@@ -20,11 +20,14 @@ The strategy is to build destination-specific family travel pages and interactiv
 - [Content strategy](docs/plan/content-strategy.md)
 - [Product and AI plan](docs/plan/product-ai-plan.md)
 - [Technical plan](docs/plan/technical-plan.md)
+- [Deployment](docs/plan/deployment.md)
 - [90-day execution plan](docs/plan/90-day-execution-plan.md)
 
 ## First Prototype
 
 Open [site/san-diego-with-kids.html](site/san-diego-with-kids.html) in a browser to view the first city page prototype.
+
+The production site is configured for GitHub Pages at `familytripwise.com`.
 
 ## Recommended Initial Wedge
 
