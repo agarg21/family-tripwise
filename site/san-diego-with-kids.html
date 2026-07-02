@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>San Diego With Kids: Where to Stay, What to Do, and a Family Itinerary</title>
+    <meta
+      name="description"
+      content="Plan San Diego with kids: best areas to stay, family-friendly activities, hotel priorities, stroller notes, rainy-day backups, and a nap-friendly itinerary builder."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./san-diego-with-kids.html" aria-label="Family Tripwise home">
+        <span class="brand-mark">FT</span>
+        <span>Family Tripwise</span>
+      </a>
+      <nav aria-label="Page sections">
+        <a href="#where-to-stay">Stay</a>
+        <a href="#things-to-do">Things to do</a>
+        <a href="#itinerary">Itinerary</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-media" role="img" aria-label="San Diego skyline from Coronado at dawn"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">San Diego, California</p>
+          <h1>San Diego with kids</h1>
+          <p>
+            Pick a home base, build a beach-and-zoo itinerary, and keep the day realistic for naps,
+            strollers, parking, and tired legs.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#planner">Start with your family</a>
+            <a class="button secondary" href="#quick-answer">See quick picks</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="quick-answer" class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Fast answer</p>
+            <h2>Best base for most families</h2>
+            <p>
+              Mission Bay is the easiest default for beach time, short drives, pools, and calmer days.
+              Choose Downtown only if you want walkable restaurants and plan to use the trolley or rideshares.
+            </p>
+          </div>
+          <dl class="snapshot">
+            <div>
+              <dt>Best ages</dt>
+              <dd>All ages, especially toddlers to tweens</dd>
+            </div>
+            <div>
+              <dt>Ideal trip</dt>
+              <dd>3 to 5 days</dd>
+            </div>
+            <div>
+              <dt>Car need</dt>
+              <dd>Helpful for beach and zoo days</dd>
+            </div>
+            <div>
+              <dt>Rain backup</dt>
+              <dd>Balboa Park museums, Fleet Science Center, aquarium</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="planner" class="container tool-layout">
+        <div class="tool-panel">
+          <p class="eyebrow">Family fit</p>
+          <h2>Choose your San Diego base</h2>
+          <form id="stay-form" class="controls">
+            <fieldset>
+              <legend>Youngest child</legend>
+              <label><input type="radio" name="age" value="baby"> Baby</label>
+              <label><input type="radio" name="age" value="toddler" checked> Toddler</label>
+              <label><input type="radio" name="age" value="kid"> Kid</label>
+              <label><input type="radio" name="age" value="teen"> Teen</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Trip style</legend>
+              <label><input type="radio" name="style" value="easy" checked> Easy logistics</label>
+              <label><input type="radio" name="style" value="beach"> Beach days</label>
+              <label><input type="radio" name="style" value="city"> Walkable meals</label>
+              <label><input type="radio" name="style" value="value"> Value</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Must have</legend>
+              <label><input type="checkbox" name="need" value="pool" checked> Pool</label>
+              <label><input type="checkbox" name="need" value="kitchen"> Kitchen</label>
+              <label><input type="checkbox" name="need" value="transit"> Low driving</label>
+              <label><input type="checkbox" name="need" value="stroller" checked> Stroller-friendly</label>
+            </fieldset>
+          </form>
+        </div>
+
+        <aside class="result-panel" aria-live="polite">
+          <p class="eyebrow">Recommended area</p>
+          <h2 id="area-name">Mission Bay</h2>
+          <p id="area-summary">
+            Easiest default for first-time family trips: resort pools, bay beaches, short drives, and
+            calmer evenings.
+          </p>
+          <div class="score-list">
+            <div><span>Logistics</span><strong id="logistics-score">9/10</strong></div>
+            <div><span>Stroller ease</span><strong id="stroller-score">8/10</strong></div>
+            <div><span>Value</span><strong id="value-score">6/10</strong></div>
+          </div>
+          <p class="note" id="area-caveat">
+            Avoid if you want to walk out to many restaurants every night.
+          </p>
+        </aside>
+      </section>
+
+      <section id="where-to-stay" class="band">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Where to stay</p>
+            <h2>Best San Diego areas for families</h2>
+          </div>
+          <div class="area-table" role="table" aria-label="Best San Diego areas for families">
+            <div class="table-row table-head" role="row">
+              <span role="columnheader">Area</span>
+              <span role="columnheader">Best for</span>
+              <span role="columnheader">Watch out for</span>
+              <span role="columnheader">Family fit</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">Mission Bay</span>
+              <span role="cell">Pools, bay beaches, toddlers, easy days</span>
+              <span role="cell">Less neighborhood walking</span>
+              <span role="cell">Excellent</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">La Jolla</span>
+              <span role="cell">Scenery, tide pools, beach mornings</span>
+              <span role="cell">Parking and hills</span>
+              <span role="cell">Great</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">Downtown / Little Italy</span>
+              <span role="cell">Restaurants, harbor, no-car evenings</span>
+              <span role="cell">Noise and smaller rooms</span>
+              <span role="cell">Good</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">Coronado</span>
+              <span role="cell">Beach, calmer pace, classic vacation feel</span>
+              <span role="cell">Higher hotel prices</span>
+              <span role="cell">Great</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="things-to-do" class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Things to do</p>
+          <h2>Family activities by pace</h2>
+        </div>
+        <div class="filter-bar" aria-label="Activity filters">
+          <button class="chip active" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="toddler">Toddlers</button>
+          <button class="chip" type="button" data-filter="stroller">Stroller-friendly</button>
+          <button class="chip" type="button" data-filter="rain">Rain backup</button>
+          <button class="chip" type="button" data-filter="teen">Teens</button>
+        </div>
+        <div class="activity-grid" id="activity-grid">
+          <article class="activity-card" data-tags="toddler stroller">
+            <h3>San Diego Zoo</h3>
+            <p>Best anchor day for most families. Use the bus tour early, then pick two zones instead of trying to finish the whole park.</p>
+            <dl>
+              <div><dt>Time</dt><dd>4-6 hrs</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="toddler stroller rain">
+            <h3>Balboa Park museums</h3>
+            <p>Pair one museum with a picnic or playground stop. Keep it flexible if kids are museum-light.</p>
+            <dl>
+              <div><dt>Time</dt><dd>2-4 hrs</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="toddler stroller">
+            <h3>Mission Bay beach morning</h3>
+            <p>Calmer water, easy sand time, and a low-effort morning before naps or a short attraction.</p>
+            <dl>
+              <div><dt>Time</dt><dd>2-3 hrs</dd></div>
+              <div><dt>Stroller</dt><dd>Mixed</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="teen">
+            <h3>La Jolla Cove and sea caves</h3>
+            <p>Great for older kids and teens who can manage uneven paths and a more adventurous coastal stop.</p>
+            <dl>
+              <div><dt>Time</dt><dd>2-4 hrs</dd></div>
+              <div><dt>Stroller</dt><dd>Limited</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="rain toddler">
+            <h3>Birch Aquarium</h3>
+            <p>A manageable indoor/outdoor option with ocean views and a better pace for younger kids than a full theme-park day.</p>
+            <dl>
+              <div><dt>Time</dt><dd>90 min</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="stroller teen">
+            <h3>Coronado ferry and waterfront</h3>
+            <p>Good for a scenic low-commitment afternoon, especially from Downtown or Little Italy.</p>
+            <dl>
+              <div><dt>Time</dt><dd>2-3 hrs</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section id="itinerary" class="band itinerary-band">
+        <div class="container itinerary-layout">
+          <div>
+            <p class="eyebrow">3-day starter plan</p>
+            <h2>Nap-friendly San Diego itinerary</h2>
+            <ol class="timeline">
+              <li>
+                <strong>Day 1: Mission Bay and easy arrival</strong>
+                <span>Short beach time, groceries, pool, early dinner.</span>
+              </li>
+              <li>
+                <strong>Day 2: Zoo plus Balboa Park</strong>
+                <span>Zoo early, rest after lunch, one low-pressure museum or garden walk.</span>
+              </li>
+              <li>
+                <strong>Day 3: La Jolla or Coronado</strong>
+                <span>Choose La Jolla for scenery or Coronado for a calmer beach day.</span>
+              </li>
+            </ol>
+          </div>
+          <div class="map-panel">
+            <h3>Map grouping</h3>
+            <div class="mini-map" aria-hidden="true">
+              <span class="pin zoo">Zoo</span>
+              <span class="pin bay">Mission Bay</span>
+              <span class="pin cove">La Jolla</span>
+              <span class="pin cor">Coronado</span>
+            </div>
+            <p class="note">
+              First build: static grouping. Next step: export these stops to a real map and tune the route by hotel area.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Family Tripwise prototype. Human review required before publishing hotel or safety recommendations.</p>
+      <p>
+        Hero image: San Diego skyline at dawn from Coronado by Nserrano, CC BY-SA 3.0,
+        via Wikimedia Commons.
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+

@@ -22,6 +22,10 @@ The strategy is to build destination-specific family travel pages and interactiv
 - [Technical plan](docs/plan/technical-plan.md)
 - [90-day execution plan](docs/plan/90-day-execution-plan.md)
 
+## First Prototype
+
+Open [site/san-diego-with-kids.html](site/san-diego-with-kids.html) in a browser to view the first city page prototype.
+
 ## Recommended Initial Wedge
 
 Launch with 10 destination clusters:
@@ -36,4 +40,3 @@ Launch with 10 destination clusters:
 8. Washington DC
 9. Paris, France
 10. London, UK
-
