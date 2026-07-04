@@ -97,6 +97,36 @@ nav a {
   background-size: cover;
 }
 
+.page-hero {
+  padding: clamp(70px, 10vw, 120px) 0 clamp(42px, 6vw, 72px);
+  background:
+    linear-gradient(135deg, rgba(18, 108, 103, 0.16), rgba(240, 189, 86, 0.2)),
+    var(--surface);
+}
+
+.page-hero h1 {
+  max-width: 980px;
+  color: var(--ink);
+  font-size: clamp(2.7rem, 8vw, 6rem);
+}
+
+.page-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.research-note {
+  display: inline-flex;
+  max-width: 760px;
+  border-left: 4px solid var(--coral);
+  padding-left: 12px;
+  color: #43515a;
+  font-size: 0.95rem;
+  font-weight: 680;
+}
+
 .hero-copy {
   width: min(900px, calc(100% - 36px));
   margin: 0 auto clamp(52px, 9vh, 92px);
@@ -178,9 +208,20 @@ h3 {
   color: white;
 }
 
+.text-link {
+  color: var(--teal);
+  font-weight: 780;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 .container {
   width: min(1160px, calc(100% - 36px));
   margin: 0 auto;
+}
+
+.page-section {
+  padding: clamp(52px, 8vw, 86px) 0;
 }
 
 .band {
@@ -376,6 +417,12 @@ input {
   gap: 16px;
 }
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .activity-card {
   display: flex;
   min-height: 245px;
@@ -509,8 +556,14 @@ input {
     grid-template-columns: 1fr;
   }
 
-  .activity-grid {
+  .activity-grid,
+  .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .table-row {
@@ -537,4 +590,3 @@ input {
     width: 100%;
   }
 }
-

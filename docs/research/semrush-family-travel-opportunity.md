@@ -77,6 +77,27 @@ Los Angeles, Myrtle Beach, Seattle, Branson, Costa Rica, Phoenix/Scottsdale, Pue
 | best family hotels in san diego | 720 | 12 | Strong monetization |
 | best hotels in paris for families | 720 | 11 | Strong monetization |
 
+## Age-Specific Query Status
+
+The initial Semrush research identified age-specific planning intent patterns such as
+`{destination} with toddlers` and `{destination} with teens`, and SERP review found that
+few pages support family constraints by kid age. The saved export does not include
+city-level volume rows for age-specific activity queries such as `things to do in San Diego
+with toddlers` or `things to do in San Diego with teens`.
+
+Fresh validation is still needed before creating many city-age URLs. Use `phrase_these`
+in the US database for batches like:
+
+- `things to do in san diego with toddlers`
+- `things to do in san diego with teens`
+- `san diego with toddlers`
+- `san diego with teens`
+- `things to do in {destination} with toddlers`
+- `things to do in {destination} with teens`
+
+Current implementation choice: keep age filters on the dedicated activities page, then
+create separate toddler/teen pages only when query volume or SERP weakness justifies them.
+
 ## SERP Patterns
 
 Recurring ranking domains and formats:
@@ -117,4 +138,3 @@ Recurring ranking domains and formats:
 ## Recommendation
 
 Proceed with a 90-day content-and-tool MVP. The initial goal should be proving that interactive destination pages can outperform static family travel blogs and convert searchers into tool users.
-

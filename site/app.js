@@ -55,10 +55,12 @@ const valueScore = document.querySelector("#value-score");
 const areaCaveat = document.querySelector("#area-caveat");
 
 function getChecked(name) {
+  if (!form) return undefined;
   return form.querySelector(`input[name="${name}"]:checked`)?.value;
 }
 
 function getNeeds() {
+  if (!form) return [];
   return [...form.querySelectorAll('input[name="need"]:checked')].map((input) => input.value);
 }
 
@@ -76,6 +78,10 @@ function chooseArea() {
 }
 
 function renderArea() {
+  if (!areaName || !areaSummary || !logisticsScore || !strollerScore || !valueScore || !areaCaveat) {
+    return;
+  }
+
   const area = chooseArea();
   areaName.textContent = area.name;
   areaSummary.textContent = area.summary;
@@ -85,8 +91,10 @@ function renderArea() {
   areaCaveat.textContent = area.caveat;
 }
 
-form.addEventListener("change", renderArea);
-renderArea();
+if (form) {
+  form.addEventListener("change", renderArea);
+  renderArea();
+}
 
 const chips = [...document.querySelectorAll(".chip")];
 const activities = [...document.querySelectorAll(".activity-card")];
@@ -96,9 +104,8 @@ chips.forEach((chip) => {
     const filter = chip.dataset.filter;
     chips.forEach((item) => item.classList.toggle("active", item === chip));
     activities.forEach((activity) => {
-      const tags = activity.dataset.tags.split(" ");
+      const tags = (activity.dataset.tags || "").split(" ");
       activity.hidden = filter !== "all" && !tags.includes(filter);
     });
   });
 });
-
