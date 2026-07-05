@@ -13,6 +13,19 @@ const cities = [
     volume: { activities: "5,400", stay: "110", itinerary: "20" },
     metaName: "Chicago",
     intro: "Balance big museums, lakefront time, architecture views, parks, and neighborhood meals without turning every day into a transit marathon.",
+    photo: {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG",
+      alt: "Millennium Park in Chicago at dusk.",
+      credit: "Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"
+    },
+    sources: [
+      ["Field Museum visit info", "https://www.fieldmuseum.org/visit"],
+      ["Shedd Aquarium plan-a-visit", "https://www.sheddaquarium.org/plan-a-visit"],
+      ["Lincoln Park Zoo visit info", "https://www.lpzoo.org/visit/"],
+      ["Maggie Daley Park", "https://maggiedaleypark.com/"],
+      ["Navy Pier visit info", "https://navypier.org/"]
+    ],
     areas: [
       ["River North / Magnificent Mile", "First-timers, central transit, easy restaurants", "Hotel prices and busy sidewalks", "Great"],
       ["Lincoln Park", "Zoo, playgrounds, neighborhood walks", "Farther from Loop museums", "Excellent"],
@@ -42,6 +55,19 @@ const cities = [
     volume: { activities: "5,400", stay: "best family hotels: 140", itinerary: "10" },
     metaName: "San Antonio",
     intro: "Use the River Walk, Alamo, museums, theme parks, and Pearl District without underestimating heat, walking time, or nap breaks.",
+    photo: {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg",
+      alt: "The San Antonio River Walk with paths and restaurants along the water.",
+      credit: "Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg"
+    },
+    sources: [
+      ["The Alamo visit info", "https://www.thealamo.org/visit"],
+      ["GO RIO River Walk cruises", "https://www.goriocruises.com/"],
+      ["The DoSeum visit info", "https://www.thedoseum.org/visit"],
+      ["San Antonio Zoo visit info", "https://sazoo.org/plan-your-visit/"],
+      ["Natural Bridge Caverns", "https://naturalbridgecaverns.com/"]
+    ],
     areas: [
       ["River Walk / Downtown", "First visit, walkable meals, Alamo access", "Noise and stroller crowding", "Great"],
       ["Pearl / Museum Reach", "Food, calmer walks, families who want less chaos", "Fewer classic hotel bargains", "Excellent"],
@@ -71,6 +97,21 @@ const cities = [
     volume: { activities: "4,400", stay: "320", itinerary: "90" },
     metaName: "San Diego",
     intro: "Build around beach mornings, the zoo, Balboa Park, La Jolla, and realistic driving windows between naps, meals, and pool time.",
+    photo: {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/San%20Diego%20Zoo%2C%20San%20Diego%2C%20United%20States%20%28Unsplash%20QZwf5yNopUo%29.jpg",
+      alt: "A red panda at the San Diego Zoo.",
+      credit: "Photo: Lance Anderson, Wikimedia Commons, CC0",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg"
+    },
+    sources: [
+      ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
+      ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
+      ["Balboa Park visitor info", "https://balboapark.org/"],
+      ["Coronado Ferry info", "https://coronadoferrylanding.com/ferry-info/"],
+      ["Bahia Resort Hotel FAQ", "https://www.bahiahotel.com/faqs"],
+      ["San Diego Mission Bay Resort FAQ", "https://www.missionbayresort.com/faq/"],
+      ["Homewood Suites San Diego Downtown/Bayside", "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/"]
+    ],
     areas: [
       ["Mission Bay", "Toddlers, pools, bay beaches, easy zoo drives", "Less neighborhood walking", "Excellent"],
       ["La Jolla", "Tide pools, sea lions, coastal views, older kids", "Hills and parking", "Great"],
@@ -101,6 +142,20 @@ const cities = [
     volume: { activities: "3,600", stay: "best family hotels: 880", itinerary: "10" },
     metaName: "Las Vegas",
     intro: "Make Las Vegas work for kids by choosing the right hotel base, limiting Strip walking, and mixing spectacle with pools, nature, and downtime.",
+    photo: {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG",
+      alt: "The Bellagio fountains and Las Vegas Strip at night.",
+      credit: "Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"
+    },
+    sources: [
+      ["Mandalay Bay Beach", "https://mandalaybay.mgmresorts.com/en/amenities/beach.html"],
+      ["Mandalay Bay FAQ", "https://mandalaybay.mgmresorts.com/en/faq.html"],
+      ["Discovery Children's Museum", "https://www.discoverykidslv.org/"],
+      ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
+      ["Vdara Hotel & Spa", "https://vdara.mgmresorts.com/en.html"],
+      ["Hilton Grand Vacations Club Paradise Las Vegas", "https://www.hilton.com/en/hotels/lasvsgv-hilton-grand-vacations-club-paradise-las-vegas/"]
+    ],
     areas: [
       ["Center Strip", "First-timers, shows, short access to major sights", "Crowds, smoke, long casino walks", "Good"],
       ["South Strip", "Mandalay Bay pool, value, airport access", "Farther from some attractions", "Great"],
@@ -130,6 +185,20 @@ const cities = [
     volume: { activities: "3,600 for NYC variant", stay: "590 for NYC variant", itinerary: "90 for NYC variant" },
     metaName: "NYC",
     intro: "Use NYC's museums, parks, ferries, neighborhoods, and transit with a plan that respects walking distance, stroller access, bathroom breaks, and overstimulation.",
+    photo: {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg",
+      alt: "A bridge and trees in Central Park, New York City.",
+      credit: "Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"
+    },
+    sources: [
+      ["Central Park visitor info", "https://www.centralparknyc.org/"],
+      ["American Museum of Natural History plan your visit", "https://www.amnh.org/plan-your-visit"],
+      ["Staten Island Ferry", "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml"],
+      ["Children's Museum of Manhattan", "https://cmom.org/"],
+      ["Top of the Rock", "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/"],
+      ["Brooklyn Bridge Park", "https://brooklynbridgepark.org/"]
+    ],
     areas: [
       ["Upper West Side", "Museums, Central Park, calmer family base", "Longer rides downtown", "Excellent"],
       ["Midtown", "First-timers, transit, major sights", "Crowds, room size, noise", "Good"],
@@ -212,6 +281,39 @@ function links(city) {
   };
 }
 
+function updatedBlock() {
+  return `      <section class="container trust-panel" aria-label="Review status">
+        <p><strong>Last updated:</strong> July 5, 2026</p>
+        <p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>
+      </section>
+`;
+}
+
+function cityPhoto(city) {
+  return `      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="${esc(city.photo.src)}" alt="${esc(city.photo.alt)}" loading="eager" decoding="async">
+          <figcaption>${esc(city.photo.credit)}. <a href="${esc(city.photo.creditUrl)}">License and source</a>.</figcaption>
+        </figure>
+      </section>
+`;
+}
+
+function sourceList(city) {
+  return `      <section class="container page-section source-section">
+        <div class="section-heading">
+          <p class="eyebrow">Sources checked</p>
+          <h2>Official sources and licensing notes</h2>
+        </div>
+        <p>Use these official pages to verify current hours, ticketing, parking, accessibility, hotel fees, and policies before booking.</p>
+        <ul class="source-list">
+${city.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
+          <li><a href="${esc(city.photo.creditUrl)}">Photo license and attribution</a></li>
+        </ul>
+      </section>
+`;
+}
+
 function hero(city, h1, intro) {
   return `    <main>
       <section class="page-hero">
@@ -221,6 +323,7 @@ function hero(city, h1, intro) {
           <p>${esc(intro)}</p>
         </div>
       </section>
+${updatedBlock()}${cityPhoto(city)}
 `;
 }
 
@@ -296,6 +399,7 @@ ${activityCards(city)}
         <script type="application/json" id="map-ready-activities">${JSON.stringify(city.activities.map(([name, tags, time, cost, stroller, rain, nap, area, summary]) => ({ name, tags: tags.split(" "), time, cost, stroller, rain, nap, area, summary })))}</script>
       </section>
 ${ageLinks}
+${sourceList(city)}
     </main>`;
   return pageShell({
     title: `Things to Do in ${city.name} With Kids by Age`,
@@ -353,6 +457,7 @@ ${rows}
           <article class="activity-card"><h3>Booking filters</h3><p>Prioritize family rooms or suites, breakfast, pool hours, laundry, parking cost, elevators, and walking distance to meals or transit.</p></article>
         </div>
       </section>
+${sourceList(city)}
     </main>`;
   return pageShell({
     title: `Where to Stay in ${city.name} With Kids`,
@@ -379,7 +484,7 @@ ${items}
         <div class="map-panel">
           <h3>Adjust by age</h3>
           <p>For toddlers, shorten the morning anchor and protect the post-lunch reset. For teens, swap one playground or short museum stop for a more independent neighborhood, food, tour, or outdoor activity.</p>
-          <p class="note">Starter plan only. Adjust by season, weather, child needs, opening hours, and human-reviewed safety/transit notes.</p>
+          <p class="note">Starter plan only. Adjust by season, weather, child needs, opening hours, transit access, and current closure or safety advisories.</p>
         </div>
       </section>
       <section class="band intro-band">
@@ -404,6 +509,7 @@ ${twoDayItems}
           <article class="activity-card"><h3>Rainy-day version</h3><p>Keep one indoor activity and one easy meal option in reserve rather than rebuilding the day from scratch.</p></article>
         </div>
       </section>
+${sourceList(city)}
     </main>`;
   return pageShell({
     title: `${city.name} Itinerary With Kids: 2 and 3 Day Starter Plan`,
@@ -443,6 +549,7 @@ function agePage(city, age, signal) {
 ${activityCards(city, age)}
         </div>
       </section>
+${sourceList(city)}
     </main>`;
   return pageShell({
     title: `Things to Do in ${city.name} With ${age[0].toUpperCase() + age.slice(1)}`,

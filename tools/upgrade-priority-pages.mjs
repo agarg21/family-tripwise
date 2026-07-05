@@ -219,6 +219,49 @@ const activityPages = {
       ["Is San Diego good with toddlers?", "Yes. Mission Bay, the zoo bus tour, Birch Aquarium, Balboa Park, and hotel-pool pacing make it one of the better toddler city trips."],
       ["Should toddlers visit La Jolla Cove?", "Only with realistic parking and stroller expectations. La Jolla Shores or Birch Aquarium is usually easier."]
     ]
+  },
+  "things-to-do/new-york-city-with-kids.html": {
+    title: "Things to Do in New York City With Kids: Strollers, Transit, Museums and One-Day Plans",
+    description:
+      "Plan New York City with kids by age, stroller difficulty, subway friction, rainy-day museums, nap-friendly routing, free activities, and nearby pairings.",
+    city: "New York City",
+    quick: [
+      ["Best overall", "Central Park plus AMNH", "The strongest family day when you want outdoor flexibility and an indoor anchor."],
+      ["Best for toddlers", "Central Park playgrounds or CMOM", "Short sessions, bathrooms nearby, and easy hotel-reset potential if you stay uptown."],
+      ["Best for teens", "Brooklyn Bridge Park or observation deck", "More skyline payoff and independence than another little-kid museum."],
+      ["Best rainy-day option", "American Museum of Natural History", "Big enough to anchor the day without crossing town repeatedly."],
+      ["Best free/low-cost", "Staten Island Ferry or Central Park", "High memory value without a major ticket purchase."],
+      ["Best stroller-friendly", "Central Park and Brooklyn Bridge Park", "Wide paths beat crowded Midtown sidewalks."],
+      ["Best half-day anchor", "AMNH or Brooklyn Bridge Park", "Both pair cleanly with nearby food and a shorter second stop."],
+      ["Best if you only have one day", "Central Park, AMNH, early dinner", "Keeps the day in one family-manageable zone."]
+    ],
+    rows: [
+      ["Central Park", "0-17", "2-4 hrs", "$", "Upper Manhattan", "Good", "No", "High", "No", "Flexible outdoor reset with playgrounds", "AMNH or Upper West Side meal"],
+      ["American Museum of Natural History", "3-14", "2-4 hrs", "$$", "Upper West Side", "Good", "Yes", "Medium", "Timed tickets helpful", "Best all-age rainy-day anchor", "Central Park"],
+      ["Staten Island Ferry", "4+", "90 min", "$", "Lower Manhattan", "Good", "Partial", "Medium", "No", "Free skyline/statue ride", "Battery Park or Downtown meal"],
+      ["Children's Museum of Manhattan", "0-6", "90 min-2 hrs", "$$", "Upper West Side", "Good", "Yes", "High", "Check tickets", "Toddler/preschool indoor reset", "Central Park playground"],
+      ["Top of the Rock", "7+", "90 min", "$$$", "Midtown", "Mixed", "Yes", "Low", "Book ahead", "Skyline payoff for older kids", "Bryant Park or easy dinner"],
+      ["Brooklyn Bridge Park", "2-17", "2-3 hrs", "$", "Brooklyn", "Good", "No", "Medium", "No", "Skyline, playgrounds, and open space", "Brooklyn Heights Promenade"]
+    ],
+    details: [
+      ["Central Park", "Families like that it can be a playground stop, picnic, stroller walk, or teen-friendly wander depending on energy.", "Best for all ages when you choose one zone instead of trying to cross the whole park.", "The park is huge; wandering without a bathroom/food plan burns time fast.", "Pick a playground, lawn, or museum-adjacent corner before you leave the hotel.", "Use nearby museum/cafe options as part of the reset plan rather than improvising after kids are done.", "No booking; check weather and playground/restroom proximity.", "Pair with AMNH or an Upper West Side meal."],
+      ["American Museum of Natural History", "Families like the dinosaur, ocean, space, and animal exhibits that work across ages.", "Best for preschoolers through teens, with toddlers needing a shorter highlights route.", "Museum fatigue, timed-entry friction, and trying to see every hall.", "Choose two or three exhibit goals before entering.", "Food and restrooms are onsite, but check current policies and hours.", "Timed tickets are usually worth checking ahead.", "Pair with Central Park rather than a second major museum."],
+      ["Staten Island Ferry", "Families like the free harbor ride and skyline views without a full tour commitment.", "Best for preschoolers and up who can handle boarding/waiting.", "Crowds, security lines, and the need to board again for the return.", "Treat it as a Lower Manhattan half-day piece, not a citywide day plan.", "Use bathrooms before boarding and plan food on either side.", "No ticket required; check current service notices.", "Pair with Battery Park, Seaport, or a Downtown hotel reset."],
+      ["Children's Museum of Manhattan", "Families like the younger-kid focus and indoor backup value.", "Best for babies, toddlers, and preschoolers.", "Older siblings may outgrow it quickly.", "Use it when a toddler needs a contained activity, not as the whole-family flagship stop.", "Upper West Side food and Central Park can help before or after.", "Check ticketing and exhibit hours.", "Pair with a short Central Park playground session."],
+      ["Top of the Rock", "Families with older kids like the clear skyline payoff.", "Best for elementary kids, tweens, and teens.", "Lines, heights, cost, and Midtown crowding.", "Book a time when kids are fed and ready to wait.", "Use bathrooms and snacks before entering the queue.", "Book timed tickets ahead if this is a must-do.", "Pair with Bryant Park or a simple Midtown meal."],
+      ["Brooklyn Bridge Park", "Families like the open space, playgrounds, skyline views, and room to decompress.", "Best for toddlers through teens.", "Bridge/DUMBO crowds and subway/elevator planning.", "Choose a pier/playground zone and avoid over-planning the bridge walk with small kids.", "Food and bathrooms vary by pier; check before kids are urgent.", "No booking for park time.", "Pair with Brooklyn Heights Promenade or a ferry/subway ride back."]
+    ],
+    plans: {
+      "1-day plan": "Base the day on the Upper West Side: Central Park playground or walk, AMNH, hotel/rest, then an easy neighborhood dinner.",
+      "2-day plan": "Day 1: Central Park plus AMNH. Day 2: Staten Island Ferry for skyline/statue views, then Brooklyn Bridge Park or a Midtown observation deck by age.",
+      "Rainy-day plan": "Use AMNH as the main anchor, add CMOM for younger kids if needed, and avoid crossing town twice in bad weather.",
+      "Toddler-friendly plan": "Central Park playground, nap/hotel reset, CMOM or a short museum highlights visit.",
+      "Teen-friendly plan": "Brooklyn Bridge Park/DUMBO, food stop, observation deck or Broadway matinee if budget and age fit."
+    },
+    faqs: [
+      ["What is the best thing to do in NYC with kids?", "For most first-time families, Central Park plus the American Museum of Natural History is the most reliable all-age pairing."],
+      ["Is New York City stroller-friendly?", "Some parks and museums are stroller-friendly, but subway elevators, crowded sidewalks, and Midtown congestion make route planning important."]
+    ]
   }
 };
 
@@ -287,6 +330,39 @@ const stayPages = {
     faqs: [
       ["What is the best area to stay in Las Vegas with kids?", "South Strip is often the best compromise, especially if pool time and easier logistics matter more than being in the absolute center."],
       ["Should families stay on the Las Vegas Strip?", "They can, but the Strip involves more walking, crowds, smoke exposure risk, and resort-fee math than many families expect."]
+    ]
+  },
+  "where-to-stay/new-york-city-with-kids.html": {
+    title: "Where to Stay in New York City With Kids: Best Areas, Subway Tradeoffs and Family Hotel Checks",
+    description:
+      "Compare where to stay in New York City with kids by subway access, stroller friction, noise, room size, walkability, nearby parks, museums, and family trip style.",
+    city: "New York City",
+    quick: [
+      ["Best overall area", "Upper West Side", "Best balance of Central Park, AMNH, calmer evenings, and family food options."],
+      ["Best for first-timers", "Upper West Side or Midtown", "Choose UWS for family pace, Midtown for shortest access to classic sights."],
+      ["Best without a car", "Upper West Side, Midtown, or Downtown", "NYC is a no-car city, but elevator/subway access matters block by block."],
+      ["Best with toddlers", "Upper West Side", "Parks, playgrounds, AMNH, and less nighttime chaos."],
+      ["Best for museums/parks", "Upper West Side", "Central Park and AMNH make the easiest first family base."],
+      ["Best for older kids/teens", "Downtown / Tribeca or Brooklyn Heights", "More neighborhood exploring, waterfront, and food flexibility."],
+      ["Best budget-friendly", "Long Island City or Downtown Brooklyn", "Often better space/value, but check transit and evening logistics."],
+      ["Think twice about", "Times Square with toddlers", "Convenient on paper, but noise, crowds, and room size can wear families down."]
+    ],
+    rows: [
+      ["Upper West Side", "Toddlers, museums, Central Park", "Longer rides downtown", "Easy subway but elevator-dependent", "Good", "Low-medium", "Hotel parking not the plan", "High", "AMNH, Central Park, CMOM", "Boutique/chain urban hotels", "Best default family base"],
+      ["Midtown", "First-timers, transit, shows", "Crowds, noise, small rooms", "Easy but busy", "Mixed", "High", "Expensive/avoid car", "High", "Times Square, Bryant Park, observation decks", "Large urban hotels", "Convenient but tiring"],
+      ["Downtown / Tribeca", "Space, waterfront, older kids", "Fewer classic sights nearby", "Good subway/rideshare access", "Good", "Medium", "Expensive/avoid car", "Medium-high", "Ferries, Battery Park, Seaport", "Upscale/suite hotels", "Great if budget allows"],
+      ["Brooklyn Heights / Downtown Brooklyn", "Waterfront, calmer evenings", "Bridge/tunnel planning", "Good if near subway", "Good", "Low-medium", "Not needed", "Medium-high", "Brooklyn Bridge Park, Promenade", "Hotels/suites", "Good neighborhood feel"],
+      ["Long Island City", "Value, skyline views, subway access", "Less classic NYC outside the hotel", "Good if close to train", "Mixed", "Medium", "Varies", "Medium", "Quick rides to Midtown, parks", "Chain/suite hotels", "Good value if transit pencils out"]
+    ],
+    hotelNote: "Research checked against official hotel and destination pages in July 2026. NYC room sizes, destination fees, crib policies, elevators, and cancellation terms vary sharply by property, so verify the exact room type before booking.",
+    hotels: [
+      ["Upper West Side family-base hotels", "Best fit for museum-and-park trips", "Prioritize two-bed rooms, suites, or connecting-room policies; many NYC rooms are smaller than families expect", "Pools are uncommon; choose this area for park/museum access instead", "Breakfast varies by property and may be expensive", "Kitchen/laundry is uncommon unless booking an extended-stay or apartment-style property", "Request crib/rollaway details directly and confirm elevator access", "Do not plan to park; use transit/taxi/rideshare and verify destination fees", "Lower than Times Square, but avenue-facing rooms can still be noisy", "Best fit when Central Park, AMNH, CMOM, and calmer evenings matter most."],
+      ["Midtown convenience hotels", "Best fit for shows, observation decks, and short first visits", "Room size and elevator waits are the big family checks", "Pools are uncommon and not the main reason to stay here", "Breakfast may add meaningful cost; plan nearby quick-service options", "Kitchen/laundry usually limited", "Confirm crib/rollaway, occupancy, and connecting-room rules before booking", "Parking is expensive; check resort/destination fees before comparing rates", "Times Square/cross-town noise and crowds are the main risk", "Best fit when being close to classic sights beats quiet and space."],
+      ["Downtown/Brooklyn suite-style options", "Best fit for families who want more space or a calmer neighborhood", "Look for suite layouts, sofa beds, and a short walk to a useful subway line", "Pools vary and should not be assumed", "Breakfast and kitchenettes are more likely at select-service/suite brands", "Laundry may be easier than in Midtown, but verify by property", "Confirm crib/rollaway and room occupancy policies", "Parking still should not be the default plan", "Usually calmer than Midtown, but subway distance can become the tradeoff", "Best fit when space and evening decompression matter more than being next to every landmark."]
+    ],
+    faqs: [
+      ["What is the best area to stay in NYC with kids?", "The Upper West Side is the safest default for many families because Central Park, AMNH, CMOM, neighborhood food, and calmer evenings are close together."],
+      ["Should families stay in Times Square?", "Times Square can be convenient for shows and first-timers, but families with toddlers should think carefully about noise, crowds, room size, and stroller friction."]
     ]
   }
 };
@@ -482,6 +558,9 @@ ${schemaEnd}
 }
 
 function insertBeforeMainEnd(html, section) {
+  if (html.includes('<section class="container page-section source-section">')) {
+    return html.replace(/\s*<section class="container page-section source-section">/, `\n${section}      <section class="container page-section source-section">`);
+  }
   return html.replace(/\s*<\/main>/, `\n${section}    </main>`);
 }
 
