@@ -597,6 +597,29 @@ input {
   padding-left: 20px;
 }
 
+.about-summary {
+  margin-bottom: clamp(34px, 5vw, 58px);
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.method-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.method-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .research-card {
   background: #fffdf8;
 }
@@ -740,7 +763,8 @@ input {
   .card-grid,
   .quick-pick-grid,
   .plan-grid,
-  .detail-card-grid {
+  .detail-card-grid,
+  .methodology-grid {
     grid-template-columns: 1fr;
   }
 

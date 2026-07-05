@@ -267,6 +267,7 @@ ${staticNav("../")}
 ${body}
     <footer class="site-footer">
       <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
+      <p><a href="../about.html">How our family travel guides are built</a></p>
     </footer>
 ${script ? '    <script src="../app.js"></script>\n' : ""}  </body>
 </html>
@@ -566,6 +567,89 @@ function writeSite(path, contents) {
   writeFileSync(full, contents);
 }
 
+function aboutPage() {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How Family Tripwise Builds Family Travel Guides</title>
+    <meta name="description" content="Learn how Family Tripwise researches family travel guides, including age fit, stroller friction, lodging base, weather backups, source checks, and update discipline.">
+    <link rel="canonical" href="https://familytripwise.com/about.html">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Family Tripwise home">
+        <span class="brand-mark">FT</span>
+        <span>Family Tripwise</span>
+      </a>
+      <nav aria-label="Destination guides">
+${staticNav("./")}
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Methodology</p>
+          <h1>How Family Tripwise builds family travel guides</h1>
+          <p>Family travel advice gets useful when it stops treating every family like the same group of adults with smaller shoes. Our guides focus on age fit, pace, stroller friction, weather backup, nap timing, lodging base, and the small logistics that decide whether a day works.</p>
+        </div>
+      </section>
+      <section class="container trust-panel about-summary" aria-label="Review status">
+        <p><strong>Last updated:</strong> July 5, 2026</p>
+        <p><strong>Current scope:</strong> Family Tripwise is running a focused 5-city test before expanding. We update pages as search data, official sources, and firsthand notes improve.</p>
+      </section>
+      <section class="container page-section methodology-section">
+        <div class="section-heading">
+          <p class="eyebrow">What we evaluate</p>
+          <h2>Family logistics come first</h2>
+        </div>
+        <div class="methodology-grid">
+          <article class="method-card"><h3>Age fit</h3><p>We separate toddler, elementary, tween, and teen fit because the same attraction can be perfect for one kid and exhausting for another.</p></article>
+          <article class="method-card"><h3>Stroller friction</h3><p>We flag hills, sand, stairs, crowds, long indoor corridors, subway elevators, and walking routes that can turn a simple outing into a project.</p></article>
+          <article class="method-card"><h3>Nap and reset value</h3><p>We favor plans with realistic morning anchors, easy meals, hotel resets, and optional afternoon stops instead of overstuffed sightseeing days.</p></article>
+          <article class="method-card"><h3>Weather backup</h3><p>We look for indoor or mixed-weather alternatives that can be swapped in without rebuilding the entire day.</p></article>
+          <article class="method-card"><h3>Lodging base</h3><p>For stay pages, we start with area tradeoffs before hotel names: noise, walkability, parking, transit, pool value, room size, and nearby meals.</p></article>
+          <article class="method-card"><h3>Pairing nearby</h3><p>We group attractions that make sense together so families avoid crossing a city twice with tired kids.</p></article>
+        </div>
+      </section>
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Source discipline</p>
+            <h2>What we check before publishing</h2>
+            <p>Each upgraded guide includes official source links for attraction planning, hotel policies, ticketing, parking, accessibility, and photo licensing where relevant. We use those sources to shape planning notes, then keep change-sensitive claims cautious.</p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>Official sources</dt><dd>Attractions, hotels, parks, transit, and destination organizations.</dd></div>
+            <div><dt>Search input</dt><dd>SEO research helps choose pages, but does not replace useful planning detail.</dd></div>
+            <div><dt>Images</dt><dd>Licensed or public-domain images only; no generated travel photos.</dd></div>
+            <div><dt>Update checks</dt><dd>Hotel fees, hours, policies, and closures should be verified before booking.</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="container page-section methodology-section">
+        <div class="section-heading">
+          <p class="eyebrow">Limits</p>
+          <h2>What our guides are not</h2>
+        </div>
+        <div class="methodology-grid">
+          <article class="method-card"><h3>Not a guarantee</h3><p>Opening hours, resort fees, pool rules, parking costs, and transit conditions can change quickly. Always verify the details that matter for your trip before paying.</p></article>
+          <article class="method-card"><h3>Not medical or safety advice</h3><p>We can flag planning friction, but families should use official advisories and their own judgment for health, safety, mobility, and accessibility needs.</p></article>
+          <article class="method-card"><h3>Not a personal trip diary</h3><p>When a page is research-based rather than firsthand, we keep the language practical and source-backed instead of pretending we personally tested every stop.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
+      <p><a href="./about.html">How our family travel guides are built</a></p>
+    </footer>
+  </body>
+</html>
+`;
+}
+
 for (const city of cities) {
   writeSite(`things-to-do/${city.slug}-with-kids.html`, activitiesPage(city));
   writeSite(`where-to-stay/${city.slug}-with-kids.html`, stayPage(city));
@@ -576,6 +660,8 @@ for (const page of agePages) {
   const city = cities.find((item) => item.slug === page.slug);
   writeSite(`things-to-do/${page.slug}-with-${page.age}.html`, agePage(city, page.age, page.volume));
 }
+
+writeSite("about.html", aboutPage());
 
 const oldRedirects = [
   ["san-diego-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
@@ -648,6 +734,7 @@ ${cities.map((city) => `          <article class="activity-card">
     </main>
     <footer class="site-footer">
       <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
+      <p><a href="./about.html">How our family travel guides are built</a></p>
     </footer>
   </body>
 </html>
@@ -656,6 +743,7 @@ ${cities.map((city) => `          <article class="activity-card">
 writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://familytripwise.com/</loc></url>
+  <url><loc>https://familytripwise.com/about.html</loc></url>
 ${cities.flatMap((city) => [
   `  <url><loc>https://familytripwise.com/things-to-do/${city.slug}-with-kids.html</loc></url>`,
   `  <url><loc>https://familytripwise.com/where-to-stay/${city.slug}-with-kids.html</loc></url>`,
@@ -667,4 +755,4 @@ ${agePages.map((page) => `  <url><loc>https://familytripwise.com/things-to-do/${
 
 upgradePriorityPages(outDir);
 
-console.log("Generated 20 SEO pages plus index, redirects, and sitemap.");
+console.log("Generated 20 SEO pages plus about, index, redirects, and sitemap.");
