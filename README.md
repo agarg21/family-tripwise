@@ -23,9 +23,9 @@ The strategy is to build destination-specific family travel pages and interactiv
 - [Deployment](docs/plan/deployment.md)
 - [90-day execution plan](docs/plan/90-day-execution-plan.md)
 
-## First Prototype
+## Local Preview
 
-Open [site/san-diego-with-kids.html](site/san-diego-with-kids.html) in a browser to view the first city page prototype.
+Open [site/things-to-do/san-diego-with-kids.html](site/things-to-do/san-diego-with-kids.html) in a browser to view the current San Diego guide.
 
 The production site is configured for GitHub Pages at `familytripwise.com`.
 

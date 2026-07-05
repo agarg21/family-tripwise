@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
 
@@ -165,6 +166,14 @@ function esc(value) {
   return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 }
 
+function staticNav(prefix) {
+  return `        <a href="${prefix}things-to-do/chicago-with-kids.html">Chicago</a>
+        <a href="${prefix}things-to-do/san-antonio-with-kids.html">San Antonio</a>
+        <a href="${prefix}things-to-do/san-diego-with-kids.html">San Diego</a>
+        <a href="${prefix}things-to-do/las-vegas-with-kids.html">Las Vegas</a>
+        <a href="${prefix}things-to-do/new-york-city-with-kids.html">NYC</a>`;
+}
+
 function pageShell({ title, description, canonical, nav, body, script = false }) {
   return `<!doctype html>
 <html lang="en">
@@ -182,14 +191,13 @@ function pageShell({ title, description, canonical, nav, body, script = false })
         <span class="brand-mark">FT</span>
         <span>Family Tripwise</span>
       </a>
-      <nav aria-label="Related pages">
-${nav.map(([href, label]) => `        <a href="${href}">${esc(label)}</a>`).join("\n")}
+      <nav aria-label="Destination guides">
+${staticNav("../")}
       </nav>
     </header>
 ${body}
     <footer class="site-footer">
-      <p>Family Tripwise prototype. Human review required before publishing hotel, safety, transit, stroller, or area recommendations.</p>
-      <p>Scores and fit labels are estimated planning signals, not personally verified experience.</p>
+      <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
     </footer>
 ${script ? '    <script src="../app.js"></script>\n' : ""}  </body>
 </html>
@@ -204,14 +212,13 @@ function links(city) {
   };
 }
 
-function hero(city, label, h1, intro) {
+function hero(city, h1, intro) {
   return `    <main>
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">${esc(city.name)}, ${esc(city.state)}</p>
           <h1>${esc(h1)}</h1>
           <p>${esc(intro)}</p>
-          <p class="research-note">${esc(label)}</p>
         </div>
       </section>
 `;
@@ -239,21 +246,20 @@ function activityCards(city, filterAge) {
 
 function activitiesPage(city) {
   const l = links(city);
-  const nycHint = city.slug === "new-york-city" ? " Targets NYC, New York, and New York City wording." : "";
   const cityAgePages = agePages.filter((page) => page.slug === city.slug);
   const ageLinks = cityAgePages.length
     ? `      <section class="band">
         <div class="container card-grid">
 ${cityAgePages.map((page) => `          <article class="activity-card">
             <h3>${esc(city.name)} with ${esc(page.age)}</h3>
-            <p>Dedicated age-specific page based on validated signal: ${esc(page.volume)}.</p>
+            <p>Focused planning for age-specific pacing, activity fit, weather backups, and family logistics.</p>
             <p><a class="text-link" href="./${city.slug}-with-${page.age}.html">Open the ${esc(page.age)} activity guide</a></p>
           </article>`).join("\n")}
         </div>
       </section>
 `
     : "";
-  const body = `${hero(city, `Primary keyword volume: ${city.volume.activities}.${nycHint}`, `Things to do in ${city.name} with kids`, city.intro)}
+  const body = `${hero(city, `Things to do in ${city.name} with kids`, city.intro)}
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>
@@ -309,18 +315,18 @@ function stayPage(city) {
               <span role="cell">${esc(watch)}</span>
               <span role="cell">${esc(fit)}</span>
             </div>`).join("\n");
-  const body = `${hero(city, `Primary keyword signal: ${city.volume.stay}.`, `Where to stay in ${city.name} with kids`, `Compare the best family areas in ${city.name} by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.`)}
+  const body = `${hero(city, `Where to stay in ${city.name} with kids`, `Compare the best family areas in ${city.name} by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.`)}
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>
             <p class="eyebrow">Family base</p>
             <h2>Start with the area, then shortlist hotels</h2>
-            <p>Hotel recommendations need human review. This page starts with area fit and the family decision factors that make or break a stay.</p>
+            <p>Start with the area fit, then use the hotel checks below to compare room setup, parking, pool value, meal friction, and kid reset options before booking.</p>
           </div>
           <dl class="snapshot">
             <div><dt>Activity page</dt><dd><a href="${l.activities}">Activities near each area</a></dd></div>
             <div><dt>Itinerary page</dt><dd><a href="${l.itinerary}">Sample itinerary by area</a></dd></div>
-            <div><dt>Review status</dt><dd>Hotel shortlist requires human review</dd></div>
+            <div><dt>Booking check</dt><dd>Verify fees, room type, and cancellation terms</dd></div>
             <div><dt>Key checks</dt><dd>Parking, pool, breakfast, room size</dd></div>
           </dl>
         </div>
@@ -342,8 +348,8 @@ ${rows}
       </section>
       <section class="band">
         <div class="container card-grid">
-          <article class="activity-card"><h3>Family hotel shortlist</h3><p>TODO human review: add 5-8 hotels with room-size notes, pool/breakfast/kitchen/laundry checks, crib or rollaway policy, parking, noise, and cancellation considerations.</p></article>
-          <article class="activity-card"><h3>Stroller and transit notes</h3><p>TODO human review: verify sidewalks, elevators, transit station access, hill difficulty, ride-share friction, and car-seat logistics.</p></article>
+          <article class="activity-card"><h3>Family hotel shortlist</h3><p>Prioritize hotels that clearly publish room layout, crib or rollaway policy, parking cost, pool hours, breakfast setup, and cancellation terms.</p></article>
+          <article class="activity-card"><h3>Stroller and transit notes</h3><p>Before committing to a no-car stay, check sidewalks, elevators, transit station access, hill difficulty, ride-share pickup points, and car-seat logistics for your exact area.</p></article>
           <article class="activity-card"><h3>Booking filters</h3><p>Prioritize family rooms or suites, breakfast, pool hours, laundry, parking cost, elevators, and walking distance to meals or transit.</p></article>
         </div>
       </section>
@@ -361,7 +367,7 @@ function itineraryPage(city) {
   const l = links(city);
   const items = city.itinerary.map(([day, plan]) => `              <li><strong>${esc(day)}</strong><span>${esc(plan)}</span></li>`).join("\n");
   const twoDayItems = city.itinerary.slice(0, 2).map(([day, plan]) => `              <li><strong>${esc(day)}</strong><span>${esc(plan)}</span></li>`).join("\n");
-  const body = `${hero(city, `Primary keyword signal: ${city.volume.itinerary}.`, `${city.name} itinerary with kids`, `A starter family itinerary for ${city.name} with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.`)}
+  const body = `${hero(city, `${city.name} itinerary with kids`, `A starter family itinerary for ${city.name} with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.`)}
       <section class="container page-section itinerary-layout">
         <div>
           <p class="eyebrow">3-day starter plan</p>
@@ -412,7 +418,7 @@ function agePage(city, age, signal) {
   const l = links(city);
   const isToddler = age === "toddlers";
   const focus = isToddler ? city.toddlerFocus : city.teenFocus;
-  const body = `${hero(city, `Validated age-specific signal: ${signal}.`, `Things to do in ${city.name} with ${age}`, `A focused activity guide for ${age} in ${city.name}, with the main kids guide kept as the broader planning hub.`)}
+  const body = `${hero(city, `Things to do in ${city.name} with ${age}`, `A focused activity guide for ${age} in ${city.name}, with the main kids guide kept as the broader planning hub.`)}
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>
@@ -465,6 +471,7 @@ for (const page of agePages) {
 }
 
 const oldRedirects = [
+  ["san-diego-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
   ["san-diego-things-to-do-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
   ["san-diego-where-to-stay-with-kids.html", "where-to-stay/san-diego-with-kids.html", "Where to stay in San Diego with kids"]
 ];
@@ -502,12 +509,8 @@ writeSite("index.html", `<!doctype html>
         <span class="brand-mark">FT</span>
         <span>Family Tripwise</span>
       </a>
-      <nav aria-label="Destination pages">
-        <a href="./things-to-do/chicago-with-kids.html">Chicago</a>
-        <a href="./things-to-do/san-antonio-with-kids.html">San Antonio</a>
-        <a href="./things-to-do/san-diego-with-kids.html">San Diego</a>
-        <a href="./things-to-do/las-vegas-with-kids.html">Las Vegas</a>
-        <a href="./things-to-do/new-york-city-with-kids.html">NYC</a>
+      <nav aria-label="Destination guides">
+${staticNav("./")}
       </nav>
     </header>
     <main>
@@ -537,7 +540,7 @@ ${cities.map((city) => `          <article class="activity-card">
       </section>
     </main>
     <footer class="site-footer">
-      <p>Family Tripwise prototype. Human review required before publishing hotel, safety, transit, stroller, or area recommendations.</p>
+      <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
     </footer>
   </body>
 </html>
@@ -554,5 +557,7 @@ ${cities.flatMap((city) => [
 ${agePages.map((page) => `  <url><loc>https://familytripwise.com/things-to-do/${page.slug}-with-${page.age}.html</loc></url>`).join("\n")}
 </urlset>
 `);
+
+upgradePriorityPages(outDir);
 
 console.log("Generated 20 SEO pages plus index, redirects, and sitemap.");
