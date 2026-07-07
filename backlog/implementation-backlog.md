@@ -4,66 +4,9 @@ Last updated: 2026-07-07
 
 ## Active
 
-No implementation task is currently active. The SRR-001 handoff is ready below.
+No implementation task is currently active. IMP-001 and IMP-002 were completed in the first implementation pass.
 
 ## Ready
-
-### IMP-001: Add Static Site SEO QA Script
-
-Status: ready
-
-Recommendation label: `test`
-
-Priority: P0
-
-Source: SRR-001 audit, 2026-07-07
-
-Implementation scope:
-
-- Add a local validation command that checks:
-  - every `site/sitemap.xml` URL maps to a local HTML file;
-  - sitemap URLs return 200 in production when network checks are enabled;
-  - internal relative links in `site/**/*.html` resolve locally;
-  - every JSON-LD block parses as valid JSON;
-  - pages below a configurable word-count threshold are flagged when they are included in the sitemap;
-  - legacy canonical shim pages outside the sitemap are flagged for redirect/noindex review.
-- Add the command to `README.md` or an npm script if a package file is introduced.
-
-Acceptance checks:
-
-- Current internal link problems: 0.
-- Current JSON-LD parse problems: 0.
-- Script flags the five itinerary pages, Chicago/San Antonio stay pages, and thin teen pages as quality-review candidates rather than silently passing them.
-
-### IMP-002: Upgrade San Diego Itinerary Page Before Expansion
-
-Status: ready
-
-Recommendation label: `improve`
-
-Priority: P0
-
-Source: SRR-001 audit, 2026-07-07
-
-Target file:
-
-- `site/family-itinerary/san-diego-with-kids.html`
-
-Implementation scope:
-
-- Expand from a thin starter page into a decision-support page aligned with the San Diego cluster.
-- Add a scannable itinerary table covering 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day variants.
-- Include nap/rest windows, drive/transition assumptions, stroller difficulty, meal/reset notes, and what to skip.
-- Link clearly to San Diego things-to-do, toddlers, teens, and where-to-stay pages.
-- Add appropriate JSON-LD if the rendered content supports it, such as `ItemList` and `FAQPage`.
-- Preserve uncertainty: no personal-experience claims; mark route/pacing guidance as planning guidance unless human reviewed.
-
-Acceptance checks:
-
-- Page includes at least one comparison/decision table.
-- Page includes official source/update notes.
-- Page remains internally linked from the San Diego activity and stay pages.
-- JSON-LD parses if added.
 
 ### IMP-003: Upgrade Chicago And San Antonio Where-To-Stay Pages
 
@@ -186,4 +129,45 @@ Potential scope:
 
 ## Done
 
-None yet in the three-agent operating system.
+### IMP-001: Add Static Site SEO QA Script
+
+Status: done
+
+Completed: 2026-07-07
+
+Implementation notes:
+
+- Added `tools/seo-qa.mjs`.
+- Added README usage for `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production`.
+- Checks sitemap URLs against local HTML files, optional production 200 responses, internal relative links, JSON-LD parse validity, sitemap-listed thin-page word count, and legacy San Diego shim pages outside the sitemap.
+
+Validation result:
+
+- `node tools/seo-qa.mjs`: 0 errors, 15 warnings after IMP-002.
+- `node tools/seo-qa.mjs --production`: 0 errors, 15 warnings after IMP-002.
+- Current internal link problems: 0.
+- Current JSON-LD parse problems: 0.
+
+Remaining QA warnings:
+
+- Thin-page/content-depth review: `site/about.html`, `site/index.html`, four remaining itinerary pages, four teen pages, and Chicago/San Antonio where-to-stay pages.
+- Legacy shim review: three root-level San Diego shim pages outside the sitemap.
+
+### IMP-002: Upgrade San Diego Itinerary Page Before Expansion
+
+Status: done
+
+Completed: 2026-07-07
+
+Implementation notes:
+
+- Upgraded `site/family-itinerary/san-diego-with-kids.html` through `tools/upgrade-priority-pages.mjs` so the page survives regeneration.
+- Added quick route decisions, a comparison table for 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day variants, pacing cards, San Diego cluster links, and `ItemList` / `FAQPage` JSON-LD.
+- Preserved uncertainty by labeling route details as planning guidance and telling users to verify drive times, parking, stroller routes, attraction hours, weather, and child energy needs.
+
+Acceptance checks:
+
+- Page includes a comparison/decision table.
+- Page retains official source/update notes.
+- Page remains linked from San Diego activity and stay pages.
+- JSON-LD parses through `tools/seo-qa.mjs`.

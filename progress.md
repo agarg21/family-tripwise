@@ -17,6 +17,12 @@
   - checked local internal links and JSON-LD blocks with 0 failures;
   - used Anti Gravity CLI as an advisory second-opinion reviewer;
   - handed implementation-ready page-quality tasks to the Implementation Agent.
+- Completed first implementation pass from the SRR-001 handoff:
+  - added a dependency-free static SEO QA script at `tools/seo-qa.mjs`;
+  - documented local and production QA commands in `README.md`;
+  - upgraded the San Diego family itinerary page through `tools/upgrade-priority-pages.mjs` and regenerated `site/family-itinerary/san-diego-with-kids.html`;
+  - added San Diego itinerary decision support for 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day plans;
+  - validated with local and production QA: 0 errors, with remaining warnings carried forward in the implementation backlog.
 
 ## Before Operating-System Migration
 

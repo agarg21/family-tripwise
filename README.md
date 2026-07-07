@@ -29,6 +29,20 @@ Open [site/things-to-do/san-diego-with-kids.html](site/things-to-do/san-diego-wi
 
 The production site is configured for GitHub Pages at `familytripwise.com`.
 
+## Local QA
+
+Run the static SEO QA check before publishing site changes:
+
+```bash
+node tools/seo-qa.mjs
+```
+
+To also check production sitemap URLs for HTTP 200 responses:
+
+```bash
+node tools/seo-qa.mjs --production
+```
+
 ## Recommended Initial Wedge
 
 Launch with 10 destination clusters:

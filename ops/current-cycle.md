@@ -47,6 +47,12 @@ Implement the SRR-001 page-quality handoff before adding any new destination clu
   - verified all 22 sitemap URLs return 200;
   - found 0 local internal-link failures and 0 JSON-LD parse failures;
   - identified thin-page quality risks before further city expansion.
+- Implementation completed the first SRR-001 handoff pass on 2026-07-07:
+  - added `tools/seo-qa.mjs` for sitemap, internal-link, JSON-LD, thin-page, legacy-shim, and optional production checks;
+  - documented the QA command in `README.md`;
+  - upgraded `site/family-itinerary/san-diego-with-kids.html` via `tools/upgrade-priority-pages.mjs`;
+  - added San Diego itinerary route variants, nap/rest assumptions, stroller/drive friction, meal/reset notes, skip guidance, cluster links, and `ItemList` / `FAQPage` schema;
+  - re-ran local and production QA with 0 errors.
 
 ## Ready For SEO Research & Review
 
@@ -65,11 +71,16 @@ Implementation can proceed from `backlog/implementation-backlog.md`.
 
 Current ready implementation areas:
 
-- P0: add static site SEO QA script.
-- P0: upgrade `site/family-itinerary/san-diego-with-kids.html`.
 - P0: upgrade Chicago and San Antonio where-to-stay pages.
 - P1: upgrade or temporarily noindex thin teen pages, with an explicit San Antonio teen decision.
 - P1: handle legacy San Diego canonical shim pages with redirects or `noindex, follow`.
+
+Current QA findings from `node tools/seo-qa.mjs --production`:
+
+- Errors: 0.
+- Warnings: 15.
+- Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, four remaining itinerary pages, four teen pages, and Chicago/San Antonio where-to-stay pages.
+- Legacy shim warnings remain for the three root-level San Diego HTML files outside the sitemap.
 
 ## Waiting On User
 
@@ -84,7 +95,7 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-Implementation Agent.
+Implementation Agent for IMP-003, then SEO Research & Review Agent for post-implementation QA when the first cleanup batch is complete.
 
 ## Master Notes
 

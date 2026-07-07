@@ -367,6 +367,46 @@ const stayPages = {
   }
 };
 
+const itineraryPages = {
+  "family-itinerary/san-diego-with-kids.html": {
+    title: "San Diego Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    description:
+      "Build a San Diego itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with naps, meals, and skip notes.",
+    city: "San Diego",
+    quick: [
+      ["Best 1-day plan", "Zoo early, Balboa Park reset, Mission Bay or pool", "Highest San Diego payoff with only one cross-town move after lunch."],
+      ["Best 2-day plan", "Zoo/Balboa plus Mission Bay/La Jolla", "Gives one major attraction day and one coast day without overpacking."],
+      ["Best 3-day plan", "Arrival reset, zoo day, coast choice", "The safest family rhythm if naps, weather, or beach time matter."],
+      ["Best toddler pace", "Mission Bay, zoo bus tour, Birch Aquarium", "Shorter sessions, easier exits, and fewer stair-heavy coastal stops."],
+      ["Best teen pace", "Zoo highlights, La Jolla, Coronado or food stop", "More scenery and independence, fewer playground-heavy filler stops."],
+      ["Best rainy-day swap", "Birch Aquarium or one Balboa Park museum", "Keeps the day useful without rebuilding every meal and drive."],
+      ["Best stay pairing", "Mission Bay for younger kids; Downtown for no-car-lite trips", "Treat this as planning guidance and verify exact hotel logistics."],
+      ["What to skip", "Zoo plus La Jolla plus Coronado in one day", "That route can turn the trip into driving and parking management."]
+    ],
+    rows: [
+      ["1-day highlights", "Zoo early; lunch/rest; Mission Bay, Balboa Park, or hotel pool", "School-age mixed groups", "Post-lunch hotel or shade reset", "Moderate; zoo hills and one drive", "Eat near Balboa Park or near the hotel", "Late zoo start, La Jolla add-on, second paid attraction"],
+      ["2-day first visit", "Day 1 zoo/Balboa; Day 2 Mission Bay or La Jolla by age", "Families with a weekend", "Protect one afternoon as optional", "Moderate; two zones over two days", "Keep dinners near the stay base", "Trying to include Coronado and La Jolla unless kids have stamina"],
+      ["3-day balanced plan", "Arrival reset; zoo/Balboa; coast day with La Jolla or Coronado", "Most families", "One real reset each day", "Moderate; fewer rushed crossings", "Stock snacks on arrival and keep one easy dinner", "Making Day 1 a full sightseeing day"],
+      ["Toddler-paced plan", "Mission Bay morning; nap; zoo bus tour or Birch Aquarium", "Babies, toddlers, preschoolers", "Nap after lunch is the anchor", "Lower if you avoid Cove stairs and long walks", "Use hotel meals or verified nearby casual stops", "La Jolla Cove with stroller-heavy gear"],
+      ["Teen-paced plan", "Zoo highlights; La Jolla scenery; Coronado ferry or food stop", "Tweens and teens", "Reset can be a cafe, beach pause, or hotel break", "Higher walking tolerance, but parking still matters", "Add a food stop teens care about", "Too many little-kid playground resets"],
+      ["Rainy-day version", "Birch Aquarium or Balboa Park museum; meal nearby; hotel reset", "Any age with weather constraints", "Use the weather window for one outdoor walk", "Lower if you stay in one zone", "Do not count on beach meals in bad weather", "Long outdoor zoo day if rain is steady"]
+    ],
+    plans: {
+      "Arrival afternoon": "Keep arrival deliberately soft: groceries or snacks, hotel/pool time, and an early dinner near your base. Save the zoo and La Jolla for a rested morning.",
+      "Zoo day": "Arrive near opening, use the bus tour early, choose two or three zones, then leave space for a post-lunch reset. Add only one Balboa Park garden, playground, or museum if energy is still good.",
+      "Coast day": "Choose Mission Bay for younger kids, La Jolla for older walkers and teens, or Coronado when you want a calmer beach-and-ferry feel. Avoid trying to do all three in one day.",
+      "Rain backup": "Use Birch Aquarium or one Balboa Park museum as the anchor, then keep food and parking close. Treat the beach as a bonus if the weather clears.",
+      "Toddler adjustment": "Shorten every activity block, keep snacks visible, and make the hotel reset non-negotiable. If the first morning goes long, delete the afternoon stop.",
+      "Teen adjustment": "Trade one playground or short museum stop for La Jolla scenery, a food stop, kayaking-style activity if appropriate, or Coronado waterfront time."
+    },
+    faqs: [
+      ["How many days do families need in San Diego?", "Two or three days works best for a first family trip. One day can work if you choose the zoo plus one low-pressure reset instead of trying to see the whole coast."],
+      ["What should families skip on a short San Diego trip?", "Avoid stacking the zoo, La Jolla, Coronado, and Mission Bay into one day. Parking, hills, and drive time can overwhelm the actual activities."],
+      ["What is the easiest rainy-day San Diego itinerary with kids?", "Use Birch Aquarium or a Balboa Park museum as the main anchor, keep meals nearby, and save beach or zoo time for the best weather window."]
+    ]
+  }
+};
+
 function esc(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -479,6 +519,18 @@ ${rows.map((row) => `              <tr>${row.map((cell) => `<td>${esc(cell)}</td
         </div>`;
 }
 
+function renderItineraryMatrix(rows) {
+  const headers = ["Route", "Best structure", "Best for", "Rest window", "Stroller/drive friction", "Meal/reset notes", "What to skip"];
+  return `        <div class="comparison-scroll">
+          <table class="comparison-table">
+            <thead><tr>${headers.map((header) => `<th>${esc(header)}</th>`).join("")}</tr></thead>
+            <tbody>
+${rows.map((row) => `              <tr>${row.map((cell) => `<td>${esc(cell)}</td>`).join("")}</tr>`).join("\n")}
+            </tbody>
+          </table>
+        </div>`;
+}
+
 function renderHotels(hotels) {
   const labels = ["Best fit", "Room setup", "Pool", "Breakfast", "Kitchen/laundry", "Crib/rollaway", "Parking/fees", "Noise risk", "Why it fits families"];
   return `        <div class="detail-card-grid">
@@ -517,6 +569,53 @@ ${renderStayMatrix(page.rows)}
           </div>
           <p class="review-label">${esc(page.hotelNote || "Research-based shortlist. Verify fees, room type, policies, and amenities before booking.")}</p>
 ${renderHotels(page.hotels)}
+        </div>
+      </section>
+${markerEnd}
+`;
+}
+
+function renderItineraryUpgrade(page) {
+  return `${markerStart}
+      <section class="band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Quick route decisions</p>
+            <h2>Choose the San Diego plan that matches your family</h2>
+          </div>
+${renderQuickPicks(page.quick)}
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Compare itinerary options</p>
+          <h2>1-day, 2-day, 3-day, toddler, teen, and rainy-day variants</h2>
+        </div>
+        <p class="review-label">Planning guidance only. Drive times, parking, stroller routes, attraction hours, weather, and child energy can change the right answer for your family; verify current details before booking or promising a route.</p>
+${renderItineraryMatrix(page.rows)}
+      </section>
+
+      <section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Pacing rules</p>
+            <h2>How to keep the day from getting too ambitious</h2>
+          </div>
+${renderPlans(page.plans)}
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Cluster links</p>
+          <h2>Swap activities without rebuilding the whole trip</h2>
+        </div>
+        <div class="card-grid">
+          <article class="activity-card"><h3>All-ages activity guide</h3><p>Compare zoo, Mission Bay, Balboa Park, Birch Aquarium, La Jolla, and Coronado by age, rain, nap fit, and stroller friction.</p><p><a class="text-link" href="../things-to-do/san-diego-with-kids.html">Open San Diego things to do with kids</a></p></article>
+          <article class="activity-card"><h3>Toddler-specific swaps</h3><p>Use shorter sessions, easier exits, and nap-first pacing when younger kids are driving the schedule.</p><p><a class="text-link" href="../things-to-do/san-diego-with-toddlers.html">Open San Diego with toddlers</a></p></article>
+          <article class="activity-card"><h3>Teen-specific swaps</h3><p>Trade some little-kid resets for stronger scenery, food, and independence where it fits your family.</p><p><a class="text-link" href="../things-to-do/san-diego-with-teens.html">Open San Diego with teens</a></p></article>
+          <article class="activity-card"><h3>Where to stay first</h3><p>Pick the lodging base before locking the route. Mission Bay, Downtown, La Jolla, Coronado, and Mission Valley change the practical day shape.</p><p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Open where to stay in San Diego with kids</a></p></article>
         </div>
       </section>
 ${markerEnd}
@@ -575,8 +674,12 @@ function upgradeFile(outDir, path, page, type) {
   html = stripMarked(html, markerStart, markerEnd);
   html = stripMarked(html, schemaStart, schemaEnd);
   html = updateHead(html, page);
-  const section = type === "activity" ? renderActivityUpgrade(page) : renderStayUpgrade(page);
-  const schema = type === "activity" ? `${itemListSchema(page)}${faqSchema(page)}` : `${itemListSchema(page)}${faqSchema(page)}`;
+  const section = type === "activity"
+    ? renderActivityUpgrade(page)
+    : type === "itinerary"
+      ? renderItineraryUpgrade(page)
+      : renderStayUpgrade(page);
+  const schema = `${itemListSchema(page)}${faqSchema(page)}`;
   html = insertBeforeMainEnd(html, section);
   html = insertSchema(html, schema);
   writeFileSync(full, html);
@@ -588,5 +691,8 @@ export function upgradePriorityPages(outDir) {
   }
   for (const [path, page] of Object.entries(stayPages)) {
     upgradeFile(outDir, path, page, "stay");
+  }
+  for (const [path, page] of Object.entries(itineraryPages)) {
+    upgradeFile(outDir, path, page, "itinerary");
   }
 }
