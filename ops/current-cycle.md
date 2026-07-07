@@ -53,6 +53,11 @@ Implement the SRR-001 page-quality handoff before adding any new destination clu
   - upgraded `site/family-itinerary/san-diego-with-kids.html` via `tools/upgrade-priority-pages.mjs`;
   - added San Diego itinerary route variants, nap/rest assumptions, stroller/drive friction, meal/reset notes, skip guidance, cluster links, and `ItemList` / `FAQPage` schema;
   - re-ran local and production QA with 0 errors.
+- Implementation completed IMP-003 on 2026-07-07:
+  - upgraded Chicago and San Antonio where-to-stay pages via `tools/upgrade-priority-pages.mjs`;
+  - added quick-pick area decisions, area matrices, parking/transit/stroller/noise caveats, nearby attraction fit, family verdicts, and schema;
+  - used hotel-verification checklists instead of firm hotel recommendations because a human-reviewed hotel workflow is not yet available;
+  - re-ran local and production QA with 0 errors and 13 remaining warnings.
 
 ## Ready For SEO Research & Review
 
@@ -71,15 +76,14 @@ Implementation can proceed from `backlog/implementation-backlog.md`.
 
 Current ready implementation areas:
 
-- P0: upgrade Chicago and San Antonio where-to-stay pages.
 - P1: upgrade or temporarily noindex thin teen pages, with an explicit San Antonio teen decision.
 - P1: handle legacy San Diego canonical shim pages with redirects or `noindex, follow`.
 
 Current QA findings from `node tools/seo-qa.mjs --production`:
 
 - Errors: 0.
-- Warnings: 15.
-- Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, four remaining itinerary pages, four teen pages, and Chicago/San Antonio where-to-stay pages.
+- Warnings: 13.
+- Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, four remaining itinerary pages, and four teen pages.
 - Legacy shim warnings remain for the three root-level San Diego HTML files outside the sitemap.
 
 ## Waiting On User
@@ -95,7 +99,7 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-Implementation Agent for IMP-003, then SEO Research & Review Agent for post-implementation QA when the first cleanup batch is complete.
+Implementation Agent for IMP-004, then SEO Research & Review Agent for post-implementation QA when the first cleanup batch is complete.
 
 ## Master Notes
 

@@ -4,38 +4,9 @@ Last updated: 2026-07-07
 
 ## Active
 
-No implementation task is currently active. IMP-001 and IMP-002 were completed in the first implementation pass.
+No implementation task is currently active. IMP-001, IMP-002, and IMP-003 are complete.
 
 ## Ready
-
-### IMP-003: Upgrade Chicago And San Antonio Where-To-Stay Pages
-
-Status: ready
-
-Recommendation label: `improve`
-
-Priority: P0
-
-Source: SRR-001 audit, 2026-07-07
-
-Target files:
-
-- `site/where-to-stay/chicago-with-kids.html`
-- `site/where-to-stay/san-antonio-with-kids.html`
-
-Implementation scope:
-
-- Bring both pages up to the quality bar already used on San Diego, Las Vegas, and New York City stay pages.
-- Add quick-pick area decisions, area comparison table, parking/transit/stroller/noise caveats, nearby attraction fit, and family verdict.
-- Add hotel-shortlist sections only if claims are sourced and clearly marked for verification; otherwise add a "what to verify before booking" decision section instead of firm hotel recommendations.
-- Add source/update notes and schema where content supports it.
-
-Acceptance checks:
-
-- Each page includes a comparison table.
-- Each page separates area guidance from hotel recommendation claims.
-- Human-review caveats appear near any hotel or area recommendation.
-- JSON-LD parses if added.
 
 ### IMP-004: Decide Thin Teen Page Treatment
 
@@ -170,4 +141,30 @@ Acceptance checks:
 - Page includes a comparison/decision table.
 - Page retains official source/update notes.
 - Page remains linked from San Diego activity and stay pages.
+- JSON-LD parses through `tools/seo-qa.mjs`.
+
+### IMP-003: Upgrade Chicago And San Antonio Where-To-Stay Pages
+
+Status: done
+
+Completed: 2026-07-07
+
+Implementation notes:
+
+- Upgraded `site/where-to-stay/chicago-with-kids.html` and `site/where-to-stay/san-antonio-with-kids.html` through `tools/upgrade-priority-pages.mjs`.
+- Added quick-pick area decisions, area comparison matrices, parking/transit/stroller/noise caveats, nearby attraction fit, family verdicts, and `ItemList` / `FAQPage` JSON-LD.
+- Used "what to verify before booking" sections instead of firm hotel recommendations because a human-reviewed hotel workflow is not yet available.
+- Added area-guidance caveats near the comparison matrices and hotel-claim caveats near the verification sections.
+
+Validation result:
+
+- `node tools/seo-qa.mjs`: 0 errors, 13 warnings.
+- `node tools/seo-qa.mjs --production`: 0 errors, 13 warnings.
+- Chicago and San Antonio where-to-stay pages are no longer flagged as thin-page warnings.
+
+Acceptance checks:
+
+- Each page includes a comparison table.
+- Each page separates area guidance from hotel recommendation claims.
+- Human-review caveats appear near area guidance and hotel-verification sections.
 - JSON-LD parses through `tools/seo-qa.mjs`.

@@ -23,6 +23,11 @@
   - upgraded the San Diego family itinerary page through `tools/upgrade-priority-pages.mjs` and regenerated `site/family-itinerary/san-diego-with-kids.html`;
   - added San Diego itinerary decision support for 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day plans;
   - validated with local and production QA: 0 errors, with remaining warnings carried forward in the implementation backlog.
+- Completed `IMP-003` from the SRR-001 handoff:
+  - upgraded Chicago and San Antonio where-to-stay pages through `tools/upgrade-priority-pages.mjs`;
+  - added area quick picks, comparison matrices, parking/transit/stroller/noise caveats, nearby attraction fit, and family verdicts;
+  - used hotel-verification checklists instead of firm hotel recommendations because hotel claims still require human review;
+  - validated with local and production QA: 0 errors, 13 remaining warnings.
 
 ## Before Operating-System Migration
 

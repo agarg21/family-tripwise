@@ -364,6 +364,82 @@ const stayPages = {
       ["What is the best area to stay in NYC with kids?", "The Upper West Side is the safest default for many families because Central Park, AMNH, CMOM, neighborhood food, and calmer evenings are close together."],
       ["Should families stay in Times Square?", "Times Square can be convenient for shows and first-timers, but families with toddlers should think carefully about noise, crowds, room size, and stroller friction."]
     ]
+  },
+  "where-to-stay/chicago-with-kids.html": {
+    title: "Where to Stay in Chicago With Kids: Best Areas, Transit and Family Hotel Checks",
+    description:
+      "Compare where to stay in Chicago with kids by museum access, stroller and transit friction, parking, noise, walkability, hotel type, and family trip style.",
+    city: "Chicago",
+    quick: [
+      ["Best overall area", "River North / Magnificent Mile", "A practical first-visit base when you want restaurants, river access, and short rides to major sights."],
+      ["Best with toddlers", "Lincoln Park", "Zoo, playgrounds, neighborhood meals, and calmer evenings can beat maximum sightseeing efficiency."],
+      ["Best for museums", "Loop / Millennium Park or South Loop", "Choose by whether you want park access, Museum Campus proximity, or easier train/rideshare logistics."],
+      ["Best for teens", "River North or West Loop", "Better fit for architecture tours, food, lakefront plans, and fewer toddler-focused compromises."],
+      ["Best no-car base", "River North, Loop, or West Loop", "A car usually adds parking cost and friction; verify stroller access and elevator needs block by block."],
+      ["Best value check", "South Loop or select-service areas near transit", "Only works if the exact hotel still keeps meals and attractions manageable."],
+      ["Best quiet-feeling base", "Lincoln Park", "Often a better decompression fit than the busiest downtown blocks."],
+      ["Think twice about", "A car-dependent airport or suburban stay", "Rate savings can disappear if each day needs long rides, parking, or tired evening transfers."]
+    ],
+    areaNote: "Area guidance is research-based planning support, not a human-verified recommendation. Before booking, verify current transit access, elevator availability, parking cost, room setup, neighborhood noise, and walking routes for the exact hotel block.",
+    rows: [
+      ["River North / Magnificent Mile", "First-timers, restaurants, architecture tours", "Busy sidewalks and higher rates", "Good transit/rideshare access; car usually not helpful", "Mixed on crowded blocks", "Medium-high", "Expensive/limited", "High", "Riverwalk, Navy Pier access, Magnificent Mile", "Urban hotels and larger full-service properties", "Best practical default if downtown energy fits your kids"],
+      ["Lincoln Park", "Toddlers, zoo, playgrounds, calmer evenings", "Farther from Loop/Museum Campus sights", "Transit and rideshare planning needed", "Good near parks, mixed by station", "Low-medium", "Varies by property", "High for local meals/parks", "Lincoln Park Zoo, Nature Boardwalk, lakefront", "Boutique/select-service/nearby apartment-style stays", "Best slower family base"],
+      ["Loop / Millennium Park", "Short stays, parks, museums, transit", "Quieter evenings and office-district feel", "Strong train access; rideshares useful for Museum Campus", "Good in park core, busier downtown crossings", "Medium", "Expensive/limited", "High in daytime", "Millennium Park, Maggie Daley Park, Art Institute, Museum Campus rides", "Large urban hotels", "Best if park/museum access matters most"],
+      ["South Loop / Museum Campus", "Museum Campus, value checks, older kids", "Less classic tourist energy at night", "Good for Museum Campus; transit varies by block", "Good near parks, verify exact route", "Low-medium", "Often easier than core downtown but still paid", "Medium", "Field Museum, Shedd, lakefront, Grant Park", "Select-service, suites, urban hotels", "Good if museums drive the trip"],
+      ["West Loop", "Food, teens, stylish hotels", "Less toddler green space immediately outside", "Good rideshare and some transit; verify station distance", "Mixed depending on sidewalks/construction", "Medium", "Paid/varies", "High for restaurants", "Restaurants, Fulton Market, short rides downtown", "Boutique and lifestyle hotels", "Best for food-focused older-kid trips"]
+    ],
+    hotelNote: "No firm Chicago hotel recommendations are being made in this pass. Use this verification checklist to separate area fit from hotel claims until a human-reviewed hotel workflow exists.",
+    verify: [
+      ["Room and sleep setup", "Confirm the exact room type, bed count, sofa bed wording, crib/rollaway availability, occupancy limit, and whether connecting rooms are guaranteed or only requested."],
+      ["Parking and car plan", "If bringing a car, verify nightly parking cost, in/out privileges, valet-only rules, garage height, and whether daily sightseeing still requires separate attraction parking."],
+      ["Transit and stroller access", "Check the exact walk to CTA stations, elevator availability, sidewalk construction, bridge crossings, and whether rideshare pickup is practical with car seats."],
+      ["Noise and event risk", "Ask about room placement away from elevators, nightlife, event venues, street noise, and large weekend events if naps or early bedtimes matter."],
+      ["Meals and reset options", "Verify breakfast details, mini-fridge/microwave availability, nearby casual meals, grocery access, and whether returning for a midday reset is realistic from your planned sights."],
+      ["Pool and weather backup", "Do not assume a pool is useful just because it exists; check pool hours, seasonal limits, kid rules, and whether the hotel has indoor space for bad-weather downtime."]
+    ],
+    faqs: [
+      ["What is the best area to stay in Chicago with kids?", "River North/Magnificent Mile is the most practical first-visit default for many families, while Lincoln Park can be better for toddlers and calmer evenings."],
+      ["Should families rent a car in Chicago?", "Most city-focused family trips work better without a car, but exact transit, stroller, and car-seat needs should be checked against the hotel location."],
+      ["Where should families stay for Chicago museums?", "Loop, South Loop, and River North can all work for Museum Campus trips; the best choice depends on hotel block, budget, meals, and how much transit or rideshare friction your family can handle."]
+    ]
+  },
+  "where-to-stay/san-antonio-with-kids.html": {
+    title: "Where to Stay in San Antonio With Kids: River Walk, Pearl and Family Hotel Checks",
+    description:
+      "Compare where to stay in San Antonio with kids by River Walk access, heat, stroller friction, parking, noise, pool value, hotel type, and family trip style.",
+    city: "San Antonio",
+    quick: [
+      ["Best overall area", "Pearl / Museum Reach", "A calmer food-and-walk base for many families if the hotel price and attraction distances work."],
+      ["Best first visit", "River Walk / Downtown", "Closest to the classic sights, but noise, crowds, stroller handling, and parking need checking."],
+      ["Best with toddlers", "Pearl / Museum Reach or Broadway/DoSeum area", "Usually easier to pair with The DoSeum, zoo, shade breaks, and shorter outings."],
+      ["Best for theme parks", "Northwest / SeaWorld area", "Works when SeaWorld or Six Flags is the anchor and a car-based trip is expected."],
+      ["Best value check", "Airport / North San Antonio", "Can make sense with a car, but it is less vacation-feeling and farther from signature stops."],
+      ["Best no-car-lite base", "Downtown", "Only if your route stays compact and you verify stroller-friendly walking paths and rideshare plans."],
+      ["Best heat strategy", "Stay near your main morning anchor", "San Antonio plans work better when midday reset distance is short."],
+      ["Think twice about", "A cheap stay far from every anchor", "Heat, parking, and repeated drives can cost more than the room savings are worth."]
+    ],
+    areaNote: "Area guidance is research-based planning support, not a human-verified recommendation. Before booking, verify current parking costs, pool hours, elevator access, River Walk stroller routes, event noise, heat-season plans, and drive times for the exact hotel.",
+    rows: [
+      ["Pearl / Museum Reach", "Food, calmer walks, DoSeum/zoo access", "Fewer bargain hotels and still not next to every classic sight", "Car/rideshare useful; some walkable meals", "Generally easier than busiest River Walk segments, verify route", "Low-medium", "Paid/varies by property", "High for meals, medium for attractions", "Pearl, Museum Reach, The DoSeum, zoo by short ride", "Boutique/upscale/select-service nearby", "Best balanced family base if budget works"],
+      ["River Walk / Downtown", "First visit, Alamo, boat ride, walkable meals", "Noise, crowds, stroller crowding, parking cost", "Lowest car need for classic sights; rideshares still useful", "Mixed on stairs/crowds/river-level paths", "Medium-high", "Often expensive", "High for signature sights", "Alamo, River Walk, boat rides, Hemisfair", "Large downtown hotels and historic properties", "Best classic first-visit base with caveats"],
+      ["Broadway / Brackenridge / DoSeum area", "Toddlers, zoo, DoSeum, shorter younger-kid days", "Less classic River Walk feel", "Car/rideshare likely", "Good around some attractions, verify sidewalks", "Low-medium", "Varies/easier than core downtown in some cases", "Medium", "The DoSeum, San Antonio Zoo, Brackenridge Park", "Select-service and neighborhood hotels nearby", "Best younger-kid logistics candidate"],
+      ["Northwest / SeaWorld / Six Flags area", "Theme parks, pools, car-based trips", "Farther from Downtown and Pearl", "Car required", "Hotel-dependent", "Low-medium", "Often easier but verify fees", "Low", "SeaWorld, Six Flags, resort pools", "Resorts, suites, chain hotels", "Best when theme parks are the main trip"],
+      ["Airport / North San Antonio", "Value, parking, road access", "Less vacation feel and more driving", "Car required", "Hotel-dependent", "Low-medium", "Often easier", "Low", "Airport, north-side drives, Downtown by car", "Chain/select-service hotels", "Best budget base only if drive time pencils out"]
+    ],
+    hotelNote: "No firm San Antonio hotel recommendations are being made in this pass. Use this verification checklist to separate area fit from hotel claims until a human-reviewed hotel workflow exists.",
+    verify: [
+      ["Room and sleep setup", "Confirm the exact bed count, suite wording, crib/rollaway availability, occupancy limit, connecting-room policy, and whether the room location can support naps."],
+      ["Parking and resort fees", "Verify nightly parking, valet-only rules, resort/destination fees, in/out privileges, and whether Downtown attractions require separate parking."],
+      ["Pool and heat plan", "Check pool hours, shade, seasonal closures, towel rules, and whether the pool is close enough to function as a midday heat reset."],
+      ["River Walk stroller route", "For Downtown stays, verify whether the practical route uses stairs, elevators, narrow paths, bridges, or crowded restaurant segments."],
+      ["Noise and events", "Ask about room placement away from bars, event spaces, elevators, pool noise, and River Walk-facing late-night activity if early bedtime matters."],
+      ["Meals and midday reset", "Verify breakfast, mini-fridge/microwave access, nearby casual meals, and whether your main activities are close enough for a heat-season rest break."]
+    ],
+    faqs: [
+      ["What is the best area to stay in San Antonio with kids?", "Pearl/Museum Reach is often the best balanced family base, while Downtown/River Walk is strongest for a classic first visit if families can manage noise, crowds, and parking."],
+      ["Is the San Antonio River Walk stroller-friendly?", "Some routes can work, but stairs, crowds, bridges, narrow paths, and restaurant segments make exact-route verification important before relying on a stroller-heavy plan."],
+      ["Should families stay near SeaWorld in San Antonio?", "Stay near SeaWorld or Six Flags when theme parks are the main trip. For Alamo, River Walk, DoSeum, zoo, or Pearl plans, a central base usually reduces driving friction."]
+    ]
   }
 };
 
@@ -541,7 +617,39 @@ ${hotels.map(([name, ...values]) => `          <article class="detail-card resea
         </div>`;
 }
 
+function renderVerificationChecks(checks) {
+  return `        <div class="detail-card-grid">
+${checks.map(([name, value]) => `          <article class="detail-card research-card">
+            <h3>${esc(name)}</h3>
+            <p>${esc(value)}</p>
+          </article>`).join("\n")}
+        </div>`;
+}
+
 function renderStayUpgrade(page) {
+  const areaNote = page.areaNote ? `        <p class="review-label">${esc(page.areaNote)}</p>\n` : "";
+  const hotelSection = page.hotels?.length
+    ? `<section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Hotel shortlist</p>
+            <h2>Research-based family hotel shortlist</h2>
+          </div>
+          <p class="review-label">${esc(page.hotelNote || "Research-based shortlist. Verify fees, room type, policies, and amenities before booking.")}</p>
+${renderHotels(page.hotels)}
+        </div>
+      </section>`
+    : `<section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Before booking</p>
+            <h2>What to verify before choosing a family hotel</h2>
+          </div>
+          <p class="review-label">${esc(page.hotelNote || "No firm hotel recommendations are being made in this pass. Verify exact hotel claims before booking.")}</p>
+${renderVerificationChecks(page.verify || [])}
+        </div>
+      </section>`;
+
   return `${markerStart}
       <section class="band rank-ready-section">
         <div class="container">
@@ -558,19 +666,10 @@ ${renderQuickPicks(page.quick)}
           <p class="eyebrow">Area matrix</p>
           <h2>Compare the stay tradeoffs before booking</h2>
         </div>
-${renderStayMatrix(page.rows)}
+${areaNote}${renderStayMatrix(page.rows)}
       </section>
 
-      <section class="band intro-band rank-ready-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Hotel shortlist</p>
-            <h2>Research-based family hotel shortlist</h2>
-          </div>
-          <p class="review-label">${esc(page.hotelNote || "Research-based shortlist. Verify fees, room type, policies, and amenities before booking.")}</p>
-${renderHotels(page.hotels)}
-        </div>
-      </section>
+      ${hotelSection}
 ${markerEnd}
 `;
 }
