@@ -57,110 +57,82 @@
           </dl>
         </div>
       </section>
-      <section class="container page-section">
-        <div class="section-heading">
-          <p class="eyebrow">Activity filters</p>
-          <h2>Kid-friendly activities by age, pace, and weather</h2>
-        </div>
-        <div class="filter-bar" aria-label="Activity filters">
-          <button class="chip active" type="button" data-filter="all">All</button>
-          <button class="chip" type="button" data-filter="baby">Baby</button>
-          <button class="chip" type="button" data-filter="toddler">Toddler</button>
-          <button class="chip" type="button" data-filter="preschool">Preschool</button>
-          <button class="chip" type="button" data-filter="elementary">Elementary</button>
-          <button class="chip" type="button" data-filter="tween">Tween</button>
-          <button class="chip" type="button" data-filter="teen">Teen</button>
-          <button class="chip" type="button" data-filter="rain">Rain</button>
-        </div>
-        <div class="activity-grid">
-          <article class="activity-card" data-tags="baby toddler preschool elementary tween teen stroller">
-            <h3>Central Park</h3>
-            <p>Use playgrounds and one nearby museum instead of trying to cover the whole park.</p>
-            <dl>
-              <div><dt>Age fit</dt><dd>baby, toddler, preschool, elementary, tween, teen, stroller</dd></div>
-              <div><dt>Time</dt><dd>2-4 hrs</dd></div>
-              <div><dt>Cost</dt><dd>$</dd></div>
-              <div><dt>Area</dt><dd>Upper Manhattan</dd></div>
-              <div><dt>Stroller</dt><dd>Good</dd></div>
-              <div><dt>Rainy day</dt><dd>No</dd></div>
-              <div><dt>Nap-friendly</dt><dd>High</dd></div>
-              <div><dt>Booking</dt><dd>Check ahead</dd></div>
-            </dl>
-          </article>
-          <article class="activity-card" data-tags="toddler preschool elementary tween teen rain stroller">
-            <h3>American Museum of Natural History</h3>
-            <p>A strong anchor for most ages; pick exhibits before entering.</p>
-            <dl>
-              <div><dt>Age fit</dt><dd>toddler, preschool, elementary, tween, teen, rain, stroller</dd></div>
-              <div><dt>Time</dt><dd>2-4 hrs</dd></div>
-              <div><dt>Cost</dt><dd>$$</dd></div>
-              <div><dt>Area</dt><dd>Upper West Side</dd></div>
-              <div><dt>Stroller</dt><dd>Good</dd></div>
-              <div><dt>Rainy day</dt><dd>Yes</dd></div>
-              <div><dt>Nap-friendly</dt><dd>Medium</dd></div>
-              <div><dt>Booking</dt><dd>Check ahead</dd></div>
-            </dl>
-          </article>
-          <article class="activity-card" data-tags="preschool elementary tween teen stroller">
-            <h3>Staten Island Ferry</h3>
-            <p>A free skyline-and-statue moment without committing to a full tour.</p>
-            <dl>
-              <div><dt>Age fit</dt><dd>preschool, elementary, tween, teen, stroller</dd></div>
-              <div><dt>Time</dt><dd>90 min</dd></div>
-              <div><dt>Cost</dt><dd>$</dd></div>
-              <div><dt>Area</dt><dd>Lower Manhattan</dd></div>
-              <div><dt>Stroller</dt><dd>Good</dd></div>
-              <div><dt>Rainy day</dt><dd>Partial</dd></div>
-              <div><dt>Nap-friendly</dt><dd>Medium</dd></div>
-              <div><dt>Booking</dt><dd>Check ahead</dd></div>
-            </dl>
-          </article>
-          <article class="activity-card" data-tags="baby toddler preschool rain stroller">
-            <h3>Children's Museum of Manhattan</h3>
-            <p>Best for younger kids when weather or energy dips.</p>
-            <dl>
-              <div><dt>Age fit</dt><dd>baby, toddler, preschool, rain, stroller</dd></div>
-              <div><dt>Time</dt><dd>90 min-2 hrs</dd></div>
-              <div><dt>Cost</dt><dd>$$</dd></div>
-              <div><dt>Area</dt><dd>Upper West Side</dd></div>
-              <div><dt>Stroller</dt><dd>Good</dd></div>
-              <div><dt>Rainy day</dt><dd>Yes</dd></div>
-              <div><dt>Nap-friendly</dt><dd>High</dd></div>
-              <div><dt>Booking</dt><dd>Check ahead</dd></div>
-            </dl>
-          </article>
-          <article class="activity-card" data-tags="elementary tween teen">
-            <h3>Top of the Rock or Empire State Building</h3>
-            <p>Better for older kids who can handle lines and heights.</p>
-            <dl>
-              <div><dt>Age fit</dt><dd>elementary, tween, teen</dd></div>
-              <div><dt>Time</dt><dd>90 min</dd></div>
-              <div><dt>Cost</dt><dd>$$$</dd></div>
-              <div><dt>Area</dt><dd>Midtown</dd></div>
-              <div><dt>Stroller</dt><dd>Mixed</dd></div>
-              <div><dt>Rainy day</dt><dd>Yes</dd></div>
-              <div><dt>Nap-friendly</dt><dd>Low</dd></div>
-              <div><dt>Booking</dt><dd>Check ahead</dd></div>
-            </dl>
-          </article>
-          <article class="activity-card" data-tags="toddler preschool elementary tween teen stroller">
-            <h3>Brooklyn Bridge Park</h3>
-            <p>Great skyline payoff with more space than Midtown sidewalks.</p>
-            <dl>
-              <div><dt>Age fit</dt><dd>toddler, preschool, elementary, tween, teen, stroller</dd></div>
-              <div><dt>Time</dt><dd>2-3 hrs</dd></div>
-              <div><dt>Cost</dt><dd>$</dd></div>
-              <div><dt>Area</dt><dd>Brooklyn</dd></div>
-              <div><dt>Stroller</dt><dd>Good</dd></div>
-              <div><dt>Rainy day</dt><dd>No</dd></div>
-              <div><dt>Nap-friendly</dt><dd>Medium</dd></div>
-              <div><dt>Booking</dt><dd>Check ahead</dd></div>
-            </dl>
-          </article>
-        </div>
-        <script type="application/json" id="map-ready-activities">[{"name":"Central Park","tags":["baby","toddler","preschool","elementary","tween","teen","stroller"],"time":"2-4 hrs","cost":"$","stroller":"Good","rain":"No","nap":"High","area":"Upper Manhattan","summary":"Use playgrounds and one nearby museum instead of trying to cover the whole park."},{"name":"American Museum of Natural History","tags":["toddler","preschool","elementary","tween","teen","rain","stroller"],"time":"2-4 hrs","cost":"$$","stroller":"Good","rain":"Yes","nap":"Medium","area":"Upper West Side","summary":"A strong anchor for most ages; pick exhibits before entering."},{"name":"Staten Island Ferry","tags":["preschool","elementary","tween","teen","stroller"],"time":"90 min","cost":"$","stroller":"Good","rain":"Partial","nap":"Medium","area":"Lower Manhattan","summary":"A free skyline-and-statue moment without committing to a full tour."},{"name":"Children's Museum of Manhattan","tags":["baby","toddler","preschool","rain","stroller"],"time":"90 min-2 hrs","cost":"$$","stroller":"Good","rain":"Yes","nap":"High","area":"Upper West Side","summary":"Best for younger kids when weather or energy dips."},{"name":"Top of the Rock or Empire State Building","tags":["elementary","tween","teen"],"time":"90 min","cost":"$$$","stroller":"Mixed","rain":"Yes","nap":"Low","area":"Midtown","summary":"Better for older kids who can handle lines and heights."},{"name":"Brooklyn Bridge Park","tags":["toddler","preschool","elementary","tween","teen","stroller"],"time":"2-3 hrs","cost":"$","stroller":"Good","rain":"No","nap":"Medium","area":"Brooklyn","summary":"Great skyline payoff with more space than Midtown sidewalks."}]</script>
-      </section>
 <!-- priority-upgrade:start -->
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">First-time visitors</p>
+          <h2>Best NYC choices for a first family trip</h2>
+        </div>
+        <div class="quick-pick-grid">
+          <article class="quick-pick">
+            <span>Best first-day plan</span>
+            <strong>Central Park plus AMNH</strong>
+            <p>Use one Upper West Side zone for outdoor space, a major indoor anchor, bathrooms, and an easier dinner reset.</p>
+          </article>
+          <article class="quick-pick">
+            <span>Best classic skyline moment</span>
+            <strong>Staten Island Ferry or Brooklyn Bridge Park</strong>
+            <p>Pick one lower-stress skyline plan instead of trying to combine every Downtown and Brooklyn landmark.</p>
+          </article>
+          <article class="quick-pick">
+            <span>Best toddler-first route</span>
+            <strong>Central Park playground plus CMOM</strong>
+            <p>Short sessions and a nearby hotel or meal reset matter more than checking off Midtown sights.</p>
+          </article>
+          <article class="quick-pick">
+            <span>Best older-kid route</span>
+            <strong>Brooklyn Bridge Park or an observation deck</strong>
+            <p>Give older kids a skyline payoff, but verify lines, heights, weather, and timed-ticket rules first.</p>
+          </article>
+          <article class="quick-pick">
+            <span>Best rainy-day fallback</span>
+            <strong>AMNH as the anchor</strong>
+            <p>Use one large indoor stop and keep meals nearby rather than crossing town twice in bad weather.</p>
+          </article>
+          <article class="quick-pick">
+            <span>Best next planning step</span>
+            <strong>Choose stay area before final route</strong>
+            <p>Use the NYC stay guide and itinerary page so subway, stroller, and reset plans match your hotel base.</p>
+          </article>
+        </div>
+        <p class="review-label">Planning guidance only. Verify current museum rules, timed-entry needs, stroller/elevator access, transit changes, weather, and safety advisories before committing to a route.</p>
+      </section>
+
+      <section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Tourist trip planning</p>
+            <h2>Scan by age, weather, budget, and stroller/transit friction</h2>
+          </div>
+          <p class="review-label">This page is for families planning a New York City trip, especially first-time or short-stay visitors. Local weekend events, seasonal calendars, borough-specific repeat visits, and day-trip ideas are a separate future research concept; they are not part of this evergreen tourist guide yet.</p>
+        <div class="comparison-scroll">
+          <table class="comparison-table">
+            <thead><tr><th>Trip type</th><th>Best picks</th><th>Age band</th><th>Weather</th><th>Budget</th><th>Stroller/transit note</th><th>Next step</th></tr></thead>
+            <tbody>
+              <tr><td>First-time mixed ages</td><td>Central Park plus AMNH</td><td>0-14</td><td>Good with AMNH backup</td><td>$-$$</td><td>Easier if staying Upper West Side; verify stroller route and museum rules</td><td><a href="../where-to-stay/new-york-city-with-kids.html">Pick a stay base</a></td></tr>
+              <tr><td>Toddlers/preschoolers</td><td>Central Park playgrounds or CMOM</td><td>0-6</td><td>CMOM for rain</td><td>$$ for CMOM</td><td>Keep sessions short and confirm elevator/stroller access for your route</td><td><a href="../family-itinerary/new-york-city-with-kids.html">Build a toddler-paced route</a></td></tr>
+              <tr><td>Elementary kids</td><td>AMNH, ferry, Central Park</td><td>6-10</td><td>AMNH works best in rain</td><td>$-$$</td><td>Avoid crossing town more than once after lunch</td><td><a href="../family-itinerary/new-york-city-with-kids.html">Use a 1- or 2-day plan</a></td></tr>
+              <tr><td>Tweens/teens</td><td>Brooklyn Bridge Park or observation deck</td><td>10-17</td><td>Observation decks are weather-sensitive</td><td>$-$$$</td><td>Transit and line timing matter more than stroller access</td><td><a href="../where-to-stay/new-york-city-with-kids.html">Choose a teen-friendly base</a></td></tr>
+              <tr><td>Low-cost day</td><td>Staten Island Ferry plus park time</td><td>4-17</td><td>Partial weather backup</td><td>$</td><td>Boarding/waiting and bathroom timing still need planning</td><td><a href="../family-itinerary/new-york-city-with-kids.html">Map the day before leaving</a></td></tr>
+              <tr><td>Bad-weather day</td><td>AMNH or CMOM by age</td><td>0-14</td><td>Best rain plan</td><td>$$</td><td>Keep meals close and avoid two long subway transfers in rain</td><td><a href="../where-to-stay/new-york-city-with-kids.html">Stay near the rainy-day anchor</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Next planning step</p>
+          <h2>Match activities to your stay base and route</h2>
+        </div>
+        <div class="card-grid">
+          <article class="activity-card"><h3>Choose a family base</h3><p>NYC sightseeing changes by hotel area. Room size, elevator access, subway distance, stroller friction, and evening noise all affect the day.</p><p><a class="text-link" href="../where-to-stay/new-york-city-with-kids.html">Open where to stay in New York City with kids</a></p></article>
+          <article class="activity-card"><h3>Turn picks into a route</h3><p>Use the itinerary page to avoid crossing town twice, protect meal windows, and keep rainy-day swaps realistic.</p><p><a class="text-link" href="../family-itinerary/new-york-city-with-kids.html">Open the New York City family itinerary</a></p></article>
+          <article class="activity-card"><h3>Keep this page tourist-focused</h3><p>This evergreen guide is for trip planning. Local weekend events, seasonal calendars, and repeat-visit ideas need a separate freshness workflow before publishing.</p></article>
+        </div>
+      </section>
+
       <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
@@ -222,10 +194,10 @@
             <thead><tr><th>Activity</th><th>Best ages</th><th>Time</th><th>Cost</th><th>Area</th><th>Stroller</th><th>Rain</th><th>Nap</th><th>Booking</th><th>Why worth it</th><th>Pair nearby</th></tr></thead>
             <tbody>
               <tr><td>Central Park</td><td>0-17</td><td>2-4 hrs</td><td>$</td><td>Upper Manhattan</td><td>Good</td><td>No</td><td>High</td><td>No</td><td>Flexible outdoor reset with playgrounds</td><td>AMNH or Upper West Side meal</td></tr>
-              <tr><td>American Museum of Natural History</td><td>3-14</td><td>2-4 hrs</td><td>$</td><td>Upper West Side</td><td>Good</td><td>Yes</td><td>Medium</td><td>Timed tickets helpful</td><td>Best all-age rainy-day anchor</td><td>Central Park</td></tr>
+              <tr><td>American Museum of Natural History</td><td>3-14</td><td>2-4 hrs</td><td>$$</td><td>Upper West Side</td><td>Good</td><td>Yes</td><td>Medium</td><td>Timed tickets helpful</td><td>Best all-age rainy-day anchor</td><td>Central Park</td></tr>
               <tr><td>Staten Island Ferry</td><td>4+</td><td>90 min</td><td>$</td><td>Lower Manhattan</td><td>Good</td><td>Partial</td><td>Medium</td><td>No</td><td>Free skyline/statue ride</td><td>Battery Park or Downtown meal</td></tr>
-              <tr><td>Children's Museum of Manhattan</td><td>0-6</td><td>90 min-2 hrs</td><td>$</td><td>Upper West Side</td><td>Good</td><td>Yes</td><td>High</td><td>Check tickets</td><td>Toddler/preschool indoor reset</td><td>Central Park playground</td></tr>
-              <tr><td>Top of the Rock</td><td>7+</td><td>90 min</td><td>$$</td><td>Midtown</td><td>Mixed</td><td>Yes</td><td>Low</td><td>Book ahead</td><td>Skyline payoff for older kids</td><td>Bryant Park or easy dinner</td></tr>
+              <tr><td>Children's Museum of Manhattan</td><td>0-6</td><td>90 min-2 hrs</td><td>$$</td><td>Upper West Side</td><td>Good</td><td>Yes</td><td>High</td><td>Check tickets</td><td>Toddler/preschool indoor reset</td><td>Central Park playground</td></tr>
+              <tr><td>Top of the Rock</td><td>7+</td><td>90 min</td><td>$$$</td><td>Midtown</td><td>Mixed</td><td>Yes</td><td>Low</td><td>Book ahead</td><td>Skyline payoff for older kids</td><td>Bryant Park or easy dinner</td></tr>
               <tr><td>Brooklyn Bridge Park</td><td>2-17</td><td>2-3 hrs</td><td>$</td><td>Brooklyn</td><td>Good</td><td>No</td><td>Medium</td><td>No</td><td>Skyline, playgrounds, and open space</td><td>Brooklyn Heights Promenade</td></tr>
             </tbody>
           </table>
@@ -332,6 +304,110 @@
         </div>
       </section>
 <!-- priority-upgrade:end -->
+      <section class="container page-section">
+        <div class="section-heading">
+          <p class="eyebrow">Activity filters</p>
+          <h2>Kid-friendly activities by age, pace, and weather</h2>
+        </div>
+        <div class="filter-bar" aria-label="Activity filters">
+          <button class="chip active" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="baby">Baby</button>
+          <button class="chip" type="button" data-filter="toddler">Toddler</button>
+          <button class="chip" type="button" data-filter="preschool">Preschool</button>
+          <button class="chip" type="button" data-filter="elementary">Elementary</button>
+          <button class="chip" type="button" data-filter="tween">Tween</button>
+          <button class="chip" type="button" data-filter="teen">Teen</button>
+          <button class="chip" type="button" data-filter="rain">Rain</button>
+        </div>
+        <div class="activity-grid">
+          <article class="activity-card" data-tags="baby toddler preschool elementary tween teen stroller">
+            <h3>Central Park</h3>
+            <p>Use playgrounds and one nearby museum instead of trying to cover the whole park.</p>
+            <dl>
+              <div><dt>Age fit</dt><dd>baby, toddler, preschool, elementary, tween, teen, stroller</dd></div>
+              <div><dt>Time</dt><dd>2-4 hrs</dd></div>
+              <div><dt>Cost</dt><dd>$</dd></div>
+              <div><dt>Area</dt><dd>Upper Manhattan</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+              <div><dt>Rainy day</dt><dd>No</dd></div>
+              <div><dt>Nap-friendly</dt><dd>High</dd></div>
+              <div><dt>Booking</dt><dd>Check ahead</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="toddler preschool elementary tween teen rain stroller">
+            <h3>American Museum of Natural History</h3>
+            <p>A strong anchor for most ages; pick exhibits before entering.</p>
+            <dl>
+              <div><dt>Age fit</dt><dd>toddler, preschool, elementary, tween, teen, rain, stroller</dd></div>
+              <div><dt>Time</dt><dd>2-4 hrs</dd></div>
+              <div><dt>Cost</dt><dd>$$</dd></div>
+              <div><dt>Area</dt><dd>Upper West Side</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+              <div><dt>Rainy day</dt><dd>Yes</dd></div>
+              <div><dt>Nap-friendly</dt><dd>Medium</dd></div>
+              <div><dt>Booking</dt><dd>Check ahead</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="preschool elementary tween teen stroller">
+            <h3>Staten Island Ferry</h3>
+            <p>A free skyline-and-statue moment without committing to a full tour.</p>
+            <dl>
+              <div><dt>Age fit</dt><dd>preschool, elementary, tween, teen, stroller</dd></div>
+              <div><dt>Time</dt><dd>90 min</dd></div>
+              <div><dt>Cost</dt><dd>$</dd></div>
+              <div><dt>Area</dt><dd>Lower Manhattan</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+              <div><dt>Rainy day</dt><dd>Partial</dd></div>
+              <div><dt>Nap-friendly</dt><dd>Medium</dd></div>
+              <div><dt>Booking</dt><dd>Check ahead</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="baby toddler preschool rain stroller">
+            <h3>Children's Museum of Manhattan</h3>
+            <p>Best for younger kids when weather or energy dips.</p>
+            <dl>
+              <div><dt>Age fit</dt><dd>baby, toddler, preschool, rain, stroller</dd></div>
+              <div><dt>Time</dt><dd>90 min-2 hrs</dd></div>
+              <div><dt>Cost</dt><dd>$$</dd></div>
+              <div><dt>Area</dt><dd>Upper West Side</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+              <div><dt>Rainy day</dt><dd>Yes</dd></div>
+              <div><dt>Nap-friendly</dt><dd>High</dd></div>
+              <div><dt>Booking</dt><dd>Check ahead</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="elementary tween teen">
+            <h3>Top of the Rock or Empire State Building</h3>
+            <p>Better for older kids who can handle lines and heights.</p>
+            <dl>
+              <div><dt>Age fit</dt><dd>elementary, tween, teen</dd></div>
+              <div><dt>Time</dt><dd>90 min</dd></div>
+              <div><dt>Cost</dt><dd>$$$</dd></div>
+              <div><dt>Area</dt><dd>Midtown</dd></div>
+              <div><dt>Stroller</dt><dd>Mixed</dd></div>
+              <div><dt>Rainy day</dt><dd>Yes</dd></div>
+              <div><dt>Nap-friendly</dt><dd>Low</dd></div>
+              <div><dt>Booking</dt><dd>Check ahead</dd></div>
+            </dl>
+          </article>
+          <article class="activity-card" data-tags="toddler preschool elementary tween teen stroller">
+            <h3>Brooklyn Bridge Park</h3>
+            <p>Great skyline payoff with more space than Midtown sidewalks.</p>
+            <dl>
+              <div><dt>Age fit</dt><dd>toddler, preschool, elementary, tween, teen, stroller</dd></div>
+              <div><dt>Time</dt><dd>2-3 hrs</dd></div>
+              <div><dt>Cost</dt><dd>$</dd></div>
+              <div><dt>Area</dt><dd>Brooklyn</dd></div>
+              <div><dt>Stroller</dt><dd>Good</dd></div>
+              <div><dt>Rainy day</dt><dd>No</dd></div>
+              <div><dt>Nap-friendly</dt><dd>Medium</dd></div>
+              <div><dt>Booking</dt><dd>Check ahead</dd></div>
+            </dl>
+          </article>
+        </div>
+        <script type="application/json" id="map-ready-activities">[{"name":"Central Park","tags":["baby","toddler","preschool","elementary","tween","teen","stroller"],"time":"2-4 hrs","cost":"$","stroller":"Good","rain":"No","nap":"High","area":"Upper Manhattan","summary":"Use playgrounds and one nearby museum instead of trying to cover the whole park."},{"name":"American Museum of Natural History","tags":["toddler","preschool","elementary","tween","teen","rain","stroller"],"time":"2-4 hrs","cost":"$$","stroller":"Good","rain":"Yes","nap":"Medium","area":"Upper West Side","summary":"A strong anchor for most ages; pick exhibits before entering."},{"name":"Staten Island Ferry","tags":["preschool","elementary","tween","teen","stroller"],"time":"90 min","cost":"$","stroller":"Good","rain":"Partial","nap":"Medium","area":"Lower Manhattan","summary":"A free skyline-and-statue moment without committing to a full tour."},{"name":"Children's Museum of Manhattan","tags":["baby","toddler","preschool","rain","stroller"],"time":"90 min-2 hrs","cost":"$$","stroller":"Good","rain":"Yes","nap":"High","area":"Upper West Side","summary":"Best for younger kids when weather or energy dips."},{"name":"Top of the Rock or Empire State Building","tags":["elementary","tween","teen"],"time":"90 min","cost":"$$$","stroller":"Mixed","rain":"Yes","nap":"Low","area":"Midtown","summary":"Better for older kids who can handle lines and heights."},{"name":"Brooklyn Bridge Park","tags":["toddler","preschool","elementary","tween","teen","stroller"],"time":"2-3 hrs","cost":"$","stroller":"Good","rain":"No","nap":"Medium","area":"Brooklyn","summary":"Great skyline payoff with more space than Midtown sidewalks."}]</script>
+      </section>
+
       <section class="container page-section source-section">
         <div class="section-heading">
           <p class="eyebrow">Sources checked</p>

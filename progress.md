@@ -7,6 +7,10 @@
   - GSC showed 15 impressions and 0 clicks, so recommendations remain directional;
   - `things-to-do/new-york-city-with-kids.html` had the strongest early page-level signal;
   - NYC local/weekend and San Antonio hotel opportunities were deferred for the next research discussion.
+- Completed `IMP-005` and `IMP-009`:
+  - added `noindex, follow` to the three legacy San Diego shim pages while preserving canonical links to active San Diego URLs;
+  - improved the existing tourist-oriented New York City things-to-do page with first-time visitor decisions, a scan matrix, tourist-vs-local framing, and stronger NYC stay/itinerary links;
+  - validated with local and production QA: 0 errors, 6 remaining warnings.
 
 ## 2026-07-07
 

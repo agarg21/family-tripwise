@@ -225,6 +225,25 @@ const activityPages = {
     description:
       "Plan New York City with kids by age, stroller difficulty, subway friction, rainy-day museums, nap-friendly routing, free activities, and nearby pairings.",
     city: "New York City",
+    placement: "after-intro",
+    firstTime: [
+      ["Best first-day plan", "Central Park plus AMNH", "Use one Upper West Side zone for outdoor space, a major indoor anchor, bathrooms, and an easier dinner reset."],
+      ["Best classic skyline moment", "Staten Island Ferry or Brooklyn Bridge Park", "Pick one lower-stress skyline plan instead of trying to combine every Downtown and Brooklyn landmark."],
+      ["Best toddler-first route", "Central Park playground plus CMOM", "Short sessions and a nearby hotel or meal reset matter more than checking off Midtown sights."],
+      ["Best older-kid route", "Brooklyn Bridge Park or an observation deck", "Give older kids a skyline payoff, but verify lines, heights, weather, and timed-ticket rules first."],
+      ["Best rainy-day fallback", "AMNH as the anchor", "Use one large indoor stop and keep meals nearby rather than crossing town twice in bad weather."],
+      ["Best next planning step", "Choose stay area before final route", "Use the NYC stay guide and itinerary page so subway, stroller, and reset plans match your hotel base."]
+    ],
+    scanRows: [
+      ["First-time mixed ages", "Central Park plus AMNH", "0-14", "Good with AMNH backup", "$-$$", "Easier if staying Upper West Side; verify stroller route and museum rules", "../where-to-stay/new-york-city-with-kids.html", "Pick a stay base"],
+      ["Toddlers/preschoolers", "Central Park playgrounds or CMOM", "0-6", "CMOM for rain", "$$ for CMOM", "Keep sessions short and confirm elevator/stroller access for your route", "../family-itinerary/new-york-city-with-kids.html", "Build a toddler-paced route"],
+      ["Elementary kids", "AMNH, ferry, Central Park", "6-10", "AMNH works best in rain", "$-$$", "Avoid crossing town more than once after lunch", "../family-itinerary/new-york-city-with-kids.html", "Use a 1- or 2-day plan"],
+      ["Tweens/teens", "Brooklyn Bridge Park or observation deck", "10-17", "Observation decks are weather-sensitive", "$-$$$", "Transit and line timing matter more than stroller access", "../where-to-stay/new-york-city-with-kids.html", "Choose a teen-friendly base"],
+      ["Low-cost day", "Staten Island Ferry plus park time", "4-17", "Partial weather backup", "$", "Boarding/waiting and bathroom timing still need planning", "../family-itinerary/new-york-city-with-kids.html", "Map the day before leaving"],
+      ["Bad-weather day", "AMNH or CMOM by age", "0-14", "Best rain plan", "$$", "Keep meals close and avoid two long subway transfers in rain", "../where-to-stay/new-york-city-with-kids.html", "Stay near the rainy-day anchor"]
+    ],
+    touristNote:
+      "This page is for families planning a New York City trip, especially first-time or short-stay visitors. Local weekend events, seasonal calendars, borough-specific repeat visits, and day-trip ideas are a separate future research concept; they are not part of this evergreen tourist guide yet.",
     quick: [
       ["Best overall", "Central Park plus AMNH", "The strongest family day when you want outdoor flexibility and an indoor anchor."],
       ["Best for toddlers", "Central Park playgrounds or CMOM", "Short sessions, bathrooms nearby, and easy hotel-reset potential if you stay uptown."],
@@ -719,6 +738,18 @@ ${rows.map((row) => `              <tr>${row.map((cell) => `<td>${esc(cell)}</td
         </div>`;
 }
 
+function renderVisitorScan(rows) {
+  const headers = ["Trip type", "Best picks", "Age band", "Weather", "Budget", "Stroller/transit note", "Next step"];
+  return `        <div class="comparison-scroll">
+          <table class="comparison-table">
+            <thead><tr>${headers.map((header) => `<th>${esc(header)}</th>`).join("")}</tr></thead>
+            <tbody>
+${rows.map(([trip, picks, ages, weather, budget, note, href, linkText]) => `              <tr><td>${esc(trip)}</td><td>${esc(picks)}</td><td>${esc(ages)}</td><td>${esc(weather)}</td><td>${esc(budget)}</td><td>${esc(note)}</td><td><a href="${esc(href)}">${esc(linkText)}</a></td></tr>`).join("\n")}
+            </tbody>
+          </table>
+        </div>`;
+}
+
 function renderDetails(details) {
   const labels = ["Why families like it", "Best ages", "What can go wrong", "Parent logistics", "Food/bathroom/reset", "Booking/timing", "Nearby pairing"];
   return `        <div class="detail-card-grid">
@@ -740,7 +771,39 @@ ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-c
 
 function renderActivityUpgrade(page) {
   return `${markerStart}
-      <section class="band rank-ready-section">
+${page.firstTime ? `      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">First-time visitors</p>
+          <h2>Best NYC choices for a first family trip</h2>
+        </div>
+${renderQuickPicks(page.firstTime)}
+        <p class="review-label">Planning guidance only. Verify current museum rules, timed-entry needs, stroller/elevator access, transit changes, weather, and safety advisories before committing to a route.</p>
+      </section>
+
+      <section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Tourist trip planning</p>
+            <h2>Scan by age, weather, budget, and stroller/transit friction</h2>
+          </div>
+          <p class="review-label">${esc(page.touristNote)}</p>
+${renderVisitorScan(page.scanRows || [])}
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Next planning step</p>
+          <h2>Match activities to your stay base and route</h2>
+        </div>
+        <div class="card-grid">
+          <article class="activity-card"><h3>Choose a family base</h3><p>NYC sightseeing changes by hotel area. Room size, elevator access, subway distance, stroller friction, and evening noise all affect the day.</p><p><a class="text-link" href="../where-to-stay/new-york-city-with-kids.html">Open where to stay in New York City with kids</a></p></article>
+          <article class="activity-card"><h3>Turn picks into a route</h3><p>Use the itinerary page to avoid crossing town twice, protect meal windows, and keep rainy-day swaps realistic.</p><p><a class="text-link" href="../family-itinerary/new-york-city-with-kids.html">Open the New York City family itinerary</a></p></article>
+          <article class="activity-card"><h3>Keep this page tourist-focused</h3><p>This evergreen guide is for trip planning. Local weekend events, seasonal calendars, and repeat-visit ideas need a separate freshness workflow before publishing.</p></article>
+        </div>
+      </section>
+
+` : ""}      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Quick picks</p>
@@ -1012,14 +1075,25 @@ ${schemaEnd}
 
 function insertBeforeMainEnd(html, section) {
   if (html.includes('<section class="container page-section source-section">')) {
-    return html.replace(/\s*<section class="container page-section source-section">/, `\n${section}      <section class="container page-section source-section">`);
+    return html.replace(
+      /\s*<section class="container page-section source-section">/,
+      () => `\n${section}      <section class="container page-section source-section">`
+    );
   }
-  return html.replace(/\s*<\/main>/, `\n${section}    </main>`);
+  return html.replace(/\s*<\/main>/, () => `\n${section}    </main>`);
+}
+
+function insertAfterIntroBand(html, section) {
+  const marker = '      <section class="container page-section">\n        <div class="section-heading">\n          <p class="eyebrow">Activity filters</p>';
+  if (html.includes(marker)) {
+    return html.replace(marker, () => `${section}${marker}`);
+  }
+  return insertBeforeMainEnd(html, section);
 }
 
 function insertSchema(html, schema) {
   if (!schema) return html;
-  return html.replace(/\s*<\/body>/, `\n${schema}  </body>`);
+  return html.replace(/\s*<\/body>/, () => `\n${schema}  </body>`);
 }
 
 function upgradeFile(outDir, path, page, type) {
@@ -1036,7 +1110,7 @@ function upgradeFile(outDir, path, page, type) {
         ? renderTeenUpgrade(page)
       : renderStayUpgrade(page);
   const schema = `${itemListSchema(page)}${faqSchema(page)}`;
-  html = insertBeforeMainEnd(html, section);
+  html = page.placement === "after-intro" ? insertAfterIntroBand(html, section) : insertBeforeMainEnd(html, section);
   html = insertSchema(html, schema);
   writeFileSync(full, html);
 }

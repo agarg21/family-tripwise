@@ -150,9 +150,9 @@ for (const filePath of htmlFiles) {
     }
   } else if (basename(filePath).startsWith("san-diego")) {
     const hasNoindex = /<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
-    warnings.push(
-      `${rel} is outside the sitemap and looks like a legacy San Diego shim; ${hasNoindex ? "noindex present" : "review redirect or noindex, follow."}`
-    );
+    if (!hasNoindex) {
+      warnings.push(`${rel} is outside the sitemap and looks like a legacy San Diego shim; review redirect or noindex, follow.`);
+    }
   }
 }
 

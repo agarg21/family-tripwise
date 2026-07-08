@@ -68,6 +68,11 @@ Implement the SRR-001 page-quality handoff before adding any new destination clu
   - strongest early page-level signal was `things-to-do/new-york-city-with-kids.html` with 9 impressions and average position 11.8;
   - San Antonio hotel-intent queries appeared, but rankings are weak and hotel recommendation work still needs a human-review workflow;
   - NYC local/weekend concepts were identified as possible future research, not implementation-ready yet.
+- Implementation completed IMP-005 and IMP-009 on 2026-07-08:
+  - added `noindex, follow` to the three legacy San Diego shim pages while preserving canonicals to the active URLs;
+  - kept the shim files out of `site/sitemap.xml`;
+  - improved the existing tourist-oriented NYC things-to-do page with a first-time visitor decision section, a scan matrix by age/weather/budget/stroller-transit friction, a tourist-vs-local note, and stronger NYC stay/itinerary links;
+  - re-ran local and production QA with 0 errors and 6 remaining warnings.
 
 ## Ready For SEO Research & Review
 
@@ -82,19 +87,18 @@ Findings to preserve:
 
 ## Ready For Implementation
 
-Implementation can proceed from `backlog/implementation-backlog.md`.
+No implementation-ready task is currently active in `backlog/implementation-backlog.md`.
 
 Current ready implementation areas:
 
-- P1: handle legacy San Diego canonical shim pages with redirects or `noindex, follow`.
-- P1: improve the existing tourist-oriented New York City things-to-do page from early GSC signal.
+- None. Candidate implementation tasks need SEO Research & Review confirmation or user direction.
 
 Current QA findings from `node tools/seo-qa.mjs --production`:
 
 - Errors: 0.
-- Warnings: 9.
+- Warnings: 6.
 - Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, and four remaining itinerary pages.
-- Legacy shim warnings remain for the three root-level San Diego HTML files outside the sitemap.
+- Legacy shim warnings are resolved because the three root-level San Diego HTML files are outside the sitemap and carry `noindex, follow`.
 
 ## Waiting On User
 
@@ -111,7 +115,7 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-Implementation Agent for IMP-005 and IMP-009, then SEO Research & Review Agent for post-implementation QA and the deferred NYC local / San Antonio hotel research discussion.
+SEO Research & Review Agent for post-implementation QA and the deferred NYC local / San Antonio hotel research discussion.
 
 ## Master Notes
 

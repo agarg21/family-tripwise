@@ -16,6 +16,22 @@ Implications:
 - Defer NYC local/weekend page creation until SEO Research & Review validates demand, SERPs, freshness burden, and source workflow.
 - Defer San Antonio hotel-intent expansion until there is more data and a human-review path for hotel claims.
 
+## 2026-07-08: Noindex Legacy Static Shim Pages
+
+Decision: For legacy static HTML shim pages that cannot be served as true 301 redirects in the current plain GitHub Pages setup, use `noindex, follow` plus canonical links to the active URL.
+
+Why:
+
+- GitHub Pages does not provide a clean repository-local 301 redirect mechanism for these plain static files.
+- The existing San Diego shim pages already forward users with meta refresh and canonicalize to active URLs.
+- Adding `noindex, follow` prevents legacy URLs from competing with canonical destination pages in search.
+
+Implications:
+
+- Keep legacy shim files out of `site/sitemap.xml`.
+- Keep canonical links pointing to active URLs.
+- Treat true 301 redirects as preferable if hosting changes later.
+
 ## 2026-07-07: Use Three-Agent SEO Operating System
 
 Decision: Operate Family Tripwise through Master / Operator, Implementation Agent, and SEO Research & Review Agent.
