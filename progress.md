@@ -1,5 +1,13 @@
 # Progress
 
+## 2026-07-08
+
+- Added GSC UI review notes at `docs/research/gsc-ui-review-2026-07-08.md`.
+- Converted the review into implementation-ready NYC tourist-page work while preserving the small-sample caveat:
+  - GSC showed 15 impressions and 0 clicks, so recommendations remain directional;
+  - `things-to-do/new-york-city-with-kids.html` had the strongest early page-level signal;
+  - NYC local/weekend and San Antonio hotel opportunities were deferred for the next research discussion.
+
 ## 2026-07-07
 
 - Migrated Family Tripwise into a three-agent SEO operating structure.

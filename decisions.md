@@ -1,5 +1,21 @@
 # Decisions
 
+## 2026-07-08: Treat Early GSC Data As Directional
+
+Decision: Use the July 8, 2026 GSC UI review to guide small improvements, not strategic pivots.
+
+Why:
+
+- GSC showed only 15 total impressions and 0 clicks.
+- The visible query and page rows match the Family Tripwise strategy, but the sample is too small for stable ranking conclusions.
+- The strongest current signal is the existing New York City things-to-do page, not a new city or new page family.
+
+Implications:
+
+- Improve the existing tourist-oriented NYC things-to-do page now.
+- Defer NYC local/weekend page creation until SEO Research & Review validates demand, SERPs, freshness burden, and source workflow.
+- Defer San Antonio hotel-intent expansion until there is more data and a human-review path for hotel claims.
+
 ## 2026-07-07: Use Three-Agent SEO Operating System
 
 Decision: Operate Family Tripwise through Master / Operator, Implementation Agent, and SEO Research & Review Agent.

@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-07
+Last updated: 2026-07-08
 
 ## Cycle Name
 
@@ -63,6 +63,11 @@ Implement the SRR-001 page-quality handoff before adding any new destination clu
   - added teen quick picks, comparison tables, detailed teen-specific notes, itinerary variants, internal cluster links, and schema;
   - kept San Antonio teens indexed after upgrading it to standalone teen intent and added an explicit index decision on the page;
   - re-ran local and production QA with 0 errors and 9 remaining warnings.
+- SEO Research & Review completed a GSC UI review on 2026-07-08:
+  - GSC showed 15 total impressions and 0 clicks, so all findings are directional and not statistically stable;
+  - strongest early page-level signal was `things-to-do/new-york-city-with-kids.html` with 9 impressions and average position 11.8;
+  - San Antonio hotel-intent queries appeared, but rankings are weak and hotel recommendation work still needs a human-review workflow;
+  - NYC local/weekend concepts were identified as possible future research, not implementation-ready yet.
 
 ## Ready For SEO Research & Review
 
@@ -82,6 +87,7 @@ Implementation can proceed from `backlog/implementation-backlog.md`.
 Current ready implementation areas:
 
 - P1: handle legacy San Diego canonical shim pages with redirects or `noindex, follow`.
+- P1: improve the existing tourist-oriented New York City things-to-do page from early GSC signal.
 
 Current QA findings from `node tools/seo-qa.mjs --production`:
 
@@ -100,10 +106,12 @@ Useful future user input:
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for the next research cycle.
 - Whether to create a standalone San Diego family hotels page after a human-review workflow exists.
+- Whether to validate an NYC local/weekend-events page concept in the next SEO Research & Review cycle.
+- Whether to validate San Antonio family-hotel demand before any standalone hotel page or hotel-shortlist expansion.
 
 ## Recommended Next Agent
 
-Implementation Agent for IMP-005, then SEO Research & Review Agent for post-implementation QA when the first cleanup batch is complete.
+Implementation Agent for IMP-005 and IMP-009, then SEO Research & Review Agent for post-implementation QA and the deferred NYC local / San Antonio hotel research discussion.
 
 ## Master Notes
 
