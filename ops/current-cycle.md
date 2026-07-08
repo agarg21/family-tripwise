@@ -58,6 +58,11 @@ Implement the SRR-001 page-quality handoff before adding any new destination clu
   - added quick-pick area decisions, area matrices, parking/transit/stroller/noise caveats, nearby attraction fit, family verdicts, and schema;
   - used hotel-verification checklists instead of firm hotel recommendations because a human-reviewed hotel workflow is not yet available;
   - re-ran local and production QA with 0 errors and 13 remaining warnings.
+- Implementation completed IMP-004 on 2026-07-07:
+  - upgraded Chicago, Las Vegas, San Diego, and San Antonio teen pages via `tools/upgrade-priority-pages.mjs`;
+  - added teen quick picks, comparison tables, detailed teen-specific notes, itinerary variants, internal cluster links, and schema;
+  - kept San Antonio teens indexed after upgrading it to standalone teen intent and added an explicit index decision on the page;
+  - re-ran local and production QA with 0 errors and 9 remaining warnings.
 
 ## Ready For SEO Research & Review
 
@@ -76,14 +81,13 @@ Implementation can proceed from `backlog/implementation-backlog.md`.
 
 Current ready implementation areas:
 
-- P1: upgrade or temporarily noindex thin teen pages, with an explicit San Antonio teen decision.
 - P1: handle legacy San Diego canonical shim pages with redirects or `noindex, follow`.
 
 Current QA findings from `node tools/seo-qa.mjs --production`:
 
 - Errors: 0.
-- Warnings: 13.
-- Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, four remaining itinerary pages, and four teen pages.
+- Warnings: 9.
+- Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, and four remaining itinerary pages.
 - Legacy shim warnings remain for the three root-level San Diego HTML files outside the sitemap.
 
 ## Waiting On User
@@ -99,7 +103,7 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-Implementation Agent for IMP-004, then SEO Research & Review Agent for post-implementation QA when the first cleanup batch is complete.
+Implementation Agent for IMP-005, then SEO Research & Review Agent for post-implementation QA when the first cleanup batch is complete.
 
 ## Master Notes
 

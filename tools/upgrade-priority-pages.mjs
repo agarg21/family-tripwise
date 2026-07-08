@@ -483,6 +483,202 @@ const itineraryPages = {
   }
 };
 
+const teenPages = {
+  "things-to-do/chicago-with-teens.html": {
+    title: "Things to Do in Chicago With Teens: Museums, Food, Lakefront and Weather Plans",
+    description:
+      "Plan Chicago with teens using activity quick picks, transit and walking caveats, rainy-day swaps, food/reset notes, and realistic teen-friendly itinerary ideas.",
+    city: "Chicago",
+    links: {
+      allAges: "../things-to-do/chicago-with-kids.html",
+      stay: "../where-to-stay/chicago-with-kids.html",
+      itinerary: "../family-itinerary/chicago-with-kids.html"
+    },
+    quick: [
+      ["Best overall", "Architecture river plan plus Riverwalk food", "Strong teen payoff if weather, timing, and attention span line up."],
+      ["Best rainy-day anchor", "Field Museum or Shedd Aquarium", "Pick one major indoor stop rather than trying to stack Museum Campus."],
+      ["Best low-cost reset", "Millennium Park, lakefront, or Lincoln Park Zoo", "Useful when you need space between paid attractions."],
+      ["Best food pairing", "West Loop or River North", "Works best when meals are part of the teen plan, not an afterthought."],
+      ["Best skyline moment", "Riverwalk or lakefront route", "Good payoff without committing to another ticketed attraction."],
+      ["Best if you only have one day", "Museum Campus plus river/lakefront dinner", "Keeps the route focused and avoids cross-city zigzags."],
+      ["Think twice about", "Toddler-heavy playground pacing", "Teens usually need stronger scenery, food, museums, or active choices."],
+      ["Main planning risk", "Weather and transit friction", "Cold, heat, storms, elevator gaps, and long walks can change the plan quickly."]
+    ],
+    rows: [
+      ["Architecture river plan", "12-17", "90 min-2 hrs", "$$$", "River North", "Limited", "No", "Low", "Book/check times", "Clear Chicago signature for teens", "Riverwalk meal or Magnificent Mile"],
+      ["Field Museum", "10-17", "2-4 hrs", "$$", "Museum Campus", "Good", "Yes", "Medium", "Check tickets", "Big exhibits with stronger teen payoff than a short kid stop", "Lakefront or Shedd exterior"],
+      ["Shedd Aquarium", "10-15", "2-3 hrs", "$$$", "Museum Campus", "Good", "Yes", "Medium", "Book ahead", "Reliable indoor animal/science anchor", "Field Museum lawn or lakefront walk"],
+      ["Millennium Park / Maggie Daley area", "10-17", "60-120 min", "$", "Loop", "Good", "Partial", "Medium", "No", "Easy skyline and photo reset", "Art Institute exterior or Loop meal"],
+      ["Lincoln Park Zoo and lakefront", "10-15", "2-3 hrs", "$", "Lincoln Park", "Good", "No", "Medium", "No", "Free flexible outdoor block", "Neighborhood lunch or Nature Boardwalk"],
+      ["Navy Pier by specific reason", "10-17", "1-3 hrs", "$$", "Streeterville", "Good", "Partial", "Medium", "Depends on activity", "Useful mixed-weather filler if you choose one goal", "Lakefront walk or casual food"]
+    ],
+    details: [
+      ["Architecture river plan", "Teens get skyline, story, and movement without another museum-style block.", "Best for tweens and teens who can sit, listen, and handle weather exposure.", "Cold, rain, wind, ticket timing, and younger siblings who cannot sit through it.", "Book a time after food or snacks, and do not stack it after a draining museum marathon.", "Use bathrooms before boarding and plan the next meal near River North or the Riverwalk.", "Verify operator, departure point, weather policy, and accessibility before booking.", "Pair with Riverwalk food or a short Magnificent Mile walk."],
+      ["Field Museum", "It can work for teens when you choose exhibit goals instead of wandering every hall.", "Best for science, history, and dinosaur-interested teens.", "Museum fatigue and trying to combine Field, Shedd, and another big stop in one day.", "Pick two or three must-see sections, then leave before everyone is done.", "Museum Campus has food/restroom options, but verify hours and policies for the day.", "Check tickets, special exhibits, and current hours.", "Pair with lakefront time or a simple dinner, not another full museum."],
+      ["Shedd Aquarium", "A safer bad-weather anchor when teens still want animals, views, and a contained plan.", "Best for younger teens or mixed-age groups.", "Crowds, timed-entry friction, and feeling too young for older teens if overdone.", "Use it as the main indoor block, then add outdoor skyline time if weather improves.", "Plan food and bathroom breaks before leaving Museum Campus.", "Book/check timed entry and current exhibits.", "Pair with Field Museum only if both stops are intentionally shortened."],
+      ["Millennium Park / Maggie Daley area", "It gives a quick Chicago sense of place without requiring a long ticketed commitment.", "Best for first-day orientation, photos, and a low-cost reset.", "Crowds, event closures, and making it the whole teen plan.", "Use it as a bridge between meals, transit, or one bigger attraction.", "Food and bathrooms vary by route, so decide before anyone is urgent.", "Check event closures and weather.", "Pair with the Loop, Art Institute exterior, or easy transit back to the hotel."],
+      ["Lincoln Park Zoo and lakefront", "Free entry and lakefront access make it useful when the budget or weather needs flexibility.", "Best for animal-interested younger teens or mixed-age sibling groups.", "It may feel too young if teens want a more independent city day.", "Frame it as a neighborhood/lakefront block, not just a zoo visit.", "Use nearby neighborhood food as the reset plan.", "Check hours and seasonal closures.", "Pair with Nature Boardwalk or a Lincoln Park meal."],
+      ["Navy Pier by specific reason", "It can fill a weather gap if you choose a clear reason to go.", "Best for mixed-age groups or teens who want a simple lakefront activity.", "It can feel crowded, commercial, and unfocused.", "Choose one activity, view, or meal; avoid vague wandering.", "Food and restrooms are convenient, but crowds can slow everything down.", "Check hours, pricing, and event schedule.", "Pair with lakefront or a short ride back to the hotel."]
+    ],
+    plans: {
+      "1-day teen plan": "Choose Field Museum or Shedd as the anchor, add lakefront or Millennium Park time, then finish with River North or West Loop food.",
+      "2-day teen plan": "Day 1: Museum Campus plus lakefront. Day 2: architecture river plan, Riverwalk, and a neighborhood food stop.",
+      "Rainy-day plan": "Use Field Museum or Shedd as the main block, keep meals close, and save lakefront or boat plans for the clearest weather window.",
+      "Low-cost plan": "Use Lincoln Park Zoo, lakefront, Millennium Park, and one paid activity instead of turning every stop into a ticket.",
+      "Mixed-age plan": "Let teens choose the food or skyline piece while younger kids get a shorter zoo, park, or aquarium block."
+    },
+    faqs: [
+      ["Is Chicago good with teens?", "Yes, if the plan leans into museums, river/lakefront views, food, and weather-aware routing instead of playground-heavy pacing."],
+      ["What should families avoid with teens in Chicago?", "Avoid stacking multiple large museums, long exposed walks, and a late architecture tour without food or weather backup."]
+    ]
+  },
+  "things-to-do/las-vegas-with-teens.html": {
+    title: "Things to Do in Las Vegas With Teens: Pools, Red Rock, Shows and Heat Plans",
+    description:
+      "Plan Las Vegas with teens using activity quick picks, heat and Strip walking caveats, rainy-day swaps, hotel-pool resets, and realistic itinerary ideas.",
+    city: "Las Vegas",
+    links: {
+      allAges: "../things-to-do/las-vegas-with-kids.html",
+      stay: "../where-to-stay/las-vegas-with-kids.html",
+      itinerary: "../family-itinerary/las-vegas-with-kids.html"
+    },
+    quick: [
+      ["Best overall", "Pool plus one teen-specific anchor", "Vegas works better when the hotel reset is part of the plan."],
+      ["Best outdoor break", "Red Rock Canyon", "Strongest contrast to casino/resort corridors if heat and transport work."],
+      ["Best rainy/heat backup", "Area15-style immersive stop or High Roller", "Choose by age, sensory tolerance, and budget."],
+      ["Best low-cost classic", "Bellagio Conservatory and fountains", "A short visual stop, not the whole teen plan."],
+      ["Best evening idea", "Age-appropriate show or skyline activity", "Check ratings, timing, ticket rules, and late-night atmosphere."],
+      ["Best planning base", "South or Center Strip by exact hotel fit", "Pool, room location, smoke exposure, and walking routes matter."],
+      ["Think twice about", "Aimless Strip walking", "Distances, heat, casino detours, and crowds are harder than maps imply."],
+      ["Main planning risk", "Heat, sensory overload, and fees", "Keep costs, resort fees, pool rules, and downtime visible before booking."]
+    ],
+    rows: [
+      ["Red Rock Canyon", "10-17", "Half day", "$$", "West of Strip", "Hard", "No", "Low", "Timed entry may apply", "Best nature reset for teens", "Low-key hotel evening"],
+      ["Area15 / immersive exhibits", "12-17", "2-3 hrs", "$$$", "Off Strip", "Mixed", "Yes", "Low", "Book specific exhibits", "Teen-friendly indoor option if sensory fit is right", "Food hall or pool reset"],
+      ["High Roller", "10-17", "45-60 min", "$$", "LINQ", "Good", "Yes", "Medium", "Book/check pricing", "Contained skyline payoff", "LINQ Promenade meal"],
+      ["Bellagio Conservatory and fountains", "10-17", "60-90 min", "$", "Center Strip", "Moderate", "Partial", "Medium", "No", "Classic short Vegas visual", "Nearby early dinner"],
+      ["Hotel pool block", "10-17", "Half day", "$$", "Hotel", "Good", "No", "High", "Check rules", "Realistic downtime and heat management", "One short evening activity"],
+      ["Age-appropriate show", "12-17", "Evening", "$$$", "Strip or off-Strip", "Mixed", "Yes", "Low", "Book ahead", "Best teen evening if rating/timing fits", "Early dinner and rideshare plan"]
+    ],
+    details: [
+      ["Red Rock Canyon", "Teens often need a real break from casino/resort environments, and Red Rock gives a different trip texture.", "Best for older kids and teens comfortable with heat-aware walking.", "Heat, timed entry, drive logistics, trail difficulty, and younger siblings.", "Make it the main half-day plan and keep the evening easy.", "Bring water/snacks and plan bathrooms before leaving the Strip.", "Check weather, timed entry, road status, and trail fit before committing.", "Pair with pool time or a quiet hotel evening."],
+      ["Area15 / immersive exhibits", "It can give teens a high-payoff indoor activity when outdoor plans are too hot or smoky.", "Best for teens who like immersive, visual, or interactive environments.", "Sensory overload, cost, exhibit age fit, and trying to do too many paid pieces.", "Choose one or two exact exhibits before arriving.", "Use onsite food as a reset if it fits your family.", "Book/check exhibit details, age guidance, and current hours.", "Pair with pool downtime rather than another loud evening."],
+      ["High Roller", "It is contained, scenic, and easier to plan than wandering multiple resorts.", "Best for teens who want a skyline moment without a long show.", "Cost, lines, and timing around meals.", "Use it when everyone is fed and ready for a slower ride.", "Plan bathrooms and snacks before boarding.", "Check ticket options and current pricing.", "Pair with LINQ Promenade food or a short fountain stop."],
+      ["Bellagio Conservatory and fountains", "It gives classic Vegas visual payoff with low time commitment.", "Best for all teen trips as a short stop.", "Long resort walks, crowds, smoke exposure risk in nearby corridors, and overbuilding the stop.", "Treat it as a 60-90 minute loop with food nearby.", "Use nearby hotel food/restrooms, but expect walking.", "No ticket for the visual stop; verify fountain schedule if it matters.", "Pair with early dinner, High Roller, or a ride back to the hotel."],
+      ["Hotel pool block", "The pool can be the reason the trip feels like a vacation instead of a logistics puzzle.", "Best for all teen ages if the pool rules fit.", "Seasonal closures, shade, crowding, fees, and height or tube rules.", "Protect pool time as the reset, especially in heat.", "Use the room as the snack and decompression base.", "Check pool hours, rules, closures, and resort fees before booking.", "Pair with one evening anchor, not multiple Strip crossings."],
+      ["Age-appropriate show", "A show can be the cleanest teen evening if ratings, timing, and budget work.", "Best for teens who can handle late timing and venue rules.", "Age ratings, ticket cost, late meals, and transportation after the show.", "Book an earlier show when possible and make dinner simple.", "Plan food before the venue and rideshare pickup after.", "Verify age restrictions, content, runtime, and ticket policies.", "Pair with a quiet morning or pool-heavy next day."]
+    ],
+    plans: {
+      "1-day teen plan": "Pool morning, short Bellagio/fountain loop, early dinner, then High Roller or an age-appropriate show.",
+      "2-day teen plan": "Day 1: pool and classic Strip visuals. Day 2: Red Rock Canyon or an immersive indoor stop, then a low-pressure evening.",
+      "Heat plan": "Move outdoor or Strip walking to early/late windows, keep midday for pool or indoor activity, and avoid long resort-to-resort walks.",
+      "Rainy-day plan": "Use Area15-style exhibits, High Roller, or a show as the anchor, then keep food and rideshares simple.",
+      "Mixed-age plan": "Let teens choose one show, nature, or immersive activity while younger siblings get pool or museum time."
+    },
+    faqs: [
+      ["Is Las Vegas good with teens?", "It can be, if the hotel, pool, heat, walking routes, show choices, and evening environment are planned carefully."],
+      ["What should families avoid with teens in Las Vegas?", "Avoid assuming the Strip is an easy walk, especially in heat, with crowds, casino detours, or tired younger siblings."]
+    ]
+  },
+  "things-to-do/san-diego-with-teens.html": {
+    title: "Things to Do in San Diego With Teens: Coast, Zoo, Food and Rainy-Day Plans",
+    description:
+      "Plan San Diego with teens using coast and zoo quick picks, stroller-free route caveats, rainy-day swaps, food/reset notes, and realistic teen-friendly itineraries.",
+    city: "San Diego",
+    links: {
+      allAges: "../things-to-do/san-diego-with-kids.html",
+      stay: "../where-to-stay/san-diego-with-kids.html",
+      itinerary: "../family-itinerary/san-diego-with-kids.html"
+    },
+    quick: [
+      ["Best overall", "La Jolla coast plus food/reset plan", "Strong teen payoff if parking, walking, and weather cooperate."],
+      ["Best major attraction", "San Diego Zoo highlights", "Works when teens choose zones instead of chasing every exhibit."],
+      ["Best rainy-day swap", "Birch Aquarium or Balboa Park museum", "Useful backup without rebuilding the entire day."],
+      ["Best low-pressure day", "Coronado ferry and waterfront", "Scenic, flexible, and easier than a packed cross-city route."],
+      ["Best younger-sibling compromise", "Zoo bus tour or Birch Aquarium", "Still teen-acceptable if the day includes food or coast time."],
+      ["Best base check", "La Jolla, Mission Bay, Downtown, or Coronado by route", "The right base depends on whether coast, zoo, or beach time leads."],
+      ["Think twice about", "La Jolla Cove with stroller-heavy family logistics", "Teens may love it, but mixed-age gear and parking can derail the plan."],
+      ["Main planning risk", "Parking and cross-town stacking", "Do not turn a teen coast day into a parking-and-driving day."]
+    ],
+    rows: [
+      ["La Jolla Cove / coast", "12-17", "2-4 hrs", "$", "La Jolla", "Hard", "No", "Low", "No", "Best scenery and teen independence", "Birch Aquarium or casual lunch"],
+      ["San Diego Zoo highlights", "10-17", "3-5 hrs", "$$$", "Balboa Park", "Moderate", "No", "Medium", "Book/check tickets", "Major all-age anchor if teens choose priorities", "Balboa Park food or one museum"],
+      ["Birch Aquarium", "10-15", "90 min-2 hrs", "$$", "La Jolla", "Good", "Partial", "High", "Check tickets", "Compact weather backup near the coast", "La Jolla Shores or Cove"],
+      ["Balboa Park museums", "10-17", "2-4 hrs", "$$", "Balboa Park", "Good", "Yes", "Medium", "Check exhibits", "Best flexible culture/rain option", "Zoo or garden walk"],
+      ["Coronado ferry and waterfront", "10-17", "2-3 hrs", "$$", "Downtown/Coronado", "Good", "No", "Medium", "Check ferry times", "Scenic low-effort outing", "Waterfront dinner or beach walk"],
+      ["Mission Bay / beach reset", "10-17", "2-3 hrs", "$", "Mission Bay", "Mixed", "No", "High", "No", "Easy decompression between bigger plans", "Hotel pool or casual meal"]
+    ],
+    details: [
+      ["La Jolla Cove / coast", "Teens get scenery, wildlife viewing, photos, and a more independent-feeling stop.", "Best for tweens and teens who can handle crowds, stairs, and uneven coastal paths.", "Parking, crowds, stairs, slippery/uneven paths, and mixed-age family gear.", "Go early or off-peak and avoid pairing it with too many cross-town stops.", "Plan bathrooms and food before arrival so the day does not collapse after parking.", "No booking for a coast walk; verify weather, surf, closures, and parking expectations.", "Pair with Birch Aquarium or one La Jolla meal."],
+      ["San Diego Zoo highlights", "The zoo still works for teens when the family chooses priority zones and avoids completion mode.", "Best for animal-interested teens and mixed-age groups.", "Trying to see the whole zoo, heat, hills, and late starts.", "Use the bus tour or map to reduce wasted walking, then focus on a few zones.", "Food/restrooms are inside, but plan a reset before everyone is done.", "Buy/check dated tickets and current hours.", "Pair with Balboa Park, not a full La Jolla plan the same day."],
+      ["Birch Aquarium", "It is compact enough for a weather backup and close enough to pair with coast time.", "Best for younger teens or mixed-age groups.", "Older teens may find it too short unless the coast is part of the plan.", "Treat it as a 90-minute anchor, not a full-day promise.", "Use La Jolla food options as the reset after the visit.", "Check ticket windows, parking, and hours.", "Pair with La Jolla Shores or Cove depending on walking tolerance."],
+      ["Balboa Park museums", "The park gives options when weather, mood, or sibling ages change.", "Best for teens when they choose the museum or exhibit.", "Museum fatigue and buying too many tickets.", "Pick one paid museum and one outdoor garden or food reset.", "Verify food/restroom options near the chosen museum.", "Check current exhibits and hours.", "Pair with the zoo only if both are shortened."],
+      ["Coronado ferry and waterfront", "It turns transportation into part of the outing and gives a calmer coast feel.", "Best for teens who want scenery without a packed attraction schedule.", "Ferry timing, wind, and return logistics.", "Use it from Downtown when you want a lower-effort afternoon.", "Plan dinner or snacks near either landing.", "Check ferry times and weather.", "Pair with waterfront dinner or a beach walk."],
+      ["Mission Bay / beach reset", "It can keep the trip from becoming all driving, lines, and ticketed attractions.", "Best for mixed-age groups and teens who need downtime.", "Sand, sun, parking, and boredom if framed as the only teen activity.", "Use it as a reset between bigger plans, not the headline teen day.", "Use hotel or verified nearby facilities as the reset plan.", "Check weather, parking, tide, and shade.", "Pair with pool time or a short evening meal."]
+    ],
+    plans: {
+      "1-day teen plan": "Zoo highlights early, lunch/rest, then Mission Bay or a short coast stop depending on where you are staying.",
+      "2-day teen plan": "Day 1: zoo and Balboa Park. Day 2: La Jolla coast or Coronado ferry with food and beach time.",
+      "Rainy-day plan": "Use Birch Aquarium or one Balboa Park museum as the anchor, keep meals close, and save coast time for the clearest weather window.",
+      "Coast-first plan": "Start La Jolla early, add Birch Aquarium or lunch, then avoid another parking-heavy cross-town stop.",
+      "Mixed-age plan": "Give teens the coast or food choice while younger siblings get Mission Bay, aquarium, or zoo bus-tour pacing."
+    },
+    faqs: [
+      ["What is the best thing to do in San Diego with teens?", "La Jolla coast is often the strongest teen-specific stop, while the San Diego Zoo remains the best all-age anchor if the family chooses zones carefully."],
+      ["What should families avoid with teens in San Diego?", "Avoid stacking the zoo, La Jolla, Coronado, and Mission Bay in one day; parking and drive time can overwhelm the fun."]
+    ]
+  },
+  "things-to-do/san-antonio-with-teens.html": {
+    title: "Things to Do in San Antonio With Teens: Caverns, Theme Parks, River Walk and Heat Plans",
+    description:
+      "Plan San Antonio with teens using activity quick picks, heat-aware timing, River Walk caveats, rainy-day swaps, food/reset notes, and realistic teen-friendly itineraries.",
+    city: "San Antonio",
+    indexDecision: "Index decision: keep this page indexable. San Antonio can support standalone teen intent when the page focuses on caverns, theme parks, River Walk logistics, food/reset planning, heat, and older-kid pacing instead of repeating the all-ages guide.",
+    links: {
+      allAges: "../things-to-do/san-antonio-with-kids.html",
+      stay: "../where-to-stay/san-antonio-with-kids.html",
+      itinerary: "../family-itinerary/san-antonio-with-kids.html"
+    },
+    quick: [
+      ["Best overall", "Natural Bridge Caverns or Six Flags by teen style", "Choose adventure/walking or rides; do not try to force both into one day."],
+      ["Best classic San Antonio", "Alamo plus River Walk boat ride", "Works as a short orientation block, not a full teen day."],
+      ["Best food/reset area", "Pearl / Museum Reach", "Useful for meals and decompression between hotter or more crowded stops."],
+      ["Best heat strategy", "Early anchor, midday reset, evening river/food", "Teen stamina helps, but summer heat still shapes the trip."],
+      ["Best rainy/indoor-ish backup", "DoSeum only for mixed-age groups; otherwise choose food or indoor exhibit-style stops carefully", "Avoid pretending a younger-kid museum is always a teen anchor."],
+      ["Best theme-park base", "Northwest / SeaWorld / Six Flags area", "Only if theme parks are the main reason for the trip."],
+      ["Think twice about", "Long midday Downtown wandering", "Heat, crowds, and stroller/sidewalk friction can drain everyone."],
+      ["Main planning risk", "Drive time plus heat", "A cheap or far hotel can make every teen plan harder."]
+    ],
+    rows: [
+      ["Natural Bridge Caverns", "10-17", "2-4 hrs", "$$$", "North of city", "Hard", "Partial", "Low", "Book/check tours", "Best adventure-style teen anchor", "Low-key evening or Pearl meal"],
+      ["Six Flags Fiesta Texas", "12-17", "Half-full day", "$$$", "Northwest", "Mixed", "No", "Low", "Book/check hours", "Strongest ride-focused teen day", "Hotel pool/reset"],
+      ["Alamo plus short River Walk", "10-17", "90 min-2 hrs", "$", "Downtown", "Mixed", "Partial", "Medium", "Timed entry may help", "Classic context without overcommitting", "Boat ride or early dinner"],
+      ["River Walk boat ride", "10-17", "45-60 min", "$$", "Downtown", "Limited boarding", "Partial", "Medium", "Check times", "Low-walking orientation activity", "Alamo or Pearl meal"],
+      ["Pearl / Museum Reach food reset", "10-17", "1-3 hrs", "$$", "Pearl", "Good", "Partial", "Medium", "Check hours", "Useful teen food and decompression block", "DoSeum for siblings or zoo drive"],
+      ["San Antonio Zoo for mixed ages", "10-14", "2-4 hrs", "$$", "Brackenridge Park", "Good", "No", "Medium", "Check hours", "Only if siblings or animal interest justify it", "Pearl or park reset"]
+    ],
+    details: [
+      ["Natural Bridge Caverns", "It gives teens a more adventure-oriented reason to leave Downtown.", "Best for older kids and teens comfortable with walking and uneven surfaces.", "Drive time, tour requirements, heat around outdoor areas, and younger siblings.", "Make it the main half-day anchor and keep the rest of the day light.", "Plan water, snacks, and bathrooms before the tour.", "Book/check tour availability, footwear guidance, weather, and current requirements.", "Pair with a low-key evening or Pearl meal."],
+      ["Six Flags Fiesta Texas", "Ride-focused teens may value a full theme-park commitment more than another historic stop.", "Best for tweens and teens who meet ride/heat tolerance needs.", "Heat, lines, cost, transportation, and sibling height differences.", "Treat it as the day, not one stop among many.", "Use the hotel as the reset and protect the next morning.", "Check tickets, hours, ride closures, and height rules.", "Pair with a pool evening or rest day."],
+      ["Alamo plus short River Walk", "It gives the trip San Antonio context without requiring teens to spend half a day on history.", "Best for teens when kept concise and paired with food or river time.", "Heat, crowds, and younger-kid pacing around Downtown.", "Use it as an orientation block early or late, not a midday marathon.", "Plan food and bathrooms before the River Walk segment.", "Check current entry rules and timed-entry needs.", "Pair with a boat ride or early dinner."],
+      ["River Walk boat ride", "Sitting down while seeing the city can work well when walking energy is low.", "Best for teens as a short orientation or evening add-on.", "Boarding waits, heat, stroller handling for siblings, and weather.", "Use it near a meal window rather than as a standalone destination.", "Use bathrooms before boarding.", "Check schedules, weather, and boarding location.", "Pair with the Alamo, Downtown dinner, or Pearl."],
+      ["Pearl / Museum Reach food reset", "Food and a calmer walking environment can keep the trip teen-friendly.", "Best for teens who care about meals, people-watching, and a less scripted block.", "Peak dining crowds, heat, and assuming every teen wants to linger.", "Use it as a reset between bigger anchors.", "Verify hours and food options before relying on it.", "Check event schedules and restaurant hours.", "Pair with DoSeum for siblings, zoo, or a short Downtown block."],
+      ["San Antonio Zoo for mixed ages", "It can still work when younger siblings are present or teens like animal stops.", "Best for younger teens or mixed-age families.", "Heat and feeling too young if teens wanted rides/caverns.", "Start early and do not stack it with another big outdoor attraction.", "Plan water, snacks, and a shaded reset.", "Check seasonal hours and current tickets.", "Pair with Pearl or a hotel rest."]
+    ],
+    plans: {
+      "1-day teen plan": "Choose Natural Bridge Caverns or Six Flags as the anchor, then use Pearl or a short River Walk block for food and evening reset.",
+      "2-day teen plan": "Day 1: Alamo, boat ride, Pearl. Day 2: Natural Bridge Caverns or Six Flags, then low-key hotel/pool time.",
+      "Heat plan": "Start the biggest outdoor or walking-heavy activity early, reset midday, and use Downtown/River Walk only when temperatures and crowds are more manageable.",
+      "Rainy-day plan": "Use a short Downtown context block, food/reset time, and check whether caverns, shows, or indoor options make sense for the day's weather.",
+      "Mixed-age plan": "Let teens choose one high-payoff anchor while younger siblings get zoo, DoSeum, boat ride, or pool time."
+    },
+    faqs: [
+      ["Is San Antonio good with teens?", "Yes, when the plan includes teen-weighted anchors like Natural Bridge Caverns, Six Flags, River Walk context, and food/reset time rather than only younger-kid stops."],
+      ["Should the San Antonio with teens page stay indexed?", "Yes. This page is being kept indexable because it now has standalone teen planning guidance, route tradeoffs, and an explicit older-kid activity focus."]
+    ]
+  }
+};
+
 function esc(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -578,6 +774,65 @@ ${renderDetails(page.details)}
           <h2>Turn the list into a realistic family day</h2>
         </div>
 ${renderPlans(page.plans)}
+      </section>
+${markerEnd}
+`;
+}
+
+function renderTeenUpgrade(page) {
+  const indexDecision = page.indexDecision
+    ? `        <p class="review-label">${esc(page.indexDecision)}</p>\n`
+    : "";
+  return `${markerStart}
+      <section class="band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Teen quick picks</p>
+            <h2>Best choices by teen trip style</h2>
+          </div>
+${indexDecision}${renderQuickPicks(page.quick)}
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Compare teen activities</p>
+          <h2>Teen activity decision table</h2>
+        </div>
+        <p class="review-label">Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.</p>
+${renderActivityComparison(page.rows)}
+      </section>
+
+      <section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Teen logistics</p>
+            <h2>Detailed notes for older-kid planning</h2>
+          </div>
+${renderDetails(page.details)}
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Teen itineraries</p>
+          <h2>Route ideas that avoid generic sightseeing marathons</h2>
+        </div>
+${renderPlans(page.plans)}
+      </section>
+
+      <section class="band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Plan the cluster</p>
+            <h2>Use the teen page with the broader family guide</h2>
+          </div>
+          <div class="card-grid">
+            <article class="activity-card"><h3>All-ages activity hub</h3><p>Use the main guide when siblings, grandparents, toddlers, or mixed stamina levels change the activity shortlist.</p><p><a class="text-link" href="${esc(page.links.allAges)}">Open the all-ages things-to-do guide</a></p></article>
+            <article class="activity-card"><h3>Where to stay</h3><p>Choose the lodging base before locking in teen routes; transit, parking, noise, pool value, and meal access shape the day.</p><p><a class="text-link" href="${esc(page.links.stay)}">Open the where-to-stay guide</a></p></article>
+            <article class="activity-card"><h3>Family itinerary</h3><p>Use the itinerary page to keep the teen plan realistic around meals, weather, hotel resets, and younger siblings.</p><p><a class="text-link" href="${esc(page.links.itinerary)}">Open the family itinerary</a></p></article>
+          </div>
+        </div>
       </section>
 ${markerEnd}
 `;
@@ -777,6 +1032,8 @@ function upgradeFile(outDir, path, page, type) {
     ? renderActivityUpgrade(page)
     : type === "itinerary"
       ? renderItineraryUpgrade(page)
+      : type === "teen"
+        ? renderTeenUpgrade(page)
       : renderStayUpgrade(page);
   const schema = `${itemListSchema(page)}${faqSchema(page)}`;
   html = insertBeforeMainEnd(html, section);
@@ -793,5 +1050,8 @@ export function upgradePriorityPages(outDir) {
   }
   for (const [path, page] of Object.entries(itineraryPages)) {
     upgradeFile(outDir, path, page, "itinerary");
+  }
+  for (const [path, page] of Object.entries(teenPages)) {
+    upgradeFile(outDir, path, page, "teen");
   }
 }

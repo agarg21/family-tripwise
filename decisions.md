@@ -43,6 +43,22 @@ Implications:
 - San Diego remains the first cluster to deepen before expansion because it already has kids, toddlers, teens, stay, and itinerary coverage.
 - Do not create standalone best-family-hotel pages until a human-review workflow exists for hotel, fee, room, crib/rollaway, pool, parking, safety, and noise claims.
 
+## 2026-07-07: Keep San Antonio Teens Page Indexed After Upgrade
+
+Decision: Keep `site/things-to-do/san-antonio-with-teens.html` indexable after upgrading it to the stronger age-specific page pattern.
+
+Why:
+
+- The page now has standalone teen planning value instead of a thin card-only pattern.
+- It focuses on older-kid trip differences: caverns, theme parks, River Walk logistics, food/reset planning, heat, drive time, and mixed-age sibling tradeoffs.
+- It includes comparison tables, detailed teen-specific notes, itinerary variants, source/update notes, internal cluster links, and JSON-LD.
+
+Implications:
+
+- Keep the San Antonio teen URL in `site/sitemap.xml`.
+- Do not add `noindex, follow` unless a later SEO Research & Review pass finds the page still does not deserve indexing.
+- Continue to treat safety, transit, stroller, heat, and family-suitability guidance as planning guidance requiring user verification and/or human review.
+
 ## Prior Decisions
 
 See existing docs for earlier decisions:

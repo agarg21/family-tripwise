@@ -28,6 +28,11 @@
   - added area quick picks, comparison matrices, parking/transit/stroller/noise caveats, nearby attraction fit, and family verdicts;
   - used hotel-verification checklists instead of firm hotel recommendations because hotel claims still require human review;
   - validated with local and production QA: 0 errors, 13 remaining warnings.
+- Completed `IMP-004` from the SRR-001 handoff:
+  - upgraded Chicago, Las Vegas, San Diego, and San Antonio teen pages through `tools/upgrade-priority-pages.mjs`;
+  - added teen quick picks, comparison tables, detailed activity notes, itinerary variants, internal cluster links, and schema;
+  - kept San Antonio teens indexed after adding standalone teen planning depth and an explicit index decision;
+  - validated with local and production QA: 0 errors, 9 remaining warnings.
 
 ## Before Operating-System Migration
 

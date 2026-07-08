@@ -4,38 +4,9 @@ Last updated: 2026-07-07
 
 ## Active
 
-No implementation task is currently active. IMP-001, IMP-002, and IMP-003 are complete.
+No implementation task is currently active. IMP-001 through IMP-004 are complete.
 
 ## Ready
-
-### IMP-004: Decide Thin Teen Page Treatment
-
-Status: ready
-
-Recommendation label: `test`
-
-Priority: P1
-
-Source: SRR-001 audit, 2026-07-07
-
-Target files:
-
-- `site/things-to-do/chicago-with-teens.html`
-- `site/things-to-do/las-vegas-with-teens.html`
-- `site/things-to-do/san-diego-with-teens.html`
-- `site/things-to-do/san-antonio-with-teens.html`
-
-Implementation scope:
-
-- Upgrade Chicago, Las Vegas, and San Diego teen pages to the stronger San Diego toddler-page pattern: quick picks, comparison table, detailed teen-specific activity notes, itinerary variants, source notes, and schema.
-- For San Antonio teens, either upgrade to the same standard or temporarily remove from sitemap and add `noindex, follow` until it can support standalone intent.
-- Ensure each upgraded teen page links back to the all-ages destination activity page and relevant itinerary/stay pages.
-
-Acceptance checks:
-
-- No sitemap-listed teen page remains a 350-450 word card-only page.
-- San Antonio teen page has an explicit index/noindex decision.
-- JSON-LD parses if added.
 
 ### IMP-005: Handle Legacy San Diego Canonical Shim Pages
 
@@ -167,4 +138,29 @@ Acceptance checks:
 - Each page includes a comparison table.
 - Each page separates area guidance from hotel recommendation claims.
 - Human-review caveats appear near area guidance and hotel-verification sections.
+- JSON-LD parses through `tools/seo-qa.mjs`.
+
+### IMP-004: Decide Thin Teen Page Treatment
+
+Status: done
+
+Completed: 2026-07-07
+
+Implementation notes:
+
+- Upgraded `site/things-to-do/chicago-with-teens.html`, `site/things-to-do/las-vegas-with-teens.html`, `site/things-to-do/san-diego-with-teens.html`, and `site/things-to-do/san-antonio-with-teens.html` through `tools/upgrade-priority-pages.mjs`.
+- Added teen quick picks, comparison tables, detailed teen-specific activity notes, itinerary variants, internal cluster links, and `ItemList` / `FAQPage` JSON-LD.
+- Kept San Antonio teens indexed after upgrading it to standalone teen intent; the page now includes an explicit index decision.
+- Preserved uncertainty with planning-guidance caveats and reminders to verify hours, ticketing, age/height rules, weather, transit, sibling stroller needs, and safety advisories.
+
+Validation result:
+
+- `node tools/seo-qa.mjs`: 0 errors, 9 warnings.
+- `node tools/seo-qa.mjs --production`: 0 errors, 9 warnings.
+- Teen pages are no longer flagged as thin-page warnings.
+
+Acceptance checks:
+
+- No sitemap-listed teen page remains a 350-450 word card-only page.
+- San Antonio teen page has an explicit keep-indexed decision.
 - JSON-LD parses through `tools/seo-qa.mjs`.
