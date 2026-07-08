@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-07-08: Keep Upgraded Cleanup Pages Indexed
+
+Decision: Keep the upgraded cleanup pages indexable after the post-implementation SEO QA review, and improve the four remaining non-San-Diego itinerary pages rather than noindexing them.
+
+Why:
+
+- Local and production QA both returned 0 errors after commit `c4cedfc`.
+- The upgraded San Diego itinerary, Chicago/San Antonio where-to-stay pages, teen pages, and NYC tourist things-to-do page now include stronger decision support, comparison tables or matrices, internal links, schema, and verification caveats.
+- `site/about.html` and `site/index.html` are thin by the QA threshold, but they are trust/navigation pages rather than destination SEO targets.
+- The four remaining non-San-Diego itinerary pages still target explicit `{destination} itinerary with kids` intent and should be upgraded to the San Diego itinerary pattern instead of removed from the index.
+
+Implications:
+
+- `IMP-010` is the next implementation-ready task.
+- Do not noindex upgraded teen, where-to-stay, San Diego itinerary, or NYC tourist pages based on the old thin-page concerns.
+- Keep `site/about.html` and `site/index.html` indexable for now; treat improvements there as lower-priority trust/navigation work.
+- Continue to defer new city expansion, NYC local/weekend pages, and standalone hotel pages until the current itinerary cleanup and relevant research/human-review workflows are handled.
+
 ## 2026-07-08: Treat Early GSC Data As Directional
 
 Decision: Use the July 8, 2026 GSC UI review to guide small improvements, not strategic pivots.

@@ -8,7 +8,43 @@ No implementation task is currently active. IMP-001 through IMP-005 and IMP-009 
 
 ## Ready
 
-None right now.
+### IMP-010: Upgrade Remaining Family Itinerary Pages
+
+Status: ready
+
+Recommendation label: `improve`
+
+Source handoff:
+
+- `SRR-004: Post-Implementation QA For Thin-Page Cleanup`
+
+Primary files:
+
+- `site/family-itinerary/chicago-with-kids.html`
+- `site/family-itinerary/las-vegas-with-kids.html`
+- `site/family-itinerary/new-york-city-with-kids.html`
+- `site/family-itinerary/san-antonio-with-kids.html`
+- `tools/upgrade-priority-pages.mjs` if these pages are generated or upgraded through the shared script
+
+Goal:
+
+Bring the four remaining itinerary pages up to the same index-worthy pattern as `site/family-itinerary/san-diego-with-kids.html`.
+
+Required improvements:
+
+- Add destination-specific quick route decisions.
+- Add a comparison table for 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day variants where relevant.
+- Add nap/rest assumptions, meal/reset notes, stroller/transit or drive-time friction, and clear skip guidance.
+- Strengthen cluster links to the destination's activity and where-to-stay pages.
+- Preserve uncertainty with "planning guidance only" language and reminders to verify hours, tickets, weather, route conditions, safety advisories, transit/stroller access, parking, and child energy.
+- Add or preserve valid `ItemList` and `FAQPage` JSON-LD where the content supports it.
+
+Acceptance checks:
+
+- `node tools/seo-qa.mjs` returns 0 errors and no thin-page warnings for the four upgraded itinerary pages.
+- `node tools/seo-qa.mjs --production` returns 0 errors after deployment, or implementation clearly notes that production has not deployed yet.
+- Internal links and JSON-LD continue to pass QA.
+- No hotel, safety, transit, stroller, or route claim is presented as personally verified experience.
 
 ## Candidate Tasks
 
@@ -43,6 +79,21 @@ Potential scope:
 - create `best family hotels in San Diego` only after hotel claims have a human-review/source workflow
 - keep the current San Diego where-to-stay page as the area decision page
 - separate measured property facts from editorial recommendations
+
+### IMP-011: Improve Home And About Trust Pages
+
+Status: candidate
+
+Potential scope:
+
+- lightly expand `site/index.html` as a navigational product/home page without turning it into a generic marketing page
+- expand `site/about.html` with clearer editorial methodology, source policy, update discipline, human-review boundaries, and what is model-derived vs verified
+- keep both pages indexable unless a later SEO Research & Review pass finds a stronger reason to noindex
+
+Why candidate, not ready:
+
+- The pages are thin by word count, but they are trust/navigation pages rather than destination SEO targets.
+- The remaining itinerary warnings are a higher priority because they target explicit `{destination} itinerary with kids` search intent.
 
 ## Done
 

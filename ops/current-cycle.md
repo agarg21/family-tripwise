@@ -8,7 +8,7 @@ Cycle 1: Migrate Family Tripwise into the three-agent SEO operating system.
 
 ## Active Priority
 
-Implement the SRR-001 page-quality handoff before adding any new destination clusters.
+Implement `IMP-010` to upgrade the four remaining family itinerary pages before adding any new destination clusters.
 
 ## Current Project State
 
@@ -73,10 +73,20 @@ Implement the SRR-001 page-quality handoff before adding any new destination clu
   - kept the shim files out of `site/sitemap.xml`;
   - improved the existing tourist-oriented NYC things-to-do page with a first-time visitor decision section, a scan matrix by age/weather/budget/stroller-transit friction, a tourist-vs-local note, and stronger NYC stay/itinerary links;
   - re-ran local and production QA with 0 errors and 6 remaining warnings.
+- SEO Research & Review completed post-implementation QA on 2026-07-08:
+  - confirmed `IMP-001` through `IMP-005` and `IMP-009` align with strategy;
+  - re-ran local and production QA with 0 errors and 6 remaining warnings;
+  - confirmed upgraded San Diego itinerary, Chicago/San Antonio stay pages, upgraded teen pages, and the improved NYC tourist page should remain indexed;
+  - confirmed legacy San Diego shim handling is sufficient for the current GitHub Pages setup;
+  - found the four remaining non-San-Diego itinerary pages are the main remaining index-quality risk;
+  - used Anti Gravity CLI via `agy` as an advisory reviewer, which agreed that the next ready task should upgrade the remaining itinerary pages.
 
 ## Ready For SEO Research & Review
 
-SRR-001 is complete. Next SEO Research & Review work should focus on post-implementation QA and index-worthiness review, not new city expansion.
+No SEO Research & Review task is active. Deferred research topics are queued for later validation, not immediate implementation:
+
+- NYC local/weekend-events concept.
+- San Antonio family-hotel demand and human-review workflow.
 
 Findings to preserve:
 
@@ -84,14 +94,19 @@ Findings to preserve:
 - San Diego should be finished as the first deep cluster before expansion.
 - Existing pages should be improved before new cities are created.
 - Best-family-hotel standalone pages require a human-review path before firm hotel recommendations are published.
+- Upgraded cleanup pages now deserve indexing; do not noindex them.
+- `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages, even though they are still thin by the QA threshold.
 
 ## Ready For Implementation
 
-No implementation-ready task is currently active in `backlog/implementation-backlog.md`.
+`IMP-010` is ready in `backlog/implementation-backlog.md`.
 
 Current ready implementation areas:
 
-- None. Candidate implementation tasks need SEO Research & Review confirmation or user direction.
+- Upgrade `site/family-itinerary/chicago-with-kids.html`.
+- Upgrade `site/family-itinerary/las-vegas-with-kids.html`.
+- Upgrade `site/family-itinerary/new-york-city-with-kids.html`.
+- Upgrade `site/family-itinerary/san-antonio-with-kids.html`.
 
 Current QA findings from `node tools/seo-qa.mjs --production`:
 
@@ -99,6 +114,8 @@ Current QA findings from `node tools/seo-qa.mjs --production`:
 - Warnings: 6.
 - Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, and four remaining itinerary pages.
 - Legacy shim warnings are resolved because the three root-level San Diego HTML files are outside the sitemap and carry `noindex, follow`.
+- The four remaining itinerary warnings are now implementation-ready under `IMP-010`.
+- `site/about.html` and `site/index.html` are candidate/lightweight improvement work, not current noindex candidates.
 
 ## Waiting On User
 
@@ -115,7 +132,7 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-SEO Research & Review Agent for post-implementation QA and the deferred NYC local / San Antonio hotel research discussion.
+Implementation Agent for `IMP-010`.
 
 ## Master Notes
 

@@ -1,10 +1,10 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-07
+Last updated: 2026-07-08
 
 ## Active
 
-No SEO Research & Review task is active until Implementation completes the SRR-001 handoff or the user requests another research/review cycle.
+No SEO Research & Review task is active. Post-implementation QA is complete and `IMP-010` is ready for Implementation.
 
 ## Next
 
@@ -42,18 +42,43 @@ Compare:
 
 Recommend one narrow implementation test.
 
-### SRR-004: Post-Implementation QA For Thin-Page Cleanup
+### SRR-006: Validate NYC Local / Weekend Events Concept
 
 Status: pending
 
 Recommendation label: `test`
 
-Review after Implementation completes the first handoff batch:
+Evaluate whether a distinct New York City local/nearby-parent page or module should exist separately from the evergreen tourist page.
 
-- Confirm upgraded San Diego itinerary has itinerary decision table, nap/rain swaps, route assumptions, schema, and source notes.
-- Confirm Chicago and San Antonio where-to-stay pages match the upgraded stay-page quality bar.
-- Confirm thin teen pages either meet the age-specific activity page quality bar or are temporarily removed from the sitemap with `noindex, follow`.
-- Re-run internal link, sitemap, and JSON-LD checks.
+Questions:
+
+- Is there measurable demand for `nyc this weekend with kids`, `kids events nyc this weekend`, `things to do with kids nyc this weekend`, and related variants?
+- Are SERPs dominated by local calendars, tourism boards, social platforms, or weak listicles?
+- Can Family Tripwise maintain freshness with a source-and-human-review workflow?
+- Should the first local page be weekend events, day trips, free activities, or rainy-day activities?
+
+Metrics:
+
+- Keyword volume, CPC, difficulty, and traffic are `UNKNOWN` until measured with a named tool.
+
+### SRR-007: Validate San Antonio Family-Hotel Demand And Review Workflow
+
+Status: pending
+
+Recommendation label: `ask user`
+
+Assess whether San Antonio hotel-intent queries justify more hotel-focused work before a human-review workflow exists.
+
+Questions:
+
+- Is demand for San Antonio family hotels strong enough to prioritize now beyond the existing where-to-stay page?
+- Should the next step be research only, a hotel-verification workflow, or a standalone hotel page brief?
+- Can a human reviewer verify hotel, fee, room, crib/rollaway, pool, parking, noise, location, safety, and transit/stroller claims?
+
+Current measured signal:
+
+- GSC UI review on July 8, 2026 showed sparse San Antonio family-hotel queries, but rankings were weak and total GSC data volume was tiny.
+- Treat all conclusions as directional until more data is available.
 
 ### SRR-005: San Diego Hotel Page Feasibility Review
 
@@ -68,6 +93,43 @@ Evaluate whether to create `best family hotels in San Diego` only after:
 - the current San Diego where-to-stay page remains the canonical area decision page.
 
 ## Done
+
+### SRR-004: Post-Implementation QA For Thin-Page Cleanup
+
+Status: done
+
+Completed: 2026-07-08
+
+Recommendation label: `improve`
+
+Scope:
+
+- Confirm `IMP-001` through `IMP-005` and `IMP-009` align with strategy.
+- Review whether upgraded pages now deserve indexing.
+- Check remaining QA warnings for `site/about.html`, `site/index.html`, and four remaining itinerary pages.
+- Review San Diego legacy shim handling.
+- Review improved NYC tourist page against the GSC signal and Family Tripwise quality bar.
+- Use Anti Gravity CLI as advisory second-opinion reviewer if available.
+
+Result:
+
+- Local QA and production QA both returned 0 errors and 6 warnings.
+- `IMP-001` through `IMP-005` and `IMP-009` align with `AGENTS.md`, `strategy/current-strategy.md`, and `strategy/content-principles.md`.
+- Upgraded pages deserve continued indexing:
+  - `site/family-itinerary/san-diego-with-kids.html`;
+  - `site/where-to-stay/chicago-with-kids.html`;
+  - `site/where-to-stay/san-antonio-with-kids.html`;
+  - four upgraded teen pages;
+  - `site/things-to-do/new-york-city-with-kids.html`.
+- Remaining itinerary warnings are real content-depth issues. Chicago, Las Vegas, New York City, and San Antonio itinerary pages should be improved using the San Diego itinerary pattern instead of noindexed.
+- `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages; monitor them and improve later if a lightweight trust/homepage task is needed.
+- The three San Diego legacy shim pages are sufficiently handled for the current static GitHub Pages setup because they are outside the sitemap, include `noindex, follow`, and canonicalize to active URLs.
+- The upgraded NYC tourist page adequately responds to the early GSC signal while keeping local/weekend concepts separate.
+- Anti Gravity CLI advisory review was run via `agy`; it agreed that the next implementation-ready task should be upgrading the four remaining itinerary pages and did not recommend noindexing About/Home.
+
+Implementation-ready handoff created:
+
+- `IMP-010: Upgrade Remaining Family Itinerary Pages`
 
 ### SRR-001: Audit Current Strategy And Live Page Alignment
 
