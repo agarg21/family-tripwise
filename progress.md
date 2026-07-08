@@ -2,6 +2,11 @@
 
 ## 2026-07-08
 
+- Completed `IMP-010`:
+  - upgraded the Chicago, Las Vegas, New York City, and San Antonio family itinerary pages through `tools/upgrade-priority-pages.mjs`;
+  - added destination-specific route decisions, 1-day/2-day/3-day/toddler/teen/rainy-day comparison tables, pacing rules, meal/reset notes, skip guidance, stronger cluster links, and `ItemList` / `FAQPage` JSON-LD;
+  - preserved planning-guidance caveats for hours, tickets, weather, route conditions, safety advisories, transit/stroller access, parking, drive or transfer times, and child energy;
+  - validated with local and production QA: 0 errors, 2 remaining warnings for Home and About only.
 - Completed post-implementation SEO QA and strategy review after commit `c4cedfc`:
   - confirmed `IMP-001` through `IMP-005` and `IMP-009` align with strategy and content principles;
   - re-ran local and production QA with 0 errors and 6 remaining warnings;

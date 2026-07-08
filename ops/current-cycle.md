@@ -8,7 +8,7 @@ Cycle 1: Migrate Family Tripwise into the three-agent SEO operating system.
 
 ## Active Priority
 
-Implement `IMP-010` to upgrade the four remaining family itinerary pages before adding any new destination clusters.
+Post-`IMP-010` review and next-priority selection before adding any new destination clusters.
 
 ## Current Project State
 
@@ -80,6 +80,12 @@ Implement `IMP-010` to upgrade the four remaining family itinerary pages before 
   - confirmed legacy San Diego shim handling is sufficient for the current GitHub Pages setup;
   - found the four remaining non-San-Diego itinerary pages are the main remaining index-quality risk;
   - used Anti Gravity CLI via `agy` as an advisory reviewer, which agreed that the next ready task should upgrade the remaining itinerary pages.
+- Implementation completed IMP-010 on 2026-07-08:
+  - upgraded the Chicago, Las Vegas, New York City, and San Antonio family itinerary pages through `tools/upgrade-priority-pages.mjs`;
+  - added destination-specific quick route decisions, 1-day/2-day/3-day/toddler/teen/rainy-day comparison tables, pacing rules, meal/reset notes, skip guidance, and stronger cluster links;
+  - preserved planning-guidance caveats for hours, tickets, weather, route conditions, safety advisories, transit/stroller access, parking, drive or transfer times, and child energy;
+  - added valid `ItemList` and `FAQPage` JSON-LD;
+  - re-ran local and production QA with 0 errors and 2 remaining warnings.
 
 ## Ready For SEO Research & Review
 
@@ -99,22 +105,19 @@ Findings to preserve:
 
 ## Ready For Implementation
 
-`IMP-010` is ready in `backlog/implementation-backlog.md`.
+No implementation-ready task is currently active in `backlog/implementation-backlog.md`.
 
 Current ready implementation areas:
 
-- Upgrade `site/family-itinerary/chicago-with-kids.html`.
-- Upgrade `site/family-itinerary/las-vegas-with-kids.html`.
-- Upgrade `site/family-itinerary/new-york-city-with-kids.html`.
-- Upgrade `site/family-itinerary/san-antonio-with-kids.html`.
+- None. Candidate implementation tasks need SEO Research & Review confirmation or user direction.
 
 Current QA findings from `node tools/seo-qa.mjs --production`:
 
 - Errors: 0.
-- Warnings: 6.
-- Thin-page/content-depth warnings remain for `site/about.html`, `site/index.html`, and four remaining itinerary pages.
+- Warnings: 2.
+- Thin-page/content-depth warnings remain for `site/about.html` and `site/index.html`.
 - Legacy shim warnings are resolved because the three root-level San Diego HTML files are outside the sitemap and carry `noindex, follow`.
-- The four remaining itinerary warnings are now implementation-ready under `IMP-010`.
+- The four remaining itinerary warnings were resolved under `IMP-010`.
 - `site/about.html` and `site/index.html` are candidate/lightweight improvement work, not current noindex candidates.
 
 ## Waiting On User
@@ -132,7 +135,7 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-Implementation Agent for `IMP-010`.
+SEO Research & Review Agent for post-`IMP-010` QA and next-priority handoff selection.
 
 ## Master Notes
 

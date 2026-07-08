@@ -4,47 +4,11 @@ Last updated: 2026-07-08
 
 ## Active
 
-No implementation task is currently active. IMP-001 through IMP-005 and IMP-009 are complete.
+No implementation task is currently active. IMP-001 through IMP-005 and IMP-009 through IMP-010 are complete.
 
 ## Ready
 
-### IMP-010: Upgrade Remaining Family Itinerary Pages
-
-Status: ready
-
-Recommendation label: `improve`
-
-Source handoff:
-
-- `SRR-004: Post-Implementation QA For Thin-Page Cleanup`
-
-Primary files:
-
-- `site/family-itinerary/chicago-with-kids.html`
-- `site/family-itinerary/las-vegas-with-kids.html`
-- `site/family-itinerary/new-york-city-with-kids.html`
-- `site/family-itinerary/san-antonio-with-kids.html`
-- `tools/upgrade-priority-pages.mjs` if these pages are generated or upgraded through the shared script
-
-Goal:
-
-Bring the four remaining itinerary pages up to the same index-worthy pattern as `site/family-itinerary/san-diego-with-kids.html`.
-
-Required improvements:
-
-- Add destination-specific quick route decisions.
-- Add a comparison table for 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day variants where relevant.
-- Add nap/rest assumptions, meal/reset notes, stroller/transit or drive-time friction, and clear skip guidance.
-- Strengthen cluster links to the destination's activity and where-to-stay pages.
-- Preserve uncertainty with "planning guidance only" language and reminders to verify hours, tickets, weather, route conditions, safety advisories, transit/stroller access, parking, and child energy.
-- Add or preserve valid `ItemList` and `FAQPage` JSON-LD where the content supports it.
-
-Acceptance checks:
-
-- `node tools/seo-qa.mjs` returns 0 errors and no thin-page warnings for the four upgraded itinerary pages.
-- `node tools/seo-qa.mjs --production` returns 0 errors after deployment, or implementation clearly notes that production has not deployed yet.
-- Internal links and JSON-LD continue to pass QA.
-- No hotel, safety, transit, stroller, or route claim is presented as personally verified experience.
+None right now.
 
 ## Candidate Tasks
 
@@ -242,3 +206,33 @@ Acceptance checks:
 - Page includes visible decision support for first-time visitors.
 - Page has stronger internal links to NYC stay and itinerary pages.
 - Material stroller/transit/safety guidance is framed as planning guidance requiring verification.
+
+### IMP-010: Upgrade Remaining Family Itinerary Pages
+
+Status: done
+
+Completed: 2026-07-08
+
+Source handoff:
+
+- `SRR-004: Post-Implementation QA For Thin-Page Cleanup`
+
+Implementation notes:
+
+- Upgraded `site/family-itinerary/chicago-with-kids.html`, `site/family-itinerary/las-vegas-with-kids.html`, `site/family-itinerary/new-york-city-with-kids.html`, and `site/family-itinerary/san-antonio-with-kids.html` through `tools/upgrade-priority-pages.mjs`.
+- Added destination-specific quick route decisions, 1-day/2-day/3-day/toddler/teen/rainy-day comparison tables, pacing rules, meal/reset notes, stroller/transit or drive-time friction, and skip guidance.
+- Strengthened cluster links from each itinerary page to the relevant things-to-do and where-to-stay pages, plus teen pages where they exist.
+- Preserved uncertainty with planning-guidance caveats requiring verification of hours, tickets, weather, route conditions, safety advisories, transit/stroller access, parking, drive or transfer times, and child energy.
+- Added valid `ItemList` and `FAQPage` JSON-LD for the upgraded itinerary pages.
+
+Validation result:
+
+- `node tools/seo-qa.mjs`: 0 errors, 2 warnings.
+- The four upgraded itinerary pages are no longer flagged as thin-page warnings.
+- `node tools/seo-qa.mjs --production`: 0 errors, 2 warnings; production URL checks passed, while content deployment may still depend on the next commit/deploy.
+
+Acceptance checks:
+
+- No thin-page warnings remain for the four upgraded itinerary pages.
+- Internal links and JSON-LD continue to pass QA.
+- Hotel, safety, transit, stroller, and route guidance remains framed as planning guidance requiring verification rather than personally verified experience.

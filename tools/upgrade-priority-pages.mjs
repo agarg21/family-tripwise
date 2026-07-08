@@ -463,11 +463,209 @@ const stayPages = {
 };
 
 const itineraryPages = {
+  "family-itinerary/chicago-with-kids.html": {
+    title: "Chicago Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    description:
+      "Build a Chicago itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with naps, transit, meals, and skip notes.",
+    city: "Chicago",
+    links: {
+      allAges: "../things-to-do/chicago-with-kids.html",
+      stay: "../where-to-stay/chicago-with-kids.html",
+      teen: "../things-to-do/chicago-with-teens.html"
+    },
+    clusterCards: [
+      ["All-ages activity guide", "Compare Museum Campus, Lincoln Park Zoo, Maggie Daley Park, boat tours, Navy Pier, and lakefront stops by age, weather, nap fit, and stroller/transit friction.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
+      ["Teen-specific swaps", "Use stronger river, lakefront, museum, and food ideas when older kids need more than playground-heavy pacing.", "../things-to-do/chicago-with-teens.html", "Open Chicago with teens"],
+      ["Where to stay first", "Choose the lodging base before locking the route. Loop, River North, Streeterville, Lincoln Park, and West Loop all change transit, stroller, noise, and meal friction.", "../where-to-stay/chicago-with-kids.html", "Open where to stay in Chicago with kids"]
+    ],
+    quick: [
+      ["Best 1-day plan", "Millennium Park, one Museum Campus anchor, easy dinner", "Gives a clear Chicago first-day feel without turning the day into three museums."],
+      ["Best 2-day plan", "Parks/Museum Campus plus Lincoln Park or river plan", "Balances one downtown day with a second day that can flex by age and weather."],
+      ["Best 3-day plan", "Downtown orientation, museum day, neighborhood/lakefront day", "Adds room for a real rest window and a weather swap instead of stacking attractions."],
+      ["Best toddler pace", "Lincoln Park Zoo, nap, Maggie Daley Park if energy holds", "Shorter outdoor blocks and flexible exits beat long museum marathons."],
+      ["Best teen pace", "Architecture river plan, Field highlights, Riverwalk food", "Gives older kids skyline, story, and meal payoff without little-kid filler."],
+      ["Best rainy-day swap", "Shedd Aquarium or Field Museum as the anchor", "Pick one major indoor stop, keep meals nearby, and save lakefront time for a clearer window."],
+      ["Best stay pairing", "Loop/River North for first timers; Lincoln Park for younger-kid rhythm", "Treat this as planning guidance and verify transit, elevator, parking, and noise details before booking."],
+      ["What to skip", "Field, Shedd, Navy Pier, and a boat tour in one day", "That much walking, ticket timing, and weather exposure can overwhelm the actual fun."]
+    ],
+    rows: [
+      ["1-day highlights", "Millennium Park/Maggie Daley early; one Museum Campus anchor; simple Loop or River North dinner", "First-time mixed ages", "Post-museum hotel or lakefront reset", "Moderate; downtown walking and transit elevators need checking", "Eat near the museum or near the hotel instead of crossing town hungry", "Second museum, Navy Pier add-on, late boat tour without food"],
+      ["2-day first visit", "Day 1 parks and Museum Campus; Day 2 Lincoln Park Zoo or architecture river plan by age", "Weekend families", "Keep one afternoon optional", "Moderate; two core zones over two days", "Use neighborhood meals as the reset plan", "Trying to cover every lakefront and downtown stop"],
+      ["3-day balanced plan", "Downtown orientation; museum/lakefront day; Lincoln Park or river/neighborhood day", "Most families", "One protected reset each day", "Lower if you keep each day to one main zone", "Stock snacks and keep dinner close to the stay base", "Making arrival day a full sightseeing day"],
+      ["Toddler-paced plan", "Lincoln Park Zoo morning; nap; Maggie Daley or hotel pool/play space if energy holds", "Babies, toddlers, preschoolers", "Nap after lunch is the anchor", "Lower outdoors, but weather and transit elevator access matter", "Use verified nearby casual food and bathrooms", "Multiple paid museums in one day"],
+      ["Teen-paced plan", "Architecture river plan; Field or lakefront highlights; Riverwalk or West Loop food", "Tweens and teens", "Reset can be a meal, cafe, or hotel break", "Walking tolerance is higher, but weather can still change the plan", "Let food be part of the route, not a leftover decision", "Toddler-heavy playground pacing all day"],
+      ["Rainy-day version", "Shedd or Field as the main block; meal nearby; hotel reset; optional indoor-ish Navy Pier only if needed", "Any age with weather constraints", "Use breaks inside one zone", "Lower if you avoid cross-town transfers in rain", "Do not rely on long exposed walks for meals", "Boat tour or lakefront-heavy day in poor weather"]
+    ],
+    plans: {
+      "Arrival afternoon": "Keep arrival soft: check in, snacks, a short Millennium Park or nearby neighborhood walk if weather cooperates, and an early dinner near the hotel.",
+      "Museum Campus day": "Choose Field Museum or Shedd Aquarium as the main event, not both at full depth. Add lakefront time only if weather and energy are still good.",
+      "Neighborhood day": "Use Lincoln Park Zoo for younger kids or a river/food plan for older kids. Keep transit simple and verify elevator access if a stroller is part of the plan.",
+      "Rain backup": "Use Shedd or Field as the anchor, keep food close, and treat Navy Pier or a hotel reset as optional rather than mandatory.",
+      "Toddler adjustment": "Shorten each block, protect the post-lunch rest, and delete the afternoon stop if the morning ran long or weather turned rough.",
+      "Teen adjustment": "Trade playground time for architecture, lakefront views, a focused museum section, and a meal teens care about."
+    },
+    faqs: [
+      ["How many days do families need in Chicago?", "Two or three days works best for a first family trip. One day can work if you choose one park zone, one Museum Campus anchor, and an easy dinner instead of chasing every landmark."],
+      ["What should families skip on a short Chicago trip?", "Avoid stacking multiple large museums, Navy Pier, and a boat tour into one day. Transit, weather, ticket timing, and tired legs can become the trip."],
+      ["What is the easiest rainy-day Chicago itinerary with kids?", "Use Shedd Aquarium or Field Museum as the main anchor, keep meals nearby, and save lakefront, zoo, or boat plans for the clearest weather window."]
+    ]
+  },
+  "family-itinerary/las-vegas-with-kids.html": {
+    title: "Las Vegas Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    description:
+      "Build a Las Vegas itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with heat, pools, meals, and skip notes.",
+    city: "Las Vegas",
+    links: {
+      allAges: "../things-to-do/las-vegas-with-kids.html",
+      stay: "../where-to-stay/las-vegas-with-kids.html",
+      teen: "../things-to-do/las-vegas-with-teens.html"
+    },
+    clusterCards: [
+      ["All-ages activity guide", "Compare hotel pools, Bellagio fountains, Discovery Children's Museum, High Roller, Red Rock Canyon, and immersive stops by age, heat, rain, nap fit, and walking friction.", "../things-to-do/las-vegas-with-kids.html", "Open Las Vegas things to do with kids"],
+      ["Teen-specific swaps", "Use Red Rock, immersive exhibits, shows, skyline stops, and food plans when older kids need more than pool-and-stroller pacing.", "../things-to-do/las-vegas-with-teens.html", "Open Las Vegas with teens"],
+      ["Where to stay first", "Pick the hotel base before the route. Pool setup, room location, casino-floor exposure, parking, resort fees, and walk paths can shape the whole trip.", "../where-to-stay/las-vegas-with-kids.html", "Open where to stay in Las Vegas with kids"]
+    ],
+    quick: [
+      ["Best 1-day plan", "Pool morning, Bellagio visual stop, early dinner, one skyline/show option", "Keeps Vegas memorable without forcing kids through a Strip marathon."],
+      ["Best 2-day plan", "Pool/classic visuals plus museum or Red Rock by age", "Gives one resort-centered day and one off-Strip or kid-centered anchor."],
+      ["Best 3-day plan", "Arrival pool, classic Strip moment, age-specific anchor", "Adds enough slack for heat, late nights, and sensory overload."],
+      ["Best toddler pace", "Pool, nap, Discovery Children's Museum, short fountains stop", "Indoor and hotel-reset blocks matter more than checking off famous sights."],
+      ["Best teen pace", "Red Rock or immersive exhibit, pool reset, age-appropriate evening", "Older kids usually need one distinctive anchor beyond hotel wandering."],
+      ["Best rainy/heat swap", "Discovery Children's Museum, High Roller, or selected indoor exhibit", "Choose by age and sensory tolerance, then keep resort walking short."],
+      ["Best stay pairing", "Hotel pool and room logistics first, sightseeing second", "Treat hotel fit as part of the itinerary and verify fees, pool rules, smoke exposure, and walking routes."],
+      ["What to skip", "Aimless Strip walking with tired kids", "Distances, heat, casino detours, and crowds are harder than maps imply."]
+    ],
+    rows: [
+      ["1-day highlights", "Pool morning; Bellagio Conservatory/fountains; early dinner; High Roller or age-appropriate show", "Short first visits", "Midday room/pool reset", "Moderate-high; Strip walking and resort corridors add friction", "Eat before evening crowds and verify kid-appropriate venues", "Multiple casino-resort walks just because they look close"],
+      ["2-day first visit", "Day 1 pool and classic visuals; Day 2 Discovery Children's Museum, Red Rock, or Area15-style stop by age", "Weekend families", "Protect one late morning or afternoon at the hotel", "Variable; lower with rideshares/car and a contained hotel base", "Make one dinner easy and one dinner interesting", "Trying to do Red Rock and a long Strip night on the same day"],
+      ["3-day balanced plan", "Arrival pool; classic Strip/spectacle day; age-specific off-Strip or nature anchor", "Most families", "One true downtime block daily", "Lower if each day has one main zone", "Stock snacks/water and keep backup meals close", "Making every evening a late night"],
+      ["Toddler-paced plan", "Pool; nap; Discovery Children's Museum; one short fountains or conservatory stop", "Babies, toddlers, preschoolers", "Nap or quiet room time is the anchor", "Lower if you avoid long indoor resort walks", "Use hotel meals or verified nearby casual stops", "Late shows, long Strip walks, and loud sensory-heavy stops"],
+      ["Teen-paced plan", "Red Rock or immersive exhibit; pool reset; skyline or show option", "Tweens and teens", "Reset can be pool, food, or quiet room time", "Drive/rideshare friction plus heat checks matter", "Let teens choose one food or spectacle piece", "Repeating the same casino-resort wander each day"],
+      ["Rainy/heat version", "Indoor museum or exhibit; contained skyline stop; hotel reset", "Any age with weather or heat constraints", "Use the hotel as the main safety valve", "Lower if the plan avoids long outdoor transfers", "Do not rely on walking to find dinner with tired kids", "Outdoor-heavy Red Rock or pool-only day in poor conditions"]
+    ],
+    plans: {
+      "Arrival afternoon": "Use the hotel as the first activity: pool if open, room setup, snacks, and an early dinner. Save the bigger Strip or off-Strip move for a rested block.",
+      "Classic Vegas day": "Do one short visual loop, such as Bellagio Conservatory and fountains, then leave before the walking and crowds swallow the day.",
+      "Off-Strip day": "Choose Discovery Children's Museum for younger kids, Red Rock for older outdoor-ready kids, or a specific immersive exhibit for teens. Do not make it a vague wandering day.",
+      "Rain or heat backup": "Move the main activity indoors, shorten resort corridors, and keep rideshare/car logistics visible. Heat and sensory overload can be as disruptive as rain.",
+      "Toddler adjustment": "Protect nap and meal timing, avoid late-night promises, and use the pool or room reset before adding one short evening visual.",
+      "Teen adjustment": "Give teens a distinctive anchor, then build in pool or food downtime so the trip does not become only logistics and fees."
+    },
+    faqs: [
+      ["How many days do families need in Las Vegas?", "Two or three days works best if the hotel pool and downtime are part of the trip. One day can work if families keep the plan to pool time, one classic visual stop, and one age-appropriate evening idea."],
+      ["What should families skip on a short Las Vegas trip?", "Avoid aimless Strip walking, repeated casino-resort crossings, and late nights every night. Heat, smoke exposure, crowds, and fees can make a simple plan harder than expected."],
+      ["What is the easiest rainy-day or heat-day Las Vegas itinerary with kids?", "Use a kid-centered indoor stop, a contained skyline or resort visual, and a hotel reset. Verify current hours, pool rules, ticketing, parking, and transport before committing."]
+    ]
+  },
+  "family-itinerary/new-york-city-with-kids.html": {
+    title: "New York City Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    description:
+      "Build a New York City itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with transit, meals, strollers, and skip notes.",
+    city: "New York City",
+    links: {
+      allAges: "../things-to-do/new-york-city-with-kids.html",
+      stay: "../where-to-stay/new-york-city-with-kids.html"
+    },
+    clusterCards: [
+      ["All-ages activity guide", "Compare Central Park, AMNH, Staten Island Ferry, CMOM, observation decks, and Brooklyn Bridge Park by age, weather, budget, nap fit, and stroller/transit friction.", "../things-to-do/new-york-city-with-kids.html", "Open New York City things to do with kids"],
+      ["Where to stay first", "Choose the lodging base before finalizing the route. Upper West Side, Midtown, Downtown, Brooklyn, and Long Island City change subway, stroller, reset, and evening-noise tradeoffs.", "../where-to-stay/new-york-city-with-kids.html", "Open where to stay in New York City with kids"]
+    ],
+    quick: [
+      ["Best 1-day plan", "Central Park, AMNH, early Upper West Side dinner", "Keeps a first family day in one manageable zone with indoor/outdoor flexibility."],
+      ["Best 2-day plan", "Uptown park/museum day plus Downtown ferry or Brooklyn skyline day", "Adds classic views without crossing the city repeatedly in one day."],
+      ["Best 3-day plan", "Uptown, Downtown/Brooklyn, Midtown or repeat-favorite day", "Gives enough space for weather, transit, and child-energy pivots."],
+      ["Best toddler pace", "Central Park playground, CMOM or AMNH, hotel reset", "Short sessions and elevator/stroller planning beat landmark chasing."],
+      ["Best teen pace", "Brooklyn Bridge Park, observation deck, food/neighborhood time", "Older kids often need skyline payoff and independence, not only little-kid museums."],
+      ["Best rainy-day swap", "AMNH or CMOM by age, meals nearby, hotel reset", "Choose one large indoor anchor and avoid two long subway transfers in bad weather."],
+      ["Best stay pairing", "Upper West Side for park/museum rhythm; Midtown/Downtown by route goals", "Treat this as planning guidance and verify elevator access, subway changes, hotel room setup, and evening noise."],
+      ["What to skip", "Uptown, Downtown, Brooklyn, and Midtown in one day", "Too many transfers and sidewalks can overwhelm the family version of New York."]
+    ],
+    rows: [
+      ["1-day highlights", "Central Park playgrounds or walk; AMNH; early dinner near Upper West Side or hotel", "First-time mixed ages", "Post-lunch museum cafe, park bench, or hotel reset", "Moderate; stroller and subway elevator routes need checking", "Keep meals in the same zone", "Downtown ferry, Times Square, and Brooklyn add-ons in the same day"],
+      ["2-day first visit", "Day 1 Upper West Side/Central Park; Day 2 Staten Island Ferry, Brooklyn Bridge Park, or Midtown by age", "Weekend families", "Keep one afternoon optional", "Moderate-high if hotel base is far from route", "Use one planned meal per day as the reset", "Trying to hit every borough or landmark"],
+      ["3-day balanced plan", "Uptown park/museum; Downtown ferry or Brooklyn skyline; Midtown or repeat-favorite/weather day", "Most families", "One real reset or slow meal daily", "Lower if each day stays in one or two adjacent zones", "Choose dinners by hotel base before leaving", "Starting each morning with a long transfer"],
+      ["Toddler-paced plan", "Central Park playground; CMOM or AMNH; nap/hotel reset; short evening walk", "Babies, toddlers, preschoolers", "Nap or quiet room time is the anchor", "Lower if staying near the park; higher with elevator gaps", "Use nearby casual meals and verified bathrooms", "Observation decks, long ferry waits, and multiple transfers"],
+      ["Teen-paced plan", "Brooklyn Bridge Park or observation deck; food stop; one museum or neighborhood block", "Tweens and teens", "Reset can be food, coffee, park seating, or hotel break", "Walking tolerance is higher, but transit timing still matters", "Let teens choose one skyline or food payoff", "All-day little-kid museum/playground rhythm"],
+      ["Rainy-day version", "AMNH or CMOM by age; meal nearby; hotel reset; short indoor/covered second stop only if needed", "Any age with weather constraints", "Use the indoor anchor as the day", "Lower if you avoid cross-town subway transfers", "Do not improvise meals after everyone is wet and tired", "Outdoor skyline day or long bridge walk in poor weather"]
+    ],
+    plans: {
+      "Arrival afternoon": "Keep arrival close to the hotel: snacks, a short neighborhood walk, and an early dinner. Save subway learning and big-ticket activities for a rested morning.",
+      "Uptown day": "Use Central Park and AMNH or CMOM as the core. Keep the day in one zone and verify stroller/elevator routes before promising the exact path.",
+      "Skyline day": "Choose Staten Island Ferry, Brooklyn Bridge Park, or an observation deck, not all of them. Weather, lines, and transit can change the best option.",
+      "Rain backup": "Use AMNH or CMOM as the anchor, keep meals nearby, and move any skyline plan to the clearest window.",
+      "Toddler adjustment": "Shorten every block, prioritize bathrooms and elevator access, and delete the second activity if the first one runs long.",
+      "Teen adjustment": "Trade a playground or younger-kid museum block for skyline views, a food neighborhood, or a focused museum section."
+    },
+    faqs: [
+      ["How many days do families need in New York City?", "Three days is a better first family rhythm, but one or two days can work if each day stays in one main zone and the hotel base fits the route."],
+      ["What should families skip on a short New York City trip?", "Avoid stacking Central Park, AMNH, Times Square, Staten Island Ferry, Brooklyn Bridge Park, and an observation deck into one day. Transit, sidewalks, lines, and weather can make that unrealistic with kids."],
+      ["What is the easiest rainy-day New York City itinerary with kids?", "Use AMNH or CMOM as the anchor by age, keep meals nearby, and save ferry, bridge, park, or observation-deck plans for the clearest weather window."]
+    ]
+  },
+  "family-itinerary/san-antonio-with-kids.html": {
+    title: "San Antonio Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    description:
+      "Build a San Antonio itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with heat, meals, drive time, and skip notes.",
+    city: "San Antonio",
+    links: {
+      allAges: "../things-to-do/san-antonio-with-kids.html",
+      stay: "../where-to-stay/san-antonio-with-kids.html",
+      teen: "../things-to-do/san-antonio-with-teens.html"
+    },
+    clusterCards: [
+      ["All-ages activity guide", "Compare the Alamo, River Walk boat ride, The DoSeum, zoo, Natural Bridge Caverns, and Six Flags by age, heat, rain, nap fit, and stroller/drive friction.", "../things-to-do/san-antonio-with-kids.html", "Open San Antonio things to do with kids"],
+      ["Teen-specific swaps", "Use caverns, theme-park, food, and short Downtown context ideas when older kids need more than younger-kid museum pacing.", "../things-to-do/san-antonio-with-teens.html", "Open San Antonio with teens"],
+      ["Where to stay first", "Pick the lodging base before locking the route. Pearl, Downtown/River Walk, Broadway/DoSeum, Northwest theme-park areas, and airport/value bases change heat, parking, stroller, and drive-time tradeoffs.", "../where-to-stay/san-antonio-with-kids.html", "Open where to stay in San Antonio with kids"]
+    ],
+    quick: [
+      ["Best 1-day plan", "Alamo early, boat ride, Pearl or DoSeum by age", "Covers the city signature without a long hot Downtown march."],
+      ["Best 2-day plan", "Downtown/Pearl plus DoSeum, zoo, caverns, or theme park by age", "Separates classic first-visit stops from the bigger kid-specific anchor."],
+      ["Best 3-day plan", "Arrival reset, Downtown context, age-specific anchor day", "Adds heat-season slack and keeps one major attraction from swallowing every day."],
+      ["Best toddler pace", "The DoSeum, Pearl food/reset, hotel nap, short boat ride", "Indoor hands-on time and a short evening view usually beat long outdoor sightseeing."],
+      ["Best teen pace", "Natural Bridge Caverns or Six Flags, Pearl food, short River Walk", "Older kids often need adventure, rides, or food payoff plus concise city context."],
+      ["Best rainy/heat swap", "The DoSeum or short indoor/covered Downtown plan", "Keep the plan close to meals and save outdoor zoo/theme-park time for a better window."],
+      ["Best stay pairing", "Pearl/Museum Reach or Downtown for first visit; Northwest only for theme-park trips", "Treat this as planning guidance and verify exact parking, noise, stroller route, and heat-season logistics."],
+      ["What to skip", "Outdoor zoo, River Walk, caverns, and theme park in one compressed route", "Heat, drive time, lines, and tired kids can turn the day into logistics."]
+    ],
+    rows: [
+      ["1-day highlights", "Alamo early; boat ride; lunch/rest; Pearl or DoSeum depending on ages", "First-time mixed ages", "Midday hotel, shaded meal, or Pearl reset", "Moderate; Downtown stroller routes and parking need checking", "Plan lunch before heat and crowds peak", "Zoo, caverns, and Six Flags add-ons"],
+      ["2-day first visit", "Day 1 Downtown/Alamo/River Walk/Pearl; Day 2 DoSeum or zoo for younger kids, caverns or Six Flags for older kids", "Weekend families", "Protect one afternoon as optional", "Moderate-high; second day may require a drive", "Keep dinners close to the stay base", "Multiple outdoor anchors in summer heat"],
+      ["3-day balanced plan", "Arrival reset; Downtown/Pearl day; age-specific anchor day; optional zoo or food reset", "Most families", "One real reset daily, especially warm months", "Lower if you avoid crossing north/south repeatedly", "Stock water/snacks and choose backup meals early", "Making the theme park or caverns day share space with too many classic stops"],
+      ["Toddler-paced plan", "The DoSeum; Pearl reset; hotel nap; short boat ride if weather and energy cooperate", "Babies, toddlers, preschoolers", "Nap after lunch is the anchor", "Lower if staying near Pearl/Broadway; Downtown route still needs verifying", "Use verified casual meals and bathrooms", "Long River Walk loop, midday zoo, or caverns with tired toddlers"],
+      ["Teen-paced plan", "Natural Bridge Caverns or Six Flags; food reset; concise Alamo/River Walk block", "Tweens and teens", "Reset can be hotel pool, Pearl meal, or quiet evening", "Drive time and heat checks matter", "Give teens a food or adventure payoff", "Younger-kid-only museum pacing all day"],
+      ["Rainy/heat version", "The DoSeum for younger kids; short Downtown context plus food; indoor/rest block; save outdoor anchor", "Any age with weather or heat constraints", "Use midday as the protected reset", "Lower if you keep the route central", "Do not rely on exposed walking for meals", "Long zoo/theme-park day in extreme heat or storms"]
+    ],
+    plans: {
+      "Arrival afternoon": "Keep the first block light: snacks, pool or room setup if available, a short Pearl or nearby meal, and no promises that require perfect weather.",
+      "Downtown context day": "Use the Alamo and a short River Walk or boat segment as the city signature, then stop before heat and crowds make it feel bigger than it is.",
+      "Age-specific anchor day": "Choose DoSeum or zoo for younger kids, Natural Bridge Caverns or Six Flags for older kids. Treat the chosen anchor as the day, not a prelude to three more stops.",
+      "Rain or heat backup": "Use The DoSeum, a short meal-centered Downtown block, or a hotel reset. Verify current hours, ticketing, and weather policies before changing the route.",
+      "Toddler adjustment": "Keep sessions short, make the midday rest non-negotiable, and delete the evening add-on if the morning ran hot or overstimulating.",
+      "Teen adjustment": "Give older kids one higher-payoff anchor, then use food, pool, or a concise River Walk block rather than stretching the day with younger-kid filler."
+    },
+    faqs: [
+      ["How many days do families need in San Antonio?", "Two or three days works best for a first family trip. One day can work if families keep Downtown concise and choose either Pearl or DoSeum instead of stacking every major attraction."],
+      ["What should families skip on a short San Antonio trip?", "Avoid stacking the zoo, River Walk, caverns, theme parks, and Pearl into one compressed route. Heat, drive time, parking, lines, and child energy can change the plan quickly."],
+      ["What is the easiest rainy-day or heat-day San Antonio itinerary with kids?", "Use The DoSeum for younger kids or a short indoor/meal-centered Downtown plan, then save zoo, River Walk walking, caverns, or theme-park time for better conditions."]
+    ]
+  },
   "family-itinerary/san-diego-with-kids.html": {
     title: "San Diego Itinerary With Kids: 1, 2 and 3 Day Family Plans",
     description:
       "Build a San Diego itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with naps, meals, and skip notes.",
     city: "San Diego",
+    links: {
+      allAges: "../things-to-do/san-diego-with-kids.html",
+      stay: "../where-to-stay/san-diego-with-kids.html",
+      toddler: "../things-to-do/san-diego-with-toddlers.html",
+      teen: "../things-to-do/san-diego-with-teens.html"
+    },
+    clusterCards: [
+      ["All-ages activity guide", "Compare zoo, Mission Bay, Balboa Park, Birch Aquarium, La Jolla, and Coronado by age, rain, nap fit, and stroller friction.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
+      ["Toddler-specific swaps", "Use shorter sessions, easier exits, and nap-first pacing when younger kids are driving the schedule.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
+      ["Teen-specific swaps", "Trade some little-kid resets for stronger scenery, food, and independence where it fits your family.", "../things-to-do/san-diego-with-teens.html", "Open San Diego with teens"],
+      ["Where to stay first", "Pick the lodging base before locking the route. Mission Bay, Downtown, La Jolla, Coronado, and Mission Valley change the practical day shape.", "../where-to-stay/san-diego-with-kids.html", "Open where to stay in San Diego with kids"]
+    ],
     quick: [
       ["Best 1-day plan", "Zoo early, Balboa Park reset, Mission Bay or pool", "Highest San Diego payoff with only one cross-town move after lunch."],
       ["Best 2-day plan", "Zoo/Balboa plus Mission Bay/La Jolla", "Gives one major attraction day and one coast day without overpacking."],
@@ -704,6 +902,14 @@ function esc(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function slugify(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replaceAll("&", "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 function stripMarked(html, start, end) {
@@ -993,12 +1199,19 @@ ${markerEnd}
 }
 
 function renderItineraryUpgrade(page) {
+  const clusterCards = page.clusterCards?.length
+    ? page.clusterCards
+    : [
+        ["All-ages activity guide", `Use the main ${page.city} activity guide to compare family stops by age, weather, pacing, and logistics.`, page.links?.allAges || `../things-to-do/${slugify(page.city)}-with-kids.html`, `Open ${page.city} things to do with kids`],
+        ["Where to stay first", `Pick the lodging base before locking the route. Area, parking, transit, stroller, noise, and meal access can change the day shape.`, page.links?.stay || `../where-to-stay/${slugify(page.city)}-with-kids.html`, `Open where to stay in ${page.city} with kids`]
+      ];
+
   return `${markerStart}
       <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Quick route decisions</p>
-            <h2>Choose the San Diego plan that matches your family</h2>
+            <h2>Choose the ${esc(page.city)} plan that matches your family</h2>
           </div>
 ${renderQuickPicks(page.quick)}
         </div>
@@ -1009,7 +1222,7 @@ ${renderQuickPicks(page.quick)}
           <p class="eyebrow">Compare itinerary options</p>
           <h2>1-day, 2-day, 3-day, toddler, teen, and rainy-day variants</h2>
         </div>
-        <p class="review-label">Planning guidance only. Drive times, parking, stroller routes, attraction hours, weather, and child energy can change the right answer for your family; verify current details before booking or promising a route.</p>
+        <p class="review-label">Planning guidance only. Verify current hours, tickets, weather, route conditions, safety advisories, transit/stroller access, parking, drive or transfer times, and child energy before booking or promising a route.</p>
 ${renderItineraryMatrix(page.rows)}
       </section>
 
@@ -1029,10 +1242,7 @@ ${renderPlans(page.plans)}
           <h2>Swap activities without rebuilding the whole trip</h2>
         </div>
         <div class="card-grid">
-          <article class="activity-card"><h3>All-ages activity guide</h3><p>Compare zoo, Mission Bay, Balboa Park, Birch Aquarium, La Jolla, and Coronado by age, rain, nap fit, and stroller friction.</p><p><a class="text-link" href="../things-to-do/san-diego-with-kids.html">Open San Diego things to do with kids</a></p></article>
-          <article class="activity-card"><h3>Toddler-specific swaps</h3><p>Use shorter sessions, easier exits, and nap-first pacing when younger kids are driving the schedule.</p><p><a class="text-link" href="../things-to-do/san-diego-with-toddlers.html">Open San Diego with toddlers</a></p></article>
-          <article class="activity-card"><h3>Teen-specific swaps</h3><p>Trade some little-kid resets for stronger scenery, food, and independence where it fits your family.</p><p><a class="text-link" href="../things-to-do/san-diego-with-teens.html">Open San Diego with teens</a></p></article>
-          <article class="activity-card"><h3>Where to stay first</h3><p>Pick the lodging base before locking the route. Mission Bay, Downtown, La Jolla, Coronado, and Mission Valley change the practical day shape.</p><p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Open where to stay in San Diego with kids</a></p></article>
+${clusterCards.map(([title, body, href, linkText]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
         </div>
       </section>
 ${markerEnd}
