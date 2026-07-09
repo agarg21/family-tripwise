@@ -1,10 +1,10 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-08
+Last updated: 2026-07-09
 
 ## Active
 
-No SEO Research & Review task is active. Post-implementation QA is complete and `IMP-010` is ready for Implementation.
+No SEO Research & Review task is active. SRR-006 is complete, but `IMP-012` is deferred at user request.
 
 ## Next
 
@@ -42,25 +42,6 @@ Compare:
 
 Recommend one narrow implementation test.
 
-### SRR-006: Validate NYC Local / Weekend Events Concept
-
-Status: pending
-
-Recommendation label: `test`
-
-Evaluate whether a distinct New York City local/nearby-parent page or module should exist separately from the evergreen tourist page.
-
-Questions:
-
-- Is there measurable demand for `nyc this weekend with kids`, `kids events nyc this weekend`, `things to do with kids nyc this weekend`, and related variants?
-- Are SERPs dominated by local calendars, tourism boards, social platforms, or weak listicles?
-- Can Family Tripwise maintain freshness with a source-and-human-review workflow?
-- Should the first local page be weekend events, day trips, free activities, or rainy-day activities?
-
-Metrics:
-
-- Keyword volume, CPC, difficulty, and traffic are `UNKNOWN` until measured with a named tool.
-
 ### SRR-007: Validate San Antonio Family-Hotel Demand And Review Workflow
 
 Status: pending
@@ -93,6 +74,37 @@ Evaluate whether to create `best family hotels in San Diego` only after:
 - the current San Diego where-to-stay page remains the canonical area decision page.
 
 ## Done
+
+### SRR-006: Validate NYC Local / Weekend Events Concept
+
+Status: done
+
+Completed: 2026-07-08
+
+Recommendation label: `test`
+
+Research artifact:
+
+- `docs/research/srr-006-nyc-local-weekend-events.md`
+
+Scope:
+
+- Decide whether Family Tripwise should test a local/nearby-parent page or product module for NYC, Jersey City, Hoboken, and reachable family activities/weekend events.
+- Include user context: the user lives in Jersey City and personally wants free/paid family activities around NYC, Jersey City, Hoboken, and nearby reachable areas.
+- Treat Instagram accounts such as JCFamilies and The Hoboken Girl as competitor/source-discovery signals, not scrape targets or durable primary sources.
+
+Result:
+
+- Recommended a hybrid test: SEO landing page plus manually curated weekend planner module, with possible future newsletter path.
+- Recommended first URL: `/things-to-do/nyc-this-weekend-with-kids.html`, framed as a planner for NYC, Jersey City, Hoboken, and nearby reachable areas.
+- Recommended scope: greater NYC metro families, with Jersey City/Hoboken as first-class filters and logistics context rather than separate first-page silos.
+- Keyword volume, CPC, difficulty, traffic, and revenue potential are `UNKNOWN`; no named keyword database was queried.
+- Observed source ecosystem includes Mommy Poppins, Time Out Kids, Brooklyn Bridge Parents, NYC Parks, Hudson River Park, Brooklyn Bridge Park, NYPL/BPL, JCFamilies, Jersey City Cultural Affairs, Jersey City Free Public Library, Hoboken Girl/Local Girl, Hoboken Public Library, Hoboken Now, NJ Kids, NJ Mom, Macaroni KID, and Eventbrite.
+- Anti Gravity CLI advisory review was run via `agy`; it agreed with a hybrid test, greater NYC/Jersey City/Hoboken scope, NYC weekend URL, and no automatic publishing.
+
+Implementation handoff created, then deferred at user request on 2026-07-09:
+
+- `IMP-012: Build Greater NYC Weekend Family Planner Pilot`
 
 ### SRR-004: Post-Implementation QA For Thin-Page Cleanup
 

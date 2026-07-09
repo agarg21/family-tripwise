@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-08
+Last updated: 2026-07-09
 
 ## Cycle Name
 
@@ -8,7 +8,7 @@ Cycle 1: Migrate Family Tripwise into the three-agent SEO operating system.
 
 ## Active Priority
 
-Post-`IMP-010` review and next-priority selection before adding any new destination clusters.
+Choose the next implementation priority after deferring `IMP-012`. Current options are candidate work only: improve Home/About trust pages, improve existing priority-page internal links, validate or prototype the first tool-like component, or run another SEO Research & Review pass.
 
 ## Current Project State
 
@@ -86,12 +86,23 @@ Post-`IMP-010` review and next-priority selection before adding any new destinat
   - preserved planning-guidance caveats for hours, tickets, weather, route conditions, safety advisories, transit/stroller access, parking, drive or transfer times, and child energy;
   - added valid `ItemList` and `FAQPage` JSON-LD;
   - re-ran local and production QA with 0 errors and 2 remaining warnings.
+- SEO Research & Review completed SRR-006 on 2026-07-08:
+  - validated a greater NYC local/weekend-events concept using current SERP/source research and user context from Jersey City;
+  - recommended a hybrid SEO page plus manually curated weekend planner module, not a pure static article and not automatic event publishing;
+  - recommended first URL `/things-to-do/nyc-this-weekend-with-kids.html`, framed for NYC, Jersey City, Hoboken, and nearby reachable family activities;
+  - marked keyword volume, CPC, difficulty, traffic, and revenue potential as `UNKNOWN` because no named keyword database was queried;
+  - used Anti Gravity CLI via `agy` as an advisory reviewer;
+  - created research artifact `docs/research/srr-006-nyc-local-weekend-events.md`;
+  - created ready implementation handoff `IMP-012`.
+- User deferred `IMP-012` on 2026-07-09:
+  - keep the research and implementation brief as a future option;
+  - do not send the Implementation Agent into the NYC weekend planner now;
+  - do not create `/things-to-do/nyc-this-weekend-with-kids.html` as the next cycle.
 
 ## Ready For SEO Research & Review
 
 No SEO Research & Review task is active. Deferred research topics are queued for later validation, not immediate implementation:
 
-- NYC local/weekend-events concept.
 - San Antonio family-hotel demand and human-review workflow.
 
 Findings to preserve:
@@ -102,14 +113,18 @@ Findings to preserve:
 - Best-family-hotel standalone pages require a human-review path before firm hotel recommendations are published.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
 - `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages, even though they are still thin by the QA threshold.
+- NYC/Jersey City/Hoboken weekend-events work is researched and can be revisited later, but it is not the current implementation priority.
 
 ## Ready For Implementation
 
-No implementation-ready task is currently active in `backlog/implementation-backlog.md`.
+No implementation task is currently ready. `IMP-012` is deferred.
 
-Current ready implementation areas:
+Candidate next implementation areas:
 
-- None. Candidate implementation tasks need SEO Research & Review confirmation or user direction.
+- Improve `site/index.html` and `site/about.html` as trust/navigation pages.
+- Strengthen internal links across existing priority pages.
+- Ask SEO Research & Review to choose the first narrow tool-like feature.
+- Ask SEO Research & Review to validate San Antonio or San Diego hotel-page feasibility and human-review workflow.
 
 Current QA findings from `node tools/seo-qa.mjs --production`:
 
@@ -122,7 +137,7 @@ Current QA findings from `node tools/seo-qa.mjs --production`:
 
 ## Waiting On User
 
-No hard blocker right now.
+No hard blocker right now. The next step needs a product/SEO priority choice because the only ready implementation handoff was deferred.
 
 Useful future user input:
 
@@ -130,12 +145,11 @@ Useful future user input:
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for the next research cycle.
 - Whether to create a standalone San Diego family hotels page after a human-review workflow exists.
-- Whether to validate an NYC local/weekend-events page concept in the next SEO Research & Review cycle.
 - Whether to validate San Antonio family-hotel demand before any standalone hotel page or hotel-shortlist expansion.
 
 ## Recommended Next Agent
 
-SEO Research & Review Agent for post-`IMP-010` QA and next-priority handoff selection.
+Master / Operator should choose or request the next priority. Do not route to Implementation Agent until a ready task is selected.
 
 ## Master Notes
 

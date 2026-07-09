@@ -1,7 +1,21 @@
 # Progress
 
+## 2026-07-09
+
+- Deferred `IMP-012: Build Greater NYC Weekend Family Planner Pilot` at user request:
+  - kept the SRR-006 research artifact and implementation brief for future use;
+  - moved the task out of the ready implementation lane;
+  - updated the current cycle so the next step is a fresh priority choice rather than the NYC weekend planner.
+
 ## 2026-07-08
 
+- Completed `SRR-006: Validate NYC Local / Weekend Events Concept`:
+  - created research artifact `docs/research/srr-006-nyc-local-weekend-events.md`;
+  - reviewed NYC, Jersey City, Hoboken, and nearby family activity/event source ecosystem;
+  - used Anti Gravity CLI via `agy` as an advisory second-opinion reviewer;
+  - recommended a hybrid SEO page plus manually curated weekend planner module, not a pure static article or automated event scraper;
+  - marked keyword volume, CPC, difficulty, traffic, and revenue potential as `UNKNOWN` because no named keyword database was queried;
+  - created ready implementation handoff `IMP-012` for a greater NYC weekend family planner pilot.
 - Completed `IMP-010`:
   - upgraded the Chicago, Las Vegas, New York City, and San Antonio family itinerary pages through `tools/upgrade-priority-pages.mjs`;
   - added destination-specific route decisions, 1-day/2-day/3-day/toddler/teen/rainy-day comparison tables, pacing rules, meal/reset notes, skip guidance, stronger cluster links, and `ItemList` / `FAQPage` JSON-LD;

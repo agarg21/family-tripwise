@@ -1,14 +1,14 @@
 # Implementation Backlog
 
-Last updated: 2026-07-08
+Last updated: 2026-07-09
 
 ## Active
 
-No implementation task is currently active. IMP-001 through IMP-005 and IMP-009 through IMP-010 are complete.
+No implementation task is currently active. IMP-001 through IMP-005 and IMP-009 through IMP-010 are complete. IMP-012 is intentionally deferred for now.
 
 ## Ready
 
-None right now.
+No implementation task is currently ready. Pick the next task from Candidate Tasks only after the user chooses a direction or SEO Research & Review confirms the next priority.
 
 ## Candidate Tasks
 
@@ -58,6 +58,71 @@ Why candidate, not ready:
 
 - The pages are thin by word count, but they are trust/navigation pages rather than destination SEO targets.
 - The remaining itinerary warnings are a higher priority because they target explicit `{destination} itinerary with kids` search intent.
+
+## Deferred
+
+### IMP-012: Build Greater NYC Weekend Family Planner Pilot
+
+Status: deferred
+
+Recommendation label: `test`
+
+Deferred: 2026-07-09 at user request.
+
+Source handoff:
+
+- `SRR-006: Validate NYC Local / Weekend Events Concept`
+- `docs/research/srr-006-nyc-local-weekend-events.md`
+
+Goal:
+
+Build a manual, source-backed pilot framework for a greater NYC weekend family planner serving families around New York City, Jersey City, Hoboken, and nearby reachable areas.
+
+Recommended URL:
+
+- `/things-to-do/nyc-this-weekend-with-kids.html`
+
+Important boundaries:
+
+- Do not build an automatic scraper.
+- Do not automatically publish event data.
+- Do not scrape Instagram private/login-only content.
+- Treat Instagram/local social accounts as discovery signals only unless event details are public and source-linked.
+- Do not add the page to `site/sitemap.xml` unless it contains enough current, reviewed content to deserve indexing.
+- If the page shell is created before reviewed pilot content exists, keep it `noindex, follow` and outside the sitemap.
+
+Primary implementation options:
+
+- Create a static page with a manually reviewed event/activity table.
+- Add a small structured data file or embedded data block for manually curated events.
+- Add filters or grouped sections for Jersey City/Hoboken, Manhattan/NYC, Brooklyn waterfront, nearby NJ, free/low-cost, rainy-day, age band, and reservation-needed.
+
+Required event fields:
+
+- event/activity name
+- date/time
+- area
+- venue
+- age fit
+- price band
+- indoor/outdoor
+- rainy-day suitability
+- reservation/ticket need
+- transit/logistics note from Jersey City/Hoboken
+- stroller note, labeled estimated or human-reviewed
+- public source URL
+- last-checked date
+- review status
+
+Acceptance checks:
+
+- Every published event row has a public source URL and last-checked date.
+- Past events are excluded or clearly not published.
+- Stroller, transit, safety, and suitability notes are labeled estimated or human-reviewed.
+- The page does not imply Family Tripwise personally attended or verified an event unless a human reviewer supplied that note.
+- The page includes freshness and human-review guardrails.
+- Local QA returns 0 errors.
+- If the page is indexable and added to the sitemap, production QA should return 0 errors after deployment.
 
 ## Done
 
