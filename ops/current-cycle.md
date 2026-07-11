@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-09
+Last updated: 2026-07-11
 
 ## Cycle Name
 
@@ -8,7 +8,7 @@ Cycle 1: Migrate Family Tripwise into the three-agent SEO operating system.
 
 ## Active Priority
 
-Choose the next implementation priority after deferring `IMP-012`. Current options are candidate work only: improve Home/About trust pages, improve existing priority-page internal links, validate or prototype the first tool-like component, or run another SEO Research & Review pass.
+Post-`IMP-014` checkpoint: current ready implementation lane is clear. Do not add new destination clusters, standalone hotel pages, or the deferred NYC weekend planner without a new SEO Research & Review handoff or user direction.
 
 ## Current Project State
 
@@ -98,10 +98,44 @@ Choose the next implementation priority after deferring `IMP-012`. Current optio
   - keep the research and implementation brief as a future option;
   - do not send the Implementation Agent into the NYC weekend planner now;
   - do not create `/things-to-do/nyc-this-weekend-with-kids.html` as the next cycle.
+- Master ran a current GSC UI review on 2026-07-11:
+  - total impressions increased to 162, with 0 clicks and average position 60.6;
+  - the strongest visible page signal is `where-to-stay/san-diego-with-kids.html` with 59 impressions;
+  - New York City things-to-do remains the strongest activity-page signal with 25 impressions;
+  - sitemap status remains Success with 22 discovered pages;
+  - page indexing data is still processing;
+  - manual actions and security issues show no issues detected;
+  - created `docs/research/gsc-ui-review-2026-07-11.md`;
+  - created ready implementation handoff `IMP-013`.
+- Implementation completed IMP-013 on 2026-07-11:
+  - improved San Diego where-to-stay for visible family hotel/stay intent without creating a standalone hotel page or firm hotel recommendations;
+  - added San Diego hotel decision support and official-source booking checks for room setup, pool, breakfast/food, kitchen/laundry, crib/rollaway, parking/resort fees, noise, location, and property-source verification;
+  - strengthened New York City things-to-do, New York City where-to-stay, Chicago where-to-stay, and Las Vegas things-to-do with GSC-aligned decision support and internal cluster links;
+  - expanded Home into a practical navigation hub for the current five destination clusters;
+  - expanded About with editorial methodology, source policy, human-review boundaries, and model-derived-vs-reviewed claim framing;
+  - kept `IMP-012` deferred and added no new city, standalone hotel, or NYC weekend page;
+  - re-ran local and production QA with 0 errors and 0 warnings.
+- SEO Research & Review completed SRR-008 on 2026-07-11:
+  - confirmed `IMP-013` improved GSC-signaled pages without unsupported expansion;
+  - re-ran local and production QA with 0 errors and 0 warnings;
+  - confirmed Home/About thin-page warnings are resolved;
+  - confirmed sitemap remains unchanged at 22 canonical URLs and excludes legacy San Diego shims;
+  - confirmed no new city cluster, standalone hotel page, or NYC weekend planner page was created;
+  - confirmed `IMP-012` remains deferred;
+  - found one implementation-ready cleanup: replace safety-loaded wording where the intended meaning is planning reliability or lower friction rather than source-backed physical safety;
+  - created ready handoff `IMP-014`.
+- Master completed IMP-014 on 2026-07-11 after the Implementation Agent turn hit a system error:
+  - reframed safety-loaded planning shorthand in generated source and regenerated HTML;
+  - changed uncaveated uses such as "safest default," "safest rainy-day anchors," "safer bad-weather anchor," and "hotel as the main safety valve" to planning-reliability or lower-friction wording;
+  - preserved true safety-advisory, methodology, human-review, and official-source verification caveats;
+  - re-ran local QA with 0 errors and 0 warnings;
+  - confirmed sitemap remains 22 canonical URLs.
 
 ## Ready For SEO Research & Review
 
-No SEO Research & Review task is active. Deferred research topics are queued for later validation, not immediate implementation:
+No SEO Research & Review task is active.
+
+Deferred research topics are queued for later validation, not immediate implementation:
 
 - San Antonio family-hotel demand and human-review workflow.
 
@@ -112,32 +146,29 @@ Findings to preserve:
 - Existing pages should be improved before new cities are created.
 - Best-family-hotel standalone pages require a human-review path before firm hotel recommendations are published.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
-- `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages, even though they are still thin by the QA threshold.
+- `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages; their prior thin-page warnings were resolved under `IMP-013`.
 - NYC/Jersey City/Hoboken weekend-events work is researched and can be revisited later, but it is not the current implementation priority.
 
 ## Ready For Implementation
 
-No implementation task is currently ready. `IMP-012` is deferred.
+No implementation-ready task is currently active in `backlog/implementation-backlog.md`.
 
-Candidate next implementation areas:
+Current ready implementation areas:
 
-- Improve `site/index.html` and `site/about.html` as trust/navigation pages.
-- Strengthen internal links across existing priority pages.
-- Ask SEO Research & Review to choose the first narrow tool-like feature.
-- Ask SEO Research & Review to validate San Antonio or San Diego hotel-page feasibility and human-review workflow.
+- None. Candidate implementation tasks need SEO Research & Review confirmation or user direction.
 
-Current QA findings from `node tools/seo-qa.mjs --production`:
+Current local QA findings from `node tools/seo-qa.mjs`:
 
 - Errors: 0.
-- Warnings: 2.
-- Thin-page/content-depth warnings remain for `site/about.html` and `site/index.html`.
+- Warnings: 0.
+- Home/About thin-page warnings are resolved.
 - Legacy shim warnings are resolved because the three root-level San Diego HTML files are outside the sitemap and carry `noindex, follow`.
 - The four remaining itinerary warnings were resolved under `IMP-010`.
-- `site/about.html` and `site/index.html` are candidate/lightweight improvement work, not current noindex candidates.
+- `IMP-012` remains deferred; no NYC weekend page should be created unless the user reactivates it.
 
 ## Waiting On User
 
-No hard blocker right now. The next step needs a product/SEO priority choice because the only ready implementation handoff was deferred.
+No hard blocker right now.
 
 Useful future user input:
 
@@ -149,7 +180,7 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-Master / Operator should choose or request the next priority. Do not route to Implementation Agent until a ready task is selected.
+Master / Operator for final commit, push, and deployment follow-up. After that, SEO Research & Review Agent for the next priority choice.
 
 ## Master Notes
 

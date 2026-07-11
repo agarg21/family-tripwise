@@ -1,5 +1,24 @@
 # Decisions
 
+## 2026-07-11: Prioritize GSC-Signaled Existing Pages
+
+Decision: Prioritize improving existing pages that Google is already testing before adding new city clusters, standalone hotel pages, or the deferred NYC weekend planner.
+
+Why:
+
+- The July 11, 2026 GSC review shows impressions increased to 162 but clicks remain 0 and average position remains weak at 60.6.
+- The strongest visible page signal is San Diego where-to-stay, which maps to family hotel/stay intent but still requires human-review boundaries before any firm hotel recommendations.
+- New York City things-to-do and where-to-stay pages continue to show relevant evergreen intent.
+- Home/About still appear as known thin trust/navigation risks in local QA.
+
+Implications:
+
+- Implement `IMP-013` before reactivating `IMP-012` or creating new destinations.
+- Improve San Diego lodging decision support without creating a standalone family hotels page.
+- Improve NYC evergreen activity/stay support and internal links.
+- Improve Home/About trust and methodology depth.
+- Keep all hotel, safety, transit, stroller, area, and suitability claims clearly caveated unless human-reviewed.
+
 ## 2026-07-09: Defer IMP-012 For Now
 
 Decision: Skip `IMP-012: Build Greater NYC Weekend Family Planner Pilot` for the current cycle.

@@ -597,8 +597,20 @@ ${staticNav("./")}
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Review status">
-        <p><strong>Last updated:</strong> July 5, 2026</p>
-        <p><strong>Current scope:</strong> Family Tripwise is running a focused 5-city test before expanding. We update pages as search data, official sources, and firsthand notes improve.</p>
+        <p><strong>Last updated:</strong> July 11, 2026</p>
+        <p><strong>Current scope:</strong> Family Tripwise is running a focused 5-city test before expanding. Current destination clusters are San Diego, Las Vegas, New York City, Chicago, and San Antonio. We update pages as search data, official sources, product needs, and human review notes improve.</p>
+      </section>
+      <section class="container page-section methodology-section">
+        <div class="section-heading">
+          <p class="eyebrow">Editorial promise</p>
+          <h2>Planning guidance, not fake certainty</h2>
+        </div>
+        <div class="methodology-grid">
+          <article class="method-card"><h3>Research-based by default</h3><p>Most Family Tripwise destination pages are built from official attraction pages, official hotel pages, destination information, search-intent research, and structured family planning assumptions. Unless a page says otherwise, it should not be read as a firsthand trip diary.</p></article>
+          <article class="method-card"><h3>Human review required</h3><p>Hotel recommendations, area recommendations, safety notes, stroller/transit advice, and family-suitability claims can materially affect a trip. Those claims must stay caveated until a human reviewer verifies the exact detail or supplies firsthand experience.</p></article>
+          <article class="method-card"><h3>Model-derived notes are labeled</h3><p>When we use model-derived planning judgment, we frame it as guidance to verify. Examples include route friction, nap risk, family fit, hotel tradeoffs, and what to skip on a short trip.</p></article>
+          <article class="method-card"><h3>Official sources still win</h3><p>Hours, ticket rules, parking, fees, pool access, room policies, stroller access, elevator status, weather closures, and event schedules can change. Families should check official sources before booking or promising a plan to kids.</p></article>
+        </div>
       </section>
       <section class="container page-section methodology-section">
         <div class="section-heading">
@@ -620,6 +632,7 @@ ${staticNav("./")}
             <p class="eyebrow">Source discipline</p>
             <h2>What we check before publishing</h2>
             <p>Each upgraded guide includes official source links for attraction planning, hotel policies, ticketing, parking, accessibility, and photo licensing where relevant. We use those sources to shape planning notes, then keep change-sensitive claims cautious.</p>
+            <p>For hotels, we separate area guidance from property checks. A hotel may appear as a research candidate because its official page lists a room type, pool, kitchenette, breakfast, parking policy, or location advantage, but that is not the same as a human-reviewed recommendation. Families should verify the exact booking screen, fees, cancellation terms, and room assignment rules before paying.</p>
           </div>
           <dl class="snapshot">
             <div><dt>Official sources</dt><dd>Attractions, hotels, parks, transit, and destination organizations.</dd></div>
@@ -631,6 +644,18 @@ ${staticNav("./")}
       </section>
       <section class="container page-section methodology-section">
         <div class="section-heading">
+          <p class="eyebrow">How pages improve</p>
+          <h2>Search data is input, not the product</h2>
+        </div>
+        <div class="methodology-grid">
+          <article class="method-card"><h3>GSC signal</h3><p>Google Search Console helps identify which existing pages Google is testing, such as family stay intent or things-to-do intent. We use that signal to improve decision support on current pages before adding new clusters.</p></article>
+          <article class="method-card"><h3>Cluster completeness</h3><p>A strong destination cluster should connect where-to-stay, things-to-do, itinerary, toddler, teen, and methodology pages so a parent can move from research to a realistic route without opening unrelated listicles.</p></article>
+          <article class="method-card"><h3>Useful structure</h3><p>We prefer quick picks, comparison tables, verification checklists, source notes, and skip guidance over long narrative copy. The page should make tradeoffs visible under time pressure.</p></article>
+          <article class="method-card"><h3>No scaled filler</h3><p>We do not add new city pages just because a keyword exists. Existing pages should earn indexing through parent-specific planning value, clear caveats, and internal links that match the trip-planning workflow.</p></article>
+        </div>
+      </section>
+      <section class="container page-section methodology-section">
+        <div class="section-heading">
           <p class="eyebrow">Limits</p>
           <h2>What our guides are not</h2>
         </div>
@@ -638,6 +663,24 @@ ${staticNav("./")}
           <article class="method-card"><h3>Not a guarantee</h3><p>Opening hours, resort fees, pool rules, parking costs, and transit conditions can change quickly. Always verify the details that matter for your trip before paying.</p></article>
           <article class="method-card"><h3>Not medical or safety advice</h3><p>We can flag planning friction, but families should use official advisories and their own judgment for health, safety, mobility, and accessibility needs.</p></article>
           <article class="method-card"><h3>Not a personal trip diary</h3><p>When a page is research-based rather than firsthand, we keep the language practical and source-backed instead of pretending we personally tested every stop.</p></article>
+          <article class="method-card"><h3>Not a hotel booking guarantee</h3><p>Room size, fees, deposits, parking, rollaways, cribs, kitchenettes, breakfast, pool access, and noise exposure can vary by property, date, room type, and booking channel. Treat our hotel notes as verification prompts.</p></article>
+          <article class="method-card"><h3>Not real-time operations data</h3><p>Transit disruptions, weather, closures, timed-entry availability, and event schedules can change after a guide is updated. The final check should happen close to the trip date.</p></article>
+          <article class="method-card"><h3>Not a replacement for parent judgment</h3><p>Families know their own child energy, sensory needs, nap tolerance, food constraints, mobility needs, and budget. Our job is to make tradeoffs easier to see, not to overrule those constraints.</p></article>
+        </div>
+      </section>
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Current guide set</p>
+            <h2>Where to start</h2>
+            <p>Use the home page as the navigation hub for current destination clusters. Start with where-to-stay when lodging base, parking, room setup, pool value, or stroller/transit friction will shape the trip. Start with things-to-do when the main question is age fit, rainy-day backup, or how to avoid overstuffing a day. Use itinerary pages when you need a route that protects meals and rest windows.</p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>San Diego</dt><dd><a href="./where-to-stay/san-diego-with-kids.html">Stay guide</a> and <a href="./family-itinerary/san-diego-with-kids.html">family itinerary</a></dd></div>
+            <div><dt>New York City</dt><dd><a href="./things-to-do/new-york-city-with-kids.html">Activity guide</a> and <a href="./where-to-stay/new-york-city-with-kids.html">stay guide</a></dd></div>
+            <div><dt>Chicago</dt><dd><a href="./things-to-do/chicago-with-kids.html">Activity guide</a> and <a href="./where-to-stay/chicago-with-kids.html">stay guide</a></dd></div>
+            <div><dt>Las Vegas</dt><dd><a href="./things-to-do/las-vegas-with-kids.html">Activity guide</a> and <a href="./where-to-stay/las-vegas-with-kids.html">stay guide</a></dd></div>
+          </dl>
         </div>
       </section>
     </main>
@@ -712,7 +755,27 @@ ${staticNav("./")}
         <div class="container">
           <p class="eyebrow">Family travel planning</p>
           <h1>Plan better trips with kids</h1>
-          <p>Choose family-friendly activities, areas to stay, and starter itineraries by city, age, stroller difficulty, weather, and trip pace.</p>
+          <p>Choose family-friendly activities, areas to stay, and starter itineraries by city, age, stroller difficulty, weather, lodging base, and trip pace. Family Tripwise is built for practical decisions: where to stay, what to do, what to skip, and how to keep the day realistic when kids, meals, weather, parking, and naps change the plan.</p>
+        </div>
+      </section>
+      <section class="container trust-panel about-summary" aria-label="Current scope">
+        <p><strong>Current scope:</strong> Five active destination clusters: San Diego, Las Vegas, New York City, Chicago, and San Antonio.</p>
+        <p><strong>How to use this site:</strong> Start with the page that matches your hardest constraint. If lodging drives the trip, use where-to-stay first. If kid age or weather drives the trip, use things-to-do first. If you already know the city and base, use the itinerary page to avoid overpacking the day.</p>
+      </section>
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Start here</p>
+            <h2>Pick the planning question you need to answer</h2>
+            <p>Most family trips fail in the handoffs: the hotel is too far from the first activity, the pool is not useful at nap time, the stroller route is harder than expected, or a rainy-day backup requires crossing the city twice. The home page is a routing hub for the current clusters, not a generic travel magazine front page.</p>
+            <p>Use the links below to move from broad destination choice to a concrete plan. Each destination cluster is designed to connect stay area, activity fit, route pacing, and age-specific tradeoffs.</p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>Where should we stay?</dt><dd>Use area matrices and hotel verification checks before comparing room prices.</dd></div>
+            <div><dt>What should we do?</dt><dd>Use activity tables by age, weather, stroller friction, budget, and nap fit.</dd></div>
+            <div><dt>Can the day work?</dt><dd>Use itinerary variants for 1-day, 2-day, 3-day, toddler, teen, and rainy-day plans.</dd></div>
+            <div><dt>Can we trust the claim?</dt><dd>Use the methodology page to separate sourced facts, model-derived guidance, and human-reviewed claims.</dd></div>
+          </dl>
         </div>
       </section>
       <section class="container page-section">
@@ -730,6 +793,63 @@ ${cities.map((city) => `          <article class="activity-card">
               <div><dt>Plan</dt><dd><a href="./family-itinerary/${city.slug}-with-kids.html">Itinerary</a></dd></div>
             </dl>
           </article>`).join("\n")}
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading">
+          <p class="eyebrow">Current priority paths</p>
+          <h2>Fast routes through the site</h2>
+        </div>
+        <div class="card-grid">
+          <article class="activity-card">
+            <h3>San Diego family stay planning</h3>
+            <p>Use San Diego when the main question is family-friendly hotels, pool value, Mission Bay vs Downtown, zoo drives, beach access, parking, and whether a hotel can support naps and early bedtimes.</p>
+            <p><a class="text-link" href="./where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas and hotel checks</a></p>
+          </article>
+          <article class="activity-card">
+            <h3>New York City first family trip</h3>
+            <p>Use NYC when the main question is Central Park, AMNH, ferries, observation decks, Upper West Side vs Midtown, subway/stroller friction, and how to keep a tourist itinerary from crossing town too often.</p>
+            <p><a class="text-link" href="./things-to-do/new-york-city-with-kids.html">Plan things to do in New York City with kids</a></p>
+          </article>
+          <article class="activity-card">
+            <h3>Las Vegas with kids</h3>
+            <p>Use Las Vegas when pool setup, heat, resort walking, smoke exposure, Red Rock, indoor backups, and short visual stops matter more than a long list of adult-focused attractions.</p>
+            <p><a class="text-link" href="./things-to-do/las-vegas-with-kids.html">Plan Las Vegas with kids</a></p>
+          </article>
+          <article class="activity-card">
+            <h3>Chicago stay and activity pairing</h3>
+            <p>Use Chicago when you need to decide between River North, Loop, Lincoln Park, South Loop, and West Loop before choosing museums, lakefront time, architecture tours, and rainy-day routes.</p>
+            <p><a class="text-link" href="./where-to-stay/chicago-with-kids.html">Compare Chicago stay areas with kids</a></p>
+          </article>
+        </div>
+      </section>
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Trust and caveats</p>
+            <h2>How Family Tripwise handles uncertain travel claims</h2>
+            <p>Family Tripwise uses research-based planning notes. We do not present hotel, safety, transit, stroller, area, or family-suitability claims as personally verified unless a human reviewer supplied that note. Where details can change, the page should point you toward what to verify before booking or promising a plan.</p>
+            <p>That means a hotel section may identify what to check on official property pages instead of naming a single “best” hotel. It also means a route note may say to verify elevator access, parking, timed-entry rules, weather, or child energy rather than claiming the route always works.</p>
+            <p><a class="text-link" href="./about.html">Read how Family Tripwise builds and labels guides</a></p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>Hotel claims</dt><dd>Verify room setup, fees, pool, breakfast, crib/rollaway, kitchen/laundry, parking, and noise.</dd></div>
+            <div><dt>Route claims</dt><dd>Verify hours, tickets, weather, safety advisories, transit/stroller access, parking, and child energy.</dd></div>
+            <div><dt>Search data</dt><dd>GSC and SEO research guide improvements, but useful parent decision support is the actual product.</dd></div>
+            <div><dt>Expansion rule</dt><dd>Existing pages should be improved before adding new destination clusters or unsupported hotel pages.</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading">
+          <p class="eyebrow">Age-specific planning</p>
+          <h2>When kid age changes the answer</h2>
+        </div>
+        <div class="card-grid">
+          <article class="activity-card"><h3>San Diego with toddlers</h3><p>Use this when Mission Bay, zoo bus tour, Birch Aquarium, short beach sessions, and hotel resets are more important than seeing the whole city.</p><p><a class="text-link" href="./things-to-do/san-diego-with-toddlers.html">Open San Diego toddler guide</a></p></article>
+          <article class="activity-card"><h3>San Diego with teens</h3><p>Use this when La Jolla, coast time, food stops, zoo highlights, and fewer little-kid resets are the better trip shape.</p><p><a class="text-link" href="./things-to-do/san-diego-with-teens.html">Open San Diego teen guide</a></p></article>
+          <article class="activity-card"><h3>Chicago with teens</h3><p>Use this when architecture, museums, Riverwalk food, skyline views, and weather-aware routing matter more than playground-heavy pacing.</p><p><a class="text-link" href="./things-to-do/chicago-with-teens.html">Open Chicago teen guide</a></p></article>
+          <article class="activity-card"><h3>Las Vegas with teens</h3><p>Use this when Red Rock, immersive exhibits, shows, food, heat, and late-day energy require different choices than a younger-kid trip.</p><p><a class="text-link" href="./things-to-do/las-vegas-with-teens.html">Open Las Vegas teen guide</a></p></article>
         </div>
       </section>
     </main>

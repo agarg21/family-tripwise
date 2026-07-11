@@ -1,5 +1,37 @@
 # Progress
 
+## 2026-07-11
+
+- Completed `IMP-014: Clean Safety-Loaded Planning Language`:
+  - reframed safety-loaded planning shorthand in generated source and regenerated HTML;
+  - replaced uncaveated planning uses of "safest," "safer," and "safety valve" with reliability, lower-friction, contained-plan, or pressure-release wording;
+  - preserved true safety-advisory, methodology, human-review, and official-source verification caveats;
+  - validated with local QA: 0 errors, 0 warnings;
+  - confirmed sitemap remains 22 canonical URLs.
+- Completed `SRR-008: Post-IMP-013 GSC-Signaled Page Review`:
+  - confirmed `IMP-013` improved GSC-signaled pages without adding unsupported expansion;
+  - re-ran local and production QA with 0 errors and 0 warnings;
+  - confirmed Home/About warnings are resolved;
+  - confirmed sitemap remains unchanged at 22 canonical URLs and excludes legacy San Diego shim pages;
+  - confirmed no new city cluster, standalone hotel page, or `/things-to-do/nyc-this-weekend-with-kids.html` page was created;
+  - confirmed `IMP-012` remains deferred;
+  - created ready implementation handoff `IMP-014` to clean safety-loaded planning language in current pages and JSON-LD.
+- Completed `IMP-013`:
+  - improved San Diego where-to-stay for visible family hotel/stay intent without creating a standalone hotel page or firm hotel recommendations;
+  - added hotel decision support and official-source booking checks for room setup, pool, breakfast/food, kitchen/laundry, crib/rollaway, parking/resort fees, noise, location, and property-source verification;
+  - strengthened New York City things-to-do, New York City where-to-stay, Chicago where-to-stay, and Las Vegas things-to-do with query-aligned decision support and internal cluster links;
+  - expanded Home into a practical navigation hub for the current destination clusters;
+  - expanded About with editorial methodology, source policy, human-review boundaries, and model-derived-vs-reviewed claim framing;
+  - validated with local and production QA: 0 errors, 0 warnings.
+- Ran a current GSC UI review for `sc-domain:familytripwise.com`:
+  - recorded 162 impressions, 0 clicks, 0% CTR, and average position 60.6 over the 3-month report window;
+  - identified San Diego where-to-stay, New York City things-to-do, San Antonio where-to-stay, Las Vegas things-to-do, Chicago where-to-stay, and New York City where-to-stay as the highest-impression current pages;
+  - confirmed sitemap success with 22 discovered pages;
+  - confirmed page indexing data is still processing;
+  - confirmed no manual actions and no security issues detected;
+  - created `docs/research/gsc-ui-review-2026-07-11.md`.
+- Created ready implementation handoff `IMP-013` to improve GSC-signaled priority pages, internal links, and Home/About trust pages.
+
 ## 2026-07-09
 
 - Deferred `IMP-012: Build Greater NYC Weekend Family Planner Pilot` at user request:

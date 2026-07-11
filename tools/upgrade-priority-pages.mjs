@@ -133,7 +133,7 @@ const activityPages = {
     },
     faqs: [
       ["Is Chicago stroller-friendly with kids?", "Many attractions are stroller-friendly, but downtown sidewalks, transit elevators, and winter weather can add friction."],
-      ["What is the best rainy-day activity in Chicago with kids?", "Shedd Aquarium and Field Museum are the safest rainy-day anchors for most families."]
+      ["What is the best rainy-day activity in Chicago with kids?", "Shedd Aquarium and Field Museum are the most reliable rainy-day anchors for most families."]
     ]
   },
   "things-to-do/las-vegas-with-kids.html": {
@@ -174,6 +174,12 @@ const activityPages = {
       "Toddler-friendly plan": "Pool, nap, Discovery Children's Museum, and one short fountain stop.",
       "Teen-friendly plan": "Red Rock Canyon or Area15, interesting food, and one skyline/spectacle activity."
     },
+    clusterLinks: [
+      ["Where to stay in Las Vegas", "Choose the hotel base before finalizing activities. Pool setup, smoke exposure, resort walking, fees, and room location can change the whole family plan.", "../where-to-stay/las-vegas-with-kids.html", "Open where to stay in Las Vegas with kids"],
+      ["Las Vegas family itinerary", "Turn pool time, one classic visual stop, and age-specific anchors into a realistic route instead of a Strip marathon.", "../family-itinerary/las-vegas-with-kids.html", "Open the Las Vegas family itinerary"],
+      ["Las Vegas with teens", "Use the teen guide when Red Rock, immersive exhibits, shows, food, and later evenings matter more than toddler pacing.", "../things-to-do/las-vegas-with-teens.html", "Open Las Vegas with teens"],
+      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
+    ],
     faqs: [
       ["Is Las Vegas good for kids?", "It can be, if the hotel, pool, heat, walking distance, and evening environment are planned carefully."],
       ["What should families avoid in Las Vegas?", "Avoid assuming Strip distances are easy with kids, strollers, heat, or tired legs."]
@@ -277,6 +283,11 @@ const activityPages = {
       "Toddler-friendly plan": "Central Park playground, nap/hotel reset, CMOM or a short museum highlights visit.",
       "Teen-friendly plan": "Brooklyn Bridge Park/DUMBO, food stop, observation deck or Broadway matinee if budget and age fit."
     },
+    clusterLinks: [
+      ["Where to stay in New York City", "Choose the family base before finalizing activities. Upper West Side, Midtown, Downtown, Brooklyn, and Long Island City create different stroller, subway, and reset tradeoffs.", "../where-to-stay/new-york-city-with-kids.html", "Open where to stay in New York City with kids"],
+      ["New York City family itinerary", "Turn Central Park, AMNH, ferry, skyline, toddler, teen, and rainy-day ideas into a route with fewer cross-town transfers.", "../family-itinerary/new-york-city-with-kids.html", "Open the NYC family itinerary"],
+      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
+    ],
     faqs: [
       ["What is the best thing to do in NYC with kids?", "For most first-time families, Central Park plus the American Museum of Natural History is the most reliable all-age pairing."],
       ["Is New York City stroller-friendly?", "Some parks and museums are stroller-friendly, but subway elevators, crowded sidewalks, and Midtown congestion make route planning important."]
@@ -286,12 +297,13 @@ const activityPages = {
 
 const stayPages = {
   "where-to-stay/san-diego-with-kids.html": {
-    title: "Where to Stay in San Diego With Kids: Best Areas, Tradeoffs and Family Hotel Checks",
+    title: "Where to Stay in San Diego With Kids: Areas, Family Hotels and Booking Checks",
     description:
-      "Compare where to stay in San Diego with kids by beach access, zoo drives, stroller ease, parking, walkability, noise, hotel type, and family tradeoffs.",
+      "Compare where to stay in San Diego with kids by family-friendly hotel checks, beach access, zoo drives, stroller ease, parking, pool value, room setup, noise, and area tradeoffs.",
     city: "San Diego",
     quick: [
       ["Best overall area", "Mission Bay", "Best balance of pools, bay beaches, and easy drives."],
+      ["Best family-hotel search starting point", "Area fit before hotel name", "For family friendly hotels in San Diego, decide pool/beach vs zoo/harbor logistics before comparing properties."],
       ["Best for first-timers", "Mission Bay or Downtown/Little Italy", "Choose Mission Bay for resort ease, Downtown for meals and harbor access."],
       ["Best without a car", "Downtown / Little Italy", "Most practical for restaurants, harbor, ferry, rideshares, and trolley use."],
       ["Best with toddlers", "Mission Bay", "Shorter beach sessions and pool resets matter."],
@@ -307,14 +319,38 @@ const stayPages = {
       ["Coronado", "Classic beach pace", "Price and bridge/ferry logistics", "Moderate", "Good", "Low-medium", "Can be expensive", "Medium", "Beach, ferry, waterfront", "Beach resorts/inns", "Best splurge beach stay"],
       ["Mission Valley / Hotel Circle", "Value, parking, central drives", "Not walkable/vacation-feeling", "Car required", "Medium", "Medium", "Often easier", "Low", "Zoo, Old Town, beaches by car", "Chain hotels/suites", "Best value with car"]
     ],
-    hotelNote: "Research checked against official property pages in July 2026. Verify fees, exact room type, crib/rollaway policy, pool hours, and cancellation terms before booking.",
+    hotelDecision: [
+      ["Start with the trip shape", "Beach and pool trips usually point families toward Mission Bay or Coronado; zoo, harbor, and restaurant-heavy trips may point toward Downtown/Little Italy, Mission Valley, or a split plan."],
+      ["Separate family-friendly from family-verified", "A property can look family-friendly because it has a pool, suite, or beach access, but Family Tripwise has not personally verified sleep quality, service, noise, or current policies."],
+      ["Prioritize sleep setup", "Before comparing star ratings, confirm exact bed count, sofa-bed wording, crib/rollaway policy, occupancy limits, connecting-room rules, elevator access, and whether the room location can support naps."],
+      ["Price the full stay", "Compare nightly rate plus resort fee, parking, breakfast, extra-bed charges, taxes, and whether a rental car or repeated rideshares are needed from that area."],
+      ["Use official property sources", "Check the hotel website, FAQ, room page, fee page, amenity page, and booking screen. Third-party snippets can lag behind current property policy."],
+      ["Ask before booking", "If pool access, crib availability, rollaway rules, room placement, kitchen/laundry, or parking will make or break the trip, contact the property before paying."]
+    ],
+    hotelNote: "Research checked against official property pages in July 2026. These are hotel fit checks, not personally verified rankings or firm recommendations. Verify fees, exact room type, crib/rollaway policy, pool hours, kitchen/laundry details, noise exposure, parking, and cancellation terms before booking.",
     hotels: [
       ["Bahia Resort Hotel", "Strong Mission Bay family-suite candidate", "Bay Family Suite lists 675 sq ft, multiple beds, a sofa bed, kitchenette-style amenities, balcony, and two bathrooms", "Pool plus bay/beach setting; resort fee covers pool towels and beach/resort extras", "On-property dining includes grab-and-go and seasonal poolside options", "Family suite lists refrigerator, microwave, toaster, and coffeemaker; laundry should be verified", "Request crib/rollaway details directly before booking", "Official FAQ says one vehicle per guest room parks without a separate parking charge; resort fee still applies", "Mission Bay resort setting can be calmer than downtown, but room location still matters", "Best fit when you want bay time, a larger room setup, and fewer car trips after nap time."],
       ["San Diego Mission Bay Resort", "Good pool-and-bay base for resort-style trips", "Room and suite categories vary; some rooms may not have elevator access, so request the exact setup you need", "Pool and bayfront resort amenities are the main family value", "On-site dining reduces dinner friction after beach or pool time", "Kitchen/laundry varies by room type; verify before relying on it", "Request crib/rollaway and elevator needs directly", "Official FAQ lists overnight self-parking at $47 per night", "Ask for room placement away from events, elevators, or late pool noise if naps are fragile", "Best fit when the hotel itself is part of the San Diego plan."],
       ["Homewood Suites San Diego Downtown/Bayside", "Practical suite option for no-car or short-ride trips", "All-suite setup with in-room kitchens is useful for breakfast, snacks, and longer stays", "Outdoor pool is useful but less resort-like than Mission Bay", "Hilton lists free hot breakfast, which can simplify mornings", "In-room kitchens are a major family convenience; laundry details should be verified", "Request crib/rollaway and connecting-room details before booking", "Hilton hotel-info page lists valet parking at $65 and no self-parking", "Urban/airport-adjacent location means room placement and noise sensitivity matter", "Best fit when walkable Little Italy meals and short rides to the zoo/harbor matter more than beach-resort atmosphere."]
     ],
+    bookingChecks: [
+      ["Room setup source", "Use the official room-detail page and booking screen to confirm square footage, bed configuration, sofa bed, kitchenette wording, balcony/patio access, bathroom count, occupancy, and whether the room is reachable by elevator."],
+      ["Pool and beach source", "Use the official amenity page to verify pool hours, seasonal closures, depth/height rules, towel policy, beach gear, cabana costs, and whether the pool is close enough to work as a midday reset."],
+      ["Breakfast and food source", "Check the official dining page or booking inclusions for breakfast, grab-and-go options, mini-fridge/microwave access, and nearby casual meals before relying on an easy morning."],
+      ["Kitchen, laundry, and baby gear source", "Confirm refrigerator, microwave, kitchenette, washer/dryer or laundry access, crib, rollaway, high chair, and connecting-room availability directly with the property when those details matter."],
+      ["Parking and fees source", "Verify resort/destination fees, self-parking, valet, in/out privileges, EV charging, oversized vehicle limits, and whether area attractions still require separate parking."],
+      ["Noise and location source", "Ask about room placement away from elevators, event spaces, pool decks, traffic, nightlife, and airport or harbor noise if naps or early bedtime matter."]
+    ],
+    clusterLinks: [
+      ["Things to do in San Diego", "Use the activity guide to decide whether your hotel should optimize for the zoo, Mission Bay, La Jolla, Coronado, or Balboa Park.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
+      ["San Diego family itinerary", "Match the stay base to a realistic 1-day, 2-day, 3-day, toddler, teen, or rainy-day route before booking.", "../family-itinerary/san-diego-with-kids.html", "Open the San Diego family itinerary"],
+      ["Toddler-specific planning", "If naps, stroller exits, and short sessions drive the trip, cross-check Mission Bay, zoo bus tour, Birch Aquarium, and hotel reset options.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
+      ["Teen-specific planning", "If older kids need coast, food, and less little-kid pacing, use the teen guide before committing to a beach or urban base.", "../things-to-do/san-diego-with-teens.html", "Open San Diego with teens"],
+      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and how model-derived planning notes differ from verified claims.", "../about.html", "Read the methodology"]
+    ],
     faqs: [
-      ["What is the best area to stay in San Diego with kids?", "Mission Bay is the easiest default for many families, especially with toddlers, pools, and beach time."],
+      ["What is the best area to stay in San Diego with kids?", "Mission Bay is the easiest default for many families, especially with toddlers, pools, and beach time, but Downtown/Little Italy, Coronado, La Jolla, and Mission Valley can be better fits for different routes."],
+      ["What is the best family hotel in San Diego?", "There is no single best family hotel without knowing your room setup, pool needs, car plan, budget, nap sensitivity, and itinerary. Use the hotel fit checks on this page, then verify exact property details before booking."],
       ["Can families stay in San Diego without a car?", "Yes, but Downtown/Little Italy is usually the most practical base. Beach and zoo-heavy trips are easier with a car or rideshares."]
     ]
   },
@@ -352,12 +388,13 @@ const stayPages = {
     ]
   },
   "where-to-stay/new-york-city-with-kids.html": {
-    title: "Where to Stay in New York City With Kids: Best Areas, Subway Tradeoffs and Family Hotel Checks",
+    title: "Where to Stay in New York City With Kids: Best Areas for Families",
     description:
-      "Compare where to stay in New York City with kids by subway access, stroller friction, noise, room size, walkability, nearby parks, museums, and family trip style.",
+      "Compare the best places to stay in New York City with family by subway access, stroller friction, noise, room size, walkability, parks, museums, and hotel checks.",
     city: "New York City",
     quick: [
       ["Best overall area", "Upper West Side", "Best balance of Central Park, AMNH, calmer evenings, and family food options."],
+      ["Best place to stay with family", "Upper West Side for many first trips", "Use it as the default check because park, museum, meals, and calmer evenings cluster together."],
       ["Best for first-timers", "Upper West Side or Midtown", "Choose UWS for family pace, Midtown for shortest access to classic sights."],
       ["Best without a car", "Upper West Side, Midtown, or Downtown", "NYC is a no-car city, but elevator/subway access matters block by block."],
       ["Best with toddlers", "Upper West Side", "Parks, playgrounds, AMNH, and less nighttime chaos."],
@@ -373,14 +410,33 @@ const stayPages = {
       ["Brooklyn Heights / Downtown Brooklyn", "Waterfront, calmer evenings", "Bridge/tunnel planning", "Good if near subway", "Good", "Low-medium", "Not needed", "Medium-high", "Brooklyn Bridge Park, Promenade", "Hotels/suites", "Good neighborhood feel"],
       ["Long Island City", "Value, skyline views, subway access", "Less classic NYC outside the hotel", "Good if close to train", "Mixed", "Medium", "Varies", "Medium", "Quick rides to Midtown, parks", "Chain/suite hotels", "Good value if transit pencils out"]
     ],
+    areaNote: "Area guidance is planning support, not a personally verified recommendation. Verify subway elevator access, room size, destination fees, stroller route, evening noise, and exact hotel block before booking.",
+    hotelDecision: [
+      ["Decide the first-trip base", "For many families, the Upper West Side is the first area to test because Central Park, AMNH, CMOM, and calmer meals are close together. Midtown can be better for shows or very short first visits."],
+      ["Check stroller and transit reality", "Do not assume a short subway ride is easy with a stroller. Verify station elevator access, transfer count, sidewalk crowding, and whether taxis or rideshares fit your car-seat needs."],
+      ["Price room size honestly", "NYC rooms can be tight. Confirm bed count, sofa bed, connecting rooms, occupancy limits, crib availability, elevator waits, and whether luggage/stroller storage works."],
+      ["Protect evening decompression", "Noise, crowds, and long dinner waits can matter as much as attraction distance. Ask about room placement and choose a base with realistic nearby food."],
+      ["Use official sources", "Check the property room page, hotel FAQ, fee disclosure, cancellation terms, accessibility notes, and booking screen before relying on a third-party snippet."]
+    ],
     hotelNote: "Research checked against official hotel and destination pages in July 2026. NYC room sizes, destination fees, crib policies, elevators, and cancellation terms vary sharply by property, so verify the exact room type before booking.",
     hotels: [
       ["Upper West Side family-base hotels", "Best fit for museum-and-park trips", "Prioritize two-bed rooms, suites, or connecting-room policies; many NYC rooms are smaller than families expect", "Pools are uncommon; choose this area for park/museum access instead", "Breakfast varies by property and may be expensive", "Kitchen/laundry is uncommon unless booking an extended-stay or apartment-style property", "Request crib/rollaway details directly and confirm elevator access", "Do not plan to park; use transit/taxi/rideshare and verify destination fees", "Lower than Times Square, but avenue-facing rooms can still be noisy", "Best fit when Central Park, AMNH, CMOM, and calmer evenings matter most."],
       ["Midtown convenience hotels", "Best fit for shows, observation decks, and short first visits", "Room size and elevator waits are the big family checks", "Pools are uncommon and not the main reason to stay here", "Breakfast may add meaningful cost; plan nearby quick-service options", "Kitchen/laundry usually limited", "Confirm crib/rollaway, occupancy, and connecting-room rules before booking", "Parking is expensive; check resort/destination fees before comparing rates", "Times Square/cross-town noise and crowds are the main risk", "Best fit when being close to classic sights beats quiet and space."],
       ["Downtown/Brooklyn suite-style options", "Best fit for families who want more space or a calmer neighborhood", "Look for suite layouts, sofa beds, and a short walk to a useful subway line", "Pools vary and should not be assumed", "Breakfast and kitchenettes are more likely at select-service/suite brands", "Laundry may be easier than in Midtown, but verify by property", "Confirm crib/rollaway and room occupancy policies", "Parking still should not be the default plan", "Usually calmer than Midtown, but subway distance can become the tradeoff", "Best fit when space and evening decompression matter more than being next to every landmark."]
     ],
+    bookingChecks: [
+      ["Room and fee check", "Verify square footage, bed setup, occupancy, resort/destination fee, crib/rollaway rules, cancellation terms, and whether breakfast or kitchen access is included."],
+      ["Transit and stroller check", "Use official transit/elevator information and the hotel address to verify the exact route to your first two activity days before booking."],
+      ["Noise and reset check", "Ask about room placement away from elevators, street-facing noise, nightlife, service areas, and event spaces if early bedtime matters."]
+    ],
+    clusterLinks: [
+      ["NYC things to do with kids", "Use the activity guide to decide whether your base should optimize for Central Park/AMNH, Downtown/ferries, Brooklyn views, or Midtown sights.", "../things-to-do/new-york-city-with-kids.html", "Open NYC things to do with kids"],
+      ["NYC family itinerary", "Match the stay area to the 1-day, 2-day, 3-day, toddler, teen, or rainy-day route before locking a hotel.", "../family-itinerary/new-york-city-with-kids.html", "Open the NYC family itinerary"],
+      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
+    ],
     faqs: [
-      ["What is the best area to stay in NYC with kids?", "The Upper West Side is the safest default for many families because Central Park, AMNH, CMOM, neighborhood food, and calmer evenings are close together."],
+      ["What is the best area to stay in NYC with kids?", "The Upper West Side is often the lowest-friction default for many families because Central Park, AMNH, CMOM, neighborhood food, and calmer evenings are close together."],
+      ["What is the best place to stay in New York City with family?", "For a first family trip, test the Upper West Side first, then compare Midtown, Downtown/Tribeca, Brooklyn Heights/Downtown Brooklyn, and Long Island City against your route, budget, room-size needs, and stroller/transit tolerance."],
       ["Should families stay in Times Square?", "Times Square can be convenient for shows and first-timers, but families with toddlers should think carefully about noise, crowds, room size, and stroller friction."]
     ]
   },
@@ -415,6 +471,12 @@ const stayPages = {
       ["Noise and event risk", "Ask about room placement away from elevators, nightlife, event venues, street noise, and large weekend events if naps or early bedtimes matter."],
       ["Meals and reset options", "Verify breakfast details, mini-fridge/microwave availability, nearby casual meals, grocery access, and whether returning for a midday reset is realistic from your planned sights."],
       ["Pool and weather backup", "Do not assume a pool is useful just because it exists; check pool hours, seasonal limits, kid rules, and whether the hotel has indoor space for bad-weather downtime."]
+    ],
+    clusterLinks: [
+      ["Chicago things to do with kids", "Use the activity guide to decide whether your stay base should optimize for Museum Campus, Lincoln Park Zoo, river architecture, lakefront, or food.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
+      ["Chicago family itinerary", "Match River North, Lincoln Park, Loop, South Loop, or West Loop to a realistic 1-day, 2-day, 3-day, toddler, teen, or rainy-day plan.", "../family-itinerary/chicago-with-kids.html", "Open the Chicago family itinerary"],
+      ["Chicago with teens", "Use the teen guide if architecture tours, museums, lakefront views, or food plans matter more than playground and toddler pacing.", "../things-to-do/chicago-with-teens.html", "Open Chicago with teens"],
+      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
     ],
     faqs: [
       ["What is the best area to stay in Chicago with kids?", "River North/Magnificent Mile is the most practical first-visit default for many families, while Lincoln Park can be better for toddlers and calmer evenings."],
@@ -541,7 +603,7 @@ const itineraryPages = {
       ["3-day balanced plan", "Arrival pool; classic Strip/spectacle day; age-specific off-Strip or nature anchor", "Most families", "One true downtime block daily", "Lower if each day has one main zone", "Stock snacks/water and keep backup meals close", "Making every evening a late night"],
       ["Toddler-paced plan", "Pool; nap; Discovery Children's Museum; one short fountains or conservatory stop", "Babies, toddlers, preschoolers", "Nap or quiet room time is the anchor", "Lower if you avoid long indoor resort walks", "Use hotel meals or verified nearby casual stops", "Late shows, long Strip walks, and loud sensory-heavy stops"],
       ["Teen-paced plan", "Red Rock or immersive exhibit; pool reset; skyline or show option", "Tweens and teens", "Reset can be pool, food, or quiet room time", "Drive/rideshare friction plus heat checks matter", "Let teens choose one food or spectacle piece", "Repeating the same casino-resort wander each day"],
-      ["Rainy/heat version", "Indoor museum or exhibit; contained skyline stop; hotel reset", "Any age with weather or heat constraints", "Use the hotel as the main safety valve", "Lower if the plan avoids long outdoor transfers", "Do not rely on walking to find dinner with tired kids", "Outdoor-heavy Red Rock or pool-only day in poor conditions"]
+      ["Rainy/heat version", "Indoor museum or exhibit; contained skyline stop; hotel reset", "Any age with weather or heat constraints", "Use the hotel as the main pressure-release valve", "Lower if the plan avoids long outdoor transfers", "Do not rely on walking to find dinner with tired kids", "Outdoor-heavy Red Rock or pool-only day in poor conditions"]
     ],
     plans: {
       "Arrival afternoon": "Use the hotel as the first activity: pool if open, room setup, snacks, and an early dinner. Save the bigger Strip or off-Strip move for a rested block.",
@@ -669,7 +731,7 @@ const itineraryPages = {
     quick: [
       ["Best 1-day plan", "Zoo early, Balboa Park reset, Mission Bay or pool", "Highest San Diego payoff with only one cross-town move after lunch."],
       ["Best 2-day plan", "Zoo/Balboa plus Mission Bay/La Jolla", "Gives one major attraction day and one coast day without overpacking."],
-      ["Best 3-day plan", "Arrival reset, zoo day, coast choice", "The safest family rhythm if naps, weather, or beach time matter."],
+      ["Best 3-day plan", "Arrival reset, zoo day, coast choice", "The most reliable family rhythm if naps, weather, or beach time matter."],
       ["Best toddler pace", "Mission Bay, zoo bus tour, Birch Aquarium", "Shorter sessions, easier exits, and fewer stair-heavy coastal stops."],
       ["Best teen pace", "Zoo highlights, La Jolla, Coronado or food stop", "More scenery and independence, fewer playground-heavy filler stops."],
       ["Best rainy-day swap", "Birch Aquarium or one Balboa Park museum", "Keeps the day useful without rebuilding every meal and drive."],
@@ -732,7 +794,7 @@ const teenPages = {
     details: [
       ["Architecture river plan", "Teens get skyline, story, and movement without another museum-style block.", "Best for tweens and teens who can sit, listen, and handle weather exposure.", "Cold, rain, wind, ticket timing, and younger siblings who cannot sit through it.", "Book a time after food or snacks, and do not stack it after a draining museum marathon.", "Use bathrooms before boarding and plan the next meal near River North or the Riverwalk.", "Verify operator, departure point, weather policy, and accessibility before booking.", "Pair with Riverwalk food or a short Magnificent Mile walk."],
       ["Field Museum", "It can work for teens when you choose exhibit goals instead of wandering every hall.", "Best for science, history, and dinosaur-interested teens.", "Museum fatigue and trying to combine Field, Shedd, and another big stop in one day.", "Pick two or three must-see sections, then leave before everyone is done.", "Museum Campus has food/restroom options, but verify hours and policies for the day.", "Check tickets, special exhibits, and current hours.", "Pair with lakefront time or a simple dinner, not another full museum."],
-      ["Shedd Aquarium", "A safer bad-weather anchor when teens still want animals, views, and a contained plan.", "Best for younger teens or mixed-age groups.", "Crowds, timed-entry friction, and feeling too young for older teens if overdone.", "Use it as the main indoor block, then add outdoor skyline time if weather improves.", "Plan food and bathroom breaks before leaving Museum Campus.", "Book/check timed entry and current exhibits.", "Pair with Field Museum only if both stops are intentionally shortened."],
+      ["Shedd Aquarium", "A more contained bad-weather anchor when teens still want animals, views, and a focused plan.", "Best for younger teens or mixed-age groups.", "Crowds, timed-entry friction, and feeling too young for older teens if overdone.", "Use it as the main indoor block, then add outdoor skyline time if weather improves.", "Plan food and bathroom breaks before leaving Museum Campus.", "Book/check timed entry and current exhibits.", "Pair with Field Museum only if both stops are intentionally shortened."],
       ["Millennium Park / Maggie Daley area", "It gives a quick Chicago sense of place without requiring a long ticketed commitment.", "Best for first-day orientation, photos, and a low-cost reset.", "Crowds, event closures, and making it the whole teen plan.", "Use it as a bridge between meals, transit, or one bigger attraction.", "Food and bathrooms vary by route, so decide before anyone is urgent.", "Check event closures and weather.", "Pair with the Loop, Art Institute exterior, or easy transit back to the hotel."],
       ["Lincoln Park Zoo and lakefront", "Free entry and lakefront access make it useful when the budget or weather needs flexibility.", "Best for animal-interested younger teens or mixed-age sibling groups.", "It may feel too young if teens want a more independent city day.", "Frame it as a neighborhood/lakefront block, not just a zoo visit.", "Use nearby neighborhood food as the reset plan.", "Check hours and seasonal closures.", "Pair with Nature Boardwalk or a Lincoln Park meal."],
       ["Navy Pier by specific reason", "It can fill a weather gap if you choose a clear reason to go.", "Best for mixed-age groups or teens who want a simple lakefront activity.", "It can feel crowded, commercial, and unfocused.", "Choose one activity, view, or meal; avoid vague wandering.", "Food and restrooms are convenient, but crowds can slow everything down.", "Check hours, pricing, and event schedule.", "Pair with lakefront or a short ride back to the hotel."]
@@ -975,7 +1037,27 @@ ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-c
         </div>`;
 }
 
+function renderClusterCards(cards) {
+  return `        <div class="card-grid">
+${cards.map(([title, body, href, linkText]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
+        </div>`;
+}
+
 function renderActivityUpgrade(page) {
+  const clusterSection = page.clusterLinks?.length
+    ? `
+      <section class="band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Plan the cluster</p>
+            <h2>Connect activities to stay area, route, and methodology</h2>
+          </div>
+${renderClusterCards(page.clusterLinks)}
+        </div>
+      </section>
+`
+    : "";
+
   return `${markerStart}
 ${page.firstTime ? `      <section class="container page-section rank-ready-section">
         <div class="section-heading">
@@ -1043,7 +1125,7 @@ ${renderDetails(page.details)}
           <h2>Turn the list into a realistic family day</h2>
         </div>
 ${renderPlans(page.plans)}
-      </section>
+      </section>${clusterSection ? `${clusterSection}` : ""}
 ${markerEnd}
 `;
 }
@@ -1132,7 +1214,7 @@ ${rows.map((row) => `              <tr>${row.map((cell) => `<td>${esc(cell)}</td
 }
 
 function renderHotels(hotels) {
-  const labels = ["Best fit", "Room setup", "Pool", "Breakfast", "Kitchen/laundry", "Crib/rollaway", "Parking/fees", "Noise risk", "Why it fits families"];
+  const labels = ["Potential fit", "Room setup", "Pool", "Breakfast", "Kitchen/laundry", "Crib/rollaway", "Parking/fees", "Noise risk", "Family fit to verify"];
   return `        <div class="detail-card-grid">
 ${hotels.map(([name, ...values]) => `          <article class="detail-card research-card">
             <h3>${esc(name)}</h3>
@@ -1152,18 +1234,48 @@ ${checks.map(([name, value]) => `          <article class="detail-card research-
 
 function renderStayUpgrade(page) {
   const areaNote = page.areaNote ? `        <p class="review-label">${esc(page.areaNote)}</p>\n` : "";
-  const hotelSection = page.hotels?.length
-    ? `<section class="band intro-band rank-ready-section">
+  const decisionSection = page.hotelDecision?.length
+    ? `      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Hotel decision support</p>
+          <h2>How to evaluate family-friendly hotel claims</h2>
+        </div>
+        <p class="review-label">Hotel guidance on this page is research-based planning support, not a personally verified recommendation. Use official property pages and the booking screen to verify details before paying.</p>
+${renderVerificationChecks(page.hotelDecision)}
+      </section>`
+    : "";
+  const bookingSection = page.bookingChecks?.length
+    ? `      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Booking checks</p>
+          <h2>Official-source checks before you book</h2>
+        </div>
+${renderVerificationChecks(page.bookingChecks)}
+      </section>`
+    : "";
+  const clusterSection = page.clusterLinks?.length
+    ? `      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Hotel shortlist</p>
-            <h2>Research-based family hotel shortlist</h2>
+            <p class="eyebrow">Plan the cluster</p>
+            <h2>Use the stay guide with activities, itinerary, and methodology</h2>
           </div>
-          <p class="review-label">${esc(page.hotelNote || "Research-based shortlist. Verify fees, room type, policies, and amenities before booking.")}</p>
+${renderClusterCards(page.clusterLinks)}
+        </div>
+      </section>`
+    : "";
+  const hotelSection = page.hotels?.length
+    ? `      <section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Hotel fit checks</p>
+            <h2>Research-backed hotel verification notes</h2>
+          </div>
+          <p class="review-label">${esc(page.hotelNote || "Research-based hotel fit notes. Verify fees, room type, policies, and amenities before booking; these are not personally verified hotel recommendations.")}</p>
 ${renderHotels(page.hotels)}
         </div>
       </section>`
-    : `<section class="band intro-band rank-ready-section">
+    : `      <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Before booking</p>
@@ -1193,7 +1305,7 @@ ${renderQuickPicks(page.quick)}
 ${areaNote}${renderStayMatrix(page.rows)}
       </section>
 
-      ${hotelSection}
+${[decisionSection, hotelSection, bookingSection, clusterSection].filter(Boolean).join("\n\n")}
 ${markerEnd}
 `;
 }

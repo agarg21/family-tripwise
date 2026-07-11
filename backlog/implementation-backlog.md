@@ -1,14 +1,14 @@
 # Implementation Backlog
 
-Last updated: 2026-07-09
+Last updated: 2026-07-11
 
 ## Active
 
-No implementation task is currently active. IMP-001 through IMP-005 and IMP-009 through IMP-010 are complete. IMP-012 is intentionally deferred for now.
+No implementation task is currently active. IMP-001 through IMP-005, IMP-009 through IMP-010, and IMP-013 through IMP-014 are complete. IMP-012 is intentionally deferred for now.
 
 ## Ready
 
-No implementation task is currently ready. Pick the next task from Candidate Tasks only after the user chooses a direction or SEO Research & Review confirms the next priority.
+None right now.
 
 ## Candidate Tasks
 
@@ -43,21 +43,6 @@ Potential scope:
 - create `best family hotels in San Diego` only after hotel claims have a human-review/source workflow
 - keep the current San Diego where-to-stay page as the area decision page
 - separate measured property facts from editorial recommendations
-
-### IMP-011: Improve Home And About Trust Pages
-
-Status: candidate
-
-Potential scope:
-
-- lightly expand `site/index.html` as a navigational product/home page without turning it into a generic marketing page
-- expand `site/about.html` with clearer editorial methodology, source policy, update discipline, human-review boundaries, and what is model-derived vs verified
-- keep both pages indexable unless a later SEO Research & Review pass finds a stronger reason to noindex
-
-Why candidate, not ready:
-
-- The pages are thin by word count, but they are trust/navigation pages rather than destination SEO targets.
-- The remaining itinerary warnings are a higher priority because they target explicit `{destination} itinerary with kids` search intent.
 
 ## Deferred
 
@@ -125,6 +110,30 @@ Acceptance checks:
 - If the page is indexable and added to the sitemap, production QA should return 0 errors after deployment.
 
 ## Done
+
+### IMP-014: Clean Safety-Loaded Planning Language
+
+Status: done
+
+Completed: 2026-07-11
+
+Implementation notes:
+
+- Reframed safety-loaded planning shorthand in generated source and regenerated HTML.
+- Changed "safest" or "safer" uses that meant reliability or lower friction to "most reliable," "lowest-friction," or "more contained."
+- Changed the Las Vegas itinerary phrase "hotel as the main safety valve" to "hotel as the main pressure-release valve."
+- Preserved true caveats and methodology language around safety advisories, human-review boundaries, and official-source verification.
+- Did not add new city clusters, standalone hotel pages, or the deferred NYC weekend planner page.
+
+Validation result:
+
+- `node --check tools/upgrade-priority-pages.mjs`: passed.
+- `node --check tools/generate-pages.mjs`: passed.
+- `node tools/generate-pages.mjs`: regenerated pages.
+- `rg -n "safest|safe|safety" site tools`: remaining matches are safety-advisory, methodology, or verification-caveat contexts.
+- `node tools/seo-qa.mjs`: 0 errors, 0 warnings.
+- `git diff --check`: clean.
+- Sitemap remains 22 canonical URLs.
 
 ### IMP-001: Add Static Site SEO QA Script
 
@@ -301,3 +310,34 @@ Acceptance checks:
 - No thin-page warnings remain for the four upgraded itinerary pages.
 - Internal links and JSON-LD continue to pass QA.
 - Hotel, safety, transit, stroller, and route guidance remains framed as planning guidance requiring verification rather than personally verified experience.
+
+### IMP-013: Improve GSC-Signaled Priority Pages And Trust Pages
+
+Status: done
+
+Completed: 2026-07-11
+
+Source handoff:
+
+- `docs/research/gsc-ui-review-2026-07-11.md`
+
+Implementation notes:
+
+- Improved `site/where-to-stay/san-diego-with-kids.html` through `tools/upgrade-priority-pages.mjs` for family hotel/stay intent without creating a standalone hotel page.
+- Added San Diego hotel decision support and official-source booking checks covering room setup, pool, breakfast/food, kitchen/laundry, crib/rollaway, parking/resort fees, noise, location, and property-source verification.
+- Improved `site/things-to-do/new-york-city-with-kids.html`, `site/where-to-stay/new-york-city-with-kids.html`, `site/where-to-stay/chicago-with-kids.html`, and `site/things-to-do/las-vegas-with-kids.html` with stronger cluster links and query-aligned decision support where appropriate.
+- Improved `site/index.html` through `tools/generate-pages.mjs` as a practical navigation hub for the current five destination clusters.
+- Improved `site/about.html` through `tools/generate-pages.mjs` with editorial methodology, source policy, human-review boundaries, model-derived-vs-reviewed framing, and hotel/route claim caveats.
+- Kept `IMP-012` deferred; no NYC weekend page, standalone hotel page, or new destination cluster was created.
+
+Validation result:
+
+- `node tools/seo-qa.mjs`: 0 errors, 0 warnings.
+- `node tools/seo-qa.mjs --production`: 0 errors, 0 warnings.
+- Home/About thin-page warnings are resolved.
+
+Acceptance checks:
+
+- Internal links and JSON-LD continue to pass QA.
+- No new city pages, standalone hotel pages, or NYC weekend pages were added.
+- Changed pages keep hotel, safety, transit, stroller, area, and family-suitability claims framed as planning guidance requiring verification unless human-reviewed.

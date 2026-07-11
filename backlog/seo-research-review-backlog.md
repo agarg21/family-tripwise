@@ -1,10 +1,10 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-09
+Last updated: 2026-07-11
 
 ## Active
 
-No SEO Research & Review task is active. SRR-006 is complete, but `IMP-012` is deferred at user request.
+No SEO Research & Review task is active.
 
 ## Next
 
@@ -74,6 +74,47 @@ Evaluate whether to create `best family hotels in San Diego` only after:
 - the current San Diego where-to-stay page remains the canonical area decision page.
 
 ## Done
+
+### SRR-008: Post-IMP-013 GSC-Signaled Page Review
+
+Status: done
+
+Completed: 2026-07-11
+
+Recommendation labels: `monitor`, `improve`
+
+Source inputs:
+
+- `AGENTS.md`
+- `strategy/current-strategy.md`
+- `strategy/content-principles.md`
+- `agents/seo-research-review-agent.md`
+- `ops/current-cycle.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `docs/research/gsc-ui-review-2026-07-11.md`
+- `progress.md`
+- `decisions.md`
+- current git status and diff
+- changed `IMP-013` site pages and generation scripts
+
+Result:
+
+- Confirmed `IMP-013` improved the GSC-signaled pages without adding unsupported expansion.
+- Local QA returned 0 errors and 0 warnings.
+- Production QA returned 0 errors and 0 warnings.
+- Home/About thin-page warnings are resolved.
+- Sitemap remains unchanged at 22 canonical URLs and continues to exclude legacy San Diego shim pages.
+- The three San Diego legacy shim pages remain outside the sitemap and include `noindex, follow` plus canonical links to active URLs.
+- No new city cluster, standalone hotel page, or `/things-to-do/nyc-this-weekend-with-kids.html` page was created.
+- `IMP-012` remains deferred.
+- Changed pages include useful parent decision support, internal cluster links, metadata, `ItemList` / `FAQPage` schema where appropriate, source sections, and trust/methodology framing.
+- Hotel, stroller, transit, area, and family-suitability guidance is generally framed as research-based planning support requiring verification rather than personally verified recommendation.
+- Found one implementation-ready claim-language cleanup: several pages use safety-loaded words such as "safest" where the intended meaning is planning reliability or lowest-friction choice, not source-backed physical safety.
+
+Implementation-ready handoff created:
+
+- `IMP-014: Clean Safety-Loaded Planning Language`
 
 ### SRR-006: Validate NYC Local / Weekend Events Concept
 
