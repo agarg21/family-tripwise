@@ -29,6 +29,7 @@ Post-`IMP-014` checkpoint: current ready implementation lane is clear. Do not ad
 - Master / Operator: current thread
 - Implementation Agent: `019f3ca5-67ed-7b93-a88c-838c5a026535`
 - SEO Research & Review Agent: `019f3ca5-b3b7-7fd2-9f0f-ba411bf5c658`
+- GSC Monitoring Agent: `019f5bf2-811b-7132-800d-74b0920052ec`
 
 ## Recent Work
 
@@ -130,6 +131,12 @@ Post-`IMP-014` checkpoint: current ready implementation lane is clear. Do not ad
   - preserved true safety-advisory, methodology, human-review, and official-source verification caveats;
   - re-ran local QA with 0 errors and 0 warnings;
   - confirmed sitemap remains 22 canonical URLs.
+- Master created a dedicated GSC Monitoring Agent lane on 2026-07-13:
+  - added `agents/gsc-monitoring-agent.md`;
+  - added project monitor config at `ops/gsc-monitor.json`;
+  - added generated `site/robots.txt` with a sitemap directive;
+  - created GSC Monitoring Agent thread `019f5bf2-811b-7132-800d-74b0920052ec`;
+  - ran the first public preflight and found production `robots.txt` was still 404 before deployment.
 
 ## Ready For SEO Research & Review
 
@@ -180,7 +187,22 @@ Useful future user input:
 
 ## Recommended Next Agent
 
-Master / Operator for final commit, push, and deployment follow-up. After that, SEO Research & Review Agent for the next priority choice.
+GSC Monitoring Agent for indexing/sitemap checks. SEO Research & Review Agent for the next content or SEO priority choice.
+
+## GSC Monitoring
+
+- Agent thread: `019f5bf2-811b-7132-800d-74b0920052ec`
+- Config: `ops/gsc-monitor.json`
+- Public preflight:
+
+```bash
+python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops/gsc-monitor.json
+```
+
+- Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
+- Latest public preflight before deployment: all monitored URLs returned 200 and appeared in the sitemap; production `robots.txt` returned 404 and needs deployment.
+- Latest GSC monitoring report: pending initial GSC Monitoring Agent run after `robots.txt` deployment.
+- Next monitoring action: deploy `site/robots.txt`, rerun public preflight, then have the GSC Monitoring Agent check sitemap status and configured URL inspection state.
 
 ## Master Notes
 

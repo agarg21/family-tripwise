@@ -874,6 +874,12 @@ ${agePages.map((page) => `  <url><loc>https://familytripwise.com/things-to-do/${
 </urlset>
 `);
 
+writeSite("robots.txt", `User-agent: *
+Allow: /
+
+Sitemap: https://familytripwise.com/sitemap.xml
+`);
+
 upgradePriorityPages(outDir);
 
-console.log("Generated 20 SEO pages plus about, index, redirects, and sitemap.");
+console.log("Generated 20 SEO pages plus about, index, redirects, robots, and sitemap.");

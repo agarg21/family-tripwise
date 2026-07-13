@@ -1,0 +1,23 @@
+{
+  "site": "Family Tripwise",
+  "domain": "familytripwise.com",
+  "sitemap": "https://familytripwise.com/sitemap.xml",
+  "robots": "https://familytripwise.com/robots.txt",
+  "urls": [
+    "https://familytripwise.com/",
+    "https://familytripwise.com/about.html",
+    "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+    "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+    "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+    "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+    "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+    "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+    "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+    "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+    "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+    "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+    "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+    "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+    "https://familytripwise.com/things-to-do/chicago-with-kids.html"
+  ]
+}

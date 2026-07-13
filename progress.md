@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-13
+
+- Created a dedicated GSC Monitoring Agent lane:
+  - created GSC Monitoring Agent thread `019f5bf2-811b-7132-800d-74b0920052ec`;
+  - added `agents/gsc-monitoring-agent.md` with monitoring responsibilities and safety boundaries;
+  - added `ops/gsc-monitor.json` for Family Tripwise public preflight and GSC monitoring;
+  - added generated `site/robots.txt` with the sitemap directive;
+  - ran the first public preflight, which confirmed all monitored URLs return 200 and are in the sitemap, but production `robots.txt` was 404 before deployment.
+
 ## 2026-07-11
 
 - Completed `IMP-014: Clean Safety-Loaded Planning Language`:
