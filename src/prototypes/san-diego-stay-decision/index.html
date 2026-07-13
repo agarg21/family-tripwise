@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>San Diego stay decision — unpublished prototype</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Family Tripwise prototype home">
+        <span class="brand-mark" aria-hidden="true">FT</span>
+        <span>Family Tripwise <small>prototype lab</small></span>
+      </a>
+      <span class="status-pill">Unpublished · needs review</span>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">San Diego stay-decision prototype</p>
+          <h1>Find a starting point for your family’s stay.</h1>
+          <p class="hero-copy">Tell us what would make the trip easier. We’ll compare area candidates and show the assumptions behind the result.</p>
+        </div>
+        <aside class="trust-card">
+          <strong>This is not a booking recommendation.</strong>
+          <p>Scores are model-derived planning hypotheses. Area, transit, stroller, noise, and family-fit claims still require sources and human review.</p>
+        </aside>
+      </section>
+
+      <section class="workspace" aria-label="Stay decision tool">
+        <form id="decision-form" class="planner-card">
+          <div class="section-heading">
+            <span>01</span>
+            <div>
+              <p class="eyebrow">Your trip</p>
+              <h2>What needs to work?</h2>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Youngest child</legend>
+            <div class="choice-grid compact">
+              <label><input type="radio" name="age" value="baby"> <span>Baby</span></label>
+              <label><input type="radio" name="age" value="toddler" checked> <span>Toddler</span></label>
+              <label><input type="radio" name="age" value="school-age"> <span>School age</span></label>
+              <label><input type="radio" name="age" value="teen"> <span>Teen</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Getting around</legend>
+            <div class="choice-grid">
+              <label><input type="radio" name="transport" value="rental" checked> <span>Rental car</span></label>
+              <label><input type="radio" name="transport" value="rideshare"> <span>Rideshare</span></label>
+              <label><input type="radio" name="transport" value="car-light"> <span>Prefer car-light</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Trip pace</legend>
+            <div class="choice-grid">
+              <label><input type="radio" name="pace" value="relaxed"> <span>Relaxed</span></label>
+              <label><input type="radio" name="pace" value="balanced" checked> <span>Balanced</span></label>
+              <label><input type="radio" name="pace" value="full"> <span>Full days</span></label>
+            </div>
+          </fieldset>
+
+          <label class="select-label" for="priority">Top priority</label>
+          <select id="priority" name="priority">
+            <option value="beach">Easy beach time</option>
+            <option value="attractionBalance" selected>Balance across activities</option>
+            <option value="carLight">Fewer car-dependent moments</option>
+            <option value="quiet">Quieter reset time</option>
+            <option value="value">More value flexibility</option>
+          </select>
+
+          <div class="toggle-list">
+            <label class="toggle-row">
+              <span><strong>Return for naps or resets</strong><small>Give extra weight to an easier midday base.</small></span>
+              <input type="checkbox" name="napReset" checked>
+            </label>
+            <label class="toggle-row">
+              <span><strong>Need a kitchen or laundry</strong><small>Add this to the property verification list.</small></span>
+              <input type="checkbox" name="kitchenLaundry">
+            </label>
+            <label class="toggle-row">
+              <span><strong>Stroller-sensitive trip</strong><small>Flag access details for human verification.</small></span>
+              <input type="checkbox" name="stroller" checked>
+            </label>
+          </div>
+
+          <button class="primary-button" type="submit">Compare area candidates <span aria-hidden="true">→</span></button>
+          <p class="form-note">No personal data is stored or sent anywhere by this prototype.</p>
+        </form>
+
+        <section class="results-card" aria-labelledby="results-title">
+          <div class="section-heading">
+            <span>02</span>
+            <div>
+              <p class="eyebrow">Decision support</p>
+              <h2 id="results-title">Your comparison</h2>
+            </div>
+          </div>
+          <div id="results" aria-live="polite">
+            <div class="empty-state">
+              <div class="empty-map" aria-hidden="true"><span></span><span></span><span></span></div>
+              <h3>Start with your family constraints.</h3>
+              <p>The comparison will show a model-derived fit index, why each candidate surfaced, tradeoffs, and what still needs verification.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="method-card">
+        <div>
+          <p class="eyebrow">How to read this prototype</p>
+          <h2>A shortlist with receipts, not a verdict.</h2>
+        </div>
+        <div class="method-grid">
+          <article><strong>Fit index</strong><p>A transparent weighted score from the answers above. It is not a probability or quality rating.</p></article>
+          <article><strong>Evidence state</strong><p>Shows whether assumptions have sources, freshness dates, and human review. Empty fields reduce confidence.</p></article>
+          <article><strong>Next checks</strong><p>Turns unverified lodging, access, fee, and family-fit details into a property-level checklist.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Family Tripwise prototype · Not published · Not personally verified</p>
+    </footer>
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>
