@@ -1,8 +1,12 @@
 # Needs User
 
-Last updated: 2026-07-07
+Last updated: 2026-07-13
 
-No hard blockers.
+## Hard Blockers
+
+| Status | Question | Why it matters |
+|---|---|---|
+| blocked | Sign into Google Search Console in Chrome or open an authenticated GSC tab for `sc-domain:familytripwise.com`. | Required before the GSC Monitoring Agent can run URL Inspection on configured Family Tripwise URLs. |
 
 ## Useful Decisions Soon
 
@@ -21,4 +25,3 @@ Agents should add questions here when:
 - paid tools or account changes are needed
 - DNS, hosting, billing, or domain changes are needed
 - legal, safety, or trust-sensitive claims cannot be handled from sources alone
-

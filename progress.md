@@ -7,7 +7,11 @@
   - added `agents/gsc-monitoring-agent.md` with monitoring responsibilities and safety boundaries;
   - added `ops/gsc-monitor.json` for Family Tripwise public preflight and GSC monitoring;
   - added generated `site/robots.txt` with the sitemap directive;
-  - ran the first public preflight, which confirmed all monitored URLs return 200 and are in the sitemap, but production `robots.txt` was 404 before deployment.
+  - ran the first public preflight, which confirmed all monitored URLs return 200 and are in the sitemap, but production `robots.txt` was 404 before deployment;
+  - deployed setup commit `f7e514c`, then reran public preflight successfully with sitemap 200, robots 200, sitemap directive present, and all configured URLs returning 200 and appearing in the sitemap;
+  - created `docs/research/gsc-monitoring-latest.md` and `docs/research/gsc-monitoring-2026-07-13.md`;
+  - recorded that private GSC URL Inspection is blocked until an authenticated GSC browser session is available;
+  - did not request indexing.
 
 ## 2026-07-11
 

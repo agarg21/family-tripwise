@@ -136,7 +136,15 @@ Post-`IMP-014` checkpoint: current ready implementation lane is clear. Do not ad
   - added project monitor config at `ops/gsc-monitor.json`;
   - added generated `site/robots.txt` with a sitemap directive;
   - created GSC Monitoring Agent thread `019f5bf2-811b-7132-800d-74b0920052ec`;
-  - ran the first public preflight and found production `robots.txt` was still 404 before deployment.
+  - ran the first public preflight and found production `robots.txt` was still 404 before deployment;
+  - deployed setup commit `f7e514c` through GitHub Pages run `29259511918`;
+  - reran public preflight successfully after deployment.
+- Master recorded the first GSC monitoring report on 2026-07-13:
+  - public preflight passed for sitemap, robots, and configured monitor URLs;
+  - private GSC check was blocked by Google sign-in in the available browser session;
+  - URL Inspection was not completed and indexing was not requested;
+  - latest report lives at `docs/research/gsc-monitoring-latest.md`;
+  - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
 
 ## Ready For SEO Research & Review
 
@@ -175,7 +183,7 @@ Current local QA findings from `node tools/seo-qa.mjs`:
 
 ## Waiting On User
 
-No hard blocker right now.
+GSC private URL Inspection is blocked until the user signs into Google Search Console in Chrome or opens an authenticated GSC tab for `sc-domain:familytripwise.com`.
 
 Useful future user input:
 
@@ -200,9 +208,12 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 ```
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Latest public preflight before deployment: all monitored URLs returned 200 and appeared in the sitemap; production `robots.txt` returned 404 and needs deployment.
-- Latest GSC monitoring report: pending initial GSC Monitoring Agent run after `robots.txt` deployment.
-- Next monitoring action: deploy `site/robots.txt`, rerun public preflight, then have the GSC Monitoring Agent check sitemap status and configured URL inspection state.
+- Latest public preflight after deployment: sitemap returned 200 with 22 parsed URLs; robots returned 200 and advertises the sitemap; all configured URLs returned 200 and appeared in the sitemap.
+- Latest GSC monitoring report: `docs/research/gsc-monitoring-latest.md`.
+- Dated monitoring report: `docs/research/gsc-monitoring-2026-07-13.md`.
+- Latest known authenticated GSC status: sitemap Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos; performance as of Jul 12 showed 213 impressions, 0 clicks, average position 60.2.
+- 2026-07-13 private GSC status: blocked by Google sign-in; URL Inspection not completed; indexing not requested.
+- Next monitoring action: sign into GSC in Chrome or open an authenticated GSC tab, then have the GSC Monitoring Agent inspect configured URLs. Do not request indexing unless explicitly authorized.
 
 ## Master Notes
 
