@@ -15,7 +15,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
 | `FT-DEV-001` | completed locally | `PASS` | Re-review cycle 2 closed the prior P2 and P3 findings; eligible for exact-path commit after staged QA. |
-| `FT-RES-001` | open | awaiting implementation | Review after the evidence pack is completed. |
+| `FT-RES-001` | completed locally | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
 
 ## Open blocking findings
 
@@ -65,6 +65,33 @@ Full verification evidence:
 - `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each passed with 0 errors and 0 warnings across 22 sitemap URLs and 25 site HTML files.
 - `git status --short -- site` and `git diff --name-only -- site` were empty. No prototype reference exists in `site/`, the root `README.md`, or `tools/`; `index.html` retains `noindex, nofollow`. The implementation remains confined to `src/prototypes/san-diego-stay-decision/`, outside every protected live/indexed URL.
 - Trust-sensitive area, transit, stroller, route, noise, value, and family-fit statements remain model-derived hypotheses marked low-confidence and `needs-human-review`. No publishing, sitemap inclusion, indexing request, external mutation, outreach, commit, push, or deployment occurred during review.
+
+Findings:
+
+- None (`P0`-`P3`).
+
+### 2026-07-13 — `FT-RES-001` review cycle 1
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- The central action ledger independently identifies `FT-RES-001` as the only open action after completed `FT-DEV-001`; the site config declares only `docs/research/san-diego-stay-decision-evidence.md` as its target path. The new evidence pack is confined to that path. Pre-existing dirty monitoring, cycle, needs-user, and progress files remained present and were not changed by this review.
+- `git status --short -- site` and `git diff --name-only -- site` were empty, and no evidence-pack or prototype reference exists under `site/` or in `site/sitemap.xml`. The pack says it is an internal, not-human-reviewed, not-publication-ready artifact and expressly authorizes no live page, sitemap entry, hotel shortlist, safety conclusion, or property recommendation (`docs/research/san-diego-stay-decision-evidence.md:7-15`).
+- No implementation file was edited during review. No commit, push, deployment, publication, indexing request, outreach, or external-account mutation occurred.
+
+Coverage and trust verification:
+
+- Independently compared the evidence matrix with `src/prototypes/san-diego-stay-decision/data.mjs`: all five area names and all 30 dimension scores match exactly, in dimension order, for 35 total material items. The five framing rows cover every prototype framing without promoting any framing to a recommendation (`docs/research/san-diego-stay-decision-evidence.md:80-88`), and the 30 score rows consistently state that scores are reproduced only for traceability and are not endorsed (`docs/research/san-diego-stay-decision-evidence.md:90-147`).
+- All 19 cited URLs are primary/official sources from the City of San Diego, City of Coronado, San Diego MTS, SANDAG-led 511, or County of San Diego. Independent `curl -L` checks returned HTTP 200 for every URL on 2026-07-13. Direct content inspection confirmed each bounded factual claim in the source register, including Mission Bay facilities, Coronado access infrastructure, La Jolla Shores amenities and summer-weekend parking pressure, Downtown neighborhood context, transit/accessibility rules, TOT/TMD treatment, regional traffic data, and dynamic County beach postings. The pack consistently distinguishes infrastructure or amenity existence from property-, route-, date-, price-, and family-specific conclusions.
+- Independently reproduced the two high-risk evidence tensions. The City Mission Valley page describes the community as a regional center “tied together by the San Diego Trolley,” so the prototype's area-wide `1/5` car-light score is correctly classified as `SCORE-CHALLENGE`, not validated (`docs/research/san-diego-stay-decision-evidence.md:34,57,88,144`). The City neighborhood-shuttle page simultaneously says FRED service would be discontinued July 1, 2025 and retains present-tense service area, hours, price, and booking details; the pack correctly treats current availability as `SOURCE-CONFLICT` and prohibits relying on FRED until non-conflicting authoritative confirmation exists (`docs/research/san-diego-stay-decision-evidence.md:35,63,87,133,169`).
+- The pack does not equate MTS accessibility with stroller ease. MTS confirms accessible vehicle systems, while its riding rules impose cart/stroller dimensions, storage and capacity constraints and require a child to be removed from a stroller before a bus departs. The pack conservatively routes exact family friction to `Q-STROLLER` and route testing rather than overstating accessibility as convenience.
+- All unsupported route time, noise, value, room, parking, fee, and midday-return claims are explicitly `UNKNOWN` at the necessary granularity. Ten named human-review questions assign owner roles and required evidence (`docs/research/san-diego-stay-decision-evidence.md:65-78`); the worksheet requires a decision, exact approved wording/value, evidence, freshness, reviewer identity, date, and notes for every framing and score (`docs/research/san-diego-stay-decision-evidence.md:149-161`). Seven integration gates block publication until all 35 decisions, the Mission Valley challenge, the FRED conflict, freshness, unknown handling, trust disclosures, GSC evidence, and the target-level observation policy are resolved (`docs/research/san-diego-stay-decision-evidence.md:163-173`).
+
+QA evidence:
+
+- `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each passed with 0 errors and 0 warnings across 22 sitemap URLs and 25 site HTML files.
+- `git diff --check` passed. `git diff --no-index --check /dev/null docs/research/san-diego-stay-decision-evidence.md` produced no whitespace diagnostics, covering the untracked target file that the normal tracked diff check cannot inspect.
 
 Findings:
 
