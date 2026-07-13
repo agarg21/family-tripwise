@@ -55,3 +55,15 @@ This repository is for building a family travel planning site and AI product. Th
 - Keep content templates in `docs/plan/content-strategy.md` until a CMS or content model exists.
 - When adding app code, include a simple local setup path in `README.md`.
 
+## Portfolio Operator Pilot
+
+- Family Tripwise is enrolled in the central SEO Portfolio Operator at `/Users/apoorvagarg/Documents/SEO Agent/seo-lab/operator/`.
+- The central runner may make path-scoped code changes directly in the local `main` checkout during the supervised pilot.
+- This repository remains the source of truth for site code, strategy, trust rules, and human-review requirements.
+- The operator owns cross-run evidence, observation windows, experiment selection, and portfolio reporting.
+- Do not change a URL protected by an active observation window unless a technical defect requires it. Unrelated development may proceed.
+- Preserve pre-existing dirty files, inspect the diff before and after changes, and do not push or deploy without explicit authorization.
+- Implement an approved operator experiment in this repository or an isolated worktree, then run the native QA commands before deployment.
+- Every operator implementation must be reviewed by an independent reviewer subagent in the same run and recorded in `ops/operator-review.md` before it is considered complete.
+- The implementation operator must address P0-P2 findings and request re-review, for at most three review cycles. It may commit only after `PASS` or `PASS_WITH_P3`, green QA, and exact-path staging.
+- Commits are authorized on the local `main` checkout after review consensus. Push, deployment, publishing, indexing requests, outreach, and external-account mutation remain prohibited.
