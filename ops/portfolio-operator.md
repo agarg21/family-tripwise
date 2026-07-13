@@ -60,4 +60,7 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 - Diff QA: tracked `git diff --check` passed; path-aware `git diff --no-index --check` passed for every untracked prototype file; `site/` remained unchanged.
 - Scope: implementation edits remained inside `src/prototypes/san-diego-stay-decision/`; this evidence update is in `ops/portfolio-operator.md`. No live URL, publishing surface, sitemap, external account, push, or deployment was changed.
 - Independent re-review: cycle 2 returned `PASS` with no P0-P3 findings. The reviewer independently reproduced wrapper-only table scrolling at 390×844, re-ran focused tests and native/production QA, checked all 1,440 supported form combinations, verified tracked and untracked whitespace, and confirmed `site/` remained untouched.
-- Commit gate: reviewer consensus is satisfied; exact-path staged QA is still required before the authorized local `main` commit.
+- Commit gate: reviewer consensus, green focused/native/production QA, staged `git diff --check`, and exact-path validation all passed.
+- Local implementation commit: `7bbef4463ad41b2644c1234cee97cd8c3c935853` (`feat: add reviewed San Diego stay decision prototype`) on `main`.
+- Exact committed paths: `src/prototypes/san-diego-stay-decision/`, `ops/portfolio-operator.md`, and `ops/operator-review.md`. Pre-existing changes in `AGENTS.md`, monitoring/operations documents, `progress.md`, and the untracked reviewer-agent instruction file remained unstaged and unmodified by the commit.
+- External state: commit only. Nothing was pushed, deployed, published, submitted for indexing, sent as outreach, or changed in an external account.
