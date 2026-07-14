@@ -113,11 +113,11 @@ const cities = [
       ["Homewood Suites San Diego Downtown/Bayside", "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/"]
     ],
     areas: [
-      ["Mission Bay", "Toddlers, pools, bay beaches, easy zoo drives", "Less neighborhood walking", "Excellent"],
-      ["La Jolla", "Tide pools, sea lions, coastal views, older kids", "Hills and parking", "Great"],
-      ["Downtown / Little Italy", "Walkable meals, harbor, Balboa Park access", "Noise and parking fees", "Good"],
-      ["Coronado", "Classic beach vacation pace", "Higher hotel prices", "Great"],
-      ["Mission Valley / Hotel Circle", "Value and central drives", "Car-dependent", "Good"]
+      ["Mission Bay", "Beach-and-reset research candidate", "Verify property access, exact routes, and fees", "Needs review"],
+      ["La Jolla", "Coastal research candidate", "Verify slopes, crossings, parking, and property route", "Needs review"],
+      ["Downtown / Little Italy", "Urban car-light research candidate", "Verify exact transit, sidewalks, room size, and noise", "Needs review"],
+      ["Coronado", "Beach-first research candidate", "Verify off-island routes, beach access, and full price", "Needs review"],
+      ["Mission Valley / Hotel Circle", "Central-base research candidate", "Verify property-level trolley, driving, and walking access", "Needs review"]
     ],
     activities: [
       ["San Diego Zoo", "toddler preschool elementary tween teen stroller", "4-6 hrs", "$$$", "Good", "No", "Medium", "Balboa Park", "Use the bus tour early, then choose a few zones instead of trying to finish the whole park."],
@@ -282,9 +282,9 @@ function links(city) {
   };
 }
 
-function updatedBlock() {
+function updatedBlock(lastUpdated = "July 5, 2026") {
   return `      <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Last updated:</strong> July 5, 2026</p>
+        <p><strong>Last updated:</strong> ${esc(lastUpdated)}</p>
         <p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>
       </section>
 `;
@@ -315,7 +315,7 @@ ${city.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${es
 `;
 }
 
-function hero(city, h1, intro) {
+function hero(city, h1, intro, lastUpdated) {
   return `    <main>
       <section class="page-hero">
         <div class="container">
@@ -324,7 +324,7 @@ function hero(city, h1, intro) {
           <p>${esc(intro)}</p>
         </div>
       </section>
-${updatedBlock()}${cityPhoto(city)}
+${updatedBlock(lastUpdated)}${cityPhoto(city)}
 `;
 }
 
@@ -414,13 +414,14 @@ ${sourceList(city)}
 
 function stayPage(city) {
   const l = links(city);
+  const isSanDiego = city.slug === "san-diego";
   const rows = city.areas.map(([area, best, watch, fit]) => `            <div class="table-row" role="row">
               <span role="cell">${esc(area)}</span>
               <span role="cell">${esc(best)}</span>
               <span role="cell">${esc(watch)}</span>
               <span role="cell">${esc(fit)}</span>
             </div>`).join("\n");
-  const body = `${hero(city, `Where to stay in ${city.name} with kids`, `Compare the best family areas in ${city.name} by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.`)}
+  const body = `${hero(city, `Where to stay in ${city.name} with kids`, isSanDiego ? "Compare San Diego stay candidates using exact property, route, room, fee, stroller, noise, and reset checks before treating any area as the answer." : `Compare the best family areas in ${city.name} by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.`, isSanDiego ? "July 13, 2026" : undefined)}
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>
@@ -438,15 +439,15 @@ function stayPage(city) {
       </section>
       <section class="container page-section">
         <div class="section-heading">
-          <p class="eyebrow">Area recommender</p>
-          <h2>Best areas for families</h2>
+          <p class="eyebrow">${isSanDiego ? "Area research" : "Area recommender"}</p>
+          <h2>${isSanDiego ? "Stay candidates to verify" : "Best areas for families"}</h2>
         </div>
         <div class="area-table" role="table" aria-label="Where to stay in ${esc(city.name)} with kids">
           <div class="table-row table-head" role="row">
             <span role="columnheader">Area</span>
             <span role="columnheader">Best for</span>
             <span role="columnheader">Watch out for</span>
-            <span role="columnheader">Family fit</span>
+            <span role="columnheader">${isSanDiego ? "Evidence state" : "Family fit"}</span>
           </div>
 ${rows}
         </div>

@@ -16,10 +16,11 @@ This is the durable handoff between the Family Tripwise implementation operator 
 |---|---|---|---|
 | `FT-DEV-001` | completed locally | `PASS` | Re-review cycle 2 closed the prior P2 and P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-RES-001` | completed locally | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
+| `FT-EXP-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed both P2 findings; eligible for exact-path commit after staged QA. |
 
 ## Open blocking findings
 
-- None. The prior `FT-DEV-001` P2 was closed by re-review cycle 2 on 2026-07-13.
+- None. `FT-EXP-001` re-review cycle 2 closed both prior P2 findings on 2026-07-13.
 
 ## Review history
 
@@ -92,6 +93,51 @@ QA evidence:
 
 - `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each passed with 0 errors and 0 warnings across 22 sitemap URLs and 25 site HTML files.
 - `git diff --check` passed. `git diff --no-index --check /dev/null docs/research/san-diego-stay-decision-evidence.md` produced no whitespace diagnostics, covering the untracked target file that the normal tracked diff check cannot inspect.
+
+Findings:
+
+- None (`P0`-`P3`).
+
+### 2026-07-13 — `FT-EXP-001` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and policy evidence:
+
+- The deterministic operator still selects open action `FT-EXP-001`. Central observation state records a bounded override for only `https://familytripwise.com/where-to-stay/san-diego-with-kids.html`; the six other URLs from the July 11 window remain protected through 2026-07-25. This matches the user's target-specific override rather than converting it into a site-wide observation reset.
+- The action diff is confined to the declared implementation paths (`tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`, `tools/san-diego-stay-tool.test.mjs`, `site/where-to-stay/san-diego-with-kids.html`, `site/styles.css`, `site/app.js`, and `site/san-diego-stay-tool.mjs`) and evidence paths (`decisions.md` and `ops/portfolio-operator.md`, plus this review log). No sitemap, robots, canonical, indexability, deployment, or unrelated live-page change is present. Pre-existing dirty monitoring, cycle, needs-user, and progress files remain present and were not edited by this review.
+- Regeneration was independently tested in a temporary copy of the complete working tree. `node tools/generate-pages.mjs` regenerated every site artifact byte-for-byte with no checksum change, so the current generated output is idempotent and no non-declared page drift was found.
+
+Behavior and QA evidence:
+
+- `node --check` passed for both generators, `site/app.js`, and `site/san-diego-stay-tool.mjs`. `node --test tools/san-diego-stay-tool.test.mjs` passed 3/3 tests. An independent exhaustive check covered all 96 supported combinations of six primary constraints, two transport modes, and eight extra-constraint sets; every output had the expected bounded length, unique checks, an `UNKNOWN` disclosure, and no `best area` or `recommend` language.
+- Through a local HTTP server, Chrome loaded the module successfully and generated seven unique checks for car-light + stroller + nap + kitchen. At 1280px, the page and viewport were both 1280px wide. At 390×844, the page and viewport were both 390px wide, the tool/form/result were each contained at 354px, the result panel became non-sticky, and the 1,160px matrix remained isolated inside its 352px horizontal scroller. The form has 11 associated labels for 11 inputs, three legends for three fieldsets, unique IDs, an `aria-live="polite"` result, and keyboard-visible focus. No implementation-origin console warning, exception, module-load failure, or network failure occurred. The browser separately requested the site's pre-existing absent `/favicon.ico`, producing one unrelated 404; this did not affect the action module.
+- The shared `site/app.js` activity filtering still worked after dead stay-recommender removal: the San Diego activity page's teen chip became active and filtered the six cards to four visible and two hidden.
+- The three new official context links (City Mission Valley, MTS maps/schedules, and County beach/bay status) each returned HTTP 200 on 2026-07-13. The City's page reproduces the cited trolley-connected wording, and the page correctly labels all three links as context rather than family-fit verdicts. The new checklist, area table, quick cards, matrix, and FAQ do not publish the prototype's numeric scores or rank areas.
+- `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each passed with 0 errors and 0 warnings across 22 sitemap URLs and 25 HTML files. `git diff --check` and path-aware whitespace checks for both new files passed.
+
+Findings:
+
+1. `P2` — `FT-EXP-001` leaves unreviewed firm area/hotel-fit and route/noise conclusions on the target page, contradicting the action's non-prescriptive boundary and the evidence pack. `tools/upgrade-priority-pages.mjs:320-340` and the generated `site/where-to-stay/san-diego-with-kids.html:243,278-310` still say trips “usually point” to named areas, call properties “Strong,” “Good,” or “Practical” family candidates, state that Mission Bay “can be calmer than downtown,” and use “Best fit” conclusions including fewer car trips after nap time. The adjacent disclosure says these are not firm recommendations, while `docs/research/san-diego-stay-decision-evidence.md` keeps property noise, route time, midday-return practicality, and property fit `UNKNOWN` pending named human review. Expected behavior: the full resulting target page, not only the new checklist, must avoid firm recommendations and unsupported family-fit conclusions. Bounded fix: in the San Diego `hotelDecision` and `hotels` generator data, replace directional/graded fit wording and area-derived noise/route conclusions with neutral candidate attributes plus exact property, route, room, date, and reviewer questions; regenerate the one target and re-run trust-string, focused, browser, and native QA.
+2. `P2` — `FT-EXP-001` materially changes the page on 2026-07-13 while the visible trust panel still says `Last updated: July 5, 2026` (`site/where-to-stay/san-diego-with-kids.html:34`; source template `tools/generate-pages.mjs:287`). This makes the page's freshness disclosure inaccurate at the point the new tool and claim rewrites would be integrated. Expected behavior: the visible last-updated date reflects the reviewed substantive revision and survives regeneration without changing unrelated pages. Bounded fix: parameterize the generator's update date narrowly for the San Diego stay page (or make an equivalently target-specific generated update), set it to July 13, 2026, regenerate, and verify that no other page changes.
+
+### 2026-07-13 — `FT-EXP-001` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the firm-recommendation P2. The San Diego `hotelDecision` and `hotels` data at `tools/upgrade-priority-pages.mjs:324-336` and generated output at `site/where-to-stay/san-diego-with-kids.html:242-310` now use exact-route mapping, official-attribute candidates, repeated current-detail verification, explicit `Room-level noise is UNKNOWN` wording, and named human-review questions. The prior directional/graded phrases (`usually point`, `Strong`, `Good`, `Practical`, `can be calmer`, `Best fit`, fewer-car-trips-after-nap, and short-rides conclusions) are absent from both the target page and its target-scoped generator object. No `/10` score is present. The remaining Mission Bay/Coronado, Downtown/Little Italy, Mission Valley, and La Jolla labels are explicitly marked hypotheses or candidates and route to exact property/route checks rather than verdicts.
+- Closed the freshness P2. `site/where-to-stay/san-diego-with-kids.html:34` now says `Last updated: July 13, 2026`. The generator accepts an optional date and passes July 13 only from the San Diego stay-page branch (`tools/generate-pages.mjs:285-287,318-327,415-424`). In a fresh temporary working-tree copy, full regeneration was byte-for-byte idempotent. The San Diego stay page was the only generated destination page with July 13; the other 19 destination pages retained July 5, so the fix does not expand to unrelated targets.
+
+Full verification evidence:
+
+- Central state still identifies `FT-EXP-001` as the deterministic action. Its observation override contains exactly the San Diego where-to-stay URL, while the other six July 11 URLs remain protected through 2026-07-25.
+- The action remains confined to its declared implementation and evidence paths. Under `site/`, tracked changes are only `app.js`, `styles.css`, and the San Diego where-to-stay page; the only untracked site file is `san-diego-stay-tool.mjs`. No sitemap, robots, canonical, other page, indexability, deployment, or external-account change is present. Pre-existing dirty monitoring, cycle, needs-user, and progress files remain preserved.
+- `node --check` passed for both generators, `site/app.js`, and `site/san-diego-stay-tool.mjs`. `node --test tools/san-diego-stay-tool.test.mjs` passed 3/3. An independent target-scoped trust check passed, and all 96 supported checklist combinations again produced unique, bounded output with an `UNKNOWN` disclosure and no recommendation language.
+- Chrome independently loaded the page and module through HTTP and generated seven unique checks for car-light + stroller + nap + kitchen. At 1280px there was no page overflow. At 390×844 the page remained 390px wide, the tool/form/result remained 354px wide, the result became non-sticky, and the 1,160px comparison table remained isolated in its 352px scroller. Labels, fieldsets/legends, unique IDs, polite live-region behavior, and visible keyboard focus remained intact. The shared activity filter still reduced the San Diego activity cards from six to four visible for the teen filter. No implementation-origin exception, warning, module failure, or network failure occurred; the one pre-existing `/favicon.ico` 404 remains unrelated.
+- The three action-specific official context links again returned HTTP 200. Two existing property URLs returned HTTP 200; Hilton returned HTTP 403 to command-line `curl`, which is recorded as public-network `UNKNOWN`, not as a verified content defect or a reason to weaken the page's re-verification instruction.
+- `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each passed with 0 errors and 0 warnings across 22 sitemap URLs and 25 HTML files. `git diff --check` and path-aware whitespace checks for the two new files passed.
 
 Findings:
 

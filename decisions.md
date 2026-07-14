@@ -1,5 +1,24 @@
 # Decisions
 
+## 2026-07-13: Run One Bounded San Diego Batch Before Observation
+
+Decision: Supersede the July 25 wait for the San Diego where-to-stay target and run `FT-EXP-001` as one cohesive, reviewed pre-observation batch. Begin a fresh target-scoped observation window only after the reviewed commit is deployed.
+
+Why:
+
+- The user explicitly preferred a few meaningful changes now over waiting until July 25.
+- The unpublished prototype and source-backed evidence pack are complete, review-clean, and committed, so the next useful step is a narrow integration rather than more speculative research.
+- The evidence pack found that the existing page's strongest area verdicts and car-light claims should be framed as hypotheses until exact properties, routes, dates, and human review exist.
+- One bounded experiment preserves a measurable future baseline better than several unrelated page edits.
+
+Implications:
+
+- Add a constraint-led verification checklist to the existing San Diego where-to-stay page; do not publish the prototype's unreviewed numeric scores.
+- Reframe overconfident area, car-light, reset, value, noise, and FAQ statements as research hypotheses or exact verification questions.
+- Keep the change confined to the declared `FT-EXP-001` paths and require independent review, green QA, exact-path staging, and one local `main` commit.
+- A local commit does not start observation because it does not change production. Push and deployment remain separate decisions.
+- After deployment, protect the San Diego where-to-stay URL for a new 14-day measurement window while unrelated work may continue.
+
 ## 2026-07-11: Prioritize GSC-Signaled Existing Pages
 
 Decision: Prioritize improving existing pages that Google is already testing before adding new city clusters, standalone hotel pages, or the deferred NYC weekend planner.
