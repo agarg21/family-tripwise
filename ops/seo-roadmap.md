@@ -13,6 +13,13 @@ The user owns portfolio goals and material strategic decisions. User input is re
 
 The machine-readable source used by the deterministic operator is `ops/seo-roadmap.json`.
 
+## Current GSC evidence
+
+- Latest snapshot: `ops/gsc-snapshots/2026-07-13.json`.
+- Classification on July 14: reused authenticated UI import, one day old, with performance data through July 12.
+- It is directional and not fresh API evidence. It may guide non-measurement research, but it cannot support a fresh indexing, traffic, ranking, or experiment conclusion.
+- The automated API collector safely skipped collection because its protected service-account secret is not configured; it did not create a fake snapshot.
+
 ## Maintenance cadence
 
 - Every run: select at most one ready item, preserve unrelated work, and update only that item's status and evidence.
@@ -25,12 +32,24 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 | Order | Item | Lane | State | Why now |
 |---:|---|---|---|---|
-| 1 | `FT-RES-002` priority-page review | Content/product quality | Ready | The old research backlog is ready but was never promoted into the deterministic queue. This should identify exactly one next live improvement without touching a protected URL. |
+| 1 | `FT-IMP-001` Las Vegas stay verification revision | Content/product quality | Ready | SRR-002 found the clearest unprotected combination of early relevance, shallow decision support, and firm human-gated claim debt. |
 | 2 | `FT-DEV-002` itinerary pacing prototype | Product | Ready | It advances the differentiated-tool thesis outside the live site while observation continues. |
 | 3 | `FT-AUTH-001` source-worthy asset plan | Authority | Ready | Authority is effectively zero; asset and prospect research can proceed without outreach. |
 | 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+## Completed this cycle
+
+### FT-RES-002 — priority-page index-worthiness review
+
+- Completed: 2026-07-14.
+- Evidence: reused authenticated July 13 UI import, current local page inspection, current public/repository health, active observation windows, and historical opportunity research.
+- Result: all eight reviewed pages remain index-worthy. No protected URL was edited.
+- Promoted action: `FT-IMP-001` / `IMP-015`, limited to the unprotected Las Vegas where-to-stay page and its generator/test/evidence paths.
+- Research artifact: `docs/research/srr-002-priority-page-review.md`.
+- Independent review: cycle 2 `PASS`; the cycle 1 Chicago-page scope P2 was corrected and no P0-P3 findings remain.
+- QA: roadmap JSON validation, 11 GSC snapshot/privacy tests, native and production SEO QA, and tracked/untracked whitespace checks passed; no `site/**` path changed.
 
 ## Daily evidence loop
 

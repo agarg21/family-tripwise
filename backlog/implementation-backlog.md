@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-07-11
+Last updated: 2026-07-14
 
 ## Active
 
@@ -8,7 +8,42 @@ No implementation task is currently active. IMP-001 through IMP-005, IMP-009 thr
 
 ## Ready
 
-None right now.
+### IMP-015: Reframe Las Vegas Stay Decision Support
+
+Status: ready
+
+Roadmap ID: `FT-IMP-001`
+
+Source handoff:
+
+- `SRR-002: Review Priority Pages For Index-Worthiness`
+- `docs/research/srr-002-priority-page-review.md`
+
+Goal:
+
+Turn the existing Las Vegas where-to-stay page into a constraint-led verification guide without publishing unreviewed area, hotel, smoke/noise, route, pool, or family-suitability conclusions as fact.
+
+Affected production URL:
+
+- `https://familytripwise.com/where-to-stay/las-vegas-with-kids.html`
+
+Bounded implementation paths:
+
+- `tools/upgrade-priority-pages.mjs`
+- `site/where-to-stay/las-vegas-with-kids.html`
+- `tools/las-vegas-stay-page.test.mjs`
+- declared operator evidence and roadmap files
+
+Acceptance checks:
+
+- Replace firm `best area` and `best fit` verdicts with neutral candidates, exact verification questions, or explicit unknowns.
+- Treat smoke/noise exposure, pool access, room assignment, fees, and route friction as property-, room-, route-, date-, or policy-specific checks.
+- Do not rank hotels or imply personally verified family suitability.
+- Preserve the canonical, indexability, sitemap membership, and existing URL.
+- Add focused tests for blocked firm phrases, trust framing, canonical/indexability stability, and generator idempotence.
+- Change no protected URL or unrelated generated page.
+- Focused and native QA pass; independent review returns `PASS` or `PASS_WITH_P3` before commit.
+- Production passes the predeclared action-specific invariant after deployment.
 
 ## Candidate Tasks
 

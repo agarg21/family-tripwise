@@ -23,7 +23,9 @@
       "title": "Refresh the priority-page index-worthiness review and promote one next implementation",
       "kind": "research",
       "lane": "content-and-product-quality",
-      "status": "ready",
+      "status": "completed",
+      "selected_on": "2026-07-14",
+      "completed_on": "2026-07-14",
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -41,7 +43,51 @@
         "ops/seo-roadmap.md"
       ],
       "success_signal": "A current evidence-backed review identifies and promotes exactly one bounded implementation that improves an existing page or cluster without changing a protected URL during observation.",
-      "notes": "Research may inspect protected URLs but must not edit them. Prefer an unprotected San Diego gap when evidence is comparable."
+      "gsc_evidence_classification": "reused authenticated UI import collected 2026-07-13 with data through 2026-07-12; directional, not fresh API evidence",
+      "promoted_action": "FT-IMP-001",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "qa_evidence": [
+        "roadmap JSON validation passed",
+        "GSC snapshot/privacy tests passed 11 of 11",
+        "native SEO QA passed with 0 errors and 0 warnings",
+        "production SEO QA passed with 0 errors and 0 warnings",
+        "tracked and untracked whitespace checks passed",
+        "no site path changed"
+      ],
+      "result": "All eight priority pages remain index-worthy. Promoted one bounded trust and decision-support revision for the unprotected Las Vegas where-to-stay page; no protected URL was edited.",
+      "notes": "Research inspected protected URLs without editing them. The San Diego activity discovery gap remains a due read-only monitor, while the unprotected Las Vegas stay page had the clearest combined early relevance and trust-policy debt."
+    },
+    {
+      "id": "FT-IMP-001",
+      "implementation_backlog_id": "IMP-015",
+      "title": "Reframe the Las Vegas stay page as a constraint-led verification guide",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "ready",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "tools/upgrade-priority-pages.mjs",
+        "site/where-to-stay/las-vegas-with-kids.html",
+        "tools/las-vegas-stay-page.test.mjs",
+        "backlog/implementation-backlog.md",
+        "ops/portfolio-operator.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "production_invariant": "The affected URL remains canonical and indexable, contains exact total-fee, room-assignment, pool-access, smoke/noise-exposure, and route-friction checks, and contains no unreviewed best-area or best-fit verdict presented as fact.",
+      "success_signal": "The existing page provides useful constraint-led booking checks without firm human-gated area, hotel-fit, smoke/noise, route, pool, or family-suitability claims; focused/native QA and independent review pass.",
+      "notes": "This is an existing unprotected URL. Do not rank hotels, add a new page, alter sitemap/indexability, or touch any protected target."
     },
     {
       "id": "FT-DEV-002",

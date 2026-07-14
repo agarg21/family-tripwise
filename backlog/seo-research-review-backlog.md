@@ -1,31 +1,12 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-11
+Last updated: 2026-07-14
 
 ## Active
 
 No SEO Research & Review task is active.
 
 ## Next
-
-### SRR-002: Review Priority Pages For Index-Worthiness
-
-Status: ready
-
-Recommendation label: `improve`
-
-Review pages currently most important to Family Tripwise:
-
-- San Diego things to do with kids
-- San Diego where to stay with kids
-- Las Vegas things to do with kids
-- Las Vegas where to stay with kids
-- New York City things to do with kids
-- New York City where to stay with kids
-- Chicago things to do with kids
-- San Antonio things to do with kids
-
-Focus on parent usefulness, originality, trust, internal links, metadata, and whether each page deserves indexing.
 
 ### SRR-003: Decide First Tool-Like Feature
 
@@ -74,6 +55,30 @@ Evaluate whether to create `best family hotels in San Diego` only after:
 - the current San Diego where-to-stay page remains the canonical area decision page.
 
 ## Done
+
+### SRR-002: Review Priority Pages For Index-Worthiness
+
+Status: done
+
+Completed: 2026-07-14
+
+Recommendation label: `improve`
+
+Research artifact:
+
+- `docs/research/srr-002-priority-page-review.md`
+
+Result:
+
+- Kept all eight reviewed priority pages indexable based on current usefulness, metadata, internal links, source framing, and structured decision support.
+- Classified the latest GSC snapshot as a one-day-old reused authenticated UI import, not fresh API evidence; it informed non-measurement research but did not support a fresh indexing or performance claim.
+- Respected both active URL-scoped observation windows and did not edit any reviewed live page.
+- Promoted exactly one bounded next implementation: `FT-IMP-001` / `IMP-015`, a trust and decision-support revision of the unprotected Las Vegas where-to-stay page.
+- Did not request indexing, add a destination/page, send outreach, or mutate an external account.
+
+Implementation-ready handoff created:
+
+- `IMP-015: Reframe Las Vegas Stay Decision Support`
 
 ### SRR-008: Post-IMP-013 GSC-Signaled Page Review
 

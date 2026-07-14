@@ -19,10 +19,11 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-EXP-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed both P2 findings; eligible for exact-path commit after staged QA. |
 | `FT-INFRA-001` | review-clean, not committed | `PASS` | Re-review cycle 3 closed deployment-marker and evidence-sequencing findings; eligible for exact-path commit after staged QA. |
 | `FT-INFRA-002` | review-clean, not committed | `PASS` | Re-review closed snapshot privacy, freshness, zero-data, and open-action evidence-gate findings; eligible for exact-path commit after staged QA. |
+| `FT-RES-002` | review-clean, not committed | `PASS` | Review cycle 2 closed the omitted-page finding; eligible for exact-path commit after staged QA. |
 
 ## Open blocking findings
 
-- None. `FT-EXP-001` re-review cycle 2 closed both prior P2 findings on 2026-07-13.
+- None. `FT-RES-002` review cycle 2 closed its prior P2 finding on 2026-07-14.
 
 ## Review history
 
@@ -35,6 +36,46 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - The central selector labels snapshots `fresh`, `reused`, or `stale`; fresh-GSC measurement work requires page, URL Inspection, and protected query evidence, including when resuming an open action. Unrelated research, product, and authority work can continue from the roadmap.
 - The operator owns the rolling 28-day roadmap and weekly re-scoring. User approval remains required for material strategy, monetization, trust, outreach, indexing, and stop/continue gates.
 - Final validation passed: Node tests 14/14, Python selector tests 6/6, public snapshot schema/privacy validation, workflow YAML and JSON parsing, local SEO QA with 0 errors and 0 warnings, and `git diff --check`.
+
+Findings:
+
+- None (`P0`-`P3`).
+
+### 2026-07-14 — `FT-RES-002` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and safety evidence:
+
+- Reviewed the complete action diff against baseline `923381d780c020e061d24561740cbf1a4eb52a3b`. Research and roadmap edits are confined to the declared FT-RES-002 paths; this review log is the only additional path. No `site/**`, sitemap, robots, canonical, indexability, publishing, indexing-request, outreach, or external-account change is present. The five pre-existing dirty files remain present and outside the action diff.
+- Independently read `ops/gsc-snapshots/2026-07-13.json`. It is correctly classified as a one-day-old **reused authenticated UI import**, collected July 13 with data through July 12, directional completeness, empty normalized page/inspection rows, and not fresh API evidence. No credential, complete raw-query export, country/device row, or user data was added.
+- Central observation state protects the six July 11 targets through July 25 and the San Diego stay page through July 27. The proposed Las Vegas stay URL is not protected. FT-RES-002 edits no live page and declares no affected production URL, so the current transaction is correctly push-only.
+
+Verification evidence:
+
+- `ops/seo-roadmap.json` parses successfully. `git diff --check` and the path-aware whitespace check for the untracked research artifact passed.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 22 local sitemap URLs and 25 HTML files.
+- Independently inspected the canonical, indexability, schema, visible main-content depth, and source/link structure of the eight pages originally named by SRR-002. All eight remain canonical and indexable in the local site, but the review artifact does not cover that exact set as described below.
+
+Findings:
+
+1. `P2` — FT-RES-002 did not inspect one of the eight pages required by its source backlog, so its “all eight” conclusion and promotion comparison are incomplete. The original SRR-002 list in baseline `backlog/seo-research-review-backlog.md` names `site/things-to-do/chicago-with-kids.html`; `docs/research/srr-002-priority-page-review.md:51` substitutes `site/where-to-stay/chicago-with-kids.html`, which was not one of the eight, and then uses that substitute page's 1,138-word/14-link evidence, July 11 page row, and protected-window status. The omitted Chicago activity page is a distinct, unprotected URL with 1,274 local main-content words, canonical/indexable markup, seven external sources, and its own reused July 11 row (9 impressions, average position 67.3). Expected behavior: inspect and record the exact eight named priority pages before closing SRR-002 and promoting exactly one implementation. Bounded fix: replace the Chicago stay row and related reasoning with a current Chicago things-to-do review, compare that unprotected candidate explicitly against Las Vegas stay, and update the research artifact plus roadmap/backlog evidence. Retain `FT-IMP-001` only if that corrected comparison still supports it; otherwise promote the single corrected winner. Then request re-review.
+
+### 2026-07-14 — `FT-RES-002` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the P2. `docs/research/srr-002-priority-page-review.md` now reviews the required `site/things-to-do/chicago-with-kids.html` instead of the out-of-scope Chicago stay page. Independently reproduced 1,274 visible `<main>` words, 11 internal links, seven official/source-section links, the self-canonical indexable state, and two JSON-LD blocks. The reused July 11 page row correctly reports 9 impressions at average position 67.3; no fresh-GSC or causal conclusion is claimed.
+- The corrected comparison explicitly treats Chicago activities as an unprotected candidate and retains exactly one promoted action. That decision is supported by the recorded evidence: Las Vegas stay has the stronger reused relevance position (28.2 versus 67.3), shallower main-content depth (1,039 versus 1,274 words), and firm `best area` / `best fit`, smoke, walking, pool, fee, and hotel-booking language in a human-gated commercial context. Chicago's firm age/stroller/activity-fit shorthand remains documented as later trust-language debt rather than being ignored.
+
+Full verification evidence:
+
+- The completed artifact now covers exactly the eight pages originally named by SRR-002. All eight retain their self-canonical, indexable local state. No live page, protected URL, sitemap, robots, canonical, indexability, or `site/**` path is changed by FT-RES-002.
+- The July 13 public-safe snapshot remains correctly classified as a reused authenticated UI import, not fresh API evidence. The research and roadmap contain no credentials, complete raw-query export, country/device row, or user data.
+- `ops/seo-roadmap.json` parses successfully. `git diff --check` and the path-aware whitespace check for the untracked research artifact passed. `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 22 local sitemap URLs and 25 HTML files.
+- The action remains push-only with no affected production URL. The future `FT-IMP-001` action declares the unprotected Las Vegas stay URL and a bounded production invariant covering canonical/indexable state, exact total-fee, room-assignment, pool-access, smoke/noise, and route-friction checks, and removal of unreviewed firm best-area/best-fit verdicts.
 
 Findings:
 
