@@ -20,12 +20,54 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-INFRA-001` | review-clean, not committed | `PASS` | Re-review cycle 3 closed deployment-marker and evidence-sequencing findings; eligible for exact-path commit after staged QA. |
 | `FT-INFRA-002` | review-clean, not committed | `PASS` | Re-review closed snapshot privacy, freshness, zero-data, and open-action evidence-gate findings; eligible for exact-path commit after staged QA. |
 | `FT-RES-002` | review-clean, not committed | `PASS` | Review cycle 2 closed the omitted-page finding; eligible for exact-path commit after staged QA. |
+| `FT-DEV-002` | completed locally | `PASS` | Re-review cycle 2 closed the combination-coverage evidence finding; exact-path commit authorized after staged QA. |
 
 ## Open blocking findings
 
-- None. `FT-RES-002` review cycle 2 closed its prior P2 finding on 2026-07-14.
+- None. `FT-DEV-002` review cycle 2 closed its prior P2 finding on 2026-07-14.
 
 ## Review history
+
+### 2026-07-14 — `FT-DEV-002` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the P2. `src/prototypes/san-diego-itinerary-pacing/planner.test.mjs` now iterates both states of `stroller` and `sensoryBreaks` inside every age, day-count, reset, weather, transport, and pace combination; it asserts that each conditional rule appears if and only if its corresponding constraint is enabled and expects exactly 11,520 cases.
+- `ops/seo-roadmap.json` and `ops/seo-roadmap.md` now report 11,520 supported combinations and explicitly include both boolean constraint states. The inaccurate 2,880 count is absent from the implementation and roadmap paths.
+
+Full verification evidence:
+
+- Independently re-ran the focused suite; all 5 tests passed, including the complete 11,520-case deterministic, disclosure, non-prescriptive, and conditional-rule sweep. Syntax checks passed for all three implementation modules, and the roadmap JSON parses successfully.
+- Native and production SEO QA each returned 0 errors and 0 warnings. Tracked and untracked path-aware whitespace checks passed. No `site/**` path is changed.
+- The remediation changes only the test's two missing boolean loops, their conditional-rule assertions, expected count, and the two matching mechanical roadmap QA statements. No product behavior, trust judgment, publication boundary, production URL, protected target, sitemap, canonical, robots, indexability, network behavior, or external state changed after cycle 1.
+- The cycle 1 full-action checks therefore remain valid: the prototype is unpublished and `noindex, nofollow`; it stores or sends no personal data; every output remains model-derived and `needs-human-review`; exact timing/route, weather/advisory, access/stroller, and child-fit questions remain routed to verification; and the independently exercised desktop and 390px flows had no console error, unlabeled control, or horizontal overflow.
+
+Findings:
+
+- None (`P0`-`P3`).
+
+### 2026-07-14 — `FT-DEV-002` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and safety evidence:
+
+- Reviewed every file under `src/prototypes/san-diego-itinerary-pacing/` and the complete action diff against baseline `f9eaccdf17a476967f147a3691df9c7523638814`. Implementation and roadmap changes are confined to the declared FT-DEV-002 paths; this review log is the only additional path. The five pre-existing dirty files remain present and outside the action diff.
+- The prototype remains outside `site/`, is absent from the sitemap and public references, and retains `noindex, nofollow`. No production URL, protected observation target, canonical, robots, indexability, deployment, indexing request, outreach, or external account is changed.
+- No persistence, cookies, analytics, network submission, or external resource request exists. The form is processed in memory only, and the interface consistently says that personal data is not stored or sent.
+- Every generated plan is identified as a model-derived draft with `needs-human-review` status. Exact route and timing, current weather and official advisories, access/stroller constraints, and child-specific fit are routed to explicit verification checks rather than presented as verified facts.
+
+Behavior and QA evidence:
+
+- Independently ran syntax checks and the focused test file; all 5 tests passed. Native and production SEO QA each returned 0 errors and 0 warnings. Tracked and untracked path-aware whitespace checks passed, and the roadmap JSON parses successfully.
+- Independently exercised the default desktop flow at 1280×900 and a dense four-day teen, rain, car-light, fuller-pace, stroller, and sensory-break flow at 390×844. Both produced the expected number of day cards with no page-level overflow, console exception, log error, or unlabeled form control. The four fieldsets retain legends, the result uses a polite live region, and the dense output includes the disclosure plus route, weather/advisory, access, and human child-fit gates.
+- An independent exhaustive runtime sweep covered all 11,520 combinations of the five age choices, four day counts, four reset choices, four weather cases, three transport cases, three pace choices, and both states of the two boolean constraints. All outputs preserved the selected boolean values and added the stroller and sensory rules exactly when enabled.
+
+Findings:
+
+1. `P2` — The committed regression test and durable QA evidence inaccurately describe 2,880 cases as “all supported combinations.” `src/prototypes/san-diego-itinerary-pacing/planner.test.mjs:44-77` fixes `stroller` and `sensoryBreaks` to `true`, even though both are supported user-controlled dimensions, while `ops/seo-roadmap.json` and `ops/seo-roadmap.md` call those 2,880 cases exhaustive. The complete supported space is 11,520 combinations. Expected behavior: the action's durable exhaustive-test claim covers every supported constraint state and catches conditional-rule regressions. Bounded fix: loop over `false` and `true` for both boolean dimensions, assert that each corresponding triggered rule appears exactly when enabled, update the expected count to 11,520, and correct the two roadmap QA statements before requesting re-review.
 
 ### 2026-07-14 — `FT-INFRA-002`
 

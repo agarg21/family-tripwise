@@ -94,7 +94,12 @@
       "title": "Build an unpublished San Diego nap-and-pacing itinerary prototype",
       "kind": "development",
       "lane": "product",
-      "status": "ready",
+      "status": "completed",
+      "selected_on": "2026-07-14",
+      "implementation_ready_on": "2026-07-14",
+      "completed_on": "2026-07-14",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
       "impact": 4,
       "confidence": 4,
       "learning_value": 5,
@@ -110,7 +115,19 @@
         "ops/seo-roadmap.md"
       ],
       "success_signal": "A locally testable, unpublished prototype converts child age, nap/reset needs, trip length, weather, and transport constraints into a transparent pacing plan without publishing route, safety, or suitability claims as verified fact.",
-      "notes": "Keep the prototype outside site/ until a later reviewed integration action is separately selected."
+      "gsc_evidence_classification": "reused authenticated UI import collected 2026-07-13 with data through 2026-07-12; directional, not fresh API evidence; GitHub workflow 29349159935 skipped collection because GSC_SERVICE_ACCOUNT_JSON is not configured",
+      "publication_state": "unpublished prototype outside site with noindex, nofollow",
+      "qa_evidence": [
+        "syntax checks passed for app.mjs, data.mjs, and planner.mjs",
+        "planner tests passed 5 of 5 across all 11,520 supported combinations",
+        "native SEO QA passed with 0 errors and 0 warnings",
+        "production SEO QA passed with 0 errors and 0 warnings",
+        "desktop and 390px mobile browser flows passed with no implementation console errors or horizontal overflow",
+        "no site path, sitemap entry, or public integration changed",
+        "independent review cycle 2 passed with no P0-P3 findings after closing the combination-coverage P2"
+      ],
+      "result": "Built a deterministic local planner that converts age, trip length, reset, weather, transport, pace, stroller, and sensory constraints into disclosed day shapes, triggered rules, and current verification checks.",
+      "notes": "Keep the prototype outside site/ until a later reviewed integration action is separately selected. Every output is model-derived, needs human review, and avoids exact route/timing, safety, access, or suitability claims."
     },
     {
       "id": "FT-AUTH-001",

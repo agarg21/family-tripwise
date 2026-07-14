@@ -19,6 +19,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 - Classification on July 14: reused authenticated UI import, one day old, with performance data through July 12.
 - It is directional and not fresh API evidence. It may guide non-measurement research, but it cannot support a fresh indexing, traffic, ranking, or experiment conclusion.
 - The automated API collector safely skipped collection because its protected service-account secret is not configured; it did not create a fake snapshot.
+- GitHub workflow run `29349159935` completed successfully but explicitly skipped collection for the same missing-secret reason, so the July 13 snapshot remains reused rather than fresh.
 
 ## Maintenance cadence
 
@@ -33,9 +34,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | Order | Item | Lane | State | Why now |
 |---:|---|---|---|---|
 | 1 | `FT-IMP-001` Las Vegas stay verification revision | Content/product quality | Ready | SRR-002 found the clearest unprotected combination of early relevance, shallow decision support, and firm human-gated claim debt. |
-| 2 | `FT-DEV-002` itinerary pacing prototype | Product | Ready | It advances the differentiated-tool thesis outside the live site while observation continues. |
-| 3 | `FT-AUTH-001` source-worthy asset plan | Authority | Ready | Authority is effectively zero; asset and prospect research can proceed without outreach. |
-| 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
+| 2 | `FT-AUTH-001` source-worthy asset plan | Authority | Ready | Authority is effectively zero; asset and prospect research can proceed without outreach. |
+| 3 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -50,6 +50,16 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Research artifact: `docs/research/srr-002-priority-page-review.md`.
 - Independent review: cycle 2 `PASS`; the cycle 1 Chicago-page scope P2 was corrected and no P0-P3 findings remain.
 - QA: roadmap JSON validation, 11 GSC snapshot/privacy tests, native and production SEO QA, and tracked/untracked whitespace checks passed; no `site/**` path changed.
+
+### FT-DEV-002 — San Diego itinerary-pacing prototype
+
+- Selected: 2026-07-14 by the deterministic operator as the highest-scoring eligible non-measurement action.
+- State: completed and review-clean on 2026-07-14.
+- Publication: unpublished under `src/prototypes/san-diego-itinerary-pacing/`, marked `noindex, nofollow`, and absent from `site/` and the sitemap.
+- Product result: a deterministic local planner turns age, trip length, reset, weather, transport, pace, stroller, and sensory constraints into day shapes, visible triggered rules, and a verification gate.
+- Trust boundary: every output is model-derived and `needs-human-review`; no exact route, timing, access, safety, or suitability conclusion is presented as verified fact.
+- QA: syntax checks passed; planner tests passed 5/5 over all 11,520 supported combinations, including both stroller and sensory states; native and production SEO QA returned 0 errors and 0 warnings; desktop and 390px browser flows had no console errors or horizontal overflow.
+- Independent review: cycle 2 `PASS`; the combination-coverage P2 was closed and no P0-P3 findings remain.
 
 ## Daily evidence loop
 
