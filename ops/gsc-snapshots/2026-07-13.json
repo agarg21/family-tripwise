@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "site": "family-tripwise",
+  "property": "sc-domain:familytripwise.com",
+  "visibility": "public-summary",
+  "collection_mode": "authenticated-ui-import",
+  "collected_at": "2026-07-13T10:57:00-04:00",
+  "data_through": "2026-07-12",
+  "completeness": "directional",
+  "gsc": {
+    "sitemap_status": "Success",
+    "sitemap_last_read": "2026-07-08",
+    "sitemap_errors": null,
+    "sitemap_warnings": null,
+    "discovered_pages": 22,
+    "discovered_videos": 0,
+    "performance": {
+      "status": "directional",
+      "latest_known_impressions": 213,
+      "latest_known_clicks": 0,
+      "latest_known_ctr_percent": 0,
+      "latest_known_average_position": 60.2,
+      "snapshot_date": "2026-07-12",
+      "page_rows": []
+    },
+    "priority_inspection": {
+      "inspected": 7,
+      "indexed": 6,
+      "unknown": 1,
+      "unknown_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "indexing_requested": false,
+      "urls": []
+    }
+  },
+  "private_fields_omitted": [
+    "credentials",
+    "complete raw query rows",
+    "country and device rows"
+  ],
+  "notes": "Normalized from the authenticated July 13 monitoring report. Page-level and per-URL rows were not captured in that report and remain empty rather than inferred."
+}

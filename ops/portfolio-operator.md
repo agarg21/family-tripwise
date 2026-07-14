@@ -31,6 +31,8 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 - No indexing request is authorized by this handoff.
 - Path-scoped local changes, a reviewed commit, direct push to `main`, and GitHub Pages deployment are authorized under `AGENTS.md`. The release must be exact-path, independently reviewed, QA-green, free of remote divergence, and production-verified against the pushed SHA plus action-specific invariants. Independent subagent review never substitutes for required human review of firm trust-sensitive claims. Drafts, unpublished prototypes, human-gated claims without durable review evidence, indexing requests, outreach, and unrelated external-account mutation remain gated.
 - Existing uncommitted monitoring and operations changes must be preserved.
+- The operator-owned execution queue lives in `ops/seo-roadmap.json`; routine selected-item status updates and weekly evidence-based reprioritization are authorized. Material destination, monetization, trust, or stop/continue decisions still require user input.
+- Daily GitHub GSC snapshots are public-safe normalized summaries. Complete raw query exports and credentials remain outside this public repository.
 
 ## Implementation evidence
 

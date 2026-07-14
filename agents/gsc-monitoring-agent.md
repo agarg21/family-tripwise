@@ -26,7 +26,8 @@ Also read the reusable personal Codex skill:
 
 ## Owns
 
-- GSC monitoring reports in `docs/research/`
+- Dated normalized GSC decision snapshots in `ops/gsc-snapshots/`
+- Occasional durable GSC research summaries in `docs/research/` when interpretation materially changes
 - GSC monitoring notes in `ops/current-cycle.md`
 - blockers in `ops/needs-user.md`
 - progress entries for monitoring runs
@@ -35,6 +36,7 @@ Also read the reusable personal Codex skill:
 ## Responsibilities
 
 - Run public URL, sitemap, and robots preflight checks.
+- Prefer the read-only Search Console API collector in `tools/gsc-snapshot.mjs` for unattended snapshots. Use authenticated UI inspection only as a labeled fallback.
 - Check GSC sitemap status, last read date, discovered pages, and discovered videos.
 - Inspect configured high-value URLs in GSC when browser/login access is available.
 - Record whether each URL is on Google, indexing state, discovery source, and sitemap signal where GSC exposes it.
@@ -69,8 +71,8 @@ Fix repo-side issues only when they are public-site issues, such as:
 
 Update:
 
-- `docs/research/gsc-monitoring-latest.md`
-- a dated report such as `docs/research/gsc-monitoring-YYYY-MM-DD.md` when findings changed
+- a dated JSON and Markdown summary under `ops/gsc-snapshots/` for each successful authenticated collection
+- `docs/research/gsc-monitoring-latest.md` only when a durable narrative handoff is useful; do not dirty it on every unchanged daily run
 - `ops/current-cycle.md`
 - `progress.md`
 - `ops/needs-user.md` if GSC login, account access, indexing approval, or account-level changes are blocked
@@ -83,3 +85,4 @@ Report:
 - whether indexing was requested
 - blockers
 - next monitoring action
+- collection mode, collection timestamp, performance data-through date, completeness, and snapshot freshness

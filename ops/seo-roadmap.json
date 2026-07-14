@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "site": "family-tripwise",
+  "owner": "Family Tripwise SEO Operator",
+  "last_updated": "2026-07-14",
+  "last_rescored_on": "2026-07-14",
+  "next_rescore_due": "2026-07-21",
+  "planning_horizon_days": 28,
+  "maintenance": {
+    "after_every_run": "Update the selected item's durable status and evidence; do not reprioritize unrelated items mechanically.",
+    "weekly": "Re-score ready and planned items from fresh GSC, public health, experiment, product, and authority evidence.",
+    "monthly_or_strategy_event": "Ask the user to confirm material destination expansion, monetization direction, risk changes, or site continuation decisions."
+  },
+  "goals": [
+    "Validate relevant organic demand before scaling destination count.",
+    "Finish San Diego as the first deep, differentiated family-planning cluster.",
+    "Create a repeatable loop from evidence to one reviewed experiment to observation to keep/iterate/stop.",
+    "Build useful tools and source-worthy assets rather than generic travel prose."
+  ],
+  "items": [
+    {
+      "id": "FT-RES-002",
+      "title": "Refresh the priority-page index-worthiness review and promote one next implementation",
+      "kind": "research",
+      "lane": "content-and-product-quality",
+      "status": "ready",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/srr-002-priority-page-review.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "A current evidence-backed review identifies and promotes exactly one bounded implementation that improves an existing page or cluster without changing a protected URL during observation.",
+      "notes": "Research may inspect protected URLs but must not edit them. Prefer an unprotected San Diego gap when evidence is comparable."
+    },
+    {
+      "id": "FT-DEV-002",
+      "title": "Build an unpublished San Diego nap-and-pacing itinerary prototype",
+      "kind": "development",
+      "lane": "product",
+      "status": "ready",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "src/prototypes/san-diego-itinerary-pacing/",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "A locally testable, unpublished prototype converts child age, nap/reset needs, trip length, weather, and transport constraints into a transparent pacing plan without publishing route, safety, or suitability claims as verified fact.",
+      "notes": "Keep the prototype outside site/ until a later reviewed integration action is separately selected."
+    },
+    {
+      "id": "FT-AUTH-001",
+      "title": "Design a source-worthy San Diego family planning asset and authority prospect map",
+      "kind": "research",
+      "lane": "authority",
+      "status": "ready",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/san-diego-source-worthy-asset-plan.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "A research-backed brief defines one genuinely linkable San Diego family-planning asset, its evidence requirements, and a scored relevant prospect set without sending outreach.",
+      "notes": "Research and scoring are authorized. Outreach, contributed-content publishing, partnerships, and account mutation remain gated."
+    },
+    {
+      "id": "FT-EVAL-001",
+      "title": "Evaluate the deployed San Diego stay-checklist experiment",
+      "kind": "measurement",
+      "lane": "measurement",
+      "status": "ready-after-observation-window",
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": false,
+      "requires_fresh_gsc": true,
+      "required_evidence": [
+        "fresh_gsc_snapshot",
+        "gsc_page_rows",
+        "gsc_priority_inspection_rows",
+        "protected_query_analysis"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "Fresh query/page and indexing evidence is compared with the July 13 baseline and results in a keep, iterate, or stop decision without overstating causality.",
+      "notes": "Eligible on or after 2026-07-27."
+    }
+  ]
+}

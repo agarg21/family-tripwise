@@ -18,12 +18,27 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-001` | completed locally | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-EXP-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed both P2 findings; eligible for exact-path commit after staged QA. |
 | `FT-INFRA-001` | review-clean, not committed | `PASS` | Re-review cycle 3 closed deployment-marker and evidence-sequencing findings; eligible for exact-path commit after staged QA. |
+| `FT-INFRA-002` | review-clean, not committed | `PASS` | Re-review closed snapshot privacy, freshness, zero-data, and open-action evidence-gate findings; eligible for exact-path commit after staged QA. |
 
 ## Open blocking findings
 
 - None. `FT-EXP-001` re-review cycle 2 closed both prior P2 findings on 2026-07-13.
 
 ## Review history
+
+### 2026-07-14 — `FT-INFRA-002`
+
+**Result: `PASS`**
+
+- Independent review covered the public-safe Search Console collector and workflow, dated snapshot format, rolling operator roadmap, central roadmap merge and evidence gates, and the updated daily automation prompt.
+- Public snapshots exclude credentials, raw query exports, referrers, non-allowlisted URLs, and API-supplied sitemap URLs. The collector uses Search Console's read-only scope, labels finalized data, and renders zero-impression CTR and position as `UNKNOWN`.
+- The central selector labels snapshots `fresh`, `reused`, or `stale`; fresh-GSC measurement work requires page, URL Inspection, and protected query evidence, including when resuming an open action. Unrelated research, product, and authority work can continue from the roadmap.
+- The operator owns the rolling 28-day roadmap and weekly re-scoring. User approval remains required for material strategy, monetization, trust, outreach, indexing, and stop/continue gates.
+- Final validation passed: Node tests 14/14, Python selector tests 6/6, public snapshot schema/privacy validation, workflow YAML and JSON parsing, local SEO QA with 0 errors and 0 warnings, and `git diff --check`.
+
+Findings:
+
+- None (`P0`-`P3`).
 
 ### 2026-07-13 — `FT-INFRA-001`
 

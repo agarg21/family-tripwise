@@ -1,0 +1,64 @@
+name: Capture GSC Decision Snapshot
+
+on:
+  schedule:
+    - cron: "15 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gsc-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate collector
+        run: node --test tools/gsc-snapshot.test.mjs
+
+      - name: Check read-only GSC credentials
+        id: credentials
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -n "$GSC_SERVICE_ACCOUNT_JSON" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GSC_SERVICE_ACCOUNT_JSON is not configured; no snapshot was created."
+          fi
+
+      - name: Collect normalized GSC snapshot
+        if: steps.credentials.outputs.configured == 'true'
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: node tools/gsc-snapshot.mjs
+
+      - name: Validate public snapshot boundary
+        if: steps.credentials.outputs.configured == 'true'
+        run: node tools/gsc-snapshot.mjs --validate-existing
+
+      - name: Commit snapshot to main
+        if: steps.credentials.outputs.configured == 'true'
+        run: |
+          git add -- ops/gsc-snapshots
+          if git diff --cached --quiet; then
+            echo "No GSC snapshot change to commit."
+            exit 0
+          fi
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          git commit -m "data: capture daily GSC snapshot"
+          git push origin HEAD:main
