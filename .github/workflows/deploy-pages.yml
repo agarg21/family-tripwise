@@ -28,6 +28,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate site and focused tests
+        run: |
+          node tools/seo-qa.mjs
+          node --test tools/*.test.mjs
+
+      - name: Stamp release identity
+        run: |
+          node --input-type=module -e 'import { writeFileSync } from "node:fs"; writeFileSync("site/release.json", `${JSON.stringify({ sha: process.env.GITHUB_SHA, run_id: process.env.GITHUB_RUN_ID })}\n`);'
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
@@ -40,3 +54,30 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Verify deployed release and production SEO
+        env:
+          RELEASE_MARKER_URL: https://familytripwise.com/release.json
+        run: |
+          node tools/seo-qa.mjs --production
+          node --input-type=module <<'NODE'
+          const markerUrl = new URL(process.env.RELEASE_MARKER_URL);
+          markerUrl.searchParams.set("expected", process.env.GITHUB_SHA);
+
+          for (let attempt = 1; attempt <= 12; attempt += 1) {
+            try {
+              const response = await fetch(markerUrl, { cache: "no-store" });
+              const marker = response.ok ? await response.json() : {};
+              if (marker.sha === process.env.GITHUB_SHA) {
+                console.log(`Verified deployed release ${marker.sha} from workflow run ${marker.run_id}.`);
+                process.exit(0);
+              }
+              console.log(`Attempt ${attempt}: production marker has ${marker.sha ?? "no SHA"}.`);
+            } catch (error) {
+              console.log(`Attempt ${attempt}: ${error.message}`);
+            }
+            await new Promise((resolve) => setTimeout(resolve, 10_000));
+          }
+
+          console.error(`Production did not serve expected release ${process.env.GITHUB_SHA}.`);
+          process.exit(1);
+          NODE

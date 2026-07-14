@@ -8,7 +8,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 2. The operator spawns an independent reviewer subagent, which inspects the diff and behavior and records a result here without editing implementation files.
 3. The operator addresses P0-P2 findings and asks the reviewer subagent to recheck the fixes.
 4. The loop may run at most three review cycles. If acceptance is not reached, the run stops without committing and asks for user input.
-5. The operator may create an exact-path commit only after `PASS` or `PASS_WITH_P3` and green QA. Push and deployment remain separately gated.
+5. The operator may create an exact-path commit only after `PASS` or `PASS_WITH_P3` and green QA. Direct-`main` push and deployment then follow the autonomous release gate in `AGENTS.md`.
 
 ## Review queue
 
@@ -17,12 +17,28 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-DEV-001` | completed locally | `PASS` | Re-review cycle 2 closed the prior P2 and P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-RES-001` | completed locally | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-EXP-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed both P2 findings; eligible for exact-path commit after staged QA. |
+| `FT-INFRA-001` | review-clean, not committed | `PASS` | Re-review cycle 3 closed deployment-marker and evidence-sequencing findings; eligible for exact-path commit after staged QA. |
 
 ## Open blocking findings
 
 - None. `FT-EXP-001` re-review cycle 2 closed both prior P2 findings on 2026-07-13.
 
 ## Review history
+
+### 2026-07-13 — `FT-INFRA-001`
+
+**Result: `PASS`**
+
+- Three independent review cycles covered the direct-`main` policy, central operator configuration and skill, scheduled automation prompt, and GitHub Pages workflow.
+- Human review of firm hotel, area, safety, transit/stroller, and material family-suitability claims is explicitly separate from reviewer-subagent consensus.
+- The workflow now runs local SEO QA and focused tests before deployment, stamps the artifact with the Git commit SHA, verifies that exact SHA in production, and retains sitemap-wide availability QA. The operator must additionally predeclare and verify action-specific content or behavior invariants for every affected URL.
+- Pre-commit mechanical review/QA evidence is distinct from commit, workflow, deployment, and production identifiers recorded centrally after release.
+- Direct-`main` autonomy remains in place for routine review-clean releases. Rollback is limited to the latest isolated action after a verified critical regression; ambiguous scope is escalated.
+- Final validation passed: workflow YAML parse, `git diff --check`, local SEO QA with 0 errors and 0 warnings, and focused tests 3/3.
+
+Findings:
+
+- None (`P0`-`P3`).
 
 ### 2026-07-13 — `FT-DEV-001`
 

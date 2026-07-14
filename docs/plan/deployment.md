@@ -10,17 +10,26 @@ The first version is published as a static site with GitHub Pages.
 
 The workflow deploys on pushes to `main` when files under `site/` or the Pages workflow change. It can also be run manually from GitHub Actions.
 
-## Current GitHub Pages Constraint
+## Continuous deployment policy
 
-GitHub rejected Pages setup while this repository was private:
+The repository currently deploys successfully through GitHub Pages from `main`. Routine reviewed releases do not require a branch or pull request.
 
-> Your current plan does not support GitHub Pages for this repository.
+Before pushing, the operator must:
 
-Options:
+1. complete the independent implement-review loop with `PASS` or `PASS_WITH_P3` and no P0-P2 findings;
+2. run focused tests, local SEO QA, and staged-diff checks;
+3. fetch `origin` and verify that the complete `origin/main..main` range contains only action-recorded, review-clean commits;
+4. stop on remote divergence or ambiguous scope rather than merging or rebasing unattended.
 
-1. Make `agarg21/family-tripwise` public and use GitHub Pages.
-2. Keep the repository private and deploy through Cloudflare Pages, Vercel, Netlify, or another host that supports private GitHub repositories.
-3. Upgrade GitHub plan/support for private-repository Pages, if desired.
+Independent subagent review does not satisfy the separate human review required for firm hotel, area, safety, transit/stroller, or material family-suitability claims. Such a release is autonomous only when it does not introduce or materially change those firm claims, or when durable evidence records the completed human review.
+
+After reviewer consensus and before commit, the operator may append only mechanical evidence already available from immutable pre-commit results, such as the review verdict, timestamps, and QA results. Any subsequent product, content, code, configuration, or judgment change requires re-review. Commit SHA, workflow run ID, deployment URL, and production results are recorded centrally after release rather than backfilled into the same site-repository commit.
+
+The Pages workflow runs only when `site/**` or the workflow itself changes. Documentation, research, and operator-only pushes should be recorded as push-only releases and should not trigger or wait for Pages.
+
+For a deployable release, monitor the workflow and verify that `/release.json` reports the pushed commit SHA. For every affected URL, run and record a predeclared release-specific content or behavior invariant; the sitemap-wide HEAD sweep remains availability QA and is not sufficient on its own. Record the commit SHA, workflow run, affected URLs, expected invariants, and results. Retry one clearly transient workflow failure once. If deployment succeeds but a critical regression is verified, automatically revert only the latest isolated action and verify the rollback. Escalate instead when the rollback range or failure cause is ambiguous.
+
+User approval remains required for DNS/CNAME or hosting changes, broader GitHub permissions/secrets, force pushes, destructive URL/indexability changes, a new destination or a batch above three new indexable pages, and unresolved trust-sensitive judgment.
 
 ## DNS
 

@@ -29,7 +29,7 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 ## Safety
 
 - No indexing request is authorized by this handoff.
-- Path-scoped local code changes and a post-review local commit are authorized. Commit only after an independent reviewer subagent returns `PASS` or `PASS_WITH_P3`, no P0-P2 findings remain, and exact-path staged QA passes. No push, public deployment, trust-sensitive publishing, outreach, or account mutation is authorized by this handoff.
+- Path-scoped local changes, a reviewed commit, direct push to `main`, and GitHub Pages deployment are authorized under `AGENTS.md`. The release must be exact-path, independently reviewed, QA-green, free of remote divergence, and production-verified against the pushed SHA plus action-specific invariants. Independent subagent review never substitutes for required human review of firm trust-sensitive claims. Drafts, unpublished prototypes, human-gated claims without durable review evidence, indexing requests, outreach, and unrelated external-account mutation remain gated.
 - Existing uncommitted monitoring and operations changes must be preserved.
 
 ## Implementation evidence
