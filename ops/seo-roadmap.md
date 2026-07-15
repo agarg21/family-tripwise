@@ -23,7 +23,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 ## Maintenance cadence
 
-- Every run: select at most one ready item, preserve unrelated work, and update only that item's status and evidence.
+- Every run: complete routine monitoring housekeeping, then select at most one substantive ready item. Healthy or unchanged housekeeping may coexist with that item; preserve unrelated work and update only the affected monitoring and selected-item evidence.
 - Weekly: review fresh evidence, close stale ideas, re-score the next four weeks, and keep at least two useful non-protected items ready when evidence supports them.
 - After a deployment: add a URL-scoped observation window and keep unrelated roadmap lanes open.
 - At an observation checkpoint: decide keep, iterate, or stop before editing the protected target again.
@@ -65,7 +65,7 @@ Ready does not mean all items should ship immediately. The operator selects one 
 
 1. Read the newest dated snapshot under `ops/gsc-snapshots/` and state its collection mode and age.
 2. Run current public and repository health checks.
-3. Complete a due indexing check before choosing unrelated measurement work.
+3. Complete due routine monitoring as housekeeping. Preempt substantive work only for a verified technical or production defect, a safety or trust blocker, a due substantive experiment decision, or a check explicitly marked to preempt.
 4. Select the highest-value eligible roadmap item; do not invent work when the queue or evidence does not support it.
 5. Implement, independently review, commit, push, and verify within the standing policy.
 6. Record evidence and update the selected roadmap item.

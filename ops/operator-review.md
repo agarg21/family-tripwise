@@ -48,6 +48,27 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-15 — monitoring-housekeeping policy review cycle 1
+
+**Result: `PASS`**
+
+Policy and automation evidence:
+
+- The central and Family Tripwise instructions consistently classify daily GSC snapshot ingestion, schema/privacy validation, routine URL Inspection reconciliation, and a healthy unchanged public preflight as run-start housekeeping that may coexist with one substantive roadmap item. The skill, site roadmap, GSC-agent charter, and active permanent-task prompt use the same boundary.
+- Preemption remains limited to a verified technical or production defect, a safety or trust blocker, a due substantive experiment decision, or a scheduled check explicitly marked `preempts_substantive_action`. The active prompt also explicitly prohibits indexing requests and retains a maximum of one substantive roadmap item.
+- The active automation invokes the selector by its absolute central path, performs housekeeping before substantive selection, resumes only genuinely unfinished implementation work, and otherwise executes the highest-value eligible machine-readable roadmap item. It preserves direct-main review, QA, exact-path staging, push, and deployment gates.
+
+Selector and QA evidence:
+
+- The selector no longer returns early for an ordinary due monitoring check. It carries all due monitoring in `due_monitoring` while selecting an eligible substantive candidate, but still returns a monitoring decision for an explicit preemption marker or when no substantive item is eligible. Verified public or repository QA failure continues to select the technical lane.
+- Independent unit tests passed 8/8, including healthy due-monitoring coexistence, explicit monitoring preemption, stale-GSC non-measurement selection, evidence gates, and roadmap timing. A current-state selection probe with healthy checks selected `FT-IMP-001` and did not reopen completed `FT-MON-001`.
+- `node --test tools/gsc-snapshot.test.mjs` passed 11/11, including credential-shaped-field rejection and same-origin URL allowlisting. `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 22 sitemap URLs and 25 HTML files. `git diff --check` passed.
+- No implementation, live-site, sitemap, robots, indexability, outreach, external-account, or deployment path is changed by this policy update. Pre-existing unrelated dirty monitoring and operations files remain preserved.
+
+Findings:
+
+- None (`P0`-`P3`).
+
 ### 2026-07-14 — `FT-DEV-002` review cycle 1
 
 **Result: `CHANGES_REQUIRED`**

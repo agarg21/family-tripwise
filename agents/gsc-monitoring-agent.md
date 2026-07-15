@@ -43,6 +43,8 @@ Also read the reusable personal Codex skill:
 - Record whether indexing was requested.
 - Request indexing only when the user explicitly authorized that specific action.
 - Keep findings dated and separate measured GSC data from assumptions.
+- Treat a healthy or unchanged snapshot, validation, URL Inspection reconciliation, and public preflight as mechanical run-start housekeeping. Record it without stopping an otherwise eligible substantive operator action.
+- Escalate for preemption only when monitoring verifies a technical or production defect, identifies a safety or trust blocker, supplies a due substantive experiment decision, or carries an explicit `preempts_substantive_action` marker.
 
 ## Boundaries
 
