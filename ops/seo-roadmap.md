@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-14
+Last updated: 2026-07-15
 
 Last re-scored: 2026-07-14
 Next re-score due: 2026-07-21
@@ -15,11 +15,11 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-13.json`.
-- Classification on July 14: reused authenticated UI import, one day old, with performance data through July 12.
-- It is directional and not fresh API evidence. It may guide non-measurement research, but it cannot support a fresh indexing, traffic, ranking, or experiment conclusion.
-- The automated API collector safely skipped collection because its protected service-account secret is not configured; it did not create a fake snapshot.
-- GitHub workflow run `29349159935` completed successfully but explicitly skipped collection for the same missing-secret reason, so the July 13 snapshot remains reused rather than fresh.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-15.json`.
+- Classification on July 15: fresh authenticated read-only Search Console API evidence, collected July 15 with finalized performance data through July 13.
+- Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
+- The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
+- Protected query analysis remains not configured, so this snapshot does not satisfy the separate `FT-EVAL-001` query-evidence requirement.
 
 ## Maintenance cadence
 
@@ -33,7 +33,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 | Order | Item | Lane | State | Why now |
 |---:|---|---|---|---|
-| 1 | `FT-IMP-001` Las Vegas stay verification revision | Content/product quality | Ready | SRR-002 found the clearest unprotected combination of early relevance, shallow decision support, and firm human-gated claim debt. |
+| 1 | `FT-IMP-001` Las Vegas stay verification revision | Content/product quality | Completed | Review cycle 1 passed; release proceeds through the exact-path deployment gate. |
 | 2 | `FT-AUTH-001` source-worthy asset plan | Authority | Ready | Authority is effectively zero; asset and prospect research can proceed without outreach. |
 | 3 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
@@ -60,6 +60,16 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Trust boundary: every output is model-derived and `needs-human-review`; no exact route, timing, access, safety, or suitability conclusion is presented as verified fact.
 - QA: syntax checks passed; planner tests passed 5/5 over all 11,520 supported combinations, including both stroller and sensory states; native and production SEO QA returned 0 errors and 0 warnings; desktop and 390px browser flows had no console errors or horizontal overflow.
 - Independent review: cycle 2 `PASS`; the combination-coverage P2 was closed and no P0-P3 findings remain.
+
+### FT-IMP-001 — Las Vegas stay verification revision
+
+- Selected: 2026-07-15 by the deterministic operator after healthy monitoring housekeeping did not meet a preemption condition.
+- State: completed and review-clean on 2026-07-15.
+- Affected URL: `https://familytripwise.com/where-to-stay/las-vegas-with-kids.html` (unprotected).
+- Product result: firm best-area, best-fit, smoke/noise, route, pool, and family-suitability verdicts were replaced with neutral hypotheses, explicit `UNKNOWN` states, exact property/room/route/date checks, and human-review questions.
+- Release invariant: canonical/indexable/sitemap state remains unchanged; the page visibly includes total-fee, room-assignment, pool-access, smoke/noise-exposure, and route-friction checks and no unreviewed best-area or best-fit verdict as fact.
+- QA: focused tests passed 2/2; regeneration is idempotent and changes no unrelated page; native and production SEO QA returned 0 errors and 0 warnings; desktop, 390px, and 320px browser checks found no page overflow or implementation console error.
+- Independent review: cycle 1 `PASS`; no P0-P3 findings.
 
 ## Daily evidence loop
 

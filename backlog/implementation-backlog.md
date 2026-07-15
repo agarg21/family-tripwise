@@ -1,16 +1,18 @@
 # Implementation Backlog
 
-Last updated: 2026-07-14
+Last updated: 2026-07-15
 
 ## Active
 
-No implementation task is currently active. IMP-001 through IMP-005, IMP-009 through IMP-010, and IMP-013 through IMP-014 are complete. IMP-012 is intentionally deferred for now.
+`IMP-015` / `FT-IMP-001` is completed locally and review-clean. IMP-001 through IMP-005, IMP-009 through IMP-010, and IMP-013 through IMP-014 are complete. IMP-012 is intentionally deferred for now.
 
-## Ready
+## Selected
 
 ### IMP-015: Reframe Las Vegas Stay Decision Support
 
-Status: ready
+Status: done
+
+Completed: 2026-07-15
 
 Roadmap ID: `FT-IMP-001`
 
@@ -44,6 +46,14 @@ Acceptance checks:
 - Change no protected URL or unrelated generated page.
 - Focused and native QA pass; independent review returns `PASS` or `PASS_WITH_P3` before commit.
 - Production passes the predeclared action-specific invariant after deployment.
+
+Implementation result, 2026-07-15:
+
+- Replaced firm area and property-fit verdicts with research hypotheses, exact verification questions, explicit `UNKNOWN` states, and human-review questions.
+- Added visible total-fee, room-assignment, pool-access, smoke/noise-exposure, route-friction, and current-policy checks.
+- Preserved the existing canonical URL, indexability, and sitemap membership; no other generated page changed.
+- Focused tests passed 2/2, native and production SEO QA returned 0 errors and 0 warnings, and desktop plus 390px/320px browser checks found no page overflow or implementation console error.
+- Independent review cycle 1 returned `PASS` with no P0-P3 findings; exact-path commit and release are authorized after final staged QA.
 
 ## Candidate Tasks
 

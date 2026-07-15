@@ -21,12 +21,38 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-INFRA-002` | review-clean, not committed | `PASS` | Re-review closed snapshot privacy, freshness, zero-data, and open-action evidence-gate findings; eligible for exact-path commit after staged QA. |
 | `FT-RES-002` | review-clean, not committed | `PASS` | Review cycle 2 closed the omitted-page finding; eligible for exact-path commit after staged QA. |
 | `FT-DEV-002` | completed locally | `PASS` | Re-review cycle 2 closed the combination-coverage evidence finding; exact-path commit authorized after staged QA. |
+| `FT-IMP-001` | review-clean, not committed | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
 
 ## Open blocking findings
 
-- None. `FT-DEV-002` review cycle 2 closed its prior P2 finding on 2026-07-14.
+- None.
 
 ## Review history
+
+### 2026-07-15 — `FT-IMP-001` review cycle 1
+
+**Result: `PASS`**
+
+Scope and policy evidence:
+
+- Reviewed the complete action diff against baseline `aa160a358ffaac1181227a5868af974411bea3b0`. The action changes are confined to `tools/upgrade-priority-pages.mjs`, `site/where-to-stay/las-vegas-with-kids.html`, `tools/las-vegas-stay-page.test.mjs`, `backlog/implementation-backlog.md`, `ops/portfolio-operator.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, and this review log. The five pre-existing dirty monitoring, cycle, needs-user, and progress files remain present and outside the action.
+- Central observation state does not protect the Las Vegas stay URL. The only changed `site/**` path is `site/where-to-stay/las-vegas-with-kids.html`; no protected URL, new page, sitemap, robots, canonical, deployment workflow, or unrelated generated page changed.
+- The resulting page consistently identifies areas and properties as candidates, hypotheses, research starting points, or human-review questions. Exact room, assignment, fee, pool, smoke/noise, route, stroller/access, date, and family-fit conclusions are either verification steps or explicitly `UNKNOWN`; no personally verified experience, hotel ranking, or firm best-area/best-fit verdict is introduced. Independent subagent review does not supply the human review that those firm claims would require.
+
+Correctness, SEO, and QA evidence:
+
+- `node --check tools/upgrade-priority-pages.mjs` passed. `node --test tools/las-vegas-stay-page.test.mjs` passed 2/2, covering the blocked firm phrases, trust framing, visible booking checks, July 15 freshness label, canonical/indexability/sitemap stability, generator idempotence, and unrelated-page stability. A separate baseline comparison confirmed that the canonical is unchanged, the page has no `noindex`, the sitemap contains the URL exactly once, both JSON-LD blocks parse, and the only `site/**` diff is the declared Las Vegas page.
+- `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each returned 0 errors and 0 warnings across 22 sitemap URLs and 25 HTML files. Tracked and untracked path-aware whitespace checks passed.
+- Independent Chrome passes at 1440x900, 390x844, and 320x700 found no page-level horizontal overflow, out-of-bounds hero or comparison wrapper, implementation console/log event, clipping, or broken layout. At 390px and 320px, the 1,167px comparison table remained contained in its 352px and 282px horizontal scrollers and scrolled without widening the document. Visual inspection found the desktop and mobile hierarchy readable and the narrow table content legible inside the expected internal scroll region.
+- Independent public source probes returned HTTP 200 for the Discovery Children's Museum and BLM Red Rock pages. MGM property endpoints were unavailable to command-line checks and Hilton returned 403; these are recorded as unavailable public-network verification, not site defects. The page does not depend on those responses for a firm suitability conclusion and instructs readers to recheck exact official property, booking, room, route, and policy details before paying.
+
+Release invariant:
+
+- The affected URL remains canonical, indexable, and in the sitemap. It visibly contains the exact `Total-fee`, `Room-assignment`, `Pool-access`, `Smoke/noise-exposure`, and `Route-friction` checks and contains no unreviewed best-area or best-fit verdict presented as fact.
+
+Findings:
+
+- None (`P0`-`P3`).
 
 ### 2026-07-14 — `FT-DEV-002` re-review cycle 2
 

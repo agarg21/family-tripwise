@@ -17,13 +17,11 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 
 ## Current operator decision
 
-- Decision: run one bounded `FT-EXP-001` San Diego stay-page integration batch before beginning a fresh target-scoped observation window.
-- Reason: on 2026-07-13 the user explicitly superseded the July 25 wait and requested a few reviewed changes and a local commit first.
-- Next read-only check: recheck San Diego things-to-do discovery/indexing on or after 2026-07-15.
-- Completed development: the unpublished San Diego stay-decision prototype exists outside `site/` as `FT-DEV-001`.
-- Completed research: the source-backed evidence pack exists as `FT-RES-001` and passed independent review.
-- Active action: `FT-EXP-001` — add a non-prescriptive verification checklist to the San Diego stay page and reframe overconfident area claims using the evidence pack.
-- Observation begins only after the reviewed commit is deployed; a local commit alone does not alter the live baseline.
+- Decision: implement `FT-IMP-001` / `IMP-015`, a bounded constraint-led revision of the unprotected Las Vegas where-to-stay page.
+- Reason: after healthy monitoring housekeeping, the deterministic selector chose the highest-value eligible substantive roadmap item. SRR-002 identified the page as the clearest unprotected combination of early relevance, shallow decision support, and trust-policy debt.
+- Monitoring housekeeping: the fresh July 15 authenticated API snapshot, snapshot privacy/schema validation, URL Inspection reconciliation, public preflight, and repository QA were healthy or unchanged and did not meet a preemption condition.
+- Active action: `FT-IMP-001` — remove firm unreviewed area/property-fit conclusions and add exact booking and route verification checks without changing the URL, canonical, indexability, or sitemap.
+- Review and release gate: independent review cycle 1 returned `PASS` with no P0-P3 findings; exact-path commit and release may proceed after final staged QA.
 - Authority outreach: blocked until the site has a genuinely source-worthy asset.
 
 ## Safety
@@ -94,3 +92,20 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 - Regeneration scope: only `site/app.js`, `site/styles.css`, and `site/where-to-stay/san-diego-with-kids.html` differ under `site/`; no unrelated page, sitemap, robots, canonical, or indexability change was introduced.
 - Revalidation: syntax checks passed; focused tests passed 3/3; native and production QA each returned 0 errors and 0 warnings; tracked and new-file whitespace checks passed; target-page trust-string checks found none of the blocked phrases and confirmed the visible July 13 date.
 - Independent re-review: cycle 2 returned `PASS` with no P0-P3 findings. The reviewer independently confirmed the two P2 fixes, target-only update date, bounded observation override, all 96 checklist combinations, generator idempotence, desktop/mobile behavior, accessibility, shared activity filtering, source status, native/production QA, and whitespace.
+
+### FT-IMP-001 — implementation ready for review 2026-07-15
+
+- Decision: `IMPLEMENT` — reframe the existing Las Vegas stay page as a constraint-led verification guide.
+- Baseline commit: `aa160a358ffaac1181227a5868af974411bea3b0` on local and remote `main`.
+- GSC evidence: fresh authenticated read-only API snapshot collected 2026-07-15 with finalized data through 2026-07-13; completeness `finalized-conservative` using a two-day lag. Protected query analysis remains not configured but is not required for this non-measurement action.
+- Housekeeping: 11/11 snapshot tests and validation of three public snapshot files passed; public preflight returned 200 for sitemap, robots, and all 15 monitored URLs; native and production SEO QA returned 0 errors and 0 warnings. The unchanged not-indexed rows did not establish a technical/production defect, safety/trust blocker, due experiment decision, or explicit preemption.
+- Affected production URL: `https://familytripwise.com/where-to-stay/las-vegas-with-kids.html`.
+- Predeclared invariant: the URL remains canonical, indexable, and in the sitemap; it visibly includes total-fee, room-assignment, pool-access, smoke/noise-exposure, and route-friction checks; it contains no unreviewed best-area or best-fit verdict presented as fact.
+- Implementation paths: `tools/upgrade-priority-pages.mjs`, `site/where-to-stay/las-vegas-with-kids.html`, and `tools/las-vegas-stay-page.test.mjs`.
+- Evidence paths: `backlog/implementation-backlog.md`, `ops/portfolio-operator.md`, `ops/operator-review.md`, `ops/seo-roadmap.json`, and `ops/seo-roadmap.md`.
+- Product result: rewrote the base decision framing, quick hypotheses, area matrix, property cards, FAQ schema, and visible booking checks so area, hotel fit, smoke/noise, route, pool, and family suitability remain hypotheses, exact checks, explicit `UNKNOWN` states, or human-review questions rather than firm recommendations.
+- Focused QA: `node --test tools/las-vegas-stay-page.test.mjs` passed 2/2. It covers blocked firm phrases, canonical/indexability/sitemap stability, trust framing, required checks, generator idempotence, and absence of unrelated generated-page changes.
+- Native QA: `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each returned 0 errors and 0 warnings across 22 sitemap URLs and 25 site HTML files.
+- Browser QA: desktop 1440px, mobile 390px, and narrow 320px views had no page-level horizontal overflow, out-of-bounds cards, or implementation console errors. The 1,167px comparison table remains contained inside its 352px/282px horizontal scroller.
+- Scope: no protected URL, unrelated generated page, sitemap, robots, canonical, external account, indexing request, outreach, or deployment changed. The five pre-existing dirty files remain present and outside the action diff.
+- Independent review: cycle 1 returned `PASS` with no P0-P3 findings. The reviewer independently reproduced focused/native/production QA, generator and unrelated-page stability, canonical/indexability/sitemap/schema checks, and Chrome layout checks at 1440px, 390px, and 320px. Unavailable MGM probes and Hilton's 403 response were recorded as `UNKNOWN`, not site defects; the page retains exact re-verification instructions and makes no firm suitability conclusion.

@@ -64,7 +64,12 @@
       "title": "Reframe the Las Vegas stay page as a constraint-led verification guide",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "ready",
+      "status": "completed",
+      "selected_on": "2026-07-15",
+      "implementation_ready_on": "2026-07-15",
+      "completed_on": "2026-07-15",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
       "impact": 4,
       "confidence": 4,
       "learning_value": 4,
@@ -87,7 +92,18 @@
       ],
       "production_invariant": "The affected URL remains canonical and indexable, contains exact total-fee, room-assignment, pool-access, smoke/noise-exposure, and route-friction checks, and contains no unreviewed best-area or best-fit verdict presented as fact.",
       "success_signal": "The existing page provides useful constraint-led booking checks without firm human-gated area, hotel-fit, smoke/noise, route, pool, or family-suitability claims; focused/native QA and independent review pass.",
-      "notes": "This is an existing unprotected URL. Do not rank hotels, add a new page, alter sitemap/indexability, or touch any protected target."
+      "gsc_evidence_classification": "fresh authenticated read-only API snapshot collected 2026-07-15 with finalized performance data through 2026-07-13; finalized-conservative completeness based on a two-day lag",
+      "qa_evidence": [
+        "focused Las Vegas page tests passed 2 of 2",
+        "generator regeneration is idempotent and changes no unrelated site file",
+        "native SEO QA passed with 0 errors and 0 warnings",
+        "production SEO QA passed with 0 errors and 0 warnings",
+        "desktop, 390px, and 320px browser checks passed without page overflow or implementation console errors",
+        "canonical, indexability, and sitemap membership remained unchanged",
+        "independent review cycle 1 passed with no P0-P3 findings"
+      ],
+      "result": "Reframed the existing Las Vegas stay page as a constraint-led verification guide with explicit total-fee, room-assignment, pool-access, smoke/noise-exposure, route-friction, and current-policy checks. Firm area and property-fit verdicts were replaced by hypotheses, UNKNOWN states, exact checks, and human-review questions.",
+      "notes": "This is an existing unprotected URL. Do not rank hotels, add a new page, alter sitemap/indexability, or touch any protected target. Review cycle 1 passed."
     },
     {
       "id": "FT-DEV-002",
