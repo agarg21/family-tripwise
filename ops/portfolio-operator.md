@@ -17,18 +17,18 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 
 ## Current operator decision
 
-- Decision: implement `FT-IMP-001` / `IMP-015`, a bounded constraint-led revision of the unprotected Las Vegas where-to-stay page.
-- Reason: after healthy monitoring housekeeping, the deterministic selector chose the highest-value eligible substantive roadmap item. SRR-002 identified the page as the clearest unprotected combination of early relevance, shallow decision support, and trust-policy debt.
-- Monitoring housekeeping: the fresh July 15 authenticated API snapshot, snapshot privacy/schema validation, URL Inspection reconciliation, public preflight, and repository QA were healthy or unchanged and did not meet a preemption condition.
-- Active action: `FT-IMP-001` — remove firm unreviewed area/property-fit conclusions and add exact booking and route verification checks without changing the URL, canonical, indexability, or sitemap.
-- Review and release gate: independent review cycle 1 returned `PASS` with no P0-P3 findings; exact-path commit and release may proceed after final staged QA.
+- Decision: execute user-authorized `FT-MAINT-001`, a bounded cleanup of the five carried July 13 narrative files and the GSC monitoring handoff policy.
+- Reason: resolve the preserved dirty state without discarding valid historical evidence or restoring stale GSC/login/operator status. This maintenance action replaces normal roadmap selection for this run; do not also start `FT-AUTH-001`.
+- Current GSC source: authenticated read-only API snapshot collected July 15 with finalized data through July 13, `finalized-conservative` completeness, 11 of 15 priority URLs indexed, four not indexed, no login blocker, and no indexing request.
+- Active action: separate historical July 13 manual/UI evidence from current API evidence, make the latest narrative a durable pointer, reconcile operational handoffs, and prevent unchanged daily housekeeping from rewriting narrative files.
+- Review and release gate: independent review cycle 2 returned `PASS` with zero P0-P3 findings after closing one privacy/allowlist P2; snapshot/privacy and native QA are green. Exact-path staging remains required and the release is push-only.
 - Authority outreach: blocked until the site has a genuinely source-worthy asset.
 
 ## Safety
 
 - No indexing request is authorized by this handoff.
 - Path-scoped local changes, a reviewed commit, direct push to `main`, and GitHub Pages deployment are authorized under `AGENTS.md`. The release must be exact-path, independently reviewed, QA-green, free of remote divergence, and production-verified against the pushed SHA plus action-specific invariants. Independent subagent review never substitutes for required human review of firm trust-sensitive claims. Drafts, unpublished prototypes, human-gated claims without durable review evidence, indexing requests, outreach, and unrelated external-account mutation remain gated.
-- Existing uncommitted monitoring and operations changes must be preserved.
+- The five carried monitoring and operations changes are in scope only for `FT-MAINT-001`; all other unrelated work remains protected.
 - The operator-owned execution queue lives in `ops/seo-roadmap.json`; routine selected-item status updates and weekly evidence-based reprioritization are authorized. Material destination, monetization, trust, or stop/continue decisions still require user input.
 - Daily GitHub GSC snapshots are public-safe normalized summaries. Complete raw query exports and credentials remain outside this public repository.
 
@@ -109,3 +109,22 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 - Browser QA: desktop 1440px, mobile 390px, and narrow 320px views had no page-level horizontal overflow, out-of-bounds cards, or implementation console errors. The 1,167px comparison table remains contained inside its 352px/282px horizontal scroller.
 - Scope: no protected URL, unrelated generated page, sitemap, robots, canonical, external account, indexing request, outreach, or deployment changed. The five pre-existing dirty files remain present and outside the action diff.
 - Independent review: cycle 1 returned `PASS` with no P0-P3 findings. The reviewer independently reproduced focused/native/production QA, generator and unrelated-page stability, canonical/indexability/sitemap/schema checks, and Chrome layout checks at 1440px, 390px, and 320px. Unavailable MGM probes and Hilton's 403 response were recorded as `UNKNOWN`, not site defects; the page retains exact re-verification instructions and makes no firm suitability conclusion.
+
+### FT-MAINT-001 — documentation and monitoring-policy cleanup 2026-07-15
+
+- Authorization: dedicated user-requested maintenance transaction replacing normal substantive roadmap selection for this run; `FT-AUTH-001` remains untouched.
+- Baseline commit: `5c3bf9ba4cc8c1e918a07c55134f46f9a5513f36`; local and `origin/main` had no divergence after fetch.
+- Exact baseline dirty paths: `docs/research/gsc-monitoring-2026-07-13.md`, `docs/research/gsc-monitoring-latest.md`, `ops/current-cycle.md`, `ops/needs-user.md`, and `progress.md`. No other path was dirty.
+- Baseline provenance: the five-file diff replaced a July 13 sign-in blocker with valid authenticated UI findings for seven inspected URLs, but it still treated that subset as current. The committed July 15 authenticated API snapshot supersedes current status with 15 inspection rows while preserving the July 13 UI evidence as historical.
+- Current evidence: `ops/gsc-snapshots/2026-07-15.json`, collected `2026-07-15T11:49:36.800Z`, finalized through July 13, completeness `finalized-conservative` using a two-day lag; sitemap Success with 22 discovered pages; 386 impressions, 0 clicks, 0% CTR, average position 59.58; 11 of 15 priority URLs indexed and four not indexed; zero collector-unknown rows; no indexing request.
+- Provenance resolution by path:
+  - `docs/research/gsc-monitoring-2026-07-13.md`: retained as explicitly historical authenticated manual/UI evidence; its seven-URL inspection and UI-only discovery details are no longer presented as current.
+  - `docs/research/gsc-monitoring-latest.md`: reduced to a pointer and compact summary sourced from the newest normalized snapshot rather than a second independent data copy.
+  - `ops/current-cycle.md`: reconciled to the permanent operator task, deterministic selector, operator-owned roadmap, authenticated API collection, and current 11/15 inspection result while preserving older work as historical context.
+  - `ops/needs-user.md`: removed the stale login blocker; indexing and protected query analysis remain explicit future gates, not current blockers or performed actions.
+  - `progress.md`: separated the historical July 13 UI record from the July 15 current-state reconciliation.
+  - `agents/gsc-monitoring-agent.md`: daily healthy/unchanged snapshot housekeeping now leaves narrative handoffs untouched unless interpretation, a blocker, monitored scope, or a material decision changes.
+- Exact action paths: the six files above plus `ops/portfolio-operator.md` and reviewer-owned `ops/operator-review.md`.
+- Boundaries: no `site/**`, sitemap, robots, product/content page, external account, private/raw GSC data, indexing request, outreach, deployment, or roadmap experiment is in scope.
+- Independent review: cycle 1 found one P2 because two exact historical discovery-source URL variants were outside the checked-in public allowlist. The cells were generalized without losing the historical no-referring-sitemap signal; cycle 2 returned `PASS` with zero P0-P3 findings, and the review log contains no exact nonallowlisted variant.
+- QA: GSC snapshot/privacy tests passed 11/11; all three public snapshots validated; native SEO QA returned 0 errors and 0 warnings; the focused full-action privacy scan and `git diff --check` passed.

@@ -1,20 +1,18 @@
 # Needs User
 
-Last updated: 2026-07-13
+Last updated: 2026-07-15
 
-## Hard Blockers
+No hard blockers.
 
-| Status | Question | Why it matters |
-|---|---|---|
-| blocked | Sign into Google Search Console in Chrome or open an authenticated GSC tab for `sc-domain:familytripwise.com`. | Required before the GSC Monitoring Agent can run URL Inspection on configured Family Tripwise URLs. |
+The authenticated read-only GSC API collector is working, so there is no GSC-login blocker. The July 15 snapshot inspected 15 priority URLs: 11 are indexed and four are not indexed. No indexing request was made, and indexing remains separately gated rather than a current blocker.
 
 ## Useful Decisions Soon
 
 | Status | Question | Why it matters |
 |---|---|---|
-| optional | Should the next cycle optimize existing pages or build a first interactive tool? | Determines whether Implementation focuses on page quality or product differentiation. |
 | optional | Can a human reviewer verify hotel, area, safety, transit, and stroller claims? | Required before stronger lodging/area recommendations can be stated as reviewed. |
-| optional | Should Semrush or DataForSEO budget be used in the next SEO cycle? | Determines whether SEO Research & Review uses fresh paid data or repo/browser-accessible research only. |
+| optional | Should protected query analysis be configured when `FT-EVAL-001` becomes due? | The current public snapshot is fresh, but protected query evidence remains a separate measurement requirement. |
+| optional | Should Semrush or DataForSEO budget be used in a future research cycle? | Paid data remains optional and requires an explicit budget decision. |
 
 ## Escalation Rules
 

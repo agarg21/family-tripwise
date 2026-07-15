@@ -1,8 +1,19 @@
 # Progress
 
+## 2026-07-15
+
+- Reconciled the five carried July 13 GSC/operations narrative files against the authenticated read-only API snapshot and current operator state:
+  - preserved `docs/research/gsc-monitoring-2026-07-13.md` as explicitly historical manual/UI evidence;
+  - converted `docs/research/gsc-monitoring-latest.md` into a lightweight pointer to the newest dated normalized snapshot;
+  - recorded the current 15-URL inspection result: 11 indexed and four not indexed;
+  - removed the stale GSC-login blocker while preserving the separate indexing-authorization gate;
+  - made the permanent operator task, deterministic selector, and `ops/seo-roadmap.json` the current workflow;
+  - changed monitoring policy so healthy or unchanged daily housekeeping updates dated snapshots without rewriting narrative handoffs;
+  - did not request indexing or change any external account.
+
 ## 2026-07-13
 
-- Created a dedicated GSC Monitoring Agent lane:
+- Historical setup and manual/UI monitoring evidence from July 13:
   - created GSC Monitoring Agent thread `019f5bf2-811b-7132-800d-74b0920052ec`;
   - added `agents/gsc-monitoring-agent.md` with monitoring responsibilities and safety boundaries;
   - added `ops/gsc-monitor.json` for Family Tripwise public preflight and GSC monitoring;
@@ -10,7 +21,9 @@
   - ran the first public preflight, which confirmed all monitored URLs return 200 and are in the sitemap, but production `robots.txt` was 404 before deployment;
   - deployed setup commit `f7e514c`, then reran public preflight successfully with sitemap 200, robots 200, sitemap directive present, and all configured URLs returning 200 and appearing in the sitemap;
   - created `docs/research/gsc-monitoring-latest.md` and `docs/research/gsc-monitoring-2026-07-13.md`;
-  - recorded that private GSC URL Inspection is blocked until an authenticated GSC browser session is available;
+  - the authenticated UI check recorded sitemap Success, last read Jul 8, 2026, 22 discovered pages, and 0 discovered videos;
+  - the UI priority subset found six of seven inspected URLs indexed;
+  - recorded `https://familytripwise.com/things-to-do/san-diego-with-kids.html` as live and in sitemap but not indexed / unknown to Google in URL Inspection;
   - did not request indexing.
 
 ## 2026-07-11

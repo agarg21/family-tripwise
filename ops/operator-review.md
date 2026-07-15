@@ -22,12 +22,52 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-002` | review-clean, not committed | `PASS` | Review cycle 2 closed the omitted-page finding; eligible for exact-path commit after staged QA. |
 | `FT-DEV-002` | completed locally | `PASS` | Re-review cycle 2 closed the combination-coverage evidence finding; exact-path commit authorized after staged QA. |
 | `FT-IMP-001` | review-clean, not committed | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
+| `FT-MAINT-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed the public-repository allowlist/privacy finding; eligible for exact-path push-only commit after staged QA. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-07-15 — `FT-MAINT-001` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and provenance evidence:
+
+- Reviewed the complete working-tree diff against baseline `5c3bf9ba4cc8c1e918a07c55134f46f9a5513f36`. Before this maintenance action, the only dirty paths were the five declared July 13 narrative files. The added policy/evidence changes are confined to `agents/gsc-monitoring-agent.md`, those five files, `ops/portfolio-operator.md`, and this reviewer-owned log. No `site/**`, sitemap, robots, product/content page, deployment workflow, roadmap experiment, or other production path is changed; the release invariant is therefore push-only with no affected production URL.
+- Independently reconciled the current claims to `ops/gsc-snapshots/2026-07-15.json`: collection mode `search-console-api-readonly`, collection time `2026-07-15T11:49:36.800Z`, finalized data through July 13 using the conservative two-day lag, sitemap `Success` with 22 discovered pages, 386 impressions, 0 clicks, 0% CTR, average position 59.58, and 11 of 15 inspected URLs indexed with the four named URLs not indexed, zero collector-unknown rows, and no indexing request. The snapshot and central report support the removal of the former GSC-login blocker and identify `FT-AUTH-001` as the next ready substantive item; this dedicated cleanup correctly does not start it.
+- The July 13 dated report is clearly labeled historical authenticated manual/UI evidence and limits its indexing conclusion to the seven inspected URLs. Its sitemap and URL Inspection statuses, last-crawl values, six-of-seven result, and absence of indexing requests are consistent with the corresponding July 15 normalized inspection rows. `gsc-monitoring-latest.md` is now a compact handoff to the dated normalized snapshot rather than a competing full export. `current-cycle.md`, `needs-user.md`, and `progress.md` distinguish the historical UI subset from the current API evidence and current permanent-operator workflow.
+- The GSC-agent charter now says healthy or unchanged snapshot ingestion, schema/privacy validation, URL Inspection reconciliation, and public preflight are routine housekeeping; narrative files change only for a changed interpretation, blocker, monitored scope, or material decision. Dated normalized snapshots remain the routine durable evidence.
+
+Independent QA evidence:
+
+- `node --test tools/gsc-snapshot.test.mjs` passed 11/11, including credential-field rejection and rejection of same-origin URLs outside the checked-in allowlist. `node tools/gsc-snapshot.mjs --validate-existing` validated all three public snapshots. `node tools/seo-qa.mjs` returned 0 errors and 0 warnings. `git diff --check` passed.
+- The action diff contains no credential-shaped field, complete raw-query export, country/device row, user data, `site/**` path, Pages workflow path, roadmap experiment change, or deployable artifact. No indexing request, outreach, deployment, or external-account change is represented.
+
+Findings:
+
+1. `P2` — The historical report would commit two exact authenticated-UI discovery-source URLs that were outside the checked-in public URL allowlist. `docs/research/gsc-monitoring-2026-07-13.md:55-56` included noncanonical HTTP/WWW variants, while `ops/gsc-monitor.json` allowlists only the canonical HTTPS monitored URLs and the snapshot validator expressly rejects same-origin URLs outside that allowlist. Passing snapshot validation does not cover narrative Markdown, so the current QA result did not make those two values public-safe. Expected behavior: preserve the valid July 13 historical finding without committing non-allowlisted exact GSC source URLs. Bounded fix: generalize those discovery-source cells to say that GSC showed HTTP/WWW domain variants (and the canonical homepage where applicable), or omit the exact referring-page values; retain the historical “no referring sitemap detected” observation and all allowlisted inspected-URL evidence. Then rerun the privacy scan/whitespace checks and request re-review.
+
+### 2026-07-15 — `FT-MAINT-001` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the P2. `docs/research/gsc-monitoring-2026-07-13.md:55-56` now describes the historical discovery-source evidence generically as HTTP/WWW variants of the canonical domain and, where applicable, the canonical homepage. The two exact noncanonical source URLs are absent from every implementation, policy, narrative, and evidence path. The report retains the valid July 13 “no referring sitemaps detected” observation, the allowlisted inspected URLs, last-crawl evidence, six-of-seven indexed result, and explicit historical/current boundary.
+- Generalized the cycle-1 finding itself so this public review log does not retain the two non-allowlisted values.
+
+Full verification evidence:
+
+- The remediation changes only the two bounded discovery-source cells in the historical report; no current API metric, indexing state, operator decision, monitoring policy, trust judgment, target scope, or release behavior changed after cycle 1.
+- Independently reran `node --test tools/gsc-snapshot.test.mjs` (11/11 passed), `node tools/gsc-snapshot.mjs --validate-existing` (three public snapshots validated), and `node tools/seo-qa.mjs` (0 errors, 0 warnings). `git diff --check` passed. A focused scan found no exact noncanonical HTTP Family Tripwise URL in any action file outside this reviewer-owned log, and this log now contains none either.
+- The complete action remains confined to its eight declared paths. No `site/**`, sitemap, robots, product/content page, Pages workflow, roadmap experiment, credential, raw/private GSC export, indexing request, outreach, deployment, or external-account change is present. The release remains push-only with no affected production URL.
+
+Findings:
+
+- None (`P0`-`P3`).
 
 ### 2026-07-15 — `FT-IMP-001` review cycle 1
 

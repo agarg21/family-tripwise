@@ -1,14 +1,14 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-11
+Last updated: 2026-07-15
 
 ## Cycle Name
 
-Cycle 1: Migrate Family Tripwise into the three-agent SEO operating system.
+Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its rolling roadmap.
 
 ## Active Priority
 
-Post-`IMP-014` checkpoint: current ready implementation lane is clear. Do not add new destination clusters, standalone hotel pages, or the deferred NYC weekend planner without a new SEO Research & Review handoff or user direction.
+The operator-owned source of truth is `ops/seo-roadmap.json`. `FT-IMP-001` is complete and deployed; `FT-AUTH-001` is the next ready substantive item. The dedicated July 15 maintenance transaction replaces normal roadmap selection for its run, so it must not also start `FT-AUTH-001`.
 
 ## Current Project State
 
@@ -20,13 +20,14 @@ Post-`IMP-014` checkpoint: current ready implementation lane is clear. Do not ad
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: Domain property `sc-domain:familytripwise.com` verified; sitemap submitted successfully with 22 discovered pages as of 2026-07-05
+- GSC: authenticated read-only API collection is working; the July 15 snapshot has finalized data through July 13, a successful sitemap with 22 discovered pages, and 11 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 
-## Operating Threads
+## Historical operating threads
 
-- Master / Operator: current thread
+- The permanent Family Tripwise SEO Operator task and central deterministic operator now own current selection and release work.
+- The following earlier role-specific threads are historical references, not independent priority owners:
 - Implementation Agent: `019f3ca5-67ed-7b93-a88c-838c5a026535`
 - SEO Research & Review Agent: `019f3ca5-b3b7-7fd2-9f0f-ba411bf5c658`
 - GSC Monitoring Agent: `019f5bf2-811b-7132-800d-74b0920052ec`
@@ -139,16 +140,18 @@ Post-`IMP-014` checkpoint: current ready implementation lane is clear. Do not ad
   - ran the first public preflight and found production `robots.txt` was still 404 before deployment;
   - deployed setup commit `f7e514c` through GitHub Pages run `29259511918`;
   - reran public preflight successfully after deployment.
-- Master recorded the first GSC monitoring report on 2026-07-13:
+- Historical July 13 authenticated UI monitoring evidence:
   - public preflight passed for sitemap, robots, and configured monitor URLs;
-  - private GSC check was blocked by Google sign-in in the available browser session;
-  - URL Inspection was not completed and indexing was not requested;
-  - latest report lives at `docs/research/gsc-monitoring-latest.md`;
+  - confirmed GSC sitemap status is Success, last read Jul 8, 2026, with 22 discovered pages and 0 discovered videos;
+  - inspected the priority URL subset without requesting indexing;
+  - found six of seven inspected priority URLs are indexed;
+  - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-15.json`; it supersedes the seven-URL UI subset for current status.
 
-## Ready For SEO Research & Review
+## Ready For Operator Selection
 
-No SEO Research & Review task is active.
+`ops/seo-roadmap.json` is the current execution queue. `FT-AUTH-001` is ready but is not part of the dedicated July 15 cleanup transaction.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -164,13 +167,9 @@ Findings to preserve:
 - `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages; their prior thin-page warnings were resolved under `IMP-013`.
 - NYC/Jersey City/Hoboken weekend-events work is researched and can be revisited later, but it is not the current implementation priority.
 
-## Ready For Implementation
+## Implementation State
 
-No implementation-ready task is currently active in `backlog/implementation-backlog.md`.
-
-Current ready implementation areas:
-
-- None. Candidate implementation tasks need SEO Research & Review confirmation or user direction.
+Legacy implementation backlogs remain historical inputs. Current implementation eligibility, required evidence, target paths, observation windows, and status come from `ops/seo-roadmap.json` and the central operator state.
 
 Current local QA findings from `node tools/seo-qa.mjs`:
 
@@ -183,7 +182,7 @@ Current local QA findings from `node tools/seo-qa.mjs`:
 
 ## Waiting On User
 
-GSC private URL Inspection is blocked until the user signs into Google Search Console in Chrome or opens an authenticated GSC tab for `sc-domain:familytripwise.com`.
+No hard blocker right now.
 
 Useful future user input:
 
@@ -193,9 +192,9 @@ Useful future user input:
 - Whether to create a standalone San Diego family hotels page after a human-review workflow exists.
 - Whether to validate San Antonio family-hotel demand before any standalone hotel page or hotel-shortlist expansion.
 
-## Recommended Next Agent
+## Recommended Next Operator
 
-GSC Monitoring Agent for indexing/sitemap checks. SEO Research & Review Agent for the next content or SEO priority choice.
+Continue in the permanent Family Tripwise SEO Operator task. It performs healthy GSC monitoring as housekeeping and uses the deterministic selector plus `ops/seo-roadmap.json` for substantive work.
 
 ## GSC Monitoring
 
@@ -209,11 +208,15 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight after deployment: sitemap returned 200 with 22 parsed URLs; robots returned 200 and advertises the sitemap; all configured URLs returned 200 and appeared in the sitemap.
-- Latest GSC monitoring report: `docs/research/gsc-monitoring-latest.md`.
-- Dated monitoring report: `docs/research/gsc-monitoring-2026-07-13.md`.
-- Latest known authenticated GSC status: sitemap Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos; performance as of Jul 12 showed 213 impressions, 0 clicks, average position 60.2.
-- 2026-07-13 private GSC status: blocked by Google sign-in; URL Inspection not completed; indexing not requested.
-- Next monitoring action: sign into GSC in Chrome or open an authenticated GSC tab, then have the GSC Monitoring Agent inspect configured URLs. Do not request indexing unless explicitly authorized.
+- Current normalized source: `ops/gsc-snapshots/2026-07-15.json`, collected through the authenticated read-only API on July 15 with finalized data through July 13.
+- Completeness: `finalized-conservative`, based on a conservative two-day lag.
+- Current GSC sitemap status: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos.
+- Current URL Inspection summary: 11 of 15 priority URLs are indexed; four are not indexed; zero inspection rows are collector-unknown.
+- The four not-indexed URLs are San Diego things-to-do for kids, toddlers, and teens, plus the New York City family itinerary.
+- GSC login blocker: none.
+- Indexing requested: no. Do not request indexing without separate authorization.
+- `docs/research/gsc-monitoring-latest.md` is a pointer/summary; `docs/research/gsc-monitoring-2026-07-13.md` preserves historical manual/UI evidence.
+- Healthy or unchanged daily monitoring remains housekeeping and should update dated normalized snapshots, not narrative handoffs, unless interpretation, a blocker, monitored scope, or a material decision changes.
 
 ## Master Notes
 

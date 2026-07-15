@@ -28,9 +28,9 @@ Also read the reusable personal Codex skill:
 
 - Dated normalized GSC decision snapshots in `ops/gsc-snapshots/`
 - Occasional durable GSC research summaries in `docs/research/` when interpretation materially changes
-- GSC monitoring notes in `ops/current-cycle.md`
-- blockers in `ops/needs-user.md`
-- progress entries for monitoring runs
+- Material GSC monitoring handoffs in `ops/current-cycle.md`
+- Current blockers in `ops/needs-user.md`
+- Progress entries only for material monitoring changes or decisions
 - `ops/gsc-monitor.json` updates when the monitored URL set changes
 
 ## Responsibilities
@@ -74,10 +74,11 @@ Fix repo-side issues only when they are public-site issues, such as:
 Update:
 
 - a dated JSON and Markdown summary under `ops/gsc-snapshots/` for each successful authenticated collection
-- `docs/research/gsc-monitoring-latest.md` only when a durable narrative handoff is useful; do not dirty it on every unchanged daily run
-- `ops/current-cycle.md`
-- `progress.md`
+- `docs/research/gsc-monitoring-latest.md` only when interpretation, a blocker, monitored scope, or a material decision changes
+- `ops/current-cycle.md` and `progress.md` only for the same material changes; do not rewrite them for healthy or unchanged daily housekeeping
 - `ops/needs-user.md` if GSC login, account access, indexing approval, or account-level changes are blocked
+
+When the daily snapshot, validation, URL Inspection reconciliation, and public preflight are healthy or unchanged, leave all narrative handoff files untouched. The dated normalized snapshot is the routine durable evidence.
 
 Report:
 

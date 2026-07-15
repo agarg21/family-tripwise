@@ -1,5 +1,7 @@
 # GSC Monitoring Report: 2026-07-13
 
+> Historical evidence: this report preserves the authenticated manual/UI inspection performed on July 13. It is not the current GSC handoff. The current normalized source is `ops/gsc-snapshots/2026-07-15.json`, collected through the read-only API on July 15 with finalized data through July 13.
+
 ## Site
 
 - Site: Family Tripwise
@@ -28,50 +30,72 @@ Result after deployment:
 - All configured monitored URLs returned 200.
 - All configured monitored URLs appeared in the sitemap.
 
-Repo-side issue fixed:
+Repo-side issue fixed before this monitoring run:
 
 - Before deployment, `https://familytripwise.com/robots.txt` returned 404.
-- Added generated `site/robots.txt` with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Deployed setup commit `f7e514c` through GitHub Pages run `29259511918`.
+- Setup added generated `site/robots.txt` with `Sitemap: https://familytripwise.com/sitemap.xml`.
+- Setup commit `f7e514c` deployed through GitHub Pages run `29259511918`.
 
-## GSC Private Check
+## Historical GSC Sitemap Status
 
-Status: blocked on 2026-07-13.
+Checked manually in the authenticated Google Search Console UI for `sc-domain:familytripwise.com` on July 13.
 
-The available browser session reached the Google sign-in page for Search Console, and no already-authenticated GSC tab was available to claim. No account-level GSC changes were made.
+| Sitemap | Type | Submitted | Last read | Status | Discovered pages | Discovered videos |
+|---|---|---|---|---|---:|---:|
+| `https://familytripwise.com/sitemap.xml` | Sitemap | Jul 5, 2026 | Jul 8, 2026 | Success | 22 | 0 |
 
-## Last Known Authenticated GSC Status
+## Historical URL Inspection
 
-From the Master / Operator's authenticated browser review on 2026-07-12:
+Indexing requests were not authorized and were not submitted.
 
-- Performance: 213 impressions, 0 clicks, 0% CTR, average position 60.2.
-- Sitemap status: Success.
-- Sitemap last read: Jul 8, 2026.
-- Discovered pages: 22.
-- Discovered videos: 0.
-- Page indexing report: processing data.
-- HTTPS: 15 HTTPS URLs and 1 `HTTPS not evaluated` URL, last update Jul 11, 2026.
-- Manual actions: no issues detected.
-- Security issues: no issues detected.
+This manual UI inspection was limited to seven priority URLs. It does not represent the current 15-URL inspection set.
 
-## URL Inspection
+| URL | GSC status | Page indexing | Last crawl | Discovery / sitemap detail | Fetch / canonical notes | Indexing requested |
+|---|---|---|---|---|---|---|
+| `https://familytripwise.com/` | URL is on Google | Page is indexed | Jul 12, 2026, 3:36:10 PM | No referring sitemaps detected; referring pages included HTTP/WWW variants of the canonical domain | Fetched successfully by Googlebot smartphone; Google-selected canonical is inspected URL | No |
+| `https://familytripwise.com/where-to-stay/san-diego-with-kids.html` | URL is on Google | Page is indexed | Jul 4, 2026, 6:04:54 PM | No referring sitemaps detected; referring pages included the canonical homepage and an HTTP domain variant | Fetched successfully by Googlebot smartphone; Google-selected canonical is inspected URL | No |
+| `https://familytripwise.com/things-to-do/san-diego-with-kids.html` | URL is not on Google | Page is not indexed: URL is unknown to Google | Not shown | Not shown | Not shown | No |
+| `https://familytripwise.com/things-to-do/new-york-city-with-kids.html` | URL is on Google | Page is indexed | Jul 4, 2026, 6:02:18 PM | No referring sitemaps detected; referring page is `https://familytripwise.com/` | Fetched successfully by Googlebot smartphone; Google-selected canonical is inspected URL | No |
+| `https://familytripwise.com/where-to-stay/san-antonio-with-kids.html` | URL is on Google | Page is indexed | Jul 4, 2026, 5:35:30 PM | No referring sitemaps detected; referring page is `https://familytripwise.com/` | Fetched successfully by Googlebot smartphone; Google-selected canonical is inspected URL | No |
+| `https://familytripwise.com/things-to-do/las-vegas-with-kids.html` | URL is on Google | Page is indexed | Jul 4, 2026, 5:41:12 PM | No referring sitemaps detected; referring page is `https://familytripwise.com/` | Fetched successfully by Googlebot smartphone; Google-selected canonical is inspected URL | No |
+| `https://familytripwise.com/where-to-stay/chicago-with-kids.html` | URL is on Google | Page is indexed | Jul 4, 2026, 5:49:19 PM | No referring sitemaps detected; referring page is `https://familytripwise.com/` | Fetched successfully by Googlebot smartphone; Google-selected canonical is inspected URL | No |
 
-Configured URL inspection was not completed on 2026-07-13 because GSC required Google sign-in.
+## Interpretation
 
-Indexing requested: No.
+- These statements describe the July 13 UI evidence only.
+- Public crawlability is healthy for the monitored set.
+- GSC sitemap processing is healthy at the sitemap level: `Success`, 22 discovered pages, 0 videos.
+- Six of seven inspected priority URLs are indexed.
+- `things-to-do/san-diego-with-kids.html` is the priority gap: it is live, in the sitemap, and returns 200, but URL Inspection says `URL is unknown to Google`.
+- URL Inspection did not show referring sitemap attribution for inspected indexed URLs, even though the submitted sitemap itself is successful and the URLs are present in the sitemap. Monitor this; it may update as GSC reconciles sitemap and URL Inspection data.
 
-Indexing was not authorized for this run, and no indexing request was submitted.
+## Current-state reconciliation
 
-## Next Monitoring Action
+The later authenticated read-only API snapshot collected July 15 supersedes this report for current status:
 
-Sign into Google Search Console for `familytripwise.com` in Chrome, or open an authenticated GSC tab, then ask the GSC Monitoring Agent to inspect `ops/gsc-monitor.json`.
+- Collection mode: `search-console-api-readonly`.
+- Collected: `2026-07-15T11:49:36.800Z`.
+- Finalized performance data through: `2026-07-13`.
+- Completeness: `finalized-conservative`, using a conservative two-day lag.
+- Priority URL Inspection: 11 of 15 indexed and four not indexed; none are unknown to the collector.
+- Not indexed: San Diego things-to-do for kids, toddlers, and teens, plus the New York City family itinerary.
+- GSC login blocker: none; the authenticated API collector is working.
+- Indexing requested: no.
 
-Priority subset if full URL inspection is too slow:
+## Blockers
 
-- `https://familytripwise.com/`
-- `https://familytripwise.com/where-to-stay/san-diego-with-kids.html`
-- `https://familytripwise.com/things-to-do/san-diego-with-kids.html`
-- `https://familytripwise.com/things-to-do/new-york-city-with-kids.html`
-- `https://familytripwise.com/where-to-stay/san-antonio-with-kids.html`
-- `https://familytripwise.com/things-to-do/las-vegas-with-kids.html`
-- `https://familytripwise.com/where-to-stay/chicago-with-kids.html`
+No current blocker.
+
+No indexing request was made. Indexing remains a separately gated action.
+
+## Historical next action
+
+At the time of the July 13 UI check, the next action was to rerun public preflight and reconcile the priority URLs. That reconciliation was completed by the July 15 API snapshot.
+
+For current monitoring, read the newest dated snapshot under `ops/gsc-snapshots/` and run public preflight as routine housekeeping:
+
+```bash
+python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops/gsc-monitor.json
+```
+
+Do not request indexing unless a later user authorization explicitly permits that action.
