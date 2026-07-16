@@ -23,12 +23,55 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-DEV-002` | completed locally | `PASS` | Re-review cycle 2 closed the combination-coverage evidence finding; exact-path commit authorized after staged QA. |
 | `FT-IMP-001` | review-clean, not committed | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-MAINT-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed the public-repository allowlist/privacy finding; eligible for exact-path push-only commit after staged QA. |
+| `FT-AUTH-001` | review-clean research brief | `PASS` | Re-review cycle 2 closed the sole anchor-scope P2; eligible for exact-path push-only commit after staged QA. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-07-16 — `FT-AUTH-001` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and policy evidence:
+
+- Reviewed the complete working-tree state against baseline `773bf562d794909485ff428c2ef0a7e24e1a2bd4`. The implementation changes are confined to `docs/research/san-diego-source-worthy-asset-plan.md`, `ops/seo-roadmap.json`, and `ops/seo-roadmap.md`; this reviewer edited only `ops/operator-review.md`. No `site/**`, sitemap, robots, indexability, product/content page, or Pages-workflow path changed, so there is no affected production URL and the predeclared release invariant remains push-only.
+- The brief defines one differentiated asset rather than generic travel prose: a source-dated San Diego Family Reset Atlas with a filterable map, downloadable data, methodology, corrections/changelog, freshness, confidence, license, and human-review fields. It expressly blocks publication and citation outreach until source coverage, reuse terms, deterministic validation, accessibility, user testing, and human review pass.
+- Firm route, stroller, sensory, caregiver-facility, access, safety, and family-suitability conclusions are not asserted as verified. The plan requires first-party/government evidence, route or field testing where applicable, reviewer identity/date/method/notes, and `UNKNOWN` for missing review. It prohibits composite suitability scores and distinguishes official facts from operator judgment.
+- The eight prospects are public organizations or publishers with no private contact data. Every score sums correctly under the disclosed 0-11 rubric, and the brief labels the scores as operator judgments rather than promised coverage or links. No outreach, contributed content, partnership, publication, indexing request, or external-account action is represented.
+- The two promoted follow-ups remain `ready` and unstarted. `FT-RES-003` is confined to public source/license research, and `FT-DEV-003` is confined to an unpublished, noindex prototype using synthetic fixtures until real-record sourcing is reviewed. Neither changes a protected URL.
+
+Independent source and QA evidence:
+
+- Public probes independently confirmed the City park dataset's weekly cadence and downloadable geospatial formats, the MTS rules page, Zoo accessibility information, and the stated public family/resource-page formats for the non-tourism prospect set. The park, MTS, Zoo, and all seven non-tourism prospect URLs returned HTTP 200. Current command-line probes returned HTTP 403 for SAN Airport accessibility and the San Diego Tourism Authority pages; these remain public-network `UNKNOWN`, not verified source or site defects, and the brief requires rechecking before build or outreach.
+- `node --test tools/gsc-snapshot.test.mjs` passed 11/11. `node tools/gsc-snapshot.mjs --validate-existing` validated all four public snapshots. The July 16 snapshot independently confirms authenticated read-only API collection at `2026-07-16T11:54:29.635Z`, finalized-conservative data through July 14 via the two-day lag, 440 impressions, 0 clicks, sitemap `Success` with 22 discovered pages, and 11 of 15 inspected URLs indexed with four not indexed, zero unknown, and no indexing request.
+- `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` returned 0 errors and 0 warnings. The roadmap JSON parses; all eight prospect score sums validate; tracked and untracked whitespace checks pass. No credential, raw/private query export, country/device row, user data, or private contact information was found.
+
+Findings:
+
+1. `P2` — `FT-AUTH-001` does not define a consistent bounded anchor scope. `docs/research/san-diego-source-worthy-asset-plan.md:31-39` says the MVP has 12 anchors, but the five coverage rows enumerate 13 items: four in Balboa Park/Zoo, three Downtown/Waterfront, and two each in La Jolla, Mission Bay, and Old Town/Mission Valley. The mismatch propagates to the 12-record release threshold at line 92, the recommended 12-anchor audit at line 141, `ops/seo-roadmap.json:195`, and `ops/seo-roadmap.md:37`. This leaves `FT-RES-003` without a deterministic input set and makes the 80% source-coverage stop threshold ambiguous. Expected behavior: name one exact MVP set and use the same count across the brief, quality/stop gates, and both roadmap representations. Bounded fix: remove or explicitly merge one candidate anchor, or change the scope consistently to 13; then re-run the roadmap, score, QA, and whitespace checks and request re-review.
+
+### 2026-07-16 — `FT-AUTH-001` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the sole P2. `docs/research/san-diego-source-worthy-asset-plan.md:31-39` now explicitly defines the five coverage rows as the complete 13-anchor MVP set. Independent enumeration reproduced 13 items: four in Balboa Park/Zoo, three Downtown/Waterfront, and two each in La Jolla, Mission Bay, and Old Town/Mission Valley.
+- The dependent gates are deterministic and consistent. The brief requires all 13 anchor records before release (`line 92`), says to stop or narrow when official sources cannot support at least 11 of 13 (`line 100`, the ceiling of the prior 80% threshold), and recommends auditing all 13 enumerated candidates (`line 141`). `ops/seo-roadmap.json` and `ops/seo-roadmap.md` likewise define `FT-RES-003` against all 13 candidates. No residual 12-anchor statement remains in the three implementation paths.
+
+Full verification evidence:
+
+- The bounded remediation changes only the numeric/scope wording that resolves cycle 1; it does not alter the proposed asset, source assertions, prospect set or scores, evidence classes, human-review rules, publication gates, outreach boundary, follow-up target paths, or operator prioritization. The cycle-1 trust, source, privacy, and authority-policy verification therefore remains applicable.
+- The complete action still changes only `docs/research/san-diego-source-worthy-asset-plan.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, and this reviewer-owned log. No `site/**`, sitemap, robots, canonical, indexability, product/content page, protected URL, or Pages workflow changed. There is no affected production URL; the release remains push-only.
+- Independent focused validation confirmed five coverage rows, exactly 13 enumerated anchors, the 11-of-13 stop threshold, and matching `FT-RES-003` JSON scope. The roadmap JSON parses. `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each returned 0 errors and 0 warnings. Tracked and untracked whitespace checks passed.
+- No asset, follow-up, contributed content, or partnership was published or started. No outreach, indexing request, external-account mutation, private contact data, raw/private GSC data, or firm trust-sensitive trip claim was introduced.
+
+Findings:
+
+- None (`P0`-`P3`).
 
 ### 2026-07-15 — `FT-MAINT-001` review cycle 1
 

@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-15
+Last updated: 2026-07-16
 
 Last re-scored: 2026-07-14
 Next re-score due: 2026-07-21
@@ -15,8 +15,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-15.json`.
-- Classification on July 15: fresh authenticated read-only Search Console API evidence, collected July 15 with finalized performance data through July 13.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-16.json`.
+- Classification on July 16: fresh authenticated read-only Search Console API evidence, collected July 16 with finalized performance data through July 14.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Protected query analysis remains not configured, so this snapshot does not satisfy the separate `FT-EVAL-001` query-evidence requirement.
@@ -33,9 +33,10 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 | Order | Item | Lane | State | Why now |
 |---:|---|---|---|---|
-| 1 | `FT-IMP-001` Las Vegas stay verification revision | Content/product quality | Completed | Review cycle 1 passed; release proceeds through the exact-path deployment gate. |
-| 2 | `FT-AUTH-001` source-worthy asset plan | Authority | Ready | Authority is effectively zero; asset and prospect research can proceed without outreach. |
-| 3 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
+| 1 | `FT-AUTH-001` source-worthy asset plan | Authority | Completed | Review cycle 2 passed; Family Reset Atlas brief and scored prospect map are review-clean, while publication and outreach remain gated. |
+| 2 | `FT-RES-003` source and license audit | Authority/product evidence | Ready | Verify whether all 13 enumerated candidate anchors can support a public-safe, reusable dataset before real records are built. |
+| 3 | `FT-DEV-003` schema and map-shell prototype | Product | Ready | Synthetic fixtures can validate the data contract and accessible interaction without publishing claims. |
+| 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -70,6 +71,18 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Release invariant: canonical/indexable/sitemap state remains unchanged; the page visibly includes total-fee, room-assignment, pool-access, smoke/noise-exposure, and route-friction checks and no unreviewed best-area or best-fit verdict as fact.
 - QA: focused tests passed 2/2; regeneration is idempotent and changes no unrelated page; native and production SEO QA returned 0 errors and 0 warnings; desktop, 390px, and 320px browser checks found no page overflow or implementation console error.
 - Independent review: cycle 1 `PASS`; no P0-P3 findings.
+
+### FT-AUTH-001 — San Diego source-worthy asset plan
+
+- Selected: 2026-07-16 by the deterministic operator after fresh GSC, URL Inspection, public preflight, and repository QA housekeeping remained healthy and non-preempting.
+- State: completed and review-clean on 2026-07-16.
+- Asset direction: a source-dated San Diego Family Reset Atlas with a filterable map, downloadable dataset, methodology, freshness, confidence, and human-review fields.
+- Evidence boundary: official sources establish only their explicit facts; route, stroller, sensory, caregiver-facility, and family-suitability conclusions remain human-gated or `UNKNOWN`.
+- Prospect result: eight relevant public domains scored for audience, resource-format fit, non-duplicative value, and local trust. No private contact data was collected and no outreach was sent.
+- Promoted follow-ups: `FT-RES-003` for official-source/license coverage and `FT-DEV-003` for an unpublished synthetic-fixture schema/map shell. Both remain unstarted and outside `site/`.
+- Publication boundary: no `site/**`, sitemap, robots, indexability, external account, contributed content, partnership, or live asset changed.
+- Independent review: cycle 2 `PASS`; cycle 1's anchor-count P2 was closed by consistently enumerating 13 anchors, requiring all 13 for release readiness, and defining the stop threshold as fewer than 11 of 13 sourced anchors. No P0-P3 findings remain.
+- QA: eight prospect scores and the 13-anchor count validated; roadmap JSON, 11 GSC snapshot/privacy tests, four snapshot validations, native and production SEO QA, and tracked/untracked whitespace checks passed.
 
 ## Daily evidence loop
 
