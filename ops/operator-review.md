@@ -24,6 +24,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-001` | review-clean, not committed | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-MAINT-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed the public-repository allowlist/privacy finding; eligible for exact-path push-only commit after staged QA. |
 | `FT-AUTH-001` | review-clean research brief | `PASS` | Re-review cycle 2 closed the sole anchor-scope P2; eligible for exact-path push-only commit after staged QA. |
+| `FT-DEV-003` | review-clean unpublished prototype | `PASS` | Re-review cycle 2 closed all three P2 findings; eligible for exact-path push-only commit after staged QA. |
 
 ## Open blocking findings
 
@@ -68,6 +69,49 @@ Full verification evidence:
 - The complete action still changes only `docs/research/san-diego-source-worthy-asset-plan.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, and this reviewer-owned log. No `site/**`, sitemap, robots, canonical, indexability, product/content page, protected URL, or Pages workflow changed. There is no affected production URL; the release remains push-only.
 - Independent focused validation confirmed five coverage rows, exactly 13 enumerated anchors, the 11-of-13 stop threshold, and matching `FT-RES-003` JSON scope. The roadmap JSON parses. `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each returned 0 errors and 0 warnings. Tracked and untracked whitespace checks passed.
 - No asset, follow-up, contributed content, or partnership was published or started. No outreach, indexing request, external-account mutation, private contact data, raw/private GSC data, or firm trust-sensitive trip claim was introduced.
+
+Findings:
+
+- None (`P0`-`P3`).
+
+### 2026-07-17 — `FT-DEV-003` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope, trust, and publication evidence:
+
+- Reviewed the complete working-tree candidate against baseline `21d86a9257bdcb75a9f1357f5bb420932e2d2489`. Before this reviewer-owned entry, tracked changes were confined to `ops/seo-roadmap.json` and `ops/seo-roadmap.md`, and the only untracked implementation was `src/prototypes/san-diego-family-reset-atlas/`. No `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, external account, outreach, indexing request, deployment, or publication changed.
+- The prototype is outside `site/`, declares `noindex, nofollow`, and is absent from `site/sitemap.xml` and the checked production entry surfaces. It contains exactly six visibly synthetic fixtures, null real coordinates, illustrative interface positions, no source URLs or source-owned records/material, and no storage, network, download, import, or publication path. The current fixture prose keeps route, access, sensory, stroller, safety, caregiver-facility, and family-suitability conclusions qualified, `UNKNOWN`, or human-review gated.
+- The roadmap consistently classifies the July 16 authenticated read-only API snapshot as reused evidence, records the unpublished state, and keeps real ingestion, downloads, publication, outreach, and user-input storage blocked.
+
+Independent QA and behavior evidence:
+
+- `node --test src/prototypes/san-diego-family-reset-atlas/*.test.mjs` passed 4/4. Syntax checks for `app.mjs`, `data.mjs`, and `schema.mjs` passed. Native and production `node tools/seo-qa.mjs` each returned 0 errors and 0 warnings. `git diff --check`, exact-path inspection, and publication/storage/network string probes passed.
+- Chrome reproduced search filtering, selected map/list synchronization, clear recovery, explicit map/list/details no-result states, and Enter-key marker selection with focus moved to the updated details panel. At 390px the reset-type filter worked and the page width remained 390px. At 320px every panel was contained from 8px to 312px, no control was out of bounds, the document width remained 320px, and visual inspection found no clipped panel or control. Browser warnings came only from an unrelated installed extension; no implementation-origin console warning or error occurred.
+- Desktop behavior exposed the accessibility failure below. Independent negative schema probes also reproduced both validator failures below; these are not hypothetical omissions in implementation notes.
+
+Findings:
+
+1. `P2` — The desktop sticky layout makes the reset-type filters non-interactive after the page scrolls. In the reviewed `src/prototypes/san-diego-family-reset-atlas/styles.css:147-159`, both the tall `.control-panel` and the later `.details-panel` are sticky in the same grid column. After scrolling a reset-type checkbox into view, the checkbox reports a visible bounding rectangle, but `document.elementFromPoint()` at its center resolves to a `DD` inside the details panel; Playwright checkbox actions, DOM activation, and a coordinate click therefore leave it unchecked. The same filter works at 390px where both panels become static. Expected behavior: every cluster and reset-type control remains operable at desktop and mobile widths. Bounded fix: prevent the two panels from overlapping (for example, keep no more than one of these column panels sticky), then verify all reset-type controls at desktop plus 390px/320px containment and keyboard selection sync.
+2. `P2` — The schema validator does not enforce two fields that the action says the proposed contract exposes. In `src/prototypes/san-diego-family-reset-atlas/schema.mjs:21-34,64-77`, `source_published_or_updated_at` is neither required nor validated as `null`/ISO freshness, and `coordinates.status` is not required or controlled. Independently deleting both fields from a valid fixture still returned `[]` from `validateAtlasRecord`, even though the UI and roadmap promise visible freshness and coordinate state. Expected behavior: the deterministic validator rejects records that omit or malform every declared contract state. Bounded fix: validate source-published freshness with explicit `UNKNOWN`/null semantics appropriate to synthetic fixtures, require a controlled coordinate-status value, and add negative tests that prove both omissions fail.
+3. `P2` — The trust-boundary validator permits the very firm access, sensory, stroller, and suitability conclusions the action says it excludes. `src/prototypes/san-diego-family-reset-atlas/schema.mjs:36-43,92-95` checks only a narrow phrase list; replacing a fixture's `source_fact` with `This route is accessible, quiet, easy with strollers, and suitable for families.` still returns `[]`. Current fixtures are conservatively worded, but the schema/validator prototype cannot safely validate the advertised no-firm-claim contract. Expected behavior: a synthetic record cannot pass validation while making a firm trust-sensitive trip-planning conclusion. Bounded fix: encode and validate an explicit trust/uncertainty state or otherwise reject representative firm route, access, sensory, stroller, safety, and suitability claims, and expand negative tests beyond the current `safest family-friendly` example.
+
+### 2026-07-17 — `FT-DEV-003` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the desktop filter-operability P2. `src/prototypes/san-diego-family-reset-atlas/styles.css:147-158` now leaves only `.details-panel` sticky; `.control-panel` participates normally in the grid. At the 1352×722 desktop viewport, Chrome scrolled the lower `transport constraint` checkbox into view, `document.elementFromPoint()` at its center returned that exact `INPUT`, and Playwright check filtered the synchronized map/list/details state to the sole Old Town record. Uncheck returned 6/6, and the combined `Balboa Park / Zoo` plus `quiet/sensory support` filters produced the sole matching Balboa support record. The details panel began below rather than painting over the checked control.
+- Closed the freshness/coordinate-state validation P2. `src/prototypes/san-diego-family-reset-atlas/schema.mjs:20,69-84,102-104` now requires `source_published_or_updated_at`, limits it to `null` or an ISO date, controls `coordinates.status`, and requires `withheld-synthetic-fixture` for synthetic records. Independent deletion of both fields returned the expected freshness and coordinate-state errors; invalid non-date and uncontrolled-state values are covered by the focused test.
+- Closed the firm-claim rejection P2. `src/prototypes/san-diego-family-reset-atlas/schema.mjs:37-48,109-112` now rejects the reviewed access, quiet/sensory, stroller-ease, and family-suitability wording. Independently substituting the exact cycle-1 sentence returned four prohibited-pattern errors rather than an empty result, and the negative test uses that same sentence.
+
+Full-scope verification evidence:
+
+- The action remains confined to `src/prototypes/san-diego-family-reset-atlas/`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, and this reviewer-owned log. The prototype is outside `site/`, retains `noindex, nofollow`, and remains absent from the production sitemap and checked production entry surfaces. No `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, external account, outreach, indexing request, deployment, or publication changed; affected production URLs: none and the release is push-only.
+- All six fixtures independently validate, are visibly synthetic, have null source URLs and real-coordinate fields, use only `Synthetic fixture — no source owner`, retain `UNKNOWN` confidence plus `needed` human review, and expose illustrative map positions rather than geography. Static inspection found no storage, network ingestion, downloadable-data, import, real-record, or publication path. Current fixture prose contains no firm route, access, sensory, stroller, safety, caregiver-facility, or family-suitability conclusion.
+- Browser inventory passed at desktop, 390px, and 320px. Search, combined cluster/type filters, clear recovery, explicit no-results states in map/list/details, map/list `aria-pressed` synchronization, Enter-key marker activation, and focus transfer to updated details all worked. At 390px the lower transport filter worked, both column panels were static, all inputs had associated labels, no control was out of bounds, and document width equaled 390px. At 320px all four panels were contained from 8px to 312px, no control was out of bounds, and both body/document widths equaled 320px. Visual inspection found no clipping, and there were no implementation-origin console warnings or errors.
+- `node --test src/prototypes/san-diego-family-reset-atlas/*.test.mjs` passed 5/5. Syntax checks for all three modules passed. Native and production `node tools/seo-qa.mjs` each returned 0 errors and 0 warnings. The roadmap JSON parses, exact negative probes pass, `git diff --check` passes, and exact scope/publication/storage inspection is clean.
 
 Findings:
 

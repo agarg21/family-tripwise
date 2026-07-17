@@ -35,7 +35,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 |---:|---|---|---|---|
 | 1 | `FT-AUTH-001` source-worthy asset plan | Authority | Completed | Review cycle 2 passed; Family Reset Atlas brief and scored prospect map are review-clean, while publication and outreach remain gated. |
 | 2 | `FT-RES-003` source and license audit | Authority/product evidence | Completed | All 13 anchors have official coverage, but real downloadable records remain blocked by unresolved structured-reuse and human-review gates. |
-| 3 | `FT-DEV-003` schema and map-shell prototype | Product | Ready | Synthetic fixtures can validate the data contract and accessible interaction without publishing claims. |
+| 3 | `FT-DEV-003` schema and map-shell prototype | Product | Completed | Review-clean synthetic fixtures validate the data contract and accessible interaction without publishing claims or ingesting real records. |
 | 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
@@ -79,7 +79,7 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Asset direction: a source-dated San Diego Family Reset Atlas with a filterable map, downloadable dataset, methodology, freshness, confidence, and human-review fields.
 - Evidence boundary: official sources establish only their explicit facts; route, stroller, sensory, caregiver-facility, and family-suitability conclusions remain human-gated or `UNKNOWN`.
 - Prospect result: eight relevant public domains scored for audience, resource-format fit, non-duplicative value, and local trust. No private contact data was collected and no outreach was sent.
-- Promoted follow-ups: `FT-RES-003` for official-source/license coverage, now completed, and `FT-DEV-003` for an unpublished synthetic-fixture schema/map shell, which remains ready and unstarted. Both remain outside `site/`.
+- Promoted follow-ups: `FT-RES-003` for official-source/license coverage and `FT-DEV-003` for an unpublished synthetic-fixture schema/map shell are now completed and review-clean. Both remain outside `site/`.
 - Publication boundary: no `site/**`, sitemap, robots, indexability, external account, contributed content, partnership, or live asset changed.
 - Independent review: cycle 2 `PASS`; cycle 1's anchor-count P2 was closed by consistently enumerating 13 anchors, requiring all 13 for release readiness, and defining the stop threshold as fewer than 11 of 13 sourced anchors. No P0-P3 findings remain.
 - QA: eight prospect scores and the 13-anchor count validated; roadmap JSON, 11 GSC snapshot/privacy tests, four snapshot validations, native and production SEO QA, and tracked/untracked whitespace checks passed.
@@ -95,6 +95,17 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Publication boundary: no `site/**`, sitemap, robots, indexability, production URL, external account, or source-owned material changed.
 - Independent review: cycle 2 `PASS`; cycle 1's source-fidelity and stale-roadmap-state P2 findings were closed and no P0-P3 findings remain.
 - QA: all 26 cited links returned 200; all 13 anchor assertions and the City dataset license/freshness/record claims validated; 11 GSC snapshot/privacy tests, four snapshot validations, native and production SEO QA, roadmap/privacy/allowlist checks, and tracked/untracked whitespace checks passed.
+
+### FT-DEV-003 — unpublished Family Reset Atlas prototype
+
+- Selected: 2026-07-17 after the Control Room scan identified Family Tripwise as the due sensor and its deterministic selector chose the only ready eligible item.
+- State: completed and review-clean on 2026-07-17.
+- Evidence: reused authenticated read-only API snapshot collected July 16 with finalized performance data through July 14; one day old and within the configured freshness SLA. Monitoring remained healthy and non-preempting.
+- Product result: an unpublished schema validator and accessible filter/map-shell prototype uses six synthetic fixtures to expose provenance, freshness, reuse, confidence, human-review, operational-caveat, null-coordinate, and uncertainty fields.
+- Trust and data boundary: fixtures have `UNKNOWN` confidence and `needed` human-review status; marker positions are illustrative interface coordinates, not geography. No real source record, coordinate, route, access, sensory, stroller, safety, family-suitability claim, user input, or stored filter state is present.
+- Publication boundary: the prototype remains under `src/prototypes/san-diego-family-reset-atlas/`, carries `noindex, nofollow`, and is absent from `site/` and the sitemap. Real-record ingestion, downloads, publication, and outreach remain blocked.
+- QA: schema and interaction tests passed 5/5, including freshness, coordinate-state, and firm-claim rejection; syntax checks passed; native and production SEO QA returned 0 errors and 0 warnings; desktop, 390px, and 320px browser checks covered every control and passed without implementation console errors, horizontal overflow, or sticky-panel obstruction.
+- Independent review: cycle 2 `PASS`; cycle 1's sticky-control, schema-contract, and firm-claim enforcement P2 findings were closed, with no P0-P3 findings remaining.
 
 ## Daily evidence loop
 

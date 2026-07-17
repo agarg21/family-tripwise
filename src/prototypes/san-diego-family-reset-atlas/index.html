@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Family Reset Atlas — synthetic prototype</title>
+    <meta name="description" content="Unpublished synthetic-fixture prototype for a source-aware family reset atlas.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23116b61'/%3E%3Cpath d='M20 36h24M24 27h16' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#atlas-results">Skip to results</a>
+    <header class="prototype-header">
+      <div>
+        <p class="eyebrow">Unpublished · synthetic fixtures only</p>
+        <h1>San Diego Family Reset Atlas</h1>
+        <p class="lede">Test a transparent schema and accessible map-shell without publishing real venue records or family-fit claims.</p>
+      </div>
+      <div class="boundary" role="note" aria-label="Prototype boundary">
+        <strong>Not trip advice</strong>
+        <span>Marker positions are illustrative. Route, access, sensory, stroller, safety, and suitability conclusions remain <code>UNKNOWN</code> until separately sourced and reviewed.</span>
+      </div>
+    </header>
+
+    <main class="atlas-layout">
+      <section class="control-panel" aria-labelledby="filter-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Explore the contract</p>
+            <h2 id="filter-heading">Filter synthetic records</h2>
+          </div>
+          <button class="text-button" id="clear-filters" type="button">Clear filters</button>
+        </div>
+
+        <label class="search-label" for="atlas-search">Search fixture name or cluster</label>
+        <input id="atlas-search" type="search" autocomplete="off" placeholder="Try “Balboa” or “transport”">
+
+        <fieldset>
+          <legend>Cluster</legend>
+          <div class="choice-grid" id="cluster-filters"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Reset or constraint type</legend>
+          <div class="choice-grid" id="type-filters"></div>
+        </fieldset>
+
+        <p class="privacy-note">No filter or selection data is stored, transmitted, or written to the URL.</p>
+      </section>
+
+      <section class="map-panel" aria-labelledby="map-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Illustrative interface</p>
+            <h2 id="map-heading">Map shell</h2>
+          </div>
+          <span class="result-count" id="result-count" role="status" aria-live="polite"></span>
+        </div>
+        <p class="map-disclosure">This abstract grid is not a geographic map and contains no real coordinates.</p>
+        <div class="map-shell" id="map-shell" role="group" aria-label="Synthetic atlas marker grid">
+          <div class="map-grid" aria-hidden="true"></div>
+          <div id="map-markers"></div>
+          <p class="map-empty" id="map-empty" hidden>No synthetic records match these filters.</p>
+        </div>
+      </section>
+
+      <section class="results-panel" id="atlas-results" aria-labelledby="results-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Visible evidence state</p>
+            <h2 id="results-heading">Synthetic record list</h2>
+          </div>
+        </div>
+        <div class="record-list" id="record-list"></div>
+      </section>
+
+      <aside class="details-panel" aria-labelledby="details-heading">
+        <p class="eyebrow">Selected schema record</p>
+        <h2 id="details-heading">Evidence details</h2>
+        <div id="record-details" tabindex="-1"></div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Prototype action <code>FT-DEV-003</code>. Real records, publication, downloads, and outreach remain gated.</p>
+    </footer>
+
+    <script type="module" src="app.mjs"></script>
+  </body>
+</html>
