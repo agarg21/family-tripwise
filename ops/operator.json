@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "slug": "family-tripwise",
+  "mission": "Help parents make realistic family-trip decisions through trustworthy destination tools and evidence-aware planning guidance.",
+  "lifecycle": "active",
+  "autonomy": "reviewed-release",
+  "control_room": "/Users/apoorvagarg/Documents/SEO Agent/seo-lab/operator",
+  "central_config": "config/sites/family-tripwise.json",
+  "scan_interval_hours": 2,
+  "maximum_substantive_actions_per_day": 1,
+  "release_policy": "Follow the existing independent-review, exact-path, QA, direct-main, deployment, and production-verification gates in AGENTS.md.",
+  "cloud_readiness": {
+    "mode": "hybrid",
+    "cloud_capabilities": ["github", "public-web", "gsc-readonly-api", "repository-qa", "deployment-verification"],
+    "local_dependencies": [
+      {
+        "name": "semrush",
+        "reason": "Authenticated Chrome session",
+        "fallback": "Use the latest normalized import, label freshness, and continue when Semrush is not required evidence."
+      }
+    ]
+  }
+}
