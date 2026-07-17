@@ -34,7 +34,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | Order | Item | Lane | State | Why now |
 |---:|---|---|---|---|
 | 1 | `FT-AUTH-001` source-worthy asset plan | Authority | Completed | Review cycle 2 passed; Family Reset Atlas brief and scored prospect map are review-clean, while publication and outreach remain gated. |
-| 2 | `FT-RES-003` source and license audit | Authority/product evidence | Ready | Verify whether all 13 enumerated candidate anchors can support a public-safe, reusable dataset before real records are built. |
+| 2 | `FT-RES-003` source and license audit | Authority/product evidence | Completed | All 13 anchors have official coverage, but real downloadable records remain blocked by unresolved structured-reuse and human-review gates. |
 | 3 | `FT-DEV-003` schema and map-shell prototype | Product | Ready | Synthetic fixtures can validate the data contract and accessible interaction without publishing claims. |
 | 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
@@ -79,10 +79,22 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Asset direction: a source-dated San Diego Family Reset Atlas with a filterable map, downloadable dataset, methodology, freshness, confidence, and human-review fields.
 - Evidence boundary: official sources establish only their explicit facts; route, stroller, sensory, caregiver-facility, and family-suitability conclusions remain human-gated or `UNKNOWN`.
 - Prospect result: eight relevant public domains scored for audience, resource-format fit, non-duplicative value, and local trust. No private contact data was collected and no outreach was sent.
-- Promoted follow-ups: `FT-RES-003` for official-source/license coverage and `FT-DEV-003` for an unpublished synthetic-fixture schema/map shell. Both remain unstarted and outside `site/`.
+- Promoted follow-ups: `FT-RES-003` for official-source/license coverage, now completed, and `FT-DEV-003` for an unpublished synthetic-fixture schema/map shell, which remains ready and unstarted. Both remain outside `site/`.
 - Publication boundary: no `site/**`, sitemap, robots, indexability, external account, contributed content, partnership, or live asset changed.
 - Independent review: cycle 2 `PASS`; cycle 1's anchor-count P2 was closed by consistently enumerating 13 anchors, requiring all 13 for release readiness, and defining the stop threshold as fewer than 11 of 13 sourced anchors. No P0-P3 findings remain.
 - QA: eight prospect scores and the 13-anchor count validated; roadmap JSON, 11 GSC snapshot/privacy tests, four snapshot validations, native and production SEO QA, and tracked/untracked whitespace checks passed.
+
+### FT-RES-003 — San Diego Reset Atlas source and reuse audit
+
+- Selected: 2026-07-16 by the deterministic operator after fresh GSC, URL Inspection, public preflight, and repository QA housekeeping remained healthy and non-preempting.
+- State: completed and review-clean on 2026-07-16.
+- Coverage result: official first-party or government evidence is available for all 13 enumerated anchors, clearing the 11-of-13 continuation threshold.
+- Reuse result: City Open Data may support reusable location geometry for two public-park anchors under its governing terms; structured redistribution of ordinary venue and agency webpage facts remains `UNKNOWN`.
+- Trust boundary: route practicality, stroller ease, sensory/quiet suitability, caregiver-facility availability, safety, and material family-fit conclusions remain human-gated. No real record is release-cleared.
+- Product decision: `FT-DEV-003` may proceed only as an unpublished synthetic-fixture prototype. Real data ingestion, downloadable publication, and outreach remain blocked.
+- Publication boundary: no `site/**`, sitemap, robots, indexability, production URL, external account, or source-owned material changed.
+- Independent review: cycle 2 `PASS`; cycle 1's source-fidelity and stale-roadmap-state P2 findings were closed and no P0-P3 findings remain.
+- QA: all 26 cited links returned 200; all 13 anchor assertions and the City dataset license/freshness/record claims validated; 11 GSC snapshot/privacy tests, four snapshot validations, native and production SEO QA, roadmap/privacy/allowlist checks, and tracked/untracked whitespace checks passed.
 
 ## Daily evidence loop
 

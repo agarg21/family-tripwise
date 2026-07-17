@@ -386,3 +386,45 @@ Full verification evidence:
 Findings:
 
 - None (`P0`-`P3`).
+
+### 2026-07-16 — `FT-RES-003` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and safety evidence:
+
+- Reviewed the complete action diff against committed `main` at `e425f91773b1697ed843d170ef1fbc9a2426378d`. Before this reviewer-owned log entry, the working tree contained exactly the declared untracked research artifact plus the two roadmap files; no `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, or external-account path changed. Affected production URLs: none; the release remains push-only.
+- The audit covers the 13 anchors enumerated by `FT-AUTH-001` and consistently blocks real-record ingestion and downloadable publication. `FT-DEV-003` remains limited to an unpublished, `noindex` prototype with visibly synthetic fixtures, no source-derived coordinates or venue claims, no stored user input, and disabled real-data/import/publish paths.
+- Trust-sensitive route practicality, stroller ease, quiet/sensory suitability, caregiver-facility availability, safety, and material family-fit conclusions are explicitly human-gated. No outreach, permission request, source-prose/media/map copying, indexing request, publishing, deployment, or external mutation is introduced.
+
+Independent source, reuse, and QA evidence:
+
+- All 26 cited links returned HTTP 200 in independent public probes. The City park-locations page currently lists an update date of May 1, 2026, a weekly cadence, CSV and GeoJSON downloads, and an ODC PDDL license link. The Open Data FAQ says portal data has no usage or redistribution restrictions; the Terms preserve separately stated intellectual-property rights, permit dataset-specific additional conditions, disclaim accuracy, and require verification or site inspection. The audit correctly keeps those dataset rights separate from ordinary City webpages, PDFs, maps, media, and third-party material.
+- Independently downloaded the current City CSV and GeoJSON. Both contain exact `La Jolla Shores Beach` and `Mission Bay Park` records; the GeoJSON provides `MultiPolygon` geometry for each. The audit conservatively limits reuse clearance to applicable park-location fields and requires exact retrieval/version, terms, attribution, transformation, record-level, and release-specific review.
+- Bounded probes reproduced the explicit source support for the other anchors, including Zoo steep grades/access services, Fleet accessibility programming, Nat accessibility, Balboa Park context, New Children's Museum access programs, Waterfront Park facilities and volatile closure/repair notices, SAN Assist and lactation/nursing facilities, Birch Aquarium access/KultureCity information, La Jolla Shores access indicators, Belmont guest-service context, Mission Bay park/facilities context, Old Town accessible-feature barriers, and MTS station/parking/stroller rules. The two source-fidelity exceptions are findings below.
+- The July 16 GSC snapshot is fresh authenticated `search-console-api-readonly` evidence collected `2026-07-16T11:54:29.635Z`, finalized conservatively through July 14 using the two-day-lag basis. `node --test tools/gsc-snapshot.test.mjs` passed 11/11; `node tools/gsc-snapshot.mjs --validate-existing` validated four public snapshots; native and production SEO QA each returned 0 errors and 0 warnings. Roadmap JSON parsing, tracked and untracked whitespace checks, credential/privacy scans, and exact action-path inspection passed.
+
+Findings:
+
+1. `P2` — Two source/freshness statements are not independently reproducible as written. `docs/research/san-diego-reset-atlas-source-license-audit.md:37` calls Fleet's program a “quieter-hours program,” while the current official page calls it `Accessibility Mornings` and says it offers a sensory-friendly experience; translating that to “quieter” crosses the audit's own human gate for quiet/sensory conditions. At `docs/research/san-diego-reset-atlas-source-license-audit.md:47`, the audit says Old Town's page carried a current-status check dated 2026-07-14, but the live official page now exposes a dynamic `Current Restrictions` timestamp dated 2026-07-16, so the precise July 14 assertion has no durable support in the artifact. Expected behavior: every official-source assertion is a bounded, reproducible paraphrase and volatile freshness is represented without an unsupported fixed value. Bounded fix: name Fleet's `Accessibility Mornings` and attribute only the source's explicit sensory-friendly description while retaining the human-review caveat; describe Old Town's status timestamp as dynamic (or record durable evidence for a historical value), keep the audit checked date, and require release-time revalidation. Then re-run the source probes and request re-review.
+2. `P2` — The human-readable roadmap contradicts the action's current durable status. `ops/seo-roadmap.md:82` says both promoted follow-ups `FT-RES-003` and `FT-DEV-003` remain unstarted, while the same diff marks `FT-RES-003` in review at lines 87-95 and the JSON status is `in-review`. Expected behavior: the operator-owned roadmap has one unambiguous current state while preserving historical promotion context. Bounded fix: rewrite the FT-AUTH-001 bullet as explicitly historical (“at promotion time”) or state that only `FT-DEV-003` remains unstarted, without changing the selected-action boundary, and request re-review.
+
+### 2026-07-16 — `FT-RES-003` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the source/freshness P2. `docs/research/san-diego-reset-atlas-source-license-audit.md:37` now names `Accessibility Mornings`, attributes only the official page's explicit sensory-friendly description, and says the scheduled program does not prove a particular visit is quiet or low-stimulation. Independent live probes returned HTTP 200 and reproduced both the program name and source wording. Line 47 now describes the Old Town `Current Restrictions` timestamp as dynamic, records only the July 16 page-check date, and requires release-time revalidation; the official page returned HTTP 200 and exposed both `Current Restrictions` and `Last Checked`. The unsupported `quieter-hours` and fixed `2026-07-14` audit wording is absent.
+- Closed the roadmap-status P2. `ops/seo-roadmap.md:82` now says `FT-RES-003` is in review and `FT-DEV-003` remains ready and unstarted, consistent with the current table, the FT-RES-003 action section, and the machine-readable `in-review` status.
+
+Full verification evidence:
+
+- The remediation is limited to the bounded source wording and one roadmap status sentence; the complete action still covers exactly the 13 FT-AUTH-001 anchors with public first-party/government sources, explicit freshness/`UNKNOWN` treatment, attribution, conservative reuse classification, and human-review gaps. Cycle 1's independently verified ODC PDDL/City portal terms and current CSV/GeoJSON record evidence for La Jolla Shores Beach and Mission Bay Park remains unchanged. Dataset rights are still separated from ordinary webpage, map, PDF, media, and third-party rights.
+- Real-record ingestion and downloadable publication remain blocked. `FT-DEV-003` remains limited to a visibly synthetic, unpublished, `noindex` prototype outside `site/`, with no source-derived coordinates or venue claims, no stored user input, and disabled real-data/import/publish paths. Firm route, stroller, quiet/sensory, caregiver-facility, safety, and material family-fit conclusions remain human-gated.
+- The exact action paths remain the research artifact, both roadmap files, and this reviewer log. No `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, source-owned material, external account, permission request, outreach, indexing, deployment, or publication changed. Affected production URLs: none; release invariant remains push-only.
+- `node --test tools/gsc-snapshot.test.mjs` passed 11/11; all four public snapshots validated; native and production SEO QA each returned 0 errors and 0 warnings. Roadmap JSON parsing, stale-phrase probes, focused live-source probes, tracked `git diff --check`, and the untracked research artifact's path-aware whitespace check passed.
+
+Findings:
+
+- None (`P0`-`P3`).
