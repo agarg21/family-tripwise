@@ -322,6 +322,63 @@
       "review": "Cycle 3 PASS; zero P0-P3 findings.",
       "qa": "15/15 GSC schema/privacy tests; six snapshot validations; native and production SEO QA 0 errors/0 warnings; 19 source rows; cached and new-file whitespace checks passed.",
       "notes": "User approved replacing the blanket hotel human-review blocker with a high-quality research workflow on 2026-07-18. This action is research-only: do not publish a standalone hotel page, add hotel affiliate CTAs, copy review text, scrape prohibited sources, request indexing, or make safety/firsthand/family-suitability claims as verified."
+    },
+    {
+      "id": "FT-PLAN-001",
+      "title": "Design the clean San Diego family-hotel page brief",
+      "kind": "planning",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "docs/plan/san-diego-family-hotel-page-concept.md",
+        "docs/research/san-diego-family-hotel-expanded-candidate-brief.md",
+        "docs/plan/hotel-research-engine.md",
+        "docs/plan/content-strategy.md",
+        "backlog/seo-research-review-backlog.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "A concise page brief defines the uncluttered San Diego family-hotel page structure, candidate breadth, category logic, comparison fields, evidence modules, price-band standard, review-signal rules, and publication gates before any live page is built.",
+      "selected_on": "2026-07-18",
+      "completed_on": "2026-07-18",
+      "evidence": "Manual user instruction clarified that the next San Diego hotel step should broaden beyond three hotels, use approximate room-per-night bands rather than exact booking-flow totals, treat crib/rollaway/connecting-room facts as useful but not mandatory, and prioritize recent family/kids review signals.",
+      "review": "Cycle 2 PASS after closing price-band durability, stale booking-gate, and exact-path P2 findings.",
+      "qa": "jq empty ops/seo-roadmap.json; node tools/seo-qa.mjs 0 errors/0 warnings; git diff --check passed.",
+      "notes": "Page brief and expanded candidate planning only. Do not publish a page, add affiliate CTAs, request indexing, deploy, or create ordinal hotel rankings in this planning action. Price bands in the candidate brief remain provisional hypotheses until FT-RES-005 creates per-hotel source rows."
+    },
+    {
+      "id": "FT-RES-005",
+      "title": "Expand the San Diego family-hotel evidence pack to 6-8 candidates",
+      "kind": "research",
+      "lane": "content-and-product-quality",
+      "status": "ready",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/san-diego-family-hotel-evidence-pack.md",
+        "docs/research/san-diego-family-hotel-expanded-candidate-brief.md",
+        "docs/plan/san-diego-family-hotel-page-concept.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "The San Diego evidence pack covers 6-8 primary hotels with official facts, approximate nightly room bands, parking/fee signals, family-relevant recent review themes, community-signal separation, conflicts, and parent-facing verification notes without publishing a page.",
+      "notes": "Do not require exact booking-screen totals for this pass. Use sourced approximate price bands and keep final all-in totals, exact room availability, cancellation rules, crib/rollaway/connecting-room guarantees, safety, quiet-room, stroller, and firm family-suitability claims as verify-before-booking or human-review-gated."
     }
   ]
 }

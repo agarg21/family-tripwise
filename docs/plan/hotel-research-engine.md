@@ -42,10 +42,10 @@ Each hotel in a shortlist needs:
 - stable hotel name, brand/collection, official URL, booking URL, and destination area;
 - last checked date and next recheck date;
 - family use case: beach, bay, theme park, city base, resort stay-put, suite/kitchen, budget, luxury, multigenerational;
-- room setup facts: max occupancy, suites, kitchen/kitchenette, connecting rooms, crib/rollaway policy, washer/laundry where relevant;
+- room setup facts visible from official sources: max occupancy, suites, kitchen/kitchenette, connecting rooms, crib/rollaway policy, washer/laundry where relevant;
 - family amenity facts: pool, splash pad/water slide, kids club, beach/bay access, breakfast, dining, parking, resort fee, shuttle/house car, laundry;
 - review-signal summary with date range, source types, sample-size bucket, repeated positives, repeated negatives, and conflicts;
-- booking friction: total-fee transparency, parking/resort fees, occupancy quirks, cancellation friction, seasonal closure/renovation risk;
+- booking friction: approximate nightly room band, total-fee transparency, parking/resort fees, occupancy quirks, cancellation friction, seasonal closure/renovation risk;
 - confidence label: `high`, `medium`, `low`, or `unknown`;
 - claim label: `official fact`, `research-based`, `review-signal-derived`, `model-derived`, or `human-verified`;
 - unresolved unknowns and exact checks a parent should make before booking.
@@ -56,11 +56,11 @@ Default criteria for San Diego hotel research:
 
 | Criterion | Why Families Care | Evidence Needed |
 |---|---|---|
-| Room setup | Sleep separation, crib/rollaway, connecting rooms, and occupancy limits can make or break the stay. | Official room pages plus date-specific booking check. |
+| Room setup | Sleep separation, occupancy limits, kitchens, and optional crib/rollaway/connecting-room availability can make or break the stay. | Official room pages plus booking-time verification for the exact room. Crib, rollaway, and connecting-room details are captured when visible, not treated as mandatory for every hotel. |
 | Pool and water play | Often more important than a long attraction list for younger kids. | Official amenity pages plus recent review-signal themes. |
 | Beach or bay practicality | Families need to know whether the water/route works for their age mix. | Official location/access facts; human review for firm safety or stroller verdicts. |
 | Breakfast and food | Included breakfast is helpful for some families but not universal, especially at resorts with credits or kitchens. | Booking terms, package details, room kitchen facts, dining hours. |
-| Fees and parking | Resort fees, destination fees, and parking can change the real value. | Date-specific booking check. |
+| Fees and parking | Resort fees, destination fees, and parking can change the real value. | Official fee pages plus a sourced approximate price band; final all-in booking totals are recommended when available but not mandatory for planning. |
 | Nap/reset logistics | Midday return friction matters for toddlers and sensory-sensitive kids. | Map distance and transport context; human review for firm practicality. |
 | Noise/crowds | Sleep and overstimulation risk are common hotel-review themes. | Review-signal summary; human review for firm room/block recommendations. |
 | Kids club and activities | Ages, cost, reservations, and seasonality matter more than the existence of a club. | Official program pages checked near publication. |
@@ -73,6 +73,7 @@ A standalone `best family hotels in {destination}` page may publish when:
 - every listed hotel has the required record;
 - every ranking/category label is tied to explicit criteria and evidence;
 - review-signal summaries are paraphrased, not copied;
+- recent family-relevant reviews or reviews from travelers with kids are checked where available, with visible date range, sample-size bucket, repeated themes, and conflicts;
 - conflicts and unknowns are visible;
 - no claim says or implies that Family Tripwise personally stayed there unless a human supplied that experience;
 - safety, exact stroller practicality, room-selection, and family-suitability guarantees remain either `UNKNOWN`, `verify before booking`, or `human-verified`;
@@ -82,14 +83,15 @@ A standalone `best family hotels in {destination}` page may publish when:
 ## Refresh Rules
 
 - Recheck official hotel facts every 30 days for live hotel pages.
-- Recheck booking-fee examples every 14 days while a page is under active observation or monetization testing.
+- Recheck approximate nightly room bands and visible fee examples every 14 days while a page is under active observation or monetization testing.
 - Re-scan review/community signals every 60 days, or sooner after a major renovation, closure, rebrand, or SERP shift.
 - Expire or downgrade any hotel record with stale official facts, unresolved contradiction, or missing fee/room evidence.
 
 ## Evidence-Pack Implementation Rules
 
-- Declare one reproducible reference booking scenario: check date, stay dates, party size, child ages, room count, and booking channel.
-- A blocked or dynamic booking flow is a completed check only when the attempted fields and resulting `UNKNOWN` values are recorded. It cannot support a price, availability, or cancellation claim.
+- Declare one reproducible reference planning scenario where useful: check date, rough season/date window, party size, child ages, room count, and source type.
+- A full booking flow is not mandatory for planning. When exact booking results are blocked or dynamic, record a sourced approximate nightly room band instead of manufacturing a total. It cannot support a final all-in total, availability, or cancellation claim.
+- Crib, rollaway, connecting-room, laundry, microwave, mini-fridge, and kitchen details should be captured when visible from official sources. Missing optional details should become a `verify before booking` note, not an automatic blocker.
 - For review signals, record source type, visible date range, approximate inspected sample, repeated themes, and conflicts. Never copy review prose or treat a platform-generated summary as independent verification.
 - Keep community/forum evidence in a separate class from verified-stay review signals. One thread may identify a question, but cannot establish a recurring condition.
 - Do not infer property quality from an aggregate score. Prefer criteria-specific, conflicting themes and the exact parent check they trigger.
@@ -101,3 +103,7 @@ A standalone `best family hotels in {destination}` page may publish when:
 San Diego is the first candidate because GSC and Semrush both show lodging intent around the existing San Diego stay page, and Semrush currently reports low-to-moderate difficulty for family hotel terms.
 
 First pack: `docs/research/san-diego-family-hotel-evidence-pack.md`. It covers three existing candidate properties and records why a standalone indexable hotel page is not yet release-ready.
+
+The future public page direction is captured in `docs/plan/san-diego-family-hotel-page-concept.md`: clean, low-clutter, category-led, evidence-labeled, and built around parent decision criteria rather than a generic ranked list.
+
+Expanded candidate brief: `docs/research/san-diego-family-hotel-expanded-candidate-brief.md`. It widens the next evidence pass to eight primary candidates, adds a price-band standard, and treats crib/rollaway/connecting-room details as useful optional evidence rather than mandatory fields for every hotel.

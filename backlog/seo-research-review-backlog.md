@@ -60,7 +60,8 @@ Result:
 
 - Built a source-backed internal record for the three candidate properties already named on the San Diego stay page.
 - Separated official facts, booking checks, review signals, community signals, conflicts, and unknowns.
-- Kept the pack unranked and internal. A standalone hotel page remains blocked pending reproducible room-level booking checks, consistent review sampling, freshness checks, and human review for trust-sensitive conclusions.
+- Kept the pack unranked and internal. A standalone hotel page remains blocked pending broader hotel coverage, sourced approximate price bands, consistent review sampling, freshness checks, and human review for trust-sensitive conclusions.
+- Added a follow-up page concept queue item: `FT-PLAN-001`, focused on a clean, low-clutter San Diego family-hotel page brief before any live page is built.
 - No live page, sitemap, indexability, affiliate, indexing, outreach, or external-account change was made.
 
 ### SRR-002: Review Priority Pages For Index-Worthiness

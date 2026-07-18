@@ -26,6 +26,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-AUTH-001` | review-clean research brief | `PASS` | Re-review cycle 2 closed the sole anchor-scope P2; eligible for exact-path push-only commit after staged QA. |
 | `FT-DEV-003` | review-clean unpublished prototype | `PASS` | Re-review cycle 2 closed all three P2 findings; eligible for exact-path push-only commit after staged QA. |
 | `FT-RES-004` | review-clean internal research pack | `PASS` | Re-review cycle 3 validated the isolated cached action and closed the final concurrent-scope P2. |
+| `FT-PLAN-001` | review-clean planning brief | `PASS` | Re-review cycle 2 closed price-band durability, stale gate language, and exact-path findings; eligible for exact-path push-only commit after staged QA. |
 
 ## Open blocking findings
 
@@ -542,6 +543,32 @@ Full verification evidence:
 - Real-record ingestion and downloadable publication remain blocked. `FT-DEV-003` remains limited to a visibly synthetic, unpublished, `noindex` prototype outside `site/`, with no source-derived coordinates or venue claims, no stored user input, and disabled real-data/import/publish paths. Firm route, stroller, quiet/sensory, caregiver-facility, safety, and material family-fit conclusions remain human-gated.
 - The exact action paths remain the research artifact, both roadmap files, and this reviewer log. No `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, source-owned material, external account, permission request, outreach, indexing, deployment, or publication changed. Affected production URLs: none; release invariant remains push-only.
 - `node --test tools/gsc-snapshot.test.mjs` passed 11/11; all four public snapshots validated; native and production SEO QA each returned 0 errors and 0 warnings. Roadmap JSON parsing, stale-phrase probes, focused live-source probes, tracked `git diff --check`, and the untracked research artifact's path-aware whitespace check passed.
+
+Findings:
+
+- None (`P0`-`P3`).
+### 2026-07-18 — `FT-PLAN-001` review cycles 1-2
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual planning diff for the San Diego family-hotel next step. The work is confined to planning, research, roadmap, backlog, and review-log paths; no `site/**`, sitemap, robots, indexability, affiliate, indexing request, external account, deployment, or live hotel page changed.
+- The page brief widens the candidate set beyond the original three hotels, keeps the intended public page to 6-8 primary cards, and avoids ordinal ranking or unsupported `best`, safety, quiet-room, stroller, route, or firm family-suitability claims.
+- The revised hotel research policy accepts sourced approximate nightly room bands for planning and treats crib, rollaway, connecting-room, kitchen, laundry, microwave, and mini-fridge details as useful optional evidence when visible, with missing details routed to `verify before booking`.
+- Recent family-relevant reviews are required as paraphrased, bounded evidence with visible date range, sample-size bucket, repeated themes, and conflicts; review prose, reviewer identifiers, private data, and platform summaries are not copied or treated as independent verification.
+
+Prior-finding verification:
+
+- Closed the price-band durability P2. The expanded candidate brief marks all candidate price postures as provisional hypotheses and requires `FT-RES-005` to create hotel-specific price source rows before public use.
+- Closed the stale booking-gate P2. Roadmap and backlog language now refers to sourced approximate nightly room bands, visible fee/parking evidence, broader coverage, consistent review sampling, freshness checks, and human review for trust-sensitive claims instead of exact booking-total requirements.
+- Closed the exact-path P2. `backlog/seo-research-review-backlog.md` and `ops/operator-review.md` are included in the `FT-PLAN-001` target path list.
+
+QA evidence:
+
+- `jq empty ops/seo-roadmap.json` passed.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings.
+- `git diff --check` passed.
 
 Findings:
 

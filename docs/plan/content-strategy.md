@@ -4,6 +4,12 @@
 
 Build destination clusters, not isolated articles. Each destination should become a small planning hub with pages for activities, lodging, itineraries, and child-age-specific advice.
 
+## Expansion Sequence
+
+Work depth-first in San Diego before expanding across the pilot set. The goal is to prove the page quality bar, research engine, hotel decision format, itinerary/pacing support, and family-specific evidence model in one destination first.
+
+Once San Diego has pages and research we are happy with, expand the proven patterns across the five pilot cities instead of inventing new formats destination by destination.
+
 ## Initial Destination Clusters
 
 1. San Diego

@@ -36,8 +36,10 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 1 | `FT-AUTH-001` source-worthy asset plan | Authority | Completed | Review cycle 2 passed; Family Reset Atlas brief and scored prospect map are review-clean, while publication and outreach remain gated. |
 | 2 | `FT-RES-003` source and license audit | Authority/product evidence | Completed | All 13 anchors have official coverage, but real downloadable records remain blocked by unresolved structured-reuse and human-review gates. |
 | 3 | `FT-DEV-003` schema and map-shell prototype | Product | Completed | Review-clean synthetic fixtures validate the data contract and accessible interaction without publishing claims or ingesting real records. |
-| 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
-| 5 | `FT-RES-004` San Diego family-hotel research engine evidence pack | Content/product quality | Completed | A three-property internal pack now separates official facts, booking checks, review/community signals, conflicts, unknowns, and publication gates without editing a protected URL or publishing a hotel page. |
+| 4 | `FT-RES-004` San Diego family-hotel research engine evidence pack | Content/product quality | Completed | The review-clean three-property pack separates official facts, booking checks, signals, conflicts, unknowns, and publication gates without publishing a hotel page. |
+| 5 | `FT-PLAN-001` clean San Diego family-hotel page brief | Content/product quality | Completed | The review-clean brief widens the candidate set, defines price-band and review-signal standards, and keeps the public page gated. |
+| 6 | `FT-RES-005` expanded San Diego family-hotel evidence pack | Content/product quality | Ready | Expand from the first three hotels to a 6-8 hotel evidence set with approximate price bands and family-review signals. |
+| 7 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -114,10 +116,20 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - State: completed and review-clean on 2026-07-18.
 - GSC evidence: fresh authenticated read-only API snapshot collected July 18 with finalized data through July 16; completeness `finalized-conservative` using the two-day-lag basis. Protected query evidence remains unavailable but is not required for this research action.
 - Research result: a three-property internal pack covers the candidates already named on the San Diego stay page and separates official facts, attempted booking checks, review signals, community signals, conflicts, unknowns, claim labels, and exact parent checks.
-- Decision: do not publish or rank a standalone hotel page yet. Room-level availability/occupancy/total/cancellation evidence, a consistent expanded review sample, pre-release freshness checks, and human review for trust-sensitive conclusions remain gates.
+- Decision: do not publish or rank a standalone hotel page yet. The next pass should replace exact booking-total requirements with sourced approximate nightly room bands, visible fee/parking evidence, a consistent expanded review sample, pre-release freshness checks, and human review for trust-sensitive conclusions.
 - Publication boundary: no `site/**`, protected URL, sitemap, robots, indexability, affiliate CTA, external account, indexing request, outreach, or deployment changed.
 - Independent review: cycle 3 `PASS` with zero P0-P3 findings; cycles 1-2 closed booking/source reproducibility and concurrent-diff isolation P2s.
 - QA: 15/15 GSC schema/privacy tests, all six public snapshot validations, roadmap JSON, 19 registered source rows, native/production SEO QA, and exact cached/new-file whitespace checks passed.
+
+### FT-PLAN-001 — Clean San Diego family-hotel page brief
+
+- Selected: 2026-07-18 by direct manual user instruction after FT-RES-004 completed.
+- State: completed and review-clean on 2026-07-18.
+- Planning result: the brief expands the next San Diego hotel pass from three existing candidates to about eight primary candidates, defines a calm 6-8 card public page shape, keeps category labels non-ordinal, and requires family-review signals without copying review prose.
+- User policy update: use sourced approximate nightly room bands instead of requiring exact booking-flow totals for planning; keep taxes, fees, parking, breakfast, cancellation, and final all-in totals as separate booking checks. Crib, rollaway, connecting-room, kitchen, and laundry details are useful when visible but not mandatory for every candidate.
+- Publication boundary: no `site/**`, protected URL, sitemap, robots, indexability, affiliate CTA, external account, indexing request, outreach, deployment, or live hotel page changed.
+- Independent review: cycle 2 `PASS`; cycle 1 P2 findings for provisional price-band durability, stale exact-booking gate language, and target-path coverage were closed.
+- QA: roadmap JSON validation, native SEO QA, and whitespace checks passed.
 
 ## Daily evidence loop
 
@@ -133,6 +145,16 @@ Ready does not mean all items should ship immediately. The operator selects one 
 Hotel pages no longer require firsthand human review for every research-based claim. They do require the documented hotel research engine in `docs/plan/hotel-research-engine.md`: official property facts, current booking checks, review/community-signal summaries, contradictions, freshness, uncertainty labels, and clear separation between research-based guidance and personally verified experience.
 
 Human review remains required for firsthand stay claims, safety assurances, exact route/stroller practicality verdicts, room-selection advice that materially affects booking, and any firm family-suitability conclusion that the research record cannot support.
+
+## San Diego Hotel Page Hypothesis
+
+The target experience should borrow Reddit's useful constraint-and-tradeoff feel, but present it as a clean decision page: category-led picks, compact hotel cards, a quiet comparison table, activity-distance bands, current price/fee checks where available, and expandable evidence notes. The page should avoid clutter, generic ranked-list prose, and unsupported `best` claims.
+
+The first standalone hotel page should not stop at the three hotels already named on the current stay page. The next research pass should evaluate about eight primary candidates, then publish only the 6-8 strongest evidence-backed cards. Use sourced approximate nightly room bands rather than exact booking totals unless a stable booking screen is already available. Crib, rollaway, connecting-room, and kitchen details should be captured when visible, but missing optional details become `verify before booking` notes rather than automatic blockers. Recent family-relevant review signals are a core input and must remain paraphrased, bounded, and conflict-aware.
+
+## Expansion Policy
+
+Go deeper in San Diego before expanding the five pilot cities. The operator should finish the San Diego research/page pattern first: hotel evidence engine, clean hotel page brief, stay-page measurement, and any necessary quality upgrades. Once the San Diego pattern is strong enough to reuse, expand it across the pilot cities as a repeatable system.
 
 ## Data boundary
 
