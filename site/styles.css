@@ -711,6 +711,48 @@ input {
   background: #fffdf8;
 }
 
+.hotel-pick-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.hotel-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hotel-card {
+  align-content: start;
+}
+
+.hotel-card .eyebrow {
+  margin-bottom: -4px;
+}
+
+.hotel-card ul {
+  display: grid;
+  gap: 7px;
+  margin: 8px 0 0;
+  padding-left: 19px;
+  color: var(--muted);
+}
+
+.hotel-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+
+.hotel-facts div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--surface);
+}
+
+.hotel-comparison {
+  min-width: 1180px;
+}
+
 .activity-card {
   display: flex;
   min-height: 245px;
@@ -850,8 +892,10 @@ input {
   .activity-grid,
   .card-grid,
   .quick-pick-grid,
+  .hotel-pick-grid,
   .plan-grid,
   .detail-card-grid,
+  .hotel-card-grid,
   .methodology-grid {
     grid-template-columns: 1fr;
   }
@@ -878,6 +922,7 @@ input {
 @media (max-width: 560px) {
   .snapshot,
   fieldset,
+  .hotel-facts,
   .stay-tool-form fieldset,
   .stay-tool-needs {
     grid-template-columns: 1fr;

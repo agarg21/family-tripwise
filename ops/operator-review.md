@@ -28,12 +28,48 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-004` | review-clean internal research pack | `PASS` | Re-review cycle 3 validated the isolated cached action and closed the final concurrent-scope P2. |
 | `FT-PLAN-001` | review-clean planning brief | `PASS` | Re-review cycle 2 closed price-band durability, stale gate language, and exact-path findings; eligible for exact-path push-only commit after staged QA. |
 | `FT-RES-005` | review-clean expanded research pack | `PASS` | Re-review cycle 2 closed the community/source reproducibility P2; eligible for exact-path push-only commit after staged QA. |
+| `FT-PUB-001` | review-clean San Diego hotel page | `PASS_WITH_P3` | Re-review cycle 2 closed the Loews quietness P2; one non-blocking P3 remains for conflicting Loews self-parking official-source values. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-07-18 — `FT-PUB-001` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and policy evidence:
+
+- Reviewed the manually selected publication action to create one live San Diego hotel page at `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
+- The implementation diff was confined to `tools/generate-pages.mjs`, `tools/san-diego-family-hotels-page.test.mjs`, `site/where-to-stay/san-diego-family-hotels.html`, `site/where-to-stay/san-diego-with-kids.html`, `site/index.html`, `site/sitemap.xml`, `site/styles.css`, `ops/seo-roadmap.json`, and `ops/seo-roadmap.md`; this review log had not yet been appended.
+- The new page was canonical, indexable, present in the sitemap, and internally linked from the home page and San Diego stay page. It covered eight hotel candidates from the review-clean evidence pack, used a CC0 Mission Bay visual, and avoided affiliate links, booking calls to action, external-account mutation, outreach, and indexing requests.
+
+QA evidence:
+
+- Independent checks passed: `node --test tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs`, `jq empty ops/seo-roadmap.json`, `node tools/seo-qa.mjs`, `git diff --check`, targeted URL/link counts, and Wikimedia image/license checks. The reviewer accepted the expected predeployment production `404` for the new URL.
+
+Finding:
+
+1. `P2` — One Loews quick-pick sentence made an unsupported quietness claim by saying the hotel offered a "quieter Coronado resort feel." Quietness is human-gated and unknown in the evidence pack. Expected fix: replace the wording with neutral location language in the generator and regenerated HTML.
+
+### 2026-07-18 — `FT-PUB-001` re-review cycle 2
+
+**Result: `PASS_WITH_P3`**
+
+Prior-finding verification:
+
+- Closed the cycle-1 P2. The Loews quick-pick now says "a less central Coronado bay resort setup" in the generator and generated page. Remaining quietness language is caveat or human-gated language, not a hotel-fit claim.
+
+Full verification evidence:
+
+- Independent checks passed: `node --test tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs`, `node tools/seo-qa.mjs`, `jq empty ops/seo-roadmap.json`, and `git diff --check`.
+- The action remains one San Diego page and does not publish a city batch, affiliate/booking CTA, indexing request, outreach, external-account mutation, or source-owned hotel media. Production SEO QA must be rerun after deployment because the new URL is expected to return `404` before release.
+
+Finding:
+
+1. `P3` — Loews self-parking has a same-site official-source conflict: one Loews page supports `$47` self-parking while a Loews FAQ currently lists `$50`. The page already keeps fees as verify-before-booking and this does not block release.
 
 ### 2026-07-18 — `FT-RES-005` review cycle 1
 

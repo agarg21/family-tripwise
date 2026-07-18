@@ -384,6 +384,43 @@
       "review": "Cycle 2 PASS after closing the community/source reproducibility P2.",
       "qa": "jq empty ops/seo-roadmap.json; node tools/seo-qa.mjs 0 errors/0 warnings; node tools/seo-qa.mjs --production 0 errors/0 warnings after one transient homepage 503 cleared on focused public checks; git diff --check passed.",
       "notes": "Do not require exact booking-screen totals for this pass. Use sourced approximate price bands and keep final all-in totals, exact room availability, cancellation rules, crib/rollaway/connecting-room guarantees, safety, quiet-room, stroller, and firm family-suitability claims as verify-before-booking or human-review-gated."
+    },
+    {
+      "id": "FT-PUB-001",
+      "title": "Publish the researched San Diego family-hotel shortlist page",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/generate-pages.mjs",
+        "tools/san-diego-family-hotels-page.test.mjs",
+        "site/where-to-stay/san-diego-family-hotels.html",
+        "site/where-to-stay/san-diego-with-kids.html",
+        "site/index.html",
+        "site/sitemap.xml",
+        "site/styles.css",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "production_invariant": "The new URL is canonical, indexable, present exactly once in the sitemap, internally linked from the home page and San Diego stay page, and visibly presents eight researched hotel candidates without ordinal ranking, affiliate/booking CTAs, booking promises, unsupported safety/quiet/stroller/route claims, or personally verified stay claims.",
+      "success_signal": "A clean live San Diego family-hotel page uses the reviewed evidence pack to compare eight candidates by category, room setup, rough price band, fees/parking, review-signal conflicts, and verify-before-booking checks while preserving trust boundaries and passing QA/review/deployment verification.",
+      "selected_on": "2026-07-18",
+      "completed_on": "2026-07-18",
+      "evidence": "Manual user instruction approved publishing the San Diego hotel page after FT-RES-005. The page uses the July 18 review-clean evidence pack, source-dated official facts, rough planning price bands, paraphrased review-signal conflicts, visible verification checks, and a CC0 Mission Bay visual asset. No affiliate links, external-account mutations, outreach, or indexing requests are included.",
+      "review": "Cycle 2 PASS_WITH_P3 after closing the Loews quietness P2. Remaining P3: Loews official pages conflict on self-parking amount ($47 on one page, $50 on FAQ), with page copy keeping fees verify-before-booking.",
+      "qa": "node --test tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs passed 5/5; jq empty ops/seo-roadmap.json passed; node tools/seo-qa.mjs passed with 23 sitemap URLs, 26 HTML files, 0 errors, 0 warnings; git diff --check passed; local HTTP page returned 200; local sitemap contains the new URL; Wikimedia image resolved 200. Production SEO QA predeploy returns expected 404 for the new URL and must pass after deployment.",
+      "notes": "This is one new San Diego indexable page, not a new destination or page batch. Playwright screenshot QA was not run because the package is not installed in this repo. After deployment, verify the new URL, sitemap membership, release marker, and page invariants."
     }
   ]
 }

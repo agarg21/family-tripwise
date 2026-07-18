@@ -39,7 +39,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 4 | `FT-RES-004` San Diego family-hotel research engine evidence pack | Content/product quality | Completed | The review-clean three-property pack separates official facts, booking checks, signals, conflicts, unknowns, and publication gates without publishing a hotel page. |
 | 5 | `FT-PLAN-001` clean San Diego family-hotel page brief | Content/product quality | Completed | The review-clean brief widens the candidate set, defines price-band and review-signal standards, and keeps the public page gated. |
 | 6 | `FT-RES-005` expanded San Diego family-hotel evidence pack | Content/product quality | Completed | The review-clean expanded pack covers eight hotels with approximate price bands and family-review signals, while the live page remains gated. |
-| 7 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
+| 7 | `FT-PUB-001` researched San Diego family-hotel page | Content/product quality | Completed | Manual user approval moved the review-clean hotel evidence into one live, source-dated, non-ranky San Diego page. |
+| 8 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -141,6 +142,17 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Publication boundary: no `site/**`, protected URL, sitemap, robots, indexability, affiliate CTA, external account, indexing request, outreach, deployment, or live hotel page changed.
 - Independent review: cycle 2 `PASS`; cycle 1 P2 for community/source reproducibility was closed by downgrading unsourced hotel-specific community notes to question discovery only and aligning review-signal source wording.
 - QA: roadmap JSON validation, native SEO QA, production SEO QA, and whitespace checks passed. One transient homepage `503` during the first production QA cleared on focused public checks and retry.
+
+### FT-PUB-001 — Researched San Diego family-hotel page
+
+- Selected: 2026-07-18 by direct manual user instruction after FT-RES-005 completed.
+- State: completed and review-clean on 2026-07-18.
+- Affected URL: `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
+- Publication result: one new San Diego page translates the eight-hotel evidence pack into category picks, a compact comparison table, hotel cards, rough planning bands, fee/parking signals, review-signal conflicts, source links, a CC0 Mission Bay visual, and verify-before-booking checks.
+- Trust boundary: the page is research-based and source-dated. It does not claim firsthand stays, rank hotels ordinally, add affiliate or booking CTAs, promise final prices, or establish safety, quiet-room, stroller-route, water-suitability, exact room-selection, cancellation, or family-fit conclusions.
+- Release invariant: the URL must be canonical, indexable, in the sitemap exactly once, internally linked from the home page and San Diego stay page, and visibly include eight researched candidates plus final all-in total and human-review caveats.
+- Independent review: cycle 2 `PASS_WITH_P3`; cycle 1 P2 for unsupported Loews quietness wording was closed. Remaining P3: same-site Loews official pages conflict on self-parking amount (`$47` versus `$50`), while page copy keeps fees verify-before-booking.
+- QA: focused page tests and Las Vegas regression tests passed 5/5; roadmap JSON validation passed; native static SEO QA passed with 23 sitemap URLs and 26 HTML files; whitespace checks passed; local HTTP page returned 200; local sitemap includes the new URL; Wikimedia image resolved 200. Production SEO QA is expected to return 404 for the new URL before deployment and must be rerun after deployment.
 
 ## Daily evidence loop
 
