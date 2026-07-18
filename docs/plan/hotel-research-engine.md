@@ -86,8 +86,18 @@ A standalone `best family hotels in {destination}` page may publish when:
 - Re-scan review/community signals every 60 days, or sooner after a major renovation, closure, rebrand, or SERP shift.
 - Expire or downgrade any hotel record with stale official facts, unresolved contradiction, or missing fee/room evidence.
 
+## Evidence-Pack Implementation Rules
+
+- Declare one reproducible reference booking scenario: check date, stay dates, party size, child ages, room count, and booking channel.
+- A blocked or dynamic booking flow is a completed check only when the attempted fields and resulting `UNKNOWN` values are recorded. It cannot support a price, availability, or cancellation claim.
+- For review signals, record source type, visible date range, approximate inspected sample, repeated themes, and conflicts. Never copy review prose or treat a platform-generated summary as independent verification.
+- Keep community/forum evidence in a separate class from verified-stay review signals. One thread may identify a question, but cannot establish a recurring condition.
+- Do not infer property quality from an aggregate score. Prefer criteria-specific, conflicting themes and the exact parent check they trigger.
+- Store no reviewer identifiers, complete raw-review exports, user data, private booking details, source-owned photos, or copied source text.
+- A candidate pack is not a ranking. A `best`, `quietest`, `safest`, route/stroller, room-selection, or firm family-fit label needs evidence that specifically supports it and any required human review.
+
 ## First Candidate
 
 San Diego is the first candidate because GSC and Semrush both show lodging intent around the existing San Diego stay page, and Semrush currently reports low-to-moderate difficulty for family hotel terms.
 
-Recommended next action: create an internal San Diego family-hotel evidence pack and candidate data model before publishing a new indexable hotel page.
+First pack: `docs/research/san-diego-family-hotel-evidence-pack.md`. It covers three existing candidate properties and records why a standalone indexable hotel page is not yet release-ready.

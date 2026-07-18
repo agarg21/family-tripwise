@@ -1,6 +1,6 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-14
+Last updated: 2026-07-18
 
 ## Active
 
@@ -42,21 +42,26 @@ Current measured signal:
 - GSC UI review on July 8, 2026 showed sparse San Antonio family-hotel queries, but rankings were weak and total GSC data volume was tiny.
 - Treat all conclusions as directional until more data is available.
 
+## Done
+
 ### SRR-005: San Diego Hotel Page Feasibility Review
 
-Status: ready
+Status: done
+
+Completed: 2026-07-18
 
 Recommendation label: `research`
 
-Create an internal San Diego family-hotel evidence pack before publishing `best family hotels in San Diego`.
+Research artifact:
 
-- Apply the research workflow in `docs/plan/hotel-research-engine.md`;
-- source hotel data from official property pages, current booking checks, review/community signal summaries, and other auditable sources where useful;
-- label claims as official fact, research-based, review-signal-derived, model-derived, or human-verified;
-- keep firsthand, safety, exact stroller/route practicality, room-selection, and unsupported family-suitability verdicts human-reviewed or explicitly unknown;
-- the current San Diego where-to-stay page remains the canonical area decision page.
+- `docs/research/san-diego-family-hotel-evidence-pack.md`
 
-## Done
+Result:
+
+- Built a source-backed internal record for the three candidate properties already named on the San Diego stay page.
+- Separated official facts, booking checks, review signals, community signals, conflicts, and unknowns.
+- Kept the pack unranked and internal. A standalone hotel page remains blocked pending reproducible room-level booking checks, consistent review sampling, freshness checks, and human review for trust-sensitive conclusions.
+- No live page, sitemap, indexability, affiliate, indexing, outreach, or external-account change was made.
 
 ### SRR-002: Review Priority Pages For Index-Worthiness
 

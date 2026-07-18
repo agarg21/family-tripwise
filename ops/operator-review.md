@@ -25,6 +25,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-MAINT-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed the public-repository allowlist/privacy finding; eligible for exact-path push-only commit after staged QA. |
 | `FT-AUTH-001` | review-clean research brief | `PASS` | Re-review cycle 2 closed the sole anchor-scope P2; eligible for exact-path push-only commit after staged QA. |
 | `FT-DEV-003` | review-clean unpublished prototype | `PASS` | Re-review cycle 2 closed all three P2 findings; eligible for exact-path push-only commit after staged QA. |
+| `FT-RES-004` | review-clean internal research pack | `PASS` | Re-review cycle 3 validated the isolated cached action and closed the final concurrent-scope P2. |
 
 ## Open blocking findings
 
@@ -69,6 +70,69 @@ Full verification evidence:
 - The complete action still changes only `docs/research/san-diego-source-worthy-asset-plan.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, and this reviewer-owned log. No `site/**`, sitemap, robots, canonical, indexability, product/content page, protected URL, or Pages workflow changed. There is no affected production URL; the release remains push-only.
 - Independent focused validation confirmed five coverage rows, exactly 13 enumerated anchors, the 11-of-13 stop threshold, and matching `FT-RES-003` JSON scope. The roadmap JSON parses. `node tools/seo-qa.mjs` and `node tools/seo-qa.mjs --production` each returned 0 errors and 0 warnings. Tracked and untracked whitespace checks passed.
 - No asset, follow-up, contributed content, or partnership was published or started. No outreach, indexing request, external-account mutation, private contact data, raw/private GSC data, or firm trust-sensitive trip claim was introduced.
+
+Findings:
+
+- None (`P0`-`P3`).
+
+### 2026-07-18 — `FT-RES-004` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and release evidence:
+
+- Reviewed the complete action diff against clean `main` and `origin/main` at `be4c69e51f82bba4e36354ee7d5724526e20d3b1`. Before this reviewer-owned entry, the working tree contained only the declared research artifact, hotel-research policy, research backlog, and two roadmap files. This log is the sixth declared target path.
+- No `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, affiliate CTA, source-owned review prose/media, indexing request, outreach, deployment, or external-account change is present. Affected production URLs: none; the release invariant remains push-only.
+- The pack is explicitly internal, unranked, and not publication-ready. Safety, exact route/stroller practicality, quiet-room, water-suitability, room-selection, value, and firm family-fit claims remain `UNKNOWN`, booking-time checks, or human-review gates rather than being presented as verified experience.
+
+Independent source and QA evidence:
+
+- Current official pages independently reproduced the material fee, parking, room/occupancy, amenity, laundry, connection, cancellation, breakfast/kitchen, location, and airport-shuttle assertions. The Bahia and Mission Bay direct-booking controls currently resolve to public SynXis landing URLs, but automated booking content was blocked; the pack correctly does not infer a room, price, availability, tax total, or cancellation result from that failure.
+- Public review/community pages reproduced the bounded themes and conflicts without copied prose or stored reviewer identifiers. In particular, current review samples support Mission Bay room-condition/pool-crowding conflicts and Homewood room-space/location positives plus parking, breakfast, maintenance, and noise variability. Command-line probes returned a mix of 200/202 and 403/429 responses; the public-network failures are `UNKNOWN`, not site defects.
+- The July 18 GSC snapshot is fresh authenticated read-only API evidence collected July 18 with conservatively finalized data through July 16. The 15 GSC schema/query/privacy tests passed; all six public snapshots validated; roadmap JSON parsed; native and production SEO QA each returned 0 errors and 0 warnings; tracked and untracked whitespace checks passed.
+
+Findings:
+
+1. `P2` — The attempted booking checks are not reproducible from the durable hotel records because the required booking URLs/landing paths are omitted. `docs/plan/hotel-research-engine.md:44` requires an official URL and booking URL for every hotel, while `docs/research/san-diego-family-hotel-evidence-pack.md:56,68,80` says each official booking path was attempted but stores only property/fact URLs in the source register. Expected behavior: another reviewer can follow the exact public booking entry point used for the declared party and dates and distinguish a blocked/dynamic result from a missing attempt. Bounded fix: add a dated booking-check source row or field for each property with its stable official booking landing URL (or explicitly record why no durable public booking URL exists), the attempted scenario, and the resulting `UNKNOWN` fields; do not store session tokens, personal data, or infer any unavailable result. Then request re-review.
+2. `P2` — Review/community sample accounting is internally incomplete, so two summaries cannot be reproduced from the source register as written. `docs/research/san-diego-family-hotel-evidence-pack.md:58` says the Bahia community sample contains three 2026 Reddit threads, but lines 95-96 register only two. Line 81 says the Homewood review sample uses Booking.com, Hotels.com, and Tripadvisor, but lines 104-105 register only Booking.com and Hotels.com. Expected behavior: every stated source type and inspected-sample count maps to a registered, dated source, or the summary is narrowed to the sources actually registered. Bounded fix: either add the missing source rows with their supported theme and checked date or correct the source counts/types and any dependent wording; keep review prose, identities, and platform-generated summaries out of the repository. Then request re-review.
+3. `P2` — The working tree changed after the reviewer captured the declared six-path action: untracked `docs/plan/san-diego-family-hotel-page-concept.md` appeared during review, but it is absent from `FT-RES-004.target_paths` in `ops/seo-roadmap.json:310-317` and was not part of the reviewed baseline/resulting diff. It also introduces a future 6-8-hotel page shape and affiliate/drive-time product questions beyond this action's bounded three-property evidence-pack deliverable. Expected behavior: the exact committed action contains only declared, fully reviewed paths and judgments. Bounded fix: remove this path from the FT-RES-004 transaction (preserving any useful idea in a separately authorized future action), or materially re-scope the roadmap action and request a complete fresh review of the new diff. Do not stage it under the current review result.
+
+### 2026-07-18 — `FT-RES-004` re-review cycle 2
+
+**Result: `CHANGES_REQUIRED`**
+
+Prior-finding verification:
+
+- Closed the booking-check reproducibility P2. Each hotel record and source register now contains a stable official booking entry URL, the July 18 check date, the shared two-adult/two-child September 15-17 reference scenario, the blocked/dynamic result, and explicit `UNKNOWN` room, occupancy, total, deposit, and cancellation fields. Independent probes reached both SynXis entry URLs; the Hilton booking probe was unavailable to command-line verification and remains correctly classified as public-network `UNKNOWN`, not a hotel or site defect. No session token, personal booking detail, unavailable price, or inferred result is stored.
+- Closed the sample-accounting P2. Bahia now says two public 2026 Reddit threads and registers exactly two. Homewood now names Booking.com and Hotels.com and registers exactly those two review sources. The stale three-thread, three-platform, and uncited Bahia breakfast-offer wording is absent. The source register contains 19 unique IDs and 19 unique URLs.
+- The conservative Bahia bedding conflict is correct: the current official room page's summary names two queen beds plus a double bed, while its body describes the connecting-room bed as a queen. The pack does not resolve the conflict by inference and requires direct confirmation.
+
+Full verification evidence:
+
+- The complete pack remains internal, unranked, and not publication-ready. Official facts, booking checks, review signals, community signals, conflicts, claim labels, expiry dates, and parent checks remain distinct. Safety, exact route/stroller practicality, quiet, water suitability, value, room selection, and firm family fit remain `UNKNOWN` or human-review gated. No copied review prose, reviewer identity, private data, source-owned media, or aggregate-score quality inference is present.
+- The declared FT-RES-004 target list remains the same six paths. No `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, affiliate CTA, indexing request, outreach, deployment, or external-account change is present. The release must remain push-only.
+- `node --test tools/gsc-snapshot.test.mjs tools/gsc-query-export.test.mjs` passed 15/15; all six public snapshots validated; roadmap JSON parsed; native and production SEO QA each returned 0 errors and 0 warnings; tracked and untracked whitespace checks passed.
+
+Remaining finding:
+
+1. `P2` — The concurrently created page concept is not fully excluded from the current action diff. Although `docs/plan/san-diego-family-hotel-page-concept.md` can remain preserved and unstaged as unrelated work, four declared FT-RES-004 files now depend on it: `docs/plan/hotel-research-engine.md:105` links to it, `backlog/seo-research-review-backlog.md:64` says FT-RES-004 added its follow-up, `ops/seo-roadmap.json:324-343` creates `FT-PLAN-001` with that file as a target, and `ops/seo-roadmap.md:40,136-138` adds the item and its product hypothesis. These material additions were absent from review cycle 1 and are not among the stated evidence-pack fixes. If the concept stays unstaged, the exact-path FT-RES-004 commit would publish references to an absent artifact; if it is staged, the commit would exceed FT-RES-004's six declared paths and reviewed three-property deliverable. Expected behavior: preserved unrelated work has no dependency or judgment in the reviewed action diff. Bounded fix: remove the concurrent concept/`FT-PLAN-001` references and hypothesis from the FT-RES-004 hunks while leaving the untracked concept itself untouched and unstaged; then request the final re-review. A separately selected future action may add and review the concept and its roadmap entry.
+
+### 2026-07-18 — `FT-RES-004` re-review cycle 3
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the final concurrent-scope P2 against the isolated Git index. `git diff --cached --name-only` contains exactly five FT-RES-004 action files: `docs/research/san-diego-family-hotel-evidence-pack.md`, `docs/plan/hotel-research-engine.md`, `backlog/seo-research-review-backlog.md`, `ops/seo-roadmap.json`, and `ops/seo-roadmap.md`. This reviewer-owned log remains unstaged for the operator to include as the sixth declared evidence path after consensus.
+- The complete cached additions contain no `FT-PLAN-001`, `san-diego-family-hotel-page-concept`, expansion-policy, or content-strategy reference. The concurrent FT-PLAN-001 files and unstaged hunks remain preserved only in the working tree; they are not part of the reviewed release candidate and must remain outside the FT-RES-004 commit.
+- The booking and source-accounting fixes from cycle 2 remain in the cached artifact: all three official booking entry points, dated reference-scenario attempts, blocked/public-network `UNKNOWN` results, two registered Bahia community threads, and two registered Homewood review platforms. The source register contains 19 unique IDs and 19 unique URLs, with no stale sample wording.
+
+Full verification evidence:
+
+- Independently reviewed the complete cached research, policy, backlog, and roadmap diff. The evidence pack stays internal, unranked, and not publication-ready; it documents candidates, family decision criteria, official facts, attempted booking checks, review/community themes, conflicts, freshness, claim labels, exact parent checks, and release gates. The Bahia bed-type contradiction remains visible rather than resolved by inference.
+- No safety assurance, personally verified stay, exact route/stroller verdict, quiet-room or room-selection rule, water-suitability conclusion, or firm family-fit claim is introduced. Review/community prose is paraphrased, samples remain small and directional, and no review identity, copied source text/media, private booking data, credential, raw query export, or aggregate-score quality inference is stored.
+- The cached roadmap JSON parses and retains exactly the six declared FT-RES-004 target paths. `git diff --cached --check` passes. The 15 GSC schema/query/privacy tests pass; all six public snapshots validate; native and production SEO QA each return 0 errors and 0 warnings.
+- No cached `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, affiliate CTA, indexing request, outreach, deployment, or external-account change exists. Affected production URLs: none; release invariant remains push-only.
 
 Findings:
 

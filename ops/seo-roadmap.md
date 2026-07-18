@@ -37,7 +37,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 2 | `FT-RES-003` source and license audit | Authority/product evidence | Completed | All 13 anchors have official coverage, but real downloadable records remain blocked by unresolved structured-reuse and human-review gates. |
 | 3 | `FT-DEV-003` schema and map-shell prototype | Product | Completed | Review-clean synthetic fixtures validate the data contract and accessible interaction without publishing claims or ingesting real records. |
 | 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
-| 5 | `FT-RES-004` San Diego family-hotel research engine evidence pack | Content/product quality | Ready | User approved moving from a blanket hotel-review blocker to a documented research workflow; research can proceed without editing protected URLs or publishing a hotel page. |
+| 5 | `FT-RES-004` San Diego family-hotel research engine evidence pack | Content/product quality | Completed | A three-property internal pack now separates official facts, booking checks, review/community signals, conflicts, unknowns, and publication gates without editing a protected URL or publishing a hotel page. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -107,6 +107,17 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Publication boundary: the prototype remains under `src/prototypes/san-diego-family-reset-atlas/`, carries `noindex, nofollow`, and is absent from `site/` and the sitemap. Real-record ingestion, downloads, publication, and outreach remain blocked.
 - QA: schema and interaction tests passed 5/5, including freshness, coordinate-state, and firm-claim rejection; syntax checks passed; native and production SEO QA returned 0 errors and 0 warnings; desktop, 390px, and 320px browser checks covered every control and passed without implementation console errors, horizontal overflow, or sticky-panel obstruction.
 - Independent review: cycle 2 `PASS`; cycle 1's sticky-control, schema-contract, and firm-claim enforcement P2 findings were closed, with no P0-P3 findings remaining.
+
+### FT-RES-004 — San Diego family-hotel evidence pack
+
+- Selected: 2026-07-18 by the deterministic operator after fresh GSC, URL Inspection, public preflight, and repository QA housekeeping remained healthy and non-preempting.
+- State: completed and review-clean on 2026-07-18.
+- GSC evidence: fresh authenticated read-only API snapshot collected July 18 with finalized data through July 16; completeness `finalized-conservative` using the two-day-lag basis. Protected query evidence remains unavailable but is not required for this research action.
+- Research result: a three-property internal pack covers the candidates already named on the San Diego stay page and separates official facts, attempted booking checks, review signals, community signals, conflicts, unknowns, claim labels, and exact parent checks.
+- Decision: do not publish or rank a standalone hotel page yet. Room-level availability/occupancy/total/cancellation evidence, a consistent expanded review sample, pre-release freshness checks, and human review for trust-sensitive conclusions remain gates.
+- Publication boundary: no `site/**`, protected URL, sitemap, robots, indexability, affiliate CTA, external account, indexing request, outreach, or deployment changed.
+- Independent review: cycle 3 `PASS` with zero P0-P3 findings; cycles 1-2 closed booking/source reproducibility and concurrent-diff isolation P2s.
+- QA: 15/15 GSC schema/privacy tests, all six public snapshot validations, roadmap JSON, 19 registered source rows, native/production SEO QA, and exact cached/new-file whitespace checks passed.
 
 ## Daily evidence loop
 

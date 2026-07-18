@@ -298,7 +298,7 @@
       "title": "Create the San Diego family-hotel research engine evidence pack",
       "kind": "research",
       "lane": "content-and-product-quality",
-      "status": "ready",
+      "status": "completed",
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -316,6 +316,11 @@
         "ops/seo-roadmap.md"
       ],
       "success_signal": "An internal evidence pack defines San Diego family hotel candidates, family decision criteria, official source facts, booking checks, review/community-signal themes, conflicts, unknowns, and publication-ready claim labels without publishing a new hotel page.",
+      "selected_on": "2026-07-18",
+      "evidence": "Fresh authenticated read-only API snapshot collected 2026-07-18 with finalized data through 2026-07-16; healthy housekeeping did not preempt. The internal three-property pack records current official facts, attempted booking checks, bounded review/community themes, conflicts, unknowns, claim labels, and release gates.",
+      "completed_on": "2026-07-18",
+      "review": "Cycle 3 PASS; zero P0-P3 findings.",
+      "qa": "15/15 GSC schema/privacy tests; six snapshot validations; native and production SEO QA 0 errors/0 warnings; 19 source rows; cached and new-file whitespace checks passed.",
       "notes": "User approved replacing the blanket hotel human-review blocker with a high-quality research workflow on 2026-07-18. This action is research-only: do not publish a standalone hotel page, add hotel affiliate CTAs, copy review text, scrape prohibited sources, request indexing, or make safety/firsthand/family-suitability claims as verified."
     }
   ]
