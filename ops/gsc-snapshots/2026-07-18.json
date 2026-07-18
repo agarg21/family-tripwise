@@ -4,7 +4,7 @@
   "property": "sc-domain:familytripwise.com",
   "visibility": "public-summary",
   "collection_mode": "search-console-api-readonly",
-  "collected_at": "2026-07-18T02:52:12.219Z",
+  "collected_at": "2026-07-18T11:18:41.239Z",
   "data_through": "2026-07-16",
   "requested_period_end": "2026-07-16",
   "completeness": "finalized-conservative",
@@ -20,18 +20,18 @@
       "status": "finalized",
       "period_start": "2026-06-19",
       "period_end": "2026-07-16",
-      "latest_known_impressions": 493,
+      "latest_known_impressions": 534,
       "latest_known_clicks": 0,
       "latest_known_ctr_percent": 0,
-      "latest_known_average_position": 60.05,
+      "latest_known_average_position": 60.04,
       "snapshot_date": "2026-07-16",
       "page_rows": [
         {
           "url": "https://familytripwise.com/",
           "clicks": 0,
-          "impressions": 4,
+          "impressions": 5,
           "ctr_percent": 0,
-          "average_position": 1
+          "average_position": 20.8
         },
         {
           "url": "https://familytripwise.com/about.html",
@@ -71,16 +71,16 @@
         {
           "url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
           "clicks": 0,
-          "impressions": 41,
+          "impressions": 48,
           "ctr_percent": 0,
-          "average_position": 59.22
+          "average_position": 59.15
         },
         {
           "url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
           "clicks": 0,
-          "impressions": 117,
+          "impressions": 130,
           "ctr_percent": 0,
-          "average_position": 56.2
+          "average_position": 56.29
         },
         {
           "url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
@@ -92,7 +92,7 @@
         {
           "url": "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
           "clicks": 0,
-          "impressions": 46,
+          "impressions": 49,
           "ctr_percent": 0,
           "average_position": 43.57
         },
@@ -113,9 +113,9 @@
         {
           "url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
           "clicks": 0,
-          "impressions": 31,
+          "impressions": 32,
           "ctr_percent": 0,
-          "average_position": 58.94
+          "average_position": 59.94
         },
         {
           "url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
@@ -127,23 +127,23 @@
         {
           "url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
           "clicks": 0,
-          "impressions": 26,
+          "impressions": 32,
           "ctr_percent": 0,
-          "average_position": 50.54
+          "average_position": 47.69
         },
         {
           "url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
           "clicks": 0,
-          "impressions": 52,
+          "impressions": 55,
           "ctr_percent": 0,
-          "average_position": 80.48
+          "average_position": 81.16
         },
         {
           "url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
           "clicks": 0,
-          "impressions": 158,
+          "impressions": 165,
           "ctr_percent": 0,
-          "average_position": 58.12
+          "average_position": 58.63
         }
       ]
     },
@@ -169,7 +169,7 @@
           "indexing_state": "INDEXING_ALLOWED",
           "page_fetch_state": "SUCCESSFUL",
           "robots_txt_state": "ALLOWED",
-          "last_crawl_time": "2026-07-12T19:36:10Z"
+          "last_crawl_time": "2026-07-18T09:01:45Z"
         },
         {
           "url": "https://familytripwise.com/about.html",
