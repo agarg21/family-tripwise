@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise SEO Operator",
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-18",
   "last_rescored_on": "2026-07-14",
   "next_rescore_due": "2026-07-21",
   "planning_horizon_days": 28,
@@ -353,14 +353,14 @@
       "evidence": "Manual user instruction clarified that the next San Diego hotel step should broaden beyond three hotels, use approximate room-per-night bands rather than exact booking-flow totals, treat crib/rollaway/connecting-room facts as useful but not mandatory, and prioritize recent family/kids review signals.",
       "review": "Cycle 2 PASS after closing price-band durability, stale booking-gate, and exact-path P2 findings.",
       "qa": "jq empty ops/seo-roadmap.json; node tools/seo-qa.mjs 0 errors/0 warnings; git diff --check passed.",
-      "notes": "Page brief and expanded candidate planning only. Do not publish a page, add affiliate CTAs, request indexing, deploy, or create ordinal hotel rankings in this planning action. Price bands in the candidate brief remain provisional hypotheses until FT-RES-005 creates per-hotel source rows."
+      "notes": "Page brief and expanded candidate planning only. Do not publish a page, add affiliate CTAs, request indexing, deploy, or create ordinal hotel rankings in this planning action. FT-RES-005 now contains the per-hotel source rows required before a future public page can use price bands, but those bands still need a publication freshness check."
     },
     {
       "id": "FT-RES-005",
       "title": "Expand the San Diego family-hotel evidence pack to 6-8 candidates",
       "kind": "research",
       "lane": "content-and-product-quality",
-      "status": "ready",
+      "status": "completed",
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -378,6 +378,11 @@
         "ops/seo-roadmap.md"
       ],
       "success_signal": "The San Diego evidence pack covers 6-8 primary hotels with official facts, approximate nightly room bands, parking/fee signals, family-relevant recent review themes, community-signal separation, conflicts, and parent-facing verification notes without publishing a page.",
+      "selected_on": "2026-07-18",
+      "completed_on": "2026-07-18",
+      "evidence": "Manual user instruction selected the next San Diego-deepening step after FT-PLAN-001. The expanded internal evidence pack now covers eight primary hotels with official facts, volatile approximate price bands, parking/fee signals, paraphrased review and community themes, conflicts, unknowns, and parent-facing verification checks. No live page, sitemap, affiliate CTA, indexability, external account, outreach, indexing request, or deployment changed.",
+      "review": "Cycle 2 PASS after closing the community/source reproducibility P2.",
+      "qa": "jq empty ops/seo-roadmap.json; node tools/seo-qa.mjs 0 errors/0 warnings; node tools/seo-qa.mjs --production 0 errors/0 warnings after one transient homepage 503 cleared on focused public checks; git diff --check passed.",
       "notes": "Do not require exact booking-screen totals for this pass. Use sourced approximate price bands and keep final all-in totals, exact room availability, cancellation rules, crib/rollaway/connecting-room guarantees, safety, quiet-room, stroller, and firm family-suitability claims as verify-before-booking or human-review-gated."
     }
   ]

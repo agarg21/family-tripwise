@@ -27,12 +27,51 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-DEV-003` | review-clean unpublished prototype | `PASS` | Re-review cycle 2 closed all three P2 findings; eligible for exact-path push-only commit after staged QA. |
 | `FT-RES-004` | review-clean internal research pack | `PASS` | Re-review cycle 3 validated the isolated cached action and closed the final concurrent-scope P2. |
 | `FT-PLAN-001` | review-clean planning brief | `PASS` | Re-review cycle 2 closed price-band durability, stale gate language, and exact-path findings; eligible for exact-path push-only commit after staged QA. |
+| `FT-RES-005` | review-clean expanded research pack | `PASS` | Re-review cycle 2 closed the community/source reproducibility P2; eligible for exact-path push-only commit after staged QA. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-07-18 — `FT-RES-005` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and policy evidence:
+
+- Reviewed the complete uncommitted diff for the manually selected San Diego deepening action. Changed paths were confined to `docs/research/san-diego-family-hotel-evidence-pack.md`, `docs/research/san-diego-family-hotel-expanded-candidate-brief.md`, `docs/plan/san-diego-family-hotel-page-concept.md`, `ops/seo-roadmap.json`, and `ops/seo-roadmap.md`; this reviewer-owned log had not yet been appended.
+- No `site/**`, Pages workflow, sitemap, robots, canonical, indexability, production URL, affiliate CTA, indexing request, outreach, deployment, or external-account mutation was present.
+- The pack covered eight hotel candidates with official facts, volatile price bands, fee/parking signals, review-signal summaries, parent checks, and publication gates. Price bands were labeled planning evidence rather than booking promises, and final all-in totals, taxes, fees, cancellation, exact room fit, and trust-sensitive claims remained gated.
+
+QA evidence:
+
+- Independent checks passed: `jq empty ops/seo-roadmap.json`, `node tools/seo-qa.mjs`, `git diff --check`, and path-scope inspection. The reviewer accepted operator evidence that production SEO QA passed on retry after focused public `curl` checks returned 200 for the homepage, sitemap, and San Diego stay page.
+
+Finding:
+
+1. `P2` — Source-register reproducibility gap for community and some review-signal claims. Hotel-specific community claims depended on a generic aggregate community source row, and several review-signal notes named source categories that were not listed in the matching source rows. Expected behavior: either add exact public source rows for material hotel-specific community/review claims or downgrade/remove unsupported signal wording.
+
+### 2026-07-18 — `FT-RES-005` re-review cycle 2
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the cycle-1 P2. The pack now states that no hotel-specific community claim is release-supported in this expanded pass unless a future exact public thread source row is registered. The aggregate community row supports question discovery only and is not property-fact evidence or hotel-specific claim support.
+- Unsupported source-category wording was removed from Hyatt, Paradise Point, and LEGOLAND review signals. Catamaran retains family-travel page wording only because the matching source row names the Tripster and KidTripster pages and labels editorial family-travel pages anecdotal, not verified-stay platforms.
+
+Full verification evidence:
+
+- The final action remains confined to `docs/plan/san-diego-family-hotel-page-concept.md`, `docs/research/san-diego-family-hotel-evidence-pack.md`, `docs/research/san-diego-family-hotel-expanded-candidate-brief.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, and this reviewer-owned log. No `site/**` or workflow path changed.
+- The expanded pack covers eight candidates and keeps approximate room-night bands, fees, parking, breakfast, cancellation, exact room fit, cribs, rollaways, connecting rooms, kitchens, safety, quiet, route/stroller practicality, value, and firm family suitability behind planning, freshness, booking-time, or human-review gates as applicable.
+- Independent checks passed: `jq empty ops/seo-roadmap.json`, `node tools/seo-qa.mjs`, `git diff --check`, and path-scope inspection. Operator evidence showed `node tools/seo-qa.mjs --production` passing with 0 errors and 0 warnings after the fix.
+- No copied review prose, reviewer identifiers, raw/private data, source-owned media, live page, ranking, affiliate call to action, sitemap/indexability change, indexing request, outreach, external-account mutation, or deployment was introduced.
+
+Findings:
+
+- None (`P0`-`P3`).
 
 ### 2026-07-16 — `FT-AUTH-001` review cycle 1
 

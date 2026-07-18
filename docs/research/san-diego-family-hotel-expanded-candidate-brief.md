@@ -4,13 +4,13 @@ Status: internal planning research; not publication-ready
 
 Checked: 2026-07-18
 
-Related work: `FT-PLAN-001`; follow-up candidate for expanded evidence pack
+Related work: `FT-PLAN-001`; superseded for durable price/source evidence by `FT-RES-005`
 
 ## Decision
 
 The first San Diego family-hotel page should not be limited to the three hotels already named on the current where-to-stay page. Those three were useful because they proved the evidence workflow on existing claims, but a standalone hotel-intent page needs enough breadth to answer the searcher without feeling thin.
 
-Use eight primary candidates for the first full evidence pass, then keep additional hotels in a watchlist. The public page should still feel clean: category picks and a compact comparison surface first, with evidence drawers only for parents who want the detail.
+Use the eight primary candidates covered by `FT-RES-005` as the first full evidence set, then keep additional hotels in a watchlist. The public page should still feel clean: category picks and a compact comparison surface first, with evidence drawers only for parents who want the detail.
 
 ## Price Standard
 
@@ -35,18 +35,18 @@ Rules:
 
 ## Primary Candidate Set
 
-The price posture below is a provisional planning hypothesis, not durable price evidence. `FT-RES-005` must replace these hypotheses with per-hotel source rows before any public page uses a price band.
+The price posture below is the planning band carried forward from `FT-RES-005`, which now contains per-hotel source rows. These bands remain volatile and must be refreshed before any public page uses them.
 
-| Hotel | Area/use case | Why it belongs in the first set | Provisional price hypothesis | Main evidence gaps |
+| Hotel | Area/use case | Why it belongs in the first set | `FT-RES-005` planning band | Main evidence gaps before publication |
 |---|---|---|---|---|
-| Bahia Resort Hotel | Mission Bay suite/bay stay | Already on the stay page; unusually clear family-suite facts and bundled one-vehicle parking language. | `$$-$$$$` hypothesis | Per-hotel price source, exact room availability, family-suite bedding conflict, current fee visibility, recent family-review sample. |
-| San Diego Mission Bay Resort | Mission Bay pool/wading-pool resort | Already on the stay page; official pool, wading pool, beach, activities, and fee/parking facts create a strong family decision contrast. | `$$$` hypothesis | Per-hotel price source, expanded family-review sample, room condition/noise conflicts, exact room-band support. |
-| Hyatt Regency Mission Bay Spa and Marina | Pool/waterslide-first Mission Bay stay | Repeatedly appears in family/community discussion; official pages expose waterslide/pool positioning and room amenity details. | `$$$-$$$$` hypothesis | Per-hotel price source, current parking fee, waterslide height/current hours, recent family-review conflicts, exact family room category. |
-| Paradise Point Resort & Spa | Stay-put Mission Bay resort | Broad family resort shape: bungalow-style rooms, bay setting, five pools, beach, sport courts, and large property footprint. | `$$-$$$` hypothesis | Per-hotel price source, whether the property scale helps or hurts families by age, parking/fee presentation, room-condition conflicts. |
-| Catamaran Resort Hotel and Spa | Pacific Beach/bay/beach walkability | Adds a different coastal pattern from Mission Bay resorts: beach/bay access plus Pacific Beach dining/walking tradeoffs. | `$$-$$$$` hypothesis | Per-hotel price source, parking/current fees, noise/crowd exposure, family room setup, pool/beach practicality. |
-| Homewood Suites San Diego Downtown/Bayside | Downtown/Little Italy suite/kitchen base | Already on the stay page; useful contrast for families prioritizing kitchen, breakfast, and urban access over resort feel. | `$$` hypothesis | Per-hotel price source, parking friction, breakfast consistency, room noise, exact suite layout. |
-| LEGOLAND Hotel or Castle Hotel | LEGOLAND/North County theme-park base | Searchers often need to know when San Diego family lodging should move north for a LEGOLAND-heavy trip. | `$$$-$$$$` hypothesis | Per-hotel price source; family total is package-dependent and needs clear distinction between per-person promos and room totals. |
-| Loews Coronado Bay Resort | Coronado bay/splurge candidate | Covers the Coronado family-resort lane without defaulting to the more complex Hotel del Coronado product. | `$$$-$$$$` hypothesis | Per-hotel price source, isolation from Coronado village, parking/resort fees, pool/beach practicality, recent family reviews. |
+| Bahia Resort Hotel | Mission Bay suite/bay stay | Already on the stay page; unusually clear family-suite facts and bundled one-vehicle parking language. | `$$-$$$` | Exact room availability, family-suite bedding conflict, fresh family-review sample, and pre-publication price refresh. |
+| San Diego Mission Bay Resort | Mission Bay pool/wading-pool resort | Already on the stay page; official pool, wading pool, beach, activities, and fee/parking facts create a strong family decision contrast. | `$$$` | Expanded family-review sample, room condition/noise conflicts, exact room-band support, and pre-publication price refresh. |
+| Hyatt Regency Mission Bay Spa and Marina | Pool/waterslide-first Mission Bay stay | Repeatedly appears in family/community discussion; official pages expose waterslide/pool positioning and room amenity details. | `$$-$$$` | Current official parking amount, waterslide height/current hours, recent family-review conflicts, and exact family room category. |
+| Paradise Point Resort & Spa | Stay-put Mission Bay resort | Broad family resort shape: bungalow-style rooms, bay setting, five pools, beach, sport courts, and large property footprint. | `$$-$$$` | Whether the property scale helps or hurts families by age, parking/fee presentation, room-condition conflicts, and pre-publication price refresh. |
+| Catamaran Resort Hotel and Spa | Pacific Beach/bay/beach walkability | Adds a different coastal pattern from Mission Bay resorts: beach/bay access plus Pacific Beach dining/walking tradeoffs. | `$$$` | Room/building condition, noise/crowd exposure, sofa-bed availability, pool/beach practicality, and pre-publication price refresh. |
+| Homewood Suites San Diego Downtown/Bayside | Downtown/Little Italy suite/kitchen base | Already on the stay page; useful contrast for families prioritizing kitchen, breakfast, and urban access over resort feel. | `$$` | Valet friction, breakfast consistency, room noise, exact suite layout, and pre-publication price refresh. |
+| LEGOLAND Hotel or Castle Hotel | LEGOLAND/North County theme-park base | Searchers often need to know when San Diego family lodging should move north for a LEGOLAND-heavy trip. | `package-dependent` | Family total is package-dependent and needs clear distinction between per-person promos, room totals, tickets, and parking. |
+| Loews Coronado Bay Resort | Coronado bay/splurge candidate | Covers the Coronado family-resort lane without defaulting to the more complex Hotel del Coronado product. | `$$-$$$` | Isolation from Coronado village, shuttle reliability, parking/resort fees, pool/beach practicality, recent family reviews, and pre-publication price refresh. |
 
 ## Watchlist
 
@@ -116,5 +116,5 @@ Avoid labels like `best hotel in San Diego`, `safest`, `quietest`, `most strolle
 | LEGOLAND-HOTEL | https://www.legoland.com/california/places-to-stay/legoland-hotel/ | LEGOLAND Hotel breakfast, kid sleeping area, pool, entertainment, and package language. |
 | LEGOLAND-PARKING | https://california-support.legoland.com/hc/en-us/articles/360001573591-Is-parking-included-with-my-stay-at-the-LEGOLAND-California-Hotel-or-Castle-Hotel | LEGOLAND hotel parking facts. |
 | LOEWS-MAIN | https://www.loewshotels.com/coronado-bay-resort | Loews Coronado Bay resort fee, parking, pool, and official hotel facts. |
-| OTA-PRICE-EXAMPLES | Expedia, Hotels.com, KAYAK, Tripadvisor, Travelocity public hotel pages checked 2026-07-18 | Orientation only for the provisional price hypotheses above. `FT-RES-005` must create hotel-specific price source rows before a public page uses price bands. |
-| REVIEW-SOURCES | Booking.com, Tripadvisor, Hotels.com, Expedia public review pages checked 2026-07-18 | Future review-signal collection; paraphrase only, no copied review prose or reviewer identifiers. |
+| OTA-PRICE-EXAMPLES | Expedia, Hotels.com, KAYAK, Tripadvisor, Travelocity public hotel pages checked 2026-07-18 | Orientation only for planning bands. `FT-RES-005` contains hotel-specific price source rows, but publication still requires freshness checks. |
+| REVIEW-SOURCES | Booking.com, Tripadvisor, Hotels.com, Expedia public review pages checked 2026-07-18 | Directional review-signal collection; paraphrase only, no copied review prose or reviewer identifiers. |

@@ -10,7 +10,7 @@ Google is showing Reddit for San Diego family-hotel queries because the thread a
 
 The page should feel calm and clean, not like a giant hotel directory. It should help a parent narrow the choice in two minutes, then expand only if they want the evidence.
 
-The first three-hotel evidence pack was intentionally narrow because it checked claims already present on the San Diego stay page. A standalone hotel-intent page needs more breadth. The next evidence pass should cover about eight primary candidates, with a short watchlist for hotels that may fill gaps later.
+The first three-hotel evidence pack was intentionally narrow because it checked claims already present on the San Diego stay page. A standalone hotel-intent page needs more breadth. `FT-RES-005` expanded the internal pack to eight primary candidates, with a short watchlist for hotels that may fill gaps later.
 
 ## Differentiator
 
@@ -28,7 +28,7 @@ Reddit has messy trust. Hotel blogs have expert voice. OTAs have inventory and r
 
 The first public page should target 6-8 primary hotel cards. Use eight for the research pass so one or two can be dropped without leaving the page thin.
 
-Primary candidates for the next evidence pass:
+Primary candidates now covered by the expanded evidence pack:
 
 | Hotel | Page role |
 |---|---|
@@ -106,7 +106,7 @@ Show this as a rough planning band only. Keep taxes, resort fees, parking, break
 
 ## Review Standard
 
-Recent reviews from families or people traveling with kids are high-value evidence. The next pass should collect two public review sources per primary hotel where feasible, prioritize 2025-2026 visible reviews, and record repeated positives, repeated negatives, conflicts, and the exact parent check each conflict triggers.
+Recent reviews from families or people traveling with kids are high-value evidence. `FT-RES-005` collected directional public review signals for eight candidates; before publication, refresh two public review sources per displayed hotel where feasible, prioritize 2025-2026 visible reviews, and record repeated positives, repeated negatives, conflicts, and the exact parent check each conflict triggers.
 
 Do not copy review text or reviewer identifiers. Do not treat a platform summary as independent verification.
 

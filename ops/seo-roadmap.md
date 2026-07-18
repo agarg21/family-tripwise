@@ -38,7 +38,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 3 | `FT-DEV-003` schema and map-shell prototype | Product | Completed | Review-clean synthetic fixtures validate the data contract and accessible interaction without publishing claims or ingesting real records. |
 | 4 | `FT-RES-004` San Diego family-hotel research engine evidence pack | Content/product quality | Completed | The review-clean three-property pack separates official facts, booking checks, signals, conflicts, unknowns, and publication gates without publishing a hotel page. |
 | 5 | `FT-PLAN-001` clean San Diego family-hotel page brief | Content/product quality | Completed | The review-clean brief widens the candidate set, defines price-band and review-signal standards, and keeps the public page gated. |
-| 6 | `FT-RES-005` expanded San Diego family-hotel evidence pack | Content/product quality | Ready | Expand from the first three hotels to a 6-8 hotel evidence set with approximate price bands and family-review signals. |
+| 6 | `FT-RES-005` expanded San Diego family-hotel evidence pack | Content/product quality | Completed | The review-clean expanded pack covers eight hotels with approximate price bands and family-review signals, while the live page remains gated. |
 | 7 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
@@ -131,6 +131,17 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Independent review: cycle 2 `PASS`; cycle 1 P2 findings for provisional price-band durability, stale exact-booking gate language, and target-path coverage were closed.
 - QA: roadmap JSON validation, native SEO QA, and whitespace checks passed.
 
+### FT-RES-005 — Expanded San Diego family-hotel evidence pack
+
+- Selected: 2026-07-18 by direct manual user instruction after FT-PLAN-001 completed.
+- State: completed and review-clean on 2026-07-18.
+- Research result: the internal evidence pack now covers eight primary candidates: Bahia Resort Hotel, San Diego Mission Bay Resort, Hyatt Regency Mission Bay Spa and Marina, Paradise Point Resort & Spa, Catamaran Resort Hotel and Spa, Homewood Suites San Diego Downtown/Bayside, LEGOLAND Hotel or Castle Hotel, and Loews Coronado Bay Resort.
+- User policy application: exact booking-flow totals are not required for this pass. The pack uses sourced approximate room-night bands or `package-dependent`, keeps taxes, resort fees, parking, breakfast, cancellation, and final all-in totals as booking checks, and treats crib, rollaway, connecting-room, kitchen, laundry, microwave, and mini-fridge facts as useful when visible rather than mandatory.
+- Trust boundary: review and community signals are paraphrased and conflict-aware. No hotel is ranked, no firm family-suitability, safety, quiet-room, route/stroller, or value claim is made, and the public hotel page remains blocked behind freshness checks and release review.
+- Publication boundary: no `site/**`, protected URL, sitemap, robots, indexability, affiliate CTA, external account, indexing request, outreach, deployment, or live hotel page changed.
+- Independent review: cycle 2 `PASS`; cycle 1 P2 for community/source reproducibility was closed by downgrading unsourced hotel-specific community notes to question discovery only and aligning review-signal source wording.
+- QA: roadmap JSON validation, native SEO QA, production SEO QA, and whitespace checks passed. One transient homepage `503` during the first production QA cleared on focused public checks and retry.
+
 ## Daily evidence loop
 
 1. Read the newest dated snapshot under `ops/gsc-snapshots/` and state its collection mode and age.
@@ -150,7 +161,7 @@ Human review remains required for firsthand stay claims, safety assurances, exac
 
 The target experience should borrow Reddit's useful constraint-and-tradeoff feel, but present it as a clean decision page: category-led picks, compact hotel cards, a quiet comparison table, activity-distance bands, current price/fee checks where available, and expandable evidence notes. The page should avoid clutter, generic ranked-list prose, and unsupported `best` claims.
 
-The first standalone hotel page should not stop at the three hotels already named on the current stay page. The next research pass should evaluate about eight primary candidates, then publish only the 6-8 strongest evidence-backed cards. Use sourced approximate nightly room bands rather than exact booking totals unless a stable booking screen is already available. Crib, rollaway, connecting-room, and kitchen details should be captured when visible, but missing optional details become `verify before booking` notes rather than automatic blockers. Recent family-relevant review signals are a core input and must remain paraphrased, bounded, and conflict-aware.
+The first standalone hotel page should not stop at the three hotels already named on the current stay page. `FT-RES-005` now evaluates eight primary candidates; a future live page should publish only the 6-8 strongest evidence-backed cards. Use sourced approximate nightly room bands rather than exact booking totals unless a stable booking screen is already available. Crib, rollaway, connecting-room, and kitchen details should be captured when visible, but missing optional details become `verify before booking` notes rather than automatic blockers. Recent family-relevant review signals are a core input and must remain paraphrased, bounded, and conflict-aware.
 
 ## Expansion Policy
 
