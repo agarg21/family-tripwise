@@ -21,7 +21,7 @@ Before pushing, the operator must:
 3. fetch `origin` and verify that the complete `origin/main..main` range contains only action-recorded, review-clean commits;
 4. stop on remote divergence or ambiguous scope rather than merging or rebasing unattended.
 
-Independent subagent review does not satisfy the separate human review required for firm hotel, area, safety, transit/stroller, or material family-suitability claims. Such a release is autonomous only when it does not introduce or materially change those firm claims, or when durable evidence records the completed human review.
+Independent subagent review does not satisfy the separate human review required for firsthand experience, safety assurances, exact route/stroller practicality, or material family-suitability claims that cannot be supported from the research record. Researched hotel and area guidance may be released autonomously only when durable evidence records source coverage, review-signal handling, freshness, uncertainty labels, and the absence of unsupported personal-experience claims.
 
 After reviewer consensus and before commit, the operator may append only mechanical evidence already available from immutable pre-commit results, such as the review verdict, timestamps, and QA results. Any subsequent product, content, code, configuration, or judgment change requires re-review. Commit SHA, workflow run ID, deployment URL, and production results are recorded centrally after release rather than backfilled into the same site-repository commit.
 

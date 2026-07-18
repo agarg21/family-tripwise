@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-16
+Last updated: 2026-07-18
 
 Last re-scored: 2026-07-14
 Next re-score due: 2026-07-21
@@ -15,11 +15,11 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-16.json`.
-- Classification on July 16: fresh authenticated read-only Search Console API evidence, collected July 16 with finalized performance data through July 14.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-18.json`.
+- Classification on July 18: fresh authenticated read-only Search Console API evidence, collected July 18 with finalized performance data through July 16.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
-- Protected query analysis remains not configured, so this snapshot does not satisfy the separate `FT-EVAL-001` query-evidence requirement.
+- Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet, so this snapshot does not satisfy the separate `FT-EVAL-001` query-evidence requirement.
 
 ## Maintenance cadence
 
@@ -37,6 +37,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 2 | `FT-RES-003` source and license audit | Authority/product evidence | Completed | All 13 anchors have official coverage, but real downloadable records remain blocked by unresolved structured-reuse and human-review gates. |
 | 3 | `FT-DEV-003` schema and map-shell prototype | Product | Completed | Review-clean synthetic fixtures validate the data contract and accessible interaction without publishing claims or ingesting real records. |
 | 4 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
+| 5 | `FT-RES-004` San Diego family-hotel research engine evidence pack | Content/product quality | Ready | User approved moving from a blanket hotel-review blocker to a documented research workflow; research can proceed without editing protected URLs or publishing a hotel page. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -115,6 +116,12 @@ Ready does not mean all items should ship immediately. The operator selects one 
 4. Select the highest-value eligible roadmap item; do not invent work when the queue or evidence does not support it.
 5. Implement, independently review, commit, push, and verify within the standing policy.
 6. Record evidence and update the selected roadmap item.
+
+## Hotel Research Policy
+
+Hotel pages no longer require firsthand human review for every research-based claim. They do require the documented hotel research engine in `docs/plan/hotel-research-engine.md`: official property facts, current booking checks, review/community-signal summaries, contradictions, freshness, uncertainty labels, and clear separation between research-based guidance and personally verified experience.
+
+Human review remains required for firsthand stay claims, safety assurances, exact route/stroller practicality verdicts, room-selection advice that materially affects booking, and any firm family-suitability conclusion that the research record cannot support.
 
 ## Data boundary
 

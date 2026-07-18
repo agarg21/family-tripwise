@@ -1,0 +1,66 @@
+name: Export Protected GSC Query Rows
+
+on:
+  workflow_dispatch:
+    inputs:
+      page_url:
+        description: "Optional exact page URL to export query rows for"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gsc-query-export
+  cancel-in-progress: false
+
+jobs:
+  query-export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate GSC collectors
+        run: node --test tools/gsc-snapshot.test.mjs tools/gsc-query-export.test.mjs
+
+      - name: Collect protected query export
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          FTW_GSC_QUERY_EXPORT_DIR: ${{ runner.temp }}/family-tripwise-protected-gsc-query-exports
+          FTW_GSC_QUERY_PAGE: ${{ inputs.page_url }}
+        run: node tools/gsc-query-export.mjs
+
+      - name: Encrypt protected query export
+        env:
+          FTW_GSC_QUERY_EXPORT_DIR: ${{ runner.temp }}/family-tripwise-protected-gsc-query-exports
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=("$FTW_GSC_QUERY_EXPORT_DIR"/*.json)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No protected query export JSON file found." >&2
+            exit 1
+          fi
+          for file in "${files[@]}"; do
+            openssl cms -encrypt -aes256 -binary -outform DER \
+              -in "$file" \
+              -out "$file.cms" \
+              ops/gsc-query-export-recipient.pem
+            rm -- "$file"
+          done
+
+      - name: Upload encrypted query export artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: family-tripwise-encrypted-gsc-query-export
+          path: ${{ runner.temp }}/family-tripwise-protected-gsc-query-exports/*.json.cms
+          if-no-files-found: error
+          retention-days: 7

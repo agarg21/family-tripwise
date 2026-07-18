@@ -13,6 +13,8 @@ The repository is public. Snapshots may contain:
 
 Snapshots must not contain credentials, tokens, service-account JSON, complete raw query exports, country/device rows, user data, or indexing-request mutations.
 
+Complete page-query exports use the protected path documented in `docs/plan/protected-gsc-query-export.md`; they must remain encrypted in GitHub artifacts and decrypted only into the central operator state outside this public repository.
+
 The daily GitHub workflow writes `YYYY-MM-DD.json` and `YYYY-MM-DD.md`. If more than one run occurs on the same day, the latest successful run replaces that day's files so Git history records the change.
 
 ## Authentication

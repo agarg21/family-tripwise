@@ -74,6 +74,16 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-18 — protected GSC query export and hotel research policy review
+
+**Result: `PASS`**
+
+Reviewed the protected GSC query export tool/workflow, encrypted artifact boundary, recipient certificate, decrypt-only-to-central-state documentation, and hotel research engine policy update. The workflow uses the existing read-only GSC service-account secret, keeps GitHub permissions at `contents: read`, writes plaintext only to runner temp, encrypts exports with `ops/gsc-query-export-recipient.pem`, deletes plaintext JSON before upload, and uploads only `.json.cms` artifacts. The private decryption key remains outside the repository, and decrypted exports are documented to land only in the central operator state outside this public repo.
+
+No credentials, private key, tokens, raw/decrypted query exports, country/device rows, user data, `site/**`, sitemap, robots, canonical, indexability, Pages deploy workflow, or production publishing path changed. The hotel policy permits research-based hotel and area guidance only with durable evidence records, freshness/source labels, uncertainty handling, and clear separation from personally verified experience; human review remains required for firsthand experience, safety assurances, exact route/stroller practicality, material room-selection advice, and unsupported firm family-suitability claims.
+
+Validation: `ops/seo-roadmap.json` parsed successfully; `git diff --check` passed; `node --test tools/gsc-query-export.test.mjs tools/gsc-snapshot.test.mjs` passed 15/15; `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; local CMS encryption/decryption roundtrip passed.
+
 ### 2026-07-17 — `FT-DEV-003` review cycle 1
 
 **Result: `CHANGES_REQUIRED`**

@@ -44,14 +44,16 @@ Current measured signal:
 
 ### SRR-005: San Diego Hotel Page Feasibility Review
 
-Status: pending
+Status: ready
 
-Recommendation label: `ask user`
+Recommendation label: `research`
 
-Evaluate whether to create `best family hotels in San Diego` only after:
+Create an internal San Diego family-hotel evidence pack before publishing `best family hotels in San Diego`.
 
-- the user confirms a human-review path for hotel recommendations, fees, room policies, pool notes, parking, crib/rollaway notes, and noise/location caveats;
-- hotel data can be sourced from official property pages or another auditable source;
+- Apply the research workflow in `docs/plan/hotel-research-engine.md`;
+- source hotel data from official property pages, current booking checks, review/community signal summaries, and other auditable sources where useful;
+- label claims as official fact, research-based, review-signal-derived, model-derived, or human-verified;
+- keep firsthand, safety, exact stroller/route practicality, room-selection, and unsupported family-suitability verdicts human-reviewed or explicitly unknown;
 - the current San Diego where-to-stay page remains the canonical area decision page.
 
 ## Done

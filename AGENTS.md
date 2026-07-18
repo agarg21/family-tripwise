@@ -16,7 +16,8 @@ This repository is for building a family travel planning site and AI product. Th
   - London UK and London Ontario must be disambiguated.
   - Paris France and Paris TX must be disambiguated.
 - Prefer interactive tools, tables, maps, filters, and decision flows over long static copy.
-- Human review is required for hotel recommendations, area recommendations, safety notes, transit/stroller advice, and any claims that could materially affect a family trip.
+- Hotel, area, transit/stroller, and family-fit guidance may be published from a documented high-quality research workflow when claims are clearly labeled as research-based, source-backed, date-stamped, and uncertainty-aware.
+- Human review is still required before publishing any personally verified experience, safety assurance, exact route/stroller practicality verdict, or firm family-suitability claim that the research record cannot independently support.
 
 ## SEO Rules
 
@@ -44,8 +45,9 @@ This repository is for building a family travel planning site and AI product. Th
   - Rainy-day backup planner
   - Map export
   - Packing list by season and child age
-- Do not present AI output as personally verified experience unless a human has reviewed or supplied the experience.
-- Label estimated or model-derived scores clearly.
+- Do not present AI output or desk research as personally verified experience unless a human has reviewed or supplied the experience.
+- Label estimated, model-derived, review-signal-derived, and research-based scores clearly.
+- Hotel shortlists must keep a durable evidence record covering official property facts, current booking/fee checks, review-signal themes, conflicting reports, freshness, and unresolved unknowns.
 
 ## Repository Conventions
 
@@ -69,7 +71,7 @@ This repository is for building a family travel planning site and AI product. Th
 - Preserve pre-existing dirty files and inspect the diff before and after changes. Family Tripwise has standing authorization for direct-`main` push and continuous deployment only under the release gate below.
 - Implement an approved operator experiment in this repository or an isolated worktree, then run the native QA commands before deployment.
 - Every operator implementation must be reviewed by an independent reviewer subagent in the same run and recorded in `ops/operator-review.md` before it is considered complete.
-- Independent subagent review is a code-and-policy quality gate, not a substitute for the human review required by the Operating Principles. An autonomous release may not introduce or materially change a firm human-gated claim unless durable evidence records the completed human review; drafts must remain clearly non-firm and outside the live site.
+- Independent subagent review is a code-and-policy quality gate, not a substitute for completed human review where the Operating Principles still require it. An autonomous release may introduce researched hotel or area guidance only when durable evidence records source coverage, uncertainty handling, freshness, and claim labels; drafts with unsupported firm claims must remain clearly non-firm and outside the live site.
 - The implementation operator must address P0-P2 findings and request re-review, for at most three review cycles. It may commit only after `PASS` or `PASS_WITH_P3`, green QA, and exact-path staging.
 - After reviewer consensus and before commit, only mechanical evidence already available from immutable pre-commit outputs may be appended without another review (for example review verdict, timestamps, and QA results). Revalidate the final path list and diff; any product, content, code, configuration, or judgment change requires re-review. Record the later commit SHA, workflow run, deployment URL, and production results centrally after release; do not amend or add a site-repository commit solely to backfill them.
 - Commits, direct pushes to `main`, and GitHub Pages deployment are authorized after review consensus, green QA, exact-path staging, and verification that every unpushed commit is action-recorded and review-clean.

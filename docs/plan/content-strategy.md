@@ -23,7 +23,7 @@ Build destination clusters, not isolated articles. Each destination should becom
 |---|---|---|---|
 | `/things-to-do/{destination}-with-kids` | Activity planning | Tickets, tours, attractions | Age filters, map, rainy-day toggle |
 | `/where-to-stay/{destination}-with-kids` | Lodging decision | Hotels, apartments, affiliate | Area recommender |
-| `/best-family-hotels/{destination}` | Commercial hotel selection | Hotel affiliate | Review summarizer, amenity comparison |
+| `/best-family-hotels/{destination}` | Commercial hotel selection | Hotel affiliate | Research-backed hotel evidence engine, review-signal summary, amenity comparison |
 | `/family-itinerary/{destination}` | Trip planning | Tours, hotels, paid planner | Nap-friendly itinerary builder |
 | `/{destination}-with-toddlers` | Age-specific planning | Hotels, attractions | Stroller and nap constraints |
 | `/{destination}-with-teens` | Age-specific planning | Activities, tours | Interest-based itinerary |
@@ -77,7 +77,7 @@ Each page should include:
 - Map-ready structured data.
 - Parent-specific caveats.
 - Internal links to related destination pages.
-- Human-reviewed recommendations where material.
+- Research-backed recommendations with clear evidence labels; human-reviewed recommendations where direct experience, safety, route/stroller practicality, or unsupported family-suitability claims are material.
 
 ## Internal Linking
 
@@ -89,3 +89,4 @@ Each destination cluster should link:
 - Toddler/teen pages to activities and itinerary pages.
 - Destination pages to similar destinations by trip type.
 
+Standalone family-hotel pages may launch before firsthand hotel stays only when they follow `docs/plan/hotel-research-engine.md`: source-backed records, visible uncertainty, review-signal summaries, current booking checks, and no unsupported personal-experience or safety claims.

@@ -292,6 +292,31 @@
       ],
       "success_signal": "Fresh query/page and indexing evidence is compared with the July 13 baseline and results in a keep, iterate, or stop decision without overstating causality.",
       "notes": "Eligible on or after 2026-07-27."
+    },
+    {
+      "id": "FT-RES-004",
+      "title": "Create the San Diego family-hotel research engine evidence pack",
+      "kind": "research",
+      "lane": "content-and-product-quality",
+      "status": "ready",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/san-diego-family-hotel-evidence-pack.md",
+        "docs/plan/hotel-research-engine.md",
+        "backlog/seo-research-review-backlog.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "An internal evidence pack defines San Diego family hotel candidates, family decision criteria, official source facts, booking checks, review/community-signal themes, conflicts, unknowns, and publication-ready claim labels without publishing a new hotel page.",
+      "notes": "User approved replacing the blanket hotel human-review blocker with a high-quality research workflow on 2026-07-18. This action is research-only: do not publish a standalone hotel page, add hotel affiliate CTAs, copy review text, scrape prohibited sources, request indexing, or make safety/firsthand/family-suitability claims as verified."
     }
   ]
 }
