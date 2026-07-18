@@ -416,7 +416,7 @@ function stayPage(city) {
   const l = links(city);
   const isSanDiego = city.slug === "san-diego";
   const hotelShortlistLink = isSanDiego
-    ? '<a href="../where-to-stay/san-diego-family-hotels.html">8 researched hotel candidates</a>'
+    ? '<a href="../where-to-stay/san-diego-family-hotels.html">8 family hotel options</a>'
     : "Parking, pool, breakfast, room size";
   const rows = city.areas.map(([area, best, watch, fit]) => `            <div class="table-row" role="row">
               <span role="cell">${esc(area)}</span>
@@ -625,7 +625,7 @@ function sanDiegoFamilyHotelPage() {
   const itemListJson = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "San Diego researched family hotel candidates",
+    name: "San Diego family hotel options",
     itemListElement: hotels.map((hotel, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -669,13 +669,13 @@ function sanDiegoFamilyHotelPage() {
       <section class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
-          <h1>Family hotels in San Diego: 8 researched candidates to compare</h1>
-          <p>Use this as a clean shortlist, not a ranking. Compare room setup, pool or bay value, breakfast and kitchen needs, parking, fees, review-signal conflicts, and what to verify before booking.</p>
+          <h1>Family hotels in San Diego: 8 options to compare</h1>
+          <p>Use this as a clean shortlist, not a ranking. Compare room setup, pool or bay value, breakfast and kitchen needs, parking, fees, recent review patterns, and what to confirm before booking.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Last updated:</strong> July 18, 2026</p>
-        <p><strong>Evidence status:</strong> Research-based and source-dated. Family Tripwise has not personally stayed at these hotels. Exact safety, quiet-room, stroller-route, water-suitability, room-selection, cancellation, and final-value claims remain verify-before-booking or human-review-gated.</p>
+        <p><strong>Last checked:</strong> July 18, 2026</p>
+        <p>This guide combines hotel facts, public review patterns, and family planning checks. Hotel policies and fees change often, so confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms before booking.</p>
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
@@ -692,7 +692,7 @@ function sanDiegoFamilyHotelPage() {
             <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
           </div>
           <dl class="snapshot">
-            <div><dt>Hotels covered</dt><dd>8 researched candidates</dd></div>
+            <div><dt>Hotels covered</dt><dd>8 options</dd></div>
             <div><dt>Price format</dt><dd>Rough room-night band, not a quote</dd></div>
             <div><dt>Review signal</dt><dd>Paraphrased public themes only</dd></div>
             <div><dt>Release boundary</dt><dd>No booking links or booking promises</dd></div>
@@ -735,7 +735,7 @@ ${comparisonRows}
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Hotel cards</p>
-          <h2>Eight candidates, with the caveats visible</h2>
+          <h2>Eight options, with the useful checks up front</h2>
         </div>
         <div class="detail-card-grid hotel-card-grid">
 ${hotelCards}
@@ -746,13 +746,13 @@ ${hotelCards}
           <div>
             <p class="eyebrow">Method</p>
             <h2>How to use this page</h2>
-            <p>Use the cards to reduce the list, then open the official room, FAQ, amenities, fee, and booking pages for the exact dates. Public reviews are useful for repeated positives and conflicts, but they do not prove that your assigned room will be quiet, clean, close to the pool, or good value.</p>
-            <p>Community/forum discussion was used as question discovery for this research cycle, not as hotel-specific proof. If a future page uses a public thread as a material signal, it needs an exact source row and a bounded claim.</p>
+            <p>Use the cards to reduce the list, then open the official room, FAQ, amenities, fee, and booking pages for your exact dates. Public reviews are useful for repeated positives and conflicts, but room assignment, noise, service, and total value can vary by stay.</p>
+            <p>We separate hotel facts from stay-dependent judgment. That is why this page points out what to compare, what families often care about, and what should still be confirmed before paying.</p>
           </div>
           <dl class="snapshot">
             <div><dt>Always verify</dt><dd>Room, total, fees, cancellation</dd></div>
             <div><dt>Ask if crucial</dt><dd>Crib, rollaway, connecting room</dd></div>
-            <div><dt>Human-gated</dt><dd>Safety, quiet, exact routes</dd></div>
+            <div><dt>Stay-dependent</dt><dd>Safety, quiet, exact routes</dd></div>
             <div><dt>Useful next step</dt><dd><a href="../family-itinerary/san-diego-with-kids.html">Match hotel to itinerary</a></dd></div>
           </dl>
         </div>
@@ -774,8 +774,8 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
     </main>`;
 
   return pageShell({
-    title: "Family Hotels in San Diego: 8 Researched Candidates to Compare",
-    description: "Compare San Diego family hotel candidates by room setup, pool and bay value, price bands, parking, fees, breakfast, kitchen needs, review signals, and booking checks.",
+    title: "Family Hotels in San Diego: 8 Options to Compare",
+    description: "Compare San Diego family hotels by room setup, pool and bay value, price bands, parking, fees, breakfast, kitchen needs, review signals, and booking checks.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
   });
@@ -1117,7 +1117,7 @@ ${cities.map((city) => `          <article class="activity-card">
           <article class="activity-card">
             <h3>San Diego family stay planning</h3>
             <p>Use San Diego when the main question is family-friendly hotels, pool value, Mission Bay vs Downtown, zoo drives, beach access, parking, and whether a hotel can support naps and early bedtimes.</p>
-            <p><a class="text-link" href="./where-to-stay/san-diego-family-hotels.html">Compare researched San Diego family hotels</a></p>
+            <p><a class="text-link" href="./where-to-stay/san-diego-family-hotels.html">Compare San Diego family hotels</a></p>
             <p><a class="text-link" href="./where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas</a></p>
           </article>
           <article class="activity-card">

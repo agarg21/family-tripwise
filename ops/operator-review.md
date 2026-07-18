@@ -109,6 +109,31 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-18 — San Diego hotel page tone polish review cycles 1-2
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual live-copy polish for the San Diego family-hotel page after user feedback that the public page sounded defensive and exposed internal trust language.
+- The change is confined to the San Diego hotel page, generated source, two internal link labels, and the focused page test. It removes user-facing phrases such as `researched candidates`, `Evidence status`, `Research-based and source-dated`, and `human-review-gated`.
+- The revised page keeps useful transparency with `Last checked`, a plain-language note about hotel facts, public review patterns, and booking-time confirmation, plus method/source sections and no affiliate, booking, ordinal-ranking, firsthand-stay, safety, quiet-room, stroller-route, or exact-value guarantees.
+
+Prior-finding verification:
+
+- Cycle 1 returned `PASS_WITH_P3`; the only content nit was that `8 good options` sounded slightly more endorsing than needed, and the focused test still used `hotel candidates` in one test name.
+- Cycle 2 returned `PASS`; the title/H1 now say `8 options to compare`, generator and generated HTML match, and the focused test says `hotel options`.
+
+QA evidence:
+
+- `node --test tools/san-diego-family-hotels-page.test.mjs` passed 3/3.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings.
+- `git diff --check` passed.
+
+Findings:
+
+- None (`P0`-`P3`).
+
 ### 2026-07-16 — `FT-AUTH-001` review cycle 1
 
 **Result: `CHANGES_REQUIRED`**

@@ -8,18 +8,18 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const pagePath = join(root, "site", "where-to-stay", "san-diego-family-hotels.html");
 const html = readFileSync(pagePath, "utf8");
 
-test("publishes the San Diego family hotel page as an indexable researched shortlist", () => {
+test("publishes the San Diego family hotel page as an indexable comparison guide", () => {
   const sitemap = readFileSync(join(root, "site", "sitemap.xml"), "utf8");
 
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name=["']robots["'][^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html/g) || []).length, 1);
-  assert.match(html, /Last updated:<\/strong> July 18, 2026/);
-  assert.match(html, /Research-based and source-dated/);
-  assert.match(html, /Family Tripwise has not personally stayed at these hotels/);
+  assert.match(html, /Last checked:<\/strong> July 18, 2026/);
+  assert.match(html, /hotel facts, public review patterns, and family planning checks/);
+  assert.match(html, /confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms/i);
 });
 
-test("covers eight named hotel candidates with booking-time caveats", () => {
+test("covers eight named hotel options with booking-time caveats", () => {
   const hotelNames = [
     "Bahia Resort Hotel",
     "San Diego Mission Bay Resort",
@@ -46,6 +46,7 @@ test("avoids affiliate, ordinal ranking, and unsupported trust-sensitive claims"
   assert.doesNotMatch(html, /affiliate/i);
   assert.doesNotMatch(html, /#1|No\. 1|number one/i);
   assert.doesNotMatch(html, /safest hotel|quietest hotel|guaranteed family|personally verified/i);
+  assert.doesNotMatch(html, /human-review-gated|Evidence status|researched candidates|Research-based and source-dated/i);
   assert.doesNotMatch(html, /book now|reserve now|get deal|check availability/i);
   assert.match(html, /Use this as a clean shortlist, not a ranking/);
 });
