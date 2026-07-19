@@ -109,6 +109,28 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-18 — Manual San Diego family hotels schematic map POC review cycle 1
+
+**Result: `PASS_WITH_P3`**
+
+Scope and safety evidence:
+
+- Reviewed the manual live-page diff for the San Diego family hotels map POC. The code/content change is confined to `tools/generate-pages.mjs`, `site/styles.css`, `tools/san-diego-family-hotels-page.test.mjs`, and the generated `site/where-to-stay/san-diego-family-hotels.html`.
+- The page now uses repo-native SVG/HTML/CSS for a San Diego-specific schematic clustering map with eight hotel markers and seven kid-anchor markers. It does not add an iframe, Google Maps Embed API, `maps.googleapis.com`, API key dependency, affiliate link, booking CTA, or booking promise.
+- The map copy explicitly says it is schematic clustering, not exact routing. Existing Google Maps search links remain ordinary outbound search links for user verification.
+
+QA evidence:
+
+- `node --test tools/san-diego-family-hotels-page.test.mjs` passed 4/4.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 23 sitemap URLs and 26 HTML files.
+- `git diff --check` passed.
+- Local browser visual QA checked the schematic map on desktop and mobile. The final mobile viewport had no horizontal overflow and kept labels/markers legible after responsive marker and label polish.
+
+Findings:
+
+1. `P3` — Marker aria labels read awkwardly for hotels, for example “Open Bahia Resort Hotel hotel in Google Maps.” This is minor accessibility copy polish and does not block release.
+2. `P3` — Some marker clusters remain tight on mobile, especially the Mission Bay and downtown/Balboa/Coronado areas. The legend and offsets keep the POC usable, but later iterations could add smarter collision handling.
+
 ### 2026-07-18 — San Diego hotel page headline review cycle 1
 
 **Result: `PASS`**

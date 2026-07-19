@@ -43,12 +43,30 @@ test("covers eight named hotel options with dollar ranges and map links", () => 
 
   assert.match(html, /Rough nightly range, not a quote/);
   assert.match(html, /final all-in totals/);
-  assert.match(html, /Open the hotels and kid anchors in Google Maps/);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=San%20Diego%20Zoo/);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /Verify before booking/);
   assert.match(html, /Crib, rollaway, connecting room/);
   assert.match(html, /Safety, quiet, exact routes/);
+});
+
+test("renders a San Diego-specific native schematic map without a Google embed dependency", () => {
+  assert.match(html, /class="san-diego-schematic-map"/);
+  assert.match(html, /Schematic map for clustering, not exact routing/);
+  assert.match(html, /North County \/ LEGOLAND/);
+  assert.match(html, /Mission Bay/);
+  assert.match(html, /La Jolla/);
+  assert.match(html, /Downtown/);
+  assert.match(html, /Coronado/);
+
+  for (const label of ["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "A1", "A2", "A3", "A4", "A5", "A6", "A7"]) {
+    assert.match(html, new RegExp(`>${label}<`));
+  }
+
+  assert.equal((html.match(/class="schematic-marker hotel-marker"/g) || []).length, 8);
+  assert.equal((html.match(/class="schematic-marker anchor-marker"/g) || []).length, 7);
+  assert.doesNotMatch(html, /<iframe/i);
+  assert.doesNotMatch(html, /maps\.googleapis\.com|google\.com\/maps\/embed/i);
 });
 
 test("avoids affiliate, ordinal ranking, generic tradeoff blocks, and unsupported claims", () => {

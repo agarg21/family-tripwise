@@ -486,6 +486,9 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Family positives around bay, pool, location, and staff; conflicts around room age, cleanliness, and room-to-room variability.",
     parentCheck: "Verify Family Suite availability, exact bedding, room condition, crib/rollaway policy, total price, room location, and current pool/beach operations.",
     mapQuery: "Bahia Resort Hotel San Diego",
+    mapLabel: "H1",
+    mapX: 33,
+    mapY: 52,
     sources: ["BAH-1", "BAH-2", "BAH-P", "BAH-R"]
   },
   {
@@ -500,6 +503,9 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Pool and bay positives, with conflicts around crowding, comfort, maintenance, room condition, and room-location/noise variability.",
     parentCheck: "Verify exact room/floor access, total price with parking, current pool/wading-pool operations, activity calendar, bedding requests, and cancellation terms.",
     mapQuery: "San Diego Mission Bay Resort",
+    mapLabel: "H2",
+    mapX: 42,
+    mapY: 50,
     sources: ["MBR-1", "MBR-2", "MBR-P", "MBR-R"]
   },
   {
@@ -514,6 +520,9 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Waterslide, pool, location, suite/space, and kid-enjoyment positives; conflicts around fees, parking friction, room/value variability, and immediate-area walkability.",
     parentCheck: "Verify current parking cost, waterslide height/hour rules, exact suite or room bedding, final total, cancellation, and room location relative to pool/elevator/event areas.",
     mapQuery: "Hyatt Regency Mission Bay Spa and Marina",
+    mapLabel: "H3",
+    mapX: 29,
+    mapY: 55,
     sources: ["HY-1", "HY-2", "HY-3", "HY-P", "HY-R"]
   },
   {
@@ -528,6 +537,9 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Family orientation, multiple pools, spacious rooms, beach access, and resort-village positives; conflicts around total price, amenity value, property scale, and room condition.",
     parentCheck: "Verify room location, total with parking, current pool/restaurant/activity operations, walking distance from assigned room to meals, and room condition/renovation status.",
     mapQuery: "Paradise Point Resort San Diego",
+    mapLabel: "H4",
+    mapX: 32,
+    mapY: 46,
     sources: ["PP-1", "PP-P", "PP-R"]
   },
   {
@@ -542,6 +554,9 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Bay/beach location, Pacific Beach convenience, pool/arcade, tropical grounds, and family beach practicality positives; conflicts around older rooms, mustiness, pool size, and resort-value expectations.",
     parentCheck: "Verify exact room/building/renovation status, parking, room layout, sofa-bed availability, crib/rollaway handling, pool/beach operations, noise exposure, and final total.",
     mapQuery: "Catamaran Resort Hotel and Spa San Diego",
+    mapLabel: "H5",
+    mapX: 28,
+    mapY: 39,
     sources: ["CAT-1", "CAT-2", "CAT-P", "CAT-R"]
   },
   {
@@ -556,6 +571,9 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Suite, breakfast, location, pool/workout area, and family-friendly lobby positives; conflicts around valet cost, breakfast consistency, parking friction, noise, and maintenance.",
     parentCheck: "Verify exact suite layout, occupancy, final total with valet, breakfast hours/menu, pool availability, valet wait/oversize rules, routes to first activities, and room-noise request.",
     mapQuery: "Homewood Suites San Diego Downtown Bayside",
+    mapLabel: "H6",
+    mapX: 55,
+    mapY: 62,
     sources: ["HWS-1", "HWS-P", "HWS-R"]
   },
   {
@@ -570,6 +588,9 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Child-theme, bunk/kids sleeping areas, breakfast convenience, activities, and park proximity positives; conflicts around value, parking cost, food quality, and whether more than one or two nights is worth it.",
     parentCheck: "Compare room-total versus package-per-person total, tickets, parking, exact capacity, breakfast crowding, pool hours, early-access rules, cancellation, and whether North County fits the rest of the itinerary.",
     mapQuery: "LEGOLAND Hotel California Carlsbad",
+    mapLabel: "H7",
+    mapX: 38,
+    mapY: 13,
     sources: ["LEG-1", "LEG-2", "LEG-P", "LEG-R"]
   },
   {
@@ -584,18 +605,21 @@ const sanDiegoFamilyHotels = [
     reviewSignal: "Pool, service, family amenities, toddler/family pool enjoyment, children's pool, crib, laundry, and supervised-activity positives; conflicts around isolation, parking/fees, and property condition.",
     parentCheck: "Verify final total with parking, shuttle hours/reservation process, room/suite layout, pool/kids-program status, driving plan, and whether isolation helps or hurts the family.",
     mapQuery: "Loews Coronado Bay Resort",
+    mapLabel: "H8",
+    mapX: 62,
+    mapY: 78,
     sources: ["LOEWS-1", "LOEWS-P", "LOEWS-R"]
   }
 ];
 
-const sanDiegoKidsMapLinks = [
-  ["San Diego Zoo", "San Diego Zoo"],
-  ["Balboa Park", "Balboa Park San Diego"],
-  ["Mission Bay", "Mission Bay San Diego"],
-  ["Birch Aquarium", "Birch Aquarium at Scripps"],
-  ["La Jolla Cove", "La Jolla Cove"],
-  ["Coronado Ferry Landing", "Coronado Ferry Landing"],
-  ["LEGOLAND California", "LEGOLAND California"]
+const sanDiegoKidsMapPoints = [
+  { label: "A1", name: "San Diego Zoo", area: "Balboa Park", mapQuery: "San Diego Zoo", mapX: 57, mapY: 57 },
+  { label: "A2", name: "Balboa Park", area: "Central San Diego", mapQuery: "Balboa Park San Diego", mapX: 61, mapY: 55 },
+  { label: "A3", name: "Mission Bay", area: "Mission Bay", mapQuery: "Mission Bay San Diego", mapX: 41, mapY: 44 },
+  { label: "A4", name: "Birch Aquarium", area: "La Jolla", mapQuery: "Birch Aquarium at Scripps", mapX: 22, mapY: 29 },
+  { label: "A5", name: "La Jolla Cove", area: "La Jolla", mapQuery: "La Jolla Cove", mapX: 20, mapY: 34 },
+  { label: "A6", name: "Coronado Ferry Landing", area: "Coronado", mapQuery: "Coronado Ferry Landing", mapX: 60, mapY: 67 },
+  { label: "A7", name: "LEGOLAND California", area: "Carlsbad", mapQuery: "LEGOLAND California", mapX: 47, mapY: 9 }
 ];
 
 const sanDiegoHotelSources = [
@@ -616,6 +640,17 @@ const sanDiegoHotelSources = [
 
 function googleMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query)}`;
+}
+
+function mapMarker(point, type) {
+  const markerClass = type === "hotel" ? "hotel-marker" : "anchor-marker";
+  const kind = type === "hotel" ? "hotel" : "kid anchor";
+  return `<a class="schematic-marker ${markerClass}" style="left: ${point.mapX}%; top: ${point.mapY}%;" href="${googleMapsUrl(point.mapQuery)}" aria-label="Open ${esc(point.name)} ${kind} in Google Maps"><span>${esc(point.mapLabel || point.label)}</span></a>`;
+}
+
+function mapLegendItem(point, type) {
+  const label = point.mapLabel || point.label;
+  return `              <li><span class="legend-token ${type}-token">${esc(label)}</span><a href="${googleMapsUrl(point.mapQuery)}">${esc(point.name)}</a><em>${esc(point.area)}</em></li>`;
 }
 
 function sanDiegoFamilyHotelPage() {
@@ -644,8 +679,10 @@ function sanDiegoFamilyHotelPage() {
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
 
-  const hotelMapLinks = hotels.map((hotel) => `          <li><a href="${googleMapsUrl(hotel.mapQuery)}">${esc(hotel.name)}</a></li>`).join("\n");
-  const kidsMapLinks = sanDiegoKidsMapLinks.map(([label, query]) => `          <li><a href="${googleMapsUrl(query)}">${esc(label)}</a></li>`).join("\n");
+  const hotelMapMarkers = hotels.map((hotel) => mapMarker(hotel, "hotel")).join("\n");
+  const kidsMapMarkers = sanDiegoKidsMapPoints.map((point) => mapMarker(point, "anchor")).join("\n");
+  const hotelMapLegend = hotels.map((hotel) => mapLegendItem(hotel, "hotel")).join("\n");
+  const kidsMapLegend = sanDiegoKidsMapPoints.map((point) => mapLegendItem(point, "anchor")).join("\n");
 
   const itemListJson = {
     "@context": "https://schema.org",
@@ -760,23 +797,42 @@ ${comparisonRows}
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Map check</p>
-          <h2>Open the hotels and kid anchors in Google Maps</h2>
+          <h2>See how the hotel clusters line up with kid anchors</h2>
         </div>
-        <div class="map-link-layout">
+        <div class="schematic-map-panel">
+          <div class="san-diego-schematic-map" role="img" aria-label="Schematic San Diego map showing family hotel options and kid activity anchors">
+            <svg class="schematic-map-art" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <rect class="map-water" width="100" height="100"></rect>
+              <path class="map-land" d="M42 0H100V100H57C59 88 51 80 54 70C57 59 48 52 50 42C53 28 42 17 42 0Z"></path>
+              <path class="map-bay" d="M28 42C38 35 49 41 48 51C47 61 35 62 29 55C24 50 23 46 28 42Z"></path>
+              <path class="map-coast" d="M43 0C43 15 53 28 50 42C48 52 57 59 54 70C51 80 59 88 57 100"></path>
+              <path class="map-route" d="M45 1C47 15 52 25 56 36C60 49 62 62 61 78C60 88 62 95 65 100"></path>
+              <path class="map-route map-route-secondary" d="M24 35C33 42 42 48 55 59C60 63 65 69 69 76"></path>
+            </svg>
+            <span class="map-area-label north-county-label">North County / LEGOLAND</span>
+            <span class="map-area-label la-jolla-label">La Jolla</span>
+            <span class="map-area-label mission-bay-label">Mission Bay</span>
+            <span class="map-area-label downtown-label">Downtown</span>
+            <span class="map-area-label coronado-label">Coronado</span>
+${hotelMapMarkers}
+${kidsMapMarkers}
+          </div>
+          <p class="review-label">Schematic map for clustering, not exact routing. Open any marker in Google Maps to sanity-check drive time, parking, shuttle timing, stroller practicality, and beach routes for your dates.</p>
+        </div>
+        <div class="map-link-layout map-legend-layout">
           <article class="detail-card">
             <h3>Hotels</h3>
-            <ul class="map-link-list">
-${hotelMapLinks}
+            <ul class="map-link-list map-legend-list">
+${hotelMapLegend}
             </ul>
           </article>
           <article class="detail-card">
             <h3>Kid anchors</h3>
-            <ul class="map-link-list">
-${kidsMapLinks}
+            <ul class="map-link-list map-legend-list">
+${kidsMapLegend}
             </ul>
           </article>
         </div>
-        <p class="review-label">Use these links to sanity-check drive distance and clustering. Traffic, parking, shuttle timing, stroller practicality, and beach routes can change by day and exact room location.</p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
