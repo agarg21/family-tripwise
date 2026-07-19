@@ -14,6 +14,8 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name=["']robots["'][^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html/g) || []).length, 1);
+  assert.match(html, /<title>Top Family Hotels in San Diego: 8 Options by Trip Style<\/title>/);
+  assert.match(html, /<h1>Top Family Hotels in San Diego: 8 Options by Trip Style<\/h1>/);
   assert.match(html, /Last checked:<\/strong> July 18, 2026/);
   assert.match(html, /hotel facts, public review patterns, and family planning checks/);
   assert.match(html, /confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms/i);

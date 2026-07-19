@@ -109,6 +109,28 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-18 — San Diego hotel page headline review cycle 1
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual live headline/title change requested by the user: `Top Family Hotels in San Diego: 8 Options by Trip Style`.
+- The change is confined to the San Diego hotel page, generated source, focused page test, and this review log.
+- The surrounding copy immediately preserves the trust boundary with `shortlist, not a ranking` and `not by a universal winner`. No ordinal ranking, firsthand stay claim, booking/affiliate CTA, safety/quiet/stroller/route guarantee, or unsupported firm family-suitability claim was introduced.
+- Generator and generated HTML match, and the focused test directly asserts the title and H1.
+
+QA evidence:
+
+- Independent read-only review returned `PASS`.
+- `node --test tools/san-diego-family-hotels-page.test.mjs` passed 3/3.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings.
+- `git diff --check` passed.
+
+Findings:
+
+- None (`P0`-`P3`).
+
 ### 2026-07-18 — San Diego hotel page price/map refinement review cycle 1
 
 **Result: `PASS`**

@@ -694,7 +694,7 @@ function sanDiegoFamilyHotelPage() {
       <section class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
-          <h1>Family hotels in San Diego: 8 options to compare</h1>
+          <h1>Top Family Hotels in San Diego: 8 Options by Trip Style</h1>
           <p>Use this as a clean shortlist, not a ranking. Compare room setup, pool or bay value, breakfast and kitchen needs, rough nightly range, map location, recent review patterns, and what to confirm before booking.</p>
         </div>
       </section>
@@ -820,7 +820,7 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
     </main>`;
 
   return pageShell({
-    title: "Family Hotels in San Diego: 8 Options to Compare",
+    title: "Top Family Hotels in San Diego: 8 Options by Trip Style",
     description: "Compare San Diego family hotels by room setup, pool and bay value, rough nightly ranges, map location, breakfast, kitchen needs, review signals, and booking checks.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
