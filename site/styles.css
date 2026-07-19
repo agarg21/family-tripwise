@@ -481,10 +481,9 @@ input {
 }
 
 .section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
+  display: grid;
+  gap: 4px;
+  align-items: start;
   margin-bottom: 22px;
 }
 
@@ -919,11 +918,6 @@ input {
   .hotel-card-grid,
   .methodology-grid {
     grid-template-columns: 1fr;
-  }
-
-  .section-heading {
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .table-row {

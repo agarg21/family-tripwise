@@ -109,6 +109,27 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-19 — Manual global section-heading alignment review cycle 1
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual global CSS change to stop shared section headings from pushing `h2` text to the right on desktop. The product/design diff is confined to `site/styles.css`; this review log was appended as mechanical evidence after PASS.
+- `.section-heading` now uses stacked grid layout with `align-items: start` instead of horizontal flex plus `justify-content: space-between`.
+- The obsolete mobile-only `.section-heading` flex override was removed, leaving no conflicting or dead flex-specific rule.
+- No content, canonical, sitemap, robots, indexability, link, iframe, or external-account change was introduced.
+
+QA evidence:
+
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 23 sitemap URLs and 26 HTML files.
+- `node --test tools/san-diego-family-hotels-page.test.mjs` passed 4/4.
+- `git diff --check` passed.
+
+Findings:
+
+- None (`P0`-`P3`).
+
 ### 2026-07-18 — Manual San Diego family hotels online review wording review cycles 1-2
 
 **Result: `PASS`**
