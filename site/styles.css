@@ -753,6 +753,27 @@ input {
   min-width: 1180px;
 }
 
+.map-link-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.map-link-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.map-link-list a,
+.hotel-facts a,
+.comparison-table a {
+  color: var(--teal-dark);
+  font-weight: 760;
+}
+
 .activity-card {
   display: flex;
   min-height: 245px;
@@ -896,6 +917,7 @@ input {
   .plan-grid,
   .detail-card-grid,
   .hotel-card-grid,
+  .map-link-layout,
   .methodology-grid {
     grid-template-columns: 1fr;
   }
@@ -923,6 +945,7 @@ input {
   .snapshot,
   fieldset,
   .hotel-facts,
+  .map-link-list,
   .stay-tool-form fieldset,
   .stay-tool-needs {
     grid-template-columns: 1fr;

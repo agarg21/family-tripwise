@@ -478,106 +478,124 @@ const sanDiegoFamilyHotels = [
     name: "Bahia Resort Hotel",
     category: "Mission Bay suite/bay stay",
     area: "Mission Bay",
-    band: "$$-$$$",
+    priceRange: "$340-$630+",
     strengths: ["Family Suite facts are unusually visible", "One-vehicle parking is not a separate charge in the inspected FAQ", "Bay/pool/location positives recur in public review signals"],
     tradeoffs: ["Bedding wording conflicts on the official Family Suite page", "Room age and cleanliness comments are mixed"],
     familySetup: "Official Bay Family Suite page lists 675 sq ft, sofa bed, kitchenette, balcony, two bathrooms, refrigerator, microwave, toaster, and one-vehicle self-parking; verify exact bedding and occupancy before using this as the reason to book.",
-    fees: "$48 resort fee; inspected FAQ says no separate parking charge for one vehicle.",
+    priceNote: "Standard-room public examples; Family Suite can price higher.",
     reviewSignal: "Family positives around bay, pool, location, and staff; conflicts around room age, cleanliness, and room-to-room variability.",
-    parentCheck: "Verify exact Family Suite availability, bedding, crib/rollaway policy, all-in total, resort-fee inclusions, room location, and current pool/beach operations.",
+    parentCheck: "Verify Family Suite availability, exact bedding, room condition, crib/rollaway policy, total price, room location, and current pool/beach operations.",
+    mapQuery: "Bahia Resort Hotel San Diego",
     sources: ["BAH-1", "BAH-2", "BAH-P", "BAH-R"]
   },
   {
     name: "San Diego Mission Bay Resort",
     category: "Mission Bay pool/wading-pool resort",
     area: "Mission Bay",
-    band: "$$$",
+    priceRange: "$375-$500+",
     strengths: ["Waterfront pool and shallow wading-pool facts are official", "Beach access and seasonal activities fit a stay-put resort question", "Good contrast against suite/kitchen urban hotels"],
     tradeoffs: ["Parking and resort fee add up quickly", "Review signals include crowding, beds, maintenance, and room-location noise conflicts"],
     familySetup: "Official materials list pool, shallow wading pool, beach access, seasonal activities, and rollaways where available subject to fire-code limits; exact family room layout remains room-specific.",
-    fees: "$46 resort charge plus tax; $47 parking in inspected official materials.",
+    priceNote: "Public examples before family room choice; parking can move the total.",
     reviewSignal: "Pool and bay positives, with conflicts around crowding, comfort, maintenance, room condition, and room-location/noise variability.",
-    parentCheck: "Verify exact room/floor access, all-in total with parking, current pool/wading-pool operations, activity calendar, bedding requests, and cancellation terms.",
+    parentCheck: "Verify exact room/floor access, total price with parking, current pool/wading-pool operations, activity calendar, bedding requests, and cancellation terms.",
+    mapQuery: "San Diego Mission Bay Resort",
     sources: ["MBR-1", "MBR-2", "MBR-P", "MBR-R"]
   },
   {
     name: "Hyatt Regency Mission Bay Spa and Marina",
     category: "Pool/waterslide-first stay",
     area: "Mission Bay",
-    band: "$$-$$$",
+    priceRange: "$270-$350+",
     strengths: ["Official pages list lagoon-style pools, three waterslides, hot tub, and separate children's pool area", "Room pages expose minifridge, play-yard, rollaway, and microwave-request details", "Kid enjoyment and waterslides recur in review signals"],
     tradeoffs: ["Official parking dollar amount was not found in the inspected pages", "Fee/value, pool temperature/size, and room variability appear in conflicts"],
     familySetup: "Official room pages list two-queen options, suites, minifridges, play yards on request, and microwaves on request for a fee in many room descriptions.",
-    fees: "$46 resort fee in inspected Hyatt policy page; parking amount needs a fresh direct check.",
+    priceNote: "Public examples; parking amount still needs a fresh direct check.",
     reviewSignal: "Waterslide, pool, location, suite/space, and kid-enjoyment positives; conflicts around fees, parking friction, room/value variability, and immediate-area walkability.",
     parentCheck: "Verify current parking cost, waterslide height/hour rules, exact suite or room bedding, final total, cancellation, and room location relative to pool/elevator/event areas.",
+    mapQuery: "Hyatt Regency Mission Bay Spa and Marina",
     sources: ["HY-1", "HY-2", "HY-3", "HY-P", "HY-R"]
   },
   {
     name: "Paradise Point Resort & Spa",
     category: "Stay-put Mission Bay resort",
     area: "Mission Bay",
-    band: "$$-$$$",
+    priceRange: "$240-$360+",
     strengths: ["Official amenities describe five heated pools, beach areas, marina, sports courts, miniature golf, and seasonal activities", "Large-property resort shape may help families who want to stay on property", "Multiple-pool and family-orientation positives recur"],
     tradeoffs: ["Large footprint may be helpful or annoying depending on kid age and assigned room", "Price/fee perception and room-condition variability appear in conflicts"],
     familySetup: "Bungalow-style rooms and suites need exact room verification; do not infer family layout from the property style alone.",
-    fees: "$46 amenities fee included in guestroom rate; $49 reserved doorstep parking in inspected official materials.",
+    priceNote: "Public examples; larger rooms, bayfront location, and parking can move higher.",
     reviewSignal: "Family orientation, multiple pools, spacious rooms, beach access, and resort-village positives; conflicts around total price, amenity value, property scale, and room condition.",
     parentCheck: "Verify room location, total with parking, current pool/restaurant/activity operations, walking distance from assigned room to meals, and room condition/renovation status.",
+    mapQuery: "Paradise Point Resort San Diego",
     sources: ["PP-1", "PP-P", "PP-R"]
   },
   {
     name: "Catamaran Resort Hotel and Spa",
     category: "Pacific Beach bay/beach walkability",
     area: "Pacific Beach",
-    band: "$$$",
+    priceRange: "$395-$740+",
     strengths: ["Official pages expose studios/suites with kitchenettes and some sofa-bed language", "Bay/beach access and Pacific Beach dining can fit families who want a walkable coastal base", "Location positives recur in review signals"],
     tradeoffs: ["Cribs and rollaways are request-only and not guaranteed", "Older/musty-room and small-pool conflicts appear in public signals"],
     familySetup: "Official FAQ lists kitchenettes with mini refrigerator, microwave, toaster oven, and requestable kitchen items for some studios/suites; exact sofa-bed and building status need verification.",
-    fees: "$46 resort fee; $47 self-parking and $50 valet in inspected official FAQ.",
+    priceNote: "Public examples; room view, renovation status, and weekend dates can move a lot.",
     reviewSignal: "Bay/beach location, Pacific Beach convenience, pool/arcade, tropical grounds, and family beach practicality positives; conflicts around older rooms, mustiness, pool size, and resort-value expectations.",
     parentCheck: "Verify exact room/building/renovation status, parking, room layout, sofa-bed availability, crib/rollaway handling, pool/beach operations, noise exposure, and final total.",
+    mapQuery: "Catamaran Resort Hotel and Spa San Diego",
     sources: ["CAT-1", "CAT-2", "CAT-P", "CAT-R"]
   },
   {
     name: "Homewood Suites San Diego Downtown/Bayside",
     category: "Suite/kitchen downtown base",
     area: "Downtown / Little Italy",
-    band: "$$",
-    strengths: ["Official Hilton page lists all-suite rooms, in-room kitchens, free hot breakfast, connecting rooms, and cribs", "Good contrast for families who need kitchen/breakfast more than resort amenities", "Lower planning band than many resort candidates"],
+    priceRange: "$265-$350+",
+    strengths: ["Official Hilton page lists all-suite rooms, in-room kitchens, free hot breakfast, connecting rooms, and cribs", "Good contrast for families who need kitchen/breakfast more than resort amenities", "Lower rough range than many resort options"],
     tradeoffs: ["No self-parking and $65 valet create car friction", "Breakfast variety/staffing, parking, noise, and maintenance appear in conflicts"],
     familySetup: "Official Hilton page lists all-suite setup, in-room kitchens, connecting rooms, cribs, outdoor pool, and nearby distance facts; exact suite walls, doors, bedding, and occupancy still need verification.",
-    fees: "No self-parking; $65 valet with in/out privileges in inspected Hilton page.",
+    priceNote: "Public examples; valet cost matters if you keep a car.",
     reviewSignal: "Suite, breakfast, location, pool/workout area, and family-friendly lobby positives; conflicts around valet cost, breakfast consistency, parking friction, noise, and maintenance.",
     parentCheck: "Verify exact suite layout, occupancy, final total with valet, breakfast hours/menu, pool availability, valet wait/oversize rules, routes to first activities, and room-noise request.",
+    mapQuery: "Homewood Suites San Diego Downtown Bayside",
     sources: ["HWS-1", "HWS-P", "HWS-R"]
   },
   {
     name: "LEGOLAND Hotel or Castle Hotel",
     category: "LEGOLAND-heavy North County trip",
     area: "Carlsbad / LEGOLAND",
-    band: "package-dependent",
+    priceRange: "Package-priced",
     strengths: ["Official pages list themed rooms, kids sleeping area, breakfast, pool, entertainment, and in-room treasure hunt", "Can reduce morning friction when LEGOLAND is the core trip", "Strong child-theme positives appear in review signals"],
     tradeoffs: ["Not a clean San Diego city-base for zoo, Mission Bay, Downtown, or La Jolla days", "Package/per-person pricing must not be compared as a plain room rate"],
     familySetup: "Official pages list separate kids sleeping area in every room, Pack 'N Plays by request, and room capacity by exact room size.",
-    fees: "Parking is not included for most guests; inspected support page lists self-parking at $40 and overnight valet at $55.",
+    priceNote: "Compare room, tickets, breakfast, and parking as one family total.",
     reviewSignal: "Child-theme, bunk/kids sleeping areas, breakfast convenience, activities, and park proximity positives; conflicts around value, parking cost, food quality, and whether more than one or two nights is worth it.",
     parentCheck: "Compare room-total versus package-per-person total, tickets, parking, exact capacity, breakfast crowding, pool hours, early-access rules, cancellation, and whether North County fits the rest of the itinerary.",
+    mapQuery: "LEGOLAND Hotel California Carlsbad",
     sources: ["LEG-1", "LEG-2", "LEG-P", "LEG-R"]
   },
   {
     name: "Loews Coronado Bay Resort",
-    category: "Coronado bay/splurge candidate",
+    category: "Coronado bay/splurge option",
     area: "Coronado",
-    band: "$$-$$$",
+    priceRange: "$235-$360+",
     strengths: ["Official materials describe a waterfront Coronado resort with heated pools", "Shuttle by reservation/request can matter for Coronado Village plans", "Pool/service/family amenity positives recur in review signals"],
     tradeoffs: ["More isolated from Coronado Village and San Diego attractions than central bases", "Parking/fees and property-condition comments appear in conflicts"],
     familySetup: "Exact room layout, connecting-room, occupancy, and family-package terms are offer/room-specific and require direct verification.",
-    fees: "$42 plus-tax resort fee; $47 self-parking and $55 valet in inspected official materials.",
+    priceNote: "Public examples; room view, season, parking, and Coronado logistics can move the total.",
     reviewSignal: "Pool, service, family amenities, toddler/family pool enjoyment, children's pool, crib, laundry, and supervised-activity positives; conflicts around isolation, parking/fees, and property condition.",
-    parentCheck: "Verify final total with resort fee and parking, shuttle hours/reservation process, room/suite layout, pool/kids-program status, driving plan, and whether isolation helps or hurts the family.",
+    parentCheck: "Verify final total with parking, shuttle hours/reservation process, room/suite layout, pool/kids-program status, driving plan, and whether isolation helps or hurts the family.",
+    mapQuery: "Loews Coronado Bay Resort",
     sources: ["LOEWS-1", "LOEWS-P", "LOEWS-R"]
   }
+];
+
+const sanDiegoKidsMapLinks = [
+  ["San Diego Zoo", "San Diego Zoo"],
+  ["Balboa Park", "Balboa Park San Diego"],
+  ["Mission Bay", "Mission Bay San Diego"],
+  ["Birch Aquarium", "Birch Aquarium at Scripps"],
+  ["La Jolla Cove", "La Jolla Cove"],
+  ["Coronado Ferry Landing", "Coronado Ferry Landing"],
+  ["LEGOLAND California", "LEGOLAND California"]
 ];
 
 const sanDiegoHotelSources = [
@@ -596,6 +614,10 @@ const sanDiegoHotelSources = [
   ["Loews Coronado Bay Resort", "https://www.loewshotels.com/coronado-bay-resort"]
 ];
 
+function googleMapsUrl(query) {
+  return `https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query)}`;
+}
+
 function sanDiegoFamilyHotelPage() {
   const hotels = sanDiegoFamilyHotels;
   const hotelCards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
@@ -603,13 +625,13 @@ function sanDiegoFamilyHotelPage() {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Planning band</dt><dd>${esc(hotel.band)}</dd></div>
-              <div><dt>Fees/parking</dt><dd>${esc(hotel.fees)}</dd></div>
+              <div><dt>Rough nightly range</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why families may shortlist it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Tradeoffs to check</h4><ul>${hotel.tradeoffs.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
             <section><h4>Review signal</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Price note</h4><p>${esc(hotel.priceNote)}</p></section>
             <section><h4>Verify before booking</h4><p>${esc(hotel.parentCheck)}</p></section>
           </article>`).join("\n");
 
@@ -617,10 +639,13 @@ function sanDiegoFamilyHotelPage() {
                 <td>${esc(hotel.name)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${esc(hotel.band)}</td>
-                <td>${esc(hotel.fees)}</td>
-                <td>${esc(hotel.tradeoffs[0])}</td>
+                <td>${esc(hotel.priceRange)}</td>
+                <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
+                <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
+
+  const hotelMapLinks = hotels.map((hotel) => `          <li><a href="${googleMapsUrl(hotel.mapQuery)}">${esc(hotel.name)}</a></li>`).join("\n");
+  const kidsMapLinks = sanDiegoKidsMapLinks.map(([label, query]) => `          <li><a href="${googleMapsUrl(query)}">${esc(label)}</a></li>`).join("\n");
 
   const itemListJson = {
     "@context": "https://schema.org",
@@ -630,7 +655,7 @@ function sanDiegoFamilyHotelPage() {
       "@type": "ListItem",
       position: index + 1,
       name: hotel.name,
-      description: `${hotel.category}; planning band ${hotel.band}`
+      description: `${hotel.category}; rough nightly range ${hotel.priceRange}`
     }))
   };
 
@@ -643,7 +668,7 @@ function sanDiegoFamilyHotelPage() {
         name: "What is the best family hotel in San Diego?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "There is no single best family hotel for every trip. Compare the room setup, pool/water value, parking and fees, breakfast or kitchen needs, activity routes, and exact total for your dates before choosing."
+          text: "There is no single best family hotel for every trip. Compare the room setup, pool/water value, rough nightly range, breakfast or kitchen needs, activity routes, and exact total for your dates before choosing."
         }
       },
       {
@@ -656,10 +681,10 @@ function sanDiegoFamilyHotelPage() {
       },
       {
         "@type": "Question",
-        name: "Are the price bands on this page booking quotes?",
+        name: "Are the price ranges on this page booking quotes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. They are rough planning bands from public sources checked July 18, 2026. Families should verify the final all-in total, taxes, parking, resort fees, breakfast, cancellation terms, and exact room type before booking."
+          text: "No. They are rough public examples checked July 18, 2026. Families should verify the final all-in total, taxes, parking, breakfast, cancellation terms, and exact room type before booking."
         }
       }
     ]
@@ -670,12 +695,12 @@ function sanDiegoFamilyHotelPage() {
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
           <h1>Family hotels in San Diego: 8 options to compare</h1>
-          <p>Use this as a clean shortlist, not a ranking. Compare room setup, pool or bay value, breakfast and kitchen needs, parking, fees, recent review patterns, and what to confirm before booking.</p>
+          <p>Use this as a clean shortlist, not a ranking. Compare room setup, pool or bay value, breakfast and kitchen needs, rough nightly range, map location, recent review patterns, and what to confirm before booking.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Last checked:</strong> July 18, 2026</p>
-        <p>This guide combines hotel facts, public review patterns, and family planning checks. Hotel policies and fees change often, so confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms before booking.</p>
+        <p>This guide combines hotel facts, public review patterns, and family planning checks. Hotel policies and extra charges change often, so confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms before booking.</p>
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
@@ -693,7 +718,7 @@ function sanDiegoFamilyHotelPage() {
           </div>
           <dl class="snapshot">
             <div><dt>Hotels covered</dt><dd>8 options</dd></div>
-            <div><dt>Price format</dt><dd>Rough room-night band, not a quote</dd></div>
+            <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
             <div><dt>Review signal</dt><dd>Paraphrased public themes only</dd></div>
             <div><dt>Release boundary</dt><dd>No booking links or booking promises</dd></div>
           </dl>
@@ -705,7 +730,7 @@ function sanDiegoFamilyHotelPage() {
           <h2>Start with the family constraint</h2>
         </div>
         <div class="quick-pick-grid hotel-pick-grid">
-          <article class="quick-pick"><span>Mission Bay suite/bay stay</span><strong>Bahia Resort Hotel</strong><p>Use when a larger-room candidate matters and the Family Suite is actually available with bedding confirmed.</p></article>
+          <article class="quick-pick"><span>Mission Bay suite/bay stay</span><strong>Bahia Resort Hotel</strong><p>Use when a larger-room option matters and the Family Suite is actually available with bedding confirmed.</p></article>
           <article class="quick-pick"><span>Pool/wading-pool resort</span><strong>San Diego Mission Bay Resort</strong><p>Use when on-property water time matters, with fee, parking, room-condition, and crowding checks.</p></article>
           <article class="quick-pick"><span>Waterslide-first stay</span><strong>Hyatt Regency Mission Bay</strong><p>Use when pools and slides are the headline, after checking parking and waterslide rules.</p></article>
           <article class="quick-pick"><span>Stay-put resort feel</span><strong>Paradise Point Resort & Spa</strong><p>Use when a large Mission Bay resort footprint helps rather than hurts your family rhythm.</p></article>
@@ -721,16 +746,37 @@ function sanDiegoFamilyHotelPage() {
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">Bands are rough planning signals from public sources checked July 18, 2026. They are not live rates or final all-in totals.</p>
+          <p class="review-label">Ranges are rough public examples checked July 18, 2026. They are not live rates or final all-in totals, and parking or package choices can move the real number.</p>
           <div class="comparison-scroll">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Use case</th><th>Area</th><th>Band</th><th>Fees/parking signal</th><th>First tradeoff</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Use case</th><th>Area</th><th>Rough nightly range</th><th>Map</th><th>Main booking check</th></tr></thead>
               <tbody>
 ${comparisonRows}
               </tbody>
             </table>
           </div>
         </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading">
+          <p class="eyebrow">Map check</p>
+          <h2>Open the hotels and kid anchors in Google Maps</h2>
+        </div>
+        <div class="map-link-layout">
+          <article class="detail-card">
+            <h3>Hotels</h3>
+            <ul class="map-link-list">
+${hotelMapLinks}
+            </ul>
+          </article>
+          <article class="detail-card">
+            <h3>Kid anchors</h3>
+            <ul class="map-link-list">
+${kidsMapLinks}
+            </ul>
+          </article>
+        </div>
+        <p class="review-label">Use these links to sanity-check drive distance and clustering. Traffic, parking, shuttle timing, stroller practicality, and beach routes can change by day and exact room location.</p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
@@ -762,11 +808,11 @@ ${hotelCards}
           <p class="eyebrow">Sources checked</p>
           <h2>Official sources and volatile price/review evidence</h2>
         </div>
-        <p>Official facts were checked July 18, 2026. Price and review signals are volatile and should be refreshed before a final booking decision.</p>
+        <p>Official facts were checked July 18, 2026. Rough price examples and review signals are volatile and should be refreshed before a final booking decision.</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages checked July 18, 2026 for rough price and review-signal context.</li>
+          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages checked July 18, 2026 for rough nightly-price and review-signal context.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -775,7 +821,7 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
   return pageShell({
     title: "Family Hotels in San Diego: 8 Options to Compare",
-    description: "Compare San Diego family hotels by room setup, pool and bay value, price bands, parking, fees, breakfast, kitchen needs, review signals, and booking checks.",
+    description: "Compare San Diego family hotels by room setup, pool and bay value, rough nightly ranges, map location, breakfast, kitchen needs, review signals, and booking checks.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
   });

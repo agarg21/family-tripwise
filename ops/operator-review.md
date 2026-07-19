@@ -109,6 +109,28 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-18 — San Diego hotel page price/map refinement review cycle 1
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual live-copy refinement requested after publication: replace `$$`/`$$$` with rough dollar ranges, remove the dedicated generic `Tradeoffs to check` card section, and add simple Google Maps links for the hotel set plus kid activity anchors.
+- The change is confined to the San Diego hotel page, generated source, shared CSS for the new map-link layout, and the focused page test. It does not create or mutate any Google account artifact; the map additions are plain outbound Google Maps search links.
+- Price language is caveated as rough public examples checked July 18, 2026, not live rates or final all-in totals. The page retains confirmation checks for exact room, total price, parking, cancellation, route practicality, and stay-dependent conditions.
+- The page still avoids affiliate/booking CTAs, ordinal ranking, firsthand stay claims, safety/quiet/stroller/route guarantees, and personally verified family-suitability claims.
+
+QA evidence:
+
+- Independent read-only review returned `PASS`.
+- `node --test tools/san-diego-family-hotels-page.test.mjs` passed 3/3.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings.
+- `git diff --check` passed.
+
+Findings:
+
+- None (`P0`-`P3`).
+
 ### 2026-07-18 — San Diego hotel page tone polish review cycles 1-2
 
 **Result: `PASS`**
