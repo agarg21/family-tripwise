@@ -43,30 +43,21 @@ test("covers eight named hotel options with dollar ranges and map links", () => 
 
   assert.match(html, /Rough nightly range, not a quote/);
   assert.match(html, /final all-in totals/);
-  assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=San%20Diego%20Zoo/);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /Verify before booking/);
   assert.match(html, /Crib, rollaway, connecting room/);
   assert.match(html, /Safety, quiet, exact routes/);
 });
 
-test("renders a San Diego-specific native schematic map without a Google embed dependency", () => {
-  assert.match(html, /class="san-diego-schematic-map"/);
-  assert.match(html, /Schematic map for clustering, not exact routing/);
-  assert.match(html, /North County \/ LEGOLAND/);
-  assert.match(html, /Mission Bay/);
-  assert.match(html, /La Jolla/);
-  assert.match(html, /Downtown/);
-  assert.match(html, /Coronado/);
-
-  for (const label of ["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "A1", "A2", "A3", "A4", "A5", "A6", "A7"]) {
-    assert.match(html, new RegExp(`>${label}<`));
-  }
-
-  assert.equal((html.match(/class="schematic-marker hotel-marker"/g) || []).length, 8);
-  assert.equal((html.match(/class="schematic-marker anchor-marker"/g) || []).length, 7);
-  assert.doesNotMatch(html, /<iframe/i);
-  assert.doesNotMatch(html, /maps\.googleapis\.com|google\.com\/maps\/embed/i);
+test("embeds the shared Google My Maps view instead of the native schematic POC", () => {
+  assert.match(html, /class="google-my-map"/);
+  assert.match(html, /title="Family Tripwise San Diego family hotels and kid activity map"/);
+  assert.match(html, /src="https:\/\/www\.google\.com\/maps\/d\/embed\?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32\.823313151707154%2C-117\.28066802355525&amp;z=13"/);
+  assert.match(html, /Open the full Google map/);
+  assert.match(html, /Use the embedded Google My Maps view for clustering/);
+  assert.equal((html.match(/<iframe/g) || []).length, 1);
+  assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
+  assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);
 });
 
 test("avoids affiliate, ordinal ranking, generic tradeoff blocks, and unsupported claims", () => {

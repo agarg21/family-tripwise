@@ -131,6 +131,29 @@ Findings:
 1. `P3` — Marker aria labels read awkwardly for hotels, for example “Open Bahia Resort Hotel hotel in Google Maps.” This is minor accessibility copy polish and does not block release.
 2. `P3` — Some marker clusters remain tight on mobile, especially the Mission Bay and downtown/Balboa/Coronado areas. The legend and offsets keep the POC usable, but later iterations could add smarter collision handling.
 
+### 2026-07-18 — Manual San Diego family hotels My Maps embed review cycle 1
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual live-page diff replacing the San Diego family hotels native schematic map POC with the user-curated Google My Maps embed. The code/content diff is confined to `tools/generate-pages.mjs`, `site/styles.css`, `tools/san-diego-family-hotels-page.test.mjs`, and the generated `site/where-to-stay/san-diego-family-hotels.html`.
+- The Google My Map `19tptDfcCGkrLLpofrO8ponPdeCefQKc` was made public with explicit user approval so the website embed can render for visitors. Direct public embed verification rendered the map and no longer showed the prior private/login-only error.
+- The page embeds the shared My Maps view at the requested center/zoom (`ll=32.823313151707154,-117.28066802355525`, `z=13`) with a lazy-loaded iframe, fixed responsive dimensions, and no Google Maps Platform API key or `maps.googleapis.com` dependency.
+- The native schematic SVG/HTML marker data, helper functions, styles, legend markup, and positive schematic tests were removed. Existing per-hotel Google Maps search links remain available for hotel-specific route checks.
+- No affiliate link, booking CTA, booking promise, unsupported firsthand/safety/quiet/stroller/route guarantee, canonical change, robots change, sitemap change, or indexability change was introduced.
+
+QA evidence:
+
+- `node --test tools/san-diego-family-hotels-page.test.mjs` passed 4/4.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 23 sitemap URLs and 26 HTML files.
+- `git diff --check` passed.
+- Browser QA: direct public My Maps embed rendered outside the signed-in Chrome editor state; local desktop page iframe painted after lazy load with no horizontal overflow; mobile 390x844 viewport rendered a 352x420 iframe with no horizontal overflow.
+
+Findings:
+
+- None (`P0`-`P3`).
+
 ### 2026-07-18 — San Diego hotel page headline review cycle 1
 
 **Result: `PASS`**
