@@ -109,6 +109,32 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-18 — Manual San Diego family hotels online review wording review cycles 1-2
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual live-page wording diff clarifying the San Diego family hotels page's review-language vocabulary. The code/content diff is confined to `tools/generate-pages.mjs`, `tools/san-diego-family-hotels-page.test.mjs`, and the generated `site/where-to-stay/san-diego-family-hotels.html`.
+- User-facing `Review signal`, `review signal`, and `review-signal` wording was replaced with `Online reviews` / `Online review patterns` language. The page now explains that these are paraphrased public themes from travel review and booking sites, summarized as repeated positives and conflicts rather than copied review text.
+- The wording does not imply firsthand stays, exact review scraping, a guaranteed representative sample, safety/quiet/stroller/route verification, affiliate promotion, booking promises, or booking CTAs.
+- No canonical, sitemap, robots, indexability, Google My Maps embed, or external-account change was introduced.
+
+Prior-finding verification:
+
+- Closed the cycle-1 `P2`: the remaining `review-signal context` source-list wording was replaced with `online review pattern context`.
+- Closed the cycle-1 `P3` test gap: the focused page test now blocks `/review[- ]signal/i` across the generated HTML.
+
+QA evidence:
+
+- `node --test tools/san-diego-family-hotels-page.test.mjs` passed 4/4.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 23 sitemap URLs and 26 HTML files.
+- `git diff --check` passed.
+
+Findings:
+
+- None (`P0`-`P3`).
+
 ### 2026-07-18 — Manual San Diego family hotels schematic map POC review cycle 1
 
 **Result: `PASS_WITH_P3`**

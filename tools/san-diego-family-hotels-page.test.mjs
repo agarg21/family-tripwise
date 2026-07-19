@@ -17,7 +17,7 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.match(html, /<title>Top Family Hotels in San Diego: 8 Options by Trip Style<\/title>/);
   assert.match(html, /<h1>Top Family Hotels in San Diego: 8 Options by Trip Style<\/h1>/);
   assert.match(html, /Last checked:<\/strong> July 18, 2026/);
-  assert.match(html, /hotel facts, public review patterns, and family planning checks/);
+  assert.match(html, /hotel facts, public online review patterns, and family planning checks/);
   assert.match(html, /confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms/i);
 });
 
@@ -47,6 +47,10 @@ test("covers eight named hotel options with dollar ranges and map links", () => 
   assert.match(html, /Verify before booking/);
   assert.match(html, /Crib, rollaway, connecting room/);
   assert.match(html, /Safety, quiet, exact routes/);
+  assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased public themes from travel review and booking sites<\/dd>/);
+  assert.match(html, /<h4>Online review patterns<\/h4>/);
+  assert.match(html, /Online review patterns come from public travel review and booking sites/);
+  assert.doesNotMatch(html, /review[- ]signal/i);
 });
 
 test("embeds the shared Google My Maps view instead of the native schematic POC", () => {

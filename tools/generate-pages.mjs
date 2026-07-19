@@ -479,7 +479,7 @@ const sanDiegoFamilyHotels = [
     category: "Mission Bay suite/bay stay",
     area: "Mission Bay",
     priceRange: "$340-$630+",
-    strengths: ["Family Suite facts are unusually visible", "One-vehicle parking is not a separate charge in the inspected FAQ", "Bay/pool/location positives recur in public review signals"],
+    strengths: ["Family Suite facts are unusually visible", "One-vehicle parking is not a separate charge in the inspected FAQ", "Bay/pool/location positives recur in online review patterns"],
     tradeoffs: ["Bedding wording conflicts on the official Family Suite page", "Room age and cleanliness comments are mixed"],
     familySetup: "Official Bay Family Suite page lists 675 sq ft, sofa bed, kitchenette, balcony, two bathrooms, refrigerator, microwave, toaster, and one-vehicle self-parking; verify exact bedding and occupancy before using this as the reason to book.",
     priceNote: "Standard-room public examples; Family Suite can price higher.",
@@ -494,7 +494,7 @@ const sanDiegoFamilyHotels = [
     area: "Mission Bay",
     priceRange: "$375-$500+",
     strengths: ["Waterfront pool and shallow wading-pool facts are official", "Beach access and seasonal activities fit a stay-put resort question", "Good contrast against suite/kitchen urban hotels"],
-    tradeoffs: ["Parking and resort fee add up quickly", "Review signals include crowding, beds, maintenance, and room-location noise conflicts"],
+    tradeoffs: ["Parking and resort fee add up quickly", "Online review patterns include crowding, beds, maintenance, and room-location noise conflicts"],
     familySetup: "Official materials list pool, shallow wading pool, beach access, seasonal activities, and rollaways where available subject to fire-code limits; exact family room layout remains room-specific.",
     priceNote: "Public examples before family room choice; parking can move the total.",
     reviewSignal: "Pool and bay positives, with conflicts around crowding, comfort, maintenance, room condition, and room-location/noise variability.",
@@ -507,7 +507,7 @@ const sanDiegoFamilyHotels = [
     category: "Pool/waterslide-first stay",
     area: "Mission Bay",
     priceRange: "$270-$350+",
-    strengths: ["Official pages list lagoon-style pools, three waterslides, hot tub, and separate children's pool area", "Room pages expose minifridge, play-yard, rollaway, and microwave-request details", "Kid enjoyment and waterslides recur in review signals"],
+    strengths: ["Official pages list lagoon-style pools, three waterslides, hot tub, and separate children's pool area", "Room pages expose minifridge, play-yard, rollaway, and microwave-request details", "Kid enjoyment and waterslides recur in online review patterns"],
     tradeoffs: ["Official parking dollar amount was not found in the inspected pages", "Fee/value, pool temperature/size, and room variability appear in conflicts"],
     familySetup: "Official room pages list two-queen options, suites, minifridges, play yards on request, and microwaves on request for a fee in many room descriptions.",
     priceNote: "Public examples; parking amount still needs a fresh direct check.",
@@ -535,7 +535,7 @@ const sanDiegoFamilyHotels = [
     category: "Pacific Beach bay/beach walkability",
     area: "Pacific Beach",
     priceRange: "$395-$740+",
-    strengths: ["Official pages expose studios/suites with kitchenettes and some sofa-bed language", "Bay/beach access and Pacific Beach dining can fit families who want a walkable coastal base", "Location positives recur in review signals"],
+    strengths: ["Official pages expose studios/suites with kitchenettes and some sofa-bed language", "Bay/beach access and Pacific Beach dining can fit families who want a walkable coastal base", "Location positives recur in online review patterns"],
     tradeoffs: ["Cribs and rollaways are request-only and not guaranteed", "Older/musty-room and small-pool conflicts appear in public signals"],
     familySetup: "Official FAQ lists kitchenettes with mini refrigerator, microwave, toaster oven, and requestable kitchen items for some studios/suites; exact sofa-bed and building status need verification.",
     priceNote: "Public examples; room view, renovation status, and weekend dates can move a lot.",
@@ -563,7 +563,7 @@ const sanDiegoFamilyHotels = [
     category: "LEGOLAND-heavy North County trip",
     area: "Carlsbad / LEGOLAND",
     priceRange: "Package-priced",
-    strengths: ["Official pages list themed rooms, kids sleeping area, breakfast, pool, entertainment, and in-room treasure hunt", "Can reduce morning friction when LEGOLAND is the core trip", "Strong child-theme positives appear in review signals"],
+    strengths: ["Official pages list themed rooms, kids sleeping area, breakfast, pool, entertainment, and in-room treasure hunt", "Can reduce morning friction when LEGOLAND is the core trip", "Strong child-theme positives appear in online review patterns"],
     tradeoffs: ["Not a clean San Diego city-base for zoo, Mission Bay, Downtown, or La Jolla days", "Package/per-person pricing must not be compared as a plain room rate"],
     familySetup: "Official pages list separate kids sleeping area in every room, Pack 'N Plays by request, and room capacity by exact room size.",
     priceNote: "Compare room, tickets, breakfast, and parking as one family total.",
@@ -577,7 +577,7 @@ const sanDiegoFamilyHotels = [
     category: "Coronado bay/splurge option",
     area: "Coronado",
     priceRange: "$235-$360+",
-    strengths: ["Official materials describe a waterfront Coronado resort with heated pools", "Shuttle by reservation/request can matter for Coronado Village plans", "Pool/service/family amenity positives recur in review signals"],
+    strengths: ["Official materials describe a waterfront Coronado resort with heated pools", "Shuttle by reservation/request can matter for Coronado Village plans", "Pool/service/family amenity positives recur in online review patterns"],
     tradeoffs: ["More isolated from Coronado Village and San Diego attractions than central bases", "Parking/fees and property-condition comments appear in conflicts"],
     familySetup: "Exact room layout, connecting-room, occupancy, and family-package terms are offer/room-specific and require direct verification.",
     priceNote: "Public examples; room view, season, parking, and Coronado logistics can move the total.",
@@ -623,7 +623,7 @@ function sanDiegoFamilyHotelPage() {
             </dl>
             <section><h4>Why families may shortlist it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
-            <section><h4>Review signal</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Online review patterns</h4><p>${esc(hotel.reviewSignal)}</p></section>
             <section><h4>Price note</h4><p>${esc(hotel.priceNote)}</p></section>
             <section><h4>Verify before booking</h4><p>${esc(hotel.parentCheck)}</p></section>
           </article>`).join("\n");
@@ -690,7 +690,7 @@ function sanDiegoFamilyHotelPage() {
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Last checked:</strong> July 18, 2026</p>
-        <p>This guide combines hotel facts, public review patterns, and family planning checks. Hotel policies and extra charges change often, so confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms before booking.</p>
+        <p>This guide combines hotel facts, public online review patterns, and family planning checks. Hotel policies and extra charges change often, so confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms before booking.</p>
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
@@ -709,7 +709,7 @@ function sanDiegoFamilyHotelPage() {
           <dl class="snapshot">
             <div><dt>Hotels covered</dt><dd>8 options</dd></div>
             <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
-            <div><dt>Review signal</dt><dd>Paraphrased public themes only</dd></div>
+            <div><dt>Online reviews</dt><dd>Paraphrased public themes from travel review and booking sites</dd></div>
             <div><dt>Release boundary</dt><dd>No booking links or booking promises</dd></div>
           </dl>
         </div>
@@ -772,7 +772,7 @@ ${hotelCards}
           <div>
             <p class="eyebrow">Method</p>
             <h2>How to use this page</h2>
-            <p>Use the cards to reduce the list, then open the official room, FAQ, amenities, fee, and booking pages for your exact dates. Public reviews are useful for repeated positives and conflicts, but room assignment, noise, service, and total value can vary by stay.</p>
+            <p>Use the cards to reduce the list, then open the official room, FAQ, amenities, fee, and booking pages for your exact dates. Online review patterns come from public travel review and booking sites, summarized as repeated positives and conflicts rather than copied review text. Room assignment, noise, service, and total value can still vary by stay.</p>
             <p>We separate hotel facts from stay-dependent judgment. That is why this page points out what to compare, what families often care about, and what should still be confirmed before paying.</p>
           </div>
           <dl class="snapshot">
@@ -788,11 +788,11 @@ ${hotelCards}
           <p class="eyebrow">Sources checked</p>
           <h2>Official sources and volatile price/review evidence</h2>
         </div>
-        <p>Official facts were checked July 18, 2026. Rough price examples and review signals are volatile and should be refreshed before a final booking decision.</p>
+        <p>Official facts were checked July 18, 2026. Rough price examples and online review patterns are volatile and should be refreshed before a final booking decision.</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages checked July 18, 2026 for rough nightly-price and review-signal context.</li>
+          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages checked July 18, 2026 for rough nightly-price and online review pattern context.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -801,7 +801,7 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
   return pageShell({
     title: "Top Family Hotels in San Diego: 8 Options by Trip Style",
-    description: "Compare San Diego family hotels by room setup, pool and bay value, rough nightly ranges, map location, breakfast, kitchen needs, review signals, and booking checks.",
+    description: "Compare San Diego family hotels by room setup, pool and bay value, rough nightly ranges, map location, breakfast, kitchen needs, online review patterns, and booking checks.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
   });
