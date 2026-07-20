@@ -18,6 +18,7 @@ The strategy is to build destination-specific family travel pages and interactiv
 - [Semrush research summary](docs/research/semrush-family-travel-opportunity.md)
 - [Domain name research](docs/research/domain-name-research.md)
 - [Content strategy](docs/plan/content-strategy.md)
+- [SEO cluster research protocol](docs/plan/seo-cluster-research-protocol.md)
 - [Product and AI plan](docs/plan/product-ai-plan.md)
 - [Technical plan](docs/plan/technical-plan.md)
 - [Deployment](docs/plan/deployment.md)

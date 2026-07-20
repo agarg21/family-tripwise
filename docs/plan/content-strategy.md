@@ -10,6 +10,10 @@ Work depth-first in San Diego before expanding across the pilot set. The goal is
 
 Once San Diego has pages and research we are happy with, expand the proven patterns across the five pilot cities instead of inventing new formats destination by destination.
 
+Use `docs/plan/seo-cluster-research-protocol.md` before adding or materially changing destination pages. Page decisions should come from keyword validation, SERP-overlap clustering, ranking-page inspection, persona hypotheses, current page audits, and trust/evidence constraints.
+
+The differentiation bet is AI-assisted research plus clean product UX. Family Tripwise should use AI to synthesize fresh, source-dated evidence and turn scattered parent questions into simple decision surfaces. It should not mimic local publishers' firsthand authority, Reddit's UGC, or OTA/Tripadvisor booking and review scale. For pages where competitors do not have live booking inventory or large review databases, look for places Family Tripwise can be substantially better through comparison tables, maps, constraint routing, freshness checks, and transparent evidence boundaries.
+
 ## Initial Destination Clusters
 
 1. San Diego
@@ -84,6 +88,7 @@ Each page should include:
 - Parent-specific caveats.
 - Internal links to related destination pages.
 - Research-backed recommendations with clear evidence labels; human-reviewed recommendations where direct experience, safety, route/stroller practicality, or unsupported family-suitability claims are material.
+- Persona-based review: each page should give the primary family persona a useful default answer before asking them to use filters or controls.
 
 ## Internal Linking
 
@@ -96,3 +101,5 @@ Each destination cluster should link:
 - Destination pages to similar destinations by trip type.
 
 Standalone family-hotel pages may launch before firsthand hotel stays only when they follow `docs/plan/hotel-research-engine.md`: source-backed records, visible uncertainty, review-signal summaries, current booking checks, and no unsupported personal-experience or safety claims.
+
+Destination cluster expansion should follow `docs/plan/seo-cluster-research-protocol.md` so San Diego's page-decision method can be reused for Las Vegas, New York City, Chicago, San Antonio, and later cities.
