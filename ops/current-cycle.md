@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual user-directed implementation, `FT-IMP-002`, is review-clean and ready for exact-path commit/release verification: the all-ages San Diego things-to-do page now acts as a persona-led cluster router. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual user-directed implementation, `FT-IMP-002`, is released: commit `1a321707fcb8203df40e19ac13bdf8782db196bb` was pushed, GitHub Pages run `29752040108` succeeded, production invariants passed, and production SEO QA passed. The all-ages San Diego things-to-do page now acts as a persona-led cluster router. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 ## Current Project State
 
@@ -151,7 +151,7 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual 
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-002` is completed and review-clean pending commit, push, deployment monitoring, and production verification. The next substantive eligible action is `FT-EVAL-001` on or after 2026-07-27, when fresh GSC evidence can evaluate the protected San Diego stay-page observation window.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-002` is completed, committed, pushed, deployed, and production-verified. The next substantive eligible action is `FT-EVAL-001` on or after 2026-07-27, when fresh GSC evidence can evaluate the protected San Diego stay-page observation window.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 

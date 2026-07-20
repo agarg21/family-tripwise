@@ -29,7 +29,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-PLAN-001` | review-clean planning brief | `PASS` | Re-review cycle 2 closed price-band durability, stale gate language, and exact-path findings; eligible for exact-path push-only commit after staged QA. |
 | `FT-RES-005` | review-clean expanded research pack | `PASS` | Re-review cycle 2 closed the community/source reproducibility P2; eligible for exact-path push-only commit after staged QA. |
 | `FT-PUB-001` | review-clean San Diego hotel page | `PASS_WITH_P3` | Re-review cycle 2 closed the Loews quietness P2; one non-blocking P3 remains for conflicting Loews self-parking official-source values. |
-| `FT-IMP-002` | review-clean San Diego things-to-do router | `PASS` | Review cycle 2 closed the stale freshness-date P2; eligible for exact-path commit and deployment verification after staged QA. |
+| `FT-IMP-002` | released San Diego things-to-do router | `PASS` | Review cycle 2 closed the stale freshness-date P2; commit `1a321707fcb8203df40e19ac13bdf8782db196bb` was pushed, Pages run `29752040108` succeeded, and production invariants/SEO QA passed. |
 
 ## Open blocking findings
 
@@ -64,6 +64,14 @@ QA evidence:
 - `jq empty ops/seo-roadmap.json` passed.
 - `git diff --check` passed.
 - Independent reviewer task: `019f7ff6-3cca-7052-9e6d-869eac450da3` / Harvey.
+
+Release evidence:
+
+- Exact-path release commit: `1a321707fcb8203df40e19ac13bdf8782db196bb`.
+- GitHub Pages run: `29752040108`, completed successfully.
+- Production verification passed for `https://familytripwise.com/things-to-do/san-diego-with-kids.html`: canonical URL, July 20 freshness date, five persona routes, official rainy/free/budget links, and no blocked trust claims.
+- `node tools/seo-qa.mjs --production` passed with 0 errors and 0 warnings after deployment.
+- No follow-up site commit was made solely to backfill release evidence.
 
 Findings:
 
