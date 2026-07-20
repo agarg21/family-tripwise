@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-15
+Last updated: 2026-07-20
 
 ## Cycle Name
 
@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. `FT-IMP-001` is complete and deployed; `FT-AUTH-001` is the next ready substantive item. The dedicated July 15 maintenance transaction replaces normal roadmap selection for its run, so it must not also start `FT-AUTH-001`.
+The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual user-directed transaction, `FT-RES-006`, is completed and review-clean: a San Diego SERP-overlap cluster, persona, and page-audit decision pack. It promotes `FT-IMP-002`, a future existing-page improvement to make the all-ages San Diego things-to-do page a persona-led cluster router. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 ## Current Project State
 
@@ -20,7 +20,7 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. `FT-IMP-001` is co
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 15 snapshot has finalized data through July 13, a successful sitemap with 22 discovered pages, and 11 of 15 priority URLs indexed
+- GSC: authenticated read-only API collection is working; the July 19 snapshot has finalized data through July 17, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 
@@ -147,11 +147,11 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. `FT-IMP-001` is co
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-15.json`; it supersedes the seven-URL UI subset for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-19.json`, collected through the read-only API with finalized data through July 17; it supersedes the seven-URL UI subset for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-AUTH-001` is ready but is not part of the dedicated July 15 cleanup transaction.
+`ops/seo-roadmap.json` is the current execution queue. `FT-RES-006` is completed and review-clean. `FT-IMP-002` is the next ready implementation handoff if the user/operator selects implementation later.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -208,11 +208,12 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight after deployment: sitemap returned 200 with 22 parsed URLs; robots returned 200 and advertises the sitemap; all configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-07-15.json`, collected through the authenticated read-only API on July 15 with finalized data through July 13.
+- Current normalized source: `ops/gsc-snapshots/2026-07-19.json`, collected through the authenticated read-only API on July 19 with finalized data through July 17.
+- Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos.
-- Current URL Inspection summary: 11 of 15 priority URLs are indexed; four are not indexed; zero inspection rows are collector-unknown.
-- The four not-indexed URLs are San Diego things-to-do for kids, toddlers, and teens, plus the New York City family itinerary.
+- Current URL Inspection summary: 12 of 15 priority URLs are indexed; three are not indexed; zero inspection rows are collector-unknown.
+- The three not-indexed URLs are San Diego things-to-do for kids and teens, plus the New York City family itinerary. The San Diego toddler page is indexed in the latest inspection.
 - GSC login blocker: none.
 - Indexing requested: no. Do not request indexing without separate authorization.
 - `docs/research/gsc-monitoring-latest.md` is a pointer/summary; `docs/research/gsc-monitoring-2026-07-13.md` preserves historical manual/UI evidence.

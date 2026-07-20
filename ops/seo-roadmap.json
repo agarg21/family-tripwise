@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise SEO Operator",
-  "last_updated": "2026-07-18",
+  "last_updated": "2026-07-20",
   "last_rescored_on": "2026-07-14",
   "next_rescore_due": "2026-07-21",
   "planning_horizon_days": 28,
@@ -421,6 +421,68 @@
       "review": "Cycle 2 PASS_WITH_P3 after closing the Loews quietness P2. Remaining P3: Loews official pages conflict on self-parking amount ($47 on one page, $50 on FAQ), with page copy keeping fees verify-before-booking.",
       "qa": "node --test tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs passed 5/5; jq empty ops/seo-roadmap.json passed; node tools/seo-qa.mjs passed with 23 sitemap URLs, 26 HTML files, 0 errors, 0 warnings; git diff --check passed; local HTTP page returned 200; local sitemap contains the new URL; Wikimedia image resolved 200. Production SEO QA predeploy returns expected 404 for the new URL and must pass after deployment.",
       "notes": "This is one new San Diego indexable page, not a new destination or page batch. Playwright screenshot QA was not run because the package is not installed in this repo. After deployment, verify the new URL, sitemap membership, release marker, and page invariants."
+    },
+    {
+      "id": "FT-RES-006",
+      "title": "Create the San Diego cluster SERP-overlap and persona decision pack",
+      "kind": "research",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-20",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 4,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/san-diego-cluster-research-decision-pack.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md"
+      ],
+      "success_signal": "A durable research pack builds a San Diego query universe from SERP-overlap evidence, inspects representative ranking pages, derives evidence-labeled personas, audits all canonical/indexable San Diego pages and relevant prototypes, and promotes exactly one bounded next implementation without editing site paths.",
+      "gsc_evidence_classification": "fresh authenticated read-only API snapshot collected 2026-07-19 with finalized data through 2026-07-17; central Control Room report on 2026-07-20 classifies it as reused central evidence for scheduling, but it remains current public-safe repository evidence for this manual research action",
+      "promoted_action": "FT-IMP-002",
+      "review": "Independent read-only reviewer `019f7f5a-007c-7f01-afea-990f6def6484` returned PASS with no P0-P3 findings on 2026-07-20 after reviewing the current working tree and corrected GSC state.",
+      "qa": "jq empty ops/seo-roadmap.json passed; node tools/seo-qa.mjs passed; node tools/seo-qa.mjs --production passed; node --test tools/gsc-snapshot.test.mjs passed 11/11; node tools/gsc-snapshot.mjs --validate-existing validated 7 snapshots; focused San Diego hotel/stay/GSC query tests passed 13/13; focused research artifact and roadmap consistency checks passed; git diff --check passed.",
+      "notes": "Manual user-directed research transaction. No site path, sitemap, robots, canonical, indexability, indexing request, external account, or deployment changed. Semrush was not used for fresh claims; public SERP and ranking-page evidence is directional and source-dated."
+    },
+    {
+      "id": "FT-IMP-002",
+      "implementation_backlog_id": "IMP-016",
+      "title": "Upgrade the San Diego things-to-do page into a persona-led cluster router",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "ready",
+      "implementation_ready_on": "2026-07-20",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "tools/generate-pages.mjs",
+        "site/things-to-do/san-diego-with-kids.html",
+        "tools/san-diego-cluster-router-page.test.mjs",
+        "backlog/implementation-backlog.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "production_invariant": "The San Diego things-to-do URL remains canonical, indexable, and in the sitemap; it visibly routes first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners to the correct San Diego cluster pages without editing the protected San Diego stay page or publishing unsupported safety, route, stroller, quiet, water-suitability, or firm family-fit claims.",
+      "success_signal": "The existing all-ages San Diego activities page becomes a clear cluster router for research-derived personas, improves internal discovery of toddler, teen, stay, hotel, and itinerary pages, preserves trust boundaries, and passes focused/native QA plus independent review.",
+      "notes": "Do not touch `site/where-to-stay/san-diego-with-kids.html` before the 2026-07-27 protected stay-page evaluation unless a technical defect requires it. Do not create a new page, add a new destination, request indexing, scrape events, or mutate external accounts."
     }
   ]
 }

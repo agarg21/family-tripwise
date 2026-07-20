@@ -1,10 +1,10 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-18
+Last updated: 2026-07-20
 
 ## Active
 
-No SEO Research & Review task is active.
+- None.
 
 ## Next
 
@@ -43,6 +43,34 @@ Current measured signal:
 - Treat all conclusions as directional until more data is available.
 
 ## Done
+
+### SRR-009: San Diego Cluster SERP-Overlap And Persona Decision Pack
+
+Status: done
+
+Completed: 2026-07-20
+
+Roadmap ID: `FT-RES-006`
+
+Recommendation label: `improve`
+
+Research artifact:
+
+- `docs/research/san-diego-cluster-research-decision-pack.md`
+
+Scope:
+
+- Built the complete San Diego family query universe from observed SERP URL/domain overlap, not keyword-volume lists or semantic intuition alone.
+- Inspected representative ranking pages and separated authority/firsthand advantages Family Tripwise cannot copy from structural/usefulness opportunities it can honestly pursue.
+- Derived a small research-hypothesis persona set from query modifiers, parent/community questions, and product constraints.
+- Audited all canonical/indexable San Diego pages, legacy shims, and relevant unpublished prototypes against the cluster map and personas.
+- Promoted exactly one bounded next implementation while respecting the protected San Diego stay-page observation window.
+
+Current result:
+
+- Promoted `FT-IMP-002` / `IMP-016`: upgrade the existing all-ages San Diego things-to-do page into a persona-led cluster router.
+- Independent review returned `PASS` with no P0-P3 findings.
+- No `site/**`, sitemap, robots, canonical, indexability, external account, indexing request, automation, or deployment changed in the research action.
 
 ### SRR-005: San Diego Hotel Page Feasibility Review
 

@@ -1,12 +1,52 @@
 # Implementation Backlog
 
-Last updated: 2026-07-15
+Last updated: 2026-07-20
 
 ## Active
 
-`IMP-015` / `FT-IMP-001` is completed locally and review-clean. IMP-001 through IMP-005, IMP-009 through IMP-010, and IMP-013 through IMP-014 are complete. IMP-012 is intentionally deferred for now.
+No implementation task is active.
 
 ## Selected
+
+### IMP-016: Upgrade San Diego Things-To-Do Into Persona-Led Cluster Router
+
+Status: ready
+
+Roadmap ID: `FT-IMP-002`
+
+Source handoff:
+
+- `FT-RES-006: Create the San Diego cluster SERP-overlap and persona decision pack`
+- `docs/research/san-diego-cluster-research-decision-pack.md`
+
+Goal:
+
+Improve the existing all-ages San Diego activities page so it becomes the cluster router for first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners.
+
+Affected production URL:
+
+- `https://familytripwise.com/things-to-do/san-diego-with-kids.html`
+
+Expected bounded implementation paths:
+
+- `tools/generate-pages.mjs`
+- `site/things-to-do/san-diego-with-kids.html`
+- `tools/san-diego-cluster-router-page.test.mjs`
+- declared operator evidence and roadmap files
+
+Acceptance checks:
+
+- Preserve the existing canonical URL, indexability, and sitemap membership.
+- Make the page's all-ages role explicit: broad activity hub plus San Diego cluster router, not a duplicate toddler, teen, hotel, or itinerary page.
+- Route at least five research-derived personas: first-time family, toddler/nap/stroller family, teen/tween family, lodging-led planner, and rainy/free/budget planner.
+- Link clearly to the existing toddler, teen, stay, hotel, and itinerary pages without editing the protected San Diego stay page before the July 27 observation gate.
+- Add a compact rainy/free planning surface with official/current-source links where relevant; do not publish stale event or Kids Free claims as current.
+- Do not publish unsupported safety, route, stroller, quiet, water-suitability, or firm family-fit claims.
+- Do not copy review/forum prose or treat community anecdotes as verified experience.
+- Do not create a new page, add a new destination, request indexing, scrape events, or mutate external accounts.
+- Focused/native QA and independent review must pass before commit.
+
+## Completed
 
 ### IMP-015: Reframe Las Vegas Stay Decision Support
 

@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-18
+Last updated: 2026-07-20
 
 Last re-scored: 2026-07-14
 Next re-score due: 2026-07-21
@@ -15,8 +15,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-18.json`.
-- Classification on July 18: fresh authenticated read-only Search Console API evidence, collected July 18 with finalized performance data through July 16.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-19.json`.
+- Classification on July 20: fresh authenticated read-only Search Console API evidence, collected July 19 with finalized performance data through July 17. The central Control Room report reuses this snapshot for scheduling, so do not call it a newly collected July 20 snapshot.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet, so this snapshot does not satisfy the separate `FT-EVAL-001` query-evidence requirement.
@@ -40,7 +40,9 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 5 | `FT-PLAN-001` clean San Diego family-hotel page brief | Content/product quality | Completed | The review-clean brief widens the candidate set, defines price-band and review-signal standards, and keeps the public page gated. |
 | 6 | `FT-RES-005` expanded San Diego family-hotel evidence pack | Content/product quality | Completed | The review-clean expanded pack covers eight hotels with approximate price bands and family-review signals, while the live page remains gated. |
 | 7 | `FT-PUB-001` researched San Diego family-hotel page | Content/product quality | Completed | Manual user approval moved the review-clean hotel evidence into one live, source-dated, non-ranky San Diego page. |
-| 8 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
+| 8 | `FT-RES-006` San Diego SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Manual user instruction selected one San Diego-deepening research transaction that audits the full cluster before the next implementation. |
+| 9 | `FT-IMP-002` San Diego things-to-do persona-led cluster router | Content/product quality | Ready | The research pack promotes one existing-page improvement that can strengthen the cluster without touching the protected stay page. |
+| 10 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -153,6 +155,26 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Release invariant: the URL must be canonical, indexable, in the sitemap exactly once, internally linked from the home page and San Diego stay page, and visibly include eight researched candidates plus final all-in total and human-review caveats.
 - Independent review: cycle 2 `PASS_WITH_P3`; cycle 1 P2 for unsupported Loews quietness wording was closed. Remaining P3: same-site Loews official pages conflict on self-parking amount (`$47` versus `$50`), while page copy keeps fees verify-before-booking.
 - QA: focused page tests and Las Vegas regression tests passed 5/5; roadmap JSON validation passed; native static SEO QA passed with 23 sitemap URLs and 26 HTML files; whitespace checks passed; local HTTP page returned 200; local sitemap includes the new URL; Wikimedia image resolved 200. Production SEO QA is expected to return 404 for the new URL before deployment and must be rerun after deployment.
+
+### FT-RES-006 — San Diego SERP-overlap cluster and persona decision pack
+
+- Selected: 2026-07-20 by direct manual user instruction.
+- State: completed and review-clean on 2026-07-20.
+- Research artifact: `docs/research/san-diego-cluster-research-decision-pack.md`.
+- Evidence: latest public-safe GSC snapshot from July 19 with finalized data through July 17; prior July 18 snapshot; latest central Control Room report; current San Diego site pages and prototypes; current public SERP snapshots; representative ranking-page inspection; qualitative Reddit/forum and r/Agentic_SEO process discussions.
+- Research result: the San Diego query universe is clustered by observed SERP URL/domain overlap, not keyword-volume lists alone. The pack defines five research-hypothesis personas, audits every canonical/indexable San Diego page plus legacy shims and relevant unpublished prototypes, separates authority advantages Family Tripwise cannot honestly copy from usefulness opportunities it can pursue, and recommends one bounded next implementation.
+- Promoted action: `FT-IMP-002`, an existing-page upgrade to make `https://familytripwise.com/things-to-do/san-diego-with-kids.html` a persona-led cluster router for first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners.
+- Publication boundary: no `site/**`, sitemap, robots, canonical, indexability, indexing request, external account, outreach, automation, or deployment changed.
+- Independent review: `PASS` from read-only reviewer `019f7f5a-007c-7f01-afea-990f6def6484`; no P0-P3 findings.
+- QA: roadmap JSON validation, native static SEO QA, production SEO QA, GSC snapshot tests/validation, focused research-artifact consistency, focused roadmap consistency, privacy/credential scan, and whitespace checks passed.
+
+### FT-IMP-002 — San Diego things-to-do persona-led cluster router
+
+- State: ready.
+- Source handoff: `FT-RES-006` and `docs/research/san-diego-cluster-research-decision-pack.md`.
+- Affected URL: `https://familytripwise.com/things-to-do/san-diego-with-kids.html`.
+- Goal: improve the existing all-ages San Diego activities page so it acts as a clear cluster router rather than another long generic list.
+- Acceptance boundary: preserve canonical/indexability/sitemap state; route at least five research-derived personas to the current toddler, teen, stay, hotel, and itinerary pages; do not edit the protected San Diego stay page before July 27; do not add a new page, new destination, indexing request, event scraper, or external account mutation; keep safety, route, stroller, quiet, water-suitability, and firm family-fit claims gated.
 
 ## Daily evidence loop
 
