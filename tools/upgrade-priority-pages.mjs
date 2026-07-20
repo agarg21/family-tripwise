@@ -18,9 +18,81 @@ const activityPages = {
       ["Best for teens", "La Jolla Cove", "More scenery and independence than a playground-heavy day."],
       ["Best rainy-day option", "Birch Aquarium or Balboa Park museums", "Both are easier to shorten than a full theme-park day."],
       ["Best free/low-cost", "Mission Bay or La Jolla tide-pool walk", "Parking is the main friction; the activity itself can stay low-cost."],
-      ["Best stroller-friendly", "Balboa Park core and zoo bus tour", "Use paved routes and transit inside the zoo to reduce walking."],
+      ["Lower stroller-friction candidate", "Balboa Park core and zoo bus tour", "Verify the exact paved route and use transit inside the zoo to reduce walking."],
       ["Best half-day anchor", "Birch Aquarium plus La Jolla coast", "Works as a contained morning or afternoon without overloading the day."],
       ["Best if you only have one day", "Zoo early, Balboa Park reset, Mission Bay or hotel pool", "Gives San Diego's family signature without crossing the city repeatedly."]
+    ],
+    personaRoutes: [
+      [
+        "First-time family",
+        "Use this page to pick one signature anchor, then move to the itinerary page so zoo, Balboa Park, bay, La Jolla, meals, and rest windows do not become a cross-city sprint.",
+        [
+          ["../family-itinerary/san-diego-with-kids.html", "Build the San Diego family itinerary"]
+        ]
+      ],
+      [
+        "Toddler, nap, or stroller-sensitive family",
+        "Use the toddler guide when short sessions, exits, hotel reset time, stroller handling, bathrooms, and snack timing matter more than seeing the longest attraction list.",
+        [
+          ["./san-diego-with-toddlers.html", "Open San Diego with toddlers"]
+        ]
+      ],
+      [
+        "Teen or tween family",
+        "Use the teen guide when the trip needs more coastline, food, independent-feeling stops, and fewer playground-style decisions.",
+        [
+          ["./san-diego-with-teens.html", "Open San Diego with teens"]
+        ]
+      ],
+      [
+        "Lodging-led planner",
+        "If hotel pool, beach access, parking, room setup, or midday returns will decide the trip, choose the stay base and hotel shortlist before locking the activity order.",
+        [
+          ["../where-to-stay/san-diego-with-kids.html", "Compare stay areas"],
+          ["../where-to-stay/san-diego-family-hotels.html", "Compare family hotels"]
+        ]
+      ],
+      [
+        "Rainy, free, or budget planner",
+        "Use official source pages before planning around a discount or weather backup. Treat October Kids Free and museum offers as date-specific checks, not evergreen guarantees.",
+        [
+          ["https://www.sandiego.org/c/kids-free", "Check Kids Free San Diego"],
+          ["https://sandiegomuseumcouncil.org/specials/kidsfree/", "Check Museum Council offers"]
+        ]
+      ]
+    ],
+    officialChecks: [
+      [
+        "Rainy-day backup",
+        "Start with Birch Aquarium or one Balboa Park museum, then verify current hours, timed-entry rules, parking, and whether the exhibit mix fits your child before promising it.",
+        [
+          ["https://aquarium.ucsd.edu/plan-your-visit", "Birch Aquarium plan your visit"],
+          ["https://balboapark.org/", "Balboa Park visitor info"]
+        ]
+      ],
+      [
+        "Free or lower-cost day",
+        "Mission Bay, Balboa Park outdoor time, ferry/waterfront walks, and La Jolla coast can keep ticket costs low, but parking, meals, and transport still decide the real day cost.",
+        [
+          ["https://www.sandiego.org/c/kids-free", "San Diego Tourism Authority Kids Free"],
+          ["https://sandiegomuseumcouncil.org/specials/kidsfree/", "San Diego Museum Council Kids Free"]
+        ]
+      ],
+      [
+        "Water, beach, and bay check",
+        "Before making a bay or beach stop the family reset plan, check current beach and bay status plus weather, tides, parking, shade, and restrooms for the exact spot.",
+        [
+          ["https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html", "County beach and bay status"]
+        ]
+      ]
+    ],
+    clusterLinks: [
+      ["San Diego toddler guide", "Use this when naps, short sessions, stroller handling, bathrooms, and easy exits are the binding constraint.", "./san-diego-with-toddlers.html", "Open San Diego with toddlers"],
+      ["San Diego teen guide", "Use this when older kids need coast, food, adventure options, and less toddler-paced structure.", "./san-diego-with-teens.html", "Open San Diego with teens"],
+      ["San Diego stay areas", "Use this before finalizing activities if the hotel base, parking, beach route, pool, or midday reset drives the trip.", "../where-to-stay/san-diego-with-kids.html", "Open where to stay in San Diego with kids"],
+      ["San Diego family hotels", "Use this when exact room setup, pool value, breakfast, kitchen, and rough nightly range matter before activity order.", "../where-to-stay/san-diego-family-hotels.html", "Open San Diego family hotels"],
+      ["San Diego family itinerary", "Use this after choosing anchors to sequence 1-day, 2-day, toddler, teen, and rainy-day plans without overpacking.", "../family-itinerary/san-diego-with-kids.html", "Open the San Diego family itinerary"],
+      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
     ],
     rows: [
       ["San Diego Zoo", "2-14", "4-6 hrs", "$$$", "Balboa Park", "Moderate", "No", "Medium", "Book ahead in peak periods", "Biggest family payoff in one place", "Balboa Park playground or one museum"],
@@ -1070,6 +1142,22 @@ ${cards.map(([title, body, href, linkText]) => `          <article class="activi
         </div>`;
 }
 
+function renderLinkList(links) {
+  return links.map(([href, label]) => `<a class="text-link" href="${esc(href)}">${esc(label)}</a>`).join(" ");
+}
+
+function renderPersonaRoutes(routes) {
+  return `        <div class="card-grid">
+${routes.map(([persona, body, links]) => `          <article class="activity-card"><h3>${esc(persona)}</h3><p>${esc(body)}</p><p>${renderLinkList(links)}</p></article>`).join("\n")}
+        </div>`;
+}
+
+function renderOfficialChecks(checks) {
+  return `        <div class="card-grid">
+${checks.map(([title, body, links]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p>${renderLinkList(links)}</p></article>`).join("\n")}
+        </div>`;
+}
+
 function renderActivityUpgrade(page) {
   const clusterSection = page.clusterLinks?.length
     ? `
@@ -1081,6 +1169,17 @@ function renderActivityUpgrade(page) {
           </div>
 ${renderClusterCards(page.clusterLinks)}
         </div>
+      </section>
+`
+    : "";
+  const officialCheckSection = page.officialChecks?.length
+    ? `
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Rain and budget checks</p>
+          <h2>Verify current offers and backup plans before building around them</h2>
+        </div>
+${renderOfficialChecks(page.officialChecks)}
       </section>
 `
     : "";
@@ -1118,6 +1217,15 @@ ${renderVisitorScan(page.scanRows || [])}
         </div>
       </section>
 
+` : ""}${page.personaRoutes?.length ? `      <section class="container page-section rank-ready-section" aria-labelledby="san-diego-family-constraint-router">
+        <div class="section-heading">
+          <p class="eyebrow">San Diego cluster router</p>
+          <h2 id="san-diego-family-constraint-router">Start with your family constraint</h2>
+        </div>
+        <p class="review-label">This is the all-ages activity hub. Use it to choose the first planning route, then move to the toddler, teen, stay, hotel, or itinerary page that matches the constraint you actually need to solve.</p>
+${renderPersonaRoutes(page.personaRoutes)}
+      </section>
+
 ` : ""}      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
@@ -1153,7 +1261,7 @@ ${renderDetails(page.details)}
         </div>
 ${renderPlans(page.plans)}
       </section>${clusterSection ? `${clusterSection}` : ""}
-${markerEnd}
+${officialCheckSection}${markerEnd}
 `;
 }
 

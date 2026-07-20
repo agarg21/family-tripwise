@@ -350,6 +350,7 @@ function activityCards(city, filterAge) {
 
 function activitiesPage(city) {
   const l = links(city);
+  const lastUpdated = city.slug === "san-diego" ? "July 20, 2026" : undefined;
   const cityAgePages = agePages.filter((page) => page.slug === city.slug);
   const ageLinks = cityAgePages.length
     ? `      <section class="band">
@@ -363,7 +364,7 @@ ${cityAgePages.map((page) => `          <article class="activity-card">
       </section>
 `
     : "";
-  const body = `${hero(city, `Things to do in ${city.name} with kids`, city.intro)}
+  const body = `${hero(city, `Things to do in ${city.name} with kids`, city.intro, lastUpdated)}
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>

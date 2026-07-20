@@ -29,12 +29,45 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-PLAN-001` | review-clean planning brief | `PASS` | Re-review cycle 2 closed price-band durability, stale gate language, and exact-path findings; eligible for exact-path push-only commit after staged QA. |
 | `FT-RES-005` | review-clean expanded research pack | `PASS` | Re-review cycle 2 closed the community/source reproducibility P2; eligible for exact-path push-only commit after staged QA. |
 | `FT-PUB-001` | review-clean San Diego hotel page | `PASS_WITH_P3` | Re-review cycle 2 closed the Loews quietness P2; one non-blocking P3 remains for conflicting Loews self-parking official-source values. |
+| `FT-IMP-002` | review-clean San Diego things-to-do router | `PASS` | Review cycle 2 closed the stale freshness-date P2; eligible for exact-path commit and deployment verification after staged QA. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-07-20 — `FT-IMP-002` review cycles 1-2
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the manual implementation to upgrade `https://familytripwise.com/things-to-do/san-diego-with-kids.html` into a persona-led San Diego cluster router.
+- Final implementation paths are `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`, `tools/san-diego-cluster-router-page.test.mjs`, `site/things-to-do/san-diego-with-kids.html`, `backlog/implementation-backlog.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, `ops/current-cycle.md`, and this review log.
+- Only one site page changed: `site/things-to-do/san-diego-with-kids.html`. The protected `site/where-to-stay/san-diego-with-kids.html` page remained unchanged.
+- The target page remains canonical, indexable, and present once in the sitemap.
+- The page now explicitly identifies itself as the all-ages activity hub and routes first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners to existing San Diego cluster pages.
+- The rainy/free/budget surface links to official San Diego Tourism Authority, San Diego Museum Council, Birch Aquarium, Balboa Park, and County beach/bay status sources without publishing stale Kids Free guarantees.
+- No new page, destination, indexing request, event scraper, outreach, booking/affiliate CTA, copied review/forum prose, external-account mutation, or deployment mutation was introduced before commit.
+
+Prior-finding verification:
+
+- Cycle 1 returned `CHANGES_REQUIRED` for a `P2` stale freshness disclosure: the target page still showed `Last updated: July 5, 2026` after the July 20 router/current-source update.
+- Cycle 2 closed the `P2`. `tools/generate-pages.mjs` now sets the San Diego all-ages activity page date to `July 20, 2026`; the generated target page shows that date; and `tools/san-diego-cluster-router-page.test.mjs` asserts it.
+
+QA evidence:
+
+- `node tools/generate-pages.mjs` passed.
+- `node --test tools/san-diego-cluster-router-page.test.mjs tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs` passed 10/10.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings after sequential rerun.
+- `jq empty ops/seo-roadmap.json` passed.
+- `git diff --check` passed.
+- Independent reviewer task: `019f7ff6-3cca-7052-9e6d-869eac450da3` / Harvey.
+
+Findings:
+
+- None (`P0`-`P3`) after cycle 2.
 
 ### 2026-07-18 — `FT-PUB-001` review cycle 1
 

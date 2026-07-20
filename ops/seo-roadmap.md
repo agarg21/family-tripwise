@@ -41,7 +41,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 6 | `FT-RES-005` expanded San Diego family-hotel evidence pack | Content/product quality | Completed | The review-clean expanded pack covers eight hotels with approximate price bands and family-review signals, while the live page remains gated. |
 | 7 | `FT-PUB-001` researched San Diego family-hotel page | Content/product quality | Completed | Manual user approval moved the review-clean hotel evidence into one live, source-dated, non-ranky San Diego page. |
 | 8 | `FT-RES-006` San Diego SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Manual user instruction selected one San Diego-deepening research transaction that audits the full cluster before the next implementation. |
-| 9 | `FT-IMP-002` San Diego things-to-do persona-led cluster router | Content/product quality | Ready | The research pack promotes one existing-page improvement that can strengthen the cluster without touching the protected stay page. |
+| 9 | `FT-IMP-002` San Diego things-to-do persona-led cluster router | Content/product quality | Completed | Existing all-ages activity page now routes first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners without touching the protected stay page. |
 | 10 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
@@ -170,11 +170,13 @@ Ready does not mean all items should ship immediately. The operator selects one 
 
 ### FT-IMP-002 — San Diego things-to-do persona-led cluster router
 
-- State: ready.
+- State: completed 2026-07-20.
 - Source handoff: `FT-RES-006` and `docs/research/san-diego-cluster-research-decision-pack.md`.
 - Affected URL: `https://familytripwise.com/things-to-do/san-diego-with-kids.html`.
-- Goal: improve the existing all-ages San Diego activities page so it acts as a clear cluster router rather than another long generic list.
-- Acceptance boundary: preserve canonical/indexability/sitemap state; route at least five research-derived personas to the current toddler, teen, stay, hotel, and itinerary pages; do not edit the protected San Diego stay page before July 27; do not add a new page, new destination, indexing request, event scraper, or external account mutation; keep safety, route, stroller, quiet, water-suitability, and firm family-fit claims gated.
+- Result: upgraded the existing all-ages San Diego activities page into a cluster router rather than another long generic list.
+- Implemented routes: first-time family, toddler/nap/stroller family, teen/tween family, lodging-led planner, and rainy/free/budget planner.
+- Preserved boundary: canonical/indexability/sitemap state stayed stable; the protected San Diego stay page was not edited; no new page, destination, indexing request, event scraper, outreach, booking/affiliate CTA, or external account mutation was introduced; safety, route, stroller, quiet, water-suitability, and firm family-fit claims remain gated.
+- QA and review: `node tools/generate-pages.mjs`, focused tests 10/10, `node tools/seo-qa.mjs`, `jq empty ops/seo-roadmap.json`, and `git diff --check` passed. Independent reviewer `019f7ff6-3cca-7052-9e6d-869eac450da3` returned `PASS` on review cycle 2 after the freshness-date P2 was fixed.
 
 ## Daily evidence loop
 

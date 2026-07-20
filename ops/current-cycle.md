@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual user-directed transaction, `FT-RES-006`, is completed and review-clean: a San Diego SERP-overlap cluster, persona, and page-audit decision pack. It promotes `FT-IMP-002`, a future existing-page improvement to make the all-ages San Diego things-to-do page a persona-led cluster router. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual user-directed implementation, `FT-IMP-002`, is review-clean and ready for exact-path commit/release verification: the all-ages San Diego things-to-do page now acts as a persona-led cluster router. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 ## Current Project State
 
@@ -20,7 +20,7 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual 
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 19 snapshot has finalized data through July 17, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
+- GSC: authenticated read-only API collection is working; the July 20 snapshot has finalized data through July 18, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 
@@ -147,11 +147,11 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual 
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-19.json`, collected through the read-only API with finalized data through July 17; it supersedes the seven-URL UI subset for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-20.json`, collected through the read-only API with finalized data through July 18; it supersedes the seven-URL UI subset for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-RES-006` is completed and review-clean. `FT-IMP-002` is the next ready implementation handoff if the user/operator selects implementation later.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-002` is completed and review-clean pending commit, push, deployment monitoring, and production verification. The next substantive eligible action is `FT-EVAL-001` on or after 2026-07-27, when fresh GSC evidence can evaluate the protected San Diego stay-page observation window.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 

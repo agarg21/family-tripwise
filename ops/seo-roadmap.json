@@ -40,7 +40,8 @@
         "backlog/implementation-backlog.md",
         "ops/operator-review.md",
         "ops/seo-roadmap.json",
-        "ops/seo-roadmap.md"
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md"
       ],
       "success_signal": "A current evidence-backed review identifies and promotes exactly one bounded implementation that improves an existing page or cluster without changing a protected URL during observation.",
       "gsc_evidence_classification": "reused authenticated UI import collected 2026-07-13 with data through 2026-07-12; directional, not fresh API evidence",
@@ -459,8 +460,10 @@
       "title": "Upgrade the San Diego things-to-do page into a persona-led cluster router",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "ready",
+      "status": "completed",
       "implementation_ready_on": "2026-07-20",
+      "selected_on": "2026-07-20",
+      "completed_on": "2026-07-20",
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -473,6 +476,7 @@
       ],
       "target_paths": [
         "tools/generate-pages.mjs",
+        "tools/upgrade-priority-pages.mjs",
         "site/things-to-do/san-diego-with-kids.html",
         "tools/san-diego-cluster-router-page.test.mjs",
         "backlog/implementation-backlog.md",
@@ -482,7 +486,9 @@
       ],
       "production_invariant": "The San Diego things-to-do URL remains canonical, indexable, and in the sitemap; it visibly routes first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners to the correct San Diego cluster pages without editing the protected San Diego stay page or publishing unsupported safety, route, stroller, quiet, water-suitability, or firm family-fit claims.",
       "success_signal": "The existing all-ages San Diego activities page becomes a clear cluster router for research-derived personas, improves internal discovery of toddler, teen, stay, hotel, and itinerary pages, preserves trust boundaries, and passes focused/native QA plus independent review.",
-      "notes": "Do not touch `site/where-to-stay/san-diego-with-kids.html` before the 2026-07-27 protected stay-page evaluation unless a technical defect requires it. Do not create a new page, add a new destination, request indexing, scrape events, or mutate external accounts."
+      "review": "Independent read-only reviewer `019f7ff6-3cca-7052-9e6d-869eac450da3` returned CHANGES_REQUIRED on cycle 1 for stale target-page freshness, then PASS on cycle 2 after the San Diego activity page date was durably updated to July 20, 2026.",
+      "qa": "node tools/generate-pages.mjs passed; node --test tools/san-diego-cluster-router-page.test.mjs tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs passed 10/10; node tools/seo-qa.mjs passed with 0 errors and 0 warnings after sequential rerun; jq empty ops/seo-roadmap.json passed; git diff --check passed.",
+      "notes": "Completed as a manual user-directed existing-page implementation. The protected San Diego stay page was not edited. No new page, destination, indexing request, scraper, outreach, booking/affiliate CTA, or external account mutation was introduced."
     }
   ]
 }

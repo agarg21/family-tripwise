@@ -8,9 +8,15 @@ No implementation task is active.
 
 ## Selected
 
+No implementation task is selected.
+
+## Completed
+
 ### IMP-016: Upgrade San Diego Things-To-Do Into Persona-Led Cluster Router
 
-Status: ready
+Status: done
+
+Completed: 2026-07-20
 
 Roadmap ID: `FT-IMP-002`
 
@@ -30,6 +36,7 @@ Affected production URL:
 Expected bounded implementation paths:
 
 - `tools/generate-pages.mjs`
+- `tools/upgrade-priority-pages.mjs`
 - `site/things-to-do/san-diego-with-kids.html`
 - `tools/san-diego-cluster-router-page.test.mjs`
 - declared operator evidence and roadmap files
@@ -46,7 +53,21 @@ Acceptance checks:
 - Do not create a new page, add a new destination, request indexing, scrape events, or mutate external accounts.
 - Focused/native QA and independent review must pass before commit.
 
-## Completed
+Result:
+
+- Added a top-of-page San Diego cluster router for first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners.
+- Added a compact rainy/free/budget verification surface with official San Diego Tourism Authority, San Diego Museum Council, Birch Aquarium, Balboa Park, and County beach/bay status links.
+- Reframed the stroller quick pick as a lower-friction candidate with route verification rather than a firm stroller-friendly claim.
+- Updated the San Diego all-ages activity page freshness date to July 20, 2026.
+- Preserved canonical, indexability, sitemap membership, and the protected San Diego stay page.
+
+Review and QA:
+
+- Independent reviewer `019f7ff6-3cca-7052-9e6d-869eac450da3` returned `PASS` on review cycle 2 after the stale-date P2 was fixed.
+- `node tools/generate-pages.mjs` passed.
+- `node --test tools/san-diego-cluster-router-page.test.mjs tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs` passed 10/10.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings after sequential rerun.
+- `jq empty ops/seo-roadmap.json` and `git diff --check` passed.
 
 ### IMP-015: Reframe Las Vegas Stay Decision Support
 
