@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 ## Cycle Name
 
@@ -8,7 +8,9 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed action `FT-IMP-004` is completed and review-clean for both San Diego lodging pages after the user explicitly overrode the low-signal observation hold. The area page and hotel page now have distinct area-choice and named-hotel jobs while retaining detailed decision support. `FT-EVAL-001` is superseded; later `FT-EVAL-002` is a non-blocking crawl/query checkpoint after current evidence exists. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed action `FT-IMP-004` is completed, released, and production-verified for both San Diego lodging pages after the user explicitly overrode the low-signal observation hold. The area page and hotel page now have distinct area-choice and named-hotel jobs while retaining detailed decision support. `FT-EVAL-001` is superseded; later `FT-EVAL-002` is a non-blocking crawl/query checkpoint after current evidence exists. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+
+The repository roadmap no longer has a calendar protection hold on the San Diego stay page. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, treat that report entry as a stale ledger mismatch and do not let it manufacture a scheduled action.
 
 ## Current Project State
 
@@ -23,6 +25,7 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-direct
 - GSC: authenticated read-only API collection is working; the July 20 snapshot has finalized data through July 18, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
+- Current released implementation: commit `326501bd32399421c56cbe0f4e4065146166a062`; GitHub Pages run `29796506753` succeeded and production verification passed for both revised San Diego lodging URLs
 
 ## Historical operating threads
 
@@ -151,7 +154,7 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-direct
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-004` is completed and review-clean, pending exact-path release and production verification. The next lodging measurement action is `FT-EVAL-002`, but it is not calendar-triggered and must wait for current Google crawl and protected query evidence on both revised URLs.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-004` is completed and released at commit `326501bd32399421c56cbe0f4e4065146166a062`; Pages run `29796506753`, production content invariants, and production SEO QA all passed. The next lodging measurement action is `FT-EVAL-002`, but it is not calendar-triggered and must wait for current Google crawl and protected query evidence on both revised URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -189,7 +192,6 @@ Useful future user input:
 - Whether to prioritize traffic growth, tool/product prototype, or monetization next.
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for the next research cycle.
-- Whether to create a standalone San Diego family hotels page after a human-review workflow exists.
 - Whether to validate San Antonio family-hotel demand before any standalone hotel page or hotel-shortlist expansion.
 
 ## Recommended Next Operator
@@ -208,7 +210,7 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight after deployment: sitemap returned 200 with 22 parsed URLs; robots returned 200 and advertises the sitemap; all configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-07-19.json`, collected through the authenticated read-only API on July 19 with finalized data through July 17.
+- Current normalized source: `ops/gsc-snapshots/2026-07-20.json`, collected through the authenticated read-only API on July 20 with finalized data through July 18.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos.

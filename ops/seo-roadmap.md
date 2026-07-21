@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 Last re-scored: 2026-07-14
 Next re-score due: 2026-07-21
@@ -43,7 +43,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 8 | `FT-RES-006` San Diego SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Manual user instruction selected one San Diego-deepening research transaction that audits the full cluster before the next implementation. |
 | 9 | `FT-IMP-002` San Diego things-to-do persona-led cluster router | Content/product quality | Completed | Existing all-ages activity page now routes first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners without touching the protected stay page. |
 | 10 | `FT-IMP-003` San Diego specialist-page usefulness pass | Content/product quality | Completed | All six pages received a section inventory; toddler, teen, and itinerary pages were compressed without removing their scan, detail, or application layers. |
-| 11 | `FT-IMP-004` improve both San Diego lodging pages | Content/product quality | Completed | User explicitly overrode the low-signal observation hold; both pages now have distinct search jobs and review-clean section-level improvements. |
+| 11 | `FT-IMP-004` improve both San Diego lodging pages | Content/product quality | Completed and released | User explicitly overrode the low-signal observation hold; both pages now have distinct search jobs, review-clean section-level improvements, and verified production output at `326501bd`. |
 | 12 | `FT-EVAL-001` stay-checklist evaluation | Measurement | Superseded | The July 13 checklist is no longer an isolated experiment after `FT-IMP-004`; do not claim a causal result on July 27. |
 | 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Ready after evidence | Non-blocking; run only after both revised URLs have current crawl and protected query evidence. |
 
@@ -195,13 +195,14 @@ Ready does not mean all items should ship immediately. The operator selects one 
 ### FT-IMP-004 — Improve both San Diego lodging decision pages
 
 - Selected: 2026-07-20 by direct manual user instruction after the user chose immediate page usefulness over preserving the low-signal stay-page observation window.
-- State: completed and review-clean.
+- State: completed, released, and production-verified at commit `326501bd32399421c56cbe0f4e4065146166a062`; GitHub Pages run `29796506753` succeeded.
 - Affected URLs: `https://familytripwise.com/where-to-stay/san-diego-with-kids.html` and `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
 - Area-page result: removes the duplicate base area table and parallel three-hotel profiles; retains five area choices, a seven-field comparison, interactive constraint checklist, four exact-hotel checks, and direct routing to the eight-hotel guide.
 - Hotel-page result: retains all eight detailed property records, approximate nightly prices, map, room facts, directional themes from sampled reviews, and sources; compresses eight repetitive category cards to five trip styles and merges repeated methodology/caveats.
 - Measurement consequence: `FT-EVAL-001` is superseded. `FT-EVAL-002` is a non-blocking crawl/query-interpretation checkpoint, not a short-window ranking verdict.
 - Boundary: no URL, destination, sitemap, robots, canonical, indexability, indexing request, outreach, booking CTA, affiliate change, or external-account mutation.
 - QA and review: 39/39 repository tests, 14/14 focused lodging/regression tests, native and production-preflight SEO QA, desktop/mobile browser checks, JSON, privacy, scope, and whitespace checks passed. Independent reviewer `019f8284-1234-7c81-aa49-b4d50c95942a` returned `PASS` on cycle 2 with no P0-P3 findings.
+- Production verification: the release marker matched the implementation commit; both affected URLs passed the predeclared content invariants, canonical/indexability/sitemap checks, and production SEO QA with 0 errors and 0 warnings.
 
 ## Daily evidence loop
 

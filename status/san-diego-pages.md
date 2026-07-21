@@ -1,6 +1,6 @@
 # San Diego Page Status
 
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 Sources:
 
@@ -10,7 +10,14 @@ Sources:
 - Historical Semrush-derived demand notes: `docs/plan/5-city-page-build-brief.md`, `docs/plan/seo-cluster-research-protocol.md`, `docs/research/age-specific-family-travel-demand.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
-Note: GSC index/performance status below comes from the July 20 snapshot, collected before the July 20 `FT-IMP-002` deployment. Production page availability was verified after deployment. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; protected raw query export has not been collected into repo state yet.
+Note: GSC index/performance status below comes from the July 20 snapshot, with finalized data through July 18. It predates the July 20 `FT-IMP-002` and `FT-IMP-004` releases and therefore does not measure either revision. Production availability and action-specific content checks passed for both releases. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; protected raw query export has not been collected into repo state yet.
+
+## Release State
+
+- The latest San Diego lodging implementation is `FT-IMP-004`, commit `326501bd32399421c56cbe0f4e4065146166a062`.
+- GitHub Pages run `29796506753` succeeded. The production release marker matched the commit, both lodging URLs passed their content invariants, and production SEO QA returned 0 errors and 0 warnings.
+- The repository and `origin/main` were clean and aligned at the implementation commit before this documentation reconciliation.
+- The repository roadmap has no calendar observation hold after the user's manual override. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, automated dispatch touching the stay URL should treat the ledger mismatch as unresolved rather than schedule work from the date. `FT-EVAL-002` becomes eligible only when both revised lodging URLs have current crawl and protected query evidence.
 
 ## Public Pages
 

@@ -30,7 +30,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-005` | review-clean expanded research pack | `PASS` | Re-review cycle 2 closed the community/source reproducibility P2; eligible for exact-path push-only commit after staged QA. |
 | `FT-PUB-001` | review-clean San Diego hotel page | `PASS_WITH_P3` | Re-review cycle 2 closed the Loews quietness P2; one non-blocking P3 remains for conflicting Loews self-parking official-source values. |
 | `FT-IMP-002` | released San Diego things-to-do router | `PASS` | Review cycle 2 closed the stale freshness-date P2; commit `1a321707fcb8203df40e19ac13bdf8782db196bb` was pushed, Pages run `29752040108` succeeded, and production invariants/SEO QA passed. |
-| `FT-IMP-004` | review-clean San Diego lodging revision | `PASS` | Cycle 2 closed unsupported route/reset conclusions and representative-sounding language for small directional review samples; eligible for exact-path commit and deployment after final staged QA. |
+| `FT-IMP-004` | released San Diego lodging revision | `PASS` | Cycle 2 closed unsupported route/reset conclusions and representative-sounding language for small directional review samples; commit `326501bd32399421c56cbe0f4e4065146166a062` was pushed, Pages run `29796506753` succeeded, and production invariants/SEO QA passed. |
 
 ## Open blocking findings
 
@@ -176,6 +176,19 @@ Prior-finding verification:
 - Closed the review-sample P2. Hotel cards now say `Themes in sampled online reviews`; the page identifies a small directional public sample and states that it is not representative ratings, copied reviews, or firsthand stays.
 
 Independent read-only QA passed: 39/39 repository tests, 14/14 focused tests, native SEO QA with 0 errors and 0 warnings, syntax checks, roadmap JSON, whitespace checks, exact declared scope, and privacy scan. No P0-P3 findings remain.
+
+Release evidence:
+
+- Implementation commit `326501bd32399421c56cbe0f4e4065146166a062` was pushed to `origin/main`.
+- GitHub Pages run `29796506753` completed successfully.
+- The production release marker matched the implementation commit; both affected URLs passed the predeclared content invariants, canonical/indexability/sitemap checks, and production SEO QA with 0 errors and 0 warnings.
+- `FT-EVAL-001` remains superseded. `FT-EVAL-002` is the next lodging measurement action only after current crawl and protected query evidence exists for both revised URLs; it is not a calendar-triggered hold.
+
+### 2026-07-21 — `FT-IMP-004` release-state reconciliation
+
+- Documentation-only scope: `ops/current-cycle.md`, `ops/needs-user.md`, `ops/operator-review.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, and `status/san-diego-pages.md`.
+- Independent reviewer `019f8481-7526-7773-82a3-2a45fc5ecc7f` returned `CHANGES_REQUIRED` in cycle 1 for the unreconciled central hold, two stale current-cycle notes, and the superseded needs-user question; cycle 2 returned `PASS` with no P0-P3 findings after all were corrected.
+- Native QA passed: 39/39 repository tests, roadmap JSON validation, `git diff --check`, privacy/exact-scope checks, and local SEO QA with 0 errors and 0 warnings. The reviewer also independently verified the production release marker, Pages run, affected-page invariants, and production SEO QA.
 
 ### 2026-07-20 — `FT-IMP-003` review cycles 1-2
 

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise SEO Operator",
-  "last_updated": "2026-07-20",
+  "last_updated": "2026-07-21",
   "last_rescored_on": "2026-07-14",
   "next_rescore_due": "2026-07-21",
   "planning_horizon_days": 28,
@@ -574,6 +574,7 @@
       "kind": "implementation",
       "lane": "content-and-product-quality",
       "status": "completed",
+      "completed_on": "2026-07-20",
       "impact": 5,
       "confidence": 4,
       "learning_value": 4,
@@ -615,6 +616,12 @@
       ],
       "result": "The area page now compares five areas through one scan layer, one conditional detail matrix, one interactive application layer, and four hotel checks without duplicating named hotel profiles. The hotel page retains eight detailed properties, approximate nightly prices, the shared map, official facts, and small directional review samples while removing repeated category and methodology layers.",
       "review": "Independent reviewer 019f8284-1234-7c81-aa49-b4d50c95942a returned PASS on cycle 2 with no P0-P3 findings after both cycle-1 P2 findings were closed.",
+      "release_evidence": {
+        "commit": "326501bd32399421c56cbe0f4e4065146166a062",
+        "pages_run": "29796506753",
+        "pages_result": "success",
+        "production_result": "The release marker matched the implementation commit; both affected URLs passed action-specific content invariants, canonical/indexability/sitemap checks, and production SEO QA with 0 errors and 0 warnings."
+      },
       "notes": "Manual user-directed override of the stay-page observation hold on 2026-07-20. The user explicitly prioritized immediate usefulness improvements over preserving a low-signal early measurement window. No new URL, destination, indexing request, outreach, booking CTA, or external-account mutation is allowed."
     }
   ]
