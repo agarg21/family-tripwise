@@ -112,6 +112,19 @@ const cities = [
       ["San Diego Mission Bay Resort FAQ", "https://www.missionbayresort.com/faq/"],
       ["Homewood Suites San Diego Downtown/Bayside", "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/"]
     ],
+    activitySources: [
+      ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
+      ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
+      ["Balboa Park visitor info", "https://balboapark.org/"],
+      ["Coronado Ferry info", "https://coronadoferrylanding.com/ferry-info/"],
+      ["SeaWorld San Diego park info", "https://seaworld.com/san-diego/park-info/"],
+      ["LEGOLAND California plan your visit", "https://www.legoland.com/california/plan-your-visit/"],
+      ["San Diego Zoo Safari Park plan your visit", "https://sandiegozoo.org/app/p/"],
+      ["The New Children's Museum plan your visit", "https://thinkplaycreate.org/visit/"],
+      ["The New Children's Museum current notices", "https://thinkplaycreate.org/"],
+      ["Fleet Science Center hours and admission", "https://www.fleetscience.org/hours-admission"],
+      ["Belmont Park", "https://www.belmontpark.com/"]
+    ],
     areas: [
       ["Mission Bay", "Beach-and-reset research candidate", "Verify property access, exact routes, and fees", "Needs review"],
       ["La Jolla", "Coastal research candidate", "Verify slopes, crossings, parking, and property route", "Needs review"],
@@ -125,7 +138,13 @@ const cities = [
       ["Balboa Park museums", "preschool elementary tween teen rain stroller", "2-4 hrs", "$$", "Good", "Yes", "Medium", "Balboa Park", "Pick one museum and add a playground or garden walk."],
       ["Birch Aquarium", "toddler preschool elementary rain stroller", "90 min", "$$", "Good", "Partial", "High", "La Jolla", "A manageable indoor/outdoor backup with ocean views."],
       ["La Jolla Cove", "elementary tween teen", "2-4 hrs", "$", "Limited", "No", "Low", "La Jolla", "Great for older kids who can handle crowds, stairs, and uneven coastal paths."],
-      ["Coronado ferry and waterfront", "preschool elementary tween teen stroller", "2-3 hrs", "$$", "Good", "No", "Medium", "Downtown / Coronado", "A scenic lower-effort outing from Downtown."]
+      ["Coronado ferry and waterfront", "preschool elementary tween teen stroller", "2-3 hrs", "$$", "Good", "No", "Medium", "Downtown / Coronado", "A scenic lower-effort outing from Downtown."],
+      ["SeaWorld San Diego", "preschool elementary tween teen stroller", "full day", "$$$", "Good", "Partial", "Low", "Mission Bay", "A major paid day with animals, presentations, and rides; check height rules and the current show schedule."],
+      ["LEGOLAND California", "toddler preschool elementary", "full day", "$$$", "Good", "Partial", "Low", "Carlsbad", "Best for LEGO-focused younger children when the North County drive and a full park day fit the trip."],
+      ["San Diego Zoo Safari Park", "preschool elementary tween teen", "full day", "$$$", "Mixed", "No", "Low", "Escondido", "A separate inland wildlife day, not an add-on to the San Diego Zoo."],
+      ["The New Children's Museum", "toddler preschool elementary rain stroller", "2-3 hrs", "$$", "Good", "Yes", "High", "Downtown", "A hands-on Downtown anchor for younger kids; the museum announced a July 21-26, 2026 Comic-Con closure."],
+      ["Fleet Science Center", "preschool elementary tween rain stroller", "2-4 hrs", "$$", "Good", "Yes", "Medium", "Balboa Park", "An interactive science and dome-theater option for a wet or hot part of the day."],
+      ["Belmont Park", "elementary tween teen", "2-4 hrs", "$$-$$$", "Mixed", "Partial", "Low", "Mission Beach", "A flexible rides-and-boardwalk stop for older kids; pay and height rules vary by attraction."]
     ],
     teenFocus: ["La Jolla Cove", "kayaking or sea caves", "Coronado ferry", "neighborhood food", "beach time with fewer little-kid stops"],
     toddlerFocus: ["Mission Bay", "San Diego Zoo bus tour", "Birch Aquarium", "Balboa Park playgrounds"],
@@ -367,7 +386,10 @@ function activityCards(city, filterAge) {
 
 function activitiesPage(city) {
   const l = links(city);
-  const lastUpdated = city.slug === "san-diego" ? "July 20, 2026" : undefined;
+  const lastUpdated = city.slug === "san-diego" ? "July 21, 2026" : undefined;
+  const sourceNote = city.slug === "san-diego"
+    ? "Official venue links are below. Age fit, duration, cost tier, stroller, weather, nap, and booking labels are Family Tripwise editorial estimates; check current conditions before going."
+    : undefined;
   const cityAgePages = agePages.filter((page) => page.slug === city.slug);
   const ageLinks = cityAgePages.length
     ? `      <section class="band">
@@ -381,7 +403,7 @@ ${cityAgePages.map((page) => `          <article class="activity-card">
       </section>
 `
     : "";
-  const body = `${hero(city, `Things to do in ${city.name} with kids`, city.intro, lastUpdated)}
+  const body = `${hero(city, `Things to do in ${city.name} with kids`, city.intro, lastUpdated, sourceNote)}
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>
@@ -418,7 +440,7 @@ ${activityCards(city)}
         <script type="application/json" id="map-ready-activities">${JSON.stringify(city.activities.map(([name, tags, time, cost, stroller, rain, nap, area, summary]) => ({ name, tags: tags.split(" "), time, cost, stroller, rain, nap, area, summary })))}</script>
       </section>
 ${ageLinks}
-${sourceList(city)}
+${sourceList(city, city.activitySources || city.sources)}
     </main>`;
   return pageShell({
     title: `Things to Do in ${city.name} With Kids by Age`,
@@ -434,7 +456,7 @@ function stayPage(city) {
   const l = links(city);
   const isSanDiego = city.slug === "san-diego";
   const hotelShortlistLink = isSanDiego
-    ? '<a href="../where-to-stay/san-diego-family-hotels.html">8 family hotel options</a>'
+    ? '<a href="../where-to-stay/san-diego-family-hotels.html">12 family hotel options</a>'
     : "Parking, pool, breakfast, room size";
   const rows = city.areas.map(([area, best, watch, fit]) => `            <div class="table-row" role="row">
               <span role="cell">${esc(area)}</span>
@@ -552,7 +574,7 @@ const sanDiegoFamilyHotels = [
     familySetup: "Bungalow-style rooms and suites need exact room verification; do not infer family layout from the property style alone.",
     priceNote: "Public examples; larger rooms, bayfront location, and parking can move higher.",
     reviewSignal: "Family orientation, multiple pools, spacious rooms, beach access, and resort-village positives; conflicts around total price, amenity value, property scale, and room condition.",
-    parentCheck: "Verify room location, total with parking, current pool/restaurant/activity operations, walking distance from assigned room to meals, and room condition/renovation status.",
+    parentCheck: "Verify room location, total with parking, current pool/restaurant/activity operations, room condition, and any active redevelopment, renovation, or property-name change before booking.",
     mapQuery: "Paradise Point Resort San Diego",
     sources: ["PP-1", "PP-P", "PP-R"]
   },
@@ -611,6 +633,62 @@ const sanDiegoFamilyHotels = [
     parentCheck: "Verify final total with parking, shuttle hours/reservation process, room/suite layout, pool/kids-program status, driving plan, and whether isolation helps or hurts the family.",
     mapQuery: "Loews Coronado Bay Resort",
     sources: ["LOEWS-1", "LOEWS-P", "LOEWS-R"]
+  },
+  {
+    name: "La Jolla Shores Hotel",
+    category: "La Jolla beachfront stay",
+    area: "La Jolla Shores",
+    priceRange: "$350-$550+",
+    strengths: ["Beachfront location creates a distinct La Jolla trip shape", "Official room pages expose suites and limited kitchen or kitchenette setups", "Beach, location, staff, and refreshed-room positives recur in online review patterns"],
+    tradeoffs: ["Current pool/deck and construction status can materially change the stay", "Official policy pages have recently conflicted on parking amounts"],
+    familySetup: "Official room pages show two-queen rooms plus selected suites with sofa beds, kitchenettes, or a full kitchen; verify the exact room name because those features are not property-wide.",
+    priceNote: "Recent OTA examples displayed roughly $400-$450 including taxes and fees for selected one-night dates; larger rooms and peak dates can move much higher.",
+    reviewSignal: "Beach access, location, staff, and refreshed-room positives recur; construction, amenity availability, fees, and room-condition variability appear in conflicts.",
+    parentCheck: "Verify current pool/deck and construction status, exact room kitchen and bedding, parking, final total, and cancellation terms.",
+    mapQuery: "La Jolla Shores Hotel",
+    sources: ["LJS-OFFICIAL-ROOMS", "LJS-OFFICIAL-FAQ", "LJS-OFFICIAL-POLICY", "LJS-PRICE-EXPEDIA", "LJS-REVIEWS-EXPEDIA", "LJS-REVIEWS-TRIPADVISOR"]
+  },
+  {
+    name: "Hotel del Coronado",
+    category: "Iconic Coronado beachfront splurge",
+    area: "Coronado Beach",
+    priceRange: "$600-$900+",
+    strengths: ["Official materials expose multiple room neighborhoods and guaranteed connecting-room selection or request", "Cribs, select rollaways, heated pools, beach experiences, and an ages 4-12 kids program are documented", "Beach, setting, history, and resort-experience positives recur"],
+    tradeoffs: ["The five room neighborhoods do not offer the same room or pool experience", "Crowding and value are recurring conflicts at a very high total price"],
+    familySetup: "Standard neighborhoods offer rooms and suites, while Shore House and Beach Village include larger residence-style options; Shore House villas have one to three bedrooms, living areas, and full kitchens. Cribs are complimentary and rollaways fit select room types.",
+    priceNote: "A recent OTA example displayed about $619 including taxes and fees for one night; premium dates, views, villas, parking, and larger family layouts can move far higher.",
+    reviewSignal: "Beach, setting, history, pools, and the resort experience recur positively; room-neighborhood fit, crowding, service consistency, and value recur as conflicts.",
+    parentCheck: "Choose the exact neighborhood and room first, then verify pool access, connecting-room handling, final total with parking, kids-program schedule, and cancellation terms.",
+    mapQuery: "Hotel del Coronado",
+    sources: ["DEL-OFFICIAL-FAQ", "DEL-OFFICIAL-STAY", "DEL-OFFICIAL-SHORE-HOUSE", "DEL-PRICE-EXPEDIA", "DEL-REVIEWS-EXPEDIA", "DEL-REVIEWS-TRIPADVISOR"]
+  },
+  {
+    name: "The Dana on Mission Bay",
+    category: "Simpler Mission Bay family base",
+    area: "Mission Bay",
+    priceRange: "$250-$400+",
+    strengths: ["Official pages publish two heated pools, exact room capacities, and many suite layouts", "Crib, rollaway, connecting-room, refrigerator, microwave, parking, and resort-fee details are unusually clear", "Location, pools, grounds, and family-activity positives recur"],
+    tradeoffs: ["There are no full kitchens", "Room condition, parking walks, and fee/value perception vary"],
+    familySetup: "Standard rooms list a maximum occupancy of four; many junior suites and suites list up to six with sofa sleepers. All rooms can take a free crib, limited connecting rooms are request-only, and rooms include refrigerators and microwaves rather than kitchens.",
+    priceNote: "Recent OTA examples displayed from the mid-$200s to about $325 including taxes and fees for selected one-night dates; suites and peak weekends can move higher.",
+    reviewSignal: "Mission Bay location, pools, grounds, staff, and family activities recur positively; room size or condition, parking distance, and total-value concerns vary.",
+    parentCheck: "Verify exact room layout and occupancy, final total with parking and resort fee, connecting request if needed, pool/activity schedule, and cancellation terms.",
+    mapQuery: "The Dana on Mission Bay",
+    sources: ["DANA-OFFICIAL-FAQ", "DANA-OFFICIAL-ROOMS", "DANA-PRICE-EXPEDIA", "DANA-REVIEWS-EXPEDIA", "DANA-REVIEWS-BOOKING", "DANA-REVIEWS-TRIPADVISOR"]
+  },
+  {
+    name: "Manchester Grand Hyatt San Diego",
+    category: "Downtown waterfront full-service stay",
+    area: "Downtown / Seaport Village",
+    priceRange: "$300-$450+",
+    strengths: ["Official room pages publish connecting options and multiple family-suite layouts", "Downtown waterfront position fits Seaport Village and Embarcadero days", "Views, location, and large-hotel convenience recur positively"],
+    tradeoffs: ["The second rooftop pool is under renovation and the official FAQ says only Coastline Pool is operating", "A large convention-hotel footprint and room renovation status can change the experience"],
+    familySetup: "Official pages list a two-double connecting room, family suites with sleeper sofas or connecting bedrooms, minifridges, play yards on request, and microwaves in many suites; exact occupancy and connection still depend on room type.",
+    priceNote: "Recent OTA examples displayed about $330-$340 including taxes and fees for one night; family suites, parking, and high-demand Downtown dates can move higher.",
+    reviewSignal: "Bay views, Downtown access, rooms, and hotel scale recur positively; renovation status, pool expectations, club or service consistency, and value recur as conflicts.",
+    parentCheck: "Verify a renovated room, exact connecting or suite setup, current pool access, destination fee, parking, final total, and cancellation terms.",
+    mapQuery: "Manchester Grand Hyatt San Diego",
+    sources: ["MGH-OFFICIAL-MAIN", "MGH-OFFICIAL-ROOMS", "MGH-OFFICIAL-FAQ", "MGH-OFFICIAL-RENOVATION", "MGH-PRICE-EXPEDIA", "MGH-REVIEWS-EXPEDIA", "MGH-REVIEWS-BOOKING", "MGH-REVIEWS-TRIPADVISOR"]
   }
 ];
 
@@ -627,7 +705,27 @@ const sanDiegoHotelSources = [
   ["Homewood Suites Downtown/Bayside", "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/"],
   ["LEGOLAND Hotel", "https://www.legoland.com/california/places-to-stay/legoland-hotel/"],
   ["LEGOLAND hotel parking support", "https://california-support.legoland.com/hc/en-us/articles/360001573591-Is-parking-included-with-my-stay-at-the-LEGOLAND-California-Hotel-or-Castle-Hotel"],
-  ["Loews Coronado Bay Resort", "https://www.loewshotels.com/coronado-bay-resort"]
+  ["Loews Coronado Bay Resort", "https://www.loewshotels.com/coronado-bay-resort"],
+  ["La Jolla Shores Hotel accommodations", "https://www.ljshoreshotel.com/accommodations/"],
+  ["La Jolla Shores Hotel resort policies", "https://www.ljshoreshotel.com/resort-policies/"],
+  ["La Jolla Shores price and verified-review context", "https://www.expedia.com/La-Jolla-Hotels-La-Jolla-Shores-Hotel.h25973.Hotel-Information"],
+  ["La Jolla Shores recent-review context", "https://www.tripadvisor.com/Hotel_Review-g32578-d217262-Reviews-La_Jolla_Shores_Hotel-La_Jolla_San_Diego_California.html"],
+  ["Hotel del Coronado FAQ", "https://www.hoteldel.com/faq/"],
+  ["Hotel del Coronado rooms", "https://www.hoteldel.com/stay/"],
+  ["Hotel del Coronado price and verified-review context", "https://www.expedia.com/Coronado-Hotels-Hotel-Del-Coronado.h7496.Hotel-Information"],
+  ["Hotel del Coronado recent-review context", "https://www.tripadvisor.com/Hotel_Review-g32250-d125137-Reviews-Hotel_Del_Coronado-Coronado_California.html"],
+  ["The Dana on Mission Bay FAQ", "https://thedana.com/san-diego-hotel/faq/"],
+  ["The Dana on Mission Bay rooms", "https://thedana.com/san-diego-accommodations/"],
+  ["The Dana price and verified-review context", "https://www.expedia.com/San-Diego-Hotels-The-Dana-On-Mission-Bay.h40953.Hotel-Information"],
+  ["The Dana recent-review context", "https://www.booking.com/reviews/us/hotel/the-dana-on-mission-bay.html"],
+  ["The Dana additional review context", "https://www.tripadvisor.com/Hotel_Review-g60750-d83646-Reviews-The_Dana_on_Mission_Bay-San_Diego_California.html"],
+  ["Manchester Grand Hyatt San Diego", "https://www.hyatt.com/grand-hyatt/en-US/sanrs-manchester-grand-hyatt-san-diego"],
+  ["Manchester Grand Hyatt rooms", "https://www.hyatt.com/grand-hyatt/en-US/sanrs-manchester-grand-hyatt-san-diego/rooms"],
+  ["Manchester Grand Hyatt FAQ", "https://www.hyatt.com/grand-hyatt/en-US/sanrs-manchester-grand-hyatt-san-diego/faqs"],
+  ["Manchester Grand Hyatt renovation status", "https://www.hyatt.com/grand-hyatt/en-US/sanrs-manchester-grand-hyatt-san-diego/renovation"],
+  ["Manchester Grand Hyatt price and verified-review context", "https://www.expedia.com/San-Diego-Hotels-Manchester-Grand-Hyatt-San-Diego.h12073.Hotel-Information"],
+  ["Manchester Grand Hyatt recent-review context", "https://www.booking.com/reviews/us/hotel/manchester-grand-hyatt-san-diego.html"],
+  ["Manchester Grand Hyatt additional review context", "https://www.tripadvisor.com/Hotel_Review-g60750-d80219-Reviews-Manchester_Grand_Hyatt_San_Diego-San_Diego_California.html"]
 ];
 
 function googleMapsUrl(query) {
@@ -699,7 +797,7 @@ function sanDiegoFamilyHotelPage() {
         name: "Are the price ranges on this page booking quotes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. They are rough public examples checked July 18, 2026. Families should verify the final all-in total, taxes, parking, breakfast, cancellation terms, and exact room type before booking."
+          text: "No. They are rough public examples checked July 21, 2026. Families should verify the final all-in total, taxes, parking, breakfast, cancellation terms, and exact room type before booking."
         }
       }
     ]
@@ -709,12 +807,12 @@ function sanDiegoFamilyHotelPage() {
       <section class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
-          <h1>Top Family Hotels in San Diego: 8 Options by Trip Style</h1>
-          <p>Compare eight San Diego family hotels by pool and bay access, room setup, breakfast or kitchen needs, approximate nightly price, location, and themes from sampled online reviews.</p>
+          <h1>Top Family Hotels in San Diego: 12 Options by Trip Style</h1>
+          <p>Compare 12 San Diego family hotels by pool and beach access, room setup, breakfast or kitchen needs, approximate nightly price, location, and themes from sampled online reviews.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts and review sources checked:</strong> July 18, 2026</p>
+        <p><strong>Hotel facts and review sources checked:</strong> July 21, 2026</p>
         <p>Approximate prices are planning ranges. Compare the final total for your dates, room type, occupancy, taxes, and parking before booking.</p>
       </section>
       <section class="container media-section">
@@ -728,14 +826,14 @@ function sanDiegoFamilyHotelPage() {
           <div>
             <p class="eyebrow">Short answer</p>
             <h2>Start with the kind of trip you want</h2>
-            <p>For Mission Bay water time, compare Bahia, Mission Bay Resort, Hyatt, and Paradise Point. Start with Catamaran for Pacific Beach and bay access, Homewood Bayside for a suite and kitchen, LEGOLAND hotels for a park-centered trip, and Loews for a Coronado resort stay.</p>
+            <p>For Mission Bay water time, compare the six bay resorts by pool, room setup, and total price. Use La Jolla Shores for a beach-first La Jolla stay, Homewood or Manchester for two different Downtown bases, LEGOLAND hotels for a park-centered trip, and Hotel del or Loews for two very different Coronado stays.</p>
             <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
           </div>
           <dl class="snapshot">
-            <div><dt>Hotels covered</dt><dd>8 options</dd></div>
+            <div><dt>Hotels covered</dt><dd>12 options</dd></div>
             <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
-            <div><dt>Location view</dt><dd>Hotels and kid activities on one shared map</dd></div>
+            <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
           </dl>
         </div>
       </section>
@@ -745,11 +843,12 @@ function sanDiegoFamilyHotelPage() {
           <h2>Pick the closest trip style</h2>
         </div>
         <div class="quick-pick-grid hotel-pick-grid">
-          <article class="quick-pick"><span>Mission Bay water time</span><strong>Four different resort shapes</strong><p>Bahia for a published family-suite option; Mission Bay Resort for a wading pool; Hyatt for waterslides; Paradise Point for a larger stay-put resort.</p></article>
+          <article class="quick-pick"><span>Mission Bay water time</span><strong>Six different stay shapes</strong><p>Start with Bahia for a family suite, Mission Bay Resort for a wading pool, Hyatt for waterslides, Paradise Point for scale, Catamaran for Pacific Beach access, or The Dana for clearer room-capacity details.</p></article>
           <article class="quick-pick"><span>Bay plus Pacific Beach</span><strong>Catamaran Resort</strong><p>Compare when bay access and nearby food matter, with careful room-building and nighttime-noise checks.</p></article>
-          <article class="quick-pick"><span>Suite/kitchen downtown</span><strong>Homewood Suites Bayside</strong><p>Use when breakfast and kitchen function matter more than resort amenities.</p></article>
+          <article class="quick-pick"><span>Downtown base</span><strong>Homewood or Manchester Grand Hyatt</strong><p>Choose Homewood for suite, kitchen, and breakfast function; Manchester for a large full-service waterfront hotel, after checking renovation and pool status.</p></article>
           <article class="quick-pick"><span>LEGOLAND-heavy trip</span><strong>LEGOLAND Hotel/Castle</strong><p>Use when the park is the anchor; compare package, tickets, and parking as one total.</p></article>
-          <article class="quick-pick"><span>Coronado resort trip</span><strong>Loews Coronado Bay</strong><p>Compare when pools and Coronado time matter enough to accept a less central base.</p></article>
+          <article class="quick-pick"><span>Coronado resort trip</span><strong>Hotel del or Loews</strong><p>Choose Hotel del for the iconic beachfront experience or Loews for a more isolated bay resort; price the full stay before deciding.</p></article>
+          <article class="quick-pick"><span>La Jolla beach trip</span><strong>La Jolla Shores Hotel</strong><p>Compare for direct beach access, but verify current construction, pool/deck operations, and the exact room setup.</p></article>
         </div>
       </section>
       <section class="band">
@@ -758,7 +857,7 @@ function sanDiegoFamilyHotelPage() {
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">Approximate nightly prices come from public examples checked July 18, 2026. Use them to set a budget, then compare the final total for the same dates and room setup.</p>
+          <p class="review-label">Approximate nightly prices come from public examples checked July 21, 2026. Use them to set a budget, then compare the final total for the same dates and room setup.</p>
           <div class="comparison-scroll">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Approx. nightly price</th><th>Map</th><th>Most important check</th></tr></thead>
@@ -777,13 +876,13 @@ ${comparisonRows}
         <div class="google-map-panel">
           <iframe class="google-my-map" title="Family Tripwise San Diego family hotels and kid activity map" src="${sanDiegoMyMapsEmbedUrl}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-        <p class="review-label">Blue markers are hotels and the contrasting markers are kid activities. Use the full map to compare the hotel cluster with the family's first two planned days.</p>
+        <p class="review-label">Use the shared map to understand the main hotel and activity clusters. The four newly added hotels may not yet appear as shared-map pins, so use each table row's direct hotel map link for the complete 12-hotel set.</p>
         <p><a class="text-link" href="${sanDiegoMyMapsViewUrl}">Open the full Google map</a></p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Hotel cards</p>
-          <h2>Eight options, with the useful checks up front</h2>
+          <h2>12 options, with the useful checks up front</h2>
         </div>
         <div class="detail-card-grid hotel-card-grid">
 ${hotelCards}
@@ -798,7 +897,7 @@ ${hotelCards}
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages checked July 18, 2026 for rough nightly-price and online review pattern context.</li>
+          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages checked July 21, 2026 for rough nightly-price and online review pattern context.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -806,8 +905,8 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
     </main>`;
 
   return pageShell({
-    title: "Top Family Hotels in San Diego: 8 Options by Trip Style",
-    description: "Compare eight San Diego family hotels by trip style, approximate nightly price, room setup, pools, breakfast or kitchen needs, map location, and sampled online review themes.",
+    title: "Top Family Hotels in San Diego: 12 Options by Trip Style",
+    description: "Compare 12 San Diego family hotels by trip style, approximate nightly price, room setup, pools, breakfast or kitchen needs, map location, and sampled online review themes.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
   });

@@ -14,14 +14,14 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name=["']robots["'][^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html/g) || []).length, 1);
-  assert.match(html, /<title>Top Family Hotels in San Diego: 8 Options by Trip Style<\/title>/);
-  assert.match(html, /<h1>Top Family Hotels in San Diego: 8 Options by Trip Style<\/h1>/);
-  assert.match(html, /Hotel facts and review sources checked:<\/strong> July 18, 2026/);
+  assert.match(html, /<title>Top Family Hotels in San Diego: 12 Options by Trip Style<\/title>/);
+  assert.match(html, /<h1>Top Family Hotels in San Diego: 12 Options by Trip Style<\/h1>/);
+  assert.match(html, /Hotel facts and review sources checked:<\/strong> July 21, 2026/);
   assert.match(html, /Approximate prices are planning ranges/);
   assert.match(html, /final total for your dates, room type, occupancy, taxes, and parking/i);
 });
 
-test("covers eight named hotel options with dollar ranges and map links", () => {
+test("covers 12 named hotel options with dollar ranges and map links", () => {
   const hotelNames = [
     "Bahia Resort Hotel",
     "San Diego Mission Bay Resort",
@@ -30,14 +30,18 @@ test("covers eight named hotel options with dollar ranges and map links", () => 
     "Catamaran Resort Hotel and Spa",
     "Homewood Suites San Diego Downtown/Bayside",
     "LEGOLAND Hotel or Castle Hotel",
-    "Loews Coronado Bay Resort"
+    "Loews Coronado Bay Resort",
+    "La Jolla Shores Hotel",
+    "Hotel del Coronado",
+    "The Dana on Mission Bay",
+    "Manchester Grand Hyatt San Diego"
   ];
 
   for (const name of hotelNames) {
     assert.match(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
-  for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "Package-priced", "$235-$360+"]) {
+  for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "Package-priced", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) {
     assert.match(html, new RegExp(range.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
@@ -45,10 +49,11 @@ test("covers eight named hotel options with dollar ranges and map links", () => 
   assert.match(html, /compare the final total for the same dates and room setup/i);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
-  assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
-  assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 8);
-  assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 8);
-  assert.equal((html.match(/<h4>Price context and key check<\/h4>/g) || []).length, 8);
+  assert.match(html, /<dt>Location view<\/dt><dd>Shared cluster map plus direct links for all 12 hotels<\/dd>/);
+  assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
+  assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 12);
+  assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 12);
+  assert.equal((html.match(/<h4>Price context and key check<\/h4>/g) || []).length, 12);
   assert.doesNotMatch(html, /<h2>How to use this page<\/h2>/);
   assert.match(html, /small directional sample/);
   assert.match(html, /not representative ratings/);
@@ -61,7 +66,9 @@ test("embeds the shared Google My Maps view instead of the native schematic POC"
   assert.match(html, /title="Family Tripwise San Diego family hotels and kid activity map"/);
   assert.match(html, /src="https:\/\/www\.google\.com\/maps\/d\/embed\?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32\.823313151707154%2C-117\.28066802355525&amp;z=13"/);
   assert.match(html, /Open the full Google map/);
-  assert.match(html, /Blue markers are hotels and the contrasting markers are kid activities/);
+  assert.match(html, /four newly added hotels may not yet appear as shared-map pins/i);
+  assert.match(html, /each table row's direct hotel map link/i);
+  assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
   assert.equal((html.match(/<iframe/g) || []).length, 1);
   assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
   assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);

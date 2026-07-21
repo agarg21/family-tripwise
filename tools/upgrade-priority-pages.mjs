@@ -15,12 +15,10 @@ const activityPages = {
     quick: [
       ["Best overall", "San Diego Zoo", "Best single anchor for most ages if you start early and avoid trying to see every zone."],
       ["Best for toddlers", "Mission Bay beach morning", "Calmer water, flexible timing, and easy bail-out if naps win."],
-      ["Best for teens", "La Jolla Cove", "More scenery and independence than a playground-heavy day."],
-      ["Best rainy-day option", "Birch Aquarium or Balboa Park museums", "Both are easier to shorten than a full theme-park day."],
-      ["Best free/low-cost", "Mission Bay or La Jolla tide-pool walk", "Parking is the main friction; the activity itself can stay low-cost."],
-      ["Lower stroller-friction candidate", "Balboa Park core and zoo bus tour", "Verify the exact paved route and use transit inside the zoo to reduce walking."],
-      ["Best half-day anchor", "Birch Aquarium plus La Jolla coast", "Works as a contained morning or afternoon without overloading the day."],
-      ["Best if you only have one day", "Zoo early, Balboa Park reset, Mission Bay or hotel pool", "Gives San Diego's family signature without crossing the city repeatedly."]
+      ["Best for teens", "La Jolla Cove or Belmont Park", "Choose coast and scenery or rides and boardwalk energy instead of a younger-child museum day."],
+      ["Best rainy-day option", "Fleet, The New Children's Museum, or Birch Aquarium", "Choose by child age and location. The New Children's Museum announced a July 21-26, 2026 Comic-Con closure."],
+      ["Best full paid day", "SeaWorld, LEGOLAND, or Safari Park", "Pick one based on child interest and geography; none is a sensible add-on to another major anchor."],
+      ["Best free/low-cost", "Mission Bay, La Jolla coast, or Coronado waterfront", "Parking or ferry cost is the main friction; keep the rest of the day light."]
     ],
     personaRoutes: [
       [
@@ -100,22 +98,33 @@ const activityPages = {
       ["Balboa Park museums", "4-14", "2-4 hrs", "$$", "Balboa Park", "Easy in core", "Yes", "Medium", "Check timed exhibits", "Good weather-proof culture stop", "Zoo, playground, gardens"],
       ["Birch Aquarium", "2-10", "90 min-2 hrs", "$$", "La Jolla", "Easy", "Partial", "High", "Often helpful", "Manageable size and ocean views", "La Jolla Shores or Cove drive-by"],
       ["La Jolla Cove", "7+", "2-4 hrs", "$", "La Jolla", "Hard", "No", "Low", "No", "Memorable coast and sea-life viewing", "Birch Aquarium, casual lunch"],
-      ["Coronado ferry/waterfront", "4+", "2-3 hrs", "$$", "Downtown/Coronado", "Easy", "No", "Medium", "Check ferry times", "Scenic outing with built-in transport", "Waterfront dinner or beach walk"]
+      ["Coronado ferry/waterfront", "4+", "2-3 hrs", "$$", "Downtown/Coronado", "Easy", "No", "Medium", "Check ferry times", "Scenic outing with built-in transport", "Waterfront dinner or beach walk"],
+      ["SeaWorld San Diego", "3+", "Full day", "$$$", "Mission Bay", "Easy paths", "Partial", "Low", "Book/check schedule", "Animals, presentations, and rides in one paid day", "Mission Bay or hotel reset"],
+      ["LEGOLAND California", "2-12", "Full day", "$$$", "Carlsbad", "Easy paths", "Partial", "Low", "Book/check hours", "Strongest for LEGO-focused younger kids", "North County hotel or early dinner"],
+      ["San Diego Zoo Safari Park", "4+", "Full day", "$$$", "Escondido", "Mixed", "No", "Low", "Book/check heat", "A distinct large-scale wildlife day", "Early dinner and rest"],
+      ["The New Children's Museum", "1-9", "2-3 hrs", "$$", "Downtown", "Easy", "Yes", "High", "Closed Jul 21-26, 2026; check calendar", "Hands-on younger-child Downtown anchor", "Waterfront Park or early meal"],
+      ["Fleet Science Center", "3-13", "2-4 hrs", "$$", "Balboa Park", "Easy", "Yes", "Medium", "Check film times", "Interactive science plus dome theater", "One Balboa Park outdoor stop"],
+      ["Belmont Park", "6+", "2-4 hrs", "$$-$$$", "Mission Beach", "Mixed", "Partial", "Low", "Check ride hours", "Flexible rides and boardwalk energy", "Mission Bay or beach walk"]
     ],
     details: [
-      ["San Diego Zoo", "Families like it because it can satisfy animal lovers, walkers, and kids who need a big headline day.", "Best for toddlers through teens, but toddlers need the bus tour and fewer zones.", "Trying to cover the whole zoo, heat, hills, and late starts.", "Arrive early, choose two or three zones, and use the bus tour before everyone is tired.", "Bathrooms and food are inside the park; for a calmer reset, leave room for a Balboa Park garden or playground after.", "Buy dated tickets ahead during school breaks; do not stack this with La Jolla on the same day.", "Pair with Balboa Park, not a beach across town."],
-      ["Mission Bay beach morning", "Families like the calmer bay water and flexible start-stop rhythm.", "Best for babies, toddlers, preschoolers, and early elementary kids.", "Sand plus gear can make stroller use awkward; shade and parking vary by spot.", "Treat this as a morning block before sun and overtired kids peak.", "Use the hotel or nearby casual food as the bathroom/reset plan unless you verify facilities for a specific beach.", "No booking needed; check weather, tide, and parking before leaving.", "Pair with hotel pool, a short nap, or a light afternoon aquarium stop."],
-      ["Balboa Park museums", "Families like that the park lets you pivot between museums, gardens, playgrounds, and open space.", "Best for preschoolers through teens when you choose the right museum.", "Museum fatigue and long walks between attractions.", "Pick one paid museum, then add a free outdoor stop instead of buying a full day of tickets.", "The park has multiple restrooms and food options, but exact hours vary and should be checked before relying on them.", "Book special exhibits if needed; otherwise keep the plan flexible.", "Pair with the zoo only if you keep the museum stop short."],
-      ["Birch Aquarium", "Families like the compact footprint and indoor/outdoor mix.", "Best for toddlers through elementary-age kids.", "It may feel too short for teens unless paired with the coast.", "Use it as a 90-minute reset or rainy-day anchor rather than a full-day plan.", "Restrooms and food availability should be verified for the day of visit; La Jolla has more meal options nearby.", "Timed tickets can help; check hours and parking before going.", "Pair with La Jolla Shores for younger kids or La Jolla Cove for older kids."],
-      ["La Jolla Cove", "Families like the sea lions, coastline, and high-memory payoff.", "Best for elementary kids, tweens, and teens.", "Crowds, parking, stairs, uneven paths, and stroller frustration.", "Skip the stroller-heavy version unless you have a clear paved route and realistic parking plan.", "Plan bathrooms and food before arriving; this is not a place to improvise with an overtired toddler.", "No booking, but go early or off-peak.", "Pair with Birch Aquarium or a single La Jolla meal, not multiple cross-town stops."],
-      ["Coronado ferry and waterfront", "Families like that the ferry ride itself becomes the attraction.", "Best for preschoolers and up.", "Ferry timing, wind, and the need to coordinate return plans.", "Use it from Downtown when you want an outing without driving and parking again.", "Downtown and Coronado both have food options; verify restrooms near your exact landing.", "Check ferry times before promising it to kids.", "Pair with waterfront dinner, a beach walk, or a calm hotel evening."]
+      ["SeaWorld San Diego", "Families can combine animals, presentations, and rides without changing locations.", "Best when preschoolers through teens share at least one interest.", "Height splits, show timing, heat, lines, and a high total cost can fragment the day.", "Choose the family's top two priorities before arrival and use the official app for current schedules.", "Food and family restrooms are inside; check outside-food and stroller policies before packing.", "Check dated hours, closures, height rules, and ticket terms.", "Pair only with a Mission Bay or hotel reset."],
+      ["LEGOLAND California", "The park has unusually strong focus for LEGO-loving younger children.", "Best for toddlers through elementary-age kids; older siblings need ride-interest checks.", "Carlsbad travel, height splits, seasonal Water Park hours, and trying to return to central San Diego afterward.", "Treat it as a North County day and arrive near opening.", "Use the park app and plan one calm meal window before the afternoon dip.", "Check dated hours, temporary closures, height rules, parking, and ticket terms.", "Pair with a North County hotel or an early dinner, not a central-city attraction."],
+      ["San Diego Zoo Safari Park", "Families get a larger-scale wildlife setting that feels different from the city zoo.", "Best for preschoolers through teens who tolerate a large outdoor day.", "Escondido travel, heat, parking, and the park's large footprint.", "Choose Safari Park or Zoo for the trip unless the family genuinely wants two full wildlife days.", "Use the official map to place meals, shade, and rest around the must-see animals.", "Check current hours, parking, heat, optional safari costs, and attraction schedules.", "Pair with an early meal and rest, not another ticketed anchor."],
+      ["The New Children's Museum", "Hands-on installations give younger children a real Downtown indoor anchor.", "Best for toddlers through early elementary kids.", "It may skew young for tweens and teens; it is normally closed Tuesdays and announced a July 21-26, 2026 Comic-Con closure.", "Use it for two or three hours rather than filling an entire family day.", "Plan lunch nearby and verify Waterfront Park conditions before relying on the outdoor pairing.", "Check current hours, closure notices, admission, events, and the museum calendar.", "Pair with Waterfront Park, Seaport Village, or a hotel reset."],
+      ["Fleet Science Center", "Interactive exhibits and a dome-theater film create a useful science and weather-backup choice.", "Best for preschoolers through tweens, with exhibit fit varying by age.", "Museum overlap, film timing, and trying to add too many Balboa Park stops.", "Choose the film and one or two exhibit priorities before entering.", "The official page lists an on-site cafe; confirm its current hours if it anchors the meal plan.", "Check current admission, film schedule, and accessibility-morning dates.", "Pair with one garden, playground, or short Balboa Park walk."],
+      ["Belmont Park", "Families can choose a few rides, food, and beach time without committing to a full theme-park day.", "Best for elementary kids, tweens, and teens after checking ride heights.", "Crowds, noise, ride-by-ride cost, height splits, and Mission Beach parking.", "Set a ride or spending limit before arrival and keep the beach portion optional.", "Food is available in the park; verify restrooms and beach conditions for the exact plan.", "Check current ride hours, ticket options, closures, and height rules.", "Pair with Mission Bay or a short beach walk, not another major paid attraction."]
     ],
+    compactDetails: true,
+    comparisonNote: "Age fit, time, cost tier, stroller, rain, nap, and booking labels are Family Tripwise editorial estimates. Verify current venue rules and conditions for the trip date.",
+    detailsEyebrow: "Extra planning",
+    detailsTitle: "What changes when you choose a major paid or day-trip option",
+    detailsNote: "The comparison table covers all 12 choices. These six additions need extra planning because of geography, height splits, operating schedules, or a larger time and ticket commitment.",
     plans: {
       "1-day plan": "Start at the zoo when it opens, use the bus tour first, eat nearby, rest after lunch, then choose Mission Bay or a hotel pool instead of crossing to La Jolla.",
-      "2-day plan": "Day 1: Zoo plus a short Balboa Park stop. Day 2: Birch Aquarium and La Jolla for older kids, or Mission Bay plus Coronado for younger kids.",
-      "Rainy-day plan": "Use Birch Aquarium or one Balboa Park museum as the anchor, keep meals close, and save the zoo or beach for the best weather window.",
-      "Toddler-friendly plan": "Mission Bay morning, nap or hotel reset, then Birch Aquarium or a short zoo bus-tour visit.",
-      "Teen-friendly plan": "La Jolla Cove, kayak/sea-cave style adventure if appropriate, food stop, then Coronado or a sunset waterfront walk."
+      "2-day plan": "Day 1: Zoo plus a short Balboa Park stop. Day 2: Birch Aquarium and La Jolla for older kids, or Mission Bay plus The New Children's Museum for younger kids.",
+      "Rainy-day plan": "Use Fleet, The New Children's Museum, Birch Aquarium, or one Balboa Park museum as the anchor, chosen by age and hotel location.",
+      "Big-ticket day": "Choose SeaWorld, LEGOLAND, or Safari Park as the only major anchor. Protect the evening and avoid promising a second paid attraction.",
+      "Teen-friendly plan": "Choose La Jolla coast or Belmont Park, add one food stop, then use Coronado or the waterfront only if the route stays simple."
     },
     faqs: [
       ["What is the best thing to do in San Diego with kids?", "For most families, the San Diego Zoo is the best single anchor activity, but Mission Bay is easier for toddlers and La Jolla is better for teens."],
@@ -403,7 +412,7 @@ const stayPages = {
       ["Confirm the make-or-break amenity", "If the pool, kitchen, breakfast, laundry, beach access, or quiet room request is essential, check the current property page and ask the hotel when the published answer is unclear."]
     ],
     clusterLinks: [
-      ["Eight family hotel options", "Move from area choice to named hotels with rough nightly prices, room setup, pool and kitchen facts, sampled online-review themes, and a shared map.", "./san-diego-family-hotels.html", "Compare San Diego family hotels"],
+      ["12 family hotel options", "Move from area choice to named hotels with rough nightly prices, room setup, pool and kitchen facts, sampled online-review themes, and a shared map.", "./san-diego-family-hotels.html", "Compare San Diego family hotels"],
       ["Things to do in San Diego", "Use the activity guide to decide whether your hotel should optimize for the zoo, Mission Bay, La Jolla, Coronado, or Balboa Park.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
       ["San Diego family itinerary", "Match the stay base to a realistic 1-day, 2-day, 3-day, toddler, teen, or rainy-day route before booking.", "../family-itinerary/san-diego-with-kids.html", "Open the San Diego family itinerary"],
       ["Toddler-specific planning", "If naps, stroller exits, and short sessions drive the trip, cross-check Mission Bay, zoo bus tour, Birch Aquarium, and hotel reset options.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
@@ -1232,10 +1241,10 @@ ${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNo
       <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Parent logistics</p>
-            <h2>Detailed activity notes</h2>
+            <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
+            <h2>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
           </div>
-${renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
         </div>
       </section>
 

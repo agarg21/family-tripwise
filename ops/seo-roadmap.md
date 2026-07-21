@@ -46,8 +46,21 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 11 | `FT-IMP-004` improve both San Diego lodging pages | Content/product quality | Completed and released | User explicitly overrode the low-signal observation hold; both pages now have distinct search jobs, review-clean section-level improvements, and verified production output at `326501bd`. |
 | 12 | `FT-EVAL-001` stay-checklist evaluation | Measurement | Superseded | The July 13 checklist is no longer an isolated experiment after `FT-IMP-004`; do not claim a causal result on July 27. |
 | 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Ready after evidence | Non-blocking; run only after both revised URLs have current crawl and protected query evidence. |
+| 14 | `FT-IMP-005` expand San Diego activity and hotel decision sets | Content/product quality | Completed; release pending | The 12-activity and 12-hotel implementation is review-clean after cycle-3 `PASS`, with green native QA and exact scope. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+### FT-IMP-005 — Expand San Diego activity and hotel decision sets
+
+- Selected: 2026-07-21 by direct manual user instruction.
+- State: completed and review-clean; eligible for the exact-scope commit and deployment gate.
+- Main URLs: `https://familytripwise.com/things-to-do/san-diego-with-kids.html` and `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
+- Target: evaluate wider candidate pools, then publish 12 distinct primary activities and 12 evidence-backed hotels only when each earns inclusion through a different age, weather, budget, geography, or trip-style decision.
+- Dependent stay-page scope: update only the two hard-coded hotel-count link labels; do not reopen its area guidance.
+- Evidence: fresh July 21 authenticated API snapshot through July 19 is context only; use current SERPs, official attraction/property sources, current public price examples, and bounded recent family-review/community signals for candidate selection.
+- Boundary: no new URL, destination, indexing request, outreach, affiliate CTA, external-account mutation, personally verified claim, or unsupported safety/route/family-fit conclusion.
+- Local result: 12 primary activity rows, six concise extra-planning cards for the additions, 12 hotel records, six hotel trip-style picks, and a durable candidate/evidence review. Native SEO QA returned 0 errors and 0 warnings; all 40 repository tests and `git diff --check` passed.
+- Review: Tesla (`019f86e6-7253-78c1-a1b0-5024da393b27`) returned `PASS` on cycle 3 with no P0-P3 findings after every earlier finding was closed.
 
 ## Completed this cycle
 

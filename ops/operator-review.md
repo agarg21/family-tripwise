@@ -261,6 +261,50 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-21 — `FT-IMP-005` review cycle 1
+
+**Result: `CHANGES_REQUIRED`**
+
+Review scope:
+
+- Full 15-path manual implementation diff for the San Diego activity and family-hotel expansion.
+- Research methodology and candidate-selection rationale in `docs/research/san-diego-activity-hotel-expansion-review.md`.
+- Generated-source parity, exact 12-activity and 12-hotel counts, page usefulness and repetition, current official-source support, price/review labeling, trust boundaries, schema, internal links, and stay-page scope.
+- Native pre-review QA: `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings; `node --test tools/*.test.mjs` passed 40/40; `git diff --check` passed.
+
+Release state:
+
+- No commit, push, deployment, indexing request, outreach, new URL, destination, or external-account mutation has occurred.
+- Independent read-only reviewer: Tesla (`019f86e6-7253-78c1-a1b0-5024da393b27`).
+
+Findings:
+
+1. `P2` — The four new hotel records needed property-level durable source mapping, review windows and sample-size buckets, confidence/claim labels, and explicit recheck dates.
+2. `P2` — Activity constraint judgments needed a visible label distinguishing Family Tripwise editorial estimates from official attraction facts.
+3. `P2` — The New Children's Museum's announced July 21-26, 2026 Comic-Con closure needed to appear in the page decision surface.
+4. `P2` — `ops/current-cycle.md` cited the prior July 20 GSC snapshot instead of the current July 21 snapshot.
+5. `P3` — The hotel map wording implied all 12 hotels were pins in the shared map, the activity page date was stale, and the Manchester pool caveat needed its FAQ source alongside the renovation page.
+
+Resolution state:
+
+- All P2 findings were closed in cycle 2. No commit, push, or release occurred before re-review.
+
+### 2026-07-21 — `FT-IMP-005` review cycle 2
+
+**Result: `PASS_WITH_P3`**
+
+- Independent reviewer Tesla (`019f86e6-7253-78c1-a1b0-5024da393b27`) confirmed every cycle-1 P2 was closed and found no P0-P2 issues.
+- Remaining P3s: the research record assigned the active-pool detail to the renovation page instead of the FAQ, and four unused hotel metadata arrays retained placeholder source IDs.
+- Exact 15-path scope, the stay page's two count-only changes, 12/12 page and schema counts, claim boundaries, privacy, and all native QA passed.
+
+### 2026-07-21 — `FT-IMP-005` review cycle 3
+
+**Result: `PASS`**
+
+- Independent reviewer Tesla (`019f86e6-7253-78c1-a1b0-5024da393b27`) confirmed both cycle-2 P3s were closed and all earlier remediations remained intact.
+- No P0-P3 findings remained. Exact 15-path scope was preserved and the stay page still changes only its two dependent hotel-count references.
+- Final QA: native SEO QA passed with 0 errors and 0 warnings; all 40 tests, idempotent regeneration, both JavaScript checks, roadmap JSON, privacy, source mapping, and `git diff --check` passed.
+
 ### 2026-07-18 — Manual San Diego family hotels online review wording review cycles 1-2
 
 **Result: `PASS`**

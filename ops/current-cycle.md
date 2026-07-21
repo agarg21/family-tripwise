@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed action `FT-IMP-004` is completed, released, and production-verified for both San Diego lodging pages after the user explicitly overrode the low-signal observation hold. The area page and hotel page now have distinct area-choice and named-hotel jobs while retaining detailed decision support. `FT-EVAL-001` is superseded; later `FT-EVAL-002` is a non-blocking crawl/query checkpoint after current evidence exists. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed action `FT-IMP-005` is review-clean and eligible for release after expanding the all-ages San Diego guide to 12 primary activities and the family-hotel guide to 12 evidence-backed properties after wider candidate review. The area page remains limited to two dependent hotel-count label corrections. Independent reviewer Tesla (`019f86e6-7253-78c1-a1b0-5024da393b27`) returned `PASS` on cycle 3 with no P0-P3 findings; native SEO QA is green with 0 errors and 0 warnings, and all 40 repository tests pass. `FT-EVAL-001` remains superseded and `FT-EVAL-002` remains a non-blocking later crawl/query checkpoint after current evidence exists. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 The repository roadmap no longer has a calendar protection hold on the San Diego stay page. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, treat that report entry as a stale ledger mismatch and do not let it manufacture a scheduled action.
 
@@ -22,7 +22,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 20 snapshot has finalized data through July 18, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
+- GSC: authenticated read-only API collection is working; the July 21 snapshot has finalized data through July 19, 651 impressions over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: commit `326501bd32399421c56cbe0f4e4065146166a062`; GitHub Pages run `29796506753` succeeded and production verification passed for both revised San Diego lodging URLs

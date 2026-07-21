@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 ## Active
 
@@ -8,9 +8,29 @@ No implementation task is active.
 
 ## Selected
 
-No implementation task is selected.
+No implementation task is selected outside the active review.
 
 ## Completed
+
+### IMP-019: Expand San Diego Activity and Hotel Decision Sets
+
+Status: done
+
+Completed: 2026-07-21
+
+Roadmap ID: `FT-IMP-005`
+
+Result:
+
+- Expanded the activity comparison to 12 primary choices while keeping six situation picks and limiting extra logistics cards to the six additions.
+- Expanded the hotel comparison to 12 researched properties with four new trip-style gaps, rough nightly ranges, official room/amenity facts, current operational caveats, direct map links, and bounded online-review themes.
+- Added a durable candidate-selection and evidence review at `docs/research/san-diego-activity-hotel-expansion-review.md`.
+- Kept the stay-area page change to the two dependent 8-to-12 hotel-count references.
+
+Review and QA:
+
+- Independent reviewer Tesla (`019f86e6-7253-78c1-a1b0-5024da393b27`) returned `PASS` on cycle 3 with no P0-P3 findings.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings; all 40 repository tests, JavaScript checks, roadmap JSON, privacy, exact-scope, browser-layout, source-link, and whitespace checks passed.
 
 ### IMP-018: Improve Both San Diego Lodging Decision Pages
 

@@ -35,12 +35,12 @@ test("gives the area page one scan layer, one detail layer, and one application 
 });
 
 test("keeps hotel-list intent on the hotel page instead of duplicating hotel profiles", () => {
-  assert.match(stay, /Eight family hotel options/);
+  assert.match(stay, /12 family hotel options/);
   assert.match(stay, /href="\.\/san-diego-family-hotels\.html"/);
   assert.doesNotMatch(stay, /Research-backed hotel verification notes/);
   assert.doesNotMatch(stay, /<h3>Bahia Resort Hotel<\/h3>|<h3>San Diego Mission Bay Resort<\/h3>|<h3>Homewood Suites San Diego Downtown\/Bayside<\/h3>/);
 
-  assert.match(hotels, /Eight options, with the useful checks up front/);
+  assert.match(hotels, /12 options, with the useful checks up front/);
   assert.match(hotels, /Themes in sampled online reviews/);
   assert.match(hotels, /Approx\. nightly price/);
 });
@@ -64,5 +64,5 @@ test("keeps both pages detailed without returning to their prior repetition", ()
     .split(/\s+/).length;
 
   assert.ok(visibleWords(stay) >= 900 && visibleWords(stay) <= 1800);
-  assert.ok(visibleWords(hotels) >= 1500 && visibleWords(hotels) <= 2600);
+  assert.ok(visibleWords(hotels) >= 2000 && visibleWords(hotels) <= 3200);
 });

@@ -623,6 +623,57 @@
         "production_result": "The release marker matched the implementation commit; both affected URLs passed action-specific content invariants, canonical/indexability/sitemap checks, and production SEO QA with 0 errors and 0 warnings."
       },
       "notes": "Manual user-directed override of the stay-page observation hold on 2026-07-20. The user explicitly prioritized immediate usefulness improvements over preserving a low-signal early measurement window. No new URL, destination, indexing request, outreach, booking CTA, or external-account mutation is allowed."
+    },
+    {
+      "id": "FT-IMP-005",
+      "implementation_backlog_id": "IMP-019",
+      "title": "Expand the San Diego activity and family-hotel decision sets",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-21",
+      "completed_on": "2026-07-21",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-activity-hotel-expansion-review.md",
+        "tools/generate-pages.mjs",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/san-diego-cluster-router-page.test.mjs",
+        "tools/san-diego-family-hotels-page.test.mjs",
+        "tools/san-diego-lodging-editorial-page.test.mjs",
+        "site/things-to-do/san-diego-with-kids.html",
+        "site/where-to-stay/san-diego-family-hotels.html",
+        "site/where-to-stay/san-diego-with-kids.html",
+        "status/san-diego-pages.md",
+        "backlog/implementation-backlog.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "The all-ages guide covers 12 distinct San Diego family activities without duplicating specialist-page jobs, and the hotel guide covers 12 evidence-backed properties across distinct trip styles while retaining a fast comparison layer, concise details, current source labels, and clear uncertainty boundaries.",
+      "production_invariant": "All three touched URLs remain canonical, indexable, and in the sitemap; the activity page visibly compares 12 primary activities with age, pace, weather, cost, and geographic decision support; the hotel page visibly compares 12 researched properties with approximate nightly ranges, official family-setup facts, sampled-review themes, source links, and map links; the stay page changes only its hotel-count link labels; no new URL, destination, indexing request, outreach, affiliate CTA, external-account mutation, or personally verified claim is introduced.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-21 with finalized data through 2026-07-19. The all-ages and hotel revisions are newer than this performance window, so GSC is context only and cannot measure this action.",
+      "qa_evidence": [
+        "full generator and priority-upgrade pass completed",
+        "native SEO QA passed with 23 sitemap URLs, 26 HTML files, 0 errors, and 0 warnings",
+        "all 40 repository tests passed",
+        "roadmap JSON and git diff whitespace validation passed"
+      ],
+      "result": "Review-clean implementation expands the all-ages guide to 12 primary choices and the family-hotel guide to 12 researched properties. Repeated activity prose is bounded to six compact extra-planning cards for the additions, and the stay page changes only its two dependent hotel-count references.",
+      "review": "Independent reviewer Tesla (019f86e6-7253-78c1-a1b0-5024da393b27) returned PASS on cycle 3 with no P0-P3 findings after all cycle-1 P2 and cycle-2 P3 findings were closed.",
+      "notes": "Selected by direct manual user instruction on 2026-07-21. Research a wider candidate pool before selecting 12 activities and 12 hotels; list length is not a quota. The central report's superseded stay-page hold remains a ledger mismatch, so the stay URL is limited to two dependent count-label corrections."
     }
   ]
 }
