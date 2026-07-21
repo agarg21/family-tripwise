@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed action `FT-IMP-003` is completed and review-clean: all six canonical San Diego pages received a section-level usefulness audit, while implementation was limited to the toddler, teen, and itinerary specialist pages. The protected stay page remains unchanged through July 27, and the newly observing hotel and all-ages activity pages remain unchanged. The next substantive queued action remains `FT-EVAL-001` on or after July 27. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed action `FT-IMP-004` is completed and review-clean for both San Diego lodging pages after the user explicitly overrode the low-signal observation hold. The area page and hotel page now have distinct area-choice and named-hotel jobs while retaining detailed decision support. `FT-EVAL-001` is superseded; later `FT-EVAL-002` is a non-blocking crawl/query checkpoint after current evidence exists. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 ## Current Project State
 
@@ -151,7 +151,7 @@ The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-direct
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-002` is completed, committed, pushed, deployed, and production-verified. The next substantive eligible action is `FT-EVAL-001` on or after 2026-07-27, when fresh GSC evidence can evaluate the protected San Diego stay-page observation window.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-004` is completed and review-clean, pending exact-path release and production verification. The next lodging measurement action is `FT-EVAL-002`, but it is not calendar-triggered and must wait for current Google crawl and protected query evidence on both revised URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 

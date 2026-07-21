@@ -30,6 +30,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-005` | review-clean expanded research pack | `PASS` | Re-review cycle 2 closed the community/source reproducibility P2; eligible for exact-path push-only commit after staged QA. |
 | `FT-PUB-001` | review-clean San Diego hotel page | `PASS_WITH_P3` | Re-review cycle 2 closed the Loews quietness P2; one non-blocking P3 remains for conflicting Loews self-parking official-source values. |
 | `FT-IMP-002` | released San Diego things-to-do router | `PASS` | Review cycle 2 closed the stale freshness-date P2; commit `1a321707fcb8203df40e19ac13bdf8782db196bb` was pushed, Pages run `29752040108` succeeded, and production invariants/SEO QA passed. |
+| `FT-IMP-004` | review-clean San Diego lodging revision | `PASS` | Cycle 2 closed unsupported route/reset conclusions and representative-sounding language for small directional review samples; eligible for exact-path commit and deployment after final staged QA. |
 
 ## Open blocking findings
 
@@ -149,6 +150,32 @@ Full verification evidence:
 Findings:
 
 - None (`P0`-`P3`).
+
+### 2026-07-20 — `FT-IMP-004` review cycle 1
+
+**Reviewer:** `019f8284-1234-7c81-aa49-b4d50c95942a` (`Gibbs`)
+
+**Result: `CHANGES_REQUIRED`**
+
+Findings:
+
+1. `P2` — Several area-matrix and FAQ statements presented route, car, walkability, or midday-return judgments more firmly than the exact-property/date evidence supports. Recast these as comparisons to test and add focused regression coverage.
+2. `P2` — “Common” and “recurring” review wording overstated the hotel evidence pack's small directional review samples. Label the card and methodology text as themes from sampled reviews and state that the sample is not representative.
+
+Scope, structure, intent separation, internal routing, canonical/indexability, sitemap membership, roadmap supersession, and non-blocking measurement policy otherwise passed. The reviewer independently reran 39/39 repository tests, 14/14 focused tests, native SEO QA, roadmap JSON validation, and whitespace checks.
+
+### 2026-07-20 — `FT-IMP-004` re-review cycle 2
+
+**Reviewer:** `019f8284-1234-7c81-aa49-b4d50c95942a` (`Gibbs`)
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the area-guidance P2. Route, car, walkability, and midday-reset fields are conditional comparisons explicitly labeled as checks to test; the FAQ follows the same boundary and focused tests reject the prior firm phrases.
+- Closed the review-sample P2. Hotel cards now say `Themes in sampled online reviews`; the page identifies a small directional public sample and states that it is not representative ratings, copied reviews, or firsthand stays.
+
+Independent read-only QA passed: 39/39 repository tests, 14/14 focused tests, native SEO QA with 0 errors and 0 warnings, syntax checks, roadmap JSON, whitespace checks, exact declared scope, and privacy scan. No P0-P3 findings remain.
 
 ### 2026-07-20 — `FT-IMP-003` review cycles 1-2
 

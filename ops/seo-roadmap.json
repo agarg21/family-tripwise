@@ -8,6 +8,7 @@
   "planning_horizon_days": 28,
   "maintenance": {
     "after_every_run": "Update the selected item's durable status and evidence; do not reprioritize unrelated items mechanically.",
+    "after_deployment": "Record a crawl and measurement checkpoint. On a new or low-signal URL, do not block high-confidence usefulness, factual, or technical improvements unless an action contract explicitly requires an isolated experiment and the evidence can support that evaluation.",
     "weekly": "Re-score ready and planned items from fresh GSC, public health, experiment, product, and authority evidence.",
     "monthly_or_strategy_event": "Ask the user to confirm material destination expansion, monetization direction, risk changes, or site continuation decisions."
   },
@@ -269,7 +270,7 @@
       "title": "Evaluate the deployed San Diego stay-checklist experiment",
       "kind": "measurement",
       "lane": "measurement",
-      "status": "ready-after-observation-window",
+      "status": "superseded",
       "impact": 3,
       "confidence": 4,
       "learning_value": 5,
@@ -291,8 +292,41 @@
         "ops/seo-roadmap.json",
         "ops/seo-roadmap.md"
       ],
-      "success_signal": "Fresh query/page and indexing evidence is compared with the July 13 baseline and results in a keep, iterate, or stop decision without overstating causality.",
-      "notes": "Eligible on or after 2026-07-27."
+      "success_signal": "Superseded: the July 13 checklist change is no longer an isolated experiment after the user's explicit July 20 instruction to improve the page during its observation window.",
+      "result": "No causal evaluation will be claimed. The stay page had 190 impressions and average position 59.67 in the fresh July 20 snapshot, but Google's recorded last crawl was July 4, before the July 13 checklist deployment.",
+      "notes": "Superseded by FT-IMP-004. Preserve this item as experiment-history evidence rather than treating July 27 as a meaningful performance verdict."
+    },
+    {
+      "id": "FT-EVAL-002",
+      "title": "Check crawl and query interpretation for the revised San Diego lodging pages",
+      "kind": "measurement",
+      "lane": "measurement",
+      "status": "ready-after-evidence",
+      "impact": 3,
+      "confidence": 3,
+      "learning_value": 4,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": true,
+      "required_evidence": [
+        "fresh_gsc_snapshot",
+        "gsc_page_rows",
+        "gsc_priority_inspection_rows",
+        "protected_query_analysis"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "status/san-diego-pages.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "After Google recrawls the revised pages, fresh indexing, page, and protected query evidence identifies whether Google is distinguishing area intent from hotel-list intent; the checkpoint makes no short-window causal ranking claim.",
+      "notes": "Non-blocking evidence checkpoint. Do not create a protection window or manufacture an action from calendar cadence; run only after both revised URLs have current crawl/query evidence."
     },
     {
       "id": "FT-RES-004",
@@ -533,6 +567,55 @@
       "qa": "Generator and unrelated-output idempotency passed; 16 focused tests passed; native and production SEO QA passed with 23 sitemap URLs, 26 HTML files, 0 errors, and 0 warnings; 1280px and 390px browser checks passed without page overflow or console errors; roadmap JSON, exact scope, privacy, and whitespace checks passed.",
       "result": "Completed a section-level audit of all six canonical San Diego pages and reduced within-page repetition on the toddler, teen, and itinerary pages while preserving comparison detail, route applications, canonical/indexable state, and source boundaries. Fixed the defective two-day itinerary, labeled categorical planning fields as editorial estimates, restored the teen one-day route, and removed unrelated hotel-source residue.",
       "notes": "Manual user-directed editorial action. The protected stay page, newly observing hotel page, and newly observing all-ages activity page were audited but not edited. No sitemap, robots, canonical, indexability, new page, external account, outreach, or indexing request changed."
+    },
+    {
+      "id": "FT-IMP-004",
+      "title": "Improve both San Diego lodging decision pages",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-section-level-editorial-audit.md",
+        "tools/generate-pages.mjs",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/san-diego-family-hotels-page.test.mjs",
+        "tools/san-diego-lodging-editorial-page.test.mjs",
+        "tools/san-diego-stay-tool.test.mjs",
+        "site/where-to-stay/san-diego-with-kids.html",
+        "site/where-to-stay/san-diego-family-hotels.html",
+        "site/san-diego-stay-tool.mjs",
+        "status/san-diego-pages.md",
+        "backlog/implementation-backlog.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "Both lodging pages answer distinct user jobs with one scan layer, one detail layer, and concise evidence boundaries; the area page routes hotel-list intent to the hotel shortlist and the hotel page preserves property-level detail without repeated defensive language.",
+      "production_invariant": "Both lodging URLs remain canonical, indexable, and present in the sitemap; the area page visibly compares five areas and links to the hotel guide without duplicating named hotel profiles; the hotel page visibly retains eight detailed properties, approximate nightly prices, directional themes from sampled online reviews, source links, and the shared Google map.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-20 with finalized data through 2026-07-18. The stay page is indexed with 190 impressions and average position 59.67; the hotel page is newer than the performance window. Evidence is context only, not a causal performance evaluation.",
+      "qa_evidence": [
+        "full generator and upgrade pass completed; unrelated generated page output remained byte-stable",
+        "all 39 repository tests passed, including 14 focused lodging/regression tests",
+        "native SEO QA passed with 23 sitemap URLs, 26 HTML files, 0 errors, and 0 warnings",
+        "desktop and 390px browser checks passed with no page overflow; wide tables remained isolated in their scrollers; the map and interactive checklist rendered and worked",
+        "browser console had no errors or warnings",
+        "roadmap JSON and git diff whitespace validation passed"
+      ],
+      "result": "The area page now compares five areas through one scan layer, one conditional detail matrix, one interactive application layer, and four hotel checks without duplicating named hotel profiles. The hotel page retains eight detailed properties, approximate nightly prices, the shared map, official facts, and small directional review samples while removing repeated category and methodology layers.",
+      "review": "Independent reviewer 019f8284-1234-7c81-aa49-b4d50c95942a returned PASS on cycle 2 with no P0-P3 findings after both cycle-1 P2 findings were closed.",
+      "notes": "Manual user-directed override of the stay-page observation hold on 2026-07-20. The user explicitly prioritized immediate usefulness improvements over preserving a low-signal early measurement window. No new URL, destination, indexing request, outreach, booking CTA, or external-account mutation is allowed."
     }
   ]
 }

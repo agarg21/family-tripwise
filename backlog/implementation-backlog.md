@@ -12,6 +12,25 @@ No implementation task is selected.
 
 ## Completed
 
+### IMP-018: Improve Both San Diego Lodging Decision Pages
+
+Status: done
+
+Completed: 2026-07-20
+
+Roadmap ID: `FT-IMP-004`
+
+Result:
+
+- Made the area page the focused answer to where-to-stay/area intent and the hotel page the focused answer to family-hotel-list intent.
+- Kept five detailed area choices, the interactive checklist, all eight hotel records, approximate prices, sampled review themes, sources, and the shared map while removing repeated scan and methodology layers.
+- Superseded the no-longer-isolated `FT-EVAL-001`; later `FT-EVAL-002` is a non-blocking crawl/query checkpoint after evidence exists.
+
+Review and QA:
+
+- Independent reviewer `019f8284-1234-7c81-aa49-b4d50c95942a` returned `PASS` on cycle 2 with no P0-P3 findings.
+- 39/39 repository tests, 14/14 focused tests, SEO QA, desktop/mobile browser checks, JSON, privacy, scope, and whitespace checks passed.
+
 ### IMP-017: San Diego Specialist-Page Usefulness Pass
 
 Status: done

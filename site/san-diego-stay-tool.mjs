@@ -37,8 +37,7 @@ const EXTRA_CHECKS = {
 };
 
 const BASE_CHECKS = [
-  "Keep two area candidates until exact property and route checks are complete; do not treat an area label as a verdict.",
-  "Recheck dynamic transit, beach, price, fee, construction, event, and property information close to the booking date.",
+  "Keep two area-and-hotel combinations until the route and room checks are complete.",
 ];
 
 function selectedNeeds(formData) {
@@ -58,7 +57,7 @@ export function buildStayChecklist({ primary, transport, needs = [] }) {
   ];
 
   return {
-    summary: `Research exact properties around ${PRIMARY_CHECKS[primary].label}; keep every unsupported property, route, price, noise, or family-fit detail marked UNKNOWN.`,
+    summary: `Focus the final comparison on ${PRIMARY_CHECKS[primary].label}, then apply these checks to two area-and-hotel combinations.`,
     checks: [...new Set(checks)],
   };
 }

@@ -15,18 +15,18 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-19.json`.
-- Classification on July 20: fresh authenticated read-only Search Console API evidence, collected July 19 with finalized performance data through July 17. The central Control Room report reuses this snapshot for scheduling, so do not call it a newly collected July 20 snapshot.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-20.json`.
+- Classification on July 20: fresh authenticated read-only Search Console API evidence, collected July 20 with finalized performance data through July 18.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
-- Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet, so this snapshot does not satisfy the separate `FT-EVAL-001` query-evidence requirement.
+- Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet.
 
 ## Maintenance cadence
 
 - Every run: complete routine monitoring housekeeping, then select at most one substantive ready item. Healthy or unchanged housekeeping may coexist with that item; preserve unrelated work and update only the affected monitoring and selected-item evidence.
 - Weekly: review fresh evidence, close stale ideas, re-score the next four weeks, and keep at least two useful non-protected items ready when evidence supports them.
-- After a deployment: add a URL-scoped observation window and keep unrelated roadmap lanes open.
-- At an observation checkpoint: decide keep, iterate, or stop before editing the protected target again.
+- After a deployment: record a crawl and measurement checkpoint. Do not automatically protect a new or low-signal URL from high-confidence usefulness, factual, or technical improvements.
+- Use a blocking observation window only when an action explicitly requires an isolated experiment and available evidence can support that evaluation.
 - Monthly or after a strategic event: ask the user to confirm destination expansion, monetization, risk, and continuation decisions.
 
 ## Current sequence
@@ -43,7 +43,9 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 8 | `FT-RES-006` San Diego SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Manual user instruction selected one San Diego-deepening research transaction that audits the full cluster before the next implementation. |
 | 9 | `FT-IMP-002` San Diego things-to-do persona-led cluster router | Content/product quality | Completed | Existing all-ages activity page now routes first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners without touching the protected stay page. |
 | 10 | `FT-IMP-003` San Diego specialist-page usefulness pass | Content/product quality | Completed | All six pages received a section inventory; toddler, teen, and itinerary pages were compressed without removing their scan, detail, or application layers. |
-| 11 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
+| 11 | `FT-IMP-004` improve both San Diego lodging pages | Content/product quality | Completed | User explicitly overrode the low-signal observation hold; both pages now have distinct search jobs and review-clean section-level improvements. |
+| 12 | `FT-EVAL-001` stay-checklist evaluation | Measurement | Superseded | The July 13 checklist is no longer an isolated experiment after `FT-IMP-004`; do not claim a causal result on July 27. |
+| 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Ready after evidence | Non-blocking; run only after both revised URLs have current crawl and protected query evidence. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -189,6 +191,17 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Scope boundary: the protected stay page and newly observing hotel/all-ages pages were audited but not edited. Canonical, indexability, sitemap, robots, new-page, external-account, outreach, and indexing-request state did not change.
 - QA: generator/idempotency passed; 16 focused tests passed; native and production SEO QA returned 0 errors and 0 warnings; desktop/mobile browser checks passed; JSON, scope, privacy, and whitespace checks passed.
 - Independent review: cycle 2 `PASS` with no P0-P3 findings after closing all three cycle-1 P2 findings and both P3 observations.
+
+### FT-IMP-004 — Improve both San Diego lodging decision pages
+
+- Selected: 2026-07-20 by direct manual user instruction after the user chose immediate page usefulness over preserving the low-signal stay-page observation window.
+- State: completed and review-clean.
+- Affected URLs: `https://familytripwise.com/where-to-stay/san-diego-with-kids.html` and `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
+- Area-page result: removes the duplicate base area table and parallel three-hotel profiles; retains five area choices, a seven-field comparison, interactive constraint checklist, four exact-hotel checks, and direct routing to the eight-hotel guide.
+- Hotel-page result: retains all eight detailed property records, approximate nightly prices, map, room facts, directional themes from sampled reviews, and sources; compresses eight repetitive category cards to five trip styles and merges repeated methodology/caveats.
+- Measurement consequence: `FT-EVAL-001` is superseded. `FT-EVAL-002` is a non-blocking crawl/query-interpretation checkpoint, not a short-window ranking verdict.
+- Boundary: no URL, destination, sitemap, robots, canonical, indexability, indexing request, outreach, booking CTA, affiliate change, or external-account mutation.
+- QA and review: 39/39 repository tests, 14/14 focused lodging/regression tests, native and production-preflight SEO QA, desktop/mobile browser checks, JSON, privacy, scope, and whitespace checks passed. Independent reviewer `019f8284-1234-7c81-aa49-b4d50c95942a` returned `PASS` on cycle 2 with no P0-P3 findings.
 
 ## Daily evidence loop
 

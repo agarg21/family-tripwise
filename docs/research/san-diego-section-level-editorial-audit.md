@@ -2,7 +2,7 @@
 
 Date: 2026-07-20
 
-Action: `FT-IMP-003`
+Actions: `FT-IMP-003`, followed by user-directed lodging implementation `FT-IMP-004`
 
 ## Decision Standard
 
@@ -24,8 +24,8 @@ The San Diego pages contain useful comparison and parent-logistics material. The
 
 | Page | Section-level verdict | Current action |
 |---|---|---|
-| `where-to-stay/san-diego-with-kids.html` | Keep the area decision job and interactive tool. Later compress repeated area tables and repeated verify-the-property language. Preserve concrete area and booking checks. | Audit only. Protected through 2026-07-27. |
-| `where-to-stay/san-diego-family-hotels.html` | Keep category picks, map, price ranges, and detailed hotel cards. Later shorten the comparison table's repeated verification text and tighten the methodology block without hiding source dates or uncertainty. | Audit only. Newly observing. |
+| `where-to-stay/san-diego-with-kids.html` | Keep the area decision job and interactive tool. Remove the duplicated base area table and parallel three-hotel guide; retain five area choices, a seven-field matrix, a focused checklist, four booking checks, and a clear bridge to the hotel page. | Implemented under `FT-IMP-004` after the user explicitly overrode the observation hold. |
+| `where-to-stay/san-diego-family-hotels.html` | Keep all eight property records, map, price ranges, directional themes from sampled reviews, and source trail. Reduce eight repetitive category cards to five trip styles, reduce each hotel card to four substantive fields, and merge the methodology explanation into the source section. | Implemented under `FT-IMP-004`. |
 | `things-to-do/san-diego-with-kids.html` | Keep the persona router, filters, comparison table, official rainy/budget checks, and detailed logistics. Later merge the old age-promo cards into the router and reduce repeated explanations across quick picks, details, and mini-itineraries. | Audit only. Newly observing after `FT-IMP-002`. |
 | `things-to-do/san-diego-with-toddlers.html` | Keep the comparison table, detailed parent logistics, and practical day plans. Remove duplicate starter cards, reduce eight quick picks to four decisions, combine seven micro-fields into four useful fields, remove the irrelevant teen plan, remove unrelated hotel sources, and soften unsupported water/ease verdicts. | Implemented in this action. |
 | `things-to-do/san-diego-with-teens.html` | Keep the comparison table, tradeoffs, and route applications. Remove duplicate starter cards, reduce eight quick picks to four decisions, combine repetitive micro-fields, reduce route cards, remove unrelated hotel sources, and replace unsupported universal-best wording with preference-led choices. | Implemented in this action. New teen-specific activities require separate evidence and are not added here. |
@@ -39,31 +39,30 @@ The rows below cover every visible top-level content block. Repeated cards insid
 
 | Visible section | Verdict | Why / action |
 |---|---|---|
-| Hero, review-status panel, and licensed image | Compress later | The page job is clear, but the methodology language can be shorter after the observation window. Keep date, evidence boundary, and image attribution. |
+| Hero, review-status panel, and licensed image | Compressed | The page now states its five-area job directly and uses a short source boundary with a current update date. |
 | `Start with the area, then shortlist hotels` | Keep | Gives the correct area-first decision and bridges to the hotel shortlist. |
-| `Stay candidates to verify` area cards | Merge later | Useful area detail, but substantially overlaps the later area-hypothesis and matrix sections. Preserve concrete tradeoffs in one scan surface. |
-| Family hotel, stroller/transit, and booking-filter cards | Move/link later | Useful checks, but hotel-selection detail can live primarily on the hotel page while this page keeps the area/base decision. |
-| `Turn your hardest constraint into booking checks` tool | Keep | Distinct interactive decision support; it earns its place. Do not edit before `FT-EVAL-001`. |
-| `Area hypotheses by family need` | Keep or merge later | Strong constraint routing, but should become the single summary layer if the earlier area cards are removed. |
-| `Compare the stay tradeoffs before booking` matrix | Keep | Strongest detailed area comparison. Retain evidence labels and human-review boundaries. |
-| `How to evaluate family-friendly hotel claims` | Compress later | Helpful method, but some checks repeat the hotel page and official-source section. Keep only checks that affect area choice. |
-| `Research-backed hotel verification notes` | Move/link later | Named-property detail now has a dedicated hotel page. Retain a short bridge instead of parallel hotel cards if GSC supports the split. |
-| `Official-source checks before you book` | Compress later | Keep the exact check categories, but reduce repeated verify language. |
-| Cluster links | Keep, then compact | Useful onward routing; cards can become a tighter related-guides block. |
+| `Stay candidates to verify` base table | Removed | It duplicated the stronger five-area scan layer and matrix. |
+| Family hotel, stroller/transit, and booking-filter cards | Removed/moved | Hotel-selection detail now lives on the hotel page; four concise checks remain on the area page. |
+| Family-constraint checklist | Kept and simplified | Distinct application layer; visible and generated wording is now direct rather than internal or defensive. |
+| Five areas by family trip | Kept and compressed | This is now the single scan layer, with one card per area and a concrete trip shape. |
+| Five-area comparison matrix | Kept and simplified | Seven useful fields replace an eleven-column matrix dominated by repeated unknown/property-specific states. |
+| Hotel evaluation method | Merged | Four booking checks retain route, sleep setup, total-price, and make-or-break amenity decisions. |
+| Three named hotel profiles | Moved/link | The area page now links to the dedicated eight-hotel guide instead of maintaining a parallel mini shortlist. |
+| Cluster links | Kept | Hotel, activities, itinerary, toddler, and teen links continue planning from the chosen base. |
 | Official sources and footer | Keep | Required evidence and methodology path; remove any source no longer used after future consolidation. |
 
 ### Family Hotel Shortlist
 
 | Visible section | Verdict | Why / action |
 |---|---|---|
-| Hero and review-status panel | Compress later | Clear hotel-list job; shorten repeated uncertainty language without implying firsthand stays. |
-| `Choose by trip shape, not by a universal winner` | Keep | Concise decision rule and a useful contrast with ordinal lists. |
-| `Start with the family constraint` | Keep | Strong routing by pool/bay, suite/kitchen, LEGOLAND, and other trip shapes. |
-| `Quick hotel comparison` | Keep, shorten later | Strong scan layer. Replace long repeated verification cells with one differentiating check per hotel. |
+| Hero and review-status panel | Compressed | The page now states the comparison fields and one concise price/source boundary. |
+| Trip-shape introduction | Kept and made concrete | Names the Mission Bay comparison set and the distinct Pacific Beach, suite, LEGOLAND, and Coronado choices. |
+| Trip-style cards | Compressed | Five trip-style choices replace eight cards that repeated the hotel list. |
+| `Quick hotel comparison` | Kept | All eight properties retain approximate price, area, map link, and the most important check. |
 | Shared Google map | Keep | Distinct location/attraction visualization that the cards cannot replace. |
-| `Eight options, with the useful checks up front` hotel cards | Keep | Main detail layer: room setup, rough price, review conflicts, and parent checks. Preserve detail and source links. |
-| `How to use this page` | Compress later | Keep a short selection sequence; remove caveats already visible in the review panel and hotel cards. |
-| Official sources and volatile evidence | Keep | Required evidence trail for hotel facts, price ranges, review signals, and freshness. |
+| Eight detailed hotel cards | Kept and compressed | Each card now has four fields: shortlist reason, family setup, directional themes from sampled online reviews, and price context/key check. |
+| `How to use this page` | Merged | The standalone defensive methodology block is gone; the source section now explains official facts, the small directional review sample, and approximate prices once. |
+| Official sources and volatile evidence | Kept | Required evidence trail remains intact. |
 
 ### Main Things-To-Do Hub
 
@@ -117,20 +116,12 @@ The rows below cover every visible top-level content block. Repeated cards insid
 | Related planning pages | Keep, later compact | Useful route-to-activity/stay navigation without duplicating specialist detail. |
 | Official sources and footer | Keep and clean | Hotel sources are removed; venue, ferry, and beach/bay condition sources match visible route content. |
 
-## Protected-Page Notes For Later
+## Lodging Follow-Up Decision
 
-### Stay page
-
-- Keep: area-first decision role, area tool, concrete booking checks, hotel-page bridge.
-- Compress later: two area comparison surfaces and repeated verification language.
-- Verify later: exact route, stroller, quiet, value, room-selection, and area-fit conclusions.
-- Gate: no edit before `FT-EVAL-001` on or after 2026-07-27.
-
-### Hotel page
-
-- Keep: trip-style categories, rough nightly ranges, map, per-property setup, online-review conflicts, and final checks.
-- Compress later: long repeated verification cells in the summary table and defensive framing that repeats the same caveat.
-- Observe first: do not expand resorts, pools, waterslides, or candidate count before discovery/query evidence.
+- On July 20, the user explicitly chose immediate usefulness improvements over preserving the stay page's low-signal observation window.
+- `FT-EVAL-001` can no longer isolate the July 13 checklist change and is superseded rather than treated as a performance verdict.
+- A later `FT-EVAL-002` crawl/query checkpoint is non-blocking and should run only after Google has current evidence for both revised lodging URLs.
+- Exact safety, quiet-room, stroller-route, accessibility-practicality, water-suitability, and room-selection conclusions remain outside this editorial implementation.
 
 ### All-ages activities page
 
@@ -141,14 +132,15 @@ The rows below cover every visible top-level content block. Repeated cards insid
 ## Acceptance Criteria
 
 1. All six canonical San Diego pages have a durable section-level editorial verdict.
-2. Only the toddler, teen, and itinerary URLs change.
+2. `FT-IMP-003` changes only toddler, teen, and itinerary URLs; `FT-IMP-004` changes only the two lodging URLs and their existing interactive checklist.
 3. Each edited page retains a scan layer, detailed decision layer, and route/application layer.
 4. Duplicate base sections and unrelated hotel-source residue are removed from the edited pages.
 5. Canonical, indexability, sitemap, source, and trust boundaries remain intact.
 6. Generator output is deterministic and no unrelated page changes after regeneration.
+7. The area page contains no duplicate named-hotel profile section, while the hotel page retains all eight detailed candidates.
 
 ## Deferred Evidence Work
 
 - Research genuinely teen-specific options before adding kayaking, surfing, USS Midway, active waterfront, or food-led recommendations.
 - Exact age bands, visit lengths, stroller, rain, nap, booking, and value fields remain editorial estimates and are now labeled as such. Recheck and replace them with stronger source evidence when those fields next receive a substantive update.
-- Revisit protected and newly observing pages only after their declared checkpoints or evidence change.
+- Use future crawl/query evidence to refine intent routing, not to block obvious usefulness or factual improvements on this low-signal new site.

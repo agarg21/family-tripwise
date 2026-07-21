@@ -16,9 +16,9 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html/g) || []).length, 1);
   assert.match(html, /<title>Top Family Hotels in San Diego: 8 Options by Trip Style<\/title>/);
   assert.match(html, /<h1>Top Family Hotels in San Diego: 8 Options by Trip Style<\/h1>/);
-  assert.match(html, /Last checked:<\/strong> July 18, 2026/);
-  assert.match(html, /hotel facts, public online review patterns, and family planning checks/);
-  assert.match(html, /confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms/i);
+  assert.match(html, /Hotel facts and review sources checked:<\/strong> July 18, 2026/);
+  assert.match(html, /Approximate prices are planning ranges/);
+  assert.match(html, /final total for your dates, room type, occupancy, taxes, and parking/i);
 });
 
 test("covers eight named hotel options with dollar ranges and map links", () => {
@@ -42,14 +42,17 @@ test("covers eight named hotel options with dollar ranges and map links", () => 
   }
 
   assert.match(html, /Rough nightly range, not a quote/);
-  assert.match(html, /final all-in totals/);
+  assert.match(html, /compare the final total for the same dates and room setup/i);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
-  assert.match(html, /Verify before booking/);
-  assert.match(html, /Crib, rollaway, connecting room/);
-  assert.match(html, /Safety, quiet, exact routes/);
-  assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased public themes from travel review and booking sites<\/dd>/);
-  assert.match(html, /<h4>Online review patterns<\/h4>/);
-  assert.match(html, /Online review patterns come from public travel review and booking sites/);
+  assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
+  assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
+  assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 8);
+  assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 8);
+  assert.equal((html.match(/<h4>Price context and key check<\/h4>/g) || []).length, 8);
+  assert.doesNotMatch(html, /<h2>How to use this page<\/h2>/);
+  assert.match(html, /small directional sample/);
+  assert.match(html, /not representative ratings/);
+  assert.doesNotMatch(html, /What online reviews commonly mention|recurring positives and concerns/);
   assert.doesNotMatch(html, /review[- ]signal/i);
 });
 
@@ -58,7 +61,7 @@ test("embeds the shared Google My Maps view instead of the native schematic POC"
   assert.match(html, /title="Family Tripwise San Diego family hotels and kid activity map"/);
   assert.match(html, /src="https:\/\/www\.google\.com\/maps\/d\/embed\?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32\.823313151707154%2C-117\.28066802355525&amp;z=13"/);
   assert.match(html, /Open the full Google map/);
-  assert.match(html, /Use the embedded Google My Maps view for clustering/);
+  assert.match(html, /Blue markers are hotels and the contrasting markers are kid activities/);
   assert.equal((html.match(/<iframe/g) || []).length, 1);
   assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
   assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);
@@ -73,5 +76,6 @@ test("avoids affiliate, ordinal ranking, generic tradeoff blocks, and unsupporte
   assert.doesNotMatch(html, /<dt>Planning band<\/dt>/i);
   assert.doesNotMatch(html, /<th>Fees\/parking signal<\/th>/i);
   assert.doesNotMatch(html, /book now|reserve now|get deal|check availability/i);
-  assert.match(html, /Use this as a clean shortlist, not a ranking/);
+  assert.match(html, /Pick the closest trip style/);
+  assert.doesNotMatch(html, /universal winner|Release boundary|human-review question/i);
 });

@@ -442,33 +442,17 @@ function stayPage(city) {
               <span role="cell">${esc(watch)}</span>
               <span role="cell">${esc(fit)}</span>
             </div>`).join("\n");
-  const body = `${hero(city, `Where to stay in ${city.name} with kids`, isSanDiego ? "Compare San Diego stay candidates using exact property, route, room, fee, stroller, noise, and reset checks before treating any area as the answer." : `Compare the best family areas in ${city.name} by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.`, isSanDiego ? "July 13, 2026" : undefined)}
-      <section class="band intro-band">
-        <div class="container answer-grid">
-          <div>
-            <p class="eyebrow">Family base</p>
-            <h2>Start with the area, then shortlist hotels</h2>
-            <p>Start with the area fit, then use the hotel checks below to compare room setup, parking, pool value, meal friction, and kid reset options before booking.</p>
-          </div>
-          <dl class="snapshot">
-            <div><dt>Activity page</dt><dd><a href="${l.activities}">Activities near each area</a></dd></div>
-            <div><dt>Itinerary page</dt><dd><a href="${l.itinerary}">Sample itinerary by area</a></dd></div>
-            <div><dt>Booking check</dt><dd>Verify fees, room type, and cancellation terms</dd></div>
-            <div><dt>${isSanDiego ? "Hotel shortlist" : "Key checks"}</dt><dd>${hotelShortlistLink}</dd></div>
-          </dl>
-        </div>
-      </section>
-      <section class="container page-section">
+  const baseAreaSections = isSanDiego ? "" : `      <section class="container page-section">
         <div class="section-heading">
-          <p class="eyebrow">${isSanDiego ? "Area research" : "Area recommender"}</p>
-          <h2>${isSanDiego ? "Stay candidates to verify" : "Best areas for families"}</h2>
+          <p class="eyebrow">Area recommender</p>
+          <h2>Best areas for families</h2>
         </div>
         <div class="area-table" role="table" aria-label="Where to stay in ${esc(city.name)} with kids">
           <div class="table-row table-head" role="row">
             <span role="columnheader">Area</span>
             <span role="columnheader">Best for</span>
             <span role="columnheader">Watch out for</span>
-            <span role="columnheader">${isSanDiego ? "Evidence state" : "Family fit"}</span>
+            <span role="columnheader">Family fit</span>
           </div>
 ${rows}
         </div>
@@ -480,6 +464,30 @@ ${rows}
           <article class="activity-card"><h3>Booking filters</h3><p>Prioritize family rooms or suites, breakfast, pool hours, laundry, parking cost, elevators, and walking distance to meals or transit.</p></article>
         </div>
       </section>
+`;
+  const stayIntro = isSanDiego
+    ? "Compare five San Diego areas by beach access, activity routes, car needs, hotel style, and midday-reset practicality, then move to a shortlist of specific hotels."
+    : `Compare the best family areas in ${city.name} by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.`;
+  const sourceNote = isSanDiego
+    ? "Area guidance uses official destination, transit, attraction, and hotel sources plus current San Diego lodging research. Exact routes and room conditions vary by property and date."
+    : undefined;
+  const body = `${hero(city, `Where to stay in ${city.name} with kids`, stayIntro, isSanDiego ? "July 20, 2026" : undefined, sourceNote)}
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Family base</p>
+            <h2>${isSanDiego ? "Choose the base that matches the trip" : "Start with the area, then shortlist hotels"}</h2>
+            <p>${isSanDiego ? "Use this page to choose between Mission Bay, La Jolla, Downtown/Little Italy, Coronado, and Mission Valley. Once two areas look plausible, compare the named properties on the hotel page." : "Start with the area fit, then use the hotel checks below to compare room setup, parking, pool value, meal friction, and kid reset options before booking."}</p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>Activity page</dt><dd><a href="${l.activities}">Activities near each area</a></dd></div>
+            <div><dt>Itinerary page</dt><dd><a href="${l.itinerary}">Sample itinerary by area</a></dd></div>
+            <div><dt>Booking check</dt><dd>Verify fees, room type, and cancellation terms</dd></div>
+            <div><dt>${isSanDiego ? "Hotel shortlist" : "Key checks"}</dt><dd>${hotelShortlistLink}</dd></div>
+          </dl>
+        </div>
+      </section>
+${baseAreaSections}
 ${sourceList(city)}
     </main>`;
   return pageShell({
@@ -639,11 +647,10 @@ function sanDiegoFamilyHotelPage() {
               <div><dt>Rough nightly range</dt><dd>${esc(hotel.priceRange)}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
-            <section><h4>Why families may shortlist it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
+            <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
-            <section><h4>Online review patterns</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price note</h4><p>${esc(hotel.priceNote)}</p></section>
-            <section><h4>Verify before booking</h4><p>${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
           </article>`).join("\n");
 
   const comparisonRows = hotels.map((hotel) => `              <tr>
@@ -703,12 +710,12 @@ function sanDiegoFamilyHotelPage() {
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
           <h1>Top Family Hotels in San Diego: 8 Options by Trip Style</h1>
-          <p>Use this as a clean shortlist, not a ranking. Compare room setup, pool or bay value, breakfast and kitchen needs, rough nightly range, map location, recent review patterns, and what to confirm before booking.</p>
+          <p>Compare eight San Diego family hotels by pool and bay access, room setup, breakfast or kitchen needs, approximate nightly price, location, and themes from sampled online reviews.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Last checked:</strong> July 18, 2026</p>
-        <p>This guide combines hotel facts, public online review patterns, and family planning checks. Hotel policies and extra charges change often, so confirm the exact room type, total price, parking, crib or rollaway needs, and cancellation terms before booking.</p>
+        <p><strong>Hotel facts and review sources checked:</strong> July 18, 2026</p>
+        <p>Approximate prices are planning ranges. Compare the final total for your dates, room type, occupancy, taxes, and parking before booking.</p>
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
@@ -720,32 +727,29 @@ function sanDiegoFamilyHotelPage() {
         <div class="container answer-grid">
           <div>
             <p class="eyebrow">Short answer</p>
-            <h2>Choose by trip shape, not by a universal winner</h2>
-            <p>Mission Bay hotels tend to answer pool, bay, and stay-put resort questions. Homewood Bayside answers suite, kitchen, and breakfast questions. LEGOLAND hotels answer a North County theme-park question. Loews answers a Coronado resort question. The right choice depends on the exact room, total price, parking, meals, and first two activity days.</p>
+            <h2>Start with the kind of trip you want</h2>
+            <p>For Mission Bay water time, compare Bahia, Mission Bay Resort, Hyatt, and Paradise Point. Start with Catamaran for Pacific Beach and bay access, Homewood Bayside for a suite and kitchen, LEGOLAND hotels for a park-centered trip, and Loews for a Coronado resort stay.</p>
             <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
           </div>
           <dl class="snapshot">
             <div><dt>Hotels covered</dt><dd>8 options</dd></div>
             <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
-            <div><dt>Online reviews</dt><dd>Paraphrased public themes from travel review and booking sites</dd></div>
-            <div><dt>Release boundary</dt><dd>No booking links or booking promises</dd></div>
+            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
+            <div><dt>Location view</dt><dd>Hotels and kid activities on one shared map</dd></div>
           </dl>
         </div>
       </section>
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Category picks</p>
-          <h2>Start with the family constraint</h2>
+          <h2>Pick the closest trip style</h2>
         </div>
         <div class="quick-pick-grid hotel-pick-grid">
-          <article class="quick-pick"><span>Mission Bay suite/bay stay</span><strong>Bahia Resort Hotel</strong><p>Use when a larger-room option matters and the Family Suite is actually available with bedding confirmed.</p></article>
-          <article class="quick-pick"><span>Pool/wading-pool resort</span><strong>San Diego Mission Bay Resort</strong><p>Use when on-property water time matters, with fee, parking, room-condition, and crowding checks.</p></article>
-          <article class="quick-pick"><span>Waterslide-first stay</span><strong>Hyatt Regency Mission Bay</strong><p>Use when pools and slides are the headline, after checking parking and waterslide rules.</p></article>
-          <article class="quick-pick"><span>Stay-put resort feel</span><strong>Paradise Point Resort & Spa</strong><p>Use when a large Mission Bay resort footprint helps rather than hurts your family rhythm.</p></article>
-          <article class="quick-pick"><span>Pacific Beach/bay access</span><strong>Catamaran Resort</strong><p>Use for beach and bay walkability, with room-condition and noise checks.</p></article>
+          <article class="quick-pick"><span>Mission Bay water time</span><strong>Four different resort shapes</strong><p>Bahia for a published family-suite option; Mission Bay Resort for a wading pool; Hyatt for waterslides; Paradise Point for a larger stay-put resort.</p></article>
+          <article class="quick-pick"><span>Bay plus Pacific Beach</span><strong>Catamaran Resort</strong><p>Compare when bay access and nearby food matter, with careful room-building and nighttime-noise checks.</p></article>
           <article class="quick-pick"><span>Suite/kitchen downtown</span><strong>Homewood Suites Bayside</strong><p>Use when breakfast and kitchen function matter more than resort amenities.</p></article>
           <article class="quick-pick"><span>LEGOLAND-heavy trip</span><strong>LEGOLAND Hotel/Castle</strong><p>Use when the park is the anchor; compare package, tickets, and parking as one total.</p></article>
-          <article class="quick-pick"><span>Coronado bay/splurge</span><strong>Loews Coronado Bay</strong><p>Use when a less central Coronado bay resort setup is worth the location and parking tradeoff.</p></article>
+          <article class="quick-pick"><span>Coronado resort trip</span><strong>Loews Coronado Bay</strong><p>Compare when pools and Coronado time matter enough to accept a less central base.</p></article>
         </div>
       </section>
       <section class="band">
@@ -754,10 +758,10 @@ function sanDiegoFamilyHotelPage() {
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">Ranges are rough public examples checked July 18, 2026. They are not live rates or final all-in totals, and parking or package choices can move the real number.</p>
+          <p class="review-label">Approximate nightly prices come from public examples checked July 18, 2026. Use them to set a budget, then compare the final total for the same dates and room setup.</p>
           <div class="comparison-scroll">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Use case</th><th>Area</th><th>Rough nightly range</th><th>Map</th><th>Main booking check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Approx. nightly price</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${comparisonRows}
               </tbody>
@@ -773,7 +777,7 @@ ${comparisonRows}
         <div class="google-map-panel">
           <iframe class="google-my-map" title="Family Tripwise San Diego family hotels and kid activity map" src="${sanDiegoMyMapsEmbedUrl}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-        <p class="review-label">Use the embedded Google My Maps view for clustering, then open the full map or each hotel link for route checks. Traffic, parking, shuttle timing, stroller practicality, and beach routes can change by day and exact room location.</p>
+        <p class="review-label">Blue markers are hotels and the contrasting markers are kid activities. Use the full map to compare the hotel cluster with the family's first two planned days.</p>
         <p><a class="text-link" href="${sanDiegoMyMapsViewUrl}">Open the full Google map</a></p>
       </section>
       <section class="container page-section">
@@ -785,28 +789,12 @@ ${comparisonRows}
 ${hotelCards}
         </div>
       </section>
-      <section class="band intro-band">
-        <div class="container answer-grid">
-          <div>
-            <p class="eyebrow">Method</p>
-            <h2>How to use this page</h2>
-            <p>Use the cards to reduce the list, then open the official room, FAQ, amenities, fee, and booking pages for your exact dates. Online review patterns come from public travel review and booking sites, summarized as repeated positives and conflicts rather than copied review text. Room assignment, noise, service, and total value can still vary by stay.</p>
-            <p>We separate hotel facts from stay-dependent judgment. That is why this page points out what to compare, what families often care about, and what should still be confirmed before paying.</p>
-          </div>
-          <dl class="snapshot">
-            <div><dt>Always verify</dt><dd>Room, total, fees, cancellation</dd></div>
-            <div><dt>Ask if crucial</dt><dd>Crib, rollaway, connecting room</dd></div>
-            <div><dt>Stay-dependent</dt><dd>Safety, quiet, exact routes</dd></div>
-            <div><dt>Useful next step</dt><dd><a href="../family-itinerary/san-diego-with-kids.html">Match hotel to itinerary</a></dd></div>
-          </dl>
-        </div>
-      </section>
       <section class="container page-section source-section">
         <div class="section-heading">
           <p class="eyebrow">Sources checked</p>
-          <h2>Official sources and volatile price/review evidence</h2>
+          <h2>How the hotel information was checked</h2>
         </div>
-        <p>Official facts were checked July 18, 2026. Rough price examples and online review patterns are volatile and should be refreshed before a final booking decision.</p>
+        <p>Room and amenity facts come from official hotel pages. Review notes summarize a small directional sample from public travel review and booking sites; the themes are not representative ratings, copied reviews, or firsthand stays. Prices are rough public examples, not live quotes.</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
@@ -819,7 +807,7 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
   return pageShell({
     title: "Top Family Hotels in San Diego: 8 Options by Trip Style",
-    description: "Compare San Diego family hotels by room setup, pool and bay value, rough nightly ranges, map location, breakfast, kitchen needs, online review patterns, and booking checks.",
+    description: "Compare eight San Diego family hotels by trip style, approximate nightly price, room setup, pools, breakfast or kitchen needs, map location, and sampled online review themes.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
   });

@@ -372,61 +372,47 @@ const stayPages = {
   "where-to-stay/san-diego-with-kids.html": {
     title: "Where to Stay in San Diego With Kids: Areas, Family Hotels and Booking Checks",
     description:
-      "Compare where to stay in San Diego with kids by family-friendly hotel checks, beach access, zoo drives, stroller ease, parking, pool value, room setup, noise, and area tradeoffs.",
+      "Compare five areas for a San Diego family trip by beach access, activity routes, car needs, hotel style, midday resets, and nearby kid activities.",
     city: "San Diego",
     stayTool: true,
-    areaNote: "These are model-derived research starting points, not reviewed area recommendations. Use the checklist above to test exact properties, routes, dates, fees, and family constraints before keeping an area on the shortlist.",
+    hideHotelSection: true,
+    quickHeading: "Five areas, matched to different family trips",
+    matrixHeading: "Compare the five bases side by side",
+    areaNote: "Area-level guidance helps narrow the search. The exact hotel, route, price, and room still determine whether the choice works for your family.",
+    areaHeaders: ["Area", "Best starting point for", "Main compromise", "Getting around to test", "Midday reset to test", "Hotel pattern", "Nearby anchors"],
     quick: [
-      ["Start with the trip constraint", "Area fit before hotel name", "Decide whether beach access, route simplicity, room setup, reset time, or full-stay cost is the hardest constraint."],
-      ["Beach-access hypothesis", "Mission Bay or Coronado", "Compare the exact property-to-usable-beach route; area names alone do not establish easy access."],
-      ["Car-light hypothesis", "Downtown / Little Italy", "Test exact stops, frequency, transfers, sidewalks, elevators, and stroller rules before relying on a no-car plan."],
-      ["Central-base hypothesis", "Mission Valley", "The city describes the community as trolley-connected, but usefulness varies by property and itinerary."],
-      ["Coastal-wandering hypothesis", "La Jolla", "Verify slopes, crossings, parking, and the exact route from a candidate property."],
-      ["Toddler/reset question", "Can the base support a real midday return?", "Test the activity-to-room route against the family's nap window instead of inferring it from the area."],
-      ["Value question", "What is the full bookable total?", "Compare the same dates and room setup with taxes, parking, fees, meals, and transport included."],
-      ["Noise question", "Which room and what dates?", "Area-level descriptions do not establish property or room quietness."],
-      ["Decision rule", "Keep two candidates until verification", "Do not let a model score or a single amenity decide the stay."]
+      ["Pool, bay and slower days", "Mission Bay", "Compare first when the hotel and waterfront time are part of the itinerary, not just a place to sleep."],
+      ["Coast, aquarium and La Jolla days", "La Jolla", "Compare when coastal access matters more than being central to the whole city."],
+      ["Restaurants and an urban base", "Downtown / Little Italy", "Useful for waterfront and meal access; room size, noise, parking, and cross-city drives need more attention."],
+      ["Beach-first resort trip", "Coronado", "Compare when Coronado itself is the plan and the family is willing to test off-island routes for other days."],
+      ["Central driving base", "Mission Valley / Hotel Circle", "Compare when the itinerary is spread across the city and hotel value matters more than neighborhood atmosphere."]
     ],
     rows: [
-      ["Mission Bay", "Beach-and-reset candidate", "Property access and route time vary", "Test exact routes", "Route-specific", "Property-specific", "Verify every fee", "Unknown by property", "Mission Bay facilities; verify itinerary", "Resorts and family hotels", "Research hypothesis"],
-      ["La Jolla", "Coastal candidate", "Slopes, crossings, and parking vary", "Test exact routes", "Route-specific", "Property-specific", "Verify every fee", "Unknown by property", "La Jolla Shores and nearby stops", "Boutique/luxury/coastal", "Research hypothesis"],
-      ["Downtown / Little Italy", "Urban, car-light candidate", "Noise, room size, and transfers vary", "Test stops and transfers", "Route-specific", "Property-specific", "Verify every fee", "Unknown by property", "Waterfront and regional transit context", "Urban hotels", "Research hypothesis"],
-      ["Coronado", "Beach-first candidate", "Off-island routes and pricing vary", "Test ferry/bus/drive plan", "Route-specific", "Property-specific", "Verify every fee", "Unknown by property", "Public beach and waterfront context", "Beach resorts/inns", "Research hypothesis"],
-      ["Mission Valley / Hotel Circle", "Central-base candidate", "Property-level access varies", "Trolley or driving by property", "Route-specific", "Property-specific", "Verify every fee", "Unknown by property", "Central location; test actual itinerary", "Chain hotels/suites", "Score requires review"]
+      ["Mission Bay", "Pool, bay and resort-centered days", "Routes to coast, Downtown, or North County vary by hotel and day", "Compare current routes from the exact hotel to the first two activity anchors", "Time the real return; use the hotel as part of the day only when that route works", "Resorts, family hotels and some larger-room options", "Mission Bay waterfront and nearby family attractions"],
+      ["La Jolla", "Coastal mornings, Birch Aquarium and La Jolla time", "Slopes, parking and cross-city routes vary", "Test hotel-to-activity routes, parking, crossings, and whether a car is needed", "Time the return from each planned stop to the exact hotel", "Coastal, boutique and higher-end hotels", "La Jolla Shores, Cove area and Birch Aquarium"],
+      ["Downtown / Little Italy", "Waterfront stops, restaurants and an urban base", "Room size, noise and parking vary by property", "Test walking or transit for planned waterfront stops and map every other route", "Compare meal and activity routes with the family's actual reset window", "Urban hotels and suite properties", "Waterfront, Little Italy and regional transit connections"],
+      ["Coronado", "A beach-first stay with resort time", "Mainland routes and timing vary by hotel and destination", "Compare the exact drive, ferry, or bus sequence for planned mainland days", "Time the return before relying on the hotel for a midday break", "Beach resorts and inns", "Coronado beach and waterfront"],
+      ["Mission Valley / Hotel Circle", "A central-base hypothesis for a spread-out itinerary", "Neighborhood feel and walkability vary by exact property", "Compare property-level driving routes and current trolley access", "Time each return; central location alone does not prove a practical reset", "Chain hotels, suites and value-oriented options", "Central context toward the zoo, Old Town and multiple corridors"]
     ],
-    hotelDecision: [
-      ["Map the trip shape", "For each candidate property, map the family's beach, pool, zoo, harbor, restaurant, and reset plans to exact routes. Do not infer property or area fit from the area name."],
-      ["Separate family-friendly from family-verified", "A property can look family-friendly because it has a pool, suite, or beach access, but Family Tripwise has not personally verified sleep quality, service, noise, or current policies."],
-      ["Prioritize sleep setup", "Before comparing star ratings, confirm exact bed count, sofa-bed wording, crib/rollaway policy, occupancy limits, connecting-room rules, elevator access, and whether the room location can support naps."],
-      ["Price the full stay", "Compare nightly rate plus resort fee, parking, breakfast, extra-bed charges, taxes, and whether a rental car or repeated rideshares are needed from that area."],
-      ["Use official property sources", "Check the hotel website, FAQ, room page, fee page, amenity page, and booking screen. Third-party snippets can lag behind current property policy."],
-      ["Ask before booking", "If pool access, crib availability, rollaway rules, room placement, kitchen/laundry, or parking will make or break the trip, contact the property before paying."]
-    ],
-    hotelNote: "Research checked against official property pages in July 2026. These are hotel fit checks, not personally verified rankings or firm recommendations. Verify fees, exact room type, crib/rollaway policy, pool hours, kitchen/laundry details, noise exposure, parking, and cancellation terms before booking.",
-    hotels: [
-      ["Bahia Resort Hotel", "Official-room-page candidate for larger-room verification", "The Bay Family Suite page lists 675 sq ft, multiple beds, a sofa bed, kitchenette-style amenities, a balcony, and two bathrooms; verify the exact bookable room", "Official pages list pool and bay/beach amenities; verify current access, hours, closures, and inclusions", "Official pages list on-property dining, including grab-and-go and seasonal options; verify current hours", "The family-suite page lists a refrigerator, microwave, toaster, and coffeemaker; verify equipment and laundry access", "Request current crib/rollaway, occupancy, and room-access details directly before booking", "The official FAQ says one vehicle per guest room parks without a separate parking charge; verify the current resort fee and booking total", "Room-level noise is UNKNOWN; ask about traffic, events, elevators, pool decks, construction, and the exact room location", "Human-review question: does the exact room, total price, beach route, activity route, and midday-return time work for this family's dates?"],
-      ["San Diego Mission Bay Resort", "Bayfront-property candidate for exact-room and fee verification", "Room and suite categories vary; some rooms may not have elevator access, so request the exact setup and route", "Official pages list pool and bayfront amenities; verify current access, hours, closures, and inclusions", "Official pages list on-site dining; verify current hours, menus, and whether they fit the family's meal plan", "Kitchen and laundry details vary by room type; verify the exact bookable room and guest access", "Request current crib/rollaway, occupancy, and elevator details directly", "The official FAQ lists overnight self-parking at $47 per night; verify the current booking total and all fees", "Room-level noise is UNKNOWN; ask about events, elevators, pool decks, traffic, construction, and the exact room location", "Human-review question: does the exact room, total price, beach route, activity route, and reset plan work for this family's dates?"],
-      ["Homewood Suites San Diego Downtown/Bayside", "Suite-property candidate for exact-room and route verification", "The official hotel page lists an all-suite setup and in-room kitchens; verify the exact bookable room, occupancy, and sleeping layout", "The official hotel page lists an outdoor pool; verify current access, hours, closures, and rules", "The official hotel page lists free hot breakfast; verify the current booking inclusion, hours, and fit for the family's schedule", "The official page lists in-room kitchens; verify exact equipment and guest-laundry access", "Request current crib/rollaway, occupancy, and connecting-room details before booking", "The official hotel page lists valet parking at $65 and no self-parking; verify the current booking total and all fees", "Room-level noise is UNKNOWN; ask about airport paths, traffic, events, elevators, construction, and the exact room location", "Human-review question: do the exact room, total price, meal plan, walking/transit routes, and midday-return time work for this family's dates?"]
-    ],
+    bookingHeading: "Four checks before choosing the exact hotel",
+    clusterHeading: "Continue planning from the chosen base",
     bookingChecks: [
-      ["Room setup source", "Use the official room-detail page and booking screen to confirm square footage, bed configuration, sofa bed, kitchenette wording, balcony/patio access, bathroom count, occupancy, and whether the room is reachable by elevator."],
-      ["Pool and beach source", "Use the official amenity page to verify pool hours, seasonal closures, depth/height rules, towel policy, beach gear, cabana costs, and whether the pool is close enough to work as a midday reset."],
-      ["Breakfast and food source", "Check the official dining page or booking inclusions for breakfast, grab-and-go options, mini-fridge/microwave access, and nearby casual meals before relying on an easy morning."],
-      ["Kitchen, laundry, and baby gear source", "Confirm refrigerator, microwave, kitchenette, washer/dryer or laundry access, crib, rollaway, high chair, and connecting-room availability directly with the property when those details matter."],
-      ["Parking and fees source", "Verify resort/destination fees, self-parking, valet, in/out privileges, EV charging, oversized vehicle limits, and whether area attractions still require separate parking."],
-      ["Noise and location source", "Ask about room placement away from elevators, event spaces, pool decks, traffic, nightlife, and airport or harbor noise if naps or early bedtime matter."]
+      ["Map the first two days", "Compare each hotel against the family's first two activity days, meals, and likely midday return. A central-looking area can still create awkward routes."],
+      ["Check the sleep setup", "Confirm beds, occupancy, sofa-bed wording, crib or rollaway availability, connecting-room rules, elevator access, and room-location requests for the exact room type."],
+      ["Compare the nightly total", "Use the same dates and occupancy, then compare taxes, parking, resort fees, breakfast, and likely transport costs rather than the headline room rate alone."],
+      ["Confirm the make-or-break amenity", "If the pool, kitchen, breakfast, laundry, beach access, or quiet room request is essential, check the current property page and ask the hotel when the published answer is unclear."]
     ],
     clusterLinks: [
+      ["Eight family hotel options", "Move from area choice to named hotels with rough nightly prices, room setup, pool and kitchen facts, sampled online-review themes, and a shared map.", "./san-diego-family-hotels.html", "Compare San Diego family hotels"],
       ["Things to do in San Diego", "Use the activity guide to decide whether your hotel should optimize for the zoo, Mission Bay, La Jolla, Coronado, or Balboa Park.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
       ["San Diego family itinerary", "Match the stay base to a realistic 1-day, 2-day, 3-day, toddler, teen, or rainy-day route before booking.", "../family-itinerary/san-diego-with-kids.html", "Open the San Diego family itinerary"],
       ["Toddler-specific planning", "If naps, stroller exits, and short sessions drive the trip, cross-check Mission Bay, zoo bus tour, Birch Aquarium, and hotel reset options.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
-      ["Teen-specific planning", "If older kids need coast, food, and less little-kid pacing, use the teen guide before committing to a beach or urban base.", "../things-to-do/san-diego-with-teens.html", "Open San Diego with teens"],
-      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and how model-derived planning notes differ from verified claims.", "../about.html", "Read the methodology"]
+      ["Teen-specific planning", "If older kids need coast, food, and less little-kid pacing, use the teen guide before committing to a beach or urban base.", "../things-to-do/san-diego-with-teens.html", "Open San Diego with teens"]
     ],
     faqs: [
-      ["What is the best area to stay in San Diego with kids?", "There is no reviewed default for every family. Compare Mission Bay, Coronado, La Jolla, Downtown/Little Italy, and Mission Valley against exact beach access, activity routes, transport, room setup, reset needs, and full-stay cost."],
-      ["What is the best family hotel in San Diego?", "There is no single best family hotel without knowing your room setup, pool needs, car plan, budget, nap sensitivity, and itinerary. Use the hotel fit checks on this page, then verify exact property details before booking."],
-      ["Can families stay in San Diego without a car?", "A car-light stay may work, but do not decide from the area name alone. Test the exact property-to-meal and property-to-activity routes, current MTS service, transfers, sidewalks, elevators, and stroller constraints for the travel dates."]
+      ["What is the best area to stay in San Diego with kids?", "Compare Mission Bay first for a pool-and-bay trip, La Jolla for coast and aquarium time, Downtown or Little Italy for an urban restaurant base, Coronado for a beach-first stay, and Mission Valley as a central-base hypothesis. Then test exact hotels, routes, and total prices."],
+      ["Where can families compare specific San Diego hotels?", "Use the Family Tripwise San Diego family-hotel shortlist for eight named options organized by trip style, with rough nightly prices, map links, room and amenity facts, and themes from sampled online reviews."],
+      ["Can families stay in San Diego without a car?", "Test a car-light plan from exact Downtown or Little Italy hotels first: list the family's activities and meals, then compare every walking, transit, and return route using current MTS service. The area name alone does not establish that the trip will work without a car."]
     ]
   },
   "where-to-stay/las-vegas-with-kids.html": {
@@ -1323,10 +1309,10 @@ ${markerEnd}
 `;
 }
 
-function renderStayMatrix(rows, labelMode = "default") {
-  const headers = labelMode === "verification"
+function renderStayMatrix(rows, labelMode = "default", customHeaders) {
+  const headers = customHeaders || (labelMode === "verification"
     ? ["Area candidate", "Research angle", "What to verify", "Route/transport check", "Stroller/access check", "Smoke/noise check", "Parking/fee check", "Walking check", "Nearby anchor context", "Property type", "Evidence state"]
-    : ["Area", labelMode === "hypothesis" ? "Research angle" : "Best for", "Main tradeoff", "Transit/driving", "Stroller", "Noise", "Parking", "Walkability", "Nearby attractions", "Hotel type", labelMode === "hypothesis" ? "Evidence state" : "Family verdict"];
+    : ["Area", labelMode === "hypothesis" ? "Research angle" : "Best for", "Main tradeoff", "Transit/driving", "Stroller", "Noise", "Parking", "Walkability", "Nearby attractions", "Hotel type", labelMode === "hypothesis" ? "Evidence state" : "Family verdict"]);
   return `        <div class="comparison-scroll">
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th>${esc(header)}</th>`).join("")}</tr></thead>
@@ -1371,11 +1357,10 @@ ${checks.map(([name, value]) => `          <article class="detail-card research-
 function renderStayTool() {
   return `      <section class="container page-section rank-ready-section stay-tool-section" aria-labelledby="stay-tool-title">
         <div class="section-heading">
-          <p class="eyebrow">Interactive stay checklist</p>
-          <h2 id="stay-tool-title">Turn your hardest constraint into booking checks</h2>
+          <p class="eyebrow">Build a shortlist</p>
+          <h2 id="stay-tool-title">Choose your biggest family constraint</h2>
         </div>
-        <p class="review-label">This tool creates a verification checklist. It does not rank areas, publish the prototype's unreviewed scores, or replace current property and route research.</p>
-        <p class="note stay-tool-sources">Evidence starting points: <a href="https://www.sandiego.gov/planning/community-plans/mission-valley">City of San Diego Mission Valley plan</a>, <a href="https://www.sdmts.com/getting-around/maps-and-schedules">MTS maps and schedules</a>, and <a href="https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html">County beach and bay status</a>. These sources establish context, not a family-fit verdict.</p>
+        <p class="review-label">Select what matters most and get a focused checklist for comparing your final two areas and hotels.</p>
         <div class="stay-tool-layout">
           <form id="san-diego-stay-tool" class="stay-tool-form">
             <fieldset>
@@ -1398,21 +1383,22 @@ function renderStayTool() {
               <label><input type="checkbox" name="need" value="nap"> Midday nap or reset</label>
               <label><input type="checkbox" name="need" value="kitchen"> Kitchen or laundry</label>
             </fieldset>
-            <button class="button tool-submit" type="submit">Build my verification checklist</button>
+            <button class="button tool-submit" type="submit">Build my comparison checklist</button>
             <p class="note">Your answers stay in this browser tab and are not sent or stored.</p>
           </form>
           <section class="result-panel stay-tool-result" aria-labelledby="stay-tool-result-title" aria-live="polite">
             <p class="eyebrow">Your research sequence</p>
-            <h3 id="stay-tool-result-title">Verify before narrowing the shortlist</h3>
-            <p id="stay-tool-summary">Choose the constraints that would make or break the trip.</p>
+            <h3 id="stay-tool-result-title">Your comparison checklist</h3>
+            <p id="stay-tool-summary">Choose the constraint that would most affect the trip.</p>
             <ol id="stay-tool-checklist">
               <li>Shortlist two areas as hypotheses, not conclusions.</li>
               <li>Verify exact properties, routes, dates, and total prices.</li>
             </ol>
-            <p class="note">Keep unsupported details as <strong>UNKNOWN</strong>. Recheck dynamic transit, beach, price, fee, and property information near the booking date.</p>
+            <p class="note">Recheck changing transit, beach, price, fee, and property information near the booking date.</p>
           </section>
         </div>
-        <noscript><p class="review-label">JavaScript is unavailable. Use the area matrix and official-source booking checks below as a manual checklist.</p></noscript>
+        <p class="note stay-tool-sources">Current starting points: <a href="https://www.sandiego.gov/planning/community-plans/mission-valley">City of San Diego Mission Valley plan</a>, <a href="https://www.sdmts.com/getting-around/maps-and-schedules">MTS maps and schedules</a>, and <a href="https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html">County beach and bay status</a>.</p>
+        <noscript><p class="review-label">Use the area matrix and four hotel checks below as a manual checklist.</p></noscript>
       </section>`;
 }
 
@@ -1432,7 +1418,7 @@ ${renderVerificationChecks(page.hotelDecision)}
     ? `      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Booking checks</p>
-          <h2>Official-source checks before you book</h2>
+          <h2>${esc(page.bookingHeading || "Official-source checks before you book")}</h2>
         </div>
 ${renderVerificationChecks(page.bookingChecks)}
       </section>`
@@ -1442,13 +1428,13 @@ ${renderVerificationChecks(page.bookingChecks)}
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Plan the cluster</p>
-            <h2>Use the stay guide with activities, itinerary, and methodology</h2>
+            <h2>${esc(page.clusterHeading || "Use the stay guide with activities, itinerary, and methodology")}</h2>
           </div>
 ${renderClusterCards(page.clusterLinks)}
         </div>
       </section>`
     : "";
-  const hotelSection = page.hotels?.length
+  const hotelSection = page.hideHotelSection ? "" : page.hotels?.length
     ? `      <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
@@ -1477,7 +1463,7 @@ ${toolSection}      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Quick decision</p>
-            <h2>${page.stayTool || page.constraintLed ? "Area hypotheses by family need" : "Best areas by family need"}</h2>
+            <h2>${esc(page.quickHeading || (page.stayTool || page.constraintLed ? "Area hypotheses by family need" : "Best areas by family need"))}</h2>
           </div>
 ${renderQuickPicks(page.quick)}
         </div>
@@ -1486,9 +1472,9 @@ ${renderQuickPicks(page.quick)}
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Area matrix</p>
-          <h2>Compare the stay tradeoffs before booking</h2>
+          <h2>${esc(page.matrixHeading || "Compare the stay tradeoffs before booking")}</h2>
         </div>
-${areaNote}${renderStayMatrix(page.rows, page.constraintLed ? "verification" : page.stayTool ? "hypothesis" : "default")}
+${areaNote}${renderStayMatrix(page.rows, page.constraintLed ? "verification" : page.stayTool ? "hypothesis" : "default", page.areaHeaders)}
       </section>
 
 ${[decisionSection, hotelSection, bookingSection, clusterSection].filter(Boolean).join("\n\n")}
