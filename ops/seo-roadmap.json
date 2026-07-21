@@ -489,6 +489,50 @@
       "review": "Independent read-only reviewer `019f7ff6-3cca-7052-9e6d-869eac450da3` returned CHANGES_REQUIRED on cycle 1 for stale target-page freshness, then PASS on cycle 2 after the San Diego activity page date was durably updated to July 20, 2026.",
       "qa": "node tools/generate-pages.mjs passed; node --test tools/san-diego-cluster-router-page.test.mjs tools/san-diego-family-hotels-page.test.mjs tools/las-vegas-stay-page.test.mjs passed 10/10; node tools/seo-qa.mjs passed with 0 errors and 0 warnings after sequential rerun; jq empty ops/seo-roadmap.json passed; git diff --check passed.",
       "notes": "Completed as a manual user-directed existing-page implementation. The protected San Diego stay page was not edited. No new page, destination, indexing request, scraper, outreach, booking/affiliate CTA, or external account mutation was introduced."
+    },
+    {
+      "id": "FT-IMP-003",
+      "implementation_backlog_id": "IMP-017",
+      "title": "Run a section-level usefulness pass on San Diego specialist pages",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-20",
+      "completed_on": "2026-07-20",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+        "https://familytripwise.com/family-itinerary/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-section-level-editorial-audit.md",
+        "tools/generate-pages.mjs",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/san-diego-specialist-editorial-page.test.mjs",
+        "site/things-to-do/san-diego-with-toddlers.html",
+        "site/things-to-do/san-diego-with-teens.html",
+        "site/family-itinerary/san-diego-with-kids.html",
+        "status/san-diego-pages.md",
+        "backlog/implementation-backlog.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "production_invariant": "The three specialist URLs remain canonical, indexable, and present in the sitemap; every retained section adds page-specific family decision support, repeated generic guidance is compressed, and no protected San Diego stay-page, new hotel page, all-ages activity page, sitemap, robots, external account, or indexing request changes.",
+      "success_signal": "A durable section-level audit covers all six canonical San Diego pages and the three eligible specialist pages become more concise and decision-useful without losing practical detail, search intent, source framing, or trust boundaries.",
+      "gsc_evidence_classification": "fresh authenticated read-only API snapshot collected 2026-07-20 with finalized performance data through 2026-07-18; indexing and performance are context only, not the basis for editorial usefulness claims",
+      "review": "Independent read-only reviewer 019f825a-b52d-79a2-9388-16a8348f6419 returned CHANGES_REQUIRED on cycle 1 for section-audit completeness, categorical claim labels, and teen one-day promise alignment, then PASS with no P0-P3 findings on cycle 2.",
+      "qa": "Generator and unrelated-output idempotency passed; 16 focused tests passed; native and production SEO QA passed with 23 sitemap URLs, 26 HTML files, 0 errors, and 0 warnings; 1280px and 390px browser checks passed without page overflow or console errors; roadmap JSON, exact scope, privacy, and whitespace checks passed.",
+      "result": "Completed a section-level audit of all six canonical San Diego pages and reduced within-page repetition on the toddler, teen, and itinerary pages while preserving comparison detail, route applications, canonical/indexable state, and source boundaries. Fixed the defective two-day itinerary, labeled categorical planning fields as editorial estimates, restored the teen one-day route, and removed unrelated hotel-source residue.",
+      "notes": "Manual user-directed editorial action. The protected stay page, newly observing hotel page, and newly observing all-ages activity page were audited but not edited. No sitemap, robots, canonical, indexability, new page, external account, outreach, or indexing request changed."
     }
   ]
 }

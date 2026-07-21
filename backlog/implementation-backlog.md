@@ -12,6 +12,26 @@ No implementation task is selected.
 
 ## Completed
 
+### IMP-017: San Diego Specialist-Page Usefulness Pass
+
+Status: done
+
+Completed: 2026-07-20
+
+Roadmap ID: `FT-IMP-003`
+
+Result:
+
+- Audited every top-level section across all six canonical San Diego pages.
+- Removed duplicate starter blocks and repetitive micro-fields from the toddler, teen, and itinerary pages while retaining scan, detail, and application layers.
+- Fixed the two-day itinerary, restored the promised teen one-day route, labeled categorical fields as editorial estimates, and removed unrelated hotel-source residue.
+- Preserved the stay-page observation window and left the newly observing hotel and all-ages activity pages unchanged.
+
+Review and QA:
+
+- Independent reviewer `019f825a-b52d-79a2-9388-16a8348f6419` returned `PASS` on cycle 2 with no P0-P3 findings.
+- Generator/idempotency, 16 focused tests, native/production SEO QA, desktop/mobile browser checks, JSON, scope, privacy, and whitespace checks passed.
+
 ### IMP-016: Upgrade San Diego Things-To-Do Into Persona-Led Cluster Router
 
 Status: done

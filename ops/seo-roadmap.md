@@ -42,7 +42,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 7 | `FT-PUB-001` researched San Diego family-hotel page | Content/product quality | Completed | Manual user approval moved the review-clean hotel evidence into one live, source-dated, non-ranky San Diego page. |
 | 8 | `FT-RES-006` San Diego SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Manual user instruction selected one San Diego-deepening research transaction that audits the full cluster before the next implementation. |
 | 9 | `FT-IMP-002` San Diego things-to-do persona-led cluster router | Content/product quality | Completed | Existing all-ages activity page now routes first-time, toddler/nap/stroller, teen/tween, lodging-led, and rainy/free/budget planners without touching the protected stay page. |
-| 10 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
+| 10 | `FT-IMP-003` San Diego specialist-page usefulness pass | Content/product quality | Completed | All six pages received a section inventory; toddler, teen, and itinerary pages were compressed without removing their scan, detail, or application layers. |
+| 11 | `FT-EVAL-001` stay-checklist evaluation | Measurement | July 27 | Requires fresh GSC evidence after the URL-scoped observation window. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -177,6 +178,17 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Implemented routes: first-time family, toddler/nap/stroller family, teen/tween family, lodging-led planner, and rainy/free/budget planner.
 - Preserved boundary: canonical/indexability/sitemap state stayed stable; the protected San Diego stay page was not edited; no new page, destination, indexing request, event scraper, outreach, booking/affiliate CTA, or external account mutation was introduced; safety, route, stroller, quiet, water-suitability, and firm family-fit claims remain gated.
 - QA and review: `node tools/generate-pages.mjs`, focused tests 10/10, `node tools/seo-qa.mjs`, `jq empty ops/seo-roadmap.json`, and `git diff --check` passed. Independent reviewer `019f7ff6-3cca-7052-9e6d-869eac450da3` returned `PASS` on review cycle 2 after the freshness-date P2 was fixed.
+
+### FT-IMP-003 — San Diego specialist-page usefulness pass
+
+- Selected: 2026-07-20 by direct manual user instruction after the user clarified that cross-page overlap is acceptable but every page section should provide useful detail.
+- State: completed and review-clean on 2026-07-20.
+- Audit result: every top-level section or repeated section family across the six canonical San Diego pages now has a keep, compress, merge, move/link, remove, or verify verdict in `docs/research/san-diego-section-level-editorial-audit.md`.
+- Product result: the toddler, teen, and itinerary pages retain a concise selector, structured comparison/detail, and route/application layer while duplicate starter blocks, repetitive micro-fields, defective route structure, and unrelated hotel-source residue are removed.
+- Trust result: categorical age, duration, stroller, rain, nap, booking, and value fields are labeled as Family Tripwise editorial estimates rather than venue guarantees; the County beach/bay source is included for current water-condition checks.
+- Scope boundary: the protected stay page and newly observing hotel/all-ages pages were audited but not edited. Canonical, indexability, sitemap, robots, new-page, external-account, outreach, and indexing-request state did not change.
+- QA: generator/idempotency passed; 16 focused tests passed; native and production SEO QA returned 0 errors and 0 warnings; desktop/mobile browser checks passed; JSON, scope, privacy, and whitespace checks passed.
+- Independent review: cycle 2 `PASS` with no P0-P3 findings after closing all three cycle-1 P2 findings and both P3 observations.
 
 ## Daily evidence loop
 

@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. The latest manual user-directed implementation, `FT-IMP-002`, is released: commit `1a321707fcb8203df40e19ac13bdf8782db196bb` was pushed, GitHub Pages run `29752040108` succeeded, production invariants passed, and production SEO QA passed. The all-ages San Diego things-to-do page now acts as a persona-led cluster router. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed action `FT-IMP-003` is completed and review-clean: all six canonical San Diego pages received a section-level usefulness audit, while implementation was limited to the toddler, teen, and itinerary specialist pages. The protected stay page remains unchanged through July 27, and the newly observing hotel and all-ages activity pages remain unchanged. The next substantive queued action remains `FT-EVAL-001` on or after July 27. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 ## Current Project State
 

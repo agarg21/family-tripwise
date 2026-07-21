@@ -262,14 +262,12 @@ const activityPages = {
     description:
       "Plan San Diego with toddlers using short-session activities, stroller notes, nap-friendly timing, bathroom/reset planning, beach choices, and rainy-day options.",
     city: "San Diego",
+    compactDetails: true,
+    comparisonNote: "Age, time, stroller, rain, nap, booking, and value fields are Family Tripwise editorial estimates, not venue guarantees; check the linked venue and exact beach or park facilities before going.",
     quick: [
-      ["Best overall", "Mission Bay morning", "The easiest toddler rhythm: sand, water, snack, leave."],
+      ["Easiest morning", "Mission Bay", "Use one verified bayfront spot for sand and water, then leave before lunch or nap pressure builds."],
       ["Best animal stop", "San Diego Zoo bus tour", "Use the bus and a few zones, not the whole zoo."],
       ["Best rainy-day option", "Birch Aquarium", "Small enough for toddlers and easy to shorten."],
-      ["Best free/low-cost", "Balboa Park playground/garden time", "Good reset if you avoid over-scheduling."],
-      ["Best stroller-friendly", "Balboa Park core", "Paved routes and short loops beat cove stairs."],
-      ["Best half-day anchor", "Birch Aquarium plus La Jolla Shores", "Works if you keep the beach portion simple."],
-      ["Best nap-friendly", "Hotel pool or Mission Bay", "Close, flexible, and easy to abandon."],
       ["Best if you only have one day", "Zoo bus tour plus Mission Bay", "Two high-payoff toddler activities without too many transitions."]
     ],
     rows: [
@@ -280,7 +278,7 @@ const activityPages = {
       ["Coronado beach walk", "2-5", "1-2 hrs", "$", "Coronado", "Mixed", "No", "Medium", "No", "Calmer vacation-feel outing", "Ferry or early dinner"]
     ],
     details: [
-      ["Mission Bay", "Toddlers like the open-ended sand and calmer bay feel.", "Best for babies through preschoolers.", "Gear load, sun, and sandy stroller frustration.", "Arrive early, keep the session short, and leave before lunch spirals.", "Use your hotel or verified beach facilities as the reset plan.", "No booking; check weather, parking, and shade.", "Pair with a nap and pool rather than another major attraction."],
+      ["Mission Bay", "Toddlers get open-ended sand and water play without a fixed attraction schedule.", "Best for babies through preschoolers when adults verify the exact bayfront spot.", "Gear load, sun, water conditions, and sandy stroller frustration.", "Arrive early, keep the session short, and leave before lunch pressure builds.", "Use your hotel or verified beach facilities as the bathroom and reset plan.", "Check current beach/bay status, weather, parking, shade, and facilities for the exact spot.", "Pair with a nap and pool rather than another major attraction."],
       ["San Diego Zoo bus tour", "Toddlers get animal payoff without walking every path.", "Best for toddlers who can handle a bus ride and short viewing stops.", "The zoo is too big if adults chase completion.", "Start with the bus tour, then choose one animal zone.", "Food/restrooms are inside, but do not wait until urgent.", "Buy ahead in busy periods.", "Pair with a playground or hotel reset."],
       ["Birch Aquarium", "Toddlers like the tanks and manageable size.", "Best for toddlers and preschoolers.", "It may be over quickly, which is fine if planned as a short stop.", "Treat it as a 90-minute anchor.", "Verify food/restroom setup for the day.", "Check ticket windows.", "Pair with La Jolla Shores, not a long Cove hike."],
       ["Balboa Park playground/gardens", "Toddlers get movement without a full paid attraction.", "Best for toddlers who need a reset.", "The park can sprawl if you wander without a plan.", "Choose one playground/garden area and stop.", "Check restrooms near your chosen area.", "No booking for outdoor time.", "Pair with the zoo bus tour or one short museum."],
@@ -289,13 +287,16 @@ const activityPages = {
     plans: {
       "1-day plan": "Zoo bus tour early, one animal zone, hotel nap, then Mission Bay or pool.",
       "2-day plan": "Day 1: Mission Bay and pool. Day 2: Birch Aquarium or zoo bus tour with a Balboa Park reset.",
-      "Rainy-day plan": "Birch Aquarium, short meal, hotel reset. Add a Balboa Park museum only if your toddler is still regulated.",
-      "Toddler-friendly plan": "Short sessions, snack before transitions, and one real activity per half day.",
-      "Teen-friendly plan": "Not applicable; use the San Diego with teens page for older-kid planning."
+      "Rainy-day plan": "Birch Aquarium, short meal, hotel reset. Add one Balboa Park museum only if your toddler still has capacity."
     },
     faqs: [
-      ["Is San Diego good with toddlers?", "Yes. Mission Bay, the zoo bus tour, Birch Aquarium, Balboa Park, and hotel-pool pacing make it one of the better toddler city trips."],
-      ["Should toddlers visit La Jolla Cove?", "Only with realistic parking and stroller expectations. La Jolla Shores or Birch Aquarium is usually easier."]
+      ["What works well in San Diego with toddlers?", "Mission Bay, the zoo bus tour, Birch Aquarium, and a short Balboa Park stop can support shorter sessions and a midday reset when current conditions and facilities are checked."],
+      ["Should toddlers visit La Jolla Cove?", "It can work, but parking, stairs, uneven paths, crowds, and stroller gear need a specific plan. Compare that friction with Birch Aquarium or a verified La Jolla Shores stop before deciding."]
+    ],
+    clusterLinks: [
+      ["All-ages activity hub", "Use the broader guide when siblings, grandparents, or mixed stamina levels change the shortlist.", "./san-diego-with-kids.html", "Open San Diego things to do with kids"],
+      ["Family itinerary", "Sequence the toddler choices around arrival, nap, meals, weather, and the hotel reset instead of adding another attraction.", "../family-itinerary/san-diego-with-kids.html", "Open the San Diego family itinerary"],
+      ["Stay areas", "Choose the lodging base before promising a midday return; verify the exact hotel route and room setup for your dates.", "../where-to-stay/san-diego-with-kids.html", "Compare San Diego stay areas"]
     ]
   },
   "things-to-do/new-york-city-with-kids.html": {
@@ -828,13 +829,9 @@ const itineraryPages = {
       ["Where to stay first", "Pick the lodging base before locking the route. Mission Bay, Downtown, La Jolla, Coronado, and Mission Valley change the practical day shape.", "../where-to-stay/san-diego-with-kids.html", "Open where to stay in San Diego with kids"]
     ],
     quick: [
-      ["Best 1-day plan", "Zoo early, Balboa Park reset, Mission Bay or pool", "Highest San Diego payoff with only one cross-town move after lunch."],
+      ["Best 1-day plan", "Zoo early, Balboa Park reset, Mission Bay or pool", "Combines one major attraction with a flexible afternoon; verify the final move from your hotel."],
       ["Best 2-day plan", "Zoo/Balboa plus Mission Bay/La Jolla", "Gives one major attraction day and one coast day without overpacking."],
-      ["Best 3-day plan", "Arrival reset, zoo day, coast choice", "The most reliable family rhythm if naps, weather, or beach time matter."],
-      ["Best toddler pace", "Mission Bay, zoo bus tour, Birch Aquarium", "Shorter sessions, easier exits, and fewer stair-heavy coastal stops."],
-      ["Best teen pace", "Zoo highlights, La Jolla, Coronado or food stop", "More scenery and independence, fewer playground-heavy filler stops."],
-      ["Best rainy-day swap", "Birch Aquarium or one Balboa Park museum", "Keeps the day useful without rebuilding every meal and drive."],
-      ["Best stay pairing", "Mission Bay for younger kids; Downtown for no-car-lite trips", "Treat this as planning guidance and verify exact hotel logistics."],
+      ["Best 3-day plan", "Arrival reset, zoo day, coast choice", "Leaves more room for naps, weather changes, or an unplanned beach block."],
       ["What to skip", "Zoo plus La Jolla plus Coronado in one day", "That route can turn the trip into driving and parking management."]
     ],
     rows: [
@@ -846,12 +843,10 @@ const itineraryPages = {
       ["Rainy-day version", "Birch Aquarium or Balboa Park museum; meal nearby; hotel reset", "Any age with weather constraints", "Use the weather window for one outdoor walk", "Lower if you stay in one zone", "Do not count on beach meals in bad weather", "Long outdoor zoo day if rain is steady"]
     ],
     plans: {
-      "Arrival afternoon": "Keep arrival deliberately soft: groceries or snacks, hotel/pool time, and an early dinner near your base. Save the zoo and La Jolla for a rested morning.",
-      "Zoo day": "Arrive near opening, use the bus tour early, choose two or three zones, then leave space for a post-lunch reset. Add only one Balboa Park garden, playground, or museum if energy is still good.",
-      "Coast day": "Choose Mission Bay for younger kids, La Jolla for older walkers and teens, or Coronado when you want a calmer beach-and-ferry feel. Avoid trying to do all three in one day.",
-      "Rain backup": "Use Birch Aquarium or one Balboa Park museum as the anchor, then keep food and parking close. Treat the beach as a bonus if the weather clears.",
-      "Toddler adjustment": "Shorten every activity block, keep snacks visible, and make the hotel reset non-negotiable. If the first morning goes long, delete the afternoon stop.",
-      "Teen adjustment": "Trade one playground or short museum stop for La Jolla scenery, a food stop, kayaking-style activity if appropriate, or Coronado waterfront time."
+      "Choose one zone per half day": "Keep zoo and Balboa Park together, make Mission Bay its own reset block, and choose either La Jolla or Coronado for a coast half day. Check the next parking or transit step for the exact day and season before promising a second anchor across the city.",
+      "Use a real stop rule": "After the main anchor, continue only if everyone has eaten, the bathroom and rest needs are handled, and the optional stop can be abandoned without losing a reservation. A free garden or hotel pool is easier to drop than another timed ticket.",
+      "Adjust for younger kids": "Shorten each block and protect the post-lunch reset. Keep snacks and the next bathroom known before changing zones. Use the toddler page for exact activity swaps rather than adding more stops here.",
+      "Adjust for teens or rain": "Let teens choose the coast, museum, or food-led anchor and give them a say in what gets cut. In rain, use one aquarium or museum and keep the meal nearby instead of recreating the full route indoors."
     },
     faqs: [
       ["How many days do families need in San Diego?", "Two or three days works best for a first family trip. One day can work if you choose the zoo plus one low-pressure reset instead of trying to see the whole coast."],
@@ -959,27 +954,25 @@ const teenPages = {
     ]
   },
   "things-to-do/san-diego-with-teens.html": {
-    title: "Things to Do in San Diego With Teens: Coast, Zoo, Food and Rainy-Day Plans",
+    title: "Things to Do in San Diego With Teens: Coast, Zoo, Museums and Rainy-Day Plans",
     description:
-      "Plan San Diego with teens using coast and zoo quick picks, stroller-free route caveats, rainy-day swaps, food/reset notes, and realistic teen-friendly itineraries.",
+      "Compare San Diego coast, zoo, museum, ferry, and weather-backup options for teens, with route tradeoffs and realistic one- and two-day plans.",
     city: "San Diego",
+    compactDetails: true,
+    comparisonNote: "Age, time, stroller, rain, nap, booking, and value fields are Family Tripwise editorial estimates, not venue guarantees; check the linked venue and let your teen help choose the anchor.",
     links: {
       allAges: "../things-to-do/san-diego-with-kids.html",
       stay: "../where-to-stay/san-diego-with-kids.html",
       itinerary: "../family-itinerary/san-diego-with-kids.html"
     },
     quick: [
-      ["Best overall", "La Jolla coast plus food/reset plan", "Strong teen payoff if parking, walking, and weather cooperate."],
+      ["Best coast choice", "La Jolla coast plus one meal", "Good scenery and wildlife-viewing potential if parking, walking, and weather cooperate."],
       ["Best major attraction", "San Diego Zoo highlights", "Works when teens choose zones instead of chasing every exhibit."],
       ["Best rainy-day swap", "Birch Aquarium or Balboa Park museum", "Useful backup without rebuilding the entire day."],
-      ["Best low-pressure day", "Coronado ferry and waterfront", "Scenic, flexible, and easier than a packed cross-city route."],
-      ["Best younger-sibling compromise", "Zoo bus tour or Birch Aquarium", "Still teen-acceptable if the day includes food or coast time."],
-      ["Best base check", "La Jolla, Mission Bay, Downtown, or Coronado by route", "The right base depends on whether coast, zoo, or beach time leads."],
-      ["Think twice about", "La Jolla Cove with stroller-heavy family logistics", "Teens may love it, but mixed-age gear and parking can derail the plan."],
       ["Main planning risk", "Parking and cross-town stacking", "Do not turn a teen coast day into a parking-and-driving day."]
     ],
     rows: [
-      ["La Jolla Cove / coast", "12-17", "2-4 hrs", "$", "La Jolla", "Hard", "No", "Low", "No", "Best scenery and teen independence", "Birch Aquarium or casual lunch"],
+      ["La Jolla Cove / coast", "12-17", "2-4 hrs", "$", "La Jolla", "Hard", "No", "Low", "No", "Scenery and a more independent-feeling stop", "Birch Aquarium or casual lunch"],
       ["San Diego Zoo highlights", "10-17", "3-5 hrs", "$$$", "Balboa Park", "Moderate", "No", "Medium", "Book/check tickets", "Major all-age anchor if teens choose priorities", "Balboa Park food or one museum"],
       ["Birch Aquarium", "10-15", "90 min-2 hrs", "$$", "La Jolla", "Good", "Partial", "High", "Check tickets", "Compact weather backup near the coast", "La Jolla Shores or Cove"],
       ["Balboa Park museums", "10-17", "2-4 hrs", "$$", "Balboa Park", "Good", "Yes", "Medium", "Check exhibits", "Best flexible culture/rain option", "Zoo or garden walk"],
@@ -995,14 +988,13 @@ const teenPages = {
       ["Mission Bay / beach reset", "It can keep the trip from becoming all driving, lines, and ticketed attractions.", "Best for mixed-age groups and teens who need downtime.", "Sand, sun, parking, and boredom if framed as the only teen activity.", "Use it as a reset between bigger plans, not the headline teen day.", "Use hotel or verified nearby facilities as the reset plan.", "Check weather, parking, tide, and shade.", "Pair with pool time or a short evening meal."]
     ],
     plans: {
-      "1-day teen plan": "Zoo highlights early, lunch/rest, then Mission Bay or a short coast stop depending on where you are staying.",
+      "1-day teen plan": "Choose either zoo highlights or the La Jolla coast as the main anchor, add one nearby meal, and keep the optional second stop close to the hotel or first activity.",
       "2-day teen plan": "Day 1: zoo and Balboa Park. Day 2: La Jolla coast or Coronado ferry with food and beach time.",
       "Rainy-day plan": "Use Birch Aquarium or one Balboa Park museum as the anchor, keep meals close, and save coast time for the clearest weather window.",
-      "Coast-first plan": "Start La Jolla early, add Birch Aquarium or lunch, then avoid another parking-heavy cross-town stop.",
       "Mixed-age plan": "Give teens the coast or food choice while younger siblings get Mission Bay, aquarium, or zoo bus-tour pacing."
     },
     faqs: [
-      ["What is the best thing to do in San Diego with teens?", "La Jolla coast is often the strongest teen-specific stop, while the San Diego Zoo remains the best all-age anchor if the family chooses zones carefully."],
+      ["What should families prioritize in San Diego with teens?", "Start by asking whether the teen prefers coastline, animals, museums, or a lower-pressure ferry and waterfront day. La Jolla and the zoo are strong candidates, but the best anchor depends on that preference and the family's route."],
       ["What should families avoid with teens in San Diego?", "Avoid stacking the zoo, La Jolla, Coronado, and Mission Bay in one day; parking and drive time can overwhelm the fun."]
     ]
   },
@@ -1117,13 +1109,20 @@ ${rows.map(([trip, picks, ages, weather, budget, note, href, linkText]) => `    
         </div>`;
 }
 
-function renderDetails(details) {
-  const labels = ["Why families like it", "Best ages", "What can go wrong", "Parent logistics", "Food/bathroom/reset", "Booking/timing", "Nearby pairing"];
+function renderDetails(details, compact = false) {
+  const labels = compact
+    ? ["Why consider it", "Main tradeoff", "How to plan it", "Pair nearby"]
+    : ["Why families like it", "Best ages", "What can go wrong", "Parent logistics", "Food/bathroom/reset", "Booking/timing", "Nearby pairing"];
   return `        <div class="detail-card-grid">
-${details.map(([name, ...values]) => `          <article class="detail-card">
+${details.map(([name, ...rawValues]) => {
+  const values = compact
+    ? [`${rawValues[0]} ${rawValues[1]}`, rawValues[2], `${rawValues[3]} ${rawValues[4]} ${rawValues[5]}`, rawValues[6]]
+    : rawValues;
+  return `          <article class="detail-card">
             <h3>${esc(name)}</h3>
             ${values.map((value, index) => `<section><h4>${esc(labels[index])}</h4><p>${esc(value)}</p></section>`).join("\n            ")}
-          </article>`).join("\n")}
+          </article>`;
+}).join("\n")}
         </div>`;
 }
 
@@ -1241,7 +1240,7 @@ ${renderQuickPicks(page.quick)}
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>
         </div>
-${renderActivityComparison(page.rows)}
+${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${renderActivityComparison(page.rows)}
       </section>
 
       <section class="band intro-band rank-ready-section">
@@ -1250,7 +1249,7 @@ ${renderActivityComparison(page.rows)}
             <p class="eyebrow">Parent logistics</p>
             <h2>Detailed activity notes</h2>
           </div>
-${renderDetails(page.details)}
+${renderDetails(page.details, page.compactDetails)}
         </div>
       </section>
 
@@ -1285,7 +1284,7 @@ ${indexDecision}${renderQuickPicks(page.quick)}
           <p class="eyebrow">Compare teen activities</p>
           <h2>Teen activity decision table</h2>
         </div>
-        <p class="review-label">Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.</p>
+        <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
 ${renderActivityComparison(page.rows)}
       </section>
 
@@ -1295,7 +1294,7 @@ ${renderActivityComparison(page.rows)}
             <p class="eyebrow">Teen logistics</p>
             <h2>Detailed notes for older-kid planning</h2>
           </div>
-${renderDetails(page.details)}
+${renderDetails(page.details, page.compactDetails)}
         </div>
       </section>
 

@@ -282,10 +282,16 @@ function links(city) {
   };
 }
 
-function updatedBlock(lastUpdated = "July 5, 2026") {
+function updatedBlock(
+  lastUpdated = "July 5, 2026",
+  sourceNote
+) {
+  const reviewLine = sourceNote
+    ? `<strong>Source note:</strong> ${esc(sourceNote)}`
+    : "<strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.";
   return `      <section class="container trust-panel" aria-label="Review status">
         <p><strong>Last updated:</strong> ${esc(lastUpdated)}</p>
-        <p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>
+        <p>${reviewLine}</p>
       </section>
 `;
 }
@@ -300,22 +306,33 @@ function cityPhoto(city) {
 `;
 }
 
-function sourceList(city) {
+function sourceList(
+  city,
+  selectedSources = city.sources,
+  sourceIntro = "Use these official pages to verify current hours, ticketing, parking, accessibility, hotel fees, and policies before booking."
+) {
   return `      <section class="container page-section source-section">
         <div class="section-heading">
           <p class="eyebrow">Sources checked</p>
           <h2>Official sources and licensing notes</h2>
         </div>
-        <p>Use these official pages to verify current hours, ticketing, parking, accessibility, hotel fees, and policies before booking.</p>
+        <p>${esc(sourceIntro)}</p>
         <ul class="source-list">
-${city.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
+${selectedSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="${esc(city.photo.creditUrl)}">Photo license and attribution</a></li>
         </ul>
       </section>
 `;
 }
 
-function hero(city, h1, intro, lastUpdated) {
+function sanDiegoSpecialistSources(city) {
+  return [
+    ...city.sources.slice(0, 4),
+    ["San Diego County beach and bay status", "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html"]
+  ];
+}
+
+function hero(city, h1, intro, lastUpdated, sourceNote) {
   return `    <main>
       <section class="page-hero">
         <div class="container">
@@ -324,7 +341,7 @@ function hero(city, h1, intro, lastUpdated) {
           <p>${esc(intro)}</p>
         </div>
       </section>
-${updatedBlock(lastUpdated)}${cityPhoto(city)}
+${updatedBlock(lastUpdated, sourceNote)}${cityPhoto(city)}
 `;
 }
 
@@ -810,9 +827,10 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
 function itineraryPage(city) {
   const l = links(city);
+  const isSanDiego = city.slug === "san-diego";
   const items = city.itinerary.map(([day, plan]) => `              <li><strong>${esc(day)}</strong><span>${esc(plan)}</span></li>`).join("\n");
   const twoDayItems = city.itinerary.slice(0, 2).map(([day, plan]) => `              <li><strong>${esc(day)}</strong><span>${esc(plan)}</span></li>`).join("\n");
-  const body = `${hero(city, `${city.name} itinerary with kids`, `A starter family itinerary for ${city.name} with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.`)}
+  const starterSections = `
       <section class="container page-section itinerary-layout">
         <div>
           <p class="eyebrow">3-day starter plan</p>
@@ -848,8 +866,12 @@ ${twoDayItems}
           <article class="activity-card"><h3>Choose the best base</h3><p>Use the <a href="${l.stay}">where-to-stay guide</a> before booking a hotel for this route.</p></article>
           <article class="activity-card"><h3>Rainy-day version</h3><p>Keep one indoor activity and one easy meal option in reserve rather than rebuilding the day from scratch.</p></article>
         </div>
-      </section>
-${sourceList(city)}
+      </section>`;
+  const itineraryIntro = isSanDiego
+    ? "Choose a realistic one-, two-, or three-day route, then adjust the rest windows and optional stops for toddlers, teens, or rain."
+    : `A starter family itinerary for ${city.name} with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.`;
+  const body = `${hero(city, `${city.name} itinerary with kids`, itineraryIntro, isSanDiego ? "July 20, 2026" : undefined, isSanDiego ? "Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before the trip." : undefined)}${isSanDiego ? "" : starterSections}
+${sourceList(city, isSanDiego ? sanDiegoSpecialistSources(city) : city.sources, isSanDiego ? "Use these official pages to check current hours, tickets, parking, accessibility, ferry schedules, and beach or bay conditions before the trip." : undefined)}
     </main>`;
   return pageShell({
     title: `${city.name} Itinerary With Kids: 2 and 3 Day Starter Plan`,
@@ -863,8 +885,9 @@ ${sourceList(city)}
 function agePage(city, age, signal) {
   const l = links(city);
   const isToddler = age === "toddlers";
+  const isSanDiego = city.slug === "san-diego";
   const focus = isToddler ? city.toddlerFocus : city.teenFocus;
-  const body = `${hero(city, `Things to do in ${city.name} with ${age}`, `A focused activity guide for ${age} in ${city.name}, with the main kids guide kept as the broader planning hub.`)}
+  const starterSections = `
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>
@@ -888,8 +911,14 @@ function agePage(city, age, signal) {
         <div class="activity-grid">
 ${activityCards(city, age)}
         </div>
-      </section>
-${sourceList(city)}
+      </section>`;
+  const ageIntro = isSanDiego
+    ? isToddler
+      ? "Compare short-session activities by nap timing, stroller and bathroom logistics, weather backup, and how easily the family can leave."
+      : "Compare coast, zoo, museum, ferry, and weather-backup options by teen interest, route friction, time, and mixed-age fit."
+    : `A focused activity guide for ${age} in ${city.name}, with the main kids guide kept as the broader planning hub.`;
+  const body = `${hero(city, `Things to do in ${city.name} with ${age}`, ageIntro, isSanDiego ? "July 20, 2026" : undefined, isSanDiego ? "Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before going." : undefined)}${isSanDiego ? "" : starterSections}
+${sourceList(city, isSanDiego ? sanDiegoSpecialistSources(city) : city.sources, isSanDiego ? "Use these official pages to check current hours, tickets, parking, accessibility, ferry schedules, and beach or bay conditions before going." : undefined)}
     </main>`;
   return pageShell({
     title: `Things to Do in ${city.name} With ${age[0].toUpperCase() + age.slice(1)}`,
