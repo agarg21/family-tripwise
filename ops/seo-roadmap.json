@@ -755,6 +755,52 @@
       "review_summary": "Independent reviewer Popper (019f8a48-2b5a-7fe1-b6a7-290771ee03b8) returned PASS_WITH_P3 on cycle 2 after visible FAQ/schema alignment and Red Rock budget-filter membership closed both P2 findings. The residual P3 is a non-blocking future-reuse suggestion for the optional FAQ heading.",
       "qa_summary": "Full generator regeneration, 44/44 repository tests, 4/4 focused tests, JavaScript syntax, native SEO QA with 0 errors and 0 warnings, roadmap JSON, privacy, exact-scope, source-link classification, responsive checks at 1280/390/320px, and git diff --check passed.",
       "notes": "Promoted by FT-RES-007. Improve one existing page first; no list-length quota and no new hotel, free, toddler, indoor, or other URL in this action. Selection and implementation remain separate transactions."
+    },
+    {
+      "id": "FT-PUB-002",
+      "implementation_backlog_id": "IMP-021",
+      "research_backlog_id": "SRR-011",
+      "title": "Research and publish the Las Vegas family-hotel comparison",
+      "kind": "publication",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-22",
+      "completed_on": "2026-07-22",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 5,
+      "risk": 3,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+        "https://familytripwise.com/"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-family-hotel-evidence-pack.md",
+        "tools/generate-pages.mjs",
+        "tools/las-vegas-family-hotels-page.test.mjs",
+        "site/where-to-stay/las-vegas-family-hotels.html",
+        "site/where-to-stay/las-vegas-with-kids.html",
+        "site/index.html",
+        "site/sitemap.xml",
+        "status/las-vegas-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "One clean named-property page compares only evidence-backed Las Vegas family-hotel options by trip style, rough total nightly range, room setup, pool/resort role, sampled recent family-review themes and conflicts, and current checks without imitating OTA inventory or claiming firsthand stays.",
+      "production_invariant": "The new hotel URL is canonical, indexable, in the sitemap, and internally linked from the existing stay guide and home page; it contains a compact comparison and evidence-backed property notes with visible freshness and uncertainty labels; existing canonical URLs remain indexable; no unsupported safety, exact route, smoke/noise, pool-access, room-selection, price guarantee, personally verified, or firm universal-family-fit claim is introduced.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-22 with finalized data through 2026-07-20. The proposed URL does not yet exist, so GSC cannot measure it; the action is justified by previously collected Semrush US hotel-query estimates and observed named-property SERP overlap, not a fresh GSC performance claim.",
+      "implementation_summary": "Created one canonical ten-hotel Las Vegas comparison organized by trip style, with official room and amenity facts, rough total-night ranges, sampled online-review themes and conflicts, direct maps, visible freshness and uncertainty, FAQ/schema alignment, and approved routing from the existing stay guide and home page.",
+      "review_summary": "Independent reviewer Prism (019f8ae7-5f67-71c3-a1ed-8edd6cae20f3) returned PASS on cycle 2 after the Cancun price/crib evidence conflict and hero-image performance/license attribution closed both cycle-1 P2 findings. No P0-P3 findings remain.",
+      "qa_summary": "Full regeneration, 47/47 repository tests, 3/3 focused tests, JavaScript syntax, native SEO QA with 0 errors and 0 warnings, roadmap JSON, privacy, exact-scope, source, responsive checks at 1280/390/320px, and git diff --check passed.",
+      "notes": "Selected by direct manual user instruction. One new indexable page only. Research and publication are one transaction, but the page may release only if the durable evidence pack, focused/native/browser QA, and independent review pass. Existing stay and home pages may change only to route to the new hotel page. No indexing request, affiliate CTA, outreach, external-account mutation, custom-map mutation, separate resorts URL, or recurring automation."
     }
   ]
 }

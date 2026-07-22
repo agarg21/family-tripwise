@@ -4,7 +4,25 @@ Last updated: 2026-07-22
 
 ## Active
 
-- None.
+No standalone research task is active outside the selected publication transaction.
+
+## Recently Done
+
+### SRR-011: Las Vegas Family-Hotel Evidence Pack
+
+Status: done
+
+Completed: 2026-07-22
+
+Roadmap ID: `FT-PUB-002`
+
+Evaluate a wider candidate pool and produce the durable official-fact, rough-total-price, sampled-review, contradiction, freshness, and unknown record required for one clean Las Vegas family-hotel comparison. This research is part of the selected publication transaction, not a separate scheduled action.
+
+Result:
+
+- Selected ten properties with distinct pool, suite, kitchen, budget, older-kid, North Strip, and nature-base roles.
+- Recorded official facts, broad total-night planning ranges, bounded recent-review themes/conflicts, deferred candidates, freshness, unknowns, page architecture, acceptance criteria, and measurement plan.
+- Artifact: `docs/research/las-vegas-family-hotel-evidence-pack.md`.
 
 ## Next
 

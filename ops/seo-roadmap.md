@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 Last re-scored: 2026-07-14
 Next re-score due: 2026-07-21
@@ -49,8 +49,22 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 14 | `FT-IMP-005` expand San Diego activity and hotel decision sets | Content/product quality | Completed and released | Commit `31bba30652d76c3d1664193532a9c508a83c6f32`; Pages run `29876597948` and production verification passed. |
 | 15 | `FT-RES-007` select the next pilot city and create the incremental city playbook | Content/product quality | Completed | Las Vegas wins the fresh GSC, keyword, SERP, commercial-intent, and existing-page comparison; research promotes one existing-page improvement. |
 | 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Completed; release authorized | Twelve distinct choices, compact scan/detail layers, and heat/budget support passed QA and independent review on one existing URL. |
+| 17 | `FT-PUB-002` research and publish the Las Vegas family-hotel comparison | Content/product quality | Completed; release authorized | Ten distinct evidence-backed hotel options passed native QA and independent review; exact-path release is authorized. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+### FT-PUB-002 - Research and publish the Las Vegas family-hotel comparison
+
+- Selected: 2026-07-22 by direct manual user instruction.
+- State: completed and review-clean on 2026-07-22; exact-path release authorized.
+- New URL: `https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html`.
+- Evidence requirement: evaluate a wider candidate pool; retain only properties with distinct trip-style value, current official room/amenity facts, a source-dated rough total nightly range, bounded recent family-review themes and conflicts, current operational caveats, and explicit unknowns.
+- Product requirement: one compact default comparison plus concise property notes; do not create separate family-resort, pool, suite, or waterslide URLs.
+- Dependent scope: the existing Las Vegas stay guide and home page may change only enough to route to the new comparison. The newly released activity page is excluded.
+- Trust boundary: no personally stayed claim, universal ranking, safety assurance, exact route/stroller verdict, room-selection guarantee, smoke/noise conclusion, pool-access guarantee, or stable-price promise.
+- Release gate: focused/native QA, exact generator output, responsive browser checks, source/privacy/scope checks, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
+- Local result: ten trip-style hotel options, one compact comparison, rough total-night ranges, official facts, sampled online-review themes/conflicts, direct maps, visible FAQ/schema, and dependent routing from the stay guide and home page.
+- Review and QA: Prism (`019f8ae7-5f67-71c3-a1ed-8edd6cae20f3`) returned `PASS` on cycle 2 after both P2 findings were closed. Full regeneration, 47 tests, focused tests, native SEO QA, responsive checks, privacy/scope/source checks, roadmap JSON, JavaScript syntax, and whitespace checks passed.
 
 ### FT-RES-007 - Next pilot city and incremental city playbook
 

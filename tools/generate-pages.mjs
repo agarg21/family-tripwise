@@ -510,9 +510,12 @@ ${sourceList(city, city.activitySources || city.sources, city.activitySourceIntr
 function stayPage(city) {
   const l = links(city);
   const isSanDiego = city.slug === "san-diego";
+  const isLasVegas = city.slug === "las-vegas";
   const hotelShortlistLink = isSanDiego
     ? '<a href="../where-to-stay/san-diego-family-hotels.html">12 family hotel options</a>'
-    : "Parking, pool, breakfast, room size";
+    : isLasVegas
+      ? '<a href="../where-to-stay/las-vegas-family-hotels.html">10 family hotel options</a>'
+      : "Parking, pool, breakfast, room size";
   const rows = city.areas.map(([area, best, watch, fit]) => `            <div class="table-row" role="row">
               <span role="cell">${esc(area)}</span>
               <span role="cell">${esc(best)}</span>
@@ -967,6 +970,284 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
   });
 }
 
+const lasVegasFamilyHotels = [
+  {
+    name: "Mandalay Bay Resort and Casino",
+    category: "Pool-and-attraction resort",
+    area: "South Strip",
+    priceRange: "$110-$350+",
+    strengths: ["The 11-acre beach complex and Shark Reef can make the hotel part of the itinerary", "Official two-queen rooms list space for four"],
+    familySetup: "Official materials list 550 sq ft two-queen rooms for up to four, plus an 11-acre beach complex with a wave pool, lazy river, pools, and Shark Reef on site.",
+    reviewSignal: "Beach, pool, and room-size positives recur; check-in or service waits, noise, seasonal pool limits, and value when water features are closed appear as conflicts.",
+    priceNote: "Recent public low-date examples started near $110 total, while weekends, events, and larger rooms can move far higher.",
+    parentCheck: "Confirm which pools and water features operate on the exact dates, room occupancy, final total, parking, and the casino-floor path.",
+    mapQuery: "Mandalay Bay Resort Las Vegas"
+  },
+  {
+    name: "Four Seasons Hotel Las Vegas",
+    category: "Non-gaming luxury with Mandalay access",
+    area: "South Strip",
+    priceRange: "$350-$700+",
+    strengths: ["Official family materials describe a non-gaming and non-smoking hotel", "Guests receive private-pool and Mandalay Beach access"],
+    familySetup: "The official family page lists a private pool, Mandalay Beach access, cribs or rollaways, childproofing items, children's toiletries, books, and games; exact room occupancy still depends on room type.",
+    reviewSignal: "Service, cleanliness, room space, and the calmer setting recur positively; high prices, early or seasonal pool limits, airport noise, and occasional service or condition conflicts also appear.",
+    priceNote: "A recent public one-night example was about $351 total; larger rooms, weekends, dining, and parking can move the stay much higher.",
+    parentCheck: "Price the full stay and verify private and Mandalay pool hours, exact bedding, parking, and whether the south-Strip location fits the plan.",
+    mapQuery: "Four Seasons Hotel Las Vegas"
+  },
+  {
+    name: "Vdara Hotel & Spa",
+    category: "Central non-gaming kitchenette suite",
+    area: "Center Strip / CityCenter",
+    priceRange: "$150-$450+",
+    strengths: ["Every official Studio is a 582 sq ft suite with a kitchenette", "The property is casino-free and smoke-free while staying close to Aria and Bellagio"],
+    familySetup: "The official Studio lists a king bed, pullout queen sofa, kitchenette, dining table, and maximum occupancy of four. Larger one-bedroom layouts are available, but bedding and separation vary.",
+    reviewSignal: "Room space, non-gaming atmosphere, and access toward Aria and Bellagio recur positively; empty kitchenettes until supplies are requested, small fridges, parking walks, maintenance, and fee clarity recur as conflicts.",
+    priceNote: "Public examples varied from roughly $150 to more than $450 total depending on date and inventory source.",
+    parentCheck: "Confirm the exact suite bedding, kitchen equipment supplied, parking route, pool season, final total, and cancellation terms.",
+    mapQuery: "Vdara Hotel and Spa Las Vegas"
+  },
+  {
+    name: "Marriott's Grand Chateau",
+    category: "Multi-bedroom kitchen and laundry base",
+    area: "Center Strip / Harmon Avenue",
+    priceRange: "$200-$700+",
+    strengths: ["Official one- to three-bedroom villas add kitchens, living space, and in-unit laundry", "The property publishes no resort fee"],
+    familySetup: "Official pages list guest rooms plus one-, two-, and three-bedroom villas with kitchens or kitchenettes, living and dining space, and in-unit laundry in villas. Two pools and valet-only parking are also listed.",
+    reviewSignal: "Space, kitchens, laundry, cleanliness, and central location recur positively; small or crowded pools, valet dependence, timeshare contact, noise, and limited food choices recur as conflicts.",
+    priceNote: "Public examples ranged from the low $200s to roughly $700 for higher dates or larger units; villa size is the main comparison point.",
+    parentCheck: "Compare the exact villa, bedrooms and baths, housekeeping cadence, valet cost and wait, final total, and cancellation terms.",
+    mapQuery: "Marriott's Grand Chateau Las Vegas"
+  },
+  {
+    name: "Tahiti Village Resort",
+    category: "Off-Strip lazy-river suite",
+    area: "South Las Vegas Boulevard",
+    priceRange: "$130-$300+",
+    strengths: ["Official one- and two-bedroom suites publish kitchenette or full-kitchen setups", "The pool, lazy river, arcade, activities, and free parking support a stay-put day"],
+    familySetup: "Official pages list a 580 sq ft one-bedroom with kitchenette, a 971 sq ft one-bedroom with full kitchen, and a 1,551 sq ft two-bedroom suite, plus pool, lazy river, arcade, activities, and free parking.",
+    reviewSignal: "Room space, kitchens, lazy river, pool, and the away-from-casino setting recur positively; crowding, partial pool closures, elevator or parking walks, service follow-through, room condition, and sales contact recur as conflicts.",
+    priceNote: "A recent public one-night example was about $129 total; larger suites and peak pool dates can move higher.",
+    parentCheck: "Verify the exact kitchen, pool and lazy-river operations, crib or Pack 'n Play availability if needed, shuttle schedule, final total, and cancellation terms.",
+    mapQuery: "Tahiti Village Resort Las Vegas"
+  },
+  {
+    name: "Hilton Vacation Club Cancun Resort Las Vegas",
+    category: "Off-Strip waterslides and family space",
+    area: "South Las Vegas Boulevard",
+    priceRange: "$120-$320+",
+    strengths: ["Hilton lists two pools and four waterslides", "Free parking and residence-style layouts can fit a car-based family trip"],
+    familySetup: "Hilton lists two pools, four waterslides, free parking, non-smoking rooms, and resort residences. Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request. Treat crib availability as unresolved and confirm it directly if needed.",
+    reviewSignal: "Family pool and space positives appear in the small sample; resort fee, service consistency, timeshare context, room condition, and distance from main Strip stops remain the main conflicts.",
+    priceNote: "A current public one-night example was about $119 total; dates and larger residences can move higher.",
+    parentCheck: "Confirm the conflicting crib policy if needed, exact suite and kitchen, slide operations and rules, transport plan, final total, and cancellation terms.",
+    mapQuery: "Hilton Vacation Club Cancun Resort Las Vegas"
+  },
+  {
+    name: "Excalibur Hotel & Casino",
+    category: "Themed lower-price south Strip base",
+    area: "South Strip",
+    priceRange: "$60-$220+",
+    strengths: ["Newly renovated two-queen rooms officially list space for four", "The castle theme, arcade, and nearby Tournament of Kings can entertain younger children"],
+    familySetup: "Official room pages list newly renovated 352 sq ft two-queen rooms for four and larger two-bedroom suites. Current property materials also list arcade or midway entertainment and a pool.",
+    reviewSignal: "Low total, castle theme, arcade, and south-Strip access help some families; room condition varies sharply, with smoke, cleanliness, maintenance, queues, and tower or renovation status recurring as conflicts.",
+    priceNote: "A recent public low-date example was about $58 total; renovated rooms, weekends, and event dates can move much higher.",
+    parentCheck: "Confirm a renovated room and tower, exact pool season, casino route, final total, parking, and the newest room-condition reviews.",
+    mapQuery: "Excalibur Hotel and Casino Las Vegas"
+  },
+  {
+    name: "New York-New York Hotel & Casino",
+    category: "Older-kid Strip energy",
+    area: "South Strip",
+    priceRange: "$80-$300+",
+    strengths: ["Official pages list remodeled two-queen rooms", "The Big Apple Coaster, arcade, food, and arena access can suit older kids"],
+    familySetup: "Official property pages list remodeled two-queen rooms, the Big Apple Coaster and Arcade, a seasonal pool, and walkways toward neighboring south-Strip resorts.",
+    reviewSignal: "Remodeled rooms, food and entertainment density, location, and older-kid energy are positives; casino noise or smoke exposure, coaster fit and cost, pool modesty, queues, and busy public areas are conflicts.",
+    priceNote: "A recent public low-date example was about $79 total; event nights and specific remodeled-room choices can move higher.",
+    parentCheck: "Check coaster height and comfort, room tower, pool season, casino path, event-night price, parking, and final total.",
+    mapQuery: "New York-New York Hotel and Casino Las Vegas"
+  },
+  {
+    name: "Las Vegas Hilton at Resorts World",
+    category: "Modern North Strip resort",
+    area: "North Strip",
+    priceRange: "$150-$350+",
+    strengths: ["Official Hilton two-queen rooms sleep four", "The resort's large multi-pool complex and food choices support an on-property day"],
+    familySetup: "Hilton lists two-queen rooms for four. Resorts World lists a large multi-pool complex; the Athena infinity area is 21+, so families should verify which all-ages pools are operating.",
+    reviewSignal: "Modern rooms, cleanliness, pool complex, and on-property food choice recur positively; check-in lines, long internal walks, high food costs, housekeeping inconsistency, and early or seasonal pool closures recur as conflicts.",
+    priceNote: "Recent public examples ranged from about $134 including fees to the high $200s before all tax, with large offer and date swings.",
+    parentCheck: "Verify which all-ages pools are open, exact Hilton tower and room, internal walking, parking, final total, and cancellation terms.",
+    mapQuery: "Las Vegas Hilton at Resorts World"
+  },
+  {
+    name: "Red Rock Casino Resort & Spa",
+    category: "Summerlin nature and stay-put base",
+    area: "Summerlin",
+    priceRange: "$220-$450+",
+    strengths: ["Bowling, cinema, arcade or Kids Quest, and pool options create non-Strip downtime", "The location can pair with a Red Rock Canyon day"],
+    familySetup: "Official pages list a pool for registered guests, bowling, cinema, arcade or Kids Quest, and proximity to Red Rock Canyon. Kids Quest is a separate hourly paid program with current ages and rules to verify.",
+    reviewSignal: "Pool, room quality, on-site activities, and the off-Strip setting appear positively; seasonally limited pools, long hotel walks, fees or value, and Strip distance recur as conflicts.",
+    priceNote: "A recent public one-night example was about $219 total; weekends and premium rooms can move higher.",
+    parentCheck: "Confirm pool operations, Kids Quest ages, hours and price, room-to-amenity walking, Red Rock transport, final total, and cancellation terms.",
+    mapQuery: "Red Rock Casino Resort and Spa Las Vegas"
+  }
+];
+
+const lasVegasHotelSources = [
+  ["Mandalay Bay rooms", "https://mandalaybay.mgmresorts.com/en/hotel.html"],
+  ["Mandalay Bay property facts", "https://mandalaybay.mgmresorts.com/en/contact-us.html"],
+  ["Four Seasons family amenities", "https://www.fourseasons.com/lasvegas/services-and-amenities/family/"],
+  ["Vdara hotel", "https://vdara.mgmresorts.com/en.html"],
+  ["Vdara Studio suite", "https://vdara.mgmresorts.com/en/hotel/studio-suite.html"],
+  ["Marriott's Grand Chateau", "https://www.marriott.com/en-us/hotels/lasvg-marriotts-grand-chateau/overview/"],
+  ["Marriott's Grand Chateau rooms", "https://www.marriott.com/en-us/hotels/lasvg-marriotts-grand-chateau/rooms/"],
+  ["Tahiti Village suites and amenities", "https://tahitivillage.com/"],
+  ["Hilton Vacation Club Cancun Resort", "https://www.hilton.com/en/hotels/lascngv-hilton-vacation-club-cancun-resort-las-vegas/"],
+  ["Hilton Cancun Resort hotel information", "https://www.hilton.com/en/hotels/lascngv-hilton-vacation-club-cancun-resort-las-vegas/hotel-info/"],
+  ["Excalibur rooms", "https://excalibur.mgmresorts.com/en/hotel.html"],
+  ["New York-New York hotel", "https://newyorknewyork.mgmresorts.com/en.html"],
+  ["New York-New York amenities", "https://newyorknewyork.mgmresorts.com/en/amenities.html"],
+  ["Resorts World pools", "https://www.rwlasvegas.com/pools/"],
+  ["Las Vegas Hilton rooms", "https://www.hilton.com/en/hotels/rslvhvh-resorts-world-las-vegas/rooms/las-vegas-hilton/"],
+  ["Red Rock family activities", "https://redrockresort.com/see-and-do/activities/"],
+  ["Red Rock pool", "https://redrockresort.com/see-and-do/pool/"],
+  ["Kids Quest at Red Rock", "https://www.kidsquest.com/location/redrock/"]
+];
+
+function lasVegasFamilyHotelPage() {
+  const hotels = lasVegasFamilyHotels;
+  const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
+            <p class="eyebrow">${esc(hotel.category)}</p>
+            <h3>${esc(hotel.name)}</h3>
+            <dl class="hotel-facts">
+              <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
+              <div><dt>Rough total/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
+            </dl>
+            <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
+            <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+          </article>`).join("\n");
+
+  const rows = hotels.map((hotel) => `              <tr>
+                <td>${esc(hotel.name)}</td>
+                <td>${esc(hotel.category)}</td>
+                <td>${esc(hotel.area)}</td>
+                <td>${esc(hotel.priceRange)}</td>
+                <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
+                <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
+              </tr>`).join("\n");
+
+  const faqs = [
+    ["What is the best family hotel in Las Vegas?", "There is no single best hotel for every family. Mandalay Bay fits a water-resort trip, Vdara and Marriott's Grand Chateau fit different suite needs, Tahiti Village and Cancun Resort fit off-Strip water time, and the other options answer distinct budget, older-kid, luxury, or nature-base needs."],
+    ["Should a family stay on or off the Las Vegas Strip?", "Stay on the Strip when the chosen hotel and nearby activities reduce transfers enough to outweigh casino, crowd, and walking friction. Stay off the Strip when a kitchen, parking, waterslides, a quieter reset pattern, or a Red Rock day matters more than immediate resort access."],
+    ["Do these nightly ranges include resort fees and taxes?", "The ranges use public total-price examples where the source displayed taxes and mandatory fees, then widen them for date changes. Parking, larger rooms, optional purchases, and some source displays can still sit outside the example, so compare the final total for the same dates and room setup."]
+  ];
+  const faqJson = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }))
+  };
+  const itemListJson = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Las Vegas family hotel options",
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; rough total per night ${hotel.priceRange}` }))
+  };
+
+  const body = `    <main>
+      <section class="page-hero hotel-hero">
+        <div class="container">
+          <p class="eyebrow">Las Vegas family hotels</p>
+          <h1>Top Family Hotels in Las Vegas: 10 Options by Trip Style</h1>
+          <p>Compare ten Las Vegas family hotels by room setup, pool value, casino or non-gaming context, approximate total nightly price, location, and themes from sampled online reviews.</p>
+        </div>
+      </section>
+      <section class="container trust-panel" aria-label="Review status">
+        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026</p>
+        <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, and cancellation terms.</p>
+      </section>
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG" alt="The Bellagio fountains and Las Vegas Strip at night." width="1280" height="850" loading="eager" decoding="async">
+          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
+        </figure>
+      </section>
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Short answer</p>
+            <h2>Choose the hotel that removes the biggest family friction</h2>
+            <p>Mandalay Bay and Four Seasons share the strongest water-resort setup at different price and atmosphere levels. Vdara and Marriott's Grand Chateau solve two different central-suite needs. Tahiti Village and Cancun Resort trade centrality for kitchens and water time. Use the other four when themed value, older-kid energy, a modern North Strip resort, or a Summerlin base matters more.</p>
+            <p><a class="text-link" href="./las-vegas-with-kids.html">Compare Las Vegas stay areas and property constraints</a></p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>Hotels covered</dt><dd>10 options</dd></div>
+            <div><dt>Price format</dt><dd>Rough total/night, not a quote</dd></div>
+            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
+            <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
+        <div class="quick-pick-grid hotel-pick-grid">
+          <article class="quick-pick"><span>Pool-centered resort</span><strong>Mandalay Bay or Four Seasons</strong><p>Choose Mandalay for the full resort and attraction energy; compare Four Seasons when a non-gaming luxury base and private pool justify the higher total.</p></article>
+          <article class="quick-pick"><span>Central suite</span><strong>Vdara or Grand Chateau</strong><p>Choose Vdara for a kitchenette and casino-free tower; choose Grand Chateau when separate bedrooms, a full kitchen, or laundry matters more.</p></article>
+          <article class="quick-pick"><span>Off-Strip water time</span><strong>Tahiti Village or Cancun Resort</strong><p>Compare lazy river and suite choices at Tahiti against four waterslides, free parking, and a farther-south base at Cancun Resort.</p></article>
+          <article class="quick-pick"><span>Themed or older-kid Strip</span><strong>Excalibur or New York-New York</strong><p>Use Excalibur for lower-price castle and arcade appeal; compare New York-New York for remodeled rooms, coaster energy, and arena access.</p></article>
+          <article class="quick-pick"><span>North Strip or nature base</span><strong>Resorts World Hilton or Red Rock</strong><p>Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</p></article>
+        </div>
+      </section>
+      <section class="band">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
+          <p class="review-label">Ranges synthesize public total-price examples checked July 22, 2026. Compare the final total for the same dates, occupancy, and room setup.</p>
+          <div class="comparison-scroll">
+            <table class="comparison-table hotel-comparison">
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Rough total/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <tbody>
+${rows}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
+        <div class="detail-card-grid hotel-card-grid">
+${cards}
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading"><p class="eyebrow">Common questions</p><h2>Las Vegas family hotel FAQ</h2></div>
+        <div class="card-grid">
+${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
+        </div>
+      </section>
+      <section class="container page-section source-section">
+        <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. Price ranges use volatile public examples rather than live booking quotes.</p>
+        <ul class="source-list">
+${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Las Vegas photo source and attribution</a> by Chensiyuan; <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a></li>
+          <li>Public Expedia, Booking.com, Hotels.com, Tripadvisor, Trip.com, Hilton, and Marriott price or review pages checked July 22, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
+        </ul>
+      </section>
+      <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
+      <script type="application/ld+json">${JSON.stringify(faqJson)}</script>
+    </main>`;
+
+  return pageShell({
+    title: "Top Family Hotels in Las Vegas: 10 Options by Trip Style",
+    description: "Compare 10 Las Vegas family hotels by trip style, rough total nightly price, room setup, pools, casino or non-gaming context, location, and sampled online-review themes.",
+    canonical: "where-to-stay/las-vegas-family-hotels.html",
+    nav: [["./las-vegas-with-kids.html", "Where to stay"], ["../things-to-do/las-vegas-with-kids.html", "Things to do"], ["../family-itinerary/las-vegas-with-kids.html", "Itinerary"]],
+    body
+  });
+}
+
 function itineraryPage(city) {
   const l = links(city);
   const isSanDiego = city.slug === "san-diego";
@@ -1215,6 +1496,7 @@ for (const page of agePages) {
 }
 
 writeSite("where-to-stay/san-diego-family-hotels.html", sanDiegoFamilyHotelPage());
+writeSite("where-to-stay/las-vegas-family-hotels.html", lasVegasFamilyHotelPage());
 writeSite("about.html", aboutPage());
 
 const oldRedirects = [
@@ -1327,6 +1609,7 @@ ${cities.map((city) => `          <article class="activity-card">
             <h3>Las Vegas with kids</h3>
             <p>Use Las Vegas when pool setup, heat, resort walking, smoke exposure, Red Rock, indoor backups, and short visual stops matter more than a long list of adult-focused attractions.</p>
             <p><a class="text-link" href="./things-to-do/las-vegas-with-kids.html">Plan Las Vegas with kids</a></p>
+            <p><a class="text-link" href="./where-to-stay/las-vegas-family-hotels.html">Compare Las Vegas family hotels</a></p>
           </article>
           <article class="activity-card">
             <h3>Chicago stay and activity pairing</h3>
@@ -1378,6 +1661,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://familytripwise.com/</loc></url>
   <url><loc>https://familytripwise.com/about.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/san-diego-family-hotels.html</loc></url>
+  <url><loc>https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html</loc></url>
 ${cities.flatMap((city) => [
   `  <url><loc>https://familytripwise.com/things-to-do/${city.slug}-with-kids.html</loc></url>`,
   `  <url><loc>https://familytripwise.com/where-to-stay/${city.slug}-with-kids.html</loc></url>`,
@@ -1395,4 +1679,4 @@ Sitemap: https://familytripwise.com/sitemap.xml
 
 upgradePriorityPages(outDir);
 
-console.log("Generated 21 SEO pages plus about, index, redirects, robots, and sitemap.");
+console.log("Generated 22 SEO pages plus about, index, redirects, robots, and sitemap.");

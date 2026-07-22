@@ -4,13 +4,32 @@ Last updated: 2026-07-22
 
 ## Active
 
-No implementation task is active.
+None.
 
 ## Selected
 
 No implementation task is selected.
 
 ## Completed
+
+### IMP-021: Publish The Las Vegas Family-Hotel Comparison
+
+Status: done
+
+Completed: 2026-07-22
+
+Roadmap ID: `FT-PUB-002`
+
+Build one new named-property comparison only after the same transaction creates a durable, reviewable hotel evidence pack. Existing Las Vegas stay and home pages may receive internal links; no other live page is in scope.
+
+Result:
+
+- Created a ten-hotel comparison organized by trip style rather than ordinal rank.
+- Added rough total-night ranges, official room/amenity facts, sampled online-review themes/conflicts, direct maps, a compact comparison, and visible FAQ.
+- Added only the approved dependent links from the existing Las Vegas stay page and home page.
+- Durable evidence: `docs/research/las-vegas-family-hotel-evidence-pack.md`.
+- Independent reviewer Prism returned `PASS` on cycle 2 after both P2 findings were closed; native, focused, responsive, privacy, source, and scope QA passed.
+- State: review-clean and authorized for exact-path commit, deployment, and production verification.
 
 ### IMP-020: Improve The Las Vegas All-Ages Things-To-Do Hub
 

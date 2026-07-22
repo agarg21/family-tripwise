@@ -1079,3 +1079,34 @@ QA evidence:
 Residual finding:
 
 1. `P3` - The optional visible FAQ heading is currently Las Vegas-specific inside the generic activity renderer. If another city enables that option later, derive the heading from page data. This does not affect current output or release eligibility.
+
+### 2026-07-22 - `FT-PUB-002` review cycle 1
+
+**Reviewer:** Prism (`019f8ae7-5f67-71c3-a1ed-8edd6cae20f3`)
+
+**Result: `CHANGES_REQUIRED`**
+
+Findings:
+
+1. `P2` - Cancun Resort's evidence pack said direct USD inventory was not consistently priced while the page published a `$140-$320+` range, and Hilton's no-crib statement conflicted with Expedia's free-crib-on-request listing. Record the current public price basis, preserve the policy contradiction as unresolved, and align the page.
+2. `P2` - The hero loaded the 4.49 MB original image eagerly and omitted the creator, selected license link, and modification disclosure. Use a right-sized derivative and complete attribution.
+
+Everything else passed: methodology, candidate distinctness, hotel/area intent boundary, source and review sampling, claim safety, compact decision design, canonical/indexability/sitemap/schema, internal links, responsive behavior, privacy, exact scope, and observation/release policy. Focused tests, all 47 repository tests, native SEO QA, roadmap JSON, JavaScript syntax, and whitespace checks passed.
+
+### 2026-07-22 - `FT-PUB-002` re-review cycle 2
+
+**Reviewer:** Prism (`019f8ae7-5f67-71c3-a1ed-8edd6cae20f3`)
+
+**Result: `PASS`**
+
+Prior-finding verification:
+
+- Closed the Cancun P2. The evidence pack and page now use a `$120-$320+` planning range grounded by the observed public `$119` total example and explicitly preserve the Hilton/Expedia crib contradiction as unresolved.
+- Closed the image P2. The hero now uses Wikimedia's 1280-pixel derivative with intrinsic dimensions, creator Chensiyuan, a CC BY-SA 4.0 link, and a clear no-editorial-changes/resized-preview statement.
+- No P0-P3 finding remains. The reviewer independently confirmed the current price display, conflicting crib statements, and image-license requirements.
+
+QA evidence:
+
+- `node --test tools/*.test.mjs` passed 47/47; the focused hotel-page file passed 3/3.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings across 24 sitemap URLs and 27 HTML files.
+- Full regeneration, JavaScript syntax, roadmap JSON, source/privacy/exact-scope checks, responsive browser checks at 1280/390/320 pixels, and `git diff --check` passed.
