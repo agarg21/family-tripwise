@@ -8,13 +8,15 @@ No implementation task is active.
 
 ## Selected
 
-No implementation task is selected outside the active review.
+No implementation task is selected.
 
-## Ready
+## Completed
 
 ### IMP-020: Improve The Las Vegas All-Ages Things-To-Do Hub
 
-Status: ready; not selected or started
+Status: done
+
+Completed: 2026-07-22
 
 Roadmap ID: `FT-IMP-006`
 
@@ -50,7 +52,18 @@ Not in this action:
 - a free, toddler, indoor, waterslide, or resort-specific URL;
 - indexing requests, outreach, external-account mutations, or recurring automation.
 
-## Completed
+Result:
+
+- Expanded the existing hub from six to 12 distinct activity choices without creating another URL.
+- Reduced the primary cards from eight fields to four, retained one 12-row comparison, and limited deeper notes to six high-friction choices.
+- Replaced eight universal `best` picks with five trip-shape starting routes and added compact heat/indoor, free/budget, and current-condition checks.
+- Added visible FAQ content aligned with FAQ schema and preserved the teen, stay, and itinerary routes.
+- Added the durable wider-candidate and every-section record at `docs/research/las-vegas-activity-expansion-review.md`.
+
+Review and QA:
+
+- Independent reviewer Popper (`019f8a48-2b5a-7fe1-b6a7-290771ee03b8`) returned `PASS_WITH_P3` on cycle 2 after both P2 findings were closed.
+- All 44 repository tests, focused tests, JavaScript checks, native SEO QA, roadmap JSON, privacy, exact-scope, responsive browser, source-link, and whitespace checks passed. The remaining P3 is only a future-reuse suggestion for the optional FAQ heading.
 
 ### IMP-019: Expand San Diego Activity and Hotel Decision Sets
 

@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed research action `FT-RES-007` is completed and review-clean with `PASS_WITH_P3`. Fresh GSC, a logged-in Semrush US comparison, current SERPs, representative ranking pages, and the current site select Las Vegas as the next city. `FT-IMP-006` is ready but not selected or started: improve the existing all-ages Las Vegas activity hub after wider candidate research and an every-section usefulness pass. The separately justified Las Vegas family-hotel page is provisionally second, followed by teen-page refinement. `FT-EVAL-002` remains a non-blocking later San Diego crawl/query checkpoint after current evidence exists. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Manual user-directed implementation `FT-IMP-006` is completed and review-clean: the existing all-ages Las Vegas activity hub now has a researched 12-choice compact implementation after wider candidate research and an every-section usefulness pass. Scope remained limited to that one live URL plus its generator, focused test, durable research/status, backlog, roadmap, cycle, and reviewer evidence paths. No new URL, hotel page, teen/stay/itinerary edit, indexing request, or external-account mutation was included. Fresh July 22 GSC remains pre-change baseline context only. The next substantive Las Vegas action is a separately selected family-hotel evidence/build transaction; this cycle does not start it. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 The repository roadmap no longer has a calendar protection hold on the San Diego stay page. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, treat that report entry as a stale ledger mismatch and do not let it manufacture a scheduled action.
 
@@ -154,7 +154,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-006` is the promoted next implementation after `FT-RES-007` passes review: improve `https://familytripwise.com/things-to-do/las-vegas-with-kids.html` after wider candidate research and an every-section usefulness pass. It is ready, not selected or started. The separately justified Las Vegas family-hotel page follows later as its own research/implementation action. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-006` is completed and release-authorized for `https://familytripwise.com/things-to-do/las-vegas-with-kids.html`. The separately justified Las Vegas family-hotel evidence/build work is the next substantive city action; it must be selected as its own transaction. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 

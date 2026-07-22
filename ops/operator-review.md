@@ -1045,3 +1045,37 @@ QA evidence:
 Findings:
 
 - None (`P0`-`P3`).
+### 2026-07-22 - `FT-IMP-006` review cycle 1
+
+**Reviewer:** Popper (`019f8a48-2b5a-7fe1-b6a7-290771ee03b8`)
+
+**Result: `CHANGES_REQUIRED`**
+
+Findings:
+
+1. `P2` - The three FAQ questions existed only in `FAQPage` JSON-LD. Render the same questions and answers visibly or remove the schema, then test visible/schema alignment.
+2. `P2` - Red Rock Canyon was labeled `Low cost` but omitted from the `Free / low cost` filter. Align its filter tag and add focused coverage.
+
+Everything else passed: candidate distinctness, evidence classification, every-section audit, persona/intent coverage, claim safety, canonical/indexability/sitemap/schema, generator isolation, responsive behavior, privacy, exact scope, and durable operator state. Focused tests, all 44 repository tests, native SEO QA, roadmap JSON, and whitespace checks passed.
+
+### 2026-07-22 - `FT-IMP-006` re-review cycle 2
+
+**Reviewer:** Popper (`019f8a48-2b5a-7fe1-b6a7-290771ee03b8`)
+
+**Result: `PASS_WITH_P3`**
+
+Prior-finding verification:
+
+- Closed the FAQ P2. The page now renders three compact visible FAQ cards aligned with the three-entry `FAQPage` schema, and focused tests verify each question before the schema block.
+- Closed the budget-filter P2. Red Rock now carries the `budget` tag consistently with its `Low cost` classification, and focused tests verify exact membership.
+- No claim, schema, canonical, sitemap, internal-link, privacy, scope, generator-isolation, layout, or operator-state regression remains.
+
+QA evidence:
+
+- `node --test tools/*.test.mjs` passed 44/44; the Las Vegas focused file passed 4/4.
+- `node tools/seo-qa.mjs` passed with 0 errors and 0 warnings; JavaScript syntax, full regeneration, roadmap JSON, privacy, exact-scope, source-link classification, and `git diff --check` passed.
+- Browser checks at 1280, 390, and 320 pixels found no page overflow or clipped text; the table stayed inside its scroller, filters worked, the image rendered, and no console warning/error appeared.
+
+Residual finding:
+
+1. `P3` - The optional visible FAQ heading is currently Las Vegas-specific inside the generic activity renderer. If another city enables that option later, derive the heading from page data. This does not affect current output or release eligibility.

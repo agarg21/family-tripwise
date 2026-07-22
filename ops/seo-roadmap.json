@@ -721,8 +721,10 @@
       "title": "Improve the Las Vegas all-ages things-to-do hub after full candidate and section review",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "ready",
+      "status": "completed",
       "implementation_ready_on": "2026-07-22",
+      "selected_on": "2026-07-22",
+      "completed_on": "2026-07-22",
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -749,6 +751,9 @@
       "success_signal": "The existing all-ages Las Vegas page becomes a current, compact decision hub for first-time, resort-led, younger-child/heat, teen/mixed-age, and budget/short-stay families after wider candidate research and an every-section usefulness review.",
       "production_invariant": "The Las Vegas all-ages activity URL remains canonical, indexable, and present in the sitemap; the page offers a concise comparison of only distinct, current, supported activity choices, visibly routes to teen, stay, and itinerary pages, includes useful free/budget and heat/indoor decision support, and introduces no unsupported safety, smoke/noise, stroller-route, sensory, pool-access, price, or firm family-fit claim.",
       "gsc_evidence_classification": "Baseline is fresh authenticated page-level GSC collected 2026-07-22 through 2026-07-20: 180 impressions, 0 clicks, average position 56.22. This is directional early discovery, not query-specific performance or causal evidence.",
+      "implementation_summary": "Expanded the existing all-ages hub to 12 distinct compact choices with six filters, one complete comparison, five trip-shape routes, six high-friction detail cards, heat/budget/current-condition checks, and three cluster links after a durable wider-candidate and every-section review.",
+      "review_summary": "Independent reviewer Popper (019f8a48-2b5a-7fe1-b6a7-290771ee03b8) returned PASS_WITH_P3 on cycle 2 after visible FAQ/schema alignment and Red Rock budget-filter membership closed both P2 findings. The residual P3 is a non-blocking future-reuse suggestion for the optional FAQ heading.",
+      "qa_summary": "Full generator regeneration, 44/44 repository tests, 4/4 focused tests, JavaScript syntax, native SEO QA with 0 errors and 0 warnings, roadmap JSON, privacy, exact-scope, source-link classification, responsive checks at 1280/390/320px, and git diff --check passed.",
       "notes": "Promoted by FT-RES-007. Improve one existing page first; no list-length quota and no new hotel, free, toddler, indoor, or other URL in this action. Selection and implementation remain separate transactions."
     }
   ]

@@ -161,6 +161,28 @@ const cities = [
     volume: { activities: "3,600", stay: "best family hotels: 880", itinerary: "10" },
     metaName: "Las Vegas",
     intro: "Make Las Vegas work for kids by choosing the right hotel base, limiting Strip walking, and mixing spectacle with pools, nature, and downtime.",
+    activityH1: "Things to Do in Las Vegas With Kids: 12 Picks by Trip Style",
+    activityTitle: "Things to Do in Las Vegas With Kids: 12 Picks by Trip Style",
+    activityDescription: "Compare 12 things to do in Las Vegas with kids by age, heat and indoor fit, cost, time, location, and trip style, with current official-source checks.",
+    activityIntro: "Choose one main family anchor, protect a pool or hotel reset, and use the filters to compare 12 distinct options without turning the Strip into a walking marathon.",
+    activitiesLastUpdated: "July 22, 2026",
+    activitySourceNote: "Official venue links are below. Age fit, duration, cost, stroller, weather, nap, booking, and value labels are Family Tripwise editorial estimates; recheck current attraction rules, hours, prices, and conditions before going.",
+    activitySourceIntro: "Use these official pages to verify current hours, tickets, age or height rules, reservations, weather procedures, accessibility, and attraction policies before going.",
+    compactActivityCards: true,
+    activityFilters: [
+      ["all", "All"],
+      ["toddler", "Toddler"],
+      ["elementary", "Elementary"],
+      ["teen", "Teen"],
+      ["indoor", "Indoor / heat"],
+      ["budget", "Free / low cost"]
+    ],
+    activitySnapshot: [
+      ["First Vegas trip", "Bellagio plus one age-fit anchor"],
+      ["Younger kids / heat", "DISCOVERY, Shark Reef, or Adventuredome"],
+      ["Older kids", "AREA15, Red Rock, a show, or Neon Museum"],
+      ["Next planning step", "Choose the stay base and route", "../where-to-stay/las-vegas-with-kids.html"]
+    ],
     photo: {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG",
       alt: "The Bellagio fountains and Las Vegas Strip at night.",
@@ -175,6 +197,22 @@ const cities = [
       ["Vdara Hotel & Spa", "https://vdara.mgmresorts.com/en.html"],
       ["Hilton Grand Vacations Club Paradise Las Vegas", "https://www.hilton.com/en/hotels/lasvsgv-hilton-grand-vacations-club-paradise-las-vegas/"]
     ],
+    activitySources: [
+      ["Visit Las Vegas family guide", "https://www.visitlasvegas.com/experience/post/things-to-do-in-las-vegas-with-kids/"],
+      ["Mandalay Bay Beach", "https://mandalaybay.mgmresorts.com/en/amenities/beach.html"],
+      ["Fountains of Bellagio", "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"],
+      ["Bellagio Conservatory", "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"],
+      ["DISCOVERY Children's Museum FAQ", "https://discoverykidslv.org/about/faq/"],
+      ["Shark Reef Aquarium", "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"],
+      ["Adventuredome", "https://www.circuscircus.com/attractions/adventuredome/"],
+      ["Springs Preserve", "https://www.springspreserve.org/"],
+      ["High Roller terms", "https://www.caesars.com/content/dam/lnq/Property/High-Roller/lnq-Property-High-Roller-T-and-C.pdf"],
+      ["AREA15", "https://www.area15.com/"],
+      ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
+      ["Pinball Hall of Fame", "https://travelnevada.com/museums/pinball-hall-of-fame/"],
+      ["Tournament of Kings", "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"],
+      ["Neon Museum FAQ", "https://neonmuseum.org/faqs/"]
+    ],
     areas: [
       ["Center Strip", "First-timers, shows, short access to major sights", "Crowds, smoke, long casino walks", "Good"],
       ["South Strip", "Mandalay Bay pool, value, airport access", "Farther from some attractions", "Great"],
@@ -182,6 +220,20 @@ const cities = [
       ["Downtown / Fremont", "Budget and neon spectacle", "Noise and adult atmosphere", "Limited"]
     ],
     activities: [
+      ["Resort pool / reset block", "baby toddler preschool elementary tween teen stroller", "Half day", "Varies", "Property-specific", "No", "High", "Your hotel", "Treat the pool as a trip block only after checking access, season, shade, closures, and exact property rules."],
+      ["Bellagio Conservatory and fountains", "toddler preschool elementary tween teen stroller budget", "60-90 min", "Free", "Route-specific", "Partial", "Medium", "Center Strip", "A short first-trip visual stop; allow for crowds, display changes, and long resort approaches."],
+      ["DISCOVERY Children's Museum", "toddler preschool elementary stroller indoor rain", "2-3 hrs", "Paid", "Check venue", "Yes", "High", "Downtown", "A child-centered indoor anchor for younger families; check the current calendar and admission."],
+      ["Shark Reef Aquarium", "toddler preschool elementary tween teen stroller indoor rain", "90 min-2 hrs", "Paid", "Check venue", "Yes", "Medium", "South Strip", "A contained indoor animal stop with timed entry; plan the route through Mandalay Bay."],
+      ["Adventuredome", "preschool elementary tween teen indoor rain", "2-4 hrs", "Paid", "Mixed", "Yes", "Low", "North Strip", "An indoor rides option where height splits, noise, closures, and stimulation shape the visit."],
+      ["Springs Preserve", "toddler preschool elementary tween stroller indoor", "2-4 hrs", "Paid", "Mixed", "Partial", "Medium", "West of Downtown", "Combine museums, gardens, and play space, then adjust the outdoor portion for heat and current programs."],
+      ["High Roller observation wheel", "elementary tween teen stroller indoor rain", "45-60 min", "Paid", "Check policy", "Yes", "Medium", "LINQ", "A contained skyline ride; check stroller handling and use restrooms before boarding."],
+      ["AREA15 / selected exhibit", "tween teen indoor rain", "2-3 hrs", "Paid", "Exhibit-specific", "Yes", "Low", "Off Strip", "Choose an exact experience by age, sensory fit, duration, and total ticket cost before arriving."],
+      ["Red Rock Canyon Scenic Drive", "elementary tween teen budget", "Half day", "Low cost", "Limited", "No", "Low", "West of Strip", "A desert half-day that requires a heat, weather, service, and seasonal timed-entry check."],
+      ["Pinball Hall of Fame", "elementary tween teen indoor rain budget", "60-120 min", "Pay per play", "Mixed", "Yes", "Medium", "South Strip", "A flexible, easy-to-shorten arcade stop; machine availability and experience quality can vary."],
+      ["Tournament of Kings", "preschool elementary tween teen indoor rain", "Evening", "Paid", "Venue-specific", "Yes", "Low", "South Strip", "An all-ages dinner show with horses and strong effects; check sensory, respiratory, meal, and timing fit."],
+      ["Neon Museum", "elementary tween teen", "60-90 min", "Paid", "Limited", "No", "Low", "Downtown", "An outdoor Vegas-history stop whose timed visit can change with heat, wind, air quality, or storms."]
+    ],
+    agePageActivities: [
       ["Hotel pool day", "baby toddler preschool elementary tween teen stroller", "half day", "$$", "Good", "No", "High", "Hotel area", "The pool is often the actual family anchor. Check hours, shade, and height rules before booking."],
       ["Bellagio Conservatory and fountains", "toddler preschool elementary tween teen stroller", "60-90 min", "$", "Good", "Partial", "Medium", "Center Strip", "A flexible short stop, but plan for long indoor walking through resorts."],
       ["Discovery Children's Museum", "toddler preschool elementary rain stroller", "2-3 hrs", "$$", "Good", "Yes", "High", "Downtown", "Best younger-kid indoor backup away from casino floors."],
@@ -365,31 +417,44 @@ ${updatedBlock(lastUpdated, sourceNote)}${cityPhoto(city)}
 }
 
 function activityCards(city, filterAge) {
+  const activitySource = filterAge && city.agePageActivities ? city.agePageActivities : city.activities;
   const activities = filterAge
-    ? city.activities.filter((item) => item[1].includes(filterAge === "toddlers" ? "toddler" : "teen"))
-    : city.activities;
+    ? activitySource.filter((item) => item[1].includes(filterAge === "toddlers" ? "toddler" : "teen"))
+    : activitySource;
+  const ageTags = new Set(["baby", "toddler", "preschool", "elementary", "tween", "teen"]);
+  const compact = city.compactActivityCards && !filterAge;
   return activities.map(([name, tags, time, cost, stroller, rain, nap, area, summary]) => `          <article class="activity-card" data-tags="${esc(tags)}">
             <h3>${esc(name)}</h3>
             <p>${esc(summary)}</p>
             <dl>
-              <div><dt>Age fit</dt><dd>${esc(tags.split(" ").join(", "))}</dd></div>
+              <div><dt>Age fit</dt><dd>${esc(tags.split(" ").filter((tag) => !compact || ageTags.has(tag)).join(", "))}</dd></div>
               <div><dt>Time</dt><dd>${esc(time)}</dd></div>
               <div><dt>Cost</dt><dd>${esc(cost)}</dd></div>
               <div><dt>Area</dt><dd>${esc(area)}</dd></div>
-              <div><dt>Stroller</dt><dd>${esc(stroller)}</dd></div>
+${compact ? "" : `              <div><dt>Stroller</dt><dd>${esc(stroller)}</dd></div>
               <div><dt>Rainy day</dt><dd>${esc(rain)}</dd></div>
               <div><dt>Nap-friendly</dt><dd>${esc(nap)}</dd></div>
-              <div><dt>Booking</dt><dd>Check ahead</dd></div>
+              <div><dt>Booking</dt><dd>Check ahead</dd></div>`}
             </dl>
           </article>`).join("\n");
 }
 
 function activitiesPage(city) {
   const l = links(city);
-  const lastUpdated = city.slug === "san-diego" ? "July 21, 2026" : undefined;
-  const sourceNote = city.slug === "san-diego"
+  const lastUpdated = city.activitiesLastUpdated || (city.slug === "san-diego" ? "July 21, 2026" : undefined);
+  const sourceNote = city.activitySourceNote || (city.slug === "san-diego"
     ? "Official venue links are below. Age fit, duration, cost tier, stroller, weather, nap, and booking labels are Family Tripwise editorial estimates; check current conditions before going."
-    : undefined;
+    : undefined);
+  const activityFilters = city.activityFilters || [
+    ["all", "All"], ["baby", "Baby"], ["toddler", "Toddler"], ["preschool", "Preschool"],
+    ["elementary", "Elementary"], ["tween", "Tween"], ["teen", "Teen"], ["rain", "Rain"]
+  ];
+  const activitySnapshot = city.activitySnapshot || [
+    ["Best toddler ideas", city.toddlerFocus.slice(0, 2).join(", ")],
+    ["Best teen ideas", city.teenFocus.slice(0, 2).join(", ")],
+    ["Stay planning", "Best areas to stay with kids", l.stay],
+    ["Route planning", "Turn these into an itinerary", l.itinerary]
+  ];
   const cityAgePages = agePages.filter((page) => page.slug === city.slug);
   const ageLinks = cityAgePages.length
     ? `      <section class="band">
@@ -403,7 +468,7 @@ ${cityAgePages.map((page) => `          <article class="activity-card">
       </section>
 `
     : "";
-  const body = `${hero(city, `Things to do in ${city.name} with kids`, city.intro, lastUpdated, sourceNote)}
+  const body = `${hero(city, city.activityH1 || `Things to do in ${city.name} with kids`, city.activityIntro || city.intro, lastUpdated, sourceNote)}
       <section class="band intro-band">
         <div class="container answer-grid">
           <div>
@@ -412,10 +477,7 @@ ${cityAgePages.map((page) => `          <article class="activity-card">
             <p>These lists are designed for realistic family pacing: one main outing, one flexible backup, and enough space for meals, transit, hotel breaks, and kid moods.</p>
           </div>
           <dl class="snapshot">
-            <div><dt>Best toddler ideas</dt><dd>${esc(city.toddlerFocus.slice(0, 2).join(", "))}</dd></div>
-            <div><dt>Best teen ideas</dt><dd>${esc(city.teenFocus.slice(0, 2).join(", "))}</dd></div>
-            <div><dt>Stay planning</dt><dd><a href="${l.stay}">Best areas to stay with kids</a></dd></div>
-            <div><dt>Route planning</dt><dd><a href="${l.itinerary}">Turn these into an itinerary</a></dd></div>
+${activitySnapshot.map(([label, value, href]) => `            <div><dt>${esc(label)}</dt><dd>${href ? `<a href="${esc(href)}">${esc(value)}</a>` : esc(value)}</dd></div>`).join("\n")}
           </dl>
         </div>
       </section>
@@ -425,14 +487,7 @@ ${cityAgePages.map((page) => `          <article class="activity-card">
           <h2>Kid-friendly activities by age, pace, and weather</h2>
         </div>
         <div class="filter-bar" aria-label="Activity filters">
-          <button class="chip active" type="button" data-filter="all">All</button>
-          <button class="chip" type="button" data-filter="baby">Baby</button>
-          <button class="chip" type="button" data-filter="toddler">Toddler</button>
-          <button class="chip" type="button" data-filter="preschool">Preschool</button>
-          <button class="chip" type="button" data-filter="elementary">Elementary</button>
-          <button class="chip" type="button" data-filter="tween">Tween</button>
-          <button class="chip" type="button" data-filter="teen">Teen</button>
-          <button class="chip" type="button" data-filter="rain">Rain</button>
+${activityFilters.map(([filter, label], index) => `          <button class="chip${index === 0 ? " active" : ""}" type="button" data-filter="${esc(filter)}">${esc(label)}</button>`).join("\n")}
         </div>
         <div class="activity-grid">
 ${activityCards(city)}
@@ -440,11 +495,11 @@ ${activityCards(city)}
         <script type="application/json" id="map-ready-activities">${JSON.stringify(city.activities.map(([name, tags, time, cost, stroller, rain, nap, area, summary]) => ({ name, tags: tags.split(" "), time, cost, stroller, rain, nap, area, summary })))}</script>
       </section>
 ${ageLinks}
-${sourceList(city, city.activitySources || city.sources)}
+${sourceList(city, city.activitySources || city.sources, city.activitySourceIntro)}
     </main>`;
   return pageShell({
-    title: `Things to Do in ${city.name} With Kids by Age`,
-    description: `Plan things to do in ${city.name} with kids using age filters, stroller notes, rainy-day backups, nap-friendly pacing, and area context.`,
+    title: city.activityTitle || `Things to Do in ${city.name} With Kids by Age`,
+    description: city.activityDescription || `Plan things to do in ${city.name} with kids using age filters, stroller notes, rainy-day backups, nap-friendly pacing, and area context.`,
     canonical: `things-to-do/${city.slug}-with-kids.html`,
     nav: [[l.stay, "Where to stay"], [l.itinerary, "Itinerary"], ["#top", city.metaName]],
     body,

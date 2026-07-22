@@ -218,52 +218,74 @@ const activityPages = {
     ]
   },
   "things-to-do/las-vegas-with-kids.html": {
-    title: "Things to Do in Las Vegas With Kids: Pools, Shows, Heat and Strip Logistics",
+    title: "Things to Do in Las Vegas With Kids: 12 Picks by Trip Style",
     description:
-      "Plan Las Vegas with kids using family-friendly activity picks, heat-aware timing, Strip walking warnings, stroller notes, rainy-day backups, and hotel-pool downtime.",
+      "Compare 12 things to do in Las Vegas with kids by age, heat and indoor fit, cost, time, location, and trip style, with current official-source checks.",
     city: "Las Vegas",
+    compactDetails: true,
+    comparisonNote: "Age fit, time, cost, stroller, rain, nap, booking, and value fields are Family Tripwise editorial estimates, not venue guarantees. Recheck the linked official source for the exact date, child, ticket, and experience.",
+    quickEyebrow: "Choose a trip shape",
+    quickTitle: "Five useful ways to start",
+    quickNote: "These are starting routes, not universal rankings. Choose the one that matches the family's age mix, heat tolerance, budget, and interest.",
     quick: [
-      ["Best overall", "Hotel pool plus one spectacle", "Vegas works best when the hotel is part of the plan."],
-      ["Best for toddlers", "Discovery Children's Museum", "Indoor, kid-centered, and away from casino floors."],
-      ["Best for teens", "Area15 or Red Rock Canyon", "More age-appropriate payoff than repeated resort wandering."],
-      ["Best rainy-day option", "Discovery Children's Museum or Area15", "Pick by age and sensory tolerance."],
-      ["Best free/low-cost", "Bellagio Conservatory and fountains", "Short, memorable, and easy to pair with a meal."],
-      ["Best stroller-friendly", "Hotel pool/resort base", "The Strip itself is not as stroller-easy as it looks on a map."],
-      ["Best half-day anchor", "Red Rock Canyon for older kids", "A strong break from casino/resort environments."],
-      ["Best if you only have one day", "Pool morning, Bellagio stop, High Roller or age-appropriate show", "Keeps the day contained."]
+      ["First Vegas trip", "Bellagio plus one paid anchor", "Use the Conservatory and fountains as the short classic stop, then choose one museum, aquarium, ride, show, or skyline experience."],
+      ["Resort-led day", "Pool or hotel reset plus one evening choice", "Verify the exact pool access and rules, then protect the room as a real midday break."],
+      ["Younger kids or high heat", "DISCOVERY, Shark Reef, or Adventuredome", "Choose by child interest and height or sensory fit; do not stack all three."],
+      ["Tweens and teens", "AREA15, Red Rock, Neon Museum, or Tournament of Kings", "Let older kids choose the anchor, then verify weather, show effects, or exact exhibit rules."],
+      ["Free or lower cost", "Bellagio plus Pinball Hall of Fame", "The Bellagio stop is free; Pinball is pay per play, but transport, parking, meals, and game spend still count."]
     ],
     rows: [
-      ["Hotel pool day", "0-17", "Half day", "$$", "Hotel", "Easy", "No", "High", "Check rules", "Most realistic family anchor", "Early dinner or short spectacle"],
-      ["Bellagio Conservatory/fountains", "2+", "60-90 min", "$", "Center Strip", "Moderate", "Partial", "Medium", "No", "Classic low-cost Vegas moment", "Nearby meal"],
-      ["Discovery Children's Museum", "1-9", "2-3 hrs", "$$", "Downtown", "Easy", "Yes", "High", "Check tickets", "Best younger-kid indoor stop", "Downtown Container Park if appropriate"],
-      ["High Roller", "6+", "45-60 min", "$$", "LINQ", "Easy", "Yes", "Medium", "Book ahead useful", "Contained skyline activity", "LINQ Promenade food"],
-      ["Red Rock Canyon", "8+", "Half day", "$$", "West of Strip", "Hard", "No", "Low", "Timed entry may apply", "Nature break for older kids", "Low-key hotel evening"],
-      ["Area15", "10+", "2-3 hrs", "$$$", "Off Strip", "Mixed", "Yes", "Low", "Book exhibits", "Teen-friendly immersive stop", "Food hall/reset nearby"]
+      ["Resort pool / reset block", "0-17", "Half day", "Varies", "Your hotel", "Property-specific", "No", "High", "Check exact access", "Builds recovery into the trip", "One short evening anchor"],
+      ["Bellagio Conservatory and fountains", "2+", "60-90 min", "Free", "Center Strip", "Route-specific", "Partial", "Medium", "Check schedules/display", "Short classic Vegas visual", "Nearby meal"],
+      ["DISCOVERY Children's Museum", "1-9", "2-3 hrs", "Paid", "Downtown", "Check venue", "Yes", "High", "Check calendar", "Child-centered indoor anchor", "Hotel reset"],
+      ["Shark Reef Aquarium", "2+", "90 min-2 hrs", "Paid", "South Strip", "Check venue", "Yes", "Medium", "Timed entry", "Contained indoor animal stop", "Pool or early meal"],
+      ["Adventuredome", "3+ by ride", "2-4 hrs", "Paid", "North Strip", "Mixed", "Yes", "Low", "Check heights/rides", "Indoor rides with flexible duration", "Simple meal"],
+      ["Springs Preserve", "2-12", "2-4 hrs", "Paid", "West of Downtown", "Mixed", "Partial", "Medium", "Check programs", "Museums, gardens, and play space", "Early dinner"],
+      ["High Roller observation wheel", "6+", "45-60 min", "Paid", "LINQ", "Check policy", "Yes", "Medium", "Check ticket/stroller", "Contained skyline ride", "LINQ meal"],
+      ["AREA15 / selected exhibit", "10+ varies", "2-3 hrs", "Paid", "Off Strip", "Exhibit-specific", "Yes", "Low", "Book exact exhibit", "Immersive older-kid option", "Food/reset nearby"],
+      ["Red Rock Canyon Scenic Drive", "6+ varies", "Half day", "Low cost", "West of Strip", "Limited", "No", "Low", "Seasonal timed entry", "Desert contrast to the Strip", "Quiet hotel evening"],
+      ["Pinball Hall of Fame", "6+", "60-120 min", "Pay per play", "South Strip", "Mixed", "Yes", "Medium", "No fixed ticket", "Flexible, easy-to-shorten play", "South Strip meal"],
+      ["Tournament of Kings", "All ages; fit varies", "Evening", "Paid", "South Strip", "Venue-specific", "Yes", "Low", "Book/check effects", "Concrete dinner-show choice", "Quiet next morning"],
+      ["Neon Museum", "7+ varies", "60-90 min", "Paid", "Downtown", "Limited", "No", "Low", "Timed ticket/weather", "Vegas-history evening option", "Downtown meal"]
     ],
+    detailsEyebrow: "High-friction choices",
+    detailsTitle: "Six choices that need an extra check",
+    detailsNote: "The comparison table covers all 12. These six get extra space because property rules, height splits, sensory effects, reservations, or weather can materially change the plan.",
     details: [
-      ["Hotel pool day", "Families like that it makes Vegas feel like a vacation instead of a logistics puzzle.", "Best for all ages if the hotel pool fits your child.", "Pool rules, shade, crowding, and resort fees.", "Choose the hotel partly by pool setup, not just room price.", "Your room is the reset; that is the point.", "Verify hours, height rules, seasonal closures, and whether tubes/cabanas cost extra.", "Pair with one short evening activity."],
-      ["Bellagio Conservatory and fountains", "Families like the visual payoff with low commitment.", "Best for toddlers through teens.", "Long resort walks and crowds.", "Treat it as a short stop, not a full outing.", "Use nearby hotel food/restrooms, but expect walking.", "No ticket needed.", "Pair with an early dinner or High Roller."],
-      ["Discovery Children's Museum", "Families like a true kid-centered indoor break.", "Best for toddlers through early elementary kids.", "It is not the best teen stop.", "Use it when younger kids need to reset away from the Strip.", "Downtown food/restroom planning should be checked before arrival.", "Check hours and ticketing.", "Pair with a hotel pool nap/resort reset."],
-      ["High Roller", "Families like that it is contained and scenic.", "Best for school-age kids and teens.", "May feel expensive for a short ride.", "Go when everyone can handle a line and a slow ride.", "Use LINQ Promenade before boarding.", "Advance tickets can help.", "Pair with food nearby rather than another long walk."],
-      ["Red Rock Canyon", "Families like the complete change of scenery.", "Best for older kids and teens.", "Drive time, heat, trail difficulty, and younger siblings.", "Make it the main half-day plan and carry water.", "Bathroom/food options are limited compared with the Strip; plan ahead.", "Check timed entry and weather.", "Pair with a low-key hotel evening."],
-      ["Area15", "Families with teens like the immersive feel.", "Best for tweens and teens.", "Sensory overload, cost, and age appropriateness.", "Choose specific exhibits rather than wandering into everything.", "Food is nearby, but verify suitability by age.", "Book the exact exhibit you want.", "Pair with pool downtime, not another loud evening."]
+      ["Resort pool / reset block", "A hotel-based block can reduce transitions and protect recovery time.", "It only works when the exact property's access, season, rules, shade, and closures fit the stay.", "Assuming a room booking guarantees the pool experience shown in marketing.", "Check the booked property's current pool page and guest eligibility before paying.", "Use the room for food, bathroom, and decompression instead of adding another resort crossing.", "Recheck hours, closures, depth or height rules, and extra charges near the visit.", "Pair with one short evening choice."],
+      ["Adventuredome", "It offers rides without committing to outdoor heat.", "Fit changes by the children's heights, ride interests, and response to noise and stimulation.", "Height splits, ride closures, cost, and a loud indoor environment can fragment the group.", "Check the current ride list and height rules before presenting it as a shared family stop.", "Plan a clear meeting and meal break inside or immediately after the visit.", "Recheck hours, ride availability, pass terms, and restrictions.", "Pair with a simple meal and hotel reset."],
+      ["AREA15 / selected exhibit", "The district can work when one exact immersive experience matches the older child's interests.", "Each exhibit has its own age, duration, sensory, and ticket rules.", "Buying several experiences without checking fit can make the stop expensive and overstimulating.", "Choose one primary exhibit, price the total, and preserve an exit plan.", "Decide whether onsite food helps or whether the family needs a quieter reset elsewhere.", "Verify the exact exhibit's current age guidance, hours, entry, and accessibility.", "Pair with pool or room downtime."],
+      ["Red Rock Canyon Scenic Drive", "It gives the trip a distinct desert half-day away from resort corridors.", "Fit depends on heat, weather, mobility, trail choice, and access to a car.", "Treating a scenic drive and a hike as the same plan, or underestimating heat and limited services.", "Choose the drive or one suitable stop as the anchor and carry the needed water and food.", "Use restrooms before leaving the city and check current visitor facilities.", "A Scenic Drive timed entry is required Oct. 1-May 31 during published daytime hours; recheck BLM conditions.", "Pair with a quiet hotel evening."],
+      ["Tournament of Kings", "It packages a recognizable Vegas show and meal into one fixed block.", "The horses, dust, pyrotechnics, strobe, smoke, fog, meal, and timing need family-specific review.", "Assuming all-ages admission means the effects or meal work for every child.", "Review current warnings, seating, meal details, and runtime before buying.", "Plan dietary questions and a calm transition after the show.", "Verify the exact performance, ticket terms, effects notice, and child policy.", "Pair with an easy morning or pool day."],
+      ["Neon Museum", "It offers a history-led visual stop that feels different from a resort attraction.", "The collection is outdoors and the payoff depends on interest, weather, and timed-entry fit.", "Heat, wind, poor air, lightning, or a late visit can change the experience or schedule.", "Choose the visit time around current conditions and keep the rest of Downtown simple.", "Plan food, water, and transport before the timed entry.", "Recheck the museum FAQ, weather procedures, hours, and ticket terms.", "Pair with one nearby meal."]
     ],
+    plansEyebrow: "Route shapes",
+    plansTitle: "Build a Las Vegas day without stacking the Strip",
     plans: {
-      "1-day plan": "Pool morning, Bellagio Conservatory/fountains, early dinner, then High Roller or an age-appropriate show.",
-      "2-day plan": "Day 1: Pool and classic Strip visuals. Day 2: Discovery Children's Museum for younger kids or Red Rock/Area15 for older kids.",
-      "Rainy-day plan": "Use Discovery Children's Museum or Area15 as the anchor, keep resort walking short, and avoid stacking indoor casino corridors.",
-      "Toddler-friendly plan": "Pool, nap, Discovery Children's Museum, and one short fountain stop.",
-      "Teen-friendly plan": "Red Rock Canyon or Area15, interesting food, and one skyline/spectacle activity."
+      "One-day first trip": "Use a verified pool or slow morning, Bellagio as the short classic stop, an early meal, then High Roller or Tournament of Kings, not both.",
+      "Two-day mixed-age trip": "Day 1: resort reset, Bellagio, and one evening choice. Day 2: DISCOVERY or Shark Reef for younger kids, or Red Rock/AREA15 for older kids.",
+      "Younger kids in heat": "Choose DISCOVERY, Shark Reef, or height-appropriate Adventuredome rides as one indoor anchor, then return to the room or verified pool.",
+      "Free or flexible day": "Use Bellagio plus a meal and optional pay-per-play time at Pinball Hall of Fame; count transport, parking, food, and game spend in the real cost.",
+      "Older-kid contrast day": "Choose Red Rock for nature or AREA15 for an indoor immersive stop, then use Neon Museum or a show only if weather, energy, and budget still fit."
     },
+    clusterTitle: "Move from the shortlist to the stay base and route",
     clusterLinks: [
       ["Where to stay in Las Vegas", "Choose the hotel base before finalizing activities. Pool setup, smoke exposure, resort walking, fees, and room location can change the whole family plan.", "../where-to-stay/las-vegas-with-kids.html", "Open where to stay in Las Vegas with kids"],
       ["Las Vegas family itinerary", "Turn pool time, one classic visual stop, and age-specific anchors into a realistic route instead of a Strip marathon.", "../family-itinerary/las-vegas-with-kids.html", "Open the Las Vegas family itinerary"],
-      ["Las Vegas with teens", "Use the teen guide when Red Rock, immersive exhibits, shows, food, and later evenings matter more than toddler pacing.", "../things-to-do/las-vegas-with-teens.html", "Open Las Vegas with teens"],
-      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
+      ["Las Vegas with teens", "Use the teen guide when Red Rock, immersive exhibits, shows, food, and later evenings matter more than toddler pacing.", "../things-to-do/las-vegas-with-teens.html", "Open Las Vegas with teens"]
     ],
+    officialChecksEyebrow: "Before locking the day",
+    officialChecksTitle: "Three checks that change the shortlist",
+    officialChecks: [
+      ["Heat and indoor backup", "Indoor does not mean low-stimulation or low-walking. Check the exact venue route, current hours, ride or exhibit rules, and how the family will return to the hotel.", [["https://www.visitlasvegas.com/experience/post/things-to-do-in-las-vegas-with-kids/", "Visit Las Vegas family guide"], ["https://discoverykidslv.org/about/faq/", "DISCOVERY FAQ"]]],
+      ["Free and lower-cost plan", "Bellagio is the clearest free visual stop and Pinball is pay per play, but meals, parking, transport, and game spend determine the real day cost.", [["https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html", "Bellagio fountains"], ["https://travelnevada.com/museums/pinball-hall-of-fame/", "Pinball Hall of Fame"]]],
+      ["Reservation, height, sensory, and weather", "Recheck the exact attraction near the visit. Red Rock reservations, Adventuredome ride rules, AREA15 exhibit terms, Tournament effects, and Neon Museum weather procedures are not interchangeable.", [["https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon", "Red Rock Canyon NCA"], ["https://www.circuscircus.com/attractions/adventuredome/", "Adventuredome"], ["https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html", "Tournament of Kings"], ["https://neonmuseum.org/faqs/", "Neon Museum FAQ"]]]
+    ],
+    visibleFaqs: true,
     faqs: [
-      ["Is Las Vegas good for kids?", "It can be, if the hotel, pool, heat, walking distance, and evening environment are planned carefully."],
-      ["What should families avoid in Las Vegas?", "Avoid assuming Strip distances are easy with kids, strollers, heat, or tired legs."]
+      ["Is Las Vegas good for kids?", "It can work when the family chooses an age-fit anchor, verifies the hotel and pool setup, limits resort-to-resort walking, and protects time for heat, meals, and recovery."],
+      ["What can families do for free in Las Vegas?", "The Bellagio Conservatory and fountains are the clearest short free choice in this set. A low-ticket day can add Pinball Hall of Fame, but transport, parking, meals, and game spend still matter."],
+      ["What is a useful indoor or heat backup in Las Vegas?", "For younger kids, compare DISCOVERY Children's Museum, Shark Reef, and height-appropriate Adventuredome rides. For older kids, compare an exact AREA15 exhibit or a show after checking sensory fit and current rules."]
     ]
   },
   "things-to-do/san-diego-with-toddlers.html": {
@@ -1152,14 +1174,20 @@ ${checks.map(([title, body, links]) => `          <article class="activity-card"
         </div>`;
 }
 
+function renderFaqs(faqs) {
+  return `        <div class="card-grid">
+${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
+        </div>`;
+}
+
 function renderActivityUpgrade(page) {
   const clusterSection = page.clusterLinks?.length
     ? `
       <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Plan the cluster</p>
-            <h2>Connect activities to stay area, route, and methodology</h2>
+            <p class="eyebrow">${esc(page.clusterEyebrow || "Plan the cluster")}</p>
+            <h2>${esc(page.clusterTitle || "Connect activities to stay area, route, and methodology")}</h2>
           </div>
 ${renderClusterCards(page.clusterLinks)}
         </div>
@@ -1170,10 +1198,23 @@ ${renderClusterCards(page.clusterLinks)}
     ? `
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
-          <p class="eyebrow">Rain and budget checks</p>
-          <h2>Verify current offers and backup plans before building around them</h2>
+          <p class="eyebrow">${esc(page.officialChecksEyebrow || "Rain and budget checks")}</p>
+          <h2>${esc(page.officialChecksTitle || "Verify current offers and backup plans before building around them")}</h2>
         </div>
 ${renderOfficialChecks(page.officialChecks)}
+      </section>
+`
+    : "";
+  const faqSection = page.visibleFaqs && page.faqs?.length
+    ? `
+      <section class="band rank-ready-section" aria-labelledby="activity-faq-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Common planning questions</p>
+            <h2 id="activity-faq-title">Las Vegas with kids FAQ</h2>
+          </div>
+${renderFaqs(page.faqs)}
+        </div>
       </section>
 `
     : "";
@@ -1223,10 +1264,10 @@ ${renderPersonaRoutes(page.personaRoutes)}
 ` : ""}      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Quick picks</p>
-            <h2>Best choices by family situation</h2>
+            <p class="eyebrow">${esc(page.quickEyebrow || "Quick picks")}</p>
+            <h2>${esc(page.quickTitle || "Best choices by family situation")}</h2>
           </div>
-${renderQuickPicks(page.quick)}
+${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>\n` : ""}${renderQuickPicks(page.quick)}
         </div>
       </section>
 
@@ -1250,12 +1291,12 @@ ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}
 
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
-          <p class="eyebrow">Mini itineraries</p>
-          <h2>Turn the list into a realistic family day</h2>
+          <p class="eyebrow">${esc(page.plansEyebrow || "Mini itineraries")}</p>
+          <h2>${esc(page.plansTitle || "Turn the list into a realistic family day")}</h2>
         </div>
 ${renderPlans(page.plans)}
       </section>${clusterSection ? `${clusterSection}` : ""}
-${officialCheckSection}${markerEnd}
+${officialCheckSection}${faqSection}${markerEnd}
 `;
 }
 

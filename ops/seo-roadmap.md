@@ -48,7 +48,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Ready after evidence | Non-blocking; run only after both revised URLs have current crawl and protected query evidence. |
 | 14 | `FT-IMP-005` expand San Diego activity and hotel decision sets | Content/product quality | Completed and released | Commit `31bba30652d76c3d1664193532a9c508a83c6f32`; Pages run `29876597948` and production verification passed. |
 | 15 | `FT-RES-007` select the next pilot city and create the incremental city playbook | Content/product quality | Completed | Las Vegas wins the fresh GSC, keyword, SERP, commercial-intent, and existing-page comparison; research promotes one existing-page improvement. |
-| 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Ready | Research a wider candidate pool, audit every section, and improve one existing URL before creating the separately justified hotel page. |
+| 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Completed; release authorized | Twelve distinct choices, compact scan/detail layers, and heat/budget support passed QA and independent review on one existing URL. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -64,12 +64,14 @@ Ready does not mean all items should ship immediately. The operator selects one 
 
 ### FT-IMP-006 - Improve the Las Vegas all-ages things-to-do hub
 
-- State: ready; not selected or started in this research transaction.
+- State: completed and review-clean on 2026-07-22; exact-path release authorized.
 - Source handoff: `FT-RES-007` and `docs/research/next-city-prioritization-las-vegas-cluster.md`.
 - Target: `https://familytripwise.com/things-to-do/las-vegas-with-kids.html`.
 - Scope: widen the candidate research, then review every current section against five persona hypotheses, current ranking pages, evidence quality, repetition, scan cost, and trust boundaries. Keep only choices with distinct planning value; there is no list-length quota.
 - Product requirement: preserve the all-ages hub and its teen/stay/itinerary routes, add compact free/budget and heat/indoor decision support, and avoid creating a new URL in this action.
-- Release gate: focused/native QA, generator and unrelated-output stability, responsive browser checks, privacy/scope checks, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit/deployment.
+- Local result: 12 compact filterable choices, one 12-row comparison, five trip-shape routes, six high-friction detail cards, three current-check cards, three cluster routes, and activity-specific official sources. The candidate and every-section decision record is `docs/research/las-vegas-activity-expansion-review.md`.
+- Review and QA: Popper (`019f8a48-2b5a-7fe1-b6a7-290771ee03b8`) returned `PASS_WITH_P3` on cycle 2 after both P2 findings were closed. Generator/unrelated-output stability, 44 tests, native SEO QA, responsive browser checks, privacy/scope, source-link classification, roadmap JSON, and whitespace checks passed.
+- Residual P3: derive the optional visible FAQ heading from page data if another city later enables it; this does not affect the Las Vegas output.
 
 ### FT-IMP-005 — Expand San Diego activity and hotel decision sets
 
