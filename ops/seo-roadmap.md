@@ -46,9 +46,30 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 11 | `FT-IMP-004` improve both San Diego lodging pages | Content/product quality | Completed and released | User explicitly overrode the low-signal observation hold; both pages now have distinct search jobs, review-clean section-level improvements, and verified production output at `326501bd`. |
 | 12 | `FT-EVAL-001` stay-checklist evaluation | Measurement | Superseded | The July 13 checklist is no longer an isolated experiment after `FT-IMP-004`; do not claim a causal result on July 27. |
 | 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Ready after evidence | Non-blocking; run only after both revised URLs have current crawl and protected query evidence. |
-| 14 | `FT-IMP-005` expand San Diego activity and hotel decision sets | Content/product quality | Completed; release pending | The 12-activity and 12-hotel implementation is review-clean after cycle-3 `PASS`, with green native QA and exact scope. |
+| 14 | `FT-IMP-005` expand San Diego activity and hotel decision sets | Content/product quality | Completed and released | Commit `31bba30652d76c3d1664193532a9c508a83c6f32`; Pages run `29876597948` and production verification passed. |
+| 15 | `FT-RES-007` select the next pilot city and create the incremental city playbook | Content/product quality | Completed | Las Vegas wins the fresh GSC, keyword, SERP, commercial-intent, and existing-page comparison; research promotes one existing-page improvement. |
+| 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Ready | Research a wider candidate pool, audit every section, and improve one existing URL before creating the separately justified hotel page. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+### FT-RES-007 - Next pilot city and incremental city playbook
+
+- Selected: 2026-07-22 by direct manual user instruction.
+- State: completed 2026-07-22; research and planning only.
+- Evidence: fresh July 22 authenticated GSC API snapshot through July 20, a July 22 logged-in Semrush US bulk comparison after API units were unavailable, current public SERPs, representative ranking pages, existing site pages, and current operator state.
+- Decision: Las Vegas is next. It has the strongest combined existing GSC discovery, broad activity opportunity, commercial hotel depth, and existing-page leverage. Chicago, New York City, and San Antonio follow in that provisional order.
+- Deliverables: `docs/research/next-city-prioritization-las-vegas-cluster.md`, `docs/plan/incremental-city-cluster-playbook.md`, `status/las-vegas-pages.md`, and exactly one promoted implementation.
+- Review: independent reviewer Mendel returned `PASS_WITH_P3` after all P2 findings were closed. The residual P3 is a non-blocking stale `review second` phrase in one teen audit row; it does not affect the architecture, status table, or sole promoted action.
+- Boundary: no `site/**`, new URL, sitemap, robots, canonical, indexability, indexing request, external-account mutation, outreach, automation, or deployment change.
+
+### FT-IMP-006 - Improve the Las Vegas all-ages things-to-do hub
+
+- State: ready; not selected or started in this research transaction.
+- Source handoff: `FT-RES-007` and `docs/research/next-city-prioritization-las-vegas-cluster.md`.
+- Target: `https://familytripwise.com/things-to-do/las-vegas-with-kids.html`.
+- Scope: widen the candidate research, then review every current section against five persona hypotheses, current ranking pages, evidence quality, repetition, scan cost, and trust boundaries. Keep only choices with distinct planning value; there is no list-length quota.
+- Product requirement: preserve the all-ages hub and its teen/stay/itinerary routes, add compact free/budget and heat/indoor decision support, and avoid creating a new URL in this action.
+- Release gate: focused/native QA, generator and unrelated-output stability, responsive browser checks, privacy/scope checks, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit/deployment.
 
 ### FT-IMP-005 — Expand San Diego activity and hotel decision sets
 

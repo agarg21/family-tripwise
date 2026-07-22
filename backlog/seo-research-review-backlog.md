@@ -1,6 +1,6 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-20
+Last updated: 2026-07-22
 
 ## Active
 
@@ -43,6 +43,21 @@ Current measured signal:
 - Treat all conclusions as directional until more data is available.
 
 ## Done
+
+### SRR-010: Select Next Pilot City And Define The Reusable City Workflow
+
+Status: done
+
+Completed: 2026-07-22
+
+Roadmap ID: `FT-RES-007`
+
+Result:
+
+- Selected Las Vegas using fresh page-level GSC, a logged-in Semrush US comparison, query-level SERP overlap, representative ranking pages, and current-page leverage.
+- Created the Las Vegas cluster/persona/page decision pack, reusable incremental city playbook, and full Las Vegas page status table.
+- Promoted exactly one next implementation, `FT-IMP-006` / `IMP-020`, without editing `site/**`.
+- Independent reviewer Mendel returned `PASS_WITH_P3` after all P2 findings were closed; native and focused QA passed.
 
 ### SRR-009: San Diego Cluster SERP-Overlap And Persona Decision Pack
 

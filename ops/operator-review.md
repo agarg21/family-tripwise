@@ -151,6 +151,67 @@ Findings:
 
 - None (`P0`-`P3`).
 
+### 2026-07-22 - `FT-RES-007` review cycle 1
+
+**Reviewer:** Mendel (`019f8a02-ae8a-7b91-9909-715e3742a72c`)
+
+**Result: `CHANGES_REQUIRED`**
+
+Scope and positive evidence:
+
+- Reviewed the complete research-only working tree against the repository operating model. No `site/**`, sitemap, robots, canonical, indexability, deployment, indexing request, external account, outreach, or automation path changed.
+- Independently confirmed all four current Las Vegas pages are canonical, indexable, sitemap-listed, and represented in the audit.
+- Current SERPs supported the documented mix of official, publisher, family-blog, OTA, community, and teen-specialist results.
+- Native SEO QA passed with 0 errors and 0 warnings; all 40 tests passed; roadmap JSON, whitespace, and credential/privacy checks passed.
+
+Findings:
+
+1. `P2` - Cross-city selection was not reproducible because the pack preserved aggregate sampled totals but not the selection-driving city query metrics or the playbook's six-factor score.
+2. `P2` - The 15 listed Las Vegas rows sum to 11,060, not the reported 10,960.
+3. `P2` - SERP overlap and persona provenance needed exact query-level ranking/page-type observations plus source-linked, bounded community themes.
+4. `P2` - Two lower sections of `ops/current-cycle.md` still called the July 20 GSC snapshot current while the top correctly used July 22.
+
+Remediation for cycle 2:
+
+- Replaced cross-city aggregate coverage totals with exact selection-driving rows, added the material cross-city volume/KD matrix, and recorded a six-factor score with direction and tie-break logic.
+- Corrected the Las Vegas sampled-row coverage sum to 11,060 and retained the explicit non-additive warning.
+- Added an exact-query SERP observation matrix plus source-linked qualitative community themes and source-register entries.
+- Updated both stale current-cycle references to the July 22 snapshot finalized through July 20.
+
+### 2026-07-22 - `FT-RES-007` re-review cycle 2
+
+**Reviewer:** Mendel (`019f8a02-ae8a-7b91-9909-715e3742a72c`)
+
+**Result: `PASS_WITH_P3`**
+
+Prior-finding verification:
+
+- All four cycle-1 P2 findings are closed. The cross-city selection preserves material keyword rows, non-additive treatment, six-factor scoring, and tie-break logic; Las Vegas sampled coverage is correctly 11,060; exact-query SERP and source-linked community evidence support the clusters/personas; and current-cycle references use the July 22 GSC snapshot.
+- Full scope, four-page audit completeness, one promoted implementation, policy/privacy boundaries, reviewer evidence, roadmap JSON, 40/40 tests, native SEO QA, and whitespace checks passed.
+
+Finding:
+
+1. `P3` - The provisional future sequence placed the teen-page review second in the research pack while the status page called the family-hotel page second. The sole promoted action was unaffected.
+
+Cycle-3 reconciliation:
+
+- Aligned the provisional sequence to all-ages hub first, family-hotel research/build second, and teen-page refinement third. The hotel page has the stronger unmet commercial query family; the existing teen page remains live and can continue collecting evidence after the hub changes.
+
+### 2026-07-22 - `FT-RES-007` re-review cycle 3
+
+**Reviewer:** Mendel (`019f8a02-ae8a-7b91-9909-715e3742a72c`)
+
+**Result: `PASS_WITH_P3`**
+
+Verification:
+
+- No P0-P2 findings remain. `FT-IMP-006` is still the sole promoted and ready implementation; the nine-path scope is exact and the rationale remains evidence-consistent.
+- All 40 repository tests, native SEO QA with 0 errors and 0 warnings, roadmap JSON, whitespace, and privacy checks passed.
+
+Residual finding:
+
+1. `P3` - The architecture and status table place the family-hotel page second and teen refinement third, but the teen-page row in the complete audit retains the stale phrase `review second`. This does not affect the selected city, the promoted all-ages action, page roles, release boundary, or next transaction.
+
 ### 2026-07-20 — `FT-IMP-004` review cycle 1
 
 **Reviewer:** `019f8284-1234-7c81-aa49-b4d50c95942a` (`Gibbs`)

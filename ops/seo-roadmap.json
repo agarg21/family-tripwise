@@ -2,9 +2,9 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise SEO Operator",
-  "last_updated": "2026-07-21",
-  "last_rescored_on": "2026-07-14",
-  "next_rescore_due": "2026-07-21",
+  "last_updated": "2026-07-22",
+  "last_rescored_on": "2026-07-22",
+  "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
   "maintenance": {
     "after_every_run": "Update the selected item's durable status and evidence; do not reprioritize unrelated items mechanically.",
@@ -674,6 +674,82 @@
       "result": "Review-clean implementation expands the all-ages guide to 12 primary choices and the family-hotel guide to 12 researched properties. Repeated activity prose is bounded to six compact extra-planning cards for the additions, and the stay page changes only its two dependent hotel-count references.",
       "review": "Independent reviewer Tesla (019f86e6-7253-78c1-a1b0-5024da393b27) returned PASS on cycle 3 with no P0-P3 findings after all cycle-1 P2 and cycle-2 P3 findings were closed.",
       "notes": "Selected by direct manual user instruction on 2026-07-21. Research a wider candidate pool before selecting 12 activities and 12 hotels; list length is not a quota. The central report's superseded stay-page hold remains a ledger mismatch, so the stay URL is limited to two dependent count-label corrections."
+    },
+    {
+      "id": "FT-RES-007",
+      "title": "Select the next pilot city and create the incremental city-cluster playbook",
+      "kind": "research",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-22",
+      "completed_on": "2026-07-22",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": true,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+        "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/next-city-prioritization-las-vegas-cluster.md",
+        "docs/plan/incremental-city-cluster-playbook.md",
+        "status/las-vegas-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Fresh GSC and named keyword evidence select one existing pilot city; observed SERP overlap, ranking-page analysis, persona hypotheses, and a complete current-page audit determine its page architecture and exactly one bounded next implementation; the resulting process is reusable city by city.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-22 with finalized data through 2026-07-20; page-level evidence is directional because the site has 0 clicks and low impressions.",
+      "promoted_action": "FT-IMP-006",
+      "result": "Selected Las Vegas as the next city using fresh page-level GSC, source-dated Semrush query metrics, current SERP overlap, ranking-page analysis, persona hypotheses, and a complete four-page audit. Created a reusable incremental city playbook and promoted exactly one existing-page implementation, FT-IMP-006.",
+      "review": "Independent read-only reviewer Mendel (019f8a02-ae8a-7b91-9909-715e3742a72c) returned CHANGES_REQUIRED on cycle 1, PASS_WITH_P3 on cycle 2, and PASS_WITH_P3 on cycle 3. All P2 findings closed. The sole residual P3 is a stale 'review second' phrase in one teen-page audit row; architecture/status consistently place hotels second and teen refinement third, and the promoted FT-IMP-006 action is unaffected.",
+      "qa": "node tools/seo-qa.mjs passed with 0 errors and 0 warnings; all 40 repository tests passed; 10 public GSC snapshots validated; roadmap JSON, focused action linkage, sampled-volume arithmetic, source-link probes, privacy/credential scans, exact-scope checks, tracked/untracked whitespace checks, and git diff --check passed.",
+      "notes": "Direct manual user instruction. Research and planning only: no site page, sitemap, indexability, indexing request, destination, outreach, external account, or automation change. The central Control Room remains the only scheduler. Semrush estimates came from a logged-in US browser analysis collected 2026-07-22 after API units were unavailable; overlapping rows are not unique traffic."
+    },
+    {
+      "id": "FT-IMP-006",
+      "implementation_backlog_id": "IMP-020",
+      "title": "Improve the Las Vegas all-ages things-to-do hub after full candidate and section review",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "ready",
+      "implementation_ready_on": "2026-07-22",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-activity-expansion-review.md",
+        "tools/generate-pages.mjs",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/las-vegas-things-to-do-page.test.mjs",
+        "site/things-to-do/las-vegas-with-kids.html",
+        "status/las-vegas-pages.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing all-ages Las Vegas page becomes a current, compact decision hub for first-time, resort-led, younger-child/heat, teen/mixed-age, and budget/short-stay families after wider candidate research and an every-section usefulness review.",
+      "production_invariant": "The Las Vegas all-ages activity URL remains canonical, indexable, and present in the sitemap; the page offers a concise comparison of only distinct, current, supported activity choices, visibly routes to teen, stay, and itinerary pages, includes useful free/budget and heat/indoor decision support, and introduces no unsupported safety, smoke/noise, stroller-route, sensory, pool-access, price, or firm family-fit claim.",
+      "gsc_evidence_classification": "Baseline is fresh authenticated page-level GSC collected 2026-07-22 through 2026-07-20: 180 impressions, 0 clicks, average position 56.22. This is directional early discovery, not query-specific performance or causal evidence.",
+      "notes": "Promoted by FT-RES-007. Improve one existing page first; no list-length quota and no new hotel, free, toddler, indoor, or other URL in this action. Selection and implementation remain separate transactions."
     }
   ]
 }

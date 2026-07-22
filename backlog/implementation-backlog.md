@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 ## Active
 
@@ -9,6 +9,46 @@ No implementation task is active.
 ## Selected
 
 No implementation task is selected outside the active review.
+
+## Ready
+
+### IMP-020: Improve The Las Vegas All-Ages Things-To-Do Hub
+
+Status: ready; not selected or started
+
+Roadmap ID: `FT-IMP-006`
+
+Source handoff:
+
+- `FT-RES-007: Select the next pilot city and create the incremental city-cluster playbook`
+- `docs/research/next-city-prioritization-las-vegas-cluster.md`
+
+Goal:
+
+Improve the existing all-ages Las Vegas activity page after a wider candidate review and an every-section usefulness audit. Make it a compact decision hub for first-time, resort-led, younger-child/heat, teen/mixed-age, and budget/short-stay families.
+
+Affected production URL:
+
+- `https://familytripwise.com/things-to-do/las-vegas-with-kids.html`
+
+Acceptance checks:
+
+- Research a wider current candidate pool across Strip icons, Downtown, indoor/heat backup, free/budget, pool/resort, nature, museum, show, and age-specific needs.
+- Select only activities with distinct planning value; a likely 10-12 set is a hypothesis, not a quota.
+- Review every visible section for usefulness, repetition, persona coverage, unsupported firmness, source freshness, and keep/compress/merge/move/replace/remove treatment.
+- Preserve the all-ages role and clear links to the teen, stay, and itinerary pages.
+- Add compact free/budget and heat/indoor planning support without creating another URL.
+- Use one comparison layer and only decision-relevant detail; do not repeat each activity in several long formats.
+- Do not publish unsupported safety, smoke/noise, stroller-route, sensory, pool-access, price, or firm family-fit claims.
+- Preserve canonical, indexability, sitemap membership, and unrelated generated output.
+- Focused tests, full native QA, responsive browser checks, privacy/scope validation, and independent review must pass before commit.
+
+Not in this action:
+
+- the separately justified Las Vegas family-hotel page;
+- edits to teen, stay, or itinerary URLs;
+- a free, toddler, indoor, waterslide, or resort-specific URL;
+- indexing requests, outreach, external-account mutations, or recurring automation.
 
 ## Completed
 
