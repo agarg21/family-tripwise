@@ -923,51 +923,100 @@ const teenPages = {
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {
-    title: "Things to Do in Las Vegas With Teens: Pools, Red Rock, Shows and Heat Plans",
+    title: "Things to Do in Las Vegas With Teens: 8 Picks by Trip Style",
     description:
-      "Plan Las Vegas with teens using activity quick picks, heat and Strip walking caveats, rainy-day swaps, hotel-pool resets, and realistic itinerary ideas.",
+      "Compare eight things to do in Las Vegas with teens by interest, cost, time, heat, location, age rules, and mixed-age fit, with current official checks.",
     city: "Las Vegas",
+    schemaName: "Las Vegas teen activity options",
+    compactDetails: true,
+    removeGeneratedAgeSections: true,
+    baseReplacements: [
+      ["<h1>Things to do in Las Vegas with teens</h1>", "<h1>Things to Do in Las Vegas With Teens: 8 Picks by Trip Style</h1>"],
+      ["<p>A focused activity guide for teens in Las Vegas, with the main kids guide kept as the broader planning hub.</p>", "<p>Compare eight older-kid choices by actual teen payoff, time, cost, heat, location, age or height rules, and mixed-age fit.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 22, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Age, time, cost, weather, and trip-style labels are Family Tripwise editorial estimates. Check the exact ticket, event, height rule, weather policy, and minor-access rule before committing.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
     links: {
       allAges: "../things-to-do/las-vegas-with-kids.html",
       stay: "../where-to-stay/las-vegas-with-kids.html",
       itinerary: "../family-itinerary/las-vegas-with-kids.html"
     },
+    quickHeading: "Five ways to let the teen choose",
+    quickNote: "These are starting routes, not universal rankings. Let the teen choose the trip's anchor, then let the adults verify the exact ticket, age or height rule, weather, transport, and late-day plan.",
     quick: [
-      ["Best overall", "Pool plus one teen-specific anchor", "Vegas works better when the hotel reset is part of the plan."],
-      ["Best outdoor break", "Red Rock Canyon", "Strongest contrast to casino/resort corridors if heat and transport work."],
-      ["Best rainy/heat backup", "Area15-style immersive stop or High Roller", "Choose by age, sensory tolerance, and budget."],
-      ["Best low-cost classic", "Bellagio Conservatory and fountains", "A short visual stop, not the whole teen plan."],
-      ["Best evening idea", "Age-appropriate show or skyline activity", "Check ratings, timing, ticket rules, and late-night atmosphere."],
-      ["Best planning base", "South or Center Strip by exact hotel fit", "Pool, room location, smoke exposure, and walking routes matter."],
-      ["Think twice about", "Aimless Strip walking", "Distances, heat, casino detours, and crowds are harder than maps imply."],
-      ["Main planning risk", "Heat, sensory overload, and fees", "Keep costs, resort fees, pool rules, and downtime visible before booking."]
+      ["Immersive and unusual", "AREA15, one exact experience", "Choose the experience first; age, effects, duration, and ticket rules differ inside the same district."],
+      ["Outdoor contrast", "Red Rock Canyon", "Use the scenic drive or one planned stop when the teen wants desert scenery more than another resort corridor."],
+      ["Thrill and games", "Big Apple Coaster and Arcade", "The coaster has a current 54-inch rule; the arcade gives mixed-height siblings a separate option."],
+      ["Flexible and lower cost", "Bellagio plus Pinball Hall of Fame", "Combine one free Vegas visual with pay-per-play time instead of buying another full attraction ticket."],
+      ["Big visual evening", "Sphere, High Roller, or Neon Museum", "Choose screen spectacle, skyline, or Vegas design history; do not stack all three into one night."]
     ],
+    comparisonNote: "Every row stays only because it offers an older-kid reason to choose it: immersive novelty, desert contrast, thrill, games, skyline, photo/design interest, or a current large-format show. Age, time, cost, indoor, and fit labels are editorial estimates, not venue guarantees.",
+    comparisonHeaders: ["Activity", "Teen fit", "Time", "Cost", "Area", "Walking", "Indoor", "Flexibility", "Current check", "Why it earns teen space", "Pair nearby"],
     rows: [
-      ["Red Rock Canyon", "10-17", "Half day", "$$", "West of Strip", "Hard", "No", "Low", "Timed entry may apply", "Best nature reset for teens", "Low-key hotel evening"],
-      ["Area15 / immersive exhibits", "12-17", "2-3 hrs", "$$$", "Off Strip", "Mixed", "Yes", "Low", "Book specific exhibits", "Teen-friendly indoor option if sensory fit is right", "Food hall or pool reset"],
-      ["High Roller", "10-17", "45-60 min", "$$", "LINQ", "Good", "Yes", "Medium", "Book/check pricing", "Contained skyline payoff", "LINQ Promenade meal"],
-      ["Bellagio Conservatory and fountains", "10-17", "60-90 min", "$", "Center Strip", "Moderate", "Partial", "Medium", "No", "Classic short Vegas visual", "Nearby early dinner"],
-      ["Hotel pool block", "10-17", "Half day", "$$", "Hotel", "Good", "No", "High", "Check rules", "Realistic downtime and heat management", "One short evening activity"],
-      ["Age-appropriate show", "12-17", "Evening", "$$$", "Strip or off-Strip", "Mixed", "Yes", "Low", "Book ahead", "Best teen evening if rating/timing fits", "Early dinner and rideshare plan"]
+      ["AREA15 / one exact experience", "Older kids; exact experience varies", "2-4 hrs", "Paid", "Off Strip", "Experience-specific", "Yes", "Medium", "Check exact attraction and minor policy", "Immersive choice with genuine older-kid novelty", "Food or hotel reset"],
+      ["Red Rock Canyon Scenic Drive", "Teens interested in desert scenery", "Half day", "Low cost", "West of Strip", "Choice-specific", "No", "Medium", "Check weather, road and seasonal entry", "A real visual and pace contrast to the Strip", "Quiet hotel evening"],
+      ["Big Apple Coaster and Arcade", "Coaster: 54 inches; arcade broader", "1-2 hrs", "Paid", "South Strip", "Resort route", "Partial", "High", "Check height, weather and hours", "A concrete thrill choice with a sibling fallback", "New York-New York meal"],
+      ["High Roller observation wheel", "Teens who want skyline over thrill", "45-60 min", "Paid", "LINQ", "Boarding route", "Yes", "Medium", "Check ticket and cabin terms", "Contained skyline payoff without a long show", "LINQ meal"],
+      ["Pinball Hall of Fame", "Game-focused teens and mixed ages", "60-120 min", "Pay per play", "South Strip", "Low once inside", "Yes", "High", "Check current hours", "Flexible play that can stop before attraction fatigue", "South Strip meal"],
+      ["Neon Museum", "Design, photo or Vegas-history interest", "60-90 min", "Paid", "Downtown", "Outdoor visit", "No", "Medium", "Check timed ticket and weather", "A short visual-history choice that does not feel little-kid led", "Early Downtown meal"],
+      ["Bellagio Conservatory and fountains", "Teens who want classic Vegas visuals", "60-90 min", "Free", "Center Strip", "Long resort approaches", "Partial", "High", "Check display and fountain schedules", "Photo payoff with low ticket commitment", "Nearby meal"],
+      ["Sphere film experience or selected event", "Interest and production-specific", "About 2 hrs; varies", "Paid", "East of Strip", "Venue route", "Yes", "Low", "Check exact production, age and effects", "A current large-format event teens may choose themselves", "Simple meal and hotel return"]
     ],
+    detailsEyebrow: "High-friction choices",
+    detailsTitle: "Five choices that need an exact check",
+    detailsNote: "The comparison covers all eight. These five get extra space because their age, height, sensory, weather, ticket, or transport details can change the decision.",
     details: [
-      ["Red Rock Canyon", "Teens often need a real break from casino/resort environments, and Red Rock gives a different trip texture.", "Best for older kids and teens comfortable with heat-aware walking.", "Heat, timed entry, drive logistics, trail difficulty, and younger siblings.", "Make it the main half-day plan and keep the evening easy.", "Bring water/snacks and plan bathrooms before leaving the Strip.", "Check weather, timed entry, road status, and trail fit before committing.", "Pair with pool time or a quiet hotel evening."],
-      ["Area15 / immersive exhibits", "It can give teens a high-payoff indoor activity when outdoor plans are too hot or smoky.", "Best for teens who like immersive, visual, or interactive environments.", "Sensory overload, cost, exhibit age fit, and trying to do too many paid pieces.", "Choose one or two exact exhibits before arriving.", "Use onsite food as a reset if it fits your family.", "Book/check exhibit details, age guidance, and current hours.", "Pair with pool downtime rather than another loud evening."],
-      ["High Roller", "It is contained, scenic, and easier to plan than wandering multiple resorts.", "Best for teens who want a skyline moment without a long show.", "Cost, lines, and timing around meals.", "Use it when everyone is fed and ready for a slower ride.", "Plan bathrooms and snacks before boarding.", "Check ticket options and current pricing.", "Pair with LINQ Promenade food or a short fountain stop."],
-      ["Bellagio Conservatory and fountains", "It gives classic Vegas visual payoff with low time commitment.", "Best for all teen trips as a short stop.", "Long resort walks, crowds, smoke exposure risk in nearby corridors, and overbuilding the stop.", "Treat it as a 60-90 minute loop with food nearby.", "Use nearby hotel food/restrooms, but expect walking.", "No ticket for the visual stop; verify fountain schedule if it matters.", "Pair with early dinner, High Roller, or a ride back to the hotel."],
-      ["Hotel pool block", "The pool can be the reason the trip feels like a vacation instead of a logistics puzzle.", "Best for all teen ages if the pool rules fit.", "Seasonal closures, shade, crowding, fees, and height or tube rules.", "Protect pool time as the reset, especially in heat.", "Use the room as the snack and decompression base.", "Check pool hours, rules, closures, and resort fees before booking.", "Pair with one evening anchor, not multiple Strip crossings."],
-      ["Age-appropriate show", "A show can be the cleanest teen evening if ratings, timing, and budget work.", "Best for teens who can handle late timing and venue rules.", "Age ratings, ticket cost, late meals, and transportation after the show.", "Book an earlier show when possible and make dinner simple.", "Plan food before the venue and rideshare pickup after.", "Verify age restrictions, content, runtime, and ticket policies.", "Pair with a quiet morning or pool-heavy next day."]
+      ["AREA15 / one exact experience", "The district offers immersive art, games, rides, and events that can feel chosen for older kids.", "Best for teens who want interactive or visual novelty and will help select the exact experience.", "The name AREA15 does not identify one product; each experience has separate age, effects, time, and ticket rules.", "Choose one primary experience before buying. Do not treat a multi-attraction pass as automatically better.", "Plan food or a quiet exit before adding another loud stop.", "Verify the exact experience, minor policy, effects notice, accessibility, hours, and refund terms.", "Pair with a hotel reset."],
+      ["Red Rock Canyon Scenic Drive", "The desert setting gives teens a genuine contrast to resort interiors and screens.", "Best for teens who value scenery, photography, geology, or a break from indoor spectacle.", "Heat, weather, limited services, driving, and trail choice can turn the same destination into a very different outing.", "Choose scenic drive only or one suitable stop; do not promise a hike until current conditions and mobility fit are checked.", "Carry water and settle restroom and food plans before leaving the city.", "Recheck BLM road status, weather, fire restrictions, and seasonal timed-entry rules.", "Pair with a low-key evening."],
+      ["Big Apple Coaster and Arcade", "A named thrill ride gives ride-focused teens a clear reason to choose the South Strip.", "Best for teens who actively want the coaster; the arcade provides a different option for non-riders.", "The official coaster rule is 54 inches without footwear, operations can change with weather, and the arcade is a separate spend.", "Confirm every rider's height and interest before reserving; let non-riders use the arcade without making the whole family wait indefinitely.", "Set a play budget and decide the meal before entering the resort route.", "Recheck hours, weather, ticket terms, height, and the route from the chosen entrance.", "Pair with a New York-New York meal."],
+      ["Sphere film experience or selected event", "The venue can deliver the kind of large-format visual event a teen specifically asks to see.", "Best for teens who are genuinely interested in the current production rather than the building alone.", "The production, content, effects, runtime, price, and age fit change; Sphere is a venue, not one stable attraction.", "Choose the exact production first, review the event page together, and price the complete ticket order before building the night around it.", "Keep the meal and return route simple around the fixed entry time.", "Verify the current production, age guidance, effects, entry rules, fees, and refund terms.", "Pair with one meal, not another major show."],
+      ["Neon Museum", "The collection can appeal to teens interested in design, photography, signs, or Vegas history.", "Best for teens who choose visual history over rides, games, or another large show.", "It is an outdoor timed visit, so heat, wind, air quality, storms, and personal interest determine the payoff.", "Choose the visit time around current conditions and keep the Downtown portion bounded.", "Plan water, food, and transport before the timed entry.", "Recheck the museum FAQ, weather procedure, photography rules, hours, and ticket terms.", "Pair with an early Downtown meal."]
     ],
+    plansEyebrow: "Teen route shapes",
+    plansTitle: "Build the trip around one teen-chosen anchor",
     plans: {
-      "1-day teen plan": "Pool morning, short Bellagio/fountain loop, early dinner, then High Roller or an age-appropriate show.",
-      "2-day teen plan": "Day 1: pool and classic Strip visuals. Day 2: Red Rock Canyon or an immersive indoor stop, then a low-pressure evening.",
-      "Heat plan": "Move outdoor or Strip walking to early/late windows, keep midday for pool or indoor activity, and avoid long resort-to-resort walks.",
-      "Rainy-day plan": "Use Area15-style exhibits, High Roller, or a show as the anchor, then keep food and rideshares simple.",
-      "Mixed-age plan": "Let teens choose one show, nature, or immersive activity while younger siblings get pool or museum time."
+      "One-day first visit": "Use a slow or pool morning, let the teen choose Big Apple Coaster, AREA15, or Pinball as the paid anchor, then add Bellagio or High Roller only if the route stays compact.",
+      "Two-day contrast": "Day 1: one Strip visual plus one teen-chosen paid stop. Day 2: Red Rock for desert contrast or AREA15/Sphere when weather or interests favor indoors.",
+      "Heat or rain": "Use one exact AREA15 experience, Pinball, High Roller, or the selected Sphere production as the anchor. Indoor does not prove low walking or low stimulation.",
+      "Mixed ages": "Give the teen first choice of the anchor; let younger siblings use the arcade, hotel pool, or all-ages guide rather than forcing every family member through the same ticket."
     },
+    clusterLinks: [
+      ["All-ages activity hub", "Use the broader 12-choice guide when younger siblings, grandparents, or mixed stamina change the shortlist.", "../things-to-do/las-vegas-with-kids.html", "Open all Las Vegas family activities"],
+      ["Family hotel comparison", "Compare ten hotels by trip style, room setup, pool role, rough nightly total, and sampled online-review themes.", "../where-to-stay/las-vegas-family-hotels.html", "Compare Las Vegas family hotels"],
+      ["Stay-area guide", "Choose the trip base before locking routes; exact resort exits, transport, pool access, and room location shape the teen plan.", "../where-to-stay/las-vegas-with-kids.html", "Compare Las Vegas stay areas"],
+      ["Family itinerary", "Sequence the selected anchor around meals, weather, hotel resets, and younger siblings without building a Strip marathon.", "../family-itinerary/las-vegas-with-kids.html", "Open the Las Vegas family itinerary"]
+    ],
+    officialChecksEyebrow: "Before buying tickets",
+    officialChecksTitle: "Three checks that change a teen plan",
+    officialChecks: [
+      ["Exact attraction, not destination name", "AREA15 and Sphere contain changing experiences or productions. Select the exact ticket first, then check age, height, effects, duration, accessibility, and refund terms.", [["https://www.area15.com/visit-us", "AREA15 visit information"], ["https://www.thesphere.com/shows/the-sphere-experience", "Sphere current experience"]]],
+      ["Weather, height, and timed entry", "Big Apple Coaster requires a current 54-inch minimum; Red Rock and Neon Museum plans change with weather and operating conditions. Recheck near the visit.", [["https://newyorknewyork.mgmresorts.com/en/entertainment/the-big-apple-coaster-and-arcade.html", "Big Apple Coaster"], ["https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon", "Red Rock Canyon NCA"], ["https://neonmuseum.org/faqs/", "Neon Museum visit FAQ"]]],
+      ["Minor and late-night rules", "Do not assume a teen can enter every event or wander independently late at night. Check the exact venue's adult-supervision policy and the City of Las Vegas youth-curfew guidance.", [["https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer", "City youth-curfew guide"], ["https://www.area15.com/experiences/pass-bundles/level-1", "AREA15 pass restrictions"]]]
+    ],
+    visibleFaqs: true,
+    faqTitle: "Las Vegas with teens FAQ",
     faqs: [
-      ["Is Las Vegas good with teens?", "It can be, if the hotel, pool, heat, walking routes, show choices, and evening environment are planned carefully."],
-      ["What should families avoid with teens in Las Vegas?", "Avoid assuming the Strip is an easy walk, especially in heat, with crowds, casino detours, or tired younger siblings."]
+      ["What are the strongest Las Vegas choices for teens?", "Start with the teen's interest: AREA15 for one selected immersive experience, Red Rock for desert contrast, Big Apple Coaster for thrills, Pinball for flexible games, or Sphere, High Roller, and Neon Museum for different kinds of visual payoff."],
+      ["Can teenagers explore Las Vegas on their own?", "Do not assume they can. Check current city curfew guidance, the exact venue's minor policy, and whether adult accompaniment is required for the ticket or time of day."],
+      ["How should a mixed-age family use this page?", "Let the teen choose one anchor, then use the all-ages guide, arcade, hotel reset, or split plan for younger siblings instead of forcing every child through the same activity."]
+    ],
+    sourcesIntro: "Official attraction and city sources checked July 22, 2026. Use the exact event or attraction page again near the visit because productions, effects, prices, hours, weather rules, and minor policies can change.",
+    sources: [
+      ["AREA15 visit information", "https://www.area15.com/visit-us"],
+      ["AREA15 pass restrictions", "https://www.area15.com/experiences/pass-bundles/level-1"],
+      ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
+      ["Big Apple Coaster and Arcade", "https://newyorknewyork.mgmresorts.com/en/entertainment/the-big-apple-coaster-and-arcade.html"],
+      ["High Roller", "https://www.caesars.com/linq/things-to-do/attractions/high-roller"],
+      ["Pinball Hall of Fame", "https://travelnevada.com/museums/pinball-hall-of-fame/"],
+      ["Neon Museum visit FAQ", "https://neonmuseum.org/faqs/"],
+      ["Bellagio fountains", "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"],
+      ["Bellagio Conservatory", "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"],
+      ["Sphere current experience", "https://www.thesphere.com/shows/the-sphere-experience"],
+      ["City of Las Vegas youth-curfew guide", "https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer"],
+      ["Las Vegas photo source and attribution", "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"],
+      ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
     ]
   },
   "things-to-do/san-diego-with-teens.html": {
@@ -1102,8 +1151,8 @@ ${items.map(([label, pick, why]) => `          <article class="quick-pick">
         </div>`;
 }
 
-function renderActivityComparison(rows) {
-  const headers = ["Activity", "Best ages", "Time", "Cost", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"];
+function renderActivityComparison(rows, customHeaders) {
+  const headers = customHeaders || ["Activity", "Best ages", "Time", "Cost", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"];
   return `        <div class="comparison-scroll">
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th>${esc(header)}</th>`).join("")}</tr></thead>
@@ -1304,14 +1353,45 @@ function renderTeenUpgrade(page) {
   const indexDecision = page.indexDecision
     ? `        <p class="review-label">${esc(page.indexDecision)}</p>\n`
     : "";
+  const clusterCards = page.clusterLinks?.length
+    ? renderClusterCards(page.clusterLinks)
+    : `          <div class="card-grid">
+            <article class="activity-card"><h3>All-ages activity hub</h3><p>Use the main guide when siblings, grandparents, toddlers, or mixed stamina levels change the activity shortlist.</p><p><a class="text-link" href="${esc(page.links.allAges)}">Open the all-ages things-to-do guide</a></p></article>
+            <article class="activity-card"><h3>Where to stay</h3><p>Choose the lodging base before locking in teen routes; transit, parking, noise, pool value, and meal access shape the day.</p><p><a class="text-link" href="${esc(page.links.stay)}">Open the where-to-stay guide</a></p></article>
+            <article class="activity-card"><h3>Family itinerary</h3><p>Use the itinerary page to keep the teen plan realistic around meals, weather, hotel resets, and younger siblings.</p><p><a class="text-link" href="${esc(page.links.itinerary)}">Open the family itinerary</a></p></article>
+          </div>`;
+  const officialCheckSection = page.officialChecks?.length
+    ? `
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">${esc(page.officialChecksEyebrow || "Before locking the plan")}</p>
+          <h2>${esc(page.officialChecksTitle || "Current checks for a teen trip")}</h2>
+        </div>
+${renderOfficialChecks(page.officialChecks)}
+      </section>
+`
+    : "";
+  const faqSection = page.visibleFaqs && page.faqs?.length
+    ? `
+      <section class="band rank-ready-section" aria-labelledby="teen-faq-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Common planning questions</p>
+            <h2 id="teen-faq-title">${esc(page.faqTitle || `${page.city} with teens FAQ`)}</h2>
+          </div>
+${renderFaqs(page.faqs)}
+        </div>
+      </section>
+`
+    : "";
   return `${markerStart}
       <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Teen quick picks</p>
-            <h2>Best choices by teen trip style</h2>
+            <h2>${esc(page.quickHeading || "Best choices by teen trip style")}</h2>
           </div>
-${indexDecision}${renderQuickPicks(page.quick)}
+${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>\n` : ""}${renderQuickPicks(page.quick)}
         </div>
       </section>
 
@@ -1321,23 +1401,23 @@ ${indexDecision}${renderQuickPicks(page.quick)}
           <h2>Teen activity decision table</h2>
         </div>
         <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
-${renderActivityComparison(page.rows)}
+${renderActivityComparison(page.rows, page.comparisonHeaders)}
       </section>
 
       <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Teen logistics</p>
-            <h2>Detailed notes for older-kid planning</h2>
+            <p class="eyebrow">${esc(page.detailsEyebrow || "Teen logistics")}</p>
+            <h2>${esc(page.detailsTitle || "Detailed notes for older-kid planning")}</h2>
           </div>
-${renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
         </div>
       </section>
 
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
-          <p class="eyebrow">Teen itineraries</p>
-          <h2>Route ideas that avoid generic sightseeing marathons</h2>
+          <p class="eyebrow">${esc(page.plansEyebrow || "Teen itineraries")}</p>
+          <h2>${esc(page.plansTitle || "Route ideas that avoid generic sightseeing marathons")}</h2>
         </div>
 ${renderPlans(page.plans)}
       </section>
@@ -1348,15 +1428,38 @@ ${renderPlans(page.plans)}
             <p class="eyebrow">Plan the cluster</p>
             <h2>Use the teen page with the broader family guide</h2>
           </div>
-          <div class="card-grid">
-            <article class="activity-card"><h3>All-ages activity hub</h3><p>Use the main guide when siblings, grandparents, toddlers, or mixed stamina levels change the activity shortlist.</p><p><a class="text-link" href="${esc(page.links.allAges)}">Open the all-ages things-to-do guide</a></p></article>
-            <article class="activity-card"><h3>Where to stay</h3><p>Choose the lodging base before locking in teen routes; transit, parking, noise, pool value, and meal access shape the day.</p><p><a class="text-link" href="${esc(page.links.stay)}">Open the where-to-stay guide</a></p></article>
-            <article class="activity-card"><h3>Family itinerary</h3><p>Use the itinerary page to keep the teen plan realistic around meals, weather, hotel resets, and younger siblings.</p><p><a class="text-link" href="${esc(page.links.itinerary)}">Open the family itinerary</a></p></article>
-          </div>
+${clusterCards}
         </div>
       </section>
-${markerEnd}
+${officialCheckSection}${faqSection}${markerEnd}
 `;
+}
+
+function removeGeneratedAgeSections(html) {
+  const start = html.indexOf('      <section class="band intro-band">');
+  const end = html.indexOf('      <section class="container page-section source-section">');
+  if (start === -1 && end !== -1) return html;
+  if (start === -1 || end === -1 || end <= start) {
+    throw new Error("Expected generated age-page sections were not found");
+  }
+  return `${html.slice(0, start)}${html.slice(end)}`;
+}
+
+function replaceSourceSection(html, page) {
+  if (!page.sources?.length) return html;
+  const section = `      <section class="container page-section source-section">
+        <div class="section-heading">
+          <p class="eyebrow">Sources checked</p>
+          <h2>Official sources and licensing notes</h2>
+        </div>
+        <p>${esc(page.sourcesIntro || "Use these official pages to verify current details before planning around them.")}</p>
+        <ul class="source-list">
+${page.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
+        </ul>
+      </section>`;
+  const pattern = /      <section class="container page-section source-section">[\s\S]*?      <\/section>/;
+  if (!pattern.test(html)) throw new Error("Expected source section was not found");
+  return html.replace(pattern, section);
 }
 
 function renderStayMatrix(rows, labelMode = "default", customHeaders) {
@@ -1605,7 +1708,7 @@ function itemListSchema(page) {
     <script type="application/ld+json">${JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: `${page.city} family travel planning options`,
+      name: page.schemaName || `${page.city} family travel planning options`,
       itemListElement: page.rows.map((row, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -1660,6 +1763,8 @@ function upgradeFile(outDir, path, page, type) {
   html = stripMarked(html, schemaStart, schemaEnd);
   html = updateHead(html, page);
   html = applyBaseReplacements(html, page.baseReplacements);
+  if (page.removeGeneratedAgeSections) html = removeGeneratedAgeSections(html);
+  html = replaceSourceSection(html, page);
   const section = type === "activity"
     ? renderActivityUpgrade(page)
     : type === "itinerary"

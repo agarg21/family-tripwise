@@ -800,7 +800,51 @@
       "implementation_summary": "Created one canonical ten-hotel Las Vegas comparison organized by trip style, with official room and amenity facts, rough total-night ranges, sampled online-review themes and conflicts, direct maps, visible freshness and uncertainty, FAQ/schema alignment, and approved routing from the existing stay guide and home page.",
       "review_summary": "Independent reviewer Prism (019f8ae7-5f67-71c3-a1ed-8edd6cae20f3) returned PASS on cycle 2 after the Cancun price/crib evidence conflict and hero-image performance/license attribution closed both cycle-1 P2 findings. No P0-P3 findings remain.",
       "qa_summary": "Full regeneration, 47/47 repository tests, 3/3 focused tests, JavaScript syntax, native SEO QA with 0 errors and 0 warnings, roadmap JSON, privacy, exact-scope, source, responsive checks at 1280/390/320px, and git diff --check passed.",
+      "release_commit": "bda58e8d2384b3935e10e92b367a2ffd9ab76a72",
+      "pages_run": 29944609529,
+      "release_state": "released-and-production-verified",
       "notes": "Selected by direct manual user instruction. One new indexable page only. Research and publication are one transaction, but the page may release only if the durable evidence pack, focused/native/browser QA, and independent review pass. Existing stay and home pages may change only to route to the new hotel page. No indexing request, affiliate CTA, outreach, external-account mutation, custom-map mutation, separate resorts URL, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-007",
+      "implementation_backlog_id": "IMP-022",
+      "research_backlog_id": "SRR-012",
+      "title": "Review and improve the Las Vegas teen guide",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-22",
+      "completed_on": "2026-07-22",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-teens.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-teen-page-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/las-vegas-teen-page.test.mjs",
+        "site/things-to-do/las-vegas-with-teens.html",
+        "status/las-vegas-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing teen page answers a distinct older-kid job with a compact shortlist in which every retained choice has a clear teen-specific reason, current official checks, useful mixed-age routing, and less repetition than the all-ages hub.",
+      "production_invariant": "The existing Las Vegas teen URL remains canonical, indexable, and present in the sitemap; visible content and schema align; every primary choice explains its teen-specific value and material tradeoff; the page retains routes to all-ages, stay, and itinerary planning without unsupported safety, exact-route, sensory, age-fit, or personally verified claims.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-22 with finalized data through 2026-07-20: 2 impressions, 0 clicks, and page-level average position 11. This is an encouraging but extremely low-sample discovery signal, not a query-specific rank or performance conclusion.",
+      "implementation_summary": "Rebuilt the existing teen guide as a compact decision page with five interest-led starts, eight teen-specific choices, five high-friction detail cards, four route shapes, mixed-age routing, current official checks, and visible FAQ/schema after a competitor, persona, candidate, and every-section review.",
+      "review_summary": "Independent reviewer Dewey (019f8bee-4a96-7660-a2fd-ce864e9979da) returned PASS_WITH_P3 with no P0-P2. Two stale-documentation P3 notes about the prior hotel release and current GSC snapshot were reconciled during mechanical verdict logging.",
+      "qa_summary": "Full deterministic generation, 51/51 repository tests, 4/4 focused tests, JavaScript syntax, roadmap JSON, native SEO QA with 0 errors and 0 warnings, privacy, exact-scope, source-link classification, 1280/390/320 responsive checks, and git diff --check passed.",
+      "notes": "Selected under the user's standing manual instruction to continue Las Vegas work without approval pauses. One existing URL only. Research and implementation are one bounded transaction; no new URL, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }

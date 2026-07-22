@@ -8,9 +8,25 @@ None.
 
 ## Selected
 
-No implementation task is selected.
+No implementation task is selected outside the active Las Vegas teen-page action.
 
 ## Completed
+
+### IMP-022: Improve The Las Vegas Teen Guide
+
+Status: done
+
+Completed: 2026-07-22
+
+Roadmap ID: `FT-IMP-007`
+
+Result:
+
+- Replaced the duplicated generic teen flow with five interest-led starts, one eight-choice comparison, five high-friction detail cards, four route shapes, four cluster routes, three current-check cards, and three visible FAQs.
+- Required an older-kid reason for every retained choice, removed hotel pool and generic show as primaries, and preserved mixed-age routing without changing another live page.
+- Added a durable competitor, persona, candidate, claim, and every-section record at `docs/research/las-vegas-teen-page-review.md`.
+- Full generation, 51/51 repository tests, 4/4 focused tests, native SEO QA, JavaScript/JSON/whitespace/privacy/scope/source checks, and 1280/390/320 responsive checks passed.
+- Independent reviewer Dewey (`019f8bee-4a96-7660-a2fd-ce864e9979da`) returned `PASS_WITH_P3`; both stale-documentation P3 notes were reconciled during verdict logging. Exact-path release is authorized.
 
 ### IMP-021: Publish The Las Vegas Family-Hotel Comparison
 
@@ -29,7 +45,7 @@ Result:
 - Added only the approved dependent links from the existing Las Vegas stay page and home page.
 - Durable evidence: `docs/research/las-vegas-family-hotel-evidence-pack.md`.
 - Independent reviewer Prism returned `PASS` on cycle 2 after both P2 findings were closed; native, focused, responsive, privacy, source, and scope QA passed.
-- State: review-clean and authorized for exact-path commit, deployment, and production verification.
+- State: released and production-verified at commit `bda58e8d2384b3935e10e92b367a2ffd9ab76a72`; GitHub Pages run `29944609529` succeeded.
 
 ### IMP-020: Improve The Las Vegas All-Ages Things-To-Do Hub
 

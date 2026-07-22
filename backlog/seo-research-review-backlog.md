@@ -4,9 +4,24 @@ Last updated: 2026-07-22
 
 ## Active
 
-No standalone research task is active outside the selected publication transaction.
+No standalone research task is active. The selected implementation transaction is in QA and review.
 
 ## Recently Done
+
+### SRR-012: Las Vegas Teen Page Competitor And Section Review
+
+Status: done inside implementation transaction
+
+Completed: 2026-07-22
+
+Roadmap ID: `FT-IMP-007`
+
+Result:
+
+- Audited every visible section against teen intent, LV-P4, mixed-age planning, repetition, and trust boundaries.
+- Compared current teen-specific ranking pages and qualitative community discussions without treating anecdotes as demand or firsthand proof.
+- Retained eight choices only where an older-kid reason and current official-check path were clear; removed the generic hotel-pool and unspecified-show primaries.
+- Artifact: `docs/research/las-vegas-teen-page-review.md`.
 
 ### SRR-011: Las Vegas Family-Hotel Evidence Pack
 

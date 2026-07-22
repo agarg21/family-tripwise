@@ -15,8 +15,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-20.json`.
-- Classification on July 20: fresh authenticated read-only Search Console API evidence, collected July 20 with finalized performance data through July 18.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-22.json`.
+- Classification on July 22: fresh authenticated read-only Search Console API evidence, collected July 22 with finalized performance data through July 20.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet.
@@ -48,21 +48,34 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Ready after evidence | Non-blocking; run only after both revised URLs have current crawl and protected query evidence. |
 | 14 | `FT-IMP-005` expand San Diego activity and hotel decision sets | Content/product quality | Completed and released | Commit `31bba30652d76c3d1664193532a9c508a83c6f32`; Pages run `29876597948` and production verification passed. |
 | 15 | `FT-RES-007` select the next pilot city and create the incremental city playbook | Content/product quality | Completed | Las Vegas wins the fresh GSC, keyword, SERP, commercial-intent, and existing-page comparison; research promotes one existing-page improvement. |
-| 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Completed; release authorized | Twelve distinct choices, compact scan/detail layers, and heat/budget support passed QA and independent review on one existing URL. |
-| 17 | `FT-PUB-002` research and publish the Las Vegas family-hotel comparison | Content/product quality | Completed; release authorized | Ten distinct evidence-backed hotel options passed native QA and independent review; exact-path release is authorized. |
+| 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Completed and released | Commit `3f555d65`; Pages run `29930917894` and production verification passed. |
+| 17 | `FT-PUB-002` research and publish the Las Vegas family-hotel comparison | Content/product quality | Completed and released | Commit `bda58e8`; Pages run `29944609529` and production verification passed. |
+| 18 | `FT-IMP-007` review and improve the Las Vegas teen guide | Content/product quality | Completed; release authorized | Eight teen-specific choices and a compact decision flow passed QA and independent review on the existing URL. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+### FT-IMP-007 - Review and improve the Las Vegas teen guide
+
+- Selected: 2026-07-22 under the user's standing manual instruction to continue Las Vegas work without approval pauses.
+- State: completed and review-clean on 2026-07-22; exact-path release authorized.
+- Target: `https://familytripwise.com/things-to-do/las-vegas-with-teens.html`.
+- Evidence: fresh July 22 page-level GSC has two impressions at average position 11; Semrush estimates 590 US monthly searches for the core exact query; current SERPs preserve a distinct teen/tween result set. The GSC sample is too small for a performance conclusion.
+- Product requirement: audit every section and candidate against LV-P4, current ranking pages, official sources, all-ages overlap, mixed-age needs, scan cost, and trust boundaries. Every retained choice needs an older-kid-specific reason.
+- Boundary: preserve the URL, canonical, indexability, and sitemap; do not edit another live page or create a new URL.
+- Release gate: durable review artifact, focused/native/responsive/source/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
+- Local result: five interest-led starts, one eight-choice comparison, five high-friction detail cards, four route shapes, four cluster routes, three current-check cards, and three visible FAQs. The durable review is `docs/research/las-vegas-teen-page-review.md`.
+- Review and QA: Dewey (`019f8bee-4a96-7660-a2fd-ce864e9979da`) returned `PASS_WITH_P3` with no P0-P2. Full generation, 51 repository tests, focused tests, native SEO QA, JavaScript/JSON/whitespace/privacy/scope/source checks, and 1280/390/320 responsive checks passed. Both stale-documentation P3 notes were reconciled during verdict logging.
 
 ### FT-PUB-002 - Research and publish the Las Vegas family-hotel comparison
 
 - Selected: 2026-07-22 by direct manual user instruction.
-- State: completed and review-clean on 2026-07-22; exact-path release authorized.
+- State: completed, released, and production-verified on 2026-07-22 at commit `bda58e8d2384b3935e10e92b367a2ffd9ab76a72`; GitHub Pages run `29944609529` succeeded.
 - New URL: `https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html`.
 - Evidence requirement: evaluate a wider candidate pool; retain only properties with distinct trip-style value, current official room/amenity facts, a source-dated rough total nightly range, bounded recent family-review themes and conflicts, current operational caveats, and explicit unknowns.
 - Product requirement: one compact default comparison plus concise property notes; do not create separate family-resort, pool, suite, or waterslide URLs.
 - Dependent scope: the existing Las Vegas stay guide and home page may change only enough to route to the new comparison. The newly released activity page is excluded.
 - Trust boundary: no personally stayed claim, universal ranking, safety assurance, exact route/stroller verdict, room-selection guarantee, smoke/noise conclusion, pool-access guarantee, or stable-price promise.
-- Release gate: focused/native QA, exact generator output, responsive browser checks, source/privacy/scope checks, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
+- Release result: focused/native QA, exact generator output, responsive browser checks, source/privacy/scope checks, and independent reviewer `PASS` passed before the exact-path release; production invariants and production SEO QA passed after deployment.
 - Local result: ten trip-style hotel options, one compact comparison, rough total-night ranges, official facts, sampled online-review themes/conflicts, direct maps, visible FAQ/schema, and dependent routing from the stay guide and home page.
 - Review and QA: Prism (`019f8ae7-5f67-71c3-a1ed-8edd6cae20f3`) returned `PASS` on cycle 2 after both P2 findings were closed. Full regeneration, 47 tests, focused tests, native SEO QA, responsive checks, privacy/scope/source checks, roadmap JSON, JavaScript syntax, and whitespace checks passed.
 
