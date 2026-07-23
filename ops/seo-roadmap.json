@@ -889,8 +889,52 @@
       "implementation_summary": "Replaced duplicated area, hotel, and verification sections with five trip-shape starts, one five-row base comparison, three decision checks, four cluster routes, three visible FAQs aligned with schema, and one current source list. Named-property comparison remains on the separate ten-hotel page.",
       "qa_summary": "Deterministic generation; 53/53 repository tests; 4/4 focused tests; native SEO QA 0 errors and 0 warnings; JavaScript, JSON, whitespace, privacy, exact-scope, source-classification, and 1280/390/320 responsive checks passed.",
       "review_summary": "Independent reviewer Carson (019f8ce4-2aa3-7da3-a3c8-07fe9fcfa14d) returned PASS_WITH_P3 with no P0-P2. Two stale-status P3 notes were reconciled mechanically during verdict logging.",
-      "release_state": "review-clean; exact-path commit, push, Pages deployment, and production verification pending",
+      "release_commit": "7bc29933add65357ca2d83c39790614193d7165d",
+      "pages_run": 29975754626,
+      "release_state": "released-and-production-verified",
       "notes": "Selected by direct manual user instruction after FT-IMP-007 released. One existing URL only. No new URL, sitemap change, hotel-page edit, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-009",
+      "implementation_backlog_id": "IMP-024",
+      "research_backlog_id": "SRR-014",
+      "title": "Review and improve the Las Vegas family itinerary",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-23",
+      "completed_on": "2026-07-23",
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-family-itinerary-page-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/las-vegas-itinerary-page.test.mjs",
+        "site/family-itinerary/las-vegas-with-kids.html",
+        "status/las-vegas-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing itinerary page becomes a concise, useful day-by-day planning surface with realistic one-, two-, and three-day routes, age and heat pivots, stop rules, and clear handoffs to the completed activity and lodging pages.",
+      "production_invariant": "The existing Las Vegas itinerary URL remains canonical, indexable, and present in the sitemap; it provides distinct one-, two-, and three-day plans with visible alternatives and stop rules, routes to all-ages, teen, stay-area, and family-hotel planning, aligns visible FAQ and schema, and introduces no unsupported safety, exact-time, exact-route, stroller, sensory, smoke/noise, pool-access, ticket, opening-hour, or personally verified claim.",
+      "gsc_evidence_classification": "Reused authenticated read-only API snapshot collected 2026-07-22 with finalized data through 2026-07-20: 5 impressions, 0 clicks, and page-level average position 22.6. The one-day-old evidence is current but unchanged and too sparse for query-specific or causal conclusions.",
+      "implementation_summary": "Replaced duplicate starter, abstract matrix, and generic pacing layers with three trip-length starts, three distinct day-by-day plans, five persona/trip pivots, four stop rules, four sibling-page routes, three visible FAQs aligned with schema, and one current source list.",
+      "qa_summary": "Deterministic generation; 57/57 repository tests; 4/4 focused tests; native SEO QA 0 errors and 0 warnings; JavaScript, JSON, whitespace, privacy, exact-scope, source-classification, and 1280/390/320 responsive checks passed.",
+      "review_summary": "Independent reviewer Ohm (019f8e37-8452-7d00-8c74-62198bfc4c93) returned PASS_WITH_P3 with no P0-P2. The stale QA-status P3 was reconciled mechanically during verdict logging.",
+      "release_state": "review-clean; exact-path commit, push, Pages deployment, and production verification pending",
+      "notes": "Selected by direct manual user instruction after FT-IMP-008 released. One existing URL only. No new URL, sitemap change, sibling-page edit, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }

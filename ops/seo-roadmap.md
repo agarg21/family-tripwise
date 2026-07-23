@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 Last re-scored: 2026-07-14
 Next re-score due: 2026-07-21
@@ -51,14 +51,26 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Completed and released | Commit `3f555d65`; Pages run `29930917894` and production verification passed. |
 | 17 | `FT-PUB-002` research and publish the Las Vegas family-hotel comparison | Content/product quality | Completed and released | Commit `bda58e8`; Pages run `29944609529` and production verification passed. |
 | 18 | `FT-IMP-007` review and improve the Las Vegas teen guide | Content/product quality | Completed and released | Commit `ae917f1`; Pages run `29964564369` and production verification passed. |
-| 19 | `FT-IMP-008` simplify the Las Vegas stay-area guide | Content/product quality | Review-clean; release pending | Five base types now replace duplicated area, hotel, and verification sections; 53/53 tests, responsive QA, and independent review passed. |
+| 19 | `FT-IMP-008` simplify the Las Vegas stay-area guide | Content/product quality | Completed and released | Commit `7bc2993`; Pages run `29975754626` and production verification passed. |
+| 20 | `FT-IMP-009` review and improve the Las Vegas family itinerary | Content/product quality | Review-clean; release pending | Three day-by-day route lengths, five pivots, and four stop rules replace duplicated abstract layers; 57/57 tests, responsive QA, and independent review passed. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+### FT-IMP-009 - Review and improve the Las Vegas family itinerary
+
+- Selected: 2026-07-23 under the user's standing manual instruction to continue Las Vegas work without approval pauses.
+- State: research, implementation, full QA, and independent review complete; exact-path release and production verification pending.
+- Target: `https://familytripwise.com/family-itinerary/las-vegas-with-kids.html`.
+- Evidence: the July 22 authenticated API snapshot is one day old, unchanged, and finalized through July 20; the page has 5 impressions at average position 22.6. That sample is too small for a query-rank or performance conclusion.
+- Product requirement: inspect current itinerary SERPs and representative ranking pages, apply LV-P1 through LV-P5, and audit every visible section. Build genuinely usable one-, two-, and three-day plans with age/heat pivots and stop rules rather than repeating the activity list.
+- Boundary: preserve the URL, canonical, indexability, and sitemap; sibling Las Vegas pages are planning dependencies but remain unchanged.
+- Release gate: durable review artifact, focused/native/responsive/source/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
+- Local result: three trip-length starts, three detailed day-by-day plans, five persona/trip pivots, four stop rules, four cluster handoffs, three visible FAQs aligned with schema, one current source list, and no duplicate generated starter sections. The durable review is `docs/research/las-vegas-family-itinerary-page-review.md`.
 
 ### FT-IMP-008 - Simplify the Las Vegas stay-area guide
 
 - Selected: 2026-07-22 under the user's standing manual instruction to continue Las Vegas work without approval pauses.
-- State: research, implementation, full QA, and independent review complete; exact-path release and production verification pending.
+- State: completed, released, and production-verified on 2026-07-22 at commit `7bc29933add65357ca2d83c39790614193d7165d`; GitHub Pages run `29975754626` succeeded.
 - Target: `https://familytripwise.com/where-to-stay/las-vegas-with-kids.html`.
 - Evidence: fresh July 22 page-level GSC has 13 impressions at average position 44.69; the July 22 Semrush check estimates only 20 monthly searches for the exact area query, while named hotel/resort variants are much larger and already route to the separate hotel comparison. The GSC sample is too small for a performance conclusion.
 - Product requirement: audit every section against current area/base SERPs, LV-P1/LV-P2/LV-P3/LV-P5, hotel-page overlap, scan cost, and trust boundaries. Keep one concise area/base decision path and route named-property work to the hotel page.

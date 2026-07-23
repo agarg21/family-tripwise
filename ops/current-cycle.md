@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual action `FT-IMP-008` is review-clean: the existing Las Vegas stay-area guide now has a concise five-base decision flow after a current area/base competitor, persona, hotel-overlap, and every-section audit. Full native QA and responsive verification passed, and Carson returned `PASS_WITH_P3` with no P0-P2; exact-path release and production verification remain. The user has authorized continuing through the Las Vegas page backlog without approval pauses, but each release remains bounded, independently reviewed, and separately recorded. The live all-ages, teen, hotel, itinerary, other-city pages, external accounts, indexing requests, affiliate CTAs, outreach, and recurring automation are excluded from this action. Fresh July 22 GSC is current but the stay page's 13 impressions are too sparse for a performance conclusion. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual action `FT-IMP-009` is review-clean: the existing Las Vegas family-itinerary page now has three real day-by-day route lengths, five persona/trip pivots, and four stop rules after current SERP, ranking-page, LV-P1-through-LV-P5, completed-cluster, every-section, and trust review. Full native and responsive QA passed, and Ohm returned `PASS_WITH_P3` with no P0-P2; exact-path release and production verification remain. The user has authorized continuing through the Las Vegas page backlog without approval pauses, but each release remains bounded, independently reviewed, and separately recorded. The live all-ages, teen, stay, hotel, other-city pages, external accounts, indexing requests, affiliate CTAs, outreach, and recurring automation are excluded from this action. The July 22 authenticated GSC snapshot is reused, current, and unchanged; the itinerary's 5 impressions at average position 22.6 are too sparse for a performance conclusion. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 The repository roadmap no longer has a calendar protection hold on the San Diego stay page. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, treat that report entry as a stale ledger mismatch and do not let it manufacture a scheduled action.
 
@@ -25,7 +25,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 - GSC: authenticated read-only API collection is working; the July 22 snapshot has finalized data through July 20, 651 impressions over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `ae917f1435b8c8f14e496fe4a6c774e20a460d37`; GitHub Pages run `29964564369` succeeded and production verification passed for the Las Vegas teen guide
+- Current released implementation: commit `7bc29933add65357ca2d83c39790614193d7165d`; GitHub Pages run `29975754626` succeeded and production verification passed for the Las Vegas stay-area guide
 
 ## Historical operating threads
 
@@ -154,7 +154,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-008` is review-clean for one existing Las Vegas stay-area URL; research, implementation, 53/53 tests, native/responsive QA, and independent review are complete, while exact-path release and production verification remain in this bounded transaction. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-009` is review-clean for one existing Las Vegas itinerary URL; research, implementation, 57/57 tests, native/responsive QA, and independent review are complete, while exact-path release and production verification remain in this bounded transaction. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 

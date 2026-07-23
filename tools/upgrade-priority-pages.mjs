@@ -701,50 +701,93 @@ const itineraryPages = {
     ]
   },
   "family-itinerary/las-vegas-with-kids.html": {
-    title: "Las Vegas Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    title: "Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Build a Las Vegas itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with heat, pools, meals, and skip notes.",
+      "Plan one, two or three realistic Las Vegas days with kids using resort resets, age and heat pivots, one-anchor days, and clear stop rules.",
     city: "Las Vegas",
+    schemaName: "Las Vegas family itinerary lengths",
+    removeGeneratedItinerarySections: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>Las Vegas itinerary with kids</h1>", "<h1>Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
+      ["<p>A starter family itinerary for Las Vegas with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose a trip length, protect one reset, and give each day one main job. Then swap the anchor for age, heat, weather, and hotel location.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 23, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transport, weather, ticket, and minor policy for your dates.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
     links: {
       allAges: "../things-to-do/las-vegas-with-kids.html",
       stay: "../where-to-stay/las-vegas-with-kids.html",
       teen: "../things-to-do/las-vegas-with-teens.html"
     },
     clusterCards: [
-      ["All-ages activity guide", "Compare hotel pools, Bellagio fountains, Discovery Children's Museum, High Roller, Red Rock Canyon, and immersive stops by age, heat, rain, nap fit, and walking friction.", "../things-to-do/las-vegas-with-kids.html", "Open Las Vegas things to do with kids"],
-      ["Teen-specific swaps", "Use Red Rock, immersive exhibits, shows, skyline stops, and food plans when older kids need more than pool-and-stroller pacing.", "../things-to-do/las-vegas-with-teens.html", "Open Las Vegas with teens"],
-      ["Where to stay first", "Pick the hotel base before the route. Pool setup, room location, casino-floor exposure, parking, resort fees, and walk paths can shape the whole trip.", "../where-to-stay/las-vegas-with-kids.html", "Open where to stay in Las Vegas with kids"]
+      ["Choose the activity anchor", "Compare 12 current choices by age, heat, rain, budget, nap fit, and planning friction before placing one into the day.", "../things-to-do/las-vegas-with-kids.html", "Open Las Vegas things to do with kids"],
+      ["Give teens one real choice", "Use the older-kid guide when a thrill, desert, immersive, skyline, history, or game anchor should shape the route.", "../things-to-do/las-vegas-with-teens.html", "Open Las Vegas with teens"],
+      ["Choose the base type", "Compare Center Strip, South Strip, suite, west-side, and Downtown bases before assuming the map reflects the daily effort.", "../where-to-stay/las-vegas-with-kids.html", "Compare Las Vegas stay bases"],
+      ["Compare named hotels", "Use the ten-hotel page for rough nightly totals, room setup, pool role, official facts, recent online-review themes, and maps.", "../where-to-stay/las-vegas-family-hotels.html", "Compare Las Vegas family hotels"]
     ],
+    quickTitle: "Pick the trip length before the attractions",
     quick: [
-      ["Best 1-day plan", "Pool morning, Bellagio visual stop, early dinner, one skyline/show option", "Keeps Vegas memorable without forcing kids through a Strip marathon."],
-      ["Best 2-day plan", "Pool/classic visuals plus museum or Red Rock by age", "Gives one resort-centered day and one off-Strip or kid-centered anchor."],
-      ["Best 3-day plan", "Arrival pool, classic Strip moment, age-specific anchor", "Adds enough slack for heat, late nights, and sensory overload."],
-      ["Best toddler pace", "Pool, nap, Discovery Children's Museum, short fountains stop", "Indoor and hotel-reset blocks matter more than checking off famous sights."],
-      ["Best teen pace", "Red Rock or immersive exhibit, pool reset, age-appropriate evening", "Older kids usually need one distinctive anchor beyond hotel wandering."],
-      ["Best rainy/heat swap", "Discovery Children's Museum, High Roller, or selected indoor exhibit", "Choose by age and sensory tolerance, then keep resort walking short."],
-      ["Best stay pairing", "Hotel pool and room logistics first, sightseeing second", "Treat hotel fit as part of the itinerary and verify fees, pool rules, smoke exposure, and walking routes."],
-      ["What to skip", "Aimless Strip walking with tired kids", "Distances, heat, casino detours, and crowds are harder than maps imply."]
+      ["One day", "One classic visual + one paid or age-led anchor", "Keep the hotel reset or slow meal; do not turn the Strip into the activity."],
+      ["Two days", "One resort/Strip day + one child-chosen anchor day", "This separates spectacle from a museum, nature, or older-kid choice."],
+      ["Three days", "Soft arrival + classic day + contrast day", "Use the third day for Downtown, Red Rock, a younger-child anchor, or a teen choice instead of another resort loop."]
     ],
     rows: [
-      ["1-day highlights", "Pool morning; Bellagio Conservatory/fountains; early dinner; High Roller or age-appropriate show", "Short first visits", "Midday room/pool reset", "Moderate-high; Strip walking and resort corridors add friction", "Eat before evening crowds and verify kid-appropriate venues", "Multiple casino-resort walks just because they look close"],
-      ["2-day first visit", "Day 1 pool and classic visuals; Day 2 Discovery Children's Museum, Red Rock, or Area15-style stop by age", "Weekend families", "Protect one late morning or afternoon at the hotel", "Variable; lower with rideshares/car and a contained hotel base", "Make one dinner easy and one dinner interesting", "Trying to do Red Rock and a long Strip night on the same day"],
-      ["3-day balanced plan", "Arrival pool; classic Strip/spectacle day; age-specific off-Strip or nature anchor", "Most families", "One true downtime block daily", "Lower if each day has one main zone", "Stock snacks/water and keep backup meals close", "Making every evening a late night"],
-      ["Toddler-paced plan", "Pool; nap; Discovery Children's Museum; one short fountains or conservatory stop", "Babies, toddlers, preschoolers", "Nap or quiet room time is the anchor", "Lower if you avoid long indoor resort walks", "Use hotel meals or verified nearby casual stops", "Late shows, long Strip walks, and loud sensory-heavy stops"],
-      ["Teen-paced plan", "Red Rock or immersive exhibit; pool reset; skyline or show option", "Tweens and teens", "Reset can be pool, food, or quiet room time", "Drive/rideshare friction plus heat checks matter", "Let teens choose one food or spectacle piece", "Repeating the same casino-resort wander each day"],
-      ["Rainy/heat version", "Indoor museum or exhibit; contained skyline stop; hotel reset", "Any age with weather or heat constraints", "Use the hotel as the main pressure-release valve", "Lower if the plan avoids long outdoor transfers", "Do not rely on walking to find dinner with tired kids", "Outdoor-heavy Red Rock or pool-only day in poor conditions"]
+      ["One-day first look", "One classic visual, one child-fit anchor, one reset", "Short visit or road-trip stop", "Keep the middle block slow", "Property and route specific", "Choose dinner before the last activity", "A second resort loop"],
+      ["Two-day first trip", "Resort/Strip day plus one contrast day", "First-time families", "Protect one hotel return", "One main zone per half day", "Make one dinner deliberately easy", "Nature and a late Strip night together"],
+      ["Three-day balanced trip", "Soft arrival, classic day, age-led contrast day", "Families wanting one slower day", "Keep one block optional daily", "Varies by base and chosen anchor", "Use meals as route boundaries", "Three late evenings"]
     ],
+    dayPlans: [
+      ["One-day first look", "Short visits, stopovers, and families who want one recognizable Vegas moment", [
+        ["First block", "Choose one classic visual near the stay base. Bellagio Conservatory and fountains are a useful central option after checking the current display and fountain schedule."],
+        ["Middle block", "Use the hotel, pool if access and weather fit, or a deliberately slow meal as the reset. Do not add another resort just because it looks close."],
+        ["Last block", "Choose one contained paid or age-led anchor: High Roller, a current show, Shark Reef, or one older-kid choice. Check the exact ticket and minor policy."]
+      ], "Stop after the last anchor. A second long resort loop is the first thing to remove."],
+      ["Two-day first trip", "Most first-time families who want spectacle plus one child-led day", [
+        ["Day 1: resort + classic visual", "Start with the hotel or pool if it is genuinely part of the stay, then use one central or South Strip visual block and an early meal. Keep the evening optional."],
+        ["Day 2: one contrast anchor", "Choose DISCOVERY Children's Museum for younger children, Red Rock for an outdoor-ready car day, or one AREA15/teen choice for older kids. Treat the selection as the day."],
+        ["Reset rule", "Return to the hotel or end sightseeing after the contrast anchor. Do not attach Red Rock, Downtown, or a major ticket to a second long Strip evening."]
+      ], "If Day 1 ran late, delete the Day 2 evening add-on before cutting the meal or reset."],
+      ["Three-day balanced trip", "Families who want a softer arrival and one day outside the resort corridor", [
+        ["Day 1: arrive softly", "Settle into the room, buy water or snacks, use the pool only if access and conditions fit, and keep dinner close to the base."],
+        ["Day 2: classic Las Vegas", "Use one visual block such as Bellagio plus one contained ticket, skyline, or show choice. Put the reset between them rather than crossing resorts continuously."],
+        ["Day 3: choose the contrast", "Pick Downtown history, DISCOVERY for younger children, Red Rock for a nature-led drive, or a teen-selected immersive or thrill anchor. Do not combine all four."]
+      ], "Keep one block optional each day and make only one evening a firm late plan."]
+    ],
+    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivots: [
+      ["Younger child, nap, or heat", "One indoor child-led anchor and the hotel reset", "Use DISCOVERY or Shark Reef instead of a long outdoor/resort sequence", "Transfer, stroller handling, stimulation, and return timing vary", "Venue access, exact route, weather, pool access, and meal plan"],
+      ["Teen or mixed ages", "One older-kid-selected anchor", "Use the teen guide for AREA15, Red Rock, thrills, skyline, history, or games", "Tickets, minor rules, younger-sibling fit, and split plans", "Exact experience, age/height policy, effects, and adult accompaniment"],
+      ["Pool-led resort trip", "Make the pool a full trip block", "Remove a sightseeing block rather than squeezing the pool between tickets", "Access, season, shade, and room-to-pool route are property specific", "Guest access, operating status, rules, and the family's complete stay plan"],
+      ["Nature or road-trip stop", "Use Red Rock as the contrast day", "Move the classic visual to a separate short block", "Weather, timed entry, service, driving, and outdoor readiness", "BLM alerts, reservation rules, conditions, water, and vehicle plan"],
+      ["Short or budget-led visit", "One free visual and one chosen spend", "Use Bellagio plus a low-commitment activity instead of several tickets", "Transport, parking, meals, and game spend still accumulate", "Current schedules, total ticket cost, parking, and the stop rule"]
+    ],
+    plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "Arrival afternoon": "Use the hotel as the first activity: pool if open, room setup, snacks, and an early dinner. Save the bigger Strip or off-Strip move for a rested block.",
-      "Classic Vegas day": "Do one short visual loop, such as Bellagio Conservatory and fountains, then leave before the walking and crowds swallow the day.",
-      "Off-Strip day": "Choose Discovery Children's Museum for younger kids, Red Rock for older outdoor-ready kids, or a specific immersive exhibit for teens. Do not make it a vague wandering day.",
-      "Rain or heat backup": "Move the main activity indoors, shorten resort corridors, and keep rideshare/car logistics visible. Heat and sensory overload can be as disruptive as rain.",
-      "Toddler adjustment": "Protect nap and meal timing, avoid late-night promises, and use the pool or room reset before adding one short evening visual.",
-      "Teen adjustment": "Give teens a distinctive anchor, then build in pool or food downtime so the trip does not become only logistics and fees."
+      "One main job per half day": "A pool, major museum, nature drive, or ticketed attraction already fills a block. Do not use a second headline stop as the transfer plan.",
+      "Treat the reset as scheduled": "Choose the hotel return, pool, quiet room time, or slow meal before the day starts. Remove the next activity when the reset disappears.",
+      "Map the exact entrance": "A resort name or neighborhood pin does not show the actual entrance, rideshare pickup, indoor detour, or stroller path. Check the chosen route for the date.",
+      "Set the evening stop rule": "Decide which evening is allowed to run late and what gets deleted when the child is done. A paid ticket does not make a tired family recover."
     },
     faqs: [
-      ["How many days do families need in Las Vegas?", "Two or three days works best if the hotel pool and downtime are part of the trip. One day can work if families keep the plan to pool time, one classic visual stop, and one age-appropriate evening idea."],
-      ["What should families skip on a short Las Vegas trip?", "Avoid aimless Strip walking, repeated casino-resort crossings, and late nights every night. Heat, smoke exposure, crowds, and fees can make a simple plan harder than expected."],
-      ["What is the easiest rainy-day or heat-day Las Vegas itinerary with kids?", "Use a kid-centered indoor stop, a contained skyline or resort visual, and a hotel reset. Verify current hours, pool rules, ticketing, parking, and transport before committing."]
+      ["How many days do families need in Las Vegas?", "Two days is the clearest first-trip structure: one resort or classic-visual day and one child-chosen contrast day. Add a third day for a softer arrival or a separate Downtown, nature, younger-child, or teen anchor."],
+      ["What should families skip on a short Las Vegas trip?", "Skip repeated resort crossings, multiple major tickets in one day, and a firm late plan every night. Keep one classic visual, one age-fit anchor, a meal plan, and a real stop rule."],
+      ["How should families change the itinerary for heat or rain?", "Move the main block to a current indoor attraction, keep the meal and hotel reset close to that choice, and drop the outdoor or pool block when conditions or access do not fit. Recheck current venue and weather information before leaving."]
+    ],
+    sourcesIntro: "Official attraction and route sources checked July 23, 2026. Recheck schedules, operating status, tickets, weather, reservations, accessibility, and minor policies for the exact date.",
+    sources: [
+      ["Visit Las Vegas family guide", "https://www.visitlasvegas.com/experience/post/things-to-do-in-las-vegas-with-kids/"],
+      ["Bellagio fountains", "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"],
+      ["Bellagio Conservatory", "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"],
+      ["DISCOVERY Children's Museum FAQ", "https://discoverykidslv.org/about/faq/"],
+      ["Shark Reef Aquarium", "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"],
+      ["High Roller", "https://www.caesars.com/linq/things-to-do/attractions/high-roller"],
+      ["AREA15 visit information", "https://www.area15.com/visit-us"],
+      ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
+      ["Neon Museum visit FAQ", "https://neonmuseum.org/faqs/"],
+      ["Las Vegas photo source and attribution", "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"],
+      ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
     ]
   },
   "family-itinerary/new-york-city-with-kids.html": {
@@ -1212,6 +1255,17 @@ ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-c
         </div>`;
 }
 
+function renderDayPlans(plans) {
+  return `        <div class="detail-card-grid">
+${plans.map(([title, fit, blocks, stopRule]) => `          <article class="detail-card itinerary-plan">
+            <h3>${esc(title)}</h3>
+            <section><h4>Use this for</h4><p>${esc(fit)}</p></section>
+            ${blocks.map(([label, body]) => `<section><h4>${esc(label)}</h4><p>${esc(body)}</p></section>`).join("\n            ")}
+            <section><h4>Stop rule</h4><p>${esc(stopRule)}</p></section>
+          </article>`).join("\n")}
+        </div>`;
+}
+
 function renderClusterCards(cards) {
   return `        <div class="card-grid">
 ${cards.map(([title, body, href, linkText]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
@@ -1460,6 +1514,16 @@ function removeGeneratedBodySections(html) {
   return removeGeneratedAgeSections(html);
 }
 
+function removeGeneratedItinerarySections(html) {
+  const start = html.indexOf('      <section class="container page-section itinerary-layout">');
+  const end = html.indexOf('      <section class="container page-section source-section">');
+  if (start === -1 && end !== -1) return html;
+  if (start === -1 || end === -1 || end <= start) {
+    throw new Error("Expected generated itinerary sections were not found");
+  }
+  return `${html.slice(0, start)}${html.slice(end)}`;
+}
+
 function replaceSourceSection(html, page) {
   if (!page.sources?.length) return html;
   const section = `      <section class="container page-section source-section">
@@ -1667,6 +1731,71 @@ function renderItineraryUpgrade(page) {
         ["Where to stay first", `Pick the lodging base before locking the route. Area, parking, transit, stroller, noise, and meal access can change the day shape.`, page.links?.stay || `../where-to-stay/${slugify(page.city)}-with-kids.html`, `Open where to stay in ${page.city} with kids`]
       ];
 
+  if (page.dayPlans?.length) {
+    const faqSection = page.visibleFaqs && page.faqs?.length
+      ? `
+      <section class="band rank-ready-section" aria-labelledby="itinerary-faq-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Common planning questions</p>
+            <h2 id="itinerary-faq-title">${esc(page.faqTitle || `${page.city} family itinerary FAQ`)}</h2>
+          </div>
+${renderFaqs(page.faqs)}
+        </div>
+      </section>
+`
+      : "";
+    return `${markerStart}
+      <section class="band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Quick route decisions</p>
+            <h2>${esc(page.quickTitle)}</h2>
+          </div>
+${renderQuickPicks(page.quick)}
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Day-by-day routes</p>
+          <h2>Use one, two, or three days without stacking the Strip</h2>
+        </div>
+        <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
+${renderDayPlans(page.dayPlans)}
+      </section>
+
+      <section class="band intro-band rank-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Change the route</p>
+            <h2>Pivot for age, pool time, heat, nature, or budget</h2>
+          </div>
+${renderActivityComparison(page.pivots, page.pivotHeaders)}
+        </div>
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Stop rules</p>
+          <h2>${esc(page.plansTitle)}</h2>
+        </div>
+${renderPlans(page.plans)}
+      </section>
+
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">Cluster links</p>
+          <h2>Finish the activity and lodging decisions</h2>
+        </div>
+        <div class="card-grid">
+${clusterCards.map(([title, body, href, linkText]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
+        </div>
+      </section>
+${faqSection}${markerEnd}
+`;
+  }
+
   return `${markerStart}
       <section class="band rank-ready-section">
         <div class="container">
@@ -1789,6 +1918,7 @@ function upgradeFile(outDir, path, page, type) {
   html = applyBaseReplacements(html, page.baseReplacements);
   if (page.removeGeneratedAgeSections) html = removeGeneratedAgeSections(html);
   if (page.removeGeneratedBodySections) html = removeGeneratedBodySections(html);
+  if (page.removeGeneratedItinerarySections) html = removeGeneratedItinerarySections(html);
   html = replaceSourceSection(html, page);
   const section = type === "activity"
     ? renderActivityUpgrade(page)

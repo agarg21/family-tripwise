@@ -1,12 +1,27 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 ## Active
 
-No standalone research task is active. `FT-IMP-008` remains the active implementation transaction.
+No standalone research task is active. `FT-IMP-009` remains the active implementation transaction.
 
 ## Recently Done
+
+### SRR-014: Las Vegas Family-Itinerary Competitor And Section Review
+
+Status: done inside implementation transaction
+
+Completed: 2026-07-23
+
+Roadmap ID: `FT-IMP-009`
+
+Result:
+
+- Compared current destination, firsthand, commercial, generated-itinerary, and qualitative community results without treating anecdotes as demand or verified universal facts.
+- Applied LV-P1 through LV-P5 and recorded a keep/compress/replace/remove decision for every visible section.
+- Separated activity selection, lodging selection, and itinerary sequencing, then defined three route lengths, five pivots, and four stop rules.
+- Artifact: `docs/research/las-vegas-family-itinerary-page-review.md`.
 
 ### SRR-013: Las Vegas Stay-Area Competitor And Section Review
 

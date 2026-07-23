@@ -1,12 +1,45 @@
 # Implementation Backlog
 
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 ## Active
 
-### IMP-023: Simplify The Las Vegas Stay-Area Guide
+### IMP-024: Improve The Las Vegas Family Itinerary
 
 Status: review-clean; exact-path release pending
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-009`
+
+Review and improve the existing Las Vegas family-itinerary page so it turns the completed activity and lodging decisions into realistic one-, two-, and three-day plans. Apply current itinerary SERPs, LV-P1 through LV-P5, every-section, evidence, repetition, and trust review before implementation.
+
+Affected production URL:
+
+- `https://familytripwise.com/family-itinerary/las-vegas-with-kids.html`
+
+Boundaries:
+
+- Preserve the existing URL, canonical, indexability, and sitemap membership.
+- Use the live all-ages, teen, stay-area, and family-hotel pages as planning dependencies without editing them.
+- Do not publish exact travel-time, route, stroller, safety, sensory, pool-access, opening-hour, ticket, or personally verified claims.
+- Do not create another URL, request indexing, mutate an external account, or add automation.
+- Complete focused/native/responsive QA and independent review before exact-path release.
+
+Local result:
+
+- Replaced duplicate generated and upgraded itinerary layers with three trip-length starts, three day-by-day route cards, five persona/trip pivots, four stop rules, four cluster routes, and three visible FAQs.
+- Routed activity, teen, base, and named-hotel decisions to the completed sibling pages without changing them.
+- Replaced stale hotel-source residue and the original image redirect with current itinerary sources and a fully attributed 1280-pixel derivative.
+- Added deterministic focused tests and the durable research record at `docs/research/las-vegas-family-itinerary-page-review.md`.
+- Full deterministic generation, 57/57 repository tests, 4/4 focused tests, native SEO QA, responsive checks at 1280/390/320, JSON/JavaScript/whitespace/privacy/scope checks, and source classification passed.
+- Independent reviewer Ohm (`019f8e37-8452-7d00-8c74-62198bfc4c93`) returned `PASS_WITH_P3` with no P0-P2; the stale QA-status P3 was reconciled mechanically during verdict logging.
+
+## Completed
+
+### IMP-023: Simplify The Las Vegas Stay-Area Guide
+
+Status: done and released
 
 Selected: 2026-07-22
 
@@ -33,12 +66,7 @@ Local result:
 - Added deterministic focused tests and the durable research record at `docs/research/las-vegas-stay-area-page-review.md`.
 - Full generation, 53/53 repository tests, 4/4 focused tests, native SEO QA, responsive checks at 1280/390/320, JSON/JavaScript/whitespace/privacy/scope checks, and source classification passed.
 - Independent reviewer Carson (`019f8ce4-2aa3-7da3-a3c8-07fe9fcfa14d`) returned `PASS_WITH_P3` with no P0-P2; both stale-status P3 notes were reconciled during mechanical verdict logging. Exact-path release is authorized.
-
-## Selected
-
-No implementation task is selected outside the active Las Vegas stay-area action.
-
-## Completed
+- Released and production-verified at commit `7bc29933add65357ca2d83c39790614193d7165d`; GitHub Pages run `29975754626` succeeded.
 
 ### IMP-022: Improve The Las Vegas Teen Guide
 
