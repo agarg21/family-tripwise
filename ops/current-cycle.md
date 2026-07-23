@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 ## Cycle Name
 
@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual action `FT-IMP-009` is review-clean: the existing Las Vegas family-itinerary page now has three real day-by-day route lengths, five persona/trip pivots, and four stop rules after current SERP, ranking-page, LV-P1-through-LV-P5, completed-cluster, every-section, and trust review. Full native and responsive QA passed, and Ohm returned `PASS_WITH_P3` with no P0-P2; exact-path release and production verification remain. The user has authorized continuing through the Las Vegas page backlog without approval pauses, but each release remains bounded, independently reviewed, and separately recorded. The live all-ages, teen, stay, hotel, other-city pages, external accounts, indexing requests, affiliate CTAs, outreach, and recurring automation are excluded from this action. The July 22 authenticated GSC snapshot is reused, current, and unchanged; the itinerary's 5 impressions at average position 22.6 are too sparse for a performance conclusion. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual research action `FT-RES-008` is complete and review-clean. It used current GSC context, logged-in Semrush Chrome evidence, query-level SERP overlap, ranking pages, qualitative parent discussions, five Chicago persona hypotheses, and every-section audits to define the Chicago cluster. The decision keeps the existing stay page focused on areas, approves one future evidence-backed family-hotel page, and promotes exactly one next implementation: `FT-IMP-010` / `IMP-025` for the existing all-ages activity hub. No `site/**`, publication, indexing request, external account, affiliate CTA, outreach, or recurring automation changed. The fresh July 23 authenticated GSC snapshot is finalized through July 21; Chicago's 102 impressions across three visible page rows remain directional discovery, not query-specific ranking or causal evidence. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 The repository roadmap no longer has a calendar protection hold on the San Diego stay page. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, treat that report entry as a stale ledger mismatch and do not let it manufacture a scheduled action.
 
@@ -22,10 +22,10 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 22 snapshot has finalized data through July 20, 651 impressions over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
+- GSC: authenticated read-only API collection is working; the July 23 snapshot has finalized data through July 21, 681 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `7bc29933add65357ca2d83c39790614193d7165d`; GitHub Pages run `29975754626` succeeded and production verification passed for the Las Vegas stay-area guide
+- Current released implementation: commit `48417b0aedb17375e4474711302574e11da53494`; GitHub Pages run `29994060699` succeeded and production verification passed for the Las Vegas family itinerary
 
 ## Historical operating threads
 
@@ -154,7 +154,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-009` is review-clean for one existing Las Vegas itinerary URL; research, implementation, 57/57 tests, native/responsive QA, and independent review are complete, while exact-path release and production verification remain in this bounded transaction. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-010` / `IMP-025` is the sole ready substantive action: improve the existing Chicago all-ages things-to-do hub after a wider candidate and every-section review. The separately approved Chicago family-hotel page follows in a later evidence-pack transaction. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -164,7 +164,7 @@ Deferred research topics are queued for later validation, not immediate implemen
 Findings to preserve:
 
 - Current destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio.
-- San Diego is the first deep cluster; Las Vegas is the next city, handled one page at a time.
+- San Diego and Las Vegas are the first two deep clusters; Chicago is the next city, handled first as one research decision pack and then one page at a time.
 - Existing pages should be improved before new cities are created.
 - Best-family-hotel standalone pages require a human-review path before firm hotel recommendations are published.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
@@ -211,7 +211,7 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight after deployment: sitemap returned 200 with 22 parsed URLs; robots returned 200 and advertises the sitemap; all configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-07-22.json`, collected through the authenticated read-only API on July 22 with finalized data through July 20.
+- Current normalized source: `ops/gsc-snapshots/2026-07-23.json`, collected through the authenticated read-only API on July 23 with finalized data through July 21.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos.

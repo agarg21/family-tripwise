@@ -52,14 +52,40 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 17 | `FT-PUB-002` research and publish the Las Vegas family-hotel comparison | Content/product quality | Completed and released | Commit `bda58e8`; Pages run `29944609529` and production verification passed. |
 | 18 | `FT-IMP-007` review and improve the Las Vegas teen guide | Content/product quality | Completed and released | Commit `ae917f1`; Pages run `29964564369` and production verification passed. |
 | 19 | `FT-IMP-008` simplify the Las Vegas stay-area guide | Content/product quality | Completed and released | Commit `7bc2993`; Pages run `29975754626` and production verification passed. |
-| 20 | `FT-IMP-009` review and improve the Las Vegas family itinerary | Content/product quality | Review-clean; release pending | Three day-by-day route lengths, five pivots, and four stop rules replace duplicated abstract layers; 57/57 tests, responsive QA, and independent review passed. |
+| 20 | `FT-IMP-009` review and improve the Las Vegas family itinerary | Content/product quality | Released and production-verified | Commit `48417b0`; Pages run `29994060699`; production verification passed. |
+| 21 | `FT-RES-008` Chicago SERP-overlap cluster and persona decision pack | Content/product quality | Completed and review-clean | Query-level overlap, exact Semrush phrases, five personas, every-section audits, hotel/area architecture, and one promoted action passed independent review. |
+| 22 | `FT-IMP-010` improve the Chicago all-ages things-to-do hub | Content/product quality | Ready | Wider candidate review, one complete comparison, five persona routes, free/weather support, and less repeated prose on the existing URL. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+### FT-RES-008 - Chicago SERP-overlap cluster and persona decision pack
+
+- Selected: 2026-07-23 by direct manual user instruction after the Las Vegas cluster was completed.
+- State: completed and review-clean on 2026-07-23.
+- Scope: research current Chicago query families and observed ranking-page overlap; inspect representative ranking pages and qualitative parent discussions; derive Chicago-specific persona hypotheses; audit all four existing Chicago pages; decide whether family-hotel list intent deserves a separate named-property page; and promote exactly one bounded implementation.
+- Evidence: the fresh July 23 authenticated GSC snapshot is finalized through July 21; three Chicago page rows have 102 impressions total, while the teen page has no page row. This is discovery context only.
+- Boundary: no `site/**` edit, publication, indexing request, external-account mutation, affiliate CTA, outreach, or recurring automation.
+- Release gate: durable research/status/roadmap records, native/focused evidence and consistency checks, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path push.
+- Research result: nine overlap clusters, five persona hypotheses, every-section decisions for all four current Chicago pages, and a clear architecture in which the existing stay page owns areas while one future hotel page owns named properties.
+- Hotel decision: approve one future `chicago-family-hotels.html` comparison after a durable evidence pack; do not create separate resort, pool, suite, downtown, or near-attraction URLs.
+- Promoted action: `FT-IMP-010` / `IMP-025`, improve the existing all-ages things-to-do page first because it has the largest observed demand, 52 early GSC impressions, and substantial repeated content.
+- Artifacts: `docs/research/chicago-family-cluster-decision-pack.md` and `status/chicago-pages.md`.
+- Review: Carson (`019f8e60-ca8b-73c2-b344-43a0e93c606e`) returned `PASS` on cycle 3 after both P2 traceability gaps and all P3 notes were closed; no P0-P3 remains.
+- QA: 57/57 tests, native SEO QA 0/0, roadmap JSON, focused page/persona/cluster/action/source/privacy/scope checks, and whitespace checks passed.
+
+### FT-IMP-010 - Improve the Chicago all-ages things-to-do hub
+
+- State: ready; select it only as the next separate substantive transaction.
+- Target: `https://familytripwise.com/things-to-do/chicago-with-kids.html`.
+- Baseline: 52 impressions, 0 clicks, and page-level average position 58.88 in the fresh July 23 authenticated snapshot. This is not a query-specific rank.
+- Product requirement: research a wider candidate pool, apply CHI-P1 through CHI-P5, preserve one complete comparison, keep deep notes only for high-friction choices, and add compact free/budget plus indoor/weather support.
+- Boundary: preserve URL/canonical/indexability/sitemap; do not edit the teen, stay, itinerary, or future hotel page and do not create another URL.
+- Release gate: durable candidate/every-section review, focused/native/responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
 
 ### FT-IMP-009 - Review and improve the Las Vegas family itinerary
 
 - Selected: 2026-07-23 under the user's standing manual instruction to continue Las Vegas work without approval pauses.
-- State: research, implementation, full QA, and independent review complete; exact-path release and production verification pending.
+- State: completed, released, and production-verified on 2026-07-23 at commit `48417b0aedb17375e4474711302574e11da53494`; GitHub Pages run `29994060699` succeeded.
 - Target: `https://familytripwise.com/family-itinerary/las-vegas-with-kids.html`.
 - Evidence: the July 22 authenticated API snapshot is one day old, unchanged, and finalized through July 20; the page has 5 impressions at average position 22.6. That sample is too small for a query-rank or performance conclusion.
 - Product requirement: inspect current itinerary SERPs and representative ranking pages, apply LV-P1 through LV-P5, and audit every visible section. Build genuinely usable one-, two-, and three-day plans with age/heat pivots and stop rules rather than repeating the activity list.

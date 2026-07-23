@@ -1166,3 +1166,32 @@ QA evidence:
 - Full deterministic generation passed; `node --test tools/*.test.mjs` passed 57/57 and the focused itinerary file passed 4/4.
 - `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy, source classification, exact scope, and `git diff --check` passed.
 - Operator responsive checks at 1280, 390, and 320 pixels found no page-level overflow or console warning/error; the comparison table remained contained in its horizontal scroller and the 1280-pixel hero derivative rendered.
+
+### 2026-07-23 - `FT-RES-008` review cycles 1-3
+
+**Reviewer:** Carson (`019f8e60-ca8b-73c2-b344-43a0e93c606e`)
+
+**Final result: `PASS`**
+
+Cycle 1 findings and disposition:
+
+1. `P2` - The cluster summary lacked a query-level record of sampled queries, recurring pages/domains, SERP features, and concrete intersections. Closed by adding a 15-query observation matrix and explicit overlap conclusions.
+2. `P2` - Several Semrush values were attached only to unnamed variants. Closed by recording the exact phrase for every cited volume/KD value while preserving the non-additive warning.
+3. `P3` - The teen page's absent GSC page row used `0 known` clicks. Closed by changing impressions/clicks/position to no-row/N/A language.
+
+Cycle 2 P3 notes and disposition:
+
+1. Named the exact `weekend getaways from Chicago with kids` phrase for its directional estimate.
+2. Added exact downtown-family-hotel and near-Shedd observations to the query matrix so the CHI-C7 field/filter decision is auditable.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- The reviewer accepted the evidence method and freshness labels, Semrush non-additive handling, observed SERP-overlap clusters, five persona hypotheses, every-section audit for all four Chicago pages, named-hotel-versus-area architecture, exactly one promoted implementation, GSC and claim safety, privacy, no-site boundary, and exact path scope.
+
+QA evidence:
+
+- `node --test tools/*.test.mjs` passed 57/57.
+- `node tools/seo-qa.mjs` returned 0 errors and 0 warnings.
+- Roadmap JSON, four-page/five-persona/nine-cluster/action consistency, source count, privacy review, exact scope, and `git diff --check` passed.
+- After review, origin's mechanical July 23 GSC snapshot was fast-forwarded. Its immutable page rows mechanically refresh the Chicago total from 101 to 102 impressions and the stay row from 37 at 59.89 to 38 at 60.11; the activity and itinerary baselines and every research decision are unchanged.

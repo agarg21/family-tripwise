@@ -4,9 +4,51 @@ Last updated: 2026-07-23
 
 ## Active
 
+No implementation task is active. `FT-IMP-010` / `IMP-025` is the sole ready next Chicago action.
+
+## Ready
+
+### IMP-025: Improve The Chicago All-Ages Things-To-Do Hub
+
+Status: ready
+
+Roadmap ID: `FT-IMP-010`
+
+Source handoff:
+
+- `FT-RES-008: Create the Chicago SERP-overlap cluster and persona decision pack`
+- `docs/research/chicago-family-cluster-decision-pack.md`
+
+Goal:
+
+Improve the existing Chicago all-ages activity page after a wider current candidate review and every-section audit. Replace repeated cards, picks, tables, details, and mini-itineraries with one complete comparison, concise persona/trip-shape routes, and deep notes only for high-friction choices.
+
+Affected production URL:
+
+- `https://familytripwise.com/things-to-do/chicago-with-kids.html`
+
+Acceptance checks:
+
+- Preserve the existing URL, canonical, indexability, and sitemap membership.
+- Evaluate a wider current candidate pool; retain only choices with distinct age, weather, budget, pace, or geographic value.
+- Apply CHI-P1 through CHI-P5 without duplicating teen, area, future hotel, or itinerary jobs.
+- Add compact free/budget and indoor/weather support with current official checks.
+- Replace generic reused source residue with activity-specific sources.
+- Do not publish unsupported safety, exact-route, stroller, sensory, age-fit, price, opening-hour, or personally verified claims.
+- Focused tests, deterministic generation, native and responsive QA, privacy/scope validation, and independent review must pass before release.
+
+Not in this action:
+
+- the separately approved Chicago family-hotel page;
+- edits to the teen, stay, or itinerary URLs;
+- another new URL;
+- indexing requests, outreach, affiliate CTAs, external-account mutation, or recurring automation.
+
+## Completed
+
 ### IMP-024: Improve The Las Vegas Family Itinerary
 
-Status: review-clean; exact-path release pending
+Status: done and released
 
 Selected: 2026-07-23
 
@@ -34,8 +76,7 @@ Local result:
 - Added deterministic focused tests and the durable research record at `docs/research/las-vegas-family-itinerary-page-review.md`.
 - Full deterministic generation, 57/57 repository tests, 4/4 focused tests, native SEO QA, responsive checks at 1280/390/320, JSON/JavaScript/whitespace/privacy/scope checks, and source classification passed.
 - Independent reviewer Ohm (`019f8e37-8452-7d00-8c74-62198bfc4c93`) returned `PASS_WITH_P3` with no P0-P2; the stale QA-status P3 was reconciled mechanically during verdict logging.
-
-## Completed
+- Released and production-verified at commit `48417b0aedb17375e4474711302574e11da53494`; GitHub Pages run `29994060699` succeeded.
 
 ### IMP-023: Simplify The Las Vegas Stay-Area Guide
 

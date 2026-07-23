@@ -4,9 +4,24 @@ Last updated: 2026-07-23
 
 ## Active
 
-No standalone research task is active. `FT-IMP-009` remains the active implementation transaction.
+No standalone research task is active. `FT-IMP-010` / `IMP-025` is the sole ready Chicago implementation.
 
 ## Recently Done
+
+### SRR-015: Chicago SERP-Overlap Cluster, Persona, And Page Decision Pack
+
+Status: done
+
+Roadmap ID: `FT-RES-008`
+
+Result:
+
+- Built a query-level SERP observation matrix, nine overlap clusters, and five persona hypotheses from current GSC, logged-in Semrush Chrome, public SERPs, ranking pages, and qualitative parent discussions.
+- Audited every visible section of all four current Chicago pages.
+- Kept area/base intent on the existing stay page and approved one future named-property family-hotel page through the durable hotel evidence workflow.
+- Promoted exactly one next implementation: `FT-IMP-010` / `IMP-025` for the existing all-ages activity hub.
+- Artifact: `docs/research/chicago-family-cluster-decision-pack.md`.
+- Independent reviewer Carson returned `PASS` on cycle 3 with no P0-P3 findings.
 
 ### SRR-014: Las Vegas Family-Itinerary Competitor And Section Review
 
