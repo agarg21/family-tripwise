@@ -4,9 +4,24 @@ Last updated: 2026-07-22
 
 ## Active
 
-No standalone research task is active. The selected implementation transaction is in QA and review.
+No standalone research task is active. `FT-IMP-008` remains the active implementation transaction.
 
 ## Recently Done
+
+### SRR-013: Las Vegas Stay-Area Competitor And Section Review
+
+Status: done inside implementation transaction
+
+Completed: 2026-07-22
+
+Roadmap ID: `FT-IMP-008`
+
+Result:
+
+- Separated the area/base decision from named-property comparison after inspecting current area, hotel, OTA, and qualitative community results.
+- Applied LV-P1/LV-P2/LV-P3/LV-P5 and recorded a keep/compress/replace/remove decision for every visible section.
+- Reduced the proposed page to five base types, one comparison, three decisive checks, cluster routing, visible FAQ, and current source boundaries.
+- Artifact: `docs/research/las-vegas-stay-area-page-review.md`.
 
 ### SRR-012: Las Vegas Teen Page Competitor And Section Review
 

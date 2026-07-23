@@ -447,61 +447,72 @@ const stayPages = {
     ]
   },
   "where-to-stay/las-vegas-with-kids.html": {
-    title: "Where to Stay in Las Vegas With Kids: Booking Checks for Families",
+    title: "Where to Stay in Las Vegas With Kids: 5 Base Types Compared",
     description:
-      "Compare Las Vegas stay candidates using exact checks for total fees, room assignment, pool access, smoke and noise exposure, route friction, and family logistics.",
+      "Compare five Las Vegas family stay bases by trip style, activity anchors, transport, resort routine, and main tradeoffs, then move to named hotel options.",
     city: "Las Vegas",
+    schemaName: "Las Vegas family stay base options",
     constraintLed: true,
+    removeGeneratedBodySections: true,
+    hideHotelSection: true,
+    visibleFaqs: true,
     baseReplacements: [
-      ["<p>Compare the best family areas in Las Vegas by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.</p>", "<p>Compare Las Vegas stay candidates using exact property, room, fee, pool, smoke/noise, route, and reset checks. Area labels are research starting points, not reviewed family recommendations.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Last updated:</strong> July 15, 2026</p>"],
-      ["<h2>Start with the area, then shortlist hotels</h2>", "<h2>Start with constraints, then verify exact properties</h2>"],
-      ["<p>Start with the area fit, then use the hotel checks below to compare room setup, parking, pool value, meal friction, and kid reset options before booking.</p>", "<p>Use area names only to build a research shortlist. Before booking, verify the exact property, room assignment, total fees, pool access, smoke/noise exposure, and routes that matter for your dates.</p>"],
-      ["<p class=\"eyebrow\">Area recommender</p>\n          <h2>Best areas for families</h2>", "<p class=\"eyebrow\">Area research</p>\n          <h2>Stay candidates to investigate</h2>"],
-      ["<span role=\"columnheader\">Best for</span>\n            <span role=\"columnheader\">Watch out for</span>\n            <span role=\"columnheader\">Family fit</span>", "<span role=\"columnheader\">Research angle</span>\n            <span role=\"columnheader\">What to verify</span>\n            <span role=\"columnheader\">Evidence state</span>"],
-      ["<span role=\"cell\">First-timers, shows, short access to major sights</span>\n              <span role=\"cell\">Crowds, smoke, long casino walks</span>\n              <span role=\"cell\">Good</span>", "<span role=\"cell\">Classic-resort access hypothesis</span>\n              <span role=\"cell\">Exact walking route, room location, and smoke/noise exposure</span>\n              <span role=\"cell\">Needs property and route verification</span>"],
-      ["<span role=\"cell\">Mandalay Bay pool, value, airport access</span>\n              <span role=\"cell\">Farther from some attractions</span>\n              <span role=\"cell\">Great</span>", "<span role=\"cell\">Pool-reset and South Strip hypothesis</span>\n              <span role=\"cell\">Exact pool access, total fees, room assignment, and attraction routes</span>\n              <span role=\"cell\">Needs property and route verification</span>"],
-      ["<span role=\"cell\">Nature, calmer hotels, older kids</span>\n              <span role=\"cell\">Not a classic Strip stay</span>\n              <span role=\"cell\">Good</span>", "<span role=\"cell\">Nature-route and drive-plan hypothesis</span>\n              <span role=\"cell\">Exact drive times, parking, room conditions, and activity routes</span>\n              <span role=\"cell\">Needs date and route verification</span>"],
-      ["<span role=\"cell\">Budget and neon spectacle</span>\n              <span role=\"cell\">Noise and adult atmosphere</span>\n              <span role=\"cell\">Limited</span>", "<span role=\"cell\">Budget and neon-access hypothesis</span>\n              <span role=\"cell\">Exact room noise, smoke/adult exposure, walking, and rideshare routes</span>\n              <span role=\"cell\">Needs property and route verification</span>"],
-      ["<article class=\"activity-card\"><h3>Family hotel shortlist</h3><p>Prioritize hotels that clearly publish room layout, crib or rollaway policy, parking cost, pool hours, breakfast setup, and cancellation terms.</p></article>", "<article class=\"activity-card\"><h3>Property verification shortlist</h3><p>Keep only properties whose official room details and booking screen answer the family's make-or-break questions; a listing here is not a recommendation.</p></article>"],
-      ["<article class=\"activity-card\"><h3>Stroller and transit notes</h3><p>Before committing to a no-car stay, check sidewalks, elevators, transit station access, hill difficulty, ride-share pickup points, and car-seat logistics for your exact area.</p></article>", "<article class=\"activity-card\"><h3>Route and mobility checks</h3><p>Test the exact property-to-meal and property-to-activity routes, elevators, walking exposure, rideshare pickup points, stroller constraints, and car-seat logistics.</p></article>"],
-      ["<article class=\"activity-card\"><h3>Booking filters</h3><p>Prioritize family rooms or suites, breakfast, pool hours, laundry, parking cost, elevators, and walking distance to meals or transit.</p></article>", "<article class=\"activity-card\"><h3>Booking-screen checks</h3><p>Verify the exact room assignment, occupancy, total mandatory fees, pool access, cancellation terms, parking, and any amenity that would make or break the trip.</p></article>"]
+      ["<h1>Where to stay in Las Vegas with kids</h1>", "<h1>Where to Stay in Las Vegas With Kids: 5 Base Types Compared</h1>"],
+      ["<p>Compare the best family areas in Las Vegas by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.</p>", "<p>Choose the trip base first: central sights, a pool-led resort stay, a suite routine, Red Rock access, or a Downtown-focused visit. Then compare named hotels.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Area and transport sources checked:</strong> July 22, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Base-type guidance is editorial planning support. Exact walking, stroller, smoke/noise, pool, room, and price details depend on the property, dates, and route.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
     ],
+    quickHeading: "Five useful starting points",
     quick: [
-      ["Pool-reset hypothesis", "South Strip candidate", "Verify exact pool access, seasonal rules, room-to-pool route, and the full booking total."],
-      ["Classic-sights hypothesis", "Center Strip candidate", "Map the exact resort exits, walking route, room location, and smoke/noise exposure."],
-      ["Car-light hypothesis", "Exact Center or South Strip property", "Test current property-to-activity routes and rideshare or transit steps; the area name is not enough."],
-      ["Toddler-reset hypothesis", "Property with the shortest verified reset route", "Confirm room assignment, elevator path, pool access, meals, and the actual midday return."],
-      ["Attraction-route hypothesis", "Candidate near the chosen trip anchors", "Measure exact routes for the booked dates instead of assuming every Strip property is close."],
-      ["Full-cost hypothesis", "Off-Strip or South Strip candidate", "Compare mandatory fees, parking, rideshares, meals, and route time before calling it lower cost."],
-      ["Nature-route hypothesis", "Summerlin / Red Rock candidate", "Verify exact drive time, parking, heat plan, and the room setup for the dates."],
-      ["Extra verification", "Downtown / Fremont candidate", "Treat room noise, smoke/adult exposure, and family fit as UNKNOWN until the exact property and routes are reviewed."]
+      ["First Las Vegas trip", "Center Strip", "Start here when Bellagio, High Roller, shows, and central Strip sights shape most of the plan."],
+      ["Pool-led resort trip", "South Strip", "Start here when the resort pool and one or two South Strip attractions are part of the vacation."],
+      ["Kitchen or non-gaming priority", "Near-Strip suite base", "Choose the exact hotel first; kitchenette, laundry, casino path, and transport matter more than the area label."],
+      ["Red Rock and car-based days", "West side / Summerlin", "Use this base when nature and driving lead the trip, not when the family expects a classic walk-out Strip stay."],
+      ["Downtown-focused visit", "Downtown / Fremont", "Consider it when Downtown attractions are intentional; check the exact evening plan, room location, and transport back."]
     ],
+    matrixHeading: "Compare the base before the hotel",
+    areaHeaders: ["Base type", "Start here when", "What it simplifies", "Transport reality", "Main tradeoff", "Next step"],
     rows: [
-      ["South Strip", "Pool-reset and resort hypothesis", "Exact property, room, pool, fee, and route details", "Verify each trip route", "UNKNOWN until exact route", "UNKNOWN for exact room", "Verify total mandatory fees", "Measure exact exits and paths", "Pool and Shark Reef context", "Large-resort candidates", "Research starting point; human review required"],
-      ["Center Strip", "Classic-resort-access hypothesis", "Exact exits, walking exposure, smoke/noise, and room location", "Verify every route", "UNKNOWN until exact route", "UNKNOWN for exact room and path", "Verify parking and resort fees", "Measure indoor and outdoor paths", "Bellagio, High Roller, show context", "Large casino-resort candidates", "Research starting point; human review required"],
-      ["Summerlin / Red Rock", "Nature-route and drive-plan hypothesis", "Exact drive time, parking, heat, and room details", "Verify dated drive plan", "UNKNOWN until exact route", "UNKNOWN for exact room", "Verify parking and mandatory fees", "Property-specific", "Red Rock Canyon context", "Resort and suburban candidates", "Research starting point; human review required"],
-      ["Off-Strip candidates", "Space, parking, or total-cost hypothesis", "Full-stay cost plus rideshare, drive, and meal friction", "Verify every route", "UNKNOWN until exact route", "UNKNOWN for exact room", "Compare full booking totals", "Property-specific", "Depends on exact location", "Suite and select-service candidates", "Research starting point; human review required"],
-      ["Downtown / Fremont", "Budget and neon-access hypothesis", "Exact room noise, smoke/adult exposure, walking, and rideshare routes", "Verify every route", "UNKNOWN until exact route", "UNKNOWN for exact room and path", "Verify parking and mandatory fees", "Measure exact paths", "Fremont and museum context", "Casino-hotel candidates", "Extra verification and human review required"]
+      ["Center Strip", "A first visit centered on Bellagio, High Roller, shows, or nearby meals", "Keeps several classic sights in the same broad resort corridor", "Walking can still include long indoor detours and outdoor exposure; test the exact hotel exit", "Large-resort scale, crowds, and price vary sharply by property", "Compare Center Strip hotels and map the first two days"],
+      ["South Strip", "The pool or resort is a major trip anchor", "Pairs the hotel reset with Shark Reef, New York-New York, or a separate central-Strip move", "Rideshare, tram, or longer walks may be needed for Center and North Strip plans", "A strong pool does not guarantee a short room-to-pool or room-to-attraction route", "Confirm pool access and compare the complete stay total"],
+      ["Near-Strip suite base", "Kitchen, laundry, room separation, or a reduced casino path matters most", "Makes the room routine the first decision instead of resort spectacle", "Most activities still need a deliberate walk, ride, or drive plan", "The same label covers properties with very different locations and services", "Choose the exact suite hotel before judging the base"],
+      ["West side / Summerlin", "Red Rock, Downtown Summerlin, or car-based day trips lead the itinerary", "Reduces the need to cross the Strip before a west-side nature day", "Plan on driving or rideshare for most Strip and Downtown activities", "It is not a walk-out base for the classic Strip experience", "Price parking, drive time, and one Strip evening separately"],
+      ["Downtown / Fremont", "Neon Museum, Mob Museum, or Fremont is a deliberate part of the stay", "Keeps Downtown attractions together instead of treating them as a Strip add-on", "Strip activities require a separate ride; late-evening rules and pickup plans matter", "Noise and the evening environment vary by exact property and block", "Check the room location and family evening plan before booking"]
     ],
-    areaNote: "These are model-derived research starting points, not reviewed area recommendations. Keep smoke/noise, stroller access, route friction, pool usability, and family suitability as UNKNOWN until the exact property, room, route, date, and relevant human review are available.",
-    hotelNote: "Research checked against official property pages in July 2026. These are property verification candidates, not personally verified rankings or recommendations. Verify the exact room, assignment, mandatory fees, pool access, smoke/noise exposure, route, and current policy before paying.",
-    hotels: [
-      ["Mandalay Bay", "Property candidate for pool-access and total-fee verification", "Verify the exact bookable room, beds, occupancy, room assignment, elevator distance, and walking requirements", "The official Beach page describes the pool complex; verify date-specific access, hours, closures, height rules, and whether access is included", "Use the booking inclusion and official dining pages to verify breakfast cost, hours, and a workable morning plan", "Verify the exact room's refrigerator, microwave, kitchen, and guest-laundry access if any item matters", "Confirm crib/rollaway availability, cost, occupancy limits, and whether the request is guaranteed", "Compare the final booking total including resort fees, taxes, parking, and any pool or cabana costs", "UNKNOWN for the exact room and routes; ask about elevators, event spaces, pool decks, traffic, construction, and casino exposure", "Human-review question: do the exact room, total price, pool rules, activity routes, and reset plan work for this family's dates?"],
-      ["Vdara Hotel & Spa", "Property candidate for exact room, route, and smoke-exposure verification", "The official room page lists Studio Suite details; verify the exact bookable category, occupancy, beds, kitchenette equipment, assignment, and requests", "Verify date-specific pool access, hours, closures, rules, and whether the booked room includes access", "Use the booking inclusion and official dining pages to verify breakfast cost, hours, and a workable morning plan", "Verify the exact kitchenette equipment and guest-laundry access before relying on either", "Confirm crib/rollaway availability, cost, occupancy limits, and whether the request is guaranteed", "Compare the final booking total including destination or resort fees, taxes, valet or garage parking, and transport", "UNKNOWN for the exact room and walking paths; verify room placement plus every indoor/outdoor route where smoke exposure matters", "Human-review question: do the exact room, total price, smoke-exposure routes, activity routes, and reset plan work for this family's dates?"],
-      ["Hilton Grand Vacations Club Paradise Las Vegas", "Property candidate for exact suite, parking, and route verification", "Verify the exact bookable room, sleeping layout, occupancy, kitchen equipment, room assignment, elevators, and connecting-room policy", "Verify date-specific pool access, hours, closures, rules, and whether the pool works for the planned reset window", "Verify the booking's breakfast inclusion or build a current grocery and in-room meal plan", "Verify exact kitchen equipment plus washer/dryer or guest-laundry access for the booked room", "Confirm crib/rollaway availability, cost, occupancy limits, and whether the request is guaranteed", "Verify the final booking total, current parking terms, taxes, deposits, and every mandatory fee", "UNKNOWN for the exact room and routes; ask about elevators, traffic, events, construction, and the property-to-activity path", "Human-review question: do the exact room, total price, transport plan, activity routes, and reset plan work for this family's dates?"]
-    ],
+    areaNote: "Use these as planning starts, not universal rankings. The exact hotel can reverse the area-level tradeoff, especially for walking, stroller handling, casino exposure, pool access, room setup, and total price.",
+    bookingHeading: "Three checks that settle the base decision",
     bookingChecks: [
-      ["Total-fee check", "Capture the final booking-screen total for the exact room and dates, including resort or destination fees, taxes, parking, deposits, and any required amenity charges; do not compare headline nightly rates alone."],
-      ["Room-assignment check", "Confirm the exact room category, beds, occupancy, connecting-room policy, elevator and resort-walk distance, and which requests are guaranteed versus merely noted."],
-      ["Pool-access check", "Verify date-specific pool access, seasonal closures, hours, depth or height rules, guest eligibility, reservation requirements, and any extra charges for the booked room."],
-      ["Smoke/noise-exposure check", "Treat exposure as UNKNOWN until the property answers questions about the exact room, ventilation, casino or smoking-area paths, elevators, event spaces, pool decks, traffic, nightlife, and construction."],
-      ["Route-friction check", "Map the exact property exit to each priority activity and meal for the travel dates, including indoor resort walking, outdoor heat exposure, crossings, elevators, rideshare pickup, stroller constraints, and the midday return."],
-      ["Current-policy check", "Recheck the official property page, FAQ, and booking terms near payment and again before travel; record the source and checked date for any make-or-break detail."]
+      ["Map the first two days", "Use the exact hotel entrance or rideshare pickup, not the center of an area pin. Check the morning anchor, midday return, dinner, and one evening plan."],
+      ["Compare the complete stay", "Compare the same dates and occupancy across room total, mandatory fees, parking, likely rideshares, and breakfast or kitchen needs. Area labels do not establish value."],
+      ["Confirm the reset routine", "Verify the exact room setup, pool access, elevator or resort walk, casino path, and meal options that would make the hotel workable for this family."]
     ],
+    clusterHeading: "Move from base type to the rest of the trip",
+    clusterLinks: [
+      ["10 family hotel options", "Compare named properties by trip style, room setup, pool role, rough nightly total, and sampled online-review themes.", "./las-vegas-family-hotels.html", "Compare Las Vegas family hotels"],
+      ["Things to do with kids", "Use the 12-choice activity guide to decide whether the base should optimize for the Strip, Downtown, an indoor day, or Red Rock.", "../things-to-do/las-vegas-with-kids.html", "Open Las Vegas things to do with kids"],
+      ["Things to do with teens", "Give older kids one anchor, then choose a base that keeps that ticket and the family reset realistic.", "../things-to-do/las-vegas-with-teens.html", "Open Las Vegas with teens"],
+      ["Family itinerary", "Sequence the chosen activities and hotel reset before paying for a location that only looks central on a map.", "../family-itinerary/las-vegas-with-kids.html", "Open the Las Vegas family itinerary"]
+    ],
+    faqTitle: "Las Vegas family stay FAQ",
     faqs: [
-      ["What is the best area to stay in Las Vegas with kids?", "There is no reviewed default for every family. Compare exact properties and rooms against total fees, pool access, smoke/noise exposure, activity routes, reset needs, mobility constraints, and the travel dates."],
-      ["Should families stay on the Las Vegas Strip?", "Treat the Strip as a set of property-and-route hypotheses, not one uniform choice. Verify exact walking paths, indoor and outdoor smoke exposure, room location, fees, pool rules, and rideshare or transit steps before booking."]
+      ["What is a useful first area to check for a Las Vegas family trip?", "Check Center Strip first when most plans involve Bellagio, High Roller, shows, and central Strip meals. Use South Strip for a pool-led resort trip, a near-Strip suite for room routine, the west side for Red Rock-led driving, or Downtown when Downtown attractions are the point."],
+      ["Should families stay on the Las Vegas Strip?", "The Strip can work when the family's main activities and hotel reset are there. Compare the exact resort exit, indoor and outdoor walking, rideshare plan, room setup, pool access, and complete price rather than treating the whole Strip as one location."],
+      ["Where should families compare specific Las Vegas hotels?", "Use the Family Tripwise Las Vegas family-hotel comparison for ten named options with rough total-night ranges, room and amenity facts, recent online-review themes, and map links."]
+    ],
+    sourcesIntro: "Area and transport sources checked July 22, 2026. Recheck operating details and exact property routes near the trip.",
+    sources: [
+      ["Las Vegas Monorail route map", "https://www.lvmonorail.com/route-map/"],
+      ["RTC Southern Nevada transit", "https://www.rtcsnv.com/ways-to-travel/transit/"],
+      ["Mandalay Bay Beach", "https://mandalaybay.mgmresorts.com/en/amenities/beach.html"],
+      ["Bellagio fountains", "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"],
+      ["High Roller", "https://www.caesars.com/linq/things-to-do/attractions/high-roller"],
+      ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
+      ["Fremont Street Experience", "https://vegasexperience.com/"],
+      ["City of Las Vegas youth-curfew guide", "https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer"],
+      ["Las Vegas photo source and attribution", "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"],
+      ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
     ]
   },
   "where-to-stay/new-york-city-with-kids.html": {
@@ -1445,6 +1456,10 @@ function removeGeneratedAgeSections(html) {
   return `${html.slice(0, start)}${html.slice(end)}`;
 }
 
+function removeGeneratedBodySections(html) {
+  return removeGeneratedAgeSections(html);
+}
+
 function replaceSourceSection(html, page) {
   if (!page.sources?.length) return html;
   const section = `      <section class="container page-section source-section">
@@ -1587,6 +1602,15 @@ ${renderClusterCards(page.clusterLinks)}
         </div>
       </section>`
     : "";
+  const faqSection = page.visibleFaqs && page.faqs?.length
+    ? `      <section class="container page-section rank-ready-section" aria-labelledby="stay-faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Common planning questions</p>
+          <h2 id="stay-faq-title">${esc(page.faqTitle || `${page.city} family stay FAQ`)}</h2>
+        </div>
+${renderFaqs(page.faqs)}
+      </section>`
+    : "";
   const hotelSection = page.hideHotelSection ? "" : page.hotels?.length
     ? `      <section class="band intro-band rank-ready-section">
         <div class="container">
@@ -1630,7 +1654,7 @@ ${renderQuickPicks(page.quick)}
 ${areaNote}${renderStayMatrix(page.rows, page.constraintLed ? "verification" : page.stayTool ? "hypothesis" : "default", page.areaHeaders)}
       </section>
 
-${[decisionSection, hotelSection, bookingSection, clusterSection].filter(Boolean).join("\n\n")}
+${[decisionSection, hotelSection, bookingSection, clusterSection, faqSection].filter(Boolean).join("\n\n")}
 ${page.stayTool ? '      <script type="module" src="../san-diego-stay-tool.mjs"></script>\n' : ''}${markerEnd}
 `;
 }
@@ -1764,6 +1788,7 @@ function upgradeFile(outDir, path, page, type) {
   html = updateHead(html, page);
   html = applyBaseReplacements(html, page.baseReplacements);
   if (page.removeGeneratedAgeSections) html = removeGeneratedAgeSections(html);
+  if (page.removeGeneratedBodySections) html = removeGeneratedBodySections(html);
   html = replaceSourceSection(html, page);
   const section = type === "activity"
     ? renderActivityUpgrade(page)

@@ -4,11 +4,39 @@ Last updated: 2026-07-22
 
 ## Active
 
-None.
+### IMP-023: Simplify The Las Vegas Stay-Area Guide
+
+Status: review-clean; exact-path release pending
+
+Selected: 2026-07-22
+
+Roadmap ID: `FT-IMP-008`
+
+Review and simplify the existing Las Vegas stay-area page so it answers the trip-base decision without duplicating the live named-hotel comparison. Apply current SERP, LV-P1/LV-P2/LV-P3/LV-P5 persona, every-section, and trust review before implementation.
+
+Affected production URL:
+
+- `https://familytripwise.com/where-to-stay/las-vegas-with-kids.html`
+
+Boundaries:
+
+- Preserve the existing URL, canonical, indexability, and sitemap membership.
+- Keep named-property prices, room facts, and review themes on the hotel comparison page.
+- Do not publish a universal best area, safety assurance, exact route or stroller verdict, or personally verified stay claim.
+- Do not edit another live page, request indexing, mutate an external account, or add automation.
+- Complete focused/native/responsive QA and independent review before exact-path release.
+
+Local result:
+
+- Replaced the verbose, duplicated area and hotel flow with five trip-shape starts, one five-row base comparison, three decision checks, four cluster routes, three visible FAQs, and one current source list.
+- Removed the weaker named-hotel profiles; the ten-hotel page now owns property prices, room facts, and sampled online-review themes.
+- Added deterministic focused tests and the durable research record at `docs/research/las-vegas-stay-area-page-review.md`.
+- Full generation, 53/53 repository tests, 4/4 focused tests, native SEO QA, responsive checks at 1280/390/320, JSON/JavaScript/whitespace/privacy/scope checks, and source classification passed.
+- Independent reviewer Carson (`019f8ce4-2aa3-7da3-a3c8-07fe9fcfa14d`) returned `PASS_WITH_P3` with no P0-P2; both stale-status P3 notes were reconciled during mechanical verdict logging. Exact-path release is authorized.
 
 ## Selected
 
-No implementation task is selected outside the active Las Vegas teen-page action.
+No implementation task is selected outside the active Las Vegas stay-area action.
 
 ## Completed
 

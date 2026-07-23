@@ -844,7 +844,53 @@
       "implementation_summary": "Rebuilt the existing teen guide as a compact decision page with five interest-led starts, eight teen-specific choices, five high-friction detail cards, four route shapes, mixed-age routing, current official checks, and visible FAQ/schema after a competitor, persona, candidate, and every-section review.",
       "review_summary": "Independent reviewer Dewey (019f8bee-4a96-7660-a2fd-ce864e9979da) returned PASS_WITH_P3 with no P0-P2. Two stale-documentation P3 notes about the prior hotel release and current GSC snapshot were reconciled during mechanical verdict logging.",
       "qa_summary": "Full deterministic generation, 51/51 repository tests, 4/4 focused tests, JavaScript syntax, roadmap JSON, native SEO QA with 0 errors and 0 warnings, privacy, exact-scope, source-link classification, 1280/390/320 responsive checks, and git diff --check passed.",
+      "release_commit": "ae917f1435b8c8f14e496fe4a6c774e20a460d37",
+      "pages_run": 29964564369,
+      "release_state": "released-and-production-verified",
       "notes": "Selected under the user's standing manual instruction to continue Las Vegas work without approval pauses. One existing URL only. Research and implementation are one bounded transaction; no new URL, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-008",
+      "implementation_backlog_id": "IMP-023",
+      "research_backlog_id": "SRR-013",
+      "title": "Simplify the Las Vegas stay-area guide",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-22",
+      "completed_on": "2026-07-22",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-stay-area-page-review.md",
+      "tools/upgrade-priority-pages.mjs",
+      "tools/las-vegas-stay-page.test.mjs",
+      "tools/las-vegas-family-hotels-page.test.mjs",
+      "site/where-to-stay/las-vegas-with-kids.html",
+        "status/las-vegas-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing stay page becomes a concise area/base decision surface with one clear comparison, trip-style routing, a direct handoff to the named-hotel page, and no duplicated hotel profiles or repeated defensive verification prose.",
+      "production_invariant": "The existing Las Vegas stay URL remains canonical, indexable, and present in the sitemap; it compares only supported area/base implications, routes named-property selection to the family-hotel page, visibly links to activities and itinerary planning, aligns visible FAQ and schema, and introduces no unsupported safety, exact-route, stroller, smoke/noise, price, room, or universal family-fit claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-22 with finalized data through 2026-07-20: 13 impressions, 0 clicks, and page-level average position 44.69. This is directional early discovery, not query-specific performance or causal evidence.",
+      "implementation_summary": "Replaced duplicated area, hotel, and verification sections with five trip-shape starts, one five-row base comparison, three decision checks, four cluster routes, three visible FAQs aligned with schema, and one current source list. Named-property comparison remains on the separate ten-hotel page.",
+      "qa_summary": "Deterministic generation; 53/53 repository tests; 4/4 focused tests; native SEO QA 0 errors and 0 warnings; JavaScript, JSON, whitespace, privacy, exact-scope, source-classification, and 1280/390/320 responsive checks passed.",
+      "review_summary": "Independent reviewer Carson (019f8ce4-2aa3-7da3-a3c8-07fe9fcfa14d) returned PASS_WITH_P3 with no P0-P2. Two stale-status P3 notes were reconciled mechanically during verdict logging.",
+      "release_state": "review-clean; exact-path commit, push, Pages deployment, and production verification pending",
+      "notes": "Selected by direct manual user instruction after FT-IMP-007 released. One existing URL only. No new URL, sitemap change, hotel-page edit, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }

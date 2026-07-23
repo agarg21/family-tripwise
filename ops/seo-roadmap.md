@@ -50,14 +50,28 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 15 | `FT-RES-007` select the next pilot city and create the incremental city playbook | Content/product quality | Completed | Las Vegas wins the fresh GSC, keyword, SERP, commercial-intent, and existing-page comparison; research promotes one existing-page improvement. |
 | 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Completed and released | Commit `3f555d65`; Pages run `29930917894` and production verification passed. |
 | 17 | `FT-PUB-002` research and publish the Las Vegas family-hotel comparison | Content/product quality | Completed and released | Commit `bda58e8`; Pages run `29944609529` and production verification passed. |
-| 18 | `FT-IMP-007` review and improve the Las Vegas teen guide | Content/product quality | Completed; release authorized | Eight teen-specific choices and a compact decision flow passed QA and independent review on the existing URL. |
+| 18 | `FT-IMP-007` review and improve the Las Vegas teen guide | Content/product quality | Completed and released | Commit `ae917f1`; Pages run `29964564369` and production verification passed. |
+| 19 | `FT-IMP-008` simplify the Las Vegas stay-area guide | Content/product quality | Review-clean; release pending | Five base types now replace duplicated area, hotel, and verification sections; 53/53 tests, responsive QA, and independent review passed. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+
+### FT-IMP-008 - Simplify the Las Vegas stay-area guide
+
+- Selected: 2026-07-22 under the user's standing manual instruction to continue Las Vegas work without approval pauses.
+- State: research, implementation, full QA, and independent review complete; exact-path release and production verification pending.
+- Target: `https://familytripwise.com/where-to-stay/las-vegas-with-kids.html`.
+- Evidence: fresh July 22 page-level GSC has 13 impressions at average position 44.69; the July 22 Semrush check estimates only 20 monthly searches for the exact area query, while named hotel/resort variants are much larger and already route to the separate hotel comparison. The GSC sample is too small for a performance conclusion.
+- Product requirement: audit every section against current area/base SERPs, LV-P1/LV-P2/LV-P3/LV-P5, hotel-page overlap, scan cost, and trust boundaries. Keep one concise area/base decision path and route named-property work to the hotel page.
+- Boundary: preserve the URL, canonical, indexability, and sitemap; do not edit another live page or create a new URL.
+- Exact scope note: the existing hotel-page regression test is included only to accept the equivalent same-directory `./las-vegas-family-hotels.html` route emitted by this page; the hotel page itself remains unchanged.
+- Release gate: durable review artifact, focused/native/responsive/source/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
+- Local result: five trip-style starts, one five-row base comparison, three decisive checks, four cluster routes, three visible FAQs aligned with schema, one current source list, and no duplicated named-hotel profiles. The durable review is `docs/research/las-vegas-stay-area-page-review.md`.
+- Review and QA: Carson (`019f8ce4-2aa3-7da3-a3c8-07fe9fcfa14d`) returned `PASS_WITH_P3` with no P0-P2. Deterministic generation, 53/53 repository tests, 4/4 focused tests, native SEO QA 0/0, JavaScript/JSON/whitespace/privacy/scope/source checks, and 1280/390/320 responsive checks passed. Both stale-status P3 notes were reconciled during verdict logging.
 
 ### FT-IMP-007 - Review and improve the Las Vegas teen guide
 
 - Selected: 2026-07-22 under the user's standing manual instruction to continue Las Vegas work without approval pauses.
-- State: completed and review-clean on 2026-07-22; exact-path release authorized.
+- State: completed, released, and production-verified on 2026-07-22 at commit `ae917f1435b8c8f14e496fe4a6c774e20a460d37`; GitHub Pages run `29964564369` succeeded.
 - Target: `https://familytripwise.com/things-to-do/las-vegas-with-teens.html`.
 - Evidence: fresh July 22 page-level GSC has two impressions at average position 11; Semrush estimates 590 US monthly searches for the core exact query; current SERPs preserve a distinct teen/tween result set. The GSC sample is too small for a performance conclusion.
 - Product requirement: audit every section and candidate against LV-P4, current ranking pages, official sources, all-ages overlap, mixed-age needs, scan cost, and trust boundaries. Every retained choice needs an older-kid-specific reason.
