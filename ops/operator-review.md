@@ -1277,3 +1277,35 @@ QA evidence:
 - `node --test tools/chicago-stay-page.test.mjs` passed 4/4; `node --test tools/*.test.mjs` passed 69/69.
 - `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/scope inspection, and `git diff --check` passed.
 - Responsive checks at 1280, 390, and 320 pixels found no page-level or card overflow; the comparison remained contained in its scroller and the 1280 by 960 image loaded.
+
+### 2026-07-23 - `FT-IMP-012` review cycles 1-2
+
+**Formal reviewer:** Peirce (`019f93b0-2afb-7af1-a826-8ce8e31c66e6`)
+
+**Final result: `PASS`**
+
+Pre-gate visual findings and disposition:
+
+1. `P2` - Reduced the mobile comparison from eleven to seven teen-relevant columns and added a scoped 820-pixel table with a sticky activity-name column.
+2. `P2` - Reduced repetition by removing the generated body, using five singular quick paths, limiting deeper notes to four high-friction choices, and rewriting the FAQ away from an eight-item restatement.
+3. `P2` - Replaced combined unrelated quick picks with one activity per quick path.
+4. `P2` - Rewrote every comparison reason around older-kid agency, challenge, teen voice, photos, movement, sports culture, shared immersive response, or live audience input.
+5. `P2` - Corrected the high-friction section heading from five choices to four.
+
+Formal cycle 1 findings and disposition:
+
+1. `P2` - Reconciled the durable implementation decision with the authorized existing shared-upgrader and scoped stylesheet changes.
+2. `P2` - Added exact query-to-ranking-page and community-discussion registers with collection date, evidence class, use, and limitation.
+3. `P3` - Replaced Flyover's intermediary-only support with its direct official rider and sensory FAQ, then aligned the comparison, sources, and test.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- Peirce accepted evidence classification and traceability, SERP/persona grounding, candidate and every-section completeness, usefulness and compactness, claim/source safety, canonical/indexability/sitemap/schema, cluster links, generator isolation, scoped mobile behavior, privacy, observation policy, and exact paths.
+- Secondary visual reviewer Jason (`019f93b0-755c-7532-80db-c11ec5cc9677`) returned `PASS_WITH_P3` after all P2s closed; privacy/scope reviewer Rawls (`019f93b0-a8f7-7de1-9278-72ea1977381d`) returned `PASS`.
+
+QA evidence:
+
+- `node --test tools/chicago-teen-page.test.mjs` passed 5/5; `node --test tools/*.test.mjs` passed 74/74.
+- `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; roadmap JSON, generation isolation, source/privacy/scope inspection, and `git diff --check` passed.
+- Browser verification found 8 comparison rows, 7 headers, 4 detail cards, a computed sticky first column, an 820-pixel comparison table, no 1280-pixel page overflow, and a loaded 1280 by 960 licensed image.

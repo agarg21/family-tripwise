@@ -4,6 +4,31 @@ Last updated: 2026-07-23
 
 ## Active
 
+### SRR-019: Chicago Teen Candidate And Every-Section Review
+
+Status: done and review-clean inside `FT-IMP-012`
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-012`
+
+Inspect current teen SERPs, representative ranking pages, qualitative parent/teen discussions, a wider candidate set, official sources, and every visible section of the current page. Apply CHI-P4 directly and route mixed-age, lodging, and sequencing needs without duplicating sibling pages.
+
+Required coverage:
+
+- A distinct older-kid reason for every retained primary choice.
+- Current official facts and volatility checks for tickets, age/height rules, weather, transit, events, and access.
+- Candidate keep/add/remove/defer decisions and every-section keep/compress/replace/remove instructions.
+- One complete comparison, compact high-friction notes, useful route shapes, current checks, visible/schema-aligned FAQs, and cluster routes.
+
+Result:
+
+- Recorded the exact queries, representative ranking URLs, community discussion URLs, evidence classes, collection date, uses, and limitations rather than leaving SERP or UGC conclusions as untraceable summaries.
+- Applied CHI-P4 to an 8-choice set with an explicit older-kid reason for every option, while routing mixed-age activity, hotel, stay-area, and itinerary jobs to their proper pages.
+- Audited every visible section, removed the repeated generated body, reduced verification repetition, and limited deeper notes to four genuinely high-friction choices.
+- Added current direct official product support, including Flyover rider/sensory rules, and preserved all safety, independent-roaming, age-fit, route, price, weather, and firsthand trust boundaries.
+- Independent reviewer Peirce returned final `PASS` in cycle 2 with no P0-P3 findings.
+
 ### SRR-018: Chicago Stay-Area Competitor And Section Review
 
 Status: done and review-clean inside `FT-IMP-011`

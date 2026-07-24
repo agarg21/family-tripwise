@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual action `FT-IMP-011` / `IMP-027` / `SRR-018` is complete and review-clean with final independent `PASS`; exact-path commit, deployment, and production verification remain. It changes one existing Chicago stay-area URL after an every-section, persona, competitor, and current-source review; named-property content stays on the released hotel page. The fresh July 23 authenticated GSC snapshot is finalized through July 21; the stay page has 38 impressions, 0 clicks, and page-level average position 60.11, which is early discovery evidence rather than a query-specific rank or causal signal. No new URL, sibling-page content edit, sitemap change, indexing request, external account, affiliate CTA, outreach, or recurring automation is allowed. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual action `FT-IMP-012` / `IMP-028` / `SRR-019` is review-clean and awaiting commit, push, deployment, and production verification under the user's standing instruction to complete Chicago pages iteratively. It changes one existing Chicago teen URL after a wider candidate, every-section, persona, competitor, exact ranking/community register, and current-source review. The first visual review expanded exact scope to one narrowly named shared-stylesheet treatment so the seven-column comparison keeps the activity name visible on mobile; unrelated selectors remain unchanged. Focused tests pass 5/5, the full suite passes 74/74, native SEO QA is 0/0, browser/source/privacy/scope checks pass, and formal independent reviewer Peirce returned `PASS` in cycle 2 with no P0-P3 findings. The fresh July 23 authenticated GSC snapshot is finalized through July 21 and has no page row for this URL, so impressions, clicks, and position are N/A; previously collected logged-in Semrush estimates and the distinct teen SERP support the usefulness action without a GSC performance claim. No new URL, sibling-page edit, sitemap change, indexing request, external account, affiliate CTA, outreach, or recurring automation is allowed. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 The repository roadmap no longer has a calendar protection hold on the San Diego stay page. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, treat that report entry as a stale ledger mismatch and do not let it manufacture a scheduled action.
 
@@ -25,7 +25,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 - GSC: authenticated read-only API collection is working; the July 23 snapshot has finalized data through July 21, 681 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `833c081ca1c436d609b50e36ae94f47cff4c7cbf`; GitHub Pages run `30062024170` succeeded and production verification passed for the Chicago family-hotel comparison and its routing links
+- Current released implementation: commit `9d1a90d4b39a2477175bdd8597ee79e197db0ab8`; GitHub Pages run `30084335602` succeeded and production verification passed for the Chicago stay-area simplification
 
 ## Historical operating threads
 
@@ -154,7 +154,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-PUB-003` / `IMP-026` / `SRR-017` released and passed production verification at commit `833c081ca1c436d609b50e36ae94f47cff4c7cbf` through Pages run `30062024170`. `FT-IMP-011` / `IMP-027` / `SRR-018` is complete and review-clean; exact-path release and production verification remain. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-011` / `IMP-027` / `SRR-018` released and passed production verification at commit `9d1a90d4b39a2477175bdd8597ee79e197db0ab8` through Pages run `30084335602`. `FT-IMP-012` / `IMP-028` / `SRR-019` is review-clean and release-pending. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 

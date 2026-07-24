@@ -1156,51 +1156,104 @@ const itineraryPages = {
 
 const teenPages = {
   "things-to-do/chicago-with-teens.html": {
-    title: "Things to Do in Chicago With Teens: Museums, Food, Lakefront and Weather Plans",
+    title: "Things to Do in Chicago With Teens: 8 Picks by Trip Style",
     description:
-      "Plan Chicago with teens using activity quick picks, transit and walking caveats, rainy-day swaps, food/reset notes, and realistic teen-friendly itinerary ideas.",
+      "Compare eight things to do in Chicago with teens by interest, cost, time, weather, location, age rules, and mixed-age fit, with current official checks.",
     city: "Chicago",
+    schemaName: "Chicago teen activity options",
+    compactDetails: true,
+    removeGeneratedAgeSections: true,
+    baseReplacements: [
+      ["<h1>Things to do in Chicago with teens</h1>", "<h1>Things to Do in Chicago With Teens: 8 Picks by Trip Style</h1>"],
+      ["<p>A focused activity guide for teens in Chicago, with the main kids guide kept as the broader planning hub.</p>", "<p>Compare eight older-kid choices by actual teen payoff, time, cost, weather exposure, location, and the exact rule that may change the plan.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 23, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Teen fit, time, cost, walking, weather, and flexibility labels are Family Tripwise editorial estimates. Check the exact ticket, event, age or height rule, weather policy, and accessibility details before committing.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Behnazkhazai via <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
     links: {
       allAges: "../things-to-do/chicago-with-kids.html",
       stay: "../where-to-stay/chicago-with-kids.html",
       itinerary: "../family-itinerary/chicago-with-kids.html"
     },
+    quickHeading: "Five ways to let the teen shape the trip",
     quick: [
-      ["Best overall", "Architecture river plan plus Riverwalk food", "Strong teen payoff if weather, timing, and attention span line up."],
-      ["Best rainy-day anchor", "Field Museum or Shedd Aquarium", "Pick one major indoor stop rather than trying to stack Museum Campus."],
-      ["Best low-cost reset", "Millennium Park, lakefront, or Lincoln Park Zoo", "Useful when you need space between paid attractions."],
-      ["Best food pairing", "West Loop or River North", "Works best when meals are part of the teen plan, not an afterthought."],
-      ["Best skyline moment", "Riverwalk or lakefront route", "Good payoff without committing to another ticketed attraction."],
-      ["Best if you only have one day", "Museum Campus plus river/lakefront dinner", "Keeps the route focused and avoids cross-city zigzags."],
-      ["Think twice about", "Toddler-heavy playground pacing", "Teens usually need stronger scenery, food, museums, or active choices."],
-      ["Main planning risk", "Weather and transit friction", "Cold, heat, storms, elevator gaps, and long walks can change the plan quickly."]
+      ["Chicago story", "Architecture cruise", "A narrated moving view rewards teens who want city design, skyline photos, and context rather than another gallery."],
+      ["Hands-on mission", "Griffin MSI", "Let the teen choose U-505, engineering, storms, or another current exhibit instead of trying to complete the museum."],
+      ["Self-guided art", "Art Institute Teen Audio Guide", "The free official app includes stories and sounds produced by Chicago teens, giving the visit an older-kid voice and pace."],
+      ["Movement and route choice", "One Lakefront Trail segment", "Agree on the mode, distance, turnaround, and photo or food goal so the teen has agency without an aimless route."],
+      ["Older-kid evening", "One selected Second City show", "Live comedy can feel distinctly different from the daytime plan when the exact rating, age rule, and return timing fit."]
     ],
+    comparisonNote: "Scan the teen reason first, then compare the practical columns. Time, cost, format, and flexibility are editorial estimates, not venue guarantees.",
+    comparisonClass: "teen-comparison",
+    comparisonHeaders: ["Activity", "Teen reason", "Time / cost", "Area / format", "Flexibility", "Check before choosing", "Pair nearby"],
     rows: [
-      ["Architecture river plan", "12-17", "90 min-2 hrs", "$$$", "River North", "Limited", "No", "Low", "Book/check times", "Clear Chicago signature for teens", "Riverwalk meal or Magnificent Mile"],
-      ["Field Museum", "10-17", "2-4 hrs", "$$", "Museum Campus", "Good", "Yes", "Medium", "Check tickets", "Big exhibits with stronger teen payoff than a short kid stop", "Lakefront or Shedd exterior"],
-      ["Shedd Aquarium", "10-15", "2-3 hrs", "$$$", "Museum Campus", "Good", "Yes", "Medium", "Book ahead", "Reliable indoor animal/science anchor", "Field Museum lawn or lakefront walk"],
-      ["Millennium Park / Maggie Daley area", "10-17", "60-120 min", "$", "Loop", "Good", "Partial", "Medium", "No", "Easy skyline and photo reset", "Art Institute exterior or Loop meal"],
-      ["Lincoln Park Zoo and lakefront", "10-15", "2-3 hrs", "$", "Lincoln Park", "Good", "No", "Medium", "No", "Free flexible outdoor block", "Neighborhood lunch or Nature Boardwalk"],
-      ["Navy Pier by specific reason", "10-17", "1-3 hrs", "$$", "Streeterville", "Good", "Partial", "Medium", "Depends on activity", "Useful mixed-weather filler if you choose one goal", "Lakefront walk or casual food"]
+      ["Chicago Architecture Center river cruise", "City story, skyline photos, and a fixed narrative instead of another gallery", "About 90 min / paid", "River North / exposed cruise", "Low", "Sailing, weather, boarding, accessibility", "Riverwalk meal"],
+      ["Griffin Museum of Science and Industry", "A choose-your-mission visit built around U-505, engineering, storms, or another current exhibit", "3-5 hrs / paid", "Hyde Park / large indoor museum", "Medium", "Admission, exhibit and add-on tickets", "Hyde Park meal"],
+      ["Art Institute Teen Audio Guide", "Self-paced art context voiced and produced by Chicago teens", "2-3 hrs / paid admission; guide free", "Loop / large indoor museum", "High", "App, galleries, admission and hours", "Millennium Park"],
+      ["360 CHICAGO and optional TILT", "Skyline and photo payoff with an opt-in physical thrill", "60-90 min / paid", "Streeterville / contained indoor visit", "Medium", "Visibility, ticket and 42-inch TILT rule", "Magnificent Mile meal"],
+      ["Wrigley Field tour or selected game", "Sports culture, stadium details, and a behind-the-scenes or live-game goal", "Tour or game length / paid", "Wrigleyville / stadium route", "Low", "Exact tour or game, weather and access", "Wrigleyville meal"],
+      ["Lakefront Trail, one bounded segment", "Movement, route choice, skyline photos, and a teen-chosen turnaround goal", "60-120 min / free or rental cost", "Lakefront / exposed route", "High", "Weather, closures, route, equipment and skill", "Exit-area meal"],
+      ["Flyover at Navy Pier", "Immersive media and a shared sensory reaction with less route navigation", "About 60-90 min / paid", "Navy Pier / contained indoor visit", "Medium", "Current film, sensory effects, 40-inch rule and ticket", "Streeterville meal"],
+      ["Second City, one selected show", "Live comedy, audience input, and an evening that is not built around younger kids", "Show-dependent / paid", "Old Town / indoor seated show", "Low", "Rating, 13+ rule, adult accompaniment and fees", "Early Old Town meal"]
     ],
+    detailsEyebrow: "High-friction choices",
+    detailsTitle: "Four choices that need an exact check",
+    detailsNote: "Only the four choices with the most consequential add-on, visibility, route-skill, age, or content decisions get a deeper planning note.",
     details: [
-      ["Architecture river plan", "Teens get skyline, story, and movement without another museum-style block.", "Best for tweens and teens who can sit, listen, and handle weather exposure.", "Cold, rain, wind, ticket timing, and younger siblings who cannot sit through it.", "Book a time after food or snacks, and do not stack it after a draining museum marathon.", "Use bathrooms before boarding and plan the next meal near River North or the Riverwalk.", "Verify operator, departure point, weather policy, and accessibility before booking.", "Pair with Riverwalk food or a short Magnificent Mile walk."],
-      ["Field Museum", "It can work for teens when you choose exhibit goals instead of wandering every hall.", "Best for science, history, and dinosaur-interested teens.", "Museum fatigue and trying to combine Field, Shedd, and another big stop in one day.", "Pick two or three must-see sections, then leave before everyone is done.", "Museum Campus has food/restroom options, but verify hours and policies for the day.", "Check tickets, special exhibits, and current hours.", "Pair with lakefront time or a simple dinner, not another full museum."],
-      ["Shedd Aquarium", "A more contained bad-weather anchor when teens still want animals, views, and a focused plan.", "Best for younger teens or mixed-age groups.", "Crowds, timed-entry friction, and feeling too young for older teens if overdone.", "Use it as the main indoor block, then add outdoor skyline time if weather improves.", "Plan food and bathroom breaks before leaving Museum Campus.", "Book/check timed entry and current exhibits.", "Pair with Field Museum only if both stops are intentionally shortened."],
-      ["Millennium Park / Maggie Daley area", "It gives a quick Chicago sense of place without requiring a long ticketed commitment.", "Best for first-day orientation, photos, and a low-cost reset.", "Crowds, event closures, and making it the whole teen plan.", "Use it as a bridge between meals, transit, or one bigger attraction.", "Food and bathrooms vary by route, so decide before anyone is urgent.", "Check event closures and weather.", "Pair with the Loop, Art Institute exterior, or easy transit back to the hotel."],
-      ["Lincoln Park Zoo and lakefront", "Free entry and lakefront access make it useful when the budget or weather needs flexibility.", "Best for animal-interested younger teens or mixed-age sibling groups.", "It may feel too young if teens want a more independent city day.", "Frame it as a neighborhood/lakefront block, not just a zoo visit.", "Use nearby neighborhood food as the reset plan.", "Check hours and seasonal closures.", "Pair with Nature Boardwalk or a Lincoln Park meal."],
-      ["Navy Pier by specific reason", "It can fill a weather gap if you choose a clear reason to go.", "Best for mixed-age groups or teens who want a simple lakefront activity.", "It can feel crowded, commercial, and unfocused.", "Choose one activity, view, or meal; avoid vague wandering.", "Food and restrooms are convenient, but crowds can slow everything down.", "Check hours, pricing, and event schedule.", "Pair with lakefront or a short ride back to the hotel."]
+      ["Griffin Museum of Science and Industry", "A teen can choose a mission such as U-505, engineering, storms, or another current exhibit instead of following a little-kid checklist.", "Best for teens who want hands-on science, machines, history, or a large indoor anchor.", "The museum is large, some experiences need separate timed tickets, and Hyde Park adds route time from central hotels.", "Choose two priority exhibits before arrival. Treat the U-505 on-board tour as a separate decision, not part of basic admission.", "Plan the meal and return route before museum fatigue arrives.", "Recheck admission, current exhibits, U-505 availability, accessibility, and any add-on ticket.", "Pair with one Hyde Park meal, not another major museum."],
+      ["360 CHICAGO and optional TILT", "The observation deck gives a fast skyline overview; TILT adds an optional physical thrill for interested teens.", "Best for teens who actively want a high view or the add-on rather than families buying it by default.", "Low visibility, height discomfort, dynamic pricing, queues, and the separate TILT decision can reduce value.", "Check the forecast and let each person opt in or out of TILT without turning it into a courage test.", "Keep the next meal nearby because the visit's length can change with queues and interest.", "Recheck visibility, ticket terms, current hours, accessibility, and the official 42-inch TILT minimum.", "Pair with a Streeterville or Magnificent Mile meal."],
+      ["Lakefront Trail, one bounded segment", "A chosen walk or bike segment gives teens movement, skyline views, and control over pace.", "Best for families that can choose an exact segment, mode, distance, and turnaround point together.", "Wind, heat, cold, rain, path congestion, bike skill, equipment, and mixing up the separate bike and pedestrian trails.", "Do not write 'bike the lakefront' as a complete plan. Pick the entry, exit, turnaround, rental, and fallback before leaving.", "Carry water and know the next restroom and meal stop for the selected segment.", "Recheck weather, closures, trail map, equipment fit, and the family's route ability.", "Pair with one beach, park, or neighborhood meal near the exit."],
+      ["Second City, one selected show", "Live sketch or improv can give the evening an older-kid identity beyond dinner and a hotel return.", "Best for teens who want comedy and whose adult has reviewed the exact production together with them.", "Shows carry different ratings and content; general Chicago admission excludes children under 13 unless noted, and ages 13-17 require an adult.", "Choose the exact show, rating, time, seats, fees, and return route before buying.", "Eat early and keep the post-show plan simple.", "Recheck the production page, content rating, age rule, adult accompaniment, accessibility, fees, and runtime.", "Pair with one Old Town meal."]
     ],
+    plansEyebrow: "Teen route shapes",
+    plansTitle: "Build the day around one teen-chosen anchor",
     plans: {
-      "1-day teen plan": "Choose Field Museum or Shedd as the anchor, add lakefront or Millennium Park time, then finish with River North or West Loop food.",
-      "2-day teen plan": "Day 1: Museum Campus plus lakefront. Day 2: architecture river plan, Riverwalk, and a neighborhood food stop.",
-      "Rainy-day plan": "Use Field Museum or Shedd as the main block, keep meals close, and save lakefront or boat plans for the clearest weather window.",
-      "Low-cost plan": "Use Lincoln Park Zoo, lakefront, Millennium Park, and one paid activity instead of turning every stop into a ticket.",
-      "Mixed-age plan": "Let teens choose the food or skyline piece while younger kids get a shorter zoo, park, or aquarium block."
+      "One-day first visit": "Let the teen choose the architecture cruise, Griffin MSI, or Art Institute as the main anchor. Add only one nearby skyline, park, or meal block, then protect the evening from cross-city backtracking.",
+      "Two-day contrast": "Day 1: architecture cruise plus Riverwalk or 360 CHICAGO. Day 2: Griffin MSI or Art Institute, followed by a bounded lakefront segment or selected evening show.",
+      "Rain, cold, or low visibility": "Use Griffin MSI, the Art Institute, Flyover, or one reviewed Second City show. Indoor does not guarantee low walking, low stimulation, or a suitable ticket.",
+      "Mixed ages": "Give the teen first choice of one anchor. Use the all-ages guide or a split block for younger siblings instead of making the teen page carry every age at once."
     },
+    clusterLinks: [
+      ["All-ages activity hub", "Use the broader 12-choice guide when younger siblings, grandparents, or mixed stamina change the shortlist.", "../things-to-do/chicago-with-kids.html", "Open all Chicago family activities"],
+      ["Family hotel comparison", "Compare ten Chicago hotels by trip style, room setup, pool role, rough nightly total, and sampled online-review themes.", "../where-to-stay/chicago-family-hotels.html", "Compare Chicago family hotels"],
+      ["Stay-area guide", "Choose the base before locking routes; exact entrances, transit, parking, room location, and evening return shape the teen plan.", "../where-to-stay/chicago-with-kids.html", "Compare Chicago stay areas"],
+      ["Family itinerary", "Sequence the selected anchor around meals, weather, hotel resets, and younger siblings without building a city marathon.", "../family-itinerary/chicago-with-kids.html", "Open the Chicago family itinerary"]
+    ],
+    officialChecksEyebrow: "Before buying tickets",
+    officialChecksTitle: "Three checks that can change a teen plan",
+    officialChecks: [
+      ["Exact product, not attraction name", "Griffin MSI add-ons, Wrigley tours and games, Flyover films, and Second City productions are different products. Select the exact one before checking age, content, duration, accessibility, and total price.", [["https://www.griffinmsi.org/tours/u-505-submarine-on-board-tour", "Griffin MSI U-505 tour"], ["https://www.mlb.com/cubs/ballpark/tours", "Wrigley Field tours"], ["https://www.experienceflyover.com/chicago/plan-your-visit/faqs/", "Flyover Chicago FAQ"], ["https://www.secondcity.com/shows/chicago", "Second City Chicago shows"]]],
+      ["Weather, visibility, and route", "The architecture cruise and Lakefront Trail are exposed. 360 CHICAGO can remain open when visibility is poor. Recheck conditions and the exact route or ticket near the visit.", [["https://www.architecture.org/city-tours/river-cruise", "Chicago Architecture Center river cruise"], ["https://www.chicagoparkdistrict.com/lakefront-trail", "Chicago Park District Lakefront Trail"], ["https://360chicago.com/experience", "360 CHICAGO experience"]]],
+      ["Age, height, and adult accompaniment", "The official TILT minimum is currently 42 inches. Second City generally excludes children under 13 unless noted, and ages 13-17 require an adult. Check the exact product again before buying.", [["https://360chicago.com/virtual-tilt", "360 CHICAGO TILT"], ["https://www.secondcity.com/faqs", "Second City theater FAQ"]]]
+    ],
+    visibleFaqs: true,
+    faqTitle: "Chicago with teens FAQ",
     faqs: [
-      ["Is Chicago good with teens?", "Yes, if the plan leans into museums, river/lakefront views, food, and weather-aware routing instead of playground-heavy pacing."],
-      ["What should families avoid with teens in Chicago?", "Avoid stacking multiple large museums, long exposed walks, and a late architecture tour without food or weather backup."]
+      ["How should a family choose a Chicago activity for a teen?", "Ask the teen to choose the trip's main experience type: city story, hands-on science, self-guided art, skyline or photos, sports, movement, immersive media, or live comedy. Use the comparison to test that choice against time, location, weather, and the exact ticket."],
+      ["What can families do in Chicago with teens when the weather is bad?", "Use Griffin MSI, the Art Institute, Flyover, or a selected show as the main indoor anchor. Recheck tickets and routes, and remember that a large museum can still involve substantial walking."],
+      ["Can teenagers explore Chicago attractions on their own?", "This guide does not make independent-roaming or safety assurances. Check the venue's minor policy, the exact route, transit conditions, time of day, and your own family's supervision plan."]
+    ],
+    sourcesIntro: "Official attraction, venue, park, and licensing sources checked July 23, 2026. Reopen the exact ticket or event page near the visit for changing details.",
+    sources: [
+      ["Chicago Architecture Center river cruise", "https://www.architecture.org/city-tours/river-cruise"],
+      ["Chicago Architecture Center accessibility and safety", "https://www.architecture.org/city-tours/accessibility-and-safety"],
+      ["Griffin MSI U-505 on-board tour", "https://www.griffinmsi.org/tours/u-505-submarine-on-board-tour"],
+      ["Griffin Museum of Science and Industry", "https://www.griffinmsi.org/about"],
+      ["Art Institute Teen Audio Guide", "https://www.artic.edu/visit/who-s-visiting/teens/teen-audio-guide"],
+      ["Art Institute mobile app and audio tours", "https://www.artic.edu/visit/explore-on-your-own/mobile-app-audio-tours"],
+      ["360 CHICAGO experience", "https://360chicago.com/experience"],
+      ["360 CHICAGO TILT", "https://360chicago.com/virtual-tilt"],
+      ["Wrigley Field tours", "https://www.mlb.com/cubs/ballpark/tours"],
+      ["Wrigley Field information guide", "https://www.mlb.com/cubs/ballpark/information/guide"],
+      ["Chicago Park District Lakefront Trail", "https://www.chicagoparkdistrict.com/lakefront-trail"],
+      ["Flyover at Navy Pier", "https://navypier.org/pier-locations/flyover/"],
+      ["Flyover Chicago rider and sensory FAQ", "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/"],
+      ["Second City Chicago shows", "https://www.secondcity.com/shows/chicago"],
+      ["Second City theater FAQ", "https://www.secondcity.com/faqs"],
+      ["Choose Chicago activities for teens or tweens", "https://www.choosechicago.com/articles/families/top-10-chicago-must-dos-with-teens-or-tweens-2/"],
+      ["Chicago photo source and attribution", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"],
+      ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {
@@ -1432,9 +1485,10 @@ ${items.map(([label, pick, why]) => `          <article class="quick-pick">
         </div>`;
 }
 
-function renderActivityComparison(rows, customHeaders) {
+function renderActivityComparison(rows, customHeaders, wrapperClass = "") {
   const headers = customHeaders || ["Activity", "Best ages", "Time", "Cost", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"];
-  return `        <div class="comparison-scroll">
+  const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
+  return `        <div class="${esc(className)}">
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th>${esc(header)}</th>`).join("")}</tr></thead>
             <tbody>
@@ -1779,7 +1833,7 @@ ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page
           <h2>Teen activity decision table</h2>
         </div>
         <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
-${renderActivityComparison(page.rows, page.comparisonHeaders)}
+${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
       </section>
 
       <section class="band intro-band rank-ready-section">

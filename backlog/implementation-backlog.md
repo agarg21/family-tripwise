@@ -4,9 +4,54 @@ Last updated: 2026-07-23
 
 ## Active
 
+### IMP-028: Review And Improve The Chicago Teen Guide
+
+Status: review-clean; release pending
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-012`
+
+Research a wider current teen-specific candidate set, audit every visible section, and rebuild the existing URL around choices that earn their place through a distinct older-kid reason.
+
+Affected production URL:
+
+- `https://familytripwise.com/things-to-do/chicago-with-teens.html`
+
+Exact maximum transaction scope:
+
+- `docs/research/chicago-teen-page-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/chicago-teen-page.test.mjs`
+- `site/things-to-do/chicago-with-teens.html`
+- `site/styles.css`
+- `status/chicago-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Preserve the existing URL, canonical, indexability, and sitemap membership.
+- Require a teen-specific reason and current official check for each retained primary choice.
+- Do not publish universal age fit, safety, exact-route, transit, weather, price, opening-hour, or independent-wandering claims.
+- The shared stylesheet is included only for a scoped mobile comparison treatment required by the first visual review; unrelated selectors must remain unchanged.
+- Do not edit another live page, request indexing, mutate an external account, add an affiliate CTA, send outreach, or add recurring automation.
+
+Local result:
+
+- Replaced the duplicated generated shortlist and six generic choices with five singular teen-choice starts, one eight-choice comparison, four high-friction notes, four route shapes, four cluster routes, three current checks, and three visible/schema-aligned FAQs.
+- Reduced the comparison from eleven to seven teen-relevant columns and added a scoped 820-pixel table with a sticky activity column so mobile readers can keep the option name in view.
+- Recorded exact ranking-page and community-discussion registers, official product sources, evidence limitations, candidate decisions, every-section treatment, persona fit, trust boundaries, acceptance criteria, and measurement in `docs/research/chicago-teen-page-review.md`.
+- Focused tests passed 5/5, the full suite passed 74/74, native SEO QA returned 0 errors and 0 warnings, and the browser check confirmed 8 rows, 7 headers, 4 detail cards, the scoped sticky column, no 1280-pixel page overflow, and a 1280 by 960 image.
+- Independent reviewer Peirce (`019f93b0-2afb-7af1-a826-8ce8e31c66e6`) returned final `PASS` in cycle 2 with no P0-P3 findings. Secondary visual reviewer Jason closed all P2 findings and returned `PASS_WITH_P3`; privacy/scope reviewer Rawls returned `PASS`.
+
 ### IMP-027: Simplify The Chicago Stay-Area Guide
 
-Status: done and review-clean; release pending
+Status: done and released
 
 Selected: 2026-07-23
 
@@ -47,6 +92,7 @@ Local result:
 - Added four cluster routes led by the released ten-hotel comparison, three visible FAQs aligned with schema, and current Choose Chicago and CTA verification sources.
 - Focused tests passed 4/4, the full suite passed 69/69, native SEO QA returned 0 errors and 0 warnings, and 1280/390/320 responsive checks passed without page or card overflow.
 - Independent reviewer Meitner (`019f9385-11e0-70d3-8013-d4effa21ca00`) returned final `PASS` in cycle 2 with no P0-P3 findings.
+- Released at commit `9d1a90d4b39a2477175bdd8597ee79e197db0ab8`; GitHub Pages run `30084335602` succeeded and production verification passed.
 
 ### IMP-026: Publish The Chicago Family-Hotel Comparison
 

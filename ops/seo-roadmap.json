@@ -1110,8 +1110,49 @@
       "implementation_summary": "Replaced three repeated area-selection layers and six stale hotel checks with five conditional trip-style starts, one five-row six-column area comparison, three decisive checks, four cluster routes led by the released hotel comparison, three visible FAQs aligned with schema, and current Choose Chicago and CTA verification sources.",
       "qa_summary": "Focused tests passed 4/4, the full repository suite passed 69/69, native SEO QA returned 0 errors and 0 warnings, JavaScript and roadmap JSON validation passed, generation is idempotent and isolated, and responsive checks at 1280/390/320 found no page-level overflow, card overflow, or image failure.",
       "review_summary": "Independent reviewer Meitner (019f9385-11e0-70d3-8013-d4effa21ca00) returned FAIL in cycle 1 for one P2 stale operator-state contradiction plus two P3 source/wording notes. All were corrected; cycle 2 returned final PASS with no P0-P3 findings.",
-      "release_state": "review-clean-release-pending",
+      "release_commit": "9d1a90d4b39a2477175bdd8597ee79e197db0ab8",
+      "pages_run": 30084335602,
+      "release_state": "released-and-production-verified",
       "notes": "Selected under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses. One existing URL only. Current SERP/persona evidence is reused from the same-day FT-RES-008 decision pack and will be supplemented with a page-specific every-section and current-source review. The existing hotel-page regression test is included only to accept the equivalent same-directory hotel route emitted by this page; the hotel page remains unchanged. No new URL, sibling-page content edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-012",
+      "implementation_backlog_id": "IMP-028",
+      "research_backlog_id": "SRR-019",
+      "title": "Review and improve the Chicago teen guide",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "review-clean-release-pending",
+      "selected_on": "2026-07-23",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/chicago-with-teens.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-teen-page-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/chicago-teen-page.test.mjs",
+        "site/things-to-do/chicago-with-teens.html",
+        "site/styles.css",
+        "status/chicago-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing Chicago teen page becomes a materially wider but less repetitive decision guide with explicit older-kid reasons, one complete comparison, compact high-friction notes, useful route shapes, current official checks, and clear links to the all-ages, hotel, stay, and itinerary jobs.",
+      "production_invariant": "The existing Chicago teen URL remains canonical, indexable, present in the sitemap, and internally connected to the Chicago cluster; every retained choice has a teen-specific reason and introduces no unsupported age-fit, safety, exact-route, transit, weather, price, opening-hour, independent-wandering, or personally verified claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-23 with finalized data through 2026-07-21: no page row exists for the Chicago teen URL. Impressions, clicks, and position are therefore N/A; the action is justified by the 720-search directional core estimate, observed distinct teen SERP, and current usefulness gap rather than a GSC performance claim.",
+      "release_state": "review-clean-awaiting-commit-push-deployment",
+      "notes": "Selected under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses. One existing URL only. Same-day FT-RES-008 SERP/persona evidence is supplemented with an exact page-specific ranking/community register, candidate, every-section, and current official-source review. The first visual review expanded scope to one narrowly named shared-stylesheet treatment so the seven-column comparison keeps the activity name visible on mobile; unrelated selectors remain unchanged. Focused tests pass 5/5, full tests pass 74/74, native SEO QA is 0/0, and browser/source/privacy/scope checks pass. Formal independent reviewer Peirce returned PASS in cycle 2 with no P0-P3 findings. No new URL, sibling-page edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }
