@@ -1,31 +1,31 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
-Last re-scored: 2026-07-14
-Next re-score due: 2026-07-21
+Last re-scored: 2026-07-22
+Next re-score due: 2026-07-29
 
 ## Ownership
 
-The Family Tripwise SEO Operator creates and maintains this roadmap. It converts the user's growth goals, site strategy, fresh GSC evidence, public health, experiment results, implementation backlog, and authority evidence into a rolling 28-day execution queue.
+The central SEO Control Room owns scheduling, dispatch registration, and roadmap reprioritization. This repository mirrors the durable project queue and evidence needed to execute a valid dispatch or direct manual user instruction.
 
-The user owns portfolio goals and material strategic decisions. User input is required for destination expansion, monetization changes, major risk or trust decisions, large page batches, destructive URL/indexability changes, credentials, outreach, and stop/continue decisions. The independent reviewer validates implementation quality; it does not replace the operator's prioritization responsibility or required human review.
+The Family Tripwise project operator may update the selected action's repository evidence and status within an authorized transaction, but it must not self-dispatch or reprioritize unrelated work. The user owns portfolio goals and material strategic decisions. The independent reviewer validates implementation quality; it does not replace Control Room scheduling or required human review.
 
-The machine-readable source used by the deterministic operator is `ops/seo-roadmap.json`.
+`ops/seo-roadmap.json` is the repository mirror used for contract validation and project execution. The central dispatch ledger and latest central report control scheduler state when post-release evidence has not yet been backfilled here.
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-23.json`.
-- Classification on July 23: fresh authenticated read-only Search Console API evidence, collected July 23 with finalized performance data through July 21.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-24.json`.
+- Classification on July 24: fresh authenticated read-only Search Console API evidence, collected July 24 with finalized performance data through July 22.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet.
 
 ## Maintenance cadence
 
-- Every run: complete routine monitoring housekeeping, then select at most one substantive ready item. Healthy or unchanged housekeeping may coexist with that item; preserve unrelated work and update only the affected monitoring and selected-item evidence.
-- Weekly: review fresh evidence, close stale ideas, re-score the next four weeks, and keep at least two useful non-protected items ready when evidence supports them.
-- After a deployment: record a crawl and measurement checkpoint. Do not automatically protect a new or low-signal URL from high-confidence usefulness, factual, or technical improvements.
+- Every Control Room run: complete routine monitoring housekeeping and dispatch at most one eligible substantive action. The project operator executes only that contract or a direct user instruction.
+- Weekly in the Control Room: review fresh evidence, close stale ideas, and re-score the next four weeks when evidence supports it.
+- After a deployment: record commit, workflow, production, crawl, and measurement evidence centrally. Do not create a repository commit solely to backfill those fields.
 - Use a blocking observation window only when an action explicitly requires an isolated experiment and available evidence can support that evaluation.
 - Monthly or after a strategic event: ask the user to confirm destination expansion, monetization, risk, and continuation decisions.
 
@@ -58,9 +58,21 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 23 | `FT-PUB-003` research and publish the Chicago family-hotel comparison | Content/product quality | Completed and released | Commit `833c081`; Pages run `30062024170`; production verification passed. |
 | 24 | `FT-IMP-011` simplify the Chicago stay-area guide | Content/product quality | Completed and released | Commit `9d1a90d`; Pages run `30084335602`; production verification passed. |
 | 25 | `FT-IMP-012` review and improve the Chicago teen guide | Content/product quality | Completed and released | Commit `7df3952`; Pages run `30087275395`; production verification passed. |
-| 26 | `FT-IMP-013` review and improve the Chicago family itinerary | Content/product quality | Review-clean; release pending | Replaced repeated abstract route layers with concrete one-, two-, and three-day execution plans, persona pivots, stop rules, and all four Chicago cluster handoffs. |
+| 26 | `FT-IMP-013` review and improve the Chicago family itinerary | Content/product quality | Completed and released | Commit `f7a2d7f`; Pages run `30090493666`; production verification passed. |
+| 27 | `FT-OPS-001` audit and harden the repository operating model | Operating model | Completed | Release narratives reconciled, current operating guidance aligned, and focused state-drift QA added without changing `site/**`. |
 
-Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
+Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+
+### FT-OPS-001 - Audit and harden the repository operating model
+
+- Selected: 2026-07-24 by direct manual user instruction.
+- State: completed and review-clean on 2026-07-24; documentation and QA hardening only.
+- Evidence: aligned repository at `d12d011`, fresh July 24 GSC finalized through July 22, verified Chicago itinerary release commit `f7a2d7f`, successful Pages run `30090493666`, and the current central Control Room report.
+- Scope: reconcile Chicago and stale prior-city status narratives; align roadmap, current cycle, backlogs, and needs-user; refresh README, content strategy, technical plan, and city playbook; add a durable operating audit and focused state QA.
+- Boundary: no `site/**`, sitemap, deployment workflow, external account, indexing request, outreach, recurring automation, or hidden city implementation.
+- Technical decision: keep the static architecture; queue the 4,337-line generator/upgrader modularization as a separate behavior-preserving action before several more city revamps.
+- QA: 83/83 repository tests, 5/5 focused state tests, operator-state QA, native SEO QA 0/0, roadmap JSON, local links, privacy, exact-path, no-site/no-workflow, and whitespace checks passed.
+- Review: independent reviewer Popper (`019f94ac-a664-7813-83af-367c71446ed3`) returned final `PASS` in cycle 2 with no P0-P3 findings.
 
 ### FT-RES-008 - Chicago SERP-overlap cluster and persona decision pack
 
@@ -125,7 +137,7 @@ Ready does not mean all items should ship immediately. The operator selects one 
 ### FT-IMP-013 - Review and improve the Chicago family itinerary
 
 - Selected: 2026-07-23 under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses.
-- State: review-clean; commit and release pending.
+- State: completed, released, and production-verified on 2026-07-24 at commit `f7a2d7f936bf286ab25776e058eefc72ea7569f8`; GitHub Pages run `30090493666` succeeded.
 - Target: `https://familytripwise.com/family-itinerary/chicago-with-kids.html`.
 - Demand and evidence: directional logged-in Semrush US estimates collected July 23 are 20 for `Chicago itinerary with kids` and 20 for `3 days in Chicago with kids`; variants overlap. The fresh July 23 GSC snapshot has 12 impressions, 0 clicks, and page-level average position 20.75, which is too small for a query-rank or causal conclusion.
 - Product requirement: inspect current itinerary SERPs and representative ranking pages, apply CHI-P1 through CHI-P5, and audit every visible section. Build genuinely usable one-, two-, and three-day execution plans with age/weather/budget/base pivots and explicit stop rules rather than repeating the activity list.
@@ -134,6 +146,7 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Release gate: focused/native/responsive/source/privacy/scope QA and a different independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
 - Local result: three trip-length starts, three concrete day plans, five persona pivots, four stop rules, four cluster handoffs, current sources, and visible/schema-aligned FAQs. Focused tests pass 4/4, the full suite passes 78/78, native SEO QA is 0/0, and 1280/390/320 browser checks pass without page overflow; the mobile pivot table keeps its first column visible while scrolling.
 - Review: Boyle (`019f93dc-ecd8-78c1-988a-51943eca7217`) returned final `PASS` in cycle 2 with no P0-P3 findings.
+- Production: the workflow head and release marker matched `f7a2d7f`; the itinerary invariant and production SEO QA passed.
 
 ### FT-IMP-012 - Review and improve the Chicago teen guide
 
@@ -210,7 +223,7 @@ Ready does not mean all items should ship immediately. The operator selects one 
 
 ### FT-IMP-006 - Improve the Las Vegas all-ages things-to-do hub
 
-- State: completed and review-clean on 2026-07-22; exact-path release authorized.
+- State: completed, released, and production-verified on 2026-07-22 at commit `3f555d65b9e6b9c86f47c176ed2d6f3c529789a8`; GitHub Pages run `29930917894` succeeded.
 - Source handoff: `FT-RES-007` and `docs/research/next-city-prioritization-las-vegas-cluster.md`.
 - Target: `https://familytripwise.com/things-to-do/las-vegas-with-kids.html`.
 - Scope: widen the candidate research, then review every current section against five persona hypotheses, current ranking pages, evidence quality, repetition, scan cost, and trust boundaries. Keep only choices with distinct planning value; there is no list-length quota.
@@ -222,7 +235,7 @@ Ready does not mean all items should ship immediately. The operator selects one 
 ### FT-IMP-005 — Expand San Diego activity and hotel decision sets
 
 - Selected: 2026-07-21 by direct manual user instruction.
-- State: completed and review-clean; eligible for the exact-scope commit and deployment gate.
+- State: completed, released, and production-verified on 2026-07-21 at commit `31bba30652d76c3d1664193532a9c508a83c6f32`; GitHub Pages run `29876597948` succeeded.
 - Main URLs: `https://familytripwise.com/things-to-do/san-diego-with-kids.html` and `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
 - Target: evaluate wider candidate pools, then publish 12 distinct primary activities and 12 evidence-backed hotels only when each earns inclusion through a different age, weather, budget, geography, or trip-style decision.
 - Dependent stay-page scope: update only the two hard-coded hotel-count link labels; do not reopen its area guidance.
@@ -391,9 +404,9 @@ Ready does not mean all items should ship immediately. The operator selects one 
 1. Read the newest dated snapshot under `ops/gsc-snapshots/` and state its collection mode and age.
 2. Run current public and repository health checks.
 3. Complete due routine monitoring as housekeeping. Preempt substantive work only for a verified technical or production defect, a safety or trust blocker, a due substantive experiment decision, or a check explicitly marked to preempt.
-4. Select the highest-value eligible roadmap item; do not invent work when the queue or evidence does not support it.
+4. For a registered dispatch, validate the lease and execute only the immutable contract. For direct manual work, record the user-directed action and exact paths.
 5. Implement, independently review, commit, push, and verify within the standing policy.
-6. Record evidence and update the selected roadmap item.
+6. Return the structured handback to the Control Room. Do not self-select the next item.
 
 ## Hotel Research Policy
 
@@ -409,7 +422,7 @@ The first standalone hotel page should not stop at the three hotels already name
 
 ## Expansion Policy
 
-Go deeper in San Diego before expanding the five pilot cities. The operator should finish the San Diego research/page pattern first: hotel evidence engine, clean hotel page brief, stay-page measurement, and any necessary quality upgrades. Once the San Diego pattern is strong enough to reuse, expand it across the pilot cities as a repeatable system.
+San Diego established the first deep pattern; Las Vegas and Chicago validated transfer. Future city work must still begin with a current decision pack and Control Room dispatch or direct manual user instruction. New York City is the leading research candidate and San Antonio is the runner-up, but neither priority self-authorizes implementation.
 
 ## Data boundary
 

@@ -1,21 +1,22 @@
 # Las Vegas Page Status
 
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
 Sources:
 
-- Latest public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-23.md`
+- Implementation baseline GSC snapshot: `ops/gsc-snapshots/2026-07-23.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-24.md`
 - Las Vegas city/cluster research: `docs/research/next-city-prioritization-las-vegas-cluster.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
-Demand estimates are directional US monthly search volumes from the logged-in Semrush check collected July 22, 2026. Closely related rows overlap and must not be summed into unique traffic. GSC rank is page-level average position over the latest 28-day window, finalized through July 21; it is not a claim that the page ranks at that position for each example query. Example queries are research targets, not a protected GSC query export.
+Demand estimates are directional US monthly search volumes from the logged-in Semrush check collected July 22, 2026. Closely related rows overlap and must not be summed into unique traffic. Baseline GSC rank is page-level average position over the implementation window finalized through July 21; it is not a claim that the page ranks at that position for each example query. Example queries are research targets, not a protected GSC query export.
 
 ## Public Pages
 
-| Page | Full URL | Est. search demand/mo | Current GSC rank | Target rank | 2-3 top search queries | Current status | Done | Remaining / blocker | Next action |
+| Page | Full URL | Est. search demand/mo | Baseline GSC rank | Target rank | 2-3 top search queries | Current status | Done | Remaining / blocker | Next action |
 |---|---|---:|---|---|---|---|---|---|---|
-| Main things-to-do hub | https://familytripwise.com/things-to-do/las-vegas-with-kids.html | 3,600 core exact; 5,880 across four overlapping broad variants | Avg position 56.53; 192 impressions | Top 20 first, then Top 10 | `things to do in Las Vegas with kids`; `things to do with kids in Las Vegas`; `Las Vegas family activities` | Live, indexed, released, and production-verified under `FT-IMP-006`. | Twelve distinct choices, six practical filters, one complete comparison, five trip-shape routes, six high-friction detail notes, visible FAQ, heat/budget checks, and links to teen/stay/itinerary pages. | Current GSC is only the pre-change baseline; no performance conclusion is available yet. | Preserve while Google recrawls; use later GSC as directional evidence rather than manufacturing a cadence action. |
+| Main things-to-do hub | https://familytripwise.com/things-to-do/las-vegas-with-kids.html | 3,600 core exact; 5,880 across four overlapping broad variants | Avg position 56.53; 192 impressions | Top 20 first, then Top 10 | `things to do in Las Vegas with kids`; `things to do with kids in Las Vegas`; `Las Vegas family activities` | Live, indexed, released, and production-verified under `FT-IMP-006`. | Twelve distinct choices, six practical filters, one complete comparison, five trip-shape routes, six high-friction detail notes, visible FAQ, heat/budget checks, and links to teen/stay/itinerary pages. | Baseline GSC predates the change; no performance conclusion is available yet. | Preserve while Google recrawls; use later GSC as directional evidence rather than manufacturing a cadence action. |
 | Teen activities | https://familytripwise.com/things-to-do/las-vegas-with-teens.html | 590 core exact; alternate variants also support the intent | Avg position 11; 2 impressions | Top 10 | `things to do in Las Vegas with teens`; `things to do with teens in Las Vegas`; `Las Vegas with teens` | Live, released, and production-verified under `FT-IMP-007` at `ae917f1`; Pages run `29964564369` succeeded. | Eight teen-specific choices, five trip-style starts, five high-friction detail cards, four route shapes, mixed-age routing, current official checks, visible FAQ/schema, and a full competitor/persona/section record. | The two-impression GSC baseline is too small for a performance conclusion, and post-change evidence does not exist yet. | Preserve while Google recrawls; do not request indexing. |
 | Stay areas / property constraints | https://familytripwise.com/where-to-stay/las-vegas-with-kids.html | 20 for exact area query; overlaps 3,980+ hotel/resort variants | Avg position 44.69; 13 impressions | Top 20 | `where to stay in Las Vegas with kids`; `best area to stay in Las Vegas with kids`; `where should families stay in Las Vegas` | Live, released, and production-verified under `FT-IMP-008` at `7bc2993`; Pages run `29975754626` succeeded. | Five trip-shape starts, one five-row base comparison, three decisive checks, four cluster routes, three visible FAQs/schema, current sources, and full competitor/persona/every-section review. | The 13-impression baseline is too small for a performance conclusion; post-change evidence does not exist yet. | Preserve while Google recrawls; do not request indexing. |
 | Family itinerary | https://familytripwise.com/family-itinerary/las-vegas-with-kids.html | About 20 across two sampled exact itinerary phrases | Avg position 22.6; 5 impressions | Top 20 | `Las Vegas itinerary with kids`; `Las Vegas family itinerary`; `Las Vegas weekend with kids` | Live, released, and production-verified under `FT-IMP-009` at `48417b0`; Pages run `29994060699` succeeded. | Three trip-length starts, three day-by-day plans, five persona/trip pivots, four stop rules, four cluster routes, three visible FAQs/schema, current sources, a full competitor/persona/every-section record, 57/57 tests, responsive QA, and independent review. | The five-impression baseline is too small for a performance conclusion; post-change evidence does not exist yet. | Preserve while Google recrawls; do not request indexing. |
@@ -45,6 +46,6 @@ Demand estimates are directional US monthly search volumes from the logged-in Se
 | Free/budget | Prominent all-ages module first; standalone page only after further evidence. |
 | Toddler / indoor / heat / stroller / waterslides | Filters or modules, not new URLs now. |
 
-## Current Priority
+## Current Decision
 
-Las Vegas is complete at the current five-page core-cluster level. `FT-IMP-006` / `IMP-020`, `FT-PUB-002` / `IMP-021`, `FT-IMP-007` / `IMP-022`, `FT-IMP-008` / `IMP-023`, and `FT-IMP-009` / `IMP-024` are released and production-verified. Chicago is the next active city research transaction.
+Las Vegas is complete at the current five-page core-cluster level. `FT-IMP-006` / `IMP-020`, `FT-PUB-002` / `IMP-021`, `FT-IMP-007` / `IMP-022`, `FT-IMP-008` / `IMP-023`, and `FT-IMP-009` / `IMP-024` are released and production-verified. Preserve the current architecture while Google discovers the revisions; change a page only when current evidence identifies a concrete usefulness, freshness, intent, or technical gap.

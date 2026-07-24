@@ -1,12 +1,31 @@
 # Implementation Backlog
 
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
-## Active
+## Planned Technical Cleanup
+
+### IMP-030: Modularize Static Page Generation Without Output Changes
+
+Status: candidate; separate reviewed transaction required
+
+Audit source: `FT-OPS-001`
+
+Split the 1,968-line base generator and 2,369-line page upgrader into shared helpers plus destination/page-type specifications before several more city revamps. Preserve the static architecture and public output.
+
+Acceptance boundary:
+
+- No intentional `site/**` content, metadata, schema, link, style, or behavior change.
+- Full generation must be byte-stable and idempotent.
+- Existing focused tests and native SEO QA must stay green.
+- Add or retain isolation proof that one city specification cannot mutate unrelated city output.
+- Do not combine the refactor with New York City research or content implementation.
+- Exact module paths must be declared before editing and independently reviewed.
+
+## Latest Completed Chicago Work
 
 ### IMP-029: Review And Improve The Chicago Family Itinerary
 
-Status: review-clean; release pending
+Status: done and released
 
 Selected: 2026-07-23
 
@@ -48,6 +67,7 @@ Local result:
 - Recorded exact query-to-ranking-page and community registers, all five persona applications, every-section treatment, claim boundaries, acceptance criteria, and measurement in `docs/research/chicago-family-itinerary-page-review.md`.
 - Focused tests passed 4/4, the full suite passed 78/78, native SEO QA returned 0 errors and 0 warnings, and 1280/390/320 browser checks found no page overflow. The mobile pivot table stays in its scroller with a sticky trip-constraint column, and the 1280 by 960 image loads.
 - Independent reviewer Boyle (`019f93dc-ecd8-78c1-988a-51943eca7217`) returned final `PASS` in cycle 2 with no P0-P3 findings after the SERP-overlap classification, mobile table behavior, and target-only regeneration test were corrected.
+- Released at commit `f7a2d7f936bf286ab25776e058eefc72ea7569f8`; GitHub Pages run `30090493666` succeeded and production release/content/SEO verification passed.
 
 ### IMP-028: Review And Improve The Chicago Teen Guide
 
@@ -196,7 +216,7 @@ Local result:
 - Independent reviewer Wegener (`019f91eb-1d7f-7861-a9e3-4c0d8c1628b7`) returned final `PASS` on cycle 3 with no P0-P3 findings. The exact paths are eligible for commit, push, deployment, and production verification.
 - Released at commit `833c081ca1c436d609b50e36ae94f47cff4c7cbf`; GitHub Pages run `30062024170` succeeded and production verification passed.
 
-## Completed
+## Earlier Completed
 
 ### IMP-025: Improve The Chicago All-Ages Things-To-Do Hub
 

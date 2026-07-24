@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "site": "family-tripwise",
-  "owner": "Family Tripwise SEO Operator",
-  "last_updated": "2026-07-23",
+  "owner": "Central SEO Control Room",
+  "last_updated": "2026-07-24",
   "last_rescored_on": "2026-07-22",
   "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
   "maintenance": {
-    "after_every_run": "Update the selected item's durable status and evidence; do not reprioritize unrelated items mechanically.",
-    "after_deployment": "Record a crawl and measurement checkpoint. On a new or low-signal URL, do not block high-confidence usefulness, factual, or technical improvements unless an action contract explicitly requires an isolated experiment and the evidence can support that evaluation.",
-    "weekly": "Re-score ready and planned items from fresh GSC, public health, experiment, product, and authority evidence.",
+    "after_every_run": "The project operator updates only the dispatched or directly user-instructed item's repository evidence and must not self-dispatch or reprioritize unrelated items.",
+    "after_deployment": "The Control Room records commit, workflow, production, crawl, and measurement evidence centrally; do not create a repository commit solely to backfill it.",
+    "weekly": "The Control Room re-scores ready and planned items from fresh GSC, public health, experiment, product, and authority evidence.",
     "monthly_or_strategy_event": "Ask the user to confirm material destination expansion, monetization direction, risk changes, or site continuation decisions."
   },
   "goals": [
@@ -673,7 +673,10 @@
       ],
       "result": "Review-clean implementation expands the all-ages guide to 12 primary choices and the family-hotel guide to 12 researched properties. Repeated activity prose is bounded to six compact extra-planning cards for the additions, and the stay page changes only its two dependent hotel-count references.",
       "review": "Independent reviewer Tesla (019f86e6-7253-78c1-a1b0-5024da393b27) returned PASS on cycle 3 with no P0-P3 findings after all cycle-1 P2 and cycle-2 P3 findings were closed.",
-      "notes": "Selected by direct manual user instruction on 2026-07-21. Research a wider candidate pool before selecting 12 activities and 12 hotels; list length is not a quota. The central report's superseded stay-page hold remains a ledger mismatch, so the stay URL is limited to two dependent count-label corrections."
+      "release_commit": "31bba30652d76c3d1664193532a9c508a83c6f32",
+      "pages_run": 29876597948,
+      "release_state": "released-and-production-verified",
+      "notes": "Selected by direct manual user instruction on 2026-07-21. Research a wider candidate pool before selecting 12 activities and 12 hotels; list length is not a quota. Commit 31bba30652d76c3d1664193532a9c508a83c6f32 deployed successfully through Pages run 29876597948; release marker, action invariants, and production SEO QA passed."
     },
     {
       "id": "FT-RES-007",
@@ -1166,8 +1169,9 @@
       "title": "Review and improve the Chicago family itinerary",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "review-clean-release-pending",
+      "status": "completed",
       "selected_on": "2026-07-23",
+      "completed_on": "2026-07-24",
       "impact": 4,
       "confidence": 4,
       "learning_value": 4,
@@ -1198,8 +1202,56 @@
       "implementation_summary": "Replaced the duplicated generated nap/weekend starters, eight universal quick picks, six-row abstract matrix, and six generic pacing cards with three trip-length starts, three concrete day-plan cards, five persona pivots, four stop rules, four cluster handoffs, current official sources, and three visible/schema-aligned FAQs.",
       "qa_summary": "Focused tests pass 4/4, the full repository suite passes 78/78, native SEO QA returns 0 errors and 0 warnings, generation is isolated/idempotent, and 1280/390/320 browser, source, privacy, and scope checks pass. The mobile pivot table stays contained and keeps its first column visible while scrolling.",
       "review_summary": "Independent reviewer Boyle (019f93dc-ecd8-78c1-988a-51943eca7217) returned PASS in cycle 2 with no P0-P3 findings after the SERP-overlap classification, mobile pivot-table behavior, and target-only regeneration test were corrected.",
-      "release_state": "review-clean-release-pending",
-      "notes": "Selected under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses. One existing URL only. Same-day FT-RES-008 evidence is supplemented with exact itinerary-specific ranking/community registers, all five persona applications, an every-section audit, and current official-source checks. Review cycle 1 expanded scope to one narrowly named shared-stylesheet treatment so the trip-constraint label remains visible while the five-column pivot comparison scrolls on mobile; unrelated selectors remain unchanged. No new URL, sibling-page edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+      "release_commit": "f7a2d7f936bf286ab25776e058eefc72ea7569f8",
+      "pages_run": 30090493666,
+      "released_at": "2026-07-24T11:43:03Z",
+      "release_state": "released-and-production-verified",
+      "notes": "Selected under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses. One existing URL only. Same-day FT-RES-008 evidence is supplemented with exact itinerary-specific ranking/community registers, all five persona applications, an every-section audit, and current official-source checks. Review cycle 1 expanded scope to one narrowly named shared-stylesheet treatment so the trip-constraint label remains visible while the five-column pivot comparison scrolls on mobile; unrelated selectors remain unchanged. Commit f7a2d7f936bf286ab25776e058eefc72ea7569f8 deployed successfully through Pages run 30090493666; release marker, action invariant, and production SEO QA passed. No new URL, sibling-page edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+    },
+    {
+      "id": "FT-OPS-001",
+      "title": "Audit and harden the repository operating model",
+      "kind": "operations",
+      "lane": "operating-model",
+      "status": "completed",
+      "selected_on": "2026-07-24",
+      "completed_on": "2026-07-24",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "README.md",
+        "docs/plan/content-strategy.md",
+        "docs/plan/technical-plan.md",
+        "docs/plan/incremental-city-cluster-playbook.md",
+        "docs/research/repository-operating-model-audit-2026-07-24.md",
+        "tools/operator-state-qa.mjs",
+        "tools/operator-state-qa.test.mjs",
+        "status/README.md",
+        "status/chicago-pages.md",
+        "status/las-vegas-pages.md",
+        "status/san-diego-pages.md",
+        "backlog/implementation-backlog.md",
+        "backlog/seo-research-review-backlog.md",
+        "ops/needs-user.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Chicago and prior city release narratives match verified production state; current strategy and architecture docs describe the operating repository; a focused state QA check detects future latest-release and snapshot metadata drift; native QA and independent review pass.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-24 with finalized data through 2026-07-22; used only to reconcile operating context, not to claim page-level causality or create content work.",
+      "qa_summary": "Full repository tests passed 83/83; focused operator-state tests passed 5/5; operator-state QA passed with 0 errors; native SEO QA passed with 0 errors and 0 warnings; roadmap JSON, local Markdown links, privacy, exact-path, no-site/no-workflow, and git diff checks passed.",
+      "review_summary": "Independent reviewer Popper (019f94ac-a664-7813-83af-367c71446ed3) returned PASS in cycle 2 with no P0-P3 findings after scheduler ownership, central post-release recording, remaining stale release narratives, and release-order robustness were corrected.",
+      "result": "Reconciled Chicago, San Diego, and Las Vegas release narratives; aligned Control Room-only scheduling and current strategy/architecture guidance; defined city-status baseline semantics; added tested operator-state drift QA; and queued one separate behavior-preserving generator modularization candidate.",
+      "notes": "Direct manual user instruction. Documentation and QA hardening only: no site page, sitemap, Pages workflow, deployment, external account, indexing request, outreach, or recurring automation. The larger generator modularization remains a separate behavior-preserving candidate."
     }
   ]
 }

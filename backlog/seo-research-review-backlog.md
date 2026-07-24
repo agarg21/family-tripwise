@@ -1,8 +1,8 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
-## Active
+## Latest Completed Chicago Reviews
 
 ### SRR-020: Chicago Family-Itinerary Competitor And Every-Section Review
 
@@ -105,7 +105,7 @@ Result:
 - Artifact: `docs/research/chicago-family-hotel-evidence-pack.md`.
 - Independent reviewer Wegener returned final `PASS` on cycle 3 with no P0-P3 findings.
 
-## Recently Done
+## Earlier Completed
 
 ### SRR-016: Chicago All-Ages Candidate And Every-Section Review
 

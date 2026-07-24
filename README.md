@@ -6,10 +6,13 @@ The strategy is to build destination-specific family travel pages and interactiv
 
 ## Current Focus
 
-- US search demand first.
-- Start with destination pages where family-travel SERPs are weak or fragmented.
-- Prioritize high-intent clusters: where to stay, best family hotels, best areas to stay, things to do with kids, and itineraries with kids.
-- Differentiate with tools instead of static blog posts.
+- Use US search demand as the default market.
+- Work one city at a time from query research, observed SERP overlap, ranking-page analysis, persona hypotheses, and an every-section usefulness review.
+- Improve existing pages before adding URLs unless the current SERP clearly requires a separate page type.
+- Differentiate through current source-backed research, clean comparisons, family-constraint routing, useful maps, and compact decision support.
+- Keep the central Control Room as the only scheduler. Manual work in this repository is user-directed and still follows the same QA, independent-review, release, and reconciliation gates.
+
+San Diego, Las Vegas, and Chicago have completed deep quality passes. New York City is the leading next-city research candidate; it is not pre-approved page scope until a current city decision pack establishes the architecture.
 
 ## Starter Docs
 
@@ -23,18 +26,24 @@ The strategy is to build destination-specific family travel pages and interactiv
 - [Technical plan](docs/plan/technical-plan.md)
 - [Deployment](docs/plan/deployment.md)
 - [90-day execution plan](docs/plan/90-day-execution-plan.md)
+- [Incremental city cluster playbook](docs/plan/incremental-city-cluster-playbook.md)
+- [Current operating cycle](ops/current-cycle.md)
+- [SEO roadmap](ops/seo-roadmap.md)
+- [City status convention](status/README.md)
 
 ## Local Preview
 
-Open [site/things-to-do/san-diego-with-kids.html](site/things-to-do/san-diego-with-kids.html) in a browser to view the current San Diego guide.
+Open any file under `site/` directly in a browser. The generated pages do not require a local server for basic review.
 
 The production site is configured for GitHub Pages at `familytripwise.com`.
 
 ## Local QA
 
-Run the static SEO QA check before publishing site changes:
+Run the full repository tests, operating-state consistency check, and static SEO QA before release:
 
 ```bash
+node --test tools/*.test.mjs
+node tools/operator-state-qa.mjs
 node tools/seo-qa.mjs
 ```
 
@@ -44,17 +53,14 @@ To also check production sitemap URLs for HTTP 200 responses:
 node tools/seo-qa.mjs --production
 ```
 
-## Recommended Initial Wedge
+## Source Of Truth
 
-Launch with 10 destination clusters:
+- `ops/seo-roadmap.json`: machine-readable action and release state.
+- `ops/current-cycle.md`: concise current operating checkpoint.
+- `status/`: city-level page roles, frozen evidence baselines, review coverage, release state, and blockers.
+- `docs/research/`: dated decision packs and evidence records.
+- `docs/plan/`: reusable policy and workflow.
+- `site/`: deployable static output.
+- `tools/`: deterministic generation and QA.
 
-1. San Diego
-2. Las Vegas
-3. New York City
-4. Orlando / Disney World
-5. Chicago
-6. Miami
-7. San Antonio
-8. Washington DC
-9. Paris, France
-10. London, UK
+Historical launch briefs remain useful evidence, but they do not override the current roadmap or city playbook.

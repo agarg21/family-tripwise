@@ -6,15 +6,17 @@ Build destination clusters, not isolated articles. Each destination should becom
 
 ## Expansion Sequence
 
-Work depth-first in San Diego before expanding across the pilot set. The goal is to prove the page quality bar, research engine, hotel decision format, itinerary/pacing support, and family-specific evidence model in one destination first.
+San Diego established the first deep-cluster quality bar. Las Vegas and Chicago then proved that the research, hotel evidence, persona, every-section review, and iterative release process can transfer to another city without publishing a predetermined page quota.
 
-Once San Diego has pages and research we are happy with, expand the proven patterns across the five pilot cities instead of inventing new formats destination by destination.
+Continue one city at a time. Select the city from fresh GSC discovery, current keyword evidence, observed SERP opportunity, commercial depth, existing-page leverage, and research cost. Produce the city decision pack before deciding which pages to create or improve.
+
+New York City is the current leading research candidate and San Antonio is the runner-up. This is a prioritization hypothesis, not standing approval to publish either cluster.
 
 Use `docs/plan/seo-cluster-research-protocol.md` before adding or materially changing destination pages. Page decisions should come from keyword validation, SERP-overlap clustering, ranking-page inspection, persona hypotheses, current page audits, and trust/evidence constraints.
 
 The differentiation bet is AI-assisted research plus clean product UX. Family Tripwise should use AI to synthesize fresh, source-dated evidence and turn scattered parent questions into simple decision surfaces. It should not mimic local publishers' firsthand authority, Reddit's UGC, or OTA/Tripadvisor booking and review scale. For pages where competitors do not have live booking inventory or large review databases, look for places Family Tripwise can be substantially better through comparison tables, maps, constraint routing, freshness checks, and transparent evidence boundaries.
 
-## Initial Destination Clusters
+## Candidate Destination Set
 
 1. San Diego
 2. Las Vegas
@@ -33,12 +35,14 @@ The differentiation bet is AI-assisted research plus clean product UX. Family Tr
 |---|---|---|---|
 | `/things-to-do/{destination}-with-kids` | Activity planning | Tickets, tours, attractions | Age filters, map, rainy-day toggle |
 | `/where-to-stay/{destination}-with-kids` | Lodging decision | Hotels, apartments, affiliate | Area recommender |
-| `/best-family-hotels/{destination}` | Commercial hotel selection | Hotel affiliate | Research-backed hotel evidence engine, review-signal summary, amenity comparison |
+| `/where-to-stay/{destination}-family-hotels` | Commercial hotel selection | Hotel affiliate | Research-backed hotel evidence engine, review-signal summary, amenity comparison |
 | `/family-itinerary/{destination}` | Trip planning | Tours, hotels, paid planner | Nap-friendly itinerary builder |
 | `/{destination}-with-toddlers` | Age-specific planning | Hotels, attractions | Stroller and nap constraints |
 | `/{destination}-with-teens` | Age-specific planning | Activities, tours | Interest-based itinerary |
 
-## First 30 Pages
+## Historical Page Opportunity List
+
+This table is the founding opportunity inventory. It is not a publication queue. The current roadmap and a source-dated city decision pack control implementation.
 
 | Priority | Page |
 |---:|---|
@@ -102,4 +106,4 @@ Each destination cluster should link:
 
 Standalone family-hotel pages may launch before firsthand hotel stays only when they follow `docs/plan/hotel-research-engine.md`: source-backed records, visible uncertainty, review-signal summaries, current booking checks, and no unsupported personal-experience or safety claims.
 
-Destination cluster expansion should follow `docs/plan/seo-cluster-research-protocol.md` so San Diego's page-decision method can be reused for Las Vegas, New York City, Chicago, San Antonio, and later cities.
+Destination cluster expansion should follow `docs/plan/incremental-city-cluster-playbook.md`, which incorporates the research protocol, release closure, and city-status requirements.

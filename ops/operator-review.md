@@ -1332,3 +1332,23 @@ QA evidence:
 - `node --test tools/chicago-itinerary-page.test.mjs` passed 4/4; `node --test tools/*.test.mjs` passed 78/78.
 - `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/source/scope inspection, and `git diff --check` passed.
 - Browser checks at 1280, 390, and 320 pixels found no page-level overflow; the 820-pixel pivot table remained contained, its first column stayed at left 0 after horizontal scroll, and the 1280 by 960 licensed image loaded.
+
+### 2026-07-24 - `FT-OPS-001` review cycles 1-2
+
+**Reviewer:** Popper (`019f94ac-a664-7813-83af-367c71446ed3`)
+
+**Final result: `PASS`**
+
+Cycle 1 findings and disposition:
+
+1. `P1` - Corrected legacy roadmap ownership and cadence language so the central Control Room is consistently the only scheduler and roadmap owner; the project operator cannot self-dispatch or reprioritize unrelated work.
+2. `P1` - Corrected the release-closure guide so post-release commit, workflow, deployment, and production evidence is recorded centrally and no repository-only backfill commit is created.
+3. `P2` - Reconciled remaining stale Chicago cluster and San Diego/Las Vegas detailed roadmap narratives with verified release state.
+4. `P3` - Changed state QA to select the newest repository-recorded release by explicit release timing rather than array order and added a reorder regression test.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- Full repository tests passed 83/83; focused operator-state tests passed 5/5.
+- Operator-state QA passed with 0 errors; native SEO QA passed with 0 errors and 0 warnings.
+- Roadmap JSON, local Markdown links, privacy, exact-path, no-site/no-workflow, and `git diff --check` passed.

@@ -24,6 +24,8 @@ This guide operationalizes the San Diego process and the Las Vegas selection in 
 8. Make the default view compact. Filters and deeper detail should reduce decision friction, not require users to configure the page before it becomes useful.
 9. Keep evidence source-dated, uncertainty proportional, and user-facing language direct rather than defensive.
 10. Let fresh crawl/query evidence and product gaps trigger follow-up work. Scan cadence alone does not manufacture tasks.
+11. Treat release-state reconciliation as part of the transaction. A page is not durably complete while roadmap, backlog, current-cycle, and city-status records still call it pending.
+12. Keep generation deterministic and city changes isolated. When the current tooling makes exact scope difficult to prove, schedule a behavior-preserving technical refactor before adding more content complexity.
 
 ## Stage 0: Operating Gate
 
@@ -250,7 +252,21 @@ Implementation sequence:
 9. Stage exact paths, inspect every unpushed commit/path, fetch origin, require no divergence, commit, and push only reviewed work.
 10. For deployable changes, monitor the native Pages workflow and verify the release marker plus action-specific production invariants.
 
-## Stage 10: Measure and Continue
+## Stage 10: Close The Release
+
+After a successful deployment:
+
+- verify the workflow head SHA and release marker;
+- run production SEO QA and the predeclared content/behavior invariant;
+- return the commit, Pages run, production results, and reviewed range in the structured handback;
+- let the Control Room record post-release evidence centrally and reconcile scheduler state;
+- do not amend or create a repository commit solely to backfill commit, workflow, deployment, or production fields.
+
+Before the release commit, repository narratives may correctly say `review-clean; release pending`. A later repository reconciliation is allowed only when it is part of another authorized transaction or is itself explicitly dispatched or directly requested by the user, as with `FT-OPS-001`. Run `node tools/operator-state-qa.mjs` whenever such a reconciliation records release evidence.
+
+Output: one verified central handback and no repository-only backfill commit.
+
+## Stage 11: Measure and Continue
 
 Measurement begins with state, not a calendar reminder:
 
@@ -270,6 +286,18 @@ Continue when one of these is true:
 - the user explicitly changes priority.
 
 Do not generate an edit merely because a weekly scan ran or a nominal observation date arrived.
+
+## Technical Maintainability Gate
+
+Before starting a city implementation, confirm that:
+
+- the page can be generated or upgraded without editing unrelated city specifications;
+- an isolation test can prove the exact output set;
+- shared CSS changes are narrowly named and visually checked;
+- the generator remains idempotent;
+- content evidence is not embedded in a way that prevents source-date refresh.
+
+If those conditions cannot be shown, promote a behavior-preserving tooling task first. Do not hide a broad generator refactor inside a content transaction.
 
 ## Required Durable Artifacts
 
