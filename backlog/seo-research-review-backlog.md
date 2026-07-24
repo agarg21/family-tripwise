@@ -4,6 +4,31 @@ Last updated: 2026-07-23
 
 ## Active
 
+### SRR-020: Chicago Family-Itinerary Competitor And Every-Section Review
+
+Status: done and review-clean inside `FT-IMP-013`
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-013`
+
+Inspect current family-itinerary SERPs, representative ranking pages, qualitative family discussions, official route-anchor sources, all five Chicago persona hypotheses, and every visible section of the current page.
+
+Required coverage:
+
+- Exact ranking-page and community-discussion register with evidence class, date, use, and limitation.
+- One-, two-, and three-day execution plans that do not duplicate activity selection or promise exact route performance.
+- Pivots for younger-child/nap, teen, rain/winter, budget, and stay-base constraints.
+- Explicit deletion and stop rules, all four Chicago cluster handoffs, current official checks, visible/schema-aligned FAQs, and claim boundaries.
+
+Result:
+
+- Recorded exact itinerary queries, representative ranking URLs, community discussion URLs, evidence classes, collection date, uses, and limitations.
+- Applied CHI-P1 through CHI-P5 and separated activity, teen, area, hotel, itinerary, and live-route jobs.
+- Audited every visible section, removed repeated generated summaries, and implemented concrete one-, two-, and three-day route shapes with deletion rules.
+- Preserved exact-route, transit, stroller, safety, weather, ticket, price, timing, firsthand, and universal-fit boundaries.
+- Independent reviewer Boyle returned final `PASS` in cycle 2 with no P0-P3 findings.
+
 ### SRR-019: Chicago Teen Candidate And Every-Section Review
 
 Status: done and review-clean inside `FT-IMP-012`

@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual action `FT-IMP-012` / `IMP-028` / `SRR-019` is review-clean and awaiting commit, push, deployment, and production verification under the user's standing instruction to complete Chicago pages iteratively. It changes one existing Chicago teen URL after a wider candidate, every-section, persona, competitor, exact ranking/community register, and current-source review. The first visual review expanded exact scope to one narrowly named shared-stylesheet treatment so the seven-column comparison keeps the activity name visible on mobile; unrelated selectors remain unchanged. Focused tests pass 5/5, the full suite passes 74/74, native SEO QA is 0/0, browser/source/privacy/scope checks pass, and formal independent reviewer Peirce returned `PASS` in cycle 2 with no P0-P3 findings. The fresh July 23 authenticated GSC snapshot is finalized through July 21 and has no page row for this URL, so impressions, clicks, and position are N/A; previously collected logged-in Semrush estimates and the distinct teen SERP support the usefulness action without a GSC performance claim. No new URL, sibling-page edit, sitemap change, indexing request, external account, affiliate CTA, outreach, or recurring automation is allowed. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
+The operator-owned source of truth is `ops/seo-roadmap.json`. Direct manual action `FT-IMP-013` / `IMP-029` / `SRR-020` is review-clean and awaiting commit/release under the user's standing instruction to complete Chicago pages iteratively. It changes one existing Chicago itinerary URL after current ranking-page/community/current-source review, all five persona hypotheses, and an every-section audit. The revised page has three trip-length starts, three concrete day plans, five pivots, four stop rules, all four Chicago handoffs, and visible source-aligned FAQs. Focused tests pass 4/4, the full suite passes 78/78, native SEO QA is 0/0, and 1280/390/320 browser checks pass without page overflow; the mobile pivot table keeps its first column visible while scrolling. Independent reviewer Boyle returned final `PASS` in cycle 2 with no P0-P3 findings. The fresh July 23 authenticated GSC snapshot is finalized through July 21 and shows 12 impressions, 0 clicks, and page-level average position 20.75; the sample is too small for a query-rank or causal conclusion. The directional logged-in Semrush exact and three-day estimates are 20 each and overlap. No new URL, sibling-page edit, sitemap change, indexing request, external account, affiliate CTA, outreach, or recurring automation is allowed. The central Control Room remains the only scheduler; this task is the manual command center and project writer.
 
 The repository roadmap no longer has a calendar protection hold on the San Diego stay page. The latest central Control Room report still carries the superseded July 27 hold and needs central reconciliation; until then, treat that report entry as a stale ledger mismatch and do not let it manufacture a scheduled action.
 
@@ -25,7 +25,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 - GSC: authenticated read-only API collection is working; the July 23 snapshot has finalized data through July 21, 681 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `9d1a90d4b39a2477175bdd8597ee79e197db0ab8`; GitHub Pages run `30084335602` succeeded and production verification passed for the Chicago stay-area simplification
+- Current released implementation: commit `7df3952b87557f035780bb4d9a44056b43678004`; GitHub Pages run `30087275395` succeeded and production verification passed for the Chicago teen-guide improvement
 
 ## Historical operating threads
 
@@ -154,7 +154,7 @@ The repository roadmap no longer has a calendar protection hold on the San Diego
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-011` / `IMP-027` / `SRR-018` released and passed production verification at commit `9d1a90d4b39a2477175bdd8597ee79e197db0ab8` through Pages run `30084335602`. `FT-IMP-012` / `IMP-028` / `SRR-019` is review-clean and release-pending. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the current execution queue. `FT-IMP-012` / `IMP-028` / `SRR-019` released and passed production verification at commit `7df3952b87557f035780bb4d9a44056b43678004` through Pages run `30087275395`. `FT-IMP-013` / `IMP-029` / `SRR-020` is review-clean and awaiting commit/release. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 

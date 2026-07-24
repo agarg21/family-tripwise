@@ -881,50 +881,101 @@ const stayPages = {
 
 const itineraryPages = {
   "family-itinerary/chicago-with-kids.html": {
-    title: "Chicago Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    title: "Chicago Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Build a Chicago itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with naps, transit, meals, and skip notes.",
+      "Plan one, two or three realistic Chicago days with kids using one-zone routes, age and weather pivots, protected resets, and clear stop rules.",
     city: "Chicago",
+    schemaName: "Chicago family itinerary lengths",
+    removeGeneratedItinerarySections: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>Chicago itinerary with kids</h1>", "<h1>Chicago Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
+      ["<p>A starter family itinerary for Chicago with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, keep each day to one main zone, and protect one reset. Then swap the anchor for age, weather, budget, and hotel location.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 23, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transit or parking, weather, ticket, and accessibility details for your dates.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Behnazkhazai via <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
     links: {
       allAges: "../things-to-do/chicago-with-kids.html",
       stay: "../where-to-stay/chicago-with-kids.html",
       teen: "../things-to-do/chicago-with-teens.html"
     },
     clusterCards: [
-      ["All-ages activity guide", "Compare Museum Campus, Lincoln Park Zoo, Maggie Daley Park, boat tours, Navy Pier, and lakefront stops by age, weather, nap fit, and stroller/transit friction.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
-      ["Teen-specific swaps", "Use stronger river, lakefront, museum, and food ideas when older kids need more than playground-heavy pacing.", "../things-to-do/chicago-with-teens.html", "Open Chicago with teens"],
-      ["Where to stay first", "Choose the lodging base before locking the route. Loop, River North, Streeterville, Lincoln Park, and West Loop all change transit, stroller, noise, and meal friction.", "../where-to-stay/chicago-with-kids.html", "Open where to stay in Chicago with kids"]
+      ["Choose the activity anchor", "Compare 12 current choices by age, weather, cost, pace, and planning friction before placing one into the day.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
+      ["Give teens one real choice", "Use the older-kid guide when architecture, science, art, skyline, sports, movement, immersive media, or comedy should shape the route.", "../things-to-do/chicago-with-teens.html", "Open Chicago with teens"],
+      ["Choose the stay area", "Compare River North, Streeterville, Lincoln Park, the Loop, and South Loop before assuming a map pin reflects the daily effort.", "../where-to-stay/chicago-with-kids.html", "Compare Chicago stay areas"],
+      ["Compare named hotels", "Use the ten-hotel page for rough nightly totals, room setup, pool role, official facts, sampled online-review themes, and maps.", "../where-to-stay/chicago-family-hotels.html", "Compare Chicago family hotels"]
     ],
+    quickTitle: "Pick the trip length before the attractions",
     quick: [
-      ["Best 1-day plan", "Millennium Park, one Museum Campus anchor, easy dinner", "Gives a clear Chicago first-day feel without turning the day into three museums."],
-      ["Best 2-day plan", "Parks/Museum Campus plus Lincoln Park or river plan", "Balances one downtown day with a second day that can flex by age and weather."],
-      ["Best 3-day plan", "Downtown orientation, museum day, neighborhood/lakefront day", "Adds room for a real rest window and a weather swap instead of stacking attractions."],
-      ["Best toddler pace", "Lincoln Park Zoo, nap, Maggie Daley Park if energy holds", "Shorter outdoor blocks and flexible exits beat long museum marathons."],
-      ["Best teen pace", "Architecture river plan, Field highlights, Riverwalk food", "Gives older kids skyline, story, and meal payoff without little-kid filler."],
-      ["Best rainy-day swap", "Shedd Aquarium or Field Museum as the anchor", "Pick one major indoor stop, keep meals nearby, and save lakefront time for a clearer window."],
-      ["Best stay pairing", "Loop/River North for first timers; Lincoln Park for younger-kid rhythm", "Treat this as planning guidance and verify transit, elevator, parking, and noise details before booking."],
-      ["What to skip", "Field, Shedd, Navy Pier, and a boat tour in one day", "That much walking, ticket timing, and weather exposure can overwhelm the actual fun."]
+      ["One day", "One zone + one child-fit anchor + one easy finish", "Choose the Loop, Museum Campus, or another single zone rather than spending the short visit in transfers."],
+      ["Two days", "One central day + one age-led contrast day", "Separate the classic city view from a museum, Lincoln Park, Hyde Park, or teen-chosen anchor."],
+      ["Three days", "Soft arrival + central day + contrast day", "Use the third day for Museum Campus, Lincoln Park, Hyde Park, or an older-kid route instead of another downtown checklist."]
     ],
     rows: [
-      ["1-day highlights", "Millennium Park/Maggie Daley early; one Museum Campus anchor; simple Loop or River North dinner", "First-time mixed ages", "Post-museum hotel or lakefront reset", "Moderate; downtown walking and transit elevators need checking", "Eat near the museum or near the hotel instead of crossing town hungry", "Second museum, Navy Pier add-on, late boat tour without food"],
-      ["2-day first visit", "Day 1 parks and Museum Campus; Day 2 Lincoln Park Zoo or architecture river plan by age", "Weekend families", "Keep one afternoon optional", "Moderate; two core zones over two days", "Use neighborhood meals as the reset plan", "Trying to cover every lakefront and downtown stop"],
-      ["3-day balanced plan", "Downtown orientation; museum/lakefront day; Lincoln Park or river/neighborhood day", "Most families", "One protected reset each day", "Lower if you keep each day to one main zone", "Stock snacks and keep dinner close to the stay base", "Making arrival day a full sightseeing day"],
-      ["Toddler-paced plan", "Lincoln Park Zoo morning; nap; Maggie Daley or hotel pool/play space if energy holds", "Babies, toddlers, preschoolers", "Nap after lunch is the anchor", "Lower outdoors, but weather and transit elevator access matter", "Use verified nearby casual food and bathrooms", "Multiple paid museums in one day"],
-      ["Teen-paced plan", "Architecture river plan; Field or lakefront highlights; Riverwalk or West Loop food", "Tweens and teens", "Reset can be a meal, cafe, or hotel break", "Walking tolerance is higher, but weather can still change the plan", "Let food be part of the route, not a leftover decision", "Toddler-heavy playground pacing all day"],
-      ["Rainy-day version", "Shedd or Field as the main block; meal nearby; hotel reset; optional indoor-ish Navy Pier only if needed", "Any age with weather constraints", "Use breaks inside one zone", "Lower if you avoid cross-town transfers in rain", "Do not rely on long exposed walks for meals", "Boat tour or lakefront-heavy day in poor weather"]
+      ["One-day first look", "One main zone, one child-fit anchor, one flexible finish", "Short visit or arrival/departure day", "Keep the middle or late block slow", "Exact base and anchor determine the transfer", "Choose the meal before the last activity", "A second major zone"],
+      ["Two-day first trip", "Central Chicago day plus one age-led contrast day", "Most first-time weekend families", "Protect one hotel return or slow meal", "One main zone per half day", "Let the second-day neighborhood set the meal", "Two large museums in one day"],
+      ["Three-day balanced trip", "Soft arrival, classic central day, chosen contrast day", "Families wanting one slower day", "Keep one block optional daily", "Varies by stay base and chosen anchor", "Use meals as route boundaries", "Three firm late evenings"]
     ],
+    dayPlansTitle: "Use one, two, or three days without crossing the city for every headline stop",
+    itineraryNote: "Choose the route shape first, then check exact attractions, hotel entrances, transit or parking, weather, tickets, and accessibility for the dates.",
+    pivotComparisonClass: "itinerary-pivot-comparison",
+    dayPlans: [
+      ["One-day first look", "Short visits, train stopovers, and families who want one coherent Chicago day", [
+        ["Choose the zone", "Use the Loop for Millennium Park, Maggie Daley, or the Art Institute; use Museum Campus for Field or Shedd. Do not promise both zones until the family checks the exact route and energy."],
+        ["Choose one anchor", "Pick one paid or high-attention stop from the all-ages guide. Let parks, lakefront views, or a nearby meal stay flexible around it."],
+        ["Finish near the base", "End with a simple meal, hotel return, or short nearby walk. The final block should be the first thing deleted when arrival, weather, or the anchor runs long."]
+      ], "Stop after the chosen anchor and easy finish. A second museum, Navy Pier detour, or late fixed ticket is the first removal."],
+      ["Two-day first trip", "Most first-time families who want classic Chicago plus one child-led contrast", [
+        ["Day 1: central Chicago", "Choose a Loop park/art day or an architecture/river day. Keep one meal and the evening close to the stay base instead of adding Museum Campus automatically."],
+        ["Day 2: one contrast zone", "Choose Museum Campus for Field or Shedd, Lincoln Park for the zoo and neighborhood, Hyde Park for Griffin MSI, or one teen-selected anchor. Treat the choice as the day."],
+        ["Reset rule", "Protect one hotel return, slow meal, or unbooked block. If Day 1 runs late, remove the Day 2 evening add-on before cutting food or the reset."]
+      ], "Do not use the contrast day to combine Museum Campus, Lincoln Park, Hyde Park, and Navy Pier."],
+      ["Three-day balanced trip", "Families who want a soft arrival and two distinct full-day shapes", [
+        ["Day 1: arrive softly", "Settle into the room, buy snacks, and use one nearby park, lakefront view, or neighborhood walk only if timing and weather cooperate."],
+        ["Day 2: classic central day", "Choose the Loop or architecture/river as the main story. Add one nearby child-fit anchor and keep the last block flexible."],
+        ["Day 3: choose the contrast", "Pick Museum Campus, Lincoln Park, Hyde Park, or a teen-selected sports, art, skyline, movement, immersive, or comedy anchor. Do not combine all four zones."]
+      ], "Keep one block optional each day and make only one evening a firm late plan."]
+    ],
+    pivotTitle: "Pivot for age, weather, budget, or the chosen base",
+    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivots: [
+      ["Younger child, stroller, or nap", "One short anchor and the protected reset", "Use Maggie Daley, Chicago Children's Museum, Lincoln Park Zoo, or another age-fit choice instead of a long multi-zone sequence", "Exits, elevators, stroller handling, queues, weather, and return timing vary", "Exact route, current accessibility, ticket, meal, bathroom, and hotel-return plan"],
+      ["Teen or mixed ages", "One older-kid-selected anchor", "Use the teen guide for architecture, Griffin MSI, art, skyline, Wrigley, lakefront, Flyover, or a selected show", "Exact products, age rules, younger-sibling fit, and evening return", "Ticket, content, height or minor rule, weather, and split-plan needs"],
+      ["Rain, winter, heat, or low visibility", "One current indoor anchor and a nearby meal", "Move the outdoor or skyline block rather than forcing the original sequence", "Indoor can still mean queues, walking, stimulation, and transfers", "Venue status, forecast, transit alerts, ticket, coat/stroller storage, and backup"],
+      ["Budget-led trip", "One chosen paid anchor plus flexible public-space time", "Use Millennium/Maggie Daley, Lincoln Park Zoo, or a bounded lakefront block when current conditions fit", "Parking, transit, meals, rentals, and special exhibits still cost money", "Current free admission, event closures, weather, transport, and complete daily spend"],
+      ["Arrival, departure, or lodging-led route", "Keep the first and last blocks near the chosen base", "Move the farthest zone to the full day with the cleanest transport plan", "Hotel entrance, luggage, parking, station accessibility, and check-in timing", "Exact address, luggage plan, current CTA alerts, parking, and realistic return"]
+    ],
+    plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "Arrival afternoon": "Keep arrival soft: check in, snacks, a short Millennium Park or nearby neighborhood walk if weather cooperates, and an early dinner near the hotel.",
-      "Museum Campus day": "Choose Field Museum or Shedd Aquarium as the main event, not both at full depth. Add lakefront time only if weather and energy are still good.",
-      "Neighborhood day": "Use Lincoln Park Zoo for younger kids or a river/food plan for older kids. Keep transit simple and verify elevator access if a stroller is part of the plan.",
-      "Rain backup": "Use Shedd or Field as the anchor, keep food close, and treat Navy Pier or a hotel reset as optional rather than mandatory.",
-      "Toddler adjustment": "Shorten each block, protect the post-lunch rest, and delete the afternoon stop if the morning ran long or weather turned rough.",
-      "Teen adjustment": "Trade playground time for architecture, lakefront views, a focused museum section, and a meal teens care about."
+      "One main job per half day": "A large museum, architecture cruise, neighborhood visit, or younger-child anchor already fills a block. Do not make the transfer another headline attraction.",
+      "Treat the reset as scheduled": "Choose the hotel return, nap, quiet room time, park break, or slow meal before the day starts. Remove the next activity when the reset disappears.",
+      "Map the exact entrance": "A neighborhood or attraction pin does not show the actual entrance, elevator, parking garage, rideshare point, or stroller path. Check the selected route for the date.",
+      "Set the evening stop rule": "Choose which evening may run late and what gets deleted when the child is done. A prepaid ticket does not make a tired family recover."
     },
     faqs: [
-      ["How many days do families need in Chicago?", "Two or three days works best for a first family trip. One day can work if you choose one park zone, one Museum Campus anchor, and an easy dinner instead of chasing every landmark."],
-      ["What should families skip on a short Chicago trip?", "Avoid stacking multiple large museums, Navy Pier, and a boat tour into one day. Transit, weather, ticket timing, and tired legs can become the trip."],
-      ["What is the easiest rainy-day Chicago itinerary with kids?", "Use Shedd Aquarium or Field Museum as the main anchor, keep meals nearby, and save lakefront, zoo, or boat plans for the clearest weather window."]
+      ["How many days do families need in Chicago?", "Two days gives a clear first-trip structure: one central Chicago day and one age-led contrast day. Add a third day for a soft arrival, a separate museum or neighborhood zone, or a teen-chosen anchor."],
+      ["What should families skip on a short Chicago trip?", "Skip cross-city attraction stacking, two large museums in one day, and a firm late ticket every evening. Keep one main zone, one child-fit anchor, a meal plan, and a real stop rule."],
+      ["How should families change the itinerary for bad weather?", "Move the main block to one current indoor attraction, keep the meal and hotel reset close to that choice, and drop the outdoor, boat, or skyline block when conditions do not fit. Recheck venue, weather, and transit information before leaving."]
+    ],
+    sourcesIntro: "Official destination, attraction, park, and transit sources checked July 23, 2026. Recheck schedules, tickets, service alerts, weather, access, and exact routes for the dates.",
+    sources: [
+      ["Choose Chicago two-day family itinerary", "https://www.choosechicago.com/articles/families/2-days-of-chicago-family-fun-for-every-season/"],
+      ["CTA maps", "https://www.transitchicago.com/maps/"],
+      ["CTA accessible transit", "https://www.transitchicago.com/accessibility/default.aspx"],
+      ["CTA system and elevator alerts", "https://www.transitchicago.com/alerts/"],
+      ["Field Museum plan a visit", "https://www.fieldmuseum.org/visit"],
+      ["Shedd Aquarium plan a visit", "https://www.sheddaquarium.org/plan-a-visit"],
+      ["Art Institute family visits", "https://www.artic.edu/visit/who-s-visiting/families"],
+      ["Maggie Daley Park", "https://www.maggiedaleypark.com/things-to-do-see/play-garden/"],
+      ["Lincoln Park Zoo visit information", "https://www.lpzoo.org/visit/"],
+      ["Griffin Museum of Science and Industry", "https://www.griffinmsi.org/"],
+      ["Chicago Architecture Center river cruise", "https://www.architecture.org/city-tours/river-cruise"],
+      ["Chicago Park District Lakefront Trail", "https://www.chicagoparkdistrict.com/lakefront-trail"],
+      ["Chicago Children's Museum visit information", "https://www.chicagochildrensmuseum.org/hours-tickets-and-faq"],
+      ["Chicago photo source and attribution", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"],
+      ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
     ]
   },
   "family-itinerary/las-vegas-with-kids.html": {
@@ -2126,7 +2177,7 @@ ${renderQuickPicks(page.quick)}
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Day-by-day routes</p>
-          <h2>Use one, two, or three days without stacking the Strip</h2>
+          <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>
         </div>
         <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
 ${renderDayPlans(page.dayPlans)}
@@ -2136,9 +2187,9 @@ ${renderDayPlans(page.dayPlans)}
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Change the route</p>
-            <h2>Pivot for age, pool time, heat, nature, or budget</h2>
+            <h2>${esc(page.pivotTitle || "Pivot for age, pool time, heat, nature, or budget")}</h2>
           </div>
-${renderActivityComparison(page.pivots, page.pivotHeaders)}
+${renderActivityComparison(page.pivots, page.pivotHeaders, page.pivotComparisonClass)}
         </div>
       </section>
 

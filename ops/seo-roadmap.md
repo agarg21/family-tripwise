@@ -57,7 +57,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 22 | `FT-IMP-010` improve the Chicago all-ages things-to-do hub | Content/product quality | Completed and released | Commit `ad4f318`; Pages run `30058164707`; production verification passed. |
 | 23 | `FT-PUB-003` research and publish the Chicago family-hotel comparison | Content/product quality | Completed and released | Commit `833c081`; Pages run `30062024170`; production verification passed. |
 | 24 | `FT-IMP-011` simplify the Chicago stay-area guide | Content/product quality | Completed and released | Commit `9d1a90d`; Pages run `30084335602`; production verification passed. |
-| 25 | `FT-IMP-012` review and improve the Chicago teen guide | Content/product quality | Selected and in progress | Widen teen-specific choices, remove repeated layers, and require an older-kid reason plus current check for every retained option. |
+| 25 | `FT-IMP-012` review and improve the Chicago teen guide | Content/product quality | Completed and released | Commit `7df3952`; Pages run `30087275395`; production verification passed. |
+| 26 | `FT-IMP-013` review and improve the Chicago family itinerary | Content/product quality | Review-clean; release pending | Replaced repeated abstract route layers with concrete one-, two-, and three-day execution plans, persona pivots, stop rules, and all four Chicago cluster handoffs. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -121,10 +122,23 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Operator QA: focused tests 4/4, full suite 69/69, native SEO QA 0 errors/0 warnings, JavaScript and roadmap JSON validation, generation isolation/idempotency, whitespace, and responsive checks at 1280/390/320 passed.
 - Review: Meitner (`019f9385-11e0-70d3-8013-d4effa21ca00`) returned final `PASS` in cycle 2 with no P0-P3 findings after the stale operator state, Streeterville source specificity, and nightly-price wording were corrected.
 
+### FT-IMP-013 - Review and improve the Chicago family itinerary
+
+- Selected: 2026-07-23 under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses.
+- State: review-clean; commit and release pending.
+- Target: `https://familytripwise.com/family-itinerary/chicago-with-kids.html`.
+- Demand and evidence: directional logged-in Semrush US estimates collected July 23 are 20 for `Chicago itinerary with kids` and 20 for `3 days in Chicago with kids`; variants overlap. The fresh July 23 GSC snapshot has 12 impressions, 0 clicks, and page-level average position 20.75, which is too small for a query-rank or causal conclusion.
+- Product requirement: inspect current itinerary SERPs and representative ranking pages, apply CHI-P1 through CHI-P5, and audit every visible section. Build genuinely usable one-, two-, and three-day execution plans with age/weather/budget/base pivots and explicit stop rules rather than repeating the activity list.
+- Boundary: preserve the URL, canonical, indexability, and sitemap; released sibling Chicago pages are planning dependencies but remain unchanged.
+- Exact maximum scope: one durable itinerary review, the existing shared page upgrader, one focused test, the existing itinerary HTML, one itinerary-scoped shared-stylesheet treatment required by review, Chicago status, and operator/backlog records.
+- Release gate: focused/native/responsive/source/privacy/scope QA and a different independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
+- Local result: three trip-length starts, three concrete day plans, five persona pivots, four stop rules, four cluster handoffs, current sources, and visible/schema-aligned FAQs. Focused tests pass 4/4, the full suite passes 78/78, native SEO QA is 0/0, and 1280/390/320 browser checks pass without page overflow; the mobile pivot table keeps its first column visible while scrolling.
+- Review: Boyle (`019f93dc-ecd8-78c1-988a-51943eca7217`) returned final `PASS` in cycle 2 with no P0-P3 findings.
+
 ### FT-IMP-012 - Review and improve the Chicago teen guide
 
 - Selected: 2026-07-23 under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses.
-- State: review-clean; commit, push, deployment, and production verification pending.
+- State: completed, released, and production-verified on 2026-07-23 at commit `7df3952b87557f035780bb4d9a44056b43678004`; GitHub Pages run `30087275395` succeeded.
 - Target: `https://familytripwise.com/things-to-do/chicago-with-teens.html`.
 - Demand and evidence: directional logged-in Semrush US estimates collected July 23 are 720 for `things to do in Chicago with teens` and 110 for `things to do in Chicago with teenagers`; variants overlap. The fresh July 23 GSC snapshot has no page row, so impressions, clicks, and position are N/A.
 - Product requirement: inspect a wider teen-specific candidate set and current ranking pages, apply CHI-P4 plus mixed-age routes, and audit every visible section. Keep only choices with a distinct older-kid reason, current official checks, one complete comparison, compact high-friction notes, and useful route shapes.

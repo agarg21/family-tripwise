@@ -4,9 +4,54 @@ Last updated: 2026-07-23
 
 ## Active
 
-### IMP-028: Review And Improve The Chicago Teen Guide
+### IMP-029: Review And Improve The Chicago Family Itinerary
 
 Status: review-clean; release pending
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-013`
+
+Audit the existing itinerary against current family-itinerary SERPs, all five Chicago persona hypotheses, current route-anchor sources, and every visible section. Replace repeated summaries with concrete one-, two-, and three-day plans, useful pivots, and firm stop rules.
+
+Affected production URL:
+
+- `https://familytripwise.com/family-itinerary/chicago-with-kids.html`
+
+Exact maximum transaction scope:
+
+- `docs/research/chicago-family-itinerary-page-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/chicago-itinerary-page.test.mjs`
+- `site/family-itinerary/chicago-with-kids.html`
+- `site/styles.css`
+- `status/chicago-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Preserve the existing URL, canonical, indexability, and sitemap membership.
+- Keep activity selection, teen choices, area selection, and named hotel comparison on their released specialist pages.
+- Do not claim exact route time, transit ease, stroller practicality, safety, weather, ticket availability, or universal family fit.
+- Do not edit another live page, request indexing, mutate an external account, add an affiliate CTA, send outreach, or add recurring automation.
+- The shared stylesheet is included only for a reviewer-required, itinerary-scoped sticky first column in the mobile pivot comparison; unrelated selectors must remain unchanged.
+
+Local result:
+
+- Replaced generated nap/weekend starters, eight universal quick picks, a six-row abstract matrix, and six generic pacing cards with three trip-length starts, three concrete day-plan cards, five persona pivots, and four stop rules.
+- Added all four released Chicago cluster handoffs, current official route/attraction checks, a sized licensed image, and three visible FAQs aligned with schema.
+- Recorded exact query-to-ranking-page and community registers, all five persona applications, every-section treatment, claim boundaries, acceptance criteria, and measurement in `docs/research/chicago-family-itinerary-page-review.md`.
+- Focused tests passed 4/4, the full suite passed 78/78, native SEO QA returned 0 errors and 0 warnings, and 1280/390/320 browser checks found no page overflow. The mobile pivot table stays in its scroller with a sticky trip-constraint column, and the 1280 by 960 image loads.
+- Independent reviewer Boyle (`019f93dc-ecd8-78c1-988a-51943eca7217`) returned final `PASS` in cycle 2 with no P0-P3 findings after the SERP-overlap classification, mobile table behavior, and target-only regeneration test were corrected.
+
+### IMP-028: Review And Improve The Chicago Teen Guide
+
+Status: done and released
 
 Selected: 2026-07-23
 
@@ -48,6 +93,7 @@ Local result:
 - Recorded exact ranking-page and community-discussion registers, official product sources, evidence limitations, candidate decisions, every-section treatment, persona fit, trust boundaries, acceptance criteria, and measurement in `docs/research/chicago-teen-page-review.md`.
 - Focused tests passed 5/5, the full suite passed 74/74, native SEO QA returned 0 errors and 0 warnings, and the browser check confirmed 8 rows, 7 headers, 4 detail cards, the scoped sticky column, no 1280-pixel page overflow, and a 1280 by 960 image.
 - Independent reviewer Peirce (`019f93b0-2afb-7af1-a826-8ce8e31c66e6`) returned final `PASS` in cycle 2 with no P0-P3 findings. Secondary visual reviewer Jason closed all P2 findings and returned `PASS_WITH_P3`; privacy/scope reviewer Rawls returned `PASS`.
+- Released at commit `7df3952b87557f035780bb4d9a44056b43678004`; GitHub Pages run `30087275395` succeeded and production release/content/SEO verification passed.
 
 ### IMP-027: Simplify The Chicago Stay-Area Guide
 

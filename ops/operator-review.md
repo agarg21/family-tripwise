@@ -1309,3 +1309,26 @@ QA evidence:
 - `node --test tools/chicago-teen-page.test.mjs` passed 5/5; `node --test tools/*.test.mjs` passed 74/74.
 - `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; roadmap JSON, generation isolation, source/privacy/scope inspection, and `git diff --check` passed.
 - Browser verification found 8 comparison rows, 7 headers, 4 detail cards, a computed sticky first column, an 820-pixel comparison table, no 1280-pixel page overflow, and a loaded 1280 by 960 licensed image.
+
+### 2026-07-23 - `FT-IMP-013` review cycles 1-2
+
+**Reviewer:** Boyle (`019f93dc-ecd8-78c1-988a-51943eca7217`)
+
+**Final result: `PASS`**
+
+Cycle 1 findings and disposition:
+
+1. `P2` - The representative ranking-page sample did not support a numeric SERP-overlap conclusion. The durable review now classifies observed URL overlap as `UNKNOWN`, frames the one-URL decision as medium-confidence based on the shared sequencing job and recurring itinerary page type, and requires complete comparable top-10 sets before a future quantitative overlap claim.
+2. `P2` - Mobile comparison behavior had not been visually proven. The exact scope was expanded before editing to one itinerary-only shared-stylesheet class; the five-column table now uses an 820-pixel contained scroller and a sticky 170-pixel trip-constraint column.
+3. `P3` - The isolation test initially proved only no-op idempotency. It now removes the target's generated priority/schema blocks, proves only the Chicago itinerary changes, and proves the second generation is idempotent.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- Boyle accepted the evidence classification and traceability, all five persona applications, every-section completeness, compactness, search-job boundaries, claim/source safety, canonical/indexability/sitemap/schema, cluster links, generator isolation, scoped responsive behavior, privacy, observation policy, and exact paths.
+
+QA evidence:
+
+- `node --test tools/chicago-itinerary-page.test.mjs` passed 4/4; `node --test tools/*.test.mjs` passed 78/78.
+- `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/source/scope inspection, and `git diff --check` passed.
+- Browser checks at 1280, 390, and 320 pixels found no page-level overflow; the 820-pixel pivot table remained contained, its first column stayed at left 0 after horizontal scroll, and the 1280 by 960 licensed image loaded.
