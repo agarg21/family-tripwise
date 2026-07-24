@@ -2,6 +2,52 @@
 
 Last updated: 2026-07-24
 
+## Next NYC Implementation
+
+### IMP-031: Improve The New York City All-Ages Things-To-Do Hub
+
+Status: ready candidate; promoted by `FT-RES-009`, not yet selected
+
+Roadmap ID: `FT-IMP-014`
+
+Target:
+
+- `https://familytripwise.com/things-to-do/new-york-city-with-kids.html`
+
+Review a wider current activity candidate set and every visible section, then replace the repeated six-choice layers with one scan-first decision product serving NYC-P1 through NYC-P5.
+
+Expected maximum transaction scope:
+
+- `docs/research/new-york-city-activity-expansion-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/new-york-city-activities-page.test.mjs`
+- `site/things-to-do/new-york-city-with-kids.html`
+- `site/styles.css` only if a narrowly scoped responsive comparison treatment is required
+- `status/new-york-city-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Preserve the existing URL, canonical, indexability, and sitemap membership.
+- Keep full teen, hotel, stay-area, and itinerary jobs on their own pages.
+- Use current official sources for material ticket, age, access, operating, and volatility claims.
+- Remove internal editorial/methodology narration from the primary task flow.
+- Do not publish universal age fit, safety, exact route, stroller, weather, price, timing, or personally verified claims.
+- Do not create another URL, request indexing, mutate an external account, add an affiliate CTA, send outreach, or add recurring automation.
+
+Acceptance:
+
+- Roughly 10-14 earned choices across classic, younger-child, free/outdoor, indoor/weather, mixed-age, and neighborhood roles; no list-length quota.
+- One complete filterable comparison, compact trip-style starts, and deep notes only for high-friction decisions.
+- Strong younger-child, free/budget, weather, and mixed-age support without duplicating specialist pages.
+- Target-only, idempotent generation and responsive/source/privacy/scope QA.
+- Independent reviewer `PASS` or `PASS_WITH_P3`.
+
 ## Planned Technical Cleanup
 
 ### IMP-030: Modularize Static Page Generation Without Output Changes

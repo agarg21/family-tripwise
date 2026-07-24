@@ -14,7 +14,7 @@
   },
   "goals": [
     "Validate relevant organic demand before scaling destination count.",
-    "Finish San Diego as the first deep, differentiated family-planning cluster.",
+    "Deepen one existing city at a time through research, reviewed page improvements, and measured observation before adding destinations.",
     "Create a repeatable loop from evidence to one reviewed experiment to observation to keep/iterate/stop.",
     "Build useful tools and source-worthy assets rather than generic travel prose."
   ],
@@ -1252,6 +1252,84 @@
       "review_summary": "Independent reviewer Popper (019f94ac-a664-7813-83af-367c71446ed3) returned PASS in cycle 2 with no P0-P3 findings after scheduler ownership, central post-release recording, remaining stale release narratives, and release-order robustness were corrected.",
       "result": "Reconciled Chicago, San Diego, and Las Vegas release narratives; aligned Control Room-only scheduling and current strategy/architecture guidance; defined city-status baseline semantics; added tested operator-state drift QA; and queued one separate behavior-preserving generator modularization candidate.",
       "notes": "Direct manual user instruction. Documentation and QA hardening only: no site page, sitemap, Pages workflow, deployment, external account, indexing request, outreach, or recurring automation. The larger generator modularization remains a separate behavior-preserving candidate."
+    },
+    {
+      "id": "FT-RES-009",
+      "research_backlog_id": "SRR-021",
+      "title": "Create the New York City cluster SERP-overlap and persona decision pack",
+      "kind": "research",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-24",
+      "completed_on": "2026-07-24",
+      "review_outcome": "PASS",
+      "review_cycles": 3,
+      "impact": 5,
+      "confidence": 5,
+      "learning_value": 5,
+      "effort": 4,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+        "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-family-cluster-decision-pack.md",
+        "status/new-york-city-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A review-clean NYC decision pack uses current GSC, logged-in Semrush, observed SERP overlap, ranking pages, qualitative community evidence, five persona hypotheses, and every-section audits to define one non-cannibalizing page architecture and exactly one next implementation.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-24 with finalized data through 2026-07-22. Things to do has 55 impressions at page-level average position 43.98; where to stay has 47 at 50.06; itinerary has no performance row and is unknown to Google in URL Inspection. These are early page-level discovery signals, not query ranks or causal evidence.",
+      "promoted_action": "FT-IMP-014",
+      "qa_summary": "Full repository tests passed 83/83; operator-state QA passed with 0 errors; native SEO QA passed with 0 errors and 0 warnings; roadmap JSON, exact keyword/source consistency, local references, URL syntax, changed-content credential safety, exact-path, no-site, and git diff checks passed.",
+      "review_summary": "Independent reviewer Einstein (019f9574-fcbe-7810-a2e2-53c45e216171) returned PASS in cycle 3 with no P0-P3 findings after exact metric records, explicit SERP intersections, missing cluster page analyses, persona source traces, pending architecture labels, and one stay-area domain intersection were corrected.",
+      "result": "Defined nine overlap clusters and five persona hypotheses; kept the three existing URLs; proposed one future named-property family-hotel page and one future teen/tween specialist subject to review; rejected separate toddler, free, indoor, pool, suite, family-of-five, generic vacation, and static weekend URLs for this pass; audited every visible section; and promoted the existing all-ages page.",
+      "notes": "Direct manual user instruction. Research-only transaction: no site page, sitemap, workflow, publication, deployment, indexing request, external-account mutation, affiliate CTA, outreach, or recurring automation. Logged-in Semrush variants overlap and are not summed as unique demand. Weekend/today work remains deferred."
+    },
+    {
+      "id": "FT-IMP-014",
+      "implementation_backlog_id": "IMP-031",
+      "research_backlog_id": "SRR-022",
+      "title": "Improve the New York City all-ages things-to-do hub",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "ready",
+      "impact": 5,
+      "confidence": 5,
+      "learning_value": 5,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-activity-expansion-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/new-york-city-activities-page.test.mjs",
+        "site/things-to-do/new-york-city-with-kids.html",
+        "site/styles.css",
+        "status/new-york-city-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing NYC all-ages page becomes a materially wider but less repetitive decision guide with five conditional trip starts, one filterable comparison, strong younger-child/free/weather support, compact high-friction notes, current official checks, and clear routes to the separate stay, hotel, teen, and itinerary jobs.",
+      "production_invariant": "The existing NYC all-ages URL remains canonical, indexable, present in the sitemap, and internally connected to the NYC cluster; no unsupported universal age-fit, safety, exact-route, stroller, transit, weather, ticket, price, timing, or personally verified claim is introduced.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-24 with finalized data through 2026-07-22: the page has 55 impressions, 0 clicks, and page-level average position 43.98. This is early discovery evidence, not a query-specific rank or causal performance conclusion.",
+      "notes": "Promoted by FT-RES-009 and not yet selected. One existing URL only. No new URL, sibling-page content edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }

@@ -31,6 +31,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-PUB-001` | review-clean San Diego hotel page | `PASS_WITH_P3` | Re-review cycle 2 closed the Loews quietness P2; one non-blocking P3 remains for conflicting Loews self-parking official-source values. |
 | `FT-IMP-002` | released San Diego things-to-do router | `PASS` | Review cycle 2 closed the stale freshness-date P2; commit `1a321707fcb8203df40e19ac13bdf8782db196bb` was pushed, Pages run `29752040108` succeeded, and production invariants/SEO QA passed. |
 | `FT-IMP-004` | released San Diego lodging revision | `PASS` | Cycle 2 closed unsupported route/reset conclusions and representative-sounding language for small directional review samples; commit `326501bd32399421c56cbe0f4e4065146166a062` was pushed, Pages run `29796506753` succeeded, and production invariants/SEO QA passed. |
+| `FT-RES-009` | review-clean NYC cluster decision pack | `PASS` | Reviewer Einstein (`019f9574-fcbe-7810-a2e2-53c45e216171`) returned final `PASS` in cycle 3 with no P0-P3 findings after exact keyword, SERP-intersection, representative-page, persona-traceability, pending-status, and one shared-domain correction; native and focused QA passed. |
 
 ## Open blocking findings
 

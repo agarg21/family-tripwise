@@ -60,8 +60,32 @@ The Family Tripwise project operator may update the selected action's repository
 | 25 | `FT-IMP-012` review and improve the Chicago teen guide | Content/product quality | Completed and released | Commit `7df3952`; Pages run `30087275395`; production verification passed. |
 | 26 | `FT-IMP-013` review and improve the Chicago family itinerary | Content/product quality | Completed and released | Commit `f7a2d7f`; Pages run `30090493666`; production verification passed. |
 | 27 | `FT-OPS-001` audit and harden the repository operating model | Operating model | Completed | Release narratives reconciled, current operating guidance aligned, and focused state-drift QA added without changing `site/**`. |
+| 28 | `FT-RES-009` New York City SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Current GSC, exact logged-in Semrush records, explicit SERP intersections, five personas, and every-section audits define a five-page NYC architecture without changing `site/**`; independent review `PASS`. |
+| 29 | `FT-IMP-014` improve the New York City all-ages things-to-do hub | Content/product quality | Ready candidate | Promoted by `FT-RES-009`; existing indexed page has the strongest immediate usefulness and acquisition gap. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+
+### FT-RES-009 - New York City SERP-overlap cluster and persona decision pack
+
+- Selected: 2026-07-24 by direct manual user instruction to begin NYC pages.
+- State: completed and review-clean; independent reviewer Einstein returned `PASS` in cycle 3 with no P0-P3 findings.
+- Scope: current NYC query universe, logged-in Semrush US demand/KD, observed ranking-page overlap, representative competitor/community analysis, five persona hypotheses, every-section audit of all three current NYC pages, five-page architecture, and one promoted implementation.
+- GSC: fresh July 24 API evidence finalized through July 22. Things to do has 55 impressions at page-level average position 43.98; stay has 47 at 50.06; itinerary has no page row and URL Inspection says unknown to Google. These are not query ranks or causal evidence.
+- Architecture: keep the three existing pages; add one future named-property family-hotel comparison and one future teen/tween specialist. Toddler, free, indoor, pool, suite, family-of-five, stroller, and no-car constraints remain modules/fields first. Weekend/today remains deferred.
+- Boundary: no `site/**`, sitemap, publication, indexing request, external-account mutation, affiliate CTA, outreach, deployment, or recurring automation.
+- Promoted action: `FT-IMP-014` / `IMP-031`, improve the existing all-ages page first.
+- Artifacts: `docs/research/new-york-city-family-cluster-decision-pack.md` and `status/new-york-city-pages.md`.
+- Release gate: native/focused research consistency, links/source/privacy/scope checks, roadmap JSON, independent reviewer `PASS` or `PASS_WITH_P3`, then exact-path push-only commit.
+
+### FT-IMP-014 - Improve the New York City all-ages things-to-do hub
+
+- State: ready candidate promoted by `FT-RES-009`; not yet selected.
+- Target: `https://familytripwise.com/things-to-do/new-york-city-with-kids.html`.
+- Demand: exact measured phrases show 480 searches/month at KD 25, 390 at KD 22, and 320 at KD 21. Related variants overlap and are not summed as unique traffic.
+- Baseline: 55 impressions, 0 clicks, page-level average position 43.98 in the July 24 snapshot.
+- Product requirement: replace repeated six-choice layers with one filterable scan surface, roughly 10-14 earned options, five conditional trip starts, strong younger-child/free/weather support, and deep notes only for high-friction choices.
+- Boundary: preserve URL/canonical/indexability/sitemap; do not duplicate future teen, hotel, stay, or itinerary jobs; do not create a URL or request indexing.
+- Release gate: page-specific candidate/every-section/source review, focused/native/responsive/source/privacy/scope QA, target-only idempotent generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 
 ### FT-OPS-001 - Audit and harden the repository operating model
 

@@ -2,6 +2,51 @@
 
 Last updated: 2026-07-24
 
+## Latest Completed NYC Cluster Research
+
+### SRR-021: New York City SERP-Overlap Cluster, Persona, And Page Decision Pack
+
+Status: done and review-clean inside `FT-RES-009`
+
+Selected: 2026-07-24
+
+Roadmap ID: `FT-RES-009`
+
+Build the current NYC visitor-family query universe, use observed ranking-page/domain overlap to decide page boundaries, inspect representative ranking pages and qualitative parent discussions, derive evidence-grounded persona hypotheses, and audit every visible section of all three current NYC pages.
+
+Required coverage:
+
+- Fresh public-safe GSC classification and current logged-in Semrush US volume/KD evidence.
+- Query-level SERP observations for broad activities, teens, toddlers, free/budget, areas, hotels, and itinerary.
+- Explicit hotel-versus-area and teen-versus-all-ages boundaries.
+- Every-section keep/compress/replace/remove instructions for the existing activity, stay, and itinerary pages.
+- Exactly one promoted implementation, acceptance criteria, measurement, source register, privacy check, and deferred weekend/current-content boundary.
+
+Result:
+
+- Defined nine overlap clusters and five persona hypotheses.
+- Kept the three existing URLs, proposed one future named-property hotel page and one future teen/tween page subject to review, and rejected separate toddler, free, indoor, pool, suite, family-of-five, generic family-vacation, and static weekend URLs for this pass.
+- Audited every visible section and identified severe repetition on the 2,538-word all-ages page, unsupported generic hotel verification on the stay page, and abstract duplication on the itinerary.
+- Promoted `FT-IMP-014` / `IMP-031` for the existing all-ages page.
+- Artifact: `docs/research/new-york-city-family-cluster-decision-pack.md`.
+- Independent reviewer Einstein (`019f9574-fcbe-7810-a2e2-53c45e216171`) returned final `PASS` in cycle 3 with no P0-P3 findings after exact metric records, explicit SERP intersections, missing cluster page analyses, persona source traces, pending architecture labels, and one stay-area domain intersection were corrected.
+
+### SRR-022: New York City All-Ages Candidate And Every-Section Review
+
+Status: ready inside future `FT-IMP-014`
+
+Roadmap ID: `FT-IMP-014`
+
+Before changing the existing page, inspect a wider current activity candidate set, current all-ages ranking pages, qualitative parent discussions, direct official attraction sources, NYC-P1 through NYC-P5, and every visible section of the current page.
+
+Required coverage:
+
+- Candidate keep/add/remove/defer decisions with a distinct decision role for every retained option.
+- Current official facts and volatility checks for tickets, age/height rules, access, weather, operating status, and booking.
+- Every-section keep/compress/replace/remove instructions that eliminate the repeated six-choice layers.
+- One filterable comparison, strong younger-child/free/weather support, compact high-friction notes, useful sibling-page routes, and visible/schema-aligned FAQs.
+- Target-only generation, idempotency, responsive scan behavior, source/privacy/scope checks, and independent review.
+
 ## Latest Completed Chicago Reviews
 
 ### SRR-020: Chicago Family-Itinerary Competitor And Every-Section Review

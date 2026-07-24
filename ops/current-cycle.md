@@ -8,17 +8,19 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-OPS-001` completed the repository audit and hardening after the Chicago cluster. It reconciled stale release narratives, refreshed current strategy and architecture guidance, defined city-status semantics, and added focused state-drift QA. It changed no `site/**` path, sitemap, deployment workflow, external account, indexing state, outreach, or recurring automation.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-RES-009` completed the NYC cluster decision pack with current GSC, exact logged-in Semrush evidence, explicit SERP intersections, five persona hypotheses, every-section audits of all three current NYC pages, a five-page architecture, and exactly one promoted implementation. It changed no `site/**` path, sitemap, deployment workflow, external account, indexing state, outreach, or recurring automation.
 
-The central Control Room remains the only scheduler and currently reports no ready unprotected substantive action. `FT-EVAL-002` is evidence-gated, not calendar-triggered. Direct user work may continue through this master task under repository gates.
+The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to begin NYC pages. `FT-EVAL-002` remains evidence-gated, not calendar-triggered.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-24.md`, fresh authenticated API data finalized through 2026-07-22.
 - Latest site release: `FT-IMP-013` at commit `f7a2d7f936bf286ab25776e058eefc72ea7569f8`; Pages run `30090493666` succeeded and production verification passed.
-- Active manual action: none; `FT-OPS-001` is review-clean and complete.
+- Active manual action: none; `FT-RES-009` is review-clean and complete.
 - Active substantive Control Room action: none.
-- Next city research candidate: New York City, followed by San Antonio; neither is pre-approved implementation scope.
+- Promoted NYC implementation: `FT-IMP-014` / `IMP-031`, improve the existing all-ages activity page after this research transaction is review-clean and released.
+- Later NYC sequence: one family-hotel page, one teen/tween page, the existing stay-area page, then the existing itinerary; each remains a separate reviewed transaction.
+- Next city after NYC: San Antonio; no implementation scope is pre-approved.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
 
 ## Current Project State
@@ -163,23 +165,22 @@ The central Control Room remains the only scheduler and currently reports no rea
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-013` / `IMP-029` / `SRR-020` released and passed production verification at commit `f7a2d7f936bf286ab25776e058eefc72ea7569f8` through Pages run `30090493666`. `FT-OPS-001` completed with 83/83 tests, native SEO QA 0/0, focused state QA, and independent reviewer `PASS`. The Control Room has no ready unprotected substantive item. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. Completed direct manual research action `FT-RES-009` promotes `FT-IMP-014` / `IMP-031` for the indexed NYC all-ages page because the page has 55 early impressions, three exact measured activity phrases show 480, 390, and 320 US searches/month, and the current page repeats six choices across several layers. Related phrases overlap and are not summed as unique demand. `FT-IMP-014` is the next ready direct-manual candidate. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
-- Behavior-preserving generator/upgrader modularization before several more city revamps.
-- New York City cluster research and existing-page audit before deciding its page architecture.
+- Behavior-preserving generator/upgrader modularization remains a separate technical candidate; it must not be hidden inside an NYC content transaction.
 - San Antonio family-hotel demand and review workflow after the NYC decision.
 
 Findings to preserve:
 
 - Current destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio.
-- San Diego, Las Vegas, and Chicago have completed deep quality passes.
+- San Diego, Las Vegas, and Chicago have completed deep quality passes; NYC research is active.
 - Existing pages should be improved before new cities are created.
 - Best-family-hotel standalone pages require a human-review path before firm hotel recommendations are published.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
 - `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages; their prior thin-page warnings were resolved under `IMP-013`.
-- NYC/Jersey City/Hoboken weekend-events work is researched and can be revisited later, but it is not the current implementation priority.
+- NYC/Jersey City/Hoboken weekend-events work remains deferred; `FT-RES-009` does not revive it.
 
 ## Implementation State
 
@@ -207,7 +208,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Continue in the permanent Family Tripwise SEO Operator task. The Control Room performs healthy GSC monitoring as housekeeping and remains the only scheduler. The next user-directed technical candidate is behavior-preserving generator modularization; the next city research candidate is New York City.
+Continue in the permanent Family Tripwise SEO Operator task. Push the review-clean research-only `FT-RES-009` transaction, then select `FT-IMP-014` as the first separate NYC page transaction under the user's direct instruction. The Control Room performs healthy GSC monitoring as housekeeping and remains the only scheduler for scheduled work.
 
 ## GSC Monitoring
 
