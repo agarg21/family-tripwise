@@ -54,7 +54,8 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 19 | `FT-IMP-008` simplify the Las Vegas stay-area guide | Content/product quality | Completed and released | Commit `7bc2993`; Pages run `29975754626` and production verification passed. |
 | 20 | `FT-IMP-009` review and improve the Las Vegas family itinerary | Content/product quality | Released and production-verified | Commit `48417b0`; Pages run `29994060699`; production verification passed. |
 | 21 | `FT-RES-008` Chicago SERP-overlap cluster and persona decision pack | Content/product quality | Completed and review-clean | Query-level overlap, exact Semrush phrases, five personas, every-section audits, hotel/area architecture, and one promoted action passed independent review. |
-| 22 | `FT-IMP-010` improve the Chicago all-ages things-to-do hub | Content/product quality | Review-clean; release eligible | Final cycle 3 `PASS`; 61/61 tests, native SEO QA 0/0, responsive/filter checks, exact scope, and privacy passed. |
+| 22 | `FT-IMP-010` improve the Chicago all-ages things-to-do hub | Content/product quality | Completed and released | Commit `ad4f318`; Pages run `30058164707`; production verification passed. |
+| 23 | `FT-PUB-003` research and publish the Chicago family-hotel comparison | Content/product quality | Completed and review-clean; release pending | Ten trip-style properties, dated price/review evidence, current contradictions, focused/native/responsive QA, and final independent `PASS`. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -76,7 +77,7 @@ Ready does not mean all items should ship immediately. The operator selects one 
 ### FT-IMP-010 - Improve the Chicago all-ages things-to-do hub
 
 - Selected: 2026-07-23 by direct manual user instruction.
-- State: review-clean and eligible for exact-path release.
+- State: completed, released, and production-verified at commit `ad4f31801a3721b84a8f017bcda718f42ac7e731`; GitHub Pages run `30058164707` succeeded.
 - Target: `https://familytripwise.com/things-to-do/chicago-with-kids.html`.
 - Baseline: 52 impressions, 0 clicks, and page-level average position 58.88 in the fresh July 23 authenticated snapshot. This is not a query-specific rank.
 - Product requirement: research a wider candidate pool, apply CHI-P1 through CHI-P5, preserve one complete comparison, keep deep notes only for high-friction choices, and add compact free/budget plus indoor/weather support.
@@ -88,6 +89,20 @@ Ready does not mean all items should ship immediately. The operator selects one 
 - Review cycle 2: Mendel returned `PASS_WITH_P3` with no P0-P2. The activity trust-panel reference to hotel evidence and a duplicate backlog QA line were the only P3 notes; both were fixed for final cycle 3 confirmation.
 - Review cycle 3: Mendel returned final `PASS`; no P0-P3 findings remain.
 - QA after cycle 1 fixes: focused tests 4/4, full tests 61/61, native SEO QA 0 errors/0 warnings, JavaScript and roadmap JSON validation, responsive checks at 1280/390/320, filter/support/FAQ behavior, privacy/scope checks, and `git diff --check` passed.
+
+### FT-PUB-003 - Research and publish the Chicago family-hotel comparison
+
+- Selected: 2026-07-23 by direct manual user instruction to continue Chicago pages iteratively without approval pauses.
+- State: completed and review-clean; exact-path release is pending.
+- Target: `https://familytripwise.com/where-to-stay/chicago-family-hotels.html`, with link-only routing changes allowed on the existing Chicago stay page and home page.
+- Demand basis: directional logged-in Semrush US estimates collected July 23 are 320 for `best hotels in Chicago for families`, 260 for `family friendly hotels in Chicago`, and 210 for `kid friendly hotels Chicago`; variants overlap and must not be summed.
+- GSC: the proposed URL does not exist in the fresh July 23 snapshot, so there is no page row or performance claim.
+- Product requirement: about 10-12 evidence-backed properties by distinct trip style, one compact comparison, approximate total nightly ranges, current official facts, bounded recent family-review themes and conflicts, direct maps, visible freshness, and useful unknowns.
+- Boundary: one new indexable hotel URL only; no separate pool, suite, downtown, resort, or near-attraction URL; no booking transaction, affiliate CTA, indexing request, external-account mutation, outreach, custom-map change, or recurring automation.
+- Exact maximum scope: hotel evidence pack, generator, one focused test, the new hotel HTML, link-only stay/home edits, sitemap, Chicago status, and operator/backlog records.
+- Release gate: focused/native/responsive/source/privacy/scope QA and an independent reviewer `PASS` or `PASS_WITH_P3` before exact-path commit and deployment.
+- Local result: 10 trip-style hotel options, one compact comparison, 10 evidence-backed detail cards, five quick starts, direct maps, rough total-night ranges, sampled online-review observations and conflicts, and three visible FAQs. Focused tests passed 4/4, the repository suite passed 65/65, native SEO QA returned 0 errors and 0 warnings, and 1280/390/320 responsive checks passed.
+- Review: Wegener (`019f91eb-1d7f-7861-a9e3-4c0d8c1628b7`) returned final `PASS` on cycle 3 with no P0-P3 findings after Langham, review-ledger, Hilton-price, Hotel Zachary, and generator-isolation fixes.
 
 ### FT-IMP-009 - Review and improve the Las Vegas family itinerary
 

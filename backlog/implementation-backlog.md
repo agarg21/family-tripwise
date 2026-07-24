@@ -4,11 +4,70 @@ Last updated: 2026-07-23
 
 ## Active
 
-### IMP-025: Improve The Chicago All-Ages Things-To-Do Hub
+### IMP-026: Publish The Chicago Family-Hotel Comparison
 
-Status: review-clean and eligible for release
+Status: done and review-clean; release pending
 
 Selected: 2026-07-23
+
+Roadmap ID: `FT-PUB-003`
+
+Research and publish one clean Chicago named-property comparison after creating a durable hotel evidence pack in the same transaction. Use current official property facts, rough total-night planning ranges, and bounded recent family-review themes and conflicts. Existing Chicago stay and home pages may receive only the links needed to route readers to the new page.
+
+Affected production URLs:
+
+- `https://familytripwise.com/where-to-stay/chicago-family-hotels.html`
+- `https://familytripwise.com/where-to-stay/chicago-with-kids.html`
+- `https://familytripwise.com/`
+
+Exact maximum transaction scope:
+
+- `docs/research/chicago-family-hotel-evidence-pack.md`
+- `tools/generate-pages.mjs`
+- `tools/chicago-family-hotels-page.test.mjs`
+- `site/where-to-stay/chicago-family-hotels.html`
+- `site/where-to-stay/chicago-with-kids.html`
+- `site/index.html`
+- `site/sitemap.xml`
+- `status/chicago-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Publish one indexable hotel URL only; do not split out pool, suite, downtown, resort, or near-attraction variants.
+- Use trip-style roles rather than an unsupported ordinal ranking.
+- Show approximate total nightly planning ranges, not live inventory or a booking transaction.
+- Treat crib, rollaway, connecting-room, and kitchen details as optional evidence; unknowns are not automatic exclusions.
+- Paraphrase small or thin recent family-review samples and retain conflicts and freshness labels.
+- Do not publish safety assurances, exact route or stroller verdicts, price guarantees, personally verified stays, or universal family-fit claims.
+- Do not request indexing, add an affiliate CTA, mutate an external account, send outreach, or add recurring automation.
+
+Local result:
+
+- Published one generated comparison with 10 hotels chosen for distinct trip-style jobs, one 10-row comparison, 10 detailed hotel cards, five trip-style starts, direct Google Maps links, and three visible FAQs aligned with schema.
+- Added a source-dated trust panel, approximate total-night ranges, official room and amenity facts, small-sample online-review themes and conflicts, and a current InterContinental pool-closure notice.
+- Deferred Loews because its official site posts an indoor-pool closure through December 31, and recorded other evaluated but nonselected properties in the evidence pack.
+- Linked the new page from the home page and existing Chicago stay-area guide without changing the released Chicago activity page.
+- The focused test passed 4/4, the full repository suite passed 65/65, native SEO QA returned 0 errors and 0 warnings, and JavaScript syntax, roadmap JSON, whitespace, privacy, source, map, and scope checks passed.
+- Responsive checks at 1280, 390, and 320 pixels found no page-level overflow. The comparison stays inside its horizontal scroller, the image loaded at its declared 1280 by 960 dimensions, and all 10 cards fit their containers.
+- Review cycle 1 found three P2 evidence gaps and two P3 gaps. The implementation now reconciles the conflicting Langham Kids Suite pages, logs exact review sample counts/date spans/family context/source mapping, records Hilton's tax-inclusive public low, removes the unsupported Hotel Zachary negative amenity statement, and automates full-generator idempotency and isolation.
+- Review cycle 2 found one remaining P2 because supplemental review samples lacked exact counts and date spans. Those fields are now logged for every source and property.
+- Independent reviewer Wegener (`019f91eb-1d7f-7861-a9e3-4c0d8c1628b7`) returned final `PASS` on cycle 3 with no P0-P3 findings. The exact paths are eligible for commit, push, deployment, and production verification.
+
+## Completed
+
+### IMP-025: Improve The Chicago All-Ages Things-To-Do Hub
+
+Status: done and released
+
+Selected: 2026-07-23
+
+Completed: 2026-07-23
 
 Roadmap ID: `FT-IMP-010`
 
@@ -41,14 +100,9 @@ Local result:
 - After cycle 1 fixes, focused tests passed 4/4, the full suite passed 61/61, native SEO QA returned 0 errors and 0 warnings, and JavaScript/roadmap JSON/whitespace checks passed.
 - Responsive checks at 1280, 390, and 320 pixels found no page-level overflow or console errors; the comparison table stayed inside its horizontal scroller. The budget filter hid seven nonmatching choices, kept all 15 support cards and all three FAQs visible, and exposed one correct `aria-pressed` state.
 - Review cycle 1 found filter scope, duplicate routing, persona-traceability, candidate-count, accessibility, and generator-isolation issues. The implementation now keeps all non-filter support visible, exposes `aria-pressed`, removes the second route layer, traces CHI-P1 through CHI-P5, records 18 candidates, and proves regeneration changes only the stale target page.
-- Review cycle 2 returned `PASS_WITH_P3` with no P0-P2. Its two polish notes were fixed: the activity trust panel no longer mentions hotel evidence, and the duplicate QA bullet was removed. Final cycle 3 confirmation is pending.
+- Review cycle 2 returned `PASS_WITH_P3` with no P0-P2. Its two polish notes were fixed: the activity trust panel no longer mentions hotel evidence, and the duplicate QA bullet was removed.
 - Independent reviewer Mendel (`019f9112-265b-7742-9175-974f86f4811e`) returned final `PASS` on cycle 3 with no P0-P3 findings. The exact paths are eligible for commit, push, deployment, and production verification.
-
-## Ready
-
-No other implementation is ready while `FT-IMP-010` is active.
-
-## Completed
+- Released and production-verified at commit `ad4f31801a3721b84a8f017bcda718f42ac7e731`; GitHub Pages run `30058164707` succeeded.
 
 ### IMP-024: Improve The Las Vegas Family Itinerary
 

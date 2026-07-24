@@ -511,11 +511,14 @@ function stayPage(city) {
   const l = links(city);
   const isSanDiego = city.slug === "san-diego";
   const isLasVegas = city.slug === "las-vegas";
+  const isChicago = city.slug === "chicago";
   const hotelShortlistLink = isSanDiego
     ? '<a href="../where-to-stay/san-diego-family-hotels.html">12 family hotel options</a>'
     : isLasVegas
       ? '<a href="../where-to-stay/las-vegas-family-hotels.html">10 family hotel options</a>'
-      : "Parking, pool, breakfast, room size";
+      : isChicago
+        ? '<a href="../where-to-stay/chicago-family-hotels.html">10 family hotel options</a>'
+        : "Parking, pool, breakfast, room size";
   const rows = city.areas.map(([area, best, watch, fit]) => `            <div class="table-row" role="row">
               <span role="cell">${esc(area)}</span>
               <span role="cell">${esc(best)}</span>
@@ -563,7 +566,7 @@ ${rows}
             <div><dt>Activity page</dt><dd><a href="${l.activities}">Activities near each area</a></dd></div>
             <div><dt>Itinerary page</dt><dd><a href="${l.itinerary}">Sample itinerary by area</a></dd></div>
             <div><dt>Booking check</dt><dd>Verify fees, room type, and cancellation terms</dd></div>
-            <div><dt>${isSanDiego ? "Hotel shortlist" : "Key checks"}</dt><dd>${hotelShortlistLink}</dd></div>
+            <div><dt>${isSanDiego || isChicago ? "Hotel shortlist" : "Key checks"}</dt><dd>${hotelShortlistLink}</dd></div>
           </dl>
         </div>
       </section>
@@ -1248,6 +1251,286 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
   });
 }
 
+const chicagoFamilyHotels = [
+  {
+    name: "Embassy Suites by Hilton Chicago Downtown Magnificent Mile",
+    category: "Two-room suite, breakfast, and pool",
+    area: "Streeterville",
+    priceRange: "$280-$550+",
+    strengths: ["Two-room suites can separate sleep from adult downtime", "Made-to-order breakfast and an indoor pool keep two recurring family costs or needs in one place"],
+    familySetup: "Hilton lists suites, made-to-order breakfast, an evening reception, indoor pool, cribs, and a daily destination charge. Children 17 and under stay free in the same suite with a parent; exact bedding and occupancy still depend on the suite.",
+    reviewSignal: "The inspected sample included positive mentions of suite space, breakfast, pool, and location. It also surfaced elevator disruption, crowding, room condition, towels, and housekeeping.",
+    priceNote: "A recent public example was about $282 total; larger suites, weekends, and event dates can move much higher.",
+    parentCheck: "Confirm exact suite bedding and occupancy, current elevator and pool status, destination charge, parking, and final total.",
+    mapQuery: "Embassy Suites Chicago Downtown Magnificent Mile"
+  },
+  {
+    name: "Homewood Suites by Hilton Chicago-Downtown",
+    category: "Kitchen, breakfast, and indoor-pool base",
+    area: "River North",
+    priceRange: "$210-$450+",
+    strengths: ["Full kitchens and hot breakfast reduce meal setup", "An indoor pool and published connecting rooms add flexibility for longer stays"],
+    familySetup: "Hilton lists a full kitchen, free hot breakfast, indoor pool, connecting rooms, and a location one block from Michigan Avenue. Confirm a true one-bedroom category when a door between sleep and living space matters.",
+    reviewSignal: "The inspected sample included positive mentions of suite space, kitchen, breakfast, location, and the pool. It also surfaced dated condition, city noise, pool availability or crowding, breakfast variation, and valet waits or billing.",
+    priceNote: "A recent public one-night example was about $209 total; one-bedroom categories and peak dates can move higher.",
+    parentCheck: "Confirm the exact suite layout, pool status, breakfast setup, recent room condition, valet total, and final price.",
+    mapQuery: "Homewood Suites by Hilton Chicago Downtown 40 East Grand"
+  },
+  {
+    name: "Residence Inn Chicago Downtown/River North",
+    category: "Kitchen and breakfast without a pool requirement",
+    area: "River North",
+    priceRange: "$270-$500+",
+    strengths: ["Every suite has a full-size kitchen and breakfast is included", "On-site laundry and grocery-shopping service can help on a longer trip"],
+    familySetup: "Marriott lists all suites, full-size kitchens, complimentary hot breakfast, on-site laundry, grocery-shopping service, and self or valet parking. Bedding, sofa-bed setup, and whether the sleeping area has a door vary by category.",
+    reviewSignal: "The inspected sample included positive mentions of kitchens, breakfast, location, staff, and suite usefulness. It also surfaced room-specific city noise, kitchen supplies, the small gym, and summer value.",
+    priceNote: "A recent public example was about $268 total, while a stronger-demand summer date was reported near $382.",
+    parentCheck: "Confirm bedding, bedroom separation, sofa-bed setup, kitchen equipment, parking, and the final total for the same suite.",
+    mapQuery: "Residence Inn Chicago Downtown River North"
+  },
+  {
+    name: "Sable at Navy Pier Chicago, Curio Collection by Hilton",
+    category: "Navy Pier-centered younger-child trip",
+    area: "Navy Pier / Streeterville",
+    priceRange: "$310-$650+",
+    strengths: ["The hotel can put Chicago Children's Museum and pier activities at the day's starting point", "Official two-queen rooms and suites sleep four, with lake or skyline views"],
+    familySetup: "Official sources list two-queen rooms and suites sleeping four, mini fridges, cribs, confirmed connecting rooms, paid breakfast, and pier parking. The property has no pool.",
+    reviewSignal: "The inspected sample included positive mentions of views, room condition, and Navy Pier access. It also surfaced the long pier approach, wayfinding, parking cost, service inconsistency, and elevator disruption.",
+    priceNote: "A recent public one-night example was about $311 total; pier events, views, suites, and weekends can move higher.",
+    parentCheck: "Decide whether a pier base helps more than it complicates other days, then verify bedding, event calendar, parking, and final total.",
+    mapQuery: "Sable at Navy Pier Chicago"
+  },
+  {
+    name: "Swissotel Chicago",
+    category: "Purpose-built Kids Suite",
+    area: "New Eastside",
+    priceRange: "$240-$550+",
+    strengths: ["The current Kids Suite offer creates separate adult and child spaces", "The offer includes toys, games, movie night, and breakfast under stated terms"],
+    familySetup: "The Kids Suite offer lists a two-room setup with a dedicated children's space and breakfast for two adults and up to two children, subject to availability. Public standard double-room inventory lists two double beds for four.",
+    reviewSignal: "The inspected sample included positive mentions of views, river or lake location, room size, and staff. It also surfaced dated finishes, the experience fee, parking access, room assignment or service inconsistency, and offer availability.",
+    priceNote: "A recent standard-room example was about $235 total; the Kids Suite offer and mandatory experience fee can move higher.",
+    parentCheck: "Confirm the actual Kids Suite, breakfast terms, fee, parking, bedding, and final total rather than assuming a standard room includes the family setup.",
+    mapQuery: "Swissotel Chicago"
+  },
+  {
+    name: "InterContinental Chicago Magnificent Mile",
+    category: "Historic indoor-pool base",
+    area: "Magnificent Mile",
+    priceRange: "$300-$600+",
+    strengths: ["The heated junior Olympic-size indoor pool is a distinct weather-backup amenity", "Official room inventory includes two-double rooms and requestable connecting rooms or cribs"],
+    familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. A temporary August 10-12, 2026 pool closure is posted.",
+    reviewSignal: "The inspected sample included positive mentions of the pool, location, historic character, and staff. It also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost.",
+    priceNote: "A recent public one-night example was about $305 total; larger rooms, events, and weekends can move higher.",
+    parentCheck: "Check the live pool calendar and depth fit, exact two-double room, connecting request, parking, and final total.",
+    mapQuery: "InterContinental Chicago Magnificent Mile"
+  },
+  {
+    name: "Hilton Chicago",
+    category: "Museum Campus and Grant Park base",
+    area: "South Loop",
+    priceRange: "$320-$650+",
+    strengths: ["Grant Park and Museum Campus can shape the first half of the trip", "Hilton publishes two-double rooms, an indoor pool, game room, and larger family-connection layouts"],
+    familySetup: "Hilton lists two-double rooms sleeping four, an indoor pool, connecting rooms, cribs, game room, and larger family-connection or specialty layouts. Standard and specialty options differ sharply in space and total price.",
+    reviewSignal: "The inspected sample included positive mentions of Grant Park location, historic public spaces, pool, staff, and larger layouts. It also surfaced housekeeping consistency, dated-room variation, event-scale crowds, and parking cost.",
+    priceNote: "A current public example was about $308 including taxes and fees; specialty layouts and convention dates can move far higher.",
+    parentCheck: "Compare the standard room with the exact larger layout needed, then verify pool, event calendar, parking, and final total.",
+    mapQuery: "Hilton Chicago 720 South Michigan Avenue"
+  },
+  {
+    name: "Hotel Zachary Chicago, a Tribute Portfolio Hotel",
+    category: "Wrigleyville and older-kid trip",
+    area: "Lakeview / Wrigleyville",
+    priceRange: "$360-$750+",
+    strengths: ["Direct Wrigley Field positioning makes a Cubs game or concert the trip anchor", "Official inventory includes double-queen and ballpark-view categories"],
+    familySetup: "Official pages list king and double-queen rooms directly across from Wrigley Field, with neighborhood dining and ballpark-view categories.",
+    reviewSignal: "The inspected sample included positive mentions of Wrigley views, room condition, staff, and event convenience. It also surfaced event pricing, noise, blocked streets or rideshare friction, parking, breakfast cost, and limited cold storage.",
+    priceNote: "A recent public one-night example was about $363 total; Cubs games and concerts can invalidate the low end.",
+    parentCheck: "Check the Wrigley event calendar first, then bedding, refrigerator status, post-event transport, parking, and final total.",
+    mapQuery: "Hotel Zachary Chicago"
+  },
+  {
+    name: "Four Seasons Hotel Chicago",
+    category: "Luxury family amenities and pool",
+    area: "Gold Coast",
+    priceRange: "$630-$1,200+",
+    strengths: ["The current family program combines an indoor pool, child amenities, and a play space", "Two-double lake-view rooms publicly sleep four, with larger suite choices available"],
+    familySetup: "Current Four Seasons materials list a 44-foot indoor pool, family programming and child amenities, complimentary dining for children under five under stated terms, and two-double lake-view rooms for four.",
+    reviewSignal: "The inspected sample included positive mentions of service, pool, child amenities, views, room space, and location. It also surfaced the high total, occasional service mismatch, pool crowding, and room-layout questions.",
+    priceNote: "A recent public one-night example was about $630 total; two-double rooms, suites, weekends, dining, and parking can move much higher.",
+    parentCheck: "Price the exact room or suite and confirm bedding, pool timing, child-dining terms, parking, and the value of the family amenities.",
+    mapQuery: "Four Seasons Hotel Chicago"
+  },
+  {
+    name: "The Langham, Chicago",
+    category: "Riverfront luxury with a larger pool",
+    area: "Chicago River / River North",
+    priceRange: "$600-$1,200+",
+    strengths: ["The 67-foot indoor pool and a separate current Kids Suite can support an indoor reset", "Large rooms and a riverfront location can work when one central luxury base is the priority"],
+    familySetup: "Langham lists a 67-foot indoor pool and connecting rooms by request. Its current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended; the Cinema Suite is separate and subject to availability.",
+    reviewSignal: "The inspected sample included positive mentions of room size, river location, pool, service, and cleanliness. It also surfaced weekend pool crowding, food and parking cost, and service or climate-control inconsistency.",
+    priceNote: "A recent public one-night example was about $600 total; connecting rooms, suites, club access, food, and parking can move much higher.",
+    parentCheck: "Confirm the room and connection, pool child rules, current Kids Suite status and access, food plan, parking, and final total.",
+    mapQuery: "The Langham Chicago"
+  }
+];
+
+const chicagoHotelSources = [
+  ["Embassy Suites Magnificent Mile", "https://www.hilton.com/en/hotels/chirees-embassy-suites-chicago-downtown-magnificent-mile/"],
+  ["Homewood Suites Chicago-Downtown", "https://www.hilton.com/en/hotels/chihwhw-homewood-suites-chicago-downtown/"],
+  ["Residence Inn River North overview", "https://www.marriott.com/en-us/hotels/chirn-residence-inn-chicago-downtown-river-north/overview/"],
+  ["Residence Inn River North rooms", "https://www.marriott.com/en-us/hotels/chirn-residence-inn-chicago-downtown-river-north/rooms/"],
+  ["Residence Inn River North dining", "https://www.marriott.com/en-us/hotels/chirn-residence-inn-chicago-downtown-river-north/dining/"],
+  ["Sable at Navy Pier", "https://sablehotel.com/"],
+  ["Sable hotel information", "https://www.hilton.com/en-gb/hotels/chipiqq-sable-at-navy-pier-chicago/hotel-info/"],
+  ["Swissotel Kids Suite offer", "https://www.swissotel.com/hotels/chicago/promotions/family/swissotel-kids-suite/"],
+  ["Swissotel Kids Suite room", "https://www.swissotel.com/hotels/chicago/suites/kid-friendly-suite/"],
+  ["InterContinental rooms", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/rooms"],
+  ["InterContinental amenities and pool", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities"],
+  ["Hilton Chicago rooms", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/rooms/"],
+  ["Hilton Chicago amenities", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/amenities/"],
+  ["Hotel Zachary rooms", "https://www.hotelzachary.com/accommodations/"],
+  ["Four Seasons family guide", "https://press.fourseasons.com/chicago/trending-now/reasons-to-stay-in-chicago-with-kids/"],
+  ["Four Seasons hotel facts", "https://press.fourseasons.com/chicago/hotel-facts/"],
+  ["The Langham pool", "https://www.langhamhotels.com/en/the-langham/chicago/wellness/swimming-pool/"],
+  ["The Langham current Kids Suite", "https://www.langhamhotels.com/en/the-langham/chicago/stay/the-kids-suite/"],
+  ["The Langham hotel overview", "https://www.langhamhotels.com/en/the-langham/chicago/discover/hotel-at-a-glance/"],
+  ["The Langham child policy", "https://www.langhamhotels.com/en/the-langham/chicago/policy/"]
+];
+
+function chicagoFamilyHotelPage() {
+  const hotels = chicagoFamilyHotels;
+  const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
+            <p class="eyebrow">${esc(hotel.category)}</p>
+            <h3>${esc(hotel.name)}</h3>
+            <dl class="hotel-facts">
+              <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
+              <div><dt>Rough total/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
+            </dl>
+            <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
+            <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+          </article>`).join("\n");
+
+  const rows = hotels.map((hotel) => `              <tr>
+                <td>${esc(hotel.name)}</td>
+                <td>${esc(hotel.category)}</td>
+                <td>${esc(hotel.area)}</td>
+                <td>${esc(hotel.priceRange)}</td>
+                <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
+                <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
+              </tr>`).join("\n");
+
+  const faqs = [
+    ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
+    ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change; InterContinental currently posts an August 10-12, 2026 closure."],
+    ["Do these Chicago hotel ranges include taxes and fees?", "The ranges start from public examples that displayed taxes and mandatory fees where stated, then widen for date and room changes. Parking, food, larger rooms, and optional purchases remain outside the range, so compare the final total for the same dates and setup."]
+  ];
+  const faqJson = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }))
+  };
+  const itemListJson = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Chicago family hotel options",
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; rough total per night ${hotel.priceRange}` }))
+  };
+
+  const body = `    <main>
+      <section class="page-hero hotel-hero">
+        <div class="container">
+          <p class="eyebrow">Chicago family hotels</p>
+          <h1>Top Family Hotels in Chicago: 10 Options by Trip Style</h1>
+          <p>Compare ten Chicago family hotels by room setup, breakfast or kitchen utility, indoor pool, location, approximate total nightly price, and themes from sampled online reviews.</p>
+        </div>
+      </section>
+      <section class="container trust-panel" aria-label="Review status">
+        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 23, 2026</p>
+        <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, and cancellation terms.</p>
+      </section>
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG" alt="Millennium Park and the Chicago skyline at dusk." width="1280" height="960" loading="eager" decoding="async">
+          <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
+        </figure>
+      </section>
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Short answer</p>
+            <h2>Let the room setup and first two days choose the hotel</h2>
+            <p>Start with Embassy Suites, Homewood, or Residence Inn when sleep separation, breakfast, or a kitchen drives the stay. Use Sable for a Navy Pier-centered trip, Swissotel for its specific Kids Suite, InterContinental for the historic pool, Hilton Chicago for Museum Campus, and Hotel Zachary for Wrigleyville. Four Seasons and Langham are the two luxury comparisons.</p>
+            <p><a class="text-link" href="./chicago-with-kids.html">Compare Chicago stay areas before choosing a property</a></p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>Hotels covered</dt><dd>10 distinct options</dd></div>
+            <div><dt>Price format</dt><dd>Rough total/night, not a quote</dd></div>
+            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
+            <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
+        <div class="quick-pick-grid hotel-pick-grid">
+          <article class="quick-pick"><span>Suite plus breakfast</span><strong>Embassy Suites or Homewood</strong><p>Choose Embassy for a two-room suite and made-to-order breakfast; choose Homewood when a full kitchen matters more.</p></article>
+          <article class="quick-pick"><span>Kitchen without pool</span><strong>Residence Inn River North</strong><p>Use it for full kitchens, breakfast, and on-site laundry when pool time is not part of the plan.</p></article>
+          <article class="quick-pick"><span>Young-child or kids-room trip</span><strong>Sable or Swissotel</strong><p>Choose Sable to start on Navy Pier; choose Swissotel only when the specific two-room Kids Suite is available and worth the total.</p></article>
+          <article class="quick-pick"><span>Pool plus location</span><strong>InterContinental or Hilton Chicago</strong><p>Choose InterContinental for Magnificent Mile and its historic pool; choose Hilton Chicago for Grant Park and Museum Campus.</p></article>
+          <article class="quick-pick"><span>Wrigley or luxury</span><strong>Hotel Zachary, Four Seasons, or Langham</strong><p>Use Zachary for an older-kid ballpark trip; compare Four Seasons and Langham on exact room, pool, play space, service, and full price.</p></article>
+        </div>
+      </section>
+      <section class="band">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
+          <p class="review-label">Ranges synthesize public price examples checked July 23, 2026. Parking is separate. Compare the final total for the same dates, occupancy, and room setup.</p>
+          <div class="comparison-scroll">
+            <table class="comparison-table hotel-comparison">
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Rough total/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <tbody>
+${rows}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
+        <div class="detail-card-grid hotel-card-grid">
+${cards}
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading"><p class="eyebrow">Common questions</p><h2>Chicago family hotel FAQ</h2></div>
+        <div class="card-grid">
+${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
+        </div>
+      </section>
+      <section class="container page-section source-section">
+        <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. Price ranges use volatile public examples rather than live booking quotes.</p>
+        <ul class="source-list">
+${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
+          <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
+          <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham price or review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
+        </ul>
+      </section>
+      <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
+      <script type="application/ld+json">${JSON.stringify(faqJson)}</script>
+    </main>`;
+
+  return pageShell({
+    title: "Top Family Hotels in Chicago: 10 Options by Trip Style",
+    description: "Compare 10 Chicago family hotels by trip style, rough total nightly price, room setup, breakfast or kitchens, indoor pools, location, and sampled online-review themes.",
+    canonical: "where-to-stay/chicago-family-hotels.html",
+    nav: [["./chicago-with-kids.html", "Where to stay"], ["../things-to-do/chicago-with-kids.html", "Things to do"], ["../family-itinerary/chicago-with-kids.html", "Itinerary"]],
+    body
+  });
+}
+
 function itineraryPage(city) {
   const l = links(city);
   const isSanDiego = city.slug === "san-diego";
@@ -1497,6 +1780,7 @@ for (const page of agePages) {
 
 writeSite("where-to-stay/san-diego-family-hotels.html", sanDiegoFamilyHotelPage());
 writeSite("where-to-stay/las-vegas-family-hotels.html", lasVegasFamilyHotelPage());
+writeSite("where-to-stay/chicago-family-hotels.html", chicagoFamilyHotelPage());
 writeSite("about.html", aboutPage());
 
 const oldRedirects = [
@@ -1612,9 +1896,10 @@ ${cities.map((city) => `          <article class="activity-card">
             <p><a class="text-link" href="./where-to-stay/las-vegas-family-hotels.html">Compare Las Vegas family hotels</a></p>
           </article>
           <article class="activity-card">
-            <h3>Chicago stay and activity pairing</h3>
-            <p>Use Chicago when you need to decide between River North, Loop, Lincoln Park, South Loop, and West Loop before choosing museums, lakefront time, architecture tours, and rainy-day routes.</p>
+            <h3>Chicago family stay and activity pairing</h3>
+            <p>Use Chicago when you need to compare River North, the Loop, South Loop, Navy Pier, or Wrigleyville, then choose between suite, kitchen, pool, museum-base, and older-kid hotel setups.</p>
             <p><a class="text-link" href="./where-to-stay/chicago-with-kids.html">Compare Chicago stay areas with kids</a></p>
+            <p><a class="text-link" href="./where-to-stay/chicago-family-hotels.html">Compare Chicago family hotels</a></p>
           </article>
         </div>
       </section>
@@ -1662,6 +1947,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://familytripwise.com/about.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/san-diego-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html</loc></url>
+  <url><loc>https://familytripwise.com/where-to-stay/chicago-family-hotels.html</loc></url>
 ${cities.flatMap((city) => [
   `  <url><loc>https://familytripwise.com/things-to-do/${city.slug}-with-kids.html</loc></url>`,
   `  <url><loc>https://familytripwise.com/where-to-stay/${city.slug}-with-kids.html</loc></url>`,
@@ -1679,4 +1965,4 @@ Sitemap: https://familytripwise.com/sitemap.xml
 
 upgradePriorityPages(outDir);
 
-console.log("Generated 22 SEO pages plus about, index, redirects, robots, and sitemap.");
+console.log("Generated 23 SEO pages plus about, index, redirects, robots, and sitemap.");

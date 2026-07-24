@@ -4,6 +4,35 @@ Last updated: 2026-07-23
 
 ## Active
 
+### SRR-017: Chicago Family-Hotel Evidence Pack
+
+Status: done and review-clean inside `FT-PUB-003`
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-PUB-003`
+
+Evaluate a wider current Chicago property pool and produce the durable official-fact, rough-total-price, sampled-family-review, contradiction, freshness, and unknown record required for one clean named-property comparison. The likely 10-12-property shape is a research hypothesis, not a quota.
+
+Required coverage:
+
+- Distinct trip-style utility rather than ordinal `best` claims.
+- Official room/suite, pool, breakfast/kitchen, parking, location, and optional crib/rollaway/connecting/laundry facts where available.
+- Rough total-night planning ranges from current public examples, labeled approximate and date-stamped.
+- Bounded paraphrased recent family-review themes and conflicts, with small/thin sample labels.
+- Current SERP and persona fit, deferred candidates, unknowns, source freshness, page architecture, acceptance criteria, and measurement plan.
+
+Result:
+
+- Evaluated 19 current candidates and retained 10 with distinct suite, kitchen, pool, younger-child, museum, Wrigley, or luxury utility; documented every selection, deferral, and unresolved check.
+- Recorded 52 direct source URLs across official property facts, current public price examples, sampled review pages, competitors, and qualitative community context.
+- Logged exact inspected review counts, visible date spans, family context where exposed, and source-to-theme mapping for all 10 properties while storing no raw reviews, reviewer identifiers, credentials, private booking details, or personal data.
+- Reconciled the current Langham Kids Suite page with its stale contradictory overview and corrected Hilton Chicago's low-price evidence to the current tax-inclusive public result.
+- Artifact: `docs/research/chicago-family-hotel-evidence-pack.md`.
+- Independent reviewer Wegener returned final `PASS` on cycle 3 with no P0-P3 findings.
+
+## Recently Done
+
 ### SRR-016: Chicago All-Ages Candidate And Every-Section Review
 
 Status: done and review-clean inside `FT-IMP-010`
@@ -21,8 +50,6 @@ Result:
 - Preserved one all-ages canonical URL and the separate stay, hotel, itinerary, and teen jobs.
 - Artifact: `docs/research/chicago-activity-expansion-review.md`.
 - Independent reviewer Mendel returned final `PASS` on cycle 3 with no P0-P3 findings.
-
-## Recently Done
 
 ### SRR-015: Chicago SERP-Overlap Cluster, Persona, And Page Decision Pack
 

@@ -1225,3 +1225,32 @@ QA evidence:
 - `node --test tools/*.test.mjs` passed 61/61; the focused Chicago file passed 4/4.
 - `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/scope inspection, and `git diff --check` passed.
 - Responsive checks at 1280, 390, and 320 pixels found no page overflow or console warning/error; the comparison table remained contained, and the budget filter hid seven nonmatching choices while leaving 15 support cards and all three FAQs visible with the correct `aria-pressed` state.
+
+### 2026-07-23 - `FT-PUB-003` review cycles 1-3
+
+**Reviewer:** Wegener (`019f91eb-1d7f-7861-a9e3-4c0d8c1628b7`)
+
+**Final result: `PASS`**
+
+Cycle 1 findings and disposition:
+
+1. `P2` - Reconciled the current Langham Kids Suite page, which says open daily, with the stale overview saying suspended; the live page distinguishes the separate availability-dependent Cinema Suite and tells readers to confirm current status.
+2. `P2` - Added exact review counts, visible date spans, family-context classification, and source-to-theme mapping rather than relying on generic `small` or `thin` labels.
+3. `P2` - Corrected Hilton Chicago's public low to the current tax-inclusive Expedia example supporting the published range.
+4. `P3` - Removed Hotel Zachary's unsupported negative amenity sentence.
+5. `P3` - Added a focused full-generator test that proves idempotency and no unrelated output change.
+
+Cycle 2 finding and disposition:
+
+1. `P2` - Added exact counts and visible date spans for every supplemental Booking.com and Tripadvisor sample.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- The reviewer accepted evidence classification, official facts, prices, review observations and conflicts, contradictions, freshness, the 19-property selection, persona/SERP fit, claim safety, privacy, compact user experience, canonical/indexability, sitemap, schema, routing, responsive evidence, generator behavior, observation policy, and exact scope.
+
+QA evidence:
+
+- `node --test tools/*.test.mjs` passed 65/65; the focused Chicago hotel file passed 4/4.
+- `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/source/scope inspection, and `git diff --check` passed.
+- Responsive checks at 1280, 390, and 320 pixels found no page-level overflow; the comparison remained contained in its horizontal scroller, the image loaded at 1280 by 960 pixels, and all ten hotel cards fit their containers.
