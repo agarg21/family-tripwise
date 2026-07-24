@@ -4,7 +4,23 @@ Last updated: 2026-07-23
 
 ## Active
 
-No standalone research task is active. `FT-IMP-010` / `IMP-025` is the sole ready Chicago implementation.
+### SRR-016: Chicago All-Ages Candidate And Every-Section Review
+
+Status: done and review-clean inside `FT-IMP-010`
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-010`
+
+Research a wider current Chicago activity candidate pool, inspect current ranking pages and official sources, apply CHI-P1 through CHI-P5, and record a keep/expand/compress/replace/remove decision for every visible section before changing the existing all-ages page. This is part of the implementation transaction, not a separate scheduled action.
+
+Result:
+
+- Audited every visible section and replaced repeated layers with a compact 12-choice decision flow.
+- Recorded 18 candidates with keep/add/remove/defer decisions, explicit CHI-P1 through CHI-P5 coverage, competitor usefulness patterns, and a primary-source claim ledger.
+- Preserved one all-ages canonical URL and the separate stay, hotel, itinerary, and teen jobs.
+- Artifact: `docs/research/chicago-activity-expansion-review.md`.
+- Independent reviewer Mendel returned final `PASS` on cycle 3 with no P0-P3 findings.
 
 ## Recently Done
 

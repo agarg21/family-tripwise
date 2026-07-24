@@ -54,7 +54,7 @@ The machine-readable source used by the deterministic operator is `ops/seo-roadm
 | 19 | `FT-IMP-008` simplify the Las Vegas stay-area guide | Content/product quality | Completed and released | Commit `7bc2993`; Pages run `29975754626` and production verification passed. |
 | 20 | `FT-IMP-009` review and improve the Las Vegas family itinerary | Content/product quality | Released and production-verified | Commit `48417b0`; Pages run `29994060699`; production verification passed. |
 | 21 | `FT-RES-008` Chicago SERP-overlap cluster and persona decision pack | Content/product quality | Completed and review-clean | Query-level overlap, exact Semrush phrases, five personas, every-section audits, hotel/area architecture, and one promoted action passed independent review. |
-| 22 | `FT-IMP-010` improve the Chicago all-ages things-to-do hub | Content/product quality | Ready | Wider candidate review, one complete comparison, five persona routes, free/weather support, and less repeated prose on the existing URL. |
+| 22 | `FT-IMP-010` improve the Chicago all-ages things-to-do hub | Content/product quality | Review-clean; release eligible | Final cycle 3 `PASS`; 61/61 tests, native SEO QA 0/0, responsive/filter checks, exact scope, and privacy passed. |
 
 Ready does not mean all items should ship immediately. The operator selects one action per run using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows.
 
@@ -75,12 +75,19 @@ Ready does not mean all items should ship immediately. The operator selects one 
 
 ### FT-IMP-010 - Improve the Chicago all-ages things-to-do hub
 
-- State: ready; select it only as the next separate substantive transaction.
+- Selected: 2026-07-23 by direct manual user instruction.
+- State: review-clean and eligible for exact-path release.
 - Target: `https://familytripwise.com/things-to-do/chicago-with-kids.html`.
 - Baseline: 52 impressions, 0 clicks, and page-level average position 58.88 in the fresh July 23 authenticated snapshot. This is not a query-specific rank.
 - Product requirement: research a wider candidate pool, apply CHI-P1 through CHI-P5, preserve one complete comparison, keep deep notes only for high-friction choices, and add compact free/budget plus indoor/weather support.
 - Boundary: preserve URL/canonical/indexability/sitemap; do not edit the teen, stay, itinerary, or future hotel page and do not create another URL.
+- Exact maximum scope: one durable review, `tools/upgrade-priority-pages.mjs`, one focused test, the existing all-ages HTML, Chicago status, and operator/backlog records.
 - Release gate: durable candidate/every-section review, focused/native/responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+- Local result: the filter and comparison cover 12 distinct choices; one five-card CHI-P1 through CHI-P5 routing layer replaces universal rankings and the standalone teen band; only six high-friction choices receive deep notes; the duplicate mini-itinerary layer is removed; three cluster links, three visible/schema-aligned FAQs, and current official sources complete the decision flow.
+- Review cycle 1: Mendel (`019f9112-265b-7742-9175-974f86f4811e`) returned `FAIL` with three P2 and three P3 findings. All were addressed by scoping filterable cards, adding `aria-pressed`, removing duplicate routes, explicitly tracing CHI-P1 through CHI-P5, correcting 19 to 18 candidates, and strengthening the isolation test.
+- Review cycle 2: Mendel returned `PASS_WITH_P3` with no P0-P2. The activity trust-panel reference to hotel evidence and a duplicate backlog QA line were the only P3 notes; both were fixed for final cycle 3 confirmation.
+- Review cycle 3: Mendel returned final `PASS`; no P0-P3 findings remain.
+- QA after cycle 1 fixes: focused tests 4/4, full tests 61/61, native SEO QA 0 errors/0 warnings, JavaScript and roadmap JSON validation, responsive checks at 1280/390/320, filter/support/FAQ behavior, privacy/scope checks, and `git diff --check` passed.
 
 ### FT-IMP-009 - Review and improve the Las Vegas family itinerary
 

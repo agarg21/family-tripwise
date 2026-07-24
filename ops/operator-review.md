@@ -1195,3 +1195,33 @@ QA evidence:
 - `node tools/seo-qa.mjs` returned 0 errors and 0 warnings.
 - Roadmap JSON, four-page/five-persona/nine-cluster/action consistency, source count, privacy review, exact scope, and `git diff --check` passed.
 - After review, origin's mechanical July 23 GSC snapshot was fast-forwarded. Its immutable page rows mechanically refresh the Chicago total from 101 to 102 impressions and the stay row from 37 at 59.89 to 38 at 60.11; the activity and itinerary baselines and every research decision are unchanged.
+### 2026-07-23 - `FT-IMP-010` review cycles 1-3
+
+**Reviewer:** Mendel (`019f9112-265b-7742-9175-974f86f4811e`)
+
+**Final result: `PASS`**
+
+Cycle 1 findings and disposition:
+
+1. `P2` - The global activity filter hid untagged cluster, official-check, and FAQ cards. Closed by rendering all support cards outside the filter class and testing that only 12 tagged choices are filterable.
+2. `P2` - Five quick starts and five mini-itinerary routes repeated first-trip, younger-child, weather, and budget guidance. Closed by keeping one five-card CHI-P1 through CHI-P5 route layer and removing the standalone teen band plus mini-itinerary layer.
+3. `P2` - The durable implementation audit did not explicitly trace CHI-P1 through CHI-P5. Closed by mapping all five hypotheses, including P4 teen routing and P5 lodging routing.
+4. `P3` - Corrected the candidate count from 19 to 18.
+5. `P3` - Added initialized and click-updated `aria-pressed` to filter controls.
+6. `P3` - Strengthened isolation coverage to make the target stale, regenerate it, and prove only that target changes.
+
+Cycle 2 findings and disposition:
+
+1. `P3` - Made the trust panel activity-specific instead of mentioning hotel evidence.
+2. `P3` - Removed a duplicate QA result line from the implementation backlog.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- The reviewer accepted evidence classification, competitor/community handling, CHI-P1 through CHI-P5 coverage, the every-section and 18-candidate audit, compactness, claim/source safety, canonical/indexability/sitemap preservation, internal links, visible FAQ/schema and 12-item ItemList alignment, generator isolation, accessibility, privacy, observation policy, and exact path scope.
+
+QA evidence:
+
+- `node --test tools/*.test.mjs` passed 61/61; the focused Chicago file passed 4/4.
+- `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/scope inspection, and `git diff --check` passed.
+- Responsive checks at 1280, 390, and 320 pixels found no page overflow or console warning/error; the comparison table remained contained, and the budget filter hid seven nonmatching choices while leaving 15 support cards and all three FAQs visible with the correct `aria-pressed` state.

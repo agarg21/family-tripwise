@@ -4,22 +4,13 @@ Last updated: 2026-07-23
 
 ## Active
 
-No implementation task is active. `FT-IMP-010` / `IMP-025` is the sole ready next Chicago action.
-
-## Ready
-
 ### IMP-025: Improve The Chicago All-Ages Things-To-Do Hub
 
-Status: ready
+Status: review-clean and eligible for release
+
+Selected: 2026-07-23
 
 Roadmap ID: `FT-IMP-010`
-
-Source handoff:
-
-- `FT-RES-008: Create the Chicago SERP-overlap cluster and persona decision pack`
-- `docs/research/chicago-family-cluster-decision-pack.md`
-
-Goal:
 
 Improve the existing Chicago all-ages activity page after a wider current candidate review and every-section audit. Replace repeated cards, picks, tables, details, and mini-itineraries with one complete comparison, concise persona/trip-shape routes, and deep notes only for high-friction choices.
 
@@ -27,22 +18,35 @@ Affected production URL:
 
 - `https://familytripwise.com/things-to-do/chicago-with-kids.html`
 
-Acceptance checks:
+Exact maximum transaction scope:
 
-- Preserve the existing URL, canonical, indexability, and sitemap membership.
-- Evaluate a wider current candidate pool; retain only choices with distinct age, weather, budget, pace, or geographic value.
-- Apply CHI-P1 through CHI-P5 without duplicating teen, area, future hotel, or itinerary jobs.
-- Add compact free/budget and indoor/weather support with current official checks.
-- Replace generic reused source residue with activity-specific sources.
-- Do not publish unsupported safety, exact-route, stroller, sensory, age-fit, price, opening-hour, or personally verified claims.
-- Focused tests, deterministic generation, native and responsive QA, privacy/scope validation, and independent review must pass before release.
+- `docs/research/chicago-activity-expansion-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/chicago-activity-page.test.mjs`
+- `site/things-to-do/chicago-with-kids.html`
+- `status/chicago-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
 
-Not in this action:
+Local result:
 
-- the separately approved Chicago family-hotel page;
-- edits to the teen, stay, or itinerary URLs;
-- another new URL;
-- indexing requests, outreach, affiliate CTAs, external-account mutation, or recurring automation.
+- Expanded the compact activity filter and comparison from six generic choices to 12 distinct family decisions.
+- Replaced eight universal "best" cards and the standalone teen band with one five-card CHI-P1 through CHI-P5 routing layer, then removed the repeated mini-itinerary layer.
+- Replaced generic Navy Pier treatment with Chicago Children's Museum as a specific younger-child reason to visit.
+- Added current official-source checks, three visible FAQs aligned with schema, and a durable every-section/candidate/persona review.
+- After cycle 1 fixes, focused tests passed 4/4, the full suite passed 61/61, native SEO QA returned 0 errors and 0 warnings, and JavaScript/roadmap JSON/whitespace checks passed.
+- Responsive checks at 1280, 390, and 320 pixels found no page-level overflow or console errors; the comparison table stayed inside its horizontal scroller. The budget filter hid seven nonmatching choices, kept all 15 support cards and all three FAQs visible, and exposed one correct `aria-pressed` state.
+- Review cycle 1 found filter scope, duplicate routing, persona-traceability, candidate-count, accessibility, and generator-isolation issues. The implementation now keeps all non-filter support visible, exposes `aria-pressed`, removes the second route layer, traces CHI-P1 through CHI-P5, records 18 candidates, and proves regeneration changes only the stale target page.
+- Review cycle 2 returned `PASS_WITH_P3` with no P0-P2. Its two polish notes were fixed: the activity trust panel no longer mentions hotel evidence, and the duplicate QA bullet was removed. Final cycle 3 confirmation is pending.
+- Independent reviewer Mendel (`019f9112-265b-7742-9175-974f86f4811e`) returned final `PASS` on cycle 3 with no P0-P3 findings. The exact paths are eligible for commit, push, deployment, and production verification.
+
+## Ready
+
+No other implementation is ready while `FT-IMP-010` is active.
 
 ## Completed
 

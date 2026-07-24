@@ -175,46 +175,246 @@ const activityPages = {
     ]
   },
   "things-to-do/chicago-with-kids.html": {
-    title: "Things to Do in Chicago With Kids: Museums, Parks, Transit and Age Guide",
+    title: "Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style",
     description:
-      "Plan Chicago with kids by age, weather, stroller difficulty, transit friction, museum pacing, lakefront time, and nearby pairings.",
+      "Compare 12 things to do in Chicago with kids by age, weather, budget, time, area, stroller fit, and trip style, with current official-source checks.",
     city: "Chicago",
+    removeBaseActivitySiblingBand: true,
+    supportCardClass: "detail-card",
+    hidePlans: true,
+    baseReplacements: [
+      ["<h1>Things to do in Chicago with kids</h1>", "<h1>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style</h1>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Last updated:</strong> July 23, 2026</p>"],
+      ["Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.", "Family Tripwise compares official attraction information, current city sources, family logistics, and practical planning tradeoffs such as age fit, stroller friction, weather backup, nap timing, and location."],
+      ["<div><dt>Best toddler ideas</dt><dd>Lincoln Park Zoo, Maggie Daley Park</dd></div>", "<div><dt>Younger-child day</dt><dd>Chicago Children's Museum or Lincoln Park Zoo</dd></div>"],
+      ["<div><dt>Best teen ideas</dt><dd>architecture boat tour, food halls and neighborhoods</dd></div>", "<div><dt>Older-kid day</dt><dd>Architecture cruise, Art Institute, or 360 CHICAGO</dd></div>"],
+    ],
+    activityFilters: [
+      ["all", "All"],
+      ["toddler", "Toddler"],
+      ["elementary", "Elementary"],
+      ["teen", "Teen"],
+      ["indoor", "Indoor / rain"],
+      ["budget", "Free / low cost"],
+    ],
+    activityCards: [
+      {
+        name: "Field Museum",
+        tags: ["elementary", "tween", "teen", "stroller", "indoor", "rain"],
+        age: "School-age, tween, teen",
+        time: "3-5 hrs",
+        cost: "Paid",
+        area: "Museum Campus",
+        stroller: "Good",
+        rain: "Yes",
+        nap: "Medium",
+        summary: "Choose two or three exhibit priorities and treat this as the day's museum, not the first of several.",
+      },
+      {
+        name: "Shedd Aquarium",
+        tags: ["toddler", "preschool", "elementary", "tween", "stroller", "indoor", "rain"],
+        age: "Toddler through tween",
+        time: "2-4 hrs",
+        cost: "Paid",
+        area: "Museum Campus",
+        stroller: "Good",
+        rain: "Yes",
+        nap: "Medium",
+        summary: "A strong animal and indoor anchor when the family is comfortable with timed tickets and busy galleries.",
+      },
+      {
+        name: "Griffin Museum of Science and Industry",
+        tags: ["preschool", "elementary", "tween", "teen", "stroller", "indoor", "rain"],
+        age: "Preschool through teen",
+        time: "4-6 hrs",
+        cost: "Paid",
+        area: "Hyde Park",
+        stroller: "Good",
+        rain: "Yes",
+        nap: "Low",
+        summary: "Hands-on exhibits can fill most of a day; Hyde Park travel and ticketed add-ons make it a deliberate choice.",
+      },
+      {
+        name: "Adler Planetarium",
+        tags: ["elementary", "tween", "teen", "stroller", "indoor", "rain"],
+        age: "School-age through teen",
+        time: "2-4 hrs",
+        cost: "Paid",
+        area: "Museum Campus",
+        stroller: "Good",
+        rain: "Yes",
+        nap: "Medium",
+        summary: "Best when space or sky shows are the real interest, not merely as a third Museum Campus stop.",
+      },
+      {
+        name: "Lincoln Park Zoo",
+        tags: ["baby", "toddler", "preschool", "elementary", "tween", "stroller", "budget"],
+        age: "Baby through tween",
+        time: "2-3 hrs",
+        cost: "Free admission",
+        area: "Lincoln Park",
+        stroller: "Good",
+        rain: "Partial",
+        nap: "High",
+        summary: "Free admission and flexible exits make this one of the easiest choices to shorten around weather or energy.",
+      },
+      {
+        name: "Millennium Park and Maggie Daley Park",
+        tags: ["toddler", "preschool", "elementary", "tween", "stroller", "budget"],
+        age: "Toddler through tween",
+        time: "1-3 hrs",
+        cost: "Free",
+        area: "Loop",
+        stroller: "Good",
+        rain: "No",
+        nap: "Medium",
+        summary: "Use the parks as a first-day orientation or movement break, with the Play Garden strongest for children under 12.",
+      },
+      {
+        name: "Chicago Architecture Center river cruise",
+        tags: ["elementary", "tween", "teen"],
+        age: "School-age through teen",
+        time: "90 min",
+        cost: "Paid",
+        area: "River North",
+        stroller: "Check operator",
+        rain: "Weather-dependent",
+        nap: "Low",
+        summary: "A signature older-kid choice when the family can sit for 90 minutes and plans around weather and departure time.",
+      },
+      {
+        name: "Chicago Children's Museum",
+        tags: ["baby", "toddler", "preschool", "elementary", "stroller", "indoor", "rain"],
+        age: "Baby through early elementary",
+        time: "2-3 hrs",
+        cost: "Paid",
+        area: "Navy Pier",
+        stroller: "Good",
+        rain: "Yes",
+        nap: "High",
+        summary: "The clearest family reason to visit Navy Pier, with hands-on play aimed mainly at younger children.",
+      },
+      {
+        name: "Art Institute of Chicago",
+        tags: ["elementary", "tween", "teen", "stroller", "indoor", "rain", "budget"],
+        age: "School-age through teen",
+        time: "90 min-3 hrs",
+        cost: "Kids under 14 free",
+        area: "Loop",
+        stroller: "Good",
+        rain: "Yes",
+        nap: "Medium",
+        summary: "A short family route can work better than a completionist visit; family resources and sensory guidance are available.",
+      },
+      {
+        name: "360 CHICAGO",
+        tags: ["elementary", "tween", "teen", "stroller", "indoor", "rain"],
+        age: "School-age through teen",
+        time: "60-90 min",
+        cost: "Paid",
+        area: "Magnificent Mile",
+        stroller: "Check venue",
+        rain: "Yes, but views vary",
+        nap: "Medium",
+        summary: "A contained skyline choice; treat TILT as an optional add-on and check visibility before committing.",
+      },
+      {
+        name: "Garfield Park Conservatory",
+        tags: ["baby", "toddler", "preschool", "elementary", "tween", "teen", "stroller", "indoor", "rain", "budget"],
+        age: "All ages",
+        time: "1-2 hrs",
+        cost: "Free or current admission",
+        area: "Garfield Park",
+        stroller: "Good",
+        rain: "Yes",
+        nap: "High",
+        summary: "A calm greenhouse reset with lower ticket pressure; check the current resident and nonresident admission model.",
+      },
+      {
+        name: "Chicago lakefront and beach time",
+        tags: ["baby", "toddler", "preschool", "elementary", "tween", "teen", "stroller", "budget"],
+        age: "All ages",
+        time: "1-3 hrs",
+        cost: "Free",
+        area: "Lakefront",
+        stroller: "Route-specific",
+        rain: "No",
+        nap: "High",
+        summary: "Keep this flexible and choose the exact beach or path only after checking season, weather, swim status, and facilities.",
+      },
+    ],
+    compactDetails: true,
+    comparisonNote: "Age fit, time, cost, stroller, rain, nap, and booking fields are Family Tripwise editorial planning estimates, not venue guarantees. Recheck the linked official source and exact date before building the day around a choice.",
+    quickEyebrow: "Choose a trip shape",
+    quickTitle: "Five useful ways to start",
+    quickNote: "These are starting routes, not universal rankings. Choose by child interest, age mix, weather, budget, and how much museum time the family actually enjoys.",
     quick: [
-      ["Best overall", "Museum Campus", "Field Museum or Shedd gives the biggest family payoff."],
-      ["Best for toddlers", "Lincoln Park Zoo", "Flexible, free, and easy to shorten."],
-      ["Best for teens", "Architecture boat tour", "More memorable for older kids than another playground stop."],
-      ["Best rainy-day option", "Shedd Aquarium or Field Museum", "Both can anchor a bad-weather day."],
-      ["Best free/low-cost", "Lincoln Park Zoo or Millennium Park", "Strong family value if weather cooperates."],
-      ["Best stroller-friendly", "Lincoln Park Zoo", "More forgiving than crowded downtown sidewalks."],
-      ["Best half-day anchor", "Shedd Aquarium", "Works as a contained morning or afternoon."],
-      ["Best if you only have one day", "Millennium Park plus one Museum Campus attraction", "Keeps transit simple."]
+      ["First-time mixed ages", "Millennium Park plus one major anchor", "Use the parks for city context, then choose Field, Shedd, Art Institute, or a river cruise by interest instead of stacking them."],
+      ["Younger child or easy exit", "Chicago Children's Museum or Lincoln Park Zoo", "Both support a shorter day; choose indoor hands-on play or a flexible outdoor animal stop."],
+      ["Weather or budget constraint", "Use the indoor or lower-cost filters", "Choose one current, age-fit anchor and keep the backup nearby instead of rebuilding the whole day."],
+      ["Older kids and teens", "Architecture cruise, Art Institute, or 360 CHICAGO", "Let older children choose between city story, art, or skyline rather than defaulting to younger-child pacing."],
+      ["Lodging-led trip", "Choose the stay base before the final activity order", "The Loop, River North, Lincoln Park, Museum Campus routes, and Hyde Park create different reset and transport patterns."]
     ],
     rows: [
-      ["Field Museum", "6+", "3-5 hrs", "$$", "Museum Campus", "Easy", "Yes", "Medium", "Check tickets", "Classic Chicago museum anchor", "Lakefront or Shedd"],
-      ["Shedd Aquarium", "2-12", "2-4 hrs", "$$$", "Museum Campus", "Easy", "Yes", "High", "Book ahead", "Best indoor younger-kid anchor", "Field Museum lawn or lakefront"],
-      ["Lincoln Park Zoo", "0-10", "2-3 hrs", "$", "Lincoln Park", "Easy", "No", "High", "No", "Free flexible animal stop", "Nature Boardwalk or playground"],
-      ["Maggie Daley Park", "2-10", "1-2 hrs", "$", "Loop", "Easy", "No", "Medium", "No", "Energy burn near major sights", "Millennium Park"],
-      ["Architecture boat tour", "9+", "90 min", "$$$", "River North", "Limited", "No", "Low", "Book ahead", "Best teen/tween signature activity", "Riverwalk meal"],
-      ["Navy Pier", "4+", "2-4 hrs", "$$", "Streeterville", "Easy", "Partial", "Medium", "Depends on activities", "Useful mixed-weather fallback", "Ohio Street Beach or lakefront"]
+      ["Field Museum", "6+", "3-5 hrs", "Paid", "Museum Campus", "Good", "Yes", "Medium", "Check tickets/exhibits", "Large natural-history anchor", "Lakefront reset"],
+      ["Shedd Aquarium", "2-12", "2-4 hrs", "Paid", "Museum Campus", "Good", "Yes", "Medium", "Timed tickets helpful", "Focused animal and science day", "Museum Campus lawn"],
+      ["Griffin Museum of Science and Industry", "4+", "4-6 hrs", "Paid", "Hyde Park", "Good", "Yes", "Low", "Check add-ons", "Hands-on, full-day science choice", "Hyde Park meal"],
+      ["Adler Planetarium", "6+", "2-4 hrs", "Paid", "Museum Campus", "Good", "Yes", "Medium", "Check shows", "Space-led museum choice", "Lakefront view"],
+      ["Lincoln Park Zoo", "0-12", "2-3 hrs", "Free admission", "Lincoln Park", "Good", "Partial", "High", "No general ticket", "Flexible animal stop", "Nature Boardwalk"],
+      ["Millennium Park and Maggie Daley Park", "2-12", "1-3 hrs", "Free", "Loop", "Good", "No", "Medium", "Check events", "City context plus movement", "Art Institute"],
+      ["Chicago Architecture Center river cruise", "6+", "90 min", "Paid", "River North", "Check operator", "Weather-dependent", "Low", "Book/check season", "Chicago story from the river", "Riverwalk meal"],
+      ["Chicago Children's Museum", "1-9", "2-3 hrs", "Paid", "Navy Pier", "Good", "Yes", "High", "Check entry window", "Hands-on younger-child anchor", "Short lakefront walk"],
+      ["Art Institute of Chicago", "6+", "90 min-3 hrs", "Kids under 14 free", "Loop", "Good", "Yes", "Medium", "Check admission", "Short art route with family resources", "Millennium Park"],
+      ["360 CHICAGO", "6+", "60-90 min", "Paid", "Magnificent Mile", "Check venue", "Yes; views vary", "Medium", "Check visibility/TILT", "Contained skyline choice", "Streeterville meal"],
+      ["Garfield Park Conservatory", "All ages", "1-2 hrs", "Free/current admission", "Garfield Park", "Good", "Yes", "High", "Check admission", "Calmer greenhouse reset", "Keep the route simple"],
+      ["Chicago lakefront and beach time", "All ages", "1-3 hrs", "Free", "Lakefront", "Route-specific", "No", "High", "Check season/status", "Flexible outdoor recovery time", "Nearby neighborhood meal"]
     ],
+    detailsEyebrow: "High-friction choices",
+    detailsTitle: "Six choices that need an extra check",
+    detailsNote: "The comparison table covers all 12. These six get extra space because size, timed entry, travel, weather, optional add-ons, or current conditions can materially change the family plan.",
     details: [
-      ["Field Museum", "Families like the big exhibits and easy Museum Campus pairing.", "Best for school-age kids through teens.", "Trying to combine too many museums in one day.", "Choose must-see exhibits first and leave before museum fatigue hits.", "Food/restroom options exist onsite; verify hours for the day.", "Check ticket packages and special exhibits.", "Pair with lakefront time or Shedd, not three museums."],
-      ["Shedd Aquarium", "Families like the animal payoff and indoor reliability.", "Best for toddlers through tweens.", "Crowds and timed-entry friction.", "Book ahead and use it as a half-day anchor.", "Plan food and stroller parking on arrival.", "Tickets are often easiest in advance.", "Pair with a short lakefront walk."],
-      ["Lincoln Park Zoo", "Families like the free entry and flexible pacing.", "Best for babies through elementary kids.", "Weather exposure and long park wandering.", "Pick a few animal zones and leave room for snack breaks.", "Nearby park areas can serve as resets; verify bathrooms as you go.", "No ticket needed for general admission.", "Pair with the Nature Boardwalk or neighborhood meal."],
-      ["Millennium Park / Maggie Daley Park", "Families like quick skyline payoff and playground time.", "Best for toddlers through elementary kids.", "Crowds and overstimulation around big events.", "Use as a first-day orientation stop.", "Food/restrooms vary by route; plan before kids are urgent.", "No booking for park time.", "Pair with the Art Institute exterior, Bean area, or Loop hotel reset."],
-      ["Architecture boat tour", "Families with older kids like the clear story and river views.", "Best for tweens and teens.", "Younger kids may not sit still; weather matters.", "Book a time when kids are fed and rested.", "Use bathrooms before boarding.", "Book ahead in peak season.", "Pair with Riverwalk food or a short Magnificent Mile walk."],
-      ["Navy Pier", "Families like that it can fill a weather gap.", "Best for preschoolers through teens.", "It can feel commercial and crowded.", "Choose one reason to go, not a vague afternoon wander.", "Food/restroom options are part of the appeal.", "Check activity hours and pricing.", "Pair with lakefront or a short ride back to the hotel."]
+      ["Field Museum", "The scale and major natural-history exhibits can justify a full family museum block.", "Best for school-age children through teens who have one or two exhibit interests.", "Museum fatigue and the temptation to add Shedd or Adler as another full stop.", "Choose priorities before arrival and stop while the experience is still working.", "Plan the meal and bathroom break inside or immediately after the museum.", "Check current admission, exhibitions, and family resources.", "Pair with outdoor lakefront time, not another full museum."],
+      ["Shedd Aquarium", "The animal focus works across a broad age range and provides a substantial indoor anchor.", "Best for younger children through tweens when crowds and timed entry fit the day.", "Busy galleries, ticket timing, and trying to complete every habitat or presentation.", "Buy for the intended window and decide the family's highest-interest zones first.", "Plan food, stroller handling, and the exit before everyone is tired.", "Recheck current tickets, hours, experiences, and accessibility details.", "Pair with one short Museum Campus outdoor reset."],
+      ["Griffin Museum of Science and Industry", "Hands-on exhibits can hold children who prefer machines, experiments, and movement to traditional display cases.", "Best for preschoolers through teens, with different exhibit priorities by age.", "The museum is large, Hyde Park changes the route, and add-on experiences can fragment time and budget.", "Treat it as the day's anchor and choose any ticketed add-on before arrival.", "Build in a real meal and sitting break rather than trying to see every hall.", "Check current admission, exhibit availability, add-on tickets, and transport.", "Pair with a nearby meal or quiet evening."],
+      ["Chicago Architecture Center river cruise", "The 90-minute cruise gives older children a clear Chicago story while the city moves around them.", "Best for school-age children through teens who can sit and listen for the full trip.", "Weather exposure, a fixed departure, infant ticket rules, and a child who loses interest on the boat.", "Choose the departure around food and energy, arrive early, and review the operator's current accessibility details.", "Use bathrooms before boarding and keep the next meal near the Riverwalk.", "The official season is generally March through November; verify exact dates, tickets, weather policy, and departure point.", "Pair with one Riverwalk meal or short walk."],
+      ["360 CHICAGO", "It is a contained skyline stop that can fit between meals or a Magnificent Mile route.", "Best for school-age children through teens who value the view.", "Low visibility, paying for a short visit, or treating optional TILT as part of every ticket.", "Check conditions and current ticket choices before committing.", "Use it as a short viewpoint, not a reason to add multiple observation decks.", "Verify current hours, visibility, ticket terms, and TILT rules.", "Pair with a nearby meal or hotel reset."],
+      ["Chicago lakefront and beach time", "Open space can provide the flexible recovery block that museum-heavy trips need.", "Useful across ages when the exact path or beach fits weather, mobility, and water comfort.", "Assuming every beach is equally suitable, open, staffed, swimmable, or easy with a stroller.", "Choose the exact location only after checking current Chicago Park District conditions and facilities.", "Bring the family's needed shade, water, food, and exit plan rather than relying on an unknown beach setup.", "Check swim season, weather, daily water-quality status, and current beach notices.", "Pair with the closest neighborhood meal, not a cross-city attraction."]
     ],
-    plans: {
-      "1-day plan": "Millennium Park/Maggie Daley Park early, one Museum Campus anchor, then a simple River North or Loop dinner.",
-      "2-day plan": "Day 1: Parks and Museum Campus. Day 2: Lincoln Park Zoo plus neighborhood lunch; teens can swap in an architecture boat tour.",
-      "Rainy-day plan": "Use Shedd or Field as the anchor, keep transit simple, and save Navy Pier only if you need a second indoor-ish option.",
-      "Toddler-friendly plan": "Lincoln Park Zoo, nap/hotel reset, Maggie Daley Park if weather and energy hold.",
-      "Teen-friendly plan": "Architecture boat tour, Field Museum highlights, Riverwalk food, and lakefront views."
-    },
+    clusterTitle: "Move from the shortlist to the stay base and route",
+    clusterLinks: [
+      ["Where to stay in Chicago", "Choose the lodging base before finalizing activities. Museum Campus, Loop, River North, Lincoln Park, and Hyde Park routes create different transit and reset patterns.", "../where-to-stay/chicago-with-kids.html", "Open where to stay in Chicago with kids"],
+      ["Chicago family itinerary", "Turn one anchor, one flexible reset, meals, and weather backups into a realistic route instead of a museum checklist.", "../family-itinerary/chicago-with-kids.html", "Open the Chicago family itinerary"],
+      ["Chicago with teens", "Use the teen guide when architecture, art, food, skyline views, and older-child pacing matter more than younger-child play.", "./chicago-with-teens.html", "Open Chicago with teens"]
+    ],
+    officialChecksEyebrow: "Before locking the day",
+    officialChecksTitle: "Three checks that can change the shortlist",
+    officialChecks: [
+      ["Tickets and large museums", "Timed entry, special exhibits, shows, and add-ons vary. Pick the exact museum first and check its current admission and calendar before treating Museum Campus or Hyde Park as a complete plan.", [["https://www.fieldmuseum.org/landing/visiting-with-kids", "Field Museum with kids"], ["https://www.sheddaquarium.org/plan-a-visit", "Shedd plan a visit"], ["https://www.griffinmsi.org/", "Griffin Museum of Science and Industry"]]],
+      ["Younger-child and lower-cost day", "Lincoln Park Zoo has free general admission; Art Institute admission is free for children under 14; Garfield Park Conservatory's current model differs for Chicago residents and other visitors. Recheck before promising a free day.", [["https://www.lpzoo.org/visit/", "Lincoln Park Zoo visit"], ["https://www.artic.edu/learn-with-us/families", "Art Institute families"], ["https://garfieldconservatory.org/visit/", "Garfield Park Conservatory visit"]]],
+      ["Season, weather, and water", "River cruises, beach swimming, and skyline views change with season and weather. Check the exact cruise, beach dashboard, and visibility near the visit.", [["https://www.architecture.org/city-tours/river-cruise", "Chicago Architecture Center river cruise"], ["https://www.chicagoparkdistrict.com/beaches", "Chicago Park District beaches"], ["https://www.chicagoparkdistrict.com/beach-dashboard", "Chicago beach swim-status dashboard"]]]
+    ],
+    visibleFaqs: true,
     faqs: [
-      ["Is Chicago stroller-friendly with kids?", "Many attractions are stroller-friendly, but downtown sidewalks, transit elevators, and winter weather can add friction."],
-      ["What is the best rainy-day activity in Chicago with kids?", "Shedd Aquarium and Field Museum are the most reliable rainy-day anchors for most families."]
+      ["What are the best things to do in Chicago with kids?", "Start with the child's interests rather than one universal ranking: Shedd for aquatic animals, Field for natural history, Griffin MSI for hands-on science, Chicago Children's Museum for younger play, and an architecture cruise or Art Institute for many older children."],
+      ["What can families do for free in Chicago?", "Lincoln Park Zoo and the public parks are the clearest free choices. Children under 14 receive free Art Institute admission, while Garfield Park Conservatory has current resident and nonresident rules to verify. Transport, parking, food, and seasonal conditions still affect the day."],
+      ["What is a useful rainy-day activity in Chicago with kids?", "Choose one substantial indoor anchor by interest: Shedd, Field, Griffin MSI, Adler, Art Institute, or Chicago Children's Museum. Indoor does not always mean low-crowd or low-walking, so keep the rest of the route light."]
+    ],
+    sourcesIntro: "Official attraction and city sources checked July 23, 2026. Recheck tickets, hours, exhibitions, weather, water conditions, and operating details for the exact visit date.",
+    sources: [
+      ["Field Museum with kids", "https://www.fieldmuseum.org/landing/visiting-with-kids"],
+      ["Shedd Aquarium plan a visit", "https://www.sheddaquarium.org/plan-a-visit"],
+      ["Griffin Museum of Science and Industry", "https://www.griffinmsi.org/"],
+      ["Adler Planetarium tickets", "https://www.adlerplanetarium.org/visit/tickets/"],
+      ["Lincoln Park Zoo visit", "https://www.lpzoo.org/visit/"],
+      ["Maggie Daley Park Play Garden", "https://www.maggiedaleypark.com/things-to-do-see/play-garden/"],
+      ["Chicago Architecture Center river cruise", "https://www.architecture.org/city-tours/river-cruise"],
+      ["Chicago Children's Museum hours, tickets, and FAQ", "https://www.chicagochildrensmuseum.org/hours-tickets-and-faq"],
+      ["Art Institute family resources", "https://www.artic.edu/learn-with-us/families"],
+      ["360 CHICAGO with kids", "https://360chicago.com/things-to-do/visiting-360-chicago-with-kids"],
+      ["Garfield Park Conservatory visit", "https://garfieldconservatory.org/visit/"],
+      ["Chicago Park District beaches", "https://www.chicagoparkdistrict.com/beaches"],
+      ["Chicago beach swim-status dashboard", "https://www.chicagoparkdistrict.com/beach-dashboard"],
+      ["Millennium Park photo source and license", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"]
     ]
   },
   "things-to-do/las-vegas-with-kids.html": {
@@ -1266,9 +1466,9 @@ ${plans.map(([title, fit, blocks, stopRule]) => `          <article class="detai
         </div>`;
 }
 
-function renderClusterCards(cards) {
+function renderClusterCards(cards, cardClass = "activity-card") {
   return `        <div class="card-grid">
-${cards.map(([title, body, href, linkText]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
+${cards.map(([title, body, href, linkText]) => `          <article class="${esc(cardClass)}"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
         </div>`;
 }
 
@@ -1282,16 +1482,99 @@ ${routes.map(([persona, body, links]) => `          <article class="activity-car
         </div>`;
 }
 
-function renderOfficialChecks(checks) {
+function renderOfficialChecks(checks, cardClass = "activity-card") {
   return `        <div class="card-grid">
-${checks.map(([title, body, links]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p>${renderLinkList(links)}</p></article>`).join("\n")}
+${checks.map(([title, body, links]) => `          <article class="${esc(cardClass)}"><h3>${esc(title)}</h3><p>${esc(body)}</p><p>${renderLinkList(links)}</p></article>`).join("\n")}
         </div>`;
 }
 
-function renderFaqs(faqs) {
+function renderFaqs(faqs, cardClass = "activity-card") {
   return `        <div class="card-grid">
-${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
+${faqs.map(([question, answer]) => `          <article class="${esc(cardClass)} faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
         </div>`;
+}
+
+function replaceBaseActivitySection(html, page) {
+  if (!page.activityCards?.length) return html;
+
+  const sectionStart = '      <section class="container page-section">\n        <div class="section-heading">\n          <p class="eyebrow">Activity filters</p>';
+  const nextSiblingBand = '      <section class="band">\n        <div class="container card-grid">';
+  const sourceSection = '      <section class="container page-section source-section">';
+  const start = html.indexOf(sectionStart);
+  const possibleEnds = [
+    html.indexOf(nextSiblingBand, start),
+    html.indexOf(sourceSection, start),
+  ].filter((index) => index !== -1);
+  const end = possibleEnds.length ? Math.min(...possibleEnds) : -1;
+  if (start === -1 || end === -1 || end <= start) {
+    throw new Error(`Expected base activity section was not found for ${page.city}`);
+  }
+
+  const filters = page.activityFilters || [
+    ["all", "All"],
+    ["toddler", "Toddler"],
+    ["elementary", "Elementary"],
+    ["teen", "Teen"],
+    ["indoor", "Indoor"],
+    ["budget", "Free / low cost"],
+  ];
+  const cards = page.activityCards.map((activity) => `          <article class="activity-card" data-tags="${esc(activity.tags.join(" "))}">
+            <h3>${esc(activity.name)}</h3>
+            <p>${esc(activity.summary)}</p>
+            <dl>
+              <div><dt>Age fit</dt><dd>${esc(activity.age)}</dd></div>
+              <div><dt>Time</dt><dd>${esc(activity.time)}</dd></div>
+              <div><dt>Cost</dt><dd>${esc(activity.cost)}</dd></div>
+              <div><dt>Area</dt><dd>${esc(activity.area)}</dd></div>
+            </dl>
+          </article>`).join("\n");
+  const mapData = page.activityCards.map(({ name, tags, time, cost, area, summary, stroller, rain, nap }) => ({
+    name,
+    tags,
+    time,
+    cost,
+    stroller,
+    rain,
+    nap,
+    area,
+    summary,
+  }));
+  const section = `      <section class="container page-section">
+        <div class="section-heading">
+          <p class="eyebrow">Activity filters</p>
+          <h2>${esc(page.activityFilterTitle || "Kid-friendly activities by age, pace, and weather")}</h2>
+        </div>
+        <div class="filter-bar" aria-label="Activity filters">
+${filters.map(([value, label], index) => `          <button class="chip${index === 0 ? " active" : ""}" type="button" data-filter="${esc(value)}" aria-pressed="${index === 0 ? "true" : "false"}">${esc(label)}</button>`).join("\n")}
+        </div>
+        <div class="activity-grid">
+${cards}
+        </div>
+        <script type="application/json" id="map-ready-activities">${JSON.stringify(mapData)}</script>
+        <script>
+          document.currentScript.closest("section").querySelectorAll(".chip").forEach((chip, _, chips) => {
+            chip.addEventListener("click", () => {
+              chips.forEach((item) => item.setAttribute("aria-pressed", String(item === chip)));
+            });
+          });
+        </script>
+      </section>
+`;
+
+  return `${html.slice(0, start)}${section}${html.slice(end)}`;
+}
+
+function removeBaseActivitySiblingBand(html, page) {
+  if (!page.removeBaseActivitySiblingBand) return html;
+  const startMarker = '      <section class="band">\n        <div class="container card-grid">';
+  const endMarker = '      <section class="container page-section source-section">';
+  const start = html.indexOf(startMarker);
+  const end = html.indexOf(endMarker, start);
+  if (start === -1 && html.includes(endMarker)) return html;
+  if (start === -1 || end === -1 || end <= start) {
+    throw new Error(`Expected base activity sibling band was not found for ${page.city}`);
+  }
+  return `${html.slice(0, start)}${html.slice(end)}`;
 }
 
 function renderActivityUpgrade(page) {
@@ -1303,7 +1586,7 @@ function renderActivityUpgrade(page) {
             <p class="eyebrow">${esc(page.clusterEyebrow || "Plan the cluster")}</p>
             <h2>${esc(page.clusterTitle || "Connect activities to stay area, route, and methodology")}</h2>
           </div>
-${renderClusterCards(page.clusterLinks)}
+${renderClusterCards(page.clusterLinks, page.supportCardClass)}
         </div>
       </section>
 `
@@ -1315,7 +1598,7 @@ ${renderClusterCards(page.clusterLinks)}
           <p class="eyebrow">${esc(page.officialChecksEyebrow || "Rain and budget checks")}</p>
           <h2>${esc(page.officialChecksTitle || "Verify current offers and backup plans before building around them")}</h2>
         </div>
-${renderOfficialChecks(page.officialChecks)}
+${renderOfficialChecks(page.officialChecks, page.supportCardClass)}
       </section>
 `
     : "";
@@ -1325,13 +1608,22 @@ ${renderOfficialChecks(page.officialChecks)}
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Common planning questions</p>
-            <h2 id="activity-faq-title">Las Vegas with kids FAQ</h2>
+            <h2 id="activity-faq-title">${esc(page.faqTitle || `${page.city} with kids FAQ`)}</h2>
           </div>
-${renderFaqs(page.faqs)}
+${renderFaqs(page.faqs, page.supportCardClass)}
         </div>
       </section>
 `
     : "";
+  const plansSection = page.hidePlans
+    ? ""
+    : `      <section class="container page-section rank-ready-section">
+        <div class="section-heading">
+          <p class="eyebrow">${esc(page.plansEyebrow || "Mini itineraries")}</p>
+          <h2>${esc(page.plansTitle || "Turn the list into a realistic family day")}</h2>
+        </div>
+${renderPlans(page.plans)}
+      </section>`;
 
   return `${markerStart}
 ${page.firstTime ? `      <section class="container page-section rank-ready-section">
@@ -1403,13 +1695,7 @@ ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}
         </div>
       </section>
 
-      <section class="container page-section rank-ready-section">
-        <div class="section-heading">
-          <p class="eyebrow">${esc(page.plansEyebrow || "Mini itineraries")}</p>
-          <h2>${esc(page.plansTitle || "Turn the list into a realistic family day")}</h2>
-        </div>
-${renderPlans(page.plans)}
-      </section>${clusterSection ? `${clusterSection}` : ""}
+${plansSection}${clusterSection ? `${clusterSection}` : ""}
 ${officialCheckSection}${faqSection}${markerEnd}
 `;
 }
@@ -1916,6 +2202,8 @@ function upgradeFile(outDir, path, page, type) {
   html = stripMarked(html, schemaStart, schemaEnd);
   html = updateHead(html, page);
   html = applyBaseReplacements(html, page.baseReplacements);
+  html = replaceBaseActivitySection(html, page);
+  html = removeBaseActivitySiblingBand(html, page);
   if (page.removeGeneratedAgeSections) html = removeGeneratedAgeSections(html);
   if (page.removeGeneratedBodySections) html = removeGeneratedBodySections(html);
   if (page.removeGeneratedItinerarySections) html = removeGeneratedItinerarySections(html);

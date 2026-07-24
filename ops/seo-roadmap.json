@@ -982,12 +982,12 @@
     {
       "id": "FT-IMP-010",
       "implementation_backlog_id": "IMP-025",
-      "research_backlog_id": "SRR-015",
+      "research_backlog_id": "SRR-016",
       "title": "Improve the Chicago all-ages things-to-do hub",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "ready",
-      "selected_on": null,
+      "status": "review-clean",
+      "selected_on": "2026-07-23",
       "impact": 5,
       "confidence": 5,
       "learning_value": 5,
@@ -1000,7 +1000,7 @@
       ],
       "target_paths": [
         "docs/research/chicago-activity-expansion-review.md",
-        "tools/generate-pages.mjs",
+        "tools/upgrade-priority-pages.mjs",
         "tools/chicago-activity-page.test.mjs",
         "site/things-to-do/chicago-with-kids.html",
         "status/chicago-pages.md",
@@ -1014,7 +1014,10 @@
       "success_signal": "The existing Chicago all-ages page becomes a materially less repetitive decision hub with a wider evidence-backed activity set, one complete comparison, concise routes for five family-planning hypotheses, compact free/weather support, and clear boundaries with teen, stay, hotel, and itinerary jobs.",
       "production_invariant": "The existing Chicago all-ages URL remains canonical, indexable, present in the sitemap, and internally connected to the Chicago cluster; the page uses current activity-specific sources and introduces no unsupported safety, exact-route, stroller, sensory, age-fit, price, opening-hour, or personally verified claim.",
       "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-23 with finalized data through 2026-07-21: 52 impressions, 0 clicks, and page-level average position 58.88. This is early page discovery, not a query-specific rank or causal performance conclusion.",
-      "notes": "Promoted by FT-RES-008 and eligible only after that research action is review-clean and committed. One existing URL only. The separately approved Chicago family-hotel page is outside this action. No new URL, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+      "implementation_summary": "The existing page now compares 12 distinct choices through a compact filter and one decision table, uses one five-card CHI-P1 through CHI-P5 routing layer, six high-friction deep notes, three cluster handoffs, three visible/schema-aligned FAQs, and current official-source checks. The standalone teen band and repeated mini-itinerary layer were removed; generic Navy Pier treatment was replaced by the specific Chicago Children's Museum decision.",
+      "qa_summary": "Review cycle 1 found three P2 and three P3 issues. The implementation now scopes filtering to 12 tagged activity cards while keeping 15 support cards and all three FAQs visible, exposes aria-pressed, removes duplicate routing, traces CHI-P1 through CHI-P5, corrects the candidate count to 18, and proves isolated regeneration from a stale target. Focused tests passed 4/4, full tests 61/61, native SEO QA 0 errors/0 warnings, JavaScript/roadmap JSON/whitespace checks passed, and responsive/filter checks at 1280/390/320 passed without page overflow or console errors.",
+      "review_summary": "Independent reviewer Mendel (019f9112-265b-7742-9175-974f86f4811e) returned FAIL in cycle 1, PASS_WITH_P3 in cycle 2, and final PASS in cycle 3. Filter scope/accessibility, duplicate routing, CHI-P1 through CHI-P5 traceability, candidate count, isolation coverage, trust-panel precision, and duplicate QA narrative were corrected. No P0-P3 findings remain.",
+      "notes": "Selected by direct manual user instruction after FT-RES-008 completed and the user asked to start Chicago pages. One existing URL only. The separately approved Chicago family-hotel page is outside this action. No new URL, sibling-page edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }
