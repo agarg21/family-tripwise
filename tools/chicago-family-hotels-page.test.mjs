@@ -82,7 +82,7 @@ test("routes from home and the existing stay guide without changing the activity
   const activity = readFileSync(join(root, "site", "things-to-do", "chicago-with-kids.html"), "utf8");
 
   assert.match(home, /href="\.\/where-to-stay\/chicago-family-hotels\.html"/);
-  assert.match(stay, /href="\.\.\/where-to-stay\/chicago-family-hotels\.html"/);
+  assert.match(stay, /href="(?:\.\/|\.\.\/where-to-stay\/)chicago-family-hotels\.html"/);
   assert.doesNotMatch(activity, /chicago-family-hotels\.html/);
 });
 

@@ -4,9 +4,53 @@ Last updated: 2026-07-23
 
 ## Active
 
-### IMP-026: Publish The Chicago Family-Hotel Comparison
+### IMP-027: Simplify The Chicago Stay-Area Guide
 
 Status: done and review-clean; release pending
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-011`
+
+Reduce the existing Chicago stay page to one area/base decision path. Keep five distinct trip-style starts, one concise comparison, three decisive checks, visible FAQs, and a prominent handoff to the released named-hotel comparison.
+
+Affected production URL:
+
+- `https://familytripwise.com/where-to-stay/chicago-with-kids.html`
+
+Exact maximum transaction scope:
+
+- `docs/research/chicago-stay-area-page-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/chicago-stay-page.test.mjs`
+- `tools/chicago-family-hotels-page.test.mjs`
+- `site/where-to-stay/chicago-with-kids.html`
+- `status/chicago-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Preserve the existing URL, canonical, indexability, and sitemap membership.
+- Keep area/base intent here and named-property intent on the released hotel page.
+- The existing hotel-page regression test may change only to accept the equivalent same-directory route; the hotel page remains unchanged.
+- Do not publish safety, exact-route, stroller, quiet, travel-time, price-value, or universal family-fit guarantees.
+- Do not edit another live page, request indexing, mutate an external account, add an affiliate CTA, send outreach, or add recurring automation.
+
+Local result:
+
+- Replaced the repeated generated intro/table/cards, eight universal `best` picks, eleven-column matrix, and six stale hotel checks with five conditional starts, one five-row comparison, and three decisive checks.
+- Added four cluster routes led by the released ten-hotel comparison, three visible FAQs aligned with schema, and current Choose Chicago and CTA verification sources.
+- Focused tests passed 4/4, the full suite passed 69/69, native SEO QA returned 0 errors and 0 warnings, and 1280/390/320 responsive checks passed without page or card overflow.
+- Independent reviewer Meitner (`019f9385-11e0-70d3-8013-d4effa21ca00`) returned final `PASS` in cycle 2 with no P0-P3 findings.
+
+### IMP-026: Publish The Chicago Family-Hotel Comparison
+
+Status: done and released
 
 Selected: 2026-07-23
 
@@ -58,6 +102,7 @@ Local result:
 - Review cycle 1 found three P2 evidence gaps and two P3 gaps. The implementation now reconciles the conflicting Langham Kids Suite pages, logs exact review sample counts/date spans/family context/source mapping, records Hilton's tax-inclusive public low, removes the unsupported Hotel Zachary negative amenity statement, and automates full-generator idempotency and isolation.
 - Review cycle 2 found one remaining P2 because supplemental review samples lacked exact counts and date spans. Those fields are now logged for every source and property.
 - Independent reviewer Wegener (`019f91eb-1d7f-7861-a9e3-4c0d8c1628b7`) returned final `PASS` on cycle 3 with no P0-P3 findings. The exact paths are eligible for commit, push, deployment, and production verification.
+- Released at commit `833c081ca1c436d609b50e36ae94f47cff4c7cbf`; GitHub Pages run `30062024170` succeeded and production verification passed.
 
 ## Completed
 

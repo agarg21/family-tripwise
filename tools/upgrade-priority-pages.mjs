@@ -769,47 +769,74 @@ const stayPages = {
     ]
   },
   "where-to-stay/chicago-with-kids.html": {
-    title: "Where to Stay in Chicago With Kids: Best Areas, Transit and Family Hotel Checks",
+    title: "Where to Stay in Chicago With Kids: 5 Areas Compared",
     description:
-      "Compare where to stay in Chicago with kids by museum access, stroller and transit friction, parking, noise, walkability, hotel type, and family trip style.",
+      "Compare five Chicago areas for a family trip by activity anchors, reset routine, transport plan, and main tradeoff, then move to named hotel options.",
     city: "Chicago",
+    schemaName: "Chicago family stay area options",
+    constraintLed: true,
+    removeGeneratedBodySections: true,
+    hideHotelSection: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>Where to stay in Chicago with kids</h1>", "<h1>Where to Stay in Chicago With Kids: 5 Areas Compared</h1>"],
+      ["<p>Compare the best family areas in Chicago by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.</p>", "<p>Choose the trip base first: central sights, Lincoln Park days, downtown parks, Museum Campus, or a food-led older-kid visit. Then compare named hotels.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Area and transport sources checked:</strong> July 23, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are conditional starting points, not universal area rankings. Exact walking, step-free transit, room, noise, parking, and price details depend on the hotel, route, date, and family.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Behnazkhazai via <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
+    quickHeading: "Five useful starting points",
     quick: [
-      ["Best overall area", "River North / Magnificent Mile", "A practical first-visit base when you want restaurants, river access, and short rides to major sights."],
-      ["Best with toddlers", "Lincoln Park", "Zoo, playgrounds, neighborhood meals, and calmer evenings can beat maximum sightseeing efficiency."],
-      ["Best for museums", "Loop / Millennium Park or South Loop", "Choose by whether you want park access, Museum Campus proximity, or easier train/rideshare logistics."],
-      ["Best for teens", "River North or West Loop", "Better fit for architecture tours, food, lakefront plans, and fewer toddler-focused compromises."],
-      ["Best no-car base", "River North, Loop, or West Loop", "A car usually adds parking cost and friction; verify stroller access and elevator needs block by block."],
-      ["Best value check", "South Loop or select-service areas near transit", "Only works if the exact hotel still keeps meals and attractions manageable."],
-      ["Best quiet-feeling base", "Lincoln Park", "Often a better decompression fit than the busiest downtown blocks."],
-      ["Think twice about", "A car-dependent airport or suburban stay", "Rate savings can disappear if each day needs long rides, parking, or tired evening transfers."]
+      ["First city trip", "River North / Streeterville", "Start here when the river, Navy Pier, downtown meals, and several classic sights shape the itinerary."],
+      ["Younger-child neighborhood trip", "Lincoln Park", "Start here when the zoo, lakefront green space, and neighborhood time matter more than a central downtown address."],
+      ["Parks and Loop anchors", "Loop / Millennium Park", "Start here when Millennium Park, Maggie Daley Park, the Art Institute, or Loop architecture lead the first days."],
+      ["Museum Campus-led trip", "South Loop / Museum Campus", "Start here when Field Museum, Shedd Aquarium, and lakefront time are major anchors, then test the exact hotel route."],
+      ["Food-led older-kid trip", "West Loop", "Start here when restaurants and neighborhood time are part of the trip, not just somewhere to eat after downtown sightseeing."]
     ],
-    areaNote: "Area guidance is research-based planning support, not a human-verified recommendation. Before booking, verify current transit access, elevator availability, parking cost, room setup, neighborhood noise, and walking routes for the exact hotel block.",
+    matrixHeading: "Compare the area before the hotel",
+    areaHeaders: ["Area", "Start here when", "What it simplifies", "Transport check", "Main tradeoff", "Next step"],
     rows: [
-      ["River North / Magnificent Mile", "First-timers, restaurants, architecture tours", "Busy sidewalks and higher rates", "Good transit/rideshare access; car usually not helpful", "Mixed on crowded blocks", "Medium-high", "Expensive/limited", "High", "Riverwalk, Navy Pier access, Magnificent Mile", "Urban hotels and larger full-service properties", "Best practical default if downtown energy fits your kids"],
-      ["Lincoln Park", "Toddlers, zoo, playgrounds, calmer evenings", "Farther from Loop/Museum Campus sights", "Transit and rideshare planning needed", "Good near parks, mixed by station", "Low-medium", "Varies by property", "High for local meals/parks", "Lincoln Park Zoo, Nature Boardwalk, lakefront", "Boutique/select-service/nearby apartment-style stays", "Best slower family base"],
-      ["Loop / Millennium Park", "Short stays, parks, museums, transit", "Quieter evenings and office-district feel", "Strong train access; rideshares useful for Museum Campus", "Good in park core, busier downtown crossings", "Medium", "Expensive/limited", "High in daytime", "Millennium Park, Maggie Daley Park, Art Institute, Museum Campus rides", "Large urban hotels", "Best if park/museum access matters most"],
-      ["South Loop / Museum Campus", "Museum Campus, value checks, older kids", "Less classic tourist energy at night", "Good for Museum Campus; transit varies by block", "Good near parks, verify exact route", "Low-medium", "Often easier than core downtown but still paid", "Medium", "Field Museum, Shedd, lakefront, Grant Park", "Select-service, suites, urban hotels", "Good if museums drive the trip"],
-      ["West Loop", "Food, teens, stylish hotels", "Less toddler green space immediately outside", "Good rideshare and some transit; verify station distance", "Mixed depending on sidewalks/construction", "Medium", "Paid/varies", "High for restaurants", "Restaurants, Fulton Market, short rides downtown", "Boutique and lifestyle hotels", "Best for food-focused older-kid trips"]
+      ["River North / Streeterville", "The river, Navy Pier, downtown meals, and classic sights dominate", "Keeps several first-trip anchors in the same broad downtown zone", "Map each exact hotel to the first two anchors; river crossings, station access, and pickup points vary", "The area covers busy blocks and hotels with very different room, price, and reset patterns", "Compare named downtown hotels and the complete stay"],
+      ["Lincoln Park", "Zoo, lakefront green space, and neighborhood time lead the trip", "Keeps a younger-child day and local meals near the chosen base", "Test the exact hotel-to-park route and every planned downtown or Museum Campus transfer", "It trades a central downtown address for a more neighborhood-led itinerary", "Choose the exact property before assuming the route works"],
+      ["Loop / Millennium Park", "Millennium Park, Maggie Daley Park, the Art Institute, or Loop architecture lead", "Puts several downtown park and cultural anchors in one planning zone", "Check the exact entrance, CTA station accessibility, current elevator alerts, and the return after dinner", "The best block for daytime anchors may not fit the family's evening meal or room priorities", "Map the full day, not just the morning stop"],
+      ["South Loop / Museum Campus", "Field Museum, Shedd Aquarium, and lakefront time are major anchors", "Reduces the need to treat Museum Campus as an add-on to every day", "Map the exact hotel route to each museum and every separate downtown or neighborhood day", "A museum-led base can add transfers when the rest of the itinerary is elsewhere", "Compare the museum route with the complete hotel fit"],
+      ["West Loop", "Restaurants and an older-kid neighborhood experience are intentional trip anchors", "Makes food and neighborhood time part of the daily plan", "Test each hotel against Loop, river, lakefront, and Museum Campus days instead of assuming centrality", "Classic waterfront and museum anchors still need separate routes", "Use the teen and hotel guides before committing"]
     ],
-    hotelNote: "No firm Chicago hotel recommendations are being made in this pass. Use this verification checklist to separate area fit from hotel claims until a human-reviewed hotel workflow exists.",
-    verify: [
-      ["Room and sleep setup", "Confirm the exact room type, bed count, sofa bed wording, crib/rollaway availability, occupancy limit, and whether connecting rooms are guaranteed or only requested."],
-      ["Parking and car plan", "If bringing a car, verify nightly parking cost, in/out privileges, valet-only rules, garage height, and whether daily sightseeing still requires separate attraction parking."],
-      ["Transit and stroller access", "Check the exact walk to CTA stations, elevator availability, sidewalk construction, bridge crossings, and whether rideshare pickup is practical with car seats."],
-      ["Noise and event risk", "Ask about room placement away from elevators, nightlife, event venues, street noise, and large weekend events if naps or early bedtimes matter."],
-      ["Meals and reset options", "Verify breakfast details, mini-fridge/microwave availability, nearby casual meals, grocery access, and whether returning for a midday reset is realistic from your planned sights."],
-      ["Pool and weather backup", "Do not assume a pool is useful just because it exists; check pool hours, seasonal limits, kid rules, and whether the hotel has indoor space for bad-weather downtime."]
+    areaNote: "Use these as planning starts, not universal rankings. An exact hotel can reverse the area-level tradeoff, especially for room setup, walking, step-free transit, parking, noise, reset timing, and total price.",
+    bookingHeading: "Three checks that settle the area decision",
+    bookingChecks: [
+      ["Put the first two days on a map", "Use exact hotel pins and attraction entrances. Include the morning anchor, likely midday return, dinner, and one weather backup before deciding that an area looks central."],
+      ["Test the family reset", "Check the actual return route, current CTA service and elevator alerts, meal access, and the room routine needed for naps, early bedtime, or a slower afternoon."],
+      ["Compare named hotels", "Use the Chicago hotel comparison for room setup, approximate nightly totals, pool or kitchen utility, sampled online-review observations, conflicts, and direct map links."]
     ],
+    clusterHeading: "Move from area choice to the rest of the trip",
     clusterLinks: [
-      ["Chicago things to do with kids", "Use the activity guide to decide whether your stay base should optimize for Museum Campus, Lincoln Park Zoo, river architecture, lakefront, or food.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
-      ["Chicago family itinerary", "Match River North, Lincoln Park, Loop, South Loop, or West Loop to a realistic 1-day, 2-day, 3-day, toddler, teen, or rainy-day plan.", "../family-itinerary/chicago-with-kids.html", "Open the Chicago family itinerary"],
-      ["Chicago with teens", "Use the teen guide if architecture tours, museums, lakefront views, or food plans matter more than playground and toddler pacing.", "../things-to-do/chicago-with-teens.html", "Open Chicago with teens"],
-      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
+      ["10 family hotel options", "Compare named properties by trip style, room setup, rough nightly total, current amenities, sampled online-review observations, and map context.", "./chicago-family-hotels.html", "Compare Chicago family hotels"],
+      ["Things to do with kids", "Use the 12-choice activity guide to decide whether the base should favor Museum Campus, Lincoln Park, downtown parks, the river, or lakefront time.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
+      ["Things to do with teens", "Let an older child choose an architecture, skyline, museum, food, or lakefront anchor before finalizing the base.", "../things-to-do/chicago-with-teens.html", "Open Chicago with teens"],
+      ["Family itinerary", "Sequence the chosen anchors and reset before paying for a location that only looks central on a broad map.", "../family-itinerary/chicago-with-kids.html", "Open the Chicago family itinerary"]
     ],
+    faqTitle: "Chicago family stay FAQ",
     faqs: [
-      ["What is the best area to stay in Chicago with kids?", "River North/Magnificent Mile is the most practical first-visit default for many families, while Lincoln Park can be better for toddlers and calmer evenings."],
-      ["Should families rent a car in Chicago?", "Most city-focused family trips work better without a car, but exact transit, stroller, and car-seat needs should be checked against the hotel location."],
-      ["Where should families stay for Chicago museums?", "Loop, South Loop, and River North can all work for Museum Campus trips; the best choice depends on hotel block, budget, meals, and how much transit or rideshare friction your family can handle."]
+      ["What is a useful first area to check for a Chicago family trip?", "Check River North or Streeterville first when the river, Navy Pier, downtown meals, and classic sights lead the trip. Compare Lincoln Park for a neighborhood-and-zoo plan, the Loop for downtown parks and culture, South Loop for Museum Campus, or West Loop for a food-led older-kid visit."],
+      ["Where can families compare specific Chicago hotels?", "Use the Family Tripwise Chicago family-hotel comparison for ten named options with rough nightly totals, room and amenity facts, sampled recent online-review observations and conflicts, and direct map links."],
+      ["Should a family rent a car in Chicago?", "Decide from the exact itinerary and hotel. Compare CTA and rideshare routes, current station accessibility and elevator alerts, hotel parking, and any car-seat needs before choosing; an area name alone does not settle the question."]
+    ],
+    sourcesIntro: "Area and transport sources checked July 23, 2026. Recheck current service, elevator status, construction, events, and exact hotel routes near the trip.",
+    sources: [
+      ["Choose Chicago where-to-stay area overview", "https://www.choosechicago.com/blog/hotels/where-to-stay-in-chicago/"],
+      ["Choose Chicago River North", "https://www.choosechicago.com/neighborhoods/river-north/"],
+      ["Choose Chicago Streeterville", "https://www.choosechicago.com/neighborhoods/streeterville/"],
+      ["Choose Chicago Lincoln Park", "https://www.choosechicago.com/neighborhoods/lincoln-park/"],
+      ["Choose Chicago Loop", "https://www.choosechicago.com/neighborhoods/loop/"],
+      ["Choose Chicago South Loop", "https://www.choosechicago.com/neighborhoods/south-loop/"],
+      ["Choose Chicago West Loop", "https://www.choosechicago.com/neighborhoods/west-loop/"],
+      ["CTA maps", "https://www.transitchicago.com/maps/"],
+      ["CTA accessible transit", "https://www.transitchicago.com/accessibility/default.aspx"],
+      ["CTA system and elevator alerts", "https://www.transitchicago.com/alerts/"],
+      ["Chicago photo source and attribution", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"],
+      ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
     ]
   },
   "where-to-stay/san-antonio-with-kids.html": {

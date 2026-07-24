@@ -1066,8 +1066,52 @@
       "implementation_summary": "Created one canonical ten-hotel Chicago comparison, a 19-property evidence pack, one compact comparison, ten detail cards, five trip-style starts, direct maps, approximate total-night ranges, bounded dated review observations and conflicts, three visible FAQs, sitemap membership, and link-only routing from the home and Chicago stay pages.",
       "qa_summary": "Focused tests passed 4/4, the full repository suite passed 65/65, native SEO QA returned 0 errors and 0 warnings, JavaScript syntax, roadmap JSON, privacy/source/scope and whitespace checks passed, full generation is automatically idempotent and isolated, and 1280/390/320 responsive checks found no page-level overflow.",
       "review_summary": "Independent reviewer Wegener (019f91eb-1d7f-7861-a9e3-4c0d8c1628b7) returned FAIL in cycles 1 and 2, then final PASS in cycle 3 with no P0-P3 findings. Langham source conflict handling, exact review-ledger counts/date spans/family context/source mappings, Hilton tax-inclusive price support, Hotel Zachary claim precision, and generator idempotency/isolation were corrected.",
-      "release_state": "review-clean-release-pending",
+      "release_commit": "833c081ca1c436d609b50e36ae94f47cff4c7cbf",
+      "pages_run": 30062024170,
+      "release_state": "released-and-production-verified",
       "notes": "Selected by direct manual user instruction after the Chicago all-ages hub released. One new indexable page only. Research and publication are one transaction, but the page may release only if the durable evidence pack, focused/native/browser QA, and independent review pass. Existing Chicago stay and home pages may change only to route to the new hotel page. No indexing request, affiliate CTA, outreach, external-account mutation, custom-map mutation, separate hotel-variant URL, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-011",
+      "implementation_backlog_id": "IMP-027",
+      "research_backlog_id": "SRR-018",
+      "title": "Simplify the Chicago stay-area guide",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-23",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-stay-area-page-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/chicago-stay-page.test.mjs",
+        "tools/chicago-family-hotels-page.test.mjs",
+        "site/where-to-stay/chicago-with-kids.html",
+        "status/chicago-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing Chicago stay page answers the area/base decision with five distinct trip-style starts, one concise comparison, three decisive checks, a prominent named-hotel handoff, and visible source-aligned FAQs without repeating hotel-list work.",
+      "production_invariant": "The existing Chicago stay URL remains canonical, indexable, present in the sitemap, and internally connected to the Chicago cluster; the page introduces no unsupported safety, exact-route, stroller, quiet, travel-time, value, or universal family-fit claim, and the released hotel page remains unchanged.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-23 with finalized data through 2026-07-21: the existing stay page has 38 impressions, 0 clicks, and page-level average position 60.11. This is early discovery evidence, not a query-specific rank or causal performance conclusion.",
+      "implementation_summary": "Replaced three repeated area-selection layers and six stale hotel checks with five conditional trip-style starts, one five-row six-column area comparison, three decisive checks, four cluster routes led by the released hotel comparison, three visible FAQs aligned with schema, and current Choose Chicago and CTA verification sources.",
+      "qa_summary": "Focused tests passed 4/4, the full repository suite passed 69/69, native SEO QA returned 0 errors and 0 warnings, JavaScript and roadmap JSON validation passed, generation is idempotent and isolated, and responsive checks at 1280/390/320 found no page-level overflow, card overflow, or image failure.",
+      "review_summary": "Independent reviewer Meitner (019f9385-11e0-70d3-8013-d4effa21ca00) returned FAIL in cycle 1 for one P2 stale operator-state contradiction plus two P3 source/wording notes. All were corrected; cycle 2 returned final PASS with no P0-P3 findings.",
+      "release_state": "review-clean-release-pending",
+      "notes": "Selected under the user's standing direct manual instruction to complete Chicago pages iteratively without approval pauses. One existing URL only. Current SERP/persona evidence is reused from the same-day FT-RES-008 decision pack and will be supplemented with a page-specific every-section and current-source review. The existing hotel-page regression test is included only to accept the equivalent same-directory hotel route emitted by this page; the hotel page remains unchanged. No new URL, sibling-page content edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }

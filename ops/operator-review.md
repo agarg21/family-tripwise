@@ -1254,3 +1254,26 @@ QA evidence:
 - `node --test tools/*.test.mjs` passed 65/65; the focused Chicago hotel file passed 4/4.
 - `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/source/scope inspection, and `git diff --check` passed.
 - Responsive checks at 1280, 390, and 320 pixels found no page-level overflow; the comparison remained contained in its horizontal scroller, the image loaded at 1280 by 960 pixels, and all ten hotel cards fit their containers.
+
+### 2026-07-23 - `FT-IMP-011` review cycles 1-2
+
+**Reviewer:** Meitner (`019f9385-11e0-70d3-8013-d4effa21ca00`)
+
+**Final result: `PASS`**
+
+Cycle 1 findings and disposition:
+
+1. `P2` - Reconciled stale current-cycle and roadmap statements that still named the July 22 GSC snapshot and treated `FT-PUB-003` as release-pending; durable state now records the July 23 snapshot and verified hotel release.
+2. `P3` - Added the exact Choose Chicago Streeterville source to the generator, page, research artifact, and focused test.
+3. `P3` - Replaced ambiguous `total-night ranges` wording on the stay page with `nightly totals`.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- The reviewer accepted evidence classification, current SERP/persona grounding, every-section completeness, scan cost, area/hotel boundary, claim and source safety, canonical/indexability/sitemap/schema, internal links, generator isolation, responsive behavior, privacy, observation policy, and exact path scope.
+
+QA evidence:
+
+- `node --test tools/chicago-stay-page.test.mjs` passed 4/4; `node --test tools/*.test.mjs` passed 69/69.
+- `node tools/seo-qa.mjs` returned 0 errors and 0 warnings; JavaScript syntax, roadmap JSON, privacy/scope inspection, and `git diff --check` passed.
+- Responsive checks at 1280, 390, and 320 pixels found no page-level or card overflow; the comparison remained contained in its scroller and the 1280 by 960 image loaded.

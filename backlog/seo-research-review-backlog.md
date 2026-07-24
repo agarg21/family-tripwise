@@ -4,6 +4,30 @@ Last updated: 2026-07-23
 
 ## Active
 
+### SRR-018: Chicago Stay-Area Competitor And Section Review
+
+Status: done and review-clean inside `FT-IMP-011`
+
+Selected: 2026-07-23
+
+Roadmap ID: `FT-IMP-011`
+
+Audit every visible section of the Chicago stay page against the same-day SERP-overlap/persona decision pack, current official area and transit sources, scan cost, claim support, and the now-released hotel page. Record keep, compress, replace, remove, and route decisions before implementation.
+
+Required coverage:
+
+- CHI-P1, CHI-P2, CHI-P5, and explicit routing for CHI-P4.
+- Area/base versus named-property search-job boundary.
+- Current official source checks and unsupported-claim removal.
+- One concise five-area comparison, three decisive checks, hotel handoff, cluster routes, and visible/schema-aligned FAQs.
+
+Result:
+
+- Audited every visible section and replaced repeated or unsupported area, hotel, stroller, quiet, value, and family-fit shorthand with one conditional five-area decision path.
+- Applied CHI-P1, CHI-P2, CHI-P5, and CHI-P4 routing while keeping CHI-P3 on the activity/itinerary route.
+- Recorded current Choose Chicago and CTA source boundaries, every-section decisions, claim treatment, acceptance criteria, and measurement in `docs/research/chicago-stay-area-page-review.md`.
+- Independent reviewer Meitner returned final `PASS` in cycle 2 with no P0-P3 findings.
+
 ### SRR-017: Chicago Family-Hotel Evidence Pack
 
 Status: done and review-clean inside `FT-PUB-003`
