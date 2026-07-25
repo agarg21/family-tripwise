@@ -61,7 +61,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 26 | `FT-IMP-013` review and improve the Chicago family itinerary | Content/product quality | Completed and released | Commit `f7a2d7f`; Pages run `30090493666`; production verification passed. |
 | 27 | `FT-OPS-001` audit and harden the repository operating model | Operating model | Completed | Release narratives reconciled, current operating guidance aligned, and focused state-drift QA added without changing `site/**`. |
 | 28 | `FT-RES-009` New York City SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Current GSC, exact logged-in Semrush records, explicit SERP intersections, five personas, and every-section audits define a five-page NYC architecture without changing `site/**`; independent review `PASS`. |
-| 29 | `FT-IMP-014` improve the New York City all-ages things-to-do hub | Content/product quality | Completed and review-clean | Twelve-choice decision surface, current official checks, optimized media, 87/87 tests, and independent review `PASS_WITH_P3`; exact-path release follows. |
+| 29 | `FT-IMP-014` improve the New York City all-ages things-to-do hub | Content/product quality | Released and production-verified | Commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1`; Pages run `30172548240`; release marker, production invariants, and production SEO QA passed after review `PASS_WITH_P3` with no P0-P2 findings. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -79,7 +79,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 
 ### FT-IMP-014 - Improve the New York City all-ages things-to-do hub
 
-- State: completed and review-clean on 2026-07-24 under the user's direct manual NYC instruction; exact-path commit and deployment follow.
+- State: released and production-verified on 2026-07-25 at commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1`; GitHub Pages run `30172548240` succeeded.
 - Target: `https://familytripwise.com/things-to-do/new-york-city-with-kids.html`.
 - Demand: exact measured phrases show 480 searches/month at KD 25, 390 at KD 22, and 320 at KD 21. Related variants overlap and are not summed as unique traffic.
 - Baseline: 55 impressions, 0 clicks, page-level average position 43.98 in the July 24 snapshot.
@@ -87,6 +87,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Local result: 12 distinct choices, five conditional trip starts, one complete comparison table, six high-friction notes, four official checks, and three visible/schema-aligned FAQs; no sibling page, stylesheet, sitemap, or URL changed.
 - QA: native tests 87/87, operator-state QA, SEO QA 0/0, target-only regeneration, responsive browser checks at 1280px/390px/320px, filter behavior, source/privacy/scope, roadmap JSON, and whitespace checks pass.
 - Review: Huygens returned final `PASS_WITH_P3` in cycle 3 with no P0-P2 findings after the media-performance and NYSCI teen-routing P2s were closed. One non-blocking P3 remains for an older-start test selector.
+- Release: `https://familytripwise.com/release.json` reported the exact commit; the canonical/indexable 12-choice page, six filters, comparison, FAQ/schema alignment, optimized image, cluster links, and NYSCI tag correction were verified in production; production SEO QA returned 0 errors and 0 warnings.
 - Boundary: preserve URL/canonical/indexability/sitemap; do not duplicate future teen, hotel, stay, or itinerary jobs; do not create a URL or request indexing.
 - Release gate: page-specific candidate/every-section/source review, focused/native/responsive/source/privacy/scope QA, target-only idempotent generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 

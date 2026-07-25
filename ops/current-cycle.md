@@ -8,17 +8,17 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-014` is review-clean and in its exact-path release gate. It applies review-clean `FT-RES-009` to the existing indexed all-ages activity page through a page-specific candidate/source/every-section review, one wider decision surface, compact family-constraint routes, current official checks, optimized media, focused tests, native QA, independent review, and production verification.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-014` is released and production-verified at commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1` through Pages run `30172548240`. It applied review-clean `FT-RES-009` to the existing indexed all-ages activity page through a page-specific candidate/source/every-section review, one wider decision surface, compact family-constraint routes, current official checks, optimized media, focused tests, native QA, independent review, and production verification.
 
 The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to begin NYC pages. `FT-EVAL-002` remains evidence-gated, not calendar-triggered.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-25.md`, fresh authenticated API data finalized through 2026-07-23.
-- Latest site release: `FT-IMP-013` at commit `f7a2d7f936bf286ab25776e058eefc72ea7569f8`; Pages run `30090493666` succeeded and production verification passed.
-- Active manual action: `FT-IMP-014`, selected 2026-07-24 under the user's direct instruction.
+- Latest site release: `FT-IMP-014` at commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1`; Pages run `30172548240` succeeded, the release marker matched, and production invariants/SEO QA passed.
+- Active manual action: none; this housekeeping transaction reconciles completed release evidence only.
 - Active substantive Control Room action: none.
-- Active NYC release: `FT-IMP-014` / `IMP-031`; page-specific research, implementation, full QA, and independent review are complete, while commit, deployment, and production verification remain pending.
+- Latest NYC release: `FT-IMP-014` / `IMP-031`, released and production-verified with final review `PASS_WITH_P3`, no P0-P2 findings, and one non-blocking test-selector P3.
 - Later NYC sequence: one family-hotel page, one teen/tween page, the existing stay-area page, then the existing itinerary; each remains a separate reviewed transaction.
 - Next city after NYC: San Antonio; no implementation scope is pre-approved.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
@@ -36,7 +36,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
 - GSC: authenticated read-only API collection is working; the July 25 snapshot has finalized data through July 23, 784 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `f7a2d7f936bf286ab25776e058eefc72ea7569f8`; GitHub Pages run `30090493666` succeeded and production verification passed for the Chicago itinerary improvement
+- Current released implementation: commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1`; GitHub Pages run `30172548240` succeeded and production verification passed for the New York City all-ages activity improvement
 
 ## Historical operating threads
 
@@ -165,7 +165,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-014` / `IMP-031` is active for the indexed NYC all-ages page because the page has 55 early impressions, three exact measured activity phrases show 480, 390, and 320 US searches/month, and the prior page repeated six choices across several layers. The local implementation now provides 12 distinct choices through one filterable decision surface; related phrases still overlap and are not summed as unique demand. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-014` / `IMP-031` is released and production-verified for the indexed NYC all-ages page. The page now provides 12 distinct choices through one filterable decision surface; the latest July 25 public-safe snapshot records 56 impressions at page-level average position 43.32, which remains sparse directional discovery evidence rather than a query rank or causal result. Related demand phrases overlap and are not summed as unique demand. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -175,7 +175,7 @@ Deferred research topics are queued for later validation, not immediate implemen
 Findings to preserve:
 
 - Current destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio.
-- San Diego, Las Vegas, and Chicago have completed deep quality passes; NYC cluster research is review-clean and the first page improvement is in its release gate.
+- San Diego, Las Vegas, and Chicago have completed deep quality passes; NYC cluster research is review-clean and its first page improvement is released and production-verified.
 - Existing pages should be improved before new cities are created.
 - Best-family-hotel standalone pages require a human-review path before firm hotel recommendations are published.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
@@ -208,7 +208,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Continue in the permanent Family Tripwise SEO Operator task. Finish exact-path release and production verification for review-clean manual action `FT-IMP-014`. After that transaction closes, the next user-authorized NYC transaction is the separately researched family-hotel comparison; it must receive its own evidence pack, QA, review, and release gate. The Control Room performs healthy GSC monitoring as housekeeping and remains the only scheduler for scheduled work.
+Remain idle after this release-state reconciliation. `FT-IMP-014` is closed as released and production-verified. The next NYC candidate is the separately researched family-hotel comparison, but it is not started by this housekeeping transaction and still requires its own direct manual instruction or valid Control Room dispatch, evidence pack, QA, review, and release gate. The Control Room performs healthy GSC monitoring as housekeeping and remains the only scheduler for scheduled work.
 
 ## GSC Monitoring
 

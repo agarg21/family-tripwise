@@ -1,12 +1,12 @@
 # Implementation Backlog
 
-Last updated: 2026-07-24
+Last updated: 2026-07-25
 
 ## Next NYC Implementation
 
 ### IMP-031: Improve The New York City All-Ages Things-To-Do Hub
 
-Status: review-clean; exact-path release pending
+Status: done, released, and production-verified
 
 Selected: 2026-07-24
 
@@ -57,6 +57,7 @@ Local result:
 - Recorded the 18-candidate review, all five NYC persona applications, every-section treatment, official claim/source ledger, and measurement plan in `docs/research/new-york-city-activity-expansion-review.md`.
 - Full native tests pass 87/87; operator-state QA and native SEO QA pass with 0 errors and 0 warnings; responsive checks at 1280px/390px/320px, filter behavior, image loading, target-only regeneration, source/privacy/scope checks, roadmap JSON, and whitespace checks pass locally. The independent review release gate passed.
 - Independent reviewer Huygens returned final `PASS_WITH_P3` in cycle 3 after the media-performance and NYSCI teen-routing P2s were closed. One non-blocking P3 remains for an older-start test selector; the underlying map-data regression assertion is valid.
+- Commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1` deployed through GitHub Pages run `30172548240`; the release marker matched, production invariants passed, and production SEO QA returned 0 errors and 0 warnings.
 
 ## Planned Technical Cleanup
 
