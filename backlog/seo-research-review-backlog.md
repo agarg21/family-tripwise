@@ -33,7 +33,9 @@ Result:
 
 ### SRR-022: New York City All-Ages Candidate And Every-Section Review
 
-Status: ready inside future `FT-IMP-014`
+Status: done and review-clean inside `FT-IMP-014`
+
+Selected: 2026-07-24
 
 Roadmap ID: `FT-IMP-014`
 
@@ -46,6 +48,15 @@ Required coverage:
 - Every-section keep/compress/replace/remove instructions that eliminate the repeated six-choice layers.
 - One filterable comparison, strong younger-child/free/weather support, compact high-friction notes, useful sibling-page routes, and visible/schema-aligned FAQs.
 - Target-only generation, idempotency, responsive scan behavior, source/privacy/scope checks, and independent review.
+
+Result:
+
+- Reviewed 18 candidates and retained 12 with distinct classic, younger-child, free/outdoor, indoor/weather, mixed-age, neighborhood, and high-friction decision roles.
+- Applied NYC-P1 through NYC-P5 to the page, audited every prior visible section, and replaced repeated six-choice layers with one scan-first decision surface.
+- Used direct official attraction sources for material ticket, age, access, stroller, weather, operating, and booking checks; kept editorial estimates and unresolved route-specific details explicitly non-guaranteed.
+- Artifact: `docs/research/new-york-city-activity-expansion-review.md`.
+- Full native tests pass 87/87; focused implementation, operator-state, SEO, responsive, source/privacy/scope, roadmap JSON, and whitespace checks pass locally. The independent review release gate passed.
+- Independent reviewer Huygens returned final `PASS_WITH_P3` in cycle 3 with no P0-P2 findings after the media audit/performance and NYSCI teen-routing findings were corrected.
 
 ## Latest Completed Chicago Reviews
 

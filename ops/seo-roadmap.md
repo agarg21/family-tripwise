@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-24
+Last updated: 2026-07-25
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -15,8 +15,8 @@ The Family Tripwise project operator may update the selected action's repository
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-24.json`.
-- Classification on July 24: fresh authenticated read-only Search Console API evidence, collected July 24 with finalized performance data through July 22.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-25.json`.
+- Classification on July 25: fresh authenticated read-only Search Console API evidence, collected July 25 with finalized performance data through July 23.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet.
@@ -61,7 +61,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 26 | `FT-IMP-013` review and improve the Chicago family itinerary | Content/product quality | Completed and released | Commit `f7a2d7f`; Pages run `30090493666`; production verification passed. |
 | 27 | `FT-OPS-001` audit and harden the repository operating model | Operating model | Completed | Release narratives reconciled, current operating guidance aligned, and focused state-drift QA added without changing `site/**`. |
 | 28 | `FT-RES-009` New York City SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Current GSC, exact logged-in Semrush records, explicit SERP intersections, five personas, and every-section audits define a five-page NYC architecture without changing `site/**`; independent review `PASS`. |
-| 29 | `FT-IMP-014` improve the New York City all-ages things-to-do hub | Content/product quality | Ready candidate | Promoted by `FT-RES-009`; existing indexed page has the strongest immediate usefulness and acquisition gap. |
+| 29 | `FT-IMP-014` improve the New York City all-ages things-to-do hub | Content/product quality | Completed and review-clean | Twelve-choice decision surface, current official checks, optimized media, 87/87 tests, and independent review `PASS_WITH_P3`; exact-path release follows. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -79,11 +79,14 @@ Ready does not authorize project work by itself. The Control Room selects and di
 
 ### FT-IMP-014 - Improve the New York City all-ages things-to-do hub
 
-- State: ready candidate promoted by `FT-RES-009`; not yet selected.
+- State: completed and review-clean on 2026-07-24 under the user's direct manual NYC instruction; exact-path commit and deployment follow.
 - Target: `https://familytripwise.com/things-to-do/new-york-city-with-kids.html`.
 - Demand: exact measured phrases show 480 searches/month at KD 25, 390 at KD 22, and 320 at KD 21. Related variants overlap and are not summed as unique traffic.
 - Baseline: 55 impressions, 0 clicks, page-level average position 43.98 in the July 24 snapshot.
 - Product requirement: replace repeated six-choice layers with one filterable scan surface, roughly 10-14 earned options, five conditional trip starts, strong younger-child/free/weather support, and deep notes only for high-friction choices.
+- Local result: 12 distinct choices, five conditional trip starts, one complete comparison table, six high-friction notes, four official checks, and three visible/schema-aligned FAQs; no sibling page, stylesheet, sitemap, or URL changed.
+- QA: native tests 87/87, operator-state QA, SEO QA 0/0, target-only regeneration, responsive browser checks at 1280px/390px/320px, filter behavior, source/privacy/scope, roadmap JSON, and whitespace checks pass.
+- Review: Huygens returned final `PASS_WITH_P3` in cycle 3 with no P0-P2 findings after the media-performance and NYSCI teen-routing P2s were closed. One non-blocking P3 remains for an older-start test selector.
 - Boundary: preserve URL/canonical/indexability/sitemap; do not duplicate future teen, hotel, stay, or itinerary jobs; do not create a URL or request indexing.
 - Release gate: page-specific candidate/every-section/source review, focused/native/responsive/source/privacy/scope QA, target-only idempotent generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 

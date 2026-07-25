@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Central SEO Control Room",
-  "last_updated": "2026-07-24",
+  "last_updated": "2026-07-25",
   "last_rescored_on": "2026-07-22",
   "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
@@ -1301,7 +1301,8 @@
       "title": "Improve the New York City all-ages things-to-do hub",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "ready",
+      "status": "completed",
+      "selected_on": "2026-07-24",
       "impact": 5,
       "confidence": 5,
       "learning_value": 5,
@@ -1329,7 +1330,8 @@
       "success_signal": "The existing NYC all-ages page becomes a materially wider but less repetitive decision guide with five conditional trip starts, one filterable comparison, strong younger-child/free/weather support, compact high-friction notes, current official checks, and clear routes to the separate stay, hotel, teen, and itinerary jobs.",
       "production_invariant": "The existing NYC all-ages URL remains canonical, indexable, present in the sitemap, and internally connected to the NYC cluster; no unsupported universal age-fit, safety, exact-route, stroller, transit, weather, ticket, price, timing, or personally verified claim is introduced.",
       "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-24 with finalized data through 2026-07-22: the page has 55 impressions, 0 clicks, and page-level average position 43.98. This is early discovery evidence, not a query-specific rank or causal performance conclusion.",
-      "notes": "Promoted by FT-RES-009 and not yet selected. One existing URL only. No new URL, sibling-page content edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+      "result": "Implemented as a 12-choice filterable activity guide with five conditional trip starts, one full comparison table, six high-friction notes, four official checks, and three visible/schema-aligned FAQs. The 18-candidate, five-persona, every-section, media, and claim/source review is durable in docs/research/new-york-city-activity-expansion-review.md. Native tests pass 87/87; operator-state QA and SEO QA pass with 0 errors and 0 warnings; focused, responsive, source/privacy/scope, roadmap JSON, and whitespace checks pass. Reviewer Huygens returned PASS_WITH_P3 in cycle 3 with no P0-P2 findings after the media-performance and NYSCI teen-routing findings were closed.",
+      "notes": "Selected 2026-07-24 by direct manual user instruction. One existing URL only. No new URL, sibling-page content edit, stylesheet edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
     }
   ]
 }

@@ -6,7 +6,9 @@ Last updated: 2026-07-24
 
 ### IMP-031: Improve The New York City All-Ages Things-To-Do Hub
 
-Status: ready candidate; promoted by `FT-RES-009`, not yet selected
+Status: review-clean; exact-path release pending
+
+Selected: 2026-07-24
 
 Roadmap ID: `FT-IMP-014`
 
@@ -47,6 +49,14 @@ Acceptance:
 - Strong younger-child, free/budget, weather, and mixed-age support without duplicating specialist pages.
 - Target-only, idempotent generation and responsive/source/privacy/scope QA.
 - Independent reviewer `PASS` or `PASS_WITH_P3`.
+
+Local result:
+
+- Replaced six repeated activity layers with 12 earned choices, five conditional trip starts, one filterable card surface, one complete comparison table, six high-friction decision notes, four official planning checks, and three visible/schema-aligned FAQs.
+- Added distinct toddler, elementary, teen, indoor/rain, and free/low-cost filters while keeping the future teen guide, family-hotel comparison, stay-area guide, and itinerary as separate jobs.
+- Recorded the 18-candidate review, all five NYC persona applications, every-section treatment, official claim/source ledger, and measurement plan in `docs/research/new-york-city-activity-expansion-review.md`.
+- Full native tests pass 87/87; operator-state QA and native SEO QA pass with 0 errors and 0 warnings; responsive checks at 1280px/390px/320px, filter behavior, image loading, target-only regeneration, source/privacy/scope checks, roadmap JSON, and whitespace checks pass locally. The independent review release gate passed.
+- Independent reviewer Huygens returned final `PASS_WITH_P3` in cycle 3 after the media-performance and NYSCI teen-routing P2s were closed. One non-blocking P3 remains for an older-start test selector; the underlying map-data regression assertion is valid.
 
 ## Planned Technical Cleanup
 

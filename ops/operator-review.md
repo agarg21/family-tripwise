@@ -32,6 +32,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-002` | released San Diego things-to-do router | `PASS` | Review cycle 2 closed the stale freshness-date P2; commit `1a321707fcb8203df40e19ac13bdf8782db196bb` was pushed, Pages run `29752040108` succeeded, and production invariants/SEO QA passed. |
 | `FT-IMP-004` | released San Diego lodging revision | `PASS` | Cycle 2 closed unsupported route/reset conclusions and representative-sounding language for small directional review samples; commit `326501bd32399421c56cbe0f4e4065146166a062` was pushed, Pages run `29796506753` succeeded, and production invariants/SEO QA passed. |
 | `FT-RES-009` | review-clean NYC cluster decision pack | `PASS` | Reviewer Einstein (`019f9574-fcbe-7810-a2e2-53c45e216171`) returned final `PASS` in cycle 3 with no P0-P3 findings after exact keyword, SERP-intersection, representative-page, persona-traceability, pending-status, and one shared-domain correction; native and focused QA passed. |
+| `FT-IMP-014` | NYC all-ages activity improvement review-clean | `PASS_WITH_P3` | Final cycle 3 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for an older-start test selector; exact paths are release-eligible after staged QA. |
 
 ## Open blocking findings
 
@@ -1353,3 +1354,24 @@ Final verification:
 - Full repository tests passed 83/83; focused operator-state tests passed 5/5.
 - Operator-state QA passed with 0 errors; native SEO QA passed with 0 errors and 0 warnings.
 - Roadmap JSON, local Markdown links, privacy, exact-path, no-site/no-workflow, and `git diff --check` passed.
+
+### 2026-07-24 - `FT-IMP-014` review cycles 1-3
+
+**Reviewers:** Aquinas (`019f98e1-3570-7da0-90f2-d55f414090c3`) and Huygens (`019f9a18-5594-7442-8c5e-81d13b5759a0`)
+
+**Final result: `PASS_WITH_P3`**
+
+P0-P2 findings and disposition:
+
+1. `P2` - Added the omitted media row to the every-section audit, replaced the 5.57 MB original Central Park image with Wikimedia's approximately 468 KB 1,280px thumbnail, declared intrinsic dimensions, and added a focused regression assertion.
+2. `P2` - Removed NYSCI from the teen filter and older-child start because the page's evidence-derived fit is preschool through tween / age 3-12; aligned the persona record and added regression coverage.
+
+Residual finding:
+
+1. `P3` - The older-start negative regression test looks for an `h3` while the rendered label is a `span`, so that one assertion can pass on an empty slice. The separate map-data assertion correctly verifies that NYSCI lacks the teen tag. This is non-blocking.
+
+Final verification:
+
+- No P0-P2 findings remain; prior media remediation remains intact.
+- Huygens accepted the candidate, competitor, persona, every-section, usefulness, claim/source, canonical/indexability/sitemap/schema, filter, image, responsive, generator-isolation, operating-state, privacy, and exact-path work.
+- Native tests pass 87/87; focused tests pass 4/4; operator-state QA passes; SEO QA reports 0 errors and 0 warnings; responsive, source, JSON, privacy, scope, and whitespace checks pass.
