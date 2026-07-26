@@ -1,12 +1,12 @@
 # Implementation Backlog
 
-Last updated: 2026-07-25
+Last updated: 2026-07-26
 
-## Next NYC Implementation
+## Latest NYC Implementation
 
 ### IMP-032: Research And Publish The New York City Family-Hotel Comparison
 
-Status: done and review-clean; release pending
+Status: done, released, and production-verified
 
 Selected: 2026-07-25
 
@@ -59,6 +59,7 @@ Local result:
 - Kept the activity page unchanged and the existing stay-area page focused on geography.
 - Focused generation, hotel-page, sibling-hotel, idempotency, responsive, image-decode, source, privacy, scope, and whitespace checks pass; the full repository suite passes 91/91, operator-state QA passes, and SEO QA reports 0 errors and 0 warnings.
 - Independent reviewer Kepler (`019f9c21-7769-7561-bb6f-170bfc41ab35`) returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings after the Embassy crib-source and review-family-context findings were corrected. One non-blocking P3 remains for high-density mobile selection of the 1200px image candidate.
+- Commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` was pushed to `main`; Pages run `30184040925` succeeded. The release marker matched, production SEO QA reported 0 errors and 0 warnings, and the canonical/indexable page, 12 hotel cards, 24 Google Maps links, and single sitemap entry were verified in production.
 
 ### IMP-031: Improve The New York City All-Ages Things-To-Do Hub
 

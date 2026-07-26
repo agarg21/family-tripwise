@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-25
+Last updated: 2026-07-26
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -62,7 +62,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 27 | `FT-OPS-001` audit and harden the repository operating model | Operating model | Completed | Release narratives reconciled, current operating guidance aligned, and focused state-drift QA added without changing `site/**`. |
 | 28 | `FT-RES-009` New York City SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Current GSC, exact logged-in Semrush records, explicit SERP intersections, five personas, and every-section audits define a five-page NYC architecture without changing `site/**`; independent review `PASS`. |
 | 29 | `FT-IMP-014` improve the New York City all-ages things-to-do hub | Content/product quality | Released and production-verified | Commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1`; Pages run `30172548240`; release marker, production invariants, and production SEO QA passed after review `PASS_WITH_P3` with no P0-P2 findings. |
-| 30 | `FT-PUB-004` research and publish the New York City family-hotel comparison | Content/product quality | Review-clean; release pending | Twelve earned choices and their durable evidence pack passed native QA and independent review with no P0-P2 findings. |
+| 30 | `FT-PUB-004` research and publish the New York City family-hotel comparison | Content/product quality | Completed and released | Commit `57d765f`; Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -95,13 +95,14 @@ Ready does not authorize project work by itself. The Control Room selects and di
 ### FT-PUB-004 - Research and publish the New York City family-hotel comparison
 
 - Selected: 2026-07-25 by direct manual user instruction.
-- State: review-clean on 2026-07-25; exact-path release pending.
+- State: completed, released, and production-verified.
 - Target: `https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html`.
 - Demand: exact measured phrases show 390 searches/month at KD 29, 390 at KD 20, and 260 at KD 24. Related variants overlap and are not summed as unique traffic.
 - Product requirement: one clean named-property comparison built from an 18-25 candidate pool, official facts, broad total-night ranges, bounded recent online-review observations/conflicts, direct map links, and trip-style routing.
 - Local result: 22 candidates reviewed, 12 retained, six trip-style starts, one complete comparison, 12 property cards, direct map links, three visible/schema-aligned FAQs, and internal routes from home and the existing stay-area guide.
 - QA: full repository tests pass 91/91; operator-state QA passes; SEO QA reports 0 errors and 0 warnings; focused, responsive, image, source, privacy, scope, roadmap JSON, activity-page non-change, and whitespace checks pass.
 - Review: Kepler (`019f9c21-7769-7561-bb6f-170bfc41ab35`) returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings. One non-blocking P3 remains for high-density mobile selection of the 1200px image candidate.
+- Release: commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf`; Pages run `30184040925`; release marker matched; the canonical/indexable NYC hotel page, 12 hotel cards, 24 Google Maps links, and one sitemap entry passed production verification; production SEO QA reported 0 errors and 0 warnings.
 - Boundary: one new URL only; the existing stay page retains area/base intent. No booking transaction, indexing request, affiliate CTA, external-account mutation, outreach, or recurring automation.
 - Release gate: durable evidence pack, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 

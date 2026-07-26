@@ -33,7 +33,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-004` | released San Diego lodging revision | `PASS` | Cycle 2 closed unsupported route/reset conclusions and representative-sounding language for small directional review samples; commit `326501bd32399421c56cbe0f4e4065146166a062` was pushed, Pages run `29796506753` succeeded, and production invariants/SEO QA passed. |
 | `FT-RES-009` | review-clean NYC cluster decision pack | `PASS` | Reviewer Einstein (`019f9574-fcbe-7810-a2e2-53c45e216171`) returned final `PASS` in cycle 3 with no P0-P3 findings after exact keyword, SERP-intersection, representative-page, persona-traceability, pending-status, and one shared-domain correction; native and focused QA passed. |
 | `FT-IMP-014` | NYC all-ages activity improvement review-clean | `PASS_WITH_P3` | Final cycle 3 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for an older-start test selector; exact paths are release-eligible after staged QA. |
-| `FT-PUB-004` | NYC family-hotel comparison review-clean | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for high-density mobile image candidate selection; exact paths are release-eligible after staged QA. |
+| `FT-PUB-004` | NYC family-hotel comparison released and production-verified | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. Commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed through Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
 
 ## Open blocking findings
 
@@ -1397,3 +1397,4 @@ Final verification:
 - No P0-P2 findings remain.
 - Full repository tests pass 91/91; operator-state QA passes; SEO QA reports 0 errors and 0 warnings.
 - Exact 14-path scope, duplicate-key-safe roadmap parsing, activity-page non-change, source reachability, image decode/current-source selection, responsive 1280/390/320 behavior, privacy, canonical/indexability/sitemap/schema/internal links, target-only idempotency, and `git diff --check` pass.
+- Release commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed successfully through Pages run `30184040925`. The release marker matched; the canonical/indexable page, 12 hotel cards, 24 Google Maps links, and one sitemap entry passed production verification; production SEO QA reported 0 errors and 0 warnings.
