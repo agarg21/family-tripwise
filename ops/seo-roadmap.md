@@ -67,7 +67,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 32 | `FT-IMP-016` simplify and improve the New York City stay-area guide | Content/product quality | Released and production-verified | Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; Pages run `30199465923`; release marker, five quick-pick starts, canonical/indexability, one sitemap entry, production invariants, and production SEO QA passed after Maxwell `PASS` with no P0-P3 findings. |
 | 33 | `FT-IMP-017` review and improve the New York City family itinerary | Content/product quality | Released and production-verified | Commit `d0c4a7d`; Pages run `30204670128`; release marker, canonical/indexability, one sitemap entry, action invariants, and production SEO QA passed. |
 | 34 | `FT-RES-010` San Antonio SERP-overlap cluster and persona decision pack | Content/product quality | Completed and review-clean | Current GSC, exact Semrush evidence, observed SERP overlap, five personas, and every-section audits define a five-role architecture without changing `site/**`; Goodall returned `PASS`. |
-| 35 | `FT-IMP-018` improve the San Antonio all-ages things-to-do hub | Content/product quality | Ready; not selected | Highest observed demand and clearest usefulness defect: six choices are repeated across too many layers, with weak free/indoor/heat support. |
+| 35 | `FT-IMP-018` improve the San Antonio all-ages things-to-do hub | Content/product quality | Active implementation | Direct manual instruction selected the existing all-ages URL after the review-clean cluster decision pack; no sibling page or new URL is in scope. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -102,11 +102,15 @@ Ready does not authorize project work by itself. The Control Room selects and di
 
 ### FT-IMP-018 - Improve the San Antonio all-ages things-to-do hub
 
-- State: ready, not selected or started. Ready status does not authorize work.
+- Selected: 2026-07-26 by direct manual user instruction.
+- State: review-clean and release pending.
 - Target: `https://familytripwise.com/things-to-do/san-antonio-with-kids.html`.
 - Demand: exact measured phrases show 5,400 searches/month at KD 19, 1,600 at KD 20, and 880 at KD 21. Variants overlap and are not summed.
 - Baseline: 11 impressions, 0 clicks, and page-level average position 64.36 in the fresh July 26 GSC snapshot.
 - Product requirement: review at least 18 candidate roles; retain roughly 10-14 earned choices; apply `SA-P1` through `SA-P5`; replace repeated six-choice layers with five conditional starts, one filterable comparison, useful younger-child/heat/indoor/free/budget/teen/theme-park routing, bounded high-friction notes, current official checks, and cluster routes.
+- Local result: 23 candidates reviewed, 13 retained choices, seven filters, five conditional starts, one eight-field comparison, six compact high-friction notes, four official-check groups, three cluster routes, three visible/schema-aligned FAQs, current sources, and a dimensioned licensed image. The duplicate mini-itinerary layer is removed.
+- QA: focused tests pass 5/5 and full repository tests pass 110/110; operator-state and local SEO QA pass; target-only generation, 1280/390/320 responsive containment, sticky first-column behavior, useful filter counts, image decode, 16/16 source reachability, schema/FAQ, duplicate-key-safe roadmap JSON, privacy/scope, and whitespace checks pass.
+- Review: Pasteur (`019f9eeb-de35-7261-839b-43bd97d42174`) cycle one returned `FAIL` for two P2 findings: mobile row identity and missing direct 35-minute/Junior Ranger sources. Both P2s and the two P3 wording/filter findings were corrected; cycle two returned `PASS` with no P0-P3 findings.
 - Boundary: one existing URL only. No sibling-page content edit, sitemap change, new URL, indexing request, external-account mutation, affiliate CTA, outreach, hotel publication, or recurring automation.
 - Release gate: durable candidate/every-section/source review, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 

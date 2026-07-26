@@ -2,11 +2,13 @@
 
 Last updated: 2026-07-26
 
-## Ready San Antonio Implementation
+## Active San Antonio Implementation
 
 ### IMP-036: Improve The San Antonio All-Ages Things-To-Do Hub
 
-Status: ready; not selected
+Status: review-clean; commit, release, and production verification pending
+
+Selected: 2026-07-26
 
 Roadmap ID: `FT-IMP-018`
 
@@ -46,6 +48,18 @@ Acceptance:
 - Only high-friction choices receive deep notes; teen, stay, and itinerary jobs route to their existing pages.
 - Visible FAQs and schema agree.
 - Target-only generation, canonical/indexability/sitemap/internal-link/schema, responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+Local result:
+
+- Reviewed 23 candidates and retained 13 distinct roles rather than filling a list-length quota.
+- Replaced the repeated six-choice layers with seven filters, 13 concise cards, five conditional persona starts, one eight-field comparison, six compact high-friction notes, four current-check groups, three cluster routes, and three visible/schema-aligned FAQs.
+- Removed the duplicate mini-itinerary layer and routed sequencing to the existing itinerary page.
+- Added current direct sources for every retained material claim and a dimensioned 1280-by-960 licensed image derivative.
+- Focused page tests pass 5/5 and the full repository suite passes 110/110.
+- Operator-state QA and local SEO QA pass with 0 errors and 0 warnings.
+- Target-only generation, 1280/390/320 responsive containment, sticky first-column behavior, materially narrowing filters, image decode, all 16 source links, schema/FAQ alignment, duplicate-key-safe roadmap JSON, privacy/scope, and whitespace checks pass.
+- Pasteur (`019f9eeb-de35-7261-839b-43bd97d42174`) returned `PASS` in cycle two with no P0-P3 findings after the mobile row-identity, direct-source, Morgan's wording, and broad-filter findings were fixed.
+- Exact-path release and production verification remain.
 
 Baseline and measurement:
 

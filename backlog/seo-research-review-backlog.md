@@ -36,11 +36,13 @@ Result:
 - Full repository tests pass 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap JSON, focused SERP/persona/action/source/scope, 35-URL reachability, privacy, exact-path, no-site, and whitespace checks pass.
 - Independent reviewer Goodall (`019f9ec6-b438-7d33-9c60-658a5706ac29`) returned `PASS` in cycle 2 with no P0-P3 findings after exact-versus-domain SERP intersections, persona source traceability, direct ranking/community links, and two audit counts were corrected.
 
-## Ready San Antonio Page Review
+## Active San Antonio Page Review
 
 ### SRR-028: San Antonio All-Ages Candidate, Persona, Source, And Every-Section Review
 
-Status: ready; not selected
+Status: complete, QA-green, and review-clean inside `FT-IMP-018`
+
+Selected: 2026-07-26
 
 Roadmap ID: `FT-IMP-018`
 
@@ -54,6 +56,16 @@ Required coverage:
 - Replace repeated cards, quick picks, detail fields, and mini-itineraries with one calm scan-first decision flow.
 - Use current direct official sources for every material retained fact and leave unresolved route, stroller, accessibility, ticket, weather, price, age-fit, and family-fit claims unknown or explicitly verify-current.
 - Preserve the existing URL, canonical, indexability, and sitemap entry; do not edit sibling content or publish another URL.
+
+Result:
+
+- Artifact: `docs/research/san-antonio-activity-expansion-review.md`.
+- Reviewed 23 candidates against distinct decision role, `SA-P1` through `SA-P5`, current primary evidence, unresolved checks, and cannibalization risk.
+- Retained 13 choices and deferred 10; Hopscotch and art-led options route to the later teen review, while Pearl remains a pairing/base rather than a primary attraction.
+- Audited every current section and replaced repetition with one calm scan-first architecture.
+- Recorded claim boundaries, source freshness, acceptance, measurement, and the exact one-page release boundary.
+- Focused tests pass 5/5 and the full repository suite passes 110/110; operator-state and local SEO QA pass; focused source, persona, candidate, section, scope, privacy, JSON, responsive, and whitespace checks pass.
+- Pasteur returned final `PASS` in cycle two with no P0-P3 findings.
 
 ## Latest Completed NYC Itinerary Review
 

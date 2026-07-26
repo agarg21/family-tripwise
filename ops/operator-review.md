@@ -38,6 +38,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-016` | NYC stay-area simplification released and production-verified | `PASS` | Maxwell cycle 2 closed the stale released-versus-future NYC status P2; no P0-P3 findings remain. Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2` deployed through Pages run `30199465923`; release marker, production invariants, and production SEO QA passed. |
 | `FT-IMP-017` | NYC family-itinerary improvement released and production-verified | `PASS_WITH_P3` | Lagrange cycle 1 found no P0-P2 findings. Commit `d0c4a7dc565dea809d4d2b12caa4033b40cafe22` deployed through Pages run `30204670128`; release marker, invariants, and production SEO QA passed. |
 | `FT-RES-010` | San Antonio cluster decision research complete and review-clean | `PASS` | Goodall cycle 2 closed all three P2 findings and both P3 audit-count notes; no P0-P3 remains. Exact nine-path research-only diff is eligible for commit/push after staged QA. |
+| `FT-IMP-018` | San Antonio 13-choice all-ages activity implementation | `PASS` | Pasteur cycle one `FAIL` findings were fixed; cycle two returned `PASS` with no P0-P3. Focused 5/5 and full 110/110 tests plus state/SEO/responsive/source/JSON/privacy/scope/whitespace QA pass. Release pending. |
 
 ## Open blocking findings
 
@@ -1485,3 +1486,35 @@ Final verification:
 - No P0-P2 findings remain.
 - Lagrange accepted the methodology and evidence limits, SERP/page-type rationale, five-persona grounding, every-section audit, usefulness and reduced repetition, claim/source safety, canonical/indexability/sitemap/schema/FAQ alignment, generator parity and target-only idempotency, responsive containment, privacy, exact 11-path scope, observation policy, and release policy.
 - Focused tests pass 4/4; full repository tests pass 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap JSON, syntax, source, privacy, exact-scope, responsive, and whitespace checks pass.
+
+### 2026-07-26 - `FT-IMP-018` review cycle 1
+
+**Reviewer:** Pasteur (`019f9eeb-de35-7261-839b-43bd97d42174`), independent read-only review
+
+**Result: `FAIL`**
+
+Findings and disposition:
+
+1. `P2` - The eight-column mobile comparison lost row identity after horizontal scrolling. Reused the tested sticky-first-column comparison class, verified the computed sticky position after scrolling at 390px, and added a focused regression assertion.
+2. `P2` - The exact 35-minute GO RIO and Missions Junior Ranger claims lacked their most direct visible source URLs. Added the GO RIO narrated-cruise overview and NPS Junior Ranger page to both registers and precise label/URL tests.
+3. `P3` - Replaced vague Morgan's "qualifying guests" wording with the official "guests with special needs" scope.
+4. `P3` - Tightened broad age filters: younger-child anchors now return six choices and older-kid payoff returns five; the other filters return four, two, four, and three.
+
+Cycle-two verification:
+
+- Focused tests pass 5/5; full repository tests pass 110/110.
+- Operator-state QA and local SEO QA pass with 0 errors and 0 warnings.
+- Browser checks at 1280/390/320 confirm no document overflow, decoded media, no empty fields, useful filter counts, and a pinned first column after the table scrolls to its final column.
+- All 16 visible source links return 200; duplicate-key-safe roadmap JSON, exact scope, privacy, and `git diff --check` pass.
+
+### 2026-07-26 - `FT-IMP-018` review cycle 2
+
+**Reviewer:** Pasteur (`019f9eeb-de35-7261-839b-43bd97d42174`), independent read-only review
+
+**Final result: `PASS`**
+
+Final verification:
+
+- No P0-P3 findings remain.
+- Pasteur accepted the 23-candidate methodology, 13 retained roles, `SA-P1` through `SA-P5` routing, reduced repetition, direct-source coverage, calibrated claims, useful filter counts, sticky mobile comparison, canonical/indexability/sitemap/schema/internal links, generator isolation/idempotency, temp cleanup, privacy, exact 11-path scope, and durable state.
+- Focused tests pass 5/5; full repository tests pass 110/110; operator-state QA passes; local SEO QA reports 0 errors and 0 warnings.
