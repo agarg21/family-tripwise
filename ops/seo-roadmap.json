@@ -1493,6 +1493,49 @@
       "release_state": "released-and-production-verified",
       "result": "Released and production-verified five-area New York City family stay guide with five conditional starts, one complete comparison, three high-friction notes, four cluster routes, current primary sources, and three visible/schema-aligned FAQs.",
       "notes": "Selected 2026-07-26 by direct manual user instruction to continue to the next NYC page. Commit cd10933489ddf8e6c37780e5c0f20dfa740d60c2 deployed successfully through Pages run 30199465923; release.json matched the commit/run, the canonical/indexable page retained five quick-pick starts, the sitemap contained one entry, all action-specific production invariants passed, and production SEO QA returned 0 errors and 0 warnings. One existing URL only. No sitemap edit, new URL, indexing request, affiliate CTA, external-account mutation, outreach, itinerary work, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-017",
+      "implementation_backlog_id": "IMP-035",
+      "research_backlog_id": "SRR-026",
+      "title": "Review and improve the New York City family itinerary",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "in_progress",
+      "selected_on": "2026-07-26",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-family-itinerary-page-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/new-york-city-itinerary-page.test.mjs",
+        "site/family-itinerary/new-york-city-with-kids.html",
+        "status/new-york-city-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing canonical NYC itinerary becomes a concise sequencing product with concrete one-, two-, and three-day route shapes, useful persona and weather pivots, explicit stop rules, all four released NYC cluster handoffs, current official checks, and visible source-aligned FAQs without repeating the activity inventory.",
+      "production_invariant": "The existing NYC itinerary URL remains canonical, indexable, present once in the sitemap, and internally connected to all four released NYC planning pages; it introduces no unsupported exact-route, transit, stroller, accessibility, safety, weather, ticket, price, timing, independent-child, or universal family-fit claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-26 with finalized data through 2026-07-24. The itinerary has no performance row and URL Inspection says it is not indexed. This is discovery context, not evidence that content quality caused non-indexing or that an implementation will change rankings.",
+      "implementation_summary": "Refreshed current itinerary SERPs, representative ranking pages, qualitative family constraints, all five NYC personas, primary sources, and every visible section. Rebuilt the existing URL as three trip-length starts, three executable day-plan cards, five persona and constraint pivots, four stop rules, four released-cluster routes, and three visible/schema-aligned FAQs with an optimized dimensioned public-domain image.",
+      "qa_summary": "Focused tests pass 4/4 and the full repository suite passes 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; target-only/full generation, canonical/indexability/sitemap/internal links/schema, 1280/390/320 responsive rendering, image decode, sticky-column containment, source/privacy/scope, roadmap JSON, and whitespace checks pass.",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 1,
+      "review_summary": "Independent reviewer Lagrange (019f9ea5-2520-7540-91c7-ce5a5ce30360) returned PASS_WITH_P3 in cycle 1 with no P0-P2 findings. The non-blocking P3 records that the duration-query SERP conclusion uses representative evidence rather than a durable query row for every named duration; numeric URL overlap remains UNKNOWN.",
+      "release_state": "review-clean-release-pending",
+      "notes": "Selected 2026-07-26 by direct manual user instruction to proceed with the next NYC page. One existing URL only. Research, one-page implementation, native QA, responsive verification, and independent review are complete; exact-path release and production verification remain. No new URL, sitemap edit, sibling-page content edit, indexing request, affiliate CTA, external-account mutation, outreach, another city action, or recurring automation."
     }
   ]
 }

@@ -1264,48 +1264,99 @@ const itineraryPages = {
     ]
   },
   "family-itinerary/new-york-city-with-kids.html": {
-    title: "New York City Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    title: "New York City Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Build a New York City itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with transit, meals, strollers, and skip notes.",
+      "Plan one, two or three realistic New York City days with kids using zone-based routes, age and weather pivots, protected resets, and clear stop rules.",
     city: "New York City",
+    schemaName: "New York City family itinerary lengths",
+    removeGeneratedItinerarySections: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>New York City itinerary with kids</h1>", "<h1>New York City Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
+      ["<p>A starter family itinerary for New York City with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, keep each day to one main zone, and protect one reset. Then change the anchor for age, weather, budget, and the stay base.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 26, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transit, weather, ticket, and accessibility details for your dates.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Central_Park_New_York_City_New_York_23_cropped.jpg/1280px-Central_Park_New_York_City_New_York_23_cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons. <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Jet Lowe / National Park Service via <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">public domain</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
     links: {
       allAges: "../things-to-do/new-york-city-with-kids.html",
-      stay: "../where-to-stay/new-york-city-with-kids.html"
+      stay: "../where-to-stay/new-york-city-with-kids.html",
+      teen: "../things-to-do/new-york-city-with-teens.html"
     },
     clusterCards: [
-      ["All-ages activity guide", "Compare Central Park, AMNH, Staten Island Ferry, CMOM, observation decks, and Brooklyn Bridge Park by age, weather, budget, nap fit, and stroller/transit friction.", "../things-to-do/new-york-city-with-kids.html", "Open New York City things to do with kids"],
-      ["Where to stay first", "Choose the lodging base before finalizing the route. Upper West Side, Midtown, Downtown, Brooklyn, and Long Island City change subway, stroller, reset, and evening-noise tradeoffs.", "../where-to-stay/new-york-city-with-kids.html", "Open where to stay in New York City with kids"]
+      ["Choose the activity anchor", "Compare 12 current choices by age, weather, cost, pace, and planning friction before placing one into the day.", "../things-to-do/new-york-city-with-kids.html", "Open New York City things to do with kids"],
+      ["Give teens one real choice", "Use the older-kid guide when skyline, theatre, sports, art, food, neighborhoods, movement, or a photo payoff should shape the route.", "../things-to-do/new-york-city-with-teens.html", "Open New York City with teens"],
+      ["Choose the stay area", "Compare Upper West Side, Midtown, Downtown/Tribeca, Brooklyn, and Long Island City before assuming a map pin reflects the daily effort.", "../where-to-stay/new-york-city-with-kids.html", "Compare New York City stay areas"],
+      ["Compare named hotels", "Use the 12-hotel page for rough nightly totals, room function, official facts, bounded online-review observations, and maps.", "../where-to-stay/new-york-city-family-hotels.html", "Compare New York City family hotels"]
     ],
+    quickTitle: "Pick the trip length before the attractions",
     quick: [
-      ["Best 1-day plan", "Central Park, AMNH, early Upper West Side dinner", "Keeps a first family day in one manageable zone with indoor/outdoor flexibility."],
-      ["Best 2-day plan", "Uptown park/museum day plus Downtown ferry or Brooklyn skyline day", "Adds classic views without crossing the city repeatedly in one day."],
-      ["Best 3-day plan", "Uptown, Downtown/Brooklyn, Midtown or repeat-favorite day", "Gives enough space for weather, transit, and child-energy pivots."],
-      ["Best toddler pace", "Central Park playground, CMOM or AMNH, hotel reset", "Short sessions and elevator/stroller planning beat landmark chasing."],
-      ["Best teen pace", "Brooklyn Bridge Park, observation deck, food/neighborhood time", "Older kids often need skyline payoff and independence, not only little-kid museums."],
-      ["Best rainy-day swap", "AMNH or CMOM by age, meals nearby, hotel reset", "Choose one large indoor anchor and avoid two long subway transfers in bad weather."],
-      ["Best stay pairing", "Upper West Side for park/museum rhythm; Midtown/Downtown by route goals", "Treat this as planning guidance and verify elevator access, subway changes, hotel room setup, and evening noise."],
-      ["What to skip", "Uptown, Downtown, Brooklyn, and Midtown in one day", "Too many transfers and sidewalks can overwhelm the family version of New York."]
+      ["One day", "One Uptown zone + one child-fit anchor + one easy finish", "Use Central Park and one bounded AMNH visit as the route shape; do not add Downtown, Brooklyn, and a late ticket."],
+      ["Two days", "One Uptown day + one Downtown/harbor day", "Separate the park/museum rhythm from the ferry, Battery, or Brooklyn view instead of crossing the city repeatedly."],
+      ["Three days", "Uptown + Downtown/harbor + one child-chosen contrast day", "Use the third day for Midtown, a teen choice, a younger-child anchor, or a weather swap rather than another icon checklist."]
     ],
     rows: [
-      ["1-day highlights", "Central Park playgrounds or walk; AMNH; early dinner near Upper West Side or hotel", "First-time mixed ages", "Post-lunch museum cafe, park bench, or hotel reset", "Moderate; stroller and subway elevator routes need checking", "Keep meals in the same zone", "Downtown ferry, Times Square, and Brooklyn add-ons in the same day"],
-      ["2-day first visit", "Day 1 Upper West Side/Central Park; Day 2 Staten Island Ferry, Brooklyn Bridge Park, or Midtown by age", "Weekend families", "Keep one afternoon optional", "Moderate-high if hotel base is far from route", "Use one planned meal per day as the reset", "Trying to hit every borough or landmark"],
-      ["3-day balanced plan", "Uptown park/museum; Downtown ferry or Brooklyn skyline; Midtown or repeat-favorite/weather day", "Most families", "One real reset or slow meal daily", "Lower if each day stays in one or two adjacent zones", "Choose dinners by hotel base before leaving", "Starting each morning with a long transfer"],
-      ["Toddler-paced plan", "Central Park playground; CMOM or AMNH; nap/hotel reset; short evening walk", "Babies, toddlers, preschoolers", "Nap or quiet room time is the anchor", "Lower if staying near the park; higher with elevator gaps", "Use nearby casual meals and verified bathrooms", "Observation decks, long ferry waits, and multiple transfers"],
-      ["Teen-paced plan", "Brooklyn Bridge Park or observation deck; food stop; one museum or neighborhood block", "Tweens and teens", "Reset can be food, coffee, park seating, or hotel break", "Walking tolerance is higher, but transit timing still matters", "Let teens choose one skyline or food payoff", "All-day little-kid museum/playground rhythm"],
-      ["Rainy-day version", "AMNH or CMOM by age; meal nearby; hotel reset; short indoor/covered second stop only if needed", "Any age with weather constraints", "Use the indoor anchor as the day", "Lower if you avoid cross-town subway transfers", "Do not improvise meals after everyone is wet and tired", "Outdoor skyline day or long bridge walk in poor weather"]
+      ["One-day first look", "One Uptown zone, one child-fit anchor, one flexible finish"],
+      ["Two-day first trip", "Uptown park/museum day plus one Downtown/harbor day"],
+      ["Three-day balanced trip", "Uptown, Downtown/harbor, and one child-chosen contrast day"]
     ],
+    dayPlansTitle: "Use one, two, or three days without crossing the city for every headline stop",
+    itineraryNote: "Choose the route shape first, then check exact attractions, hotel entrances, MTA service and elevators, weather, tickets, and accessibility for the dates.",
+    pivotComparisonClass: "itinerary-pivot-comparison",
+    dayPlans: [
+      ["One-day first look", "Short visits and first-time families who want one coherent New York City day", [
+        ["Morning anchor", "Choose Central Park or a bounded AMNH visit as the main first block. If the museum is the priority, decide which halls or ticketed experience matters before entering."],
+        ["Middle reset", "Keep the meal, park break, or hotel return in the same Uptown route. The second anchor remains optional if the first one runs long."],
+        ["Easy finish", "Use a short park block, neighborhood meal, or return toward the stay base. Add a current Midtown ticket only when the family has deliberately removed something else."]
+      ], "Stop after one long anchor and the easy finish. Downtown, Brooklyn, and a second fixed ticket are the first removals."],
+      ["Two-day first trip", "Most first-time weekend families who want a classic park/museum day and one harbor view", [
+        ["Day 1: Uptown", "Use Central Park plus one bounded AMNH or other all-ages choice. Keep the meal and evening close to the exact stay base instead of adding Downtown."],
+        ["Day 2: Downtown/harbor", "Choose The Battery and the Staten Island Ferry, or choose a Brooklyn Bridge Park route. Treat one harbor payoff as the day rather than promising both."],
+        ["Reset rule", "Protect one unbooked afternoon or hotel return. If Day 1 runs late, remove the Day 2 evening add-on before cutting food or the reset."]
+      ], "Do not use Day 2 to combine a full Statue/Ellis visit, ferry round trip, bridge walk, Brooklyn park, and Broadway evening."],
+      ["Three-day balanced trip", "Families who want two classic geographic days plus one age-led choice", [
+        ["Day 1: Uptown", "Choose the park and one museum or all-ages anchor. Keep the final block flexible and check exact MTA elevator status near travel."],
+        ["Day 2: Downtown/harbor", "Choose The Battery plus one ferry or Brooklyn view route. Use an indoor or meal backup when weather, visibility, service, or child energy changes."],
+        ["Day 3: choose the contrast", "Pick one Midtown ticket or show, one teen-selected city experience, or one younger-child anchor from the released guides. Treat the selected activity as the day."]
+      ], "Keep one block optional each day and make only one evening a firm late plan."]
+    ],
+    pivotTitle: "Pivot for age, weather, budget, or the chosen base",
+    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivots: [
+      ["Younger child, sensory need, stroller, or nap", "One short anchor and the protected reset", "Use one park/play block or a bounded museum visit instead of a long multi-zone sequence", "Entrances, elevators, stroller handling, queues, noise, and return timing vary", "Exact MTA route and elevator status, venue access or sensory resources, meal, bathroom, and hotel-return plan"],
+      ["Teen or mixed ages", "One older-kid-selected anchor", "Use the teen guide for skyline, theatre, sports, art, food, neighborhoods, movement, or a photo payoff", "Exact product, show advisory, younger-sibling fit, cost, and evening return", "Ticket, age or minor policy, content, weather, and split-plan needs"],
+      ["Rain, heat, cold, low visibility, or poor air", "One current indoor anchor and a nearby meal", "Move the outdoor, ferry, park, bridge, or skyline block rather than forcing the original sequence", "Indoor can still mean queues, walking, stimulation, and transfers", "Forecast, venue status, MTA alerts, ticket, coat or stroller storage, and backup"],
+      ["Budget-led trip", "One chosen paid anchor plus flexible park or ferry time", "Use Central Park, The Battery, the Staten Island Ferry, or Brooklyn Bridge Park when current conditions fit", "Transit, meals, special exhibits, events, and optional tickets still cost money", "Current operating status, weather, event closures, transport, and complete daily spend"],
+      ["Arrival, departure, or lodging-led route", "Keep the first and last blocks near the chosen base", "Move the farthest zone to the full day with the cleanest transport plan", "Hotel entrance, luggage, station accessibility, check-in, and evening return", "Exact address, luggage plan, MTA service and elevators, and realistic hotel return"]
+    ],
+    plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "Arrival afternoon": "Keep arrival close to the hotel: snacks, a short neighborhood walk, and an early dinner. Save subway learning and big-ticket activities for a rested morning.",
-      "Uptown day": "Use Central Park and AMNH or CMOM as the core. Keep the day in one zone and verify stroller/elevator routes before promising the exact path.",
-      "Skyline day": "Choose Staten Island Ferry, Brooklyn Bridge Park, or an observation deck, not all of them. Weather, lines, and transit can change the best option.",
-      "Rain backup": "Use AMNH or CMOM as the anchor, keep meals nearby, and move any skyline plan to the clearest window.",
-      "Toddler adjustment": "Shorten every block, prioritize bathrooms and elevator access, and delete the second activity if the first one runs long.",
-      "Teen adjustment": "Trade a playground or younger-kid museum block for skyline views, a food neighborhood, or a focused museum section."
+      "One main job per half day": "A large museum, ferry route, park exploration, Broadway show, or ticketed attraction already fills a block. Do not make the transfer another headline stop.",
+      "Treat the reset as scheduled": "Choose the hotel return, nap, quiet room time, park break, or slow meal before the day starts. Remove the next activity when the reset disappears.",
+      "Map the exact entrance and station": "A neighborhood pin does not show the actual entrance, working elevator, platform path, ferry terminal, or stroller route. Check the selected MTA and venue path near travel.",
+      "Set the evening stop rule": "Choose which evening may run late and what gets deleted when the child is done. A prepaid ticket does not make a tired family recover."
     },
     faqs: [
-      ["How many days do families need in New York City?", "Three days is a better first family rhythm, but one or two days can work if each day stays in one main zone and the hotel base fits the route."],
-      ["What should families skip on a short New York City trip?", "Avoid stacking Central Park, AMNH, Times Square, Staten Island Ferry, Brooklyn Bridge Park, and an observation deck into one day. Transit, sidewalks, lines, and weather can make that unrealistic with kids."],
-      ["What is the easiest rainy-day New York City itinerary with kids?", "Use AMNH or CMOM as the anchor by age, keep meals nearby, and save ferry, bridge, park, or observation-deck plans for the clearest weather window."]
+      ["How many days should a family spend in New York City?", "Two full days can cover one Uptown day and one Downtown or harbor day. A third day adds room for one child-chosen contrast, a slower arrival, or a weather swap. The useful number depends on the stay base, ages, tickets, and daily reset needs."],
+      ["What should families skip on a short New York City trip?", "Skip cross-city attraction stacking, more than one major anchor per half day, and a firm late ticket every evening. Keep one main zone, one child-fit anchor, a meal or reset plan, and a clear deletion rule."],
+      ["How should families change the itinerary for bad weather?", "Move the main block to one current indoor attraction, keep the meal and hotel reset close to that choice, and drop the ferry, park, bridge, or skyline block when conditions do not fit. Recheck venue, weather, and MTA information before leaving."]
+    ],
+    sourcesIntro: "Official attraction, park, ferry, theatre, and transit sources checked July 26, 2026. Recheck schedules, service and elevator status, tickets, weather, access, and exact routes for the dates.",
+    sources: [
+      ["MTA trip and service information", "https://www.mta.info/"],
+      ["MTA accessible stations", "https://www.mta.info/accessibility/stations"],
+      ["MTA elevator and escalator status", "https://www.mta.info/elevator-escalator-status"],
+      ["American Museum of Natural History plan a visit", "https://www.amnh.org/plan-your-visit"],
+      ["AMNH accessibility", "https://www.amnh.org/plan-your-visit/accessibility"],
+      ["AMNH sensory resources", "https://www.amnh.org/plan-your-visit/accessibility/sensory-resources-for-visitors"],
+      ["Central Park Conservancy visitor information", "https://www.centralparknyc.org/"],
+      ["NYC DOT Staten Island Ferry schedule", "https://www.nyc.gov/html/dot/html/ferrybus/siferryschedule.shtml"],
+      ["The Battery visitor information", "https://www.thebattery.org/"],
+      ["Brooklyn Bridge Park visitor information", "https://brooklynbridgepark.org/"],
+      ["Broadway League current shows and advisories", "https://www.broadway.org/shows"],
+      ["New York City photo source and attribution", "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"],
+      ["Public-domain mark", "https://creativecommons.org/publicdomain/mark/1.0/"]
     ]
   },
   "family-itinerary/san-antonio-with-kids.html": {

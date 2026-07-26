@@ -65,8 +65,23 @@ The Family Tripwise project operator may update the selected action's repository
 | 30 | `FT-PUB-004` research and publish the New York City family-hotel comparison | Content/product quality | Completed and released | Commit `57d765f`; Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
 | 31 | `FT-IMP-015` research and publish the New York City teen/tween activity specialist | Content/product quality | Released and production-verified | Commit `77e6cb9322da34ffc13daf84b0851e83773cc382`; Pages run `30198727075`; release marker, production invariants, and production SEO QA passed after review `PASS_WITH_P3` with no P0-P2 findings. |
 | 32 | `FT-IMP-016` simplify and improve the New York City stay-area guide | Content/product quality | Released and production-verified | Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; Pages run `30199465923`; release marker, five quick-pick starts, canonical/indexability, one sitemap entry, production invariants, and production SEO QA passed after Maxwell `PASS` with no P0-P3 findings. |
+| 33 | `FT-IMP-017` review and improve the New York City family itinerary | Content/product quality | Review-clean; release pending | One existing URL now has three trip-length starts, three executable day plans, five pivots, four stop rules, four cluster routes, and visible/schema-aligned FAQs; Lagrange returned `PASS_WITH_P3` in cycle 1 with no P0-P2 findings. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+
+### FT-IMP-017 - Review and improve the New York City family itinerary
+
+- Selected: 2026-07-26 by direct manual user instruction to continue to the final NYC page.
+- State: research, one-page implementation, responsive checks, native QA, and independent review are complete; exact-path release and production verification remain.
+- Target: `https://familytripwise.com/family-itinerary/new-york-city-with-kids.html`.
+- Demand and evidence: logged-in Semrush exact variants collected July 24 show 30 and 10 searches/month and overlap. The fresh July 26 GSC snapshot, finalized through July 24, has no itinerary performance row; URL Inspection says the page is not indexed.
+- Product requirement: inspect current itinerary SERPs and representative ranking pages, apply NYC-P1 through NYC-P5, and audit every visible section. Replace repeated summaries with concrete one-, two-, and three-day plans, useful pivots, stop rules, and routes to all four released NYC cluster pages.
+- Local result: three trip-length starts, three executable day-plan cards, five persona/constraint pivots, four stop rules, four cluster routes, three visible/schema-aligned FAQs, current official checks, and an optimized dimensioned public-domain image.
+- QA: focused tests 4/4 and full repository tests 105/105 pass; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; target-only generation and 1280/390/320 responsive checks pass.
+- Review: Lagrange (`019f9ea5-2520-7540-91c7-ce5a5ce30360`) returned `PASS_WITH_P3` in cycle 1 with no P0-P2 findings. The P3 records representative rather than complete duration-query SERP evidence; numeric overlap remains `UNKNOWN`.
+- Maximum scope: one durable itinerary review, the existing shared page upgrader, one focused test, the existing itinerary HTML, NYC status, both backlogs, and operator records.
+- Boundary: preserve URL/canonical/indexability/sitemap; do not edit sibling pages, request indexing, create a URL, add an affiliate CTA, mutate an external account, send outreach, start San Antonio, or add recurring automation.
+- Release gate: current SERP/ranking-page/persona/source/every-section review, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 
 ### FT-RES-009 - New York City SERP-overlap cluster and persona decision pack
 

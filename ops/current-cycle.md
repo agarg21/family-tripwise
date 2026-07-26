@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-016` is completed, released, and production-verified. No substantive action is selected in this reconciliation.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-017` is selected to review and improve the existing New York City family itinerary through current SERP, ranking-page, persona, official-source, every-section, responsive, QA, independent-review, and production-verification gates.
 
 The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to begin NYC pages. `FT-EVAL-002` remains evidence-gated, not calendar-triggered.
 
@@ -16,13 +16,13 @@ The central Control Room remains the only scheduler. This transaction is allowed
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-26.md`, fresh authenticated API data finalized through 2026-07-24.
 - Latest site release: `FT-IMP-016` at commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; Pages run `30199465923` succeeded, the release marker matched, and action-specific production invariants/SEO QA passed.
-- Active manual action: none.
+- Active manual action: `FT-IMP-017`, selected 2026-07-26 under the user's direct instruction.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-016` / `IMP-034` / `SRR-025`, released and production-verified with Maxwell `PASS`, no P0-P3 findings, 101/101 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
 - NYC teen publication: complete; production contains one canonical/indexable 10-choice specialist with the expected cluster routes and one sitemap entry.
 - NYC stay-area improvement: complete; production contains the canonical/indexable five-area guide with five quick-pick starts, one sitemap entry, and the expected cluster routes.
-- Later NYC sequence: the existing itinerary remains a separate, unselected reviewed transaction.
+- Active NYC itinerary improvement: `FT-IMP-017` / `IMP-035` / `SRR-026`; research, one-page implementation, responsive checks, native QA, and Lagrange cycle-one `PASS_WITH_P3` with no P0-P2 findings are complete; exact-path release and production verification remain.
 - Next city after NYC: San Antonio; no implementation scope is pre-approved.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
 
@@ -211,7 +211,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-No substantive action is selected. `FT-IMP-016` is released and production-verified. Do not start the New York City itinerary or another project action from this mechanical reconciliation. The Control Room remains the only scheduler for scheduled work; a future direct manual instruction remains separately allowed.
+Continue active direct manual action `FT-IMP-017` on the existing New York City itinerary URL through research, one-page implementation, native QA, independent review, exact-path release, and production verification. Do not start San Antonio or another action in the same transaction. The Control Room remains the only scheduler for scheduled work.
 
 ## GSC Monitoring
 

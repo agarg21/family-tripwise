@@ -2,7 +2,37 @@
 
 Last updated: 2026-07-26
 
-## Active NYC Stay-Area Review
+## Active NYC Itinerary Review
+
+### SRR-026: New York City Family-Itinerary SERP, Persona, Source, And Every-Section Review
+
+Status: done and review-clean inside `FT-IMP-017`
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-017`
+
+Before implementation, inspect current itinerary SERPs, representative ranking pages, qualitative family questions, NYC-P1 through NYC-P5, current official attraction/transit sources, and every visible section of the existing page.
+
+Required coverage:
+
+- Confirm one-, two-, and three-day variants belong on the existing itinerary URL rather than separate pages.
+- Record what representative ranking pages answer well, weakly, or not at all, separating firsthand/local authority from usefulness opportunities.
+- Apply all five persona hypotheses to route shape, resets, weather, budget, age mix, stay base, and exact-current-check needs.
+- Review every current hero, trust, media, starter, quick-pick, comparison, pacing, cluster-link, source, and schema section for keep/compress/replace/remove.
+- Define one calm itinerary architecture, acceptance/measurement, source freshness, claim and privacy boundaries, and independent review.
+
+Result:
+
+- Refreshed current itinerary SERPs and representative family, local-parent, firsthand, commercial, generated, and community pages.
+- Confirmed one-, two-, three-, and longer-day variants belong to one sequencing page; numeric URL overlap remains `UNKNOWN` because complete comparable top-10 sets were not retained.
+- Applied NYC-P1 through NYC-P5 to geographic route shape, resets, mixed ages, sensory/weather/budget needs, and lodging-led decisions.
+- Audited every visible section and recorded keep/compress/replace/remove decisions, source freshness, claim boundaries, architecture, acceptance, and measurement.
+- Artifact: `docs/research/new-york-city-family-itinerary-page-review.md`.
+- Focused tests pass 4/4 and full repository tests pass 105/105; operator-state, local SEO, target-only generation, responsive, source, privacy, scope, roadmap JSON, and whitespace checks pass.
+- Lagrange (`019f9ea5-2520-7540-91c7-ce5a5ce30360`) returned `PASS_WITH_P3` in cycle 1 with no P0-P2 findings. One non-blocking P3 preserves the representative-versus-complete SERP evidence limitation.
+
+## Latest Completed NYC Review
 
 ### SRR-025: New York City Stay-Area SERP, Persona, Source, And Every-Section Review
 
@@ -32,7 +62,7 @@ Result:
 - Full repository tests pass 101/101; focused, operator-state, local SEO, responsive, source, privacy, scope, roadmap JSON, and whitespace checks pass.
 - Independent reviewer Maxwell (`019f9e13-9dbc-7440-a637-dfa52b6a719f`) returned `PASS` in cycle 2 with no P0-P3 findings.
 
-## Latest Completed NYC Review
+## Earlier NYC Review
 
 ### SRR-024: New York City Teen/Tween Candidate And Page Review
 

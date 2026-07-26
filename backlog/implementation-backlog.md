@@ -4,6 +4,62 @@ Last updated: 2026-07-26
 
 ## Active NYC Implementation
 
+### IMP-035: Review And Improve The New York City Family Itinerary
+
+Status: review-clean and release-pending
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-017`
+
+Target:
+
+- `https://familytripwise.com/family-itinerary/new-york-city-with-kids.html`
+
+Review current itinerary SERPs, representative ranking pages, qualitative family constraints, NYC-P1 through NYC-P5, current official sources, and every visible section before replacing repeated summaries with a concrete sequencing product.
+
+Expected maximum transaction scope:
+
+- `docs/research/new-york-city-family-itinerary-page-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/new-york-city-itinerary-page.test.mjs`
+- `site/family-itinerary/new-york-city-with-kids.html`
+- `status/new-york-city-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Keep the existing canonical/indexable URL and its one sitemap entry.
+- Route activity, teen, area, and named-hotel decisions to their released pages instead of repeating those jobs.
+- Use current official sources for material attraction, transit, ferry, park, accessibility, ticket, and operating checks.
+- Treat ranking pages and community discussions as qualitative input, not demand, firsthand evidence, or verified universal family experience.
+- Do not claim exact route/timing, stroller or accessibility practicality, safety, weather suitability, stable prices/hours, independent-child suitability, or universal family fit.
+- Do not edit sibling pages or the sitemap, publish another URL, request indexing, add an affiliate CTA, mutate an external account, send outreach, start another city, or add recurring automation.
+
+Acceptance:
+
+- One clear selection layer and concrete one-, two-, and three-day plans replace repeated starter, quick-pick, matrix, and generic pacing layers.
+- Five persona/constraint pivots and explicit stop rules support younger children, teens/mixed ages, weather, budget, and lodging-led routes.
+- The page links directly to all-ages activities, teens, stay areas, and named hotels.
+- Target-only generation, canonical/indexability/sitemap/internal-link/schema, responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+Local result:
+
+- Replaced two generated starter plans, three utility cards, eight universal quick picks, a six-row abstract matrix, and six generic pacing cards with one coherent planning flow.
+- Added three trip-length starts, three executable day-plan cards, five persona/constraint pivots, four stop rules, four released-cluster routes, and three visible/schema-aligned FAQs.
+- Added current MTA, ferry, park, museum, sensory, and theatre check paths; optimized the public-domain image to a dimensioned 1280px derivative.
+- Focused tests pass 4/4; target-only and full generation change no unrelated site file.
+- Full repository tests pass 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings.
+- Responsive checks pass at 1280px, 390px, and 320px with a decoded image, contained sticky-column comparison scrolling, no body overflow, and no text overlap.
+- Exact-path source/privacy/roadmap JSON/whitespace checks and independent review remain before release.
+
+## Latest Completed NYC Implementation
+
 ### IMP-034: Simplify And Improve The New York City Stay-Area Guide
 
 Status: done, released, and production-verified
@@ -57,7 +113,7 @@ Local result:
 - Independent reviewer Maxwell (`019f9e13-9dbc-7440-a637-dfa52b6a719f`) returned `PASS` in cycle 2 with no P0-P3 findings after the stale NYC release-state table was reconciled.
 - Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2` was pushed to `main`; Pages run `30199465923` succeeded. The release marker matched, the canonical/indexable page retained five quick-pick starts and one sitemap entry, action-specific production invariants passed, and production SEO QA reported 0 errors and 0 warnings.
 
-## Latest Completed NYC Implementation
+## Earlier NYC Implementation
 
 ### IMP-033: Research And Publish The New York City Teen/Tween Activity Specialist
 

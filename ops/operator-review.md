@@ -36,6 +36,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-PUB-004` | NYC family-hotel comparison released and production-verified | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. Commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed through Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
 | `FT-IMP-015` | NYC teen/tween specialist released and production-verified | `PASS_WITH_P3` | Curie cycle 2 closed the empty compact-detail pairing P2; no P0-P2 remains. Commit `77e6cb9322da34ffc13daf84b0851e83773cc382` deployed through Pages run `30198727075`; release marker, production invariants, and production SEO QA passed. One P3 remains for the generic but licensed/optimized Central Park hero. |
 | `FT-IMP-016` | NYC stay-area simplification released and production-verified | `PASS` | Maxwell cycle 2 closed the stale released-versus-future NYC status P2; no P0-P3 findings remain. Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2` deployed through Pages run `30199465923`; release marker, production invariants, and production SEO QA passed. |
+| `FT-IMP-017` | NYC family-itinerary improvement review-clean | `PASS_WITH_P3` | Lagrange cycle 1 found no P0-P2 findings. One non-blocking P3 records representative rather than complete duration-query SERP evidence; numeric overlap remains `UNKNOWN`. Exact paths are release-eligible after staged QA. |
 
 ## Open blocking findings
 
@@ -1442,3 +1443,19 @@ Final verification:
 - No P0-P3 findings remain.
 - Maxwell accepted the evidence classification, refreshed SERP and ranking-page usefulness analysis, five-persona grounding, every-section audit, area-versus-hotel boundary, five-area usefulness, source and claim safety, visible/schema FAQ alignment, canonical/indexability/sitemap/internal links, generator parity and idempotency, responsive containment, privacy, exact 11-path scope, single-site-page boundary, and release policy.
 - Full repository tests pass 101/101; focused and state tests pass 9/9; operator-state QA passes; local SEO QA reports 0 errors and 0 warnings; duplicate-key-safe roadmap parsing and `git diff --check` pass.
+
+### 2026-07-26 - `FT-IMP-017` review cycle 1
+
+**Reviewer:** Lagrange (`019f9ea5-2520-7540-91c7-ce5a5ce30360`), independent read-only review
+
+**Final result: `PASS_WITH_P3`**
+
+Residual finding:
+
+1. `P3` - The research names one-, two-, three-, four-, five-, and seven-day wording as one broad result family, while the durable query register explicitly names two- and three-day searches plus a broader variant. This is non-blocking because the evidence is labeled representative and numeric URL overlap remains `UNKNOWN`.
+
+Final verification:
+
+- No P0-P2 findings remain.
+- Lagrange accepted the methodology and evidence limits, SERP/page-type rationale, five-persona grounding, every-section audit, usefulness and reduced repetition, claim/source safety, canonical/indexability/sitemap/schema/FAQ alignment, generator parity and target-only idempotency, responsive containment, privacy, exact 11-path scope, observation policy, and release policy.
+- Focused tests pass 4/4; full repository tests pass 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap JSON, syntax, source, privacy, exact-scope, responsive, and whitespace checks pass.
