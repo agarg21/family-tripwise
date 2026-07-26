@@ -33,6 +33,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-004` | released San Diego lodging revision | `PASS` | Cycle 2 closed unsupported route/reset conclusions and representative-sounding language for small directional review samples; commit `326501bd32399421c56cbe0f4e4065146166a062` was pushed, Pages run `29796506753` succeeded, and production invariants/SEO QA passed. |
 | `FT-RES-009` | review-clean NYC cluster decision pack | `PASS` | Reviewer Einstein (`019f9574-fcbe-7810-a2e2-53c45e216171`) returned final `PASS` in cycle 3 with no P0-P3 findings after exact keyword, SERP-intersection, representative-page, persona-traceability, pending-status, and one shared-domain correction; native and focused QA passed. |
 | `FT-IMP-014` | NYC all-ages activity improvement review-clean | `PASS_WITH_P3` | Final cycle 3 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for an older-start test selector; exact paths are release-eligible after staged QA. |
+| `FT-PUB-004` | NYC family-hotel comparison review-clean | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for high-density mobile image candidate selection; exact paths are release-eligible after staged QA. |
 
 ## Open blocking findings
 
@@ -1375,3 +1376,24 @@ Final verification:
 - No P0-P2 findings remain; prior media remediation remains intact.
 - Huygens accepted the candidate, competitor, persona, every-section, usefulness, claim/source, canonical/indexability/sitemap/schema, filter, image, responsive, generator-isolation, operating-state, privacy, and exact-path work.
 - Native tests pass 87/87; focused tests pass 4/4; operator-state QA passes; SEO QA reports 0 errors and 0 warnings; responsive, source, JSON, privacy, scope, and whitespace checks pass.
+
+### 2026-07-25 - `FT-PUB-004` review cycles 1-2
+
+**Reviewer:** Kepler (`019f9c21-7769-7561-bb6f-170bfc41ab35`), evidence-and-release review
+
+**Final result: `PASS_WITH_P3`**
+
+P0-P2 findings and disposition:
+
+1. `P2` - Replaced the unsupported Embassy Suites no-crib conclusion with the current Hilton-versus-Expedia source conflict and a direct-confirmation check in the evidence pack, generator, page, and focused regression test.
+2. `P2` - Added a bounded family-context disclosure to all 12 property ledgers and a concise public explanation that most slices do not expose a reliable family-only count.
+
+Residual finding:
+
+1. `P3` - A 390px high-density screen may select the 1200px responsive photo candidate because 640w is below its effective pixel requirement. The image renders and the layout remains correct; a future shared media pass can add an intermediate candidate.
+
+Final verification:
+
+- No P0-P2 findings remain.
+- Full repository tests pass 91/91; operator-state QA passes; SEO QA reports 0 errors and 0 warnings.
+- Exact 14-path scope, duplicate-key-safe roadmap parsing, activity-page non-change, source reachability, image decode/current-source selection, responsive 1280/390/320 behavior, privacy, canonical/indexability/sitemap/schema/internal links, target-only idempotency, and `git diff --check` pass.

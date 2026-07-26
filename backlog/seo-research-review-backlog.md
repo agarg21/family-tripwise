@@ -1,6 +1,35 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-24
+Last updated: 2026-07-25
+
+## Active NYC Hotel Review
+
+### SRR-023: New York City Family-Hotel Evidence Pack
+
+Status: done and review-clean inside `FT-PUB-004`
+
+Selected: 2026-07-25
+
+Roadmap ID: `FT-PUB-004`
+
+Before publication, inspect an 18-25 property candidate pool, representative current hotel-list ranking pages, direct official property sources, public price examples, bounded recent online-review samples, relevant family discussions, NYC-P1/P2/P4/P5, and the intended page decision flow.
+
+Required coverage:
+
+- Candidate keep/defer decisions with a distinct family trip role for every retained property.
+- Official room/occupancy, two-bed/suite, kitchen/breakfast, pool, crib/connecting, location, and current operating evidence where found; unresolved fields remain unknown.
+- Approximate total nightly planning ranges with a dated method and clear exclusions; no quote or checkout claim.
+- Review observation ledger with exact inspected sample size/date span/source-to-theme mapping, family-context disclosure, conflicts, and no copied prose or reviewer identifiers.
+- Competitor usefulness analysis separating authority/firsthand advantages from comparison, freshness, and decision-support opportunities.
+- One calm comparison architecture, direct Google Maps links, three visible/schema-aligned FAQs, acceptance/measurement, privacy, and independent review.
+
+Result:
+
+- Reviewed 22 candidate properties, retained 12, and documented the role and defer reason for every candidate.
+- Recorded current official property facts, broad July 25 total-night planning ranges, bounded online-review observations, conflicts or thin-sample notes, freshness, decisive checks, and unresolved unknowns.
+- Separated source-backed room function from requests and guarantees, including the atypical Embassy Suites room layout and occupancy limits at Four Seasons.
+- Artifact: `docs/research/new-york-city-family-hotel-evidence-pack.md`.
+- Research and implementation are complete and review-clean. Independent reviewer Kepler (`019f9c21-7769-7561-bb6f-170bfc41ab35`) returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings after the Embassy crib-source and family-context disclosure findings were corrected.
 
 ## Latest Completed NYC Cluster Research
 

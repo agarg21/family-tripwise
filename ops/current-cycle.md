@@ -8,7 +8,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-014` is released and production-verified at commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1` through Pages run `30172548240`. It applied review-clean `FT-RES-009` to the existing indexed all-ages activity page through a page-specific candidate/source/every-section review, one wider decision surface, compact family-constraint routes, current official checks, optimized media, focused tests, native QA, independent review, and production verification.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-PUB-004` is the active NYC transaction. It applies review-clean `FT-RES-009` to one named-property family-hotel comparison through a durable candidate, official-fact, broad-price, bounded-review, conflict, freshness, persona, responsive, QA, independent-review, and production-verification workflow.
 
 The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to begin NYC pages. `FT-EVAL-002` remains evidence-gated, not calendar-triggered.
 
@@ -16,9 +16,10 @@ The central Control Room remains the only scheduler. This transaction is allowed
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-25.md`, fresh authenticated API data finalized through 2026-07-23.
 - Latest site release: `FT-IMP-014` at commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1`; Pages run `30172548240` succeeded, the release marker matched, and production invariants/SEO QA passed.
-- Active manual action: none; this housekeeping transaction reconciles completed release evidence only.
+- Active manual action: `FT-PUB-004`, review-clean on 2026-07-25 under the user's direct instruction; exact-path release and production verification remain.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-014` / `IMP-031`, released and production-verified with final review `PASS_WITH_P3`, no P0-P2 findings, and one non-blocking test-selector P3.
+- Active NYC hotel publication: `FT-PUB-004` / `IMP-032` / `SRR-023`; the 22-candidate evidence pack and one 12-property page passed native QA and independent review with no P0-P2 findings; release is pending.
 - Later NYC sequence: one family-hotel page, one teen/tween page, the existing stay-area page, then the existing itinerary; each remains a separate reviewed transaction.
 - Next city after NYC: San Antonio; no implementation scope is pre-approved.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
@@ -208,7 +209,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Remain idle after this release-state reconciliation. `FT-IMP-014` is closed as released and production-verified. The next NYC candidate is the separately researched family-hotel comparison, but it is not started by this housekeeping transaction and still requires its own direct manual instruction or valid Control Room dispatch, evidence pack, QA, review, and release gate. The Control Room performs healthy GSC monitoring as housekeeping and remains the only scheduler for scheduled work.
+Release review-clean direct manual action `FT-PUB-004` through an exact-path commit, push, Pages monitoring, and production verification. Do not start the teen, stay-area, or itinerary transaction in the same action. The Control Room performs healthy GSC monitoring as housekeeping and remains the only scheduler for scheduled work.
 
 ## GSC Monitoring
 

@@ -1342,6 +1342,53 @@
       "release_state": "released-and-production-verified",
       "result": "Implemented as a 12-choice filterable activity guide with five conditional trip starts, one full comparison table, six high-friction notes, four official checks, and three visible/schema-aligned FAQs. The 18-candidate, five-persona, every-section, media, and claim/source review is durable in docs/research/new-york-city-activity-expansion-review.md. Native tests pass 87/87; operator-state QA and SEO QA pass with 0 errors and 0 warnings; focused, responsive, source/privacy/scope, roadmap JSON, and whitespace checks pass. Reviewer Huygens returned PASS_WITH_P3 in cycle 3 with no P0-P2 findings after the media-performance and NYSCI teen-routing findings were closed.",
       "notes": "Selected 2026-07-24 by direct manual user instruction. Commit 1437affd20914a7bf3fbdc5ae0097371d3fb96c1 deployed successfully through Pages run 30172548240; release.json matched the commit, production invariants passed, and production SEO QA returned 0 errors and 0 warnings. One existing URL only. No new URL, sibling-page content edit, stylesheet edit, sitemap change, indexing request, external-account mutation, outreach, affiliate CTA, or recurring automation."
+    },
+    {
+      "id": "FT-PUB-004",
+      "implementation_backlog_id": "IMP-032",
+      "research_backlog_id": "SRR-023",
+      "title": "Research and publish the New York City family-hotel comparison",
+      "kind": "publication",
+      "lane": "content-and-product-quality",
+      "status": "in_progress",
+      "selected_on": "2026-07-25",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 2,
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 5,
+      "risk": 3,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-family-hotel-evidence-pack.md",
+        "tools/generate-pages.mjs",
+        "tools/new-york-city-family-hotels-page.test.mjs",
+        "site/where-to-stay/new-york-city-family-hotels.html",
+        "site/where-to-stay/new-york-city-with-kids.html",
+        "site/index.html",
+        "site/sitemap.xml",
+        "status/new-york-city-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "One canonical named-property comparison helps families compare roughly 10-15 earned NYC hotels by trip style, room function, broad total-night range, location, family-useful amenities, bounded recent online-review observations/conflicts, and decisive checks without duplicating the stay-area page.",
+      "production_invariant": "The new NYC hotel URL is canonical, indexable, present once in the sitemap, and linked from home and the existing NYC stay guide; it introduces no unsupported universal ranking, firsthand stay, safety, quiet, exact-route, guaranteed room/crib/connection, stable-price, or universal-family-fit claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-25 with finalized data through 2026-07-23. The proposed URL has no GSC row because it does not exist; the existing NYC stay page has 49 impressions at page-level average position 49.73. This is directional context, not a query rank or causal result.",
+      "implementation_summary": "Reviewed 22 candidate properties and retained 12 with distinct family trip roles. Built one comparison with six trip-style starts, a complete table, 12 source-backed property cards, broad total-night planning ranges, bounded review observations and conflicts, direct Google Maps links, three visible/schema-aligned FAQs, and routes from home and the existing stay-area guide.",
+      "qa_summary": "Full repository tests pass 91/91; operator-state QA passes; SEO QA reports 0 errors and 0 warnings; focused, responsive, image, source, privacy, scope, duplicate-key-safe roadmap, activity-page non-change, target-only idempotency, and whitespace checks pass.",
+      "review_summary": "Independent reviewer Kepler (019f9c21-7769-7561-bb6f-170bfc41ab35) completed two cycles. Final verdict was PASS_WITH_P3 with no P0-P2 findings after the Embassy crib-source conflict and review-family-context disclosures were corrected; one non-blocking P3 remains for high-density mobile selection of the 1200px image candidate.",
+      "release_state": "review-clean-release-pending",
+      "result": "Review-clean 12-property comparison backed by a 22-candidate evidence pack, current official property facts, rough total-night planning ranges, bounded review observations and family-context limits, trip-style routing, direct map links, and visible/schema-aligned FAQs.",
+      "notes": "Selected 2026-07-25 by direct manual user instruction. Evidence pack and implementation are review-clean; exact-path release and production verification remain. One new indexable URL only. No booking transaction, indexing request, affiliate CTA, external-account mutation, outreach, another page publication, or recurring automation."
     }
   ]
 }

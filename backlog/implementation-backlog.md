@@ -4,6 +4,62 @@ Last updated: 2026-07-25
 
 ## Next NYC Implementation
 
+### IMP-032: Research And Publish The New York City Family-Hotel Comparison
+
+Status: done and review-clean; release pending
+
+Selected: 2026-07-25
+
+Roadmap ID: `FT-PUB-004`
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html`
+
+Create one current named-property comparison after building a durable evidence pack from an 18-25 hotel candidate pool. Compare selected hotels by trip style, room function, approximate total nightly range, location, family-useful amenities, bounded recent online-review observations, conflicts, and decisive checks.
+
+Expected maximum transaction scope:
+
+- `docs/research/new-york-city-family-hotel-evidence-pack.md`
+- `tools/generate-pages.mjs`
+- `tools/new-york-city-family-hotels-page.test.mjs`
+- `site/where-to-stay/new-york-city-family-hotels.html`
+- `site/where-to-stay/new-york-city-with-kids.html`
+- `site/index.html`
+- `site/sitemap.xml`
+- `status/new-york-city-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Publish exactly one new canonical/indexable URL and keep the existing stay-area page focused on geography and trip base.
+- Use direct official sources for room, occupancy, kitchen/breakfast, pool, crib/connecting, location, and current operating facts where available.
+- Use broad total-night planning ranges, not booking quotes; no personal data, checkout flow, or exact-date booking transaction.
+- Keep review observations bounded, paraphrased, source-dated, conflict-aware, and explicit when family context is thin.
+- Do not claim a personal stay, universal best, safety, quiet, exact stroller/walking route, guaranteed connection/crib, stable price, or universal family fit.
+- Do not request indexing, add an affiliate CTA, mutate Google Maps or another external account, send outreach, create another URL, or add recurring automation.
+
+Acceptance:
+
+- An 18-25 property candidate pool produces roughly 10-15 earned choices with distinct family trip roles; no list-length quota.
+- Every selected hotel has official evidence, a rough total-night range, review-source coverage, at least one conflict or explicit thin-sample note, freshness, a direct Google Maps link, and a decisive parent check.
+- Useful family-of-five, two-bed/suite, younger-child, teen, budget/value, Midtown, park/museum, Downtown/Brooklyn, kitchen/breakfast, and pool roles are covered where evidence earns them.
+- Existing home and stay-area pages route to the new comparison without changing another NYC content job.
+- Targeted generation, sitemap/internal-link/schema, responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+Local result:
+
+- Reviewed 22 candidate properties and retained 12 with distinct family trip roles.
+- Built one scan-first comparison with six trip-style starts, a complete table, 12 detailed property cards, direct Google Maps links, three visible/schema-aligned FAQs, and routes from home and the existing stay-area guide.
+- Kept the activity page unchanged and the existing stay-area page focused on geography.
+- Focused generation, hotel-page, sibling-hotel, idempotency, responsive, image-decode, source, privacy, scope, and whitespace checks pass; the full repository suite passes 91/91, operator-state QA passes, and SEO QA reports 0 errors and 0 warnings.
+- Independent reviewer Kepler (`019f9c21-7769-7561-bb6f-170bfc41ab35`) returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings after the Embassy crib-source and review-family-context findings were corrected. One non-blocking P3 remains for high-density mobile selection of the 1200px image candidate.
+
 ### IMP-031: Improve The New York City All-Ages Things-To-Do Hub
 
 Status: done, released, and production-verified
