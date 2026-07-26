@@ -897,56 +897,70 @@ const stayPages = {
     ]
   },
   "where-to-stay/new-york-city-with-kids.html": {
-    title: "Where to Stay in New York City With Kids: Best Areas for Families",
+    title: "Where to Stay in New York City With Kids: 5 Areas Compared",
     description:
-      "Compare the best places to stay in New York City with family by subway access, stroller friction, noise, room size, walkability, parks, museums, and hotel checks.",
+      "Compare five New York City family stay areas by the first two days, midday reset, child pace, transit and access checks, cost tradeoffs, and nearby anchors.",
     city: "New York City",
+    schemaName: "New York City family stay area options",
+    constraintLed: true,
+    removeGeneratedBodySections: true,
+    hideHotelSection: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>Where to stay in New York City with kids</h1>", "<h1>Where to Stay in New York City With Kids: 5 Areas Compared</h1>"],
+      ["<p>Compare the best family areas in New York City by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.</p>", "<p>Choose the base from the family's first two days and likely midday return: park and museum time, classic Midtown sights, the harbor, Brooklyn, or a Queens value check. Then compare named hotels.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Area and transport sources checked:</strong> July 26, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Area guidance is planning support, not a universal ranking. Exact station access, elevator status, walking route, room exposure, price, and return pattern depend on the hotel, itinerary, date, and current service.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
+      ["<figcaption>Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons. <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">Wikimedia Commons</a>. Wikimedia serves this resized preview.</figcaption>"]
+    ],
+    quickHeading: "Five useful starting points",
     quick: [
-      ["Best overall area", "Upper West Side", "Best balance of Central Park, AMNH, calmer evenings, and family food options."],
-      ["Best place to stay with family", "Upper West Side for many first trips", "Use it as the default check because park, museum, meals, and calmer evenings cluster together."],
-      ["Best for first-timers", "Upper West Side or Midtown", "Choose UWS for family pace, Midtown for shortest access to classic sights."],
-      ["Best without a car", "Upper West Side, Midtown, or Downtown", "NYC is a no-car city, but elevator/subway access matters block by block."],
-      ["Best with toddlers", "Upper West Side", "Parks, playgrounds, AMNH, and less nighttime chaos."],
-      ["Best for museums/parks", "Upper West Side", "Central Park and AMNH make the easiest first family base."],
-      ["Best for older kids/teens", "Downtown / Tribeca or Brooklyn Heights", "More neighborhood exploring, waterfront, and food flexibility."],
-      ["Best budget-friendly", "Long Island City or Downtown Brooklyn", "Often better space/value, but check transit and evening logistics."],
-      ["Think twice about", "Times Square with toddlers", "Convenient on paper, but noise, crowds, and room size can wear families down."]
+      ["Park, museum, or younger-child days", "Upper West Side", "Start here when Central Park, AMNH, and nearby flexible time shape the first two days."],
+      ["Short classic-sight or Broadway trip", "Midtown", "Choose the exact subarea around the planned sights; Times Square, Bryant Park, and Grand Central are not one interchangeable base."],
+      ["Harbor and Lower Manhattan days", "Downtown / Tribeca", "Start here when ferries, the Seaport, the memorial area, or downtown waterfront time lead the itinerary."],
+      ["Brooklyn waterfront route", "Brooklyn Heights / Downtown Brooklyn", "Use it when Brooklyn Bridge Park and Lower Manhattan are deliberate anchors, not when every day returns to Midtown."],
+      ["Room-price or Queens access check", "Long Island City", "Treat value and convenience as hypotheses until the exact hotel, station, first two days, and complete stay total are compared."]
     ],
+    matrixHeading: "Compare the area before the hotel",
+    areaHeaders: ["Area", "Start here when", "What it simplifies", "Reset reality", "Main friction", "Nearby anchors", "Exact check"],
     rows: [
-      ["Upper West Side", "Toddlers, museums, Central Park", "Longer rides downtown", "Easy subway but elevator-dependent", "Good", "Low-medium", "Hotel parking not the plan", "High", "AMNH, Central Park, CMOM", "Boutique/chain urban hotels", "Best default family base"],
-      ["Midtown", "First-timers, transit, shows", "Crowds, noise, small rooms", "Easy but busy", "Mixed", "High", "Expensive/avoid car", "High", "Times Square, Bryant Park, observation decks", "Large urban hotels", "Convenient but tiring"],
-      ["Downtown / Tribeca", "Space, waterfront, older kids", "Fewer classic sights nearby", "Good subway/rideshare access", "Good", "Medium", "Expensive/avoid car", "Medium-high", "Ferries, Battery Park, Seaport", "Upscale/suite hotels", "Great if budget allows"],
-      ["Brooklyn Heights / Downtown Brooklyn", "Waterfront, calmer evenings", "Bridge/tunnel planning", "Good if near subway", "Good", "Low-medium", "Not needed", "Medium-high", "Brooklyn Bridge Park, Promenade", "Hotels/suites", "Good neighborhood feel"],
-      ["Long Island City", "Value, skyline views, subway access", "Less classic NYC outside the hotel", "Good if close to train", "Mixed", "Medium", "Varies", "Medium", "Quick rides to Midtown, parks", "Chain/suite hotels", "Good value if transit pencils out"]
+      ["Upper West Side", "Central Park, AMNH, or younger-child park-and-museum time leads the first two days", "Keeps several indoor and outdoor choices in one broad zone", "A hotel return can work only when the selected stops and exact address stay nearby", "Downtown and east-side days can add longer rides or transfers", "Central Park, AMNH, CMOM, Riverside Park", "Map the hotel entrance and both first-day routes; check station accessibility and live elevator status"],
+      ["Midtown", "A short trip centers on Broadway, Bryant Park, Rockefeller Center, Grand Central, or nearby skyline stops", "Can keep several classic sights and one evening in the same broad zone", "The return depends on the exact subarea and entrance, not the word Midtown", "Crowd exposure, station access, room exposure, and hotel scale vary block by block", "Bryant Park, Broadway, Rockefeller Center, Grand Central", "Choose the exact subarea, then check entrances, planned lines, live service, and the room request"],
+      ["Downtown / Tribeca", "Harbor, ferry, memorial, Seaport, or Lower Manhattan time leads the itinerary", "Keeps several downtown anchors close to the base", "Useful for downtown days; it does not shorten an uptown-heavy plan", "Repeat uptown rides and property prices can erase the area-level advantage", "Battery Park City, ferries, Seaport, Lower Manhattan", "Map ferry and attraction entrances, both first days, the uptown route, and the named hotel total"],
+      ["Brooklyn Heights / Downtown Brooklyn", "Brooklyn Bridge Park and Lower Manhattan are deliberate trip anchors", "Keeps waterfront and Brooklyn time from becoming a day-trip add-on", "A return works when the family is already in Brooklyn or Lower Manhattan", "A Manhattan-heavy plan can create repeated river crossings", "Brooklyn Bridge Park, promenade, Downtown Brooklyn", "Check the exact station, lines, accessibility, walking approach, and evening return"],
+      ["Long Island City", "Midtown or Queens access plus a possible room-price or room-function advantage matters", "Can make a Midtown-facing route and Gantry Plaza time more coherent", "Door-to-door return depends on the exact station and hotel entrance", "One-stop language does not prove current value, easy access, or a simple late return", "Gantry Plaza State Park, Midtown-facing waterfront, Queens routes", "Compare live service/access, the first two days, hotel entrance, room setup, and complete stay total"]
     ],
-    areaNote: "Area guidance is planning support, not a personally verified recommendation. Verify subway elevator access, room size, destination fees, stroller route, evening noise, and exact hotel block before booking.",
-    hotelDecision: [
-      ["Decide the first-trip base", "For many families, the Upper West Side is the first area to test because Central Park, AMNH, CMOM, and calmer meals are close together. Midtown can be better for shows or very short first visits."],
-      ["Check stroller and transit reality", "Do not assume a short subway ride is easy with a stroller. Verify station elevator access, transfer count, sidewalk crowding, and whether taxis or rideshares fit your car-seat needs."],
-      ["Price room size honestly", "NYC rooms can be tight. Confirm bed count, sofa bed, connecting rooms, occupancy limits, crib availability, elevator waits, and whether luggage/stroller storage works."],
-      ["Protect evening decompression", "Noise, crowds, and long dinner waits can matter as much as attraction distance. Ask about room placement and choose a base with realistic nearby food."],
-      ["Use official sources", "Check the property room page, hotel FAQ, fee disclosure, cancellation terms, accessibility notes, and booking screen before relying on a third-party snippet."]
-    ],
-    hotelNote: "Research checked against official hotel and destination pages in July 2026. NYC room sizes, destination fees, crib policies, elevators, and cancellation terms vary sharply by property, so verify the exact room type before booking.",
-    hotels: [
-      ["Upper West Side family-base hotels", "Best fit for museum-and-park trips", "Prioritize two-bed rooms, suites, or connecting-room policies; many NYC rooms are smaller than families expect", "Pools are uncommon; choose this area for park/museum access instead", "Breakfast varies by property and may be expensive", "Kitchen/laundry is uncommon unless booking an extended-stay or apartment-style property", "Request crib/rollaway details directly and confirm elevator access", "Do not plan to park; use transit/taxi/rideshare and verify destination fees", "Lower than Times Square, but avenue-facing rooms can still be noisy", "Best fit when Central Park, AMNH, CMOM, and calmer evenings matter most."],
-      ["Midtown convenience hotels", "Best fit for shows, observation decks, and short first visits", "Room size and elevator waits are the big family checks", "Pools are uncommon and not the main reason to stay here", "Breakfast may add meaningful cost; plan nearby quick-service options", "Kitchen/laundry usually limited", "Confirm crib/rollaway, occupancy, and connecting-room rules before booking", "Parking is expensive; check resort/destination fees before comparing rates", "Times Square/cross-town noise and crowds are the main risk", "Best fit when being close to classic sights beats quiet and space."],
-      ["Downtown/Brooklyn suite-style options", "Best fit for families who want more space or a calmer neighborhood", "Look for suite layouts, sofa beds, and a short walk to a useful subway line", "Pools vary and should not be assumed", "Breakfast and kitchenettes are more likely at select-service/suite brands", "Laundry may be easier than in Midtown, but verify by property", "Confirm crib/rollaway and room occupancy policies", "Parking still should not be the default plan", "Usually calmer than Midtown, but subway distance can become the tradeoff", "Best fit when space and evening decompression matter more than being next to every landmark."]
-    ],
+    areaNote: "Use these as route starts, not universal rankings. The exact hotel can reverse the area-level tradeoff through station access, walking route, room setup, price, block conditions, and the family's first two days.",
+    bookingHeading: "Three decisions worth a closer look",
     bookingChecks: [
-      ["Room and fee check", "Verify square footage, bed setup, occupancy, resort/destination fee, crib/rollaway rules, cancellation terms, and whether breakfast or kitchen access is included."],
-      ["Transit and stroller check", "Use official transit/elevator information and the hotel address to verify the exact route to your first two activity days before booking."],
-      ["Noise and reset check", "Ask about room placement away from elevators, street-facing noise, nightlife, service areas, and event spaces if early bedtime matters."]
+      ["Midtown is several different bases", "Times Square, Bryant Park, Rockefeller Center, and Grand Central create different walking and subway patterns. Pin the exact hotel entrance and the first two days before calling a Midtown room central."],
+      ["Verify the whole accessible route", "Use the MTA subway map, accessible-station list, and live elevator status together. An accessible station does not guarantee the preferred entrance, transfer, elevator, or future service will work as expected."],
+      ["Price cross-river bases against the itinerary", "Brooklyn and Long Island City can earn the stay when their route and room total work. Compare the complete hotel price, exact station, transfers, likely returns, and every Manhattan-heavy day before assuming better value."]
     ],
+    clusterHeading: "Move from the area to the rest of the trip",
     clusterLinks: [
-      ["NYC things to do with kids", "Use the activity guide to decide whether your base should optimize for Central Park/AMNH, Downtown/ferries, Brooklyn views, or Midtown sights.", "../things-to-do/new-york-city-with-kids.html", "Open NYC things to do with kids"],
-      ["NYC family itinerary", "Match the stay area to the 1-day, 2-day, 3-day, toddler, teen, or rainy-day route before locking a hotel.", "../family-itinerary/new-york-city-with-kids.html", "Open the NYC family itinerary"],
-      ["How claims are handled", "Review the methodology page for source policy, human-review boundaries, and model-derived planning notes.", "../about.html", "Read the methodology"]
+      ["12 family hotel options", "Compare named properties by room setup, broad total-night range, area, family logistics, and bounded recent online-review observations.", "./new-york-city-family-hotels.html", "Compare New York City family hotels"],
+      ["Things to do with kids", "Use the 12-choice all-ages guide to decide whether the base should favor Central Park, Midtown, Downtown, Brooklyn, or a deliberate Queens day.", "../things-to-do/new-york-city-with-kids.html", "Open New York City things to do with kids"],
+      ["Things to do with teens", "Let an older child choose a skyline, media, art, live-performance, sports, or neighborhood anchor before finalizing the base.", "../things-to-do/new-york-city-with-teens.html", "Open New York City with teens"],
+      ["Family itinerary", "Sequence the first two days and one protected reset before paying for a location that only looks central on a broad map.", "../family-itinerary/new-york-city-with-kids.html", "Build the New York City family itinerary"]
     ],
+    faqTitle: "New York City family stay FAQ",
     faqs: [
-      ["What is the best area to stay in NYC with kids?", "The Upper West Side is often the lowest-friction default for many families because Central Park, AMNH, CMOM, neighborhood food, and calmer evenings are close together."],
-      ["What is the best place to stay in New York City with family?", "For a first family trip, test the Upper West Side first, then compare Midtown, Downtown/Tribeca, Brooklyn Heights/Downtown Brooklyn, and Long Island City against your route, budget, room-size needs, and stroller/transit tolerance."],
-      ["Should families stay in Times Square?", "Times Square can be convenient for shows and first-timers, but families with toddlers should think carefully about noise, crowds, room size, and stroller friction."]
+      ["What is a useful first area to check for a New York City family trip?", "Check the Upper West Side first when Central Park, AMNH, and younger-child park or museum days lead the trip. Use Midtown for a short classic-sight or Broadway route, Downtown for harbor-led days, Brooklyn for a deliberate waterfront plan, or Long Island City for an exact-station and total-price comparison."],
+      ["Should families stay in Times Square?", "Times Square can work when Broadway and nearby Midtown sights lead a short trip. Compare the exact hotel entrance, room exposure, planned walking, station access, meal options, and first two days instead of treating all of Midtown as the same base."],
+      ["Where can families compare specific New York City hotels?", "Use the Family Tripwise New York City family-hotel comparison for 12 named options with broad total-night ranges, room and amenity facts, bounded recent online-review observations, conflicts, and direct map links."]
+    ],
+    sourcesIntro: "Area and transport sources checked July 26, 2026. Recheck current service, elevator status, construction, events, park conditions, and exact hotel routes near the trip.",
+    sources: [
+      ["MTA subway maps", "https://www.mta.info/maps/subway-line-maps"],
+      ["MTA accessible stations", "https://www.mta.info/accessibility/stations"],
+      ["MTA elevator and escalator status", "https://www.mta.info/elevator-escalator-status"],
+      ["Bryant Park", "https://www.bryantpark.org/the-park"],
+      ["Battery Park City parks", "https://bpca.ny.gov/places/parks/"],
+      ["Brooklyn Bridge Park visit information", "https://brooklynbridgepark.org/plan-your-visit/"],
+      ["Gantry Plaza State Park", "https://parks.ny.gov/visit/state-parks/gantry-plaza-state-park"],
+      ["New York City photo source and attribution", "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"]
     ]
   },
   "where-to-stay/chicago-with-kids.html": {

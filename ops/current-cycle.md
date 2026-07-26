@@ -8,20 +8,21 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-015` is review-clean and awaiting exact-path release. It applies review-clean `FT-RES-009` to one teen/tween activity specialist through current SERP, ranking-page, candidate, official-source, persona, mixed-age, responsive, QA, independent-review, and production-verification gates.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-016` is selected to simplify and improve the existing New York City stay-area guide through current SERP, ranking-page, persona, official-source, every-section, responsive, QA, independent-review, and production-verification gates.
 
 The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to begin NYC pages. `FT-EVAL-002` remains evidence-gated, not calendar-triggered.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-25.md`, fresh authenticated API data finalized through 2026-07-23.
-- Latest site release: `FT-PUB-004` at commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf`; Pages run `30184040925` succeeded, the release marker matched, and production invariants/SEO QA passed.
-- Active manual action: `FT-IMP-015`, selected 2026-07-26 under the user's direct instruction.
+- Latest site release: `FT-IMP-015` at commit `77e6cb9322da34ffc13daf84b0851e83773cc382`; Pages run `30198727075` succeeded, the release marker matched, and production invariants/SEO QA passed.
+- Active manual action: `FT-IMP-016`, selected 2026-07-26 under the user's direct instruction.
 - Active substantive Control Room action: none.
-- Latest NYC release: `FT-PUB-004` / `IMP-032` / `SRR-023`, released and production-verified with final review `PASS_WITH_P3`, no P0-P2 findings, 91/91 tests, and production SEO QA at 0 errors and 0 warnings.
+- Latest NYC release: `FT-IMP-015` / `IMP-033` / `SRR-024`, released and production-verified with final review `PASS_WITH_P3`, no P0-P2 findings, 97/97 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
-- Active NYC teen publication: `FT-IMP-015` / `IMP-033` / `SRR-024`; one new 10-choice specialist is review-clean with Curie `PASS_WITH_P3`, no P0-P2 findings, and awaits exact-path release.
-- Later NYC sequence: the existing stay-area page, then the existing itinerary; each remains a separate reviewed transaction.
+- NYC teen publication: complete; production contains one canonical/indexable 10-choice specialist with the expected cluster routes and one sitemap entry.
+- Active NYC stay-area improvement: `FT-IMP-016` / `IMP-034` / `SRR-025`; research and one existing-URL implementation are review-clean with Maxwell `PASS` in cycle 2, no P0-P3 findings, 101/101 tests, and local SEO QA at 0 errors/0 warnings; exact-path release remains.
+- Later NYC sequence: the existing itinerary remains a separate reviewed transaction.
 - Next city after NYC: San Antonio; no implementation scope is pre-approved.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
 
@@ -38,7 +39,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
 - GSC: authenticated read-only API collection is working; the July 25 snapshot has finalized data through July 23, 784 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf`; GitHub Pages run `30184040925` succeeded and production verification passed for the New York City family-hotel comparison
+- Current released implementation: commit `77e6cb9322da34ffc13daf84b0851e83773cc382`; GitHub Pages run `30198727075` succeeded and production verification passed for the New York City teen/tween activity specialist
 
 ## Historical operating threads
 
@@ -210,7 +211,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Continue active direct manual action `FT-IMP-015` through exact-path release and production verification. Research, one-page implementation, local QA, and independent review are complete with no P0-P2 findings. Do not start the stay-area or itinerary transaction in the same action. The Control Room remains the only scheduler for scheduled work.
+Continue active direct manual action `FT-IMP-016` on the existing New York City stay-area URL through exact-path release and production verification. Research, one-page implementation, native QA, and independent review are complete with no P0-P3 findings. Do not start the itinerary transaction in the same action. The Control Room remains the only scheduler for scheduled work.
 
 ## GSC Monitoring
 

@@ -2,11 +2,41 @@
 
 Last updated: 2026-07-26
 
-## Active NYC Teen Review
+## Active NYC Stay-Area Review
+
+### SRR-025: New York City Stay-Area SERP, Persona, Source, And Every-Section Review
+
+Status: done and review-clean inside `FT-IMP-016`
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-016`
+
+Before implementation, inspect current area-intent SERPs, representative ranking pages, qualitative family questions, NYC-P1/P2/P5, current official area/transit sources, and every visible section of the existing page.
+
+Required coverage:
+
+- Confirm the stay-area page remains distinct from the named-property hotel page using observed ranking-page and intent evidence.
+- Record what representative ranking pages answer well, weakly, or not at all, separating local/firsthand authority from usefulness opportunities.
+- Review every current recommendation, comparison, detail, booking-check, source, FAQ, and cluster-link section for keep/compress/replace/remove.
+- Ground retained area roles in route shape, midday reset, child pace, transit/access friction, cost/value, and exact-current-check needs without unsupported universal claims.
+- Define one calm five-area architecture, acceptance/measurement, source freshness, privacy boundaries, and independent review.
+
+Result:
+
+- Refreshed three area-intent SERPs and representative ranking pages, preserving local/firsthand authority as a competitor advantage while identifying comparison, sourcing, and choice-friction opportunities.
+- Revalidated the area-versus-hotel boundary and the five retained bases.
+- Applied NYC-P1 through NYC-P5 to route shape, reset, access, cost/value, and named-property handoff decisions.
+- Audited every visible section and recorded keep/compress/replace/remove decisions, source freshness, claim boundaries, architecture, acceptance, measurement, and privacy.
+- Artifact: `docs/research/new-york-city-stay-area-review.md`.
+- Full repository tests pass 101/101; focused, operator-state, local SEO, responsive, source, privacy, scope, roadmap JSON, and whitespace checks pass.
+- Independent reviewer Maxwell (`019f9e13-9dbc-7440-a637-dfa52b6a719f`) returned `PASS` in cycle 2 with no P0-P3 findings.
+
+## Latest Completed NYC Review
 
 ### SRR-024: New York City Teen/Tween Candidate And Page Review
 
-Status: done and review-clean inside `FT-IMP-015`
+Status: done, released, and production-verified inside `FT-IMP-015`
 
 Selected: 2026-07-26
 

@@ -34,7 +34,8 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-009` | review-clean NYC cluster decision pack | `PASS` | Reviewer Einstein (`019f9574-fcbe-7810-a2e2-53c45e216171`) returned final `PASS` in cycle 3 with no P0-P3 findings after exact keyword, SERP-intersection, representative-page, persona-traceability, pending-status, and one shared-domain correction; native and focused QA passed. |
 | `FT-IMP-014` | NYC all-ages activity improvement review-clean | `PASS_WITH_P3` | Final cycle 3 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for an older-start test selector; exact paths are release-eligible after staged QA. |
 | `FT-PUB-004` | NYC family-hotel comparison released and production-verified | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. Commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed through Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
-| `FT-IMP-015` | NYC teen/tween specialist review-clean | `PASS_WITH_P3` | Curie cycle 2 closed the empty compact-detail pairing P2; no P0-P2 remains. One P3 remains for the generic but licensed/optimized Central Park hero. |
+| `FT-IMP-015` | NYC teen/tween specialist released and production-verified | `PASS_WITH_P3` | Curie cycle 2 closed the empty compact-detail pairing P2; no P0-P2 remains. Commit `77e6cb9322da34ffc13daf84b0851e83773cc382` deployed through Pages run `30198727075`; release marker, production invariants, and production SEO QA passed. One P3 remains for the generic but licensed/optimized Central Park hero. |
+| `FT-IMP-016` | NYC stay-area simplification review-clean | `PASS` | Maxwell cycle 2 closed the stale released-versus-future NYC status P2; no P0-P3 findings remain. Eligible for exact-path release after staged QA. |
 
 ## Open blocking findings
 
@@ -1425,3 +1426,19 @@ Final verification:
 - No P0-P2 findings remain.
 - Full repository tests pass 97/97; focused tests pass 6/6; operator-state QA passes; local SEO QA reports 0 errors and 0 warnings.
 - Curie independently accepted the evidence classification, refreshed SERP traceability, persona grounding, 20-candidate keep/defer work, primary-source support, ten-choice usefulness, mixed-age and supervision boundaries, all-ages separation, internal links, canonical/indexability/sitemap/schema/FAQ alignment, generator parity/idempotency, desktop/mobile containment, privacy, exact 15-path scope, and release policy.
+
+### 2026-07-26 - `FT-IMP-016` review cycles 1-2
+
+**Reviewer:** Maxwell (`019f9e13-9dbc-7440-a637-dfa52b6a719f`), independent read-only review
+
+**Final result: `PASS`**
+
+P0-P2 findings and disposition:
+
+1. `P2` - Reconciled the lower NYC cluster-decision table and ordered sequence so the all-ages, hotel, and teen pages are recorded as released, the stay-area guide is active, and the itinerary is next.
+
+Final verification:
+
+- No P0-P3 findings remain.
+- Maxwell accepted the evidence classification, refreshed SERP and ranking-page usefulness analysis, five-persona grounding, every-section audit, area-versus-hotel boundary, five-area usefulness, source and claim safety, visible/schema FAQ alignment, canonical/indexability/sitemap/internal links, generator parity and idempotency, responsive containment, privacy, exact 11-path scope, single-site-page boundary, and release policy.
+- Full repository tests pass 101/101; focused and state tests pass 9/9; operator-state QA passes; local SEO QA reports 0 errors and 0 warnings; duplicate-key-safe roadmap parsing and `git diff --check` pass.

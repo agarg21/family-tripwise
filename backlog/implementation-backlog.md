@@ -4,9 +4,64 @@ Last updated: 2026-07-26
 
 ## Active NYC Implementation
 
-### IMP-033: Research And Publish The New York City Teen/Tween Activity Specialist
+### IMP-034: Simplify And Improve The New York City Stay-Area Guide
 
 Status: done and review-clean; release pending
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-016`
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/new-york-city-with-kids.html`
+
+Replace repeated universal defaults, generic hotel cards, and the 27-field verification inventory with one calm five-area comparison built around route shape, midday reset, child pace, transit/access friction, and cost/value tradeoffs.
+
+Expected maximum transaction scope:
+
+- `docs/research/new-york-city-stay-area-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/new-york-city-stay-page.test.mjs`
+- `site/where-to-stay/new-york-city-with-kids.html`
+- `status/new-york-city-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Keep the existing canonical/indexable URL and five-area geography job; the separate hotel page owns named-property selection.
+- Use current official sources for material transit/access, attraction-anchor, park, ferry, and operating facts.
+- Treat ranking pages and community discussions as qualitative question/structure input, not demand or firsthand evidence.
+- Do not claim universal best, safety, quiet, exact walking/stroller/transit conditions, stable prices/times, or personally verified experience.
+- Do not edit the sitemap, publish another URL, request indexing, add an affiliate CTA, mutate an external account, send outreach, or add recurring automation.
+
+Acceptance:
+
+- One five-row comparison and five conditional starts replace overlapping recommendation layers.
+- Only high-friction area choices receive deeper notes; exact current checks are visible and actionable.
+- The page routes directly to hotels, all-ages activities, teens, and itinerary planning without taking over their content jobs.
+- Target-only generation, canonical/indexability/internal-link/schema, responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+Local result:
+
+- Replaced nine repeated quick picks and an 11-column categorical table with five conditional starts and one five-row route/reset comparison.
+- Removed the generated duplicate area recommender, generic hotel-decision layer, 27 area-hotel verification fields, universal defaults, and categorical stroller/noise/family-fit verdicts.
+- Added three high-friction decisions, four cluster routes, current MTA/park sources, and three visible/schema-aligned FAQs.
+- Focused tests pass 4/4; target-only regeneration changes no unrelated site file; responsive checks pass at 1280px, 390px, and 320px with a decoded hero, contained comparison scrolling, and no text overlap.
+- Full repository tests pass 101/101; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap parsing, source/privacy/scope, and whitespace checks pass.
+- Independent reviewer Maxwell (`019f9e13-9dbc-7440-a637-dfa52b6a719f`) returned `PASS` in cycle 2 with no P0-P3 findings after the stale NYC release-state table was reconciled.
+- Exact-path release and production verification remain.
+
+## Latest Completed NYC Implementation
+
+### IMP-033: Research And Publish The New York City Teen/Tween Activity Specialist
+
+Status: done, released, and production-verified
 
 Selected: 2026-07-26
 
@@ -59,9 +114,9 @@ Local result:
 - Added a teen route from home and the all-ages NYC guide while preserving the all-ages page's mixed-age job.
 - Focused tests pass 6/6; the full repository suite passes 97/97; operator-state and local SEO QA pass with 0 errors and 0 warnings; desktop/mobile rendering, horizontal containment, duplicate-key-safe roadmap parsing, privacy, exact scope, regeneration, schema, links, and whitespace checks pass.
 - Independent reviewer Curie (`019f9dfa-f5ce-72f3-bad3-63e0fbef84d7`) returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings after the empty compact-detail pairing defect was fixed. One non-blocking P3 remains for the generic but licensed, optimized, and responsive Central Park hero.
-- Exact-path release remains pending.
+- Commit `77e6cb9322da34ffc13daf84b0851e83773cc382` was pushed to `main`; Pages run `30198727075` succeeded. The release marker matched, production invariants passed, and production SEO QA reported 0 errors and 0 warnings.
 
-## Latest NYC Implementation
+## Earlier NYC Implementation
 
 ### IMP-032: Research And Publish The New York City Family-Hotel Comparison
 
