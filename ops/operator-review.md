@@ -35,7 +35,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-014` | NYC all-ages activity improvement review-clean | `PASS_WITH_P3` | Final cycle 3 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for an older-start test selector; exact paths are release-eligible after staged QA. |
 | `FT-PUB-004` | NYC family-hotel comparison released and production-verified | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. Commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed through Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
 | `FT-IMP-015` | NYC teen/tween specialist released and production-verified | `PASS_WITH_P3` | Curie cycle 2 closed the empty compact-detail pairing P2; no P0-P2 remains. Commit `77e6cb9322da34ffc13daf84b0851e83773cc382` deployed through Pages run `30198727075`; release marker, production invariants, and production SEO QA passed. One P3 remains for the generic but licensed/optimized Central Park hero. |
-| `FT-IMP-016` | NYC stay-area simplification review-clean | `PASS` | Maxwell cycle 2 closed the stale released-versus-future NYC status P2; no P0-P3 findings remain. Eligible for exact-path release after staged QA. |
+| `FT-IMP-016` | NYC stay-area simplification released and production-verified | `PASS` | Maxwell cycle 2 closed the stale released-versus-future NYC status P2; no P0-P3 findings remain. Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2` deployed through Pages run `30199465923`; release marker, production invariants, and production SEO QA passed. |
 
 ## Open blocking findings
 

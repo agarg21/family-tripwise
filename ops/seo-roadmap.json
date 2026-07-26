@@ -1453,8 +1453,9 @@
       "title": "Simplify and improve the New York City stay-area guide",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-07-26",
+      "completed_on": "2026-07-26",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "impact": 5,
@@ -1486,8 +1487,12 @@
       "implementation_summary": "Refreshed current area-intent SERPs, ranking-page usefulness, qualitative parent constraints, five NYC personas, primary sources, and every visible section. Rebuilt the existing URL as five conditional starts, one five-row comparison, three high-friction notes, four cluster routes, and three visible/schema-aligned FAQs while routing named-property decisions to the 12-hotel page.",
       "qa_summary": "Focused tests pass 4/4 and the full repository suite passes 101/101; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; target-only regeneration, 1280/390/320 responsive rendering, horizontal containment, image decode, schema/FAQ alignment, source/privacy/scope, duplicate-key-safe roadmap JSON, and whitespace checks pass.",
       "review_summary": "Independent reviewer Maxwell (019f9e13-9dbc-7440-a637-dfa52b6a719f) completed two cycles. Final verdict was PASS with no P0-P3 findings after stale released-versus-future NYC status cells were reconciled.",
-      "release_state": "review-clean-release-pending",
-      "notes": "Selected 2026-07-26 by direct manual user instruction to continue to the next NYC page. One existing URL only; local research, implementation, QA, and independent review are complete with no P0-P3 findings, and exact-path release remains. Do not edit the sitemap, publish a new URL, request indexing, add an affiliate CTA, mutate an external account, send outreach, or add recurring automation."
+      "release_commit": "cd10933489ddf8e6c37780e5c0f20dfa740d60c2",
+      "pages_run": 30199465923,
+      "released_at": "2026-07-26T11:05:37Z",
+      "release_state": "released-and-production-verified",
+      "result": "Released and production-verified five-area New York City family stay guide with five conditional starts, one complete comparison, three high-friction notes, four cluster routes, current primary sources, and three visible/schema-aligned FAQs.",
+      "notes": "Selected 2026-07-26 by direct manual user instruction to continue to the next NYC page. Commit cd10933489ddf8e6c37780e5c0f20dfa740d60c2 deployed successfully through Pages run 30199465923; release.json matched the commit/run, the canonical/indexable page retained five quick-pick starts, the sitemap contained one entry, all action-specific production invariants passed, and production SEO QA returned 0 errors and 0 warnings. One existing URL only. No sitemap edit, new URL, indexing request, affiliate CTA, external-account mutation, outreach, itinerary work, or recurring automation."
     }
   ]
 }

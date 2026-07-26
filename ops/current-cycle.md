@@ -8,21 +8,21 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-016` is selected to simplify and improve the existing New York City stay-area guide through current SERP, ranking-page, persona, official-source, every-section, responsive, QA, independent-review, and production-verification gates.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-016` is completed, released, and production-verified. No substantive action is selected in this reconciliation.
 
 The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to begin NYC pages. `FT-EVAL-002` remains evidence-gated, not calendar-triggered.
 
 ## State Checkpoint
 
-- Latest GSC evidence: `ops/gsc-snapshots/2026-07-25.md`, fresh authenticated API data finalized through 2026-07-23.
-- Latest site release: `FT-IMP-015` at commit `77e6cb9322da34ffc13daf84b0851e83773cc382`; Pages run `30198727075` succeeded, the release marker matched, and production invariants/SEO QA passed.
-- Active manual action: `FT-IMP-016`, selected 2026-07-26 under the user's direct instruction.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-07-26.md`, fresh authenticated API data finalized through 2026-07-24.
+- Latest site release: `FT-IMP-016` at commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; Pages run `30199465923` succeeded, the release marker matched, and action-specific production invariants/SEO QA passed.
+- Active manual action: none.
 - Active substantive Control Room action: none.
-- Latest NYC release: `FT-IMP-015` / `IMP-033` / `SRR-024`, released and production-verified with final review `PASS_WITH_P3`, no P0-P2 findings, 97/97 tests, and production SEO QA at 0 errors and 0 warnings.
+- Latest NYC release: `FT-IMP-016` / `IMP-034` / `SRR-025`, released and production-verified with Maxwell `PASS`, no P0-P3 findings, 101/101 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
 - NYC teen publication: complete; production contains one canonical/indexable 10-choice specialist with the expected cluster routes and one sitemap entry.
-- Active NYC stay-area improvement: `FT-IMP-016` / `IMP-034` / `SRR-025`; research and one existing-URL implementation are review-clean with Maxwell `PASS` in cycle 2, no P0-P3 findings, 101/101 tests, and local SEO QA at 0 errors/0 warnings; exact-path release remains.
-- Later NYC sequence: the existing itinerary remains a separate reviewed transaction.
+- NYC stay-area improvement: complete; production contains the canonical/indexable five-area guide with five quick-pick starts, one sitemap entry, and the expected cluster routes.
+- Later NYC sequence: the existing itinerary remains a separate, unselected reviewed transaction.
 - Next city after NYC: San Antonio; no implementation scope is pre-approved.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
 
@@ -36,10 +36,10 @@ The central Control Room remains the only scheduler. This transaction is allowed
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 25 snapshot has finalized data through July 23, 784 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
+- GSC: authenticated read-only API collection is working; the July 26 snapshot has finalized data through July 24, 921 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `77e6cb9322da34ffc13daf84b0851e83773cc382`; GitHub Pages run `30198727075` succeeded and production verification passed for the New York City teen/tween activity specialist
+- Current released implementation: commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; GitHub Pages run `30199465923` succeeded and production verification passed for the New York City family stay-area guide
 
 ## Historical operating threads
 
@@ -164,11 +164,11 @@ The central Control Room remains the only scheduler. This transaction is allowed
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-25.json`, collected through the read-only API with finalized data through July 23; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-26.json`, collected through the read-only API with finalized data through July 24; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-014` / `IMP-031` is released and production-verified for the indexed NYC all-ages page. The page now provides 12 distinct choices through one filterable decision surface; the latest July 25 public-safe snapshot records 56 impressions at page-level average position 43.32, which remains sparse directional discovery evidence rather than a query rank or causal result. Related demand phrases overlap and are not summed as unique demand. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-014` / `IMP-031` is released and production-verified for the indexed NYC all-ages page. The page now provides 12 distinct choices through one filterable decision surface; the latest July 26 public-safe snapshot records 58 impressions at page-level average position 43.64, which remains sparse directional discovery evidence rather than a query rank or causal result. Related demand phrases overlap and are not summed as unique demand. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -211,7 +211,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Continue active direct manual action `FT-IMP-016` on the existing New York City stay-area URL through exact-path release and production verification. Research, one-page implementation, native QA, and independent review are complete with no P0-P3 findings. Do not start the itinerary transaction in the same action. The Control Room remains the only scheduler for scheduled work.
+No substantive action is selected. `FT-IMP-016` is released and production-verified. Do not start the New York City itinerary or another project action from this mechanical reconciliation. The Control Room remains the only scheduler for scheduled work; a future direct manual instruction remains separately allowed.
 
 ## GSC Monitoring
 
@@ -225,7 +225,7 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight after deployment: sitemap returned 200 with 22 parsed URLs; robots returned 200 and advertises the sitemap; all configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-07-25.json`, collected through the authenticated read-only API on July 25 with finalized data through July 23.
+- Current normalized source: `ops/gsc-snapshots/2026-07-26.json`, collected through the authenticated read-only API on July 26 with finalized data through July 24.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos.

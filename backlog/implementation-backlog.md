@@ -6,7 +6,7 @@ Last updated: 2026-07-26
 
 ### IMP-034: Simplify And Improve The New York City Stay-Area Guide
 
-Status: done and review-clean; release pending
+Status: done, released, and production-verified
 
 Selected: 2026-07-26
 
@@ -55,7 +55,7 @@ Local result:
 - Focused tests pass 4/4; target-only regeneration changes no unrelated site file; responsive checks pass at 1280px, 390px, and 320px with a decoded hero, contained comparison scrolling, and no text overlap.
 - Full repository tests pass 101/101; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap parsing, source/privacy/scope, and whitespace checks pass.
 - Independent reviewer Maxwell (`019f9e13-9dbc-7440-a637-dfa52b6a719f`) returned `PASS` in cycle 2 with no P0-P3 findings after the stale NYC release-state table was reconciled.
-- Exact-path release and production verification remain.
+- Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2` was pushed to `main`; Pages run `30199465923` succeeded. The release marker matched, the canonical/indexable page retained five quick-pick starts and one sitemap entry, action-specific production invariants passed, and production SEO QA reported 0 errors and 0 warnings.
 
 ## Latest Completed NYC Implementation
 
