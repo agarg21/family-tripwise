@@ -63,6 +63,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 28 | `FT-RES-009` New York City SERP-overlap cluster and persona decision pack | Content/product quality | Completed | Current GSC, exact logged-in Semrush records, explicit SERP intersections, five personas, and every-section audits define a five-page NYC architecture without changing `site/**`; independent review `PASS`. |
 | 29 | `FT-IMP-014` improve the New York City all-ages things-to-do hub | Content/product quality | Released and production-verified | Commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1`; Pages run `30172548240`; release marker, production invariants, and production SEO QA passed after review `PASS_WITH_P3` with no P0-P2 findings. |
 | 30 | `FT-PUB-004` research and publish the New York City family-hotel comparison | Content/product quality | Completed and released | Commit `57d765f`; Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
+| 31 | `FT-IMP-015` research and publish the New York City teen/tween activity specialist | Content/product quality | Review-clean; release pending | One 10-choice specialist and durable 20-candidate evidence record passed review cycle 2 with no P0-P2 findings. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -105,6 +106,19 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Release: commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf`; Pages run `30184040925`; release marker matched; the canonical/indexable NYC hotel page, 12 hotel cards, 24 Google Maps links, and one sitemap entry passed production verification; production SEO QA reported 0 errors and 0 warnings.
 - Boundary: one new URL only; the existing stay page retains area/base intent. No booking transaction, indexing request, affiliate CTA, external-account mutation, outreach, or recurring automation.
 - Release gate: durable evidence pack, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+### FT-IMP-015 - Research and publish the New York City teen/tween activity specialist
+
+- Selected: 2026-07-26 by direct manual user instruction.
+- State: completed and review-clean; exact-path release pending.
+- Target: `https://familytripwise.com/things-to-do/new-york-city-with-teens.html`.
+- Demand: exact measured phrases show 590, 480, and 170 searches/month at KD 11, 10, and 13. Related variants overlap and are not summed as unique traffic.
+- Product requirement: one calm teen-choice page built from a broad candidate set, current official facts, distinct teen reasons, one complete comparison, bounded high-friction notes, route shapes, mixed-age handling, cluster links, and visible/schema-aligned FAQs.
+- Local result: 20 candidate roles reviewed, 10 retained, five teen-led starts, one 10-row comparison, five high-friction notes, three bounded route shapes, four current-check groups, four cluster routes, and three visible/schema-aligned FAQs. Home and the all-ages page route to the specialist.
+- QA: focused tests 6/6 and full repository tests 97/97 pass; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; desktop/mobile rendering, horizontal containment, target-only regeneration, schema, source/privacy/scope, duplicate-key-safe roadmap JSON, and whitespace checks pass.
+- Review: Curie (`019f9dfa-f5ce-72f3-bad3-63e0fbef84d7`) returned `PASS_WITH_P3` in cycle 2. The P2 empty compact-detail pairing defect is fixed and regression-tested; no P0-P2 remains. One non-blocking P3 remains for the generic but licensed, optimized, and responsive Central Park hero.
+- Boundary: one new URL only; the existing all-ages page retains mixed-age inventory. No indexing request, affiliate CTA, external-account mutation, outreach, another publication, or recurring automation.
+- Release gate: durable SERP/candidate/source/persona review, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 
 ### FT-OPS-001 - Audit and harden the repository operating model
 

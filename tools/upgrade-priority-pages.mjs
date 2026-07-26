@@ -741,6 +741,7 @@ const activityPages = {
     clusterEyebrow: "Next planning decision",
     clusterTitle: "Continue from the shortlist",
     clusterLinks: [
+      ["New York City with teens", "Use the specialist when an older child should choose the skyline, media, art, live-performance, sports, or neighborhood anchor and the exact age, ticket, sensory, or evening rule matters.", "./new-york-city-with-teens.html", "Open New York City with teens"],
       ["Where to stay in New York City", "Choose the base before final activity order. Upper West Side, Midtown, Downtown, Brooklyn, and Queens create different transport and reset patterns; named hotels remain a separate comparison job.", "../where-to-stay/new-york-city-with-kids.html", "Compare New York City stay areas"],
       ["New York City family itinerary", "Turn one activity anchor, one flexible block, meals, and a weather swap into a realistic one-, two-, or three-day sequence.", "../family-itinerary/new-york-city-with-kids.html", "Build the New York City family itinerary"]
     ],
@@ -1485,6 +1486,114 @@ const teenPages = {
       ["Choose Chicago activities for teens or tweens", "https://www.choosechicago.com/articles/families/top-10-chicago-must-dos-with-teens-or-tweens-2/"],
       ["Chicago photo source and attribution", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"],
       ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
+    ]
+  },
+  "things-to-do/new-york-city-with-teens.html": {
+    title: "Things to Do in New York City With Teens: 10 Picks by Trip Style",
+    description:
+      "Compare 10 things to do in New York City with teens by interest, time, cost, location, flexibility, mixed-age fit, and current official checks.",
+    city: "New York City",
+    schemaName: "New York City teen activity options",
+    compactDetails: true,
+    removeGeneratedAgeSections: true,
+    baseReplacements: [
+      ["<h1>Things to do in New York City with teens</h1>", "<h1>Things to Do in New York City With Teens: 10 Picks by Trip Style</h1>"],
+      ["<p>A focused activity guide for teens in New York City, with the main kids guide kept as the broader planning hub.</p>", "<p>Compare 10 older-kid choices by actual teen payoff, time, cost, location, flexibility, mixed-age fit, and the exact rule that can change the plan.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 26, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Teen fit, time, cost, walking, flexibility, and mixed-age labels are Family Tripwise editorial estimates. Check the exact ticket, age or minor rule, content, effects, weather, access, and schedule before committing.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"]
+    ],
+    links: {
+      allAges: "../things-to-do/new-york-city-with-kids.html",
+      stay: "../where-to-stay/new-york-city-with-kids.html",
+      itinerary: "../family-itinerary/new-york-city-with-kids.html"
+    },
+    quickHeading: "Five ways to let the teen choose the anchor",
+    quickNote: "Choose one older-kid payoff first. The best answer depends on interest, trip base, weather, budget, sibling fit, and the exact ticket rather than a universal top-ten order.",
+    quick: [
+      ["Visual city moment", "SUMMIT One Vanderbilt", "Use this for immersive rooms, skyline photos, and a contained Midtown payoff when visibility and the reflective environment fit."],
+      ["Film, games, and media", "Museum of the Moving Image", "Let the teen choose Behind the Screen, Media Game Lab, Jim Henson, or a current screening instead of treating Queens as a generic museum detour."],
+      ["Interactive challenge", "SPYSCAPE or SPYGAMES", "Choose the exact experience first: museum-style spy challenges and team-based physical games have different timing, effects, and rules."],
+      ["Art or city story", "MoMA or Tenement Museum", "Use MoMA for self-directed art and design; use one exact Tenement tour for a fixed story and Lower East Side context."],
+      ["Live or neighborhood-led day", "Broadway, Yankees, High Line, or DUMBO", "Let the teen choose live performance, sports, architecture, food, photos, or a ferry route, then keep the rest of the day nearby."]
+    ],
+    comparisonNote: "Scan the teen reason first, then the decisive current check. Time, cost class, walking, flexibility, and pairing are editorial estimates, not venue guarantees.",
+    comparisonClass: "teen-comparison",
+    comparisonHeaders: ["Activity", "Teen reason", "Time / cost", "Area / format", "Flexibility", "Check before choosing", "Pair nearby"],
+    rows: [
+      ["SUMMIT One Vanderbilt", "Immersive rooms, skyline views, photos, and a contained visual payoff", "90-150 min / premium paid", "Midtown East / timed indoor-outdoor experience", "Low", "Visibility, exact ticket, effects, footwear and under-16 accompaniment", "Grand Central or early meal"],
+      ["Museum of the Moving Image", "Film, television, games, puppetry, and media-making instead of a general museum checklist", "2-4 hrs / paid; some free windows", "Astoria, Queens / indoor museum", "High", "Hours, galleries, screening ticket, program date and Queens route", "Astoria meal"],
+      ["SPYSCAPE or SPYGAMES", "Codes, observation, strategy, movement, and team challenges", "50 min-2.5 hrs / premium paid", "Midtown West / indoor interactive", "Medium", "Exact product, age/minor rule, team setup, flashing lights and physical fit", "Central Park South meal"],
+      ["Intrepid Museum", "Aircraft, carrier, space shuttle, and optional submarine mission", "3-5 hrs / paid", "Hudson River / large mixed indoor-outdoor museum", "Medium", "Tickets, closures, deck weather and Growler 40-inch/hatch rules", "Short Hudson River walk"],
+      ["MoMA", "Self-directed modern art, design, photography, film, and a teen-chosen gallery mission", "2-3 hrs / paid adults; 16 and under free", "Midtown / large indoor museum", "High", "Tickets, exhibitions, chosen floors, crowds and current hours", "Rockefeller Center or meal"],
+      ["Tenement Museum, one exact tour", "Guided immigrant and neighborhood history with a fixed story rather than a huge collection", "1-2 hrs / paid", "Lower East Side / guided apartment or walking tour", "Low", "Exact tour, recommended age, content, stairs/access and availability", "Teen-chosen Lower East Side food"],
+      ["One selected Broadway show", "A distinctly New York live-performance evening chosen by the teen", "Show-dependent / premium paid", "Theater District / seated performance", "Low", "Production content, age/theatre rule, runtime, fees, seats and return route", "Early nearby meal"],
+      ["Yankee Stadium classic tour or selected game", "Sports history, stadium access, or a live-game goal", "60 min tour or game length / paid", "Bronx / stadium", "Low", "Tour versus game, schedule, weather, bags, mobile tickets and sensory needs", "Keep the Bronx block simple"],
+      ["High Line and Chelsea, one bounded segment", "Architecture, public art, photos, movement, and a teen-chosen food stop", "60-120 min / free", "Chelsea / exposed linear park", "High", "Entry, exit, elevator status, weather, crowds and walking tolerance", "Chelsea Market or Hudson River"],
+      ["NYC Ferry to DUMBO / Brooklyn Bridge Park", "Skyline movement, bridge photos, food, and neighborhood time for a lower ticket cost", "2-4 hrs / lower-cost paid ferry", "East River and Brooklyn / exposed route", "Medium", "Route, fare, schedule, service alerts, weather and return plan", "DUMBO meal or one park pier"]
+    ],
+    detailsEyebrow: "High-friction choices",
+    detailsTitle: "Five choices that need an exact decision",
+    detailsNote: "All 10 choices are compared above. These five get more space because the ticket product, physical rule, content, visibility, or route can materially change the family's answer.",
+    details: [
+      ["SUMMIT One Vanderbilt", "Immersive rooms and skyline views create an obvious visual payoff, especially for a teen who wants photos.", "Best when the family values the experience enough to accept a timed premium ticket and weather-dependent visibility.", "Reflective spaces, effects, crowds, footwear rules, and poor visibility can reduce the value.", "Check the exact ticket, current experience guidance, visibility, and under-16 accompaniment before buying.", "Keep the next stop close to Grand Central and do not stack another observation deck.", "Recheck the ticket terms, visibility, effects, and current entry guidance near the visit.", "Pair with Grand Central or an early Midtown meal."],
+      ["SPYSCAPE or SPYGAMES", "The museum-style spy experience and team-based physical games support different interests in strategy, movement, and competition.", "Best when the family chooses the product rather than buying an ambiguous bundle.", "Age guidance, team setup, flashing lights, physical demands, duration, and minor policies differ by product.", "Read the exact ticket details and let the teen choose cognitive challenges, physical games, or both.", "Use comfortable clothing and keep a lower-sensory sibling alternative available when needed.", "Recheck product, age, team, effects, clothing, access, and minor guidance near the visit.", "Pair with a simple Midtown meal or Central Park South."],
+      ["Intrepid Museum and Growler", "The carrier, aircraft, space shuttle, and submarine can become one coherent machine-and-history mission.", "Best for teens who actively want aviation, naval history, engineering, or space.", "Growler requires a 40-inch minimum and passing a replica hatch without assistance; narrow spaces and an early line closure can matter.", "Choose the must-see area before arrival and confirm current closures, weather, tickets, and access.", "Treat Intrepid as the day's large museum rather than a short stop before another major anchor.", "Recheck tickets, closures, deck weather, Growler access, and line status near the visit.", "Pair with a short Hudson River walk and easy meal."],
+      ["Tenement Museum", "One guided story can make immigration, work, housing, and neighborhood change concrete.", "Best for a teen interested in history and conversation who accepts a fixed tour format.", "The museum is available only through guided apartment or walking tours; age guidance, themes, stairs, and availability vary.", "Select the exact tour by story, recommended age, access, duration, and current inventory.", "Use a teen-chosen Lower East Side food stop as the flexible payoff after the fixed tour.", "Recheck the selected tour's story, age guidance, access, duration, and availability.", "Pair with one Lower East Side meal, not another large museum."],
+      ["Broadway or Yankee Stadium", "A chosen live show, game, or stadium tour can be the trip's strongest teen-owned anchor.", "Best when the teen picks the production or sports product and the family accepts the fixed timing.", "Content, age rules, runtime, weather, bags, ticket fees, game duration, and evening return are product-specific.", "For Broadway, check the exact production and theatre. For Yankees, choose classic tour, pregame tour, or game and note that pregame products can require a separate game ticket.", "Build the meal and return route around the event rather than adding a second timed attraction.", "Recheck the exact production, tour or game, age rule, schedule, weather, bags, fees, and return timing.", "Pair Broadway with an early Theater District meal; keep a Bronx sports day simple."]
+    ],
+    plansEyebrow: "Bounded teen routes",
+    plansTitle: "Three route shapes with one real anchor",
+    plans: {
+      "Midtown visual and creative route": "Choose SUMMIT, MoMA, SPYSCAPE, or one Broadway show as the anchor. Add one teen-chosen meal and at most one short nearby walk; do not stack multiple premium timed attractions.",
+      "Queens media or Brooklyn skyline route": "Use Museum of the Moving Image plus an Astoria meal, or take one NYC Ferry route to DUMBO and choose a single Brooklyn Bridge Park pier. Check the exact return before leaving Manhattan.",
+      "History, sports, or West Side route": "Choose one Tenement tour, Intrepid visit, Yankee Stadium product, or bounded High Line segment. Keep the second block flexible and in the same area whenever possible."
+    },
+    clusterLinks: [
+      ["All-ages activity hub", "Use the main 12-choice guide when younger siblings, grandparents, stroller needs, free choices, or a broad first-trip shortlist change the answer.", "./new-york-city-with-kids.html", "Open New York City things to do with kids"],
+      ["Family hotel comparison", "Compare 12 named properties by room setup, approximate nightly range, area, family logistics, and bounded online review themes.", "../where-to-stay/new-york-city-family-hotels.html", "Compare New York City family hotels"],
+      ["Where to stay", "Choose the lodging base before locking teen routes; Midtown, Downtown, Brooklyn, Queens, and the Upper West Side create different return patterns.", "../where-to-stay/new-york-city-with-kids.html", "Compare New York City stay areas"],
+      ["Family itinerary", "Turn one teen anchor, meals, weather, and mixed-age alternatives into a realistic one-, two-, or three-day sequence.", "../family-itinerary/new-york-city-with-kids.html", "Build the New York City family itinerary"]
+    ],
+    officialChecksEyebrow: "Before locking the plan",
+    officialChecksTitle: "Four current checks that can change the choice",
+    officialChecks: [
+      ["Timed, immersive, and interactive products", "SUMMIT and SPYSCAPE use exact tickets with different effects, durations, and minor rules. Choose the product before comparing the price.", [["https://summitov.com/ticketterms/", "SUMMIT ticket terms"], ["https://summitov.com/codeofconduct/", "SUMMIT code of conduct"], ["https://spyscape.com/all-access", "SPYSCAPE all access"], ["https://spyscape.com/tickets-new-york", "SPYSCAPE and SPYGAMES tickets"]]],
+      ["Museums and exact experiences", "Moving Image screenings, Intrepid's Growler, MoMA galleries, and Tenement tours have different add-ons, physical access, age guidance, or fixed formats.", [["https://movingimage.org/education/game-design-lab/", "Moving Image Media Game Lab"], ["https://intrepidmuseum.org/exhibitions/permanent-exhibitions/submarine-growler", "Intrepid Growler rules"], ["https://www.moma.org/visit/tips", "MoMA visit FAQ"], ["https://www.tenement.org/plan-a-visit/", "Tenement Museum visit planning"]]],
+      ["Shows, tours, and games", "Broadway advisories belong to the exact production and theatre. Yankee Stadium classic tours, pregame products, and games are not interchangeable.", [["https://www.broadway.org/shows", "Current Broadway shows and advisories"], ["https://www.mlb.com/yankees/ballpark/tours/public", "Yankee Stadium public tours"], ["https://www.mlb.com/yankees/ballpark/information/know-before-you-go", "Yankee Stadium 2026 guide"]]],
+      ["Outdoor and cross-borough routes", "High Line elevator status, NYC Ferry schedules, weather, and the chosen Brooklyn Bridge Park pier shape the route. Set your family's supervision boundaries and check the exact outbound and return route.", [["https://www.thehighline.org/visit/", "High Line visit information"], ["https://www.ferry.nyc/ticketing-info/", "NYC Ferry ticketing"], ["https://brooklynbridgepark.org/plan-your-visit/maps-and-directions/", "Brooklyn Bridge Park maps and directions"]]]
+    ],
+    visibleFaqs: true,
+    faqTitle: "New York City with teens FAQ",
+    faqs: [
+      ["What are the strongest New York City choices for teens?", "Start with the teen's interest: SUMMIT for immersive skyline views, Moving Image for film and games, SPYSCAPE for interactive challenges, Intrepid for machines and space, MoMA for art and design, or a selected tour, show, sports product, or neighborhood route for a more specific payoff."],
+      ["How should a mixed-age family use this page?", "Let the teen choose one anchor, then use the all-ages guide or a split plan for younger siblings when content, effects, physical rules, duration, or evening timing do not fit everyone."],
+      ["Can teenagers explore New York City attractions on their own?", "This guide does not make independent-roaming or safety assurances. Check the exact venue's minor rule, route, transit conditions, time of day, and your own family's supervision plan."]
+    ],
+    sourcesIntro: "Official attraction, venue, park, city, ferry, and licensing sources checked July 26, 2026. Reopen the exact ticket, tour, show, route, and access page near the visit because inventory, prices, policies, effects, weather, and service can change.",
+    sources: [
+      ["SUMMIT ticket terms", "https://summitov.com/ticketterms/"],
+      ["SUMMIT code of conduct", "https://summitov.com/codeofconduct/"],
+      ["Museum of the Moving Image Media Game Lab", "https://movingimage.org/education/game-design-lab/"],
+      ["Museum of the Moving Image tween and teen programs", "https://movingimage.org/education/tween-teen-programs/"],
+      ["Museum of the Moving Image visit information", "https://movingimage.org/visit/"],
+      ["SPYSCAPE all access", "https://spyscape.com/all-access"],
+      ["SPYSCAPE and SPYGAMES tickets", "https://spyscape.com/tickets-new-york"],
+      ["Intrepid Museum Growler", "https://intrepidmuseum.org/exhibitions/permanent-exhibitions/submarine-growler"],
+      ["Intrepid Museum accessibility tools", "https://intrepidmuseum.org/resources/accessibility-tools"],
+      ["MoMA visit FAQ", "https://www.moma.org/visit/tips"],
+      ["MoMA family information", "https://www.moma.org/visit/families/"],
+      ["Tenement Museum plan a visit", "https://www.tenement.org/plan-a-visit/"],
+      ["Broadway League family guidance", "https://www.broadway.org/info/popular-new-york-broadway-shows-for-families"],
+      ["Current Broadway shows and advisories", "https://www.broadway.org/shows"],
+      ["Yankee Stadium public tours", "https://www.mlb.com/yankees/ballpark/tours/public"],
+      ["Yankee Stadium 2026 guide", "https://www.mlb.com/yankees/ballpark/information/know-before-you-go"],
+      ["High Line visit information", "https://www.thehighline.org/visit/"],
+      ["NYC Parks High Line", "https://www.nycgovparks.org/parks/the-high-line"],
+      ["NYC Ferry ticketing", "https://www.ferry.nyc/ticketing-info/"],
+      ["NYC Ferry routes and schedules", "https://www.ferry.nyc/routes-and-schedules/"],
+      ["Brooklyn Bridge Park maps and directions", "https://brooklynbridgepark.org/plan-your-visit/maps-and-directions/"],
+      ["New York City photo source and attribution", "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"]
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {

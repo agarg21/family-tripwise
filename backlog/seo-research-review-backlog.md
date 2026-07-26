@@ -1,6 +1,34 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-25
+Last updated: 2026-07-26
+
+## Active NYC Teen Review
+
+### SRR-024: New York City Teen/Tween Candidate And Page Review
+
+Status: done and review-clean inside `FT-IMP-015`
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-015`
+
+Before publication, inspect the distinct teen/tween SERP, representative ranking pages, qualitative family discussions, a broad current candidate set, direct official sources, NYC-P4, mixed-age constraints, and the intended page decision flow.
+
+Required coverage:
+
+- Query and SERP boundary validation against the existing all-ages page.
+- Candidate keep/defer decisions with a distinct teen decision role for every retained activity.
+- Current official age, height, ticket, access, weather, content, minor/supervision, and operating evidence where material; unresolved fields remain unknown.
+- Ranking-page usefulness analysis separating firsthand/local advantages from structure, freshness, comparison, and decision-support opportunities.
+- One calm scan-first comparison, bounded high-friction notes, route shapes, mixed-age handling, cluster links, visible/schema-aligned FAQs, acceptance/measurement, privacy, and independent review.
+
+Result:
+
+- Confirmed a distinct teen result family using the existing exact-query/overlap record and fresh July 26 public SERP checks.
+- Separated firsthand/local/current-event strengths from comparison, source freshness, choice, and route-support opportunities.
+- Reviewed 20 candidate roles, retained 10, and recorded keep/defer rationale, direct primary evidence, unresolved checks, NYC-P4 traceability, claim boundaries, page architecture, acceptance, and measurement.
+- Artifact: `docs/research/new-york-city-teen-activity-review.md`.
+- Research and implementation are QA-green and review-clean. Curie (`019f9dfa-f5ce-72f3-bad3-63e0fbef84d7`) returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings.
 
 ## Active NYC Hotel Review
 

@@ -34,6 +34,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-009` | review-clean NYC cluster decision pack | `PASS` | Reviewer Einstein (`019f9574-fcbe-7810-a2e2-53c45e216171`) returned final `PASS` in cycle 3 with no P0-P3 findings after exact keyword, SERP-intersection, representative-page, persona-traceability, pending-status, and one shared-domain correction; native and focused QA passed. |
 | `FT-IMP-014` | NYC all-ages activity improvement review-clean | `PASS_WITH_P3` | Final cycle 3 closed both P2 findings; no P0-P2 remains. One non-blocking P3 remains for an older-start test selector; exact paths are release-eligible after staged QA. |
 | `FT-PUB-004` | NYC family-hotel comparison released and production-verified | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. Commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed through Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
+| `FT-IMP-015` | NYC teen/tween specialist review-clean | `PASS_WITH_P3` | Curie cycle 2 closed the empty compact-detail pairing P2; no P0-P2 remains. One P3 remains for the generic but licensed/optimized Central Park hero. |
 
 ## Open blocking findings
 
@@ -1398,3 +1399,29 @@ Final verification:
 - Full repository tests pass 91/91; operator-state QA passes; SEO QA reports 0 errors and 0 warnings.
 - Exact 14-path scope, duplicate-key-safe roadmap parsing, activity-page non-change, source reachability, image decode/current-source selection, responsive 1280/390/320 behavior, privacy, canonical/indexability/sitemap/schema/internal links, target-only idempotency, and `git diff --check` pass.
 - Release commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed successfully through Pages run `30184040925`. The release marker matched; the canonical/indexable page, 12 hotel cards, 24 Google Maps links, and one sitemap entry passed production verification; production SEO QA reported 0 errors and 0 warnings.
+
+### 2026-07-26 - `FT-IMP-015` review cycles 1-2
+
+**Reviewer:** Curie (`019f9dfa-f5ce-72f3-bad3-63e0fbef84d7`), Content Systems & Evidence Reviewer
+
+**Final result: `PASS_WITH_P3`**
+
+P0-P2 findings and disposition:
+
+1. `P2` - All five compact detail rows omitted the field consumed before `Pair nearby`, which rendered five empty pairing sections. Added the missing current-check field to every row, regenerated the page, and added regression assertions against empty or `undefined` output.
+
+Additional improvements:
+
+- Added a compact exact-query-to-representative-result table for the July 26 SERP refresh.
+- Rewrote internal-sounding outdoor-route copy as direct family supervision and outbound/return-route guidance.
+- Replaced the stale NYC Parks hostname with the current official URL after the old host returned 401 in a 22-link source probe.
+
+Residual finding:
+
+1. `P3` - The licensed Central Park hero is visually generic and is not one of the ten selected activities. It is correctly attributed, optimized, responsive, and acceptable for this release.
+
+Final verification:
+
+- No P0-P2 findings remain.
+- Full repository tests pass 97/97; focused tests pass 6/6; operator-state QA passes; local SEO QA reports 0 errors and 0 warnings.
+- Curie independently accepted the evidence classification, refreshed SERP traceability, persona grounding, 20-candidate keep/defer work, primary-source support, ten-choice usefulness, mixed-age and supervision boundaries, all-ages separation, internal links, canonical/indexability/sitemap/schema/FAQ alignment, generator parity/idempotency, desktop/mobile containment, privacy, exact 15-path scope, and release policy.

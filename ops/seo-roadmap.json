@@ -1393,6 +1393,54 @@
       "release_state": "released-and-production-verified",
       "result": "Released and production-verified 12-property comparison backed by a 22-candidate evidence pack, current official property facts, rough total-night planning ranges, bounded review observations and family-context limits, trip-style routing, direct map links, and visible/schema-aligned FAQs.",
       "notes": "Selected 2026-07-25 by direct manual user instruction. Commit 57d765f4fb488b5f8f077a6cddc9023901b3b4bf deployed successfully through Pages run 30184040925; release.json matched the commit, the canonical/indexable page contained 12 hotel cards and 24 Google Maps links, the sitemap contained one entry, and production SEO QA returned 0 errors and 0 warnings. One new indexable URL only. No booking transaction, indexing request, affiliate CTA, external-account mutation, outreach, another page publication, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-015",
+      "implementation_backlog_id": "IMP-033",
+      "research_backlog_id": "SRR-024",
+      "title": "Research and publish the New York City teen/tween activity specialist",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "in_progress",
+      "selected_on": "2026-07-26",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 2,
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 5,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-teens.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-teen-activity-review.md",
+        "tools/generate-pages.mjs",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/new-york-city-teen-page.test.mjs",
+        "site/things-to-do/new-york-city-with-teens.html",
+        "site/things-to-do/new-york-city-with-kids.html",
+        "site/index.html",
+        "site/sitemap.xml",
+        "status/new-york-city-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "One canonical teen/tween specialist helps families choose roughly 8-12 earned NYC activities by teen interest, trip shape, exact-product friction, weather, cost, location, mixed-age fit, and supervision needs without duplicating the all-ages page.",
+      "production_invariant": "The new NYC teen URL is canonical, indexable, present once in the sitemap, and linked from home and the existing NYC all-ages page; it introduces no unsupported universal age-fit, safety, independent-roaming, exact-route/transit, stable-price/hour, or personally verified claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-25 with finalized data through 2026-07-23. The proposed URL has no GSC row because it does not exist; the existing NYC all-ages page has 56 impressions at page-level average position 43.32. This is directional context, not a query rank or causal result.",
+      "implementation_summary": "Reviewed 20 candidate roles and retained 10 distinct teen choices. Built one canonical/indexable specialist with five teen-led starts, a complete 10-row comparison, five high-friction notes, three bounded route shapes, four current-check groups, four cluster routes, and three visible/schema-aligned FAQs; home and the all-ages page route to it.",
+      "qa_summary": "Focused tests pass 6/6 and the full repository suite passes 97/97; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; desktop/mobile rendering, horizontal containment, target-only regeneration, schema, source/privacy/scope, duplicate-key-safe roadmap JSON, and whitespace checks pass.",
+      "review_summary": "Independent reviewer Curie (019f9dfa-f5ce-72f3-bad3-63e0fbef84d7) completed two cycles. Final verdict was PASS_WITH_P3 with no P0-P2 findings after the empty compact-detail pairing defect was corrected and regression-tested. One non-blocking P3 remains for the generic but licensed, optimized, and responsive Central Park hero.",
+      "release_state": "review-clean-release-pending",
+      "result": "Review-clean 10-choice New York City teen specialist backed by a 20-candidate evidence record, current primary sources, teen-led starts, exact-product and mixed-age checks, bounded routes, cluster links, and visible/schema-aligned FAQs.",
+      "notes": "Selected 2026-07-26 by direct manual user instruction. One new indexable URL only. No indexing request, affiliate CTA, external-account mutation, outreach, another page publication, or recurring automation."
     }
   ]
 }

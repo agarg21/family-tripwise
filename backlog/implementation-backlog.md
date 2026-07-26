@@ -2,6 +2,65 @@
 
 Last updated: 2026-07-26
 
+## Active NYC Implementation
+
+### IMP-033: Research And Publish The New York City Teen/Tween Activity Specialist
+
+Status: done and review-clean; release pending
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-015`
+
+Target:
+
+- `https://familytripwise.com/things-to-do/new-york-city-with-teens.html`
+
+Create one current teen/tween decision page after reviewing the distinct teen SERP, representative ranking pages, current parent/teen questions, a broad activity candidate set, official sources, NYC-P4, mixed-age constraints, and the intended scan-first flow.
+
+Expected maximum transaction scope:
+
+- `docs/research/new-york-city-teen-activity-review.md`
+- `tools/generate-pages.mjs`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/new-york-city-teen-page.test.mjs`
+- `site/things-to-do/new-york-city-with-teens.html`
+- `site/things-to-do/new-york-city-with-kids.html`
+- `site/index.html`
+- `site/sitemap.xml`
+- `status/new-york-city-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Publish exactly one new canonical/indexable URL and keep the existing all-ages page as the mixed-age inventory.
+- Use current official sources for material age, height, ticket, access, weather, supervision, content, and operating claims.
+- Use community and ranking-page observations only as qualitative question/structure inputs; do not copy firsthand authority or treat anecdotes as demand.
+- Do not claim universal teen fit, safety, permission to roam independently, exact route/transit conditions, stable prices/hours, or personally verified experience.
+- Do not request indexing, add an affiliate CTA, mutate an external account, send outreach, publish another URL, or add recurring automation.
+
+Acceptance:
+
+- A broad candidate set produces roughly 8-12 earned choices with distinct teen reasons; no list-length quota.
+- The page starts from teen interests and trip shape, not age labels alone, and exposes exact-product, booking, content, weather, route, cost, and supervision checks where material.
+- It includes one complete comparison, only a bounded set of deeper high-friction notes, realistic route shapes, mixed-age handling, visible/schema-aligned FAQs, current official sources, and direct routes to all-ages, hotels, stay areas, and itinerary planning.
+- Home and the existing all-ages NYC page route to the specialist without changing another page's content job.
+- Targeted generation, sitemap/internal-link/schema, responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+Local result:
+
+- Reviewed 20 candidate roles and retained 10 distinct teen choices.
+- Added one canonical/indexable specialist with five teen-led starts, one 10-row comparison, five high-friction notes, three bounded route shapes, four current-check groups, four cluster routes, and three visible/schema-aligned FAQs.
+- Added a teen route from home and the all-ages NYC guide while preserving the all-ages page's mixed-age job.
+- Focused tests pass 6/6; the full repository suite passes 97/97; operator-state and local SEO QA pass with 0 errors and 0 warnings; desktop/mobile rendering, horizontal containment, duplicate-key-safe roadmap parsing, privacy, exact scope, regeneration, schema, links, and whitespace checks pass.
+- Independent reviewer Curie (`019f9dfa-f5ce-72f3-bad3-63e0fbef84d7`) returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings after the empty compact-detail pairing defect was fixed. One non-blocking P3 remains for the generic but licensed, optimized, and responsive Central Park hero.
+- Exact-path release remains pending.
+
 ## Latest NYC Implementation
 
 ### IMP-032: Research And Publish The New York City Family-Hotel Comparison

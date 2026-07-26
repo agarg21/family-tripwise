@@ -297,6 +297,7 @@ const cities = [
 const agePages = [
   { slug: "chicago", age: "teens", volume: "720 exact; 320 for Chicago with teens" },
   { slug: "las-vegas", age: "teens", volume: "590 exact; 720 alternate word order" },
+  { slug: "new-york-city", age: "teens", volume: "590 exact; 480 alternate word order" },
   { slug: "san-diego", age: "teens", volume: "590 exact" },
   { slug: "san-diego", age: "toddlers", volume: "260 exact; 260 San Diego toddler activities" },
   { slug: "san-antonio", age: "teens", volume: "140 exact; 390 alternate word order" }
@@ -2236,6 +2237,7 @@ ${cities.map((city) => `          <article class="activity-card">
           <article class="activity-card"><h3>San Diego with teens</h3><p>Use this when La Jolla, coast time, food stops, zoo highlights, and fewer little-kid resets are the better trip shape.</p><p><a class="text-link" href="./things-to-do/san-diego-with-teens.html">Open San Diego teen guide</a></p></article>
           <article class="activity-card"><h3>Chicago with teens</h3><p>Use this when architecture, museums, Riverwalk food, skyline views, and weather-aware routing matter more than playground-heavy pacing.</p><p><a class="text-link" href="./things-to-do/chicago-with-teens.html">Open Chicago teen guide</a></p></article>
           <article class="activity-card"><h3>Las Vegas with teens</h3><p>Use this when Red Rock, immersive exhibits, shows, food, heat, and late-day energy require different choices than a younger-kid trip.</p><p><a class="text-link" href="./things-to-do/las-vegas-with-teens.html">Open Las Vegas teen guide</a></p></article>
+          <article class="activity-card"><h3>New York City with teens</h3><p>Use this when media, art, skyline, live performance, sports, food, and bounded neighborhood routes matter more than a younger-kid checklist.</p><p><a class="text-link" href="./things-to-do/new-york-city-with-teens.html">Open New York City teen guide</a></p></article>
         </div>
       </section>
     </main>
