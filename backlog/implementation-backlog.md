@@ -2,11 +2,62 @@
 
 Last updated: 2026-07-26
 
-## Active NYC Implementation
+## Ready San Antonio Implementation
+
+### IMP-036: Improve The San Antonio All-Ages Things-To-Do Hub
+
+Status: ready; not selected
+
+Roadmap ID: `FT-IMP-018`
+
+Target:
+
+- `https://familytripwise.com/things-to-do/san-antonio-with-kids.html`
+
+Replace the repeated six-choice page with one current, evidence-backed decision surface built from a broad candidate review and `SA-P1` through `SA-P5`.
+
+Expected maximum transaction scope:
+
+- `docs/research/san-antonio-activity-expansion-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/san-antonio-activities-page.test.mjs`
+- `site/things-to-do/san-antonio-with-kids.html`
+- `status/san-antonio-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Keep the existing canonical/indexable URL and its one sitemap entry.
+- Review at least 18 candidate roles and retain roughly 10-14 only when the evidence supports a distinct decision role.
+- Use current direct official sources for material attraction, access, ticket, weather, seasonal, and operating facts.
+- Treat ranking pages and community discussions as qualitative question/structure input, not demand, firsthand evidence, or verified universal family experience.
+- Do not claim exact route/timing, stroller or accessibility practicality, safety, stable prices/hours, weather suitability, universal age/family fit, or personally verified experience.
+- Do not edit sibling pages or the sitemap, publish another URL, request indexing, add an affiliate CTA, mutate an external account, send outreach, start the hotel page, or add recurring automation.
+
+Acceptance:
+
+- One complete filterable comparison and five conditional persona starts replace repeated cards, universal quick picks, duplicate detail fields, and mini-itineraries.
+- Younger-child, heat/indoor, free/budget, teen/mixed-age, and theme-park decisions are useful without becoming separate URLs.
+- Only high-friction choices receive deep notes; teen, stay, and itinerary jobs route to their existing pages.
+- Visible FAQs and schema agree.
+- Target-only generation, canonical/indexability/sitemap/internal-link/schema, responsive/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+Baseline and measurement:
+
+- Fresh July 26 GSC snapshot: 11 impressions, 0 clicks, page-level average position 64.36.
+- Exact Semrush phrases include 5,400, 1,600, and 880 monthly searches; variants overlap and are not summed.
+- Observe crawl and query-family discovery after any separately authorized release; do not request indexing or claim causation.
+
+## Latest Completed NYC Implementation
 
 ### IMP-035: Review And Improve The New York City Family Itinerary
 
-Status: review-clean and release-pending
+Status: done, released, and production-verified
 
 Selected: 2026-07-26
 
@@ -56,9 +107,10 @@ Local result:
 - Focused tests pass 4/4; target-only and full generation change no unrelated site file.
 - Full repository tests pass 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings.
 - Responsive checks pass at 1280px, 390px, and 320px with a decoded image, contained sticky-column comparison scrolling, no body overflow, and no text overlap.
-- Exact-path source/privacy/roadmap JSON/whitespace checks and independent review remain before release.
+- Exact-path source/privacy/roadmap JSON/whitespace checks and independent review passed before release.
+- Commit `d0c4a7dc565dea809d4d2b12caa4033b40cafe22` deployed successfully through Pages run `30204670128`; production invariants and SEO QA passed.
 
-## Latest Completed NYC Implementation
+## Prior Completed NYC Implementation
 
 ### IMP-034: Simplify And Improve The New York City Stay-Area Guide
 

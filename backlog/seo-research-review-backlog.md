@@ -2,7 +2,60 @@
 
 Last updated: 2026-07-26
 
-## Active NYC Itinerary Review
+## Latest Completed San Antonio Cluster Review
+
+### SRR-027: San Antonio SERP-Overlap Cluster, Persona, And Page Decision Pack
+
+Status: complete and review-clean
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-RES-010`
+
+Build a complete San Antonio family query universe; collect current keyword evidence and observed SERP overlap; inspect representative ranking pages and qualitative parent/community constraints; derive usable persona hypotheses; audit every canonical/indexable San Antonio page and every visible section; define one non-cannibalizing page architecture; and promote exactly one bounded next implementation if evidence supports it.
+
+Boundaries:
+
+- Research only; do not edit `site/**`, publish, deploy, or request indexing.
+- Do not treat anecdotes as demand or desk research as firsthand experience.
+- Do not sum overlapping keyword variants into unique traffic.
+- Do not create a hotel, toddler, weather, budget, or other page merely because a modifier exists.
+- No external-account mutation, outreach, affiliate CTA, another city action, or recurring automation.
+
+Result:
+
+- Built a complete San Antonio family query universe from current logged-in Semrush evidence without summing overlapping variants.
+- Recorded high-confidence observed overlap for the two core all-ages query sets and the two core family-hotel query sets; marked incomplete free, toddler, itinerary, and stay intersections `UNKNOWN` rather than inventing counts.
+- Reviewed representative official, local, firsthand-family, commercial, and community pages while keeping local/firsthand authority separate from usefulness opportunities.
+- Derived five research-hypothesis personas: `SA-P1` first-time icon family, `SA-P2` heat-and-reset younger-child family, `SA-P3` theme-park/resort family, `SA-P4` teen/mixed-age family, and `SA-P5` budget/local-style family.
+- Audited every visible section of all four canonical/indexable San Antonio pages.
+- Kept all four existing page roles, approved one future named-property hotel comparison after an evidence pack, and rejected separate toddler, indoor, resort, pool, duration, and current-weekend URLs for this pass.
+- Promoted `FT-IMP-018` / `IMP-036` as the only next implementation: improve the existing all-ages things-to-do hub.
+- Artifact: `docs/research/san-antonio-family-cluster-decision-pack.md`.
+- Status matrix: `status/san-antonio-pages.md`.
+- Full repository tests pass 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap JSON, focused SERP/persona/action/source/scope, 35-URL reachability, privacy, exact-path, no-site, and whitespace checks pass.
+- Independent reviewer Goodall (`019f9ec6-b438-7d33-9c60-658a5706ac29`) returned `PASS` in cycle 2 with no P0-P3 findings after exact-versus-domain SERP intersections, persona source traceability, direct ranking/community links, and two audit counts were corrected.
+
+## Ready San Antonio Page Review
+
+### SRR-028: San Antonio All-Ages Candidate, Persona, Source, And Every-Section Review
+
+Status: ready; not selected
+
+Roadmap ID: `FT-IMP-018`
+
+Before implementation, inspect at least 18 candidate activity roles, current direct official sources, representative ranking pages, qualitative parent constraints, all five San Antonio persona hypotheses, and every planned section of the existing all-ages page.
+
+Required coverage:
+
+- Keep roughly 10-14 choices only when each earns a distinct family decision role; do not use a list-length quota.
+- Trace `SA-P1` through `SA-P5` to conditional starts, comparison fields, filters, high-friction notes, stop rules, and cluster routes.
+- Provide real younger-child, heat/indoor, free/budget, teen/mixed-age, and theme-park routing.
+- Replace repeated cards, quick picks, detail fields, and mini-itineraries with one calm scan-first decision flow.
+- Use current direct official sources for every material retained fact and leave unresolved route, stroller, accessibility, ticket, weather, price, age-fit, and family-fit claims unknown or explicitly verify-current.
+- Preserve the existing URL, canonical, indexability, and sitemap entry; do not edit sibling content or publish another URL.
+
+## Latest Completed NYC Itinerary Review
 
 ### SRR-026: New York City Family-Itinerary SERP, Persona, Source, And Every-Section Review
 

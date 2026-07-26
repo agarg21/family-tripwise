@@ -8,22 +8,22 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-017` is selected to review and improve the existing New York City family itinerary through current SERP, ranking-page, persona, official-source, every-section, responsive, QA, independent-review, and production-verification gates.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual research action `FT-RES-010` has produced a review-clean San Antonio SERP-overlap cluster and persona decision pack; exact-path push-only release remains in this transaction.
 
-The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to begin NYC pages. `FT-EVAL-002` remains evidence-gated, not calendar-triggered.
+The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to proceed to San Antonio. `FT-IMP-018` is promoted but not selected or started, and `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-26.md`, fresh authenticated API data finalized through 2026-07-24.
-- Latest site release: `FT-IMP-016` at commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; Pages run `30199465923` succeeded, the release marker matched, and action-specific production invariants/SEO QA passed.
-- Active manual action: `FT-IMP-017`, selected 2026-07-26 under the user's direct instruction.
+- Latest site release: `FT-IMP-017` at commit `d0c4a7dc565dea809d4d2b12caa4033b40cafe22`; Pages run `30204670128` succeeded, the release marker matched, and action-specific production invariants/SEO QA passed.
+- Active manual action: `FT-RES-010`, review-clean with exact-path research-only release pending.
 - Active substantive Control Room action: none.
-- Latest NYC release: `FT-IMP-016` / `IMP-034` / `SRR-025`, released and production-verified with Maxwell `PASS`, no P0-P3 findings, 101/101 tests, and production SEO QA at 0 errors and 0 warnings.
+- Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
 - NYC teen publication: complete; production contains one canonical/indexable 10-choice specialist with the expected cluster routes and one sitemap entry.
 - NYC stay-area improvement: complete; production contains the canonical/indexable five-area guide with five quick-pick starts, one sitemap entry, and the expected cluster routes.
-- Active NYC itinerary improvement: `FT-IMP-017` / `IMP-035` / `SRR-026`; research, one-page implementation, responsive checks, native QA, and Lagrange cycle-one `PASS_WITH_P3` with no P0-P2 findings are complete; exact-path release and production verification remain.
-- Next city after NYC: San Antonio; no implementation scope is pre-approved.
+- NYC itinerary improvement: complete, released, and production-verified at commit `d0c4a7d` through Pages run `30204670128`.
+- San Antonio research: `FT-RES-010` / `SRR-027` is complete and Goodall review-clean; `FT-IMP-018` / `IMP-036` / `SRR-028` is the only promoted next implementation and remains ready, not selected.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
 
 ## Current Project State
@@ -39,7 +39,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
 - GSC: authenticated read-only API collection is working; the July 26 snapshot has finalized data through July 24, 921 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; GitHub Pages run `30199465923` succeeded and production verification passed for the New York City family stay-area guide
+- Current released implementation: commit `d0c4a7dc565dea809d4d2b12caa4033b40cafe22`; GitHub Pages run `30204670128` succeeded and production verification passed for the New York City family itinerary
 
 ## Historical operating threads
 
@@ -168,17 +168,17 @@ The central Control Room remains the only scheduler. This transaction is allowed
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-014` / `IMP-031` is released and production-verified for the indexed NYC all-ages page. The page now provides 12 distinct choices through one filterable decision surface; the latest July 26 public-safe snapshot records 58 impressions at page-level average position 43.64, which remains sparse directional discovery evidence rather than a query rank or causal result. Related demand phrases overlap and are not summed as unique demand. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. `FT-RES-010` defines the San Antonio five-role architecture and promotes `FT-IMP-018` as the one next implementation: improve the existing all-ages page. The promoted action remains ready, not selected; ready state does not authorize implementation. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
 - Behavior-preserving generator/upgrader modularization remains a separate technical candidate; it must not be hidden inside an NYC content transaction.
-- San Antonio family-hotel demand and review workflow after the NYC decision.
+- San Antonio family-hotel evidence work after the all-ages improvement; one hotel page should own hotel, resort, lazy-river, pool, room, and review-signal variants.
 
 Findings to preserve:
 
 - Current destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio.
-- San Diego, Las Vegas, and Chicago have completed deep quality passes; NYC cluster research is review-clean and its first page improvement is released and production-verified.
+- San Diego, Las Vegas, Chicago, and New York City have completed deep quality passes; San Antonio research now defines the next one-page sequence.
 - Existing pages should be improved before new cities are created.
 - Best-family-hotel standalone pages require a human-review path before firm hotel recommendations are published.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
@@ -211,7 +211,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Continue active direct manual action `FT-IMP-017` on the existing New York City itinerary URL through research, one-page implementation, native QA, independent review, exact-path release, and production verification. Do not start San Antonio or another action in the same transaction. The Control Room remains the only scheduler for scheduled work.
+Finish `FT-RES-010` through native QA, independent review, and an exact-path research-only push. Do not start `FT-IMP-018` in the same transaction. After reconciliation, `FT-IMP-018` is the next eligible San Antonio action only when the Control Room dispatches it or the user directly instructs implementation.
 
 ## GSC Monitoring
 

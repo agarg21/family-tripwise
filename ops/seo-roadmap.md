@@ -65,23 +65,50 @@ The Family Tripwise project operator may update the selected action's repository
 | 30 | `FT-PUB-004` research and publish the New York City family-hotel comparison | Content/product quality | Completed and released | Commit `57d765f`; Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
 | 31 | `FT-IMP-015` research and publish the New York City teen/tween activity specialist | Content/product quality | Released and production-verified | Commit `77e6cb9322da34ffc13daf84b0851e83773cc382`; Pages run `30198727075`; release marker, production invariants, and production SEO QA passed after review `PASS_WITH_P3` with no P0-P2 findings. |
 | 32 | `FT-IMP-016` simplify and improve the New York City stay-area guide | Content/product quality | Released and production-verified | Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; Pages run `30199465923`; release marker, five quick-pick starts, canonical/indexability, one sitemap entry, production invariants, and production SEO QA passed after Maxwell `PASS` with no P0-P3 findings. |
-| 33 | `FT-IMP-017` review and improve the New York City family itinerary | Content/product quality | Review-clean; release pending | One existing URL now has three trip-length starts, three executable day plans, five pivots, four stop rules, four cluster routes, and visible/schema-aligned FAQs; Lagrange returned `PASS_WITH_P3` in cycle 1 with no P0-P2 findings. |
+| 33 | `FT-IMP-017` review and improve the New York City family itinerary | Content/product quality | Released and production-verified | Commit `d0c4a7d`; Pages run `30204670128`; release marker, canonical/indexability, one sitemap entry, action invariants, and production SEO QA passed. |
+| 34 | `FT-RES-010` San Antonio SERP-overlap cluster and persona decision pack | Content/product quality | Completed and review-clean | Current GSC, exact Semrush evidence, observed SERP overlap, five personas, and every-section audits define a five-role architecture without changing `site/**`; Goodall returned `PASS`. |
+| 35 | `FT-IMP-018` improve the San Antonio all-ages things-to-do hub | Content/product quality | Ready; not selected | Highest observed demand and clearest usefulness defect: six choices are repeated across too many layers, with weak free/indoor/heat support. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
 ### FT-IMP-017 - Review and improve the New York City family itinerary
 
 - Selected: 2026-07-26 by direct manual user instruction to continue to the final NYC page.
-- State: research, one-page implementation, responsive checks, native QA, and independent review are complete; exact-path release and production verification remain.
+- State: released and production-verified on 2026-07-26 at commit `d0c4a7dc565dea809d4d2b12caa4033b40cafe22`; GitHub Pages run `30204670128` succeeded.
 - Target: `https://familytripwise.com/family-itinerary/new-york-city-with-kids.html`.
 - Demand and evidence: logged-in Semrush exact variants collected July 24 show 30 and 10 searches/month and overlap. The fresh July 26 GSC snapshot, finalized through July 24, has no itinerary performance row; URL Inspection says the page is not indexed.
 - Product requirement: inspect current itinerary SERPs and representative ranking pages, apply NYC-P1 through NYC-P5, and audit every visible section. Replace repeated summaries with concrete one-, two-, and three-day plans, useful pivots, stop rules, and routes to all four released NYC cluster pages.
 - Local result: three trip-length starts, three executable day-plan cards, five persona/constraint pivots, four stop rules, four cluster routes, three visible/schema-aligned FAQs, current official checks, and an optimized dimensioned public-domain image.
 - QA: focused tests 4/4 and full repository tests 105/105 pass; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; target-only generation and 1280/390/320 responsive checks pass.
 - Review: Lagrange (`019f9ea5-2520-7540-91c7-ce5a5ce30360`) returned `PASS_WITH_P3` in cycle 1 with no P0-P2 findings. The P3 records representative rather than complete duration-query SERP evidence; numeric overlap remains `UNKNOWN`.
+- Release: the release marker matched the commit/run; the canonical/indexable page retained three starts, three day plans, five pivots, four stop rules, four cluster routes, three visible/schema-aligned FAQs, and one sitemap entry; production SEO QA returned 0 errors and 0 warnings.
 - Maximum scope: one durable itinerary review, the existing shared page upgrader, one focused test, the existing itinerary HTML, NYC status, both backlogs, and operator records.
 - Boundary: preserve URL/canonical/indexability/sitemap; do not edit sibling pages, request indexing, create a URL, add an affiliate CTA, mutate an external account, send outreach, start San Antonio, or add recurring automation.
-- Release gate: current SERP/ranking-page/persona/source/every-section review, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+### FT-RES-010 - Create the San Antonio cluster SERP-overlap and persona decision pack
+
+- Selected: 2026-07-26 by direct manual user instruction to proceed to San Antonio.
+- State: complete and review-clean; exact-path research-only push remains in this transaction.
+- Scope: inspect all four existing canonical/indexable San Antonio pages, current keyword families, observed SERP overlap, representative ranking pages, qualitative parent/community constraints, persona hypotheses, every visible section, page boundaries, and internal-link gaps.
+- GSC: fresh authenticated read-only API evidence collected July 26 and finalized through July 24. The four page rows total 105 impressions and 0 clicks; this is sparse page-level discovery context, not query rank or causal evidence.
+- Result: five core page roles, five persona hypotheses, every-section audits for all four current pages, high-confidence all-ages and hotel overlap decisions, calibrated unknown overlap elsewhere, one future hotel-page role, and no separate toddler, indoor, resort, pool, duration, or static-weekend URL.
+- Promoted action: `FT-IMP-018` / `IMP-036`, improve the existing all-ages page first.
+- QA: 105/105 tests, operator-state QA, SEO QA at 0 errors/0 warnings, duplicate-key-safe roadmap JSON, focused consistency/source/scope checks, and whitespace checks pass.
+- Review: Goodall (`019f9ec6-b438-7d33-9c60-658a5706ac29`) returned `PASS` in cycle 2 with no P0-P3 findings after closing the SERP-intersection, persona-traceability, source-link, and audit-count findings.
+- Maximum paths: the San Antonio research pack and status file, NYC status release reconciliation, both backlogs, and four operator-state files.
+- Boundary: research only. Do not edit `site/**`, publish a page, request indexing, mutate an external account, send outreach, start a San Antonio implementation, add a destination, or create recurring automation.
+- Artifacts: `docs/research/san-antonio-family-cluster-decision-pack.md` and `status/san-antonio-pages.md`.
+- Release gate: native/focused research consistency, links/source/privacy/scope checks, roadmap JSON, independent reviewer `PASS` or `PASS_WITH_P3`, then exact-path push-only commit.
+
+### FT-IMP-018 - Improve the San Antonio all-ages things-to-do hub
+
+- State: ready, not selected or started. Ready status does not authorize work.
+- Target: `https://familytripwise.com/things-to-do/san-antonio-with-kids.html`.
+- Demand: exact measured phrases show 5,400 searches/month at KD 19, 1,600 at KD 20, and 880 at KD 21. Variants overlap and are not summed.
+- Baseline: 11 impressions, 0 clicks, and page-level average position 64.36 in the fresh July 26 GSC snapshot.
+- Product requirement: review at least 18 candidate roles; retain roughly 10-14 earned choices; apply `SA-P1` through `SA-P5`; replace repeated six-choice layers with five conditional starts, one filterable comparison, useful younger-child/heat/indoor/free/budget/teen/theme-park routing, bounded high-friction notes, current official checks, and cluster routes.
+- Boundary: one existing URL only. No sibling-page content edit, sitemap change, new URL, indexing request, external-account mutation, affiliate CTA, outreach, hotel publication, or recurring automation.
+- Release gate: durable candidate/every-section/source review, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 
 ### FT-RES-009 - New York City SERP-overlap cluster and persona decision pack
 

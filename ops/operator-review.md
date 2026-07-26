@@ -36,13 +36,39 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-PUB-004` | NYC family-hotel comparison released and production-verified | `PASS_WITH_P3` | Cycle 2 closed both P2 findings; no P0-P2 remains. Commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` deployed through Pages run `30184040925`; release marker, production invariants, and production SEO QA passed. |
 | `FT-IMP-015` | NYC teen/tween specialist released and production-verified | `PASS_WITH_P3` | Curie cycle 2 closed the empty compact-detail pairing P2; no P0-P2 remains. Commit `77e6cb9322da34ffc13daf84b0851e83773cc382` deployed through Pages run `30198727075`; release marker, production invariants, and production SEO QA passed. One P3 remains for the generic but licensed/optimized Central Park hero. |
 | `FT-IMP-016` | NYC stay-area simplification released and production-verified | `PASS` | Maxwell cycle 2 closed the stale released-versus-future NYC status P2; no P0-P3 findings remain. Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2` deployed through Pages run `30199465923`; release marker, production invariants, and production SEO QA passed. |
-| `FT-IMP-017` | NYC family-itinerary improvement review-clean | `PASS_WITH_P3` | Lagrange cycle 1 found no P0-P2 findings. One non-blocking P3 records representative rather than complete duration-query SERP evidence; numeric overlap remains `UNKNOWN`. Exact paths are release-eligible after staged QA. |
+| `FT-IMP-017` | NYC family-itinerary improvement released and production-verified | `PASS_WITH_P3` | Lagrange cycle 1 found no P0-P2 findings. Commit `d0c4a7dc565dea809d4d2b12caa4033b40cafe22` deployed through Pages run `30204670128`; release marker, invariants, and production SEO QA passed. |
+| `FT-RES-010` | San Antonio cluster decision research complete and review-clean | `PASS` | Goodall cycle 2 closed all three P2 findings and both P3 audit-count notes; no P0-P3 remains. Exact nine-path research-only diff is eligible for commit/push after staged QA. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-07-26 - `FT-RES-010` review cycles 1-2
+
+**Result: `PASS`**
+
+Scope and safety evidence:
+
+- Reviewed the direct manual San Antonio cluster research transaction across exactly nine declared research/status/backlog/operator paths.
+- No `site/**`, sitemap, deployment workflow, external account, indexing request, outreach, affiliate CTA, another destination, implementation, or recurring automation changed.
+- Fresh July 26 GSC evidence is labeled as sparse page-level discovery rather than query rank or causation.
+- Logged-in Semrush variants are not summed; unavailable and displayed-zero fields remain distinct.
+
+Cycle history:
+
+- Cycle 1 returned `CHANGES_REQUIRED` with three P2 findings: combined exact/domain SERP intersections without retained Sample A/B sets; incomplete persona structure and source traceability; and missing direct ranking/community URLs. Two P3 audit counts also said nine quick picks where the pages contain eight.
+- Cycle 2 verified retained activity and hotel Sample A/B sets with separate exact-URL, domain-only, page-type, feature, and `UNKNOWN` evidence; complete `SA-P1` through `SA-P5` jobs/contexts/age-pace/anxieties/criteria/failures/source traces; direct ranking and community links; and corrected counts.
+- Final reviewer: Goodall (`019f9ec6-b438-7d33-9c60-658a5706ac29`).
+- Final result: `PASS`; no P0-P3 findings remain.
+
+QA evidence:
+
+- Full repository tests pass 105/105.
+- `node tools/operator-state-qa.mjs` passes.
+- `node tools/seo-qa.mjs` reports 0 errors and 0 warnings.
+- Duplicate-key-safe roadmap JSON, focused SERP/persona/action/source/scope, 35-URL reachability, privacy, exact-path, no-site, and `git diff --check` checks pass.
 
 ### 2026-07-20 — `FT-IMP-002` review cycles 1-2
 
