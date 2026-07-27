@@ -2,11 +2,68 @@
 
 Last updated: 2026-07-26
 
-## Active San Antonio Implementation
+## Active San Antonio Publication
+
+### IMP-037: Research And Publish The San Antonio Family-Hotel Comparison
+
+Status: review-clean; release pending
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-PUB-005`
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html`
+
+Research at least 18 candidate properties and publish one calm comparison of roughly 10-12 earned options. Keep resort, lazy-river, pool, suite, breakfast, kitchen, and room-intent variants as fields and trip-style starts rather than separate URLs.
+
+Local result:
+
+- Reviewed 22 candidates and retained 12 properties with distinct resort, water-feature, villa/kitchen, two-room-suite, included-food, all-suite, classic-location, and indoor-pool roles.
+- Built one canonical page with six trip-style starts, a sticky mobile comparison, 12 expandable evidence-bounded hotel profiles, 24 hotel/family-anchor Google Maps links, and three visible/schema-aligned FAQs.
+- Added routes from home and the existing stay-area guide while leaving the activities, teen, and itinerary pages unchanged.
+- Documented current official facts, rough total-night planning ranges, recent online-review samples, family-context limits, conflicts, decisive checks, and the 10-property deferred pool.
+- Cycle-one review found four P2 mobile-density, tablet-layout, stale-state, and price-source findings. The profiles now collapse cleanly, the card flow stays one-column at tablet widths, map destinations and table jumps are explicit, stale state is reconciled, exact missing price URLs are recorded, and the deferred pool has compact source checks.
+- Cycle two: Averroes returned `PASS` with no P0-P3; Dirac confirmed both visual P2s closed and returned `PASS_WITH_P3`. The two residual P3s cover non-sticky mobile column headers and desktop jump targets sitting beneath the sticky site header.
+
+Expected maximum transaction scope:
+
+- `docs/research/san-antonio-family-hotel-evidence-pack.md`
+- `tools/generate-pages.mjs`
+- `tools/san-antonio-family-hotels-page.test.mjs`
+- `site/where-to-stay/san-antonio-family-hotels.html`
+- `site/where-to-stay/san-antonio-with-kids.html`
+- `site/index.html`
+- `site/sitemap.xml`
+- `status/san-antonio-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Boundaries:
+
+- Publish one canonical/indexable hotel URL and add one sitemap entry.
+- Use current official property facts, broad total-night planning ranges, bounded sampled online-review themes/conflicts, freshness, direct maps, and decisive parent checks.
+- Do not imply an ordinal ranking, firsthand stay, safety/quiet assurance, exact route, guaranteed room/crib/connection, stable price, universal family fit, or representative review sentiment.
+- Home and the existing stay guide may receive only the links needed to route to the new page. Do not edit activity, teen, or itinerary pages.
+- Do not book anything, request indexing, add an affiliate CTA, mutate an external account, send outreach, publish another URL, or add recurring automation.
+
+Acceptance:
+
+- At least 18 candidates are reviewed and roughly 10-12 are retained for distinct family trip roles rather than list length.
+- `SA-P2` through `SA-P4` can compare room function, pool/resort role, location, broad nightly total, included-food/kitchen utility, sampled review observations/conflicts, maps, and one decisive check.
+- Visible FAQs and schema agree; home and stay-area links route to the page.
+- Full/focused tests, target-only generation, responsive/image/source/privacy/scope QA, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+## Latest Completed San Antonio Implementation
 
 ### IMP-036: Improve The San Antonio All-Ages Things-To-Do Hub
 
-Status: review-clean; commit, release, and production verification pending
+Status: done, released, and production-verified
 
 Selected: 2026-07-26
 
@@ -59,7 +116,7 @@ Local result:
 - Operator-state QA and local SEO QA pass with 0 errors and 0 warnings.
 - Target-only generation, 1280/390/320 responsive containment, sticky first-column behavior, materially narrowing filters, image decode, all 16 source links, schema/FAQ alignment, duplicate-key-safe roadmap JSON, privacy/scope, and whitespace checks pass.
 - Pasteur (`019f9eeb-de35-7261-839b-43bd97d42174`) returned `PASS` in cycle two with no P0-P3 findings after the mobile row-identity, direct-source, Morgan's wording, and broad-filter findings were fixed.
-- Exact-path release and production verification remain.
+- Commit `27168d5d7ec472ba8f08b9e7d56e79607da03b2e` deployed successfully through Pages run `30207559125`; the release marker, canonical/indexability, one sitemap entry, action-specific production invariants, and production SEO QA passed.
 
 Baseline and measurement:
 

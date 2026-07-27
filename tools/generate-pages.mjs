@@ -514,6 +514,7 @@ function stayPage(city) {
   const isLasVegas = city.slug === "las-vegas";
   const isChicago = city.slug === "chicago";
   const isNewYorkCity = city.slug === "new-york-city";
+  const isSanAntonio = city.slug === "san-antonio";
   const hotelShortlistLink = isSanDiego
     ? '<a href="../where-to-stay/san-diego-family-hotels.html">12 family hotel options</a>'
     : isLasVegas
@@ -522,6 +523,8 @@ function stayPage(city) {
         ? '<a href="../where-to-stay/chicago-family-hotels.html">10 family hotel options</a>'
         : isNewYorkCity
           ? '<a href="../where-to-stay/new-york-city-family-hotels.html">12 family hotel options</a>'
+          : isSanAntonio
+            ? '<a href="../where-to-stay/san-antonio-family-hotels.html">12 family hotel options</a>'
         : "Parking, pool, breakfast, room size";
   const rows = city.areas.map(([area, best, watch, fit]) => `            <div class="table-row" role="row">
               <span role="cell">${esc(area)}</span>
@@ -570,7 +573,7 @@ ${rows}
             <div><dt>Activity page</dt><dd><a href="${l.activities}">Activities near each area</a></dd></div>
             <div><dt>Itinerary page</dt><dd><a href="${l.itinerary}">Sample itinerary by area</a></dd></div>
             <div><dt>Booking check</dt><dd>Verify fees, room type, and cancellation terms</dd></div>
-            <div><dt>${isSanDiego || isChicago || isNewYorkCity ? "Hotel shortlist" : "Key checks"}</dt><dd>${hotelShortlistLink}</dd></div>
+            <div><dt>${isSanDiego || isChicago || isNewYorkCity || isSanAntonio ? "Hotel shortlist" : "Key checks"}</dt><dd>${hotelShortlistLink}</dd></div>
           </dl>
         </div>
       </section>
@@ -1535,6 +1538,327 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
   });
 }
 
+const sanAntonioFamilyHotels = [
+  {
+    name: "Hyatt Regency Hill Country Resort and Villas",
+    category: "Full resort and water-play trip",
+    area: "West San Antonio / SeaWorld",
+    priceRange: "$360-$700+",
+    strengths: ["The official resort pages publish a water park, pools, and the Big Spring lagoon", "Published two-queen rooms accommodate two adults and two children"],
+    familySetup: "This is a resort-led stay near SeaWorld, not a convenient base for walking the River Walk. The exact room, water-feature operating schedule, and daily drive plan still matter.",
+    reviewSignal: "A recent public sample with strong family context often praised the pools, lazy river, activities, grounds, and service. It also surfaced limited midday food, crowded kid-heavy periods, no in-room microwave in some rooms, and a sand-rinse complaint.",
+    priceNote: "A public one-night example was about $437 total; room category and high-demand resort dates can move higher.",
+    parentCheck: "Confirm the exact room occupancy, current water-feature schedule, food hours, parking, and final total.",
+    mapQuery: "Hyatt Regency Hill Country Resort and Villas",
+    anchorQuery: "SeaWorld San Antonio"
+  },
+  {
+    name: "JW Marriott San Antonio Hill Country Resort and Spa",
+    category: "Largest water-complex resort comparison",
+    area: "North San Antonio / TPC Parkway",
+    priceRange: "$450-$850+",
+    strengths: ["Marriott publishes a nine-acre water experience with a lazy river and slides", "Some public two-queen inventory accommodates five, but the exact room controls"],
+    familySetup: "The resort can fill a large share of the trip by itself. It is far from Downtown, and current wristband, slide, pool, room-occupancy, and parking rules need a dated check.",
+    reviewSignal: "A recent public sample often praised the water features, family activities, service, and food. Isolated reports flagged paid parking, a temporarily unavailable slide, and one bathroom-maintenance problem.",
+    priceNote: "A public one-night example was about $505 total; family occupancy, weekends, and resort demand can push the total higher.",
+    parentCheck: "Confirm exact occupancy, water-feature operations and wristband rules, parking, and final total.",
+    mapQuery: "JW Marriott San Antonio Hill Country Resort and Spa",
+    anchorQuery: "Natural Bridge Caverns"
+  },
+  {
+    name: "Signia by Hilton La Cantera Resort and Spa",
+    category: "Pools near Six Flags",
+    area: "La Cantera / Northwest",
+    priceRange: "$280-$600+",
+    strengths: ["The property publishes five pools, including a family pool and slide", "The location is the clearest resort start for a Six Flags-led trip"],
+    familySetup: "Rooms, suites, and villas differ substantially. Treat this as a pools-and-Six-Flags comparison, not a claim that every room or pool setup works for every family.",
+    reviewSignal: "Recent public reviews often praised the grounds, views, pools, rooms, staff, and local shuttle. Two current reports raised pool-service or towel-availability problems, while explicit family labeling was thin.",
+    priceNote: "A public one-night example was about $315 total; larger layouts and popular weekends can move higher.",
+    parentCheck: "Confirm the exact room, family-pool and slide status, shuttle details, parking, and final total.",
+    mapQuery: "Signia by Hilton La Cantera Resort and Spa",
+    anchorQuery: "Six Flags Fiesta Texas"
+  },
+  {
+    name: "Hyatt Vacation Club at Wild Oak Ranch",
+    category: "Villa, kitchen, and lazy-river stay",
+    area: "West San Antonio / SeaWorld",
+    priceRange: "$260-$500+",
+    strengths: ["Official inventory includes studios and one- to three-bedroom villas", "Villas publish kitchens and in-room laundry; the resort publishes pools, slides, and a lazy river"],
+    familySetup: "This is a vacation-club property, and some promotional offers may involve a sales presentation. Studios and villas do not have the same kitchen, laundry, beds, or occupancy.",
+    reviewSignal: "A recent family-heavy public sample often praised villa space, kitchens, pools, the lazy river, activities, and grounds. It also surfaced early restaurant closing, sales-presentation offers, firm beds, and cashless snack-purchase friction.",
+    priceNote: "A public example started near $249 before taxes; the displayed range widens that into a rough planning total.",
+    parentCheck: "Confirm studio versus villa, occupancy, kitchen and laundry equipment, current water features, any offer terms, and final total.",
+    mapQuery: "Hyatt Vacation Club at Wild Oak Ranch",
+    anchorQuery: "SeaWorld San Antonio"
+  },
+  {
+    name: "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+    category: "Two-room suite and breakfast Downtown",
+    area: "Downtown / River Walk",
+    priceRange: "$150-$320+",
+    strengths: ["Hilton publishes two-room suites and free made-to-order breakfast", "An outdoor rooftop pool and evening reception add useful hotel-reset options"],
+    familySetup: "Choose the exact suite rather than assuming every listing has the same beds or occupancy. The hotel is central, while valet parking can materially change a car-based trip.",
+    reviewSignal: "A recent public sample often praised the room space, breakfast, location, and staff. It also surfaced high valet cost and occasional maintenance or service variation.",
+    priceNote: "A public one-night example was about $165 total before parking; larger suites and event dates can move higher.",
+    parentCheck: "Confirm exact suite beds and occupancy, breakfast timing, pool status, parking, and final total.",
+    mapQuery: "Embassy Suites San Antonio Riverwalk Downtown",
+    anchorQuery: "The Alamo San Antonio"
+  },
+  {
+    name: "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown",
+    category: "Downtown kitchen and breakfast",
+    area: "Downtown / River Walk",
+    priceRange: "$145-$300+",
+    strengths: ["Hilton publishes full in-suite kitchens and free hot breakfast", "The hotel offers an outdoor pool in a central River Walk location"],
+    familySetup: "Studio and one-bedroom layouts solve different sleep needs. Confirm the actual door separation, beds, occupancy, kitchen equipment, and parking before treating the brand name as enough.",
+    reviewSignal: "Recent public reviews often praised spacious suites, kitchens, breakfast, location, and staff. They also surfaced expensive parking, dated details, repair concerns, and isolated room-odor or cleanliness problems.",
+    priceNote: "A public one-night example was about $156 total before parking; larger suites and event dates can move higher.",
+    parentCheck: "Confirm studio versus one-bedroom layout, beds, kitchen equipment, pool status, parking, and final total.",
+    mapQuery: "Homewood Suites San Antonio Riverwalk Downtown",
+    anchorQuery: "Hemisfair San Antonio"
+  },
+  {
+    name: "Home2 Suites by Hilton San Antonio Riverwalk",
+    category: "Studio kitchen for a larger family",
+    area: "Downtown / 118 Soledad Street",
+    priceRange: "$135-$280+",
+    strengths: ["Hilton publishes in-suite kitchens and free breakfast", "Some public two-queen-and-sofa inventory lists occupancy up to six"],
+    familySetup: "This is the 118 Soledad Street Riverwalk property, not the separate Home2 Suites Downtown location. Most rooms are studios, and exact beds, occupancy, and bathroom privacy need checking.",
+    reviewSignal: "A recent family-heavy public sample often praised spacious studios, kitchenette utility, location, and staff. It also surfaced basic breakfast, expensive valet parking, barn-door bathroom privacy, and a May report that the pool was under construction.",
+    priceNote: "A public one-night example was about $143 total before parking; exact room and demand can move higher.",
+    parentCheck: "Confirm the 118 Soledad property, exact beds and occupancy, bathroom setup, current pool operation, parking, and final total.",
+    mapQuery: "Home2 Suites by Hilton San Antonio Riverwalk 118 Soledad",
+    anchorQuery: "The Alamo San Antonio"
+  },
+  {
+    name: "Drury Plaza Hotel San Antonio Riverwalk",
+    category: "Included-food value Downtown",
+    area: "Downtown / River Walk",
+    priceRange: "$145-$300+",
+    strengths: ["Drury publishes free hot breakfast and its evening 5:30 Kickback", "The property has rooftop outdoor and indoor pools plus in-room microwaves and refrigerators"],
+    familySetup: "The included food can reduce meal friction, but busy breakfast, elevator, and pool periods may matter. Compare a standard room with the all-suite tower before paying.",
+    reviewSignal: "A recent public sample often praised breakfast, the evening food, location, value, staff, and pools. It also surfaced slow or crowded elevators, buffet lines, pool-towel shortages, and valet cost.",
+    priceNote: "A public one-night example was about $151 total before parking; suite categories and event dates can move higher.",
+    parentCheck: "Confirm the exact room or suite, current food schedule, pool operations, parking, and final total.",
+    mapQuery: "Drury Plaza Hotel San Antonio Riverwalk",
+    anchorQuery: "Hemisfair San Antonio"
+  },
+  {
+    name: "Hotel Contessa",
+    category: "All-suite River Walk reset",
+    area: "Downtown / River Walk",
+    priceRange: "$180-$380+",
+    strengths: ["The property publishes an all-suite layout with separate living space", "A heated rooftop pool adds a contained Downtown reset"],
+    familySetup: "A suite label does not guarantee enough beds for the family. Confirm the sofa-bed or other sleeping surface, registered occupancy, and whether the living zone provides the separation needed.",
+    reviewSignal: "A recent public sample often praised suite space, location, staff, and the rooftop pool. It also surfaced third-guest bedding not being prepared, no microwave, worn decor, and high parking or total price.",
+    priceNote: "A public one-night example was about $192 total before parking; room category and strong-demand dates can move higher.",
+    parentCheck: "Confirm exact bedding and occupancy, living-room separation, microwave need, pool status, parking, and final total.",
+    mapQuery: "Hotel Contessa San Antonio",
+    anchorQuery: "The Alamo San Antonio"
+  },
+  {
+    name: "Hyatt Regency San Antonio Riverwalk",
+    category: "Classic first-visit location",
+    area: "Downtown / Alamo and River Walk",
+    priceRange: "$180-$380+",
+    strengths: ["The hotel directly connects the Alamo and River Walk planning zones", "Hyatt publishes a rooftop temperature-controlled pool"],
+    familySetup: "This is a location-led option rather than a suite, kitchen, or included-breakfast solution. Check the exact two-queen room, bathroom size, event calendar, and room placement.",
+    reviewSignal: "Recent public reviews often praised location, access, cleanliness, and staff. They also surfaced parking cost, Fiesta or hallway noise, smaller bathrooms, elevators, and weaker value for standard rooms.",
+    priceNote: "A public one-night example was about $202 total before parking; events and room categories can move higher.",
+    parentCheck: "Confirm exact beds and occupancy, current pool status, event noise, room placement, parking, and final total.",
+    mapQuery: "Hyatt Regency San Antonio Riverwalk",
+    anchorQuery: "The Alamo San Antonio"
+  },
+  {
+    name: "San Antonio Marriott Rivercenter on the River Walk",
+    category: "Indoor pool and Rivercenter access",
+    area: "Downtown / Rivercenter",
+    priceRange: "$230-$450+",
+    strengths: ["Marriott publishes indoor and outdoor pools", "Direct Rivercenter access can simplify meals, weather pivots, and a first-visit route"],
+    familySetup: "Published two-queen rooms accommodate four, while some larger suites differ. Convention volume, current pool operation, and expensive parking can matter as much as the map location.",
+    reviewSignal: "A recent mostly general-traveler sample often praised the location, mall access, cleanliness, staff, and pool. It also surfaced high parking and total cost plus a busier convention-hotel feel.",
+    priceNote: "A public one-night example was about $281 total before parking; suites, conventions, and event dates can move higher.",
+    parentCheck: "Confirm exact room occupancy, current indoor and outdoor pool operation, event calendar, parking, and final total.",
+    mapQuery: "San Antonio Marriott Rivercenter on the River Walk",
+    anchorQuery: "LEGOLAND Discovery Center San Antonio"
+  },
+  {
+    name: "Omni La Mansion del Rio",
+    category: "Historic central River Walk stay",
+    area: "Downtown / River Walk",
+    priceRange: "$180-$380+",
+    strengths: ["The property publishes rooms with two double beds and a heated courtyard pool", "The central location fits a compact classic-sights trip"],
+    familySetup: "This is a historic, location-led hotel rather than a large-family or kitchen solution. The courtyard pool is useful for a short reset, not a resort water day.",
+    reviewSignal: "A recent public sample with meaningful family context often praised the location, courtyard, pool, and staff. It also surfaced a small or shallow pool, limited pool-bar hours, valet or garage friction, and warm halls or elevators.",
+    priceNote: "Public one-night examples were about $188-$191 total before parking; room and event dates can move higher.",
+    parentCheck: "Confirm exact beds and occupancy, room placement, current pool operation, parking access, and final total.",
+    mapQuery: "Omni La Mansion del Rio",
+    anchorQuery: "The Alamo San Antonio"
+  }
+];
+
+const sanAntonioHotelSources = [
+  ["Hyatt Regency Hill Country overview", "https://www.hyatt.com/hyatt-regency/en-US/sanhc-hyatt-regency-hill-country-resort-and-villas"],
+  ["Hyatt Regency Hill Country rooms", "https://www.hyatt.com/hyatt-regency/en-US/sanhc-hyatt-regency-hill-country-resort-and-villas/rooms"],
+  ["Hyatt Regency Hill Country Big Spring lagoon", "https://www.hyatt.com/hyatt-regency/en-US/sanhc-hyatt-regency-hill-country-resort-and-villas/big-spring-lagoon"],
+  ["JW Marriott San Antonio overview", "https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/overview/"],
+  ["JW Marriott San Antonio experiences", "https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/experiences/"],
+  ["Signia by Hilton La Cantera rooms", "https://www.lacanteraresort.com/accommodations/rooms/"],
+  ["Signia by Hilton La Cantera pool policies", "https://www.lacanteraresort.com/resort/policies/"],
+  ["Hyatt Vacation Club at Wild Oak Ranch", "https://www.hyattvacationclub.com/resorts/wild-oak-ranch"],
+  ["Hyatt Vacation Club at Wild Oak Ranch rooms", "https://www.hyatt.com/en-US/hotel/texas/hyatt-vacation-club-at-wild-oak-ranch/sansh/rooms"],
+  ["Embassy Suites San Antonio Riverwalk Downtown", "https://www.hilton.com/en/hotels/sateses-embassy-suites-san-antonio-riverwalk-downtown/"],
+  ["Homewood Suites San Antonio-Riverwalk/Downtown", "https://www.hilton.com/en/hotels/satdnhw-homewood-suites-san-antonio-riverwalk-downtown/"],
+  ["Home2 Suites San Antonio Riverwalk", "https://www.hilton.com/en/hotels/satrlht-home2-suites-san-antonio-riverwalk/"],
+  ["Drury Plaza Hotel San Antonio Riverwalk", "https://www.druryhotels.com/locations/san-antonio-tx/drury-plaza-hotel-san-antonio-riverwalk"],
+  ["Hotel Contessa amenities", "https://www.thehotelcontessa.com/stay/amenities/"],
+  ["Hotel Contessa FAQ", "https://www.thehotelcontessa.com/our-story/faq/"],
+  ["Hyatt Regency San Antonio Riverwalk", "https://www.hyatt.com/hyatt-regency/en-US/satrs-hyatt-regency-san-antonio-riverwalk"],
+  ["San Antonio Marriott Rivercenter overview", "https://www.marriott.com/en-us/hotels/satrc-san-antonio-marriott-rivercenter-on-the-river-walk/overview/"],
+  ["San Antonio Marriott Rivercenter experiences", "https://www.marriott.com/en-us/hotels/satrc-san-antonio-marriott-rivercenter-on-the-river-walk/experiences/"],
+  ["Omni La Mansion del Rio", "https://www.omnihotels.com/hotels/san-antonio-la-mansion-del-rio"],
+  ["Omni La Mansion del Rio pool", "https://www.omnihotels.com/hotels/san-antonio-la-mansion-del-rio/wellness/pool"]
+];
+
+function sanAntonioFamilyHotelPage() {
+  const hotels = sanAntonioFamilyHotels;
+  const hotelId = (index) => `san-antonio-hotel-${index + 1}`;
+  const cards = hotels.map((hotel, index) => `          <details class="detail-card hotel-card" id="${hotelId(index)}">
+            <summary style="cursor: pointer;">
+              <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
+              <strong style="display: block; margin-top: 6px; font-size: 1.25rem;">${esc(hotel.name)}</strong>
+              <span style="display: block; margin-top: 6px;">${esc(hotel.area)}; ${esc(hotel.priceRange)} rough total/night</span>
+            </summary>
+            <dl class="hotel-facts">
+              <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
+              <div><dt>Rough total/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Maps</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Hotel map</a> · <a href="${googleMapsUrl(hotel.anchorQuery)}">${esc(hotel.anchorQuery)}</a></dd></div>
+            </dl>
+            <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
+            <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+          </details>`).join("\n");
+
+  const rows = hotels.map((hotel, index) => `              <tr>
+                <td><a href="#${hotelId(index)}">${esc(hotel.name)}</a></td>
+                <td>${esc(hotel.category)}</td>
+                <td>${esc(hotel.area)}</td>
+                <td>${esc(hotel.priceRange)}</td>
+                <td>${esc(hotel.anchorQuery)}</td>
+                <td>${esc(hotel.parentCheck.split(",")[0])}.</td>
+              </tr>`).join("\n");
+
+  const faqs = [
+    ["Which San Antonio family hotels have a lazy river?", "Hyatt Regency Hill Country, JW Marriott San Antonio Hill Country, and Hyatt Vacation Club at Wild Oak Ranch publish lazy-river or substantial water-complex features. Signia by Hilton La Cantera publishes five pools and a family slide instead. Confirm current operating schedules and access rules for the exact dates."],
+    ["Should a family stay on the River Walk or at a San Antonio resort?", "Choose a River Walk hotel when the Alamo, boat ride, Hemisfair, and compact Downtown days lead the trip. Choose a west or north resort when pools, SeaWorld, Six Flags, or a stay-put day matter more than repeated Downtown access. Map the first two days before deciding."],
+    ["Which San Antonio hotels include breakfast or a kitchen?", "Embassy Suites includes made-to-order breakfast and a two-room suite. Homewood and Home2 publish kitchens plus breakfast. Drury includes breakfast and an evening food service. Wild Oak villas publish full kitchens, while its studios differ. Confirm the exact room and current food schedule."]
+  ];
+  const faqJson = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }))
+  };
+  const itemListJson = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "San Antonio family hotel options",
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; rough total per night ${hotel.priceRange}` }))
+  };
+
+  const body = `    <main>
+      <section class="page-hero hotel-hero">
+        <div class="container">
+          <p class="eyebrow">San Antonio family hotels</p>
+          <h1>Top Family Hotels in San Antonio: 12 Options by Trip Style</h1>
+          <p>Compare twelve San Antonio family hotels and resorts by water features, room function, breakfast or kitchen utility, location, approximate total nightly price, and themes from recent online reviews.</p>
+        </div>
+      </section>
+      <section class="container trust-panel" aria-label="Information freshness">
+        <p><strong>Hotel facts, prices, and online-review sources checked:</strong> July 26, 2026</p>
+        <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, current pool operations, and cancellation terms.</p>
+      </section>
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200" srcset="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200 1200w" sizes="(max-width: 700px) calc(100vw - 36px), 1160px" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="eager" decoding="async" fetchpriority="high">
+          <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</figcaption>
+        </figure>
+      </section>
+      <section class="band intro-band">
+        <div class="container answer-grid">
+          <div>
+            <p class="eyebrow">Short answer</p>
+            <h2>Decide whether the hotel is the attraction</h2>
+            <p>Start with Hyatt Hill Country, JW Marriott, La Cantera, or Wild Oak when water time should fill a major trip block. Use Embassy Suites for a two-room suite and breakfast Downtown; Homewood or Home2 for kitchen utility; Drury for included food; Contessa for an all-suite River Walk reset; Hyatt Regency or Omni for a classic central stay; and Marriott Rivercenter when an indoor pool and mall access matter.</p>
+            <p><a class="text-link" href="./san-antonio-with-kids.html">Compare San Antonio stay areas before choosing a property</a></p>
+          </div>
+          <dl class="snapshot">
+            <div><dt>Hotels covered</dt><dd>12 distinct options</dd></div>
+            <div><dt>Price format</dt><dd>Rough total/night, not a quote</dd></div>
+            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small recent public sample</dd></div>
+            <div><dt>Map view</dt><dd>Hotel and nearby family-anchor links</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="container page-section rank-ready-section">
+        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
+        <div class="quick-pick-grid hotel-pick-grid">
+          <article class="quick-pick"><span>Water-resort vacation</span><strong>Hyatt Hill Country, JW Marriott, or La Cantera</strong><p>Compare the current water features, room occupancy, distance from the rest of the itinerary, parking, and full price.</p></article>
+          <article class="quick-pick"><span>Villa, kitchen, and lazy river</span><strong>Wild Oak Ranch</strong><p>Choose the exact studio or villa and understand the vacation-club context before treating it as a normal resort booking.</p></article>
+          <article class="quick-pick"><span>Two rooms plus breakfast</span><strong>Embassy Suites</strong><p>Start here when Downtown access, a door between sleep zones, and made-to-order breakfast solve the main family constraints.</p></article>
+          <article class="quick-pick"><span>Kitchen or larger-family studio</span><strong>Homewood or Home2</strong><p>Choose Homewood for clearer one-bedroom options; compare Home2 when a two-queen studio for up to six is the target setup.</p></article>
+          <article class="quick-pick"><span>Included-food value</span><strong>Drury Plaza</strong><p>Breakfast and evening food can reduce trip friction; count elevator crowds, parking, and the exact room against that value.</p></article>
+          <article class="quick-pick"><span>Classic Downtown trip</span><strong>Contessa, Hyatt Regency, Marriott Rivercenter, or Omni</strong><p>Compare suite space, indoor-pool access, River Walk location, event noise, and parking rather than treating central hotels as interchangeable.</p></article>
+        </div>
+      </section>
+      <section class="band">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
+          <p class="review-label">Ranges start with public price examples checked July 26, 2026; upper edges are editorial planning ceilings, not observed quotes. Parking and optional purchases are separate. Compare the final total for the same dates, occupancy, and room setup.</p>
+          <div class="comparison-scroll teen-comparison">
+            <table class="comparison-table hotel-comparison">
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Rough total/night</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
+              <tbody>
+${rows}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>
+        <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
+${cards}
+        </div>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading"><p class="eyebrow">Common questions</p><h2>San Antonio family hotel FAQ</h2></div>
+        <div class="card-grid">
+${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
+        </div>
+      </section>
+      <section class="container page-section source-section">
+        <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages. Family labeling was strong for some properties and thin for others, so the notes identify recurring themes and conflicts rather than claiming parent consensus. Price ranges use volatile public examples rather than live booking quotes.</p>
+        <ul class="source-list">
+${sanAntonioHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
+          <li><a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">San Antonio photo source</a> by Matt Harriger; <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>.</li>
+          <li>Public Expedia and Booking.com price or review pages checked July 26, 2026; exact URLs, candidate decisions, sample freshness, conflicts, and evidence limits are recorded in the evidence pack.</li>
+        </ul>
+      </section>
+      <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
+      <script type="application/ld+json">${JSON.stringify(faqJson)}</script>
+    </main>`;
+
+  return pageShell({
+    title: "Top Family Hotels in San Antonio: 12 Options by Trip Style",
+    description: "Compare 12 San Antonio family hotels and resorts by trip style, rough total nightly price, pools and lazy rivers, room setup, breakfast or kitchens, and recent online-review themes.",
+    canonical: "where-to-stay/san-antonio-family-hotels.html",
+    nav: [["./san-antonio-with-kids.html", "Where to stay"], ["../things-to-do/san-antonio-with-kids.html", "Things to do"], ["../family-itinerary/san-antonio-with-kids.html", "Itinerary"]],
+    body
+  });
+}
+
 const newYorkCityFamilyHotels = [
   {
     name: "Hotel Beacon",
@@ -2087,6 +2411,7 @@ writeSite("where-to-stay/san-diego-family-hotels.html", sanDiegoFamilyHotelPage(
 writeSite("where-to-stay/las-vegas-family-hotels.html", lasVegasFamilyHotelPage());
 writeSite("where-to-stay/chicago-family-hotels.html", chicagoFamilyHotelPage());
 writeSite("where-to-stay/new-york-city-family-hotels.html", newYorkCityFamilyHotelPage());
+writeSite("where-to-stay/san-antonio-family-hotels.html", sanAntonioFamilyHotelPage());
 writeSite("about.html", aboutPage());
 
 const oldRedirects = [
@@ -2208,6 +2533,12 @@ ${cities.map((city) => `          <article class="activity-card">
             <p><a class="text-link" href="./where-to-stay/chicago-with-kids.html">Compare Chicago stay areas with kids</a></p>
             <p><a class="text-link" href="./where-to-stay/chicago-family-hotels.html">Compare Chicago family hotels</a></p>
           </article>
+          <article class="activity-card">
+            <h3>San Antonio family hotels and resorts</h3>
+            <p>Use San Antonio when you need to choose between a River Walk base, a water-resort trip, a suite or kitchen, included breakfast, theme-park access, and a realistic heat reset.</p>
+            <p><a class="text-link" href="./where-to-stay/san-antonio-with-kids.html">Compare San Antonio stay areas with kids</a></p>
+            <p><a class="text-link" href="./where-to-stay/san-antonio-family-hotels.html">Compare San Antonio family hotels</a></p>
+          </article>
         </div>
       </section>
       <section class="band intro-band">
@@ -2257,6 +2588,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/chicago-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html</loc></url>
+  <url><loc>https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html</loc></url>
 ${cities.flatMap((city) => [
   `  <url><loc>https://familytripwise.com/things-to-do/${city.slug}-with-kids.html</loc></url>`,
   `  <url><loc>https://familytripwise.com/where-to-stay/${city.slug}-with-kids.html</loc></url>`,
@@ -2274,4 +2606,4 @@ Sitemap: https://familytripwise.com/sitemap.xml
 
 upgradePriorityPages(outDir);
 
-console.log("Generated 24 SEO pages plus about, index, redirects, robots, and sitemap.");
+console.log("Generated 25 SEO pages plus about, index, redirects, robots, and sitemap.");

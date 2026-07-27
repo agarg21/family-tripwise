@@ -67,7 +67,8 @@ The Family Tripwise project operator may update the selected action's repository
 | 32 | `FT-IMP-016` simplify and improve the New York City stay-area guide | Content/product quality | Released and production-verified | Commit `cd10933489ddf8e6c37780e5c0f20dfa740d60c2`; Pages run `30199465923`; release marker, five quick-pick starts, canonical/indexability, one sitemap entry, production invariants, and production SEO QA passed after Maxwell `PASS` with no P0-P3 findings. |
 | 33 | `FT-IMP-017` review and improve the New York City family itinerary | Content/product quality | Released and production-verified | Commit `d0c4a7d`; Pages run `30204670128`; release marker, canonical/indexability, one sitemap entry, action invariants, and production SEO QA passed. |
 | 34 | `FT-RES-010` San Antonio SERP-overlap cluster and persona decision pack | Content/product quality | Completed and review-clean | Current GSC, exact Semrush evidence, observed SERP overlap, five personas, and every-section audits define a five-role architecture without changing `site/**`; Goodall returned `PASS`. |
-| 35 | `FT-IMP-018` improve the San Antonio all-ages things-to-do hub | Content/product quality | Active implementation | Direct manual instruction selected the existing all-ages URL after the review-clean cluster decision pack; no sibling page or new URL is in scope. |
+| 35 | `FT-IMP-018` improve the San Antonio all-ages things-to-do hub | Content/product quality | Released and production-verified | Commit `27168d5`; Pages run `30207559125`; release marker, canonical/indexability, one sitemap entry, action invariants, and production SEO QA passed after Pasteur `PASS`. |
+| 36 | `FT-PUB-005` research and publish the San Antonio family-hotel comparison | Content/product quality | Review-clean; release pending | Twenty-two candidates were reviewed and 12 retained for one comparison; cycle two closed all P2s and returned Averroes `PASS` plus Dirac `PASS_WITH_P3`. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -103,7 +104,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 ### FT-IMP-018 - Improve the San Antonio all-ages things-to-do hub
 
 - Selected: 2026-07-26 by direct manual user instruction.
-- State: review-clean and release pending.
+- State: released and production-verified on 2026-07-26 at commit `27168d5d7ec472ba8f08b9e7d56e79607da03b2e`; GitHub Pages run `30207559125` succeeded.
 - Target: `https://familytripwise.com/things-to-do/san-antonio-with-kids.html`.
 - Demand: exact measured phrases show 5,400 searches/month at KD 19, 1,600 at KD 20, and 880 at KD 21. Variants overlap and are not summed.
 - Baseline: 11 impressions, 0 clicks, and page-level average position 64.36 in the fresh July 26 GSC snapshot.
@@ -111,8 +112,23 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Local result: 23 candidates reviewed, 13 retained choices, seven filters, five conditional starts, one eight-field comparison, six compact high-friction notes, four official-check groups, three cluster routes, three visible/schema-aligned FAQs, current sources, and a dimensioned licensed image. The duplicate mini-itinerary layer is removed.
 - QA: focused tests pass 5/5 and full repository tests pass 110/110; operator-state and local SEO QA pass; target-only generation, 1280/390/320 responsive containment, sticky first-column behavior, useful filter counts, image decode, 16/16 source reachability, schema/FAQ, duplicate-key-safe roadmap JSON, privacy/scope, and whitespace checks pass.
 - Review: Pasteur (`019f9eeb-de35-7261-839b-43bd97d42174`) cycle one returned `FAIL` for two P2 findings: mobile row identity and missing direct 35-minute/Junior Ranger sources. Both P2s and the two P3 wording/filter findings were corrected; cycle two returned `PASS` with no P0-P3 findings.
+- Release: `https://familytripwise.com/release.json` reported the exact commit/run; the canonical/indexable 13-choice page, seven filters, sticky comparison, FAQ/schema alignment, image, cluster links, and direct-source corrections were verified in production; production SEO QA returned 0 errors and 0 warnings.
 - Boundary: one existing URL only. No sibling-page content edit, sitemap change, new URL, indexing request, external-account mutation, affiliate CTA, outreach, hotel publication, or recurring automation.
 - Release gate: durable candidate/every-section/source review, focused/native/responsive/source/privacy/scope QA, target-only generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
+
+### FT-PUB-005 - Research and publish the San Antonio family-hotel comparison
+
+- Selected: 2026-07-26 by direct manual user instruction after the all-ages release.
+- State: review-clean; exact-path release and production verification remain.
+- Target: `https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html`.
+- Demand: exact measured phrases show 170, 140, and 110 searches/month. Resort, pool, and lazy-river variants overlap and must not be summed as unique traffic.
+- Baseline: the proposed URL has no GSC row because it does not exist; the existing San Antonio stay page has 85 impressions at page-level average position 80.14 in the fresh July 26 snapshot.
+- Product requirement: review at least 18 candidate properties and retain roughly 10-12 earned choices with current official facts, broad total-night planning ranges, sampled recent online-review themes/conflicts, freshness, direct maps, decisive parent checks, and `SA-P2` through `SA-P4` routing.
+- Local result: 22 candidates reviewed, 12 retained, six trip-style starts, one sticky mobile comparison with profile jumps, 12 expandable property profiles, 24 clearly named hotel/family-anchor map links, three visible/schema-aligned FAQs, and routes from home and the existing stay-area guide. The activity, teen, and itinerary pages remain unchanged.
+- Review: cycle one found four P2 findings covering mobile profile density, the 821px card/fact layout, stale lower `current-cycle.md` instructions, and three missing exact price-source URLs. The correction pass added expandable one-column profiles, explicit table jumps and map labels, shorter comparison checks, reconciled state, exact price URLs, and compact source records for all 10 deferrals. In cycle two, Averroes (`019fa0c8-ae15-7003-9f6e-a55c08018e44`) returned `PASS` with no P0-P3, while Dirac (`019fa0c8-e315-79c0-885a-a540adbec672`) returned `PASS_WITH_P3` with no P0-P2. Residual P3s: mobile table headers do not remain visible through the long table, and desktop/tablet profile jumps can sit beneath the sticky site header.
+- QA before review: focused tests pass 4/4; full repository tests pass 114/114; operator-state and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap JSON, idempotent generation, 1280/390/320 responsive containment, sticky mobile row identity, image decode, privacy, scope, and whitespace checks pass. Brand source probes returned successful pages or expected bot-limited 403/429 responses, with no unresolved source-not-found result.
+- Boundary: one new indexable URL; home and the existing stay guide may receive only the links needed to route to it. Do not edit activity, teen, or itinerary pages; create variant hotel URLs; request indexing; add an affiliate CTA; mutate an external account; send outreach; or create recurring automation.
+- Release gate: durable candidate/official-fact/price/review/conflict evidence, focused/native/responsive/source/privacy/scope QA, idempotent generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 
 ### FT-RES-009 - New York City SERP-overlap cluster and persona decision pack
 

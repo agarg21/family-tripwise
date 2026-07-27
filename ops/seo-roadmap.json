@@ -1593,8 +1593,9 @@
       "title": "Improve the San Antonio all-ages things-to-do hub",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-07-26",
+      "completed_on": "2026-07-26",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "impact": 5,
@@ -1626,8 +1627,60 @@
       "implementation_summary": "Reviewed 23 candidates and retained 13 distinct family roles; replaced repeated six-choice layers with seven filters, five conditional starts, one eight-field comparison, six compact high-friction notes, four current-check groups, three cluster routes, three visible/schema-aligned FAQs, current primary sources, and a dimensioned licensed image. Removed the duplicate mini-itinerary layer.",
       "qa_summary": "Focused tests pass 5/5 and the full repository suite passes 110/110; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; target-only/full generation, canonical/indexability/sitemap/internal links/schema, useful filter counts, sticky first-column behavior, 1280/390/320 responsive containment, image decode, 16/16 source reachability, duplicate-key-safe roadmap JSON, privacy, exact scope, and whitespace checks pass.",
       "review_summary": "Independent reviewer Pasteur (019f9eeb-de35-7261-839b-43bd97d42174) returned FAIL in cycle 1 for two P2 findings: mobile comparison row identity and missing direct source coverage for the 35-minute GO RIO and Junior Ranger claims. Both P2s plus the P3 Morgan's admission wording and broad age filters were corrected; cycle 2 returned final PASS with no P0-P3 findings.",
+      "release_commit": "27168d5d7ec472ba8f08b9e7d56e79607da03b2e",
+      "pages_run": 30207559125,
+      "released_at": "2026-07-26T15:02:20Z",
+      "release_state": "released-and-production-verified",
+      "result": "Released and production-verified the existing San Antonio all-ages page as a 13-choice guide with seven filters, five conditional starts, one complete comparison, six high-friction notes, current direct sources, and aligned FAQ schema.",
+      "notes": "Selected 2026-07-26 by direct manual user instruction after FT-RES-010 completed and passed independent review. Commit 27168d5d7ec472ba8f08b9e7d56e79607da03b2e deployed successfully through Pages run 30207559125; release.json matched the commit/run, the canonical/indexable page retained one sitemap entry, all action-specific production invariants passed, and production SEO QA returned 0 errors and 0 warnings. One existing URL only; no sibling-page content edit, sitemap change, new URL, indexing request, external-account mutation, affiliate CTA, outreach, hotel publication, or recurring automation."
+    },
+    {
+      "id": "FT-PUB-005",
+      "implementation_backlog_id": "IMP-037",
+      "research_backlog_id": "SRR-029",
+      "title": "Research and publish the San Antonio family-hotel comparison",
+      "kind": "publication",
+      "lane": "content-and-product-quality",
+      "status": "in_progress",
+      "selected_on": "2026-07-26",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "019fa0c8-ae15-7003-9f6e-a55c08018e44",
+        "019fa0c8-e315-79c0-885a-a540adbec672"
+      ],
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 5,
+      "risk": 3,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-antonio-family-hotel-evidence-pack.md",
+        "tools/generate-pages.mjs",
+        "tools/san-antonio-family-hotels-page.test.mjs",
+        "site/where-to-stay/san-antonio-family-hotels.html",
+        "site/where-to-stay/san-antonio-with-kids.html",
+        "site/index.html",
+        "site/sitemap.xml",
+        "status/san-antonio-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "One canonical named-property comparison helps families compare roughly 10-12 earned San Antonio hotels by trip style, room function, broad total-night range, location, pool or resort role, family-useful amenities, bounded recent online-review observations/conflicts, and decisive checks without duplicating the stay-area page.",
+      "production_invariant": "The new San Antonio hotel URL is canonical, indexable, present once in the sitemap, and linked from home and the existing San Antonio stay guide; it introduces no unsupported universal ranking, firsthand stay, safety, quiet, exact-route, guaranteed room/crib/connection, stable-price, or universal-family-fit claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-26 with finalized data through 2026-07-24. The proposed URL has no GSC row because it does not exist; the existing San Antonio stay page has 85 impressions at page-level average position 80.14. This is directional context, not a query rank or causal result.",
       "release_state": "review-clean-release-pending",
-      "notes": "Selected 2026-07-26 by direct manual user instruction after FT-RES-010 completed and passed independent review. One existing URL only; no sibling-page content edit, sitemap change, new URL, indexing request, external-account mutation, affiliate CTA, outreach, hotel publication, or recurring automation."
+      "result": "Reviewed 22 candidates and retained 12 for one locally built comparison with six trip-style starts, one sticky mobile comparison with profile jumps, 12 expandable evidence-bounded property profiles, 24 clearly named hotel/family-anchor Google Maps links, three visible/schema-aligned FAQs, and internal routes from home and the existing stay-area guide.",
+      "notes": "Selected 2026-07-26 by direct manual user instruction after FT-IMP-018 released. Cycle-one review found four P2 mobile-density, tablet-layout, stale-state, and price-source findings; the correction pass added expandable one-column profiles, explicit table jumps and map labels, shorter comparison checks, reconciled state, exact price URLs, and compact source records for all 10 deferrals. Cycle two returned Averroes PASS with no P0-P3 and Dirac PASS_WITH_P3 with no P0-P2. Residual P3s cover non-sticky mobile table headers and desktop/tablet jump targets beneath the sticky site header. Focused tests pass 4/4; full repository tests pass 114/114; operator-state and local SEO QA pass; idempotent generation, duplicate-key-safe JSON, responsive 1280/821/390/320 behavior, sticky row identity, image decode, source/privacy/scope, and whitespace checks pass. One new indexable URL only. Hotel, resort, lazy-river, pool, suite, breakfast, kitchen, and room variants remain one page with fields and trip-style starts rather than separate URLs. No booking transaction, indexing request, affiliate CTA, external-account mutation, outreach, another page publication, or recurring automation."
     }
   ]
 }

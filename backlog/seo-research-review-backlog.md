@@ -458,7 +458,7 @@ Recommend one narrow implementation test.
 
 ### SRR-007: Validate San Antonio Family-Hotel Demand And Review Workflow
 
-Status: pending
+Status: superseded by `FT-RES-010` and active `SRR-029`
 
 Recommendation label: `ask user`
 
@@ -474,6 +474,23 @@ Current measured signal:
 
 - GSC UI review on July 8, 2026 showed sparse San Antonio family-hotel queries, but rankings were weak and total GSC data volume was tiny.
 - Treat all conclusions as directional until more data is available.
+
+### SRR-029: San Antonio Family-Hotel Evidence Pack
+
+Status: evidence pack complete and review-clean
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-PUB-005`
+
+Evaluate at least 18 candidate properties and produce the durable official-fact, broad-total-price, sampled-review, conflict, freshness, map, decisive-check, and unknown record required for one clean San Antonio family-hotel comparison. This research is part of the selected publication transaction, not a separate scheduled action.
+
+Result:
+
+- Reviewed 22 candidates, retained 12, and documented 10 deferrals.
+- Recorded official room/amenity facts, rough total-price anchors, recent public review slices, explicit-family-context limits, property-specific conflicts, freshness, and decisive checks.
+- Preserved hotel, resort, pool, lazy-river, suite, kitchen, breakfast, and location variants as one page role rather than manufacturing variant URLs.
+- Averroes cycle two returned `PASS` with no P0-P3 after the exact price-source, durable-state, and deferred-candidate traceability findings were closed.
 
 ## Done
 

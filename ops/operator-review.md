@@ -1518,3 +1518,32 @@ Final verification:
 - No P0-P3 findings remain.
 - Pasteur accepted the 23-candidate methodology, 13 retained roles, `SA-P1` through `SA-P5` routing, reduced repetition, direct-source coverage, calibrated claims, useful filter counts, sticky mobile comparison, canonical/indexability/sitemap/schema/internal links, generator isolation/idempotency, temp cleanup, privacy, exact 11-path scope, and durable state.
 - Focused tests pass 5/5; full repository tests pass 110/110; operator-state QA passes; local SEO QA reports 0 errors and 0 warnings.
+
+### 2026-07-26 - `FT-PUB-005` review cycles 1-2
+
+**Reviewers:** Averroes (`019fa0c8-ae15-7003-9f6e-a55c08018e44`), Independent Read-Only Release Reviewer; Dirac (`019fa0c8-e315-79c0-885a-a540adbec672`), independent visual/UX verifier
+
+**Final result: `PASS_WITH_P3`**
+
+P0-P2 findings and disposition:
+
+1. `P2` - Replaced the uninterrupted 12-profile mobile directory with native expandable profiles, forced the card flow to one column at tablet widths, added table-to-profile jumps, shortened comparison checks, and named each nearby map destination.
+2. `P2` - Reconciled stale lower sections of `ops/current-cycle.md` that still called the released activity page unfinished and prohibited the active hotel action.
+3. `P2` - Added exact Expedia property/price URLs for Home2 at 118 Soledad, Hyatt Regency Riverwalk, and Omni La Mansion del Rio.
+4. `P2` - Confirmed the 821px opened-card layout has full-width cards and no fact-cell overflow; the collapsed mobile profile flow replaces roughly 15,000 pixels of uninterrupted expanded-card content.
+
+Additional cycle-two closure:
+
+- Added dated source records for all 10 deferred candidates, closing Averroes's P3 traceability finding.
+- Averroes returned `PASS` with no P0-P3 findings. Dirac confirmed both visual P2s closed and returned `PASS_WITH_P3`.
+
+Residual findings:
+
+1. `P3` - Mobile table row identity remains pinned, but the column header does not remain visible throughout the long comparison.
+2. `P3` - Desktop and tablet table-to-profile jumps can position the target beneath the sticky site header.
+
+Final verification:
+
+- No P0-P2 findings remain.
+- Focused tests pass 4/4; full repository tests pass 114/114; operator-state and local SEO QA pass with 0 errors and 0 warnings.
+- Duplicate-key-safe roadmap JSON, exact scope, restricted-page non-change, idempotent generation, 1280/821/390/320 responsive checks, collapsed/expanded profile behavior, image decode, source reachability, privacy, and `git diff --check` pass.
