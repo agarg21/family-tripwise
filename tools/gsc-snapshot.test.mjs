@@ -1,6 +1,16 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { base64url, finalizedThroughFromProbe, normalizeAggregate, normalizePageRows, performanceWindow, renderMarkdown, sitemapCounts, sitemapStatus, summarizeInspection, validatePublicSnapshot } from "./gsc-snapshot.mjs";
+
+test("inspects every canonical sitemap URL", async () => {
+  const monitor = JSON.parse(await readFile(new URL("../ops/gsc-monitor.json", import.meta.url), "utf8"));
+  const sitemap = await readFile(new URL("../site/sitemap.xml", import.meta.url), "utf8");
+  const sitemapUrls = [...sitemap.matchAll(/<loc>(https:\/\/familytripwise\.com\/[^<]*)<\/loc>/g)].map((match) => match[1]);
+
+  assert.equal(new Set(monitor.urls).size, monitor.urls.length, "monitor URLs must be unique");
+  assert.deepEqual([...monitor.urls].sort(), sitemapUrls.sort());
+});
 
 test("builds a stable finalized 28-day window ending two days ago", () => {
   assert.deepEqual(performanceWindow(new Date("2026-07-14T12:00:00Z")), {

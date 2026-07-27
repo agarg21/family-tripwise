@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -15,11 +15,13 @@ The Family Tripwise project operator may update the selected action's repository
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-26.json`.
-- Classification on July 26: fresh authenticated read-only Search Console API evidence, collected July 26 with finalized performance data through July 24.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-27.json`.
+- Classification on July 27: fresh authenticated read-only Search Console API evidence, collected July 27 with finalized performance data through July 25.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
-- Protected query export is configured through an encrypted manual workflow, but no decrypted protected export has been collected into central operator state yet.
+- The protected July 25 page-query export was collected through the encrypted manual workflow and decrypted only into central operator state outside this repository. Its named queries are relevant to the intended family activities, hotels, and stay jobs; it is qualitative early evidence, not a stable rank result.
+- GSC still showed the sitemap's July 8 read with 22 discovered pages while the live sitemap contained 28. Direct inspection found all five family-hotel pages unknown to Google. The sitemap was successfully resubmitted on July 27, and read-only monitoring now covers all 28 sitemap URLs.
+- New-city research is paused by direct user instruction until explicitly reopened.
 
 ## Maintenance cadence
 

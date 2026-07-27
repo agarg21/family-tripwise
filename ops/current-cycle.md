@@ -8,13 +8,13 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-021` is released and production-verified, completing the planned five-page San Antonio cluster under the user's instruction to finish without waiting for check-ins.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. The five-page San Antonio cluster is complete. New-city research is paused by direct user instruction while current pages accumulate discovery evidence.
 
-The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to continue San Antonio work. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
+The current direct-manual action is discovery monitoring only: refresh GSC evidence, resubmit the existing sitemap, and expand read-only URL Inspection coverage to every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
 ## State Checkpoint
 
-- Latest GSC evidence: `ops/gsc-snapshots/2026-07-26.md`, fresh authenticated API data finalized through 2026-07-24.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-07-27.md`, fresh authenticated API data finalized through 2026-07-25.
 - Latest site release: `FT-IMP-021` at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; Pages run `30237864556` succeeded, the release marker and committed artifact matched production, and action-specific production invariants/SEO QA passed.
 - Active manual action: none. The planned San Antonio all-ages, hotel, stay-area, teen, and itinerary pages are released and production-verified.
 - Active substantive Control Room action: none.
@@ -36,7 +36,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 26 snapshot has finalized data through July 24, 921 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
+- GSC: authenticated read-only API collection is working; the July 27 snapshot has finalized data through July 25, 982 impressions and 1 click over 28 days, a successful but stale GSC sitemap read with 22 discovered pages, and 12 of the prior 15 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; GitHub Pages run `30237864556` succeeded and production verification passed for the San Antonio family itinerary
@@ -164,7 +164,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-26.json`, collected through the read-only API with finalized data through July 24; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-27.json`, collected through the read-only API with finalized data through July 25; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 
@@ -207,7 +207,7 @@ Useful future user input:
 - Whether to prioritize traffic growth, tool/product prototype, or monetization next.
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for later research cycles; authenticated Chrome remains the current Semrush fallback.
-- Any material change to the current NYC-then-San Antonio city order.
+- When destination expansion should resume; new-city research remains paused until the user explicitly reopens it.
 
 ## Recommended Next Operator
 
@@ -224,18 +224,19 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 ```
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Latest public preflight after deployment: sitemap returned 200 with 22 parsed URLs; robots returned 200 and advertises the sitemap; all configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-07-26.json`, collected through the authenticated read-only API on July 26 with finalized data through July 24.
+- Latest public preflight on July 27: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
+- Current normalized source: `ops/gsc-snapshots/2026-07-27.json`, collected through the authenticated read-only API on July 27 with finalized data through July 25.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
-- Current GSC sitemap status: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos.
-- Current URL Inspection summary: 12 of 15 priority URLs are indexed; three are not indexed; zero inspection rows are collector-unknown.
+- Current GSC sitemap status before the manual refresh: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos. The live sitemap returns 28 URLs and was successfully resubmitted in GSC on July 27; processing remains asynchronous.
+- Current URL Inspection summary: 12 of the prior 15 monitored URLs are indexed; three are not indexed; zero inspection rows are collector-unknown. Monitoring now covers all 28 canonical sitemap URLs beginning with the next snapshot.
 - The three not-indexed URLs are San Diego things-to-do for kids and teens, plus the New York City family itinerary. The San Diego toddler page is indexed in the latest inspection.
+- Direct July 27 GSC inspection also found all five family-hotel URLs unknown to Google with no referring sitemap detected; this is a discovery blocker, not a content-quality verdict.
 - GSC login blocker: none.
-- Indexing requested: no. Do not request indexing without separate authorization.
+- Per-URL indexing requested: no. The repository policy continues to prohibit the per-URL request action; the existing sitemap was resubmitted under the user's direct approval.
 - `docs/research/gsc-monitoring-latest.md` is a pointer/summary; `docs/research/gsc-monitoring-2026-07-13.md` preserves historical manual/UI evidence.
 - Healthy or unchanged daily monitoring remains housekeeping and should update dated normalized snapshots, not narrative handoffs, unless interpretation, a blocker, monitored scope, or a material decision changes.
 
 ## Master Notes
 
-Do not create more cities or mass-generate pages until SEO Research & Review confirms the next implementation-ready priority.
+Do not research or create more cities until the user explicitly reopens destination expansion.

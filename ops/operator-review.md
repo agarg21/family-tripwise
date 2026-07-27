@@ -1736,3 +1736,16 @@ No P0, P1, or P3 findings were reported. Cycle-three validation is required.
 - All three stale statements were reconciled to the immutable release evidence and no-selected-next-action state.
 - Cycle two returned `PASS` with no P0-P3 findings across the complete seven-path documentation-only diff.
 - Boyle verified mutually consistent release SHA/run/timestamp, QA and review evidence, all five San Antonio pages recorded as released and production-verified, duplicate-key-safe roadmap JSON, no unrelated action metadata change, and no `site/**` change.
+
+### 2026-07-27 - GSC discovery monitoring reconciliation
+
+**State:** direct user-authorized monitoring and sitemap refresh; pre-review
+
+- Fresh authenticated API snapshot `ops/gsc-snapshots/2026-07-27.json` is finalized through July 25 and records 982 impressions, 1 click, sitemap `Success`, 22 discovered pages from the July 8 read, and 12 of the prior 15 monitored URLs indexed.
+- Public preflight found the live sitemap and robots healthy with 28 canonical sitemap URLs.
+- The protected July 25 page-query export was encrypted in GitHub and decrypted only into central operator state; no raw query rows entered this repository.
+- Direct GSC inspection found all five family-hotel pages unknown to Google with no referring sitemap detected. The existing sitemap was successfully resubmitted on July 27; no per-URL indexing request was made.
+- `ops/gsc-monitor.json` now matches all 28 sitemap URLs, and focused regression coverage prevents future silent monitor/sitemap drift.
+- New-city research is paused by direct user instruction until explicitly reopened.
+- Independent reviewer Kant returned two P2 documentation findings in cycle one: a stale 22-URL public-preflight statement and a stale city-order prompt.
+- Both findings were corrected without broadening the eight-path scope. Cycle two returned `PASS` with no P0-P3 findings after verifying monitor/sitemap equality, evidence classification, asynchronous sitemap wording, privacy, the destination-expansion pause, and no `site/**` or per-URL indexing-request change.
