@@ -1659,3 +1659,64 @@ No P0, P1, or P3 findings were reported. Cycle-two review is required.
 - Independently reran the focused 5/5 tests, full 123/123 suite, operator-state QA, local SEO QA, generator idempotency, duplicate-key-safe roadmap parsing, exact 11-path scope, privacy, and `git diff --check`.
 - Verified canonical/indexability/sitemap/internal links, ItemList and visible FAQ parity, sibling non-change, current official source coverage, claim boundaries, and release-policy compliance.
 - No P0-P3 findings remain.
+
+### 2026-07-27 - `FT-IMP-020` release reconciliation
+
+- Commit `e071a60c66729b61137113a96ade116969fe3532` deployed through successful GitHub Pages run `30236032473`.
+- `release.json` matched the commit/run, production HTML matched the committed artifact exactly, the canonical/indexable URL retained one sitemap entry, and all action-specific invariants passed.
+- Production SEO QA returned 0 errors and 0 warnings.
+
+### 2026-07-27 - `FT-IMP-021` selection and pre-review evidence
+
+**State:** selected under direct manual user instruction
+
+- Exact scope is limited to the itinerary research artifact, upgrader configuration and focused test, the existing San Antonio itinerary URL, San Antonio status/backlogs, and four operator-state mirrors.
+- Research maps four current query result types to representative exact URLs/domains, compares six ranking/community page types, applies all five San Antonio personas, audits every visible section, and records 17 current sources plus claim boundaries.
+- The implementation replaces repeated starter/weekend/quick-pick/variant/pacing layers with three trip-length starts, three executable day plans, five constraint pivots, four stop rules, four cluster routes, and three visible/schema-aligned FAQs.
+- Focused tests pass 4/4. Browser checks at 1280, 821, 390, and 320 pixels confirm no document overflow or text containment failure, a decoded 1280-by-960 image, left-aligned section headings, and sticky constraint identity after maximum horizontal table scrolling.
+- Focused tests pass 4/4 and the full repository suite passes 127/127; operator-state and local SEO QA pass with 0 errors and 0 warnings; target/full idempotency, privacy, exact-scope, duplicate-key-safe JSON, and whitespace QA pass.
+
+### 2026-07-27 - `FT-IMP-021` review cycle 1
+
+**Reviewer:** Einstein (`019fa1c7-1bb6-7e71-8d60-2195fc698e63`), independent read-only reviewer
+
+**Result: `FAIL`**
+
+Findings and disposition:
+
+1. `P2` - Added literal representative URLs/domains to all four sampled query rows, including the exact qualitative community discussions used for toddler, heat, and transport questions.
+2. `P2` - Reconciled the stale top and lower current-cycle/status sections to released `FT-IMP-020` and active `FT-IMP-021`.
+3. `P2` - Made the horizontal pivot comparison a keyboard-focusable, explicitly labeled region with scoped column headers and row-header roles; expanded the focused regression test.
+4. `P2` - Added the current direct Alamo Collections Center page to the research record, generated source register, and focused test.
+
+No P0, P1, or P3 findings were reported. Cycle-two review is required.
+
+Post-correction QA:
+
+- Focused tests pass 4/4 and the full repository suite passes 127/127; operator-state and local SEO QA pass with 0 errors and 0 warnings.
+- All 17 source URLs return HTTP 200.
+- The labeled comparison region receives keyboard focus and Arrow Right changes its horizontal scroll position; five column scopes and five row-header roles are present.
+- Target/full idempotency, responsive containment, sticky row identity, image decode, privacy, exact 11-path scope, duplicate-key-safe JSON, and `git diff --check` pass.
+
+### 2026-07-27 - `FT-IMP-021` review cycle 2
+
+**Reviewer:** Einstein (`019fa1c7-1bb6-7e71-8d60-2195fc698e63`), independent read-only reviewer
+
+**Result: `FAIL`**
+
+- Confirmed the query-level URLs, direct Collections Center source, table accessibility semantics, source counts, page usefulness, persona coverage, claim boundaries, canonical/schema/FAQ/internal links, and declared 11-path scope are review-clean.
+- One `P2` remained for three stale release/next-action sentences: the current released implementation still named `FT-IMP-019`, the detailed `FT-IMP-020` roadmap section still said release-pending, and the next-operator instruction still said to complete already-complete corrections.
+- Reconciled those sentences to released `FT-IMP-020` at commit `e071a60c66729b61137113a96ade116969fe3532` through Pages run `30236032473`, and corrected `FT-IMP-021` awaiting cycle-three validation.
+
+No P0, P1, or P3 findings were reported. Cycle-three validation is required.
+
+### 2026-07-27 - `FT-IMP-021` review cycle 3
+
+**Reviewer:** Einstein (`019fa1c7-1bb6-7e71-8d60-2195fc698e63`), independent read-only reviewer
+
+**Result: `PASS_WITH_P3`**
+
+- Confirmed the remaining cycle-two P2 is closed: the current release, detailed `FT-IMP-020` release result, and `FT-IMP-021` next action are consistent.
+- Confirmed no substantive regression in the research, page, source, accessibility, canonical/schema/FAQ/internal-link, policy, or exact-scope work.
+- No P0-P2 findings remain.
+- One P3 identified two lagging review-state sentences; both were mechanically reconciled to final review complete and release pending.

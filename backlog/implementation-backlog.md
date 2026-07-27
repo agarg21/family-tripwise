@@ -1361,11 +1361,11 @@ Acceptance checks:
 - No new city pages, standalone hotel pages, or NYC weekend pages were added.
 - Changed pages keep hotel, safety, transit, stroller, area, and family-suitability claims framed as planning guidance requiring verification unless human-reviewed.
 
-## Active San Antonio Implementation
+## Latest Released San Antonio Implementation
 
 ### IMP-039: Improve The San Antonio Teen Activity Specialist
 
-Status: review-clean; exact-path release pending
+Status: done, released, and production-verified
 
 Selected: 2026-07-27
 
@@ -1382,3 +1382,30 @@ Local result:
 - Five teen-led starts, 10 comparison choices, five high-friction details, three bounded routes, four current-check groups, four cluster routes, three aligned FAQs, and 22 sources.
 - Focused tests pass 5/5; full repository tests pass 123/123; local SEO QA returns 0 errors and 0 warnings; source and responsive checks pass.
 - Franklin cycle one returned `FAIL` for three P2 findings. Query-to-URL traceability, direct GO RIO duration/Six Flags chaperone sources, and stale/copy-pasted state mirrors were corrected. Cycle two returned `PASS` with no P0-P3 findings.
+- Commit `e071a60c66729b61137113a96ade116969fe3532` deployed through successful Pages run `30236032473`; release marker, exact production artifact, action invariants, and production SEO QA passed.
+
+## Active San Antonio Implementation
+
+### IMP-040: Improve The San Antonio Family Itinerary
+
+Status: review-clean; exact-path release pending
+
+Selected: 2026-07-27
+
+Roadmap ID: `FT-IMP-021`
+
+Source handoff: `SRR-032`
+
+Review current itinerary result types and representative ranking pages, all five San Antonio persona hypotheses, every visible section, current primary sources, and material claim boundaries before rebuilding the existing URL as one compact sequencing product.
+
+Use three trip-length starts, executable day-plan shapes, age/heat/weather/base pivots, explicit stop rules, visible/schema-aligned FAQs, and handoffs to the released all-ages, teen, stay-area, and hotel pages. Preserve the existing canonical/indexable URL and sitemap entry.
+
+Do not edit a sibling site page or sitemap, add a URL, request indexing, mutate an external account, send outreach, or create recurring automation.
+
+Local result:
+
+- Three trip-length starts, three executable day-plan cards, five constraint pivots, four stop rules, four cluster routes, three visible/schema-aligned FAQs, and 17 current official/licensing sources.
+- Removed the repeated starter plan, weekend plan, eight quick picks, six-row variants table, and six generic pacing cards.
+- Cycle-one P2 corrections add literal URL traceability to every query row, reconcile every active/release-state mirror, add keyboard/row/column semantics to the mobile comparison, and directly source the Collections Center claim.
+- Post-correction focused tests pass 4/4 and the full repository suite passes 127/127; operator-state and local SEO QA pass with 0 errors and 0 warnings; all 17 sources return 200; keyboard scrolling, responsive/table/image checks, privacy, exact scope, duplicate-key-safe JSON, idempotent generation, and whitespace checks pass.
+- Einstein returned final `PASS_WITH_P3` in cycle three with no P0-P2 findings. The non-blocking P3 identified two lagging review-state sentences; both were mechanically reconciled before release.

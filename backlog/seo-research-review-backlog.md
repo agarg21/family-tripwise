@@ -756,3 +756,25 @@ Result:
 - Applied the primary teen persona and mixed-age needs, reviewed 18 candidate roles, retained 10, and audited every visible section.
 - Recorded 22 current official/licensing sources, material claim boundaries, acceptance criteria, and non-causal measurement limits.
 - Cycle-one review required query-to-URL traceability and direct support for the GO RIO duration and Six Flags chaperone check; both evidence corrections are complete. Franklin returned `PASS` in cycle two with no P0-P3 findings.
+
+### SRR-032: San Antonio Family-Itinerary SERP, Persona, Source, And Every-Section Review
+
+Status: complete and independently review-clean inside `FT-IMP-021`
+
+Selected: 2026-07-27
+
+Roadmap ID: `FT-IMP-021`
+
+Before implementation, inspect current itinerary result types and representative ranking pages, qualitative family constraints, `SA-P1` through `SA-P5`, current official attraction/transport/weather sources, and every visible section of the existing page.
+
+The review must decide what to keep, delete, combine, or rebuild; distinguish structural opportunities from firsthand/local authority we cannot claim; and bound route, time, transport, stroller, accessibility, safety, weather, ticket, price, and family-fit assertions.
+
+Result:
+
+- Mapped four current itinerary queries to representative exact URLs/domains and result types without inventing complete top-10 counts or ranks.
+- Compared six ranking/community page types, preserving their concrete attraction and local-authority strengths while targeting overpacking, deletion, reset, and constraint gaps.
+- Applied `SA-P1` through `SA-P5` and audited every visible section of the existing page.
+- Recorded 17 current official/licensing sources, material claim boundaries, acceptance criteria, and non-causal measurement limits.
+- Cycle-one P2 corrections add literal URLs/domains for every sampled query and direct Collections Center support.
+- Einstein returned final `PASS_WITH_P3` in cycle three with no P0-P2 findings.
+- Artifact: `docs/research/san-antonio-family-itinerary-page-review.md`.

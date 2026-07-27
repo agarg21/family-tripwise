@@ -1617,50 +1617,104 @@ const itineraryPages = {
     ]
   },
   "family-itinerary/san-antonio-with-kids.html": {
-    title: "San Antonio Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    title: "San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Build a San Antonio itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with heat, meals, drive time, and skip notes.",
+      "Plan one, two or three realistic San Antonio days with kids using coherent route shapes, age and heat pivots, protected resets, and clear stop rules.",
     city: "San Antonio",
+    schemaName: "San Antonio family itinerary lengths",
+    removeGeneratedItinerarySections: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>San Antonio itinerary with kids</h1>", "<h1>San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
+      ["<p>A starter family itinerary for San Antonio with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, give each half day one main job, and protect one reset. Then change the anchor for age, heat, weather, budget, and the stay base.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction, route, and weather sources checked:</strong> July 27, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transport or parking, weather, ticket, and accessibility details for your dates.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
+      ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Matt Harriger via <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
     links: {
       allAges: "../things-to-do/san-antonio-with-kids.html",
       stay: "../where-to-stay/san-antonio-with-kids.html",
       teen: "../things-to-do/san-antonio-with-teens.html"
     },
     clusterCards: [
-      ["All-ages activity guide", "Compare the Alamo, River Walk boat ride, The DoSeum, zoo, Natural Bridge Caverns, and Six Flags by age, heat, rain, nap fit, and stroller/drive friction.", "../things-to-do/san-antonio-with-kids.html", "Open San Antonio things to do with kids"],
-      ["Teen-specific swaps", "Use caverns, theme-park, food, and short Downtown context ideas when older kids need more than younger-kid museum pacing.", "../things-to-do/san-antonio-with-teens.html", "Open San Antonio with teens"],
-      ["Where to stay first", "Pick the lodging base before locking the route. Pearl, Downtown/River Walk, Broadway/DoSeum, Northwest theme-park areas, and airport/value bases change heat, parking, stroller, and drive-time tradeoffs.", "../where-to-stay/san-antonio-with-kids.html", "Open where to stay in San Antonio with kids"]
+      ["Choose the activity anchor", "Compare 13 current choices by age, weather, cost, pace, and planning friction before placing one into the day.", "../things-to-do/san-antonio-with-kids.html", "Open San Antonio things to do with kids"],
+      ["Give teens one real choice", "Use the older-kid guide when adventure, coasters, competition, history, art, food, or a photo payoff should shape the route.", "../things-to-do/san-antonio-with-teens.html", "Open San Antonio with teens"],
+      ["Choose the stay area", "Compare Downtown, Pearl, Broadway/Brackenridge, SeaWorld/Westover Hills, and La Cantera before assuming a map pin reflects the daily return.", "../where-to-stay/san-antonio-with-kids.html", "Compare San Antonio stay areas"],
+      ["Compare named hotels", "Use the 12-hotel page for broad nightly ranges, room function, official facts, bounded online-review observations, and maps.", "../where-to-stay/san-antonio-family-hotels.html", "Compare San Antonio family hotels"]
     ],
+    quickTitle: "Pick the trip length before the attractions",
     quick: [
-      ["Best 1-day plan", "Alamo early, boat ride, Pearl or DoSeum by age", "Covers the city signature without a long hot Downtown march."],
-      ["Best 2-day plan", "Downtown/Pearl plus DoSeum, zoo, caverns, or theme park by age", "Separates classic first-visit stops from the bigger kid-specific anchor."],
-      ["Best 3-day plan", "Arrival reset, Downtown context, age-specific anchor day", "Adds heat-season slack and keeps one major attraction from swallowing every day."],
-      ["Best toddler pace", "The DoSeum, Pearl food/reset, hotel nap, short boat ride", "Indoor hands-on time and a short evening view usually beat long outdoor sightseeing."],
-      ["Best teen pace", "Natural Bridge Caverns or Six Flags, Pearl food, short River Walk", "Older kids often need adventure, rides, or food payoff plus concise city context."],
-      ["Best rainy/heat swap", "The DoSeum or short indoor/covered Downtown plan", "Keep the plan close to meals and save outdoor zoo/theme-park time for a better window."],
-      ["Best stay pairing", "Pearl/Museum Reach or Downtown for first visit; Northwest only for theme-park trips", "Treat this as planning guidance and verify exact parking, noise, stroller route, and heat-season logistics."],
-      ["What to skip", "Outdoor zoo, River Walk, caverns, and theme park in one compressed route", "Heat, drive time, lines, and tired kids can turn the day into logistics."]
+      ["One day", "One bounded Downtown signature block + one reset + one easy finish", "Use the Alamo, GO RIO, or both as the context; Hemisfair, a meal, or the hotel remains optional."],
+      ["Two days", "One Downtown day + one age-led anchor day", "Separate the city signature from The DoSeum, zoo/Witte, caverns, SeaWorld, Six Flags, or another major choice."],
+      ["Three days", "Downtown + age-led anchor + one flexible contrast day", "Use the third day for missions, Pearl, a teen choice, a resort reset, or another family priority rather than an icon checklist."]
     ],
     rows: [
-      ["1-day highlights", "Alamo early; boat ride; lunch/rest; Pearl or DoSeum depending on ages", "First-time mixed ages", "Midday hotel, shaded meal, or Pearl reset", "Moderate; Downtown stroller routes and parking need checking", "Plan lunch before heat and crowds peak", "Zoo, caverns, and Six Flags add-ons"],
-      ["2-day first visit", "Day 1 Downtown/Alamo/River Walk/Pearl; Day 2 DoSeum or zoo for younger kids, caverns or Six Flags for older kids", "Weekend families", "Protect one afternoon as optional", "Moderate-high; second day may require a drive", "Keep dinners close to the stay base", "Multiple outdoor anchors in summer heat"],
-      ["3-day balanced plan", "Arrival reset; Downtown/Pearl day; age-specific anchor day; optional zoo or food reset", "Most families", "One real reset daily, especially warm months", "Lower if you avoid crossing north/south repeatedly", "Stock water/snacks and choose backup meals early", "Making the theme park or caverns day share space with too many classic stops"],
-      ["Toddler-paced plan", "The DoSeum; Pearl reset; hotel nap; short boat ride if weather and energy cooperate", "Babies, toddlers, preschoolers", "Nap after lunch is the anchor", "Lower if staying near Pearl/Broadway; Downtown route still needs verifying", "Use verified casual meals and bathrooms", "Long River Walk loop, midday zoo, or caverns with tired toddlers"],
-      ["Teen-paced plan", "Natural Bridge Caverns or Six Flags; food reset; concise Alamo/River Walk block", "Tweens and teens", "Reset can be hotel pool, Pearl meal, or quiet evening", "Drive time and heat checks matter", "Give teens a food or adventure payoff", "Younger-kid-only museum pacing all day"],
-      ["Rainy/heat version", "The DoSeum for younger kids; short Downtown context plus food; indoor/rest block; save outdoor anchor", "Any age with weather or heat constraints", "Use midday as the protected reset", "Lower if you keep the route central", "Do not rely on exposed walking for meals", "Long zoo/theme-park day in extreme heat or storms"]
+      ["One-day first look", "One bounded Downtown signature block, one reset, one easy finish"],
+      ["Two-day first trip", "Downtown context day plus one age-led anchor day"],
+      ["Three-day balanced trip", "Downtown, age-led anchor, and one flexible contrast day"]
     ],
+    dayPlansTitle: "Use one, two, or three days without making every option mandatory",
+    itineraryNote: "Choose the route shape first, then check exact attraction entries, hotel entrances, transport or parking, heat and weather, tickets, and accessibility for the dates.",
+    pivotComparisonClass: "itinerary-pivot-comparison",
+    dayPlans: [
+      ["One-day first look", "Short visits and first-time families who want one coherent San Antonio day", [
+        ["Morning context", "Choose the Alamo church reservation, the paid Collections Center, or another bounded Downtown history product. Decide the exact product before arrival instead of treating the whole district as one stop."],
+        ["Middle reset", "Use a seated GO RIO cruise, a planned meal, shade, or the hotel as the reset only when the current operation, wait, weather, and return fit. The second anchor remains optional."],
+        ["Easy finish", "Use Hemisfair, one short River Walk segment, a nearby meal, or the hotel. Remove the finish when heat, waiting, or the first anchor runs long."]
+      ], "Stop after the context block and reset. Pearl, the zoo, a cave tour, and a theme park are the first removals."],
+      ["Two-day first trip", "Weekend families who want the city signature plus one child-led day", [
+        ["Day 1: Downtown context", "Choose the Alamo product and GO RIO or another same-district finish. Keep the meal and reset near the exact stay base rather than adding Pearl and another museum automatically."],
+        ["Day 2: choose the family anchor", "Choose The DoSeum for hands-on younger-child time, zoo or Witte for an animal/museum day, Natural Bridge for a selected cave product, or one theme park. Treat the selected anchor as the day."],
+        ["Reset rule", "Protect one unbooked afternoon, hotel return, or simple evening. If Day 1 runs late, remove the Day 2 add-on before cutting food or the reset."]
+      ], "Do not use Day 2 to combine the zoo, DoSeum, caverns, SeaWorld, Six Flags, and a late Downtown return."],
+      ["Three-day balanced trip", "Families who want two defined days plus one flexible contrast or recovery day", [
+        ["Day 1: city signature", "Use one bounded Downtown history choice, one cruise or River Walk block, and a clear heat or hotel exit."],
+        ["Day 2: age-led anchor", "Choose one younger-child, animal/museum, adventure, teen, or theme-park anchor from the released guides. Keep the final block optional."],
+        ["Day 3: choose the contrast", "Choose one mission site, Pearl/Museum Reach, a budget/local-style block, another family priority, or a resort/hotel reset. Confirm exact openings and transport before turning it into a route."]
+      ], "Keep one block optional each day and make only one distant full-day attraction a fixed commitment."]
+    ],
+    pivotTitle: "Pivot for age, heat, weather, budget, or the chosen base",
+    pivotTableLabel: "San Antonio itinerary constraint comparison. Scroll horizontally for all columns.",
+    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivots: [
+      ["Younger child, nap, sensory need, stroller, or short session", "One hands-on or animal anchor and the protected reset", "Use The DoSeum, a bounded Witte or zoo visit, Hemisfair, or another current age-fit choice instead of a long multi-zone sequence", "Entrances, stroller handling, queues, heat, effects, bathrooms, and hotel-return timing vary", "Exact route, venue access or sensory resources, weather, ticket, meal, bathroom, and return plan"],
+      ["Teen or mixed ages", "One older-child-selected anchor", "Use the teen guide for caverns, coasters, competition, history, art, food, or a photo payoff; use a split only when the family can support it", "Exact product, minor or height rule, younger-sibling fit, cost, and evening return", "Ticket, age or chaperone rule, effects, weather, transport, and split-plan needs"],
+      ["Heat, storm, poor air, or outdoor-operation change", "One current indoor or shaded anchor and a nearby meal/reset", "Move the zoo, park, outdoor mission, long River Walk, or theme-park block rather than forcing the original sequence", "Indoor can still mean queues, stimulation, walking, and transport", "Forecast, alerts, venue status, ticket, parking or VIA plan, and hotel return"],
+      ["Budget or local-style trip", "One chosen paid anchor plus flexible history, park, mission, or district time", "Use the Alamo church, one mission site, Hemisfair, Pearl, or another no-admission block when current conditions fit", "Transport, parking, meals, events, special exhibits, and optional purchases still cost money", "Current admission, event or site status, weather, transport, parking, and complete daily spend"],
+      ["Arrival, departure, transport, or lodging-base constraint", "Keep the first and last blocks near the chosen base", "Move the farthest north-, west-, or south-side anchor to the full day with the cleanest return plan", "Hotel entrance, luggage, parking, VIA service, rideshare, check-in, and evening return", "Exact address, luggage plan, service alerts, parking, realistic return, and what gets deleted"]
+    ],
+    plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "Arrival afternoon": "Keep the first block light: snacks, pool or room setup if available, a short Pearl or nearby meal, and no promises that require perfect weather.",
-      "Downtown context day": "Use the Alamo and a short River Walk or boat segment as the city signature, then stop before heat and crowds make it feel bigger than it is.",
-      "Age-specific anchor day": "Choose DoSeum or zoo for younger kids, Natural Bridge Caverns or Six Flags for older kids. Treat the chosen anchor as the day, not a prelude to three more stops.",
-      "Rain or heat backup": "Use The DoSeum, a short meal-centered Downtown block, or a hotel reset. Verify current hours, ticketing, and weather policies before changing the route.",
-      "Toddler adjustment": "Keep sessions short, make the midday rest non-negotiable, and delete the evening add-on if the morning ran hot or overstimulating.",
-      "Teen adjustment": "Give older kids one higher-payoff anchor, then use food, pool, or a concise River Walk block rather than stretching the day with younger-kid filler."
+      "One main job per half day": "The Alamo district, a museum, zoo, cave tour, theme park, mission route, or resort block already fills a family planning unit. Do not make the transfer another headline stop.",
+      "Protect the midday reset or heat exit": "Choose the meal, hotel return, shaded stop, or low-pressure indoor block before the day starts. Remove the next activity when that reset disappears.",
+      "Choose one distant full-day anchor": "Natural Bridge, SeaWorld, Six Flags, and other outer-zone anchors need their own dated operation, ticket, transport, and return plan. Do not stack them with each other.",
+      "Set the deletion and return rule": "Decide which optional block goes first and how the family returns to the hotel when weather, waiting, child energy, or an attraction runs long."
     },
     faqs: [
-      ["How many days do families need in San Antonio?", "Two or three days works best for a first family trip. One day can work if families keep Downtown concise and choose either Pearl or DoSeum instead of stacking every major attraction."],
-      ["What should families skip on a short San Antonio trip?", "Avoid stacking the zoo, River Walk, caverns, theme parks, and Pearl into one compressed route. Heat, drive time, parking, lines, and child energy can change the plan quickly."],
-      ["What is the easiest rainy-day or heat-day San Antonio itinerary with kids?", "Use The DoSeum for younger kids or a short indoor/meal-centered Downtown plan, then save zoo, River Walk walking, caverns, or theme-park time for better conditions."]
+      ["How many days should a family spend in San Antonio?", "One day can cover a bounded Downtown context block. Two days add one age-led anchor. A third day creates room for a mission, Pearl, a resort reset, another family priority, or a weather swap. The useful length depends on the stay base, ages, heat, tickets, and reset needs."],
+      ["What should families skip on a short San Antonio trip?", "Skip cross-city attraction stacking, more than one distant full-day anchor, and a firm late add-on after every major stop. Keep one main job per half day, a meal or reset, and a clear deletion rule."],
+      ["How should families change a San Antonio itinerary for heat or storms?", "Move the main block to one current indoor or shaded choice, keep the meal and hotel reset close to it, and drop the zoo, park, long River Walk, mission, or theme-park block when current conditions or operations do not fit."]
+    ],
+    sourcesIntro: "Official attraction, park, transit, weather, and licensing sources checked July 27, 2026. Recheck schedules, service alerts, weather, tickets, access, and exact routes for the dates.",
+    sources: [
+      ["Alamo free church timed entry", "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry"],
+      ["Alamo Collections Center", "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center"],
+      ["GO RIO narrated cruise overview", "https://www.goriocruises.com/overview/"],
+      ["GO RIO visitor information", "https://www.goriocruises.com/visitor-information/"],
+      ["Hemisfair visit information", "https://hemisfair.org/visit/"],
+      ["The DoSeum plan your visit", "https://www.thedoseum.org/plan-your-visit"],
+      ["San Antonio Zoo plan your visit", "https://sazoo.org/visit/"],
+      ["Witte Museum plan your visit", "https://www.wittemuseum.org/plan-your-visit/"],
+      ["San Antonio Missions basic information", "https://www.nps.gov/saan/planyourvisit/basicinfo.htm"],
+      ["Natural Bridge Caverns", "https://naturalbridgecaverns.com/"],
+      ["Six Flags Fiesta Texas hours and calendar", "https://www.sixflags.com/fiestatexas/plan-your-visit/park-hours"],
+      ["SeaWorld San Antonio park information", "https://seaworld.com/san-antonio/park-info/"],
+      ["VIA trip planning", "https://www.viainfo.net/trip-planning/"],
+      ["VIA service alerts", "https://www.viainfo.net/service-alerts/"],
+      ["National Weather Service San Antonio forecast", "https://forecast.weather.gov/MapClick.php?lat=29.4241&lon=-98.4936"],
+      ["San Antonio River Walk photo source and attribution", "https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg"],
+      ["CC BY-SA 2.0 license", "https://creativecommons.org/licenses/by-sa/2.0/"]
     ]
   },
   "family-itinerary/san-diego-with-kids.html": {
@@ -2207,14 +2261,17 @@ ${items.map(([label, pick, why]) => `          <article class="quick-pick">
         </div>`;
 }
 
-function renderActivityComparison(rows, customHeaders, wrapperClass = "") {
+function renderActivityComparison(rows, customHeaders, wrapperClass = "", options = {}) {
   const headers = customHeaders || ["Activity", "Best ages", "Time", "Cost", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"];
   const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
-  return `        <div class="${esc(className)}">
+  const wrapperAttributes = options.accessibleLabel
+    ? ` tabindex="0" role="region" aria-label="${esc(options.accessibleLabel)}"`
+    : "";
+  return `        <div class="${esc(className)}"${wrapperAttributes}>
           <table class="comparison-table">
-            <thead><tr>${headers.map((header) => `<th>${esc(header)}</th>`).join("")}</tr></thead>
+            <thead><tr>${headers.map((header) => `<th${options.accessibleLabel ? ' scope="col"' : ""}>${esc(header)}</th>`).join("")}</tr></thead>
             <tbody>
-${rows.map((row) => `              <tr>${row.map((cell) => `<td>${esc(cell)}</td>`).join("")}</tr>`).join("\n")}
+${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${esc(cell)}</td>`).join("")}</tr>`).join("\n")}
             </tbody>
           </table>
         </div>`;
@@ -2861,7 +2918,10 @@ ${renderDayPlans(page.dayPlans)}
             <p class="eyebrow">Change the route</p>
             <h2>${esc(page.pivotTitle || "Pivot for age, pool time, heat, nature, or budget")}</h2>
           </div>
-${renderActivityComparison(page.pivots, page.pivotHeaders, page.pivotComparisonClass)}
+${renderActivityComparison(page.pivots, page.pivotHeaders, page.pivotComparisonClass, {
+  accessibleLabel: page.pivotTableLabel,
+  rowHeaders: Boolean(page.pivotTableLabel)
+})}
         </div>
       </section>
 
