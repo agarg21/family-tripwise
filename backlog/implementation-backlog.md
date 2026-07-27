@@ -1388,7 +1388,7 @@ Local result:
 
 ### IMP-040: Improve The San Antonio Family Itinerary
 
-Status: review-clean; exact-path release pending
+Status: completed, released, and production-verified
 
 Selected: 2026-07-27
 
@@ -1409,3 +1409,4 @@ Local result:
 - Cycle-one P2 corrections add literal URL traceability to every query row, reconcile every active/release-state mirror, add keyboard/row/column semantics to the mobile comparison, and directly source the Collections Center claim.
 - Post-correction focused tests pass 4/4 and the full repository suite passes 127/127; operator-state and local SEO QA pass with 0 errors and 0 warnings; all 17 sources return 200; keyboard scrolling, responsive/table/image checks, privacy, exact scope, duplicate-key-safe JSON, idempotent generation, and whitespace checks pass.
 - Einstein returned final `PASS_WITH_P3` in cycle three with no P0-P2 findings. The non-blocking P3 identified two lagging review-state sentences; both were mechanically reconciled before release.
+- Commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f` deployed successfully through Pages run `30237864556`; release marker, exact production artifact, action invariants, and production SEO QA passed.

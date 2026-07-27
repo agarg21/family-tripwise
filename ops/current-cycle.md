@@ -8,22 +8,22 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-020` is released and production-verified. Direct manual action `FT-IMP-021` has completed research, implementation, and pre-review QA under the user's instruction to finish the San Antonio cluster without waiting for check-ins.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. Direct manual action `FT-IMP-021` is released and production-verified, completing the planned five-page San Antonio cluster under the user's instruction to finish without waiting for check-ins.
 
 The central Control Room remains the only scheduler. This transaction is allowed by the user's direct manual instruction to continue San Antonio work. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-26.md`, fresh authenticated API data finalized through 2026-07-24.
-- Latest site release: `FT-IMP-020` at commit `e071a60c66729b61137113a96ade116969fe3532`; Pages run `30236032473` succeeded, the release marker and committed artifact matched production, and action-specific production invariants/SEO QA passed.
-- Active manual action: `FT-IMP-021`, selected 2026-07-27 under the user's direct instruction; research, implementation, QA, and final independent review are complete. Exact-path release and production verification remain.
+- Latest site release: `FT-IMP-021` at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; Pages run `30237864556` succeeded, the release marker and committed artifact matched production, and action-specific production invariants/SEO QA passed.
+- Active manual action: none. The planned San Antonio all-ages, hotel, stay-area, teen, and itinerary pages are released and production-verified.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
 - NYC teen publication: complete; production contains one canonical/indexable 10-choice specialist with the expected cluster routes and one sitemap entry.
 - NYC stay-area improvement: complete; production contains the canonical/indexable five-area guide with five quick-pick starts, one sitemap entry, and the expected cluster routes.
 - NYC itinerary improvement: complete, released, and production-verified at commit `d0c4a7d` through Pages run `30204670128`.
-- San Antonio research and releases: `FT-RES-010`, `FT-IMP-018`, `FT-PUB-005`, `FT-IMP-019`, and `FT-IMP-020` are complete. `FT-IMP-020` released at `e071a60` through Pages run `30236032473`. `FT-IMP-021` / `IMP-040` / `SRR-032` is the active San Antonio itinerary action.
+- San Antonio research and releases: `FT-RES-010`, `FT-IMP-018`, `FT-PUB-005`, `FT-IMP-019`, `FT-IMP-020`, and `FT-IMP-021` are complete. The final itinerary action released at `90ed019` through Pages run `30237864556`; no planned San Antonio page remains open.
 - Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
 
 ## Current Project State
@@ -39,7 +39,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
 - GSC: authenticated read-only API collection is working; the July 26 snapshot has finalized data through July 24, 921 impressions and 1 click over 28 days, a successful sitemap with 22 discovered pages, and 12 of 15 priority URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `e071a60c66729b61137113a96ade116969fe3532`; GitHub Pages run `30236032473` succeeded and production verification passed for the San Antonio teen activity specialist
+- Current released implementation: commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; GitHub Pages run `30237864556` succeeded and production verification passed for the San Antonio family itinerary
 
 ## Historical operating threads
 
@@ -168,7 +168,7 @@ The central Control Room remains the only scheduler. This transaction is allowed
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-020` released and production-verified at commit `e071a60c66729b61137113a96ade116969fe3532` through Pages run `30236032473`; the release marker, exact production artifact, action invariants, and production SEO QA passed. `FT-IMP-021` is the active direct-manual transaction for the existing San Antonio family itinerary. Its exact 11-path scope preserves one URL and now contains a current query/ranking-page/persona/every-section/source review plus three trip-length starts, three executable day plans, five pivots, four stop rules, four cluster routes, three aligned FAQs, and 17 current sources. Einstein cycle one returned `FAIL` for four P2 traceability/state/accessibility/source findings; all are corrected and cycle-two review remains. No sibling site page, sitemap, new URL, indexing request, external-account mutation, outreach, or recurring automation is allowed. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-021` released and production-verified at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f` through Pages run `30237864556`; the release marker, exact production artifact, action invariants, and production SEO QA passed. The five-page San Antonio sequence is complete, and no next substantive action is selected in this reconciliation. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -178,7 +178,7 @@ Deferred research topics are queued for later validation, not immediate implemen
 Findings to preserve:
 
 - Current destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio.
-- San Diego, Las Vegas, Chicago, and New York City have completed deep quality passes; San Antonio research now defines the next one-page sequence.
+- San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed their current deep quality passes.
 - Existing pages should be improved before new cities are created.
 - Named-property hotel pages require durable source, uncertainty, freshness, and review records; personally verified, safety, quiet, exact-route, or unsupported firm family-suitability claims still require human review.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
@@ -211,7 +211,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Complete cycle-three validation, exact-path release, and production verification for corrected `FT-IMP-021`. Do not edit a sibling San Antonio page or another city page inside this transaction.
+No substantive action is selected by this reconciliation. Preserve the completed San Antonio cluster and let the Control Room or a future direct user instruction choose the next eligible action from fresh evidence; do not manufacture work from scan cadence.
 
 ## GSC Monitoring
 

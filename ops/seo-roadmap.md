@@ -71,7 +71,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 36 | `FT-PUB-005` research and publish the San Antonio family-hotel comparison | Content/product quality | Released and production-verified | Commit `4617ec82`; Pages run `30226920951`; 12 hotels, 24 maps, release marker, production invariants, and production SEO QA passed. |
 | 37 | `FT-IMP-019` simplify and improve the San Antonio stay-area guide | Content/product quality | Released and production-verified | Commit `7f54f23`; Pages run `30234700209`; release marker, production artifact, action invariants, and production SEO QA passed. |
 | 38 | `FT-IMP-020` improve the San Antonio teen activity specialist | Content/product quality | Released and production-verified | Commit `e071a60`; Pages run `30236032473`; release marker, production artifact, action invariants, and production SEO QA passed after Franklin `PASS`. |
-| 39 | `FT-IMP-021` review and improve the San Antonio family itinerary | Content/product quality | In progress | One existing URL only; current SERP, persona, every-section, source, and claim-boundary review precedes a compact sequencing improvement. |
+| 39 | `FT-IMP-021` review and improve the San Antonio family itinerary | Content/product quality | Completed | Existing itinerary is released and production-verified as a compact one-, two-, and three-day sequencing product. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -163,7 +163,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 ### FT-IMP-021 - Review and improve the San Antonio family itinerary
 
 - Selected: 2026-07-27 under the user's direct manual instruction to finish the San Antonio cluster without waiting for check-ins.
-- State: research, implementation, QA, and final independent review are complete; exact-path release and production verification remain.
+- State: completed, released, and production-verified.
 - Target: `https://familytripwise.com/family-itinerary/san-antonio-with-kids.html`.
 - Demand: the generic exact itinerary phrase is estimated at 260 searches/month and the 3-day phrase at 40; exact family itinerary seeds displayed 0. These overlapping estimates are directional, not unique traffic.
 - Baseline: 6 impressions, 0 clicks, and page-level average position 27.17 in the fresh July 26 GSC snapshot. This is too sparse for a query-rank or causal conclusion.
@@ -171,6 +171,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Local result: three trip-length starts; three executable day-plan cards; five constraint pivots; four stop rules; four cluster routes; three visible/schema-aligned FAQs; 17 current official/licensing sources; and a dimensioned licensed image.
 - Review: Einstein (`019fa1c7-1bb6-7e71-8d60-2195fc698e63`) completed three cycles. Cycle one found four P2 traceability/state/accessibility/source issues; cycle two found one deeper stale-state P2; all P2s were corrected. Final verdict is `PASS_WITH_P3` with no P0-P2 findings.
 - Post-correction QA: focused tests pass 4/4 and the full repository suite passes 127/127; operator-state and local SEO QA pass with 0 errors and 0 warnings; all 17 source URLs return 200; keyboard scrolling, responsive/table/image checks, duplicate-key-safe JSON, idempotent generation, privacy, exact scope, and whitespace checks pass.
+- Release: commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f` deployed successfully through Pages run `30237864556`; release marker, exact production artifact, action invariants, and production SEO QA passed.
 - Boundary: one existing URL only. No sibling page or sitemap edit, new URL, indexing request, external-account mutation, outreach, or recurring automation.
 
 ### FT-RES-009 - New York City SERP-overlap cluster and persona decision pack

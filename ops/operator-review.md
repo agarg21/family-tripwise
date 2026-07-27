@@ -1720,3 +1720,19 @@ No P0, P1, or P3 findings were reported. Cycle-three validation is required.
 - Confirmed no substantive regression in the research, page, source, accessibility, canonical/schema/FAQ/internal-link, policy, or exact-scope work.
 - No P0-P2 findings remain.
 - One P3 identified two lagging review-state sentences; both were mechanically reconciled to final review complete and release pending.
+
+### 2026-07-27 - `FT-IMP-021` release reconciliation
+
+- Commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f` deployed through successful GitHub Pages run `30237864556`.
+- `release.json` matched the commit/run, production HTML matched the committed artifact exactly, the canonical/indexable URL retained one sitemap entry, and all action-specific invariants passed.
+- Production SEO QA returned 0 errors and 0 warnings.
+- This release completes the planned five-page San Antonio cluster; no San Antonio implementation remains active.
+
+### 2026-07-27 - `FT-IMP-021` release-state reconciliation review
+
+**Reviewer:** Boyle (`019fa1e5-0e94-79b0-aa83-ccd9056860da`), independent read-only reviewer
+
+- Cycle one returned `FAIL` for one P2 covering three deeper stale `ops/current-cycle.md` statements that still described the completed itinerary as active or pending.
+- All three stale statements were reconciled to the immutable release evidence and no-selected-next-action state.
+- Cycle two returned `PASS` with no P0-P3 findings across the complete seven-path documentation-only diff.
+- Boyle verified mutually consistent release SHA/run/timestamp, QA and review evidence, all five San Antonio pages recorded as released and production-verified, duplicate-key-safe roadmap JSON, no unrelated action metadata change, and no `site/**` change.
