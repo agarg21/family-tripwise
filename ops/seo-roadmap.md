@@ -69,7 +69,8 @@ The Family Tripwise project operator may update the selected action's repository
 | 34 | `FT-RES-010` San Antonio SERP-overlap cluster and persona decision pack | Content/product quality | Completed and review-clean | Current GSC, exact Semrush evidence, observed SERP overlap, five personas, and every-section audits define a five-role architecture without changing `site/**`; Goodall returned `PASS`. |
 | 35 | `FT-IMP-018` improve the San Antonio all-ages things-to-do hub | Content/product quality | Released and production-verified | Commit `27168d5`; Pages run `30207559125`; release marker, canonical/indexability, one sitemap entry, action invariants, and production SEO QA passed after Pasteur `PASS`. |
 | 36 | `FT-PUB-005` research and publish the San Antonio family-hotel comparison | Content/product quality | Released and production-verified | Commit `4617ec82`; Pages run `30226920951`; 12 hotels, 24 maps, release marker, production invariants, and production SEO QA passed. |
-| 37 | `FT-IMP-019` simplify and improve the San Antonio stay-area guide | Content/product quality | In progress | The hotel boundary now exists; simplify five area choices around visitor routes, resets, transport, and a direct hotel handoff. |
+| 37 | `FT-IMP-019` simplify and improve the San Antonio stay-area guide | Content/product quality | Released and production-verified | Commit `7f54f23`; Pages run `30234700209`; release marker, production artifact, action invariants, and production SEO QA passed. |
+| 38 | `FT-IMP-020` improve the San Antonio teen activity specialist | Content/product quality | Review cycle 2 pending | Cycle-one P2 corrections add query-to-URL traceability, direct GO RIO/Six Flags sources, and consistent release/queue state. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -135,15 +136,26 @@ Ready does not authorize project work by itself. The Control Room selects and di
 ### FT-IMP-019 - Simplify and improve the San Antonio stay-area guide
 
 - Selected: 2026-07-26 by direct manual user instruction after the hotel comparison released.
-- State: review-clean; exact-path release and production verification remain.
+- State: completed, released, and production-verified at commit `7f54f230a859d61a41d0eb9a60781f037d88947f` through Pages run `30234700209`.
 - Target: `https://familytripwise.com/where-to-stay/san-antonio-with-kids.html`.
 - Demand: generic exact phrases show 590 and 140 searches/month; family-specific variants show 10-20. Variants overlap and generic results include residential-neighborhood intent.
 - Baseline: 85 impressions, 0 clicks, and page-level average position 80.14 in the fresh July 26 GSC snapshot.
 - Product requirement: keep one five-base visitor guide, replace universal “best” language and duplicate sections with five conditional starts, one route/reset/transport matrix, three decisive checks, current direct sources, visible/schema-aligned FAQs, and a clear route to the 12-hotel comparison.
 - Local result: five conditional starts; one five-row/seven-field comparison with sticky mobile row identity; three decisive checks; four cluster routes; three visible/schema-aligned FAQs; current area, VIA, River Walk access, attraction, and photo sources; and a direct handoff to the released 12-hotel page. The airport default is deferred and SeaWorld is separated from La Cantera/Six Flags.
-- QA before review: focused tests pass 4/4 and full repository tests pass 118/118; operator-state and local SEO QA pass with 0 errors and 0 warnings; target-only idempotent generation, 1280/821/390/320 containment, sticky mobile row identity, image decode, source probes, duplicate-key-safe JSON, privacy, exact scope, and whitespace checks pass.
-- Review: Raman (`019fa195-fc1c-7ee0-b9ab-550a70f4a5d3`) closed query-level SERP traceability, stale release/queue state, and FAQ repetition findings across the three-cycle cap, then returned final `PASS` with no P0-P3 findings.
-- Boundary: one existing URL only. Do not edit sibling site pages or sitemap; add a URL; request indexing; mutate an external account; send outreach; or create recurring automation.
+- Release result: `release.json` matched the commit/run, the production page matched the committed artifact exactly, action-specific invariants passed, and production SEO QA returned 0 errors and 0 warnings.
+
+### FT-IMP-020 - Improve the San Antonio teen activity specialist
+
+- Selected: 2026-07-27 by direct manual user instruction to finish the San Antonio cluster without waiting for check-ins.
+- State: research and implementation are independently review-clean; exact-path release and production verification remain.
+- Target: `https://familytripwise.com/things-to-do/san-antonio-with-teens.html`.
+- Demand: exact Semrush phrases show 140 searches/month for `things to do in san antonio with teens` and 70 for `san antonio with teens`; variants overlap.
+- Baseline: 3 impressions, 0 clicks, and page-level average position 9.00 in the fresh July 26 GSC snapshot. This is too sparse to call a stable top-10 result.
+- Product requirement: keep one teen specialist, replace repetitive generic lists with 10 distinct teen-weighted choices, five interest-led starts, one decision table, selective high-friction detail, bounded routes, current official checks, and clear mixed-age and cluster handoffs.
+- Local result: five teen-led starts; one 10-row/seven-field comparison with sticky mobile activity identity; five selective high-friction details; three bounded routes; four current-check groups; four cluster routes; three visible/schema-aligned FAQs; 22 current official/licensing sources; and a dimensioned licensed image.
+- QA: focused tests pass 5/5, full repository tests pass 123/123, local SEO QA returns 0 errors and 0 warnings, 21 source URLs return 200 directly while Pearl's exact official page is current in search after one local timeout, and responsive checks pass at 1280/821/390/320 pixels.
+- Review: Franklin (`019fa1ad-674c-79d2-9d58-66b918f78f32`) returned `FAIL` in cycle one for three P2 findings covering query-to-URL traceability, direct GO RIO/Six Flags source support, and stale/copy-pasted state mirrors. All three were corrected. Cycle two returned `PASS` with no P0-P3 findings.
+- Boundary: one existing URL only. No sibling page or sitemap edit, new URL, indexing request, external-account mutation, outreach, or recurring automation.
 - Release gate: durable SERP/ranking-page/persona/every-section/source review, focused/native/responsive/source/privacy/scope QA, target-only idempotent generation, and independent reviewer `PASS` or `PASS_WITH_P3`.
 
 ### FT-RES-009 - New York City SERP-overlap cluster and persona decision pack

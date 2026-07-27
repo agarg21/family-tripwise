@@ -1693,8 +1693,9 @@
       "title": "Simplify and improve the San Antonio stay-area guide",
       "kind": "implementation",
       "lane": "content-and-product-quality",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-07-26",
+      "completed_on": "2026-07-27",
       "review_outcome": "PASS",
       "review_cycles": 3,
       "reviewer_agent_ids": [
@@ -1729,9 +1730,59 @@
       "implementation_summary": "Replaced four repeated choice layers with five conditional visitor-base starts, one five-row seven-field comparison, three decisive area checks, four cluster routes, three visible/schema-aligned FAQs, current direct area/transport/access sources, and a dimensioned licensed image. Split SeaWorld from La Cantera/Six Flags, deferred the unearned airport default, and routed named-property decisions to the released 12-hotel guide.",
       "qa_summary": "Focused tests pass 4/4 and the full repository suite passes 118/118; operator-state and local SEO QA pass with 0 errors and 0 warnings; target-only generation, canonical/indexability/sitemap/schema/internal links, visible FAQ parity, 1280/821/390/320 responsive containment, sticky mobile row identity, image decode, 12 successful source probes plus one expected bot-limited 429, duplicate-key-safe roadmap JSON, privacy, exact scope, and whitespace checks pass.",
       "review_summary": "Independent reviewer Raman (019fa195-fc1c-7ee0-b9ab-550a70f4a5d3) returned FAIL in cycles 1-2 for query-level SERP traceability and stale release/queue narratives, then initially found two mechanical state defects in cycle 3. All P2s plus the repetitive FAQ P3 were corrected within the three-cycle cap; final cycle-three validation returned PASS with no P0-P3 findings.",
+      "release_commit": "7f54f230a859d61a41d0eb9a60781f037d88947f",
+      "pages_run": 30234700209,
+      "released_at": "2026-07-27T03:29:23Z",
+      "release_state": "released-and-production-verified",
+      "result": "Released and production-verified the existing page as a concise five-base visitor guide with a clear area-to-hotel flow.",
+      "notes": "Selected under the user's direct manual instruction after the San Antonio hotel comparison released. Raman returned final PASS in cycle three with no P0-P3 findings. Commit 7f54f230a859d61a41d0eb9a60781f037d88947f deployed through successful Pages run 30234700209; release.json matched the commit/run, the production artifact matched the committed HTML exactly, all action-specific invariants passed, and production SEO QA returned 0 errors and 0 warnings. One existing URL only; no sibling page, sitemap, new URL, indexing request, external-account mutation, outreach, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-020",
+      "implementation_backlog_id": "IMP-039",
+      "research_backlog_id": "SRR-031",
+      "title": "Improve the San Antonio teen activity specialist",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "in_progress",
+      "selected_on": "2026-07-27",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "019fa1ad-674c-79d2-9d58-66b918f78f32"
+      ],
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-teens.html"
+      ],
+      "target_paths": [
+        "docs/research/san-antonio-teen-activity-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/san-antonio-teen-page.test.mjs",
+        "site/things-to-do/san-antonio-with-teens.html",
+        "status/san-antonio-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing teen URL becomes a concise 10-choice specialist that lets an older child choose one anchor by interest, compares time/cost/location/flexibility/mixed-age fit, gives deeper support only to high-friction products, and routes clearly to the rest of the San Antonio cluster.",
+      "production_invariant": "The existing San Antonio teen URL remains canonical, indexable, present once in the sitemap, and linked to the all-ages, hotel, stay-area, and itinerary roles; it introduces no unsupported universal teen ranking, safety or independent-roaming assurance, exact route/accessibility guarantee, stable price, copied review claim, or personally verified experience.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-26 with finalized data through 2026-07-24. The page has 3 impressions, 0 clicks, and page-level average position 9.00. This is promising but extremely sparse page-level discovery evidence, not a stable top-10 query rank or causal result.",
+      "implementation_summary": "Reviewed current teen query result types with query-to-URL traceability, five representative ranking-page patterns, the primary teen persona plus mixed-age needs, 18 candidate roles, every visible section, and current claim boundaries. Replaced the repeated eight-start/six-choice structure with five teen-led starts, one 10-row seven-field comparison, five high-friction details, three bounded routes, four current-check groups, four cluster routes, three visible/schema-aligned FAQs, 22 current sources, and a dimensioned licensed image.",
+      "qa_summary": "Focused tests pass 5/5 and the full repository suite passes 123/123; local SEO QA passes with 0 errors and 0 warnings; canonical/indexability/sitemap/internal links/schema, visible FAQ parity, target-only/full generation idempotency, 1280/821/390/320 responsive containment, sticky mobile row identity, image decode, 21 direct source HTTP 200 results plus one current official Pearl page confirmed through recent search crawl after a local timeout, duplicate-key-safe roadmap JSON, privacy, exact scope, and whitespace checks pass.",
+      "review_summary": "Independent reviewer Franklin (019fa1ad-674c-79d2-9d58-66b918f78f32) returned FAIL in cycle 1 for three P2 findings: missing query-to-URL traceability, insufficiently direct GO RIO duration and Six Flags chaperone sources, and stale/copy-pasted state mirrors. All three P2s were corrected. Cycle 2 returned PASS with no P0-P3 findings.",
       "release_state": "review-clean-release-pending",
-      "result": "The existing page is review-clean as a concise five-base visitor guide with a clear area-to-hotel flow. Exact-path release and production verification remain.",
-      "notes": "Selected under the user's direct manual instruction after the San Antonio hotel comparison released. Raman returned final PASS in cycle three with no P0-P3 findings. One existing URL only. The exact 11-path scope includes one durable every-section/persona/competition/source review and focused generation tests. Do not edit sibling site pages or sitemap, add a URL, request indexing, mutate an external account, send outreach, or create recurring automation."
+      "result": "Research and implementation are review-clean; exact-path release and production verification remain.",
+      "notes": "One existing URL only. The frozen diff includes the durable query/SERP, competitor, persona, candidate, every-section, primary-source, and claim-boundary review. Do not edit sibling site pages or sitemap, add a URL, request indexing, mutate an external account, send outreach, or create recurring automation."
     }
   ]
 }

@@ -2,11 +2,11 @@
 
 Last updated: 2026-07-26
 
-## Active San Antonio Implementation
+## Recent San Antonio Implementation
 
 ### IMP-038: Simplify And Improve The San Antonio Stay-Area Guide
 
-Status: review-clean; release pending
+Status: completed, released, and production-verified at commit `7f54f23` through Pages run `30234700209`
 
 Selected: 2026-07-26
 
@@ -1360,3 +1360,25 @@ Acceptance checks:
 - Internal links and JSON-LD continue to pass QA.
 - No new city pages, standalone hotel pages, or NYC weekend pages were added.
 - Changed pages keep hotel, safety, transit, stroller, area, and family-suitability claims framed as planning guidance requiring verification unless human-reviewed.
+
+## Active San Antonio Implementation
+
+### IMP-039: Improve The San Antonio Teen Activity Specialist
+
+Status: review-clean; exact-path release pending
+
+Selected: 2026-07-27
+
+Roadmap ID: `FT-IMP-020`
+
+Source handoff: `SRR-031`
+
+Rebuild the existing San Antonio teen URL as one compact 10-choice specialist. Use five interest-led starts, one seven-field comparison, selective high-friction details, bounded routes, current official checks, visible/schema-aligned FAQs, and routes to the all-ages, hotel, stay-area, and itinerary pages. Preserve the existing canonical/indexable URL and sitemap entry.
+
+Do not edit a sibling site page or sitemap, add a URL, request indexing, mutate an external account, send outreach, or create recurring automation.
+
+Local result:
+
+- Five teen-led starts, 10 comparison choices, five high-friction details, three bounded routes, four current-check groups, four cluster routes, three aligned FAQs, and 22 sources.
+- Focused tests pass 5/5; full repository tests pass 123/123; local SEO QA returns 0 errors and 0 warnings; source and responsive checks pass.
+- Franklin cycle one returned `FAIL` for three P2 findings. Query-to-URL traceability, direct GO RIO duration/Six Flags chaperone sources, and stale/copy-pasted state mirrors were corrected. Cycle two returned `PASS` with no P0-P3 findings.

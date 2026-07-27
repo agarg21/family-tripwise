@@ -458,7 +458,7 @@ Recommend one narrow implementation test.
 
 ### SRR-030: San Antonio Stay-Area SERP, Persona, And Every-Section Review
 
-Status: review-clean inside `FT-IMP-019`; release pending
+Status: completed, released, and production-verified inside `FT-IMP-019`
 
 Selected: 2026-07-26
 
@@ -739,3 +739,20 @@ Result, 2026-07-07:
 - Near-term destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio. Do not add more cities until the thin-page cleanup and first-cluster improvements are complete.
 - First cluster priority: finish San Diego quality depth before expansion. San Diego already has kids, toddlers, teens, stay, and itinerary coverage; the itinerary page is the weakest San Diego URL.
 - Anti Gravity CLI advisory review was run via `agy`; it agreed that thin itinerary, Chicago/San Antonio stay, and thin teen pages are the main quality risk. Its stronger noindex recommendation was treated as advisory; the preferred path is immediate improvement with temporary noindex only if those pages cannot be upgraded in the next implementation cycle.
+
+### SRR-031: San Antonio Teen SERP, Persona, Candidate, And Every-Section Review
+
+Status: complete and independently review-clean inside `FT-IMP-020`
+
+Selected: 2026-07-27
+
+Roadmap ID: `FT-IMP-020`
+
+Refresh the teen query result types and representative ranking pages; apply the San Antonio persona hypotheses with `SA-P4` primary and mixed-age needs from `SA-P1`/`SA-P3`; review candidate roles, every visible section, current primary sources, and material claim boundaries. The review supports one existing-page improvement and no new URL.
+
+Result:
+
+- Recorded four query-level result patterns and five representative competitor types without inventing complete top-10 overlap counts or ranks.
+- Applied the primary teen persona and mixed-age needs, reviewed 18 candidate roles, retained 10, and audited every visible section.
+- Recorded 22 current official/licensing sources, material claim boundaries, acceptance criteria, and non-causal measurement limits.
+- Cycle-one review required query-to-URL traceability and direct support for the GO RIO duration and Six Flags chaperone check; both evidence corrections are complete. Franklin returned `PASS` in cycle two with no P0-P3 findings.

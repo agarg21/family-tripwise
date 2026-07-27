@@ -1613,3 +1613,49 @@ Final cycle-three validation: `PASS`
 - Raman verified the action-specific `review_cycles: 3` record and the removal of superseded `SRR-007` and completed `SRR-029` from the live `Next` queue.
 - No P0-P3 findings remain.
 - The final verdict relies on the previously reviewed frozen substantive diff and the recorded full, focused, state, SEO, responsive, source, privacy, scope, JSON, and whitespace QA.
+
+### 2026-07-27 - `FT-IMP-019` release reconciliation
+
+- Commit `7f54f230a859d61a41d0eb9a60781f037d88947f` deployed through successful GitHub Pages run `30234700209`.
+- `release.json` matched the commit/run, the production HTML matched the committed artifact exactly, the canonical/indexable URL retained one sitemap entry, and all action-specific invariants passed.
+- Production SEO QA returned 0 errors and 0 warnings; local `main` and `origin/main` were clean and aligned.
+
+### 2026-07-27 - `FT-IMP-020` selection
+
+**State:** selected under direct manual user instruction
+
+- Exact scope is limited to the teen research artifact, upgrader configuration and focused test, the existing San Antonio teen URL, the San Antonio status/backlogs, and four operator-state mirrors.
+- Research must refresh current teen query result types and representative ranking pages, apply the San Antonio personas, review candidates and every visible section, use current primary sources, and preserve explicit claim boundaries.
+- No sibling site page, sitemap, new URL, indexing request, external-account mutation, outreach, or recurring automation is allowed.
+
+Pre-review QA:
+
+- The durable review records four current query-level result patterns, five representative ranking-page types, the primary teen and mixed-age personas, 18 candidates, every visible section, claim boundaries, 22 sources, acceptance criteria, and measurement limits.
+- Focused tests pass 5/5; the full repository suite passes 123/123; local SEO QA passes with 0 errors and 0 warnings.
+- Full and target generation are idempotent. Browser checks at 1280, 821, 390, and 320 pixels confirm no document overflow, complete text containment, a decoded 1280-by-960 image, and sticky activity identity after maximum horizontal table scrolling.
+- Twenty-one source URLs returned HTTP 200 directly after correcting one stale Alamo URL and adding the direct GO RIO overview and Six Flags park-policy pages. Pearl's exact official event page timed out locally but is current in search and was crawled six days earlier. Duplicate-key-safe roadmap JSON, privacy, exact scope, and `git diff --check` pass.
+
+### 2026-07-27 - `FT-IMP-020` review cycle 1
+
+**Reviewer:** Franklin (`019fa1ad-674c-79d2-9d58-66b918f78f32`), independent read-only reviewer
+
+**Result: `FAIL`**
+
+Findings and disposition:
+
+1. `P2` - Mapped every recorded teen query to representative observed URLs/domains and page types so the intent boundary and confidence are reproducible without claiming a complete top-10 set.
+2. `P2` - Added the direct GO RIO overview for the 35-minute duration and the direct Six Flags park/chaperone policy in the research record, generator, generated page, source register, and focused regression test.
+3. `P2` - Reconciled the roadmap table, removed copied `FT-IMP-019` QA/review lines from the `FT-IMP-020` section, updated the current released implementation, and corrected the all-ages status row.
+
+No P0, P1, or P3 findings were reported. Cycle-two review is required.
+
+### 2026-07-27 - `FT-IMP-020` review cycle 2
+
+**Reviewer:** Franklin (`019fa1ad-674c-79d2-9d58-66b918f78f32`), independent read-only reviewer
+
+**Result: `PASS`**
+
+- Confirmed all three cycle-one P2 findings are closed across the research record, generator, generated page, focused test, status, and operator-state mirrors.
+- Independently reran the focused 5/5 tests, full 123/123 suite, operator-state QA, local SEO QA, generator idempotency, duplicate-key-safe roadmap parsing, exact 11-path scope, privacy, and `git diff --check`.
+- Verified canonical/indexability/sitemap/internal links, ItemList and visible FAQ parity, sibling non-change, current official source coverage, claim boundaries, and release-policy compliance.
+- No P0-P3 findings remain.

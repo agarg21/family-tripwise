@@ -2061,52 +2061,112 @@ const teenPages = {
     ]
   },
   "things-to-do/san-antonio-with-teens.html": {
-    title: "Things to Do in San Antonio With Teens: Caverns, Theme Parks, River Walk and Heat Plans",
+    title: "Things to Do in San Antonio With Teens: 10 Picks by Trip Style",
     description:
-      "Plan San Antonio with teens using activity quick picks, heat-aware timing, River Walk caveats, rainy-day swaps, food/reset notes, and realistic teen-friendly itineraries.",
+      "Compare 10 things to do in San Antonio with teens by interest, time, cost, area, flexibility, mixed-age fit, and current official checks.",
     city: "San Antonio",
-    indexDecision: "Index decision: keep this page indexable. San Antonio can support standalone teen intent when the page focuses on caverns, theme parks, River Walk logistics, food/reset planning, heat, and older-kid pacing instead of repeating the all-ages guide.",
+    schemaName: "San Antonio teen activity options",
+    compactDetails: true,
+    removeGeneratedAgeSections: true,
+    baseReplacements: [
+      ["<h1>Things to do in San Antonio with teens</h1>", "<h1>Things to Do in San Antonio With Teens: 10 Picks by Trip Style</h1>"],
+      ["<p>A focused activity guide for teens in San Antonio, with the main kids guide kept as the broader planning hub.</p>", "<p>Let the older child choose one anchor, then compare 10 options by teen payoff, time, cost, area, flexibility, mixed-age fit, and the exact current check that can change the plan.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 27, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Teen fit, time, cost class, flexibility, and mixed-age labels are Family Tripwise editorial estimates. Check the exact ticket, tour, height or minor rule, effects, weather, access, schedule, and route before committing.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
+      ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Matt Harriger via <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
     links: {
-      allAges: "../things-to-do/san-antonio-with-kids.html",
+      allAges: "./san-antonio-with-kids.html",
       stay: "../where-to-stay/san-antonio-with-kids.html",
       itinerary: "../family-itinerary/san-antonio-with-kids.html"
     },
+    quickHeading: "Five ways to let the teen choose the anchor",
+    quickNote: "Choose one meaningful payoff before filling the day. The answer depends on the teen's interest, exact ticket, trip base, heat, budget, and sibling fit rather than a universal ranking.",
     quick: [
-      ["Best overall", "Natural Bridge Caverns or Six Flags by teen style", "Choose adventure/walking or rides; do not try to force both into one day."],
-      ["Best classic San Antonio", "Alamo plus River Walk boat ride", "Works as a short orientation block, not a full teen day."],
-      ["Best food/reset area", "Pearl / Museum Reach", "Useful for meals and decompression between hotter or more crowded stops."],
-      ["Best heat strategy", "Early anchor, midday reset, evening river/food", "Teen stamina helps, but summer heat still shapes the trip."],
-      ["Best rainy/indoor-ish backup", "DoSeum only for mixed-age groups; otherwise choose food or indoor exhibit-style stops carefully", "Avoid pretending a younger-kid museum is always a teen anchor."],
-      ["Best theme-park base", "Northwest / SeaWorld / Six Flags area", "Only if theme parks are the main reason for the trip."],
-      ["Think twice about", "Long midday Downtown wandering", "Heat, crowds, and stroller/sidewalk friction can drain everyone."],
-      ["Main planning risk", "Drive time plus heat", "A cheap or far hotel can make every teen plan harder."]
+      ["Adventure and physical challenge", "Natural Bridge Caverns, exact tour", "Choose a developed walking tour or an Adventure Tour only after checking age, physical demands, clothing, waiver, duration, and refund terms."],
+      ["Coasters and a full park day", "Six Flags or SeaWorld", "Compare the exact ride priorities, height rules, operating calendar, heat exposure, ticket scope, and location before choosing the park."],
+      ["Competitive indoor reset", "Andretti Indoor Karting & Games", "Use karting, laser tag, VR, bowling, or arcade time when the exact height, license, waiver, clothing, and price rules fit the group."],
+      ["History with a defined mission", "Alamo exhibit or Mission San Jose", "Choose artifacts and one paid exhibit, or one free mission site and ranger program; do not turn five missions into a forced checklist."],
+      ["Art, food, and lower-pressure city time", "Hopscotch, Pearl, River Walk, or Southtown", "Let the teen choose immersive art, a narrated cruise, a food stop, shops, photos, or a selected gallery, then keep the route bounded."]
     ],
+    comparisonNote: "Scan the teen reason first, then the decisive current check. Time, cost class, area, flexibility, and mixed-age fit are editorial estimates, not venue guarantees.",
+    comparisonClass: "teen-comparison",
+    comparisonHeaders: ["Activity", "Teen reason", "Time / cost", "Area / format", "Flexibility", "Check before choosing", "Pair nearby"],
     rows: [
-      ["Natural Bridge Caverns", "10-17", "2-4 hrs", "$$$", "North of city", "Hard", "Partial", "Low", "Book/check tours", "Best adventure-style teen anchor", "Low-key evening or Pearl meal"],
-      ["Six Flags Fiesta Texas", "12-17", "Half-full day", "$$$", "Northwest", "Mixed", "No", "Low", "Book/check hours", "Strongest ride-focused teen day", "Hotel pool/reset"],
-      ["Alamo plus short River Walk", "10-17", "90 min-2 hrs", "$", "Downtown", "Mixed", "Partial", "Medium", "Timed entry may help", "Classic context without overcommitting", "Boat ride or early dinner"],
-      ["River Walk boat ride", "10-17", "45-60 min", "$$", "Downtown", "Limited boarding", "Partial", "Medium", "Check times", "Low-walking orientation activity", "Alamo or Pearl meal"],
-      ["Pearl / Museum Reach food reset", "10-17", "1-3 hrs", "$$", "Pearl", "Good", "Partial", "Medium", "Check hours", "Useful teen food and decompression block", "DoSeum for siblings or zoo drive"],
-      ["San Antonio Zoo for mixed ages", "10-14", "2-4 hrs", "$$", "Brackenridge Park", "Good", "No", "Medium", "Check hours", "Only if siblings or animal interest justify it", "Pearl or park reset"]
+      ["Natural Bridge Caverns, exact tour", "Caves, geology, and an optional hands-on challenge instead of a generic sightseeing stop", "2-4 hrs plus drive / premium paid", "North of city / developed or Adventure Tour", "Low", "Exact tour, minimum age, physical fit, clothing, waiver, availability, and refund rule", "Low-key meal or hotel reset"],
+      ["Six Flags Fiesta Texas", "Coasters and thrill rides can justify one teen-owned full day", "Half-full day / premium paid", "La Cantera / outdoor theme park", "Low", "Calendar, ride closures, exact height rules, weather, ticket scope, and chaperone policy", "Hotel or La Cantera meal"],
+      ["Andretti Indoor Karting & Games", "Competitive racing, VR, laser tag, bowling, and arcade choices work as a heat or rain pivot", "1-4 hrs / paid by activity", "The Rim / indoor entertainment", "High", "Exact activity, height or license rule, waiver, clothing, walk-in availability, and total spend", "The Rim or La Cantera meal"],
+      ["SeaWorld San Antonio", "Coasters, animal presentations, and optional water-park scope support different teen interests", "Half-full day / premium paid", "Westover Hills / outdoor theme park", "Low", "Park versus Aquatica ticket, ride heights, showtimes, weather, closures, and active chaperone policy", "West-side hotel reset"],
+      ["Alamo church and Ralston Family Collections Center", "Artifacts and one defined story give Downtown history a concrete purpose", "1-2.5 hrs / free church plus paid exhibit", "Downtown / historic site and indoor exhibit", "Medium", "Free church reservation, exact paid exhibit, hours, entry time, content interest, and construction access", "GO RIO or early meal"],
+      ["Mission San Jose or one selected mission", "A free World Heritage site, architecture, and self-guided or ranger context without a paid attraction", "1.5-3 hrs / free", "Mission Reach / mixed indoor-outdoor historic site", "Medium", "Chosen site, visitor-center and program hours, heat, high-water closures, transport, and return plan", "Southtown meal"],
+      ["Hopscotch San Antonio", "Immersive installations and photos create a contained indoor visual stop", "60-90 min / paid", "Downtown / indoor art experience", "Medium", "Advance ticket, child-ticket cutoff, adult-only hours, current installations, effects, and parking", "Travis Park or Downtown meal"],
+      ["GO RIO narrated cruise", "A seated 35-minute orientation supplies city context without another long walking block", "About 35 min plus wait / paid", "Downtown River Walk / open-air cruise", "Medium", "Current hours, boarding location, wait, weather, river closure, and return to the next stop", "Alamo or Downtown meal"],
+      ["Pearl and Museum Reach, one teen-chosen stop", "Food, shops, photos, market timing, and river space offer a lower-pressure reset", "1-3 hrs / free to browse; food varies", "Pearl / open district and river corridor", "High", "Chosen shop, meal or event, market date, heat, parking or ride plan, and return", "SAMA or hotel reset"],
+      ["Southtown and Blue Star, one selected gallery or food stop", "Murals, independent spaces, photos, and food can feel more self-directed than another major attraction", "1-3 hrs / free to browse; purchases vary", "Southtown / neighborhood block", "High", "Exact gallery or shop hours, event date, weather, parking, walking limit, and evening return", "Mission San Jose or Downtown"]
     ],
+    detailsEyebrow: "High-friction choices",
+    detailsTitle: "Five choices that need an exact decision",
+    detailsNote: "All 10 choices are compared above. These five get more space because the tour, ride rule, waiver, ticket scope, or minor policy can materially change the family's answer.",
     details: [
-      ["Natural Bridge Caverns", "It gives teens a more adventure-oriented reason to leave Downtown.", "Best for older kids and teens comfortable with walking and uneven surfaces.", "Drive time, tour requirements, heat around outdoor areas, and younger siblings.", "Make it the main half-day anchor and keep the rest of the day light.", "Plan water, snacks, and bathrooms before the tour.", "Book/check tour availability, footwear guidance, weather, and current requirements.", "Pair with a low-key evening or Pearl meal."],
-      ["Six Flags Fiesta Texas", "Ride-focused teens may value a full theme-park commitment more than another historic stop.", "Best for tweens and teens who meet ride/heat tolerance needs.", "Heat, lines, cost, transportation, and sibling height differences.", "Treat it as the day, not one stop among many.", "Use the hotel as the reset and protect the next morning.", "Check tickets, hours, ride closures, and height rules.", "Pair with a pool evening or rest day."],
-      ["Alamo plus short River Walk", "It gives the trip San Antonio context without requiring teens to spend half a day on history.", "Best for teens when kept concise and paired with food or river time.", "Heat, crowds, and younger-kid pacing around Downtown.", "Use it as an orientation block early or late, not a midday marathon.", "Plan food and bathrooms before the River Walk segment.", "Check current entry rules and timed-entry needs.", "Pair with a boat ride or early dinner."],
-      ["River Walk boat ride", "Sitting down while seeing the city can work well when walking energy is low.", "Best for teens as a short orientation or evening add-on.", "Boarding waits, heat, stroller handling for siblings, and weather.", "Use it near a meal window rather than as a standalone destination.", "Use bathrooms before boarding.", "Check schedules, weather, and boarding location.", "Pair with the Alamo, Downtown dinner, or Pearl."],
-      ["Pearl / Museum Reach food reset", "Food and a calmer walking environment can keep the trip teen-friendly.", "Best for teens who care about meals, people-watching, and a less scripted block.", "Peak dining crowds, heat, and assuming every teen wants to linger.", "Use it as a reset between bigger anchors.", "Verify hours and food options before relying on it.", "Check event schedules and restaurant hours.", "Pair with DoSeum for siblings, zoo, or a short Downtown block."],
-      ["San Antonio Zoo for mixed ages", "It can still work when younger siblings are present or teens like animal stops.", "Best for younger teens or mixed-age families.", "Heat and feeling too young if teens wanted rides/caverns.", "Start early and do not stack it with another big outdoor attraction.", "Plan water, snacks, and a shaded reset.", "Check seasonal hours and current tickets.", "Pair with Pearl or a hotel rest."]
+      ["Natural Bridge Caverns, exact tour", "A cave tour gives adventure-oriented teens a destination-specific reason to leave the city center.", "Best when the family chooses between a developed walking tour and a more demanding Adventure Tour before buying.", "The checked Adventure Tours list a minimum age of eight, moderate-to-hard physical demands, specific clothing, a waiver, minor accompaniment, small groups, advance payment, and restrictive refund terms.", "Open the exact tour page together and match duration, physical fit, clothing, age, and booking terms to the whole group.", "Bring the listed clothing and change-of-clothes setup when using an Adventure Tour; keep the evening light.", "Recheck exact tour inventory, requirements, weather, waiver, price, and cancellation terms near the visit.", "Pair with one meal or hotel reset."],
+      ["Six Flags Fiesta Texas", "A teen who actively wants coasters may prefer one committed park day to several smaller city stops.", "Best when the must-ride list and every rider's current eligibility justify the cost and heat exposure.", "Ride-specific height and physical rules, closures, weather, operating dates, ticket products, and chaperone policies can change the usable day.", "Have the teen choose three priority rides and compare each current rule before buying.", "Treat the park as the anchor; do not add a cave tour or long Downtown block.", "Recheck calendar, ride pages, closures, height and access guide, weather, tickets, and chaperone policy.", "Pair with a simple La Cantera meal or hotel reset."],
+      ["Andretti Indoor Karting & Games", "The family can choose racing, laser tag, VR, bowling, or arcade time instead of buying one broad attraction ticket.", "Best for a competitive teen and mixed-age group willing to choose the exact activity and spend limit.", "Intermediate karting currently lists a 54-inch minimum and recommended age 12; adult racing has a separate license/age rule. Minors need an adult-completed waiver, and clothing rules apply.", "Select the race or attraction first, complete the current waiver correctly, and price the group's actual choices.", "Wear flat closed-toe shoes for racing and set the arcade or activity budget before arrival.", "Recheck pricing, height or license rule, waiver, clothing, hours, and walk-in availability.", "Pair with one nearby meal."],
+      ["SeaWorld San Antonio", "The same park can serve ride-focused, animal-focused, or water-park teens, but those are different days.", "Best when the family agrees on park scope and checks each priority ride or program.", "SeaWorld and Aquatica ticket scope differs; ride heights, interaction rules, weather, closures, food rules, and an active chaperone policy can affect the day.", "Choose SeaWorld only or the combined water-park product, then compare the teen's three priorities with current rules.", "Build a full-day heat and meal plan rather than treating the park as a quick add-on.", "Recheck hours, ticket scope, ride rules, showtimes, weather policy, closures, and chaperone policy.", "Pair with a west-side hotel reset."],
+      ["Alamo or San Antonio Missions", "A defined artifact, architecture, or World Heritage mission gives history a concrete teen-selected purpose.", "Best when the teen chooses the Alamo exhibit or one mission site rather than receiving a long history checklist.", "The Alamo church uses a free reservation while the Collections Center is a separate paid product. NPS site, visitor-center, and ranger-program hours differ; summer heat and high-water closures can affect Mission Reach.", "Choose one product or site, confirm the exact entry and program, and limit the outdoor route to what current conditions support.", "Use one nearby meal or cruise as the flexible follow-up instead of adding another large museum.", "Recheck reservation, paid exhibit, NPS hours, programs, heat, closures, transport, and return plan.", "Pair the Alamo with GO RIO; pair Mission San Jose with Southtown."]
     ],
+    plansEyebrow: "Bounded teen routes",
+    plansTitle: "Three route shapes with one real anchor",
     plans: {
-      "1-day teen plan": "Choose Natural Bridge Caverns or Six Flags as the anchor, then use Pearl or a short River Walk block for food and evening reset.",
-      "2-day teen plan": "Day 1: Alamo, boat ride, Pearl. Day 2: Natural Bridge Caverns or Six Flags, then low-key hotel/pool time.",
-      "Heat plan": "Start the biggest outdoor or walking-heavy activity early, reset midday, and use Downtown/River Walk only when temperatures and crowds are more manageable.",
-      "Rainy-day plan": "Use a short Downtown context block, food/reset time, and check whether caverns, shows, or indoor options make sense for the day's weather.",
-      "Mixed-age plan": "Let teens choose one high-payoff anchor while younger siblings get zoo, DoSeum, boat ride, or pool time."
+      "Adventure or park day": "Choose one exact Natural Bridge Caverns tour, Six Flags, or SeaWorld as the anchor. Add only a simple meal or hotel reset; do not combine two distant premium days.",
+      "Downtown history and visual route": "Choose the Alamo exhibit or Hopscotch, then add GO RIO and one meal only if current entry times, weather, and walking remain practical.",
+      "Missions, Southtown, or Pearl route": "Choose one mission site plus one Southtown stop, or use Pearl and Museum Reach as a food/photo reset. Confirm exact openings and the return rather than wandering across all three areas."
     },
+    clusterLinks: [
+      ["All-ages activity hub", "Use the 13-choice guide when younger siblings, grandparents, toddler pacing, free choices, or a broader first-trip shortlist change the answer.", "./san-antonio-with-kids.html", "Open San Antonio things to do with kids"],
+      ["Family hotel comparison", "Compare 12 named properties by trip style, room setup, broad nightly range, pool or resort role, and bounded online-review observations.", "../where-to-stay/san-antonio-family-hotels.html", "Compare San Antonio family hotels"],
+      ["Stay-area guide", "Choose the base before locking a teen route; Downtown, Pearl, younger-child corridors, SeaWorld, and La Cantera create different returns.", "../where-to-stay/san-antonio-with-kids.html", "Compare San Antonio stay areas"],
+      ["Family itinerary", "Turn one teen-selected anchor, meals, heat, weather, and sibling alternatives into a realistic one-, two-, or three-day sequence.", "../family-itinerary/san-antonio-with-kids.html", "Build the San Antonio family itinerary"]
+    ],
+    officialChecksEyebrow: "Before locking the plan",
+    officialChecksTitle: "Four current checks that can change the choice",
+    officialChecks: [
+      ["Exact cave or ride product", "Natural Bridge tour types, Six Flags rides, and SeaWorld or Aquatica products are not interchangeable. Check the selected ticket, rule, calendar, chaperone policy, and weather response.", [["https://naturalbridgecaverns.com/adventure-tour/", "Natural Bridge Adventure Tours"], ["https://www.sixflags.com/fiestatexas/frequently-asked-questions", "Six Flags FAQ"], ["https://www.sixflags.com/fiestatexas/code-of-conduct", "Six Flags park and chaperone policy"], ["https://seaworld.com/san-antonio/faq/", "SeaWorld FAQ and chaperone policy"]]],
+      ["Karting, immersive art, and minor rules", "Andretti activities use different height, license, clothing, and waiver rules. Hopscotch uses advance tickets and lists child-ticket and adult-only-hour boundaries.", [["https://andrettikarting.com/sanantonio/pricing", "Andretti pricing and activity rules"], ["https://andrettikarting.com/sanantonio/faq", "Andretti FAQ"], ["https://www.letshopscotch.com/faq/", "Hopscotch FAQ"], ["https://letshopscotch.com/locations/san-antonio", "Hopscotch San Antonio hours"]]],
+      ["History product and site hours", "The Alamo church, paid Collections Center, and NPS mission sites have different entry, hours, programs, heat exposure, and closure conditions.", [["https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", "Alamo free church entry"], ["https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center", "Alamo Collections Center"], ["https://www.nps.gov/saan/planyourvisit/basicinfo.htm", "San Antonio Missions basic information"], ["https://www.nps.gov/saan/planyourvisit/directions.htm", "San Antonio Missions directions and conditions"]]],
+      ["Cruise, district, and return plan", "GO RIO duration, boarding, and river conditions, Pearl event timing, Southtown openings, heat, parking, and the route back can change a flexible city block.", [["https://www.goriocruises.com/overview/", "GO RIO narrated cruise overview"], ["https://www.goriocruises.com/visitor-information/", "GO RIO visitor information"], ["https://www.goriocruises.com/faq/", "GO RIO FAQ"], ["https://events.atpearl.com/series/farmers-market/", "Pearl Farmers Market"], ["https://www.visitsanantonio.com/plan-your-trip/itineraries/teens/", "Visit San Antonio teen itinerary"]]]
+    ],
+    visibleFaqs: true,
+    faqTitle: "San Antonio with teens FAQ",
     faqs: [
-      ["Is San Antonio good with teens?", "Yes, when the plan includes teen-weighted anchors like Natural Bridge Caverns, Six Flags, River Walk context, and food/reset time rather than only younger-kid stops."],
-      ["Should the San Antonio with teens page stay indexed?", "Yes. This page is being kept indexable because it now has standalone teen planning guidance, route tradeoffs, and an explicit older-kid activity focus."]
+      ["What are useful San Antonio starting points for teens?", "Start with the teen's interest: an exact Natural Bridge cave tour for adventure, Six Flags or SeaWorld for a park day, Andretti for indoor competition, the Alamo or Mission San Jose for a defined history mission, or Hopscotch, GO RIO, Pearl, and Southtown for art, food, photos, and lower-pressure city time."],
+      ["How should a mixed-age family use this page?", "Let the teen choose one anchor, then use the all-ages guide or a split plan when height, physical demands, effects, duration, ticket cost, or younger-child interests do not fit everyone."],
+      ["Can teenagers visit San Antonio attractions on their own?", "This guide does not make independent-roaming or safety assurances. Check the exact venue's minor or chaperone rule, route, transport conditions, time of day, and your own family's supervision plan."]
+    ],
+    sourcesIntro: "Official attraction, park, historic-site, district, destination, and licensing sources checked July 27, 2026. Reopen the exact ticket, tour, ride, event, route, and policy near the visit because prices, inventory, rules, weather, hours, and access can change.",
+    sources: [
+      ["Natural Bridge Caverns Adventure Tours", "https://naturalbridgecaverns.com/adventure-tour/"],
+      ["Six Flags Fiesta Texas FAQ", "https://www.sixflags.com/fiestatexas/frequently-asked-questions"],
+      ["Six Flags Fiesta Texas accessibility", "https://www.sixflags.com/fiestatexas/accessibility"],
+      ["Six Flags Fiesta Texas park and chaperone policy", "https://www.sixflags.com/fiestatexas/code-of-conduct"],
+      ["Six Flags Fiesta Texas hours and calendar", "https://www.sixflags.com/fiestatexas/plan-your-visit/park-hours"],
+      ["Andretti San Antonio pricing and activity rules", "https://andrettikarting.com/sanantonio/pricing"],
+      ["Andretti San Antonio FAQ", "https://andrettikarting.com/sanantonio/faq"],
+      ["SeaWorld San Antonio FAQ and chaperone policy", "https://seaworld.com/san-antonio/faq/"],
+      ["SeaWorld San Antonio weather policy", "https://seaworld.com/san-antonio/help/inclement-weather-policy/"],
+      ["Alamo free church entry", "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry"],
+      ["Alamo Collections Center", "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center"],
+      ["San Antonio Missions basic information", "https://www.nps.gov/saan/planyourvisit/basicinfo.htm"],
+      ["San Antonio Missions directions and conditions", "https://www.nps.gov/saan/planyourvisit/directions.htm"],
+      ["Hopscotch FAQ", "https://www.letshopscotch.com/faq/"],
+      ["Hopscotch San Antonio hours", "https://letshopscotch.com/locations/san-antonio"],
+      ["GO RIO visitor information", "https://www.goriocruises.com/visitor-information/"],
+      ["GO RIO FAQ", "https://www.goriocruises.com/faq/"],
+      ["GO RIO narrated cruise overview", "https://www.goriocruises.com/overview/"],
+      ["Pearl Farmers Market", "https://events.atpearl.com/series/farmers-market/"],
+      ["Visit San Antonio teen itinerary", "https://www.visitsanantonio.com/plan-your-trip/itineraries/teens/"],
+      ["San Antonio River Walk photo source and attribution", "https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg"],
+      ["CC BY-SA 2.0 license", "https://creativecommons.org/licenses/by-sa/2.0/"]
     ]
   }
 };
