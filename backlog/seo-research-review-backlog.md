@@ -456,34 +456,43 @@ Compare:
 
 Recommend one narrow implementation test.
 
+### SRR-030: San Antonio Stay-Area SERP, Persona, And Every-Section Review
+
+Status: review-clean inside `FT-IMP-019`; release pending
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-019`
+
+Refresh the stay-area SERP and representative ranking pages; apply `SA-P1` through `SA-P5`; audit every visible section and material claim; distinguish visitor-area intent from residential-neighborhood and named-hotel intent; and record current direct area, transport, accessibility-map, and family-anchor sources. This review supports one existing-page improvement and no new URL.
+
+Result:
+
+- Recorded current public-result types plus the prior Semrush stay/hotel boundary without inventing missing overlap counts.
+- Compared official destination, broad family-guide, hotel-list, and community result types.
+- Applied all five persona hypotheses, reviewed nine candidate bases, retained five, and audited every visible section.
+- Produced a current 13-source register, calibrated claim boundaries, implementation acceptance criteria, and a measurement plan.
+- Raman returned final `PASS` in cycle three with no P0-P3 findings after query-level traceability and stale queue-state corrections.
+
+## Done
+
 ### SRR-007: Validate San Antonio Family-Hotel Demand And Review Workflow
 
-Status: superseded by `FT-RES-010` and active `SRR-029`
+Status: superseded and closed
 
-Recommendation label: `ask user`
+Resolved by:
 
-Assess whether San Antonio hotel-intent queries justify more hotel-focused work before a human-review workflow exists.
-
-Questions:
-
-- Is demand for San Antonio family hotels strong enough to prioritize now beyond the existing where-to-stay page?
-- Should the next step be research only, a hotel-verification workflow, or a standalone hotel page brief?
-- Can a human reviewer verify hotel, fee, room, crib/rollaway, pool, parking, noise, location, safety, and transit/stroller claims?
-
-Current measured signal:
-
-- GSC UI review on July 8, 2026 showed sparse San Antonio family-hotel queries, but rankings were weak and total GSC data volume was tiny.
-- Treat all conclusions as directional until more data is available.
+- `FT-RES-010` established current directional hotel demand and the area-versus-property boundary.
+- `SRR-029` built the durable hotel evidence pack.
+- `FT-PUB-005` released and production-verified the 12-property hotel comparison.
 
 ### SRR-029: San Antonio Family-Hotel Evidence Pack
 
-Status: evidence pack complete and review-clean
+Status: done, released, and production-verified
 
 Selected: 2026-07-26
 
 Roadmap ID: `FT-PUB-005`
-
-Evaluate at least 18 candidate properties and produce the durable official-fact, broad-total-price, sampled-review, conflict, freshness, map, decisive-check, and unknown record required for one clean San Antonio family-hotel comparison. This research is part of the selected publication transaction, not a separate scheduled action.
 
 Result:
 
@@ -491,8 +500,7 @@ Result:
 - Recorded official room/amenity facts, rough total-price anchors, recent public review slices, explicit-family-context limits, property-specific conflicts, freshness, and decisive checks.
 - Preserved hotel, resort, pool, lazy-river, suite, kitchen, breakfast, and location variants as one page role rather than manufacturing variant URLs.
 - Averroes cycle two returned `PASS` with no P0-P3 after the exact price-source, durable-state, and deferred-candidate traceability findings were closed.
-
-## Done
+- Released at commit `4617ec82a87ae383eafdf9b01ecdf7f2d424063e` through successful Pages run `30226920951`; production verification passed.
 
 ### SRR-010: Select Next Pilot City And Define The Reusable City Workflow
 

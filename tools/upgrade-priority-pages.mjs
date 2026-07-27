@@ -1257,41 +1257,76 @@ const stayPages = {
     ]
   },
   "where-to-stay/san-antonio-with-kids.html": {
-    title: "Where to Stay in San Antonio With Kids: River Walk, Pearl and Family Hotel Checks",
+    title: "Where to Stay in San Antonio With Kids: 5 Areas Compared",
     description:
-      "Compare where to stay in San Antonio with kids by River Walk access, heat, stroller friction, parking, noise, pool value, hotel type, and family trip style.",
+      "Compare five San Antonio family stay areas by the first two days, midday reset, transport reality, theme-park anchor, main friction, and exact hotel check.",
     city: "San Antonio",
+    schemaName: "San Antonio family stay area options",
+    constraintLed: true,
+    removeGeneratedBodySections: true,
+    hideHotelSection: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>Where to stay in San Antonio with kids</h1>", "<h1>Where to Stay in San Antonio With Kids: 5 Areas Compared</h1>"],
+      ["<p>Compare the best family areas in San Antonio by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.</p>", "<p>Choose the base from the family's first two days and likely midday return: classic Downtown sights, Pearl and museums, younger-child anchors, SeaWorld, or Six Flags. Then compare named hotels.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Area and transport sources checked:</strong> July 26, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Area guidance is planning support, not a universal ranking. Exact River Walk access, transport, walking route, room exposure, parking, price, and return pattern depend on the hotel, itinerary, date, and current conditions.</p>"],
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
+      ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Matt Harriger via <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
+    ],
+    quickHeading: "Five useful starting points",
     quick: [
-      ["Best overall area", "Pearl / Museum Reach", "A calmer food-and-walk base for many families if the hotel price and attraction distances work."],
-      ["Best first visit", "River Walk / Downtown", "Closest to the classic sights, but noise, crowds, stroller handling, and parking need checking."],
-      ["Best with toddlers", "Pearl / Museum Reach or Broadway/DoSeum area", "Usually easier to pair with The DoSeum, zoo, shade breaks, and shorter outings."],
-      ["Best for theme parks", "Northwest / SeaWorld area", "Works when SeaWorld or Six Flags is the anchor and a car-based trip is expected."],
-      ["Best value check", "Airport / North San Antonio", "Can make sense with a car, but it is less vacation-feeling and farther from signature stops."],
-      ["Best no-car-lite base", "Downtown", "Only if your route stays compact and you verify stroller-friendly walking paths and rideshare plans."],
-      ["Best heat strategy", "Stay near your main morning anchor", "San Antonio plans work better when midday reset distance is short."],
-      ["Think twice about", "A cheap stay far from every anchor", "Heat, parking, and repeated drives can cost more than the room savings are worth."]
+      ["First trip with classic sights", "Downtown / River Walk", "Start here when the Alamo, Downtown River Walk, Hemisfair, and nearby meals shape most of the first two days."],
+      ["Pearl, food, and Museum Reach", "Pearl / Museum Reach", "Start here when Pearl time and the northern river corridor matter more than walking out to every Downtown icon."],
+      ["Younger-child museum and zoo days", "Broadway / Brackenridge / Alamo Heights", "Compare exact hotels here when The DoSeum, zoo, Brackenridge Park, and a car or rideshare routine lead the plan."],
+      ["SeaWorld or west-side resort trip", "Westover Hills / SeaWorld", "Use this base when SeaWorld, Aquatica, or the resort is a trip anchor rather than one distant add-on."],
+      ["Six Flags and La Cantera trip", "La Cantera / Six Flags", "Use this base when Six Flags, a resort day, and nearby meals or shopping outweigh repeated Downtown returns."]
     ],
-    areaNote: "Area guidance is research-based planning support, not a human-verified recommendation. Before booking, verify current parking costs, pool hours, elevator access, River Walk stroller routes, event noise, heat-season plans, and drive times for the exact hotel.",
+    matrixHeading: "Compare the base before the hotel",
+    matrixWrapperClass: "teen-comparison",
+    areaHeaders: ["Area", "Start here when", "What it simplifies", "Reset reality", "Transport reality", "Main friction", "Exact check"],
     rows: [
-      ["Pearl / Museum Reach", "Food, calmer walks, DoSeum/zoo access", "Fewer bargain hotels and still not next to every classic sight", "Car/rideshare useful; some walkable meals", "Generally easier than busiest River Walk segments, verify route", "Low-medium", "Paid/varies by property", "High for meals, medium for attractions", "Pearl, Museum Reach, The DoSeum, zoo by short ride", "Boutique/upscale/select-service nearby", "Best balanced family base if budget works"],
-      ["River Walk / Downtown", "First visit, Alamo, boat ride, walkable meals", "Noise, crowds, stroller crowding, parking cost", "Lowest car need for classic sights; rideshares still useful", "Mixed on stairs/crowds/river-level paths", "Medium-high", "Often expensive", "High for signature sights", "Alamo, River Walk, boat rides, Hemisfair", "Large downtown hotels and historic properties", "Best classic first-visit base with caveats"],
-      ["Broadway / Brackenridge / DoSeum area", "Toddlers, zoo, DoSeum, shorter younger-kid days", "Less classic River Walk feel", "Car/rideshare likely", "Good around some attractions, verify sidewalks", "Low-medium", "Varies/easier than core downtown in some cases", "Medium", "The DoSeum, San Antonio Zoo, Brackenridge Park", "Select-service and neighborhood hotels nearby", "Best younger-kid logistics candidate"],
-      ["Northwest / SeaWorld / Six Flags area", "Theme parks, pools, car-based trips", "Farther from Downtown and Pearl", "Car required", "Hotel-dependent", "Low-medium", "Often easier but verify fees", "Low", "SeaWorld, Six Flags, resort pools", "Resorts, suites, chain hotels", "Best when theme parks are the main trip"],
-      ["Airport / North San Antonio", "Value, parking, road access", "Less vacation feel and more driving", "Car required", "Hotel-dependent", "Low-medium", "Often easier", "Low", "Airport, north-side drives, Downtown by car", "Chain/select-service hotels", "Best budget base only if drive time pencils out"]
+      ["Downtown / River Walk", "The Alamo, Downtown River Walk, Hemisfair, and central meals lead the first two days", "Keeps several first-visit anchors in the same broad district", "A hotel return works only when the exact entrance and planned stops stay close", "A car-light central plan may work; map every non-Downtown day and current VIA option", "River-level access, crowds, events, room exposure, parking, and price vary by block and hotel", "Map the hotel entrance, River Walk access point, first two days, and complete hotel total"],
+      ["Pearl / Museum Reach", "Pearl, Museum Reach, food, or the northern river corridor leads the plan", "Keeps Pearl meals and part of the river experience near the base", "Useful for Pearl-led time; it does not make every Downtown or theme-park return short", "Walking, river routes, rideshare, car, and VIA usefulness depend on the exact hotel and stop", "Hotel inventory, price, and access to other signature sights can narrow the area advantage", "Compare exact hotel options, river access, both first-day routes, and the Downtown return"],
+      ["Broadway / Brackenridge / Alamo Heights", "The DoSeum, zoo, Brackenridge Park, Witte, or local meals shape younger-child days", "Can keep several cultural-corridor anchors in one broad zone", "The return depends on the exact hotel; the neighborhood label alone does not prove a quick nap reset", "Plan on exact car, rideshare, or VIA routes for Downtown and every other zone", "Hotels and walk-out meal options vary across a broad corridor", "Pin the hotel, attraction entrances, meals, transport, and the complete room setup"],
+      ["Westover Hills / SeaWorld", "SeaWorld, Aquatica, or a west-side resort is a main trip anchor", "Keeps the largest west-side day and possible resort reset near the base", "Useful on park/resort days; Downtown, Pearl, zoo, and Six Flags remain separate trips", "A car or deliberate rideshare plan is the default hypothesis to verify", "A park-adjacent label does not establish the room, pool, fee, meal, or gate route", "Confirm the exact park plan, hotel-to-gate route, room function, total price, and every central-city day"],
+      ["La Cantera / Six Flags", "Six Flags, a La Cantera resort day, or nearby meals and shopping lead the trip", "Keeps the northwestern anchor and property-led time together", "Useful for Six Flags/resort days; it does not shorten SeaWorld or Downtown returns", "Plan exact car or rideshare routes and price every Downtown visit separately", "This is a car-based base unless the exact trip stays within the district", "Confirm park dates, exact hotel route, room and pool function, complete price, and central-city plan"]
     ],
-    hotelNote: "No firm San Antonio hotel recommendations are being made in this pass. Use this verification checklist to separate area fit from hotel claims until a human-reviewed hotel workflow exists.",
-    verify: [
-      ["Room and sleep setup", "Confirm the exact bed count, suite wording, crib/rollaway availability, occupancy limit, connecting-room policy, and whether the room location can support naps."],
-      ["Parking and resort fees", "Verify nightly parking, valet-only rules, resort/destination fees, in/out privileges, and whether Downtown attractions require separate parking."],
-      ["Pool and heat plan", "Check pool hours, shade, seasonal closures, towel rules, and whether the pool is close enough to function as a midday heat reset."],
-      ["River Walk stroller route", "For Downtown stays, verify whether the practical route uses stairs, elevators, narrow paths, bridges, or crowded restaurant segments."],
-      ["Noise and events", "Ask about room placement away from bars, event spaces, elevators, pool noise, and River Walk-facing late-night activity if early bedtime matters."],
-      ["Meals and midday reset", "Verify breakfast, mini-fridge/microwave access, nearby casual meals, and whether your main activities are close enough for a heat-season rest break."]
+    areaNote: "Use these as route starts, not universal rankings. The exact hotel can reverse the area-level tradeoff through River Walk access, transport, room setup, parking, price, block conditions, and the family's first two days.",
+    bookingHeading: "Three decisions that settle the base",
+    bookingChecks: [
+      ["The River Walk is not one interchangeable hotel pin", "Downtown River Walk and Museum Reach create different routes. Use the current River Walk access maps, then pin the exact hotel entrance, river access point, attraction entrances, and likely midday return."],
+      ["SeaWorld and Six Flags are different stay bases", "Westover Hills/SeaWorld and La Cantera/Six Flags solve different park and resort days. Map both theme parks, every Downtown day, meals, and the hotel reset before grouping them as northwest."],
+      ["Choose the area, then compare the named hotel", "Use the 12-hotel guide for room function, broad total-night ranges, pool or resort role, included-food or kitchen utility, current official facts, bounded online-review observations, and maps."]
     ],
+    clusterHeading: "Move from the base to the rest of the trip",
+    clusterLinks: [
+      ["12 family hotel options", "Compare named properties by area, room function, broad total-night range, pool or resort role, included-food or kitchen utility, and bounded recent online-review observations.", "./san-antonio-family-hotels.html", "Compare San Antonio family hotels"],
+      ["Things to do with kids", "Use the 13-choice activity guide to decide whether the base should favor Downtown, Pearl and museums, a younger-child corridor, or a theme park.", "../things-to-do/san-antonio-with-kids.html", "Open San Antonio things to do with kids"],
+      ["Things to do with teens", "Let the older child choose a thrill, culture, sport, food, or adventure anchor before finalizing the family base.", "../things-to-do/san-antonio-with-teens.html", "Open San Antonio with teens"],
+      ["Family itinerary", "Sequence the first two days and one realistic reset before paying for a location that only looks central on a broad map.", "../family-itinerary/san-antonio-with-kids.html", "Build the San Antonio family itinerary"]
+    ],
+    faqTitle: "San Antonio family stay FAQ",
     faqs: [
-      ["What is the best area to stay in San Antonio with kids?", "Pearl/Museum Reach is often the best balanced family base, while Downtown/River Walk is strongest for a classic first visit if families can manage noise, crowds, and parking."],
-      ["Is the San Antonio River Walk stroller-friendly?", "Some routes can work, but stairs, crowds, bridges, narrow paths, and restaurant segments make exact-route verification important before relying on a stroller-heavy plan."],
-      ["Should families stay near SeaWorld in San Antonio?", "Stay near SeaWorld or Six Flags when theme parks are the main trip. For Alamo, River Walk, DoSeum, zoo, or Pearl plans, a central base usually reduces driving friction."]
+      ["Does an airport-area hotel save money for a San Antonio family trip?", "Treat an airport-area rate as a price hypothesis, not an automatic value. Compare the complete hotel total, parking, meals, rides or fuel, and every return from the family's first two days before trading a visitor base for a lower room rate."],
+      ["Should families stay on the San Antonio River Walk?", "A River Walk stay can work when the family's main Downtown or Museum Reach plans match that exact section. Compare the hotel entrance, river access map, first two days, room setup, parking or transport, and complete price rather than treating every River Walk hotel as the same location."],
+      ["Where can families compare specific San Antonio hotels?", "Use the Family Tripwise San Antonio family-hotel comparison for 12 named options with broad total-night ranges, room and amenity facts, bounded recent online-review observations, conflicts, and direct map links."]
+    ],
+    sourcesIntro: "Area and transport sources checked July 26, 2026. Recheck current access maps, VIA service, events, construction, attraction operations, and exact hotel routes near the trip.",
+    sources: [
+      ["Visit San Antonio neighborhood guide", "https://www.visitsanantonio.com/plan-your-trip/neighborhood-guide/"],
+      ["Visit San Antonio Downtown", "https://www.visitsanantonio.com/plan-your-trip/neighborhood-guide/downtown/"],
+      ["Visit San Antonio Pearl / Midtown", "https://www.visitsanantonio.com/plan-your-trip/neighborhood-guide/pearl-district/"],
+      ["Visit San Antonio Alamo Heights", "https://www.visitsanantonio.com/plan-your-trip/neighborhood-guide/alamo-heights/"],
+      ["Visit San Antonio Northwest / SeaWorld", "https://www.visitsanantonio.com/plan-your-trip/neighborhood-guide/northwest/"],
+      ["Visit San Antonio La Cantera / Six Flags", "https://www.visitsanantonio.com/plan-your-trip/neighborhood-guide/la-cantera-district/"],
+      ["VIA trip planning", "https://www.viainfo.net/trip-planning/"],
+      ["VIA how to ride and accessibility", "https://www.viainfo.net/how-to-ride/"],
+      ["San Antonio River Walk maps and accessibility guides", "https://www.thesanantonioriverwalk.com/plan-your-trip/maps/"],
+      ["The DoSeum visit information", "https://www.thedoseum.org/visit"],
+      ["San Antonio Zoo plan a visit", "https://sazoo.org/visit/"],
+      ["San Antonio photo source and attribution", "https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg"],
+      ["CC BY-SA 2.0 license", "https://creativecommons.org/licenses/by-sa/2.0/"]
     ]
   }
 };
@@ -2535,11 +2570,12 @@ ${page.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${es
   return html.replace(pattern, section);
 }
 
-function renderStayMatrix(rows, labelMode = "default", customHeaders) {
+function renderStayMatrix(rows, labelMode = "default", customHeaders, wrapperClass = "") {
   const headers = customHeaders || (labelMode === "verification"
     ? ["Area candidate", "Research angle", "What to verify", "Route/transport check", "Stroller/access check", "Smoke/noise check", "Parking/fee check", "Walking check", "Nearby anchor context", "Property type", "Evidence state"]
     : ["Area", labelMode === "hypothesis" ? "Research angle" : "Best for", "Main tradeoff", "Transit/driving", "Stroller", "Noise", "Parking", "Walkability", "Nearby attractions", "Hotel type", labelMode === "hypothesis" ? "Evidence state" : "Family verdict"]);
-  return `        <div class="comparison-scroll">
+  const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
+  return `        <div class="${esc(className)}">
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th>${esc(header)}</th>`).join("")}</tr></thead>
             <tbody>
@@ -2709,7 +2745,7 @@ ${renderQuickPicks(page.quick)}
           <p class="eyebrow">Area matrix</p>
           <h2>${esc(page.matrixHeading || "Compare the stay tradeoffs before booking")}</h2>
         </div>
-${areaNote}${renderStayMatrix(page.rows, page.constraintLed ? "verification" : page.stayTool ? "hypothesis" : "default", page.areaHeaders)}
+${areaNote}${renderStayMatrix(page.rows, page.constraintLed ? "verification" : page.stayTool ? "hypothesis" : "default", page.areaHeaders, page.matrixWrapperClass)}
       </section>
 
 ${[decisionSection, hotelSection, bookingSection, clusterSection, faqSection].filter(Boolean).join("\n\n")}

@@ -2,11 +2,57 @@
 
 Last updated: 2026-07-26
 
-## Active San Antonio Publication
+## Active San Antonio Implementation
+
+### IMP-038: Simplify And Improve The San Antonio Stay-Area Guide
+
+Status: review-clean; release pending
+
+Selected: 2026-07-26
+
+Roadmap ID: `FT-IMP-019`
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/san-antonio-with-kids.html`
+
+Use a durable SERP, ranking-page, persona, every-section, and source review to turn the existing page into a concise five-base visitor decision guide. Keep named-property comparison on the released hotel page.
+
+Expected maximum transaction scope:
+
+- `docs/research/san-antonio-stay-area-review.md`
+- `tools/upgrade-priority-pages.mjs`
+- `tools/san-antonio-stay-page.test.mjs`
+- `site/where-to-stay/san-antonio-with-kids.html`
+- `status/san-antonio-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Acceptance:
+
+- Five conditional trip starts and one simpler five-row visitor-area comparison replace duplicate and universal “best” layers.
+- The comparison centers the first two days, reset pattern, transport reality, main friction, nearby anchors, and exact next check.
+- Current area, River Walk access, and transport sources support material claims.
+- The released 12-hotel guide receives a clear handoff; visible FAQs and schema agree.
+- Focused/full QA, target-only idempotent generation, responsive/source/privacy/scope checks, and independent review pass.
+
+Local result:
+
+- Replaced the four repeated choice layers with five conditional visitor-base starts and one five-row, seven-field comparison.
+- Split Westover Hills/SeaWorld from La Cantera/Six Flags and deferred the unearned airport default.
+- Added three decisive checks, four cluster routes, three visible/schema-aligned FAQs, current direct sources, and a clear route to the released 12-hotel page.
+- Focused tests pass 4/4 and full repository tests pass 118/118; local/state/SEO/responsive/source/privacy/scope QA passes.
+- Raman returned final `PASS` in cycle three with no P0-P3 findings after query-level SERP traceability, stale release/queue state, and FAQ repetition were corrected.
+
+## Latest Completed San Antonio Publication
 
 ### IMP-037: Research And Publish The San Antonio Family-Hotel Comparison
 
-Status: review-clean; release pending
+Status: done, released, and production-verified
 
 Selected: 2026-07-26
 
@@ -26,6 +72,7 @@ Local result:
 - Documented current official facts, rough total-night planning ranges, recent online-review samples, family-context limits, conflicts, decisive checks, and the 10-property deferred pool.
 - Cycle-one review found four P2 mobile-density, tablet-layout, stale-state, and price-source findings. The profiles now collapse cleanly, the card flow stays one-column at tablet widths, map destinations and table jumps are explicit, stale state is reconciled, exact missing price URLs are recorded, and the deferred pool has compact source checks.
 - Cycle two: Averroes returned `PASS` with no P0-P3; Dirac confirmed both visual P2s closed and returned `PASS_WITH_P3`. The two residual P3s cover non-sticky mobile column headers and desktop jump targets sitting beneath the sticky site header.
+- Released at commit `4617ec82a87ae383eafdf9b01ecdf7f2d424063e` through successful Pages run `30226920951`; release marker, production invariants, and production SEO QA passed.
 
 Expected maximum transaction scope:
 

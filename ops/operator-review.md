@@ -1547,3 +1547,69 @@ Final verification:
 - No P0-P2 findings remain.
 - Focused tests pass 4/4; full repository tests pass 114/114; operator-state and local SEO QA pass with 0 errors and 0 warnings.
 - Duplicate-key-safe roadmap JSON, exact scope, restricted-page non-change, idempotent generation, 1280/821/390/320 responsive checks, collapsed/expanded profile behavior, image decode, source reachability, privacy, and `git diff --check` pass.
+
+Release reconciliation:
+
+- Commit `4617ec82a87ae383eafdf9b01ecdf7f2d424063e` deployed through successful GitHub Pages run `30226920951` at `2026-07-27T00:13:17Z`.
+- `release.json` matched the commit and run. The canonical/indexable page, 12 hotel profiles, 24 hotel/family-anchor maps, FAQ/schema alignment, one sitemap entry, and expected internal routes passed production verification; production SEO QA returned 0 errors and 0 warnings.
+
+### 2026-07-26 - `FT-IMP-019` selection
+
+**State:** selected under direct manual user instruction
+
+- Exact scope is limited to the stay-area research artifact, stay-page upgrader configuration and focused test, the existing San Antonio stay URL, the San Antonio status/backlogs, and four operator-state mirrors.
+- Research must refresh the visitor stay-area SERP and representative ranking pages, distinguish residential-neighborhood and named-hotel intent, apply `SA-P1` through `SA-P5`, audit every section and material claim, and use current direct area/transport/access sources.
+- No sibling site page, sitemap, new URL, indexing request, external-account mutation, outreach, or recurring automation is allowed.
+
+Pre-review QA:
+
+- The durable review records current public-result types, the prior Semrush boundary, representative ranking-page usefulness, all five persona hypotheses, nine candidate bases, every visible section, claim boundaries, a 13-source register, acceptance criteria, and measurement limits.
+- Focused tests pass 4/4; full repository tests pass 118/118; operator-state and local SEO QA pass with 0 errors and 0 warnings.
+- Target-only generation is idempotent. Browser checks at 1280, 821, 390, and 320 pixels confirm no document overflow, decoded 1280-pixel media, left-aligned section headings, complete card containment, and sticky area identity after horizontal table scrolling.
+- Twelve source probes returned 200; The DoSeum returned a bot-limited 429 rather than a not-found response. Duplicate-key-safe roadmap JSON, privacy, exact scope, and `git diff --check` pass.
+
+### 2026-07-26 - `FT-IMP-019` review cycle 1
+
+**Reviewer:** Raman (`019fa195-fc1c-7ee0-b9ab-550a70f4a5d3`), independent read-only reviewer
+
+**Result: `FAIL`**
+
+Findings and disposition:
+
+1. `P2` - The fresh result summary combined four queries without query-to-URL traceability. Added a query-level table with representative URLs/domains, result and feature patterns, boundary signal, confidence, and an explicit non-rank/non-complete-set limit.
+2. `P2` - Reconciled stale San Antonio status/backlog language that still called the released hotel page future/active or told the completed all-ages page to proceed to hotel publication.
+3. `P3` - Replaced the first FAQ's repetition of all five quick starts with an airport-area discount versus complete-trip-cost question.
+
+Cycle-two review is required because the research, status, and FAQ corrections are material.
+
+### 2026-07-26 - `FT-IMP-019` review cycle 2
+
+**Reviewer:** Raman (`019fa195-fc1c-7ee0-b9ab-550a70f4a5d3`), independent read-only reviewer
+
+**Result: `FAIL`**
+
+Findings and disposition:
+
+1. `P2` - Reconciled the final stale cluster-decision row that still said the already released all-ages page should improve first.
+2. `P2` - Moved superseded `SRR-007` out of the live `Next` queue, removed its obsolete `ask user` questions, and recorded how `FT-RES-010`, `SRR-029`, and released `FT-PUB-005` closed it.
+
+Cycle two confirmed the query-level SERP traceability P2 and repetitive FAQ P3 were closed. Cycle-three review is required for the final state corrections.
+
+### 2026-07-26 - `FT-IMP-019` review cycle 3
+
+**Reviewer:** Raman (`019fa195-fc1c-7ee0-b9ab-550a70f4a5d3`), independent read-only reviewer
+
+Initial cycle-three result: `FAIL`
+
+Findings and disposition:
+
+1. `P2` - Corrected `FT-IMP-019` review-cycle metadata to three after a generic earlier patch left it at one.
+2. `P2` - Moved completed `SRR-029` from the live `Next` queue to `Done`.
+
+All content, evidence, FAQ/schema, generator, and SEO findings from prior cycles were confirmed closed. Final cycle-three validation remains before release.
+
+Final cycle-three validation: `PASS`
+
+- Raman verified the action-specific `review_cycles: 3` record and the removal of superseded `SRR-007` and completed `SRR-029` from the live `Next` queue.
+- No P0-P3 findings remain.
+- The final verdict relies on the previously reviewed frozen substantive diff and the recorded full, focused, state, SEO, responsive, source, privacy, scope, JSON, and whitespace QA.

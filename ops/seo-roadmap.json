@@ -71,7 +71,7 @@
       "implementation_ready_on": "2026-07-15",
       "completed_on": "2026-07-15",
       "review_outcome": "PASS",
-      "review_cycles": 1,
+      "review_cycles": 2,
       "impact": 4,
       "confidence": 4,
       "learning_value": 4,
@@ -1641,8 +1641,9 @@
       "title": "Research and publish the San Antonio family-hotel comparison",
       "kind": "publication",
       "lane": "content-and-product-quality",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-07-26",
+      "completed_on": "2026-07-27",
       "review_outcome": "PASS_WITH_P3",
       "review_cycles": 2,
       "reviewer_agent_ids": [
@@ -1678,9 +1679,59 @@
       "success_signal": "One canonical named-property comparison helps families compare roughly 10-12 earned San Antonio hotels by trip style, room function, broad total-night range, location, pool or resort role, family-useful amenities, bounded recent online-review observations/conflicts, and decisive checks without duplicating the stay-area page.",
       "production_invariant": "The new San Antonio hotel URL is canonical, indexable, present once in the sitemap, and linked from home and the existing San Antonio stay guide; it introduces no unsupported universal ranking, firsthand stay, safety, quiet, exact-route, guaranteed room/crib/connection, stable-price, or universal-family-fit claim.",
       "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-26 with finalized data through 2026-07-24. The proposed URL has no GSC row because it does not exist; the existing San Antonio stay page has 85 impressions at page-level average position 80.14. This is directional context, not a query rank or causal result.",
+      "release_commit": "4617ec82a87ae383eafdf9b01ecdf7f2d424063e",
+      "pages_run": 30226920951,
+      "released_at": "2026-07-27T00:13:17Z",
+      "release_state": "released-and-production-verified",
+      "result": "Released and production-verified one 12-property San Antonio family-hotel comparison with six trip-style starts, a sticky mobile comparison, expandable evidence-bounded profiles, 24 hotel/family-anchor maps, and aligned visible/schema FAQs.",
+      "notes": "Selected 2026-07-26 by direct manual user instruction after FT-IMP-018 released. Cycle-one review found four P2 mobile-density, tablet-layout, stale-state, and price-source findings; the correction pass added expandable one-column profiles, explicit table jumps and map labels, shorter comparison checks, reconciled state, exact price URLs, and compact source records for all 10 deferrals. Cycle two returned Averroes PASS with no P0-P3 and Dirac PASS_WITH_P3 with no P0-P2. Residual P3s cover non-sticky mobile table headers and desktop/tablet jump targets beneath the sticky site header. Focused tests passed 4/4; full repository tests passed 114/114; operator-state and local SEO QA passed. Commit 4617ec82a87ae383eafdf9b01ecdf7f2d424063e deployed through successful Pages run 30226920951; release.json matched the commit/run, all production invariants passed, and production SEO QA returned 0 errors and 0 warnings. One new indexable URL only. No booking transaction, indexing request, affiliate CTA, external-account mutation, outreach, another page publication, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-019",
+      "implementation_backlog_id": "IMP-038",
+      "research_backlog_id": "SRR-030",
+      "title": "Simplify and improve the San Antonio stay-area guide",
+      "kind": "implementation",
+      "lane": "content-and-product-quality",
+      "status": "in_progress",
+      "selected_on": "2026-07-26",
+      "review_outcome": "PASS",
+      "review_cycles": 3,
+      "reviewer_agent_ids": [
+        "019fa195-fc1c-7ee0-b9ab-550a70f4a5d3"
+      ],
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-antonio-stay-area-review.md",
+        "tools/upgrade-priority-pages.mjs",
+        "tools/san-antonio-stay-page.test.mjs",
+        "site/where-to-stay/san-antonio-with-kids.html",
+        "status/san-antonio-pages.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing stay-area URL becomes a concise visitor-focused five-base decision guide with five conditional starts, one route/reset/transport comparison, three decisive checks, current area and transport sources, and a clear handoff to the released hotel comparison.",
+      "production_invariant": "The existing San Antonio stay URL remains canonical, indexable, present once in the sitemap, and linked to the hotel, activity, teen, and itinerary roles; it introduces no unsupported universal area ranking, exact-route, accessibility, stroller, safety, quiet, transport, parking, price, or personally verified claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API snapshot collected 2026-07-26 with finalized data through 2026-07-24. The page has 85 impressions, 0 clicks, and page-level average position 80.14. This is sparse page-level discovery evidence, not a query-specific rank or causal result.",
+      "implementation_summary": "Replaced four repeated choice layers with five conditional visitor-base starts, one five-row seven-field comparison, three decisive area checks, four cluster routes, three visible/schema-aligned FAQs, current direct area/transport/access sources, and a dimensioned licensed image. Split SeaWorld from La Cantera/Six Flags, deferred the unearned airport default, and routed named-property decisions to the released 12-hotel guide.",
+      "qa_summary": "Focused tests pass 4/4 and the full repository suite passes 118/118; operator-state and local SEO QA pass with 0 errors and 0 warnings; target-only generation, canonical/indexability/sitemap/schema/internal links, visible FAQ parity, 1280/821/390/320 responsive containment, sticky mobile row identity, image decode, 12 successful source probes plus one expected bot-limited 429, duplicate-key-safe roadmap JSON, privacy, exact scope, and whitespace checks pass.",
+      "review_summary": "Independent reviewer Raman (019fa195-fc1c-7ee0-b9ab-550a70f4a5d3) returned FAIL in cycles 1-2 for query-level SERP traceability and stale release/queue narratives, then initially found two mechanical state defects in cycle 3. All P2s plus the repetitive FAQ P3 were corrected within the three-cycle cap; final cycle-three validation returned PASS with no P0-P3 findings.",
       "release_state": "review-clean-release-pending",
-      "result": "Reviewed 22 candidates and retained 12 for one locally built comparison with six trip-style starts, one sticky mobile comparison with profile jumps, 12 expandable evidence-bounded property profiles, 24 clearly named hotel/family-anchor Google Maps links, three visible/schema-aligned FAQs, and internal routes from home and the existing stay-area guide.",
-      "notes": "Selected 2026-07-26 by direct manual user instruction after FT-IMP-018 released. Cycle-one review found four P2 mobile-density, tablet-layout, stale-state, and price-source findings; the correction pass added expandable one-column profiles, explicit table jumps and map labels, shorter comparison checks, reconciled state, exact price URLs, and compact source records for all 10 deferrals. Cycle two returned Averroes PASS with no P0-P3 and Dirac PASS_WITH_P3 with no P0-P2. Residual P3s cover non-sticky mobile table headers and desktop/tablet jump targets beneath the sticky site header. Focused tests pass 4/4; full repository tests pass 114/114; operator-state and local SEO QA pass; idempotent generation, duplicate-key-safe JSON, responsive 1280/821/390/320 behavior, sticky row identity, image decode, source/privacy/scope, and whitespace checks pass. One new indexable URL only. Hotel, resort, lazy-river, pool, suite, breakfast, kitchen, and room variants remain one page with fields and trip-style starts rather than separate URLs. No booking transaction, indexing request, affiliate CTA, external-account mutation, outreach, another page publication, or recurring automation."
+      "result": "The existing page is review-clean as a concise five-base visitor guide with a clear area-to-hotel flow. Exact-path release and production verification remain.",
+      "notes": "Selected under the user's direct manual instruction after the San Antonio hotel comparison released. Raman returned final PASS in cycle three with no P0-P3 findings. One existing URL only. The exact 11-path scope includes one durable every-section/persona/competition/source review and focused generation tests. Do not edit sibling site pages or sitemap, add a URL, request indexing, mutate an external account, send outreach, or create recurring automation."
     }
   ]
 }
