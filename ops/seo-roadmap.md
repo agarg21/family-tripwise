@@ -20,7 +20,7 @@ The Family Tripwise project operator may update the selected action's repository
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - The protected July 25 page-query export was collected through the encrypted manual workflow and decrypted only into central operator state outside this repository. Its named queries are relevant to the intended family activities, hotels, and stay jobs; it is qualitative early evidence, not a stable rank result.
-- GSC still showed the sitemap's July 8 read with 22 discovered pages while the live sitemap contained 28. Direct inspection found all five family-hotel pages unknown to Google. The sitemap was successfully resubmitted on July 27, and read-only monitoring now covers all 28 sitemap URLs.
+- The sitemap was successfully resubmitted on July 27. GSC subsequently reread the sitemap and now reports 28 discovered pages; read-only URL Inspection found 18 indexed and ten not indexed. The San Diego, Chicago, and New York City family-hotel pages are discovered but not indexed; the Las Vegas and San Antonio hotel pages remain unknown.
 - New-city research is paused by direct user instruction until explicitly reopened.
 
 ## Maintenance cadence

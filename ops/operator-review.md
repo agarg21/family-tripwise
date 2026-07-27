@@ -1749,3 +1749,7 @@ No P0, P1, or P3 findings were reported. Cycle-three validation is required.
 - New-city research is paused by direct user instruction until explicitly reopened.
 - Independent reviewer Kant returned two P2 documentation findings in cycle one: a stale 22-URL public-preflight statement and a stale city-order prompt.
 - Both findings were corrected without broadening the eight-path scope. Cycle two returned `PASS` with no P0-P3 findings after verifying monitor/sitemap equality, evidence classification, asynchronous sitemap wording, privacy, the destination-expansion pause, and no `site/**` or per-URL indexing-request change.
+- Monitoring configuration commit `2571dee702b4a014cef58ee08328e9aab52244bf` was pushed to `main`.
+- Authenticated snapshot workflow run `30285029386` then completed successfully and produced mechanical snapshot commit `f6ed25c31dbc9d6d3f409313067c634142e709d8`. GSC had reread the sitemap with 28 discovered pages; URL Inspection covered all 28 URLs and found 18 indexed, ten not indexed, and zero collector-unknown rows. No per-URL indexing request was made.
+- Independent post-snapshot reviewer Feynman returned one P2 wording finding in cycle one: sitemap reread and page crawl/inspection had been conflated in three narrative files.
+- The three claims were corrected to distinguish sitemap discovery from URL Inspection. Cycle two returned `PASS` with no P0-P3 findings after verifying exact counts, state split, timestamps, commit/workflow evidence, gates, privacy, and the five-path scope.

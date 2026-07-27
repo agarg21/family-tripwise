@@ -10,7 +10,7 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. The five-page San Antonio cluster is complete. New-city research is paused by direct user instruction while current pages accumulate discovery evidence.
 
-The current direct-manual action is discovery monitoring only: refresh GSC evidence, resubmit the existing sitemap, and expand read-only URL Inspection coverage to every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
+The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
 ## State Checkpoint
 
@@ -36,7 +36,7 @@ The current direct-manual action is discovery monitoring only: refresh GSC evide
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 27 snapshot has finalized data through July 25, 982 impressions and 1 click over 28 days, a successful but stale GSC sitemap read with 22 discovered pages, and 12 of the prior 15 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the July 27 snapshot has finalized data through July 25, 982 impressions and 1 click over 28 days, a successful current sitemap read with 28 discovered pages, and 18 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; GitHub Pages run `30237864556` succeeded and production verification passed for the San Antonio family itinerary
@@ -228,10 +228,11 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 - Current normalized source: `ops/gsc-snapshots/2026-07-27.json`, collected through the authenticated read-only API on July 27 with finalized data through July 25.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
-- Current GSC sitemap status before the manual refresh: Success, last read Jul 8, 2026, 22 discovered pages, 0 discovered videos. The live sitemap returns 28 URLs and was successfully resubmitted in GSC on July 27; processing remains asynchronous.
-- Current URL Inspection summary: 12 of the prior 15 monitored URLs are indexed; three are not indexed; zero inspection rows are collector-unknown. Monitoring now covers all 28 canonical sitemap URLs beginning with the next snapshot.
-- The three not-indexed URLs are San Diego things-to-do for kids and teens, plus the New York City family itinerary. The San Diego toddler page is indexed in the latest inspection.
-- Direct July 27 GSC inspection also found all five family-hotel URLs unknown to Google with no referring sitemap detected; this is a discovery blocker, not a content-quality verdict.
+- Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.
+- Current URL Inspection summary: 18 of 28 canonical sitemap URLs are indexed; ten are not indexed; zero inspection rows are collector-unknown.
+- Discovered but currently not indexed: the San Diego, Chicago, and New York City family-hotel pages.
+- Unknown to Google: the Las Vegas and San Antonio family-hotel pages, San Diego all-ages and teen activity pages, New York City itinerary and teen pages, and the Chicago teen page.
+- These are discovery/crawl states, not content-quality verdicts. The San Diego toddler page and San Antonio teen page are indexed.
 - GSC login blocker: none.
 - Per-URL indexing requested: no. The repository policy continues to prohibit the per-URL request action; the existing sitemap was resubmitted under the user's direct approval.
 - `docs/research/gsc-monitoring-latest.md` is a pointer/summary; `docs/research/gsc-monitoring-2026-07-13.md` preserves historical manual/UI evidence.

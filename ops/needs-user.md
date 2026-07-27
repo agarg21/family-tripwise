@@ -4,11 +4,11 @@ Last updated: 2026-07-27
 
 No hard blockers.
 
-The authenticated read-only GSC API collector and protected-query workflow are configured, so there is no GSC-login or query-export setup blocker. The July 27 snapshot inspected the prior 15-URL set: 12 are indexed and three are not indexed. Monitoring now covers all 28 sitemap URLs beginning with the next snapshot.
+The authenticated read-only GSC API collector and protected-query workflow are configured, so there is no GSC-login or query-export setup blocker. The July 27 snapshot inspected all 28 sitemap URLs: 18 are indexed and ten are not indexed.
 
 The user paused research for additional cities on July 27. Do not select destination-expansion research until the user explicitly reopens it. `FT-EVAL-002` remains ineligible until both revised lodging URLs have current crawl and protected query evidence.
 
-The live sitemap contains 28 canonical URLs and was successfully resubmitted in GSC on July 27 after direct inspection found all five family-hotel URLs unknown to Google. GSC processing is asynchronous. No per-URL indexing request was made.
+The live sitemap contains 28 canonical URLs and was successfully resubmitted in GSC on July 27. GSC subsequently reread the sitemap and now reports 28 discovered pages; URL Inspection shows the San Diego, Chicago, and New York City family-hotel pages as discovered but not indexed, while the Las Vegas and San Antonio family-hotel pages remain unknown. No per-URL indexing request was made.
 
 ## Useful Decisions Soon
 

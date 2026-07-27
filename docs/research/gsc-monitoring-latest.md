@@ -13,17 +13,17 @@ This file is a lightweight handoff, not an independently maintained GSC data cop
 
 - Property: `sc-domain:familytripwise.com`.
 - Collection mode: authenticated read-only Search Console API.
-- Collected: `2026-07-27T13:22:22.689Z`.
+- Collected: `2026-07-27T16:30:58.562Z`.
 - Finalized performance data through: `2026-07-25`.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Performance: 982 impressions, 1 click, 0.1% CTR, average position 61.22 over the recorded 28-day period.
 - Public preflight: the live sitemap and robots file return 200, robots advertises the sitemap, and the sitemap contains 28 canonical URLs.
-- GSC sitemap before refresh: `Success`; 22 discovered pages; last read `2026-07-08T08:39:19.199Z`.
-- Priority URL Inspection: 12 of the prior 15 monitored URLs indexed; three not indexed; zero collector-unknown rows.
-- Not indexed in the API set: San Diego things-to-do for kids and teens, plus the New York City family itinerary.
-- Direct GSC inspection on July 27 found all five family-hotel pages unknown to Google with no referring sitemap detected.
-- The existing sitemap was successfully resubmitted on July 27. GSC accepted it and will process it asynchronously; no per-URL indexing request was made.
-- Monitor coverage now matches all 28 sitemap URLs, with a regression test preventing future silent drift.
+- GSC sitemap after refresh: `Success`; 28 discovered pages; last read `2026-07-27T16:21:58.188Z`.
+- URL Inspection: 18 of 28 monitored URLs indexed; ten not indexed; zero collector-unknown rows.
+- Discovered but currently not indexed: the San Diego, Chicago, and New York City family-hotel pages.
+- Unknown to Google: the Las Vegas and San Antonio family-hotel pages, San Diego all-ages and teen activity pages, New York City itinerary and teen pages, and the Chicago teen page.
+- The existing sitemap was successfully resubmitted on July 27. GSC subsequently reread the sitemap and now reports 28 discovered pages; no per-URL indexing request was made.
+- Monitor coverage matches all 28 sitemap URLs, with a regression test preventing future silent drift.
 - A protected page-query export for finalized data through July 25 was encrypted in GitHub and decrypted only into central operator state. Named query evidence aligns with the intended family activity, hotel, and stay intents.
 - GSC login blocker: none.
 - Indexing requested: no.
