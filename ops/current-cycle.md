@@ -12,13 +12,14 @@ The repository mirror of project state is `ops/seo-roadmap.json`; the central Co
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
-`FT-DEV-004` is completed and review-clean after Noether cycle-two `PASS`. It modularizes static generation without changing public output. `FT-OPS-002` released and production-verified at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0` through Pages run `30359879823`.
+`FT-RES-011` is completed and review-clean after Pasteur cycle-two `PASS` with no P0-P3 findings. It selected Orlando and promoted only `FT-PUB-006`, which remains unselected and user-gated because it would publish a new destination.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-28.md`, fresh authenticated API data finalized through 2026-07-26.
 - Latest site release: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823` succeeded, and the release marker, production invariant, and production SEO QA passed.
-- Latest manual action: `FT-DEV-004`, completed and review-clean with 137/137 tests and byte-identical public output.
+- Latest manual action: `FT-RES-011`, completed and review-clean.
+- Promoted next action: `FT-PUB-006`, ready pending explicit user approval; not selected.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
@@ -41,7 +42,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - GSC: authenticated read-only API collection is working; the July 28 snapshot has finalized data through July 26, 1,033 impressions and 1 click over 28 days, a successful current sitemap read with 28 discovered pages, and 20 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; GitHub Pages run `30237864556` succeeded and production verification passed for the San Antonio family itinerary
+- Current released implementation: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; GitHub Pages run `30359879823` succeeded and production verification passed
 
 ## Historical operating threads
 
@@ -170,7 +171,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, and behavior-preserving `FT-DEV-004` modularization are complete. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, `FT-DEV-004`, and `FT-RES-011` are complete. `FT-PUB-006` is the only promoted follow-on and remains user-gated. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -209,11 +210,11 @@ Useful future user input:
 - Whether to prioritize traffic growth, tool/product prototype, or monetization next.
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for later research cycles; authenticated Chrome remains the current Semrush fallback.
-- Which destination wins the next evidence-based city decision pack after `FT-DEV-004`; expansion is reopened, but no city is preselected.
+- Whether to approve `FT-PUB-006`, the one-page Orlando all-ages activity publication promoted by `FT-RES-011`. Research selected Orlando, but no new-destination publication is authorized yet.
 
 ## Recommended Next Operator
 
-Use a separate research transaction to select the next city from fresh evidence; do not inherit a city from the historical candidate list or manufacture work from scan cadence.
+Wait for explicit user approval before selecting or implementing `FT-PUB-006`; do not infer publication authority from the completed research instruction.
 
 ## GSC Monitoring
 
@@ -243,4 +244,4 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 ## Master Notes
 
-Destination expansion is reopened for after `FT-DEV-004`. Select the next city in a separate research transaction from fresh evidence under the incremental city playbook; do not create city pages inside this technical action.
+Destination expansion reopened after `FT-DEV-004`. The separate `FT-RES-011` research transaction selected Orlando from current evidence; no city page was created inside the technical action or the research pass.

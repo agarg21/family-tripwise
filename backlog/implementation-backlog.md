@@ -4,6 +4,54 @@ Last updated: 2026-07-28
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before implementation.
 
+## Promoted Orlando Publication
+
+### IMP-041: Research And Publish The Orlando All-Ages Family Activity Hub
+
+Status: ready only after explicit user approval for a new destination
+
+Roadmap ID: `FT-PUB-006`
+
+Research review: `SRR-034`
+
+Target:
+
+- `https://familytripwise.com/things-to-do/orlando-with-kids.html`
+
+Build one compact all-ages Orlando decision hub after refreshing current SERPs, representative ranking pages, at least 25 candidate day or attraction roles, all six Orlando persona hypotheses, and current direct official sources.
+
+Expected maximum transaction scope:
+
+- `docs/research/orlando-activity-page-review.md`
+- `tools/page-generation/city-data.mjs`
+- `tools/page-generation/upgrade-page-data.mjs`
+- `tools/generate-pages.mjs`
+- `tools/orlando-activities-page.test.mjs`
+- `site/things-to-do/orlando-with-kids.html`
+- `site/index.html`
+- `site/sitemap.xml`
+- `status/orlando-pages.md`
+- `backlog/seo-research-review-backlog.md`
+- `backlog/implementation-backlog.md`
+- `ops/needs-user.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Acceptance:
+
+- Give `ORL-P1` through `ORL-P6` useful visible defaults before filters.
+- Compare only earned park and non-park day roles; a likely 12-16 choices is a hypothesis, not a quota.
+- Make major park, rest/non-park, free/lower-cost, younger-child, mixed-age/teen, and indoor/heat pivots visible without publishing filtered URLs.
+- Use current official checks and direct maps; do not publish unsupported firsthand, route, stroller/accessibility, safety, water, wait-time, stable price/hour, or universal family-fit claims.
+- Add exactly one canonical/indexable URL and one sitemap entry. Do not publish an Orlando sibling page in the transaction.
+- Prove target/full idempotency and unrelated-output stability; pass focused/full/state/SEO/responsive/source/privacy/scope QA and independent review.
+
+Gate:
+
+- `AGENTS.md` requires explicit user approval before publishing a new destination. `FT-RES-011` researched and promoted this action but did not authorize implementation.
+
 ## Recent San Antonio Implementation
 
 ### IMP-038: Simplify And Improve The San Antonio Stay-Area Guide

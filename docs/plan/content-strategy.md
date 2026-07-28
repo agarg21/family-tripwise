@@ -10,7 +10,17 @@ San Diego established the first deep-cluster quality bar. Las Vegas and Chicago 
 
 Continue one city at a time. Select the city from fresh GSC discovery, current keyword evidence, observed SERP opportunity, commercial depth, existing-page leverage, and research cost. Produce the city decision pack before deciding which pages to create or improve.
 
-San Diego, Las Vegas, Chicago, New York City, and San Antonio now have completed five-role cluster passes. The user reopened new-city research for after the behavior-preserving generation refactor. The next destination must be selected from fresh evidence under the city playbook rather than inherited from the historical candidate list below.
+San Diego, Las Vegas, Chicago, New York City, and San Antonio now have completed five-role cluster passes. The July 28 next-city pass selected Orlando from current Semrush, observed SERP overlap, ranking-page usefulness, commercial depth, family-planning constraints, and research cost. The selection is documented in `docs/research/next-city-cluster-selection-2026-07-28.md`.
+
+Orlando should expand incrementally rather than inherit the five-page pattern as a quota. `FT-PUB-006` is the only promoted follow-on and remains unselected pending explicit approval for a new destination:
+
+1. Publish one all-ages activity decision hub after the required new-destination approval.
+2. Research one combined family-hotel and resort comparison next.
+3. Preserve free/budget activities as a likely standalone page because current demand and its cost-specific SERP are meaningfully distinct.
+4. Add an Orlando-level itinerary only as a later sequencing product.
+5. Keep the base chooser inside the hotel page initially; exact family area demand does not yet justify a separate URL.
+6. Use visible toddler, teen/mixed-age, indoor/heat, nap, transport, and rest-day routes before considering specialist URLs.
+7. Keep Disney-specific pages deferred until a separate brand-intent research pass.
 
 Use `docs/plan/seo-cluster-research-protocol.md` before adding or materially changing destination pages. Page decisions should come from keyword validation, SERP-overlap clustering, ranking-page inspection, persona hypotheses, current page audits, and trust/evidence constraints.
 

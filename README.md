@@ -12,7 +12,7 @@ The strategy is to build destination-specific family travel pages and interactiv
 - Differentiate through current source-backed research, clean comparisons, family-constraint routing, useful maps, and compact decision support.
 - Keep the central Control Room as the only scheduler. Manual work in this repository is user-directed and still follows the same QA, independent-review, release, and reconciliation gates.
 
-San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed five-role cluster passes. New-city research resumes after the behavior-preserving generation refactor, one city at a time from fresh evidence under the incremental city playbook.
+San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed five-role cluster passes. After the behavior-preserving generation refactor, `FT-RES-011` selected Orlando as the next researched cluster; its first all-ages publication remains explicitly user-gated.
 
 ## Starter Docs
 

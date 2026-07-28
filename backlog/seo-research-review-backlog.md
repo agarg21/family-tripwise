@@ -4,6 +4,53 @@ Last updated: 2026-07-28
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before substantive work.
 
+## Current Next-City Research
+
+### SRR-033: Select And Research The Next Family Destination Cluster
+
+Status: complete and review-clean as `FT-RES-011`
+
+Selected: 2026-07-28
+
+Compare the strongest remaining destination candidates using fresh existing-site GSC context, current logged-in Semrush demand/KD/intent evidence, observed SERP URL and domain overlap, representative ranking-page usefulness, family-planning constraints, product fit, and research cost. Select exactly one city, define its non-cannibalizing query clusters and research-hypothesis personas, and promote exactly one bounded next action.
+
+Boundaries:
+
+- Research only; do not edit `site/**`, publish a city page, alter the sitemap, deploy, or request indexing.
+- GSC cannot measure demand for an unpublished city; use it only as context for how the current domain is being discovered.
+- Do not sum overlapping keyword variants or treat keyword volume as unique traffic.
+- Do not infer SERP overlap from semantic similarity; record observed URLs/domains and mark incomplete intersections `UNKNOWN`.
+- Community anecdotes are qualitative constraints, not demand or verified family experience.
+- A promoted new-destination publication remains user-gated under `AGENTS.md`.
+
+Result:
+
+- Selected Orlando over Miami, Dallas, Nashville, and Washington, DC from current whole-cluster evidence.
+- Recorded seven retained exact URL overlaps across the two broad Orlando activity samples.
+- Recorded high hotel/best-hotel and hotel/resort overlap; one future hotel comparison should absorb resort and major amenity routes initially.
+- Preserved free/budget as a credible later standalone page because it has 720/KD 17 and only three retained exact overlaps against either broad activity sample.
+- Kept toddler and teen as visible hub routes for now despite distinct result sets because exact demand is 70 and 40.
+- Derived six Orlando persona hypotheses and a restrained page architecture.
+- Promoted only `FT-PUB-006` / `IMP-041` / `SRR-034`, pending explicit new-destination approval.
+- Artifact: `docs/research/next-city-cluster-selection-2026-07-28.md`.
+
+### SRR-034: Orlando All-Ages Candidate, Persona, Source, And Page Review
+
+Status: ready only after user approval for `FT-PUB-006`
+
+Roadmap ID: `FT-PUB-006`
+
+Before publication, refresh the broad, free/budget, toddler, teen/mixed-age, park-choice, non-park, indoor/weather, and itinerary result sets; review at least 25 candidate day or attraction roles; retain only options with distinct family decision value; and review every planned section against `ORL-P1` through `ORL-P6`.
+
+Boundaries:
+
+- Publish exactly one Orlando URL and add one sitemap entry.
+- Do not publish hotel, stay, itinerary, free, toddler, teen, or Disney-specific sibling URLs.
+- Give useful visible defaults before filters; do not create indexable filter states.
+- Use current direct official sources for every material park, attraction, access, ticket, height, weather, and operating fact.
+- Do not imply firsthand experience or unsupported route, stroller/accessibility, safety, water, wait-time, weather, price, or universal family-fit certainty.
+- No indexing request, affiliate CTA, external-account mutation, outreach, booking action, or recurring automation.
+
 ## Latest Completed San Antonio Cluster Review
 
 ### SRR-027: San Antonio SERP-Overlap Cluster, Persona, And Page Decision Pack

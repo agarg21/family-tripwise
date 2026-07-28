@@ -1794,3 +1794,14 @@ No P0, P1, or P3 findings were reported. Cycle-three validation is required.
 - Focused modularization tests pass 2/2 and the full suite passes 137/137. Operator-state, content-freshness, and local SEO QA pass with 0 errors and 0 warnings.
 - The reviewer reconstructed the pre-refactor generator and upgrader sources exactly from the new modules and compatibility entry points. All 38 tracked public files remain byte-identical after repeated full generation.
 - Compatibility, idempotence, isolated-target restoration, duplicate-key-safe roadmap JSON, exact declared scope, privacy, no-`site/**`, and whitespace checks pass.
+
+### 2026-07-28 - `FT-RES-011` next-city cluster selection review
+
+**Reviewer:** Pasteur (`019faa72-8808-7c50-a10f-74b6a7d56337`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for two P2 findings: the four runner-up cities lacked durable query-level SERP traces, and current guidance still said no city had been selected. One P3 found that stay/base product overlap was described as observed SERP overlap.
+- The correction added query-specific, source-linked activity and family-hotel traces for Miami, Dallas, Nashville, and Washington, DC; reconciled README and current-cycle guidance; added `README.md` to the declared scope; and distinguished product-job overlap from numeric SERP overlap, which remains `UNKNOWN`.
+- Cycle 2 returned `PASS` with no P0-P3 findings. The reviewer confirmed the candidate comparison, Orlando overlap evidence, six persona hypotheses, one-action prioritization, user approval gate, ID ownership, exact paths, privacy, and no-`site/**` production invariant.
+- Full tests pass 137/137. Operator-state and content-freshness QA pass; local SEO QA reports 0 errors and 0 warnings. Duplicate-key-safe roadmap JSON, action/backlog linkage, 82 citation references across 65 unique URLs, source-link checks, privacy, exact scope, no-site, and whitespace QA pass.
