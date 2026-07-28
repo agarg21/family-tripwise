@@ -1,5 +1,7 @@
 # 90-Day Execution Plan
 
+Historical plan notice, 2026-07-28: this is the founding launch plan, not the current execution queue. The site has moved beyond these staged page-count goals; use `ops/seo-roadmap.json`, `ops/current-cycle.md`, and the incremental city playbook for current work.
+
 ## Goal
 
 Validate whether interactive, family-specific destination pages can rank and convert better than static family travel blog posts.
@@ -86,4 +88,3 @@ These are directional, assuming a new domain:
 - Store source dates for recommendations.
 - Mark inferred scores clearly.
 - Add tools that make the pages meaningfully better than static SERPs.
-

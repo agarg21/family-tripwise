@@ -1,5 +1,7 @@
 # Progress
 
+Archive notice, 2026-07-28: this is a historical launch-era narrative through July 15, not the current progress ledger. Use `ops/seo-roadmap.json`, `ops/current-cycle.md`, city files under `status/`, and dated GSC snapshots for current state.
+
 ## 2026-07-15
 
 - Reconciled the five carried July 13 GSC/operations narrative files against the authenticated read-only API snapshot and current operator state:

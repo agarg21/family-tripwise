@@ -1,6 +1,8 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-26
+Last updated: 2026-07-28
+
+Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before substantive work.
 
 ## Latest Completed San Antonio Cluster Review
 
@@ -36,7 +38,7 @@ Result:
 - Full repository tests pass 105/105; operator-state QA and local SEO QA pass with 0 errors and 0 warnings; duplicate-key-safe roadmap JSON, focused SERP/persona/action/source/scope, 35-URL reachability, privacy, exact-path, no-site, and whitespace checks pass.
 - Independent reviewer Goodall (`019f9ec6-b438-7d33-9c60-658a5706ac29`) returned `PASS` in cycle 2 with no P0-P3 findings after exact-versus-domain SERP intersections, persona source traceability, direct ranking/community links, and two audit counts were corrected.
 
-## Active San Antonio Page Review
+## Completed San Antonio Page Review
 
 ### SRR-028: San Antonio All-Ages Candidate, Persona, Source, And Every-Section Review
 
@@ -439,11 +441,11 @@ Result:
 - Recorded official facts, broad total-night planning ranges, bounded recent-review themes/conflicts, deferred candidates, freshness, unknowns, page architecture, acceptance criteria, and measurement plan.
 - Artifact: `docs/research/las-vegas-family-hotel-evidence-pack.md`.
 
-## Next
+## Superseded Launch-Era Tool Decision
 
 ### SRR-003: Decide First Tool-Like Feature
 
-Status: pending
+Status: superseded by released activity filters plus unpublished stay-decision, itinerary-pacing, and reset-atlas prototypes
 
 Recommendation label: `test`
 
@@ -454,7 +456,7 @@ Compare:
 - nap-friendly itinerary builder
 - rainy-day planner
 
-Recommend one narrow implementation test.
+The later roadmap produced several bounded tests. Any public integration now requires a newly selected action with current evidence; this old comparison is not an active next step.
 
 ### SRR-030: San Antonio Stay-Area SERP, Persona, And Every-Section Review
 

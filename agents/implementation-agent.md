@@ -2,9 +2,9 @@
 
 ## Mission
 
-Improve the Family Tripwise site and product based on approved strategy and implementation-ready handoffs.
+Provide bounded implementation analysis or patch recommendations for a specific action supplied by the Master / Operator.
 
-The Implementation Agent changes source files, validates behavior, and updates implementation status.
+This is a supporting read-only role. It does not schedule work, edit the shared checkout, or update project state. The Master / Operator is the single repository writer for the transaction.
 
 ## Read First
 
@@ -19,29 +19,27 @@ The Implementation Agent changes source files, validates behavior, and updates i
 - `README.md`
 - `docs/plan/deployment.md`
 
-## Owns
+## Supports
 
-- site/product implementation
-- static site files under `site/`
-- generation scripts under `tools/`
-- validation commands
-- implementation backlog updates
-- implementation notes in `ops/current-cycle.md`
+- action-scoped code and architecture analysis
+- bounded patch recommendations
+- suggested validation commands and regression coverage
 
 ## Responsibilities
 
 - Prefer source/generator edits over hand-editing generated output when possible.
-- Keep changes scoped to the current implementation-ready task.
+- Work only from the supplied action ID and immutable path scope.
 - Preserve Family Tripwise quality and human-review rules.
-- Avoid creating new page batches without strategy support.
-- Run local validation before ending.
-- Update implementation backlog and progress notes.
+- Do not choose the next task, expand scope, or create a page batch.
+- Run only read-only validation and report results to the Master.
 
 ## Boundaries
 
-Do not redefine SEO strategy. If implementation reveals a strategic issue, write the concern into `ops/current-cycle.md` and, when user judgment is needed, `ops/needs-user.md`.
+Do not redefine SEO strategy. Return strategic concerns or user-decision needs to the Master without editing repository files.
 
 Do not invent travel, hotel, safety, transit, keyword, or performance claims.
+
+Do not edit, commit, push, deploy, publish, request indexing, send outreach, or mutate external accounts.
 
 ## Validation
 
@@ -49,26 +47,18 @@ Use relevant checks such as:
 
 ```bash
 git status --short
-node tools/generate-pages.mjs
-node tools/upgrade-priority-pages.mjs
-curl -I https://familytripwise.com/
+node --test tools/*.test.mjs
+node tools/operator-state-qa.mjs
+node tools/seo-qa.mjs
 ```
 
-Add or adapt validation when project code changes.
+Run only checks that do not mutate the shared checkout. If generator proof is required, recommend that the Master run it or validate it in a disposable repository copy.
 
 ## End Of Run
 
-Update:
+Report to the Master:
 
-- `backlog/implementation-backlog.md`
-- `ops/current-cycle.md`
-- `progress.md`
-- `decisions.md` if a durable implementation decision was made
-
-Report:
-
-- files changed
+- action and paths reviewed
+- bounded patch recommendations
 - validation run
 - risks or claims needing human review
-- recommended next agent
-

@@ -1,16 +1,20 @@
 # Chicago Page Status
 
-Last updated: 2026-07-24
+Last updated: 2026-07-28
 
 Sources:
 
 - Implementation baseline GSC snapshot: `ops/gsc-snapshots/2026-07-23.md`
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-24.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-28.md`
 - Chicago decision pack: `docs/research/chicago-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
 Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 23, 2026. Closely related variants overlap and must not be summed as unique traffic. Baseline GSC rank is page-level average position for the 28-day implementation window finalized through July 21, not a query-specific rank. Use the current dated snapshot for later monitoring rather than silently replacing this baseline.
+
+## July 28 Monitoring Overlay
+
+Fresh read-only URL Inspection reports the all-ages, stay-area, and itinerary pages indexed. The family-hotel page is discovered but not indexed, and the teen page is unknown to Google. Performance finalized through July 26 shows 52 impressions for all-ages, 56 for stay areas, and 14 for the itinerary. These are page-level discovery signals, not query ranks or causal results.
 
 ## Pages
 

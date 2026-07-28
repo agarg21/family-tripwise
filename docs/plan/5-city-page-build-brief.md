@@ -2,6 +2,8 @@
 
 Date: July 3, 2026
 
+Historical brief notice, 2026-07-28: this preserves the original five-city launch hypothesis and keyword estimates. It is not a current build queue. All five city clusters have since received evidence-led architecture and page reviews; current roles and next actions live in `status/`, `ops/seo-roadmap.json`, and dated research packs.
+
 Purpose: implementation handoff for building the first Family Tripwise destination clusters in one coordinated push.
 
 Data notes:

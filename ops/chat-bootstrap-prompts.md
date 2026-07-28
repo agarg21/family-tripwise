@@ -1,8 +1,10 @@
-# Child Chat Bootstrap Prompts
+# Historical Child Chat Bootstrap Prompts
 
-Last updated: 2026-07-07
+Last updated: 2026-07-28
 
-Use these prompts when creating project-scoped Codex chats in the Family Tripwise / Travel SEO workspace.
+Archive status: these prompts document the pre-Control-Room child-chat model. Do not use them to create independent priority owners or repository writers.
+
+Current work is executed by the permanent project Master / Operator from either a validated Control Room dispatch or a direct manual user instruction. The Control Room is the only scheduler, the Master is the single repository writer for the transaction, and independent reviewers are read-only. Current rules live in `AGENTS.md`, `ops/operator.json`, `ops/seo-roadmap.json`, and `ops/current-cycle.md`.
 
 Project path:
 
@@ -166,4 +168,3 @@ End your response with:
 - implementation-ready tasks
 - recommended next agent
 ```
-

@@ -1,6 +1,8 @@
-# SEO Portfolio Operator Handoff
+# Historical SEO Portfolio Operator Handoff
 
 Migration started: 2026-07-13
+
+Archive status: this file preserves the supervised-pilot migration and action evidence below. Its “current” labels are historical to the dated entries and must not be used for selection or release state. Current scheduling and project state live in the central Control Room, `ops/seo-roadmap.json`, and `ops/current-cycle.md`.
 
 ## Status
 
@@ -15,7 +17,7 @@ Family Tripwise is in a supervised operator pilot with path-scoped code changes 
 - Action ledger: `state/family-tripwise/action-ledger.json`
 - Latest report: `reports/family-tripwise/latest.md`
 
-## Current operator decision
+## Historical operator decision from 2026-07-15
 
 - Decision: execute user-authorized `FT-MAINT-001`, a bounded cleanup of the five carried July 13 narrative files and the GSC monitoring handoff policy.
 - Reason: resolve the preserved dirty state without discarding valid historical evidence or restoring stale GSC/login/operator status. This maintenance action replaces normal roadmap selection for this run; do not also start `FT-AUTH-001`.

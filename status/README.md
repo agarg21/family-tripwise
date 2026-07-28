@@ -15,4 +15,6 @@ Daily search evidence belongs in `ops/gsc-snapshots/`. A city table should be up
 
 Use `Baseline GSC` rather than `Current GSC` when a number is intentionally frozen at the implementation decision. Never call a historical snapshot the latest snapshot.
 
+When a newer snapshot materially changes discovery or a blocker, add a short dated monitoring overlay above the frozen table. Do not silently replace the decision baseline or describe page-level average position as a query rank.
+
 The release commit, workflow run, deployment result, and production verification are recorded centrally after deployment. Do not create a repository commit solely to backfill them. Update the city file and related repository narratives only as part of another authorized transaction or an explicitly dispatched/user-requested reconciliation. When repository release evidence is present, `node tools/operator-state-qa.mjs` checks it for common stale-language and metadata mismatches.

@@ -1,16 +1,20 @@
 # Las Vegas Page Status
 
-Last updated: 2026-07-24
+Last updated: 2026-07-28
 
 Sources:
 
 - Implementation baseline GSC snapshot: `ops/gsc-snapshots/2026-07-23.md`
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-24.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-28.md`
 - Las Vegas city/cluster research: `docs/research/next-city-prioritization-las-vegas-cluster.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
 Demand estimates are directional US monthly search volumes from the logged-in Semrush check collected July 22, 2026. Closely related rows overlap and must not be summed into unique traffic. Baseline GSC rank is page-level average position over the implementation window finalized through July 21; it is not a claim that the page ranks at that position for each example query. Example queries are research targets, not a protected GSC query export.
+
+## July 28 Monitoring Overlay
+
+Fresh read-only URL Inspection reports all five Las Vegas pages indexed, including the family-hotel URL crawled on July 28. Performance finalized through July 26 shows page rows for the four older planning pages, led by 344 impressions for the all-ages hub; the hotel page has no performance row yet. These are page-level discovery signals, not query ranks or causal results.
 
 ## Public Pages
 
@@ -20,7 +24,7 @@ Demand estimates are directional US monthly search volumes from the logged-in Se
 | Teen activities | https://familytripwise.com/things-to-do/las-vegas-with-teens.html | 590 core exact; alternate variants also support the intent | Avg position 11; 2 impressions | Top 10 | `things to do in Las Vegas with teens`; `things to do with teens in Las Vegas`; `Las Vegas with teens` | Live, released, and production-verified under `FT-IMP-007` at `ae917f1`; Pages run `29964564369` succeeded. | Eight teen-specific choices, five trip-style starts, five high-friction detail cards, four route shapes, mixed-age routing, current official checks, visible FAQ/schema, and a full competitor/persona/section record. | The two-impression GSC baseline is too small for a performance conclusion, and post-change evidence does not exist yet. | Preserve while Google recrawls; do not request indexing. |
 | Stay areas / property constraints | https://familytripwise.com/where-to-stay/las-vegas-with-kids.html | 20 for exact area query; overlaps 3,980+ hotel/resort variants | Avg position 44.69; 13 impressions | Top 20 | `where to stay in Las Vegas with kids`; `best area to stay in Las Vegas with kids`; `where should families stay in Las Vegas` | Live, released, and production-verified under `FT-IMP-008` at `7bc2993`; Pages run `29975754626` succeeded. | Five trip-shape starts, one five-row base comparison, three decisive checks, four cluster routes, three visible FAQs/schema, current sources, and full competitor/persona/every-section review. | The 13-impression baseline is too small for a performance conclusion; post-change evidence does not exist yet. | Preserve while Google recrawls; do not request indexing. |
 | Family itinerary | https://familytripwise.com/family-itinerary/las-vegas-with-kids.html | About 20 across two sampled exact itinerary phrases | Avg position 22.6; 5 impressions | Top 20 | `Las Vegas itinerary with kids`; `Las Vegas family itinerary`; `Las Vegas weekend with kids` | Live, released, and production-verified under `FT-IMP-009` at `48417b0`; Pages run `29994060699` succeeded. | Three trip-length starts, three day-by-day plans, five persona/trip pivots, four stop rules, four cluster routes, three visible FAQs/schema, current sources, a full competitor/persona/every-section record, 57/57 tests, responsive QA, and independent review. | The five-impression baseline is too small for a performance conclusion; post-change evidence does not exist yet. | Preserve while Google recrawls; do not request indexing. |
-| Family hotel comparison | https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html | 1,900 family-friendly hotels; 880 best family hotels; 720 family resorts; 480 kid-friendly hotels | N/A: new URL has no pre-launch GSC row | Top 20 first, then Top 10 | `family friendly hotels in Las Vegas`; `best family hotels in Las Vegas`; `Las Vegas family resorts` | Live, released, and production-verified under `FT-PUB-002` at `bda58e8`; Pages run `29944609529` succeeded. | Ten distinct trip-style options, official property facts, rough total-night ranges, sampled online-review themes/conflicts, direct hotel maps, comparison table, visible FAQ, durable evidence pack, native QA, and independent review. | No post-launch search or crawl evidence exists yet. Price/review evidence is volatile and must be refreshed before materially stale claims are relied on. | Keep the one hotel/resort URL; do not request indexing or create a separate `family resorts` page. |
+| Family hotel comparison | https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html | 1,900 family-friendly hotels; 880 best family hotels; 720 family resorts; 480 kid-friendly hotels | N/A: new URL has no pre-launch GSC row | Top 20 first, then Top 10 | `family friendly hotels in Las Vegas`; `best family hotels in Las Vegas`; `Las Vegas family resorts` | Live, indexed as of July 28, released, and production-verified under `FT-PUB-002` at `bda58e8`; Pages run `29944609529` succeeded. | Ten distinct trip-style options, official property facts, rough total-night ranges, sampled online-review themes/conflicts, direct hotel maps, comparison table, visible FAQ, durable evidence pack, native QA, and independent review. | No performance row exists yet. Price/review evidence is volatile and must be refreshed before materially stale claims are relied on. | Keep the one hotel/resort URL; do not request indexing or create a separate `family resorts` page. |
 
 ## Review Coverage
 

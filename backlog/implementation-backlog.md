@@ -1,6 +1,8 @@
 # Implementation Backlog
 
-Last updated: 2026-07-26
+Last updated: 2026-07-28
+
+Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before implementation.
 
 ## Recent San Antonio Implementation
 
@@ -464,7 +466,7 @@ Status: candidate; separate reviewed transaction required
 
 Audit source: `FT-OPS-001`
 
-Split the 1,968-line base generator and 2,369-line page upgrader into shared helpers plus destination/page-type specifications before several more city revamps. Preserve the static architecture and public output.
+Split the 2,610-line base generator and 3,101-line page upgrader into shared helpers plus destination/page-type specifications before several more city revamps. Preserve the static architecture and public output.
 
 Acceptance boundary:
 
@@ -1029,13 +1031,13 @@ Implementation result, 2026-07-15:
 - Focused tests passed 2/2, native and production SEO QA returned 0 errors and 0 warnings, and desktop plus 390px/320px browser checks found no page overflow or implementation console error.
 - Independent review cycle 1 returned `PASS` with no P0-P3 findings; exact-path commit and release are authorized after final staged QA.
 
-## Candidate Tasks
+## Superseded Launch-Era Candidates
 
-These need SEO Research & Review confirmation before implementation:
+These July launch candidates are retained for history and are no longer eligible queue items. Internal linking, interactive filters/prototypes, and the San Diego hotel page were implemented through later roadmap actions.
 
 ### IMP-006: Improve Existing Priority Page Internal Links
 
-Status: candidate
+Status: superseded by later cluster implementations
 
 Potential scope:
 
@@ -1044,7 +1046,7 @@ Potential scope:
 
 ### IMP-007: Build First Narrow Tool-Like Component
 
-Status: candidate
+Status: superseded by released filters and unpublished tool prototypes
 
 Potential scope:
 
@@ -1055,7 +1057,7 @@ Potential scope:
 
 ### IMP-008: Create San Diego Family Hotels Page After Human Review Path
 
-Status: candidate
+Status: completed through the later San Diego hotel evidence/publication workflow
 
 Potential scope:
 
@@ -1384,7 +1386,7 @@ Local result:
 - Franklin cycle one returned `FAIL` for three P2 findings. Query-to-URL traceability, direct GO RIO duration/Six Flags chaperone sources, and stale/copy-pasted state mirrors were corrected. Cycle two returned `PASS` with no P0-P3 findings.
 - Commit `e071a60c66729b61137113a96ade116969fe3532` deployed through successful Pages run `30236032473`; release marker, exact production artifact, action invariants, and production SEO QA passed.
 
-## Active San Antonio Implementation
+## Latest Completed San Antonio Implementation
 
 ### IMP-040: Improve The San Antonio Family Itinerary
 

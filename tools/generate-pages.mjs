@@ -97,6 +97,7 @@ const cities = [
     volume: { activities: "4,400", stay: "320", itinerary: "90" },
     metaName: "San Diego",
     intro: "Build around beach mornings, the zoo, Balboa Park, La Jolla, and realistic driving windows between naps, meals, and pool time.",
+    activitiesLastUpdated: "July 28, 2026",
     photo: {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/San%20Diego%20Zoo%2C%20San%20Diego%2C%20United%20States%20%28Unsplash%20QZwf5yNopUo%29.jpg",
       alt: "A red panda at the San Diego Zoo.",
@@ -142,7 +143,7 @@ const cities = [
       ["SeaWorld San Diego", "preschool elementary tween teen stroller", "full day", "$$$", "Good", "Partial", "Low", "Mission Bay", "A major paid day with animals, presentations, and rides; check height rules and the current show schedule."],
       ["LEGOLAND California", "toddler preschool elementary", "full day", "$$$", "Good", "Partial", "Low", "Carlsbad", "Best for LEGO-focused younger children when the North County drive and a full park day fit the trip."],
       ["San Diego Zoo Safari Park", "preschool elementary tween teen", "full day", "$$$", "Mixed", "No", "Low", "Escondido", "A separate inland wildlife day, not an add-on to the San Diego Zoo."],
-      ["The New Children's Museum", "toddler preschool elementary rain stroller", "2-3 hrs", "$$", "Good", "Yes", "High", "Downtown", "A hands-on Downtown anchor for younger kids; the museum announced a July 21-26, 2026 Comic-Con closure."],
+      ["The New Children's Museum", "toddler preschool elementary rain stroller", "2-3 hrs", "$$", "Good", "Yes", "High", "Downtown", "A hands-on Downtown anchor for younger kids; check the museum calendar for current hours and closure notices."],
       ["Fleet Science Center", "preschool elementary tween rain stroller", "2-4 hrs", "$$", "Good", "Yes", "Medium", "Balboa Park", "An interactive science and dome-theater option for a wet or hot part of the day."],
       ["Belmont Park", "elementary tween teen", "2-4 hrs", "$$-$$$", "Mixed", "Partial", "Low", "Mission Beach", "A flexible rides-and-boardwalk stop for older kids; pay and height rules vary by attraction."]
     ],

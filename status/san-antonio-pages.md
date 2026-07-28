@@ -1,19 +1,23 @@
 # San Antonio Page Status
 
-Last updated: 2026-07-27
+Last updated: 2026-07-28
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-26.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-28.md`
 - San Antonio decision pack: `docs/research/san-antonio-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
-Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 26, 2026. Closely related variants overlap and must not be summed as unique traffic. GSC rank is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
+Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 26, 2026. Closely related variants overlap and must not be summed as unique traffic. Decision-baseline GSC position is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
+
+## July 28 Monitoring Overlay
+
+Fresh read-only URL Inspection reports the all-ages, teen, stay-area, and itinerary pages indexed; the family-hotel URL is discovered but not indexed. Performance finalized through July 26 shows page rows for all four indexed planning pages, led by 89 impressions for stay areas. These are page-level discovery signals, not query ranks or causal results.
 
 ## Pages
 
-| Page | Full URL | Est. search demand/mo | Current GSC rank | Target rank | 2-3 top search queries | Current status | Latest persona / competition review | Remaining / blocker | Next action |
+| Page | Full URL | Est. search demand/mo | Decision-baseline GSC position | Target rank | 2-3 top search queries | Current status | Latest persona / competition review | Remaining / blocker | Next action |
 |---|---|---|---|---|---|---|---|---|---|
 | Main things-to-do hub | https://familytripwise.com/things-to-do/san-antonio-with-kids.html | Exact measured phrases: 5,400, 1,600, and 880/month; variants overlap | Avg position 64.36; 11 impressions | Top 20 first, then Top 10 | `things to do in san antonio with kids`; `things to do with kids in san antonio`; `san antonio things to do with kids` | Released and production-verified 13-choice guide at commit `27168d5`; Pages run `30207559125`. | `FT-RES-010` covers SERPs, competitors, personas, and every section. `SRR-028` reviews 23 candidates, retains 13, traces `SA-P1` through `SA-P5`, and records current direct sources and claim boundaries. Pasteur cycle two returned `PASS` with no P0-P3. | No current blocker; observe discovery without claiming causation from sparse early GSC evidence. | Keep and measure natural discovery. |
 | Teen activities | https://familytripwise.com/things-to-do/san-antonio-with-teens.html | Exact measured phrases: 140 and 70/month; variants overlap | Avg position 9.00; 3 impressions | Top 20, then test Top 10 stability | `things to do in san antonio with teens`; `san antonio with teens`; `san antonio with teenagers` | Released and production-verified at commit `e071a60`; Pages run `30236032473`. | `SRR-031` maps query-level result types to representative URLs, covers primary teen and mixed-age personas, reviews 18 candidates and every visible section, and records claim boundaries plus 22 current sources. Franklin returned cycle-two `PASS` with no P0-P3 findings. | Three impressions are too sparse to call it a stable top-10 result; observe discovery without claiming causation. | Keep the compact 10-choice specialist. |

@@ -1,5 +1,7 @@
 # Decisions
 
+Archive notice, 2026-07-28: this records early project decisions and is not the current decision queue. Current action decisions live in `ops/seo-roadmap.json`, supported by dated research and `ops/current-cycle.md`.
+
 ## 2026-07-13: Run One Bounded San Diego Batch Before Observation
 
 Decision: Supersede the July 25 wait for the San Diego where-to-stay target and run `FT-EXP-001` as one cohesive, reviewed pre-observation batch. Begin a fresh target-scoped observation window only after the reviewed commit is deployed.

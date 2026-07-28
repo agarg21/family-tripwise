@@ -12,7 +12,7 @@ The strategy is to build destination-specific family travel pages and interactiv
 - Differentiate through current source-backed research, clean comparisons, family-constraint routing, useful maps, and compact decision support.
 - Keep the central Control Room as the only scheduler. Manual work in this repository is user-directed and still follows the same QA, independent-review, release, and reconciliation gates.
 
-San Diego, Las Vegas, and Chicago have completed deep quality passes. New York City is the leading next-city research candidate; it is not pre-approved page scope until a current city decision pack establishes the architecture.
+San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed five-role cluster passes. New-city research is paused by direct user instruction; current discovery and blockers are recorded in the July 28 GSC snapshot and city status files.
 
 ## Starter Docs
 

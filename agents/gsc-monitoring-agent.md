@@ -24,14 +24,10 @@ Also read the reusable personal Codex skill:
 
 - `~/.codex/skills/gsc-monitor/SKILL.md`
 
-## Owns
+## Mechanical Write Exception
 
-- Dated normalized GSC decision snapshots in `ops/gsc-snapshots/`
-- Occasional durable GSC research summaries in `docs/research/` when interpretation materially changes
-- Material GSC monitoring handoffs in `ops/current-cycle.md`
-- Current blockers in `ops/needs-user.md`
-- Progress entries only for material monitoring changes or decisions
-- `ops/gsc-monitor.json` updates when the monitored URL set changes
+- A schema-valid, public-safe dated snapshot confined to `ops/gsc-snapshots/**` may be written under the mechanical evidence exception in `AGENTS.md`.
+- The monitoring agent does not write narrative state, change monitored scope, schedule work, or select an action. Material interpretation and blocker changes are returned to the Master / Operator.
 
 ## Responsibilities
 
@@ -40,8 +36,7 @@ Also read the reusable personal Codex skill:
 - Check GSC sitemap status, last read date, discovered pages, and discovered videos.
 - Inspect configured high-value URLs in GSC when browser/login access is available.
 - Record whether each URL is on Google, indexing state, discovery source, and sitemap signal where GSC exposes it.
-- Record whether indexing was requested.
-- Request indexing only when the user explicitly authorized that specific action.
+- Record that per-URL indexing was not requested.
 - Keep findings dated and separate measured GSC data from assumptions.
 - Treat a healthy or unchanged snapshot, validation, URL Inspection reconciliation, and public preflight as mechanical run-start housekeeping. Record it without stopping an otherwise eligible substantive operator action.
 - Escalate for preemption only when monitoring verifies a technical or production defect, identifies a safety or trust blocker, supplies a due substantive experiment decision, or carries an explicit `preempts_substantive_action` marker.
@@ -51,7 +46,7 @@ Also read the reusable personal Codex skill:
 - Do not add analytics scripts or tracking pixels.
 - Do not collect user-entered calculator, form, or private browsing data.
 - Do not make account-level GSC changes without explicit approval.
-- Do not repeatedly request indexing for the same URL.
+- Do not request indexing. Repository policy prohibits indexing requests.
 - Do not bypass CAPTCHA, account verification, or browser security prompts.
 - Do not create or change SEO strategy; hand strategic implications to SEO Research & Review.
 
@@ -74,9 +69,7 @@ Fix repo-side issues only when they are public-site issues, such as:
 Update:
 
 - a dated JSON and Markdown summary under `ops/gsc-snapshots/` for each successful authenticated collection
-- `docs/research/gsc-monitoring-latest.md` only when interpretation, a blocker, monitored scope, or a material decision changes
-- `ops/current-cycle.md` and `progress.md` only for the same material changes; do not rewrite them for healthy or unchanged daily housekeeping
-- `ops/needs-user.md` if GSC login, account access, indexing approval, or account-level changes are blocked
+- no narrative file; return material interpretation, login/access blockers, or account-level decision needs to the Master / Operator
 
 When the daily snapshot, validation, URL Inspection reconciliation, and public preflight are healthy or unchanged, leave all narrative handoff files untouched. The dated normalized snapshot is the routine durable evidence.
 

@@ -1,19 +1,23 @@
 # New York City Page Status
 
-Last updated: 2026-07-26
+Last updated: 2026-07-28
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-26.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-28.md`
 - NYC decision pack: `docs/research/new-york-city-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
-Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 24, 2026. Closely related variants overlap and must not be summed as unique traffic. GSC rank is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
+Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 24, 2026. Closely related variants overlap and must not be summed as unique traffic. Decision-baseline GSC position is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
+
+## July 28 Monitoring Overlay
+
+Fresh read-only URL Inspection reports the all-ages and stay-area pages indexed. The family-hotel and teen pages are discovered but not indexed; the itinerary remains unknown to Google. Performance finalized through July 26 shows 66 impressions for all-ages and 58 for stay areas. These are page-level discovery signals, not query ranks or causal results.
 
 ## Pages
 
-| Page | Full URL | Est. search demand/mo | Current GSC rank | Target rank | 2-3 top search queries | Current status | Review coverage | Remaining / blocker | Next action |
+| Page | Full URL | Est. search demand/mo | Decision-baseline GSC position | Target rank | 2-3 top search queries | Current status | Review coverage | Remaining / blocker | Next action |
 |---|---|---:|---|---|---|---|---|---|---|
 | Main things-to-do hub | https://familytripwise.com/things-to-do/new-york-city-with-kids.html | Exact measured phrases: 480, 390, and 320/month; variants overlap | Avg position 43.64; 58 impressions | Top 20 first, then Top 10 | `things to do in New York City with kids`; `things to do with kids in New York City`; `fun things to do in New York City with kids` | Indexed; `FT-IMP-014` released and production-verified at commit `1437affd20914a7bf3fbdc5ae0097371d3fb96c1` through Pages run `30172548240`. | Cluster, competition, NYC-P1 through NYC-P5, every prior section, 18 candidates, official claim sources, optimized media, and responsive behavior reviewed under `FT-RES-009` and `SRR-022`; final review `PASS_WITH_P3` with no P0-P2 findings. | No release blocker. Sparse GSC evidence remains directional. | Observe crawl and query-cluster discovery without blocking the next separately authorized NYC page. |
 | Family hotel comparison | https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html | Exact measured phrases: 390, 390, and 260/month; variants overlap | N/A: no post-release GSC page row yet | Top 20 first, then Top 10 | `best family hotels in New York City`; `best hotels in NYC for families`; `family friendly hotels New York City` | Released and production-verified at commit `57d765f4fb488b5f8f077a6cddc9023901b3b4bf` through Pages run `30184040925`. | Hotel SERP, competitor types, NYC-P1/P2/P4/P5, page boundary, and evidence requirements reviewed under `FT-RES-009`; `SRR-023` reviewed 22 candidate properties and retained 12 with official facts, broad prices, bounded review observations, conflicts, freshness, and decisive checks. Kepler returned `PASS_WITH_P3` in cycle 2 with no P0-P2 findings. | No release blocker. Post-release GSC evidence is not available yet. | Observe discovery and query fit without starting another action from this reconciliation. |

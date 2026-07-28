@@ -1753,3 +1753,31 @@ No P0, P1, or P3 findings were reported. Cycle-three validation is required.
 - Authenticated snapshot workflow run `30285029386` then completed successfully and produced mechanical snapshot commit `f6ed25c31dbc9d6d3f409313067c634142e709d8`. GSC had reread the sitemap with 28 discovered pages; URL Inspection covered all 28 URLs and found 18 indexed, ten not indexed, and zero collector-unknown rows. No per-URL indexing request was made.
 - Independent post-snapshot reviewer Feynman returned one P2 wording finding in cycle one: sitemap reread and page crawl/inspection had been conflated in three narrative files.
 - The three claims were corrected to distinguish sitemap discovery from URL Inspection. Cycle two returned `PASS` with no P0-P3 findings after verifying exact counts, state split, timestamps, commit/workflow evidence, gates, privacy, and the five-path scope.
+
+### 2026-07-28 - `FT-OPS-002` repository consistency and freshness review
+
+**Reviewer:** Heisenberg (`019fa8a8-a8b6-7e63-92a2-8a091728d05e`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for two P2 findings: legacy supporting-agent charters still granted independent scheduling/write authority, and the freshness detector missed abbreviated months plus first-party `application/json`. One P3 identified a historical-closure false-positive risk.
+- The correction pass made supporting roles action-bound/read-only, limited GSC writes to the mechanical snapshot exception, added abbreviated-month and map-ready JSON inspection, excluded JSON-LD, and allowed explicitly resolved historical notices.
+- Cycle 2 returned `FAIL` for one remaining P2: the read-only implementation charter still listed write-capable generator commands.
+- The final correction replaced those commands with read-only tests and QA and reserved generator proof for the Master or a disposable checkout.
+- Cycle 3 returned `PASS` with no P0-P3 findings.
+- Focused tests pass 12/12 and the full suite passes 135/135. Content-freshness, operator-state, local and production SEO QA pass with 0 errors and 0 warnings.
+- All 15 public GSC snapshots, July 27 city overlays, roadmap duplicate-key/ID safety, exact declared scope, privacy, Markdown links, byte-stable generation, canonical/indexability/sitemap invariants, one-page public diff, and `git diff --check` pass.
+
+### 2026-07-28 - `FT-OPS-002` post-snapshot reconciliation review
+
+**Reviewer:** Kierkegaard (`019fa8b5-19d8-76a3-8846-42e2798ff2e0`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Mechanical snapshot commit `0e2960541b26d6fcb4cf88d76390e7e33be965c4` arrived on `origin/main` during the required pre-push fetch and was fast-forwarded without overlap.
+- Cycle 1 returned `FAIL` for stale lower current-cycle indexing lists and the stale `docs/research/gsc-monitoring-latest.md` pointer. Both were reconciled to July 28.
+- Cycle 2 returned `FAIL` for one remaining README reference to the July 27 snapshot. It was updated to July 28.
+- Cycle 3 returned `PASS` with no P0-P3 findings.
+- The July 28 snapshot records 1,033 impressions, one click, 28 discovered pages, 20 indexed URLs, and eight not indexed. San Diego and Las Vegas hotel pages are indexed.
+- `FT-EVAL-002` correctly remains evidence-gated and unselected because the San Diego stay page's recorded crawl predates its July revision.
+- Full tests pass 135/135; all 16 public snapshots validate; freshness, operator-state, local and production SEO QA, JSON, privacy, exact-scope, canonical/indexability/sitemap, one-page public diff, and whitespace checks pass.

@@ -9,13 +9,13 @@ Independently review implementations created by the SEO Portfolio Operator. Find
 - Run as a subagent of the implementation operator, with a bounded review task and without editing authority.
 - Review the requirements, repository diff, implementation evidence, and resulting behavior.
 - Do not rely on the implementation agent's conclusion that its work is correct.
-- Do not edit implementation files or silently fix findings.
-- Write only to `ops/operator-review.md`.
+- Do not edit any repository file or silently fix findings.
+- Return the verdict and findings to the project writer. The project writer records the immutable review evidence in `ops/operator-review.md`.
 
 ## Review order
 
 1. Read `AGENTS.md`, `ops/portfolio-operator.md`, and `ops/operator-review.md`.
-2. Identify the newest completed implementation that is not yet reviewed, or a previously reviewed action whose fixes need re-review.
+2. Review only the bounded action ID, frozen requirements, and commit/diff range supplied by the project writer.
 3. Capture `git status --short` and the path-scoped diff without modifying user-owned files.
 4. Check scope and guardrails:
    - declared target paths only;
@@ -28,7 +28,7 @@ Independently review implementations created by the SEO Portfolio Operator. Find
    - mobile layout, accessibility, and console errors when UI exists;
    - SEO metadata/indexing behavior where relevant;
    - security and privacy where relevant.
-6. Record evidence and findings in `ops/operator-review.md`.
+6. Return evidence, findings, and a verdict to the project writer without modifying the checkout.
 
 ## Finding severity
 
@@ -43,7 +43,7 @@ Each finding must include the action ID, file and line when applicable, observed
 
 - `PASS`: no P0-P2 findings.
 - `PASS_WITH_P3`: only non-blocking findings.
-- `CHANGES_REQUIRED`: one or more P1-P2 findings.
-- `BLOCKED`: P0 or review could not be completed with available evidence.
+- `FAIL`: one or more P0-P2 findings.
+- `BLOCKED`: the review could not be completed because required evidence or an external dependency is unavailable.
 
-Return the result and findings to the implementation operator for a fix/re-review loop. If there is no new or fixed implementation to review, leave the log unchanged and report no action. Never edit implementation files, commit, push, deploy, publish, request indexing, send outreach, or mutate external accounts.
+Use `FAIL` for a normal fix/re-review cycle. Reserve `BLOCKED` for an external dependency that prevents a valid review. Return the result and findings to the project writer for at most three review cycles. Never edit repository files, commit, push, deploy, publish, request indexing, send outreach, or mutate external accounts.

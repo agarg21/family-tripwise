@@ -15,7 +15,7 @@ This architecture is appropriate for the present 28-page site. A framework migra
 
 ## Maintainability Direction
 
-The generation layer now carries material scaling debt: the base generator and page upgrader together exceed 4,300 lines, mix destination content with HTML transforms, and rely on exact-string or regular-expression replacement. That remains deterministic and well tested, but it makes parallel city work and future autonomous edits harder to reason about.
+The generation layer now carries material scaling debt: the base generator and page upgrader total 5,711 lines as of July 28, 2026, mix destination content with HTML transforms, and rely on exact-string or regular-expression replacement. That remains deterministic and well tested, but it makes parallel city work and future autonomous edits harder to reason about.
 
 Before several more city revamps, perform a behavior-preserving modularization:
 
@@ -117,7 +117,7 @@ Binary or scored fields should be used only when the evidence genuinely supports
 
 1. Completed: static multi-city pages, internal links, sitemap, and deployment QA.
 2. Completed: activity filtering and a San Diego stay-decision component.
-3. Completed: durable research-based family-hotel evidence and comparison workflow in three cities.
+3. Completed: durable research-based family-hotel evidence and comparison workflow in all five current cities.
 4. Next technical milestone: modularize the deterministic generation layer without changing public output.
 5. Next product milestones remain evidence-triggered: reusable itinerary interaction, weather backup, map export, and lawful refreshable review synthesis.
 

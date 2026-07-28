@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { basename, dirname, join, normalize, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { findExpiredOperationalNotices } from "./content-freshness.mjs";
 
 const rootDir = fileURLToPath(new URL("../", import.meta.url));
 const siteDir = join(rootDir, "site");
@@ -121,6 +122,10 @@ for (const url of sitemapUrls) {
 for (const filePath of htmlFiles) {
   const html = readFileSync(filePath, "utf8");
   const rel = relative(rootDir, filePath);
+
+  for (const notice of findExpiredOperationalNotices(html)) {
+    errors.push(`${rel} has an expired operational notice ending ${notice.endDate}: ${notice.excerpt}`);
+  }
 
   for (const href of extractAttributes(html, "href")) {
     if (!isLocalRelativeLink(href)) continue;

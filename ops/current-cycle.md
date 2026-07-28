@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-27
+Last updated: 2026-07-28
 
 ## Cycle Name
 
@@ -12,11 +12,13 @@ The repository mirror of project state is `ops/seo-roadmap.json`; the central Co
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
+`FT-OPS-002` is review-clean and release-pending after Heisenberg cycle-three `PASS` and Kierkegaard's post-snapshot cycle-three `PASS`, both with no P0-P3 findings. It reconciles repository guidance and dated-content freshness without creating a page, expanding a destination, requesting indexing, or absorbing the separate generator modularization.
+
 ## State Checkpoint
 
-- Latest GSC evidence: `ops/gsc-snapshots/2026-07-27.md`, fresh authenticated API data finalized through 2026-07-25.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-07-28.md`, fresh authenticated API data finalized through 2026-07-26.
 - Latest site release: `FT-IMP-021` at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; Pages run `30237864556` succeeded, the release marker and committed artifact matched production, and action-specific production invariants/SEO QA passed.
-- Active manual action: none. The planned San Antonio all-ages, hotel, stay-area, teen, and itinerary pages are released and production-verified.
+- Active manual action: `FT-OPS-002`, review-clean and release-pending after 135/135 tests, QA at 0 errors/0 warnings, Heisenberg `PASS`, and post-snapshot reviewer Kierkegaard `PASS`.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
@@ -36,7 +38,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 27 snapshot has finalized data through July 25, 982 impressions and 1 click over 28 days, a successful current sitemap read with 28 discovered pages, and 18 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the July 28 snapshot has finalized data through July 26, 1,033 impressions and 1 click over 28 days, a successful current sitemap read with 28 discovered pages, and 20 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; GitHub Pages run `30237864556` succeeded and production verification passed for the San Antonio family itinerary
@@ -164,11 +166,11 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-27.json`, collected through the read-only API with finalized data through July 25; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-28.json`, collected through the read-only API with finalized data through July 26; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-021` released and production-verified at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f` through Pages run `30237864556`; the release marker, exact production artifact, action invariants, and production SEO QA passed. The five-page San Antonio sequence is complete, and no next substantive action is selected in this reconciliation. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-021` released and production-verified at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f` through Pages run `30237864556`; the release marker, exact production artifact, action invariants, and production SEO QA passed. The five-page San Antonio sequence is complete. `FT-OPS-002` is the selected direct-manual repository consistency and freshness action. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -225,13 +227,14 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight on July 27: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-07-27.json`, collected through the authenticated read-only API on July 27 with finalized data through July 25.
+- Current normalized source: `ops/gsc-snapshots/2026-07-28.json`, collected through the authenticated read-only API on July 28 with finalized data through July 26.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.
-- Current URL Inspection summary: 18 of 28 canonical sitemap URLs are indexed; ten are not indexed; zero inspection rows are collector-unknown.
-- Discovered but currently not indexed: the San Diego, Chicago, and New York City family-hotel pages.
-- Unknown to Google: the Las Vegas and San Antonio family-hotel pages, San Diego all-ages and teen activity pages, New York City itinerary and teen pages, and the Chicago teen page.
+- Current URL Inspection summary: 20 of 28 canonical sitemap URLs are indexed; eight are not indexed; zero inspection rows are collector-unknown.
+- Discovered but currently not indexed: the Chicago, New York City, and San Antonio family-hotel pages plus the New York City teen page.
+- Unknown to Google: the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The San Diego and Las Vegas family-hotel pages are indexed as of the July 28 inspection.
 - These are discovery/crawl states, not content-quality verdicts. The San Diego toddler page and San Antonio teen page are indexed.
 - GSC login blocker: none.
 - Per-URL indexing requested: no. The repository policy continues to prohibit the per-URL request action; the existing sitemap was resubmitted under the user's direct approval.

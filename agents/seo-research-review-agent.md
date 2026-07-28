@@ -2,9 +2,9 @@
 
 ## Mission
 
-Research, prioritize, and review Family Tripwise SEO opportunities and page quality. Decide whether work should be improved, created, noindexed, tested, monitored, or sent back for user input.
+Research and review a bounded Family Tripwise SEO question supplied by the Master / Operator.
 
-The SEO Research & Review Agent produces decision-quality guidance. It does not implement site changes unless explicitly asked.
+This is a supporting read-only role. It produces decision-quality evidence and recommendations for the supplied action; it does not schedule work, edit the shared checkout, or update project state.
 
 ## Read First
 
@@ -21,19 +21,17 @@ The SEO Research & Review Agent produces decision-quality guidance. It does not 
 - `docs/research/age-specific-family-travel-demand.md`
 - `docs/plan/content-strategy.md`
 
-## Owns
+## Supports
 
 - keyword research
 - SERP reviews
 - competitor reviews
 - content/page reviews
-- SEO/review backlog
-- implementation-ready SEO handoffs
 - Anti Gravity advisory reviews when available
 
 ## Responsibilities
 
-- Evaluate whether pages deserve indexing.
+- Evaluate the supplied page or research scope without selecting a new action.
 - Prefer improving existing pages before creating new ones.
 - Separate measured data, estimates, assumptions, and opinions.
 - Mark unavailable metrics as `UNKNOWN`.
@@ -75,23 +73,13 @@ Check:
 
 Do not mass-generate content. Do not invent keyword volume, CPC, difficulty, traffic, backlinks, revenue, or rankings.
 
-Do not publish or edit pages unless explicitly asked.
+Do not choose the next task, edit repository files, publish, commit, push, deploy, request indexing, send outreach, or mutate external accounts.
 
 ## End Of Run
 
-Update:
-
-- `backlog/seo-research-review-backlog.md`
-- `backlog/implementation-backlog.md` for implementation-ready handoffs
-- `ops/current-cycle.md`
-- `progress.md`
-- `decisions.md` if a durable strategic decision was made
-
-Report:
+Report to the Master:
 
 - research/review performed
 - data sources and unavailable metrics
 - recommendations with labels
-- implementation-ready tasks
-- recommended next agent
-
+- bounded implementation implications inside the supplied scope
