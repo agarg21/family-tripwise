@@ -8,17 +8,17 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. The five-page San Antonio cluster is complete. New-city research is paused by direct user instruction while current pages accumulate discovery evidence.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. The five-page San Antonio cluster is complete. The user reopened one-city-at-a-time expansion after the generator modularization.
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
-`FT-OPS-002` is review-clean and release-pending after Heisenberg cycle-three `PASS` and Kierkegaard's post-snapshot cycle-three `PASS`, both with no P0-P3 findings. It reconciles repository guidance and dated-content freshness without creating a page, expanding a destination, requesting indexing, or absorbing the separate generator modularization.
+`FT-DEV-004` is completed and review-clean after Noether cycle-two `PASS`. It modularizes static generation without changing public output. `FT-OPS-002` released and production-verified at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0` through Pages run `30359879823`.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-28.md`, fresh authenticated API data finalized through 2026-07-26.
-- Latest site release: `FT-IMP-021` at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f`; Pages run `30237864556` succeeded, the release marker and committed artifact matched production, and action-specific production invariants/SEO QA passed.
-- Active manual action: `FT-OPS-002`, review-clean and release-pending after 135/135 tests, QA at 0 errors/0 warnings, Heisenberg `PASS`, and post-snapshot reviewer Kierkegaard `PASS`.
+- Latest site release: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823` succeeded, and the release marker, production invariant, and production SEO QA passed.
+- Latest manual action: `FT-DEV-004`, completed and review-clean with 137/137 tests and byte-identical public output.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
@@ -170,11 +170,11 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. `FT-IMP-021` released and production-verified at commit `90ed019ea83b1ed242b0e545d3efc9b5215db40f` through Pages run `30237864556`; the release marker, exact production artifact, action invariants, and production SEO QA passed. The five-page San Antonio sequence is complete. `FT-OPS-002` is the selected direct-manual repository consistency and freshness action. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, and behavior-preserving `FT-DEV-004` modularization are complete. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
-- Behavior-preserving generator/upgrader modularization remains a separate technical candidate; it must not be hidden inside an NYC content transaction.
+- Behavior-preserving generator/upgrader modularization is complete as `FT-DEV-004`; future city research and content work remain separate transactions.
 - Later San Antonio hotel refreshes should preserve one page for hotel, resort, lazy-river, pool, room, kitchen, breakfast, and online-review variants unless observed SERP evidence supports a different boundary.
 
 Findings to preserve:
@@ -209,11 +209,11 @@ Useful future user input:
 - Whether to prioritize traffic growth, tool/product prototype, or monetization next.
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for later research cycles; authenticated Chrome remains the current Semrush fallback.
-- When destination expansion should resume; new-city research remains paused until the user explicitly reopens it.
+- Which destination wins the next evidence-based city decision pack after `FT-DEV-004`; expansion is reopened, but no city is preselected.
 
 ## Recommended Next Operator
 
-No substantive action is selected by this reconciliation. Preserve the completed San Antonio cluster and let the Control Room or a future direct user instruction choose the next eligible action from fresh evidence; do not manufacture work from scan cadence.
+Use a separate research transaction to select the next city from fresh evidence; do not inherit a city from the historical candidate list or manufacture work from scan cadence.
 
 ## GSC Monitoring
 
@@ -243,4 +243,4 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 ## Master Notes
 
-Do not research or create more cities until the user explicitly reopens destination expansion.
+Destination expansion is reopened for after `FT-DEV-004`. Select the next city in a separate research transaction from fresh evidence under the incremental city playbook; do not create city pages inside this technical action.

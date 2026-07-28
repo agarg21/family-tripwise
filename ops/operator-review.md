@@ -1781,3 +1781,16 @@ No P0, P1, or P3 findings were reported. Cycle-three validation is required.
 - The July 28 snapshot records 1,033 impressions, one click, 28 discovered pages, 20 indexed URLs, and eight not indexed. San Diego and Las Vegas hotel pages are indexed.
 - `FT-EVAL-002` correctly remains evidence-gated and unselected because the San Diego stay page's recorded crawl predates its July revision.
 - Full tests pass 135/135; all 16 public snapshots validate; freshness, operator-state, local and production SEO QA, JSON, privacy, exact-scope, canonical/indexability/sitemap, one-page public diff, and whitespace checks pass.
+
+### 2026-07-28 - `FT-DEV-004` static generation modularization review
+
+**Reviewer:** Noether (`019fa9ed-e454-7661-a76e-fb7616182ad5`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for one P2: a stale Master Notes sentence still prohibited new-city research even though the user had reopened it for after the refactor.
+- The sentence was corrected to require a separate evidence-based city research transaction after `FT-DEV-004`.
+- Cycle 2 returned `PASS` with no P0-P3 findings.
+- Focused modularization tests pass 2/2 and the full suite passes 137/137. Operator-state, content-freshness, and local SEO QA pass with 0 errors and 0 warnings.
+- The reviewer reconstructed the pre-refactor generator and upgrader sources exactly from the new modules and compatibility entry points. All 38 tracked public files remain byte-identical after repeated full generation.
+- Compatibility, idempotence, isolated-target restoration, duplicate-key-safe roadmap JSON, exact declared scope, privacy, no-`site/**`, and whitespace checks pass.

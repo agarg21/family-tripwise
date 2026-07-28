@@ -10,7 +10,7 @@ San Diego established the first deep-cluster quality bar. Las Vegas and Chicago 
 
 Continue one city at a time. Select the city from fresh GSC discovery, current keyword evidence, observed SERP opportunity, commercial depth, existing-page leverage, and research cost. Produce the city decision pack before deciding which pages to create or improve.
 
-San Diego, Las Vegas, Chicago, New York City, and San Antonio now have completed five-role cluster passes. New-city research is paused by direct user instruction. When it resumes, the next destination must be selected from fresh evidence under the city playbook rather than inherited from the historical candidate list below.
+San Diego, Las Vegas, Chicago, New York City, and San Antonio now have completed five-role cluster passes. The user reopened new-city research for after the behavior-preserving generation refactor. The next destination must be selected from fresh evidence under the city playbook rather than inherited from the historical candidate list below.
 
 Use `docs/plan/seo-cluster-research-protocol.md` before adding or materially changing destination pages. Page decisions should come from keyword validation, SERP-overlap clustering, ranking-page inspection, persona hypotheses, current page audits, and trust/evidence constraints.
 

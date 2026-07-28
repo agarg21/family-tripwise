@@ -462,7 +462,7 @@ Local result:
 
 ### IMP-030: Modularize Static Page Generation Without Output Changes
 
-Status: candidate; separate reviewed transaction required
+Status: done as `FT-DEV-004`; review-clean
 
 Audit source: `FT-OPS-001`
 

@@ -7,7 +7,8 @@ The production site is a dependency-free static site deployed through GitHub Pag
 - generated HTML in `site/`;
 - shared styling in `site/styles.css`;
 - small progressive-enhancement scripts in `site/`;
-- deterministic generation and page upgrades in `tools/generate-pages.mjs` and `tools/upgrade-priority-pages.mjs`;
+- deterministic generation through `tools/generate-pages.mjs` and a compatibility export at `tools/upgrade-priority-pages.mjs`;
+- explicit generation modules under `tools/page-generation/` for city data, family-hotel pages, priority-page data, and upgrade logic;
 - page-specific regression tests plus repository SEO QA in `tools/`;
 - machine-readable operating state in `ops/seo-roadmap.json`.
 
@@ -15,17 +16,16 @@ This architecture is appropriate for the present 28-page site. A framework migra
 
 ## Maintainability Direction
 
-The generation layer now carries material scaling debt: the base generator and page upgrader total 5,711 lines as of July 28, 2026, mix destination content with HTML transforms, and rely on exact-string or regular-expression replacement. That remains deterministic and well tested, but it makes parallel city work and future autonomous edits harder to reason about.
+The July 28 modularization reduced the base generator from 2,610 to about 750 lines and made the old upgrader path a compatibility export. Large destination/page specifications still exist, but they now live apart from orchestration and transform logic:
 
-Before several more city revamps, perform a behavior-preserving modularization:
+- `city-data.mjs`: base destination and age-page specifications;
+- `family-hotel-pages.mjs`: named hotel evidence and page renderers;
+- `upgrade-page-data.mjs`: reviewed priority-page specifications;
+- `upgrade-engine.mjs`: shared priority-page transforms and file updates.
 
-1. Extract shared escaping, schema, block replacement, source-list, and file-write helpers.
-2. Move destination and page specifications into city/page-type modules.
-3. Keep one explicit command that regenerates the complete site deterministically.
-4. Preserve byte-for-byte output during the refactor unless a separately reviewed page change is declared.
-5. Keep focused isolation tests proving a city change cannot mutate unrelated pages.
+Keep `node tools/generate-pages.mjs` as the one complete-site command. Preserve byte-for-byte output unless a separately reviewed page change is declared, and keep focused isolation tests proving that restoring one city target cannot mutate unrelated pages.
 
-Do not combine this refactor with a city content rewrite. Do not adopt a CMS, database, Next.js, Astro, or TypeScript solely to make the repository look more conventional.
+This refactor does not justify a CMS, database, Next.js, Astro, or TypeScript migration. Future cleanup should extract smaller shared render helpers only when a real city change benefits from it and the same byte-stability gate can be maintained.
 
 ## Data Model Draft
 

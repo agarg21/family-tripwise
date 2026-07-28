@@ -21,7 +21,7 @@ The Family Tripwise project operator may update the selected action's repository
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - The protected July 25 page-query export was collected through the encrypted manual workflow and decrypted only into central operator state outside this repository. Its named queries are relevant to the intended family activities, hotels, and stay jobs; it is qualitative early evidence, not a stable rank result.
 - The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on July 28 found 20 indexed and eight not indexed. The San Diego and Las Vegas family-hotel pages are now indexed; Chicago, New York City, and San Antonio family-hotel pages are discovered but not indexed.
-- New-city research is paused by direct user instruction until explicitly reopened.
+- The user reopened new-city research on July 28. Resume one city at a time after `FT-DEV-004`, selecting the destination from fresh evidence under the incremental city playbook.
 
 ## Maintenance cadence
 
@@ -74,19 +74,31 @@ The Family Tripwise project operator may update the selected action's repository
 | 37 | `FT-IMP-019` simplify and improve the San Antonio stay-area guide | Content/product quality | Released and production-verified | Commit `7f54f23`; Pages run `30234700209`; release marker, production artifact, action invariants, and production SEO QA passed. |
 | 38 | `FT-IMP-020` improve the San Antonio teen activity specialist | Content/product quality | Released and production-verified | Commit `e071a60`; Pages run `30236032473`; release marker, production artifact, action invariants, and production SEO QA passed after Franklin `PASS`. |
 | 39 | `FT-IMP-021` review and improve the San Antonio family itinerary | Content/product quality | Completed | Existing itinerary is released and production-verified as a compact one-, two-, and three-day sequencing product. |
-| 40 | `FT-OPS-002` reconcile operating guidance and harden dated-content freshness | Operating model | Review-clean; release pending | Guidance/status alignment and expired-notice QA passed 135/135 tests; Heisenberg and post-snapshot reviewer Kierkegaard returned final `PASS` with no P0-P3 findings. |
+| 40 | `FT-OPS-002` reconcile operating guidance and harden dated-content freshness | Operating model | Released and production-verified | Commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823`; release marker, production invariant, and production SEO QA passed after two independent final `PASS` verdicts. |
+| 41 | `FT-DEV-004` modularize static page generation without output changes | Technical foundation | Completed and review-clean | Compatible entry points now delegate to four explicit modules; 137/137 tests, byte-stable output, isolation proof, and Noether cycle-two `PASS` with no P0-P3 findings. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+
+### FT-DEV-004 - Modularize static page generation without output changes
+
+- Selected: 2026-07-28 by direct manual user instruction.
+- State: completed and review-clean after Noether cycle-two `PASS`.
+- Scope: split city data, family-hotel page specifications, priority-page data, and upgrade logic into explicit modules while keeping `tools/generate-pages.mjs` and `tools/upgrade-priority-pages.mjs` compatible.
+- Boundary: no intentional `site/**` change and no city research or content implementation in this transaction.
+- Acceptance: byte-identical full generation, idempotence, focused target isolation, full native QA, and independent read-only review.
+- Result: all 38 tracked public files remain byte-identical; focused tests pass 2/2, the full suite passes 137/137, and native state/freshness/SEO QA is green.
+- Review: Noether found one stale city-pause sentence in cycle 1; after correction, cycle 2 returned `PASS` with no P0-P3 findings.
+- Product follow-on: the user reopened destination expansion; after this refactor, select the next city from fresh GSC, current keyword/SERP evidence, existing-page leverage, and research cost.
 
 ### FT-OPS-002 - Reconcile operating guidance and harden dated-content freshness
 
 - Selected: 2026-07-28 by direct manual user instruction after a read-only repository audit.
-- State: review-clean and release-pending after Heisenberg and post-snapshot reviewer Kierkegaard each returned final `PASS`.
+- State: released and production-verified at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0` through Pages run `30359879823`.
 - Evidence: fresh authenticated read-only GSC snapshot collected July 28 with finalized performance through July 26; used only for current status overlays.
 - Scope: align current ownership and archive labels, reconcile the five city-status monitoring overlays and stale backlog labels, remove the expired July 21-26 San Diego museum-closure notice, and make native SEO QA reject expired operational notices.
 - Boundary: one existing public page may change only to remove the expired notice and update its visible page date. No new URL, destination research, sitemap/indexing change, external-account mutation, outreach, or recurring automation.
 - QA/review: focused tests 12/12, full suite 135/135, 16 public snapshots valid, content-freshness/operator-state/local and production SEO QA green, exact-scope/privacy/JSON/link/generation checks green; both final independent verdicts are `PASS` with no P0-P3 findings.
-- Separate technical action: `IMP-030` generator/upgrader modularization remains a future behavior-preserving transaction and is not part of this release.
+- Separate technical action: `IMP-030` / `FT-DEV-004` is now the active behavior-preserving transaction.
 
 ### FT-IMP-017 - Review and improve the New York City family itinerary
 
