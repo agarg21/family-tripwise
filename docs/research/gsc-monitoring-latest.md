@@ -1,6 +1,6 @@
 # GSC Monitoring Latest
 
-Last materially updated: 2026-07-28
+Last materially updated: 2026-07-29
 
 This file is a lightweight handoff, not an independently maintained GSC data copy. Read the newest normalized dated snapshot for exact current evidence:
 
@@ -25,7 +25,7 @@ This file is a lightweight handoff, not an independently maintained GSC data cop
 - The San Diego and Las Vegas family-hotel pages are indexed as of the July 28 inspection.
 - The existing sitemap was successfully resubmitted on July 27. GSC subsequently reread the sitemap and now reports 28 discovered pages; no per-URL indexing request was made.
 - Monitor coverage matches all 28 sitemap URLs, with a regression test preventing future silent drift.
-- A protected page-query export for finalized data through July 25 was encrypted in GitHub and decrypted only into central operator state. Named query evidence aligns with the intended family activity, hotel, and stay intents.
+- A protected page-query export aligned to finalized data through July 26 was collected on July 29 through successful GitHub Actions run `30443765836`, encrypted before artifact upload, and decrypted only into central operator state. Complete rows remain outside this repository.
 - GSC login blocker: none.
 - Indexing requested: no.
 

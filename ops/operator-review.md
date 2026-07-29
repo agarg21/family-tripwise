@@ -1805,3 +1805,17 @@ No P0, P1, or P3 findings were reported. Cycle-three validation is required.
 - The correction added query-specific, source-linked activity and family-hotel traces for Miami, Dallas, Nashville, and Washington, DC; reconciled README and current-cycle guidance; added `README.md` to the declared scope; and distinguished product-job overlap from numeric SERP overlap, which remains `UNKNOWN`.
 - Cycle 2 returned `PASS` with no P0-P3 findings. The reviewer confirmed the candidate comparison, Orlando overlap evidence, six persona hypotheses, one-action prioritization, user approval gate, ID ownership, exact paths, privacy, and no-`site/**` production invariant.
 - Full tests pass 137/137. Operator-state and content-freshness QA pass; local SEO QA reports 0 errors and 0 warnings. Duplicate-key-safe roadmap JSON, action/backlog linkage, 82 citation references across 65 unique URLs, source-link checks, privacy, exact scope, no-site, and whitespace QA pass.
+
+### 2026-07-29 - `FT-RES-012` existing-page ranking opportunity review
+
+**Reviewer:** Mendel (`019fad73-e98e-7d01-886c-8321ca819d17`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for three P2 findings: rank-band wording overstated period-average position as individual-impression position, the promoted Atlas action weakened the existing three-task/two-parent human gate, and protected-export/state metadata remained stale.
+- The correction pass made every rank band explicitly row-average-based, restored three representative tasks independently completed by two parents without agent simulation, and reconciled the July 29 protected export and roadmap state.
+- Cycle 2 returned `PASS` with no P0-P3 findings.
+- The reviewer reproduced 237 protected rows across 14 pages, 940 impressions and one click, with 74 impressions attached to rows averaging positions 21-40 and 866 to rows averaging worse than 40.
+- All 28 sitemap URLs appear exactly once in the opportunity map. Crawl evidence reproduces 20 indexed and eight unindexed URLs, with three current crawls, 17 older crawls, and eight URLs without crawls.
+- Full tests pass 137/137; GSC tests pass 16/16; Atlas tests pass 5/5. Operator-state and content-freshness QA pass; local and production SEO QA report 0 errors and 0 warnings.
+- Duplicate-key-safe roadmap JSON, privacy, exact eight-path scope, no-`site/**`, no-workflow, no-indexing-request, no-outreach, and `git diff --check` checks pass.

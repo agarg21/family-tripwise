@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Central SEO Control Room",
-  "last_updated": "2026-07-28",
+  "last_updated": "2026-07-29",
   "last_rescored_on": "2026-07-22",
   "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
@@ -2046,6 +2046,81 @@
       "production_invariant": "Exactly one new canonical/indexable Orlando activity URL and one sitemap entry; no hotel, stay, itinerary, free, toddler, teen, or Disney-specific URL; unrelated public files remain byte-stable except the minimum home route.",
       "gsc_evidence_classification": "The July 28 GSC snapshot is fresh evidence for the existing site but contains no Orlando page because the destination is unpublished. Selection is based on current Semrush, observed SERP overlap, ranking-page usefulness, and product evidence rather than a GSC rank claim.",
       "notes": "Promoted but not selected by FT-RES-011. AGENTS.md requires explicit user approval before a new destination is published. Do not implement from ready state alone. One page only; no hotel research, separate modifier page, indexing request, affiliate CTA, external-account mutation, outreach, booking action, or recurring automation."
+    },
+    {
+      "id": "FT-RES-012",
+      "research_backlog_id": "SRR-035",
+      "title": "Build the existing-page protected GSC ranking opportunity map",
+      "kind": "research",
+      "lane": "content-and-product-quality",
+      "status": "completed",
+      "selected_on": "2026-07-29",
+      "completed_on": "2026-07-29",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "019fad73-e98e-7d01-886c-8321ca819d17"
+      ],
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": true,
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/existing-page-ranking-opportunity-map-2026-07-29.md",
+        "docs/research/gsc-monitoring-latest.md",
+        "backlog/seo-research-review-backlog.md",
+        "ops/needs-user.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A review-clean, public-safe decision pack classifies every canonical/indexable page from fresh page/indexing evidence, protected page-query aggregates, current page role, internal-link support, and authority evidence; distinguishes indexing, relevance, CTR, authority, and insufficient-evidence cases; and promotes exactly one bounded existing-page action or records that none is eligible.",
+      "production_invariant": "Research-only action: no site/**, sitemap, canonical, indexability, Pages workflow, indexing request, outreach, external account beyond the approved read-only protected export workflow, or production behavior changes.",
+      "gsc_evidence_classification": "The July 28 public-safe snapshot is fresh authenticated read-only API evidence collected 2026-07-28 with finalized data through 2026-07-26. The protected page-query export was collected 2026-07-29 through successful GitHub Actions run 30443765836 and aligned to that finalized window; plaintext rows remain outside this repository.",
+      "promoted_action": "FT-AUTH-002",
+      "qa_summary": "Full repository tests pass 137/137; GSC tests pass 16/16; Atlas tests pass 5/5; operator-state and content-freshness QA pass; local and production SEO QA report 0 errors and 0 warnings; duplicate-key-safe roadmap JSON, all-28-page coverage, privacy, exact-path, no-site, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Mendel (019fad73-e98e-7d01-886c-8321ca819d17) returned FAIL in cycle 1 for three P2 findings covering period-average-position precision, the existing three-task/two-parent human gate, and stale protected-export/state metadata. After correction, cycle 2 returned PASS with no P0-P3 findings.",
+      "result": "Classified all 28 canonical/indexable pages. The protected export contains 940 impressions across 14 pages: no exported page-query row has a period-average position of 20 or better; 74 impressions are attached to rows averaging positions 21-40 and 866 to rows averaging worse than 40. Eight pages are not indexed, almost every query-bearing page has not been crawled since its latest reviewed release, and no CTR or clean page-rewrite action is eligible. Promoted one authority evidence/build action for the existing San Diego Reset Atlas.",
+      "notes": "Selected by direct manual user instruction to prioritize ranking existing pages before broad city expansion. Research only. Orlando publication FT-PUB-006 remains separately user-gated. Do not expose complete query rows, country/device dimensions, credentials, or user data; do not request indexing, edit site content, send outreach, or create recurring automation."
+    },
+    {
+      "id": "FT-AUTH-002",
+      "research_backlog_id": "SRR-036",
+      "title": "Complete the real-record and parent-test evidence for the San Diego Family Reset Atlas",
+      "kind": "research",
+      "lane": "authority-and-product-evidence",
+      "status": "ready",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 4,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-reset-atlas-publication-evidence.md",
+        "docs/research/san-diego-reset-atlas-source-license-audit.md",
+        "src/prototypes/san-diego-family-reset-atlas/",
+        "backlog/seo-research-review-backlog.md",
+        "ops/needs-user.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A review-clean, real-record candidate outside site/** covers the exact 13 audited San Diego anchors with at least 30 useful source-backed reset/constraint records, validates provenance, freshness, confidence, human-review and license state, and prepares three representative planning tasks for independent completion by two parents without simulating their evidence or publishing the asset.",
+      "production_invariant": "No site/**, sitemap, canonical, indexability, Pages workflow, deployment, indexing request, outreach, prospect contact, external-account mutation, user-data collection, or production behavior change.",
+      "gsc_evidence_classification": "Promoted by FT-RES-012 from fresh page/indexing and protected query evidence. The action is authority/product evidence work rather than a GSC performance experiment and makes no ranking or backlink promise.",
+      "result": "Pending separate selection.",
+      "notes": "Use the completed FT-AUTH-001 plan, FT-RES-003 source/license audit, and FT-DEV-003 prototype. Preserve the exact 13-anchor scope. Unsupported route, stroller, sensory, quiet, safety, caregiver-facility, and family-suitability conclusions remain UNKNOWN. Prepare but do not simulate the required parent tests. Stop before publication or outreach."
     }
   ]
 }

@@ -1,8 +1,53 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-28
+Last updated: 2026-07-29
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before substantive work.
+
+## Current Ranking Opportunity Research
+
+### SRR-035: Existing-Page Protected GSC Ranking Opportunity Map
+
+Status: complete and review-clean as `FT-RES-012`
+
+Selected: 2026-07-29
+
+Use the current public-safe GSC page and URL Inspection evidence plus a protected page-query export to classify every canonical/indexable page as indexing-first, insufficient-evidence, query-refinement, CTR/snippet, or authority-led. Score opportunities without exposing complete query rows, promote exactly one bounded existing-page follow-on if evidence supports it, and keep the Orlando publication separately user-gated.
+
+Boundaries:
+
+- Research only; do not edit `site/**`, publish a page, alter the sitemap, request indexing, deploy, or mutate a search account.
+- Plaintext page-query rows remain outside the public repository. Commit only aggregated, thresholded, public-safe conclusions.
+- Page-level average position is not a query rank. Do not treat tiny impression samples or broad averages as stable opportunities.
+- Do not rewrite a page merely because it is old, newly crawled, or below an arbitrary position threshold.
+- Distinguish indexing/discovery, query relevance, snippet/CTR, authority, and product-usefulness problems.
+- Promote exactly one existing-page action or record that no page is yet eligible.
+
+Result:
+
+- Classified all 28 canonical/indexable pages from fresh page/inspection evidence, protected page-query aggregates, crawl-versus-release state, current role, internal links, and authority evidence.
+- The protected export contains 940 impressions: no exported page-query row has a period-average position of 20 or better; 74 impressions are attached to rows averaging positions 21-40 and 866 to rows averaging worse than 40.
+- Eight pages are not indexed, and almost every page with query evidence has not been crawled since its latest reviewed release.
+- Found transitional hotel/area and activity/itinerary role collisions that should be rechecked after sibling indexing rather than edited immediately.
+- Found no CTR candidate and no clean existing-page content-rewrite winner.
+- Identified Las Vegas all-ages activities as the strongest aligned page to watch, but not to rewrite before a current crawl.
+- Promoted only `FT-AUTH-002` / `SRR-036` to complete the real-record and parent-test evidence for the existing San Diego Reset Atlas; publication and outreach remain gated.
+- Artifact: `docs/research/existing-page-ranking-opportunity-map-2026-07-29.md`.
+- Review: Mendel cycle one returned `FAIL` for three P2 precision/state findings. After correction, cycle two returned `PASS` with no P0-P3 findings.
+
+### SRR-036: San Diego Family Reset Atlas Real-Record And Parent-Test Evidence
+
+Status: ready for separate selection as `FT-AUTH-002`
+
+Use the completed `FT-AUTH-001` plan, `FT-RES-003` source/license audit, and `FT-DEV-003` prototype to build a public-safe real-record candidate for the existing San Diego all-ages hub.
+
+Boundaries:
+
+- Preserve the exact 13-anchor scope and build at least 30 useful source-backed candidate records.
+- Keep every unsupported route, stroller, sensory, quiet, safety, caregiver-facility, and family-suitability conclusion `UNKNOWN`.
+- Prepare three representative planning tasks for independent completion by two parents, but do not simulate the required human evidence.
+- Keep the candidate outside `site/**`; do not publish, deploy, request indexing, send outreach, contact a prospect, mutate an external account, or create recurring automation.
+- A later publication decision requires complete evidence, human gates, native QA, independent review, and separately authorized release scope.
 
 ## Current Next-City Research
 

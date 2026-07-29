@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-28
+Last updated: 2026-07-29
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -19,7 +19,7 @@ The Family Tripwise project operator may update the selected action's repository
 - Classification on July 28: fresh authenticated read-only Search Console API evidence, collected July 28 with finalized performance data through July 26.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
-- The protected July 25 page-query export was collected through the encrypted manual workflow and decrypted only into central operator state outside this repository. Its named queries are relevant to the intended family activities, hotels, and stay jobs; it is qualitative early evidence, not a stable rank result.
+- The protected July 29 page-query export is aligned to finalized data through July 26, was encrypted in successful GitHub Actions run `30443765836`, and was decrypted only into central operator state outside this repository. It contains 237 rows across 14 pages and 940 impressions; no exported row has a period-average position of 20 or better. Complete rows remain outside this repository.
 - The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on July 28 found 20 indexed and eight not indexed. The San Diego and Las Vegas family-hotel pages are now indexed; Chicago, New York City, and San Antonio family-hotel pages are discovered but not indexed.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 
@@ -78,8 +78,36 @@ The Family Tripwise project operator may update the selected action's repository
 | 41 | `FT-DEV-004` modularize static page generation without output changes | Technical foundation | Completed and review-clean | Compatible entry points now delegate to four explicit modules; 137/137 tests, byte-stable output, isolation proof, and Noether cycle-two `PASS` with no P0-P3 findings. |
 | 42 | `FT-RES-011` select and research the next family destination cluster | Content/product quality | Completed and review-clean | Orlando selected from current Semrush, observed SERP overlap, ranking-page usefulness, cluster depth, family constraints, and research cost; Pasteur cycle-two `PASS` with no P0-P3; one user-gated action promoted. |
 | 43 | `FT-PUB-006` research and publish the Orlando all-ages family activity hub | Content/product quality | Ready pending user approval | One new destination URL only; `AGENTS.md` requires explicit approval before selection or implementation. |
+| 44 | `FT-RES-012` build the existing-page protected GSC ranking opportunity map | Content/product quality | Completed and review-clean | No current page rewrite or CTR winner; eight pages are not indexed, current crawls lag releases, no exported page-query row averages position 20 or better, and authority is the dominant next lane. |
+| 45 | `FT-AUTH-002` complete San Diego Reset Atlas real-record and parent-test evidence | Authority | Ready for separate selection | Build a source-backed real-record candidate outside `site/**`; prepare human usability tasks; stop before publication or outreach. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+
+### FT-RES-012 - Build the existing-page protected GSC ranking opportunity map
+
+- Selected: 2026-07-29 by direct manual user instruction.
+- State: completed and review-clean.
+- Scope: use the latest public-safe GSC snapshot, URL Inspection, protected page-query evidence, internal-link support, current page roles, and authority evidence to classify every existing canonical/indexable page.
+- Privacy boundary: complete query rows remain outside this public repository; only aggregated, thresholded, public-safe conclusions may be committed.
+- Decision boundary: separate indexing-first, insufficient-evidence, query-refinement, CTR/snippet, authority-led, and keep/observe cases. Page-level average position is not a query rank.
+- Publication boundary: research only; no `site/**`, sitemap, indexing request, deploy, external-account change beyond the approved read-only export workflow, outreach, or recurring automation.
+- Success: promote exactly one bounded existing-page follow-on if the evidence supports one; otherwise record that no page is eligible.
+
+- Result: all 28 pages classified. The protected export contains 940 impressions: no exported page-query row has a period-average position of 20 or better; 74 impressions are attached to rows averaging positions 21-40 and 866 to rows averaging worse than 40. No CTR or clean page-rewrite action is eligible.
+- Crawl result: eight URLs are not indexed, and almost every page with query evidence was last crawled before its current reviewed release.
+- Role result: hotel intent currently lands on several stay-area pages while newer hotel siblings are unindexed or newly crawled; NYC itinerary intent spills into all-ages while the itinerary is unknown.
+- Authority result: current central evidence reports Authority Score 0, three spam referring domains, and zero follow links.
+- Promoted action: `FT-AUTH-002` / `SRR-036`, ready for separate selection; no publication or outreach authority is implied.
+- QA/review: full repository tests pass 137/137; GSC tests pass 16/16; Atlas tests pass 5/5; operator-state, content-freshness, duplicate-key-safe JSON, local and production SEO QA, privacy, exact-scope, no-site, and whitespace checks pass. Mendel returned `FAIL` for three P2 precision/state findings in cycle one; after correction, cycle two returned `PASS` with no P0-P3 findings.
+
+### FT-AUTH-002 - Complete San Diego Reset Atlas real-record and parent-test evidence
+
+- State: ready for separate selection; not selected.
+- Basis: `FT-AUTH-001`, `FT-RES-003`, and `FT-DEV-003` already provide a review-clean asset plan, 13-anchor source/license audit, and accessible synthetic prototype.
+- Scope: build at least 30 real source-backed candidate records for the exact 13 anchors, preserve provenance/freshness/confidence/human-review/license fields, and prepare three representative planning tasks for independent completion by two parents.
+- Trust boundary: unsupported route, stroller, sensory, quiet, safety, caregiver-facility, and family-suitability conclusions remain `UNKNOWN`.
+- Publication boundary: keep outside `site/**`; no deploy, indexing request, outreach, prospect contact, external-account mutation, or recurring automation.
+- Stop rule: do not promote publication unless source coverage, licensing, trust boundaries, deterministic validation, accessibility, and real parent usability gates pass.
 
 ### FT-RES-011 - Select and research the next family destination cluster
 
