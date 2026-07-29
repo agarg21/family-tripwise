@@ -12,15 +12,15 @@ The repository mirror of project state is `ops/seo-roadmap.json`; the central Co
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
-`FT-RES-012` is complete and review-clean. It found no current page-rewrite or CTR winner: eight pages are not indexed, nearly every query-bearing page has an older crawl than its current release, and no exported page-query row has a period-average position of 20 or better. It promoted only `FT-AUTH-002`, a separately selectable evidence/build action for the existing San Diego Reset Atlas. `FT-PUB-006` remains unselected and user-gated.
+`FT-RES-012` and its selected follow-on `FT-AUTH-002` are complete and review-clean. The Reset Atlas now has a 39-record, 13-anchor unpublished candidate and a three-task parent-test protocol. After two correction cycles, Wegener returned cycle-three `PASS` with no P0-P3 findings. Real Parent A and Parent B testing remains a future human gate; `FT-PUB-006` remains unselected and user-gated.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-28.md`, fresh authenticated API data finalized through 2026-07-26.
 - Latest site release: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823` succeeded, and the release marker, production invariant, and production SEO QA passed.
 - Active manual action: none.
-- Latest completed manual action: `FT-RES-012`, completed and review-clean after Mendel cycle-two `PASS` with no P0-P3 findings.
-- Promoted authority action: `FT-AUTH-002`, ready for separate selection; not selected.
+- Latest completed manual action: `FT-AUTH-002`, completed and review-clean after Wegener cycle-three `PASS` with no P0-P3 findings.
+- Promoted authority action: `FT-AUTH-002`, completed and review-clean; real parent testing remains a user-gated future step.
 - Promoted expansion action: `FT-PUB-006`, ready pending explicit user approval; not selected.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
@@ -173,7 +173,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, `FT-DEV-004`, and `FT-RES-011` are complete. `FT-RES-012` has completed research and awaits independent review. It promoted `FT-AUTH-002` as a separately selectable authority-evidence action; `FT-PUB-006` remains the separately user-gated expansion action. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, and `FT-AUTH-002` are complete and review-clean. `FT-PUB-006` remains the separately user-gated expansion action. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -216,7 +216,7 @@ Useful future user input:
 
 ## Recommended Next Operator
 
-Complete independent review and closure for `FT-RES-012`. After that, `FT-AUTH-002` is ready for separate selection but is not selected by the ranking-map transaction; `FT-PUB-006` still requires explicit new-destination approval.
+No agent-substantive action is selected. The next Atlas step is the user-gated real Parent A and Parent B protocol; agents must not simulate it. `FT-PUB-006` still requires explicit new-destination approval.
 
 ## GSC Monitoring
 

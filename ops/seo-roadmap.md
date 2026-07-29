@@ -79,7 +79,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 42 | `FT-RES-011` select and research the next family destination cluster | Content/product quality | Completed and review-clean | Orlando selected from current Semrush, observed SERP overlap, ranking-page usefulness, cluster depth, family constraints, and research cost; Pasteur cycle-two `PASS` with no P0-P3; one user-gated action promoted. |
 | 43 | `FT-PUB-006` research and publish the Orlando all-ages family activity hub | Content/product quality | Ready pending user approval | One new destination URL only; `AGENTS.md` requires explicit approval before selection or implementation. |
 | 44 | `FT-RES-012` build the existing-page protected GSC ranking opportunity map | Content/product quality | Completed and review-clean | No current page rewrite or CTR winner; eight pages are not indexed, current crawls lag releases, no exported page-query row averages position 20 or better, and authority is the dominant next lane. |
-| 45 | `FT-AUTH-002` complete San Diego Reset Atlas real-record and parent-test evidence | Authority | Ready for separate selection | Build a source-backed real-record candidate outside `site/**`; prepare human usability tasks; stop before publication or outreach. |
+| 45 | `FT-AUTH-002` complete San Diego Reset Atlas real-record and parent-test evidence | Authority | Completed and review-clean | 39 internal records cover all 13 anchors; all coordinates and 273 trust states remain `UNKNOWN`; three parent tasks are prepared but not simulated; Wegener cycle-three `PASS`. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -97,17 +97,27 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Crawl result: eight URLs are not indexed, and almost every page with query evidence was last crawled before its current reviewed release.
 - Role result: hotel intent currently lands on several stay-area pages while newer hotel siblings are unindexed or newly crawled; NYC itinerary intent spills into all-ages while the itinerary is unknown.
 - Authority result: current central evidence reports Authority Score 0, three spam referring domains, and zero follow links.
-- Promoted action: `FT-AUTH-002` / `SRR-036`, ready for separate selection; no publication or outreach authority is implied.
+- Promoted action at `FT-RES-012` completion: `FT-AUTH-002` / `SRR-036`; it was later selected by direct user instruction. No publication or outreach authority is implied.
 - QA/review: full repository tests pass 137/137; GSC tests pass 16/16; Atlas tests pass 5/5; operator-state, content-freshness, duplicate-key-safe JSON, local and production SEO QA, privacy, exact-scope, no-site, and whitespace checks pass. Mendel returned `FAIL` for three P2 precision/state findings in cycle one; after correction, cycle two returned `PASS` with no P0-P3 findings.
 
 ### FT-AUTH-002 - Complete San Diego Reset Atlas real-record and parent-test evidence
 
-- State: ready for separate selection; not selected.
+- Selected: 2026-07-29 by direct manual user instruction.
+- State: completed and review-clean on 2026-07-29.
 - Basis: `FT-AUTH-001`, `FT-RES-003`, and `FT-DEV-003` already provide a review-clean asset plan, 13-anchor source/license audit, and accessible synthetic prototype.
 - Scope: build at least 30 real source-backed candidate records for the exact 13 anchors, preserve provenance/freshness/confidence/human-review/license fields, and prepare three representative planning tasks for independent completion by two parents.
 - Trust boundary: unsupported route, stroller, sensory, quiet, safety, caregiver-facility, and family-suitability conclusions remain `UNKNOWN`.
 - Publication boundary: keep outside `site/**`; no deploy, indexing request, outreach, prospect contact, external-account mutation, or recurring automation.
 - Stop rule: do not promote publication unless source coverage, licensing, trust boundaries, deterministic validation, accessibility, and real parent usability gates pass.
+- Candidate result: 39 original-paraphrase records provide exactly 3 records for each of the 13 anchors and cite 19 current official first-party or government URLs.
+- State result: all 39 coordinate pairs are null and `UNKNOWN`; all 273 trust-sensitive states are `UNKNOWN`; all 39 records are `internal-research-only`.
+- Human gate: three representative planning tasks are ready for separate completion by Parent A and Parent B. No agent test result exists or counts as parent evidence.
+- Release result: no `site/**`, sitemap, deployment, indexing, outreach, account, public download, or recurring-automation change.
+- Evidence: `docs/research/san-diego-reset-atlas-publication-evidence.md`, refreshed source/reuse audit, and the `noindex` prototype.
+- Review cycle one: Wegener returned `FAIL` with four P2 findings. Corrections add the exact Fleet Accessibility Mornings source, field-specific durable human-review evidence, structured-reuse evidence, coordinate bounds and provenance enforcement, adversarial tests, and current-state reconciliation.
+- Review cycle two: Wegener returned `FAIL` with two P2 findings and one P3. Final corrections add an intentionally empty approved-evidence registry, exact repository-heading reference checks, agent/simulation and placeholder rejection, exact calendar validation, and complete singular labels.
+- Final correction QA: 137/137 native tests and 10/10 Atlas tests pass; content freshness and operator-state QA pass; local and production SEO QA report 0 errors and 0 warnings; 19/19 sources return HTTP 200; browser checks at 1440/390/320, privacy, duplicate-key, exact-scope, no-production-path, and whitespace checks pass.
+- Review cycle three: Wegener (`019fadac-19df-7ec1-ad4f-6028526cefe0`) returned `PASS` with no P0-P3 findings across the complete 15-path diff.
 
 ### FT-RES-011 - Select and research the next family destination cluster
 

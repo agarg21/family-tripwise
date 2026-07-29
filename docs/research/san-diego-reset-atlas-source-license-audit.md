@@ -1,12 +1,28 @@
 # San Diego Family Reset Atlas: Source and Reuse Audit
 
-Action: `FT-RES-003`
+Actions: `FT-RES-003`, refreshed by `FT-AUTH-002`
 
-Audited: 2026-07-16
+Audited: 2026-07-16; candidate boundary refreshed 2026-07-29
 
 State: research evidence only; no live record, downloadable dataset, outreach, or permission request
 
-## Decision
+## FT-AUTH-002 Internal Candidate Update
+
+The historical `FT-RES-003` audit below cleared an unpublished prototype only with synthetic fixtures. `FT-AUTH-002` has now taken the next narrower step: 39 short, original-paraphrase, source-backed records exist as an internal candidate across the same 13 anchors.
+
+- The candidate cites 19 official first-party or government URLs checked 2026-07-29; all 19 returned HTTP 200 in a same-day reachability check.
+- All 39 records are `internal-research-only`; no structured-redistribution right is claimed.
+- All 39 coordinate pairs are null with state `UNKNOWN`.
+- All 273 trust-sensitive states remain `UNKNOWN`.
+- The separate approved-evidence registry is empty, so the validator cannot accept `human-reviewed`, `cleared-data`, or `verified-source` states in this candidate.
+- No source prose, media, maps, icons, or downloadable source file was copied.
+- No public download, live page, sitemap entry, deployment, indexing request, outreach, or account mutation was created.
+
+The two City Open Data park anchors identified in the original audit were not ingested in this action. Publishing a mixed map with verified geometry for only two anchors could imply completeness that the evidence does not support. Exact geometry and terms can be reconsidered only in a later release-specific action.
+
+The rights conclusion is unchanged: current official pages can support attributed internal research and short original paraphrases, but this audit does not clear a public or downloadable structured dataset. See `docs/research/san-diego-reset-atlas-publication-evidence.md` for the candidate ledger and required two-parent test.
+
+## Historical FT-RES-003 Decision
 
 Official first-party or government evidence is available for all 13 candidate anchors. That clears the coverage threshold for an unpublished schema and interaction prototype, but it does **not** clear a real downloadable atlas dataset for release.
 
@@ -15,7 +31,7 @@ Official first-party or government evidence is available for all 13 candidate an
 - `11/13` anchors rely only on ordinary official web pages whose structured-redistribution rights are not stated on the cited page. Those facts may be researched and attributed, but real downloadable records remain `UNKNOWN` until a release-specific rights review.
 - All route practicality, stroller ease, sensory/quiet suitability, family-facility availability, safety, and material family-fit conclusions remain human-gated. An official accessibility or amenity statement does not establish convenience or suitability for a particular family.
 
-Proceed with `FT-DEV-003` using synthetic fixtures only. Do not ingest the official pages into a downloadable dataset, reproduce maps or source prose, or publish real anchor records from this audit.
+At the time of `FT-RES-003`, the next approved step was `FT-DEV-003` using synthetic fixtures only. That historical decision did not authorize public real records, a downloadable dataset, reproduced maps, or copied source prose. `FT-AUTH-002` later authorized only the internal, original-paraphrase candidate described above.
 
 ## Audit rules
 
@@ -34,7 +50,7 @@ Every future real record must retain source owner, canonical source URL, checked
 | # | Anchor | Official source coverage and freshness | Reuse / attribution decision | Human-review and release gap |
 |---:|---|---|---|---|
 | 1 | San Diego Zoo | [Guest accessibility](https://zoo.sandiegozoo.org/visit/guests-with-disabilities) explicitly describes accessibility services and terrain considerations. Page checked 2026-07-16; page-level update date `UNKNOWN`. | `LIMITED-RESEARCH`; credit San Diego Zoo Wildlife Alliance and link the checked page. Structured redistribution, page text, images, and maps: `UNKNOWN`. | Human review is required for route steepness, stroller friction, quiet/sensory conditions, service availability, and any family-fit statement. Recheck current services before release. |
-| 2 | Fleet Science Center | [Visit](https://www.fleetscience.org/visit-fleet-science-center) and [accessibility](https://www.fleetscience.org/accessibility) pages provide current visitor and accessibility information, including `Accessibility Mornings`, which the source describes as a sensory-friendly experience. Checked 2026-07-16; update dates `UNKNOWN`. | `LIMITED-RESEARCH`; credit Fleet Science Center and cite the exact page. Program details, page text, media, and structured redistribution: `UNKNOWN`. | A scheduled sensory-friendly program is not proof that a specific visit is quiet or low-stimulation. Human review must verify date, capacity, sensory conditions, and family-specific usefulness. |
+| 2 | Fleet Science Center | [Visit](https://www.fleetscience.org/visit-fleet-science-center), [accessibility](https://www.fleetscience.org/accessibility), and the exact [Accessibility Mornings](https://www.fleetscience.org/events/accessibility-mornings) page provide current visitor, access-feature, and program details. Original pages checked 2026-07-16; exact program source added and checked 2026-07-29; update dates `UNKNOWN`. | `LIMITED-RESEARCH`; credit Fleet Science Center and cite the exact page for each fact. Program details, page text, media, and structured redistribution: `UNKNOWN`. | A scheduled program is not proof that a specific visit is quiet or low-stimulation. Human review must verify date, capacity, sensory conditions, and family-specific usefulness. |
 | 3 | The Nat | [Accessibility](https://www.sdnhm.org/visit/accessibility/) documents venue access features. Checked 2026-07-16; update date `UNKNOWN`. | `LIMITED-RESEARCH`; credit San Diego Natural History Museum and cite the page. Structured reuse and media rights: `UNKNOWN`. | Human review is required for actual routes, elevators, quiet areas, crowding, stroller handling, and sensory or family-suitability claims. |
 | 4 | Central Prado / Balboa Park | The City [Balboa Park page](https://www.sandiego.gov/park-and-recreation/parks/regional/balboa) and [facilities page](https://www.sandiego.gov/park-and-recreation/parks/regional/balboa/facilities/facilities) establish official park/facility context. Checked 2026-07-16; page update dates `UNKNOWN`. | `LIMITED-RESEARCH` for webpage facts. City-authored prose, facility maps, PDFs, and images are not cleared by this audit. Attribute the City and link the exact page. | Verify route grade, surface, shade, tram operation, restroom/facility availability, crowding, and reset suitability. Do not infer stroller ease from general accessibility. |
 | 5 | New Children's Museum | [Visit](https://thinkplaycreate.org/visit/) and [access programs](https://thinkplaycreate.org/visit/access-programs/) provide first-party operating and access-program information. Checked 2026-07-16; update dates `UNKNOWN`. | `LIMITED-RESEARCH`; credit The New Children's Museum and cite the exact page. Program text, media, floor plans, and structured reuse: `UNKNOWN`. | Human review must verify current program availability, sensory/quiet conditions, caregiver facilities, accessibility routes, and family fit. Missing facts remain `UNKNOWN`. |
@@ -71,15 +87,16 @@ Manual research may record a short original paraphrase and citation for internal
 | Human review of trust-sensitive fields | `NOT STARTED` | Keep firm access, route, stroller, sensory, safety, caregiver-facility, and family-fit claims out of the live site. |
 | Publication / outreach authorization | `NOT REQUESTED` | No publishing, prospect contact, permission request, contributed content, or external-account action. |
 
-## Next bounded action
+## Next Bounded Action
 
-`FT-DEV-003` may build the unpublished, `noindex` schema/validator and accessible map/filter shell under `src/prototypes/san-diego-family-reset-atlas/` with synthetic fixtures. Synthetic fixtures must be visibly labeled, use no source-derived coordinates or venue claims, store no user input, and keep every real-data/import/publish path disabled.
+`FT-AUTH-002` now provides the unpublished, `noindex` 39-record candidate under `src/prototypes/san-diego-family-reset-atlas/`. It uses no source-derived coordinates, stores no user input, and keeps every public download, publish, and outreach path disabled.
 
-Before any real-record release, a later action must define the exact intended fields per anchor, complete record-level terms review, capture durable human review for every firm trust-sensitive field, and pass the asset plan's user-testing and release gates.
+The next eligible product-evidence action is human, not agent-simulated: two parents must independently complete the same three tasks in `docs/research/san-diego-reset-atlas-publication-evidence.md`. Before any real-record release, a later action must also complete release-specific record and terms review, capture durable human review for every firm trust-sensitive field, add a public methodology/corrections/changelog surface, and pass a separately authorized release gate.
 
 ## Public-safety log
 
 - Research used public official pages only; no credentials, private contacts, raw GSC data, country/device rows, or non-allowlisted Search Console URLs were collected.
-- No source prose, map, image, PDF, or venue dataset was copied into the repository.
+- The original audit copied no source prose, map, image, PDF, or venue dataset. The 2026-07-29 candidate adds only short original paraphrases with source links and explicit internal-only reuse notes.
 - No outreach, permission request, indexing request, account mutation, site edit, sitemap change, deployment, or publication occurred.
 - Public-network availability is evidence only for this check. A future network failure is `UNKNOWN`, not a verified source or production defect.
+- The 2026-07-29 candidate check reached all 19 cited URLs with HTTP 200. Reachability does not establish factual freshness, service availability, experience quality, or reuse permission.

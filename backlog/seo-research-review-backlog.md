@@ -37,7 +37,9 @@ Result:
 
 ### SRR-036: San Diego Family Reset Atlas Real-Record And Parent-Test Evidence
 
-Status: ready for separate selection as `FT-AUTH-002`
+Status: complete and review-clean as `FT-AUTH-002`
+
+Selected: 2026-07-29 by direct manual user instruction
 
 Use the completed `FT-AUTH-001` plan, `FT-RES-003` source/license audit, and `FT-DEV-003` prototype to build a public-safe real-record candidate for the existing San Diego all-ages hub.
 
@@ -48,6 +50,20 @@ Boundaries:
 - Prepare three representative planning tasks for independent completion by two parents, but do not simulate the required human evidence.
 - Keep the candidate outside `site/**`; do not publish, deploy, request indexing, send outreach, contact a prospect, mutate an external account, or create recurring automation.
 - A later publication decision requires complete evidence, human gates, native QA, independent review, and separately authorized release scope.
+
+Candidate result:
+
+- Built 39 source-backed internal records, exactly 3 for each of the 13 audited anchors, from 19 current official first-party or government URLs.
+- Preserved source owner, URL, freshness, evidence class, confidence, human-review state, operational caveat, and reuse state on every record.
+- Kept all 39 coordinate pairs and all 273 trust-sensitive field states `UNKNOWN`; all records are `internal-research-only`.
+- Prepared three representative tasks for separate completion by Parent A and Parent B. No agent result was created or counted as human evidence.
+- Kept the product `noindex` and outside `site/**`; no public dataset, site change, deployment, indexing request, outreach, prospect contact, external-account mutation, or recurring automation occurred.
+- Artifacts: `docs/research/san-diego-reset-atlas-publication-evidence.md`, refreshed `docs/research/san-diego-reset-atlas-source-license-audit.md`, and `src/prototypes/san-diego-family-reset-atlas/`.
+- Review cycle one: Wegener returned `FAIL` with four P2 findings covering one indirect Fleet source, self-attestable human-review and reuse states, unenforced coordinate provenance, and stale cycle text. The correction adds the exact Fleet source, durable field-specific human-review and reuse evidence contracts, coordinate bounds/provenance requirements, adversarial tests, and reconciled state.
+- Review cycle two: Wegener returned `FAIL` with two P2 findings and one P3 covering unverified evidence-reference strings, impossible normalized dates, and incomplete singular labels. The correction uses an intentionally empty approved-evidence registry, exact repository-heading references, agent/simulation and placeholder rejection, exact calendar validation, and complete singular labels.
+- Final correction QA: 137/137 native tests and 10/10 Atlas tests pass; content freshness and operator-state QA pass; local and production SEO QA report 0 errors and 0 warnings; 19/19 sources return HTTP 200; browser, privacy, duplicate-key, exact-scope, no-production-path, and whitespace checks pass.
+- Review cycle three: Wegener returned `PASS` with no P0-P3 findings after independently rejecting all prior bypasses and confirming the complete 15-path scope.
+- Final state: complete and review-clean. Publication remains blocked by real parent testing, trust-sensitive human review, structured-reuse clearance, and a separately authorized release action.
 
 ## Current Next-City Research
 
