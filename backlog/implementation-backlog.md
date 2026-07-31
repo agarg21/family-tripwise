@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-042: Add A Source-Dated San Diego Family Attraction Logistics Index
 
-Status: ready only after explicit user approval; not selected
+Status: review-clean 2026-07-31; exact-path release pending
 
 Roadmap ID: `FT-AUTH-005`
 
@@ -20,12 +20,14 @@ Target:
 
 Improve the existing all-ages page in place. Use only its 12 current activity choices to create one validated source-dated logistics dataset, one compact responsive table, and one client-side CSV or JSON download generated from the page's embedded data. Create no separate data URL, and consolidate overlapping comparison material so the page does not become longer or more cluttered.
 
-Likely implementation scope, to be narrowed before selection:
+Exact implementation scope:
 
 - `docs/research/san-diego-attraction-logistics-evidence.md`
-- one source record under `tools/page-generation/` or the existing San Diego generator data
-- one embedded validated record source that renders the table and generates the download in the browser
-- the existing San Diego all-ages page generator and focused tests
+- `tools/page-generation/upgrade-page-data.mjs`
+- `tools/page-generation/upgrade-engine.mjs`
+- `tools/san-diego-cluster-router-page.test.mjs`
+- `tools/san-diego-attraction-logistics.test.mjs`
+- `site/styles.css`
 - `site/things-to-do/san-diego-with-kids.html`
 - `status/san-diego-pages.md`
 - `backlog/implementation-backlog.md`
@@ -34,6 +36,13 @@ Likely implementation scope, to be narrowed before selection:
 - `ops/seo-roadmap.md`
 - `ops/current-cycle.md`
 - `ops/operator-review.md`
+
+Implementation result:
+
+- The old 11-column comparison layer is replaced by one eight-column logistics index generated from exactly 12 source-dated records.
+- The visible table, embedded JSON, client-side CSV, and `ItemList` names derive from the same record array.
+- Fresh GSC, public preflight, canonical, robots, sitemap, and internal-link checks found no technical exclusion on either the all-ages or teen URL. The teen page remains unchanged; discovery/authority remains the observed limitation.
+- After cycle-one remediation, focused tests pass 10/10 and the full repository passes 142/142. Operator-state QA, duplicate-key-safe roadmap JSON, local SEO QA, sticky-column responsive behavior, source/privacy/exact-scope, idempotency, and whitespace checks pass. Aquinas cycle two returned `PASS_WITH_P3` with no P0-P2; exact-path release remains pending.
 
 Acceptance:
 
@@ -47,7 +56,7 @@ Acceptance:
 
 Gate:
 
-- `FT-AUTH-004` is research only. The user must explicitly approve `FT-AUTH-005` before selection or implementation.
+- `FT-AUTH-004` is research only. The user explicitly approved `FT-AUTH-005` on 2026-07-31; that selection gate is satisfied.
 - After production verification, a named first wave of at most six prospects requires another explicit user approval before any contact.
 
 ## Promoted Orlando Publication

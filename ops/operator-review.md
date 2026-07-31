@@ -40,12 +40,38 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-010` | San Antonio cluster decision research complete and review-clean | `PASS` | Goodall cycle 2 closed all three P2 findings and both P3 audit-count notes; no P0-P3 remains. Exact nine-path research-only diff is eligible for commit/push after staged QA. |
 | `FT-IMP-018` | San Antonio 13-choice all-ages activity implementation | `PASS` | Pasteur cycle one `FAIL` findings were fixed; cycle two returned `PASS` with no P0-P3. Focused 5/5 and full 110/110 tests plus state/SEO/responsive/source/JSON/privacy/scope/whitespace QA pass. Release pending. |
 | `FT-AUTH-004` | San Diego existing-page authority research complete and review-clean | `PASS` | Schrodinger cycle two closed all four P2 findings; cycle three verified the complete diff after non-overlapping July 29-31 GSC snapshots were fast-forwarded. No P0-P3 remains; exact nine-path research-only diff is commit/push eligible after staged QA. |
+| `FT-AUTH-005` | Review-clean San Diego attraction logistics implementation | `PASS_WITH_P3` | Aquinas cycle two closed both P2s and the console-narrative P3; no P0-P2 remains. One non-blocking visible-row test-isolation P3 remains. Exact 14-path commit/deployment is release-eligible after final staged QA. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-07-31 - `FT-AUTH-005` review cycle 2
+
+**Result: `PASS_WITH_P3`**
+
+- Independent reviewer: Aquinas (`019fb9e9-8038-7850-9471-83f5d69386a6`).
+- Both P2s are closed: the logistics table keeps its `Choice` column sticky during mobile horizontal scrolling, and setting/time/cost estimate semantics now align across evidence, visible content, and `ItemList` descriptions.
+- The console-narrative P3 is closed, and the shared CSV serializer now receives native quote/comma execution coverage.
+- One non-blocking P3 remains: the visible-row native assertion searches the full logistics section, so matching embedded JSON could conceal a missing visible value. Independent browser parity verified all 12 visible rows and every field exactly.
+- Independent QA passed 10/10 focused and 142/142 full tests; operator-state and local SEO QA; 1440/390/320 browser checks; sticky behavior at `scrollLeft=650`; embedded JSON/table/schema/CSV parity; all 12 current direct official sources; generator idempotency; duplicate-key-safe JSON; privacy; whitespace; and exact 14-path scope.
+- Production all-ages and teen URLs remain 200, self-canonical, indexable, sitemap-listed once, robots-allowed, and internally linked. Fresh July 31 GSC evidence still supports unknown-to-Google without a verified technical exclusion.
+- No teen page, sitemap, robots, workflow, new URL, indexing request, outreach, deployment, external-account mutation, or credential change occurred during review.
+- Verdict satisfies the release gate; exact-path staged QA, commit, push, deployment, and production verification may proceed.
+
+### 2026-07-31 - `FT-AUTH-005` review cycle 1
+
+**Result: `FAIL`**
+
+- Independent reviewer: Aquinas (`019fb9e9-8038-7850-9471-83f5d69386a6`).
+- P2: the 1,080px mobile-scrolling table did not keep the `Choice` row header visible after horizontal scrolling.
+- P2: setting was classified as a Family Tripwise estimate in the evidence register but omitted from the visible estimate list and emitted without estimate wording in `ItemList` descriptions.
+- P3: focused tests did not verify every visible value, schema-description estimate wording, or executed CSV escaping.
+- P3: the QA narrative claimed no console errors even though a first local Chrome load can report the site's pre-existing missing favicon; no implementation-origin JavaScript error was found.
+- Reviewer independently confirmed 9/9 focused and 141/141 full tests, 0-error operator-state and SEO QA, browser CSV behavior, source reachability, exact scope, privacy, idempotency, and the no-technical-indexing-defect conclusion.
+- Remediation: add a logistics-specific sticky first column and regression assertion; label setting as an estimate in the visible note/table, evidence policy, and schema; execute the shared CSV serializer in native tests; narrow the console-error wording. Re-review is required before release.
 
 ### 2026-07-31 - `FT-AUTH-004` review cycles 1-3
 

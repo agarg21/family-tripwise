@@ -81,7 +81,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 44 | `FT-RES-012` build the existing-page protected GSC ranking opportunity map | Content/product quality | Completed and review-clean | No current page rewrite or CTR winner; eight pages are not indexed, current crawls lag releases, no exported page-query row averages position 20 or better, and authority is the dominant next lane. |
 | 45 | `FT-AUTH-002` complete San Diego Reset Atlas real-record and parent-test evidence | Authority | Completed and review-clean | 39 internal records cover all 13 anchors; all coordinates and 273 trust states remain `UNKNOWN`; three parent tasks are prepared but not simulated; Wegener cycle-three `PASS`. |
 | 46 | `FT-AUTH-004` map San Diego backlink gaps and promote one existing-page authority action | Authority | Completed and review-clean | Semrush detected zero legitimate Family Tripwise referring domains in its current 11-domain sample; links outside Semrush remain unknown, competitor page-level profiles are far smaller and noisier than domain totals imply, and one existing-page enhancement plus public prospect set passed Schrodinger cycle-three review. |
-| 47 | `FT-AUTH-005` add a source-dated San Diego family attraction logistics index | Authority | Ready pending user approval | Improve the existing all-ages URL in place for exactly its 12 current activities; no new canonical/indexable HTML page and no outreach inside implementation. |
+| 47 | `FT-AUTH-005` add a source-dated San Diego family attraction logistics index | Authority | Review-clean; release pending | Aquinas cycle-two `PASS_WITH_P3` closed both P2s; exactly 12 current activities share one source-dated table/data/download record set. No new canonical/indexable HTML page, teen-page edit, indexing request, or outreach. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -101,7 +101,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 
 ### FT-AUTH-005 - Add a source-dated San Diego family attraction logistics index
 
-- State: ready pending explicit user approval; not selected.
+- State: review-clean and release pending on 2026-07-31; Aquinas cycle-two `PASS_WITH_P3`, no P0-P2.
 - Target: `https://familytripwise.com/things-to-do/san-diego-with-kids.html`.
 - Scope: use exactly the 12 current activity choices to generate one current official-source-backed logistics record set, one compact responsive table, and one client-side CSV or JSON download from the embedded page data, with no separate data URL.
 - Usefulness boundary: consolidate overlapping comparison material rather than stacking another long section. Keep estimates, confidence, freshness, and unknowns visible.
@@ -109,6 +109,11 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - URL boundary: do not add another canonical/indexable HTML page, filtered URL, destination, or sitemap entry.
 - Release gate: focused/full/state/SEO/source/privacy/responsive/idempotency QA, independent review, exact-path commit, deployment, and production invariants must pass.
 - Outreach gate: implementation contains no outreach. After production verification, a named first wave of at most six prospects requires a second explicit user approval before contact.
+- Indexing audit: fresh July 31 GSC reports the all-ages and teen URLs unknown to Google, while public preflight and repository checks show 200 responses, self-canonicals, indexable markup, sitemap inclusion, and internal links. Audit both for a concrete technical defect; do not request indexing or edit the teen page speculatively.
+- Audit result: no technical exclusion or rendering defect was found. The all-ages page keeps its canonical/indexable state and the teen page remains unchanged; discovery and authority remain the evidence-backed limitation.
+- Cycle-one remediation: the mobile table now keeps `Choice` visible while horizontally scrolled; setting is consistently labeled as an estimate in evidence, visible content, and schema; the shared CSV serializer is executed in native tests; console reporting is narrowed to implementation-origin errors.
+- Re-review QA: focused tests 10/10 and full tests 142/142 pass; operator-state, duplicate-key-safe roadmap JSON, local SEO, responsive/sticky-column layout, embedded-data parity, schema, source/privacy/exact-scope, idempotency, and whitespace checks pass.
+- Remaining P3: the native visible-row assertion is not perfectly isolated from embedded JSON, although independent browser parity verified every visible row exactly. This is accepted non-blocking test debt under the release policy.
 
 ### FT-RES-012 - Build the existing-page protected GSC ranking opportunity map
 

@@ -60,6 +60,56 @@ ${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.
         </div>`;
 }
 
+function scriptSafeJson(value) {
+  return JSON.stringify(value).replaceAll("<", "\\u003c");
+}
+
+export function attractionLogisticsCsv(records) {
+  const columns = ["name", "area", "setting", "timeEstimate", "costEstimate", "currentCheck", "weatherRole", "transportPrompt", "evidenceNote", "unknowns", "checked", "officialUrl"];
+  const csvCell = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
+  return [columns, ...records.map((record) => columns.map((column) => record[column]))]
+    .map((row) => row.map(csvCell).join(","))
+    .join("\r\n");
+}
+
+function renderAttractionLogisticsIndex(records, note) {
+  return `      <section class="container page-section rank-ready-section" aria-labelledby="san-diego-logistics-index-title">
+        <div class="section-heading">
+          <p class="eyebrow">Plan the practical details</p>
+          <h2 id="san-diego-logistics-index-title">San Diego family attraction logistics index</h2>
+        </div>
+        <p class="review-label" id="san-diego-logistics-index-note">${esc(note)}</p>
+        <p><button class="button primary" id="download-san-diego-attraction-logistics" type="button">Download CSV</button></p>
+        <div class="comparison-scroll logistics-comparison" tabindex="0" role="region" aria-label="San Diego family attraction logistics">
+          <table class="comparison-table">
+            <thead><tr><th scope="col">Choice</th><th scope="col">Setting and time estimates</th><th scope="col">Cost estimate</th><th scope="col">Check now</th><th scope="col">Weather role</th><th scope="col">Transport starting point</th><th scope="col">Still uncertain</th><th scope="col">Official source</th></tr></thead>
+            <tbody>
+${records.map((record) => `              <tr><th scope="row">${esc(record.name)}<br><small>${esc(record.area)}</small></th><td>${esc(record.setting)} estimate<br>${esc(record.timeEstimate)} estimate</td><td>${esc(record.costEstimate)} estimate</td><td>${esc(record.currentCheck)}</td><td>${esc(record.weatherRole)}</td><td>${esc(record.transportPrompt)}</td><td>${esc(record.unknowns)}</td><td><a href="${esc(record.officialUrl)}">Official source</a><br>Checked ${esc(record.checked)}</td></tr>`).join("\n")}
+            </tbody>
+          </table>
+        </div>
+        <script type="application/json" id="san-diego-attraction-logistics-data">${scriptSafeJson(records)}</script>
+        <script>
+          (() => {
+            const button = document.getElementById("download-san-diego-attraction-logistics");
+            const data = JSON.parse(document.getElementById("san-diego-attraction-logistics-data").textContent);
+            ${attractionLogisticsCsv.toString()}
+            button.addEventListener("click", () => {
+              const csv = attractionLogisticsCsv(data);
+              const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+              const link = document.createElement("a");
+              link.href = url;
+              link.download = "san-diego-family-attraction-logistics-2026-07-31.csv";
+              document.body.append(link);
+              link.click();
+              link.remove();
+              URL.revokeObjectURL(url);
+            });
+          })();
+        </script>
+      </section>`;
+}
+
 function renderVisitorScan(rows) {
   const headers = ["Trip type", "Best picks", "Age band", "Weather", "Budget", "Stroller/transit note", "Next step"];
   return `        <div class="comparison-scroll">
@@ -320,13 +370,13 @@ ${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>
         </div>
       </section>
 
-      <section class="container page-section rank-ready-section">
+${page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote) : `      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>
         </div>
 ${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
-      </section>
+      </section>`}
 
       <section class="band intro-band rank-ready-section">
         <div class="container">
@@ -789,17 +839,20 @@ ${schemaEnd}
 }
 
 function itemListSchema(page) {
-  if (!page.rows?.length) return "";
+  const items = page.logisticsIndex?.length ? page.logisticsIndex : page.rows;
+  if (!items?.length) return "";
   return `${schemaStart}
     <script type="application/ld+json">${JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ItemList",
       name: page.schemaName || `${page.city} family travel planning options`,
-      itemListElement: page.rows.map((row, index) => ({
+      itemListElement: items.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        name: row[0],
-        description: row[9] || row[1]
+        name: Array.isArray(item) ? item[0] : item.name,
+        description: Array.isArray(item)
+          ? item[9] || item[1]
+          : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${item.currentCheck}.`
       }))
     })}</script>
 ${schemaEnd}

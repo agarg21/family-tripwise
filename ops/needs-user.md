@@ -2,7 +2,7 @@
 
 Last updated: 2026-07-31
 
-No active agent action is blocked. `FT-AUTH-004` is complete and review-clean after Schrodinger cycle-three `PASS` with no P0-P3 findings. The San Diego backlink-gap and existing-page authority pass did not create a page, change `site/**`, or contact a prospect.
+No active agent action is blocked. The user approved `FT-AUTH-005` / `IMP-042` on July 31; Aquinas cycle two returned `PASS_WITH_P3` with no P0-P2, and exact-path release is pending. No indexing request or outreach is authorized.
 
 `FT-OPS-002` is released and production-verified. `FT-DEV-004` is completed and review-clean; no user decision is required.
 
@@ -16,7 +16,7 @@ The live sitemap contains 28 canonical URLs and was successfully resubmitted in 
 
 | Status | Question | Why it matters |
 |---|---|---|
-| required before selection | Approve, revise, or reject `FT-AUTH-005` / `IMP-042`? | This would improve the existing San Diego all-ages URL with one source-dated 12-attraction logistics index and a client-side download generated from embedded page data. It adds no separate data URL or canonical/indexable HTML page and includes no outreach. |
+| resolved 2026-07-31 | Approve, revise, or reject `FT-AUTH-005` / `IMP-042`? | Approved. The implementation may improve only the existing San Diego all-ages URL; no separate data URL, new canonical/indexable HTML page, indexing request, teen-page edit without a verified defect, or outreach is included. |
 | required only after a production-verified `FT-AUTH-005` release | Approve, revise, or reject the named first outreach wave of at most six public prospects? | Every contact is a separate external action. The proposed wave is The Parking Spot, ParentMap, San Diego Family Magazine, KidsOutAndAbout San Diego, San Diego Museum Council, and San Diego Tourism Authority. |
 | closed unless the user revives the unpublished Atlas | Should real parents run the three Reset Atlas tasks? | No. The user stopped the new-page/Atlas direction, so missing parent tests do not block existing-page authority work and should not generate follow-up. |
 | required before implementation | Approve Orlando as the next new destination and authorize one all-ages activity URL? | `AGENTS.md` requires user approval for a new destination. Approval would select `FT-PUB-006`; research alone does not authorize publication. |

@@ -2183,7 +2183,13 @@
       "title": "Add a source-dated San Diego family attraction logistics index",
       "kind": "implementation",
       "lane": "authority-and-existing-page-growth",
-      "status": "ready_pending_user_approval",
+      "status": "in_progress",
+      "selected_on": "2026-07-31",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 2,
+      "reviewer_ids": [
+        "019fb9e9-8038-7850-9471-83f5d69386a6"
+      ],
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -2198,8 +2204,9 @@
         "docs/research/san-diego-attraction-logistics-evidence.md",
         "tools/page-generation/upgrade-page-data.mjs",
         "tools/page-generation/upgrade-engine.mjs",
-        "tools/upgrade-priority-pages.mjs",
+        "tools/san-diego-cluster-router-page.test.mjs",
         "tools/san-diego-attraction-logistics.test.mjs",
+        "site/styles.css",
         "site/things-to-do/san-diego-with-kids.html",
         "status/san-diego-pages.md",
         "backlog/implementation-backlog.md",
@@ -2211,8 +2218,10 @@
       ],
       "success_signal": "The existing all-ages San Diego URL exposes one concise, validated, source-dated logistics index for exactly its 12 current activities, with direct official sources, explicit estimates and unknowns, a matching client-side download generated from embedded page data, no separate data URL, and no duplicate visible comparison layer or new canonical/indexable HTML page.",
       "production_invariant": "The existing URL, canonical, indexability, sitemap entry count, cluster routes, privacy posture, and unrelated generated output remain unchanged. Outreach, prospect contact, indexing requests, paid placement, external-account mutation, and recurring automation remain outside the implementation.",
-      "gsc_evidence_classification": "Promoted from FT-AUTH-004 using current July 31 Semrush and public-page authority evidence. The July 28 GSC snapshot is reused only as directional discovery context; the action is not a fresh-GSC experiment and makes no ranking or backlink promise.",
-      "notes": "Ready does not authorize implementation. Explicit user approval is required before selection. After a review-clean production release, any named outreach wave requires a second explicit user approval before contact. Scope must be narrowed to exact generator, embedded-data, test, site, status, backlog, and operator paths before editing."
+      "gsc_evidence_classification": "Fresh authenticated read-only GSC snapshot collected 2026-07-31 with finalized data through 2026-07-29. It shows the all-ages and teen San Diego activity URLs remain unknown to Google while public preflight confirms both return 200, are canonical/indexable, and appear in the sitemap. This action is not a fresh-GSC performance experiment and makes no ranking or backlink promise.",
+      "qa_summary": "Focused tests pass 10/10 and full tests pass 142/142. Operator-state QA, duplicate-key-safe roadmap JSON, local SEO QA at 0 errors and 0 warnings, generator idempotency/unrelated-output stability, 1440/390/320 responsive and sticky-column behavior, embedded-data/table/schema/CSV parity, source/privacy/exact-14-path scope, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Aquinas (019fb9e9-8038-7850-9471-83f5d69386a6) returned FAIL in cycle one for two P2 mobile-row-identity and estimate-semantics findings plus two P3 test/narrative findings. Cycle two verified both P2s and the console-narrative P3 closed, returning PASS_WITH_P3 with no P0-P2. One non-blocking P3 remains: the native visible-row assertion can read matching values from embedded JSON, although independent browser parity verified all visible rows exactly.",
+      "notes": "Selected 2026-07-31 by direct manual user approval. Implementation is review-clean and limited to one existing all-ages URL and the exact 14 evidence, generator, style, focused-test, status, backlog, and operator paths recorded here. The teen URL received a technical indexing audit only and remains unchanged because no defect was verified. After production release, any named outreach wave requires a second explicit user approval before contact. No indexing request, outreach, paid placement, external-account mutation, or recurring automation is authorized."
     }
   ]
 }

@@ -630,6 +630,18 @@ input {
   border-bottom: 0;
 }
 
+.logistics-comparison .comparison-table th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 170px;
+  background: var(--teal-dark);
+}
+
+.logistics-comparison .comparison-table thead th:first-child {
+  z-index: 2;
+}
+
 .teen-comparison .comparison-table {
   min-width: 820px;
 }

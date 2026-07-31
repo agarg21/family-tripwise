@@ -12,15 +12,15 @@ The repository mirror of project state is `ops/seo-roadmap.json`; the central Co
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
-`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. The user decided not to continue the unpublished Reset Atlas usefulness direction. `FT-AUTH-004` promotes only `FT-AUTH-005` / `IMP-042`, an in-place all-ages-page enhancement that remains unselected and user-gated. `FT-PUB-006` remains unselected and user-gated.
+`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. The user decided not to continue the unpublished Reset Atlas usefulness direction and approved `FT-AUTH-005` / `IMP-042` on July 31. That in-place all-ages-page enhancement is review-clean after Aquinas cycle-two `PASS_WITH_P3`; release is pending. `FT-PUB-006` remains unselected and user-gated.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-31.md`, fresh authenticated API evidence with finalized data through 2026-07-29. `FT-AUTH-004` remains explicitly based on the July 28 snapshot that existed at selection; the later snapshot is mechanical monitoring evidence, not a retroactive action baseline.
 - Latest site release: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823` succeeded, and the release marker, production invariant, and production SEO QA passed.
-- Active manual action: none after completion of the research-only `FT-AUTH-004` transaction.
+- Active manual action: `FT-AUTH-005` / `IMP-042`; review-clean with no P0-P2, exact-path release pending.
 - Latest completed manual action: `FT-AUTH-004`, completed and review-clean after Schrodinger cycle-three `PASS` with no P0-P3 findings.
-- Promoted authority action: `FT-AUTH-005` / `IMP-042`, ready pending explicit user approval; it would improve the existing San Diego all-ages page without adding a canonical/indexable HTML page. No live-page enhancement or outreach is authorized inside `FT-AUTH-004`.
+- Authority implementation boundary: `FT-AUTH-005` improves the existing San Diego all-ages page without adding a canonical/indexable HTML page. The teen page receives a technical indexability audit only; no indexing request, teen content edit, or outreach is authorized.
 - Promoted expansion action: `FT-PUB-006`, ready pending explicit user approval; not selected.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
@@ -173,7 +173,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, and `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is the only promoted authority implementation and remains unselected pending explicit user approval. `FT-PUB-006` remains the separately user-gated expansion action. `FT-EVAL-002` remains non-blocking and must wait until finalized protected page/query evidence includes the July 31 San Diego stay-area crawl.
+`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, technical operations work, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, and `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is selected and review-clean, with exact-path release pending. `FT-PUB-006` remains the separately user-gated expansion action. `FT-EVAL-002` remains non-blocking and must wait until finalized protected page/query evidence includes the July 31 San Diego stay-area crawl.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -199,6 +199,7 @@ Current local QA findings from `node tools/seo-qa.mjs`:
 
 - Errors: 0.
 - Warnings: 0.
+- `FT-AUTH-005` post-remediation checks pass 10/10 focused and 142/142 full tests; responsive checks found no page overflow or implementation-origin JavaScript errors, and the `Choice` column remains visible after horizontal scrolling. A first local Chrome load can still log the site's pre-existing missing favicon.
 - Home/About thin-page warnings are resolved.
 - Legacy shim warnings are resolved because the three root-level San Diego HTML files are outside the sitemap and carry `noindex, follow`.
 - The four remaining itinerary warnings were resolved under `IMP-010`.
@@ -214,11 +215,11 @@ Useful future user input:
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for later research cycles; authenticated Chrome remains the current Semrush fallback.
 - Whether to approve `FT-PUB-006`, the one-page Orlando all-ages activity publication promoted by `FT-RES-011`. Research selected Orlando, but no new-destination publication is authorized yet.
-- Whether to approve `FT-AUTH-005` / `IMP-042`, now that `FT-AUTH-004` is review-clean. Outreach remains a separate later gate after a review-clean production release.
+- After a review-clean production release of `FT-AUTH-005`, whether to approve the named first outreach wave. Outreach remains a separate later gate.
 
 ## Recommended Next Operator
 
-Ask the user to approve, revise, or reject `FT-AUTH-005` / `IMP-042`. If approved, implement only the existing-page logistics index and client-side download under its exact reviewed scope; do not contact prospects. After a review-clean production release, ask separately about the named first outreach wave. `FT-PUB-006` still requires explicit new-destination approval.
+Perform the review-clean `FT-AUTH-005` exact-path commit, push, deployment, and production verification. Do not contact prospects or request indexing. After production verification, ask separately about the named first outreach wave. `FT-PUB-006` still requires explicit new-destination approval.
 
 ## GSC Monitoring
 
