@@ -1,10 +1,40 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-29
+Last updated: 2026-07-31
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before substantive work.
 
 ## Current Ranking Opportunity Research
+
+### SRR-038: San Diego Existing-Page Backlink Gap And Authority Plan
+
+Status: complete and review-clean as `FT-AUTH-004`; Schrodinger cycle-three `PASS`, no P0-P3
+
+Selected: 2026-07-31 by direct manual user instruction
+
+Build a source-linked authority decision pack for the six current canonical San Diego pages. Use current authenticated Semrush evidence where available, inspect the public pages behind meaningful competitor backlinks, separate replicable editorial patterns from spam and authority we cannot honestly copy, and promote exactly one bounded enhancement on an existing URL.
+
+Boundaries:
+
+- Do not create a new page, edit `site/**`, alter the sitemap or indexability, deploy, or request indexing.
+- Do not send outreach, submit directories, buy or exchange links, post promotional UGC, collect private contact data, or mutate an external account beyond authenticated read-only research.
+- Do not treat Semrush Authority Score, backlinks, or referring-domain counts as Google metrics or ranking guarantees.
+- Do not count automated SEO spam, owned properties, generic directories, scraper copies, or irrelevant links as earned authority.
+- Record public source URL, linking page/domain, linked competitor/URL where visible, link context, likely follow state when observable, editorial relevance, replicability, proposed Family Tripwise target, citation reason, freshness, and confidence.
+- Promote exactly one existing-page enhancement and a separately gated outreach plan, or record that no credible action is ready.
+
+Expected artifact:
+
+- `docs/research/san-diego-existing-page-authority-gap-2026-07-31.md`
+
+Review-clean result:
+
+- Semrush detected zero legitimate Family Tripwise referring domains as of 2026-07-31 among its current 11-domain sample and 13 nofollow links; every sampled source is low-authority SEO spam, while links outside Semrush remain `UNKNOWN`.
+- Competitor raw totals substantially overstate clean editorial authority. La Jolla Mom's exact San Diego hotel page has 29 referring domains, 18 at AS 0-10; The Family Voyage's exact San Diego guide has only six referring domains and ten follow links.
+- The durable competitor advantage is a smaller layer of real editorial, peer, travel, local, media, industry, and source-quote relationships on top of mature topical domains.
+- Selected the existing all-ages San Diego page as the first authority asset because a source-dated attraction-logistics index has a clearer citation use than another commercial hotel-list enhancement.
+- Promoted only `FT-AUTH-005` / `IMP-042`, ready pending explicit user approval. It adds no new canonical/indexable HTML page and includes no outreach.
+- Prepared a 12-prospect public-page set and a separately gated first wave of at most six prospects; no private contact data was collected and no contact occurred.
 
 ### SRR-035: Existing-Page Protected GSC Ranking Opportunity Map
 

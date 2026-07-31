@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-29
+Last updated: 2026-07-31
 
 ## Cycle Name
 
@@ -12,15 +12,15 @@ The repository mirror of project state is `ops/seo-roadmap.json`; the central Co
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
-`FT-RES-012` and its selected follow-on `FT-AUTH-002` are complete and review-clean. The Reset Atlas now has a 39-record, 13-anchor unpublished candidate and a three-task parent-test protocol. After two correction cycles, Wegener returned cycle-three `PASS` with no P0-P3 findings. Real Parent A and Parent B testing remains a future human gate; `FT-PUB-006` remains unselected and user-gated.
+`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. The user decided not to continue the unpublished Reset Atlas usefulness direction. `FT-AUTH-004` promotes only `FT-AUTH-005` / `IMP-042`, an in-place all-ages-page enhancement that remains unselected and user-gated. `FT-PUB-006` remains unselected and user-gated.
 
 ## State Checkpoint
 
-- Latest GSC evidence: `ops/gsc-snapshots/2026-07-28.md`, fresh authenticated API data finalized through 2026-07-26.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-07-31.md`, fresh authenticated API evidence with finalized data through 2026-07-29. `FT-AUTH-004` remains explicitly based on the July 28 snapshot that existed at selection; the later snapshot is mechanical monitoring evidence, not a retroactive action baseline.
 - Latest site release: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823` succeeded, and the release marker, production invariant, and production SEO QA passed.
-- Active manual action: none.
-- Latest completed manual action: `FT-AUTH-002`, completed and review-clean after Wegener cycle-three `PASS` with no P0-P3 findings.
-- Promoted authority action: `FT-AUTH-002`, completed and review-clean; real parent testing remains a user-gated future step.
+- Active manual action: none after completion of the research-only `FT-AUTH-004` transaction.
+- Latest completed manual action: `FT-AUTH-004`, completed and review-clean after Schrodinger cycle-three `PASS` with no P0-P3 findings.
+- Promoted authority action: `FT-AUTH-005` / `IMP-042`, ready pending explicit user approval; it would improve the existing San Diego all-ages page without adding a canonical/indexable HTML page. No live-page enhancement or outreach is authorized inside `FT-AUTH-004`.
 - Promoted expansion action: `FT-PUB-006`, ready pending explicit user approval; not selected.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
@@ -29,7 +29,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - NYC stay-area improvement: complete; production contains the canonical/indexable five-area guide with five quick-pick starts, one sitemap entry, and the expected cluster routes.
 - NYC itinerary improvement: complete, released, and production-verified at commit `d0c4a7d` through Pages run `30204670128`.
 - San Antonio research and releases: `FT-RES-010`, `FT-IMP-018`, `FT-PUB-005`, `FT-IMP-019`, `FT-IMP-020`, and `FT-IMP-021` are complete. The final itinerary action released at `90ed019` through Pages run `30237864556`; no planned San Antonio page remains open.
-- Blocking measurement item: `FT-EVAL-002`, until both revised San Diego lodging URLs have current crawl and protected query evidence.
+- Blocking measurement item: `FT-EVAL-002`. Both revised San Diego lodging URLs now have current crawl evidence, but finalized performance and protected query evidence must include the July 31 stay-area crawl before the checkpoint is eligible.
 
 ## Current Project State
 
@@ -41,7 +41,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the July 28 snapshot has finalized data through July 26, 1,033 impressions and 1 click over 28 days, a successful current sitemap read with 28 discovered pages, and 20 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the July 31 snapshot has finalized data through July 29, 1,226 impressions and 2 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; GitHub Pages run `30359879823` succeeded and production verification passed
@@ -169,11 +169,11 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-28.json`, collected through the read-only API with finalized data through July 26; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-07-31.json`, collected through the read-only API with finalized data through July 29; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, and `FT-AUTH-002` are complete and review-clean. `FT-PUB-006` remains the separately user-gated expansion action. `FT-EVAL-002` remains non-blocking and must wait for current Google crawl and protected query evidence on both revised San Diego lodging URLs.
+`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, `FT-OPS-002`, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, and `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is the only promoted authority implementation and remains unselected pending explicit user approval. `FT-PUB-006` remains the separately user-gated expansion action. `FT-EVAL-002` remains non-blocking and must wait until finalized protected page/query evidence includes the July 31 San Diego stay-area crawl.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -185,6 +185,7 @@ Findings to preserve:
 - Current destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio.
 - San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed their current deep quality passes.
 - Existing pages should be improved before new cities are created.
+- The first promoted authority asset should improve the existing San Diego all-ages page with one source-dated 12-attraction logistics index; it should not create a new HTML page or add another verbose comparison layer.
 - Named-property hotel pages require durable source, uncertainty, freshness, and review records; personally verified, safety, quiet, exact-route, or unsupported firm family-suitability claims still require human review.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
 - `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages; their prior thin-page warnings were resolved under `IMP-013`.
@@ -213,10 +214,11 @@ Useful future user input:
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for later research cycles; authenticated Chrome remains the current Semrush fallback.
 - Whether to approve `FT-PUB-006`, the one-page Orlando all-ages activity publication promoted by `FT-RES-011`. Research selected Orlando, but no new-destination publication is authorized yet.
+- Whether to approve `FT-AUTH-005` / `IMP-042`, now that `FT-AUTH-004` is review-clean. Outreach remains a separate later gate after a review-clean production release.
 
 ## Recommended Next Operator
 
-No agent-substantive action is selected. The next Atlas step is the user-gated real Parent A and Parent B protocol; agents must not simulate it. `FT-PUB-006` still requires explicit new-destination approval.
+Ask the user to approve, revise, or reject `FT-AUTH-005` / `IMP-042`. If approved, implement only the existing-page logistics index and client-side download under its exact reviewed scope; do not contact prospects. After a review-clean production release, ask separately about the named first outreach wave. `FT-PUB-006` still requires explicit new-destination approval.
 
 ## GSC Monitoring
 
@@ -230,14 +232,13 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight on July 27: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-07-28.json`, collected through the authenticated read-only API on July 28 with finalized data through July 26.
+- Current normalized source: `ops/gsc-snapshots/2026-07-31.json`, collected through the authenticated read-only API on July 31 with finalized data through July 29.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.
-- Current URL Inspection summary: 20 of 28 canonical sitemap URLs are indexed; eight are not indexed; zero inspection rows are collector-unknown.
-- Discovered but currently not indexed: the Chicago, New York City, and San Antonio family-hotel pages plus the New York City teen page.
-- Unknown to Google: the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The San Diego and Las Vegas family-hotel pages are indexed as of the July 28 inspection.
+- Current URL Inspection summary: 24 of 28 canonical sitemap URLs are indexed; four are not indexed; zero inspection rows are collector-unknown.
+- Currently not indexed: the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The San Diego stay-area and itinerary pages were crawled July 31; the San Diego and Las Vegas family-hotel pages remain indexed.
 - These are discovery/crawl states, not content-quality verdicts. The San Diego toddler page and San Antonio teen page are indexed.
 - GSC login blocker: none.
 - Per-URL indexing requested: no. The repository policy continues to prohibit the per-URL request action; the existing sitemap was resubmitted under the user's direct approval.

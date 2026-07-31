@@ -1,8 +1,54 @@
 # Implementation Backlog
 
-Last updated: 2026-07-28
+Last updated: 2026-07-31
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before implementation.
+
+## Promoted Existing-Page Authority Pilot
+
+### IMP-042: Add A Source-Dated San Diego Family Attraction Logistics Index
+
+Status: ready only after explicit user approval; not selected
+
+Roadmap ID: `FT-AUTH-005`
+
+Research review: `SRR-038`
+
+Target:
+
+- `https://familytripwise.com/things-to-do/san-diego-with-kids.html`
+
+Improve the existing all-ages page in place. Use only its 12 current activity choices to create one validated source-dated logistics dataset, one compact responsive table, and one client-side CSV or JSON download generated from the page's embedded data. Create no separate data URL, and consolidate overlapping comparison material so the page does not become longer or more cluttered.
+
+Likely implementation scope, to be narrowed before selection:
+
+- `docs/research/san-diego-attraction-logistics-evidence.md`
+- one source record under `tools/page-generation/` or the existing San Diego generator data
+- one embedded validated record source that renders the table and generates the download in the browser
+- the existing San Diego all-ages page generator and focused tests
+- `site/things-to-do/san-diego-with-kids.html`
+- `status/san-diego-pages.md`
+- `backlog/implementation-backlog.md`
+- `ops/needs-user.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Acceptance:
+
+- Exactly the 12 already-published activities are represented; no new canonical/indexable HTML page or destination is added.
+- Every externally checkable field has a current direct official source and checked date; estimates, confidence, and unknowns are explicit.
+- Visible records and the client-side download derive from one embedded validated source, cannot drift, and create no separate data URL.
+- The new index replaces or consolidates overlapping comparison material instead of stacking another verbose section.
+- Safety, exact stroller/route practicality, sensory suitability, wait/drive/walk time, universal family fit, and firsthand experience are not inferred.
+- Target/full idempotency, unrelated-output stability, state/SEO/source/privacy/responsive/keyboard QA, and independent read-only review pass.
+- Production release is verified before any outreach approval request. Outreach is not included in this implementation.
+
+Gate:
+
+- `FT-AUTH-004` is research only. The user must explicitly approve `FT-AUTH-005` before selection or implementation.
+- After production verification, a named first wave of at most six prospects requires another explicit user approval before any contact.
 
 ## Promoted Orlando Publication
 

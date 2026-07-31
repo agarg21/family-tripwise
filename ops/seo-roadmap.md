@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-29
+Last updated: 2026-07-31
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -15,12 +15,12 @@ The Family Tripwise project operator may update the selected action's repository
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-28.json`.
-- Classification on July 28: fresh authenticated read-only Search Console API evidence, collected July 28 with finalized performance data through July 26.
+- Latest snapshot: `ops/gsc-snapshots/2026-07-31.json`.
+- Classification on July 31: fresh authenticated read-only Search Console API evidence, collected July 31 with finalized performance data through July 29.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - The protected July 29 page-query export is aligned to finalized data through July 26, was encrypted in successful GitHub Actions run `30443765836`, and was decrypted only into central operator state outside this repository. It contains 237 rows across 14 pages and 940 impressions; no exported row has a period-average position of 20 or better. Complete rows remain outside this repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on July 28 found 20 indexed and eight not indexed. The San Diego and Las Vegas family-hotel pages are now indexed; Chicago, New York City, and San Antonio family-hotel pages are discovered but not indexed.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on July 31 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 
 ## Maintenance cadence
@@ -80,8 +80,35 @@ The Family Tripwise project operator may update the selected action's repository
 | 43 | `FT-PUB-006` research and publish the Orlando all-ages family activity hub | Content/product quality | Ready pending user approval | One new destination URL only; `AGENTS.md` requires explicit approval before selection or implementation. |
 | 44 | `FT-RES-012` build the existing-page protected GSC ranking opportunity map | Content/product quality | Completed and review-clean | No current page rewrite or CTR winner; eight pages are not indexed, current crawls lag releases, no exported page-query row averages position 20 or better, and authority is the dominant next lane. |
 | 45 | `FT-AUTH-002` complete San Diego Reset Atlas real-record and parent-test evidence | Authority | Completed and review-clean | 39 internal records cover all 13 anchors; all coordinates and 273 trust states remain `UNKNOWN`; three parent tasks are prepared but not simulated; Wegener cycle-three `PASS`. |
+| 46 | `FT-AUTH-004` map San Diego backlink gaps and promote one existing-page authority action | Authority | Completed and review-clean | Semrush detected zero legitimate Family Tripwise referring domains in its current 11-domain sample; links outside Semrush remain unknown, competitor page-level profiles are far smaller and noisier than domain totals imply, and one existing-page enhancement plus public prospect set passed Schrodinger cycle-three review. |
+| 47 | `FT-AUTH-005` add a source-dated San Diego family attraction logistics index | Authority | Ready pending user approval | Improve the existing all-ages URL in place for exactly its 12 current activities; no new canonical/indexable HTML page and no outreach inside implementation. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+
+### FT-AUTH-004 - Map San Diego backlink gaps and promote one existing-page authority action
+
+- Selected: 2026-07-31 by direct manual user instruction.
+- State: complete and review-clean; Schrodinger cycle-three `PASS`, no P0-P3.
+- Scope: inspect current authenticated Semrush backlink evidence and public linking pages for La Jolla Mom, The Family Voyage, and representative independent San Diego competitors; distinguish meaningful editorial links, owned/commercial links, syndication, spam, and non-replicable authority.
+- Existing-page boundary: select one current San Diego URL and one citation-worthy enhancement that can live on that URL. Do not create a new page or edit `site/**` in this research transaction.
+- Prospect boundary: retain only relevant public organizations/pages with a specific citation rationale. Do not collect private contact data or send outreach.
+- Measurement boundary: track legitimate relevant referring domains, follow links, referral visits, discovery/crawl changes, and aligned protected-query movement without promising rankings or treating third-party authority scores as Google metrics.
+- Evidence classification: the July 28 GSC snapshot is a three-day-old authenticated API snapshot, reused only as directional context. Current Semrush and public-page evidence must be source-dated separately.
+- Identifier note: `FT-AUTH-003` belonged only to an abandoned, uncommitted Atlas usefulness attempt and is intentionally not reused.
+- Publication boundary: no live-page change, new URL, sitemap/indexability change, deployment, indexing request, outreach, prospect contact, paid link, directory submission, external-account mutation beyond read-only research, or recurring automation.
+- Review-clean result: all 11 Semrush-detected Family Tripwise referring domains are low-authority nofollow SEO spam; links outside Semrush remain unknown. La Jolla Mom's exact hotel page has 29 referring domains, 18 at AS 0-10; The Family Voyage's exact San Diego guide has six referring domains and ten follow links. The durable competitor edge is a small relevant editorial/peer/media/industry layer on mature topical domains.
+- Promoted action: `FT-AUTH-005` / `IMP-042`, ready only after explicit user approval. The selected existing URL is the all-ages San Diego activity hub because a maintained source-dated logistics index has a clearer citation use than another commercial hotel-list enhancement.
+
+### FT-AUTH-005 - Add a source-dated San Diego family attraction logistics index
+
+- State: ready pending explicit user approval; not selected.
+- Target: `https://familytripwise.com/things-to-do/san-diego-with-kids.html`.
+- Scope: use exactly the 12 current activity choices to generate one current official-source-backed logistics record set, one compact responsive table, and one client-side CSV or JSON download from the embedded page data, with no separate data URL.
+- Usefulness boundary: consolidate overlapping comparison material rather than stacking another long section. Keep estimates, confidence, freshness, and unknowns visible.
+- Trust boundary: do not infer safety, exact stroller/route practicality, sensory suitability, exact wait/drive/walk time, universal family fit, or firsthand experience.
+- URL boundary: do not add another canonical/indexable HTML page, filtered URL, destination, or sitemap entry.
+- Release gate: focused/full/state/SEO/source/privacy/responsive/idempotency QA, independent review, exact-path commit, deployment, and production invariants must pass.
+- Outreach gate: implementation contains no outreach. After production verification, a named first wave of at most six prospects requires a second explicit user approval before contact.
 
 ### FT-RES-012 - Build the existing-page protected GSC ranking opportunity map
 
