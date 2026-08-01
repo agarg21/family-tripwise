@@ -4,6 +4,8 @@ Status: operating guide
 
 Prepared: 2026-07-22
 
+Last updated: 2026-08-01
+
 Owner: Family Tripwise project operator
 
 ## Purpose
@@ -11,6 +13,8 @@ Owner: Family Tripwise project operator
 Use this process to choose, research, build, review, and measure one city at a time. The goal is not to publish a predetermined page set. It is to discover which family-planning jobs have real search evidence, determine the smallest coherent city product, and improve one page before expanding.
 
 This guide operationalizes the San Diego process and the Las Vegas selection in `docs/research/next-city-prioritization-las-vegas-cluster.md`.
+
+The current depth-before-expansion stance and ranking timeline live in `docs/research/authority-ranking-timeline-and-depth-strategy-2026-08-01.md`.
 
 ## Principles
 
@@ -26,6 +30,21 @@ This guide operationalizes the San Diego process and the Las Vegas selection in 
 10. Let fresh crawl/query evidence and product gaps trigger follow-up work. Scan cadence alone does not manufacture tasks.
 11. Treat release-state reconciliation as part of the transaction. A page is not durably complete while roadmap, backlog, current-cycle, and city-status records still call it pending.
 12. Keep generation deterministic and city changes isolated. When the current tooling makes exact scope difficult to prove, schedule a behavior-preserving technical refactor before adding more content complexity.
+13. Build research authority through a maintained claim-level evidence layer, information gain, and legitimate external use. Do not imply local or firsthand authority the project does not have.
+14. Treat the agent as a fast constraint-routing layer over the same validated records used by public pages, not as a separate factual content generator.
+
+## Existing-City Depth Cycle
+
+Use a depth cycle when the site has enough city coverage to learn from current pages but lacks durable authority, stable rankings, or a proven research product.
+
+1. Select a small city set from current discovery, product maturity, authority opportunity, and maintainability. Do not work every city to satisfy symmetry.
+2. Choose one primary authority/evidence city and at most two secondary existing-page improvement candidates.
+3. For each substantive action, select one of four jobs: strengthen the evidence layer, improve one existing page, test one legitimate citation path, or measure a declared outcome.
+4. Keep new-destination research durable but defer publication unless it teaches something a current-city action cannot and the user approves expansion.
+5. Evaluate crawl, indexing, query interpretation, usefulness, evidence reuse, and legitimate citations during the cycle. Do not require top-10 movement inside one month.
+6. At the end of the cycle, decide whether to continue depth, change the product/acquisition thesis, or expand. Absence of a calendar slot does not block an evidence-backed action; arrival of a calendar slot does not create one.
+
+The August 2026 depth set is San Diego as primary, Las Vegas and Chicago as secondary candidates, and New York City/San Antonio as maintain-and-observe. Orlando remains a deferred, user-gated expansion candidate. This set may change only from a direct user decision or current evidence recorded in a selected action.
 
 ## Stage 0: Operating Gate
 
@@ -52,6 +71,7 @@ Collect:
 - current page inventory and improvement leverage;
 - SERP quality and page-type fit;
 - commercial intent and research cost.
+- whether an existing city can produce the same learning with lower maintenance and authority dilution.
 
 Score the decision qualitatively from 1-5 on:
 
@@ -131,6 +151,7 @@ For each, document:
 - what is stale, generic, repetitive, or weakly evidenced;
 - what authority, firsthand experience, inventory, or review scale we cannot copy;
 - what structural, research, freshness, map, filter, or decision-support opportunity we can honestly pursue.
+- what normalized evidence, contradiction handling, calculation, or structured output would create information gain beyond a source summary.
 
 The working differentiation is disciplined quality: current source-backed information, clean comparison, family-constraint routing, compact detail, useful maps, and bounded review synthesis. It does not require a contrived novelty claim.
 
@@ -171,6 +192,7 @@ Page-level fields:
 - overlap/cannibalization risk;
 - verdict: keep, expand, consolidate, observe, or retire;
 - next eligible action and blocker.
+- whether the page and any related agent output can share validated evidence records without factual drift.
 
 Then perform a section-level usefulness review for any page considered for implementation. Examine every visible block, including hero, intros, cards, tables, filters, detail sections, routes, FAQs, trust language, and sources.
 
@@ -277,6 +299,7 @@ Measurement begins with state, not a calendar reminder:
 - compare discovered query families with the intended role;
 - record indexing, impressions, position, clicks/CTR when nonzero, and internal-link/crawl observations;
 - avoid causal claims from tiny or short-window data.
+- distinguish the first 30 days of crawl/query learning from the 30-90 day improvement window and the 3-12 month authority/ranking evaluation window.
 
 Continue when one of these is true:
 
@@ -286,6 +309,8 @@ Continue when one of these is true:
 - the user explicitly changes priority.
 
 Do not generate an edit merely because a weekly scan ran or a nominal observation date arrived.
+
+Do not encode a fixed new-domain sandbox. Google documents that improvements may appear in days or take several months, while first-party industry datasets and case histories show wide variation and substantial selection effects. Use project evidence rather than waiting for or promising an age threshold.
 
 ## Technical Maintainability Gate
 

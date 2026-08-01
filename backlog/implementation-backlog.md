@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-07-31
+Last updated: 2026-08-01
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before implementation.
 
@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-042: Add A Source-Dated San Diego Family Attraction Logistics Index
 
-Status: review-clean 2026-07-31; exact-path release pending
+Status: released and production-verified 2026-07-31
 
 Roadmap ID: `FT-AUTH-005`
 
@@ -42,7 +42,7 @@ Implementation result:
 - The old 11-column comparison layer is replaced by one eight-column logistics index generated from exactly 12 source-dated records.
 - The visible table, embedded JSON, client-side CSV, and `ItemList` names derive from the same record array.
 - Fresh GSC, public preflight, canonical, robots, sitemap, and internal-link checks found no technical exclusion on either the all-ages or teen URL. The teen page remains unchanged; discovery/authority remains the observed limitation.
-- After cycle-one remediation, focused tests pass 10/10 and the full repository passes 142/142. Operator-state QA, duplicate-key-safe roadmap JSON, local SEO QA, sticky-column responsive behavior, source/privacy/exact-scope, idempotency, and whitespace checks pass. Aquinas cycle two returned `PASS_WITH_P3` with no P0-P2; exact-path release remains pending.
+- After cycle-one remediation, focused tests passed 10/10 and the full repository passed 142/142. Operator-state QA, duplicate-key-safe roadmap JSON, local SEO QA, sticky-column responsive behavior, source/privacy/exact-scope, idempotency, and whitespace checks passed. Aquinas cycle two returned `PASS_WITH_P3` with no P0-P2. Commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` deployed through successful Pages run `30667262994`; the release marker, target 200 response, production invariant, and production SEO QA passed.
 
 Acceptance:
 
@@ -52,18 +52,18 @@ Acceptance:
 - The new index replaces or consolidates overlapping comparison material instead of stacking another verbose section.
 - Safety, exact stroller/route practicality, sensory suitability, wait/drive/walk time, universal family fit, and firsthand experience are not inferred.
 - Target/full idempotency, unrelated-output stability, state/SEO/source/privacy/responsive/keyboard QA, and independent read-only review pass.
-- Production release is verified before any outreach approval request. Outreach is not included in this implementation.
+- Production release is verified. Outreach was not included and still requires a separate explicit approval.
 
 Gate:
 
 - `FT-AUTH-004` is research only. The user explicitly approved `FT-AUTH-005` on 2026-07-31; that selection gate is satisfied.
-- After production verification, a named first wave of at most six prospects requires another explicit user approval before any contact.
+- A named first wave of at most six prospects requires another explicit user approval before any contact.
 
 ## Promoted Orlando Publication
 
 ### IMP-041: Research And Publish The Orlando All-Ages Family Activity Hub
 
-Status: ready only after explicit user approval for a new destination
+Status: ready only after the August existing-city depth hold is lifted and explicit user approval is given for a new destination
 
 Roadmap ID: `FT-PUB-006`
 

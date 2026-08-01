@@ -1,8 +1,8 @@
 # Family Tripwise Current Strategy
 
-Last updated: 2026-07-07
+Last updated: 2026-08-01
 
-This is the canonical operating strategy for Family Tripwise. It consolidates the current project direction without replacing the underlying source docs in `docs/`.
+This is the canonical operating strategy for Family Tripwise. Historical launch plans remain useful as provenance but do not control the current queue.
 
 ## Source Docs
 
@@ -10,282 +10,193 @@ Read these before changing strategy:
 
 - `AGENTS.md`
 - `docs/PROJECT_BRIEF.md`
-- `docs/plan/product-ai-plan.md`
 - `docs/plan/content-strategy.md`
-- `docs/plan/90-day-execution-plan.md`
-- `docs/research/semrush-family-travel-opportunity.md`
-- `docs/research/age-specific-family-travel-demand.md`
+- `docs/plan/product-ai-plan.md`
+- `docs/plan/incremental-city-cluster-playbook.md`
+- `docs/plan/hotel-research-engine.md`
+- `docs/research/authority-ranking-timeline-and-depth-strategy-2026-08-01.md`
+- `ops/seo-roadmap.json`
+- the latest public-safe GSC snapshot
+
+`docs/plan/90-day-execution-plan.md` and the first-30-page inventory are historical launch hypotheses, not publication instructions or traffic forecasts.
 
 ## Project Thesis
 
-Family Tripwise is a consumer family travel planning site and AI product. It helps parents and caregivers make realistic trip decisions with children by combining destination-specific SEO pages with practical planning tools.
+Family Tripwise is a consumer family-travel decision product. It helps parents make realistic trip choices by combining useful indexable destination pages, a maintained online-evidence layer, and fast constraint-aware planning tools.
 
-The site should not feel like a generic AI travel blog. It should answer parent-specific planning questions that ordinary travel listicles handle poorly:
+The product cannot claim local or firsthand authority where none exists. Its authority should come from disciplined research:
 
-- Where should we stay with kids?
-- What should we do with kids this age?
-- Which hotel or area is actually family-friendly?
-- Can this itinerary work without exhausting everyone?
-- What should we avoid?
-- What is the backup plan if naps, weather, transit, crowds, or walking go sideways?
+- current official facts;
+- date-specific prices and policies where observable;
+- bounded recent online-review signals and conflicts;
+- public community questions used as qualitative input;
+- map and location context;
+- explicit family decision criteria;
+- transparent estimates, unknowns, and source dates.
+
+AI helps collect, normalize, compare, refresh, and route that evidence. AI-generated prose alone is not a differentiator.
+
+## Core Promise
+
+Family Tripwise should answer questions that static listicles and unstructured forums handle poorly:
+
+- Where should this particular family stay?
+- Which hotels fit the room, pool, location, and budget constraints?
+- Which activities work for this age mix and pace?
+- What can be combined without making the day unrealistic?
+- What is the lower-friction or weather-backup option?
+- Which facts are current, disputed, estimated, or still worth checking?
+
+The default page should answer the main job quickly. Tables, maps, filters, and the agent should reduce work after that point, not force users to configure the page before it becomes useful.
 
 ## Audience
 
-Primary users are parents and caregivers planning trips with:
+Primary users are parents and caregivers planning trips with babies, toddlers, school-age children, tweens, teens, or mixed-age groups.
 
-- babies
-- toddlers
-- school-age kids
-- tweens
-- teens
-- mixed-age sibling groups
+Common constraints include:
 
-The user is usually trying to resolve practical constraints:
+- sleep separation, naps, and reset windows;
+- stroller, car-seat, walking, parking, and transit friction;
+- room occupancy, kitchens, breakfast, pools, and laundry;
+- weather, crowds, and overstimulation;
+- budget and approximate total nightly cost;
+- different interests and energy levels within one family.
 
-- nap schedules
-- stroller access
-- car seats
-- transit complexity
-- room size
-- pool, breakfast, kitchen, laundry, crib, or rollaway needs
-- rainy-day backups
-- budget
-- walking tolerance
-- overstimulation
-- multi-child age gaps
+These are product and review lenses. They are not automatically separate search pages.
 
-## SEO Wedge
+## Search Strategy
 
-The initial search opportunity is destination-specific family travel queries where intent is clear and existing SERPs are often fragmented or generic.
+Use destination-specific family queries as entry points into a useful planning product. The strongest recurring jobs remain:
 
-Highest-intent pages:
+- named family hotels and resorts;
+- where to stay or which area to choose;
+- things to do with children;
+- age-specific activity planning when the SERP is distinct;
+- realistic family itineraries.
 
-- `where to stay in {destination} with kids`
-- `best family hotels in {destination}`
-- `best area to stay in {destination} with kids`
-
-Medium-high intent pages:
-
-- `things to do in {destination} with kids`
-- `{destination} itinerary with kids`
-
-Medium intent pages:
-
-- `{destination} family vacation`
-- `kid-friendly {destination}`
-- `{destination} with toddlers`
-- `{destination} with teens`
+Page architecture must come from observed SERP overlap, the user job, current site coverage, and evidence depth. Similar wording is not enough to justify another URL. Improve an existing page before creating a new one unless current ranking pages clearly demand a separate page type.
 
 Default search market: United States unless a task explicitly says otherwise.
 
-## Product Wedge
+## Research-Authority Model
 
-Family Tripwise should compete with static blogs by adding decision support and tools:
+Family Tripwise should build three mutually reinforcing assets:
 
-- where-to-stay recommender
-- family hotel shortlist and review summarizer
-- things-to-do list with age filters
-- nap-friendly itinerary builder
-- rainy-day backup planner
-- stroller/transit difficulty scoring
-- map export
-- packing list by season and child age
+1. **Maintained evidence:** claim-level sources, freshness, conflicts, uncertainty, and structured comparable fields.
+2. **Decision surfaces:** concise pages, maps, tables, downloads, and agent answers that create information gain from the evidence.
+3. **External corroboration:** legitimate editorial, local, industry, corporate, or peer citations earned because a dataset or finding is useful.
 
-Static blogs answer: "Here are things we did."
+Third-party authority scores are diagnostic estimates, not Google metrics or goals. Measure legitimate relevant referring domains, referral use, discovery, crawl, aligned query movement, and product usefulness instead.
 
-Family Tripwise should answer: "Given your children, budget, trip length, mobility needs, lodging style, and weather risk, here is the plan that is most likely to work."
+The first public authority pattern is the San Diego Family Attraction Logistics Index. It should teach whether a maintained structured resource gives publishers and parents a reason to cite or return to Family Tripwise.
 
-## Initial Destination Clusters
+## Current Portfolio
 
-The first destination cluster set is:
+The current live city portfolio is:
 
 1. San Diego
 2. Las Vegas
-3. New York City
-4. Orlando / Disney World
-5. Chicago
-6. Miami
-7. San Antonio
-8. Washington DC
-9. Paris, France
-10. London, UK
+3. Chicago
+4. New York City
+5. San Antonio
 
-Destination normalization rules:
+Orlando has a completed decision pack but no authorized page. Miami, Washington DC, Paris, London, and other candidates remain research options rather than an active build queue.
+
+Destination normalization rules remain:
 
 - NYC, New York, and New York City map to `New York City`.
-- Oahu, Honolulu, and Waikiki are related but should remain separate when search intent differs.
-- Disney World and Orlando can be grouped, but Disney-specific terms must be marked.
-- London UK and London Ontario must be disambiguated.
-- Paris France and Paris TX must be disambiguated.
+- Oahu, Honolulu, and Waikiki stay distinct when search intent differs.
+- Disney World and Orlando may be related, but Disney-specific intent must be marked.
+- London, UK and London, Ontario must be disambiguated.
+- Paris, France and Paris, Texas must be disambiguated.
 
-## First 30 Page Roadmap
+## August 2026 Direction
 
-The current first-30 roadmap from `docs/plan/content-strategy.md` is:
+Go deeper before expanding.
 
-| Priority | Page |
-|---:|---|
-| 1 | Things to do in San Diego with kids |
-| 2 | Where to stay in San Diego with kids |
-| 3 | Best family hotels in San Diego |
-| 4 | San Diego family itinerary |
-| 5 | Things to do in Las Vegas with kids |
-| 6 | Best family hotels in Las Vegas |
-| 7 | Where to stay in Las Vegas with kids |
-| 8 | Things to do in New York City with kids |
-| 9 | Where to stay in New York City with kids |
-| 10 | Best family hotels in New York City |
-| 11 | New York City itinerary with kids |
-| 12 | Things to do in Orlando with kids |
-| 13 | Best family hotels in Orlando |
-| 14 | Disney World with toddlers |
-| 15 | Disney World family itinerary |
-| 16 | Things to do in Chicago with kids |
-| 17 | Where to stay in Chicago with kids |
-| 18 | Chicago itinerary with kids |
-| 19 | Things to do in Miami with kids |
-| 20 | Best family hotels in Miami |
-| 21 | Where to stay in Miami with kids |
-| 22 | Things to do in San Antonio with kids |
-| 23 | Best family hotels in San Antonio |
-| 24 | Things to do in Washington DC with kids |
-| 25 | Where to stay in Washington DC with kids |
-| 26 | Washington DC itinerary with kids |
-| 27 | Where to stay in Paris with kids |
-| 28 | Best family hotels in Paris |
-| 29 | Where to stay in London with kids |
-| 30 | Best family hotels in London |
+- San Diego is the primary authority and evidence-engine city.
+- Las Vegas and Chicago are the secondary existing-page improvement candidates.
+- New York City and San Antonio remain maintained and observed unless fresh evidence identifies a concrete defect or stronger opportunity.
+- Orlando publication is deferred during this depth cycle unless the user explicitly changes strategy.
 
-Do not treat this as permission to mass-generate pages. Each page still needs a useful, index-worthy reason to exist.
+This is not a weekly content calendar. Each action remains evidence-triggered and separately selected. Scan cadence does not manufacture work.
 
-## Current Site Status
+The August objectives are:
 
-The site is a static GitHub Pages site deployed from `site/`.
+- strengthen the reusable research-authority method;
+- improve at most one current page per substantive transaction from current query/SERP evidence;
+- test a small legitimate citation path only after explicit outreach approval;
+- design the agent as a fast query layer over shared validated records;
+- learn from indexing, crawl, query interpretation, and user usefulness without promising short-window rank movement.
 
-Current configured domain:
+## Page Quality Bar
 
-- `familytripwise.com`
+Every indexable page must justify itself through family-specific usefulness and information gain. Include only the components that improve the page's job:
 
-Current page families include:
+- a useful default answer near the top;
+- clear comparison or decision routing;
+- criteria appropriate to age, pace, cost, weather, lodging, or transport;
+- concise tradeoffs and avoid-if conditions;
+- direct current verification links for volatile facts;
+- source/freshness signals that remain calm rather than defensive;
+- internal routes to the next family decision;
+- schema only when it matches visible content.
 
-- `things-to-do/`
-- `where-to-stay/`
-- `family-itinerary/`
-- an About/methodology page
-- legacy redirect-style San Diego HTML pages
+A page should save meaningful research effort. It should not require a parent to open five tabs to reconstruct the same comparison, and it should not become a long evidence dump.
 
-GitHub Pages and GSC are already configured. Do not redo infrastructure unless a check shows drift.
+## Evidence And Human Review
 
-## Quality Bar
+Research-based hotel, area, attraction, and planning guidance may publish when the evidence record supports the specific claim and records sources, freshness, conflicts, estimates, and unknowns.
 
-Every indexable page should justify itself through family-specific usefulness, not just keyword targeting.
+Human review remains required before publishing:
 
-Each page should include, where relevant:
+- personally verified experience;
+- safety assurance;
+- exact route or stroller-practicality verdict;
+- materially consequential room-selection advice not supported by current property evidence;
+- a firm family-suitability conclusion the research record cannot independently support.
 
-- search-intent-matched intro
-- quick decision section
-- comparison table
-- age suitability
-- time needed
-- cost band
-- stroller/transit difficulty
-- nap-friendliness
-- rainy-day suitability
-- parent-specific caveats
-- booking/timing notes
-- nearby pairings
-- internal links to related pages
-- schema where useful
-- source or update signals where appropriate
+Do not call online-review synthesis a Family Tripwise review. Label it as an online-review signal or research interpretation. Never retain reviewer identity, copy review prose, or turn one anecdote into a recurring condition.
 
-Pages should help a parent make real trip-planning decisions without opening five other tabs.
+Separate official facts, booking observations, online-review signals, community hypotheses, estimates, model output, editorial interpretation, and human-verified experience. Use `UNKNOWN` instead of invented precision.
 
-## Human-Review Requirements
+## Ranking Expectations
 
-Human review is required for:
+The site launched in July 2026. One month is enough to evaluate crawl, indexing, query interpretation, technical health, and obvious usefulness gaps. It is not enough to judge durable authority.
 
-- hotel recommendations
-- area recommendations
-- safety notes
-- transit/stroller advice
-- claims that could materially affect a family trip
+- Next 30 days: evaluate discovery, evidence reuse, and action readiness.
+- 30-90 days: look for broader aligned impressions, query-band movement, legitimate citations, and clear iteration signals.
+- 3-6 months: evaluate whether selected pages can sustain top-20 or top-10 visibility for appropriate queries.
+- 6-12 months: make a fairer judgment about repeatable authority, stable query coverage, and destination expansion.
 
-Agents may draft, structure, compare, and flag claims, but must not present AI output as personally verified experience.
+These are decision windows, not ranking or traffic guarantees. There is no fixed sandbox policy and no traffic forecast in the current operating strategy.
 
-Separate:
+## Expansion Gate
 
-- measured data
-- tool estimates
-- human-reviewed claims
-- assumptions
-- opinions
-- model-derived scores
+Do not add another city merely because the current pages are published. Expansion requires:
 
-Mark unavailable keyword volume, CPC, difficulty, traffic, backlinks, revenue, or ranking data as `UNKNOWN`.
+- a source-dated city decision pack;
+- a distinct first user job and justified page type;
+- enough maintainable evidence to create useful information gain;
+- technical and editorial capacity that does not dilute existing cities;
+- a clear learning reason to expand rather than improve a current page;
+- explicit user approval under `AGENTS.md`.
 
-## 90-Day Goals
+## Main Risks
 
-Days 1-30:
+- polished summaries that add no original decision value;
+- scaled city or modifier pages that dilute maintenance and topical coherence;
+- stale price, policy, attraction, hotel, or transit facts;
+- review themes presented with false statistical or firsthand authority;
+- interfaces that expose many controls but no useful default;
+- overreacting to tiny GSC samples or calendar cadence;
+- chasing raw backlink counts, third-party authority scores, or low-quality placements;
+- assuming domain age will repair an undifferentiated product.
 
-- brand/domain decision
-- repository and documentation
-- content model
-- first 10 pages
-- first version of where-to-stay recommender
-- basic activity data structure
+Mitigate these risks with source-classified records, conflict tracking, compact decision surfaces, exact action scope, independent review, current GSC/SERP evidence, and selective legitimate citation work.
 
-Days 31-60:
+## Operating Model
 
-- expand Orlando / Disney World, Chicago, Miami, and San Antonio clusters
-- add activity filters
-- build first itinerary builder prototype
-- build first hotel comparison table
+The central SEO Control Room is the only scheduler and dispatch ledger. This project task is the single repository writer for a valid dispatch or direct manual user instruction. Every substantive strategy, content, product, code, or configuration change follows exact-path scope, native QA, independent read-only review, and the repository release policy.
 
-Days 61-90:
-
-- expand Washington DC, Paris, and London clusters
-- add rainy-day planner
-- add map export
-- create review summarization workflow
-- create editorial QA checklist
-
-Directional traffic targets for a new domain:
-
-| Timeframe | Monthly organic sessions |
-|---|---:|
-| 3 months | 500-2,000 |
-| 6 months | 5,000-15,000 |
-| 12 months | 25,000-75,000 |
-
-Treat these as directional assumptions, not measured forecasts.
-
-## Risks
-
-Main risks:
-
-- publishing thin AI travel content
-- over-scaling before page quality is high
-- inaccurate hotel, safety, transit, or stroller advice
-- stale attraction, transit, and hotel data
-- insufficient trust signals
-- adding pages that do not deserve indexing
-- inventing metrics or confidence
-
-Mitigations:
-
-- keep human review in the loop
-- start with fewer destinations and deeper utility
-- store source dates where possible
-- label inferred scores clearly
-- improve existing pages before creating more pages
-- use tools, tables, and decision flows to add original value
-
-## Current Operating Priority
-
-Use the three-agent operating system:
-
-1. Master / Operator maintains strategy, baton, decisions, and sequencing.
-2. SEO Research & Review audits strategy, pages, opportunities, and ranking realism.
-3. Implementation changes the site/product only when work is implementation-ready.
-
-The immediate next priority is to have SEO Research & Review audit the current strategy, current live pages, and first destination cluster priority before additional implementation.
-
+The current roadmap lives in `ops/seo-roadmap.json`. Historical first-30-page, three-agent, and staged 90-day plans do not override it.

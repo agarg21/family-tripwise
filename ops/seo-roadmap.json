@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Central SEO Control Room",
-  "last_updated": "2026-07-31",
+  "last_updated": "2026-08-01",
   "last_rescored_on": "2026-07-22",
   "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
@@ -2013,6 +2013,8 @@
       "kind": "publication",
       "lane": "content-and-product-quality",
       "status": "ready_pending_user_approval",
+      "strategy_hold": "August 2026 existing-city depth cycle",
+      "strategy_review_on_or_after": "2026-09-01",
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -2045,7 +2047,7 @@
       "success_signal": "One source-current Orlando all-ages activity hub gives six research-hypothesis personas useful visible defaults, compares only earned park and non-park day roles, exposes free/budget, younger-child, mixed-age/teen, and indoor/heat pivots without filtered URLs, and launches as the destination's only new page.",
       "production_invariant": "Exactly one new canonical/indexable Orlando activity URL and one sitemap entry; no hotel, stay, itinerary, free, toddler, teen, or Disney-specific URL; unrelated public files remain byte-stable except the minimum home route.",
       "gsc_evidence_classification": "The July 28 GSC snapshot is fresh evidence for the existing site but contains no Orlando page because the destination is unpublished. Selection is based on current Semrush, observed SERP overlap, ranking-page usefulness, and product evidence rather than a GSC rank claim.",
-      "notes": "Promoted but not selected by FT-RES-011. AGENTS.md requires explicit user approval before a new destination is published. Do not implement from ready state alone. One page only; no hotel research, separate modifier page, indexing request, affiliate CTA, external-account mutation, outreach, booking action, or recurring automation."
+      "notes": "Promoted but not selected by FT-RES-011. The August 2026 strategy holds new-city publication while San Diego, Las Vegas, and Chicago deepen; the September review date does not self-dispatch work. AGENTS.md still requires explicit user approval before a new destination is published. Do not implement from ready state alone. One page only; no hotel research, separate modifier page, indexing request, affiliate CTA, external-account mutation, outreach, booking action, or recurring automation."
     },
     {
       "id": "FT-RES-012",
@@ -2174,7 +2176,7 @@
       "result": "Completed and review-clean. Semrush detected zero legitimate Family Tripwise referring domains as of 2026-07-31 among its current 11-domain sample; all sampled sources are AS 0-10 nofollow SEO spam, while links outside Semrush remain UNKNOWN. Competitor page-level evidence is much smaller and noisier than domain totals imply: La Jolla Mom's exact San Diego hotel page has 29 referring domains, 18 at AS 0-10, while The Family Voyage's exact San Diego guide has 6 referring domains and 10 follow links. The selected existing-page authority asset is the all-ages San Diego activity hub, where a source-dated 12-attraction logistics index can provide a clearer citation reason than another commercial hotel-list enhancement.",
       "qa_summary": "Native 137/137 tests, operator-state QA, content-freshness QA, local SEO QA at 0 errors and 0 warnings, duplicate-key-safe JSON, exact nine-path/no-site scope, focused activity/prospect/wave/download checks, July 31 GSC overlay reconciliation, privacy scan, and whitespace QA passed.",
       "review_summary": "Independent read-only reviewer Schrodinger returned FAIL in cycle one for four P2 Semrush-scope, data-download, prospect-reproducibility, and stale Reset Atlas status findings. Cycle two returned PASS after all corrections. Cycle three rechecked the complete diff after non-overlapping July 29-31 GSC snapshot commits were fast-forwarded and returned PASS with no P0-P3, including factual current-state mirrors and the still-evidence-gated FT-EVAL-002 boundary.",
-      "notes": "Selected by direct manual user instruction. Authenticated Semrush Chrome and current public backlink/source pages were checked July 31. The July 28 GSC snapshot was reused only as directional context. Do not reuse the abandoned uncommitted Atlas usefulness-action identifier FT-AUTH-003. The only promoted follow-on is FT-AUTH-005 / IMP-042, ready pending explicit user approval. No page was created or modified, no private contact data was collected, and no outreach, paid link, directory submission, promotional post, external-account mutation beyond read-only research, or recurring automation occurred."
+      "notes": "Selected by direct manual user instruction. Authenticated Semrush Chrome and current public backlink/source pages were checked July 31. The July 28 GSC snapshot was reused only as directional context. Do not reuse the abandoned uncommitted Atlas usefulness-action identifier FT-AUTH-003. Its only promoted follow-on was FT-AUTH-005 / IMP-042, which was later approved, released, and production-verified. No page was created or modified in this research action, no private contact data was collected, and no outreach, paid link, directory submission, promotional post, external-account mutation beyond read-only research, or recurring automation occurred."
     },
     {
       "id": "FT-AUTH-005",
@@ -2183,8 +2185,9 @@
       "title": "Add a source-dated San Diego family attraction logistics index",
       "kind": "implementation",
       "lane": "authority-and-existing-page-growth",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-07-31",
+      "completed_on": "2026-07-31",
       "review_outcome": "PASS_WITH_P3",
       "review_cycles": 2,
       "reviewer_ids": [
@@ -2221,7 +2224,58 @@
       "gsc_evidence_classification": "Fresh authenticated read-only GSC snapshot collected 2026-07-31 with finalized data through 2026-07-29. It shows the all-ages and teen San Diego activity URLs remain unknown to Google while public preflight confirms both return 200, are canonical/indexable, and appear in the sitemap. This action is not a fresh-GSC performance experiment and makes no ranking or backlink promise.",
       "qa_summary": "Focused tests pass 10/10 and full tests pass 142/142. Operator-state QA, duplicate-key-safe roadmap JSON, local SEO QA at 0 errors and 0 warnings, generator idempotency/unrelated-output stability, 1440/390/320 responsive and sticky-column behavior, embedded-data/table/schema/CSV parity, source/privacy/exact-14-path scope, and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Aquinas (019fb9e9-8038-7850-9471-83f5d69386a6) returned FAIL in cycle one for two P2 mobile-row-identity and estimate-semantics findings plus two P3 test/narrative findings. Cycle two verified both P2s and the console-narrative P3 closed, returning PASS_WITH_P3 with no P0-P2. One non-blocking P3 remains: the native visible-row assertion can read matching values from embedded JSON, although independent browser parity verified all visible rows exactly.",
-      "notes": "Selected 2026-07-31 by direct manual user approval. Implementation is review-clean and limited to one existing all-ages URL and the exact 14 evidence, generator, style, focused-test, status, backlog, and operator paths recorded here. The teen URL received a technical indexing audit only and remains unchanged because no defect was verified. After production release, any named outreach wave requires a second explicit user approval before contact. No indexing request, outreach, paid placement, external-account mutation, or recurring automation is authorized."
+      "release_commit": "e7c40ff4e770a2c94c6ed298808775c1ac9c9762",
+      "pages_run": 30667262994,
+      "released_at": "2026-07-31T21:38:36Z",
+      "release_state": "released-and-production-verified",
+      "result": "Released and production-verified the existing San Diego all-ages page with one 12-attraction source-dated logistics index and matching client-side CSV generated from the same validated embedded records. The URL remained canonical, indexable, present once in the sitemap, and free of a separate data URL.",
+      "notes": "Selected 2026-07-31 by direct manual user approval. Commit e7c40ff4e770a2c94c6ed298808775c1ac9c9762 deployed successfully through Pages run 30667262994; release.json matched the commit/run, the target returned 200, action-specific production invariants passed, and production SEO QA returned 0 errors and 0 warnings. The teen URL received a technical indexing audit only and remains unchanged because no defect was verified. Any named outreach wave requires a second explicit user approval before contact. No indexing request, outreach, paid placement, external-account mutation, or recurring automation is authorized."
+    },
+    {
+      "id": "FT-RES-013",
+      "title": "Define the research-authority thesis and August depth cycle",
+      "kind": "research",
+      "lane": "strategy-and-authority",
+      "status": "completed",
+      "selected_on": "2026-08-01",
+      "completed_on": "2026-08-01",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_ids": [
+        "019fbd0a-052c-72f0-84a0-b3db31ad8b17"
+      ],
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "AGENTS.md",
+        "README.md",
+        "docs/research/authority-ranking-timeline-and-depth-strategy-2026-08-01.md",
+        "strategy/current-strategy.md",
+        "strategy/content-principles.md",
+        "docs/plan/content-strategy.md",
+        "docs/plan/product-ai-plan.md",
+        "docs/plan/incremental-city-cluster-playbook.md",
+        "backlog/implementation-backlog.md",
+        "status/san-diego-pages.md",
+        "ops/needs-user.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A review-clean, source-classified strategy audit makes research authority and the maintained evidence layer explicit, replaces launch-era expansion assumptions with one bounded August depth cycle across existing cities, sets evidence-based ranking expectations, and keeps Reddit anecdotes qualitative rather than causal proof.",
+      "production_invariant": "Research and strategy only: no site/**, sitemap, canonical, indexability, Pages workflow, deployment, indexing request, outreach, prospect contact, external-account mutation, new destination, or recurring automation change.",
+      "gsc_evidence_classification": "Fresh authenticated read-only GSC snapshot collected 2026-07-31 with finalized data through 2026-07-29 provides the current project baseline: 1,226 impressions, 2 clicks, 28 discovered pages, and 24 of 28 inspected sitemap URLs indexed. It is context for patience and prioritization, not evidence that authority has already improved.",
+      "qa_summary": "Full repository tests pass 142/142. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings. Duplicate-key-safe roadmap JSON, all 15 registered paths, Markdown links, source reachability/classification, privacy/credential safety, no-site scope, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Bohr (019fbd0a-052c-72f0-84a0-b3db31ad8b17) returned PASS_WITH_P3 in cycle one with no P0-P2. The two P3 wording findings were corrected: GSC 62.19 is labeled aggregate average position, and the Orlando backlog records the August strategy hold. Cycle two returned PASS with no P0-P3 findings.",
+      "result": "Aligned the durable strategy and operating plans around a maintained online-evidence layer, information gain, and fast family-constraint decisions. Set an August depth cycle with San Diego primary, Las Vegas and Chicago secondary, New York City and San Antonio maintained, and Orlando publication held; documented non-predictive ranking windows and qualitative Reddit case histories.",
+      "notes": "Selected by direct manual user instruction on 2026-08-01 and completed review-clean the same day. Official Google guidance and first-party Ahrefs/Semrush datasets anchor the timeline stance; Reddit cases remain self-reported, heterogeneous, and non-causal. No site path, new URL, deployment, indexing request, outreach, external-account mutation, or recurring automation changed."
     }
   ]
 }

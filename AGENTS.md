@@ -8,6 +8,8 @@ This repository is for building a family travel planning site and AI product. Th
 
 - Treat SEO research as product input, not as a request to generate thin content.
 - Prioritize helpful, structured, human-reviewable pages over generic AI-written travel prose.
+- Build research authority rather than implying local or firsthand authority the project does not have. Family Tripwise's durable advantage is a maintained evidence layer that turns current official facts, online-review signals, community questions, maps, prices, policies, conflicts, and unknowns into faster family decisions.
+- AI should improve evidence collection, normalization, comparison, refresh, and constraint routing. AI-generated prose or a summary of other pages is not by itself original value.
 - Use the US search market as the default unless a task explicitly says otherwise.
 - Keep destination normalization consistent:
   - NYC, New York, and New York City map to `New York City`.
@@ -47,6 +49,8 @@ This repository is for building a family travel planning site and AI product. Th
   - Packing list by season and child age
 - Do not present AI output or desk research as personally verified experience unless a human has reviewed or supplied the experience.
 - Label estimated, model-derived, review-signal-derived, and research-based scores clearly.
+- Keep official facts, booking observations, online-review signals, community hypotheses, estimates, editorial interpretation, and human-verified experience distinct. Do not call online-review synthesis a Family Tripwise review.
+- Prefer one validated record source for visible page comparisons, downloads, structured data, and agent answers so public outputs cannot silently disagree.
 - Hotel shortlists must keep a durable evidence record covering official property facts, current booking/fee checks, review-signal themes, conflicting reports, freshness, and unresolved unknowns.
 
 ## Repository Conventions

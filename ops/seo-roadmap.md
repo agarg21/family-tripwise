@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-07-31
+Last updated: 2026-08-01
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -22,6 +22,7 @@ The Family Tripwise project operator may update the selected action's repository
 - The protected July 29 page-query export is aligned to finalized data through July 26, was encrypted in successful GitHub Actions run `30443765836`, and was decrypted only into central operator state outside this repository. It contains 237 rows across 14 pages and 940 impressions; no exported row has a period-average position of 20 or better. Complete rows remain outside this repository.
 - The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on July 31 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
+- On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
 ## Maintenance cadence
 
@@ -77,11 +78,12 @@ The Family Tripwise project operator may update the selected action's repository
 | 40 | `FT-OPS-002` reconcile operating guidance and harden dated-content freshness | Operating model | Released and production-verified | Commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823`; release marker, production invariant, and production SEO QA passed after two independent final `PASS` verdicts. |
 | 41 | `FT-DEV-004` modularize static page generation without output changes | Technical foundation | Completed and review-clean | Compatible entry points now delegate to four explicit modules; 137/137 tests, byte-stable output, isolation proof, and Noether cycle-two `PASS` with no P0-P3 findings. |
 | 42 | `FT-RES-011` select and research the next family destination cluster | Content/product quality | Completed and review-clean | Orlando selected from current Semrush, observed SERP overlap, ranking-page usefulness, cluster depth, family constraints, and research cost; Pasteur cycle-two `PASS` with no P0-P3; one user-gated action promoted. |
-| 43 | `FT-PUB-006` research and publish the Orlando all-ages family activity hub | Content/product quality | Ready pending user approval | One new destination URL only; `AGENTS.md` requires explicit approval before selection or implementation. |
+| 43 | `FT-PUB-006` research and publish the Orlando all-ages family activity hub | Content/product quality | Ready but held for August depth cycle | Research remains valid, but one new destination URL is deferred until the existing-city strategy is reviewed on or after September 1 or the user explicitly overrides it; approval is still required. |
 | 44 | `FT-RES-012` build the existing-page protected GSC ranking opportunity map | Content/product quality | Completed and review-clean | No current page rewrite or CTR winner; eight pages are not indexed, current crawls lag releases, no exported page-query row averages position 20 or better, and authority is the dominant next lane. |
 | 45 | `FT-AUTH-002` complete San Diego Reset Atlas real-record and parent-test evidence | Authority | Completed and review-clean | 39 internal records cover all 13 anchors; all coordinates and 273 trust states remain `UNKNOWN`; three parent tasks are prepared but not simulated; Wegener cycle-three `PASS`. |
 | 46 | `FT-AUTH-004` map San Diego backlink gaps and promote one existing-page authority action | Authority | Completed and review-clean | Semrush detected zero legitimate Family Tripwise referring domains in its current 11-domain sample; links outside Semrush remain unknown, competitor page-level profiles are far smaller and noisier than domain totals imply, and one existing-page enhancement plus public prospect set passed Schrodinger cycle-three review. |
-| 47 | `FT-AUTH-005` add a source-dated San Diego family attraction logistics index | Authority | Review-clean; release pending | Aquinas cycle-two `PASS_WITH_P3` closed both P2s; exactly 12 current activities share one source-dated table/data/download record set. No new canonical/indexable HTML page, teen-page edit, indexing request, or outreach. |
+| 47 | `FT-AUTH-005` add a source-dated San Diego family attraction logistics index | Authority | Released and production-verified | Commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762`; Pages run `30667262994`; exactly 12 activities share one source-dated table/data/download record set and production verification passed. |
+| 48 | `FT-RES-013` define the research-authority thesis and August depth cycle | Strategy/authority | Completed and review-clean | Bohr cycle-two `PASS` with no P0-P3; durable strategy now prioritizes existing-city depth, research authority, and evidence-based ranking windows before expansion. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -99,15 +101,26 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Review-clean result: all 11 Semrush-detected Family Tripwise referring domains are low-authority nofollow SEO spam; links outside Semrush remain unknown. La Jolla Mom's exact hotel page has 29 referring domains, 18 at AS 0-10; The Family Voyage's exact San Diego guide has six referring domains and ten follow links. The durable competitor edge is a small relevant editorial/peer/media/industry layer on mature topical domains.
 - Promoted action: `FT-AUTH-005` / `IMP-042`, ready only after explicit user approval. The selected existing URL is the all-ages San Diego activity hub because a maintained source-dated logistics index has a clearer citation use than another commercial hotel-list enhancement.
 
+### FT-RES-013 - Define the research-authority thesis and August depth cycle
+
+- Selected: 2026-08-01 by direct manual user instruction.
+- State: completed and review-clean on 2026-08-01; Bohr cycle-two `PASS` with no P0-P3.
+- Scope: reconcile the canonical strategy and reusable plans around maintained online evidence, information gain, fast constraint routing, realistic ranking timelines, and an August existing-city depth cycle.
+- Evidence: fresh July 31 GSC baseline; current official Google guidance; first-party Ahrefs and Semrush datasets; current/recent `r/Agentic_SEO` and `r/juststart` case histories used qualitatively with explicit credibility limits.
+- City stance: San Diego is primary; Las Vegas and Chicago are secondary existing-page candidates; New York City and San Antonio remain maintain-and-observe; Orlando publication is held during the August cycle.
+- Boundary: no `site/**`, new URL, indexing request, outreach, prospect contact, external-account mutation, deployment, or recurring automation.
+- QA: 142/142 tests; operator-state, freshness, local and production SEO QA; duplicate-key JSON, exact 15-path scope, Markdown links, source/privacy, no-site, and whitespace checks pass.
+
 ### FT-AUTH-005 - Add a source-dated San Diego family attraction logistics index
 
-- State: review-clean and release pending on 2026-07-31; Aquinas cycle-two `PASS_WITH_P3`, no P0-P2.
+- State: released and production-verified on 2026-07-31; Aquinas cycle-two `PASS_WITH_P3`, no P0-P2.
+- Release: commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762`; successful Pages run `30667262994`; release marker, target 200 response, action invariants, and production SEO QA passed.
 - Target: `https://familytripwise.com/things-to-do/san-diego-with-kids.html`.
 - Scope: use exactly the 12 current activity choices to generate one current official-source-backed logistics record set, one compact responsive table, and one client-side CSV or JSON download from the embedded page data, with no separate data URL.
 - Usefulness boundary: consolidate overlapping comparison material rather than stacking another long section. Keep estimates, confidence, freshness, and unknowns visible.
 - Trust boundary: do not infer safety, exact stroller/route practicality, sensory suitability, exact wait/drive/walk time, universal family fit, or firsthand experience.
 - URL boundary: do not add another canonical/indexable HTML page, filtered URL, destination, or sitemap entry.
-- Release gate: focused/full/state/SEO/source/privacy/responsive/idempotency QA, independent review, exact-path commit, deployment, and production invariants must pass.
+- Release gate result: focused/full/state/SEO/source/privacy/responsive/idempotency QA, independent review, exact-path commit, deployment, and production invariants passed.
 - Outreach gate: implementation contains no outreach. After production verification, a named first wave of at most six prospects requires a second explicit user approval before contact.
 - Indexing audit: fresh July 31 GSC reports the all-ages and teen URLs unknown to Google, while public preflight and repository checks show 200 responses, self-canonicals, indexable markup, sitemap inclusion, and internal links. Audit both for a concrete technical defect; do not request indexing or edit the teen page speculatively.
 - Audit result: no technical exclusion or rendering defect was found. The all-ages page keeps its canonical/indexable state and the teen page remains unchanged; discovery and authority remain the evidence-backed limitation.

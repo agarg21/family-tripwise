@@ -1,12 +1,14 @@
 # Family Tripwise Content Principles
 
-Last updated: 2026-07-07
+Last updated: 2026-08-01
 
 ## North Star
 
 Publish pages and tools that help parents make realistic family trip decisions by age, pace, weather, stroller difficulty, transit complexity, budget, and lodging base.
 
 Do not publish pages just because a keyword exists.
+
+Family Tripwise does not depend on local or firsthand experience it does not have. Its value comes from maintaining and synthesizing current online evidence into faster, clearer family decisions.
 
 ## What Good Looks Like
 
@@ -20,10 +22,13 @@ A strong Family Tripwise page should:
 - link to nearby and next-step pages
 - distinguish toddlers, kids, teens, and mixed-age groups
 - preserve uncertainty when claims are not verified
+- save the parent substantial comparison or verification work
+- create information gain through normalization, conflict handling, and explicit decision criteria
+- show a useful default before filters or agent refinement
 
 ## Page-Level Quality Bar
 
-For things-to-do pages, include where relevant:
+For things-to-do pages, include only where relevant:
 
 - quick picks
 - activity comparison table
@@ -32,36 +37,42 @@ For things-to-do pages, include where relevant:
 - time needed
 - cost band
 - neighborhood or area
-- stroller difficulty
+- stroller or transport checks proportional to available evidence
 - rainy-day suitability
 - nap-friendliness
 - booking need
 - nearby pairings
 - mini-itineraries
 
-For where-to-stay pages, include where relevant:
+For where-to-stay pages, include only where relevant:
 
 - quick decision section
 - area comparison matrix
 - parking and transit notes
-- stroller friendliness
-- walkability
-- noise risk
+- stroller and walkability checks proportional to available evidence
+- bounded online-review signals about noise or other recurring family concerns
 - nearby attractions
 - hotel type
-- family verdict
-- hotel shortlist only when claims are human-reviewed or clearly marked for review
+- evidence-derived trip-style fit with explicit criteria
+- hotel shortlist only when the durable hotel research workflow supports every published claim
 
 ## Claims And Evidence
 
 Separate:
 
 - measured data
-- first-party or human-reviewed notes
-- third-party sourced facts
+- official source facts
+- date-specific booking or price observations
+- recent online-review signals
+- community questions or hypotheses
 - tool estimates
 - model-derived assumptions
-- opinions or editorial judgment
+- editorial interpretation
+- human-verified experience
+
+Store evidence at claim level where practical: source URL, source class, checked date, affected entity, confidence, conflicts, and unresolved unknowns. Reuse validated records across page tables, downloads, structured data, prose, and agent answers.
+
+Online reviews can support bounded recurring themes when the source window, approximate sample, and conflicts are recorded. Never copy review prose, retain reviewer identity, call the synthesis a Family Tripwise review, or convert an isolated anecdote into a fact.
 
 Never invent:
 
@@ -80,15 +91,15 @@ Use `UNKNOWN` when a metric is unavailable.
 
 ## Human Review
 
-Human review is required before treating these claims as firm recommendations:
+Research-based hotel, area, attraction, and planning guidance may publish when the durable evidence supports the specific claim. Human review is required before publishing:
 
-- hotel recommendations
-- area recommendations
-- safety notes
-- transit or stroller difficulty
-- family suitability claims that could materially affect a trip
+- personally verified experience
+- safety assurance
+- exact route or stroller-practicality verdict
+- material room-selection advice that current property evidence cannot support
+- a firm family-suitability conclusion the research record cannot independently support
 
-AI may draft and structure these sections, but the page must remain honest about what is estimated or pending review.
+AI may collect, structure, compare, flag conflicts, draft, and route evidence. It must not manufacture experience, consensus, measurements, or certainty.
 
 ## SEO Rules
 
@@ -99,6 +110,9 @@ AI may draft and structure these sections, but the page must remain honest about
 - Use internal links to connect activity, lodging, itinerary, and age-specific pages.
 - Add schema where it genuinely matches page content.
 - Keep titles and descriptions useful, specific, and non-spammy.
+- Treat page-level average position as a page signal, not a query rank.
+- Let crawl, query, SERP, and usefulness evidence trigger changes; calendar cadence alone does not.
+- Do not create indexable filtered variants without distinct demand, SERPs, and user jobs.
 
 ## Product Rules
 
@@ -111,6 +125,7 @@ Prefer:
 - maps
 - checklists
 - recommender logic
+- downloadable or citable structured resources when they create a real external use
 
 Avoid:
 
@@ -120,4 +135,5 @@ Avoid:
 - fake personal experience
 - overstated authority
 - pages that require many disclaimers to be trusted
-
+- summaries that do not add comparison, calculation, conflict resolution, or routing value
+- controls that hide the useful answer behind setup friction

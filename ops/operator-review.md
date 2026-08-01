@@ -40,13 +40,27 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-010` | San Antonio cluster decision research complete and review-clean | `PASS` | Goodall cycle 2 closed all three P2 findings and both P3 audit-count notes; no P0-P3 remains. Exact nine-path research-only diff is eligible for commit/push after staged QA. |
 | `FT-IMP-018` | San Antonio 13-choice all-ages activity implementation | `PASS` | Pasteur cycle one `FAIL` findings were fixed; cycle two returned `PASS` with no P0-P3. Focused 5/5 and full 110/110 tests plus state/SEO/responsive/source/JSON/privacy/scope/whitespace QA pass. Release pending. |
 | `FT-AUTH-004` | San Diego existing-page authority research complete and review-clean | `PASS` | Schrodinger cycle two closed all four P2 findings; cycle three verified the complete diff after non-overlapping July 29-31 GSC snapshots were fast-forwarded. No P0-P3 remains; exact nine-path research-only diff is commit/push eligible after staged QA. |
-| `FT-AUTH-005` | Review-clean San Diego attraction logistics implementation | `PASS_WITH_P3` | Aquinas cycle two closed both P2s and the console-narrative P3; no P0-P2 remains. One non-blocking visible-row test-isolation P3 remains. Exact 14-path commit/deployment is release-eligible after final staged QA. |
+| `FT-AUTH-005` | Released and production-verified San Diego attraction logistics implementation | `PASS_WITH_P3` | Aquinas cycle two closed both P2s; no P0-P2 remains. Commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` deployed through Pages run `30667262994`; release marker, target 200 response, production invariants, and production SEO QA passed. One non-blocking visible-row test-isolation P3 remains. |
+| `FT-RES-013` | Research-authority strategy audit complete and review-clean | `PASS` | Bohr cycle two closed both non-blocking wording P3s; no P0-P3 remains. Exact 15-path research/strategy transaction; no `site/**`, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-01 - `FT-RES-013` research-authority strategy review
+
+**Reviewer:** Bohr (`019fbd0a-052c-72f0-84a0-b3db31ad8b17`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `PASS_WITH_P3` with no P0-P2 findings. The two P3s identified an aggregate GSC metric labeled as page-level and an Orlando backlog status that omitted the August strategy hold.
+- The correction labeled 62.19 as aggregate average position and made lifting the August hold plus explicit new-destination approval prerequisites in the backlog.
+- Cycle 2 returned `PASS` with no P0-P3 findings.
+- The reviewer validated methodology, Google/Ahrefs/Semrush caveats, qualitative and non-causal Reddit handling, non-predictive ranking windows, research-authority framing, trust/human gates, FT-AUTH-005 release evidence, and strategy/roadmap consistency.
+- Full tests pass 142/142. Operator-state, freshness, local and production SEO QA pass with 0 errors and 0 warnings. Duplicate-key-safe JSON, exact 15-path scope, Markdown links, source/privacy, no-site, and whitespace checks pass.
+- No `site/**`, new URL, deployment, indexing request, outreach, prospect contact, external-account mutation, or recurring automation changed.
 
 ### 2026-07-31 - `FT-AUTH-005` review cycle 2
 

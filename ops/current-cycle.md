@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-07-31
+Last updated: 2026-08-01
 
 ## Cycle Name
 
@@ -8,20 +8,20 @@ Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its roll
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. The five-page San Antonio cluster is complete. The user reopened one-city-at-a-time expansion after the generator modularization.
+The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. The current five-city portfolio is complete. The August strategy deepens existing cities before any new-destination publication.
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
-`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. The user decided not to continue the unpublished Reset Atlas usefulness direction and approved `FT-AUTH-005` / `IMP-042` on July 31. That in-place all-ages-page enhancement is review-clean after Aquinas cycle-two `PASS_WITH_P3`; release is pending. `FT-PUB-006` remains unselected and user-gated.
+`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` through Pages run `30667262994`. `FT-RES-013` completed on August 1 after Bohr cycle-two `PASS`, aligning the durable strategy around research authority, realistic ranking timelines, and a month of depth across existing cities before expansion. `FT-PUB-006` remains unselected and is held during this strategy cycle.
 
 ## State Checkpoint
 
 - Latest GSC evidence: `ops/gsc-snapshots/2026-07-31.md`, fresh authenticated API evidence with finalized data through 2026-07-29. `FT-AUTH-004` remains explicitly based on the July 28 snapshot that existed at selection; the later snapshot is mechanical monitoring evidence, not a retroactive action baseline.
-- Latest site release: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; Pages run `30359879823` succeeded, and the release marker, production invariant, and production SEO QA passed.
-- Active manual action: `FT-AUTH-005` / `IMP-042`; review-clean with no P0-P2, exact-path release pending.
-- Latest completed manual action: `FT-AUTH-004`, completed and review-clean after Schrodinger cycle-three `PASS` with no P0-P3 findings.
-- Authority implementation boundary: `FT-AUTH-005` improves the existing San Diego all-ages page without adding a canonical/indexable HTML page. The teen page receives a technical indexability audit only; no indexing request, teen content edit, or outreach is authorized.
-- Promoted expansion action: `FT-PUB-006`, ready pending explicit user approval; not selected.
+- Latest site release: `FT-AUTH-005` at commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762`; Pages run `30667262994` succeeded, and the release marker, target 200 response, production invariant, and production SEO QA passed.
+- Active manual action: none.
+- Latest completed manual action: `FT-RES-013`, research/strategy only, review-clean after Bohr cycle-two `PASS` with no P0-P3 findings.
+- Authority implementation result: the existing San Diego all-ages page now contains the 12-attraction logistics index and CSV without adding a canonical/indexable HTML page. The teen page remained unchanged; no indexing request or outreach occurred.
+- Promoted expansion action: `FT-PUB-006`, unselected and held during the August depth cycle; it still requires explicit user approval after strategy review.
 - Active substantive Control Room action: none.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
@@ -44,7 +44,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - GSC: authenticated read-only API collection is working; the July 31 snapshot has finalized data through July 29, 1,226 impressions and 2 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: `FT-OPS-002` at commit `f814b27482eff9e22b24d21ae267c4ea36e2a9e0`; GitHub Pages run `30359879823` succeeded and production verification passed
+- Current released implementation: `FT-AUTH-005` at commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762`; GitHub Pages run `30667262994` succeeded and production verification passed
 
 ## Historical operating threads
 
@@ -173,7 +173,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, technical operations work, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, and `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is selected and review-clean, with exact-path release pending. `FT-PUB-006` remains the separately user-gated expansion action. `FT-EVAL-002` remains non-blocking and must wait until finalized protected page/query evidence includes the July 31 San Diego stay-area crawl.
+`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, technical operations work, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, `FT-AUTH-004`, released `FT-AUTH-005`, and `FT-RES-013` are complete. `FT-PUB-006` remains separately user-gated and is held during the August existing-city depth cycle. `FT-EVAL-002` remains non-blocking and must wait until finalized protected page/query evidence includes the July 31 San Diego stay-area crawl.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -182,10 +182,10 @@ Deferred research topics are queued for later validation, not immediate implemen
 
 Findings to preserve:
 
-- Current destination focus remains San Diego, Las Vegas, New York City, Chicago, and San Antonio.
+- Current destination focus remains San Diego, Las Vegas, Chicago, New York City, and San Antonio; August prioritizes San Diego first, with Las Vegas and Chicago as secondary evidence-led candidates.
 - San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed their current deep quality passes.
 - Existing pages should be improved before new cities are created.
-- The first promoted authority asset should improve the existing San Diego all-ages page with one source-dated 12-attraction logistics index; it should not create a new HTML page or add another verbose comparison layer.
+- The first authority asset is live on the existing San Diego all-ages page as one source-dated 12-attraction logistics index; it created no new HTML page or duplicate comparison layer.
 - Named-property hotel pages require durable source, uncertainty, freshness, and review records; personally verified, safety, quiet, exact-route, or unsupported firm family-suitability claims still require human review.
 - Upgraded cleanup pages now deserve indexing; do not noindex them.
 - `site/about.html` and `site/index.html` should remain indexable as trust/navigation pages; their prior thin-page warnings were resolved under `IMP-013`.
@@ -199,7 +199,7 @@ Current local QA findings from `node tools/seo-qa.mjs`:
 
 - Errors: 0.
 - Warnings: 0.
-- `FT-AUTH-005` post-remediation checks pass 10/10 focused and 142/142 full tests; responsive checks found no page overflow or implementation-origin JavaScript errors, and the `Choice` column remains visible after horizontal scrolling. A first local Chrome load can still log the site's pre-existing missing favicon.
+- `FT-AUTH-005` passed 10/10 focused and 142/142 full tests before its verified production release; responsive checks found no page overflow or implementation-origin JavaScript errors, and the `Choice` column remains visible after horizontal scrolling. A first local Chrome load can still log the site's pre-existing missing favicon.
 - Home/About thin-page warnings are resolved.
 - Legacy shim warnings are resolved because the three root-level San Diego HTML files are outside the sitemap and carry `noindex, follow`.
 - The four remaining itinerary warnings were resolved under `IMP-010`.
@@ -211,15 +211,15 @@ No hard blocker right now.
 
 Useful future user input:
 
-- Whether to prioritize traffic growth, tool/product prototype, or monetization next.
+- Which one bounded authority or existing-page action to select after `FT-RES-013`, based on fresh evidence rather than calendar cadence.
 - Whether a human reviewer can verify hotel/area/safety/transit claims.
 - Whether Semrush and/or DataForSEO budget should be used for later research cycles; authenticated Chrome remains the current Semrush fallback.
-- Whether to approve `FT-PUB-006`, the one-page Orlando all-ages activity publication promoted by `FT-RES-011`. Research selected Orlando, but no new-destination publication is authorized yet.
-- After a review-clean production release of `FT-AUTH-005`, whether to approve the named first outreach wave. Outreach remains a separate later gate.
+- Whether to approve the named San Diego outreach wave. The authority asset is production-verified, but outreach remains a separate external-action gate.
+- Orlando publication is not a current August decision; revisit it on or after the existing-city strategy review unless the user explicitly overrides the depth cycle.
 
 ## Recommended Next Operator
 
-Perform the review-clean `FT-AUTH-005` exact-path commit, push, deployment, and production verification. Do not contact prospects or request indexing. After production verification, ask separately about the named first outreach wave. `FT-PUB-006` still requires explicit new-destination approval.
+With explicit user approval, run the named San Diego outreach pilot; otherwise use fresh protected-query/crawl evidence to select one Las Vegas or Chicago existing-page audit. Do not publish Orlando, request indexing, or contact prospects without the required separate authority.
 
 ## GSC Monitoring
 

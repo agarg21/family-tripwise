@@ -4,15 +4,17 @@
 
 Build destination clusters, not isolated articles. Each destination should become a small planning hub with pages for activities, lodging, itineraries, and child-age-specific advice.
 
+The current objective is not broader page coverage. It is to make a few existing city clusters substantially more useful, build legitimate research authority, learn how their rankings respond, and expand only after the method is repeatable.
+
 ## Expansion Sequence
 
-San Diego established the first deep-cluster quality bar. Las Vegas and Chicago then proved that the research, hotel evidence, persona, every-section review, and iterative release process can transfer to another city without publishing a predetermined page quota.
+San Diego established the first deep-cluster quality bar. Las Vegas and Chicago then proved that the research, hotel evidence, persona, every-section review, and iterative release process can transfer to another city without publishing a predetermined page quota. New York City and San Antonio completed the current five-city portfolio.
 
 Continue one city at a time. Select the city from fresh GSC discovery, current keyword evidence, observed SERP opportunity, commercial depth, existing-page leverage, and research cost. Produce the city decision pack before deciding which pages to create or improve.
 
-San Diego, Las Vegas, Chicago, New York City, and San Antonio now have completed five-role cluster passes. The July 28 next-city pass selected Orlando from current Semrush, observed SERP overlap, ranking-page usefulness, commercial depth, family-planning constraints, and research cost. The selection is documented in `docs/research/next-city-cluster-selection-2026-07-28.md`.
+San Diego, Las Vegas, Chicago, New York City, and San Antonio now have completed five-role cluster passes. The July 28 next-city pass selected Orlando from current Semrush, observed SERP overlap, ranking-page usefulness, commercial depth, family-planning constraints, and research cost. That research remains valid, but August 2026 is an existing-city depth cycle; Orlando publication is deferred unless the user explicitly changes strategy.
 
-Orlando should expand incrementally rather than inherit the five-page pattern as a quota. `FT-PUB-006` is the only promoted follow-on and remains unselected pending explicit approval for a new destination:
+When expansion resumes, Orlando should expand incrementally rather than inherit the five-page pattern as a quota. `FT-PUB-006` remains an unselected, user-gated option:
 
 1. Publish one all-ages activity decision hub after the required new-destination approval.
 2. Research one combined family-hotel and resort comparison next.
@@ -24,7 +26,32 @@ Orlando should expand incrementally rather than inherit the five-page pattern as
 
 Use `docs/plan/seo-cluster-research-protocol.md` before adding or materially changing destination pages. Page decisions should come from keyword validation, SERP-overlap clustering, ranking-page inspection, persona hypotheses, current page audits, and trust/evidence constraints.
 
-The differentiation bet is AI-assisted research plus clean product UX. Family Tripwise should use AI to synthesize fresh, source-dated evidence and turn scattered parent questions into simple decision surfaces. It should not mimic local publishers' firsthand authority, Reddit's UGC, or OTA/Tripadvisor booking and review scale. For pages where competitors do not have live booking inventory or large review databases, look for places Family Tripwise can be substantially better through comparison tables, maps, constraint routing, freshness checks, and transparent evidence boundaries.
+The differentiation bet is a maintained research-authority engine plus clean product UX. Family Tripwise should use AI to collect, normalize, compare, refresh, and route source-dated evidence and turn scattered parent questions into simple decision surfaces. It should not mimic local publishers' firsthand authority, Reddit's UGC, or OTA/Tripadvisor booking and review scale.
+
+The output must add information gain beyond source summaries:
+
+- criteria-based comparisons across normalized entities;
+- bounded recent online-review themes with date/sample context and conflicts;
+- current official facts and direct recheck links;
+- derived planning bands and transparent estimates;
+- family-constraint defaults, avoid-if notes, and next decisions;
+- shared records that support visible pages, structured data, downloads, and agent answers.
+
+For pages where competitors do not have live booking inventory or large review databases, look for places Family Tripwise can be substantially better through compact comparison, maps, constraint routing, freshness checks, contradiction handling, and transparent evidence boundaries.
+
+## August 2026 Depth Cycle
+
+The durable research and timeline decision is in `docs/research/authority-ranking-timeline-and-depth-strategy-2026-08-01.md`.
+
+- **San Diego:** primary authority/evidence city; observe the released logistics index and keep outreach separately user-gated.
+- **Las Vegas:** secondary existing-page ranking candidate because the current all-ages page has the strongest page-level discovery signal; audit current queries and SERPs before editing.
+- **Chicago:** secondary existing-page ranking candidate because key pages have current crawls and a small directional itinerary signal; inspect protected queries before selection.
+- **New York City and San Antonio:** maintain and observe after their recent cluster releases unless a defect or stronger opportunity appears.
+- **Orlando:** preserve the decision pack, but publish no page during the depth cycle without a new explicit override.
+
+This list does not schedule weekly work or promise one edit per city. It narrows where evidence-led actions may be selected. Calendar cadence alone creates no implementation.
+
+Evaluate indexing, crawl, query interpretation, evidence reuse, and page usefulness during the month. Treat durable top-20/top-10 movement and legitimate citations as multi-month outcomes, not August acceptance criteria.
 
 ## Candidate Destination Set
 
