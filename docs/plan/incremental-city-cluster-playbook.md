@@ -312,6 +312,19 @@ Do not generate an edit merely because a weekly scan ran or a nominal observatio
 
 Do not encode a fixed new-domain sandbox. Google documents that improvements may appear in days or take several months, while first-party industry datasets and case histories show wide variation and substantial selection effects. Use project evidence rather than waiting for or promising an age threshold.
 
+### Apply the SEO doctrine before continuing
+
+Use `strategy/seo-doctrine.md` to choose the next lane:
+
+- do not create a URL from keyword phrasing or competitor page count alone;
+- do not run CTR work unless a coherent relevant query family normally averages position 20 or better, has at least 100 finalized 28-day impressions, has a current crawl, and shows a plausible live-SERP disadvantage;
+- do not edit an existing page unless the audit names a concrete intent, evidence, trust, scan, internal-link, or decision-support deficiency;
+- treat technical SEO as the active lane only for a verified exclusion or material usability defect;
+- require a named citation reason before promoting authority work;
+- return `OBSERVE` when the evidence does not support a bounded improvement.
+
+These are deliberately conservative project thresholds, not universal ranking claims. They protect a young low-data site from reacting to aggregate averages and practitioner folklore.
+
 ## Technical Maintainability Gate
 
 Before starting a city implementation, confirm that:

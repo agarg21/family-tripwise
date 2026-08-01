@@ -14,6 +14,7 @@ Read these before changing strategy:
 - `docs/plan/product-ai-plan.md`
 - `docs/plan/incremental-city-cluster-playbook.md`
 - `docs/plan/hotel-research-engine.md`
+- `strategy/seo-doctrine.md`
 - `docs/research/authority-ranking-timeline-and-depth-strategy-2026-08-01.md`
 - `ops/seo-roadmap.json`
 - the latest public-safe GSC snapshot
@@ -77,6 +78,18 @@ Use destination-specific family queries as entry points into a useful planning p
 Page architecture must come from observed SERP overlap, the user job, current site coverage, and evidence depth. Similar wording is not enough to justify another URL. Improve an existing page before creating a new one unless current ranking pages clearly demand a separate page type.
 
 Default search market: United States unless a task explicitly says otherwise.
+
+### Current decision doctrine
+
+`strategy/seo-doctrine.md` governs publish, edit, CTR, authority, AI-use, and stop decisions. In particular:
+
+- page count and publishing frequency are not authority goals;
+- a URL owns a user job and coherent query family, not one exact-match keyword;
+- SERP analysis must identify intent and missing user work rather than reproduce competitor outlines;
+- technical SEO is a release gate and defect lane, not the growth thesis after the gate is green;
+- aggregate low CTR is not actionable while aligned query cohorts remain mostly beyond position 20;
+- an existing-page edit requires a named user-facing deficiency;
+- practitioner cases are hypothesis sources and must survive disclosure, confounding, promotion, official-guidance, and project-evidence checks.
 
 ## Research-Authority Model
 

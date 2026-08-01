@@ -23,6 +23,9 @@ This repository is for building a family travel planning site and AI product. Th
 
 ## SEO Rules
 
+- Treat `strategy/seo-doctrine.md` as the current decision doctrine. Depart from it only when fresh project evidence, current SERP evidence, or explicit user direction supports the exception.
+- Do not use page count, publishing frequency, exact-match variants, competitor inventory, or calendar cadence as authority strategies. Every new URL needs a distinct SERP-supported user job and maintainable information gain.
+- Do not diagnose a CTR problem from aggregate page/property data while aligned query cohorts average worse than position 20. Normal title/snippet experiments require a coherent relevant query family, at least 100 finalized 28-day impressions, current crawl state, and live-SERP evidence.
 - Start with destination clusters where query volume, commercial intent, and SERP weakness overlap.
 - Highest-intent pages:
   - `where to stay in {destination} with kids`

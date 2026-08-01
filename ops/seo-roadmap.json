@@ -2276,6 +2276,47 @@
       "review_summary": "Independent read-only reviewer Bohr (019fbd0a-052c-72f0-84a0-b3db31ad8b17) returned PASS_WITH_P3 in cycle one with no P0-P2. The two P3 wording findings were corrected: GSC 62.19 is labeled aggregate average position, and the Orlando backlog records the August strategy hold. Cycle two returned PASS with no P0-P3 findings.",
       "result": "Aligned the durable strategy and operating plans around a maintained online-evidence layer, information gain, and fast family-constraint decisions. Set an August depth cycle with San Diego primary, Las Vegas and Chicago secondary, New York City and San Antonio maintained, and Orlando publication held; documented non-predictive ranking windows and qualitative Reddit case histories.",
       "notes": "Selected by direct manual user instruction on 2026-08-01 and completed review-clean the same day. Official Google guidance and first-party Ahrefs/Semrush datasets anchor the timeline stance; Reddit cases remain self-reported, heterogeneous, and non-causal. No site path, new URL, deployment, indexing request, outreach, external-account mutation, or recurring automation changed."
+    },
+    {
+      "id": "FT-RES-014",
+      "title": "Codify an opinionated evidence-led SEO doctrine",
+      "kind": "research",
+      "lane": "strategy-and-authority",
+      "status": "completed",
+      "selected_on": "2026-08-01",
+      "completed_on": "2026-08-01",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_ids": [
+        "019fbd26-4c6f-7df0-a639-9b446bd17a51"
+      ],
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "AGENTS.md",
+        "README.md",
+        "docs/research/reddit-seo-practitioner-case-review-2026-08-01.md",
+        "strategy/seo-doctrine.md",
+        "strategy/current-strategy.md",
+        "docs/plan/incremental-city-cluster-playbook.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A review-clean doctrine turns official Google guidance, current project evidence, and credibility-rated practitioner cases into explicit publish, edit, CTR, authority, AI-use, and stop rules that future city work can apply without defaulting to page volume or calendar cadence.",
+      "production_invariant": "Research and strategy only: no site/**, new URL, sitemap, canonical, indexability, deployment, indexing request, outreach, external-account mutation, destination expansion, or recurring automation change.",
+      "gsc_evidence_classification": "The fresh 2026-08-01 authenticated GSC snapshot with finalized data through 2026-07-30 is the current project baseline: 1,226 impressions, 2 clicks, 28 discovered pages, and 24 of 28 inspected sitemap URLs indexed. It is used only to ground decision thresholds; the Reddit review does not manufacture new traffic, ranking, CTR, or authority evidence.",
+      "qa_summary": "Full repository tests pass 142/142. Operator-state and content-freshness QA pass. Local and production SEO QA pass with 0 errors and 0 warnings. All 20 public GSC snapshots validate. Duplicate-key-safe roadmap JSON, exact 10-path scope, ten-case and source checks, Markdown links, privacy/credential safety, no-site scope, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Russell (019fbd26-4c6f-7df0-a639-9b446bd17a51) returned PASS_WITH_P3 in cycle one with no P0-P2. The two P3s were corrected by documenting case inclusion/exclusion and non-representative limits and by separating the job-board case's traffic and revenue attribution. Cycle two returned PASS with no P0-P3 findings.",
+      "result": "Added a binding Family Tripwise SEO doctrine covering page creation, query families, SERP analysis, technical gates, ranking-lane diagnosis, CTR eligibility, existing-page edits, AI research operations, research authority, citation-worthy link work, timing, and stop rules. The supporting review credibility-rates ten current Reddit cases against official Google guidance and project evidence.",
+      "notes": "Selected by direct manual user instruction and completed review-clean on 2026-08-01. Current top/month and travel-relevant r/Agentic_SEO and r/juststart material was browser-inspected and remains qualitative, self-reported, dynamic, and non-causal. The non-overlapping August 1 mechanical GSC snapshot was fast-forwarded after review, validated, and did not change the conclusions. No site path, new URL, deployment, indexing request, outreach, external-account mutation, destination expansion, or recurring automation changed."
     }
   ]
 }

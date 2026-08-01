@@ -15,12 +15,12 @@ The Family Tripwise project operator may update the selected action's repository
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-07-31.json`.
-- Classification on July 31: fresh authenticated read-only Search Console API evidence, collected July 31 with finalized performance data through July 29.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-01.json`.
+- Classification on August 1: fresh authenticated read-only Search Console API evidence, collected August 1 with finalized performance data through July 30.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - The protected July 29 page-query export is aligned to finalized data through July 26, was encrypted in successful GitHub Actions run `30443765836`, and was decrypted only into central operator state outside this repository. It contains 237 rows across 14 pages and 940 impressions; no exported row has a period-average position of 20 or better. Complete rows remain outside this repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on July 31 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 1 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
@@ -84,8 +84,17 @@ The Family Tripwise project operator may update the selected action's repository
 | 46 | `FT-AUTH-004` map San Diego backlink gaps and promote one existing-page authority action | Authority | Completed and review-clean | Semrush detected zero legitimate Family Tripwise referring domains in its current 11-domain sample; links outside Semrush remain unknown, competitor page-level profiles are far smaller and noisier than domain totals imply, and one existing-page enhancement plus public prospect set passed Schrodinger cycle-three review. |
 | 47 | `FT-AUTH-005` add a source-dated San Diego family attraction logistics index | Authority | Released and production-verified | Commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762`; Pages run `30667262994`; exactly 12 activities share one source-dated table/data/download record set and production verification passed. |
 | 48 | `FT-RES-013` define the research-authority thesis and August depth cycle | Strategy/authority | Completed and review-clean | Bohr cycle-two `PASS` with no P0-P3; durable strategy now prioritizes existing-city depth, research authority, and evidence-based ranking windows before expansion. |
+| 49 | `FT-RES-014` codify an opinionated evidence-led SEO doctrine | Strategy/authority | Completed and review-clean | Russell cycle-two `PASS` with no P0-P3; the binding doctrine rejects page-count authority, keyword-variant factories, low-visibility CTR work, technical busywork, and unsupported practitioner folklore. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+
+### FT-RES-014 - Codify an opinionated evidence-led SEO doctrine
+
+- Selected: 2026-08-01 by direct manual user instruction.
+- State: completed and review-clean after Russell cycle-two `PASS` with no P0-P3 findings; research and strategy only.
+- Scope: inspect current top/month and travel-relevant `r/Agentic_SEO` and `r/juststart` posts; credibility-rate claims; validate against official Google guidance and current project evidence; codify explicit publish, edit, CTR, authority, AI-use, and stop rules.
+- Result: `strategy/seo-doctrine.md` is the binding decision doctrine, supported by a ten-case credibility-rated practitioner review and six current official Google sources. Practitioner cases remain qualitative and non-causal.
+- Boundary: no `site/**`, page publication, new destination, indexing request, outreach, external-account mutation, deployment, or recurring automation.
 
 ### FT-AUTH-004 - Map San Diego backlink gaps and promote one existing-page authority action
 

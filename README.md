@@ -23,6 +23,7 @@ San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed fiv
 - [Domain name research](docs/research/domain-name-research.md)
 - [Content strategy](docs/plan/content-strategy.md)
 - [SEO cluster research protocol](docs/plan/seo-cluster-research-protocol.md)
+- [Opinionated SEO doctrine](strategy/seo-doctrine.md)
 - [Research authority and ranking timeline decision](docs/research/authority-ranking-timeline-and-depth-strategy-2026-08-01.md)
 - [Product and AI plan](docs/plan/product-ai-plan.md)
 - [Technical plan](docs/plan/technical-plan.md)

@@ -42,12 +42,27 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-AUTH-004` | San Diego existing-page authority research complete and review-clean | `PASS` | Schrodinger cycle two closed all four P2 findings; cycle three verified the complete diff after non-overlapping July 29-31 GSC snapshots were fast-forwarded. No P0-P3 remains; exact nine-path research-only diff is commit/push eligible after staged QA. |
 | `FT-AUTH-005` | Released and production-verified San Diego attraction logistics implementation | `PASS_WITH_P3` | Aquinas cycle two closed both P2s; no P0-P2 remains. Commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` deployed through Pages run `30667262994`; release marker, target 200 response, production invariants, and production SEO QA passed. One non-blocking visible-row test-isolation P3 remains. |
 | `FT-RES-013` | Research-authority strategy audit complete and review-clean | `PASS` | Bohr cycle two closed both non-blocking wording P3s; no P0-P3 remains. Exact 15-path research/strategy transaction; no `site/**`, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
+| `FT-RES-014` | Opinionated SEO doctrine complete and review-clean | `PASS` | Russell cycle two closed both non-blocking P3s; no P0-P3 remains. Exact 10-path research/strategy transaction; no `site/**`, publication, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-01 - `FT-RES-014` opinionated SEO doctrine review
+
+**Reviewer:** Russell (`019fbd26-4c6f-7df0-a639-9b446bd17a51`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `PASS_WITH_P3` with no P0-P2 findings. The two P3s requested a reproducible Reddit case-selection note and corrected traffic-versus-revenue attribution for the job-board case.
+- The correction records inclusion, exclusion, retained-case count, dynamic ordering, and non-representative limitations, and separates Bing/ChatGPT traffic from predominantly candidate-referral revenue and smaller certification revenue.
+- Cycle 2 returned `PASS` with no P0-P3 findings.
+- The reviewer validated the Reddit credibility method, official-Google alignment, conservative project-specific CTR thresholds, and the page-count, query-family, SERP, technical, edit, AI-research, authority, timing, and stop rules.
+- Full tests pass 142/142. Operator-state, freshness, local and production SEO QA pass with 0 errors and 0 warnings. All 20 public GSC snapshots validate. Duplicate-key-safe JSON, exact 10-path scope, ten-case and source checks, Markdown links, privacy, no-site, and whitespace checks pass.
+- The non-overlapping August 1 GSC snapshot was fast-forwarded after review and validated as mechanical evidence. It preserves the same aggregate totals and indexing count while extending finalized data through July 30, so it does not change the doctrine or review conclusion.
+- No `site/**`, new URL, deployment, indexing request, outreach, external-account mutation, destination expansion, or recurring automation changed.
 
 ### 2026-08-01 - `FT-RES-013` research-authority strategy review
 
