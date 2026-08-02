@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Central SEO Control Room",
-  "last_updated": "2026-08-01",
+  "last_updated": "2026-08-02",
   "last_rescored_on": "2026-07-22",
   "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
@@ -2317,6 +2317,84 @@
       "review_summary": "Independent read-only reviewer Russell (019fbd26-4c6f-7df0-a639-9b446bd17a51) returned PASS_WITH_P3 in cycle one with no P0-P2. The two P3s were corrected by documenting case inclusion/exclusion and non-representative limits and by separating the job-board case's traffic and revenue attribution. Cycle two returned PASS with no P0-P3 findings.",
       "result": "Added a binding Family Tripwise SEO doctrine covering page creation, query families, SERP analysis, technical gates, ranking-lane diagnosis, CTR eligibility, existing-page edits, AI research operations, research authority, citation-worthy link work, timing, and stop rules. The supporting review credibility-rates ten current Reddit cases against official Google guidance and project evidence.",
       "notes": "Selected by direct manual user instruction and completed review-clean on 2026-08-01. Current top/month and travel-relevant r/Agentic_SEO and r/juststart material was browser-inspected and remains qualitative, self-reported, dynamic, and non-causal. The non-overlapping August 1 mechanical GSC snapshot was fast-forwarded after review, validated, and did not change the conclusions. No site path, new URL, deployment, indexing request, outreach, external-account mutation, destination expansion, or recurring automation changed."
+    },
+    {
+      "id": "FT-RES-015",
+      "title": "Diagnose the Las Vegas all-ages ranking opportunity",
+      "kind": "research",
+      "lane": "content-and-authority-diagnostic",
+      "status": "completed",
+      "selected_on": "2026-08-02",
+      "completed_on": "2026-08-02",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_ids": [
+        "019fc258-08e3-7c23-b633-703c318f5885"
+      ],
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": true,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-ranking-diagnostic-2026-08-02.md",
+        "status/las-vegas-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A protected-query, live-SERP, competitor, persona, section-level, internal-link, and citation-reason audit identifies exactly one bounded existing-page or authority implementation, or returns OBSERVE when no concrete deficiency is supported.",
+      "production_invariant": "Research only: no site/**, page edit, new URL, sitemap, canonical, indexability, deployment, indexing request, outreach, external-account mutation, destination expansion, or recurring automation change.",
+      "gsc_evidence_classification": "Fresh authenticated 2026-08-02 public-safe GSC snapshot with finalized data through 2026-07-31: the indexed Las Vegas all-ages URL has 464 impressions, 0 clicks, and aggregate page-average position 60.69 over 28 days. Protected workflow run 30746285285 produced 54 page/query rows aligned to that window and 456 attributable impressions; complete raw rows remain encrypted or in private central operator state outside the public repository.",
+      "promoted_action": "FT-AUTH-006",
+      "qa_summary": "Full repository tests pass 142/142. Operator-state and content-freshness QA pass. Local and production SEO QA pass with 0 errors and 0 warnings. All 21 public GSC snapshots validate. Protected 44/410, 2/18, 8/28 classification arithmetic, top-ten share, modifier absence, GSC page/crawl values, SERP denominator, four page-level reuse targets, duplicate-key-safe JSON, exact seven-path/no-site scope, local references, privacy, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Faraday (019fc258-08e3-7c23-b633-703c318f5885) returned FAIL in cycle one for two P2 findings: the published protected-query rule did not reproduce its totals, and the authority label lacked page-level reuse prospects; one P3 found a hidden SERP URL denominator. The correction made the classifier reproducible, named four exact reuse targets while keeping outreach gated, acknowledged an existing family-cost benchmark and stop rule, and exposed URL-versus-domain overlap. Cycle two returned PASS with no P0-P3 findings.",
+      "result": "Completed a fresh protected-query, live-SERP, ranking-page, persona, every-section, internal-link and authority diagnostic for the indexed Las Vegas all-ages page. One broad activity URL remains correct. The page is not in a CTR lane and has zero finalized performance days after its July 31 crawl, but repeated decision layers and generic cost/current-check fields support one bounded source-dated 12-choice consolidation action.",
+      "notes": "Selected by direct manual user instruction and completed review-clean on 2026-08-02. FT-AUTH-006 is promoted but remains ready pending separate selection; it was not implemented here. No site path, page edit, new URL, deployment, indexing request, outreach, external-account mutation, destination expansion, or recurring automation changed."
+    },
+    {
+      "id": "FT-AUTH-006",
+      "title": "Replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index",
+      "kind": "implementation",
+      "lane": "authority-and-existing-page-growth",
+      "status": "ready_pending_selection",
+      "promoted_on": "2026-08-02",
+      "promoted_by": "FT-RES-015",
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-attraction-cost-friction-evidence.md",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "tools/las-vegas-things-to-do-page.test.mjs",
+        "tools/las-vegas-attraction-cost-friction.test.mjs",
+        "site/things-to-do/las-vegas-with-kids.html",
+        "status/las-vegas-pages.md",
+        "ops/needs-user.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing Las Vegas all-ages URL uses one validated embedded record set to compare exactly its current 12 choices by a clearly defined approximate family admission scenario, time, setting, zone and exact current-check friction; the new index replaces the old wide table and repeated detail/route/check layers, drives matching ItemList and optional client-side CSV output, and adds the named family-hotel route without increasing page count or visible decision layers.",
+      "production_invariant": "Keep the existing title, H1, URL, canonical, indexability, sitemap entry count and sibling-page ownership. No new activity, new URL, separate public data URL, indexing request, outreach, paid placement, external-account mutation, destination expansion, or recurring automation.",
+      "gsc_evidence_classification": "Promoted by FT-RES-015 from fresh public-safe GSC and protected query evidence finalized through 2026-07-31. The page has 464 public impressions, zero clicks and aggregate page-average position 60.69; 410 of 456 protected attributable impressions use direct action/list wording and another 18 use place/visit wording. The July 31 crawl has zero finalized post-crawl performance days, so this action is justified by an independently observed usefulness/citation gap and makes no rewrite-failure or ranking promise.",
+      "notes": "Ready for separate selection; not selected or implemented by FT-RES-015. Use exactly the existing 12 choices, direct official sources, a named two-adult/two-child admission-only scenario, explicit exclusions and VARIABLE/VERIFY or UNKNOWN values. Replace repeated layers rather than append. Outreach remains separately user-gated."
     }
   ]
 }

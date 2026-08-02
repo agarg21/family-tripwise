@@ -43,12 +43,27 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-AUTH-005` | Released and production-verified San Diego attraction logistics implementation | `PASS_WITH_P3` | Aquinas cycle two closed both P2s; no P0-P2 remains. Commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` deployed through Pages run `30667262994`; release marker, target 200 response, production invariants, and production SEO QA passed. One non-blocking visible-row test-isolation P3 remains. |
 | `FT-RES-013` | Research-authority strategy audit complete and review-clean | `PASS` | Bohr cycle two closed both non-blocking wording P3s; no P0-P3 remains. Exact 15-path research/strategy transaction; no `site/**`, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
 | `FT-RES-014` | Opinionated SEO doctrine complete and review-clean | `PASS` | Russell cycle two closed both non-blocking P3s; no P0-P3 remains. Exact 10-path research/strategy transaction; no `site/**`, publication, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
+| `FT-RES-015` | Las Vegas all-ages ranking diagnostic complete and review-clean | `PASS` | Faraday cycle two closed both P2s and the P3; no P0-P3 remains. Exact seven-path research transaction promotes only `FT-AUTH-006`; protected rows stay outside the public repository and no `site/**` or external action changed. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-02 - `FT-RES-015` Las Vegas all-ages ranking diagnostic review
+
+**Reviewer:** Faraday (`019fc258-08e3-7c23-b633-703c318f5885`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for two P2 findings: the documented protected-query classifier omitted one `to do` construction and did not reproduce 44 rows / 410 impressions, and the authority framing lacked legitimate page-level reuse prospects. One P3 found that two Instagram URLs were collapsed behind an unexplained 8-of-9 SERP denominator.
+- The correction made the three-bucket classifier explicit and reproducible; distinguished URL-level from publisher/domain overlap; acknowledged KidPaths as an existing family-cost benchmark; named exact Seattle's Child, Family Vacation Hub, Blogger at Large, and KidPaths pages with field-level reuse reasons and confidence boundaries; kept outreach separately gated; and added a stop rule when the finished index is not materially non-duplicative.
+- Cycle 2 returned `PASS` with no P0-P3 findings.
+- The reviewer independently reproduced 44 direct-action rows / 410 impressions, 2 place/visit rows / 18 impressions, and 8 generic destination-with-kids rows / 28 impressions, totaling 54 rows / 456 impressions without exposing complete query rows.
+- The zero-finalized-days-after-July-31-crawl boundary, exactly one bounded action, no-new-page rule, persona/every-section audit, source safety, citation rationale, and separate outreach gate passed.
+- Full tests pass 142/142. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings. All 21 public GSC snapshots validate. Duplicate-key-safe JSON, exact seven-path scope, no `site/**`, local references, privacy, and whitespace checks pass.
+
 
 ### 2026-08-01 - `FT-RES-014` opinionated SEO doctrine review
 
