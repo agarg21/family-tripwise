@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-02
+Last updated: 2026-08-03
 
 ## Cycle Name
 
@@ -12,15 +12,15 @@ The repository mirror of project state is `ops/seo-roadmap.json`; the central Co
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` remains evidence-gated rather than calendar-triggered.
 
-`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` through Pages run `30667262994`. `FT-RES-013`, `FT-RES-014`, and `FT-RES-015` are complete and review-clean. `FT-RES-015` promotes one bounded existing-page follow-on, `FT-AUTH-006`, for separate selection. `FT-PUB-006` remains unselected and held.
+`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` through Pages run `30667262994`. `FT-RES-013`, `FT-RES-014`, and `FT-RES-015` are complete and review-clean. The user selected the promoted Las Vegas existing-page action `FT-AUTH-006` on August 3. `FT-PUB-006` remains unselected and held.
 
 ## State Checkpoint
 
-- Latest GSC evidence: `ops/gsc-snapshots/2026-08-02.md`, fresh authenticated API evidence with finalized data through 2026-07-31. `FT-AUTH-004` remains explicitly based on the July 28 snapshot that existed at selection; subsequent snapshots are mechanical monitoring evidence, not a retroactive action baseline.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-08-03.md`, fresh authenticated API evidence with finalized data through 2026-08-01. The Las Vegas all-ages URL has 480 impressions, zero clicks, page-average position 60.3, remains indexed, and was last crawled July 31. This mechanical overlay preserves the `FT-RES-015` diagnosis and is not a CTR signal.
 - Latest site release: `FT-AUTH-005` at commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762`; Pages run `30667262994` succeeded, and the release marker, target 200 response, production invariant, and production SEO QA passed.
-- Active manual action: none. `FT-RES-015`, the research-only Las Vegas all-ages ranking diagnostic, is complete and review-clean after Faraday cycle-two `PASS` with no P0-P3 findings. No site edit, publication, indexing request, outreach, external-account mutation, destination expansion, or recurring automation occurred.
+- Active manual action: `FT-AUTH-006`, selected by direct user instruction on August 3. It may update only the existing Las Vegas all-ages page and its declared source, evidence, tests, status, and ops paths; no new URL, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 - Las Vegas diagnostic result: the target is indexed and has 464 public impressions, zero clicks and page-average position 60.69. Protected export run `30746285285` produced 54 rows and 456 attributable impressions; 410 impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording. Three live SERPs strongly overlap, so one broad all-ages URL remains correct. Zero finalized performance days follow the July 31 crawl, so no rewrite failure is claimed.
-- Promoted existing-page action: `FT-AUTH-006`, ready pending separate selection. It would replace repeated Las Vegas comparison/detail/route/check layers with one source-dated family activity cost-and-friction index for exactly the current 12 choices; no new page, title test, indexing request, or outreach.
+- Active implementation result: `FT-AUTH-006` keeps the existing Las Vegas URL, title, H1, filters, and 12 choices; it replaces the old 11-column matrix plus repeated detail/route/check layers with one source-dated cost-and-friction record set that drives the visible index, ItemList, and client-side CSV. Herschel cycle two returned `PASS` with no P0-P3 findings; 147/147 tests and state/SEO/responsive/source/privacy/scope QA pass. Exact-path commit, deployment and production verification remain.
 - Latest completed manual action: `FT-RES-015`, research only, review-clean after Faraday cycle-two `PASS` with no P0-P3 findings.
 - Authority implementation result: the existing San Diego all-ages page now contains the 12-attraction logistics index and CSV without adding a canonical/indexable HTML page. The teen page remained unchanged; no indexing request or outreach occurred.
 - Promoted expansion action: `FT-PUB-006`, unselected and held during the August depth cycle; it still requires explicit user approval after strategy review.
@@ -43,7 +43,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the August 2 snapshot has finalized data through July 31, 1,400 impressions and 2 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the August 3 snapshot has finalized data through August 1, 1,507 impressions and 3 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: `FT-AUTH-005` at commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762`; GitHub Pages run `30667262994` succeeded and production verification passed

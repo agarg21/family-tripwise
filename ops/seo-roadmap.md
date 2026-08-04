@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-02
+Last updated: 2026-08-03
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -15,12 +15,12 @@ The Family Tripwise project operator may update the selected action's repository
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-02.json`.
-- Classification on August 2: fresh authenticated read-only Search Console API evidence, collected August 2 with finalized performance data through July 31.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-03.json`.
+- Classification on August 3: fresh authenticated read-only Search Console API evidence, collected August 3 with finalized performance data through August 1.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - The protected July 29 sitewide export remains aligned to finalized data through July 26 and outside this repository. A fresh target-only Las Vegas export was encrypted in successful GitHub Actions run `30746285285`, decrypted only into private central operator state, and aligned through July 31. It contains 54 rows and 456 attributable impressions; complete rows remain outside this repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 2 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 3 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
@@ -86,7 +86,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 48 | `FT-RES-013` define the research-authority thesis and August depth cycle | Strategy/authority | Completed and review-clean | Bohr cycle-two `PASS` with no P0-P3; durable strategy now prioritizes existing-city depth, research authority, and evidence-based ranking windows before expansion. |
 | 49 | `FT-RES-014` codify an opinionated evidence-led SEO doctrine | Strategy/authority | Completed and review-clean | Russell cycle-two `PASS` with no P0-P3; the binding doctrine rejects page-count authority, keyword-variant factories, low-visibility CTR work, technical busywork, and unsupported practitioner folklore. |
 | 50 | `FT-RES-015` diagnose the Las Vegas all-ages ranking opportunity | Content/authority diagnostic | Completed and review-clean | Faraday cycle-two `PASS` with no P0-P3; fresh protected evidence and live SERPs support one broad URL and one consolidation/citation improvement without calling the latest crawl a failed rewrite. |
-| 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Ready pending separate selection | Keep the same 12 choices and URL; replace the wide table and repeated detail/route/check layers with one source-dated family cost-and-friction record set. No list expansion, title test, new page, indexing request, or outreach. |
+| 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Review-clean; release pending | Herschel cycle-two `PASS` with no P0-P3; 147/147 tests and state/SEO/responsive/source/privacy/scope QA pass. The existing URL keeps the same 12 choices while repeated layers become one source-dated family cost-and-friction record set. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -98,17 +98,18 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Evidence: fresh August 2 public-safe GSC finalized through July 31; successful protected export run `30746285285` with 54 rows and 456 attributable impressions retained outside the public repository; three current live SERPs; seven representative ranking pages; every current section; prior Las Vegas personas; internal links; and the current authority sample.
 - Result: 410 protected impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording; three representative SERPs strongly overlap. Keep one broad activity URL. The current page repeats the same 12 choices through an 11-column table, six details, five routes and three separate checks while leaving realistic family admission and current-check facts scattered or generic.
 - Timing boundary: the July 31 crawl has zero finalized performance days after it. Do not call the July revision a ranking failure and do not run a title/CTR test at page-average position 60.69.
-- Promoted action: `FT-AUTH-006`, ready for separate selection. Replace repeated layers with one source-dated cost-and-friction index for exactly the same 12 choices; add the existing family-hotel sibling to contextual routing.
+- Promoted action: `FT-AUTH-006`, subsequently selected by direct user instruction on August 3. Replace repeated layers with one source-dated cost-and-friction index for exactly the same 12 choices; add the existing family-hotel sibling to contextual routing.
 - Boundary: no `site/**`, page edit, new URL, publication, indexing request, outreach, external-account mutation, deployment, destination expansion, or recurring automation.
 
 ### FT-AUTH-006 - Add the Las Vegas family activity cost-and-friction index
 
-- State: ready pending separate selection; not implemented by `FT-RES-015`.
+- State: review-clean after Herschel cycle-two `PASS` with no P0-P3 findings; exact-path commit, deployment and production verification pending.
 - Target: the existing `https://familytripwise.com/things-to-do/las-vegas-with-kids.html` only.
 - Product boundary: use exactly the current 12 choices. One validated embedded record set should power a compact visible index, ItemList data and optional client-side CSV with no separate public data URL.
 - Decision fields: direct official source; a named two-adult/two-child admission-only estimate or `VARIABLE / VERIFY`; explicit exclusions; planning time; setting; Las Vegas zone; exact current-check friction; checked date; evidence class; confidence; unresolved unknowns.
 - Consolidation rule: replace the old wide table, six detail cards, five route cards and three repeated checks. Keep filters, at most three starts, FAQ and cluster routes; add the existing named family-hotel route. Do not append another comparison layer or inflate the list.
 - Measurement: preserve the August 2 public/protected baseline, verify product and technical invariants at release, and wait for a later crawl plus finalized post-release query evidence before interpreting movement. Do not create an observation task from calendar cadence.
+- QA: 147/147 tests; operator-state QA; local and production-preflight SEO QA at 0 errors and 0 warnings; responsive desktop/mobile behavior; official-source boundaries; exact record alignment; duplicate-key JSON; privacy; exact scope; and whitespace checks pass.
 - Boundary: unchanged title, H1, URL, canonical, indexability and sitemap count; no new URL, indexing request, outreach, paid placement, external-account mutation, destination expansion, or recurring automation.
 
 ### FT-RES-014 - Codify an opinionated evidence-led SEO doctrine

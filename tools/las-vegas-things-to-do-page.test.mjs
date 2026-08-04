@@ -5,6 +5,7 @@ import { dirname, join, relative } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
+import { activityPages } from "./page-generation/upgrade-page-data.mjs";
 import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -42,7 +43,7 @@ test("publishes one canonical 12-choice Las Vegas activity decision page", () =>
 
   assert.match(html, /<title>Things to Do in Las Vegas With Kids: 12 Picks by Trip Style<\/title>/);
   assert.match(html, /<h1>Things to Do in Las Vegas With Kids: 12 Picks by Trip Style<\/h1>/);
-  assert.match(html, /Last updated:<\/strong> July 22, 2026/);
+  assert.match(html, /Attraction prices and official sources checked:<\/strong> August 3, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/las-vegas-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/las-vegas-with-kids\.html/g) || []).length, 1);
@@ -50,6 +51,12 @@ test("publishes one canonical 12-choice Las Vegas activity decision page", () =>
   const baseSection = html.slice(html.indexOf('<section class="container page-section">'), html.indexOf("<!-- priority-upgrade:start -->"));
   assert.equal((baseSection.match(/<article class="activity-card" data-tags=/g) || []).length, 12);
   assert.equal((baseSection.match(/<div><dt>/g) || []).length, 48);
+  const recordNames = activityPages[target].costFrictionIndex.map(({ name }) => name);
+  const filterCardNames = [...baseSection.matchAll(/<article class="activity-card" data-tags="[^"]+">[\s\S]*?<h3>([^<]+)<\/h3>/g)].map((match) => match[1]);
+  const mapData = JSON.parse(baseSection.match(/<script type="application\/json" id="map-ready-activities">([\s\S]*?)<\/script>/)[1]);
+  assert.deepEqual(recordNames, activityNames);
+  assert.deepEqual(filterCardNames, recordNames);
+  assert.deepEqual(mapData.map(({ name }) => name), recordNames);
   for (const filter of ["all", "toddler", "elementary", "teen", "indoor", "budget"]) {
     assert.match(baseSection, new RegExp(`data-filter="${filter}"`));
   }
@@ -57,20 +64,28 @@ test("publishes one canonical 12-choice Las Vegas activity decision page", () =>
   for (const name of activityNames) assert.ok(html.includes(name), `missing ${name}`);
 });
 
-test("keeps the long page compact and uncertainty-aware", () => {
+test("consolidates the long page into one uncertainty-aware decision layer", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const upgrade = html.slice(html.indexOf("<!-- priority-upgrade:start -->"), html.indexOf("<!-- priority-upgrade:end -->"));
 
-  assert.match(upgrade, /Five useful ways to start/);
-  assert.equal((upgrade.match(/<article class="quick-pick">/g) || []).length, 5);
-  assert.equal((upgrade.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 12);
-  assert.equal((upgrade.match(/<article class="detail-card">/g) || []).length, 6);
-  assert.equal((upgrade.match(/<article class="plan-card">/g) || []).length, 5);
-  assert.equal((upgrade.match(/<h3>(Where to stay in Las Vegas|Las Vegas family itinerary|Las Vegas with teens)<\/h3>/g) || []).length, 3);
-  assert.match(upgrade, /editorial estimates, not venue guarantees/i);
-  assert.match(upgrade, /These are starting routes, not universal rankings/i);
+  assert.match(upgrade, /Three useful ways to start/);
+  assert.equal((upgrade.match(/<article class="quick-pick">/g) || []).length, 3);
+  const comparison = upgrade.match(/aria-labelledby="las-vegas-attraction-cost-friction-title"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(comparison, "expected one cost-and-friction comparison");
+  assert.equal((comparison.match(/<tr>/g) || []).length, 13);
+  assert.equal((comparison.match(/>Official source<\/a>/g) || []).length, 12);
+  assert.equal((upgrade.match(/<article class="detail-card">/g) || []).length, 0);
+  assert.equal((upgrade.match(/<article class="plan-card">/g) || []).length, 0);
+  assert.equal((upgrade.match(/<h3>(Where to stay in Las Vegas|Family hotels in Las Vegas|Las Vegas family itinerary|Las Vegas with teens)<\/h3>/g) || []).length, 4);
+  assert.match(upgrade, /two adults and two children ages 6 and 10/i);
+  assert.match(upgrade, /VARIABLE \/ VERIFY/);
+  assert.match(upgrade, /planning estimates, not venue guarantees/i);
 
   for (const blocked of [
+    "Activity decision table",
+    "Six choices that need an extra check",
+    "Build a Las Vegas day without stacking the Strip",
+    "Three checks that change the shortlist",
     "Best overall",
     "Best stroller-friendly",
     "Best younger-kid indoor stop",
@@ -95,7 +110,7 @@ test("keeps schema and official sources aligned with the 12 choices", () => {
   for (const question of faq.mainEntity.map((item) => item.name)) {
     assert.ok(visibleHtml.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
-  for (const source of ["Visit Las Vegas family guide", "Adventuredome", "Springs Preserve", "Red Rock Canyon NCA", "Tournament of Kings", "Neon Museum FAQ"]) {
+  for (const source of ["Mandalay Bay Beach", "Adventuredome", "Springs Preserve tickets", "Red Rock Canyon visit planning", "Tournament of Kings", "Neon Museum daytime admission"]) {
     assert.match(html, new RegExp(source));
   }
 });

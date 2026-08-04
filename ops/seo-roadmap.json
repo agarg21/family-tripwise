@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Central SEO Control Room",
-  "last_updated": "2026-08-02",
+  "last_updated": "2026-08-03",
   "last_rescored_on": "2026-07-22",
   "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
@@ -2364,9 +2364,15 @@
       "title": "Replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index",
       "kind": "implementation",
       "lane": "authority-and-existing-page-growth",
-      "status": "ready_pending_selection",
+      "status": "in_progress",
       "promoted_on": "2026-08-02",
       "promoted_by": "FT-RES-015",
+      "selected_on": "2026-08-03",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_ids": [
+        "019fc816-3052-76a0-92a2-fa0a6753e2ca"
+      ],
       "impact": 5,
       "confidence": 4,
       "learning_value": 5,
@@ -2383,6 +2389,7 @@
         "tools/page-generation/upgrade-engine.mjs",
         "tools/las-vegas-things-to-do-page.test.mjs",
         "tools/las-vegas-attraction-cost-friction.test.mjs",
+        "tools/las-vegas-family-hotels-page.test.mjs",
         "site/things-to-do/las-vegas-with-kids.html",
         "status/las-vegas-pages.md",
         "ops/needs-user.md",
@@ -2394,7 +2401,10 @@
       "success_signal": "The existing Las Vegas all-ages URL uses one validated embedded record set to compare exactly its current 12 choices by a clearly defined approximate family admission scenario, time, setting, zone and exact current-check friction; the new index replaces the old wide table and repeated detail/route/check layers, drives matching ItemList and optional client-side CSV output, and adds the named family-hotel route without increasing page count or visible decision layers.",
       "production_invariant": "Keep the existing title, H1, URL, canonical, indexability, sitemap entry count and sibling-page ownership. No new activity, new URL, separate public data URL, indexing request, outreach, paid placement, external-account mutation, destination expansion, or recurring automation.",
       "gsc_evidence_classification": "Promoted by FT-RES-015 from fresh public-safe GSC and protected query evidence finalized through 2026-07-31. The page has 464 public impressions, zero clicks and aggregate page-average position 60.69; 410 of 456 protected attributable impressions use direct action/list wording and another 18 use place/visit wording. The July 31 crawl has zero finalized post-crawl performance days, so this action is justified by an independently observed usefulness/citation gap and makes no rewrite-failure or ranking promise.",
-      "notes": "Ready for separate selection; not selected or implemented by FT-RES-015. Use exactly the existing 12 choices, direct official sources, a named two-adult/two-child admission-only scenario, explicit exclusions and VARIABLE/VERIFY or UNKNOWN values. Replace repeated layers rather than append. Outreach remains separately user-gated."
+      "qa_summary": "Full repository tests pass 147/147. Operator-state QA passes. Local and production-preflight SEO QA pass with 0 errors and 0 warnings. Responsive desktop/mobile behavior, official-source boundaries, ItemList/filter/map/index alignment, duplicate-key-safe roadmap JSON, exact 13-path scope, privacy/credential safety and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Herschel (019fc816-3052-76a0-92a2-fa0a6753e2ca) returned FAIL in cycle one for one P2 Neon Museum seasonal/fee/age-band evidence boundary and three P3 clarity, data-alignment and status-label issues. The correction uses VARIABLE / VERIFY for the ambiguous family scenario, records the September-May and processing-fee boundaries, separates evidence from confidence, proves exact record alignment and corrects the status label. Cycle two returned PASS with no P0-P3 findings.",
+      "result": "Review-clean existing-page consolidation for exactly the current 12 Las Vegas choices: three starts, one source-dated family admission and planning-friction index, one shared embedded record set for visible rows, ItemList and CSV, and four contextual cluster routes including the existing family-hotel comparison.",
+      "notes": "Selected by direct manual user instruction on 2026-08-03 and review-clean after Herschel cycle-two PASS; release pending. Use exactly the existing 12 choices, direct official sources, a named two-adult/two-child admission-only scenario, explicit exclusions and VARIABLE/VERIFY or UNKNOWN values. Replace repeated layers rather than append. The declared scope includes the existing Las Vegas family-hotel regression test because its prior no-link assertion directly conflicts with this action's required named-hotel route; the hotel page remains unchanged. Outreach remains separately user-gated."
     }
   ]
 }

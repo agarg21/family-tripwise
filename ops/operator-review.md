@@ -44,12 +44,25 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-013` | Research-authority strategy audit complete and review-clean | `PASS` | Bohr cycle two closed both non-blocking wording P3s; no P0-P3 remains. Exact 15-path research/strategy transaction; no `site/**`, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
 | `FT-RES-014` | Opinionated SEO doctrine complete and review-clean | `PASS` | Russell cycle two closed both non-blocking P3s; no P0-P3 remains. Exact 10-path research/strategy transaction; no `site/**`, publication, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
 | `FT-RES-015` | Las Vegas all-ages ranking diagnostic complete and review-clean | `PASS` | Faraday cycle two closed both P2s and the P3; no P0-P3 remains. Exact seven-path research transaction promotes only `FT-AUTH-006`; protected rows stay outside the public repository and no `site/**` or external action changed. |
+| `FT-AUTH-006` | Las Vegas cost-and-friction implementation review-clean; release pending | `PASS` | Herschel cycle two closed the Neon seasonal/processing-fee evidence boundary and all three clarity/alignment/status findings; no P0-P3 remains. Exact 13-path scope; 147/147 tests and state/SEO/responsive/source/privacy/scope QA pass. No new page, indexing request, outreach, or external mutation. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-03 - `FT-AUTH-006` Las Vegas cost-and-friction implementation review
+
+**Reviewer:** Herschel (`019fc816-3052-76a0-92a2-fa0a6753e2ca`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for one P2: the Neon Museum row did not fully preserve the official September-May daytime boundary, processing fee, and missing age-six ticket-band ambiguity. Three P3s requested clearer evidence/confidence labels, exact filter/map/index record-alignment proof, and a date-bound GSC status heading.
+- The correction changed the family estimate to `VARIABLE / VERIFY`, linked the exact daytime-admission page, recorded the season and processing fee, kept the known September-May subtotal separate from the unresolved age-six input, separated evidence from confidence, added exact order/name alignment coverage, and corrected the GSC label.
+- Cycle 2 returned `PASS` under the title "Las Vegas cost-and-friction consolidation is source-aligned and review-clean," with no P0-P3 findings across all 13 declared paths.
+- Full tests pass 147/147. Operator-state QA and local/production-preflight SEO QA pass with 0 errors and 0 warnings. Responsive desktop/mobile behavior, official-source boundaries, record alignment, duplicate-key-safe JSON, exact scope, privacy/credential safety, and whitespace checks pass.
+- The existing URL, title, H1, canonical, indexability, sitemap count, filters, and 12-choice set remain unchanged. No new page, indexing request, outreach, external-account mutation, destination expansion, or recurring automation was introduced.
 
 ### 2026-08-02 - `FT-RES-015` Las Vegas all-ages ranking diagnostic review
 

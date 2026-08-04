@@ -72,6 +72,14 @@ export function attractionLogisticsCsv(records) {
     .join("\r\n");
 }
 
+export function attractionCostFrictionCsv(records) {
+  const columns = ["name", "zone", "setting", "timeEstimate", "familyAdmissionEstimate", "costBasis", "inclusions", "exclusions", "currentCheck", "evidenceClass", "confidence", "unknowns", "checked", "officialUrl"];
+  const csvCell = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
+  return [columns, ...records.map((record) => columns.map((column) => record[column]))]
+    .map((row) => row.map(csvCell).join(","))
+    .join("\r\n");
+}
+
 function renderAttractionLogisticsIndex(records, note) {
   return `      <section class="container page-section rank-ready-section" aria-labelledby="san-diego-logistics-index-title">
         <div class="section-heading">
@@ -100,6 +108,45 @@ ${records.map((record) => `              <tr><th scope="row">${esc(record.name)}
               const link = document.createElement("a");
               link.href = url;
               link.download = "san-diego-family-attraction-logistics-2026-07-31.csv";
+              document.body.append(link);
+              link.click();
+              link.remove();
+              URL.revokeObjectURL(url);
+            });
+          })();
+        </script>
+      </section>`;
+}
+
+function renderAttractionCostFrictionIndex(records, note, config) {
+  const id = config.id;
+  return `      <section class="container page-section rank-ready-section" aria-labelledby="${esc(id)}-title">
+        <div class="section-heading">
+          <p class="eyebrow">${esc(config.eyebrow)}</p>
+          <h2 id="${esc(id)}-title">${esc(config.title)}</h2>
+        </div>
+        <p class="review-label" id="${esc(id)}-note">${esc(note)}</p>
+        <p><button class="button primary" id="download-${esc(id)}" type="button">Download CSV</button></p>
+        <div class="comparison-scroll logistics-comparison" tabindex="0" role="region" aria-label="${esc(config.ariaLabel)}">
+          <table class="comparison-table">
+            <thead><tr><th scope="col">Choice</th><th scope="col">Approximate family admission</th><th scope="col">Planning shape</th><th scope="col">Check before going</th><th scope="col">Evidence</th></tr></thead>
+            <tbody>
+${records.map((record) => `              <tr><th scope="row">${esc(record.name)}<br><small>${esc(record.zone)}</small></th><td><strong>${esc(record.familyAdmissionEstimate)}</strong><br>${esc(record.costBasis)}<br><small>Includes: ${esc(record.inclusions)} Excludes: ${esc(record.exclusions)}</small></td><td>${esc(record.setting)}<br>${esc(record.timeEstimate)} estimate</td><td>${esc(record.currentCheck)}<br><small>Still uncertain: ${esc(record.unknowns)}</small></td><td><strong>Evidence:</strong> ${esc(record.evidenceClass)}<br><strong>Confidence:</strong> ${esc(record.confidence)}<br><a href="${esc(record.officialUrl)}">Official source</a><br>Checked ${esc(record.checked)}</td></tr>`).join("\n")}
+            </tbody>
+          </table>
+        </div>
+        <script type="application/json" id="${esc(id)}-data">${scriptSafeJson(records)}</script>
+        <script>
+          (() => {
+            const button = document.getElementById("download-${esc(id)}");
+            const data = JSON.parse(document.getElementById("${esc(id)}-data").textContent);
+            ${attractionCostFrictionCsv.toString()}
+            button.addEventListener("click", () => {
+              const csv = attractionCostFrictionCsv(data);
+              const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+              const link = document.createElement("a");
+              link.href = url;
+              link.download = "${esc(config.downloadFilename)}";
               document.body.append(link);
               link.click();
               link.remove();
@@ -370,7 +417,7 @@ ${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>
         </div>
       </section>
 
-${page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote) : `      <section class="container page-section rank-ready-section">
+${page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote) : `      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>
@@ -378,7 +425,7 @@ ${page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsInd
 ${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
       </section>`}
 
-      <section class="band intro-band rank-ready-section">
+${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
@@ -386,7 +433,7 @@ ${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNo
           </div>
 ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
         </div>
-      </section>
+      </section>`}
 
 ${plansSection}${clusterSection ? `${clusterSection}` : ""}
 ${officialCheckSection}${faqSection}${markerEnd}
@@ -839,7 +886,7 @@ ${schemaEnd}
 }
 
 function itemListSchema(page) {
-  const items = page.logisticsIndex?.length ? page.logisticsIndex : page.rows;
+  const items = page.costFrictionIndex?.length ? page.costFrictionIndex : page.logisticsIndex?.length ? page.logisticsIndex : page.rows;
   if (!items?.length) return "";
   return `${schemaStart}
     <script type="application/ld+json">${JSON.stringify({
@@ -852,7 +899,9 @@ function itemListSchema(page) {
         name: Array.isArray(item) ? item[0] : item.name,
         description: Array.isArray(item)
           ? item[9] || item[1]
-          : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${item.currentCheck}.`
+          : page.costFrictionIndex?.length
+            ? `Approximate family admission: ${item.familyAdmissionEstimate}. Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}. Current check: ${item.currentCheck}`
+            : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${item.currentCheck}.`
       }))
     })}</script>
 ${schemaEnd}

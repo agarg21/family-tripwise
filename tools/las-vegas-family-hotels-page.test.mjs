@@ -65,12 +65,12 @@ test("keeps visible FAQ and schema aligned", () => {
   }
 });
 
-test("routes from home and the existing stay guide without changing the activity page", () => {
+test("routes from home, the stay guide, and the activity decision flow", () => {
   const home = readFileSync(join(root, "site", "index.html"), "utf8");
   const stay = readFileSync(join(root, "site", "where-to-stay", "las-vegas-with-kids.html"), "utf8");
   const activity = readFileSync(join(root, "site", "things-to-do", "las-vegas-with-kids.html"), "utf8");
 
   assert.match(home, /href="\.\/where-to-stay\/las-vegas-family-hotels\.html"/);
   assert.match(stay, /href="\.\/las-vegas-family-hotels\.html"/);
-  assert.doesNotMatch(activity, /las-vegas-family-hotels\.html/);
+  assert.equal((activity.match(/href="\.\.\/where-to-stay\/las-vegas-family-hotels\.html"/g) || []).length, 1);
 });
