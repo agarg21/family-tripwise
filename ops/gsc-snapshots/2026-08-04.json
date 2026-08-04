@@ -4,7 +4,7 @@
   "property": "sc-domain:familytripwise.com",
   "visibility": "public-summary",
   "collection_mode": "search-console-api-readonly",
-  "collected_at": "2026-08-04T10:37:49.025Z",
+  "collected_at": "2026-08-04T12:19:30.984Z",
   "data_through": "2026-08-02",
   "requested_period_end": "2026-08-02",
   "completeness": "finalized-conservative",
