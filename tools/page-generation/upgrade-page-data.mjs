@@ -1336,12 +1336,18 @@ export const activityPages = {
 
 export const stayPages = {
   "where-to-stay/san-diego-with-kids.html": {
-    title: "Where to Stay in San Diego With Kids: Areas, Family Hotels and Booking Checks",
+    title: "Where to Stay in San Diego With Kids: 5 Areas Compared",
     description:
-      "Compare five areas for a San Diego family trip by beach access, activity routes, car needs, hotel style, midday resets, and nearby kid activities.",
+      "Compare five San Diego areas for a family trip by beach access, first-day routes, car needs, midday resets, hotel patterns, and nearby kid activities.",
     city: "San Diego",
+    schemaName: "San Diego family stay area options",
     stayTool: true,
     hideHotelSection: true,
+    baseReplacements: [
+      ["<h1>Where to stay in San Diego with kids</h1>", "<h1>Where to Stay in San Diego With Kids: 5 Areas Compared</h1>"],
+      ["<p>Compare five San Diego areas by beach access, activity routes, car needs, hotel style, and midday-reset practicality, then move to a shortlist of specific hotels.</p>", "<p>Choose among Mission Bay, La Jolla, Downtown/Little Italy, Coronado, and Mission Valley by the first two days, transport, and midday reset. Then compare named hotels.</p>"],
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Area guidance checked:</strong> July 20, 2026; page updated August 4, 2026</p>"]
+    ],
     quickHeading: "Five areas, matched to different family trips",
     matrixHeading: "Compare the five bases side by side",
     areaNote: "Area-level guidance helps narrow the search. The exact hotel, route, price, and room still determine whether the choice works for your family.",
@@ -1360,8 +1366,8 @@ export const stayPages = {
       ["Coronado", "A beach-first stay with resort time", "Mainland routes and timing vary by hotel and destination", "Compare the exact drive, ferry, or bus sequence for planned mainland days", "Time the return before relying on the hotel for a midday break", "Beach resorts and inns", "Coronado beach and waterfront"],
       ["Mission Valley / Hotel Circle", "A central-base hypothesis for a spread-out itinerary", "Neighborhood feel and walkability vary by exact property", "Compare property-level driving routes and current trolley access", "Time each return; central location alone does not prove a practical reset", "Chain hotels, suites and value-oriented options", "Central context toward the zoo, Old Town and multiple corridors"]
     ],
-    bookingHeading: "Four checks before choosing the exact hotel",
-    clusterHeading: "Continue planning from the chosen base",
+    bookingHeading: "Choose the area first, then verify the exact hotel",
+    clusterHeading: "Move from the chosen area to a named hotel",
     bookingChecks: [
       ["Map the first two days", "Compare each hotel against the family's first two activity days, meals, and likely midday return. A central-looking area can still create awkward routes."],
       ["Check the sleep setup", "Confirm beds, occupancy, sofa-bed wording, crib or rollaway availability, connecting-room rules, elevator access, and room-location requests for the exact room type."],
@@ -1369,17 +1375,13 @@ export const stayPages = {
       ["Confirm the make-or-break amenity", "If the pool, kitchen, breakfast, laundry, beach access, or quiet room request is essential, check the current property page and ask the hotel when the published answer is unclear."]
     ],
     clusterLinks: [
-      ["12 family hotel options", "Move from area choice to named hotels with rough nightly prices, room setup, pool and kitchen facts, sampled online-review themes, and a shared map.", "./san-diego-family-hotels.html", "Compare San Diego family hotels"],
+      ["Compare 12 family hotels", "Use the separate hotel shortlist after choosing an area. Compare named properties by rough nightly price, room setup, pool and kitchen facts, sampled online-review themes, and the shared map.", "./san-diego-family-hotels.html", "Compare 12 San Diego family hotels"],
       ["Things to do in San Diego", "Use the activity guide to decide whether your hotel should optimize for the zoo, Mission Bay, La Jolla, Coronado, or Balboa Park.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
       ["San Diego family itinerary", "Match the stay base to a realistic 1-day, 2-day, 3-day, toddler, teen, or rainy-day route before booking.", "../family-itinerary/san-diego-with-kids.html", "Open the San Diego family itinerary"],
       ["Toddler-specific planning", "If naps, stroller exits, and short sessions drive the trip, cross-check Mission Bay, zoo bus tour, Birch Aquarium, and hotel reset options.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
       ["Teen-specific planning", "If older kids need coast, food, and less little-kid pacing, use the teen guide before committing to a beach or urban base.", "../things-to-do/san-diego-with-teens.html", "Open San Diego with teens"]
     ],
-    faqs: [
-      ["What is the best area to stay in San Diego with kids?", "Compare Mission Bay first for a pool-and-bay trip, La Jolla for coast and aquarium time, Downtown or Little Italy for an urban restaurant base, Coronado for a beach-first stay, and Mission Valley as a central-base hypothesis. Then test exact hotels, routes, and total prices."],
-      ["Where can families compare specific San Diego hotels?", "Use the Family Tripwise San Diego family-hotel shortlist for eight named options organized by trip style, with rough nightly prices, map links, room and amenity facts, and themes from sampled online reviews."],
-      ["Can families stay in San Diego without a car?", "Test a car-light plan from exact Downtown or Little Italy hotels first: list the family's activities and meals, then compare every walking, transit, and return route using current MTS service. The area name alone does not establish that the trip will work without a car."]
-    ]
+    faqs: []
   },
   "where-to-stay/las-vegas-with-kids.html": {
     title: "Where to Stay in Las Vegas With Kids: 5 Base Types Compared",

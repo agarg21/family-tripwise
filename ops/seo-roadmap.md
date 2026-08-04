@@ -87,7 +87,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 49 | `FT-RES-014` codify an opinionated evidence-led SEO doctrine | Strategy/authority | Completed and review-clean | Russell cycle-two `PASS` with no P0-P3; the binding doctrine rejects page-count authority, keyword-variant factories, low-visibility CTR work, technical busywork, and unsupported practitioner folklore. |
 | 50 | `FT-RES-015` diagnose the Las Vegas all-ages ranking opportunity | Content/authority diagnostic | Completed and review-clean | Faraday cycle-two `PASS` with no P0-P3; fresh protected evidence and live SERPs support one broad URL and one consolidation/citation improvement without calling the latest crawl a failed rewrite. |
 | 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Released and production-verified | Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57`; Pages run `30869031713`; release marker, target invariants, and production SEO QA passed after Herschel cycle-two `PASS`. |
-| 52 | `FT-IMP-022` clarify San Diego lodging URL ownership | Existing-page role clarity | Ready | Focus the stay-area search promise and exact-property handoff on five areas versus 12 named hotels. Keep the hotel page unchanged; no broad rewrite, new URL, title/CTR experiment, or indexing request. |
+| 52 | `FT-IMP-022` clarify San Diego lodging URL ownership | Existing-page role clarity | Review-clean; release pending | Lovelace cycle two returned `PASS` with no P0-P3 findings. The areas page now promises five areas compared and hands exact-property selection to the unchanged 12-hotel page. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -126,10 +126,12 @@ Ready does not authorize project work by itself. The Control Room selects and di
 
 ### FT-IMP-022 - Clarify San Diego lodging URL ownership
 
-- State: ready; promoted by `FT-EVAL-002`, not selected by this measurement transaction.
+- State: review-clean; exact-path commit, deployment and production verification remain.
 - Target: the existing San Diego stay-area URL; the family-hotel URL remains the unchanged named-property destination.
 - Product change: focus the stay-area title, H1 and description on choosing five bases; reframe exact-property checks as a second-step handoff; add one descriptive link to the 12-hotel page at that handoff.
+- Result: the title and H1 now say `5 Areas Compared`; the description, hero and ItemList name reinforce the area decision; the booking heading makes the sequence explicit; and the next section links to the separate 12-hotel comparison. Non-visible FAQ schema was removed instead of adding another page section.
 - Preserve: all five area comparisons, the family-constraint tool, useful booking checks, both canonical/indexable URLs and both sitemap entries.
+- QA: 147/147 tests; operator-state, content-freshness, local and production-preflight SEO QA; 23 public snapshots; generator idempotence; focused role/invariant tests; unchanged hotel page; responsive desktop/mobile layout; comparison-tool behavior; duplicate-key JSON; exact ten-path scope; privacy and whitespace checks pass.
 - Measurement: preserve the August 4 public/protected baseline and re-evaluate only after a later crawl and sufficient finalized post-crawl evidence. No ranking promise or calendar dispatch.
 - Boundary: no hotel-page rewrite, hotel-profile duplication, merge, redirect, canonical change, noindex, new URL, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 

@@ -120,6 +120,17 @@ Normalized internal-link inspection also shows an asymmetry after excluding each
 
 **Measurement plan:** preserve this 2026-07-06 through 2026-08-02 baseline. Re-evaluate only after Google records a crawl of the clarified area page and a later finalized window contains enough post-crawl evidence to classify query ownership. Compare area/hotel shares, exact overlap, clicks, and query-level positions without promising a ranking lift or dispatching work from calendar cadence.
 
+## FT-IMP-022 Implementation Result
+
+Implemented and review-clean on 2026-08-04 after Lovelace cycle-two `PASS`; release remains pending.
+
+- The stay-area title and H1 now say `Where to Stay in San Diego With Kids: 5 Areas Compared`.
+- The description and hero copy name the area/base decision and the five compared bases without claiming to be the hotel list.
+- The booking section now says to choose the area first and verify the exact hotel second.
+- The next section hands named-property selection to the separate 12-hotel page with a descriptive link.
+- The ItemList name now describes family stay-area options. Non-visible FAQ schema was removed; the visible handoff carries the current 12-hotel count without adding another page section.
+- The hotel page, both URLs, canonicals, indexability states, and sitemap entries remain unchanged.
+
 ## What This Does Not Justify
 
 - no causal verdict on the July page revisions;

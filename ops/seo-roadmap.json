@@ -2432,9 +2432,15 @@
       "title": "Clarify San Diego lodging URL ownership",
       "kind": "implementation",
       "lane": "existing-page-role-clarity",
-      "status": "ready",
+      "status": "in_progress",
       "promoted_on": "2026-08-04",
       "promoted_by": "FT-EVAL-002",
+      "selected_on": "2026-08-04",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_ids": [
+        "019fcda1-a3b5-7533-888c-9ba5c51f8d37"
+      ],
       "impact": 4,
       "confidence": 4,
       "learning_value": 4,
@@ -2461,7 +2467,11 @@
       "success_signal": "The existing stay-area page unambiguously promises a five-area/base decision in its title, H1 and description; retains its useful area comparison, constraint tool and booking checks; and hands named-property selection to the unchanged 12-hotel page without adding or merging a URL.",
       "production_invariant": "Keep both URLs, canonicals, indexability states and sitemap entries unchanged. Keep the family-hotel page content and search promise unchanged. No broad rewrite, hotel-profile duplication, CTR claim, redirect, noindex, indexing request, outreach, external-account mutation, destination expansion or recurring automation.",
       "gsc_evidence_classification": "Promoted by FT-EVAL-002 from the fresh August 4 public snapshot and two protected exports finalized through August 2. Hotel/resort wording supplies 83.7% of attributable stay-area impressions and 94.0% of family-hotel impressions; 54 normalized queries occur on both URLs. The short post-crawl tail prevents causal ranking attribution, but the current mixed area-page title is an independently visible role defect.",
-      "notes": "Ready but not selected by the FT-EVAL-002 measurement transaction. This is a role-clarification implementation, not a title/CTR experiment or permission for a wider lodging rewrite."
+      "result": "Implementation is review-clean with release pending. The stay-area title and H1 now promise five areas compared; the description, hero, ItemList name, booking heading and 12-hotel handoff reinforce area-first ownership. The five choices, comparison, constraint tool and property checks remain. Non-visible FAQ schema was removed. The hotel page and all URL/indexability/sitemap invariants are unchanged.",
+      "qa_summary": "Full repository tests pass 147/147. Operator-state, content-freshness, local and production-preflight SEO QA pass with 0 errors and 0 warnings. All 23 public GSC snapshots validate. Generator idempotence, focused lodging-role checks, unchanged hotel page, exact canonical/indexability/sitemap and ItemList/handoff invariants, desktop/mobile responsive layout, comparison-tool behavior, duplicate-key JSON, exact ten-path scope, privacy/credential safety and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Lovelace (019fcda1-a3b5-7533-888c-9ba5c51f8d37) returned FAIL in cycle one for one P2 stale ready/unselected queue mirror and three P3 stale-tense, hidden FAQ schema and ItemList test gaps. The corrections reconcile the live state, make selection-time evidence historical, remove non-visible FAQ schema without adding page clutter, and parse/assert the exact five-area ItemList. Cycle two returned PASS with no P0-P3 findings.",
+      "release_state": "review-clean-release-pending",
+      "notes": "Selected by direct manual user instruction on 2026-08-04. This is a role-clarification implementation, not a title/CTR experiment or permission for a wider lodging rewrite. No indexing request, outreach, external-account mutation, new URL, destination expansion or recurring automation occurred."
     }
   ]
 }

@@ -46,12 +46,25 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-015` | Las Vegas all-ages ranking diagnostic complete and review-clean | `PASS` | Faraday cycle two closed both P2s and the P3; no P0-P3 remains. Exact seven-path research transaction promotes only `FT-AUTH-006`; protected rows stay outside the public repository and no `site/**` or external action changed. |
 | `FT-AUTH-006` | Las Vegas cost-and-friction implementation released and production-verified | `PASS` | Herschel cycle two closed all findings. Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57` deployed through Pages run `30869031713`; release marker, page invariants, and production SEO QA passed. |
 | `FT-EVAL-002` | San Diego lodging crawl/query checkpoint complete and review-clean | `PASS` | Heisenberg cycle two closed all three P3 findings; no P0-P3 remains. Exact eight-path public-safe scope promotes only ready, unselected `FT-IMP-022`; no complete rows, page edit, indexing request, or causal ranking claim. |
+| `FT-IMP-022` | San Diego lodging URL role clarification review-clean; release pending | `PASS` | Lovelace cycle two closed the P2 stale queue state and all three P3 findings; no P0-P3 remains. Exact ten-path scope; 147/147 tests and all declared QA pass. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-04 - `FT-IMP-022` San Diego lodging URL role clarification review
+
+**Reviewer:** Lovelace (`019fcda1-a3b5-7533-888c-9ba5c51f8d37`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for one P2 stale ready/unselected queue mirror and three P3 findings: two stale present-tense evidence statements, non-visible FAQ schema, and no focused parser assertion for the changed ItemList.
+- The correction reconciles the live queue, marks the old title as selection-time evidence, removes non-visible FAQ schema without adding page clutter, and parses the JSON-LD to assert the exact five-area ItemList and absence of FAQPage.
+- Cycle 2 returned `PASS` with no P0-P3 findings across the complete ten-path diff.
+- Full tests pass 147/147. Operator-state, content-freshness, local and production-preflight SEO QA pass with 0 errors and 0 warnings. All 23 public snapshots validate. Generator idempotence, focused role/invariant tests, unchanged hotel page, responsive desktop/mobile layout, comparison-tool behavior, duplicate-key JSON, exact scope, privacy and whitespace checks pass.
+- Both lodging URLs, canonicals, indexability states and sitemap entries remain unchanged. No new URL, broad rewrite, title/CTR experiment, indexing request, outreach, external-account mutation, destination expansion or recurring automation occurred.
 
 ### 2026-08-04 - `FT-EVAL-002` San Diego lodging query-ownership review
 

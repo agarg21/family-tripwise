@@ -7,6 +7,8 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const stay = readFileSync(new URL("../site/where-to-stay/san-diego-with-kids.html", import.meta.url), "utf8");
 const hotels = readFileSync(new URL("../site/where-to-stay/san-diego-family-hotels.html", import.meta.url), "utf8");
 const sitemap = readFileSync(new URL("../site/sitemap.xml", import.meta.url), "utf8");
+const staySchemas = [...stay.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+  .map((match) => JSON.parse(match[1]));
 
 test("keeps both San Diego lodging pages canonical, indexable, and in the sitemap", () => {
   const urls = [
@@ -23,6 +25,10 @@ test("keeps both San Diego lodging pages canonical, indexable, and in the sitema
 });
 
 test("gives the area page one scan layer, one detail layer, and one application layer", () => {
+  assert.match(stay, /<title>Where to Stay in San Diego With Kids: 5 Areas Compared<\/title>/);
+  assert.match(stay, /<meta name="description" content="Compare five San Diego areas for a family trip/);
+  assert.match(stay, /<h1>Where to Stay in San Diego With Kids: 5 Areas Compared<\/h1>/);
+  assert.match(stay, /Choose among Mission Bay, La Jolla, Downtown\/Little Italy, Coronado, and Mission Valley/);
   assert.match(stay, /Choose the base that matches the trip/);
   assert.match(stay, /Five areas, matched to different family trips/);
   assert.equal((stay.match(/<article class="quick-pick">/g) || []).length, 5);
@@ -30,12 +36,24 @@ test("gives the area page one scan layer, one detail layer, and one application 
   assert.match(stay, /<th>Best starting point for<\/th>/);
   assert.equal((stay.match(/<tbody>[\s\S]*?<\/tbody>/g) || []).length, 1);
   assert.match(stay, /Choose your biggest family constraint/);
-  assert.match(stay, /Four checks before choosing the exact hotel/);
-  assert.match(stay, /Continue planning from the chosen base/);
+  assert.match(stay, /Choose the area first, then verify the exact hotel/);
+  assert.match(stay, /Move from the chosen area to a named hotel/);
+
+  const itemList = staySchemas.find((schema) => schema["@type"] === "ItemList");
+  assert.equal(itemList?.name, "San Diego family stay area options");
+  assert.deepEqual(itemList?.itemListElement.map((item) => item.name), [
+    "Mission Bay",
+    "La Jolla",
+    "Downtown / Little Italy",
+    "Coronado",
+    "Mission Valley / Hotel Circle",
+  ]);
+  assert.equal(staySchemas.some((schema) => schema["@type"] === "FAQPage"), false);
 });
 
 test("keeps hotel-list intent on the hotel page instead of duplicating hotel profiles", () => {
-  assert.match(stay, /12 family hotel options/);
+  assert.match(stay, /Compare 12 family hotels/);
+  assert.match(stay, /Compare 12 San Diego family hotels/);
   assert.match(stay, /href="\.\/san-diego-family-hotels\.html"/);
   assert.doesNotMatch(stay, /Research-backed hotel verification notes/);
   assert.doesNotMatch(stay, /<h3>Bahia Resort Hotel<\/h3>|<h3>San Diego Mission Bay Resort<\/h3>|<h3>Homewood Suites San Diego Downtown\/Bayside<\/h3>/);
@@ -46,7 +64,7 @@ test("keeps hotel-list intent on the hotel page instead of duplicating hotel pro
 });
 
 test("uses concise source boundaries without defensive internal language", () => {
-  assert.match(stay, /Last updated:<\/strong> July 20, 2026/);
+  assert.match(stay, /Area guidance checked:<\/strong> July 20, 2026; page updated August 4, 2026/);
   assert.match(stay, /Area guidance uses official destination, transit, attraction, and hotel sources/);
   assert.doesNotMatch(stay, /model-derived|unreviewed scores|UNKNOWN|human-review question/i);
   assert.doesNotMatch(stay, /Driving or rideshare for most city attractions|A car is usually the simplest trip model|limited walkability at many hotels|Often practical for returning between driving-based outings/i);

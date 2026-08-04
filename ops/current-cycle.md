@@ -12,7 +12,7 @@ The repository mirror of project state is `ops/seo-roadmap.json`; the central Co
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` is complete and review-clean after Heisenberg cycle-two `PASS`.
 
-`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` through Pages run `30667262994`. `FT-RES-013`, `FT-RES-014`, `FT-RES-015`, and `FT-EVAL-002` are complete and review-clean. `FT-AUTH-006` is released and production-verified at `6bc35d03ba413056cf3b9988bf449ae8972d4a57` through Pages run `30869031713`. No manual action is active; `FT-IMP-022` is ready but unselected. `FT-PUB-006` remains unselected and held.
+`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` through Pages run `30667262994`. `FT-RES-013`, `FT-RES-014`, `FT-RES-015`, and `FT-EVAL-002` are complete and review-clean. `FT-AUTH-006` is released and production-verified at `6bc35d03ba413056cf3b9988bf449ae8972d4a57` through Pages run `30869031713`. `FT-IMP-022` is the active direct-manual action. `FT-PUB-006` remains unselected and held.
 
 ## State Checkpoint
 
@@ -31,8 +31,8 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - NYC stay-area improvement: complete; production contains the canonical/indexable five-area guide with five quick-pick starts, one sitemap entry, and the expected cluster routes.
 - NYC itinerary improvement: complete, released, and production-verified at commit `d0c4a7d` through Pages run `30204670128`.
 - San Antonio research and releases: `FT-RES-010`, `FT-IMP-018`, `FT-PUB-005`, `FT-IMP-019`, `FT-IMP-020`, and `FT-IMP-021` are complete. The final itinerary action released at `90ed019` through Pages run `30237864556`; no planned San Antonio page remains open.
-- Active measurement result: `FT-EVAL-002` used the fresh August 4 snapshot and separate protected exports for both San Diego lodging URLs. Of attributable impressions, hotel/resort wording accounts for 83.7% on the stay-area page and 94.0% on the hotel page; 54 normalized queries overlap. The area-page title still promises `Family Hotels`, so one bounded role-clarification action is promoted. The short post-crawl tail prevents a causal ranking verdict.
-- Promoted next action: `FT-IMP-022`, ready but not selected. Clarify the existing stay-area title/H1/description and exact-property handoff while leaving the hotel page unchanged.
+- Completed measurement result: `FT-EVAL-002` used the fresh August 4 snapshot and separate protected exports for both San Diego lodging URLs. Of attributable impressions, hotel/resort wording accounts for 83.7% on the stay-area page and 94.0% on the hotel page; 54 normalized queries overlap. At selection time, the area-page title still promised `Family Hotels`, so the checkpoint promoted one bounded role clarification. The short post-crawl tail prevents a causal ranking verdict.
+- Active manual action: `FT-IMP-022`, selected August 4. Lovelace cycle two returned `PASS` with no P0-P3 findings. The areas page now promises five areas compared and hands named-property selection to the unchanged 12-hotel page; 147/147 tests and state/SEO/responsive/invariant/privacy/scope QA pass. Exact-path commit, deployment and production verification remain.
 
 ## Current Project State
 
@@ -176,7 +176,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, technical operations work, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, `FT-AUTH-004`, released `FT-AUTH-005`, `FT-RES-013`, `FT-RES-014`, `FT-RES-015`, and released `FT-AUTH-006` are complete. `FT-PUB-006` remains separately user-gated and is held during the August existing-city depth cycle. `FT-EVAL-002` has crossed its evidence gate and promotes only ready, unselected `FT-IMP-022`.
+`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, technical operations work, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, `FT-AUTH-004`, released `FT-AUTH-005`, `FT-RES-013`, `FT-RES-014`, `FT-RES-015`, and released `FT-AUTH-006` are complete. `FT-PUB-006` remains separately user-gated and is held during the August existing-city depth cycle. `FT-IMP-022` is review-clean and release-pending.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
