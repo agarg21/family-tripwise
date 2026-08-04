@@ -1,18 +1,18 @@
 # Needs User
 
-Last updated: 2026-08-03
+Last updated: 2026-08-04
 
-No active agent action is blocked. `FT-AUTH-005` / `IMP-042` is released and production-verified at commit `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` through Pages run `30667262994`. Research/strategy actions `FT-RES-013`, `FT-RES-014`, and `FT-RES-015` are review-clean. `FT-AUTH-006` is review-clean after Herschel cycle-two `PASS` with no P0-P3 findings; exact-path commit, deployment and production verification remain. No indexing request or outreach is authorized.
+No active agent action is blocked. `FT-AUTH-006` is released and production-verified at commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57` through Pages run `30869031713` after Herschel cycle-two `PASS` with no P0-P3 findings. `FT-EVAL-002` is complete and review-clean after Heisenberg cycle-two `PASS`; it promotes `FT-IMP-022` as ready but unselected. No indexing request or outreach is authorized.
 
 `FT-OPS-002` is released and production-verified. `FT-DEV-004` is completed and review-clean; no user decision is required.
 
-The authenticated read-only GSC API collector and protected-query workflow are configured, so there is no GSC-login or query-export setup blocker. The August 3 snapshot inspected all 28 sitemap URLs: 24 are indexed and four are not indexed. Protected Las Vegas export run `30746285285` succeeded and retained complete rows outside the public repository.
+The authenticated read-only GSC API collector and protected-query workflow are configured, so there is no GSC-login or query-export setup blocker. The August 4 snapshot inspected all 28 sitemap URLs: 24 are indexed and four are not indexed. Protected San Diego lodging exports `30901691773` and `30901720876` succeeded and retained complete rows outside the public repository.
 
-The user selected an existing-page ranking opportunity pass on July 29. `FT-RES-012` found no evidence-backed page rewrite or CTR action: discovery/indexing and authority are the limiting lanes. `FT-AUTH-002` completed the unpublished Atlas evidence candidate, but the user then stopped the new-page direction. `FT-AUTH-004` found that Semrush detected zero legitimate Family Tripwise referring domains as of 2026-07-31 among its current 11-domain sample; links outside Semrush remain `UNKNOWN`. Its in-place source-dated logistics index follow-on is now live. `FT-RES-013` holds Orlando publication during the August existing-city depth cycle. Both revised San Diego lodging URLs now have current crawl evidence, but `FT-EVAL-002` remains ineligible until finalized protected page/query evidence includes the July 31 stay-area crawl.
+The user selected an existing-page ranking opportunity pass on July 29. `FT-RES-012` found no broad rewrite or CTR winner: discovery/indexing and authority remain limiting lanes. `FT-AUTH-004` and `FT-AUTH-005` produced the live San Diego logistics index. `FT-RES-013` holds Orlando publication during the August existing-city depth cycle. `FT-EVAL-002` now identifies one narrower page-role defect: hotel/resort wording supplies 156 of 166 attributable exported impressions (94.0%) on the family-hotel URL and 323 of 386 (83.7%) on the stay-area URL while its title promises `Family Hotels`. `FT-IMP-022` may clarify that area-versus-property handoff without rewriting the hotel page.
 
-The live sitemap contains 28 canonical URLs and was successfully resubmitted in GSC on July 27. GSC still reports 28 discovered pages; August 3 URL Inspection shows 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page. No per-URL indexing request was made.
+The live sitemap contains 28 canonical URLs and was successfully resubmitted in GSC on July 27. GSC still reports 28 discovered pages; August 4 URL Inspection shows 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page. No per-URL indexing request was made.
 
-The Las Vegas all-ages URL is indexed and correctly interpreted for one broad family-activity query family. `FT-RES-015` found a concrete page-quality and citation gap, not an indexing defect or title opportunity. The review-clean `FT-AUTH-006` implementation consolidates the same 12 choices into one source-dated family admission and current-check record set without changing the title, URL, or page count. No user decision is required for release gates.
+The Las Vegas all-ages URL is indexed and correctly interpreted for one broad family-activity query family. `FT-RES-015` found a concrete page-quality and citation gap, not an indexing defect or title opportunity. Released `FT-AUTH-006` consolidates the same 12 choices into one source-dated family admission and current-check record set without changing the title, URL, or page count.
 
 ## Useful Decisions Soon
 

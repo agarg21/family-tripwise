@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Central SEO Control Room",
-  "last_updated": "2026-08-03",
+  "last_updated": "2026-08-04",
   "last_rescored_on": "2026-07-22",
   "next_rescore_due": "2026-07-29",
   "planning_horizon_days": 28,
@@ -301,7 +301,14 @@
       "title": "Check crawl and query interpretation for the revised San Diego lodging pages",
       "kind": "measurement",
       "lane": "measurement",
-      "status": "ready-after-evidence",
+      "status": "completed",
+      "selected_on": "2026-08-04",
+      "completed_on": "2026-08-04",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_ids": [
+        "019fcc6b-03bf-73e3-8126-8fcd6c7284d3"
+      ],
       "impact": 3,
       "confidence": 3,
       "learning_value": 4,
@@ -320,13 +327,22 @@
         "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
       ],
       "target_paths": [
+        "docs/research/san-diego-lodging-query-interpretation-2026-08-04.md",
         "status/san-diego-pages.md",
+        "status/las-vegas-pages.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
         "ops/operator-review.md",
         "ops/seo-roadmap.json",
         "ops/seo-roadmap.md"
       ],
       "success_signal": "After Google recrawls the revised pages, fresh indexing, page, and protected query evidence identifies whether Google is distinguishing area intent from hotel-list intent; the checkpoint makes no short-window causal ranking claim.",
-      "notes": "Non-blocking evidence checkpoint. Do not create a protection window or manufacture an action from calendar cadence; run only after both revised URLs have current crawl/query evidence."
+      "gsc_evidence_classification": "Fresh authenticated 2026-08-04 public-safe snapshot finalized through 2026-08-02 plus two target-only protected read-only exports from runs 30901691773 and 30901720876. Both URLs are indexed; the hotel page was crawled July 28 and the stay-area page July 31. Complete rows remain private. The 28-day export contains only two dates beyond the stay-area crawl, so it supports query-ownership diagnosis but no causal ranking verdict.",
+      "promoted_action": "FT-IMP-022",
+      "result": "Protected evidence attributes 323 of 386 stay-area query impressions (83.7%) to hotel/resort wording and only 30 (7.8%) to area/base wording; the family-hotel page attributes 156 of 166 impressions (94.0%) to hotel/resort wording. Fifty-four normalized queries occur on both URLs. The hotel page's role is clean, while the stay-area title and handoff blur area-versus-property ownership. Promote one bounded role clarification; do not rewrite the hotel page or claim cannibalization causality.",
+      "qa_summary": "Full repository tests pass 147/147. Operator-state, content-freshness, local SEO, production SEO, 23-snapshot validation, duplicate-key JSON, protected-aggregate arithmetic, internal-link counts, local references, exact eight-path scope, no-site-diff, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Heisenberg (019fcc6b-03bf-73e3-8126-8fcd6c7284d3) returned PASS_WITH_P3 in cycle one for one internal-link count, implicit percentage denominators in compact mirrors and one stale status date. All three were corrected. Cycle two returned PASS with no P0-P3 findings.",
+      "notes": "Selected by direct manual user instruction on 2026-08-04. Protected plaintext remains mode 0600 outside the public repository; only reproducible public-safe aggregates are recorded. No page edit, indexing request, outreach, external-account mutation, new URL, destination expansion, or recurring automation occurred."
     },
     {
       "id": "FT-RES-004",
@@ -2364,10 +2380,11 @@
       "title": "Replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index",
       "kind": "implementation",
       "lane": "authority-and-existing-page-growth",
-      "status": "in_progress",
+      "status": "completed",
       "promoted_on": "2026-08-02",
       "promoted_by": "FT-RES-015",
       "selected_on": "2026-08-03",
+      "completed_on": "2026-08-04",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_ids": [
@@ -2403,8 +2420,48 @@
       "gsc_evidence_classification": "Promoted by FT-RES-015 from fresh public-safe GSC and protected query evidence finalized through 2026-07-31. The page has 464 public impressions, zero clicks and aggregate page-average position 60.69; 410 of 456 protected attributable impressions use direct action/list wording and another 18 use place/visit wording. The July 31 crawl has zero finalized post-crawl performance days, so this action is justified by an independently observed usefulness/citation gap and makes no rewrite-failure or ranking promise.",
       "qa_summary": "Full repository tests pass 147/147. Operator-state QA passes. Local and production-preflight SEO QA pass with 0 errors and 0 warnings. Responsive desktop/mobile behavior, official-source boundaries, ItemList/filter/map/index alignment, duplicate-key-safe roadmap JSON, exact 13-path scope, privacy/credential safety and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Herschel (019fc816-3052-76a0-92a2-fa0a6753e2ca) returned FAIL in cycle one for one P2 Neon Museum seasonal/fee/age-band evidence boundary and three P3 clarity, data-alignment and status-label issues. The correction uses VARIABLE / VERIFY for the ambiguous family scenario, records the September-May and processing-fee boundaries, separates evidence from confidence, proves exact record alignment and corrects the status label. Cycle two returned PASS with no P0-P3 findings.",
-      "result": "Review-clean existing-page consolidation for exactly the current 12 Las Vegas choices: three starts, one source-dated family admission and planning-friction index, one shared embedded record set for visible rows, ItemList and CSV, and four contextual cluster routes including the existing family-hotel comparison.",
-      "notes": "Selected by direct manual user instruction on 2026-08-03 and review-clean after Herschel cycle-two PASS; release pending. Use exactly the existing 12 choices, direct official sources, a named two-adult/two-child admission-only scenario, explicit exclusions and VARIABLE/VERIFY or UNKNOWN values. Replace repeated layers rather than append. The declared scope includes the existing Las Vegas family-hotel regression test because its prior no-link assertion directly conflicts with this action's required named-hotel route; the hotel page remains unchanged. Outreach remains separately user-gated."
+      "release_commit": "6bc35d03ba413056cf3b9988bf449ae8972d4a57",
+      "pages_run": 30869031713,
+      "released_at": "2026-08-04T01:32:28Z",
+      "release_state": "released-and-production-verified",
+      "result": "Released and production-verified the existing 12-choice Las Vegas page with three starts, one source-dated family admission and planning-friction index, one shared embedded record set for visible rows, ItemList and CSV, and four contextual cluster routes including the existing family-hotel comparison.",
+      "notes": "Selected by direct manual user instruction on 2026-08-03 and released at commit 6bc35d03ba413056cf3b9988bf449ae8972d4a57 through successful Pages run 30869031713 after Herschel cycle-two PASS. The production release marker, target 200 response, 12 records, three starts, 12-entry ItemList, one sitemap entry, unchanged canonical/indexability/title/H1, and production SEO QA passed. The hotel page remained unchanged. No new page, indexing request, outreach, external-account mutation, destination expansion, or recurring automation."
+    },
+    {
+      "id": "FT-IMP-022",
+      "title": "Clarify San Diego lodging URL ownership",
+      "kind": "implementation",
+      "lane": "existing-page-role-clarity",
+      "status": "ready",
+      "promoted_on": "2026-08-04",
+      "promoted_by": "FT-EVAL-002",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-lodging-query-interpretation-2026-08-04.md",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/san-diego-lodging-editorial-page.test.mjs",
+        "site/where-to-stay/san-diego-with-kids.html",
+        "status/san-diego-pages.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "success_signal": "The existing stay-area page unambiguously promises a five-area/base decision in its title, H1 and description; retains its useful area comparison, constraint tool and booking checks; and hands named-property selection to the unchanged 12-hotel page without adding or merging a URL.",
+      "production_invariant": "Keep both URLs, canonicals, indexability states and sitemap entries unchanged. Keep the family-hotel page content and search promise unchanged. No broad rewrite, hotel-profile duplication, CTR claim, redirect, noindex, indexing request, outreach, external-account mutation, destination expansion or recurring automation.",
+      "gsc_evidence_classification": "Promoted by FT-EVAL-002 from the fresh August 4 public snapshot and two protected exports finalized through August 2. Hotel/resort wording supplies 83.7% of attributable stay-area impressions and 94.0% of family-hotel impressions; 54 normalized queries occur on both URLs. The short post-crawl tail prevents causal ranking attribution, but the current mixed area-page title is an independently visible role defect.",
+      "notes": "Ready but not selected by the FT-EVAL-002 measurement transaction. This is a role-clarification implementation, not a title/CTR experiment or permission for a wider lodging rewrite."
     }
   ]
 }

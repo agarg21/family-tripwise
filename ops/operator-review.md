@@ -44,13 +44,27 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-013` | Research-authority strategy audit complete and review-clean | `PASS` | Bohr cycle two closed both non-blocking wording P3s; no P0-P3 remains. Exact 15-path research/strategy transaction; no `site/**`, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
 | `FT-RES-014` | Opinionated SEO doctrine complete and review-clean | `PASS` | Russell cycle two closed both non-blocking P3s; no P0-P3 remains. Exact 10-path research/strategy transaction; no `site/**`, publication, new destination, outreach, indexing request, external-account mutation, deployment, or recurring automation. |
 | `FT-RES-015` | Las Vegas all-ages ranking diagnostic complete and review-clean | `PASS` | Faraday cycle two closed both P2s and the P3; no P0-P3 remains. Exact seven-path research transaction promotes only `FT-AUTH-006`; protected rows stay outside the public repository and no `site/**` or external action changed. |
-| `FT-AUTH-006` | Las Vegas cost-and-friction implementation review-clean; release pending | `PASS` | Herschel cycle two closed the Neon seasonal/processing-fee evidence boundary and all three clarity/alignment/status findings; no P0-P3 remains. Exact 13-path scope; 147/147 tests and state/SEO/responsive/source/privacy/scope QA pass. No new page, indexing request, outreach, or external mutation. |
+| `FT-AUTH-006` | Las Vegas cost-and-friction implementation released and production-verified | `PASS` | Herschel cycle two closed all findings. Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57` deployed through Pages run `30869031713`; release marker, page invariants, and production SEO QA passed. |
+| `FT-EVAL-002` | San Diego lodging crawl/query checkpoint complete and review-clean | `PASS` | Heisenberg cycle two closed all three P3 findings; no P0-P3 remains. Exact eight-path public-safe scope promotes only ready, unselected `FT-IMP-022`; no complete rows, page edit, indexing request, or causal ranking claim. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-04 - `FT-EVAL-002` San Diego lodging query-ownership review
+
+**Reviewer:** Heisenberg (`019fcc6b-03bf-73e3-8126-8fcd6c7284d3`), independent read-only reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `PASS_WITH_P3` for one hotel internal-link count, implicit percentage denominators in compact state mirrors, and the stale Las Vegas status date.
+- The correction states the self-link/noindex exclusions and reproducible 10-from-7 versus 4-from-3 internal-link counts, names the 323/386 and 156/166 attributable-export denominators, and dates the Las Vegas release mirror August 4.
+- Cycle 2 returned `PASS` with no P0-P3 findings across the complete eight-path diff.
+- The reviewer independently reproduced the classifier buckets, shares, clicks, weighted positions, exact overlap, and unique-query aggregates from mode-0600 exports without exposing query rows. Evidence freshness, crawl-tail causality boundaries, page signals, action scope, privacy, FT-AUTH-006 release truth, and duplicate-key JSON passed.
+- Full tests pass 147/147. Operator-state, content-freshness, local/production SEO, 23-snapshot validation, aggregate arithmetic, internal-link counts, local-reference, exact-scope, no-site-diff, privacy/credential and whitespace checks pass.
+- `FT-IMP-022` remains ready and unselected. No `site/**`, page edit, indexing request, outreach, external-account mutation, destination expansion, or recurring automation occurred.
 
 ### 2026-08-03 - `FT-AUTH-006` Las Vegas cost-and-friction implementation review
 

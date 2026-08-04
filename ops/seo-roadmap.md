@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-03
+Last updated: 2026-08-04
 
 Last re-scored: 2026-07-22
 Next re-score due: 2026-07-29
@@ -15,12 +15,12 @@ The Family Tripwise project operator may update the selected action's repository
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-03.json`.
-- Classification on August 3: fresh authenticated read-only Search Console API evidence, collected August 3 with finalized performance data through August 1.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-04.json`.
+- Classification on August 4: fresh authenticated read-only Search Console API evidence, collected August 4 with finalized performance data through August 2.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - The protected July 29 sitewide export remains aligned to finalized data through July 26 and outside this repository. A fresh target-only Las Vegas export was encrypted in successful GitHub Actions run `30746285285`, decrypted only into private central operator state, and aligned through July 31. It contains 54 rows and 456 attributable impressions; complete rows remain outside this repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 3 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 4 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
@@ -48,7 +48,7 @@ The Family Tripwise project operator may update the selected action's repository
 | 10 | `FT-IMP-003` San Diego specialist-page usefulness pass | Content/product quality | Completed | All six pages received a section inventory; toddler, teen, and itinerary pages were compressed without removing their scan, detail, or application layers. |
 | 11 | `FT-IMP-004` improve both San Diego lodging pages | Content/product quality | Completed and released | User explicitly overrode the low-signal observation hold; both pages now have distinct search jobs, review-clean section-level improvements, and verified production output at `326501bd`. |
 | 12 | `FT-EVAL-001` stay-checklist evaluation | Measurement | Superseded | The July 13 checklist is no longer an isolated experiment after `FT-IMP-004`; do not claim a causal result on July 27. |
-| 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Ready after evidence | Non-blocking; run only after both revised URLs have current crawl and protected query evidence. |
+| 13 | `FT-EVAL-002` revised lodging crawl/query checkpoint | Measurement | Completed and review-clean | Fresh protected evidence attributes 156 of 166 exported impressions (94.0%) on the hotel page and 323 of 386 (83.7%) on the area page to hotel/resort wording. Heisenberg cycle two returned `PASS`; promote one bounded role clarification, not a causal ranking verdict. |
 | 14 | `FT-IMP-005` expand San Diego activity and hotel decision sets | Content/product quality | Completed and released | Commit `31bba30652d76c3d1664193532a9c508a83c6f32`; Pages run `29876597948` and production verification passed. |
 | 15 | `FT-RES-007` select the next pilot city and create the incremental city playbook | Content/product quality | Completed | Las Vegas wins the fresh GSC, keyword, SERP, commercial-intent, and existing-page comparison; research promotes one existing-page improvement. |
 | 16 | `FT-IMP-006` improve the Las Vegas all-ages things-to-do hub | Content/product quality | Completed and released | Commit `3f555d65`; Pages run `29930917894` and production verification passed. |
@@ -86,7 +86,8 @@ The Family Tripwise project operator may update the selected action's repository
 | 48 | `FT-RES-013` define the research-authority thesis and August depth cycle | Strategy/authority | Completed and review-clean | Bohr cycle-two `PASS` with no P0-P3; durable strategy now prioritizes existing-city depth, research authority, and evidence-based ranking windows before expansion. |
 | 49 | `FT-RES-014` codify an opinionated evidence-led SEO doctrine | Strategy/authority | Completed and review-clean | Russell cycle-two `PASS` with no P0-P3; the binding doctrine rejects page-count authority, keyword-variant factories, low-visibility CTR work, technical busywork, and unsupported practitioner folklore. |
 | 50 | `FT-RES-015` diagnose the Las Vegas all-ages ranking opportunity | Content/authority diagnostic | Completed and review-clean | Faraday cycle-two `PASS` with no P0-P3; fresh protected evidence and live SERPs support one broad URL and one consolidation/citation improvement without calling the latest crawl a failed rewrite. |
-| 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Review-clean; release pending | Herschel cycle-two `PASS` with no P0-P3; 147/147 tests and state/SEO/responsive/source/privacy/scope QA pass. The existing URL keeps the same 12 choices while repeated layers become one source-dated family cost-and-friction record set. |
+| 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Released and production-verified | Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57`; Pages run `30869031713`; release marker, target invariants, and production SEO QA passed after Herschel cycle-two `PASS`. |
+| 52 | `FT-IMP-022` clarify San Diego lodging URL ownership | Existing-page role clarity | Ready | Focus the stay-area search promise and exact-property handoff on five areas versus 12 named hotels. Keep the hotel page unchanged; no broad rewrite, new URL, title/CTR experiment, or indexing request. |
 
 Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
 
@@ -103,7 +104,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 
 ### FT-AUTH-006 - Add the Las Vegas family activity cost-and-friction index
 
-- State: review-clean after Herschel cycle-two `PASS` with no P0-P3 findings; exact-path commit, deployment and production verification pending.
+- State: released and production-verified at commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57` through successful Pages run `30869031713` after Herschel cycle-two `PASS` with no P0-P3 findings.
 - Target: the existing `https://familytripwise.com/things-to-do/las-vegas-with-kids.html` only.
 - Product boundary: use exactly the current 12 choices. One validated embedded record set should power a compact visible index, ItemList data and optional client-side CSV with no separate public data URL.
 - Decision fields: direct official source; a named two-adult/two-child admission-only estimate or `VARIABLE / VERIFY`; explicit exclusions; planning time; setting; Las Vegas zone; exact current-check friction; checked date; evidence class; confidence; unresolved unknowns.
@@ -111,6 +112,26 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Measurement: preserve the August 2 public/protected baseline, verify product and technical invariants at release, and wait for a later crawl plus finalized post-release query evidence before interpreting movement. Do not create an observation task from calendar cadence.
 - QA: 147/147 tests; operator-state QA; local and production-preflight SEO QA at 0 errors and 0 warnings; responsive desktop/mobile behavior; official-source boundaries; exact record alignment; duplicate-key JSON; privacy; exact scope; and whitespace checks pass.
 - Boundary: unchanged title, H1, URL, canonical, indexability and sitemap count; no new URL, indexing request, outreach, paid placement, external-account mutation, destination expansion, or recurring automation.
+
+### FT-EVAL-002 - Check San Diego lodging crawl and query interpretation
+
+- State: completed and review-clean after Heisenberg cycle-two `PASS` with no P0-P3 findings.
+- Targets: the existing San Diego stay-area and family-hotel URLs only.
+- Evidence gate: a fresh public-safe snapshot, current URL Inspection for both pages, and protected page/query evidence aligned through a finalized date that includes the July 31 stay-area crawl.
+- Question: is Google distinguishing area/neighborhood intent from named-hotel/resort intent, or is one URL receiving materially mixed queries that expose a page-role problem?
+- Result: 323 of 386 attributable exported stay-area impressions (83.7%) use hotel/resort wording versus 30 (7.8%) area/base wording; 156 of 166 attributable hotel-page impressions (94.0%) use hotel/resort wording. Fifty-four normalized queries occur on both URLs. The current area-page title explicitly promises `Family Hotels`, while the hotel page itself has clean ownership.
+- Decision: promote `FT-IMP-022` as one bounded role clarification. Do not call this a causal cannibalization result because the 28-day window contains only two dates beyond the July 31 stay-area crawl.
+- QA: 147/147 tests; operator state, content freshness, local/production SEO, 23 public snapshots, protected aggregate reproduction, internal-link counts, duplicate-key JSON, local references, exact eight-path scope, no-site-diff, privacy and whitespace checks pass.
+- Boundary: research/state only; no `site/**`, page edit, new URL, title test, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
+
+### FT-IMP-022 - Clarify San Diego lodging URL ownership
+
+- State: ready; promoted by `FT-EVAL-002`, not selected by this measurement transaction.
+- Target: the existing San Diego stay-area URL; the family-hotel URL remains the unchanged named-property destination.
+- Product change: focus the stay-area title, H1 and description on choosing five bases; reframe exact-property checks as a second-step handoff; add one descriptive link to the 12-hotel page at that handoff.
+- Preserve: all five area comparisons, the family-constraint tool, useful booking checks, both canonical/indexable URLs and both sitemap entries.
+- Measurement: preserve the August 4 public/protected baseline and re-evaluate only after a later crawl and sufficient finalized post-crawl evidence. No ranking promise or calendar dispatch.
+- Boundary: no hotel-page rewrite, hotel-profile duplication, merge, redirect, canonical change, noindex, new URL, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 
 ### FT-RES-014 - Codify an opinionated evidence-led SEO doctrine
 
@@ -737,7 +758,7 @@ Ready does not authorize project work by itself. The Control Room selects and di
 - Affected URLs: `https://familytripwise.com/where-to-stay/san-diego-with-kids.html` and `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
 - Area-page result: removes the duplicate base area table and parallel three-hotel profiles; retains five area choices, a seven-field comparison, interactive constraint checklist, four exact-hotel checks, and direct routing to the eight-hotel guide.
 - Hotel-page result: retains all eight detailed property records, approximate nightly prices, map, room facts, directional themes from sampled reviews, and sources; compresses eight repetitive category cards to five trip styles and merges repeated methodology/caveats.
-- Measurement consequence: `FT-EVAL-001` is superseded. `FT-EVAL-002` is a non-blocking crawl/query-interpretation checkpoint, not a short-window ranking verdict.
+- Measurement consequence: `FT-EVAL-001` is superseded. `FT-EVAL-002` crossed its crawl/query evidence gate on August 4 and remains a query-ownership checkpoint, not a short-window ranking verdict.
 - Boundary: no URL, destination, sitemap, robots, canonical, indexability, indexing request, outreach, booking CTA, affiliate change, or external-account mutation.
 - QA and review: 39/39 repository tests, 14/14 focused lodging/regression tests, native and production-preflight SEO QA, desktop/mobile browser checks, JSON, privacy, scope, and whitespace checks passed. Independent reviewer `019f8284-1234-7c81-aa49-b4d50c95942a` returned `PASS` on cycle 2 with no P0-P3 findings.
 - Production verification: the release marker matched the implementation commit; both affected URLs passed the predeclared content invariants, canonical/indexability/sitemap checks, and production SEO QA with 0 errors and 0 warnings.
