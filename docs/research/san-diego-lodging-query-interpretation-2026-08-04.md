@@ -122,7 +122,7 @@ Normalized internal-link inspection also shows an asymmetry after excluding each
 
 ## FT-IMP-022 Implementation Result
 
-Implemented and review-clean on 2026-08-04 after Lovelace cycle-two `PASS`; release remains pending.
+Implemented, released, and production-verified on 2026-08-04 at commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` through Pages run `30930924523` after Lovelace cycle-two `PASS`.
 
 - The stay-area title and H1 now say `Where to Stay in San Diego With Kids: 5 Areas Compared`.
 - The description and hero copy name the area/base decision and the five compared bases without claiming to be the hotel list.
@@ -130,6 +130,7 @@ Implemented and review-clean on 2026-08-04 after Lovelace cycle-two `PASS`; rele
 - The next section hands named-property selection to the separate 12-hotel page with a descriptive link.
 - The ItemList name now describes family stay-area options. Non-visible FAQ schema was removed; the visible handoff carries the current 12-hotel count without adding another page section.
 - The hotel page, both URLs, canonicals, indexability states, and sitemap entries remain unchanged.
+- The run's first attempt deployed successfully, then its production SEO step received a transient 503 from an unrelated San Antonio URL. The single allowed retry hit a duplicate `github-pages` artifact collision, so the workflow wrapper is red even though `release.json`, both target invariants, and a fresh production SEO run verify the release.
 
 ## What This Does Not Justify
 

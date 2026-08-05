@@ -46,13 +46,27 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-015` | Las Vegas all-ages ranking diagnostic complete and review-clean | `PASS` | Faraday cycle two closed both P2s and the P3; no P0-P3 remains. Exact seven-path research transaction promotes only `FT-AUTH-006`; protected rows stay outside the public repository and no `site/**` or external action changed. |
 | `FT-AUTH-006` | Las Vegas cost-and-friction implementation released and production-verified | `PASS` | Herschel cycle two closed all findings. Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57` deployed through Pages run `30869031713`; release marker, page invariants, and production SEO QA passed. |
 | `FT-EVAL-002` | San Diego lodging crawl/query checkpoint complete and review-clean | `PASS` | Heisenberg cycle two closed all three P3 findings; no P0-P3 remains. Exact eight-path public-safe scope promotes only ready, unselected `FT-IMP-022`; no complete rows, page edit, indexing request, or causal ranking claim. |
-| `FT-IMP-022` | San Diego lodging URL role clarification review-clean; release pending | `PASS` | Lovelace cycle two closed the P2 stale queue state and all three P3 findings; no P0-P3 remains. Exact ten-path scope; 147/147 tests and all declared QA pass. |
+| `FT-IMP-022` | San Diego lodging URL role clarification released and production-verified | `PASS` | Lovelace cycle two closed the P2 stale queue state and all three P3 findings; no P0-P3 remains. Commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` was published by run `30930924523`; the red workflow wrapper reflects a post-deploy transient 503 and retry artifact collision, while release marker, invariants, and fresh production SEO QA pass. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-05 - `FT-IMP-022` release-state reconciliation
+
+**Reviewer:** Chandrasekhar (`019fd14d-c991-7a43-80c4-93c5b53faaae`), independent read-only reviewer
+
+**Review title:** `FT-IMP-022 Release-State Reconciliation Review`
+
+**Verdict:** `PASS`; no P0-P3 findings.
+
+- Commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` was published by the successful deploy step in Pages run `30930924523`.
+- Attempt one failed only after deployment when production SEO QA received a transient 503 from the unrelated San Antonio stay-area URL. The single allowed retry then failed before deployment because the rerun contained two artifacts named `github-pages`.
+- Current `release.json` reports the exact commit and run. Both San Diego lodging URLs satisfy their declared production invariants, the hotel page remains unchanged, and a fresh production SEO run returns 0 errors and 0 warnings.
+- The overall workflow conclusion remains `failure`; this reconciliation does not label the run successful. Production is healthy, so no rollback or further retry is warranted.
+- Chandrasekhar confirmed the exact seven-path documentation/state scope, aligned release mirrors, held `FT-PUB-006` state, no manufactured action, no `site/**` change, clean whitespace, and no privacy or credential issue.
 
 ### 2026-08-04 - `FT-IMP-022` San Diego lodging URL role clarification review
 
@@ -77,7 +91,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - Cycle 2 returned `PASS` with no P0-P3 findings across the complete eight-path diff.
 - The reviewer independently reproduced the classifier buckets, shares, clicks, weighted positions, exact overlap, and unique-query aggregates from mode-0600 exports without exposing query rows. Evidence freshness, crawl-tail causality boundaries, page signals, action scope, privacy, FT-AUTH-006 release truth, and duplicate-key JSON passed.
 - Full tests pass 147/147. Operator-state, content-freshness, local/production SEO, 23-snapshot validation, aggregate arithmetic, internal-link counts, local-reference, exact-scope, no-site-diff, privacy/credential and whitespace checks pass.
-- `FT-IMP-022` remains ready and unselected. No `site/**`, page edit, indexing request, outreach, external-account mutation, destination expansion, or recurring automation occurred.
+- At the `FT-EVAL-002` checkpoint, `FT-IMP-022` remained ready and unselected. No `site/**`, page edit, indexing request, outreach, external-account mutation, destination expansion, or recurring automation occurred in that research transaction.
 
 ### 2026-08-03 - `FT-AUTH-006` Las Vegas cost-and-friction implementation review
 
