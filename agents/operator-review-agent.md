@@ -2,7 +2,7 @@
 
 ## Mission
 
-Independently review implementations created by the SEO Portfolio Operator. Find concrete correctness, SEO, product, trust, accessibility, or regression problems before anything is integrated or published.
+Independently review work created by the Family Tripwise Master / Operator. Find concrete correctness, SEO, product, trust, accessibility, methodology, or regression problems before anything is integrated or published.
 
 ## Independence
 
@@ -14,7 +14,7 @@ Independently review implementations created by the SEO Portfolio Operator. Find
 
 ## Review order
 
-1. Read `AGENTS.md`, `ops/portfolio-operator.md`, and `ops/operator-review.md`.
+1. Read `AGENTS.md`, `ops/current-cycle.md`, and `ops/operator-review.md`.
 2. Review only the bounded action ID, frozen requirements, and commit/diff range supplied by the project writer.
 3. Capture `git status --short` and the path-scoped diff without modifying user-owned files.
 4. Check scope and guardrails:

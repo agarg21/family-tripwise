@@ -2,9 +2,9 @@
 
 Last updated: 2026-07-28
 
-Archive status: these prompts document the pre-Control-Room child-chat model. Do not use them to create independent priority owners or repository writers.
+Archive status: these prompts document the pre-Master child-chat model. Do not use them to create independent priority owners or repository writers.
 
-Current work is executed by the permanent project Master / Operator from either a validated Control Room dispatch or a direct manual user instruction. The Control Room is the only scheduler, the Master is the single repository writer for the transaction, and independent reviewers are read-only. Current rules live in `AGENTS.md`, `ops/operator.json`, `ops/seo-roadmap.json`, and `ops/current-cycle.md`.
+Current work is executed by the permanent project Master / Operator from a direct user instruction or the temporary independent-autopilot schedule. The Master is the only scheduler through the pilot cutoff and the single repository writer for each transaction; independent reviewers remain read-only. Current rules live in `AGENTS.md`, `ops/operator.json`, `ops/seo-roadmap.json`, and `ops/current-cycle.md`.
 
 Project path:
 

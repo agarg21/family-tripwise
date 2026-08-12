@@ -11,7 +11,7 @@ The strategy is to build destination-specific family travel pages and interactiv
 - Improve existing pages before adding URLs unless the current SERP clearly requires a separate page type.
 - Build research authority through a maintained evidence layer: official facts, source-dated review patterns, claim-level uncertainty, and visible synthesis that helps families decide faster.
 - Differentiate through current source-backed research, clean comparisons, family-constraint routing, useful maps, and compact decision support. AI accelerates collection and synthesis; it does not manufacture experience.
-- Keep the central Control Room as the only scheduler. Manual work in this repository is user-directed and still follows the same QA, independent-review, release, and reconciliation gates.
+- Run the temporary independent Master-thread autopilot twice daily through September 12, 2026. The cadence does not create a content quota; every substantive action still needs evidence, exact scope, native QA, independent review, and release verification.
 
 San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed five-role cluster passes. The August 2026 operating theme is depth before expansion: San Diego is the primary ranking-improvement city, Las Vegas and Chicago are secondary existing-page candidates, and New York City and San Antonio remain maintained observation cohorts. Orlando research is preserved, but publication is held during this cycle unless the user explicitly changes direction.
 

@@ -1,30 +1,30 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-05
+Last updated: 2026-08-12
 
 ## Cycle Name
 
-Cycle 2: Operate Family Tripwise through the SEO Portfolio Operator and its rolling roadmap.
+Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
 
-The repository mirror of project state is `ops/seo-roadmap.json`; the central Control Room owns scheduling and the dispatch ledger. The current five-city portfolio is complete. The August strategy deepens existing cities before any new-destination publication.
+The repository source of project state is `ops/seo-roadmap.json`. Through September 12 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator is the only scheduler and runs at 09:00 and 17:00 Eastern without consulting or updating the central Control Room. The current five-city portfolio is complete; existing-page usefulness, evidence, discovery, and authority take priority over expansion.
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` is complete and review-clean after Heisenberg cycle-two `PASS`.
 
-`FT-RES-012`, `FT-AUTH-002`, and the research-only San Diego backlink-gap action `FT-AUTH-004` are complete and review-clean. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff4e770a2c94c6ed298808775c1ac9c9762` through Pages run `30667262994`. `FT-RES-013`, `FT-RES-014`, `FT-RES-015`, and `FT-EVAL-002` are complete and review-clean. `FT-AUTH-006` is released and production-verified at `6bc35d03ba413056cf3b9988bf449ae8972d4a57` through Pages run `30869031713`. `FT-IMP-022` is released and production-verified at `e5e41ecbd664220f4359140cfd639e4e2b7a186f` through run `30930924523`. No direct-manual action is active. `FT-PUB-006` remains unselected and held.
+`FT-OPS-003` is complete and review-clean. It reuses the Family Tripwise heartbeat, establishes the independent twice-daily loop, keeps community work draft-only, and preserves the existing QA/review/release gates. `FT-PUB-006` remains unselected and held; the autopilot does not authorize Orlando or another new destination.
 
 ## State Checkpoint
 
-- Latest GSC evidence: `ops/gsc-snapshots/2026-08-04.md`, fresh authenticated API evidence with finalized data through 2026-08-02. The Las Vegas all-ages URL has 493 impressions, zero clicks, page-average position 59.75, remains indexed, and was last crawled July 31. This mechanical overlay preserves the `FT-RES-015` diagnosis and is not a CTR signal.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-08-12.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-10. The property has 1,732 impressions, 6 clicks, aggregate average position 63.9, 28 discovered pages, and 24 of 28 inspected URLs indexed. Most page rows remain in the low-visibility lane; this is not a sitewide CTR or rewrite signal.
 - Latest site release: `FT-IMP-022` at commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f`, published by the successful deploy step in Pages run `30930924523`. The workflow wrapper is red because the first verification received an unrelated transient 503 and the one allowed retry encountered a duplicate `github-pages` artifact; the release marker, target invariants, and fresh production SEO QA independently pass.
 - Completed manual action: `FT-EVAL-002`, selected by direct user instruction on August 4 and closed after Heisenberg cycle-two `PASS`. No `site/**`, new URL, page edit, title test, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 - Las Vegas diagnostic result: the target is indexed and has 464 public impressions, zero clicks and page-average position 60.69. Protected export run `30746285285` produced 54 rows and 456 attributable impressions; 410 impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording. Three live SERPs strongly overlap, so one broad all-ages URL remains correct. Zero finalized performance days follow the July 31 crawl, so no rewrite failure is claimed.
 - Latest implementation result: `FT-IMP-022` keeps both San Diego lodging URLs while making the stay-area page own the five-area/base decision and handing exact-property selection to the unchanged 12-hotel page. Lovelace cycle two returned `PASS` with no P0-P3 findings; the release marker, target invariants, and fresh production SEO QA pass.
-- Latest completed manual action: `FT-EVAL-002`, research/state only and review-clean on August 4.
+- Completed operating-model action: `FT-OPS-003`; Turing cycle two returned `PASS` with no P0-P3 findings, and no public page or external account changed.
 - Authority implementation result: the existing San Diego all-ages page now contains the 12-attraction logistics index and CSV without adding a canonical/indexable HTML page. The teen page remained unchanged; no indexing request or outreach occurred.
 - Promoted expansion action: `FT-PUB-006`, unselected and held during the August depth cycle; it still requires explicit user approval after strategy review.
-- Active substantive Control Room action: none.
+- Active substantive central Control Room action: not applicable; central scheduling and dispatch state are outside the independent pilot.
 - Latest NYC release: `FT-IMP-017` / `IMP-035` / `SRR-026`, released and production-verified with Lagrange `PASS_WITH_P3`, no P0-P2 findings, 105/105 tests, and production SEO QA at 0 errors and 0 warnings.
 - NYC hotel publication: complete; production contains one canonical/indexable page with 12 hotel cards, 24 Google Maps links, and one sitemap entry.
 - NYC teen publication: complete; production contains one canonical/indexable 10-choice specialist with the expected cluster routes and one sitemap entry.
@@ -44,14 +44,14 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the August 4 snapshot has finalized data through August 2, 1,595 impressions and 3 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the August 12 snapshot has finalized data through August 10, 1,732 impressions and 6 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: `FT-AUTH-006` at commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57`; GitHub Pages run `30869031713` succeeded and production verification passed
+- Current released implementation: `FT-IMP-022` at commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f`; the release marker and production verification pass, with the qualified workflow-wrapper state recorded above
 
 ## Historical operating threads
 
-- The permanent Family Tripwise SEO Operator task and central deterministic operator now own current selection and release work.
+- The permanent Family Tripwise Master / Operator owns current selection and release work through the September 12 independent-pilot cutoff.
 - The following earlier role-specific threads are historical references, not independent priority owners:
 - Implementation Agent: `019f3ca5-67ed-7b93-a88c-838c5a026535`
 - SEO Research & Review Agent: `019f3ca5-b3b7-7fd2-9f0f-ba411bf5c658`
@@ -172,11 +172,11 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-04.json`, collected through the read-only API with finalized data through August 2; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-12.json`, collected through the read-only API with finalized data through August 10; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue mirror. The five-page San Antonio sequence, technical operations work, `FT-DEV-004`, `FT-RES-011`, `FT-RES-012`, `FT-AUTH-002`, `FT-AUTH-004`, released `FT-AUTH-005`, `FT-RES-013`, `FT-RES-014`, `FT-RES-015`, released `FT-AUTH-006`, and released `FT-IMP-022` are complete. `FT-PUB-006` remains separately user-gated and is held during the August existing-city depth cycle. No substantive item is selected.
+`ops/seo-roadmap.json` is the repository queue. `FT-OPS-003` is complete. `FT-PUB-006` remains separately user-gated and held; each future scheduled run should choose one evidence-qualified existing-page/evidence/research action or record a no-op.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -196,7 +196,7 @@ Findings to preserve:
 
 ## Implementation State
 
-Legacy implementation backlogs remain historical inputs. Current implementation eligibility, required evidence, target paths, observation windows, and status come from `ops/seo-roadmap.json` and the central operator state.
+Legacy implementation backlogs remain historical inputs. Current implementation eligibility, required evidence, target paths, observation windows, and status come from `ops/seo-roadmap.json` and this independent Master thread's repository-recorded state.
 
 Current local QA findings from `node tools/seo-qa.mjs`:
 

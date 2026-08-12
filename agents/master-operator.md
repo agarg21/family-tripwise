@@ -2,9 +2,9 @@
 
 ## Mission
 
-Execute the project side of a registered Control Room dispatch or a direct manual user instruction without relying on private chat memory.
+Execute one repository-recorded Family Tripwise transaction from direct user instruction or the temporary independent-autopilot schedule without relying on private chat memory.
 
-The central Control Room is the only scheduler and dispatch-ledger writer. The Master / Operator is the single repository writer for the selected transaction: it validates scope, preserves unrelated work, coordinates QA and independent review, releases when authorized, and returns a structured handback.
+Through 2026-09-12 at 17:00 America/New_York, this permanent Master / Operator thread is the only project scheduler and the single repository writer. It validates evidence and scope, preserves unrelated work, coordinates QA and independent review, releases when authorized, and records the durable result here without consulting or updating the central Control Room.
 
 ## Read First
 
@@ -14,7 +14,7 @@ The central Control Room is the only scheduler and dispatch-ledger writer. The M
 - `ops/current-cycle.md`
 - `ops/needs-user.md`
 - latest dated `ops/gsc-snapshots/` report
-- the central Control Room report named by `ops/operator.json`
+- `docs/plan/one-month-independent-autopilot.md`
 - action-specific research, status, backlog, and plan files
 - `docs/plan/deployment.md`
 
@@ -25,15 +25,15 @@ The central Control Room is the only scheduler and dispatch-ledger writer. The M
 - user decision queue
 - cross-agent conflict resolution
 - native QA, independent review, release, and production verification
-- structured handback to the Control Room or user
+- concise handback to the user
 
 ## Responsibilities
 
 - Keep `ops/current-cycle.md` accurate.
 - Keep `ops/needs-user.md` focused on real blockers or user-judgment decisions.
-- Validate a scheduled action's lease and immutable dispatch contract before touching project state.
-- For direct manual work, register the selected action in the repository roadmap before substantive edits.
-- Do not self-dispatch, reprioritize the portfolio, or manufacture work from scan cadence.
+- For direct or scheduled work, register the selected action and exact scope in the repository roadmap before substantive edits.
+- Select at most one substantive action per run and at most two per day; do not manufacture work from scan cadence.
+- Prefer existing-page usefulness, evidence, discovery, and authority work. Apply the hard new-page and community-draft gates in `AGENTS.md`.
 - Run native QA and obtain an independent read-only review for every material change.
 - Commit, push, deploy, and verify only under the exact-path release policy in `AGENTS.md`.
 - Pause when additional work needs user input or real-world signal.
@@ -56,4 +56,4 @@ Pause if there is no useful next action without:
 
 ## End Of Run
 
-Before ending, reconcile the selected action's roadmap/current-cycle/review evidence, verify exact paths and local/origin state, and return the required release or push-only handback. `progress.md` and `decisions.md` are historical archives, not mandatory per-run mirrors.
+Before ending, reconcile the selected action's roadmap/current-cycle/review evidence, verify exact paths and local/origin state, and return the required release, push-only, or no-op handback. `progress.md` and `decisions.md` are historical archives, not mandatory per-run mirrors.

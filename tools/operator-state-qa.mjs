@@ -30,9 +30,16 @@ function releaseOrder(item) {
   );
 }
 
+function isProductionVerifiedRelease(item) {
+  return new Set([
+    "released-and-production-verified",
+    "released-and-production-verified-with-workflow-wrapper-failure"
+  ]).has(item.release_state);
+}
+
 function latestRecordedReleaseItem(items) {
   return items
-    .filter((item) => item.release_state === "released-and-production-verified")
+    .filter(isProductionVerifiedRelease)
     .sort((left, right) => releaseOrder(right).localeCompare(releaseOrder(left)))[0];
 }
 
@@ -85,7 +92,7 @@ export function checkOperatorState(root) {
     if (item.status === "completed" && item.release_state === "review-clean-release-pending") {
       errors.push(`${item.id} is completed but still marked release-pending`);
     }
-    if (item.release_state === "released-and-production-verified") {
+    if (isProductionVerifiedRelease(item)) {
       if (!/^[0-9a-f]{40}$/.test(item.release_commit ?? "")) {
         errors.push(`${item.id} has an invalid or missing release_commit`);
       }

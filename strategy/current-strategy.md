@@ -1,6 +1,6 @@
 # Family Tripwise Current Strategy
 
-Last updated: 2026-08-01
+Last updated: 2026-08-12
 
 This is the canonical operating strategy for Family Tripwise. Historical launch plans remain useful as provenance but do not control the current queue.
 
@@ -142,6 +142,16 @@ The August objectives are:
 - design the agent as a fast query layer over shared validated records;
 - learn from indexing, crawl, query interpretation, and user usefulness without promising short-window rank movement.
 
+### Independent autopilot month
+
+From August 12 through September 12, the permanent Master thread runs twice daily without the central Control Room. Cadence is an opportunity to observe and make one bounded improvement, not permission to publish or rewrite twice a day.
+
+- Existing pages and shared evidence products come first.
+- Current GSC query/crawl evidence, live SERP gaps, official-fact freshness, recurring parent questions, or verified usability defects must name the expected benefit before a page changes.
+- Competitor research should identify work a parent still has to reconstruct; it must not become outline copying or list inflation.
+- Relevant public questions may inform the evidence layer and a concise draft-answer queue. Answers are never auto-posted and never imply firsthand experience.
+- A no-op is successful when no evidence-qualified action would improve a real family decision.
+
 ## Page Quality Bar
 
 Every indexable page must justify itself through family-specific usefulness and information gain. Include only the components that improve the page's job:
@@ -210,6 +220,6 @@ Mitigate these risks with source-classified records, conflict tracking, compact 
 
 ## Operating Model
 
-The central SEO Control Room is the only scheduler and dispatch ledger. This project task is the single repository writer for a valid dispatch or direct manual user instruction. Every substantive strategy, content, product, code, or configuration change follows exact-path scope, native QA, independent read-only review, and the repository release policy.
+During the one-month pilot, the permanent Family Tripwise Master / Operator thread is the only scheduler and repository writer. It does not consult or update the central Control Room. Every substantive strategy, content, product, code, research, or configuration change follows evidence-based selection, exact-path scope, native QA, independent read-only review, and the repository release policy.
 
 The current roadmap lives in `ops/seo-roadmap.json`. Historical first-30-page, three-agent, and staged 90-day plans do not override it.

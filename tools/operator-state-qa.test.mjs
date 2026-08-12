@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
+import { mkdtempSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -11,7 +11,8 @@ function fixture({
   stale = false,
   badMetadata = false,
   adjacentPending = false,
-  reorderedReleases = false
+  reorderedReleases = false,
+  qualifiedReleaseState = false
 } = {}) {
   const root = mkdtempSync(join(tmpdir(), "family-tripwise-operator-state-"));
   mkdirSync(join(root, "ops/gsc-snapshots"), { recursive: true });
@@ -30,7 +31,9 @@ function fixture({
         {
           id: "FT-IMP-001",
           status: "completed",
-          release_state: "released-and-production-verified",
+          release_state: qualifiedReleaseState
+            ? "released-and-production-verified-with-workflow-wrapper-failure"
+            : "released-and-production-verified",
           release_commit: releaseCommit,
           pages_run: 123,
           released_at: "2026-07-24T12:00:00Z",
@@ -101,4 +104,21 @@ test("does not attribute an adjacent action's pending state to the latest releas
 
 test("selects the newest recorded release by timestamp rather than array order", () => {
   assert.deepEqual(checkOperatorState(fixture({ reorderedReleases: true })), []);
+});
+
+test("accepts a production-verified release with a qualified workflow state", () => {
+  assert.deepEqual(checkOperatorState(fixture({ qualifiedReleaseState: true })), []);
+});
+
+test("does not accept an unrecognized production-verified release prefix", () => {
+  const root = fixture({ qualifiedReleaseState: true });
+  const roadmapPath = join(root, "ops/seo-roadmap.json");
+  const roadmap = JSON.parse(readFileSync(roadmapPath, "utf8"));
+  roadmap.items[0].release_state = "released-and-production-verified-pending";
+  writeFileSync(roadmapPath, `${JSON.stringify(roadmap, null, 2)}\n`);
+
+  assert.match(
+    checkOperatorState(root).join("\n"),
+    /No released-and-production-verified roadmap item exists/
+  );
 });

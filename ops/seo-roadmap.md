@@ -1,34 +1,35 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-05
+Last updated: 2026-08-12
 
-Last re-scored: 2026-07-22
-Next re-score due: 2026-07-29
+Last re-scored: 2026-08-12
+Next re-score due: 2026-08-19
 
 ## Ownership
 
-The central SEO Control Room owns scheduling, dispatch registration, and roadmap reprioritization. This repository mirrors the durable project queue and evidence needed to execute a valid dispatch or direct manual user instruction.
+Through September 12 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator owns twice-daily scheduling and roadmap reprioritization from this repository. It does not consult or update the central SEO Control Room during the pilot.
 
-The Family Tripwise project operator may update the selected action's repository evidence and status within an authorized transaction, but it must not self-dispatch or reprioritize unrelated work. The user owns portfolio goals and material strategic decisions. The independent reviewer validates implementation quality; it does not replace Control Room scheduling or required human review.
+Each run may select at most one evidence-qualified substantive action. The user owns material strategic and external-action decisions. The independent reviewer validates implementation quality; it does not replace required human evidence or user approval.
 
-`ops/seo-roadmap.json` is the repository mirror used for contract validation and project execution. The central dispatch ledger and latest central report control scheduler state when post-release evidence has not yet been backfilled here.
+`ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Healthy monitoring or a heartbeat without a concrete user benefit should produce a no-op rather than a manufactured action.
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-04.json`.
-- Classification on August 4: fresh authenticated read-only Search Console API evidence, collected August 4 with finalized performance data through August 2.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-12.json`.
+- Classification on August 12: fresh authenticated read-only Search Console API evidence, collected August 12 with finalized performance data through August 10.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
-- The protected July 29 sitewide export remains aligned to finalized data through July 26 and outside this repository. A fresh target-only Las Vegas export was encrypted in successful GitHub Actions run `30746285285`, decrypted only into private central operator state, and aligned through July 31. It contains 54 rows and 456 attributable impressions; complete rows remain outside this repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 4 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 12 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 1,732 impressions, 6 clicks, 0.35% CTR, and aggregate average position 63.9. Most page rows remain in a low-visibility lane, so this is not a sitewide CTR or rewrite signal.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
 ## Maintenance cadence
 
-- Every Control Room run: complete routine monitoring housekeeping and dispatch at most one eligible substantive action. The project operator executes only that contract or a direct user instruction.
-- Weekly in the Control Room: review fresh evidence, close stale ideas, and re-score the next four weeks when evidence supports it.
-- After a deployment: record commit, workflow, production, crawl, and measurement evidence centrally. Do not create a repository commit solely to backfill those fields.
+- Every independent Master run: complete routine monitoring housekeeping and select at most one evidence-qualified substantive action, or record a no-op.
+- Weekly in this repository: review fresh evidence, close stale ideas, and re-score the next four weeks when evidence supports it.
+- After a deployment: record commit, workflow, production, crawl, and measurement evidence in durable project state. Do not create a repository commit solely to backfill those fields.
 - Use a blocking observation window only when an action explicitly requires an isolated experiment and available evidence can support that evaluation.
 - Monthly or after a strategic event: ask the user to confirm destination expansion, monetization, risk, and continuation decisions.
 
@@ -88,8 +89,21 @@ The Family Tripwise project operator may update the selected action's repository
 | 50 | `FT-RES-015` diagnose the Las Vegas all-ages ranking opportunity | Content/authority diagnostic | Completed and review-clean | Faraday cycle-two `PASS` with no P0-P3; fresh protected evidence and live SERPs support one broad URL and one consolidation/citation improvement without calling the latest crawl a failed rewrite. |
 | 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Released and production-verified | Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57`; Pages run `30869031713`; release marker, target invariants, and production SEO QA passed after Herschel cycle-two `PASS`. |
 | 52 | `FT-IMP-022` clarify San Diego lodging URL ownership | Existing-page role clarity | Released and production-verified | Commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` was published by run `30930924523`; the red workflow wrapper reflects a post-deploy transient 503 and retry artifact collision, while the release marker, invariants, and fresh production SEO QA pass. |
+| 53 | `FT-OPS-003` enable the one-month independent Master autopilot | Operating model | Completed and review-clean | Reuses the Family Tripwise heartbeat for 09:00 and 17:00 Eastern runs through September 12; Turing cycle-two `PASS` confirmed the evidence, no-op, release, new-page, and draft-only community gates. |
 
-Ready does not authorize project work by itself. The Control Room selects and dispatches work using impact, confidence, learning value, effort, risk, freshness requirements, and active observation windows; direct manual user instructions remain separately allowed.
+Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-OPS-003 - Enable the one-month independent Master autopilot
+
+- Selected: 2026-08-12 by explicit user instruction.
+- State: completed and review-clean after Turing cycle-two `PASS` with no P0-P3 findings; this operating-model action is push-only and changes no public page.
+- Schedule: the existing paused `family-tripwise-operator-pilot` heartbeat is active on the permanent Master thread at 09:00 and 17:00 America/New_York through the September 12 cutoff.
+- Mission: improve existing pages, shared evidence products, discovery, trust, and real-user decision support. Run cadence is not a publishing quota and may produce a no-op.
+- Evidence: fresh August 12 GSC finalized through August 10 shows 1,732 impressions, 6 clicks, aggregate position 63.9, 28 discovered pages, and 24 of 28 inspected URLs indexed. It supports monitoring and restraint, not an aggregate CTR diagnosis.
+- New-page gate: current SERP-supported distinct job, material demand, no clean existing-URL fit, maintainable information gain, explicit roadmap eligibility, and required user approval.
+- Community boundary: current public questions may inform research and source-linked drafts in `backlog/community-answer-drafts.md`; no autonomous posting, voting, messaging, account creation, impersonation, or promotional linking.
+- Scope: operating model, runbook, queue, and state QA only. No `site/**`, sitemap, indexability, deployment, analytics, indexing request, outreach, external-account mutation, new URL, or second recurring automation.
+- QA and review: 149/149 tests, focused operator-state tests 7/7, state/freshness/local and production SEO/snapshot/JSON/link/privacy/scope/whitespace QA pass. The cycle-one release-state-prefix P2 was fixed with an explicit allowlist and negative regression test; Turing cycle two returned `PASS`.
 
 ### FT-RES-015 - Diagnose the Las Vegas all-ages ranking opportunity
 
@@ -770,9 +784,9 @@ Ready does not authorize project work by itself. The Control Room selects and di
 1. Read the newest dated snapshot under `ops/gsc-snapshots/` and state its collection mode and age.
 2. Run current public and repository health checks.
 3. Complete due routine monitoring as housekeeping. Preempt substantive work only for a verified technical or production defect, a safety or trust blocker, a due substantive experiment decision, or a check explicitly marked to preempt.
-4. For a registered dispatch, validate the lease and execute only the immutable contract. For direct manual work, record the user-directed action and exact paths.
+4. Select at most one bounded action from direct user authority plus repository evidence; record its action ID, exact paths, evidence, acceptance criteria, measurement plan, and production invariants before editing.
 5. Implement, independently review, commit, push, and verify within the standing policy.
-6. Return the structured handback to the Control Room. Do not self-select the next item.
+6. Return a concise handback to the user and leave the next action evidence-gated.
 
 ## Hotel Research Policy
 
@@ -788,8 +802,8 @@ The first standalone hotel page should not stop at the three hotels already name
 
 ## Expansion Policy
 
-San Diego established the first deep pattern; Las Vegas and Chicago validated transfer. Future city work must still begin with a current decision pack and Control Room dispatch or direct manual user instruction. New York City is the leading research candidate and San Antonio is the runner-up, but neither priority self-authorizes implementation.
+San Diego established the first deep pattern; Las Vegas, Chicago, New York City, and San Antonio validated transfer. Orlando research remains held. Any future URL needs the current distinct-job, demand, existing-URL-fit, maintainable-information-gain, roadmap-eligibility, and user-approval gates in `AGENTS.md`.
 
 ## Data boundary
 
-This repository is public. Committed GSC snapshots are normalized decision summaries: aggregate performance, page-level metrics for public URLs, sitemap status, and URL Inspection status. Credentials and complete raw query exports must never be committed. Deeper private query analysis remains in the central operator's protected state.
+This repository is public. Committed GSC snapshots are normalized decision summaries: aggregate performance, page-level metrics for public URLs, sitemap status, and URL Inspection status. Credentials and complete raw query exports must never be committed. Independent-pilot query exports remain encrypted in GitHub and decrypt only to the Family Tripwise private directory documented in `docs/plan/protected-gsc-query-export.md`.

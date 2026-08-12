@@ -2,7 +2,7 @@
 
 State: configured
 
-Last updated: 2026-07-18
+Last updated: 2026-08-12
 
 Family Tripwise's public GSC snapshots intentionally omit complete query rows. The protected query export path collects `page + query` rows only when manually requested and keeps the plaintext outside the public repository.
 
@@ -13,7 +13,7 @@ Family Tripwise's public GSC snapshots intentionally omit complete query rows. T
 - The workflow deletes plaintext JSON on the runner before upload.
 - The public recipient certificate lives at `ops/gsc-query-export-recipient.pem`.
 - The private decryption key lives outside this repo at `~/.codex/private/family-tripwise/gsc-query-export-private-key.pem`.
-- Decrypted exports belong in `/Users/apoorvagarg/Documents/SEO Agent/seo-lab/operator/state/family-tripwise/protected-gsc-query-exports/`.
+- Decrypted exports belong in `~/.codex/private/family-tripwise/protected-gsc-query-exports/`, outside both the public repository and the central SEO operator.
 
 ## Manual Run
 
@@ -37,9 +37,9 @@ gh run download RUN_ID -R agarg21/family-tripwise \
   -n family-tripwise-encrypted-gsc-query-export \
   -D /tmp/family-tripwise-gsc-query-export
 
-mkdir -p "/Users/apoorvagarg/Documents/SEO Agent/seo-lab/operator/state/family-tripwise/protected-gsc-query-exports"
+mkdir -p "$HOME/.codex/private/family-tripwise/protected-gsc-query-exports"
 for file in /tmp/family-tripwise-gsc-query-export/*.json.cms; do
-  out="/Users/apoorvagarg/Documents/SEO Agent/seo-lab/operator/state/family-tripwise/protected-gsc-query-exports/$(basename "${file%.cms}")"
+  out="$HOME/.codex/private/family-tripwise/protected-gsc-query-exports/$(basename "${file%.cms}")"
   openssl cms -decrypt -inform DER \
     -in "$file" \
     -recip ops/gsc-query-export-recipient.pem \
@@ -50,3 +50,5 @@ done
 ```
 
 Never commit decrypted exports, complete query rows, credentials, country/device rows, or user data.
+
+The independent Master may use aggregate conclusions from these private exports in public-safe research, but it must never reproduce complete rows or identifying query detail in the repository.

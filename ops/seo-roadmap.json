@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "site": "family-tripwise",
-  "owner": "Central SEO Control Room",
-  "last_updated": "2026-08-05",
-  "last_rescored_on": "2026-07-22",
-  "next_rescore_due": "2026-07-29",
+  "owner": "Family Tripwise Master / Operator",
+  "last_updated": "2026-08-12",
+  "last_rescored_on": "2026-08-12",
+  "next_rescore_due": "2026-08-19",
   "planning_horizon_days": 28,
   "maintenance": {
-    "after_every_run": "The project operator updates only the dispatched or directly user-instructed item's repository evidence and must not self-dispatch or reprioritize unrelated items.",
-    "after_deployment": "The Control Room records commit, workflow, production, crawl, and measurement evidence centrally; do not create a repository commit solely to backfill it.",
-    "weekly": "The Control Room re-scores ready and planned items from fresh GSC, public health, experiment, product, and authority evidence.",
+    "after_every_run": "The independent Master updates only the selected direct-manual/autopilot item's repository evidence and records a no-op when no evidence-qualified action exists.",
+    "after_deployment": "The independent Master records commit, workflow, production, crawl, and measurement evidence in repository state without creating a separate commit solely to backfill release metadata.",
+    "weekly": "The independent Master re-scores ready and planned items from fresh GSC, public health, SERP, product, content, community-question, and authority evidence.",
     "monthly_or_strategy_event": "Ask the user to confirm material destination expansion, monetization direction, risk changes, or site continuation decisions."
   },
   "goals": [
@@ -2476,6 +2476,62 @@
       "released_at": "2026-08-04T16:49:05Z",
       "release_state": "released-and-production-verified-with-workflow-wrapper-failure",
       "notes": "Selected by direct manual user instruction on 2026-08-04. The first attempt in run 30930924523 deployed successfully, then production SEO verification received a transient 503 from an unrelated San Antonio URL; the single allowed retry failed on a duplicate github-pages artifact. Current release.json, target invariants and fresh production SEO QA independently verify the release, while the overall workflow conclusion correctly remains failure. This is a role-clarification implementation, not a title/CTR experiment or permission for a wider lodging rewrite. No indexing request, outreach, external-account mutation, new URL, destination expansion or recurring automation occurred."
+    },
+    {
+      "id": "FT-OPS-003",
+      "title": "Enable the one-month independent Master autopilot",
+      "kind": "operations",
+      "lane": "operating-model",
+      "status": "completed",
+      "selected_on": "2026-08-12",
+      "completed_on": "2026-08-12",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "019ff61b-a224-72a0-ae0a-7b14f995f331"
+      ],
+      "impact": 5,
+      "confidence": 5,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "AGENTS.md",
+        "README.md",
+        "agents/master-operator.md",
+        "agents/operator-review-agent.md",
+        "strategy/current-strategy.md",
+        "docs/plan/one-month-independent-autopilot.md",
+        "docs/plan/protected-gsc-query-export.md",
+        "backlog/community-answer-drafts.md",
+        "ops/chat-bootstrap-prompts.md",
+        "ops/operator.json",
+        "ops/gsc-snapshots/README.md",
+        "tools/operator-state-qa.mjs",
+        "tools/operator-state-qa.test.mjs",
+        "ops/needs-user.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The repository consistently authorizes the permanent Family Tripwise Master thread as the twice-daily scheduler through September 12, keeps existing-page and real-user usefulness as the default, enforces a hard evidence gate for new URLs, confines community work to source-linked drafts, preserves independent review and exact-path release gates, and produces no site or external-account change.",
+      "production_invariant": "Operating-model and documentation only: no site/**, sitemap, canonical, indexability, Pages workflow, deployment, analytics, indexing request, community posting, outreach, external-account mutation, new URL, destination expansion, or second recurring automation.",
+      "gsc_evidence_classification": "Fresh authenticated read-only snapshot collected 2026-08-12 with finalized data through 2026-08-10: 1,732 impressions, 6 clicks, aggregate average position 63.9, and 24 of 28 inspected sitemap URLs indexed. It supports continued monitoring and restraint, not a CTR diagnosis or page rewrite.",
+      "acceptance_criteria": [
+        "The existing paused Family Tripwise heartbeat is reused, attached to the permanent Master thread, scheduled for 09:00 and 17:00 America/New_York, and bounded by the September 12 cutoff.",
+        "Current instructions and roadmap identify the Master as the only scheduler during the pilot and prohibit central Control Room interaction.",
+        "Existing-page evidence gates, new-page gates, no-op behavior, community-draft safety, QA, review, release, and external-action boundaries are durable and internally consistent.",
+        "Native state, snapshot, content-freshness, SEO, JSON duplicate-key/ID, privacy, exact-scope, no-site-diff, and whitespace QA pass; independent review returns PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "At each scheduled run, record the newest finalized evidence, selected action or no-op, expected user value, review/release result, and next evidence gate. At the cutoff, evaluate useful existing-page improvements, defects prevented, source freshness, GSC/indexing/query movement, community drafts prepared, and avoided low-value edits; do not judge success by action count.",
+      "qa_summary": "Full repository tests pass 149/149; focused operator-state tests pass 7/7; operator-state and content-freshness QA pass; local and production SEO QA report 0 errors and 0 warnings; all 30 public GSC snapshots validate; JSON duplicate-key/ID, Markdown-link, privacy, exact 18-path scope, no-site/no-workflow, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Turing (019ff61b-a224-72a0-ae0a-7b14f995f331) returned one cycle-one P2 because a release-state prefix match could accept malformed qualified states. The checker was changed to an explicit two-state allowlist and a negative regression test was added. Cycle two returned PASS with no P0-P3 findings.",
+      "result": "Activated the existing Family Tripwise heartbeat for two independent Master runs per day through September 12; aligned repository policy, strategy, role charters, roadmap and current-cycle state; added a no-quota runbook and draft-only community queue; moved future protected query exports to the Family Tripwise private directory; and hardened qualified release-state validation without changing the public site or an external account.",
+      "notes": "Selected by explicit user instruction on 2026-08-12. The paused automation family-tripwise-operator-pilot was reused rather than duplicated. External forum/Reddit posting remains user-gated; the autonomous lane is research and drafting only."
     }
   ]
 }
