@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-12
 
-No active action is blocked. `FT-DEV-005` completed the user-requested local review surface for community answer drafts; run `node tools/community-answer-review.mjs` and open its loopback URL. Existing-page research, implementation, monitoring, QA, reviewed releases, and community-answer drafting are authorized within the recorded gates. Approving wording in the local queue will not authorize posting; no indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
+No active action is blocked. `FT-COM-001` completed one review-clean NYC family-itinerary answer for the local review surface created by `FT-DEV-005`; `COMM-2026-001` is ready with `user_review.decision` still pending. Open `http://127.0.0.1:4178` while the local board is running to approve, revise, or reject the wording. Approving wording will not authorize posting; no indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
 
 `FT-OPS-002` is released and production-verified. `FT-DEV-004` is completed and review-clean; no user decision is required.
 

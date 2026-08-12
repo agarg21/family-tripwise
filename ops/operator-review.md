@@ -49,12 +49,25 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-022` | San Diego lodging URL role clarification released and production-verified | `PASS` | Lovelace cycle two closed the P2 stale queue state and all three P3 findings; no P0-P3 remains. Commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` was published by run `30930924523`; the red workflow wrapper reflects a post-deploy transient 503 and retry artifact collision, while release marker, invariants, and fresh production SEO QA pass. |
 | `FT-OPS-003` | One-month independent Master autopilot operating model | `PASS` | Turing cycle one found one P2 in qualified release-state matching; the explicit allowlist and negative test closed it. Cycle two returned `PASS` with no P0-P3. Full 149/149 and focused 7/7 tests plus state/freshness/SEO/snapshot/JSON/link/privacy/scope/whitespace QA pass. |
 | `FT-DEV-005` | Local community-answer review board complete and review-clean | `PASS` | Noether cycles one and two found rebinding, public-data, chronology and Eastern-date issues; all were fixed with adversarial tests. Cycle three returned `PASS` with no P0-P3. Full 159/159 and focused 10/10 tests plus state/freshness/SEO/snapshot/queue/privacy/scope/responsive QA pass. |
+| `FT-COM-001` | One current NYC family-itinerary answer draft complete and review-clean | `PASS` | Hume cycle one found three P2s covering source fidelity, omitted AI guidance, and an unsupported dining comparison. All were fixed; cycle two returned `PASS` with no P0-P3. Full 159/159 and focused 10/10 tests plus queue/state/freshness/SEO/JSON/source/privacy/scope QA pass. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-12 - `FT-COM-001` current NYC itinerary answer draft
+
+**Reviewer:** Hume (`019ff6f2-6e9f-7e23-b67a-6e5e0a7807a2`), independent read-only community-answer reviewer
+
+**Final result: `PASS`**
+
+- Cycle 1 returned `FAIL` for three P2 findings: unsupported first-trip framing plus advice that contradicted the family's stated two birthday priorities, omission of the community FAQ's explicit AI-itinerary caution, and an AMNH dining comparison stronger than the official evidence.
+- The correction removed the unsupported framing, preserved both birthday admissions while cutting other rigidity, recorded the AI-assisted/human-review boundary, and separated conditional dining advice from two exact AMNH official sources.
+- Cycle 2 returned `PASS` with no P0-P3 findings across the complete six-path diff.
+- Full tests pass 159/159 and focused community-review tests pass 10/10. Queue schema, operator state, content freshness, local and production SEO, duplicate-key/ID, source, exact-scope, privacy, no-site/no-workflow, and whitespace QA pass.
+- `COMM-2026-001` remains pending user review with `posting_authorized: false`; no answer, link, vote, message, account action, indexing request, outreach, destination expansion, or automation change occurred.
 
 ### 2026-08-05 - `FT-IMP-022` release-state reconciliation
 

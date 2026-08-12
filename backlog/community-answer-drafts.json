@@ -3,5 +3,81 @@
   "last_updated": "2026-08-12",
   "repository_visibility": "public",
   "posting_authorized": false,
-  "drafts": []
+  "drafts": [
+    {
+      "id": "COMM-2026-001",
+      "destination": "New York City",
+      "community": "r/visitingnyc",
+      "thread_url": "https://www.reddit.com/r/visitingnyc/comments/1vcck6j/nyc_itinerary_with_soon_to_be_7_year_old/",
+      "observed_on": "2026-08-12",
+      "rules": {
+        "checked_on": "2026-08-12",
+        "summary": "The thread directs visitors to the community FAQ and basic-courtesies guide. The FAQ explicitly cautions against relying on AI-generated itineraries because hours and distances may be wrong; this AI-assisted draft therefore uses current official checks and remains subject to human review. The public rules page did not expose readable rule text, so self-promotional-link permission is not established. Keep any eventual answer link-free; posting still requires a separate user instruction and fresh rule check.",
+        "links": [
+          "https://www.reddit.com/r/visitingnyc/about/rules/",
+          "https://www.reddit.com/r/visitingnyc/comments/1rrw8fi/visiting_nyc_faq_start_your_nyc_journey_here/"
+        ]
+      },
+      "question": "How should a family pace a Tuesday-to-Saturday New York City trip with an early-elementary-age child when the draft combines Central Park, AMNH, a Yankees game, two chosen birthday attractions, Lower Manhattan, a Statue of Liberty visit, and a final West Side morning?",
+      "decision_job": "Preserve both birthday priorities, remove other fragile blocks, protect recovery time, and decide whether the Statue goal is a harbor view, an island visit, or the advance-ticket crown climb.",
+      "draft_answer": "The itinerary is workable, but I would make three decisions before adding anything.\n\n1. Wednesday: make AMNH and the Yankees game the two anchors. Treat Central Park before the museum as an optional short walk, not a third must-do. Buy AMNH admission ahead for faster entry and reserve any ticketed exhibition time you care about. AMNH lists current on-site dining options, so lunch can stay inside if that helps protect the hotel break; check the current hours and menus rather than assuming it is the best choice. Check MTA service on the day for the stadium trip instead of locking in a car ride now.\n\n2. Birthday day: since Sloomoo and Museum of Ice Cream are both birthday priorities, keep both and make everything else serve them. Book the two timed entries with a generous gap, put the meal nearby, and do not add a third attraction. Before booking, decide which admission survives if a delay forces a cut; that keeps the day from becoming a race without second-guessing the birthday choices.\n\n3. Friday: decide now whether the goal is to see the Statue or climb it. Crown access is a separate advance reservation through the official Statue City Cruises seller. NPS says children must be at least 42 inches tall, and the crown requires 162 narrow stairs with no elevator. If crown or pedestal tickets are unavailable, choose an island general-admission visit or a ferry view and plan the day around that honest fallback. If you visit the islands, make Wall Street and Eataly optional rather than equal anchors.\n\nTuesday already has the right shape: keep Bryant Park or Times Square dependent on arrival energy, with Times Square after dinner if everyone still has fuel. For Saturday, first confirm that the hotel will hold bags, choose High Line or Chelsea Market as the must-do, and set a hard turn-back time for Penn Station.\n\nThe overall rule I would use is one protected reset and one item each day that can disappear without making the day feel failed.",
+      "evidence": [
+        {
+          "classification": "community-question",
+          "title": "Current NYC family itinerary-check discussion",
+          "url": "https://www.reddit.com/r/visitingnyc/comments/1vcck6j/nyc_itinerary_with_soon_to_be_7_year_old/",
+          "checked_on": "2026-08-12",
+          "note": "Used only for the paraphrased schedule, pace, food, transit, and Statue-access decisions. Participant identities, copied comments, and anecdotal recommendations are not retained or treated as facts."
+        },
+        {
+          "classification": "official-fact",
+          "title": "AMNH dining information",
+          "url": "https://www.amnh.org/plan-your-visit/dining",
+          "checked_on": "2026-08-12",
+          "note": "Supports the existence and current posted hours of on-site dining options. Whether eating inside is the best family choice remains an editorial decision; exact visit duration and family pace remain variable."
+        },
+        {
+          "classification": "official-fact",
+          "title": "AMNH plan-your-visit information",
+          "url": "https://www.amnh.org/plan-your-visit",
+          "checked_on": "2026-08-12",
+          "note": "Supports advance admission for faster entry, separate timed ticketed exhibitions, current operating information, and the museum as the direct check path; exact visit duration and family pace remain variable."
+        },
+        {
+          "classification": "official-fact",
+          "title": "National Park Service Statue of Liberty crown guidance",
+          "url": "https://www.nps.gov/stli/planyourvisit/visit-the-crown.htm",
+          "checked_on": "2026-08-12",
+          "note": "Supports advance official-vendor reservation, the 42-inch minimum for children, 162 narrow stairs, and no elevator to the crown. Availability and the family's ability or comfort are not inferred."
+        },
+        {
+          "classification": "official-fact",
+          "title": "MTA current service and trip-planning information",
+          "url": "https://www.mta.info/",
+          "checked_on": "2026-08-12",
+          "note": "Used only as the current check path for the stadium trip. No exact route, duration, accessibility, crowd, or safety claim is made."
+        },
+        {
+          "classification": "editorial-interpretation",
+          "title": "Family Tripwise NYC itinerary sequencing research",
+          "url": "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+          "checked_on": "2026-08-12",
+          "note": "Supports the disclosed one-anchor-per-half-day, protected-reset, optional-block, and geographic-priority framework. It is product guidance, not personally tested experience or proof of universal fit."
+        }
+      ],
+      "family_tripwise_link": {
+        "recommendation": "omit",
+        "url": null,
+        "rationale": "The answer is complete without a link, and current public rule evidence does not establish permission for self-promotional linking. The internal research page is recorded only for reviewer traceability."
+      },
+      "uncertainty": "The exact travel dates, attraction ticket inventory, game time, MTA service, hotel bag-storage policy, child height, sensory fit, energy, and meal preferences are unknown. Restaurant quality and attraction fit are not ranked, and no route, crowd, safety, or timing outcome is guaranteed.",
+      "user_review": {
+        "decision": "pending",
+        "decided_on": null,
+        "notes": ""
+      },
+      "created_on": "2026-08-12",
+      "updated_on": "2026-08-12"
+    }
+  ]
 }

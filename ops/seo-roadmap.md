@@ -91,8 +91,20 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 52 | `FT-IMP-022` clarify San Diego lodging URL ownership | Existing-page role clarity | Released and production-verified | Commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` was published by run `30930924523`; the red workflow wrapper reflects a post-deploy transient 503 and retry artifact collision, while the release marker, invariants, and fresh production SEO QA pass. |
 | 53 | `FT-OPS-003` enable the one-month independent Master autopilot | Operating model | Completed and review-clean | Reuses the Family Tripwise heartbeat for 09:00 and 17:00 Eastern runs through September 12; Turing cycle-two `PASS` confirmed the evidence, no-op, release, new-page, and draft-only community gates. |
 | 54 | `FT-DEV-005` add a local community-answer review board | Community usefulness workflow | Completed and review-clean | Noether cycle-three `PASS`; strict public-repository queue, loopback/same-origin/token writes, Eastern dates, and approve/revise/reject UI are ready without posting authority. |
+| 55 | `FT-COM-001` draft one current NYC family-itinerary answer | Community usefulness | Completed and review-clean | One pending, self-contained NYC itinerary draft passed Hume cycle-two review after source-fidelity, AI-guidance, and dining-evidence corrections; no link or external write. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-COM-001 - Draft one current NYC family-itinerary answer
+
+- Selected: 2026-08-12 by the first scheduled independent-pilot heartbeat after fresh GSC and repository health checks found no defect, unfinished release, or eligible page edit.
+- State: completed and review-clean after Hume cycle-two `PASS` with no P0-P3 findings; the draft remains pending user review and was not posted.
+- Source: one current r/visitingnyc itinerary-check question about a Tuesday-through-Saturday family trip with an early-elementary-age child. Retain only the paraphrased decision context, source URL, and evidence; no username or copied thread text.
+- User value: preserve both chosen birthday admissions without adding a third block, protect the planned reset, and distinguish a harbor view from the advance-ticket and stair requirements of entering the Statue of Liberty crown.
+- Link boundary: omit the Family Tripwise link. The answer can stand alone, and the visible community rules interface does not establish permission for self-promotional linking.
+- Scope: one pending JSON-queue draft plus five durable state mirrors. No `site/**`, public page, external post, vote, message, account action, indexing request, outreach, new destination, or automation change.
+- Measurement: user approve/revise/reject clarity in the localhost board; no volume, posting, vote, link, traffic, or ranking target.
+- QA and review: 159/159 full tests and 10/10 focused tests pass with strict queue, state, freshness, local/production SEO, duplicate-key/ID, source, scope, privacy, no-site/no-workflow and whitespace checks. Hume's three cycle-one P2s were fixed; cycle two returned `PASS` with no P0-P3 findings.
 
 ### FT-DEV-005 - Add a local community-answer review board
 

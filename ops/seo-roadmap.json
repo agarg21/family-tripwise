@@ -2583,6 +2583,50 @@
       "review_summary": "Independent read-only reviewer Noether (019ff629-a276-76d0-b320-5ca7d84ad7b2) returned three P2s in cycle one for Host/Origin rebinding exposure, unclear public-repository privacy, and incomplete chronology. Cycle two confirmed those closed and found one P2 UTC-versus-New-York default plus one P3 predating decision. The final correction added project-time-zone review dates and the missing lower bound. Cycle three returned PASS with no P0-P3 findings.",
       "result": "Added a localhost-only review board backed by a strict public-repository JSON queue. The user can inspect source, rules, evidence, freshness, uncertainty and link rationale, edit answer wording and public-safe notes, and record pending, approved, revise or rejected. Loopback Host, same-origin, ephemeral-token, CSP, schema, chronology, atomic-write and public-data boundaries are enforced; approval never authorizes posting.",
       "notes": "Selected by direct user instruction on 2026-08-12. This creates a localhost review surface backed by repository data; it does not publish an internal or public website and does not authorize external posting."
+    },
+    {
+      "id": "FT-COM-001",
+      "title": "Draft one current NYC family-itinerary answer",
+      "kind": "community-research",
+      "lane": "community-usefulness",
+      "status": "completed",
+      "selected_on": "2026-08-12",
+      "completed_on": "2026-08-12",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "019ff6f2-6e9f-7e23-b67a-6e5e0a7807a2"
+      ],
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 1,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "backlog/community-answer-drafts.json",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "One current, specific New York City family-itinerary question receives a concise evidence-separated answer draft that helps the family reduce schedule overload and resolve its highest-consequence choice, with no promotional link or external write.",
+      "production_invariant": "Repository queue and state only: no site/**, new URL, sitemap, canonical, indexability, Pages workflow, analytics, indexing request, forum post, vote, message, outreach, account mutation, destination expansion, or recurring automation change.",
+      "gsc_evidence_classification": "Fresh authenticated read-only snapshot collected 2026-08-12 with finalized data through 2026-08-10: 1,732 impressions, 6 clicks, aggregate average position 63.9, and 24 of 28 inspected sitemap URLs indexed. It was checked before selection but does not justify or measure this qualitative community-answer action.",
+      "acceptance_criteria": [
+        "The queue contains exactly one new pending draft for a current public question observed on 2026-08-12, with the question paraphrased and no username, copied thread text, personal data, or private note retained.",
+        "The draft answers first, uses no firsthand, local, parent, traveler, safety, or exact-route claim, and distinguishes official facts, community signals, editorial interpretation, and unknowns.",
+        "The community rule check and every evidence record have a current source URL and checked date; a Family Tripwise link is omitted because the answer is self-contained and promotional-link permission is not established.",
+        "The strict queue schema, focused and full native QA, privacy and exact-scope checks pass, and an independent read-only reviewer returns PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Present the draft in the localhost review board with user_review.decision pending. Measure whether the user can approve, revise, or reject it without source ambiguity; do not use draft count, posting, votes, links, traffic, or rankings as a success target.",
+      "qa_summary": "Full repository tests pass 159/159 and focused community-review tests pass 10/10. Strict queue validation, operator-state, content-freshness, local and production SEO, duplicate-key/ID, source reachability, exact six-path scope, privacy/credential, no-site/no-workflow and whitespace checks pass. AMNH returned its known automated-client 403 while the current official content was independently inspected through public search.",
+      "review_summary": "Independent read-only reviewer Hume (019ff6f2-6e9f-7e23-b67a-6e5e0a7807a2) returned FAIL in cycle one for three P2 findings: the answer contradicted the family's stated birthday priorities, the rule check omitted the community FAQ's AI caution, and the AMNH lunch comparison exceeded official evidence. The correction preserved both chosen birthday admissions, added the AI/human-review boundary, and separated conditional dining guidance from official facts. Cycle two returned PASS with no P0-P3 findings.",
+      "result": "Added one current NYC family-itinerary answer draft to the public-safe localhost review queue. It preserves both stated birthday priorities, protects flexible blocks, distinguishes Statue viewing from advance-ticket crown access, uses current official checks, omits promotional linking, and remains pending user review with posting authority false.",
+      "notes": "Selected by the first scheduled independent-pilot heartbeat on 2026-08-12 after repository/origin reconciliation and fresh GSC review found no defect, unfinished release, or evidence-qualified page edit. The source is a current r/visitingnyc itinerary-check question. No answer was posted; approval of wording will not authorize posting."
     }
   ]
 }
