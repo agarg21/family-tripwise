@@ -90,8 +90,19 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Released and production-verified | Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57`; Pages run `30869031713`; release marker, target invariants, and production SEO QA passed after Herschel cycle-two `PASS`. |
 | 52 | `FT-IMP-022` clarify San Diego lodging URL ownership | Existing-page role clarity | Released and production-verified | Commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` was published by run `30930924523`; the red workflow wrapper reflects a post-deploy transient 503 and retry artifact collision, while the release marker, invariants, and fresh production SEO QA pass. |
 | 53 | `FT-OPS-003` enable the one-month independent Master autopilot | Operating model | Completed and review-clean | Reuses the Family Tripwise heartbeat for 09:00 and 17:00 Eastern runs through September 12; Turing cycle-two `PASS` confirmed the evidence, no-op, release, new-page, and draft-only community gates. |
+| 54 | `FT-DEV-005` add a local community-answer review board | Community usefulness workflow | Completed and review-clean | Noether cycle-three `PASS`; strict public-repository queue, loopback/same-origin/token writes, Eastern dates, and approve/revise/reject UI are ready without posting authority. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-DEV-005 - Add a local community-answer review board
+
+- Selected: 2026-08-12 by explicit user instruction.
+- State: completed and review-clean after Noether cycle-three `PASS` with no P0-P3 findings; local tooling only, so this is push-only with no Pages wait.
+- Product: a dependency-free localhost review board backed by a validated JSON queue. It should show the source question, concise draft, evidence and freshness, permit answer edits and notes, and record `approved`, `revise`, or `rejected` decisions for later autopilot runs.
+- Safety boundary: approval means wording accepted for a possible later posting action. It never posts, votes, messages, creates an account, or authorizes the autopilot to perform an external write.
+- Evidence: fresh August 12 GSC is available but does not select or justify this user-directed workflow action.
+- Scope: 12 repository paths covering policy, queue data, local tooling/tests, and durable state. No `site/**`, public URL, sitemap, indexability, deployment, external-account mutation, or recurring automation creation.
+- QA and review: 159/159 full tests and 10/10 focused tests pass with state, freshness, local/production SEO, 30 snapshots, queue/JSON/link/privacy/scope/no-site/responsive/live-host/whitespace checks. Review cycles closed rebinding, public-data, chronology and Eastern-date findings; cycle three returned `PASS`.
 
 ### FT-OPS-003 - Enable the one-month independent Master autopilot
 
@@ -101,7 +112,7 @@ Ready does not authorize project work by itself. The Master selects at most one 
 - Mission: improve existing pages, shared evidence products, discovery, trust, and real-user decision support. Run cadence is not a publishing quota and may produce a no-op.
 - Evidence: fresh August 12 GSC finalized through August 10 shows 1,732 impressions, 6 clicks, aggregate position 63.9, 28 discovered pages, and 24 of 28 inspected URLs indexed. It supports monitoring and restraint, not an aggregate CTR diagnosis.
 - New-page gate: current SERP-supported distinct job, material demand, no clean existing-URL fit, maintainable information gain, explicit roadmap eligibility, and required user approval.
-- Community boundary: current public questions may inform research and source-linked drafts in `backlog/community-answer-drafts.md`; no autonomous posting, voting, messaging, account creation, impersonation, or promotional linking.
+- Community boundary: current public questions may inform research and source-linked drafts in the validated `backlog/community-answer-drafts.json` queue, with policy in `backlog/community-answer-drafts.md`; no autonomous posting, voting, messaging, account creation, impersonation, or promotional linking.
 - Scope: operating model, runbook, queue, and state QA only. No `site/**`, sitemap, indexability, deployment, analytics, indexing request, outreach, external-account mutation, new URL, or second recurring automation.
 - QA and review: 149/149 tests, focused operator-state tests 7/7, state/freshness/local and production SEO/snapshot/JSON/link/privacy/scope/whitespace QA pass. The cycle-one release-state-prefix P2 was fixed with an explicit allowlist and negative regression test; Turing cycle two returned `PASS`.
 

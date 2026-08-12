@@ -12,7 +12,7 @@ The repository source of project state is `ops/seo-roadmap.json`. Through Septem
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` is complete and review-clean after Heisenberg cycle-two `PASS`.
 
-`FT-OPS-003` is complete and review-clean. It reuses the Family Tripwise heartbeat, establishes the independent twice-daily loop, keeps community work draft-only, and preserves the existing QA/review/release gates. `FT-PUB-006` remains unselected and held; the autopilot does not authorize Orlando or another new destination.
+`FT-OPS-003` and `FT-DEV-005` are complete and review-clean. The loopback-only community review board gives the user a quick approve, revise, or reject surface for repository-backed drafts without authorizing external posting. `FT-PUB-006` remains unselected and held; the autopilot does not authorize Orlando or another new destination.
 
 ## State Checkpoint
 
@@ -22,6 +22,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Las Vegas diagnostic result: the target is indexed and has 464 public impressions, zero clicks and page-average position 60.69. Protected export run `30746285285` produced 54 rows and 456 attributable impressions; 410 impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording. Three live SERPs strongly overlap, so one broad all-ages URL remains correct. Zero finalized performance days follow the July 31 crawl, so no rewrite failure is claimed.
 - Latest implementation result: `FT-IMP-022` keeps both San Diego lodging URLs while making the stay-area page own the five-area/base decision and handing exact-property selection to the unchanged 12-hotel page. Lovelace cycle two returned `PASS` with no P0-P3 findings; the release marker, target invariants, and fresh production SEO QA pass.
 - Completed operating-model action: `FT-OPS-003`; Turing cycle two returned `PASS` with no P0-P3 findings, and no public page or external account changed.
+- Completed local-tooling action: `FT-DEV-005`; Noether cycle three returned `PASS` with no P0-P3 findings, and no public page or external write changed.
 - Authority implementation result: the existing San Diego all-ages page now contains the 12-attraction logistics index and CSV without adding a canonical/indexable HTML page. The teen page remained unchanged; no indexing request or outreach occurred.
 - Promoted expansion action: `FT-PUB-006`, unselected and held during the August depth cycle; it still requires explicit user approval after strategy review.
 - Active substantive central Control Room action: not applicable; central scheduling and dispatch state are outside the independent pilot.

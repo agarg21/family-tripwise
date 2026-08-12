@@ -52,7 +52,7 @@ When any condition is uncertain, improve, research, consolidate, or observe inst
 
 Public forums and Reddit can reveal parent language, edge cases, unresolved questions, and practical decision criteria. They are qualitative evidence, not demand metrics or verified experience.
 
-The autopilot may add a small number of drafts to `backlog/community-answer-drafts.md`. A useful draft:
+The autopilot may add a small number of drafts to the validated `backlog/community-answer-drafts.json` queue. `backlog/community-answer-drafts.md` defines its human policy, and `node tools/community-answer-review.mjs` opens the local review board. A useful draft:
 
 - answers the exact question in the first sentence;
 - is concise enough for the venue;
@@ -63,6 +63,8 @@ The autopilot may add a small number of drafts to `backlog/community-answer-draf
 - records the thread URL, date, community rule check, sources, and why the answer helps.
 
 Autopilot must not post, vote, message, create accounts, evade moderation, or pose as a human traveler. User review remains required before any external action.
+
+The review board may record `pending`, `approved`, `revise`, or `rejected`. `approved` means the user accepts the wording for possible later use; it is not posting authority. A later external post still requires a fresh explicit instruction.
 
 ## Stop Rules
 

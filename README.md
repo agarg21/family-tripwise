@@ -40,6 +40,16 @@ Open any file under `site/` directly in a browser. The generated pages do not re
 
 The production site is configured for GitHub Pages at `familytripwise.com`.
 
+### Community Answer Review
+
+Start the localhost review board with:
+
+```bash
+node tools/community-answer-review.mjs
+```
+
+Open the printed `127.0.0.1` URL to review repository-backed forum and Reddit answer drafts. You can edit wording, leave notes, and mark a draft approved, revise, rejected, or pending. The tool writes only to `backlog/community-answer-drafts.json`; approval does not post the answer or authorize a later external write. This JSON file is committed to the public repository, so never enter usernames, personal data, private contact details, or private reviewer notes.
+
 ## Local QA
 
 Run the full repository tests, operating-state consistency check, and static SEO QA before release:
@@ -68,6 +78,7 @@ The command remains the stable entry point. Its page data and render/update logi
 
 - `ops/seo-roadmap.json`: machine-readable action and release state.
 - `ops/current-cycle.md`: concise current operating checkpoint.
+- `backlog/community-answer-drafts.json`: validated community-answer drafts and user review decisions; posting is always disabled.
 - `status/`: city-level page roles, frozen evidence baselines, review coverage, release state, and blockers.
 - `docs/research/`: dated decision packs and evidence records.
 - `docs/plan/`: reusable policy and workflow.

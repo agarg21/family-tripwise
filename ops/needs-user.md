@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-12
 
-No active action is blocked. `FT-OPS-003` completed the repository alignment for the user-authorized independent autopilot at 09:00 and 17:00 Eastern through September 12. Existing-page research, implementation, monitoring, QA, reviewed releases, and community-answer drafting are authorized within the recorded gates. No indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
+No active action is blocked. `FT-DEV-005` completed the user-requested local review surface for community answer drafts; run `node tools/community-answer-review.mjs` and open its loopback URL. Existing-page research, implementation, monitoring, QA, reviewed releases, and community-answer drafting are authorized within the recorded gates. Approving wording in the local queue will not authorize posting; no indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
 
 `FT-OPS-002` is released and production-verified. `FT-DEV-004` is completed and review-clean; no user decision is required.
 
