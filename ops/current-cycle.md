@@ -17,8 +17,9 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 ## State Checkpoint
 
 - Completed scheduled action: `FT-MAINT-002`, released and production-verified at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422` through successful Pages run `31685857634`. Locke returned cycle-one `PASS_WITH_P3` with no P0-P2. The page now reports IHG's scheduled reopening and continuing project without an observed-reopening claim; URL, title, canonical, indexability, sitemap, hotel count and unrelated content remain unchanged.
-- August 13 evidence boundary: no newer mechanical GSC snapshot arrived before selection. The August 12 authenticated API snapshot is reused recent evidence finalized through August 10 and is not the reason for this factual-maintenance action.
-- Latest GSC evidence: `ops/gsc-snapshots/2026-08-12.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-10. The property has 1,732 impressions, 6 clicks, aggregate average position 63.9, 28 discovered pages, and 24 of 28 inspected URLs indexed. Most page rows remain in the low-visibility lane; this is not a sitewide CTR or rewrite signal.
+- Morning action evidence boundary: no August 13 snapshot had arrived before `FT-MAINT-002` selection, so that factual-maintenance action used the August 12 snapshot only as orientation.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-08-13.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-11. The property has 1,821 impressions, 6 clicks, aggregate average position 63.84, 28 discovered pages, and 24 of 28 inspected URLs indexed. The added 89 rolling impressions, unchanged clicks/indexing, page-average positions and absence of a public query cohort do not create a CTR or rewrite action.
+- August 13 evening monitoring: the new mechanical snapshot passed schema/privacy validation; all 28 configured production URLs are 200 and in the sitemap; robots and sitemap are healthy; production SEO, content freshness, operator-state and focused GSC/state tests pass; the community draft remains pending without user feedback. No substantive action was selected.
 - Latest site release: `FT-MAINT-002` at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`, published and production-verified by successful Pages run `31685857634`. The release marker, corrected Chicago text, declared target invariants and fresh production SEO QA pass.
 - Completed manual action: `FT-EVAL-002`, selected by direct user instruction on August 4 and closed after Heisenberg cycle-two `PASS`. No `site/**`, new URL, page edit, title test, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 - Las Vegas diagnostic result: the target is indexed and has 464 public impressions, zero clicks and page-average position 60.69. Protected export run `30746285285` produced 54 rows and 456 attributable impressions; 410 impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording. Three live SERPs strongly overlap, so one broad all-ages URL remains correct. Zero finalized performance days follow the July 31 crawl, so no rewrite failure is claimed.
@@ -48,7 +49,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the August 12 snapshot has finalized data through August 10, 1,732 impressions and 6 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the August 13 snapshot has finalized data through August 11, 1,821 impressions and 6 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: `FT-MAINT-002` at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`; Pages run `31685857634`, release marker, target invariants and production SEO verification pass
@@ -176,7 +177,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-12.json`, collected through the read-only API with finalized data through August 10; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-13.json`, collected through the read-only API with finalized data through August 11; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 

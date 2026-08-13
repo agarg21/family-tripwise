@@ -15,13 +15,14 @@ Each run may select at most one evidence-qualified substantive action. The user 
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-12.json`.
-- Classification on August 12: fresh authenticated read-only Search Console API evidence, collected August 12 with finalized performance data through August 10.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-13.json`.
+- Classification on August 13: fresh authenticated read-only Search Console API evidence, collected August 13 with finalized performance data through August 11.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 12 found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 1,732 impressions, 6 clicks, 0.35% CTR, and aggregate average position 63.9. Most page rows remain in a low-visibility lane, so this is not a sitewide CTR or rewrite signal.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 13 found 24 indexed and four not indexed, unchanged from August 12. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 1,821 impressions, 6 clicks, 0.33% CTR, and aggregate average position 63.84. The rolling total added 89 impressions while clicks and indexing stayed unchanged. The largest visible page-row increase is the San Diego family-hotel page from 482 to 569 impressions, but its page-average position remains 70.32 and the public snapshot has no query cohort. This is not a sitewide or page-level CTR/rewrite signal.
+- August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
