@@ -2633,8 +2633,9 @@
       "title": "Refresh the expired Chicago InterContinental pool notice",
       "kind": "maintenance",
       "lane": "production-factual-freshness",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-08-13",
+      "completed_on": "2026-08-13",
       "review_outcome": "PASS_WITH_P3",
       "review_cycles": 1,
       "reviewer_agent_ids": [
@@ -2674,7 +2675,11 @@
       "measurement_plan": "Treat this as factual freshness maintenance, not a ranking experiment. Verify the production release marker, zero freshness/SEO errors, the revised project caveat, and unchanged URL/canonical/indexability/sitemap/hotel-count/map-link invariants; preserve GSC as observation only.",
       "qa_summary": "Focused Chicago hotel tests pass 4/4 and the full repository suite passes 179/179. Operator-state and content-freshness QA pass; local SEO QA reports 0 errors and 0 warnings. Full generation is idempotent and target-only; browser checks at 1280, 390 and 320 pixels show no horizontal overflow or clipped card text with ten hotel cards, 20 Maps links and the image intact. Roadmap duplicate-key/ID, exact ten-path scope, added-line credential, and whitespace checks pass. IHG returns its expected automated-client 403 while the current official notices were independently inspected through public search crawl.",
       "review_summary": "Independent read-only reviewer Locke (019ffa63-4417-7f93-a26d-1b8f8f7de7fe) returned PASS_WITH_P3 in cycle one with no P0-P2. Locke confirmed the scheduled-versus-observed reopening boundary, official-hour conflict handling, concise usefulness, FAQ/schema parity, evidence classification, GSC boundary, exact scope, technical invariants and 179/179 tests. One P3 requested mechanical phase wording reconciliation before release; one P3 noted optional future regression hardening against the omitted disputed clock times.",
-      "result": "Implementation and review are complete locally. The generated page replaces the expired closure notice with IHG's source-dated project schedule, omits conflicting exact hours, avoids a personally verified reopening claim, and preserves every declared page and technical invariant. Exact-path commit, Pages release and production verification remain pending.",
+      "result": "Released and production-verified. The page replaces the expired closure notice with IHG's source-dated project schedule, omits conflicting exact hours, avoids a personally verified reopening claim, and preserves the URL, title, H1, canonical, indexability, sitemap entry, ten hotels, 20 Maps links, prices and unrelated content. The release marker, target invariants and production SEO QA pass.",
+      "release_commit": "9bf5e04d51efaaa5f35c97ba60656555603fc422",
+      "pages_run": 31685857634,
+      "released_at": "2026-08-13T09:17:17Z",
+      "release_state": "released-and-production-verified",
       "notes": "Selected by the 2026-08-13 09:00 independent-pilot heartbeat after clean origin reconciliation and public health checks. It preempts cadence work because the stale dated notice is a current production defect. No indexing request or external-account action is authorized."
     }
   ]

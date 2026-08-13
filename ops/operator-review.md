@@ -50,7 +50,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-OPS-003` | One-month independent Master autopilot operating model | `PASS` | Turing cycle one found one P2 in qualified release-state matching; the explicit allowlist and negative test closed it. Cycle two returned `PASS` with no P0-P3. Full 149/149 and focused 7/7 tests plus state/freshness/SEO/snapshot/JSON/link/privacy/scope/whitespace QA pass. |
 | `FT-DEV-005` | Local community-answer review board complete and review-clean | `PASS` | Noether cycles one and two found rebinding, public-data, chronology and Eastern-date issues; all were fixed with adversarial tests. Cycle three returned `PASS` with no P0-P3. Full 159/159 and focused 10/10 tests plus state/freshness/SEO/snapshot/queue/privacy/scope/responsive QA pass. |
 | `FT-COM-001` | One current NYC family-itinerary answer draft complete and review-clean | `PASS` | Hume cycle one found three P2s covering source fidelity, omitted AI guidance, and an unsupported dining comparison. All were fixed; cycle two returned `PASS` with no P0-P3. Full 159/159 and focused 10/10 tests plus queue/state/freshness/SEO/JSON/source/privacy/scope QA pass. |
-| `FT-MAINT-002` | Chicago InterContinental pool-notice factual refresh review-clean; release pending | `PASS_WITH_P3` | Locke cycle one confirmed the scheduled-versus-observed reopening boundary, hour-conflict handling, usefulness, FAQ/schema parity, evidence/GSC classification, exact scope and unchanged page invariants. No P0-P2; two non-blocking P3s cover phase wording and optional clock-time test hardening. |
+| `FT-MAINT-002` | Chicago InterContinental pool-notice factual refresh released and production-verified | `PASS_WITH_P3` | Locke cycle one confirmed the scheduled-versus-observed reopening boundary, hour-conflict handling, usefulness, FAQ/schema parity, evidence/GSC classification, exact scope and unchanged page invariants. No P0-P2. Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`, Pages run `31685857634`, marker, target invariants and production SEO QA pass. |
 
 ## Open blocking findings
 
@@ -76,6 +76,12 @@ Independent assessment and QA:
 - Confirmed the page reports IHG's schedule rather than an observed or firsthand reopening, records the official-hour conflict and omits exact hours.
 - Confirmed concise user value, evidence classification, GSC boundary, visible FAQ/schema parity, exact ten-path scope and unchanged URL/title/H1/canonical/indexability/sitemap/ten-hotel/20-Maps-link/price/unrelated-content invariants.
 - Independently reran 179/179 tests, duplicate-key/ID and whitespace checks; all passed and the worktree remained unchanged.
+
+Release evidence:
+
+- Exact-path commit `9bf5e04d51efaaa5f35c97ba60656555603fc422` was published through successful Pages run `31685857634` at 2026-08-13T09:17:17Z.
+- Production `release.json` reports that SHA and run. The expired notice is absent; both cautious scheduled-reopening strings are present; ten hotel cards, 20 Maps links, one canonical, indexability by absence of `noindex`, and one sitemap entry remain.
+- Fresh production SEO QA reports 0 errors and 0 warnings.
 
 ### 2026-08-12 - `FT-COM-001` current NYC itinerary answer draft
 
