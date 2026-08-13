@@ -1,8 +1,8 @@
 # Needs User
 
-Last updated: 2026-08-12
+Last updated: 2026-08-13
 
-No active action is blocked. `FT-COM-001` completed one review-clean NYC family-itinerary answer for the local review surface created by `FT-DEV-005`; `COMM-2026-001` is ready with `user_review.decision` still pending. Open `http://127.0.0.1:4178` while the local board is running to approve, revise, or reject the wording. Approving wording will not authorize posting; no indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
+No active action is blocked. `FT-MAINT-002` is implementation-complete and review-clean after Locke cycle-one `PASS_WITH_P3` with no P0-P2; it needs no user decision, does not change page architecture, and awaits exact-path commit, release and production verification. `FT-COM-001` completed one review-clean NYC family-itinerary answer for the local review surface created by `FT-DEV-005`; `COMM-2026-001` is ready with `user_review.decision` still pending. Open `http://127.0.0.1:4178` while the local board is running to approve, revise, or reject the wording. Approving wording will not authorize posting; no indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
 
 `FT-OPS-002` is released and production-verified. `FT-DEV-004` is completed and review-clean; no user decision is required.
 

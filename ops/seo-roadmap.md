@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-12
+Last updated: 2026-08-13
 
 Last re-scored: 2026-08-12
 Next re-score due: 2026-08-19
@@ -92,8 +92,20 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 53 | `FT-OPS-003` enable the one-month independent Master autopilot | Operating model | Completed and review-clean | Reuses the Family Tripwise heartbeat for 09:00 and 17:00 Eastern runs through September 12; Turing cycle-two `PASS` confirmed the evidence, no-op, release, new-page, and draft-only community gates. |
 | 54 | `FT-DEV-005` add a local community-answer review board | Community usefulness workflow | Completed and review-clean | Noether cycle-three `PASS`; strict public-repository queue, loopback/same-origin/token writes, Eastern dates, and approve/revise/reject UI are ready without posting authority. |
 | 55 | `FT-COM-001` draft one current NYC family-itinerary answer | Community usefulness | Completed and review-clean | One pending, self-contained NYC itinerary draft passed Hume cycle-two review after source-fidelity, AI-guidance, and dining-evidence corrections; no link or external write. |
+| 56 | `FT-MAINT-002` refresh the expired Chicago InterContinental pool notice | Production factual freshness | Review-clean; release pending | Locke cycle-one `PASS_WITH_P3` with no P0-P2; the expired notice is replaced locally and every URL/page invariant remains fixed. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-MAINT-002 - Refresh the expired Chicago InterContinental pool notice
+
+- Selected: 2026-08-13 by the 09:00 independent-pilot heartbeat after clean repository/origin reconciliation.
+- State: implementation and independent review complete; Locke returned `PASS_WITH_P3` with no P0-P2. Exact-path commit, Pages release and production verification remain pending.
+- Evidence: IHG's current amenities/project notice says the pool was scheduled to reopen after August 12 while seating and locker-room work continues through September 16, with occasional daytime construction, unavailable locker rooms, and relocated weekend pool movies. Separate official IHG pages conflict on exact pool hours, so no exact-hours claim will be published.
+- GSC boundary: the newest available August 12 authenticated API snapshot is reused recent evidence finalized through August 10, not newly collected evidence. Its aggregate performance and indexing data do not justify this edit.
+- Exact scope: the Chicago hotel evidence pack, family-hotel generator and focused test, generated Chicago family-hotel HTML, Chicago status, and the five operator-state mirrors named in JSON.
+- Invariants: same URL, title, H1, canonical, indexability, sitemap entry, ten hotels, 20 Google Maps links, price ranges, and unrelated content; no new URL, indexing request, external write, destination expansion, or automation change.
+- Measurement: close the production freshness defect and verify zero freshness/SEO errors plus exact production invariants; this is not a ranking or CTR experiment.
+- QA/review: focused tests pass 4/4 and the full suite passes 179/179; state, freshness, local SEO, deterministic generation, 1280/390/320 rendering, duplicate-key/ID, exact-scope, credential and whitespace checks pass. Locke confirmed source/claim safety, usefulness, FAQ/schema parity and invariants; the two P3s cover mechanically reconciled phase wording and optional future clock-time regression hardening.
 
 ### FT-COM-001 - Draft one current NYC family-itinerary answer
 

@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-12
+Last updated: 2026-08-13
 
 ## Cycle Name
 
@@ -12,10 +12,12 @@ The repository source of project state is `ops/seo-roadmap.json`. Through Septem
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` is complete and review-clean after Heisenberg cycle-two `PASS`.
 
-`FT-OPS-003`, `FT-DEV-005`, and `FT-COM-001` are complete and review-clean. The first scheduled pilot run added one current NYC family-itinerary answer to the loopback queue without a promotional link or external write; it remains pending user review. `FT-PUB-006` remains unselected and held; the autopilot does not authorize Orlando or another new destination.
+`FT-OPS-003`, `FT-DEV-005`, and `FT-COM-001` are complete and review-clean. The first scheduled pilot run added one current NYC family-itinerary answer to the loopback queue without a promotional link or external write; it remains pending user review. `FT-MAINT-002` is the one selected August 13 action because freshness and production SEO QA found the Chicago family-hotel page still presenting an August 10-12 InterContinental pool closure as current. `FT-PUB-006` remains unselected and held; the autopilot does not authorize Orlando or another new destination.
 
 ## State Checkpoint
 
+- Active action: `FT-MAINT-002`, selected August 13 to replace one expired Chicago InterContinental pool-closure notice with a current, source-attributed project caveat. Implementation and native QA are complete; Locke returned cycle-one `PASS_WITH_P3` with no P0-P2. The action preserves the URL, title, canonical, indexability, sitemap, hotel count and unrelated content; exact-path commit, Pages release and production verification remain pending.
+- August 13 evidence boundary: no newer mechanical GSC snapshot arrived before selection. The August 12 authenticated API snapshot is reused recent evidence finalized through August 10 and is not the reason for this factual-maintenance action.
 - Latest GSC evidence: `ops/gsc-snapshots/2026-08-12.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-10. The property has 1,732 impressions, 6 clicks, aggregate average position 63.9, 28 discovered pages, and 24 of 28 inspected URLs indexed. Most page rows remain in the low-visibility lane; this is not a sitewide CTR or rewrite signal.
 - Latest site release: `FT-IMP-022` at commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f`, published by the successful deploy step in Pages run `30930924523`. The workflow wrapper is red because the first verification received an unrelated transient 503 and the one allowed retry encountered a duplicate `github-pages` artifact; the release marker, target invariants, and fresh production SEO QA independently pass.
 - Completed manual action: `FT-EVAL-002`, selected by direct user instruction on August 4 and closed after Heisenberg cycle-two `PASS`. No `site/**`, new URL, page edit, title test, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.

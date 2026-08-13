@@ -50,12 +50,32 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-OPS-003` | One-month independent Master autopilot operating model | `PASS` | Turing cycle one found one P2 in qualified release-state matching; the explicit allowlist and negative test closed it. Cycle two returned `PASS` with no P0-P3. Full 149/149 and focused 7/7 tests plus state/freshness/SEO/snapshot/JSON/link/privacy/scope/whitespace QA pass. |
 | `FT-DEV-005` | Local community-answer review board complete and review-clean | `PASS` | Noether cycles one and two found rebinding, public-data, chronology and Eastern-date issues; all were fixed with adversarial tests. Cycle three returned `PASS` with no P0-P3. Full 159/159 and focused 10/10 tests plus state/freshness/SEO/snapshot/queue/privacy/scope/responsive QA pass. |
 | `FT-COM-001` | One current NYC family-itinerary answer draft complete and review-clean | `PASS` | Hume cycle one found three P2s covering source fidelity, omitted AI guidance, and an unsupported dining comparison. All were fixed; cycle two returned `PASS` with no P0-P3. Full 159/159 and focused 10/10 tests plus queue/state/freshness/SEO/JSON/source/privacy/scope QA pass. |
+| `FT-MAINT-002` | Chicago InterContinental pool-notice factual refresh review-clean; release pending | `PASS_WITH_P3` | Locke cycle one confirmed the scheduled-versus-observed reopening boundary, hour-conflict handling, usefulness, FAQ/schema parity, evidence/GSC classification, exact scope and unchanged page invariants. No P0-P2; two non-blocking P3s cover phase wording and optional clock-time test hardening. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-13 - `FT-MAINT-002` Chicago InterContinental pool-notice refresh
+
+**Reviewer:** Locke (`019ffa63-4417-7f93-a26d-1b8f8f7de7fe`), independent read-only factual-maintenance reviewer
+
+**Final result: `PASS_WITH_P3`**
+
+Findings:
+
+- No P0-P2 findings.
+- `P3`: pre-review state text still called implementation/native QA pending. This was mechanically reconciled while logging the verdict; no reviewed page, source, test, or judgment changed.
+- `P3`: the focused test does not explicitly ban the conflicting IHG `5:00 AM` and `7:00 AM` values. Current generated source and HTML publish neither time, and visible FAQ/JSON-LD answers match; this remains optional regression hardening.
+
+Independent assessment and QA:
+
+- Confirmed current IHG notices support the August 10-12 closure, scheduled reopening for the remaining project, September 16 end date, occasional daytime construction, unavailable locker rooms and relocated weekend pool movies.
+- Confirmed the page reports IHG's schedule rather than an observed or firsthand reopening, records the official-hour conflict and omits exact hours.
+- Confirmed concise user value, evidence classification, GSC boundary, visible FAQ/schema parity, exact ten-path scope and unchanged URL/title/H1/canonical/indexability/sitemap/ten-hotel/20-Maps-link/price/unrelated-content invariants.
+- Independently reran 179/179 tests, duplicate-key/ID and whitespace checks; all passed and the worktree remained unchanged.
 
 ### 2026-08-12 - `FT-COM-001` current NYC itinerary answer draft
 

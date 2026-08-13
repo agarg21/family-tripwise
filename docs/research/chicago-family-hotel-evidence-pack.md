@@ -2,7 +2,9 @@
 
 Status: publication evidence for `FT-PUB-003`
 
-Checked: 2026-07-23
+Initial full check: 2026-07-23
+
+Targeted operational refresh: 2026-08-13
 
 Market: US family travel
 
@@ -34,6 +36,13 @@ Price method: ranges use visible next-30-day summer 2026 examples for two adults
 
 Review method: the primary sample is the latest bounded set of visible, verified Expedia entries inspected July 23, supplemented by named Booking.com or Tripadvisor pages when a conflict or family context needed a second check. The ledger records the exact number inspected, visible date span, whether family context was explicit, and source-to-theme mapping. The live page says only what appeared in the inspected sample; it does not call the themes representative or infer family context when none was exposed. No review prose, reviewer identifier, aggregate score, or raw export is retained. Recheck within 60 days or sooner after a closure, renovation, rebrand, material policy change, or strong new conflict.
 
+### August 13 InterContinental refresh
+
+- `OFFICIAL_PROPERTY_FACT`, checked August 13: IHG's amenities and special-activations notices say the pool was closed August 10-12 and was scheduled to reopen for the remainder of a seating and locker-room project running through September 16. They also warn of occasional daytime construction, unavailable locker rooms, and weekend pool movies temporarily relocated elsewhere in the hotel.
+- `CONFLICT`: IHG's general amenities page and dedicated pool page publish different daily opening times. The page does not resolve or repeat either exact time; families are directed to recheck current access.
+- `UNKNOWN`: this desk check confirms IHG's published schedule, not the pool's observed operating state. Family Tripwise does not claim to have verified the reopening in person.
+- Scope: no prices, review samples, room inventory, hotel selection, or other property records were refreshed in this maintenance action.
+
 ## Selected Comparison Set
 
 | Hotel | Trip-style starting point | Rough total/night | Official facts that matter | Sampled online-review themes | Most important check |
@@ -43,7 +52,7 @@ Review method: the primary sample is the latest bounded set of visible, verified
 | Residence Inn Chicago Downtown/River North | Kitchen and breakfast without a pool requirement | `$270-$500+` | Marriott lists all suites, full-size kitchens, complimentary hot breakfast, on-site laundry, grocery-shopping service, and self or valet parking. | The inspected sample included positive mentions of kitchens, breakfast, location, staff, and suite usefulness; it also surfaced room-specific city noise, kitchen supplies, the small gym, and summer value. | Confirm exact bedding, whether the sleeping area has a door, sofa-bed setup, kitchen equipment, parking, and final total. |
 | Sable at Navy Pier Chicago, Curio Collection by Hilton | Navy Pier-centered younger-child trip | `$310-$650+` | Official sources list lake or skyline views, two-queen rooms and suites sleeping four, mini fridges, cribs, confirmed connecting rooms, paid breakfast, and pier parking. | The inspected sample included positive mentions of views, room condition, and Navy Pier access; it also surfaced the long pier approach, wayfinding, parking cost, service inconsistency, and elevator disruption. | Decide whether sleeping on the pier helps more than it complicates other days; verify room bedding, pier event calendar, parking, and final total. |
 | Swissotel Chicago | Purpose-built Kids Suite | `$240-$550+` | The current Kids Suite offer lists a two-room setup with a dedicated children's space, toys, games, movie night, and breakfast for two adults and up to two children, subject to availability. Standard double rooms publicly list two double beds for four. | The inspected sample included positive mentions of views, river or lake location, room size, and staff; it also surfaced dated finishes, the experience fee, parking access, room assignment or service inconsistency, and offer availability. | Confirm the Kids Suite rather than assuming a standard room includes it; price the fee, breakfast terms, parking, and final total. |
-| InterContinental Chicago Magnificent Mile | Historic indoor-pool base | `$300-$600+` | IHG lists two-double rooms, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool; a temporary August 10-12, 2026 pool closure is posted. | The inspected sample included positive mentions of the pool, location, historic character, and staff; it also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost. | Check the live pool calendar and depth fit, exact two-double room, connecting request, parking, and final total. |
+| InterContinental Chicago Magnificent Mile | Historic indoor-pool base | `$300-$600+` | IHG lists two-double rooms, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Its August 13 project notice says the pool was scheduled to reopen after the August 10-12 closure while related work continues through September 16; occasional daytime construction and unavailable locker rooms may continue. | The inspected sample included positive mentions of the pool, location, historic character, and staff; it also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost. | Recheck current pool access and project conditions, depth fit, exact two-double room, connecting request, parking, and final total. |
 | Hilton Chicago | Museum Campus and Grant Park base | `$320-$650+` | Hilton lists two-double rooms for four, an indoor pool, connecting rooms, cribs, game room, and larger family-connection or specialty layouts. | The inspected sample included positive mentions of Grant Park location, historic public spaces, pool, staff, and larger layouts; it also surfaced housekeeping consistency, dated-room variation, event-scale crowds, and parking cost. | Compare a standard two-double room with the exact larger layout needed; verify pool, event calendar, parking, and total. |
 | Hotel Zachary Chicago, a Tribute Portfolio Hotel | Wrigleyville and older-kid trip | `$360-$750+` | Official pages list king and double-queen rooms directly across from Wrigley Field, with neighborhood dining and ballpark-view categories. | The inspected sample included positive mentions of Wrigley views, room condition, staff, and event convenience; it also surfaced event pricing, noise, blocked streets or rideshare friction, parking, breakfast cost, and limited cold storage. | Check the Wrigley event calendar first, then exact bedding, refrigerator status, transport after events, parking, and final total. |
 | Four Seasons Hotel Chicago | Luxury family amenities and pool | `$630-$1,200+` | Current Four Seasons material lists a 44-foot indoor pool, family programming and child amenities, complimentary dining for children under five under stated terms, and two-double lake-view rooms for four. | The inspected sample included positive mentions of service, pool, child amenities, views, room space, and location; it also surfaced the high total, occasional service mismatch, pool crowding, and room-layout questions. | Price the exact room or suite, confirm bedding and pool timing, child-dining terms, parking, and the value of the family amenities. |
@@ -113,7 +122,7 @@ The page should not expose internal labels such as `REVIEW_SIGNAL`, show a defen
 - Exactly one new canonical and indexable URL, present once in the sitemap.
 - Ten named hotels and ten direct Google Maps links.
 - Every hotel has an official source, broad total-night range, public review source, conflict, freshness date, and parent check.
-- The current Loews pool closure and InterContinental August closure are not obscured.
+- The current Loews pool closure and InterContinental project schedule are not obscured; the ended InterContinental closure is not presented as current or personally verified as reopened.
 - No ordinal ranking, affiliate or booking CTA, copied review prose, reviewer identifier, aggregate score, firsthand claim, safety or quiet guarantee, exact route claim, price guarantee, or indexing request.
 - Existing Chicago stay and home pages link to the comparison; the released activities page remains unchanged.
 - ItemList and FAQ schema match visible content.
@@ -136,7 +145,7 @@ Official property sources:
 - Residence Inn River North overview, rooms, and dining: https://www.marriott.com/en-us/hotels/chirn-residence-inn-chicago-downtown-river-north/overview/, https://www.marriott.com/en-us/hotels/chirn-residence-inn-chicago-downtown-river-north/rooms/, and https://www.marriott.com/en-us/hotels/chirn-residence-inn-chicago-downtown-river-north/dining/
 - Sable property and Hilton policy pages: https://sablehotel.com/ and https://www.hilton.com/en-gb/hotels/chipiqq-sable-at-navy-pier-chicago/hotel-info/
 - Swissotel Kids Suite offer and room: https://www.swissotel.com/hotels/chicago/promotions/family/swissotel-kids-suite/ and https://www.swissotel.com/hotels/chicago/suites/kid-friendly-suite/
-- InterContinental rooms and amenities: https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/rooms and https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities
+- InterContinental rooms, amenities, dedicated pool page, and project notice: https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/rooms, https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities, https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities/pool, and https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities/special-activations
 - Hilton Chicago rooms and amenities: https://www.hilton.com/en/hotels/chichhh-hilton-chicago/rooms/ and https://www.hilton.com/en/hotels/chichhh-hilton-chicago/amenities/
 - Hotel Zachary rooms and current fact sheet: https://www.hotelzachary.com/accommodations/ and https://www.hotelzachary.com/pdf/Hotel%20Zachary%20-%20Fact%20Sheet%20%28December%202025%29.pdf
 - Four Seasons family article and hotel facts: https://press.fourseasons.com/chicago/trending-now/reasons-to-stay-in-chicago-with-kids/ and https://press.fourseasons.com/chicago/hotel-facts/

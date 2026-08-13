@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-12",
+  "last_updated": "2026-08-13",
   "last_rescored_on": "2026-08-12",
   "next_rescore_due": "2026-08-19",
   "planning_horizon_days": 28,
@@ -2627,6 +2627,55 @@
       "review_summary": "Independent read-only reviewer Hume (019ff6f2-6e9f-7e23-b67a-6e5e0a7807a2) returned FAIL in cycle one for three P2 findings: the answer contradicted the family's stated birthday priorities, the rule check omitted the community FAQ's AI caution, and the AMNH lunch comparison exceeded official evidence. The correction preserved both chosen birthday admissions, added the AI/human-review boundary, and separated conditional dining guidance from official facts. Cycle two returned PASS with no P0-P3 findings.",
       "result": "Added one current NYC family-itinerary answer draft to the public-safe localhost review queue. It preserves both stated birthday priorities, protects flexible blocks, distinguishes Statue viewing from advance-ticket crown access, uses current official checks, omits promotional linking, and remains pending user review with posting authority false.",
       "notes": "Selected by the first scheduled independent-pilot heartbeat on 2026-08-12 after repository/origin reconciliation and fresh GSC review found no defect, unfinished release, or evidence-qualified page edit. The source is a current r/visitingnyc itinerary-check question. No answer was posted; approval of wording will not authorize posting."
+    },
+    {
+      "id": "FT-MAINT-002",
+      "title": "Refresh the expired Chicago InterContinental pool notice",
+      "kind": "maintenance",
+      "lane": "production-factual-freshness",
+      "status": "in_progress",
+      "selected_on": "2026-08-13",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 1,
+      "reviewer_agent_ids": [
+        "019ffa63-4417-7f93-a26d-1b8f8f7de7fe"
+      ],
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 2,
+      "effort": 1,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-family-hotel-evidence-pack.md",
+        "tools/page-generation/family-hotel-pages.mjs",
+        "tools/chicago-family-hotels-page.test.mjs",
+        "site/where-to-stay/chicago-family-hotels.html",
+        "status/chicago-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The Chicago family-hotel page no longer presents the ended August 10-12 InterContinental pool closure as current and instead gives a source-dated, uncertainty-aware summary of IHG's continuing project notice without claiming a personally verified reopening.",
+      "production_invariant": "Keep the existing Chicago family-hotel URL, title, H1, canonical, indexability, sitemap entry, ten-hotel shortlist, 20 Google Maps links, price ranges, and all unrelated page content unchanged. No new URL, indexing request, analytics, external post, outreach, account mutation, destination expansion, or recurring automation change.",
+      "gsc_evidence_classification": "Reused recent authenticated read-only snapshot collected 2026-08-12 and finalized through 2026-08-10; no newer snapshot arrived before selection. Its aggregate 1,732 impressions, 6 clicks and 24-of-28 indexed result are orientation only and do not justify this edit. The action is preempted by a verified dated production defect: content-freshness and production SEO QA both fail on the expired August 10-12 notice.",
+      "acceptance_criteria": [
+        "The expired closure wording is absent from generated source and HTML, and content-freshness plus local and production SEO QA pass.",
+        "The page accurately attributes the schedule to IHG: the pool was scheduled to reopen after August 12 while seating and locker-room work continues through September 16, with occasional daytime construction, unavailable locker rooms, and relocated weekend pool movies; it does not independently guarantee that reopening occurred.",
+        "The evidence pack records the August 13 official-source refresh and the conflicting public pool-hour listings, and the page avoids publishing an exact pool-hour claim.",
+        "Focused and full native QA, deterministic generation, exact-path/privacy checks and an independent read-only review return PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Treat this as factual freshness maintenance, not a ranking experiment. Verify the production release marker, zero freshness/SEO errors, the revised project caveat, and unchanged URL/canonical/indexability/sitemap/hotel-count/map-link invariants; preserve GSC as observation only.",
+      "qa_summary": "Focused Chicago hotel tests pass 4/4 and the full repository suite passes 179/179. Operator-state and content-freshness QA pass; local SEO QA reports 0 errors and 0 warnings. Full generation is idempotent and target-only; browser checks at 1280, 390 and 320 pixels show no horizontal overflow or clipped card text with ten hotel cards, 20 Maps links and the image intact. Roadmap duplicate-key/ID, exact ten-path scope, added-line credential, and whitespace checks pass. IHG returns its expected automated-client 403 while the current official notices were independently inspected through public search crawl.",
+      "review_summary": "Independent read-only reviewer Locke (019ffa63-4417-7f93-a26d-1b8f8f7de7fe) returned PASS_WITH_P3 in cycle one with no P0-P2. Locke confirmed the scheduled-versus-observed reopening boundary, official-hour conflict handling, concise usefulness, FAQ/schema parity, evidence classification, GSC boundary, exact scope, technical invariants and 179/179 tests. One P3 requested mechanical phase wording reconciliation before release; one P3 noted optional future regression hardening against the omitted disputed clock times.",
+      "result": "Implementation and review are complete locally. The generated page replaces the expired closure notice with IHG's source-dated project schedule, omits conflicting exact hours, avoids a personally verified reopening claim, and preserves every declared page and technical invariant. Exact-path commit, Pages release and production verification remain pending.",
+      "notes": "Selected by the 2026-08-13 09:00 independent-pilot heartbeat after clean origin reconciliation and public health checks. It preempts cadence work because the stale dated notice is a current production defect. No indexing request or external-account action is authorized."
     }
   ]
 }

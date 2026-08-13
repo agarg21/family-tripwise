@@ -46,8 +46,11 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
   assert.match(html, /Rough total\/night, not a quote/);
-  assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 23, 2026/);
-  assert.match(html, /temporary August 10-12, 2026 pool closure/);
+  assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 23, 2026; InterContinental pool project rechecked August 13, 2026/);
+  assert.match(html, /pool was scheduled to reopen after an August 10-12 closure while seating and locker-room work continues through September 16/);
+  assert.match(html, /locker rooms are unavailable, and weekend pool movies are relocated elsewhere in the hotel/);
+  assert.match(html, /scheduled to reopen after August 12 while related work continues through September 16/);
+  assert.doesNotMatch(html, /temporary August 10-12, 2026 pool closure/);
   assert.match(html, /current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended/);
   assert.match(html, /current public example was about \$308 including taxes and fees/);
   assert.match(html, /1280px-Millennium_park%2Cchicago\.JPG/);
