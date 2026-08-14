@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-13
+Last updated: 2026-08-14
 
 ## Cycle Name
 
@@ -20,6 +20,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Morning action evidence boundary: no August 13 snapshot had arrived before `FT-MAINT-002` selection, so that factual-maintenance action used the August 12 snapshot only as orientation.
 - Latest GSC evidence: `ops/gsc-snapshots/2026-08-13.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-11. The property has 1,821 impressions, 6 clicks, aggregate average position 63.84, 28 discovered pages, and 24 of 28 inspected URLs indexed. The added 89 rolling impressions, unchanged clicks/indexing, page-average positions and absence of a public query cohort do not create a CTR or rewrite action.
 - August 13 evening monitoring: the new mechanical snapshot passed schema/privacy validation; all 28 configured production URLs are 200 and in the sitemap; robots and sitemap are healthy; production SEO, content freshness, operator-state and focused GSC/state tests pass; the community draft remains pending without user feedback. No substantive action was selected.
+- August 14 morning monitoring: the heartbeat arrived at 05:00 Eastern, before the active GSC workflow's 06:15 Eastern daily schedule, so the August 13 snapshot is recent reused evidence rather than an August 14 read. Public preflight, all 31 public-snapshot validations, 159/159 tests, operator-state, content-freshness, and local/production SEO QA pass; the community draft remains pending. Independent read-only reviewer Locke returned cycle-two `PASS` with no P0-P3 after the first cycle caught and corrected the UTC-to-Eastern checkpoint error. The exact housekeeping path is `ops/current-cycle.md`; no substantive action was selected.
 - Latest site release: `FT-MAINT-002` at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`, published and production-verified by successful Pages run `31685857634`. The release marker, corrected Chicago text, declared target invariants and fresh production SEO QA pass.
 - Completed manual action: `FT-EVAL-002`, selected by direct user instruction on August 4 and closed after Heisenberg cycle-two `PASS`. No `site/**`, new URL, page edit, title test, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 - Las Vegas diagnostic result: the target is indexed and has 464 public impressions, zero clicks and page-average position 60.69. Protected export run `30746285285` produced 54 rows and 456 attributable impressions; 410 impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording. Three live SERPs strongly overlap, so one broad all-ages URL remains correct. Zero finalized performance days follow the July 31 crawl, so no rewrite failure is claimed.
@@ -240,8 +241,8 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 ```
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Latest public preflight on July 27: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-08-02.json`, collected through the authenticated read-only API on August 2 with finalized data through July 31.
+- Latest public preflight on August 14: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
+- Current normalized source: `ops/gsc-snapshots/2026-08-13.json`, collected through the authenticated read-only API on August 13 with finalized data through August 11. The August 14 heartbeat arrived before the daily collector was due, so this remains recent reused evidence until a newer snapshot arrives.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.
