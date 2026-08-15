@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-14
+Last updated: 2026-08-15
 
 ## Cycle Name
 
@@ -18,10 +18,11 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 
 - Completed scheduled action: `FT-MAINT-002`, released and production-verified at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422` through successful Pages run `31685857634`. Locke returned cycle-one `PASS_WITH_P3` with no P0-P2. The page now reports IHG's scheduled reopening and continuing project without an observed-reopening claim; URL, title, canonical, indexability, sitemap, hotel count and unrelated content remain unchanged.
 - Morning action evidence boundary: no August 13 snapshot had arrived before `FT-MAINT-002` selection, so that factual-maintenance action used the August 12 snapshot only as orientation.
-- Latest GSC evidence: `ops/gsc-snapshots/2026-08-14.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-12. The property has 1,815 impressions, 6 clicks, aggregate average position 63.82, 28 discovered pages, and 24 of 28 inspected URLs indexed. The six-impression rolling decrease, unchanged clicks/indexing, page-average positions and absence of a public query cohort do not create a CTR or rewrite action.
+- Latest GSC evidence: `ops/gsc-snapshots/2026-08-15.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-13. The property has 1,877 impressions, 6 clicks, aggregate average position 63.91, 28 discovered pages, and 24 of 28 inspected URLs indexed. The 62-impression rolling increase, unchanged clicks/indexing, page-average positions and absence of a public query cohort do not create a CTR or rewrite action.
 - August 13 evening monitoring: the new mechanical snapshot passed schema/privacy validation; all 28 configured production URLs are 200 and in the sitemap; robots and sitemap are healthy; production SEO, content freshness, operator-state and focused GSC/state tests pass; the community draft remains pending without user feedback. No substantive action was selected.
 - August 14 morning monitoring: the heartbeat arrived at 05:00 Eastern, before the active GSC workflow's 06:15 Eastern daily schedule, so the August 13 snapshot is recent reused evidence rather than an August 14 read. Public preflight, all 31 public-snapshot validations, 159/159 tests, operator-state, content-freshness, and local/production SEO QA pass; the community draft remains pending. Independent read-only reviewer Locke returned cycle-two `PASS` with no P0-P3 after the first cycle caught and corrected the UTC-to-Eastern checkpoint error. The exact housekeeping path is `ops/current-cycle.md`; no substantive action was selected.
 - August 14 afternoon monitoring: fresh snapshot commit `707ee36` arrived through successful GSC workflow run `31795004656`, passed schema/privacy validation, and records a successful August 13 crawl of the indexed San Diego family-hotel page. Its performance window ends August 12, so it contains zero finalized post-crawl days. All 28 configured production URLs remain healthy and in the sitemap; 159/159 tests plus operator-state, content-freshness, local/production SEO, JSON, scope, and whitespace QA pass. Independent read-only reviewer Plato (`01a0013c-c187-7ab3-ac70-8bc4203c663d`) returned `PASS` with no P0-P3 across the exact five housekeeping paths. No substantive action was selected while finalized post-crawl performance data accumulates.
+- August 15 monitoring: fresh snapshot commit `c8e684a` arrived through successful GSC workflow run `31880077557`, passed schema/privacy validation, and leaves all 28 inspection states and crawl timestamps unchanged. The San Diego family-hotel performance window now ends on its August 13 crawl date but contains no complete finalized day after the 16:43 UTC crawl. All 33 snapshots validate; 159/159 tests plus operator-state, content-freshness, local/production SEO, public preflight, JSON, scope, and whitespace QA pass. Independent read-only reviewer Cicero (`01a00658-806f-7a72-8942-274df4b5edee`) returned `PASS` with no P0-P3 across the exact three state paths. No substantive action was selected.
 - Latest site release: `FT-MAINT-002` at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`, published and production-verified by successful Pages run `31685857634`. The release marker, corrected Chicago text, declared target invariants and fresh production SEO QA pass.
 - Completed manual action: `FT-EVAL-002`, selected by direct user instruction on August 4 and closed after Heisenberg cycle-two `PASS`. No `site/**`, new URL, page edit, title test, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 - Las Vegas diagnostic result: the target is indexed and has 464 public impressions, zero clicks and page-average position 60.69. Protected export run `30746285285` produced 54 rows and 456 attributable impressions; 410 impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording. Three live SERPs strongly overlap, so one broad all-ages URL remains correct. Zero finalized performance days follow the July 31 crawl, so no rewrite failure is claimed.
@@ -51,7 +52,7 @@ The direct-manual discovery pass is complete: fresh GSC evidence was collected, 
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the August 14 snapshot has finalized data through August 12, 1,815 impressions and 6 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the August 15 snapshot has finalized data through August 13, 1,877 impressions and 6 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: `FT-MAINT-002` at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`; Pages run `31685857634`, release marker, target invariants and production SEO verification pass
@@ -243,7 +244,7 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
 - Latest public preflight on August 14: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-08-14.json`, collected through the authenticated read-only API on August 14 with finalized data through August 12.
+- Current normalized source: `ops/gsc-snapshots/2026-08-15.json`, collected through the authenticated read-only API on August 15 with finalized data through August 13.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.
