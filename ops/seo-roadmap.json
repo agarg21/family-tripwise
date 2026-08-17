@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-16",
+  "last_updated": "2026-08-17",
   "last_rescored_on": "2026-08-12",
   "next_rescore_due": "2026-08-19",
   "planning_horizon_days": 28,
@@ -2681,6 +2681,101 @@
       "released_at": "2026-08-13T09:17:17Z",
       "release_state": "released-and-production-verified",
       "notes": "Selected by the 2026-08-13 09:00 independent-pilot heartbeat after clean origin reconciliation and public health checks. It preempts cadence work because the stale dated notice is a current production defect. No indexing request or external-account action is authorized."
+    },
+    {
+      "id": "FT-RES-016",
+      "title": "Audit San Diego family-hotel source and price freshness",
+      "kind": "research",
+      "lane": "existing-page-evidence-freshness",
+      "status": "completed",
+      "selected_on": "2026-08-17",
+      "completed_on": "2026-08-17",
+      "review_outcome": "PASS",
+      "review_cycles": 3,
+      "reviewer_agent_ids": [
+        "01a00f00-8d41-7d40-8167-bbeadc34d0b6"
+      ],
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 4,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-family-hotel-freshness-audit-2026-08-17.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "status/san-diego-pages.md"
+      ],
+      "success_signal": "A source-classified audit of all 12 live San Diego hotel records identifies any material stale or conflicting official fact, fee, renovation, room, amenity, or rough-price claim and either promotes one bounded correction or records an evidence-supported preserve decision without resetting the page observation window.",
+      "production_invariant": "Research and state only: no site/**, generator, test, title, H1, URL, canonical, indexability, sitemap, hotel count, map, deployment, indexing request, analytics, external post, outreach, account mutation, destination expansion, or recurring automation change.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-08-16 and finalized through 2026-08-14: 1,879 property impressions, 6 clicks, aggregate average position 63.98, 24 of 28 inspected URLs indexed, and 661 impressions at page-average position 70.25 for the indexed San Diego family-hotel page. Only one complete finalized calendar day follows its August 13 crawl, so GSC does not justify an edit or CTR conclusion. The audit is triggered by the live evidence layer reaching its recorded August 17 official-fact refresh boundary and its rough-price observations exceeding the 14-day refresh rule.",
+      "acceptance_criteria": [
+        "All 12 live hotels are checked against current official property or brand sources for the material facts the page exposes, including room setup, pool/water features, breakfast or kitchen function, mandatory fees or parking where published, and current renovation or closure notices.",
+        "Current rough nightly-price evidence is sampled from public official, OTA, metasearch, or review-platform visibility without completing a booking, exposing personal data, or presenting a rate as a quote; unavailable or incomparable observations remain UNKNOWN.",
+        "Every finding records source URL, checked date, evidence class, freshness, confidence, conflict or unknown, and whether the live claim is confirmed, stale-but-nonmaterial, materially contradicted, or unsupported.",
+        "The audit recommends PRESERVE or promotes exactly one bounded existing-page maintenance action; it does not edit the protected page, create a URL, request indexing, send outreach, post externally, or mutate an account.",
+        "Focused and full native QA, JSON duplicate-key and privacy checks, exact-path/no-site scope, and an independent read-only review return PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Treat this as evidence-layer maintenance, not a ranking experiment. Measure complete 12-hotel source coverage, confirmed versus changed material claims, price-band comparability, conflicts and unknowns, and whether one correction is warranted. Preserve the August 13 crawl boundary unless a later separately selected maintenance action fixes a verified material defect.",
+      "qa_summary": "159/159 native tests; operator-state, content-freshness, local and production SEO, all 34 public snapshot validations, duplicate-key/ID, 12 official plus 12 price-row consistency, 37 unique source URLs, exact eight-path, privacy, no-site/tool/workflow and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Bacon returned FAIL in cycles one and two for six P2 findings covering future evidence-pack scope, price comparability, freshness boundaries, claim completeness, one stale backlog mirror and Paradise Point parking. All were corrected. Cycle three returned PASS with no P0-P3 findings across the complete eight-path diff.",
+      "result": "Completed a source-classified freshness audit of all 12 live San Diego hotel records. Core room, pool, kitchen/breakfast, location and trip-style facts remain supported. Public price observations are dynamic, usually two-adult and mostly late-July, so they orient but do not renew the visible ranges. La Jolla Shores now officially describes a refreshed heated pool and children's wading pool while its first-party pages conflict between $45 and $55 parking. Exactly one later maintenance action, FT-MAINT-003 / IMP-043, is promoted but not selected.",
+      "notes": "Selected by the 2026-08-17 morning independent-pilot heartbeat after clean origin reconciliation. The heartbeat arrived before the August 17 GSC workflow, so August 16 evidence is reused. The action is research-only and responds to explicit hotel-evidence freshness rules rather than page cadence, low clicks, or competitor length. No site/**, URL, indexability, map, deployment, indexing request, external-account or automation path changed."
+    },
+    {
+      "id": "FT-MAINT-003",
+      "implementation_backlog_id": "IMP-043",
+      "research_backlog_id": "SRR-039",
+      "promoted_by": "FT-RES-016",
+      "title": "Refresh the existing San Diego family-hotel evidence layer",
+      "kind": "maintenance",
+      "lane": "production-factual-freshness",
+      "status": "ready_not_selected",
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 3,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-family-hotel-evidence-pack.md",
+        "docs/research/san-diego-activity-hotel-expansion-review.md",
+        "docs/research/san-diego-family-hotel-freshness-audit-2026-08-17.md",
+        "tools/page-generation/family-hotel-pages.mjs",
+        "tools/san-diego-family-hotels-page.test.mjs",
+        "site/where-to-stay/san-diego-family-hotels.html",
+        "status/san-diego-pages.md",
+        "backlog/implementation-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing 12-hotel page exposes current source dates, source-limited public price orientation, La Jolla Shores' refreshed pool state and unresolved first-party parking conflict, while preserving its concise comparison role and every search/production invariant.",
+      "production_invariant": "Keep exactly 12 hotels, the existing title, H1, URL, canonical, indexability, sitemap entry, map, direct Maps links, trip-style roles and non-promotional posture. No new URL, destination, hotel, analytics, indexing request, outreach, external post/account mutation, affiliate CTA or recurring automation.",
+      "gsc_evidence_classification": "Promoted from evidence-layer freshness research, not GSC performance. The reused August 16 public-safe snapshot is finalized through August 14 and gives the indexed page 661 impressions, zero clicks and page-average position 70.25, but only one complete finalized day follows its August 13 crawl. GSC cannot support a ranking, CTR or rewrite conclusion; this action is eligible only as factual/evidence maintenance.",
+      "acceptance_criteria": [
+        "All 12 official fact records and visible checked dates are refreshed in both the original eight-record family-hotel evidence pack and four-record expansion review without changing the hotel set, search role or page architecture.",
+        "La Jolla Shores reflects the official refreshed heated pool and children's wading pool while explicitly preserving the current first-party $45/$55 parking conflict.",
+        "Public price examples use one declared scenario where reproducible, state date/occupancy/room/source limitations, remain rough planning orientation and leave unavailable same-basis observations UNKNOWN.",
+        "Manchester's fourth-floor pool December 2026 schedule and every other current closure, renovation, fee, room and request-only caveat remain source-backed and uncertainty-aware.",
+        "Focused and full native QA, deterministic generation, exact-path/privacy/source/responsive checks and independent read-only review return PASS or PASS_WITH_P3 before release."
+      ],
+      "measurement_plan": "Treat the work as factual/evidence maintenance. Verify source-date coverage, claim corrections, exact 12-hotel parity, generated page/schema consistency and production invariants. Preserve August 13 as the GSC performance boundary and wait for a later crawl plus sufficient finalized aligned query evidence before interpreting movement.",
+      "notes": "Promoted but not selected by FT-RES-016. A later heartbeat may select this one-URL maintenance action after normal repository reconciliation. Promotion does not authorize implementation in the research transaction and makes no ranking promise."
     }
   ]
 }

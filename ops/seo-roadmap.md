@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-16
+Last updated: 2026-08-17
 
 Last re-scored: 2026-08-12
 Next re-score due: 2026-08-19
@@ -98,8 +98,31 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 54 | `FT-DEV-005` add a local community-answer review board | Community usefulness workflow | Completed and review-clean | Noether cycle-three `PASS`; strict public-repository queue, loopback/same-origin/token writes, Eastern dates, and approve/revise/reject UI are ready without posting authority. |
 | 55 | `FT-COM-001` draft one current NYC family-itinerary answer | Community usefulness | Completed and review-clean | One pending, self-contained NYC itinerary draft passed Hume cycle-two review after source-fidelity, AI-guidance, and dining-evidence corrections; no link or external write. |
 | 56 | `FT-MAINT-002` refresh the expired Chicago InterContinental pool notice | Production factual freshness | Released and production-verified | Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`; Pages run `31685857634`; marker, revised text, page invariants and production SEO QA pass after Locke `PASS_WITH_P3` with no P0-P2. |
+| 57 | `FT-RES-016` audit San Diego family-hotel source and price freshness | Existing-page evidence freshness | Completed and review-clean | All 12 records checked. Core facts hold; price support is dynamic/stale, and La Jolla Shores has one resolved pool state plus an unresolved first-party parking conflict. Bacon cycle-three `PASS`; no page change. |
+| 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Ready, not selected | One later one-URL maintenance pass may refresh source dates/prices and La Jolla Shores facts without changing the 12-hotel product or treating the edit as a ranking test. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-016 - Audit San Diego family-hotel source and price freshness
+
+- Selected: 2026-08-17 by the morning independent-pilot heartbeat after clean repository/origin reconciliation.
+- State: completed and review-clean; research-only, with the protected San Diego family-hotel page unchanged. Bacon cycle-three `PASS` found no P0-P3.
+- Evidence trigger: the original eight-record hotel evidence pack was checked July 18 and set August 17 as its official-fact refresh boundary. The four July 21 expansion records remain inside their 30-day official-fact window, but every visible rough-price observation exceeds the 14-day rule.
+- GSC boundary: the August 16 authenticated API snapshot is recent reused evidence finalized through August 14. The indexed hotel page has 661 impressions, zero clicks and page-average position 70.25, with only one complete finalized day after its August 13 crawl. This does not create a CTR, rewrite, or ranking conclusion.
+- Exact scope: one new 12-hotel freshness audit, research and optional implementation backlog handoffs, roadmap/current-cycle/review mirrors, and San Diego status. No `site/**`, generator, test, workflow, or external-account path is allowed.
+- Acceptance: classify current official facts, volatile price visibility, conflicts and unknowns for all 12 hotels; preserve the page or promote exactly one bounded future maintenance action; pass native QA and independent review.
+- Measurement: evidence coverage and material discrepancy detection only. Preserve the active crawl/observation boundary unless a separately selected action fixes a verified material defect.
+- Result: all 12 official-source records remain viable. Public price examples are dynamic, generally two-adult and mostly late-July, so they do not renew the visible 14-day ranges. La Jolla Shores now officially describes a refreshed heated pool and children's wading pool, while first-party pages still disagree between $45 and $55 parking. `FT-MAINT-003` / `IMP-043` is the only promoted follow-up and remains unselected.
+- QA/review: 159/159 tests; state, freshness, local/production SEO, 34 public snapshots, duplicate-key/ID, 12+12 row/source coverage, privacy, exact-scope and whitespace checks pass. Bacon's first two cycles found six P2s, all corrected; cycle three returned `PASS` with no P0-P3.
+
+### FT-MAINT-003 - Refresh the existing San Diego family-hotel evidence layer
+
+- State: ready, not selected. Promotion by `FT-RES-016` does not consume another action or authorize implementation in the same run.
+- Target: the existing San Diego family-hotel URL only.
+- Product boundary: keep exactly 12 hotels, the page role and architecture, title/H1, URL/canonical/indexability/sitemap, map, trip-style routing and non-promotional posture.
+- Evidence work: refresh the original eight durable records in the family-hotel evidence pack and the four expansion records, then refresh all visible official checked dates and public rough-price orientation; publish La Jolla Shores' refreshed pool state and retain the first-party parking conflict; keep Manchester's current December 2026 pool schedule and all material caveats current.
+- GSC boundary: this is factual/evidence maintenance, not a ranking or CTR experiment. Preserve the August 13 performance boundary until a later crawl and sufficient finalized aligned query evidence exist.
+- Release gate: a later separately selected transaction must complete focused/full QA, deterministic generation, source/privacy/scope/responsive checks and independent review before release.
 
 ### FT-MAINT-002 - Refresh the expired Chicago InterContinental pool notice
 

@@ -1,8 +1,47 @@
 # Implementation Backlog
 
-Last updated: 2026-08-01
+Last updated: 2026-08-17
 
-Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before implementation.
+Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Promoted San Diego Hotel Freshness Maintenance
+
+### IMP-043: Refresh The Existing San Diego Family-Hotel Evidence Layer
+
+Status: promoted by `FT-RES-016`; ready for a later separate selection as `FT-MAINT-003`
+
+Research: `SRR-039`
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`
+
+Refresh the existing 12-hotel page without changing its search role or adding inventory. Refresh the original eight durable records in the family-hotel evidence pack and the four expansion records before updating the page, then update official checked dates and public price orientation from a declared, reproducible scenario where available. Replace La Jolla Shores' stale generic pool/construction check with its current official refreshed-pool state while retaining the first-party $45/$55 parking conflict. Keep Manchester's December 2026 second-pool completion and all other material official caveats current.
+
+Boundaries:
+
+- Preserve exactly 12 hotels, trip-style roles, title, H1, URL, canonical, indexability, sitemap entry, embedded map, direct Maps links and non-promotional posture.
+- Do not interpret the maintenance as a ranking or CTR experiment, add prose/comparison layers, publish a guaranteed rate, or infer a family total from a two-adult example.
+- No new URL, destination, hotel, indexing request, analytics, outreach, external post/account mutation, affiliate CTA or recurring automation.
+- Keep public examples clearly date-, occupancy-, room- and source-limited; unavailable same-basis results remain `UNKNOWN`.
+- Run focused/full QA, generation/idempotency, source/privacy/scope/responsive checks and independent read-only review before release.
+
+Expected implementation paths:
+
+- `docs/research/san-diego-family-hotel-evidence-pack.md`
+- `docs/research/san-diego-activity-hotel-expansion-review.md`
+- `docs/research/san-diego-family-hotel-freshness-audit-2026-08-17.md`
+- `tools/page-generation/family-hotel-pages.mjs`
+- `tools/san-diego-family-hotels-page.test.mjs`
+- `site/where-to-stay/san-diego-family-hotels.html`
+- `status/san-diego-pages.md`
+- `backlog/implementation-backlog.md`
+- `ops/seo-roadmap.json`
+- `ops/seo-roadmap.md`
+- `ops/current-cycle.md`
+- `ops/operator-review.md`
+
+Selection note: factual/evidence maintenance is eligible during the active GSC observation window, but promotion does not select or implement it in the `FT-RES-016` transaction.
 
 ## Promoted Existing-Page Authority Pilot
 

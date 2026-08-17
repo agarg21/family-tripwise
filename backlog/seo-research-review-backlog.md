@@ -1,8 +1,37 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-07-31
+Last updated: 2026-08-17
 
-Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; the central Control Room is the only scheduler, and direct manual actions must be registered there before substantive work.
+Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
+
+## Active Evidence Freshness Research
+
+### SRR-039: San Diego Family-Hotel Source And Price Freshness Audit
+
+Status: completed and review-clean as `FT-RES-016`; Bacon cycle-three `PASS`; one bounded maintenance handoff promoted
+
+Selected: 2026-08-17 by the independent Family Tripwise Master pilot
+
+Audit all 12 hotels currently visible on `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html` because the original eight records checked July 18 reach their explicit August 17 official-fact boundary and every live rough-price observation is older than the 14-day hotel research rule. The four July 21 expansion records remain inside their 30-day official-fact boundary, and the July 21 review signals remain inside their separate 60-day boundary.
+
+Boundaries:
+
+- Research only; do not edit `site/**`, generators, tests, URLs, canonicals, indexability, the sitemap, or the active August 13 crawl observation window.
+- Check current official room, pool/water, breakfast/kitchen, fee/parking, and renovation/closure facts that the page exposes for each hotel.
+- Refresh only public approximate nightly-price evidence; do not complete a booking, collect personal data, or convert a dynamic example into a guaranteed quote.
+- Record direct source, checked date, evidence class, confidence, conflicts, unknowns, and a claim-level confirmed/changed/unsupported decision.
+- Recommend `PRESERVE` or promote exactly one bounded future maintenance action. No indexing request, analytics, outreach, external post, account mutation, new destination, or recurring automation.
+
+Expected artifact:
+
+- `docs/research/san-diego-family-hotel-freshness-audit-2026-08-17.md`
+
+Result:
+
+- All 12 live hotel records received a direct official-source pass. The core shortlist and family decision facts remain supported.
+- Public price observations remain dynamic, occupancy-mismatched, and mostly late-July rather than reproducible same-day family totals. They can orient but cannot renew the live bands under the 14-day rule.
+- La Jolla Shores now officially describes a refreshed heated pool and children's wading pool. Its own pages conflict between $45 and $55 parking, so the conflict must remain visible rather than being silently resolved.
+- Promoted exactly one later existing-page maintenance action: `FT-MAINT-003` / `IMP-043`. No `site/**`, page, URL, indexability, map, deployment, indexing, or external account changed in this research transaction.
 
 ## Current Ranking Opportunity Research
 
