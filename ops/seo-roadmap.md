@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-17
+Last updated: 2026-08-18
 
 Last re-scored: 2026-08-12
 Next re-score due: 2026-08-19
@@ -99,7 +99,7 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 55 | `FT-COM-001` draft one current NYC family-itinerary answer | Community usefulness | Completed and review-clean | One pending, self-contained NYC itinerary draft passed Hume cycle-two review after source-fidelity, AI-guidance, and dining-evidence corrections; no link or external write. |
 | 56 | `FT-MAINT-002` refresh the expired Chicago InterContinental pool notice | Production factual freshness | Released and production-verified | Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`; Pages run `31685857634`; marker, revised text, page invariants and production SEO QA pass after Locke `PASS_WITH_P3` with no P0-P2. |
 | 57 | `FT-RES-016` audit San Diego family-hotel source and price freshness | Existing-page evidence freshness | Completed and review-clean | All 12 records checked. Core facts hold; price support is dynamic/stale, and La Jolla Shores has one resolved pool state plus an unresolved first-party parking conflict. Bacon cycle-three `PASS`; no page change. |
-| 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Review-clean; release pending | Bacon returned cycle-one `PASS` with no P0-P3 across the corrected 13-path candidate; exact-path commit, deployment and production verification remain. |
+| 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Released and production-verified | Commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` was published by successful Pages run `32120676612`; Bacon returned cycle-one `PASS` with no P0-P3, and the live marker, production SEO QA and declared invariants pass. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
 
@@ -118,13 +118,13 @@ Ready does not authorize project work by itself. The Master selects at most one 
 ### FT-MAINT-003 - Refresh the existing San Diego family-hotel evidence layer
 
 - Selected: 2026-08-17 by the 17:00 independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot.
-- State: review-clean after Bacon cycle-one `PASS` with no P0-P3; exact-path commit, deployment and production verification remain.
+- State: completed, released and production-verified at commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` through successful Pages run `32120676612`; Bacon returned cycle-one `PASS` with no P0-P3.
 - Target: the existing San Diego family-hotel URL only.
 - Product boundary: keep exactly 12 hotels, the page role and architecture, title/H1, URL/canonical/indexability/sitemap, map, trip-style routing and non-promotional posture.
 - Evidence work: refresh the original eight durable records in the family-hotel evidence pack and the four expansion records, then refresh all visible official checked dates and public rough-price orientation; publish La Jolla Shores' refreshed pool state and retain the first-party parking conflict; keep Manchester's current December 2026 pool schedule and all material caveats current.
 - GSC boundary: fresh August 17 API evidence is finalized through August 15: 1,897 property impressions, 6 clicks, aggregate position 64.01, 24/28 indexed, and 676 impressions at page-average position 70.33 for the hotel page. Only two complete finalized days follow the August 13 16:43 UTC crawl, so this remains factual/evidence maintenance rather than a ranking or CTR experiment.
 - Implementation result: all 12 official records and visible dates are refreshed; La Jolla Shores and Loews conflicts are explicit; the July price ranges remain clearly older orientation because August checks were not comparable family totals; all product and search invariants are preserved.
-- Release gate: focused/full QA, deterministic generation, source/privacy/scope/responsive checks pass. Bacon independently confirmed the complete 13-path candidate and returned `PASS`; fetch/divergence check, exact-path commit, Pages and production verification remain.
+- Release gate: focused/full QA, deterministic generation, source/privacy/scope/responsive checks and Bacon's independent `PASS` all completed before release. The live marker reports the exact commit/run, production SEO QA returns 0 errors and 0 warnings, and every declared page invariant passes.
 
 ### FT-MAINT-002 - Refresh the expired Chicago InterContinental pool notice
 

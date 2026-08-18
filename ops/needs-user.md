@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-18
 
-No user decision is required for the current release gate. `FT-MAINT-003` is review-clean after Bacon cycle-one `PASS` with no P0-P3; exact-path commit, Pages and production verification remain. `FT-MAINT-002` remains released and production-verified at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422` through successful Pages run `31685857634`. `FT-COM-001` completed one review-clean NYC family-itinerary answer for the local review surface created by `FT-DEV-005`; `COMM-2026-001` remains pending user review. Open `http://127.0.0.1:4178` while the local board is running to approve, revise, or reject the wording. Approving wording will not authorize posting; no indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
+No user decision is required for the completed release. `FT-MAINT-003` is released and production-verified at commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` through successful Pages run `32120676612` after Bacon cycle-one `PASS` with no P0-P3. `FT-COM-001` completed one review-clean NYC family-itinerary answer for the local review surface created by `FT-DEV-005`; `COMM-2026-001` remains pending user review. Open `http://127.0.0.1:4178` while the local board is running to approve, revise, or reject the wording. Approving wording will not authorize posting; no indexing request, analytics installation, external posting, outreach, new destination, or unrelated account mutation is authorized.
 
 `FT-OPS-002` is released and production-verified. `FT-DEV-004` is completed and review-clean; no user decision is required.
 

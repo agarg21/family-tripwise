@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-08-17
+Last updated: 2026-08-18
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-043: Refresh The Existing San Diego Family-Hotel Evidence Layer
 
-Status: review-clean after Bacon cycle-one `PASS`; exact-path release pending
+Status: completed, released and production-verified at `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` through Pages run `32120676612`
 
 Research: `SRR-039`
 
@@ -39,11 +39,12 @@ Expected implementation paths:
 - `ops/seo-roadmap.json`
 - `ops/seo-roadmap.md`
 - `ops/current-cycle.md`
+- `ops/needs-user.md`
 - `ops/operator-review.md`
 
 Selection note: the August 17 17:00 independent-pilot heartbeat selected this factual/evidence maintenance during the active GSC observation window. Preserve the August 13 performance boundary and do not interpret the correction as a ranking test.
 
-Implementation result: refreshed all 12 official-property records and visible source dates, corrected La Jolla Shores and Loews pool/parking/shuttle facts, kept every rough nightly band as older July orientation after the August spot check could not produce comparable family totals, and preserved the existing page/search invariants. Ampere found successively smaller state/evidence inconsistencies across the prior transaction's three review cycles; the last stale one-day sentence was corrected locally. The August 18 run selected a fresh bounded release-review transaction with Bacon and added only the stale needs-user mirror to exact scope. Bacon returned cycle-one `PASS` with no P0-P3; exact-path release remains.
+Implementation result: refreshed all 12 official-property records and visible source dates, corrected La Jolla Shores and Loews pool/parking/shuttle facts, kept every rough nightly band as older July orientation after the August spot check could not produce comparable family totals, and preserved the existing page/search invariants. Ampere found successively smaller state/evidence inconsistencies across the prior transaction's three review cycles; the last stale one-day sentence was corrected locally. The August 18 run selected a fresh bounded release-review transaction with Bacon and added only the stale needs-user mirror to exact scope. Bacon returned cycle-one `PASS` with no P0-P3. Commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` was published by successful Pages run `32120676612`; the live marker, production SEO QA and all declared page invariants pass.
 
 ## Promoted Existing-Page Authority Pilot
 

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-17",
+  "last_updated": "2026-08-18",
   "last_rescored_on": "2026-08-12",
   "next_rescore_due": "2026-08-19",
   "planning_horizon_days": 28,
@@ -2739,8 +2739,9 @@
       "title": "Refresh the existing San Diego family-hotel evidence layer",
       "kind": "maintenance",
       "lane": "production-factual-freshness",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-08-17",
+      "completed_on": "2026-08-18",
       "review_outcome": "PASS",
       "review_cycles": 1,
       "prior_review_cycles": 3,
@@ -2748,7 +2749,10 @@
         "01a00b87-e66e-7af0-aebf-70b36f8acb3e",
         "01a00f00-8d41-7d40-8167-bbeadc34d0b6"
       ],
-      "release_state": "review-clean-release-pending",
+      "release_state": "released-and-production-verified",
+      "release_commit": "20f88bd6ec995f05beb4e430936fbb1bb5f7a522",
+      "pages_run": 32120676612,
+      "released_at": "2026-08-18T09:16:28Z",
       "impact": 4,
       "confidence": 5,
       "learning_value": 3,
@@ -2787,8 +2791,8 @@
       "measurement_plan": "Treat the work as factual/evidence maintenance. Verify source-date coverage, claim corrections, exact 12-hotel parity, generated page/schema consistency and production invariants. Preserve August 13 as the GSC performance boundary and wait for a later crawl plus sufficient finalized aligned query evidence before interpreting movement.",
       "qa_summary": "Focused San Diego hotel tests pass 4/4 and the full repository suite passes 159/159. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 35 public GSC snapshots validate. Deterministic generation, duplicate-key-safe JSON and unique IDs, exact registered 13-path scope, privacy/credential scan, git diff --check, public preflight, and page invariants pass. Responsive checks from the corrected HTML at 1280, 390 and 320 pixels show no page overflow or top-level overlap; the comparison table scrolls internally.",
       "review_summary": "The original August 17 implementation-review transaction used Ampere for three cycles and ended without PASS after successively correcting six P2s and two P3s; its final single stale status sentence was corrected locally and not released. The separate August 18 bounded release-review transaction used a different independent read-only reviewer, Bacon (01a00f00-8d41-7d40-8167-bbeadc34d0b6), who returned PASS in cycle one with no P0-P3 across the complete corrected 13-path diff and independently confirmed claim/source safety, price boundaries, GSC state, schema parity, exact scope and public invariants.",
-      "result": "Implementation and evidence records are review-clean and ready for release. The existing 12-hotel page separates August official facts from July 18-21 review samples and older July price orientation, corrects La Jolla Shores and Loews conflicts plus other current official facts, removes unsupported FAQ schema, and preserves every URL, title, product, map and observation invariant.",
-      "notes": "Selected by the August 17 17:00 independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot. The page change is limited to refreshed evidence dates and verified factual/conflict corrections; it is not a performance rewrite or ranking test. Three independent review cycles ended without a passing verdict; the final stale one-day status sentence was corrected locally. The August 18 05:00 Eastern run selected one fresh bounded release-review transaction for the corrected diff, added only the stale ops/needs-user.md mirror to exact scope, and reused the recent August 17 GSC snapshot because the run preceded the daily workflow. Bacon returned cycle-one PASS with no P0-P3; exact-path commit, Pages and production verification remain."
+      "result": "Released and production-verified at commit 20f88bd6ec995f05beb4e430936fbb1bb5f7a522 through successful Pages run 32120676612. The existing 12-hotel page separates August official facts from July 18-21 review samples and older July price orientation, corrects La Jolla Shores and Loews conflicts plus other current official facts, removes unsupported FAQ schema, and preserves every URL, title, product, map and observation invariant. The live marker, production SEO QA and all declared page checks pass.",
+      "notes": "Selected by the August 17 17:00 independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot. The page change is limited to refreshed evidence dates and verified factual/conflict corrections; it is not a performance rewrite or ranking test. Three independent review cycles ended without a passing verdict; the final stale one-day status sentence was corrected locally. The August 18 05:00 Eastern run selected one fresh bounded release-review transaction for the corrected diff, added only the stale ops/needs-user.md mirror to exact scope, and reused the recent August 17 GSC snapshot because the run preceded the daily workflow. Bacon returned cycle-one PASS with no P0-P3. Exact commit 20f88bd6ec995f05beb4e430936fbb1bb5f7a522 was published and production-verified through successful Pages run 32120676612."
     }
   ]
 }
