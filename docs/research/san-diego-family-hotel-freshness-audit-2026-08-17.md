@@ -32,7 +32,7 @@ Price comparisons are intentionally conservative. Different dates, stay lengths,
 
 | Hotel | Current official findings checked 2026-08-17 | Decision | Confidence / unresolved item |
 |---|---|---|---|
-| [Bahia Resort Hotel](https://www.bahiahotel.com/faqs) | The FAQ still says one vehicle is included and lists a $48 daily resort fee. The [Bay Family Suite](https://www.bahiahotel.com/rooms/bay-family-suite) still lists 675 square feet, kitchenette appliances, two bathrooms, and included self-parking. | Confirm core facts. | High. The official suite headline and body still conflict on whether the connecting bedroom is a double or queen; the live page already tells parents to verify exact bedding. |
+| [Bahia Resort Hotel](https://www.bahiahotel.com/faqs) | The FAQ separately lists a $48 daily resort fee and says parking carries no charge, with one vehicle allowed per room. The [Bay Family Suite](https://www.bahiahotel.com/rooms/bay-family-suite) still lists 675 square feet, kitchenette appliances, two bathrooms, and self-parking. | Confirm core facts. | High. The official suite headline and body still conflict on whether the connecting bedroom is a double or queen; the live page already tells parents to verify exact bedding. |
 | [San Diego Mission Bay Resort](https://www.missionbayresort.com/faq/) | Official [amenities](https://www.missionbayresort.com/resort-amenities/) continue to show a waterfront pool, shallow wading pool, beach access, seasonal activities, a $46 resort fee, $47 self-parking, limited $35 rollaways, and connecting rooms that are not guaranteed. | Confirm. | High for published facts; exact room/fire-code fit remains room-specific. |
 | [Hyatt Regency Mission Bay](https://www.hyatt.com/hyatt-regency/en-US/sanis-hyatt-regency-mission-bay-spa-and-marina) | Hyatt continues to publish lagoon-style pools, three waterslides, a separate children's pool area, two-queen rooms, family suites and a $46 daily resort fee. The inspected first-party content does not expose a parking amount. | Confirm; retain parking check. | High for pool, room and resort-fee facts. Parking is `UNKNOWN` from current first-party evidence; a public OTA lists $50 self-parking, but that is not an official-property fact. |
 | [Paradise Point Resort & Spa](https://www.paradisepoint.com/resort/beach-resort-amenities/) | The official amenities page still lists five heated pools, beach access, recreation, a $46 nightly amenities fee and $49 reserved doorstep parking. The inspected source does not establish the exact room setup used for a family scenario. | Confirm amenities, fee and parking; retain exact-room check. | High for published amenities, fee and parking. Exact room layout and current all-in total remain `UNKNOWN` for renewal. |
@@ -77,6 +77,19 @@ Scenario provenance is incomplete by design and prevents renewal. Most OTA resul
 - do not stack another comparison layer or add hotel prose.
 
 This maintenance can be selected during the active GSC observation window because it addresses factual and evidence freshness. Its result must not be interpreted as a ranking test until a later crawl and sufficient finalized query evidence exist.
+
+## FT-MAINT-003 Implementation Result
+
+Selected during the August 17 afternoon pilot run, this pass applies the audit to the maintained evidence records and the existing public page without changing its search role or comparison architecture.
+
+- All 12 official-property records now carry an August 17 fact check. The original eight remain in the family-hotel evidence pack; the four later additions remain in the expansion review.
+- The public page now dates official facts separately from online-review samples and describes every nightly range as broad July planning orientation. The August spot check did not produce comparable family totals, so it does not renew or silently relabel those ranges as current quotes.
+- La Jolla Shores now reflects the official refreshed heated pool and children's wading pool. Its conflicting first-party $45 and $55 parking figures remain visible as a booking check.
+- Loews now reflects three heated pools, the current $42 resort fee, no-reservation Village shuttle, on-demand beach shuttle, and the current $47/$50 first-party self-parking conflict.
+- Paradise Point now carries the current $46 amenities fee and $49 reserved doorstep parking; Manchester retains the December 2026 fourth-floor-pool schedule; request-only room details and exact-room unknowns remain explicit where material.
+- The title, H1, 12-hotel set, URL, canonical, indexability, sitemap entry, embedded map, direct Maps links, trip-style roles and non-promotional posture remain unchanged.
+
+The action is factual/evidence maintenance, not a ranking experiment. August 13 remains the performance boundary until a later crawl and enough finalized aligned query evidence exist.
 
 ## Source Register
 

@@ -16,9 +16,12 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html/g) || []).length, 1);
   assert.match(html, /<title>Top Family Hotels in San Diego: 12 Options by Trip Style<\/title>/);
   assert.match(html, /<h1>Top Family Hotels in San Diego: 12 Options by Trip Style<\/h1>/);
-  assert.match(html, /Hotel facts and review sources checked:<\/strong> July 21, 2026/);
-  assert.match(html, /Approximate prices are planning ranges/);
-  assert.match(html, /final total for your dates, room type, occupancy, taxes, and parking/i);
+  assert.match(html, /Hotel facts checked:<\/strong> August 17, 2026/);
+  assert.match(html, /Online-review themes sampled:<\/strong> July 18-21, 2026/);
+  assert.match(html, /August checks did not provide consistent family totals/i);
+  assert.match(html, /compare the same room and occupancy plus taxes and parking/i);
+  assert.equal((html.match(/type="application\/ld\+json"/g) || []).length, 1);
+  assert.doesNotMatch(html, /"@type":"FAQPage"/);
 });
 
 test("covers 12 named hotel options with dollar ranges and map links", () => {
@@ -46,7 +49,7 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
   }
 
   assert.match(html, /Rough nightly range, not a quote/);
-  assert.match(html, /compare the final total for the same dates and room setup/i);
+  assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
   assert.match(html, /<dt>Location view<\/dt><dd>Shared cluster map plus direct links for all 12 hotels<\/dd>/);
@@ -59,6 +62,17 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
   assert.match(html, /not representative ratings/);
   assert.doesNotMatch(html, /What online reviews commonly mention|recurring positives and concerns/);
   assert.doesNotMatch(html, /review[- ]signal/i);
+  assert.match(html, /refreshed heated pool and children(?:'|&#39;)s wading pool/i);
+  assert.match(html, /published \$45\/\$55 parking amount applies/i);
+  assert.doesNotMatch(html, /La Jolla Shores[^]*?current construction, pool\/deck operations/i);
+  assert.match(html, /three heated pools, a \$42 resort fee/i);
+  assert.match(html, /current FAQ says \$50 self-parking and \$55 valet, while the amenities page still says \$47 self-parking/i);
+  assert.match(html, /no-reservation Coronado Village shuttle service/i);
+  assert.match(html, /December 2026 fourth-floor-pool schedule/i);
+  assert.match(html, /Official amenities list a \$46 fee and \$49 reserved doorstep parking/i);
+  assert.match(html, /FAQ separately lists a \$48 resort fee and says parking carries no charge/i);
+  assert.doesNotMatch(html, /\$48 resort fee includes one-vehicle parking/i);
+  assert.equal((html.match(/The range uses older public examples/g) || []).length, 0);
 });
 
 test("embeds the shared Google My Maps view instead of the native schematic POC", () => {
@@ -69,6 +83,8 @@ test("embeds the shared Google My Maps view instead of the native schematic POC"
   assert.match(html, /four newly added hotels may not yet appear as shared-map pins/i);
   assert.match(html, /each table row's direct hotel map link/i);
   assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
+  assert.match(html, /https:\/\/www\.loewshotels\.com\/coronado-bay-resort\/faqs/);
+  assert.match(html, /https:\/\/www\.ljshoreshotel\.com\/faqs\//);
   assert.equal((html.match(/<iframe/g) || []).length, 1);
   assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
   assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);

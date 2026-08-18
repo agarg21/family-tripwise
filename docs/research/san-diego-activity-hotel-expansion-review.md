@@ -1,8 +1,10 @@
 # San Diego Activity and Hotel Expansion Review
 
-Last updated: 2026-07-21
+Last updated: 2026-08-17
 
-Action: `FT-IMP-005`
+Current maintenance action: `FT-MAINT-003`
+
+Original implementation action: `FT-IMP-005`
 
 ## Decision
 
@@ -23,6 +25,8 @@ Expand the all-ages San Diego activity guide from 6 to 12 primary choices and th
 | Official attraction and hotel pages | Primary factual evidence | 2026-07-21 | Current location, room, amenity, operating, accessibility, fee, and closure facts. |
 | Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK snippets/pages | Current public commercial/review evidence | 2026-07-21 | Rough price context and small directional review-theme samples. Not representative ratings or booking quotes. |
 | Reddit and other parent/community discussions | Qualitative community evidence | 2026-07-21 | Repeated parent questions and practical concerns only. Not demand, verified experience, or property fact. |
+
+Maintenance overlay: official hotel facts for all four additions were refreshed August 17, 2026. July 21 price observations are `UNKNOWN for renewal` because the August 17 public checks did not expose comparable family scenarios. July review samples remain qualitative and inside the 60-day review boundary.
 | Existing San Diego cluster/persona and competitor research | Durable repository research | 2026-07-18 to 2026-07-20 | Personas, intent boundaries, and previously inspected ranking-page strengths/gaps. |
 
 ## SERP and page-shape check
@@ -87,12 +91,12 @@ One current-state flag changes: Paradise Point's current official site remains a
 
 | Hotel | Decision gap filled | Official facts that matter | Rough public planning range | Directional online-review themes | Decision |
 |---|---|---|---|---|---|
-| La Jolla Shores Hotel | Beachfront La Jolla base | Exact suite/kitchen layouts vary; official policy pages have recently conflicted on parking and pool/deck availability | `$350-$550+` | Beach access, location, staff and refreshed rooms recur positively; construction/amenity availability, fees and condition vary | Add, with a prominent operations check |
-| Hotel del Coronado | Iconic beachfront Coronado splurge | Multiple room neighborhoods; guaranteed connecting-room filter/request; cribs; select rollaways; Shore House villas have kitchens; kids program ages 4-12 | `$600-$900+` | Beach, setting, history and resort experience recur positively; room-neighborhood fit, crowding and value are recurring conflicts | Add, but do not collapse all neighborhoods into one room promise |
-| The Dana on Mission Bay | Simpler Mission Bay price/setup choice | Two heated pools; standard rooms max 4 and many suites max 6; cribs free; limited connecting/rollaway; refrigerators/microwaves but no kitchens; current FAQ lists parking and resort fee | `$250-$400+` | Location, pools, grounds and family activities recur positively; room size/condition, parking walk and fee/value concerns vary | Add |
-| Manchester Grand Hyatt San Diego | Downtown full-service and suite option | Two-double connecting room and family suites; play yard requests; suite microwaves; daily destination fee; only Coastline Pool currently operating while the other pool is renovated | `$300-$450+` | Bay/Downtown access, views and scale recur positively; renovation status, pool expectations, room assignment and value recur as conflicts | Add, with renovation check |
+| La Jolla Shores Hotel | Beachfront La Jolla base | Exact suite/kitchen layouts vary; refreshed heated pool and children's wading pool; first-party pages conflict between $45 and $55 parking | `$350-$550+` | Beach access, location, staff and refreshed rooms recur positively; fees and room condition vary | Keep, with the parking conflict and exact-room check |
+| Hotel del Coronado | Iconic Coronado beachfront splurge | Five room neighborhoods; guaranteed connecting selection/request; cribs; select rollaways; heated pools; ages 4-12 program; restoration completed June 2025 | `$600-$900+` | Beach, setting, history and resort experience recur positively; room-neighborhood fit, crowding and value are recurring conflicts | Keep, but do not collapse all neighborhoods into one room promise |
+| The Dana on Mission Bay | Simpler Mission Bay price/setup choice | Two heated pools; standard rooms max 4 and many suites max 6; cribs free; limited connecting/rollaway; refrigerators/microwaves but no kitchens; $25 resort fee and $35 parking | `$250-$400+` | Location, pools, grounds and family activities recur positively; room size/condition, parking walk and fee/value concerns vary | Keep |
+| Manchester Grand Hyatt San Diego | Downtown full-service and suite option | Connecting/family-suite options; play yards; suite microwaves; only Coastline Pool operating; fourth-floor pool due December 2026; guestrooms and third-floor pool refreshed | `$300-$450+` | Bay/Downtown access, views and scale recur positively; renovation status, pool expectations, room assignment and value recur as conflicts | Keep, with the December 2026 pool check |
 
-Ranges are deliberately broad and rounded. They use recent public examples as budget orientation, not a rate quote. A family should compare the final total for its dates, occupancy, room type, parking, taxes, and cancellation terms.
+Ranges are deliberately broad and rounded. They use older July public examples as explicitly dated budget orientation, not current rates or quotes. A family should compare the final total for its dates, occupancy, room type, parking, taxes, and cancellation terms.
 
 ### Durable evidence records for the four additions
 
@@ -103,52 +107,52 @@ Review sampling is a small directional scan: 5-12 visible recent excerpts or sni
 #### La Jolla Shores Hotel
 
 - **Family use case:** a family prioritizing direct beach access and a La Jolla base over central access to the wider city.
-- **Official facts checked:** room and suite layouts vary; some published layouts include kitchen features. The accommodation, FAQ, and resort-policy pages do not support treating every room as equivalent.
-- **Price evidence:** Expedia displayed public examples of about `$406-$447` including taxes and fees on 2026-07-21 for dates within the next 30 days. The page uses the wider `$350-$550+` planning range.
+- **Official facts checked:** room and suite layouts vary; some published layouts include kitchen features. Current first-party pages describe a newly refreshed heated outdoor pool and children's wading pool, a $50 resort fee, and conflicting parking amounts: the accommodations FAQ says $45 while the accommodations body and resort-policy page say $55.
+- **Price evidence:** Expedia displayed public examples of about `$406-$447` including taxes and fees on 2026-07-21 for dates within the next 30 days. August 17 checks did not expose a comparable family scenario, so the wider `$350-$550+` planning range is `UNKNOWN for renewal` and remains directional only.
 - **Online-review sample:** Expedia and Tripadvisor; visible review dates ranged approximately February-July 2026; sample-size bucket `small (5-12 visible excerpts/snippets)`.
 - **Repeated positives:** beach access, location, staff, and refreshed-room comments.
-- **Repeated concerns or conflicts:** construction or amenity availability, room condition, fees, noise/value, and the difference between refreshed and dated inventory. Official pages also showed conflicting parking figures and require a current pool/deck operations check.
-- **Confidence and claim boundary:** official room/policy facts `HIGH`; displayed price examples `MEDIUM`; review patterns `LOW`. Do not promise a kitchen, quiet room, specific view, completed work, or a final price without exact-room/date confirmation.
-- **Freshness:** checked 2026-07-21; recheck price examples by 2026-08-04, official operations/policies by 2026-08-04, and review themes by 2026-09-19.
-- **Parent check:** confirm the exact room layout, pool/deck and construction status, parking charge, and final total for the travel dates.
+- **Repeated concerns or conflicts:** room condition, fees, noise/value, and the difference between refreshed and dated inventory. The official pool work is complete, but first-party parking figures still conflict.
+- **Confidence and claim boundary:** official room/policy facts `HIGH`; displayed price examples `MEDIUM`; review patterns `LOW`. Do not promise a kitchen, quiet room, specific view, or a final price without exact-room/date confirmation.
+- **Freshness:** official facts checked 2026-08-17 and due again 2026-09-16; price range remains unrenewed from 2026-07-21; review themes remain due 2026-09-19.
+- **Parent check:** confirm the exact room layout, which first-party parking amount applies, current pool operations, and final total for the travel dates.
 - **Sources:** `LJS-OFFICIAL-ROOMS`, `LJS-OFFICIAL-FAQ`, `LJS-OFFICIAL-POLICY`, `LJS-PRICE-EXPEDIA`, `LJS-REVIEWS-EXPEDIA`, `LJS-REVIEWS-TRIPADVISOR`.
 
 #### Hotel del Coronado
 
 - **Family use case:** an iconic beachfront resort stay where the property experience is a major part of the trip and the budget can absorb a premium.
-- **Official facts checked:** the resort has materially different room neighborhoods; the booking flow advertises a guaranteed connecting-room option; cribs and select rollaways are described in official FAQs; Shore House villas publish kitchens; Ocean Explorers is described for ages 4-12.
-- **Price evidence:** Expedia displayed a public example around `$619` including taxes and fees on 2026-07-21 for a date within the next 30 days. The page uses the wider `$600-$900+` planning range.
+- **Official facts checked:** the resort has five materially different room neighborhoods; the booking flow advertises a guaranteed connecting-room option; cribs and select rollaways are described in official FAQs; Shore House villas publish kitchens; Ocean Explorers is described for ages 4-12; the six-year restoration was completed in June 2025; and the current mandatory charge is $50.
+- **Price evidence:** Expedia displayed a public example around `$619` including taxes and fees on 2026-07-21 for a date within the next 30 days. August 17 checks did not expose a comparable family scenario, so the wider `$600-$900+` planning range is `UNKNOWN for renewal` and remains directional only.
 - **Online-review sample:** Expedia and Tripadvisor; visible review dates ranged approximately March-July 2026; sample-size bucket `small (5-12 visible excerpts/snippets)`.
 - **Repeated positives:** beach setting, historic character, resort experience, and a stay-put trip shape.
 - **Repeated concerns or conflicts:** room-neighborhood fit, crowding, service consistency, room condition, and value. A hotel-level recommendation cannot promise the same experience across every building or room category.
 - **Confidence and claim boundary:** official room/program facts `HIGH`; displayed price example `MEDIUM`; review patterns `LOW`. Do not imply that every room connects, every unit has a kitchen, or every neighborhood has the same access and condition.
-- **Freshness:** checked 2026-07-21; recheck price examples by 2026-08-04, official facts by 2026-08-20, and review themes by 2026-09-19.
+- **Freshness:** official facts checked 2026-08-17 and due again 2026-09-16; price range remains unrenewed from 2026-07-21; review themes remain due 2026-09-19.
 - **Parent check:** select the exact neighborhood and room type, verify connecting-room or kitchen needs, and compare the final total including current mandatory charges and parking.
 - **Sources:** `DEL-OFFICIAL-FAQ`, `DEL-OFFICIAL-STAY`, `DEL-OFFICIAL-SHORE-HOUSE`, `DEL-PRICE-EXPEDIA`, `DEL-REVIEWS-EXPEDIA`, `DEL-REVIEWS-TRIPADVISOR`.
 
 #### The Dana on Mission Bay
 
 - **Family use case:** a more moderate Mission Bay base for families that want pools and practical room-capacity information without a large stay-put-resort footprint.
-- **Official facts checked:** two heated pools; standard-room capacity commonly up to four and many suites up to six; free cribs; limited connecting rooms and rollaways; refrigerators and microwaves but no published full kitchens; current FAQ publishes parking and resort-fee information.
-- **Price evidence:** Expedia displayed a public example around `$326` including taxes and fees on 2026-07-21 for a date within the next 30 days, with other visible examples in the mid-$200s. The page uses the wider `$250-$400+` planning range.
+- **Official facts checked:** two heated pools; standard-room capacity commonly up to four and many suites up to six; free cribs; $10 limited rollaways; request-only connecting rooms; refrigerators and microwaves but no full kitchens; $25 resort fee and $35 parking.
+- **Price evidence:** Expedia displayed a public example around `$326` including taxes and fees on 2026-07-21 for a date within the next 30 days, with other visible examples in the mid-$200s. August 17 checks did not expose a comparable family scenario, so the wider `$250-$400+` planning range is `UNKNOWN for renewal` and remains directional only.
 - **Online-review sample:** Expedia, Booking.com, and Tripadvisor; visible review dates ranged approximately May-July 2026; sample-size bucket `small (5-12 visible excerpts/snippets)`.
 - **Repeated positives:** Mission Bay location, pools, grounds, and family activities.
 - **Repeated concerns or conflicts:** room size or condition, parking walk, and whether fees feel worthwhile for the selected room.
 - **Confidence and claim boundary:** official capacity/amenity facts `HIGH`; displayed price examples `MEDIUM`; review patterns `LOW`. Do not promise connecting rooms, rollaways, a kitchen, or a particular room condition.
-- **Freshness:** checked 2026-07-21; recheck price examples by 2026-08-04, official facts by 2026-08-20, and review themes by 2026-09-19.
+- **Freshness:** official facts checked 2026-08-17 and due again 2026-09-16; price range remains unrenewed from 2026-07-21; review themes remain due 2026-09-19.
 - **Parent check:** confirm occupancy for the exact room, any connecting/rollaway request, pool availability, parking, and the final total.
 - **Sources:** `DANA-OFFICIAL-FAQ`, `DANA-OFFICIAL-ROOMS`, `DANA-PRICE-EXPEDIA`, `DANA-REVIEWS-EXPEDIA`, `DANA-REVIEWS-BOOKING`, `DANA-REVIEWS-TRIPADVISOR`.
 
 #### Manchester Grand Hyatt San Diego
 
 - **Family use case:** a full-service Downtown base for families choosing bayfront access, larger-hotel amenities, or a published connecting/suite setup.
-- **Official facts checked:** published two-double connecting and family-suite options; play yards by request; microwaves in specified suites; a daily destination charge; the current FAQ says only Coastline Pool is operating, while the renovation page provides the broader schedule for the other rooftop pool.
-- **Price evidence:** Expedia displayed public examples around `$329-$340` including taxes and fees on 2026-07-21 for a date within the next 30 days. The page uses the wider `$300-$450+` planning range.
+- **Official facts checked:** published two-double connecting and family-suite options; play yards by request; microwaves in specified suites; a daily destination charge; Coastline is the only operating pool; the fourth-floor pool is due in December 2026; and the third-floor pool plus guestrooms are described as refreshed.
+- **Price evidence:** Expedia displayed public examples around `$329-$340` including taxes and fees on 2026-07-21 for a date within the next 30 days. August 17 checks did not expose a comparable family scenario, so the wider `$300-$450+` planning range is `UNKNOWN for renewal` and remains directional only.
 - **Online-review sample:** Expedia, Booking.com, and Tripadvisor; visible review dates ranged approximately January-July 2026; sample-size bucket `small (5-12 visible excerpts/snippets)`.
 - **Repeated positives:** Downtown/bay location, views, room scale, and access to waterfront activities.
 - **Repeated concerns or conflicts:** renovation disruption, pool expectations, room assignment, service consistency, and value after current charges.
 - **Confidence and claim boundary:** official room/renovation facts `HIGH`; displayed price examples `MEDIUM`; review patterns `LOW`. Do not describe two pools as currently available or promise a connecting room, play yard, view, or renovation completion date.
-- **Freshness:** checked 2026-07-21; recheck price examples and renovation/pool status by 2026-08-04, other official facts by 2026-08-20, and review themes by 2026-09-19.
+- **Freshness:** official facts checked 2026-08-17 and due again 2026-09-16; price range remains unrenewed from 2026-07-21; review themes remain due 2026-09-19.
 - **Parent check:** verify the exact room setup, connecting request, active pool, renovation impacts, destination charge, parking, and final total.
 - **Sources:** `MGH-OFFICIAL-MAIN`, `MGH-OFFICIAL-ROOMS`, `MGH-OFFICIAL-FAQ`, `MGH-OFFICIAL-RENOVATION`, `MGH-PRICE-EXPEDIA`, `MGH-REVIEWS-EXPEDIA`, `MGH-REVIEWS-BOOKING`, `MGH-REVIEWS-TRIPADVISOR`.
 

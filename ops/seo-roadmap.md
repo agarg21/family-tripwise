@@ -15,14 +15,14 @@ Each run may select at most one evidence-qualified substantive action. The user 
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-16.json`.
-- Classification on August 16: fresh authenticated read-only Search Console API evidence, collected August 16 with finalized performance data through August 14.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-17.json`.
+- Classification on August 17: fresh authenticated read-only Search Console API evidence, collected August 17 with finalized performance data through August 15.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 16 found 24 indexed and four not indexed, unchanged from August 15. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 1,879 impressions, 6 clicks, 0.32% CTR, and aggregate average position 63.98. The rolling total added two impressions while clicks and indexing stayed unchanged. The San Diego family-hotel row increased from 632 to 661 impressions at page-average position 70.25, but the public snapshot has no query cohort. This is not a sitewide or page-level CTR/rewrite signal.
-- URL Inspection still records the successful August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is now finalized through August 14, giving one complete finalized calendar day after the crawl; preserve the page and wait for sufficient later protected query evidence before interpreting movement.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 17 found 24 indexed and four not indexed, unchanged from August 16. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 1,897 impressions, 6 clicks, 0.32% CTR, and aggregate average position 64.01. Clicks and indexing remain unchanged. The San Diego family-hotel row has 676 impressions at page-average position 70.33, but the public snapshot has no query cohort. This is not a sitewide or page-level CTR/rewrite signal.
+- URL Inspection still records the successful August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is now finalized through August 15, giving two complete finalized calendar days after the crawl; preserve the August 13 measurement boundary and wait for sufficient later aligned query evidence before interpreting movement.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
 - August 15 monitoring: the fresh snapshot and unchanged URL Inspection state do not alter the August 14 measurement decision. Public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change; no substantive action was selected.
@@ -99,7 +99,7 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 55 | `FT-COM-001` draft one current NYC family-itinerary answer | Community usefulness | Completed and review-clean | One pending, self-contained NYC itinerary draft passed Hume cycle-two review after source-fidelity, AI-guidance, and dining-evidence corrections; no link or external write. |
 | 56 | `FT-MAINT-002` refresh the expired Chicago InterContinental pool notice | Production factual freshness | Released and production-verified | Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`; Pages run `31685857634`; marker, revised text, page invariants and production SEO QA pass after Locke `PASS_WITH_P3` with no P0-P2. |
 | 57 | `FT-RES-016` audit San Diego family-hotel source and price freshness | Existing-page evidence freshness | Completed and review-clean | All 12 records checked. Core facts hold; price support is dynamic/stale, and La Jolla Shores has one resolved pool state plus an unresolved first-party parking conflict. Bacon cycle-three `PASS`; no page change. |
-| 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Ready, not selected | One later one-URL maintenance pass may refresh source dates/prices and La Jolla Shores facts without changing the 12-hotel product or treating the edit as a ranking test. |
+| 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Review-clean; release pending | Bacon returned cycle-one `PASS` with no P0-P3 across the corrected 13-path candidate; exact-path commit, deployment and production verification remain. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
 
@@ -117,12 +117,14 @@ Ready does not authorize project work by itself. The Master selects at most one 
 
 ### FT-MAINT-003 - Refresh the existing San Diego family-hotel evidence layer
 
-- State: ready, not selected. Promotion by `FT-RES-016` does not consume another action or authorize implementation in the same run.
+- Selected: 2026-08-17 by the 17:00 independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot.
+- State: review-clean after Bacon cycle-one `PASS` with no P0-P3; exact-path commit, deployment and production verification remain.
 - Target: the existing San Diego family-hotel URL only.
 - Product boundary: keep exactly 12 hotels, the page role and architecture, title/H1, URL/canonical/indexability/sitemap, map, trip-style routing and non-promotional posture.
 - Evidence work: refresh the original eight durable records in the family-hotel evidence pack and the four expansion records, then refresh all visible official checked dates and public rough-price orientation; publish La Jolla Shores' refreshed pool state and retain the first-party parking conflict; keep Manchester's current December 2026 pool schedule and all material caveats current.
-- GSC boundary: this is factual/evidence maintenance, not a ranking or CTR experiment. Preserve the August 13 performance boundary until a later crawl and sufficient finalized aligned query evidence exist.
-- Release gate: a later separately selected transaction must complete focused/full QA, deterministic generation, source/privacy/scope/responsive checks and independent review before release.
+- GSC boundary: fresh August 17 API evidence is finalized through August 15: 1,897 property impressions, 6 clicks, aggregate position 64.01, 24/28 indexed, and 676 impressions at page-average position 70.33 for the hotel page. Only two complete finalized days follow the August 13 16:43 UTC crawl, so this remains factual/evidence maintenance rather than a ranking or CTR experiment.
+- Implementation result: all 12 official records and visible dates are refreshed; La Jolla Shores and Loews conflicts are explicit; the July price ranges remain clearly older orientation because August checks were not comparable family totals; all product and search invariants are preserved.
+- Release gate: focused/full QA, deterministic generation, source/privacy/scope/responsive checks pass. Bacon independently confirmed the complete 13-path candidate and returned `PASS`; fetch/divergence check, exact-path commit, Pages and production verification remain.
 
 ### FT-MAINT-002 - Refresh the expired Chicago InterContinental pool notice
 

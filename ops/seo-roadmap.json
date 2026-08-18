@@ -2739,7 +2739,16 @@
       "title": "Refresh the existing San Diego family-hotel evidence layer",
       "kind": "maintenance",
       "lane": "production-factual-freshness",
-      "status": "ready_not_selected",
+      "status": "in_progress",
+      "selected_on": "2026-08-17",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "prior_review_cycles": 3,
+      "reviewer_agent_ids": [
+        "01a00b87-e66e-7af0-aebf-70b36f8acb3e",
+        "01a00f00-8d41-7d40-8167-bbeadc34d0b6"
+      ],
+      "release_state": "review-clean-release-pending",
       "impact": 4,
       "confidence": 5,
       "learning_value": 3,
@@ -2762,11 +2771,12 @@
         "ops/seo-roadmap.json",
         "ops/seo-roadmap.md",
         "ops/current-cycle.md",
+        "ops/needs-user.md",
         "ops/operator-review.md"
       ],
       "success_signal": "The existing 12-hotel page exposes current source dates, source-limited public price orientation, La Jolla Shores' refreshed pool state and unresolved first-party parking conflict, while preserving its concise comparison role and every search/production invariant.",
       "production_invariant": "Keep exactly 12 hotels, the existing title, H1, URL, canonical, indexability, sitemap entry, map, direct Maps links, trip-style roles and non-promotional posture. No new URL, destination, hotel, analytics, indexing request, outreach, external post/account mutation, affiliate CTA or recurring automation.",
-      "gsc_evidence_classification": "Promoted from evidence-layer freshness research, not GSC performance. The reused August 16 public-safe snapshot is finalized through August 14 and gives the indexed page 661 impressions, zero clicks and page-average position 70.25, but only one complete finalized day follows its August 13 crawl. GSC cannot support a ranking, CTR or rewrite conclusion; this action is eligible only as factual/evidence maintenance.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected August 17 and finalized through August 15: 1,897 property impressions, 6 clicks, aggregate average position 64.01, 24 of 28 inspected URLs indexed, and 676 impressions at page-average position 70.33 for the indexed San Diego family-hotel page. Only two complete finalized calendar days follow its August 13 16:43 UTC crawl. GSC does not support a ranking, CTR or rewrite conclusion; this action is selected only as factual/evidence maintenance from the completed FT-RES-016 audit.",
       "acceptance_criteria": [
         "All 12 official fact records and visible checked dates are refreshed in both the original eight-record family-hotel evidence pack and four-record expansion review without changing the hotel set, search role or page architecture.",
         "La Jolla Shores reflects the official refreshed heated pool and children's wading pool while explicitly preserving the current first-party $45/$55 parking conflict.",
@@ -2775,7 +2785,10 @@
         "Focused and full native QA, deterministic generation, exact-path/privacy/source/responsive checks and independent read-only review return PASS or PASS_WITH_P3 before release."
       ],
       "measurement_plan": "Treat the work as factual/evidence maintenance. Verify source-date coverage, claim corrections, exact 12-hotel parity, generated page/schema consistency and production invariants. Preserve August 13 as the GSC performance boundary and wait for a later crawl plus sufficient finalized aligned query evidence before interpreting movement.",
-      "notes": "Promoted but not selected by FT-RES-016. A later heartbeat may select this one-URL maintenance action after normal repository reconciliation. Promotion does not authorize implementation in the research transaction and makes no ranking promise."
+      "qa_summary": "Focused San Diego hotel tests pass 4/4 and the full repository suite passes 159/159. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 35 public GSC snapshots validate. Deterministic generation, duplicate-key-safe JSON and unique IDs, exact registered 13-path scope, privacy/credential scan, git diff --check, public preflight, and page invariants pass. Responsive checks from the corrected HTML at 1280, 390 and 320 pixels show no page overflow or top-level overlap; the comparison table scrolls internally.",
+      "review_summary": "The original August 17 implementation-review transaction used Ampere for three cycles and ended without PASS after successively correcting six P2s and two P3s; its final single stale status sentence was corrected locally and not released. The separate August 18 bounded release-review transaction used a different independent read-only reviewer, Bacon (01a00f00-8d41-7d40-8167-bbeadc34d0b6), who returned PASS in cycle one with no P0-P3 across the complete corrected 13-path diff and independently confirmed claim/source safety, price boundaries, GSC state, schema parity, exact scope and public invariants.",
+      "result": "Implementation and evidence records are review-clean and ready for release. The existing 12-hotel page separates August official facts from July 18-21 review samples and older July price orientation, corrects La Jolla Shores and Loews conflicts plus other current official facts, removes unsupported FAQ schema, and preserves every URL, title, product, map and observation invariant.",
+      "notes": "Selected by the August 17 17:00 independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot. The page change is limited to refreshed evidence dates and verified factual/conflict corrections; it is not a performance rewrite or ranking test. Three independent review cycles ended without a passing verdict; the final stale one-day status sentence was corrected locally. The August 18 05:00 Eastern run selected one fresh bounded release-review transaction for the corrected diff, added only the stale ops/needs-user.md mirror to exact scope, and reused the recent August 17 GSC snapshot because the run preceded the daily workflow. Bacon returned cycle-one PASS with no P0-P3; exact-path commit, Pages and production verification remain."
     }
   ]
 }
