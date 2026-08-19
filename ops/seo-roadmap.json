@@ -2,9 +2,9 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-18",
-  "last_rescored_on": "2026-08-12",
-  "next_rescore_due": "2026-08-19",
+  "last_updated": "2026-08-19",
+  "last_rescored_on": "2026-08-19",
+  "next_rescore_due": "2026-08-26",
   "planning_horizon_days": 28,
   "maintenance": {
     "after_every_run": "The independent Master updates only the selected direct-manual/autopilot item's repository evidence and records a no-op when no evidence-qualified action exists.",
