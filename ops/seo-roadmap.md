@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-19
+Last updated: 2026-08-20
 
 Last re-scored: 2026-08-19
 Next re-score due: 2026-08-26
@@ -15,20 +15,21 @@ Each run may select at most one evidence-qualified substantive action. The user 
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-19.json`.
-- Classification on August 19: fresh authenticated read-only Search Console API evidence, collected August 19 with finalized performance data through August 17.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-20.json`.
+- Classification on August 20: fresh authenticated read-only Search Console API evidence, collected August 20 with finalized performance data through August 18.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 19 found 24 indexed and four not indexed, unchanged from August 18. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 1,905 impressions, 5 clicks, 0.26% CTR, and aggregate average position 64.18. The one-click decrease is a rolling-window change on the San Diego stay-area row, not evidence of a new click or a diagnosed loss. Indexing is unchanged. The San Diego family-hotel row remains at 697 impressions and page-average position 70.37, but the public snapshot has no query cohort. This is not a sitewide or page-level CTR/rewrite signal.
-- URL Inspection still records the successful August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is now finalized through August 17, giving four complete finalized calendar days after the crawl; preserve the August 13 measurement boundary and wait for sufficient later aligned query evidence before interpreting movement.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 20 found 24 indexed and four not indexed, unchanged from August 19, with no inspection-row or crawl-time changes. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,144 impressions, 5 clicks, 0.23% CTR, and aggregate average position 65.45. The San Diego family-hotel row has 854 impressions and page-average position 72.24. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- URL Inspection still records the successful August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is now finalized through August 18, giving five complete finalized calendar days after the crawl; preserve the August 13 measurement boundary and wait for sufficient later aligned query evidence before interpreting movement.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
 - August 15 monitoring: the fresh snapshot and unchanged URL Inspection state do not alter the August 14 measurement decision. Public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change; no substantive action was selected.
 - August 16 monitoring: the fresh snapshot adds one complete finalized post-crawl day for the San Diego family-hotel page but no query cohort, indexing change, crawl change, production defect, or user-facing gap. The page remains inside its observation window and no substantive action was selected.
 - August 18 afternoon monitoring: fresh API evidence and public health checks add no crawl/indexing change, query cohort, production defect or named family-decision gap. One San Antonio family-hotel impression at page-average position 7 is not an actionable rank signal. No substantive action was selected.
 - August 19 afternoon monitoring: fresh API evidence and public health checks again add no crawl/indexing change, query cohort, production defect or named family-decision gap. The weekly re-score changed no item score or status: `FT-PUB-006` remains the sole open roadmap item and stays user-gated under the August depth strategy. No substantive action was selected.
+- August 20 afternoon monitoring: fresh API evidence and public health checks add no inspection/crawl change, query cohort, production defect, unfinished release or named family-decision gap. The larger rolling impression totals remain low-visibility page averages rather than an edit instruction. `FT-PUB-006` remains user-gated; no substantive action was selected.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
