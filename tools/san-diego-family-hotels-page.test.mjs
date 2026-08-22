@@ -75,6 +75,25 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
   assert.equal((html.match(/The range uses older public examples/g) || []).length, 0);
 });
 
+test("starts with one trip-style decision surface before evidence and media", () => {
+  const tripStyleIndex = html.indexOf("Pick the closest trip style");
+  const reviewStatusIndex = html.indexOf('aria-label="Review status"');
+  const mediaIndex = html.indexOf('class="container media-section"');
+
+  assert.ok(tripStyleIndex > html.indexOf("</section>", html.indexOf('class="page-hero hotel-hero"')));
+  assert.ok(tripStyleIndex < reviewStatusIndex);
+  assert.ok(tripStyleIndex < mediaIndex);
+  assert.equal((html.match(/Pick the closest trip style/g) || []).length, 1);
+  assert.doesNotMatch(html, /Start with the kind of trip you want/);
+  assert.doesNotMatch(html, /For Mission Bay water time, compare the six bay resorts/);
+  assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
+  assert.equal((html.match(/href="\.\.\/where-to-stay\/san-diego-with-kids\.html"/g) || []).length, 1);
+  assert.match(html, /Compare San Diego stay areas first/);
+  assert.ok(html.indexOf("Compare San Diego stay areas first") < reviewStatusIndex);
+  assert.equal((html.match(/<dl class="snapshot">/g) || []).length, 1);
+  assert.ok(html.indexOf('<dl class="snapshot">') < reviewStatusIndex);
+});
+
 test("embeds the shared Google My Maps view instead of the native schematic POC", () => {
   assert.match(html, /class="google-my-map"/);
   assert.match(html, /title="Family Tripwise San Diego family hotels and kid activity map"/);

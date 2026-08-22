@@ -53,12 +53,25 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-MAINT-002` | Chicago InterContinental pool-notice factual refresh released and production-verified | `PASS_WITH_P3` | Locke cycle one confirmed the scheduled-versus-observed reopening boundary, hour-conflict handling, usefulness, FAQ/schema parity, evidence/GSC classification, exact scope and unchanged page invariants. No P0-P2. Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`, Pages run `31685857634`, marker, target invariants and production SEO QA pass. |
 | `FT-RES-016` | San Diego family-hotel evidence freshness audit complete and review-clean | `PASS` | Bacon cycles one and two found six P2s across future scope, price provenance/classification, freshness mirrors and claim completeness. All were corrected; cycle three returned `PASS` with no P0-P3. Full 159/159 and state/freshness/SEO/snapshot/JSON/coverage/privacy/scope/whitespace QA pass. |
 | `FT-RES-017` | Task-based persona usefulness pilot complete and review-clean | `PASS` | Pasteur cycle one found one P2 stale inspection attribution and two P3 source/threshold labels; all were corrected. Cycle two returned `PASS` with no P0-P3 and independently reproduced the information-order finding. |
+| `FT-IMP-023` | San Diego hotel trip-style information-order implementation review-clean; release pending | `PASS` | Godel cycle one found two P2 layout/link regressions; both were fixed. Cycle two returned `PASS` with no P0-P3 and independently reproduced the corrected first-viewport route and all product/search invariants. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-22 - `FT-IMP-023` San Diego hotel trip-style information order
+
+**Reviewer:** Godel (`01a02a73-c845-7bc0-9766-47ee9cc8ce47`), independent read-only implementation reviewer
+
+**Final result: `PASS`**
+
+- Cycle one returned `FAIL` for two P2s: the four-field snapshot became an unbalanced third child in the desktop trust-panel grid, and removing the broad summary also removed the page's only area-first handoff.
+- The four fields and original area link now sit below the unchanged six cards; the trust panel retains its balanced two-child layout, and a regression test protects the link.
+- Cycle two returned `PASS` with no P0-P3. Godel reproduced the 390-by-844 heading at 671px and first card at 736px, plus overflow-free 1280/390/320 layouts.
+- Focused tests pass 5/5 and full tests pass 160/160. State, freshness, local and production-preflight SEO, all 40 snapshots, exact scope, JSON/IDs, privacy, whitespace and every 12-hotel/search/evidence invariant pass.
+- This is `proxy-reviewed` task evidence, not behavioral or user-validated evidence. Release is pending.
 
 ### 2026-08-22 - `FT-RES-017` task-based persona usefulness pilot
 

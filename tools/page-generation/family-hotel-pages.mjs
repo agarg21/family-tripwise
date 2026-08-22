@@ -263,32 +263,6 @@ function sanDiegoFamilyHotelPage() {
           <p>Compare 12 San Diego family hotels by pool and beach access, room setup, breakfast or kitchen needs, approximate nightly price, location, and themes from sampled online reviews.</p>
         </div>
       </section>
-      <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
-        <p>Approximate prices are broad July planning ranges. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking.</p>
-      </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/21a-san-diego-mission-bay.jpg" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="eager" decoding="async">
-          <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>.</figcaption>
-        </figure>
-      </section>
-      <section class="band intro-band">
-        <div class="container answer-grid">
-          <div>
-            <p class="eyebrow">Short answer</p>
-            <h2>Start with the kind of trip you want</h2>
-            <p>For Mission Bay water time, compare the six bay resorts by pool, room setup, and total price. Use La Jolla Shores for a beach-first La Jolla stay, Homewood or Manchester for two different Downtown bases, LEGOLAND hotels for a park-centered trip, and Hotel del or Loews for two very different Coronado stays.</p>
-            <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
-          </div>
-          <dl class="snapshot">
-            <div><dt>Hotels covered</dt><dd>12 options</dd></div>
-            <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
-            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
-            <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
-          </dl>
-        </div>
-      </section>
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Category picks</p>
@@ -302,6 +276,23 @@ function sanDiegoFamilyHotelPage() {
           <article class="quick-pick"><span>Coronado resort trip</span><strong>Hotel del or Loews</strong><p>Choose Hotel del for the iconic beachfront experience or Loews for a more isolated bay resort; price the full stay before deciding.</p></article>
           <article class="quick-pick"><span>La Jolla beach trip</span><strong>La Jolla Shores Hotel</strong><p>Compare for direct beach access and the refreshed pool, then verify the exact room setup and which published parking amount applies.</p></article>
         </div>
+        <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
+        <dl class="snapshot">
+          <div><dt>Hotels covered</dt><dd>12 options</dd></div>
+          <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
+          <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
+          <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
+        </dl>
+      </section>
+      <section class="container trust-panel" aria-label="Review status">
+        <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
+        <p>Approximate prices are broad July planning ranges. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking.</p>
+      </section>
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/21a-san-diego-mission-bay.jpg" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="eager" decoding="async">
+          <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>.</figcaption>
+        </figure>
       </section>
       <section class="band">
         <div class="container">

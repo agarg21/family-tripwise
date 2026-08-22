@@ -2849,6 +2849,60 @@
       "review_summary": "Independent read-only reviewer Pasteur (01a02a44-55fa-7542-884c-9c8fc76b6cc3) returned FAIL in cycle one for one P2 stale August 21 URL Inspection attribution across two current mirrors. Two P3s requested direct links for every generalized community source and explicit analyst-selected labeling for the $400 stress-test boundary. All were corrected. Cycle two returned PASS with no P0-P3 findings and independently reproduced the structural information-order finding.",
       "result": "Adopted one reusable task-based persona protocol with explicit proxy-reviewed, behavior-supported and user-validated evidence levels; completed five live-page scenarios; and found that the current page can support every tested hotel decision while its first useful mobile route begins about 1.46 viewports down and overlaps with a second routing layer. Promoted only IMP-044 as an unselected candidate to move and consolidate the existing trip-style start. No public page changed.",
       "notes": "Selected by direct manual user instruction on 2026-08-22 after clean origin reconciliation and fast-forward of the mechanical August 22 GSC snapshot. The pilot page has a high-intent hotel-selection job and the portfolio's strongest maintained lodging evidence layer. The action is research-only and does not interrupt or reinterpret the active August 13 performance window."
+    },
+    {
+      "id": "FT-IMP-023",
+      "research_backlog_id": "SRR-040",
+      "implementation_backlog_id": "IMP-044",
+      "promoted_by": "FT-RES-017",
+      "title": "Move and consolidate the San Diego hotel trip-style start",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-08-22",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a02a73-c845-7bc0-9766-47ee9cc8ce47"
+      ],
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/family-hotel-pages.mjs",
+        "tools/san-diego-family-hotels-page.test.mjs",
+        "site/where-to-stay/san-diego-family-hotels.html",
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "At 390 by 844 pixels, the existing six-option trip-style routing surface starts inside the first viewport immediately after the hero, the duplicate broad trip summary is absent, and all five proxy-reviewed hotel-selection tasks remain answerable with the same evidence and next checks.",
+      "production_invariant": "Keep exactly 12 hotels, all current comparison rows, detail cards, rough price orientation, source dates, conflicts, source links, the map and direct Maps links, title, H1, URL, canonical, indexability, sitemap entry and ItemList parity. Add no hotel, filter, URL, prose layer, claim, affiliate CTA, indexing request, analytics, outreach, external post/account mutation, destination or recurring automation.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-22 and finalized through 2026-08-20: 2,194 property impressions, 5 clicks, aggregate average position 65.62, 24 of 28 inspected URLs indexed, and 925 impressions at page-average position 72.37 for the indexed San Diego family-hotel page. Seven complete finalized calendar days follow its August 13 crawl, but the public snapshot has no aligned query cohort. GSC is orientation only and does not justify this edit; the independently reproduced proxy-review P2 qualifies the action as a material usefulness correction during observation.",
+      "acceptance_criteria": [
+        "The existing six quick-pick trip-style cards appear directly after the hero and begin inside the first 844 pixels at a 390-pixel viewport, before the review-status panel and image.",
+        "The broad Start with the kind of trip you want summary is removed instead of creating a second routing layer; no new control, hotel, claim, prose layer or URL is added.",
+        "Exactly 12 comparison rows and detail cards, all current rough prices, evidence dates, conflicts, sources, map and direct Maps links, title, H1, canonical, indexability, sitemap and ItemList parity remain unchanged.",
+        "Scenarios S1-S5 remain answerable and no task output or evidence boundary is weaker after the reorder.",
+        "Focused and full native QA, deterministic generation, desktop/390/320 browser checks, exact-scope/privacy/invariant checks and independent read-only review return PASS or PASS_WITH_P3 before release."
+      ],
+      "measurement_plan": "Compare pre/post DOM order, first useful decision-surface position and S1-S5 task answerability. Treat August 13 as a historical pre-change crawl boundary only; this release interrupts unchanged-page performance interpretation, and any later search conclusion must wait for a post-release crawl plus sufficient finalized aligned query evidence.",
+      "qa_summary": "Focused San Diego hotel tests pass 5/5 and the full repository suite passes 160/160. Operator-state, content-freshness, local and production-preflight SEO QA pass with 0 errors and 0 warnings; all 40 public GSC snapshots validate. Full generation is idempotent. Browser checks at 1280, 390 and 320 pixels show no page overflow or top-level overlap; at 390 by 844 the trip-style heading begins at 671px and first card at 736px. Exact-scope, canonical/indexability/sitemap, 12-hotel/table/card/schema/map/source, privacy and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Godel (01a02a73-c845-7bc0-9766-47ee9cc8ce47) returned FAIL in cycle one for two P2s: the four-field snapshot created an unbalanced third child in the desktop trust-panel grid, and removing the broad summary also removed the only area-first handoff. The snapshot and existing link were moved below the six cards without changing their first-viewport position; the trust panel returned to its original two-child grid and the link gained a regression test. Cycle two returned PASS with no P0-P3.",
+      "result": "Review-clean; release pending. The unchanged six-card trip-style surface now follows the hero, the area-first handoff and four comparison definitions remain below those cards, the duplicate broad summary is removed, and scenarios S1-S5 retain their prior outputs and uncertainty boundaries.",
+      "notes": "Selected by the August 22 17:00 independent-pilot heartbeat after clean origin alignment. FT-RES-017 and Pasteur independently reproduced the information-order defect. This is a bounded task-order correction, not a ranking, CTR or content-volume experiment."
     }
   ]
 }
