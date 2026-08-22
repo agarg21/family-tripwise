@@ -52,12 +52,25 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-COM-001` | One current NYC family-itinerary answer draft complete and review-clean | `PASS` | Hume cycle one found three P2s covering source fidelity, omitted AI guidance, and an unsupported dining comparison. All were fixed; cycle two returned `PASS` with no P0-P3. Full 159/159 and focused 10/10 tests plus queue/state/freshness/SEO/JSON/source/privacy/scope QA pass. |
 | `FT-MAINT-002` | Chicago InterContinental pool-notice factual refresh released and production-verified | `PASS_WITH_P3` | Locke cycle one confirmed the scheduled-versus-observed reopening boundary, hour-conflict handling, usefulness, FAQ/schema parity, evidence/GSC classification, exact scope and unchanged page invariants. No P0-P2. Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`, Pages run `31685857634`, marker, target invariants and production SEO QA pass. |
 | `FT-RES-016` | San Diego family-hotel evidence freshness audit complete and review-clean | `PASS` | Bacon cycles one and two found six P2s across future scope, price provenance/classification, freshness mirrors and claim completeness. All were corrected; cycle three returned `PASS` with no P0-P3. Full 159/159 and state/freshness/SEO/snapshot/JSON/coverage/privacy/scope/whitespace QA pass. |
+| `FT-RES-017` | Task-based persona usefulness pilot complete and review-clean | `PASS` | Pasteur cycle one found one P2 stale inspection attribution and two P3 source/threshold labels; all were corrected. Cycle two returned `PASS` with no P0-P3 and independently reproduced the information-order finding. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-22 - `FT-RES-017` task-based persona usefulness pilot
+
+**Reviewer:** Pasteur (`01a02a44-55fa-7542-884c-9c8fc76b6cc3`), independent read-only research and methodology reviewer
+
+**Final result: `PASS`**
+
+- Cycle one returned `FAIL` for one P2: two current mirrors attributed the latest URL Inspection evidence to August 21 instead of the authoritative August 22 snapshot. Two P3s requested direct source/date traceability for every generalized community thread and an explicit analyst-selected label for the $400 scenario boundary.
+- The correction aligned both mirrors to August 22, listed four current thread sources without identity or copied text, and labeled $400 as a stress-test input rather than observed demand.
+- Cycle two returned `PASS` with no P0-P3. Pasteur independently reproduced the buried and duplicated first decision surface and judged it structural rather than aesthetic.
+- Full tests pass 159/159. Operator-state, content-freshness, local and production SEO, 40 public snapshots, duplicate-key-safe JSON and unique IDs, exact 12-path scope, privacy, source/scenario/action consistency, no-site and whitespace checks pass.
+- Only `IMP-044` is promoted as an unselected existing-page candidate; no public page, performance boundary, indexability, external account or automation changed.
 
 ### 2026-08-13 - `FT-MAINT-002` Chicago InterContinental pool-notice refresh
 

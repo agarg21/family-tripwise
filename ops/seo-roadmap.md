@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-21
+Last updated: 2026-08-22
 
 Last re-scored: 2026-08-19
 Next re-score due: 2026-08-26
@@ -15,14 +15,14 @@ Each run may select at most one evidence-qualified substantive action. The user 
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-21.json`.
-- Classification on August 21: fresh authenticated read-only Search Console API evidence, collected August 21 with finalized performance data through August 19.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-22.json`.
+- Classification on August 22: fresh authenticated read-only Search Console API evidence, collected August 22 with finalized performance data through August 20.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection on August 21 found 24 indexed and four not indexed, unchanged from August 20, with no inspection-row or crawl-time changes. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,085 impressions, 5 clicks, 0.24% CTR, and aggregate average position 65.52. The San Diego family-hotel row has 854 impressions and page-average position 72.24. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
-- URL Inspection still records the successful August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is now finalized through August 19, giving six complete finalized calendar days after the crawl; preserve the August 13 measurement boundary and wait for sufficient later aligned query evidence before interpreting movement.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 22 snapshot found 24 indexed and four not indexed, with no inspection-row or crawl-time change from August 21. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,194 impressions, 5 clicks, 0.23% CTR, and aggregate average position 65.62. The San Diego family-hotel row has 925 impressions and page-average position 72.37. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- URL Inspection still records the successful August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is now finalized through August 20, giving seven complete finalized calendar days after the crawl; preserve the August 13 measurement boundary and wait for sufficient later aligned query evidence before interpreting movement.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
 - August 15 monitoring: the fresh snapshot and unchanged URL Inspection state do not alter the August 14 measurement decision. Public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change; no substantive action was selected.
@@ -104,8 +104,20 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 56 | `FT-MAINT-002` refresh the expired Chicago InterContinental pool notice | Production factual freshness | Released and production-verified | Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`; Pages run `31685857634`; marker, revised text, page invariants and production SEO QA pass after Locke `PASS_WITH_P3` with no P0-P2. |
 | 57 | `FT-RES-016` audit San Diego family-hotel source and price freshness | Existing-page evidence freshness | Completed and review-clean | All 12 records checked. Core facts hold; price support is dynamic/stale, and La Jolla Shores has one resolved pool state plus an unresolved first-party parking conflict. Bacon cycle-three `PASS`; no page change. |
 | 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Released and production-verified | Commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` was published by successful Pages run `32120676612`; Bacon returned cycle-one `PASS` with no P0-P3, and the live marker, production SEO QA and declared invariants pass. |
+| 59 | `FT-RES-017` pilot a task-based persona usefulness review and recursive learning loop | Existing-page user value method | Completed and review-clean | Five task scenarios are answerable; Pasteur independently reproduced one information-order P2 and returned cycle-two `PASS`. Only unselected candidate `IMP-044` is promoted. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-017 - Pilot a task-based persona usefulness review and recursive learning loop
+
+- Selected: 2026-08-22 by direct manual user instruction after clean fast-forward of the mechanical August 22 GSC snapshot.
+- State: completed and review-clean; Pasteur cycle-two `PASS` with no P0-P3. Research, strategy and state only; no public page changed.
+- Target: `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
+- Method: convert evidence-derived persona labels into explicit planning tasks with required outputs, then inspect whether the live desktop and mobile page lets each scenario choose a useful short list, compare consistent criteria, trace evidence and uncertainty, and reach a next verification step.
+- Evidence boundary: fresh public-safe GSC is orientation only; current SERPs, representative ranking pages, current parent questions, live-page structure and authoritative user-research guidance support hypotheses. An AI task walkthrough is `proxy-reviewed`, never user-tested or user-validated.
+- Exact scope: one protocol, one pilot review, one learning ledger, strategy/research/optional implementation handoffs, San Diego status and five operator mirrors. No `site/**`, release, indexing, external action, destination or automation change.
+- Result: all five scenarios reach a defensible decision. The first useful route begins about 1.46 mobile viewports down and overlaps with a second trip-style layer; only `IMP-044` is promoted as an unselected reorder/consolidation candidate.
+- QA/review: 159/159 tests, state/freshness/local and production SEO, 40 snapshots, JSON/IDs, source/scenario/action, exact-scope/privacy/no-site and whitespace checks pass. Pasteur cycle one found one P2 and two P3 evidence/state issues; all were corrected, and cycle two returned `PASS` with no P0-P3.
 
 ### FT-RES-016 - Audit San Diego family-hotel source and price freshness
 

@@ -1,8 +1,39 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-08-17
+Last updated: 2026-08-22
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
+
+## Active Usefulness Research
+
+### SRR-040: Task-Based Persona Usefulness Review Pilot
+
+Status: completed and review-clean as `FT-RES-017`; Pasteur cycle-two `PASS` with no P0-P3; one bounded unselected implementation candidate promoted
+
+Selected: 2026-08-22 by direct manual user instruction
+
+Create a reusable method for checking whether an existing Family Tripwise page helps evidence-grounded family scenarios complete a real planning task. Pilot the method on `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html` and clearly distinguish a structured proxy review from observation of actual users.
+
+Boundaries:
+
+- Research and state only; do not edit `site/**`, generators, tests, URLs, canonicals, indexability, the sitemap, hotel set, map, or active August 13 performance boundary.
+- Derive scenarios from current search intent, recurring parent questions, current ranking pages, the existing San Diego persona hypotheses, and the page's maintained evidence. Do not invent demographic truth or claim that an AI persona behaved like a person.
+- Check task answerability, comparison consistency, evidence traceability, uncertainty, scan and repetition burden, and next-step clarity on desktop and mobile.
+- Classify results as `proxy-reviewed`, `behavior-supported`, or `user-validated`; this action cannot earn the final label.
+- Promote at most one bounded existing-page improvement or record `PRESERVE` / `OBSERVE`.
+
+Expected artifacts:
+
+- `docs/plan/persona-usefulness-review-protocol.md`
+- `docs/research/san-diego-family-hotels-persona-task-review-2026-08-22.md`
+- `backlog/product-learning-ledger.md`
+
+Result:
+
+- The reusable protocol treats persona reviews as evidence-grounded task walkthroughs, not simulated respondents, and reserves `user-validated` for actual participant or first-party behavioral evidence.
+- Five San Diego hotel-selection scenarios can reach defensible decisions and preserve evidence/uncertainty boundaries.
+- The first useful mobile decision begins about 1.46 viewports down and the page repeats two trip-style layers before the comparison. Pasteur independently reproduced this structural finding.
+- Promoted only `IMP-044`, an unselected candidate to move and consolidate the existing trip-style start. No `site/**`, public page, URL, indexability, performance boundary, external account or automation changed.
 
 ## Active Evidence Freshness Research
 

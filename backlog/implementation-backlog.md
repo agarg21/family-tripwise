@@ -1,8 +1,32 @@
 # Implementation Backlog
 
-Last updated: 2026-08-18
+Last updated: 2026-08-22
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate San Diego Hotel Decision-Surface Improvement
+
+### IMP-044: Move And Consolidate The San Diego Hotel Trip-Style Start
+
+Status: candidate promoted by `FT-RES-017`; not selected or authorized for implementation in the research transaction
+
+Research: `SRR-040`
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`
+
+The task-based proxy review found that the page can complete five evidence-grounded hotel-selection scenarios, but the first useful answer begins about 1.46 mobile viewports down and overlaps with a second trip-style layer before the full comparison. A later bounded implementation may move one compact trip-style decision surface directly below the hero and merge the broad trip summary into the existing six trip-style starts.
+
+Boundaries:
+
+- Preserve exactly 12 hotels, the comparison table, map, direct Maps links, detailed cards, rough price orientation, evidence dates, conflicts, source links, title, H1, URL, canonical, indexability, sitemap entry and `ItemList` parity.
+- Add no filter, hotel, destination, URL, prose layer, stable-price claim, affiliate CTA, indexing request, analytics, outreach, external post/account mutation or recurring automation.
+- Keep the August 13 GSC performance boundary. Treat the implementation as a task-order hypothesis, not a ranking or CTR experiment.
+- Re-run scenarios S1-S5 from `docs/research/san-diego-family-hotels-persona-task-review-2026-08-22.md`; a useful route should begin inside the first 844 mobile pixels after the site header and all current task outputs must remain available.
+- Require focused/full native QA, deterministic generation, desktop/390/320 browser checks, exact-scope/privacy/source/invariant checks and independent read-only review before release.
+
+Likely implementation paths must be declared when selected. No page or generator path is authorized by this backlog entry.
 
 ## Promoted San Diego Hotel Freshness Maintenance
 

@@ -1,6 +1,6 @@
 # Family Tripwise Current Strategy
 
-Last updated: 2026-08-12
+Last updated: 2026-08-22
 
 This is the canonical operating strategy for Family Tripwise. Historical launch plans remain useful as provenance but do not control the current queue.
 
@@ -14,6 +14,7 @@ Read these before changing strategy:
 - `docs/plan/product-ai-plan.md`
 - `docs/plan/incremental-city-cluster-playbook.md`
 - `docs/plan/hotel-research-engine.md`
+- `docs/plan/persona-usefulness-review-protocol.md`
 - `strategy/seo-doctrine.md`
 - `docs/research/authority-ranking-timeline-and-depth-strategy-2026-08-01.md`
 - `ops/seo-roadmap.json`
@@ -36,6 +37,21 @@ The product cannot claim local or firsthand authority where none exists. Its aut
 - transparent estimates, unknowns, and source dates.
 
 AI helps collect, normalize, compare, refresh, and route that evidence. AI-generated prose alone is not a differentiator.
+
+## Recursive Learning Loop
+
+The product and its operating method should improve together:
+
+1. observe current search, source, community-question, review-signal, and interface evidence;
+2. refine the smallest evidence-grounded family task hypothesis;
+3. review one existing page or shared evidence product against that task;
+4. make at most one bounded improvement, or preserve it;
+5. verify quality, release state, and later crawl/query evidence;
+6. distill a reusable lesson only when the result changes a rule or confidence.
+
+The loop optimizes for family decisions completed, research effort saved, uncertainty handled, and defects prevented. It does not optimize for action count, prose volume, page count, or heartbeat cadence.
+
+Persona reviews use `docs/plan/persona-usefulness-review-protocol.md`. They are structured proxy walkthroughs, not synthetic customer panels. Use them to discover buried answers, missing comparisons, inconsistent evidence, unsupported certainty, and avoidable repetition. Reserve `user-validated` for actual participant or first-party behavioral evidence; GSC, SERPs, online reviews, community anecdotes, and LLM walkthroughs can support hypotheses but cannot prove satisfaction or preference.
 
 ## Core Promise
 
@@ -151,6 +167,7 @@ From August 12 through September 12, the permanent Master thread runs twice dail
 - Competitor research should identify work a parent still has to reconstruct; it must not become outline copying or list inflation.
 - Relevant public questions may inform the evidence layer and a concise draft-answer queue. Answers are never auto-posted and never imply firsthand experience.
 - A no-op is successful when no evidence-qualified action would improve a real family decision.
+- Each material usefulness loop should leave one falsifiable hypothesis, one result, and any reusable lesson in `backlog/product-learning-ledger.md`; do not create ledger churn from unchanged monitoring.
 
 ## Page Quality Bar
 

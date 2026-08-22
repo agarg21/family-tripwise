@@ -1,0 +1,9 @@
+# Product Learning Ledger
+
+Last updated: 2026-08-22
+
+This ledger stores reusable lessons from completed evidence-to-action loops. It is not a diary or scheduler. Add an entry only when evidence changes a product, research, or SEO rule; a heartbeat, scan, or unchanged metric is not a learning event.
+
+| ID | Date | Scope | Hypothesis | Evidence and class | Decision or action | Result | Confidence | Reusable lesson | Next falsification trigger |
+|---|---|---|---|---|---|---|---|---|---|
+| `LRN-001` | 2026-08-22 | Persona usefulness method; San Diego family-hotel pilot | Evidence-derived persona labels become more useful when converted into explicit tasks and observable completion checks, but they cannot establish human preference or satisfaction. | Live desktop/mobile walkthrough (`proxy-reviewed`); current SERPs and ranking pages; four qualitative parent-question sources; fresh public-safe GSC orientation; Google/GOV.UK guidance; ICLR 2026 simulation benchmark. | Adopt the task-based protocol. Keep three evidence levels and prohibit `user-tested` / `user-validated` language without actual behavioral evidence. | Five scenarios completed their core decisions; the reviewer independently reproduced one information-order defect and returned cycle-two `PASS` after evidence/state corrections. `IMP-044` is the only unselected candidate. | Medium until repeated across another page; high for the human-substitution limitation. | Use synthetic personas as adversarial task checklists, not as fake respondents. Ask whether a page enables a defensible decision, not whether an imagined person likes it. | Another reviewer cannot reproduce the same task finding; a later real-user or behavioral test contradicts it; or the method repeatedly promotes changes with no measurable task improvement. |

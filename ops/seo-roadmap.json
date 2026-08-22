@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-21",
+  "last_updated": "2026-08-22",
   "last_rescored_on": "2026-08-19",
   "next_rescore_due": "2026-08-26",
   "planning_horizon_days": 28,
@@ -2793,6 +2793,62 @@
       "review_summary": "The original August 17 implementation-review transaction used Ampere for three cycles and ended without PASS after successively correcting six P2s and two P3s; its final single stale status sentence was corrected locally and not released. The separate August 18 bounded release-review transaction used a different independent read-only reviewer, Bacon (01a00f00-8d41-7d40-8167-bbeadc34d0b6), who returned PASS in cycle one with no P0-P3 across the complete corrected 13-path diff and independently confirmed claim/source safety, price boundaries, GSC state, schema parity, exact scope and public invariants.",
       "result": "Released and production-verified at commit 20f88bd6ec995f05beb4e430936fbb1bb5f7a522 through successful Pages run 32120676612. The existing 12-hotel page separates August official facts from July 18-21 review samples and older July price orientation, corrects La Jolla Shores and Loews conflicts plus other current official facts, removes unsupported FAQ schema, and preserves every URL, title, product, map and observation invariant. The live marker, production SEO QA and all declared page checks pass.",
       "notes": "Selected by the August 17 17:00 independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot. The page change is limited to refreshed evidence dates and verified factual/conflict corrections; it is not a performance rewrite or ranking test. Three independent review cycles ended without a passing verdict; the final stale one-day status sentence was corrected locally. The August 18 05:00 Eastern run selected one fresh bounded release-review transaction for the corrected diff, added only the stale ops/needs-user.md mirror to exact scope, and reused the recent August 17 GSC snapshot because the run preceded the daily workflow. Bacon returned cycle-one PASS with no P0-P3. Exact commit 20f88bd6ec995f05beb4e430936fbb1bb5f7a522 was published and production-verified through successful Pages run 32120676612."
+    },
+    {
+      "id": "FT-RES-017",
+      "research_backlog_id": "SRR-040",
+      "implementation_backlog_id": "IMP-044",
+      "title": "Pilot a task-based persona usefulness review and recursive learning loop",
+      "kind": "research",
+      "lane": "existing-page-user-value-method",
+      "status": "completed",
+      "selected_on": "2026-08-22",
+      "completed_on": "2026-08-22",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a02a44-55fa-7542-884c-9c8fc76b6cc3"
+      ],
+      "impact": 5,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "strategy/current-strategy.md",
+        "docs/plan/persona-usefulness-review-protocol.md",
+        "docs/research/san-diego-family-hotels-persona-task-review-2026-08-22.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A reusable task-based review protocol and one complete San Diego family-hotel pilot distinguish proxy usability findings from human validation, test whether evidence-grounded family scenarios can complete real decisions, and either promote one bounded improvement or record an evidence-supported preserve decision.",
+      "production_invariant": "Research, strategy, backlog and state only: no site/**, generator, test, URL, title, H1, canonical, indexability, sitemap, hotel set, map, deployment, indexing request, analytics, external post, outreach, account mutation, destination expansion or recurring automation change.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-22 and finalized through 2026-08-20: 2,194 property impressions, 5 clicks, aggregate average position 65.62, 24 of 28 inspected URLs indexed, and 925 impressions at page-average position 72.37 for the indexed San Diego family-hotel page. Seven complete finalized calendar days follow its August 13 crawl, but the public snapshot has no aligned query cohort. GSC is orientation only and does not justify a CTR, ranking or rewrite conclusion; explicit user direction selects this usefulness-method pilot.",
+      "acceptance_criteria": [
+        "The protocol defines evidence-grounded task scenarios, success outputs, observable page checks, defect severity, confidence and explicit proxy-reviewed, behavior-supported and user-validated evidence levels; it never presents an AI persona as a real user.",
+        "The San Diego family-hotel pilot walks every selected scenario through the live desktop and mobile page, records section and viewport evidence, tests fact/review-signal/estimate/unknown traceability, and identifies both useful decisions and concrete friction without inventing behavior or satisfaction.",
+        "Current SERPs, representative ranking pages, official people-first and user-research guidance, qualitative parent questions and current project evidence are source-dated and classified; competitor wording, judgments and proprietary data are not copied.",
+        "The recursive learning ledger records hypothesis, evidence, confidence, decision, result and next trigger; it is updated only when evidence changes a reusable product or SEO rule, not from cadence.",
+        "The action promotes at most one bounded existing-page improvement or records PRESERVE/OBSERVE, preserves the August 13 performance boundary, and passes focused/full native QA, privacy/scope checks and independent read-only review."
+      ],
+      "measurement_plan": "Evaluate whether the protocol produces reproducible task failures and a bounded action that another reviewer can independently trace. For any later page implementation, compare task-answerability and decision-surface position before and after while preserving GSC crawl/query boundaries. GSC, forum questions and review signals may support behavior hypotheses but do not prove satisfaction; only actual participant or behavioral evidence can earn user-validated status.",
+      "promoted_action": "IMP-044",
+      "qa_summary": "Full repository tests pass 159/159. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 40 public GSC snapshots validate. Duplicate-key-safe roadmap JSON and unique IDs, four community-source records, five scenario/evidence-level/action consistency, exact 12-path scope, privacy/credential, no-site and whitespace checks pass. Seven external method/page sources returned 200; the current San Diego Tourism Authority page returned its known automated-client 403 and was independently inspected through the public web crawl.",
+      "review_summary": "Independent read-only reviewer Pasteur (01a02a44-55fa-7542-884c-9c8fc76b6cc3) returned FAIL in cycle one for one P2 stale August 21 URL Inspection attribution across two current mirrors. Two P3s requested direct links for every generalized community source and explicit analyst-selected labeling for the $400 stress-test boundary. All were corrected. Cycle two returned PASS with no P0-P3 findings and independently reproduced the structural information-order finding.",
+      "result": "Adopted one reusable task-based persona protocol with explicit proxy-reviewed, behavior-supported and user-validated evidence levels; completed five live-page scenarios; and found that the current page can support every tested hotel decision while its first useful mobile route begins about 1.46 viewports down and overlaps with a second routing layer. Promoted only IMP-044 as an unselected candidate to move and consolidate the existing trip-style start. No public page changed.",
+      "notes": "Selected by direct manual user instruction on 2026-08-22 after clean origin reconciliation and fast-forward of the mechanical August 22 GSC snapshot. The pilot page has a high-intent hotel-selection job and the portfolio's strongest maintained lodging evidence layer. The action is research-only and does not interrupt or reinterpret the active August 13 performance window."
     }
   ]
 }
