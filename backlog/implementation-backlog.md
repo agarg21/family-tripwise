@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-044: Move And Consolidate The San Diego Hotel Trip-Style Start
 
-Status: review-clean after Godel cycle-two `PASS` with no P0-P3; release pending
+Status: completed, released and production-verified at `2dbe30db874553521423bb755ce069bb57a5fb0c` through Pages run `32587720666`
 
 Research: `SRR-040`
 
@@ -28,7 +28,7 @@ Boundaries:
 
 Exact implementation paths are registered in `FT-IMP-023`. The selected change is limited to moving the existing six-card trip-style surface directly after the hero and removing the duplicated broad trip summary.
 
-Implementation result: the trip-style heading now begins at 671px and its first card at 736px in a 390-by-844 browser viewport, before the evidence panel and image. The old broad summary is absent. All 12 hotels and scenarios S1-S5 retain their current decision outputs, evidence boundaries and next checks. Godel cycle one found two P2s covering the evidence-panel desktop grid and lost area-first link; both were fixed, and cycle two returned `PASS` with no P0-P3. This is a proxy task result, not behavioral or user-validated evidence.
+Implementation result: the trip-style heading now begins at 671px and its first card at 736px in a 390-by-844 browser viewport, before the evidence panel and image. The old broad summary is absent. All 12 hotels and scenarios S1-S5 retain their current decision outputs, evidence boundaries and next checks. Godel cycle one found two P2s covering the evidence-panel desktop grid and lost area-first link; both were fixed, and cycle two returned `PASS` with no P0-P3. Commit `2dbe30db874553521423bb755ce069bb57a5fb0c` was published through successful Pages run `32587720666`; the live marker, production SEO and declared page/mobile invariants pass. This is a proxy task result, not behavioral or user-validated evidence.
 
 ## Promoted San Diego Hotel Freshness Maintenance
 

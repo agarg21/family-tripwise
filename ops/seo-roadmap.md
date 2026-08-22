@@ -105,14 +105,14 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 57 | `FT-RES-016` audit San Diego family-hotel source and price freshness | Existing-page evidence freshness | Completed and review-clean | All 12 records checked. Core facts hold; price support is dynamic/stale, and La Jolla Shores has one resolved pool state plus an unresolved first-party parking conflict. Bacon cycle-three `PASS`; no page change. |
 | 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Released and production-verified | Commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` was published by successful Pages run `32120676612`; Bacon returned cycle-one `PASS` with no P0-P3, and the live marker, production SEO QA and declared invariants pass. |
 | 59 | `FT-RES-017` pilot a task-based persona usefulness review and recursive learning loop | Existing-page user value method | Completed and review-clean | Five task scenarios are answerable; Pasteur independently reproduced one information-order P2 and returned cycle-two `PASS`. Only unselected candidate `IMP-044` is promoted. |
-| 60 | `FT-IMP-023` move and consolidate the San Diego hotel trip-style start | Existing-page user value | Review-clean; release pending | The first card begins at 736px on 390-by-844 mobile, the duplicate summary is gone, the area-first handoff and full 12-hotel product are preserved, and Godel cycle two returned `PASS`. |
+| 60 | `FT-IMP-023` move and consolidate the San Diego hotel trip-style start | Existing-page user value | Released and production-verified | Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`; Pages run `32587720666`; the first card begins at 736px on live 390-by-844 mobile and every declared invariant passes. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
 
 ### FT-IMP-023 - Move and consolidate the San Diego hotel trip-style start
 
 - Selected: 2026-08-22 by the 17:00 independent-pilot heartbeat after clean origin reconciliation.
-- State: review-clean; release pending. Godel cycle-two `PASS` with no P0-P3.
+- State: completed, released and production-verified at commit `2dbe30db874553521423bb755ce069bb57a5fb0c` through successful Pages run `32587720666`; Godel cycle-two `PASS` with no P0-P3.
 - Trigger: `FT-RES-017` and Pasteur independently reproduced one `proxy-reviewed` P2: the first useful route begins about 1.46 mobile viewports down and duplicates a broad trip-summary layer.
 - Target: `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
 - Exact scope: generator, focused page test, generated page, implementation/learning/status records and five operator mirrors. No other page, data record, style, URL or external state may change.
@@ -121,6 +121,7 @@ Ready does not authorize project work by itself. The Master selects at most one 
 - Result before review: at 390 by 844 the trip-style heading begins at 671px and its first card at 736px, with no horizontal overflow. The broad summary is absent, and scenarios S1-S5 retain their prior outputs and evidence boundaries.
 - QA: focused tests pass 5/5 and full tests pass 160/160. State, freshness, local and production-preflight SEO, 40 snapshots, deterministic generation, 1280/390/320 rendering, exact-scope, privacy, content/search invariants and whitespace checks pass.
 - Review: Godel cycle one found two P2s covering the unbalanced desktop evidence grid and removed area-first link. Both were fixed; cycle two independently confirmed the corrected layout, restored link, all invariants and green QA, then returned `PASS` with no P0-P3.
+- Production: `release.json` reports the exact commit/run. Production SEO returns 0 errors and 0 warnings; the live page is 200, canonical and indexable with six trip-style cards, 12 hotel cards, 24 direct Maps links, one map, one area-first link, one 12-item ItemList and no duplicate summary. Live 390-by-844 rendering reproduces 671px/736px with no horizontal overflow.
 
 ### FT-RES-017 - Pilot a task-based persona usefulness review and recursive learning loop
 

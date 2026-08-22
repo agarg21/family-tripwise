@@ -2858,13 +2858,18 @@
       "title": "Move and consolidate the San Diego hotel trip-style start",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-08-22",
+      "completed_on": "2026-08-22",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_agent_ids": [
         "01a02a73-c845-7bc0-9766-47ee9cc8ce47"
       ],
+      "release_state": "released-and-production-verified",
+      "release_commit": "2dbe30db874553521423bb755ce069bb57a5fb0c",
+      "pages_run": 32587720666,
+      "released_at": "2026-08-22T17:26:42Z",
       "impact": 4,
       "confidence": 5,
       "learning_value": 5,
@@ -2901,7 +2906,7 @@
       "measurement_plan": "Compare pre/post DOM order, first useful decision-surface position and S1-S5 task answerability. Treat August 13 as a historical pre-change crawl boundary only; this release interrupts unchanged-page performance interpretation, and any later search conclusion must wait for a post-release crawl plus sufficient finalized aligned query evidence.",
       "qa_summary": "Focused San Diego hotel tests pass 5/5 and the full repository suite passes 160/160. Operator-state, content-freshness, local and production-preflight SEO QA pass with 0 errors and 0 warnings; all 40 public GSC snapshots validate. Full generation is idempotent. Browser checks at 1280, 390 and 320 pixels show no page overflow or top-level overlap; at 390 by 844 the trip-style heading begins at 671px and first card at 736px. Exact-scope, canonical/indexability/sitemap, 12-hotel/table/card/schema/map/source, privacy and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Godel (01a02a73-c845-7bc0-9766-47ee9cc8ce47) returned FAIL in cycle one for two P2s: the four-field snapshot created an unbalanced third child in the desktop trust-panel grid, and removing the broad summary also removed the only area-first handoff. The snapshot and existing link were moved below the six cards without changing their first-viewport position; the trust panel returned to its original two-child grid and the link gained a regression test. Cycle two returned PASS with no P0-P3.",
-      "result": "Review-clean; release pending. The unchanged six-card trip-style surface now follows the hero, the area-first handoff and four comparison definitions remain below those cards, the duplicate broad summary is removed, and scenarios S1-S5 retain their prior outputs and uncertainty boundaries.",
+      "result": "Released and production-verified at commit 2dbe30db874553521423bb755ce069bb57a5fb0c through successful Pages run 32587720666. The unchanged six-card trip-style surface now follows the hero, the area-first handoff and four comparison definitions remain below those cards, the duplicate broad summary is removed, and scenarios S1-S5 retain their prior outputs and uncertainty boundaries. The live marker, production SEO and declared page/mobile invariants pass.",
       "notes": "Selected by the August 22 17:00 independent-pilot heartbeat after clean origin alignment. FT-RES-017 and Pasteur independently reproduced the information-order defect. This is a bounded task-order correction, not a ranking, CTR or content-volume experiment."
     }
   ]
