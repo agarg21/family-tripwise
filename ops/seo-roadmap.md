@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-22
+Last updated: 2026-08-23
 
 Last re-scored: 2026-08-19
 Next re-score due: 2026-08-26
@@ -15,14 +15,14 @@ Each run may select at most one evidence-qualified substantive action. The user 
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-22.json`.
-- Classification on August 22: fresh authenticated read-only Search Console API evidence, collected August 22 with finalized performance data through August 20.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-23.json`.
+- Classification on August 23: fresh authenticated read-only Search Console API evidence, collected August 23 with finalized performance data through August 21.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 22 snapshot found 24 indexed and four not indexed, with no inspection-row or crawl-time change from August 21. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,194 impressions, 5 clicks, 0.23% CTR, and aggregate average position 65.62. The San Diego family-hotel row has 925 impressions and page-average position 72.37. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
-- URL Inspection still records the successful August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is now finalized through August 20, giving seven complete finalized calendar days after the crawl; preserve the August 13 measurement boundary and wait for sufficient later aligned query evidence before interpreting movement.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 23 snapshot found 24 indexed and four not indexed, with no inspection-row or crawl-time change from August 22. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,105 impressions, 5 clicks, 0.24% CTR, and aggregate average position 65.72. The San Diego family-hotel row remains at 925 impressions and page-average position 72.37. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- URL Inspection still records the August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is finalized through August 21, giving eight complete finalized calendar days after that crawl, but the entire window predates the August 22 `FT-IMP-023` release. There are zero finalized post-release days and no post-release crawl evidence, so this snapshot cannot evaluate the change.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
 - August 15 monitoring: the fresh snapshot and unchanged URL Inspection state do not alter the August 14 measurement decision. Public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change; no substantive action was selected.
@@ -31,6 +31,7 @@ Each run may select at most one evidence-qualified substantive action. The user 
 - August 19 afternoon monitoring: fresh API evidence and public health checks again add no crawl/indexing change, query cohort, production defect or named family-decision gap. The weekly re-score changed no item score or status: `FT-PUB-006` remains the sole open roadmap item and stays user-gated under the August depth strategy. No substantive action was selected.
 - August 20 afternoon monitoring: fresh API evidence and public health checks add no inspection/crawl change, query cohort, production defect, unfinished release or named family-decision gap. The larger rolling impression totals remain low-visibility page averages rather than an edit instruction. `FT-PUB-006` remains user-gated; no substantive action was selected.
 - August 21 afternoon monitoring: fresh API evidence extends the finalized window by one day but adds no inspection/crawl change, query cohort, production defect, unfinished release or named family-decision gap. The rolling page/property averages remain orientation rather than an edit instruction. `FT-PUB-006` remains user-gated; no substantive action was selected.
+- August 23 afternoon monitoring: mechanical snapshot commit `8c7b0cd` validates as fresh API evidence finalized through August 21. It adds no inspection/crawl change or public query cohort, and all performance data predates the August 22 hotel-page release. Public health and production checks remain green; `FT-PUB-006` remains user-gated, and no substantive action was selected.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 

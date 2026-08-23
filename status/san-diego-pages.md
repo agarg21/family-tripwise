@@ -1,11 +1,11 @@
 # San Diego Page Status
 
-Last updated: 2026-08-22
+Last updated: 2026-08-23
 
 Sources:
 
 - Implementation baseline GSC snapshot: `ops/gsc-snapshots/2026-07-21.md`
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-08-22.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-08-23.md`
 - Current lodging query interpretation: `docs/research/san-diego-lodging-query-interpretation-2026-08-04.md`
 - San Diego SERP/persona research: `docs/research/san-diego-cluster-research-decision-pack.md`
 - Section-level usefulness review: `docs/research/san-diego-section-level-editorial-audit.md`
@@ -15,13 +15,13 @@ Sources:
 - Family-hotel freshness audit: `docs/research/san-diego-family-hotel-freshness-audit-2026-08-17.md`
 - Family-hotel task-based persona review: `docs/research/san-diego-family-hotels-persona-task-review-2026-08-22.md`
 
-Note: The implementation baseline remains the July 21 snapshot. The family-hotel row uses the August 22 snapshot finalized through August 20; the stay-area row uses August 4, and unrelated page rows retain their prior recorded baseline. None of these windows can establish causal impact from a page change. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; complete protected rows remain outside this public repository.
+Note: The implementation baseline remains the July 21 snapshot. The family-hotel row uses the August 23 snapshot finalized through August 21; the stay-area row uses August 4, and unrelated page rows retain their prior recorded baseline. None of these windows can establish causal impact from a page change. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; complete protected rows remain outside this public repository.
 
-## August 22 Family-Hotel Crawl Overlay
+## August 23 Family-Hotel Crawl Overlay
 
-Fresh authenticated read-only GSC evidence collected August 22 is finalized through August 20. The family-hotel page remains submitted and indexed, and URL Inspection still records the successful crawl at 2026-08-13 16:43 UTC instead of the prior July 28 crawl. Its public 28-day row has 925 impressions, zero clicks, and page-average position 72.37.
+Fresh authenticated read-only GSC evidence collected August 23 is finalized through August 21. The family-hotel page remains submitted and indexed, and URL Inspection still records the successful crawl at 2026-08-13 16:43 UTC instead of the prior July 28 crawl. Its public 28-day row remains at 925 impressions, zero clicks, and page-average position 72.37.
 
-This remains a measurement boundary, not a ranking verdict: the finalized performance window contains seven complete calendar days after the crawl and the public snapshot has no query cohort. The rolling impression total does not identify a CTR problem or a page deficiency. Do not make ranking-driven edits until a later protected export contains sufficient finalized post-August 13 query evidence; separately justified factual maintenance or proxy-reviewed usefulness work remains allowed when it does not reinterpret performance. The stay-area page remains indexed with its July 31 crawl.
+This remains a measurement boundary, not a ranking verdict: the finalized performance window contains eight complete calendar days after the crawl, but it ends before the August 22 `FT-IMP-023` release and has no public query cohort. It therefore contains zero post-release days and cannot evaluate the change. The rolling impression total does not identify a CTR problem or a page deficiency. Do not make ranking-driven edits until a later crawl and protected export contain sufficient finalized post-release query evidence; separately justified factual maintenance or proxy-reviewed usefulness work remains allowed when it does not reinterpret performance. The stay-area page remains indexed with its July 31 crawl.
 
 ## August 17 Family-Hotel Evidence Freshness Overlay
 
