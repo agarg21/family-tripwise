@@ -98,7 +98,7 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 50 | `FT-RES-015` diagnose the Las Vegas all-ages ranking opportunity | Content/authority diagnostic | Completed and review-clean | Faraday cycle-two `PASS` with no P0-P3; fresh protected evidence and live SERPs support one broad URL and one consolidation/citation improvement without calling the latest crawl a failed rewrite. |
 | 51 | `FT-AUTH-006` replace repeated Las Vegas planning layers with a source-dated family activity cost-and-friction index | Authority/existing-page growth | Released and production-verified | Commit `6bc35d03ba413056cf3b9988bf449ae8972d4a57`; Pages run `30869031713`; release marker, target invariants, and production SEO QA passed after Herschel cycle-two `PASS`. |
 | 52 | `FT-IMP-022` clarify San Diego lodging URL ownership | Existing-page role clarity | Released and production-verified | Commit `e5e41ecbd664220f4359140cfd639e4e2b7a186f` was published by run `30930924523`; the red workflow wrapper reflects a post-deploy transient 503 and retry artifact collision, while the release marker, invariants, and fresh production SEO QA pass. |
-| 53 | `FT-OPS-003` enable the one-month independent Master autopilot | Operating model | Completed and review-clean | Reuses the Family Tripwise heartbeat for 09:00 and 17:00 Eastern runs through September 12; Turing cycle-two `PASS` confirmed the evidence, no-op, release, new-page, and draft-only community gates. |
+| 53 | `FT-OPS-003` enable the one-month independent Master autopilot | Operating model | Completed and review-clean | Reuses the Family Tripwise heartbeat for 05:00 and 13:00 Eastern runs through September 12, matching its 09:00 and 17:00 UTC slots; Turing cycle-two `PASS` confirmed the evidence, no-op, release, new-page, and draft-only community gates. |
 | 54 | `FT-DEV-005` add a local community-answer review board | Community usefulness workflow | Completed and review-clean | Noether cycle-three `PASS`; strict public-repository queue, loopback/same-origin/token writes, Eastern dates, and approve/revise/reject UI are ready without posting authority. |
 | 55 | `FT-COM-001` draft one current NYC family-itinerary answer | Community usefulness | Completed and review-clean | One pending, self-contained NYC itinerary draft passed Hume cycle-two review after source-fidelity, AI-guidance, and dining-evidence corrections; no link or external write. |
 | 56 | `FT-MAINT-002` refresh the expired Chicago InterContinental pool notice | Production factual freshness | Released and production-verified | Commit `9bf5e04d51efaaa5f35c97ba60656555603fc422`; Pages run `31685857634`; marker, revised text, page invariants and production SEO QA pass after Locke `PASS_WITH_P3` with no P0-P2. |
@@ -111,7 +111,7 @@ Ready does not authorize project work by itself. The Master selects at most one 
 
 ### FT-IMP-023 - Move and consolidate the San Diego hotel trip-style start
 
-- Selected: 2026-08-22 by the 17:00 independent-pilot heartbeat after clean origin reconciliation.
+- Selected: 2026-08-22 by the 17:00 UTC independent-pilot heartbeat after clean origin reconciliation.
 - State: completed, released and production-verified at commit `2dbe30db874553521423bb755ce069bb57a5fb0c` through successful Pages run `32587720666`; Godel cycle-two `PASS` with no P0-P3.
 - Trigger: `FT-RES-017` and Pasteur independently reproduced one `proxy-reviewed` P2: the first useful route begins about 1.46 mobile viewports down and duplicates a broad trip-summary layer.
 - Target: `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`.
@@ -148,7 +148,7 @@ Ready does not authorize project work by itself. The Master selects at most one 
 
 ### FT-MAINT-003 - Refresh the existing San Diego family-hotel evidence layer
 
-- Selected: 2026-08-17 by the 17:00 independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot.
+- Selected: 2026-08-17 by the 17:00 UTC independent-pilot heartbeat after clean fast-forward of the mechanical August 17 GSC snapshot.
 - State: completed, released and production-verified at commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` through successful Pages run `32120676612`; Bacon returned cycle-one `PASS` with no P0-P3.
 - Target: the existing San Diego family-hotel URL only.
 - Product boundary: keep exactly 12 hotels, the page role and architecture, title/H1, URL/canonical/indexability/sitemap, map, trip-style routing and non-promotional posture.
@@ -159,7 +159,7 @@ Ready does not authorize project work by itself. The Master selects at most one 
 
 ### FT-MAINT-002 - Refresh the expired Chicago InterContinental pool notice
 
-- Selected: 2026-08-13 by the 09:00 independent-pilot heartbeat after clean repository/origin reconciliation.
+- Selected: 2026-08-13 by the 09:00 UTC independent-pilot heartbeat after clean repository/origin reconciliation.
 - State: completed, released and production-verified at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422` through successful Pages run `31685857634`; Locke returned `PASS_WITH_P3` with no P0-P2.
 - Evidence: IHG's current amenities/project notice says the pool was scheduled to reopen after August 12 while seating and locker-room work continues through September 16, with occasional daytime construction, unavailable locker rooms, and relocated weekend pool movies. Separate official IHG pages conflict on exact pool hours, so no exact-hours claim will be published.
 - GSC boundary: the newest available August 12 authenticated API snapshot is reused recent evidence finalized through August 10, not newly collected evidence. Its aggregate performance and indexing data do not justify this edit.
@@ -194,7 +194,7 @@ Ready does not authorize project work by itself. The Master selects at most one 
 
 - Selected: 2026-08-12 by explicit user instruction.
 - State: completed and review-clean after Turing cycle-two `PASS` with no P0-P3 findings; this operating-model action is push-only and changes no public page.
-- Schedule: the existing paused `family-tripwise-operator-pilot` heartbeat is active on the permanent Master thread at 09:00 and 17:00 America/New_York through the September 12 cutoff.
+- Schedule: the existing paused `family-tripwise-operator-pilot` heartbeat is active on the permanent Master thread at 09:00 and 17:00 UTC, which is 05:00 and 13:00 America/New_York during the pilot, through the September 12 cutoff.
 - Mission: improve existing pages, shared evidence products, discovery, trust, and real-user decision support. Run cadence is not a publishing quota and may produce a no-op.
 - Evidence: fresh August 12 GSC finalized through August 10 shows 1,732 impressions, 6 clicks, aggregate position 63.9, 28 discovered pages, and 24 of 28 inspected URLs indexed. It supports monitoring and restraint, not an aggregate CTR diagnosis.
 - New-page gate: current SERP-supported distinct job, material demand, no clean existing-URL fit, maintainable information gain, explicit roadmap eligibility, and required user approval.

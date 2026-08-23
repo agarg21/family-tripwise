@@ -68,7 +68,7 @@ Expected implementation paths:
 - `ops/needs-user.md`
 - `ops/operator-review.md`
 
-Selection note: the August 17 17:00 independent-pilot heartbeat selected this factual/evidence maintenance during the active GSC observation window. Preserve the August 13 performance boundary and do not interpret the correction as a ranking test.
+Selection note: the August 17 17:00 UTC independent-pilot heartbeat selected this factual/evidence maintenance during the active GSC observation window. Preserve the August 13 performance boundary and do not interpret the correction as a ranking test.
 
 Implementation result: refreshed all 12 official-property records and visible source dates, corrected La Jolla Shores and Loews pool/parking/shuttle facts, kept every rough nightly band as older July orientation after the August spot check could not produce comparable family totals, and preserved the existing page/search invariants. Ampere found successively smaller state/evidence inconsistencies across the prior transaction's three review cycles; the last stale one-day sentence was corrected locally. The August 18 run selected a fresh bounded release-review transaction with Bacon and added only the stale needs-user mirror to exact scope. Bacon returned cycle-one `PASS` with no P0-P3. Commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` was published by successful Pages run `32120676612`; the live marker, production SEO QA and all declared page invariants pass.
 

@@ -6,7 +6,7 @@ Cutoff: 2026-09-12 at 17:00 America/New_York
 
 ## Mission
 
-Improve the usefulness, trustworthiness, discoverability, and rankings of existing Family Tripwise pages for real family-trip planning. The independent Master thread runs at 09:00 and 17:00 America/New_York. It does not use or update the central SEO Control Room.
+Improve the usefulness, trustworthiness, discoverability, and rankings of existing Family Tripwise pages for real family-trip planning. The independent Master thread runs at 05:00 and 13:00 America/New_York during the pilot, corresponding to the heartbeat's 09:00 and 17:00 UTC slots. It does not use or update the central SEO Control Room.
 
 The schedule creates review opportunities, not a publishing quota. Each run may complete one substantive action or a no-op.
 

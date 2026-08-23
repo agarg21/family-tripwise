@@ -1,6 +1,6 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-22
+Last updated: 2026-08-23
 
 ## Cycle Name
 
@@ -8,7 +8,7 @@ Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
 
-The repository source of project state is `ops/seo-roadmap.json`. Through September 12 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator is the only scheduler and runs at 09:00 and 17:00 Eastern without consulting or updating the central Control Room. The current five-city portfolio is complete; existing-page usefulness, evidence, discovery, and authority take priority over expansion.
+The repository source of project state is `ops/seo-roadmap.json`. Through September 12 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator is the only scheduler and runs at 09:00 and 17:00 UTC, which is 05:00 and 13:00 Eastern during the pilot, without consulting or updating the central Control Room. The current five-city portfolio is complete; existing-page usefulness, evidence, discovery, and authority take priority over expansion.
 
 The direct-manual discovery pass is complete: fresh GSC evidence was collected, the existing sitemap was resubmitted and reread, and read-only URL Inspection now covers every sitemap URL. `FT-EVAL-002` is complete and review-clean after Heisenberg cycle-two `PASS`.
 
@@ -51,6 +51,7 @@ Direct manual action `FT-RES-017` / `SRR-040` is complete and review-clean after
 - August 22 afternoon implementation checkpoint: the unchanged six trip-style cards now start directly after the hero; the broad duplicate summary is gone; and the existing area-first handoff plus four comparison definitions remain below the cards. Focused tests pass 5/5 and full tests pass 160/160. State, freshness, local and production-preflight SEO, all 40 snapshots, generation, exact scope, privacy, content/search invariants and whitespace pass. Browser checks at 1280, 390 and 320 pixels show no overflow or top-level overlap.
 - August 22 afternoon review: Godel cycle one found two P2s: the four definition cards made the two-column trust panel unbalanced, and the removed summary had contained the only area-first link. The cards and existing link now sit below the six trip-style cards, leaving their first-viewport position unchanged and restoring the trust panel's two-child layout. A regression test protects the link. Cycle two returned `PASS` with no P0-P3; release is pending.
 - August 22 afternoon release: commit `2dbe30db874553521423bb755ce069bb57a5fb0c` was published by successful Pages run `32587720666`. The live marker matches; production SEO reports 0 errors and 0 warnings; the page is 200, canonical and indexable with six trip-style cards, 12 hotel cards, 24 Maps links, one map, one area-first handoff, 12 ItemList entries and no old summary. Live mobile reproduces the 671px heading and 736px first card without overflow.
+- August 23 morning monitoring: the 05:02 Eastern heartbeat arrived before the daily GSC workflow's 06:15 Eastern schedule, so the August 22 authenticated snapshot is recent reused evidence rather than a new August 23 read. The baseline worktree was clean and HEAD remains aligned with origin; all 40 public snapshots validate; all 28 configured URLs, sitemap and robots pass public preflight; 160/160 tests plus operator-state, content-freshness and local/production SEO QA pass. `FT-IMP-023` has zero finalized post-release performance days and no post-release crawl evidence. No production defect, unfinished release, user feedback or named family-decision gap makes a substantive action eligible; `FT-PUB-006` remains user-gated and `COMM-2026-001` remains pending user review. No substantive action was selected.
 - Latest site release: `FT-IMP-023` at commit `2dbe30db874553521423bb755ce069bb57a5fb0c`, published and production-verified by successful Pages run `32587720666`.
 - Completed manual action: `FT-EVAL-002`, selected by direct user instruction on August 4 and closed after Heisenberg cycle-two `PASS`. No `site/**`, new URL, page edit, title test, indexing request, outreach, external-account mutation, destination expansion, or recurring automation.
 - Las Vegas diagnostic result: the target is indexed and has 464 public impressions, zero clicks and page-average position 60.69. Protected export run `30746285285` produced 54 rows and 456 attributable impressions; 410 impressions (89.9%) use direct action/list wording and another 18 (3.9%) use place/visit wording. Three live SERPs strongly overlap, so one broad all-ages URL remains correct. Zero finalized performance days follow the July 31 crawl, so no rewrite failure is claimed.
@@ -271,7 +272,7 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 ```
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Latest public preflight on August 21: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
+- Latest public preflight on August 23: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
 - Current normalized source: `ops/gsc-snapshots/2026-08-22.json`, collected through the authenticated read-only API on August 22 with finalized data through August 20.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
