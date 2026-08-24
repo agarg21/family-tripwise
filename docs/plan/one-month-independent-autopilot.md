@@ -8,19 +8,34 @@ Cutoff: 2026-09-12 at 17:00 America/New_York
 
 Improve the usefulness, trustworthiness, discoverability, and rankings of existing Family Tripwise pages for real family-trip planning. The independent Master thread runs at 05:00 and 13:00 America/New_York during the pilot, corresponding to the heartbeat's 09:00 and 17:00 UTC slots. It does not use or update the central SEO Control Room.
 
-The schedule creates review opportunities, not a publishing quota. Each run may complete one substantive action or a no-op.
+The schedule creates one daily learning obligation, not a publishing quota. Each run may complete at most one substantive action; across the two Eastern-time runs, at least one bounded learning unit must be completed each day.
+
+## Daily Progress Contract
+
+A learning unit is one source-dated, durable result from exactly one lane:
+
+- inspect three to five current parent/community questions and extract the shared family decision, constraints, and unanswered work;
+- run one explicit family-planning task against one existing page on desktop/mobile and record answerability, friction, repetition, unsupported certainty, and missing comparison;
+- inspect one current query family, its live SERP/result types, and representative ranking pages for information gain Family Tripwise can honestly provide;
+- audit one maintained evidence set for stale facts, conflicts, unknowns, or weak provenance;
+- draft one concise, non-promotional community answer when current Family Tripwise research genuinely helps.
+
+The unit must record the family decision, hypothesis, evidence class and date, result, confidence, reusable lesson, and next falsification trigger in `backlog/product-learning-ledger.md`. A supported `PRESERVE` decision or rejected hypothesis counts. An unchanged monitoring scan, repeated metric summary, or status-only narrative does not.
+
+Default the 05:00 Eastern run to learning. Default the 13:00 run to applying, deepening, or independently validating the day's result. The second run may no-op when the daily unit is complete and no additional evidence-qualified action exists. Neither run may force a page edit.
 
 ## Run Loop
 
 1. Reconcile the clean repository with origin and preserve unrelated dirty work.
 2. Validate the newest public-safe GSC snapshot and classify freshness and finalization.
-3. Check for a verified production, technical, indexability, trust, or factual defect.
-4. Resume unfinished review-clean work before selecting something new.
-5. Otherwise choose one evidence-qualified existing-page, evidence-layer, research, or community-draft action.
-6. Register action ID, exact paths, evidence, acceptance criteria, measurement plan, and production invariants before substantive edits.
-7. Run focused and full native QA and obtain independent read-only review.
-8. Release only a review-clean exact-path diff; verify production when public files change.
-9. Reconcile durable state and report the action or no-op, evidence, QA/review, release, blockers, and next evidence gate.
+3. Check whether today's learning unit is already complete in the learning ledger and current-cycle state.
+4. Check for a verified production, technical, indexability, trust, or factual defect.
+5. Resume unfinished review-clean work before selecting something new.
+6. Otherwise select one daily learning lane or one evidence-qualified existing-page, evidence-layer, research, or community-draft action.
+7. Register action ID, exact paths, evidence, acceptance criteria, measurement plan, and production invariants before substantive edits.
+8. Run focused and full native QA and obtain independent read-only review.
+9. Release only a review-clean exact-path diff; verify production when public files change.
+10. Reconcile durable state and report the learning unit or action, evidence, QA/review, release, blockers, and next evidence gate.
 
 ## Selection Standard
 
@@ -68,6 +83,6 @@ The review board may record `pending`, `approved`, `revise`, or `rejected`. `app
 
 ## Stop Rules
 
-End a run as a no-op when no bounded action has concrete expected user value, required evidence is stale/unavailable, a protected measurement window is the only reason to edit, or the next step requires user judgment or external mutation.
+End a run as a monitoring-only no-op only when the current Eastern day's learning unit is already complete, the pilot cutoff has passed, or a specific recorded technical/external blocker prevents evidence collection. Stale GSC, a protected measurement window, or a user-gated external action does not block the other learning lanes. Do not manufacture a page edit when research supports `PRESERVE`.
 
 After the cutoff, perform no project work until the user explicitly reauthorizes it.

@@ -2,12 +2,12 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-23",
+  "last_updated": "2026-08-24",
   "last_rescored_on": "2026-08-19",
   "next_rescore_due": "2026-08-26",
   "planning_horizon_days": 28,
   "maintenance": {
-    "after_every_run": "The independent Master updates only the selected direct-manual/autopilot item's repository evidence and records a no-op when no evidence-qualified action exists.",
+    "after_every_run": "The independent Master updates only the selected direct-manual/autopilot item's repository evidence. Each Eastern calendar day must complete at least one bounded learning unit unless the pilot has ended or a recorded hard blocker prevents evidence collection; a second run may no-op after that daily unit is complete when no further evidence-qualified action exists.",
     "after_deployment": "The independent Master records commit, workflow, production, crawl, and measurement evidence in repository state without creating a separate commit solely to backfill release metadata.",
     "weekly": "The independent Master re-scores ready and planned items from fresh GSC, public health, SERP, product, content, community-question, and authority evidence.",
     "monthly_or_strategy_event": "Ask the user to confirm material destination expansion, monetization direction, risk changes, or site continuation decisions."
@@ -15,7 +15,7 @@
   "goals": [
     "Validate relevant organic demand before scaling destination count.",
     "Deepen one existing city at a time through research, reviewed page improvements, and measured observation before adding destinations.",
-    "Create a repeatable loop from evidence to one reviewed experiment to observation to keep/iterate/stop.",
+    "Create a repeatable daily loop from current user questions, task-based page review, SERP evidence, or source conflicts to one reviewed experiment, preserve decision, or reusable lesson.",
     "Build useful tools and source-worthy assets rather than generic travel prose."
   ],
   "items": [
@@ -2908,6 +2908,55 @@
       "review_summary": "Independent read-only reviewer Godel (01a02a73-c845-7bc0-9766-47ee9cc8ce47) returned FAIL in cycle one for two P2s: the four-field snapshot created an unbalanced third child in the desktop trust-panel grid, and removing the broad summary also removed the only area-first handoff. The snapshot and existing link were moved below the six cards without changing their first-viewport position; the trust panel returned to its original two-child grid and the link gained a regression test. Cycle two returned PASS with no P0-P3.",
       "result": "Released and production-verified at commit 2dbe30db874553521423bb755ce069bb57a5fb0c through successful Pages run 32587720666. The unchanged six-card trip-style surface now follows the hero, the area-first handoff and four comparison definitions remain below those cards, the duplicate broad summary is removed, and scenarios S1-S5 retain their prior outputs and uncertainty boundaries. The live marker, production SEO and declared page/mobile invariants pass.",
       "notes": "Selected by the August 22 17:00 UTC independent-pilot heartbeat after clean origin alignment. FT-RES-017 and Pasteur independently reproduced the information-order defect. This is a bounded task-order correction, not a ranking, CTR or content-volume experiment."
+    },
+    {
+      "id": "FT-OPS-004",
+      "title": "Require one bounded Family Tripwise learning unit per day",
+      "kind": "operating-model",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-24",
+      "completed_on": "2026-08-24",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a0348b-547b-77c1-952c-0fdfe9a3438a"
+      ],
+      "impact": 5,
+      "confidence": 5,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "AGENTS.md",
+        "strategy/current-strategy.md",
+        "docs/plan/one-month-independent-autopilot.md",
+        "backlog/product-learning-ledger.md",
+        "ops/operator.json",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The existing twice-daily heartbeat completes at least one durable learning unit per Eastern calendar day, separates morning learning from afternoon application, and permits monitoring-only no-ops only after the daily unit is complete or a recorded hard blocker prevents evidence collection.",
+      "production_invariant": "Update only the existing family-tripwise-operator-pilot prompt and the ten registered repository policy/state paths. Preserve its automation ID, thread, schedule, cutoff, one-action-per-run cap, evidence gates, review/release policy, site content, URLs, indexing state, external-posting prohibition and central-Control-Room independence.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-24 and finalized through 2026-08-22: 2,161 property impressions, 5 clicks, aggregate average position 65.86, 24 of 28 inspected URLs indexed, and 976 impressions at page-average position 72.18 for the San Diego family-hotel page. Public GSC remains orientation only and does not justify a page edit; explicit user direction selects this operating-model correction after repeated monitoring-only runs.",
+      "acceptance_criteria": [
+        "Define one daily learning unit as a source-dated, durable result from current parent questions, a task-based page walkthrough, live SERP/ranking-page analysis, evidence freshness/conflict research, or a useful community-answer draft; unchanged health checks and narrative restatement do not count.",
+        "Default the first daily run to learning and the second to applying, deepening, or independently validating that learning while retaining at most one substantive action per run and all existing page-change evidence gates.",
+        "Require a concise ledger result that records the family decision, hypothesis, evidence class, result, confidence, reusable lesson and next falsification trigger; PRESERVE and rejected hypotheses count when supported by new evidence.",
+        "Allow a no-op only after that Eastern day's learning unit is complete, after the pilot cutoff, or when a specific recorded technical/external blocker makes evidence collection impossible; a monitoring scan alone never satisfies the daily unit.",
+        "Update the existing heartbeat prompt without changing its ID, thread, schedule or cutoff, then pass native state/JSON/privacy/scope QA and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "For each Eastern calendar day through the pilot cutoff, inspect the product-learning ledger and current-cycle record for at least one completed learning unit or one explicit hard-blocker record. Weekly, count units by lane, hypotheses confirmed/rejected, page gaps found/fixed, preserve decisions, community drafts, and facts refreshed; do not use raw page-edit count as success.",
+      "qa_summary": "Full repository tests pass 160/160. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 42 public GSC snapshots validate; public preflight passes for 28 URLs, sitemap and robots. Roadmap JSON parses with unique IDs and the exact ten-path scope; automation ID/thread/status/schedule/cutoff and required prompt clauses match; privacy, credential, whitespace and git diff checks pass.",
+      "review_summary": "Independent read-only reviewer Kierkegaard (01a0348b-547b-77c1-952c-0fdfe9a3438a) returned FAIL in cycle one for four P2s and one P3: the administrative lesson did not satisfy an eligible daily lane, two no-op/current-state mirrors were stale, one generic patch mutated historical FT-RES-007 scope, and the strategy date was stale. Corrections marked LRN-003 non-counting, added source-linked current-parent-question unit LRN-004, reconciled current state, removed the historical mutation and updated the date. Cycle two returned PASS with no P0-P3 and independently verified all four sources, anti-churn gates, automation identity/schedule/cutoff, exact scope, privacy and QA.",
+      "result": "The existing family-tripwise-operator-pilot heartbeat and ten durable repository mirrors now require at least one bounded learning unit per Eastern calendar day. Morning defaults to learning and afternoon to apply/deepen/validate; unchanged monitoring does not count, supported preserve/rejected hypotheses can count, and all page-change, human-evidence, review/release, new-page and external-action gates remain. LRN-004 completes the first eligible unit without a page edit.",
+      "notes": "Selected by direct user instruction after repeated monitoring-only heartbeats. This changes the learning obligation, not the publication threshold: the system must learn daily but may change a page only when the existing evidence gate is met."
     }
   ]
 }

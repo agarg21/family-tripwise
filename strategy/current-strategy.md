@@ -1,6 +1,6 @@
 # Family Tripwise Current Strategy
 
-Last updated: 2026-08-22
+Last updated: 2026-08-24
 
 This is the canonical operating strategy for Family Tripwise. Historical launch plans remain useful as provenance but do not control the current queue.
 
@@ -160,14 +160,17 @@ The August objectives are:
 
 ### Independent autopilot month
 
-From August 12 through September 12, the permanent Master thread runs twice daily without the central Control Room. Cadence is an opportunity to observe and make one bounded improvement, not permission to publish or rewrite twice a day.
+From August 12 through September 12, the permanent Master thread runs twice daily without the central Control Room. Cadence is a daily learn/apply loop, not permission to publish or rewrite twice a day.
 
 - Existing pages and shared evidence products come first.
+- Each Eastern calendar day completes at least one bounded learning unit from current parent questions, a task-based page walkthrough, live SERP/ranking-page analysis, evidence freshness/conflict research, or a useful community-answer draft. Unchanged health checks and rewritten status prose do not count.
+- The first daily run defaults to learning. The second applies, deepens, or independently validates that result; it may no-op only when the daily unit is already complete and no additional evidence-qualified action exists.
 - Current GSC query/crawl evidence, live SERP gaps, official-fact freshness, recurring parent questions, or verified usability defects must name the expected benefit before a page changes.
 - Competitor research should identify work a parent still has to reconstruct; it must not become outline copying or list inflation.
 - Relevant public questions may inform the evidence layer and a concise draft-answer queue. Answers are never auto-posted and never imply firsthand experience.
-- A no-op is successful when no evidence-qualified action would improve a real family decision.
-- Each material usefulness loop should leave one falsifiable hypothesis, one result, and any reusable lesson in `backlog/product-learning-ledger.md`; do not create ledger churn from unchanged monitoring.
+- A supported preserve decision or rejected hypothesis is valid progress. Page edits are not a daily quota.
+- Each learning unit leaves one falsifiable hypothesis, one result, and one reusable lesson or explicit non-generalizable finding in `backlog/product-learning-ledger.md`; do not create ledger churn from unchanged monitoring.
+- A monitoring-only no-op is successful only after the day's learning unit is complete, after the pilot cutoff, or when a recorded technical/external blocker prevents evidence collection.
 
 ## Page Quality Bar
 

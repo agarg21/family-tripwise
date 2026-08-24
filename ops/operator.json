@@ -16,6 +16,27 @@
   },
   "maximum_substantive_actions_per_run": 1,
   "maximum_substantive_actions_per_day": 2,
+  "daily_learning": {
+    "timezone": "America/New_York",
+    "minimum_units_per_day": 1,
+    "ledger": "backlog/product-learning-ledger.md",
+    "morning_default": "learn",
+    "afternoon_default": "apply-deepen-or-validate",
+    "eligible_lanes": [
+      "current-parent-questions",
+      "task-based-page-walkthrough",
+      "live-serp-ranking-page-analysis",
+      "evidence-freshness-or-conflict",
+      "community-answer-draft"
+    ],
+    "monitoring_alone_counts": false,
+    "page_change_required": false,
+    "no_op_allowed_when": [
+      "daily-unit-already-complete-and-no-additional-evidence-qualified-action",
+      "pilot-cutoff-passed",
+      "recorded-technical-or-external-blocker-prevents-evidence-collection"
+    ]
+  },
   "release_policy": "Follow the existing independent-review, exact-path, QA, direct-main, deployment, and production-verification gates in AGENTS.md.",
   "cloud_readiness": {
     "mode": "hybrid",

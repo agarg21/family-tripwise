@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-23
+Last updated: 2026-08-24
 
 Last re-scored: 2026-08-19
 Next re-score due: 2026-08-26
@@ -9,20 +9,20 @@ Next re-score due: 2026-08-26
 
 Through September 12 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator owns twice-daily scheduling and roadmap reprioritization from this repository. It does not consult or update the central SEO Control Room during the pilot.
 
-Each run may select at most one evidence-qualified substantive action. The user owns material strategic and external-action decisions. The independent reviewer validates implementation quality; it does not replace required human evidence or user approval.
+Each run may select at most one evidence-qualified substantive action. Across each Eastern calendar day, the two runs must complete at least one bounded learning unit; this is a learning obligation, not a page-edit quota. The user owns material strategic and external-action decisions. The independent reviewer validates implementation quality; it does not replace required human evidence or user approval.
 
-`ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Healthy monitoring or a heartbeat without a concrete user benefit should produce a no-op rather than a manufactured action.
+`ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-23.json`.
-- Classification on August 23: fresh authenticated read-only Search Console API evidence, collected August 23 with finalized performance data through August 21.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-24.json`.
+- Classification on August 24: fresh authenticated read-only Search Console API evidence, collected August 24 with finalized performance data through August 22.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 23 snapshot found 24 indexed and four not indexed, with no inspection-row or crawl-time change from August 22. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,105 impressions, 5 clicks, 0.24% CTR, and aggregate average position 65.72. The San Diego family-hotel row remains at 925 impressions and page-average position 72.37. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
-- URL Inspection still records the August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is finalized through August 21, giving eight complete finalized calendar days after that crawl, but the entire window predates the August 22 `FT-IMP-023` release. There are zero finalized post-release days and no post-release crawl evidence, so this snapshot cannot evaluate the change.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 24 snapshot found 24 indexed and four not indexed, with no inspection-row or crawl-time change from August 23. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,161 impressions, 5 clicks, 0.23% CTR, and aggregate average position 65.86. The San Diego family-hotel row has 976 impressions and page-average position 72.18. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- URL Inspection still records the August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is finalized through the August 22 release date, but it contains no complete finalized post-release calendar day and no post-release crawl evidence, so this snapshot cannot evaluate `FT-IMP-023`.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
 - August 15 monitoring: the fresh snapshot and unchanged URL Inspection state do not alter the August 14 measurement decision. Public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change; no substantive action was selected.
@@ -32,12 +32,14 @@ Each run may select at most one evidence-qualified substantive action. The user 
 - August 20 afternoon monitoring: fresh API evidence and public health checks add no inspection/crawl change, query cohort, production defect, unfinished release or named family-decision gap. The larger rolling impression totals remain low-visibility page averages rather than an edit instruction. `FT-PUB-006` remains user-gated; no substantive action was selected.
 - August 21 afternoon monitoring: fresh API evidence extends the finalized window by one day but adds no inspection/crawl change, query cohort, production defect, unfinished release or named family-decision gap. The rolling page/property averages remain orientation rather than an edit instruction. `FT-PUB-006` remains user-gated; no substantive action was selected.
 - August 23 afternoon monitoring: mechanical snapshot commit `8c7b0cd` validates as fresh API evidence finalized through August 21. It adds no inspection/crawl change or public query cohort, and all performance data predates the August 22 hotel-page release. Public health and production checks remain green; `FT-PUB-006` remains user-gated, and no substantive action was selected.
+- August 24 operating-model correction: fresh API evidence remains orientation only and selects no page edit. Direct user instruction selects `FT-OPS-004` to require one durable learning unit per Eastern day, with morning learn and afternoon apply/deepen/validate defaults; unchanged monitoring no longer counts.
 - The user reopened new-city research on July 28. `FT-RES-011` selected Orlando under the incremental city playbook; its one promoted publication remains user-gated.
 - On August 1, the user selected `FT-RES-013` to align the durable strategy around research authority, realistic ranking timelines, and one month of depth across existing cities before destination expansion resumes. No Orlando publication is selected during this cycle.
 
 ## Maintenance cadence
 
-- Every independent Master run: complete routine monitoring housekeeping and select at most one evidence-qualified substantive action, or record a no-op.
+- Every Eastern calendar day: complete at least one bounded learning unit from current parent questions, a task-based page walkthrough, live SERP/ranking-page analysis, evidence freshness/conflict work, or a useful community-answer draft. Unchanged monitoring does not count.
+- Every independent Master run: select at most one substantive action. The second run may no-op after the daily unit is complete when no additional evidence-qualified action exists.
 - Weekly in this repository: review fresh evidence, close stale ideas, and re-score the next four weeks when evidence supports it.
 - After a deployment: record commit, workflow, production, crawl, and measurement evidence in durable project state. Do not create a repository commit solely to backfill those fields.
 - Use a blocking observation window only when an action explicitly requires an isolated experiment and available evidence can support that evaluation.
@@ -107,8 +109,21 @@ Each run may select at most one evidence-qualified substantive action. The user 
 | 58 | `FT-MAINT-003` refresh the existing San Diego family-hotel evidence layer | Production factual freshness | Released and production-verified | Commit `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` was published by successful Pages run `32120676612`; Bacon returned cycle-one `PASS` with no P0-P3, and the live marker, production SEO QA and declared invariants pass. |
 | 59 | `FT-RES-017` pilot a task-based persona usefulness review and recursive learning loop | Existing-page user value method | Completed and review-clean | Five task scenarios are answerable; Pasteur independently reproduced one information-order P2 and returned cycle-two `PASS`. Only unselected candidate `IMP-044` is promoted. |
 | 60 | `FT-IMP-023` move and consolidate the San Diego hotel trip-style start | Existing-page user value | Released and production-verified | Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`; Pages run `32587720666`; the first card begins at 736px on live 390-by-844 mobile and every declared invariant passes. |
+| 61 | `FT-OPS-004` require one bounded Family Tripwise learning unit per day | Operating model | Completed and review-clean | The existing heartbeat and durable policy now enforce a morning learn / afternoon apply-deepen-validate loop; LRN-004 is the first eligible unit, and Kierkegaard cycle-two `PASS` confirmed all anti-churn and page-change gates. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-OPS-004 - Require one bounded Family Tripwise learning unit per day
+
+- Selected: 2026-08-24 by direct user instruction after repeated monitoring-only heartbeats.
+- State: completed and review-clean; Kierkegaard cycle-two `PASS` with no P0-P3. Policy, operator configuration, learning ledger, roadmap/current-cycle mirrors and the existing heartbeat prompt are the only changed surfaces.
+- Daily contract: complete at least one source-dated unit from current parent questions, one task-based existing-page walkthrough, one live SERP/ranking-page analysis, one evidence freshness/conflict audit, or one useful community-answer draft. Monitoring and narrative restatement do not count.
+- Run pairing: the 05:00 Eastern run defaults to learning; the 13:00 run applies, deepens, or independently validates that result. A supported preserve decision or rejected hypothesis counts, and no page edit is required.
+- No-op rule: monitoring-only no-op is allowed only after the day's unit is complete, after the pilot cutoff, or when a recorded technical/external blocker prevents evidence collection.
+- Invariants: retain the same automation ID, thread, 05:00/13:00 Eastern schedule and September 12 cutoff; retain at most one substantive action per run and all page, evidence, review, release, new-page and external-action gates.
+- Measurement: use `backlog/product-learning-ledger.md` to count daily units by lane, hypotheses confirmed/rejected, page gaps found/fixed, preserve decisions, community drafts and refreshed material facts. Raw edit count is not success.
+- First unit: `LRN-004` synthesizes four current San Diego family-lodging discussions into one stay-shape hypothesis and preserves the current hotel page pending a later one-base-versus-LEGOLAND-split task walkthrough. It is qualitative evidence, not demand or user validation.
+- Review and QA: Kierkegaard cycle one found four P2s and one P3; all were corrected. Cycle two returned `PASS` with no P0-P3. Full tests pass 160/160; state, freshness, local/production SEO, 42 snapshots, public preflight, JSON/IDs, automation identity/schedule/cutoff, privacy, exact-scope and whitespace checks pass.
 
 ### FT-IMP-023 - Move and consolidate the San Diego hotel trip-style start
 
