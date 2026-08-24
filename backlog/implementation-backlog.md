@@ -1,8 +1,43 @@
 # Implementation Backlog
 
-Last updated: 2026-08-22
+Last updated: 2026-08-24
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate San Diego Stay-Shape Decision Improvement
+
+### IMP-045: Expose The One-Base-Versus-LEGOLAND-Split Rule
+
+Status: promoted but unselected
+
+Research: `FT-RES-018`
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`
+
+The August 24 proxy walkthrough found that the page exposes strong Mission Bay and LEGOLAND hotel evidence but leaves their relationship to the reader. A family can identify each option, yet cannot recover one concise rule for keeping a Mission Bay base versus comparing a short North County split. Bay, bay-plus-Pacific-Beach, and direct ocean-beach roles are also distributed across cards rather than interpreted once.
+
+Smallest candidate:
+
+- Replace the redundant `Hotels covered / 12 options` snapshot field with one concise `One base or split?` planning comparison. Do not add a fifth snapshot field or another card/prose layer.
+- Keep Mission Bay as a comparison for a city/coastal-led itinerary. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify changing rooms; require date-specific drive/traffic and total-price verification.
+- Clarify bay, bay-plus-Pacific-Beach, and direct ocean-beach roles without claiming water safety, calmness, exact route/time, stroller practicality, quietness, or firm family suitability.
+
+Boundaries:
+
+- Preserve the six trip-style cards, four-field snapshot footprint, 12 hotels, comparison table, map, direct Maps links, detailed cards, rough price orientation, evidence dates, conflicts, sources, title, H1, URL, canonical, indexability, sitemap entry and `ItemList` parity.
+- Add no hotel, filter, page, destination, affiliate CTA, analytics, indexing request, external post/account action, outreach or automation change.
+- Treat the rule as an editorial planning framework and every drive/traffic, capacity, package, parking, fee and final-total outcome as verify-before-deciding.
+- Keep August 22 as the current page-change boundary. Search performance remains observation only until a later crawl and aligned finalized query evidence exist.
+
+Acceptance:
+
+- The first two mobile viewports expose the bounded base-versus-split comparison without increasing the snapshot/card count or creating horizontal overflow.
+- The `FT-RES-018` task improves from `PARTIAL` to `YES`; S1-S5 from the August 22 review remain no worse.
+- Focused/full tests, deterministic generation, desktop/390/320 task and layout checks, exact-scope/privacy/search/content invariants, and independent review pass before release.
+
+Selection note: promotion is not scheduling authority. Select this as a separate later action only after independent reproduction of the task finding; do not implement it inside `FT-RES-018`.
 
 ## Candidate San Diego Hotel Decision-Surface Improvement
 

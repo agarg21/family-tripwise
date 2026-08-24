@@ -2957,6 +2957,57 @@
       "review_summary": "Independent read-only reviewer Kierkegaard (01a0348b-547b-77c1-952c-0fdfe9a3438a) returned FAIL in cycle one for four P2s and one P3: the administrative lesson did not satisfy an eligible daily lane, two no-op/current-state mirrors were stale, one generic patch mutated historical FT-RES-007 scope, and the strategy date was stale. Corrections marked LRN-003 non-counting, added source-linked current-parent-question unit LRN-004, reconciled current state, removed the historical mutation and updated the date. Cycle two returned PASS with no P0-P3 and independently verified all four sources, anti-churn gates, automation identity/schedule/cutoff, exact scope, privacy and QA.",
       "result": "The existing family-tripwise-operator-pilot heartbeat and ten durable repository mirrors now require at least one bounded learning unit per Eastern calendar day. Morning defaults to learning and afternoon to apply/deepen/validate; unchanged monitoring does not count, supported preserve/rejected hypotheses can count, and all page-change, human-evidence, review/release, new-page and external-action gates remain. LRN-004 completes the first eligible unit without a page edit.",
       "notes": "Selected by direct user instruction after repeated monitoring-only heartbeats. This changes the learning obligation, not the publication threshold: the system must learn daily but may change a page only when the existing evidence gate is met."
+    },
+    {
+      "id": "FT-RES-018",
+      "title": "Test the Mission Bay base versus LEGOLAND split-stay decision",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-24",
+      "completed_on": "2026-08-24",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": [
+        "01a034c2-68a6-77a3-851e-153c7ba0ff40"
+      ],
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-mission-bay-legoland-stay-shape-review-2026-08-24.md",
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A desktop/mobile task walkthrough determines whether the existing hotel page lets a family choose one Mission Bay base versus a short LEGOLAND split stay, identifies the smallest missing decision support, and either promotes one bounded later improvement or records PRESERVE without changing the live page.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, the page generator, tests, hotel records, prices, maps, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, destinations, outreach or automation.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-24 and finalized through 2026-08-22: 2,161 property impressions, 5 clicks, aggregate average position 65.86, 24 of 28 inspected URLs indexed, and 976 impressions at page-average position 72.18 for the indexed San Diego family-hotel page. The window contains no complete finalized post-FT-IMP-023 day and no post-release crawl, so it is orientation only and cannot justify or evaluate a page edit. Current parent questions plus the LRN-004 hypothesis select this bounded task walkthrough.",
+      "acceptance_criteria": [
+        "Define one explicit family task, required outputs and evidence-grounded constraints for choosing one Mission Bay base versus a short LEGOLAND split stay; label the walkthrough proxy-reviewed rather than user-tested.",
+        "Inspect the live page on desktop and 390-pixel mobile for answerability, buried answers, detours, repetition, unsupported certainty, missing comparison, evidence traceability and next verification steps.",
+        "Classify current parent-question evidence, current page/interface evidence, maintained hotel records and fresh GSC separately; do not convert anecdotes into demand or infer exact drive, water-suitability, safety or family-fit claims.",
+        "Promote at most one bounded later existing-page action or record PRESERVE; keep FT-IMP-023's August 22 release as the current measurement boundary and do not change site/** in this transaction.",
+        "Pass focused/full native QA, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Measure whether the task can produce a one-base or split-stay rule, a short Mission Bay shortlist, a bounded LEGOLAND role, and explicit unknowns without scanning unrelated hotel records. Any later implementation should compare those task outputs and route length before/after while waiting for a post-release crawl and aligned finalized query evidence before interpreting search movement.",
+      "promoted_action": "IMP-045",
+      "qa_summary": "Full repository tests pass 160/160. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 42 public GSC snapshots validate; public preflight passes all 28 URLs plus sitemap and robots. Roadmap JSON is duplicate-key-safe with 65 unique action IDs; the exact nine-path/no-site scope, five public links, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Poincare (01a034c2-68a6-77a3-851e-153c7ba0ff40) returned cycle-one PASS with no P0-P3. Poincare independently reproduced the desktop and 390-by-844 measurements, absence of a one-base/split rule, PARTIAL task result, four community-source dates, evidence classifications, proportional IMP-045 handoff, claim boundaries, August 22 measurement boundary, exact scope, privacy and native QA.",
+      "result": "The desktop/mobile task is PARTIAL. The page exposes strong Mission Bay and LEGOLAND hotel evidence, but no one-base-versus-split rule and only distributed bay/ocean interpretation. Promote only unselected IMP-045 to replace the redundant Hotels covered snapshot field with a bounded planning comparison without adding a page layer. No live page, search state, external account or automation changed.",
+      "notes": "Selected by the August 24 afternoon independent-pilot heartbeat to apply and deepen LRN-004. This is the second run's one substantive action; no live page change is authorized."
     }
   ]
 }

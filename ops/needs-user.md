@@ -6,6 +6,8 @@ No user decision is required for completed `FT-IMP-023` / `IMP-044`; Godel cycle
 
 No user decision is required for completed `FT-OPS-004`. The existing heartbeat and repository policy now require one bounded daily learning unit without requiring page churn; Kierkegaard cycle-two `PASS` leaves no P0-P3. The next scheduled learning run may test `LRN-004`'s one-base-versus-LEGOLAND-split hypothesis, but no page edit is pre-authorized by that hypothesis.
 
+No user decision is required for completed `FT-RES-018`. Poincare returned cycle-one `PASS` with no P0-P3. Unselected `IMP-045` remains only a later copy-level candidate and must clear the normal selection, evidence, review and release gates in a separate transaction.
+
 `FT-OPS-002` is released and production-verified. `FT-DEV-004` is completed and review-clean; no user decision is required.
 
 The authenticated read-only GSC API collector and protected-query workflow are configured, so there is no GSC-login or query-export setup blocker. The August 24 snapshot is finalized through August 22 and inspected all 28 sitemap URLs: 24 are indexed and four are not indexed. It reports 2,161 impressions, 5 clicks, and aggregate average position 65.86; the San Diego family-hotel page has 976 impressions and page-average position 72.18. The rolling page/property averages have no public query cohort and do not create an aggregate or page-level CTR/rewrite action. URL Inspection still records the August 13 crawl of the indexed hotel page. The finalized window reaches the August 22 `FT-IMP-023` release date but contains no complete post-release calendar day and no post-release crawl evidence. Later search interpretation must wait for a subsequent crawl plus sufficient aligned finalized query evidence.

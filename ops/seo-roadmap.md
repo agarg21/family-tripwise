@@ -110,8 +110,20 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 59 | `FT-RES-017` pilot a task-based persona usefulness review and recursive learning loop | Existing-page user value method | Completed and review-clean | Five task scenarios are answerable; Pasteur independently reproduced one information-order P2 and returned cycle-two `PASS`. Only unselected candidate `IMP-044` is promoted. |
 | 60 | `FT-IMP-023` move and consolidate the San Diego hotel trip-style start | Existing-page user value | Released and production-verified | Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`; Pages run `32587720666`; the first card begins at 736px on live 390-by-844 mobile and every declared invariant passes. |
 | 61 | `FT-OPS-004` require one bounded Family Tripwise learning unit per day | Operating model | Completed and review-clean | The existing heartbeat and durable policy now enforce a morning learn / afternoon apply-deepen-validate loop; LRN-004 is the first eligible unit, and Kierkegaard cycle-two `PASS` confirmed all anti-churn and page-change gates. |
+| 62 | `FT-RES-018` test the Mission Bay base versus LEGOLAND split-stay decision | Recursive daily learning | Completed and review-clean | Poincare cycle-one `PASS` independently reproduces the `PARTIAL` task result and promotes only unselected `IMP-045`; no live page changes. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-018 - Test the Mission Bay base versus LEGOLAND split-stay decision
+
+- Selected: 2026-08-24 by the afternoon independent-pilot heartbeat as the apply/deepen step for `LRN-004`.
+- State: completed and review-clean; Poincare cycle-one `PASS` with no P0-P3 across the nine registered paths.
+- Task: determine whether the live San Diego family-hotel page lets a family choose one Mission Bay base versus a short LEGOLAND split stay, with a short Mission Bay shortlist, bounded LEGOLAND role, and explicit unknowns.
+- Evidence boundary: current parent questions are qualitative; the task review is proxy evidence, not user testing. Fresh GSC is orientation only because it contains no complete finalized post-`FT-IMP-023` day and no post-release crawl.
+- Invariants: no `site/**`, generator, test, hotel record, URL/search state, external action, destination or automation change.
+- Acceptance: inspect desktop and 390-pixel mobile answerability and evidence traceability, promote at most one bounded later improvement or preserve, then pass native QA and independent review.
+- Candidate result: `PARTIAL`. The existing records answer hotel-specific questions but do not expose a one-base-versus-split rule; bay/ocean roles require cross-card interpretation. Only unselected `IMP-045` is promoted, replacing one redundant snapshot field rather than adding a layer.
+- QA and review: 160/160 tests, state/freshness/local/production SEO, 42 snapshots, 28-URL public preflight, duplicate-key/ID, five-link, exact-scope, privacy and whitespace checks pass. Poincare independently reproduced the measurements, sources, evidence boundaries and proportional handoff, then returned `PASS` with no P0-P3.
 
 ### FT-OPS-004 - Require one bounded Family Tripwise learning unit per day
 

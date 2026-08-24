@@ -54,12 +54,26 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-016` | San Diego family-hotel evidence freshness audit complete and review-clean | `PASS` | Bacon cycles one and two found six P2s across future scope, price provenance/classification, freshness mirrors and claim completeness. All were corrected; cycle three returned `PASS` with no P0-P3. Full 159/159 and state/freshness/SEO/snapshot/JSON/coverage/privacy/scope/whitespace QA pass. |
 | `FT-RES-017` | Task-based persona usefulness pilot complete and review-clean | `PASS` | Pasteur cycle one found one P2 stale inspection attribution and two P3 source/threshold labels; all were corrected. Cycle two returned `PASS` with no P0-P3 and independently reproduced the information-order finding. |
 | `FT-IMP-023` | San Diego hotel trip-style information-order implementation released and production-verified | `PASS` | Godel cycle one found two P2 layout/link regressions; both were fixed. Cycle two returned `PASS` with no P0-P3. Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`, Pages run `32587720666`, marker, production SEO and all page/mobile invariants pass. |
+| `FT-RES-018` | San Diego Mission Bay versus LEGOLAND stay-shape research complete and review-clean | `PASS` | Poincare cycle one independently reproduced the `PARTIAL` task result, sources, measurements, scope and proportional unselected `IMP-045`; no P0-P3. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-24 - `FT-RES-018` Mission Bay versus LEGOLAND stay-shape review
+
+**Reviewer:** Poincare (`01a034c2-68a6-77a3-851e-153c7ba0ff40`), independent read-only research reviewer
+
+**Final result: `PASS`**
+
+- One explicit desktop/mobile task tests whether the live hotel page supports one Mission Bay base versus a short LEGOLAND split stay.
+- Candidate result is `PARTIAL`: hotel evidence and verification are strong, but the cross-card sequencing rule and concise bay/ocean interpretation are absent.
+- Only unselected `IMP-045` is promoted. It would replace one redundant snapshot field rather than add another field, card, page, hotel, filter or prose layer.
+- Poincare independently reproduced the desktop positions around 777, 2,454, 4,108 and 5,124 pixels and the 390-by-844 positions at 671, 736, 1,344, 3,078, 4,691 and 5,540 pixels, with no horizontal overflow or literal one-base/split-stay rule.
+- All four community URLs and dates, August 17 maintained evidence, August 24 GSC limits, proxy/user-tested boundary, P2 severity and unselected `IMP-045` proportionality passed independent review.
+- Cycle one returned `PASS` with no P0-P3. Full 160/160 tests, state/freshness/local/production SEO, 42 snapshots, 28-URL public preflight, duplicate-key/ID, exact nine-path/no-site scope, five links, privacy and whitespace checks pass.
 
 ### 2026-08-22 - `FT-IMP-023` San Diego hotel trip-style information order
 
