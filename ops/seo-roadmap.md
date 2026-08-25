@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-24
+Last updated: 2026-08-25
 
 Last re-scored: 2026-08-19
 Next re-score due: 2026-08-26
@@ -111,8 +111,20 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 60 | `FT-IMP-023` move and consolidate the San Diego hotel trip-style start | Existing-page user value | Released and production-verified | Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`; Pages run `32587720666`; the first card begins at 736px on live 390-by-844 mobile and every declared invariant passes. |
 | 61 | `FT-OPS-004` require one bounded Family Tripwise learning unit per day | Operating model | Completed and review-clean | The existing heartbeat and durable policy now enforce a morning learn / afternoon apply-deepen-validate loop; LRN-004 is the first eligible unit, and Kierkegaard cycle-two `PASS` confirmed all anti-churn and page-change gates. |
 | 62 | `FT-RES-018` test the Mission Bay base versus LEGOLAND split-stay decision | Recursive daily learning | Completed and review-clean | Poincare cycle-one `PASS` independently reproduces the `PARTIAL` task result and promotes only unselected `IMP-045`; no live page changes. |
+| 63 | `FT-RES-019` validate the San Diego stay-shape gap against live SERPs | Recursive daily learning | Completed and review-clean | Linnaeus cycle-two `PASS`; current results retain and narrow unselected `IMP-045` to one hotel-page rule plus the existing area-guide handoff, with no new URL or area-page edit. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-019 - Validate the San Diego stay-shape gap against live SERPs
+
+- Selected: 2026-08-25 by the morning independent-pilot heartbeat as today's live-SERP/ranking-page learning unit.
+- State: completed and review-clean across the exact nine research/handoff/state paths; Linnaeus cycle-two `PASS` with no P0-P3.
+- Question: do current results place the Mission Bay-versus-LEGOLAND one-base/split decision on a hotel page, an area page, both through a handoff, or nowhere clearly?
+- Evidence boundary: the newest available GSC snapshot is recent reused API evidence from August 24 because the heartbeat arrived before today's collector. It is orientation only and contains no aligned query cohort or post-`FT-IMP-023` crawl.
+- Invariants: no `site/**`, page, generator, URL/search state, new destination, external action or automation change.
+- Acceptance: record bounded query/URL overlap, representative ranking-page strengths/gaps, and a retain/revise/move/reject decision for unselected `IMP-045`, then pass native QA and independent review.
+- Result: retain and revise unselected `IMP-045`. Broad results divide into San Diego and Carlsbad/LEGOLAND hotel inventories, while explicit sequencing questions appear mainly in community discussions. Put one compact property-level rule on the hotel page and preserve its existing handoff to the area guide; do not edit the area page or create a new URL.
+- QA and review: 160/160 tests, state/freshness/local/production SEO, 42 snapshots, 66 unique IDs, duplicate-key, seven-link, exact-scope, privacy and whitespace checks pass. Linnaeus cycle one found three P2s in query reproducibility and state freshness; the corrected diff passed cycle two with no findings.
 
 ### FT-RES-018 - Test the Mission Bay base versus LEGOLAND split-stay decision
 

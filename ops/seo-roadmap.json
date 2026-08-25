@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-25",
   "last_rescored_on": "2026-08-19",
   "next_rescore_due": "2026-08-26",
   "planning_horizon_days": 28,
@@ -3008,6 +3008,55 @@
       "review_summary": "Independent read-only reviewer Poincare (01a034c2-68a6-77a3-851e-153c7ba0ff40) returned cycle-one PASS with no P0-P3. Poincare independently reproduced the desktop and 390-by-844 measurements, absence of a one-base/split rule, PARTIAL task result, four community-source dates, evidence classifications, proportional IMP-045 handoff, claim boundaries, August 22 measurement boundary, exact scope, privacy and native QA.",
       "result": "The desktop/mobile task is PARTIAL. The page exposes strong Mission Bay and LEGOLAND hotel evidence, but no one-base-versus-split rule and only distributed bay/ocean interpretation. Promote only unselected IMP-045 to replace the redundant Hotels covered snapshot field with a bounded planning comparison without adding a page layer. No live page, search state, external account or automation changed.",
       "notes": "Selected by the August 24 afternoon independent-pilot heartbeat to apply and deepen LRN-004. This is the second run's one substantive action; no live page change is authorized."
+    },
+    {
+      "id": "FT-RES-019",
+      "title": "Validate the San Diego stay-shape gap against live SERPs",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-25",
+      "completed_on": "2026-08-25",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-stay-shape-serp-validation-2026-08-25.md",
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Observed US SERPs and representative ranking pages determine whether the Mission Bay-versus-LEGOLAND stay-shape job belongs on the hotel page, area page, both through a handoff, or neither; unselected IMP-045 is retained, revised, moved or rejected from current evidence rather than semantic intuition.",
+      "production_invariant": "Research, candidate handoff and state only across the nine registered paths. Do not change site/**, generators, tests, either lodging page, URL/search state, hotel records, prices, maps, analytics, indexing requests, external posts/accounts, outreach, destinations or automation.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-08-24 and finalized through 2026-08-22. The August 25 05:01 Eastern heartbeat arrived before the daily GSC collector, so no August 25 snapshot is available. The 2,161 property impressions, 5 clicks, 24-of-28 indexed result, 976 hotel-page impressions at page-average position 72.18 and 234 stay-area impressions at 62.65 are orientation only: there is no public aligned query cohort, complete finalized post-FT-IMP-023 day or post-release crawl.",
+      "acceptance_criteria": [
+        "Inspect a bounded current US query set spanning explicit split-stay, Mission Bay-versus-Carlsbad/LEGOLAND, where-to-stay-with-LEGOLAND, and family-hotel planning language; record collection date, result/page type, recurring domains/pages, SERP features, overlap and confidence.",
+        "Inspect representative ranking pages from each meaningful result pattern and record whether they answer one-base-versus-split, location/travel-friction, bay/ocean role, room/price uncertainty or only list hotels/areas.",
+        "Separate authority or firsthand advantages Family Tripwise cannot claim from structural synthesis opportunities; do not copy wording, lists, judgments or proprietary data and do not treat search results as demand volume.",
+        "Decide whether IMP-045 belongs on the hotel page, area page, both through an internal handoff, or should be rejected; promote no new URL and preserve August 22 as the current hotel-page change boundary.",
+        "Record one valid August 25 learning unit and pass focused/full native QA, link/source, JSON/privacy/exact-scope/no-site and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Use observed top-result URL/domain overlap and ranking-page answers to validate page ownership and information gain, not search volume or rank estimates. A later implementation may proceed only if this research retains a bounded existing-page gap; evaluate its task output separately from GSC until a post-release crawl and aligned finalized query cohort exist.",
+      "promoted_action": "IMP-045",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "qa_summary": "Full repository tests pass 160/160. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 42 public GSC snapshots validate; roadmap JSON has 66 unique IDs and no duplicate scalar paths; seven cited links return HTTP 200; exact nine-path/no-site, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Linnaeus (01a0382c-52e8-73d1-8cb0-af36016d3075), Independent SERP Methodology and Repository-State Reviewer, returned cycle-two PASS with no P0-P3. Cycle one found three P2s covering per-query URL/feature reproducibility, stale August 24 update dates, and a stale San Diego current-priority mirror; all were fixed and independently reproduced.",
+      "result": "Retain and revise unselected IMP-045. Broad results divide into San Diego family-hotel lists and Carlsbad/LEGOLAND hotel specialists, while explicit one-base/split sequencing questions appear mainly in qualitative community discussions. Put one compact property-level rule on the existing hotel page and preserve its current handoff to the area guide; do not edit the area page or create a new URL.",
+      "notes": "Selected by the August 25 morning heartbeat as today's required live-SERP/ranking-page learning unit and as the direct falsification step for LRN-005 and unselected IMP-045. Research is complete and review-clean; no implementation is selected."
     }
   ]
 }

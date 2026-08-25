@@ -1,6 +1,6 @@
 # San Diego Page Status
 
-Last updated: 2026-08-24
+Last updated: 2026-08-25
 
 Sources:
 
@@ -15,8 +15,15 @@ Sources:
 - Family-hotel freshness audit: `docs/research/san-diego-family-hotel-freshness-audit-2026-08-17.md`
 - Family-hotel task-based persona review: `docs/research/san-diego-family-hotels-persona-task-review-2026-08-22.md`
 - Mission Bay versus LEGOLAND stay-shape review: `docs/research/san-diego-mission-bay-legoland-stay-shape-review-2026-08-24.md`
+- Stay-shape live-SERP ownership validation: `docs/research/san-diego-stay-shape-serp-validation-2026-08-25.md`
 
 Note: The implementation baseline remains the July 21 snapshot. The family-hotel row uses the August 24 snapshot finalized through August 22; the stay-area row uses August 4, and unrelated page rows retain their prior recorded baseline. None of these windows can establish causal impact from a page change. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; complete protected rows remain outside this public repository.
+
+## August 25 Stay-Shape SERP Overlay
+
+`FT-RES-019` tests the main falsification trigger from the August 24 walkthrough. Four current US query formulations produce a blended result set: broad San Diego family-hotel lists, Carlsbad/LEGOLAND hotel specialists, official attraction/hotel pages, and community itinerary discussions. Editorial pages usually own one inventory or the other; explicit one-base/split questions are clearest in qualitative community discussions. This establishes a bounded structural gap, not demand, exact rank, or user validation.
+
+`IMP-045` is retained and revised but remains unselected. The hotel page should own one compact property-level rule by replacing `Hotels covered / 12 options`, while preserving its current link to the area guide for the broader five-area/base decision. The area page should not be edited without a separate task-supported defect. No new split-stay or Mission Bay-versus-Carlsbad URL is justified. Linnaeus cycle-two `PASS` leaves no P0-P3. August 22 remains the current hotel-page change boundary.
 
 ## August 24 Stay-Shape Task Overlay
 
@@ -99,4 +106,4 @@ The user selected `FT-AUTH-005` / `IMP-042` on July 31. Its compact, source-date
 
 ## Current Priority
 
-`FT-IMP-005` is released and production-verified at `31bba30` through Pages run `29876597948`. `FT-EVAL-001` remains superseded. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff` through Pages run `30667262994`. `FT-EVAL-002` supplies the public-safe area-versus-hotel baseline. `FT-IMP-022` is released and production-verified at `e5e41ec` through run `30930924523`; it changes only the areas page. `FT-RES-016` is complete and review-clean with no public change. `FT-MAINT-003` / `IMP-043` is released and production-verified at `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` through successful Pages run `32120676612`. `FT-RES-018` is the current research-only stay-shape review and promotes unselected `IMP-045`; no live change occurs in that transaction. Wait for sufficient finalized post-crawl evidence before interpreting performance; do not infer a July rewrite result or merge the lodging URLs.
+`FT-IMP-005` is released and production-verified at `31bba30` through Pages run `29876597948`. `FT-EVAL-001` remains superseded. `FT-AUTH-005` / `IMP-042` is released and production-verified at `e7c40ff` through Pages run `30667262994`. `FT-EVAL-002` supplies the public-safe area-versus-hotel baseline. `FT-IMP-022` is released and production-verified at `e5e41ec` through run `30930924523`; it changes only the areas page. `FT-RES-016` is complete and review-clean with no public change. `FT-MAINT-003` / `IMP-043` is released and production-verified at `20f88bd6ec995f05beb4e430936fbb1bb5f7a522` through successful Pages run `32120676612`. `FT-RES-018` and `FT-RES-019` are complete and review-clean; the latter retains and narrows unselected `IMP-045` to one hotel-page rule plus the existing area-guide handoff, with no live change. Wait for sufficient finalized post-crawl evidence before interpreting performance; do not infer a July rewrite result or merge the lodging URLs.

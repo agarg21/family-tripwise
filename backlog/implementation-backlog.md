@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-08-24
+Last updated: 2026-08-25
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
@@ -8,20 +8,21 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-045: Expose The One-Base-Versus-LEGOLAND-Split Rule
 
-Status: promoted but unselected
+Status: retained and revised by `FT-RES-019`; unselected
 
-Research: `FT-RES-018`
+Research: `FT-RES-018`, `FT-RES-019`
 
 Target:
 
 - `https://familytripwise.com/where-to-stay/san-diego-family-hotels.html`
 
-The August 24 proxy walkthrough found that the page exposes strong Mission Bay and LEGOLAND hotel evidence but leaves their relationship to the reader. A family can identify each option, yet cannot recover one concise rule for keeping a Mission Bay base versus comparing a short North County split. Bay, bay-plus-Pacific-Beach, and direct ocean-beach roles are also distributed across cards rather than interpreted once.
+The August 24 proxy walkthrough found that the page exposes strong Mission Bay and LEGOLAND hotel evidence but leaves their relationship to the reader. August 25 live-SERP validation retained that gap: broad results divide into San Diego hotel lists and Carlsbad/LEGOLAND hotel lists, while explicit one-base/split questions are handled mainly in community itinerary discussions. This is information gain for one compact hotel-page handoff, not evidence for another URL or longer inventory.
 
 Smallest candidate:
 
 - Replace the redundant `Hotels covered / 12 options` snapshot field with one concise `One base or split?` planning comparison. Do not add a fifth snapshot field or another card/prose layer.
 - Keep Mission Bay as a comparison for a city/coastal-led itinerary. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify changing rooms; require date-specific drive/traffic and total-price verification.
+- Preserve the current area-first link to `https://familytripwise.com/where-to-stay/san-diego-with-kids.html`, which continues to own the broader five-area/base choice. Do not duplicate that page's area guidance or edit it without a separate task-supported defect.
 - Clarify bay, bay-plus-Pacific-Beach, and direct ocean-beach roles without claiming water safety, calmness, exact route/time, stroller practicality, quietness, or firm family suitability.
 
 Boundaries:
@@ -37,7 +38,7 @@ Acceptance:
 - The `FT-RES-018` task improves from `PARTIAL` to `YES`; S1-S5 from the August 22 review remain no worse.
 - Focused/full tests, deterministic generation, desktop/390/320 task and layout checks, exact-scope/privacy/search/content invariants, and independent review pass before release.
 
-Selection note: promotion is not scheduling authority. Select this as a separate later action only after independent reproduction of the task finding; do not implement it inside `FT-RES-018`.
+Selection note: retention is not scheduling authority. Select this as a separate later action only after `FT-RES-019` is review-clean; do not implement it inside either research transaction.
 
 ## Candidate San Diego Hotel Decision-Surface Improvement
 

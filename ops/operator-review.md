@@ -55,12 +55,26 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-017` | Task-based persona usefulness pilot complete and review-clean | `PASS` | Pasteur cycle one found one P2 stale inspection attribution and two P3 source/threshold labels; all were corrected. Cycle two returned `PASS` with no P0-P3 and independently reproduced the information-order finding. |
 | `FT-IMP-023` | San Diego hotel trip-style information-order implementation released and production-verified | `PASS` | Godel cycle one found two P2 layout/link regressions; both were fixed. Cycle two returned `PASS` with no P0-P3. Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`, Pages run `32587720666`, marker, production SEO and all page/mobile invariants pass. |
 | `FT-RES-018` | San Diego Mission Bay versus LEGOLAND stay-shape research complete and review-clean | `PASS` | Poincare cycle one independently reproduced the `PARTIAL` task result, sources, measurements, scope and proportional unselected `IMP-045`; no P0-P3. |
+| `FT-RES-019` | San Diego stay-shape live-SERP ownership research complete and review-clean | `PASS` | Linnaeus cycle two closed all three P2s covering query reproducibility and stale state mirrors; no P0-P3 remains. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-25 - `FT-RES-019` San Diego stay-shape SERP validation
+
+**Reviewer:** Linnaeus (`01a0382c-52e8-73d1-8cb0-af36016d3075`), Independent SERP Methodology and Repository-State Reviewer
+
+**Final result: `PASS`**
+
+- Four current US query formulations distinguish broad San Diego family-hotel lists, Carlsbad/LEGOLAND hotel specialists, official product pages and community itinerary discussions without treating them as volume or exact-rank evidence.
+- Candidate decision retains and revises unselected `IMP-045`: one compact property-level rule belongs on the hotel page, while the existing area guide owns the broader base choice through the current handoff.
+- No area-page edit, new URL, site change, indexing request, external action or automation is included.
+- Linnaeus (`01a0382c-52e8-73d1-8cb0-af36016d3075`) reproduced the result pattern and QA but found three P2s: per-query URLs/features were not durably logged, two updated state files retained August 24 dates, and the San Diego current-priority mirror still named `FT-RES-018` as current.
+- The query table now maps observed URLs/result types and explicit feature limitations to Q1-Q4; representative pages map back to those queries; both state dates are August 25; and current priority names `FT-RES-019` correctly.
+- Cycle two independently reproduced every fix and returned `PASS` with no P0-P3. Full 160/160 tests, state/freshness/local/production SEO, 42 snapshots, 66 unique IDs, duplicate-key safety, seven HTTP-200 links, exact nine-path/no-site scope, privacy and whitespace checks pass.
 
 ### 2026-08-24 - `FT-RES-018` Mission Bay versus LEGOLAND stay-shape review
 
