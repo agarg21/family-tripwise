@@ -8,7 +8,9 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-045: Expose The One-Base-Versus-LEGOLAND-Split Rule
 
-Status: selected as `FT-IMP-024`; review-clean after Dewey cycle-three `PASS`, release pending
+Status: completed, released, and production-verified as `FT-IMP-024`; Dewey cycle-three `PASS`
+
+Release: commit `d30c29c87e62f79840087331be5b9908b358c8e3`, successful Pages run `33059164697`; release marker, production SEO QA, and declared page invariants pass.
 
 Research: `FT-RES-018`, `FT-RES-019`
 

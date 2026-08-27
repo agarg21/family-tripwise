@@ -56,7 +56,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-023` | San Diego hotel trip-style information-order implementation released and production-verified | `PASS` | Godel cycle one found two P2 layout/link regressions; both were fixed. Cycle two returned `PASS` with no P0-P3. Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`, Pages run `32587720666`, marker, production SEO and all page/mobile invariants pass. |
 | `FT-RES-018` | San Diego Mission Bay versus LEGOLAND stay-shape research complete and review-clean | `PASS` | Poincare cycle one independently reproduced the `PARTIAL` task result, sources, measurements, scope and proportional unselected `IMP-045`; no P0-P3. |
 | `FT-RES-019` | San Diego stay-shape live-SERP ownership research complete and review-clean | `PASS` | Linnaeus cycle two closed all three P2s covering query reproducibility and stale state mirrors; no P0-P3 remains. |
-| `FT-IMP-024` | San Diego one-base-versus-LEGOLAND-split implementation review-clean; release pending | `PASS` | Dewey cycle three closed every task/state finding and returned `PASS` with no P0-P3. Exact 11-path candidate and full QA are release-eligible. |
+| `FT-IMP-024` | San Diego one-base-versus-LEGOLAND-split implementation released and production-verified | `PASS` | Dewey cycle three closed every task/state finding and returned `PASS` with no P0-P3. Commit `d30c29c87e62f79840087331be5b9908b358c8e3`, Pages run `33059164697`, release marker, production SEO QA and all declared invariants pass. |
 
 ## Open blocking findings
 
@@ -66,7 +66,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ### 2026-08-27 - `FT-IMP-024` San Diego one-base-versus-LEGOLAND-split rule
 
-**Reviewer:** pending independent read-only reviewer
+**Reviewer:** Dewey (`01a04280-439d-7e73-8a51-5a1f197a4d3d`), FT-IMP-024 Final Task and State Reviewer
 
 **Final result: cycle-three `PASS` with no P0-P3**
 
@@ -79,6 +79,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - The candidate now limits the first Mission Bay card to Bahia and Hyatt while the separate Catamaran card supplies the third shape; all 12 hotels remain in the full comparison. August 26/current-crawl and selected-action mirrors are reconciled. Browser evidence is reported against the threshold rather than as unstable hundredth-level precision. Cycle-two review then checked these corrections.
 - Dewey cycle two closed the task, claim, layout, proxy-boundary, scope, privacy and JSON findings but returned `FAIL` for one remaining P2: the project summary and San Diego table note still called the August 24 snapshot current. Both now identify the August 26 snapshot and its finalized-through-August-24 boundary. Cycle three is the final allowed review.
 - Dewey cycle three independently verified the complete corrected diff and returned `PASS` with no P0-P3. Focused 5/5 and full 160/160 tests, 44 snapshots, operator-state, local/production SEO, exact scope, privacy, JSON uniqueness, task outputs, mobile threshold and every page/search/evidence invariant pass.
+- Commit `d30c29c87e62f79840087331be5b9908b358c8e3` deployed through successful Pages run `33059164697`; the release marker reports that SHA/run, production SEO QA reports 0 errors and 0 warnings, and the declared live page invariants pass.
 
 ### 2026-08-25 - `FT-RES-019` San Diego stay-shape SERP validation
 

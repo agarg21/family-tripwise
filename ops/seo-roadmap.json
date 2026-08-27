@@ -3066,8 +3066,9 @@
       "title": "Expose the San Diego one-base-versus-LEGOLAND-split rule",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-08-27",
+      "completed_on": "2026-08-27",
       "review_outcome": "PASS",
       "review_cycles": 3,
       "reviewer_agent_ids": [
@@ -3107,10 +3108,13 @@
         "Focused and full native QA, deterministic generation, operator/GSC/SEO/freshness/JSON/privacy/scope/invariant checks and independent read-only review return PASS or PASS_WITH_P3 before release."
       ],
       "measurement_plan": "Compare the FT-RES-018 task before and after for rule completeness, verification boundaries and mobile route length, while rechecking S1-S5 and every production invariant. Record the August 25 crawl as the last pre-change search boundary; any later ranking or CTR interpretation requires a post-FT-IMP-024 crawl and sufficient finalized aligned query evidence.",
-      "release_state": "review-clean-release-pending",
+      "release_state": "released-and-production-verified",
+      "release_commit": "d30c29c87e62f79840087331be5b9908b358c8e3",
+      "pages_run": 33059164697,
+      "released_at": "2026-08-27T09:34:33Z",
       "qa_summary": "Focused San Diego hotel tests pass 5/5 and the full repository suite passes 160/160. Operator-state, content-freshness, local and production-preflight SEO QA pass with 0 errors and 0 warnings; all 44 public GSC snapshots validate; all 28 configured production URLs, sitemap and robots pass public preflight. Full generation is idempotent. Browser checks at 1280 by 900, 390 by 844 and 320 by 800 show zero horizontal overflow and keep the rule under two viewport heights from the trip-style section start. Duplicate-key-safe roadmap JSON has 67 unique IDs; exact scope, canonical/indexability/sitemap, 6-card/4-field/12-hotel/12-row/12-schema-item/24-map/one-iframe, privacy and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Dewey (01a04280-439d-7e73-8a51-5a1f197a4d3d), FT-IMP-024 Final Task and State Reviewer, returned cycle-three PASS with no P0-P3. Cycle one found two P2s and one P3 covering the incomplete six-start task, stale current-state mirrors and overprecise browser ratios. Cycle two closed the task and evidence findings but found two remaining stale August 24 current labels. Cycle three independently verified the complete corrected 11-path diff, three-start routing, claim safety, current August 26 GSC state, task/proxy/mobile boundaries, exact scope, privacy, JSON and all QA.",
-      "result": "Review-clean and release-pending. The six-card surface now starts Mission Bay comparison with Bahia, Hyatt and the separate Catamaran shape; the existing four-field snapshot states when to keep one San Diego base versus compare a short LEGOLAND split and which traffic/total checks remain. All 12 hotels and page/search/evidence invariants remain intact.",
+      "result": "Released and production-verified at commit d30c29c87e62f79840087331be5b9908b358c8e3 through successful Pages run 33059164697. The six-card surface now starts Mission Bay comparison with Bahia, Hyatt and the separate Catamaran shape; the existing four-field snapshot states when to keep one San Diego base versus compare a short LEGOLAND split and which traffic/total checks remain. The release marker, production SEO QA and all 12-hotel page/search/evidence invariants pass.",
       "notes": "Selected by the August 27 morning independent-pilot heartbeat after clean origin alignment and ingestion of the August 25-26 public-safe GSC snapshots. Initial browser QA clarified the mobile criterion to measure from the existing trip-style section start. Dewey cycle one found that the snapshot rule alone left the original task PARTIAL because the first card still named six Mission Bay starts; the smallest correction compresses that existing card to Bahia and Hyatt while the separate Catamaran card supplies the third shape. All six cards and all 12 hotel records remain. This is not a ranking, CTR, page-count or list-expansion action."
     }
   ]
