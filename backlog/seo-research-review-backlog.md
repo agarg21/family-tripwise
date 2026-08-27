@@ -1,10 +1,33 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-08-22
+Last updated: 2026-08-27
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-041: San Diego Lodging Cross-Page Task Review
+
+Status: completed and review-clean as `FT-RES-020`; Pascal cycle-two `PASS` with no P0-P3
+
+Selected: 2026-08-27 by the afternoon independent Family Tripwise pilot
+
+Test whether a family can start on the five-area San Diego guide, choose a broad base, reach the 12-hotel shortlist, use the released one-base-versus-short-LEGOLAND-split rule, reduce the first property comparison, and recover date-specific traffic and total checks without conflicting guidance or an avoidable handoff detour.
+
+Boundaries:
+
+- Research/state only; do not edit `site/**`, either lodging page, generators, tests, URLs, indexability, sitemap, hotel/area records, external accounts, outreach, or automation.
+- Treat desktop/mobile walkthroughs as `proxy-reviewed` interface evidence, never user testing, behavior, satisfaction, ranking, or CTR evidence.
+- Use the recent reused August 26 GSC snapshot only as a pre-`FT-IMP-024` measurement boundary; it contains no aligned query cohort.
+- Record `PRESERVE` or one bounded future defect hypothesis without selecting an implementation.
+
+Review-clean result:
+
+- The task is `PARTIAL`. Page ownership and guidance are coherent, and the hotel page completes the new stay-shape decision once reached.
+- On the area page, the first hotel link precedes the five-area quick choice and matrix; the clearer dedicated hotel handoff follows the matrix and four booking checks much later.
+- Record one unselected future hypothesis: consolidate the duplicated hotel handoff and place the existing named-hotel transition immediately after the area matrix. No page change is included.
+- Artifact: `docs/research/san-diego-lodging-cross-page-task-review-2026-08-27.md`.
+- Review: Pascal cycle one found three P2s covering one misattributed GSC row, one proxy-language overreach, and one stale roadmap state. Cycle two verified all three corrections and returned `PASS` with no P0-P3.
 
 ### SRR-040: Task-Based Persona Usefulness Review Pilot
 

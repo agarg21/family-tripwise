@@ -3116,6 +3116,55 @@
       "review_summary": "Independent read-only reviewer Dewey (01a04280-439d-7e73-8a51-5a1f197a4d3d), FT-IMP-024 Final Task and State Reviewer, returned cycle-three PASS with no P0-P3. Cycle one found two P2s and one P3 covering the incomplete six-start task, stale current-state mirrors and overprecise browser ratios. Cycle two closed the task and evidence findings but found two remaining stale August 24 current labels. Cycle three independently verified the complete corrected 11-path diff, three-start routing, claim safety, current August 26 GSC state, task/proxy/mobile boundaries, exact scope, privacy, JSON and all QA.",
       "result": "Released and production-verified at commit d30c29c87e62f79840087331be5b9908b358c8e3 through successful Pages run 33059164697. The six-card surface now starts Mission Bay comparison with Bahia, Hyatt and the separate Catamaran shape; the existing four-field snapshot states when to keep one San Diego base versus compare a short LEGOLAND split and which traffic/total checks remain. The release marker, production SEO QA and all 12-hotel page/search/evidence invariants pass.",
       "notes": "Selected by the August 27 morning independent-pilot heartbeat after clean origin alignment and ingestion of the August 25-26 public-safe GSC snapshots. Initial browser QA clarified the mobile criterion to measure from the existing trip-style section start. Dewey cycle one found that the snapshot rule alone left the original task PARTIAL because the first card still named six Mission Bay starts; the smallest correction compresses that existing card to Bahia and Hyatt while the separate Catamaran card supplies the third shape. All six cards and all 12 hotel records remain. This is not a ranking, CTR, page-count or list-expansion action."
+    },
+    {
+      "id": "FT-RES-020",
+      "research_backlog_id": "SRR-041",
+      "title": "Test the San Diego lodging cross-page decision handoff",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-27",
+      "completed_on": "2026-08-27",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-lodging-cross-page-task-review-2026-08-27.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A desktop/mobile task walkthrough determines whether a family starting on the San Diego area guide can choose a broad base, reach the hotel shortlist, use the released one-base-versus-LEGOLAND-split rule, and recover the next verification checks without conflicting guidance or unnecessary detours.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, either lodging page, hotel or area records, prices, maps, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-08-26 and finalized through 2026-08-24: no new snapshot arrived during the August 27 afternoon fetch. The reused snapshot reports 2,116 property impressions, 5 clicks, aggregate average position 66.02, 24 of 28 inspected URLs indexed, 1,003 hotel-page impressions at page-average position 71.95, and 230 stay-area impressions at page-average position 62.68. URL Inspection records a successful 2026-08-25 crawl of the hotel page before FT-IMP-024 and an older 2026-07-31 crawl of the stay-area page. It has no aligned query cohort and predates the FT-IMP-024 release, so it is orientation and a measurement boundary only; the released cross-page route and prior task evidence select this walkthrough.",
+      "acceptance_criteria": [
+        "Define one explicit family task and required outputs spanning broad area choice, one-base versus short LEGOLAND split, no more than three first hotel shapes, and date-specific traffic/total verification; label the walkthrough proxy-reviewed rather than user-tested.",
+        "Inspect the live area-to-hotel route on desktop, 390 by 844 mobile, and 320 by 800 mobile for answerability, link discoverability, unnecessary detours, repeated or conflicting advice, evidence traceability, horizontal overflow and recovery from unknowns.",
+        "Use normal page interaction for the cross-page route and record observable section/link positions without treating viewport measurements as behavior, satisfaction or ranking evidence.",
+        "Record PRESERVE or a bounded future defect hypothesis only; do not edit either page, promote a new URL, infer CTR/ranking impact, or modify the active post-FT-IMP-024 observation boundary.",
+        "Pass focused/full native QA, GSC validation, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Measure whether the task can move from five-area selection to the hotel rule and three early hotel shapes, identify the booking/traffic checks, and return to broader area context without contradiction. Record route length and link position only as interface evidence. Any later page change requires a separately selected action; search interpretation waits for a post-FT-IMP-024 crawl and sufficient finalized aligned query evidence.",
+      "qa_summary": "Full repository tests pass 180/180. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 44 public GSC snapshots validate; public GSC preflight is healthy; roadmap JSON has 68 unique IDs and no duplicate keys; both cited live URLs return HTTP 200; exact nine-path/no-site, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Pascal (01a04439-d812-7102-b6d7-74aff1248f4a) returned cycle-two PASS with no P0-P3. Cycle one found three P2s covering a misattributed stay-area GSC row, proxy language that implied an observed user, and a stale roadmap summary; all were corrected and independently verified.",
+      "result": "Completed and review-clean. The task is PARTIAL: area and hotel page ownership is coherent, the hotel rule completes the stay-shape decision, and no conflicting guidance or overflow was found. On the area page, the first hotel link precedes the five-area decision while the dedicated handoff follows the matrix and four booking checks. Record one bounded unselected future hypothesis to consolidate the duplicate handoff immediately after the area matrix; no live page or implementation changes.",
+      "notes": "Selected by the August 27 afternoon independent-pilot heartbeat to apply and independently validate the morning FT-IMP-024 result across the existing lodging journey. This is the run's only substantive action and changes no public page. Browser screenshots and normal interactions at 390 by 844 and 320 by 800 plus desktop link navigation support the proxy result; exact desktop pixel values varied with media load and are not retained. Pascal cycle-two PASS confirms the methodology, result, evidence boundary, scope and state consistency."
     }
   ]
 }
