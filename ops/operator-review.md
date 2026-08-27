@@ -56,12 +56,29 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-IMP-023` | San Diego hotel trip-style information-order implementation released and production-verified | `PASS` | Godel cycle one found two P2 layout/link regressions; both were fixed. Cycle two returned `PASS` with no P0-P3. Commit `2dbe30db874553521423bb755ce069bb57a5fb0c`, Pages run `32587720666`, marker, production SEO and all page/mobile invariants pass. |
 | `FT-RES-018` | San Diego Mission Bay versus LEGOLAND stay-shape research complete and review-clean | `PASS` | Poincare cycle one independently reproduced the `PARTIAL` task result, sources, measurements, scope and proportional unselected `IMP-045`; no P0-P3. |
 | `FT-RES-019` | San Diego stay-shape live-SERP ownership research complete and review-clean | `PASS` | Linnaeus cycle two closed all three P2s covering query reproducibility and stale state mirrors; no P0-P3 remains. |
+| `FT-IMP-024` | San Diego one-base-versus-LEGOLAND-split implementation review-clean; release pending | `PASS` | Dewey cycle three closed every task/state finding and returned `PASS` with no P0-P3. Exact 11-path candidate and full QA are release-eligible. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-27 - `FT-IMP-024` San Diego one-base-versus-LEGOLAND-split rule
+
+**Reviewer:** pending independent read-only reviewer
+
+**Final result: cycle-three `PASS` with no P0-P3**
+
+- The candidate replaces `Hotels covered / 12 options` in the existing four-field snapshot with one conditional rule: keep one San Diego base for city/coastal-led trips and compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms.
+- The same field distinguishes bounded Mission Bay, Catamaran/Pacific Beach and La Jolla Shores/ocean-beach roles, then requires date-specific traffic and same-date room, parking and package comparison without exact route, water-safety, quietness, stroller or firm family-fit claims.
+- All six trip-style cards remain first. The existing snapshot now immediately precedes its area-guide handoff; no field, card, section, hotel, filter or URL is added.
+- Browser QA finds zero horizontal overflow at 1280 by 900, 390 by 844 and 320 by 800. The rule remains below the registered two-viewport threshold from the trip-style section start at both mobile sizes. The corrected candidate supplies all five task outputs; S1-S5 remain no worse because all six routing cards, comparison rows and hotel evidence remain available.
+- Focused tests pass 5/5 and the full suite 160/160. Operator-state, freshness, local/production-preflight SEO, all 44 public snapshots, public preflight, generation, JSON/IDs, exact scope, privacy, page/search/evidence invariants and whitespace checks pass.
+- Dewey (`01a04280-439d-7e73-8a51-5a1f197a4d3d`) cycle one returned `FAIL` for two P2s and one P3. The snapshot rule alone did not satisfy the original task's no-more-than-three Mission Bay starts, several current-state mirrors still called August 24 current or `IMP-045` unselected, and independently reproduced browser ratios differed slightly while still passing the under-two threshold.
+- The candidate now limits the first Mission Bay card to Bahia and Hyatt while the separate Catamaran card supplies the third shape; all 12 hotels remain in the full comparison. August 26/current-crawl and selected-action mirrors are reconciled. Browser evidence is reported against the threshold rather than as unstable hundredth-level precision. Cycle-two review then checked these corrections.
+- Dewey cycle two closed the task, claim, layout, proxy-boundary, scope, privacy and JSON findings but returned `FAIL` for one remaining P2: the project summary and San Diego table note still called the August 24 snapshot current. Both now identify the August 26 snapshot and its finalized-through-August-24 boundary. Cycle three is the final allowed review.
+- Dewey cycle three independently verified the complete corrected diff and returned `PASS` with no P0-P3. Focused 5/5 and full 160/160 tests, 44 snapshots, operator-state, local/production SEO, exact scope, privacy, JSON uniqueness, task outputs, mobile threshold and every page/search/evidence invariant pass.
 
 ### 2026-08-25 - `FT-RES-019` San Diego stay-shape SERP validation
 

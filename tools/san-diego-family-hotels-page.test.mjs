@@ -53,6 +53,19 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
   assert.match(html, /<dt>Location view<\/dt><dd>Shared cluster map plus direct links for all 12 hotels<\/dd>/);
+  assert.match(html, /<dt>One base or split\?<\/dt>/);
+  assert.match(html, /Keep one San Diego base when most days are around the city or coast/);
+  assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms/);
+  assert.match(html, /Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option/);
+  assert.match(html, /Verify date-specific drive and traffic plus the same-date room, parking, and package total/);
+  assert.doesNotMatch(html, /<dt>Hotels covered<\/dt>/);
+  assert.equal((html.match(/<dl class="snapshot">[\s\S]*?<\/dl>/g)?.[0].match(/<dt>/g) || []).length, 4);
+  const quickPicks = html.match(/<div class="quick-pick-grid hotel-pick-grid">([\s\S]*?)<\/div>/)?.[1] || "";
+  assert.match(quickPicks, /Bahia suite or Hyatt slides/);
+  assert.match(quickPicks, /Start with Bahia when a family suite and bay downtime matter/);
+  assert.match(quickPicks, /start with Hyatt when waterslides are the hotel-day priority/);
+  assert.match(quickPicks, /<span>Bay plus Pacific Beach<\/span><strong>Catamaran Resort<\/strong>/);
+  assert.doesNotMatch(quickPicks, /Six different stay shapes|Mission Bay Resort for a wading pool|Paradise Point for scale|The Dana for clearer room-capacity details/);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
   assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 12);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 12);
@@ -92,6 +105,8 @@ test("starts with one trip-style decision surface before evidence and media", ()
   assert.ok(html.indexOf("Compare San Diego stay areas first") < reviewStatusIndex);
   assert.equal((html.match(/<dl class="snapshot">/g) || []).length, 1);
   assert.ok(html.indexOf('<dl class="snapshot">') < reviewStatusIndex);
+  assert.ok(html.indexOf("One base or split?") < reviewStatusIndex);
+  assert.ok(html.indexOf("One base or split?") < html.indexOf("Compare San Diego stay areas first"));
 });
 
 test("embeds the shared Google My Maps view instead of the native schematic POC", () => {
@@ -113,6 +128,7 @@ test("avoids affiliate, ordinal ranking, generic tradeoff blocks, and unsupporte
   assert.doesNotMatch(html, /affiliate/i);
   assert.doesNotMatch(html, /#1|No\. 1|number one/i);
   assert.doesNotMatch(html, /safest hotel|quietest hotel|guaranteed family|personally verified/i);
+  assert.doesNotMatch(html, /\b\d+\s*(?:minute|minutes|mile|miles)\b/i);
   assert.doesNotMatch(html, /human-review-gated|Evidence status|researched candidates|Research-based and source-dated/i);
   assert.doesNotMatch(html, /<h4>Tradeoffs to check<\/h4>/i);
   assert.doesNotMatch(html, /<dt>Planning band<\/dt>/i);

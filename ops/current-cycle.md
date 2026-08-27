@@ -1,12 +1,14 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-25
+Last updated: 2026-08-27
 
 ## Cycle Name
 
 Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
+
+Morning action `FT-IMP-024` / `IMP-045` is review-clean after Dewey cycle-three `PASS` with no P0-P3 across 11 exact paths; release is pending. The prior task and SERP reviews support one compact hotel-page rule plus a reduced first comparison: replace `Hotels covered / 12 options` with a bounded one-base-versus-LEGOLAND-split rule, and show Bahia, Hyatt and the separate Catamaran card as the three Mission Bay starts while preserving all 12 hotels deeper on the page. Fresh August 26 GSC is finalized through August 24 and records a successful August 25 post-`FT-IMP-023` crawl; its page/property averages remain orientation because no aligned query cohort exists. No area page, hotel record, URL, indexing state, external account or automation is in scope.
 
 The repository source of project state is `ops/seo-roadmap.json`. Through September 12 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator is the only scheduler and runs at 09:00 and 17:00 UTC, which is 05:00 and 13:00 Eastern during the pilot, without consulting or updating the central Control Room. The current five-city portfolio is complete; existing-page usefulness, evidence, discovery, and authority take priority over expansion.
 
@@ -28,9 +30,10 @@ Direct manual action `FT-RES-017` / `SRR-040` is complete and review-clean after
 
 ## State Checkpoint
 
+- August 27 morning selection and implementation: clean origin reconciliation fast-forwarded only the August 25-26 mechanical GSC snapshots. The latest `ops/gsc-snapshots/2026-08-26.md` validates as fresh authenticated read-only API evidence finalized through August 24: 2,116 impressions, 5 clicks, aggregate average position 66.02, 24/28 indexed, and 1,003 impressions at page-average position 71.95 for the San Diego family-hotel URL. URL Inspection records a successful August 25 post-`FT-IMP-023` crawl. GSC is a measurement boundary, not the edit trigger. `FT-IMP-024` replaces one low-information snapshot field with the bounded rule supported by `FT-RES-018` and `FT-RES-019`; Dewey cycle one correctly found that this alone left the original six-start requirement unresolved, so the existing Mission Bay card now limits first stops to Bahia and Hyatt while Catamaran remains the third shape. All six cards and all 12 hotel records remain; no new layer or URL is added. Dewey cycle two closed the task finding and exposed two stale current-snapshot labels, now corrected for the final review cycle.
 - Completed scheduled action: `FT-MAINT-002`, released and production-verified at commit `9bf5e04d51efaaa5f35c97ba60656555603fc422` through successful Pages run `31685857634`. Locke returned cycle-one `PASS_WITH_P3` with no P0-P2. The page now reports IHG's scheduled reopening and continuing project without an observed-reopening claim; URL, title, canonical, indexability, sitemap, hotel count and unrelated content remain unchanged.
 - Morning action evidence boundary: no August 13 snapshot had arrived before `FT-MAINT-002` selection, so that factual-maintenance action used the August 12 snapshot only as orientation.
-- Latest GSC evidence: `ops/gsc-snapshots/2026-08-24.md`, fresh authenticated read-only API evidence with finalized data through 2026-08-22. The property has 2,161 impressions, 5 clicks, aggregate average position 65.86, 28 discovered pages, and 24 of 28 inspected URLs indexed. The San Diego family-hotel row has 976 impressions and page-average position 72.18. The rolling page/property averages and absence of a public query cohort do not create a CTR or rewrite action; the window contains no complete finalized post-`FT-IMP-023` release day and no post-release crawl evidence.
+- Historical August 24 GSC checkpoint: `ops/gsc-snapshots/2026-08-24.md` was fresh authenticated read-only API evidence finalized through August 22, with 2,161 impressions, 5 clicks, aggregate average position 65.86, 24/28 indexed, and 976 hotel-page impressions at position 72.18. It preceded the August 25 crawl and is superseded for current status by the August 26 snapshot above.
 - August 13 evening monitoring: the new mechanical snapshot passed schema/privacy validation; all 28 configured production URLs are 200 and in the sitemap; robots and sitemap are healthy; production SEO, content freshness, operator-state and focused GSC/state tests pass; the community draft remains pending without user feedback. No substantive action was selected.
 - August 14 morning monitoring: the heartbeat arrived at 05:00 Eastern, before the active GSC workflow's 06:15 Eastern daily schedule, so the August 13 snapshot is recent reused evidence rather than an August 14 read. Public preflight, all 31 public-snapshot validations, 159/159 tests, operator-state, content-freshness, and local/production SEO QA pass; the community draft remains pending. Independent read-only reviewer Locke returned cycle-two `PASS` with no P0-P3 after the first cycle caught and corrected the UTC-to-Eastern checkpoint error. The exact housekeeping path is `ops/current-cycle.md`; no substantive action was selected.
 - August 14 afternoon monitoring: fresh snapshot commit `707ee36` arrived through successful GSC workflow run `31795004656`, passed schema/privacy validation, and records a successful August 13 crawl of the indexed San Diego family-hotel page. Its performance window ends August 12, so it contains zero finalized post-crawl days. All 28 configured production URLs remain healthy and in the sitemap; 159/159 tests plus operator-state, content-freshness, local/production SEO, JSON, scope, and whitespace QA pass. Independent read-only reviewer Plato (`01a0013c-c187-7ab3-ac70-8bc4203c663d`) returned `PASS` with no P0-P3 across the exact five housekeeping paths. No substantive action was selected while finalized post-crawl performance data accumulates.
@@ -93,7 +96,7 @@ Direct manual action `FT-RES-017` / `SRR-040` is complete and review-clean after
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the August 24 snapshot has finalized data through August 22, 2,161 impressions and 5 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the current August 26 snapshot has finalized data through August 24, 2,116 impressions and 5 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
 - Current released implementation: `FT-IMP-023` at commit `2dbe30db874553521423bb755ce069bb57a5fb0c`; Pages run `32587720666`, release marker, target invariants and production SEO verification pass
@@ -221,11 +224,11 @@ Direct manual action `FT-RES-017` / `SRR-040` is complete and review-clean after
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-24.json`, collected through the read-only API with finalized data through August 22; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-26.json`, collected through the read-only API with finalized data through August 24; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue. `FT-OPS-004` is the selected operating-model action. `FT-PUB-006` remains separately user-gated and held. Each Eastern day must complete one bounded learning unit; a monitoring-only no-op is allowed only after that unit is complete, after cutoff, or under a recorded technical/external evidence-collection blocker.
+`ops/seo-roadmap.json` is the repository queue. `FT-IMP-024` is the selected August 27 action and remains pending independent review/release. `FT-PUB-006` remains separately user-gated and held. Each Eastern day must complete one bounded learning unit; a monitoring-only no-op is allowed only after that unit is complete, after cutoff, or under a recorded technical/external evidence-collection blocker.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -284,14 +287,14 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 ```
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Latest public preflight on August 24: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-08-24.json`, collected through the authenticated read-only API on August 24 with finalized data through August 22.
+- Latest public preflight on August 27: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
+- Current normalized source: `ops/gsc-snapshots/2026-08-26.json`, collected through the authenticated read-only API on August 26 with finalized data through August 24.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.
 - Current URL Inspection summary: 24 of 28 canonical sitemap URLs are indexed; four are not indexed; zero inspection rows are collector-unknown.
 - Currently not indexed: the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The San Diego stay-area and itinerary pages were crawled July 31; the San Diego and Las Vegas family-hotel pages remain indexed.
+- The San Diego stay-area and itinerary pages were crawled July 31; the indexed San Diego family-hotel page was recrawled August 25 after `FT-IMP-023`, and the Las Vegas family-hotel page remains indexed.
 - These are discovery/crawl states, not content-quality verdicts. The San Diego toddler page and San Antonio teen page are indexed.
 - GSC login blocker: none.
 - Per-URL indexing requested: no. The repository policy continues to prohibit the per-URL request action; the existing sitemap was resubmitted under the user's direct approval.

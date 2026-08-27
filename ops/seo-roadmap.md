@@ -1,9 +1,9 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-25
+Last updated: 2026-08-27
 
-Last re-scored: 2026-08-19
-Next re-score due: 2026-08-26
+Last re-scored: 2026-08-27
+Next re-score due: 2026-09-03
 
 ## Ownership
 
@@ -15,14 +15,14 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-24.json`.
-- Classification on August 24: fresh authenticated read-only Search Console API evidence, collected August 24 with finalized performance data through August 22.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-26.json`.
+- Classification on August 27: fresh authenticated read-only Search Console API evidence, collected August 26 with finalized performance data through August 24.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 24 snapshot found 24 indexed and four not indexed, with no inspection-row or crawl-time change from August 23. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,161 impressions, 5 clicks, 0.23% CTR, and aggregate average position 65.86. The San Diego family-hotel row has 976 impressions and page-average position 72.18. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
-- URL Inspection still records the August 13 16:43 UTC crawl of the indexed San Diego family-hotel page. Performance is finalized through the August 22 release date, but it contains no complete finalized post-release calendar day and no post-release crawl evidence, so this snapshot cannot evaluate `FT-IMP-023`.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 26 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,116 impressions, 5 clicks, 0.24% CTR, and aggregate average position 66.02. The San Diego family-hotel row has 1,003 impressions and page-average position 71.95. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- URL Inspection records a successful August 25 13:39 UTC crawl of the indexed San Diego family-hotel page after `FT-IMP-023`. This is the last pre-`FT-IMP-024` crawl boundary; ranking or CTR interpretation still requires sufficient finalized aligned query evidence and a later post-change crawl.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
 - August 15 monitoring: the fresh snapshot and unchanged URL Inspection state do not alter the August 14 measurement decision. Public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change; no substantive action was selected.
@@ -112,8 +112,19 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 61 | `FT-OPS-004` require one bounded Family Tripwise learning unit per day | Operating model | Completed and review-clean | The existing heartbeat and durable policy now enforce a morning learn / afternoon apply-deepen-validate loop; LRN-004 is the first eligible unit, and Kierkegaard cycle-two `PASS` confirmed all anti-churn and page-change gates. |
 | 62 | `FT-RES-018` test the Mission Bay base versus LEGOLAND split-stay decision | Recursive daily learning | Completed and review-clean | Poincare cycle-one `PASS` independently reproduces the `PARTIAL` task result and promotes only unselected `IMP-045`; no live page changes. |
 | 63 | `FT-RES-019` validate the San Diego stay-shape gap against live SERPs | Recursive daily learning | Completed and review-clean | Linnaeus cycle-two `PASS`; current results retain and narrow unselected `IMP-045` to one hotel-page rule plus the existing area-guide handoff, with no new URL or area-page edit. |
+| 64 | `FT-IMP-024` expose the San Diego one-base-versus-LEGOLAND-split rule | Existing-page user value | Review-clean; release pending | The bounded rule and three-start Mission Bay comparison passed Dewey cycle-three review; the six-card route, area-page ownership, 12 hotels and every search/evidence invariant remain intact. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-IMP-024 - Expose the San Diego one-base-versus-LEGOLAND-split rule
+
+- Selected: 2026-08-27 by the morning independent-pilot heartbeat after clean origin alignment and ingestion of the August 25-26 mechanical GSC snapshots.
+- State: review-clean across the exact 11 registered paths after Dewey cycle-three `PASS` with no P0-P3; release pending.
+- Trigger: `FT-RES-018` independently reproduced a `PARTIAL` cross-card task, and `FT-RES-019` assigned one compact property-level rule to the hotel page while preserving the area-page handoff. Fresh August 26 API evidence records an August 25 post-release crawl but remains orientation because no public aligned query cohort exists.
+- Change: replace `Hotels covered / 12 options` in the existing four-field snapshot with a bounded `One base or split?` comparison, then keep that snapshot after all six routing cards and immediately before its existing area-guide handoff. Reduce the first Mission Bay card from six named starts to Bahia and Hyatt; its separate Catamaran card remains the third starting shape. Add no card, section, hotel, filter, page or exact travel/water claim.
+- Invariants: preserve six trip-style cards, four snapshot fields, 12 hotels, prices, evidence, conflicts, sources, map and direct links, area-first handoff, title/H1, canonical/indexability/sitemap and 12-item schema parity; change no area page, external state or automation.
+- Measurement: improve all five `FT-RES-018` outputs from `PARTIAL` to `YES`, including no more than three Mission Bay starting shapes; keep S1-S5 no worse; and verify that the rule begins within two viewport heights of the trip-style section start at 390 by 844 and 320 by 800 without page overflow. August 25 is the last pre-change crawl boundary.
+- QA/review: focused tests pass 5/5 and the full suite 160/160; operator-state, freshness, local/production-preflight SEO, all 44 snapshots, public preflight, generation, browser, JSON, scope, privacy, invariant and whitespace checks pass. Dewey cycles one and two exposed and closed the task-completion and current-state defects; cycle three returned `PASS` with no P0-P3.
 
 ### FT-RES-019 - Validate the San Diego stay-shape gap against live SERPs
 

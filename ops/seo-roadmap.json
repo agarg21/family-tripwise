@@ -2,9 +2,9 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-25",
-  "last_rescored_on": "2026-08-19",
-  "next_rescore_due": "2026-08-26",
+  "last_updated": "2026-08-27",
+  "last_rescored_on": "2026-08-27",
+  "next_rescore_due": "2026-09-03",
   "planning_horizon_days": 28,
   "maintenance": {
     "after_every_run": "The independent Master updates only the selected direct-manual/autopilot item's repository evidence. Each Eastern calendar day must complete at least one bounded learning unit unless the pilot has ended or a recorded hard blocker prevents evidence collection; a second run may no-op after that daily unit is complete when no further evidence-qualified action exists.",
@@ -3057,6 +3057,61 @@
       "review_summary": "Independent read-only reviewer Linnaeus (01a0382c-52e8-73d1-8cb0-af36016d3075), Independent SERP Methodology and Repository-State Reviewer, returned cycle-two PASS with no P0-P3. Cycle one found three P2s covering per-query URL/feature reproducibility, stale August 24 update dates, and a stale San Diego current-priority mirror; all were fixed and independently reproduced.",
       "result": "Retain and revise unselected IMP-045. Broad results divide into San Diego family-hotel lists and Carlsbad/LEGOLAND hotel specialists, while explicit one-base/split sequencing questions appear mainly in qualitative community discussions. Put one compact property-level rule on the existing hotel page and preserve its current handoff to the area guide; do not edit the area page or create a new URL.",
       "notes": "Selected by the August 25 morning heartbeat as today's required live-SERP/ranking-page learning unit and as the direct falsification step for LRN-005 and unselected IMP-045. Research is complete and review-clean; no implementation is selected."
+    },
+    {
+      "id": "FT-IMP-024",
+      "research_backlog_id": "FT-RES-018, FT-RES-019",
+      "implementation_backlog_id": "IMP-045",
+      "promoted_by": "FT-RES-018",
+      "title": "Expose the San Diego one-base-versus-LEGOLAND-split rule",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-08-27",
+      "review_outcome": "PASS",
+      "review_cycles": 3,
+      "reviewer_agent_ids": [
+        "01a04280-439d-7e73-8a51-5a1f197a4d3d"
+      ],
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/family-hotel-pages.mjs",
+        "tools/san-diego-family-hotels-page.test.mjs",
+        "site/where-to-stay/san-diego-family-hotels.html",
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Inside two viewport heights of the trip-style section start at 390 by 844 and 320 by 800, the existing four-field snapshot gives a bounded rule for keeping one San Diego base versus comparing a short North County split, the quick-pick surface exposes no more than three Mission Bay starting shapes, and the FT-RES-018 task improves from PARTIAL to YES without weakening scenarios S1-S5.",
+      "production_invariant": "Keep exactly six trip-style cards, four snapshot fields, 12 comparison rows and hotel cards, rough price orientation, evidence dates, conflicts, source links, one shared map, 24 direct Maps links, the area-first handoff, title, H1, URL, canonical, indexability, sitemap entry and 12-item ItemList parity. Change no area page, hotel record, global style, filter, URL, destination, affiliate CTA, analytics, indexing request, external post/account, outreach or automation.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-26 and finalized through 2026-08-24: 2,116 property impressions, 5 clicks, aggregate average position 66.02, 24 of 28 inspected URLs indexed, and 1,003 impressions at page-average position 71.95 for the indexed San Diego family-hotel page. URL Inspection records a successful post-FT-IMP-023 crawl on 2026-08-25 at 13:39:35 UTC. The public snapshot has no aligned query cohort, so GSC is orientation and a new measurement boundary rather than the edit trigger; current community questions, the independently reproduced FT-RES-018 task gap and FT-RES-019 SERP ownership result support this bounded usefulness change.",
+      "acceptance_criteria": [
+        "Replace Hotels covered / 12 options in the existing four-field snapshot with one concise One base or split? rule, and reduce the existing Mission Bay quick start from six named options to Bahia and Hyatt while the separate Catamaran card remains the third starting shape; add no snapshot field, card, section, hotel, filter or URL.",
+        "The rule keeps one San Diego base as the comparison when city/coastal days dominate and introduces a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify changing rooms.",
+        "The same compact field requires date-specific drive/traffic and all-in room, parking and package verification without asserting exact travel time, water safety or suitability, quietness, stroller practicality or firm family fit.",
+        "At 390 by 844 and 320 by 800 pixels, the rule begins within two viewport heights of the trip-style section start without horizontal overflow; the six-card route remains first, the existing snapshot precedes its area-guide handoff, the full FT-RES-018 task including no more than three Mission Bay starting shapes is YES and scenarios S1-S5 remain no worse.",
+        "Focused and full native QA, deterministic generation, operator/GSC/SEO/freshness/JSON/privacy/scope/invariant checks and independent read-only review return PASS or PASS_WITH_P3 before release."
+      ],
+      "measurement_plan": "Compare the FT-RES-018 task before and after for rule completeness, verification boundaries and mobile route length, while rechecking S1-S5 and every production invariant. Record the August 25 crawl as the last pre-change search boundary; any later ranking or CTR interpretation requires a post-FT-IMP-024 crawl and sufficient finalized aligned query evidence.",
+      "release_state": "review-clean-release-pending",
+      "qa_summary": "Focused San Diego hotel tests pass 5/5 and the full repository suite passes 160/160. Operator-state, content-freshness, local and production-preflight SEO QA pass with 0 errors and 0 warnings; all 44 public GSC snapshots validate; all 28 configured production URLs, sitemap and robots pass public preflight. Full generation is idempotent. Browser checks at 1280 by 900, 390 by 844 and 320 by 800 show zero horizontal overflow and keep the rule under two viewport heights from the trip-style section start. Duplicate-key-safe roadmap JSON has 67 unique IDs; exact scope, canonical/indexability/sitemap, 6-card/4-field/12-hotel/12-row/12-schema-item/24-map/one-iframe, privacy and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Dewey (01a04280-439d-7e73-8a51-5a1f197a4d3d), FT-IMP-024 Final Task and State Reviewer, returned cycle-three PASS with no P0-P3. Cycle one found two P2s and one P3 covering the incomplete six-start task, stale current-state mirrors and overprecise browser ratios. Cycle two closed the task and evidence findings but found two remaining stale August 24 current labels. Cycle three independently verified the complete corrected 11-path diff, three-start routing, claim safety, current August 26 GSC state, task/proxy/mobile boundaries, exact scope, privacy, JSON and all QA.",
+      "result": "Review-clean and release-pending. The six-card surface now starts Mission Bay comparison with Bahia, Hyatt and the separate Catamaran shape; the existing four-field snapshot states when to keep one San Diego base versus compare a short LEGOLAND split and which traffic/total checks remain. All 12 hotels and page/search/evidence invariants remain intact.",
+      "notes": "Selected by the August 27 morning independent-pilot heartbeat after clean origin alignment and ingestion of the August 25-26 public-safe GSC snapshots. Initial browser QA clarified the mobile criterion to measure from the existing trip-style section start. Dewey cycle one found that the snapshot rule alone left the original task PARTIAL because the first card still named six Mission Bay starts; the smallest correction compresses that existing card to Bahia and Hyatt while the separate Catamaran card supplies the third shape. All six cards and all 12 hotel records remain. This is not a ranking, CTR, page-count or list-expansion action."
     }
   ]
 }

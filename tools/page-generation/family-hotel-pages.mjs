@@ -269,20 +269,20 @@ function sanDiegoFamilyHotelPage() {
           <h2>Pick the closest trip style</h2>
         </div>
         <div class="quick-pick-grid hotel-pick-grid">
-          <article class="quick-pick"><span>Mission Bay water time</span><strong>Six different stay shapes</strong><p>Start with Bahia for a family suite, Mission Bay Resort for a wading pool, Hyatt for waterslides, Paradise Point for scale, Catamaran for Pacific Beach access, or The Dana for clearer room-capacity details.</p></article>
+          <article class="quick-pick"><span>Mission Bay water time</span><strong>Bahia suite or Hyatt slides</strong><p>Start with Bahia when a family suite and bay downtime matter; start with Hyatt when waterslides are the hotel-day priority. Compare the other Mission Bay properties in the full table only if neither fits.</p></article>
           <article class="quick-pick"><span>Bay plus Pacific Beach</span><strong>Catamaran Resort</strong><p>Compare when bay access and nearby food matter, with careful room-building and nighttime-noise checks.</p></article>
           <article class="quick-pick"><span>Downtown base</span><strong>Homewood or Manchester Grand Hyatt</strong><p>Choose Homewood for suite, kitchen, and breakfast function; Manchester for a large full-service waterfront hotel, after checking renovation and pool status.</p></article>
           <article class="quick-pick"><span>LEGOLAND-heavy trip</span><strong>LEGOLAND Hotel/Castle</strong><p>Use when the park is the anchor; compare package, tickets, and parking as one total.</p></article>
           <article class="quick-pick"><span>Coronado resort trip</span><strong>Hotel del or Loews</strong><p>Choose Hotel del for the iconic beachfront experience or Loews for a more isolated bay resort; price the full stay before deciding.</p></article>
           <article class="quick-pick"><span>La Jolla beach trip</span><strong>La Jolla Shores Hotel</strong><p>Compare for direct beach access and the refreshed pool, then verify the exact room setup and which published parking amount applies.</p></article>
         </div>
-        <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
         <dl class="snapshot">
-          <div><dt>Hotels covered</dt><dd>12 options</dd></div>
+          <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
           <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
           <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
           <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
         </dl>
+        <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>

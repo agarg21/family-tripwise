@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-08-25
+Last updated: 2026-08-27
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-045: Expose The One-Base-Versus-LEGOLAND-Split Rule
 
-Status: retained and revised by `FT-RES-019`; unselected
+Status: selected as `FT-IMP-024`; review-clean after Dewey cycle-three `PASS`, release pending
 
 Research: `FT-RES-018`, `FT-RES-019`
 
@@ -21,6 +21,7 @@ The August 24 proxy walkthrough found that the page exposes strong Mission Bay a
 Smallest candidate:
 
 - Replace the redundant `Hotels covered / 12 options` snapshot field with one concise `One base or split?` planning comparison. Do not add a fifth snapshot field or another card/prose layer.
+- Reduce the first Mission Bay quick-pick from six named starts to Bahia for suite/bay downtime and Hyatt for waterslide-led hotel time; keep Catamaran's separate bay-plus-Pacific-Beach card as the third starting shape. Preserve the other Mission Bay properties in the full comparison and hotel records.
 - Keep Mission Bay as a comparison for a city/coastal-led itinerary. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify changing rooms; require date-specific drive/traffic and total-price verification.
 - Preserve the current area-first link to `https://familytripwise.com/where-to-stay/san-diego-with-kids.html`, which continues to own the broader five-area/base choice. Do not duplicate that page's area guidance or edit it without a separate task-supported defect.
 - Clarify bay, bay-plus-Pacific-Beach, and direct ocean-beach roles without claiming water safety, calmness, exact route/time, stroller practicality, quietness, or firm family suitability.
@@ -34,8 +35,8 @@ Boundaries:
 
 Acceptance:
 
-- The first two mobile viewports expose the bounded base-versus-split comparison without increasing the snapshot/card count or creating horizontal overflow.
-- The `FT-RES-018` task improves from `PARTIAL` to `YES`; S1-S5 from the August 22 review remain no worse.
+- The bounded base-versus-split comparison begins within two viewport heights of the existing trip-style section start at 390 by 844 and 320 by 800, without increasing the snapshot/card count or creating horizontal overflow. Keep all six routing cards first; place the existing snapshot immediately before its area-guide handoff.
+- All five `FT-RES-018` outputs improve from `PARTIAL` to `YES`, including no more than three Mission Bay starting shapes; S1-S5 from the August 22 review remain no worse.
 - Focused/full tests, deterministic generation, desktop/390/320 task and layout checks, exact-scope/privacy/search/content invariants, and independent review pass before release.
 
 Selection note: retention is not scheduling authority. Select this as a separate later action only after `FT-RES-019` is review-clean; do not implement it inside either research transaction.
