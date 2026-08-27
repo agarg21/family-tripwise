@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-27
 
-No user decision is required for completed, review-clean `FT-RES-020` / `SRR-041`; Pascal cycle-two `PASS` leaves no P0-P3. The cross-page task is `PARTIAL`: both page roles and the hotel decision are coherent, but the area guide's early hotel link precedes the five-area decision while its dedicated hotel handoff comes much later. This is a bounded, unselected future hypothesis only; no page, URL, indexing request, external account or automation change is authorized.
+No user decision is required for completed, review-clean `FT-RES-020` / `SRR-041`; Pascal cycle-two `PASS` leaves no P0-P3, and the docs-only action is pushed at commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`. The cross-page task is `PARTIAL`: both page roles and the hotel decision are coherent, but the area guide's early hotel link precedes the five-area decision while its dedicated hotel handoff comes much later. This is a bounded, unselected future hypothesis only; no page, URL, indexing request, external account or automation change is authorized.
 
 No user decision is required for completed `FT-IMP-024` / `IMP-045`. The bounded hotel-page implementation is released and production-verified at commit `d30c29c87e62f79840087331be5b9908b358c8e3` through successful Pages run `33059164697`; Dewey cycle-three `PASS` left no P0-P3. One redundant snapshot field is now the conditional rule, Bahia/Hyatt/Catamaran are the three Mission Bay starts, all six cards and 12 hotels remain, and the release marker, production SEO QA and declared invariants pass.
 

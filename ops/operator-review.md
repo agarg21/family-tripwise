@@ -57,7 +57,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-018` | San Diego Mission Bay versus LEGOLAND stay-shape research complete and review-clean | `PASS` | Poincare cycle one independently reproduced the `PARTIAL` task result, sources, measurements, scope and proportional unselected `IMP-045`; no P0-P3. |
 | `FT-RES-019` | San Diego stay-shape live-SERP ownership research complete and review-clean | `PASS` | Linnaeus cycle two closed all three P2s covering query reproducibility and stale state mirrors; no P0-P3 remains. |
 | `FT-IMP-024` | San Diego one-base-versus-LEGOLAND-split implementation released and production-verified | `PASS` | Dewey cycle three closed every task/state finding and returned `PASS` with no P0-P3. Commit `d30c29c87e62f79840087331be5b9908b358c8e3`, Pages run `33059164697`, release marker, production SEO QA and all declared invariants pass. |
-| `FT-RES-020` | San Diego lodging cross-page task research complete and review-clean | `PASS` | Pascal cycle two closed all three P2s covering GSC attribution, proxy wording and stale roadmap state; no P0-P3 remain and no public page changed. |
+| `FT-RES-020` | San Diego lodging cross-page task research complete, review-clean and pushed | `PASS` | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle two closed all three P2s; no P0-P3 remain and no public page changed. |
 
 ## Open blocking findings
 
@@ -78,6 +78,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - Exact scope is nine research/state paths; no `site/**`, page, URL/search state, external account or automation change.
 - Cycle one found three P2s: one stay-area row was attributed to the wrong snapshot, one proxy sentence implied an observed user, and one roadmap summary remained stale. All three were corrected; cycle two independently verified closure and returned `PASS` with no P0-P3.
 - Tests pass 180/180. Operator-state, freshness, local/production SEO, GSC snapshot/preflight, strict JSON, link, scope, privacy and whitespace checks pass.
+- The exact nine-path docs-only action is pushed at commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; no Pages deployment or wait applies.
 
 ### 2026-08-27 - `FT-IMP-024` San Diego one-base-versus-LEGOLAND-split rule
 

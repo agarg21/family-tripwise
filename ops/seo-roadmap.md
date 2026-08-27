@@ -113,14 +113,14 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 62 | `FT-RES-018` test the Mission Bay base versus LEGOLAND split-stay decision | Recursive daily learning | Completed and review-clean | Poincare cycle-one `PASS` independently reproduces the `PARTIAL` task result and promotes only unselected `IMP-045`; no live page changes. |
 | 63 | `FT-RES-019` validate the San Diego stay-shape gap against live SERPs | Recursive daily learning | Completed and review-clean | Linnaeus cycle-two `PASS`; current results retain and narrow unselected `IMP-045` to one hotel-page rule plus the existing area-guide handoff, with no new URL or area-page edit. |
 | 64 | `FT-IMP-024` expose the San Diego one-base-versus-LEGOLAND-split rule | Existing-page user value | Released and production-verified | Commit `d30c29c87e62f79840087331be5b9908b358c8e3`; Pages run `33059164697`; the bounded rule, three-start Mission Bay comparison, release marker, production SEO and every declared invariant pass. |
-| 65 | `FT-RES-020` test the San Diego lodging cross-page decision handoff | Recursive daily learning | Completed and review-clean | Pascal cycle-two `PASS`; the `PARTIAL` route supports one bounded unselected area-page handoff-order hypothesis, with no page or URL change. |
+| 65 | `FT-RES-020` test the San Diego lodging cross-page decision handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle-two `PASS`; no page or URL change. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
 
 ### FT-RES-020 - Test the San Diego lodging cross-page decision handoff
 
 - Selected: 2026-08-27 by the afternoon independent-pilot heartbeat to apply and independently validate the morning `FT-IMP-024` result.
-- State: completed and review-clean across nine exact research/state paths; Pascal cycle-two `PASS` leaves no P0-P3; no public page change is authorized.
+- State: completed, review-clean and docs-only pushed at commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle-two `PASS` leaves no P0-P3; no public page change is authorized and no Pages wait applies.
 - Task: start on the five-area San Diego guide, choose a plausible base for a city/coastal trip with a LEGOLAND anchor, reach the 12-hotel shortlist, use the one-base-versus-short-split rule and three early hotel shapes, then identify the date-specific traffic and total-price checks.
 - Evidence boundary: no new snapshot arrived during the August 27 afternoon fetch. The recent reused August 26 authenticated API evidence is finalized through August 24 and predates `FT-IMP-024`; it is orientation only and contains no aligned query cohort. The walkthrough is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank or CTR evidence.
 - Invariants: research/state only; no `site/**`, page, URL, hotel/area record, map, indexability, sitemap, external account, outreach or automation change.
