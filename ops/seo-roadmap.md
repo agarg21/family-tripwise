@@ -114,14 +114,14 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 63 | `FT-RES-019` validate the San Diego stay-shape gap against live SERPs | Recursive daily learning | Completed and review-clean | Linnaeus cycle-two `PASS`; current results retain and narrow unselected `IMP-045` to one hotel-page rule plus the existing area-guide handoff, with no new URL or area-page edit. |
 | 64 | `FT-IMP-024` expose the San Diego one-base-versus-LEGOLAND-split rule | Existing-page user value | Released and production-verified | Commit `d30c29c87e62f79840087331be5b9908b358c8e3`; Pages run `33059164697`; the bounded rule, three-start Mission Bay comparison, release marker, production SEO and every declared invariant pass. |
 | 65 | `FT-RES-020` test the San Diego lodging cross-page decision handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle-two `PASS`; no page or URL change. |
-| 66 | `FT-RES-021` map current Las Vegas family base-and-day-shape questions to the existing cluster | Recursive daily learning | Completed and review-clean | Meitner cycle-two `PASS`; preserve the four core page roles, with one cross-page task hypothesis unselected and no page, URL or external action. |
+| 66 | `FT-RES-021` map current Las Vegas family base-and-day-shape questions to the existing cluster | Recursive daily learning | Completed, review-clean and pushed | Commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle-two `PASS`; preserve the four core page roles, with one cross-page task hypothesis unselected and no page, URL or external action. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
 
 ### FT-RES-021 - Map current Las Vegas family base-and-day-shape questions to the existing cluster
 
 - Selected: 2026-08-28 by the morning independent-pilot heartbeat as today's required current-parent-question learning unit.
-- State: completed and review-clean across nine exact research/state paths; Meitner cycle-two `PASS` leaves no P0-P3; no public page change is authorized.
+- State: completed, review-clean and docs-only pushed at commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle-two `PASS` leaves no P0-P3; no public page changed and no Pages wait applies.
 - Question: do current family questions primarily ask for more Las Vegas attractions, or for a joined decision across trip length, fixed anchors, pool value, hotel/base location, room occupancy, heat, transport and budget?
 - Evidence boundary: four public questions dated January-June 2026 are qualitative only. Fresh August 27 authenticated GSC is finalized through August 25 but has no aligned query cohort; the all-ages page has no post-August-3 crawl, so page averages are orientation rather than a ranking or CTR diagnosis.
 - Invariants: research/state only; no `site/**`, page, record, URL/search state, community post/draft, external account, outreach or automation change.

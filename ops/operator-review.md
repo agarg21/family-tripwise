@@ -58,7 +58,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-019` | San Diego stay-shape live-SERP ownership research complete and review-clean | `PASS` | Linnaeus cycle two closed all three P2s covering query reproducibility and stale state mirrors; no P0-P3 remains. |
 | `FT-IMP-024` | San Diego one-base-versus-LEGOLAND-split implementation released and production-verified | `PASS` | Dewey cycle three closed every task/state finding and returned `PASS` with no P0-P3. Commit `d30c29c87e62f79840087331be5b9908b358c8e3`, Pages run `33059164697`, release marker, production SEO QA and all declared invariants pass. |
 | `FT-RES-020` | San Diego lodging cross-page task research complete, review-clean and pushed | `PASS` | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle two closed all three P2s; no P0-P3 remain and no public page changed. |
-| `FT-RES-021` | Las Vegas current parent base-and-day-shape research complete and review-clean | `PASS` | Meitner cycle two closed all three P2s covering reproducible discovery, neutral source labels, and ledger dates; no P0-P3 remains and no public page changed. |
+| `FT-RES-021` | Las Vegas current parent base-and-day-shape research complete, review-clean and pushed | `PASS` | Commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle two closed all three P2s covering reproducible discovery, neutral source labels, and ledger dates; no P0-P3 remains and no public page changed. |
 
 ## Open blocking findings
 

@@ -3179,6 +3179,8 @@
       "completed_on": "2026-08-28",
       "review_outcome": "PASS",
       "review_cycles": 2,
+      "release_commit": "cf40322b643b6363b9c077bc412b245bf7550dd9",
+      "release_state": "docs-only-push-complete",
       "impact": 4,
       "confidence": 3,
       "learning_value": 5,
