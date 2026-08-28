@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
 
 Last re-scored: 2026-08-27
 Next re-score due: 2026-09-03
@@ -15,13 +15,13 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-26.json`.
-- Classification on August 27: fresh authenticated read-only Search Console API evidence, collected August 26 with finalized performance data through August 24.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-27.json`.
+- Classification on August 28: fresh authenticated read-only Search Console API evidence, collected August 27 with finalized performance data through August 25.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 26 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,116 impressions, 5 clicks, 0.24% CTR, and aggregate average position 66.02. The San Diego family-hotel row has 1,003 impressions and page-average position 71.95. These rolling page/property averages have no public query cohort and do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 27 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,173 impressions, 5 clicks, 0.23% CTR, and aggregate average position 66.21. The public snapshot still has no aligned query cohort. These rolling page/property averages do not identify a CTR problem, ranking failure, or user-facing deficiency.
 - URL Inspection records a successful August 25 13:39 UTC crawl of the indexed San Diego family-hotel page after `FT-IMP-023`. This is the last pre-`FT-IMP-024` crawl boundary; ranking or CTR interpretation still requires sufficient finalized aligned query evidence and a later post-change crawl.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
@@ -114,8 +114,19 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 63 | `FT-RES-019` validate the San Diego stay-shape gap against live SERPs | Recursive daily learning | Completed and review-clean | Linnaeus cycle-two `PASS`; current results retain and narrow unselected `IMP-045` to one hotel-page rule plus the existing area-guide handoff, with no new URL or area-page edit. |
 | 64 | `FT-IMP-024` expose the San Diego one-base-versus-LEGOLAND-split rule | Existing-page user value | Released and production-verified | Commit `d30c29c87e62f79840087331be5b9908b358c8e3`; Pages run `33059164697`; the bounded rule, three-start Mission Bay comparison, release marker, production SEO and every declared invariant pass. |
 | 65 | `FT-RES-020` test the San Diego lodging cross-page decision handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle-two `PASS`; no page or URL change. |
+| 66 | `FT-RES-021` map current Las Vegas family base-and-day-shape questions to the existing cluster | Recursive daily learning | Completed and review-clean | Meitner cycle-two `PASS`; preserve the four core page roles, with one cross-page task hypothesis unselected and no page, URL or external action. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-021 - Map current Las Vegas family base-and-day-shape questions to the existing cluster
+
+- Selected: 2026-08-28 by the morning independent-pilot heartbeat as today's required current-parent-question learning unit.
+- State: completed and review-clean across nine exact research/state paths; Meitner cycle-two `PASS` leaves no P0-P3; no public page change is authorized.
+- Question: do current family questions primarily ask for more Las Vegas attractions, or for a joined decision across trip length, fixed anchors, pool value, hotel/base location, room occupancy, heat, transport and budget?
+- Evidence boundary: four public questions dated January-June 2026 are qualitative only. Fresh August 27 authenticated GSC is finalized through August 25 but has no aligned query cohort; the all-ages page has no post-August-3 crawl, so page averages are orientation rather than a ranking or CTR diagnosis.
+- Invariants: research/state only; no `site/**`, page, record, URL/search state, community post/draft, external account, outreach or automation change.
+- Acceptance: paraphrase four current questions without identities or copied text; derive and map a falsifiable shared decision model to the existing activity, stay-area, hotel and itinerary roles; conclude `PRESERVE` or record one bounded unselected task hypothesis; pass native QA and independent review.
+- Review-clean result: `PRESERVE` the four page roles and current URL set. Existing pages own every component of the joined base-and-day-shape decision. Record one unselected future task for one-day and four-day destination-pool-versus-central-base cases; add no hotel, attraction, generic layer or URL.
 
 ### FT-RES-020 - Test the San Diego lodging cross-page decision handoff
 

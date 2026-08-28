@@ -1,10 +1,33 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-042: Las Vegas Current Parent Base And Day-Shape Review
+
+Status: completed and review-clean as `FT-RES-021`; Meitner cycle-two `PASS` with no P0-P3
+
+Selected: 2026-08-28 by the morning independent Family Tripwise pilot
+
+Test whether four current Las Vegas family questions primarily need more attraction inventory or a joined decision across trip length, fixed anchors, pool value, hotel/base location, honest room occupancy, heat, transport, and budget.
+
+Boundaries:
+
+- Research/state only; do not edit `site/**`, any Las Vegas page or record, generators, tests, URLs, indexability, sitemap, external accounts, posts, outreach, or automation.
+- Retain only source date/URL, paraphrased decision context, recurring constraints, and answer work. Retain no usernames, copied thread text, or personal data; do not treat anecdotes as demand.
+- Use the fresh August 27 GSC snapshot only as orientation and a measurement boundary; it contains no aligned query cohort, and the all-ages page has no post-August-3 crawl.
+- Map the shared decision to existing cluster roles and record `PRESERVE` or one bounded future task hypothesis without selecting an implementation.
+
+Review-clean result:
+
+- `PRESERVE` the four existing page roles and current URL set. The sample asks for a joined base-and-day shape, not a longer attraction list.
+- Current pages already own the component decisions: activities handles one anchor/pool/cost; stay areas handles base/first-two-days/complete-stay/reset; hotels handles named property shapes, room setup, occupancy and totals; itinerary handles usable blocks, pivots and stop rules.
+- Record one unselected future hypothesis: test two cross-page cases, one short destination-pool-versus-central-base visit and one four-day fixed-anchor visit with a separate pool block. Add no hotel, attraction, page or generic layer from this evidence.
+- Artifact: `docs/research/las-vegas-current-parent-base-day-shape-review-2026-08-28.md`.
+- Meitner cycle one found three P2s covering reproducible discovery, neutral source labels, and stale ledger dates. Cycle two verified every correction and returned `PASS` with no P0-P3.
 
 ### SRR-041: San Diego Lodging Cross-Page Task Review
 

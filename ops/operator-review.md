@@ -58,12 +58,28 @@ This is the durable handoff between the Family Tripwise implementation operator 
 | `FT-RES-019` | San Diego stay-shape live-SERP ownership research complete and review-clean | `PASS` | Linnaeus cycle two closed all three P2s covering query reproducibility and stale state mirrors; no P0-P3 remains. |
 | `FT-IMP-024` | San Diego one-base-versus-LEGOLAND-split implementation released and production-verified | `PASS` | Dewey cycle three closed every task/state finding and returned `PASS` with no P0-P3. Commit `d30c29c87e62f79840087331be5b9908b358c8e3`, Pages run `33059164697`, release marker, production SEO QA and all declared invariants pass. |
 | `FT-RES-020` | San Diego lodging cross-page task research complete, review-clean and pushed | `PASS` | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle two closed all three P2s; no P0-P3 remain and no public page changed. |
+| `FT-RES-021` | Las Vegas current parent base-and-day-shape research complete and review-clean | `PASS` | Meitner cycle two closed all three P2s covering reproducible discovery, neutral source labels, and ledger dates; no P0-P3 remains and no public page changed. |
 
 ## Open blocking findings
 
 - None.
 
 ## Review history
+
+### 2026-08-28 - `FT-RES-021` Las Vegas current parent base-and-day-shape review
+
+**Reviewer:** Meitner (`01a047a5-1ecf-72b2-bd64-9c8d6186a045`), independent read-only reviewer
+
+**Verdict: `PASS` on cycle two; no P0-P3 remains**
+
+- Four public questions dated January-June 2026 are retained only as source URLs, dates and paraphrased decision contexts; no identities, copied comments, personal data, demand or prevalence claim is retained.
+- The shared decision model covers usable trip blocks, fixed anchors, pool as amenity or activity, base role, true occupancy and bedding, heat/movement burden, complete cost, and age/pace where evidenced.
+- Live-page inspection assigns each component to the current activity, stay-area, family-hotel or itinerary role. The questions do not justify more attractions, hotel inventory, a generic page or a new URL.
+- One bounded future task remains unselected: test one-day and four-day destination-pool-versus-central-base cases across the existing cluster before considering any page action.
+- Fresh August 27 GSC is orientation only because no aligned query cohort exists and the all-ages page has no post-August-3 crawl. No ranking, CTR, behavior, satisfaction or user-validation claim is made.
+- Exact scope is nine research/state paths; no `site/**`, page, URL/search state, community draft/post, external account or automation change.
+- Cycle one found three P2s: the discovery method was not reproducible, source-title labels exceeded the source-date/URL boundary, and two ledger dates were stale. The artifact now records the search surface, six queries, date window, screening rules and duplicate handling; labels are neutral and dates align. Cycle two verified every correction and returned `PASS`.
+- QA: 180/180 tests; operator-state and freshness pass; local/production SEO 0 errors and 0 warnings; 45 public snapshots validate; public preflight is healthy; strict duplicate-key, 69-ID, exact-scope, privacy, link and whitespace checks pass.
 
 ### 2026-08-27 - `FT-RES-020` San Diego lodging cross-page task
 

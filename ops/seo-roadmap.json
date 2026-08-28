@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-27",
+  "last_updated": "2026-08-28",
   "last_rescored_on": "2026-08-27",
   "next_rescore_due": "2026-09-03",
   "planning_horizon_days": 28,
@@ -3167,6 +3167,57 @@
       "review_summary": "Independent read-only reviewer Pascal (01a04439-d812-7102-b6d7-74aff1248f4a) returned cycle-two PASS with no P0-P3. Cycle one found three P2s covering a misattributed stay-area GSC row, proxy language that implied an observed user, and a stale roadmap summary; all were corrected and independently verified.",
       "result": "Completed and review-clean. The task is PARTIAL: area and hotel page ownership is coherent, the hotel rule completes the stay-shape decision, and no conflicting guidance or overflow was found. On the area page, the first hotel link precedes the five-area decision while the dedicated handoff follows the matrix and four booking checks. Record one bounded unselected future hypothesis to consolidate the duplicate handoff immediately after the area matrix; no live page or implementation changes.",
       "notes": "Selected by the August 27 afternoon independent-pilot heartbeat to apply and independently validate the morning FT-IMP-024 result across the existing lodging journey. This is the run's only substantive action and changes no public page. Browser screenshots and normal interactions at 390 by 844 and 320 by 800 plus desktop link navigation support the proxy result; exact desktop pixel values varied with media load and are not retained. Pascal cycle-two PASS confirms the methodology, result, evidence boundary, scope and state consistency."
+    },
+    {
+      "id": "FT-RES-021",
+      "research_backlog_id": "SRR-042",
+      "title": "Map current Las Vegas family base-and-day-shape questions to the existing cluster",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-28",
+      "completed_on": "2026-08-28",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-current-parent-base-day-shape-review-2026-08-28.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/las-vegas-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Four source-dated current family questions yield a bounded shared decision model covering trip length, fixed anchors, pool value, hotel/base location, room occupancy, heat, transport and budget; each output is assigned to an existing Las Vegas page role, and the action records PRESERVE or one falsifiable cross-page task hypothesis without changing a page or creating a URL.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, any Las Vegas page or record, prices, maps, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Do not retain usernames, copied thread text or personal data, treat anecdotes as demand, or infer ranking/CTR from page-average GSC data.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-27 and finalized through 2026-08-25: 2,173 property impressions, 5 clicks, aggregate average position 66.21, and 24 of 28 inspected URLs indexed. Las Vegas page rows are 172 impressions at page-average position 57.73 for all-ages activities, 72 at 67.17 for family hotels, 18 at 72.00 for stay areas, and 62 at 31.98 for the itinerary. URL Inspection records an August 25 crawl for stay areas but July 28-31 crawls for the other three pages; the all-ages activity page therefore has no post-August-3 release crawl. The public snapshot has no aligned query cohort, so it is fresh orientation and a measurement boundary only, not a content, CTR or ranking trigger.",
+      "acceptance_criteria": [
+        "Inspect four current public family-travel questions from January through June 2026 and retain only source date/URL, paraphrased decision context, recurring constraints and the work a useful answer must perform; retain no username, copied thread text or personal data and make no prevalence or demand claim.",
+        "Extract a falsifiable shared decision model covering trip length, fixed anchors, pool-as-activity value, hotel/base location, honest room occupancy, heat, transport or resort-walking burden, and budget where the source sample supports each field.",
+        "Map every decision output to the current all-ages activity, stay-area, family-hotel and itinerary page roles; distinguish what the cluster already answers from what needs a later explicit cross-page task walkthrough.",
+        "Conclude PRESERVE or record at most one bounded unselected hypothesis for later task validation; do not edit a page, promote a new URL, draft or post a community answer, or infer user satisfaction, behavior, ranking or CTR.",
+        "Pass focused/full native QA, GSC validation, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Count the shared decision outputs supported across the four questions and whether each has a clear current owner in the existing Las Vegas cluster. Record gaps as hypotheses rather than user failures. A later page action requires a separately selected desktop/mobile task walkthrough or stronger current evidence; search interpretation requires aligned finalized query evidence and a post-release crawl for the affected URL.",
+      "qa_summary": "Full repository tests pass 180/180. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 45 public GSC snapshots validate; public GSC preflight is healthy; roadmap JSON has 69 unique IDs and no duplicate keys; all four target URLs return HTTP 200; exact nine-path/no-site, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Meitner (01a047a5-1ecf-72b2-bd64-9c8d6186a045) returned cycle-two PASS with no P0-P3. Cycle one found three P2s covering reproducible source discovery, copied thread-title labels, and stale ledger dates; all were corrected and independently verified.",
+      "result": "Completed and review-clean. Preserve the existing activity, stay-area, family-hotel and itinerary roles plus the current URL set. Four current questions share a joined base-and-day-shape decision across usable blocks, fixed anchors, pool role, base, honest room setup, heat/movement and complete cost. Existing pages own every component; record one unselected future cross-page task for one-day and four-day pool-versus-central-base cases. Add no attractions, hotels or URL from this qualitative sample.",
+      "notes": "Selected by the August 28 morning independent-pilot heartbeat as today's required current-parent-question learning unit. The fresh August 27 GSC snapshot is healthy orientation and does not select this action. This is the run's only substantive action and changes no public page. Meitner cycle-two PASS confirms the reproducible method, proportional preserve decision, page-role mapping, GSC boundary, privacy and exact scope."
     }
   ]
 }

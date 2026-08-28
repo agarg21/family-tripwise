@@ -1,6 +1,8 @@
 # Needs User
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
+
+No user decision is required for completed, review-clean `FT-RES-021` / `SRR-042`; Meitner cycle-two `PASS` leaves no P0-P3 and the docs-only push is pending. Four current Las Vegas family questions support preserving the existing page roles and current URL set, not adding inventory. One cross-page pool-versus-central-base task remains an unselected research hypothesis; no page, URL, indexing request, community draft/post, external account or automation change is authorized.
 
 No user decision is required for completed, review-clean `FT-RES-020` / `SRR-041`; Pascal cycle-two `PASS` leaves no P0-P3, and the docs-only action is pushed at commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`. The cross-page task is `PARTIAL`: both page roles and the hotel decision are coherent, but the area guide's early hotel link precedes the five-area decision while its dedicated hotel handoff comes much later. This is a bounded, unselected future hypothesis only; no page, URL, indexing request, external account or automation change is authorized.
 
