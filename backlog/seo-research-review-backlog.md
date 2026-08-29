@@ -1,10 +1,36 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-043: Las Vegas Pool-Versus-Central-Base Cross-Page Task Review
+
+Status: completed and review-clean as `FT-RES-022`; Gauss cycle-two `PASS` with no P0-P3
+
+Selected: 2026-08-29 by the morning independent Family Tripwise pilot
+
+Test whether the live Las Vegas itinerary, stay-area, family-hotel and activity pages can jointly answer two explicit one-day/four-day pool-versus-central-base cases without an avoidable detour, contradiction or unsupported certainty.
+
+Boundaries:
+
+- Research/state only; do not edit `site/**`, any Las Vegas page or record, generators, tests, URLs, indexability, sitemap, external accounts, posts, outreach, or automation.
+- Use normal links or controls at 1280 by 900, 390 by 844 and 320 by 800; treat the result as proxy-reviewed interface evidence, never user testing, behavior, satisfaction, rank or CTR evidence.
+- Score six outputs: usable blocks; pool role; base type; true occupancy/room setup; current heat/transport/parking/access/complete-total checks; and one removal decision.
+- Fresh August 28 GSC is orientation only because the public snapshot contains no aligned query cohort. Conclude `PRESERVE` or retain at most one bounded unselected future defect hypothesis.
+
+Expected artifact:
+
+- `docs/research/las-vegas-cross-page-base-day-shape-task-review-2026-08-29.md`
+
+Current result:
+
+- The joined task is `PARTIAL`. Case A completes all six outputs; Case B requires an extrapolated four-day block count and an inferred one-base-versus-South-Strip-pool consequence.
+- The exact mobile runs have zero horizontal overflow and coherent page ownership. The itinerary-to-base and activity-to-itinerary handoffs are deep, while the hotel-to-activity transition uses global destination navigation because no contextual link exists.
+- Preserve all four pages and URLs. Retain one bounded, unselected future hypothesis to place the base consequence and current stay/hotel handoff beside the existing itinerary pool-led pivot. Add no page, hotel, attraction, or generic layer.
+- Gauss cycle two closed both P2s covering transition count and stale current-state mirrors, returned `PASS` with no P0-P3, and independently confirmed the task scores, mobile measurements, preserve decision, trust boundaries, exact scope, and native QA.
 
 ### SRR-042: Las Vegas Current Parent Base And Day-Shape Review
 

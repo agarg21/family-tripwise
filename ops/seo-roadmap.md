@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 Last re-scored: 2026-08-27
 Next re-score due: 2026-09-03
@@ -15,13 +15,13 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-27.json`.
-- Classification on August 28: fresh authenticated read-only Search Console API evidence, collected August 27 with finalized performance data through August 25.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-28.json`.
+- Classification on August 29: fresh authenticated read-only Search Console API evidence, collected August 28 with finalized performance data through August 26.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 27 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,173 impressions, 5 clicks, 0.23% CTR, and aggregate average position 66.21. The public snapshot still has no aligned query cohort. These rolling page/property averages do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 28 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,114 impressions, 4 clicks, 0.19% CTR, and aggregate average position 65.81. The public snapshot still has no aligned query cohort. These rolling page/property averages do not identify a CTR problem, ranking failure, or user-facing deficiency.
 - URL Inspection records a successful August 25 13:39 UTC crawl of the indexed San Diego family-hotel page after `FT-IMP-023`. This is the last pre-`FT-IMP-024` crawl boundary; ranking or CTR interpretation still requires sufficient finalized aligned query evidence and a later post-change crawl.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
@@ -115,8 +115,19 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 64 | `FT-IMP-024` expose the San Diego one-base-versus-LEGOLAND-split rule | Existing-page user value | Released and production-verified | Commit `d30c29c87e62f79840087331be5b9908b358c8e3`; Pages run `33059164697`; the bounded rule, three-start Mission Bay comparison, release marker, production SEO and every declared invariant pass. |
 | 65 | `FT-RES-020` test the San Diego lodging cross-page decision handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle-two `PASS`; no page or URL change. |
 | 66 | `FT-RES-021` map current Las Vegas family base-and-day-shape questions to the existing cluster | Recursive daily learning | Completed, review-clean and pushed | Commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle-two `PASS`; preserve the four core page roles, with one cross-page task hypothesis unselected and no page, URL or external action. |
+| 67 | `FT-RES-022` test the Las Vegas pool-versus-central-base cross-page handoff | Recursive daily learning | Completed and review-clean | Gauss cycle-two `PASS`; Case A completes six outputs, while Case B is `PARTIAL` on four-day blocks and base consequence. Preserve pages; one itinerary handoff hypothesis remains unselected. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-022 - Test the Las Vegas pool-versus-central-base cross-page handoff
+
+- Selected: 2026-08-29 by the morning independent-pilot heartbeat as today's required task-based learning unit and direct falsification of `FT-RES-021`.
+- State: completed and review-clean across the exact nine research/state paths; Gauss cycle-two `PASS` leaves no P0-P3 and no public page changed.
+- Task: test one family with one night plus one full day and another with four full days and fixed Center Strip anchors. Determine usable blocks, pool role, base type, true occupancy/room setup, heat/transport/parking/access/complete-total checks, and one thing to remove when the pool or a transfer consumes a block.
+- Evidence boundary: fresh authenticated August 28 GSC is finalized through August 26. It confirms all five Las Vegas pages remain indexed but contains no aligned query cohort; page averages and crawl dates are orientation, not a ranking, CTR or page-change trigger.
+- Invariants: research/state only; no `site/**`, generator, test, page, hotel/activity record, price, map, title/H1, URL/search state, external action or automation change.
+- Acceptance: walk the live itinerary, stay-area, family-hotel and activity route through normal links/controls; score the six outputs `YES`, `PARTIAL` or `NO`; record detours, repetition/conflict, evidence/unknown recovery and overflow; conclude `PRESERVE` or retain at most one bounded unselected future defect hypothesis; pass native QA and independent review. Exact 390 by 844 and 320 by 800 runs completed; the desktop browser clamped the requested 1280 by 900 override to a 1280 by 720 inner viewport, so desktop claims are limited to width breakpoint, source order, navigation and overflow.
+- Current result: `PARTIAL`. The one-day case completes all outputs. The four-day case requires block-count extrapolation and does not directly join fixed central anchors to one base versus a South Strip pool-property move. Preserve the current pages and carry only one unselected itinerary base-consequence handoff hypothesis forward.
 
 ### FT-RES-021 - Map current Las Vegas family base-and-day-shape questions to the existing cluster
 

@@ -1,12 +1,14 @@
 # Current Operating Cycle
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 ## Cycle Name
 
 Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
+
+Morning action `FT-RES-022` / `SRR-043` is completed and review-clean after Gauss cycle-two `PASS` with no P0-P3. Case A completes all six outputs. Case B is `PARTIAL`: a fourth-day block count must be extrapolated and no page directly joins fixed central anchors to one base versus a South Strip pool-property move. Exact 390 by 844 and 320 by 800 runs have zero horizontal overflow; the requested 1280 by 900 desktop override was clamped by the browser to 1280 by 720, so desktop evidence is limited to width breakpoint, source order, normal navigation and overflow. Preserve all pages and URLs; retain one bounded, unselected itinerary base-consequence handoff hypothesis. Fresh August 28 authenticated GSC in `ops/gsc-snapshots/2026-08-28.md` is finalized through August 26, confirms all five Las Vegas pages remain indexed, and remains orientation only because no aligned query cohort exists. No public page, URL/search state, external account or automation changed.
 
 Morning action `FT-RES-021` / `SRR-042` is completed, review-clean and docs-only pushed at commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle-two `PASS` closes all three cycle-one P2s and leaves no P0-P3. Four public questions dated January-June 2026 support a joined Las Vegas base-and-day-shape decision covering usable trip blocks, fixed anchors, pool role, hotel/base location, honest room occupancy, heat/movement and complete cost; they do not support more attraction or hotel inventory. The existing activity, stay-area, family-hotel and itinerary pages own every component. Preserve their roles and current URL set, and record only one unselected future cross-page task for one-day and four-day pool-versus-central-base cases. Fresh August 27 authenticated GSC in `ops/gsc-snapshots/2026-08-27.md` is finalized through August 25 and remains orientation: the public snapshot has no aligned query cohort, and the all-ages activity page has no post-August-3 crawl. No `site/**`, page, URL/search state, community draft/post, external account or automation change occurred; no Pages wait applies.
 
@@ -100,10 +102,10 @@ Direct manual action `FT-RES-017` / `SRR-040` is complete and review-clean after
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the current August 27 snapshot has finalized data through August 25, 2,173 impressions and 5 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the current August 28 snapshot has finalized data through August 26, 2,114 impressions and 4 clicks over 28 days, a successful sitemap read with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: `FT-IMP-023` at commit `2dbe30db874553521423bb755ce069bb57a5fb0c`; Pages run `32587720666`, release marker, target invariants and production SEO verification pass
+- Current released implementation: `FT-IMP-024` at commit `d30c29c87e62f79840087331be5b9908b358c8e3`; Pages run `33059164697`, release marker, target invariants and production SEO verification pass
 
 ## Historical operating threads
 
@@ -228,11 +230,11 @@ Direct manual action `FT-RES-017` / `SRR-040` is complete and review-clean after
   - found six of seven inspected priority URLs are indexed;
   - found `https://familytripwise.com/things-to-do/san-diego-with-kids.html` is live and in the sitemap but GSC URL Inspection says `URL is not on Google` / `URL is unknown to Google`;
   - dated report lives at `docs/research/gsc-monitoring-2026-07-13.md`.
-- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-27.json`, collected through the read-only API with finalized data through August 25; it supersedes earlier UI and API snapshots for current status.
+- Current authenticated API evidence is in `ops/gsc-snapshots/2026-08-28.json`, collected through the read-only API with finalized data through August 26; it supersedes earlier UI and API snapshots for current status.
 
 ## Ready For Operator Selection
 
-`ops/seo-roadmap.json` is the repository queue. `FT-RES-021` is the completed, review-clean and pushed August 28 learning action. `FT-RES-020` is the completed, review-clean and pushed August 27 afternoon research action; `FT-IMP-024` is completed, released and production-verified. `FT-PUB-006` remains separately user-gated and held. Each Eastern day must complete one bounded learning unit; a monitoring-only no-op is allowed only after that unit is complete, after cutoff, or under a recorded technical/external evidence-collection blocker.
+`ops/seo-roadmap.json` is the repository queue. `FT-RES-022` is the completed and review-clean August 29 learning action after Gauss cycle-two `PASS`. `FT-RES-021` is the completed, review-clean and pushed August 28 learning action; `FT-IMP-024` is completed, released and production-verified. `FT-PUB-006` remains separately user-gated and held. Each Eastern day must complete one bounded learning unit; a monitoring-only no-op is allowed only after that unit is complete, after cutoff, or under a recorded technical/external evidence-collection blocker.
 
 Deferred research topics are queued for later validation, not immediate implementation:
 
@@ -291,8 +293,8 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 ```
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Latest public preflight on August 27: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-08-27.json`, collected through the authenticated read-only API on August 27 with finalized data through August 25.
+- Latest public preflight on August 29: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
+- Current normalized source: `ops/gsc-snapshots/2026-08-28.json`, collected through the authenticated read-only API on August 28 with finalized data through August 26.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-28",
+  "last_updated": "2026-08-29",
   "last_rescored_on": "2026-08-27",
   "next_rescore_due": "2026-09-03",
   "planning_horizon_days": 28,
@@ -3220,6 +3220,55 @@
       "review_summary": "Independent read-only reviewer Meitner (01a047a5-1ecf-72b2-bd64-9c8d6186a045) returned cycle-two PASS with no P0-P3. Cycle one found three P2s covering reproducible source discovery, copied thread-title labels, and stale ledger dates; all were corrected and independently verified.",
       "result": "Completed and review-clean. Preserve the existing activity, stay-area, family-hotel and itinerary roles plus the current URL set. Four current questions share a joined base-and-day-shape decision across usable blocks, fixed anchors, pool role, base, honest room setup, heat/movement and complete cost. Existing pages own every component; record one unselected future cross-page task for one-day and four-day pool-versus-central-base cases. Add no attractions, hotels or URL from this qualitative sample.",
       "notes": "Selected by the August 28 morning independent-pilot heartbeat as today's required current-parent-question learning unit. The fresh August 27 GSC snapshot is healthy orientation and does not select this action. This is the run's only substantive action and changes no public page. Meitner cycle-two PASS confirms the reproducible method, proportional preserve decision, page-role mapping, GSC boundary, privacy and exact scope."
+    },
+    {
+      "id": "FT-RES-022",
+      "research_backlog_id": "SRR-043",
+      "title": "Test the Las Vegas pool-versus-central-base cross-page handoff",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-29",
+      "completed_on": "2026-08-29",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-cross-page-base-day-shape-task-review-2026-08-29.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/las-vegas-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Two explicit live desktop/mobile tasks determine whether the existing Las Vegas itinerary, stay-area, family-hotel and activity pages can carry usable blocks, fixed anchors, pool role, base type, true occupancy, heat/transport/access checks, complete cost and one removal decision without an avoidable detour, contradiction or unsupported certainty.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, any Las Vegas page or record, prices, maps, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Treat the walkthrough as proxy-reviewed interface evidence, not user testing, behavior, satisfaction, ranking or CTR evidence.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-28 and finalized through 2026-08-26: 2,114 property impressions, 4 clicks, aggregate average position 65.81, and 24 of 28 inspected URLs indexed. Las Vegas page rows are 150 impressions at page-average position 57.33 for all-ages activities, 75 at 66.76 for family hotels, 18 at 69.83 for stay areas, and 63 at 33.02 for the itinerary. URL Inspection records an August 25 crawl for stay areas but July 28-31 crawls for the other three pages; the all-ages activity page still has no post-August-3 release crawl. The public snapshot has no aligned query cohort, so it is fresh orientation and a measurement boundary only; FT-RES-021 selects this task.",
+      "acceptance_criteria": [
+        "Define two explicit family cases: one night plus one full day with a destination pool competing against a central first-trip base, and four full days with fixed Center Strip anchors plus a separate South Strip pool block; require usable-block count, pool classification, base type, true occupancy/room setup, heat/transport/parking/access/complete-total checks and one removal decision.",
+        "Walk the live four-page route at desktop 1280 by 900, mobile 390 by 844 and mobile 320 by 800 using normal links or controls; record answerability, buried answers, unnecessary detours, repetition or contradiction, unsupported certainty, missing comparison, evidence traceability, recovery from unknowns and horizontal overflow.",
+        "Score each required output YES, PARTIAL or NO from observable page evidence and report route order or section/link positions only as interface evidence; label the work proxy-reviewed rather than user-tested.",
+        "Conclude PRESERVE or record at most one bounded unselected future defect hypothesis. Do not edit a page, promote a new URL, add inventory, infer CTR/ranking effect or change the active observation boundary.",
+        "Pass focused/full native QA, public GSC validation/preflight, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "For each case and viewport, record whether all six required outputs are directly available, recoverable through a clearly labeled existing-page handoff, or missing. Count avoidable page transitions and check normal navigation plus page overflow. A later page action requires a replicated material PARTIAL or NO and a separately selected implementation; search interpretation still requires aligned finalized query evidence and a post-release crawl for the affected URL.",
+      "qa_summary": "Full repository tests pass 180/180. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 46 public GSC snapshots validate; public preflight is healthy for the sitemap, robots and all 28 configured URLs; roadmap JSON has 70 unique IDs and no duplicate keys; exact nine-path/no-site, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Gauss (01a04cd5-9e33-7272-b94a-92cfeb9b1532) returned cycle-two PASS with no P0-P3. Cycle one found two P2s covering an incorrect transition count and stale current-state mirrors; both were corrected and independently verified across the complete nine-path diff.",
+      "result": "Completed and review-clean. The joined task is PARTIAL. The one-night plus one-full-day case completes all six outputs. The four-full-day case requires extrapolating the block count beyond the current three-day itinerary and inferring whether fixed central anchors support one central base or a South Strip pool-property move. Exact 390 by 844 and 320 by 800 runs have zero horizontal overflow. Preserve all four pages and URLs; retain one bounded, unselected itinerary base-consequence handoff hypothesis and add no inventory or page.",
+      "notes": "Selected by the August 29 morning independent-pilot heartbeat as today's required task-based learning unit and direct falsification of FT-RES-021. This is the run's only substantive action and changes no public page. The browser clamped the requested 1280 by 900 desktop override to a 1280 by 720 inner viewport, so desktop claims are limited to width breakpoint, source order, normal navigation and overflow; both exact mobile dimensions were confirmed after reload. Gauss cycle-two PASS confirms the task scores, evidence boundary, proportional preserve decision, exact scope and native QA."
     }
   ]
 }
