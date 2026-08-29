@@ -1,8 +1,43 @@
 # Implementation Backlog
 
-Last updated: 2026-08-27
+Last updated: 2026-08-29
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate Las Vegas Itinerary Decision Handoff
+
+### IMP-046: Expose The Pool-To-Base Consequence
+
+Status: review-clean as `FT-IMP-025` after Linnaeus cycle-three `PASS`; commit and release pending
+
+Research: `FT-RES-021`, `FT-RES-022`
+
+Target:
+
+- `https://familytripwise.com/family-itinerary/las-vegas-with-kids.html`
+
+The August 29 cross-page task independently reproduced one bounded usefulness gap. The itinerary correctly treats a pool as a full trip block, and the existing stay and hotel pages expose base and property evidence, but the reader must infer whether fixed central anchors support one central base, a South Strip pool-led base, or a hotel move. This is a decision-handoff defect, not evidence for another itinerary, hotel, attraction, or URL.
+
+Smallest candidate:
+
+- Add one compact three-choice decision surface immediately after the existing age/pool/heat/nature/budget pivot and before the stop rules.
+- Distinguish a central-base trip, a South Strip pool-led trip, and the higher-burden option of changing hotels without making any universal recommendation.
+- Require the exact booked property's guest access, operating status, room setup, complete total, fixed anchors, and check-in/check-out burden before treating the pool or a hotel move as worthwhile.
+- Link directly to the existing Las Vegas stay-area and named-hotel pages at this decision point. Keep the existing four-card cluster section unchanged as the broader route.
+
+Boundaries:
+
+- Preserve the title, H1, description, URL, canonical, indexability, sitemap entry, three quick picks, three day plans, five pivot rows, four stop rules, four cluster cards, three visible/schema FAQs, sources, image, and three-item `ItemList`.
+- Add no fourth itinerary, hotel, attraction, price, map, score, affiliate CTA, analytics, indexing request, external post/account action, outreach, destination, or automation change.
+- Keep every route and pool statement research-based and conditional. Do not claim firsthand experience, safety, exact travel time, guaranteed pool access, or that changing hotels is usually better.
+- Treat the fresh August 29 GSC snapshot as orientation only. It contains no aligned query cohort and does not select this edit; `FT-RES-022`'s independently reproduced task gap does.
+
+Acceptance:
+
+- In the four-day proxy case, the base-type output improves from `PARTIAL` to `YES` without claiming that the current three-day itinerary supplies a fourth-day block count.
+- The new decision surface appears directly after the pivot table and before stop rules, exposes both current lodging links, and creates no horizontal overflow at desktop, 390 by 844, or 320 by 800.
+- The one-day case and every prior page invariant remain no worse. Deterministic generation changes only the Las Vegas itinerary output.
+- Focused/full tests, operator state, content freshness, local/production SEO, snapshot, strict JSON, exact-scope/privacy, responsive task QA, independent review, Pages release, release marker, and affected-URL production invariants pass.
 
 ## Candidate San Diego Stay-Shape Decision Improvement
 

@@ -1827,6 +1827,19 @@ export const itineraryPages = {
       ["Nature or road-trip stop", "Use Red Rock as the contrast day", "Move the classic visual to a separate short block", "Weather, timed entry, service, driving, and outdoor readiness", "BLM alerts, reservation rules, conditions, water, and vehicle plan"],
       ["Short or budget-led visit", "One free visual and one chosen spend", "Use Bellagio plus a low-commitment activity instead of several tickets", "Transport, parking, meals, and game spend still accumulate", "Current schedules, total ticket cost, parking, and the stop rule"]
     ],
+    baseHandoff: {
+      title: "Decide whether the pool changes the base",
+      note: "Use this only as a conditional planning rule. Verify the exact booked property's guest access, operating status, room setup, fees, and complete stay total. This handoff does not add a fourth-day route; the explicit plans on this page remain one, two, and three days.",
+      choices: [
+        ["Most fixed anchors are central", "Keep one central base", "Treat the pool as a full block only at the exact booked property after confirming guest access and operating status. Do not assume a separate resort pool is available."],
+        ["The pool is a main trip anchor", "Compare a South Strip pool-led base", "Use this start only when the other plans can tolerate separate moves. Confirm the room-to-pool route, room setup, fees, and complete stay total."],
+        ["The desired pool is at another property", "Price the hotel move before choosing it", "Compare check-out, luggage, check-in, room assignment, reset disruption, and both stay totals against keeping one base. A pool alone does not establish that a move is worthwhile."]
+      ],
+      links: [
+        ["Compare five Las Vegas base types", "../where-to-stay/las-vegas-with-kids.html"],
+        ["Verify named hotel room, pool, and total-price checks", "../where-to-stay/las-vegas-family-hotels.html"]
+      ]
+    },
     plansTitle: "Four rules that protect the itinerary",
     plans: {
       "One main job per half day": "A pool, major museum, nature drive, or ticketed attraction already fills a block. Do not use a second headline stop as the transfer plan.",

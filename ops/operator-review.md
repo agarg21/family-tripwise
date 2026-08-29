@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-IMP-025` | Las Vegas itinerary pool-to-base handoff review-clean; release pending | `PASS` | Linnaeus cycles one and two found four P2 state-mirror groups; all were corrected. Cycle three returned `PASS` with no P0-P3 after verifying implementation, claim safety, exact scope, deterministic generation, responsive behavior, August 29 evidence and native QA. |
 | `FT-RES-022` | completed, review-clean and recorded at `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339` | `PASS` | Gauss cycle two closed both P2s and confirmed the task scores, evidence boundaries, exact nine-path scope, and native QA. No public page, URL/search state, external action or automation change is selected. |
 | `FT-DEV-001` | completed locally | `PASS` | Re-review cycle 2 closed the prior P2 and P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-RES-001` | completed locally | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
@@ -67,6 +68,21 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review history
 
+### 2026-08-29 - `FT-IMP-025` Las Vegas pool-to-base consequence
+
+**Reviewer:** Linnaeus (`01a0382c-52e8-73d1-8cb0-af36016d3075`), independent read-only implementation and release-gate reviewer
+
+**Verdict: cycle-three `PASS`; no P0-P3 remains; release pending**
+
+- The exact eleven paths are registered before implementation.
+- Fresh August 29 GSC is orientation and the pre-change boundary only; the independently reproduced `FT-RES-022` family-task gap selects the action.
+- The bounded candidate adds one conditional three-choice handoff after the existing pivot, with links to the current stay and hotel evidence. It preserves the itinerary's title, URL, plans, schema, sources, and existing cluster route.
+- Cycle one independently reproduced the implementation, invariants, deterministic scope, browser behavior, and QA, then found two P2 groups: three Las Vegas page metrics plus one indexing-source label still used August 28 evidence, and several historical/current state lines still described the selected handoff as unselected future work.
+- After those corrections, cycle two closed the August 29 GSC P2 and found no implementation, trust-boundary, schema, generator, or responsive defect. It found two remaining P2 groups: three more research/status rows still used future/unselected wording, and this durable review entry had not recorded cycle one's `FAIL` and corrections.
+- All cycle-one and cycle-two P2s are corrected. The historical rows explicitly distinguish then-unselected research from the subsequent `FT-IMP-025` selection, the itinerary row names the local implementation, and this record preserves both failed review cycles.
+- Cycle three independently verified the complete corrected eleven-path diff, implementation and trust boundaries, deterministic one-target generation, exact scope, August 29 state, focused/full tests, and responsive behavior. It returned `PASS` with no P0-P3.
+- QA remains green after corrections: focused 5/5 and full 181/181 tests; state/freshness/local and production SEO; all 47 public snapshots; strict JSON/71 IDs; exact scope; deterministic one-target generation; 1280/390/320 order and document-overflow checks; public preflight; and whitespace.
+
 ### 2026-08-29 - `FT-RES-022` Las Vegas pool-versus-central-base cross-page task
 
 **Reviewer:** Gauss (`01a04cd5-9e33-7272-b94a-92cfeb9b1532`), independent read-only reviewer
@@ -77,7 +93,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - Fresh August 28 GSC is orientation only because no aligned query cohort exists; no page change is selected.
 - Exact scope is nine research/state paths; no `site/**`, page, URL/search state, external account or automation change.
 - Cycle one independently reproduced the task scores, mobile measurements, preserve decision, trust boundaries and native QA, then found two P2s: one route sentence counted three contextual transitions before naming a fourth transition, and lower current-state mirrors still named prior snapshots/releases. The route now records two contextual transitions plus one global-navigation transition; the mirrors now use the August 28 snapshot, August 29 preflight and `FT-IMP-024` as current state.
-- Cycle two independently confirmed both corrections, the complete nine-path diff, proportional `PARTIAL` result, viewport limitation, preserve decision, bounded future hypothesis, trust boundaries, exact scope, and 180/180 tests. No P0-P3 remains.
+- Cycle two independently confirmed both corrections, the complete nine-path diff, proportional `PARTIAL` result, viewport limitation, preserve decision, then-unselected bounded hypothesis, trust boundaries, exact scope, and 180/180 tests. No P0-P3 remained; the afternoon heartbeat subsequently selected that hypothesis as `FT-IMP-025`.
 - The review-clean docs-only action is recorded at commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`; this reconciliation changes only immutable release metadata.
 
 ### 2026-08-28 - `FT-RES-021` Las Vegas current parent base-and-day-shape review
@@ -89,7 +105,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - Four public questions dated January-June 2026 are retained only as source URLs, dates and paraphrased decision contexts; no identities, copied comments, personal data, demand or prevalence claim is retained.
 - The shared decision model covers usable trip blocks, fixed anchors, pool as amenity or activity, base role, true occupancy and bedding, heat/movement burden, complete cost, and age/pace where evidenced.
 - Live-page inspection assigns each component to the current activity, stay-area, family-hotel or itinerary role. The questions do not justify more attractions, hotel inventory, a generic page or a new URL.
-- One bounded future task remains unselected: test one-day and four-day destination-pool-versus-central-base cases across the existing cluster before considering any page action.
+- One bounded task was then unselected: test one-day and four-day destination-pool-versus-central-base cases across the existing cluster before considering any page action. `FT-RES-022` subsequently ran it, and the afternoon heartbeat selected its bounded handoff as `FT-IMP-025`.
 - Fresh August 27 GSC is orientation only because no aligned query cohort exists and the all-ages page has no post-August-3 crawl. No ranking, CTR, behavior, satisfaction or user-validation claim is made.
 - Exact scope is nine research/state paths; no `site/**`, page, URL/search state, community draft/post, external account or automation change.
 - Cycle one found three P2s: the discovery method was not reproducible, source-title labels exceeded the source-date/URL boundary, and two ledger dates were stale. The artifact now records the search surface, six queries, date window, screening rules and duplicate handling; labels are neutral and dates align. Cycle two verified every correction and returned `PASS`.

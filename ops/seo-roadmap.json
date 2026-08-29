@@ -3269,6 +3269,59 @@
       "review_summary": "Independent read-only reviewer Gauss (01a04cd5-9e33-7272-b94a-92cfeb9b1532) returned cycle-two PASS with no P0-P3. Cycle one found two P2s covering an incorrect transition count and stale current-state mirrors; both were corrected and independently verified across the complete nine-path diff.",
       "result": "Completed, review-clean and recorded at docs-only action commit f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339. The joined task is PARTIAL. The one-night plus one-full-day case completes all six outputs. The four-full-day case requires extrapolating the block count beyond the current three-day itinerary and inferring whether fixed central anchors support one central base or a South Strip pool-property move. Exact 390 by 844 and 320 by 800 runs have zero horizontal overflow. Preserve all four pages and URLs; retain one bounded, unselected itinerary base-consequence handoff hypothesis and add no inventory or page.",
       "notes": "Selected by the August 29 morning independent-pilot heartbeat as today's required task-based learning unit and direct falsification of FT-RES-021. This is the run's only substantive action and changes no public page. The browser clamped the requested 1280 by 900 desktop override to a 1280 by 720 inner viewport, so desktop claims are limited to width breakpoint, source order, normal navigation and overflow; both exact mobile dimensions were confirmed after reload. Gauss cycle-two PASS confirms the task scores, evidence boundary, proportional preserve decision, exact scope and native QA. The docs-only action commit is f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339; no Pages wait applies."
+    },
+    {
+      "id": "FT-IMP-025",
+      "implementation_backlog_id": "IMP-046",
+      "title": "Expose the Las Vegas pool-to-base consequence",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-08-29",
+      "review_outcome": "PASS",
+      "review_cycles": 3,
+      "reviewer_agent_ids": [
+        "01a0382c-52e8-73d1-8cb0-af36016d3075"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 4,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html"
+      ],
+      "target_paths": [
+        "backlog/implementation-backlog.md",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "tools/las-vegas-itinerary-page.test.mjs",
+        "site/family-itinerary/las-vegas-with-kids.html",
+        "status/las-vegas-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The four-day proxy case can answer the base-type output directly from one compact itinerary handoff after the existing pool/heat pivot, reach both current lodging evidence pages without waiting for the deep cluster section, and preserve every one-day output and page/search invariant without implying a fourth itinerary or universal hotel-move rule.",
+      "production_invariant": "Change only the eleven registered paths. Preserve the itinerary title, H1, description, URL, canonical, indexability, one sitemap entry, three quick picks, three day plans, five pivot rows, four stop rules, four cluster cards, three visible and schema FAQs, source list, image, and three-item ItemList. Deterministic generation must change only site/family-itinerary/las-vegas-with-kids.html. Add no fourth itinerary, hotel, attraction, price, map, score, analytics, indexing request, external post/account action, outreach, destination, automation, firsthand/safety claim, exact travel time, or guaranteed pool access.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-08-29 and finalized through 2026-08-27: 2,011 property impressions, 4 clicks, aggregate average position 65.67, and 24 of 28 inspected URLs indexed. The Las Vegas itinerary has 63 impressions at page-average position 33.02, remains indexed, and was last crawled 2026-07-31. The public snapshot has no aligned query cohort, so it is fresh orientation and the pre-change measurement boundary only; the independently reproduced FT-RES-022 task gap selects the edit.",
+      "acceptance_criteria": [
+        "Add one compact three-choice decision surface immediately after the existing itinerary pivot and before stop rules. Distinguish keeping one central base, choosing a South Strip pool-led base, and considering a hotel move only after pricing and transfer burden checks.",
+        "Link directly from that decision surface to the current Las Vegas stay-area and family-hotel pages, while preserving the existing four-card cluster route unchanged.",
+        "Improve FT-RES-022 Case B base type from PARTIAL to YES without claiming that the current one-, two-, and three-day page supplies an explicit fourth-day block count; keep Case A and all other required outputs no worse.",
+        "Preserve every production invariant, deterministic generation, and zero horizontal overflow at desktop, 390 by 844, and 320 by 800. Change no unrelated generated site file.",
+        "Pass focused and full native QA, operator-state, content-freshness, local and production SEO, public GSC validation/preflight, strict JSON, exact-scope/privacy/whitespace, independent read-only review with PASS or PASS_WITH_P3, Pages deployment, release-marker verification, and all declared affected-URL production checks."
+      ],
+      "measurement_plan": "Compare FT-RES-022 Case A and Case B before and after. Case B base type must become directly answerable from the new conditional choice plus current stay/hotel links; the fourth-day block count may remain PARTIAL and must not be hidden. Measure new section order, link presence, horizontal overflow, prior count/search/schema/source invariants, and generation scope at desktop, 390 by 844, and 320 by 800. Record the July 31 crawl as the pre-change search boundary; any ranking or CTR interpretation requires a post-release crawl and sufficient aligned finalized query evidence.",
+      "qa_summary": "Focused Las Vegas itinerary tests pass 5/5 and the full repository suite passes 181/181. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 47 public GSC snapshots validate; strict roadmap JSON has 71 unique IDs; deterministic generation changes only the Las Vegas itinerary; desktop 1280 by 900, mobile 390 by 844, and mobile 320 by 800 preserve pivot-handoff-stop order with no document overflow; exact scope, whitespace, and public preflight pass.",
+      "review_summary": "Independent read-only reviewer Linnaeus (01a0382c-52e8-73d1-8cb0-af36016d3075) returned FAIL in cycles one and two for four P2 state-mirror groups: stale August 28 Las Vegas metrics and indexing attribution, current prose that still called the selected handoff future or unselected, additional historical rows without subsequent-selection framing, and an incomplete durable review history. All were corrected. Cycle three returned PASS with no P0-P3 and independently confirmed implementation, claim safety, deterministic one-target generation, responsive behavior, exact scope, August 29 evidence, and native QA.",
+      "release_state": "review-clean-release-pending",
+      "result": "Review-clean after Linnaeus cycle-three PASS; commit, release, and production verification pending. One compact three-choice pool-to-base surface follows the existing pivot and links to the current stay-area and family-hotel evidence. FT-RES-022 Case B base type improves from PARTIAL to YES while its explicit fourth-day block count remains PARTIAL; Case A remains YES. All page, search, schema, source, generation-scope, and responsive invariants pass.",
+      "notes": "Selected by the August 29 afternoon independent-pilot heartbeat as today's apply/deepen step after completed LRN-010 and FT-RES-022. This is the run's only substantive action."
     }
   ]
 }

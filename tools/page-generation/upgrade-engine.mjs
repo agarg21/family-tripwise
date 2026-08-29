@@ -206,6 +206,19 @@ ${plans.map(([title, fit, blocks, stopRule]) => `          <article class="detai
         </div>`;
 }
 
+function renderItineraryBaseHandoff(handoff) {
+  if (!handoff?.choices?.length) return "";
+  return `      <section class="container page-section rank-ready-section itinerary-base-handoff" aria-labelledby="itinerary-base-handoff-title">
+        <div class="section-heading">
+          <p class="eyebrow">Pool and base decision</p>
+          <h2 id="itinerary-base-handoff-title">${esc(handoff.title)}</h2>
+        </div>
+        <p class="review-label">${esc(handoff.note)}</p>
+${renderQuickPicks(handoff.choices)}
+        <p class="review-label itinerary-handoff-links">${handoff.links.map(([label, href]) => `<a class="text-link" href="${esc(href)}">${esc(label)}</a>`).join(" · ")}</p>
+      </section>`;
+}
+
 function renderClusterCards(cards, cardClass = "activity-card") {
   return `        <div class="card-grid">
 ${cards.map(([title, body, href, linkText]) => `          <article class="${esc(cardClass)}"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
@@ -759,6 +772,7 @@ function renderItineraryUpgrade(page) {
       ];
 
   if (page.dayPlans?.length) {
+    const baseHandoffSection = renderItineraryBaseHandoff(page.baseHandoff);
     const faqSection = page.visibleFaqs && page.faqs?.length
       ? `
       <section class="band rank-ready-section" aria-labelledby="itinerary-faq-title">
@@ -804,8 +818,7 @@ ${renderActivityComparison(page.pivots, page.pivotHeaders, page.pivotComparisonC
 })}
         </div>
       </section>
-
-      <section class="container page-section rank-ready-section">
+${baseHandoffSection ? `\n${baseHandoffSection}\n` : "\n"}      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Stop rules</p>
           <h2>${esc(page.plansTitle)}</h2>

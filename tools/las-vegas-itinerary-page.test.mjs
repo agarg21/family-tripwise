@@ -35,8 +35,12 @@ test("keeps one canonical, indexable Las Vegas family-itinerary page", () => {
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
+  const routeChoices = html.slice(
+    html.indexOf("Quick route decisions"),
+    html.indexOf("Day-by-day routes")
+  );
 
-  assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 3);
+  assert.equal((routeChoices.match(/<article class="quick-pick">/g) || []).length, 3);
   assert.equal((html.match(/<article class="detail-card itinerary-plan">/g) || []).length, 3);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 4);
   assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
@@ -61,6 +65,34 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "safest",
     "stroller-friendly"
   ]) assert.doesNotMatch(html, new RegExp(blocked, "i"));
+});
+
+test("places one conditional pool-to-base handoff after the pivot and before stop rules", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const start = html.indexOf('<section class="container page-section rank-ready-section itinerary-base-handoff"');
+  const end = html.indexOf("</section>", start);
+  const section = html.slice(start, end);
+
+  assert.ok(start > html.indexOf("Pivot for age, pool time, heat, nature, or budget"));
+  assert.ok(start < html.indexOf("Four rules that protect the itinerary"));
+  assert.equal((section.match(/<article class="quick-pick">/g) || []).length, 3);
+
+  for (const required of [
+    "Decide whether the pool changes the base",
+    "Keep one central base",
+    "Compare a South Strip pool-led base",
+    "Price the hotel move before choosing it",
+    "This handoff does not add a fourth-day route",
+    "../where-to-stay/las-vegas-with-kids.html",
+    "../where-to-stay/las-vegas-family-hotels.html"
+  ]) assert.match(section, new RegExp(required));
+
+  for (const blocked of [
+    "guaranteed pool",
+    "safest",
+    "always move",
+    "usually better"
+  ]) assert.doesNotMatch(section, new RegExp(blocked, "i"));
 });
 
 test("aligns schema, visible FAQ, sources, image, and all four cluster routes", () => {
