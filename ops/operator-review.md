@@ -14,7 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
-| `FT-RES-022` | completed and review-clean | `PASS` | Gauss cycle two closed both P2s and confirmed the task scores, evidence boundaries, exact nine-path scope, and native QA. No public page, URL/search state, external action or automation change is selected. |
+| `FT-RES-022` | completed, review-clean and recorded at `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339` | `PASS` | Gauss cycle two closed both P2s and confirmed the task scores, evidence boundaries, exact nine-path scope, and native QA. No public page, URL/search state, external action or automation change is selected. |
 | `FT-DEV-001` | completed locally | `PASS` | Re-review cycle 2 closed the prior P2 and P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-RES-001` | completed locally | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-EXP-001` | review-clean, not committed | `PASS` | Re-review cycle 2 closed both P2 findings; eligible for exact-path commit after staged QA. |
@@ -78,6 +78,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - Exact scope is nine research/state paths; no `site/**`, page, URL/search state, external account or automation change.
 - Cycle one independently reproduced the task scores, mobile measurements, preserve decision, trust boundaries and native QA, then found two P2s: one route sentence counted three contextual transitions before naming a fourth transition, and lower current-state mirrors still named prior snapshots/releases. The route now records two contextual transitions plus one global-navigation transition; the mirrors now use the August 28 snapshot, August 29 preflight and `FT-IMP-024` as current state.
 - Cycle two independently confirmed both corrections, the complete nine-path diff, proportional `PARTIAL` result, viewport limitation, preserve decision, bounded future hypothesis, trust boundaries, exact scope, and 180/180 tests. No P0-P3 remains.
+- The review-clean docs-only action is recorded at commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`; this reconciliation changes only immutable release metadata.
 
 ### 2026-08-28 - `FT-RES-021` Las Vegas current parent base-and-day-shape review
 

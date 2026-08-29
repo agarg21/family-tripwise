@@ -20,7 +20,7 @@ Demand estimates are directional US monthly search volumes from the logged-in Se
 
 `FT-RES-022` tests the normal itinerary-to-area-to-hotel-to-activity route for one short and one four-day pool-versus-central-base case. The result is `PARTIAL`: the short case completes all six outputs, while the four-day case requires an extrapolated block count and an inferred one-base-versus-pool-property consequence. All exact 390 by 844 and 320 by 800 runs have zero horizontal overflow, and page ownership, evidence boundaries and unknown recovery remain coherent.
 
-Gauss cycle-two `PASS` leaves no P0-P3 after independently confirming both task scores, the route and mobile measurements, the desktop viewport limitation, trust boundaries, exact nine-path scope, and native QA.
+Gauss cycle-two `PASS` leaves no P0-P3 after independently confirming both task scores, the route and mobile measurements, the desktop viewport limitation, trust boundaries, exact nine-path scope, and native QA. The docs-only action is recorded at commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`.
 
 Preserve all four pages and the current URL set now. Retain only one bounded, unselected future hypothesis: connect the existing itinerary pool-led pivot to the base consequence and current stay/hotel evidence before the deep cluster section. No page, URL, inventory, search state, external action or automation changes in this research transaction.
 

@@ -115,14 +115,14 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 64 | `FT-IMP-024` expose the San Diego one-base-versus-LEGOLAND-split rule | Existing-page user value | Released and production-verified | Commit `d30c29c87e62f79840087331be5b9908b358c8e3`; Pages run `33059164697`; the bounded rule, three-start Mission Bay comparison, release marker, production SEO and every declared invariant pass. |
 | 65 | `FT-RES-020` test the San Diego lodging cross-page decision handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle-two `PASS`; no page or URL change. |
 | 66 | `FT-RES-021` map current Las Vegas family base-and-day-shape questions to the existing cluster | Recursive daily learning | Completed, review-clean and pushed | Commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle-two `PASS`; preserve the four core page roles, with one cross-page task hypothesis unselected and no page, URL or external action. |
-| 67 | `FT-RES-022` test the Las Vegas pool-versus-central-base cross-page handoff | Recursive daily learning | Completed and review-clean | Gauss cycle-two `PASS`; Case A completes six outputs, while Case B is `PARTIAL` on four-day blocks and base consequence. Preserve pages; one itinerary handoff hypothesis remains unselected. |
+| 67 | `FT-RES-022` test the Las Vegas pool-versus-central-base cross-page handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`; Gauss cycle-two `PASS`; Case A completes six outputs, while Case B is `PARTIAL` on four-day blocks and base consequence. Preserve pages; one itinerary handoff hypothesis remains unselected. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
 
 ### FT-RES-022 - Test the Las Vegas pool-versus-central-base cross-page handoff
 
 - Selected: 2026-08-29 by the morning independent-pilot heartbeat as today's required task-based learning unit and direct falsification of `FT-RES-021`.
-- State: completed and review-clean across the exact nine research/state paths; Gauss cycle-two `PASS` leaves no P0-P3 and no public page changed.
+- State: completed, review-clean and recorded at docs-only action commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`; Gauss cycle-two `PASS` leaves no P0-P3, no public page changed, and no Pages wait applies.
 - Task: test one family with one night plus one full day and another with four full days and fixed Center Strip anchors. Determine usable blocks, pool role, base type, true occupancy/room setup, heat/transport/parking/access/complete-total checks, and one thing to remove when the pool or a transfer consumes a block.
 - Evidence boundary: fresh authenticated August 28 GSC is finalized through August 26. It confirms all five Las Vegas pages remain indexed but contains no aligned query cohort; page averages and crawl dates are orientation, not a ranking, CTR or page-change trigger.
 - Invariants: research/state only; no `site/**`, generator, test, page, hotel/activity record, price, map, title/H1, URL/search state, external action or automation change.

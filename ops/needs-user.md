@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-29
 
-No user decision is required for completed, review-clean `FT-RES-022` / `SRR-043`; Gauss cycle-two `PASS` leaves no P0-P3. The short case completes all six outputs, while the four-day case is `PARTIAL` on explicit block count and the one-base-versus-South-Strip-pool consequence. Preserve all current pages and URLs. One bounded itinerary handoff hypothesis remains unselected; no page edit, new URL, indexing request, external action or automation change is authorized.
+No user decision is required for completed, review-clean `FT-RES-022` / `SRR-043`; Gauss cycle-two `PASS` leaves no P0-P3 and the docs-only action is recorded at commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`. The short case completes all six outputs, while the four-day case is `PARTIAL` on explicit block count and the one-base-versus-South-Strip-pool consequence. Preserve all current pages and URLs. One bounded itinerary handoff hypothesis remains unselected; no page edit, new URL, indexing request, external action or automation change is authorized.
 
 No user decision is required for completed, review-clean `FT-RES-021` / `SRR-042`; Meitner cycle-two `PASS` leaves no P0-P3 and the docs-only action is pushed at commit `cf40322b643b6363b9c077bc412b245bf7550dd9`. Four current Las Vegas family questions support preserving the existing page roles and current URL set, not adding inventory. One cross-page pool-versus-central-base task remains an unselected research hypothesis; no page, URL, indexing request, community draft/post, external account or automation change is authorized.
 
