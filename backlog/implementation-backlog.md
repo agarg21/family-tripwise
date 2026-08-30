@@ -1,14 +1,36 @@
 # Implementation Backlog
 
-Last updated: 2026-08-29
+Last updated: 2026-08-30
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate Chicago Itinerary Day-Count Distinction
+
+### IMP-047: Distinguish Three Calendar Days From Three Full Days
+
+Status: unselected hypothesis from `FT-RES-023`; no page edit authorized
+
+Target:
+
+- `https://familytripwise.com/family-itinerary/chicago-with-kids.html`
+
+The August 30 task review finds the current two-full-day plan complete but the three-full-day case `PARTIAL`. The existing three-day route is explicitly a soft arrival plus two full-day shapes, so a family with three complete sightseeing days must infer the third full-day assignment.
+
+Smallest candidate:
+
+- Distinguish `three calendar days including arrival` from `three full sightseeing days` inside the existing three-day quick pick and route.
+- Keep the soft-arrival option. Route a three-full-day case to one central day plus two separate contrast zones, one main anchor per day.
+- Add no section, fourth day, attraction, hotel, map, score, URL, or generic itinerary layer.
+
+Any implementation requires separate roadmap selection, source and wording review, pre/post task scoring, full native QA, independent review, and the standard release gate.
 
 ## Candidate Las Vegas Itinerary Decision Handoff
 
 ### IMP-046: Expose The Pool-To-Base Consequence
 
-Status: review-clean as `FT-IMP-025` after Linnaeus cycle-three `PASS`; commit and release pending
+Status: completed, released, and production-verified as `FT-IMP-025`; Linnaeus cycle-three `PASS`
+
+Release: commit `4e311d7e28cc2421a6fa02606213740eff8abf39`, successful Pages run `33266123776`; release marker, production SEO QA, and declared page invariants pass.
 
 Research: `FT-RES-021`, `FT-RES-022`
 

@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-29
+Last updated: 2026-08-30
 
 Last re-scored: 2026-08-27
 Next re-score due: 2026-09-03
@@ -15,13 +15,13 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
-- Latest snapshot: `ops/gsc-snapshots/2026-08-29.json`.
+- Latest snapshot: `ops/gsc-snapshots/2026-08-30.json`.
 - Classification on August 29: fresh authenticated read-only Search Console API evidence, collected August 29 with finalized performance data through August 27.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
-- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 29 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,011 impressions, 4 clicks, 0.20% CTR, and aggregate average position 65.67. The public snapshot still has no aligned query cohort. These rolling page/property averages do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 30 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
+- The finalized 28-day property total is 2,050 impressions, 4 clicks, 0.20% CTR, and aggregate average position 65.62. The public snapshot still has no aligned query cohort. These rolling page/property averages do not identify a CTR problem, ranking failure, or user-facing deficiency.
 - URL Inspection records a successful August 25 13:39 UTC crawl of the indexed San Diego family-hotel page after `FT-IMP-023`. This is the last pre-`FT-IMP-024` crawl boundary; ranking or CTR interpretation still requires sufficient finalized aligned query evidence and a later post-change crawl.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.
@@ -116,14 +116,26 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 65 | `FT-RES-020` test the San Diego lodging cross-page decision handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `9a03f2f6d489cbe3c5c481fefedd826ad0bab584`; Pascal cycle-two `PASS`; no page or URL change. |
 | 66 | `FT-RES-021` map current Las Vegas family base-and-day-shape questions to the existing cluster | Recursive daily learning | Completed, review-clean and pushed | Commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle-two `PASS`; preserve the four core page roles. Its then-unselected cross-page task subsequently ran as `FT-RES-022`; no page, URL or external action occurred in this research transaction. |
 | 67 | `FT-RES-022` test the Las Vegas pool-versus-central-base cross-page handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`; Gauss cycle-two `PASS`; Case A completes six outputs, while Case B is `PARTIAL` on four-day blocks and base consequence. Its then-unselected itinerary handoff was subsequently selected as `FT-IMP-025`. |
-| 68 | `FT-IMP-025` expose the Las Vegas pool-to-base consequence | Existing-page user value | Review-clean; release pending | Linnaeus cycle-three `PASS` leaves no P0-P3. One compact itinerary surface makes the conditional base consequence and current lodging links explicit while preserving every page/search invariant and adding no fourth itinerary, entity, or URL. |
+| 68 | `FT-IMP-025` expose the Las Vegas pool-to-base consequence | Existing-page user value | Released and production-verified | Commit `4e311d7e28cc2421a6fa02606213740eff8abf39`; Pages run `33266123776`; release marker, production SEO and every declared invariant pass. |
+| 69 | `FT-RES-023` test the Chicago itinerary full-day promise | Recursive daily learning | Completed and review-clean; docs-only push authorized | Mill cycle-two `PASS`; the two-day control completes six outputs, while the three-full-day case is `PARTIAL` on usable-day count and assignment. Preserve the page and retain only unselected `IMP-047`. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-023 - Test the Chicago itinerary full-day promise
+
+- Selected: 2026-08-30 by the morning independent-pilot heartbeat as today's required task-based learning unit.
+- State: completed and review-clean across the exact eleven research/state paths; Mill cycle-two `PASS` leaves no P0-P3; docs-only push authorized; no page edit is selected.
+- Task: compare a three-full-sightseeing-day family case against a two-full-day control on the live Chicago itinerary. Require an explicit usable-day count, one zone or anchor per day, protected reset, weather or budget swap, one removal rule and a current verification route.
+- Evidence boundary: selection used recent reused August 29 GSC. Fresh August 30 API evidence arrived before release, is finalized through August 28, and reports 40 itinerary impressions at page-average position 47.3; the page remains indexed with a July 31 crawl. No public aligned query cohort exists, so GSC is orientation only and changes no task result; the literal three-day page promise selects the task.
+- Invariants: research/state only; no `site/**`, page, generator, URL, canonical, indexability, sitemap, schema, analytics, indexing request, external action, destination or automation change. The walkthrough is proxy-reviewed interface evidence, never user testing, behavior, satisfaction, ranking or CTR evidence.
+- Acceptance: request 1280 by 900 desktop plus exact 390 by 844 and 320 by 800 mobile sizes, record the actual inner viewport in each browser environment, score both cases, conclude `PRESERVE` or retain at most one bounded unselected defect hypothesis, reconcile only the already verified `FT-IMP-025` release state, and pass native QA plus independent review.
+- Research result: the two-full-day control is `YES` across all six outputs. The three-full-day case is `PARTIAL` on usable-day count and one-zone-per-day assignment because the current route is a soft arrival plus two full days; the other four outputs are `YES`. Preserve the page and URL; retain only unselected `IMP-047`.
+- QA/review: focused 4/4 and full 181/181 tests pass; state, freshness, local/production SEO, all 48 snapshots, public preflight, strict 72-ID JSON, exact eleven-path/no-site scope, privacy, links and whitespace pass. The 1280-pixel desktop width and exact 390/320 mobile runs have zero overflow. Mill cycle one found one P2 desktop-height overstatement; cycle two verified the corrected evidence boundary and returned `PASS` with no P0-P3.
 
 ### FT-IMP-025 - Expose the Las Vegas pool-to-base consequence
 
 - Selected: 2026-08-29 by the afternoon independent-pilot heartbeat to apply the morning `FT-RES-022` result.
-- State: review-clean across the exact eleven implementation/state paths after Linnaeus cycle-three `PASS`; commit, release, and production verification pending.
+- State: released and production-verified at commit `4e311d7e28cc2421a6fa02606213740eff8abf39` through successful Pages run `33266123776`; Linnaeus cycle-three `PASS` left no P0-P3.
 - Task: add one compact three-choice decision surface immediately after the existing itinerary pivot so fixed central anchors, a South Strip pool-led trip, and the burden of changing hotels lead directly to the current stay-area and named-hotel evidence.
 - Evidence boundary: fresh authenticated August 29 GSC is finalized through August 27 and reports 2,011 property impressions, 4 clicks, aggregate position 65.67, 24 of 28 inspected URLs indexed, and 63 itinerary-page impressions at page-average position 33.02. The itinerary remains indexed with a July 31 crawl. No aligned query cohort exists, so GSC is orientation and the pre-change boundary; the independently reproduced `FT-RES-022` task gap selects the edit.
 - Invariants: preserve title/H1/description, canonical/indexability/sitemap, three quick picks, three day plans, five pivot rows, four stop rules, four cluster cards, three visible/schema FAQs, sources, image, and three-item `ItemList`. Add no fourth itinerary, entity, URL, score, map, analytics, indexing request, external action, destination, or automation.

@@ -1,10 +1,38 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-08-29
+Last updated: 2026-08-30
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-044: Chicago Itinerary Full-Day Promise Task Review
+
+Status: completed and review-clean as `FT-RES-023`; Mill cycle-two `PASS` with no P0-P3; no page edit selected
+
+Selected: 2026-08-30 by the morning independent Family Tripwise pilot
+
+Test whether the live Chicago itinerary can directly answer a three-full-sightseeing-day family task, using a two-full-day task as the control, without treating its stated soft-arrival first day as a full day.
+
+Boundaries:
+
+- Research/state only; do not edit `site/**`, the Chicago itinerary, generators, tests, URLs, indexability, sitemap, external accounts, posts, outreach, or automation.
+- Use normal links or controls at a requested 1280 by 900 desktop size plus exact 390 by 844 and 320 by 800 mobile sizes; record the actual inner viewport and treat the result as proxy-reviewed interface evidence, never user testing, behavior, satisfaction, rank or CTR evidence.
+- Score six outputs: usable full-day count; one zone or anchor per day; protected midday reset; weather or budget swap; one removal rule; and a current verification route.
+- Recent reused August 29 GSC selected no edit; the fresh August 30 snapshot arrived before release, validated, and remains orientation only because the public record contains no aligned query cohort. Conclude `PRESERVE` or retain at most one bounded unselected future defect hypothesis.
+
+Expected artifact:
+
+- `docs/research/chicago-family-itinerary-full-day-task-review-2026-08-30.md`
+
+Current result:
+
+- The three-full-day case is `PARTIAL`; the two-full-day control is `YES` across all six outputs.
+- The current three-day route is coherently a soft arrival plus two full days. A family with three complete sightseeing days must infer its third full-day zone or anchor.
+- Reset, weather/budget swap, removal, and verification outputs are complete. The 1280-pixel desktop width and exact 390 by 844 and 320 by 800 mobile runs have zero horizontal overflow. The operator saw a 900-pixel desktop height; Mill's review environment clamped to 720, so no cross-environment desktop-height or depth-ratio claim is retained.
+- Preserve the page and URL. Retain only unselected `IMP-047`, a bounded distinction inside the existing three-day quick pick and route; add no day, section, entity, page, or URL.
+- Mill cycle one reproduced the result but found one P2 desktop-height evidence overstatement. Cycle two verified the correction and full eleven-path action, then returned `PASS` with no P0-P3.
+- Pre-release mechanical snapshot `35e0eb5` is fresh through August 28: 2,050 property impressions, 4 clicks, average position 65.62, 24/28 indexed, and 40 Chicago-itinerary impressions at page-average position 47.3. It changes no conclusion.
 
 ### SRR-043: Las Vegas Pool-Versus-Central-Base Cross-Page Task Review
 

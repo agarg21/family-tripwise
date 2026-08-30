@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-29",
+  "last_updated": "2026-08-30",
   "last_rescored_on": "2026-08-27",
   "next_rescore_due": "2026-09-03",
   "planning_horizon_days": 28,
@@ -3276,8 +3276,9 @@
       "title": "Expose the Las Vegas pool-to-base consequence",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-08-29",
+      "completed_on": "2026-08-29",
       "review_outcome": "PASS",
       "review_cycles": 3,
       "reviewer_agent_ids": [
@@ -3319,9 +3320,65 @@
       "measurement_plan": "Compare FT-RES-022 Case A and Case B before and after. Case B base type must become directly answerable from the new conditional choice plus current stay/hotel links; the fourth-day block count may remain PARTIAL and must not be hidden. Measure new section order, link presence, horizontal overflow, prior count/search/schema/source invariants, and generation scope at desktop, 390 by 844, and 320 by 800. Record the July 31 crawl as the pre-change search boundary; any ranking or CTR interpretation requires a post-release crawl and sufficient aligned finalized query evidence.",
       "qa_summary": "Focused Las Vegas itinerary tests pass 5/5 and the full repository suite passes 181/181. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 47 public GSC snapshots validate; strict roadmap JSON has 71 unique IDs; deterministic generation changes only the Las Vegas itinerary; desktop 1280 by 900, mobile 390 by 844, and mobile 320 by 800 preserve pivot-handoff-stop order with no document overflow; exact scope, whitespace, and public preflight pass.",
       "review_summary": "Independent read-only reviewer Linnaeus (01a0382c-52e8-73d1-8cb0-af36016d3075) returned FAIL in cycles one and two for four P2 state-mirror groups: stale August 28 Las Vegas metrics and indexing attribution, current prose that still called the selected handoff future or unselected, additional historical rows without subsequent-selection framing, and an incomplete durable review history. All were corrected. Cycle three returned PASS with no P0-P3 and independently confirmed implementation, claim safety, deterministic one-target generation, responsive behavior, exact scope, August 29 evidence, and native QA.",
-      "release_state": "review-clean-release-pending",
-      "result": "Review-clean after Linnaeus cycle-three PASS; commit, release, and production verification pending. One compact three-choice pool-to-base surface follows the existing pivot and links to the current stay-area and family-hotel evidence. FT-RES-022 Case B base type improves from PARTIAL to YES while its explicit fourth-day block count remains PARTIAL; Case A remains YES. All page, search, schema, source, generation-scope, and responsive invariants pass.",
+      "release_state": "released-and-production-verified",
+      "release_commit": "4e311d7e28cc2421a6fa02606213740eff8abf39",
+      "pages_run": 33266123776,
+      "released_at": "2026-08-29T17:37:59Z",
+      "result": "Released and production-verified at commit 4e311d7e28cc2421a6fa02606213740eff8abf39 through successful Pages run 33266123776. One compact three-choice pool-to-base surface follows the existing pivot and links to the current stay-area and family-hotel evidence. FT-RES-022 Case B base type improves from PARTIAL to YES while its explicit fourth-day block count remains PARTIAL; Case A remains YES. The release marker, production SEO QA and all declared page/search/schema/source/responsive invariants pass.",
       "notes": "Selected by the August 29 afternoon independent-pilot heartbeat as today's apply/deepen step after completed LRN-010 and FT-RES-022. This is the run's only substantive action."
+    },
+    {
+      "id": "FT-RES-023",
+      "research_backlog_id": "SRR-044",
+      "title": "Test the Chicago itinerary full-day promise",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-30",
+      "completed_on": "2026-08-30",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a053a1-3db3-7a11-8ec0-ee5a2ec36c38"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-family-itinerary-full-day-task-review-2026-08-30.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/implementation-backlog.md",
+        "status/chicago-pages.md",
+        "status/las-vegas-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Two explicit live-page tasks determine whether the Chicago itinerary directly supplies two versus three full sightseeing days, including one zone or anchor per day, a protected midday reset, a weather or budget swap, one removal rule, and a current verification route without forcing the reader to reinterpret the soft-arrival day as a full day.",
+      "production_invariant": "Research and state only across the eleven registered paths. Do not change site/**, generators, tests, any Chicago page or record, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Treat the walkthrough as proxy-reviewed interface evidence, not user testing, behavior, satisfaction, ranking or CTR evidence. The Las Vegas and implementation-backlog paths may receive only mechanical reconciliation of the already verified FT-IMP-025 release.",
+      "gsc_evidence_classification": "Selection used recent reused authenticated API evidence collected 2026-08-29. Before release, fresh mechanical snapshot 35e0eb517e5d6a8aa2da36de36d74113c7e0704c arrived, validated, and superseded it for current status. The August 30 read is finalized through 2026-08-28: 2,050 property impressions, 4 clicks, aggregate average position 65.62, and 24 of 28 inspected URLs indexed. The Chicago itinerary has 40 impressions at page-average position 47.3, remains indexed, and was last crawled 2026-07-31. No public aligned query cohort exists, so GSC remains orientation and a measurement boundary only; the page's literal three-day planning promise selects this task.",
+      "acceptance_criteria": [
+        "Define a three-full-sightseeing-day case and a two-full-day control for a centrally based family with children ages 5 and 11, a protected midday reset, one bad-weather day, and no more than one paid anchor per day.",
+        "Request desktop 1280 by 900 plus mobile 390 by 844 and mobile 320 by 800, record the actual inner viewport in each browser environment, and walk the live itinerary using normal links or controls; record answerability, buried answers, unnecessary detours, repetition, unsupported certainty, missing comparison, evidence traceability, recovery from unknowns and horizontal overflow.",
+        "Score usable full-day count, one zone or anchor per day, reset protection, weather or budget swap, one removal rule, and current verification route as YES, PARTIAL or NO for each case from observable page evidence; label the work proxy-reviewed rather than user-tested.",
+        "Conclude PRESERVE or retain at most one bounded unselected future defect hypothesis. Do not edit a page, promote a new URL, infer CTR or ranking effect, or change an observation boundary.",
+        "Mechanically reconcile the already successful FT-IMP-025 release marker and Pages run without changing its reviewed implementation or production claims, then pass focused and full native QA, public GSC validation/preflight, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "For each case and viewport, record whether all six required outputs are directly available, recoverable through a clearly labeled existing-page handoff, or missing. Compare whether the page's first day is usable as a full day or explicitly a soft-arrival pattern, count avoidable transitions, and check normal navigation plus page overflow. A later page action requires a replicated material PARTIAL or NO and a separately selected implementation; search interpretation still requires aligned finalized query evidence and a later crawl.",
+      "qa_summary": "Focused Chicago itinerary tests pass 4/4 and the full repository suite passes 181/181. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 48 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs; strict roadmap JSON has 72 unique IDs and no duplicate keys; exact eleven-path/no-site scope, internal links, privacy/credential and whitespace checks pass. The 1280-pixel desktop width and exact 390 by 844 and 320 by 800 mobile runs have zero document overflow. The operator reported a 900-pixel desktop height while the review environment clamped to 720, so no cross-environment desktop-height or depth-ratio claim is retained.",
+      "review_summary": "Independent read-only reviewer Mill (01a053a1-3db3-7a11-8ec0-ee5a2ec36c38) returned cycle-two PASS with no P0-P3. Cycle one reproduced the substantive scores, GSC, FT-IMP-025 release, exact scope and proportional preserve decision, then found one P2 desktop-viewport evidence overstatement. Cycle two verified the correction across the complete eleven-path diff: shared desktop evidence is limited to the 1280-pixel width, order, positions, navigation and overflow; exact mobile sizes remain; all QA and link checks pass.",
+      "result": "Completed and review-clean; docs-only push authorized. The two-full-day control completes all six outputs. The three-full-day case is PARTIAL on usable-day count and one-zone-per-day assignment because the live three-day route is a soft arrival plus two full days. Reset, weather or budget swap, removal and verification outputs are complete at the 1280-pixel desktop width and exact 390 by 844 and 320 by 800 mobile sizes with zero horizontal overflow. Preserve the page and URL; retain only unselected IMP-047 and add no day, entity, section or URL.",
+      "notes": "Selected by the August 30 morning independent-pilot heartbeat as today's required task-based learning unit. This is the run's only substantive action. The FT-IMP-025 release reconciliation is mechanical housekeeping inside the registered state scope. Mill cycle one returned FAIL for one P2 desktop-viewport evidence overstatement; cycle two verified the correction and returned PASS with no P0-P3. Fresh August 30 GSC arrived mechanically after consensus, validated as snapshot 48, and changed no action or conclusion."
     }
   ]
 }

@@ -14,7 +14,8 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
-| `FT-IMP-025` | Las Vegas itinerary pool-to-base handoff review-clean; release pending | `PASS` | Linnaeus cycles one and two found four P2 state-mirror groups; all were corrected. Cycle three returned `PASS` with no P0-P3 after verifying implementation, claim safety, exact scope, deterministic generation, responsive behavior, August 29 evidence and native QA. |
+| `FT-RES-023` | completed and review-clean; docs-only push authorized | `PASS` | Mill cycle two closed the sole P2 desktop-height evidence overstatement and verified the substantive result, GSC, exact scope, release reconciliation, QA and proportional preserve decision with no P0-P3. |
+| `FT-IMP-025` | released and production-verified at `4e311d7e28cc2421a6fa02606213740eff8abf39` | `PASS` | Linnaeus cycle-three `PASS`; successful Pages run `33266123776`, matching release marker, production SEO and declared invariants verified. |
 | `FT-RES-022` | completed, review-clean and recorded at `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339` | `PASS` | Gauss cycle two closed both P2s and confirmed the task scores, evidence boundaries, exact nine-path scope, and native QA. No public page, URL/search state, external action or automation change is selected. |
 | `FT-DEV-001` | completed locally | `PASS` | Re-review cycle 2 closed the prior P2 and P3 findings; eligible for exact-path commit after staged QA. |
 | `FT-RES-001` | completed locally | `PASS` | Review cycle 1 found no P0-P3 findings; eligible for exact-path commit after staged QA. |
@@ -68,11 +69,24 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review history
 
+### 2026-08-30 - `FT-RES-023` Chicago itinerary full-day promise
+
+**Reviewer:** Mill (`01a053a1-3db3-7a11-8ec0-ee5a2ec36c38`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-two `PASS`; no P0-P3 remains**
+
+- Mill independently reproduced the `YES` two-full-day control, the three-full-day `PARTIAL` on usable-day count and day assignment, the proportional preserve decision, unselected `IMP-047`, August 29 GSC values, exact eleven-path/no-site scope, and `FT-IMP-025` release marker.
+- Cycle one found one P2: the record presented the desktop run as reproducibly exact 1280 by 900 and reported desktop viewport-depth ratios, while Mill's environment clamped the same request to 1280 by 720.
+- The correction limits cross-environment desktop evidence to the 1280-pixel width breakpoint, source order, navigation, element positions, and zero overflow. It retains exact 390 by 844 and 320 by 800 evidence and explicitly distinguishes the operator's 900-pixel report from the review environment's 720-pixel clamp.
+- No P0, P1, or P3 was reported in cycle one. Mill stopped before rerunning the remaining QA after the P2.
+- Cycle two verified the complete corrected eleven-path diff, the closed desktop evidence boundary, both task scores, the proportional preserve decision, unselected `IMP-047`, August 29 GSC, `FT-IMP-025` release reconciliation, exact scope, all QA claims, five internal 200s, Choose Chicago 200, and the documented CTA automated 403. It returned `PASS` with no P0-P3.
+- After consensus, mechanical snapshot commit `35e0eb5` arrived and all 48 public snapshots validated. Fresh evidence through August 28 leaves indexing/crawl and the action conclusion unchanged; no judgment, page, URL, search state, or external action changed.
+
 ### 2026-08-29 - `FT-IMP-025` Las Vegas pool-to-base consequence
 
 **Reviewer:** Linnaeus (`01a0382c-52e8-73d1-8cb0-af36016d3075`), independent read-only implementation and release-gate reviewer
 
-**Verdict: cycle-three `PASS`; no P0-P3 remains; release pending**
+**Verdict: cycle-three `PASS`; no P0-P3 remains; released and production-verified**
 
 - The exact eleven paths are registered before implementation.
 - Fresh August 29 GSC is orientation and the pre-change boundary only; the independently reproduced `FT-RES-022` family-task gap selects the action.
@@ -82,6 +96,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - All cycle-one and cycle-two P2s are corrected. The historical rows explicitly distinguish then-unselected research from the subsequent `FT-IMP-025` selection, the itinerary row names the local implementation, and this record preserves both failed review cycles.
 - Cycle three independently verified the complete corrected eleven-path diff, implementation and trust boundaries, deterministic one-target generation, exact scope, August 29 state, focused/full tests, and responsive behavior. It returned `PASS` with no P0-P3.
 - QA remains green after corrections: focused 5/5 and full 181/181 tests; state/freshness/local and production SEO; all 47 public snapshots; strict JSON/71 IDs; exact scope; deterministic one-target generation; 1280/390/320 order and document-overflow checks; public preflight; and whitespace.
+- Commit `4e311d7e28cc2421a6fa02606213740eff8abf39` deployed through successful Pages run `33266123776`, completed at 2026-08-29T17:37:59Z. The live release marker reports the same commit and run; production SEO and every declared affected-URL invariant passed.
 
 ### 2026-08-29 - `FT-RES-022` Las Vegas pool-versus-central-base cross-page task
 
