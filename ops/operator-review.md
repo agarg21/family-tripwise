@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-IMP-026` | review-clean across 12 registered paths; not yet released | `PASS` | Kepler cycle two closed the sole P2 stale current-cycle sentence and independently reproduced the implementation, task result, exact scope, QA and responsive invariants with no P0-P3. |
 | `FT-RES-024` | completed, review-clean and pushed at `64eddc4` | `PASS` | Kepler cycle one independently confirmed all four source dates and proportional paraphrases, privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, QA and the proportional unselected candidate with no P0-P3. |
 | `FT-RES-023` | completed, review-clean and pushed at `4d42d30` | `PASS` | Mill cycle two closed the sole P2 desktop-height evidence overstatement and verified the substantive result, GSC, exact scope, release reconciliation, QA and proportional preserve decision with no P0-P3. |
 | `FT-IMP-025` | released and production-verified at `4e311d7e28cc2421a6fa02606213740eff8abf39` | `PASS` | Linnaeus cycle-three `PASS`; successful Pages run `33266123776`, matching release marker, production SEO and declared invariants verified. |
@@ -69,6 +70,20 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-08-31 - `FT-IMP-026` Chicago partial-arrival versus three-full-day branch
+
+**Reviewer:** Kepler (`01a05987-5d7d-73c0-8416-84e6172104dd`), independent read-only implementation reviewer
+
+**Verdict: cycle-two `PASS`; no P0-P3 remains; no release has occurred**
+
+- The exact twelve paths were registered before implementation, and recent reused August 30 GSC remains orientation and the July 31 pre-change crawl boundary only.
+- The bounded branch retains the partial-arrival route and directly assigns a central day plus two distinct contrast zones when all three days are complete, one main anchor per day, without adding a layer, day, attraction, entity, URL, or unsupported claim.
+- Cycle one independently reproduced the implementation, task scores, generator/HTML/schema parity, responsive behavior and QA, then found one P2: a later `ops/current-cycle.md` summary still called implementation pending.
+- The stale sentence now says implementation is local and unreleased. Operator-state QA passes after the correction.
+- Cycle two verified the correction and complete twelve-path diff, focused 5/5 and full 162/162 tests, state/freshness/SEO/GSC/preflight checks, exact scope, JSON uniqueness, whitespace, task answerability, schema consistency, and zero document overflow at the three declared viewports. It returned `PASS` with no P0-P3.
+- After consensus, mechanical snapshot commit `71c4970` fast-forwarded without dirty-path overlap. Fresh August 31 API evidence is finalized through August 29; all 49 public snapshots validate, the Chicago itinerary row and July 31 crawl boundary are unchanged, and no action or conclusion changes.
+- The result is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank, or CTR evidence.
 
 ### 2026-08-31 - `FT-RES-024` Chicago family trip-length language
 

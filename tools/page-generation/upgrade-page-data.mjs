@@ -1697,12 +1697,12 @@ export const itineraryPages = {
     quick: [
       ["One day", "One zone + one child-fit anchor + one easy finish", "Choose the Loop, Museum Campus, or another single zone rather than spending the short visit in transfers."],
       ["Two days", "One central day + one age-led contrast day", "Separate the classic city view from a museum, Lincoln Park, Hyde Park, or teen-chosen anchor."],
-      ["Three days", "Soft arrival + central day + contrast day", "Use the third day for Museum Campus, Lincoln Park, Hyde Park, or an older-kid route instead of another downtown checklist."]
+      ["Three days", "First count the full sightseeing days", "If Day 1 is partial, use a soft arrival + central day + one contrast day. If all three days are full, use a central day + two different contrast zones, one main anchor per day."]
     ],
     rows: [
       ["One-day first look", "One main zone, one child-fit anchor, one flexible finish", "Short visit or arrival/departure day", "Keep the middle or late block slow", "Exact base and anchor determine the transfer", "Choose the meal before the last activity", "A second major zone"],
       ["Two-day first trip", "Central Chicago day plus one age-led contrast day", "Most first-time weekend families", "Protect one hotel return or slow meal", "One main zone per half day", "Let the second-day neighborhood set the meal", "Two large museums in one day"],
-      ["Three-day balanced trip", "Soft arrival, classic central day, chosen contrast day", "Families wanting one slower day", "Keep one block optional daily", "Varies by stay base and chosen anchor", "Use meals as route boundaries", "Three firm late evenings"]
+      ["Three-day balanced trip", "Partial arrival plus two full days, or three full days with a central day and two different contrast zones", "Families who first count usable full days", "Keep one block optional daily", "Varies by stay base and chosen anchors", "Use meals as route boundaries", "Three firm late evenings"]
     ],
     dayPlansTitle: "Use one, two, or three days without crossing the city for every headline stop",
     itineraryNote: "Choose the route shape first, then check exact attractions, hotel entrances, transit or parking, weather, tickets, and accessibility for the dates.",
@@ -1718,10 +1718,10 @@ export const itineraryPages = {
         ["Day 2: one contrast zone", "Choose Museum Campus for Field or Shedd, Lincoln Park for the zoo and neighborhood, Hyde Park for Griffin MSI, or one teen-selected anchor. Treat the choice as the day."],
         ["Reset rule", "Protect one hotel return, slow meal, or unbooked block. If Day 1 runs late, remove the Day 2 evening add-on before cutting food or the reset."]
       ], "Do not use the contrast day to combine Museum Campus, Lincoln Park, Hyde Park, and Navy Pier."],
-      ["Three-day balanced trip", "Families who want a soft arrival and two distinct full-day shapes", [
-        ["Day 1: arrive softly", "Settle into the room, buy snacks, and use one nearby park, lakefront view, or neighborhood walk only if timing and weather cooperate."],
-        ["Day 2: classic central day", "Choose the Loop or architecture/river as the main story. Add one nearby child-fit anchor and keep the last block flexible."],
-        ["Day 3: choose the contrast", "Pick Museum Campus, Lincoln Park, Hyde Park, or a teen-selected sports, art, skyline, movement, immersive, or comedy anchor. Do not combine all four zones."]
+      ["Three-day balanced trip", "Families with three calendar days who first count whether Day 1 is partial or all three days are full", [
+        ["First: count the full days", "If Day 1 is partial, use the soft-arrival branch. If all three days are complete sightseeing days, use the three-full-day branch instead of treating arrival as a full day."],
+        ["If Day 1 is partial", "Day 1 is a soft arrival near the stay base. Day 2 is the classic central day. Day 3 is one contrast zone. Keep the arrival block optional."],
+        ["If all three days are full", "Day 1 is central Chicago. Days 2 and 3 use two different contrast zones: choose separately from Museum Campus, Lincoln Park, Hyde Park, or one teen-selected anchor. Keep one main anchor per day and do not combine zones."]
       ], "Keep one block optional each day and make only one evening a firm late plan."]
     ],
     pivotTitle: "Pivot for age, weather, budget, or the chosen base",

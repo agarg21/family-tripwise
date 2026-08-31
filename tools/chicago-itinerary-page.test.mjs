@@ -63,6 +63,24 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
   ]) assert.doesNotMatch(html, new RegExp(blocked, "i"));
 });
 
+test("branches three calendar days by usable full-day count", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const itemList = schemas(html).find((block) => block["@type"] === "ItemList");
+  const threeDayItem = itemList.itemListElement.find((item) => item.name === "Three-day balanced trip");
+
+  assert.match(
+    html,
+    /<span>Three days<\/span>[\s\S]*?<strong>First count the full sightseeing days<\/strong>[\s\S]*?If Day 1 is partial,[\s\S]*?If all three days are full,[\s\S]*?two different contrast zones/
+  );
+  assert.match(
+    html,
+    /<h3>Three-day balanced trip<\/h3>[\s\S]*?<h4>First: count the full days<\/h4>[\s\S]*?<h4>If Day 1 is partial<\/h4>[\s\S]*?Day 2 is the classic central day[\s\S]*?<h4>If all three days are full<\/h4>[\s\S]*?Days 2 and 3 use two different contrast zones[\s\S]*?Keep one main anchor per day/
+  );
+  assert.match(threeDayItem.description, /Partial arrival plus two full days/);
+  assert.match(threeDayItem.description, /three full days with a central day and two different contrast zones/);
+  assert.doesNotMatch(html, /Families who want a soft arrival and two distinct full-day shapes/);
+});
+
 test("aligns schema, visible FAQ, sources, image, and all four cluster routes", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const styles = readFileSync(join(root, "site", "styles.css"), "utf8");

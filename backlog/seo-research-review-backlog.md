@@ -30,6 +30,8 @@ Candidate result:
 - Retain and narrow unselected `IMP-047` to one conditional full-day check inside the existing three-day choice. Keep the soft-arrival shape and route three complete days to one central plus two separate contrast zones.
 - Add no section, fourth day, attraction, URL, demand/prevalence claim, or page edit in this action.
 - Kepler cycle-one `PASS` independently confirms all four source dates and proportional paraphrases, the privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, and candidate proportionality with no P0-P3.
+- The August 31 afternoon heartbeat subsequently selected the bounded candidate as `FT-IMP-026`; `FT-RES-024` itself remains a research-only action.
+- The selected implementation is now review-clean and improves the two previously `PARTIAL` three-full-day outputs to `YES` in the independently reproduced rendered-page rerun. Implementation reviewer Kepler cycle two returned `PASS` after one stale-state P2 correction; no release has occurred. This does not convert the qualitative research into demand or user-validation evidence.
 
 ### SRR-044: Chicago Itinerary Full-Day Promise Task Review
 

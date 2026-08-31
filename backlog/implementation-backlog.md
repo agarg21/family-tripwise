@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-047: Distinguish Three Calendar Days From Three Full Days
 
-Status: retained and narrowed by `FT-RES-024` at `64eddc4`; evidence-qualified but unselected; no page edit authorized
+Status: review-clean as `FT-IMP-026`; focused, full, browser, state, freshness, SEO, 49-snapshot validation, scope, privacy, and whitespace QA pass; Kepler cycle-two `PASS`; no release has occurred
 
 Target:
 
@@ -21,9 +21,12 @@ Smallest candidate:
 - Distinguish `three calendar days including arrival` from `three full sightseeing days` inside the existing three-day quick pick and route.
 - Phrase this as one capacity check, not a new generic duration layer: are all three days complete sightseeing days?
 - Keep the soft-arrival option. Route a three-full-day case to one central day plus two separate contrast zones, one main anchor per day.
+- Keep the existing three-day ItemList description aligned with the same branch; add no schema entity.
 - Add no section, fourth day, attraction, hotel, map, score, URL, or generic itinerary layer.
 
 Any implementation requires separate roadmap selection, source and wording review, pre/post task scoring, full native QA, independent review, and the standard release gate.
+
+Local result: the existing three-day choice now asks whether Day 1 is partial or all three days are complete sightseeing days. The partial branch retains a soft arrival, central day, and one contrast day. The three-full-day branch assigns one central day plus two different contrast zones, one main anchor per day. The `FT-RES-023` three-full-day usable-count and day-assignment outputs improve from `PARTIAL` to `YES`; the two-day control and other four outputs remain `YES`. Kepler cycle one found one P2 stale current-cycle sentence; cycle two verified the correction and returned `PASS` with no P0-P3. This is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, ranking, or CTR evidence.
 
 ## Candidate Las Vegas Itinerary Decision Handoff
 

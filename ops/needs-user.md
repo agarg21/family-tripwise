@@ -2,6 +2,8 @@
 
 Last updated: 2026-08-31
 
+No user decision is required for review-clean `FT-IMP-026` / `IMP-047`. The evidence-qualified change is limited to wording inside the existing Chicago three-day quick pick, route card, and matching three-day ItemList description; it adds no page, URL, day, attraction, indexing request, external action, destination or automation. Operator QA and the rendered proxy-task rerun pass. Kepler cycle two closed the sole stale-state P2 and returned `PASS` with no P0-P3; no release has occurred.
+
 No user decision is required for completed, review-clean `FT-RES-024` / `SRR-045`, pushed at `64eddc4`; Kepler cycle-one `PASS` leaves no P0-P3. The bounded current-question sample rejects numeric day-count sufficiency and retains a narrower unselected `IMP-047`: one conditional full-day check inside the existing Chicago three-day choice. No page, URL, indexing request, external post/account, destination or automation change is authorized by this research action.
 
 No user decision is required for completed, review-clean `FT-RES-023` / `SRR-044`, pushed at `4d42d30`; Mill cycle-two `PASS` leaves no P0-P3. The two-full-day Chicago control completes all six outputs. The three-full-day case is `PARTIAL` on usable-day count and one-zone-per-day assignment because the current plan is a soft arrival plus two full days; the other four outputs are complete. Cycle one found and cycle two closed one P2 desktop-height evidence overstatement. Preserve the live page and URL and retain only unselected `IMP-047`. This is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank or CTR evidence.

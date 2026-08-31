@@ -3430,7 +3430,62 @@
       "qa_summary": "Full 181/181 tests; operator-state QA; content freshness; local and production SEO QA; all 48 public GSC snapshots; public GSC preflight; strict JSON and 73 unique IDs; exact ten-path/no-site scope; all four source links; privacy and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Kepler (01a05723-5996-76a2-9822-e0b59538f1d3) returned cycle-one PASS with no P0-P3. The reviewer independently confirmed all four source dates and proportional paraphrases, privacy and evidence boundaries, exact ten-path/no-site scope, GSC classification, state chronology, QA and candidate proportionality.",
       "result": "Completed, review-clean and pushed at commit 64eddc4. Reject numeric trip-length sufficiency within the bounded sample. Three child-family questions and one newer cross-generational pacing control separately expose nights, arrival/departure windows, age or pace, luggage, transport, budget, rest or transfer burden before usable sightseeing blocks can be assigned. Retain and narrow unselected IMP-047 to one conditional full-day check inside the existing three-day choice; add no section, day, attraction or URL.",
-      "notes": "Selected by the August 31 morning independent-pilot heartbeat as today's required current-question learning unit. This is the run's only substantive action and changes no public page. Three child-family sources are dated May-June 2025; the July 2026 control is cross-generational rather than child-family evidence. No prevalence or demand inference is permitted. Kepler cycle-one PASS found no P0-P3. The exact reviewed docs-only action was pushed to main at commit 64eddc4."
+      "notes": "Selected by the August 31 morning independent-pilot heartbeat as today's required current-question learning unit. This is the run's only substantive action and changes no public page. Three child-family sources are dated May-June 2025; the July 2026 control is cross-generational rather than child-family evidence. No prevalence or demand inference is permitted. Kepler cycle-one PASS found no P0-P3. The exact reviewed docs-only action was pushed to main at commit 64eddc4. The afternoon heartbeat subsequently selected the bounded candidate as FT-IMP-026; FT-RES-024 itself remains research-only."
+    },
+    {
+      "id": "FT-IMP-026",
+      "implementation_backlog_id": "IMP-047",
+      "title": "Distinguish partial arrival from three full Chicago days",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_review",
+      "selected_on": "2026-08-31",
+      "completed_on": null,
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a05987-5d7d-73c0-8416-84e6172104dd"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 4,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "target_paths": [
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/seo-research-review-backlog.md",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/chicago-itinerary-page.test.mjs",
+        "site/family-itinerary/chicago-with-kids.html",
+        "status/chicago-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The FT-RES-023 three-full-sightseeing-day case can directly identify three usable full days and assign one central day plus two distinct contrast zones without interpreting a soft-arrival day as full, while the two-day control and partial-arrival route remain complete and no extra decision layer is added.",
+      "production_invariant": "Change only the twelve registered paths. Replace wording only inside the existing three-day quick pick, three-day route card, and corresponding three-day ItemList description. Preserve the title, H1, description, URL, canonical, indexability, one sitemap entry, three quick picks, three route cards, three comparison rows, five pivot rows, four stop-rule cards, four cluster cards, three visible and schema FAQs, source list, image, and three-item ItemList. Deterministic generation must change only site/family-itinerary/chicago-with-kids.html. Add no section, route card, day, attraction, hotel, map, score, URL, schema entity, analytics, indexing request, external post/account action, outreach, destination, automation, firsthand/safety claim, exact travel time, or universal family-fit claim.",
+      "gsc_evidence_classification": "No August 31 snapshot was available at the 13:01 Eastern selection time. Recent reused authenticated read-only API evidence collected 2026-08-30 is finalized through 2026-08-28: 2,050 property impressions, 4 clicks, aggregate average position 65.62, and 24 of 28 inspected URLs indexed. The Chicago itinerary has 40 impressions at page-average position 47.3, remains indexed, and was last crawled 2026-07-31. No public aligned query cohort exists, so GSC is orientation and the pre-change measurement boundary only; the independently reproduced FT-RES-023 task gap and FT-RES-024 current-question synthesis select the edit.",
+      "acceptance_criteria": [
+        "Inside the existing three-day quick pick, route card, and matching ItemList description, ask whether Day 1 is partial or all three days are complete sightseeing days; add no new decision layer, section, or schema entity.",
+        "Keep the current soft-arrival branch. When all three days are full, assign one central day plus two distinct contrast zones, one main anchor per day, without adding attractions or a fourth day.",
+        "Improve the FT-RES-023 three-full-day case's usable-full-day count and one-zone-or-anchor-per-day outputs from PARTIAL to YES while keeping its reset, weather/budget swap, removal and verification outputs and the two-full-day control no worse.",
+        "Preserve every production invariant, deterministic one-target generation, normal navigation and zero horizontal overflow at desktop, 390 by 844, and 320 by 800.",
+        "Pass focused and full native QA, operator-state, content-freshness, local and production SEO, public GSC validation/preflight, strict JSON, exact-scope/privacy/whitespace, independent read-only review with PASS or PASS_WITH_P3, Pages deployment, release-marker verification, and all declared affected-URL production checks."
+      ],
+      "measurement_plan": "Rerun the FT-RES-023 three-full-day case and two-full-day control against the rendered page. The three-full-day case's usable count and assignment must improve from PARTIAL to YES without reducing the other four outputs; the two-day control and partial-arrival route must remain YES/direct. Measure section counts/order, exact branch wording, link/schema/source/search invariants, generation scope, normal navigation and horizontal overflow at desktop, 390 by 844 and 320 by 800. Record the July 31 crawl as the pre-change boundary; ranking or CTR interpretation requires a post-release crawl and sufficient aligned finalized query evidence.",
+      "qa_summary": "Focused Chicago itinerary tests pass 5/5 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and production SEO QA report 0 errors and 0 warnings; all 49 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs. Deterministic generation changes only the target site page. The operator's actual 1280 by 900, 390 by 844 and 320 by 800 browser runs have zero document overflow and the edited cards fit their containers. Strict JSON/unique-ID, exact twelve-path scope, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Kepler (01a05987-5d7d-73c0-8416-84e6172104dd) returned cycle-one FAIL for one P2 stale current-cycle sentence that still called implementation pending. The sentence was corrected. Cycle two independently verified the correction and complete twelve-path diff, implementation, task result, HTML/generator/schema parity, responsive behavior, GSC/evidence boundaries, exact scope and QA, then returned PASS with no P0-P3.",
+      "release_state": "not-released",
+      "result": "Review-clean after Kepler cycle-two PASS; no release has occurred. The three-full-day usable-count and day-assignment outputs improve from PARTIAL to YES; its other four outputs and the two-day control remain YES. The partial-arrival branch remains direct, and no new section, day, attraction, entity or URL is added.",
+      "notes": "Selected by the August 31 afternoon independent-pilot heartbeat as today's apply step after completed LRN-012, FT-RES-023 and FT-RES-024. This is the run's only substantive action. The rendered result is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank or CTR evidence. After consensus, mechanical snapshot commit 71c4970 fast-forwarded without overlap; fresh August 31 API evidence is finalized through August 29, leaves the Chicago itinerary row and July 31 crawl boundary unchanged, and changes no conclusion."
     }
   ]
 }
