@@ -14,7 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
-| `FT-RES-024` | completed and review-clean; docs-only push authorized | `PASS` | Kepler cycle one independently confirmed all four source dates and proportional paraphrases, privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, QA and the proportional unselected candidate with no P0-P3. |
+| `FT-RES-024` | completed, review-clean and pushed at `64eddc4` | `PASS` | Kepler cycle one independently confirmed all four source dates and proportional paraphrases, privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, QA and the proportional unselected candidate with no P0-P3. |
 | `FT-RES-023` | completed, review-clean and pushed at `4d42d30` | `PASS` | Mill cycle two closed the sole P2 desktop-height evidence overstatement and verified the substantive result, GSC, exact scope, release reconciliation, QA and proportional preserve decision with no P0-P3. |
 | `FT-IMP-025` | released and production-verified at `4e311d7e28cc2421a6fa02606213740eff8abf39` | `PASS` | Linnaeus cycle-three `PASS`; successful Pages run `33266123776`, matching release marker, production SEO and declared invariants verified. |
 | `FT-RES-022` | completed, review-clean and recorded at `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339` | `PASS` | Gauss cycle two closed both P2s and confirmed the task scores, evidence boundaries, exact nine-path scope, and native QA. No public page, URL/search state, external action or automation change is selected. |
@@ -81,6 +81,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - The exact ten-path scope is intact with no `site/**` change. Recent reused August 30 GSC remains orientation only, `IMP-047` remains unselected, and the prior `FT-RES-023` push reconciliation is chronological.
 - Full 181/181 tests, operator state, content freshness, local/production SEO, 48 public snapshots, public preflight, strict 73-ID JSON, exact scope, source-link, privacy and whitespace checks pass.
 - The proportional result is to normalize calendar labels into usable sightseeing blocks and retain one conditional full-day question for a separately selected implementation; this action changes no public page, URL/search state, external account or automation.
+- The reviewed docs-only action was pushed to `main` at `64eddc4`.
 
 ### 2026-08-30 - `FT-RES-023` Chicago itinerary full-day promise
 

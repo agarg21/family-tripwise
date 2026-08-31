@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-047: Distinguish Three Calendar Days From Three Full Days
 
-Status: retained and narrowed by `FT-RES-024`; evidence-qualified but unselected; no page edit authorized
+Status: retained and narrowed by `FT-RES-024` at `64eddc4`; evidence-qualified but unselected; no page edit authorized
 
 Target:
 
