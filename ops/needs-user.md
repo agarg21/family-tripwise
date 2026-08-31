@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-31
 
-No user decision is required for review-clean `FT-IMP-026` / `IMP-047`. The evidence-qualified change is limited to wording inside the existing Chicago three-day quick pick, route card, and matching three-day ItemList description; it adds no page, URL, day, attraction, indexing request, external action, destination or automation. Operator QA and the rendered proxy-task rerun pass. Kepler cycle two closed the sole stale-state P2 and returned `PASS` with no P0-P3; no release has occurred.
+No user decision is required for completed `FT-IMP-026` / `IMP-047`. The evidence-qualified change is limited to wording inside the existing Chicago three-day quick pick, route card, and matching three-day ItemList description; it adds no page, URL, day, attraction, indexing request, external action, destination or automation. Kepler cycle two closed the sole stale-state P2 and returned `PASS` with no P0-P3. Commit `d8f178c7982abfe0cd2464c103a860d2558cd3df` is production-verified through successful Pages run `33438625886`; the marker, production SEO, and declared invariants pass.
 
 No user decision is required for completed, review-clean `FT-RES-024` / `SRR-045`, pushed at `64eddc4`; Kepler cycle-one `PASS` leaves no P0-P3. The bounded current-question sample rejects numeric day-count sufficiency and retains a narrower unselected `IMP-047`: one conditional full-day check inside the existing Chicago three-day choice. No page, URL, indexing request, external post/account, destination or automation change is authorized by this research action.
 

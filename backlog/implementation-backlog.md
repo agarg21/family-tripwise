@@ -8,7 +8,9 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-047: Distinguish Three Calendar Days From Three Full Days
 
-Status: review-clean as `FT-IMP-026`; focused, full, browser, state, freshness, SEO, 49-snapshot validation, scope, privacy, and whitespace QA pass; Kepler cycle-two `PASS`; no release has occurred
+Status: completed, released, and production-verified as `FT-IMP-026`; Kepler cycle-two `PASS`; commit `d8f178c7982abfe0cd2464c103a860d2558cd3df`; successful Pages run `33438625886`
+
+Release: the live marker matches the release commit and run. Production SEO reports 0 errors and 0 warnings; the target is 200, canonical, indexable, present once in the sitemap, and preserves every declared count and schema invariant.
 
 Target:
 

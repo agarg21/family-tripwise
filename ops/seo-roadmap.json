@@ -3438,9 +3438,9 @@
       "title": "Distinguish partial arrival from three full Chicago days",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_review",
+      "status": "completed",
       "selected_on": "2026-08-31",
-      "completed_on": null,
+      "completed_on": "2026-08-31",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_agent_ids": [
@@ -3483,8 +3483,11 @@
       "measurement_plan": "Rerun the FT-RES-023 three-full-day case and two-full-day control against the rendered page. The three-full-day case's usable count and assignment must improve from PARTIAL to YES without reducing the other four outputs; the two-day control and partial-arrival route must remain YES/direct. Measure section counts/order, exact branch wording, link/schema/source/search invariants, generation scope, normal navigation and horizontal overflow at desktop, 390 by 844 and 320 by 800. Record the July 31 crawl as the pre-change boundary; ranking or CTR interpretation requires a post-release crawl and sufficient aligned finalized query evidence.",
       "qa_summary": "Focused Chicago itinerary tests pass 5/5 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and production SEO QA report 0 errors and 0 warnings; all 49 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs. Deterministic generation changes only the target site page. The operator's actual 1280 by 900, 390 by 844 and 320 by 800 browser runs have zero document overflow and the edited cards fit their containers. Strict JSON/unique-ID, exact twelve-path scope, privacy/credential and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Kepler (01a05987-5d7d-73c0-8416-84e6172104dd) returned cycle-one FAIL for one P2 stale current-cycle sentence that still called implementation pending. The sentence was corrected. Cycle two independently verified the correction and complete twelve-path diff, implementation, task result, HTML/generator/schema parity, responsive behavior, GSC/evidence boundaries, exact scope and QA, then returned PASS with no P0-P3.",
-      "release_state": "not-released",
-      "result": "Review-clean after Kepler cycle-two PASS; no release has occurred. The three-full-day usable-count and day-assignment outputs improve from PARTIAL to YES; its other four outputs and the two-day control remain YES. The partial-arrival branch remains direct, and no new section, day, attraction, entity or URL is added.",
+      "release_state": "released-and-production-verified",
+      "release_commit": "d8f178c7982abfe0cd2464c103a860d2558cd3df",
+      "pages_run": 33438625886,
+      "released_at": "2026-08-31T20:55:49Z",
+      "result": "Released and production-verified at commit d8f178c7982abfe0cd2464c103a860d2558cd3df through successful Pages run 33438625886. The three-full-day usable-count and day-assignment outputs improve from PARTIAL to YES; its other four outputs and the two-day control remain YES. The partial-arrival branch remains direct. The live marker, production SEO, and all declared page/search/schema/source/responsive invariants pass.",
       "notes": "Selected by the August 31 afternoon independent-pilot heartbeat as today's apply step after completed LRN-012, FT-RES-023 and FT-RES-024. This is the run's only substantive action. The rendered result is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank or CTR evidence. After consensus, mechanical snapshot commit 71c4970 fast-forwarded without overlap; fresh August 31 API evidence is finalized through August 29, leaves the Chicago itinerary row and July 31 crawl boundary unchanged, and changes no conclusion."
     }
   ]
