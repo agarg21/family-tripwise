@@ -1,8 +1,10 @@
 # Needs User
 
-Last updated: 2026-08-30
+Last updated: 2026-08-31
 
-No user decision is required for completed, review-clean `FT-RES-023` / `SRR-044`; Mill cycle-two `PASS` leaves no P0-P3 and the docs-only push is authorized. The two-full-day Chicago control completes all six outputs. The three-full-day case is `PARTIAL` on usable-day count and one-zone-per-day assignment because the current plan is a soft arrival plus two full days; the other four outputs are complete. Cycle one found and cycle two closed one P2 desktop-height evidence overstatement. Preserve the live page and URL and retain only unselected `IMP-047`. This is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank or CTR evidence.
+No user decision is required for completed, review-clean `FT-RES-024` / `SRR-045`; Kepler cycle-one `PASS` leaves no P0-P3 and the docs-only push is authorized. The bounded current-question sample rejects numeric day-count sufficiency and retains a narrower unselected `IMP-047`: one conditional full-day check inside the existing Chicago three-day choice. No page, URL, indexing request, external post/account, destination or automation change is authorized by this research action.
+
+No user decision is required for completed, review-clean `FT-RES-023` / `SRR-044`, pushed at `4d42d30`; Mill cycle-two `PASS` leaves no P0-P3. The two-full-day Chicago control completes all six outputs. The three-full-day case is `PARTIAL` on usable-day count and one-zone-per-day assignment because the current plan is a soft arrival plus two full days; the other four outputs are complete. Cycle one found and cycle two closed one P2 desktop-height evidence overstatement. Preserve the live page and URL and retain only unselected `IMP-047`. This is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank or CTR evidence.
 
 No user decision is required for completed `FT-IMP-025` / `IMP-046`. The compact, conditional pool-to-base decision surface is released and production-verified at commit `4e311d7e28cc2421a6fa02606213740eff8abf39` through successful Pages run `33266123776`; Linnaeus cycle-three `PASS` left no P0-P3. The release marker, production SEO QA and declared invariants pass. It adds no fourth itinerary, hotel, attraction, URL, indexing request, external action, or automation change.
 

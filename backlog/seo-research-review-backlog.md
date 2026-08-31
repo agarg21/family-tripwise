@@ -1,14 +1,39 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-08-30
+Last updated: 2026-08-31
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
 
+### SRR-045: Chicago Family Trip-Length Language Review
+
+Status: completed and review-clean as `FT-RES-024`; Kepler cycle-one `PASS` with no P0-P3; no page edit selected
+
+Selected: 2026-08-31 by the morning independent Family Tripwise pilot
+
+Test whether current family questions treat a numeric Chicago trip length as a sufficient planning input, or instead separate calendar span, nights, arrival/departure windows, usable sightseeing blocks, age/pace, transport, budget, and removal decisions.
+
+Boundaries:
+
+- Inspect three to five current public questions. Retain only source date and URL, a paraphrased decision context, recurring constraints, and the work a useful answer must perform; retain no usernames, copied thread text, personal data, demand claim, or firsthand claim.
+- Use the August 30 public-safe GSC snapshot as recent reused orientation only. It has no aligned query cohort and does not select an edit.
+- Test whether unselected `IMP-047` should be rejected, retained, or narrowed. Do not edit `site/**`, the Chicago itinerary, generators, tests, URLs, indexability, sitemap, external accounts, posts, outreach, or automation.
+
+Expected artifact:
+
+- `docs/research/chicago-current-family-trip-length-questions-2026-08-31.md`
+
+Candidate result:
+
+- Reject numeric day-count sufficiency within the bounded sample. Three child-family questions and one newer cross-generational pacing control all require calendar span to be translated into usable sightseeing blocks.
+- Retain and narrow unselected `IMP-047` to one conditional full-day check inside the existing three-day choice. Keep the soft-arrival shape and route three complete days to one central plus two separate contrast zones.
+- Add no section, fourth day, attraction, URL, demand/prevalence claim, or page edit in this action.
+- Kepler cycle-one `PASS` independently confirms all four source dates and proportional paraphrases, the privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, and candidate proportionality with no P0-P3.
+
 ### SRR-044: Chicago Itinerary Full-Day Promise Task Review
 
-Status: completed and review-clean as `FT-RES-023`; Mill cycle-two `PASS` with no P0-P3; no page edit selected
+Status: completed, review-clean and pushed at `4d42d30` as `FT-RES-023`; Mill cycle-two `PASS` with no P0-P3; no page edit selected
 
 Selected: 2026-08-30 by the morning independent Family Tripwise pilot
 

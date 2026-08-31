@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-30
+Last updated: 2026-08-31
 
 Last re-scored: 2026-08-27
 Next re-score due: 2026-09-03
@@ -16,7 +16,7 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 ## Current GSC evidence
 
 - Latest snapshot: `ops/gsc-snapshots/2026-08-30.json`.
-- Classification on August 29: fresh authenticated read-only Search Console API evidence, collected August 29 with finalized performance data through August 27.
+- Classification on August 31: recent reused authenticated read-only Search Console API evidence, collected August 30 with finalized performance data through August 28; no August 31 snapshot was available at the 05:02 Eastern selection time.
 - Completeness is `finalized-conservative`; finalization uses the conservative two-day lag rather than incomplete-data metadata.
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
@@ -117,14 +117,27 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 66 | `FT-RES-021` map current Las Vegas family base-and-day-shape questions to the existing cluster | Recursive daily learning | Completed, review-clean and pushed | Commit `cf40322b643b6363b9c077bc412b245bf7550dd9`; Meitner cycle-two `PASS`; preserve the four core page roles. Its then-unselected cross-page task subsequently ran as `FT-RES-022`; no page, URL or external action occurred in this research transaction. |
 | 67 | `FT-RES-022` test the Las Vegas pool-versus-central-base cross-page handoff | Recursive daily learning | Completed, review-clean and pushed | Commit `f1dace7d41c13e5767c5dc4894b7b6bc3ae9b339`; Gauss cycle-two `PASS`; Case A completes six outputs, while Case B is `PARTIAL` on four-day blocks and base consequence. Its then-unselected itinerary handoff was subsequently selected as `FT-IMP-025`. |
 | 68 | `FT-IMP-025` expose the Las Vegas pool-to-base consequence | Existing-page user value | Released and production-verified | Commit `4e311d7e28cc2421a6fa02606213740eff8abf39`; Pages run `33266123776`; release marker, production SEO and every declared invariant pass. |
-| 69 | `FT-RES-023` test the Chicago itinerary full-day promise | Recursive daily learning | Completed and review-clean; docs-only push authorized | Mill cycle-two `PASS`; the two-day control completes six outputs, while the three-full-day case is `PARTIAL` on usable-day count and assignment. Preserve the page and retain only unselected `IMP-047`. |
+| 69 | `FT-RES-023` test the Chicago itinerary full-day promise | Recursive daily learning | Completed, review-clean and pushed | Commit `4d42d30`; Mill cycle-two `PASS`; the two-day control completes six outputs, while the three-full-day case is `PARTIAL` on usable-day count and assignment. Preserve the page and retain only unselected `IMP-047`. |
+| 70 | `FT-RES-024` test current Chicago family trip-length language | Recursive daily learning | Completed and review-clean; docs-only push authorized | Kepler cycle-one `PASS`; the bounded sample rejects numeric-label sufficiency and retains a narrower unselected `IMP-047`; research/state only and no page edit selected. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
+
+### FT-RES-024 - Test current Chicago family trip-length language
+
+- Selected: 2026-08-31 by the morning independent-pilot heartbeat as today's required current-question learning unit.
+- State: completed and review-clean across the exact ten registered research/state paths; Kepler cycle-one `PASS` leaves no P0-P3 and authorizes the docs-only push; no page edit is selected.
+- Question: do current family questions treat a numeric Chicago trip length as sufficient, or do they separately state calendar span, nights, arrival/departure windows, usable sightseeing blocks, child age/pace, transport, budget, and what to remove?
+- Evidence boundary: recent reused August 30 authenticated API evidence is finalized through August 28. It reports 2,050 property impressions, 4 clicks, aggregate average position 65.62, 24 of 28 inspected URLs indexed, and 40 Chicago-itinerary impressions at page-average position 47.3. The page remains indexed with a July 31 crawl. No public aligned query cohort exists, so GSC is orientation only; the `FT-RES-023` task result and current public questions select this research.
+- Invariants: research/state only; retain only source date/URL and paraphrased decision context, constraints, and answer job. No identities, copied thread text, personal data, demand/prevalence claim, firsthand claim, `site/**`, page, generator, test, URL/search state, external action, destination, or automation change.
+- Acceptance: inspect three to five current public questions; classify their trip-length expression, usable blocks, constraints and answer job; test a falsifiable numeric-label-sufficiency hypothesis; conclude `REJECT`, `RETAIN`, or `NARROW` for unselected `IMP-047`; and pass native QA plus independent review.
+- Measurement: retain the candidate only if the questions plus the prior live-page task show that converting calendar labels into usable blocks materially reduces inference. A later page edit requires separate selection and release review; search interpretation still requires aligned finalized query evidence and a later crawl.
+- Candidate result: reject numeric-label sufficiency within the bounded sample. Three child-family questions and one newer cross-generational pacing control separately expose nights, partial arrival/departure windows, pace, transport, budget, rest or transfer burden. Retain and narrow unselected `IMP-047` to one conditional full-day check inside the existing three-day choice; no new layer, day, attraction, or URL.
+- QA/review: full 181/181 tests; state, freshness, local/production SEO, 48-snapshot, public-preflight, strict 73-ID JSON, exact-scope, privacy/link and whitespace checks pass. Kepler independently confirmed all four source dates and proportional paraphrases, the evidence/privacy boundaries, exact ten-path/no-site scope, GSC classification and candidate proportionality; cycle one `PASS` with no P0-P3.
 
 ### FT-RES-023 - Test the Chicago itinerary full-day promise
 
 - Selected: 2026-08-30 by the morning independent-pilot heartbeat as today's required task-based learning unit.
-- State: completed and review-clean across the exact eleven research/state paths; Mill cycle-two `PASS` leaves no P0-P3; docs-only push authorized; no page edit is selected.
+- State: completed, review-clean and pushed at `4d42d30` across the exact eleven research/state paths; Mill cycle-two `PASS` leaves no P0-P3; no page edit is selected.
 - Task: compare a three-full-sightseeing-day family case against a two-full-day control on the live Chicago itinerary. Require an explicit usable-day count, one zone or anchor per day, protected reset, weather or budget swap, one removal rule and a current verification route.
 - Evidence boundary: selection used recent reused August 29 GSC. Fresh August 30 API evidence arrived before release, is finalized through August 28, and reports 40 itinerary impressions at page-average position 47.3; the page remains indexed with a July 31 crawl. No public aligned query cohort exists, so GSC is orientation only and changes no task result; the literal three-day page promise selects the task.
 - Invariants: research/state only; no `site/**`, page, generator, URL, canonical, indexability, sitemap, schema, analytics, indexing request, external action, destination or automation change. The walkthrough is proxy-reviewed interface evidence, never user testing, behavior, satisfaction, ranking or CTR evidence.

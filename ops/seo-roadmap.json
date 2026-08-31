@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-30",
+  "last_updated": "2026-08-31",
   "last_rescored_on": "2026-08-27",
   "next_rescore_due": "2026-09-03",
   "planning_horizon_days": 28,
@@ -3377,8 +3377,60 @@
       "measurement_plan": "For each case and viewport, record whether all six required outputs are directly available, recoverable through a clearly labeled existing-page handoff, or missing. Compare whether the page's first day is usable as a full day or explicitly a soft-arrival pattern, count avoidable transitions, and check normal navigation plus page overflow. A later page action requires a replicated material PARTIAL or NO and a separately selected implementation; search interpretation still requires aligned finalized query evidence and a later crawl.",
       "qa_summary": "Focused Chicago itinerary tests pass 4/4 and the full repository suite passes 181/181. Operator-state, content-freshness, local and production SEO QA pass with 0 errors and 0 warnings; all 48 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs; strict roadmap JSON has 72 unique IDs and no duplicate keys; exact eleven-path/no-site scope, internal links, privacy/credential and whitespace checks pass. The 1280-pixel desktop width and exact 390 by 844 and 320 by 800 mobile runs have zero document overflow. The operator reported a 900-pixel desktop height while the review environment clamped to 720, so no cross-environment desktop-height or depth-ratio claim is retained.",
       "review_summary": "Independent read-only reviewer Mill (01a053a1-3db3-7a11-8ec0-ee5a2ec36c38) returned cycle-two PASS with no P0-P3. Cycle one reproduced the substantive scores, GSC, FT-IMP-025 release, exact scope and proportional preserve decision, then found one P2 desktop-viewport evidence overstatement. Cycle two verified the correction across the complete eleven-path diff: shared desktop evidence is limited to the 1280-pixel width, order, positions, navigation and overflow; exact mobile sizes remain; all QA and link checks pass.",
-      "result": "Completed and review-clean; docs-only push authorized. The two-full-day control completes all six outputs. The three-full-day case is PARTIAL on usable-day count and one-zone-per-day assignment because the live three-day route is a soft arrival plus two full days. Reset, weather or budget swap, removal and verification outputs are complete at the 1280-pixel desktop width and exact 390 by 844 and 320 by 800 mobile sizes with zero horizontal overflow. Preserve the page and URL; retain only unselected IMP-047 and add no day, entity, section or URL.",
-      "notes": "Selected by the August 30 morning independent-pilot heartbeat as today's required task-based learning unit. This is the run's only substantive action. The FT-IMP-025 release reconciliation is mechanical housekeeping inside the registered state scope. Mill cycle one returned FAIL for one P2 desktop-viewport evidence overstatement; cycle two verified the correction and returned PASS with no P0-P3. Fresh August 30 GSC arrived mechanically after consensus, validated as snapshot 48, and changed no action or conclusion."
+      "result": "Completed, review-clean and pushed at commit 4d42d30. The two-full-day control completes all six outputs. The three-full-day case is PARTIAL on usable-day count and one-zone-per-day assignment because the live three-day route is a soft arrival plus two full days. Reset, weather or budget swap, removal and verification outputs are complete at the 1280-pixel desktop width and exact 390 by 844 and 320 by 800 mobile sizes with zero horizontal overflow. Preserve the page and URL; retain only unselected IMP-047 and add no day, entity, section or URL.",
+      "notes": "Selected by the August 30 morning independent-pilot heartbeat as today's required task-based learning unit. This is the run's only substantive action. The FT-IMP-025 release reconciliation is mechanical housekeeping inside the registered state scope. Mill cycle one returned FAIL for one P2 desktop-viewport evidence overstatement; cycle two verified the correction and returned PASS with no P0-P3. Fresh August 30 GSC arrived mechanically after consensus, validated as snapshot 48, and changed no action or conclusion. The exact docs-only action was pushed to main at commit 4d42d30."
+    },
+    {
+      "id": "FT-RES-024",
+      "research_backlog_id": "SRR-045",
+      "title": "Test current Chicago family trip-length language",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-08-31",
+      "completed_on": "2026-08-31",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": [
+        "01a05723-5996-76a2-9822-e0b59538f1d3"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-current-family-trip-length-questions-2026-08-31.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/implementation-backlog.md",
+        "status/chicago-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Three to five source-dated current public questions determine whether a numeric Chicago trip length directly carries the family's usable sightseeing-block decision or whether calendar span, nights, arrival/departure windows, child age/pace, transport, budget and removal rules must be normalized separately.",
+      "production_invariant": "Research and state only across the ten registered paths. Retain only source date and URL plus paraphrased decision context, recurring constraints and the work a useful answer must perform. Retain no usernames, copied thread text, personal data, demand or prevalence claim, firsthand claim, or community answer draft. Do not change site/**, generators, tests, any Chicago page or record, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-08-30 and finalized through 2026-08-28: 2,050 property impressions, 4 clicks, aggregate average position 65.62, and 24 of 28 inspected URLs indexed. The Chicago itinerary has 40 impressions at page-average position 47.3, remains indexed, and was last crawled 2026-07-31. No public aligned query cohort exists, so GSC is orientation and a measurement boundary only; the FT-RES-023 task result and current public questions select this research.",
+      "acceptance_criteria": [
+        "Inspect three to five current public questions and retain only source date and URL, a paraphrased decision context, recurring constraints, and the work a useful answer must perform; retain no identities, copied thread text, personal data, demand claim or firsthand claim.",
+        "Test the falsifiable hypothesis that a numeric trip-length label is sufficient to route a Chicago family without separately interpreting calendar span, nights, arrival/departure windows and usable sightseeing blocks.",
+        "Classify each source's trip-length expression, usable blocks, age/pace, transport, budget and removal constraints, then map the information a useful answer must normalize.",
+        "Conclude REJECT, RETAIN or NARROW for unselected IMP-047. Do not edit a page, promote a new URL, infer ranking/CTR/behavior/satisfaction or change an observation boundary.",
+        "Pass focused and full native QA, public GSC validation/preflight, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "For each source, record whether the stated day count alone reveals the family's usable activity blocks and whether arrival, departure, nights, age/pace, transport, budget or a long transfer changes the answer. Retain the candidate only if this pattern plus FT-RES-023 shows that converting calendar labels into usable blocks materially reduces inference. Any later page edit requires a separate selected implementation and release gate; search interpretation still requires aligned finalized query evidence and a later crawl.",
+      "qa_summary": "Full 181/181 tests; operator-state QA; content freshness; local and production SEO QA; all 48 public GSC snapshots; public GSC preflight; strict JSON and 73 unique IDs; exact ten-path/no-site scope; all four source links; privacy and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Kepler (01a05723-5996-76a2-9822-e0b59538f1d3) returned cycle-one PASS with no P0-P3. The reviewer independently confirmed all four source dates and proportional paraphrases, privacy and evidence boundaries, exact ten-path/no-site scope, GSC classification, state chronology, QA and candidate proportionality.",
+      "result": "Completed and review-clean; docs-only push authorized. Reject numeric trip-length sufficiency within the bounded sample. Three child-family questions and one newer cross-generational pacing control separately expose nights, arrival/departure windows, age or pace, luggage, transport, budget, rest or transfer burden before usable sightseeing blocks can be assigned. Retain and narrow unselected IMP-047 to one conditional full-day check inside the existing three-day choice; add no section, day, attraction or URL.",
+      "notes": "Selected by the August 31 morning independent-pilot heartbeat as today's required current-question learning unit. This is the run's only substantive action and changes no public page. Three child-family sources are dated May-June 2025; the July 2026 control is cross-generational rather than child-family evidence. No prevalence or demand inference is permitted. Kepler cycle-one PASS found no P0-P3."
     }
   ]
 }

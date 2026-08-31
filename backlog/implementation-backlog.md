@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-08-30
+Last updated: 2026-08-31
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
@@ -8,17 +8,18 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-047: Distinguish Three Calendar Days From Three Full Days
 
-Status: unselected hypothesis from `FT-RES-023`; no page edit authorized
+Status: retained and narrowed by `FT-RES-024`; evidence-qualified but unselected; no page edit authorized
 
 Target:
 
 - `https://familytripwise.com/family-itinerary/chicago-with-kids.html`
 
-The August 30 task review finds the current two-full-day plan complete but the three-full-day case `PARTIAL`. The existing three-day route is explicitly a soft arrival plus two full-day shapes, so a family with three complete sightseeing days must infer the third full-day assignment.
+The August 30 task review finds the current two-full-day plan complete but the three-full-day case `PARTIAL`. The existing three-day route is explicitly a soft arrival plus two full-day shapes, so a family with three complete sightseeing days must infer the third full-day assignment. The August 31 current-question review rejects numeric day-count sufficiency within its bounded sample: families separately state nights, arrival/departure windows, age/pace, transport, budget, rest and transfer burden before their usable blocks can be assigned.
 
 Smallest candidate:
 
 - Distinguish `three calendar days including arrival` from `three full sightseeing days` inside the existing three-day quick pick and route.
+- Phrase this as one capacity check, not a new generic duration layer: are all three days complete sightseeing days?
 - Keep the soft-arrival option. Route a three-full-day case to one central day plus two separate contrast zones, one main anchor per day.
 - Add no section, fourth day, attraction, hotel, map, score, URL, or generic itinerary layer.
 
