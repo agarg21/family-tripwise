@@ -14,7 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
-| `FT-RES-025` | completed and review-clean | `PASS` | Bernoulli cycle two closed all four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors, and stale NYC GSC blockers; no P0-P3 remains across the exact nine-path/no-site scope. |
+| `FT-RES-025` | completed, review-clean and pushed at `96c9df9` | `PASS` | Bernoulli cycle two closed all four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors, and stale NYC GSC blockers; no P0-P3 remains across the exact nine-path/no-site scope. |
 | `FT-IMP-026` | released and production-verified at `d8f178c7982abfe0cd2464c103a860d2558cd3df` | `PASS` | Kepler cycle two closed the sole P2; successful Pages run `33438625886`, matching marker, production SEO, and declared invariants verified. |
 | `FT-RES-024` | completed, review-clean and pushed at `64eddc4` | `PASS` | Kepler cycle one independently confirmed all four source dates and proportional paraphrases, privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, QA and the proportional unselected candidate with no P0-P3. |
 | `FT-RES-023` | completed, review-clean and pushed at `4d42d30` | `PASS` | Mill cycle two closed the sole P2 desktop-height evidence overstatement and verified the substantive result, GSC, exact scope, release reconciliation, QA and proportional preserve decision with no P0-P3. |

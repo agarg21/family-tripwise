@@ -8,7 +8,7 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ### SRR-046: NYC Family Stay-Area Live SERP Review
 
-Status: completed and review-clean as `FT-RES-025`; Bernoulli cycle-two `PASS` with no P0-P3; no page edit selected
+Status: completed, review-clean and pushed at `96c9df9` as `FT-RES-025`; Bernoulli cycle-two `PASS` with no P0-P3; no page edit selected
 
 Selected: 2026-09-01 by the morning independent Family Tripwise pilot
 
