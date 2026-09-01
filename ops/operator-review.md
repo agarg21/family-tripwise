@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-026` | completed and review-clean; research/state only | `PASS` | Galileo cycle one confirmed the `PARTIAL` unordered case, seven-`YES` control, proportional unselected `IMP-048`, exact ten-path/no-site scope, state, evidence boundaries, responsive task evidence, navigation, and QA with no P0-P3. |
 | `FT-RES-025` | completed, review-clean and pushed at `96c9df9` | `PASS` | Bernoulli cycle two closed all four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors, and stale NYC GSC blockers; no P0-P3 remains across the exact nine-path/no-site scope. |
 | `FT-IMP-026` | released and production-verified at `d8f178c7982abfe0cd2464c103a860d2558cd3df` | `PASS` | Kepler cycle two closed the sole P2; successful Pages run `33438625886`, matching marker, production SEO, and declared invariants verified. |
 | `FT-RES-024` | completed, review-clean and pushed at `64eddc4` | `PASS` | Kepler cycle one independently confirmed all four source dates and proportional paraphrases, privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, QA and the proportional unselected candidate with no P0-P3. |
@@ -71,6 +72,17 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-09-01 - `FT-RES-026` NYC stay-area no-itinerary task review
+
+**Reviewer:** Galileo (`01a05df6-6287-7613-9019-d325b985a804`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-one `PASS`; no P0-P3**
+
+- Confirmed the unordered-anchor case fairly remains `PARTIAL`: three plausible bases survive and a provisional choice would invent missing day order.
+- Confirmed the first-two-days-known control fairly earns `YES` across all seven protocol steps and that unselected `IMP-048` is the smallest proportional future hypothesis.
+- Independently reproduced actual 1280 by 900, 390 by 844, and 320 by 800 layouts, contained mobile-table scrolling, zero document overflow, and successful navigation to both sibling pages. Its 1-3px rendering differences do not affect the rounded viewport-depth conclusions.
+- Verified fresh GSC figures and limitations, evidence/privacy boundaries, exact ten-path/no-site scope, state mirrors, and focused 4/4 plus full 162/162 and complete release-gate QA.
 
 ### 2026-09-01 - `FT-RES-025` NYC family stay-area live SERP review
 

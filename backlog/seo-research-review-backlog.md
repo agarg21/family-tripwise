@@ -6,6 +6,31 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-047: NYC Stay-Area Choice Without A Drafted Itinerary
+
+Status: completed and review-clean as `FT-RES-026`; Galileo cycle-one `PASS` with no P0-P3; no page edit selected
+
+Selected: 2026-09-01 by the afternoon independent Family Tripwise pilot
+
+Test the morning review's next falsification trigger: whether a first-time family with an unordered set of must-dos, a likely midday reset, and no drafted first-two-day itinerary can still reach a provisional area, runner-up, reversal condition, exact checks, and named-hotel handoff from the live stay-area page.
+
+Boundaries:
+
+- Research/state only across the ten registered paths; do not edit `site/**`, page copy, generators, tests, URLs, indexability, sitemap, schema, external accounts, posts, outreach, destinations, or automation.
+- Run the live page through a requested 1280 by 900 desktop size plus exact 390 by 844 and 320 by 800 mobile sizes. Record the actual viewport and treat the result as proxy-reviewed interface evidence, never user testing or satisfaction evidence.
+- Compare an unordered-anchor case with a first-two-days-known control. Score `Start`, `Reduce`, `Compare`, `Trace`, `Decide`, `Verify`, and `Recover`; conclude `PRESERVE`, `OBSERVE`, or retain at most one bounded unselected candidate.
+
+Expected artifact:
+
+- `docs/research/new-york-city-stay-area-no-itinerary-task-review-2026-09-01.md`
+
+Current result:
+
+- The unordered-anchor case is `PARTIAL`; it narrows five areas to Upper West Side, Midtown, and Downtown but cannot reach the required two or a stable provisional choice before the family sequences the first two days.
+- The first-two-days-known control is `YES` across all seven protocol steps and provisionally chooses Upper West Side over Midtown because the protected return falls on the park/museum day.
+- The itinerary sibling route is correct and works, but begins about 5.0 desktop, 7.0 390-mobile, and 8.2 narrow-mobile viewports down. Retain only unselected `IMP-048`, one compact nearby recovery link. Preserve the page and URL now.
+- Galileo independently reproduced the task, viewport, containment, and navigation evidence and returned cycle-one `PASS` with no P0-P3.
+
 ### SRR-046: NYC Family Stay-Area Live SERP Review
 
 Status: completed, review-clean and pushed at `96c9df9` as `FT-RES-025`; Bernoulli cycle-two `PASS` with no P0-P3; no page edit selected

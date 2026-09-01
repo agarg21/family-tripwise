@@ -3541,6 +3541,58 @@
       "review_summary": "Independent read-only reviewer Bernoulli (01a05c3b-9916-7ff2-9806-83c7ff010a82) returned cycle-one FAIL for four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors and stale NYC GSC blockers. Cycle two verified every correction, the proportional PRESERVE decision, evidence/privacy boundaries, exact scope and QA, then returned PASS with no P0-P3.",
       "result": "Completed and review-clean. Preserve the existing NYC stay-area page, five-area visitor decision, separate hotel-page role and URL; promote no implementation candidate. The broader family-neighborhood formulation crosses into resident/real-estate intent, and one quantified visitor guide's named evidence was not independently reproduced. No site, URL/search state, external action or automation changed.",
       "notes": "Selected by the September 1 morning independent-pilot heartbeat as today's required live-SERP/ranking-page learning unit. This is the run's only substantive action and changes no public page."
+    },
+    {
+      "id": "FT-RES-026",
+      "research_backlog_id": "SRR-047",
+      "title": "Test NYC stay-area choice without a drafted itinerary",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-01",
+      "completed_on": "2026-09-01",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": [
+        "01a05df6-6287-7613-9019-d325b985a804"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-stay-area-no-itinerary-task-review-2026-09-01.md",
+        "backlog/implementation-backlog.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/new-york-city-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A reproducible live desktop/mobile task determines whether a first-time family without a drafted first-two-day itinerary can use the existing NYC stay-area page to reach a provisional area, runner-up, decisive tradeoff, reversal condition, exact checks, and named-hotel handoff without inventing certainty.",
+      "production_invariant": "Research and state only across the ten registered paths. Do not change site/**, generators, tests, page copy, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Do not publish unsupported firsthand, safety, exact route/stroller, family-fit or behavioral claims.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-01 and finalized through 2026-08-30: 1,913 property impressions, 3 clicks, aggregate average position 65.83, and 24 of 28 inspected URLs indexed. The NYC stay-area page has 51 impressions at page-average position 44.33, is indexed, and was last crawled 2026-08-29. The public snapshot has no aligned query cohort, so GSC is orientation and a crawl boundary only; FT-RES-025's explicit next falsification trigger selects this task.",
+      "acceptance_criteria": [
+        "Run one source-grounded first-time-family task with unordered must-dos, a likely midday reset, and no drafted first two days, plus a first-two-days-known control, using only live visible page evidence.",
+        "At requested 1280 by 900 desktop plus exact 390 by 844 and 320 by 800 mobile sizes, record the actual viewport, first useful decision surface, section order, horizontal overflow, and normal hotel-handoff navigation.",
+        "Score Start, Reduce, Compare, Trace, Decide, Verify and Recover for both cases; record buried answers, detours, repetition, unsupported certainty, missing comparison, evidence traceability and next verification step.",
+        "Conclude PRESERVE, OBSERVE or retain at most one bounded unselected existing-page candidate. Make no page or URL change and never call the proxy walkthrough user testing.",
+        "Pass focused and full native QA, public GSC validation/preflight, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "The unordered-anchor case must identify at most two plausible areas, one provisional choice, one runner-up, the itinerary ordering that could reverse the choice, exact access/room checks, and the route to named hotels. The control should complete the same outputs when its first two days are fixed. Record all seven protocol steps, effort proxies and uncertainties; any later edit requires a separately selected implementation and later behavior/ranking claims require their own evidence.",
+      "qa_summary": "Focused NYC stay-page tests pass 4/4 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local SEO and the successful production retry report 0 errors and 0 warnings; all 50 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs. Strict JSON has 76 unique action IDs. Exact ten-path/no-site scope, privacy/credential, normal target/hotel/itinerary navigation, responsive containment at actual 1280 by 900, 390 by 844 and 320 by 800, mobile table containment, and whitespace checks pass. The first production SEO run saw one clearly transient 503 on an unrelated Las Vegas hotel page; the allowed single retry and public preflight returned 200.",
+      "review_summary": "Independent read-only reviewer Galileo (01a05df6-6287-7613-9019-d325b985a804) returned cycle-one PASS with no P0-P3. The reviewer independently reproduced the task scores, proportional IMP-048 boundary, fresh GSC figures, exact scope, state, QA, actual viewports, contained mobile table, zero root overflow, and successful sibling navigation; 1-3px rendering differences do not affect rounded depth conclusions.",
+      "result": "Completed and review-clean. The unordered-anchor case is PARTIAL: the page narrows five areas to Upper West Side, Midtown and Downtown but cannot choose two or a stable provisional base without sequencing the first two days. The known-days control is YES across all seven protocol steps. The itinerary route works but begins about 5.0 desktop, 7.0 390-mobile and 8.2 narrow-mobile viewports down. Preserve the page and retain only unselected IMP-048, one nearby itinerary-first recovery route. No site, URL/search state, external action or automation changed.",
+      "notes": "Selected by the September 1 afternoon independent-pilot heartbeat as today's apply/deepen step after completed FT-RES-025 and LRN-013. This is the run's only substantive action and changes no public page."
     }
   ]
 }
