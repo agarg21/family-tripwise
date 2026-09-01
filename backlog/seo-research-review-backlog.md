@@ -8,7 +8,7 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ### SRR-047: NYC Stay-Area Choice Without A Drafted Itinerary
 
-Status: completed and review-clean as `FT-RES-026`; Galileo cycle-one `PASS` with no P0-P3; no page edit selected
+Status: completed, review-clean and pushed at `ba33329` as `FT-RES-026`; Galileo cycle-one `PASS` with no P0-P3; no page edit selected
 
 Selected: 2026-09-01 by the afternoon independent Family Tripwise pilot
 

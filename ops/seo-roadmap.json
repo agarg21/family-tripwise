@@ -3551,6 +3551,7 @@
       "status": "completed",
       "selected_on": "2026-09-01",
       "completed_on": "2026-09-01",
+      "action_commit": "ba33329e01e31ca28908b4db45f0520c9a3b439f",
       "review_outcome": "PASS",
       "review_cycles": 1,
       "reviewer_agent_ids": [

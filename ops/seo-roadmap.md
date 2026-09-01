@@ -15,7 +15,7 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
-- September 1 afternoon action: `FT-RES-026` / `SRR-047` completed the live no-itinerary versus known-days task. Galileo cycle-one `PASS` leaves no P0-P3. The unordered case is `PARTIAL`, the control is `YES`, and unselected `IMP-048` is one nearby route to the existing itinerary sibling. The page and URL remain unchanged.
+- September 1 afternoon action: `FT-RES-026` / `SRR-047` completed the live no-itinerary versus known-days task and was pushed at `ba33329`. Galileo cycle-one `PASS` leaves no P0-P3. The unordered case is `PARTIAL`, the control is `YES`, and unselected `IMP-048` is one nearby route to the existing itinerary sibling. The page and URL remain unchanged.
 
 - September 1 morning action: `FT-RES-025` / `SRR-046` completed the required live-SERP/ranking-page research for the existing NYC stay-area page and was pushed at `96c9df9`. Bernoulli cycle-two `PASS` closed four P2s and leaves no P0-P3. The supported decision is `PRESERVE`; exact scope is nine research/state paths, with no public page or search-state change.
 

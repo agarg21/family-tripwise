@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-048: Surface The Itinerary-First Recovery Route
 
-Status: retained as an unselected hypothesis under review-clean `FT-RES-026`; Galileo cycle-one `PASS`; implementation is not authorized in the research action
+Status: retained as an unselected hypothesis under review-clean `FT-RES-026`, pushed at `ba33329`; Galileo cycle-one `PASS`; implementation is not authorized in the research action
 
 Target:
 
