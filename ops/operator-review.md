@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-025` | completed and review-clean | `PASS` | Bernoulli cycle two closed all four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors, and stale NYC GSC blockers; no P0-P3 remains across the exact nine-path/no-site scope. |
 | `FT-IMP-026` | released and production-verified at `d8f178c7982abfe0cd2464c103a860d2558cd3df` | `PASS` | Kepler cycle two closed the sole P2; successful Pages run `33438625886`, matching marker, production SEO, and declared invariants verified. |
 | `FT-RES-024` | completed, review-clean and pushed at `64eddc4` | `PASS` | Kepler cycle one independently confirmed all four source dates and proportional paraphrases, privacy/evidence boundaries, exact ten-path/no-site scope, GSC classification, QA and the proportional unselected candidate with no P0-P3. |
 | `FT-RES-023` | completed, review-clean and pushed at `4d42d30` | `PASS` | Mill cycle two closed the sole P2 desktop-height evidence overstatement and verified the substantive result, GSC, exact scope, release reconciliation, QA and proportional preserve decision with no P0-P3. |
@@ -70,6 +71,17 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-09-01 - `FT-RES-025` NYC family stay-area live SERP review
+
+**Reviewer:** Bernoulli (`01a05c3b-9916-7ff2-9806-83c7ff010a82`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-two `PASS`; no P0-P3**
+
+- Cycle one found four P2s: the broad third query's resident/real-estate intent was omitted, two summary-only sources supported body-level judgments, review-state mirrors disagreed, and the updated NYC status retained stale family-hotel/teen GSC blockers.
+- The corrected artifact makes the intent boundary explicit, excludes residential results from visitor inventory conclusions, limits the two summaries to page-type classification, aligns state, and uses the August 31 family-hotel and teen page rows.
+- Cycle two independently verified every correction, the proportional `PRESERVE` decision, evidence and privacy boundaries, exact nine-path/no-site scope, and green QA.
+- Focused tests pass 4/4 and full tests pass 162/162. Operator-state, content-freshness, local/production SEO, all 49 public GSC snapshots, 28-URL public preflight, strict JSON with 75 unique IDs, exact scope, privacy, links and whitespace pass.
 
 ### 2026-08-31 - `FT-IMP-026` Chicago partial-arrival versus three-full-day branch
 

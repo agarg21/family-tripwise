@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-01",
   "last_rescored_on": "2026-08-27",
   "next_rescore_due": "2026-09-03",
   "planning_horizon_days": 28,
@@ -3489,6 +3489,57 @@
       "released_at": "2026-08-31T20:55:49Z",
       "result": "Released and production-verified at commit d8f178c7982abfe0cd2464c103a860d2558cd3df through successful Pages run 33438625886. The three-full-day usable-count and day-assignment outputs improve from PARTIAL to YES; its other four outputs and the two-day control remain YES. The partial-arrival branch remains direct. The live marker, production SEO, and all declared page/search/schema/source/responsive invariants pass.",
       "notes": "Selected by the August 31 afternoon independent-pilot heartbeat as today's apply step after completed LRN-012, FT-RES-023 and FT-RES-024. This is the run's only substantive action. The rendered result is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank or CTR evidence. After consensus, mechanical snapshot commit 71c4970 fast-forwarded without overlap; fresh August 31 API evidence is finalized through August 29, leaves the Chicago itinerary row and July 31 crawl boundary unchanged, and changes no conclusion."
+    },
+    {
+      "id": "FT-RES-025",
+      "research_backlog_id": "SRR-046",
+      "title": "Recheck live NYC family stay-area search results",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-01",
+      "completed_on": "2026-09-01",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a05c3b-9916-7ff2-9806-83c7ff010a82"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-stay-area-live-serp-review-2026-09-01.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/new-york-city-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A source-dated public US-oriented result snapshot for the NYC family stay-area query family identifies current result types, recurring page/domain patterns, honest authority advantages, structural or trust opportunities, and whether the existing page has one named family-decision failure or should be preserved.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, page copy, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Do not copy ranking-page prose, retain personal data, claim exact ranks from a public search snapshot, or publish unsupported firsthand, safety, route, stroller, family-fit or quantified claims.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-08-31 and finalized through 2026-08-29: 2,013 property impressions, 3 clicks, aggregate average position 65.61, and 24 of 28 inspected URLs indexed. The NYC stay-area page has 56 impressions at page-average position 44.05. The public snapshot has no aligned query cohort, so GSC is orientation and a measurement boundary only; the morning learning contract and current live result set select this research.",
+      "acceptance_criteria": [
+        "Inspect three US-oriented query formulations and representative current result pages; record collection date, result/page types, recurring domains and access limitations without claiming exact rank tracking.",
+        "Separate local or firsthand authority, booking inventory, review scale and domain reach that Family Tripwise cannot honestly copy from structural, evidence and trust opportunities it can pursue.",
+        "Compare the existing stay-area page with the named family task of choosing a provisional base from first-trip anchors, midday return needs, exact station/access checks and the area-to-hotel handoff.",
+        "Conclude PRESERVE, OBSERVE or retain at most one unselected bounded improvement; add no URL and make no page edit in this action.",
+        "Pass focused and full native QA, public GSC validation/preflight, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Record whether representative results supply a default, route decision, tradeoffs, evidence traceability and next verification step for the named family task. Preserve the page unless a specific reproducible gap survives comparison. Any later page edit requires a separately selected implementation; search interpretation requires a later crawl plus sufficient aligned finalized query evidence.",
+      "qa_summary": "Focused NYC stay-page tests pass 4/4 and the full repository suite passes 162/162. Operator-state, content-freshness, local and production SEO, all 49 public GSC snapshots, 28-URL public preflight, strict JSON with 75 unique action IDs, exact nine-path/no-site scope, privacy, source-link and whitespace checks pass. Automated source-link checks record expected access controls without changing the research boundary.",
+      "review_summary": "Independent read-only reviewer Bernoulli (01a05c3b-9916-7ff2-9806-83c7ff010a82) returned cycle-one FAIL for four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors and stale NYC GSC blockers. Cycle two verified every correction, the proportional PRESERVE decision, evidence/privacy boundaries, exact scope and QA, then returned PASS with no P0-P3.",
+      "result": "Completed and review-clean. Preserve the existing NYC stay-area page, five-area visitor decision, separate hotel-page role and URL; promote no implementation candidate. The broader family-neighborhood formulation crosses into resident/real-estate intent, and one quantified visitor guide's named evidence was not independently reproduced. No site, URL/search state, external action or automation changed.",
+      "notes": "Selected by the September 1 morning independent-pilot heartbeat as today's required live-SERP/ranking-page learning unit. This is the run's only substantive action and changes no public page."
     }
   ]
 }

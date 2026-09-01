@@ -1,6 +1,8 @@
 # Needs User
 
-Last updated: 2026-08-31
+Last updated: 2026-09-01
+
+No user decision is required for completed, review-clean `FT-RES-025` / `SRR-046`; Bernoulli cycle-two `PASS` leaves no P0-P3 after four cycle-one P2 corrections. The September 1 live-SERP/ranking-page unit preserves the existing NYC stay-area page and does not authorize a page edit, new URL, indexing request, external action, destination, or automation change.
 
 No user decision is required for completed `FT-IMP-026` / `IMP-047`. The evidence-qualified change is limited to wording inside the existing Chicago three-day quick pick, route card, and matching three-day ItemList description; it adds no page, URL, day, attraction, indexing request, external action, destination or automation. Kepler cycle two closed the sole stale-state P2 and returned `PASS` with no P0-P3. Commit `d8f178c7982abfe0cd2464c103a860d2558cd3df` is production-verified through successful Pages run `33438625886`; the marker, production SEO, and declared invariants pass.
 

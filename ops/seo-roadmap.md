@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-08-31
+Last updated: 2026-09-01
 
 Last re-scored: 2026-08-27
 Next re-score due: 2026-09-03
@@ -14,6 +14,8 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+- September 1 morning action: `FT-RES-025` / `SRR-046` completed the required live-SERP/ranking-page research for the existing NYC stay-area page. Bernoulli cycle-two `PASS` closed four P2s and leaves no P0-P3. The supported decision is `PRESERVE`; exact scope is nine research/state paths, with no public page or search-state change.
 
 - Latest snapshot: `ops/gsc-snapshots/2026-08-31.json`.
 - Classification on August 31: fresh authenticated read-only Search Console API evidence, collected August 31 with finalized performance data through August 29. It arrived mechanically after `FT-IMP-026` review consensus; August 30 was the recent reused evidence available at selection.

@@ -1,10 +1,26 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-08-31
+Last updated: 2026-09-01
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-046: NYC Family Stay-Area Live SERP Review
+
+Status: completed and review-clean as `FT-RES-025`; Bernoulli cycle-two `PASS` with no P0-P3; no page edit selected
+
+Selected: 2026-09-01 by the morning independent Family Tripwise pilot
+
+Three US-oriented formulations and representative local/firsthand, OTA, broad-publisher, independent family-guide, hotel-route, resident-family, and real-estate results were inspected. The broader `family neighborhood` boundary query mixes resident and travel intent; those residential results are excluded from visitor inventory conclusions. The bounded travel snapshot does not reveal a named page failure. Preserve the current five-area conditional decision, separate hotel-page role, and URL; promote no implementation candidate. Exact scope is the nine registered research/state paths, with no `site/**`, URL/search-state, external-action, or automation change.
+
+Expected artifact:
+
+- `docs/research/new-york-city-stay-area-live-serp-review-2026-09-01.md`
+
+Review result:
+
+- Cycle one found four P2s covering mixed intent, summary-only source overreach, review-state mirrors, and stale NYC GSC blockers. Cycle two verified all corrections and returned `PASS` with no P0-P3.
 
 ### SRR-045: Chicago Family Trip-Length Language Review
 
