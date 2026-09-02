@@ -3648,6 +3648,60 @@
       "review_summary": "Independent read-only reviewer James (01a06168-76c7-7423-8430-58011ce9cb0d) returned cycle-one FAIL for two P2s: the April record omitted that points/free-night economics decided the booking, and two phrases overclaimed prevalence/dominance. Cycle two found one remaining P2 in the stale success signal. Cycle three verified all corrections, the hard-constraint-first conditional rule, evidence/privacy boundaries, exact scope and QA, then returned PASS with no remaining P0-P3.",
       "result": "Completed and review-clean. Two of five questions begin with an open base plus loose or unordered cross-city anchors, but points and free-night economics decide one booking; only the other independently supports the unresolved sequencing state. Three controls already treat lodging as fixed or assumed and have sequenced days. Retain and narrow IMP-048 to one conditional route only after a hard property-constraint check and only when multiple viable bases remain. Preserve both pages and URLs; no site, URL/search state, external action or automation changed.",
       "notes": "Selected by the September 2 morning independent-pilot heartbeat as today's required current-parent-question learning unit and direct falsification of FT-RES-026 / IMP-048. This is the run's only substantive action and changes no public page."
+    },
+    {
+      "id": "FT-IMP-027",
+      "implementation_backlog_id": "IMP-048",
+      "title": "Add a conditional NYC itinerary-first recovery handoff",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "completed",
+      "selected_on": "2026-09-02",
+      "completed_on": "2026-09-02",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": [
+        "01a063cb-9126-7022-ac6f-3e6069e8a03c"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 4,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "backlog/implementation-backlog.md",
+        "backlog/seo-research-review-backlog.md",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "tools/new-york-city-stay-page.test.mjs",
+        "site/where-to-stay/new-york-city-with-kids.html",
+        "status/new-york-city-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The FT-RES-026 unordered-anchor case can recover from three plausible bases by finding a conditional itinerary handoff immediately after the existing five starts, while the known-days control remains direct and no extra decision layer is added.",
+      "production_invariant": "Change only the twelve registered paths. Add one compact conditional handoff after the existing five-start grid and before the existing area matrix. Preserve the title, H1, description, URL, canonical, indexability, one sitemap entry, five quick picks, five matrix rows, three booking cards, four cluster cards, three visible and schema FAQs, source list, image and existing ItemList. Deterministic generation must change only site/where-to-stay/new-york-city-with-kids.html. Add no section, area, hotel, attraction, recommender, filter, score, URL, schema entity, analytics, indexing request, external post/account action, outreach, destination, automation, firsthand/safety claim, exact route/stroller verdict or universal family-fit claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-02 and finalized conservatively through 2026-08-31: 1,937 property impressions, 3 clicks, aggregate average position 65.9, and 24 of 28 inspected URLs indexed. The NYC stay-area page has 53 impressions at page-average position 43.89, is indexed and was last crawled 2026-08-29; the itinerary has no performance row and is not indexed. The public snapshot has no aligned query cohort, so GSC is orientation and the pre-change crawl boundary only; the independently reproduced FT-RES-026 task gap plus FT-RES-027 current-question boundary select this usefulness edit.",
+      "acceptance_criteria": [
+        "Place one compact handoff immediately after the existing five starts, first asking whether points, free nights, room setup or price already decides the hotel or area.",
+        "Route to the existing NYC itinerary sibling only when multiple areas remain viable and the first two days are not sequenced; do not make itinerary drafting a prerequisite for the known-days path.",
+        "Improve the FT-RES-026 unordered-anchor case's recovery output from PARTIAL and late to YES and nearby while keeping all seven known-days-control outputs YES.",
+        "Preserve every production invariant, deterministic one-target generation, normal navigation and zero horizontal overflow at desktop, 390 by 844 and 320 by 800.",
+        "Pass focused and full native QA, operator-state, content-freshness, local and production SEO, public GSC validation/preflight, strict JSON, exact-scope/privacy/whitespace, independent read-only review with PASS or PASS_WITH_P3, Pages deployment, release-marker verification and all declared affected-URL production checks."
+      ],
+      "measurement_plan": "Rerun the FT-RES-026 unordered-anchor case and known-days control against the rendered page. The unordered case must encounter the recovery route immediately after the five starts and be able to sequence two days before returning to area choice; the control must continue through the five starts and matrix without a required detour. Measure route order and approximate viewport depth, exact conditional wording, section/card/link/schema/source/search invariants, generation scope, normal navigation and horizontal overflow at 1280 by 900, 390 by 844 and 320 by 800. Keep the August 29 crawl as the pre-change boundary; ranking or CTR interpretation requires a post-release crawl and sufficient aligned finalized query evidence.",
+      "qa_summary": "Focused NYC stay-page tests pass 4/4 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and pre-release production SEO report 0 errors and 0 warnings; all 51 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs. Deterministic generation changes only the target site page. Actual 1280 by 900, 390 by 844 and 320 by 800 browser runs have zero document overflow; the handoff fits its container and normal itinerary navigation succeeds.",
+      "review_summary": "Independent read-only reviewer Noether (01a063cb-9126-7022-ac6f-3e6069e8a03c) checked the complete twelve-path diff, conditional copy and placement, hard-constraint-first and known-days logic, fair proxy-task and viewport-depth claims, HTML/generator/test parity, escaping, navigation, one-target generation, page/search/schema/card/source invariants, privacy, state consistency, GSC classification and green QA. Cycle one returned PASS with no P0-P3 and modified no file or external state.",
+      "result": "Completed locally and review-clean. One optional recovery handoff now follows the five starts and precedes the matrix. It checks hard lodging constraints before routing only a still-unresolved multiple-area, unsequenced-days case to the existing itinerary. The unordered case's Recover result improves from PARTIAL and late to YES and nearby; the known-days control remains seven YES outputs. Release is pending.",
+      "notes": "Selected by the September 2 afternoon independent-pilot heartbeat as the apply step after completed LRN-015, FT-RES-026 and FT-RES-027. This is the run's only substantive action."
     }
   ]
 }

@@ -6,6 +6,8 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+Implementation follow-through: the separately selected `FT-IMP-027` / `IMP-048` action has implemented the narrowed conditional recovery locally. It checks hard lodging constraints first and links to the itinerary only when multiple areas remain viable and the first two days are unsequenced. Native and responsive QA pass; Noether cycle-one `PASS` leaves no P0-P3; release remains pending. The research actions below remain historical and did not themselves authorize a page edit.
+
 ### SRR-048: NYC Stay-Area Planning-Order Questions
 
 Status: completed, review-clean and pushed at `12ac8a3`; James cycle-three `PASS` with no remaining P0-P3; research/state only; no page edit selected

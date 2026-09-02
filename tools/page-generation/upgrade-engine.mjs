@@ -44,6 +44,12 @@ ${items.map(([label, pick, why]) => `          <article class="quick-pick">
         </div>`;
 }
 
+function renderQuickRecovery(recovery) {
+  if (!recovery) return "";
+  const [lead, beforeLink, href, linkLabel, afterLink] = recovery;
+  return `\n        <p class="review-label stay-quick-recovery"><strong>${esc(lead)}</strong> ${esc(beforeLink)} <a href="${esc(href)}">${esc(linkLabel)}</a> ${esc(afterLink)}</p>`;
+}
+
 function renderActivityComparison(rows, customHeaders, wrapperClass = "", options = {}) {
   const headers = customHeaders || ["Activity", "Best ages", "Time", "Cost", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"];
   const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
@@ -746,7 +752,7 @@ ${toolSection}      <section class="band rank-ready-section">
             <p class="eyebrow">Quick decision</p>
             <h2>${esc(page.quickHeading || (page.stayTool || page.constraintLed ? "Area hypotheses by family need" : "Best areas by family need"))}</h2>
           </div>
-${renderQuickPicks(page.quick)}
+${renderQuickPicks(page.quick)}${renderQuickRecovery(page.quickRecovery)}
         </div>
       </section>
 

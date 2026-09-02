@@ -1478,6 +1478,13 @@ export const stayPages = {
       ["Brooklyn waterfront route", "Brooklyn Heights / Downtown Brooklyn", "Use it when Brooklyn Bridge Park and Lower Manhattan are deliberate anchors, not when every day returns to Midtown."],
       ["Room-price or Queens access check", "Long Island City", "Treat value and convenience as hypotheses until the exact hotel, station, first two days, and complete stay total are compared."]
     ],
+    quickRecovery: [
+      "Still choosing between areas?",
+      "First check whether points, free nights, room setup, or the complete stay price already decides the hotel or area. If multiple areas still work and the first two days are not sequenced,",
+      "../family-itinerary/new-york-city-with-kids.html",
+      "sequence the first two days",
+      "before choosing the base."
+    ],
     matrixHeading: "Compare the area before the hotel",
     areaHeaders: ["Area", "Start here when", "What it simplifies", "Reset reality", "Main friction", "Nearby anchors", "Exact check"],
     rows: [

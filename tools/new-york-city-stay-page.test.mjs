@@ -47,12 +47,21 @@ test("uses one compact area-to-hotel flow without repeated or unsupported sectio
   const html = readFileSync(join(root, "site", target), "utf8");
 
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
+  assert.equal((html.match(/class="review-label stay-quick-recovery"/g) || []).length, 1);
   assert.equal((html.match(/<article class="detail-card research-card">/g) || []).length, 3);
   assert.equal((html.match(/<article class="activity-card">/g) || []).length, 4);
   assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
   assert.match(html, /Compare the area before the hotel/);
   assert.match(html, /12 family hotel options/);
   assert.match(html, /\.\/new-york-city-family-hotels\.html/);
+
+  const quickGrid = html.indexOf('class="quick-pick-grid"');
+  const recovery = html.indexOf('class="review-label stay-quick-recovery"');
+  const matrix = html.indexOf("Compare the area before the hotel");
+  assert.ok(quickGrid < recovery && recovery < matrix, "recovery route must follow the five starts and precede the matrix");
+  assert.match(html, /points, free nights, room setup, or the complete stay price already decides the hotel or area/);
+  assert.match(html, /If multiple areas still work and the first two days are not sequenced/);
+  assert.match(html, /<a href="\.\.\/family-itinerary\/new-york-city-with-kids\.html">sequence the first two days<\/a>/);
 
   for (const blocked of [
     "Best areas for families",

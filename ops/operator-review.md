@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-IMP-027` | completed locally and review-clean across the exact twelve registered paths; release pending | cycle-one `PASS`; no P0-P3 | Noether independently verified the optional hard-constraint-first handoff, known-days control, task/depth claims, exact scope, trust and GSC boundaries, generator behavior, page invariants, responsive behavior, and green QA. |
 | `FT-RES-027` | completed, review-clean and pushed at `12ac8a3`; exact ten-path research/state action; no page edit | cycle-three `PASS`; no remaining P0-P3 | Five current questions narrow unselected `IMP-048` to a route only after a hard property-constraint check and only when multiple viable bases remain. One open-base follow-up says points decide the booking; all prevalence, behavior, satisfaction, ranking, and user-testing claims remain prohibited. |
 | `FT-RES-026` | completed, review-clean and pushed at `ba33329`; research/state only | `PASS` | Galileo cycle one confirmed the `PARTIAL` unordered case, seven-`YES` control, proportional unselected `IMP-048`, exact ten-path/no-site scope, state, evidence boundaries, responsive task evidence, navigation, and QA with no P0-P3. |
 | `FT-RES-025` | completed, review-clean and pushed at `96c9df9` | `PASS` | Bernoulli cycle two closed all four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors, and stale NYC GSC blockers; no P0-P3 remains across the exact nine-path/no-site scope. |
@@ -73,6 +74,18 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-09-02 - `FT-IMP-027` conditional NYC itinerary recovery handoff
+
+**Reviewer:** Noether (`01a063cb-9126-7022-ac6f-3e6069e8a03c`), independent read-only implementation and release-gate reviewer
+
+**Verdict: cycle-one `PASS`; no P0-P3**
+
+- Exact twelve-path implementation adds one optional handoff immediately after the five starts and before the matrix. It first checks points, free nights, room setup, and complete stay price, then links only the unresolved multiple-area, unsequenced-days case to the existing itinerary.
+- The unordered case's `Recover` result improves from `PARTIAL` and late to `YES` and nearby; the known-days control remains seven `YES` outputs and has no required detour. The new route starts about 2.2, 2.9, and 3.5 viewports down at 1280 by 900, 390 by 844, and 320 by 800, versus the prior late route at about 5.0, 7.0, and 8.2.
+- Focused tests pass 4/4 and full tests pass 162/162. Operator-state, content-freshness, local/pre-release production SEO, all 51 public GSC snapshots, 28-URL public preflight, deterministic one-target generation, normal link navigation, zero document overflow at all three viewports, and whitespace checks pass.
+- Fresh September 2 API evidence is finalized through August 31 and remains orientation only. The rendered result is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, rank, or CTR evidence.
+- Noether independently checked the complete twelve-path diff, conditional copy and placement, hard-constraint-first and known-days logic, fair task/depth claims, HTML/generator/test parity, escaping and navigation, one-target generation, page/search/schema/card/source invariants, privacy, state consistency, GSC classification, and the full QA record. It returned `PASS` with no findings and modified no file or external state.
 
 ### 2026-09-02 - `FT-RES-027` NYC stay-area planning-order question review
 

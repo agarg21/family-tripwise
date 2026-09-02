@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-048: Surface The Itinerary-First Recovery Route
 
-Status: retained and narrowed as an unselected hypothesis by completed, review-clean `FT-RES-027`, pushed at `12ac8a3`; James cycle-three `PASS` with no remaining P0-P3; implementation is not authorized in the research action
+Status: completed locally and review-clean as `FT-IMP-027`; Noether cycle-one `PASS` with no P0-P3; release pending
 
 Target:
 
@@ -24,7 +24,14 @@ Smallest candidate, if the completed review and independent reviewer retain it:
 - Reuse the current itinerary-page role and wording boundary; do not add an area, hotel, recommender, filter, section, URL, or claim.
 - Keep the known-days start, five-area matrix, and current four-card cluster handoff unchanged unless a later selected implementation proves one small duplicate link reduces the unresolved task without creating repetition or an extra step for the control.
 
-Any implementation requires separate roadmap selection, exact placement/copy review, pre/post task scoring, full native QA, independent review, and the standard release gate.
+`FT-IMP-027` is the separate roadmap selection. Its exact twelve-path scope, acceptance criteria, measurement plan, and production invariants are registered in `ops/seo-roadmap.json`; the research action itself remains historical and did not authorize the edit.
+
+Local result before independent review:
+
+- One conditional handoff now follows the existing five starts and precedes the area matrix. It checks points, free nights, room setup, and complete stay price before linking an unresolved multiple-area, unsequenced-days case to the existing itinerary sibling.
+- The unordered case's `Recover` result improves from `PARTIAL` and late to `YES` and nearby. The known-days control remains `YES` across all seven steps because the handoff is optional and its five-start-plus-matrix path is unchanged.
+- The handoff begins about 2.2 desktop, 2.9 390-mobile, and 3.5 narrow-mobile viewports down, versus about 5.0, 7.0, and 8.2 for the existing cluster-card route. This is proxy-reviewed interface evidence, not user testing, behavior, satisfaction, ranking, or CTR evidence.
+- Focused tests pass 4/4 and the full suite passes 162/162. Operator-state, content-freshness, local and pre-release production SEO, all 51 public snapshot validations, 28-URL public preflight, deterministic one-target generation, normal navigation, exact 1280 by 900 / 390 by 844 / 320 by 800 containment, and whitespace checks pass. Noether (`01a063cb-9126-7022-ac6f-3e6069e8a03c`) independently returned cycle-one `PASS` with no P0-P3. Release remains pending.
 
 ## Candidate Chicago Itinerary Day-Count Distinction
 
