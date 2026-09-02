@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-02
 
-No user decision is required for review-clean `FT-IMP-027` / `IMP-048`. The separately selected implementation is limited to one optional NYC stay-page handoff after the existing five starts; it checks hard lodging constraints first and routes only an unresolved multiple-area, unsequenced-days case to the existing itinerary. Local QA passes, and Noether cycle-one `PASS` leaves no P0-P3. Release remains pending; no new URL, indexing request, external action, destination, or automation is involved.
+No user decision is required for completed `FT-IMP-027` / `IMP-048`. The implementation is limited to one optional NYC stay-page handoff after the existing five starts; it checks hard lodging constraints first and routes only an unresolved multiple-area, unsequenced-days case to the existing itinerary. Noether cycle-one `PASS` leaves no P0-P3. Commit `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce` is production-verified through successful Pages run `33680285894`; no new URL, indexing request, external action, destination, or automation is involved.
 
 No user decision is required for completed, review-clean `FT-RES-027` / `SRR-048`; James cycle-three `PASS` leaves no remaining P0-P3. The five-question sample retains and narrows unselected `IMP-048` to one nearby itinerary route only after a hard property constraint fails to decide the base, multiple viable bases remain, and the first days are not sequenced. This research does not authorize a page edit, new URL, indexing request, external action, destination, or automation change.
 
