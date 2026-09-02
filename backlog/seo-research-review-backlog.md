@@ -1,10 +1,34 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-01
+Last updated: 2026-09-02
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-048: NYC Stay-Area Planning-Order Questions
+
+Status: completed and review-clean; James cycle-three `PASS` with no remaining P0-P3; research/state only; no page edit selected
+
+Selected: 2026-09-02 by the morning independent Family Tripwise pilot
+
+Test the `FT-RES-026` falsification trigger with five current public family questions: whether the unresolved state recurs when a family has cross-city anchors but no day sequence or base, and whether families with fixed lodging or sequenced days would be interrupted by an unconditional itinerary-first route.
+
+Boundaries:
+
+- Research/state only across the ten registered paths; do not edit `site/**`, page copy, generators, tests, URLs, indexability, sitemap, schema, external accounts, posts, outreach, destinations, or automation.
+- Retain only source date/URL, paraphrased planning state, constraints, and answer job. Retain no usernames, copied thread text, personal data, demand or prevalence claim, firsthand claim, or invented user preference.
+- Classify each question as unordered anchors/open base, fixed base/unsequenced days, or fixed lodging/sequenced days. Conclude `REJECT`, `RETAIN`, or `NARROW` for unselected `IMP-048`; make no implementation in this action.
+
+Expected artifact:
+
+- `docs/research/new-york-city-stay-area-planning-order-questions-2026-09-02.md`
+
+Candidate result:
+
+- Retain and narrow unselected `IMP-048`. Two questions begin with an open base plus loose or unordered cross-city anchors, but one follow-up says points and free-night economics decide the booking; only the other independently supports the unresolved sequencing state. Three controls already treat lodging as fixed or assumed and have sequenced days.
+- The bounded result supports one nearby itinerary route only after checking whether a hard property constraint already decides the base and only when multiple viable bases remain. Preserve the known-days path, both pages, and both URLs; make no implementation in this action.
+- Treat the five records as qualitative examples only. They do not establish prevalence, demand, behavior, satisfaction, or user preference.
 
 ### SRR-047: NYC Stay-Area Choice Without A Drafted Itinerary
 

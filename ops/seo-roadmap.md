@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-01
+Last updated: 2026-09-02
 
 Last re-scored: 2026-08-27
 Next re-score due: 2026-09-03
@@ -15,6 +15,8 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
+- September 2 morning action: `FT-RES-027` / `SRR-048` is completed and review-clean; James cycle-three `PASS` leaves no remaining P0-P3. Two of five dated questions begin in an open-base/unordered-anchor state, but points and free-night economics decide one booking; only the other independently supports sequencing before area choice. Three controls already have fixed or assumed lodging plus sequenced days. Retain and narrow unselected `IMP-048` to a route shown only after a hard property-constraint check and only when multiple viable bases remain; no public page or search state changes.
+
 - September 1 afternoon action: `FT-RES-026` / `SRR-047` completed the live no-itinerary versus known-days task and was pushed at `ba33329`. Galileo cycle-one `PASS` leaves no P0-P3. The unordered case is `PARTIAL`, the control is `YES`, and unselected `IMP-048` is one nearby route to the existing itinerary sibling. The page and URL remain unchanged.
 
 - September 1 morning action: `FT-RES-025` / `SRR-046` completed the required live-SERP/ranking-page research for the existing NYC stay-area page and was pushed at `96c9df9`. Bernoulli cycle-two `PASS` closed four P2s and leaves no P0-P3. The supported decision is `PRESERVE`; exact scope is nine research/state paths, with no public page or search-state change.
@@ -25,7 +27,7 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 - The public-safe snapshot contains normalized aggregate, page, sitemap, and priority URL Inspection rows. It omits credentials, complete raw query exports, and country/device rows.
 - Historical protected exports remain outside this repository and are not consulted through the central operator during the independent pilot. Future manually requested encrypted exports decrypt only to `~/.codex/private/family-tripwise/protected-gsc-query-exports/`; complete rows never enter the repository.
 - The sitemap was successfully resubmitted on July 27 and still reports 28 discovered pages. Read-only URL Inspection in the August 30 snapshot found 24 indexed and four not indexed. The remaining not-indexed URLs are the San Diego all-ages and teen activity pages, New York City itinerary, and Chicago teen page.
-- The finalized 28-day property total is 2,013 impressions, 3 clicks, 0.15% CTR, and aggregate average position 65.61. The public snapshot still has no aligned query cohort. These rolling page/property averages do not identify a CTR problem, ranking failure, or user-facing deficiency.
+- The finalized 28-day property total is 1,913 impressions, 3 clicks, 0.16% CTR, and aggregate average position 65.83. The public snapshot still has no aligned query cohort. These rolling page/property averages do not identify a CTR problem, ranking failure, or user-facing deficiency.
 - URL Inspection records a successful August 25 13:39 UTC crawl of the indexed San Diego family-hotel page after `FT-IMP-023`. This is the last pre-`FT-IMP-024` crawl boundary; ranking or CTR interpretation still requires sufficient finalized aligned query evidence and a later post-change crawl.
 - August 13 evening run: public health, snapshot validation, production SEO, freshness and community-queue checks found no new defect, unfinished release, user feedback, or evidence-qualified existing-page action. No substantive action was selected.
 - August 14 afternoon run: the fresh snapshot, public health, production SEO, freshness, repository state, and community queue identify no defect or evidence-qualified page change. The new San Diego hotel crawl is a measurement boundary, so no substantive action was selected.

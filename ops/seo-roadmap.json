@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-01",
+  "last_updated": "2026-09-02",
   "last_rescored_on": "2026-08-27",
   "next_rescore_due": "2026-09-03",
   "planning_horizon_days": 28,
@@ -3594,6 +3594,59 @@
       "review_summary": "Independent read-only reviewer Galileo (01a05df6-6287-7613-9019-d325b985a804) returned cycle-one PASS with no P0-P3. The reviewer independently reproduced the task scores, proportional IMP-048 boundary, fresh GSC figures, exact scope, state, QA, actual viewports, contained mobile table, zero root overflow, and successful sibling navigation; 1-3px rendering differences do not affect rounded depth conclusions.",
       "result": "Completed and review-clean. The unordered-anchor case is PARTIAL: the page narrows five areas to Upper West Side, Midtown and Downtown but cannot choose two or a stable provisional base without sequencing the first two days. The known-days control is YES across all seven protocol steps. The itinerary route works but begins about 5.0 desktop, 7.0 390-mobile and 8.2 narrow-mobile viewports down. Preserve the page and retain only unselected IMP-048, one nearby itinerary-first recovery route. No site, URL/search state, external action or automation changed.",
       "notes": "Selected by the September 1 afternoon independent-pilot heartbeat as today's apply/deepen step after completed FT-RES-025 and LRN-013. This is the run's only substantive action and changes no public page."
+    },
+    {
+      "id": "FT-RES-027",
+      "research_backlog_id": "SRR-048",
+      "title": "Test when NYC families need an itinerary-first stay-area route",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-02",
+      "completed_on": "2026-09-02",
+      "review_outcome": "PASS",
+      "review_cycles": 3,
+      "reviewer_agent_ids": [
+        "01a06168-76c7-7423-8430-58011ce9cb0d"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-stay-area-planning-order-questions-2026-09-02.md",
+        "backlog/implementation-backlog.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/new-york-city-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A source-dated sample of three to five current public NYC family questions distinguishes open-base cases resolved by hard lodging constraints from unresolved multiple-base cases that may need itinerary sequencing, while preserving the direct path for known days or fixed lodging.",
+      "production_invariant": "Research and state only across the ten registered paths. Do not change site/**, generators, tests, page copy, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Retain no usernames, copied thread text or personal data; make no demand, prevalence, behavior, satisfaction, firsthand, safety, exact-route/stroller or firm family-fit claim.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-09-01 and finalized through 2026-08-30: 1,913 property impressions, 3 clicks, aggregate average position 65.83, and 24 of 28 inspected URLs indexed. The NYC stay-area page has 51 impressions at page-average position 44.33, is indexed, and was last crawled 2026-08-29; the itinerary has no performance row and is not indexed. The public snapshot has no aligned query cohort, so GSC is orientation and a crawl boundary only; FT-RES-026's explicit current-question falsification trigger selects this research.",
+      "acceptance_criteria": [
+        "Inspect three to five current public parent or family questions and retain only source date/URL, paraphrased planning state, decision constraints, and the work a useful answer must perform.",
+        "Classify whether each family has unordered anchors and an open base, a fixed base but unsequenced days, or fixed lodging plus sequenced days; do not infer a universal planning order from the bounded sample.",
+        "Test whether unselected IMP-048 should be rejected, retained, or narrowed, including whether a conditional nearby route can help the unresolved state without interrupting the known-days task.",
+        "Preserve both URLs and make no page edit in this action; add no area, hotel, attraction, itinerary, recommender, filter, section, claim or URL.",
+        "Pass focused and full native QA, public GSC validation/preflight, JSON/privacy/scope/link checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Count only the five inspected planning states, not demand or prevalence. Retain IMP-048 only if at least one current question and the existing FT-RES-026 task reproduce a multiple-base unordered-anchor state after hard property constraints are checked; narrow or reject it when points, free nights, room inventory or another non-negotiable decides the base, when days are already sequenced, or when the route would interrupt the known-days control. Any implementation requires a separately selected action and pre/post task validation.",
+      "qa_summary": "Focused NYC stay-page tests pass 4/4 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 50 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs. Strict JSON has 77 unique action IDs. Exact ten-path/no-site scope, September 1 GSC arithmetic and human mirror, privacy/credential and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer James (01a06168-76c7-7423-8430-58011ce9cb0d) returned cycle-one FAIL for two P2s: the April record omitted that points/free-night economics decided the booking, and two phrases overclaimed prevalence/dominance. Cycle two found one remaining P2 in the stale success signal. Cycle three verified all corrections, the hard-constraint-first conditional rule, evidence/privacy boundaries, exact scope and QA, then returned PASS with no remaining P0-P3.",
+      "result": "Completed and review-clean. Two of five questions begin with an open base plus loose or unordered cross-city anchors, but points and free-night economics decide one booking; only the other independently supports the unresolved sequencing state. Three controls already treat lodging as fixed or assumed and have sequenced days. Retain and narrow IMP-048 to one conditional route only after a hard property-constraint check and only when multiple viable bases remain. Preserve both pages and URLs; no site, URL/search state, external action or automation changed.",
+      "notes": "Selected by the September 2 morning independent-pilot heartbeat as today's required current-parent-question learning unit and direct falsification of FT-RES-026 / IMP-048. This is the run's only substantive action and changes no public page."
     }
   ]
 }

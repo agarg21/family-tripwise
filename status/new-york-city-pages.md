@@ -1,6 +1,6 @@
 # New York City Page Status
 
-Last updated: 2026-09-01
+Last updated: 2026-09-02
 
 Sources:
 
@@ -18,6 +18,10 @@ Fresh read-only URL Inspection reports the all-ages and stay-area pages indexed.
 ## September 1 Research Overlay
 
 Fresh September 1 API evidence is finalized through August 30. The stay-area page has 51 impressions at page-average position 44.33, is indexed, and was last crawled August 29; the public snapshot has no aligned query cohort, so it remains orientation rather than an edit trigger. `FT-RES-025` / `SRR-046` inspected three live US-oriented family stay-area formulations and representative result pages. The result is `PRESERVE`: the current page directly handles the tested first-two-day, reset, friction, exact-access-check and named-hotel-handoff task. Bernoulli cycle-two `PASS` leaves no P0-P3. Afternoon `FT-RES-026` / `SRR-047` deepens that result: the unordered-anchor case is `PARTIAL`, the first-two-days-known control is `YES`, and the correct itinerary recovery route works but is late. Galileo cycle-one `PASS` leaves no P0-P3. Preserve the page and retain only unselected `IMP-048`; no page edit, new area inventory, URL or search-state change is selected.
+
+## September 2 Research Overlay
+
+Completed, review-clean `FT-RES-027` / `SRR-048` current-question research has James cycle-three `PASS` with no remaining P0-P3. Five public family questions dated January-June 2026 split into two initial planning states: two begin with an open base plus loose or unordered cross-city anchors, but points and free-night economics decide one booking; only the other independently supports the unresolved sequencing state. Three already treat lodging as fixed or assumed and have sequenced days. Retain and narrow unselected `IMP-048` to a nearby itinerary route only after a hard property-constraint check and only when multiple viable bases remain; do not make it a prerequisite for the known-days path. This is qualitative evidence, not demand, prevalence, behavior, satisfaction, or user testing. Both pages and URLs remain unchanged.
 
 ## Pages
 

@@ -1,6 +1,6 @@
 # Implementation Backlog
 
-Last updated: 2026-09-01
+Last updated: 2026-09-02
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-048: Surface The Itinerary-First Recovery Route
 
-Status: retained as an unselected hypothesis under review-clean `FT-RES-026`, pushed at `ba33329`; Galileo cycle-one `PASS`; implementation is not authorized in the research action
+Status: retained and narrowed as an unselected hypothesis by review-clean `FT-RES-027`; James cycle-three `PASS` with no remaining P0-P3; implementation is not authorized in the research action
 
 Target:
 
@@ -16,11 +16,13 @@ Target:
 
 The September 1 live task tests a first-time family with an unordered must-do set spanning the Upper West Side, Midtown, and Lower Manhattan plus a likely midday reset. The five starts and matrix expose the relevant tradeoffs, but the family cannot reduce the three plausible bases or make a defensible provisional choice until it sequences the first two days. The correct itinerary sibling route exists, but it follows the matrix, three deeper notes, and the first three cluster cards.
 
+The September 2 current-question sample narrows the candidate. Two questions start with an open base plus loose or unordered cross-city anchors, but one follow-up says points and free-night economics decide the downtown booking before sequencing; only the other remains a multiple-base sequencing case. Three controls already have fixed or assumed lodging plus sequenced days and need route, overload, verification, or removal help. This bounded split is qualitative and not a prevalence claim. The recovery route must follow a quick hard-constraint check and remain conditional rather than a universal prerequisite.
+
 Smallest candidate, if the completed review and independent reviewer retain it:
 
-- Add one compact itinerary-first recovery link beside the existing five-start decision for families whose first two days are not yet sequenced.
+- Add one compact, explicitly conditional itinerary-first recovery link beside the existing five-start decision only when no hard property constraint already decides the base, multiple viable bases remain, and the first two days are not yet sequenced.
 - Reuse the current itinerary-page role and wording boundary; do not add an area, hotel, recommender, filter, section, URL, or claim.
-- Keep the five-area matrix and the current four-card cluster handoff unchanged unless a later selected implementation proves one small move or duplicate link reduces the failed task without creating repetition.
+- Keep the known-days start, five-area matrix, and current four-card cluster handoff unchanged unless a later selected implementation proves one small duplicate link reduces the unresolved task without creating repetition or an extra step for the control.
 
 Any implementation requires separate roadmap selection, exact placement/copy review, pre/post task scoring, full native QA, independent review, and the standard release gate.
 

@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-027` | completed and review-clean across the exact ten registered paths; no page edit | cycle-three `PASS`; no remaining P0-P3 | Five current questions narrow unselected `IMP-048` to a route only after a hard property-constraint check and only when multiple viable bases remain. One open-base follow-up says points decide the booking; all prevalence, behavior, satisfaction, ranking, and user-testing claims remain prohibited. |
 | `FT-RES-026` | completed, review-clean and pushed at `ba33329`; research/state only | `PASS` | Galileo cycle one confirmed the `PARTIAL` unordered case, seven-`YES` control, proportional unselected `IMP-048`, exact ten-path/no-site scope, state, evidence boundaries, responsive task evidence, navigation, and QA with no P0-P3. |
 | `FT-RES-025` | completed, review-clean and pushed at `96c9df9` | `PASS` | Bernoulli cycle two closed all four P2s covering mixed resident/travel intent, summary-only source overreach, review-state mirrors, and stale NYC GSC blockers; no P0-P3 remains across the exact nine-path/no-site scope. |
 | `FT-IMP-026` | released and production-verified at `d8f178c7982abfe0cd2464c103a860d2558cd3df` | `PASS` | Kepler cycle two closed the sole P2; successful Pages run `33438625886`, matching marker, production SEO, and declared invariants verified. |
@@ -72,6 +73,18 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-09-02 - `FT-RES-027` NYC stay-area planning-order question review
+
+**Reviewer:** James (`01a06168-76c7-7423-8430-58011ce9cb0d`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-three `PASS`; no remaining P0-P3**
+
+- Cycle one found two P2s: the April record omitted that points and free-night economics ultimately decided the booking, and `commonly` / `dominant` overclaimed what a purposive five-question sample could establish.
+- The corrected result keeps the two-versus-three initial-state count bounded, treats April as mixed/contradictory for itinerary recovery, and requires a hard property-constraint check before any route is considered.
+- Cycle two found one remaining P2 in the registered success signal, which still implied unordered anchors universally needed sequencing first. The corrected signal distinguishes hard-constraint resolution from an unresolved multiple-base sequencing state.
+- Cycle three verified every correction, the proportional conditional `IMP-048` boundary, exact ten-path/no-site scope, privacy, September 1 GSC figures and limits, and green QA.
+- Focused tests pass 4/4 and full tests pass 162/162. Operator-state, content-freshness, local/production SEO, all 50 public GSC snapshots, 28-URL public preflight, strict JSON with 77 unique action IDs, exact scope, GSC mirror, privacy and whitespace checks pass.
 
 ### 2026-09-01 - `FT-RES-026` NYC stay-area no-itinerary task review
 
