@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-048: Surface The Itinerary-First Recovery Route
 
-Status: retained and narrowed as an unselected hypothesis by review-clean `FT-RES-027`; James cycle-three `PASS` with no remaining P0-P3; implementation is not authorized in the research action
+Status: retained and narrowed as an unselected hypothesis by completed, review-clean `FT-RES-027`, pushed at `12ac8a3`; James cycle-three `PASS` with no remaining P0-P3; implementation is not authorized in the research action
 
 Target:
 

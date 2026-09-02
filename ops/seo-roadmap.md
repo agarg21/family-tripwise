@@ -15,7 +15,7 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
-- September 2 morning action: `FT-RES-027` / `SRR-048` is completed and review-clean; James cycle-three `PASS` leaves no remaining P0-P3. Two of five dated questions begin in an open-base/unordered-anchor state, but points and free-night economics decide one booking; only the other independently supports sequencing before area choice. Three controls already have fixed or assumed lodging plus sequenced days. Retain and narrow unselected `IMP-048` to a route shown only after a hard property-constraint check and only when multiple viable bases remain; no public page or search state changes.
+- September 2 morning action: `FT-RES-027` / `SRR-048` is completed, review-clean and pushed at `12ac8a3`; James cycle-three `PASS` leaves no remaining P0-P3. Two of five dated questions begin in an open-base/unordered-anchor state, but points and free-night economics decide one booking; only the other independently supports sequencing before area choice. Three controls already have fixed or assumed lodging plus sequenced days. Retain and narrow unselected `IMP-048` to a route shown only after a hard property-constraint check and only when multiple viable bases remain; no public page or search state changes.
 
 - September 1 afternoon action: `FT-RES-026` / `SRR-047` completed the live no-itinerary versus known-days task and was pushed at `ba33329`. Galileo cycle-one `PASS` leaves no P0-P3. The unordered case is `PARTIAL`, the control is `YES`, and unselected `IMP-048` is one nearby route to the existing itinerary sibling. The page and URL remain unchanged.
 
