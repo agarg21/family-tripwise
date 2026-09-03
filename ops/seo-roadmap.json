@@ -3765,6 +3765,7 @@
       "status": "completed",
       "selected_on": "2026-09-03",
       "completed_on": "2026-09-03",
+      "action_commit": "67cf0aaf185d27d0a59ab097a87aa9158c786cd5",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_agent_ids": [
@@ -3810,7 +3811,7 @@
       "qa_summary": "Focused structured parsing reproduces all four target link tuples in local and production output and verifies their sitemap, canonical and HTML-indexability state. Full repository tests pass 162/162; operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 52 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs. Strict JSON has 80 unique action IDs; exact eleven-path/no-site scope, privacy, forbidden-field and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Dewey (01a068e8-828c-7473-a8ed-3aa7eb0c6265) returned cycle-one FAIL for one P2 universal-control overstatement. The correction says the targets are not uniquely or consistently weaker, records that New York City itinerary trails the six-source San Diego control while tying three others and the best indexed-source count, and identifies the all-ages indexed-source difference as mechanical self-exclusion. Cycle two independently reproduced all GSC, technical, graph, anchor, control and chronology evidence, verified the correction and green QA, and returned PASS with no P0-P3. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. The internal-link-deficit hypothesis is rejected: the four unknown URLs have 4, 4, 27 and 4 distinct inbound sources, every target has homepage and contextual destination routes, and the target set is not uniquely or consistently weaker than indexed same-role controls. All targets are live 200, self-canonical, indexable, robots-allowed and present once in the successful sitemap. Preserve every page and link; promote no implementation and do not request indexing.",
-      "notes": "Selected by the September 3 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-028 / LRN-016. This is the run's only substantive action. Exact scope is eleven research/state paths with no site, link, URL/search-state, external-action, destination or automation change. Docs-only release is pending; no Pages wait applies."
+      "notes": "Selected by the September 3 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-028 / LRN-016. This is the run's only substantive action. Exact scope is eleven research/state paths with no site, link, URL/search-state, external-action, destination or automation change. Docs-only action commit 67cf0aaf185d27d0a59ab097a87aa9158c786cd5 is pushed to main; no Pages wait applies."
     }
   ]
 }

@@ -8,7 +8,7 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ### SRR-050: Unindexed Page Internal-Discovery Audit
 
-Status: completed and review-clean; Dewey cycle-two `PASS` with no P0-P3; research/state only
+Status: completed, review-clean, and docs-only pushed at `67cf0aa`; Dewey cycle-two `PASS` with no P0-P3; research/state only
 
 Selected: 2026-09-03 by the afternoon independent Family Tripwise pilot
 

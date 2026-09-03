@@ -14,7 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
-| `FT-RES-029` | completed and review-clean; exact eleven-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Dewey confirmed the graph counts and technical evidence, rejected the cycle-one universal `equal or weaker` wording, then verified the corrected not-uniquely-or-consistently-weaker conclusion and explicit NYC/San Diego control exceptions. Decision is `PRESERVE`, with no link edit or indexing request. |
+| `FT-RES-029` | completed, review-clean, and docs-only pushed at `67cf0aa`; exact eleven-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Dewey confirmed the graph counts and technical evidence, rejected the cycle-one universal `equal or weaker` wording, then verified the corrected not-uniquely-or-consistently-weaker conclusion and explicit NYC/San Diego control exceptions. Decision is `PRESERVE`, with no link edit or indexing request. |
 | `FT-RES-028` | completed, review-clean, and docs-only pushed at `d2272b4`; no page edit | cycle-two `PASS`; no P0-P3 | Hilbert cycle one found three P2s in family/stay classification, exact-set arithmetic, and table structure. Cycle two independently reproduced 1,123 role-aligned impressions at position 72.75, 166 strict exact tracked impressions, all 26 complete comparison rows, evidence boundaries, exact scope, privacy, and green QA. |
 | `FT-IMP-027` | released and production-verified at `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce` | cycle-one `PASS`; no P0-P3 | Noether independently verified the optional hard-constraint-first handoff, known-days control, task/depth claims, exact scope, trust and GSC boundaries, generator behavior, page invariants, responsive behavior, and green QA. Successful Pages run `33680285894`, matching marker, production SEO, and target invariants verified. |
 | `FT-RES-027` | completed, review-clean and pushed at `12ac8a3`; exact ten-path research/state action; no page edit | cycle-three `PASS`; no remaining P0-P3 | Five current questions narrow unselected `IMP-048` to a route only after a hard property-constraint check and only when multiple viable bases remain. One open-base follow-up says points decide the booking; all prevalence, behavior, satisfaction, ranking, and user-testing claims remain prohibited. |
@@ -88,6 +88,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - Dewey independently reproduced the September 3 snapshot and exact four unknown URLs, live response/canonical/noindex/robots/sitemap state, local and production graph counts, anchors, matched controls, and Git chronology.
 - Full tests pass 162/162. Operator-state, content-freshness, local/production SEO, all 52 public GSC snapshots, 28-URL preflight, strict JSON with 80 unique IDs, exact eleven-path/no-site scope, privacy, and whitespace checks pass.
 - The action preserves all pages and links, promotes no implementation, requests no indexing, and makes no external change. The reviewer remained read-only and changed no file or external state.
+- Reviewed docs-only action commit `67cf0aaf185d27d0a59ab097a87aa9158c786cd5` is pushed to `main`; no Pages wait applies.
 
 ### 2026-09-03 - `FT-RES-028` GSC impressions versus researched demand
 
