@@ -3716,6 +3716,7 @@
       "status": "completed",
       "selected_on": "2026-09-03",
       "completed_on": "2026-09-03",
+      "action_commit": "d2272b499e2fadaf83bed5a3e6a50b26d9f9724e",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_agent_ids": [
@@ -3753,7 +3754,7 @@
       "qa_summary": "Full repository tests pass 162/162. Operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 51 public GSC snapshots validate. The protected aggregate/table check reproduces 1,123 role-aligned impressions at position 72.75, 166 strict exact tracked impressions, and all 26 complete eight-cell comparison rows. Strict JSON has 79 unique action IDs; exact eight-path/no-site scope, privacy, credential-field, newline, and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Hilbert (01a0668a-4920-7f90-98b1-45c7385f5899) returned cycle-one FAIL for three P2s in family/stay classification, exact tracked-phrase arithmetic, and one incomplete table row. Cycle two independently reproduced every corrected total, all public rows/anchors/ratios, GSC aggregation and privacy boundaries, exact scope and green QA, then returned PASS with no P0-P3 and changed no file or external state.",
       "result": "Completed and review-clean. Current impressions are not proportional to researched demand as demand capture: only 166 disclosed impressions match maintained exact tracked phrases, while 1,123 role-aligned disclosed impressions average position 72.75 and four meaningful-demand pages remain not indexed. Property, page and query groupings are non-additive. Preserve every page and repeat only after an indexing change, material aligned-position movement, a like-for-like US demand refresh, or the doctrine's CTR gate is met.",
-      "notes": "Selected by the September 3 morning independent-pilot heartbeat as today's required evidence-audit learning unit and to answer the user's unresolved demand-versus-impressions question. This is the run's only substantive action. The scheduled weekly re-score is performed in the same state transaction; no open item score or status changes because Orlando remains explicitly user-gated and no evidence supports a new page action. Docs-only push is pending."
+      "notes": "Selected by the September 3 morning independent-pilot heartbeat as today's required evidence-audit learning unit and to answer the user's unresolved demand-versus-impressions question. This is the run's only substantive action. The scheduled weekly re-score is performed in the same state transaction; no open item score or status changes because Orlando remains explicitly user-gated and no evidence supports a new page action. Docs-only action commit d2272b499e2fadaf83bed5a3e6a50b26d9f9724e is pushed to main; no Pages wait applies."
     }
   ]
 }
