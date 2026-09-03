@@ -6,6 +6,35 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-050: Unindexed Page Internal-Discovery Audit
+
+Status: completed and review-clean; Dewey cycle-two `PASS` with no P0-P3; research/state only
+
+Selected: 2026-09-03 by the afternoon independent Family Tripwise pilot
+
+Test whether Chicago teens, the New York City itinerary, San Diego all-ages activities, or San Diego teens has materially weaker internal discovery paths than indexed pages with the same role.
+
+Boundaries:
+
+- Use the fresh September 3 GSC URL Inspection and sitemap state, a structured local/live link graph, public technical checks, and Git chronology.
+- Separate source count, indexed-source count, homepage presence, contextual links, and public technical state from Google's unknown crawl/index state.
+- Make no page, link, URL, sitemap, canonical, indexability, indexing-request, external-action, destination, or automation change. Promote at most one bounded later implementation only if a concrete comparative defect exists.
+
+Expected artifact:
+
+- `docs/research/unindexed-page-internal-discovery-audit-2026-09-03.md`
+
+Candidate result:
+
+- Reject the internal-link-deficit hypothesis. Chicago teens and the New York City itinerary each have four distinct inbound sources, all indexed. San Diego all-ages has all 27 possible sources, 24 indexed. San Diego teens has four sources, three indexed. Every target has a homepage route plus contextual sibling routes. The targets are not uniquely or consistently weaker: the NYC itinerary ties three controls on total sources, trails San Diego's six-source itinerary, and ties the highest indexed-source count; every all-ages page has the same 27-source topology.
+- All four targets are live `200`, self-canonical, indexable, robots-allowed, and present exactly once in the successful 28-URL sitemap. Local and production target counts match.
+- Preserve all four pages and their current links. Promote no implementation candidate and do not request indexing. Reopen only for a crawl/index change, a link-graph or sitemap regression, or a verified fetch/canonical/robots/response/rendering defect.
+
+QA and review:
+
+- Focused local/production graph reproduction, full 162/162 tests, operator-state, freshness, local/production SEO, all 52 public snapshots, 28-URL preflight, strict 80-ID JSON, exact eleven-path/no-site scope, privacy, and whitespace checks pass.
+- Dewey (`01a068e8-828c-7473-a8ed-3aa7eb0c6265`) cycle one found one P2 universal-control overstatement. The correction records that NYC itinerary trails San Diego's six-source control while tying three others, and that the all-ages indexed-source difference is mechanical self-exclusion. Cycle two returned `PASS` with no P0-P3.
+
 ### SRR-049: GSC Exposure Versus Researched Keyword Demand
 
 Status: completed, review-clean, and pushed at `d2272b4`; Hilbert cycle-two `PASS` with no P0-P3; research/state only

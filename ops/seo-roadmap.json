@@ -3755,6 +3755,62 @@
       "review_summary": "Independent read-only reviewer Hilbert (01a0668a-4920-7f90-98b1-45c7385f5899) returned cycle-one FAIL for three P2s in family/stay classification, exact tracked-phrase arithmetic, and one incomplete table row. Cycle two independently reproduced every corrected total, all public rows/anchors/ratios, GSC aggregation and privacy boundaries, exact scope and green QA, then returned PASS with no P0-P3 and changed no file or external state.",
       "result": "Completed and review-clean. Current impressions are not proportional to researched demand as demand capture: only 166 disclosed impressions match maintained exact tracked phrases, while 1,123 role-aligned disclosed impressions average position 72.75 and four meaningful-demand pages remain not indexed. Property, page and query groupings are non-additive. Preserve every page and repeat only after an indexing change, material aligned-position movement, a like-for-like US demand refresh, or the doctrine's CTR gate is met.",
       "notes": "Selected by the September 3 morning independent-pilot heartbeat as today's required evidence-audit learning unit and to answer the user's unresolved demand-versus-impressions question. This is the run's only substantive action. The scheduled weekly re-score is performed in the same state transaction; no open item score or status changes because Orlando remains explicitly user-gated and no evidence supports a new page action. Docs-only action commit d2272b499e2fadaf83bed5a3e6a50b26d9f9724e is pushed to main; no Pages wait applies."
+    },
+    {
+      "id": "FT-RES-029",
+      "research_backlog_id": "SRR-050",
+      "title": "Audit internal discovery paths for the four unindexed cluster pages",
+      "kind": "research",
+      "lane": "existing-page-discovery",
+      "status": "completed",
+      "selected_on": "2026-09-03",
+      "completed_on": "2026-09-03",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a068e8-828c-7473-a8ed-3aa7eb0c6265"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": true,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/chicago-with-teens.html",
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-teens.html"
+      ],
+      "target_paths": [
+        "docs/research/unindexed-page-internal-discovery-audit-2026-09-03.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "status/chicago-pages.md",
+        "status/new-york-city-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A source-dated comparison determines whether any of the four pages that remain unknown to Google has materially weaker internal discovery support than indexed pages with the same role, separating link count and placement from sitemap, canonical, robots, live-response and external-authority limits.",
+      "production_invariant": "Research and state only across the eleven registered paths. Do not change site/**, generators, tests, page copy, internal links, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Do not claim that internal links cause indexation or that healthy links prove Google discovery; do not commit credentials, complete raw query rows, country/device rows or personal data.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-03 and finalized conservatively through 2026-09-01: 1,991 property impressions, 3 clicks, aggregate average position 65.8, and 24 of 28 inspected URLs indexed. The same Chicago teen, New York City itinerary, San Diego all-ages and San Diego teen URLs remain unknown to Google with no crawl time or performance row; sitemap state is Success with 28 discovered pages and a 2026-07-27 last-read date. The public snapshot has no aligned query cohort, so it establishes current discovery state only.",
+      "acceptance_criteria": [
+        "Verify live 200, self-canonical, indexable markup, robots allowance and single sitemap membership for all four target URLs without requesting indexing.",
+        "Count distinct indexable internal source pages, classify navigation versus contextual links and record anchor and source-role coverage for each target using the current repository output.",
+        "Compare every target with indexed controls of the same page role and distinguish a material internal-discovery deficit from an unsupported causal inference.",
+        "Conclude PRESERVE or retain at most one bounded later implementation candidate; make no page, link, URL, sitemap, indexability or external-state change in this transaction.",
+        "Pass focused reproducibility, full native QA, strict JSON, exact-scope/privacy/whitespace checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Build a reproducible link graph from current canonical indexable sitemap HTML pages, resolving relative links to canonical production URLs and deduplicating source-target pairs. For each target and matched indexed role control, record distinct inbound source count, sitewide-navigation presence, home-page presence, destination-sibling context and anchor coverage. Cross-check live response, canonical, robots and sitemap state plus fresh URL Inspection. Treat the result as an internal-discovery audit, not an indexation experiment; reassess only after a crawl/index state change or a separately selected reviewed link fix.",
+      "qa_summary": "Focused structured parsing reproduces all four target link tuples in local and production output and verifies their sitemap, canonical and HTML-indexability state. Full repository tests pass 162/162; operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 52 public GSC snapshots validate; public preflight is healthy for sitemap, robots and all 28 configured URLs. Strict JSON has 80 unique action IDs; exact eleven-path/no-site scope, privacy, forbidden-field and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Dewey (01a068e8-828c-7473-a8ed-3aa7eb0c6265) returned cycle-one FAIL for one P2 universal-control overstatement. The correction says the targets are not uniquely or consistently weaker, records that New York City itinerary trails the six-source San Diego control while tying three others and the best indexed-source count, and identifies the all-ages indexed-source difference as mechanical self-exclusion. Cycle two independently reproduced all GSC, technical, graph, anchor, control and chronology evidence, verified the correction and green QA, and returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean. The internal-link-deficit hypothesis is rejected: the four unknown URLs have 4, 4, 27 and 4 distinct inbound sources, every target has homepage and contextual destination routes, and the target set is not uniquely or consistently weaker than indexed same-role controls. All targets are live 200, self-canonical, indexable, robots-allowed and present once in the successful sitemap. Preserve every page and link; promote no implementation and do not request indexing.",
+      "notes": "Selected by the September 3 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-028 / LRN-016. This is the run's only substantive action. Exact scope is eleven research/state paths with no site, link, URL/search-state, external-action, destination or automation change. Docs-only release is pending; no Pages wait applies."
     }
   ]
 }
