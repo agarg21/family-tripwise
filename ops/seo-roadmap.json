@@ -2,9 +2,9 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-02",
-  "last_rescored_on": "2026-08-27",
-  "next_rescore_due": "2026-09-03",
+  "last_updated": "2026-09-03",
+  "last_rescored_on": "2026-09-03",
+  "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
   "maintenance": {
     "after_every_run": "The independent Master updates only the selected direct-manual/autopilot item's repository evidence. Each Eastern calendar day must complete at least one bounded learning unit unless the pilot has ended or a recorded hard blocker prevents evidence collection; a second run may no-op after that daily unit is complete when no further evidence-qualified action exists.",
@@ -3706,6 +3706,54 @@
       "released_at": "2026-09-02T20:36:53Z",
       "result": "Released and production-verified at commit ac5a68d94ebcaeed08349d30a67fcdbec0f88fce through successful Pages run 33680285894. One optional recovery handoff follows the five starts and precedes the matrix. It checks hard lodging constraints before routing only a still-unresolved multiple-area, unsequenced-days case to the existing itinerary. The unordered case's Recover result improves from PARTIAL and late to YES and nearby; the known-days control remains seven YES outputs. The live marker, production SEO and all declared target invariants pass.",
       "notes": "Selected by the September 2 afternoon independent-pilot heartbeat as the apply step after completed LRN-015, FT-RES-026 and FT-RES-027. This is the run's only substantive action."
+    },
+    {
+      "id": "FT-RES-028",
+      "research_backlog_id": "SRR-049",
+      "title": "Compare current GSC exposure with researched keyword demand",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-03",
+      "completed_on": "2026-09-03",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a0668a-4920-7f90-98b1-45c7385f5899"
+      ],
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": true,
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/gsc-impressions-vs-researched-demand-2026-09-03.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A source-dated portfolio comparison answers whether recent impressions are directionally consistent with researched keyword demand while separating exact tracked-query exposure, broader role-aligned query exposure, page totals, indexing state and average position instead of treating any one ratio as traffic share.",
+      "production_invariant": "Research and state only across the eight registered paths. Do not change site/**, generators, tests, page copy, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Do not commit or reproduce credentials, complete raw query rows, country/device rows, personal data, or unsupported rank, traffic-share, causality, demand-validation or user-behavior claims.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-02 and finalized conservatively through 2026-08-31: 1,937 property impressions, 3 clicks, aggregate average position 65.9, and 24 of 28 inspected URLs indexed. A fresh protected page-query export was collected read-only on 2026-09-03 for the same August 4-31 window through successful GitHub Actions run 33736746095 and decrypted only outside the repository. Its 476 complete rows may support public-safe aggregate conclusions, but no raw query, country/device or personal data may enter the repository.",
+      "acceptance_criteria": [
+        "Compare all 26 destination-cluster pages against one conservative researched monthly anchor or explicit range per page role; do not sum overlapping keyword variants or treat unavailable values as zero.",
+        "Separate public page impressions, privately aggregated disclosed query impressions, role-aligned cohort impressions and exact tracked-phrase impressions; record anonymous-query omission, geography, provider-estimate and ranking/exposure limitations.",
+        "State whether the current distribution is directionally aligned with researched demand, identify the strongest confirming and contradicting cases, and distinguish indexing/discovery limits from low-position exposure.",
+        "Conclude PRESERVE, OBSERVE or retain at most one bounded later measurement/research trigger. Make no page, URL, indexing or external-action change.",
+        "Pass focused arithmetic/source/privacy checks, full native QA, strict JSON and exact-scope checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Compare the finalized 2026-08-04 through 2026-08-31 GSC window with the maintained US monthly keyword estimates using the largest measured exact phrase as a conservative anchor per role, never a summed cluster forecast. For each page, record page total, page-average position, privately aggregated role-aligned impressions, exact tracked-phrase impressions and indexing presence. Treat ratios only as exposure diagnostics because GSC and keyword tools differ in geography, suppression, query coverage and methodology. Reassess demand capture only after indexed pages develop materially better aligned positions and stable finalized cohorts; keep CTR work behind the doctrine's position-20 and 100-impression gates.",
+      "qa_summary": "Full repository tests pass 162/162. Operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 51 public GSC snapshots validate. The protected aggregate/table check reproduces 1,123 role-aligned impressions at position 72.75, 166 strict exact tracked impressions, and all 26 complete eight-cell comparison rows. Strict JSON has 79 unique action IDs; exact eight-path/no-site scope, privacy, credential-field, newline, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Hilbert (01a0668a-4920-7f90-98b1-45c7385f5899) returned cycle-one FAIL for three P2s in family/stay classification, exact tracked-phrase arithmetic, and one incomplete table row. Cycle two independently reproduced every corrected total, all public rows/anchors/ratios, GSC aggregation and privacy boundaries, exact scope and green QA, then returned PASS with no P0-P3 and changed no file or external state.",
+      "result": "Completed and review-clean. Current impressions are not proportional to researched demand as demand capture: only 166 disclosed impressions match maintained exact tracked phrases, while 1,123 role-aligned disclosed impressions average position 72.75 and four meaningful-demand pages remain not indexed. Property, page and query groupings are non-additive. Preserve every page and repeat only after an indexing change, material aligned-position movement, a like-for-like US demand refresh, or the doctrine's CTR gate is met.",
+      "notes": "Selected by the September 3 morning independent-pilot heartbeat as today's required evidence-audit learning unit and to answer the user's unresolved demand-versus-impressions question. This is the run's only substantive action. The scheduled weekly re-score is performed in the same state transaction; no open item score or status changes because Orlando remains explicitly user-gated and no evidence supports a new page action. Docs-only push is pending."
     }
   ]
 }

@@ -1,10 +1,39 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-02
+Last updated: 2026-09-03
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-049: GSC Exposure Versus Researched Keyword Demand
+
+Status: completed and review-clean; Hilbert cycle-two `PASS` with no P0-P3; research/state only; push pending
+
+Selected: 2026-09-03 by the morning independent Family Tripwise pilot
+
+Compare the finalized August 4-31 Search Console window with the maintained monthly demand anchors for all 26 destination-cluster pages. Use a fresh protected page-query export only for private aggregation; retain no complete query rows in the repository.
+
+Boundaries:
+
+- Separate page totals, disclosed query totals, role-aligned cohorts, exact tracked-phrase aggregates, average position, and indexation state.
+- Use the largest maintained exact estimate as a conservative role anchor; never sum overlapping variants or call the ratio traffic share.
+- Preserve all pages and URLs unless this research identifies a separately reviewable defect. Do not request indexing, change external state, or create another destination.
+
+Expected artifact:
+
+- `docs/research/gsc-impressions-vs-researched-demand-2026-09-03.md`
+
+Result:
+
+- Current impressions are not yet in line with researched demand as demand capture. The 22 cluster pages with public performance rows sum to 1,983 page-grouped impressions, while the property total is 1,937 and four cluster pages have no row. The protected cohort has 1,123 privately aggregated role-aligned disclosed impressions at about position 72.8 and only 166 disclosed impressions from the maintained exact tracked phrases. Property, page, and query groupings are not additive.
+- San Diego family hotels is the strongest confirming case for an intended high-demand family, while four meaningful-demand pages remain not indexed. High-volume indexed activity pages have intended-query exposure but only 0.4-2.1% role-aligned exposure relative to their conservative anchors.
+- Preserve all pages. Repeat the comparison after an indexation change, a material aligned-position change, a like-for-like US volume refresh, or a page reaches the doctrine's 100-impression/position-20 CTR gate.
+
+QA and review:
+
+- Full tests pass 162/162. Operator-state, content-freshness, local/production SEO, all 51 public GSC snapshots, protected aggregate/table arithmetic, strict JSON with 79 unique action IDs, exact eight-path/no-site scope, privacy, and whitespace checks pass.
+- Hilbert (`01a0668a-4920-7f90-98b1-45c7385f5899`) cycle one found three P2s in family/stay classification, exact-set arithmetic, and table structure. Cycle two independently reproduced 1,123 role-aligned impressions at position 72.75, 166 strict exact tracked-phrase impressions, and 26 complete eight-cell rows, then returned `PASS` with no P0-P3.
 
 Implementation follow-through: the separately selected `FT-IMP-027` / `IMP-048` action implemented and released the narrowed conditional recovery at commit `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce` through successful Pages run `33680285894`. It checks hard lodging constraints first and links to the itinerary only when multiple areas remain viable and the first two days are unsequenced. Native, responsive, release-marker, production SEO, and target-invariant QA pass; Noether cycle-one `PASS` leaves no P0-P3. The research actions below remain historical and did not themselves authorize a page edit.
 

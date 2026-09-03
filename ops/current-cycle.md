@@ -1,12 +1,16 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-02
+Last updated: 2026-09-03
 
 ## Cycle Name
 
 Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
+
+Morning action `FT-RES-028` / `SRR-049` is completed and review-clean as the September 3 maintained-evidence learning unit and answer to the user's demand-versus-impressions question. Fresh September 2 authenticated API evidence is finalized through August 31: 1,937 property impressions, 3 clicks, aggregate average position 65.9, and 24/28 inspected URLs indexed. A fresh protected page-query export for the same August 4-31 window completed read-only as run `33736746095` and was decrypted only outside the repository. Its complete rows remain private; only page-level aggregates enter the research. The 22 cluster pages with public rows sum to 1,983 page-grouped impressions; property, page and query groupings are non-additive, and four cluster pages have no row. The protected aggregation has 1,123 conservatively role-aligned disclosed impressions at about position 72.8 and 166 exact tracked-phrase impressions. The conclusion is that current impressions are not proportional to researched demand: low rank and four discovery failures dominate, while page totals sometimes exceed small anchors because they combine broader query jobs. Hilbert cycle-two `PASS` independently reproduced the corrected totals after three cycle-one P2 fixes and leaves no P0-P3. Full 162/162 tests and all state, freshness, SEO, snapshot, arithmetic, JSON, exact-scope, privacy, and whitespace checks pass. Preserve every page and URL; docs-only push is pending.
+
+The September 3 weekly re-score is complete. Fresh evidence changes no open score or state: Orlando remains explicitly user-gated and no new-page or existing-page action clears the evidence gates.
 
 Afternoon action `FT-IMP-027` / `IMP-048` is complete, released, and production-verified at commit `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce` through successful Pages run `33680285894` as the September 2 apply step after completed `LRN-015`, `FT-RES-026`, and `FT-RES-027`. The exact twelve-path action adds one compact recovery handoff immediately after the NYC stay page's existing five starts, but only after asking whether points, free nights, room setup, or price already decides the base and only when multiple viable areas remain with the first two days unsequenced. The unordered case's `Recover` result improves from `PARTIAL` and late to `YES` and nearby; the known-days path remains seven `YES` outputs with no required detour. The new route begins about 2.2, 2.9, and 3.5 viewports down at 1280 by 900, 390 by 844, and 320 by 800, with zero document overflow. Focused 4/4 and full 162/162 tests plus state, freshness, local/production SEO, 51-snapshot, 28-URL preflight, deterministic one-target generation, navigation, responsive, release-marker, and live target-invariant checks pass. Noether (`01a063cb-9126-7022-ac6f-3e6069e8a03c`) independently returned cycle-one `PASS` with no P0-P3. Fresh September 2 authenticated API evidence in `ops/gsc-snapshots/2026-09-02.md` is finalized through August 31: 1,937 property impressions, 3 clicks, aggregate average position 65.9, and 24/28 inspected URLs indexed. The NYC stay page has 53 impressions at page-average position 43.89, is indexed, and retains the August 29 pre-change crawl boundary; no aligned public query cohort exists, so GSC is orientation only.
 

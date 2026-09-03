@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-028` | completed and review-clean across eight exact paths; no page edit; push pending | cycle-two `PASS`; no P0-P3 | Hilbert cycle one found three P2s in family/stay classification, exact-set arithmetic, and table structure. Cycle two independently reproduced 1,123 role-aligned impressions at position 72.75, 166 strict exact tracked impressions, all 26 complete comparison rows, evidence boundaries, exact scope, privacy, and green QA. |
 | `FT-IMP-027` | released and production-verified at `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce` | cycle-one `PASS`; no P0-P3 | Noether independently verified the optional hard-constraint-first handoff, known-days control, task/depth claims, exact scope, trust and GSC boundaries, generator behavior, page invariants, responsive behavior, and green QA. Successful Pages run `33680285894`, matching marker, production SEO, and target invariants verified. |
 | `FT-RES-027` | completed, review-clean and pushed at `12ac8a3`; exact ten-path research/state action; no page edit | cycle-three `PASS`; no remaining P0-P3 | Five current questions narrow unselected `IMP-048` to a route only after a hard property-constraint check and only when multiple viable bases remain. One open-base follow-up says points decide the booking; all prevalence, behavior, satisfaction, ranking, and user-testing claims remain prohibited. |
 | `FT-RES-026` | completed, review-clean and pushed at `ba33329`; research/state only | `PASS` | Galileo cycle one confirmed the `PARTIAL` unordered case, seven-`YES` control, proportional unselected `IMP-048`, exact ten-path/no-site scope, state, evidence boundaries, responsive task evidence, navigation, and QA with no P0-P3. |
@@ -74,6 +75,18 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-09-03 - `FT-RES-028` GSC impressions versus researched demand
+
+**Reviewer:** Hilbert (`01a0668a-4920-7f90-98b1-45c7385f5899`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-two `PASS`; no P0-P3**
+
+- Cycle one found three P2s: the private role classifier omitted `families` and place-to-stay variants, exact tracked-phrase arithmetic understated the total, and one comparison row omitted its exact-impressions cell.
+- The corrected method recognizes family/families, child/children, teen/teenager, and stay/place-to-stay forms while keeping page roles exclusive. Strict case-insensitive matching is reserved for the maintained exact phrase set.
+- Cycle two independently reproduced 1,123 role-aligned disclosed impressions at impression-weighted position 72.75, 166 strict exact tracked-phrase impressions, and all 26 eight-cell comparison rows. Public page rows, demand anchors, ranges, ratios, indexing states, and non-additive property/page/query boundaries match their sources.
+- Full tests pass 162/162. Operator-state, content-freshness, local/production SEO, all 51 public GSC snapshots, strict JSON with 79 unique IDs, exact eight-path/no-site scope, private aggregate/table arithmetic, privacy, and whitespace checks pass.
+- The result preserves every page and exposes no complete query row, credential, country/device row, personal data, or unsupported traffic-share, rank, causal, behavior, demand-validation, or user-satisfaction claim. The review remained read-only and changed no file or external state.
 
 ### 2026-09-02 - `FT-IMP-027` conditional NYC itinerary recovery handoff
 

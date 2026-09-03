@@ -1,9 +1,9 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-02
+Last updated: 2026-09-03
 
-Last re-scored: 2026-08-27
-Next re-score due: 2026-09-03
+Last re-scored: 2026-09-03
+Next re-score due: 2026-09-10
 
 ## Ownership
 
@@ -14,6 +14,10 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+- September 3 morning action: `FT-RES-028` / `SRR-049` is completed and review-clean as today's maintained-evidence learning unit. Fresh September 2 API evidence is finalized through August 31. A fresh protected page-query export for the same August 4-31 window was collected read-only through successful run `33736746095`, decrypted outside the repository, and used only for public-safe page aggregates. The 22 cluster pages with public rows sum to 1,983 page-grouped impressions, compared with a separately aggregated 1,937 property total; four cluster pages have no row. Of 1,492 disclosed query impressions, 1,123 meet the conservative destination/family-or-age/page-role definition at about position 72.8, and 166 come from maintained exact tracked phrases. The result rejects page impressions as a proportional keyword-volume proxy, preserves every page, and selects no page, URL, title, indexing, external-action, destination, or automation change. Hilbert cycle-two `PASS` independently reproduced the corrected totals after three cycle-one P2 fixes and leaves no P0-P3. Full 162/162 tests and all state, freshness, SEO, snapshot, arithmetic, JSON, exact-scope, privacy, and whitespace checks pass; docs-only push is pending.
+
+- September 3 scheduled weekly re-score: fresh GSC and the demand-calibration result do not change an open item score or state. `FT-PUB-006` remains explicitly user-gated, and current evidence supports existing-page observation rather than another publication.
 
 - September 2 afternoon action: `FT-IMP-027` / `IMP-048` is complete, released, and production-verified at commit `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce` through successful Pages run `33680285894`. The exact twelve-path action adds one conditional itinerary-first recovery handoff immediately after the existing five starts; it checks hard lodging constraints first, applies only to an unresolved multiple-area and unsequenced-days state, and preserves the direct known-days path plus every declared page/search invariant. The unordered case's recovery improves from `PARTIAL` and late to `YES` and nearby; the known-days control remains seven `YES` outputs. Focused 4/4 and full 162/162 tests plus state, freshness, SEO, 51-snapshot, 28-URL preflight, deterministic generation, navigation, responsive, release-marker, and live target-invariant checks pass. Noether cycle-one `PASS` leaves no P0-P3. Fresh September 2 API evidence is finalized through August 31 and remains orientation only because no public aligned query cohort exists.
 
