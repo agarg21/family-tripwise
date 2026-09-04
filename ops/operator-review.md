@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-030` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-three `PASS`; no P0-P3 | Four current San Antonio questions reject an inventory-first response, preserve five page roles, and retain one unselected cross-page task plus a fixed-base control. Cycle one found one P3 cost phrase; cycle two found a premature verdict record; cycle three verified both corrections. |
 | `FT-RES-029` | completed, review-clean, and docs-only pushed at `67cf0aa`; exact eleven-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Dewey confirmed the graph counts and technical evidence, rejected the cycle-one universal `equal or weaker` wording, then verified the corrected not-uniquely-or-consistently-weaker conclusion and explicit NYC/San Diego control exceptions. Decision is `PRESERVE`, with no link edit or indexing request. |
 | `FT-RES-028` | completed, review-clean, and docs-only pushed at `d2272b4`; no page edit | cycle-two `PASS`; no P0-P3 | Hilbert cycle one found three P2s in family/stay classification, exact-set arithmetic, and table structure. Cycle two independently reproduced 1,123 role-aligned impressions at position 72.75, 166 strict exact tracked impressions, all 26 complete comparison rows, evidence boundaries, exact scope, privacy, and green QA. |
 | `FT-IMP-027` | released and production-verified at `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce` | cycle-one `PASS`; no P0-P3 | Noether independently verified the optional hard-constraint-first handoff, known-days control, task/depth claims, exact scope, trust and GSC boundaries, generator behavior, page invariants, responsive behavior, and green QA. Successful Pages run `33680285894`, matching marker, production SEO, and target invariants verified. |
@@ -76,6 +77,19 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-09-04 - `FT-RES-030` San Antonio mixed-generation trip-shape questions
+
+**Reviewer:** `01a06bac-0529-7de3-abcb-bca4477cabb2`, independent read-only research and release-gate reviewer
+
+**Verdict: cycle-three `PASS`; no P0-P3**
+
+- The reviewer independently verified the four public source dates, privacy-safe proportional paraphrases, and absence of usernames, copied prose, or nonessential personal details.
+- The five-role mapping matches the shipped San Antonio pages. The preserve decision, one unselected cross-page task, and fixed-base/no-car control are proportional and remain explicitly proxy research.
+- Cycle one returned `PASS_WITH_P3` because the roadmap summary said `complete cost`, while the evidence supports paid/free selection and current cost checks. The phrase is narrowed to `current cost checks`; cycle two verified that fix but returned `FAIL` because the candidate had already recorded cycle two as `PASS`. Cycle three verified the honest review chronology and complete candidate, returning `PASS` with no P0-P3.
+- September 3 GSC figures, finalization through September 1, all five indexed states, and orientation-only limits reproduce from the public snapshot.
+- Focused tests pass 22/22 and full tests pass 162/162. Operator-state, content-freshness, local/production SEO, all 52 public snapshots, strict JSON with 81 unique IDs, exact nine-path/no-site scope, source/privacy, and whitespace checks pass.
+- The reviewer changed no file or external state. No page, URL/search state, indexing request, external action, destination, or automation changed.
 
 ### 2026-09-03 - `FT-RES-029` unindexed-page internal-discovery audit
 

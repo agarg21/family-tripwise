@@ -1,10 +1,39 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-03
+Last updated: 2026-09-04
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-051: San Antonio Mixed-Generation Trip-Shape Questions
+
+Status: completed and review-clean; cycle-three `PASS` with no P0-P3; research/state only
+
+Selected: 2026-09-04 by the morning independent Family Tripwise pilot
+
+Test whether current San Antonio family questions primarily require more activity or hotel inventory, or a joined decision across usable days, age mix, heat/rest, base, room setup, transport, budget, and distant anchors.
+
+Boundaries:
+
+- Retain only source date/URL, paraphrased planning state, decision constraints, and answer work from four current public questions.
+- Map every supported output to the existing five San Antonio page roles. Treat page-role coverage as distinct from a completed cross-page task.
+- Make no page, URL, indexing, community-draft/post, external-action, destination, or automation change. Make no demand, prevalence, behavior, satisfaction, firsthand, safety, exact-route/stroller, or firm family-fit claim.
+
+Expected artifact:
+
+- `docs/research/san-antonio-current-family-trip-shape-questions-2026-09-04.md`
+
+Result:
+
+- Preserve the five current page roles and URL set. The bounded sample combines usable blocks, age/interest, heat or indoor fallback, base state, room function, transport, and cost rather than supporting more inventory.
+- Retain one unselected cross-page task for a mixed-generation short trip, plus a fixed-base control. A later page action requires a separately selected desktop/mobile walkthrough that reproduces a material failure.
+- Recent reused September 3 GSC is finalized through September 1 and remains orientation because the public snapshot has no aligned query cohort.
+
+QA and review:
+
+- Focused San Antonio tests pass 22/22 and full tests pass 162/162. Operator-state, freshness, local/production SEO, all 52 public snapshots, strict 81-ID JSON, exact nine-path/no-site scope, source/privacy, and whitespace checks pass.
+- Independent reviewer `01a06bac-0529-7de3-abcb-bca4477cabb2` verified all four dates and paraphrases, page-role ownership, GSC figures and boundaries, scope, privacy, and proportionality. Cycle one returned `PASS_WITH_P3` for an overbroad `complete cost` summary. Cycle two verified the narrowed `current cost checks` wording but returned `FAIL` because the candidate had prematurely recorded cycle two as `PASS`. Cycle three verified the corrected chronology and complete candidate, returning `PASS` with no P0-P3.
 
 ### SRR-050: Unindexed Page Internal-Discovery Audit
 

@@ -1,15 +1,25 @@
 # San Antonio Page Status
 
-Last updated: 2026-07-28
+Last updated: 2026-09-04
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-07-28.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-03.md`
 - San Antonio decision pack: `docs/research/san-antonio-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
 Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 26, 2026. Closely related variants overlap and must not be summed as unique traffic. Decision-baseline GSC position is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
+
+## September 4 Learning Overlay
+
+`FT-RES-030` / `SRR-051` reviews four public San Antonio family questions dated November 2025-August 2026 as qualitative evidence. The sample combines usable trip blocks, child/older-adult or teen interests, heat/indoor fallback, fixed versus open lodging, room function, and transport. It does not support more attractions, hotels, a modifier page, or a new URL.
+
+The current five pages own the component decisions, but page-role coverage does not prove the joined journey works. Preserve all five pages and retain only one unselected later cross-page task: a two- or three-night mixed-generation party of five must reach a realistic day shape, one paid anchor, one free or indoor backup, a provisional base, a viable room setup, a transport hypothesis, and exact next checks through normal links. A fixed River Walk/no-car state is the control. No page change is selected by this research.
+
+Recent reused September 3 API evidence is finalized through September 1. All five San Antonio URLs are indexed. The public rows are 105 impressions at page-average position 89.24 for all-ages activities, 1 at 43.0 for teens, 80 at 67.17 for stay areas, 3 at 6.33 for family hotels, and 21 at 27.62 for the itinerary. The snapshot has no aligned public query cohort, so these values are orientation rather than rank, CTR, demand, or page-change evidence.
+
+Focused San Antonio tests pass 22/22 and the full suite passes 162/162. State, freshness, local/production SEO, all 52 public snapshots, strict JSON, exact scope, source/privacy, and whitespace checks pass. Independent reviewer `01a06bac-0529-7de3-abcb-bca4477cabb2` verified the four dates, page-role mapping, GSC limits, and proportional preserve decision. Cycle one found one P3 roadmap-summary precision issue; cycle two confirmed the fix but returned `FAIL` for a premature verdict record. Cycle three verified the chronology correction and returned `PASS` with no P0-P3.
 
 ## July 28 Monitoring Overlay
 

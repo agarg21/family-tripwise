@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-03
+Last updated: 2026-09-04
 
 Last re-scored: 2026-09-03
 Next re-score due: 2026-09-10
@@ -14,6 +14,8 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+- September 4 morning action: `FT-RES-030` / `SRR-051` is completed and review-clean as today's current-parent-question learning unit. Four public questions dated November 13, 2025-August 18, 2026 combine usable trip blocks, age/interest, heat or indoor fallback, fixed versus open lodging, room function, transport and current cost checks rather than supporting more inventory. The five current San Antonio pages own each component, but role coverage does not prove the cross-page journey. Preserve all pages and retain only one unselected mixed-generation short-trip task plus a fixed-base control for a later separately selected walkthrough. Focused 22/22 and full 162/162 tests plus state, freshness, local/production SEO, 52-snapshot, strict JSON, exact-scope, source/privacy, and whitespace checks pass. Independent reviewer `01a06bac-0529-7de3-abcb-bca4477cabb2` cycle one returned `PASS_WITH_P3` for the corrected cost-summary phrase, cycle two returned `FAIL` for a premature verdict record, and cycle three verified the chronology correction with `PASS` and no P0-P3. Recent reused September 3 GSC is finalized through September 1 and remains orientation because no public aligned query cohort exists. No page, URL/search state, external action, destination or automation changes.
 
 - September 3 afternoon action: `FT-RES-029` / `SRR-050` is completed, review-clean, and docs-only pushed at `67cf0aa` after Dewey cycle-two `PASS` with no P0-P3. Fresh September 3 GSC is finalized through September 1 and leaves the same four URLs unknown to Google. A structured local/live graph rejects a consistent internal-link-deficit hypothesis: Chicago teens and the New York City itinerary each have four inbound sources, all indexed; San Diego all-ages has all 27 possible sources, 24 indexed; San Diego teens has four sources, three indexed. Every target has a homepage route and contextual siblings. The NYC itinerary ties three controls on total sources, trails San Diego's six-source itinerary, and ties the best indexed-source count; every all-ages page has the same 27-source topology. All four targets are live `200`, self-canonical, indexable, robots-allowed, and present once in the successful 28-URL sitemap. Full 162/162 and all focused/state/freshness/SEO/snapshot/preflight/JSON/scope/privacy/whitespace checks pass. Preserve all pages and links, promote no implementation, and do not request indexing.
 

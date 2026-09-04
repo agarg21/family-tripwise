@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-03",
+  "last_updated": "2026-09-04",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -3812,6 +3812,56 @@
       "review_summary": "Independent read-only reviewer Dewey (01a068e8-828c-7473-a8ed-3aa7eb0c6265) returned cycle-one FAIL for one P2 universal-control overstatement. The correction says the targets are not uniquely or consistently weaker, records that New York City itinerary trails the six-source San Diego control while tying three others and the best indexed-source count, and identifies the all-ages indexed-source difference as mechanical self-exclusion. Cycle two independently reproduced all GSC, technical, graph, anchor, control and chronology evidence, verified the correction and green QA, and returned PASS with no P0-P3. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. The internal-link-deficit hypothesis is rejected: the four unknown URLs have 4, 4, 27 and 4 distinct inbound sources, every target has homepage and contextual destination routes, and the target set is not uniquely or consistently weaker than indexed same-role controls. All targets are live 200, self-canonical, indexable, robots-allowed and present once in the successful sitemap. Preserve every page and link; promote no implementation and do not request indexing.",
       "notes": "Selected by the September 3 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-028 / LRN-016. This is the run's only substantive action. Exact scope is eleven research/state paths with no site, link, URL/search-state, external-action, destination or automation change. Docs-only action commit 67cf0aaf185d27d0a59ab097a87aa9158c786cd5 is pushed to main; no Pages wait applies."
+    },
+    {
+      "id": "FT-RES-030",
+      "research_backlog_id": "SRR-051",
+      "title": "Map current San Antonio mixed-generation trip-shape questions to the existing cluster",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-04",
+      "completed_on": "2026-09-04",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+        "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
+        "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+        "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-antonio-current-family-trip-shape-questions-2026-09-04.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-antonio-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Four source-dated current family questions produce a bounded model of the San Antonio trip-shape decisions that parents still have to join across activity, itinerary, area and hotel evidence, and either preserve the five current page roles or retain one explicit cross-page task for later validation without changing a live page.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, page copy, activity or hotel records, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Retain no usernames, copied thread text or personal data; make no demand, prevalence, behavior, satisfaction, firsthand, safety, exact-route/stroller or firm family-fit claim.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-09-03 and finalized through 2026-09-01: 1,991 property impressions, 3 clicks, aggregate average position 65.8, and 24 of 28 inspected URLs indexed. All five San Antonio URLs are indexed. Their public rows are 105 impressions at page-average position 89.24 for all-ages activities, 1 at 43.0 for teens, 80 at 67.17 for stay areas, 3 at 6.33 for family hotels, and 21 at 27.62 for the itinerary. The snapshot has no aligned public query cohort, so it is recent reused orientation rather than a page-change, rank or CTR trigger.",
+      "acceptance_criteria": [
+        "Inspect four current public parent or family questions and retain only source date/URL, paraphrased planning state, decision constraints, and the work a useful answer must perform.",
+        "Test whether the questions ask primarily for more San Antonio inventory or for joined decisions across usable days, age mix, heat/rest, base, room setup, transport and one or more distant anchors.",
+        "Map every supported decision output to the existing five page roles and conclude PRESERVE or retain at most one bounded unselected cross-page task hypothesis for later validation.",
+        "Make no page or URL change, no community draft or post, and no inference about demand, prevalence, user satisfaction, ranking or CTR.",
+        "Pass focused source/privacy/state checks, full native QA, strict JSON and exact-scope checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Count only the four inspected planning states and the supported decision outputs, not demand or prevalence. Record whether each output has a clear current page owner and whether a family would still need to join pages to make the whole trip-shape decision. A later page change requires a separately selected desktop/mobile task walkthrough that reproduces a material failure; search interpretation requires aligned finalized query evidence and current crawl state.",
+      "qa_summary": "Focused San Antonio page-role tests pass 22/22 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 52 public GSC snapshots validate. Strict JSON has 81 unique action IDs; exact nine-path/no-site scope, source/privacy and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer 01a06bac-0529-7de3-abcb-bca4477cabb2 verified all four source dates, proportional privacy-safe paraphrases, the five shipped page roles, September 3 GSC figures and limits, scope, the preserve decision, fixed-base control and one unselected cross-page task. Cycle one returned PASS_WITH_P3 for an overbroad complete-cost phrase in the roadmap summary. The phrase is narrowed to current cost checks. Cycle two verified that correction but returned FAIL because the candidate had prematurely recorded cycle two as PASS. Cycle three verified the corrected chronology and complete candidate, returning PASS with no P0-P3. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean. Reject the inventory-first hypothesis for this four-question sample; preserve all five San Antonio page roles and URLs. Existing pages own the supported component decisions, but role coverage does not prove the joined journey. Retain one unselected mixed-generation short-trip task plus a fixed-base control for a separately selected desktop/mobile walkthrough. No page, URL/search state, external action, destination or automation changed.",
+      "notes": "Selected by the September 4 morning independent-pilot heartbeat as today's required current-parent-question learning unit. This is the run's only substantive action and was registered before research/state editing."
     }
   ]
 }
