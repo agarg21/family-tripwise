@@ -6,6 +6,35 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-052: San Antonio Cross-Page Trip-Shape Task
+
+Status: completed and review-clean; Ohm cycle-two `PASS_WITH_P3`; research/state only
+
+Selected: 2026-09-04 by the afternoon independent Family Tripwise pilot
+
+Test the `FT-RES-030` mixed-generation short-trip task and fixed River Walk/no-car control through normal live links at exact desktop and mobile viewports.
+
+Boundaries:
+
+- Score the seven task outputs and seven protocol steps without calling the walkthrough user testing or satisfaction evidence.
+- Record page order, link depth, evidence boundaries, exact next checks and mobile containment.
+- Preserve all pages and URLs. Retain at most one unselected existing-page hypothesis; make no public-site, indexing, external-action, destination, or automation change.
+
+Expected artifact:
+
+- `docs/research/san-antonio-cross-page-trip-shape-task-review-2026-09-04.md`
+
+Candidate result:
+
+- All seven planning outputs are recoverable in both cases. The joined route is `PARTIAL`: itinerary-to-activity/stay and stay-to-hotel links are materially deep, especially at 390 and 320 pixels.
+- Preserve the five page roles and URLs. Retain unselected `IMP-049`, one compact conditional itinerary handoff after the day-plan cards. `Need an anchor?` and `Still choosing lodging?` route only decisions that remain open; the handoff must not duplicate late navigation, reopen the primary case's chosen anchor, or force the fixed-base control into lodging.
+- Fresh September 4 GSC is finalized through September 2 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort.
+
+QA and review:
+
+- Focused San Antonio tests pass 22/22 and full tests pass 162/162. Operator-state, freshness, local/production SEO, all 53 public snapshots, strict 82-ID JSON, exact ten-path/no-site scope, browser navigation/viewport/containment, privacy and whitespace checks pass.
+- Ohm cycle one returned `FAIL` for missing output-level depth/transition records, an overbroad Embassy occupancy inference, and a route that could reopen the primary case's chosen anchor. All three P2s and three accompanying P3s were corrected. Cycle two returned `PASS_WITH_P3`: no P0-P2 remain; one pre-existing P3 remains for activity, stay and hotel comparison scrollers that lack the itinerary scroller's keyboard/region labelling.
+
 ### SRR-051: San Antonio Mixed-Generation Trip-Shape Questions
 
 Status: completed and review-clean; cycle-three `PASS` with no P0-P3; research/state only

@@ -14,6 +14,7 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-031` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | Both cases recover seven outputs, but deep explicit itinerary-to-sibling and stay-to-hotel routes make the joined journey `PARTIAL`. Cycle two verified all six cycle-one corrections; one pre-existing comparison-scroller accessibility P3 remains. Preserve all five pages and retain only unselected `IMP-049`. |
 | `FT-RES-030` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-three `PASS`; no P0-P3 | Four current San Antonio questions reject an inventory-first response, preserve five page roles, and retain one unselected cross-page task plus a fixed-base control. Cycle one found one P3 cost phrase; cycle two found a premature verdict record; cycle three verified both corrections. |
 | `FT-RES-029` | completed, review-clean, and docs-only pushed at `67cf0aa`; exact eleven-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Dewey confirmed the graph counts and technical evidence, rejected the cycle-one universal `equal or weaker` wording, then verified the corrected not-uniquely-or-consistently-weaker conclusion and explicit NYC/San Diego control exceptions. Decision is `PRESERVE`, with no link edit or indexing request. |
 | `FT-RES-028` | completed, review-clean, and docs-only pushed at `d2272b4`; no page edit | cycle-two `PASS`; no P0-P3 | Hilbert cycle one found three P2s in family/stay classification, exact-set arithmetic, and table structure. Cycle two independently reproduced 1,123 role-aligned impressions at position 72.75, 166 strict exact tracked impressions, all 26 complete comparison rows, evidence boundaries, exact scope, privacy, and green QA. |
@@ -77,6 +78,20 @@ This is the durable handoff between the Family Tripwise implementation operator 
 - None.
 
 ## Review history
+
+### 2026-09-04 - `FT-RES-031` San Antonio cross-page trip-shape task
+
+**Reviewer:** Ohm (`01a06d6c-4316-74c3-a79c-61a5dfa1de77`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-two `PASS_WITH_P3`; no P0-P2 remain**
+
+- The reviewer reproduced the September 4 GSC figures and limits, viewport arithmetic, normal-link routes, zero document overflow, bounded table scrolling, overall `PARTIAL` result, exact scope and green QA.
+- Cycle one returned three P2s: required output-level `DIRECT`/`NEARBY`/`DEEP` labels and transition counts were missing; Embassy's unknown exact occupancy was overstated as a plausible five-person start; and the candidate would route the primary case back to an already chosen activity anchor.
+- The operator adds per-output depth at all three viewports and explicit transition counts, limits occupancy-qualified evidence to Home2, treats Embassy only as a setup comparison, and makes both candidate routes conditional on the anchor or lodging decision remaining open.
+- Three P3s are also corrected: the generic header link is acknowledged separately from task-labelled routes, only the itinerary scroller is called programmatically labelled, and the implementation-backlog date is current.
+- Cycle two verified closure of all three P2s and all three P3 precision corrections, reproduced the viewport arithmetic, normal-link route, GSC boundary, exact scope and green QA, and returned `PASS_WITH_P3`.
+- One pre-existing P3 remains: the activity, stay and hotel comparison scrollers are visually bounded but lack the itinerary scroller's keyboard focus, region role and accessible label. It does not invalidate the task result or expand `IMP-049`.
+- No page, URL/search state, indexing request, external action, destination, or automation changed.
 
 ### 2026-09-04 - `FT-RES-030` San Antonio mixed-generation trip-shape questions
 

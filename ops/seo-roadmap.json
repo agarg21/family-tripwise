@@ -3862,6 +3862,62 @@
       "review_summary": "Independent read-only reviewer 01a06bac-0529-7de3-abcb-bca4477cabb2 verified all four source dates, proportional privacy-safe paraphrases, the five shipped page roles, September 3 GSC figures and limits, scope, the preserve decision, fixed-base control and one unselected cross-page task. Cycle one returned PASS_WITH_P3 for an overbroad complete-cost phrase in the roadmap summary. The phrase is narrowed to current cost checks. Cycle two verified that correction but returned FAIL because the candidate had prematurely recorded cycle two as PASS. Cycle three verified the corrected chronology and complete candidate, returning PASS with no P0-P3. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. Reject the inventory-first hypothesis for this four-question sample; preserve all five San Antonio page roles and URLs. Existing pages own the supported component decisions, but role coverage does not prove the joined journey. Retain one unselected mixed-generation short-trip task plus a fixed-base control for a separately selected desktop/mobile walkthrough. No page, URL/search state, external action, destination or automation changed.",
       "notes": "Selected by the September 4 morning independent-pilot heartbeat as today's required current-parent-question learning unit. This is the run's only substantive action and was registered before research/state editing."
+    },
+    {
+      "id": "FT-RES-031",
+      "research_backlog_id": "SRR-052",
+      "title": "Test the San Antonio mixed-generation cross-page trip-shape task",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-04",
+      "completed_on": "2026-09-04",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a06d6c-4316-74c3-a79c-61a5dfa1de77"
+      ],
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+        "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
+        "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+        "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-antonio-cross-page-trip-shape-task-review-2026-09-04.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/implementation-backlog.md",
+        "status/san-antonio-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A desktop and mobile walkthrough of one mixed-generation short-trip case plus one fixed-base control determines whether normal links across the current San Antonio cluster can produce a realistic day shape, paid anchor, heat backup, provisional base, functional room setup, transport hypothesis and exact next checks without restarting settled decisions or inventing certainty.",
+      "production_invariant": "Research and state only across the ten registered paths. Do not change site/**, generators, tests, page copy, links, activity or hotel records, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Treat the walkthrough as proxy review, not user testing; make no firsthand, safety, exact-route/stroller, firm family-fit, behavior, satisfaction, demand, ranking or CTR claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-04 and finalized through 2026-09-02: 1,906 property impressions, 2 clicks, aggregate average position 65.48, and 24 of 28 inspected URLs indexed. All five San Antonio URLs are indexed. Public page rows are 108 impressions at page-average position 89.2 for all-ages activities, no teen performance row, 82 at 61.55 for stay areas, 3 at 6.33 for family hotels, and 21 at 27.9 for the itinerary. The snapshot has no aligned public query cohort, so it is current crawl and orientation evidence only; FT-RES-030 selects this task, not GSC.",
+      "acceptance_criteria": [
+        "Run the primary mixed-generation case and fixed-base control through normal links on the live cluster at 1280 by 900, 390 by 844 and 320 by 800 when the operator browser supports those exact viewports.",
+        "Score all seven required outputs YES, PARTIAL or NO and record whether each answer is direct, nearby or deep, along with page sequence, repeated decisions, contradictions, unsupported certainty, unresolved unknowns and mobile containment.",
+        "Conclude PRESERVE or retain at most one bounded unselected existing-page candidate. Add no inventory, page, URL or public-site edit in this transaction.",
+        "Keep the fixed River Walk and no-car control from reopening its settled base or hotel decision, and require exact next checks wherever live conditions, occupancy, price or transport remain unresolved.",
+        "Pass focused San Antonio tests, full native QA, strict JSON, exact-scope/privacy/whitespace checks and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Count completion of the seven required outputs, the number and order of normal-link page transitions, and answer depth separately at desktop and both mobile viewports. The fixed-base control must not gain a required lodging detour. If a material failure reproduces, retain only the smallest existing-page handoff hypothesis for a separately selected implementation; search interpretation waits for aligned finalized query evidence and current crawl state.",
+      "qa_summary": "Focused San Antonio page tests pass 22/22 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 53 public GSC snapshots validate. Exact browser clicks reproduce the primary route, Home2 anchor and fixed-base control at 1280 by 900, 390 by 844 and 320 by 800 with matching reported dimensions and zero document overflow. Strict JSON has 82 unique action IDs; exact ten-path/no-site scope and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Ohm (01a06d6c-4316-74c3-a79c-61a5dfa1de77) cycle one reproduced the GSC figures and limits, viewport arithmetic, normal-link routes, zero document overflow, bounded table scrolling, PARTIAL result and green QA, but returned FAIL for three P2s: missing output-level depth and transition records, an overbroad Embassy occupancy inference, and a candidate route that could reopen the primary case's chosen anchor. Three P3 precision issues covered the generic header link, unlabelled non-itinerary scrollers, and implementation-backlog date. Cycle two verified all six corrections and returned PASS_WITH_P3 with no P0-P2. One pre-existing P3 remains because the activity, stay and hotel comparison scrollers lack the itinerary scroller's keyboard focus, region role and accessible label. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean. Both cases recover all seven planning outputs, but protocol Recover is PARTIAL because the explicit itinerary-to-activity/stay and stay-to-hotel handoffs are deep, especially on mobile. Preserve all five pages and retain only unselected IMP-049: after the day cards, Need an anchor? and Still choosing lodging? route only decisions that remain open. No page or external-state change occurred.",
+      "notes": "Selected by the September 4 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-030 / LRN-018. This is the run's only substantive action and is registered before task execution or substantive research editing."
     }
   ]
 }

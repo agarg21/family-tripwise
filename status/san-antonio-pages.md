@@ -4,7 +4,7 @@ Last updated: 2026-09-04
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-03.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-04.md`
 - San Antonio decision pack: `docs/research/san-antonio-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
@@ -12,6 +12,12 @@ Sources:
 Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 26, 2026. Closely related variants overlap and must not be summed as unique traffic. Decision-baseline GSC position is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
 
 ## September 4 Learning Overlay
+
+`FT-RES-031` / `SRR-052` applies the morning task model to the live cluster at exact 1280 by 900, 390 by 844 and 320 by 800 viewports. Both the mixed-generation open-base case and fixed River Walk/no-car control can recover all seven planning outputs. The five page roles remain coherent, all tested documents have zero horizontal overflow, mobile comparison tables scroll inside bounded containers, and the control does not require a lodging detour.
+
+The joined journey is `PARTIAL`. The activity guide's itinerary link is nearby, but after choosing a day shape the itinerary's explicit activity and stay links begin 8.9-9.5 mobile viewports down at 390 pixels and 10.4-11.1 at 320 pixels. The stay guide's semantically correct hotel handoff begins 7.0-8.0 mobile viewports down. Preserve all pages and retain only unselected `IMP-049`: after the itinerary day cards, `Need an anchor?` and `Still choosing lodging?` route only decisions that remain open. Focused 22/22 and full 162/162 tests plus state, freshness, local/production SEO, 53-snapshot, browser-route, exact-scope, JSON and whitespace checks pass. Ohm cycle one returned `FAIL` for three P2s and three P3s; cycle two verified all corrections and returned `PASS_WITH_P3` with no P0-P2. One pre-existing scroller-accessibility P3 remains. No page change is selected.
+
+Fresh September 4 API evidence is finalized through September 2: 1,906 property impressions, 2 clicks, aggregate average position 65.48, and 24/28 inspected URLs indexed. All five San Antonio URLs are indexed. Their public rows are 108 impressions at page-average position 89.2 for all-ages activities, no teen performance row, 82 at 61.55 for stay areas, 3 at 6.33 for family hotels, and 21 at 27.9 for the itinerary. No aligned public query cohort exists, so this is crawl and orientation evidence rather than a task, ranking, CTR, or page-change trigger.
 
 `FT-RES-030` / `SRR-051` reviews four public San Antonio family questions dated November 2025-August 2026 as qualitative evidence. The sample combines usable trip blocks, child/older-adult or teen interests, heat/indoor fallback, fixed versus open lodging, room function, and transport. It does not support more attractions, hotels, a modifier page, or a new URL.
 

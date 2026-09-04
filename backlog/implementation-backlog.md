@@ -1,8 +1,30 @@
 # Implementation Backlog
 
-Last updated: 2026-09-02
+Last updated: 2026-09-04
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate San Antonio Itinerary Handoff
+
+### IMP-049: Surface The Conditional Next Decision After Day Plans
+
+Status: unselected review-clean candidate from `FT-RES-031`; Ohm cycle-two `PASS_WITH_P3`
+
+Target:
+
+- `https://familytripwise.com/family-itinerary/san-antonio-with-kids.html`
+
+The mixed-generation open-base case and fixed River Walk/no-car control can recover all seven planning outputs across the current cluster. The navigation path is still `PARTIAL`: after the day shape is chosen, the itinerary activity and stay links begin 8.9-9.5 viewports down at 390 pixels and 10.4-11.1 at 320 pixels. The fixed-base control needs activities but should not reopen lodging.
+
+Smallest candidate, if independent review retains it and a later action selects it:
+
+- Add one compact conditional next-step line immediately after the existing day-plan cards.
+- Use `Need an anchor?` to route to the existing all-ages activity guide only when that choice remains open. Use `Still choosing lodging?` to route to the existing stay-area guide only when the base remains open. A case with a chosen anchor or fixed base continues without reopening that decision.
+- Reuse current sibling roles and avoid a new card, section, control, inventory item, URL, claim, or duplicate late navigation path.
+- Preserve the itinerary's title, H1, description, URL, canonical, indexability, sitemap entry, three day plans, condition pivot, stop rules, four cluster cards unless de-duplication is required, FAQs, sources and three-item `ItemList`.
+- Make no firsthand, safety, exact route, stroller, family-fit, user-behavior, satisfaction, rank or CTR claim.
+
+Any implementation requires a separate roadmap selection, before/after task and route-position checks at all three viewports, full native QA, independent review and the standard release gate.
 
 ## Candidate NYC Stay-Area Recovery Handoff
 
