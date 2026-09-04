@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-049: Surface The Conditional Next Decision After Day Plans
 
-Status: unselected review-clean candidate from `FT-RES-031`; Ohm cycle-two `PASS_WITH_P3`
+Status: unselected review-clean candidate from docs-only `FT-RES-031` commit `b49a533`; Ohm cycle-two `PASS_WITH_P3`
 
 Target:
 

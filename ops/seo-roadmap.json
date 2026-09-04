@@ -3877,6 +3877,7 @@
       "reviewer_agent_ids": [
         "01a06d6c-4316-74c3-a79c-61a5dfa1de77"
       ],
+      "action_commit": "b49a53384f4fb73fcfef33d5719a35d21e10f3bd",
       "impact": 4,
       "confidence": 3,
       "learning_value": 5,
@@ -3917,7 +3918,7 @@
       "qa_summary": "Focused San Antonio page tests pass 22/22 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 53 public GSC snapshots validate. Exact browser clicks reproduce the primary route, Home2 anchor and fixed-base control at 1280 by 900, 390 by 844 and 320 by 800 with matching reported dimensions and zero document overflow. Strict JSON has 82 unique action IDs; exact ten-path/no-site scope and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Ohm (01a06d6c-4316-74c3-a79c-61a5dfa1de77) cycle one reproduced the GSC figures and limits, viewport arithmetic, normal-link routes, zero document overflow, bounded table scrolling, PARTIAL result and green QA, but returned FAIL for three P2s: missing output-level depth and transition records, an overbroad Embassy occupancy inference, and a candidate route that could reopen the primary case's chosen anchor. Three P3 precision issues covered the generic header link, unlabelled non-itinerary scrollers, and implementation-backlog date. Cycle two verified all six corrections and returned PASS_WITH_P3 with no P0-P2. One pre-existing P3 remains because the activity, stay and hotel comparison scrollers lack the itinerary scroller's keyboard focus, region role and accessible label. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. Both cases recover all seven planning outputs, but protocol Recover is PARTIAL because the explicit itinerary-to-activity/stay and stay-to-hotel handoffs are deep, especially on mobile. Preserve all five pages and retain only unselected IMP-049: after the day cards, Need an anchor? and Still choosing lodging? route only decisions that remain open. No page or external-state change occurred.",
-      "notes": "Selected by the September 4 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-030 / LRN-018. This is the run's only substantive action and is registered before task execution or substantive research editing."
+      "notes": "Selected by the September 4 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-030 / LRN-018. This is the run's only substantive action and is registered before task execution or substantive research editing. Docs-only action commit b49a53384f4fb73fcfef33d5719a35d21e10f3bd is pushed to main; no Pages wait applies."
     }
   ]
 }

@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-04
 
+Release evidence: docs-only `FT-RES-031` / `SRR-052` action commit `b49a533`; no Pages wait applies.
+
 No user decision is required for completed, review-clean `FT-RES-031` / `SRR-052`. The live task preserves all five San Antonio pages and retains only unselected `IMP-049`, a possible compact conditional handoff after the itinerary day plans. Both tested cases recover all seven outputs; the `PARTIAL` result concerns deep explicit task routes, not incorrect or missing component evidence. Ohm cycle one returned `FAIL` for three P2 evidence/candidate defects and three P3 precision issues; cycle two verified all corrections and returned `PASS_WITH_P3` with no P0-P2. One pre-existing comparison-scroller accessibility P3 remains. This research does not authorize a page edit, new URL, indexing request, external action, destination, or automation change. Fresh September 4 GSC remains crawl/orientation evidence because no public aligned query cohort exists.
 
 No user decision is required for completed, review-clean `FT-RES-030` / `SRR-051`. Four current San Antonio family questions support preserving the existing five page roles and retaining only one unselected cross-page task for later validation. Independent reviewer `01a06bac-0529-7de3-abcb-bca4477cabb2` cycle three returned `PASS` with no P0-P3 after one wording correction and one review-state chronology correction. The sample does not authorize more inventory, a page edit, a new URL, an indexing request, external action, destination, or automation change. Recent reused September 3 GSC remains orientation because the public snapshot has no aligned query cohort.

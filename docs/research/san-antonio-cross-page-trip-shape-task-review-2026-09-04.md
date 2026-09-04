@@ -4,7 +4,7 @@ Reviewed: 2026-09-04
 
 Action: `FT-RES-031` / `SRR-052`
 
-Review: Ohm (`01a06d6c-4316-74c3-a79c-61a5dfa1de77`) cycle-two `PASS_WITH_P3`; no P0-P2 remain; one pre-existing scroller-accessibility P3 remains.
+Review: Ohm (`01a06d6c-4316-74c3-a79c-61a5dfa1de77`) cycle-two `PASS_WITH_P3`; no P0-P2 remain; one pre-existing scroller-accessibility P3 remains. Docs-only action commit: `b49a53384f4fb73fcfef33d5719a35d21e10f3bd`.
 
 Targets:
 

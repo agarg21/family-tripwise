@@ -8,7 +8,7 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ### SRR-052: San Antonio Cross-Page Trip-Shape Task
 
-Status: completed and review-clean; Ohm cycle-two `PASS_WITH_P3`; research/state only
+Status: completed, review-clean, and docs-only pushed at `b49a533`; Ohm cycle-two `PASS_WITH_P3`; research/state only
 
 Selected: 2026-09-04 by the afternoon independent Family Tripwise pilot
 

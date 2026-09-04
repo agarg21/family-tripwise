@@ -13,6 +13,8 @@ Demand estimates are directional US monthly search volumes from the logged-in Se
 
 ## September 4 Learning Overlay
 
+Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait applies.
+
 `FT-RES-031` / `SRR-052` applies the morning task model to the live cluster at exact 1280 by 900, 390 by 844 and 320 by 800 viewports. Both the mixed-generation open-base case and fixed River Walk/no-car control can recover all seven planning outputs. The five page roles remain coherent, all tested documents have zero horizontal overflow, mobile comparison tables scroll inside bounded containers, and the control does not require a lodging detour.
 
 The joined journey is `PARTIAL`. The activity guide's itinerary link is nearby, but after choosing a day shape the itinerary's explicit activity and stay links begin 8.9-9.5 mobile viewports down at 390 pixels and 10.4-11.1 at 320 pixels. The stay guide's semantically correct hotel handoff begins 7.0-8.0 mobile viewports down. Preserve all pages and retain only unselected `IMP-049`: after the itinerary day cards, `Need an anchor?` and `Still choosing lodging?` route only decisions that remain open. Focused 22/22 and full 162/162 tests plus state, freshness, local/production SEO, 53-snapshot, browser-route, exact-scope, JSON and whitespace checks pass. Ohm cycle one returned `FAIL` for three P2s and three P3s; cycle two verified all corrections and returned `PASS_WITH_P3` with no P0-P2. One pre-existing scroller-accessibility P3 remains. No page change is selected.

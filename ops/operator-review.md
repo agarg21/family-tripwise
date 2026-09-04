@@ -12,6 +12,8 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
+Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait applies.
+
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
 | `FT-RES-031` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | Both cases recover seven outputs, but deep explicit itinerary-to-sibling and stay-to-hotel routes make the joined journey `PARTIAL`. Cycle two verified all six cycle-one corrections; one pre-existing comparison-scroller accessibility P3 remains. Preserve all five pages and retain only unselected `IMP-049`. |
