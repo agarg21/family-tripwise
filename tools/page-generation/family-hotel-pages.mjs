@@ -937,7 +937,7 @@ const sanAntonioFamilyHotels = [
     familySetup: "The resort can fill a large share of the trip by itself. It is far from Downtown, and current wristband, slide, pool, room-occupancy, and parking rules need a dated check.",
     reviewSignal: "A recent public sample often praised the water features, family activities, service, and food. Isolated reports flagged paid parking, a temporarily unavailable slide, and one bathroom-maintenance problem.",
     priceNote: "A public one-night example was about $505 total; family occupancy, weekends, and resort demand can push the total higher.",
-    parentCheck: "Confirm exact occupancy, water-feature operations and wristband rules, parking, and final total.",
+    parentCheck: "The current River Bluff limit is five entry wristbands per room. Confirm exact occupancy, any rule change, water-feature operations, parking, and final total.",
     mapQuery: "JW Marriott San Antonio Hill Country Resort and Spa",
     anchorQuery: "Natural Bridge Caverns"
   },
@@ -1037,7 +1037,7 @@ const sanAntonioFamilyHotels = [
     category: "Classic first-visit location",
     area: "Downtown / Alamo and River Walk",
     priceRange: "$180-$380+",
-    strengths: ["The hotel directly connects the Alamo and River Walk planning zones", "Hyatt publishes a rooftop temperature-controlled pool"],
+    strengths: ["The hotel directly connects the Alamo and River Walk planning zones", "Hyatt publishes a rooftop pool"],
     familySetup: "This is a location-led option rather than a suite, kitchen, or included-breakfast solution. Check the exact two-queen room, bathroom size, event calendar, and room placement.",
     reviewSignal: "Recent public reviews often praised location, access, cleanliness, and staff. They also surfaced parking cost, Fiesta or hallway noise, smaller bathrooms, elevators, and weaker value for standard rooms.",
     priceNote: "A public one-night example was about $202 total before parking; events and room categories can move higher.",
@@ -1050,11 +1050,11 @@ const sanAntonioFamilyHotels = [
     category: "Indoor pool and Rivercenter access",
     area: "Downtown / Rivercenter",
     priceRange: "$230-$450+",
-    strengths: ["Marriott publishes indoor and outdoor pools", "Direct Rivercenter access can simplify meals, weather pivots, and a first-visit route"],
+    strengths: ["Marriott lists an indoor pool but also labels the amenity Indoor/Outdoor Pool; confirm the current configuration", "Direct Rivercenter access can simplify meals, weather pivots, and a first-visit route"],
     familySetup: "Published two-queen rooms accommodate four, while some larger suites differ. Convention volume, current pool operation, and expensive parking can matter as much as the map location.",
     reviewSignal: "A recent mostly general-traveler sample often praised the location, mall access, cleanliness, staff, and pool. It also surfaced high parking and total cost plus a busier convention-hotel feel.",
     priceNote: "A public one-night example was about $281 total before parking; suites, conventions, and event dates can move higher.",
-    parentCheck: "Confirm exact room occupancy, current indoor and outdoor pool operation, event calendar, parking, and final total.",
+    parentCheck: "Confirm exact room occupancy, current pool configuration and operation, event calendar, parking, and final total.",
     mapQuery: "San Antonio Marriott Rivercenter on the River Walk",
     anchorQuery: "LEGOLAND Discovery Center San Antonio"
   },
@@ -1079,8 +1079,8 @@ const sanAntonioHotelSources = [
   ["Hyatt Regency Hill Country Big Spring lagoon", "https://www.hyatt.com/hyatt-regency/en-US/sanhc-hyatt-regency-hill-country-resort-and-villas/big-spring-lagoon"],
   ["JW Marriott San Antonio overview", "https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/overview/"],
   ["JW Marriott San Antonio experiences", "https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/experiences/"],
-  ["Signia by Hilton La Cantera rooms", "https://www.lacanteraresort.com/accommodations/rooms/"],
-  ["Signia by Hilton La Cantera pool policies", "https://www.lacanteraresort.com/resort/policies/"],
+  ["Signia by Hilton La Cantera resort amenities", "https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/resort/"],
+  ["Signia by Hilton La Cantera things to do", "https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/things-to-do/"],
   ["Hyatt Vacation Club at Wild Oak Ranch", "https://www.hyattvacationclub.com/resorts/wild-oak-ranch"],
   ["Hyatt Vacation Club at Wild Oak Ranch rooms", "https://www.hyatt.com/en-US/hotel/texas/hyatt-vacation-club-at-wild-oak-ranch/sansh/rooms"],
   ["Embassy Suites San Antonio Riverwalk Downtown", "https://www.hilton.com/en/hotels/sateses-embassy-suites-san-antonio-riverwalk-downtown/"],
@@ -1151,7 +1151,7 @@ function sanAntonioFamilyHotelPage() {
         </div>
       </section>
       <section class="container trust-panel" aria-label="Information freshness">
-        <p><strong>Hotel facts, prices, and online-review sources checked:</strong> July 26, 2026</p>
+        <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Price examples and online-review sources checked:</strong> July 26, 2026.</p>
         <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, current pool operations, and cancellation terms.</p>
       </section>
       <section class="container media-section">

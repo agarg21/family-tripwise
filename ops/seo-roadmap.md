@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 Last re-scored: 2026-09-03
 Next re-score due: 2026-09-10
@@ -14,6 +14,8 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+- September 5 morning action: `FT-MAINT-004` / `SRR-053` / `IMP-050` is review-clean and release-pending as today's maintained-evidence learning unit. The live San Antonio family-hotel page's official facts were last checked July 26, beyond the research engine's 30-day refresh rule. Current first-party sources support a bounded refresh: Hyatt Regency no longer publishes the page's temperature-control wording; Marriott Rivercenter simultaneously lists one indoor pool and labels the amenity `Indoor/Outdoor Pool`; JW Marriott currently limits River Bluff entry to five wristbands per room; and La Cantera's old first-party URLs redirect to current Hilton pages. All 12 roles remain; official-fact freshness is separated from unchanged price/review dates, and no hotel, price band, review synthesis, URL, search state, destination or external action changes. Recent reused September 4 GSC is orientation only. Focused 4/4 and full 162/162 tests plus state, freshness, SEO, snapshot, preflight, generation, strict-JSON, scope, invariant and responsive checks pass. Laplace cycle one found one P2 stale Marriott evidence-pack check; cycle two verified the correction and returned `PASS` with no P0-P3.
 
 - Release evidence: docs-only `FT-RES-031` / `SRR-052` action commit `b49a533`; no Pages wait applies.
 
@@ -140,6 +142,7 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 | 69 | `FT-RES-023` test the Chicago itinerary full-day promise | Recursive daily learning | Completed, review-clean and pushed | Commit `4d42d30`; Mill cycle-two `PASS`; the two-day control completes six outputs, while the three-full-day case is `PARTIAL` on usable-day count and assignment. Preserve the page and retain only unselected `IMP-047`. |
 | 70 | `FT-RES-024` test current Chicago family trip-length language | Recursive daily learning | Completed, review-clean and pushed | Commit `64eddc4`; Kepler cycle-one `PASS`; the bounded sample rejects numeric-label sufficiency and retains a narrower unselected `IMP-047`; research/state only and no page edit selected. |
 | 71 | `FT-IMP-026` distinguish partial arrival from three full Chicago days | Existing-page user value | Released and production-verified | Commit `d8f178c`; Pages run `33438625886`; marker, production SEO, and every declared invariant pass. |
+| 72 | `FT-MAINT-004` refresh the San Antonio family-hotel official-fact layer | Production factual freshness | Review-clean; release pending | All 12 roles hold; four bounded freshness, conflict, exact-check, and source-path corrections are implemented. Laplace cycle-two `PASS` leaves no P0-P3 and QA is green. |
 
 Ready does not authorize project work by itself. The Master selects at most one action per run using impact, confidence, learning value, effort, risk, freshness requirements, active observation windows, and expected user value.
 

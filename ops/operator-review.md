@@ -16,6 +16,7 @@ Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-MAINT-004` | implementation complete and review-clean; exact 14-path official-fact refresh; release pending | cycle-two `PASS`; no P0-P3 | All 12 roles remain. Cycle one found one P2 stale Marriott check in the evidence pack; cycle two verified the configuration-and-operation wording correction. The page separates September 5 official facts from unchanged July 26 price/review evidence. |
 | `FT-RES-031` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | Both cases recover seven outputs, but deep explicit itinerary-to-sibling and stay-to-hotel routes make the joined journey `PARTIAL`. Cycle two verified all six cycle-one corrections; one pre-existing comparison-scroller accessibility P3 remains. Preserve all five pages and retain only unselected `IMP-049`. |
 | `FT-RES-030` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-three `PASS`; no P0-P3 | Four current San Antonio questions reject an inventory-first response, preserve five page roles, and retain one unselected cross-page task plus a fixed-base control. Cycle one found one P3 cost phrase; cycle two found a premature verdict record; cycle three verified both corrections. |
 | `FT-RES-029` | completed, review-clean, and docs-only pushed at `67cf0aa`; exact eleven-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Dewey confirmed the graph counts and technical evidence, rejected the cycle-one universal `equal or weaker` wording, then verified the corrected not-uniquely-or-consistently-weaker conclusion and explicit NYC/San Diego control exceptions. Decision is `PRESERVE`, with no link edit or indexing request. |
@@ -80,6 +81,18 @@ Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait 
 - None.
 
 ## Review history
+
+### 2026-09-05 - `FT-MAINT-004` San Antonio family-hotel official-fact refresh
+
+**Reviewer:** Laplace (`01a070fc-404c-7f20-af33-2f93e70a953d`), independent read-only factual and release-gate reviewer
+
+**Verdict: cycle-two `PASS`; no P0-P3 remain**
+
+- The reviewer checked the complete registered delta, all 12 current first-party hotel records, the split fact versus price/review freshness dates, GSC boundary, exact scope, generator/output parity, title/H1/canonical/indexability/sitemap, hotel order and roles, price/review stability, Maps, FAQ/ItemList, responsive containment and green QA.
+- Cycle one returned one P2: the evidence pack's Marriott verification check still asked about separate indoor and outdoor pool operation despite the newly documented first-party `Indoor Pool` versus `Indoor/Outdoor Pool` conflict.
+- The operator changed that line to require confirmation of current pool configuration and operation, matching the generator and generated page. Focused 4/4 and full 162/162 tests plus state, freshness, SEO and whitespace checks reran green.
+- Cycle two verified the correction and complete delta, then returned `PASS` with no P0-P3. The reviewer changed no file or external state.
+- Plain `curl` received a bot-defense 403 from Marriott; the reviewer confirmed that no source was ultimately unreachable and that claims were checked through accessible rendered or indexed first-party material rather than inferred from the blocked response.
 
 ### 2026-09-04 - `FT-RES-031` San Antonio cross-page trip-shape task
 

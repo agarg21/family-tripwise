@@ -1,12 +1,16 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 ## Cycle Name
 
 Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
+
+Morning action `FT-MAINT-004` / `SRR-053` / `IMP-050` is review-clean and release-pending as the September 5 maintained-evidence learning unit. The San Antonio family-hotel page's July 26 official-fact layer is beyond the explicit 30-day refresh rule. Current first-party checks cover all 12 selected properties and identify three bounded public corrections: remove unsupported temperature-control wording for Hyatt Regency Riverwalk, disclose Marriott Rivercenter's current first-party pool-label conflict instead of asserting two pools, and expose JW Marriott's current limit of five River Bluff entry wristbands per room as an exact booking check. The action also updates redirected La Cantera source links and separates September 5 official-fact freshness from unchanged July 26 price/review evidence. Exact scope is 14 registered paths and one existing URL; all title/H1/canonical/indexability/sitemap, 12-hotel/order/role, price, review, map, FAQ/schema, ItemList, responsive and external-action invariants remain fixed. Focused 4/4 and full 162/162 tests plus state, freshness, local and pre-release production SEO, 53-snapshot, public-preflight, deterministic-generation, strict-JSON, exact-scope, whitespace, content-invariant and exact desktop/mobile responsive checks pass. Laplace cycle one returned `FAIL` for one P2 stale Marriott evidence-pack check; cycle two verified the correction and returned `PASS` with no P0-P3.
+
+No September 5 GSC snapshot was available at 05:05 Eastern. Recent reused September 4 authenticated API evidence is finalized through September 2: 1,906 property impressions, 2 clicks, aggregate average position 65.48, and 24/28 inspected URLs indexed. The San Antonio family-hotel page has 3 impressions at page-average position 6.33. No public aligned query cohort exists, so these values are crawl/orientation evidence only and do not select this maintenance work.
 
 Release evidence: docs-only `FT-RES-031` / `SRR-052` action commit `b49a533`; no Pages wait applies.
 

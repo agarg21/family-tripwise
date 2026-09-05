@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-04",
+  "last_updated": "2026-09-05",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -3919,6 +3919,63 @@
       "review_summary": "Independent read-only reviewer Ohm (01a06d6c-4316-74c3-a79c-61a5dfa1de77) cycle one reproduced the GSC figures and limits, viewport arithmetic, normal-link routes, zero document overflow, bounded table scrolling, PARTIAL result and green QA, but returned FAIL for three P2s: missing output-level depth and transition records, an overbroad Embassy occupancy inference, and a candidate route that could reopen the primary case's chosen anchor. Three P3 precision issues covered the generic header link, unlabelled non-itinerary scrollers, and implementation-backlog date. Cycle two verified all six corrections and returned PASS_WITH_P3 with no P0-P2. One pre-existing P3 remains because the activity, stay and hotel comparison scrollers lack the itinerary scroller's keyboard focus, region role and accessible label. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. Both cases recover all seven planning outputs, but protocol Recover is PARTIAL because the explicit itinerary-to-activity/stay and stay-to-hotel handoffs are deep, especially on mobile. Preserve all five pages and retain only unselected IMP-049: after the day cards, Need an anchor? and Still choosing lodging? route only decisions that remain open. No page or external-state change occurred.",
       "notes": "Selected by the September 4 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-030 / LRN-018. This is the run's only substantive action and is registered before task execution or substantive research editing. Docs-only action commit b49a53384f4fb73fcfef33d5719a35d21e10f3bd is pushed to main; no Pages wait applies."
+    },
+    {
+      "id": "FT-MAINT-004",
+      "implementation_backlog_id": "IMP-050",
+      "research_backlog_id": "SRR-053",
+      "title": "Refresh the San Antonio family-hotel official-fact layer",
+      "kind": "maintenance",
+      "lane": "production-factual-freshness",
+      "status": "in_progress",
+      "selected_on": "2026-09-05",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a070fc-404c-7f20-af33-2f93e70a953d"
+      ],
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-antonio-family-hotel-official-fact-refresh-2026-09-05.md",
+        "docs/research/san-antonio-family-hotel-evidence-pack.md",
+        "tools/page-generation/family-hotel-pages.mjs",
+        "tools/san-antonio-family-hotels-page.test.mjs",
+        "site/where-to-stay/san-antonio-family-hotels.html",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/implementation-backlog.md",
+        "status/san-antonio-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "All 12 live San Antonio hotel records receive a source-dated official-fact audit; the page separates the new official-fact date from unchanged July price/review evidence and corrects only claims that current first-party sources no longer support or now present as a conflict.",
+      "production_invariant": "Change only the 14 registered paths and the existing San Antonio family-hotel URL. Preserve the title, H1, description, canonical, indexability, one sitemap entry, 12-hotel order and roles, rough price ranges, review-signal summaries, map links, visible/schema FAQ parity and 12-item ItemList. Add no hotel, URL, affiliate CTA, analytics, indexing request, external post/account, outreach, destination or automation; make no firsthand, safety, exact-route/stroller, guaranteed availability or universal family-fit claim.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-09-04 and finalized through 2026-09-02: 1,906 property impressions, 2 clicks, aggregate average position 65.48, and 24 of 28 inspected URLs indexed. The San Antonio family-hotel page is indexed with 3 impressions at page-average position 6.33. No September 5 snapshot or public aligned query cohort is available at the 05:05 Eastern selection time, so GSC is current crawl/orientation evidence only and does not select this maintenance action. The explicit 30-day official-fact refresh rule and current first-party source conflicts select it.",
+      "acceptance_criteria": [
+        "Audit the 12 selected properties against current official sources and record confirmed facts, redirects, conflicts, volatile exact checks and unresolved unknowns without refreshing July price or review signals by implication.",
+        "Replace the unsupported Hyatt Regency temperature-control wording with the current official rooftop-pool claim; represent Marriott Rivercenter's current first-party indoor-pool versus Indoor/Outdoor Pool labeling as a conflict rather than asserting two pools; expose JW Marriott's current limit of five River Bluff entry wristbands per room as a date-bound exact check.",
+        "Update stale La Cantera source links to current official Hilton pages and show separate September 5 official-fact and July 26 price/review dates on the live page.",
+        "Preserve every declared URL, page, hotel, price, review, map, schema, source and responsive invariant outside the bounded factual/freshness corrections.",
+        "Pass focused and full native QA, deterministic generation, source/privacy/exact-scope/whitespace checks, responsive verification and independent read-only review with PASS or PASS_WITH_P3 before release."
+      ],
+      "measurement_plan": "Treat this as factual freshness maintenance and today's maintained-evidence learning unit, not a ranking or CTR experiment. Verify 12/12 source coverage, the three bounded public corrections, split freshness dates, generated-source parity, production release marker, target 200/canonical/indexability/sitemap state, 12 hotel cards, 24 Maps links, visible/schema FAQ parity and 12-item ItemList. Preserve the July price/review boundary and wait for later aligned finalized query evidence before interpreting search movement.",
+      "qa_summary": "Focused San Antonio family-hotel tests pass 4/4 and the full repository suite passes 162/162. Operator-state and content-freshness QA pass; local and pre-release production SEO report 0 errors and 0 warnings; all 53 public GSC snapshots validate and public preflight is healthy for the sitemap, robots and all 28 configured URLs. Deterministic generation is idempotent and changes only the target output. Exact 1280 by 900, 390 by 844 and 320 by 800 browser runs have zero document overflow, 12 cards, 24 Maps links, both freshness dates and the Marriott conflict; the comparison table scrolls inside its mobile container. Strict JSON, exact 14-path scope, content/schema invariants and whitespace checks pass. Plain curl received a bot-defense 403 from Marriott, so source validity was checked through accessible rendered or indexed first-party pages rather than inferred from that response.",
+      "review_summary": "Independent read-only reviewer Laplace (01a070fc-404c-7f20-af33-2f93e70a953d) checked the complete delta, all 12 current first-party records, source and trust boundaries, GSC classification, scope, generator/output parity, search/schema/content/responsive invariants and green QA. Cycle one returned FAIL for one P2: the evidence pack's Marriott verification check still implied separate indoor and outdoor pools despite the documented first-party conflict. The check was changed to current pool configuration and operation. Cycle two verified the correction and returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "release_state": "review-clean-release-pending",
+      "result": "Review-clean and release-pending. All 12 hotel roles remain. The implementation separates September 5 official-fact freshness from unchanged July 26 price/review evidence, exposes JW Marriott's current five-wristband limit, removes Hyatt Regency Riverwalk's unsupported temperature-control qualifier, represents Marriott Rivercenter's first-party pool-label conflict, and replaces redirected La Cantera sources with current Hilton pages.",
+      "notes": "Selected by the September 5 morning independent-pilot heartbeat as today's required maintained-evidence learning unit and the run's only substantive action. Registered before research, code, content or state editing."
     }
   ]
 }

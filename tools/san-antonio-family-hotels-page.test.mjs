@@ -51,7 +51,15 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
   assert.match(html, /<div class="comparison-scroll teen-comparison">\s*<table class="comparison-table hotel-comparison">/);
   assert.match(html, /Rough total\/night, not a quote/);
-  assert.match(html, /Hotel facts, prices, and online-review sources checked:<\/strong> July 26, 2026/);
+  assert.match(html, /Official hotel facts rechecked:<\/strong> September 5, 2026/);
+  assert.match(html, /Price examples and online-review sources checked:<\/strong> July 26, 2026/);
+  assert.match(html, /current River Bluff limit is five entry wristbands per room/);
+  assert.match(html, /Hyatt publishes a rooftop pool/);
+  assert.doesNotMatch(html, /Hyatt publishes a rooftop temperature-controlled pool/);
+  assert.match(html, /Marriott lists an indoor pool but also labels the amenity Indoor\/Outdoor Pool/);
+  assert.doesNotMatch(html, /Marriott publishes indoor and outdoor pools/);
+  assert.match(html, /hilton\.com\/en\/hotels\/satcnsa-signia-la-cantera-resort-and-spa\/resort\//);
+  assert.doesNotMatch(html, /lacanteraresort\.com/);
   assert.match(html, /This is the 118 Soledad Street Riverwalk property/);
   assert.match(html, /This is a vacation-club property/);
   assert.match(html, /pool was under construction/);

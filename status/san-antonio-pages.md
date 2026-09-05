@@ -1,6 +1,6 @@
 # San Antonio Page Status
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 Sources:
 
@@ -10,6 +10,12 @@ Sources:
 - Current roadmap: `ops/seo-roadmap.md`
 
 Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 26, 2026. Closely related variants overlap and must not be summed as unique traffic. Decision-baseline GSC position is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
+
+## September 5 Official-Fact Refresh Overlay
+
+`FT-MAINT-004` / `SRR-053` / `IMP-050` audits all 12 family-hotel records after the July 26 official-fact layer passed its 30-day refresh interval. Current first-party sources preserve all 12 hotel roles. The bounded implementation separates the September 5 fact recheck from unchanged July 26 price/review evidence, exposes JW Marriott's current limit of five River Bluff entry wristbands per room, removes Hyatt Regency Riverwalk's no-longer-published temperature-control qualifier, represents Marriott Rivercenter's first-party indoor-versus-indoor/outdoor pool-label conflict, and replaces redirected La Cantera sources with current Hilton pages.
+
+This is factual freshness maintenance, not a hotel-set, price, review, URL, ranking, or CTR experiment. Recent reused September 4 GSC is finalized through September 2 and has no public aligned query cohort; the page's 3 impressions at page-average position 6.33 remain orientation only. Focused 4/4 and full 162/162 tests plus state, freshness, SEO, snapshot, preflight, generation, strict-JSON, scope, invariant and responsive checks pass. Laplace cycle one found one P2 stale Marriott pool check in the evidence pack; cycle two verified the correction and returned `PASS` with no P0-P3. Release is pending.
 
 ## September 4 Learning Overlay
 

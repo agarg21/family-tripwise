@@ -4,6 +4,8 @@ Status: implementation evidence for `FT-PUB-005`
 
 Prepared: 2026-07-26
 
+Official-fact refresh: 2026-09-05. See `docs/research/san-antonio-family-hotel-official-fact-refresh-2026-09-05.md`. All 12 decision roles remain, but current first-party evidence requires a five-wristband exact check for JW Marriott, removes the unsupported temperature-control qualifier for Hyatt Regency Riverwalk, and preserves a Marriott Rivercenter indoor-versus-indoor/outdoor pool-label conflict instead of asserting two pools. La Cantera's old source paths now redirect to current Hilton pages. July 26 price examples and online-review samples were not refreshed and retain their original date.
+
 Target: `https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html`
 
 Publication scope: one named-property comparison page, one link from the existing San Antonio stay guide, one link from the home page, and one sitemap entry
@@ -115,7 +117,7 @@ Deferral is not a negative quality verdict. It keeps the live comparison readabl
 - Page range: `$450-$850+`.
 - Review sample: 12 recent visible Expedia entries, July 2026-December 2025; at least 8 included explicit family or child context.
 - Directional themes: water features, family activities, service, and food were common positives. Paid parking, a temporarily unavailable slide, and one bathroom-maintenance complaint appeared as conflicts.
-- Check: exact occupancy, water-feature operations and wristband rules, parking, and final total.
+- Check: the current River Bluff limit is five entry wristbands per room; confirm exact occupancy, any rule change, water-feature operations, parking, and final total.
 
 ### Signia by Hilton La Cantera Resort and Spa
 
@@ -198,7 +200,7 @@ Deferral is not a negative quality verdict. It keeps the live comparison readabl
 ### Hyatt Regency San Antonio Riverwalk
 
 - Role: classic first-visit location.
-- Official facts: Hyatt publishes direct River Walk positioning, proximity to the Alamo, two-queen inventory, and a rooftop temperature-controlled pool.
+- Official facts: Hyatt publishes direct River Walk positioning, proximity to the Alamo, two-queen inventory, and a rooftop pool. The September 5 source no longer publishes the prior temperature-control qualifier.
 - Family constraint: this is a location-led option, not a kitchen, suite, or included-breakfast solution. Event noise and room placement can matter.
 - Public price basis: Expedia exposed about `$202` total for a one-night example.
 - Page range: `$180-$380+`.
@@ -209,13 +211,13 @@ Deferral is not a negative quality verdict. It keeps the live comparison readabl
 ### San Antonio Marriott Rivercenter on the River Walk
 
 - Role: indoor pool, Rivercenter, and weather-backup utility.
-- Official facts: Marriott publishes indoor and outdoor pools, direct Rivercenter access, and two-queen rooms accommodating four.
+- Official facts: Marriott's current overview lists an indoor pool and separately labels the swimming amenity `Indoor/Outdoor Pool`, while its current experiences FAQ says there is one indoor pool. Direct Rivercenter access and two-queen inventory remain supported; current pool configuration and room occupancy require confirmation.
 - Family constraint: larger suites differ, and convention volume, pool operation, and expensive parking can materially affect the stay.
 - Public price basis: Expedia exposed about `$281` total for a one-night example.
 - Page range: `$230-$450+`.
 - Review sample: 10 recent visible Expedia entries, July 2026-January 2026; the traveler mix was mostly general rather than reliably family-only.
 - Directional themes: location, mall access, cleanliness, staff, and the pool were common positives. Parking and total cost plus a busy convention-hotel feel appeared as conflicts.
-- Check: exact room occupancy, current indoor and outdoor pool operation, event calendar, parking, and final total.
+- Check: exact room occupancy, current pool configuration and operation, event calendar, parking, and final total.
 
 ### Omni La Mansion del Rio
 
@@ -267,10 +269,10 @@ The live page says "themes in recent online reviews," not "review signal." It ex
 - JW Marriott overview: https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/overview/
 - JW Marriott experiences: https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/experiences/
 - JW Marriott rooms: https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/rooms/
-- La Cantera overview: https://www.lacanteraresort.com/
-- La Cantera rooms: https://www.lacanteraresort.com/accommodations/rooms/
-- La Cantera pool policies: https://www.lacanteraresort.com/resort/policies/
-- La Cantera location: https://www.lacanteraresort.com/resort/location/
+- Signia by Hilton La Cantera overview: https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/
+- Signia by Hilton La Cantera resort amenities: https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/resort/
+- Signia by Hilton La Cantera things to do: https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/things-to-do/
+- Signia by Hilton La Cantera location: https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/location/
 - Wild Oak Ranch overview: https://www.hyattvacationclub.com/resorts/wild-oak-ranch
 - Wild Oak Ranch rooms: https://www.hyatt.com/en-US/hotel/texas/hyatt-vacation-club-at-wild-oak-ranch/sansh/rooms
 - Embassy Suites Riverwalk Downtown: https://www.hilton.com/en/hotels/sateses-embassy-suites-san-antonio-riverwalk-downtown/

@@ -1,8 +1,38 @@
 # Implementation Backlog
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Active San Antonio Hotel Fact Refresh
+
+### IMP-050: Refresh The 12-Hotel Official-Fact Layer
+
+Status: implementation complete and review-clean under `FT-MAINT-004`; release pending
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html`
+
+Evidence:
+
+- The July 26 official-fact layer is beyond the 30-day refresh rule in `docs/plan/hotel-research-engine.md`.
+- The September 5 first-party audit preserves all 12 roles but finds one removed qualifier, one explicit first-party conflict, one material current resort-access rule, and redirected La Cantera source paths.
+
+Bounded implementation:
+
+- Separate the September 5 official-fact recheck from unchanged July 26 price and online-review evidence.
+- Replace `temperature-controlled pool` with the current Hyatt Regency Riverwalk `rooftop pool` wording.
+- Replace Marriott Rivercenter's unqualified plural pool assertion with the current first-party conflict and an exact configuration check.
+- State JW Marriott's current limit of five River Bluff entry wristbands per room and require a rule/occupancy recheck.
+- Replace two redirected La Cantera links with current Hilton resort and things-to-do sources.
+- Preserve the existing page, title, H1, canonical, indexability, sitemap, 12 hotels and roles, price bands, review summaries, Maps links, FAQ/schema, ItemList, and non-promotional posture.
+
+Local result:
+
+- Generator and HTML implement only those factual/freshness corrections. No hotel, URL, price, review synthesis, affiliate CTA, indexing request, external action, destination, or automation is added.
+- Focused tests pass 4/4 and the full suite passes 162/162. State, freshness, local and pre-release production SEO, 53 public-snapshot validations, public preflight, deterministic generation, strict JSON, exact-scope, whitespace, content-invariant and exact desktop/mobile responsive checks pass.
+- Independent reviewer Laplace returned cycle-one `FAIL` for one P2 stale Marriott pool check in the evidence pack. The check now asks for current pool configuration and operation; cycle two returned `PASS` with no P0-P3. Release is pending.
 
 ## Candidate San Antonio Itinerary Handoff
 

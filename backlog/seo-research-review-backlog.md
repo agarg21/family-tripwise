@@ -1,10 +1,39 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-053: San Antonio Family-Hotel Official-Fact Refresh
+
+Status: implementation complete and review-clean under `FT-MAINT-004`; release pending
+
+Selected: 2026-09-05 by the morning independent Family Tripwise pilot
+
+Audit all 12 selected properties after the July 26 official-fact layer passed the research engine's 30-day refresh interval.
+
+Boundaries:
+
+- Use current official property and brand pages for material room, amenity, meal, location, policy, and exact-check claims.
+- Keep July 26 rough price examples and online-review summaries explicitly separate; do not imply that they were refreshed.
+- Correct only current first-party conflicts or unsupported wording. Keep the hotel set, roles, page architecture, URL/search state, external accounts, destination set, and automation unchanged.
+
+Artifact:
+
+- `docs/research/san-antonio-family-hotel-official-fact-refresh-2026-09-05.md`
+
+Candidate result:
+
+- All 12 roles remain. Eight properties need no visible text or source-path correction; JW Marriott gains its current limit of five River Bluff entry wristbands per room as an exact check, Hyatt Regency Riverwalk loses an unsupported temperature-control qualifier, Marriott Rivercenter now exposes its first-party `Indoor Pool` versus `Indoor/Outdoor Pool` conflict instead of asserting two pools, and La Cantera's two redirected source paths move to current Hilton pages.
+- Two redirected La Cantera sources are replaced with current Hilton pages. The public trust line separates the September 5 official-fact recheck from unchanged July 26 price and review evidence.
+- Recent reused September 4 GSC is finalized through September 2 and has no public aligned query cohort. It is crawl/orientation evidence only and did not select this maintenance work.
+
+QA and review:
+
+- Focused 4/4 and full 162/162 tests pass. State, freshness, local and pre-release production SEO, 53 public-snapshot validations, public preflight, deterministic generation, strict JSON, exact-scope, whitespace, content-invariant and exact 1280 by 900, 390 by 844 and 320 by 800 responsive checks pass.
+- Independent reviewer Laplace cycle one returned `FAIL` for one P2 stale Marriott evidence-pack check that still implied separate indoor and outdoor pools. The check now asks for current pool configuration and operation; cycle two returned `PASS` with no P0-P3. Release is pending.
 
 ### SRR-052: San Antonio Cross-Page Trip-Shape Task
 
