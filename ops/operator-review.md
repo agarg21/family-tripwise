@@ -16,7 +16,8 @@ Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait 
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
-| `FT-MAINT-004` | implementation complete and review-clean; exact 14-path official-fact refresh; release pending | cycle-two `PASS`; no P0-P3 | All 12 roles remain. Cycle one found one P2 stale Marriott check in the evidence pack; cycle two verified the configuration-and-operation wording correction. The page separates September 5 official facts from unchanged July 26 price/review evidence. |
+| `FT-RES-032` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-three `PASS_WITH_P3`; no P0-P2 | Cycle one P2s/P3 are closed. Cycle two found no P0-P2 and two record P3s; cycle three verified both corrections. One accepted non-blocking Marriott row/detail consistency P3 remains. |
+| `FT-MAINT-004` | released and production-verified; exact 14-path official-fact refresh; commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7`; Pages run `33959826964` | cycle-two `PASS`; no P0-P3 | All 12 roles remain. Cycle one found one P2 stale Marriott check in the evidence pack; cycle two verified the configuration-and-operation wording correction. The page separates September 5 official facts from unchanged July 26 price/review evidence. |
 | `FT-RES-031` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | Both cases recover seven outputs, but deep explicit itinerary-to-sibling and stay-to-hotel routes make the joined journey `PARTIAL`. Cycle two verified all six cycle-one corrections; one pre-existing comparison-scroller accessibility P3 remains. Preserve all five pages and retain only unselected `IMP-049`. |
 | `FT-RES-030` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-three `PASS`; no P0-P3 | Four current San Antonio questions reject an inventory-first response, preserve five page roles, and retain one unselected cross-page task plus a fixed-base control. Cycle one found one P3 cost phrase; cycle two found a premature verdict record; cycle three verified both corrections. |
 | `FT-RES-029` | completed, review-clean, and docs-only pushed at `67cf0aa`; exact eleven-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Dewey confirmed the graph counts and technical evidence, rejected the cycle-one universal `equal or weaker` wording, then verified the corrected not-uniquely-or-consistently-weaker conclusion and explicit NYC/San Diego control exceptions. Decision is `PRESERVE`, with no link edit or indexing request. |
@@ -81,6 +82,20 @@ Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait 
 - None.
 
 ## Review history
+
+### 2026-09-05 - `FT-RES-032` San Antonio hotel access and conflict task
+
+**Reviewer:** Hilbert (`01a07291-2bcc-7372-a64a-38e02504cf07`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-three `PASS_WITH_P3`; no P0-P2; one accepted residual P3**
+
+- The reviewer reproduced the JW Marriott/Wild Oak shortlist, GSC figures and limitations, exact viewport arithmetic, direct Marriott table anchor, release reconciliation, exact ten-path/no-site scope, and all green QA.
+- P2: `IMP-051` could improve row/detail consistency but could not resolve deep Drury discovery or the three steps used to justify it. Both Marriott labels still support an indoor component, and no current question, query, behavior, or failed-recovery evidence established a material P2. The candidate is removed and the mismatch is now a non-blocking P3.
+- P2: Task A `Verify: YES` was not reproducible because Wild Oak's card lacks nearby parking and distinct access-rule checks. `Verify` and all all-seven-steps mirrors now read `PARTIAL`.
+- P3: Task A `Trace: YES` overstated direct evidence-class separation because the full method/source explanation is deep and editorial comparison sits around attributed facts. `Trace` now reads `PARTIAL`.
+- Cycle two verified both P2s and the Trace P3 closed, reproduced the task and QA, and returned `PASS_WITH_P3` with no P0-P2. It accepted the Marriott row/detail mismatch as a proportional residual P3 and found two record-precision P3s: the documented full suite is 162/162 rather than the broader 182-test invocation, and one line still called the mismatch a decision error. The QA count and wording are corrected for final re-review.
+- Cycle three verified both record corrections, coherent chronology, production evidence, exact scope, and green QA. It returned `PASS_WITH_P3` with no P0-P2; the only residual is the accepted non-blocking Marriott row/detail consistency P3.
+- The reviewer changed no file or external state.
 
 ### 2026-09-05 - `FT-MAINT-004` San Antonio family-hotel official-fact refresh
 

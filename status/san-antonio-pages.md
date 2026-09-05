@@ -4,7 +4,7 @@ Last updated: 2026-09-05
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-04.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-05.md`
 - San Antonio decision pack: `docs/research/san-antonio-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
@@ -13,9 +13,13 @@ Demand estimates are directional US monthly search volumes from the logged-in Se
 
 ## September 5 Official-Fact Refresh Overlay
 
+`FT-RES-032` / `SRR-054` applies the refreshed access/conflict facts to two live tasks. The family-of-five resort-water case reduces to JW Marriott versus Wild Oak, but `Trace` and `Verify` remain `PARTIAL` because the full evidence-class explanation is deep and Wild Oak lacks nearby parking and distinct access-rule checks. The JW five-wristband limit is decision-active without becoming a guarantee. The downtown indoor-water control is `PARTIAL` only on `Reduce`: Marriott's row links directly to its conflict-bearing card, both official labels still support an indoor component, and no current question, query, behavior, or failed-recovery evidence makes Drury's deep path a material block. `PRESERVE_WITH_P3`: keep all 12 hotels, the comparison, and refreshed cards; retain no implementation candidate. Hilbert cycle one rejected the initial P2/candidate and all-seven-steps claim; cycle two verified those corrections and identified two record P3s; cycle three returned `PASS_WITH_P3` with no P0-P2 after both record corrections. The Marriott row/detail mismatch is the only accepted residual P3. No page edit is selected by this research.
+
+Fresh September 5 API evidence is finalized through September 3: 1,829 property impressions, 1 click, aggregate average position 65.21, and 24/28 inspected URLs indexed. The hotel page remains at 3 impressions and page-average position 6.33 with a July 30 last crawl. There are zero finalized post-release days and no public aligned query cohort, so this is orientation only.
+
 `FT-MAINT-004` / `SRR-053` / `IMP-050` audits all 12 family-hotel records after the July 26 official-fact layer passed its 30-day refresh interval. Current first-party sources preserve all 12 hotel roles. The bounded implementation separates the September 5 fact recheck from unchanged July 26 price/review evidence, exposes JW Marriott's current limit of five River Bluff entry wristbands per room, removes Hyatt Regency Riverwalk's no-longer-published temperature-control qualifier, represents Marriott Rivercenter's first-party indoor-versus-indoor/outdoor pool-label conflict, and replaces redirected La Cantera sources with current Hilton pages.
 
-This is factual freshness maintenance, not a hotel-set, price, review, URL, ranking, or CTR experiment. Recent reused September 4 GSC is finalized through September 2 and has no public aligned query cohort; the page's 3 impressions at page-average position 6.33 remain orientation only. Focused 4/4 and full 162/162 tests plus state, freshness, SEO, snapshot, preflight, generation, strict-JSON, scope, invariant and responsive checks pass. Laplace cycle one found one P2 stale Marriott pool check in the evidence pack; cycle two verified the correction and returned `PASS` with no P0-P3. Release is pending.
+This is factual freshness maintenance, not a hotel-set, price, review, URL, ranking, or CTR experiment. Recent reused September 4 GSC is finalized through September 2 and has no public aligned query cohort; the page's 3 impressions at page-average position 6.33 remain orientation only. Focused 4/4 and full 162/162 tests plus state, freshness, SEO, snapshot, preflight, generation, strict-JSON, scope, invariant and responsive checks pass. Laplace cycle one found one P2 stale Marriott pool check in the evidence pack; cycle two verified the correction and returned `PASS` with no P0-P3. Commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7` is production-verified through successful Pages run `33959826964`; the release marker, production SEO, declared content/schema invariants, and responsive checks pass.
 
 ## September 4 Learning Overlay
 

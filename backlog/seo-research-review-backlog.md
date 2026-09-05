@@ -6,9 +6,34 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-054: San Antonio Hotel Access And Conflict Task
+
+Status: completed and review-clean; Hilbert cycle-three `PASS_WITH_P3`; research/state only
+
+Selected: 2026-09-05 by the afternoon independent Family Tripwise pilot
+
+The live family-of-five resort-water case reaches a two-property JW Marriott/Wild Oak shortlist. The JW Marriott five-wristband limit is decision-active without becoming a guarantee. `Trace` and `Verify` remain `PARTIAL`: Wild Oak's card lacks a nearby parking and distinct access-rule check, and the full evidence-class explanation is deep.
+
+The downtown indoor-water control is `PARTIAL` on `Reduce` only. The comparison row links directly to Marriott card 11, where one expansion reveals the two first-party labels; both labels still support an indoor component. Drury's supportable indoor-pool alternative first appears in card 8, but no current question, query, behavior, or failed recovery evidence makes that deep path a material block.
+
+Candidate result:
+
+- `PRESERVE_WITH_P3`: preserve the 12-hotel set, page role, comparison, and refreshed detail cards; retain no implementation candidate.
+- Record the Marriott row/detail mismatch as a non-blocking P3 for consideration only with later evidence-qualified work. A row-check change alone would not improve Drury discovery or materially alter recovery.
+- Treat this as proxy-reviewed task evidence, not user testing or evidence of prevalence, behavior, satisfaction, demand, ranking, or CTR.
+
+Artifact:
+
+- `docs/research/san-antonio-hotel-access-conflict-task-review-2026-09-05.md`
+
+QA and review:
+
+- Focused 22/22 and full documented 162/162 tests pass. State, freshness, local/production SEO, 54-snapshot, strict-JSON, exact ten-path/no-site, privacy, browser, and whitespace checks pass.
+- Hilbert cycle one returned `FAIL` for two P2s and one P3; cycle two verified those closed and returned `PASS_WITH_P3`, then identified two record P3s. Cycle three verified both record corrections and returned `PASS_WITH_P3` with no P0-P2. The Marriott row/detail mismatch is the only accepted residual P3.
+
 ### SRR-053: San Antonio Family-Hotel Official-Fact Refresh
 
-Status: implementation complete and review-clean under `FT-MAINT-004`; release pending
+Status: completed, released, and production-verified under `FT-MAINT-004`; commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7`; Pages run `33959826964`
 
 Selected: 2026-09-05 by the morning independent Family Tripwise pilot
 
@@ -33,7 +58,7 @@ Candidate result:
 QA and review:
 
 - Focused 4/4 and full 162/162 tests pass. State, freshness, local and pre-release production SEO, 53 public-snapshot validations, public preflight, deterministic generation, strict JSON, exact-scope, whitespace, content-invariant and exact 1280 by 900, 390 by 844 and 320 by 800 responsive checks pass.
-- Independent reviewer Laplace cycle one returned `FAIL` for one P2 stale Marriott evidence-pack check that still implied separate indoor and outdoor pools. The check now asks for current pool configuration and operation; cycle two returned `PASS` with no P0-P3. Release is pending.
+- Independent reviewer Laplace cycle one returned `FAIL` for one P2 stale Marriott evidence-pack check that still implied separate indoor and outdoor pools. The check now asks for current pool configuration and operation; cycle two returned `PASS` with no P0-P3. Commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7` is production-verified through successful Pages run `33959826964`.
 
 ### SRR-052: San Antonio Cross-Page Trip-Shape Task
 

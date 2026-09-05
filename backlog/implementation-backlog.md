@@ -4,11 +4,11 @@ Last updated: 2026-09-05
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
-## Active San Antonio Hotel Fact Refresh
+## Completed San Antonio Hotel Fact Refresh
 
 ### IMP-050: Refresh The 12-Hotel Official-Fact Layer
 
-Status: implementation complete and review-clean under `FT-MAINT-004`; release pending
+Status: completed, released, and production-verified under `FT-MAINT-004`; commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7`; Pages run `33959826964`
 
 Target:
 
@@ -32,7 +32,7 @@ Local result:
 
 - Generator and HTML implement only those factual/freshness corrections. No hotel, URL, price, review synthesis, affiliate CTA, indexing request, external action, destination, or automation is added.
 - Focused tests pass 4/4 and the full suite passes 162/162. State, freshness, local and pre-release production SEO, 53 public-snapshot validations, public preflight, deterministic generation, strict JSON, exact-scope, whitespace, content-invariant and exact desktop/mobile responsive checks pass.
-- Independent reviewer Laplace returned cycle-one `FAIL` for one P2 stale Marriott pool check in the evidence pack. The check now asks for current pool configuration and operation; cycle two returned `PASS` with no P0-P3. Release is pending.
+- Independent reviewer Laplace returned cycle-one `FAIL` for one P2 stale Marriott pool check in the evidence pack. The check now asks for current pool configuration and operation; cycle two returned `PASS` with no P0-P3. Commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7` is production-verified through successful Pages run `33959826964`; the release marker, target SEO, all declared content/schema invariants, and exact responsive checks pass.
 
 ## Candidate San Antonio Itinerary Handoff
 
