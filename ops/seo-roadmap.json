@@ -4084,6 +4084,59 @@
       "review_summary": "Independent read-only reviewer Noether cycle one returned FAIL for two P2 stale-state defects: old latest-snapshot/preflight pointers and an obsolete pending-QA sentence. The operator corrected all three records. Cycle two verified both P2s closed, the four source records, GSC reconciliation, page-role mapping, evidence/privacy boundaries, exact nine-path scope, unique action IDs, and green QA; final verdict PASS with no P0-P3. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. Reject binary indoor-label sufficiency for the four-question sample; preserve both Chicago page roles and URLs. Retain one unselected spring-switch task plus a winter-interest control for later desktop/mobile validation. No page, URL/search-state, external-action, destination or automation change occurred.",
       "notes": "Selected by the September 6 morning independent-pilot heartbeat as today's required current-parent-question learning unit and the run's only substantive action. Registered before current-question research or substantive state editing. Review-clean docs-only action is ready for exact-path commit and push; no Pages wait applies."
+    },
+    {
+      "id": "FT-RES-034",
+      "research_backlog_id": "SRR-056",
+      "title": "Validate Chicago weather-fallback substitution across activity and itinerary pages",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-06",
+      "completed_on": "2026-09-06",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-weather-fallback-cross-page-task-review-2026-09-06.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/implementation-backlog.md",
+        "status/chicago-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A live spring-switch task and winter-interest control at desktop and mobile sizes determine whether the current activity filter/comparison and itinerary pivot complete a constraint-preserving weather substitution, including option reduction, zone/reset continuity, a deletion rule, and exact current checks.",
+      "production_invariant": "Research and state only across the ten registered paths. Do not change site/**, generators, tests, page copy, activity records, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations, community queue, or automation. Treat the walkthrough as proxy review, not user testing; make no firsthand, safety, exact-weather/route/stroller, firm family-fit, behavior, satisfaction, demand, conversion, ranking, or CTR claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-06 and finalized through 2026-09-04: 1,832 property impressions, 1 click, aggregate average position 65.27, and 24 of 28 inspected URLs indexed. The Chicago all-ages page is indexed with 14 impressions at page-average position 54.93 and an August 31 crawl; the itinerary is indexed with 36 impressions at page-average position 55.33 and an August 31 crawl. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only; the retained family task selects this research.",
+      "acceptance_criteria": [
+        "Run the spring cold-rain switch task and winter-interest control from FT-RES-033 on the live all-ages activity and itinerary pages at 1280 by 900, 390 by 844, and 320 by 800 when the operator browser supports those exact viewports.",
+        "Score Start, Reduce, Compare, Trace, Decide, Verify, and Recover as YES, PARTIAL, NO, or NOT IN PAGE ROLE for both cases; record option counts, first useful surfaces, in-page and cross-page depth, normal-link behavior, unsupported certainty, and remaining unknowns.",
+        "Test whether the route reduces to at most two candidates by age/interest, duration, cost, and zone; preserves a nearby meal/reset; identifies the dropped outdoor block; exposes current weather, venue, ticket, transport, entrance/storage, and backup checks; and keeps clothing outside these page roles.",
+        "Conclude PRESERVE or retain at most one bounded unselected existing-page candidate in the implementation backlog. Make no public-page edit in this action.",
+        "Pass focused Chicago tests, full native QA, strict JSON, exact-scope/privacy/whitespace checks, browser containment and normal-link checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Record the activity filter's before/after option count, candidate comparison fields, first relevant surface positions, itinerary pivot/deletion/reset/check positions, cross-page transitions, exact viewport and document widths, horizontal containment, and protocol results for both cases. A future edit requires a reproduced material P2 and a separately selected implementation. Search interpretation waits for a coherent finalized aligned query cohort and current post-change crawl evidence.",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a077be-18e2-7d71-a917-3f4974a4e85b"
+      ],
+      "qa_summary": "Focused Chicago activity/itinerary tests pass 9/9 and the full native suite passes 162/162. Operator-state and content-freshness QA pass; local and production SEO report 0 errors and 0 warnings; all 55 public GSC snapshots validate; the public preflight returns 200 for the sitemap, robots and all 28 configured URLs. Exact 1280 by 900, 390 by 844 and 320 by 800 browser runs reproduce both cases with zero document overflow, bounded comparison scrolling and working normal links. Strict roadmap JSON has 86 unique action IDs; exact ten-path/no-site scope, privacy and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Herschel (01a077be-18e2-7d71-a917-3f4974a4e85b) cycle one returned FAIL for one P2 research-record defect: the winter control supplied neither a space interest nor a two-to-four-hour window, but the result invented both inputs to select Adler and overstated the control as complete. The operator kept those inputs unknown, scored winter Decide PARTIAL, and narrowed all related completion claims. Cycle two verified the correction and returned PASS_WITH_P3 with no P0-P2. The three accepted P3s are single-select filter intersection, global evidence labels, and the deep complete recovery route. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean. The spring weather-fallback case reaches a defensible provisional plan. Indoor / rain and Teen each leave eight cards and filters do not compound, so Reduce is manual; global evidence labels and cross-page carry make Trace and Recover PARTIAL. The winter control is additionally PARTIAL on Decide because its source inputs omit interest and usable duration; it exposes conditional museum branches but cannot select one without inventing a preference. Decision is PRESERVE_WITH_P3 because no page-level P0-P2 is reproduced; no implementation handoff or page edit is retained.",
+      "notes": "Selected by the September 6 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-033 / LRN-022 and the run's only substantive action. Registered before browser task execution or substantive research editing. Exact 1280 by 900, 390 by 844 and 320 by 800 production runs are complete; all document widths match their viewports, comparison scrollers are bounded, and the temporary viewport override was reset. Review-clean docs-only action is ready for exact-path commit and push; no Pages wait applies."
     }
   ]
 }

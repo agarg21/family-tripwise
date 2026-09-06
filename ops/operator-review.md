@@ -12,10 +12,11 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
-Release evidence: docs-only `FT-RES-032` action commit `25adc60`; `FT-RES-033` is review-clean and pending its exact-path docs-only commit/push; no Pages wait applies.
+Release evidence: docs-only `FT-RES-033` action commit `35aa2d9`; no Pages wait applies. Review-clean `FT-RES-034` is ready for an exact-path docs-only push.
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-034` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | The spring case completes a provisional branch. The winter control reaches conditional branches but is `PARTIAL` on `Decide` because the source inputs omit interest and usable duration. Herschel cycle one caught the initial invented inputs and overclaimed completion; cycle two verified all related corrections. The three accepted P3s are single-select filter intersection, global evidence labels, and the deep complete recovery route. No implementation handoff is retained. |
 | `FT-RES-033` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Four current questions reject binary indoor-label sufficiency, preserve both Chicago page roles, and retain one unselected spring-switch task plus a winter-interest control. Cycle one found two P2 stale-state defects; cycle two verified both corrections. |
 | `FT-RES-032` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-three `PASS_WITH_P3`; no P0-P2 | Cycle one P2s/P3 are closed. Cycle two found no P0-P2 and two record P3s; cycle three verified both corrections. One accepted non-blocking Marriott row/detail consistency P3 remains. |
 | `FT-MAINT-004` | released and production-verified; exact 14-path official-fact refresh; commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7`; Pages run `33959826964` | cycle-two `PASS`; no P0-P3 | All 12 roles remain. Cycle one found one P2 stale Marriott check in the evidence pack; cycle two verified the configuration-and-operation wording correction. The page separates September 5 official facts from unchanged July 26 price/review evidence. |
@@ -83,6 +84,13 @@ Release evidence: docs-only `FT-RES-032` action commit `25adc60`; `FT-RES-033` i
 - None.
 
 ## Review history
+
+### 2026-09-06 - `FT-RES-034` Chicago weather-fallback cross-page task
+
+- Reviewer: Herschel (`01a077be-18e2-7d71-a917-3f4974a4e85b`).
+- Cycle one: `FAIL` for one P2 research-record defect. The winter control did not supply an interest or usable duration, but the initial result invented a space preference and two-to-four-hour block to select Adler and then overstated the control as complete.
+- Correction: keep both inputs unknown, score winter `Decide` as `PARTIAL`, use Adler and Field only as conditional branches, and narrow every completion claim across the exact ten-path diff.
+- Cycle two: `PASS_WITH_P3`; no P0-P2 remains. Herschel independently verified the predecessor/task/protocol alignment, conditional scoring, exact scope, 86 unique action IDs, browser evidence, GSC boundary, and green QA. The accepted P3s are single-select filter intersection, global evidence labels, and the deep complete recovery route. The reviewer made no file or external-state change.
 
 ### 2026-09-06 - `FT-RES-033` Chicago family weather-fallback questions
 

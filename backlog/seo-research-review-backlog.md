@@ -6,6 +6,37 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-056: Chicago Weather-Fallback Cross-Page Task
+
+Status: completed and review-clean; Herschel cycle-two `PASS_WITH_P3`; research/state only
+
+Selected: 2026-09-06 by the afternoon independent Family Tripwise pilot
+
+Run the spring-switch task and winter-interest control retained by `FT-RES-033` against the live Chicago all-ages activity and itinerary pages at desktop and two mobile viewports. Test whether the current filter, comparison, itinerary pivot, nearby reset, deletion rule, and current-check routes complete a constraint-preserving substitution without avoidable reconstruction.
+
+Boundaries:
+
+- Treat the walkthrough as proxy review, not user testing, preference, behavior, satisfaction, conversion, demand, ranking, or CTR evidence.
+- Score `Start`, `Reduce`, `Compare`, `Trace`, `Decide`, `Verify`, and `Recover`; record exact viewport dimensions, decision-surface depth, option counts, normal-link behavior, overflow, unsupported certainty, and remaining unknowns.
+- Conclude `PRESERVE` or retain at most one bounded, unselected existing-page candidate. Make no page, URL, indexing, external-action, destination, community, or automation change in this action.
+
+Expected artifact:
+
+- `docs/research/chicago-weather-fallback-cross-page-task-review-2026-09-06.md`
+
+Fresh September 6 GSC is finalized through September 4 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort.
+
+Candidate result:
+
+- `PRESERVE_WITH_P3`: the spring case reaches a defensible provisional plan. `Reduce`, `Trace`, and `Recover` remain `PARTIAL` because filter intersection is manual, evidence labels are global, and the complete post-shortlist route is deep on mobile.
+- `Indoor / rain` reduces 12 choices to eight at all three viewports. `Teen` also leaves eight, and selecting an age filter replaces rather than compounds the weather filter. The winter control is additionally `PARTIAL` on `Decide`: its source inputs omit both interest and usable duration, so it exposes conditional museum branches but cannot select one without inventing a preference.
+- Promote no implementation candidate. The incomplete control is a task-input limitation, not a reproduced page defect; another control, handoff, weather layer, or URL is not proportional to the page-level P3 friction.
+
+Artifact and current gate:
+
+- `docs/research/chicago-weather-fallback-cross-page-task-review-2026-09-06.md`
+- Exact 1280 by 900, 390 by 844, and 320 by 800 browser runs show zero document overflow, bounded comparison scrolling, working normal links, and the recorded option counts. Focused tests pass 9/9 and full tests pass 162/162; state, freshness, local/production SEO, 55-snapshot, 28-URL public-preflight, strict-JSON, exact-scope, privacy, and whitespace checks pass. Herschel cycle one returned `FAIL` for the P2 invented winter inputs; cycle two verified the corrected score and cross-repository claims and returned `PASS_WITH_P3` with no P0-P2. The three accepted P3s are the single-select filter intersection, global evidence labels, and deep complete recovery route.
+
 ### SRR-055: Chicago Family Weather-Fallback Questions
 
 Status: completed and review-clean; Noether cycle-two `PASS`; research/state only
