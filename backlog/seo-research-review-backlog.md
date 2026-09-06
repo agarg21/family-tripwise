@@ -35,7 +35,7 @@ Candidate result:
 Artifact and current gate:
 
 - `docs/research/chicago-weather-fallback-cross-page-task-review-2026-09-06.md`
-- Exact 1280 by 900, 390 by 844, and 320 by 800 browser runs show zero document overflow, bounded comparison scrolling, working normal links, and the recorded option counts. Focused tests pass 9/9 and full tests pass 162/162; state, freshness, local/production SEO, 55-snapshot, 28-URL public-preflight, strict-JSON, exact-scope, privacy, and whitespace checks pass. Herschel cycle one returned `FAIL` for the P2 invented winter inputs; cycle two verified the corrected score and cross-repository claims and returned `PASS_WITH_P3` with no P0-P2. The three accepted P3s are the single-select filter intersection, global evidence labels, and deep complete recovery route.
+- Exact 1280 by 900, 390 by 844, and 320 by 800 browser runs show zero document overflow, bounded comparison scrolling, working normal links, and the recorded option counts. Focused tests pass 9/9 and full tests pass 162/162; state, freshness, local/production SEO, 55-snapshot, 28-URL public-preflight, strict-JSON, exact-scope, privacy, and whitespace checks pass. Herschel cycle one returned `FAIL` for the P2 invented winter inputs; cycle two verified the corrected score and cross-repository claims and returned `PASS_WITH_P3` with no P0-P2. The three accepted P3s are the single-select filter intersection, global evidence labels, and deep complete recovery route. Docs-only action commit `2a73091ed9ae3db17322f118d042970428eca495` is pushed to `main`; no Pages wait applies.
 
 ### SRR-055: Chicago Family Weather-Fallback Questions
 

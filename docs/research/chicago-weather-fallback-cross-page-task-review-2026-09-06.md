@@ -141,6 +141,8 @@ Operator QA is complete: focused Chicago activity/itinerary tests pass 9/9 and t
 
 Independent read-only reviewer Herschel (`01a077be-18e2-7d71-a917-3f4974a4e85b`) cycle one returned `FAIL` for one P2 research-record defect: the initial winter result invented a space interest and a two-to-four-hour block, then overstated the control as complete. The result now keeps both inputs unknown, scores winter `Decide` as `PARTIAL`, and narrows every cross-repository completion claim. Cycle two verified that correction and returned `PASS_WITH_P3` with no P0-P2. The three accepted P3s are the single-select filter intersection, global evidence labels, and deep complete recovery route.
 
+Docs-only action commit `2a73091ed9ae3db17322f118d042970428eca495` is pushed to `main`; no Pages wait applies.
+
 ## Sources
 
 - [Chicago activities live page](https://familytripwise.com/things-to-do/chicago-with-kids.html), checked 2026-09-06.
