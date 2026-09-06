@@ -1,12 +1,16 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-05
+Last updated: 2026-09-06
 
 ## Cycle Name
 
 Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
+
+Morning action `FT-RES-033` / `SRR-055` is completed and review-clean after Noether cycle-two `PASS` as the September 6 current-parent-question learning unit. Three visitor-family questions dated March-July 2026 plus one December 2025 local toddler control reject an indoor label as a sufficient fallback: a substitute must preserve age/interest, usable duration, physical load, zone/reset, cost or existing commitments, then route current weather, venue and transport checks. The all-ages and itinerary pages own those component fields, but page-role coverage does not prove the joined live task. Preserve both roles and URLs; retain one unselected spring-switch task plus a winter-interest control for later desktop/mobile validation. Focused 9/9 and full 162/162 tests plus state, freshness, local/production SEO, 54-snapshot, 28-URL preflight, strict-JSON, exact-scope, source/privacy, and whitespace checks pass. Cycle one found two P2 stale-state defects; cycle two verified both corrections with no P0-P3. Exact scope is nine research/state paths, with no live page, URL/search-state, external-action, destination or automation change.
+
+Recent reused September 5 authenticated API evidence is finalized through September 3: 1,829 property impressions, 1 click, aggregate average position 65.21, and 24/28 inspected URLs indexed. The Chicago all-ages activity page has 20 impressions at page-average position 57.65 and an August 31 crawl; the itinerary has 37 impressions at page-average position 54.11 and an August 31 crawl. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only and does not select an edit or CTR action.
 
 Afternoon action `FT-RES-032` / `SRR-054` is completed and review-clean after Hilbert cycle-three `PASS_WITH_P3` as the September 5 apply/deepen step after `FT-MAINT-004` / `LRN-020`. The live family-of-five resort-water case reaches JW Marriott versus Wild Oak but is `PARTIAL` on `Trace` and `Verify`: Wild Oak's open card lacks nearby parking and distinct access-rule checks, and the full evidence-class explanation is deep. The JW five-wristband limit remains decision-active without becoming a guarantee. The downtown control is `PARTIAL` only on `Reduce`: Marriott's comparison row links directly to its conflict-bearing card, both first-party labels support an indoor component, and no current question, query, behavior, or failed-recovery evidence makes Drury's deep path a material block. `PRESERVE_WITH_P3`: keep all 12 hotels, the comparison, and refreshed cards; retain no implementation candidate. Cycle one found two P2s and one P3; cycle two verified them closed and identified two record P3s; cycle three verified both corrections with no P0-P2. The Marriott row/detail mismatch is the only accepted residual P3. No public-page change is selected by this research.
 
@@ -329,8 +333,8 @@ python3 ~/.codex/skills/gsc-monitor/scripts/public_gsc_preflight.py --config ops
 ```
 
 - Latest local setup status: `site/robots.txt` is generated with `Sitemap: https://familytripwise.com/sitemap.xml`.
-- Latest public preflight on August 30: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
-- Current normalized source: `ops/gsc-snapshots/2026-08-30.json`, collected through the authenticated read-only API on August 30 with finalized data through August 28.
+- Latest public preflight on September 6: sitemap returned 200 with 28 parsed URLs; robots returned 200 and advertises the sitemap; all 28 configured URLs returned 200 and appeared in the sitemap.
+- Current normalized source: `ops/gsc-snapshots/2026-09-05.json`, collected through the authenticated read-only API on September 5 with finalized data through September 3.
 - Current San Diego cluster research source: `docs/research/san-diego-cluster-research-decision-pack.md`, created under `FT-RES-006` on July 20, 2026.
 - Completeness: `finalized-conservative`, based on a conservative two-day lag.
 - Current GSC sitemap status after the manual refresh: Success, last read Jul 27, 2026, 28 discovered pages, 0 discovered videos. The live sitemap returns the same 28 URLs.

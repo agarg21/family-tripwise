@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-05",
+  "last_updated": "2026-09-06",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -4032,6 +4032,58 @@
       "review_summary": "Independent read-only reviewer Hilbert (01a07291-2bcc-7372-a64a-38e02504cf07) cycle one returned FAIL for two P2s and one P3. The operator removed IMP-051, narrowed the Marriott mismatch to a non-blocking P3, changed Task A Trace and Verify to PARTIAL, and corrected all mirrors. Cycle two returned PASS_WITH_P3 with no P0-P2, confirming those findings closed and the preserve decision proportional. It reported two record-precision P3s in the full test count and decision-error wording. Cycle three verified both record corrections and returned PASS_WITH_P3 with no P0-P2. The Marriott row/detail consistency mismatch is the only accepted residual P3. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. The family-of-five task reaches the JW Marriott/Wild Oak shortlist but remains PARTIAL on Trace and Verify. The downtown control is PARTIAL only on Reduce; the Marriott row links directly to its conflict-bearing card, and both official labels support an indoor component. Preserve all 12 hotels with one non-blocking row/detail P3 and no implementation candidate or page edit.",
       "notes": "Selected by the September 5 afternoon independent-pilot heartbeat as the apply/deepen step after FT-MAINT-004 / LRN-020 and the run's only substantive action. Registered before task execution or substantive research editing. FT-MAINT-004 release reconciliation is mechanical evidence within this action. Review-clean docs-only action is ready for exact-path commit and push; no Pages wait applies."
+    },
+    {
+      "id": "FT-RES-033",
+      "research_backlog_id": "SRR-055",
+      "title": "Map current Chicago weather-fallback family questions to the existing activity and itinerary pages",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-06",
+      "completed_on": "2026-09-06",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-current-weather-fallback-questions-2026-09-06.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/chicago-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Three to five source-dated current family questions determine whether an indoor label is enough to recover a disrupted Chicago day or whether families must also preserve age/interest fit, usable time, cost, zone, stamina/reset needs and current booking or operating checks across the existing activity and itinerary pages.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, page copy, activity records, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations or automation. Retain no usernames, copied thread text or personal data; make no demand, prevalence, behavior, satisfaction, firsthand, safety, exact-route/stroller or firm family-fit claim.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-09-05 and finalized through 2026-09-03: 1,829 property impressions, 1 click, aggregate average position 65.21, and 24 of 28 inspected URLs indexed. The Chicago all-ages activity page is indexed with 20 impressions at page-average position 57.65 and an August 31 crawl; the itinerary is indexed with 37 impressions at page-average position 54.11 and an August 31 crawl. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only and does not select a page or CTR change.",
+      "acceptance_criteria": [
+        "Inspect three to five current public parent or family questions and retain only source date/URL, paraphrased disruption state, decision constraints, and the work a useful answer must perform.",
+        "Test whether the indoor-versus-outdoor label alone is sufficient or whether a useful fallback must preserve age or interest, usable time, cost, zone, stamina or reset needs, and a current booking or operating check.",
+        "Map every supported decision output to the existing Chicago activity and itinerary page roles and conclude PRESERVE or retain at most one bounded unselected cross-page task for later desktop/mobile validation.",
+        "Make no page or URL change, no community draft or post, and no inference about demand, prevalence, behavior, satisfaction, ranking or CTR.",
+        "Pass focused source/privacy/state checks, full native QA, strict JSON and exact-scope checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Count only the inspected planning states and which fallback decisions they expose. Record whether each output has a current page owner and whether the existing pages' role split leaves a joined fallback task to validate. A later page edit requires a separately selected desktop/mobile walkthrough that reproduces a material failure; search interpretation requires aligned finalized query evidence and current crawl state.",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a07600-d69c-7611-99f1-aa51d5690e5b"
+      ],
+      "qa_summary": "Focused Chicago tests passed 9/9; the full native suite passed 162/162; operator-state, content-freshness, local SEO, production SEO, 54-snapshot validation, 28-URL public preflight, strict JSON, unique-ID, exact-scope, source allowlist, privacy-pattern, and whitespace checks passed.",
+      "review_summary": "Independent read-only reviewer Noether cycle one returned FAIL for two P2 stale-state defects: old latest-snapshot/preflight pointers and an obsolete pending-QA sentence. The operator corrected all three records. Cycle two verified both P2s closed, the four source records, GSC reconciliation, page-role mapping, evidence/privacy boundaries, exact nine-path scope, unique action IDs, and green QA; final verdict PASS with no P0-P3. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean. Reject binary indoor-label sufficiency for the four-question sample; preserve both Chicago page roles and URLs. Retain one unselected spring-switch task plus a winter-interest control for later desktop/mobile validation. No page, URL/search-state, external-action, destination or automation change occurred.",
+      "notes": "Selected by the September 6 morning independent-pilot heartbeat as today's required current-parent-question learning unit and the run's only substantive action. Registered before current-question research or substantive state editing. Review-clean docs-only action is ready for exact-path commit and push; no Pages wait applies."
     }
   ]
 }

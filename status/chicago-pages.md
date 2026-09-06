@@ -1,12 +1,12 @@
 # Chicago Page Status
 
-Last updated: 2026-08-31
+Last updated: 2026-09-06
 
 Sources:
 
 - Implementation baseline GSC snapshot: `ops/gsc-snapshots/2026-07-23.md`
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-08-31.md`
-- Latest public-safe GSC snapshot: `ops/gsc-snapshots/2026-08-31.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-05.md`
+- Latest public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-05.md`
 - Chicago decision pack: `docs/research/chicago-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
@@ -40,6 +40,12 @@ Fresh August 31 GSC arrived mechanically after consensus and is finalized throug
 Fresh September 3 GSC is finalized through September 1 and still classifies the Chicago teen URL as unknown to Google with no crawl time or performance row. `FT-RES-029` / `SRR-050` rejects an internal-link-deficit explanation: the page has four distinct inbound sources, all indexed, including the homepage and contextual links from the Chicago all-ages, stay-area, and itinerary pages. That matches the strongest indexed teen control and exceeds other indexed controls.
 
 The target is live `200`, self-canonical, indexable, robots-allowed, and present exactly once in the successful 28-URL sitemap; local and production link counts match. Preserve the page and links. Promote no internal-link implementation and do not request indexing; reopen only for a crawl/index change or a verified link, sitemap, fetch, canonical, robots, response, or rendering defect.
+
+## September 6 Weather-Fallback Question Overlay
+
+`FT-RES-033` / `SRR-055` tests binary indoor-label sufficiency against three visitor-family questions dated March-July 2026 and one December 2025 local toddler control. The bounded sample rejects `indoor` as a complete fallback decision: age/interest, usable duration, physical load, zone/reset, cost or existing commitments still change the substitute, and the actual weather, venue and transport state remains a current check.
+
+The all-ages comparison and itinerary already own those component decisions. Preserve both page roles and URLs; retain one unselected spring-switch task plus a winter-interest control for a separately selected desktop/mobile walkthrough. This is qualitative community and repository role evidence, not demand, user testing, behavior, satisfaction, rank, CTR, firsthand, weather, route, or safety evidence. Recent reused September 5 GSC is finalized through September 3 and remains low-position orientation without a public aligned query cohort. Noether cycle one found two P2 stale-state defects; cycle two verified both corrections and returned `PASS` with no P0-P3.
 
 ## Pages
 

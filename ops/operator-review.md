@@ -12,10 +12,11 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
-Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait applies.
+Release evidence: docs-only `FT-RES-032` action commit `25adc60`; `FT-RES-033` is review-clean and pending its exact-path docs-only commit/push; no Pages wait applies.
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-033` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Four current questions reject binary indoor-label sufficiency, preserve both Chicago page roles, and retain one unselected spring-switch task plus a winter-interest control. Cycle one found two P2 stale-state defects; cycle two verified both corrections. |
 | `FT-RES-032` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-three `PASS_WITH_P3`; no P0-P2 | Cycle one P2s/P3 are closed. Cycle two found no P0-P2 and two record P3s; cycle three verified both corrections. One accepted non-blocking Marriott row/detail consistency P3 remains. |
 | `FT-MAINT-004` | released and production-verified; exact 14-path official-fact refresh; commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7`; Pages run `33959826964` | cycle-two `PASS`; no P0-P3 | All 12 roles remain. Cycle one found one P2 stale Marriott check in the evidence pack; cycle two verified the configuration-and-operation wording correction. The page separates September 5 official facts from unchanged July 26 price/review evidence. |
 | `FT-RES-031` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | Both cases recover seven outputs, but deep explicit itinerary-to-sibling and stay-to-hotel routes make the joined journey `PARTIAL`. Cycle two verified all six cycle-one corrections; one pre-existing comparison-scroller accessibility P3 remains. Preserve all five pages and retain only unselected `IMP-049`. |
@@ -82,6 +83,17 @@ Release evidence: docs-only `FT-RES-031` action commit `b49a533`; no Pages wait 
 - None.
 
 ## Review history
+
+### 2026-09-06 - `FT-RES-033` Chicago family weather-fallback questions
+
+**Reviewer:** Noether (`01a07600-d69c-7611-99f1-aa51d5690e5b`), independent read-only research and release-gate reviewer
+
+**Verdict: cycle-two `PASS`; no P0-P3**
+
+- The reviewer verified the four public source dates and proportional paraphrases, local-use and fixed-anchor control boundaries, GSC figures and limitations, current all-ages/itinerary role mapping, privacy/evidence boundaries, one-task-plus-control limit, exact nine-path scope, unique action IDs, and green QA.
+- Cycle one returned `FAIL` for two P2 record-state defects: the current roadmap and cycle retained stale latest-snapshot/preflight pointers, and the research artifact still called already completed QA pending.
+- The operator updated the roadmap to September 5 GSC, the cycle to the September 6 preflight and September 5 normalized source, and the artifact to the actual QA chronology.
+- Cycle two verified both P2s closed and returned `PASS` with no P0-P3. The reviewer changed no file or external state.
 
 ### 2026-09-05 - `FT-RES-032` San Antonio hotel access and conflict task
 

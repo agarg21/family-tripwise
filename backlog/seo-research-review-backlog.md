@@ -1,10 +1,42 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-05
+Last updated: 2026-09-06
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-055: Chicago Family Weather-Fallback Questions
+
+Status: completed and review-clean; Noether cycle-two `PASS`; research/state only
+
+Selected: 2026-09-06 by the morning independent Family Tripwise pilot
+
+Test whether current Chicago family weather-disruption questions can be answered by choosing any indoor option, or whether a useful fallback must preserve age or interest, usable time, cost, zone, stamina or reset needs, and a current booking or operating check.
+
+Boundaries:
+
+- Retain only source date/URL, paraphrased disruption state, decision constraints, and answer work from three to five current public family questions.
+- Map every supported output to the existing all-ages activity and itinerary page roles. Treat role coverage as distinct from a completed joined task.
+- Make no page, URL, indexing, community-draft/post, external-action, destination, or automation change. Make no demand, prevalence, behavior, satisfaction, firsthand, safety, exact-route/stroller, or firm family-fit claim.
+
+Expected artifact:
+
+- `docs/research/chicago-current-weather-fallback-questions-2026-09-06.md`
+
+Recent reused September 5 GSC is finalized through September 3 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort.
+
+Candidate result:
+
+- Reject binary indoor-label sufficiency for the four-question sample. A usable fallback preserves age/interest, usable duration, physical load, zone/reset, cost or existing commitments before the current weather, venue and transport checks.
+- Preserve the all-ages and itinerary page roles and URLs. Their activity comparison and disrupted-day pivot own the supported component work, but current questions do not establish joined live-task completion.
+- Retain one unselected spring-switch task plus a winter-interest control for a separately selected desktop/mobile walkthrough. Add no rainy-day page, attraction, filter, packing section, URL, weather claim, or public-page change in this action.
+
+Artifact:
+
+- `docs/research/chicago-current-weather-fallback-questions-2026-09-06.md`
+- Focused 9/9 and full 162/162 tests plus state, freshness, local/production SEO, 54-snapshot, 28-URL preflight, strict-JSON, exact-scope, source/privacy, and whitespace checks pass.
+- Noether cycle one found two P2 stale-state defects; cycle two verified both corrections and returned `PASS` with no P0-P3.
 
 ### SRR-054: San Antonio Hotel Access And Conflict Task
 
