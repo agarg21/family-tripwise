@@ -1,10 +1,32 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-06
+Last updated: 2026-09-08
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-057: New York City First-Time Family Day-Planning Questions
+
+Status: completed and review-clean; Meitner cycle-five `PASS`; research/state only
+
+Selected: 2026-09-07 by the morning independent Family Tripwise pilot
+
+Inspect three to five current public questions from families planning New York City days and test whether their unresolved work is mainly attraction discovery or the harder translation from ages, usable time, fixed reservations, base, movement, food/rest, weather, and priorities into a deletion-ready day shape.
+
+Boundaries:
+
+- Retain only source date/URL, paraphrased planning state, recurring constraints, and the work a useful answer must perform. Retain no usernames, copied thread text, personal data, private details, or anecdote-as-demand claims.
+- Map supported outputs to the existing all-ages activity and itinerary page roles without treating role coverage as proof that the joined route works.
+- Conclude `PRESERVE` or retain at most one bounded, unselected existing-page task for later desktop/mobile validation. Make no page, URL, indexing, community-draft/post, external-action, destination, or automation change.
+
+Expected artifact:
+
+- `docs/research/new-york-city-current-family-day-planning-questions-2026-09-07.md`
+
+Recent reused September 6 GSC is finalized through September 4 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort.
+
+Result: reject the attraction-inventory-first hypothesis within the five-question sample. All five already name attractions or hold a draft; the unresolved work is usable-day capacity, hard-reservation preservation, duplicate-payoff choice, zone grouping, food/reset protection, and deletion. Preserve both current page roles and URLs. Retain one unselected fixed-reservation edit task plus a flexible two-day control for later desktop/mobile validation; make no page change. Cycles one and two found three P2 research-record defects, all corrected. Cycle three verified the action but found one unrelated historical review-cycle mutation introduced by an imprecise operator patch; it is restored. The user-authorized fourth review found that `NYC-D2` incorrectly called five planned days a five-calendar-day trip with a partial departure day. The source instead has an arrival-limited first day and concert-limited fifth day, with a follow-up spanning six inclusive calendar dates. That P2 is corrected. Meitner cycle five returned `PASS` with no P0-P3 after independently reconciling the corrected source record, bounded counts, page-role boundary, GSC limitations, exact scope, and QA.
 
 ### SRR-056: Chicago Weather-Fallback Cross-Page Task
 

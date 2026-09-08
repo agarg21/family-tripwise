@@ -16,6 +16,7 @@ Release evidence: docs-only `FT-RES-034` action commit `2a73091ed9ae3db17322f118
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-035` | completed and review-clean; exact nine-path research/state scope; docs-only push pending; no page edit | cycle-five `PASS`; no P0-P3 | Cycles one and two found three record P2s. Cycle three caught an unrelated historical review-cycle mutation, now restored. Cycle four found one P2 source-day characterization in `NYC-D2`; it is corrected. Meitner cycle five reconciled all corrections, evidence, counts, decisions, QA, and scope. |
 | `FT-RES-034` | completed, review-clean, and docs-only pushed at `2a73091`; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | The spring case completes a provisional branch. The winter control reaches conditional branches but is `PARTIAL` on `Decide` because the source inputs omit interest and usable duration. Herschel cycle one caught the initial invented inputs and overclaimed completion; cycle two verified all related corrections. The three accepted P3s are single-select filter intersection, global evidence labels, and the deep complete recovery route. No implementation handoff is retained. |
 | `FT-RES-033` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Four current questions reject binary indoor-label sufficiency, preserve both Chicago page roles, and retain one unselected spring-switch task plus a winter-interest control. Cycle one found two P2 stale-state defects; cycle two verified both corrections. |
 | `FT-RES-032` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-three `PASS_WITH_P3`; no P0-P2 | Cycle one P2s/P3 are closed. Cycle two found no P0-P2 and two record P3s; cycle three verified both corrections. One accepted non-blocking Marriott row/detail consistency P3 remains. |
@@ -84,6 +85,16 @@ Release evidence: docs-only `FT-RES-034` action commit `2a73091ed9ae3db17322f118
 - None.
 
 ## Review history
+
+### 2026-09-07 - `FT-RES-035` New York City family day-planning questions
+
+- Reviewer: `01a07b27-003a-7da2-a581-7cc82118d01b`, independent read-only research and release-gate reviewer.
+- Cycle one: `FAIL` for two P2 research-record defects. `NYC-D2` understated its usable-day context and omitted fixed Wicked and Citi Field commitments. The reusable lesson said `many itinerary questions`, inferring prevalence from a purposively selected sample.
+- Correction: preserve the second record's usable-day and fixed-commitment context, and bind the lesson to these five inspected records. The reviewer independently reproduced the 5/5, 3/5, and 2/5 counts, page-role boundary, proportional candidate, GSC figures, exact scope, and green QA.
+- Cycle two: both original P2 corrections verified, then `FAIL` for one P2 chronology typo that called this cycle-two review a cycle-one re-review. The typo was corrected.
+- Cycle three: the action chronology and substantive candidate verified, then `FAIL` because an imprecise operator patch also changed historical `FT-IMP-017` review cycles from one to two. The historical value is restored to one. The three-cycle limit is exhausted, so no commit or push may proceed without fresh user direction. The reviewer made no file or external-state change.
+- User authorization and cycle four: on 2026-09-08, the user explicitly authorized exactly one additional independent read-only review. Reviewer `01a08078-1b1e-75d0-abe6-9b9bf0fcae6a` returned `FAIL` for one P2: `NYC-D2` incorrectly described five planned days as five calendar days with partial arrival and departure days. The source instead has an arrival-limited first day and a concert-limited fifth day; a follow-up gives August 5-10, six inclusive calendar dates. The record is corrected.
+- Cycle five: Meitner (`01a0818b-b7d4-77a3-9071-7243dfb7e381`) returned `PASS` with no P0-P3. The reviewer independently reconciled the corrected D2 record, bounded counts, evidence limitations, preserve decision, task/control selection, GSC figures, review chronology, QA claims, exact nine-path/no-site scope, 87 unique action IDs, and unchanged historical action records. The reviewer made no file or external-state change.
 
 ### 2026-09-06 - `FT-RES-034` Chicago weather-fallback cross-page task
 

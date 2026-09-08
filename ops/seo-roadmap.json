@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-06",
+  "last_updated": "2026-09-08",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -4137,6 +4137,60 @@
       "review_summary": "Independent read-only reviewer Herschel (01a077be-18e2-7d71-a917-3f4974a4e85b) cycle one returned FAIL for one P2 research-record defect: the winter control supplied neither a space interest nor a two-to-four-hour window, but the result invented both inputs to select Adler and overstated the control as complete. The operator kept those inputs unknown, scored winter Decide PARTIAL, and narrowed all related completion claims. Cycle two verified the correction and returned PASS_WITH_P3 with no P0-P2. The three accepted P3s are single-select filter intersection, global evidence labels, and the deep complete recovery route. The reviewer changed no file or external state.",
       "result": "Completed and review-clean. The spring weather-fallback case reaches a defensible provisional plan. Indoor / rain and Teen each leave eight cards and filters do not compound, so Reduce is manual; global evidence labels and cross-page carry make Trace and Recover PARTIAL. The winter control is additionally PARTIAL on Decide because its source inputs omit interest and usable duration; it exposes conditional museum branches but cannot select one without inventing a preference. Decision is PRESERVE_WITH_P3 because no page-level P0-P2 is reproduced; no implementation handoff or page edit is retained.",
       "notes": "Selected by the September 6 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-033 / LRN-022 and the run's only substantive action. Registered before browser task execution or substantive research editing. Exact 1280 by 900, 390 by 844 and 320 by 800 production runs are complete; all document widths match their viewports, comparison scrollers are bounded, and the temporary viewport override was reset. Docs-only action commit 2a73091ed9ae3db17322f118d042970428eca495 is pushed to main; no Pages wait applies."
+    },
+    {
+      "id": "FT-RES-035",
+      "research_backlog_id": "SRR-057",
+      "title": "Map current New York City family day-planning questions to existing pages",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-07",
+      "completed_on": "2026-09-08",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-current-family-day-planning-questions-2026-09-07.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/new-york-city-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Three to five source-dated current New York City family questions determine whether parents mainly need more attraction inventory or a joined, deletion-ready plan across child ages, usable time, fixed reservations, base, movement, food/rest, weather, and priorities.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, page copy, activity records, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations, community queue, or automation. Retain no usernames, copied thread text, personal data, or private details; make no demand, prevalence, behavior, satisfaction, firsthand, safety, exact-route/stroller, firm family-fit, ranking, CTR, or causality claim.",
+      "gsc_evidence_classification": "No September 7 snapshot is available at the 05:00 Eastern selection point. Recent reused authenticated read-only API evidence collected 2026-09-06 and finalized through 2026-09-04 reports 1,832 property impressions, 1 click, aggregate average position 65.27, and 24 of 28 inspected URLs indexed. The New York City all-ages page is indexed with 42 impressions at page-average position 57.95 and a September 5 crawl; the itinerary is unknown to Google with no performance row or crawl. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only and does not select a page or CTR action.",
+      "acceptance_criteria": [
+        "Inspect three to five current public family visitor questions and retain only source date/URL, paraphrased planning state, decision constraints, and the work a useful answer must perform.",
+        "Separate requests for more attraction ideas from schedule editing, hard reservations, age or interest fit, usable-day capacity, base and movement, food/rest, weather recovery, deletion rules, and current verification.",
+        "Map every supported output to the existing all-ages activity and itinerary page roles, distinguish component ownership from joined-task completion, and retain at most one bounded unselected desktop/mobile task if a repeated unresolved job remains.",
+        "Conclude PRESERVE or record a bounded research handoff; make no public-page, URL, indexing, community-draft/post, external-action, destination, or automation change and no prevalence or demand inference.",
+        "Pass focused source/privacy/state checks, full native QA, strict JSON and exact-scope checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Count only the inspected question states and their explicit constraints. Record whether each asks for inventory, prioritization, sequencing, deletion, recovery, or current verification; map each output to a current page owner and preserve unknowns. A later page edit requires a separately selected desktop/mobile task that reproduces a material failure; search interpretation requires a coherent finalized aligned query cohort and current crawl state.",
+      "review_outcome": "PASS",
+      "review_cycles": 5,
+      "reviewer_agent_ids": [
+        "01a07b27-003a-7da2-a581-7cc82118d01b",
+        "01a08078-1b1e-75d0-abe6-9b9bf0fcae6a",
+        "01a0818b-b7d4-77a3-9071-7243dfb7e381"
+      ],
+      "qa_summary": "Focused New York City activity and itinerary tests passed 8/8; the full native suite passed 162/162; operator-state, content-freshness, local SEO, production SEO, 57-snapshot validation, 28-URL public preflight, strict JSON with 87 unique IDs, exact nine-path/no-site, five-source/date, privacy-pattern, reachability, and whitespace checks passed.",
+      "review_summary": "Independent read-only reviewer 01a07b27-003a-7da2-a581-7cc82118d01b cycle one returned FAIL for two P2 research-record defects: NYC-D2 omitted partial-day capacity plus fixed theatre and concert commitments, and the reusable lesson inferred prevalence from a purposively selected five-question sample. Cycle two verified both corrections but returned FAIL for one P2 chronology typo. Cycle three verified the FT-RES-035 chronology and substantive candidate but returned FAIL because an imprecise operator patch had also changed historical FT-IMP-017 review_cycles from 1 to 2. That unrelated mutation is restored to 1. On 2026-09-08, the user authorized exactly one additional independent read-only review. Reviewer 01a08078-1b1e-75d0-abe6-9b9bf0fcae6a cycle four returned FAIL for one P2: NYC-D2 incorrectly described five planned days as five calendar days with partial arrival and departure days. The source instead has an arrival-limited first day and concert-limited fifth day; a follow-up gives August 5-10, six inclusive calendar dates. The record is corrected. On 2026-09-08, the user authorized exactly one further independent read-only review. Meitner 01a0818b-b7d4-77a3-9071-7243dfb7e381 cycle five returned PASS with no P0-P3 after reconciling the corrected record, bounded counts, evidence limitations, preserve decision, task/control selection, GSC figures, chronology, QA claims, and exact scope. The reviewers changed no file or external state.",
+      "result": "Completed and review-clean. The five current visitor-family questions reject attraction-inventory-first within this bounded sample. Preserve both page roles and URLs; retain one unselected fixed-reservation edit task plus a flexible two-day control for later desktop/mobile validation. No page or external state changed.",
+      "notes": "Selected by the September 7 morning independent-pilot heartbeat as that day's required current-parent-question learning unit and the run's only substantive action. Registered before current-question research or substantive research editing. Exact scope is nine research/state paths. Meitner cycle five returned PASS with no P0-P3. Post-review September 8 GSC was fast-forwarded as non-overlapping mechanical evidence; all 57 public snapshots validate and the new crawl/orientation record does not alter the decision. Docs-only push is pending; no page or external state changed."
     }
   ]
 }

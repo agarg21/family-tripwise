@@ -1,10 +1,10 @@
 # New York City Page Status
 
-Last updated: 2026-09-02
+Last updated: 2026-09-08
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-02.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-08.md`
 - NYC decision pack: `docs/research/new-york-city-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
@@ -30,6 +30,12 @@ Afternoon `FT-IMP-027` separately selected, released, and production-verified th
 Fresh September 3 GSC is finalized through September 1 and still classifies the New York City itinerary as unknown to Google with no crawl time or performance row. `FT-RES-029` / `SRR-050` rejects a consistent internal-link-deficit explanation: the itinerary has four distinct inbound sources, all indexed, including the homepage and contextual links from the all-ages, stay-area, and teen pages. It ties three indexed itinerary controls on total sources, trails San Diego's six-source itinerary, and ties the highest indexed-source count of four.
 
 The target is live `200`, self-canonical, indexable, robots-allowed, and present exactly once in the successful 28-URL sitemap; local and production link counts match. Preserve the page and links. Promote no internal-link implementation and do not request indexing; reopen only for a crawl/index change or a verified link, sitemap, fetch, canonical, robots, response, or rendering defect.
+
+## September 7 Current-Question Overlay
+
+Completed, review-clean `FT-RES-035` / `SRR-057` current-question research rejects an attraction-inventory-first response within five public visitor-family planning records dated March-August 2026. Each already names attractions or contains a draft and asks for realism, flow, add/remove choices, or tradeoffs. The supported work is to normalize usable days, lock hard reservations, choose between duplicate payoffs, group flexible blocks by zone, protect food/reset capacity, and identify deletions.
+
+The all-ages and itinerary pages own those component decisions, but role coverage does not prove that the joined route edits an existing draft while preserving hard reservations. The review-clean decision preserves both roles and URLs and retains one fixed-reservation task plus a flexible two-day control. The user-authorized fourth review returned `FAIL` because `NYC-D2` mischaracterized five planned days as five calendar days with a partial departure day. That P2 is corrected to an arrival-limited first day and concert-limited fifth day. Meitner cycle five independently reconciled the correction and returned `PASS` with no P0-P3. Post-review September 8 GSC is fresh authenticated read-only API evidence finalized through September 6: the all-ages page is indexed with 35 impressions at page-average position 54.37 and retains its September 5 crawl, while the itinerary remains unknown to Google with no row or crawl. No public aligned query cohort exists, so GSC is crawl/orientation evidence only and does not alter the reviewed decision.
 
 ## Pages
 
