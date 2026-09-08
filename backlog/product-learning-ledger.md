@@ -4,7 +4,7 @@ Last updated: 2026-09-08
 
 This ledger stores the pilot's bounded daily learning units and reusable lessons. It is not a heartbeat diary: unchanged health checks, repeated metrics, and narrative restatement are not learning events. Add an entry when source-dated evidence confirms or rejects a hypothesis, identifies a reproducible page gap, supports a `PRESERVE` decision, refreshes a material fact/conflict, or produces a useful community answer. Each Eastern calendar day should have at least one unit unless the cutoff has passed or a specific hard blocker is recorded in current-cycle state.
 
-Release evidence: `LRN-023` / `FT-RES-034` is docs-only pushed at action commit `2a73091ed9ae3db17322f118d042970428eca495`. `LRN-019` / `FT-RES-031` is docs-only pushed at action commit `b49a533`. `LRN-020` / `FT-MAINT-004` is production-verified at commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7` through Pages run `33959826964`.
+Release evidence: `LRN-024` / `FT-RES-035` is docs-only pushed at action commit `2dec40f`. `LRN-023` / `FT-RES-034` is docs-only pushed at action commit `2a73091ed9ae3db17322f118d042970428eca495`. `LRN-019` / `FT-RES-031` is docs-only pushed at action commit `b49a533`. `LRN-020` / `FT-MAINT-004` is production-verified at commit `0dd4f1ac13b871c6392d6b0a1c209f2b65a19ac7` through Pages run `33959826964`.
 
 | ID | Date | Scope | Hypothesis | Evidence and class | Decision or action | Result | Confidence | Reusable lesson | Next falsification trigger |
 |---|---|---|---|---|---|---|---|---|---|

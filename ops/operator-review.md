@@ -12,11 +12,11 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
-Release evidence: docs-only `FT-RES-034` action commit `2a73091ed9ae3db17322f118d042970428eca495` is pushed to `main`; no Pages wait applies.
+Release evidence: docs-only `FT-RES-035` action commit `2dec40f` is pushed to `main`; no Pages wait applies.
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
-| `FT-RES-035` | completed and review-clean; exact nine-path research/state scope; docs-only push pending; no page edit | cycle-five `PASS`; no P0-P3 | Cycles one and two found three record P2s. Cycle three caught an unrelated historical review-cycle mutation, now restored. Cycle four found one P2 source-day characterization in `NYC-D2`; it is corrected. Meitner cycle five reconciled all corrections, evidence, counts, decisions, QA, and scope. |
+| `FT-RES-035` | completed, review-clean, and docs-only pushed at `2dec40f`; exact nine-path research/state scope; no page edit | cycle-five `PASS`; no P0-P3 | Cycles one and two found three record P2s. Cycle three caught an unrelated historical review-cycle mutation, now restored. Cycle four found one P2 source-day characterization in `NYC-D2`; it is corrected. Meitner cycle five reconciled all corrections, evidence, counts, decisions, QA, and scope. |
 | `FT-RES-034` | completed, review-clean, and docs-only pushed at `2a73091`; exact ten-path research/state action; no page edit | cycle-two `PASS_WITH_P3`; no P0-P2 | The spring case completes a provisional branch. The winter control reaches conditional branches but is `PARTIAL` on `Decide` because the source inputs omit interest and usable duration. Herschel cycle one caught the initial invented inputs and overclaimed completion; cycle two verified all related corrections. The three accepted P3s are single-select filter intersection, global evidence labels, and the deep complete recovery route. No implementation handoff is retained. |
 | `FT-RES-033` | completed and review-clean; exact nine-path research/state action; no page edit | cycle-two `PASS`; no P0-P3 | Four current questions reject binary indoor-label sufficiency, preserve both Chicago page roles, and retain one unselected spring-switch task plus a winter-interest control. Cycle one found two P2 stale-state defects; cycle two verified both corrections. |
 | `FT-RES-032` | completed and review-clean; exact ten-path research/state action; no page edit | cycle-three `PASS_WITH_P3`; no P0-P2 | Cycle one P2s/P3 are closed. Cycle two found no P0-P2 and two record P3s; cycle three verified both corrections. One accepted non-blocking Marriott row/detail consistency P3 remains. |
