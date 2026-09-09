@@ -1,8 +1,28 @@
 # Implementation Backlog
 
-Last updated: 2026-09-06
+Last updated: 2026-09-08
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate NYC Existing-Draft Start
+
+### IMP-051: Put Fixed Commitments Before Generic Day Shapes
+
+Status: unselected, review-clean candidate from completed `FT-RES-036` / `SRR-058`; Kepler cycle-four `PASS`; no page change authorized
+
+Target:
+
+- `https://familytripwise.com/family-itinerary/new-york-city-with-kids.html`
+
+The September 8 fixed-reservation task can reach a conditional, deletion-ready plan from the current activity and itinerary evidence, but the itinerary's first route offers only one-, two-, and three-day blank-slate cards. It does not first distinguish fixed from movable commitments or partial travel days from full usable blocks. The correct arrival/departure pivot and stop rules begin 5.9-8.4 mobile viewports down, so the reader must reconstruct the editing order.
+
+Smallest candidate, if independent review retains it and a later action selects it:
+
+- Add one compact instruction immediately under `Pick the trip length before the attractions` and before the current cards.
+- Tell a reader with an existing draft to separate fixed from movable or refundable commitments, mark usable arrival/departure/full-day blocks, place one same-zone main job and meal/reset around each fixed block, cut flexible stops first, and recheck exact terms, entrances, transit, weather, storage, and backup.
+- Add no card, form, planner, filter, attraction, day template, comparison record, route time, URL, or claim. Preserve the current flexible one-, two-, and three-day starts.
+
+Future success requires Task A `Start` and `Recover` to change from `PARTIAL` to `YES` while the flexible two-day control's `Start` remains `YES`; the instruction must remain before the cards at exact desktop and mobile viewports without changing title, H1, canonical, indexability, sitemap, schema, existing routes, pivots, stop rules, sources, or trust boundaries. Any implementation requires a separate roadmap selection, native QA, independent review, and release verification.
 
 Latest no-candidate result: `FT-RES-034` / `SRR-056` preserves the Chicago all-ages activity and itinerary pages after exact desktop/mobile spring-switch and winter-interest tasks. Single-select filtering, global evidence labels, and cross-page depth create non-blocking P3 friction. The spring case completes a provisional branch; the winter control reaches conditional museum branches but cannot select one because its retained inputs omit both interest and usable duration. That control limitation does not establish a page defect. No compound filter, duplicate handoff, weather layer, page, or URL is retained as an implementation candidate. Reopen after a complete control reproduces a material block, behavior evidence, aligned weather-fallback query evidence, or a current factual/technical defect. Docs-only action commit `2a73091ed9ae3db17322f118d042970428eca495` is pushed to `main`.
 

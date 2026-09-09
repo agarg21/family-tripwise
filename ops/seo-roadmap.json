@@ -4191,6 +4191,61 @@
       "review_summary": "Independent read-only reviewer 01a07b27-003a-7da2-a581-7cc82118d01b cycle one returned FAIL for two P2 research-record defects: NYC-D2 omitted partial-day capacity plus fixed theatre and concert commitments, and the reusable lesson inferred prevalence from a purposively selected five-question sample. Cycle two verified both corrections but returned FAIL for one P2 chronology typo. Cycle three verified the FT-RES-035 chronology and substantive candidate but returned FAIL because an imprecise operator patch had also changed historical FT-IMP-017 review_cycles from 1 to 2. That unrelated mutation is restored to 1. On 2026-09-08, the user authorized exactly one additional independent read-only review. Reviewer 01a08078-1b1e-75d0-abe6-9b9bf0fcae6a cycle four returned FAIL for one P2: NYC-D2 incorrectly described five planned days as five calendar days with partial arrival and departure days. The source instead has an arrival-limited first day and concert-limited fifth day; a follow-up gives August 5-10, six inclusive calendar dates. The record is corrected. On 2026-09-08, the user authorized exactly one further independent read-only review. Meitner 01a0818b-b7d4-77a3-9071-7243dfb7e381 cycle five returned PASS with no P0-P3 after reconciling the corrected record, bounded counts, evidence limitations, preserve decision, task/control selection, GSC figures, chronology, QA claims, and exact scope. The reviewers changed no file or external state.",
       "result": "Completed and review-clean. The five current visitor-family questions reject attraction-inventory-first within this bounded sample. Preserve both page roles and URLs; retain one unselected fixed-reservation edit task plus a flexible two-day control for later desktop/mobile validation. No page or external state changed.",
       "notes": "Selected by the September 7 morning independent-pilot heartbeat as that day's required current-parent-question learning unit and the run's only substantive action. Registered before current-question research or substantive research editing. Exact scope is nine research/state paths. Meitner cycle five returned PASS with no P0-P3. Post-review September 8 GSC was fast-forwarded as non-overlapping mechanical evidence; all 57 public snapshots validate and the new crawl/orientation record does not alter the decision. Docs-only action commit 2dec40f is pushed to main; no Pages wait applies and no page or external state changed."
+    },
+    {
+      "id": "FT-RES-036",
+      "research_backlog_id": "SRR-058",
+      "title": "Validate New York City fixed-reservation editing across activity and itinerary pages",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-08",
+      "completed_on": "2026-09-09",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/new-york-city-fixed-reservation-cross-page-task-review-2026-09-08.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/implementation-backlog.md",
+        "status/new-york-city-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A live fixed-reservation edit task and flexible two-day control at desktop and mobile sizes determine whether the current activity and itinerary pages can preserve hard anchors, normalize usable blocks, reduce each block to one zone and one main job, choose duplicate payoffs, protect food/reset capacity, identify deletions, and route current checks without avoidable reconstruction.",
+      "production_invariant": "Research and state only across the ten registered paths. Do not change site/**, generators, tests, page copy, activity records, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, external posts/accounts, outreach, destinations, community queue, or automation. Treat the walkthrough as proxy review, not user testing; make no firsthand, safety, exact-route/travel-time/stroller, firm family-fit, behavior, satisfaction, demand, conversion, ranking, CTR, or causality claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-08 and finalized through 2026-09-06: 1,824 property impressions, 3 clicks, aggregate average position 64.27, and 24 of 28 inspected URLs indexed. The New York City all-ages page is indexed with 35 impressions at page-average position 54.37 and a September 5 crawl; the itinerary is unknown to Google with no performance row or crawl. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only; the retained family task selects this research.",
+      "acceptance_criteria": [
+        "Run the NYC-D1 fixed-reservation edit task and NYC-D3 flexible two-day control from FT-RES-035 on the live all-ages activity and itinerary pages at 1280 by 900, 390 by 844, and 320 by 800 when the operator browser supports those exact viewports.",
+        "Score Start, Reduce, Compare, Trace, Decide, Verify, and Recover as YES, PARTIAL, NO, or NOT IN PAGE ROLE for both cases; record first useful surfaces, option reduction, in-page and cross-page depth, normal-link behavior, unsupported certainty, and remaining unknowns.",
+        "Test whether the route separates fixed from flexible blocks, distinguishes partial from full days, limits each usable block to one zone and main job, chooses one harbor and one observation payoff where relevant, places food/reset capacity, states first deletions, and exposes current ticket, entrance, transit, weather, storage, and backup checks.",
+        "Conclude PRESERVE or retain at most one bounded unselected existing-page candidate in the implementation backlog. Make no public-page edit in this action.",
+        "Pass focused New York City tests, full native QA, strict JSON, exact-scope/privacy/whitespace checks, browser containment and normal-link checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Record first relevant surface positions, decision-layer order, remaining choices after each reduction, fixed-anchor and deletion visibility, current-check proximity, cross-page transitions, exact viewport and document widths, horizontal containment, and protocol results for both cases. A future edit requires a reproduced material P2 and a separately selected implementation. Search interpretation waits for a coherent finalized aligned query cohort and current crawl evidence.",
+      "promoted_action": "IMP-051",
+      "review_outcome": "PASS",
+      "review_cycles": 4,
+      "reviewer_agent_ids": [
+        "01a08221-4b19-79f3-a09a-294ee3e07bbb",
+        "01a08568-8011-7a71-89a5-7d14325f850b"
+      ],
+      "qa_summary": "Focused New York City activity and itinerary tests pass 8/8; full native tests pass 162/162; operator-state and content-freshness checks pass with zero expired records; local and production SEO return 0 errors and 0 warnings across the 28-URL preflight; all 57 public GSC snapshots validate and the GSC snapshot tests pass 12/12; roadmap JSON parses with 88 unique action IDs; exact ten-path/no-site scope, privacy, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Raman (01a08221-4b19-79f3-a09a-294ee3e07bbb) cycle one returned FAIL with two P2 research-record findings: decision-critical source details were absent from the locally retained FT-RES-035 record, and the action record said QA was pending after green QA had run. Cycle two returned FAIL with one P2 consistency finding: Task A scored Decide as YES despite an unresolved harbor preference, and one provisional sentence implied unretained chronology. Cycle three confirmed those substantive corrections but returned FAIL because this machine-readable action still recorded one review cycle while prose recorded two and cycle three pending. The action now records all three cycles, and the unrelated historical FT-IMP-017 review_cycles value accidentally changed by the imprecise patch is restored to one. All P2 records are corrected. On 2026-09-08, the user explicitly authorized exactly one additional independent read-only review and instructed the operator to commit after a clean result. Kepler (01a08568-8011-7a71-89a5-7d14325f850b) cycle four returned PASS with no P0-P3 after reconciling the complete diff, source facts, scores, P2 classification, IMP-051 scope, GSC and privacy limits, exact ten-path/no-site scope, QA, review chronology, and restored historical state. Neither reviewer edited files or external state.",
+      "result": "Completed and review-clean. The fixed-reservation case reaches a conditional structure but reproduces one P2: the itinerary's early route offers only one-, two-, and three-day blank-slate starts, while arrival/departure and stop rules begin 5.9-8.4 mobile viewports down, so the reader must invent the fixed-first editing order. Task A Decide is separately PARTIAL because its retained source summary supplies no harbor preference. Preserve both pages now and retain only unselected IMP-051, one compact existing-draft instruction before the current cards. The flexible control starts correctly; duplicate ferry and observation choices remain conditional for the same input reason.",
+      "notes": "Selected by the September 8 afternoon independent-pilot heartbeat as that day's required apply/deepen learning unit after completed FT-RES-035 / LRN-024 and the run's only substantive action. Registered before browser task execution or substantive research editing. Exact 1280 by 900, 390 by 844, and 320 by 800 production runs are complete with contained tables, zero root overflow, and normal links after a visible-anchor retry. On September 8, the user authorized exactly one additional independent read-only review and instructed the operator to commit after a clean result. Kepler cycle four returned PASS with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page or external state changed. The September 9 daily learning unit remains due for the afternoon run."
     }
   ]
 }

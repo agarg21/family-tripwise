@@ -6,6 +6,28 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-058: New York City Fixed-Reservation Cross-Page Task
+
+Status: completed and review-clean under `FT-RES-036`; Kepler cycle-four `PASS`; research/state only
+
+Selected: 2026-09-08 by the afternoon independent Family Tripwise pilot
+
+Run the `NYC-D1` fixed-reservation editing task and `NYC-D3` flexible two-day control retained by `FT-RES-035` against the live New York City all-ages activity and itinerary pages at desktop and two mobile viewports. Test whether the route preserves hard anchors, converts calendar time into usable blocks, reduces each block to one zone and one main job, chooses duplicate payoffs, protects food/reset time, names deletions, and routes current checks without avoidable reconstruction.
+
+Boundaries:
+
+- Treat the walkthrough as proxy review, not user testing, preference, behavior, satisfaction, conversion, demand, ranking, or CTR evidence.
+- Score `Start`, `Reduce`, `Compare`, `Trace`, `Decide`, `Verify`, and `Recover`; record exact viewport dimensions, decision-surface depth, option reduction, normal-link behavior, overflow, unsupported certainty, and remaining unknowns.
+- Conclude `PRESERVE` or retain at most one bounded, unselected existing-page candidate. Make no page, URL, indexing, external-action, destination, community, or automation change in this action.
+
+Expected artifact:
+
+- `docs/research/new-york-city-fixed-reservation-cross-page-task-review-2026-09-08.md`
+
+Fresh September 8 GSC is finalized through September 6 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort.
+
+Local result: the fixed-reservation case is materially `PARTIAL` at `Start` and `Recover`. The itinerary's early route offers only one-, two-, and three-day blank-slate cards; its arrival/departure pivot and stop rules begin 5.9-8.4 mobile viewports down, leaving the reader to invent the fixed-first editing order. Its `Decide` score is separately `PARTIAL` because the locally retained source summary supplies no harbor preference. Preserve both pages now and retain only unselected `IMP-051`, one compact existing-draft instruction before the current cards. The flexible control keeps the current two-day start and leaves both duplicate ferry and observation choices conditional for the same input reason. Raman cycles one through three found and closed source/QA, decision-score/chronology, and machine-state P2s. User-authorized Kepler cycle four returned `PASS` with no P0-P3 after reconciling every correction, exact scope, evidence boundary, and green QA.
+
 ### SRR-057: New York City First-Time Family Day-Planning Questions
 
 Status: completed, review-clean, and docs-only pushed at `2dec40f`; Meitner cycle-five `PASS`; research/state only
