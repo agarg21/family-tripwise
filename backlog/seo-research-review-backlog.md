@@ -1,10 +1,36 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-059: San Diego Attraction Logistics Official-Fact Audit
+
+Status: completed and review-clean under `FT-RES-037`; Kant cycle-two `PASS`; research/state only
+
+Selected: 2026-09-09 by the afternoon independent Family Tripwise pilot
+
+Audit the 12 current official-source records behind the live San Diego attraction logistics index, last checked July 31, and determine whether the citation asset remains supportable as-is or whether one bounded factual-maintenance candidate must precede later authority work.
+
+Boundaries:
+
+- Record source date, reachability, retained fact compatibility, conflicts, source moves and unknowns without copying proprietary text or turning generic plan pages into current-operation guarantees.
+- Separate stable logistics from volatile schedules, prices, availability, closures and weather. Make no firsthand, safety, exact-route/stroller, firm family-fit, demand, behavior, ranking, CTR, conversion or causality claim.
+- Conclude `PRESERVE` or retain at most one bounded unselected maintenance candidate. Make no page, CSV, checked-date, URL/search-state, indexing, outreach, external-account, destination, community or automation change.
+
+Expected artifact:
+
+- `docs/research/san-diego-attraction-logistics-official-fact-audit-2026-09-09.md`
+
+Fresh September 9 GSC is finalized through September 7 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort. The San Diego all-ages activity page has no public performance row and remains unknown to Google in the durable inspection state.
+
+Result:
+
+- `PRESERVE`: all 12 registered official URLs return `200`; all 12 records remain compatible and none moved.
+- The New Children's Museum's current-week closures are explained by its dated September 8-11 closure notice, while the six-days-a-week/Tuesday-closed paragraph describes normal operations. The apparent schedule conflict is resolved; no source conflict or unknown remains.
+- Retain no maintenance candidate. The index remains supportable as a source-dated decision aid for a later separately user-authorized authority action; no page, checked-date, indexing, outreach, or external state changed. Focused `5/5`, full `162/162`, state, freshness, local/production SEO, 58-snapshot, 12-source reachability, JSON, exact-scope, privacy, and whitespace checks pass. Kant cycle one returned `FAIL` for three P2 record defects; cycle two verified all corrections and returned `PASS` with no P0-P3.
 
 ### SRR-058: New York City Fixed-Reservation Cross-Page Task
 

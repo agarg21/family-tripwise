@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 Last re-scored: 2026-09-03
 Next re-score due: 2026-09-10
@@ -14,6 +14,10 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+- September 9 action: `FT-RES-037` / `SRR-059` / `LRN-026` is completed and review-clean as the day's maintained-evidence learning unit. It audited all 12 official-source records behind the San Diego attraction logistics index, checked July 31. Exact scope is nine research/state paths; no live page, CSV, checked date, URL/search state, indexing, outreach, external account, destination, community queue, or automation changed.
+- Fresh September 9 authenticated read-only API evidence in `ops/gsc-snapshots/2026-09-09.json` is finalized through September 7: 1,757 property impressions, 3 clicks, aggregate average position 64.47, and 24/28 inspected URLs indexed. The San Diego all-ages activity page has no public performance row and remains unknown to Google with no crawl time in the durable inspection state. No public aligned query cohort exists, so GSC is current crawl/orientation evidence only and does not select a page or CTR action.
+- Final result: `PRESERVE`. All 12 official URLs return `200`; all 12 records remain compatible and none moved. The New Children's Museum's current-week closures are explained by its dated September 8-11 notice, while its six-days-a-week/Tuesday-closed paragraph describes normal operations. No source conflict, unknown, public correction, maintenance candidate, or external action remains. Focused `5/5`, full `162/162`, state, freshness, local/production SEO, 58-snapshot, source-reachability, JSON, exact-scope, privacy, and whitespace checks pass. Kant cycle one returned `FAIL` for three P2 record defects; cycle two verified all corrections and returned `PASS` with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to `main`; no Pages wait applies.
 
 - September 8 action: `FT-RES-036` / `SRR-058` / `LRN-025` is completed, review-clean, and carried by its exact-path docs-only release commit; no Pages wait applies. Exact 1280 by 900, 390 by 844, and 320 by 800 runs reproduce one P2 in the retained fixed-reservation task: the itinerary's early route offers only blank-slate one-, two-, and three-day cards, while arrival/departure and stop rules begin 5.9-8.4 mobile viewports down. The reader can reach a conditional structure but must invent the fixed-first editing order. Task A `Decide` is separately `PARTIAL` because its locally retained source summary supplies no harbor preference. Preserve both pages now and retain only unselected `IMP-051`, one compact existing-draft instruction before the current cards. The flexible two-day control starts correctly; duplicate ferry and observation choices remain conditional for the same input reason. Raman cycles one through three found and closed source/QA, decision-score/chronology, and machine-state P2s. User-authorized Kepler cycle four returned `PASS` with no P0-P3. Exact scope is ten research/state paths; no page or external state changed.
 

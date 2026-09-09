@@ -1,12 +1,18 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ## Cycle Name
 
 Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
+
+Action `FT-RES-037` / `SRR-059` / `LRN-026` is completed and review-clean as the September 9 maintained-evidence learning unit. It audited all 12 official-source records behind the live San Diego attraction logistics index, checked July 31, to determine whether the asset remains supportable as-is or whether one bounded factual-maintenance candidate must precede any later user-authorized authority outreach. Exact scope is nine research/state paths; no page, CSV, checked date, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed.
+
+Fresh September 9 authenticated read-only API evidence in `ops/gsc-snapshots/2026-09-09.md` is finalized through September 7: 1,757 property impressions, 3 clicks, aggregate average position 64.47, and 24/28 inspected URLs indexed. The San Diego all-ages activity page has no public performance row and remains unknown to Google with no crawl time in the durable inspection state. The public snapshot contains no aligned query cohort, so this is crawl/orientation evidence only; the 40-day age of the maintained official-source layer selects the audit.
+
+Final result is `PRESERVE`. All 12 official URLs return `200`; all 12 records remain compatible and none moved. The New Children's Museum's current-week closures are explained by its dated September 8-11 notice, while the six-days-a-week/Tuesday-closed paragraph describes normal operations. No source conflict, unknown, factual correction, or maintenance candidate is selected. Focused `5/5`, full `162/162`, state, freshness, local/production SEO, 58-snapshot, source-reachability, strict-JSON, exact-scope, privacy, and whitespace checks pass. Kant cycle one returned `FAIL` for three P2 record defects; cycle two verified all corrections and returned `PASS` with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to `main`; no Pages wait applies.
 
 Action `FT-RES-036` / `SRR-058` / `LRN-025` is completed and review-clean as the September 8 afternoon apply/deepen learning unit. Exact 1280 by 900, 390 by 844, and 320 by 800 production runs reproduce one P2 in the retained `NYC-D1` fixed-reservation task: the itinerary's early route offers only one-, two-, and three-day blank-slate cards, while its arrival/departure pivot and stop rules begin 5.9-8.4 mobile viewports down. The reader can reach a conditional structure but must invent the fixed-first editing order. Task A `Decide` is separately `PARTIAL` because the locally retained summary supplies no harbor preference. Preserve both pages now and retain only unselected `IMP-051`, one compact existing-draft instruction before the current cards. The `NYC-D3` flexible control starts correctly; duplicate ferry and observation choices remain conditional for the same input reason. Raman cycles one through three found and closed source/QA, decision-score/chronology, and machine-state P2s. User-authorized Kepler cycle four returned `PASS` with no P0-P3. Focused 8/8 and full 162/162 tests plus state, freshness, local/production SEO, 57-snapshot, GSC 12/12, 28-URL preflight, strict-JSON, exact-scope, privacy, and whitespace checks pass. The exact-path docs-only commit carrying this record is pushed to `main`; no Pages wait applies and no page or external state changed. The September 9 daily learning unit remains due for the afternoon run because this morning transaction completes prior review/release work.
 

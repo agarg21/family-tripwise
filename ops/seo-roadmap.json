@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-08",
+  "last_updated": "2026-09-09",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -4246,6 +4246,57 @@
       "review_summary": "Independent read-only reviewer Raman (01a08221-4b19-79f3-a09a-294ee3e07bbb) cycle one returned FAIL with two P2 research-record findings: decision-critical source details were absent from the locally retained FT-RES-035 record, and the action record said QA was pending after green QA had run. Cycle two returned FAIL with one P2 consistency finding: Task A scored Decide as YES despite an unresolved harbor preference, and one provisional sentence implied unretained chronology. Cycle three confirmed those substantive corrections but returned FAIL because this machine-readable action still recorded one review cycle while prose recorded two and cycle three pending. The action now records all three cycles, and the unrelated historical FT-IMP-017 review_cycles value accidentally changed by the imprecise patch is restored to one. All P2 records are corrected. On 2026-09-08, the user explicitly authorized exactly one additional independent read-only review and instructed the operator to commit after a clean result. Kepler (01a08568-8011-7a71-89a5-7d14325f850b) cycle four returned PASS with no P0-P3 after reconciling the complete diff, source facts, scores, P2 classification, IMP-051 scope, GSC and privacy limits, exact ten-path/no-site scope, QA, review chronology, and restored historical state. Neither reviewer edited files or external state.",
       "result": "Completed and review-clean. The fixed-reservation case reaches a conditional structure but reproduces one P2: the itinerary's early route offers only one-, two-, and three-day blank-slate starts, while arrival/departure and stop rules begin 5.9-8.4 mobile viewports down, so the reader must invent the fixed-first editing order. Task A Decide is separately PARTIAL because its retained source summary supplies no harbor preference. Preserve both pages now and retain only unselected IMP-051, one compact existing-draft instruction before the current cards. The flexible control starts correctly; duplicate ferry and observation choices remain conditional for the same input reason.",
       "notes": "Selected by the September 8 afternoon independent-pilot heartbeat as that day's required apply/deepen learning unit after completed FT-RES-035 / LRN-024 and the run's only substantive action. Registered before browser task execution or substantive research editing. Exact 1280 by 900, 390 by 844, and 320 by 800 production runs are complete with contained tables, zero root overflow, and normal links after a visible-anchor retry. On September 8, the user authorized exactly one additional independent read-only review and instructed the operator to commit after a clean result. Kepler cycle four returned PASS with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page or external state changed. The September 9 daily learning unit remains due for the afternoon run."
+    },
+    {
+      "id": "FT-RES-037",
+      "research_backlog_id": "SRR-059",
+      "title": "Audit the San Diego attraction logistics index against current official sources",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-09",
+      "completed_on": "2026-09-09",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-attraction-logistics-official-fact-audit-2026-09-09.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A source-dated audit of all 12 official-source records determines whether the live San Diego attraction logistics index remains accurate enough to preserve as a citation asset or whether one bounded factual-maintenance candidate must precede any later user-authorized authority outreach.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, visible checked dates, activity records, CSV data, page copy, title, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, outreach, external posts/accounts, destinations, community queue, or automation. Treat inaccessible or dynamic source details as unknown; make no firsthand, safety, exact-route/travel-time/stroller, firm family-fit, demand, ranking, CTR, conversion, or causality claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-09 and finalized through 2026-09-07 reports 1,757 property impressions, 3 clicks, aggregate average position 64.47, and 24 of 28 inspected URLs indexed. The San Diego all-ages activity page has no public performance row and remains unknown to Google with no crawl time in the durable inspection state. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only; the 40-day age of the maintained official-source layer selects this audit.",
+      "acceptance_criteria": [
+        "Inspect the current official source for each of the 12 live attraction records and record the September 9 source date, reachability, retained fact compatibility, material conflict, redirect or source move, and unresolved unknown without copying proprietary text.",
+        "Separate stable logistics facts from schedules, prices, availability, closures, weather, and other volatile details; do not convert a generic plan page into a current-operation guarantee.",
+        "Determine PRESERVE or retain at most one bounded unselected factual-maintenance candidate. Make no public-page, CSV, checked-date, URL, indexing, outreach, external-action, destination, community, or automation change.",
+        "Record whether the evidence asset is currently supportable for later authority work while keeping outreach separately user-gated and making no link-acquisition or ranking promise.",
+        "Pass full native QA, strict JSON, official-source reachability, exact nine-path/no-site scope, privacy and whitespace checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Classify all 12 records as unchanged, source moved, visible fact conflict, material correction, or unknown, and count each class. A future page edit requires a reproduced material conflict and separately selected maintenance action. Authority effects, discovery, ranking, and search behavior remain unmeasured; later outreach still requires explicit user authorization.",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a08730-4d38-7ef0-bb5c-3b48de3daba5"
+      ],
+      "qa_summary": "Focused San Diego attraction-logistics tests pass 5/5 and the full native suite passes 162/162. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 58 public GSC snapshots validate. Roadmap JSON has 89 unique action IDs; direct 12-source reachability, exact nine-path/no-site scope, privacy-pattern, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Kant (01a08730-4d38-7ef0-bb5c-3b48de3daba5) cycle one returned FAIL with three P2 record findings: the New Children's Museum's dated temporary closure was misclassified as a source conflict, two San Diego discovery rows retained September 3 URL Inspection wording instead of September 9, and the action notes called already-green QA pending. Cycle two verified all corrections, state mirrors, GSC boundaries, exact scope, source checks, and QA and returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean with PRESERVE. All 12 official URLs return 200; all 12 records remain compatible and none moved. The New Children's Museum's current-week closures are explained by its dated September 8-11 notice, while its six-days-a-week/Tuesday-closed paragraph describes normal operations. No source conflict, unknown, public factual correction, or maintenance candidate remains.",
+      "notes": "Selected by the September 9 afternoon independent-pilot heartbeat as that day's required maintained-evidence learning unit and the run's only substantive action. Registered before current-source inspection or substantive research editing. Research and QA are complete across the exact nine-path scope; Kant cycle two returned PASS with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page, checked date, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed."
     }
   ]
 }
