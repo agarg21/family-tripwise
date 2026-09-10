@@ -1,10 +1,36 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-060: Current San Diego Family Activity-Planning Questions
+
+Status: completed and review-clean under `FT-RES-038`; Dirac cycle-one `PASS`; research/state only
+
+Selected: 2026-09-10 by the morning independent Family Tripwise pilot
+
+Inspect three to five current public questions from families planning San Diego activities and test whether their unresolved work is mainly attraction discovery or the harder translation of existing choices under age, pace, transport, weather, cost, reservations, accessibility, and trip-date checks.
+
+Boundaries:
+
+- Retain only source date/URL, paraphrased planning state, recurring constraints, and the work a useful answer must perform. Retain no usernames, copied thread text, personal data, private details, or anecdote-as-demand claims.
+- Map supported outputs to the existing 12-choice activity index and sibling roles without treating role coverage as proof that a joined live task works.
+- Conclude `PRESERVE` or retain at most one bounded, unselected live-task hypothesis for later desktop/mobile validation. Make no page, URL/search-state, indexing, community draft/post, external-action, destination, or automation change.
+
+Expected artifact:
+
+- `docs/research/san-diego-current-family-activity-planning-questions-2026-09-10.md`
+
+Recent reused September 9 GSC is finalized through September 7 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort. The San Diego all-ages activity page has no public performance row and remains unknown to Google in the durable inspection state.
+
+Result:
+
+- `PRESERVE`. All five planning states already contain named attractions, a pass, a hotel, fixed reservations, or draft days. The shared work is usable-block normalization, commitment locking, zone grouping, meals/rest/hotel capacity, transport choice, deletion, and trip-date verification rather than more inventory.
+- Current pages own those component jobs, but role coverage does not prove that the activity-to-itinerary handoff works. Retain one unselected overfilled 2.5-day live task for later desktop/mobile validation and promote no implementation candidate now.
+- Confidence is medium for the bounded task model and low for prevalence, demand, behavior, satisfaction, route effectiveness, ranking, or CTR. Focused `10/10`, full `162/162`, state, freshness, local/production SEO, 58-snapshot, strict-JSON, exact-scope, privacy, and whitespace checks pass. Dirac cycle one independently verified the sources, evidence, decision, role mapping, GSC limits, state, scope, privacy, and QA and returned `PASS` with no P0-P3.
 
 ### SRR-059: San Diego Attraction Logistics Official-Fact Audit
 

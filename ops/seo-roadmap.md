@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
 Last re-scored: 2026-09-03
 Next re-score due: 2026-09-10
@@ -14,6 +14,9 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+- September 10 action: `FT-RES-038` / `SRR-060` / `LRN-027` is completed and review-clean as the day's current-question learning unit. Five questions dated February 12-July 27, 2026 reject attraction-inventory-first within this bounded sample: all already contain named attractions, a pass, a hotel, fixed bookings, or draft days. Preserve the current pages, roles, inventory, URLs, and search state; retain one unselected overfilled 2.5-day activity-to-itinerary live task for later desktop/mobile validation and promote no implementation candidate. Exact scope is nine research/state paths; no live page, URL/search state, indexing, outreach, external account, destination, community queue, or automation changed. Focused `10/10`, full `162/162`, state, freshness, local/production SEO, 58-snapshot, strict-JSON, exact-scope, privacy, and whitespace checks pass. Dirac cycle one returned `PASS` with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to `main`; no Pages wait applies.
+- No September 10 public-safe GSC snapshot is available at the 05:06 Eastern selection point. Recent reused September 9 authenticated read-only API evidence in `ops/gsc-snapshots/2026-09-09.json` is finalized through September 7: 1,757 property impressions, 3 clicks, aggregate average position 64.47, and 24/28 inspected URLs indexed. The San Diego all-ages activity page has no public performance row and remains unknown to Google with no crawl time in the durable inspection state. No public aligned query cohort exists, so GSC is current crawl/orientation evidence only and does not select a page or CTR action.
 
 - September 9 action: `FT-RES-037` / `SRR-059` / `LRN-026` is completed and review-clean as the day's maintained-evidence learning unit. It audited all 12 official-source records behind the San Diego attraction logistics index, checked July 31. Exact scope is nine research/state paths; no live page, CSV, checked date, URL/search state, indexing, outreach, external account, destination, community queue, or automation changed.
 - Fresh September 9 authenticated read-only API evidence in `ops/gsc-snapshots/2026-09-09.json` is finalized through September 7: 1,757 property impressions, 3 clicks, aggregate average position 64.47, and 24/28 inspected URLs indexed. The San Diego all-ages activity page has no public performance row and remains unknown to Google with no crawl time in the durable inspection state. No public aligned query cohort exists, so GSC is current crawl/orientation evidence only and does not select a page or CTR action.

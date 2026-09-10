@@ -1,6 +1,6 @@
 # San Diego Page Status
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
 Sources:
 
@@ -17,8 +17,15 @@ Sources:
 - Mission Bay versus LEGOLAND stay-shape review: `docs/research/san-diego-mission-bay-legoland-stay-shape-review-2026-08-24.md`
 - Stay-shape live-SERP ownership validation: `docs/research/san-diego-stay-shape-serp-validation-2026-08-25.md`
 - Attraction-logistics official-fact audit: `docs/research/san-diego-attraction-logistics-official-fact-audit-2026-09-09.md`
+- Current family activity-planning questions: `docs/research/san-diego-current-family-activity-planning-questions-2026-09-10.md`
 
 Note: The implementation baseline remains the July 21 snapshot. The all-ages and teen discovery rows use the fresh September 9 snapshot finalized through September 7; other performance rows retain their stated prior measurement boundaries. None of these windows can establish causal impact from a page change. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; complete protected rows remain outside this public repository.
+
+## September 10 Activity-Planning Question Overlay
+
+`FT-RES-038` / `SRR-060` / `LRN-027` inspects five current public San Diego family planning questions dated February 12 through July 27, 2026. Every planning state already contains named attractions, a pass, a hotel, fixed reservations, or draft days. The unresolved work is to normalize usable blocks, lock commitments, group by zone, protect meals/rest/hotel time, choose transport, delete flexible additions, and verify volatile trip-date details.
+
+The final decision is `PRESERVE`: do not add attractions, rewrite either page, or change URLs or search state. The all-ages activity page owns the 12-choice comparison and current-check routes; the itinerary page owns sequencing and usable-day pacing; age and lodging siblings own their narrower decisions. Because role coverage does not prove that the joined activity-to-itinerary task works, retain one unselected overfilled 2.5-day live task for a later desktop/mobile run. No implementation candidate is promoted. This is qualitative proxy evidence, not demand, prevalence, user-testing, behavior, satisfaction, ranking, or CTR evidence. Focused `10/10`, full `162/162`, state, freshness, local/production SEO, 58-snapshot, strict-JSON, exact-scope, privacy, and whitespace checks pass. Dirac cycle one returned `PASS` with no P0-P3.
 
 ## September 9 Attraction-Logistics Freshness Overlay
 

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-09",
+  "last_updated": "2026-09-10",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -4297,6 +4297,56 @@
       "review_summary": "Independent read-only reviewer Kant (01a08730-4d38-7ef0-bb5c-3b48de3daba5) cycle one returned FAIL with three P2 record findings: the New Children's Museum's dated temporary closure was misclassified as a source conflict, two San Diego discovery rows retained September 3 URL Inspection wording instead of September 9, and the action notes called already-green QA pending. Cycle two verified all corrections, state mirrors, GSC boundaries, exact scope, source checks, and QA and returned PASS with no P0-P3. The reviewer changed no file or external state.",
       "result": "Completed and review-clean with PRESERVE. All 12 official URLs return 200; all 12 records remain compatible and none moved. The New Children's Museum's current-week closures are explained by its dated September 8-11 notice, while its six-days-a-week/Tuesday-closed paragraph describes normal operations. No source conflict, unknown, public factual correction, or maintenance candidate remains.",
       "notes": "Selected by the September 9 afternoon independent-pilot heartbeat as that day's required maintained-evidence learning unit and the run's only substantive action. Registered before current-source inspection or substantive research editing. Research and QA are complete across the exact nine-path scope; Kant cycle two returned PASS with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page, checked date, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed."
+    },
+    {
+      "id": "FT-RES-038",
+      "research_backlog_id": "SRR-060",
+      "title": "Inspect current San Diego family activity-planning questions",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-10",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-current-family-activity-planning-questions-2026-09-10.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "Three to five current public family questions produce a source-dated, privacy-safe planning-task model that determines whether the existing 12-choice San Diego activity index needs more inventory, should be preserved, or warrants at most one bounded unselected live-task hypothesis.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, generators, tests, activity records, CSV data, visible checked dates, page copy, title, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, outreach, external posts/accounts, destinations, community queue, or automation. Retain no usernames, copied thread prose, or personal data; make no firsthand, safety, exact-route/travel-time/stroller, firm family-fit, prevalence, demand, behavior, satisfaction, ranking, CTR, conversion, or causality claim.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-09-09 and finalized through 2026-09-07 reports 1,757 property impressions, 3 clicks, aggregate average position 64.47, and 24 of 28 inspected URLs indexed. No September 10 public-safe snapshot is available at the 05:06 Eastern selection point. The San Diego all-ages activity page has no public performance row and remains unknown to Google with no crawl time in the durable inspection state. The public snapshot has no aligned query cohort, so GSC is current crawl/orientation evidence only and does not select a page or CTR action.",
+      "acceptance_criteria": [
+        "Inspect three to five current public questions from families planning San Diego activities and retain only source date/URL, paraphrased planning state, recurring constraints, and the work a useful answer must perform.",
+        "Test the falsifiable attraction-inventory-first hypothesis and distinguish choosing activities from sequencing, lodging, booking, transport, weather, cost, accessibility, or trip-date verification work owned by existing pages or official sources.",
+        "Map supported outputs to the existing 12-choice activity index and sibling roles without treating a small qualitative sample as demand, prevalence, user testing, behavior, satisfaction, ranking, or CTR evidence.",
+        "Conclude PRESERVE or retain at most one bounded unselected live-task hypothesis for later desktop/mobile validation. Make no page, URL/search-state, indexing, community draft/post, external-action, destination, or automation change.",
+        "Pass full native QA, strict JSON, exact nine-path/no-site scope, source/privacy and whitespace checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Count the retained questions, initial planning states, and supported constraint categories; record which existing page or current-check route owns each output. A later page change requires a separately selected live task that reproduces a material failure. Search, behavior, satisfaction, citation, and ranking effects remain unmeasured.",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": [
+        "01a08a9d-b347-75b3-a28d-b062f6f66f57"
+      ],
+      "qa_summary": "Focused San Diego tests 10/10 and full native tests 162/162 pass. Operator-state, content-freshness, local and production SEO return zero errors or warnings; all 58 public GSC snapshots validate; roadmap JSON parses with 90 unique IDs and nine registered paths; exact-scope, privacy, credential-pattern, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Dirac (01a08a9d-b347-75b3-a28d-b062f6f66f57) cycle one verified all five source dates and proportional paraphrases, the bounded preserve decision and one unselected live task, product-role mapping, GSC figures and limitations, exact nine-path/no-site scope, privacy boundaries, state, and all QA. Verdict PASS with no P0-P3; the reviewer changed no file or external state.",
+      "result": "Completed and review-clean with PRESERVE. All five current planning states already contain named attractions, a pass, a hotel, fixed bookings, or draft days; their shared work is usable-block normalization, commitment locking, zone grouping, meals/rest/hotel capacity, transport choice, deletion, and trip-date verification. Existing pages own those components, but role coverage does not prove the joined task. Retain one unselected overfilled 2.5-day activity-to-itinerary live task for later desktop/mobile validation and promote no implementation candidate.",
+      "notes": "Selected by the September 10 morning independent-pilot heartbeat as that day's required current-question learning unit and the run's only substantive action. Registered before public-question inspection or substantive research editing. Research across five current public questions, native QA, and independent review are complete; Dirac cycle one returned PASS with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed."
     }
   ]
 }
