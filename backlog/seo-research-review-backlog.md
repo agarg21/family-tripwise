@@ -6,6 +6,35 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-061: San Diego Overfilled-Draft Activity-To-Itinerary Task
+
+Status: completed and review-clean under `FT-RES-039`; Rawls cycle-two `PASS`; research/state only
+
+Selected: 2026-09-10 by the afternoon independent Family Tripwise pilot
+
+Run the overfilled 2.5-day mixed-age Mission Beach task retained by `FT-RES-038`, plus the younger-child Mission Bay-to-LEGOLAND transfer-day control, through the live all-ages activity and itinerary pages at exact 1280 by 900, 390 by 844, and 320 by 800.
+
+Boundaries:
+
+- Use normal live links and only visible page information. Score `Start`, `Reduce`, `Compare`, `Trace`, `Decide`, `Verify`, and `Recover`; retain missing preferences as unknown rather than inventing a plan.
+- Record useful-surface positions, option reduction, usable blocks, one main zone/job, fixed commitments, meals/rest/hotel time, transport choice, deletion, current checks, normal-link behavior, and horizontal containment.
+- Treat this as proxy review, not user testing, demand, behavior, satisfaction, conversion, ranking, or CTR evidence. Conclude `PRESERVE` or retain at most one unselected bounded existing-page candidate; make no page or external-state change.
+
+Expected artifact:
+
+- `docs/research/san-diego-activity-to-itinerary-overfilled-draft-task-review-2026-09-10.md`
+
+Fresh September 10 GSC is finalized through September 8 and remains crawl/orientation evidence because the public snapshot has no aligned query cohort. The all-ages page remains unknown to Google; the itinerary is indexed with 81 impressions at page-average position 67.68 and an August 29 crawl.
+
+Result before independent review:
+
+- `PRESERVE` both pages, roles, inventory, URLs, and search state. The normal forward and recovery links, activity filters, current-check routes, and contained itinerary table work at all three exact viewports.
+- Both tasks reach conditional non-invented shapes, but the reader must reconstruct fixed-versus-flexible commitments, usable arrival/transfer/full blocks, meals/rest/hotel capacity, deletion order, and checks from later generic guidance. The main case's final coast/waterfront choice remains conditional because the retained input supplies no preference.
+- Retain only unselected `IMP-052`, one compact existing-draft instruction before the current itinerary cards. It adds no inventory, planner, route, page, or claim and requires a separate later selection.
+- Focused San Diego tests pass `10/10`, the full suite passes `162/162`, and state, freshness, local/production SEO, 59-snapshot, strict-JSON, exact-scope, privacy, browser, and whitespace checks are green.
+- Rawls cycle one returned `FAIL` for two P2 record defects. Corrected surface positions now wait for `load` plus `img.complete`, and unsupported Catamaran, Zoo-duration, lunch, Gaslamp, and exact LEGOLAND-hotel details are removed. The scores and candidate boundary remain unchanged. The corrected measurement also records the targets' missing intrinsic image dimensions and resulting 520/236/189-pixel layout shift as a separate next-priority technical follow-up. Cycle-two re-review is pending.
+- Rawls cycle two independently reproduced the corrected measurements, source-bounded task inputs, all 14 task/control scores, proportional `IMP-052`, separate technical follow-up, GSC limits, state, scope, and QA. Final verdict is `PASS` with no P0-P3; the reviewer changed no file or external state.
+
 ### SRR-060: Current San Diego Family Activity-Planning Questions
 
 Status: completed and review-clean under `FT-RES-038`; Dirac cycle-one `PASS`; research/state only

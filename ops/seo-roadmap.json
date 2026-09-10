@@ -4347,6 +4347,59 @@
       "review_summary": "Independent read-only reviewer Dirac (01a08a9d-b347-75b3-a28d-b062f6f66f57) cycle one verified all five source dates and proportional paraphrases, the bounded preserve decision and one unselected live task, product-role mapping, GSC figures and limitations, exact nine-path/no-site scope, privacy boundaries, state, and all QA. Verdict PASS with no P0-P3; the reviewer changed no file or external state.",
       "result": "Completed and review-clean with PRESERVE. All five current planning states already contain named attractions, a pass, a hotel, fixed bookings, or draft days; their shared work is usable-block normalization, commitment locking, zone grouping, meals/rest/hotel capacity, transport choice, deletion, and trip-date verification. Existing pages own those components, but role coverage does not prove the joined task. Retain one unselected overfilled 2.5-day activity-to-itinerary live task for later desktop/mobile validation and promote no implementation candidate.",
       "notes": "Selected by the September 10 morning independent-pilot heartbeat as that day's required current-question learning unit and the run's only substantive action. Registered before public-question inspection or substantive research editing. Research across five current public questions, native QA, and independent review are complete; Dirac cycle one returned PASS with no P0-P3. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed."
+    },
+    {
+      "id": "FT-RES-039",
+      "research_backlog_id": "SRR-061",
+      "title": "Run the San Diego overfilled-draft activity-to-itinerary task",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-10",
+      "completed_on": "2026-09-10",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 5,
+      "effort": 3,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+        "https://familytripwise.com/family-itinerary/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "docs/research/san-diego-activity-to-itinerary-overfilled-draft-task-review-2026-09-10.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/implementation-backlog.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A reproducible live desktop/mobile walkthrough determines whether the current San Diego activity-to-itinerary route can reduce one overfilled 2.5-day mixed-age draft, while a younger-child transfer-day control prevents overcomplicating a simpler fixed-anchor case, without adding inventory or inventing trip facts.",
+      "production_invariant": "Research and state only across the ten registered paths. Do not change site/**, generators, tests, activity or itinerary data, page copy, title, H1, URL, canonical, indexability, sitemap, schema, analytics, indexing requests, outreach, external posts/accounts, destinations, community queue, or automation. Use only visible live-page information and the locally retained source-grounded task states. Make no firsthand, safety, exact route/travel-time/stroller, firm family-fit, demand, prevalence, behavior, satisfaction, conversion, ranking, CTR, or causality claim.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-10 and finalized through 2026-09-08 reports 1,786 property impressions, 3 clicks, aggregate average position 63.36, and 24 of 28 inspected URLs indexed. The San Diego all-ages page has no public performance row and remains unknown to Google with no crawl time; the itinerary has 81 impressions at page-average position 67.68 and an August 29 crawl. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only and does not select an edit or CTR action.",
+      "acceptance_criteria": [
+        "Run the live all-ages activity-to-itinerary route through normal links at exact 1280 by 900, 390 by 844, and 320 by 800 viewports for the overfilled 2.5-day mixed-age Mission Beach case and the younger-child Mission Bay-to-LEGOLAND transfer-day control retained by FT-RES-038.",
+        "Score Start, Reduce, Compare, Trace, Decide, Verify, and Recover for both cases; record useful-surface order and positions, option counts, zone/block reduction, fixed commitments, meals/rest/hotel capacity, transport choice, deletion, current checks, normal-link behavior, and horizontal containment.",
+        "Use only visible live-page evidence, preserve missing preferences as unknown, distinguish page-role handoffs from defects, and make no exact route, travel-time, stroller, safety, demand, behavior, satisfaction, ranking, or CTR claim.",
+        "Conclude PRESERVE or retain at most one bounded unselected existing-page candidate in the implementation backlog. Make no public-page, URL/search-state, indexing, community, external-action, destination, or automation change.",
+        "Pass focused San Diego tests, full native QA, strict JSON, exact ten-path/no-site scope, privacy and whitespace checks, browser containment and normal-link checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Record exact viewport and document widths, first relevant surface positions, activity choices remaining after reduction, day/block assignments, explicit fixed-anchor/rest/transport/deletion/current-check support, cross-page transition behavior, and protocol results for both cases. A future page edit requires a reproduced material P2 and separately selected implementation. Search interpretation waits for a coherent finalized aligned query cohort and current crawl evidence.",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a08c56-e133-7830-aa91-5ebb2322ec10"
+      ],
+      "qa_summary": "Browser task complete at exact 1280 by 900, 390 by 844, and 320 by 800 with zero document overflow, contained table scrolling, working filters, and working normal forward/recovery links. Focused San Diego tests pass 10/10 and the full native suite passes 162/162. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 59 public GSC snapshots validate. Roadmap JSON has 91 unique action IDs and ten registered paths; exact ten-path/no-site scope, privacy-pattern, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Rawls (01a08c56-e133-7830-aa91-5ebb2322ec10) cycle one returned FAIL for two P2 record defects: pre-image-completion surface measurements and main/control details beyond the retained source summaries. The operator re-measured after load plus img.complete, removed the unsupported Catamaran, Zoo-duration, lunch, Gaslamp, and exact LEGOLAND-hotel inputs, and kept the scores and proportional IMP-052 boundary unchanged. The corrected measurement separately verifies missing intrinsic image dimensions and a 520/236/189-pixel downstream layout shift, recorded for the next priority-eligible technical action. Cycle two independently reproduced all corrections, all 14 scores, candidate and technical-follow-up boundaries, GSC limits, state, scope, and QA and returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean with PRESERVE. Both pages remain visually contained and their filters, normal forward and recovery links, current-check routes, and itinerary table scroller work. Both tasks reach conditional, non-invented shapes, but the reader must reconstruct the existing-draft editing order from later generic rules. Retain only unselected IMP-052, one compact existing-draft instruction before the itinerary cards. Separately record the targets' missing intrinsic hero dimensions as the next priority-eligible technical follow-up; make no page change.",
+      "notes": "Selected by the September 10 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-038 / LRN-027 and the run's only substantive action. Registered before browser task execution or substantive research editing. Browser research, native QA, and Rawls cycle-two PASS are complete across the exact three viewports and ten paths. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed."
     }
   ]
 }

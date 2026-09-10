@@ -1,8 +1,42 @@
 # Implementation Backlog
 
-Last updated: 2026-09-08
+Last updated: 2026-09-10
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Verified San Diego Hero Layout-Shift Follow-Up
+
+Status: unselected next-priority technical defect from review-clean `FT-RES-039`; Rawls cycle-two `PASS`; no page change authorized in that research action
+
+Targets:
+
+- `https://familytripwise.com/things-to-do/san-diego-with-kids.html`
+- `https://familytripwise.com/family-itinerary/san-diego-with-kids.html`
+
+The shared licensed red-panda hero image has no `width` or `height` attributes and no target-specific intrinsic-space reservation. After `load` and `img.complete`, it renders 520 px high at 1280 by 900, 236 px at 390 by 844, and 189 px at 320 by 800. Measurements taken before image completion understate every following surface by exactly that amount, demonstrating a reproducible layout shift.
+
+The next separately selected technical action should reserve the image's 3,766 by 2,509 aspect ratio through the owning generator/template, regenerate only declared targets, and verify zero layout shift, no crop or responsive regression, deterministic generation, and unchanged page/search/content invariants. Do not fold that site change into `IMP-052`; the current research action remains research/state only.
+
+## Candidate San Diego Existing-Draft Start
+
+### IMP-052: Put The Editing Order Before Generic Day Shapes
+
+Status: unselected review-clean candidate from completed `FT-RES-039` / `SRR-061`; Rawls cycle-two `PASS`; no page change authorized
+
+Target:
+
+- `https://familytripwise.com/family-itinerary/san-diego-with-kids.html`
+
+The September 10 overfilled-draft task and younger-child transfer-day control can reach conditional, non-invented plan shapes from the current activity and itinerary evidence. The itinerary's first route still offers blank-slate one-, two-, and three-day cards. It does not first distinguish fixed from flexible commitments, calendar days from usable arrival/transfer/full blocks, or protected meal/rest/hotel capacity from optional stops. After the hero image settles, the one-zone and stop rules begin 3.2-4.1 viewports down, so the reader must reconstruct the editing order.
+
+Smallest candidate, if independent review retains it and a later action selects it:
+
+- Add one compact `Already have a draft?` instruction immediately under `Choose the San Diego plan that matches your family` and before the current cards.
+- Tell the reader to separate fixed from flexible or refundable commitments; mark usable arrival, transfer, partial, and full blocks; lock the stay base and transport input; reserve meals and hotel/rest capacity; assign one main zone or job per block; cut flexible cross-zone stops first; and verify trip-date hours, tickets, weather, parking, accessibility, route conditions, and backups.
+- Keep unsupported preference branches conditional. The main task does not say which coast/waterfront payoff the family prefers, and the control omits transfer timing and weather.
+- Add no card, form, planner, filter, itinerary, activity, exact route time, source claim, schema entity, or URL. Preserve the current flexible one-, two-, and three-day starts.
+
+Future success requires the main task's `Start`, `Reduce`, and `Recover` to improve from `PARTIAL` to `YES` while its missing-preference branch remains honest and the younger-child control stays light without a required detour. The instruction must remain before the cards at exact desktop/mobile viewports without changing title, H1, canonical, indexability, sitemap, schema, existing routes, comparison, pacing rules, sources, or trust boundaries. Any implementation requires a separate roadmap selection, native QA, independent review, and release verification.
 
 ## Candidate NYC Existing-Draft Start
 

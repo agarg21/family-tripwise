@@ -12,10 +12,11 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
-Release evidence: docs-only `FT-RES-035` action commit `2dec40f` is pushed to `main`; no Pages wait applies.
+Release evidence: docs-only `FT-RES-039` is carried by the exact-path action commit containing this record and is pushed to `main`; no Pages wait applies. Prior docs-only `FT-RES-035` action commit `2dec40f` is pushed to `main`.
 
 | Action | Implementation state | Review state | Notes |
 |---|---|---|---|
+| `FT-RES-039` | completed, review-clean, and docs-only pushed; exact ten-path research/state scope; no page edit; native QA green | cycle-two `PASS`; no P0-P3 | Rawls verified corrected settled-image positions, source-bounded inputs, all 14 scores, proportional `IMP-052`, separate intrinsic-image-size follow-up, GSC limits, state, scope, and QA. The reviewer changed no file or external state. |
 | `FT-RES-038` | completed and review-clean; exact nine-path research/state scope; no page edit; native QA green | cycle-one `PASS`; no P0-P3 | Dirac (`01a08a9d-b347-75b3-a28d-b062f6f66f57`) independently verified all five source dates and proportional paraphrases, the bounded `PRESERVE` decision, one unselected live task, product-role mapping, GSC figures and limits, exact scope, privacy, state, and QA. The reviewer changed no file or external state. |
 | `FT-RES-037` | completed and review-clean; exact nine-path research/state scope; no page edit; native QA green | cycle-two `PASS`; no P0-P3 | Kant (`01a08730-4d38-7ef0-bb5c-3b48de3daba5`) cycle one found that the museum exception was misclassified, two status rows retained September 3 inspection wording, and the roadmap notes called green QA pending. Cycle two verified all corrections, state mirrors, GSC boundaries, scope, source checks, and QA. Final decision is `PRESERVE`: all 12 official sources are compatible, none moved, and no conflict, unknown, maintenance candidate, or external action remains. |
 | `FT-RES-036` | completed and review-clean; exact ten-path research/state scope; no page edit | user-authorized cycle-four `PASS`; no P0-P3 | Raman (`01a08221-4b19-79f3-a09a-294ee3e07bbb`) cycles one through three found and closed source/QA, decision-score/chronology, and machine-state P2s. The user authorized one additional review. Kepler (`01a08568-8011-7a71-89a5-7d14325f850b`) cycle four reconciled the complete diff, source facts, scores, proportional `IMP-051`, GSC/privacy limits, exact scope, QA, review chronology, and restored historical state. |
@@ -88,6 +89,14 @@ Release evidence: docs-only `FT-RES-035` action commit `2dec40f` is pushed to `m
 - None.
 
 ## Review history
+
+### 2026-09-10 - `FT-RES-039` San Diego overfilled-draft activity-to-itinerary task
+
+- Reviewer: Rawls (`01a08c56-e133-7830-aa91-5ebb2322ec10`), independent read-only research and release-gate reviewer.
+- Cycle one: `FAIL` for two P2 record defects. Surface positions were captured before the hero image settled, and the main/control summaries added Catamaran, Zoo duration, lunch, Gaslamp, and an exact LEGOLAND Hotel beyond the retained privacy-safe inputs.
+- Correction: re-measure every surface after `load` plus `img.complete`; remove the unsupported inputs; keep omitted preference, timing, and weather unknown. The task scores and proportional `IMP-052` boundary do not change.
+- The corrected image check verifies a separate production technical defect: both target hero images omit intrinsic dimensions and shift all following content by 520, 236, or 189 pixels at the three viewports. It is recorded for the next priority-eligible technical action and is not edited inside this research transaction.
+- Rawls independently reproduced focused `10/10`, full `162/162`, state/freshness/SEO checks, 59 valid snapshots, 91 unique IDs, and exact ten-path/no-site scope. Cycle two verified every correction, all 14 task/control scores, the proportional `IMP-052` and technical-follow-up boundaries, GSC limits, state, scope, and QA, then returned `PASS` with no P0-P3. The reviewer changed no file or external state.
 
 ### 2026-09-07 - `FT-RES-035` New York City family day-planning questions
 

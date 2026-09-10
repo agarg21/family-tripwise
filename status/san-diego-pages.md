@@ -5,7 +5,7 @@ Last updated: 2026-09-10
 Sources:
 
 - Implementation baseline GSC snapshot: `ops/gsc-snapshots/2026-07-21.md`
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-09.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-10.md`
 - Current lodging query interpretation: `docs/research/san-diego-lodging-query-interpretation-2026-08-04.md`
 - San Diego SERP/persona research: `docs/research/san-diego-cluster-research-decision-pack.md`
 - Section-level usefulness review: `docs/research/san-diego-section-level-editorial-audit.md`
@@ -18,8 +18,19 @@ Sources:
 - Stay-shape live-SERP ownership validation: `docs/research/san-diego-stay-shape-serp-validation-2026-08-25.md`
 - Attraction-logistics official-fact audit: `docs/research/san-diego-attraction-logistics-official-fact-audit-2026-09-09.md`
 - Current family activity-planning questions: `docs/research/san-diego-current-family-activity-planning-questions-2026-09-10.md`
+- Activity-to-itinerary overfilled-draft task review: `docs/research/san-diego-activity-to-itinerary-overfilled-draft-task-review-2026-09-10.md`
 
-Note: The implementation baseline remains the July 21 snapshot. The all-ages and teen discovery rows use the fresh September 9 snapshot finalized through September 7; other performance rows retain their stated prior measurement boundaries. None of these windows can establish causal impact from a page change. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; complete protected rows remain outside this public repository.
+Note: The implementation baseline remains the July 21 snapshot. The all-ages discovery row and itinerary orientation use the fresh September 10 snapshot finalized through September 8; other performance rows retain their stated prior measurement boundaries. None of these windows can establish causal impact from a page change. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; complete protected rows remain outside this public repository.
+
+## September 10 Activity-To-Itinerary Task Overlay
+
+`FT-RES-039` / `SRR-061` / `LRN-028` runs the retained overfilled 2.5-day mixed-age Mission Beach draft plus a younger-child Mission Bay-to-LEGOLAND transfer-day control through the live all-ages and itinerary pages at exact 1280 by 900, 390 by 844, and 320 by 800.
+
+The pages remain visually contained; the activity filters, normal itinerary route, return route, current-check links, and itinerary table scroller work. Both tasks reach conditional, non-invented shapes. They remain `PARTIAL` on the early editing journey because the reader must reconstruct fixed-versus-flexible commitments, usable partial/transfer/full blocks, meal/rest/hotel capacity, deletion order, and current checks from later generic guidance. The main task's final coast/waterfront choice and the control's optional transfer-day stop correctly remain conditional because the retained inputs omit the deciding preference, timing, and weather.
+
+The decision before independent review is `PRESERVE` both pages now and retain only unselected `IMP-052`: one compact existing-draft instruction before the itinerary's current quick-route cards. It adds no inventory, planner, exact route, page, URL, search-state change, or unsupported claim. This is proxy-reviewed interface evidence, not user testing, demand, behavior, satisfaction, ranking, or CTR evidence.
+
+Cycle-one independent review identified and the operator corrected two record P2s before re-review: all surface positions are now measured after `load` and `img.complete`, and unsupported Catamaran, Zoo-duration, lunch, Gaslamp, and exact LEGOLAND-hotel inputs are removed. The corrected measurement also verifies a separate technical defect: both target hero images omit intrinsic dimensions and shift downstream content by 520, 236, or 189 pixels at the three viewports. That defect is recorded for the next priority-eligible technical action; this research action does not edit the site. Rawls cycle two independently reproduced the corrections, all 14 scores, the proportional candidate and technical follow-up, GSC limits, state, scope, and QA, then returned `PASS` with no P0-P3.
 
 ## September 10 Activity-Planning Question Overlay
 
