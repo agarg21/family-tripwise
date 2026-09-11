@@ -1,21 +1,28 @@
 # Implementation Backlog
 
-Last updated: 2026-09-10
+Last updated: 2026-09-11
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
-## Verified San Diego Hero Layout-Shift Follow-Up
+## Active San Diego Hero Layout-Shift Fix
 
-Status: unselected next-priority technical defect from review-clean `FT-RES-039`; Rawls cycle-two `PASS`; no page change authorized in that research action
+### IMP-053: Reserve The Shared Hero Before It Loads
+
+Status: selected as `FT-MAINT-005`; locally implemented and review-clean after Lagrange cycle-two `PASS`; release pending
 
 Targets:
 
 - `https://familytripwise.com/things-to-do/san-diego-with-kids.html`
+- `https://familytripwise.com/things-to-do/san-diego-with-toddlers.html`
+- `https://familytripwise.com/things-to-do/san-diego-with-teens.html`
+- `https://familytripwise.com/where-to-stay/san-diego-with-kids.html`
 - `https://familytripwise.com/family-itinerary/san-diego-with-kids.html`
 
-The shared licensed red-panda hero image has no `width` or `height` attributes and no target-specific intrinsic-space reservation. After `load` and `img.complete`, it renders 520 px high at 1280 by 900, 236 px at 390 by 844, and 189 px at 320 by 800. Measurements taken before image completion understate every following surface by exactly that amount, demonstrating a reproducible layout shift.
+The shared licensed red-panda hero omitted intrinsic dimensions on all five generated San Diego pages. Before this action, the image rendered 520 px high at 1280 by 900, about 236 px at 390 by 844, and about 189 px at 320 by 800 only after download, moving every following surface by that amount.
 
-The next separately selected technical action should reserve the image's 3,766 by 2,509 aspect ratio through the owning generator/template, regenerate only declared targets, and verify zero layout shift, no crop or responsive regression, deterministic generation, and unchanged page/search/content invariants. Do not fold that site change into `IMP-052`; the current research action remains research/state only.
+The owning city record now carries the verified 3,766 by 2,509 dimensions, the shared photo renderer emits them with a target-specific class, and one scoped stylesheet rule keeps the established responsive height. The first dimensions-only attempt correctly failed controlled QA because it reserved a 520-pixel mobile box; it was not released, and the stylesheet path was registered before correction.
+
+Final local delayed-image checks cover all five targets at 1280 by 900, 390 by 844, and 320 by 800. Each reserved and settled hero remains respectively 1,160 by 520, 354 by about 236, and 284 by about 189 pixels; hero height and the next element's top position change by zero, `object-fit: cover` remains active, and no document overflows. Deterministic generation changes only the declared five HTML outputs. Focused tests pass `23/23`, full tests pass `164/164`, and local/production SEO, freshness, snapshot validation, operator-state QA, public preflight, JSON, scope, privacy, and whitespace checks are green. Lagrange cycle one reproduced the technical result but found one P2 stale future-action sentence in `ops/needs-user.md`; cycle two verified its removal and returned `PASS` with no P0-P3. This is technical maintenance, not ranking or CTR evidence; all content, search, role, evidence, and measurement invariants remain fixed.
 
 ## Candidate San Diego Existing-Draft Start
 

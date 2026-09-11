@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-10",
+  "last_updated": "2026-09-11",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -4400,6 +4400,68 @@
       "review_summary": "Independent read-only reviewer Rawls (01a08c56-e133-7830-aa91-5ebb2322ec10) cycle one returned FAIL for two P2 record defects: pre-image-completion surface measurements and main/control details beyond the retained source summaries. The operator re-measured after load plus img.complete, removed the unsupported Catamaran, Zoo-duration, lunch, Gaslamp, and exact LEGOLAND-hotel inputs, and kept the scores and proportional IMP-052 boundary unchanged. The corrected measurement separately verifies missing intrinsic image dimensions and a 520/236/189-pixel downstream layout shift, recorded for the next priority-eligible technical action. Cycle two independently reproduced all corrections, all 14 scores, candidate and technical-follow-up boundaries, GSC limits, state, scope, and QA and returned PASS with no P0-P3. The reviewer changed no file or external state.",
       "result": "Completed and review-clean with PRESERVE. Both pages remain visually contained and their filters, normal forward and recovery links, current-check routes, and itinerary table scroller work. Both tasks reach conditional, non-invented shapes, but the reader must reconstruct the existing-draft editing order from later generic rules. Retain only unselected IMP-052, one compact existing-draft instruction before the itinerary cards. Separately record the targets' missing intrinsic hero dimensions as the next priority-eligible technical follow-up; make no page change.",
       "notes": "Selected by the September 10 afternoon independent-pilot heartbeat as the apply/deepen step after completed FT-RES-038 / LRN-027 and the run's only substantive action. Registered before browser task execution or substantive research editing. Browser research, native QA, and Rawls cycle-two PASS are complete across the exact three viewports and ten paths. The exact-path docs-only action commit carrying this record is pushed to main; no Pages wait applies. No page, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed."
+    },
+    {
+      "id": "FT-MAINT-005",
+      "implementation_backlog_id": "IMP-053",
+      "title": "Reserve intrinsic space for the shared San Diego hero image",
+      "kind": "maintenance",
+      "lane": "production-technical-health",
+      "status": "in_progress",
+      "selected_on": "2026-09-11",
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 2,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+        "https://familytripwise.com/family-itinerary/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/city-data.mjs",
+        "tools/generate-pages.mjs",
+        "tools/san-diego-hero-image.test.mjs",
+        "site/things-to-do/san-diego-with-kids.html",
+        "site/things-to-do/san-diego-with-toddlers.html",
+        "site/things-to-do/san-diego-with-teens.html",
+        "site/where-to-stay/san-diego-with-kids.html",
+        "site/family-itinerary/san-diego-with-kids.html",
+        "site/styles.css",
+        "backlog/implementation-backlog.md",
+        "status/san-diego-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "All five live San Diego pages that use the shared 3,766 by 2,509 red-panda hero reserve its intrinsic aspect ratio before the image completes, while the rendered crop, responsive containment, visible content, page roles, and search surfaces remain unchanged.",
+      "production_invariant": "Change only the 16 registered paths and the five existing San Diego URLs. Preserve every title, H1, description, canonical, indexability state, sitemap entry, schema entity, visible copy, image source/alt/credit, page role, activity/hotel/itinerary record, filter, link, download, layout breakpoint, analytics state, and active measurement boundary. Add no URL, content claim, indexing request, outreach, external post/account, destination, community change, or automation change.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-09-10 and finalized through 2026-09-08 reports 1,786 property impressions, 3 clicks, aggregate average position 63.36, and 24 of 28 inspected URLs indexed. Of the five affected San Diego pages, the toddler, stay-area, and itinerary pages are indexed; the all-ages and teen activity pages remain unknown to Google. The public snapshot has no aligned query cohort, so it is current crawl/orientation evidence only. The independently reproduced production layout-shift defect, not GSC performance, selects this maintenance action.",
+      "acceptance_criteria": [
+        "Represent the shared San Diego photo's verified 3,766 by 2,509 intrinsic dimensions in the owning city record and render optional width and height attributes through the shared photo template.",
+        "Regenerate and change only the five declared San Diego HTML outputs under site/**; every other generated file must remain byte-identical.",
+        "Verify before-image-completion and settled-image geometry at exact 1280 by 900, 390 by 844, and 320 by 800 viewports: the reserved hero box and following content position must remain stable, with the existing crop and no document overflow.",
+        "Preserve the five targets' image source, alt text, credit, visible content, titles, H1s, canonicals, indexability, sitemap entries, schema, filters, links, downloads, and page-specific decision surfaces.",
+        "Pass focused and full native QA, deterministic generation, local and production SEO, public preflight, strict JSON, exact 16-path scope, privacy and whitespace checks, and independent read-only review with PASS or PASS_WITH_P3 before release."
+      ],
+      "measurement_plan": "Treat this as technical maintenance, not a ranking or CTR experiment. Compare each target's hero and first downstream element positions before image completion and after img.complete at the three exact viewports; require zero shift within measurement precision, stable rendered image dimensions/object-fit, and no overflow. After release, verify the pushed marker, five production image attributes and responsive invariants. Preserve current GSC crawl/query interpretation boundaries and do not request indexing.",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a08fbf-2b74-7cf1-a757-f8672adf0e28"
+      ],
+      "release_state": "review-clean-release-pending",
+      "qa_summary": "Focused tests 23/23 and full tests 164/164 pass. Deterministic generation changes only the five declared HTML outputs. Local and production SEO report zero errors and warnings; freshness, 59-snapshot validation, operator-state QA, 28-URL public preflight, strict JSON, exact 16-path scope, privacy, whitespace, browser interaction, and responsive checks are green. Controlled delayed-image checks on all five pages at 1280x900, 390x844, and 320x800 report zero hero-height and following-element movement, stable 1160x520, 354x235.828125, and 284x189.203125 settled boxes, object-fit cover, and no document overflow.",
+      "review_summary": "Independent read-only reviewer Lagrange (01a08fbf-2b74-7cf1-a757-f8672adf0e28) inspected the complete 16-path diff, independently reproduced the delayed-image behavior across all five targets and three exact viewports, confirmed deterministic five-output generation, content/search invariants, GSC limits, exact scope, and green QA. Cycle one returned FAIL for one P2 stale future-action sentence in ops/needs-user.md. Cycle two verified its removal and returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "result": "Locally implemented and review-clean pending release. The shared city record and renderer now emit the verified 3,766 by 2,509 dimensions on all five affected pages, and one target-specific auto-height rule preserves prior responsive geometry. The action was registered before generator, test, generated-page, backlog, status, or review edits. Controlled pre-load QA showed that dimensions without the rule would preserve a 520-pixel mobile box; the stylesheet path was registered before correction, and that failed implementation was not released.",
+      "notes": "Selected by the September 11 morning independent-pilot heartbeat as the run's only substantive action because a verified production technical defect outranks the morning learning default. FT-RES-039 independently reproduced missing intrinsic dimensions and 520/236/189-pixel downstream shifts on two targets; direct live markup inspection confirms the same shared-image defect on all five generated San Diego pages. Exact scope expanded from 15 to 16 paths before the target-specific auto-height correction. Recent reused September 10 GSC is crawl/orientation evidence only and does not select the action. Today's eligible learning unit remains due for the afternoon run."
     }
   ]
 }

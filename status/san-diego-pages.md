@@ -1,6 +1,6 @@
 # San Diego Page Status
 
-Last updated: 2026-09-10
+Last updated: 2026-09-11
 
 Sources:
 
@@ -21,6 +21,14 @@ Sources:
 - Activity-to-itinerary overfilled-draft task review: `docs/research/san-diego-activity-to-itinerary-overfilled-draft-task-review-2026-09-10.md`
 
 Note: The implementation baseline remains the July 21 snapshot. The all-ages discovery row and itinerary orientation use the fresh September 10 snapshot finalized through September 8; other performance rows retain their stated prior measurement boundaries. None of these windows can establish causal impact from a page change. Demand estimates are directional monthly US search demand from historical Semrush/research notes, not fresh keyword-tool pulls. Top queries are target/query-universe examples, not protected GSC query exports; complete protected rows remain outside this public repository.
+
+## September 11 Shared-Hero Technical Overlay
+
+`FT-MAINT-005` / `IMP-053` is locally implemented and review-clean pending release. Live markup inspection extended the `FT-RES-039` defect from its two task targets to all five generated San Diego pages sharing the licensed red-panda hero. The shared city record now owns the verified 3,766 by 2,509 dimensions, the photo renderer emits them, and one target-specific stylesheet rule preserves the established responsive height. The first dimensions-only attempt failed controlled mobile geometry with a 520-pixel box and was corrected before review or release.
+
+Delayed-image checks across all five targets show zero hero-height or following-element movement at 1280 by 900, 390 by 844, and 320 by 800. Settled geometry remains 1,160 by 520, 354 by about 236, and 284 by about 189 pixels, with the prior crop, `object-fit: cover`, and zero document overflow. Focused tests pass `23/23`; full tests pass `164/164`; deterministic generation, SEO, freshness, snapshot, operator-state, public-preflight, JSON, scope, privacy, and whitespace checks are green. Lagrange cycle one found one P2 stale future-action sentence in `ops/needs-user.md`; cycle two verified its removal, the complete 16-path diff, and green checks and returned `PASS` with no P0-P3. Titles, H1s, descriptions, canonicals, indexability, sitemap, schema, visible copy, image source/alt/credit, page roles, records, controls, links, downloads, analytics, and GSC measurement boundaries remain unchanged.
+
+Recent reused September 10 GSC is finalized through September 8 and remains crawl/orientation evidence only: 1,786 property impressions, 3 clicks, aggregate position 63.36, and 24/28 inspected URLs indexed, with no public aligned query cohort. It did not select this action and cannot establish a ranking effect. September 11's eligible learning unit remains due for the afternoon run.
 
 ## September 10 Activity-To-Itinerary Task Overlay
 

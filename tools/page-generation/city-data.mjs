@@ -94,6 +94,8 @@ export const cities = [
     photo: {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/San%20Diego%20Zoo%2C%20San%20Diego%2C%20United%20States%20%28Unsplash%20QZwf5yNopUo%29.jpg",
       alt: "A red panda at the San Diego Zoo.",
+      width: 3766,
+      height: 2509,
       credit: "Photo: Lance Anderson, Wikimedia Commons, CC0",
       creditUrl: "https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg"
     },

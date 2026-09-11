@@ -1,12 +1,14 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-10
+Last updated: 2026-09-11
 
 ## Cycle Name
 
 Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
 
 ## Active Priority
+
+Action `FT-MAINT-005` / `IMP-053` is locally implemented and review-clean pending release as the September 11 morning run's only substantive action. `FT-RES-039` independently reproduced that the shared San Diego red-panda hero omitted intrinsic dimensions and shifted downstream content by 520, 236, or 189 pixels at 1280 by 900, 390 by 844, and 320 by 800; direct live inspection confirmed the same defect on all five generated San Diego pages sharing the image. The owning city record now carries the verified 3,766 by 2,509 dimensions, the shared renderer emits them with a target-specific class, and one scoped auto-height rule keeps the prior responsive geometry. The first dimensions-only attempt failed controlled mobile QA by reserving a 520-pixel box; it was not released, and the stylesheet path was registered before correction. Final delayed-image checks across all five targets show zero hero-height or following-element movement at all three exact viewports, stable 1,160-by-520 / 354-by-about-236 / 284-by-about-189 boxes, the prior crop, and no document overflow. Focused tests pass `23/23`; full tests pass `164/164`; deterministic generation, state, freshness, local/production SEO, 59-snapshot validation, 28-URL public preflight, strict JSON, exact 16-path scope, browser interactions, privacy, and whitespace checks are green. Lagrange cycle one reproduced the technical result but found one P2 stale future-action sentence in `ops/needs-user.md`; cycle two verified its removal and returned `PASS` with no P0-P3. Preserve every content, search, role, evidence, analytics, and measurement invariant. Recent reused September 10 GSC remains crawl/orientation evidence only; the verified technical defect selects the action. September 11's eligible learning unit remains due for the afternoon run.
 
 Action `FT-RES-039` / `SRR-061` / `LRN-028` is completed and review-clean as the September 10 afternoon apply/deepen unit. Exact 1280 by 900, 390 by 844, and 320 by 800 runs preserve both San Diego pages, roles, inventory, URLs, and search state while reproducing one bounded P2: both cases reach conditional, non-invented shapes, but the reader must reconstruct fixed-versus-flexible commitments, usable arrival/transfer/full blocks, meals/rest/hotel capacity, cut order, and checks from later generic guidance. Retain only unselected `IMP-052`, one compact existing-draft instruction before the current itinerary cards. Focused `10/10`, full `162/162`, state, freshness, local/production SEO, 59-snapshot, JSON, exact-scope, browser, privacy, and whitespace checks pass. Exact scope is ten research/state paths; no page, URL/search state, indexing request, outreach, external account, destination, community queue, or automation changed. The exact-path docs-only action commit carrying this record is pushed to `main`; no Pages wait applies.
 

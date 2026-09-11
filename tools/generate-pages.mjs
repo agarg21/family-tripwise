@@ -73,9 +73,13 @@ function updatedBlock(
 }
 
 function cityPhoto(city) {
+  const dimensions = city.photo.width && city.photo.height
+    ? ` width="${esc(city.photo.width)}" height="${esc(city.photo.height)}"`
+    : "";
+  const intrinsicClass = dimensions ? ' class="intrinsic-photo"' : "";
   return `      <section class="container media-section">
         <figure class="licensed-photo">
-          <img src="${esc(city.photo.src)}" alt="${esc(city.photo.alt)}" loading="eager" decoding="async">
+          <img src="${esc(city.photo.src)}" alt="${esc(city.photo.alt)}"${dimensions}${intrinsicClass} loading="eager" decoding="async">
           <figcaption>${esc(city.photo.credit)}. <a href="${esc(city.photo.creditUrl)}">License and source</a>.</figcaption>
         </figure>
       </section>

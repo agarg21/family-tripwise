@@ -156,6 +156,10 @@ nav a {
   box-shadow: var(--shadow);
 }
 
+.licensed-photo img.intrinsic-photo {
+  height: auto;
+}
+
 .licensed-photo figcaption {
   margin-top: 8px;
   color: var(--muted);
