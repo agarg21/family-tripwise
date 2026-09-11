@@ -4407,8 +4407,9 @@
       "title": "Reserve intrinsic space for the shared San Diego hero image",
       "kind": "maintenance",
       "lane": "production-technical-health",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-09-11",
+      "completed_on": "2026-09-11",
       "impact": 4,
       "confidence": 5,
       "learning_value": 2,
@@ -4457,11 +4458,14 @@
       "reviewer_agent_ids": [
         "01a08fbf-2b74-7cf1-a757-f8672adf0e28"
       ],
-      "release_state": "review-clean-release-pending",
+      "release_state": "released-and-production-verified",
+      "release_commit": "39ce5a1bb9492fba516208639c2bfa5a9c68800b",
+      "pages_run": 34583984842,
+      "released_at": "2026-09-11T09:24:18Z",
       "qa_summary": "Focused tests 23/23 and full tests 164/164 pass. Deterministic generation changes only the five declared HTML outputs. Local and production SEO report zero errors and warnings; freshness, 59-snapshot validation, operator-state QA, 28-URL public preflight, strict JSON, exact 16-path scope, privacy, whitespace, browser interaction, and responsive checks are green. Controlled delayed-image checks on all five pages at 1280x900, 390x844, and 320x800 report zero hero-height and following-element movement, stable 1160x520, 354x235.828125, and 284x189.203125 settled boxes, object-fit cover, and no document overflow.",
       "review_summary": "Independent read-only reviewer Lagrange (01a08fbf-2b74-7cf1-a757-f8672adf0e28) inspected the complete 16-path diff, independently reproduced the delayed-image behavior across all five targets and three exact viewports, confirmed deterministic five-output generation, content/search invariants, GSC limits, exact scope, and green QA. Cycle one returned FAIL for one P2 stale future-action sentence in ops/needs-user.md. Cycle two verified its removal and returned PASS with no P0-P3. The reviewer changed no file or external state.",
-      "result": "Locally implemented and review-clean pending release. The shared city record and renderer now emit the verified 3,766 by 2,509 dimensions on all five affected pages, and one target-specific auto-height rule preserves prior responsive geometry. The action was registered before generator, test, generated-page, backlog, status, or review edits. Controlled pre-load QA showed that dimensions without the rule would preserve a 520-pixel mobile box; the stylesheet path was registered before correction, and that failed implementation was not released.",
-      "notes": "Selected by the September 11 morning independent-pilot heartbeat as the run's only substantive action because a verified production technical defect outranks the morning learning default. FT-RES-039 independently reproduced missing intrinsic dimensions and 520/236/189-pixel downstream shifts on two targets; direct live markup inspection confirms the same shared-image defect on all five generated San Diego pages. Exact scope expanded from 15 to 16 paths before the target-specific auto-height correction. Recent reused September 10 GSC is crawl/orientation evidence only and does not select the action. Today's eligible learning unit remains due for the afternoon run."
+      "result": "Completed, released, and production-verified. The shared city record and renderer emit the verified 3,766 by 2,509 dimensions on all five affected pages, and one target-specific auto-height rule preserves prior responsive geometry. Successful Pages run 34583984842 serves the matching 39ce5a1bb9492fba516208639c2bfa5a9c68800b release marker. Production checks confirm one dimensioned image per target, self-canonical indexable markup, the stylesheet rule, zero production SEO errors or warnings, and zero delayed-image movement or overflow at all 15 page/viewport combinations.",
+      "notes": "Selected by the September 11 morning independent-pilot heartbeat as the run's only substantive action because a verified production technical defect outranks the morning learning default. FT-RES-039 independently reproduced missing intrinsic dimensions and 520/236/189-pixel downstream shifts on two targets; direct live markup inspection confirmed the same shared-image defect on all five generated San Diego pages. The action was registered before substantive editing, and exact scope expanded from 15 to 16 paths before the target-specific auto-height correction. The initial dimensions-only implementation failed controlled mobile geometry and was not released. Recent reused September 10 GSC is crawl/orientation evidence only and does not select the action. Today's eligible learning unit remains due for the afternoon run."
     }
   ]
 }

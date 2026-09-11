@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-053: Reserve The Shared Hero Before It Loads
 
-Status: selected as `FT-MAINT-005`; locally implemented and review-clean after Lagrange cycle-two `PASS`; release pending
+Status: completed, released, and production-verified at `39ce5a1bb9492fba516208639c2bfa5a9c68800b` through Pages run `34583984842`; Lagrange cycle-two `PASS`
 
 Targets:
 
@@ -22,7 +22,7 @@ The shared licensed red-panda hero omitted intrinsic dimensions on all five gene
 
 The owning city record now carries the verified 3,766 by 2,509 dimensions, the shared photo renderer emits them with a target-specific class, and one scoped stylesheet rule keeps the established responsive height. The first dimensions-only attempt correctly failed controlled QA because it reserved a 520-pixel mobile box; it was not released, and the stylesheet path was registered before correction.
 
-Final local delayed-image checks cover all five targets at 1280 by 900, 390 by 844, and 320 by 800. Each reserved and settled hero remains respectively 1,160 by 520, 354 by about 236, and 284 by about 189 pixels; hero height and the next element's top position change by zero, `object-fit: cover` remains active, and no document overflows. Deterministic generation changes only the declared five HTML outputs. Focused tests pass `23/23`, full tests pass `164/164`, and local/production SEO, freshness, snapshot validation, operator-state QA, public preflight, JSON, scope, privacy, and whitespace checks are green. Lagrange cycle one reproduced the technical result but found one P2 stale future-action sentence in `ops/needs-user.md`; cycle two verified its removal and returned `PASS` with no P0-P3. This is technical maintenance, not ranking or CTR evidence; all content, search, role, evidence, and measurement invariants remain fixed.
+Final local and production delayed-image checks cover all five targets at 1280 by 900, 390 by 844, and 320 by 800. Each reserved and settled hero remains respectively 1,160 by 520, 354 by about 236, and 284 by about 189 pixels; hero height and the next element's top position change by zero, `object-fit: cover` remains active, and no document overflows. Deterministic generation changes only the declared five HTML outputs. Focused tests pass `23/23`, full tests pass `164/164`, and local/production SEO, freshness, snapshot validation, operator-state QA, public preflight, JSON, scope, privacy, and whitespace checks are green. Lagrange cycle one reproduced the technical result but found one P2 stale future-action sentence in `ops/needs-user.md`; cycle two verified its removal and returned `PASS` with no P0-P3. Successful Pages run `34583984842` serves the matching release marker for commit `39ce5a1bb9492fba516208639c2bfa5a9c68800b`. This is technical maintenance, not ranking or CTR evidence; all content, search, role, evidence, and measurement invariants remain fixed.
 
 ## Candidate San Diego Existing-Draft Start
 
