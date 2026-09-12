@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-11",
+  "last_updated": "2026-09-12",
   "last_rescored_on": "2026-09-03",
   "next_rescore_due": "2026-09-10",
   "planning_horizon_days": 28,
@@ -4466,6 +4466,58 @@
       "review_summary": "Independent read-only reviewer Lagrange (01a08fbf-2b74-7cf1-a757-f8672adf0e28) inspected the complete 16-path diff, independently reproduced the delayed-image behavior across all five targets and three exact viewports, confirmed deterministic five-output generation, content/search invariants, GSC limits, exact scope, and green QA. Cycle one returned FAIL for one P2 stale future-action sentence in ops/needs-user.md. Cycle two verified its removal and returned PASS with no P0-P3. The reviewer changed no file or external state.",
       "result": "Completed, released, and production-verified. The shared city record and renderer emit the verified 3,766 by 2,509 dimensions on all five affected pages, and one target-specific auto-height rule preserves prior responsive geometry. Successful Pages run 34583984842 serves the matching 39ce5a1bb9492fba516208639c2bfa5a9c68800b release marker. Production checks confirm one dimensioned image per target, self-canonical indexable markup, the stylesheet rule, zero production SEO errors or warnings, and zero delayed-image movement or overflow at all 15 page/viewport combinations.",
       "notes": "Selected by the September 11 morning independent-pilot heartbeat as the run's only substantive action because a verified production technical defect outranks the morning learning default. FT-RES-039 independently reproduced missing intrinsic dimensions and 520/236/189-pixel downstream shifts on two targets; direct live markup inspection confirmed the same shared-image defect on all five generated San Diego pages. The action was registered before substantive editing, and exact scope expanded from 15 to 16 paths before the target-specific auto-height correction. The initial dimensions-only implementation failed controlled mobile geometry and was not released. Recent reused September 10 GSC is crawl/orientation evidence only and does not select the action. Today's eligible learning unit remains due for the afternoon run."
+    },
+    {
+      "id": "FT-RES-040",
+      "research_backlog_id": "SRR-062",
+      "title": "Audit the Family Tripwise branded-search YouTube identity conflict",
+      "kind": "research",
+      "lane": "recursive-daily-learning",
+      "status": "completed",
+      "selected_on": "2026-09-11",
+      "completed_on": "2026-09-12",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 5,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/",
+        "https://www.youtube.com/@FamilyTripwise"
+      ],
+      "target_paths": [
+        "docs/research/family-tripwise-branded-search-youtube-conflict-2026-09-11.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "status/README.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A source-dated branded-query and representative-result review distinguishes an unrelated same-name channel, copied protectable expression, and a likely identity-confusion case, then records the strongest proportionate response without submitting a report or changing an external account.",
+      "production_invariant": "Research and state only across the nine registered paths. Do not change site/**, page copy, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, reports, complaints, outreach, external posts/accounts, destinations, community queue, or automation. Retain no personal data, make no ownership or legal conclusion beyond the observable evidence, and do not characterize paraphrased ideas, methods, names, titles, or short phrases as proven copyright infringement.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-11 and finalized through 2026-09-09 reports 1,739 property impressions, 3 clicks, aggregate average position 63.46, and 24 of 28 inspected URLs indexed. The homepage has 12 impressions at page-average position 32.42 and the about page has 8 at position 4, but the public snapshot contains no aligned branded-query cohort. GSC is current crawl/orientation evidence only; the user's live branded-search observation plus direct public channel inspection selects this bounded trust/discoverability research.",
+      "acceptance_criteria": [
+        "Inspect at least three current branded query formulations and the representative official-site and YouTube result surfaces, recording result type, identity signals, source date, and limits without treating personalized result order as universal rank evidence.",
+        "Capture the public channel handle and canonical ID, join and upload dates, visible audience/activity counts, description, outbound identity link, video metadata, and transcript; compare them with dated Family Tripwise site and relevant NYC page provenance.",
+        "Separate exact copied expression or assets from similar ideas, methods, positioning, and source-identity confusion; verify the applicable YouTube impersonation, trademark, and copyright routes from current official sources without making a legal determination.",
+        "Conclude PRESERVE, monitor, or retain one user-gated response path. Submit no report, complaint, contact, post, account creation, search-removal request, or other external mutation.",
+        "Pass full native QA, strict JSON, exact nine-path/no-site scope, source/privacy and whitespace checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Record branded formulations inspected, recurring result types, exact identity matches, chronology, wording/asset overlap class, ambiguity, and platform-policy fit. Recheck only after a material channel/search change or a user-authorized complaint outcome. Search prominence, confusion, traffic loss, legal infringement, and causality remain unmeasured.",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 3,
+      "reviewer_agent_ids": [
+        "01a094dd-e432-7b51-896b-745ac3fff749"
+      ],
+      "qa_summary": "Full native tests pass 164/164. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 60 public GSC snapshots validate. Strict roadmap JSON and unique IDs, exact nine-path/no-site scope, six official-policy source reachability checks, added-line credential/contact scanning, and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Noether (01a094dd-e432-7b51-896b-745ac3fff749) inspected the complete nine-path diff and independently checked Git chronology, current official policies, evidence boundaries, report wording, GSC limits, exact scope, and green QA. Cycle one returned PASS with no P0-P3; it did not reproduce the earlier personalized result ordering or full transcript and accepted their explicit limits. Cycle two returned FAIL for premature release claims and an overstated reviewer-verification sentence. Cycle three verified both P2 corrections and the state-date correction and returned PASS_WITH_P3 with no P0-P2. Its sole stale-result P3 is reconciled while recording the final verdict. The reviewer changed no file or external state and submitted no report. One earlier fork returned no visible verdict and is not counted as review.",
+      "result": "Completed and review-clean with USER_GATED_RESPONSE. The official site led two ordinary branded formulations in one personalized sample, while the exact-name YouTube channel was prominent and led the quoted exact-brand sample. Exact identity, same category, overlapping positioning, earlier site provenance, and no visible unofficial disclaimer support one user-gated YouTube impersonation report. Trademark/use-rights is a separate fallback; current evidence does not support a copyright complaint. No page or external state changed.",
+      "notes": "Selected by the September 11 afternoon independent-pilot heartbeat as that day's eligible live-query learning unit and the run's only substantive action. Research was completed September 11; the September 12 morning run completed its unfinished review. Noether cycle-three PASS_WITH_P3 makes the exact-path docs-only action commit/push eligible; no Pages wait applies. September 12's eligible learning unit remains due for the afternoon run. No report, complaint, outreach, page, URL/search state, external account, destination, community queue, indexing request, or automation changed."
     }
   ]
 }

@@ -17,4 +17,6 @@ Use `Baseline GSC` rather than `Current GSC` when a number is intentionally froz
 
 When a newer snapshot materially changes discovery or a blocker, add a short dated monitoring overlay above the frozen table. Do not silently replace the decision baseline or describe page-level average position as a query rank.
 
+Property-level brand identity and source-confusion findings do not belong in a city status row. Record them in a dated research artifact plus the central roadmap, current-cycle, needs-user, and review state; update city files only when the finding changes a city page's role, release state, or evidence-qualified next action.
+
 The release commit, workflow run, deployment result, and production verification are recorded centrally after deployment. Do not create a repository commit solely to backfill them. Update the city file and related repository narratives only as part of another authorized transaction or an explicitly dispatched/user-requested reconciliation. When repository release evidence is present, `node tools/operator-state-qa.mjs` checks it for common stale-language and metadata mismatches.

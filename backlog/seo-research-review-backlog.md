@@ -1,10 +1,31 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-10
+Last updated: 2026-09-12
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-062: Family Tripwise Branded-Search YouTube Identity Conflict
+
+Status: completed and review-clean under `FT-RES-040`; Noether cycle-three `PASS_WITH_P3`; docs-only release pending
+
+Selected: 2026-09-11 by the afternoon independent Family Tripwise pilot after the user reported a same-name YouTube result
+
+Inspect three current branded-query formulations, the competing channel identity and content, dated Family Tripwise site provenance, and current official platform/IP guidance. Distinguish identity confusion from copied protectable expression and retain at most one proportionate user-gated response.
+
+Result:
+
+- `USER_GATED_RESPONSE`: the official site led `FamilyTripwise` and `familytripwise travel` in one personalized live sample, but the exact-name YouTube channel appeared third for the former and first for the quoted brand query. The result order is not generalized beyond the sample.
+- The channel uses the exact `Family Tripwise` display name and `@FamilyTripwise` handle in the same service category, joined August 23, and published one NYC Short August 24. The public site and relevant NYC planning method predate it by about four to seven weeks.
+- Same-category positioning and a closely similar geography-and-family-pace method are documented, but no substantial verbatim site text or copied site artwork is established. YouTube impersonation is the strongest current policy fit; trademark/use-rights is a fallback; copyright is not supported by this record.
+- Retain one user-gated impersonation report and submit nothing in this action. Exact prominence, universal rank, operator identity, actual confusion, traffic loss, motive, legal infringement, and complaint outcome remain unknown.
+- Fresh September 11 GSC is current crawl/orientation evidence only because the public snapshot has no aligned branded-query cohort.
+- Full native tests pass `164/164`; state, freshness, local/production SEO, 60-snapshot validation, strict JSON, exact scope, source reachability, privacy, and whitespace checks pass. Noether cycle one returned `PASS` with no P0-P3 after checking the chronology, official policy fit, reasoning boundary, report wording, state, scope, and QA; it did not reproduce the earlier personalized result ordering or full transcript and accepted their explicit limits. Cycle two returned `FAIL` for premature release claims and one overstated reviewer-verification sentence. Cycle three verified both P2 corrections and the state-date correction and returned `PASS_WITH_P3`; its sole stale-result P3 is reconciled mechanically while recording this final verdict. No P0-P2 remains. The reviewer changed no file or external state.
+
+Expected artifact:
+
+- `docs/research/family-tripwise-branded-search-youtube-conflict-2026-09-11.md`
 
 ### SRR-061: San Diego Overfilled-Draft Activity-To-Itinerary Task
 
