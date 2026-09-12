@@ -4531,8 +4531,9 @@
       "title": "Assess current GSC direction and defer the YouTube response",
       "kind": "research",
       "lane": "measurement",
-      "status": "review-clean",
+      "status": "completed",
       "selected_on": "2026-09-12",
+      "completed_on": "2026-09-12",
       "impact": 3,
       "confidence": 4,
       "learning_value": 3,
@@ -4568,7 +4569,9 @@
       "reviewer_agent_ids": [
         "01a09570-10d0-7af1-accd-879037526ab8"
       ],
-      "release_state": "review-clean-release-pending",
+      "release_state": "docs-only-pushed",
+      "release_commit": "8ef16af17928de0a8a5a62e154b248c9f1c65187",
+      "released_at": "2026-09-12T11:51:57Z",
       "qa_summary": "Full native tests pass 164/164. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 60 public GSC snapshots validate; the September 12 public preflight returns 200 for robots, the parsed 28-URL sitemap, and every declared URL. Strict roadmap JSON has 94 unique action IDs; exact seven-path/no-site scope, privacy and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Noether (01a09570-10d0-7af1-accd-879037526ab8) inspected the complete seven-path diff and independently checked snapshot dates and arithmetic, technical/index/rank/click/demand boundaries, non-causal rolling-window treatment, the testing inference, four unknown URLs, source paths, YouTube deferral, exact scope, and QA evidence. Cycle one surfaced a reversed 0.44-place comparison and one nonexistent source filename; both were corrected. Cycle two verified both corrections and returned PASS with no P0-P3. It did not independently reproduce the full native suite or private-row weighting. The reviewer changed no file or external state.",
       "result": "Completed and review-clean with CONTINUE_WITHOUT_SEARCH_EDIT. Production accessibility and 24-of-28 index coverage are healthy; the latest 1,739-impression window is down 12.7% from September 3 while aggregate position is 2.34 places better and clicks remain three. Mixed page movement and broad low-position exposure are consistent with continued sampling, not proof of a discrete Google test, sandbox, or internal quality judgment. Current exposure remains far below researched demand in a capture sense. The YouTube response is deferred to low-priority monitoring with no report authorized.",

@@ -2,9 +2,9 @@
 
 Last updated: 2026-09-12
 
-Release evidence: docs-only `FT-RES-035` / `SRR-057` action commit `2dec40f`; no Pages wait applies. Prior docs-only `FT-RES-034` / `SRR-056` action commit: `2a73091ed9ae3db17322f118d042970428eca495`.
+Release evidence: docs-only `FT-RES-041` / `SRR-063` action commit `8ef16af17928de0a8a5a62e154b248c9f1c65187`; no Pages wait applies.
 
-No user decision is required for completed, review-clean `FT-RES-041` / `SRR-063`. Current production and index coverage are healthy, but rolling impressions and clicks do not yet show a sustained organic breakout; preserve every page and search state. Noether cycle two returned `PASS` with no P0-P3 after two research-record corrections. Its exact-path docs-only release is pending. This comparison does not authorize a page edit, indexing request, analytics installation, external action, destination, community change, or automation change.
+No user decision is required for completed, review-clean, docs-only-pushed `FT-RES-041` / `SRR-063`. Current production and index coverage are healthy, but rolling impressions and clicks do not yet show a sustained organic breakout; preserve every page and search state. Noether cycle two returned `PASS` with no P0-P3 after two research-record corrections. Action commit `8ef16af17928de0a8a5a62e154b248c9f1c65187` is on `main`; no Pages wait applies. This comparison does not authorize a page edit, indexing request, analytics installation, external action, destination, community change, or automation change.
 
 No user decision is currently required for completed `FT-RES-040` / `SRR-062`. On 2026-09-12 the user deferred the possible YouTube impersonation report to a low-priority monitored backlog item. No report, complaint, outreach, external-account action, or search-removal request is authorized or submitted. Revisit only after a material channel/search change, evidence of copied protectable expression or assets, evidence of actual confusion, or a new user priority decision; trademark/use-rights remains a separate later decision rather than an automatic fallback.
 
