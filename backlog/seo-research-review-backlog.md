@@ -6,9 +6,33 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-063: Current GSC Direction And Deferred YouTube Response
+
+Status: completed and review-clean under `FT-RES-041`; Noether cycle-two `PASS`; docs-only release pending
+
+Selected: 2026-09-12 by direct user request
+
+Compare current production accessibility, index coverage, five finalized 28-day GSC checkpoints, page-level movement, and the maintained protected-query demand analysis. Separate technical health, discovery, rank, clicks, and the bounded inference that Google is still sampling the site. Do not convert overlapping windows into causal evidence or treat page/property totals as additive.
+
+Also record the user's decision to keep the completed YouTube impersonation finding as a low-priority monitored backlog item. Remove it from current needs-user state and submit no report or external mutation.
+
+Expected artifact:
+
+- `docs/research/family-tripwise-gsc-directional-health-2026-09-12.md`
+
+Result:
+
+- `CONTINUE_WITHOUT_SEARCH_EDIT`: public health and stable 24/28 index coverage are healthy, but the 1,739-impression latest window is 12.7% below September 3 and does not show a sustained organic breakout. Aggregate position improved 2.34 places over that comparison, with mixed page-level movement.
+- Broad low-position exposure is consistent with continued Google sampling, not proof of a discrete test, sandbox, or internal quality judgment. Current rank remains the dominant limit.
+- The September 3 protected cohort remains the best demand comparison: 1,123 role-aligned disclosed impressions at about position 72.8 and 166 exact tracked impressions. Current exposure remains far below researched head demand in a capture sense.
+- The YouTube response is now `DEFER_LOW_PRIORITY_MONITOR`; no current user-input request or report remains.
+- Full native and state/SEO/snapshot/preflight/scope/privacy/whitespace QA is green. Noether cycle one surfaced a reversed 0.44-place comparison and one nonexistent source filename; both were corrected. Cycle two returned `PASS` with no P0-P3 and changed no file or external state.
+
 ### SRR-062: Family Tripwise Branded-Search YouTube Identity Conflict
 
 Status: completed, review-clean, and docs-only pushed at `1bd04c8`; Noether cycle-three `PASS_WITH_P3`
+
+Follow-up: `DEFER_LOW_PRIORITY_MONITOR` by user decision on 2026-09-12. No report is authorized or submitted. Revisit only after a material channel/search change, evidence of copied protectable expression or assets, evidence of actual confusion, or a new user priority decision.
 
 Selected: 2026-09-11 by the afternoon independent Family Tripwise pilot after the user reported a same-name YouTube result
 
@@ -19,7 +43,7 @@ Result:
 - `USER_GATED_RESPONSE`: the official site led `FamilyTripwise` and `familytripwise travel` in one personalized live sample, but the exact-name YouTube channel appeared third for the former and first for the quoted brand query. The result order is not generalized beyond the sample.
 - The channel uses the exact `Family Tripwise` display name and `@FamilyTripwise` handle in the same service category, joined August 23, and published one NYC Short August 24. The public site and relevant NYC planning method predate it by about four to seven weeks.
 - Same-category positioning and a closely similar geography-and-family-pace method are documented, but no substantial verbatim site text or copied site artwork is established. YouTube impersonation is the strongest current policy fit; trademark/use-rights is a fallback; copyright is not supported by this record.
-- Retain one user-gated impersonation report and submit nothing in this action. Exact prominence, universal rank, operator identity, actual confusion, traffic loss, motive, legal infringement, and complaint outcome remain unknown.
+- The completed research retained one possible impersonation report, but the user subsequently deferred it to low-priority monitoring. Exact prominence, universal rank, operator identity, actual confusion, traffic loss, motive, legal infringement, and complaint outcome remain unknown.
 - Fresh September 11 GSC is current crawl/orientation evidence only because the public snapshot has no aligned branded-query cohort.
 - Full native tests pass `164/164`; state, freshness, local/production SEO, 60-snapshot validation, strict JSON, exact scope, source reachability, privacy, and whitespace checks pass. Noether cycle one returned `PASS` with no P0-P3 after checking the chronology, official policy fit, reasoning boundary, report wording, state, scope, and QA; it did not reproduce the earlier personalized result ordering or full transcript and accepted their explicit limits. Cycle two returned `FAIL` for premature release claims and one overstated reviewer-verification sentence. Cycle three verified both P2 corrections and the state-date correction and returned `PASS_WITH_P3`; its sole stale-result P3 is reconciled mechanically while recording this final verdict. No P0-P2 remains. The reviewer changed no file or external state.
 

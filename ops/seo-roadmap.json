@@ -4519,8 +4519,60 @@
       "released_at": "2026-09-12T09:18:26Z",
       "qa_summary": "Full native tests pass 164/164. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 60 public GSC snapshots validate. Strict roadmap JSON and unique IDs, exact nine-path/no-site scope, six official-policy source reachability checks, added-line credential/contact scanning, and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer Noether (01a094dd-e432-7b51-896b-745ac3fff749) inspected the complete nine-path diff and independently checked Git chronology, current official policies, evidence boundaries, report wording, GSC limits, exact scope, and green QA. Cycle one returned PASS with no P0-P3; it did not reproduce the earlier personalized result ordering or full transcript and accepted their explicit limits. Cycle two returned FAIL for premature release claims and an overstated reviewer-verification sentence. Cycle three verified both P2 corrections and the state-date correction and returned PASS_WITH_P3 with no P0-P2. Its sole stale-result P3 is reconciled while recording the final verdict. The reviewer changed no file or external state and submitted no report. One earlier fork returned no visible verdict and is not counted as review.",
+      "follow_up_state": "low-priority-monitored-backlog",
+      "follow_up_decided_on": "2026-09-12",
+      "follow_up_trigger": "Revisit only after a material channel/search change, evidence of copied protectable expression or assets, evidence of actual confusion, or a new user priority decision; any report remains separately user-gated.",
       "result": "Completed and review-clean with USER_GATED_RESPONSE. The official site led two ordinary branded formulations in one personalized sample, while the exact-name YouTube channel was prominent and led the quoted exact-brand sample. Exact identity, same category, overlapping positioning, earlier site provenance, and no visible unofficial disclaimer support one user-gated YouTube impersonation report. Trademark/use-rights is a separate fallback; current evidence does not support a copyright complaint. No page or external state changed.",
       "notes": "Selected by the September 11 afternoon independent-pilot heartbeat as that day's eligible live-query learning unit and the run's only substantive action. Research was completed September 11; the September 12 morning run completed its unfinished review and pushed exact-path docs-only action commit 1bd04c867b3802aff66b624223cb7845ab3e13e8 to main. No Pages wait applies. September 12's eligible learning unit remains due for the afternoon run. No report, complaint, outreach, page, URL/search state, external account, destination, community queue, indexing request, or automation changed."
+    },
+    {
+      "id": "FT-RES-041",
+      "research_backlog_id": "SRR-063",
+      "title": "Assess current GSC direction and defer the YouTube response",
+      "kind": "research",
+      "lane": "measurement",
+      "status": "review-clean",
+      "selected_on": "2026-09-12",
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 3,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": true,
+      "target_urls": [
+        "https://familytripwise.com/"
+      ],
+      "target_paths": [
+        "docs/research/family-tripwise-gsc-directional-health-2026-09-12.md",
+        "backlog/seo-research-review-backlog.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A dated comparison separates technical health, indexation, rolling visibility, rank movement, clicks, researched demand, and the bounded inference that Google is still sampling the site, while the user's YouTube decision is retained as a low-priority monitored backlog item rather than an open authorization request.",
+      "production_invariant": "Research and state only across the seven registered paths. Do not change site/**, page copy, titles, URLs, canonicals, indexability, sitemap, schema, analytics, indexing requests, reports, complaints, outreach, external posts/accounts, destinations, community queue, or automation. Do not treat property/page totals as additive or infer Google's internal quality judgment from aggregate GSC data.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-11 and finalized through 2026-09-09 reports 1,739 property impressions, 3 clicks, aggregate average position 63.46, and 24 of 28 inspected URLs indexed. It is a finalized conservative 28-day rolling window with page-grouped rows but no public aligned query cohort; it supports crawl, discovery, and directional visibility interpretation, not CTR diagnosis, user-satisfaction inference, or a claim about Google's internal testing state.",
+      "acceptance_criteria": [
+        "Run the public GSC preflight and compare at least five non-additive 28-day checkpoints covering impressions, clicks, average position, indexed URLs, and page-row breadth.",
+        "Separate healthy production/indexation signals from weak ranking and click outcomes, and label continued Google testing as an evidence-consistent inference rather than a known platform state.",
+        "Compare current page-grouped exposure with the September 3 protected-query demand analysis without converting rolling impressions into market share or validating overlapping keyword-volume estimates.",
+        "Record the user's September 12 decision to defer the YouTube impersonation response as a low-priority monitored backlog item, remove it from current needs-user state, and submit no report or external mutation.",
+        "Pass full native QA, strict JSON, exact seven-path/no-site scope, privacy and whitespace checks, and independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Preserve the current 28-day, page-role, and protected-query cohort boundaries. Reassess when one of the four unknown URLs becomes indexed, a stable aligned cohort moves materially into positions 21-40 or better, a page reaches the doctrine's CTR gate, or a fresh like-for-like demand refresh changes the opportunity baseline. Revisit the YouTube item only after a material channel/search change or a new user priority decision.",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a09570-10d0-7af1-accd-879037526ab8"
+      ],
+      "release_state": "review-clean-release-pending",
+      "qa_summary": "Full native tests pass 164/164. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 60 public GSC snapshots validate; the September 12 public preflight returns 200 for robots, the parsed 28-URL sitemap, and every declared URL. Strict roadmap JSON has 94 unique action IDs; exact seven-path/no-site scope, privacy and whitespace checks pass.",
+      "review_summary": "Independent read-only reviewer Noether (01a09570-10d0-7af1-accd-879037526ab8) inspected the complete seven-path diff and independently checked snapshot dates and arithmetic, technical/index/rank/click/demand boundaries, non-causal rolling-window treatment, the testing inference, four unknown URLs, source paths, YouTube deferral, exact scope, and QA evidence. Cycle one surfaced a reversed 0.44-place comparison and one nonexistent source filename; both were corrected. Cycle two verified both corrections and returned PASS with no P0-P3. It did not independently reproduce the full native suite or private-row weighting. The reviewer changed no file or external state.",
+      "result": "Completed and review-clean with CONTINUE_WITHOUT_SEARCH_EDIT. Production accessibility and 24-of-28 index coverage are healthy; the latest 1,739-impression window is down 12.7% from September 3 while aggregate position is 2.34 places better and clicks remain three. Mixed page movement and broad low-position exposure are consistent with continued sampling, not proof of a discrete Google test, sandbox, or internal quality judgment. Current exposure remains far below researched demand in a capture sense. The YouTube response is deferred to low-priority monitoring with no report authorized.",
+      "notes": "Selected by direct user request on September 12 as the run's only substantive action. This GSC comparison is monitoring and does not count as September 12's required eligible learning unit. No page, URL/search state, title, indexability, sitemap, schema, analytics, indexing request, report, outreach, external account, destination, community queue, or automation changed."
     }
   ]
 }
