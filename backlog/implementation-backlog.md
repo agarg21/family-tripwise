@@ -1,8 +1,26 @@
 # Implementation Backlog
 
-Last updated: 2026-09-11
+Last updated: 2026-09-14
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Active Chicago Indoor-Pool Fact Refresh
+
+### IMP-054: Correct The InterContinental Project Dates
+
+Status: review-clean and release pending; cycle-two `PASS` with no P0-P3
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/chicago-family-hotels.html`
+
+A September 14 current-official-source audit confirms that Embassy Suites Magnificent Mile, Homewood Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons Chicago, and The Langham still list indoor pools, while Loews still says its pool is closed through December 31. IHG's current project notice conflicts with the maintained August 13 summary: improvements run August 10-September 16, but the listed pool closures are August 11 and September 10, with the pool open during the remainder of the project.
+
+The implementation corrects only the InterContinental hotel card and matching visible/schema FAQ, including the temporary construction, locker-room, movie, and Resort Pass conditions. The page labels September 14 as a pool-status spot check and keeps the July 23 date on hotel, room, price, and sampled online-review evidence. It changes no title, H1, description, URL, canonical, indexability, sitemap entry, hotel selection or order, price band, review synthesis, non-pool family fact, route, destination, or external state. Recheck the IHG notice on or after September 17.
+
+Focused tests pass `4/4` and the full native suite passes `164/164`. Deterministic generation, operator state, freshness, local and production SEO, 62-snapshot validation, public preflight, strict JSON, exact twelve-path scope, source reachability classification, whitespace, and responsive checks at 1280 by 900, 390 by 844, and 320 by 800 are green. Independent review remains required before release.
+
+Review cycle one returned `FAIL` for one P2: the first refresh draft dropped the still-current disagreement between IHG's 5:00 AM general-amenities opening time and 7:00 AM dedicated-pool opening time. Both research records now restore and attribute that conflict, retain a booking-time check, and keep exact hours off the public page. Cycle two verified the correction and returned `PASS` with no P0-P3; exact-path release is pending.
 
 ## Active San Diego Hero Layout-Shift Fix
 

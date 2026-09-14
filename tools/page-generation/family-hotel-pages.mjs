@@ -699,7 +699,7 @@ const chicagoFamilyHotels = [
     area: "Magnificent Mile",
     priceRange: "$300-$600+",
     strengths: ["The heated junior Olympic-size indoor pool is a distinct weather-backup amenity", "Official room inventory includes two-double rooms and requestable connecting rooms or cribs"],
-    familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Its project notice, checked August 13, says the pool was scheduled to reopen after an August 10-12 closure while seating and locker-room work continues through September 16; guests may encounter daytime construction, locker rooms are unavailable, and weekend pool movies are relocated elsewhere in the hotel.",
+    familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Its project notice, checked September 14, says improvements run August 10-September 16, the pool closed August 11 and September 10, and it is open during the remainder of the project. Occasional daytime construction may continue, locker rooms are unavailable, weekend pool movies are relocated elsewhere in the hotel, and Resort Passes are unavailable during the project.",
     reviewSignal: "The inspected sample included positive mentions of the pool, location, historic character, and staff. It also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost.",
     priceNote: "A recent public one-night example was about $305 total; larger rooms, events, and weekends can move higher.",
     parentCheck: "Recheck current pool access and project conditions, depth fit, exact two-double room, connecting request, parking, and final total.",
@@ -807,7 +807,7 @@ function chicagoFamilyHotelPage() {
 
   const faqs = [
     ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
-    ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's project notice, checked August 13, says its pool was scheduled to reopen after August 12 while related work continues through September 16; recheck current access before booking."],
+    ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's project notice, checked September 14, says improvements run through September 16, the pool closed September 10, and it is open during the remainder of the project with temporary conditions; recheck current access before booking."],
     ["Do these Chicago hotel ranges include taxes and fees?", "The ranges start from public examples that displayed taxes and mandatory fees where stated, then widen for date and room changes. Parking, food, larger rooms, and optional purchases remain outside the range, so compare the final total for the same dates and setup."]
   ];
   const faqJson = {
@@ -831,7 +831,7 @@ function chicagoFamilyHotelPage() {
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 23, 2026; InterContinental pool project rechecked August 13, 2026</p>
+        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
         <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, and cancellation terms.</p>
       </section>
       <section class="container media-section">

@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-14
 
+No user decision is required for review-clean `FT-MAINT-006` / `IMP-054` / `LRN-030`. A September 14 audit of six selected indoor-pool hotels plus the Loews closed-pool control found one current official conflict and supports a narrow InterContinental factual correction. Independent review cycle one found one P2 omitted IHG hours conflict; the research records now restore it without publishing either disputed schedule, and cycle two returned `PASS` with no P0-P3. Native QA is green and exact-path release is pending. It adds no hotel, URL, destination, indexing request, analytics, outreach, external action, community draft, or automation change.
+
 No user decision is required for completed, review-clean, docs-only-pushed `FT-OPS-005`. The user's September 13 two-month reauthorization is reconciled in current operator policy through November 13 at 17:00 America/New_York at action commit `241749cdbced2ee34ba54d2600e883a444ef4b83`; no Pages wait applies. Full native and state/SEO/snapshot/public-preflight/scope/scheduler/DST/privacy/whitespace QA is green, and independent reviewer `01a09e5c-e2e5-7e23-8abc-1dd54c83163f` returned `PASS` with no P0-P3. The action changes only eight policy/state paths and does not authorize a page, search-state, GSC-workflow, indexing, analytics, outreach, external-posting, destination, community, or additional automation change. September 14's eligible learning unit remains due after this operating-model transaction.
 
 Release evidence: docs-only `FT-RES-041` / `SRR-063` action commit `8ef16af17928de0a8a5a62e154b248c9f1c65187`; no Pages wait applies.

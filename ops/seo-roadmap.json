@@ -4622,6 +4622,55 @@
       "review_summary": "Independent read-only reviewer thread 01a09e5c-e2e5-7e23-8abc-1dd54c83163f inspected the complete eight-path diff and independently verified the user authorization, current automation identity, November 13 cutoff and correct -05:00 offset, cadence, daily-learning and one-action contracts, retained safeguards, historical-only old references, September 13 GSC facts and limits, state, scope, and QA. Cycle one returned PASS with no P0-P3. It did not rerun the temporary-file-writing native suite, recollect authenticated GSC data, or independently verify production deployment. The reviewer changed no file or external state. An earlier same-directory fork returned no visible verdict and is not counted as review.",
       "result": "Completed, review-clean, and docs-only pushed. Current operating policy now recognizes family-tripwise-two-month-autopilot from September 13 through November 13 at 17:00 America/New_York while preserving the 05:00/13:00 Eastern schedule, one-action cap, daily learning contract, repository ownership, evidence and publication gates, reviewer/release controls, and external-action prohibitions. No site, search, GSC workflow, observation window, external account/action, destination, community queue, or automation changed. September 14's eligible learning unit remains due for the afternoon run.",
       "notes": "Selected by the September 14 morning heartbeat to reconcile the user's September 13 renewal as the run's only substantive action. This is operating maintenance, not an eligible learning unit. The exact eight-path docs-only action commit 241749cdbced2ee34ba54d2600e883a444ef4b83 is pushed to main; no Pages wait applies."
+    },
+    {
+      "id": "FT-MAINT-006",
+      "title": "Correct the Chicago family-hotel indoor-pool evidence",
+      "kind": "evidence-maintenance",
+      "lane": "trust-and-factual-quality",
+      "status": "review-clean-release-pending",
+      "selected_on": "2026-09-14",
+      "learning_unit_id": "LRN-030",
+      "implementation_id": "IMP-054",
+      "impact": 4,
+      "confidence": 5,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-family-hotel-pool-fact-refresh-2026-09-14.md",
+        "docs/research/chicago-family-hotel-evidence-pack.md",
+        "tools/page-generation/family-hotel-pages.mjs",
+        "site/where-to-stay/chicago-family-hotels.html",
+        "tools/chicago-family-hotels-page.test.mjs",
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "The Chicago family-hotel page and its evidence layer accurately distinguish six currently listed indoor pools from the still-closed Loews control, state InterContinental's exact August 11 and September 10 closure dates and current through-September-16 project conditions, and leave no implication that the broader July hotel, price, or online-review evidence was refreshed.",
+      "production_invariant": "Change only the twelve registered paths and the one existing Chicago family-hotel URL. Preserve its title, H1, description, canonical, indexability, sitemap membership, ten hotels and ordering, price bands, sampled online-review synthesis, all non-pool family facts, Maps links, visible/schema FAQ alignment, internal routes, and non-firsthand uncertainty boundaries. Add no URL, destination, hotel, analytics, indexing request, outreach, external post/account action, community draft, or automation change.",
+      "gsc_evidence_classification": "Fresh but reused authenticated read-only API evidence collected 2026-09-13 and finalized conservatively through 2026-09-11 reports 1,683 property impressions and 3 clicks. The Chicago family-hotel URL is indexed, was last crawled 2026-08-29, and has 144 rolling 28-day page impressions at aggregate page-average position 63.20 with 0 clicks. The public snapshot has no aligned query cohort and may be revised by Google; it is crawl/orientation evidence only and does not justify a title, CTR, or ranking action. The current official-source discrepancy independently selects this factual correction.",
+      "acceptance_criteria": [
+        "Audit the official pages for all six selected hotels currently listed with indoor pools plus Loews as the closure control, retaining source date, URL, supported fact, conflicts, and unknowns without claiming personal verification.",
+        "Correct the InterContinental record from the outdated August 10-12 closure summary to the current official notice: improvements August 10-September 16, closure dates August 11 and September 10, pool open for the remainder of the project, occasional daytime construction, unavailable locker rooms, relocated weekend pool movies, and unavailable Resort Passes during the project.",
+        "Label September 14 as a pool-status spot check only; do not refresh or relabel the July 23 hotel, price, or online-review evidence, and retain a September 17 next-check trigger for the scheduled project end.",
+        "Preserve all declared page and trust invariants while keeping the hotel card and visible/schema FAQ internally aligned.",
+        "Record LRN-030 as September 14's eligible maintained-evidence learning unit and pass focused and full native QA, deterministic generation, state, freshness, local/production SEO, snapshot/privacy, public preflight, strict JSON, exact twelve-path scope, source reachability, responsive checks, and independent read-only review before release."
+      ],
+      "measurement_plan": "Compare the seven official-source records against the maintained evidence layer and the generated card/FAQ. Verify the correction on desktop, 390 by 844, and 320 by 800 without layout or route regressions. Recheck the InterContinental notice on or after September 17 because the current project is scheduled through September 16. Treat later GSC as observation only until a current crawl and sufficient aligned finalized query evidence exist; do not attribute ranking or CTR movement to this factual maintenance.",
+      "qa_summary": "Focused Chicago hotel tests pass 4/4 and the full native suite passes 164/164. Deterministic generation changes only the declared Chicago HTML output and is idempotent. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 62 public GSC snapshots validate; public preflight returns 200 for robots, the parsed 28-URL sitemap, and all 28 declared URLs. Strict JSON, exact twelve-path scope, added-line privacy, and whitespace checks pass. Direct source requests return 200 for Four Seasons, Langham, and Loews; Hilton's three pages and IHG's two pages return 403 to the command-line client but were readable in the current browser workflow. Exact 1280x900, 390x844, and 320x800 browser checks show no document overflow, all ten hotel cards and three FAQs, contained InterContinental and FAQ cards, current text, and no page errors.",
+      "review_outcome": "PASS",
+      "review_summary": "Independent reviewer 01a0a018-3310-70e2-9f2e-c085aa69175b cycle one returned FAIL for one P2: both research records dropped IHG's still-current 5:00 AM general-amenities versus 7:00 AM dedicated-pool opening-time conflict. The conflict was restored and attributed, while the public page kept exact hours unpublished. Cycle two verified that correction, the learning record, review chronology, evidence-date boundary, page invariants, GSC limits, FAQ/schema equality, JSON, exact scope, and whitespace, then returned PASS with no P0-P3. It did not rerun file-writing/full-suite tests or responsive/production checks. The reviewer changed no file or external state.",
+      "result": "Review-clean and release-pending. The seven-record current-official-source audit preserves six selected indoor-pool listings and the Loews closed-pool control, while the generated InterContinental card and visible/schema FAQ now use IHG's exact August 11 and September 10 closure dates and current temporary conditions. The September 14 checked date is limited to pool status; July 23 hotel, price, and sampled online-review evidence remains unchanged. The restored IHG hours conflict remains unpublished and explicitly unresolved."
     }
   ]
 }
