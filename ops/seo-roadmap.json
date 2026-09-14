@@ -4582,8 +4582,9 @@
       "title": "Reauthorize the independent Family Tripwise operator through November 13",
       "kind": "operating-model",
       "lane": "operations",
-      "status": "review-clean",
+      "status": "completed",
       "selected_on": "2026-09-14",
+      "completed_on": "2026-09-14",
       "impact": 4,
       "confidence": 5,
       "learning_value": 2,
@@ -4613,12 +4614,14 @@
         "Pass full native QA, operator-state, snapshot/privacy, strict JSON, exact eight-path/no-site scope, renewal-string, and whitespace checks, plus independent read-only review with PASS or PASS_WITH_P3 before the docs-only push."
       ],
       "measurement_plan": "Audit the eight registered paths for current automation ID, start/cutoff dates, schedule, daily-learning contract, ownership, and stop behavior; permit old dates and IDs only in explicit historical evidence. Validate all machine-readable state and native QA. Treat this as operating maintenance, not search, user, ranking, CTR, or product-usefulness evidence; September 14's learning unit remains due for the afternoon run.",
-      "release_state": "review-clean-release-pending",
+      "release_state": "docs-only-pushed",
+      "released_commit": "241749cdbced2ee34ba54d2600e883a444ef4b83",
+      "released_at": "2026-09-14T05:25:06Z",
       "review_outcome": "PASS",
       "qa_summary": "Full native tests pass 164/164. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 62 public GSC snapshots validate; the September 14 public preflight returns 200 for robots, the parsed 28-URL sitemap, and every declared URL. Strict operator and roadmap JSON, 95 unique action IDs, exact eight-path/no-site scope, scheduler/cutoff/cadence/DST assertions, added-line credential scan, and whitespace checks pass.",
       "review_summary": "Independent read-only reviewer thread 01a09e5c-e2e5-7e23-8abc-1dd54c83163f inspected the complete eight-path diff and independently verified the user authorization, current automation identity, November 13 cutoff and correct -05:00 offset, cadence, daily-learning and one-action contracts, retained safeguards, historical-only old references, September 13 GSC facts and limits, state, scope, and QA. Cycle one returned PASS with no P0-P3. It did not rerun the temporary-file-writing native suite, recollect authenticated GSC data, or independently verify production deployment. The reviewer changed no file or external state. An earlier same-directory fork returned no visible verdict and is not counted as review.",
-      "result": "Review-clean and ready for docs-only release. Current operating policy now recognizes family-tripwise-two-month-autopilot from September 13 through November 13 at 17:00 America/New_York while preserving the 05:00/13:00 Eastern schedule, one-action cap, daily learning contract, repository ownership, evidence and publication gates, reviewer/release controls, and external-action prohibitions. No site, search, GSC workflow, observation window, external account/action, destination, community queue, or automation changed. September 14's eligible learning unit remains due for the afternoon run.",
-      "notes": "Selected by the September 14 morning heartbeat to reconcile the user's September 13 renewal as the run's only substantive action. This is operating maintenance, not an eligible learning unit. Exact-path docs-only release is pending."
+      "result": "Completed, review-clean, and docs-only pushed. Current operating policy now recognizes family-tripwise-two-month-autopilot from September 13 through November 13 at 17:00 America/New_York while preserving the 05:00/13:00 Eastern schedule, one-action cap, daily learning contract, repository ownership, evidence and publication gates, reviewer/release controls, and external-action prohibitions. No site, search, GSC workflow, observation window, external account/action, destination, community queue, or automation changed. September 14's eligible learning unit remains due for the afternoon run.",
+      "notes": "Selected by the September 14 morning heartbeat to reconcile the user's September 13 renewal as the run's only substantive action. This is operating maintenance, not an eligible learning unit. The exact eight-path docs-only action commit 241749cdbced2ee34ba54d2600e883a444ef4b83 is pushed to main; no Pages wait applies."
     }
   ]
 }
