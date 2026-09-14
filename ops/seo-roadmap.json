@@ -4628,7 +4628,7 @@
       "title": "Correct the Chicago family-hotel indoor-pool evidence",
       "kind": "evidence-maintenance",
       "lane": "trust-and-factual-quality",
-      "status": "review-clean-release-pending",
+      "status": "completed",
       "selected_on": "2026-09-14",
       "learning_unit_id": "LRN-030",
       "implementation_id": "IMP-054",
@@ -4669,8 +4669,17 @@
       "measurement_plan": "Compare the seven official-source records against the maintained evidence layer and the generated card/FAQ. Verify the correction on desktop, 390 by 844, and 320 by 800 without layout or route regressions. Recheck the InterContinental notice on or after September 17 because the current project is scheduled through September 16. Treat later GSC as observation only until a current crawl and sufficient aligned finalized query evidence exist; do not attribute ranking or CTR movement to this factual maintenance.",
       "qa_summary": "Focused Chicago hotel tests pass 4/4 and the full native suite passes 164/164. Deterministic generation changes only the declared Chicago HTML output and is idempotent. Operator-state and content-freshness checks pass; local and production SEO report 0 errors and 0 warnings; all 62 public GSC snapshots validate; public preflight returns 200 for robots, the parsed 28-URL sitemap, and all 28 declared URLs. Strict JSON, exact twelve-path scope, added-line privacy, and whitespace checks pass. Direct source requests return 200 for Four Seasons, Langham, and Loews; Hilton's three pages and IHG's two pages return 403 to the command-line client but were readable in the current browser workflow. Exact 1280x900, 390x844, and 320x800 browser checks show no document overflow, all ten hotel cards and three FAQs, contained InterContinental and FAQ cards, current text, and no page errors.",
       "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a0a018-3310-70e2-9f2e-c085aa69175b"
+      ],
       "review_summary": "Independent reviewer 01a0a018-3310-70e2-9f2e-c085aa69175b cycle one returned FAIL for one P2: both research records dropped IHG's still-current 5:00 AM general-amenities versus 7:00 AM dedicated-pool opening-time conflict. The conflict was restored and attributed, while the public page kept exact hours unpublished. Cycle two verified that correction, the learning record, review chronology, evidence-date boundary, page invariants, GSC limits, FAQ/schema equality, JSON, exact scope, and whitespace, then returned PASS with no P0-P3. It did not rerun file-writing/full-suite tests or responsive/production checks. The reviewer changed no file or external state.",
-      "result": "Review-clean and release-pending. The seven-record current-official-source audit preserves six selected indoor-pool listings and the Loews closed-pool control, while the generated InterContinental card and visible/schema FAQ now use IHG's exact August 11 and September 10 closure dates and current temporary conditions. The September 14 checked date is limited to pool status; July 23 hotel, price, and sampled online-review evidence remains unchanged. The restored IHG hours conflict remains unpublished and explicitly unresolved."
+      "release_state": "released-and-production-verified",
+      "release_commit": "bba20df2355d03c30b3c9dc33842adef4b40fb27",
+      "pages_run": 34849808246,
+      "released_at": "2026-09-14T13:32:33Z",
+      "result": "Completed, released, and production-verified. The seven-record current-official-source audit preserves six selected indoor-pool listings and the Loews closed-pool control, while the generated InterContinental card and visible/schema FAQ now use IHG's exact August 11 and September 10 closure dates and current temporary conditions. The September 14 checked date is limited to pool status; July 23 hotel, price, and sampled online-review evidence remains unchanged. The restored IHG hours conflict remains unpublished and explicitly unresolved. Successful Pages run 34849808246 serves the matching bba20df2355d03c30b3c9dc33842adef4b40fb27 marker; production SEO and all declared target invariants pass.",
+      "notes": "Selected by the September 14 afternoon two-month-autopilot heartbeat as the run's only substantive action and the day's maintained-evidence learning unit. Registered before substantive edits. Reviewer cycle one found one P2 omitted IHG hours conflict; cycle two verified the correction and returned PASS. Released at commit bba20df2355d03c30b3c9dc33842adef4b40fb27 through successful Pages run 34849808246; production verification completed before this mechanical release reconciliation."
     }
   ]
 }

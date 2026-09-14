@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-054: Correct The InterContinental Project Dates
 
-Status: review-clean and release pending; cycle-two `PASS` with no P0-P3
+Status: completed, released, and production-verified at `bba20df2355d03c30b3c9dc33842adef4b40fb27` through Pages run `34849808246`; cycle-two `PASS` with no P0-P3
 
 Target:
 
@@ -20,7 +20,7 @@ The implementation corrects only the InterContinental hotel card and matching vi
 
 Focused tests pass `4/4` and the full native suite passes `164/164`. Deterministic generation, operator state, freshness, local and production SEO, 62-snapshot validation, public preflight, strict JSON, exact twelve-path scope, source reachability classification, whitespace, and responsive checks at 1280 by 900, 390 by 844, and 320 by 800 are green. Independent review remains required before release.
 
-Review cycle one returned `FAIL` for one P2: the first refresh draft dropped the still-current disagreement between IHG's 5:00 AM general-amenities opening time and 7:00 AM dedicated-pool opening time. Both research records now restore and attribute that conflict, retain a booking-time check, and keep exact hours off the public page. Cycle two verified the correction and returned `PASS` with no P0-P3; exact-path release is pending.
+Review cycle one returned `FAIL` for one P2: the first refresh draft dropped the still-current disagreement between IHG's 5:00 AM general-amenities opening time and 7:00 AM dedicated-pool opening time. Both research records now restore and attribute that conflict, retain a booking-time check, and keep exact hours off the public page. Cycle two verified the correction and returned `PASS` with no P0-P3. Successful Pages run `34849808246` serves the matching `bba20df2355d03c30b3c9dc33842adef4b40fb27` marker; production SEO and the declared target title, H1, canonical, indexability, ten hotel cards, twenty Maps links, checked-date split, corrected conditions, and FAQ schema are verified.
 
 ## Active San Diego Hero Layout-Shift Fix
 
