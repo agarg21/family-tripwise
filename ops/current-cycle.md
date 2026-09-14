@@ -1,12 +1,14 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-12
+Last updated: 2026-09-14
 
 ## Cycle Name
 
-Cycle 3: Run the one-month independent Family Tripwise Master autopilot.
+Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
+
+Action `FT-OPS-005` is review-clean and awaiting its exact-path docs-only release as the September 14 morning run's only substantive action. The user's September 13 reauthorization created `family-tripwise-two-month-autopilot` for 05:00 and 13:00 America/New_York runs through November 13 at 17:00 Eastern, superseding the expired pilot dates in current operating policy. This transaction reconciles exactly eight policy/state paths; it changes no site, search surface, GSC workflow, observation window, external account/action, destination, community queue, or automation. Fresh `ops/gsc-snapshots/2026-09-13.md` evidence is finalized conservatively through September 11: 1,683 rolling 28-day impressions, 3 clicks, 0.18% CTR, aggregate average position 61.93, a successful 28-page sitemap, and 24/28 inspected URLs indexed. It is crawl/orientation evidence without an aligned public query cohort and does not select a page or CTR action. Full native tests pass 164/164; state, freshness, local/production SEO, 62-snapshot, public-preflight, strict-JSON, exact-scope, scheduler/DST, credential-scan, and whitespace checks pass. Independent reviewer `01a09e5c-e2e5-7e23-8abc-1dd54c83163f` returned `PASS` with no P0-P3 and changed no file or external state. Date reconciliation and repeated GSC metrics do not count as learning, so September 14's eligible learning unit remains due for the afternoon run.
 
 Action `FT-RES-041` / `SRR-063` is completed, review-clean, and docs-only pushed at commit `8ef16af17928de0a8a5a62e154b248c9f1c65187` by direct user request. The September 12 public preflight passes for robots, the parsed 28-URL sitemap, and every declared URL. Fresh September 11 authenticated read-only API evidence is finalized through September 9: 1,739 property impressions, 3 clicks, aggregate average position 63.46, and 24 of 28 inspected URLs indexed. Five overlapping checkpoints show healthy production and stable index coverage, a late-August impression peak that has not continued, and mixed page-level position gains rather than a sustained organic breakout. Broad low-position exposure across 21 of 26 cluster pages is consistent with continued Google sampling, but GSC exposes no discrete testing or sandbox state. The September 3 protected cohort remains the aligned demand baseline: 1,123 role-aligned disclosed impressions at about position 72.8 and 166 exact tracked impressions, far below researched head demand in a capture sense. Preserve every page, URL, title, and search state. The user also deferred the `FT-RES-040` YouTube response to a low-priority monitored backlog item; no current decision or report remains. Exact scope is seven research/state paths; full native and state/SEO/snapshot/preflight/scope/privacy/whitespace QA is green. Noether cycle one surfaced a reversed 0.44-place comparison and one nonexistent source filename; both were corrected. Cycle two returned `PASS` with no P0-P3 and changed no file or external state. No Pages wait applies. This GSC status comparison is monitoring and does not count as September 12's eligible learning unit.
 
@@ -94,7 +96,7 @@ Afternoon action `FT-RES-020` / `SRR-041` is completed, review-clean and docs-on
 
 Morning action `FT-IMP-024` / `IMP-045` is complete, released and production-verified at commit `d30c29c87e62f79840087331be5b9908b358c8e3` through successful Pages run `33059164697`; Dewey cycle-three `PASS` left no P0-P3. The page now replaces `Hotels covered / 12 options` with a bounded one-base-versus-LEGOLAND-split rule and shows Bahia, Hyatt and the separate Catamaran card as the three Mission Bay starts while preserving all 12 hotels deeper on the page. The release marker, production SEO QA and declared invariants pass. No area page, hotel record, URL, indexing state, external account or automation changed.
 
-The repository source of project state is `ops/seo-roadmap.json`. Through September 12 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator is the only scheduler and runs at 09:00 and 17:00 UTC, which is 05:00 and 13:00 Eastern during the pilot, without consulting or updating the central Control Room. The current five-city portfolio is complete; existing-page usefulness, evidence, discovery, and authority take priority over expansion.
+The repository source of project state is `ops/seo-roadmap.json`. From September 13 through November 13 at 17:00 America/New_York, the permanent Family Tripwise Master / Operator is the only scheduler and runs at 05:00 and 13:00 Eastern through `family-tripwise-two-month-autopilot`, without consulting or updating the central Control Room. The current five-city portfolio is complete; existing-page usefulness, evidence, discovery, and authority take priority over expansion.
 
 Direct manual operating-model action `FT-OPS-004` is complete and review-clean after Kierkegaard cycle-two `PASS` with no P0-P3. The existing heartbeat now requires one bounded learning unit per Eastern calendar day, defaults morning to learn and afternoon to apply/deepen/validate, and excludes unchanged monitoring from progress while preserving the one-substantive-action-per-run cap and every page-change, review, release, external-action and new-page gate. `LRN-004` completes the first eligible unit from four current San Diego family-lodging discussions; it preserves the current hotel page and carries only a one-base-versus-LEGOLAND-split task hypothesis forward.
 
@@ -180,14 +182,14 @@ Direct manual action `FT-RES-017` / `SRR-040` is complete and review-clean after
 - Hosting: GitHub Pages through GitHub Actions
 - Pages custom domain: `familytripwise.com`
 - HTTPS: enforced, certificate approved for `familytripwise.com` and `www.familytripwise.com`
-- GSC: authenticated read-only API collection is working; the current September 3 snapshot has finalized data through September 1, 1,991 impressions and 3 clicks over 28 days, a successful sitemap with 28 discovered pages, and 24 of 28 monitored URLs indexed
+- GSC: authenticated read-only API collection is working; the current September 13 snapshot has finalized data through September 11, 1,683 impressions and 3 clicks over 28 days, a successful sitemap with 28 discovered pages, and 24 of 28 monitored URLs indexed
 - Current site source: `site/`
 - Main generators/scripts: `tools/generate-pages.mjs`, `tools/upgrade-priority-pages.mjs`
-- Current released implementation: `FT-IMP-027` at commit `ac5a68d94ebcaeed08349d30a67fcdbec0f88fce`; Pages run `33680285894`, release marker, target invariants and production SEO verification pass
+- Current released implementation: `FT-MAINT-005` at commit `39ce5a1bb9492fba516208639c2bfa5a9c68800b`; Pages run `34583984842`, release marker, target invariants and production SEO verification pass
 
 ## Historical operating threads
 
-- The permanent Family Tripwise Master / Operator owns current selection and release work through the September 12 independent-pilot cutoff.
+- The permanent Family Tripwise Master / Operator owns current selection and release work through the November 13 at 17:00 America/New_York renewed-cycle cutoff.
 - The following earlier role-specific threads are historical references, not independent priority owners:
 - Implementation Agent: `019f3ca5-67ed-7b93-a88c-838c5a026535`
 - SEO Research & Review Agent: `019f3ca5-b3b7-7fd2-9f0f-ba411bf5c658`

@@ -6,12 +6,12 @@
   "autonomy": "independent-autopilot-reviewed-release",
   "scheduler": {
     "owner": "Family Tripwise Master / Operator",
-    "automation_id": "family-tripwise-operator-pilot",
+    "automation_id": "family-tripwise-two-month-autopilot",
     "thread_id": "019f7334-5828-7f01-b2db-e87de913ea6c",
     "timezone": "America/New_York",
     "run_hours": [5, 13],
-    "starts_on": "2026-08-12",
-    "ends_at": "2026-09-12T17:00:00-04:00",
+    "starts_on": "2026-09-13",
+    "ends_at": "2026-11-13T17:00:00-05:00",
     "central_control_room_enabled": false
   },
   "maximum_substantive_actions_per_run": 1,
@@ -33,7 +33,7 @@
     "page_change_required": false,
     "no_op_allowed_when": [
       "daily-unit-already-complete-and-no-additional-evidence-qualified-action",
-      "pilot-cutoff-passed",
+      "cycle-cutoff-passed",
       "recorded-technical-or-external-blocker-prevents-evidence-collection"
     ]
   },

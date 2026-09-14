@@ -1,12 +1,14 @@
-# One-Month Independent Autopilot
+# Independent Autopilot Operating Plan
 
-Authorized: 2026-08-12
+Renewed: 2026-09-13
 
-Cutoff: 2026-09-12 at 17:00 America/New_York
+Cutoff: 2026-11-13 at 17:00 America/New_York
+
+Repository-path note: this established path is retained for continuity; the dates and automation identity in this document govern the renewed cycle.
 
 ## Mission
 
-Improve the usefulness, trustworthiness, discoverability, and rankings of existing Family Tripwise pages for real family-trip planning. The independent Master thread runs at 05:00 and 13:00 America/New_York during the pilot, corresponding to the heartbeat's 09:00 and 17:00 UTC slots. It does not use or update the central SEO Control Room.
+Improve the usefulness, trustworthiness, discoverability, and rankings of existing Family Tripwise pages for real family-trip planning. The independent Master thread runs at 05:00 and 13:00 America/New_York during the renewed cycle through `family-tripwise-two-month-autopilot`. It does not use or update the central SEO Control Room.
 
 The schedule creates one daily learning obligation, not a publishing quota. Each run may complete at most one substantive action; across the two Eastern-time runs, at least one bounded learning unit must be completed each day.
 
@@ -83,6 +85,6 @@ The review board may record `pending`, `approved`, `revise`, or `rejected`. `app
 
 ## Stop Rules
 
-End a run as a monitoring-only no-op only when the current Eastern day's learning unit is already complete, the pilot cutoff has passed, or a specific recorded technical/external blocker prevents evidence collection. Stale GSC, a protected measurement window, or a user-gated external action does not block the other learning lanes. Do not manufacture a page edit when research supports `PRESERVE`.
+End a run as a monitoring-only no-op only when the current Eastern day's learning unit is already complete, the cycle cutoff has passed, or a specific recorded technical/external blocker prevents evidence collection. Stale GSC, a protected measurement window, or a user-gated external action does not block the other learning lanes. Do not manufacture a page edit when research supports `PRESERVE`.
 
 After the cutoff, perform no project work until the user explicitly reauthorizes it.

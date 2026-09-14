@@ -1,6 +1,8 @@
 # Needs User
 
-Last updated: 2026-09-12
+Last updated: 2026-09-14
+
+No user decision is required for review-clean `FT-OPS-005`, which is awaiting its exact-path docs-only release. The user's September 13 two-month reauthorization is sufficient to reconcile the current operator policy through November 13 at 17:00 America/New_York. Full native and state/SEO/snapshot/public-preflight/scope/scheduler/DST/privacy/whitespace QA is green, and independent reviewer `01a09e5c-e2e5-7e23-8abc-1dd54c83163f` returned `PASS` with no P0-P3. The action changes only eight policy/state paths and does not authorize a page, search-state, GSC-workflow, indexing, analytics, outreach, external-posting, destination, community, or additional automation change. September 14's eligible learning unit remains due after this operating-model transaction.
 
 Release evidence: docs-only `FT-RES-041` / `SRR-063` action commit `8ef16af17928de0a8a5a62e154b248c9f1c65187`; no Pages wait applies.
 
