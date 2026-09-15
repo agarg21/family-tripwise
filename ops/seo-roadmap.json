@@ -4736,9 +4736,11 @@
         "01a0a37f-4a5d-7791-a33f-faa8aa206b6e"
       ],
       "review_summary": "Independent reviewer 01a0a37f-4a5d-7791-a33f-faa8aa206b6e cycle one returned FAIL for two P2s and one P3: the Las Vegas Compass overlap boundary counted only six properties while saying all named/discussed overlap; the Conde Nast comparison attributed unsupported commissioned imagery; and Hotelier's Choice was omitted from the twice-recurring summary and source register. The record now distinguishes positive main-guide overlap from incidental or negative mentions, removes the imagery claim, and adds the missing recurring-domain/source evidence. Cycle two verified all corrections, chronology, state, scope, GSC boundary, learning record, proportional PRESERVE, and unselected occupancy task and returned PASS with no P0-P3. The reviewer changed no file or external state.",
-      "release_state": "review-clean-docs-only-push-pending",
+      "release_state": "docs-only-pushed",
+      "release_commit": "4360807db64210a4a18e092acbe4a0daf53a7499",
+      "released_at": "2026-09-15T05:24:14Z",
       "result": "Completed and review-clean. PRESERVE the page, hotel set, title, URL, and search state. The bounded SERP sample supports one broad named-property job. Family Tripwise already covers the dominant family decision fields and retains honest information gain. Keep one unselected family-of-five room-fit task plus a current official occupancy audit because the quick table does not normalize registered capacity or room separation; make no page edit from this sample.",
-      "notes": "Selected by the September 15 morning two-month-autopilot heartbeat as the run's only substantive action and the day's live-query learning unit. Registered before substantive edits. Reviewer cycle one found two P2s and one P3; cycle two verified all record corrections and returned PASS. Docs-only release is pending."
+      "notes": "Selected by the September 15 morning two-month-autopilot heartbeat as the run's only substantive action and the day's live-query learning unit. Registered before substantive edits. Reviewer cycle one found two P2s and one P3; cycle two verified all record corrections and returned PASS. Docs-only action commit 4360807db64210a4a18e092acbe4a0daf53a7499 is pushed to main; no Pages wait applies."
     }
   ]
 }

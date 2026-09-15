@@ -8,7 +8,7 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ### SRR-064: Current Las Vegas Family-Hotel Query Family
 
-Status: completed and review-clean under `FT-RES-042`; full QA green; reviewer cycle-two `PASS`; research/state only; docs-only push pending
+Status: completed, review-clean, and docs-only pushed at `4360807`; full QA green; reviewer cycle-two `PASS`; research/state only
 
 Selected: 2026-09-15 by the morning two-month Family Tripwise heartbeat
 

@@ -176,6 +176,8 @@ Local pre-review QA is green:
 
 Independent reviewer `01a0a37f-4a5d-7791-a33f-faa8aa206b6e` cycle one returned `FAIL` for two P2s and one P3: the Las Vegas Compass overlap boundary counted only six properties while saying all named/discussed overlap; the Conde Nast comparison attributed unsupported commissioned imagery; and Hotelier's Choice was omitted from the twice-recurring summary and source register. The record now distinguishes six positive main-guide overlaps from incidental Four Seasons and negative Resorts World mentions, removes the imagery claim, and adds Hotelier's Choice to the recurring set and source register. Cycle two verified all corrections, the chronology, state, exact scope, GSC boundary, learning record, proportional `PRESERVE`, and unselected occupancy task, then returned `PASS` with no P0-P3. The reviewer changed no file or external state. No file outside the registered eight-path research/state scope changed.
 
+Docs-only action commit `4360807db64210a4a18e092acbe4a0daf53a7499` is pushed to `main`; no Pages wait applies.
+
 ## Stop Rules
 
 - Do not add a hotel because it appears on another list.
