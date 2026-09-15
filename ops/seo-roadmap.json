@@ -4798,9 +4798,11 @@
         "01a0a53a-990b-7530-9824-f573cafee935"
       ],
       "review_summary": "Independent reviewer 01a0a53a-990b-7530-9824-f573cafee935 cycle one returned FAIL for one P2: Marriott's current rendered room modal names the Grand Chateau two-bedroom villa at maximum occupancy eight, while the initial audit left exact named-villa capacity unknown and proposed only two supported starts. The audit, candidate, learning record, and every state mirror now name the two-bedroom path and three supported starts. Cycle two verified the correction, task-score boundary, all nine mirrors, exact scope, and green QA, then returned PASS with no P0-P3. The reviewer changed no file or external state.",
-      "release_state": "review-clean-docs-only-push-pending",
+      "release_state": "docs-only-pushed",
+      "release_commit": "ec7a3d606a4392bb4bfbbf9d36e90dcb82551a72",
+      "released_at": "2026-09-15T13:35:47Z",
       "result": "Completed and review-clean. The page-only family-of-five task is PARTIAL: it cannot reduce four plausible suite properties to a visible occupancy-supported shortlist or provisional choice. Current official records support three named starts: Grand Chateau two-bedroom villa, Tahiti Village Royal Tahitian, and Cancun two-bedroom suite; Vdara needs a two-bedroom luxury suite or two-room comparison. Retain only unselected IMP-055 and make no page change in this action.",
-      "notes": "Selected by the September 15 afternoon two-month-autopilot heartbeat as the run's only substantive action and the apply/deepen follow-up to FT-RES-042 / LRN-031. Registered before substantive edits. Reviewer cycle one found one P2 omitted Grand Chateau capacity; cycle two verified all corrections and returned PASS with no P0-P3. Docs-only release is pending."
+      "notes": "Selected by the September 15 afternoon two-month-autopilot heartbeat as the run's only substantive action and the apply/deepen follow-up to FT-RES-042 / LRN-031. Registered before substantive edits. Reviewer cycle one found one P2 omitted Grand Chateau capacity; cycle two verified all corrections and returned PASS with no P0-P3. Docs-only action commit ec7a3d606a4392bb4bfbbf9d36e90dcb82551a72 is pushed to main; no Pages wait applies."
     }
   ]
 }

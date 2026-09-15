@@ -8,7 +8,7 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ### SRR-065: Las Vegas Family-Of-Five Room Fit
 
-Status: completed and review-clean; full native QA green; reviewer cycle-two `PASS`; docs-only release pending; research/state only
+Status: completed, review-clean, and docs-only pushed at `ec7a3d6`; full native QA green; reviewer cycle-two `PASS`; research/state only
 
 Selected: 2026-09-15 as the apply/deepen follow-up to completed `FT-RES-042`
 
@@ -32,7 +32,7 @@ Result:
 - Retain unselected `IMP-055`: replace `Hotels covered / 10 options` with one compact five-plus-person branch and align only the four decision-active room records. Add no new table column, section, card, hotel, page, URL, inventory claim, price promise, or casino-path conclusion.
 - The three tested widths have no document overflow; the mobile comparison table remains contained in its horizontal scroller. The four decision-active cards begin 8.97-13.49 viewports down at 390 and 10.47-15.98 at 320, but depth alone is not the defect.
 - Recent reused September 14 GSC is finalized conservatively through September 12. The indexed target has 117 impressions, no clicks, and aggregate page-average position 60.20, with no public aligned query cohort. It remains crawl/orientation evidence only.
-- Full native tests pass 164/164; state, freshness, local/production SEO, 63-snapshot validation, 28-URL public preflight, strict-JSON/98-ID, exact nine-path/no-site, source classification, privacy, browser, and whitespace checks are green. Reviewer `01a0a53a-990b-7530-9824-f573cafee935` cycle one returned `FAIL` for one P2 omitted named Grand Chateau capacity; the audit and every mirror now name the two-bedroom villa's maximum occupancy eight and the candidate's three supported starts. Cycle two verified the correction and returned `PASS` with no P0-P3.
+- Full native tests pass 164/164; state, freshness, local/production SEO, 63-snapshot validation, 28-URL public preflight, strict-JSON/98-ID, exact nine-path/no-site, source classification, privacy, browser, and whitespace checks are green. Reviewer `01a0a53a-990b-7530-9824-f573cafee935` cycle one returned `FAIL` for one P2 omitted named Grand Chateau capacity; the audit and every mirror now name the two-bedroom villa's maximum occupancy eight and the candidate's three supported starts. Cycle two verified the correction and returned `PASS` with no P0-P3. Docs-only action commit `ec7a3d606a4392bb4bfbbf9d36e90dcb82551a72` is pushed to `main`; no Pages wait applies.
 
 ### SRR-064: Current Las Vegas Family-Hotel Query Family
 

@@ -8,7 +8,7 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-055: Surface The Five-Plus Room Path
 
-Status: unselected candidate from completed, review-clean `FT-RES-043` / `SRR-065`; full native QA green; reviewer cycle-two `PASS`; no page change authorized
+Status: unselected candidate from completed, review-clean, docs-only-pushed `FT-RES-043` / `SRR-065` at `ec7a3d6`; full native QA green; reviewer cycle-two `PASS`; no page change authorized
 
 Target:
 
