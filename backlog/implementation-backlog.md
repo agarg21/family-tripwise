@@ -1,8 +1,37 @@
 # Implementation Backlog
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate Las Vegas Five-Plus Room Branch
+
+### IMP-055: Surface The Five-Plus Room Path
+
+Status: unselected candidate from completed, review-clean `FT-RES-043` / `SRR-065`; full native QA green; reviewer cycle-two `PASS`; no page change authorized
+
+Target:
+
+- `https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html`
+
+The September 15 family-of-five page-only task is `PARTIAL`. Five trip-style pairs and the detail cards narrow ten hotels to four plausible suite properties, but the page does not expose a comparable registered-capacity field, cannot name the minimum room category that carries five, and does not state when to move to a larger suite or two rooms. `Reduce`, `Compare`, `Decide`, and `Recover` therefore require current room-record reconstruction.
+
+Current official records make a compact branch maintainable:
+
+- Tahiti Village's two-bedroom Royal Tahitian accommodates up to eight.
+- Cancun's two-bedroom suites support four to six guests and its penthouse suites six to eight.
+- Vdara's Studios and one-bedroom suites max at four; its two-bedroom luxury suites max at six.
+- Marriott's Grand Chateau lists its one-bedroom villa for up to four, its two-bedroom villa for up to eight, and its three-bedroom villa for up to 12.
+
+Smallest candidate, if a later action selects it:
+
+- Replace the low-information `Hotels covered / 10 options` snapshot field with one compact `Five or more` branch before the trip-style cards.
+- Make the Royal Tahitian, Cancun two-bedroom suite, and Grand Chateau two-bedroom villa the three occupancy-supported starts. State that Vdara requires a two-bedroom luxury suite or two rooms for this task.
+- Align only those four decision-active room records across the validated evidence layer and existing detail cards, with a source date and unknowns intact.
+- Require a same-date, five-person final-total comparison. Do not turn the current broad nightly ranges into room-specific quotes.
+- Add no new card, section, table column, filter, hotel, URL, schema entity, inventory claim, connecting-room promise, fixed price, casino-route claim, or suitability conclusion.
+
+Future success requires `Start` and `Reduce` to reach `YES`, `Decide` to support a provisional three-option branch without a capacity inference, and `Recover` to identify the larger-suite or two-room fallback. The branch must stay in the existing snapshot before the trip-style cards at 1280 by 900, 390 by 844, and 320 by 800, with zero document overflow and no regression to price, evidence, table, hotel, source, schema, URL, or search-state invariants. This remains proxy-reviewed task evidence, not user testing, demand, satisfaction, CTR, or ranking evidence.
 
 ## Active Chicago Indoor-Pool Fact Refresh
 

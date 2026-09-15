@@ -6,6 +6,34 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-065: Las Vegas Family-Of-Five Room Fit
+
+Status: completed and review-clean; full native QA green; reviewer cycle-two `PASS`; docs-only release pending; research/state only
+
+Selected: 2026-09-15 as the apply/deepen follow-up to completed `FT-RES-042`
+
+Run one page-only task at 1280 by 900, 390 by 844, and 320 by 800 for two adults and three children who need one officially supported room or a clearly named larger-suite/two-room fallback, a mid-range rough total, and a non-gaming property or short casino path. Audit only the current official room records needed for Vdara, Marriott's Grand Chateau, Tahiti Village, and Hilton Vacation Club Cancun.
+
+Boundaries:
+
+- Score `Start`, `Reduce`, `Compare`, `Trace`, `Decide`, `Verify`, and `Recover` from visible page information before consulting official room sources.
+- Never infer occupancy from beds, square footage, suite/villa labels, or a property-level guest control not bound to the named room.
+- Keep dynamic total, exact availability, casino path, and unresolved room capacity as checks rather than promises.
+- Conclude `PRESERVE` or retain at most one unselected bounded existing-page candidate. Make no page, evidence-pack, hotel, URL/search-state, indexing, analytics, external-action, destination, community, or automation change.
+
+Expected artifact:
+
+- `docs/research/las-vegas-family-five-room-fit-task-review-2026-09-15.md`
+
+Result:
+
+- The page-only task is `PARTIAL` and reproduces one P2 decision defect. Trip-style starts reduce ten hotels to four plausible suite properties, but the page cannot reach two or three occupancy-supported options, name the minimum five-person room, or support a provisional choice without current room-record reconstruction.
+- Current official records support a compact maintained branch: Tahiti Village's two-bedroom Royal Tahitian accommodates up to eight; Cancun's two-bedroom suite supports four to six and its penthouse six to eight; Grand Chateau's one-bedroom villa maxes at four, its two-bedroom villa at eight, and its three-bedroom villa at 12; Vdara's Studios and one-bedroom suites max at four while its two-bedroom luxury suites max at six.
+- Retain unselected `IMP-055`: replace `Hotels covered / 10 options` with one compact five-plus-person branch and align only the four decision-active room records. Add no new table column, section, card, hotel, page, URL, inventory claim, price promise, or casino-path conclusion.
+- The three tested widths have no document overflow; the mobile comparison table remains contained in its horizontal scroller. The four decision-active cards begin 8.97-13.49 viewports down at 390 and 10.47-15.98 at 320, but depth alone is not the defect.
+- Recent reused September 14 GSC is finalized conservatively through September 12. The indexed target has 117 impressions, no clicks, and aggregate page-average position 60.20, with no public aligned query cohort. It remains crawl/orientation evidence only.
+- Full native tests pass 164/164; state, freshness, local/production SEO, 63-snapshot validation, 28-URL public preflight, strict-JSON/98-ID, exact nine-path/no-site, source classification, privacy, browser, and whitespace checks are green. Reviewer `01a0a53a-990b-7530-9824-f573cafee935` cycle one returned `FAIL` for one P2 omitted named Grand Chateau capacity; the audit and every mirror now name the two-bedroom villa's maximum occupancy eight and the candidate's three supported starts. Cycle two verified the correction and returned `PASS` with no P0-P3.
+
 ### SRR-064: Current Las Vegas Family-Hotel Query Family
 
 Status: completed, review-clean, and docs-only pushed at `4360807`; full QA green; reviewer cycle-two `PASS`; research/state only

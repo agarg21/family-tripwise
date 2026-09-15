@@ -4741,6 +4741,66 @@
       "released_at": "2026-09-15T05:24:14Z",
       "result": "Completed and review-clean. PRESERVE the page, hotel set, title, URL, and search state. The bounded SERP sample supports one broad named-property job. Family Tripwise already covers the dominant family decision fields and retains honest information gain. Keep one unselected family-of-five room-fit task plus a current official occupancy audit because the quick table does not normalize registered capacity or room separation; make no page edit from this sample.",
       "notes": "Selected by the September 15 morning two-month-autopilot heartbeat as the run's only substantive action and the day's live-query learning unit. Registered before substantive edits. Reviewer cycle one found two P2s and one P3; cycle two verified all record corrections and returned PASS. Docs-only action commit 4360807db64210a4a18e092acbe4a0daf53a7499 is pushed to main; no Pages wait applies."
+    },
+    {
+      "id": "FT-RES-043",
+      "research_backlog_id": "SRR-065",
+      "learning_unit_id": "LRN-032",
+      "title": "Test family-of-five room fit on the Las Vegas hotel page",
+      "kind": "persona-task-research",
+      "lane": "existing-page-learning",
+      "status": "completed",
+      "selected_on": "2026-09-15",
+      "completed_on": "2026-09-15",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-family-five-room-fit-task-review-2026-09-15.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A source-bounded family-of-five task at desktop and mobile widths determines whether the current page can reduce ten hotels to a defensible two- or three-option shortlist without inferring occupancy from bed count, and a current official-source audit resolves only the room categories needed for that decision. The result is PRESERVE or at most one unselected bounded existing-page candidate.",
+      "production_invariant": "Research and state only across the nine registered paths. Preserve site/**, the Las Vegas family-hotel page and evidence pack, all titles, H1s, descriptions, URLs, canonicals, indexability, sitemap, schema, hotel set/order, price and review evidence, analytics, indexing state, external accounts/actions, destinations, community queue, and automation. Do not publish or imply room occupancy, connecting-room availability, price, casino path, suitability, or family fit beyond current official support.",
+      "gsc_evidence_classification": "Recent reused authenticated read-only API evidence collected 2026-09-14 and finalized conservatively through 2026-09-12 reports 1,764 property impressions, 5 clicks, 0.28% CTR, aggregate average position 60.30, and 24 of 28 inspected URLs indexed. The indexed Las Vegas family-hotel target has 117 rolling 28-day page impressions, 0 clicks, and aggregate page-average position 60.20. No September 15 public-safe snapshot has arrived and the latest public summary contains no aligned query cohort, so GSC is crawl/orientation evidence only and does not select this task or a title, CTR, content, or ranking action. The completed FT-RES-042 hypothesis selects this apply/deepen task.",
+      "acceptance_criteria": [
+        "Run the same explicit task at 1280 by 900, 390 by 844, and 320 by 800: two adults and three children need one officially supported room or a clearly named suite/two-room fallback, a mid-range rough total, and a non-gaming property or short casino path.",
+        "Score Start, Reduce, Compare, Trace, Decide, Verify, and Recover using only visible page information; record useful-surface depth, shortlist size, decision fields, unknowns, horizontal containment, and any unsupported inference the reader would need.",
+        "Audit only the current official room-category sources for the decision-active Vdara, Marriott Grand Chateau, Tahiti Village, and Hilton Vacation Club Cancun candidates; distinguish registered occupancy from beds, square footage, or marketing labels and retain conflicts or unavailable facts as unknown.",
+        "Conclude PRESERVE or retain at most one unselected bounded existing-page candidate. Make no page, evidence-pack, hotel, URL/search-state, indexing, analytics, external-action, destination, community, or automation change.",
+        "Record LRN-032, run full native QA plus state, freshness, local/production SEO, snapshot validation, public preflight, strict JSON, exact nine-path/no-site scope, source/privacy, browser and whitespace checks, and obtain independent read-only PASS or PASS_WITH_P3 before docs-only release."
+      ],
+      "measurement_plan": "Compare task completion and visible-field availability at the three declared viewports, then test decision-active room categories against current official sources. Preserve the September 14 GSC target row as orientation only. A later implementation requires a material P2 task failure and a compact supported field; do not attribute later impression, click, or position movement to this research.",
+      "qa_evidence": [
+        "full native tests passed 164 of 164",
+        "operator-state and content-freshness checks passed",
+        "local and production SEO QA passed with 0 errors and 0 warnings",
+        "all 63 public GSC snapshots validated and public preflight passed for robots, 28 sitemap URLs, and all 28 configured URLs",
+        "strict roadmap JSON passed with 98 unique action IDs",
+        "exact registered nine-path no-site scope, source classification, privacy, browser, and whitespace checks passed"
+      ],
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a0a53a-990b-7530-9824-f573cafee935"
+      ],
+      "review_summary": "Independent reviewer 01a0a53a-990b-7530-9824-f573cafee935 cycle one returned FAIL for one P2: Marriott's current rendered room modal names the Grand Chateau two-bedroom villa at maximum occupancy eight, while the initial audit left exact named-villa capacity unknown and proposed only two supported starts. The audit, candidate, learning record, and every state mirror now name the two-bedroom path and three supported starts. Cycle two verified the correction, task-score boundary, all nine mirrors, exact scope, and green QA, then returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "release_state": "review-clean-docs-only-push-pending",
+      "result": "Completed and review-clean. The page-only family-of-five task is PARTIAL: it cannot reduce four plausible suite properties to a visible occupancy-supported shortlist or provisional choice. Current official records support three named starts: Grand Chateau two-bedroom villa, Tahiti Village Royal Tahitian, and Cancun two-bedroom suite; Vdara needs a two-bedroom luxury suite or two-room comparison. Retain only unselected IMP-055 and make no page change in this action.",
+      "notes": "Selected by the September 15 afternoon two-month-autopilot heartbeat as the run's only substantive action and the apply/deepen follow-up to FT-RES-042 / LRN-031. Registered before substantive edits. Reviewer cycle one found one P2 omitted Grand Chateau capacity; cycle two verified all corrections and returned PASS with no P0-P3. Docs-only release is pending."
     }
   ]
 }
