@@ -1,10 +1,37 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-12
+Last updated: 2026-09-15
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-064: Current Las Vegas Family-Hotel Query Family
+
+Status: completed and review-clean under `FT-RES-042`; full QA green; reviewer cycle-two `PASS`; research/state only; docs-only push pending
+
+Selected: 2026-09-15 by the morning two-month Family Tripwise heartbeat
+
+Inspect the current result sets for `family friendly hotels in Las Vegas`, `best family hotels in Las Vegas`, and `kid friendly hotels Las Vegas`; classify result types and recurring domains, inspect four representative ranking pages, and compare their decision criteria and hotel overlap with the existing Family Tripwise page.
+
+Boundaries:
+
+- Treat the search sets as a bounded current sample, not a stable universal top ten or demand measure.
+- Separate local/firsthand authority, established brand, live inventory, proprietary rankings, and massive review volume from structural or research opportunities Family Tripwise can honestly build.
+- Test room/occupancy fit, pool or on-property-day value, complete-price posture, casino/smoke context, location and movement burden, and current verification.
+- Conclude `PRESERVE` or retain at most one unselected existing-page research hypothesis. Make no page, hotel, URL/search-state, indexing, analytics, external-action, destination, community, or automation change.
+
+Expected artifact:
+
+- `docs/research/las-vegas-family-hotel-live-serp-review-2026-09-15.md`
+
+Result:
+
+- `PRESERVE`. Four domains recur across all three bounded result sets, and the result types consistently serve one named-property selection job rather than distinct exact-match page jobs.
+- Family Tripwise already covers the dominant pool, room, total-price, casino/non-gaming, location, movement, review-conflict, source-date, and current-check decisions. Its ten hotels overlap each representative page without pretending there is one universal ranking.
+- Retain one unselected family-of-five room-fit task plus decision-active official-room audit. The quick table does not normalize registered capacity or room separation, but several exact room categories remain unknown and no implementation is justified before the task reproduces a material failure.
+- Fresh September 14 GSC is finalized through September 12. The indexed target has 117 rolling impressions, no clicks, and aggregate page-average position 60.20, with no public aligned query cohort. It remains crawl/orientation evidence only.
+- Full native tests pass 164/164; state, freshness, local/production SEO, 63-snapshot, public-preflight, strict-JSON, exact-scope, source-reachability, privacy, and whitespace checks are green. Reviewer `01a0a37f-4a5d-7791-a33f-faa8aa206b6e` cycle one returned `FAIL` for two P2s and one P3 covering overlap-boundary wording, an unsupported commissioned-imagery claim, and an omitted twice-recurring domain/source. Cycle two verified all corrections and returned `PASS` with no P0-P3; the reviewer changed no file or external state.
 
 ### SRR-063: Current GSC Direction And Deferred YouTube Response
 

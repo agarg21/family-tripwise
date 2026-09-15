@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-14",
+  "last_updated": "2026-09-15",
   "last_rescored_on": "2026-09-14",
   "next_rescore_due": "2026-09-21",
   "planning_horizon_days": 28,
@@ -4680,6 +4680,65 @@
       "released_at": "2026-09-14T13:32:33Z",
       "result": "Completed, released, and production-verified. The seven-record current-official-source audit preserves six selected indoor-pool listings and the Loews closed-pool control, while the generated InterContinental card and visible/schema FAQ now use IHG's exact August 11 and September 10 closure dates and current temporary conditions. The September 14 checked date is limited to pool status; July 23 hotel, price, and sampled online-review evidence remains unchanged. The restored IHG hours conflict remains unpublished and explicitly unresolved. Successful Pages run 34849808246 serves the matching bba20df2355d03c30b3c9dc33842adef4b40fb27 marker; production SEO and all declared target invariants pass.",
       "notes": "Selected by the September 14 afternoon two-month-autopilot heartbeat as the run's only substantive action and the day's maintained-evidence learning unit. Registered before substantive edits. Reviewer cycle one found one P2 omitted IHG hours conflict; cycle two verified the correction and returned PASS. Released at commit bba20df2355d03c30b3c9dc33842adef4b40fb27 through successful Pages run 34849808246; production verification completed before this mechanical release reconciliation."
+    },
+    {
+      "id": "FT-RES-042",
+      "research_backlog_id": "SRR-064",
+      "learning_unit_id": "LRN-031",
+      "title": "Assess the current Las Vegas family-hotel query family",
+      "kind": "serp-research",
+      "lane": "existing-page-learning",
+      "status": "completed",
+      "selected_on": "2026-09-15",
+      "completed_on": "2026-09-15",
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/las-vegas-family-hotel-live-serp-review-2026-09-15.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A dated three-formulation Las Vegas family-hotel result sample classifies current result types, recurring domains, representative ranking-page strengths, hotel overlap, advantages Family Tripwise cannot honestly claim, and one-page information gain, then concludes PRESERVE or retains at most one bounded unselected existing-page research hypothesis.",
+      "production_invariant": "Research and state only across the eight registered paths. Preserve site/**, the Las Vegas family-hotel page and evidence pack, all titles, H1s, descriptions, URLs, canonicals, indexability, sitemap, schema, hotel set/order, price and review evidence, analytics, indexing state, external accounts/actions, destinations, community queue, and automation. Make no rank, prevalence, firsthand, safety, exact-route, user-behavior, satisfaction, or causal claim from the bounded search sample.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-14 and finalized conservatively through 2026-09-12 reports 1,764 property impressions, 5 clicks, 0.28% CTR, aggregate average position 60.30, and 24 of 28 inspected URLs indexed. The indexed Las Vegas family-hotel target has 117 rolling 28-day page impressions, 0 clicks, and aggregate page-average position 60.20. The public snapshot contains no aligned query cohort and may be revised by Google, so it is crawl/orientation evidence only and does not justify a title, CTR, content, or ranking action. The morning learning contract selects this bounded current-SERP audit.",
+      "acceptance_criteria": [
+        "Inspect the current result sets for family friendly hotels in Las Vegas, best family hotels in Las Vegas, and kid friendly hotels Las Vegas; record result types and only reproducible recurring-domain observations without calling the sample a complete universal top ten.",
+        "Inspect at least four representative ranking pages spanning local/editorial, established travel-publisher, and OTA or dynamic-inventory types; record source dates, family decision criteria, hotel overlap, structural strengths, disagreements, and evidence limits without copying wording, lists, ratings, or proprietary data.",
+        "Compare the live Family Tripwise page against the named family decision of room and occupancy fit, pool or on-property day value, complete-price posture, casino/smoke exposure, location and heat/movement friction, and current verification; distinguish facts already present from any one bounded unresolved comparison.",
+        "Conclude PRESERVE or retain at most one unselected existing-page research hypothesis. Make no page, hotel, URL, title, search-state, indexing, analytics, outreach, external-account, destination, community, or automation change.",
+        "Record LRN-031 as September 15's eligible live-query learning unit and pass full native QA, operator state, freshness, local and production SEO, snapshot validation, public preflight, strict JSON, exact eight-path/no-site scope, source/privacy and whitespace checks, plus independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Compare the three bounded result sets by result type and recurring domain, then compare representative ranking-page decision fields and hotel overlap with the existing Family Tripwise page. Preserve the September 14 GSC page row as orientation only. A later search edit requires a separate selected action, a named task gap plus current official support, and the doctrine's aligned-query and crawl gates; do not attribute later impression, click, or position movement to this research.",
+      "qa_evidence": [
+        "full native tests passed 164 of 164",
+        "operator-state and content-freshness checks passed",
+        "local and production SEO QA passed with 0 errors and 0 warnings",
+        "all 63 public GSC snapshots validated and public preflight passed for robots, 28 sitemap URLs, and all 28 configured URLs",
+        "strict JSON, 97 unique roadmap IDs, exact registered scope, privacy, source-reachability, and whitespace checks passed",
+        "independent reviewer cycle one returned FAIL for two P2s and one P3; cycle two verified all corrections and returned PASS with no P0-P3"
+      ],
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a0a37f-4a5d-7791-a33f-faa8aa206b6e"
+      ],
+      "review_summary": "Independent reviewer 01a0a37f-4a5d-7791-a33f-faa8aa206b6e cycle one returned FAIL for two P2s and one P3: the Las Vegas Compass overlap boundary counted only six properties while saying all named/discussed overlap; the Conde Nast comparison attributed unsupported commissioned imagery; and Hotelier's Choice was omitted from the twice-recurring summary and source register. The record now distinguishes positive main-guide overlap from incidental or negative mentions, removes the imagery claim, and adds the missing recurring-domain/source evidence. Cycle two verified all corrections, chronology, state, scope, GSC boundary, learning record, proportional PRESERVE, and unselected occupancy task and returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "release_state": "review-clean-docs-only-push-pending",
+      "result": "Completed and review-clean. PRESERVE the page, hotel set, title, URL, and search state. The bounded SERP sample supports one broad named-property job. Family Tripwise already covers the dominant family decision fields and retains honest information gain. Keep one unselected family-of-five room-fit task plus a current official occupancy audit because the quick table does not normalize registered capacity or room separation; make no page edit from this sample.",
+      "notes": "Selected by the September 15 morning two-month-autopilot heartbeat as the run's only substantive action and the day's live-query learning unit. Registered before substantive edits. Reviewer cycle one found two P2s and one P3; cycle two verified all record corrections and returned PASS. Docs-only release is pending."
     }
   ]
 }
