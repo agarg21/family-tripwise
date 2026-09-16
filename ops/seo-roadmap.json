@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-15",
+  "last_updated": "2026-09-16",
   "last_rescored_on": "2026-09-14",
   "next_rescore_due": "2026-09-21",
   "planning_horizon_days": 28,
@@ -4803,6 +4803,67 @@
       "released_at": "2026-09-15T13:35:47Z",
       "result": "Completed and review-clean. The page-only family-of-five task is PARTIAL: it cannot reduce four plausible suite properties to a visible occupancy-supported shortlist or provisional choice. Current official records support three named starts: Grand Chateau two-bedroom villa, Tahiti Village Royal Tahitian, and Cancun two-bedroom suite; Vdara needs a two-bedroom luxury suite or two-room comparison. Retain only unselected IMP-055 and make no page change in this action.",
       "notes": "Selected by the September 15 afternoon two-month-autopilot heartbeat as the run's only substantive action and the apply/deepen follow-up to FT-RES-042 / LRN-031. Registered before substantive edits. Reviewer cycle one found one P2 omitted Grand Chateau capacity; cycle two verified all corrections and returned PASS with no P0-P3. Docs-only action commit ec7a3d606a4392bb4bfbbf9d36e90dcb82551a72 is pushed to main; no Pages wait applies."
+    },
+    {
+      "id": "FT-RES-044",
+      "research_backlog_id": "SRR-066",
+      "learning_unit_id": "LRN-033",
+      "title": "Revalidate the Chicago stay-area query job",
+      "kind": "live-serp-research",
+      "lane": "existing-page-learning",
+      "status": "completed",
+      "selected_on": "2026-09-16",
+      "completed_on": "2026-09-16",
+      "impact": 4,
+      "confidence": 3,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/chicago-stay-area-live-serp-review-2026-09-16.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md"
+      ],
+      "success_signal": "A dated three-formulation Chicago stay-area result sample determines whether a geography-first family lodging job remains distinct from named-property comparison, compares at least four representative ranking pages with both current Family Tripwise pages, and concludes PRESERVE or retains at most one bounded follow-up research task without changing either page.",
+      "production_invariant": "Research and state only across the eight registered paths. Preserve site/**, both Chicago lodging pages and evidence packs, all titles, H1s, descriptions, URLs, canonicals, indexability, sitemap, schema, area and hotel sets/order, prices, review evidence, analytics, indexing state, external accounts/actions, destinations, community queue, and automation. Make no universal rank, demand, prevalence, firsthand, safety, exact-route, behavior, satisfaction, or causal claim from the bounded search sample.",
+      "gsc_evidence_classification": "Fresh authenticated read-only API evidence collected 2026-09-15 and finalized conservatively through 2026-09-13 reports 1,775 property impressions, 5 clicks, 0.28% CTR, aggregate average position 59.34, and 24 of 28 inspected URLs indexed. The indexed Chicago stay-area target has 21 rolling 28-day page impressions, 0 clicks, and aggregate page-average position 28.90; the indexed Chicago family-hotel page has 177 impressions, 0 clicks, and aggregate page-average position 59.74. The public snapshot contains no aligned query cohort, so these overlapping page averages are crawl/orientation evidence only and do not establish cannibalization, rank, demand, CTR failure, or an edit. The morning learning contract and the existing page-role boundary select this current-SERP audit.",
+      "acceptance_criteria": [
+        "Inspect current result sets for where to stay in Chicago with kids, best area to stay in Chicago with family, and family friendly neighborhoods Chicago; record result types, recurring domains, and whether results are geography-first, property-first, or blended without treating the sample as a complete universal top ten.",
+        "Inspect at least four representative current ranking pages across destination guidance, editorial travel publishing, hotel-list or booking inventory, and community or forum result types; record source dates, decision criteria, structural strengths, overlap, disagreement, and non-copyable authority advantages without copying wording, lists, ratings, or proprietary data.",
+        "Compare the live Family Tripwise area and hotel pages against one named family decision: choose a base from activity anchors, reset needs, transport consequences, exact-route uncertainty, room fit, and total-price posture without mixing area and property jobs.",
+        "Conclude PRESERVE or retain at most one bounded follow-up research task. Make no page, evidence-pack, area, hotel, URL, title, search-state, indexing, analytics, external-action, destination, community, or automation change.",
+        "Record LRN-033 as September 16's eligible live-query learning unit and pass full native QA, operator state, freshness, local and production SEO, snapshot validation, public preflight, strict JSON, exact eight-path/no-site scope, source/privacy and whitespace checks, plus independent read-only review with PASS or PASS_WITH_P3."
+      ],
+      "measurement_plan": "Compare three bounded result sets by result type and recurring domain, then compare representative ranking-page decision fields and result overlap with the existing area and hotel pages. Preserve the September 15 GSC page rows as orientation only. A later page or search change requires a separate selected action and a named user-task deficiency; do not attribute later impression, click, or position movement to this research.",
+      "qa_evidence": [
+        "full native tests passed 164 of 164",
+        "operator-state and content-freshness checks passed",
+        "local and production SEO QA passed with 0 errors and 0 warnings",
+        "all 64 public GSC snapshots validated and public preflight passed for robots, 28 sitemap URLs, and all 28 configured URLs",
+        "strict roadmap JSON passed with 99 unique action IDs",
+        "exact registered eight-path no-site scope, source classification, secret-pattern/privacy, and whitespace checks passed",
+        "independent reviewer cycle one returned FAIL for three P2s and one P3; cycle two verified all corrections and returned PASS with no P0-P3"
+      ],
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": [
+        "01a0a8a2-6271-7b62-9d62-cd234344ae50"
+      ],
+      "review_summary": "Independent reviewer 01a0a8a2-6271-7b62-9d62-cd234344ae50 cycle one returned FAIL for three P2s and one P3: the registered community/forum source type was missing; HotelsVetted's affiliate price handoff was overstated as a dynamic provider-price advantage; Expedia's five-area geography was incorrectly called a larger inventory; and the evidence table assigned HotelsVetted a publication-date range despite its date being unavailable. The corrected record adds one current public AskChicago visitor question without retaining identity or anecdotes as facts, bounds the two publisher comparisons to observed evidence, and makes the unknown date explicit. Cycle two verified all corrections, the proportional PRESERVE/no-candidate result, GSC limits, privacy, and exact scope and returned PASS with no P0-P3. The reviewer changed no file or external state.",
+      "release_state": "pending-docs-only-push",
+      "result": "Completed and review-clean. PRESERVE both Chicago lodging URLs, roles, titles, area and hotel sets, and search state. Current visitor results and one current public visitor question support a geography-first base-selection job followed by named-property comparison. The family friendly neighborhoods formulation is mixed with residential intent and should not broaden the travel page. Retain no implementation candidate.",
+      "notes": "Selected by the September 16 morning two-month-autopilot heartbeat as the run's only substantive action and the day's eligible live-query learning unit. Registered before substantive edits. Reviewer cycle one found three P2s and one P3; cycle two verified all corrections and returned PASS with no P0-P3. Docs-only release is pending; no Pages wait applies."
     }
   ]
 }

@@ -1,10 +1,39 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-15
+Last updated: 2026-09-16
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-066: Current Chicago Stay-Area Query Job
+
+Status: completed and review-clean; `PRESERVE`; full QA green; reviewer cycle-two `PASS`; research/state only
+
+Selected: 2026-09-16 as the morning two-month-autopilot learning unit
+
+Inspect current results for `where to stay in Chicago with kids`, `best area to stay in Chicago with family`, and `family friendly neighborhoods Chicago`. Classify geography-first, property-first, and blended results; inspect at least four representative ranking pages; and compare their decision fields with the existing Family Tripwise stay-area and family-hotel pages.
+
+Boundaries:
+
+- Treat the three result sets as a dated qualitative sample, not a universal rank tracker or demand measure.
+- Separate advantages Family Tripwise cannot honestly claim from structural or maintained-evidence opportunities it can support.
+- Use the September 15 GSC snapshot only for crawl/orientation. Its page averages and missing public query cohort cannot establish cannibalization, CTR failure, or query rank.
+- Conclude `PRESERVE` or retain at most one bounded follow-up research task. Make no page, area, hotel, URL/search-state, indexing, analytics, external-action, destination, community, or automation change.
+
+Expected artifact:
+
+- `docs/research/chicago-stay-area-live-serp-review-2026-09-16.md`
+
+Result:
+
+- `PRESERVE` both existing URLs, page roles, titles, area and hotel sets, and search state. The first two visitor-oriented formulations still expose a geography-first base-selection job across area-first, broad-family, destination, hotel-led, and firsthand pages.
+- `family friendly neighborhoods Chicago` is materially mixed with residential/moving intent. It does not support expanding the visitor page into schools, housing, crime scoring, commute, or raising-children content.
+- Expedia, HotelsVetted, Travel Family Blog, Little Chicago Guide, and one current public AskChicago visitor question were inspected as representative current evidence. Their geographic coverage, affiliate provider relationships, firsthand receipts, stated local authority, or community anecdotes are not advantages Family Tripwise can claim or demand measures. The existing conditional starts, compact comparison, exact-route uncertainty, maintained hotel evidence, and area-to-property handoff remain honest information gain.
+- The area page already routes activity anchors, midday reset, and transport consequences; the hotel page owns room fit, amenities, rough totals, review signals/conflicts, maps, and current checks. Blended competitor pages do not prove the URLs compete, and no public aligned GSC query cohort exists.
+- Fresh September 15 GSC is finalized through September 13. The indexed area page has 21 impressions at aggregate page-average position 28.90; the indexed hotel page has 177 at 59.74. These different unknown query mixes are crawl/orientation only and cannot establish rank, demand, CTR failure, or cannibalization.
+- Retain no implementation candidate. Revisit only if aligned query-by-page evidence shows sustained overlap, a family task cannot reduce the five areas from known anchors/reset needs, current official facts conflict, or result sets stop serving a distinct geography-first visitor job.
+- Full native tests pass 164/164; state, freshness, local/production SEO, 64-snapshot validation, 28-URL public preflight, strict-JSON/99-ID, exact eight-path/no-site, source/privacy, and whitespace checks are green. Reviewer `01a0a8a2-6271-7b62-9d62-cd234344ae50` cycle one returned `FAIL` for three P2s and one P3 covering the missing community-page inspection, overstated HotelsVetted pricing advantage, incorrect Expedia inventory comparison, and inconsistent HotelsVetted publication-date classification. All four record issues are corrected; cycle two verified the complete diff and returned `PASS` with no P0-P3.
 
 ### SRR-065: Las Vegas Family-Of-Five Room Fit
 
