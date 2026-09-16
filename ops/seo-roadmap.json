@@ -4861,9 +4861,11 @@
         "01a0a8a2-6271-7b62-9d62-cd234344ae50"
       ],
       "review_summary": "Independent reviewer 01a0a8a2-6271-7b62-9d62-cd234344ae50 cycle one returned FAIL for three P2s and one P3: the registered community/forum source type was missing; HotelsVetted's affiliate price handoff was overstated as a dynamic provider-price advantage; Expedia's five-area geography was incorrectly called a larger inventory; and the evidence table assigned HotelsVetted a publication-date range despite its date being unavailable. The corrected record adds one current public AskChicago visitor question without retaining identity or anecdotes as facts, bounds the two publisher comparisons to observed evidence, and makes the unknown date explicit. Cycle two verified all corrections, the proportional PRESERVE/no-candidate result, GSC limits, privacy, and exact scope and returned PASS with no P0-P3. The reviewer changed no file or external state.",
-      "release_state": "pending-docs-only-push",
+      "release_state": "docs-only-pushed",
+      "release_commit": "e6ec328f44956e2611690444bdc5e6ff4d731624",
+      "released_at": "2026-09-16T05:20:56Z",
       "result": "Completed and review-clean. PRESERVE both Chicago lodging URLs, roles, titles, area and hotel sets, and search state. Current visitor results and one current public visitor question support a geography-first base-selection job followed by named-property comparison. The family friendly neighborhoods formulation is mixed with residential intent and should not broaden the travel page. Retain no implementation candidate.",
-      "notes": "Selected by the September 16 morning two-month-autopilot heartbeat as the run's only substantive action and the day's eligible live-query learning unit. Registered before substantive edits. Reviewer cycle one found three P2s and one P3; cycle two verified all corrections and returned PASS with no P0-P3. Docs-only release is pending; no Pages wait applies."
+      "notes": "Selected by the September 16 morning two-month-autopilot heartbeat as the run's only substantive action and the day's eligible live-query learning unit. Registered before substantive edits. Reviewer cycle one found three P2s and one P3; cycle two verified all corrections and returned PASS with no P0-P3. Docs-only action commit e6ec328f44956e2611690444bdc5e6ff4d731624 is pushed to main; no Pages wait applies."
     }
   ]
 }

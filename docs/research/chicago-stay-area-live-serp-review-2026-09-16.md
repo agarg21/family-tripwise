@@ -200,6 +200,8 @@ Local pre-review QA is green:
 
 Independent reviewer `01a0a8a2-6271-7b62-9d62-cd234344ae50` cycle one returned `FAIL` for three P2s and one P3: no community page had been inspected despite the registered source-type criterion; HotelsVetted's affiliate price handoff was overstated as a dynamic provider-price advantage; Expedia's five-area inventory was incorrectly described as larger; and the evidence table gave HotelsVetted a publication-date range despite its date being unavailable. The record now adds a current public AskChicago visitor question without retaining a username or anecdote as fact, describes HotelsVetted's observed affiliate handoff without claiming live pricing, compares Expedia by differing geography rather than inventory size, and preserves the unknown HotelsVetted date. Cycle two verified all four corrections, the proportional `PRESERVE` decision, GSC boundary, privacy, and exact scope and returned `PASS` with no P0-P3. The reviewer did not rerun the full native suite, production QA, or original search ordering, and changed no file or external state. No file outside the registered eight-path research/state scope changed.
 
+Docs-only action commit `e6ec328f44956e2611690444bdc5e6ff4d731624` is pushed to `main`; no Pages wait applies.
+
 ## Stop Rules
 
 - Do not treat the returned search sets as a universal or stable Google top ten.
