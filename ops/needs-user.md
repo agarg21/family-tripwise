@@ -1,6 +1,12 @@
 # Needs User
 
-Last updated: 2026-09-16
+Last updated: 2026-09-17
+
+Latest `FT-IMP-028` gate: independent cycle-two `PASS` with no P0-P3 and green final native/browser QA; no project approval is needed. Earlier pending-review labels below are historical. Exact-path push and Pages/live target verification remain operator gates before release completion.
+
+No project decision is required for the pending `FT-IMP-028` / `IMP-055` capacity-only application. Independent review and verified release remain operator gates; no site release is claimed yet. September 17 `LRN-034` validates three explicit room starts and two controls without promising current price, inventory, connection or exact casino route.
+
+Scheduling observation: this heartbeat's timestamp `2026-09-17T05:02:16.232Z` is 01:02 Eastern, not the configured/intended 05:00 Eastern slot. A single arrival does not establish whether this is timezone handling or a catch-up run. The existing automation remains unchanged; if actual run times matter, confirm the intended Eastern schedule in the app before authorizing a correction. This is separate from page evidence and does not block the registered action.
 
 Reviewer `01a0a8a2-6271-7b62-9d62-cd234344ae50` cycle one returned `FAIL` for three P2s and one P3 in the `FT-RES-044` record. All four are corrected: one current public visitor question now covers the community source type without identity retention, the HotelsVetted and Expedia advantage/inventory descriptions are bounded to observed evidence, and the unknown HotelsVetted publication date is explicit. Cycle two verified all corrections and returned `PASS` with no P0-P3; no user decision is needed.
 

@@ -1,14 +1,18 @@
 # Implementation Backlog
 
-Last updated: 2026-09-15
+Last updated: 2026-09-17
 
-Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the renewed September 13-November 13 independent cycle, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
 ## Candidate Las Vegas Five-Plus Room Branch
 
 ### IMP-055: Surface The Five-Plus Room Path
 
-Status: unselected candidate from completed, review-clean, docs-only-pushed `FT-RES-043` / `SRR-065` at `ec7a3d6`; full native QA green; reviewer cycle-two `PASS`; no page change authorized
+Latest gate: `FT-IMP-028` is completed and review-clean after independent cycle-two `PASS` with no P0-P3; final native and browser QA is green. Earlier pending-review labels below are historical. Push, Pages marker and live target invariants remain pending.
+
+Status: selected September 16 as `FT-IMP-028`, resumed September 17; completed locally, independent review and release pending. Originating research `FT-RES-043` / `SRR-065` is review-clean and docs-only pushed at `ec7a3d6`.
+
+The candidate below is historical rationale. The selected implementation replaces the count field with three capacity-supported starts, explicitly narrows Grand Chateau to the audited two-king two-bedroom villa, and aligns four official room records. September 16 is a capacity-only source date, not a price/review refresh. September 17 `LRN-034` validates the rendered branch and two controls: Start/Reduce/Verify/Recover become `YES`; full price/route comparison and unconditional choice remain `PARTIAL`. Existing controls retain answerability/navigation but trip-style starts move down 282/309/405 pixels; no claim of unchanged reading depth or satisfaction is made. Focused 5/5, full 166/166 and exact three-viewport browser checks pass. See `docs/research/las-vegas-five-plus-room-branch-validation-2026-09-16.md`; native release gates and independent consensus are still required.
 
 Target:
 
@@ -23,7 +27,7 @@ Current official records make a compact branch maintainable:
 - Vdara's Studios and one-bedroom suites max at four; its two-bedroom luxury suites max at six.
 - Marriott's Grand Chateau lists its one-bedroom villa for up to four, its two-bedroom villa for up to eight, and its three-bedroom villa for up to 12.
 
-Smallest candidate, if a later action selects it:
+Original smallest candidate, subsequently selected as `FT-IMP-028`:
 
 - Replace the low-information `Hotels covered / 10 options` snapshot field with one compact `Five or more` branch before the trip-style cards.
 - Make the Royal Tahitian, Cancun two-bedroom suite, and Grand Chateau two-bedroom villa the three occupancy-supported starts. State that Vdara requires a two-bedroom luxury suite or two rooms for this task.

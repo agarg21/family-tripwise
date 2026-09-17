@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-16
+Last updated: 2026-09-17
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
@@ -14,6 +14,10 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+- Latest September 17 gate: independent reviewer `01a0adc4-137d-77b3-8bc4-51f522c0c141` cycle-two `PASS`, no P0-P3, for the complete `FT-IMP-028` candidate. Cycle-one sole grammar P3 is corrected. Final operator focused/full, state/freshness/SEO/snapshot/preflight/JSON/scope/DOM/privacy/whitespace and three-viewport browser checks pass; earlier pending-review labels describe pre-verdict states. Exact-path commit/push and Pages/live target verification remain pending.
+
+- September 17 resumed action: finish already registered `FT-IMP-028` / `IMP-055`, not a new action. Five dirty action paths were preserved; origin added only reviewed-workflow snapshot commit `81ad4f0`, understood and fast-forwarded without overlap/divergence. Newly arrived `ops/gsc-snapshots/2026-09-16.json` is authenticated read-only API evidence collected September 16 at 14:59 UTC and finalized conservatively through September 14: 1,705 property impressions, five clicks, aggregate position 59.01 and 24/28 indexed; target 105 impressions, no clicks, page-average position 59.50, indexed with September 4 crawl. No aligned public query cohort exists; this is crawl/orientation only. The independent `FT-RES-043` P2 selects the narrow usefulness action. Local branch/controls validation is `LRN-034`, September 17's eligible task unit. Only capacity routing is resolved; current price, preferences and exact casino route remain unknown. Focused 5/5, full 166/166, three exact viewports, local/production SEO, freshness, 65 snapshots and 28-URL preflight pass. Independent review, exact fourteen-path commit/push, Pages marker and target production invariants remain pending.
 
 - September 16 review: reviewer `01a0a8a2-6271-7b62-9d62-cd234344ae50` cycle one returned `FAIL` for three P2s and one P3 in the `FT-RES-044` record. The corrected record adds a current public visitor question to the required community source type without retaining identity or anecdotes as facts, describes HotelsVetted's affiliate handoff without implying verified live pricing, compares Expedia by different geography instead of larger inventory, and makes the unavailable HotelsVetted publication date explicit. Cycle two verified all corrections and returned `PASS` with no P0-P3; the reviewer changed no file or external state.
 

@@ -354,6 +354,7 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
   });
 }
 
+const lasVegasRoomCapacityChecked = "September 16, 2026";
 const lasVegasFamilyHotels = [
   {
     name: "Mandalay Bay Resort and Casino",
@@ -385,7 +386,14 @@ const lasVegasFamilyHotels = [
     area: "Center Strip / CityCenter",
     priceRange: "$150-$450+",
     strengths: ["Every official Studio is a 582 sq ft suite with a kitchenette", "The property is casino-free and smoke-free while staying close to Aria and Bellagio"],
-    familySetup: "The official Studio lists a king bed, pullout queen sofa, kitchenette, dining table, and maximum occupancy of four. Larger one-bedroom layouts are available, but bedding and separation vary.",
+    familySetup: "The official Studio lists a king bed, pullout queen sofa, kitchenette, dining table, and maximum occupancy of four. Bedding and separation vary by exact suite.",
+    roomCapacity: {
+      label: "Vdara two-bedroom luxury suite",
+      capacity: "up to six guests",
+      note: "Studios and one-bedroom suites max at four. For five guests, compare a two-bedroom Penthouse, Loft, or Hospitality Suite, or price two rooms without assuming they connect.",
+      source: "https://vdara.mgmresorts.com/en/hotel.html",
+      fivePlusStart: false
+    },
     reviewSignal: "Room space, non-gaming atmosphere, and access toward Aria and Bellagio recur positively; empty kitchenettes until supplies are requested, small fridges, parking walks, maintenance, and fee clarity recur as conflicts.",
     priceNote: "Public examples varied from roughly $150 to more than $450 total depending on date and inventory source.",
     parentCheck: "Confirm the exact suite bedding, kitchen equipment supplied, parking route, pool season, final total, and cancellation terms.",
@@ -398,6 +406,13 @@ const lasVegasFamilyHotels = [
     priceRange: "$200-$700+",
     strengths: ["Official one- to three-bedroom villas add kitchens, living space, and in-unit laundry", "The property publishes no resort fee"],
     familySetup: "Official pages list guest rooms plus one-, two-, and three-bedroom villas with kitchens or kitchenettes, living and dining space, and in-unit laundry in villas. Two pools and valet-only parking are also listed.",
+    roomCapacity: {
+      label: "Grand Chateau two-king two-bedroom villa",
+      capacity: "up to eight guests",
+      note: "The audited two-king, two-sofa-bed category has two bathrooms and does not permit cribs or rollaways. Verify the exact villa and sleeping surfaces; other layouts differ.",
+      source: "https://www.marriott.com/en-us/hotels/lasvg-marriotts-grand-chateau/rooms/",
+      fivePlusStart: true
+    },
     reviewSignal: "Space, kitchens, laundry, cleanliness, and central location recur positively; small or crowded pools, valet dependence, timeshare contact, noise, and limited food choices recur as conflicts.",
     priceNote: "Public examples ranged from the low $200s to roughly $700 for higher dates or larger units; villa size is the main comparison point.",
     parentCheck: "Compare the exact villa, bedrooms and baths, housekeeping cadence, valet cost and wait, final total, and cancellation terms.",
@@ -410,6 +425,13 @@ const lasVegasFamilyHotels = [
     priceRange: "$130-$300+",
     strengths: ["Official one- and two-bedroom suites publish kitchenette or full-kitchen setups", "The pool, lazy river, arcade, activities, and free parking support a stay-put day"],
     familySetup: "Official pages list a 580 sq ft one-bedroom with kitchenette, a 971 sq ft one-bedroom with full kitchen, and a 1,551 sq ft two-bedroom suite, plus pool, lazy river, arcade, activities, and free parking.",
+    roomCapacity: {
+      label: "Tahiti Village Royal Tahitian",
+      capacity: "up to eight guests",
+      note: "This is the two-bedroom suite formed from Moorea and Bora Bora units as one suite. Each one-bedroom category lists four guests; verify the named Royal Tahitian reservation rather than assuming a requested connector.",
+      source: "https://tahitivillage.com/booknow/",
+      fivePlusStart: true
+    },
     reviewSignal: "Room space, kitchens, lazy river, pool, and the away-from-casino setting recur positively; crowding, partial pool closures, elevator or parking walks, service follow-through, room condition, and sales contact recur as conflicts.",
     priceNote: "A recent public one-night example was about $129 total; larger suites and peak pool dates can move higher.",
     parentCheck: "Verify the exact kitchen, pool and lazy-river operations, crib or Pack 'n Play availability if needed, shuttle schedule, final total, and cancellation terms.",
@@ -422,6 +444,13 @@ const lasVegasFamilyHotels = [
     priceRange: "$120-$320+",
     strengths: ["Hilton lists two pools and four waterslides", "Free parking and residence-style layouts can fit a car-based family trip"],
     familySetup: "Hilton lists two pools, four waterslides, free parking, non-smoking rooms, and resort residences. Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request. Treat crib availability as unresolved and confirm it directly if needed.",
+    roomCapacity: {
+      label: "Cancun two-bedroom suite",
+      capacity: "four to six guests",
+      note: "HGV lists one-bedroom suites for two to four and two-bedroom penthouse suites for six to eight. Check the exact beds, kitchen, occupancy and availability for your dates.",
+      source: "https://www.hiltongrandvacations.com/en/resorts-and-destinations/las-vegas/cancun-las-vegas-a-hilton-vacation-club",
+      fivePlusStart: true
+    },
     reviewSignal: "Family pool and space positives appear in the small sample; resort fee, service consistency, timeshare context, room condition, and distance from main Strip stops remain the main conflicts.",
     priceNote: "A current public one-night example was about $119 total; dates and larger residences can move higher.",
     parentCheck: "Confirm the conflicting crib policy if needed, exact suite and kitchen, slide operations and rules, transport plan, final total, and cancellation terms.",
@@ -509,7 +538,7 @@ function lasVegasFamilyHotelPage() {
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${hotel.roomCapacity ? `<p><strong>Room capacity checked ${esc(lasVegasRoomCapacityChecked)}:</strong> ${esc(hotel.roomCapacity.label)} is listed for ${esc(hotel.roomCapacity.capacity)}. ${esc(hotel.roomCapacity.note)} <a href="${esc(hotel.roomCapacity.source)}">Official room record</a>.</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
             <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
           </article>`).join("\n");
@@ -549,7 +578,7 @@ function lasVegasFamilyHotelPage() {
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026</p>
+        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
         <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, and cancellation terms.</p>
       </section>
       <section class="container media-section">
@@ -567,7 +596,7 @@ function lasVegasFamilyHotelPage() {
             <p><a class="text-link" href="./las-vegas-with-kids.html">Compare Las Vegas stay areas and property constraints</a></p>
           </div>
           <dl class="snapshot">
-            <div><dt>Hotels covered</dt><dd>10 options</dd></div>
+            <div><dt>Five or more</dt><dd>${hotels.filter((hotel) => hotel.roomCapacity?.fivePlusStart).map((hotel) => `<a href="${esc(hotel.roomCapacity.source)}">${esc(hotel.roomCapacity.label)}</a> (${esc(hotel.roomCapacity.capacity)})`).join("; ")}. Vdara: two-bedroom luxury suite or two rooms. Compare same-date five-guest totals, not July room ranges.</dd></div>
             <div><dt>Price format</dt><dd>Rough total/night, not a quote</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
             <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>

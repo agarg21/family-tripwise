@@ -38,6 +38,8 @@ Result:
 
 ### SRR-065: Las Vegas Family-Of-Five Room Fit
 
+Subsequent application: the separately registered `FT-IMP-028` / `IMP-055` action was selected September 16 and resumed September 17. Its narrow capacity overlay and task/controls validation live in `docs/research/las-vegas-five-plus-room-branch-validation-2026-09-16.md`. The research result below remains historical; it did not itself authorize a page change. Implementation review and release are recorded separately.
+
 Status: completed, review-clean, and docs-only pushed at `ec7a3d6`; full native QA green; reviewer cycle-two `PASS`; research/state only
 
 Selected: 2026-09-15 as the apply/deepen follow-up to completed `FT-RES-042`

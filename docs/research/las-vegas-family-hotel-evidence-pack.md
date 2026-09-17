@@ -4,6 +4,19 @@ Status: publication evidence for `FT-PUB-002`
 
 Checked: 2026-07-22
 
+## September 16 Room-Capacity Overlay
+
+`FT-IMP-028` / `IMP-055` spot-checks only four decision-active official room records on September 16, 2026. [Validation record](las-vegas-five-plus-room-branch-validation-2026-09-16.md) separates that source date from September 17 task validation. The July 22 prices, other facts and sampled reviews below are not renewed. They are historical rough context, not same-date five-person/larger-suite quotes; final totals and current conditions remain booking checks.
+
+| Room record | Published capacity | Official source and limits |
+|---|---|---|
+| Grand Chateau two-king two-bedroom villa | Up to eight | [Marriott rooms](https://www.marriott.com/en-us/hotels/lasvg-marriotts-grand-chateau/rooms/), named rendered room modal: two kings, two sofa beds, two bathrooms; no cribs or rollaways. Other two-bedroom layouts differ. Generic booking controls are not capacity evidence. |
+| Tahiti Village Royal Tahitian | Up to eight | [Official suites](https://tahitivillage.com/booknow/), named two-bedroom Moorea/Bora Bora combination as one suite; each one-bedroom category maxes at four. Do not substitute a requested connector for this reservation. |
+| Cancun two-bedroom suite | Four to six | [HGV accommodation tabs](https://www.hiltongrandvacations.com/en/resorts-and-destinations/las-vegas/cancun-las-vegas-a-hilton-vacation-club): one-bedroom two to four; two-bedroom penthouse six to eight. Preserve the older unresolved crib-policy conflict. |
+| Vdara two-bedroom Penthouse, Loft or Hospitality Suite | Up to six | [MGM room categories](https://vdara.mgmresorts.com/en/hotel.html): Studios and one-bedroom categories max at four. Five guests require a supported two-bedroom category or two-room comparison without assuming connection. |
+
+These records govern the new family-size branch and four detail paragraphs; the dated July table remains provenance. No capacity establishes availability, bedding acceptability, exact budget fit, casino route or firm family suitability. The existing count field is replaced rather than adding a decision layer. Price/review refresh obligations remain open; this narrow correction is not a whole-shortlist freshness claim.
+
 Market: US family travel
 
 ## Decision

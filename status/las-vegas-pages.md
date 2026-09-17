@@ -1,11 +1,12 @@
 # Las Vegas Page Status
 
-Last updated: 2026-08-30
+Last updated: 2026-09-17
 
 Sources:
 
 - Implementation baseline GSC snapshot: `ops/gsc-snapshots/2026-07-23.md`
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-08-30.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-16.md`; the portfolio table below retains its explicitly dated August 30 baseline
+- Current family-hotel capacity application: `FT-IMP-028` / `IMP-055`; `docs/research/las-vegas-five-plus-room-branch-validation-2026-09-16.md`
 - Current itinerary base-handoff implementation: `IMP-046` / `FT-IMP-025`
 - Current cross-page task review: `docs/research/las-vegas-cross-page-base-day-shape-task-review-2026-08-29.md`
 - Current parent-question synthesis: `docs/research/las-vegas-current-parent-base-day-shape-review-2026-08-28.md`
@@ -16,6 +17,16 @@ Sources:
 - Current roadmap: `ops/seo-roadmap.md`
 
 Demand estimates are directional US monthly search volumes from the logged-in Semrush check collected July 22, 2026. Closely related rows overlap and must not be summed into unique traffic. The GSC evidence column uses the August 30 snapshot finalized through August 28. Page-average position is not a claim that a page ranks at that position for every example query. Example queries are research targets, not a protected GSC query export.
+
+## September 17 Five-Plus Capacity Application
+
+Latest gate: independent reviewer `01a0adc4-137d-77b3-8bc4-51f522c0c141` cycle two returned `PASS` with no P0-P3; all final native and three-viewport browser checks pass. Earlier pending-review wording below describes the pre-verdict candidate. Push/Pages and production target verification remain pending.
+
+`FT-IMP-028` / `IMP-055` is completed locally with independent review and release pending. The existing hotel-count snapshot field now exposes three named supported starts, including Grand Chateau's exact audited two-king two-bedroom villa, plus a Vdara two-bedroom luxury-suite/two-room fallback. Four room paragraphs and direct official links share the same records and September 16 capacity-only date. July 22 hotel/price/review evidence remains explicitly dated and is not a five-guest quote.
+
+September 17 `LRN-034` validates the page-only task and four-person central-suite plus skeptical price/availability controls. Start/Reduce/Verify/Recover become `YES`, Trace remains `YES`, and current-price/route comparison plus unconditional choice remain `PARTIAL`. Controls retain answerability/navigation; the existing starts move down 282/309/405 pixels, an acknowledged layout cost rather than behavior evidence. Exact 1280 by 900, 390 by 844 and 320 by 800 checks show no document overflow/clipped branch text, working mobile table scrolling and normal area navigation. Focused 5/5 and full 166/166 tests pass.
+
+Newly arrived September 16 API data is finalized conservatively through September 14: property 1,705 impressions, five clicks, aggregate position 59.01, 24/28 inspected URLs indexed; target 105 impressions, no clicks, page-average position 59.50, indexed with September 4 crawl. There is no aligned public query cohort. GSC is crawl/orientation only and does not select this edit or establish its search impact. Preserve every declared title/search/schema/hotel invariant; Pages and live target verification are still required before release completion.
 
 ## August 29 Pool-To-Base Implementation Overlay
 
