@@ -2073,6 +2073,7 @@ export const itineraryPages = {
   },
   "family-itinerary/san-diego-with-kids.html": {
     title: "San Diego Itinerary With Kids: 1, 2 and 3 Day Family Plans",
+    existingDraftNote: "Keep non-negotiable bookings and priorities fixed; only stops you are willing to move or drop are flexible. Mark usable arrival, departure, transfer and full-day blocks; keep your booked stay base and transport in view. Reserve meals and hotel/rest time, then choose one main zone or job per block. Cut flexible cross-zone additions first. Keep transfer days light; an optional stop waits until timing, energy and interests are known. Recheck dated hours, ticket terms, weather, parking, accessibility, exact routes and backups. Leave unresolved choices conditional rather than filling every gap.",
     description:
       "Build a San Diego itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with naps, meals, and skip notes.",
     city: "San Diego",

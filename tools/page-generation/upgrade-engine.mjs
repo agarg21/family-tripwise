@@ -852,7 +852,7 @@ ${faqSection}${markerEnd}
             <p class="eyebrow">Quick route decisions</p>
             <h2>Choose the ${esc(page.city)} plan that matches your family</h2>
           </div>
-${renderQuickPicks(page.quick)}
+${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Already have a draft?</strong> ${esc(page.existingDraftNote)}</p>\n` : ""}${renderQuickPicks(page.quick)}
         </div>
       </section>
 

@@ -8,9 +8,11 @@ Queue note: this file preserves implementation handoffs and completion evidence.
 
 ### IMP-055: Surface The Five-Plus Room Path
 
+Production completion: `FT-IMP-028` is released and verified at `c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6` through successful Pages run `35184964741`, matching marker, target 200/byte-identical reviewed HTML, production SEO and all exact three-viewport declared target checks. Verification timestamp `2026-09-17T05:15:36Z`; no retry/rollback. Earlier pending labels are historical. Post-release metadata remains local durable evidence for the next registered transaction rather than a separate metadata-only commit.
+
 Latest gate: `FT-IMP-028` is completed and review-clean after independent cycle-two `PASS` with no P0-P3; final native and browser QA is green. Earlier pending-review labels below are historical. Push, Pages marker and live target invariants remain pending.
 
-Status: selected September 16 as `FT-IMP-028`, resumed September 17; completed locally, independent review and release pending. Originating research `FT-RES-043` / `SRR-065` is review-clean and docs-only pushed at `ec7a3d6`.
+Status: selected September 16 as `FT-IMP-028`, resumed September 17; released and production-verified at c78f798 after independent PASS. Originating research `FT-RES-043` / `SRR-065` is review-clean and docs-only pushed at `ec7a3d6`.
 
 The candidate below is historical rationale. The selected implementation replaces the count field with three capacity-supported starts, explicitly narrows Grand Chateau to the audited two-king two-bedroom villa, and aligns four official room records. September 16 is a capacity-only source date, not a price/review refresh. September 17 `LRN-034` validates the rendered branch and two controls: Start/Reduce/Verify/Recover become `YES`; full price/route comparison and unconditional choice remain `PARTIAL`. Existing controls retain answerability/navigation but trip-style starts move down 282/309/405 pixels; no claim of unchanged reading depth or satisfaction is made. Focused 5/5, full 166/166 and exact three-viewport browser checks pass. See `docs/research/las-vegas-five-plus-room-branch-validation-2026-09-16.md`; native release gates and independent consensus are still required.
 
@@ -79,7 +81,9 @@ Final local and production delayed-image checks cover all five targets at 1280 b
 
 ### IMP-052: Put The Editing Order Before Generic Day Shapes
 
-Status: unselected review-clean candidate from completed `FT-RES-039` / `SRR-061`; Rawls cycle-two `PASS`; no page change authorized
+Latest gate: `FT-IMP-029` independent cycle-two PASS with no P0-P3; focused7/7, full167/167 and final scope/state/browser/SEO checks pass. Exact commit/push, Pages and live acceptance gates remain. Earlier local/review labels are chronology.
+
+Status: selected September 17 as `FT-IMP-029`; local paragraph and acceptance checks complete, independent review and release gates open. Original `FT-RES-039` / `SRR-061` candidate passed Rawls cycle two. The candidate wording below is retained as provenance; the selected implementation adds only the registered paragraph before unchanged quick starts.
 
 Target:
 

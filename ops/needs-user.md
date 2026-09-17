@@ -2,6 +2,12 @@
 
 Last updated: 2026-09-17
 
+`FT-IMP-029` has independent cycle-two PASS with no P0-P3 and green final QA. No user decision is needed; commit/push and verified production remain operator gates. Earlier review-pending labels are historical.
+
+No project approval is needed for selected `FT-IMP-029` / `IMP-052`, the existing San Diego itinerary draft-editing instruction under standing authority. Independent read-only review, push and live verification remain operator gates. The ten-destination/Cancun discussion remains advisory; no new destination is selected or published. Today's daily learning unit was already completed as `LRN-034`.
+
+Production completion: no project input is needed for released, verified `FT-IMP-028` / `IMP-055` / `LRN-034`. Action commit `c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6`, successful Pages run `35184964741`, matching marker, byte-identical live target, production SEO and exact three-viewport target invariants pass. Earlier pending project/review/release labels are historical. The separate single-trigger scheduling observation below remains unconfirmed and the automation is unchanged.
+
 Latest `FT-IMP-028` gate: independent cycle-two `PASS` with no P0-P3 and green final native/browser QA; no project approval is needed. Earlier pending-review labels below are historical. Exact-path push and Pages/live target verification remain operator gates before release completion.
 
 No project decision is required for the pending `FT-IMP-028` / `IMP-055` capacity-only application. Independent review and verified release remain operator gates; no site release is claimed yet. September 17 `LRN-034` validates three explicit room starts and two controls without promising current price, inventory, connection or exact casino route.

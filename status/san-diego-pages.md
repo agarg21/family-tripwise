@@ -1,6 +1,10 @@
 # San Diego Page Status
 
-Last updated: 2026-09-11
+Last updated: 2026-09-17
+
+Latest `FT-IMP-029` gate: independent cycle-two PASS with no P0-P3 and green final QA. The paragraph, conditional task scores, added depth and exact prior-HTML preservation are review-clean. Exact push, Pages and production verification are next; earlier review-pending labels are chronology.
+
+Current `FT-IMP-029` / `IMP-052`: one existing-draft paragraph is implemented locally before the itinerary's four unchanged quick cards. Acceptance checks retain source-bounded mixed-age and younger-child transfer cases; missing preferences, uncovered draft stops and exact timing remain unresolved. Added card depth is 112/352/448px at 1280x900, 390x844 and 320x800. No clipping or document overflow; table scroll, activity round-trip and Teen/All controls pass. Focused 7/7 and full 167/167 pass; independent review and release are still required. See `docs/research/san-diego-existing-draft-instruction-validation-2026-09-17.md`. September 16 GSC finalized through September 14 gives the itinerary 76 impressions, zero clicks, page average 59.78, indexed with August 29 crawl; no aligned public query cohort. This is orientation only. Earlier snapshots below retain historical boundaries.
 
 Sources:
 

@@ -9,6 +9,31 @@ const pages = {
 };
 const sitemap = readFileSync("site/sitemap.xml", "utf8");
 
+test("San Diego existing drafts get an editing order before unchanged quick starts", () => {
+  const html = pages.itinerary;
+  const note = html.match(/<p class="existing-draft-note">([\s\S]*?)<\/p>/)?.[1];
+  assert.ok(note);
+  assert.match(note, /Already have a draft/);
+  assert.match(note, /Keep non-negotiable bookings and priorities fixed/);
+  assert.match(note, /only stops you are willing to move or drop are flexible/);
+  assert.doesNotMatch(note, /flexible or refundable stops/);
+  assert.match(note, /arrival, departure, transfer and full-day blocks/);
+  assert.match(note, /booked stay base and transport/);
+  assert.match(note, /Reserve meals and hotel\/rest time/);
+  assert.match(note, /one main zone or job per block/);
+  assert.match(note, /Cut flexible cross-zone additions first/);
+  assert.match(note, /Keep transfer days light/);
+  assert.match(note, /timing, energy and interests are known/);
+  assert.match(note, /ticket terms, weather, parking, accessibility, exact routes and backups/);
+  assert.match(note, /Leave unresolved choices conditional/);
+  assert.ok(html.indexOf('class="existing-draft-note"') < html.indexOf('class="quick-pick-grid"'));
+  assert.equal((html.match(/class="existing-draft-note"/g) || []).length, 1);
+  for (const label of ["Best 1-day plan", "Best 2-day plan", "Best 3-day plan", "What to skip"]) {
+    assert.ok(html.includes(`<span>${label}</span>`));
+  }
+  for (const peer of [pages.toddler, pages.teen]) assert.doesNotMatch(peer, /existing-draft-note/);
+});
+
 test("specialist pages keep their core decision surfaces", () => {
   assert.match(pages.toddler, /Activity decision table/);
   assert.match(pages.toddler, /Detailed activity notes/);

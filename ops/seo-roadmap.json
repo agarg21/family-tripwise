@@ -4916,7 +4916,12 @@
         "Focused/full native QA, state/freshness/SEO/GSC/preflight/JSON/scope/privacy/whitespace, independent read-only PASS or PASS_WITH_P3, no-divergence exact-path push, Pages marker and target production invariants pass."
       ],
       "measurement_plan": "Rerun the five-person task and four-person central-suite plus skeptical price/availability controls against the rendered page. Measure named room/capacity answerability, three-option reduction, fallback, source/date trace, settled branch placement and containment at the three declared viewports. This is proxy review, not user testing or causal ranking evidence. Preserve the target's existing crawl boundary; later search interpretation requires a post-release crawl and sufficient aligned finalized query evidence, without requesting indexing.",
-      "release_state": "review-clean-pending-push-and-pages",
+      "release_state": "released-and-production-verified",
+      "release_commit": "c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6",
+      "pages_run": 35184964741,
+      "released_at": "2026-09-17T05:14:54Z",
+      "production_verified_at": "2026-09-17T05:15:36Z",
+      "production_evidence": "Successful Pages run 35184964741 and matching live release marker. Production target HTTP 200 and byte-identical to reviewed HTML; structured DOM invariants, all three exact viewport branch/table/containment/navigation checks and production SEO (zero errors/warnings) pass. No release retry or rollback required. Earlier pending labels describe pre-release chronology. Mechanical release reconciliation remains local durable evidence for a later registered transaction; no separate metadata-only commit is created under the roadmap maintenance policy.",
       "qa_evidence": [
         "Focused Las Vegas hotel tests pass 5/5; full native tests pass 166/166.",
         "Settled Chrome/Playwright at 1280x900, 390x844 and 320x800: branch precedes starts, no document overflow/clipped branch text, normal area navigation, mobile table scroll and no page errors.",
@@ -4926,6 +4931,58 @@
       ],
       "result": "Completed locally; independent review and release pending. Three exact supported room starts and Vdara fallback resolve capacity reconstruction. Start/Reduce/Verify/Recover reach YES; Compare/Decide remain PARTIAL for current price, preference and exact-route unknowns. Controls retain answerability/navigation with 282/309/405px added trip-style depth, not unchanged reading depth.",
       "notes": "Registered before substantive edits September 16, when LRN-033 was complete. Resumed September 17 as the only substantive action after preserving five dirty action paths and fast-forwarding snapshot-only commit 81ad4f0. Newly arrived September 16 API data is finalized through September 14: property 1705 impressions, 5 clicks, average 59.01 and 24/28 indexed; target 105 impressions, zero clicks, page-average 59.50, indexed with September 4 crawl. No aligned public cohort exists; selection is unchanged and GSC is orientation only. LRN-034 is today's task-based unit. No active target observation protection applies. Trigger arrived 01:02 Eastern rather than intended 05:00; no automation change is made."
+    },
+    {
+      "id": "FT-IMP-029",
+      "implementation_backlog_id": "IMP-052",
+      "title": "Put San Diego existing-draft editing before generic day shapes",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-09-17",
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 3,
+      "effort": 1,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/family-itinerary/san-diego-with-kids.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "tools/san-diego-specialist-editorial-page.test.mjs",
+        "site/family-itinerary/san-diego-with-kids.html",
+        "docs/research/san-diego-existing-draft-instruction-validation-2026-09-17.md",
+        "status/san-diego-pages.md",
+        "backlog/implementation-backlog.md",
+        "ops/current-cycle.md",
+        "ops/needs-user.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "backlog/product-learning-ledger.md",
+        "docs/research/las-vegas-five-plus-room-branch-validation-2026-09-16.md",
+        "status/las-vegas-pages.md"
+      ],
+      "success_signal": "The source-bounded existing-draft task has a direct editing order before unchanged quick starts; preserve unresolved preferences, trace limits and lighter transfer-day control.",
+      "production_invariant": "One added San Diego paragraph only. Removing its line must reproduce baseline c78f798 HTML byte-for-byte; no other site output changes. Preserve all existing text, title/H1/description, URL, canonical, indexability, sitemap, schemas, cards, comparison, pacing, sources/dates, images, links and other observation windows. No new itinerary, attraction, booking/route/safety claim, destination, indexing, analytics, outreach, external action or automation.",
+      "gsc_evidence_classification": "Recent reused September 16 read-only API snapshot, finalized conservatively through September 14: property 1705 impressions, 5 clicks, position 59.01; 24/28 indexed. Target 76 impressions, no clicks, page average 59.78, indexed with August 29 crawl. No September 17 snapshot or aligned public query cohort at selection. Orientation only; FT-RES-039 reviewed task P2 selects the action.",
+      "acceptance_criteria": [
+        "One optional existing-draft paragraph before the four unchanged quick cards names fixed/flexible commitments, usable arrival/departure/transfer/full blocks, stay/transport, meals/rest, one-zone selection, flexible cuts, conditional unknowns and current checks.",
+        "Reproduce source-bounded main and younger-child transfer control without inventing preferences or exact routes; preserve blank-slate starts and report added depth.",
+        "Settled images at 1280x900,390x844,320x800; no document or paragraph clipping; normal activity round-trip, Teen/All controls and table scroll work.",
+        "Focused/full QA, source/scope/privacy/JSON/state/SEO/snapshot checks and independent read-only PASS or PASS_WITH_P3 before exact-path push, Pages and production verification."
+      ],
+      "measurement_plan": "Apply the two FT-RES-039 tasks as implementation acceptance checks, not a new independent learning event or user test. Compare Start/Reduce/Recover, preserve PARTIAL Compare/Trace/Decide, record blank-slate depth. Today's daily unit is already LRN-034. Search interpretation waits for post-release crawl plus sufficient aligned finalized query evidence; no indexing request.",
+      "release_state": "review-clean-pending-push-and-pages",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer": "01a0adc4-137d-77b3-8bc4-51f522c0c141",
+      "result": "Independent cycle-two PASS with no P0-P3. Focused7/7 and full167/167, state against actual latest release, freshness, local/production SEO,65snapshots,28URLpreflight,15path scope/privacy/whitespace and all three browser checks pass. Exact baseline HTML remains after removing the paragraph. Commit/push, Pages and production acceptance remain required; earlier pending-cycle labels are chronological.",
+      "notes": "Current-cycle registered exact scope before substantive edits. Preserve nine baseline FT-IMP-028 release metadata paths and add six implementation/status/artifact paths. Cycle one FAIL identified carried release fields bypassing state validation and a refundability/flexibility P3. Established release_state/pages_run fields and three stale status phrases are mechanically reconciled; paragraph now defines willingness to move/drop separately from ticket terms. State QA passes against actual latest release; browser added depth112/352/448px. Cycle two pending. App polling hid the first verdict; native agent tooling retrieved it. An ephemeral read-only CLI fallback was interrupted before verdict and counts as no review cycle or approval. City expansion remains advisory; no new persistent task, destination or automation created."
     }
   ]
 }
