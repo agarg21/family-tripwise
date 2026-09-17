@@ -1,10 +1,22 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-16
+Last updated: 2026-09-17
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
 
 ## Active Usefulness Research
+
+### SRR-067: Ten-Destination Expansion Screen
+
+Action: `FT-RES-045`; direct user research request September 17; `LRN-035`.
+
+Status: preliminary screen complete and review-clean; native QA green; independent cycle-one PASS with no P0-P3 from `01a0aff7-5087-7eb3-b4d8-d7249badaed5`; docs-only push pending. No destination publication selected.
+
+Artifact: `docs/research/destination-expansion-screen-2026-09-17.md`.
+
+Screen Orlando, Washington DC, Boston, St Louis, Chattanooga, Cancun, Puerto Vallarta, London UK, Lisbon and Montreal. Current paid volume/KD/CPC is UNKNOWN. Retain July Semrush separately, and include Miami/Dallas/Nashville plus existing cities as controls in the next same-provider US batch. Orlando/Cancun/Montreal/Chattanooga receive deeper research attention, not an SEO rank or launch order. Cancun's existing competitor table and unresolved five-versus-four published room capacity conflict reject table-format novelty and retain a narrower evidence-normalization hypothesis.
+
+Next action is one capped quantitative comparison after DataForSEO access and budget are confirmed. No paid call or top-up has occurred. `FT-PUB-006` remains publication-gated; current site and observation windows are unchanged. This phase is not ten completed city-decision packs and promotes no implementation.
 
 ### SRR-066: Current Chicago Stay-Area Query Job
 

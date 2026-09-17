@@ -2,6 +2,10 @@
 
 Last updated: 2026-09-17
 
+Current input for `FT-RES-045`: confirm whether a funded DataForSEO account is available and approve a cumulative API research cap (suggested up to $5; not yet authorized). Published minimum top-up is $50 and is a separate funding decision, not covered by a small usage cap. Do not put API passwords in chat or the repository. Free ten-destination screening is complete with current paid metrics UNKNOWN; the quantitative follow-up awaits access/budget. User has authorized expansion research, superseding the earlier advisory-only labels, but not publication. `FT-PUB-006` remains user-gated; no new city or paid request was launched.
+
+No user decision is needed for completed `FT-IMP-029` / `IMP-052`: commit `70a6b5a044959c14afbb6bebf7e7629feaa37b97`, successful Pages `35226367636`, matching marker and exact live desktop/mobile invariants verified `2026-09-17T13:20:31Z`. No new destination was published; the expansion conversation remains advisory. Earlier review/push/production-gate labels are chronology.
+
 `FT-IMP-029` has independent cycle-two PASS with no P0-P3 and green final QA. No user decision is needed; commit/push and verified production remain operator gates. Earlier review-pending labels are historical.
 
 No project approval is needed for selected `FT-IMP-029` / `IMP-052`, the existing San Diego itinerary draft-editing instruction under standing authority. Independent read-only review, push and live verification remain operator gates. The ten-destination/Cancun discussion remains advisory; no new destination is selected or published. Today's daily learning unit was already completed as `LRN-034`.

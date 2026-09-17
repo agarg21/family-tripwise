@@ -81,6 +81,8 @@ Final local and production delayed-image checks cover all five targets at 1280 b
 
 ### IMP-052: Put The Editing Order Before Generic Day Shapes
 
+Production completion: `FT-IMP-029` released and verified at `70a6b5a044959c14afbb6bebf7e7629feaa37b97` through successful Pages run `35226367636`, matching marker, reviewed/live HTML bytes, zero-error/warning production SEO and all three exact viewport/navigation/filter/table checks at `2026-09-17T13:20:31Z`. Independent cycle-two PASS and full167/167 stand. No retry/rollback; earlier candidate/open-gate text is provenance. Mechanical release evidence remains local for a later registered transaction.
+
 Latest gate: `FT-IMP-029` independent cycle-two PASS with no P0-P3; focused7/7, full167/167 and final scope/state/browser/SEO checks pass. Exact commit/push, Pages and live acceptance gates remain. Earlier local/review labels are chronology.
 
 Status: selected September 17 as `FT-IMP-029`; local paragraph and acceptance checks complete, independent review and release gates open. Original `FT-RES-039` / `SRR-061` candidate passed Rawls cycle two. The candidate wording below is retained as provenance; the selected implementation adds only the registered paragraph before unchanged quick starts.

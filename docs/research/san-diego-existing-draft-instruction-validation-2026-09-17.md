@@ -2,7 +2,7 @@
 
 Date: 2026-09-17
 Action: `FT-IMP-029` / `IMP-052`
-State: local implementation and acceptance QA complete; independent cycle-two PASS with no P0-P3; push, Pages and production gates open.
+State: completed, independent cycle-two PASS with no P0-P3, released and production-verified at `70a6b5a044959c14afbb6bebf7e7629feaa37b97`.
 
 ## Evidence And Scope
 
@@ -70,3 +70,7 @@ Reusable acceptance result: an early editing order can reduce reconstruction whi
 No commit, Pages release or production acceptance is claimed until verified outputs are appended. No indexing, analytics, external account/posting/outreach, destination or automation change occurred.
 
 Final review: cycle two PASS with no P0-P3, reviewer `01a0adc4-137d-77b3-8bc4-51f522c0c141`. All fifteen hashes remained stable during review. Independently verified focused7/7, native state against the actual latest release, freshness, local SEO,65snapshots, scope/exact-byte preservation and whitespace; inspected all three refreshed screenshots. Full167/167, browser navigation/measurements, production SEO and preflight remain operator-reported. Both cycle-one findings are corrected, and no reviewer write or external mutation occurred. Earlier cycle-pending labels are chronology. Release gates remain open.
+
+## Release Evidence
+
+Action commit `70a6b5a044959c14afbb6bebf7e7629feaa37b97` is on main. Pages run `35226367636` succeeded at `2026-09-17T13:20:04Z`; production verified `13:20:31Z` with matching SHA/run marker and live HTML equal to reviewed HTML. Exact prior-HTML preservation after removing the paragraph still passes. Production SEO reports zero errors/warnings. The same three viewport measurements, containment, activity round-trip, Teen/All controls and table scrolling pass with zero page errors. No retry/rollback was needed. Earlier open-gate labels are pre-release chronology. This mechanical release backfill is local durable evidence for a later registered transaction, not a separate metadata-only commit.
