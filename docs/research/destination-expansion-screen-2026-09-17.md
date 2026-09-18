@@ -1,10 +1,12 @@
 # Destination Expansion: Preliminary Screen
 
 Action: `FT-RES-045` / `SRR-067`; learning unit `LRN-035`.
-Evidence collected: September 17, 2026. Status: preliminary research complete, QA green, independent cycle-one PASS; docs-only push pending.
+Evidence collected: September 17, 2026. Status: preliminary research complete, QA green, independent cycle-one PASS; docs-only pushed at `528d2bf15e3c077baf827ebefa634c6f2f75128d`.
 Authority: direct user request to research more destinations and consider DataForSEO. Research only, not approval to publish ten cities or spend an unspecified amount.
 
 ## Decision
+
+September 17 follow-up: the user approved $5 cumulative API usage and execution; secure saved access was found. [FT-RES-046 quantitative screen](destination-expansion-dataforseo-2026-09-17.md) now supersedes this report's access/budget/UNKNOWN-metric and preliminary research-order labels where measured. It collected 280 keywords and twelve controlled SERPs for $0.14832, prioritizing Orlando/Cancun evidence briefs while retaining substantial coverage/competition caveats. No publication is approved; the rest of this document preserves the earlier qualitative evidence and unresolved source conflict.
 
 Proceed with quantitative comparison, not destination launch. Keep all ten proposed candidates in the measurement batch. Give **Orlando, Cancun, Montreal and Chattanooga** the first deeper research attention, for four different reasons: retained historical cluster evidence, a specific booking-fact conflict, an existing official evidence base, and a bounded short-stay planning job. This is an editorial research order, not an SEO opportunity ranking. Current US volume, organic KD and CPC remain **UNKNOWN for every candidate**.
 
@@ -95,3 +97,5 @@ Only then rank destinations by relevant demand, attainable competitor gaps, comm
 Full native tests pass 167/167; all 66 public snapshots validate; freshness has zero expired notices; local SEO has zero errors/warnings; whitespace passes. Operator-state first flagged missing explicit latest snapshot paths; after correction it passes with zero errors. Exact eleven-path scope includes ten tracked changes and this new report; no site file changes. Independent read-only review is pending. Documentation-only release; no Pages wait or production change is involved.
 
 Final review: Ampere (`01a0aff7-5087-7eb3-b4d8-d7249badaed5`) returned cycle-one PASS with no P0-P3, independently reproduced the source conflict and funding boundary, and reran read-only state, 66-snapshot, freshness, local SEO, whitespace and scope checks. Full167/167 remains operator-reported. The earlier reviewer start failed from model capacity before any verdict. Source/privacy, 102 unique roadmap IDs, unchanged site, eleven exact paths and only mechanical FT-IMP-029 changes among prior items pass. Earlier pending-review labels are chronology; docs-only push remains the operator gate.
+
+Release confirmed September 17 at 15:28:51 UTC: exact eleven-path action commit `528d2bf15e3c077baf827ebefa634c6f2f75128d` is pushed to main after fresh fetch, no divergence and inspection of the sole review-clean unpushed commit. No Pages wait applies. Earlier pending-push labels are chronology. Mechanical release backfill remains local for the next registered transaction, without a metadata-only commit.

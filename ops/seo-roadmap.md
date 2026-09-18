@@ -15,6 +15,12 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 
 ## Current GSC evidence
 
+- `FT-RES-046` final gate: Newton cycle-one PASS, no P0-P3; full167/167, state0,66snapshots,freshness0,localSEO0,focused counts/cost/overlap/privacy/exact10paths/103IDs/no-site and whitespace green. Docs-only exact-path push next; previous pending-review labels are chronology. Research conclusions and $0.14832 spend unchanged.
+
+- `FT-RES-046` / `SRR-068` / `LRN-036`: direct-manual DataForSEO comparison completed, pending independent review and final QA. Same-provider 280-keyword/18-destination screen plus twelve live US desktop SERPs cost $0.14832; no funding or publication. Orlando/Cancun are next evidence briefs, London/DC second wave; no new implementation or URL eligibility. Many child-worded volumes are missing, and 64/83 reported KD values are zero despite established live competitors. See `docs/research/destination-expansion-dataforseo-2026-09-17.md` and `.json`. September 17 GSC remains reused same-day orientation only, finalized through September 15; current snapshot references below remain authoritative. Existing measurement windows unchanged; earlier access/budget blockers superseded.
+
+- `FT-RES-045` release confirmed September 17 15:28:51 UTC: docs-only commit `528d2bf15e3c077baf827ebefa634c6f2f75128d` pushed after fresh fetch/no divergence/complete unpushed-range inspection. PASS and QA stand; no Pages wait or site change. Quantitative data still requires secure access and approved spend. Earlier pending-release labels are chronology; backfill remains local for the next registered transaction.
+
 - `FT-RES-045` final gate: preliminary screen complete, Ampere cycle-one PASS with no P0-P3, full167/167 and state/freshness/localSEO/66snapshot/11path/102ID/no-site/privacy/whitespace checks green. One prior start failed from model capacity without a review verdict. Docs-only exact-path push remains; earlier pending-review labels are chronology. No new paid or publication authority is inferred.
 
 Latest validated public records: `ops/gsc-snapshots/2026-09-17.json` and `ops/gsc-snapshots/2026-09-17.md`; 66 snapshot files pass schema/privacy validation. Previous snapshot references below are chronological.

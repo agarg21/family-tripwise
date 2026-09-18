@@ -6,11 +6,19 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-068: DataForSEO Destination Comparison
+
+Final gate: independent Newton cycle-one PASS with no P0-P3; full167/167 and all focused/native QA green. Exact ten-path docs-only push next; earlier pending-review text is chronology. No implementation or publication selected.
+
+Action `FT-RES-046`; learning `LRN-036`; user-authorized September 17 execution within $5 usage cap. Status: collection/report complete, independent review and focused QA pending; full167/167 passed. Artifacts: `docs/research/destination-expansion-dataforseo-2026-09-17.md` and `.json`.
+
+280 keywords, 18 destinations, twelve live US desktop Google result sets, total $0.14832. Only 91/280 Ads volumes and 83 Labs organic KD values available; 64 KD values are zero. Missing kid-worded demand is not zero demand, and result inspection does not establish easy competition. Prioritize Orlando/Cancun evidence briefs, London/DC second wave; retain historical runner-up controls. No implementation promoted and no new city published. Next step is exact party/room/inclusion feasibility and tighter job-SERP validation before any publication decision.
+
 ### SRR-067: Ten-Destination Expansion Screen
 
 Action: `FT-RES-045`; direct user research request September 17; `LRN-035`.
 
-Status: preliminary screen complete and review-clean; native QA green; independent cycle-one PASS with no P0-P3 from `01a0aff7-5087-7eb3-b4d8-d7249badaed5`; docs-only push pending. No destination publication selected.
+Status: preliminary screen complete and review-clean; native QA green; independent cycle-one PASS with no P0-P3 from `01a0aff7-5087-7eb3-b4d8-d7249badaed5`; docs-only pushed at `528d2bf15e3c077baf827ebefa634c6f2f75128d`. No destination publication selected.
 
 Artifact: `docs/research/destination-expansion-screen-2026-09-17.md`.
 
