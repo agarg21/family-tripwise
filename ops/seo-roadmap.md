@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
@@ -14,6 +14,10 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+September18 direct-user queue update `FT-OPS-006`: FT-RES-048/SRR-070 Orlando and FT-RES-049/SRR-071 Cancun are first-wave feasibility briefs; FT-RES-050/SRR-072 London UK and FT-RES-051/SRR-073 Washington DC are second wave. FT-RES-052/SRR-074 tests missing child-worded demand and seasonal estimates where better evidence could change the order. All five are planned, unselected research, not publication approval or new paid-call authority. Register exact paths on selection; existing-site defects/review-clean work take precedence. Detailed tasks and gates live in the research backlog and JSON queue. No daily learning completion is claimed; FT-RES-047 remains interrupted/incomplete.
+
+Authenticated GSC UI check September18: displayed September9-15 Web window has five property clicks, three San Diego stay-area and two San Antonio stay-area clicks, while all149 disclosed query rows total zero clicks. This is consistent with Google's anonymized-query/reporting limits; the hidden terms cannot be reconstructed from page names or recovered via the API. No raw queries, country/device rows or account identifiers retained. See `docs/research/gsc-query-click-visibility-2026-09-18.md`. This UI observation does not replace the dated API snapshot or establish a ranking/content action. FT-RES-046 is already pushed at `00b1d4f`; older pending labels below are history.
 
 - `FT-RES-046` final gate: Newton cycle-one PASS, no P0-P3; full167/167, state0,66snapshots,freshness0,localSEO0,focused counts/cost/overlap/privacy/exact10paths/103IDs/no-site and whitespace green. Docs-only exact-path push next; previous pending-review labels are chronology. Research conclusions and $0.14832 spend unchanged.
 

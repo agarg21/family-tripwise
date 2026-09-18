@@ -1,12 +1,76 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
-Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the authorized August 12-September 12 independent pilot, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered there before substantive work.
+Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the September13-November13 renewed cycle, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered before substantive work. The prior August12-September12 pilot is historical.
 
 ## Active Usefulness Research
 
+September18 `FT-OPS-006`: the user requested these follow-ups be added to the backlog, not published. Orlando/Cancun are first wave, London/DC second wave; the supporting coverage check may be selected when it would change the order. Existing-site defects and unfinished review-clean work retain priority. The remaining screened cities remain in FT-RES-046's retain/defer pool, not a ten-city launch queue. FT-RES-047/SRR-069 remains interrupted and incomplete; LRN-037 is not claimed complete.
+
+### SRR-070: Orlando family-of-five hotel and water-access feasibility
+
+Action `FT-RES-048`; status **planned, unselected**; priority first-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+
+Family task: Compare three properties for two adults and three children with fixed park days and a hotel/rest day.
+
+Required evidence: Verify age-specific exact-room occupancy, water-feature access and exclusions, mandatory fees and same-date total-cost unknowns, Disney/non-Disney and park geography; compare the task against the inspected family publishers.
+
+Decision gate: Repeat two tightly aligned live SERPs and document overlap, result types and representative strengths. Retain a proposal only if the maintained comparison meaningfully reduces family decision work; otherwise preserve/defer.
+
+Record source/retrieval dates, evidence classes, disagreements, unknowns and maintenance cost. Require independent review and QA. Exact paths must be registered when selected. No new destination/page, paid call, analytics, indexing or external action is authorized by this entry.
+
+### SRR-071: Cancun family-resort room and inclusion feasibility
+
+Action `FT-RES-049`; status **planned, unselected**; priority first-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+
+Family task: Compare three resorts for a five-person party with mixed-age children.
+
+Required evidence: Verify exact room fit, kids-club age rules, inclusions, transfer terms and total-cost unknowns; distinguish Hotel Zone, Playa Mujeres and wider resort geography. Resolve or retain the prior five-versus-four occupancy conflict using current official sources.
+
+Decision gate: Repeat focused family-room/inclusion SERPs, distinguish resort intent overlap, and test whether a maintained comparison improves decisions. No safety, sea-condition or firsthand guarantees.
+
+Record source/retrieval dates, evidence classes, disagreements, unknowns and maintenance cost. Require independent review and QA. Exact paths must be registered when selected. No new destination/page, paid call, analytics, indexing or external action is authorized by this entry.
+
+### SRR-072: London UK larger-family lodging feasibility
+
+Action `FT-RES-050`; status **planned, unselected**; priority second-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+
+Family task: Choose provisional lodging for a family of five needing usable sleeping arrangements and a suitable base for selected activity anchors.
+
+Required evidence: Verify exact capacity/bedding, kitchen and connection conditions for three candidates; distinguish London UK from Ontario. Compare existing specialist family-of-five coverage before claiming a gap.
+
+Decision gate: Select after first-wave findings and current priorities are reviewed. Reject a generic list if it adds no maintained information gain or if the evidence burden outweighs the distinct decision.
+
+Record source/retrieval dates, evidence classes, disagreements, unknowns and maintenance cost. Require independent review and QA. Exact paths must be registered when selected. No new destination/page, paid call, analytics, indexing or external action is authorized by this entry.
+
+### SRR-073: Washington DC family lodging and activity-anchor feasibility
+
+Action `FT-RES-051`; status **planned, unselected**; priority second-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+
+Family task: Compare three lodging options for a family of five needing a midday reset between selected museum visits.
+
+Required evidence: Verify room fit, kitchen/pool policies, comparable stay-cost unknowns and neighborhood/anchor tradeoffs against current official records and the official destination guide; exact route practicality remains unknown without appropriate evidence.
+
+Decision gate: Select after first-wave findings and current priorities are reviewed. Test current hotel-versus-area SERP overlap before any URL proposal; do not imply personally verified walking/stroller conditions.
+
+Record source/retrieval dates, evidence classes, disagreements, unknowns and maintenance cost. Require independent review and QA. Exact paths must be registered when selected. No new destination/page, paid call, analytics, indexing or external action is authorized by this entry.
+
+### SRR-074: Validate destination keyword coverage and seasonality limits
+
+Action `FT-RES-052`; status **planned, unselected**; priority supporting-research. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+
+Family task: Determine whether missing child-worded demand or seasonal spikes would change the family-planning research order.
+
+Required evidence: Assess an accessible independent same-US-market source for missing activity/itinerary queries; first test coverage rather than buying a replacement product. Recheck Orlando lodging spikes and Cancun seasonality; keep vendor, date, geography and close-variant grouping separate. Retain Miami/Nashville and existing-city controls.
+
+Decision gate: Missing remains UNKNOWN, not zero. Do not sum keyword variants or infer growth across vendors. If independent evidence is unavailable, record the limitation and stop; new spending/subscription requires applicable explicit authority.
+
+Record source/retrieval dates, evidence classes, disagreements, unknowns and maintenance cost. Require independent review and QA. Exact paths must be registered when selected. No new destination/page, paid call, analytics, indexing or external action is authorized by this entry.
+
 ### SRR-068: DataForSEO Destination Comparison
+
+Release correction: reviewed action `00b1d4f` is pushed; earlier pending-release labels below are chronological. Follow-ups are now explicitly queued as SRR-070 through SRR-074.
 
 Final gate: independent Newton cycle-one PASS with no P0-P3; full167/167 and all focused/native QA green. Exact ten-path docs-only push next; earlier pending-review text is chronology. No implementation or publication selected.
 
