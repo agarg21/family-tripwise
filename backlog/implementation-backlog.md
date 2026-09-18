@@ -1,8 +1,20 @@
 # Implementation Backlog
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the renewed September 13-November 13 independent cycle, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
+
+## Candidate San Antonio Operational Notice
+
+### IMP-056: Surface JW Marriott's Room-Rest Work Notice
+
+Status: **planned, unselected**; originating `FT-RES-047` / `SRR-069` / `LRN-037`, September18. Scheduler candidate `FT-MAINT-007`; no site edit in the research action. Target: existing San Antonio family-hotel page.
+
+Evidence: the current official room/enhancement notices introduce a room-rest planning constraint absent from the production JW record. See the source-dated [audit](../docs/research/san-antonio-room-versus-water-access-audit-2026-09-18.md). This is a specific operational omission for the named midday-rest task, not low CTR, generic suite ambiguity or a reversal of the September5 P3 judgment.
+
+On selection, recheck both official notices and register exact implementation paths. Add one concise source-dated check in JW's existing parent-check/record and direct source links; align only the associated evidence and tests. Keep the differing notice scopes/timing explicit, with no single guaranteed end date. Require exact-date room-placement/work-impact verification and preserve the distinction between room conditions and water access. Do not claim every stay is disturbed or that facilities are closed. Preserve all12hotels, room/access checks, July26 price/review evidence, other official-fact dates, titles/URLs/canonical/indexability/sitemap/schema and observation windows. No hotel-set, section or new URL.
+
+Acceptance: the named parent can find the current notice and next check in the existing comparison/card flow; generated row/card agree; source/date labels do not imply a12-property or price refresh; tests and rendered desktop/mobile QA pass with independent review and release invariants. Reject/revise if the notice changes, is already surfaced, cannot be represented faithfully or a task check shows no useful information gain. Measurement is source traceability/task answerability, not ranking attribution.
 
 ## Candidate Las Vegas Five-Plus Room Branch
 

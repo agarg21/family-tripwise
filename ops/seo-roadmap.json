@@ -20,6 +20,82 @@
   ],
   "items": [
     {
+      "id": "FT-MAINT-007",
+      "implementation_backlog_id": "IMP-056",
+      "title": "Surface JW Marriott operational notice for room-rest planning",
+      "kind": "maintenance",
+      "lane": "evidence-freshness",
+      "status": "planned",
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 3,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "target_paths": [],
+      "evidence": "FT-RES-047 current official room/enhancement notices plus byte-matched page show a decision-relevant omission for midday room rest. Details and source scope differences in September18 audit.",
+      "acceptance_criteria": [
+        "Recheck both official notices and register exact paths on selection; change only JW's existing operational check, direct source links and corresponding evidence/test state.",
+        "Preserve timing/scope uncertainty and exact-date verification without promising noise, closure, unaffected facilities or a guaranteed completion date; retain occupancy/access/weather/total checks.",
+        "No new hotel/section/URL or broad date refresh. Native QA, rendered desktop/mobile task and control checks, independent review, Pages/SEO and declared URL invariants required."
+      ],
+      "measurement_plan": "Task answerability and notice traceability; not ranking attribution. Reassess if notice is withdrawn/clarified, already surfaced or cannot be faithfully summarized.",
+      "production_invariant": "Keep all other records, July26 price/review evidence, non-target fact dates, hotel set, existing URLs/search state and measurement boundaries. No paid API, analytics/indexing/external posting/account/automation or destination changes.",
+      "notes": "Unselected candidate only. FT-RES-047 is research, not implementation; prior September5 P3 result is not reversed."
+    },
+    {
+      "id": "FT-RES-047",
+      "research_backlog_id": "SRR-069",
+      "learning_unit_id": "LRN-037",
+      "title": "Audit San Antonio room capacity versus water access",
+      "kind": "research",
+      "lane": "existing-page-evidence",
+      "status": "completed",
+      "completed_on": "2026-09-18",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a0b4a4-2113-79a0-a5d7-b6018e9c6079"],
+      "review_summary": "Dirac cycle-one PASS, no P0-P3. Independently checked four official sources, production200/byte/hash match and missing notice, prior P3 boundary, task-inference limits, exact9paths,111unique IDs, mirrors/privacy/state/66snapshots/whitespace. No edits, private accounts or paid actions; full native tests operator-owned.",
+      "qa_summary": "Full167/167; state0; freshness0; localSEO0 errors/warnings; 66snapshots; exact9paths/111uniqueIDs/oneLRN037row/oneplannedIMP056candidate/fiveunchangeddestinationtasks; targethash unchanged; whitespace PASS.",
+      "release_state": "review-clean-docs-only",
+      "result": "Reject wristband-to-room-capacity inference; preserve current exact-occupancy caveat. Retain only unselected IMP-056/FT-MAINT-007 for a current JW room-rest operational-notice omission. Four first-party pages and byte-matched production text; explicit room/equipment/notice-scope/date unknowns. No rendered/user test, page edit or broad hotel/price/review refresh.",
+      "selected_on": "2026-09-18",
+      "impact": 3,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 1,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/san-antonio-room-versus-water-access-audit-2026-09-18.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/seo-research-review-backlog.md",
+        "backlog/implementation-backlog.md",
+        "status/san-antonio-pages.md"
+      ],
+      "acceptance_criteria": [
+        "Audit current JW Marriott and Wild Oak first-party room/access evidence; reject capacity inference from wristbands, generic suite labels or booking selector limits.",
+        "Compare current page text for a family of five with daytime rest needs; distinguish official facts, historical inventory, unknown booking state and no rendered/user test.",
+        "Record official renovation timing/scope without inventing a definitive end or facility closure; retain at most one maintenance candidate; exact nine-path native QA and independent read-only PASS before docs-only push."
+      ],
+      "measurement_plan": "A source-traceable capacity/access distinction and exact next checks, not a ranking or user-satisfaction forecast.",
+      "production_invariant": "No site/code, hotel-set, URL/search-state, price/review/fact-date, observation-window, destination, paid API, analytics, indexing, external account/posting or automation changes.",
+      "gsc_evidence_classification": "Recent reused September17 API through September15; 1566 impressions/6clicks/56.04 property position,24/28 indexed; target3impressions/0clicks/page-average25. No aligned public query cohort; not an edit trigger.",
+      "notes": "Resumes interrupted registration after user-requested FT-OPS-006. Three baseline release-backfill paths preserved; original destination-report carry already shipped."
+    },
+    {
       "id": "FT-OPS-006",
       "title": "Queue destination feasibility research and explain GSC hidden query clicks",
       "kind": "operating-model",
@@ -31,7 +107,9 @@
       "reviewer_agent_ids": ["01a0b49b-5209-76d0-8903-6e0d26db8f9e"],
       "review_summary": "Independent cycle-one PASS, no P0-P3; exact seven-path diff, five task mirrors, existing item preservation, Google reporting mechanism, privacy and incomplete FT-RES-047 boundary verified. UI observations accepted as operator evidence, not independently authenticated. No reviewer edits or external effects.",
       "qa_summary": "Full native167/167; state0; freshness0; localSEO0 errors/warnings; 66 snapshots; 109 unique IDs; five planned mirrors; seven exact paths; no site/code changes; whitespace PASS.",
-      "release_state": "review-clean-docs-only",
+      "release_state": "docs-only-pushed",
+      "release_commit": "6ff5a1a6387599fd036a95745ee300e30789b033",
+      "released_at": "2026-09-18T13:03:47Z",
       "selected_on": "2026-09-18",
       "impact": 3,
       "confidence": 5,

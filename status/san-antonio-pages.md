@@ -1,15 +1,23 @@
 # San Antonio Page Status
 
-Last updated: 2026-09-05
+Last updated: 2026-09-18
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-05.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-17.md`
 - San Antonio decision pack: `docs/research/san-antonio-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
 
 Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 26, 2026. Closely related variants overlap and must not be summed as unique traffic. Decision-baseline GSC position is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
+
+## September 18 Bounded Evidence Overlay
+
+Final gate: FT-RES-047 independent cycle-one PASS (Dirac, no P0-P3), full167/167 and all focused/native checks green. Research complete; docs-only release next. Candidate unselected, live site unchanged; earlier pending-review label is chronology.
+
+`FT-RES-047` / `SRR-069` / `LRN-037` completes the two-property source/page-text audit, pending QA/independent review. Preserve current room/access caveats and hotel set. Retain only unselected `IMP-056` / `FT-MAINT-007` for JW's operational-notice omission relevant to midday room rest. This does not upgrade the September5 P3 issues or certify an exact five-person booking. Findings, source scope/timing differences, equipment conflict and next checks are in `docs/research/san-antonio-room-versus-water-access-audit-2026-09-18.md`.
+
+Direct target fetch200 matches repository SHA256 `eb5c0c3b30cbaf9b811e4f6b97cc19e29cdc77291bbf54295a1c5b7ee13ff695`; no page/generated-source edit or rendered QA in this audit. Public fact date remains September5 and price/review date July26. Recent reused September17 API is finalized conservatively through September15,24/28 indexed; target3impressions/0clicks/page-average25, no public aligned query cohort. This is orientation only; source evidence selected the candidate. All observation windows are preserved.
 
 ## September 5 Official-Fact Refresh Overlay
 

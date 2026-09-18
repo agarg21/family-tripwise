@@ -6,6 +6,12 @@ Queue note: this file preserves research and review handoffs. It is not a schedu
 
 ## Active Usefulness Research
 
+### SRR-069: San Antonio Room Capacity Versus Water Access
+
+Final gate: Dirac cycle-one PASS, no P0-P3; full167/167 and all native/focused checks green. LRN-037 complete, exact nine-path docs-only release next; earlier pending labels are chronology. Candidate remains unselected.
+
+September18 resumed `FT-RES-047` / `LRN-037`: evidence audit complete, QA/independent review pending; supersedes interrupted labels below. Report: `docs/research/san-antonio-room-versus-water-access-audit-2026-09-18.md`. Four current official pages and byte-matched production HTML reject room-capacity inference from water passes/generic suite labels. Preserve the page's existing exact-occupancy distinction. Retain only unselected `IMP-056` / `FT-MAINT-007` for the newly documented JW room-rest operational notice, with source/timing limits and no closure/end-date guarantee. Wild Oak capacity/equipment remains exact-category/date verification, not a new booking recommendation. No rendered task test, page edit, broader hotel refresh, price/review change or destination work. Today's bounded evidence-learning unit is recorded as LRN-037, subject to the release review gate.
+
 September18 `FT-OPS-006`: the user requested these follow-ups be added to the backlog, not published. Orlando/Cancun are first wave, London/DC second wave; the supporting coverage check may be selected when it would change the order. Existing-site defects and unfinished review-clean work retain priority. The remaining screened cities remain in FT-RES-046's retain/defer pool, not a ten-city launch queue. FT-RES-047/SRR-069 remains interrupted and incomplete; LRN-037 is not claimed complete.
 
 ### SRR-070: Orlando family-of-five hotel and water-access feasibility
