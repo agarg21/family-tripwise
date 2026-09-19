@@ -1,12 +1,14 @@
 # Implementation Backlog
 
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the renewed September 13-November 13 independent cycle, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 
 ## Candidate San Antonio Operational Notice
 
 ### IMP-056: Surface JW Marriott's Room-Rest Work Notice
+
+September19 `FT-MAINT-007` status: **HOLD for implementation**, live-page task validation `LRN-038` complete, docs review pending. Both sources still support the bounded candidate; three live viewports confirm missing rest-work notice/direct evidence while occupancy and Wild Oak checks remain recoverable. Local-file preview was denied by browser security policy; no bypass attempted. The tentative generator draft was reversed and no site output changed. Resume only after a permitted preview workflow is established, source recheck and fresh implementation registration/QA/review. This is not a blocker to daily live/public research. No production release claimed; earlier unselected label below is history. Report: `docs/research/san-antonio-room-rest-notice-validation-2026-09-19.md`.
 
 Status: **planned, unselected**; originating `FT-RES-047` / `SRR-069` / `LRN-037`, September18. Scheduler candidate `FT-MAINT-007`; no site edit in the research action. Target: existing San Antonio family-hotel page.
 

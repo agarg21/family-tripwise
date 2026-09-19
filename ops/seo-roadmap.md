@@ -1,6 +1,6 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
@@ -14,6 +14,12 @@ Each run may select at most one evidence-qualified substantive action. Across ea
 `ops/seo-roadmap.json` is the machine-readable project queue and scheduler state. Unchanged monitoring does not satisfy the daily unit. A supported preserve decision or rejected hypothesis counts; a second run may no-op after the unit is complete rather than manufacture an action.
 
 ## Current GSC evidence
+
+September19 validated snapshot paths: `ops/gsc-snapshots/2026-09-18.json` and `ops/gsc-snapshots/2026-09-18.md`.
+
+September19 `FT-MAINT-007` / `IMP-056`: selected maintenance now **implementation-HOLD**, docs review pending. Browser policy denied local-file preview; tentative generator draft reversed, no site change. `LRN-038` completes today's learning with a live1280x900/390x844/320x800 comparison-to-card task and controls, confirming the room-rest notice/direct-source gap while preserving capacity/access/equipment caveats. Record: `docs/research/san-antonio-room-rest-notice-validation-2026-09-19.md`. A permitted preview workflow and current notice recheck are required before implementation; never bypass the denial or deploy to test. Destination queue unchanged. Scope corrected to ten docs/state paths in current-cycle; no blanket research blocker.
+
+Latest validated records are September18 JSON/Markdown,67 snapshots pass. Recent reused read-only API data throughSeptember16:1547impressions/8clicks/54.96,24/28indexed, sitemapSuccess28. Target3impressions/0clicks/25, indexed with July30crawl. Prior September17 overlapping window1566/6/56.04 is orientation only, no aligned public cohort or CTR/rank attribution. Fresh fetch leaves baseline e4d3983 aligned. Earlier candidate-unselected and older GSC labels below are chronology.
 
 `FT-RES-047` review gate now PASS (Dirac cycle one, no P0-P3), full167/167 and focused/native QA green. LRN-037 is complete; only the unselected maintenance candidate is retained. Exact nine-path docs-only release follows; earlier pending-review labels are chronology.
 

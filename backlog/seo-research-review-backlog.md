@@ -1,12 +1,14 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the September13-November13 renewed cycle, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered before substantive work. The prior August12-September12 pilot is historical.
 
 ## Active Usefulness Research
 
 ### SRR-069: San Antonio Room Capacity Versus Water Access
+
+September19 application overlay: `FT-MAINT-007` / `IMP-056` selected then held at the local-preview gate; no site/source change remains. `LRN-038` separately executes the existing live JW/Wild Oak task at desktop and two mobile sizes, confirming the absent room-rest notice/direct source path, not just repeating September18 text research. See `docs/research/san-antonio-room-rest-notice-validation-2026-09-19.md`. Source scope/impact uncertainty and the prior P3 boundary remain. Docs QA/review pending; implementation requires a permitted preview workflow, not a bypass.
 
 Final gate: Dirac cycle-one PASS, no P0-P3; full167/167 and all native/focused checks green. LRN-037 complete, exact nine-path docs-only release next; earlier pending labels are chronology. Candidate remains unselected.
 

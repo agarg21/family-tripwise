@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-18",
+  "last_updated": "2026-09-19",
   "last_rescored_on": "2026-09-14",
   "next_rescore_due": "2026-09-21",
   "planning_horizon_days": 28,
@@ -22,10 +22,19 @@
     {
       "id": "FT-MAINT-007",
       "implementation_backlog_id": "IMP-056",
+      "learning_unit_id": "LRN-038",
       "title": "Surface JW Marriott operational notice for room-rest planning",
       "kind": "maintenance",
       "lane": "evidence-freshness",
-      "status": "planned",
+      "status": "blocked",
+      "selected_on": "2026-09-19",
+      "release_state": "implementation-held-docs-review-clean",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a0b9c8-c0b3-70c1-a32f-1496c9b8bcaa"],
+      "review_summary": "Feynman cycle-one PASS, no P0-P3. Independently verified two official notices, source scope/date/impact limits, ten-path docs scope,111IDs,oneLRN038row,mirrors/preserved backfills/no site-tools diff/live200byte match and state/freshness/SEO/67snapshots/whitespace. Viewport results remain operator observations. Docs-only verdict; implementation HOLD.",
+      "qa_summary": "Full167/167; focused4/4 including generation idempotence; state0; freshness0; localSEO0errors/warnings;67snapshots; exact10paths;111uniqueIDs;oneLRN038row; no site/tools diff; live200byte-identical SHA256 eb5c0c3b30cbaf9b811e4f6b97cc19e29cdc77291bbf54295a1c5b7ee13ff695; whitespace PASS.",
+      "blocker": "Browser policy denied local-file preview and prohibited workarounds. Tentative generator-only draft reversed; no site change. Requires a permitted pre-release preview workflow. Live/public research remains possible and daily learning is not blocked.",
       "impact": 3,
       "confidence": 4,
       "learning_value": 3,
@@ -36,7 +45,18 @@
       "target_urls": [
         "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
       ],
-      "target_paths": [],
+      "target_paths": [
+        "docs/research/san-antonio-room-rest-notice-validation-2026-09-19.md",
+        "docs/research/san-antonio-family-hotel-evidence-pack.md",
+        "backlog/implementation-backlog.md",
+        "backlog/product-learning-ledger.md",
+        "backlog/seo-research-review-backlog.md",
+        "status/san-antonio-pages.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
       "evidence": "FT-RES-047 current official room/enhancement notices plus byte-matched page show a decision-relevant omission for midday room rest. Details and source scope differences in September18 audit.",
       "acceptance_criteria": [
         "Recheck both official notices and register exact paths on selection; change only JW's existing operational check, direct source links and corresponding evidence/test state.",
@@ -45,7 +65,7 @@
       ],
       "measurement_plan": "Task answerability and notice traceability; not ranking attribution. Reassess if notice is withdrawn/clarified, already surfaced or cannot be faithfully summarized.",
       "production_invariant": "Keep all other records, July26 price/review evidence, non-target fact dates, hotel set, existing URLs/search state and measurement boundaries. No paid API, analytics/indexing/external posting/account/automation or destination changes.",
-      "notes": "Unselected candidate only. FT-RES-047 is research, not implementation; prior September5 P3 result is not reversed."
+      "notes": "September19 LRN-038 live desktop/two-mobile task rejects current notice answerability; occupancy/access and Wild Oak controls remain recoverable. Candidate is retained but implementation held. Ten-path docs-only transaction, not a page release. Recheck notices before resuming and by September26 if still queued. Prior September5 P3 result is not reversed."
     },
     {
       "id": "FT-RES-047",
@@ -61,7 +81,9 @@
       "reviewer_agent_ids": ["01a0b4a4-2113-79a0-a5d7-b6018e9c6079"],
       "review_summary": "Dirac cycle-one PASS, no P0-P3. Independently checked four official sources, production200/byte/hash match and missing notice, prior P3 boundary, task-inference limits, exact9paths,111unique IDs, mirrors/privacy/state/66snapshots/whitespace. No edits, private accounts or paid actions; full native tests operator-owned.",
       "qa_summary": "Full167/167; state0; freshness0; localSEO0 errors/warnings; 66snapshots; exact9paths/111uniqueIDs/oneLRN037row/oneplannedIMP056candidate/fiveunchangeddestinationtasks; targethash unchanged; whitespace PASS.",
-      "release_state": "review-clean-docs-only",
+      "release_state": "docs-only-pushed",
+      "release_commit": "d8fe8c8a418713ef0878981f4e3f1fd6514a69db",
+      "released_at": "2026-09-18T13:14:11Z",
       "result": "Reject wristband-to-room-capacity inference; preserve current exact-occupancy caveat. Retain only unselected IMP-056/FT-MAINT-007 for a current JW room-rest operational-notice omission. Four first-party pages and byte-matched production text; explicit room/equipment/notice-scope/date unknowns. No rendered/user test, page edit or broad hotel/price/review refresh.",
       "selected_on": "2026-09-18",
       "impact": 3,

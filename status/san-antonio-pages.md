@@ -1,13 +1,15 @@
 # San Antonio Page Status
 
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 
 Sources:
 
-- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-17.md`
+- Current public-safe GSC snapshot: `ops/gsc-snapshots/2026-09-18.md`
 - San Antonio decision pack: `docs/research/san-antonio-family-cluster-decision-pack.md`
 - Reusable workflow: `docs/plan/incremental-city-cluster-playbook.md`
 - Current roadmap: `ops/seo-roadmap.md`
+
+September19: `FT-MAINT-007` / `IMP-056` is implementation-HOLD after denied local preview; tentative generator edit reversed, site unchanged. `LRN-038` live existing-page task at1280x900,390x844,320x800 confirms no room-work notice, direct evidence route or work-specific room check, while exact occupancy/access and Wild Oak equipment caveats remain. Two official sources rechecked; broader fact/price/review dates unchanged. Docs-only review/QA pending. Next step is a permitted preview workflow then bounded notice implementation; no protection bypass or unverified release. Latest GSC September18 throughSeptember16 is reused orientation, target3impressions/no clicks/25, July30crawl,24/28indexed; no ranking or CTR inference. See `docs/research/san-antonio-room-rest-notice-validation-2026-09-19.md`.
 
 Demand estimates are directional US monthly search volumes from the logged-in Semrush Chrome research collected July 26, 2026. Closely related variants overlap and must not be summed as unique traffic. Decision-baseline GSC position is page-level average position for the 28-day snapshot finalized through July 24, not a query-specific rank.
 

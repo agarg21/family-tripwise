@@ -110,6 +110,8 @@ Deferral is not a negative quality verdict. It keeps the live comparison readabl
 
 ### JW Marriott San Antonio Hill Country Resort and Spa
 
+- September19 operational overlay (`FT-MAINT-007`): the [rooms notice](https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/rooms/) and [enhancement FAQ](https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/overview/enhancements/) retain room/exterior work and possible daytime room-rest/balcony impact. Preserve their different broad versus guestroom completion scopes; confirm exact-date work near the assigned room. No actual impact, guaranteed end or pool closure inferred. These two sources alone were rechecked, not prices/reviews or all hotel facts. Live desktop/mobile task confirms absent notice/direct links; implementation held by denied local-preview access. See `san-antonio-room-rest-notice-validation-2026-09-19.md`. Recheck before resuming and by September26 if still queued; this is a research record, not a published page update.
+
 - Role: largest water-complex resort comparison.
 - Official facts: Marriott publishes a nine-acre water experience, lazy river, pools, and slides. Public room inventory showed some two-queen categories accommodating five, but occupancy is room-specific.
 - Family constraint: the resort can fill a large trip block and sits far from Downtown. Wristband, slide, pool, occupancy, and parking rules need a dated check.
