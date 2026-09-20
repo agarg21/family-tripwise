@@ -158,13 +158,16 @@ The August objectives are:
 - design the agent as a fast query layer over shared validated records;
 - learn from indexing, crawl, query interpretation, and user usefulness without promising short-window rank movement.
 
-### Independent autopilot month
+### Independent autopilot cycle
 
-From August 12 through September 12, the permanent Master thread runs twice daily without the central Control Room. Cadence is a daily learn/apply loop, not permission to publish or rewrite twice a day.
+The renewed September 13-November 13 cycle runs in the permanent Master thread without the central Control Room. The September 20 direct-user correction makes this a finish-first loop, not a publishing quota. Historical August objectives above do not override the current cycle.
 
 - Existing pages and shared evidence products come first.
 - Each Eastern calendar day completes at least one bounded learning unit from current parent questions, a task-based page walkthrough, live SERP/ranking-page analysis, evidence freshness/conflict research, or a useful community-answer draft. Unchanged health checks and rewritten status prose do not count.
-- The first daily run defaults to learning. The second applies, deepens, or independently validates that result; it may no-op only when the daily unit is already complete and no additional evidence-qualified action exists.
+- One action can include learning, implementation, QA, independent review and verified release for the same family problem. Source-dated evidence/task validation within delivery satisfies daily learning. Finish eligible work before opening another exploratory report.
+- The first actual daily run resolves the highest-priority eligible problem, implementing when evidence suffices. The second prioritizes delivery/review/release. Research-only work must name the unresolved decision and explain why no unblocked qualified improvement can proceed. Preserve/no-op remains valid under the daily-learning rules when no such improvement exists; never manufacture changes.
+- Blockers are item-specific. Record the exact failure, owner, unblock condition and next check; do not evade security or relax release QA. After two consecutive runs with the same blocker and no deliverable, escalate once and select independent eligible work. Do not repeatedly create reports about an unchanged blocker.
+- Keep current state concise and link immutable evidence/review history. Report shipped/verified separately from learning-only and blocked outcomes. Weekly progress measures verified user-facing improvements and candidate age, not snapshots, commit count or documentation volume.
 - Current GSC query/crawl evidence, live SERP gaps, official-fact freshness, recurring parent questions, or verified usability defects must name the expected benefit before a page changes.
 - Competitor research should identify work a parent still has to reconstruct; it must not become outline copying or list inflation.
 - Relevant public questions may inform the evidence layer and a concise draft-answer queue. Answers are never auto-posted and never imply firsthand experience.

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-19",
+  "last_updated": "2026-09-20",
   "last_rescored_on": "2026-09-14",
   "next_rescore_due": "2026-09-21",
   "planning_horizon_days": 28,
@@ -20,6 +20,37 @@
   ],
   "items": [
     {
+      "id": "FT-OPS-007",
+      "title": "Repair autopilot research-to-delivery loop",
+      "kind": "operations",
+      "lane": "operator-policy",
+      "status": "in_progress",
+      "selected_on": "2026-09-20",
+      "release_state": "prompt-applied-repository-reviewed",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a0be28-0976-7db2-9f92-8666ae75c107"],
+      "qa_summary": "Operator full169/169; reviewer focused21/21; state/freshness/localSEO/68snapshots/exact-scope/whitespace PASS. No site diff.",
+      "automation_update_verified_at": "2026-09-20T09:33:39Z",
+      "automation_update_result": "Existing heartbeat prompt exactly matches trimmed ops/autopilot-prompt.md on TOML-parsed readback; id/kind/name/status/schedule/cutoff/thread/creation timestamp preserved.",
+      "target_paths": [
+        "AGENTS.md", "strategy/current-strategy.md", "ops/operator.json",
+        "ops/autopilot-prompt.md", "tools/autopilot-policy.test.mjs",
+        "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md", "ops/needs-user.md"
+      ],
+      "evidence": "Direct user requests fixing the scheduled prompt. September13-19: 24 commits, three site-changing, seven snapshot-only, fourteen docs/ops; not a count of automated runs. Mandatory learning plus optional deepen/validate permits qualified delivery to wait.",
+      "acceptance_criteria": [
+        "One action can take a problem from evidence through verified release; integrated dated learning counts, without a shipping quota.",
+        "Qualified unblocked delivery takes priority over exploratory reports; blockers stay item-specific and no policy/QA bypass is allowed.",
+        "Focused/full native QA and independent PASS/PASS_WITH_P3 before applying exact stored prompt to existing heartbeat; preserve all other automation fields and verify readback.",
+        "Push only reviewed exact paths; no page changes or new learning completion claim."
+      ],
+      "measurement_plan": "Inspect next four actual runs for distinct shipped/verified, learned-only and blocked outcomes; weekly verified improvements, candidate age and blockers, not commit counts.",
+      "production_invariant": "All site/source content, URLs, search state, observation windows, existing review/release/human-evidence and external-action gates remain unchanged. Existing schedule/thread/cutoff preserved; timezone anomaly not diagnosed or silently changed.",
+      "notes": "Preserve three baseline dirty paths. FT-RES-053 interrupted without completed LRN-039; FT-MAINT-007 preview remains blocked. User explicitly authorizes this existing automation prompt update."
+    },
+    {
       "id": "FT-MAINT-007",
       "implementation_backlog_id": "IMP-056",
       "learning_unit_id": "LRN-038",
@@ -28,7 +59,9 @@
       "lane": "evidence-freshness",
       "status": "blocked",
       "selected_on": "2026-09-19",
-      "release_state": "implementation-held-docs-review-clean",
+      "release_state": "implementation-held-docs-pushed",
+      "release_commit": "8e48242f623b06cdb5d4c06d862b95770b7ba7a6",
+      "released_at": "2026-09-19T13:11:28Z",
       "review_outcome": "PASS",
       "review_cycles": 1,
       "reviewer_agent_ids": ["01a0b9c8-c0b3-70c1-a32f-1496c9b8bcaa"],

@@ -1,6 +1,8 @@
 # Needs User
 
-Last updated: 2026-09-17
+Last updated: 2026-09-20
+
+Current input status (September 20): the user authorized fixing the existing scheduled prompt as `FT-OPS-007`; no further approval is needed for that scoped update. It does not clear the browser-security gate for `FT-MAINT-007`. Owner: user/app permissions. To diagnose that item, inspect Codex Settings > Browser allowed/blocked sites and share the relevant setting without credentials. Last failure: local-file preview denied; inspecting the Codex app via Computer Use was also denied for safety reasons. Unblock condition: a legitimately permitted pre-release preview, followed by its required QA. Do not bypass the denial or treat a localhost server as automatic clearance. Recheck only after a permission/tool-capability change, not on every heartbeat. Other independent public-source research and eligible work remain possible. Earlier resolved input requests below are historical.
 
 Current `FT-RES-046` input status: **no credential, login, top-up or additional $5-budget input is needed**. Saved API access succeeded and the user asked to execute now. Bounded destination collection used $0.14832 for 280 keywords and twelve live result sets. Orlando/Cancun are proposed next evidence briefs, not approved launches. Any destination publication remains a separate user gate after maintainable job/evidence validation; `FT-PUB-006` is not released. Earlier access/budget-pending paragraphs are historical, superseded by this result. See `docs/research/destination-expansion-dataforseo-2026-09-17.md`.
 
