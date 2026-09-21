@@ -1,6 +1,6 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the September13-November13 renewed cycle, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered before substantive work. The prior August12-September12 pilot is historical.
 
@@ -32,7 +32,7 @@ Record source/retrieval dates, evidence classes, disagreements, unknowns and mai
 
 ### SRR-071: Cancun family-resort room and inclusion feasibility
 
-Action `FT-RES-049`; status **planned, unselected**; priority first-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+Action `FT-RES-049`; September21 research complete, independent cycle-two PASS and native QA green; docs-only release follows. **DEFER publication**, no implementation-ready candidate. Report: `docs/research/cancun-family-five-feasibility-2026-09-21.md`; LRN-041. Sunscape conflict now spans two official room pages, not just a publisher versus official source. Three-room task exposes independent club-age, care-condition, transfer-channel and cost gates; existing competitors already offer structured comparisons. Next eligible Cancun work resolves exact party/category/date and oldest-child programme/total gaps, not broader inventory; destination approval remains separate. Original acceptance brief below is historical.
 
 Family task: Compare three resorts for a five-person party with mixed-age children.
 

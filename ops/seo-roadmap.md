@@ -1,11 +1,15 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
 
 ## Ownership
+
+Latest GSC evidence: `ops/gsc-snapshots/2026-09-20.json` and `ops/gsc-snapshots/2026-09-20.md`, newly arrived API evidence conservatively finalized throughSeptember18;69 snapshots validate. Prior September19 window overlaps; inspection records unchanged. Orientation only, not aligned query evidence or Cancun demand.
+
+September21 current decision: FT-RES-049 / SRR-071 / LRN-041 completed the Cancun feasibility investigation; independent cycle-two PASS and native QA green, docs-only release follows. DEFER publication; record official-versus-official Sunscape capacity conflict and exact party/club/channel/cost gates. No site implementation or new destination authorized. Source record: `docs/research/cancun-family-five-feasibility-2026-09-21.md`; current status lives in JSON. FT-MAINT-007/008 remain preview-gated, already escalated; no unchanged denial retried.
 
 Manual test cycle2/2, September20: `FT-RES-048` / SRR-070 / LRN-040 research complete, independent cycle-one PASS and native QA green; docs-only release follows. **DEFER Orlando publication**; exact capacity/fee scope/operations/total-price gates remain, with no implementation candidate. Report: `docs/research/orlando-family-five-feasibility-2026-09-20.md`. Stop generic Orlando exploration; revisit only its precise remaining decision fields or destination priority. No site change.
 
