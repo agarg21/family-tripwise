@@ -19,6 +19,8 @@ Full native tests188/188 pass, including source-generation idempotence; focused 
 
 ## Release
 
+Production verified: commit `f619bcaf55ac951f98b7279dc8adb35a07cf869f`, successful Pages run `35793245524`, matching production marker and both target URLs200 with exact reviewed local bytes. Production SEO:0errors/four reviewed missing-year warnings. Exact output equality preserves the reviewed hotel counts, six pool listings, metadata, sources/schema parity and unchanged controls. Preview server stopped. The earlier pending paragraph below is pre-release chronology.
+
 Final pre-review checks:188/188 tests, state0,71 public-safe snapshots and whitespace pass. Static SEO has zero errors and four missing-year review warnings for the intentionally qualified IHG schedule; no date inferred or checker weakened. The initial FAQ repeated the past closure's full date and tripped the simple expiry detector; the shorter FAQ now refers to the separately dated2026 listing, retaining exact historical detail in the card and source record. Refreshed preview confirms final FAQ text and320px document width. Native tests rerun after regeneration.
 
 Implementation and browser QA complete; Pauli cycle-two PASS with no remaining P0-P3. Cycle-one's sole P2 was current roadmap path registration, now corrected. Production release pending. Only two existing public pages may change. After release verify marker, live byte equality, production SEO and the declared counts/metadata invariants. Next factual trigger is a changed official notice or actual completion/access confirmation, not a calendar-based rewrite.

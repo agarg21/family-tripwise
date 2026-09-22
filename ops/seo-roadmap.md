@@ -7,6 +7,10 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+FT-MAINT-007/008 now completed and production-verified: `f619bcaf55ac951f98b7279dc8adb35a07cf869f`, successful Pages `35793245524`, marker/target bytes/productionSEO pass. Prior pending release and preview-HOLD entries are chronology, not current work.
+
+Current expansion selection, September22: user directs starting more destinations. FT-DEV-008 implements Cancun's three-resort source-backed constraint model; FT-PUB-007 owns one prospective comparison page, next eligible delivery after model review. Orlando is next domestic candidate, requiring job-specific re-scope rather than automatic activation of the old activity hub. LondonUK/DC remain research. See `docs/plan/cancun-expansion-build.md`. No new city URL yet; do not return to another generic city survey or blanket user-approval hold for this first pair.
+
 Current September22 direct-manual delivery: FT-MAINT-007/008 implemented and browser-checked, pending independent review and verified release. The preview prerequisite is cleared; prior HOLD statements are chronology. See `docs/research/hotel-notice-release-2026-09-22.md`. Reused same-day GSC: `ops/gsc-snapshots/2026-09-22.json` and `ops/gsc-snapshots/2026-09-22.md`, finalized throughSeptember20, not an action-selection or ranking result.
 
 FT-DEV-007 final review: Volta cycle-one PASS, no P0-P3; independent full187/187, focused6/6 and36asset byte checks green. Exact eight-path tool/docs push follows; production unchanged, environment prerequisite cleared. Earlier pending-review and preview-HOLD entries are chronology.

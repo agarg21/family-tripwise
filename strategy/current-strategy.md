@@ -1,6 +1,10 @@
 # Family Tripwise Current Strategy
 
-Last updated: 2026-08-24
+Last updated: 2026-09-22
+
+## September Expansion Direction
+
+The user's September22 instruction to start more destinations supersedes the generic August depth-only hold for a bounded first wave: Cancun first build, Orlando next. Existing-city trust defects still take priority. FT-DEV-008 starts Cancun's maintained comparison model; FT-PUB-007 owns its single-page candidate and remaining evidence/interface/review gates. See `docs/plan/cancun-expansion-build.md`. LondonUK/WashingtonDC remain research, not launches. No ten-city batch, cadence quota or automatic hotel-to-activity intent transfer. Historical portfolio and August hold below describe prior state; the live portfolio remains five cities until a verified release.
 
 This is the canonical operating strategy for Family Tripwise. Historical launch plans remain useful as provenance but do not control the current queue.
 

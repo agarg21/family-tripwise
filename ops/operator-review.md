@@ -12,6 +12,12 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
+FT-DEV-008 Newton `01a0cb49-2139-7c52-bce8-5fc6453fa401` cycle-two **PASS**, no P0-P3. Release-field P2 closed; existing state QA now selects f619bca/Pages35793245524 and current narratives correctly say released. Core prototype/source review stands, focused9/9 independently passed; operator full197/197,71snapshots, scope15/15 and whitespace green. No new site change or GUI claim. Exact-path source/docs push follows without Pages deployment.
+
+FT-DEV-008 Newton cycle-one FAIL: one P2 in mechanical hotel-release backfills used noncanonical release-state/run fields, so existing state validation skipped the new release. Corrected both to `released-and-production-verified` and numeric `pages_run`; no prototype/source/content finding. Cycle-two re-review required; no prototype push yet.
+
+FT-DEV-008 September22: independent read-only review requested for15 exact registered paths, including paired-notice mechanical release backfills. Assess three-record claim/source integrity, unknown/conflict handling, per-child and transfer boundaries, truthful prototype-only status, new user-authority scope and next candidate. No public-site change; initial focused9/9 pass. Source registry and `docs/plan/cancun-expansion-build.md` give current evidence; full QA/review pending.
+
 FT-MAINT-007/008 Pauli `01a0cb3e-721e-7892-ab5d-ca058f2652dd` cycle-two **PASS**, no P0-P3. Sole path-registration P2 closed; independently verified exact15-path union, native state/whitespace and prior source/code/invariant checks. Full188/188 and rendered QA remain operator-owned; zero staticSEO errors/four reviewed missing-year warnings,71 snapshots. Exact-path release follows; production verification pending.
 
 FT-MAINT-007/008 Pauli cycle-one FAIL: one P2 current roadmap path mismatch (empty Chicago/old San Antonio research scope). Corrected both machine-readable path lists to match the15-path registered transaction; historical research scope remains in the September19 action history/commit. No code/content finding. Cycle-two read-only re-review requested; no release yet.

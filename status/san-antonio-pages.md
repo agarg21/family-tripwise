@@ -2,7 +2,9 @@
 
 Last updated: 2026-09-22
 
-Current FT-MAINT-007: implemented and desktop/mobile proxy-checked; independent review/release pending in `docs/research/hotel-notice-release-2026-09-22.md`. Preview HOLD below is historical. Existing12 hotels, metadata, July26 price/review and September5 general facts are preserved. No observation-window reset; reused September22 GSC throughSeptember20 is orientation only.
+FT-MAINT-007 **released and production-verified** at `f619bcaf55ac951f98b7279dc8adb35a07cf869f`, Pages `35793245524`; marker, exact target bytes and productionSEO0errors pass. Pauli cycle-two PASS;12 hotels/metadata/other evidence dates unchanged. Prior pending/HOLD notes below are history.
+
+Current FT-MAINT-007: released and desktop/mobile proxy-checked; full evidence in `docs/research/hotel-notice-release-2026-09-22.md`. Preview HOLD below is historical. Existing12 hotels, metadata, July26 price/review and September5 general facts are preserved. No observation-window reset; reused September22 GSC throughSeptember20 is orientation only.
 
 Sources:
 

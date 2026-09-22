@@ -2,7 +2,9 @@
 
 Last updated: 2026-09-22
 
-Current FT-MAINT-008: elapsed pool schedule/current unknowns implemented in the existing card and matching FAQ/schema; independent review/release pending in `docs/research/hotel-notice-release-2026-09-22.md`. Desktop/mobile proxy checks pass. Ten hotels/six pool listings and older price/review/fact dates preserved; no observation-window reset. Reused September22 GSC throughSeptember20 is orientation only.
+FT-MAINT-008 **released and production-verified** at `f619bcaf55ac951f98b7279dc8adb35a07cf869f`, Pages `35793245524`; marker, exact target bytes and productionSEO0errors pass. Pauli cycle-two PASS;10 hotels/six pool listings/schema parity/other evidence dates preserved. Prior pending notes below are history.
+
+Current FT-MAINT-008: elapsed pool schedule/current unknowns released in the existing card and matching FAQ/schema; full evidence in `docs/research/hotel-notice-release-2026-09-22.md`. Desktop/mobile proxy checks pass. Ten hotels/six pool listings and older price/review/fact dates preserved; no observation-window reset. Reused September22 GSC throughSeptember20 is orientation only.
 
 Sources:
 
