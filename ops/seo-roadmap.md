@@ -1,11 +1,15 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-21
+Last updated: 2026-09-22
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
 
 ## Ownership
+
+FT-DEV-006 implementation/audit complete: independent cycle-two PASS, full181/181 and focused21/21 green; zero SEO errors plus five intended yearless-date review warnings. Tool-only release follows, site unchanged. Detailed result in `docs/research/operational-notice-date-audit-2026-09-22.md`; no new page candidate or preview clearance.
+
+September22: FT-DEV-006 selects a reproduced freshness-tool coverage defect, not a page rewrite. Add missing-year review warnings without weakening expired-date failures or inferring years. Exact scope and gates are in current-cycle/JSON; public pages and the FT-MAINT-007/008 preview gates remain unchanged. Latest evidence: `ops/gsc-snapshots/2026-09-21.json` / `ops/gsc-snapshots/2026-09-21.md`, fresh newly arrived API throughSeptember19,70 validated records, unchanged inspections; overlapping orientation only.
 
 Latest GSC evidence: `ops/gsc-snapshots/2026-09-20.json` and `ops/gsc-snapshots/2026-09-20.md`, newly arrived API evidence conservatively finalized throughSeptember18;69 snapshots validate. Prior September19 window overlaps; inspection records unchanged. Orientation only, not aligned query evidence or Cancun demand.
 

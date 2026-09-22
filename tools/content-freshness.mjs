@@ -27,6 +27,8 @@ const OPERATIONAL_TERMS =
 const DATE_RANGE =
   /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?,\s*(\d{4})\b/gi;
 const RESOLVED_TERMS = /\b(?:then\s+)?(?:reopened|resumed|resolved|completed|ended)\b/i;
+const CALENDAR_DATE =
+  /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:\s*[-–]\s*(?:(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+)?(\d{1,2}))?(?:(?:\s*,\s*|\s+)(\d{4}))?\b/gi;
 
 function visibleText(html) {
   return html
@@ -75,6 +77,57 @@ export function findExpiredOperationalNotices(html, { now = new Date() } = {}) {
   return notices;
 }
 
+function dateReviewTexts(html) {
+  const texts = [];
+  const addText = (value) => texts.push(visibleText(
+    value.replace(/<\/(?:p|li|td|th|h[1-6]|div|section|article)>|<br\s*\/?>/gi, "$&. ")
+  ));
+  const visit = (value, key = "") => {
+    if (typeof value === "string") {
+      if (!/^(?:(?:source|last)[_-]?)?(?:checked|updated|reviewed|verified|collected)(?:[_-]?(?:at|on|date))?$/i.test(key)) addText(value);
+    } else if (value && typeof value === "object") {
+      for (const [childKey, child] of Object.entries(value)) visit(child, childKey);
+    }
+  };
+  // JSON values and HTML blocks cannot borrow context from unrelated records.
+  const body = html.replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi, (_match, attributes, source) => {
+    if (/\btype=["']application\/json["']/i.test(attributes)) {
+      try {
+        visit(JSON.parse(source));
+      } catch {
+        // Malformed JSON has no trustworthy field boundaries; do not guess them.
+      }
+    }
+    return " ";
+  });
+  addText(body);
+  return texts;
+}
+
+export function findYearlessOperationalNotices(html) {
+  const notices = [];
+  const seen = new Set();
+  for (const text of dateReviewTexts(html)) {
+    for (const match of text.matchAll(CALENDAR_DATE)) {
+      if (match[5]) continue;
+      const start = Math.max(...[".", "!", "?"].map((mark) => text.lastIndexOf(mark, match.index - 1))) + 1;
+      const ends = [".", "!", "?"]
+        .map((mark) => text.indexOf(mark, match.index + match[0].length))
+        .filter((index) => index >= 0);
+      const finish = ends.length ? Math.min(...ends) + 1 : text.length;
+      const excerpt = text.slice(start, finish).trim();
+      const beforeDate = text.slice(start, match.index);
+      if (!OPERATIONAL_TERMS.test(excerpt)) continue;
+      if (/\b(?:checked|updated|reviewed|verified|collected)(?:\s+on)?\s*:?\s*$/i.test(beforeDate)) continue;
+      const key = `${match[0]}|${excerpt}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      notices.push({ dateText: match[0], reason: "missing-year", excerpt });
+    }
+  }
+  return notices;
+}
+
 function walkHtml(dir) {
   return readdirSync(dir)
     .flatMap((entry) => {
@@ -91,16 +144,22 @@ function walkHtml(dir) {
 function runCli() {
   const rootDir = fileURLToPath(new URL("../", import.meta.url));
   const siteDir = join(rootDir, "site");
-  const failures = walkHtml(siteDir).flatMap((filePath) =>
-    findExpiredOperationalNotices(readFileSync(filePath, "utf8")).map((notice) => ({
-      path: relative(rootDir, filePath),
-      ...notice
-    }))
-  );
+  const failures = [];
+  const unresolved = [];
+  for (const filePath of walkHtml(siteDir)) {
+    const html = readFileSync(filePath, "utf8");
+    const path = relative(rootDir, filePath);
+    failures.push(...findExpiredOperationalNotices(html).map((notice) => ({ path, ...notice })));
+    unresolved.push(...findYearlessOperationalNotices(html).map((notice) => ({ path, ...notice })));
+  }
 
   console.log(`Content freshness QA: ${failures.length} expired operational notice(s)`);
+  console.log(`Coverage review: ${unresolved.length} yearless operational date(s); expiry UNKNOWN, no year inferred`);
   for (const failure of failures) {
     console.log(`  ERROR ${failure.path} ended ${failure.endDate}: ${failure.excerpt}`);
+  }
+  for (const notice of unresolved) {
+    console.log(`  WARN ${notice.path} missing year for ${notice.dateText}: ${notice.excerpt}`);
   }
   if (failures.length > 0) process.exitCode = 1;
 }
