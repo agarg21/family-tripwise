@@ -36,7 +36,15 @@ San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed fiv
 
 ## Local Preview
 
-Open any file under `site/` directly in a browser. The generated pages do not require a local server for basic review.
+Start the restricted static preview in a persistent terminal:
+
+```bash
+node tools/preview-site.mjs
+```
+
+Open `http://127.0.0.1:4173/` in the in-app browser. If that port is occupied, pass an unused port, for example `node tools/preview-site.mjs 4174`. This snapshots only public assets under `site/`, binds only to loopback, and provides no writes, directory listings, hidden files or symlink access. It does not expose the repository root. Stop with Ctrl-C; restart after generating or editing pages, then reload the browser before QA.
+
+Browser access must pass its normal permission checks. Do not disable protections, use another surface to evade a denial, or deploy to obtain a preview. A denied `file:` URL is not proof of HTTP preview permission. If an HTTP preview is denied, record the exact origin/error and ask for normal user/app permission resolution. Do not repeatedly retry it in scheduled runs. Pre-release desktop/mobile rendering, interactions and independent review remain required.
 
 The production site is configured for GitHub Pages at `familytripwise.com`.
 

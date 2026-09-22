@@ -7,6 +7,12 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+FT-DEV-007 final review: Volta cycle-one PASS, no P0-P3; independent full187/187, focused6/6 and36asset byte checks green. Exact eight-path tool/docs push follows; production unchanged, environment prerequisite cleared. Earlier pending-review and preview-HOLD entries are chronology.
+
+FT-DEV-007 validation: full187/187, focused6/6,71 public-safe snapshots; current evidence `ops/gsc-snapshots/2026-09-22.json` and `ops/gsc-snapshots/2026-09-22.md`. StaticSEO0errors/5existing warnings. No site output changed; independent tool/docs review pending.
+
+September22 FT-DEV-007: restricted site-only loopback HTTP preview is now browser-verified at desktop/mobile sizes. README contains the repeatable command and snapshot restart requirement; no security setting was changed and denied file/data URLs were not accessed. Environment gate cleared for FT-MAINT-007/008; SanAntonio is the next eligible page correction after fresh sources and its own QA/review/release, followed by Chicago. Native QA and independent review of the tool/docs change are pending. Site content remains unchanged. Earlier preview-HOLD labels below are history, not a current instruction to wait for user approval. Latest September22 GSC API snapshot is new, conservatively finalized throughSeptember20, orientation only.
+
 FT-DEV-006 implementation/audit complete: independent cycle-two PASS, full181/181 and focused21/21 green; zero SEO errors plus five intended yearless-date review warnings. Tool-only release follows, site unchanged. Detailed result in `docs/research/operational-notice-date-audit-2026-09-22.md`; no new page candidate or preview clearance.
 
 September22: FT-DEV-006 selects a reproduced freshness-tool coverage defect, not a page rewrite. Add missing-year review warnings without weakening expired-date failures or inferring years. Exact scope and gates are in current-cycle/JSON; public pages and the FT-MAINT-007/008 preview gates remain unchanged. Latest evidence: `ops/gsc-snapshots/2026-09-21.json` / `ops/gsc-snapshots/2026-09-21.md`, fresh newly arrived API throughSeptember19,70 validated records, unchanged inspections; overlapping orientation only.
