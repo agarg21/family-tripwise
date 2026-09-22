@@ -1,6 +1,8 @@
 # Chicago Page Status
 
-Last updated: 2026-09-06
+Last updated: 2026-09-22
+
+Current FT-MAINT-008: elapsed pool schedule/current unknowns implemented in the existing card and matching FAQ/schema; independent review/release pending in `docs/research/hotel-notice-release-2026-09-22.md`. Desktop/mobile proxy checks pass. Ten hotels/six pool listings and older price/review/fact dates preserved; no observation-window reset. Reused September22 GSC throughSeptember20 is orientation only.
 
 Sources:
 

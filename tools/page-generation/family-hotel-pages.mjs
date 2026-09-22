@@ -728,7 +728,7 @@ const chicagoFamilyHotels = [
     area: "Magnificent Mile",
     priceRange: "$300-$600+",
     strengths: ["The heated junior Olympic-size indoor pool is a distinct weather-backup amenity", "Official room inventory includes two-double rooms and requestable connecting rooms or cribs"],
-    familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Its project notice, checked September 14, says improvements run August 10-September 16, the pool closed August 11 and September 10, and it is open during the remainder of the project. Occasional daytime construction may continue, locker rooms are unavailable, weekend pool movies are relocated elsewhere in the hotel, and Resort Passes are unavailable during the project.",
+    familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Notice rechecked September 22, 2026: IHG still publishes an August 10-September 16 project schedule, with August 11 and September 10 closures; the notice omits the year, while its amenities page dates the September 10 closure to 2026. The published window has passed, but completion and current access are unconfirmed. The notice describes project-period daytime construction, unavailable locker rooms, relocated pool movies and unavailable Resort Pass purchases, not verified conditions today. Published hours also conflict: 7am-10pm on the pool page versus 5am-10pm on amenities. Confirm current hours, changing facilities and guest or day-pass access for your visit.",
     reviewSignal: "The inspected sample included positive mentions of the pool, location, historic character, and staff. It also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost.",
     priceNote: "A recent public one-night example was about $305 total; larger rooms, events, and weekends can move higher.",
     parentCheck: "Recheck current pool access and project conditions, depth fit, exact two-double room, connecting request, parking, and final total.",
@@ -836,7 +836,7 @@ function chicagoFamilyHotelPage() {
 
   const faqs = [
     ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
-    ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's project notice, checked September 14, says improvements run through September 16, the pool closed September 10, and it is open during the remainder of the project with temporary conditions; recheck current access before booking."],
+    ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's notice, rechecked September 22, 2026, still shows an elapsed August 10-September 16 project schedule without a year; a separate dated closure listing supplies the 2026 context. Its completion, changing facilities, current hours and pass availability remain unconfirmed. Check directly before relying on it as a pool day."],
     ["Do these Chicago hotel ranges include taxes and fees?", "The ranges start from public examples that displayed taxes and mandatory fees where stated, then widen for date and room changes. Parking, food, larger rooms, and optional purchases remain outside the range, so compare the final total for the same dates and setup."]
   ];
   const faqJson = {
@@ -967,6 +967,8 @@ const sanAntonioFamilyHotels = [
     reviewSignal: "A recent public sample often praised the water features, family activities, service, and food. Isolated reports flagged paid parking, a temporarily unavailable slide, and one bathroom-maintenance problem.",
     priceNote: "A public one-night example was about $505 total; family occupancy, weekends, and resort demand can push the total higher.",
     parentCheck: "The current River Bluff limit is five entry wristbands per room. Confirm exact occupancy, any rule change, water-feature operations, parking, and final total.",
+    operationalNotice: "Room-rest notice checked September 22, 2026: Marriott lists guestroom and exterior work from summer 2026 through spring 2027, with possible daytime noise and temporary balcony restrictions. Its enhancement FAQ gives work hours of 9am-5pm and an earlier, early-2027 estimate for guestroom completion. These describe different scopes, not a guaranteed finish date. Before booking a nap-dependent stay, confirm work near the exact room and dates; this does not establish disruption in every room or closure of the water complex.",
+    operationalSources: [["Marriott room notice", "https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/rooms/"], ["Enhancement FAQ", "https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/overview/enhancements/"]],
     mapQuery: "JW Marriott San Antonio Hill Country Resort and Spa",
     anchorQuery: "Natural Bridge Caverns"
   },
@@ -1140,7 +1142,8 @@ function sanAntonioFamilyHotelPage() {
               <div><dt>Maps</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Hotel map</a> · <a href="${googleMapsUrl(hotel.anchorQuery)}">${esc(hotel.anchorQuery)}</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>${hotel.operationalNotice ? `
+            <p><strong>Before planning room rest:</strong> ${esc(hotel.operationalNotice)} ${hotel.operationalSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join("; ")}.</p>` : ""}
             <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
             <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
           </details>`).join("\n");

@@ -1,6 +1,8 @@
 # San Antonio Page Status
 
-Last updated: 2026-09-19
+Last updated: 2026-09-22
+
+Current FT-MAINT-007: implemented and desktop/mobile proxy-checked; independent review/release pending in `docs/research/hotel-notice-release-2026-09-22.md`. Preview HOLD below is historical. Existing12 hotels, metadata, July26 price/review and September5 general facts are preserved. No observation-window reset; reused September22 GSC throughSeptember20 is orientation only.
 
 Sources:
 

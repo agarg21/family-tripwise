@@ -7,6 +7,8 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+Current September22 direct-manual delivery: FT-MAINT-007/008 implemented and browser-checked, pending independent review and verified release. The preview prerequisite is cleared; prior HOLD statements are chronology. See `docs/research/hotel-notice-release-2026-09-22.md`. Reused same-day GSC: `ops/gsc-snapshots/2026-09-22.json` and `ops/gsc-snapshots/2026-09-22.md`, finalized throughSeptember20, not an action-selection or ranking result.
+
 FT-DEV-007 final review: Volta cycle-one PASS, no P0-P3; independent full187/187, focused6/6 and36asset byte checks green. Exact eight-path tool/docs push follows; production unchanged, environment prerequisite cleared. Earlier pending-review and preview-HOLD entries are chronology.
 
 FT-DEV-007 validation: full187/187, focused6/6,71 public-safe snapshots; current evidence `ops/gsc-snapshots/2026-09-22.json` and `ops/gsc-snapshots/2026-09-22.md`. StaticSEO0errors/5existing warnings. No site output changed; independent tool/docs review pending.

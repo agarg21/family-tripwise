@@ -1,5 +1,7 @@
 # Chicago Family-Hotel Evidence Pack
 
+September22 FT-MAINT-008: IHG card/FAQ/schema now distinguish the elapsed published schedule from unconfirmed completion/current access, preserving the notice's missing year, separately dated2026 closure, pass restriction and hours conflict. Same-day official recheck; no broad July23 evidence refresh. Review/release: [transaction record](hotel-notice-release-2026-09-22.md).
+
 Status: publication evidence for `FT-PUB-003`
 
 Initial full check: 2026-07-23

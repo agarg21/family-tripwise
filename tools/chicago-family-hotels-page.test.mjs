@@ -47,9 +47,12 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
   assert.match(html, /Rough total\/night, not a quote/);
   assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026/);
-  assert.match(html, /improvements run August 10-September 16, the pool closed August 11 and September 10, and it is open during the remainder of the project/);
-  assert.match(html, /locker rooms are unavailable, weekend pool movies are relocated elsewhere in the hotel, and Resort Passes are unavailable during the project/);
-  assert.match(html, /project notice, checked September 14, says improvements run through September 16, the pool closed September 10, and it is open during the remainder of the project with temporary conditions/);
+  assert.match(html, /Notice rechecked September 22, 2026/);
+  assert.match(html, /notice omits the year/);
+  assert.match(html, /published window has passed, but completion and current access are unconfirmed/);
+  assert.match(html, /unavailable Resort Pass purchases, not verified conditions today/);
+  assert.match(html, /7am-10pm on the pool page versus 5am-10pm on amenities/);
+  assert.doesNotMatch(html, /locker rooms are unavailable|Occasional daytime construction may continue/);
   assert.doesNotMatch(html, /August 10-12 closure|scheduled to reopen after August 12|checked August 13/);
   assert.match(html, /current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended/);
   assert.match(html, /current public example was about \$308 including taxes and fees/);
@@ -77,6 +80,9 @@ test("keeps visible FAQ and schema aligned", () => {
   for (const question of faq.mainEntity.map((item) => item.name)) {
     assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
+  const poolAnswer = faq.mainEntity.find((item) => item.name.includes("indoor pool")).acceptedAnswer.text;
+  assert.match(poolAnswer, /completion, changing facilities, current hours and pass availability remain unconfirmed/);
+  assert.ok(visible.includes(poolAnswer), "pool FAQ text matches schema");
 });
 
 test("routes from home and the existing stay guide without changing the activity page", () => {

@@ -73,6 +73,21 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.doesNotMatch(html, /Book now|Reserve now|affiliate/i);
 });
 
+test("keeps the dated room-rest notice scoped to JW with direct sources", () => {
+  const html = readFileSync(pagePath, "utf8");
+  const card = html.match(/<details[^>]+id="san-antonio-hotel-2">([\s\S]*?)<\/details>/)[1];
+  assert.match(card, /Room-rest notice checked September 22, 2026/);
+  assert.match(card, /summer 2026 through spring 2027/);
+  assert.match(card, /9am-5pm/);
+  assert.match(card, /early-2027 estimate for guestroom completion/);
+  assert.match(card, /not a guaranteed finish date/);
+  assert.match(card, /confirm work near the exact room and dates/);
+  assert.match(card, /rooms\/">Marriott room notice<\/a>/);
+  assert.match(card, /overview\/enhancements\/">Enhancement FAQ<\/a>/);
+  assert.match(card, /five entry wristbands per room\. Confirm exact occupancy/);
+  assert.equal((html.match(/Before planning room rest:/g) || []).length, 1);
+});
+
 test("keeps visible FAQ and schema aligned", () => {
   const html = readFileSync(pagePath, "utf8");
   const blocks = schemas(html);

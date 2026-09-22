@@ -1,6 +1,8 @@
 # Implementation Backlog
 
-Last updated: 2026-09-19
+Last updated: 2026-09-22
+
+Current IMP-056 / FT-MAINT-007 and FT-MAINT-008: implemented with same-day source rechecks and desktop/mobile proxy QA. Independent review and production release pending; see `docs/research/hotel-notice-release-2026-09-22.md`. September19 preview-HOLD notes below are historical, cleared by FT-DEV-007.
 
 Queue note: this file preserves implementation handoffs and completion evidence. It is not a scheduler. Current selection and release state live in `ops/seo-roadmap.json`; during the renewed September 13-November 13 independent cycle, the Family Tripwise Master heartbeat is the only scheduler and implementation must be separately selected there.
 

@@ -1,5 +1,7 @@
 # San Antonio Family Hotel Evidence Pack
 
+September22 FT-MAINT-007: JW room-rest operational notice implemented with two direct Marriott sources after a same-day recheck. Review/release status: [transaction record](hotel-notice-release-2026-09-22.md). This narrow notice supersedes the September19 preview HOLD, not the broader September5 facts or July26 price/review dates.
+
 Status: implementation evidence for `FT-PUB-005`
 
 Prepared: 2026-07-26
