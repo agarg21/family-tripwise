@@ -14,7 +14,7 @@ export function cancunResortPage() {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title.replaceAll("&", "&amp;")}</title>
-  <meta name="description" content="Compare three Cancun-area all-inclusive family resorts by exact room category, child club ages, airport-transfer terms and unresolved costs. Source-linked policy checks.">
+  <meta name="description" content="Compare six Cancun-area all-inclusive family resorts by exact room category, child club ages, airport-transfer terms and unresolved costs. Source-linked policy checks.">
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../cancun-resorts.css">
@@ -27,8 +27,13 @@ export function cancunResortPage() {
     <section class="page-intro">
       <p class="eyebrow">Cancun area, Mexico</p>
       <h1>Cancun family resorts</h1>
-      <p>Three all-inclusive resorts, compared by the room and policy details that can change a family booking. This is a focused planning comparison, not a ranking of every resort.</p>
-      <p><strong>For five people:</strong> Finest publishes a five-person Family Suite with a separate children's room. Dreams Sapphire publishes a six-person family category, but the sleeping layout needs confirmation. Sunscape's two official capacity listings disagree. None is a confirmed booking for your dates.</p>
+      <p>Six all-inclusive resorts, compared by the room and policy details that can change a family booking. This is a focused planning comparison, not a ranking of every resort.</p>
+      <ul>
+        <li><strong>Two adults and two children, Hotel Zone:</strong> <a href="#ziva-ocean-view-double">Hyatt Ziva's Ocean View Double</a> publishes a four-person maximum; exact bedding and club-age rules still need checking.</li>
+        <li><strong>Five people:</strong> <a href="#finest-family-suite">Finest's Family Suite</a> publishes five places and a separate children's bedroom. <a href="#sapphire-family-junior-suite">Dreams Sapphire</a> publishes six, with sleeping layout unresolved. <a href="#sunscape-family-junior-suite">Sunscape's capacity listings disagree</a>.</li>
+        <li><strong>Six or seven people:</strong> <a href="#grand-family-suite">Moon Palace The Grand's Family Suite</a> publishes seven places across connecting rooms, with a rollaway for the seventh guest (a child). <a href="#royalton-splash-two-bedroom">Royalton Splash's two-bedroom category</a> has conflicting child limits. Confirm exact-age acceptance before relying on either.</li>
+      </ul>
+      <p>These are published-capacity starting points, not confirmed bookings or price recommendations.</p>
       <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Next source review due October 23, 2026; verify volatile details before booking.</span></p>
       <div class="jump-links"><a href="#comparison">Room &amp; policy comparison</a><a href="#family-check">Your children's ages</a><a href="#before-booking">Before booking</a></div>
     </section>
@@ -39,7 +44,7 @@ export function cancunResortPage() {
     </section>
     <section id="family-check" aria-labelledby="family-title">
       <h2 id="family-title">Check your family's age and booking conditions</h2>
-      <p>Two adults and one to five children, ages 0-17 at travel. A room maximum, a club-age match and a transfer offer are separate checks. All three resorts stay visible, including conflicts and unknowns.</p>
+      <p>Two adults and one to five children, ages 0-17 at travel. A room maximum, a club-age match and a transfer offer are separate checks. All six resorts stay visible, including conflicts and unknowns.</p>
       <form id="family-form" hidden>
         <div class="form-grid">
           <label for="children">Number of children<select id="children" name="children">${[1,2,3,4,5].map(n => `<option${n === 3 ? " selected" : ""}>${n}</option>`).join("")}</select></label>
@@ -61,18 +66,18 @@ export function cancunResortPage() {
         <li><strong>Exact party and category:</strong> supply every child's age at travel and ask whether that exact rate accepts everyone in one booked unit. A club age does not establish the hotel's child-pricing cutoff.</li>
         <li><strong>Every sleeping place:</strong> confirm bedding, any sofa or trundle, and whether a connection is guaranteed rather than requested. Ask whether another room category or unit is needed when capacity conflicts.</li>
         <li><strong>Club admission:</strong> confirm registration, toilet-training rules, current hours and space for each child. Published ages do not guarantee admission or establish the quality of care.</li>
-        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. We have not observed a comparable, date-specific three-resort quote.</li>
+        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. We have not observed comparable, date-specific quotes across these resorts.</li>
         <li><strong>Stay-date changes:</strong> check current renovation, closure and programme notices with the resort. This policy comparison does not establish that every facility will operate during your stay.</li>
       </ol>
     </section>
     <section class="geography">
       <h2>One airport region, different locations</h2>
-      <p>Sunscape is in Cancun's Hotel Zone; Finest is in Playa Mujeres to the north; Dreams Sapphire is in Riviera Cancun. The map links above locate each named resort. No transfer time, beach condition, safe swimming or stroller-route guarantee is implied.</p>
-      <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Canc%C3%BAn_aerial_2024.jpg/1280px-Canc%C3%BAn_aerial_2024.jpg" width="1280" height="960" alt="Aerial view of Cancun's coast and lagoon in January 2024, for geographic context." loading="lazy" decoding="async"><figcaption>Cancun area, January 2024; not a photo of the three compared rooms. Antony-22, <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Uncropped, displayed smaller.</figcaption></figure>
+      <p>Sunscape and Hyatt Ziva are in Cancun's Hotel Zone; Finest is in Playa Mujeres to the north; Dreams Sapphire and Royalton Splash are in Riviera Cancun. The map links above locate each named resort. No transfer time, beach condition, safe swimming or stroller-route guarantee is implied.</p>
+      <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Canc%C3%BAn_aerial_2024.jpg/1280px-Canc%C3%BAn_aerial_2024.jpg" width="1280" height="960" alt="Aerial view of Cancun's coast and lagoon in January 2024, for geographic context." loading="lazy" decoding="async"><figcaption>Cancun area, January 2024; not a photo of the compared rooms. Antony-22, <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Uncropped, displayed smaller.</figcaption></figure>
     </section>
     <section id="methodology">
       <h2>What this comparison can establish</h2>
-      <p>The same dated official-property records supply the comparison and the age checks. The three resorts were chosen to expose different room, age and transfer constraints, not as a statistically representative sample or a best-value shortlist. Where two official pages conflict, both remain linked.</p>
+      <p>The same dated official-property records supply the comparison and the age checks. These six resorts cover different room sizes, locations, age rules and transfer constraints, not a statistically representative sample or a best-value shortlist. Where two official pages conflict, both remain linked. Missing policy evidence stays unknown rather than becoming an inclusion or admission promise.</p>
       <p>We have not stayed at these resorts. No guest-review quality score, room-noise judgment, live availability, booking acceptance or total-price ranking is claimed. Published prices for other parties or undated starting rates are not family quotes. Sources can change before the next review date.</p>
       <p>Family inputs are processed in this page, not saved or submitted. The comparison does not book rooms, contact hotels or reserve childcare.</p>
       <p><a href="../about.html">How Family Tripwise handles research and uncertainty</a></p>

@@ -1,5 +1,7 @@
 # Cancun Comparison Launch Evidence
 
+Release evidence: final `3075d3736044e29bcaa96de3d89b8d091f4661a6` (implementation4dac7a2 plus reviewed whitespace correction), Pages35822306598 success, matching live marker and eight affected resources200/exact bytes. ProductionSEO29URLs0errors/four pre-existing Chicago warnings;35other public pages/assets200/exact bytes,36old local files unchanged. Live390px controls yield three records, third-party transfer exclusion,0overflow and no console warnings/errors. Verified2026-09-23T05:26:21Z. Independent final Bohr cycle-two PASS;204/204 tests. All earlier pending statements below are checkpoints, not current status.
+
 Final review: Bohr cycle-one PASS, no P0-P3; independently full204/204, focused35/35,90 extra constraint and6 date controls, state0,71snapshots, SEO0errors/four existing warnings, exact32paths/whitespace,29inventory parity and36other existing site files unchanged. Operator additionally verified age2/direct2night exclusion, mobile home-entry navigation, loaded image and no browser console errors. Push/Pages/production verification pending.
 
 September 23, 2026. FT-PUB-007 / LRN-043. Decision: implement one unranked, source-linked resort-policy comparison, then publish only after independent review and verified release. Current release state: `status/cancun-pages.md`. User September22 destination-start authority covers Cancun first and Orlando next; not a ten-city batch.

@@ -29,6 +29,7 @@ function validate(input) {
 
 function transferStatus(rule, input) {
   if (rule.rule === "extra") return "extra-under-standard-terms";
+  if (rule.rule !== "direct-offer") return "policy-unknown";
   if (["third-party", "flight-package"].includes(input.channel) || input.newReservation === false ||
       (input.nights !== null && input.nights < rule.minimumNights)) return "outside-published-offer";
   if (input.channel === "unknown" || input.nights === null || input.newReservation === null) return "conditions-unknown";

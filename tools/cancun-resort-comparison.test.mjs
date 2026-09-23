@@ -6,8 +6,8 @@ import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.
 const scenario = { childAges: [3, 7, 12], asOf: cancunEvidence.checkedOn };
 const compare = overrides => compareCancunFamily({ ...scenario, ...overrides });
 
-test("all three exact categories retain traceable first-party evidence", () => {
-  assert.equal(new Set(cancunEvidence.records.map(record => record.id)).size, 3);
+test("all six exact categories retain traceable first-party evidence", () => {
+  assert.equal(new Set(cancunEvidence.records.map(record => record.id)).size, 6);
   for (const record of cancunEvidence.records) {
     for (const field of [record.room, record.clubs, record.transfers, record.extras]) {
       assert.ok(field.sourceIds.length > 0);
@@ -98,4 +98,41 @@ test("returned results cannot mutate maintained source records", () => {
   result.records[0].room.sourceIds.push("invalid");
   result.records[0].children[0].sources[0].url = "invalid";
   assert.deepEqual(cancunEvidence, before);
+});
+
+test("larger-party and Hotel Zone starts retain capacity rather than booking claims", () => {
+  const large = compare({ childAges: [3, 5, 7, 9, 12] }).records;
+  const royalton = large.find(record => record.id === "royalton-splash-two-bedroom");
+  assert.equal(royalton.room.maximum, 8);
+  assert.equal(royalton.room.status, "disputed");
+  assert.match(royalton.room.capacityConflict, /6 versus 2/);
+  assert.equal(royalton.room.bookingAcceptance, "unknown");
+  assert.equal(royalton.children[0].status, "no-published-age-match");
+  const grand = large.find(record => record.id === "grand-family-suite");
+  assert.equal(grand.room.status, "within-published-maximum-not-confirmed");
+  assert.equal(grand.room.maximum, 7);
+  assert.match(grand.room.beds, /rollaway.*child/);
+  assert.equal(grand.room.bookingAcceptance, "unknown");
+  const ziva = compare({ childAges: [4, 12] }).records.find(record => record.id === "ziva-ocean-view-double");
+  assert.equal(ziva.area, "Cancun Hotel Zone");
+  assert.equal(ziva.room.maximum, 4);
+  assert.equal(ziva.room.status, "within-published-maximum-not-confirmed");
+  assert.equal(ziva.room.layoutStatus, "unknown");
+  assert.equal(compare().records.find(record => record.id === ziva.id).room.status, "above-published-maximum");
+});
+
+test("unknown transfer and club policy never inherits another property's offer or age band", () => {
+  for (const channel of ["unknown", "direct-suite", "third-party", "flight-package"]) {
+    const records = compare({ childAges: [3, 4, 12, 13, 17], channel, nights: 7, newReservation: true }).records;
+    const royalton = records.find(record => record.id === "royalton-splash-two-bedroom");
+    assert.equal(royalton.transfers.status, "policy-unknown");
+    const grand = records.find(record => record.id === "grand-family-suite");
+    assert.equal(grand.transfers.status, "policy-unknown");
+    assert.ok(grand.children.every(child => child.status === "no-published-age-match"));
+    assert.deepEqual(royalton.children.map(child => child.program), [null, "Kids Club", "Kids Club", null, null]);
+    const ziva = records.find(record => record.id === "ziva-ocean-view-double");
+    assert.ok(ziva.children.every(child => child.status === "no-published-age-match"));
+    assert.equal(ziva.transfers.status, "extra-under-standard-terms");
+    assert.equal(ziva.cost.total, null);
+  }
 });

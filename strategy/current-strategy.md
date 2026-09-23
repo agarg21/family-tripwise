@@ -4,6 +4,8 @@ Last updated: 2026-09-23
 
 ## September Expansion Direction
 
+Current September23 follow-up: Cancun is live (six destinations,29URLs). FT-IMP-030 addresses reproduced larger-party and Hotel Zone gaps on the existing page; six records are coverage, not a quota. Evidence: `docs/research/cancun-breadth-2026-09-23.md`; release truth: `status/cancun-pages.md`. Prior launch-pending language below is history. Orlando lodging remains next, not automatic activity-page eligibility.
+
 September23: FT-PUB-007 implements one Cancun policy comparison from the maintained model. Current launch/task evidence: `docs/research/cancun-launch-2026-09-23.md`; release status: `status/cancun-pages.md`. The new page is a preliminary constraint screen, not a reviewed best-resort or bookable-price ranking. A five-city live baseline becomes six destinations only after verified release. Orlando remains next, with its lodging job re-scoped independently of the historical activity hub. No new broad research prerequisite for Cancun.
 
 The user's September22 instruction to start more destinations supersedes the generic August depth-only hold for a bounded first wave: Cancun first build, Orlando next. Existing-city trust defects still take priority. FT-DEV-008 starts Cancun's maintained comparison model; FT-PUB-007 owns its single-page candidate and remaining evidence/interface/review gates. See `docs/plan/cancun-expansion-build.md`. LondonUK/WashingtonDC remain research, not launches. No ten-city batch, cadence quota or automatic hotel-to-activity intent transfer. Historical portfolio and August hold below describe prior state; the live portfolio remains five cities until a verified release.

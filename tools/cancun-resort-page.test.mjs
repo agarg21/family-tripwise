@@ -31,10 +31,10 @@ test("one indexable Cancun job has canonical, discovery and factual schema", () 
   assert.ok(read("ops/gsc-monitor.json").includes(url));
 });
 
-test("no-JavaScript surface retains three records, conflicts, costs and source links", () => {
+test("no-JavaScript surface retains six records, conflicts, costs and source links", () => {
   const overview = renderOverview();
-  assert.equal((overview.match(/class="resort-row"/g) ?? []).length, 3);
-  assert.equal((html.match(/class="result-card"/g) ?? []).length, 3);
+  assert.equal((overview.match(/class="resort-row"/g) ?? []).length, 6);
+  assert.equal((html.match(/class="result-card"/g) ?? []).length, 6);
   assert.match(html, /<form id="family-form" hidden>/);
   assert.match(html, /<noscript>/);
   for (const source of Object.values(cancunEvidence.sources)) assert.ok(overview.includes(source));
@@ -42,7 +42,15 @@ test("no-JavaScript surface retains three records, conflicts, costs and source l
   assert.match(overview, /minimum 3 nights/);
   assert.match(overview, /Round-trip CUN/);
   assert.match(overview, /MXN 79/);
-  assert.equal((overview.match(/Stay total: unknown/g) ?? []).length, 3);
+  assert.equal((overview.match(/Stay total: unknown/g) ?? []).length, 6);
+  assert.match(overview, /Child limit disputed: 6 versus 2/);
+  assert.match(html, /href="#grand-family-suite"/);
+  assert.match(overview, /Exact club-age rules: unknown/);
+  assert.match(overview, /MXN 85.40/);
+  assert.match(overview, /Interval International/);
+  assert.match(html, /href="#royalton-splash-two-bedroom"/);
+  assert.match(html, /href="#ziva-ocean-view-double"/);
+  assert.match(result({channel: "direct-suite", nights: 7, newReservation: true}), /Transfer inclusion is unknown/);
   assert.match(html, /We have not stayed at these resorts/);
 });
 

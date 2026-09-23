@@ -1,5 +1,9 @@
 # Cancun Expansion: First Build
 
+## Current Follow-Up
+
+FT-PUB-007 live/verified3075d37. FT-IMP-030 corrects seven-person and Hotel Zone gaps on that same URL with six maintained categories, not a count quota. Royalton child-limit conflict retained; Moon Palace seven-person and Ziva four-person categories add starts with explicit unknowns. Evidence/gates: `docs/research/cancun-breadth-2026-09-23.md`; release truth: `status/cancun-pages.md`. Earlier prototype/three-record notes are historical. Orlando follows this correction.
+
 ## September23 Delivery Checkpoint
 
 FT-PUB-007 now implements the single canonical `/where-to-stay/cancun-family-resorts.html`: three source-backed policy rows, default mixed-age results, per-child and booking-channel controls, official links and date/unknown handling. All ten sources refreshed September23; bounded review/price scan supports no quality or total-price claims. Current search overlap still supports one resort-choice job. Desktop/mobile proxy task passes; source and UI record in `docs/research/cancun-launch-2026-09-23.md`. Independent review and verified release remain required; current release status is `status/cancun-pages.md`. The September22 prototype-only statements below are historical. Orlando follows; no additional generic Cancun research gate.

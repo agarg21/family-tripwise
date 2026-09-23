@@ -1,5 +1,7 @@
 # Cancun Resort Comparison: Build One
 
+September23 FT-IMP-030: six categories,19 references; ten original sources checked this morning and additional references inspected with partial/unknown fields explicit. Royalton child limits and Sunscape capacity stay disputed. Ziva/Moon Palace club rules and Royalton/Moon Palace transfers remain unknown. See `docs/research/cancun-breadth-2026-09-23.md`; original ten-source account below describes the first build.
+
 Executable, source-backed comparison model and progressively enhanced comparison interface. Supports two adults and one to five children. This is a constraint screen, not a recommendation score or booking engine. FT-PUB-007 builds `site/where-to-stay/cancun-family-resorts.html`; verified release status lives in `status/cancun-pages.md`.
 
 Run from the repository root:

@@ -7,9 +7,9 @@ export const sources = (ids, label) => `<p class="sources">${ids.map((id, index)
 export function renderOverview() {
   return cancunEvidence.records.map(record => `<article class="resort-row" id="${esc(record.id)}">
     <header><h3>${esc(record.hotel)}</h3><p class="area">${esc(record.area)}</p><a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(record.hotel + " Mexico")}">Map location</a></header>
-    <div><h4>Room</h4><p><strong>${esc(record.room.category)}</strong></p><p class="key-fact">${record.room.capacityStatus === "disputed" ? "Capacity disputed: 4 versus 5" : `Published maximum: ${record.room.maximum}`}</p><p>${esc(record.room.beds)}</p>${list(record.room.checks)}${sources(record.room.sourceIds, "Official room details")}</div>
-    <div><h4>Club ages</h4>${list(record.clubs.programs.map(program => `${program.min}-${program.max}: ${program.name}${program.parentRequired ? "; parent must stay" : ""}${program.registration ? "; registration required" : ""}${program.pottyRequired ? "; fully toilet-trained" : ""}`))}${sources(record.clubs.sourceIds, "Official club rules")}<details><summary>Admission checks</summary>${list(record.clubs.checks)}</details></div>
-    <div><h4>Transfers &amp; extra costs</h4>${record.transfers.rule === "direct-offer" ? `<p>Round-trip ${esc(record.transfers.airport)} airport offer: minimum ${record.transfers.minimumNights} nights.</p>` : ""}${list(record.transfers.checks)}${sources(record.transfers.sourceIds, "Official transfer terms")}${list(record.extras.checks)}${sources(record.extras.sourceIds, "Official extras")}<p><strong>Stay total: unknown.</strong> No dated quote or availability confirmed.</p></div>
+    <div><h4>Room</h4><p><strong>${esc(record.room.category)}</strong></p><p class="key-fact">${record.room.capacityStatus === "disputed" ? esc(record.room.capacityConflict ?? "Capacity disputed: 4 versus 5") : `Published maximum: ${record.room.maximum}`}</p><p>${esc(record.room.beds)}</p>${list(record.room.checks)}${sources(record.room.sourceIds, "Official room details")}</div>
+    <div><h4>Club ages</h4>${record.clubs.programs.length ? list(record.clubs.programs.map(program => `${program.min}-${program.max}: ${program.name}${program.parentRequired ? "; parent must stay" : ""}${program.registration ? "; registration required" : ""}${program.pottyRequired ? "; fully toilet-trained" : ""}`)) : "<p>Exact club-age rules: unknown in this record.</p>"}${sources(record.clubs.sourceIds, record.clubs.programs.length ? "Official club rules" : "Official pages checked")}<details><summary>Admission checks</summary>${list(record.clubs.checks)}</details></div>
+    <div><h4>Transfers &amp; extra costs</h4>${record.transfers.rule === "direct-offer" ? `<p>Round-trip ${esc(record.transfers.airport)} airport offer: minimum ${record.transfers.minimumNights} nights.</p>` : ""}${list(record.transfers.checks)}${sources(record.transfers.sourceIds, record.transfers.rule === "unknown" ? "Official page checked" : "Official transfer terms")}${list(record.extras.checks)}${sources(record.extras.sourceIds, "Official extras")}<p><strong>Stay total: unknown.</strong> No dated quote or availability confirmed.</p></div>
   </article>`).join("\n");
 }
 
@@ -26,6 +26,7 @@ const childMessages = {
   "published-age-match-confirm-admission": "Published age match only; confirm admission and current conditions."
 };
 const transferMessages = {
+  "policy-unknown": "Transfer inclusion is unknown in this record; confirm your booking terms and transport cost.",
   "extra-under-standard-terms": "Transfers are extra under standard terms; check any package-specific inclusion.",
   "outside-published-offer": "Outside the published direct-booking transfer offer; check separate arrangements.",
   "conditions-unknown": "Transfer offer cannot be assessed until booking channel, nights and new-booking status are known.",
