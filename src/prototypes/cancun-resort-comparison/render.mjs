@@ -38,7 +38,7 @@ export function renderResults(result) {
   <div class="result-grid">${result.records.map(record => `<article class="result-card">
     <h3><a href="#${esc(record.id)}">${esc(record.hotel)}</a></h3>
     <p class="room-status" data-status="${esc(record.room.status)}">${esc(roomMessages[record.room.status])}</p>
-    ${record.room.layoutStatus === "unknown" ? "<p><strong>Sleeping layout unresolved:</strong> confirm every sleeping place and whether connection is guaranteed.</p>" : ""}
+${record.room.layoutStatus === "unknown" ? "<p><strong>Sleeping layout unresolved:</strong> confirm every sleeping place and whether connection is guaranteed.</p>" : ""}
     <ul class="child-results">${record.children.map((child, index) => `<li data-status="${esc(child.status)}"><strong>Child ${index + 1}, age ${child.age}${child.program ? `: ${esc(child.program)}` : ""}.</strong> ${esc(childMessages[child.status])}${child.registration === true ? " Registration required." : ""}</li>`).join("")}</ul>
     <p data-transfer="${esc(record.transfers.status)}">${esc(transferMessages[record.transfers.status])}</p>
     ${sources(record.room.sourceIds, "Confirm room")}${sources([...new Set(record.children.flatMap(child => child.sources.map(source => source.id)))], "Confirm club")}${sources(record.transfers.sources.map(source => source.id), "Confirm transfer")}

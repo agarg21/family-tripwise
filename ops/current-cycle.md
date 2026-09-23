@@ -8,6 +8,10 @@ Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
 
+FT-PUB-007 correction cleared: Bohr cycle-two PASS, no P0-P3;204/204,state0,SEO0errors/four existing warnings and complete origin/main-range whitespace pass. Only indentation correction and mechanical status evidence since initial review. Both action-recorded commits may proceed together after final fetch/no-divergence/range verification; production checks still pending.
+
+FT-PUB-007 release hold for mechanical whitespace correction only: commit4dac7a2 is local, not pushed. Staged check caught two generated whitespace-only lines missed by the unstaged tracked-only check. Shared renderer indentation corrected; cycle-two review/full QA and complete-range whitespace verification follow. No source, DOM, behavior or public-site change yet.
+
 FT-PUB-007 final gate: independent Bohr cycle-one PASS, no P0-P3, full204/204 and focused35/35 independently reproduced, plus90 constraint/6 date controls. All32 exact paths review-clean;29-URL inventory parity and36 other existing site files unchanged. Push/Pages/production verification pending. LRN-043 complete; next Orlando after verified Cancun release. Additional operator mobile boundary/home-entry checks and error-free console pass.
 
 FT-PUB-007 final pre-review QA: full204/204, focused35/35, state0,71snapshots, staticSEO0errors/four existing qualified Chicago missing-year warnings, exact32/32 paths and whitespace pass. All pre-existing destination HTML/shared CSS/JS byte-unchanged. Independent review then release verification are the only remaining gates; LRN-043 is complete today. Prior pending QA statements below are chronology.
