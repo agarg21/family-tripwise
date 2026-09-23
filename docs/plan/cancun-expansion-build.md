@@ -1,5 +1,9 @@
 # Cancun Expansion: First Build
 
+## September23 Delivery Checkpoint
+
+FT-PUB-007 now implements the single canonical `/where-to-stay/cancun-family-resorts.html`: three source-backed policy rows, default mixed-age results, per-child and booking-channel controls, official links and date/unknown handling. All ten sources refreshed September23; bounded review/price scan supports no quality or total-price claims. Current search overlap still supports one resort-choice job. Desktop/mobile proxy task passes; source and UI record in `docs/research/cancun-launch-2026-09-23.md`. Independent review and verified release remain required; current release status is `status/cancun-pages.md`. The September22 prototype-only statements below are historical. Orlando follows; no additional generic Cancun research gate.
+
 September22,2026. FT-DEV-008, direct user direction to start expanding destinations. Cancun is first build, Orlando next domestic destination; LondonUK/WashingtonDC remain second-wave research. This is not a ten-city launch authorization or a new publication cadence.
 
 ## What Happened

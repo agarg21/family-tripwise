@@ -27,6 +27,7 @@ const OPERATIONAL_TERMS =
 const DATE_RANGE =
   /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?,\s*(\d{4})\b/gi;
 const RESOLVED_TERMS = /\b(?:then\s+)?(?:reopened|resumed|resolved|completed|ended)\b/i;
+const SOURCE_CHECK_SUFFIX = /\b(?:rechecked|checked|updated|reviewed|verified|collected)(?:\s+on)?\s*:?\s*$/i;
 const CALENDAR_DATE =
   /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:\s*[-–]\s*(?:(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+)?(\d{1,2}))?(?:(?:\s*,\s*|\s+)(\d{4}))?\b/gi;
 
@@ -65,6 +66,7 @@ export function findExpiredOperationalNotices(html, { now = new Date() } = {}) {
     const finish = followingBoundaries.length > 0 ? Math.min(...followingBoundaries) + 1 : text.length;
     const excerpt = text.slice(start, finish).trim();
     const afterDate = text.slice(match.index + match[0].length, finish);
+    if (SOURCE_CHECK_SUFFIX.test(text.slice(start, match.index))) continue;
 
     if (end < today && OPERATIONAL_TERMS.test(excerpt) && !RESOLVED_TERMS.test(afterDate)) {
       notices.push({
@@ -118,7 +120,7 @@ export function findYearlessOperationalNotices(html) {
       const excerpt = text.slice(start, finish).trim();
       const beforeDate = text.slice(start, match.index);
       if (!OPERATIONAL_TERMS.test(excerpt)) continue;
-      if (/\b(?:checked|updated|reviewed|verified|collected)(?:\s+on)?\s*:?\s*$/i.test(beforeDate)) continue;
+      if (SOURCE_CHECK_SUFFIX.test(beforeDate)) continue;
       const key = `${match[0]}|${excerpt}`;
       if (seen.has(key)) continue;
       seen.add(key);

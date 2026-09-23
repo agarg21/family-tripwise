@@ -142,3 +142,15 @@ test("deduplicates identical passages without losing distinct date references", 
   const html = "<p>Closed August 11 and September 10.</p>";
   assert.deepEqual(findYearlessOperationalNotices(html + html).map((x) => x.dateText), ["August 11", "September 10"]);
 });
+
+test("source recheck dates are not operational end dates after the check day", () => {
+  const nextDay = new Date("2026-09-23T05:00:00Z");
+  const html = "<p>Notice rechecked September 22, 2026: the pool closure schedule is still uncertain.</p>";
+  assert.deepEqual(findExpiredOperationalNotices(html, { now: nextDay }), []);
+  assert.deepEqual(findYearlessOperationalNotices("<p>Closure notice rechecked September 22.</p>"), []);
+  const withExpiry = "<p>Notice rechecked September 22, 2026: pool closed through September 20, 2026.</p>";
+  assert.deepEqual(findExpiredOperationalNotices(withExpiry, { now: nextDay }).map(n => n.endDate), ["2026-09-20"]);
+  const chicago = readFileSync(new URL("../site/where-to-stay/chicago-family-hotels.html", import.meta.url), "utf8");
+  assert.deepEqual(findExpiredOperationalNotices(chicago, { now: nextDay }), []);
+  assert.equal(findYearlessOperationalNotices(chicago).length, 4);
+});

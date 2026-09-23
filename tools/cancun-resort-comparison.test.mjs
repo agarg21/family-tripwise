@@ -3,7 +3,7 @@ import test from "node:test";
 import { compareCancunFamily } from "../src/prototypes/cancun-resort-comparison/compare.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 
-const scenario = { childAges: [3, 7, 12], asOf: "2026-09-22" };
+const scenario = { childAges: [3, 7, 12], asOf: cancunEvidence.checkedOn };
 const compare = overrides => compareCancunFamily({ ...scenario, ...overrides });
 
 test("all three exact categories retain traceable first-party evidence", () => {
@@ -14,7 +14,7 @@ test("all three exact categories retain traceable first-party evidence", () => {
       for (const id of field.sourceIds) assert.equal(new URL(cancunEvidence.sources[id]).protocol, "https:");
     }
   }
-  assert.equal(cancunEvidence.publicationStatus, "prototype-not-published");
+  assert.equal(cancunEvidence.publicationStatus, "publication-candidate");
 });
 
 test("mixed-age family retains three independent decision failures", () => {
@@ -72,12 +72,12 @@ test("direct transfer offer requires new suite-only booking and minimum nights",
 test("no fabricated quote or ranking; source checks expire explicitly", () => {
   const result = compare();
   assert.equal(result.needsRecheck, false);
-  assert.equal(compare({ asOf: "2026-10-22" }).needsRecheck, true);
+  assert.equal(compare({ asOf: cancunEvidence.recheckOn }).needsRecheck, true);
   for (const record of result.records) {
     assert.equal(record.cost.total, null);
     assert.equal(record.cost.status, "unknown-not-quoted");
     assert.equal(record.score, undefined);
-    assert.ok(record.room.sources.every(source => source.checkedOn === "2026-09-22" && source.publishedOn === null));
+    assert.ok(record.room.sources.every(source => source.checkedOn === cancunEvidence.checkedOn && source.publishedOn === null));
   }
 });
 

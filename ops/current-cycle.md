@@ -1,12 +1,26 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-22
+Last updated: 2026-09-23
 
 ## Cycle Name
 
 Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
+
+FT-PUB-007 final gate: independent Bohr cycle-one PASS, no P0-P3, full204/204 and focused35/35 independently reproduced, plus90 constraint/6 date controls. All32 exact paths review-clean;29-URL inventory parity and36 other existing site files unchanged. Push/Pages/production verification pending. LRN-043 complete; next Orlando after verified Cancun release. Additional operator mobile boundary/home-entry checks and error-free console pass.
+
+FT-PUB-007 final pre-review QA: full204/204, focused35/35, state0,71snapshots, staticSEO0errors/four existing qualified Chicago missing-year warnings, exact32/32 paths and whitespace pass. All pre-existing destination HTML/shared CSS/JS byte-unchanged. Independent review then release verification are the only remaining gates; LRN-043 is complete today. Prior pending QA statements below are chronology.
+
+Before fixture edits: FT-PUB-007 exact scope expands to32 paths with `tools/chicago-family-hotels-page.test.mjs`, `tools/new-york-city-family-hotels-page.test.mjs`, `tools/san-antonio-family-hotels-page.test.mjs` and `tools/san-diego-hero-image.test.mjs`. Their isolated full-generator fixtures omit the newly imported source modules; copy the scoped comparison directory into fixtures, retain all idempotence/unchanged-byte assertions. Initial full run200/204; state metadata date mismatch corrected. This is the same launch dependency, not a second action or QA waiver.
+
+Current FT-PUB-007 checkpoint: implementation and LRN-043 source/task learning complete; focused35/35 and desktop/mobile1280/390/320 checks pass. One Cancun page, three records, ten sources refreshed; no current booking/price/quality claims. Exact28 paths registered, no old destination HTML/shared assets changed. Full QA, independent review and verified release pending. Evidence: `docs/research/cancun-launch-2026-09-23.md`; status: `status/cancun-pages.md`. No preview blocker remains. Next finish release, then Orlando; historical checkpoints below are chronology.
+
+FT-PUB-007 dependent QA repair registered before edits: add `tools/content-freshness.mjs` and `tools/content-freshness.test.mjs` to the exact scope (now28 paths including existing model test). September23 SEO QA falsely treats Chicago's September22 source-recheck dates as closure end dates. Repair only the source-date classification, retain real expired-date failures and yearless warnings, add next-day/current-page regression and same-sentence actual-expiry control. No Chicago HTML change or QA exemption. This is a release-gate dependency of the selected delivery, not a second content action.
+
+September23 first actual Eastern-day run (01:00EDT): selects FT-PUB-007 / LRN-043 to finish the authorized Cancun comparison page, integrating current sources and task validation. Exact25 paths, acceptance, measurement and production invariants registered in roadmap before implementation. Baseline016927d, two mechanical FT-DEV-008 dirty backfills preserved; fetch no incoming commits or divergence. GSC is reused September22 API evidence finalized conservatively throughSeptember20; prior September21 overlaps. No fresh API collection or aligned query cohort;71 public-safe snapshots require validation. No learning yet today. Official-source refresh and two live search samples support the narrow room/club/transfer screening job, not a best-resort ranking. Build, QA, review and production gates remain pending; no new URL live yet.
+
+FT-DEV-008 completion: `016927d03425d450ab789d4093067b76cd622c64` pushed to main after fresh fetch, no divergence and inspection of the sole reviewed unpushed commit; HEAD/origin equal and clean verified. Source/docs-only prototype, no Pages deployment or new public city page. Newton cycle-two PASS, full197/197 and focused9/9 stand. Next deliverable is FT-PUB-007, the Cancun comparison interface; Orlando follows. Only mechanical completion backfills remain local for the next transaction. Earlier pending labels below are chronology.
 
 FT-DEV-008 final gate: Newton cycle-two PASS, no P0-P3; full197/197, focused9/9, state0,71snapshots, exact15paths and whitespace pass. Source/docs-only Cancun prototype ready for push; no public city page. FT-PUB-007 is the next deliverable, Orlando follows with job-specific validation. No further broad research or user-start-approval prerequisite.
 

@@ -1,11 +1,13 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-22
+Last updated: 2026-09-23
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
 
 ## Ownership
+
+Current September23 selection: FT-PUB-007 implements Cancun's first public comparison candidate and completes LRN-043 source/task learning. One URL, three exact categories, no ranking or confirmed price/availability. Desktop/mobile controls and focused35tests pass; full QA, independent review and production gates remain. Current evidence `docs/research/cancun-launch-2026-09-23.md`; current release status `status/cancun-pages.md`. GSC reused September22 API throughSeptember20, not Cancun performance. Next: finish release, then Orlando. Prior prototype-only/pending labels below are chronology.
 
 FT-MAINT-007/008 now completed and production-verified: `f619bcaf55ac951f98b7279dc8adb35a07cf869f`, successful Pages `35793245524`, marker/target bytes/productionSEO pass. Prior pending release and preview-HOLD entries are chronology, not current work.
 
