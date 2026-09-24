@@ -1,8 +1,10 @@
 # Family Tripwise Current Strategy
 
-Last updated: 2026-09-23
+Last updated: 2026-09-24
 
 ## September Expansion Direction
+
+September24: FT-PUB-008 delivers the bounded Orlando lodging job next. One canonical comparison consolidates overlapping suite/water-amenity/park-base needs, with unknown booking acceptance and total costs explicit. Source/intent gate and limited preliminary scope are in `docs/research/orlando-launch-2026-09-24.md`; verified release truth in `status/orlando-pages.md`. Six live destinations/29URLs become seven/30 only after release verification. No hotel-demand transfer to the old activity hub, automatic hotel-count quota or second-wave launch. Existing URL observation windows remain protected.
 
 Current September23 follow-up: Cancun is live (six destinations,29URLs). FT-IMP-030 addresses reproduced larger-party and Hotel Zone gaps on the existing page; six records are coverage, not a quota. Evidence: `docs/research/cancun-breadth-2026-09-23.md`; release truth: `status/cancun-pages.md`. Prior launch-pending language below is history. Orlando lodging remains next, not automatic activity-page eligibility.
 

@@ -2,7 +2,11 @@
 
 Latest production evidence: September 17 `LRN-034` / `FT-IMP-028` is released and production-verified at action commit `c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6`, successful Pages run `35184964741`, matching marker and byte-identical target HTML. Production SEO and all three exact viewport target checks pass at `2026-09-17T05:15:36Z`. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-23
+Last updated: 2026-09-24
+
+## LRN-045 / September24 / FT-PUB-008
+
+Family decision: screen one suite for two adults/children4,7,10, November8-13 with Disney, Universal and a rest day. Hypothesis: dated official constraints can support preliminary screening without complete quotes if missing fields never become matches. Evidence: nine current official pages, two live qualitative query samples and representative publisher bodies inspected September24; date/party/fee controls on the new comparison. Result: support limited screening, reject a bookable/value winner. Occupancy, water admissions, seasonal operation and rate inclusion need separate fields. IHG exact configuration maximum stays unknown; no inference from admissions. Confidence high for source/rule fidelity, medium for usefulness, low for actual booking, satisfaction or SEO. Reusable lesson: separate independent constraints rather than collapsing them into a family-fit score. Trigger: changed official policy, confirmed unknown, actual comparable quote, failed family task or stronger competing join. Implement now under existing Orlando authority; QA/release truth in `status/orlando-pages.md`, evidence `docs/research/orlando-launch-2026-09-24.md`. Proxy-reviewed, not user-tested; source audit is today's completed learning, release is tracked separately.
 
 This ledger stores the pilot's bounded daily learning units and reusable lessons. It is not a heartbeat diary: unchanged health checks, repeated metrics, and narrative restatement are not learning events. Add an entry when source-dated evidence confirms or rejects a hypothesis, identifies a reproducible page gap, supports a `PRESERVE` decision, refreshes a material fact/conflict, or produces a useful community answer. Each Eastern calendar day should have at least one unit unless the cutoff has passed or a specific hard blocker is recorded in current-cycle state.
 

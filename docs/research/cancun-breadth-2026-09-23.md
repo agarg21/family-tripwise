@@ -1,5 +1,7 @@
 # Cancun Family-Shape Coverage
 
+Release completion: `996d64f4e0f3863f01468a4b74e60155a848d597`, Pages `35866425662` success at13:22:01UTC; live checks complete13:22:44UTC September23. Matching marker, all five changed resources200/exact bytes, productionSEO29URLs0errors/four existing warnings; live390px six-row/seven-person control, both disputes, unknown transfers, focus and0overflow, no console warnings/errors. Main/origin equal after reviewed push. Preview stopped, reviewer closed; no unshipped blocker. Pending gate statements below are chronology.
+
 September23,2026. FT-IMP-030 / LRN-044. Existing-page usefulness correction, not a new destination or resort-count target. Release truth: `status/cancun-pages.md`.
 
 ## Decision

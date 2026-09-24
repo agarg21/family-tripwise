@@ -1,11 +1,13 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-23
+Last updated: 2026-09-24
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
 
 ## Ownership
+
+Current September24 decision: FT-PUB-008 finishes the authorized Orlando lodging comparison, one URL consolidating suite/park/water constraints.24 exact paths and release invariants in JSON; current evidence `docs/research/orlando-launch-2026-09-24.md`, release truth `status/orlando-pages.md`. Initial focused9/full215 pass; browser/final review/release next. Latest `ops/gsc-snapshots/2026-09-23.json` / `ops/gsc-snapshots/2026-09-23.md` is fresh arrived API throughSeptember21,72validated, overlapping orientation only. Cancun FT-IMP-030 is already production-verified996d64f; earlier pending checkpoints below are historical. No repeated generic city survey or quote-completeness hold on this explicitly preliminary comparison. No activation of FT-PUB-006 activities.
 
 Current September23 second-run decision: FT-IMP-030 existing Cancun family-shape correction, six records with conflicts/unknowns. Evidence `docs/research/cancun-breadth-2026-09-23.md`; status `status/cancun-pages.md`;23 exact paths in JSON. Correction awaits final QA, review and verified deployment; Orlando next. Reused September22 GSC throughSeptember20, no Cancun query evidence.
 

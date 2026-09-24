@@ -12,6 +12,14 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
+FT-PUB-008 Sartre cycle2 **PASS**, no P0-P3: final whitespace/singular-night corrections, generated mirrors and mechanical review metadata confirmed. Independent215/215,state0,24exact stagedpaths/staging parity,42other unchanged site files and complete staged whitespace pass. No edits by reviewer. Commit/push and production verification remain.
+
+FT-PUB-008 post-review staged whitespace gate caught two empty conditional-line indentations in the new HTML, not included by unstaged tracked-only checks. Removed renderer indentation and corrected singular-night result heading. No policy/record change, no commit or push yet. Cycle2 read-only confirmation required; exact24-path scope unchanged.
+
+FT-PUB-008 Sartre (`01a0d1d5-dec7-7b40-b133-ca9d6f87fcc9`) cycle1 **PASS**, no P0-P3. Independently reviewed all24 paths againste3bf33b including final checkout-day rule and presentation changes;215/215 full,9/9 focused,1260 additional scenarios, source/public parity,30inventory/sitemap,42other site files unchanged,state0,72snapshots,whitespace andSEO0errors/four existing warnings. Official occupancy/fee/seasonal sources corroborated; unknowns/exclusions preserved. No reviewer edits; browser/image checks are operator-owned. Only mechanical verdict/release metadata follows; production verification remains required.
+
+FT-PUB-008 September24 independent read-only review pending.24 exact paths including four baseline Cancun mechanical completion backfills; new one-URL Orlando preliminary suite comparison. Assess source truth, unresolved occupancy vs admissions, seasonal limits/expected reopening, fee context/double counting, input boundaries, static/public model parity, discoverability30 and old-site invariants. Initial focused9/full215,72snapshots, localSEO0errors/four known warnings; final browser and state checks follow. No author-as-reviewer verdict.
+
 FT-IMP-030 Dirac (`01a0ce69-7cf2-72b1-b97d-15d621948bd9`) cycle1 **PASS**, no P0-P3. Complete23-path diff/new report and intentional release backfills reviewed. Independent206/206,state0,71snapshots,whitespace,SEO0errors/four existing warnings;1,920 additional scenarios, original3records/10sources unchanged, source/public parity,29URLs and39other site files unchanged. Royalton conflict/Moon Palace7/Ziva4 corroborated. Master final browser QA also passed1280/390/320; commit/Pages/live verification remain. No reviewer edits. Earlier pending entry below is chronology.
 
 FT-IMP-030 independent read-only review pending. Six-record correction,23 exact paths including four morning mechanical release backfills. Check Royalton conflict, unknown-policy isolation, original records unchanged and29URL invariants. Evidence: `docs/research/cancun-breadth-2026-09-23.md`. Earlier FT-PUB-007 review gates below subsequently released3075d37.

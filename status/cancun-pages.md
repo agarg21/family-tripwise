@@ -2,6 +2,8 @@
 
 ## Current Follow-Up: FT-IMP-030
 
+**Released and production-verified:** September23 13:22:44UTC, `996d64f4e0f3863f01468a4b74e60155a848d597`, Pages `35866425662` success. Matching marker and five affected resources200/exact bytes; productionSEO29URLs0errors/four existing Chicago warnings. Live390px six records/results/seven-person control, disputes/unknowns/focus/0overflow/console pass. Dirac cycle1 PASS,206tests. Earlier unshipped checkpoints below are history. No blocker; next Orlando. Cancun observation throughOctober21 and source deadlineOctober23 unchanged, same-day expansion annotated.
+
 Final gate: Dirac cycle1 PASS, no P0-P3;206/206 full,17/17 focused, state/snapshot/SEO checks and final-six-record desktop/mobile tasks pass. Commit and production verification are the remaining steps. No new URL, original3records unchanged. Detailed immutable evidence in the breadth report.
 
 September23 second run: six-category correction implemented locally, not shipped. Adds Ziva, Royalton Splash (child-limit conflict) and Moon Palace The Grand. Evidence: `docs/research/cancun-breadth-2026-09-23.md`. Final QA, independent review and production verification remain. No new URL; October21 observation boundary retained with same-day intervention, sources dueOctober23. Original three-record release below remains live until replacement verified.

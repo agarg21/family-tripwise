@@ -5,6 +5,7 @@ import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
 import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 import { cities, agePages } from "./page-generation/city-data.mjs";
 import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
+import { writeOrlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
 
@@ -560,6 +561,7 @@ writeSite("where-to-stay/new-york-city-family-hotels.html", newYorkCityFamilyHot
 writeSite("where-to-stay/san-antonio-family-hotels.html", sanAntonioFamilyHotelPage());
 writeSite("about.html", aboutPage());
 writeCancunResortPage(writeSite);
+writeOrlandoSuitePage(writeSite);
 
 const oldRedirects = [
   ["san-diego-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
@@ -691,6 +693,11 @@ ${cities.map((city) => `          <article class="activity-card">
             <p>Compare six named room categories, children's club ages, airport-transfer conditions and unresolved costs around Cancun.</p>
             <p><a class="text-link" href="./where-to-stay/cancun-family-resorts.html">Compare Cancun family resorts</a></p>
           </article>
+          <article class="activity-card">
+            <h3>Orlando family suites</h3>
+            <p>Compare Disney, Universal and off-site suite options, water-benefit date limits, room-capacity unknowns and published fee components.</p>
+            <p><a class="text-link" href="./where-to-stay/orlando-family-hotels.html">Compare Orlando family hotels</a></p>
+          </article>
         </div>
       </section>
       <section class="band intro-band">
@@ -737,6 +744,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://familytripwise.com/</loc></url>
   <url><loc>https://familytripwise.com/about.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/cancun-family-resorts.html</loc></url>
+  <url><loc>https://familytripwise.com/where-to-stay/orlando-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/san-diego-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/chicago-family-hotels.html</loc></url>
@@ -759,4 +767,4 @@ Sitemap: https://familytripwise.com/sitemap.xml
 
 upgradePriorityPages(outDir);
 
-console.log("Generated 26 SEO pages plus about, index, redirects, robots, and sitemap.");
+console.log("Generated 28 SEO pages plus about, index, redirects, robots, and sitemap.");
