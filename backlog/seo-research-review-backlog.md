@@ -44,7 +44,7 @@ Record source/retrieval dates, evidence classes, disagreements, unknowns and mai
 
 ### SRR-072: London UK larger-family lodging feasibility
 
-Action `FT-RES-050`; status **planned, unselected**; priority second-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+Action `FT-RES-050`; status **research complete, Dirac cycle-one PASS, native QA green** September24; docs-only push follows. Priority second-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`. Decision: reject a generic list; conditional exact-configuration comparison needs demonstrated information gain over existing specialist coverage, then separate London publication approval. Source/task result and next trigger: `docs/research/london-family-five-feasibility-2026-09-24.md`; LRN-046. No implementation candidate selected, no site change. Washington DC FT-RES-051 remains the next eligible independent research decision if no higher-priority work appears.
 
 Family task: Choose provisional lodging for a family of five needing usable sleeping arrangements and a suitable base for selected activity anchors.
 

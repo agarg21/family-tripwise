@@ -1,5 +1,7 @@
 # Orlando Suite Comparison Launch
 
+Release completed: `cf89d9b5ae6169eac159e2d8864844a62004d4c2`, successful Pages `35959414054` completed05:19:45UTC September24; live verification05:20:33UTC. Matching marker, seven affected resources200/exact bytes, productionSEO30URLs0errors/four existing Chicago warnings. Live390px seven-person limits, unknown capacity, checkoutOctober26 closure warning, one-night fees and no double fee addition pass; actual image loaded, focus correct,0overflow and console clean. HEAD/origin0/0. Earlier pending checkpoints are historical. No unshipped blocker. Observation/source boundaries unchanged; mechanical completion backfills ride next reviewed transaction.
+
 Final cycle2 review: Sartre PASS, no P0-P3; post-review staged whitespace correction and singular-night heading confirmed, full215/215/state0,24stagedpaths/mirrors/42other unchanged assets and complete staged whitespace pass. No commit/push yet at this checkpoint. Only mechanical immutable results follow.
 
 Action FT-PUB-008; learning LRN-045. Inspected September24,2026 Eastern. Decision: **implement now**, one preliminary lodging comparison at `/where-to-stay/orlando-family-hotels.html`, under September22 Cancun/Orlando expansion authority. This replaces the September20 generic publication defer with a deliberately narrower deliverable, not a claim that its missing booking evidence has been obtained. No activity hub, waterpark variant or second Orlando URL.
