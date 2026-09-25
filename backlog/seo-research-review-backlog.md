@@ -1,6 +1,6 @@
 # SEO Research & Review Backlog
 
-Last updated: 2026-09-21
+Last updated: 2026-09-25
 
 Queue note: this file preserves research and review handoffs. It is not a scheduler. Current selection lives in `ops/seo-roadmap.json`; during the September13-November13 renewed cycle, the Family Tripwise Master heartbeat is the only scheduler and each selected action must be registered before substantive work. The prior August12-September12 pilot is historical.
 
@@ -56,7 +56,7 @@ Record source/retrieval dates, evidence classes, disagreements, unknowns and mai
 
 ### SRR-073: Washington DC family lodging and activity-anchor feasibility
 
-Action `FT-RES-051`; status **planned, unselected**; priority second-wave. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+Action `FT-RES-051`; status **research complete; Epicurus cycle-one PASS, native QA green** September25; docs-only push next. LRN-047; eight registered docs/state paths. Reject generic inventory; retain conditional room-and-season concept, not implementation-ready or DC publication-approved. Evidence, three official category records, current publisher comparison and exact next gate: `docs/research/washington-dc-family-five-feasibility-2026-09-25.md`. At the next evidence-eligible expansion run test incremental answerability against Travel for Kids; no repeat broad inventory. Existing-page defects and qualified delivery take precedence. User-authorized research backlog addition September18, based on reviewed `FT-RES-046`.
 
 Family task: Compare three lodging options for a family of five needing a midday reset between selected museum visits.
 

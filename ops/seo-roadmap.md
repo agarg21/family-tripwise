@@ -1,13 +1,15 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
 
 ## Ownership
 
-Current September24 second-run decision: FT-RES-050 London UK feasibility research complete, Dirac cycle-one PASS with no P0-P3,215/215 full and16/16 focused tests; docs-only push follows. Reject generic inventory; retain conditional exact-configuration concept pending demonstrated task advantage and separate publication authority. Evidence `docs/research/london-family-five-feasibility-2026-09-24.md`, LRN-046; nine exact docs/state paths including four preserved morning release backfills. No site change or implementation candidate. FT-PUB-008 is production-verified cf89d9b, seven destinations/30URLs. GSC September23 JSON/Markdown is reused API evidence throughSeptember21,72validated; no query/launch attribution. Preserve all observation windows. FT-RES-051 is next eligible research absent higher-priority qualified work. Earlier launch/research pending checkpoints below are history.
+FT-RES-051 final gate: Epicurus cycle-one PASS/noP0-P3;215full/16focused/state0/73snapshots/exact8paths/whitespace pass; productionSEO30URLs0errors/four prior Chicago warnings, public preflight30URLs200. Docs-only push next. The research decision below is unchanged; its pending QA/review wording is the earlier checkpoint.
+
+Current September25 first-run decision: FT-RES-051 DC feasibility research and LRN-047 complete; QA/review then eight-path docs-only push pending. Reject generic inventory; conditional exact-room/meal/season concept and remaining gates are in `docs/research/washington-dc-family-five-feasibility-2026-09-25.md`. No DC implementation/publication selected. FT-RES-052 is independent queued research unless higher-priority delivery qualifies. Fresh `ops/gsc-snapshots/2026-09-24.json` / `ops/gsc-snapshots/2026-09-24.md`, API throughSeptember22,73validated:1406impressions/10clicks/50.91position,24/30indexed. Overlapping prior window and no query cohorts; no CTR or launch-effect inference. Site remains seven destinations/30URLs; all observation windows preserved. Prior London completion and other pending checkpoints below are history.
 
 Current September24 decision: FT-PUB-008 finishes the authorized Orlando lodging comparison, one URL consolidating suite/park/water constraints.24 exact paths and release invariants in JSON; current evidence `docs/research/orlando-launch-2026-09-24.md`, release truth `status/orlando-pages.md`. Initial focused9/full215 pass; browser/final review/release next. Latest `ops/gsc-snapshots/2026-09-23.json` / `ops/gsc-snapshots/2026-09-23.md` is fresh arrived API throughSeptember21,72validated, overlapping orientation only. Cancun FT-IMP-030 is already production-verified996d64f; earlier pending checkpoints below are historical. No repeated generic city survey or quote-completeness hold on this explicitly preliminary comparison. No activation of FT-PUB-006 activities.
 

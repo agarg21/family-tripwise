@@ -2,7 +2,11 @@
 
 Latest production evidence: September 17 `LRN-034` / `FT-IMP-028` is released and production-verified at action commit `c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6`, successful Pages run `35184964741`, matching marker and byte-identical target HTML. Production SEO and all three exact viewport target checks pass at `2026-09-17T05:15:36Z`. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
+
+## LRN-047 / September25 / FT-RES-051
+
+Family decision: one accommodation for two adults/children4,8,12 in Washington DC, November8-13, with museum-day room rest, cooking and indoor-pool preferences. Hypothesis: capacity plus kitchen/pool labels establish a workable base. September25 official category/amenity audit and live search/publisher comparison reject sufficiency: a six-person suite's table seats four; reheating differs from cooking; seasonal outdoor operation is not a November indoor backup. Two category capacity starts are supported, one unknown; actual booking, total cost and museum-return suitability remain unestablished. Confidence high for source distinctions, medium for task relevance, low for demand/novelty/satisfaction. Lesson: sleeping, cooking, dining and dated amenity access are independent fields, not one family-fit score; three properties are not a representative sample. Retain only a conditional room-and-season concept; next trigger is demonstrated added answerability versus existing specialist coverage, changed official policy or exact-party contradiction. No DC publication authority or implementation selected. Evidence/gates: `docs/research/washington-dc-family-five-feasibility-2026-09-25.md`. Source-based proxy research, not user-tested; today's learning complete, QA/release tracked separately.
 
 ## LRN-046 / September24 / FT-RES-050
 

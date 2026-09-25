@@ -12,6 +12,10 @@ This is the durable handoff between the Family Tripwise implementation operator 
 
 ## Review queue
 
+FT-RES-051 Epicurus `01a0d6f7-06b4-7f50-9a3b-da9b8705f4b1` cycle-one **PASS**, no P0-P3. Eight exact paths, preserved London backfills,215full/16focused/state0/73snapshots/oneLRN047/whitespace independently pass. Room-modal observations inherited, not independently reopened; uncertainty and research-only gate accepted. No reviewer writes. Operator productionSEO30URLs0errors/four known Chicago warnings and public preflight30URLs200 pass. Only mechanical immutable QA/review/release results follow; docs-only push next. Lower pending checkpoint is historical.
+
+FT-RES-051 / SRR-073 / LRN-047: research complete, independent read-only review pending for eight exact registered paths. Verify current official category/meal/pool claims and unknowns, two live search samples and publisher novelty limits, conditional research-only decision and separate DC launch gate, preserved three London mechanical backfills, no site/source/paid changes. Native full/focused QA and state/privacy/scope checks required. No reviewer edits; no actual booking, rendered product test or user testing claimed.
+
 FT-RES-050 Dirac `01a0d388-b528-7b40-ad4f-ff29ec213d3d` cycle-one **PASS**, no P0-P3. Independent source/category/date/novelty checks,215/215 full,16/16focused,state0,72snapshots,productionSEO30URLs0errors/four prior Chicago warnings,Orlando Pages/marker,exact9paths/oneLRN046/whitespace/no site-source-tool diff all pass. Four baseline mechanical release backfills preserved. No reviewer edits. Only immutable QA/verdict/release results follow; docs-only push next.
 
 FT-RES-050 / SRR-072 / LRN-046: independent read-only review requested for nine exact docs/state paths in the roadmap. Verify three official category claims/unknowns, task boundaries, publisher/date/novelty limits, conditional research-only decision, no London launch approval, no paid calls, preserved four Orlando completion backfills and zero site/source diff. Full/focused native QA and public-safe snapshot checks required. No rendered or real-user test claimed; no review edits permitted.
