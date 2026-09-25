@@ -68,7 +68,9 @@ Record source/retrieval dates, evidence classes, disagreements, unknowns and mai
 
 ### SRR-074: Validate destination keyword coverage and seasonality limits
 
-Action `FT-RES-052`; status **planned, unselected**; priority supporting-research. User-authorized backlog addition September18, based on reviewed `FT-RES-046`.
+Final gate September25: Galileo cycle1 PASS_WITH_P3/noP0-P2;215full/16focused/state0/73snapshots/exact8paths/whitespace pass. Minor publisher-date note retained in review. Docs-only push next; no implementation or publication selected. Lower pending QA/review wording is historical.
+
+Action `FT-RES-052`; September25 research complete, QA/review and docs-only push pending; priority supporting-research. User-authorized backlog addition September18, based on reviewed `FT-RES-046`. Result and exact next gate: `docs/research/destination-demand-coverage-2026-09-25.md`, LRN-048. Relative activity signal is recoverable; monthly missingness and seasonal recurrence remain unresolved. Next eligible expansion task is Orlando activity-task revalidation, not implementation or activation of FT-PUB-006. No paid call or site change.
 
 Family task: Determine whether missing child-worded demand or seasonal spikes would change the family-planning research order.
 
