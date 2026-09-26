@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "site": "family-tripwise",
+  "property": "sc-domain:familytripwise.com",
+  "visibility": "public-summary",
+  "collection_mode": "search-console-api-readonly",
+  "collected_at": "2026-09-26T14:30:21.958Z",
+  "data_through": "2026-09-24",
+  "requested_period_end": "2026-09-24",
+  "completeness": "finalized-conservative",
+  "finalization_basis": "conservative-two-day-lag",
+  "gsc": {
+    "sitemap_status": "Success",
+    "sitemap_last_read": "2026-07-27T16:21:58.188Z",
+    "sitemap_errors": 0,
+    "sitemap_warnings": 0,
+    "discovered_pages": 28,
+    "discovered_videos": 0,
+    "performance": {
+      "status": "finalized",
+      "period_start": "2026-08-28",
+      "period_end": "2026-09-24",
+      "latest_known_impressions": 1432,
+      "latest_known_clicks": 10,
+      "latest_known_ctr_percent": 0.7,
+      "latest_known_average_position": 50.29,
+      "snapshot_date": "2026-09-24",
+      "page_rows": [
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+          "clicks": 4,
+          "impressions": 99,
+          "ctr_percent": 4.04,
+          "average_position": 36.08
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+          "clicks": 4,
+          "impressions": 90,
+          "ctr_percent": 4.44,
+          "average_position": 35.29
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+          "clicks": 1,
+          "impressions": 50,
+          "ctr_percent": 2,
+          "average_position": 20.74
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+          "clicks": 1,
+          "impressions": 406,
+          "ctr_percent": 0.25,
+          "average_position": 61.01
+        },
+        {
+          "url": "https://familytripwise.com/",
+          "clicks": 0,
+          "impressions": 14,
+          "ctr_percent": 0,
+          "average_position": 17
+        },
+        {
+          "url": "https://familytripwise.com/about.html",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "average_position": 6
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/chicago-with-kids.html",
+          "clicks": 0,
+          "impressions": 21,
+          "ctr_percent": 0,
+          "average_position": 44.14
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html",
+          "clicks": 0,
+          "impressions": 41,
+          "ctr_percent": 0,
+          "average_position": 16.32
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+          "clicks": 0,
+          "impressions": 54,
+          "ctr_percent": 0,
+          "average_position": 47.72
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+          "clicks": 0,
+          "impressions": 13,
+          "ctr_percent": 0,
+          "average_position": 12.69
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+          "clicks": 0,
+          "impressions": 32,
+          "ctr_percent": 0,
+          "average_position": 19.16
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr_percent": 0,
+          "average_position": 78
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+          "clicks": 0,
+          "impressions": 28,
+          "ctr_percent": 0,
+          "average_position": 23.61
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "average_position": 53.4
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+          "clicks": 0,
+          "impressions": 104,
+          "ctr_percent": 0,
+          "average_position": 66.7
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+          "clicks": 0,
+          "impressions": 38,
+          "ctr_percent": 0,
+          "average_position": 49.89
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+          "clicks": 0,
+          "impressions": 236,
+          "ctr_percent": 0,
+          "average_position": 58.18
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+          "clicks": 0,
+          "impressions": 20,
+          "ctr_percent": 0,
+          "average_position": 19.9
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+          "clicks": 0,
+          "impressions": 132,
+          "ctr_percent": 0,
+          "average_position": 56.77
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "average_position": 10.7
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+          "clicks": 0,
+          "impressions": 35,
+          "ctr_percent": 0,
+          "average_position": 47.89
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+          "clicks": 0,
+          "impressions": 39,
+          "ctr_percent": 0,
+          "average_position": 24.08
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "average_position": 16.33
+        }
+      ]
+    },
+    "priority_inspection": {
+      "inspected": 31,
+      "indexed": 24,
+      "not_indexed": 7,
+      "not_indexed_urls": [
+        "https://familytripwise.com/contributors/miles-rowan.html",
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+        "https://familytripwise.com/things-to-do/chicago-with-teens.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-teens.html"
+      ],
+      "unknown": 0,
+      "unknown_urls": [],
+      "indexing_requested": false,
+      "urls": [
+        {
+          "url": "https://familytripwise.com/",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-18T01:04:31Z"
+        },
+        {
+          "url": "https://familytripwise.com/about.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-31T23:40:33Z"
+        },
+        {
+          "url": "https://familytripwise.com/contributors/miles-rowan.html",
+          "indexed": false,
+          "verdict": "NEUTRAL",
+          "coverage_state": "URL is unknown to Google",
+          "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+          "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+          "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+          "last_crawl_time": null
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+          "indexed": false,
+          "verdict": "NEUTRAL",
+          "coverage_state": "URL is unknown to Google",
+          "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+          "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+          "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+          "last_crawl_time": null
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+          "indexed": false,
+          "verdict": "NEUTRAL",
+          "coverage_state": "URL is unknown to Google",
+          "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+          "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+          "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+          "last_crawl_time": null
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-16T01:11:49Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-04T19:31:29Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-29T13:31:18Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-22T16:36:33Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-22T22:04:55Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-31T02:54:34Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-05T10:23:32Z"
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/chicago-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-31T18:44:11Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-29T17:40:12Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-25T06:54:47Z"
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-31T10:54:04Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+          "indexed": false,
+          "verdict": "NEUTRAL",
+          "coverage_state": "URL is unknown to Google",
+          "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+          "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+          "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+          "last_crawl_time": null
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-10T22:37:30Z"
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-29T06:41:49Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-05T00:26:22Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-25T06:45:19Z"
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-23T02:17:26Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-09-05T02:09:05Z"
+        },
+        {
+          "url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-29T07:53:38Z"
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+          "indexed": false,
+          "verdict": "NEUTRAL",
+          "coverage_state": "URL is unknown to Google",
+          "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+          "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+          "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+          "last_crawl_time": null
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/chicago-with-teens.html",
+          "indexed": false,
+          "verdict": "NEUTRAL",
+          "coverage_state": "URL is unknown to Google",
+          "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+          "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+          "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+          "last_crawl_time": null
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-07-05T04:41:37Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-07-29T16:11:35Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+          "indexed": false,
+          "verdict": "NEUTRAL",
+          "coverage_state": "URL is unknown to Google",
+          "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+          "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+          "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+          "last_crawl_time": null
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-08-24T04:51:05Z"
+        },
+        {
+          "url": "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
+          "indexed": true,
+          "verdict": "PASS",
+          "coverage_state": "Submitted and indexed",
+          "indexing_state": "INDEXING_ALLOWED",
+          "page_fetch_state": "SUCCESSFUL",
+          "robots_txt_state": "ALLOWED",
+          "last_crawl_time": "2026-07-04T21:58:43Z"
+        }
+      ]
+    }
+  },
+  "private_fields_omitted": [
+    "credentials",
+    "complete raw query rows",
+    "country and device rows"
+  ]
+}
