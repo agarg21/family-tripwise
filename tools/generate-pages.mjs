@@ -6,6 +6,7 @@ import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs
 import { cities, agePages } from "./page-generation/city-data.mjs";
 import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { writeOrlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
+import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
 
@@ -120,6 +121,7 @@ function hero(city, h1, intro, lastUpdated, sourceNote) {
         <div class="container">
           <p class="eyebrow">${esc(city.name)}, ${esc(city.state)}</p>
           <h1>${esc(h1)}</h1>
+          ${contributorCredit()}
           <p>${esc(intro)}</p>
         </div>
       </section>
@@ -473,6 +475,7 @@ ${staticNav("./")}
             <p>Miles is the name of our AI research contributor, with a travel-loving personality: curious about the next destination, meticulous about the details, and always making room in the plan for a break.</p>
             <p>Miles helps research official sources, compare room and activity details, draft planning notes, and flag conflicting or missing information. This is an AI role in our publishing workflow, not a separate human employee or a claim of expertise from experience.</p>
             <p>Miles has no personal trips, hotel stays, or lived experience. AI can miss or misread details; source links, check dates, and unresolved questions matter more than the persona. This profile introduces the role, not a claim that Miles authored every existing guide.</p>
+            <p><a href="./contributors/miles-rowan.html">Read Miles Rowan's contributor profile</a></p>
           </article>
         </div>
         <h3>Research, review, and responsibility</h3>
@@ -588,6 +591,7 @@ writeSite("where-to-stay/chicago-family-hotels.html", chicagoFamilyHotelPage());
 writeSite("where-to-stay/new-york-city-family-hotels.html", newYorkCityFamilyHotelPage());
 writeSite("where-to-stay/san-antonio-family-hotels.html", sanAntonioFamilyHotelPage());
 writeSite("about.html", aboutPage());
+writeSite("contributors/miles-rowan.html", milesProfilePage());
 writeCancunResortPage(writeSite);
 writeOrlandoSuitePage(writeSite);
 
@@ -771,6 +775,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://familytripwise.com/</loc></url>
   <url><loc>https://familytripwise.com/about.html</loc></url>
+  <url><loc>https://familytripwise.com/contributors/miles-rowan.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/cancun-family-resorts.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/orlando-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/san-diego-family-hotels.html</loc></url>

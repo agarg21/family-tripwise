@@ -1,3 +1,5 @@
+import { contributorCredit } from "./contributors.mjs";
+
 export function createFamilyHotelPages({ esc, pageShell }) {
 const sanDiegoFamilyHotels = [
   {
@@ -260,6 +262,7 @@ function sanDiegoFamilyHotelPage() {
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
           <h1>Top Family Hotels in San Diego: 12 Options by Trip Style</h1>
+          ${contributorCredit()}
           <p>Compare 12 San Diego family hotels by pool and beach access, room setup, breakfast or kitchen needs, approximate nightly price, location, and themes from sampled online reviews.</p>
         </div>
       </section>
@@ -574,6 +577,7 @@ function lasVegasFamilyHotelPage() {
         <div class="container">
           <p class="eyebrow">Las Vegas family hotels</p>
           <h1>Top Family Hotels in Las Vegas: 10 Options by Trip Style</h1>
+          ${contributorCredit()}
           <p>Compare ten Las Vegas family hotels by room setup, pool value, casino or non-gaming context, approximate total nightly price, location, and themes from sampled online reviews.</p>
         </div>
       </section>
@@ -856,6 +860,7 @@ function chicagoFamilyHotelPage() {
         <div class="container">
           <p class="eyebrow">Chicago family hotels</p>
           <h1>Top Family Hotels in Chicago: 10 Options by Trip Style</h1>
+          ${contributorCredit()}
           <p>Compare ten Chicago family hotels by room setup, breakfast or kitchen utility, indoor pool, location, approximate total nightly price, and themes from sampled online reviews.</p>
         </div>
       </section>
@@ -1179,6 +1184,7 @@ function sanAntonioFamilyHotelPage() {
         <div class="container">
           <p class="eyebrow">San Antonio family hotels</p>
           <h1>Top Family Hotels in San Antonio: 12 Options by Trip Style</h1>
+          ${contributorCredit()}
           <p>Compare twelve San Antonio family hotels and resorts by water features, room function, breakfast or kitchen utility, location, approximate total nightly price, and themes from recent online reviews.</p>
         </div>
       </section>
@@ -1480,6 +1486,7 @@ function newYorkCityFamilyHotelPage() {
         <div class="container">
           <p class="eyebrow">New York City family hotels</p>
           <h1>Top Family Hotels in New York City: 12 Options by Trip Style</h1>
+          ${contributorCredit()}
           <p>Compare twelve New York City family hotels by room layout, published occupancy, kitchen or breakfast utility, location, approximate total nightly price, and themes from sampled online reviews.</p>
         </div>
       </section>

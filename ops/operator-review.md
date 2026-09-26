@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-09-26 - FT-IMP-032 linked contributor credits
+
+Cycle-one PASS, no P0-P3, from Copernicus (`01a0dd60-68e4-7991-8c28-98c8844f254c`). Independent scope/baseline/generator/trust/URL checks passed. Operator completed 229 full/six focused tests and 56 rendered credit cases across all guides at320/1280, profile at390/320/1280, keyboard credit-to-profile-to-founder navigation. All release prerequisites met; exact-path push and production checks next. No material changes after consensus.
+
+Independent review requested for the direct-user 46-path action registered in `docs/plan/contributor-credits-2026-09-26.md`. All 28 guides receive one linked, explicitly AI research credit; the dedicated supporting profile explains historical attribution, separate AI review and publisher accountability. No invented human credentials or firsthand travel. Native QA: 229 full tests, six focused, state/SEO zero errors; four existing Chicago date warnings plus the generic 900-word warning for the intentionally concise identity page. Exact baseline comparison proves every guide is otherwise byte-identical. Rendering/review/release next. Prior completion backfills preserved; unrelated Orlando research remains unstaged.
+
 ## 2026-09-26 - FT-IMP-031 contributor profiles
 
 Cycle-one PASS from Raman (`01a0dd4c-ef6d-7670-905e-8f1532f5996d`), no P0-P3. Reviewer independently verified scope, truthfulness, exact supplied link, unique IDs/labels, generator parity, 3 focused tests, state, SEO and whitespace. Operator full226 and desktop1280/mobile390/320 checks pass; Miles click lands at96px, founder anchor95.8px, no overflow. No material change after consensus; mechanical results only. Commit/push and production verification next.

@@ -7,6 +7,10 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+FT-IMP-032 final gate: Copernicus cycle-one PASS/no findings, 229 full/six focused tests, all 56 rendered guide-credit cases, profile/navigation and byte-preservation checks pass. Exact 46-path release and production checks next. Current decision and measurement boundaries below unchanged.
+
+Current FT-IMP-032: implement the user's requested AI research credit on all 28 guides, linking a dedicated Miles Rowan profile. Exact 46-path scope, attribution-only observation-window intervention and acceptance are in `docs/plan/contributor-credits-2026-09-26.md`. Native QA passes (229 tests, six focused, state/SEO zero errors). Rendering, independent review and verified release are next. One supporting identity URL, no new destination; existing guide content/dates preserved. FT-IMP-031 was production-verified at `6027e17637d2c7c87f25e4fdea3d39c476112a78` / Pages `36236587941`; its lower pre-release checkpoints are historical.
+
 FT-IMP-031 pre-release: Raman cycle-one PASS; 226 full/3 focused tests, state/SEO/whitespace and 1280/390/320 rendering/anchor checks pass. Exact-path release and production verification next. This supersedes the pending implementation/browser/review checkpoints below.
 
 Direct-user FT-IMP-031 implements one named AI contributor (Miles Rowan) and the founder's approved LinkedIn profile within the existing About page. Scope and acceptance: `docs/plan/contributor-profiles-2026-09-26.md`. Profiles explicitly separate AI research, human accountability and actual human review. Native tests pass; rendering, independent review and verified release are pending. FT-RES-054 source/docs push is already verified at `2e13f7080395a00650510be2298508881eb44eb2`; its publication gates are unchanged. Earlier checkpoints below are historical.

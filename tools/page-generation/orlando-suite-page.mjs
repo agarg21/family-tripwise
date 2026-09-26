@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { contributorCredit } from "./contributors.mjs";
 import { checkedOn, recheckOn, sources, suites } from "./orlando-suite-data.mjs";
 import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-model.mjs";
 
@@ -25,6 +26,7 @@ export function orlandoSuitePage() {
   <main id="main">
     <section class="intro">
       <p class="eyebrow">Orlando, Florida</p><h1>Orlando family hotels</h1>
+      ${contributorCredit()}
       <p class="lede">Room for everyone, the right park base, and water benefits that actually apply to your dates.</p>
       <p>Three suite options across Disney, Universal and an off-site waterpark base. This is a focused comparison for a family considering one room, not a best-hotel ranking or a complete Orlando directory.</p>
       <p>Official sources checked <time datetime="${checkedOn}">September 24, 2026</time>. <span id="freshness">Next source review due ${recheckOn}; verify changing terms before paying.</span></p>

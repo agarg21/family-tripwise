@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { contributorCredit } from "./contributors.mjs";
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
 import { childFields, renderOverview, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
@@ -27,6 +28,7 @@ export function cancunResortPage() {
     <section class="page-intro">
       <p class="eyebrow">Cancun area, Mexico</p>
       <h1>Cancun family resorts</h1>
+      ${contributorCredit()}
       <p>Six all-inclusive resorts, compared by the room and policy details that can change a family booking. This is a focused planning comparison, not a ranking of every resort.</p>
       <ul>
         <li><strong>Two adults and two children, Hotel Zone:</strong> <a href="#ziva-ocean-view-double">Hyatt Ziva's Ocean View Double</a> publishes a four-person maximum; exact bedding and club-age rules still need checking.</li>

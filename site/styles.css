@@ -994,6 +994,62 @@ input {
   }
 }
 
+.page-hero p.contributor-credit,
+p.contributor-credit {
+  max-width: 100%;
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contributor-credit a,
+.contributor-profile a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contributor-credit a:focus-visible,
+.contributor-profile a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.contributor-profile {
+  max-width: 860px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.contributor-profile section {
+  padding: 24px 0;
+}
+
+.contributor-profile section + section {
+  border-top: 1px solid var(--line);
+}
+
+.contributor-profile h1 {
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.contributor-profile h2 {
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.contributor-profile p,
+.contributor-profile li {
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contributor-profile .profile-intro {
+  font-size: 20px;
+}
+
 @media (max-width: 560px) {
   .snapshot,
   fieldset,
