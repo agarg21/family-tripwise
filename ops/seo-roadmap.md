@@ -7,6 +7,10 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+FT-IMP-031 pre-release: Raman cycle-one PASS; 226 full/3 focused tests, state/SEO/whitespace and 1280/390/320 rendering/anchor checks pass. Exact-path release and production verification next. This supersedes the pending implementation/browser/review checkpoints below.
+
+Direct-user FT-IMP-031 implements one named AI contributor (Miles Rowan) and the founder's approved LinkedIn profile within the existing About page. Scope and acceptance: `docs/plan/contributor-profiles-2026-09-26.md`. Profiles explicitly separate AI research, human accountability and actual human review. Native tests pass; rendering, independent review and verified release are pending. FT-RES-054 source/docs push is already verified at `2e13f7080395a00650510be2298508881eb44eb2`; its publication gates are unchanged. Earlier checkpoints below are historical.
+
 FT-RES-054 final gate: internal model complete, Huygens cycle2 PASS,223full/8focused/state0/exact12paths/whitespace; source/docs push next. Live site unchanged. Earlier pending QA/review checkpoints are historical; public gates unchanged.
 
 Latest evidence: `ops/gsc-snapshots/2026-09-25.json` and `ops/gsc-snapshots/2026-09-25.md`, conservatively finalized throughSeptember23. This transaction is FT-RES-054 / SRR-076; the historical Chicago FT-RES-053 is unchanged.

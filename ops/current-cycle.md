@@ -8,6 +8,12 @@ Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
 
+FT-IMP-031 pre-release: profiles implemented; Raman cycle-one PASS/no findings, 226 full/3 focused tests and state/SEO/whitespace pass (four prior Chicago warnings). Desktop1280/mobile390/320 and actual profile-anchor navigation passed. Exact eight-path commit/push and About production verification next. Registration/history below remains unchanged; no destination observation window touched.
+
+Direct-user FT-IMP-031: implement founder and explicitly AI contributor profiles on the existing About page; registration, exact scope, evidence and acceptance in `docs/plan/contributor-profiles-2026-09-26.md`. User supplied founder LinkedIn and requested one named AI contributor. No destination page or new URL change. Existing FT-RES-054 backfills preserved; its public-scope gates remain unchanged. Implementation/QA/review/release pending.
+
+FT-RES-054 source/docs push verified September26 05:15:20UTC: `2e13f7080395a00650510be2298508881eb44eb2`. Fresh fetch/no divergence, complete sole reviewed range and12exactpaths checked; push succeeded, HEAD/origin matched and clean before these mechanical backfills. Huygens cycle2 PASS,223tests; LRN-049 complete and internal model committed. Live site unchanged, no Pages release needed or technical blocker. Next public-scope/authority and rendered-validation gates unchanged. Reviewer closed. Three mechanical completion backfills retained for next substantive transaction; no metadata-only commit. Lower pending checkpoints are historical.
+
 FT-RES-054 final gate: Huygens cycle2 PASS/no findings;223full/8focused/state0/exact12paths/whitespace pass. Internal comparison and LRN-049 complete, source/docs push next; live site unchanged and healthy. Public-scope/authority and rendered validation remain next expansion gates, no technical blocker. Earlier pending checkpoints are historical.
 
 FT-RES-054 implementation and LRN-049 learning complete; internal model only, live site unchanged. Huygens cycle1 PASS_WITH_P3 identified a UTC-versus-Orlando default-date edge case; corrected with a midnight-boundary regression test, cycle2 pending. Full223/223, focused8/8, state0,74snapshots, local/productionSEO0errors/four existing Chicago warnings, freshness0expired and public preflight30URLs200. Exact12paths; no technical blocker. Next is reviewed source/docs push, then the separately gated public-scope decision documented in the research record. Earlier registration checkpoints are history.

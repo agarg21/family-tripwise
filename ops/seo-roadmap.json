@@ -20,13 +20,34 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-031",
+      "title": "Add transparent founder and AI contributor profiles",
+      "kind": "improvement",
+      "status": "in_progress",
+      "selected_on": "2026-09-26",
+      "target_urls": ["https://familytripwise.com/about.html"],
+      "target_paths": ["tools/generate-pages.mjs", "site/about.html", "tools/about-page.test.mjs", "docs/plan/contributor-profiles-2026-09-26.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md"],
+      "evidence": "Direct user request for one named AI contributor and approved founder LinkedIn; missing accountability and stale scope on About page.",
+      "acceptance_criteria": ["Founder profile with exact approved link; Miles Rowan explicitly AI, without firsthand or human-review claims.", "Existing About anchors only; scope refreshed; native QA, desktop/mobile and independent review before release."],
+      "measurement_plan": "Proxy accountability/disclosure/link checks; no ranking or satisfaction attribution. See docs/plan/contributor-profiles-2026-09-26.md.",
+      "production_invariant": "Only site/about.html public bytes change. Preserve destination observation windows, URL inventory, sitemap, metadata and canonical; verify live profile anchors, approved LinkedIn and AI/human review boundaries.",
+      "release_state": "review-clean-awaiting-release",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a0dd4c-ef6d-7670-905e-8f1532f5996d"],
+      "qa_result": "226 full/3 focused tests, state/SEO/whitespace pass; four prior Chicago warnings; 1280/390/320 screenshots and anchor navigation, no overflow. Only About public output differs."
+    },
+    {
       "id": "FT-RES-054",
       "research_backlog_id": "SRR-076",
       "title": "Validate and model Orlando non-park rest-day constraints",
       "kind": "research",
       "status": "completed",
       "completed_on": "2026-09-26",
-      "release_state": "review-clean-awaiting-source-docs-push",
+      "release_state": "source-docs-pushed",
+      "release_commit": "2e13f7080395a00650510be2298508881eb44eb2",
+      "released_at": "2026-09-26T05:15:20Z",
+      "release_verification": "Fresh fetch/no divergence, sole reviewed range/12exactpaths inspected; push succeeded, HEAD/origin matched and clean before mechanical backfills. No site/generator change, Pages not required.",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_agent_ids": ["01a0dc20-598b-7f02-8349-66db80b1c96d"],
@@ -39,7 +60,7 @@
       "acceptance_criteria": ["Two current query samples and representative alternatives inspected for one mixed-age non-park/rest-day task.", "Official constraints, conflicts, unknowns and source dates retained; no unsupported route, safety or suitability assurances.", "Unpublished three-record model separates weekday exception warnings, conditional/unknown re-entry, advisory duration and scoped child-age guidance; strict input/date/freshness and output-isolation tests.", "Explicit implement/candidate/preserve/reject decision with remaining gate, native QA and independent read-only review."],
       "measurement_plan": "Proxy task answerability and evidence traceability, not demand forecast, real-user testing or satisfaction.",
       "production_invariant": "Unpublished source-model and research only, no site/generator/URL/paid/account change. Preserve observation windows and three baseline mechanical backfills. FT-PUB-006 publication authority is not inferred.",
-      "notes": "First actual Eastern run September26; no unfinished eligible release or known qualified implementation bypassed. Source/task learning and unpublished comparison implemented in same action. Full223/focused8 pass; Huygens cycle1 PASS_WITH_P3, Orlando-date correction awaiting cycle2. Next eligible expansion action is public-scope/authority decision and rendered interface validation if authorized; FT-PUB-006 not activated. No further broad demand report prerequisite."
+      "notes": "First actual Eastern run September26; no unfinished eligible release or known qualified implementation bypassed. Source/task learning and unpublished comparison implemented in same action. Full223/focused8 pass; Huygens cycle2 PASS, source/docs push verified. Next eligible expansion action is public-scope/authority decision and rendered interface validation if authorized; FT-PUB-006 not activated. No further broad demand report prerequisite."
     },
     {
       "id": "FT-PUB-008",
