@@ -13,13 +13,12 @@ test("About profiles distinguish the founder from the AI contributor", () => {
   assert.match(html, /Apoorva Garg on LinkedIn/);
   assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/apoorvag20\/"/);
   assert.match(html, /Founder and publisher/);
-  assert.match(html, /AI research contributor &middot; not a human traveler/);
-  assert.match(html, /Miles has no personal trips, hotel stays, or lived experience/);
-  assert.match(html, /not a claim that Miles authored every existing guide/);
-  assert.match(html, /does not mean Apoorva personally wrote, visited, or reviewed every place or page/);
+  assert.equal(html.split("AI employee &middot; Family travel research").length - 1, 1);
+  assert.match(html, /Miles specializes in family hotels, activity comparisons, and itineraries/);
+  assert.doesNotMatch(html, /not a human traveler|Miles has no personal trips|not a separate human employee/);
   assert.match(html, /A separate AI reviewer checks material changes/);
   assert.match(html, /#contributors, #apoorva-garg, #miles-rowan \{ scroll-margin-top: 96px; \}/);
-  assert.match(html, /not human review, independent fieldwork, or a guarantee of accuracy/);
+  assert.match(html, /Our guides distinguish official facts, research-based interpretation, and human-verified experience/);
   assert.doesNotMatch(html, /"@type"\s*:\s*"Person"/);
 });
 

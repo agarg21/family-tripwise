@@ -20,10 +20,49 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-033",
+      "title": "Simplify contributor profiles around specialties",
+      "kind": "improvement",
+      "status": "in_progress",
+      "selected_on": "2026-09-26",
+      "target_urls": [
+        "https://familytripwise.com/about.html",
+        "https://familytripwise.com/contributors/miles-rowan.html"
+      ],
+      "target_paths": [
+        "tools/generate-pages.mjs",
+        "tools/page-generation/contributors.mjs",
+        "tools/contributors.test.mjs",
+        "tools/about-page.test.mjs",
+        "site/about.html",
+        "site/contributors/miles-rowan.html",
+        "docs/plan/contributor-tone-2026-09-26.md",
+        "docs/plan/contributor-credits-2026-09-26.md",
+        "ops/current-cycle.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "Direct user feedback: repeated defensive Miles profile disclosures. Registered before editing in docs/plan/contributor-tone-2026-09-26.md.",
+      "acceptance_criteria": [
+        "Clear AI employee label, specialty-led concise profiles; no invented experience or human-review claims.",
+        "Only About and Miles profile public bytes change; guide credits, metadata, source dates, URLs and methodology remain.",
+        "Native QA, desktop/mobile navigation, independent review and verified release."
+      ],
+      "measurement_plan": "Proxy readability/disclosure/layout checks only; existing destination windows unchanged. Next trigger: specific clarity/link defect or contributor role change.",
+      "production_invariant": "Only two profile pages change; existing canonicals, About anchors and founder LinkedIn remain; all28guides and31URL sitemap untouched; no analytics or external mutation.",
+      "release_state": "review-clean-awaiting-release",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a0dd87-f265-7472-b2b8-eb82fb6b3be4"],
+      "qa": "229 full/six focused tests; state/SEO/whitespace zero errors;1280/390/320 profile rendering/navigation pass; deterministic generation; only two public files change. Five existing advisories retained."
+    },
+    {
       "id": "FT-IMP-032",
       "title": "Link all guide contributor credits to an explicit AI profile",
       "kind": "improvement",
-      "status": "in_progress",
+      "status": "completed",
+      "completed_on": "2026-09-26",
       "selected_on": "2026-09-26",
       "target_urls": [
         "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
@@ -113,7 +152,12 @@
       ],
       "measurement_plan": "Attribution-only user-directed intervention during existing observation windows; retain windows and dates, no causal SEO claim. See docs/plan/contributor-credits-2026-09-26.md.",
       "production_invariant": "One supporting profile URL; guide bodies/metadata/schema/dates/tools unchanged aside from contributor line; no fake Person author, analytics or external action. Exact reviewed affected public bytes, production SEO and release marker.",
-      "release_state": "review-clean-awaiting-release",
+      "release_state": "released-and-production-verified",
+      "release_commit": "1e91dd2b1e6731668d5c866eddc5d9a5a79cb666",
+      "pages_run": 36237679133,
+      "released_at": "2026-09-26T11:04:56.215Z",
+      "production_verified_at": "2026-09-26T11:04:56.215Z",
+      "production_verification": "Successful Pages, matching marker,32 affected public files HTTP200 and exact reviewed bytes, productionSEO31URLs zero errors with five documented advisories; live Cancun credit opens explicit AI profile. No retry/rollback. See docs/plan/contributor-credits-2026-09-26.md.",
       "review_outcome": "PASS",
       "review_cycles": 1,
       "reviewer_agent_ids": ["01a0dd60-68e4-7991-8c28-98c8844f254c"],

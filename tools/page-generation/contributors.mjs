@@ -26,31 +26,22 @@ export function milesProfilePage() {
   </header>
   <main class="container contributor-profile">
     <section aria-labelledby="profile-name">
-      <p class="eyebrow">${milesContributor.role} &middot; not a human traveler</p>
+      <p class="eyebrow">AI employee &middot; Family travel research</p>
       <h1 id="profile-name">${milesContributor.name}</h1>
       <p class="profile-intro">Curious about the next destination. Meticulous about the details. Always leaving room for a break.</p>
-      <p>Miles is the travel-loving name and personality of Family Tripwise's AI research and drafting role. The job is to help turn scattered travel information into realistic choices for families, from finding a room with enough sleeping places to leaving space for lunch and a rest.</p>
-      <p>Miles is AI, not a person, a local guide, or a traveler with firsthand experience. There are no personal hotel stays, test trips, professional travel credentials, or human memories behind this profile.</p>
+      <p>Miles specializes in family hotel research, activity comparisons, and practical itineraries. The focus is on the details that make a trip work: enough sleeping space, activities for different ages, and time for lunch and a rest.</p>
     </section>
     <section aria-labelledby="work-title">
       <h2 id="work-title">What Miles contributes</h2>
       <ul>
         <li><strong>Research:</strong> collect official attraction and property information, retain source links and check dates, and flag missing or conflicting details.</li>
-        <li><strong>Comparison:</strong> organize room setup, age policies, fees, weather alternatives, and planning constraints without turning unknowns into promises.</li>
+        <li><strong>Comparison:</strong> organize room setup, age policies, fees, and weather alternatives around each family's planning needs.</li>
         <li><strong>Drafting and maintenance:</strong> help write practical planning notes and update affected guidance when evidence changes.</li>
       </ul>
-      <p>Official facts, online-review signals, estimates, and editorial interpretation are different kinds of evidence. Miles's name is not a substitute for the sources beside a claim.</p>
     </section>
     <section aria-labelledby="review-title">
-      <h2 id="review-title">Who checks the work?</h2>
-      <p>Material changes receive a separate AI review before release. This can catch mistakes, but it is not human review, fieldwork, or a guarantee of accuracy. AI systems can share blind spots and misread sources.</p>
-      <p><a href="../about.html#apoorva-garg">Apoorva Garg, founder and publisher</a>, is the person responsible for the project's publishing approach. This does not mean he personally writes or reviews every guide. Human review and firsthand contributions are identified where they actually apply.</p>
-      <p>Read <a href="../about.html">our research method and claim boundaries</a> for how we handle uncertainty. Before booking, confirm the exact dates, party, room, fees, and current policies with the official provider.</p>
-    </section>
-    <section aria-labelledby="credit-title">
-      <h2 id="credit-title">What the contributor credit means</h2>
-      <p>We introduced the Miles Rowan role name on <time datetime="2026-09-26">September 26, 2026</time>. The credit identifies the AI research role used to maintain our guides; it does not claim Miles originally authored every sentence of an older page, or that every page has been newly fact-checked.</p>
-      <p>Each guide keeps its own source-check dates and limitations. The role name does not identify a particular AI model or replace the separate reviewer.</p>
+      <h2 id="review-title">Part of the Family Tripwise team</h2>
+      <p><a href="../about.html#apoorva-garg">Apoorva Garg, founder and publisher</a>, leads the project. Miles's contributor credit reflects ongoing research and guide maintenance; individual guides carry their own source-check dates. Learn more about <a href="../about.html">our research and review process</a>.</p>
     </section>
     <section aria-labelledby="guides-title">
       <h2 id="guides-title">Explore the guides</h2>

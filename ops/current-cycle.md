@@ -8,6 +8,12 @@ Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
 
+FT-IMP-033 review-clean: Dewey cycle-one PASS/no findings;229full/sixfocused/state/SEO/whitespace and1280/390/320 layouts/navigation pass. Only About/Miles public bytes changed; exact12path commit/push and verification next. Registration/evidence in `docs/plan/contributor-tone-2026-09-26.md`.
+
+FT-IMP-033 direct-user profile tone correction: concise AI employee label and specialties on About/Miles, no repeated non-human denials. Twelve exact paths and invariants registered in `docs/plan/contributor-tone-2026-09-26.md`. All28 guide credits/advice/dates remain unchanged. Full229 tests pass; rendered checks/review/release next. Prior FT-IMP-032 is production-verified; its lower checkpoints are history.
+
+FT-IMP-032 delivered and production-verified: `1e91dd2b1e6731668d5c866eddc5d9a5a79cb666`, Pages `36237679133`, matching marker/all32 affected public files exact at2026-09-26T11:04:56.215Z. All28 guides link the dedicated, explicitly AI Miles profile. ProductionSEO31URLs zero errors; live credit navigation passes. Copernicus PASS,229tests,56rendered cases. No blocker. Source dates/advice/tools unchanged; no SEO causal claim. Evidence/next trigger: `docs/plan/contributor-credits-2026-09-26.md`. Earlier checkpoints below are historical; completion backfills retained for the next substantive transaction.
+
 FT-IMP-032 pre-release gate passed: Copernicus cycle-one PASS/no findings; 229 full and six focused tests, state/staticSEO/whitespace, deterministic generation, all 28 baseline guide restorations and 56 desktop/mobile credit cases passed. Profile keyboard navigation and 1280/390/320 layouts checked. Exact 46-path release next; evidence in `docs/plan/contributor-credits-2026-09-26.md`. No technical blocker; no production delivery claimed yet.
 
 FT-IMP-032 direct-user registration: linked Miles AI contributor credits on28guides and one dedicated profile URL. Exact paths, explicit attribution-only observation-window intervention, invariants and measurement in `docs/plan/contributor-credits-2026-09-26.md`. Preserve existing research/dates/tools and old About anchor. QA/review/release next; prior FT-IMP-031 complete.

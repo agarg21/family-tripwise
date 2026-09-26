@@ -7,6 +7,8 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+Current FT-IMP-033: user-requested concise specialty-led Miles profiles with a clear AI employee label. Scope, tests and release invariants: `docs/plan/contributor-tone-2026-09-26.md`. No guide changes or new URL; full229 tests pass, rendering/review/release next. FT-IMP-032 delivered at `1e91dd2b1e6731668d5c866eddc5d9a5a79cb666` / Pages `36237679133`; its lower checkpoints are history.
+
 FT-IMP-032 final gate: Copernicus cycle-one PASS/no findings, 229 full/six focused tests, all 56 rendered guide-credit cases, profile/navigation and byte-preservation checks pass. Exact 46-path release and production checks next. Current decision and measurement boundaries below unchanged.
 
 Current FT-IMP-032: implement the user's requested AI research credit on all 28 guides, linking a dedicated Miles Rowan profile. Exact 46-path scope, attribution-only observation-window intervention and acceptance are in `docs/plan/contributor-credits-2026-09-26.md`. Native QA passes (229 tests, six focused, state/SEO zero errors). Rendering, independent review and verified release are next. One supporting identity URL, no new destination; existing guide content/dates preserved. FT-IMP-031 was production-verified at `6027e17637d2c7c87f25e4fdea3d39c476112a78` / Pages `36236587941`; its lower pre-release checkpoints are historical.

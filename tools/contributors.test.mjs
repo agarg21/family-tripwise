@@ -25,10 +25,11 @@ test("Miles profile is generated, linked and honest about AI and historical attr
   assert.equal(html, milesProfilePage());
   assert.match(html, /rel="canonical" href="https:\/\/familytripwise.com\/contributors\/miles-rowan.html"/);
   assert.match(html, /<h1 id="profile-name">Miles Rowan<\/h1>/);
-  assert.match(html, /AI research contributor &middot; not a human traveler/);
-  assert.match(html, /no personal hotel stays/);
-  assert.match(html, /does not claim Miles originally authored every sentence/);
-  assert.match(html, /not human review, fieldwork, or a guarantee/);
+  assert.equal(html.split("AI employee &middot; Family travel research").length - 1, 1);
+  assert.match(html, /specializes in family hotel research, activity comparisons, and practical itineraries/);
+  assert.match(html, /credit reflects ongoing research and guide maintenance/);
+  assert.match(html, /href="..\/about.html">our research and review process/);
+  assert.doesNotMatch(html, /not a human|not a person|human memories|no personal hotel stays/);
   assert.match(html, /href="..\/about.html#apoorva-garg"/);
   assert.doesNotMatch(html, /"@type"\s*:\s*"Person"|noindex/);
 });

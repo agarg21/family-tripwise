@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-09-26 - FT-IMP-033 profile tone
+
+Dewey (`01a0dd87-f265-7472-b2b8-eb82fb6b3be4`) cycle-one PASS/no P0-P3. Independently verified twelve-path scope, concise truthful disclosure, two public changes only, unchanged guides/metadata/anchors/inventory and six focused tests. Operator229full/state/SEO/whitespace and1280/390/320 profile/navigation checks pass. No material edits after consensus; release next.
+
+Twelve-path direct-user tone correction registered in `docs/plan/contributor-tone-2026-09-26.md`. Remove repeated defensive biography wording, retain clear AI employee label, specialties, source-date maintenance context and linked About methodology. Founder accountability and separate AI review remain accurate. Only two profile pages change publicly; all guides unchanged. Full229 tests pass; focused/native/browser validation and independent review next. Prior release backfills preserved; unrelated Orlando research remains unstaged.
+
 ## 2026-09-26 - FT-IMP-032 linked contributor credits
 
 Cycle-one PASS, no P0-P3, from Copernicus (`01a0dd60-68e4-7991-8c28-98c8844f254c`). Independent scope/baseline/generator/trust/URL checks passed. Operator completed 229 full/six focused tests and 56 rendered credit cases across all guides at320/1280, profile at390/320/1280, keyboard credit-to-profile-to-founder navigation. All release prerequisites met; exact-path push and production checks next. No material changes after consensus.

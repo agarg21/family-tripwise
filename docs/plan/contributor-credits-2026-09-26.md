@@ -64,6 +64,8 @@ Action: FT-IMP-032. Direct user request, September 26, 2026.
 
 ## Result
 
+Delivered and production-verified: `1e91dd2b1e6731668d5c866eddc5d9a5a79cb666`, successful Pages `36237679133`. At `2026-09-26T11:04:56.215Z`, release marker matched and all 32 changed public files returned HTTP200 with exact reviewed bytes. Production SEO checked31 URLs with zero errors; same five documented advisories. Live keyboard navigation from Cancun credit reached the Miles profile with AI disclosure. No retry or rollback. Reviewer and temporary tabs closed; preview stopped. No blocker; no SEO outcome claimed. Next attribution check is a broken-link/layout/disclosure report or a genuine contributor-role change, not cadence. Mechanical completion backfills retained for the next substantive transaction; unrelated Orlando backfill untouched.
+
 Implemented in the shared generator and the three specialized guide template modules. All 28 guides have exactly one linked AI credit immediately below H1; the new profile and old About anchor are connected. Native QA passes: 229 full tests, six focused, operator-state and static SEO zero errors, freshness zero expired notices. Four existing Chicago yearless-date warnings remain. The supporting identity page has 407 words and triggers the generic 900-word advisory; its purpose is clear identity/process disclosure, not destination search coverage, so it is not padded or exempted from the checker. Latest snapshot inspection counts remain historical; adding the profile to the read-only inventory does not claim it is indexed.
 
 For each of 28 guides, removing the single new credit line reproduces baseline `6027e17637d2c7c87f25e4fdea3d39c476112a78` byte-for-byte. Rendering, independent review and verified release are next.
