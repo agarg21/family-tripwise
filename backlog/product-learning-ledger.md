@@ -2,7 +2,11 @@
 
 Latest production evidence: September 17 `LRN-034` / `FT-IMP-028` is released and production-verified at action commit `c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6`, successful Pages run `35184964741`, matching marker and byte-identical target HTML. Production SEO and all three exact viewport target checks pass at `2026-09-17T05:15:36Z`. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-25
+Last updated: 2026-09-26
+
+## LRN-049 / September26 / FT-RES-054
+
+Family decision: children3/10, a Wednesday indoor outing with120minutes before a meal/rest break and optional return. Hypothesis: indoor label plus duration estimate establishes a workable backup. Rejected by current official weekday exception, conditional/unknown return and scoped child-area rules. Two live query samples, four alternative-page bodies and official sources inspected September26; exact dates/classes/limits in `docs/research/orlando-rest-day-task-2026-09-26.md`. Implement an unpublished three-record comparison and boundary tests now; no public page or user-test claim. Confidence high for source distinctions/model behavior, medium proxy utility, low demand/satisfaction. Lesson: opening, weather, duration and re-entry must remain independent. Trigger: changed policy, dated confirmation, a false-certainty control or a better existing comparator. Public re-scope/authority and rendered QA remain separate gates; no automatic FT-PUB-006 activation. Source audit is today's learning; unchanged GSC/health checks are not.
 
 ## LRN-048 / September25 / FT-RES-052
 

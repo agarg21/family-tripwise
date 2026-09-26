@@ -66,6 +66,12 @@ Decision gate: Select after first-wave findings and current priorities are revie
 
 Record source/retrieval dates, evidence classes, disagreements, unknowns and maintenance cost. Require independent review and QA. Exact paths must be registered when selected. No new destination/page, paid call, analytics, indexing or external action is authorized by this entry.
 
+### SRR-076: Orlando Rest-Day Constraint Task
+
+Final gate: Huygens cycle2 PASS,223full/8focused/state0/exact12paths/whitespace; source/docs push next. Lower pending QA/review wording is historical; no site delivery.
+
+FT-RES-054 / LRN-049, September26: current task/source audit supports an unpublished three-record comparison, not a generic activity hub. Evidence, implemented scope, sources/unknowns and exact public-scope/authority gate: `docs/research/orlando-rest-day-task-2026-09-26.md`. Native QA/review and source/docs push pending. No site change or FT-PUB-006 activation; next eligible expansion action is the public-scope decision, not another broad city/demand report.
+
 ### SRR-074: Validate destination keyword coverage and seasonality limits
 
 Final gate September25: Galileo cycle1 PASS_WITH_P3/noP0-P2;215full/16focused/state0/73snapshots/exact8paths/whitespace pass. Minor publisher-date note retained in review. Docs-only push next; no implementation or publication selected. Lower pending QA/review wording is historical.

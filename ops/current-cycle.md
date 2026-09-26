@@ -1,12 +1,24 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 ## Cycle Name
 
 Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
+
+FT-RES-054 final gate: Huygens cycle2 PASS/no findings;223full/8focused/state0/exact12paths/whitespace pass. Internal comparison and LRN-049 complete, source/docs push next; live site unchanged and healthy. Public-scope/authority and rendered validation remain next expansion gates, no technical blocker. Earlier pending checkpoints are historical.
+
+FT-RES-054 implementation and LRN-049 learning complete; internal model only, live site unchanged. Huygens cycle1 PASS_WITH_P3 identified a UTC-versus-Orlando default-date edge case; corrected with a midnight-boundary regression test, cycle2 pending. Full223/223, focused8/8, state0,74snapshots, local/productionSEO0errors/four existing Chicago warnings, freshness0expired and public preflight30URLs200. Exact12paths; no technical blocker. Next is reviewed source/docs push, then the separately gated public-scope decision documented in the research record. Earlier registration checkpoints are history.
+
+Registration ID correction: this transaction is FT-RES-054 / SRR-076; FT-RES-053 / SRR-075 already belongs to the historical Chicago audit and is untouched. Current evidence files: `ops/gsc-snapshots/2026-09-25.json` and `ops/gsc-snapshots/2026-09-25.md`,74validated. Twelve-path scope and acceptance unchanged. Initial full222/222 and focused7/7 pass; state-check ID/reference errors corrected before review.
+
+FT-RES-054 scope refinement before implementation: source audit supports an unpublished rest-day comparison model for the same family task. Add four exact paths (12 total): `src/prototypes/orlando-rest-day/data.mjs`, `src/prototypes/orlando-rest-day/compare.mjs`, `src/prototypes/orlando-rest-day/README.md`, `tools/orlando-rest-day.test.mjs`. Accept source-linked weekday exception warnings, conditional/unknown re-entry, advisory duration not an admission rule, per-child KidsTown scope, strict date/input/freshness checks and output isolation. No public interface, generator, site or URL change; publication stays separately gated. This finishes the evidenced internal product improvement now instead of deferring the same model to another research run.
+
+September26 first actual Eastern run (01:01), before edits: register FT-RES-054 / LRN-049 for one Orlando non-park/rest-day task and current alternative/source audit. No unfinished eligible release or known new defect; FT-PUB-006 remains publication-gated, so research resolves its specific answerability uncertainty rather than bypassing authority. Exact eight paths: `docs/research/orlando-rest-day-task-2026-09-26.md`, `docs/research/destination-demand-coverage-2026-09-25.md` (baseline completion backfill), `backlog/product-learning-ledger.md`, `backlog/seo-research-review-backlog.md`, `ops/seo-roadmap.json`, `ops/seo-roadmap.md`, `ops/current-cycle.md`, `ops/operator-review.md`. Acceptance: two live query samples; representative alternatives and maintained official constraints for one explicit family task; observed answerability/unknowns, implement/candidate/preserve/reject decision with exact stop gate; full/focused QA and independent review. Measurement is source/task answerability, never user satisfaction or traffic. Invariants: zero site/source/URL/paid/account changes, all observation windows preserved. Baseline7ec99e0 with three mechanical backfills; inspected snapshot-only5915065 fast-forwarded without overlap/divergence. Fresh arrived September25 API snapshot throughSeptember23,74validated:1428impressions/10clicks/50.54position,24/30indexed; prior1406/10/50.91 overlaps. New pages still unknown toGoogle; no query cohort, CTR or launch inference. Daily learning not yet complete.
+
+FT-RES-052 docs-only push verified September25 13:11:41UTC, `7ec99e04bc0154aeb2dea2bf6a194df82c1eaeab`; fresh fetch/no divergence, complete sole reviewed range/eight exact paths/whitespace pass, HEAD/origin matched and clean before mechanical backfills. Galileo cycle1 PASS_WITH_P3,215tests. LRN-048 learned only; site unchanged, no technical blocker. Next eligible task and publication gates remain in the demand-coverage record; no new page authorized. Three mechanical completion backfills retained for the next real transaction, no metadata-only commit. Earlier pending checkpoints below are historical.
 
 FT-RES-052 final gate: Galileo cycle1 PASS_WITH_P3/noP0-P2; one nonblocking publisher-date note retained.215full/16focused/state0/73snapshots/exact8paths/whitespace pass; productionSEO30URLs0errors/four known Chicago warnings, public preflight30URLs200. LRN-048 learned only; no site change or technical blocker. Eight-path docs-only push next. Next task and separate publication gates unchanged; lower pending checkpoints are history.
 

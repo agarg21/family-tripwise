@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-25",
+  "last_updated": "2026-09-26",
   "last_rescored_on": "2026-09-14",
   "next_rescore_due": "2026-09-21",
   "planning_horizon_days": 28,
@@ -19,6 +19,28 @@
     "Build useful tools and source-worthy assets rather than generic travel prose."
   ],
   "items": [
+    {
+      "id": "FT-RES-054",
+      "research_backlog_id": "SRR-076",
+      "title": "Validate and model Orlando non-park rest-day constraints",
+      "kind": "research",
+      "status": "completed",
+      "completed_on": "2026-09-26",
+      "release_state": "review-clean-awaiting-source-docs-push",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": ["01a0dc20-598b-7f02-8349-66db80b1c96d"],
+      "qa_result": "223 full tests,8 focused,state0,74 snapshots,exact12paths,whitespace; local/productionSEO0errors/four known Chicago warnings,public preflight30URLs200. No site change.",
+      "selected_on": "2026-09-26",
+      "learning_unit_id": "LRN-049",
+      "target_urls": [],
+      "target_paths": ["docs/research/orlando-rest-day-task-2026-09-26.md", "docs/research/destination-demand-coverage-2026-09-25.md", "backlog/product-learning-ledger.md", "backlog/seo-research-review-backlog.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/current-cycle.md", "ops/operator-review.md", "src/prototypes/orlando-rest-day/data.mjs", "src/prototypes/orlando-rest-day/compare.mjs", "src/prototypes/orlando-rest-day/README.md", "tools/orlando-rest-day.test.mjs"],
+      "evidence": "September26 two live query samples, four alternative bodies and official OSC/Crayola/SEA LIFE pages; docs/research/orlando-rest-day-task-2026-09-26.md. Weekday exception and conditional/unknown re-entry support an unpublished model, not a new URL.",
+      "acceptance_criteria": ["Two current query samples and representative alternatives inspected for one mixed-age non-park/rest-day task.", "Official constraints, conflicts, unknowns and source dates retained; no unsupported route, safety or suitability assurances.", "Unpublished three-record model separates weekday exception warnings, conditional/unknown re-entry, advisory duration and scoped child-age guidance; strict input/date/freshness and output-isolation tests.", "Explicit implement/candidate/preserve/reject decision with remaining gate, native QA and independent read-only review."],
+      "measurement_plan": "Proxy task answerability and evidence traceability, not demand forecast, real-user testing or satisfaction.",
+      "production_invariant": "Unpublished source-model and research only, no site/generator/URL/paid/account change. Preserve observation windows and three baseline mechanical backfills. FT-PUB-006 publication authority is not inferred.",
+      "notes": "First actual Eastern run September26; no unfinished eligible release or known qualified implementation bypassed. Source/task learning and unpublished comparison implemented in same action. Full223/focused8 pass; Huygens cycle1 PASS_WITH_P3, Orlando-date correction awaiting cycle2. Next eligible expansion action is public-scope/authority decision and rendered interface validation if authorized; FT-PUB-006 not activated. No further broad demand report prerequisite."
+    },
     {
       "id": "FT-PUB-008",
       "title": "Orlando family suites: room, park and water-benefit comparison",
@@ -610,7 +632,10 @@
       "lane": "user-authorized-destination-research",
       "status": "completed",
       "completed_on": "2026-09-25",
-      "release_state": "review-clean-awaiting-docs-push",
+      "release_state": "docs-only-pushed",
+      "release_commit": "7ec99e04bc0154aeb2dea2bf6a194df82c1eaeab",
+      "released_at": "2026-09-25T13:11:41Z",
+      "release_verification": "Fresh fetch/no divergence, sole reviewed range/eight exact paths/whitespace checked; push succeeded, HEAD/origin matched and clean before mechanical backfills. Docs-only; no site release or Pages wait.",
       "review_outcome": "PASS_WITH_P3",
       "review_cycles": 1,
       "reviewer_agent_ids": ["01a0d8af-1536-7f53-b992-a70c1c1b2001"],
@@ -645,7 +670,7 @@
       "evidence": "September25 US Google Trends three comparisons, live Orlando query/publisher bodies and retained September17 DataForSEO monthly controls; docs/research/destination-demand-coverage-2026-09-25.md. No new paid call or absolute-volume recovery.",
       "measurement_plan": "Source coverage/comparability, not traffic. LRN-048 rejects missing volume as no activity signal; normalized interest cannot validate monthly counts or seasonal recurrence.",
       "production_invariant": "Research only; current site and observation windows unchanged. New canonical URL/destination still needs doctrine gates and fresh explicit publication approval. No new paid calls authorized by queue entry.",
-      "notes": "Research complete, native QA green, Galileo PASS_WITH_P3; docs-only push pending. Next eligible expansion research: one Orlando non-park/rest-day task revalidation with exact answerability, SERP-overlap and maintainable-evidence gates; FT-PUB-006 remains publication-gated. Preserve all current pages/windows and UNKNOWN demand. No unblocked qualified implementation at selection. Higher-priority defects/delivery take precedence."
+      "notes": "Research complete, native QA green, Galileo PASS_WITH_P3; docs-only push verified. Next eligible expansion research: one Orlando non-park/rest-day task revalidation with exact answerability, SERP-overlap and maintainable-evidence gates; FT-PUB-006 remains publication-gated. Preserve all current pages/windows and UNKNOWN demand. No unblocked qualified implementation at selection. Higher-priority defects/delivery take precedence."
     },
     {
       "id": "FT-RES-046",
