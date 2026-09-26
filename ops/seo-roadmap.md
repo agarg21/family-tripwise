@@ -7,7 +7,11 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
-Current FT-IMP-033: user-requested concise specialty-led Miles profiles with a clear AI employee label. Scope, tests and release invariants: `docs/plan/contributor-tone-2026-09-26.md`. No guide changes or new URL; full229 tests pass, rendering/review/release next. FT-IMP-032 delivered at `1e91dd2b1e6731668d5c866eddc5d9a5a79cb666` / Pages `36237679133`; its lower checkpoints are history.
+FT-IMP-034 review-clean: Heisenberg cycle2 PASS,232full/9focused/state/SEO/75snapshots and responsive task checks green. Exact19path push and production verification next. No actual outreach or new canonical URL. Prior checkpoints below are history.
+
+Current FT-IMP-034: user-approved discovery/reuse bundle, exact19paths in `docs/plan/discovery-and-reuse-2026-09-26.md`. Seven-destination home directory, audited links, Cancun summary/checklist, protected-query watchlist and three unsent pitches. No ranking-driven rewrite qualified. Fresh `ops/gsc-snapshots/2026-09-26.json` throughSeptember24; review/release pending.
+
+FT-IMP-033 completed and production-verified at `ab54129555429138c89e7b90496b129201e75a75`, Pages `36239846062`: concise specialty-led Miles profiles with clear AI employee labels;229tests and responsive QA, Dewey PASS. No guide changes or new URL. Evidence: `docs/plan/contributor-tone-2026-09-26.md`. FT-IMP-032 delivered at `1e91dd2b1e6731668d5c866eddc5d9a5a79cb666` / Pages `36237679133`; lower checkpoints are history.
 
 FT-IMP-032 final gate: Copernicus cycle-one PASS/no findings, 229 full/six focused tests, all 56 rendered guide-credit cases, profile/navigation and byte-preservation checks pass. Exact 46-path release and production checks next. Current decision and measurement boundaries below unchanged.
 

@@ -27,6 +27,8 @@ Measurement: proxy readability, disclosure and link/layout checks; not user-test
 
 ## Result
 
+Delivered and production-verified: `ab54129555429138c89e7b90496b129201e75a75`, successful Pages `36239846062`. At `2026-09-26T11:46:52.343Z`, release marker matched and both affected public HTML files returned HTTP200 with exact reviewed bytes. Production SEO31URLs zero errors; five existing advisories retained. No retry, rollback or blocker; no guide/URL/style changes. Reviewer closed and preview stopped. Mechanical completion backfills retained for the next substantive transaction; unrelated Orlando work untouched.
+
 Implemented: concise AI employee label and specialty-led Miles profiles; publisher/process paragraph shortened, detailed About methodology retained. Only two public HTML files differ from baseline; guides, styles, source dates and sitemap are unchanged. Full229 and six focused tests pass, state/staticSEO/whitespace zero errors, freshness zero expired notices. Four prior Chicago date advisories and the existing generic short-profile advisory (now200 words) remain; a supporting bio is not padded to a destination-page word threshold.
 
 Browser QA: site-only loopback preview, both profiles at1280/390/320 widths with no horizontal overflow; desktop/mobile screenshots inspected. Keyboard navigation from Miles to founder About anchor and About Miles to dedicated profile passes. This is proxy layout/disclosure QA, not user testing. Independent review and verified release next.

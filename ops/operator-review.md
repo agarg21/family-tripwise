@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-09-26 - FT-IMP-034 discovery and reusable Cancun evidence
+
+Heisenberg (`01a0df6c-d78d-7722-9db3-5ba5a7147359`) cycle2 PASS/no outstanding findings. Cycle1 PASS_WITH_P3 corrected near-winning row aggregate14 to13; narrow re-review confirmed it. Independently232full/9focused/state/SEO/freshness/75snapshots and source/privacy/scope checks passed. Operator browser1280/390/320, download/keyboard/familyflow and46other public files byte-preservation pass. Exact19paths ready for release; mechanical metadata only after consensus.
+
+Independent read-only review required for19registered paths; prior contributor-tone completion backfill included, unrelated Orlando backfill excluded. Check compact/download record parity, no unsupported family fit, source dates, homepage scope and linking, query limitations/privacy, unsent outreach gates and31URL invariants. Evidence and acceptance in `docs/plan/discovery-and-reuse-2026-09-26.md`. No self-review verdict or delivery claim.
+
 ## 2026-09-26 - FT-IMP-033 profile tone
 
 Dewey (`01a0dd87-f265-7472-b2b8-eb82fb6b3be4`) cycle-one PASS/no P0-P3. Independently verified twelve-path scope, concise truthful disclosure, two public changes only, unchanged guides/metadata/anchors/inventory and six focused tests. Operator229full/state/SEO/whitespace and1280/390/320 profile/navigation checks pass. No material edits after consensus; release next.

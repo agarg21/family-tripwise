@@ -4,11 +4,37 @@ import { readFileSync } from "node:fs";
 import { cancunPath, cancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { childFields, renderOverview, renderResults } from "../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, renderOverview, renderQuickComparison, renderResults } from "../src/prototypes/cancun-resort-comparison/render.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const html = cancunResortPage();
 const result = overrides => renderResults(compareCancunFamily({childAges: [3, 7, 12], asOf: cancunEvidence.checkedOn, ...overrides}));
+
+test("quick comparison and portable checklist preserve exact records, conflicts and source dates", () => {
+  const quick = renderQuickComparison();
+  const checklist = bookingChecklistText();
+  assert.equal(read("site/downloads/cancun-booking-checklist.txt"), checklist);
+  assert.equal((quick.match(/scope="row"/g) ?? []).length, 6);
+  for (const record of cancunEvidence.records) {
+    assert.ok(checklist.includes(record.hotel));
+    assert.ok(checklist.includes(record.room.category));
+    assert.ok(checklist.includes(record.room.beds));
+    for (const field of ["room", "clubs", "transfers", "extras"]) {
+      for (const check of record[field].checks) assert.ok(checklist.includes(check));
+      for (const id of record[field].sourceIds) assert.ok(checklist.includes(cancunEvidence.sources[id]));
+    }
+  }
+  for (const output of [quick, checklist]) {
+    assert.ok(output.includes(cancunEvidence.checkedOn));
+    assert.ok(output.includes(cancunEvidence.recheckOn));
+    assert.match(output, /Child limit disputed: 6 versus 2/);
+    assert.match(output, /Capacity disputed: 4 versus 5/);
+    assert.match(output, /seventh guest, who must be a child/);
+  }
+  assert.match(html, /id="quick-comparison"/);
+  assert.match(html, /cancun-booking-checklist.txt" download/);
+  assert.match(read("site/cancun-resorts.css"), /@media print/);
+});
 
 test("Cancun generated page and public modules match their maintained sources", () => {
   assert.equal(read(`site/${cancunPath}`), html);

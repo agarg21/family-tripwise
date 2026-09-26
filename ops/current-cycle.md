@@ -8,6 +8,12 @@ Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
 
+FT-IMP-034 final gate: Heisenberg cycle2 PASS, corrected one P3 arithmetic typo;232full/9focused/state/SEO/75snapshots/whitespace and responsive/navigation/download/familyflow checks pass. Exact19paths ready for release,46other public files unchanged. No ranking-driven rewrite qualified; three outreach drafts remain unsent. Evidence: `docs/plan/discovery-and-reuse-2026-09-26.md`.
+
+FT-IMP-034 direct-user five-part follow-up registered before editing in `docs/plan/discovery-and-reuse-2026-09-26.md`: seven-destination discovery, internal-link audit, compact/portable Cancun evidence, protected query shortlist and unsent outreach drafts. Exact19paths; no new canonical URL or contact authority. Latest fresh evidence `ops/gsc-snapshots/2026-09-26.md` throughSeptember24, aggregate orientation only. Implementation/review/release underway; prior checkpoints below are history.
+
+FT-IMP-033 delivered and production-verified: `ab54129555429138c89e7b90496b129201e75a75`, Pages `36239846062`, exact About/Miles bytes and marker at2026-09-26T11:46:52.343Z; productionSEO31URLs zero errors. Concise AI employee profiles live; all guides unchanged. Dewey PASS,229tests and1280/390/320 browser checks. No blocker. Evidence and next trigger: `docs/plan/contributor-tone-2026-09-26.md`. Lower checkpoints are history; completion backfills retained for next substantive transaction.
+
 FT-IMP-033 review-clean: Dewey cycle-one PASS/no findings;229full/sixfocused/state/SEO/whitespace and1280/390/320 layouts/navigation pass. Only About/Miles public bytes changed; exact12path commit/push and verification next. Registration/evidence in `docs/plan/contributor-tone-2026-09-26.md`.
 
 FT-IMP-033 direct-user profile tone correction: concise AI employee label and specialties on About/Miles, no repeated non-human denials. Twelve exact paths and invariants registered in `docs/plan/contributor-tone-2026-09-26.md`. All28 guide credits/advice/dates remain unchanged. Full229 tests pass; rendered checks/review/release next. Prior FT-IMP-032 is production-verified; its lower checkpoints are history.

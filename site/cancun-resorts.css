@@ -14,6 +14,26 @@
 .cancun-page .page-intro { max-width: 900px; padding-top: 0; border: 0; }
 .cancun-page .source-date, .cancun-page .area, .cancun-page figcaption { font-size: .88rem; color: #45545c; }
 .cancun-page .jump-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 18px 0 0; }
+.cancun-page .quick-table-scroll { overflow-x: auto; max-width: 100%; }
+.cancun-page .quick-table { width: 100%; min-width: 720px; border-collapse: collapse; table-layout: fixed; font-size: .9rem; }
+.cancun-page .quick-table caption { text-align: left; padding: 8px 0 16px; color: #45545c; }
+.cancun-page .quick-table th, .cancun-page .quick-table td { vertical-align: top; text-align: left; padding: 16px; border: 1px solid #d9e1e3; overflow-wrap: anywhere; }
+.cancun-page .quick-table thead { background: #eaf4ef; }
+.cancun-page .quick-table th span { display: block; font-weight: 400; margin-top: 8px; }
+.cancun-page .quick-table td p { margin-top: 8px; }
+@media print {
+  .cancun-page .site-header, .cancun-page .skip-link, .cancun-page footer,
+  .cancun-page main > section:not(.page-intro):not(#quick-comparison):not(#before-booking),
+  .cancun-page .page-intro .jump-links, .cancun-page #quick-comparison > p { display: none; }
+  .cancun-page main { max-width: none; padding: 0; }
+  .cancun-page .page-intro > :not(h1):not(.source-date) { display: none; }
+  .cancun-page .quick-table-scroll { overflow: visible; }
+  .cancun-page .quick-table { min-width: 0; font-size: 9pt; }
+  .cancun-page .quick-table th, .cancun-page .quick-table td { padding: 6pt; }
+  .cancun-page .quick-table tr { break-inside: avoid; }
+  .cancun-page .quick-table .sources a::after { content: " (" attr(href) ")"; font-size: 7pt; }
+  .cancun-page #quick-title::after { content: " - Published maxima are not confirmed bookings"; font-size: 10pt; font-weight: normal; }
+}
 .cancun-page .resort-row { display: grid; grid-template-columns: 1fr 1.3fr 1.1fr 1.3fr; gap: 24px; padding: 24px 0; border-top: 1px solid #d9e1e3; scroll-margin-top: 20px; }
 .cancun-page .resort-row > *, .cancun-page .result-card { min-width: 0; overflow-wrap: break-word; }
 .cancun-page ul { margin: 8px 0 14px; padding-left: 20px; }

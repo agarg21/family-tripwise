@@ -4,6 +4,56 @@ export const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<
 const list = values => `<ul>${values.map(value => `<li>${esc(value)}</li>`).join("")}</ul>`;
 export const sources = (ids, label) => `<p class="sources">${ids.map((id, index) => `<a href="${esc(cancunEvidence.sources[id])}">${esc(label)}${ids.length > 1 ? ` ${index + 1}` : ""}</a>`).join(" / ")}</p>`;
 
+const capacity = record => record.room.capacityStatus === "disputed"
+  ? record.room.capacityConflict ?? "Capacity disputed: 4 versus 5"
+  : `Published maximum: ${record.room.maximum}`;
+
+export function renderQuickComparison() {
+  return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
+    <caption>Six room categories · Sources checked ${esc(cancunEvidence.checkedOn)} · Recheck due ${esc(cancunEvidence.recheckOn)}</caption>
+    <thead><tr><th scope="col">Resort and exact room</th><th scope="col">Published capacity and sleeping places</th><th scope="col">Before booking</th></tr></thead>
+    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td><td>${list(record.room.checks)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td></tr>`).join("\n")}</tbody>
+  </table></div>`;
+}
+
+export function bookingChecklistText() {
+  const recordSources = ids => [...new Set(ids)].map(id => `${id}: ${cancunEvidence.sources[id]}`).join("\n");
+  return `FAMILY TRIPWISE - CANCUN BOOKING CHECKLIST
+https://familytripwise.com/where-to-stay/cancun-family-resorts.html#quick-comparison
+Sources checked: ${cancunEvidence.checkedOn}; recheck due: ${cancunEvidence.recheckOn}.
+Research-based screening, not a quote or confirmed booking. Check the live page for updates.
+
+YOUR BOOKING
+Travel dates: ____________________ Adults: ____ Children's ages at travel: ____________________
+Resort / exact room category: _______________________________________________________________
+Booking channel: ____________________ Nights: ____ Confirmation contact and date: ___________
+
+[ ] Written acceptance of the exact party and children's ages in the exact room category.
+[ ] Every sleeping place, rollaway/crib charges and guaranteed connections confirmed.
+[ ] Each child's club admission, accompaniment, toilet-training, registration and hours checked.
+[ ] Itemized room, tax, resort-fee, transfer, childcare and extra-activity quote obtained.
+[ ] Airport transfer booking conditions and arrangements confirmed, not just advertised.
+[ ] Cancellation terms and dated renovation, pool, beach or operational changes checked.
+Unresolved questions: ______________________________________________________________________
+
+SIX ROOM RECORDS
+Published maxima do not establish dated availability or exact-party acceptance.
+Club-age matches do not establish admission. Unknown is not a negative finding.
+
+${cancunEvidence.records.map(record => `${record.hotel} - ${record.area}
+Room: ${record.room.category}
+${capacity(record)}
+Beds: ${record.room.beds}
+${record.room.checks.map(check => `Room check: ${check}`).join("\n")}
+Club bands: ${record.clubs.programs.length ? record.clubs.programs.map(p => `${p.min}-${p.max} ${p.name}${p.parentRequired ? "; parent must stay" : ""}${p.registration ? "; registration required" : ""}${p.pottyRequired ? "; fully toilet-trained" : ""}`).join(" | ") : "Exact age rules unknown in this record"}
+${record.clubs.checks.map(check => `Club check: ${check}`).join("\n")}
+${record.transfers.rule === "direct-offer" ? `Transfer offer: ${record.transfers.airport}, minimum ${record.transfers.minimumNights} nights.\n` : ""}${record.transfers.checks.map(check => `Transfer check: ${check}`).join("\n")}
+${record.extras.checks.map(check => `Cost check: ${check}`).join("\n")}
+Complete stay cost and availability: unknown.
+${recordSources([...record.room.sourceIds, ...record.clubs.sourceIds, ...record.transfers.sourceIds, ...record.extras.sourceIds])}`).join("\n\n")}
+`;
+}
+
 export function renderOverview() {
   return cancunEvidence.records.map(record => `<article class="resort-row" id="${esc(record.id)}">
     <header><h3>${esc(record.hotel)}</h3><p class="area">${esc(record.area)}</p><a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(record.hotel + " Mexico")}">Map location</a></header>

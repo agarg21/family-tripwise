@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { childFields, renderOverview, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export function cancunResortPage() {
@@ -37,7 +37,13 @@ export function cancunResortPage() {
       </ul>
       <p>These are published-capacity starting points, not confirmed bookings or price recommendations.</p>
       <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Next source review due October 23, 2026; verify volatile details before booking.</span></p>
-      <div class="jump-links"><a href="#comparison">Room &amp; policy comparison</a><a href="#family-check">Your children's ages</a><a href="#before-booking">Before booking</a></div>
+      <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#comparison">Full policy checks</a><a href="#family-check">Your children's ages</a><a href="#before-booking">Before booking</a></div>
+    </section>
+    <section id="quick-comparison" aria-labelledby="quick-title">
+      <h2 id="quick-title">Six rooms at a glance</h2>
+      <p>Start with capacity and sleeping places, then check club admission, transfers and costs in each resort's detailed record. A published maximum is not confirmation for your family.</p>
+      <p><a href="../downloads/cancun-booking-checklist.txt" download>Download the booking checklist and source records (.txt)</a></p>
+      ${renderQuickComparison()}
     </section>
     <section id="comparison" aria-labelledby="comparison-title">
       <h2 id="comparison-title">Compare the exact room, not just the resort</h2>
@@ -94,6 +100,7 @@ export function cancunResortPage() {
 
 export function writeCancunResortPage(writeSite) {
   writeSite(cancunPath, cancunResortPage());
+  writeSite("downloads/cancun-booking-checklist.txt", bookingChecklistText());
   // Copy the reviewed modules unchanged so public and native checks share one model.
   for (const name of ["data", "compare", "render", "client"]) {
     writeSite(`cancun/${name}.mjs`, readFileSync(new URL(`../../src/prototypes/cancun-resort-comparison/${name}.mjs`, import.meta.url), "utf8"));
