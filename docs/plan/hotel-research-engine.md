@@ -2,7 +2,7 @@
 
 State: planning and operator policy
 
-Last updated: 2026-07-18
+Last updated: 2026-09-27
 
 ## Purpose
 
@@ -81,6 +81,19 @@ A standalone `best family hotels in {destination}` page may publish when:
 - independent operator review passes.
 
 ## Refresh Rules
+
+### Approximate Nightly Prices
+
+September27 direct-user requirement: approximate nightly prices are a major part of hotel research and must remain visible in useful comparison tables, including shareable versions when evidence supports them. A planning range does not need to be a live quote or a final all-in total. Keep useful source-backed estimates with proportionate context; do not replace budget research with blanket "unknown" merely because a booking flow is unavailable.
+
+- Record the source, observation date, travel dates or season, currency, pricing unit, room category/room count, adults and child ages when known, and tax/mandatory-fee inclusions or exclusions. Label missing fields as unknown; do not infer them.
+- Prefer comparable family scenarios. A two-adult starting rate may be retained as clearly labeled orientation, but must not be relabeled as the price of a five-person room or used to rank unlike family totals.
+- Distinguish observed rate samples, source-supported planning ranges and derived estimates. Do not imply a broad or typical seasonal range from one isolated rate; disclose the sample's limits. Never create numbers from intuition alone.
+- Keep a concise approximate nightly range prominent where supported, with its date and basis adjacent or immediately accessible. Shared tables and downloads carry that context with the number, not in a detached disclaimer. Fee amounts remain separate when inclusion in the room rate is unknown, avoiding double counting.
+- If existing observations are stale, identify them as historical planning orientation and prioritize refresh. If no defensible range exists, keep the field visibly unavailable and queue bounded price research; do not fabricate a range or present an unresolved gap as finished pricing research.
+- Cancun's missing approximate nightly bands are the next price-research priority for its existing six-resort comparison. Use declared room/party/date assumptions and permitted public sources; failure to obtain live booking totals alone is not a stop rule. This instruction does not itself supply prices or authorize paid API calls, bookings or account changes.
+
+The refresh intervals below still apply; a newly checked fee or policy does not renew the room-price observation date.
 
 - Recheck official hotel facts every 30 days for live hotel pages.
 - Recheck approximate nightly room bands and visible fee examples every 14 days while a page is under active observation or monetization testing.

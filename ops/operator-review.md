@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-POL-001 nightly-price requirement
+
+Arendt (`01a0e2ff-0cbe-7d83-a9ae-f67d6d7b0f27`) cycle-one PASS/no P0-P3. Four-path policy/14-day/source-basis/scope consistency and whitespace independently checked; full236/stateQA/SEO0errors5prioradvisories verified by operator, no site/src/tools diff. Exact-path docs-only push next; no new prices or production change claimed.
+
+Direct-user four-path policy clarification registered in current-cycle. Preserve source-backed approximate nightly bands as a core comparison field with currency/unit/room-party/travel-date/observation/fee basis; no live-quote prerequisite or invented ranges. Keep stale/missing bands as research priorities, Cancun next. No site changes or price collection claimed. Independent read-only review and native QA pending; all unrelated dirty backfills preserved.
+
 ## 2026-09-27 - FT-IMP-035 comparison sharing
 
 Maxwell (`01a0e2d7-8604-76b2-9225-c9b489895490`) cycle-one PASS, no P0-P3. All16paths reviewed;236full/11focused/state/SEO zero errors/five existing advisories/whitespace independently passed. Verified fixed public payload, clipboard recovery, no-JS, module parity and unchanged guide outside sharing markup. Browser/clipboard/print limits accepted as documented. Operator viewport/keyboard/family-flow and48other public-file preservation checks complete. Mechanical results only after consensus; release next.

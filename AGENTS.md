@@ -55,6 +55,7 @@ This repository is for building a family travel planning site and AI product. Th
 - Keep official facts, booking observations, online-review signals, community hypotheses, estimates, editorial interpretation, and human-verified experience distinct. Do not call online-review synthesis a Family Tripwise review.
 - Prefer one validated record source for visible page comparisons, downloads, structured data, and agent answers so public outputs cannot silently disagree.
 - Hotel shortlists must keep a durable evidence record covering official property facts, current booking/fee checks, review-signal themes, conflicting reports, freshness, and unresolved unknowns.
+- Approximate nightly prices are a core family-budget comparison field. Preserve useful source-backed planning ranges rather than removing them merely because live quotes or complete stay totals are unavailable. Show currency, per-room/per-night (or other) unit, room and party basis, stay-date/season basis, observation date and known tax/fee inclusions or exclusions; label missing basis explicitly. Keep this context in shared tables/downloads. Never invent ranges, present stale observations as current quotes, or use an unrelated two-adult rate as a family-room price. Missing or stale bands are a prioritized research gap, not permission to omit budget research indefinitely; follow `docs/plan/hotel-research-engine.md`.
 
 ## Repository Conventions
 

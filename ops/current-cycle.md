@@ -2,11 +2,19 @@
 
 Last updated: 2026-09-27
 
+Monitoring checkpoint, September27 second scheduled run (13:01UTC): daily learning already complete via LRN-051/052 and FT-IMP-035 already delivered. Fetch found no incoming commits/divergence; five dirty completion backfills preserved. Reused September26 GSC throughSeptember24 versus overlapping September25 throughSeptember23;75snapshots validate, no new query evidence. At13:01:59UTC release9b190e0/Pages36319268302 and four affected public files still match; productionSEO31URLs zero errors/five prior advisories, stateQA green. No unfinished release or newly qualified implementation selected; print-dialog gate unchanged/not retried, FT-PUB-006 retains its separate scope/publication gates. No new learning entry, substantive edit, commit or notification. Next: act on a named fresh defect/task gap or eligible expansion evidence, not repeat healthy checks as progress. Mechanical checkpoint retained with completion backfills.
+
 ## Cycle Name
 
 Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
+
+FT-POL-001 review-clean: approximate nightly pricing requirement retained explicitly in AGENTS and hotel research engine. Arendt cycle-one PASS/no findings;236tests/state/SEO0errors5prioradvisories/whitespace green. No site changes. Four exact policy/state paths ready for docs-only push. Next bounded price research is Cancun's six existing resorts; unknown live totals must not displace useful sourced nightly orientation. No prices collected in this policy clarification.
+
+FT-POL-001 direct-user clarification registered September27: approximate nightly hotel prices are a core research/comparison requirement, not an optional extra displaced by live-quote uncertainty. Exact paths: `AGENTS.md`, `docs/plan/hotel-research-engine.md`, `ops/current-cycle.md`, `ops/operator-review.md`. Evidence: user's explicit instruction plus the existing engine's sourced-band rule. Acceptance: retain useful sourced estimates with clear currency/unit/room-party/date/fee basis, preserve uncertainty and no invented current quotes, keep gaps queued for research; focused policy/state and full native QA, independent review, docs-only push. Invariants: no public file, price value, source-date, URL, observation-window, external-action or automation changes. Baseline9b190e0; fetch0/0; include current-cycle's immutable prior backfill only, other four dirty paths untouched. Measurement: policy consistency, not SEO or completed price collection. Reused September26 GSC throughSeptember24 is not this action's evidence. No extra learning credit for this preference.
+
+FT-IMP-035 delivered/production-verified: `9b190e07844b871cb639dc462c86a2b5b395936e`, Pages `36319268302`, marker/four exact public files at `2026-09-27T12:32:13.756Z`, productionSEO31URLs zero errors. Cancun now has comparison-link copy, permanent anchor and fallback;236tests, Maxwell PASS, responsive/keyboard/live landing checks green. Learned: maintained-link portability works independently of print export; no SEO/user-satisfaction claim. New print control not shipped under narrow dialog-observation block, existing print/checklist unchanged. Next: expand the tested link pattern only where another table has the same concrete need; revisit print only with permitted observable QA. Evidence: `docs/plan/cancun-comparison-sharing-2026-09-27.md`. Earlier checkpoints historical.
 
 FT-IMP-035 review-clean: Maxwell cycle-one PASS/no findings;236full/11focused/state/SEO/75snapshots/whitespace and1280/390/320 sharing/keyboard/family-flow checks pass.48other public files unchanged. Exact16path commit/push and four-file production verification next; no new print-control claim. Earlier checkpoints historical.
 
