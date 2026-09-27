@@ -1,5 +1,7 @@
 # Cancun Page Status
 
+September27 FT-IMP-036 review-clean: source-backed nightly price examples for three exact categories; three others remain quote-needed. The quick comparison and portable checklist carry separate room/party/date/rate-plan/tax bases. Source audit and October11 price-refresh boundary: `docs/research/cancun-nightly-price-observations-2026-09-27.md`. Focused22/full236/state/SEO checks pass; 1280/390/320 operator rendering shows mobile prices without sideways scrolling. Locke cycle-three PASS/no findings. The September23 room-policy fact date and October21 URL observation window remain; exact-path commit, Pages and production verification next. Prior six-room comparison and sharing releases are production-verified.
+
 ## Current Follow-Up: FT-IMP-030
 
 **Released and production-verified:** September23 13:22:44UTC, `996d64f4e0f3863f01468a4b74e60155a848d597`, Pages `35866425662` success. Matching marker and five affected resources200/exact bytes; productionSEO29URLs0errors/four existing Chicago warnings. Live390px six records/results/seven-person control, disputes/unknowns/focus/0overflow/console pass. Dirac cycle1 PASS,206tests. Earlier unshipped checkpoints below are history. No blocker; next Orlando. Cancun observation throughOctober21 and source deadlineOctober23 unchanged, same-day expansion annotated.

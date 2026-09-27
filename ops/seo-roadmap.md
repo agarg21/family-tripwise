@@ -7,9 +7,13 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+Current FT-IMP-036 / LRN-053: direct-user Cancun nightly-price usefulness correction is review-clean. Three exact-category observations (two official starting samples, one dated family booking) are rendered in the quick comparison/checklist with non-comparable bases; three unknowns remain quote-needed. Mobile prices appear without horizontal scrolling. Sixteen exact paths, source audit, October11 refresh and release invariants: `docs/research/cancun-nightly-price-observations-2026-09-27.md`. Focused22/full236/state/SEO checks pass; Locke cycle-three PASS/no findings. No new URL or SEO performance inference. Exact-path commit and verified release next.
+
+FT-IMP-035 completed and production-verified at `9b190e07844b871cb639dc462c86a2b5b395936e`, Pages `36319268302`, matching marker/four exact files `2026-09-27T12:32:13.756Z`; productionSEO31URLs zero errors. Comparison-link sharing live; new print control excluded under documented narrow QA block. Maxwell PASS/236tests; evidence and next trigger in `docs/plan/cancun-comparison-sharing-2026-09-27.md`. Earlier release-pending checkpoints historical.
+
 Current FT-IMP-035: finish direct-user table-sharing follow-up on existing Cancun comparison. Canonical anchor copy/permanent link/accessible fallback; no child data, quote invention or new URL. New print control excluded under narrow observable-dialog QA block, existing print/checklist unchanged.236full/11focused/state/SEO/75snapshots and responsive task checks green; independent review/release next. Exact16paths: `docs/plan/cancun-comparison-sharing-2026-09-27.md`.
 
-FT-RES-055 completed research-only: reviewed eight-path commit `8869f7dc757e458f414bc267acec4a1b358ebaf9` pushed; HEAD/origin matched at `2026-09-27T11:59:00Z`. No public change or Pages wait. Preserve/candidate decision below remains; release-pending checkpoints are historical.
+FT-RES-055 completed research-only: reviewed eight-path commit `8869f7dc757e458f414bc267acec4a1b358ebaf9` pushed; HEAD/origin matched at `2026-09-27T11:59:00Z`. No public change or Pages wait. Preserve/candidate decision below remains; earlier checkpoints are historical.
 
 FT-RES-055 final gate: Fermat cycle-one PASS/no findings; 232 full/five focused tests, state/75 snapshots/whitespace green, static SEO zero errors/five existing advisories. Eight reviewed docs/state paths ready for docs-only push; no site/source/tool changes. Research decision and next gate below unchanged; pending-review wording is historical.
 

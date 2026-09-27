@@ -9,7 +9,7 @@ export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export function cancunResortPage() {
   const canonical = `https://familytripwise.com/${cancunPath}`;
   const title = "Cancun Family Resorts: Compare Rooms, Club Ages & Transfers";
-  const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: cancunEvidence.checkedOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
+  const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: cancunEvidence.lastUpdatedOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -42,7 +42,7 @@ export function cancunResortPage() {
     </section>
     <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
-      <p>Start with capacity and sleeping places, then check club admission, transfers and costs in each resort's detailed record. A published maximum is not confirmation for your family.</p>
+      <p>Start with capacity, sleeping places and the nightly price examples. Each price has its own party, date and fee basis; these are not like-for-like family totals. Check club admission and transfers in each detailed record.</p>
       <div class="comparison-sharing">
         <div id="comparison-actions" class="actions" hidden>
           <button id="copy-comparison" type="button">Copy comparison link</button>

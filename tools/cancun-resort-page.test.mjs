@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { cancunPath, cancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { bookingChecklistText, childFields, renderOverview, renderQuickComparison, renderResults } from "../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, esc, renderOverview, renderQuickComparison, renderResults } from "../src/prototypes/cancun-resort-comparison/render.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const html = cancunResortPage();
@@ -15,6 +15,9 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   const checklist = bookingChecklistText();
   assert.equal(read("site/downloads/cancun-booking-checklist.txt"), checklist);
   assert.equal((quick.match(/scope="row"/g) ?? []).length, 6);
+  assert.match(quick, /<th scope="col">Resort and exact room<\/th><th scope="col">Approx nightly price and booking checks<\/th><th scope="col">Published capacity and sleeping places<\/th>/);
+  assert.equal((quick.match(/data-label="Approx nightly price and booking checks"/g) ?? []).length, 6);
+  assert.equal((quick.match(/data-label="Published capacity and sleeping places"/g) ?? []).length, 6);
   for (const record of cancunEvidence.records) {
     assert.ok(checklist.includes(record.hotel));
     assert.ok(checklist.includes(record.room.category));
@@ -23,7 +26,24 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
       for (const check of record[field].checks) assert.ok(checklist.includes(check));
       for (const id of record[field].sourceIds) assert.ok(checklist.includes(cancunEvidence.sources[id]));
     }
+    if (record.price) {
+      assert.ok(quick.includes(esc(record.price.basis)));
+      assert.ok(checklist.includes(record.price.basis));
+      assert.ok(quick.includes(esc(record.price.fees)));
+      assert.ok(checklist.includes(record.price.fees));
+      for (const id of record.price.sourceIds) assert.ok(checklist.includes(cancunEvidence.sources[id]));
+    }
   }
+  assert.equal(cancunEvidence.records.filter(record => record.price).length, 3);
+  assert.match(quick, /From USD 843\/night \(official start\)/);
+  assert.match(quick, /About USD 1,015\/night for two adults/);
+  assert.match(quick, /About USD 1,036\/night \(Fall into Savings\) or USD 1,295\/night \(Standard Rate\)/);
+  assert.match(quick, /USD 507\.50 per-person\/night/);
+  assert.match(quick, /USD 3,107\.18 total/);
+  assert.match(checklist, /USD 3,107\.18 total/);
+  assert.match(quick, /two adults and children aged 3 and 7/);
+  assert.match(quick, /sanitation fee is payable at the resort and excluded/);
+  assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 3);
   for (const output of [quick, checklist]) {
     assert.ok(output.includes(cancunEvidence.checkedOn));
     assert.ok(output.includes(cancunEvidence.recheckOn));
@@ -34,6 +54,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   assert.match(html, /id="quick-comparison"/);
   assert.match(html, /cancun-booking-checklist.txt" download/);
   assert.match(read("site/cancun-resorts.css"), /@media print/);
+  assert.match(read("site/cancun-resorts.css"), /@media screen and \(max-width: 540px\)/);
 });
 
 test("Cancun generated page and public modules match their maintained sources", () => {
@@ -50,7 +71,7 @@ test("one indexable Cancun job has canonical, discovery and factual schema", () 
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   assert.equal(schema["@type"], "WebPage");
   assert.equal(schema.url, url);
-  assert.equal(schema.dateModified, cancunEvidence.checkedOn);
+  assert.equal(schema.dateModified, cancunEvidence.lastUpdatedOn);
   assert.doesNotMatch(html, /noindex|AggregateRating|"@type":"Offer"/);
   assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length - 1, 1);
   assert.ok(read("site/index.html").includes(cancunPath));
@@ -63,7 +84,7 @@ test("no-JavaScript surface retains six records, conflicts, costs and source lin
   assert.equal((html.match(/class="result-card"/g) ?? []).length, 6);
   assert.match(html, /<form id="family-form" hidden>/);
   assert.match(html, /<noscript>/);
-  for (const source of Object.values(cancunEvidence.sources)) assert.ok(overview.includes(source));
+  for (const source of Object.values(cancunEvidence.sources)) assert.ok(overview.includes(source.replaceAll("&", "&amp;")));
   assert.match(overview, /Capacity disputed: 4 versus 5/);
   assert.match(overview, /minimum 3 nights/);
   assert.match(overview, /Round-trip CUN/);

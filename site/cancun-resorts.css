@@ -83,3 +83,32 @@
   .cancun-page .site-header { align-items: flex-start; flex-direction: column; gap: 12px; }
   .cancun-page .result-card { padding: 16px; }
 }
+@media screen and (max-width: 540px) {
+  .cancun-page .quick-table-scroll { overflow: visible; }
+  .cancun-page .quick-table, .cancun-page .quick-table caption, .cancun-page .quick-table tbody,
+  .cancun-page .quick-table tr, .cancun-page .quick-table th, .cancun-page .quick-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+  .cancun-page .quick-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .cancun-page .quick-table tr { margin-bottom: 12px; border: 1px solid #d9e1e3; }
+  .cancun-page .quick-table th, .cancun-page .quick-table td { border: 0; padding: 12px 14px; }
+  .cancun-page .quick-table th[scope="row"] { background: #eaf4ef; }
+  .cancun-page .quick-table td { border-top: 1px solid #d9e1e3; }
+  .cancun-page .quick-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 8px;
+    color: #45545c;
+    font-size: .8rem;
+    font-weight: 700;
+  }
+}

@@ -1,8 +1,10 @@
-// Published rules, not live inventory, pricing or personally verified stays.
+// Published rules and dated price observations, not live inventory or personally verified stays.
 export const cancunEvidence = {
   schemaVersion: 1,
   checkedOn: "2026-09-23",
   recheckOn: "2026-10-23",
+  lastUpdatedOn: "2026-09-27",
+  priceRecheckOn: "2026-10-11",
   publicationStatus: "publication-candidate",
   sources: {
     F1: "https://www.finestresorts.com/cancun/finest-playa-mujeres/rooms/family-suite/",
@@ -15,9 +17,11 @@ export const cancunEvidence = {
     D1: "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/accommodations/club-level/",
     D2: "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/activities/",
     D3: "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/",
+    D4: "https://www.sunscaperesorts.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/accommodations/club-level/",
     R1: "https://www.royaltonresorts.com/resorts/splash-riviera-cancun/suites",
     R2: "https://www.royaltonresorts.com/resorts/splash-riviera-cancun",
     R3: "https://marriott.cdn.tambourine.com/royalton-resorts/media/rsplashcun_factsheet_spanish-67d1f4b2a8644.pdf",
+    R4: "https://book.royaltonresorts.com/?adult=2&arrive=2026-11-09&chain=26025&child=2&childages=3%7C7&currency=USD&depart=2026-11-12&hotel=38092&level=hotel&locale=en-US&productcurrency=USD&room=LXUU2&rooms=1",
     G1: "https://thegrand.moonpalace.com/accommodations/grand-family-suite",
     G2: "https://thegrand.moonpalace.com/things-to-do/playroom",
     G3: "https://thegrand.moonpalace.com/",
@@ -35,6 +39,11 @@ export const cancunEvidence = {
         beds: "King, sofa bed and two singles; separate children's bedroom",
         layoutStatus: "published", sourceIds: ["F1"],
         checks: ["Published combinations include two adults and three children; exact-age rate classification and dated availability are unverified."]
+      },
+      price: {
+        kind: "official-starting", usdFrom: 843, usdTo: null,
+        basis: "Family Suite starting rate; guest mix and travel dates not stated by the property.",
+        fees: "Tax and fee inclusion not stated.", observedOn: "2026-09-27", sourceIds: ["F1"]
       },
       clubs: {
         sourceIds: ["F2", "F3"],
@@ -58,6 +67,7 @@ export const cancunEvidence = {
         layoutStatus: "published", sourceIds: ["S1", "S2"],
         checks: ["One official page lists four guests; another lists two adults and three children. Retain both publications until exact-party acceptance is confirmed."]
       },
+      price: null,
       clubs: {
         sourceIds: ["S3"],
         programs: [
@@ -78,6 +88,11 @@ export const cancunEvidence = {
         beds: "Official category lists king or two doubles; fifth sleeping place and connected layout unresolved",
         layoutStatus: "unknown", sourceIds: ["D1", "D3"],
         checks: ["Published maximum is six guests, up to four adults. Confirm the exact booked unit, connection guarantee, sleeping places, child pricing and availability."]
+      },
+      price: {
+        kind: "derived-two-adult-starting", usdFrom: 1015, usdTo: null,
+        basis: "Two-adult room-night equivalent of the property's USD 507.50 per-person/night September low-season starting sample for this exact Preferred Club category; exact dates and child rates not stated.",
+        fees: "Tax and fee inclusion not stated.", observedOn: "2026-09-27", sourceIds: ["D4"]
       },
       clubs: {
         sourceIds: ["D2"],
@@ -101,6 +116,12 @@ export const cancunEvidence = {
         layoutStatus: "published", sourceIds: ["R1", "R3"],
         checks: ["The current suites page lists up to six children; the official Spanish factsheet lists two for the matching category. Both list eight guests total. Obtain exact-party confirmation; do not add adult and child limits together.", "This is the Sunset View category, not the similarly named Diamond Club category. Confirm bed allocation and the sofa bed for your party."]
       },
+      price: {
+        kind: "dated-rate-plan-sample", usdFrom: 1035.73, usdTo: 1295.28,
+        basis: "November 9-12, 2026; two adults and children aged 3 and 7, one suite, three nights. Fall into Savings: Flexible Stay (USD 3,107.18 total); Standard Rate (USD 3,885.85 total). These are rate-plan examples, not a seasonal range.",
+        fees: "Booking display says taxes and fees included, but the separate MXN 85.40 per-room/night sanitation fee is payable at the resort and excluded.",
+        observedOn: "2026-09-27", sourceIds: ["R4"]
+      },
       clubs: {
         sourceIds: ["R2"],
         programs: [{ name: "Kids Club", min: 4, max: 12, parentRequired: false, registration: null, pottyRequired: null }],
@@ -119,6 +140,7 @@ export const cancunEvidence = {
         layoutStatus: "unknown", sourceIds: ["Z1"],
         checks: ["Four guests total, including up to three children; not four adults plus three children. Confirm your exact ages and sleeping places. A rollaway request does not increase the maximum."]
       },
+      price: null,
       clubs: {
         sourceIds: ["Z2", "Z3"], programs: [],
         checks: ["Current exact club-age and admission rules were not established from the inspected official pages. Ask about each child; unknown does not mean no club or activities."]
@@ -136,6 +158,7 @@ export const cancunEvidence = {
         layoutStatus: "published", sourceIds: ["G1"],
         checks: ["The named category publishes seven guests. Confirm your exact ages, rate classification, rollaway arrangement and availability; this does not confirm a booking."]
       },
+      price: null,
       clubs: {
         sourceIds: ["G2"], programs: [],
         checks: ["The official Playroom page was only partially readable during this check. Confirm floor-specific age rules, adult accompaniment and current admission; no drop-off age match is inferred."]

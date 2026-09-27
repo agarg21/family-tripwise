@@ -1,7 +1,7 @@
 FAMILY TRIPWISE - CANCUN BOOKING CHECKLIST
 https://familytripwise.com/where-to-stay/cancun-family-resorts.html#quick-comparison
 Sources checked: 2026-09-23; recheck due: 2026-10-23.
-Research-based screening, not a quote or confirmed booking. Check the live page for updates.
+Price examples checked: 2026-09-27; refresh due: 2026-10-11. Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
 
 YOUR BOOKING
 Travel dates: ____________________ Adults: ____ Children's ages at travel: ____________________
@@ -24,6 +24,10 @@ Finest Playa Mujeres - Playa Mujeres, north of Cancun
 Room: Family Suite
 Published maximum: 5
 Beds: King, sofa bed and two singles; separate children's bedroom
+Price: From USD 843/night (official start)
+Basis: Family Suite starting rate; guest mix and travel dates not stated by the property.
+Fees: Tax and fee inclusion not stated.
+Price checked: 2026-09-27. Verify for your family and dates.
 Room check: Published combinations include two adults and three children; exact-age rate classification and dated availability are unverified.
 Club bands: 0-2 Mini Club accompanied access; parent must stay | 3-6 Mini Club; registration required | 7-11 Maxi Club; registration required
 Club check: Teen lounge is mentioned without an exact age band; do not infer admission for age 12.
@@ -41,6 +45,7 @@ Sunscape Cancun Resort & Spa - Cancun Hotel Zone
 Room: Family Junior Suite
 Capacity disputed: 4 versus 5
 Beds: King, bunk bed and trundle
+Price: Exact-room nightly price: not verified. Request a dated quote for your party.
 Room check: One official page lists four guests; another lists two adults and three children. Retain both publications until exact-party acceptance is confirmed.
 Club bands: 4-12 Explorer's Club | 13-17 Core Zone
 Club check: Age 3 is below the published Explorer's Club band, not proof that all resort activities exclude three-year-olds. Confirm admission conditions and actual operations.
@@ -56,6 +61,10 @@ Dreams Sapphire Resort & Spa - Riviera Cancun, not Cancun Hotel Zone
 Room: Preferred Club Family Junior Suite Tropical View
 Published maximum: 6
 Beds: Official category lists king or two doubles; fifth sleeping place and connected layout unresolved
+Price: About USD 1,015/night for two adults
+Basis: Two-adult room-night equivalent of the property's USD 507.50 per-person/night September low-season starting sample for this exact Preferred Club category; exact dates and child rates not stated.
+Fees: Tax and fee inclusion not stated.
+Price checked: 2026-09-27. Verify for your family and dates.
 Room check: Published maximum is six guests, up to four adults. Confirm the exact booked unit, connection guarantee, sleeping places, child pricing and availability.
 Club bands: 3-12 Explorer's Club; fully toilet-trained | 13-17 Core Zone
 Club check: Explorer's Club requires full toilet training. Hours vary seasonally; programming and admission remain subject to confirmation. Separate childcare costs extra.
@@ -64,12 +73,17 @@ Cost check: Separate childcare and some activities cost extra; no complete room/
 Complete stay cost and availability: unknown.
 D1: https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/accommodations/club-level/
 D3: https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/
+D4: https://www.sunscaperesorts.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/accommodations/club-level/
 D2: https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/activities/
 
 Royalton Splash Riviera Cancun - Riviera Cancun, not Cancun Hotel Zone
 Room: Luxury Two Bedroom Junior Suite
 Child limit disputed: 6 versus 2; total maximum 8
 Beds: Two bedrooms; two kings or one king and two queens. The description also mentions a sofa bed.
+Price: About USD 1,036/night (Fall into Savings) or USD 1,295/night (Standard Rate)
+Basis: November 9-12, 2026; two adults and children aged 3 and 7, one suite, three nights. Fall into Savings: Flexible Stay (USD 3,107.18 total); Standard Rate (USD 3,885.85 total). These are rate-plan examples, not a seasonal range.
+Fees: Booking display says taxes and fees included, but the separate MXN 85.40 per-room/night sanitation fee is payable at the resort and excluded.
+Price checked: 2026-09-27. Verify for your family and dates.
 Room check: The current suites page lists up to six children; the official Spanish factsheet lists two for the matching category. Both list eight guests total. Obtain exact-party confirmation; do not add adult and child limits together.
 Room check: This is the Sunset View category, not the similarly named Diamond Club category. Confirm bed allocation and the sofa bed for your party.
 Club bands: 4-12 Kids Club
@@ -80,12 +94,14 @@ Cost check: Trampoline park, bowling and laser tag carry extra charges; complete
 Complete stay cost and availability: unknown.
 R1: https://www.royaltonresorts.com/resorts/splash-riviera-cancun/suites
 R3: https://marriott.cdn.tambourine.com/royalton-resorts/media/rsplashcun_factsheet_spanish-67d1f4b2a8644.pdf
+R4: https://book.royaltonresorts.com/?adult=2&arrive=2026-11-09&chain=26025&child=2&childages=3%7C7&currency=USD&depart=2026-11-12&hotel=38092&level=hotel&locale=en-US&productcurrency=USD&room=LXUU2&rooms=1
 R2: https://www.royaltonresorts.com/resorts/splash-riviera-cancun
 
 Hyatt Ziva Cancun - Cancun Hotel Zone
 Room: Ocean View Double
 Published maximum: 4
 Beds: Exact bed configuration needs confirmation; the room page warns that pictures may differ.
+Price: Exact-room nightly price: not verified. Request a dated quote for your party.
 Room check: Four guests total, including up to three children; not four adults plus three children. Confirm your exact ages and sleeping places. A rollaway request does not increase the maximum.
 Club bands: Exact age rules unknown in this record
 Club check: Current exact club-age and admission rules were not established from the inspected official pages. Ask about each child; unknown does not mean no club or activities.
@@ -101,6 +117,7 @@ Moon Palace The Grand Cancun - Cancun area
 Room: Grand Family Suite
 Published maximum: 7
 Beds: Two connecting rooms: one king and two doubles; a rollaway for the seventh guest, who must be a child.
+Price: Exact-room nightly price: not verified. Request a dated quote for your party.
 Room check: The named category publishes seven guests. Confirm your exact ages, rate classification, rollaway arrangement and availability; this does not confirm a booking.
 Club bands: Exact age rules unknown in this record
 Club check: The official Playroom page was only partially readable during this check. Confirm floor-specific age rules, adult accompaniment and current admission; no drop-off age match is inferred.

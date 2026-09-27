@@ -1,5 +1,9 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-036 Cancun nightly-price examples
+
+Locke (`01a0e329-d21e-71c3-851f-b3fbab24ea25`) cycle-three **PASS**, no P0-P3. Cycle one found a P2 missing explicit USD labels and P3 rate-plan headline that resembled a range; cycle two verified both corrections and found one P3 stale data comment; cycle three verified that correction in source and public copy. Reviewer independently ran full 236/236, focused 22/22, state QA, static SEO (0 errors/five prior advisories), whitespace and exact 16-path scope. Operator desktop 1280/mobile 390 and 320 task checks found six rows, three priced/three quote-needed, prices directly visible on mobile with no page overflow, and the two Royalton plans named separately. Release and production verification follow.
+
 ## 2026-09-27 - FT-POL-001 nightly-price requirement
 
 Arendt (`01a0e2ff-0cbe-7d83-a9ae-f67d6d7b0f27`) cycle-one PASS/no P0-P3. Four-path policy/14-day/source-basis/scope consistency and whitespace independently checked; full236/stateQA/SEO0errors5prioradvisories verified by operator, no site/src/tools diff. Exact-path docs-only push next; no new prices or production change claimed.

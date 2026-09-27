@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-27
 
+FT-IMP-036 / LRN-053 review-clean September27 direct-user price follow-up: three exact-category nightly examples with room/party/date/fee source context enter the Cancun table and portable checklist; three unsupported exact-room prices stay visible as quote-needed. Mobile QA found the price column offscreen, so this same action makes prices visible without horizontal scrolling. Source audit, registered 16 paths, acceptance and October11 price refresh: `docs/research/cancun-nightly-price-observations-2026-09-27.md`. Existing October21 Cancun observation window has a narrow material budget-usefulness intervention, not a ranking change. September26 GSC (`ops/gsc-snapshots/2026-09-26.md`) is reused API evidence finalized through September24; September25 overlap adds no aligned cohort, so no CTR/SEO claim. Baseline `612c5095da18578dc52c9fbcf844d61a4d4a0f6d`, origin aligned after fetch; five dirty backfills preserved, especially unrelated Orlando. Focused22/full236/state/SEO0errors, desktop/mobile 1280/390/320 proxy task and Locke cycle-three PASS/no findings; exact-path commit and verified release next. No new URL, account action or request indexing.
+
 Monitoring checkpoint, September27 second scheduled run (13:01UTC): daily learning already complete via LRN-051/052 and FT-IMP-035 already delivered. Fetch found no incoming commits/divergence; five dirty completion backfills preserved. Reused September26 GSC throughSeptember24 versus overlapping September25 throughSeptember23;75snapshots validate, no new query evidence. At13:01:59UTC release9b190e0/Pages36319268302 and four affected public files still match; productionSEO31URLs zero errors/five prior advisories, stateQA green. No unfinished release or newly qualified implementation selected; print-dialog gate unchanged/not retried, FT-PUB-006 retains its separate scope/publication gates. No new learning entry, substantive edit, commit or notification. Next: act on a named fresh defect/task gap or eligible expansion evidence, not repeat healthy checks as progress. Mechanical checkpoint retained with completion backfills.
 
 ## Cycle Name
@@ -9,6 +11,8 @@ Monitoring checkpoint, September27 second scheduled run (13:01UTC): daily learni
 Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
+
+FT-POL-001 completed docs-only: `612c5095da18578dc52c9fbcf844d61a4d4a0f6d` pushed and HEAD/origin matched at `2026-09-27T13:13:36Z`, after fresh fetch and sole reviewed four-path range inspection. Arendt PASS/236tests; no Pages wait, site change or new price values. Approximate nightly bands remain core; Cancun price research next under the recorded evidence rules. Unrelated dirty backfills preserved; immutable completion retained for next substantive transaction.
 
 FT-POL-001 review-clean: approximate nightly pricing requirement retained explicitly in AGENTS and hotel research engine. Arendt cycle-one PASS/no findings;236tests/state/SEO0errors5prioradvisories/whitespace green. No site changes. Four exact policy/state paths ready for docs-only push. Next bounded price research is Cancun's six existing resorts; unknown live totals must not displace useful sourced nightly orientation. No prices collected in this policy clarification.
 

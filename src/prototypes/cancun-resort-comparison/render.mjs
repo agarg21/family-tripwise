@@ -7,12 +7,24 @@ export const sources = (ids, label) => `<p class="sources">${ids.map((id, index)
 const capacity = record => record.room.capacityStatus === "disputed"
   ? record.room.capacityConflict ?? "Capacity disputed: 4 versus 5"
   : `Published maximum: ${record.room.maximum}`;
+const money = value => `USD ${Math.round(value).toLocaleString("en-US")}`;
+const priceLabel = price => price.kind === "official-starting"
+  ? `From ${money(price.usdFrom)}/night (official start)`
+  : price.kind === "derived-two-adult-starting"
+    ? `About ${money(price.usdFrom)}/night for two adults`
+    : `About ${money(price.usdFrom)}/night (Fall into Savings) or ${money(price.usdTo)}/night (Standard Rate)`;
+const priceHtml = record => record.price
+  ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(record.price.basis)}</p><p>${esc(record.price.fees)} Price checked ${esc(record.price.observedOn)}; verify for your family and dates.</p>${sources(record.price.sourceIds, "Price source")}`
+  : "<p><strong>Exact-room nightly price: not verified.</strong> Request a dated quote for your party.</p>";
+const priceText = record => record.price
+  ? `${priceLabel(record.price)}\nBasis: ${record.price.basis}\nFees: ${record.price.fees}\nPrice checked: ${record.price.observedOn}. Verify for your family and dates.`
+  : "Exact-room nightly price: not verified. Request a dated quote for your party.";
 
 export function renderQuickComparison() {
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
-    <caption>Six room categories · Sources checked ${esc(cancunEvidence.checkedOn)} · Recheck due ${esc(cancunEvidence.recheckOn)}</caption>
-    <thead><tr><th scope="col">Resort and exact room</th><th scope="col">Published capacity and sleeping places</th><th scope="col">Before booking</th></tr></thead>
-    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td><td>${list(record.room.checks)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td></tr>`).join("\n")}</tbody>
+    <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples checked ${esc(cancunEvidence.lastUpdatedOn)}, refresh due ${esc(cancunEvidence.priceRecheckOn)} · Policy recheck due ${esc(cancunEvidence.recheckOn)}</caption>
+    <thead><tr><th scope="col">Resort and exact room</th><th scope="col">Approx nightly price and booking checks</th><th scope="col">Published capacity and sleeping places</th></tr></thead>
+    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Approx nightly price and booking checks">${priceHtml(record)}${list(record.room.checks)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td><td data-label="Published capacity and sleeping places"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
 }
 
@@ -21,7 +33,7 @@ export function bookingChecklistText() {
   return `FAMILY TRIPWISE - CANCUN BOOKING CHECKLIST
 https://familytripwise.com/where-to-stay/cancun-family-resorts.html#quick-comparison
 Sources checked: ${cancunEvidence.checkedOn}; recheck due: ${cancunEvidence.recheckOn}.
-Research-based screening, not a quote or confirmed booking. Check the live page for updates.
+Price examples checked: ${cancunEvidence.lastUpdatedOn}; refresh due: ${cancunEvidence.priceRecheckOn}. Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
 
 YOUR BOOKING
 Travel dates: ____________________ Adults: ____ Children's ages at travel: ____________________
@@ -44,13 +56,14 @@ ${cancunEvidence.records.map(record => `${record.hotel} - ${record.area}
 Room: ${record.room.category}
 ${capacity(record)}
 Beds: ${record.room.beds}
+Price: ${priceText(record)}
 ${record.room.checks.map(check => `Room check: ${check}`).join("\n")}
 Club bands: ${record.clubs.programs.length ? record.clubs.programs.map(p => `${p.min}-${p.max} ${p.name}${p.parentRequired ? "; parent must stay" : ""}${p.registration ? "; registration required" : ""}${p.pottyRequired ? "; fully toilet-trained" : ""}`).join(" | ") : "Exact age rules unknown in this record"}
 ${record.clubs.checks.map(check => `Club check: ${check}`).join("\n")}
 ${record.transfers.rule === "direct-offer" ? `Transfer offer: ${record.transfers.airport}, minimum ${record.transfers.minimumNights} nights.\n` : ""}${record.transfers.checks.map(check => `Transfer check: ${check}`).join("\n")}
 ${record.extras.checks.map(check => `Cost check: ${check}`).join("\n")}
 Complete stay cost and availability: unknown.
-${recordSources([...record.room.sourceIds, ...record.clubs.sourceIds, ...record.transfers.sourceIds, ...record.extras.sourceIds])}`).join("\n\n")}
+${recordSources([...record.room.sourceIds, ...(record.price?.sourceIds ?? []), ...record.clubs.sourceIds, ...record.transfers.sourceIds, ...record.extras.sourceIds])}`).join("\n\n")}
 `;
 }
 
@@ -59,7 +72,7 @@ export function renderOverview() {
     <header><h3>${esc(record.hotel)}</h3><p class="area">${esc(record.area)}</p><a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(record.hotel + " Mexico")}">Map location</a></header>
     <div><h4>Room</h4><p><strong>${esc(record.room.category)}</strong></p><p class="key-fact">${record.room.capacityStatus === "disputed" ? esc(record.room.capacityConflict ?? "Capacity disputed: 4 versus 5") : `Published maximum: ${record.room.maximum}`}</p><p>${esc(record.room.beds)}</p>${list(record.room.checks)}${sources(record.room.sourceIds, "Official room details")}</div>
     <div><h4>Club ages</h4>${record.clubs.programs.length ? list(record.clubs.programs.map(program => `${program.min}-${program.max}: ${program.name}${program.parentRequired ? "; parent must stay" : ""}${program.registration ? "; registration required" : ""}${program.pottyRequired ? "; fully toilet-trained" : ""}`)) : "<p>Exact club-age rules: unknown in this record.</p>"}${sources(record.clubs.sourceIds, record.clubs.programs.length ? "Official club rules" : "Official pages checked")}<details><summary>Admission checks</summary>${list(record.clubs.checks)}</details></div>
-    <div><h4>Transfers &amp; extra costs</h4>${record.transfers.rule === "direct-offer" ? `<p>Round-trip ${esc(record.transfers.airport)} airport offer: minimum ${record.transfers.minimumNights} nights.</p>` : ""}${list(record.transfers.checks)}${sources(record.transfers.sourceIds, record.transfers.rule === "unknown" ? "Official page checked" : "Official transfer terms")}${list(record.extras.checks)}${sources(record.extras.sourceIds, "Official extras")}<p><strong>Stay total: unknown.</strong> No dated quote or availability confirmed.</p></div>
+    <div><h4>Price, transfers &amp; extra costs</h4>${priceHtml(record)}${record.transfers.rule === "direct-offer" ? `<p>Round-trip ${esc(record.transfers.airport)} airport offer: minimum ${record.transfers.minimumNights} nights.</p>` : ""}${list(record.transfers.checks)}${sources(record.transfers.sourceIds, record.transfers.rule === "unknown" ? "Official page checked" : "Official transfer terms")}${list(record.extras.checks)}${sources(record.extras.sourceIds, "Official extras")}<p><strong>Stay total: unknown for your dates and party.</strong> Availability is not confirmed.</p></div>
   </article>`).join("\n");
 }
 
