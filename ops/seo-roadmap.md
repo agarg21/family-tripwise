@@ -7,6 +7,10 @@ Next re-score due: 2026-09-21
 
 ## Ownership
 
+Current FT-IMP-035: finish direct-user table-sharing follow-up on existing Cancun comparison. Canonical anchor copy/permanent link/accessible fallback; no child data, quote invention or new URL. New print control excluded under narrow observable-dialog QA block, existing print/checklist unchanged.236full/11focused/state/SEO/75snapshots and responsive task checks green; independent review/release next. Exact16paths: `docs/plan/cancun-comparison-sharing-2026-09-27.md`.
+
+FT-RES-055 completed research-only: reviewed eight-path commit `8869f7dc757e458f414bc267acec4a1b358ebaf9` pushed; HEAD/origin matched at `2026-09-27T11:59:00Z`. No public change or Pages wait. Preserve/candidate decision below remains; release-pending checkpoints are historical.
+
 FT-RES-055 final gate: Fermat cycle-one PASS/no findings; 232 full/five focused tests, state/75 snapshots/whitespace green, static SEO zero errors/five existing advisories. Eight reviewed docs/state paths ready for docs-only push; no site/source/tool changes. Research decision and next gate below unchanged; pending-review wording is historical.
 
 Current FT-RES-055 / LRN-051: field-specific hotel-price sharing audit; preserve three checked cost policies and dated estimates, no current family-total inference. Exact eight docs/state paths and candidate selection gate in `docs/research/hotel-table-sharing-price-audit-2026-09-27.md`. User's preferred table remains unidentified; no repeat question or project-wide block. Reused `ops/gsc-snapshots/2026-09-26.json` throughSeptember24; no ranking rewrite. Review/docs-only push next, live site unchanged.

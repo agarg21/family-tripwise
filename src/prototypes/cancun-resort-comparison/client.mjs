@@ -1,6 +1,9 @@
 import { compareCancunFamily } from "./compare.mjs";
 import { cancunEvidence } from "./data.mjs";
 import { childFields, renderResults } from "./render.mjs";
+import { setupSharing } from "./share.mjs";
+
+setupSharing({ root: document, clipboard: navigator.clipboard });
 
 const form = document.querySelector("#family-form");
 const fields = document.querySelector("#child-fields");

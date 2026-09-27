@@ -43,4 +43,6 @@ Confidence: high for these published fee observations and retained-label compari
 
 ## QA and Release
 
+Docs-only push verified `2026-09-27T11:59:00Z`: `8869f7dc757e458f414bc267acec4a1b358ebaf9`; fresh fetch, no divergence, complete sole reviewed commit/eight paths inspected, HEAD/origin matched after push. No Pages wait required; site unchanged. Unrelated Orlando dirty backfill preserved. These immutable completion results remain for the next substantive transaction, not a metadata-only commit.
+
 Research only; no public improvement claimed. Fermat (`01a0e2b8-c0ef-7dc3-8bed-ca5e44405a0f`) cycle-one PASS, no P0-P3 findings; independently checked all eight paths and the three official FAQs. Operator and reviewer: 232 full tests, five focused tests, state QA, 75 snapshot validations and whitespace pass; static SEO 31 URLs/34 HTML files, zero errors and five existing advisories. Operator freshness check: zero expired notices, four existing yearless Chicago dates; no site/source/tool diff. Docs-only push next. No technical blocker; the exact table selection is a narrow product clarification already asked in conversation.

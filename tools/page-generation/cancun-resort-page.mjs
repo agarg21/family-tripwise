@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
+import { comparisonUrl } from "../../src/prototypes/cancun-resort-comparison/share.mjs";
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
 import { bookingChecklistText, childFields, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
@@ -42,6 +43,14 @@ export function cancunResortPage() {
     <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
       <p>Start with capacity and sleeping places, then check club admission, transfers and costs in each resort's detailed record. A published maximum is not confirmation for your family.</p>
+      <div class="comparison-sharing">
+        <div id="comparison-actions" class="actions" hidden>
+          <button id="copy-comparison" type="button">Copy comparison link</button>
+        </div>
+        <a href="${comparisonUrl}">Direct link to this comparison</a>
+        <p id="share-status" role="status" aria-live="polite"></p>
+        <div id="comparison-link-fallback" hidden><label for="comparison-link">Comparison link</label><input id="comparison-link" type="text" readonly value="${comparisonUrl}"></div>
+      </div>
       <p><a href="../downloads/cancun-booking-checklist.txt" download>Download the booking checklist and source records (.txt)</a></p>
       ${renderQuickComparison()}
     </section>
@@ -102,7 +111,7 @@ export function writeCancunResortPage(writeSite) {
   writeSite(cancunPath, cancunResortPage());
   writeSite("downloads/cancun-booking-checklist.txt", bookingChecklistText());
   // Copy the reviewed modules unchanged so public and native checks share one model.
-  for (const name of ["data", "compare", "render", "client"]) {
+  for (const name of ["data", "compare", "render", "client", "share"]) {
     writeSite(`cancun/${name}.mjs`, readFileSync(new URL(`../../src/prototypes/cancun-resort-comparison/${name}.mjs`, import.meta.url), "utf8"));
   }
 }

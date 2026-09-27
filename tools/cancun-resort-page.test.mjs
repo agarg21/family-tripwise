@@ -38,7 +38,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
 
 test("Cancun generated page and public modules match their maintained sources", () => {
   assert.equal(read(`site/${cancunPath}`), html);
-  for (const name of ["data", "compare", "render", "client"]) {
+  for (const name of ["data", "compare", "render", "client", "share"]) {
     assert.equal(read(`site/cancun/${name}.mjs`), read(`src/prototypes/cancun-resort-comparison/${name}.mjs`));
   }
 });

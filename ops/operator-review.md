@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-035 comparison sharing
+
+Maxwell (`01a0e2d7-8604-76b2-9225-c9b489895490`) cycle-one PASS, no P0-P3. All16paths reviewed;236full/11focused/state/SEO zero errors/five existing advisories/whitespace independently passed. Verified fixed public payload, clipboard recovery, no-JS, module parity and unchanged guide outside sharing markup. Browser/clipboard/print limits accepted as documented. Operator viewport/keyboard/family-flow and48other public-file preservation checks complete. Mechanical results only after consensus; release next.
+
+Independent read-only review pending for16registered paths in `docs/plan/cancun-comparison-sharing-2026-09-27.md`. Scope is link/copy/fallback only; no new print control after observable-dialog blocker. Verify canonical/no-party-data payload, clipboard missing/denied recovery, progressive enhancement, public module parity, unchanged evidence/metadata/other pages, native QA and prior mechanical backfills. Unrelated Orlando backfill excluded. Operator236full/11focused/state/SEO/75snapshots and1280/390/320 keyboard/family-flow checks pass; five pre-existing advisories. No production claim.
+
 ## 2026-09-27 - FT-RES-055 price-context audit
 
 Fermat (`01a0e2b8-c0ef-7dc3-8bed-ca5e44405a0f`) cycle-one PASS, no P0-P3 findings. Independently verified eight paths, three official FAQs, scoped price/occupancy unknowns and preserve/candidate gate; 232 full/five focused tests, state, 75 snapshots, whitespace pass. Static SEO zero errors/five existing advisories. No reviewer edits. Operator freshness zero expired/four existing yearless dates; no site/source/tool changes. Exact-path docs-only push next; no material changes after consensus.

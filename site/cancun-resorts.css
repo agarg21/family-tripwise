@@ -21,10 +21,14 @@
 .cancun-page .quick-table thead { background: #eaf4ef; }
 .cancun-page .quick-table th span { display: block; font-weight: 400; margin-top: 8px; }
 .cancun-page .quick-table td p { margin-top: 8px; }
+.cancun-page .comparison-sharing { margin: 16px 0; }
+.cancun-page .comparison-sharing > a { display: inline-block; margin-top: 12px; }
+.cancun-page #share-status { min-height: 1.5em; margin: 8px 0; }
 @media print {
   .cancun-page .site-header, .cancun-page .skip-link, .cancun-page footer,
   .cancun-page main > section:not(.page-intro):not(#quick-comparison):not(#before-booking),
-  .cancun-page .page-intro .jump-links, .cancun-page #quick-comparison > p { display: none; }
+  .cancun-page .page-intro .jump-links, .cancun-page #quick-comparison > p,
+  .cancun-page .comparison-sharing { display: none; }
   .cancun-page main { max-width: none; padding: 0; }
   .cancun-page .page-intro > :not(h1):not(.source-date) { display: none; }
   .cancun-page .quick-table-scroll { overflow: visible; }

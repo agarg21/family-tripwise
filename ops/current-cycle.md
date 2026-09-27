@@ -8,6 +8,14 @@ Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
 
+FT-IMP-035 review-clean: Maxwell cycle-one PASS/no findings;236full/11focused/state/SEO/75snapshots/whitespace and1280/390/320 sharing/keyboard/family-flow checks pass.48other public files unchanged. Exact16path commit/push and four-file production verification next; no new print-control claim. Earlier checkpoints historical.
+
+FT-IMP-035 implementation narrowed to independently testable comparison link/copy/fallback; new print control removed after app-dialog QA denial, existing print/checklist unchanged.236full/11focused/state/SEO/75snapshots pass;1280/390/320 and keyboard/family submit-reset checks pass. No family input in link. Independent review/release next; exact scope and narrow blocked print gate in `docs/plan/cancun-comparison-sharing-2026-09-27.md`.
+
+FT-IMP-035 direct-user sharing follow-up registered before edits in `docs/plan/cancun-comparison-sharing-2026-09-27.md`: select Cancun existing comparison, visible link/copy/print and portable context; no invented price quote or new URL. Exact16paths, preserved prior backfills, unrelated Orlando excluded. Native/browser/review/release gates pending.
+
+FT-RES-055 / LRN-051 completed, research only: docs-only `8869f7dc757e458f414bc267acec4a1b358ebaf9` pushed and HEAD/origin matched at `2026-09-27T11:59:00Z`. Fermat PASS, 232 full/five focused tests; no site changes or technical blocker. Daily learning complete; existing dated prices preserved. Share export remains a candidate with the already-asked table selection and price-basis gate; next run uses independent eligible work if still unidentified. No Pages wait or repeated question. Lower checkpoints are historical; immutable backfills retained for next substantive transaction, unrelated Orlando work untouched.
+
 FT-RES-055 / LRN-051 research review complete: Fermat cycle-one PASS/no findings; 232 full/five focused tests, state/75 snapshots/whitespace pass, static SEO zero errors/five existing advisories. No site/source/tool changes; daily learning complete, no public delivery claimed. Exact eight-path docs-only commit/push next; candidate selection gate and next trigger remain in `docs/research/hotel-table-sharing-price-audit-2026-09-27.md`. Lower registration checkpoint is historical.
 
 FT-RES-055 / LRN-051 registered September27 first actual Eastern run: audit price context needed for a shareable hotel table, using three San Diego official cost-policy sources as a stated sample, not guessing the user's preferred destination. Eight exact docs/state paths and invariants in `docs/research/hotel-table-sharing-price-audit-2026-09-27.md`; no site change or technical blocker. Reused `ops/gsc-snapshots/2026-09-26.md` throughSeptember24,75validated. No unfinished eligible release or query-qualified rewrite; current learning tests price freshness rather than repeats monitoring. Prior release backfills preserved.
