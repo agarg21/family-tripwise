@@ -2,7 +2,11 @@
 
 Latest production evidence: September 17 `LRN-034` / `FT-IMP-028` is released and production-verified at action commit `c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6`, successful Pages run `35184964741`, matching marker and byte-identical target HTML. Production SEO and all three exact viewport target checks pass at `2026-09-17T05:15:36Z`. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-26
+Last updated: 2026-09-27
+
+## LRN-051 / September27 / FT-RES-055
+
+Family decision: share a hotel shortlist for two adults/three children without mistaking rough nightly bands for comparable current booking totals. Hypothesis that fresh fee checks renew historical room ranges is rejected. September27 official Bahia/Catamaran/Dana FAQ cost-policy audit supports preserving retained amounts but supplies no same-date/room/party quote; source housekeeping conflict and historical fireworks text prevent blanket freshness claims. The San Diego sample is not assumed to be the user's unidentified preferred table. Confidence high for narrow policy observations, medium for share-context design, low for prices/demand/satisfaction. Lesson: exported prices need their own date, basis and inclusion context; fresh policy facts do not renew old estimates. Preserve existing page; candidate export awaits exact table selection and its full price-context audit. Trigger: changed policy, comparable quote or an export retaining context that still fails its recipient. Evidence: `docs/research/hotel-table-sharing-price-audit-2026-09-27.md`. Source audit counts as today's learning, not unchanged GSC monitoring; no public improvement or user-testing claim.
 
 ## LRN-050 / September26 / FT-IMP-034
 

@@ -2,6 +2,8 @@
 
 Status: durable evidence for the live 12-hotel comparison
 
+September27 bounded cost-policy overlay (`FT-RES-055`): Bahia and Catamaran published fee/parking values match this pack; The Dana control matches the expanded live record. This does not renew historical room prices, review samples, remaining property facts or the overall refresh dates below. Field-specific sources, conflicts and sharing requirements: `docs/research/hotel-table-sharing-price-audit-2026-09-27.md`. Keep July ranges as dated planning orientation, not current family quotes.
+
 Official facts refreshed: 2026-08-17
 
 Price observations last supported: 2026-07-18; August 17 public checks were not comparable enough to renew them

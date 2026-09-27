@@ -1,12 +1,18 @@
 # Current Operating Cycle
 
-Last updated: 2026-09-26
+Last updated: 2026-09-27
 
 ## Cycle Name
 
 Cycle 4: Run the two-month independent Family Tripwise Master autopilot renewal.
 
 ## Active Priority
+
+FT-RES-055 / LRN-051 research review complete: Fermat cycle-one PASS/no findings; 232 full/five focused tests, state/75 snapshots/whitespace pass, static SEO zero errors/five existing advisories. No site/source/tool changes; daily learning complete, no public delivery claimed. Exact eight-path docs-only commit/push next; candidate selection gate and next trigger remain in `docs/research/hotel-table-sharing-price-audit-2026-09-27.md`. Lower registration checkpoint is historical.
+
+FT-RES-055 / LRN-051 registered September27 first actual Eastern run: audit price context needed for a shareable hotel table, using three San Diego official cost-policy sources as a stated sample, not guessing the user's preferred destination. Eight exact docs/state paths and invariants in `docs/research/hotel-table-sharing-price-audit-2026-09-27.md`; no site change or technical blocker. Reused `ops/gsc-snapshots/2026-09-26.md` throughSeptember24,75validated. No unfinished eligible release or query-qualified rewrite; current learning tests price freshness rather than repeats monitoring. Prior release backfills preserved.
+
+FT-IMP-034 delivered and production-verified: `7ba1721ea87575ee3bd203991e11aeb9b963a19f`, Pages `36270179047`, marker/five exact public files verified at2026-09-26T20:38:36.975Z; productionSEO31URLs zero errors. Home now shows seven destination scopes and hotel links; Cancun adds six-room summary and source-derived booking download. Heisenberg cycle2 PASS,232tests and responsive/task checks. Learned only: no query cohort qualifies a ranking rewrite; three outreach drafts are unsent/pending approval. No blocker. Next: preserve ranking-sensitive copy until qualified evidence; outreach needs separate explicit send authority. Evidence/measurement: `docs/plan/discovery-and-reuse-2026-09-26.md`. Lower checkpoints are history; release backfills retained for next real transaction.
 
 FT-IMP-034 final gate: Heisenberg cycle2 PASS, corrected one P3 arithmetic typo;232full/9focused/state/SEO/75snapshots/whitespace and responsive/navigation/download/familyflow checks pass. Exact19paths ready for release,46other public files unchanged. No ranking-driven rewrite qualified; three outreach drafts remain unsent. Evidence: `docs/plan/discovery-and-reuse-2026-09-26.md`.
 
