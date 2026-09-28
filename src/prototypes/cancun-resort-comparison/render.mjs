@@ -22,6 +22,29 @@ const priceText = record => record.price
   ? `${priceLabel(record.price)}\nBasis: ${record.price.basis}\nFees: ${record.price.fees}\nPrice checked: ${record.price.observedOn}. Verify for your family and dates.`
   : "Exact-room nightly price: not verified. Request a dated quote for your party.";
 
+const csvCell = value => {
+  const plain = String(value ?? "").replaceAll(/[\r\n\t]+/g, " ");
+  const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
+  return `"${safe.replaceAll('"', '""')}"`;
+};
+const sourceUrls = ids => [...new Set(ids)].map(id => cancunEvidence.sources[id]).join(" | ");
+
+export function comparisonCsv() {
+  const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price checked", "Price refresh due", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy checked", "Policy recheck due", "Live record"];
+  const rows = cancunEvidence.records.map(record => [
+    record.hotel, record.area, record.room.category,
+    record.price ? priceLabel(record.price) : "Exact-room nightly price: not verified",
+    record.price?.basis ?? "Request a dated quote for the exact room and party",
+    record.price?.fees ?? "Complete stay cost unknown; request an itemized quote",
+    record.price?.observedOn ?? "", record.price ? cancunEvidence.priceRecheckOn : "",
+    capacity(record), record.room.beds, record.room.checks.join(" | "), record.extras.checks.join(" | "),
+    sourceUrls(record.price?.sourceIds ?? []), sourceUrls(record.room.sourceIds), sourceUrls(record.extras.sourceIds),
+    cancunEvidence.checkedOn, cancunEvidence.recheckOn,
+    `https://familytripwise.com/where-to-stay/cancun-family-resorts.html#${record.id}`
+  ]);
+  return [headings, ...rows].map(row => row.map(csvCell).join(",")).join("\r\n") + "\r\n";
+}
+
 export function renderQuickComparison() {
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
     <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples checked ${esc(cancunEvidence.lastUpdatedOn)}, refresh due ${esc(cancunEvidence.priceRecheckOn)} · Policy recheck due ${esc(cancunEvidence.recheckOn)}</caption>

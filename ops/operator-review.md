@@ -1,8 +1,14 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-038 portable Cancun comparison
+
+Heisenberg (`01a0e590-98ca-7800-99f5-7bf0963b339c`) cycle-one PASS_WITH_P3, no P0-P2. Independently parsed six exact rows and 18 columns, tested four formula-leading probes, confirmed four distinct price bases/two unknowns and source/page/model parity, narrow preview MIME with security tests and preservation of four excluded dirty docs. Focused14/repository-wide257/state/76 snapshots/SEO/freshness/CSV parser/1280-390-320 proxy task passed; reviewer made no edits. P3: current CSV test uses whole-file substring matching and regex column counts; parsed per-row and formula-edge fixtures would strengthen regression detection. Review-clean exact 15 paths; release pending.
+
 ## 2026-09-27 - FT-IMP-037 Sunscape price sample
 
-Lovelace (`01a0e57d-1fd4-7701-9fd7-3226cad93194`) cycle-one PASS_WITH_P3, no P0-P2. Independently reproduced the first-party exact-category, party, date and USD330/night/USD990 non-member-plan display, compared the USD313/night member plan and FAQ environmental-tax caveat. Focused7/full236, localSEO31URLs zero errors/five prior advisories, table/checklist parity, six resort order, scope and whitespace pass. Operator state/76snapshots/freshness and 1280/390/320 no-overflow proxy task also pass. P3: two state/status lines still said full/browser QA pending; corrected mechanically from already completed checks. No product judgment or public bytes changed after consensus. Exact-path commit, push, Pages and production verification remain; no production claim yet.
+Lovelace (`01a0e57d-1fd4-7701-9fd7-3226cad93194`) cycle-one PASS_WITH_P3, no P0-P2. Independently reproduced the first-party exact-category, party, date and USD330/night/USD990 non-member-plan display, compared the USD313/night member plan and FAQ environmental-tax caveat. Focused7/full236, localSEO31URLs zero errors/five prior advisories, table/checklist parity, six resort order, scope and whitespace pass. Operator state/76snapshots/freshness and 1280/390/320 no-overflow proxy task also pass. P3: two state/status lines still said full/browser QA pending; corrected mechanically from already completed checks. No product judgment or public bytes changed after consensus.
+
+Mechanical release result: exact reviewed 14-path commit `c098dec8df369873932647f0943c2bbab3c99e77` pushed after fresh fetch, zero divergence and sole unpushed-range inspection. Pages `36363939784` succeeded; release marker matched, four affected public files returned HTTP 200 and exact local bytes. Production SEO checked 31 URLs with zero errors/five prior advisories. Completion backfill remains local for the next registered transaction, with no new review or judgment change.
 
 ## 2026-09-27 - FT-IMP-036 Cancun nightly-price examples
 

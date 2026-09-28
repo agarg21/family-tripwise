@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { cancunPath, cancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { bookingChecklistText, childFields, esc, renderOverview, renderQuickComparison, renderResults } from "../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults } from "../src/prototypes/cancun-resort-comparison/render.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const html = cancunResortPage();
@@ -57,8 +57,42 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   }
   assert.match(html, /id="quick-comparison"/);
   assert.match(html, /cancun-booking-checklist.txt" download/);
+  assert.match(html, /cancun-room-comparison.csv" download/);
   assert.match(read("site/cancun-resorts.css"), /@media print/);
   assert.match(read("site/cancun-resorts.css"), /@media screen and \(max-width: 540px\)/);
+});
+
+test("portable CSV keeps six exact rooms, distinct price bases, unknowns and source links", () => {
+  const csv = comparisonCsv();
+  assert.equal(read("site/downloads/cancun-room-comparison.csv"), csv);
+  const lines = csv.trimEnd().split("\r\n");
+  assert.equal(lines.length, 7);
+  for (const line of lines) assert.equal((line.match(/"(?:[^"]|"")*"(?=,|$)/g) ?? []).length, 18);
+  for (const record of cancunEvidence.records) {
+    assert.ok(csv.includes(record.hotel));
+    assert.ok(csv.includes(record.room.category));
+    assert.ok(csv.includes(record.room.beds));
+    assert.ok(csv.includes(`cancun-family-resorts.html#${record.id}`));
+    for (const id of [...record.room.sourceIds, ...record.extras.sourceIds, ...(record.price?.sourceIds ?? [])]) {
+      assert.ok(csv.includes(cancunEvidence.sources[id]));
+    }
+    if (record.price) {
+      assert.ok(csv.includes(record.price.basis));
+      assert.ok(csv.includes(record.price.fees));
+      assert.ok(csv.includes(record.price.observedOn));
+    }
+  }
+  assert.match(csv, /USD 330\/night \(dated family sample\)/);
+  assert.match(csv, /USD 990 displayed total/);
+  assert.match(csv, /About USD 1,015\/night for two adults/);
+  assert.match(csv, /USD 3,107\.18 total/);
+  assert.match(csv, /environmental tax; whether this particular displayed total includes it is unconfirmed/);
+  assert.equal((csv.match(/Exact-room nightly price: not verified/g) ?? []).length, 2);
+  assert.equal((csv.match(/Request a dated quote for the exact room and party/g) ?? []).length, 2);
+  assert.match(csv, /Capacity disputed: 4 versus 5/);
+  assert.match(csv, /Child limit disputed: 6 versus 2/);
+  assert.ok(csv.includes(cancunEvidence.priceRecheckOn));
+  assert.ok(csv.includes(cancunEvidence.recheckOn));
 });
 
 test("Cancun generated page and public modules match their maintained sources", () => {

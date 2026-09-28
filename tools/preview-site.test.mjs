@@ -84,12 +84,13 @@ test("preview refuses a symlink root and reports an occupied port", async (t) =>
   await assert.rejects(startSitePreview({ root, port }), { code: "EADDRINUSE" });
 });
 
-test("real preview serves affected pages and stylesheet byte-for-byte", async (t) => {
+test("real preview serves affected pages, stylesheet and comparison CSV byte-for-byte", async (t) => {
   const server = await startSitePreview({ port: 0 });
   t.after(() => new Promise((done) => server.close(done)));
-  for (const path of ["where-to-stay/san-antonio-family-hotels.html", "where-to-stay/chicago-family-hotels.html", "styles.css"]) {
+  for (const path of ["where-to-stay/san-antonio-family-hotels.html", "where-to-stay/chicago-family-hotels.html", "where-to-stay/cancun-family-resorts.html", "downloads/cancun-room-comparison.csv", "styles.css"]) {
     const response = await fetch(`http://127.0.0.1:${server.address().port}/${path}`);
     assert.equal(response.status, 200);
+    if (path.endsWith(".csv")) assert.match(response.headers.get("content-type"), /^text\/csv/);
     assert.deepEqual(Buffer.from(await response.arrayBuffer()), readFileSync(new URL(`../site/${path}`, import.meta.url)));
   }
 });

@@ -3,7 +3,7 @@ import { contributorCredit } from "./contributors.mjs";
 import { comparisonUrl } from "../../src/prototypes/cancun-resort-comparison/share.mjs";
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { bookingChecklistText, childFields, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, comparisonCsv, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export function cancunResortPage() {
@@ -52,6 +52,7 @@ export function cancunResortPage() {
         <div id="comparison-link-fallback" hidden><label for="comparison-link">Comparison link</label><input id="comparison-link" type="text" readonly value="${comparisonUrl}"></div>
       </div>
       <p><a href="../downloads/cancun-booking-checklist.txt" download>Download the booking checklist and source records (.txt)</a></p>
+      <p><a href="../downloads/cancun-room-comparison.csv" download>Download the six-room comparison (.csv)</a> · Price examples have different party, date and fee bases; do not sort them as comparable stay totals.</p>
       ${renderQuickComparison()}
     </section>
     <section id="comparison" aria-labelledby="comparison-title">
@@ -110,6 +111,7 @@ export function cancunResortPage() {
 export function writeCancunResortPage(writeSite) {
   writeSite(cancunPath, cancunResortPage());
   writeSite("downloads/cancun-booking-checklist.txt", bookingChecklistText());
+  writeSite("downloads/cancun-room-comparison.csv", comparisonCsv());
   // Copy the reviewed modules unchanged so public and native checks share one model.
   for (const name of ["data", "compare", "render", "client", "share"]) {
     writeSite(`cancun/${name}.mjs`, readFileSync(new URL(`../../src/prototypes/cancun-resort-comparison/${name}.mjs`, import.meta.url), "utf8"));
