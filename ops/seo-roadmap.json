@@ -20,10 +20,30 @@
   ],
   "items": [
     {
+      "id": "FT-RES-056",
+      "title": "Resolve San Diego family-hotel query priority without an aggregate CTR rewrite",
+      "kind": "research",
+      "status": "completed",
+      "completed_on": "2026-09-27",
+      "selected_on": "2026-09-27",
+      "target_urls": ["https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"],
+      "target_paths": ["docs/research/san-diego-hotel-query-priority-2026-09-27.md", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md"],
+      "evidence": "September27 protected 28-day page/query export through September25: 315 visible impressions across 80 lexically aligned family-lodging rows at about position68.4 under the documented rule; public page total377 impressions/one click exceeds visible rows. Two live SERP samples, three representative publishers and the current 12-hotel table reviewed. See docs/research/san-diego-hotel-query-priority-2026-09-27.md.",
+      "acceptance_criteria": ["Public-safe reproducible lexical cohort calculation with missing-row limitations", "Separate non-transferable local/firsthand authority from reproducible product gaps", "Bounded preserve decision, next falsification trigger, focused/full QA and independent read-only review"],
+      "measurement_plan": "Reopen only for a named family-task or maintained-fact failure, or doctrine-eligible aligned query/crawl/SERP evidence; no causal ranking or user-satisfaction claim.",
+      "production_invariant": "No public page, title, URL, schema, indexability, site/source code, active observation window, analytics, indexing, external account or automation change; protected raw rows remain private.",
+      "decision": "PRESERVE existing San Diego hotel page; no aggregate CTR/title or inventory rewrite.",
+      "release_state": "docs-only-review-clean",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": ["01a0e5de-71c7-7971-a45f-8236db7cb485"]
+    },
+    {
       "id": "FT-IMP-042",
       "title": "Add a dated Moon Palace exact-suite nightly budget sample",
       "kind": "improvement",
-      "status": "in_progress",
+      "status": "completed",
+      "completed_on": "2026-09-27",
       "selected_on": "2026-09-27",
       "target_urls": ["https://familytripwise.com/where-to-stay/cancun-family-resorts.html"],
       "target_paths": ["docs/research/cancun-moon-palace-price-sample-2026-09-27.md", "src/prototypes/cancun-resort-comparison/data.mjs", "tools/cancun-resort-page.test.mjs", "site/cancun/data.mjs", "site/where-to-stay/cancun-family-resorts.html", "site/downloads/cancun-booking-checklist.txt", "site/downloads/cancun-room-comparison.csv", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "status/cancun-pages.md", "docs/research/orlando-suite-booking-capacity-2026-09-27.md", "status/orlando-pages.md"],
@@ -32,7 +52,14 @@
       "measurement_plan": "Parent proxy can find a rough Moon Palace budget and its party, promo, refund and fee limitations without mistaking it for a comparable family-of-five or Ziva quote; no user or SEO proof.",
       "production_invariant": "31 canonical URLs, Cancun metadata/indexability/sitemap and six records/order unchanged; other public files, external accounts, analytics, indexing and automation unchanged. Price recheck October11; Cancun observation window otherwise throughOctober21.",
       "decision": "IMPLEMENT one evidence-limited Moon Palace sample; preserve Ziva unknown and all other values.",
-      "release_state": "pending"
+      "release_state": "released-and-production-verified",
+      "release_commit": "b2188721809f52645ef6204d75cc1c22b0b12585",
+      "pages_run": 36369808639,
+      "production_verified_at": "2026-09-28T02:27:00Z",
+      "production_verification": "Pages successful; marker matched commit/run; affected Cancun HTML/data/checklist/CSV HTTP200/exact bytes; production SEO 31 canonical URLs with zero errors/five prior advisories.",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": ["01a0e57d-1fd4-7701-9fd7-3226cad93194"]
     },
     {
       "id": "FT-IMP-041",

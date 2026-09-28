@@ -1,5 +1,9 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-RES-056 San Diego hotel query priority
+
+Curie (`01a0e5de-71c7-7971-a45f-8236db7cb485`) cycle-one FAIL with one P2: the original 71-row/221-impression aligned cohort excluded suite and Spanish family-hotel wording and lacked a reproducible rule. The research, ledger and roadmap now use an explicit case-insensitive two-regex rule, yielding 80 rows/315 impressions and about position 68.4; PRESERVE is unchanged. Cycle-two read-only PASS/no P0-P3 reproduced 80 rows/315 impressions/zero clicks/68.4444 weighted position, the other two rows/four impressions, six-path consistency, no raw-query leak and no unrelated staging or site change. Focused23/full259, state0, 76 public snapshots, local SEO31 URLs/zero errors/five prior advisories and whitespace pass. Docs-only push pending; no site release.
+
 ## 2026-09-27 - FT-IMP-042 Moon Palace exact-suite price
 
 Registered 15-path direct-user Cancun budget action in `docs/research/cancun-moon-palace-price-sample-2026-09-27.md`. Lovelace (`01a0e57d-1fd4-7701-9fd7-3226cad93194`) cycle-one FAIL with one P2 and two P3, no P0-P1: FT-IMP-042's status line mixed completed FT-IMP-041 with pending release and failed operator-state QA; the booking deep link dropped the 4-17 child in a fresh session; roadmap still said QA pending. The state line was separated, the booking-selector instruction added to the shared price basis, and the roadmap updated. Focused8/full259/state/76snapshots/localSEO31/1280-390-320 checks pass after correction. Cycle-two read-only PASS/no P0-P3 after checking the 15-path scope, shared-output caveat, rate source and QA. Reviewer changed no files; release pending.
