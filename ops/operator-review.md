@@ -1,8 +1,14 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-037 Sunscape price sample
+
+Lovelace (`01a0e57d-1fd4-7701-9fd7-3226cad93194`) cycle-one PASS_WITH_P3, no P0-P2. Independently reproduced the first-party exact-category, party, date and USD330/night/USD990 non-member-plan display, compared the USD313/night member plan and FAQ environmental-tax caveat. Focused7/full236, localSEO31URLs zero errors/five prior advisories, table/checklist parity, six resort order, scope and whitespace pass. Operator state/76snapshots/freshness and 1280/390/320 no-overflow proxy task also pass. P3: two state/status lines still said full/browser QA pending; corrected mechanically from already completed checks. No product judgment or public bytes changed after consensus. Exact-path commit, push, Pages and production verification remain; no production claim yet.
+
 ## 2026-09-27 - FT-IMP-036 Cancun nightly-price examples
 
 Locke (`01a0e329-d21e-71c3-851f-b3fbab24ea25`) cycle-three **PASS**, no P0-P3. Cycle one found a P2 missing explicit USD labels and P3 rate-plan headline that resembled a range; cycle two verified both corrections and found one P3 stale data comment; cycle three verified that correction in source and public copy. Reviewer independently ran full 236/236, focused 22/22, state QA, static SEO (0 errors/five prior advisories), whitespace and exact 16-path scope. Operator desktop 1280/mobile 390 and 320 task checks found six rows, three priced/three quote-needed, prices directly visible on mobile with no page overflow, and the two Royalton plans named separately. Release and production verification follow.
+
+Mechanical release result: exact 16-path commit `b8a6f806052a84dfd306e93cc58f2d3c119574da` pushed after fresh fetch, zero divergence and sole unpushed-range inspection. Pages `36324844728` succeeded; release marker matched; five changed public files returned HTTP 200 with exact local bytes. Production SEO checked 31 URLs with zero errors/five prior advisories; live mobile six rows, three USD examples, three unknowns and no document overflow passed. No new review or judgment change; this completion record remains local for the next registered transaction.
 
 ## 2026-09-27 - FT-POL-001 nightly-price requirement
 

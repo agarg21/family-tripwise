@@ -14,6 +14,7 @@ export const cancunEvidence = {
     S2: "https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/cancun-all-inclusive-family-suites",
     S3: "https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/all-inclusive-hotel-cancun-activities",
     S4: "https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/frequently-asked-questions",
+    S5: "https://secure.resortsbyhyatt.com/?adult=2&arrive=2026-10-27&chain=17001&child=2&childages=3%7C7&config=PlayaWebsite&currency=USD&depart=2026-10-30&hotel=95607&level=hotel&locale=en-US&productcurrency=USD&rate=BARWEB%2CWEBRCK&rooms=1&theme=PlayaWebsite",
     D1: "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/accommodations/club-level/",
     D2: "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/activities/",
     D3: "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/sapphire-resort-spa/",
@@ -67,7 +68,12 @@ export const cancunEvidence = {
         layoutStatus: "published", sourceIds: ["S1", "S2"],
         checks: ["One official page lists four guests; another lists two adults and three children. Retain both publications until exact-party acceptance is confirmed."]
       },
-      price: null,
+      price: {
+        kind: "dated-single-plan-sample", usdFrom: 330, usdTo: null,
+        basis: "October 27-30, 2026; one Family Junior Suite, two adults and children aged 3 and 7, three nights. Non-member Book Early, Save More + Kids Stay Free (12 & under): USD 990 displayed total. One dated plan, not a typical range or guaranteed future price.",
+        fees: "Booking display says taxes and fees included. The property's FAQ separately lists a MXN 79 per-room/night environmental tax; whether this particular displayed total includes it is unconfirmed.",
+        observedOn: "2026-09-27", sourceIds: ["S5", "S4"]
+      },
       clubs: {
         sourceIds: ["S3"],
         programs: [

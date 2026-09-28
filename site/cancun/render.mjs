@@ -12,6 +12,8 @@ const priceLabel = price => price.kind === "official-starting"
   ? `From ${money(price.usdFrom)}/night (official start)`
   : price.kind === "derived-two-adult-starting"
     ? `About ${money(price.usdFrom)}/night for two adults`
+    : price.kind === "dated-single-plan-sample"
+      ? `${money(price.usdFrom)}/night (dated family sample)`
     : `About ${money(price.usdFrom)}/night (Fall into Savings) or ${money(price.usdTo)}/night (Standard Rate)`;
 const priceHtml = record => record.price
   ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(record.price.basis)}</p><p>${esc(record.price.fees)} Price checked ${esc(record.price.observedOn)}; verify for your family and dates.</p>${sources(record.price.sourceIds, "Price source")}`

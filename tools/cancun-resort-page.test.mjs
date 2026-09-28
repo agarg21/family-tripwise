@@ -34,8 +34,12 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
       for (const id of record.price.sourceIds) assert.ok(checklist.includes(cancunEvidence.sources[id]));
     }
   }
-  assert.equal(cancunEvidence.records.filter(record => record.price).length, 3);
+  assert.equal(cancunEvidence.records.filter(record => record.price).length, 4);
   assert.match(quick, /From USD 843\/night \(official start\)/);
+  assert.match(quick, /USD 330\/night \(dated family sample\)/);
+  assert.match(quick, /Non-member Book Early, Save More \+ Kids Stay Free/);
+  assert.match(checklist, /USD 990 displayed total/);
+  assert.match(quick, /whether this particular displayed total includes it is unconfirmed/);
   assert.match(quick, /About USD 1,015\/night for two adults/);
   assert.match(quick, /About USD 1,036\/night \(Fall into Savings\) or USD 1,295\/night \(Standard Rate\)/);
   assert.match(quick, /USD 507\.50 per-person\/night/);
@@ -43,7 +47,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   assert.match(checklist, /USD 3,107\.18 total/);
   assert.match(quick, /two adults and children aged 3 and 7/);
   assert.match(quick, /sanitation fee is payable at the resort and excluded/);
-  assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 3);
+  assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 2);
   for (const output of [quick, checklist]) {
     assert.ok(output.includes(cancunEvidence.checkedOn));
     assert.ok(output.includes(cancunEvidence.recheckOn));

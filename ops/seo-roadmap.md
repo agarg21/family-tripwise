@@ -2,12 +2,14 @@
 
 Last updated: 2026-09-27
 
+Current FT-IMP-037 / LRN-054: complete the user's highest-priority Cancun missing-price follow-up by adding one newly verified exact-room family quote for Sunscape, not a generic resort start or a six-room refresh. September27 first-party October27-30 non-member USD330/night sample and limits, exact14path scope, QA/review/release gates and October11 recheck are in `docs/research/cancun-sunscape-price-sample-2026-09-27.md`. Four categories now have a sourced observation and two remain quote-needed. Focused7/full236, state/SEO/snapshot/freshness and 1280/390/320 browser task pass; Lovelace PASS_WITH_P3 for one stale QA-status note, now corrected; release pending. Fresh `ops/gsc-snapshots/2026-09-27.json` throughSeptember25 is orientation only, not the selection or measurement reason. Cancun URL observation window remains throughOctober21 under the direct-user budget-usefulness exception.
+
 Last re-scored: 2026-09-14
 Next re-score due: 2026-09-21
 
 ## Ownership
 
-Current FT-IMP-036 / LRN-053: direct-user Cancun nightly-price usefulness correction is review-clean. Three exact-category observations (two official starting samples, one dated family booking) are rendered in the quick comparison/checklist with non-comparable bases; three unknowns remain quote-needed. Mobile prices appear without horizontal scrolling. Sixteen exact paths, source audit, October11 refresh and release invariants: `docs/research/cancun-nightly-price-observations-2026-09-27.md`. Focused22/full236/state/SEO checks pass; Locke cycle-three PASS/no findings. No new URL or SEO performance inference. Exact-path commit and verified release next.
+FT-IMP-036 / LRN-053 completed and production-verified at `b8a6f806052a84dfd306e93cc58f2d3c119574da`, Pages `36324844728`: marker, five affected public files, 31-URL production SEO (zero errors/five prior advisories) and live mobile six-room price coverage passed. Three exact-category observations retain distinct bases; three unknowns remain quote-needed. Mobile prices appear without horizontal scrolling. Locke cycle-three PASS after focused22/full236/state QA. Source audit, October11 price refresh and invariants: `docs/research/cancun-nightly-price-observations-2026-09-27.md`. No new URL or SEO performance inference; mechanical completion metadata remains local until the next registered transaction.
 
 FT-IMP-035 completed and production-verified at `9b190e07844b871cb639dc462c86a2b5b395936e`, Pages `36319268302`, matching marker/four exact files `2026-09-27T12:32:13.756Z`; productionSEO31URLs zero errors. Comparison-link sharing live; new print control excluded under documented narrow QA block. Maxwell PASS/236tests; evidence and next trigger in `docs/plan/cancun-comparison-sharing-2026-09-27.md`. Earlier release-pending checkpoints historical.
 

@@ -45,7 +45,10 @@ Sunscape Cancun Resort & Spa - Cancun Hotel Zone
 Room: Family Junior Suite
 Capacity disputed: 4 versus 5
 Beds: King, bunk bed and trundle
-Price: Exact-room nightly price: not verified. Request a dated quote for your party.
+Price: USD 330/night (dated family sample)
+Basis: October 27-30, 2026; one Family Junior Suite, two adults and children aged 3 and 7, three nights. Non-member Book Early, Save More + Kids Stay Free (12 & under): USD 990 displayed total. One dated plan, not a typical range or guaranteed future price.
+Fees: Booking display says taxes and fees included. The property's FAQ separately lists a MXN 79 per-room/night environmental tax; whether this particular displayed total includes it is unconfirmed.
+Price checked: 2026-09-27. Verify for your family and dates.
 Room check: One official page lists four guests; another lists two adults and three children. Retain both publications until exact-party acceptance is confirmed.
 Club bands: 4-12 Explorer's Club | 13-17 Core Zone
 Club check: Age 3 is below the published Explorer's Club band, not proof that all resort activities exclude three-year-olds. Confirm admission conditions and actual operations.
@@ -54,8 +57,9 @@ Cost check: The FAQ lists an environmental tax of MXN 79 per room/night and room
 Complete stay cost and availability: unknown.
 S1: https://www.hyattinclusivecollection.com/en/resorts-hotels/sunscape/mexico/cancun-resort-spa/accommodations/rooms-suites/
 S2: https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/cancun-all-inclusive-family-suites
-S3: https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/all-inclusive-hotel-cancun-activities
+S5: https://secure.resortsbyhyatt.com/?adult=2&arrive=2026-10-27&chain=17001&child=2&childages=3%7C7&config=PlayaWebsite&currency=USD&depart=2026-10-30&hotel=95607&level=hotel&locale=en-US&productcurrency=USD&rate=BARWEB%2CWEBRCK&rooms=1&theme=PlayaWebsite
 S4: https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/frequently-asked-questions
+S3: https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/all-inclusive-hotel-cancun-activities
 
 Dreams Sapphire Resort & Spa - Riviera Cancun, not Cancun Hotel Zone
 Room: Preferred Club Family Junior Suite Tropical View
