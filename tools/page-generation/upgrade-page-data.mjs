@@ -2011,6 +2011,7 @@ export const itineraryPages = {
     ],
     dayPlansTitle: "Use one, two, or three days without making every option mandatory",
     itineraryNote: "Choose the route shape first, then check exact attraction entries, hotel entrances, transport or parking, heat and weather, tickets, and accessibility for the dates.",
+    conditionalNext: true,
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
       ["One-day first look", "Short visits and first-time families who want one coherent San Antonio day", [

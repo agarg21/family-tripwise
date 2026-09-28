@@ -62,6 +62,24 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
   ]) assert.doesNotMatch(html, new RegExp(blocked, "i"));
 });
 
+test("conditional next step routes only open activity and stay choices after day plans", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const lastPlan = html.indexOf("Three-day balanced trip", html.indexOf("Day-by-day routes"));
+  const handoff = html.indexOf('<p class="itinerary-next-step">');
+  const pivot = html.indexOf("Pivot for age, heat, weather, budget, or the chosen base");
+  assert.ok(lastPlan < handoff && handoff < pivot);
+  const line = html.slice(handoff, html.indexOf("</p>", handoff));
+  assert.match(line, /Need an anchor\?/);
+  assert.match(line, /Still choosing lodging\?/);
+  assert.match(line, /If the main activity is still open/);
+  assert.match(line, /If the base is still open/);
+  assert.match(line, /If either choice is settled, keep it/);
+  assert.match(line, /href="\.\.\/things-to-do\/san-antonio-with-kids\.html"/);
+  assert.match(line, /href="\.\.\/where-to-stay\/san-antonio-with-kids\.html"/);
+  assert.equal((line.match(/<a /g) || []).length, 2);
+  assert.equal((html.match(/class="itinerary-next-step"/g) || []).length, 1);
+});
+
 test("aligns schema, visible FAQ, sources, image, and all four cluster routes", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const styles = readFileSync(join(root, "site", "styles.css"), "utf8");

@@ -810,7 +810,7 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
         </div>
         <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
 ${renderDayPlans(page.dayPlans)}
-      </section>
+${page.conditionalNext ? `        <p class="itinerary-next-step"><strong>Need an anchor?</strong> If the main activity is still open, <a class="text-link" href="${esc(page.links.allAges)}">compare family activities</a>. <strong>Still choosing lodging?</strong> If the base is still open, <a class="text-link" href="${esc(page.links.stay)}">compare stay areas</a>. If either choice is settled, keep it and continue with the day plan.</p>\n` : ""}      </section>
 
       <section class="band intro-band rank-ready-section">
         <div class="container">

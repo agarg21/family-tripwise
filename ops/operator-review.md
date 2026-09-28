@@ -1,8 +1,14 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-040 San Antonio conditional handoff
+
+Nash (`01a0e5a9-4aa1-7241-bd7d-498850b45356`) cycle-one PASS_WITH_P3, no P0-P2. Independently checked `FT-RES-031` primary/fixed-base task fidelity, correct existing sibling links, escaped optional generator URLs, sole San Antonio public change and unchanged day plans/URL/metadata/schema/source date. Reviewer inspected recorded focused5/repository-wide259 QA, not rerun; operator state/76 snapshots/localSEO/1280-390-320 proxy routes and whitespace pass. P3: learning-ledger latest-production header was stale; corrected mechanically from immutable NYC release facts. Exact 13 paths with six prior mechanical backfills and four excluded dirty docs; no reviewer edits. Release pending.
+
 ## 2026-09-27 - FT-IMP-039 NYC existing-draft start
 
 Descartes (`01a0e59f-258f-7aa1-bd07-17d969fec493`) cycle-one PASS, no P0-P3. Independently checked `NYC-D1` fixed-first editing, `NYC-D3` blank-slate control, escaped optional generator branch, no sibling public/URL/metadata/schema/source-date change, 13 exact paths with six prior mechanical backfills and four excluded dirty docs. Focused5/repository-wide258, operator state/localSEO/whitespace pass; reviewer did not independently rerun operator browser QA. Operator 1280/390/320 no-overflow task and 76 snapshots pass. No reviewer edits; release pending.
+
+Mechanical release result: exact reviewed 13-path commit `7dd901e2581e133d2a30ca6a647805aa1591e8ea` pushed after fresh fetch, no divergence and sole unpushed-range inspection. Pages `36366271157` succeeded; release marker matched, NYC itinerary returned 200/exact bytes, and production SEO checked 31 canonical URLs with zero errors/five prior advisories. Completion backfill remains local for the next registered transaction.
 
 ## 2026-09-27 - FT-IMP-038 portable Cancun comparison
 

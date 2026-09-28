@@ -1,6 +1,8 @@
 # San Antonio Page Status
 
-Last updated: 2026-09-22
+Last updated: 2026-09-27
+
+September27 FT-IMP-040 / LRN-057 review-clean, not shipped: one conditional activity/stay-area handoff immediately after unchanged itinerary day cards. The primary party-five proxy can route both still-open choices; a fixed-base control can take only the activity link. At 1280/390/320, the line begins about 3.7/5.8/6.6 viewports down with no page overflow, both links navigate to existing siblings, and focused5/repository-wide259/state/SEO/snapshot checks pass. Nash cycle-one PASS_WITH_P3/no P0-P2; Pages verification pending. Evidence and limits: `docs/plan/san-antonio-conditional-handoff-2026-09-27.md`; no new family-fit or ranking claim.
 
 FT-MAINT-007 **released and production-verified** at `f619bcaf55ac951f98b7279dc8adb35a07cf869f`, Pages `35793245524`; marker, exact target bytes and productionSEO0errors pass. Pauli cycle-two PASS;12 hotels/metadata/other evidence dates unchanged. Prior pending/HOLD notes below are history.
 

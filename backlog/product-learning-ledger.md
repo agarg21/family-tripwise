@@ -1,8 +1,12 @@
 # Product Learning Ledger
 
-Latest production evidence: September 17 `LRN-034` / `FT-IMP-028` is released and production-verified at action commit `c78f798099ebb5dfcc69c9a3c8ad3a3fd47f36b6`, successful Pages run `35184964741`, matching marker and byte-identical target HTML. Production SEO and all three exact viewport target checks pass at `2026-09-17T05:15:36Z`. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
+Latest production evidence: September27 `LRN-056` / `FT-IMP-039` is released and production-verified at action commit `7dd901e2581e133d2a30ca6a647805aa1591e8ea`, successful Pages run `36366271157`, matching marker and byte-identical NYC itinerary HTML. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
 Last updated: 2026-09-27
+
+## LRN-057 / September27 / FT-IMP-040
+
+Family decision: after choosing a San Antonio day shape, route only the activity anchor or stay area that remains undecided. Hypothesis: the existing late cluster links are close enough for the primary party-five and fixed-base control to finish without carrying settled choices through another long scroll. Rejected by the September4 `FT-RES-031` cross-page proxy task: the activity/stay links began 8.9-11.1 mobile viewports down. A September27 desktop/mobile proxy route supports a compact conditional line after the day cards; its links now sit about 3.7/5.8/6.6 viewports down at 1280/390/320, and both navigate correctly. Confidence high in route/placement and unchanged pages, medium in proxy answerability, unknown in real behavior, satisfaction or rankings. Lesson: a next step should follow the decision just made and avoid reopening a fixed base or anchor; adding another inventory page is not required. Trigger: failed link navigation, a control routed to an already-settled choice, or a fresh task showing the earlier placement still does not help. Evidence/class: `docs/research/san-antonio-cross-page-trip-shape-task-review-2026-09-04.md` (qualitative family proxy, not prevalence) and `docs/plan/san-antonio-conditional-handoff-2026-09-27.md` (September27 task/interface QA); no GSC causal inference.
 
 ## LRN-056 / September27 / FT-IMP-039
 
