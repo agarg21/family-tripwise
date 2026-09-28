@@ -1,8 +1,12 @@
 # Product Learning Ledger
 
-Latest production evidence: September27 `LRN-057` / `FT-IMP-040` is released and production-verified at action commit `cc66b561a988acf82efefca6883d9999fb17f7d6`, successful Pages run `36366912694`, matching marker and byte-identical San Antonio itinerary HTML. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
+Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and production-verified at action commit `36034a723e6eb22a960200414e3c79a6a03b3155`, successful Pages run `36368504001`, matching marker and byte-identical Orlando HTML/two JS modules. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
 Last updated: 2026-09-27
+
+## LRN-059 / September27 / FT-IMP-042
+
+Family decision: can a four-person party get a rough nightly budget for Moon Palace The Grand's exact Grand Family Suite without treating an attractive promotional number as a typical family quote? Hypothesis: the category still has no directly readable rate, so it must remain quote-needed. Rejected by a September27 first-party booking UI check for October18-23: the visible two-adult, one-child-4-17, one-infant-0-3 selector and automatically applied RETURN5 promo showed USD8,191/five nights and USD1,638 average per room/night for the Best Flexible Rate, with displayed taxes/fees included; the cheaper pay-in-full rate was non-refundable. The party and price remained after reload, but exact child ages, a no-promo price and any separately payable local levy were not established. The named Hyatt Ziva Ocean View Double did not appear in the same-date two-adult/two-child official results, so its price remains unknown. Confidence high in the observed Moon Palace UI and plan distinction, medium in budget-orientation usefulness, low in transfer to a family of five or another stay and unknown in real satisfaction/SEO. Lesson: an exact-suite price should travel with its occupancy bands, promo and refund terms; absence from one date's results is not a zero price. Trigger: changed booking conditions, a no-promo or exact-age party result, October11 price refresh, or a proxy parent misreading this as a typical family-of-five rate. Source/class and limits: `docs/research/cancun-moon-palace-price-sample-2026-09-27.md` (first-party booking UI/official room source, source-dated audit); no GSC causal inference or firsthand stay.
 
 ## LRN-058 / September27 / FT-IMP-041
 

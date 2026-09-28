@@ -34,7 +34,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
       for (const id of record.price.sourceIds) assert.ok(checklist.includes(cancunEvidence.sources[id]));
     }
   }
-  assert.equal(cancunEvidence.records.filter(record => record.price).length, 4);
+  assert.equal(cancunEvidence.records.filter(record => record.price).length, 5);
   assert.match(quick, /From USD 843\/night \(official start\)/);
   assert.match(quick, /USD 330\/night \(dated family sample\)/);
   assert.match(quick, /Non-member Book Early, Save More \+ Kids Stay Free/);
@@ -47,7 +47,14 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   assert.match(checklist, /USD 3,107\.18 total/);
   assert.match(quick, /two adults and children aged 3 and 7/);
   assert.match(quick, /sanitation fee is payable at the resort and excluded/);
-  assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 2);
+  assert.match(quick, /USD 1,638\/night \(dated family sample\)/);
+  assert.match(quick, /Automatically applied RETURN5 promo/);
+  assert.match(quick, /Set both child age bands in the booking selector/);
+  assert.match(quick, /one child aged 4-17 and one infant aged 0-3/);
+  assert.match(quick, /USD 8,191 total/);
+  assert.match(quick, /Free cancellation until four days before arrival/);
+  assert.equal(cancunEvidence.records.find(record => record.id === "ziva-ocean-view-double")?.price, null);
+  assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
   for (const output of [quick, checklist]) {
     assert.ok(output.includes(cancunEvidence.checkedOn));
     assert.ok(output.includes(cancunEvidence.recheckOn));
@@ -87,8 +94,11 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
   assert.match(csv, /About USD 1,015\/night for two adults/);
   assert.match(csv, /USD 3,107\.18 total/);
   assert.match(csv, /environmental tax; whether this particular displayed total includes it is unconfirmed/);
-  assert.equal((csv.match(/Exact-room nightly price: not verified/g) ?? []).length, 2);
-  assert.equal((csv.match(/Request a dated quote for the exact room and party/g) ?? []).length, 2);
+  assert.match(csv, /USD 1,638\/night \(dated family sample\)/);
+  assert.match(csv, /Automatically applied RETURN5 promo/);
+  assert.match(csv, /USD 8,191 total/);
+  assert.equal((csv.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
+  assert.equal((csv.match(/Request a dated quote for the exact room and party/g) ?? []).length, 1);
   assert.match(csv, /Capacity disputed: 4 versus 5/);
   assert.match(csv, /Child limit disputed: 6 versus 2/);
   assert.ok(csv.includes(cancunEvidence.priceRecheckOn));

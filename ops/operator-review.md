@@ -1,5 +1,9 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-042 Moon Palace exact-suite price
+
+Registered 15-path direct-user Cancun budget action in `docs/research/cancun-moon-palace-price-sample-2026-09-27.md`. Lovelace (`01a0e57d-1fd4-7701-9fd7-3226cad93194`) cycle-one FAIL with one P2 and two P3, no P0-P1: FT-IMP-042's status line mixed completed FT-IMP-041 with pending release and failed operator-state QA; the booking deep link dropped the 4-17 child in a fresh session; roadmap still said QA pending. The state line was separated, the booking-selector instruction added to the shared price basis, and the roadmap updated. Focused8/full259/state/76snapshots/localSEO31/1280-390-320 checks pass after correction. Cycle-two read-only PASS/no P0-P3 after checking the 15-path scope, shared-output caveat, rate source and QA. Reviewer changed no files; release pending.
+
 ## 2026-09-27 - FT-IMP-041 Orlando exact-suite occupancy
 
 Arendt (`01a0e5bd-6831-7683-80ac-512b2d58df2f`) cycle-one PASS_WITH_P3, no P0-P2. It checked the 16-path scope, fee/price math, five/seven-person model, age caveats, metadata, escaping and general IHG amenities USD65 fee/USD31 parking. Its automated fetch of the dated booking result returned 403; it did not independently re-observe that volatile rate and relied on the retained source-dated first-party browser record for USD763.90. P3: a trailing space was added to the otherwise unchanged Disney/Cabana sleeping-setup markup. The optional citation spacing is now scoped to IHG; cycle-two read-only PASS found no P0-P3. Reviewer changed no files. Operator full259/focused9, state/76snapshots/localSEO/1280-390-320 QA passed after the spacing fix. No release yet.

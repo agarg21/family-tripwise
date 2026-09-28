@@ -20,10 +20,26 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-042",
+      "title": "Add a dated Moon Palace exact-suite nightly budget sample",
+      "kind": "improvement",
+      "status": "in_progress",
+      "selected_on": "2026-09-27",
+      "target_urls": ["https://familytripwise.com/where-to-stay/cancun-family-resorts.html"],
+      "target_paths": ["docs/research/cancun-moon-palace-price-sample-2026-09-27.md", "src/prototypes/cancun-resort-comparison/data.mjs", "tools/cancun-resort-page.test.mjs", "site/cancun/data.mjs", "site/where-to-stay/cancun-family-resorts.html", "site/downloads/cancun-booking-checklist.txt", "site/downloads/cancun-room-comparison.csv", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "status/cancun-pages.md", "docs/research/orlando-suite-booking-capacity-2026-09-27.md", "status/orlando-pages.md"],
+      "evidence": "September27 first-party Moon Palace booking engine showed Grand Family Suite October18-23 for two adults, one child 4-17 and one infant 0-3, RETURN5 promo, Best Flexible Rate USD8191/5 nights with displayed taxes/fees included; exact ages and any separate local levy unknown. See docs/research/cancun-moon-palace-price-sample-2026-09-27.md. GSC is orientation only.",
+      "acceptance_criteria": ["One clearly dated and promo-qualified about-USD1638/night Grand Family Suite flexible-plan example, not a typical rate or exact-age confirmation", "Page/checklist/CSV parity from one model; other five resort records and Ziva unknown unchanged", "Focused/full QA, responsive proxy task, independent read-only review, verified Pages release"],
+      "measurement_plan": "Parent proxy can find a rough Moon Palace budget and its party, promo, refund and fee limitations without mistaking it for a comparable family-of-five or Ziva quote; no user or SEO proof.",
+      "production_invariant": "31 canonical URLs, Cancun metadata/indexability/sitemap and six records/order unchanged; other public files, external accounts, analytics, indexing and automation unchanged. Price recheck October11; Cancun observation window otherwise throughOctober21.",
+      "decision": "IMPLEMENT one evidence-limited Moon Palace sample; preserve Ziva unknown and all other values.",
+      "release_state": "pending"
+    },
+    {
       "id": "FT-IMP-041",
       "title": "Resolve exact Orlando two-bedroom published headcount and fee-context conflict",
       "kind": "improvement",
-      "status": "in_progress",
+      "status": "completed",
+      "completed_on": "2026-09-27",
       "selected_on": "2026-09-27",
       "target_urls": ["https://familytripwise.com/where-to-stay/orlando-family-hotels.html"],
       "target_paths": ["docs/research/orlando-suite-booking-capacity-2026-09-27.md", "tools/page-generation/orlando-suite-data.mjs", "tools/page-generation/orlando-suite-model.mjs", "tools/page-generation/orlando-suite-page.mjs", "tools/orlando-suite-page.test.mjs", "site/orlando/orlando-suite-data.mjs", "site/orlando/orlando-suite-model.mjs", "site/where-to-stay/orlando-family-hotels.html", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "status/orlando-pages.md", "docs/plan/san-antonio-conditional-handoff-2026-09-27.md", "status/san-antonio-pages.md"],
@@ -32,7 +48,14 @@
       "measurement_plan": "Five-person November task resolves preliminary headcount and sees one qualified nightly budget sample while exact-age acceptance and comparable totals remain open; seven-person control exceeds all three maxima. Proxy answerability only, not booking/user/SEO proof.",
       "production_invariant": "31 canonical URLs, three Orlando records/order and metadata/indexability/sitemap unchanged; Disney/Cabana and all other public files unchanged; Orlando observation throughOctober22 except this verified defect; no booking, analytics, indexing, accounts or automation.",
       "decision": "IMPLEMENT narrow IHG source-backed occupancy/fee-context correction and one dated, explicitly limited approximate nightly sample; preserve exact-age and comparable-total unknowns.",
-      "release_state": "pending"
+      "release_state": "released-and-production-verified",
+      "release_commit": "36034a723e6eb22a960200414e3c79a6a03b3155",
+      "pages_run": 36368504001,
+      "production_verified_at": "2026-09-28T02:07:00Z",
+      "production_verification": "Pages successful; marker matched commit/run; affected Orlando HTML and two JS modules HTTP200/exact bytes; production SEO 31 canonical URLs with zero errors/five prior advisories.",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": ["01a0e5bd-6831-7683-80ac-512b2d58df2f"]
     },
     {
       "id": "FT-IMP-040",

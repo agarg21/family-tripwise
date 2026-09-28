@@ -26,6 +26,7 @@ export const cancunEvidence = {
     G1: "https://thegrand.moonpalace.com/accommodations/grand-family-suite",
     G2: "https://thegrand.moonpalace.com/things-to-do/playroom",
     G3: "https://thegrand.moonpalace.com/",
+    G4: "https://bookingsthegrandpr.moonpalace.com/rooms?&skd-total-rooms=1&adult_room1=2&child_room1_age0=1&skd-checkin=2026-10-18&skd-checkout=2026-10-23&skd-language-code=en&promocode=RETURN5&",
     Z1: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun/rooms/2VWD",
     Z2: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun/faqs",
     Z3: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun"
@@ -164,13 +165,18 @@ export const cancunEvidence = {
         layoutStatus: "published", sourceIds: ["G1"],
         checks: ["The named category publishes seven guests. Confirm your exact ages, rate classification, rollaway arrangement and availability; this does not confirm a booking."]
       },
-      price: null,
+      price: {
+        kind: "dated-single-plan-sample", usdFrom: 1638, usdTo: null,
+        basis: "October 18-23, 2026; one Grand Family Suite, two adults, one child aged 4-17 and one infant aged 0-3, five nights. Set both child age bands in the booking selector; the link may reopen with only the infant. Automatically applied RETURN5 promo; All Inclusive Best Flexible Rate showed USD 8,191 total and USD 1,638 average per room/night. Exact child ages were not entered; one dated plan, not a typical rate or a family-of-five quote.",
+        fees: "Booking display says taxes and fees included; any separately payable local levy is unconfirmed. Free cancellation until four days before arrival, then a one-night penalty; full card charge 72 hours before arrival. Recheck terms and exact-party eligibility.",
+        observedOn: "2026-09-27", sourceIds: ["G4", "G1"]
+      },
       clubs: {
         sourceIds: ["G2"], programs: [],
         checks: ["The official Playroom page was only partially readable during this check. Confirm floor-specific age rules, adult accompaniment and current admission; no drop-off age match is inferred."]
       },
       transfers: { rule: "unknown", sourceIds: ["G3"], checks: ["Transfer inclusion and eligibility were not established from the inspected page. Check the exact booking offer, airport route and arrangements."] },
-      extras: { sourceIds: ["G3"], checks: ["Mandatory fees, paid extras and a dated total were not established. Request an itemized quote rather than treating all-inclusive wording as a complete cost guarantee."] }
+      extras: { sourceIds: ["G3"], checks: ["The dated sample includes displayed taxes and fees, but separately payable local levies and paid extras were not established. Request an itemized quote for your own party and dates rather than treating all-inclusive wording as a complete cost guarantee."] }
     }
   ]
 };
