@@ -1,0 +1,22 @@
+# Chicago family-hotel price-basis correction
+
+Action: FT-IMP-043 / LRN-061. Source audit: September 28, 2026. Existing URL only.
+
+## Family decision and hypothesis
+
+Task: two adults with children ages 7 and 10 want a Chicago room near a roughly USD 350 nightly budget. Compare the Swissotel Kids Suite with Homewood's kitchen base before choosing dates. Hypothesis: the current comparison's `Rough total/night` label and hotel cards let this party distinguish a standard-room/two-adult planning band from a four-person Kids Suite quote. Rejected. The $240 Swissotel low is tied to a July standard-room example, while the Kids Suite is a separate offer with child ages required at booking. Homewood's July public example likewise does not establish an exact four-person suite total. Neither band answers the exact-party budget question.
+
+## Dated evidence and limits
+
+- `PRICE_BAND_EVIDENCE`, July 23 research-pack compilation: [Chicago family-hotel evidence pack](chicago-family-hotel-evidence-pack.md) records ten broad USD nightly bands. Public summer examples used two adults where exposed, with editorial widening for room/date variation. The pack calls these next-30-day examples but labels Swissotel's example July 5 and Hilton Chicago's July 19, both before the July 23 check; it does not establish whether those labels are stay dates, earlier observation dates, or transcription errors. Do not call those two individual examples July 23 observations or current quotes. Low examples included displayed taxes and mandatory fees where stated; parking excluded. Exact room, party and inclusion details are not uniform. This audit does not refresh prices or treat upper bounds as quoted rates.
+- `OFFICIAL_PROPERTY_FACT`, September 28: [Swissotel Kids Suite offer](https://www.swissotel.com/hotels/chicago/promotions/family/swissotel-kids-suite/) describes a separate two-room family offer with breakfast for two adults and up to two children and requests child ages at booking. It does not publish a fixed nightly price. [Homewood Chicago-Downtown](https://www.hilton.com/en/hotels/chihwhw-homewood-suites-chicago-downtown/) describes suites and kitchens, but supplies no verified four-person exact-suite quote in this audit.
+- `EXISTING_PAGE_PROXY`, September 28: the published comparison table and card label were `Rough total/night`; the Swissotel card called the standard-room example `recent`, and the Hilton Chicago card called a July example `current`. A desktop/mobile proxy can see rough dollar bands but cannot tell their party/room basis without leaving the page. This is a research-based task walkthrough, not real-user testing.
+- Reused public-safe GSC snapshot September 27, finalized through September 25: the Chicago family-hotel page has 236 impressions, zero clicks and page-average position 58.18. This is orientation, not aligned query evidence or the cause of this trust correction. The overlapping September 26 snapshot supplies no independent trend.
+
+## Decision and acceptance
+
+Implement a narrow labeling correction on the existing page: preserve all ten approximate bands and hotel order; state USD per room/night, July 23 research-pack compilation, ambiguous example dates, two-adult basis where shown, varying tax/mandatory-fee inclusion, parking exclusion and no exact family-room/Kids Suite quote before the table. Carry compatible limits into the hotel cards, FAQ, ItemList and meta description; remove `recent/current` and misleading `total` price framing. Do not invent a current price, comparable four-person total, or a budget winner.
+
+Acceptance is proxy answerability: a parent can keep the approximate price as useful orientation yet knows to quote the exact room, ages, dates, fees and full stay before choosing. Verify focused/full native QA, 1280/390/320 layout, independent read-only review and production release. Preserve 31 URLs, Chicago title/H1/canonical/indexability/sitemap, other public files and active observation windows; the meta description may change solely to align its price unit.
+
+Confidence: high in the source/page mismatch, medium that the added basis prevents proxy misreading, unknown for real parent behavior or SEO outcome. Recheck on October 11 or sooner if a current exact-family-room quote or conflicting price/fee source arrives; falsify this correction if a proxy still reads the Swissotel band as a Kids Suite quote. Source dates are not silently refreshed by the copy change.

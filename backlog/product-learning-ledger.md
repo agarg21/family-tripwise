@@ -2,7 +2,11 @@
 
 Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and production-verified at action commit `36034a723e6eb22a960200414e3c79a6a03b3155`, successful Pages run `36368504001`, matching marker and byte-identical Orlando HTML/two JS modules. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-27
+Last updated: 2026-09-28
+
+## LRN-061 / September 28 / FT-IMP-043
+
+Family decision: can two adults and children ages 7 and 10 use the Chicago hotel table to screen a roughly USD 350 nightly budget without mistaking a standard-room example for the Swissotel Kids Suite? Hypothesis: `Rough total/night` plus the existing cards already makes the party and room basis clear. Rejected by a September 28 maintained-evidence audit and existing-page proxy task: the July 23 research pack uses public summer examples for two adults where exposed and editorially widened bands, while the page omitted that basis and called July examples `recent/current`. The pack's July 5 Swissotel and July 19 Hilton example labels predate its stated check; stay-versus-observation provenance is unresolved. The September 28 official Swissotel offer names a distinct two-room setup and asks for child ages but publishes no fixed price; Homewood's official page does not provide a four-person exact-suite quote in this audit. Confidence high in source/page mismatch, medium in proxy benefit, unknown in actual behavior, booking or SEO. Lesson: keep useful approximate nightly budgets, but carry unit, party/room basis, compilation date, ambiguous example dates and fee uncertainty into public comparisons; a standard-room low is not a Kids Suite quote. Trigger: October 11 price refresh, resolved source-date provenance, a current exact-party quote or conflicting fee fact, or a proxy reader still mistaking the band for a family-room total. Evidence classes and scope: `docs/research/chicago-price-basis-2026-09-28.md`; reused GSC is orientation only, not the edit trigger. Implement narrow basis correction on the existing URL, not new prices or a ranking rewrite.
 
 ## LRN-060 / September 27 / FT-RES-056
 

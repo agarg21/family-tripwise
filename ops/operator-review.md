@@ -1,8 +1,14 @@
 # Operator Implementation Review Log
 
+## 2026-09-28 - FT-IMP-043 Chicago hotel price basis
+
+Registered ten exact paths in `ops/current-cycle.md`; September28 source audit and proxy task in `docs/research/chicago-price-basis-2026-09-28.md`. All ten approximate USD bands remain unchanged; compilation date, unit, party/room and fee limits are made explicit without inventing a family quote. Focused4/full259, state0, localSEO31/zero errors/five prior advisories, 76 snapshots and 1280/390/320 no-overflow/table-scroller proxy passed. Curie (`01a0e5de-71c7-7971-a45f-8236db7cb485`) cycle-one read-only FAIL with two P2: hero/meta still promised total nightly price, and the source pack's July5 Swissotel/July19 Hilton example labels predated its July23 compilation. One P3: status/roadmap lagged completed QA. Corrected generator/meta, qualified ambiguous source dates without inventing chronology, removed those two individual example amounts from cards, aligned tests/research/state. Cycle-two read-only PASS_WITH_P3/no P0-P2; P3 stale `pending-qa-review-release` state corrected mechanically to review-clean. Reviewer independently reran focused4/full259/state/localSEO/diff check; did not rerun browser proxy. Production release pending. Other dirty work excluded.
+
 ## 2026-09-27 - FT-RES-056 San Diego hotel query priority
 
 Curie (`01a0e5de-71c7-7971-a45f-8236db7cb485`) cycle-one FAIL with one P2: the original 71-row/221-impression aligned cohort excluded suite and Spanish family-hotel wording and lacked a reproducible rule. The research, ledger and roadmap now use an explicit case-insensitive two-regex rule, yielding 80 rows/315 impressions and about position 68.4; PRESERVE is unchanged. Cycle-two read-only PASS/no P0-P3 reproduced 80 rows/315 impressions/zero clicks/68.4444 weighted position, the other two rows/four impressions, six-path consistency, no raw-query leak and no unrelated staging or site change. Focused23/full259, state0, 76 public snapshots, local SEO31 URLs/zero errors/five prior advisories and whitespace pass. Docs-only push pending; no site release.
+
+Mechanical release result: exact six-path reviewed commit `97c50f31d76f4e4b3a9635c00e2f28e26eb5c10b` pushed after fresh fetch/no divergence and complete sole unpushed-range inspection. HEAD/origin matched; docs-only, no Pages release. Other dirty files remained excluded. Completion backfill is local for the next substantive transaction.
 
 ## 2026-09-27 - FT-IMP-042 Moon Palace exact-suite price
 

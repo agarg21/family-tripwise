@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "family-tripwise",
   "owner": "Family Tripwise Master / Operator",
-  "last_updated": "2026-09-27",
+  "last_updated": "2026-09-28",
   "last_rescored_on": "2026-09-14",
   "next_rescore_due": "2026-09-21",
   "planning_horizon_days": 28,
@@ -20,6 +20,24 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-043",
+      "title": "Expose the July price basis on the existing Chicago family-hotel comparison",
+      "kind": "improvement",
+      "status": "in_progress",
+      "selected_on": "2026-09-28",
+      "target_urls": ["https://familytripwise.com/where-to-stay/chicago-family-hotels.html"],
+      "target_paths": ["docs/research/chicago-price-basis-2026-09-28.md", "tools/page-generation/family-hotel-pages.mjs", "site/where-to-stay/chicago-family-hotels.html", "tools/chicago-family-hotels-page.test.mjs", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "status/chicago-pages.md"],
+      "evidence": "September28 source audit and two-adult/two-child proxy task found the July23 research pack's partial two-adult/standard-room basis missing from visible Chicago price comparison; two individual example dates have unresolved provenance; official Swissotel Kids Suite offer publishes no fixed price. See docs/research/chicago-price-basis-2026-09-28.md. GSC is orientation only.",
+      "acceptance_criteria": ["Preserve all ten USD bands and hotel order while showing compilation date, ambiguous example dates, room/night, party/room and fee limits", "Remove recent/current and misleading total price framing; keep hero, meta description, FAQ and ItemList aligned", "Focused/full QA, responsive proxy task, independent read-only review and verified Pages release"],
+      "measurement_plan": "Proxy family can use approximate nightly budget without mistaking standard-room examples for exact family-room quotes; no booking, satisfaction or SEO attribution.",
+      "production_invariant": "31 canonical URLs, Chicago title/H1/canonical/indexability/sitemap and ten hotels/bands/order unchanged; meta description may change only to correct the price unit; other public files, observation windows, external action, analytics, indexing and automation unchanged.",
+      "decision": "IMPLEMENT a narrow source-basis correction on the existing page; no new quote or ranking rewrite.",
+      "release_state": "review-clean-release-pending",
+      "review_outcome": "PASS_WITH_P3",
+      "review_cycles": 2,
+      "reviewer_agent_ids": ["01a0e5de-71c7-7971-a45f-8236db7cb485"]
+    },
+    {
       "id": "FT-RES-056",
       "title": "Resolve San Diego family-hotel query priority without an aggregate CTR rewrite",
       "kind": "research",
@@ -33,7 +51,8 @@
       "measurement_plan": "Reopen only for a named family-task or maintained-fact failure, or doctrine-eligible aligned query/crawl/SERP evidence; no causal ranking or user-satisfaction claim.",
       "production_invariant": "No public page, title, URL, schema, indexability, site/source code, active observation window, analytics, indexing, external account or automation change; protected raw rows remain private.",
       "decision": "PRESERVE existing San Diego hotel page; no aggregate CTR/title or inventory rewrite.",
-      "release_state": "docs-only-review-clean",
+      "release_state": "docs-only-pushed",
+      "release_commit": "97c50f31d76f4e4b3a9635c00e2f28e26eb5c10b",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_agent_ids": ["01a0e5de-71c7-7971-a45f-8236db7cb485"]

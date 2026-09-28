@@ -1,6 +1,8 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-27
+Last updated: 2026-09-28
+
+FT-IMP-043 / LRN-061 review-clean: correct the existing Chicago family-hotel comparison's July nightly-price basis. Preserve all ten USD planning bands, hotel order and URL; clarify per-room/night, partial two-adult/standard-room basis, two ambiguous example dates, variable tax/fee treatment and the lack of an exact family-room or Swissotel Kids Suite quote. September28 source audit and two-child proxy task: `docs/research/chicago-price-basis-2026-09-28.md`. This is a trust correction, not an aggregate CTR response. Focused/full native and responsive proxy QA passed; Curie cycle-two PASS_WITH_P3/no P0-P2. Exact-path push and production release pending. Recheck prices October11.
 
 FT-RES-056 / LRN-060: PRESERVE the San Diego family-hotel URL after September 27 protected aligned-query and current-result review. Eighty lexically aligned visible rows account for 315 impressions at about position 68.4; incomplete query rows cannot explain the page's one click, and aggregate CTR does not qualify a snippet change. Local/firsthand publisher authority is not imitable, while the existing room/price/fee decision table covers the observed job. Reopen only on a named family-task failure, source/price conflict or refresh, or doctrine-eligible aligned query/crawl/SERP evidence. No page, title, URL or indexability change. Exact rule and limitations: `docs/research/san-diego-hotel-query-priority-2026-09-27.md`.
 

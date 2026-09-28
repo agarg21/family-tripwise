@@ -45,7 +45,15 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 10);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
-  assert.match(html, /Rough total\/night, not a quote/);
+  assert.match(html, /Planning USD\/room\/night/);
+  assert.match(html, /two adults where party size was shown/);
+  assert.match(html, /not family-room quotes/);
+  assert.match(html, /tax and mandatory-fee inclusion varies by example/i);
+  assert.match(html, /Two example date labels in that pack are ambiguous/);
+  assert.ok(html.indexOf("not family-room quotes") < html.indexOf("<table class=\"comparison-table hotel-comparison\""));
+  for (const range of ["$280-$550+", "$210-$450+", "$270-$500+", "$310-$650+", "$240-$550+", "$300-$600+", "$320-$650+", "$360-$750+", "$630-$1,200+", "$600-$1,200+"]) {
+    assert.ok(html.includes(range), `missing price band ${range}`);
+  }
   assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026/);
   assert.match(html, /Notice rechecked September 22, 2026/);
   assert.match(html, /notice omits the year/);
@@ -55,7 +63,10 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.doesNotMatch(html, /locker rooms are unavailable|Occasional daytime construction may continue/);
   assert.doesNotMatch(html, /August 10-12 closure|scheduled to reopen after August 12|checked August 13/);
   assert.match(html, /current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended/);
-  assert.match(html, /current public example was about \$308 including taxes and fees/);
+  assert.match(html, /planning range includes standard-room evidence, not a specialty-layout quote/);
+  assert.match(html, /planning range starts from standard-room evidence, not a Kids Suite quote/);
+  assert.doesNotMatch(html, /current public example was about \$308|recent standard-room example was about \$235/);
+  assert.doesNotMatch(html, /approximate total nightly price|rough total nightly price/);
   assert.match(html, /1280px-Millennium_park%2Cchicago\.JPG/);
   assert.match(html, /width="1280" height="960"/);
   assert.match(html, /Behnazkhazai/);
@@ -83,6 +94,10 @@ test("keeps visible FAQ and schema aligned", () => {
   const poolAnswer = faq.mainEntity.find((item) => item.name.includes("indoor pool")).acceptedAnswer.text;
   assert.match(poolAnswer, /completion, changing facilities, current hours and pass availability remain unconfirmed/);
   assert.ok(visible.includes(poolAnswer), "pool FAQ text matches schema");
+  const priceAnswer = faq.mainEntity.find((item) => item.name.includes("taxes and fees")).acceptedAnswer.text;
+  assert.match(priceAnswer, /not quotes for a family room or Kids Suite/);
+  assert.ok(visible.includes(priceAnswer), "price FAQ text matches schema");
+  for (const item of itemList.itemListElement) assert.match(item.description, /USD per-room\/night planning range .* from July 23 research pack, not a family-room quote/);
 });
 
 test("routes from home and the existing stay guide without changing the activity page", () => {

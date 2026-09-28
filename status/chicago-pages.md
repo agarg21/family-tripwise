@@ -1,6 +1,8 @@
 # Chicago Page Status
 
-Last updated: 2026-09-22
+Last updated: 2026-09-28
+
+FT-IMP-043 / LRN-061 selected: September28 source audit found the existing hotel table's July23 approximate USD bands omit their partial two-adult/standard-room basis, while Swissotel's separate Kids Suite has no fixed official price. The pack's two earlier example date labels have unresolved provenance. Preserve ten hotels and price bands; clarify room/night, compilation date, party and fee limits without a new quote. Evidence and proxy task: `docs/research/chicago-price-basis-2026-09-28.md`. Focused/full native and responsive proxy QA pass; Curie cycle-two read-only PASS_WITH_P3/no P0-P2 after first-cycle corrections. Review-clean production release pending; older completed overlays below are history. October11 price recheck remains due.
 
 FT-MAINT-008 **released and production-verified** at `f619bcaf55ac951f98b7279dc8adb35a07cf869f`, Pages `35793245524`; marker, exact target bytes and productionSEO0errors pass. Pauli cycle-two PASS;10 hotels/six pool listings/schema parity/other evidence dates preserved. Prior pending notes below are history.
 
