@@ -62,6 +62,20 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
   ]) assert.doesNotMatch(html, new RegExp(blocked, "i"));
 });
 
+test("fixed-reservation editing starts before the unchanged day cards", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const heading = html.indexOf("Pick the trip length before the attractions");
+  const note = html.indexOf('<p class="existing-draft-note"><strong>Already have a draft?</strong>');
+  const firstCard = html.indexOf('<article class="quick-pick">', heading);
+  assert.ok(heading < note && note < firstCard);
+  const instruction = html.slice(note, firstCard);
+  for (const phrase of ["fixed reservations", "full days", "arrival or departure blocks", "same-zone main job", "meal or rest", "flexible stops", "ticket terms and times", "MTA service and elevators", "luggage storage"]) {
+    assert.ok(instruction.includes(phrase), phrase);
+  }
+  assert.equal((html.match(/Already have a draft\?/g) || []).length, 1);
+  assert.doesNotMatch(instruction, /choose (the )?(ferry|harbor)|guarantee|book now/i);
+});
+
 test("aligns schema, visible FAQ, sources, image, and all four cluster routes", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const styles = readFileSync(join(root, "site", "styles.css"), "utf8");

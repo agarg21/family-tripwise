@@ -1,8 +1,14 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-039 NYC existing-draft start
+
+Descartes (`01a0e59f-258f-7aa1-bd07-17d969fec493`) cycle-one PASS, no P0-P3. Independently checked `NYC-D1` fixed-first editing, `NYC-D3` blank-slate control, escaped optional generator branch, no sibling public/URL/metadata/schema/source-date change, 13 exact paths with six prior mechanical backfills and four excluded dirty docs. Focused5/repository-wide258, operator state/localSEO/whitespace pass; reviewer did not independently rerun operator browser QA. Operator 1280/390/320 no-overflow task and 76 snapshots pass. No reviewer edits; release pending.
+
 ## 2026-09-27 - FT-IMP-038 portable Cancun comparison
 
 Heisenberg (`01a0e590-98ca-7800-99f5-7bf0963b339c`) cycle-one PASS_WITH_P3, no P0-P2. Independently parsed six exact rows and 18 columns, tested four formula-leading probes, confirmed four distinct price bases/two unknowns and source/page/model parity, narrow preview MIME with security tests and preservation of four excluded dirty docs. Focused14/repository-wide257/state/76 snapshots/SEO/freshness/CSV parser/1280-390-320 proxy task passed; reviewer made no edits. P3: current CSV test uses whole-file substring matching and regex column counts; parsed per-row and formula-edge fixtures would strengthen regression detection. Review-clean exact 15 paths; release pending.
+
+Mechanical release result: exact reviewed 15-path commit `57201e2e11a9efb6c56c43d26d7c8cea11d890a0` pushed after fresh fetch, no divergence and sole unpushed-range inspection. Pages `36365286611` succeeded; release marker matched, three declared affected public resources returned 200/exact bytes, and production SEO checked 31 canonical URLs with zero errors/five prior advisories. Completion backfill remains local for the next registered transaction.
 
 ## 2026-09-27 - FT-IMP-037 Sunscape price sample
 

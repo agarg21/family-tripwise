@@ -1,6 +1,8 @@
 # New York City Page Status
 
-Last updated: 2026-09-08
+September27 FT-IMP-039 / LRN-056 review-clean, not shipped: one early fixed-first existing-draft instruction on the NYC itinerary, before the unchanged one-/two-/three-day cards. The `NYC-D1` proxy task can now identify fixed bookings, partial days, same-zone blocks, reset and flexible cuts without navigating to later pivots; `NYC-D3` blank-slate control is unchanged. Focused5/repository-wide258, 1280/390/320 no-overflow and state/SEO/snapshot checks pass. Descartes cycle-one PASS/no P0-P3; Pages verification pending. Evidence and task limits: `docs/plan/nyc-existing-draft-handoff-2026-09-27.md`; no real-user or ranking claim.
+
+Last updated: 2026-09-27
 
 Sources:
 

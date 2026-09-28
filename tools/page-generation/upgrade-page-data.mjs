@@ -1902,6 +1902,7 @@ export const itineraryPages = {
       ["Compare named hotels", "Use the 12-hotel page for rough nightly totals, room function, official facts, bounded online-review observations, and maps.", "../where-to-stay/new-york-city-family-hotels.html", "Compare New York City family hotels"]
     ],
     quickTitle: "Pick the trip length before the attractions",
+    existingDraftNote: "Put fixed reservations in place first, then mark full days and usable arrival or departure blocks. Give each block one same-zone main job and a meal or rest; move or cut flexible stops before crowding the fixed ones. Check ticket terms and times, exact entrances, MTA service and elevators, weather, and luggage storage for your dates.",
     quick: [
       ["One day", "One Uptown zone + one child-fit anchor + one easy finish", "Use Central Park and one bounded AMNH visit as the route shape; do not add Downtown, Brooklyn, and a late ticket."],
       ["Two days", "One Uptown day + one Downtown/harbor day", "Separate the park/museum rhythm from the ferry, Battery, or Brooklyn view instead of crossing the city repeatedly."],
