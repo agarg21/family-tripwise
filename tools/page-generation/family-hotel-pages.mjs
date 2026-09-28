@@ -1139,18 +1139,19 @@ function sanAntonioFamilyHotelPage() {
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
               <strong style="display: block; margin-top: 6px; font-size: 1.25rem;">${esc(hotel.name)}</strong>
-              <span style="display: block; margin-top: 6px;">${esc(hotel.area)}; ${esc(hotel.priceRange)} rough total/night</span>
+              <span style="display: block; margin-top: 6px;">${esc(hotel.area)}; ${esc(hotel.priceRange)} USD/room/night planning band (July 26)</span>
+              <span style="display: block; margin-top: 4px; font-size: 0.9rem;">Mostly two-adult standard-room examples; fee basis varies; not a family-room quote.</span>
             </summary>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Rough total/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Planning USD/room/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
               <div><dt>Maps</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Hotel map</a> · <a href="${googleMapsUrl(hotel.anchorQuery)}">${esc(hotel.anchorQuery)}</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>${hotel.operationalNotice ? `
             <p><strong>Before planning room rest:</strong> ${esc(hotel.operationalNotice)} ${hotel.operationalSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join("; ")}.</p>` : ""}
             <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Price context and key check</h4><p>July 26 price evidence: ${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
           </details>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
@@ -1165,7 +1166,8 @@ function sanAntonioFamilyHotelPage() {
   const faqs = [
     ["Which San Antonio family hotels have a lazy river?", "Hyatt Regency Hill Country, JW Marriott San Antonio Hill Country, and Hyatt Vacation Club at Wild Oak Ranch publish lazy-river or substantial water-complex features. Signia by Hilton La Cantera publishes five pools and a family slide instead. Confirm current operating schedules and access rules for the exact dates."],
     ["Should a family stay on the River Walk or at a San Antonio resort?", "Choose a River Walk hotel when the Alamo, boat ride, Hemisfair, and compact Downtown days lead the trip. Choose a west or north resort when pools, SeaWorld, Six Flags, or a stay-put day matter more than repeated Downtown access. Map the first two days before deciding."],
-    ["Which San Antonio hotels include breakfast or a kitchen?", "Embassy Suites includes made-to-order breakfast and a two-room suite. Homewood and Home2 publish kitchens plus breakfast. Drury includes breakfast and an evening food service. Wild Oak villas publish full kitchens, while its studios differ. Confirm the exact room and current food schedule."]
+    ["Which San Antonio hotels include breakfast or a kitchen?", "Embassy Suites includes made-to-order breakfast and a two-room suite. Homewood and Home2 publish kitchens plus breakfast. Drury includes breakfast and an evening food service. Wild Oak villas publish full kitchens, while its studios differ. Confirm the exact room and current food schedule."],
+    ["Are these San Antonio hotel prices family-room quotes?", "No. The USD per-room, per-night planning bands come from public price examples checked July 26, 2026; most examples used two adults and a standard room, then the bands were widened for date and room variation. Tax and mandatory-fee inclusion varies by example, and parking is separate. These are not quotes for your children's ages or a resort room. Compare the exact room, party, dates, fees and full stay total before booking."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1176,7 +1178,7 @@ function sanAntonioFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "San Antonio family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; rough total per night ${hotel.priceRange}` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; July 26 USD per-room/night planning range ${hotel.priceRange}, mostly based on two-adult standard-room examples; tax and mandatory-fee inclusion varies; not a family-room quote` }))
   };
 
   const body = `    <main>
@@ -1185,12 +1187,12 @@ function sanAntonioFamilyHotelPage() {
           <p class="eyebrow">San Antonio family hotels</p>
           <h1>Top Family Hotels in San Antonio: 12 Options by Trip Style</h1>
           ${contributorCredit()}
-          <p>Compare twelve San Antonio family hotels and resorts by water features, room function, breakfast or kitchen utility, location, approximate total nightly price, and themes from recent online reviews.</p>
+          <p>Compare twelve San Antonio family hotels and resorts by water features, room function, breakfast or kitchen utility, location, approximate per-room nightly budget, and themes from recent online reviews.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Information freshness">
         <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Price examples and online-review sources checked:</strong> July 26, 2026.</p>
-        <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, current pool operations, and cancellation terms.</p>
+        <p>USD per-room, per-night planning bands use July 26 public examples, mostly for two adults in a standard room, then widen for room and date variation. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Price the exact room, child ages, dates, fees, pool operations and cancellation terms before choosing.</p>
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
@@ -1208,7 +1210,7 @@ function sanAntonioFamilyHotelPage() {
           </div>
           <dl class="snapshot">
             <div><dt>Hotels covered</dt><dd>12 distinct options</dd></div>
-            <div><dt>Price format</dt><dd>Rough total/night, not a quote</dd></div>
+            <div><dt>Price format</dt><dd>July 26 USD/room/night planning bands; family-room total unverified</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small recent public sample</dd></div>
             <div><dt>Map view</dt><dd>Hotel and nearby family-anchor links</dd></div>
           </dl>
@@ -1228,10 +1230,10 @@ function sanAntonioFamilyHotelPage() {
       <section class="band">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="review-label">Ranges start with public price examples checked July 26, 2026; upper edges are editorial planning ceilings, not observed quotes. Parking and optional purchases are separate. Compare the final total for the same dates, occupancy, and room setup.</p>
+          <p class="review-label">July 26 USD per-room/night planning bands start from public examples, mostly two adults in standard rooms; upper edges are editorial planning ceilings, not observed quotes. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Compare exact room, child ages, dates and full stay total.</p>
           <div class="comparison-scroll teen-comparison">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Rough total/night</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
@@ -1266,7 +1268,7 @@ ${sanAntonioHotelSources.map(([label, href]) => `          <li><a href="${esc(hr
 
   return pageShell({
     title: "Top Family Hotels in San Antonio: 12 Options by Trip Style",
-    description: "Compare 12 San Antonio family hotels and resorts by trip style, rough total nightly price, pools and lazy rivers, room setup, breakfast or kitchens, and recent online-review themes.",
+    description: "Compare 12 San Antonio family hotels and resorts by trip style, dated per-room nightly budget, pools and lazy rivers, room setup, breakfast or kitchens, and recent online-review themes.",
     canonical: "where-to-stay/san-antonio-family-hotels.html",
     nav: [["./san-antonio-with-kids.html", "Where to stay"], ["../things-to-do/san-antonio-with-kids.html", "Things to do"], ["../family-itinerary/san-antonio-with-kids.html", "Itinerary"]],
     body

@@ -50,7 +50,18 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.equal((html.match(/<h4>Themes in recent online reviews<\/h4>/g) || []).length, 12);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
   assert.match(html, /<div class="comparison-scroll teen-comparison">\s*<table class="comparison-table hotel-comparison">/);
-  assert.match(html, /Rough total\/night, not a quote/);
+  assert.match(html, /Planning USD\/room\/night/);
+  assert.match(html, /mostly for two adults in a standard room/);
+  assert.match(html, /Tax and mandatory-fee inclusion varies/);
+  assert.match(html, /These are not family-room quotes/);
+  assert.ok(html.indexOf("These are not family-room quotes") < html.indexOf('<table class="comparison-table hotel-comparison">'));
+  assert.equal((html.match(/USD\/room\/night planning band \(July 26\)/g) || []).length, 12);
+  assert.equal((html.match(/Mostly two-adult standard-room examples; fee basis varies; not a family-room quote\./g) || []).length, 12);
+  assert.equal((html.match(/July 26 price evidence:/g) || []).length, 12);
+  for (const range of ["$360-$700+", "$450-$850+", "$280-$600+", "$260-$500+", "$150-$320+", "$145-$300+", "$135-$280+", "$145-$300+", "$180-$380+", "$180-$380+", "$230-$450+", "$180-$380+"]) {
+    assert.ok(html.includes(range), `missing retained range ${range}`);
+  }
+  assert.doesNotMatch(html, /approximate total nightly price|rough total nightly price/);
   assert.match(html, /Official hotel facts rechecked:<\/strong> September 5, 2026/);
   assert.match(html, /Price examples and online-review sources checked:<\/strong> July 26, 2026/);
   assert.match(html, /current River Bluff limit is five entry wristbands per room/);
@@ -95,12 +106,16 @@ test("keeps visible FAQ and schema aligned", () => {
   const faq = blocks.find((block) => block["@type"] === "FAQPage");
 
   assert.equal(itemList.itemListElement.length, 12);
-  assert.equal(faq.mainEntity.length, 3);
-  assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
+  assert.equal(faq.mainEntity.length, 4);
+  assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 4);
   const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
   for (const question of faq.mainEntity.map((item) => item.name)) {
     assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
+  const priceAnswer = faq.mainEntity.find((item) => item.name.includes("family-room quotes")).acceptedAnswer.text;
+  assert.match(priceAnswer, /most examples used two adults and a standard room/);
+  assert.ok(visible.includes(priceAnswer), "price FAQ text matches schema");
+  for (const item of itemList.itemListElement) assert.match(item.description, /July 26 USD per-room\/night planning range .*mostly based on two-adult standard-room examples; tax and mandatory-fee inclusion varies; not a family-room quote/);
 });
 
 test("routes from home and the existing stay guide without changing the activity page", () => {

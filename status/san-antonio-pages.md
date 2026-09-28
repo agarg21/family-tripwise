@@ -1,6 +1,8 @@
 # San Antonio Page Status
 
-Last updated: 2026-09-27
+Last updated: 2026-09-28
+
+FT-IMP-044 / LRN-062 selected: the July26 hotel evidence pack says most public price examples used two adults and standard rooms, but the live twelve-hotel page's rough-total labels omit that basis in the comparison and collapsed summaries. Preserve all twelve USD bands/order, official room/rest/water facts and URL; clarify room/night, date, party and fee limitations without a family-room quote. Evidence/proxy: `docs/research/san-antonio-price-basis-2026-09-28.md`. Focused5/full259, state/local SEO and responsive proxy QA passed; Curie cycle-two read-only PASS/no P0-P3 after cycle-one P2 correction. Production release pending; October11 price refresh remains.
 
 September27 FT-IMP-040 / LRN-057 delivered and production-verified: `cc66b561a988acf82efefca6883d9999fb17f7d6`, successful Pages `36366912694`, matching marker/San Antonio itinerary exact bytes, production SEO 31 canonical URLs/zero errors/five prior advisories. The conditional activity/stay-area handoff follows unchanged day cards; primary party-five proxy can route both open choices, fixed-base control only the activity link. Focused5/repository-wide259, 1280/390/320 no-overflow and state/snapshot checks pass; Nash PASS_WITH_P3/no P0-P2. Evidence/limits: `docs/plan/san-antonio-conditional-handoff-2026-09-27.md`; no new family-fit or ranking claim.
 
