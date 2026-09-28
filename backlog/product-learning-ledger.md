@@ -1,8 +1,12 @@
 # Product Learning Ledger
 
-Latest production evidence: September27 `LRN-056` / `FT-IMP-039` is released and production-verified at action commit `7dd901e2581e133d2a30ca6a647805aa1591e8ea`, successful Pages run `36366271157`, matching marker and byte-identical NYC itinerary HTML. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
+Latest production evidence: September27 `LRN-057` / `FT-IMP-040` is released and production-verified at action commit `cc66b561a988acf82efefca6883d9999fb17f7d6`, successful Pages run `36366912694`, matching marker and byte-identical San Antonio itinerary HTML. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
 Last updated: 2026-09-27
+
+## LRN-058 / September27 / FT-IMP-041
+
+Family decision: can two adults and three children shortlist the Holiday Inn Orlando Two Bedroom Suite on published headcount and get a useful approximate nightly budget? Hypothesis: six waterpark admissions and bed count might imply a six-person room maximum, while a general USD65 fee could stand in for every rate. Reject both shortcuts. September27 first-party IHG five-person booking searches explicitly list six maximum for queen/bunk, queen/two-twin and king/bunk two-bedroom configurations; the first rate's terms say six persons maximum. For November8-13, the non-member queen/bunk plan showed USD409 room + USD270 resort fee + USD84.90 taxes = USD763.90 estimated five-night total, about USD153 per room/night, while IHG's general amenities page still says USD65 plus tax nightly. Child ages were not entered; parking and other trip costs are extra. Confidence high in the displayed headcount/breakdown, medium in preliminary budget usefulness, low in age-specific acceptance, future rate or SEO effect. Lesson: occupancy comes from room/rate policy, not an amenity allotment; a dated nightly example needs exact party, dates, room, plan and fee basis. Trigger: exact-age/category/date booking contradiction, rate/fee change, October11 price recheck, or a five/seven-person proxy task failure. Evidence/class: `docs/research/orlando-suite-booking-capacity-2026-09-27.md`, September27 first-party booking UI plus official room/amenities pages; proxy task, not real-user testing or GSC inference.
 
 ## LRN-057 / September27 / FT-IMP-040
 

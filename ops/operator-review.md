@@ -1,8 +1,14 @@
 # Operator Implementation Review Log
 
+## 2026-09-27 - FT-IMP-041 Orlando exact-suite occupancy
+
+Arendt (`01a0e5bd-6831-7683-80ac-512b2d58df2f`) cycle-one PASS_WITH_P3, no P0-P2. It checked the 16-path scope, fee/price math, five/seven-person model, age caveats, metadata, escaping and general IHG amenities USD65 fee/USD31 parking. Its automated fetch of the dated booking result returned 403; it did not independently re-observe that volatile rate and relied on the retained source-dated first-party browser record for USD763.90. P3: a trailing space was added to the otherwise unchanged Disney/Cabana sleeping-setup markup. The optional citation spacing is now scoped to IHG; cycle-two read-only PASS found no P0-P3. Reviewer changed no files. Operator full259/focused9, state/76snapshots/localSEO/1280-390-320 QA passed after the spacing fix. No release yet.
+
 ## 2026-09-27 - FT-IMP-040 San Antonio conditional handoff
 
 Nash (`01a0e5a9-4aa1-7241-bd7d-498850b45356`) cycle-one PASS_WITH_P3, no P0-P2. Independently checked `FT-RES-031` primary/fixed-base task fidelity, correct existing sibling links, escaped optional generator URLs, sole San Antonio public change and unchanged day plans/URL/metadata/schema/source date. Reviewer inspected recorded focused5/repository-wide259 QA, not rerun; operator state/76 snapshots/localSEO/1280-390-320 proxy routes and whitespace pass. P3: learning-ledger latest-production header was stale; corrected mechanically from immutable NYC release facts. Exact 13 paths with six prior mechanical backfills and four excluded dirty docs; no reviewer edits. Release pending.
+
+Mechanical release result: exact reviewed 13-path commit `cc66b561a988acf82efefca6883d9999fb17f7d6` pushed after fresh fetch, no divergence and sole unpushed-range inspection. Pages `36366912694` succeeded; release marker matched, San Antonio itinerary returned 200/exact bytes, and production SEO checked 31 canonical URLs with zero errors/five prior advisories. Completion backfill remains local for the next registered transaction.
 
 ## 2026-09-27 - FT-IMP-039 NYC existing-draft start
 

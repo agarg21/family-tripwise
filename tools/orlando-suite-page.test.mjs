@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { compareStay, dateNumber, renderChecks, escapeHtml } from "./page-generation/orlando-suite-model.mjs";
-import { checkedOn, recheckOn, suites, sources } from "./page-generation/orlando-suite-data.mjs";
+import { checkedOn, pageUpdatedOn, priceRecheckOn, recheckOn, suites, sources } from "./page-generation/orlando-suite-data.mjs";
 import { orlandoPath, orlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
@@ -11,7 +11,7 @@ test("Orlando source/public parity and static example are deterministic", () => 
   for (const name of ["data", "model", "client"]) assert.equal(read(`site/orlando/orlando-suite-${name}.mjs`), read(`tools/page-generation/orlando-suite-${name}.mjs`));
   const html = orlandoSuitePage(), example = compareStay();
   for (const row of example.rows) assert.ok(html.includes(renderChecks(example, row)));
-  for (const url of Object.values(sources)) assert.ok(html.includes(url));
+  for (const url of Object.values(sources)) assert.ok(html.includes(url.replaceAll("&", "&amp;")));
   assert.match(html, /<form id="stay-form" hidden>/);
   assert.match(html, /<noscript>/);
   assert.equal((html.match(/class="suite"/g) ?? []).length, 3);
@@ -21,7 +21,7 @@ test("one discoverable Orlando lodging URL with non-commercial factual schema", 
   assert.ok(html.includes(`<link rel="canonical" href="${url}">`));
   assert.equal((html.match(/<h1>/g) ?? []).length, 1);
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-  assert.equal(schema.dateModified, checkedOn);
+  assert.equal(schema.dateModified, pageUpdatedOn);
   assert.equal(schema.url, url);
   assert.equal(schema["@type"], "WebPage");
   assert.doesNotMatch(html, /noindex|AggregateRating|"@type":"Offer"/);
@@ -29,21 +29,28 @@ test("one discoverable Orlando lodging URL with non-commercial factual schema", 
   assert.ok(read("site/index.html").includes(orlandoPath));
   assert.ok(JSON.parse(read("ops/gsc-monitor.json")).urls.includes(url));
 });
-test("five-person November task keeps capacity unknown distinct from six admissions", () => {
+test("five-person November task uses exact booking headcount, not six admissions", () => {
   const result = compareStay();
   assert.equal(result.people, 5); assert.equal(result.nights, 5);
   assert.match(result.rows[0].capacity, /headcount only/);
   assert.match(result.rows[1].dateNote, /overlaps/);
-  assert.match(result.rows[2].capacity, /unresolved/);
+  assert.match(result.rows[2].capacity, /headcount only/);
   assert.equal(result.rows[2].resortExtra, null);
   assert.match(orlandoSuitePage(), /Express Unlimited is NOT included/);
   assert.match(orlandoSuitePage(), /FlowRider is excluded/);
   assert.match(orlandoSuitePage(), /refurbishment notice/);
+  assert.match(orlandoSuitePage(), /September 27 booking-rate details displayed \$54 plus tax/);
+  assert.match(orlandoSuitePage(), /Dated IHG rate details/);
+  assert.match(orlandoSuitePage(), /About USD153 per room\/night/);
+  assert.match(orlandoSuitePage(), /USD763\.90 estimated for 5 nights/);
+  assert.match(orlandoSuitePage(), /ages not entered/);
+  assert.match(orlandoSuitePage(), /Parking is extra/);
+  assert.match(renderChecks(result,result.rows[2]), /dated nightly sample above is not a quote/);
 });
-test("headcount boundary never turns unknown occupancy into a match", () => {
+test("headcount boundary screens all three exact rooms while ages remain unverified", () => {
   for (let children = 1; children <= 5; children++) {
     const result = compareStay({children});
-    assert.match(result.rows[2].capacity, /unresolved/);
+    assert.match(result.rows[2].capacity, children === 5 ? /Exceeds/ : /headcount only/);
     assert.match(result.rows[0].capacity, children === 5 ? /Exceeds/ : /headcount only/);
     assert.match(result.rows[1].capacity, children === 5 ? /Exceeds/ : /headcount only/);
   }
@@ -79,7 +86,11 @@ test("freshness boundary and HTML escaping", () => {
   assert.equal(compareStay({asOf:"2026-10-23"}).stale,false);
   assert.equal(compareStay({asOf:recheckOn}).stale,true);
   assert.equal(escapeHtml('<b a="x">&'), "&lt;b a=&quot;x&quot;&gt;&amp;");
-  assert.equal(suites[2].maximum,null);
+  assert.equal(suites[2].maximum,6);
+  assert.equal(checkedOn,"2026-09-24");
+  assert.equal(priceRecheckOn,"2026-10-11");
+  assert.equal(suites[2].priceSample.estimatedTotal,763.90);
+  assert.equal(suites[2].priceSample.roomSubtotal + suites[2].priceSample.resortFees + suites[2].priceSample.taxes,763.90);
 });
 test("client hides stale results and does not submit or persist family inputs", () => {
   const client = read("tools/page-generation/orlando-suite-client.mjs");
