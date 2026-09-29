@@ -1,0 +1,42 @@
+# Family travel deals: search-job screen
+
+Action: FT-RES-057 / LRN-064. Evidence inspected September 29, 2026. US search market. Research only; no new URL, offer claim, or price update.
+
+## Decision
+
+**CANDIDATE:** test a family-specific offer-eligibility and comparable-stay-cost decision on an existing lodging page, starting with the Cancun room shortlist. **REJECT for now:** a generic, frequently updated family-deals page or a daily deal-page program. Search-result presence and four public questions establish plausible jobs, not monthly demand, obtainable rankings, or a current savings amount. The existing Cancun page has exact-room, source-dated budget examples, so a separate Cancun deals URL has not passed the distinct-job/no-clean-fit gate. Its active observation window runs through October 21; do not edit it for this hypothesis without a verified defect.
+
+## Search result and role sample
+
+Qualitative live result checks on September 29, not stable rank positions or a volume estimate:
+
+| Query family sampled | Observed result types | Job and overlap | What we cannot honestly reproduce |
+| --- | --- | --- | --- |
+| `family vacation deals kids stay free 2026`, `cheap family vacations all inclusive deals with kids 2026` | Booking operators, resort offers, broad editorial cheap-resort lists | Find available packages and a budget fit; broad `deals` implies dated inventory. Overlaps our hotel-budget comparisons but adds flight/package totals and current eligibility. | Operator rates, inventory, commissions or firsthand resort judgments. |
+| `kids stay free Cancun family resorts deals 2026` | Resort offer pages, [Funjet's booking/filter surface](https://www.funjet.com/deals/kids-stay-free/), resort roundups | Distinct family question: do this child's age, selected room and travel dates qualify, and is the exact stay cheaper? Our six-room Cancun table cannot yet answer the second half. | Live checkout availability or a universal `kids free` rule. |
+| `Disney World free dining vs room discount family calculator 2026` | [Disney's offer terms](https://disneyworld.disney.go.com/en_CA/special-offers/2026-kids-free-dining-plan/details/), calculators and discussion | Compare plan/room/package totals for a specific party; not the same job as choosing an Orlando suite. May merit a separate model only after its own demand and maintainability test. | Disney's package inventory or an unsupported claim that `free dining` wins. |
+
+Representative current source checks: [Moon Palace's offer](https://www.moonpalacecancun.com/offers/kids-teens-free) advertises children/teens 17 and under and a December 20 stay end; the direct page extraction on September 29 displayed an October 31 booking end but did not expose its terms body, while a recent indexed search excerpt displayed September 30 and more detailed conditions. This is an unresolved source-render/cache conflict, **not** a verified deadline or complete eligibility record. Funjet exposes hotel-only versus flight-plus-hotel, date and other filters, and its offer text limits child ages/room categories and warns about occupancy, blackout and minimum-stay restrictions. Disney's 2026 child dining offer applies to ages 3-9 with a plan purchased for everyone 10+ and excludes gratuities; that is eligibility, not a demonstrated net saving. [FamilyVacationist's list](https://familyvacationist.com/kids-stay-free-family-hotels-resorts-us-canada/), reviewed February 10 and inspected September 29, still includes a Hilton promotion whose stated booking deadline was March 31, 2026. This illustrates refresh debt, not that its other listings are wrong.
+
+## Parent-question sample
+
+Public qualitative questions inspected September 29; paraphrases only, with no identities, verbatim text or prevalence inference:
+
+- [All-inclusive budget question](https://www.reddit.com/r/AllInclusiveResorts/comments/1wbhbt4/best_family_all_inclusive_trying_to_stick_with/) (September 2026): two children aged 5 and 7, roughly USD 6,000 including flights for six nights from New York; wants child activities and manageable flight time. A useful answer needs package scope and realistic total, not an isolated nightly hotel rate.
+- [Disney dining comparison](https://www.reddit.com/r/WaltDisneyWorld/comments/1wa3foi/disney_dining_trip_help_free_dining_analysis/) (September 2026): two adults and two teens compare hotel tiers and dining-plan economics for a future trip. The 2026 ages-3-9 offer cannot simply be projected to their 2027 party.
+- [Budget trip versus parental workload](https://www.reddit.com/r/Travelwithkids/comments/1vpdcsu/a_true_vacation_with_kids/) (August 2026): low cash price can leave one parent handling meals and activities; family value includes that work, not price alone.
+- [Future-trip discount timing](https://www.reddit.com/r/WaltDisneyWorld/comments/1wsvcsm/october_2027/) (September 29, 2026): a parent asks how to weigh booking now against possible later offers. Replies are anecdotes, not verified Disney modification/refund policy.
+
+## Existing-page proxy task
+
+Party: two adults plus children 5 and 7, six nights in January 2027, New York departure, approximate USD 6,000 trip ceiling including flights. Required outputs: eligible resort/room for those ages, dated room or package total, flights/transfers and known taxes/fees, offer validity, cancellation exposure, and a same-party/date/room non-offer alternative. The sampled Moon Palace offer ends for stays on December 20, 2026 and therefore cannot cover this January trip; a future offer is unknown. The [current Cancun comparison](https://familytripwise.com/where-to-stay/cancun-family-resorts.html) can narrow exact rooms and communicate several source-dated nightly examples. It cannot verify this party's January package, whether a future `kids stay free` offer applies, or what the counterfactual non-offer total would be. Its September 27 Moon Palace Grand Family Suite example is an October 18-23 promo-qualified room observation for a different child-age/infant party; it cannot be transferred to this task or used as proof of savings. This is a desktop/content proxy, not real-user testing; mobile answerability and actual booking are untested here.
+
+## Evidence and maintenance gate
+
+For one future offer record, capture source URL/check time; property and exact room/rate plan; offer code/stacking; book/stay dates; child-age and maximum-child rules; occupancy and minimum nights; blackout/availability; meal/transfer inclusion; currency, room/party/stay basis, taxes/fees and cancellation; expiry/recheck owner. To say an offer **saves** money, obtain offer and non-offer totals for the same party, ages, room, dates, booking channel and inclusion/refund basis, with any unavoidable trip costs stated separately. An official headline or unrelated two-adult example is insufficient. Volatile offers should be removed or labeled expired at the recorded deadline; if terms cannot be verified at first party, do not publish eligibility as fact.
+
+The latest reused public-safe GSC snapshot was collected through the read-only API on September 28 and finalized through September 26, but contains no aligned deals query cohort. Its site/page averages are orientation only. The September 27 snapshot overlaps. The September 17 DataForSEO destination sample was not a deals keyword study, and missing Ads volumes are not zero demand. No new paid API call was made here. Numeric demand, SERP overlap across at least two exact query formulations, and maintainable offer data remain unproved. The site currently has 31 canonicals; no new indexable URL is justified by this screen.
+
+## Next falsification and action
+
+At the October 11 planned hotel-price refresh, first verify the live Moon Palace terms through a readable first-party source, then attempt one same-room/party/date offer-versus-non-offer total. Separately obtain a bounded US query-volume/overlap screen within fresh authorized research scope; do not infer approval for another paid call from the older destination dataset. If terms or comparable prices cannot be maintained, preserve the existing Cancun budget table and reject a `deal` label. If verified offer records expose a recurring decision the existing page cannot serve cleanly, run a desktop/mobile family task and the normal new-URL gate before proposing publication. No title/CTR experiment or ranking claim follows from this research.

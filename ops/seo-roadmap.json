@@ -20,6 +20,25 @@
   ],
   "items": [
     {
+      "id": "FT-RES-057",
+      "title": "Test family travel deals as an offer-eligibility and comparable-cost search job",
+      "kind": "research",
+      "status": "completed",
+      "completed_on": "2026-09-29",
+      "selected_on": "2026-09-29",
+      "target_urls": ["https://familytripwise.com/where-to-stay/cancun-family-resorts.html"],
+      "target_paths": ["docs/research/family-deals-search-opportunity-2026-09-29.md", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md"],
+      "evidence": "September29 qualitative US SERP samples and current official/operator offer pages plus four dated parent questions; September28 public-safe GSC is orientation only, with no aligned deals cohort. Existing Cancun comparison has dated prices but no verified same-basis offer/non-offer comparison.",
+      "acceptance_criteria": ["Separate broad transactional deals from family-specific eligibility and comparable-cost jobs without treating SERP presence as volume", "Record official terms, volatility/conflicts, proxy family decision, existing-page fit and maintenance requirements", "Name one decision and falsification/next evidence gate; focused/full native QA, independent read-only review and exact-path docs-only push"],
+      "measurement_plan": "Proxy family can determine whether its children, room and dates qualify and compare full same-basis stay costs; no booking, real-user or SEO-outcome claim.",
+      "production_invariant": "No public page, canonical URL, title, indexability, schema, sitemap, active observation window, paid call, analytics, indexing, outreach, account action or automation change; six unrelated dirty paths excluded.",
+      "decision": "CANDIDATE one family-offer eligibility and comparable-total decision within the existing Cancun job; REJECT generic live-deals or daily page publishing now. No new URL or public claim until distinct numeric demand, same-basis offer/non-offer pricing and maintainable first-party terms pass.",
+      "release_state": "review-clean-docs-push-pending",
+      "review_outcome": "PASS",
+      "review_cycles": 2,
+      "reviewer_agent_ids": ["01a0ecc7-6c61-7363-9fba-8342891a062f"]
+    },
+    {
       "id": "FT-IMP-046",
       "title": "Make the Las Vegas hotel comparison portable with its price basis intact",
       "kind": "improvement",

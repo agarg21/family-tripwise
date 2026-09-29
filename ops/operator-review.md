@@ -1,5 +1,9 @@
 # Operator Implementation Review Log
 
+## 2026-09-29 - FT-RES-057 family deals search-job screen
+
+Six exact docs/state paths registered in `ops/current-cycle.md`; six unrelated dirty paths excluded. The source-dated research distinguishes broad transactional inventory from Cancun child-offer eligibility and Disney dining/room comparison, keeps source and deadline conflicts explicit, and rejects a new public URL or savings claim without numeric demand and same-basis quote evidence. Full native 240/240, operator state zero errors, 77 GSC snapshot validations and local SEO31URLs/zero errors/five prior advisories pass. Peirce (`01a0ecc7-6c61-7363-9fba-8342891a062f`) cycle-one read-only PASS_WITH_P3/no P0-P2; it noted that the January proxy trip is after the sampled offer's December end and the editorial expired-offer example needed a linked source. Both were clarified, along with reused GSC wording. Cycle-two read-only PASS/no P0-P3 independently rechecked the three fixes, state QA, diff and dirty-path isolation. Docs-only push pending. No public page changed.
+
 FT-IMP-046 immutable release result: exact reviewed commit `dbd7250fb4d36a5030ad8615412f9b82ec29b0fb` pushed after fresh fetch and sole outgoing-range inspection; successful Pages `36552578880`; marker matched; HTML/CSV HTTP200 and exact local bytes; CSV `text/csv`; production SEO31 URLs/zero errors/five prior advisories. Six unrelated dirty paths excluded. Earlier pending checkpoints are historical.
 
 ## 2026-09-29 - FT-IMP-046 Las Vegas portable comparison
