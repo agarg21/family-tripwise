@@ -2,7 +2,9 @@
 
 Last updated: 2026-09-29
 
-FT-IMP-045 / LRN-063 selected for the existing family-hotel URL: July22 price examples have mixed party/room/tax bases but the current table/schema calls all ten bands a rough total/night and some cards still say recent/current. Preserve all ten USD bands/order and the September16 capacity branch; clarify historical per-room/night orientation and exact family-of-five quote unknown. Source/task record: `docs/research/las-vegas-price-basis-2026-09-29.md`. Focused5/full259, state/local SEO and responsive proxy QA passed; Arendt cycle-one read-only PASS/no P0-P3, release pending. October11 price refresh remains separate.
+FT-IMP-046 builds a static ten-hotel CSV and table permalink from the existing shared records. It preserves all July 22 approximate USD per-room/night bands, mixed basis/tax/fee and exact-suite uncertainty, four September 16 room-capacity records, and the page's URL/search metadata. Focused6/full260, state/snapshot/local SEO, CSV parser/MIME and 1280/390/320 proxy checks pass; Dirac cycle-one independent read-only PASS/no P0-P3; production release pending. This is a portable planning aid, not a claim of current family-room quotes, observed use or ranking gain. See `docs/plan/las-vegas-comparison-sharing-2026-09-29.md`.
+
+FT-IMP-045 / LRN-063 delivered and production-verified at `d04c9013706bbfd89d79756673d223e9a6d52032`, successful Pages `36535378278`: marker/target bytes match and production SEO31 URLs/zero errors/five prior advisories. July22 planning USD per-room/night, mixed tax/fee and exact five-person suite quote unknown are clear; all ten bands/order and September16 capacity branch unchanged. Source/task record: `docs/research/las-vegas-price-basis-2026-09-29.md`. Focused5/full259, state/local SEO and responsive proxy QA passed; Arendt cycle-one read-only PASS/no P0-P3. October11 price refresh remains separate; no SEO or real-user outcome claimed.
 
 Sources:
 

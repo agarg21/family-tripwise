@@ -304,6 +304,7 @@ ${sourceList(city)}
 const {
   sanDiegoFamilyHotelPage,
   lasVegasFamilyHotelPage,
+  lasVegasHotelComparisonCsv,
   chicagoFamilyHotelPage,
   newYorkCityFamilyHotelPage,
   sanAntonioFamilyHotelPage
@@ -585,6 +586,7 @@ for (const page of agePages) {
 
 writeSite("where-to-stay/san-diego-family-hotels.html", sanDiegoFamilyHotelPage());
 writeSite("where-to-stay/las-vegas-family-hotels.html", lasVegasFamilyHotelPage());
+writeSite("downloads/las-vegas-family-hotels.csv", lasVegasHotelComparisonCsv());
 writeSite("where-to-stay/chicago-family-hotels.html", chicagoFamilyHotelPage());
 writeSite("where-to-stay/new-york-city-family-hotels.html", newYorkCityFamilyHotelPage());
 writeSite("where-to-stay/san-antonio-family-hotels.html", sanAntonioFamilyHotelPage());

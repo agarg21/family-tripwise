@@ -1,8 +1,14 @@
 # Operator Implementation Review Log
 
+## 2026-09-29 - FT-IMP-046 Las Vegas portable comparison
+
+Eleven exact paths registered before implementation. Generated ten-row CSV and stable table anchor/download from the existing hotel records, with unchanged July 22 bands and September 16 room-capacity boundaries. Focused6/full260, operator-state0, 77 snapshot validations, local SEO31 URLs/zero errors/five prior advisories, CSV parser/MIME and 1280/390/320 proxy checks pass. Six unrelated dirty Cancun/Orlando paths excluded. Dirac (`01a0ec94-0976-7a43-80f6-c69094c8508d`) cycle-one independent read-only PASS/no P0-P3. Reviewer independently reran full260, focused8, state, local/production SEO, CSV parser, sitemap count and diff check; browser and preview MIME were operator-reported. Release pending; no site delivery yet.
+
+Before push, staged diff check flagged the CSV's CRLF as whitespace. Generator/test changed to LF and CSV regenerated, without changing rows. Focused6/full260/state0/staged diff check passed. Dirac cycle-two independent read-only PASS/no P0-P3 confirmed LF/no CR, ten 14-column rows, bands/four capacity records and exact eleven staged paths. Release pending.
+
 ## 2026-09-29 - FT-IMP-045 Las Vegas hotel price basis
 
-Registered eleven exact paths and source/task acceptance in `ops/current-cycle.md`; six unrelated dirty paths excluded. Source audit and proxy completed. Focused5/full259, state zero errors, 77 snapshots, local SEO31 URLs/zero errors/five prior advisories, diff check, and 1280/390/320 no-overflow/table-scroller proxy passed; only Las Vegas public HTML changed. Arendt (`01a0e5bd-6831-7683-80ac-512b2d58df2f`) cycle-one independent read-only PASS/no P0-P3 after checking source dates, all ten bands/order, fee/party caveats, FAQ/ItemList, capacity and dirty isolation. Reviewer independently reran focused5 and diff check; full/responsive QA were operator-reported. Release pending. FT-IMP-044 immutable release backfills are preserved in registered operator/status paths.
+Registered eleven exact paths and source/task acceptance in `ops/current-cycle.md`; six unrelated dirty paths excluded. Source audit and proxy completed. Focused5/full259, state zero errors, 77 snapshots, local SEO31 URLs/zero errors/five prior advisories, diff check, and 1280/390/320 no-overflow/table-scroller proxy passed; only Las Vegas public HTML changed. Arendt (`01a0e5bd-6831-7683-80ac-512b2d58df2f`) cycle-one independent read-only PASS/no P0-P3 after checking source dates, all ten bands/order, fee/party caveats, FAQ/ItemList, capacity and dirty isolation. Reviewer independently reran focused5 and diff check; full/responsive QA were operator-reported. Exact reviewed commit `d04c9013706bbfd89d79756673d223e9a6d52032` deployed via successful Pages `36535378278`; marker, target bytes and production SEO passed. FT-IMP-044 immutable release backfills are preserved in registered operator/status paths.
 
 ## 2026-09-28 - FT-IMP-044 San Antonio hotel price basis
 

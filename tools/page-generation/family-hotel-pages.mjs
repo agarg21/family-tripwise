@@ -530,6 +530,24 @@ const lasVegasHotelSources = [
   ["Kids Quest at Red Rock", "https://www.kidsquest.com/location/redrock/"]
 ];
 
+function lasVegasHotelComparisonCsv() {
+  const cell = (value) => {
+    const plain = String(value ?? "").replaceAll(/[\r\n\t]+/g, " ");
+    const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
+    return `"${safe.replaceAll('"', '""')}"`;
+  };
+  const headings = ["Hotel", "Trip style", "Area", "Approx USD per room per night", "Price checked", "Price basis and fee limits", "Price context", "Room capacity spot-checked", "Named room", "Published capacity", "Official room source", "Most important check", "Map", "Live comparison"];
+  const rows = lasVegasFamilyHotels.map((hotel) => [
+    hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-22",
+    "Historical planning band from mixed public examples; some used two adults, other party and room bases are unknown; tax and mandatory-fee inclusion varies; parking separate; not a current five-person suite quote",
+    hotel.priceNote, hotel.roomCapacity ? lasVegasRoomCapacityChecked : "Not individually spot-checked",
+    hotel.roomCapacity?.label ?? "", hotel.roomCapacity?.capacity ?? "", hotel.roomCapacity?.source ?? "",
+    hotel.parentCheck, `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
+    "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison"
+  ]);
+  return [headings, ...rows].map((row) => row.map(cell).join(",")).join("\n") + "\n";
+}
+
 function lasVegasFamilyHotelPage() {
   const hotels = lasVegasFamilyHotels;
   const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
@@ -617,10 +635,11 @@ function lasVegasFamilyHotelPage() {
           <article class="quick-pick"><span>North Strip or nature base</span><strong>Resorts World Hilton or Red Rock</strong><p>Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</p></article>
         </div>
       </section>
-      <section class="band">
+      <section id="hotel-comparison" class="band">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
           <p class="review-label">July 22 USD per-room/night planning bands start from mixed public examples. Some used two adults; other party and room bases are unknown. Tax and mandatory-fee inclusion varies, and parking is separate. These are not current five-person suite quotes. Compare the exact room, party, dates and full stay total.</p>
+          <p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps the July 22 price basis and unknowns with each hotel.</p>
           <div class="comparison-scroll">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
@@ -1580,6 +1599,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
   return Object.freeze({
     sanDiegoFamilyHotelPage,
     lasVegasFamilyHotelPage,
+    lasVegasHotelComparisonCsv,
     chicagoFamilyHotelPage,
     newYorkCityFamilyHotelPage,
     sanAntonioFamilyHotelPage

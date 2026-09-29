@@ -138,3 +138,30 @@ test("renders the page from the same hotel room records used in the branch", () 
     "https://www.hiltongrandvacations.com/en/resorts-and-destinations/las-vegas/cancun-las-vegas-a-hilton-vacation-club"
   ]) assert.ok(rendered.includes(`href="${source}">Official room record</a>`));
 });
+
+test("exports the same ten hotels with dated price and capacity limits", () => {
+  const esc = (value) => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+  const pages = createFamilyHotelPages({ esc, pageShell: ({ body }) => body });
+  const html = readFileSync(pagePath, "utf8");
+  const csv = readFileSync(join(root, "site", "downloads", "las-vegas-family-hotels.csv"), "utf8");
+  const rows = csv.trimEnd().split("\n").map((line) => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map((match) => match[1].replaceAll('""', '"')));
+  const expectedRanges = ["$110-$350+", "$350-$700+", "$150-$450+", "$200-$700+", "$130-$300+", "$120-$320+", "$60-$220+", "$80-$300+", "$150-$350+", "$220-$450+"];
+
+  assert.equal(csv, pages.lasVegasHotelComparisonCsv());
+  assert.equal(rows.length, 11);
+  assert.equal(rows[0].length, 14);
+  assert.ok(rows.every((row) => row.length === 14));
+  assert.deepEqual(rows.slice(1).map((row) => row[3]), expectedRanges);
+  assert.equal(rows.slice(1).filter((row) => row[7] === "September 16, 2026").length, 4);
+  for (const row of rows.slice(1)) {
+    assert.equal(row[4], "2026-07-22");
+    assert.match(row[5], /some used two adults, other party and room bases are unknown/);
+    assert.match(row[5], /tax and mandatory-fee inclusion varies/);
+    assert.match(row[5], /not a current five-person suite quote/);
+    assert.equal(row[13], "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison");
+    assert.ok(html.includes(esc(row[0])));
+  }
+  assert.match(html, /<section id="hotel-comparison" class="band">/);
+  assert.match(html, /href="\.\.\/downloads\/las-vegas-family-hotels\.csv" download/);
+  assert.match(html, /href="https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-family-hotels\.html#hotel-comparison"/);
+});
