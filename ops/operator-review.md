@@ -1,10 +1,12 @@
 # Operator Implementation Review Log
 
+FT-IMP-046 immutable release result: exact reviewed commit `dbd7250fb4d36a5030ad8615412f9b82ec29b0fb` pushed after fresh fetch and sole outgoing-range inspection; successful Pages `36552578880`; marker matched; HTML/CSV HTTP200 and exact local bytes; CSV `text/csv`; production SEO31 URLs/zero errors/five prior advisories. Six unrelated dirty paths excluded. Earlier pending checkpoints are historical.
+
 ## 2026-09-29 - FT-IMP-046 Las Vegas portable comparison
 
-Eleven exact paths registered before implementation. Generated ten-row CSV and stable table anchor/download from the existing hotel records, with unchanged July 22 bands and September 16 room-capacity boundaries. Focused6/full260, operator-state0, 77 snapshot validations, local SEO31 URLs/zero errors/five prior advisories, CSV parser/MIME and 1280/390/320 proxy checks pass. Six unrelated dirty Cancun/Orlando paths excluded. Dirac (`01a0ec94-0976-7a43-80f6-c69094c8508d`) cycle-one independent read-only PASS/no P0-P3. Reviewer independently reran full260, focused8, state, local/production SEO, CSV parser, sitemap count and diff check; browser and preview MIME were operator-reported. Release pending; no site delivery yet.
+Eleven exact paths registered before implementation. Generated ten-row CSV and stable table anchor/download from the existing hotel records, with unchanged July 22 bands and September 16 room-capacity boundaries. Focused6/full260, operator-state0, 77 snapshot validations, local SEO31 URLs/zero errors/five prior advisories, CSV parser/MIME and 1280/390/320 proxy checks pass. Six unrelated dirty Cancun/Orlando paths excluded. Dirac (`01a0ec94-0976-7a43-80f6-c69094c8508d`) cycle-one independent read-only PASS/no P0-P3. Reviewer independently reran full260, focused8, state, local/production SEO, CSV parser, sitemap count and diff check; browser and preview MIME were operator-reported. Verified release is recorded above.
 
-Before push, staged diff check flagged the CSV's CRLF as whitespace. Generator/test changed to LF and CSV regenerated, without changing rows. Focused6/full260/state0/staged diff check passed. Dirac cycle-two independent read-only PASS/no P0-P3 confirmed LF/no CR, ten 14-column rows, bands/four capacity records and exact eleven staged paths. Release pending.
+Before push, staged diff check flagged the CSV's CRLF as whitespace. Generator/test changed to LF and CSV regenerated, without changing rows. Focused6/full260/state0/staged diff check passed. Dirac cycle-two independent read-only PASS/no P0-P3 confirmed LF/no CR, ten 14-column rows, bands/four capacity records and exact eleven staged paths. Verified release is recorded above.
 
 ## 2026-09-29 - FT-IMP-045 Las Vegas hotel price basis
 
