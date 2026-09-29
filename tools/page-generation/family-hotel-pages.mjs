@@ -367,7 +367,7 @@ const lasVegasFamilyHotels = [
     strengths: ["The 11-acre beach complex and Shark Reef can make the hotel part of the itinerary", "Official two-queen rooms list space for four"],
     familySetup: "Official materials list 550 sq ft two-queen rooms for up to four, plus an 11-acre beach complex with a wave pool, lazy river, pools, and Shark Reef on site.",
     reviewSignal: "Beach, pool, and room-size positives recur; check-in or service waits, noise, seasonal pool limits, and value when water features are closed appear as conflicts.",
-    priceNote: "Recent public low-date examples started near $110 total, while weekends, events, and larger rooms can move far higher.",
+    priceNote: "A July 22 public low-date example was near $110; weekends, events, and larger rooms can move far higher.",
     parentCheck: "Confirm which pools and water features operate on the exact dates, room occupancy, final total, parking, and the casino-floor path.",
     mapQuery: "Mandalay Bay Resort Las Vegas"
   },
@@ -379,7 +379,7 @@ const lasVegasFamilyHotels = [
     strengths: ["Official family materials describe a non-gaming and non-smoking hotel", "Guests receive private-pool and Mandalay Beach access"],
     familySetup: "The official family page lists a private pool, Mandalay Beach access, cribs or rollaways, childproofing items, children's toiletries, books, and games; exact room occupancy still depends on room type.",
     reviewSignal: "Service, cleanliness, room space, and the calmer setting recur positively; high prices, early or seasonal pool limits, airport noise, and occasional service or condition conflicts also appear.",
-    priceNote: "A recent public one-night example was about $351 total; larger rooms, weekends, dining, and parking can move the stay much higher.",
+    priceNote: "A July 22 public one-night/two-adult example was about $351 with displayed taxes and fees; larger rooms, weekends, dining, and parking can move the stay much higher.",
     parentCheck: "Price the full stay and verify private and Mandalay pool hours, exact bedding, parking, and whether the south-Strip location fits the plan.",
     mapQuery: "Four Seasons Hotel Las Vegas"
   },
@@ -398,7 +398,7 @@ const lasVegasFamilyHotels = [
       fivePlusStart: false
     },
     reviewSignal: "Room space, non-gaming atmosphere, and access toward Aria and Bellagio recur positively; empty kitchenettes until supplies are requested, small fridges, parking walks, maintenance, and fee clarity recur as conflicts.",
-    priceNote: "Public examples varied from roughly $150 to more than $450 total depending on date and inventory source.",
+    priceNote: "July 22 public examples varied from roughly $150 to more than $450 depending on date and inventory source; the high example included private inventory.",
     parentCheck: "Confirm the exact suite bedding, kitchen equipment supplied, parking route, pool season, final total, and cancellation terms.",
     mapQuery: "Vdara Hotel and Spa Las Vegas"
   },
@@ -417,7 +417,7 @@ const lasVegasFamilyHotels = [
       fivePlusStart: true
     },
     reviewSignal: "Space, kitchens, laundry, cleanliness, and central location recur positively; small or crowded pools, valet dependence, timeshare contact, noise, and limited food choices recur as conflicts.",
-    priceNote: "Public examples ranged from the low $200s to roughly $700 for higher dates or larger units; villa size is the main comparison point.",
+    priceNote: "July 22 public examples ranged from the low $200s before tax to roughly $700 for higher dates or larger units; villa size is the main comparison point.",
     parentCheck: "Compare the exact villa, bedrooms and baths, housekeeping cadence, valet cost and wait, final total, and cancellation terms.",
     mapQuery: "Marriott's Grand Chateau Las Vegas"
   },
@@ -436,7 +436,7 @@ const lasVegasFamilyHotels = [
       fivePlusStart: true
     },
     reviewSignal: "Room space, kitchens, lazy river, pool, and the away-from-casino setting recur positively; crowding, partial pool closures, elevator or parking walks, service follow-through, room condition, and sales contact recur as conflicts.",
-    priceNote: "A recent public one-night example was about $129 total; larger suites and peak pool dates can move higher.",
+    priceNote: "A July 22 public one-night/two-adult example was about $129 with displayed taxes and fees; larger suites and peak pool dates can move higher.",
     parentCheck: "Verify the exact kitchen, pool and lazy-river operations, crib or Pack 'n Play availability if needed, shuttle schedule, final total, and cancellation terms.",
     mapQuery: "Tahiti Village Resort Las Vegas"
   },
@@ -455,7 +455,7 @@ const lasVegasFamilyHotels = [
       fivePlusStart: true
     },
     reviewSignal: "Family pool and space positives appear in the small sample; resort fee, service consistency, timeshare context, room condition, and distance from main Strip stops remain the main conflicts.",
-    priceNote: "A current public one-night example was about $119 total; dates and larger residences can move higher.",
+    priceNote: "A July 22 public one-night/two-adult example for July 27 was about $119 with displayed taxes and mandatory fees; dates and larger residences can move higher.",
     parentCheck: "Confirm the conflicting crib policy if needed, exact suite and kitchen, slide operations and rules, transport plan, final total, and cancellation terms.",
     mapQuery: "Hilton Vacation Club Cancun Resort Las Vegas"
   },
@@ -467,7 +467,7 @@ const lasVegasFamilyHotels = [
     strengths: ["Newly renovated two-queen rooms officially list space for four", "The castle theme, arcade, and nearby Tournament of Kings can entertain younger children"],
     familySetup: "Official room pages list newly renovated 352 sq ft two-queen rooms for four and larger two-bedroom suites. Current property materials also list arcade or midway entertainment and a pool.",
     reviewSignal: "Low total, castle theme, arcade, and south-Strip access help some families; room condition varies sharply, with smoke, cleanliness, maintenance, queues, and tower or renovation status recurring as conflicts.",
-    priceNote: "A recent public low-date example was about $58 total; renovated rooms, weekends, and event dates can move much higher.",
+    priceNote: "A July 22 public low-date example was about $58 with displayed taxes and fees; renovated rooms, weekends, and event dates can move much higher.",
     parentCheck: "Confirm a renovated room and tower, exact pool season, casino route, final total, parking, and the newest room-condition reviews.",
     mapQuery: "Excalibur Hotel and Casino Las Vegas"
   },
@@ -479,7 +479,7 @@ const lasVegasFamilyHotels = [
     strengths: ["Official pages list remodeled two-queen rooms", "The Big Apple Coaster, arcade, food, and arena access can suit older kids"],
     familySetup: "Official property pages list remodeled two-queen rooms, the Big Apple Coaster and Arcade, a seasonal pool, and walkways toward neighboring south-Strip resorts.",
     reviewSignal: "Remodeled rooms, food and entertainment density, location, and older-kid energy are positives; casino noise or smoke exposure, coaster fit and cost, pool modesty, queues, and busy public areas are conflicts.",
-    priceNote: "A recent public low-date example was about $79 total; event nights and specific remodeled-room choices can move higher.",
+    priceNote: "A July 22 public low-date example was about $79 with displayed taxes and fees; event nights and specific remodeled-room choices can move higher.",
     parentCheck: "Check coaster height and comfort, room tower, pool season, casino path, event-night price, parking, and final total.",
     mapQuery: "New York-New York Hotel and Casino Las Vegas"
   },
@@ -491,7 +491,7 @@ const lasVegasFamilyHotels = [
     strengths: ["Official Hilton two-queen rooms sleep four", "The resort's large multi-pool complex and food choices support an on-property day"],
     familySetup: "Hilton lists two-queen rooms for four. Resorts World lists a large multi-pool complex; the Athena infinity area is 21+, so families should verify which all-ages pools are operating.",
     reviewSignal: "Modern rooms, cleanliness, pool complex, and on-property food choice recur positively; check-in lines, long internal walks, high food costs, housekeeping inconsistency, and early or seasonal pool closures recur as conflicts.",
-    priceNote: "Recent public examples ranged from about $134 including fees to the high $200s before all tax, with large offer and date swings.",
+    priceNote: "July 22 public examples ranged from about $134 including fees to the high $200s plus tax, with large offer and date swings.",
     parentCheck: "Verify which all-ages pools are open, exact Hilton tower and room, internal walking, parking, final total, and cancellation terms.",
     mapQuery: "Las Vegas Hilton at Resorts World"
   },
@@ -503,7 +503,7 @@ const lasVegasFamilyHotels = [
     strengths: ["Bowling, cinema, arcade or Kids Quest, and pool options create non-Strip downtime", "The location can pair with a Red Rock Canyon day"],
     familySetup: "Official pages list a pool for registered guests, bowling, cinema, arcade or Kids Quest, and proximity to Red Rock Canyon. Kids Quest is a separate hourly paid program with current ages and rules to verify.",
     reviewSignal: "Pool, room quality, on-site activities, and the off-Strip setting appear positively; seasonally limited pools, long hotel walks, fees or value, and Strip distance recur as conflicts.",
-    priceNote: "A recent public one-night example was about $219 total; weekends and premium rooms can move higher.",
+    priceNote: "A July 22 public one-night/two-adult example was about $219 with displayed taxes and fees; weekends and premium rooms can move higher.",
     parentCheck: "Confirm pool operations, Kids Quest ages, hours and price, room-to-amenity walking, Red Rock transport, final total, and cancellation terms.",
     mapQuery: "Red Rock Casino Resort and Spa Las Vegas"
   }
@@ -537,13 +537,13 @@ function lasVegasFamilyHotelPage() {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Rough total/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Planning USD/room/night (July 22)</dt><dd>${esc(hotel.priceRange)}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${hotel.roomCapacity ? `<p><strong>Room capacity checked ${esc(lasVegasRoomCapacityChecked)}:</strong> ${esc(hotel.roomCapacity.label)} is listed for ${esc(hotel.roomCapacity.capacity)}. ${esc(hotel.roomCapacity.note)} <a href="${esc(hotel.roomCapacity.source)}">Official room record</a>.</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>These dated room-rate examples do not establish a five-person suite quote; party or room basis is unknown where not stated, and tax or mandatory-fee inclusion varies.</p></section>
           </article>`).join("\n");
 
   const rows = hotels.map((hotel) => `              <tr>
@@ -558,7 +558,7 @@ function lasVegasFamilyHotelPage() {
   const faqs = [
     ["What is the best family hotel in Las Vegas?", "There is no single best hotel for every family. Mandalay Bay fits a water-resort trip, Vdara and Marriott's Grand Chateau fit different suite needs, Tahiti Village and Cancun Resort fit off-Strip water time, and the other options answer distinct budget, older-kid, luxury, or nature-base needs."],
     ["Should a family stay on or off the Las Vegas Strip?", "Stay on the Strip when the chosen hotel and nearby activities reduce transfers enough to outweigh casino, crowd, and walking friction. Stay off the Strip when a kitchen, parking, waterslides, a quieter reset pattern, or a Red Rock day matters more than immediate resort access."],
-    ["Do these nightly ranges include resort fees and taxes?", "The ranges use public total-price examples where the source displayed taxes and mandatory fees, then widen them for date changes. Parking, larger rooms, optional purchases, and some source displays can still sit outside the example, so compare the final total for the same dates and room setup."]
+    ["Do these nightly ranges include resort fees and taxes?", "The July 22, 2026 USD per-room, per-night planning bands use public examples, then widen for date and room variation. Some recorded examples used two adults; party and exact room are unknown for others. Taxes and mandatory fees were included only where the source displayed them; other examples were before or plus tax. Parking and optional purchases can be extra. These are not current five-person suite quotes. Compare the exact room, party, dates, fees and full stay total before booking."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -569,7 +569,7 @@ function lasVegasFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Las Vegas family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; rough total per night ${hotel.priceRange}` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; July 22 USD per-room/night planning range ${hotel.priceRange}; party or room basis unknown where not stated, tax and mandatory-fee inclusion varies; not a current five-person suite quote` }))
   };
 
   const body = `    <main>
@@ -578,12 +578,12 @@ function lasVegasFamilyHotelPage() {
           <p class="eyebrow">Las Vegas family hotels</p>
           <h1>Top Family Hotels in Las Vegas: 10 Options by Trip Style</h1>
           ${contributorCredit()}
-          <p>Compare ten Las Vegas family hotels by room setup, pool value, casino or non-gaming context, approximate total nightly price, location, and themes from sampled online reviews.</p>
+          <p>Compare ten Las Vegas family hotels by room setup, pool value, casino or non-gaming context, dated per-room nightly budget, location, and themes from sampled online reviews.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
-        <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, and cancellation terms.</p>
+        <p>July 22 USD per-room, per-night planning bands synthesize public examples and widen for room and date variation. Some examples used two adults; party and exact room are unknown for others. Taxes and mandatory fees were included only where displayed, while other examples were before or plus tax; parking is separate. These are not current five-person suite quotes. Price the exact room, party, dates, fees and full stay before choosing.</p>
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
@@ -601,7 +601,7 @@ function lasVegasFamilyHotelPage() {
           </div>
           <dl class="snapshot">
             <div><dt>Five or more</dt><dd>${hotels.filter((hotel) => hotel.roomCapacity?.fivePlusStart).map((hotel) => `<a href="${esc(hotel.roomCapacity.source)}">${esc(hotel.roomCapacity.label)}</a> (${esc(hotel.roomCapacity.capacity)})`).join("; ")}. Vdara: two-bedroom luxury suite or two rooms. Compare same-date five-guest totals, not July room ranges.</dd></div>
-            <div><dt>Price format</dt><dd>Rough total/night, not a quote</dd></div>
+            <div><dt>Price format</dt><dd>July 22 USD/room/night planning bands; five-person suite total unverified</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
             <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
           </dl>
@@ -620,10 +620,10 @@ function lasVegasFamilyHotelPage() {
       <section class="band">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="review-label">Ranges synthesize public total-price examples checked July 22, 2026. Compare the final total for the same dates, occupancy, and room setup.</p>
+          <p class="review-label">July 22 USD per-room/night planning bands start from mixed public examples. Some used two adults; other party and room bases are unknown. Tax and mandatory-fee inclusion varies, and parking is separate. These are not current five-person suite quotes. Compare the exact room, party, dates and full stay total.</p>
           <div class="comparison-scroll">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Rough total/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
@@ -658,7 +658,7 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
   return pageShell({
     title: "Top Family Hotels in Las Vegas: 10 Options by Trip Style",
-    description: "Compare 10 Las Vegas family hotels by trip style, rough total nightly price, room setup, pools, casino or non-gaming context, location, and sampled online-review themes.",
+    description: "Compare 10 Las Vegas family hotels by trip style, dated per-room nightly budget, room setup, pools, casino or non-gaming context, location, and sampled online-review themes.",
     canonical: "where-to-stay/las-vegas-family-hotels.html",
     nav: [["./las-vegas-with-kids.html", "Where to stay"], ["../things-to-do/las-vegas-with-kids.html", "Things to do"], ["../family-itinerary/las-vegas-with-kids.html", "Itinerary"]],
     body

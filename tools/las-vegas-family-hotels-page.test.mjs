@@ -37,7 +37,22 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 10);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
-  assert.match(html, /Rough total\/night, not a quote/);
+  assert.match(html, /Planning USD\/room\/night/);
+  assert.match(html, /Some examples used two adults; party and exact room are unknown for others/);
+  assert.match(html, /Tax and mandatory-fee inclusion varies/);
+  assert.match(html, /These are not current five-person suite quotes/);
+  assert.ok(html.indexOf("These are not current five-person suite quotes") < html.indexOf('<table class="comparison-table hotel-comparison">'));
+  assert.equal((html.match(/<dt>Planning USD\/room\/night \(July 22\)<\/dt>/g) || []).length, 10);
+  assert.equal((html.match(/These dated room-rate examples do not establish a five-person suite quote/g) || []).length, 10);
+  const expectedRanges = ["$110-$350+", "$350-$700+", "$150-$450+", "$200-$700+", "$130-$300+", "$120-$320+", "$60-$220+", "$80-$300+", "$150-$350+", "$220-$450+"];
+  const table = html.match(/<table class="comparison-table hotel-comparison">([\s\S]*?)<\/table>/)[1];
+  assert.deepEqual([...table.matchAll(/<td>(\$[\d,]+-\$[\d,]+\+)<\/td>/g)].map((match) => match[1]), expectedRanges);
+  for (const card of html.matchAll(/<article class="detail-card hotel-card">([\s\S]*?)<\/article>/g)) {
+    const priceContext = card[1].match(/<section><h4>Price context and key check<\/h4>([\s\S]*?)<\/section>/)[1];
+    assert.match(priceContext, /July 22/);
+    assert.doesNotMatch(priceContext, /\b(recent|current) public/i);
+  }
+  assert.doesNotMatch(html, /rough total nightly price|Rough total\/night/);
   assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 22, 2026/);
   assert.match(html, /\$120-\$320\+/);
   assert.match(html, /Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request/);
@@ -64,6 +79,10 @@ test("keeps visible FAQ and schema aligned", () => {
   for (const question of faq.mainEntity.map((item) => item.name)) {
     assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
+  const priceAnswer = faq.mainEntity.find((item) => item.name.includes("resort fees and taxes")).acceptedAnswer.text;
+  assert.match(priceAnswer, /party and exact room are unknown for others/);
+  assert.ok(visible.includes(priceAnswer));
+  for (const item of itemList.itemListElement) assert.match(item.description, /July 22 USD per-room\/night planning range .*tax and mandatory-fee inclusion varies; not a current five-person suite quote/);
 });
 
 test("routes from home, the stay guide, and the activity decision flow", () => {

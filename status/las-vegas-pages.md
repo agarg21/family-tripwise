@@ -1,6 +1,8 @@
 # Las Vegas Page Status
 
-Last updated: 2026-09-17
+Last updated: 2026-09-29
+
+FT-IMP-045 / LRN-063 selected for the existing family-hotel URL: July22 price examples have mixed party/room/tax bases but the current table/schema calls all ten bands a rough total/night and some cards still say recent/current. Preserve all ten USD bands/order and the September16 capacity branch; clarify historical per-room/night orientation and exact family-of-five quote unknown. Source/task record: `docs/research/las-vegas-price-basis-2026-09-29.md`. Focused5/full259, state/local SEO and responsive proxy QA passed; Arendt cycle-one read-only PASS/no P0-P3, release pending. October11 price refresh remains separate.
 
 Sources:
 

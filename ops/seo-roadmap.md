@@ -1,8 +1,12 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-28
+Last updated: 2026-09-29
 
-FT-IMP-044 / LRN-062 selected: clarify the existing San Antonio twelve-hotel comparison's July26 per-room/night price basis. Most source examples used two adults and a standard room; tax/fee inclusion differs. Keep all twelve bands, hotel order and URL, and do not imply a family-room quote or ranking benefit. September28 source/task audit: `docs/research/san-antonio-price-basis-2026-09-28.md`. Focused5/full259, state and local SEO QA plus 1280/390/320 proxy passed; Curie cycle-two read-only PASS/no P0-P3 after cycle-one P2 correction. Verified release pending. October11 price refresh remains.
+Latest validated public-safe API evidence: `ops/gsc-snapshots/2026-09-28.json` and `ops/gsc-snapshots/2026-09-28.md`, finalized through September 26; the September 27 rolling snapshot overlaps and page/property averages are orientation only.
+
+FT-IMP-045 / LRN-063 selected: narrow source-basis correction on the existing Las Vegas ten-hotel comparison. July22 source examples mix party/room and tax/fee bases, but the page calls every band a rough total/night and cards call old examples recent/current. Preserve prices, hotel order, September16 room-capacity facts and URL; use a five-person suite-budget proxy, not GSC averages, as the decision test. Exact scope/acceptance registered in `ops/current-cycle.md`; focused5/full259, state/local SEO and 1280/390/320 proxy QA passed. Arendt cycle-one read-only PASS/no P0-P3; verified release pending. October11 price recheck remains.
+
+FT-IMP-044 / LRN-062 delivered and production-verified at `0826b064721e81c1aaafbeb86f835b3ca95d197f`, Pages `36427337317`: marker and San Antonio HTML exact bytes, production SEO31 URLs/zero errors/five prior advisories. July26 per-room/night price basis is now visible at comparison and card points; twelve bands/order unchanged. Curie cycle-two read-only PASS/no P0-P3; October11 price recheck remains. `docs/research/san-antonio-price-basis-2026-09-28.md`. No demonstrated SEO or user-behavior effect.
 
 FT-IMP-043 delivered and production-verified at `165af9474d8b2047e3e4aecd3409a1bdbc61cfbc`, Pages `36381300563`: marker and Chicago HTML exact bytes, production SEO31 URLs/zero errors/five prior advisories. July research-pack price basis and two ambiguous example dates are visible; ten USD bands/order stay unchanged. Curie cycle-two PASS_WITH_P3; October11 price recheck. `docs/research/chicago-price-basis-2026-09-28.md`. No demonstrated SEO or real-user effect.
 

@@ -2,7 +2,11 @@
 
 Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and production-verified at action commit `36034a723e6eb22a960200414e3c79a6a03b3155`, successful Pages run `36368504001`, matching marker and byte-identical Orlando HTML/two JS modules. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-28
+Last updated: 2026-09-29
+
+## LRN-063 / September 29 / FT-IMP-045
+
+Family decision: can two adults and children ages 4, 8 and 11 use the Las Vegas hotel page's approximate nightly bands to screen Vdara, Grand Chateau and Tahiti Village without mistaking a July low-room example for the exact five-person suite price? Hypothesis: `Rough total/night` plus final-price checks is sufficiently clear. Rejected by the September 29 maintained-evidence/page proxy audit. The July 22 pack mixes two-adult examples with unspecified party/room bases and tax/fee treatments, while the page uses uniform total-night language and some cards call July examples recent/current. The September 16 capacity overlay does not refresh prices. Confidence high in the source/page mismatch, medium in proxy value of clearer dated labels, unknown in parent behavior or SEO. Reusable lesson: a broad planning range can stay visible, but the unit, observation date, unknown party/room basis, mixed fees and missing exact-family quote must travel into each decision surface. Trigger: October 11 price refresh, current exact-party quote or policy conflict, or a proxy reader still confusing the band with a bookable five-person total. Evidence classes/limits and narrow implement decision: `docs/research/las-vegas-price-basis-2026-09-29.md`; GSC is orientation only.
 
 ## LRN-062 / September 28 / FT-IMP-044
 
