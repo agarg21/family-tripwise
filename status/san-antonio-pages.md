@@ -1,6 +1,12 @@
 # San Antonio Page Status
 
-Last updated: 2026-09-28
+Last updated: 2026-09-30
+
+FT-IMP-047 / LRN-065 in progress: September 30 official Wild Oak room limits and a desktop/mobile existing-page task support one conditional five-person room start. Two-bedroom is the smallest published category to check; booking, water entry and exact family-room cost remain unverified. Existing twelve hotels, bands, JW notice and canonical URL stay intact. Focused/full QA and independent cycle-two PASS_WITH_P3 are complete; reviewed release and production verification remain. No public change is claimed yet. Evidence and falsification: `docs/research/san-antonio-wild-oak-five-person-room-2026-09-30.md`.
+
+FT-IMP-047 release HOLD: Franklin read-only cycle-one FAIL/P2 because local browser disclosure calls timed out; expanded Wild Oak card not rendered-verified. Focused6/full241, state0, snapshots and local SEO passed; table text and sampled widths were seen. No commit or Pages release. Recheck only after browser bridge changes, complete desktop/mobile open-card QA, then independent P2 re-review. `ops/current-cycle.md` has exact failures and owner.
+
+FT-IMP-047 second-run QA: the browser bridge recovered, and the open Wild Oak card was checked at desktop1280/mobile390/320. The source and conditional room/category, water-access and five-person-price caveats are readable without document overflow. Franklin's first FAIL remains historical; Hooke cycle-two PASS_WITH_P3 closed the P2. Reviewed release remains; the live site is unchanged.
 
 FT-IMP-044 / LRN-062 delivered and production-verified at `0826b064721e81c1aaafbeb86f835b3ca95d197f` / Pages `36427337317`: matching marker and San Antonio HTML exact bytes, production SEO31 URLs/zero errors/five prior advisories. Dated per-room/night price basis, mostly two-adult standard-room examples, variable fee treatment and unknown family-room quote visible; twelve bands/order unchanged. Curie cycle-two PASS/no P0-P3; October11 price refresh remains. Evidence: `docs/research/san-antonio-price-basis-2026-09-28.md`.
 
@@ -95,4 +101,4 @@ Fresh read-only URL Inspection reports the all-ages, teen, stay-area, and itiner
 4. Completed: improve and release the existing teen specialist under `FT-IMP-020` at commit `e071a60` through Pages run `30236032473`.
 5. Completed: improve and release the existing itinerary as concrete one-, two-, and three-day sequencing support under `FT-IMP-021` at commit `90ed019` through Pages run `30237864556`.
 
-All five planned San Antonio pages are released and production-verified. No San Antonio page is protected by an active observation window, and no San Antonio implementation is currently active. Early GSC evidence is too sparse for causal evaluation; the next step is natural crawl and discovery observation, not a manufactured cadence action.
+At this historical five-page launch checkpoint, all five planned San Antonio pages were released and production-verified, and none was protected by an active observation window. Later FT-IMP-047 is the current narrow hotel-page implementation described at the top. Early GSC evidence is too sparse for causal evaluation; no manufactured cadence action follows from it.

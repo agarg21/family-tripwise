@@ -1015,10 +1015,12 @@ const sanAntonioFamilyHotels = [
     area: "West San Antonio / SeaWorld",
     priceRange: "$260-$500+",
     strengths: ["Official inventory includes studios and one- to three-bedroom villas", "Villas publish kitchens and in-room laundry; the resort publishes pools, slides, and a lazy river"],
-    familySetup: "This is a vacation-club property, and some promotional offers may involve a sales presentation. Studios and villas do not have the same kitchen, laundry, beds, or occupancy.",
+    familySetup: "This is a vacation-club property, and some promotional offers may involve a sales presentation. Official room categories checked September 30, 2026: studios and one-bedroom villas sleep up to four; two-bedroom villas sleep up to eight total, with a six-adult limit. For five guests, a two-bedroom villa is the smallest published category to check, not a guarantee of availability, water access, or price. Confirm the assigned kitchen, laundry, and beds.",
+    roomSource: ["Official Wild Oak room categories", "https://www.hyattvacationclub.com/resorts/wild-oak-ranch"],
     reviewSignal: "A recent family-heavy public sample often praised villa space, kitchens, pools, the lazy river, activities, and grounds. It also surfaced early restaurant closing, sales-presentation offers, firm beds, and cashless snack-purchase friction.",
     priceNote: "A public example started near $249 before taxes; the displayed range widens that into a rough planning total.",
-    parentCheck: "Confirm studio versus villa, occupancy, kitchen and laundry equipment, current water features, any offer terms, and final total.",
+    parentCheck: "For five guests, check the two-bedroom villa first. Confirm exact party and ages, bedding, availability, kitchen and laundry equipment, current water access, offer terms, and final stay total; the July 26 planning band is not a five-person quote.",
+    comparisonCheck: "Five guests: check two-bedroom villa, rate, and water access",
     mapQuery: "Hyatt Vacation Club at Wild Oak Ranch",
     anchorQuery: "SeaWorld San Antonio"
   },
@@ -1167,7 +1169,7 @@ function sanAntonioFamilyHotelPage() {
               <div><dt>Maps</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Hotel map</a> · <a href="${googleMapsUrl(hotel.anchorQuery)}">${esc(hotel.anchorQuery)}</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>${hotel.operationalNotice ? `
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}${hotel.roomSource ? ` <a href="${esc(hotel.roomSource[1])}">${esc(hotel.roomSource[0])}</a>.` : ""}</p></section>${hotel.operationalNotice ? `
             <p><strong>Before planning room rest:</strong> ${esc(hotel.operationalNotice)} ${hotel.operationalSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join("; ")}.</p>` : ""}
             <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
             <section><h4>Price context and key check</h4><p>July 26 price evidence: ${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
@@ -1179,7 +1181,7 @@ function sanAntonioFamilyHotelPage() {
                 <td>${esc(hotel.area)}</td>
                 <td>${esc(hotel.priceRange)}</td>
                 <td>${esc(hotel.anchorQuery)}</td>
-                <td>${esc(hotel.parentCheck.split(",")[0])}.</td>
+                <td>${esc(hotel.comparisonCheck || hotel.parentCheck.split(",")[0])}.</td>
               </tr>`).join("\n");
 
   const faqs = [

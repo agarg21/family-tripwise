@@ -99,6 +99,22 @@ test("keeps the dated room-rest notice scoped to JW with direct sources", () => 
   assert.equal((html.match(/Before planning room rest:/g) || []).length, 1);
 });
 
+test("gives five guests a conditional Wild Oak room start without conflating price or water access", () => {
+  const html = readFileSync(pagePath, "utf8");
+  const row = html.match(/<tr>\s*<td><a href="#san-antonio-hotel-4">[\s\S]*?<\/tr>/)?.[0];
+  const card = html.match(/<details[^>]+id="san-antonio-hotel-4">([\s\S]*?)<\/details>/)?.[1];
+
+  assert.ok(row && card, "Wild Oak comparison and card exist");
+  assert.match(row, /Five guests: check two-bedroom villa, rate, and water access/);
+  assert.match(card, /Official room categories checked September 30, 2026/);
+  assert.match(card, /studios and one-bedroom villas sleep up to four/);
+  assert.match(card, /two-bedroom villas sleep up to eight total, with a six-adult limit/);
+  assert.match(card, /smallest published category to check, not a guarantee of availability, water access, or price/);
+  assert.match(card, /hyattvacationclub\.com\/resorts\/wild-oak-ranch">Official Wild Oak room categories<\/a>/);
+  assert.match(card, /July 26 planning band is not a five-person quote/);
+  assert.equal((html.match(/Official room categories checked September 30, 2026/g) || []).length, 1);
+});
+
 test("keeps visible FAQ and schema aligned", () => {
   const html = readFileSync(pagePath, "utf8");
   const blocks = schemas(html);

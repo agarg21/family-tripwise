@@ -2,7 +2,11 @@
 
 Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and production-verified at action commit `36034a723e6eb22a960200414e3c79a6a03b3155`, successful Pages run `36368504001`, matching marker and byte-identical Orlando HTML/two JS modules. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
+
+## LRN-065 / September 30 / FT-IMP-047
+
+Family decision: which Wild Oak Ranch room category should two adults and children aged 4, 8 and 12 price before considering water access and room rest? Hypothesis: “confirm studio versus villa” on the existing page supplies a sufficient category start. Rejected by the September 30 live existing-page desktop/390px proxy task and the same-day official Hyatt room listing: studio and one-bedroom publish four-guest limits, two-bedroom publishes eight total/six adults, while the page did not identify the first five-person category. A conditional two-bedroom starting check is implemented locally but **not shipped**; the initial browser disclosure timeout was resolved by desktop/mobile open-card QA, and independent cycle-two review returned PASS_WITH_P3. Source, assigned bedding/equipment, offer/inventory, water access and exact-party final-cost checks remain separate. Confidence high in published limits and page omission, medium in proxy usefulness, unknown in actual booking, user response or SEO. Reusable lesson: an occupancy warning does not route a family until it names a category to verify; headcount is not admission or a price quote. Trigger: changed Hyatt room/offer policy, an exact-party booking contradiction, or a future proxy reader still conflating category capacity with water access or the July 26 two-adult nightly band; reviewed release and production verification are the remaining immediate gates. Source classes, dated links and limits: `docs/research/san-antonio-wild-oak-five-person-room-2026-09-30.md`. Fresh September 29 GSC through September 27 is orientation only.
 
 ## LRN-064 / September 29 / FT-RES-057
 
