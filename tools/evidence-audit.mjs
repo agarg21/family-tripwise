@@ -3,8 +3,7 @@ import { resolve, dirname, sep } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { findExpiredOperationalNotices, findYearlessOperationalNotices } from "./content-freshness.mjs";
-import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
-import { suites, sources as orlandoSources, checkedOn as orlandoChecked } from "./page-generation/orlando-suite-data.mjs";
+import { hotelAuditRecords } from "./hotel-evidence.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const DAY = 86400000;
@@ -12,14 +11,7 @@ const hash = (text) => createHash("sha256").update(text).digest("hex");
 export const easternDate = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 
 export function modelRecords() {
-  const records = [];
-  for (const r of cancunEvidence.records) {
-    records.push({ id: `cancun-${r.id}-price`, page_url: "https://familytripwise.com/where-to-stay/cancun-family-resorts.html", field: "nightly-price", verified_on: r.price?.observedOn || null, interval_days: 14, basis: `Record-specific room/party/date/fees: ${JSON.stringify(r.price || {})}`, source_urls: (r.price?.sourceIds || []).map((id) => cancunEvidence.sources[id]).filter(Boolean), evidence_path: "src/prototypes/cancun-resort-comparison/data.mjs" });
-  }
-  for (const [id, url] of Object.entries(cancunEvidence.sources)) records.push({ id: `cancun-policy-${id}`, page_url: "https://familytripwise.com/where-to-stay/cancun-family-resorts.html", field: "source-policy", verified_on: cancunEvidence.checkedOn, interval_days: 30, basis: "Conservative model source-check date; not individual claim renewal", source_urls: [url], evidence_path: "src/prototypes/cancun-resort-comparison/data.mjs" });
-  for (const r of suites) records.push({ id: `orlando-${r.id}-price`, page_url: "https://familytripwise.com/where-to-stay/orlando-family-hotels.html", field: "nightly-price", verified_on: r.priceSample?.observedOn || null, interval_days: 14, basis: `Exact room/party/date/fees: ${JSON.stringify(r.priceSample || { state: "price-research-gap" })}`, source_urls: r.priceSample ? [orlandoSources[r.priceSample.source]] : [], evidence_path: "tools/page-generation/orlando-suite-data.mjs" });
-  for (const [id, url] of Object.entries(orlandoSources)) records.push({ id: `orlando-policy-${id}`, page_url: "https://familytripwise.com/where-to-stay/orlando-family-hotels.html", field: "source-policy", verified_on: orlandoChecked, interval_days: 30, basis: "Conservative model source-check date; not individual claim renewal", source_urls: [url], evidence_path: "tools/page-generation/orlando-suite-data.mjs" });
-  return records;
+  return hotelAuditRecords();
 }
 
 export function normalizedText(html) {

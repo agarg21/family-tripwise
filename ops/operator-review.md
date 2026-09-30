@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-STD-001 shared hotel standard
+
+Cycle-two Ramanujan independent read-only PASS/noP0-P3. Verified both P2 fixes and P3 isolation; focused13/full260,state0,79snapshots,localSEO31zeroerrors/fiveprioradvisories, byte-identical saved report, sevenhotel generator parity, privacy/scope/whitespace. Exact15-path tools/docs-only push next; no public page or price change. Legacy mapping and weekly repeat validation remain explicitly unfinished, not foundation blockers.
+
+Ramanujan (`01a0f42a-3b6a-7c30-b482-7751f79bdeed`) cycle-one FAIL: P2 sensitive URL fragment retention and P2 unexpected fields escaping validation; P3 source-object aliasing. Fixed with fragment rejection, exact field-name validation and defensive source copies. Added adapter/report regressions, no current secret exposure or public change. Cycle-two read-only review required before commit.
+
+Fifteen exact paths registered before edits; six unrelated dirty paths excluded, five prior mechanical backfills preserved. Common read-only schema/adapters, deterministic quality report, source-audit reuse and page-building/maintenance workflow implemented without public-byte changes. Focused11/full258,state0,79public-safe snapshots,localSEO31zeroerrors/fiveprioradvisories and whitespace pass. Isolated generator test confirms all seven hotel pages byte-identical. Independent review pending; no commit/push yet. Remaining per-claim mapping, structured Cancun price context, missing price research and non-hotel contracts are explicit.
+
 ## 2026-09-30 - FT-ACC-001 collection and expansion acceleration
+
+Mechanical release result: exact19reviewed paths committed/pushed as `b720b53088ffe4ee638e35c9ee97fb20087e2dab` after fresh fetch/no divergence and complete sole-unpushed-range verification. HEAD/origin0/0; six unrelated dirty paths preserved; no site bytes changed, Pages wait not required. This immutable result is local for the next substantive transaction, no standalone backfill commit.
 
 Cycle-two Pascal independent read-only PASS/noP0-P3. Reproduced denial preservation across limited runs, deferred successful evidence dates, cumulative/headroom and batch controls, script-only price differences and baseline compatibility, metric-date qualification, focused11/full252,state0,79snapshots,localSEO31zeroerrors/fiveadvisories,scope/privacy/whitespace and no-site-diff. Partial mapping/exact-party adapters and full-source repeat stability remain explicit; conservative budget reservations cannot guarantee provider charges. Final19-path reviewed tools/docs-only push next; no Pages wait.
 

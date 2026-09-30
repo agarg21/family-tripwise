@@ -20,7 +20,18 @@
   ],
   "items": [
     {
-      "id": "FT-ACC-001", "title": "Accelerate evidence refresh and rank current expansion jobs", "kind": "improvement", "status": "reviewed", "selected_on": "2026-09-30",
+      "id": "FT-STD-001", "title": "Standardize hotel page evidence and maintenance gates", "kind": "improvement", "status": "completed", "selected_on": "2026-09-30", "completed_on": "2026-09-30", "target_urls": [],
+      "target_paths": ["tools/hotel-evidence.mjs", "tools/hotel-evidence.test.mjs", "tools/page-quality.mjs", "tools/page-quality.test.mjs", "tools/page-generation/family-hotel-pages.mjs", "tools/evidence-audit.mjs", "ops/page-quality/2026-09-30.json", "docs/plan/page-quality-standard.md", "docs/plan/hotel-research-engine.md", "README.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "backlog/product-learning-ledger.md"],
+      "evidence": "Direct-user standardize-first instruction; legacy inline and Cancun/Orlando hotel models use incompatible field/price envelopes; September30 audit has aggregate legacy price mapping.",
+      "acceptance_criteria": ["Validated common contract across seven hotel comparisons without duplicate price entry", "Field age/conflict/source/price-basis queue; unmapped facts explicit", "Source-model/generated-site parity, native QA and independent read-only PASS/PASS_WITH_P3"],
+      "measurement_plan": "Record/field coverage, actionable gaps and deterministic runtime, not publishing or ranking volume.",
+      "production_invariant": "No site bytes, URLs, SEO or observation-window changes; no paid/external call; six unrelated dirty paths excluded.",
+      "decision": "IMPLEMENT shared hotel standard and report first; other page-type migrations follow separately.", "release_state": "review-clean-tools-docs-ready",
+      "review_outcome": "PASS", "review_cycles": 2, "reviewer_agent_ids": ["01a0f42a-3b6a-7c30-b482-7751f79bdeed"],
+      "qa": "Focused13/full260,state0,79snapshot validations,localSEO31zeroerrors/fiveprioradvisories, saved-report parity/model isolation/sevenhotel regeneration parity/whitespace pass"
+    },
+    {
+      "id": "FT-ACC-001", "title": "Accelerate evidence refresh and rank current expansion jobs", "kind": "improvement", "status": "completed", "selected_on": "2026-09-30", "completed_on": "2026-09-30",
       "target_urls": [],
       "target_paths": ["tools/evidence-audit.mjs", "tools/evidence-audit.test.mjs", "ops/evidence-watch.json", "ops/evidence-audits/2026-09-30.json", "docs/plan/weekly-evidence-audit.md", "tools/seo-opportunity-pull.mjs", "tools/seo-opportunity-pull.test.mjs", "docs/research/family-expansion-keywords-2026-09-30.json", "docs/research/family-expansion-2026-09-30.json", "docs/research/family-expansion-2026-09-30.md", "README.md", "docs/plan/hotel-research-engine.md", "ops/operator.json", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "backlog/product-learning-ledger.md", "status/san-antonio-pages.md"],
       "evidence": "September30 direct-user request; all31-page/332-source104-second baseline; shared Cancun/Orlando field records; authenticated US72-phrase/six-SERP screen atUSD0.03164 with one40101 failure; numeric-volume rows datedSeptember12-16/historythroughAugust, null-volume rows have mixed older/September27dates and incomplete history; current official Disney2027/Universal and representative competitor pages. Fresh September30 GSC throughSeptember28 is orientation only.",
@@ -28,7 +39,9 @@
       "measurement_plan": "All-page/source coverage, runtime, due/unknown fields and reviewable deltas; query estimates and hypotheses, not ranking forecasts.",
       "production_invariant": "No site/publicURL/title/schema/sitemap/price/observation-window change; no new automation, analytics, indexing, outreach, account or unbudgeted paid call; six unrelated dirty paths excluded.",
       "decision": "IMPLEMENT collector now; CANDIDATE London exact-room/price research next, with weekly baseline validation and prioritized expansion backlog. No public launch from this screen.",
-      "release_state": "review-clean-tools-docs-push-pending",
+      "release_state": "tools-docs-only-pushed",
+      "release_commit": "b720b53088ffe4ee638e35c9ee97fb20087e2dab",
+      "release_verification": "Successful direct-main push after fresh fetch/no divergence and complete sole-unpushed-range inspection;19reviewed paths only;HEAD/origin0/0;no site diff or Pages wait; six unrelated dirty paths preserved",
       "review_outcome": "PASS",
       "review_cycles": 2,
       "reviewer_agent_ids": ["01a0f40e-5d8c-7203-ba5b-f59582c22665"],

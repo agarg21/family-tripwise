@@ -1,0 +1,52 @@
+# Page Building And Maintenance Standard
+
+Updated: 2026-09-30 / FT-STD-001
+
+## One Delivery Pipeline
+
+Use the existing generator and maintained evidence, not a separate prose pipeline:
+
+1. Define one family decision, intended query family, existing/new URL fit, and named task with required outputs. New URLs still need current SERP overlap, demand, maintainability and authorized scope.
+2. Collect source-dated records before drafting. Separate official facts, booking observations, review/community signals, editorial estimates and human experience. Retain conflicts and unknowns.
+3. Validate the record contract and inspect its quality queue. Resolve the fields needed for the task. A preliminary screen may keep explicit unknowns, but cannot make firm suitability or booking assurances.
+4. Build with the existing page-type generator. One maintained value feeds comparison, cards, downloads and structured data; do not retype prices into multiple outputs.
+5. Walk through the named task on desktop/mobile: answerability, room/age/price basis, evidence traceability, accessibility, controls and layout. This is proxy QA, not user testing.
+6. Run focused/full tests, operator-state, public-safe snapshot and SEO QA; obtain independent read-only PASS/PASS_WITH_P3 and complete the authorized verified release.
+7. Refresh from field changes and due dates. Retrieval or an unchanged hash never renews factual dates. Preserve observation windows except for verified defects.
+
+## Implemented Hotel Contract
+
+`tools/hotel-evidence.mjs` provides schema version1 and adapters for seven live hotel comparisons: 65 hotel/category records and 390 field envelopes. It reads the legacy generator catalog and Cancun/Orlando source models, not a second manually maintained price database. Catalog copies do not mutate generator arrays.
+
+Each record has an adapter ID, hotel, canonical URL, model path and mapping coverage. Initial fields: room, price, fees, transport, activities and review signal. Every field carries value, known/unknown/disputed/unmapped state, evidence class, observation date, source URLs, repository evidence path, date basis and limits. Shared model dates are labeled `model-baseline`, not individual claim verification. `unmapped` means existing evidence needs normalization, not that it is absent or wrong.
+
+Unknown field names are rejected under this schema version. Source URLs must be HTTPS without embedded credentials, sensitive query keys or fragments; use a clean public source URL and describe any section reference in the evidence record. Adapters return defensive copies, not mutable references to maintained source objects.
+
+Prices retain currency, room/night unit, amount or original display band, kind, room/party/stay basis, fees and original source context. Missing basis stays null. Legacy editorial bands retain exact displays and compilation dates. Cancun prose basis remains unchanged and is flagged for structured mapping; two-adult starting samples are not relabeled family prices. Orlando's dated stay total produces a labeled derived nightly equivalent, not a typical range. Child ages remain unknown where not originally entered. Adapters do not replace existing public renderers or change public claims.
+
+New evidence must use the same envelope with individual claim dates and explicit sources. Structure room/party/stay fields with exact ages or stated unknowns; claiming complete structured basis requires all three. Missing fees are not zero. Firm claims remain subject to the separate human evidence gate. Schema validity is not evidence sufficiency or publishing authority.
+
+## Reusable Checks
+
+```bash
+node tools/page-quality.mjs
+node tools/page-quality.mjs --date 2026-09-30 --output ops/page-quality/2026-09-30.json
+node tools/evidence-audit.mjs
+node --test tools/hotel-evidence.test.mjs tools/page-quality.test.mjs tools/evidence-audit.test.mjs
+```
+
+The offline command validates schema, dates, prices, source URLs, sitemap membership and evidence paths, then groups review tasks by field/page. Invalid records fail; gaps create a queue, never a false PASS or automatic edit. Conflicts precede budget fields and other mapping work. No browser, paid API or LLM call is needed. The source audit consumes the same hotel adapter alongside its explicit registry; collection stays allowlisted, bounded and denial-preserving.
+
+Initial September30 result: seven pages/65 records, 56 historical legacy price records due, three exact-room price gaps, 61 price records needing structured basis, three mapped conflicts (two Cancun room capacities and Orlando resort fee). Most fields have mapping/provenance gaps. Queue counts are not counts of wrong public facts.
+
+## Weekly Operator Loop
+
+Use the existing operator, not another scheduler. At the seven-day due gate, run offline quality and bounded source comparison against the previous baseline, then select the highest-priority evidence-qualified change. Inspect changed/due sources and affected records plus noise controls. Scraped/JSON-LD prices remain extraction candidates until room, party, dates and fees match. Denied sources remain narrow dependencies; do not bypass restrictions. Review reconciled changes before public updates; save source date, old/new supported values, conflict outcome and next check.
+
+FT-MAINT-009 still owns full-source repeat/noise validation before stable weekly rollout. This action does not claim that rollout or full claim mapping is complete.
+
+## Next Migrations
+
+Normalize one legacy comparison's per-property sources, claim dates and price basis first; extend that proven pattern to the other four. Structure Cancun price basis in its source model and adapt public table/export together in a separate reviewed action. Research the three missing exact-room prices through permitted comparable observations; retain historical ranges meanwhile.
+
+Stay-area, activities and itinerary pages use this delivery pipeline but require separate domain contracts for base/transport tradeoffs; attraction age/access/calendar/ticket cost; and day duration/rest/route/weather alternatives. The source audit inventories all31canonical pages, but these non-hotel field contracts are not implemented here.

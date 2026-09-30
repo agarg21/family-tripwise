@@ -1599,6 +1599,13 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
 }
 
   return Object.freeze({
+    hotelCatalog: structuredClone({
+      "san-diego": sanDiegoFamilyHotels,
+      "las-vegas": lasVegasFamilyHotels,
+      "chicago": chicagoFamilyHotels,
+      "new-york-city": newYorkCityFamilyHotels,
+      "san-antonio": sanAntonioFamilyHotels
+    }),
     sanDiegoFamilyHotelPage,
     lasVegasFamilyHotelPage,
     lasVegasHotelComparisonCsv,

@@ -104,6 +104,8 @@ The command remains the stable entry point. Its page data and render/update logi
 
 ## Source Of Truth
 
+Hotel building and maintenance share a versioned adapter and offline quality queue. Run `node tools/page-quality.mjs`, or add `--date YYYY-MM-DD --output ops/page-quality/YYYY-MM-DD.json` for a saved deterministic report. It reads existing models, preserves prices and flags evidence/basis gaps without editing pages. Workflow and remaining migrations: `docs/plan/page-quality-standard.md`. The all-page source audit reuses these records; neither tool grants publication approval.
+
 - `ops/seo-roadmap.json`: machine-readable action and release state.
 - `ops/current-cycle.md`: concise current operating checkpoint.
 - `backlog/community-answer-drafts.json`: validated community-answer drafts and user review decisions; posting is always disabled.

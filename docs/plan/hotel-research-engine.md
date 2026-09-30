@@ -1,5 +1,7 @@
 # Family Hotel Research Engine
 
+September30 FT-STD-001: a versioned hotel adapter and offline field-quality queue cover seven hotel comparisons without re-entering prices. Run `node tools/page-quality.mjs` before selecting hotel refresh work. Building/refresh procedure and remaining migrations: `docs/plan/page-quality-standard.md`. This is normalization coverage, not proof that all claims are mapped or current; collection never automatically renews observations.
+
 State: operator policy; reusable all-page source-audit tooling implemented, price adapters incomplete
 
 Last updated: 2026-09-30

@@ -2,6 +2,14 @@
 
 Last updated: 2026-09-30
 
+FT-STD-001 final gate PASS: Ramanujan cycle-two/noP0-P3,focused13/full260,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories and model/report/public-output parity. Exact15-path tools/docs-only push next; no public deployment. Legacy mapping and weekly stability remain the next standardization gates. Earlier local/FAIL checkpoints are chronology.
+
+FT-STD-001 implemented locally: seven hotel pages/65records share validated adapters and field review queue without price re-entry or changed public output. Full258tests/focused11,state0,79snapshots/localSEO31zeroerrors/fiveprioradvisories; independent review next. Next eligible work: FT-MAINT-009one legacy hotel per-field mapping and source-diff stability, then use that pattern for further cities. Expansion research remains queued; this supersedes the earlier London-next sequence, not its evidence gates.
+
+Current direct-user priority: FT-STD-001 standardizes hotel evidence and maintenance before more city research. Fifteen paths, acceptance, measurement and unchanged-public-site invariants registered in JSON/current-cycle before edits. Shared records and quality queue first; non-hotel migrations remain later work. Independent review and QA required before tools/docs-only push.
+
+FT-ACC-001 tools/docs-only delivered: reviewed19-path `b720b53088ffe4ee638e35c9ee97fb20087e2dab` pushed after fresh fetch/no divergence/fullsole-range check, HEAD/origin0/0. Pascal cycle-two PASS/full252; no public-site change or Pages wait. Next FT-RES-058London feasibility and FT-MAINT-009weekly rollout; source adapters/full-source repeat stability remain scoped work, not a project-wide blocker. Six unrelated paths preserved. Earlier pending checkpoints below are historical; mechanical completion backfill remains local for the next transaction.
+
 FT-ACC-001 review-clean: Pascal cycle-two PASS/noP0-P3; focused11/full252,state0,79snapshots,localSEO31zeroerrors/fiveexistingadvisories,19exactpaths/sixexclusions and no public-file diff independently confirmed. Tools/docs-only push is the remaining release gate; earlier local-review checkpoints below are chronology. Weekly rollout still requires full-source repeat stability; no exact-party adapter or public-page freshness renewal claimed.
 
 FT-ACC-001 current decision: implement the reusable all-page source/field audit and current expansion research backlog; local QA/independent review gates remain before tools/docs-only push.31pages/332sources collected in104seconds;211retrieved and121unavailable/challenged/unsupported, five legacy price sets due. All visible nightly bands and31publicURLs remain unchanged. Current evidence and exact next gates: `docs/plan/weekly-evidence-audit.md`, `docs/research/family-expansion-2026-09-30.md`.
