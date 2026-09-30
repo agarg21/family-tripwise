@@ -1,6 +1,18 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-ACC-001 collection and expansion acceleration
+
+Cycle-two Pascal independent read-only PASS/noP0-P3. Reproduced denial preservation across limited runs, deferred successful evidence dates, cumulative/headroom and batch controls, script-only price differences and baseline compatibility, metric-date qualification, focused11/full252,state0,79snapshots,localSEO31zeroerrors/fiveadvisories,scope/privacy/whitespace and no-site-diff. Partial mapping/exact-party adapters and full-source repeat stability remain explicit; conservative budget reservations cannot guarantee provider charges. Final19-path reviewed tools/docs-only push next; no Pages wait.
+
+Pascal (`01a0f40e-5d8c-7203-ba5b-f59582c22665`) first-cycle independent read-only FAIL: twoP2s (limited-run denial history loss; cumulative budget runtime enforcement) and oneP3 (null-volume metric-date variability omitted from summary). Repaired denial carry-forward before limit handling with multi-run controls; added cumulative headroom reservation before every API request and actual-cost reconciliation against both ceilings, with two no-network budget regressions. Qualified metric dates in report/ledger/roadmap. The actual September30paid batch remained within both ceilings. Cycle-two read-only re-review remains; no commit/push.
+
+Operator QA: focused9/full250, operator-state0,79public-safe snapshot validations, localSEO31URLs/zeroerrors/fiveprioradvisories, whitespace and no public-file diff pass. Two successful source repeat checks are reported in the collection plan; paid API partial failure is preserved with cost/status and no retry. Independent review pending.
+
+Nineteen exact paths registered before edits, including six mechanical prior-release backfills; six unrelated Cancun/Orlando dirty paths excluded. Collector, shared-model field adapters, bounded protected-auth research runner, public-safe baseline and current10-item backlog implemented. No public page change. Focused/full native QA and independent read-only review are pending; no commit/push yet. Current result/limitations: `docs/plan/weekly-evidence-audit.md`, `docs/research/family-expansion-2026-09-30.md`.
+
 ## 2026-09-30 - FT-IMP-047 Wild Oak five-person category
+
+Mechanical release result: reviewed ten-path commit `8bbc973bda8195fcca51010f21335bb86edd630a` pushed after fresh fetch/no divergence and complete outgoing-range inspection. Pages `36721259893` succeeded; marker matched, San Antonio HTML HTTP200/exact local SHA-256, production SEO31 URLs/zero errors/five pre-existing advisories. Six unrelated dirty paths excluded. No user-behavior or SEO result claimed; this completion backfill remains local for the next transaction.
 
 Franklin (`01a0f0bb-c2db-76a2-8359-1712efb4e37a`) cycle-one independent read-only FAIL: one P2 missing rendered expanded-card QA after local browser/CDP disclosure interaction deadlines. No P0/P1 or room-evidence/content defect; official Hyatt room limits support the conditional two-bedroom wording and separate rate/access checks. Focused6/full241, state0, 78 snapshots, local SEO31URLs/zero errors/five prior advisories and diff check passed. Local preview HTTP200, table text and sampled 1280/390/320 surfaces were observed; expanded card was not. No commit/push/release. Next reviewer cycle is permitted only after the card opens in local desktop/mobile preview and its text, source, caveats and layout are verified. Six unrelated dirty paths are excluded.
 

@@ -1,8 +1,10 @@
 # Family Hotel Research Engine
 
-State: planning and operator policy
+State: operator policy; reusable all-page source-audit tooling implemented, price adapters incomplete
 
-Last updated: 2026-09-27
+Last updated: 2026-09-30
+
+September30 collection layer: `tools/evidence-audit.mjs` inventories every canonical page and deduplicates allowlisted source fetches. Cancun/Orlando observation records are read directly from shared data modules; legacy city price packs have explicitly dated aggregate watches. Hash changes, structured-price candidates and HTTP success are not renewed facts. Weekly due state and agent reconciliation: `docs/plan/weekly-evidence-audit.md`. Dynamic booking prices still need source-specific, permitted room/party/date/fee adapters or reviewed public booking checks; never promote a zero-priced structured placeholder into a hotel rate.
 
 ## Purpose
 

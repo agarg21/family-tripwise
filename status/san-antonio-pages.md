@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-30
 
+FT-IMP-047 delivered and production-verified at `8bbc973bda8195fcca51010f21335bb86edd630a` / Pages `36721259893`: matching marker, San Antonio hotel HTML exact bytes, production SEO31 URLs/zero errors/five prior advisories. The five-person Wild Oak two-bedroom starting check is conditional; current inventory, water access, bedding and exact family price remain unverified. Hooke cycle-two PASS_WITH_P3 closed the rendered-card P2; 12 hotels/order/bands and JW notice remain. October11 price review or changed official room policy is next; earlier in-progress lines below are history.
+
 FT-IMP-047 / LRN-065 in progress: September 30 official Wild Oak room limits and a desktop/mobile existing-page task support one conditional five-person room start. Two-bedroom is the smallest published category to check; booking, water entry and exact family-room cost remain unverified. Existing twelve hotels, bands, JW notice and canonical URL stay intact. Focused/full QA and independent cycle-two PASS_WITH_P3 are complete; reviewed release and production verification remain. No public change is claimed yet. Evidence and falsification: `docs/research/san-antonio-wild-oak-five-person-room-2026-09-30.md`.
 
 FT-IMP-047 release HOLD: Franklin read-only cycle-one FAIL/P2 because local browser disclosure calls timed out; expanded Wild Oak card not rendered-verified. Focused6/full241, state0, snapshots and local SEO passed; table text and sampled widths were seen. No commit or Pages release. Recheck only after browser bridge changes, complete desktop/mobile open-card QA, then independent P2 re-review. `ops/current-cycle.md` has exact failures and owner.

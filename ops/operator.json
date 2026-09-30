@@ -16,6 +16,21 @@
   },
   "maximum_substantive_actions_per_run": 1,
   "maximum_substantive_actions_per_day": 2,
+  "weekly_evidence_audit": {
+    "owner": "existing-independent-operator",
+    "timezone": "America/New_York",
+    "interval_days": 7,
+    "state": "baseline-ready-second-run-validation-needed",
+    "last_collected_on": "2026-09-30",
+    "next_due_on": "2026-10-07",
+    "baseline": "ops/evidence-audits/2026-09-30.json",
+    "tool": "tools/evidence-audit.mjs",
+    "policy": "docs/plan/weekly-evidence-audit.md",
+    "new_scheduler": false,
+    "automatic_fact_renewal": false,
+    "stable_gate": "Independent-reviewed second-run noise, model parity and denial carry-forward validation before weekly rollout",
+    "paid_research_included": false
+  },
   "daily_learning": {
     "timezone": "America/New_York",
     "minimum_units_per_day": 1,

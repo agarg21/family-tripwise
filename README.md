@@ -11,9 +11,9 @@ The strategy is to build destination-specific family travel pages and interactiv
 - Improve existing pages before adding URLs unless the current SERP clearly requires a separate page type.
 - Build research authority through a maintained evidence layer: official facts, source-dated review patterns, claim-level uncertainty, and visible synthesis that helps families decide faster.
 - Differentiate through current source-backed research, clean comparisons, family-constraint routing, useful maps, and compact decision support. AI accelerates collection and synthesis; it does not manufacture experience.
-- Run the temporary independent Master-thread autopilot twice daily through September 12, 2026. The cadence does not create a content quota; every substantive action still needs evidence, exact scope, native QA, independent review, and release verification.
+- Run the renewed independent Master-thread autopilot through November 13, 2026 at 17:00 America/New_York. Cadence is not a content quota; evidence, native QA, independent review and release gates still apply.
 
-San Diego, Las Vegas, Chicago, New York City, and San Antonio have completed five-role cluster passes. The August 2026 operating theme is depth before expansion: San Diego is the primary ranking-improvement city, Las Vegas and Chicago are secondary existing-page candidates, and New York City and San Antonio remain maintained observation cohorts. Orlando research is preserved, but publication is held during this cycle unless the user explicitly changes direction.
+Seven destinations now have public guides, including Cancun and Orlando lodging comparisons. Existing-page maintenance and evidence-qualified expansion proceed together; the current ranked research queue is in `ops/seo-roadmap.json`, with the September30 search screen in `docs/research/family-expansion-2026-09-30.md`.
 
 ## Starter Docs
 
@@ -59,6 +59,26 @@ node tools/community-answer-review.mjs
 Open the printed `127.0.0.1` URL to review repository-backed forum and Reddit answer drafts. You can edit wording, leave notes, and mark a draft approved, revise, rejected, or pending. The tool writes only to `backlog/community-answer-drafts.json`; approval does not post the answer or authorize a later external write. This JSON file is committed to the public repository, so never enter usernames, personal data, private contact details, or private reviewer notes.
 
 ## Local QA
+
+### Evidence Collection
+
+Inventory all sitemap pages without network access:
+
+```bash
+node tools/evidence-audit.mjs
+```
+
+Collect a bounded source baseline or weekly comparison:
+
+```bash
+node tools/evidence-audit.mjs --collect --limit 500 --previous ops/evidence-audits/2026-09-30.json --output ops/evidence-audits/YYYY-MM-DD.json
+```
+
+This saves hashes, statuses, dated field gaps and unverified structured-price candidates, not source bodies. It never edits page facts or renews their dates. Blocked sources stay unknown; the agent reviews only relevant changes. Weekly rollout and price-adapter limits: `docs/plan/weekly-evidence-audit.md`.
+
+`node tools/seo-opportunity-pull.mjs` is a no-charge research preflight. `--execute` makes the explicitly budgeted API calls, using protected local authentication. It refuses an existing output to prevent accidental billed repeats; never delete that guard or rerun a partially billed batch without reconciliation. Change the dated batch/output explicitly for a new authorized research action.
+
+### Release Checks
 
 Run the full repository tests, operating-state consistency check, and static SEO QA before release:
 
