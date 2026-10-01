@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { activityEvidence, validateActivityEvidence } from "./activity-evidence.mjs";
+import { ACTIVITY_FIELDS, activityEvidence, vegasActivityEvidence, validateActivityEvidence } from "./activity-evidence.mjs";
 import { activityPages } from "./page-generation/upgrade-page-data.mjs";
 import { ageState, easternDate, requireNewOutput } from "./evidence-audit.mjs";
 import { validDate } from "./hotel-evidence.mjs";
@@ -24,10 +24,14 @@ export function activityQualityReport(records, { today = easternDate(), expected
       reasons, freshness, retained_on: field.retained_on, evidence_class: field.evidence_class, source_urls: [...field.source_urls], retained_value: structuredClone(field.value), limitation: field.limitation,
       next_step: name === "ticket_cost" ? "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile." : "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change." };
   })).sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
-  return { schema_version: 1, as_of: today, scope: "activity-logistics-pilot-only", automatic_fact_renewal: false, automatic_publication: false,
+  const expanded = records.some(record => record.schema_version === 2);
+  const missing = records.flatMap(record => ACTIVITY_FIELDS.filter(field => !(field in record.fields)).map(field => ({id:record.id,page_url:record.page_url,field,reason:"unmapped-no-retained-field-evidence"})));
+  const report = { schema_version: 1, as_of: today, scope: expanded ? "activity-evidence-partial-models" : "activity-logistics-pilot-only", automatic_fact_renewal: false, automatic_publication: false,
     summary: { mapped_pages: pages.length, attractions: records.length, fields: tasks.length, unpriced_exact_visit_budgets: records.length, unmapped_activity_pages: expectedPages.length - pages.length },
     mapped_pages: pages, unmapped_pages: expectedPages.filter((page) => !pages.includes(page)).sort(), tasks,
-    limitations: ["Retained source-model dates are not individual official-fact verification dates.", "Qualitative cost and duration/weather estimates remain interpretations; unknown numeric budget is not zero.", "Access/transport prompts do not establish current routes, stroller practicality, availability or safety.", "Only logisticsIndex entries are mapped; other activity pages, age routing, stay areas and itineraries remain separate contracts.", "Retrieval/hash success never renews these dates; native validity is not publishing authority."] };
+    limitations: ["Retained source-model dates are not individual official-fact verification dates.", "Qualitative cost and duration/weather estimates remain interpretations; unknown numeric budget is not zero.", "Access/transport prompts do not establish current routes, stroller practicality, availability or safety.", expanded ? "Only SanDiego logistics and LasVegas retained cost-friction records are mapped; Vegas weather/transport and other activity/age/stay/itinerary domains remain explicit gaps." : "Only logisticsIndex entries are mapped; other activity pages, age routing, stay areas and itineraries remain separate contracts.", "Retrieval/hash success never renews these dates; native validity is not publishing authority."] };
+  if (expanded) { report.summary.unmapped_fields = missing.length; report.unmapped_fields = missing; }
+  return report;
 }
 
 export async function validateActivityPaths(records, root = ROOT) {
@@ -42,14 +46,15 @@ export async function validateActivityPaths(records, root = ROOT) {
 
 async function main() {
   const args = process.argv.slice(2);
-  let today = easternDate(), output;
+  let today = easternDate(), output, includeVegas = false;
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--date" && args[i + 1] && !args[i + 1].startsWith("--")) today = args[++i];
     else if (args[i] === "--output" && args[i + 1] && !args[i + 1].startsWith("--") && !output) output = args[++i];
+    else if (args[i] === "--include-vegas" && !includeVegas) includeVegas = true;
     else throw new Error(`Unknown or incomplete activity option: ${args[i]}`);
   }
   if (output) await requireNewOutput(resolve(output));
-  const records = activityEvidence();
+  const records = [...activityEvidence(), ...(includeVegas ? vegasActivityEvidence() : [])];
   await validateActivityPaths(records);
   const report = activityQualityReport(records, { today });
   if (output) { const path = resolve(output); await mkdir(dirname(path), { recursive: true }); await writeFile(path, JSON.stringify(report, null, 2) + "\n", { flag: "wx" }); }

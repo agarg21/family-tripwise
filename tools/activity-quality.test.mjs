@@ -5,10 +5,30 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { activityEvidence } from "./activity-evidence.mjs";
+import { activityEvidence, vegasActivityEvidence } from "./activity-evidence.mjs";
 import { activityQualityReport, validateActivityPaths } from "./activity-quality.mjs";
 
 const cli = fileURLToPath(new URL("./activity-quality.mjs", import.meta.url));
+
+test("opt-in Vegas quality queue retains cost strings and exposes missing fields without touching old reports", async () => {
+  const records=[...activityEvidence(),...vegasActivityEvidence()], before=JSON.stringify(records);
+  const report=activityQualityReport(records,{today:"2026-10-01"});
+  assert.deepEqual(report.summary,{mapped_pages:2,attractions:24,fields:120,unpriced_exact_visit_budgets:24,unmapped_activity_pages:4,unmapped_fields:24});
+  assert.ok(report.unmapped_fields.every(r=>["weather","transport_check"].includes(r.field)));
+  const neon=report.tasks.find(t=>t.name==="Neon Museum"&&t.field==="ticket_cost");
+  assert.equal(neon.retained_value.planning_label,"VARIABLE / VERIFY");
+  assert.equal(neon.retained_value.amount,null);
+  assert.equal(neon.retained_on,"2026-08-03");
+  assert.match(neon.retained_value.cost_basis,/age 6/);
+  assert.ok(neon.reasons.includes("retained-source-model-review-due"));
+  assert.equal(JSON.stringify(records),before);
+  await validateActivityPaths(records);
+  const cliResult=JSON.parse(execFileSync(process.execPath,[cli,"--date","2026-10-01","--include-vegas"],{encoding:"utf8"}));
+  for(const [k,v]of Object.entries(report.summary))assert.equal(cliResult[k],v);
+  assert.throws(()=>execFileSync(process.execPath,[cli,"--include-vegas","--include-vegas"],{stdio:"pipe"}));
+  assert.deepEqual(report,JSON.parse(await readFile(new URL("../ops/page-quality/2026-10-01-las-vegas-activities.json",import.meta.url),"utf8")));
+  assert.equal(activityQualityReport(activityEvidence(),{today:"2026-09-30"}).scope,"activity-logistics-pilot-only");
+});
 
 test("activity queue is reproducible with explicit partial coverage and no automatic facts/publication", async () => {
   const records = activityEvidence(), before = JSON.stringify(records);

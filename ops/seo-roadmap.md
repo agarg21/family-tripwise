@@ -2,6 +2,8 @@
 
 Last updated: 2026-10-01
 
+Current FT-STD-005: deliver missing LasVegas retained admission/cost-friction adapter into opt-in weekly quality checks. Preserve source-model dates and every original admission/fee/age/product/unknown string, not current exact-family quotes; weather/transport remain explicit field gaps. Exact13paths/native/different read-only PASS before tools/docs-only push; public/model/Chicago/windows unchanged. Boston074completed; no new research-report substitute for this qualified maintenance gap.
+
 Current FT-RES-074: same-task Boston ParkPlaza public rate/35USDmandatory-fee/breakfast age-cap comparison, not another broad report. Exact8paths registered; original capacity pack/fifth-bed gate/all public pages unchanged. Three public plans require schema/task/CSV/native/different read-only PASS before tools/docs-only push. FT-RES-073 reviewed capacity/overlap research pushed4314478; Boston full-corpus/rest/review/controlled-overlap/publication gates remain.
 
 Current FT-RES-073: bounded Boston capacity/overlap follow-through under FT-RES-061. Six official audits/two comparison audits, three conditional reusable categories; no exact quote or complete review/rest/parking-fee layer. Capacity-only inventory already covered by current specialist; next exact ParkPlaza family-price/fifth-bed task and Copley modal, not another broad keyword report. Exact8paths registered/full-focused/different read-only review before docs/tools-only push; no Boston launch. FT-IMP-051 completed043c7c5tools/docs-only; Chicago unchanged.

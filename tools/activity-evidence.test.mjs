@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { activityPages } from "./page-generation/upgrade-page-data.mjs";
-import { activityEvidence, validateActivityEvidence } from "./activity-evidence.mjs";
+import { activityEvidence, vegasActivityEvidence, validateActivityEvidence } from "./activity-evidence.mjs";
 
 test("twelve retained logistics records preserve every value, source and model date", () => {
   const before = JSON.stringify(activityPages);
@@ -62,4 +62,55 @@ test("only maintained logistics entries are mapped, never generic copied city pl
   changed["things-to-do/san-diego-with-kids.html"].logisticsIndex[0].unknowns = "Different unresolved task";
   assert.equal(activityEvidence(changed)[0].unknowns, "Different unresolved task");
   assert.notEqual(activityEvidence()[0].unknowns, "Different unresolved task");
+});
+
+test("Vegas adapter retains every original cost, fee, age, source, confidence and date without parsing prices", () => {
+  const before = JSON.stringify(activityPages);
+  const page = activityPages["things-to-do/las-vegas-with-kids.html"];
+  const records = vegasActivityEvidence();
+  assert.equal(records.length, 12);
+  assert.deepEqual(validateActivityEvidence([...activityEvidence(), ...records]), []);
+  for (const [i,r] of records.entries()) {
+    const old = page.costFrictionIndex[i], cost = r.fields.ticket_cost.value;
+    assert.equal(r.name, old.name);
+    assert.equal(r.source_note, old.evidenceClass);
+    assert.equal(r.unknowns, old.unknowns);
+    assert.deepEqual(r.fields.venue.value, {area:old.zone,setting:old.setting});
+    assert.equal(r.fields.duration.value, old.timeEstimate);
+    assert.equal(r.fields.access_check.value, old.currentCheck);
+    assert.equal(cost.planning_label, old.familyAdmissionEstimate);
+    assert.equal(cost.cost_basis, old.costBasis);
+    assert.equal(cost.inclusions, old.inclusions);
+    assert.equal(cost.exclusions, old.exclusions);
+    assert.equal(cost.retained_evidence_class, old.evidenceClass);
+    assert.equal(cost.retained_confidence, old.confidence);
+    assert.equal(cost.party_basis, page.comparisonNote);
+    assert.ok([cost.amount,cost.currency,cost.unit,cost.visit_basis].every(v=>v===null));
+    assert.equal(r.fields.ticket_cost.evidence_class, "MIXED_RESEARCH");
+    assert.equal(r.fields.weather, undefined);
+    assert.equal(r.fields.transport_check, undefined);
+    for(const f of Object.values(r.fields)) { assert.equal(f.retained_on, old.checked); assert.deepEqual(f.source_urls,[old.officialUrl]); }
+  }
+  const neon = records.find(r=>r.name==="Neon Museum");
+  assert.match(neon.fields.ticket_cost.value.cost_basis, /age 6/);
+  assert.equal(neon.fields.ticket_cost.value.planning_label, "VARIABLE / VERIFY");
+  assert.match(records.find(r=>r.name.startsWith("Red Rock")).fields.ticket_cost.value.planning_label, /per vehicle/);
+  records[0].fields.ticket_cost.value.exclusions="mutated";
+  assert.equal(JSON.stringify(activityPages),before);
+  assert.notEqual(vegasActivityEvidence()[0].fields.ticket_cost.value.exclusions,"mutated");
+  assert.equal(activityEvidence().length,12);
+});
+
+test("Vegas schema refuses fabricated complete cost, unsupported fields, class changes and private sources", () => {
+  for(const change of [
+    r=>r[0].schema_version=1, r=>r[0].schema_version=3,
+    r=>r[0].fields.ticket_cost.value.amount=0, r=>r[0].fields.ticket_cost.value.currency="USD",
+    r=>r[0].fields.ticket_cost.value.unit="family/day", r=>r[0].fields.ticket_cost.value.visit_basis="2026-10-07",
+    r=>r[0].fields.ticket_cost.value.party_basis=null, r=>delete r[0].fields.ticket_cost.value.exclusions,
+    r=>r[0].fields.ticket_cost.value.retained_confidence="", r=>r[0].fields.weather=r[0].fields.duration,
+    r=>r[0].fields.ticket_cost.evidence_class="OFFICIAL_PROPERTY_FACT", r=>r[0].fields.venue.retained_on="2026-02-30",
+    r=>r[0].fields.duration.source_urls=["https://example.com/?token=secret"], r=>r[0].page_url="https://familytripwise.com/things-to-do/chicago-with-kids.html",
+    r=>r.push(structuredClone(r[0]))
+  ]) { const records=vegasActivityEvidence();change(records);assert.ok(validateActivityEvidence(records).length); }
+  assert.deepEqual(vegasActivityEvidence({}), []);
 });

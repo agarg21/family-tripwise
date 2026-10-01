@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-10-01 - FT-STD-005 retained Vegas activity maintenance
+
+Dirac (01a0f5dc-f0c7-78e1-99aa-03a437d5d35e) cycle-one PASS/no P0-P3 againstd09b26a84004c9df90cb88645bf7463168614bf8. Independent346isolated/15focused/307additional assertions/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/whitespace pass. All6467repository-Git entries/HEAD/index/refs/status and excluded/held/model/public/history files unchanged. Original14values/reference-family note/August3dates/mixed price limits and combined24attractions120fields/24missingfields/fourunmappedpages verified; default SD API/CLI/historicalreport reproducible. Operator347workingtree15focused/native and production health remain operator results; reviewer did not fetch/browser/network or establish live price/user evidence. Registration present but pre-edit chronology established only by operator log. Exact13paths ready tools/docs-only push; no public change.
+
+Exact13paths registered before edits; strict opt-in retained cost-friction adapter and explicit partial field coverage. Original August3prices/check dates, source-model/public/historical outputs and six exclusions/five heldChicago files immutable. Native focused/full and independent read-only PASS required before tools/docs-only push; no new official verification/publication, source retrieval or Chicago preview retry. September30GSC throughSeptember28 reused orientation; today's daily learning already complete.
+
 ## 2026-10-01 - FT-RES-074 Boston price and breakfast basis
 
 Immutable completion: exact8reviewedpaths committed/pushed29b7c87a4e8df4fadd3857649caca0b32319083d after freshfetch/no divergence/sole reviewed range, HEADorigin0/0. Tools/docs-only no public change/Pages wait; six exclusions/five heldChicago files remain local unchanged. Final three-path state-only backfill of these immutable outputs is covered by standing post-consensus mechanical-results policy, no new product/evidence/judgment.

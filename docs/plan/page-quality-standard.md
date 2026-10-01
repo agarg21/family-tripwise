@@ -1,5 +1,7 @@
 # Page Building And Maintenance Standard
 
+October1 FT-STD-005 extends the optional activity audit to LasVegas retained cost-friction records: run `node tools/activity-quality.mjs --include-vegas` within the same weekly operator. Two mapped pages/24attractions/120envelopes, four activity-page gaps and24explicit Vegas weather/transport gaps; this is partial field coverage, not current fact/price verification. All retained August3admission strings/age/product/fee exclusions and original confidence survive, numeric exact-visit amounts stay unknown. Original default SanDiego/historical reports remain reproducible. Current contract and proxy audit: `docs/plan/activity-evidence-standard.md`.
+
 Updated: 2026-09-30 / FT-STD-001
 
 September30 FT-STD-002: first legacy pilot complete for San Diego's12hotels,62of72envelopes source-linked; ten transport fields remain unknown. Original observation dates and price displays retained, narrow fee overlays isolated, explicit price-basis unknowns still trigger review. Current mapping/report/remaining research: `docs/research/san-diego-hotel-evidence-normalization-2026-09-30.md`. This does not make all72envelopes complete or fresh. Other four legacy cities still need mapping.

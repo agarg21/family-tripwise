@@ -1,0 +1,3324 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-01",
+  "scope": "activity-evidence-partial-models",
+  "automatic_fact_renewal": false,
+  "automatic_publication": false,
+  "summary": {
+    "mapped_pages": 2,
+    "attractions": 24,
+    "fields": 120,
+    "unpriced_exact_visit_budgets": 24,
+    "unmapped_activity_pages": 4,
+    "unmapped_fields": 24
+  },
+  "mapped_pages": [
+    "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+    "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+  ],
+  "unmapped_pages": [
+    "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+    "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+    "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+    "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html"
+  ],
+  "tasks": [
+    {
+      "id": "las-vegas-cost-adventuredome-ticket_cost",
+      "name": "Adventuredome",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.circuscircus.com/attractions/adventuredome/"
+      ],
+      "retained_value": {
+        "planning_label": "VARIABLE / VERIFY",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "The official attraction page exposes ride and height rules but did not expose one stable current family pass total in this check.",
+        "inclusions": "Only the exact pass or ride product selected at checkout.",
+        "exclusions": "Arcade, midway games, food, parking, and separately priced experiences unless the pass says otherwise.",
+        "retained_evidence_class": "Official operational page; checkout price unresolved",
+        "retained_confidence": "Medium"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-area15-selected-exhibit-ticket_cost",
+      "name": "AREA15 / selected exhibit",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://meowwolf.com/visit/las-vegas/tickets"
+      ],
+      "retained_value": {
+        "planning_label": "From $170",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "Omega Mart starts at $45 per adult and $40 per child; other AREA15 exhibits are different products.",
+        "inclusions": "Four base Omega Mart timed-entry tickets at advertised starting prices.",
+        "exclusions": "Fees, parking or transport, food, access cards, VIP, other exhibits, and add-ons.",
+        "retained_evidence_class": "Official exhibit ticket page",
+        "retained_confidence": "High for Omega Mart; low for unselected exhibits"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-bellagio-conservatory-and-fountains-ticket_cost",
+      "name": "Bellagio Conservatory and fountains",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"
+      ],
+      "retained_value": {
+        "planning_label": "$0 admission",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "The fountains are officially free; the Conservatory publishes seasonal show and dark dates without an admission ticket.",
+        "inclusions": "Conservatory walk-through and fountain viewing.",
+        "exclusions": "Parking, transport, food, and the optional Garden Table.",
+        "retained_evidence_class": "Official property pages",
+        "retained_confidence": "High"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-discovery-children-s-museum-ticket_cost",
+      "name": "DISCOVERY Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://discoverykidslv.org/visit/buy-tickets/"
+      ],
+      "retained_value": {
+        "planning_label": "$80",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "$20 general admission for each non-local visitor age 1 and older.",
+        "inclusions": "Four general-admission tickets.",
+        "exclusions": "Parking, transport, food, special programs, and local discounts.",
+        "retained_evidence_class": "Official ticket page",
+        "retained_confidence": "High"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-high-roller-observation-wheel-ticket_cost",
+      "name": "High Roller observation wheel",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.caesars.com/linq/things-to-do/attractions/high-roller"
+      ],
+      "retained_value": {
+        "planning_label": "VARIABLE / VERIFY",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "Caesars ticket products and day or evening tiers are date-sensitive; no stable current four-person total was exposed in the official page check.",
+        "inclusions": "Only the exact observation-wheel ticket selected.",
+        "exclusions": "Parking, transport, food, photos, upgrades, and 21+ packages.",
+        "retained_evidence_class": "Official operator page; checkout price unresolved",
+        "retained_confidence": "Medium"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-neon-museum-ticket_cost",
+      "name": "Neon Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://neonmuseum.org/whats-on/365-daytime-admission/"
+      ],
+      "retained_value": {
+        "planning_label": "VARIABLE / VERIFY",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "The known September-May daytime subtotal is $62.50 for two adults and the age-10 child; the official age bands omit age 6 and a processing fee applies.",
+        "inclusions": "Published base admission for two adults and the age-10 child; add the confirmed age-6 ticket.",
+        "exclusions": "Processing fee, the unresolved age-6 ticket, evening admission, parking, transport, food, tours, and photo products.",
+        "retained_evidence_class": "Official daytime admission page",
+        "retained_confidence": "High for season and published tiers; unresolved for the age-6 total"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-pinball-hall-of-fame-ticket_cost",
+      "name": "Pinball Hall of Fame",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://pinballmuseum.org/direct.php"
+      ],
+      "retained_value": {
+        "planning_label": "$0 admission; choose a play budget",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "The official site says entrance is free; machine spend is optional and family-controlled.",
+        "inclusions": "Entry for four.",
+        "exclusions": "Game play, transport, parking, food, and any machine-specific cost.",
+        "retained_evidence_class": "Official venue page plus editorial budget prompt",
+        "retained_confidence": "High for admission; medium for spend planning"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-red-rock-canyon-scenic-drive-ticket_cost",
+      "name": "Red Rock Canyon Scenic Drive",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"
+      ],
+      "retained_value": {
+        "planning_label": "$20-$22 per vehicle",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "$20 private-vehicle entry; add the $2 timed-entry reservation fee when required October 1-May 31, 8 a.m.-5 p.m.",
+        "inclusions": "One private vehicle and the seasonal reservation fee when applicable.",
+        "exclusions": "Rental car, fuel, tours, food, gear, and any annual pass.",
+        "retained_evidence_class": "Official BLM and Recreation.gov pages",
+        "retained_confidence": "High"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-resort-pool-reset-block-ticket_cost",
+      "name": "Resort pool / reset block",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/amenities/beach.html"
+      ],
+      "retained_value": {
+        "planning_label": "VARIABLE / VERIFY",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "Access, season, and guest eligibility depend on the exact hotel; Mandalay Bay is a representative official pool check, not a citywide promise.",
+        "inclusions": "Only access explicitly included with the booked room.",
+        "exclusions": "Room cost, cabana, food, parking, and paid day access.",
+        "retained_evidence_class": "Official representative property page plus editorial scenario",
+        "retained_confidence": "Medium"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-shark-reef-aquarium-ticket_cost",
+      "name": "Shark Reef Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"
+      ],
+      "retained_value": {
+        "planning_label": "$106-$134",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "Two adults and two children ages 5-12 at current timed-entry versus anytime prices.",
+        "inclusions": "Aquarium and Undersea Explorer VR package for four.",
+        "exclusions": "Parking, transport, food, animal encounters, and other add-ons.",
+        "retained_evidence_class": "Official attraction pricing page",
+        "retained_confidence": "High"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-springs-preserve-ticket_cost",
+      "name": "Springs Preserve",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.springspreserve.org/visitor-information/tickets.html"
+      ],
+      "retained_value": {
+        "planning_label": "$59.80",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "Non-resident admission: $18.95 per adult and $10.95 per child ages 3-17.",
+        "inclusions": "Four general-admission tickets and the attractions included by that ticket.",
+        "exclusions": "Special events, classes, rentals, transport, and food.",
+        "retained_evidence_class": "Official ticket page",
+        "retained_confidence": "High"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-tournament-of-kings-ticket_cost",
+      "name": "Tournament of Kings",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-08-17"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"
+      ],
+      "retained_value": {
+        "planning_label": "From $297.60 plus tax",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
+        "visit_basis": null,
+        "cost_basis": "Four tickets at the official $74.40 starting total per ticket; children 4 and older pay full price.",
+        "inclusions": "Four starting-tier show tickets, service fee, and the published dinner.",
+        "exclusions": "Tax, premium seats, parking, transport, drinks, photos, and dietary substitutions.",
+        "retained_evidence_class": "Official show and pricing page",
+        "retained_confidence": "High for starting price; medium for final date total"
+      },
+      "limitation": "Retained historical admission label and original confidence, not a current exact-date quote or complete family-day cost. Starting prices, per-vehicle amounts, age-gap subtotals and unknowns must not be parsed into comparable totals.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-ticket_cost",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": {
+        "planning_label": "Free park; museum costs vary",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-ticket_cost",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": {
+        "planning_label": "Mid to high, depending on rides",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-ticket_cost",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": {
+        "planning_label": "Mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-ticket_cost",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": {
+        "planning_label": "Low to mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-ticket_cost",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": {
+        "planning_label": "Mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-ticket_cost",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": {
+        "planning_label": "Free or low cost",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-ticket_cost",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-ticket_cost",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": {
+        "planning_label": "Free or low cost",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-ticket_cost",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-ticket_cost",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-ticket_cost",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-ticket_cost",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": {
+        "planning_label": "Mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "las-vegas-cost-adventuredome-access_check",
+      "name": "Adventuredome",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.circuscircus.com/attractions/adventuredome/"
+      ],
+      "retained_value": "Measure each child, compare the eligible ride set, then check current passes and ride closures before paying.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-adventuredome-venue",
+      "name": "Adventuredome",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.circuscircus.com/attractions/adventuredome/"
+      ],
+      "retained_value": {
+        "area": "North Strip",
+        "setting": "Indoor amusement park"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-area15-selected-exhibit-access_check",
+      "name": "AREA15 / selected exhibit",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://meowwolf.com/visit/las-vegas/tickets"
+      ],
+      "retained_value": "Choose the exact exhibit first; verify its age, sensory, timed-entry, late-arrival, and re-entry rules.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-area15-selected-exhibit-venue",
+      "name": "AREA15 / selected exhibit",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://meowwolf.com/visit/las-vegas/tickets"
+      ],
+      "retained_value": {
+        "area": "Off Strip",
+        "setting": "Indoor immersive exhibit; Omega Mart reference"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-bellagio-conservatory-and-fountains-access_check",
+      "name": "Bellagio Conservatory and fountains",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"
+      ],
+      "retained_value": "Check Conservatory dark dates and the current fountain schedule before routing across the resort.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-bellagio-conservatory-and-fountains-venue",
+      "name": "Bellagio Conservatory and fountains",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"
+      ],
+      "retained_value": {
+        "area": "Center Strip",
+        "setting": "Indoor conservatory plus outdoor fountains"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-discovery-children-s-museum-access_check",
+      "name": "DISCOVERY Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://discoverykidslv.org/visit/buy-tickets/"
+      ],
+      "retained_value": "Check the operating calendar and any exhibit or program changes for the visit date.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-discovery-children-s-museum-venue",
+      "name": "DISCOVERY Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://discoverykidslv.org/visit/buy-tickets/"
+      ],
+      "retained_value": {
+        "area": "Downtown",
+        "setting": "Indoor children's museum"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-high-roller-observation-wheel-access_check",
+      "name": "High Roller observation wheel",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.caesars.com/linq/things-to-do/attractions/high-roller"
+      ],
+      "retained_value": "Price the exact date and time, then confirm child, stroller, and arrival rules before crossing the resort corridor.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-high-roller-observation-wheel-venue",
+      "name": "High Roller observation wheel",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.caesars.com/linq/things-to-do/attractions/high-roller"
+      ],
+      "retained_value": {
+        "area": "LINQ / Center Strip",
+        "setting": "Enclosed observation-wheel cabin"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-neon-museum-access_check",
+      "name": "Neon Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://neonmuseum.org/whats-on/365-daytime-admission/"
+      ],
+      "retained_value": "Daytime admission is unavailable June-August. For September-May, confirm the age-6 ticket and final processing fee before choosing a timed slot.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-neon-museum-venue",
+      "name": "Neon Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://neonmuseum.org/whats-on/365-daytime-admission/"
+      ],
+      "retained_value": {
+        "area": "Downtown",
+        "setting": "Outdoor museum with timed admission"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-pinball-hall-of-fame-access_check",
+      "name": "Pinball Hall of Fame",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://pinballmuseum.org/direct.php"
+      ],
+      "retained_value": "Set a game budget before arrival and expect individual machines to vary or be unavailable.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-pinball-hall-of-fame-venue",
+      "name": "Pinball Hall of Fame",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://pinballmuseum.org/direct.php"
+      ],
+      "retained_value": {
+        "area": "South Strip",
+        "setting": "Indoor pay-per-play arcade museum"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-red-rock-canyon-scenic-drive-access_check",
+      "name": "Red Rock Canyon Scenic Drive",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"
+      ],
+      "retained_value": "Reserve the Scenic Drive in season and check heat, weather, closures, water, and the exact stop plan.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-red-rock-canyon-scenic-drive-venue",
+      "name": "Red Rock Canyon Scenic Drive",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"
+      ],
+      "retained_value": {
+        "area": "West of Strip",
+        "setting": "Outdoor 13-mile scenic drive with optional stops"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-resort-pool-reset-block-access_check",
+      "name": "Resort pool / reset block",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/amenities/beach.html"
+      ],
+      "retained_value": "Confirm guest eligibility, operating dates, pool closures, and child height rules on the booked property's page.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-resort-pool-reset-block-venue",
+      "name": "Resort pool / reset block",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/amenities/beach.html"
+      ],
+      "retained_value": {
+        "area": "Your booked hotel",
+        "setting": "Property-specific; usually outdoor"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-shark-reef-aquarium-access_check",
+      "name": "Shark Reef Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"
+      ],
+      "retained_value": "Choose timed or anytime entry; peak timed slots can sell out and the youngest VR rules differ.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-shark-reef-aquarium-venue",
+      "name": "Shark Reef Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"
+      ],
+      "retained_value": {
+        "area": "South Strip",
+        "setting": "Indoor aquarium and included VR experience"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-springs-preserve-access_check",
+      "name": "Springs Preserve",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.springspreserve.org/visitor-information/tickets.html"
+      ],
+      "retained_value": "Reserve ahead for busy dates and check heat-related early closures of outdoor areas.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-springs-preserve-venue",
+      "name": "Springs Preserve",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.springspreserve.org/visitor-information/tickets.html"
+      ],
+      "retained_value": {
+        "area": "West of Downtown",
+        "setting": "Indoor museums plus outdoor gardens and trails"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-tournament-of-kings-access_check",
+      "name": "Tournament of Kings",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"
+      ],
+      "retained_value": "Check the exact performance, final checkout total, meal, seating, and horse, dust, pyrotechnic, strobe, smoke, and fog warnings.",
+      "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-tournament-of-kings-venue",
+      "name": "Tournament of Kings",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"
+      ],
+      "retained_value": {
+        "area": "South Strip / Excalibur",
+        "setting": "Indoor dinner show with horses and theatrical effects"
+      },
+      "limitation": "Retained mixed venue/source context, not an atomic current official fact or verified route.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-access_check",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "Choose a museum, then check its hours, tickets, and paid parking",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-transport_check",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "Use the park map or transit plan; museum hours vary.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-venue",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": {
+        "area": "Balboa Park",
+        "setting": "Public park plus indoor museums"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-access_check",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "Check ride tickets, hours, closures, and height rules",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-transport_check",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "Plan for Mission Beach parking and set a ride or spending limit.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-venue",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": {
+        "area": "Mission Beach",
+        "setting": "Mixed outdoor and indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-access_check",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "Check dated tickets, daily schedule, and closing time",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-transport_check",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "Limited free three-hour parking; compare transit from your base.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-venue",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": {
+        "area": "La Jolla",
+        "setting": "Mostly indoor with outdoor terrace"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-access_check",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "Check route, schedule, one-way tickets, and capacity",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-transport_check",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "Choose downtown and return terminals before routing the day.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-venue",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": {
+        "area": "Downtown and Coronado",
+        "setting": "Ferry plus outdoor waterfront"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-access_check",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "Check admission, documentary schedule, and accessibility mornings",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-transport_check",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "Allow time from Balboa Park parking or transit to a timed film.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-venue",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": {
+        "area": "Balboa Park",
+        "setting": "Indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-access_check",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "No ticket; check current beach and water status",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-transport_check",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "Choose the exact coast segment; parking availability varies.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-venue",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": {
+        "area": "La Jolla",
+        "setting": "Outdoor coast"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-access_check",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Check ticket, dated hours, closures, and height rules",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-transport_check",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Treat Carlsbad as its own day and check parking before leaving.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-venue",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": {
+        "area": "Carlsbad",
+        "setting": "Mostly outdoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-access_check",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "No ticket; check beach and bay status for the exact stop",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-transport_check",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "Choose the exact swim or play area before comparing parking.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-venue",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": {
+        "area": "Mission Bay",
+        "setting": "Outdoor beach and park"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-access_check",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "Ticket, dated hours, parking, and accessibility map",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-access_check",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Check ticket, dated hours, parking, map, and optional safaris",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-transport_check",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Compare the Escondido drive, parking, and steep-grade access.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-venue",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "area": "Escondido",
+        "setting": "Outdoor wildlife park"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-transport_check",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "Compare paid parking with Route 7 or 215 from your base.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-venue",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "area": "Balboa Park",
+        "setting": "Mostly outdoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-access_check",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Check ticket, dated hours, showtimes, closures, and height rules",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-transport_check",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Check parking and use the official map or app for the day.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-venue",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": {
+        "area": "Mission Bay",
+        "setting": "Mixed outdoor and indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-access_check",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "Check current open days, hours, admission, and calendar",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-transport_check",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "Confirm downtown parking or transit for the chosen day.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-venue",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": {
+        "area": "Downtown",
+        "setting": "Indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-adventuredome-duration",
+      "name": "Adventuredome",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.circuscircus.com/attractions/adventuredome/"
+      ],
+      "retained_value": "2-4 hrs",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-area15-selected-exhibit-duration",
+      "name": "AREA15 / selected exhibit",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://meowwolf.com/visit/las-vegas/tickets"
+      ],
+      "retained_value": "2-3 hrs",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-bellagio-conservatory-and-fountains-duration",
+      "name": "Bellagio Conservatory and fountains",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"
+      ],
+      "retained_value": "60-90 min",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-discovery-children-s-museum-duration",
+      "name": "DISCOVERY Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://discoverykidslv.org/visit/buy-tickets/"
+      ],
+      "retained_value": "2-3 hrs",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-high-roller-observation-wheel-duration",
+      "name": "High Roller observation wheel",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.caesars.com/linq/things-to-do/attractions/high-roller"
+      ],
+      "retained_value": "45-60 min",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-neon-museum-duration",
+      "name": "Neon Museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://neonmuseum.org/whats-on/365-daytime-admission/"
+      ],
+      "retained_value": "60-90 min",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-pinball-hall-of-fame-duration",
+      "name": "Pinball Hall of Fame",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://pinballmuseum.org/direct.php"
+      ],
+      "retained_value": "60-120 min",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-red-rock-canyon-scenic-drive-duration",
+      "name": "Red Rock Canyon Scenic Drive",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"
+      ],
+      "retained_value": "3-5 hrs from a Strip base",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-resort-pool-reset-block-duration",
+      "name": "Resort pool / reset block",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/amenities/beach.html"
+      ],
+      "retained_value": "2-4 hrs",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-shark-reef-aquarium-duration",
+      "name": "Shark Reef Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"
+      ],
+      "retained_value": "90 min-2 hrs",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-springs-preserve-duration",
+      "name": "Springs Preserve",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.springspreserve.org/visitor-information/tickets.html"
+      ],
+      "retained_value": "2-4 hrs",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "las-vegas-cost-tournament-of-kings-duration",
+      "name": "Tournament of Kings",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 59,
+        "due_on": "2026-09-02"
+      },
+      "retained_on": "2026-08-03",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"
+      ],
+      "retained_value": "2-3 hrs including arrival",
+      "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-duration",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-weather",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "Strong indoor backup after selecting a museum",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-duration",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-weather",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "Weather dependent with some indoor options",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-duration",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "1.5-2 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-weather",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "Good partial weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-duration",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "2-3 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-weather",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "Weather and operations dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-duration",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-weather",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "Strong weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-duration",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-weather",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "Weather and ocean dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-duration",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Full day",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-weather",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Weather dependent; water park is seasonal",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-duration",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "2-3 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-weather",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "Weather and water dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-duration",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "4-6 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-duration",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Full day",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-weather",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Heat and weather dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-weather",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "Outdoor anchor; limited weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-duration",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Full day",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-weather",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Mostly outdoor day with limited indoor backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-duration",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "2-3 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-weather",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 62,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "Strong weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    }
+  ],
+  "limitations": [
+    "Retained source-model dates are not individual official-fact verification dates.",
+    "Qualitative cost and duration/weather estimates remain interpretations; unknown numeric budget is not zero.",
+    "Access/transport prompts do not establish current routes, stroller practicality, availability or safety.",
+    "Only SanDiego logistics and LasVegas retained cost-friction records are mapped; Vegas weather/transport and other activity/age/stay/itinerary domains remain explicit gaps.",
+    "Retrieval/hash success never renews these dates; native validity is not publishing authority."
+  ],
+  "unmapped_fields": [
+    {
+      "id": "las-vegas-cost-resort-pool-reset-block",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-resort-pool-reset-block",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-bellagio-conservatory-and-fountains",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-bellagio-conservatory-and-fountains",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-discovery-children-s-museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-discovery-children-s-museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-shark-reef-aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-shark-reef-aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-adventuredome",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-adventuredome",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-springs-preserve",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-springs-preserve",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-high-roller-observation-wheel",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-high-roller-observation-wheel",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-area15-selected-exhibit",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-area15-selected-exhibit",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-red-rock-canyon-scenic-drive",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-red-rock-canyon-scenic-drive",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-pinball-hall-of-fame",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-pinball-hall-of-fame",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-tournament-of-kings",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-tournament-of-kings",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-neon-museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "weather",
+      "reason": "unmapped-no-retained-field-evidence"
+    },
+    {
+      "id": "las-vegas-cost-neon-museum",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "field": "transport_check",
+      "reason": "unmapped-no-retained-field-evidence"
+    }
+  ]
+}

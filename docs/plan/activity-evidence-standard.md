@@ -1,5 +1,15 @@
 # Activity Evidence Standard
 
+FT-STD-005 final immutable gate: Dirac cycle-one independent read-only PASS/no P0-P3,346isolated/15focused/307additional assertions/native pass; operator347workingtree/15focused/native pass. Exact13paths ready tools/docs-only push; all public/model/source-date/history/dirty exclusions and Chicago held work preserved. No live-source or renewed-price claim.
+
+October1 FT-STD-005 adds opt-in `vegasActivityEvidence()` schema2 and `node tools/activity-quality.mjs --include-vegas`. Default12SanDiego records and historical September30report stay byte-identical. Expanded report maps24attractions/120envelopes across two pages; four other activityPages remain unmapped and24Vegas weather/transport fields are explicitly missing, not fabricated or complete. Report: `ops/page-quality/2026-10-01-las-vegas-activities.json`. This is a tools-only normalization, not renewed public prices or dates.
+
+The12Vegas records retain August3source-model dates, original admission labels, price/product/age/tier/fee basis, inclusions/exclusions, source classification/confidence, access prompts, duration estimates and unresolved unknowns. The original reference-family note (two adults/children6and10) stays verbatim in each cost record; it does not make a vehicle price, advertised starting amount or incomplete Neon subtotal a current four-person quote. Numeric amount/currency/unit/exact-visit basis remain null rather than parsing prose dollar strings. Mixed historical cost evidence is not promoted to a current official fact. Published zero-admission wording is retained as historical admission context, not zero full-day spend. Weather and route fields absent from the model remain separate gaps.
+
+Named proxy audit: find the source/basis/verification needs for that reference family planning an October7visit. Hypothesis rejected: every retained cost can be treated as one current, comparable family admission total. RedRock is per vehicle/seasonal fee; OmegaMart/Tournament use starting products and excluded fees/tax; Neon has an age6ticket gap and processing fee; four variable entries remain unresolved. Schema/queue tests can preserve these decisions without re-entering values. This is a maintained-evidence freshness/basis audit, not live-source verification, user testing or savings proof. Refresh named exact dates/ages/products and missing field evidence before a public correction; weekly collection remains in the existing October7operator, no scheduler change.
+
+FT-STD-005 exact13paths/evidence/acceptance/measurement/invariants were registered in ops/current-cycle.md and roadmap before edits. Focused/full native and independent read-only PASS required before tools/docs-only push. All site/models/generators/prices/source dates/previous reports/observation windows/budget and six exclusions/five heldChicago paths remain unchanged. No network/browser/paid/booking/account/indexing/analytics/automation mutation.
+
 FT-STD-004 / registered September30,2026 before substantive tools edits.
 
 ## Registered Action
