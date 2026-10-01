@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-070",
+  "destination": "Washington DC",
+  "checked_on": "2026-09-30",
+  "refresh_days": 30,
+  "evidence_scope": "Partial four-category published-capacity corpus, not six completed hotel records, booking acceptance, suitability or verified nap-return routes. Residence Inn facts retain September25 inspection date.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [4, 8, 12],
+    "stay": { "arrival": "2026-11-08", "departure": "2026-11-13" },
+    "preferences": ["separate sleeping and living spaces", "kitchen preferred", "Natural History and American History on different days", "midday rest", "no car", "indoor pool preferred"],
+    "budget": null
+  },
+  "sources": {
+    "embassy": {
+      "url": "https://www.hilton.com/en/hotels/wascces-embassy-suites-washington-dc-convention-center/rooms/",
+      "checked_on": "2026-09-30", "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "homewood": {
+      "url": "https://www.hilton.com/en/hotels/washwhw-homewood-suites-washington-dc-downtown/rooms/",
+      "checked_on": "2026-09-30", "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "pendry": {
+      "url": "https://www.pendry.com/washington-dc/accommodations/two-bedroom-suite/",
+      "checked_on": "2026-09-30", "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "residence": {
+      "url": "https://www.marriott.com/en-us/hotels/wascp-residence-inn-washington-dc-national-mall/rooms/",
+      "checked_on": "2026-09-25", "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "dc-embassy-deluxe-double", "hotel": "Embassy Suites Washington DC Convention Center",
+      "category": "Deluxe Two Room Suite with 2 Double Beds", "source_id": "embassy",
+      "sleeping_setup": "Two double beds in a separate bedroom, full-sized sofa bed in private living area; 547 square feet.",
+      "kitchen": "not-established", "connection": "not-applicable",
+      "configurations": [{ "maximum": 5, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Exact category card and expanded details state sleeps5, two double beds, sofa bed and separate bedroom/living spaces. King categories publish sleeps4, not inherited." }],
+      "checks": ["Confirm sofa setup and specific bedding allocation", "Microwave and mini refrigerator established, stovetop not established", "Confirm indoor-pool hours/closures and breakfast service", "Verify actual museum entrance-to-room rest journey without a stroller verdict"],
+      "conflicts": [],
+      "price": { "currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Separate dated public-plan observation required; category facts alone are not a price"] }
+    },
+    {
+      "id": "dc-homewood-two-queen", "hotel": "Homewood Suites Washington DC Downtown",
+      "category": "2 Queen Beds 1 Bedroom Suite Nonsmoking", "source_id": "homewood",
+      "sleeping_setup": "Two queen beds in separate bedroom, sofa bed in living area; exact category published sleeps5.",
+      "kitchen": "published-kitchen", "connection": "not-applicable",
+      "configurations": [{ "maximum": 5, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Exact category card and quick-look highlights publish sleeps5 and separate bedroom/living spaces; do not transfer to Premium category." }],
+      "checks": ["Confirm sofa setup and exact bedding allocation", "Full kitchen lists stove/dishwasher/full-size refrigerator/microwave", "Collect actual family/date/public-plan rate with taxes and fee basis", "Verify museum-rest transport and pool status; amenities list does not establish indoor pool"],
+      "conflicts": ["Premium 2Queen 1Bedroom card publishes sleeps4 while standard 2Queen suite publishes sleeps5; do not assume all two-queen categories accept5."],
+      "price": { "currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["No Nov8-13five-person public rate inspected; default one-guest/date price discarded"] }
+    },
+    {
+      "id": "dc-pendry-two-bedroom", "hotel": "Pendry Washington DC The Wharf",
+      "category": "Two Bedroom Suite", "source_id": "pendry",
+      "sleeping_setup": "Two king bedrooms, two living rooms, sofa accommodating up to two children, two bathrooms. Five-person maximum does not imply all possible bed allocations.",
+      "kitchen": "not-established", "connection": "not-applicable",
+      "configurations": [{ "maximum": 5, "max_adults": 4, "max_children": null, "infant_extension": null, "conditions": ["Confirm sleeping allocation and child-sofa setup for this party"], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Official exact category states maximum5persons/no more4adults and sofa for up to2children. Overall child limit not independently stated; do not treat sofa limit as total-child limit." }],
+      "checks": ["Verify requested child-sofa allocation, age restrictions and fees", "Collect exact public suite rate with taxes/mandatory fees", "Coffee/minibar are not a cooking kitchen", "Verify museum-rest journey, meal and pool access/hours"],
+      "conflicts": [],
+      "price": { "currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["No exact-party/date suite rate or sofa fee established"] }
+    },
+    {
+      "id": "dc-residence-two-queen-onqq", "hotel": "Residence Inn Washington DC National Mall",
+      "category": "1 Bedroom Suite, 2 Queen, Sofa bed (ONQQ)", "source_id": "residence",
+      "sleeping_setup": "Two queen beds, sofa bed and separated living space; maintained September25 exact-category inspection states maximum6, no rollaway or connecting rooms.",
+      "kitchen": "published-kitchen", "connection": "not-applicable",
+      "configurations": [{ "maximum": 6, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Retained September25 ONQQ room-detail inspection, not renewed by September30 generic rooms-page retrieval." }],
+      "checks": ["Reinspect exact ONQQ modal before publication; generic booking selector maximum8 is not this room limit", "Kitchen lists stovetop/fridge/microwave/dishwasher/cookware; dining table seats4", "Collect exact-party/date public rate, mandatory fees and pool hours", "Verify actual museum-rest transport and meal seating for5"],
+      "conflicts": [],
+      "price": { "currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["No usable exact-party/date rate observed; retained category facts only"] }
+    }
+  ],
+  "offer_observations": []
+}

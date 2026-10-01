@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-30
 
+Current decision FT-RES-070: partial Washington DC exact-room/public-budget corpus, a bounded FT-RES-059 subaction.13paths registered; four category records, one dated public USD sample, two unresolved categories and remaining pricing/rest/review/controlled-overlap/publication gates explicit. Reusable USD/GBP observation matching, no conversion or published DC page. Focused/full/read-only review and tools/docs-only push next. STD004 completed29f8cec/SchrodingerPASS/319isolated320workingtree, no public change; Chicago remains local unshipped. Older Current checkpoints below are history.
+
 Current FT-STD-004:12SanDiego activity logistics/72field pilot and immutable quality reports, exact15paths registered in plan before tools edits. Mixed model dates/qualitative costs/estimates/prompts retained, five activity models unmapped; no public/model/fact renewal. Focused12/full320 workingtree green; isolated/native/different read-only tools-only gates next. FT-IMP-050 seven hold docs pushedb6ba823; five sitecode/CSVfiles still local pending normal preview-access and visual/download/release gates.
 
 FT-IMP-050 current boundary: native17related/full313 pass; code/CSV local only. Actual localhost4173 browser preview denial net::ERR_BLOCKED_BY_CLIENT leaves visual/download gates uncompleted.13allowed paths including narrow needs-user record; no unchanged retry/bypass/deploy or completed LRN-077. Different read-only static review then independent eligible tools/research; release waits for normal access resolution.

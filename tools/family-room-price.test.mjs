@@ -6,6 +6,8 @@ import { roomPriceForTask, validateRoomPrices } from "./family-room-price.mjs";
 const pack = JSON.parse(readFileSync(new URL("../docs/research/london-room-configurations-2026-09-30.json", import.meta.url)));
 const observations = JSON.parse(readFileSync(new URL("../docs/research/london-mitre-price-observation-2026-09-30.json", import.meta.url)));
 const marlin = JSON.parse(readFileSync(new URL("../docs/research/london-marlin-price-observation-2026-09-30.json", import.meta.url)));
+const dcPack = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-room-configurations-2026-09-30.json", import.meta.url)));
+const dcPrices = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-embassy-price-observation-2026-09-30.json", import.meta.url)));
 const price = (samples = observations, party = pack.scenario, date = "2026-09-30") => roomPriceForTask(samples, pack, "mitre-family-five", party, date);
 
 test("public exact-family samples validate and convert stay totals to nightly equivalents", () => {
@@ -111,4 +113,32 @@ test("matched separate observations do not enrich other parties or mutate throug
   assert.equal(roomPriceForTask(samples, pack, marlin[0].record_id, { adults: 2, child_ages: [4, 8, 13] }, "2026-09-30"), null);
   assert.equal(roomPriceForTask(samples, pack, marlin[0].record_id, pack.scenario, "2026-09-29"), null);
   assert.equal(roomPriceForTask(samples, pack, marlin[0].record_id, pack.scenario, "2026-10-15").status, "historical-dated-stay-samples");
+});
+
+test("USD public stay totals retain taxes, membership exclusions and count-band age limits", () => {
+  assert.deepEqual(validateRoomPrices(dcPrices, dcPack), []);
+  const p = roomPriceForTask(dcPrices, dcPack, dcPrices[0].record_id, dcPack.scenario, "2026-09-30");
+  assert.equal(p.currency, "USD");
+  assert.deepEqual(p.rates.map(r => r.stay_amount), [1673.39, 2040.72]);
+  assert.equal(p.amount_from, 334.68);
+  assert.equal(p.amount_to, 408.14);
+  assert.equal(p.age_input_mode, "provider-age-band-counts");
+  assert.match(p.observation_limitation, /individual4\/8\/12ages were not entered/);
+  assert.match(p.fee_basis, /Member card283USD discarded/);
+  assert.match(p.fee_basis, /additional stay charges/);
+  assert.match(p.deposit_basis, /unknown hold amount, not an added stay fee/);
+  assert.equal(roomPriceForTask(dcPrices, dcPack, "dc-homewood-two-queen", dcPack.scenario, "2026-09-30"), null);
+  assert.equal(roomPriceForTask(dcPrices, dcPack, dcPrices[0].record_id,
+    { ...dcPack.scenario, child_ages: [4, 8, 13] }, "2026-09-30"), null);
+});
+
+test("currency cannot be relabeled, implicitly converted or mixed into a record", () => {
+  for (const [samples, sourcePack, currency] of [[dcPrices, dcPack, "GBP"], [dcPrices, dcPack, "EUR"], [observations, pack, "USD"]]) {
+    const s = structuredClone(samples);
+    s[0].currency = currency;
+    assert.match(validateRoomPrices(s, sourcePack).join(";"), /currency/);
+    assert.throws(() => roomPriceForTask(s, sourcePack, s[0].record_id, sourcePack.scenario, "2026-09-30"));
+  }
+  assert.equal(price().currency, "GBP");
+  assert.equal(price().amount_from, 260);
 });

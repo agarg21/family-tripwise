@@ -106,6 +106,8 @@ const pricePaths = ["mitre", "marlin", "montague"].map(name =>
 const sampleArrays = pricePaths.map(path => JSON.parse(readFileSync(path, "utf8")));
 const taskCli = fileURLToPath(new URL("./family-room-task.mjs", import.meta.url));
 const packPath = fileURLToPath(new URL("../docs/research/london-room-configurations-2026-09-30.json", import.meta.url));
+const dcPath = fileURLToPath(new URL("../docs/research/washington-dc-room-configurations-2026-09-30.json", import.meta.url));
+const dcPricePath = fileURLToPath(new URL("../docs/research/washington-dc-embassy-price-observation-2026-09-30.json", import.meta.url));
 
 test("three dated samples preserve configuration conditions, payment basis and unpriced gaps", () => {
   const before = JSON.stringify([pack, sampleArrays]);
@@ -135,4 +137,35 @@ test("multi-file CLI rejects duplicate and non-array inputs rather than ignoring
     assert.throws(() => execFileSync(process.execPath, [taskCli, packPath, "2026-09-30", ...inputs],
       { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }));
   }
+});
+
+test("DC partial corpus and public price screen retain exact categories, original dates and currency", () => {
+  const dc = JSON.parse(readFileSync(dcPath, "utf8"));
+  const prices = JSON.parse(readFileSync(dcPricePath, "utf8"));
+  const before = JSON.stringify([dc, prices]);
+  assert.deepEqual(validateRoomPack(dc), []);
+  assert.equal(dc.records.length, 4);
+  const rows = screenRoomPack(dc, dc.scenario, "2026-09-30", prices);
+  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [taskCli, dcPath, "2026-09-30", dcPricePath], { encoding: "utf8" })), rows);
+  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 1);
+  assert.equal(row(rows, "dc-embassy-deluxe-double").price.amount_from, 334.68);
+  assert.equal(row(rows, "dc-homewood-two-queen").kitchen, "published-kitchen");
+  assert.match(row(rows, "dc-homewood-two-queen").conflicts[0], /Premium.*sleeps4/);
+  assert.equal(row(rows, "dc-pendry-two-bedroom").screening, "CONDITIONAL_PUBLISHED_CAPACITY");
+  assert.equal(row(rows, "dc-residence-two-queen-onqq").checked_on, "2026-09-25");
+  assert.ok(rows.every(r => r.next_checks.at(-1).includes("USD")));
+  assert.equal(row(rows, "dc-homewood-two-queen").price.amount, null);
+  assert.equal(JSON.stringify([dc, prices]), before);
+  assert.equal(row(screenRoomPack(dc, { adults: 5, child_ages: [] }, "2026-09-30"), "dc-pendry-two-bedroom").screening, "OUTSIDE_PUBLISHED_LIMIT");
+  assert.equal(row(screenRoomPack(dc, dc.scenario, "2026-10-26"), "dc-residence-two-queen-onqq").screening, "RECHECK_SOURCE");
+});
+
+test("USD expected currency is supported without admitting arbitrary currencies or prices", () => {
+  const dc = JSON.parse(readFileSync(dcPath, "utf8"));
+  for (const mutate of [p => p.records[0].price.currency = "EUR", p => p.records[0].price.amount = 334.68]) {
+    const p = structuredClone(dc); mutate(p);
+    assert.ok(validateRoomPack(p).length);
+    assert.throws(() => screenRoomPack(p, p.scenario, "2026-09-30"));
+  }
+  assert.ok(historicalScreen(pack).every(r => r.next_checks.at(-1).includes("GBP")));
 });

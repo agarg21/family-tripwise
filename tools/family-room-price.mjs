@@ -17,7 +17,8 @@ export function validateRoomPrices(observations, pack) {
     const record = pack.records.find(r => r.id === o.record_id);
     if (!record || o.category !== record.category || o.source_url !== pack.sources[record.source_id].url ||
         !text(o.source_surface) || !text(o.fee_basis) || !text(o.limitation)) fail("Missing/mismatched category source and basis");
-    if (o.configuration_count !== 1 || o.currency !== "GBP" || o.unit !== "configuration/stay") fail("Unsupported pricing unit");
+    if (o.configuration_count !== 1 || !["GBP", "USD"].includes(o.currency) ||
+        o.currency !== record?.price?.currency || o.unit !== "configuration/stay") fail("Unsupported pricing unit/currency or record mismatch");
     if (!validDate(o.arrival) || !validDate(o.departure) || !Number.isInteger(o.nights) || o.nights < 1 ||
         (Date.parse(o.departure) - Date.parse(o.arrival)) / 86400000 !== o.nights) fail("Stay/night mismatch");
     if (!validParty(o.party)) { fail("Invalid family party"); continue; }
