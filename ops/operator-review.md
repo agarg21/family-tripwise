@@ -1,5 +1,13 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-RES-072 Residence budget and unpublished age cutoffs
+
+Euler (01a0f58e-27e5-7201-8dc2-a2bbde1c4b83) cycle-one independent read-only PASS/no P0-P3. Independently passed328fullisolated/34focused/145legacy-schema parity/23additional schema3guards/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories. Original evidence/public/model/dirty exclusions/heldChicago and HEAD/index/repository bytes preserved. Official room-page context checked; dynamic modal/rate observations remain operator-attributed, not independently replayed. Operator329workingtree/34focused/native pass. Exact11paths ready tools/docs-only push; no public deployment.
+
+Eleven exact paths registered before edits. Source-dated operator modal/rate/persisted-age inspections, schema3exact-individual unknown-cutoff identity handling and thirdDCprepay sample; originalcorpus/priors/public/model unchanged. Operator34focused pass; full/native and different read-only reviewer before tools/docs-only push. No rate Select/Book/payment/contact/account/paid/automation mutation; six exclusions/five localChicago unchanged.
+
+FTRES071immutable result: exact9reviewedpaths pushed f40398bf15e45098f3954f41720c19faa2197a6f/TuringPASS/full324isolated325workingtree, freshfetch/no divergence/sole reviewed range/HEADorigin0/0. Tools/docs-only noPages/DCpublication.
+
 ## 2026-09-30 - FT-RES-071 second DC public price comparison
 
 Turing (01a0f584-4fb1-7700-89d5-884b2d1a9830) cycle-one independent read-only PASS/no P0-P3. Independent324fullisolated/30focused/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/539nonselectedpathparity/source/privacy/scope/whitespace pass; original corpus/Embassy/London and dynamic operator-attribution boundaries stand. Operator324isolated325workingtree pass. Exact9paths ready tools/docs-only push; no site or DC launch.

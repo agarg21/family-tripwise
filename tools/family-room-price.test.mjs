@@ -10,6 +10,51 @@ const dcPack = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-r
 const dcPrices = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-embassy-price-observation-2026-09-30.json", import.meta.url)));
 const price = (samples = observations, party = pack.scenario, date = "2026-09-30") => roomPriceForTask(samples, pack, "mitre-family-five", party, date);
 
+const residence = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-residence-price-observation-2026-09-30.json", import.meta.url)));
+test("schema3 keeps unpublished cutoffs unknown for an exact individually entered party", () => {
+  assert.deepEqual(validateRoomPrices(residence, dcPack), []);
+  const p = roomPriceForTask(residence, dcPack, "dc-residence-two-queen-onqq", dcPack.scenario, "2026-09-30");
+  assert.equal(p.amount_from, 433.65);
+  assert.equal(p.rates[0].stay_amount, 2168.27);
+  assert.equal(p.age_input_mode, "individual-ages");
+  assert.equal(p.engine_party.adult_from_age, null);
+  assert.equal(p.engine_party.classification_basis, "unpublished-cutoffs-exact-individual-party");
+  assert.match(p.fee_basis, /no tax-rate\/component or all-fee-completeness inferred/);
+  assert.match(p.deposit_basis, /not an additional stay fee/);
+  assert.match(p.rates[0].cancellation, /October1,2026/);
+});
+test("unknown cutoffs cannot accept count-only, partial bounds, reclassification or missing basis", () => {
+  for (const mutate of [
+    s => s[0].engine_party.age_input_mode = "provider-age-band-counts",
+    s => delete s[0].engine_party.classification_basis,
+    s => s[0].engine_party.child_age_from = 0,
+    s => Object.assign(s[0].engine_party, { adult_from_age: 18, child_age_from: 0, child_age_to: 17 }),
+    s => s[0].engine_party.adults = 3,
+    s => s[0].engine_party.child_ages = [4, 8, 11],
+    s => s[0].engine_party.child_ages = null,
+    s => s[0].schema_version = 2,
+    s => delete s[0].rates[0].eligibility
+  ]) {
+    const samples = structuredClone(residence); mutate(samples);
+    assert.ok(validateRoomPrices(samples, dcPack).length);
+    assert.throws(() => roomPriceForTask(samples, dcPack, "dc-residence-two-queen-onqq", dcPack.scenario, "2026-09-30"));
+  }
+});
+test("schema3 preserves public eligibility, exact task, stale dates and defensive copies", () => {
+  const before = JSON.stringify(residence);
+  const samples = structuredClone(residence);
+  samples[0].rates.push({ ...samples[0].rates[0], plan: "Member-only control", eligibility: "membership-required", stay_amount: 1000 });
+  const p = roomPriceForTask(samples, dcPack, "dc-residence-two-queen-onqq", dcPack.scenario, "2026-10-15");
+  assert.equal(p.status, "historical-dated-stay-samples");
+  assert.equal(p.amount_from, 433.65);
+  assert.deepEqual(p.excluded_rate_plans, ["Member-only control"]);
+  p.engine_party.child_ages[0] = 1;
+  assert.deepEqual(samples[0].engine_party.child_ages, [4, 8, 12]);
+  for (const party of [{ adults: 2, child_ages: [4, 8, 13] }, { adults: 3, child_ages: [4, 8] }])
+    assert.equal(roomPriceForTask(samples, dcPack, "dc-residence-two-queen-onqq", party, "2026-09-30"), null);
+  assert.equal(JSON.stringify(residence), before);
+});
+
 test("public exact-family samples validate and convert stay totals to nightly equivalents", () => {
   assert.deepEqual(validateRoomPrices(observations, pack), []);
   const p = price();

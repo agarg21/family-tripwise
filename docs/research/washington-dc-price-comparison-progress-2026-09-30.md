@@ -2,6 +2,8 @@
 
 FT-RES-071 / LRN-081, September 30, 2026 Eastern. Nine paths registered in current-cycle before edits. A second dated observation extends FT-RES-070's partial corpus without rewriting its original evidence or publishing a city page.
 
+Immutable completion: exact9reviewedpaths pushed f40398bf15e45098f3954f41720c19faa2197a6f, TuringPASS/full324isolated325workingtree, freshfetch/no divergence/sole reviewed range/HEADorigin0/0. Tools/docs-only, no Pages/DCpublication or Chicago release; mechanical result, not a new learning unit.
+
 Immutable QA result: Turing cycle-one independent read-only PASS/no P0-P3, 324fullisolated/30focused, state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/539nonselectedpathparity/source/privacy/scope/whitespace. Operator324isolated325workingtree pass; exact9reviewed paths ready tools/docs-only push, no production deployment.
 
 ## Named Family Task

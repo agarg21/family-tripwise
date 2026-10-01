@@ -109,6 +109,23 @@ const packPath = fileURLToPath(new URL("../docs/research/london-room-configurati
 const dcPath = fileURLToPath(new URL("../docs/research/washington-dc-room-configurations-2026-09-30.json", import.meta.url));
 const dcPricePath = fileURLToPath(new URL("../docs/research/washington-dc-embassy-price-observation-2026-09-30.json", import.meta.url));
 
+test("three DC dated public observations retain unknown cutoffs and category baseline dates", () => {
+  const dc = JSON.parse(readFileSync(dcPath, "utf8"));
+  const paths = [dcPricePath, ...["homewood", "residence"].map(name => fileURLToPath(new URL(`../docs/research/washington-dc-${name}-price-observation-2026-09-30.json`, import.meta.url)))];
+  const samples = paths.flatMap(path => JSON.parse(readFileSync(path, "utf8")));
+  const before = JSON.stringify([dc, samples]);
+  const rows = screenRoomPack(dc, dc.scenario, "2026-09-30", samples);
+  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [taskCli, dcPath, "2026-09-30", ...paths], { encoding: "utf8" })), rows);
+  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 3);
+  const r = row(rows, "dc-residence-two-queen-onqq");
+  assert.equal(r.checked_on, "2026-09-25");
+  assert.equal(r.price.observed_on, "2026-09-30");
+  assert.equal(r.price.amount_from, 433.65);
+  assert.equal(r.price.engine_party.adult_from_age, null);
+  assert.equal(row(rows, "dc-pendry-two-bedroom").price.amount, null);
+  assert.equal(JSON.stringify([dc, samples]), before);
+});
+
 test("three dated samples preserve configuration conditions, payment basis and unpriced gaps", () => {
   const before = JSON.stringify([pack, sampleArrays]);
   const rows = screenRoomPack(pack, pack.scenario, "2026-09-30", sampleArrays.flat());

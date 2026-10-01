@@ -11,7 +11,7 @@ export function validateRoomPrices(observations, pack) {
   const identities = new Set();
   for (const o of observations) {
     const fail = message => errors.push(`${o?.record_id ?? "observation"}: ${message}`);
-    if (!o || ![1, 2].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
+    if (!o || ![1, 2, 3].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
       fail("Invalid date/class"); continue;
     }
     const record = pack.records.find(r => r.id === o.record_id);
@@ -23,24 +23,33 @@ export function validateRoomPrices(observations, pack) {
         (Date.parse(o.departure) - Date.parse(o.arrival)) / 86400000 !== o.nights) fail("Stay/night mismatch");
     if (!validParty(o.party)) { fail("Invalid family party"); continue; }
     const engine = o.engine_party;
-    if (o.schema_version === 2 && (!text(o.booking_category) || !text(o.configuration_basis) ||
+    if (o.schema_version >= 2 && (!text(o.booking_category) || !text(o.configuration_basis) ||
         !text(o.deposit_basis) || !["individual-ages", "provider-age-band-counts"].includes(engine?.age_input_mode)))
       fail("Missing priced-configuration, age-input or deposit basis");
-    if (!engine || !Number.isInteger(engine.adult_from_age) || engine.adult_from_age < 1 ||
+    const individualUnknown = o.schema_version === 3 && engine?.age_input_mode === "individual-ages" &&
+      engine.adult_from_age === null && engine.child_age_from === null && engine.child_age_to === null &&
+      engine.classification_basis === "unpublished-cutoffs-exact-individual-party";
+    if (o.schema_version === 3 && !individualUnknown) fail("Schema3 requires explicit unknown cutoffs and individual ages");
+    if (individualUnknown) {
+      if (!validParty(engine) || engine.adults !== o.party.adults || !sameAges(engine.child_ages, o.party.child_ages))
+        fail("Individually entered party does not match; unknown cutoffs cannot reclassify ages");
+    } else if (!engine || !Number.isInteger(engine.adult_from_age) || engine.adult_from_age < 1 ||
         !Number.isInteger(engine.child_age_from) || engine.child_age_from < 0 ||
         engine.child_age_to !== engine.adult_from_age - 1 || engine.child_age_from > engine.child_age_to ||
         !validParty(engine)) { fail("Invalid engine age basis"); continue; }
-    const younger = o.party.child_ages.filter(age => age >= engine.child_age_from && age < engine.adult_from_age);
-    const adultCount = o.party.adults + o.party.child_ages.filter(age => age >= engine.adult_from_age).length;
-    if (o.party.child_ages.some(age => age < engine.child_age_from) || engine.adults !== adultCount ||
-        !sameAges(younger, engine.child_ages)) fail("Engine party does not match actual ages");
+    if (!individualUnknown) {
+      const younger = o.party.child_ages.filter(age => age >= engine.child_age_from && age < engine.adult_from_age);
+      const adultCount = o.party.adults + o.party.child_ages.filter(age => age >= engine.adult_from_age).length;
+      if (o.party.child_ages.some(age => age < engine.child_age_from) || engine.adults !== adultCount ||
+          !sameAges(younger, engine.child_ages)) fail("Engine party does not match actual ages");
+    }
     const identity = JSON.stringify([o.record_id, o.checked_on, o.arrival, o.departure, o.party.adults, [...o.party.child_ages].sort((a, b) => a - b)]);
     if (identities.has(identity)) fail("Duplicate price identity");
     identities.add(identity);
     if (!Array.isArray(o.rates) || !o.rates.length) { fail("Missing rate plans"); continue; }
     const plans = new Set();
     for (const rate of o.rates) {
-      if (o.schema_version === 2 && !["public", "membership-required"].includes(rate?.eligibility))
+      if (o.schema_version >= 2 && !["public", "membership-required"].includes(rate?.eligibility))
         fail("Missing/unsupported rate eligibility");
       if (!rate || ![rate.plan, rate.meals, rate.cancellation].every(text) ||
           !Number.isFinite(rate.stay_amount) || rate.stay_amount <= 0 ||
@@ -74,7 +83,7 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     configuration_basis: observation.configuration_basis ?? "See source-surface and limitation context",
     age_input_mode: observation.engine_party.age_input_mode ?? "not-recorded",
     deposit_basis: observation.deposit_basis ?? "not-established",
-    excluded_rate_plans: observation.rates.filter(rate => observation.schema_version === 2 && rate.eligibility !== "public").map(rate => rate.plan),
+    excluded_rate_plans: observation.rates.filter(rate => observation.schema_version >= 2 && rate.eligibility !== "public").map(rate => rate.plan),
     stay: { arrival: observation.arrival, departure: observation.departure, nights: observation.nights },
     rates, fee_basis: observation.fee_basis, source_url: observation.source_url, source_surface: observation.source_surface,
     evidence_class: "BOOKING_CHECK", derivation_class: "EDITORIAL_INTERPRETATION",

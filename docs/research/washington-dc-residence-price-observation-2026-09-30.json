@@ -1,0 +1,20 @@
+[
+  {
+    "schema_version": 3, "action": "FT-RES-072", "checked_on": "2026-09-30",
+    "source_url": "https://www.marriott.com/en-us/hotels/wascp-residence-inn-washington-dc-national-mall/rooms/",
+    "source_surface": "Official ONQQ room-detail modal, exact Nov8-13public rates, persisted result guest controls showing2adults/individual4/8/12ages and non-member Prepay rate details. Clean room source only; booking/session/product/query URLs not retained.",
+    "evidence_class": "BOOKING_CHECK", "record_id": "dc-residence-two-queen-onqq",
+    "category": "1 Bedroom Suite, 2 Queen, Sofa bed (ONQQ)", "booking_category": "1 Bedroom Suite, 2 Queen, Sofa bed",
+    "configuration_basis": "Exact ONQQ room modal publishes maximum6/twoqueens/sofa/separate living room/full kitchen/table4/no rollaway/no connecting rooms. Rates currently selected room ONQQ and one room/five guests; individual ages4/8/12persisted. General selector maximum8not room limit. No allocation/reservation confirmation.",
+    "configuration_count": 1, "currency": "USD", "unit": "configuration/stay",
+    "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5,
+    "party": { "adults": 2, "child_ages": [4, 8, 12] },
+    "engine_party": { "adults": 2, "child_ages": [4, 8, 12], "adult_from_age": null, "child_age_from": null, "child_age_to": null, "age_input_mode": "individual-ages", "classification_basis": "unpublished-cutoffs-exact-individual-party" },
+    "rates": [
+      { "plan": "Prepay Non-refundable", "eligibility": "public", "stay_amount": 2168.27, "meals": "Not independently established by inspected rate terms", "cancellation": "Full-cost prepayment; source allows no-charge cancellation before11:59PM hotel-local October1,2026, thereafter nonrefundable. Date changes allowed until11:59PMlocal three days before arrival; new rates may apply, lower-cost difference forfeited, higher-cost difference charged. This is not Hilton's cancellation policy." }
+    ],
+    "fee_basis": "Public rate card shows rounded1870USDtotal/374average before Show with taxes and fees, while holding policy states2168.27USDfull-cost prepayment. The exact displayed prepayment is the retained dated amount, not rounded base rate or an extra deposit added to it. Tax toggle did not change checked state on semantic check and subsequent inspectedAXclick; no tax-rate/component or all-fee-completeness inferred. Safe use listed for fee on exactroom modal, optional service/sofa/other mandatory charges unknown. Flexible rounded1962USDpretax card not used as comparable all-cost observation; packages excluded.",
+    "deposit_basis": "Holding policy states full2168.27USDprepayment on October2,2026 (or on confirmation if date past); generic terms say full cost within24hours, timing difference retained as source conflict rather than reconciled. Amount treated as displayed prepaid stay cost, not an additional stay fee. Incidentals/card-authorisation amount not established. No card/payment/reservation.",
+    "limitation": "Exact individual ages persisted, provider adult/child cutoff limits not published in inspected controls; null cutoffs are unknown, not age18assumption or permission to reclassify another party. Exact suite/date/public eligibility retained. Full prepayment amount establishes dated budget only, not final all-fee checkout, tax components, breakfast inclusion, future availability, seasonal range, safety or suitability. Sofa allocation/charge, seatingfor5, pool operation and museum-rest journey unresolved. Original category corpus retainsSept25date; separateSept30modal inspection recorded in research, not silently renewed. One initial differenttwo-bedroom modal discarded after identity check; no Select/Book/cart/contact/account/payment."
+  }
+]
