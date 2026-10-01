@@ -11,7 +11,7 @@ export function validateRoomPrices(observations, pack) {
   const identities = new Set();
   for (const o of observations) {
     const fail = message => errors.push(`${o?.record_id ?? "observation"}: ${message}`);
-    if (!o || o.schema_version !== 1 || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
+    if (!o || ![1, 2].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
       fail("Invalid date/class"); continue;
     }
     const record = pack.records.find(r => r.id === o.record_id);
@@ -22,6 +22,9 @@ export function validateRoomPrices(observations, pack) {
         (Date.parse(o.departure) - Date.parse(o.arrival)) / 86400000 !== o.nights) fail("Stay/night mismatch");
     if (!validParty(o.party)) { fail("Invalid family party"); continue; }
     const engine = o.engine_party;
+    if (o.schema_version === 2 && (!text(o.booking_category) || !text(o.configuration_basis) ||
+        !text(o.deposit_basis) || !["individual-ages", "provider-age-band-counts"].includes(engine?.age_input_mode)))
+      fail("Missing priced-configuration, age-input or deposit basis");
     if (!engine || !Number.isInteger(engine.adult_from_age) || engine.adult_from_age < 1 ||
         !Number.isInteger(engine.child_age_from) || engine.child_age_from < 0 ||
         engine.child_age_to !== engine.adult_from_age - 1 || engine.child_age_from > engine.child_age_to ||
@@ -36,6 +39,8 @@ export function validateRoomPrices(observations, pack) {
     if (!Array.isArray(o.rates) || !o.rates.length) { fail("Missing rate plans"); continue; }
     const plans = new Set();
     for (const rate of o.rates) {
+      if (o.schema_version === 2 && !["public", "membership-required"].includes(rate?.eligibility))
+        fail("Missing/unsupported rate eligibility");
       if (!rate || ![rate.plan, rate.meals, rate.cancellation].every(text) ||
           !Number.isFinite(rate.stay_amount) || rate.stay_amount <= 0 ||
           !Number.isSafeInteger(Math.round(rate.stay_amount * 100)) || plans.has(rate.plan)) fail("Invalid/duplicate rate plan");
@@ -55,16 +60,23 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     o.arrival === stay.arrival && o.departure === stay.departure && o.party.adults === party.adults &&
     sameAges(o.party.child_ages, party.child_ages)).sort((a, b) => b.checked_on.localeCompare(a.checked_on))[0];
   if (!observation) return null;
-  const rates = observation.rates.map(rate => ({ ...rate,
+  const rates = observation.rates.filter(rate => observation.schema_version === 1 || rate.eligibility === "public").map(rate => ({ ...rate,
     nightly_average: Math.round(rate.stay_amount * 100 / observation.nights) / 100 }));
+  if (!rates.length) return null;
   const age = (Date.parse(asOf) - Date.parse(observation.checked_on)) / 86400000;
   return { status: age > 14 ? "historical-dated-stay-samples" : "dated-stay-samples",
     currency: observation.currency, unit: "configuration/night", amount: null,
     amount_from: Math.min(...rates.map(rate => rate.nightly_average)), amount_to: Math.max(...rates.map(rate => rate.nightly_average)),
     observed_on: observation.checked_on, category: observation.category, configuration_count: 1,
-    party: observation.party, engine_party: observation.engine_party,
+    party: structuredClone(observation.party), engine_party: structuredClone(observation.engine_party),
+    booking_category: observation.booking_category ?? observation.category,
+    configuration_basis: observation.configuration_basis ?? "See source-surface and limitation context",
+    age_input_mode: observation.engine_party.age_input_mode ?? "not-recorded",
+    deposit_basis: observation.deposit_basis ?? "not-established",
+    excluded_rate_plans: observation.rates.filter(rate => observation.schema_version === 2 && rate.eligibility !== "public").map(rate => rate.plan),
     stay: { arrival: observation.arrival, departure: observation.departure, nights: observation.nights },
     rates, fee_basis: observation.fee_basis, source_url: observation.source_url, source_surface: observation.source_surface,
     evidence_class: "BOOKING_CHECK", derivation_class: "EDITORIAL_INTERPRETATION",
+    observation_limitation: observation.limitation,
     limitation: "Nightly equivalents of displayed rate plans for one dated stay, not a typical seasonal range, final fee-inclusive quote, future availability or hotel value ranking." };
 }

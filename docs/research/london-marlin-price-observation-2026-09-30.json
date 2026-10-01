@@ -1,0 +1,48 @@
+[
+  {
+    "schema_version": 2,
+    "action": "FT-RES-068",
+    "checked_on": "2026-09-30",
+    "source_url": "https://www.marlin.com/london-serviced-apartments/london-city-queen-street/rooms/two-bedroom-apartment/",
+    "source_surface": "Official Queen Street Two Bedroom Apartment date/guest search to reservations.marlin.com, room-details and public rate-details panels; session parameters not retained",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "marlin-queen-street-two-bedroom",
+    "category": "Two Bedroom Apartment",
+    "booking_category": "Two Bedroom Apartment: Apartment with 2 King Beds and 1 Sofa Bed",
+    "configuration_basis": "Priced booking category explicitly includes the sofa-bed configuration, not the four-place two-king base category. Public category page describes optional sofa at additional fee; do not add an invented separate sofa charge or assume final checkout.",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": { "adults": 2, "child_ages": [4, 8, 12] },
+    "engine_party": {
+      "adults": 2,
+      "child_ages": [4, 8, 12],
+      "adult_from_age": 13,
+      "child_age_from": 0,
+      "child_age_to": 12,
+      "age_input_mode": "provider-age-band-counts"
+    },
+    "rates": [
+      {
+        "plan": "Non-Refundable Rate",
+        "eligibility": "public",
+        "stay_amount": 1980.90,
+        "meals": "Meal inclusion not established; priced apartment has kitchen",
+        "cancellation": "No cancellation or modifications; deposit required"
+      },
+      {
+        "plan": "Book With Confidence",
+        "eligibility": "public",
+        "stay_amount": 2201.00,
+        "meals": "Meal inclusion not established; priced apartment has kitchen",
+        "cancellation": "Cancel by23:00 the day before arrival; later cancellation one night's charge including VAT; guaranteed with credit card"
+      }
+    ],
+    "fee_basis": "Both public result cards state including taxes and fees. Flexible detail displays1834.17GBP accommodation plus366.83GBP INC20PC VAT, total2201GBP. Optional services and final checkout not established; refundable authorisation is separate from displayed stay price.",
+    "deposit_basis": "Flexible plan requires card/PIN authorisation at check-in; other London locations GBP200 midweek/GBP500 weekend. This Sunday-Friday stay crosses the weekend wording; exact hold applied to this reservation not established. Authorisation is not an invented nonrefundable stay fee.",
+    "limitation": "Count-only engine accepts two adults and three children ages0-12; individual4/8/12ages were not entered. These task ages fall within that displayed band, not a confirmed exact-age booking. Two publicly displayed plans retained; Member Non-Refundable and Member Flexible rates excluded, no sign-in or membership assumed. Rate-card observation only; no BookNow/Select/cart/hold/account/contact/payment action, seasonal range, guaranteed availability or final quote."
+  }
+]

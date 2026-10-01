@@ -5,6 +5,7 @@ import { roomPriceForTask, validateRoomPrices } from "./family-room-price.mjs";
 
 const pack = JSON.parse(readFileSync(new URL("../docs/research/london-room-configurations-2026-09-30.json", import.meta.url)));
 const observations = JSON.parse(readFileSync(new URL("../docs/research/london-mitre-price-observation-2026-09-30.json", import.meta.url)));
+const marlin = JSON.parse(readFileSync(new URL("../docs/research/london-marlin-price-observation-2026-09-30.json", import.meta.url)));
 const price = (samples = observations, party = pack.scenario, date = "2026-09-30") => roomPriceForTask(samples, pack, "mitre-family-five", party, date);
 
 test("public exact-family samples validate and convert stay totals to nightly equivalents", () => {
@@ -59,4 +60,55 @@ test("all source records stay immutable and fee unknown is not converted to zero
   assert.equal(price().fee_total, undefined);
   assert.equal(pack.records[0].price.amount, null);
   assert.equal(pack.offer_observations[0].amount_from, 555);
+});
+
+test("sofa-category public rates carry VAT, deposits and count-only age-input basis", () => {
+  assert.deepEqual(validateRoomPrices(marlin, pack), []);
+  const p = roomPriceForTask(marlin, pack, "marlin-queen-street-two-bedroom", pack.scenario, "2026-09-30");
+  assert.equal(p.amount_from, 396.18);
+  assert.equal(p.amount_to, 440.2);
+  assert.match(p.booking_category, /1 Sofa Bed/);
+  assert.equal(p.age_input_mode, "provider-age-band-counts");
+  assert.equal(p.engine_party.adults, 2);
+  assert.match(p.fee_basis, /366.83GBP/);
+  assert.match(p.deposit_basis, /not established/);
+  assert.equal(p.rates.length, 2);
+  assert.match(p.observation_limitation, /individual4\/8\/12ages were not entered/);
+  assert.equal(price().age_input_mode, "not-recorded");
+  assert.equal(price().deposit_basis, "not-established");
+});
+test("membership-required plans cannot lower a public comparison", () => {
+  const samples = structuredClone(marlin);
+  samples[0].rates.unshift({ ...samples[0].rates[0], plan: "Member Non-Refundable", eligibility: "membership-required", stay_amount: 1870.85 });
+  const p = roomPriceForTask(samples, pack, samples[0].record_id, pack.scenario, "2026-09-30");
+  assert.equal(p.amount_from, 396.18);
+  assert.deepEqual(p.excluded_rate_plans, ["Member Non-Refundable"]);
+  samples[0].rates = samples[0].rates.filter(r => r.eligibility === "membership-required");
+  assert.equal(roomPriceForTask(samples, pack, samples[0].record_id, pack.scenario, "2026-09-30"), null);
+});
+test("schema2 fails closed on missing eligibility, configuration, deposit or age-input basis", () => {
+  for (const mutate of [
+    s => delete s[0].booking_category,
+    s => delete s[0].configuration_basis,
+    s => delete s[0].deposit_basis,
+    s => s[0].engine_party.age_input_mode = "exact-age-confirmed",
+    s => delete s[0].rates[0].eligibility,
+    s => s[0].rates[0].eligibility = "unverified-savings",
+    s => s[0].engine_party.adult_from_age = 12
+  ]) {
+    const s = structuredClone(marlin); mutate(s);
+    assert.ok(validateRoomPrices(s, pack).length);
+    assert.throws(() => roomPriceForTask(s, pack, s[0].record_id, pack.scenario, "2026-09-30"));
+  }
+});
+test("matched separate observations do not enrich other parties or mutate through returned basis", () => {
+  const samples = [...structuredClone(observations), ...structuredClone(marlin)];
+  const before = JSON.stringify(samples);
+  const p = roomPriceForTask(samples, pack, marlin[0].record_id, pack.scenario, "2026-09-30");
+  p.party.child_ages[0] = 17;
+  p.engine_party.child_ages[0] = 17;
+  assert.equal(JSON.stringify(samples), before);
+  assert.equal(roomPriceForTask(samples, pack, marlin[0].record_id, { adults: 2, child_ages: [4, 8, 13] }, "2026-09-30"), null);
+  assert.equal(roomPriceForTask(samples, pack, marlin[0].record_id, pack.scenario, "2026-09-29"), null);
+  assert.equal(roomPriceForTask(samples, pack, marlin[0].record_id, pack.scenario, "2026-10-15").status, "historical-dated-stay-samples");
 });

@@ -1,5 +1,15 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-RES-068 Marlin public-plan and age-input basis
+
+Herschel (01a0f546-d82f-7162-aadb-3bdb2e03ea73) cycle-one read-only PASS/no P0-P3 for exact10paths against de38956. Independent22focused/CLI/API/failclosed/returnedimmutability/public-plan filtering/age-input/conditional capacity/VAT-deposit arithmetic/state79snapshots/SEOprivacy/scope/whitespace pass. Official category independently inspected; dynamic booking panels and full309 remain operator evidence. No reviewer writes/mutations; six exclusions unchanged. Ready for tools/docs-only exact-path push, no Pages wait.
+
+Operator22focused/full309,state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/CLI/whitespace pass. Public engine/category/guest/plan/detail/VAT/deposit panels directly inspected; source limitation carried through, returned party clones immutable. No room BookNow/Select/cart/reservation. Different read-only exact10path review next; dynamic booking UI remains operator evidence.
+
+Exact10paths registered in current-cycle before edits. Public count-band engine/sofa-specific category/public versus member plans/VAT/refundable deposit evidence collected read-only; original category/Mitre/public/model/history unchanged. Focused/full QA and different read-only review required before tools/docs-only push; no reservation or London launch.
+
+FT-RES-067 immutable release: de38956c986864a61894401edf1ba0e7c1aba5fc, exact12reviewed paths/sole reviewed unpushed range/freshfetch/no divergence/HEADorigin0/0, six exclusions preserved. Erdos cycle-one PASS/full305 gates stand; no public change/Pages wait.
+
 ## 2026-09-30 - FT-RES-067 London rate-sample basis adapter
 
 Erdos (`01a0f53c-b613-7a20-99ed-a3fbc56c5c65`) cycle-one independent read-only PASS/no P0-P3. Exact12paths reviewed against e2e56a1; independent18focused plus CLI/API, date/age/party/stay/plan/unit/immutability/arithmetic/state/79snapshots/SEO31/privacy/source/scope/whitespace checks pass. Official room-page context independently inspected; dynamic booking rates, age-policy UI and cancellation remain operator-observed, and full305 remains operator QA. No reviewer writes or external mutations. Ready for exact-path tools/docs-only push, no Pages wait.

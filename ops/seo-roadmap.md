@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-30
 
+Current FT-RES-068: second London public-plan sofa-specific observation, provider age-band-only input and refundable-deposit context retained by reusable adapter. Exact10paths registered; no London launch/public changes. FT-RES-067 delivered de38956/PASS/full305,12exactpaths/noPages; original category/Mitre sample immutable.
+
 Current FT-RES-067: separate exact-family Mitre rate observation and reusable matching/age/date/nightly-basis adapter.12paths registered; preserve original category/public/history data, no London launch. Prior FT-RES-058 baseline delivered e2e56a1/PASS; current comparable budget remains incomplete across the candidate set.
 
 Current FT-RES-058: six source-dated London exact categories plus reusable age/party/extra-bed/connection screening. Exact11paths registered before edits; no London launch or unsupported GBP budget. Native/independent review then tools/docs-only push; precise quote/location/review/overlap/approval gates remain.
