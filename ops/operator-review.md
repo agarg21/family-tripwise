@@ -1,6 +1,18 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-IMP-048 NYC historical budget basis
+
+Final independent read-only review: Ptolemy (`01a0f513-7ef6-7a43-9f74-6b2106d8b0c4`) cycle-one PASS, noP0-P3. Independently passed focused18 plus17related tests,state0,79offline snapshots,staticSEO/whitespace/scope and all12band/non-price/historical-report checks. Full286/browser proxy are operator-run, not independently repeated; six exclusions unchanged. Exact13-path commit/push and production Pages verification remain release gates. Only immutable mechanical results appended after consensus.
+
+Implementation checkpoint: focused18/full286,state0,79offline GSC,SEO31zeroerrors/fivepriorwarnings,diff/generation scope,1280/390/320 proxy and horizontal scrolling pass. Original12bands/order and non-price outputs retained; historic baseline/repeat/legacy artifacts remain unchanged. Review all13paths plus original source pack and separate six exclusions; only read-only review PASS/PASS_WITH_P3 may proceed to Pages.
+
+Pre-edit scope expansion: add page-quality and weekly-review tests plus `ops/page-quality/2026-09-30-nyc-price-labels.json`, total13 paths. Two full-QA failures expose historical snapshots coupled to current editorial wording. Preserve all historical artifacts; require exact twelve NYC fee-context-only deltas, current report reproduction and retrospective weekly review from retained model, with current-model drift still failing closed.
+
+Ten exact paths registered before edits, six unrelated files excluded and five prior immutable release backfills preserved. Verified July25samples should not read as current family totals. Preserve all12bands and non-price page invariants; desktop/mobile proxy, native QA and different independent read-only reviewer required before Pages release.
+
 ## 2026-09-30 - FT-MAINT-009 weekly review workflow
+
+Mechanical release result: reviewed13changed paths within14registered scope pushed as `cb894275bd6901f411f1ea3484df78e36677c764` after fresh fetch/no divergence/sole-range scope/whitespace checks;HEAD/origin0/0. No public-site change or Pages wait; six unrelated files preserved. Weekly-triage-ready via existing operator dueOctober7; this immutable result stays local until the next substantive transaction.
 
 Cycle-three Bohr independent read-only PASS/noP0-P3. All threeP2s closed. Independently verified focused17/state0/79snapshots/SEO31zeroerrorsfivepriorwarnings/whitespace, null versus actual attempt identity, required-source coverage, deferred triage, immutable saved-repeat/model-date-basis/public-output invariants. Full284 is operator-run, not independently rerun under read-only restrictions. Registered14-path tools/docs scope ready for exact changed-path push; no new public claim/fact renewal. Weekly-triage-ready state follows this verdict; October7due unchanged.
 

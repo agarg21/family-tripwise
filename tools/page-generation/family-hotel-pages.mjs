@@ -1305,7 +1305,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["Every published studio and suite has a fully equipped kitchenette", "One- and two-bedroom layouts create clearer options for sleep separation and larger families"],
     familySetup: "Official inventory includes two-double studios, one-bedroom suites, and an 800-square-foot two-bedroom suite. Occupancy differs by category, so choose the named layout rather than assuming every room works for the same family.",
     reviewSignal: "The inspected sample favored the Upper West Side location, staff, kitchen usefulness, room size, and park or transit access. It also surfaced dated bathrooms or kitchenettes, occasional maintenance issues, and weaker value on expensive dates.",
-    priceNote: "A recent public standard-room example was about $331 total; one- and two-bedroom suites can move much higher.",
+    priceNote: "A standard-room sample checked July 25, 2026 showed about $331 for one room and one night; one- and two-bedroom suites were not priced on the same basis.",
     parentCheck: "Confirm the exact suite, registered occupancy, sofa-bed use, kitchen equipment, recent condition, and final total.",
     mapQuery: "Hotel Beacon New York"
   },
@@ -1317,7 +1317,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["In-suite kitchens and free hot breakfast reduce two recurring family logistics", "Hilton publishes connecting rooms, cribs, guest laundry, and a rooftop terrace"],
     familySetup: "Many rooms are studios rather than true one-bedroom suites. Confirm beds, registered occupancy, and whether a door between sleep and living space matters for the trip.",
     reviewSignal: "The inspected sample favored breakfast, staff, kitchen supplies, cleanliness, location, and practical room setup. Breakfast quality varied, and exact room size or separation still mattered.",
-    priceNote: "A recent public one-night example was about $226 total; two-queen, one-bedroom, and peak-date inventory can move higher.",
+    priceNote: "A sample checked July 25, 2026 showed about $226 for one room and one night; two-queen and one-bedroom categories were not priced on the same basis.",
     parentCheck: "Confirm studio versus one-bedroom layout, beds, occupancy, breakfast setup, kitchen equipment, and final total.",
     mapQuery: "Homewood Suites Midtown Manhattan Times Square South"
   },
@@ -1329,7 +1329,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["Public inventory includes compact two-double studios sleeping four", "Kitchenettes, free hot breakfast, on-site laundry, and high-floor views can simplify a short or longer stay"],
     familySetup: "Marriott lists all suites and kitchenettes with appliances, cookware, and utensils. Current public reviews conflict with generic kitchenette wording about whether every room has a stovetop, so verify the exact equipment.",
     reviewSignal: "The inspected sample favored views, breakfast, location, staff, and cleanliness. Small rooms and inconsistent kitchen equipment were the main conflicts.",
-    priceNote: "A recent public one-night example was about $227 total; two-double, view, and strong-demand dates can move higher.",
+    priceNote: "A sample checked July 25, 2026 showed about $227 for one room and one night; two-double and view categories were not priced on the same basis.",
     parentCheck: "Confirm exact beds and occupancy, room size, actual kitchenette equipment, breakfast timing, and final total.",
     mapQuery: "Residence Inn New York Manhattan Central Park"
   },
@@ -1341,7 +1341,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["The published two-bedroom has one queen, two twins, a sofa bed, and a kitchenette", "Official capacity is five guests plus one child age 12 or under"],
     familySetup: "The two-bedroom is about 470 square feet with a dining area and daily housekeeping. It is an older practical apartment-hotel product, not a full-service resort.",
     reviewSignal: "The inspected sample favored location, kitchenette, staff, practicality, and value. Dated condition and room-level cleanliness variation were the main conflicts.",
-    priceNote: "A recent public studio example was about $190 total; the two-bedroom family layout can be much higher.",
+    priceNote: "A studio sample checked July 25, 2026 showed about $190 for one room and one night; the two-bedroom family layout was not priced on the same basis.",
     parentCheck: "Confirm two-bedroom availability and occupancy, bed setup, kitchen equipment, elevator or room placement, and final total.",
     mapQuery: "Radio City Apartments New York"
   },
@@ -1353,7 +1353,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["Breakfast and an evening reception are included", "King-plus-sofa-bed studios can work for a compact family-of-three setup"],
     familySetup: "Do not assume the classic Embassy Suites two-room layout: current inventory is dominated by king rooms and king-plus-sofa-bed studios around 277-320 square feet. Hilton lists cribs among the amenities, while Expedia's public policy says cribs and rollaways are unavailable; treat the crib as a request that needs direct confirmation.",
     reviewSignal: "The inspected sample favored breakfast, evening snacks, location, staff, and some quiet-room experiences. Compact rooms, firm beds, the non-suite layout, parking confusion, and a mandatory nightly charge appeared as conflicts.",
-    priceNote: "A recent public one-night example was about $221 total; views, terraces, sofa-bed categories, and event dates can move higher.",
+    priceNote: "A sample checked July 25, 2026 showed about $221 for one room and one night; view, terrace, and sofa-bed categories were not priced on the same basis.",
     parentCheck: "Confirm exact room layout and occupancy, sofa bed, the crib-source conflict and rollaway policy, mandatory charge, and final total.",
     mapQuery: "Embassy Suites New York Manhattan Times Square"
   },
@@ -1365,7 +1365,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["Wyndham publishes family rooms with bunk beds", "Current public inventory exposes a premium family room with two large double beds, a bunk bed, and a sofa bed"],
     familySetup: "The family room is the reason to compare this property; a standard room is not equivalent. Current public inventory listed capacity up to eight, but the registered occupancy and every sleeping surface still need confirmation.",
     reviewSignal: "The inspected sample favored family-room capacity, room size, Penn Station access, and value. It also surfaced inconsistent cleanliness, shower control, sofa-bed comfort, breakfast, rooftop availability, and room condition.",
-    priceNote: "A recent standard-room example was about $205 total, while a verified family review reported about $654 on another date.",
+    priceNote: "A standard-room sample checked July 25, 2026 showed about $205 for one room and one night. A sampled guest review reported about $654 on another date; that anecdote is not a comparable family-room quote.",
     parentCheck: "Confirm the exact family room and occupancy, every sleeping surface, current rooftop status, bathroom condition, and final total.",
     mapQuery: "TRYP by Wyndham New York City Times Square Midtown"
   },
@@ -1377,7 +1377,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["Most one- and two-bedroom suites are 500-600 square feet with separate living and dining areas", "Kitchenettes and private balconies are published for most suites"],
     familySetup: "Two-bedroom suites add a sofa bed and two bathrooms. Confirm the exact suite because kitchenette, balcony, bed count, and privacy differ by category.",
     reviewSignal: "The inspected sample favored suite space, kitchenettes, balconies, staff, cleanliness, and Midtown East location. It contained few negative reports, so exact view, balcony, layout, and price remain more important unknowns than a broad negative theme.",
-    priceNote: "A recent public standard-room example was about $352 total; one- and two-bedroom suites can move substantially higher.",
+    priceNote: "A standard-room sample checked July 25, 2026 showed about $352 for one room and one night; one- and two-bedroom suites were not priced on the same basis.",
     parentCheck: "Confirm the exact suite plan, sofa bed, balcony, kitchenette, registered occupancy, and final total.",
     mapQuery: "The Kimberly Hotel New York"
   },
@@ -1389,7 +1389,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["Two-double rooms put Broadway and Times Square at the door", "Published Family Connector layouts combine a king room, a two-double room, and a sofa bed"],
     familySetup: "The connector is a different and much more expensive product from a standard room. Cribs are requestable; rollaways are not available, and two double beds may feel small for older children.",
     reviewSignal: "The inspected sample favored location, room cleanliness and space, staff, and theater convenience. Smaller double beds, breakfast cost, the mandatory destination charge, and very high parking cost were conflicts.",
-    priceNote: "A recent public standard-room example was about $375 total; connectors, views, events, and peak weekends can move higher.",
+    priceNote: "A standard-room sample checked July 25, 2026 showed about $375 for one room and one night; family connectors and view categories were not priced on the same basis.",
     parentCheck: "Confirm exact two-double or connector layout, occupancy, destination charge, breakfast plan, and final total.",
     mapQuery: "New York Marriott Marquis"
   },
@@ -1401,7 +1401,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["The all-suite hotel publishes separate living and sleeping areas starting around 430 square feet", "Two-double suites sleep four, with connecting rooms and cribs also listed"],
     familySetup: "A Downtown base can simplify Battery Park, Oculus, ferry, and Lower Manhattan days while adding travel to a Midtown-heavy itinerary.",
     reviewSignal: "The inspected sample favored room space, separate living areas, service, cleanliness, and the calmer Downtown base. Distance from Midtown-heavy plans and the high total were the main decision conflicts.",
-    priceNote: "A recent public one-night example was about $473 total; two-double, view, luxury, and connecting inventory can move higher.",
+    priceNote: "A sample checked July 25, 2026 showed about $473 for one room and one night; two-double, view, and connecting categories were not priced on the same basis.",
     parentCheck: "Confirm two-double versus king-and-sofa layout, pocket-door separation, occupancy, daily route, and final total.",
     mapQuery: "Conrad New York Downtown"
   },
@@ -1413,7 +1413,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["The 765-square-foot Palace Family Suite publishes capacity up to six", "A two-double family-suite version adds one king, two doubles, a sleeper sofa, and two bathrooms for up to eight"],
     familySetup: "The named family suite is a premium category. Standard connecting rooms are request and availability dependent and should not be treated as the same product.",
     reviewSignal: "The inspected sample favored central location, staff, comfort, views, and public spaces. One busy-period report noted short staffing and long front-desk lines; exact category and price dominate the decision.",
-    priceNote: "A recent public standard-room example was about $593 total; family suites and Towers inventory can be far higher.",
+    priceNote: "A standard-room sample checked July 25, 2026 showed about $593 for one room and one night; named family suites and Towers categories were not priced on the same basis.",
     parentCheck: "Confirm named family suite versus request-only connection, bed count, occupancy, two bathrooms, charges, and final total.",
     mapQuery: "Lotte New York Palace"
   },
@@ -1425,7 +1425,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["The published Dumbo 2 Beds room is about 325 square feet with two double beds for four", "Connecting suite options and a seasonal outdoor pool add different premium setups"],
     familySetup: "This is a Brooklyn-first location, not the easiest base for a Midtown-heavy first trip. Pool season, child access, and the exact two-bed or connecting category require a current check.",
     reviewSignal: "The inspected sample favored DUMBO location, views, design, staff, and room comfort. Thin walls or noise, dark rooms, technology issues, crowded rooftop service, condition variation, and high price were conflicts.",
-    priceNote: "A recent public one-night example was about $664 total; connecting layouts and strong-demand dates can move higher.",
+    priceNote: "A sample checked July 25, 2026 showed about $664 for one room and one night; connecting layouts were not priced on the same basis.",
     parentCheck: "Confirm two-double versus connecting layout, pool season and child access, Manhattan route, room brightness or noise, and final total.",
     mapQuery: "1 Hotel Brooklyn Bridge"
   },
@@ -1437,7 +1437,7 @@ const newYorkCityFamilyHotels = [
     strengths: ["The hotel publishes an indoor pool and rooms with two double beds plus one crib", "Downtown location can pair the Oculus, One World, Battery Park, and Brooklyn Bridge"],
     familySetup: "The common two-double configuration is published for two adults and one child or one adult and two children, not a default family of four. Optional rollaways are not available.",
     reviewSignal: "The recent sample favored service, cleanliness, Downtown location, room comfort, and pool. It was mostly positive and too thin for a broad consensus; current qualitative discussion also frames the pool as a lap-pool and spa environment rather than a water-play resort.",
-    priceNote: "A recent public one-night example was about $904 total; suites, two rooms, dining, and peak dates can move higher.",
+    priceNote: "A sample checked July 25, 2026 showed about $904 for one room and one night; suites and a second room were not priced on the same basis.",
     parentCheck: "Confirm occupancy for the exact room, crib request, no-rollaway rule, child pool hours and fit, and final total.",
     mapQuery: "Four Seasons Hotel New York Downtown"
   }
@@ -1464,18 +1464,19 @@ const newYorkCityHotelSources = [
 
 function newYorkCityFamilyHotelPage() {
   const hotels = newYorkCityFamilyHotels;
+  const priceBasis = "Historical USD/room/night planning ranges from July 25, 2026 checks, starting with two-adult room samples. Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded. Taxes and mandatory fees were included only where stated; parking, extras, and a second room are separate. Upper edges are editorial planning ceilings, not observed quotes. Price your exact family room and dates before booking.";
   const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Rough total/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Approx. USD/room/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>${esc(priceBasis)}</p></section>
           </article>`).join("\n");
 
   const rows = hotels.map((hotel) => `              <tr>
@@ -1490,7 +1491,7 @@ function newYorkCityFamilyHotelPage() {
   const faqs = [
     ["What is the best family hotel in New York City?", "There is no single best hotel for every family. Hotel Beacon, Homewood, Residence Inn, and Radio City Apartments solve different kitchen or occupancy needs. Embassy Suites adds breakfast, TRYP has a specific large-family room, Marriott Marquis puts Broadway at the door, Conrad creates separate Downtown living space, and Four Seasons is the indoor-pool luxury comparison."],
     ["Which New York City hotels on this list work for a family of five?", "Radio City Apartments publishes a two-bedroom layout for five guests plus one child age 12 or under. TRYP publishes a larger family room, while Lotte publishes named family suites for six or eight. Hotel Beacon also has larger suites. Confirm the exact category and registered occupancy before paying."],
-    ["Do these New York City hotel ranges include taxes and fees?", "The ranges start from public examples that displayed taxes and mandatory fees where stated, then widen for family room and date changes. Parking, food, optional purchases, and a second room remain outside the range, so compare the final total for the same dates and setup."]
+    ["Do these New York City hotel ranges include taxes and fees?", "These historical USD per-room, per-night ranges start with two-adult room samples checked July 25, 2026, not exact family-room quotes. Taxes and mandatory fees were included only where stated, so an all-in amount is not established for every band. Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded. Parking, food, extras, and a second room are separate. Upper edges are editorial planning ceilings, not observed quotes; compare a current final total for your party, room, and dates."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1501,7 +1502,7 @@ function newYorkCityFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "New York City family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; rough total per night ${hotel.priceRange}` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; historical USD/room/night planning range ${hotel.priceRange}, based on July 25, 2026 checks; not an exact family-room quote` }))
   };
 
   const body = `    <main>
@@ -1510,12 +1511,12 @@ function newYorkCityFamilyHotelPage() {
           <p class="eyebrow">New York City family hotels</p>
           <h1>Top Family Hotels in New York City: 12 Options by Trip Style</h1>
           ${contributorCredit()}
-          <p>Compare twelve New York City family hotels by room layout, published occupancy, kitchen or breakfast utility, location, approximate total nightly price, and themes from sampled online reviews.</p>
+          <p>Compare twelve New York City family hotels by room layout, published occupancy, kitchen or breakfast utility, location, historical per-room nightly budget ranges, and themes from sampled online reviews.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts, prices, and review sources checked:</strong> July 25, 2026</p>
-        <p>Nightly ranges are rough planning totals, not quotes. Compare the final total for your dates, room type, occupancy, parking, and cancellation terms.</p>
+        <p>${esc(priceBasis)}</p>
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
@@ -1533,7 +1534,7 @@ function newYorkCityFamilyHotelPage() {
           </div>
           <dl class="snapshot">
             <div><dt>Hotels covered</dt><dd>12 distinct options</dd></div>
-            <div><dt>Price format</dt><dd>Rough total/night, not a quote</dd></div>
+            <div><dt>Price format</dt><dd>Historical USD/room/night, not a quote</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
             <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
           </dl>
@@ -1553,10 +1554,10 @@ function newYorkCityFamilyHotelPage() {
       <section class="band">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="review-label">Ranges start with public total-price examples checked July 25, 2026; upper edges are editorial planning ceilings, not observed quotes. Parking and optional purchases are separate. Compare the final total for the same dates, occupancy, and room setup.</p>
+          <p class="review-label">${esc(priceBasis)}</p>
           <div class="comparison-scroll">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Rough total/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Approx. USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
@@ -1578,7 +1579,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section class="container page-section source-section">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages; most public slices did not expose a reliable family-only count, so treat the themes as general guest signals rather than parent consensus. Price ranges use volatile public examples rather than live booking quotes.</p>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages; most public slices did not expose a reliable family-only count, so treat the themes as general guest signals rather than parent consensus. Price ranges retain historical public room examples and editorial planning ceilings, not live booking quotes or priced family categories.</p>
         <ul class="source-list">
 ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">New York City photo source</a>, Jet Lowe / National Park Service, public domain.</li>
@@ -1591,7 +1592,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
 
   return pageShell({
     title: "Top Family Hotels in New York City: 12 Options by Trip Style",
-    description: "Compare 12 New York City family hotels by trip style, rough total nightly price, room layout, occupancy, kitchens or breakfast, location, and sampled online-review themes.",
+    description: "Compare 12 New York City family hotels by trip style, historical per-room nightly budget, room layout, occupancy, kitchens or breakfast, and sampled review themes.",
     canonical: "where-to-stay/new-york-city-family-hotels.html",
     nav: [["./new-york-city-with-kids.html", "Where to stay"], ["../things-to-do/new-york-city-with-kids.html", "Things to do"], ["../family-itinerary/new-york-city-with-kids.html", "Itinerary"]],
     body

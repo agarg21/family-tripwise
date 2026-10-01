@@ -47,14 +47,14 @@ test("publishes one canonical 12-hotel New York City comparison", () => {
   assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 12);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 12);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
-  assert.match(html, /Rough total\/night, not a quote/);
+  assert.match(html, /Historical USD\/room\/night, not a quote/);
   assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 25, 2026/);
   assert.match(html, /Do not assume the classic Embassy Suites two-room layout/);
   assert.match(html, /Hilton lists cribs among the amenities/);
   assert.doesNotMatch(html, /no-crib/i);
   assert.match(html, /not a default family of four/);
   assert.match(html, /most public slices did not expose a reliable family-only count/);
-  assert.match(html, /upper edges are editorial planning ceilings, not observed quotes/);
+  assert.match(html, /Upper edges are editorial planning ceilings, not observed quotes/);
   assert.match(html, /srcset="[^"]+width=640 640w,[^"]+width=1200 1200w"/);
   assert.match(html, /public domain via/);
   assert.doesNotMatch(html, /review[- ]signal/i);
@@ -72,8 +72,34 @@ test("keeps visible FAQ and schema aligned", () => {
   assert.equal(faq.mainEntity.length, 3);
   assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
   const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
-  for (const question of faq.mainEntity.map((item) => item.name)) {
-    assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
+  for (const question of faq.mainEntity) {
+    assert.ok(visible.includes(`<h3>${question.name}</h3><p>${question.acceptedAnswer.text}</p>`), `FAQ is not aligned: ${question.name}`);
+  }
+});
+
+test("preserves all twelve bands while making historical room and party limits adjacent", () => {
+  const html = readFileSync(pagePath, "utf8");
+  const bands = ["$330-$750+", "$230-$550+", "$230-$550+", "$190-$600+", "$220-$500+", "$210-$700+", "$350-$850+", "$380-$900+", "$470-$1,000+", "$590-$1,500+", "$660-$1,400+", "$900-$1,900+"];
+  const table = html.match(/<table class="comparison-table hotel-comparison">([\s\S]*?)<\/table>/)[1];
+  const rows = [...table.matchAll(/<tr>\s*<td>([\s\S]*?)<\/tr>/g)];
+  assert.equal(rows.length, bands.length);
+  rows.forEach((row, index) => assert.ok(row[0].includes(`<td>${bands[index]}</td>`)));
+  assert.match(table, /<th>Approx\. USD\/room\/night<\/th>/);
+  const cards = [...html.matchAll(/<article class="detail-card hotel-card">([\s\S]*?)<\/article>/g)];
+  cards.forEach((card, index) => {
+    assert.ok(card[1].includes(`<dd>${bands[index]}</dd>`));
+    assert.match(card[1], /sample checked July 25, 2026/);
+    assert.match(card[1], /two-adult room samples/);
+    assert.match(card[1], /Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded/);
+    assert.match(card[1], /Taxes and mandatory fees were included only where stated/);
+    assert.match(card[1], /a second room are separate/);
+  });
+  assert.equal(cards.length, 12);
+  assert.match(cards[5][1], /guest review reported about \$654 on another date; that anecdote is not a comparable family-room quote/);
+  assert.doesNotMatch(html, /A recent (?:public|standard-room)|rough total per night|rough planning totals|approximate total nightly price/i);
+  for (const item of schemas(html).find((block) => block["@type"] === "ItemList").itemListElement) {
+    assert.match(item.description, /historical USD\/room\/night planning range/);
+    assert.match(item.description, /July 25, 2026 checks; not an exact family-room quote/);
   }
 });
 

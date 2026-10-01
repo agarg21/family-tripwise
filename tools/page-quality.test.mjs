@@ -21,8 +21,25 @@ test("quality report is reproducible, bounded and never renews dates or publishe
   assert.ok(report.tasks.slice(0, 3).every((t) => t.priority === 1));
   assert.ok(report.pages.every((p) => p.state !== "PASS"));
   await validateCatalogPaths(records);
-  const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-legacy.json", import.meta.url), "utf8"));
+  const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-nyc-price-labels.json", import.meta.url), "utf8"));
   assert.deepEqual(saved, report);
+});
+
+test("NYC wording checkpoint preserves every historical field except twelve price contexts", async () => {
+  const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-legacy.json", import.meta.url), "utf8"));
+  const current = qualityReport(hotelEvidence(), { today: "2026-09-30" });
+  const changed = [];
+  for (const task of saved.tasks) {
+    const newer = current.tasks.find((item) => item.id === task.id);
+    if (task.id.startsWith("new-york-city-") && task.field === "price") {
+      assert.notEqual(task.retained_value.fee_basis, newer.retained_value.fee_basis);
+      assert.match(newer.retained_value.fee_basis, /sample checked July 25, 2026/);
+      changed.push(task.id);
+      task.retained_value.fee_basis = newer.retained_value.fee_basis;
+    }
+  }
+  assert.equal(changed.length, 12);
+  assert.deepEqual(saved, current);
 });
 
 test("review triggers distinguish missing, stale, conflicting and unnormalized evidence", () => {

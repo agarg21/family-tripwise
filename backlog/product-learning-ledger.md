@@ -4,7 +4,15 @@ Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and
 
 Last updated: 2026-09-30
 
+## LRN-071 / September30 / FT-IMP-048
+
+Independent immutable result: Ptolemy cycle-one read-only PASS/noP0-P3, original12bands/non-pricefacts/report dates verified; operator full286 and responsive proxy remain separate from independent focused/native checks. Reviewed commit and production verification next; no new learning unit or outcome claim.
+
+Family decision: a five-person NYC family needs rough nightly budget orientation without treating standard-room low samples as priced family categories. Hypothesis: `recent` and `Rough total/night` wording overstates July25 evidence. Evidence: July25 retained Expedia two-adult samples and editorial ceilings (`BOOKING_CHECK` plus `EDITORIAL_INTERPRETATION`); September30 source audit/generated-page 1280/390/320 walkthrough (`proxy-reviewed interface evidence`), reused September30GSC throughSeptember28 orientation only. Result: confirm the bounded trust defect and IMPLEMENT currency/per-room-night/date/party/fee/unknown-category context, retaining all12bands and all room/review facts. Focused18/full286 and source/output parity pass; independent review/release pending. Historical reports remain immutable; current-model editorial context has twelve explicitly checked deltas. Confidence high for provenance/values, medium for proxy clarity, unknown for actual satisfaction/ranking. Lesson: preserve historical budget evidence with basis, do not erase it or renew it by copy edits. Next falsification: comparable exact-family quotes, first-party conflict, independent task ambiguity or real user evidence. Full evidence: `docs/research/nyc-historical-price-basis-2026-09-30.md`.
+
 ## LRN-070 / September30 / FT-MAINT-009
+
+Mechanical release result: reviewed13changed paths within14scope pushed as `cb894275bd6901f411f1ea3484df78e36677c764`;HEAD/origin0/0 after fresh-fetch/sole-range scope checks. No site/Pages release; six exclusions preserved. Weekly triage first dueOctober7, original price/fact dates unchanged. Earlier push-pending labels are history; immutable backfill local for next substantive transaction.
 
 Mechanical final gate: Bohr cycle-three PASS/noP0-P3; focused17/native state/79snapshots/SEO31zeroerrorsfivepriorwarnings/scope/immutability controls independently pass. Full284 operator-run. Weekly-triage-ready dueOctober7; registered14scope/13changed-path tools/docs push pending, no public or original-date renewal.
 

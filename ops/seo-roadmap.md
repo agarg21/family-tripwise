@@ -2,6 +2,16 @@
 
 Last updated: 2026-09-30
 
+FT-IMP-048 independent PASS/noP0-P3 (Ptolemy,cycle1); exact13reviewed paths ready for commit/push/Pages verification. No current-rate or SEO effect claimed.
+
+FT-IMP-048 QA complete: focused18/full286 and desktop/mobile/source/report invariants pass. Only NYC public hotel HTML changes; independent read-only review and Pages verification remain before delivery. LRN-071 records the family budget distinction, not fresh prices or SEO improvement.
+
+FT-IMP-048 scope now13paths: add two historical/current report regression tests and new NYC wording-only quality checkpoint; retained baseline/repeat/legacy reports stay immutable and dates/values unchanged.
+
+Current overnight FT-IMP-048: correct NYC historical per-room price framing while preserving all12bands. Ten exact paths/evidence/acceptance/measurement/invariants registered before edits. User requested extended continuation; finish eligible work without routine input, but no additional destination launch/external authority inferred. Reviewed desktop/mobile release gate first, then shared price-basis/export and priority research. Prior FT-MAINT-009 completion backfills included.
+
+FT-MAINT-009 delivered tools/docs-only at `cb894275bd6901f411f1ea3484df78e36677c764`:13reviewed changed paths within14scope, fresh-fetch/no-divergence/sole-range checks,HEAD/origin0/0. Bohr cycle-three PASS,operatorfull284. Existing operator weekly dueOctober7; no site change/Pages wait, six exclusions preserved. Immutable release backfill local for next substantive transaction; no new price/fact/rank claim.
+
 FT-MAINT-009 review-clean: Bohr cycle-three PASS/noP0-P3, operatorfull284/focused17 and native state/snapshot/SEO/scope/immutability checks pass. Weekly-triage-ready via existing operator dueOctober7;13changed paths within registered14scope ready for tools/docs push. No public fact/price renewal; current quotes and atomic mapping remain next evidence gates.
 
 Current FT-MAINT-009:14paths registered for all-source repeat/denial/noise validation and reusable weekly review queue. Baseline remains immutable; original price/fact dates and public output unchanged. Existing operator weekly dueOctober7, no new scheduler. Native QA/independent review before tools/docs-only push. FT-STD-003 delivered at `3df352034d2cf87ab90f56f97a95ec68a49b1fce`, reviewed exact15-path push,HEAD/origin0/0, no site deployment.

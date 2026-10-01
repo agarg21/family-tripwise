@@ -79,10 +79,25 @@ test("saved audit evidence cannot be overwritten", async () => {
   await assert.rejects(requireNewOutput(new URL("../ops/evidence-audits/2026-09-30.json", import.meta.url)), /already exists/);
 });
 
-test("saved all-page repeat retains current shared model and deterministic review", async () => {
+test("saved all-page repeat reproduces its historical model and rejects later wording drift", async () => {
   const read = async (file) => JSON.parse(await readFile(new URL(`../ops/evidence-audits/${file}`, import.meta.url), "utf8"));
   const repeat = await read("2026-09-30-repeat.json"), baseline = await read("2026-09-30.json");
-  const report = reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls: baseline.pages.map((p) => p.url) });
+  const currentRecords = new Map(modelRecords().map((record) => [record.id, record]));
+  const retainedRecords = repeat.pages.flatMap((p) => p.records).filter((record) => currentRecords.has(record.id)).map(({ freshness, ...record }) => record);
+  const expectedUrls = baseline.pages.map((p) => p.url);
+  const report = reviewAudit(repeat, baseline, { expectedRecords: retainedRecords, expectedUrls });
+  const changed = [];
+  for (const record of retainedRecords) {
+    const currentRecord = currentRecords.get(record.id);
+    if (record.id.startsWith("new-york-city-") && record.field === "nightly-price") {
+      assert.notEqual(record.basis, currentRecord.basis);
+      assert.equal(record.verified_on, currentRecord.verified_on);
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
+      changed.push(record.id);
+    } else assert.deepEqual(record, currentRecord);
+  }
+  assert.equal(changed.length, 12);
+  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls }), /Model\/date\/basis drift: new-york-city-/);
   assert.deepEqual(report, await read("2026-09-30-review.json"));
   assert.equal(report.summary.canonical_pages, 31);
   assert.equal(report.summary.sources, 455);
