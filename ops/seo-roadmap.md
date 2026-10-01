@@ -2,6 +2,8 @@
 
 Last updated: 2026-10-01
 
+Current FT-RES-073: bounded Boston capacity/overlap follow-through under FT-RES-061. Six official audits/two comparison audits, three conditional reusable categories; no exact quote or complete review/rest/parking-fee layer. Capacity-only inventory already covered by current specialist; next exact ParkPlaza family-price/fifth-bed task and Copley modal, not another broad keyword report. Exact8paths registered/full-focused/different read-only review before docs/tools-only push; no Boston launch. FT-IMP-051 completed043c7c5tools/docs-only; Chicago unchanged.
+
 FT-IMP-051 final review: Galileo cycle-two PASS/no P0-P3,44focused/338isolated and339workingtree/native QA pass. Exact11paths ready tools/docs-only push; both output-alias and stale-condition P2s closed. No public destination/price renewal; Chicago remains unshipped.
 
 Current FT-IMP-051: reusable exact-family research CSV from existing validated capacity/price records. Preserve plan/approximate nightly budget/exact party/stay/age basis/fees/deposit/cancellation/conditions/source dates and unpriced rows; no separate price database, automatic source renewal, currency conversion or public destination launch. Exact11paths registered before edits; full/focused QA/different read-only review then tools/docs-only push. Pendry exact-category/count calendar supplied no usable Nov8-13quote; preserve unknown, not sold-out proof. FT-RES-072 delivered8f8a678/EulerPASS/328isolated329workingtree. Chicago preview held; earlier Current records are history.

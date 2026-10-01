@@ -2,7 +2,11 @@
 
 Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and production-verified at action commit `36034a723e6eb22a960200414e3c79a6a03b3155`, successful Pages run `36368504001`, matching marker and byte-identical Orlando HTML/two JS modules. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-09-30
+Last updated: 2026-10-01
+
+## LRN-084 / October1 / FT-RES-073
+
+Family decision: which Boston categories are worth pricing for two adults/children4,8,12/Nov8-13five nights with midday rest? Hypothesis rejected: family labels, two beds or a larger suite imply five-person fit and a capacity table alone offers new information gain. October1 OFFICIAL_PROPERTY_FACT across six property audits shows exact-category limits, FamilyDouble6-versus4 conflict, unknown Marriott modal capacity and paid guarantees distinct from requests; COMPETITOR_STRUCTURE audits show a current party/capacity table already exists. Result: three conditional reusable records, explicit null USD prices, no launch; next same-task public-price/fifth-bed inspection on ParkPlaza and Copley modal rather than another keyword list. Confidence high in source/schema limits, medium opportunity, unknown budget/booking/rank/user satisfaction. Reusable lesson: preserve contradictory/unknown category evidence outside automatic recommendations and require budget/rest value beyond capacity inventory. Next falsification: clarified categories, maintained exact-family quotes, or competing completion of the combined task. Dated sources, task, exclusions and boundaries: docs/research/boston-room-budget-gates-2026-10-01.md. Proxy-reviewed, not user-tested; no public changes.
 
 ## LRN-083 / September30 / FT-IMP-051
 

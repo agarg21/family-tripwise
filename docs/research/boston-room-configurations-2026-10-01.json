@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-073",
+  "destination": "Boston",
+  "checked_on": "2026-10-01",
+  "refresh_days": 30,
+  "evidence_scope": "Partial three-category capacity screen from six property audits. No exact-party prices, complete fee/parking inventory, verified rest routes, booking acceptance or Boston publication approval.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [4, 8, 12],
+    "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"},
+    "preferences": ["separate rest space preferred", "Aquarium and Children's Museum on separate days", "midday rest", "no car, compare optional parking separately", "kitchen preferred"],
+    "budget": null
+  },
+  "sources": {
+    "park": {"url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/rooms/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
+    "four": {"url": "https://www.fourseasons.com/boston/accommodations/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
+    "langham": {"url": "https://www.langhamhotels.com/en/the-langham/boston/stay/suites/two-bedroom-suite/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"}
+  },
+  "records": [
+    {
+      "id": "boston-park-plaza-deluxe-double", "hotel": "Hilton Boston Park Plaza", "category": "2 Double Beds Deluxe Guestroom", "source_id": "park",
+      "sleeping_setup": "Two double beds; fifth sleeping place not established.",
+      "kitchen": "not-established", "connection": "not-applicable",
+      "configurations": [{"maximum": 5, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": ["Confirm fifth sleeping place, any rollaway and charge"], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Exact Deluxe card publishes sleeps5; standard Double and king-sofa suites publish4."}],
+      "checks": ["Check exact individual ages and public plan for Nov8-13", "Collect nightly/stay amount, tax, mandatory fee, cancellation, parking and deposit basis", "Verify nap-return journey and rest-space separation"],
+      "conflicts": ["Garden Terrace has a kitchen but capacity3; do not inherit its kitchen or infer five-person fit from suite size."],
+      "price": {"currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Loading-price labels are not quotes; exact family/stay/rate/tax/fee basis missing"]}
+    },
+    {
+      "id": "boston-four-seasons-plaza", "hotel": "Four Seasons Hotel Boston", "category": "Plaza Suite", "source_id": "four",
+      "sleeping_setup": "King bed, sofa bed, crib on request; three older-child bedding allocation unresolved.",
+      "kitchen": "not-established", "connection": "not-applicable",
+      "configurations": [{"maximum": 6, "max_adults": 2, "max_children": 4, "infant_extension": null, "conditions": ["Confirm three older-child sleeping places; do not count a crib for ages4/8/12"], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Plaza category publishes2adults/4children. Alternative4adults configuration does not extend adult maximum of this configuration."}],
+      "checks": ["Collect exact category/party/date public rate through permitted read-only workflow; no contact is authorized", "Verify extra bedding, meals, taxes/fees, cancellation, deposit and optional parking", "Verify actual museum-rest journey"],
+      "conflicts": [],
+      "price": {"currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["No exact quote observed; phone-to-book prompt is not a rate or authority to call"]}
+    },
+    {
+      "id": "boston-langham-club-two-bedroom", "hotel": "The Langham Boston", "category": "Club Two Bedroom Suite", "source_id": "langham",
+      "sleeping_setup": "King-bed label and queen-sofa parlor; complete bedroom bed list unresolved.",
+      "kitchen": "not-established", "connection": "not-applicable",
+      "configurations": [{"maximum": 6, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": ["Confirm complete bed allocation in the named two-bedroom category"], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Exact suite detail publishes6guests; not transferred from conflicting FamilyDouble pages."}],
+      "checks": ["Collect same-task public rate and age classifications", "In-room dining Private Kitchen wording does not establish guest cooking facilities", "Verify club child access/meals, fees, deposit, cancellation, parking and rest journey"],
+      "conflicts": [],
+      "price": {"currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["No exact-party/date public price inspected; no offer or member discount inferred"]}
+    }
+  ],
+  "offer_observations": []
+}

@@ -10,6 +10,32 @@ const clone = () => structuredClone(pack);
 const row = (rows, id) => rows.find(r => r.id === id);
 const historicalScreen = (p, party = p.scenario, date = "2026-09-30") => screenRoomPack(p, party, date);
 
+test("Boston partial capacity corpus is conditional and does not fabricate budget or omitted categories", () => {
+  const path = fileURLToPath(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url));
+  const boston = JSON.parse(readFileSync(path, "utf8"));
+  const before = JSON.stringify(boston);
+  assert.deepEqual(validateRoomPack(boston), []);
+  const rows = screenRoomPack(boston, boston.scenario, "2026-10-01");
+  assert.equal(rows.length, 3);
+  assert.ok(rows.every(r => r.screening === "CONDITIONAL_PUBLISHED_CAPACITY"));
+  assert.ok(rows.every(r => r.price.amount === null && r.price.currency === "USD" && r.kitchen === "not-established"));
+  assert.ok(rows.every(r => r.conditions.length > 0 && r.checked_on === "2026-10-01"));
+  assert.match(row(rows, "boston-park-plaza-deluxe-double").conditions[0], /fifth sleeping place/);
+  assert.match(row(rows, "boston-four-seasons-plaza").conditions[0], /crib/);
+  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [fileURLToPath(new URL("./family-room-task.mjs", import.meta.url)), path, "2026-10-01"], {encoding:"utf8"})), rows);
+  assert.equal(JSON.stringify(boston), before);
+});
+
+test("Boston does not merge adult-only and child configurations or silently renew old sources", () => {
+  const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
+  const six = screenRoomPack(boston, {adults:2,child_ages:[4,8,12,16]}, "2026-10-01");
+  assert.equal(row(six, "boston-park-plaza-deluxe-double").screening, "OUTSIDE_PUBLISHED_LIMIT");
+  assert.equal(row(six, "boston-four-seasons-plaza").screening, "CONDITIONAL_PUBLISHED_CAPACITY");
+  assert.equal(row(screenRoomPack(boston, {adults:3,child_ages:[4,8]}, "2026-10-01"), "boston-four-seasons-plaza").screening, "OUTSIDE_PUBLISHED_LIMIT");
+  assert.ok(screenRoomPack(boston, {adults:2,child_ages:[1,4,8,12,16]}, "2026-10-01").every(r => r.screening === "OUTSIDE_PUBLISHED_LIMIT"));
+  assert.ok(screenRoomPack(boston, boston.scenario, "2026-11-01").every(r => r.screening === "RECHECK_SOURCE" && r.checked_on === "2026-10-01"));
+});
+
 test("six current official categories validate with exact price gaps", () => {
   assert.deepEqual(validateRoomPack(pack), []);
   assert.equal(pack.records.length, 6);

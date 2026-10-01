@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-10-01 - FT-RES-073 Boston capacity and overlap
+
+Kepler (01a0f5af-07b1-7d10-88f8-bfeebbef306e) cycle-one independent read-only PASS/no P0-P3 for all eight paths against043c7c5. Independent46focused/340isolated/512additional-task-and-CSV assertions, state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/whitespace pass. All557repository-file hashes/HEAD/index/refs/status preserved, including six exclusions/five heldChicago paths. Current official and comparison sources checked; no booking acceptance, quote, rest-route validation, controlled ranking or launch approval claimed. Operator46focused/341workingtree/native pass. Fresh production marker ebaccf241c15fc7c3171708cf3cae775884f98c6/run36802947632 and NYC HTML/CSV/SanAntonio HTML exact parity; productionSEO31zeroerrors-fiveprioradvisories. Exact8reviewed paths ready tools/docs-only push, no public deployment.
+
+Exact8paths registered before edits. Six official audits/two live comparison pages, three conditional validated categories, null USD prices and named budget/rest task; not complete six-property corpus or city launch. Native focused/full QA and different independent read-only review required before tools/docs-only push. Original public/model/packs/samples/six exclusions/five heldChicago files unchanged. FT-IMP-051 exact11paths pushed043c7c591e01b2c667681232b8159bc2abc6824d/Galileocycle2PASS/338isolated339workingtree, freshfetch/sole reviewed range/no divergence/HEADorigin0/0.
+
 ## 2026-09-30 - FT-IMP-051 exact-task research comparison export
 
 October1 final result: Galileo cycle-two PASS/no P0-P3, both prior P2s closed. Independent44focused/338isolated/718CSV-data assertions/26alias-option checks/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories pass. All555repository files/HEAD/index/exclusions/heldChicago unchanged. Operator44focused/339workingtree/native pass; explicit canonical alias rejection and dated original configuration retention verified. Exact11paths ready tools/docs-only push; dynamic Pendry evidence remains operator-attributed.
