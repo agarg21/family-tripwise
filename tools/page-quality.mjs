@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { hotelEvidence, validateHotelEvidence, validDate } from "./hotel-evidence.mjs";
-import { ageState, easternDate } from "./evidence-audit.mjs";
+import { ageState, easternDate, requireNewOutput } from "./evidence-audit.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 
@@ -68,10 +68,11 @@ async function main() {
     else if (args[i] === "--output" && args[i + 1]) output = args[++i];
     else throw new Error(`Unknown or incomplete option: ${args[i]}`);
   }
+  if (output) await requireNewOutput(resolve(output));
   const records = hotelEvidence();
   await validateCatalogPaths(records);
   const report = qualityReport(records, { today });
-  if (output) { const path = resolve(output); await mkdir(dirname(path), { recursive: true }); await writeFile(path, JSON.stringify(report, null, 2) + "\n"); }
+  if (output) { const path = resolve(output); await mkdir(dirname(path), { recursive: true }); await writeFile(path, JSON.stringify(report, null, 2) + "\n", { flag: "wx" }); }
   console.log(JSON.stringify({ as_of: today, ...report.summary, output: output ?? null, public_changes: false }, null, 2));
 }
 

@@ -108,6 +108,8 @@ The command remains the stable entry point. Its page data and render/update logi
 
 Hotel building and maintenance share a versioned adapter and offline quality queue. Run `node tools/page-quality.mjs`, or add `--date YYYY-MM-DD --output ops/page-quality/YYYY-MM-DD.json` for a saved deterministic report. It reads existing models, preserves prices and flags evidence/basis gaps without editing pages. Workflow and remaining migrations: `docs/plan/page-quality-standard.md`. The all-page source audit reuses these records; neither tool grants publication approval.
 
+Activity maintenance starts with the twelve maintained San Diego logistics records: `node tools/activity-quality.mjs`. To save a dated report, use `--date YYYY-MM-DD --output ops/page-quality/YYYY-MM-DD-activities.json`. Both hotel/activity quality commands reject existing output paths. The pilot preserves mixed source-model dates, qualitative costs, duration/weather estimates and unconfirmed access/transport prompts; it does not fetch sources, establish current prices or change public pages. Five other activity-page models remain unmapped. Use this beside the hotel check in the existing weekly operator, not another automation. Boundaries: `docs/plan/activity-evidence-standard.md`.
+
 - `ops/seo-roadmap.json`: machine-readable action and release state.
 - `ops/current-cycle.md`: concise current operating checkpoint.
 - `backlog/community-answer-drafts.json`: validated community-answer drafts and user review decisions; posting is always disabled.

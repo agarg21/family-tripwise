@@ -1,0 +1,1857 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-09-30",
+  "scope": "activity-logistics-pilot-only",
+  "automatic_fact_renewal": false,
+  "automatic_publication": false,
+  "summary": {
+    "mapped_pages": 1,
+    "attractions": 12,
+    "fields": 72,
+    "unpriced_exact_visit_budgets": 12,
+    "unmapped_activity_pages": 5
+  },
+  "mapped_pages": [
+    "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+  ],
+  "unmapped_pages": [
+    "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+    "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+    "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+    "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+    "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html"
+  ],
+  "tasks": [
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-ticket_cost",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": {
+        "planning_label": "Free park; museum costs vary",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-ticket_cost",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": {
+        "planning_label": "Mid to high, depending on rides",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-ticket_cost",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": {
+        "planning_label": "Mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-ticket_cost",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": {
+        "planning_label": "Low to mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-ticket_cost",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": {
+        "planning_label": "Mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-ticket_cost",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": {
+        "planning_label": "Free or low cost",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-ticket_cost",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-ticket_cost",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": {
+        "planning_label": "Free or low cost",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-ticket_cost",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-ticket_cost",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-ticket_cost",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": {
+        "planning_label": "High paid day",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-ticket_cost",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "ticket_cost",
+      "priority": 1,
+      "reasons": [
+        "exact-family-ticket-basis-unknown",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-14"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": {
+        "planning_label": "Mid paid",
+        "amount": null,
+        "currency": null,
+        "unit": null,
+        "party_basis": null,
+        "visit_basis": null
+      },
+      "limitation": "Qualitative budget orientation, not a dated exact-family ticket quote or zero total; parking, transport, meals and optional purchases unpriced.",
+      "next_step": "Choose exact visit date, ages, ticket plan and fees before quoting; preserve qualitative orientation meanwhile."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-access_check",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "Choose a museum, then check its hours, tickets, and paid parking",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-transport_check",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "Use the park map or transit plan; museum hours vary.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-venue",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": {
+        "area": "Balboa Park",
+        "setting": "Public park plus indoor museums"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-access_check",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "Check ride tickets, hours, closures, and height rules",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-transport_check",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "Plan for Mission Beach parking and set a ride or spending limit.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-venue",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": {
+        "area": "Mission Beach",
+        "setting": "Mixed outdoor and indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-access_check",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "Check dated tickets, daily schedule, and closing time",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-transport_check",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "Limited free three-hour parking; compare transit from your base.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-venue",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": {
+        "area": "La Jolla",
+        "setting": "Mostly indoor with outdoor terrace"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-access_check",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "Check route, schedule, one-way tickets, and capacity",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-transport_check",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "Choose downtown and return terminals before routing the day.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-venue",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": {
+        "area": "Downtown and Coronado",
+        "setting": "Ferry plus outdoor waterfront"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-access_check",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "Check admission, documentary schedule, and accessibility mornings",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-transport_check",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "Allow time from Balboa Park parking or transit to a timed film.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-venue",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": {
+        "area": "Balboa Park",
+        "setting": "Indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-access_check",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "No ticket; check current beach and water status",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-transport_check",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "Choose the exact coast segment; parking availability varies.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-venue",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": {
+        "area": "La Jolla",
+        "setting": "Outdoor coast"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-access_check",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Check ticket, dated hours, closures, and height rules",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-transport_check",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Treat Carlsbad as its own day and check parking before leaving.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-venue",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": {
+        "area": "Carlsbad",
+        "setting": "Mostly outdoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-access_check",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "No ticket; check beach and bay status for the exact stop",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-transport_check",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "Choose the exact swim or play area before comparing parking.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-venue",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": {
+        "area": "Mission Bay",
+        "setting": "Outdoor beach and park"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-access_check",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "Ticket, dated hours, parking, and accessibility map",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-access_check",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Check ticket, dated hours, parking, map, and optional safaris",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-transport_check",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Compare the Escondido drive, parking, and steep-grade access.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-venue",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "area": "Escondido",
+        "setting": "Outdoor wildlife park"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-transport_check",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "Compare paid parking with Route 7 or 215 from your base.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-venue",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": {
+        "area": "Balboa Park",
+        "setting": "Mostly outdoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-access_check",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Check ticket, dated hours, showtimes, closures, and height rules",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-transport_check",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Check parking and use the official map or app for the day.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-venue",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": {
+        "area": "Mission Bay",
+        "setting": "Mixed outdoor and indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-access_check",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "access_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "Check current open days, hours, admission, and calendar",
+      "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-transport_check",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "transport_check",
+      "priority": 2,
+      "reasons": [
+        "verification-prompt-not-confirmed-fact",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "VERIFICATION_PROMPT",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "Confirm downtown parking or transit for the chosen day.",
+      "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-venue",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "venue",
+      "priority": 2,
+      "reasons": [
+        "mixed-claim-provenance-needs-split",
+        "retained-source-model-review-due"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "MIXED_RESEARCH",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": {
+        "area": "Downtown",
+        "setting": "Indoor"
+      },
+      "limitation": "Retained official-source context and editorial wording; atomic facts/dates require separate reconciliation.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-duration",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-balboa-park-museums-weather",
+      "name": "Balboa Park museums",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://balboapark.org/plan-your-visit/"
+      ],
+      "retained_value": "Strong indoor backup after selecting a museum",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-duration",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-belmont-park-weather",
+      "name": "Belmont Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.belmontpark.com/park-hours"
+      ],
+      "retained_value": "Weather dependent with some indoor options",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-duration",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "1.5-2 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-birch-aquarium-weather",
+      "name": "Birch Aquarium",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://aquarium.ucsd.edu/plan-your-visit"
+      ],
+      "retained_value": "Good partial weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-duration",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "2-3 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-coronado-ferry-waterfront-weather",
+      "name": "Coronado ferry/waterfront",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.flagshipsd.com/cruises/flagship-ferry"
+      ],
+      "retained_value": "Weather and operations dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-duration",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-fleet-science-center-weather",
+      "name": "Fleet Science Center",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.fleetscience.org/hours-admission"
+      ],
+      "retained_value": "Strong weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-duration",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "2-4 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-la-jolla-cove-weather",
+      "name": "La Jolla Cove",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/lifeguards/beaches/cove"
+      ],
+      "retained_value": "Weather and ocean dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-duration",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Full day",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-legoland-california-weather",
+      "name": "LEGOLAND California",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
+      ],
+      "retained_value": "Weather dependent; water park is seasonal",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-duration",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "2-3 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-mission-bay-beach-morning-weather",
+      "name": "Mission Bay beach morning",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
+      ],
+      "retained_value": "Weather and water dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-duration",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "4-6 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-duration",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Full day",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-safari-park-weather",
+      "name": "San Diego Zoo Safari Park",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://sdzsafaripark.org/plan-your-visit"
+      ],
+      "retained_value": "Heat and weather dependent",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-san-diego-zoo-weather",
+      "name": "San Diego Zoo",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://zoo.sandiegozoo.org/plan-your-visit"
+      ],
+      "retained_value": "Outdoor anchor; limited weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-duration",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Full day",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-seaworld-san-diego-weather",
+      "name": "SeaWorld San Diego",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://seaworld.com/san-diego/park-info/"
+      ],
+      "retained_value": "Mostly outdoor day with limited indoor backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-duration",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "duration",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "2-3 hours",
+      "limitation": "Unmeasured planning estimate; child pace, queues and selected stops remain unknown.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    },
+    {
+      "id": "things-to-do-san-diego-with-kids-the-new-children-s-museum-weather",
+      "name": "The New Children's Museum",
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "field": "weather",
+      "priority": 3,
+      "reasons": [
+        "editorial-estimate-not-measured"
+      ],
+      "freshness": {
+        "state": "review-due",
+        "age_days": 61,
+        "due_on": "2026-08-30"
+      },
+      "retained_on": "2026-07-31",
+      "evidence_class": "EDITORIAL_ESTIMATE",
+      "source_urls": [
+        "https://thinkplaycreate.org/visit/"
+      ],
+      "retained_value": "Strong weather backup",
+      "limitation": "Planning interpretation, not verified weather suitability or safety assurance.",
+      "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
+    }
+  ],
+  "limitations": [
+    "Retained source-model dates are not individual official-fact verification dates.",
+    "Qualitative cost and duration/weather estimates remain interpretations; unknown numeric budget is not zero.",
+    "Access/transport prompts do not establish current routes, stroller practicality, availability or safety.",
+    "Only logisticsIndex entries are mapped; other activity pages, age routing, stay areas and itineraries remain separate contracts.",
+    "Retrieval/hash success never renews these dates; native validity is not publishing authority."
+  ]
+}

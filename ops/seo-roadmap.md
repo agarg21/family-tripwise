@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-30
 
+Current FT-STD-004:12SanDiego activity logistics/72field pilot and immutable quality reports, exact15paths registered in plan before tools edits. Mixed model dates/qualitative costs/estimates/prompts retained, five activity models unmapped; no public/model/fact renewal. Focused12/full320 workingtree green; isolated/native/different read-only tools-only gates next. FT-IMP-050 seven hold docs pushedb6ba823; five sitecode/CSVfiles still local pending normal preview-access and visual/download/release gates.
+
 FT-IMP-050 current boundary: native17related/full313 pass; code/CSV local only. Actual localhost4173 browser preview denial net::ERR_BLOCKED_BY_CLIENT leaves visual/download gates uncompleted.13allowed paths including narrow needs-user record; no unchanged retry/bypass/deploy or completed LRN-077. Different read-only static review then independent eligible tools/research; release waits for normal access resolution.
 
 Current FT-IMP-050: same-record Chicago comparison anchor and portable CSV with ten historical nightly bands, room/review/source/pool caveats intact. Exact12paths registered; focused/full/responsive/download/different read-only review and verified Pages before delivery. October11 price recheck remains. FT-RES-069 delivered tools/docs-only2ea2d54/MenciusPASS/full312; London launch gates unchanged. Older Current checkpoints below are history.

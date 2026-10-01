@@ -2,7 +2,16 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { qualityReport, validateCatalogPaths } from "./page-quality.mjs";
+import { execFileSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { hotelEvidence } from "./hotel-evidence.mjs";
+
+test("hotel quality CLI cannot overwrite a retained evidence checkpoint", async () => {
+  const retained = new URL("../ops/page-quality/2026-09-30-nyc-price-labels.json", import.meta.url);
+  const before = await readFile(retained, "utf8");
+  assert.throws(() => execFileSync(process.execPath, [fileURLToPath(new URL("./page-quality.mjs", import.meta.url)), "--date", "2026-10-07", "--output", fileURLToPath(retained)], { stdio: "pipe" }), /already exists/);
+  assert.equal(await readFile(retained, "utf8"), before);
+});
 
 test("quality report is reproducible, bounded and never renews dates or publishes", async () => {
   const records = hotelEvidence();
