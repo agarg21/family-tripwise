@@ -1,5 +1,15 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-IMP-051 exact-task research comparison export
+
+October1 final result: Galileo cycle-two PASS/no P0-P3, both prior P2s closed. Independent44focused/338isolated/718CSV-data assertions/26alias-option checks/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories pass. All555repository files/HEAD/index/exclusions/heldChicago unchanged. Operator44focused/339workingtree/native pass; explicit canonical alias rejection and dated original configuration retention verified. Exact11paths ready tools/docs-only push; dynamic Pendry evidence remains operator-attributed.
+
+Galileo (01a0f59b-085c-73a3-a19d-45601d2b5907) cycle-one FAIL with twoP2: lexical public-directory guard allowed symlink aliases; stale screening replaced original bed/connection conditions with recheck text. Fixes resolve nearest real ancestor before output creation and recheck before write, plus an explicit dated/not-revalidated original-configuration column and regressions. Reviewer independently42focused/336isolated/full/state0/79snapshots/SEO31zero5prior/296additionalCSV assertions; all555repo files/HEAD/index/exclusions/Chicago unchanged. Re-review required; no commit or push.
+
+Eleven paths registered before edits. Same validated task/price inputs feed public-plan CSV rows with retained nightly/unit/currency/party/date/fee/deposit/cancellation/age/condition/source uncertainty. Pendry calendar/count observation remains operator-attributed no-quote, not sold-out/cutoff proof; no substituted starting rate. Focused/full/native and different independent read-only review required before tools/docs-only push. Original evidence/public/model/observation windows and six exclusions/five heldChicago files unchanged.
+
+FT-RES-072 immutable completion: 8f8a678216b848d326db90ed39eedd19c8204de7, exact11reviewedpaths/EulerPASS/328isolated329workingtree/34focused/native, freshfetch/no divergence/sole reviewed range/push/HEADorigin0/0. Tools/docs-only, no DC publication or Chicago release.
+
 ## 2026-09-30 - FT-RES-072 Residence budget and unpublished age cutoffs
 
 Euler (01a0f58e-27e5-7201-8dc2-a2bbde1c4b83) cycle-one independent read-only PASS/no P0-P3. Independently passed328fullisolated/34focused/145legacy-schema parity/23additional schema3guards/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories. Original evidence/public/model/dirty exclusions/heldChicago and HEAD/index/repository bytes preserved. Official room-page context checked; dynamic modal/rate observations remain operator-attributed, not independently replayed. Operator329workingtree/34focused/native pass. Exact11paths ready tools/docs-only push; no public deployment.

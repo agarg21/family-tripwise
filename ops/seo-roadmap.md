@@ -1,6 +1,10 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-09-30
+Last updated: 2026-10-01
+
+FT-IMP-051 final review: Galileo cycle-two PASS/no P0-P3,44focused/338isolated and339workingtree/native QA pass. Exact11paths ready tools/docs-only push; both output-alias and stale-condition P2s closed. No public destination/price renewal; Chicago remains unshipped.
+
+Current FT-IMP-051: reusable exact-family research CSV from existing validated capacity/price records. Preserve plan/approximate nightly budget/exact party/stay/age basis/fees/deposit/cancellation/conditions/source dates and unpriced rows; no separate price database, automatic source renewal, currency conversion or public destination launch. Exact11paths registered before edits; full/focused QA/different read-only review then tools/docs-only push. Pendry exact-category/count calendar supplied no usable Nov8-13quote; preserve unknown, not sold-out proof. FT-RES-072 delivered8f8a678/EulerPASS/328isolated329workingtree. Chicago preview held; earlier Current records are history.
 
 Current FT-RES-072: third dated DC room budget and strict schema3 unknown provider cutoff matching. ResidenceONQQmaximum6/fullkitchen/table4/individual4-8-12ages persisted; nonmember2168.27USDprepayment/433.65nightlyequivalent, not extra deposit or allfee/tax-breakdown promise. Preserve taxdisplay nonresponse/paymenttiming conflict and original categorySept25date. Exact11paths registered/native34focused green/full/different read-only review then tools/docs-only push; FTRES059fullcorpus/rest/review/overlap/publication gates remain. FTRES071deliveredf40398b/TuringPASS/full324isolated325workingtree; Chicago unshipped. Earlier Current checkpoints are history.
 

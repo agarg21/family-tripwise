@@ -6,6 +6,8 @@ State: operator policy; reusable all-page source-audit tooling implemented, pric
 
 Last updated: 2026-09-30
 
+FT-IMP-051 adds an offline exact-family CSV research/review export from the same validated capacity/price inputs, without another price database. Each public plan keeps its nightly equivalent, currency, exact party/stay, source dates, bed conditions, fees/deposit/cancellation and unknowns; unpriced categories remain rows, member rates/starting offers remain excluded. No automatic collection, date renewal or publication. Usage: `docs/plan/family-room-comparison-export.md`.
+
 FT-RES-069 room-task CLI accepts multiple separate price-observation arrays after the category/as-of arguments, validates their combined identities and preserves independent dates/limits. Three current London samples/remaining gates: `docs/research/london-price-task-progress-2026-09-30.md`. Displayed five-person results do not remove requested-bed conditions; advance nonrefundable deposits are not added again as extra stay fees. Unresolved loading/zero-night placeholders cannot become zero-price or sold-out claims.
 
 FT-RES-068 schema2 room-price observations add the exact priced configuration, provider individual-age versus age-band-count input, explicit public/membership plan eligibility and separate deposit context. Public comparisons exclude membership-required plans; unsupported/missing schema2 basis fails closed. Schema1 retains explicit not-recorded/not-established fields rather than newly inferred certainty. Second sample: `docs/research/london-marlin-price-observation-2026-09-30.md`; sofa-specific apartment/public VAT-inclusive rate cards do not rewrite the original conditional capacity record or imply final checkout/availability.
