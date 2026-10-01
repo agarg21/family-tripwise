@@ -530,12 +530,16 @@ const lasVegasHotelSources = [
   ["Kids Quest at Red Rock", "https://www.kidsquest.com/location/redrock/"]
 ];
 
-function lasVegasHotelComparisonCsv() {
+function hotelComparisonCsv(headings, rows) {
   const cell = (value) => {
     const plain = String(value ?? "").replaceAll(/[\r\n\t]+/g, " ");
     const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
     return `"${safe.replaceAll('"', '""')}"`;
   };
+  return [headings, ...rows].map((row) => row.map(cell).join(",")).join("\n") + "\n";
+}
+
+function lasVegasHotelComparisonCsv() {
   const headings = ["Hotel", "Trip style", "Area", "Approx USD per room per night", "Price checked", "Price basis and fee limits", "Price context", "Room capacity spot-checked", "Named room", "Published capacity", "Official room source", "Most important check", "Map", "Live comparison"];
   const rows = lasVegasFamilyHotels.map((hotel) => [
     hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-22",
@@ -545,7 +549,7 @@ function lasVegasHotelComparisonCsv() {
     hotel.parentCheck, `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison"
   ]);
-  return [headings, ...rows].map((row) => row.map(cell).join(",")).join("\n") + "\n";
+  return hotelComparisonCsv(headings, rows);
 }
 
 function lasVegasFamilyHotelPage() {
@@ -1462,9 +1466,23 @@ const newYorkCityHotelSources = [
   ["Four Seasons New York Downtown accommodations", "https://www.fourseasons.com/newyorkdowntown/accommodations/"]
 ];
 
+const newYorkCityPriceBasis = "Historical USD/room/night planning ranges from July 25, 2026 checks, starting with two-adult room samples. Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded. Taxes and mandatory fees were included only where stated; parking, extras, and a second room are separate. Upper edges are editorial planning ceilings, not observed quotes. Price your exact family room and dates before booking.";
+
+function newYorkCityHotelComparisonCsv() {
+  const page = "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html";
+  const headings = ["Hotel", "Trip style", "Area", "Approx USD per room per night", "Price checked", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
+  const rows = newYorkCityFamilyHotels.map((hotel) => [
+    hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-25", newYorkCityPriceBasis,
+    hotel.priceNote, hotel.familySetup, "2026-07-25", hotel.reviewSignal, hotel.parentCheck,
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
+    `${page}#sources-checked`, `${page}#hotel-comparison`
+  ]);
+  return hotelComparisonCsv(headings, rows);
+}
+
 function newYorkCityFamilyHotelPage() {
   const hotels = newYorkCityFamilyHotels;
-  const priceBasis = "Historical USD/room/night planning ranges from July 25, 2026 checks, starting with two-adult room samples. Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded. Taxes and mandatory fees were included only where stated; parking, extras, and a second room are separate. Upper edges are editorial planning ceilings, not observed quotes. Price your exact family room and dates before booking.";
+  const priceBasis = newYorkCityPriceBasis;
   const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
@@ -1551,9 +1569,10 @@ function newYorkCityFamilyHotelPage() {
           <article class="quick-pick"><span>Brooklyn or pool splurge</span><strong>1 Hotel Brooklyn Bridge or Four Seasons Downtown</strong><p>Choose 1 Hotel for a DUMBO-first premium base; compare Four Seasons only for its indoor pool, published occupancy, and no-rollaway limits.</p></article>
         </div>
       </section>
-      <section class="band">
+      <section id="hotel-comparison" class="band">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
+          <p><a href="#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/new-york-city-family-hotels.csv" download>download the twelve-hotel comparison (.csv)</a>.</p>
           <p class="review-label">${esc(priceBasis)}</p>
           <div class="comparison-scroll">
             <table class="comparison-table hotel-comparison">
@@ -1577,7 +1596,7 @@ ${cards}
 ${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
         </div>
       </section>
-      <section class="container page-section source-section">
+      <section id="sources-checked" class="container page-section source-section">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
         <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages; most public slices did not expose a reliable family-only count, so treat the themes as general guest signals rather than parent consensus. Price ranges retain historical public room examples and editorial planning ceilings, not live booking quotes or priced family categories.</p>
         <ul class="source-list">
@@ -1612,6 +1631,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     lasVegasHotelComparisonCsv,
     chicagoFamilyHotelPage,
     newYorkCityFamilyHotelPage,
+    newYorkCityHotelComparisonCsv,
     sanAntonioFamilyHotelPage
   });
 }

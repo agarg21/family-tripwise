@@ -2,9 +2,13 @@
 
 Last updated: 2026-09-30
 
-FT-IMP-048 independent PASS/noP0-P3 (Ptolemy,cycle1); exact13reviewed paths ready for commit/push/Pages verification. No current-rate or SEO effect claimed.
+FT-IMP-049 QA complete:12same-record portable rows with price/date/basis retained;focused12/full287 and native/responsive/actualdownload/Vegas-byte-parity pass. Independent review and Pages verification remain; no new indexable URL or current quote.
 
-FT-IMP-048 QA complete: focused18/full286 and desktop/mobile/source/report invariants pass. Only NYC public hotel HTML changes; independent read-only review and Pages verification remain before delivery. LRN-071 records the family budget distinction, not fresh prices or SEO improvement.
+Current FT-IMP-049: exact12paths registered for shareable NYC comparison/link and CSV, all prices/date/basis/room checks retained. QA/review/Pages gates next. FT-IMP-048 delivered and production-verified: reviewed13paths pushed as `9362c7387e16a4a73268e7acdcbadbab03c7ff2c`, successful Pages `36801593003`, exact marker and byte-identical NYC HTML, productionSEO31zeroerrors/fiveprioradvisories. All12price bands/room/review/maps/URL invariants retained. No current rate renewal or SEO outcome. Six exclusions preserved. Mechanical immutable result, not another learning unit.
+
+FT-IMP-048 independent PASS/noP0-P3 (Ptolemy,cycle1); exact13reviewed paths released and verified as recorded above. No current-rate or SEO effect claimed.
+
+FT-IMP-048 QA and release complete: focused18/full286 and desktop/mobile/source/report invariants pass. Only NYC public hotel HTML changed; independent read-only PASS and Pages verification recorded above. LRN-071 records the family budget distinction, not fresh prices or SEO improvement.
 
 FT-IMP-048 scope now13paths: add two historical/current report regression tests and new NYC wording-only quality checkpoint; retained baseline/repeat/legacy reports stay immutable and dates/values unchanged.
 

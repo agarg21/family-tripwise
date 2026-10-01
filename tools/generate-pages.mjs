@@ -307,6 +307,7 @@ const {
   lasVegasHotelComparisonCsv,
   chicagoFamilyHotelPage,
   newYorkCityFamilyHotelPage,
+  newYorkCityHotelComparisonCsv,
   sanAntonioFamilyHotelPage
 } = createFamilyHotelPages({ esc, pageShell });
 
@@ -589,6 +590,7 @@ writeSite("where-to-stay/las-vegas-family-hotels.html", lasVegasFamilyHotelPage(
 writeSite("downloads/las-vegas-family-hotels.csv", lasVegasHotelComparisonCsv());
 writeSite("where-to-stay/chicago-family-hotels.html", chicagoFamilyHotelPage());
 writeSite("where-to-stay/new-york-city-family-hotels.html", newYorkCityFamilyHotelPage());
+writeSite("downloads/new-york-city-family-hotels.csv", newYorkCityHotelComparisonCsv());
 writeSite("where-to-stay/san-antonio-family-hotels.html", sanAntonioFamilyHotelPage());
 writeSite("about.html", aboutPage());
 writeSite("contributors/miles-rowan.html", milesProfilePage());

@@ -4,7 +4,13 @@ Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and
 
 Last updated: 2026-09-30
 
+## LRN-072 / September30 / FT-IMP-049
+
+Family decision: send a twelve-hotel NYC budget/room comparison to another adult without stripping price meaning. Hypothesis: a same-record anchored route and portable table can retain useful rough budget and exact-category limits. Evidence: user table-sharing input (one-user product signal), July25 retained price/room/review records (`historical research evidence`), September30 desktop/mobile/download walkthrough (`proxy interface evidence`). Result: IMPLEMENT one no-JS link/download; actual18818byte CSV matches maintained12records/14columns, all historical prices/units/date/party/fee/check/source routes preserved;1280/390/320 no-overflow,focused12/full287/native gates pass. Independent review/release pending. Confidence high for parity/interaction, medium for proxy task, unknown for adoption/SEO. Lesson: carry basis per row in a shareable comparison, not a detached disclaimer. Next falsification: data/export drift, context lost by CSV/mobile consumer, independent unsupported-claim finding or real-user contrary evidence. Full task/limits: `docs/plan/nyc-comparison-sharing-2026-09-30.md`.
+
 ## LRN-071 / September30 / FT-IMP-048
+
+FT-IMP-048 delivered and production-verified: reviewed13paths pushed as `9362c7387e16a4a73268e7acdcbadbab03c7ff2c`, successful Pages `36801593003`, exact marker and byte-identical NYC HTML, productionSEO31zeroerrors/fiveprioradvisories. All12price bands/room/review/maps/URL invariants retained. No current rate renewal or SEO outcome. Six exclusions preserved. Mechanical immutable result, not another learning unit.
 
 Independent immutable result: Ptolemy cycle-one read-only PASS/noP0-P3, original12bands/non-pricefacts/report dates verified; operator full286 and responsive proxy remain separate from independent focused/native checks. Reviewed commit and production verification next; no new learning unit or outcome claim.
 

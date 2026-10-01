@@ -1,5 +1,17 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-IMP-049 NYC comparison sharing
+
+Volta cycle-two independent read-only PASS/noP0-P3: prior release-state P2 closed. Independently37focused/related,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories,whitespace/exact scope/catalog/18818byteCSV/date/basis/Vegas/other-output parity pass. Operatorfull287 rerun and browser/download checks are not independently repeated. Six exclusions/index/HEAD unchanged during review. Exact12reviewed paths ready for commit/push and declared production verification.
+
+Volta cycle-one read-only FAIL: oneP2, carried FT-IMP-048 release state used an unrecognized label and omitted numeric Pages run, bypassing latest-release checks. Corrected to established released-and-production-verified/pages_run fields and reconciled superseded status/roadmap/current-cycle labels; no product/data/public change. Operator state QA now validates FT-IMP-048 and passes. Cycle-two review required before release. Independent focused12+related25,79snapshots,SEO31zeroerrors/fiveadvisories,CSV/catalog/scope checks passed; operator full287/browser remain separately attributed.
+
+Implementation checkpoint: focused12/full287,state0,SEO31zeroerrors/fivepriorwarnings,source/catalog/date parity,generation/whitespace/other-public/VegasCSV exact parity and1280/390/320 actual link/download checks pass. Twelve data rows/fourteen columns, actual18818byte browser CSV identical. Independent read-only review all12paths before Pages; no source renewal or user/SEO claim.
+
+Exact12paths/evidence/acceptance/invariants registered before edits in current-cycle. Same twelve source-dated records, anchored route and no-JS portable CSV; native/responsive/download/source-basis QA and different read-only review before release.
+
+FT-IMP-048 delivered and production-verified: reviewed13paths pushed as `9362c7387e16a4a73268e7acdcbadbab03c7ff2c`, successful Pages `36801593003`, exact marker and byte-identical NYC HTML, productionSEO31zeroerrors/fiveprioradvisories. All12price bands/room/review/maps/URL invariants retained. No current rate renewal or SEO outcome. Six exclusions preserved. Mechanical immutable result, not another learning unit.
+
 ## 2026-09-30 - FT-IMP-048 NYC historical budget basis
 
 Final independent read-only review: Ptolemy (`01a0f513-7ef6-7a43-9f74-6b2106d8b0c4`) cycle-one PASS, noP0-P3. Independently passed focused18 plus17related tests,state0,79offline snapshots,staticSEO/whitespace/scope and all12band/non-price/historical-report checks. Full286/browser proxy are operator-run, not independently repeated; six exclusions unchanged. Exact13-path commit/push and production Pages verification remain release gates. Only immutable mechanical results appended after consensus.

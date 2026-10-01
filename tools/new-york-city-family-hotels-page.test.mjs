@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, relative } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
+import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pagePath = join(root, "site", "where-to-stay", "new-york-city-family-hotels.html");
@@ -111,6 +112,39 @@ test("routes from home and the existing stay guide without changing the activity
   assert.match(home, /href="\.\/where-to-stay\/new-york-city-family-hotels\.html"/);
   assert.match(stay, /href="(?:\.\/|\.\.\/where-to-stay\/)new-york-city-family-hotels\.html"/);
   assert.doesNotMatch(activity, /new-york-city-family-hotels\.html/);
+});
+
+test("portable comparison preserves same records, historical prices and source routes", () => {
+  const pages = createFamilyHotelPages({});
+  const hotels = pages.hotelCatalog["new-york-city"];
+  const html = readFileSync(pagePath, "utf8");
+  const csv = readFileSync(join(root, "site/downloads/new-york-city-family-hotels.csv"), "utf8");
+  const rows = csv.trimEnd().split("\n").map((line) => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map((match) => match[1].replaceAll('""', '"')));
+  assert.equal(csv, pages.newYorkCityHotelComparisonCsv());
+  assert.equal(rows.length, 13);
+  assert.ok(rows.every((row) => row.length === 14));
+  assert.doesNotMatch(csv, /\r/);
+  for (const [index, row] of rows.slice(1).entries()) {
+    const hotel = hotels[index];
+    assert.deepEqual(row.slice(0, 4), [hotel.name, hotel.category, hotel.area, hotel.priceRange]);
+    assert.equal(row[4], "2026-07-25");
+    assert.match(row[5], /two-adult room samples/);
+    assert.match(row[5], /Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded/);
+    assert.match(row[5], /Taxes and mandatory fees were included only where stated/);
+    assert.equal(row[6], hotel.priceNote);
+    assert.equal(row[7], hotel.familySetup);
+    assert.equal(row[8], "2026-07-25");
+    assert.equal(row[9], hotel.reviewSignal);
+    assert.equal(row[10], hotel.parentCheck);
+    assert.equal(row[11], `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`);
+    assert.equal(row[12], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#sources-checked");
+    assert.equal(row[13], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#hotel-comparison");
+    assert.ok(!row.some((cell) => /^\s*[=+\-@]/.test(cell)));
+  }
+  assert.match(html, /<section id="hotel-comparison" class="band">/);
+  assert.match(html, /<section id="sources-checked" class="container page-section source-section">/);
+  assert.match(html, /href="\.\.\/downloads\/new-york-city-family-hotels\.csv" download/);
+  assert.match(html, /href="#hotel-comparison"/);
 });
 
 test("full generation is idempotent and leaves current output unchanged", () => {
