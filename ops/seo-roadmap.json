@@ -20,13 +20,26 @@
   ],
   "items": [
     {
+      "id": "FT-STD-002", "title": "Normalize San Diego hotel evidence without factual renewal", "kind": "improvement", "status": "completed", "selected_on": "2026-09-30", "completed_on": "2026-09-30", "target_urls": [],
+      "target_paths": ["tools/legacy-hotel-sources.mjs", "tools/legacy-hotel-sources.test.mjs", "tools/page-generation/san-diego-hotel-evidence.mjs", "tools/hotel-evidence.mjs", "tools/hotel-evidence.test.mjs", "tools/page-quality.mjs", "tools/page-quality.test.mjs", "ops/evidence-watch.json", "ops/page-quality/2026-09-30-san-diego.json", "docs/research/san-diego-hotel-evidence-normalization-2026-09-30.md", "docs/plan/page-quality-standard.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "backlog/product-learning-ledger.md"],
+      "evidence": "Direct-user go-ahead; existing eight-hotel pack, four-addition review and September27fee-only observations provide retained field sources/dates/classes.",
+      "acceptance_criteria": ["All12SanDiego hotel source mappings with historical field dates, room/party/stay/fee unknowns and conflicts", "Prices/public output unchanged; no automatic evidence renewal", "Native focused/full QA and independent read-only PASS/PASS_WITH_P3"],
+      "measurement_plan": "Mapped envelopes and actual remaining research gaps; no rank or freshness inflation.",
+      "production_invariant": "No site/generator output/URL/SEO/observation-window change; no paid/network/automation/external mutation; six unrelated paths excluded.",
+      "decision": "IMPLEMENT first legacy comparison normalization, then reuse proven pattern; current price research remains a distinct task.", "release_state": "review-clean-tools-docs-ready",
+      "review_outcome": "PASS", "review_cycles": 2, "reviewer_agent_ids": ["01a0f4bc-7ca5-7a50-a084-bbdc17a51b0e"],
+      "qa": "Focused20/full267,state0,79snapshot validations,localSEO31zeroerrors/fiveprioradvisories,saved-report/sevenhotel output parity,whitespace/six-exclusion preservation pass"
+    },
+    {
       "id": "FT-STD-001", "title": "Standardize hotel page evidence and maintenance gates", "kind": "improvement", "status": "completed", "selected_on": "2026-09-30", "completed_on": "2026-09-30", "target_urls": [],
       "target_paths": ["tools/hotel-evidence.mjs", "tools/hotel-evidence.test.mjs", "tools/page-quality.mjs", "tools/page-quality.test.mjs", "tools/page-generation/family-hotel-pages.mjs", "tools/evidence-audit.mjs", "ops/page-quality/2026-09-30.json", "docs/plan/page-quality-standard.md", "docs/plan/hotel-research-engine.md", "README.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "backlog/product-learning-ledger.md"],
       "evidence": "Direct-user standardize-first instruction; legacy inline and Cancun/Orlando hotel models use incompatible field/price envelopes; September30 audit has aggregate legacy price mapping.",
       "acceptance_criteria": ["Validated common contract across seven hotel comparisons without duplicate price entry", "Field age/conflict/source/price-basis queue; unmapped facts explicit", "Source-model/generated-site parity, native QA and independent read-only PASS/PASS_WITH_P3"],
       "measurement_plan": "Record/field coverage, actionable gaps and deterministic runtime, not publishing or ranking volume.",
       "production_invariant": "No site bytes, URLs, SEO or observation-window changes; no paid/external call; six unrelated dirty paths excluded.",
-      "decision": "IMPLEMENT shared hotel standard and report first; other page-type migrations follow separately.", "release_state": "review-clean-tools-docs-ready",
+      "decision": "IMPLEMENT shared hotel standard and report first; other page-type migrations follow separately.", "release_state": "tools-docs-only-pushed",
+      "release_commit": "1eede18dd27e8db093c2fb8d78a5e5082574cdce",
+      "release_verification": "Successful main push after fresh fetch/no divergence, sole outgoing commit scope/whitespace inspection;15reviewed paths;HEAD/origin0/0;no site changes or Pages wait; six unrelated dirty paths preserved",
       "review_outcome": "PASS", "review_cycles": 2, "reviewer_agent_ids": ["01a0f42a-3b6a-7c30-b482-7751f79bdeed"],
       "qa": "Focused13/full260,state0,79snapshot validations,localSEO31zeroerrors/fiveprioradvisories, saved-report parity/model isolation/sevenhotel regeneration parity/whitespace pass"
     },

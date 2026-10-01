@@ -4,7 +4,15 @@ Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and
 
 Last updated: 2026-09-30
 
+## LRN-068 / September30 / FT-STD-002
+
+Immutable QA/review evidence: Franklin cycle-two independent read-only PASS/noP0-P3; focused20/full267,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, saved-report/sevenhotel output parity, whitespace and six unchanged exclusions. Tools/docs-only exact16-path push remains; no public freshness or SEO outcome claimed. Earlier pending labels are history.
+
+Family decision: distinguish a historical standard-room planning band from an exact family-suite budget and identify which specific room/fee fact needs checking. Hypothesis: every hotel on one legacy page can share one date/basis without losing useful provenance. Rejected by September30retained-evidence reconciliation: original eight San Diego price/review observations areJuly18, four additionsJuly21, room/activityfactsAugust17, while only Bahia/Catamaran/Dana cost policies haveSeptember27checks. Twelve records now expose62source-linked envelopes, unchanged band displays, bedding/two parking conflicts and remaining exact-room/party/date/fee unknowns; ten transport fields remainunknown. Evidence class: dated repository official/price/review records and source/register/proxy parity checks, not new live property checks or users. Confidence high in source/date/price fidelity, bounded in historical facts' current accuracy, unknown in booking/SEO impact. Lesson: normalize claim groups and narrow overlays rather than advancing a whole page's date; structured basis is not a complete quote. Trigger: a changed source-register date requires remapping, comparable exact-party price evidence, or the next legacy city fails the same importer. Result IMPLEMENT first legacy mapping; next other legacy record mapping and separate weekly source-noise validation. Evidence/limits: `docs/research/san-diego-hotel-evidence-normalization-2026-09-30.md`; no public page change. QA/review/push remain completion gates.
+
 ## LRN-067 / September30 / FT-STD-001
+
+Release evidence: reviewed15-path tools/docs-only commit `1eede18dd27e8db093c2fb8d78a5e5082574cdce` successfully pushed;HEAD/origin0/0 after fresh-fetch/sole-range checks. No public page changes, deployment or SEO outcome claimed. Earlier push-next label is historical; immutable backfill will join the next substantive transaction.
 
 Immutable QA/review evidence: Ramanujan cycle-two PASS/noP0-P3; focused13/full260,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, report/model-isolation/sevenhotel regeneration parity and whitespace pass. Tools/docs-only exact-path push is next, not a user-facing page release or ranking outcome.
 

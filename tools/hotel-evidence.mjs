@@ -1,6 +1,8 @@
 import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { suites, sources, checkedOn } from "./page-generation/orlando-suite-data.mjs";
+import { sanDiegoSources } from "./legacy-hotel-sources.mjs";
+import { normalizeSanDiegoHotel } from "./page-generation/san-diego-hotel-evidence.mjs";
 
 export const SCHEMA_VERSION = 1;
 export const EVIDENCE_CLASSES = ["OFFICIAL_PROPERTY_FACT", "BOOKING_CHECK", "REVIEW_SIGNAL", "COMMUNITY_SIGNAL", "EDITORIAL_INTERPRETATION", "HUMAN_VERIFIED"];
@@ -24,10 +26,11 @@ export function hotelEvidence() {
   const records = [];
   const { hotelCatalog } = createFamilyHotelPages({});
   for (const [city, hotels] of Object.entries(hotelCatalog)) {
+    const registry = city === "san-diego" ? sanDiegoSources() : null;
     hotels.forEach((hotel) => {
       const path = legacyPath(city);
       const unmapped = (value, evidenceClass = "EDITORIAL_INTERPRETATION") => field(value ?? null, "unmapped", evidenceClass, null, [], path, "Existing published interpretation retained; individual facts/dates/source IDs need mapping.", "unmapped");
-      records.push({ schema_version: SCHEMA_VERSION, id: `${city}-${hotel.name.normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`, hotel: hotel.name,
+      const record = { schema_version: SCHEMA_VERSION, id: `${city}-${hotel.name.normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`, hotel: hotel.name,
         page_url: pageUrl(`${city}-family-hotels`), model_path: "tools/page-generation/family-hotel-pages.mjs", coverage: "legacy-partial",
         fields: {
           room: unmapped({ category: hotel.category, setup: hotel.familySetup ?? null, checks: hotel.parentCheck }),
@@ -37,7 +40,12 @@ export function hotelEvidence() {
           fees: unknown(path), transport: unknown(path), activities: unmapped({ strengths: hotel.strengths ?? null, tradeoffs: hotel.tradeoffs ?? null }),
           review_signal: unmapped(hotel.reviewSignal, "REVIEW_SIGNAL")
         }
-      });
+      };
+      if (registry) {
+        record.fields = normalizeSanDiegoHotel(hotel, record.fields.price, registry);
+        record.model_path = "tools/page-generation/san-diego-hotel-evidence.mjs";
+      }
+      records.push(record);
     });
   }
   const path = "src/prototypes/cancun-resort-comparison/data.mjs";
@@ -102,7 +110,21 @@ export function validateHotelEvidence(records) {
       if (!f.evidence_path || !f.limitation || !["field-observation", "model-baseline", "unmapped"].includes(f.date_basis)) fail(`Missing ${name} provenance/limits`);
       if (!Array.isArray(f.source_urls)) { fail(`Invalid ${name} sources`); continue; }
       for (const value of f.source_urls) {
-        try { const url = new URL(value); if (url.protocol !== "https:" || url.username || url.password || url.hash || [...url.searchParams.keys()].some((key) => /token|password|secret|api.?key|email|session/i.test(key))) fail(`Unsafe ${name} source`); } catch { fail(`Invalid ${name} source`); }
+        try { const url = new URL(value); if (typeof value !== "string" || url.protocol !== "https:" || url.username || url.password || url.hash || [...url.searchParams.keys()].some((key) => /token|password|secret|api.?key|email|session/i.test(key))) fail(`Unsafe ${name} source`); } catch { fail(`Invalid ${name} source`); }
+      }
+      if (f.source_refs !== undefined) {
+        if (!Array.isArray(f.source_refs) || !f.source_refs.length) fail(`Invalid ${name} source references`);
+        else for (const ref of f.source_refs) {
+          if (!ref || typeof ref !== "object" || Array.isArray(ref) || Object.keys(ref).some((key) => !["id", "checked_on", "evidence_class", "evidence_path", "urls"].includes(key))) { fail(`Invalid ${name} source reference schema`); continue; }
+          if (typeof ref.id !== "string" || !/^[A-Z][A-Z0-9-]+$/.test(ref.id) || !validDate(ref.checked_on) || !EVIDENCE_CLASSES.includes(ref.evidence_class)
+            || typeof ref.evidence_path !== "string" || !/^(?:docs|src|tools)\/[a-zA-Z0-9/._-]+$/.test(ref.evidence_path) || ref.evidence_path.split("/").includes("..")
+            || !Array.isArray(ref.urls) || !ref.urls.length || ref.urls.some((url) => typeof url !== "string" || !f.source_urls.includes(url))) fail(`Invalid ${name} source reference`);
+        }
+        if (Array.isArray(f.source_refs) && f.source_refs.length && f.source_refs.every((ref) => validDate(ref?.checked_on))) {
+          if (f.observed_on !== f.source_refs.map((ref) => ref.checked_on).sort()[0]) fail(`Mismatched ${name} field/source date`);
+          const referenced = [...new Set(f.source_refs.flatMap((ref) => Array.isArray(ref?.urls) ? ref.urls : []))].sort();
+          if (JSON.stringify(referenced) !== JSON.stringify([...new Set(f.source_urls)].sort())) fail(`Incomplete ${name} source references`);
+        }
       }
       if (["known", "disputed"].includes(f.state) && f.value == null) fail(`Missing ${name} value`);
       if (name !== "price" || !f.value) continue;
@@ -115,6 +137,7 @@ export function validateHotelEvidence(records) {
       if (typeof p.structured_basis !== "boolean") fail("Missing structured-basis status");
       for (const key of ["room_basis", "party_basis", "stay_basis"]) if (p[key] !== null && (typeof p[key] !== "string" || !p[key].trim())) fail(`Invalid price ${key}`);
       if (p.structured_basis && [p.room_basis, p.party_basis, p.stay_basis].some((v) => !v)) fail("Incomplete structured price basis");
+      if (p.basis_unknowns !== undefined && (!Array.isArray(p.basis_unknowns) || p.basis_unknowns.some((value) => typeof value !== "string" || !value.trim()))) fail("Invalid price basis unknowns");
     }
   }
   return errors;
@@ -127,5 +150,5 @@ export function hotelAuditRecords() {
   return records.flatMap((r) => Object.entries(r.fields).map(([name, f]) => ({ id: `${r.id}-${name}`, page_url: r.page_url,
     field: name === "price" ? "nightly-price" : name, verified_on: f.observed_on, interval_days: name === "price" || name === "fees" ? 14 : name === "review_signal" ? 60 : 30,
     basis: `${f.limitation} Record-specific room/party/date/fees: ${JSON.stringify(f.value)}`, source_urls: f.source_urls, evidence_path: f.evidence_path,
-    evidence_class: f.evidence_class, mapping_state: f.state, date_basis: f.date_basis })));
+    evidence_class: f.evidence_class, mapping_state: f.state, date_basis: f.date_basis, ...(f.source_refs ? { source_refs: f.source_refs } : {}) })));
 }

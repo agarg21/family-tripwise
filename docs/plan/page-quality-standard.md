@@ -2,6 +2,8 @@
 
 Updated: 2026-09-30 / FT-STD-001
 
+September30 FT-STD-002: first legacy pilot complete for San Diego's12hotels,62of72envelopes source-linked; ten transport fields remain unknown. Original observation dates and price displays retained, narrow fee overlays isolated, explicit price-basis unknowns still trigger review. Current mapping/report/remaining research: `docs/research/san-diego-hotel-evidence-normalization-2026-09-30.md`. This does not make all72envelopes complete or fresh. Other four legacy cities still need mapping.
+
 ## One Delivery Pipeline
 
 Use the existing generator and maintained evidence, not a separate prose pipeline:
@@ -30,7 +32,7 @@ New evidence must use the same envelope with individual claim dates and explicit
 
 ```bash
 node tools/page-quality.mjs
-node tools/page-quality.mjs --date 2026-09-30 --output ops/page-quality/2026-09-30.json
+node tools/page-quality.mjs --date 2026-09-30 --output ops/page-quality/2026-09-30-san-diego.json
 node tools/evidence-audit.mjs
 node --test tools/hotel-evidence.test.mjs tools/page-quality.test.mjs tools/evidence-audit.test.mjs
 ```
@@ -47,6 +49,6 @@ FT-MAINT-009 still owns full-source repeat/noise validation before stable weekly
 
 ## Next Migrations
 
-Normalize one legacy comparison's per-property sources, claim dates and price basis first; extend that proven pattern to the other four. Structure Cancun price basis in its source model and adapt public table/export together in a separate reviewed action. Research the three missing exact-room prices through permitted comparable observations; retain historical ranges meanwhile.
+San Diego is the first completed legacy source-mapping pilot; extend that reviewed pattern to the other four comparisons. Its exact-family prices and ten transport fields remain research gaps. Structure Cancun price basis in its source model and adapt public table/export together in a separate reviewed action. Research the three missing exact-room prices through permitted comparable observations; retain historical ranges meanwhile.
 
 Stay-area, activities and itinerary pages use this delivery pipeline but require separate domain contracts for base/transport tradeoffs; attraction age/access/calendar/ticket cost; and day duration/rest/route/weather alternatives. The source audit inventories all31canonical pages, but these non-hotel field contracts are not implemented here.

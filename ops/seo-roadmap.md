@@ -2,6 +2,14 @@
 
 Last updated: 2026-09-30
 
+FT-STD-002 final gate PASS: Franklin cycle-two/noP0-P3,focused20/full267,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, saved-report/sevenhotel output parity and six preserved exclusions. Exact16-path tools/docs-only commit/push next; no public deployment or factual renewal. Earlier local/pending checkpoints are history.
+
+FT-STD-002 local result: all12SanDiego hotel records mapped to62dated field/source envelopes, price strings and July18/July21provenance preserved; threeSeptember27fee checks do not renew room/price facts. Bedding/parking conflicts and exact-party cost/transport unknowns remain. Focused19/full266green; independent review/push next. Remaining cities can reuse this pattern; weekly repeat stability remains FT-MAINT-009.
+
+Current direct-user action FT-STD-002: normalize all12SanDiego hotel evidence records from retained source registers and the narrow September27fee overlay. Sixteen exact paths/criteria/invariants registered before edits. Historical prices and dates stay historical; missing context/conflicts remain explicit. No page change, current fetch or paid call; independent review before tools/docs-only push.
+
+FT-STD-001 delivered tools/docs-only at `1eede18dd27e8db093c2fb8d78a5e5082574cdce`: successful exact15-path reviewed push,HEAD/origin0/0, no site deployment. Ramanujan PASS/full260. All seven hotel outputs unchanged; six unrelated paths preserved. Legacy mapping and FT-MAINT-009weekly repeat validation remain next. Earlier commit/push checkpoints are history; immutable completion backfill is local for the next substantive action.
+
 FT-STD-001 final gate PASS: Ramanujan cycle-two/noP0-P3,focused13/full260,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories and model/report/public-output parity. Exact15-path tools/docs-only push next; no public deployment. Legacy mapping and weekly stability remain the next standardization gates. Earlier local/FAIL checkpoints are chronology.
 
 FT-STD-001 implemented locally: seven hotel pages/65records share validated adapters and field review queue without price re-entry or changed public output. Full258tests/focused11,state0,79snapshots/localSEO31zeroerrors/fiveprioradvisories; independent review next. Next eligible work: FT-MAINT-009one legacy hotel per-field mapping and source-diff stability, then use that pattern for further cities. Expansion research remains queued; this supersedes the earlier London-next sequence, not its evidence gates.

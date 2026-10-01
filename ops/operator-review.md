@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-STD-002 San Diego legacy normalization
+
+Cycle-two Franklin independent read-only PASS/noP0-P3. Prior source-reference P2 closed; adversarial inputs reject before serialization. Focused20/full267,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, saved-report byte parity, sevenhotel output parity and whitespace pass. Prices, dates, conflicts, unknowns and historical baseline preserved; all six exclusions unchanged. Exact16-path tools/docs-only push next; no public deployment.
+
+Franklin (`01a0f4bc-7ca5-7a50-a084-bbdc17a51b0e`) cycle-one FAIL with oneP2: undeclared source-reference keys/non-string IDs could pass validation and serialize credential-fragment metadata. No actual private exposure. Fixed exact reference keys/ID/path/URL types and safe repository paths, with pre-report adversarial regressions. All factual mappings/dates/prices/conflicts/unknowns and public output were independently confirmed; cycle-two re-review required before push.
+
+Sixteen exact paths registered before edits; six unrelated dirty paths excluded, five immutable prior-result backfills preserved. Twelve hotels gain62dated source-linked envelopes from existing packs, with unknowns/conflicts/price bands unchanged and no factual renewal. Source importers fail on date/class/identity drift; historical baseline retained. Focused19/full266,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, deterministic report, sevenhotel regeneration parity and whitespace pass. Independent read-only review pending; no network/push/public change.
+
 ## 2026-09-30 - FT-STD-001 shared hotel standard
+
+Mechanical release result: reviewed15-path commit `1eede18dd27e8db093c2fb8d78a5e5082574cdce` pushed to main after fresh fetch/no divergence and sole outgoing-range scope/whitespace inspection;HEAD/origin0/0. No site change or Pages wait. Six unrelated dirty paths preserved. This immutable backfill stays local until the next substantive action.
 
 Cycle-two Ramanujan independent read-only PASS/noP0-P3. Verified both P2 fixes and P3 isolation; focused13/full260,state0,79snapshots,localSEO31zeroerrors/fiveprioradvisories, byte-identical saved report, sevenhotel generator parity, privacy/scope/whitespace. Exact15-path tools/docs-only push next; no public page or price change. Legacy mapping and weekly repeat validation remain explicitly unfinished, not foundation blockers.
 
