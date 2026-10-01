@@ -1,5 +1,7 @@
 # Needs User
 
+September30 FT-IMP-050: new actual HTTP preview denial supersedes the older cleared-preview checkpoint for this attempted origin only. In-app browser `ftTab.goto("http://localhost:4173/where-to-stay/chicago-family-hotels.html")` returned `net::ERR_BLOCKED_BY_CLIENT`. No repeated attempt, alternate tool/origin bypass or security change. Normal user/app browser access resolution is required; documented restricted snapshot preview is127.0.0.1:4173 and must restart after generation. Chicago export remains local/unpublished until permitted desktop/mobile and actual-download QA plus release gates pass. Owner: normal user/app preview access; recheck only after permission/environment change. Other tools/research can proceed; no project-wide stop or generic approval request.
+
 Last updated: 2026-09-22
 
 September22 expansion authority: user's "go for it ... expand to more cities ... start doing that as well" is recorded as approval to begin the bounded Cancun/Orlando expansion work. No additional generic start-approval or API credential input is needed. Cancun comparison model FT-DEV-008 is being built; FT-PUB-007 public page remains subject to evidence, interface, independent-review and release gates, not a repeated permission question. Earlier research-only/blanket new-destination holds below are historical for this first pair; they do not approve a ten-city batch or unrelated external actions.

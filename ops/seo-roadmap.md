@@ -2,6 +2,10 @@
 
 Last updated: 2026-09-30
 
+FT-IMP-050 current boundary: native17related/full313 pass; code/CSV local only. Actual localhost4173 browser preview denial net::ERR_BLOCKED_BY_CLIENT leaves visual/download gates uncompleted.13allowed paths including narrow needs-user record; no unchanged retry/bypass/deploy or completed LRN-077. Different read-only static review then independent eligible tools/research; release waits for normal access resolution.
+
+Current FT-IMP-050: same-record Chicago comparison anchor and portable CSV with ten historical nightly bands, room/review/source/pool caveats intact. Exact12paths registered; focused/full/responsive/download/different read-only review and verified Pages before delivery. October11 price recheck remains. FT-RES-069 delivered tools/docs-only2ea2d54/MenciusPASS/full312; London launch gates unchanged. Older Current checkpoints below are history.
+
 Current FT-RES-069: third dated London exact-age suite sample and multi-file offline price task; preserve conditional sofa and deposit basis, no new London page. Exact10paths registered. Prior068delivered214b49e/HerschelPASS/full309; remaining source-loading/location/review/current-overlap/launch gates stay explicit.
 
 Current FT-RES-068: second London public-plan sofa-specific observation, provider age-band-only input and refundable-deposit context retained by reusable adapter. Exact10paths registered; no London launch/public changes. FT-RES-067 delivered de38956/PASS/full305,12exactpaths/noPages; original category/Mitre sample immutable.

@@ -1,5 +1,17 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-IMP-050 Chicago comparison sharing
+
+Dalton cycle-two static PASS/no P0-P3: everyrow summerstay/exactroom-date limitation P2 closed. Independent15read-only checks plus privacy/state/whitespace/catalog/pool/source/NYC-Vegas/other-output parity pass; generation/full313 operator evidence. Seven reviewed hold docs suitable for docs-only transaction; five implementation paths local/uncommitted, LRN077pending. No browser/write/mutation, no shipping authority; required visual/download/release unresolved. FTSTD004 excluded.
+
+Dalton cycle-one static FAIL: oneP2, portable rows omitted retained summer2026stay basis and exactroom/staydate unknowns. Corrected everyrow basis and assertions without changing amounts/dates. Native rerun/cycle-two static review required; visual/download/release remain blocked separately. Reviewer independently17related/state/SEO/catalog/NYC-Vegas/other-output/scope pass; full313 operator-attributed.
+
+Scope amended to13allowed paths before adding narrow needs-user blocker. Operator17related/full313/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/generation/scope pass. Local browser navigation returned net::ERR_BLOCKED_BY_CLIENT; no visual/download verification, no retries/bypass or deployment. Independent review is code/data readiness only; unshipped until normal preview-resolution and remaining gates.
+
+Exact12paths/evidence/acceptance/measurement/invariants registered in current-cycle before substantive edits. Same ten records, historical USD/room/night bands and source/pool/room caveats; native/responsive/download QA and different read-only review before Pages. No source/rate renewal.
+
+FT-RES-069 immutable push2ea2d546a11d6b014d9944866e458d2e46d1cc79, exact10paths/freshfetch/no divergence/sole reviewed range/HEADorigin0/0; Mencius cycle-one PASS/full312, no public/Pages change, six exclusions unchanged.
+
 ## 2026-09-30 - FT-RES-069 third London sample and multi-file task
 
 Mencius (01a0f54e-47ad-7192-8187-61ce4d0d92d2) cycle-one read-only PASS/no P0-P3, exact10paths against214b49e. Independent25focused, CLI/API/multiple/single/default, fail-closed duplicate/non-array/trailing inputs, three-sample arithmetic/party/date/age, advance-deposit versus fee, requested-sofa limits, state79snapshots/SEO/privacy/scope pass. Official Montague/Mandarin categories independently inspected; full312 and dynamic booking observations remain operator evidence. No writes/mutations; six exclusions unchanged. Ready for tools/docs-only exact-path push, no Pages requirement.

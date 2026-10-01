@@ -1,6 +1,9 @@
 # Chicago Page Status
 
-Last updated: 2026-09-28
+Last updated: 2026-09-30
+
+FT-IMP-050 local/unpublished: ten-record comparison anchor and CSV implemented, all historical price bands/date/party/fee/room/review/pool caveats retained. Operator native17related/full313 pass; browser localhost4173 preview returned net::ERR_BLOCKED_BY_CLIENT. Required desktop/mobile rendering/actual-download QA remains undone, so no site-code commit/push/release or completed usefulness-learning claim. The independently reviewed hold documentation may be pushed without the local code/HTML/CSV. Narrow normal preview-access resolution in ops/needs-user.md; independent static review is not release approval. October11 price recheck unchanged.
+
 
 FT-IMP-043 delivered and production-verified: `165af9474d8b2047e3e4aecd3409a1bdbc61cfbc` / Pages `36381300563`, matching marker and Chicago HTML exact bytes, production SEO31 URLs/zero errors/five prior advisories. Dated per-room/night price basis and source-date uncertainty are visible without changing ten bands/order. Curie cycle-two PASS_WITH_P3; October11 price recheck remains.
 
