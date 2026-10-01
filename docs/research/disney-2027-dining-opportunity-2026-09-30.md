@@ -2,6 +2,8 @@
 
 FT-RES-060 / LRN-080. Sources inspected September30,2026 Eastern. Exact7paths/evidence/acceptance/measurement/invariants registered before edits in current-cycle. Bounded official-policy and current competitor-structure audit, not a new tool, canonical URL, price quote or controlled ranking result.
 
+Immutable release result: exact7 reviewed paths pushed as d9cdddb22433a9e9237c8151f40826e575898208, Dewey cycle-two PASS/no P0-P3, full323isolated/native QA. Freshfetch/no divergence/sole outgoing range/HEADorigin0/0; docs-only, no Pages or product deployment. Mechanical result, not another learning unit.
+
 ## Family Task And Current Official Limits
 
 Two adults/children4,8,12, four-night2027Disneyresort package. Decide whether prepaying for the meals they actually want is cheaper or merely convenient without treating the12year-old as child-priced, forcing extra sit-down meals or adding an invented child discount. Required outputs: source-versioned credits, age eligibility, actual package dining component quote, cash comparison for same diners/meals, tax/tip/excluded costs and unused credits. Proxy research only.

@@ -169,3 +169,28 @@ test("USD expected currency is supported without admitting arbitrary currencies 
   }
   assert.ok(historicalScreen(pack).every(r => r.next_checks.at(-1).includes("GBP")));
 });
+
+test("two DC public samples retain plan-specific cancellation, tax and exact-task limits", () => {
+  const dc = JSON.parse(readFileSync(dcPath, "utf8"));
+  const homewoodPath = fileURLToPath(new URL("../docs/research/washington-dc-homewood-price-observation-2026-09-30.json", import.meta.url));
+  const samples = [dcPricePath, homewoodPath].flatMap(path => JSON.parse(readFileSync(path, "utf8")));
+  const before = JSON.stringify([dc, samples]);
+  const rows = screenRoomPack(dc, dc.scenario, "2026-09-30", samples);
+  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [taskCli, dcPath, "2026-09-30", dcPricePath, homewoodPath], { encoding: "utf8" })), rows);
+  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 2);
+  const homewood = row(rows, "dc-homewood-two-queen");
+  assert.equal(homewood.price.amount_from, 288.97);
+  assert.equal(homewood.price.amount_to, 339.97);
+  assert.deepEqual(homewood.price.rates.map(r => r.nightly_average), [288.97, 316.61, 339.97]);
+  assert.match(homewood.price.rates[1].cancellation, /November1,2026/);
+  assert.match(homewood.price.rates[2].cancellation, /November5,2026/);
+  assert.match(row(rows, "dc-embassy-deluxe-double").price.rates[1].cancellation, /November7,2026/);
+  assert.match(homewood.price.fee_basis, /225USDmember-only.*discarded/);
+  assert.match(homewood.price.deposit_basis, /not an added stay fee/);
+  assert.equal(homewood.price.age_input_mode, "provider-age-band-counts");
+  assert.equal(row(rows, "dc-residence-two-queen-onqq").price.amount, null);
+  for (const changed of [{ ...dc.scenario, child_ages: [4, 8, 13] }, { ...dc.scenario, stay: { arrival: "2026-11-09", departure: "2026-11-14" } }])
+    assert.equal(row(screenRoomPack(dc, changed, "2026-09-30", samples), "dc-homewood-two-queen").price.status, "not-observed");
+  assert.equal(row(screenRoomPack(dc, dc.scenario, "2026-10-15", samples), "dc-homewood-two-queen").price.status, "historical-dated-stay-samples");
+  assert.equal(JSON.stringify([dc, samples]), before);
+});

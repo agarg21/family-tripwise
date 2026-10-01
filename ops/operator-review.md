@@ -1,5 +1,13 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-RES-071 second DC public price comparison
+
+Turing (01a0f584-4fb1-7700-89d5-884b2d1a9830) cycle-one independent read-only PASS/no P0-P3. Independent324fullisolated/30focused/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/539nonselectedpathparity/source/privacy/scope/whitespace pass; original corpus/Embassy/London and dynamic operator-attribution boundaries stand. Operator324isolated325workingtree pass. Exact9paths ready tools/docs-only push; no site or DC launch.
+
+Nine exact paths registered before edits; official dynamic count-band/date/category/public-plan panels inspected without Select/Book. Three Homewood dated public samples, immutable Embassy/corpus/London evidence, multi-file exact-task/stale/cancellation regression. Focused/full native and different read-only review before tools/docs-only push; no site/newURL/publication, six exclusions and five localChicago files unchanged.
+
+FT-RES-060 immutable push result: d9cdddb22433a9e9237c8151f40826e575898208, exact7 reviewed paths/Deweycycle2PASS/full323isolated/native; freshfetch/no divergence/sole range/HEADorigin0/0. Docs-only research decision, no product deployment.
+
 ## 2026-09-30 - FT-RES-060 Disney2027 opportunity decision
 
 Dewey (01a0f57c-33c6-7111-a74a-1ef1cc166183) cycle-two independent read-only PASS/no P0-P3. Cycle-one P3 for uncorroborated export/clear controls corrected to explicitly unverified/not used as overlap evidence. Independent48focused/full323isolated/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/privacy/scope/whitespace pass; cycle-two JSON/state/whitespace and other six hashes unchanged. Operator323isolated and native pass. Exact7paths ready docs-only push, no prototype/public change; six exclusions/five heldChicago files unchanged.
