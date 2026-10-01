@@ -19,7 +19,7 @@ test("seven comparisons share 65 validated records without replacing source valu
   for (const [city, hotels] of Object.entries(legacy)) for (let i = 0; i < hotels.length; i++) {
     const p = records.find((r) => r.hotel === hotels[i].name && r.page_url.includes(`/${city}-family-hotels`)).fields.price;
     assert.equal(p.value.display, hotels[i].priceRange);
-    if (city !== "san-diego") assert.equal(p.value.party_basis, null);
+    if (!["san-diego", "new-york-city"].includes(city)) assert.equal(p.value.party_basis, null);
     assert.equal(p.evidence_class, "EDITORIAL_INTERPRETATION");
   }
   for (const hotel of cancunEvidence.records) {

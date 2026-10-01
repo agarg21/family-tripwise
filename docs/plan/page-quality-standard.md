@@ -4,6 +4,8 @@ Updated: 2026-09-30 / FT-STD-001
 
 September30 FT-STD-002: first legacy pilot complete for San Diego's12hotels,62of72envelopes source-linked; ten transport fields remain unknown. Original observation dates and price displays retained, narrow fee overlays isolated, explicit price-basis unknowns still trigger review. Current mapping/report/remaining research: `docs/research/san-diego-hotel-evidence-normalization-2026-09-30.md`. This does not make all72envelopes complete or fresh. Other four legacy cities still need mapping.
 
+September30 FT-STD-003: the remaining44legacy hotels now have exact property-source aliases for retained setup, activities, prices and reviews; two fee facts additionally mapped. All five legacy comparisons total240source-linked envelopes; conservative grouped dates and independently dated overlays remain explicit. Individual subclaim dates,42remaining fee fields/44transport fields in this batch and all historical exact-party price gaps are not completed facts. Evidence/report: `docs/research/legacy-hotel-evidence-normalization-2026-09-30.md`, `ops/page-quality/2026-09-30-legacy.json`. The earlier San Diego-only checkpoint above is history.
+
 ## One Delivery Pipeline
 
 Use the existing generator and maintained evidence, not a separate prose pipeline:
@@ -49,6 +51,6 @@ FT-MAINT-009 still owns full-source repeat/noise validation before stable weekly
 
 ## Next Migrations
 
-San Diego is the first completed legacy source-mapping pilot; extend that reviewed pattern to the other four comparisons. Its exact-family prices and ten transport fields remain research gaps. Structure Cancun price basis in its source model and adapt public table/export together in a separate reviewed action. Research the three missing exact-room prices through permitted comparable observations; retain historical ranges meanwhile.
+All five legacy comparisons have retained source mappings; normalize atomic claim dates and resolve explicitly unknown fee/transport fields when required by a named task. Exact-family prices remain research gaps. Structure Cancun price basis in its source model and adapt public table/export together in a separate reviewed action. Research the three missing exact-room prices through permitted comparable observations; retain historical ranges meanwhile.
 
 Stay-area, activities and itinerary pages use this delivery pipeline but require separate domain contracts for base/transport tradeoffs; attraction age/access/calendar/ticket cost; and day duration/rest/route/weather alternatives. The source audit inventories all31canonical pages, but these non-hotel field contracts are not implemented here.

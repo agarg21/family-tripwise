@@ -2,6 +2,12 @@
 
 Last updated: 2026-09-30
 
+FT-STD-003 final gate: Halley cycle-two PASS/noP0-P3,focused24/full276 and all native state/snapshot/SEO/parity/scope checks green. Exact15-path tools/docs-only push next; no public output or evidence date renewal. Weekly repeat/noise validation follows.
+
+Current FT-STD-003: normalize remaining44legacy hotel identities, retaining historical price displays and original/narrow overlay dates. Exact15paths, evidence, acceptance, measurement and unchanged-public-site invariants registered before editing. User authorizes continued routine work without waiting; no new destination or external authority inferred. Weekly source repeat/noise validation follows this reviewed mapping.
+
+FT-STD-002 delivered tools/docs-only at `1d98c07d2497b53bd3a70673f80797f57330b42a`: exact16 reviewed paths pushed,HEAD/origin0/0 after fresh-fetch/sole-range checks. Franklin cycle-two PASS/full267; no site change or Pages wait, six unrelated paths preserved. Earlier pending labels are history. Immutable backfill stays local until the next substantive transaction; other legacy cities/current-price research and weekly repeat stability remain next gates.
+
 FT-STD-002 final gate PASS: Franklin cycle-two/noP0-P3,focused20/full267,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, saved-report/sevenhotel output parity and six preserved exclusions. Exact16-path tools/docs-only commit/push next; no public deployment or factual renewal. Earlier local/pending checkpoints are history.
 
 FT-STD-002 local result: all12SanDiego hotel records mapped to62dated field/source envelopes, price strings and July18/July21provenance preserved; threeSeptember27fee checks do not renew room/price facts. Bedding/parking conflicts and exact-party cost/transport unknowns remain. Focused19/full266green; independent review/push next. Remaining cities can reuse this pattern; weekly repeat stability remains FT-MAINT-009.

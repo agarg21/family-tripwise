@@ -4,7 +4,15 @@ Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and
 
 Last updated: 2026-09-30
 
+## LRN-069 / September30 / FT-STD-003
+
+Mechanical final gate: Halley cycle-two PASS/noP0-P3; focused24/full276,state0,79snapshots,SEO31zeroerrors/fivepriorwarnings,240mapped/13conflicts/386tasks, parity/whitespace/six exclusions pass. Exact15-path tools/docs-only push pending; no public release or new fact/price verification.
+
+Family decision: distinguish a historical budget screen from the exact larger room, water-access and rest decision across all remaining legacy comparisons. Hypothesis: retained paragraphs and one hotel date can safely inherit the latest narrow room/pool check. Rejected by September30source reconciliation:44records retain independent July price/review dates plus September5/14/16/22/30bounded overlays; later-added source URLs never inherit July dates. Result IMPLEMENT source mappings, not automatic freshness;240legacy source-linked envelopes,13conflict groups and all56historical price bands still due. Evidence class: dated repository official/booking/review records and source/output parity, not live checks or users; mixed unmapped community components remain gaps. Confidence high in retained identity/date/display fidelity, limited in current fact accuracy/atomic claim completeness, unknown in booking/SEO effect. Lesson: a shared schema must preserve evidence-class differences and independent overlay scope; formatting a price basis does not supply a missing family quote. Next falsification trigger: changed source identity/date/display, all-source repeat validation, comparable exact-party quote or a task requiring an unknown fee/route. Record: `docs/research/legacy-hotel-evidence-normalization-2026-09-30.md`. Native QA green; cycle-two review/push remain; no public change or date renewal.
+
 ## LRN-068 / September30 / FT-STD-002
+
+Release evidence: reviewed16-path tools/docs-only commit `1d98c07d2497b53bd3a70673f80797f57330b42a` pushed to main after fresh-fetch/no-divergence/sole-range checks;HEAD/origin0/0. No site or price changes, factual renewal or SEO outcome claimed; six unrelated paths preserved. Immutable backfill joins the next substantive transaction; earlier push-next labels are history.
 
 Immutable QA/review evidence: Franklin cycle-two independent read-only PASS/noP0-P3; focused20/full267,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, saved-report/sevenhotel output parity, whitespace and six unchanged exclusions. Tools/docs-only exact16-path push remains; no public freshness or SEO outcome claimed. Earlier pending labels are history.
 

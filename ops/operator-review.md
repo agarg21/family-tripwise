@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-STD-003 remaining legacy normalization
+
+Cycle-two Halley independent read-only PASS/noP0-P3 closes all fourP2s. Independently verified focused24/full276,state0,79offline snapshots,SEO31zeroerrors/fivepriorwarnings,455sources not fetched,240mapped/13conflicts/386tasks, historical-report/public-price/output parity, whitespace and six unchanged exclusions. Exact15-path tools/docs-only push next; current prices and atomic claim mapping remain gaps.
+
+Halley (`01a0f4d2-a79a-7461-acae-1c182d134877`) cycle-one FAIL: fourP2 provenance defects (later-added sources assigned July, wrong-property source URL substitution accepted, mixed community/review content mislabeled, NYC kitchenette conflict marked known). Corrected scoped dates/fingerprints, explicit mixed-component gaps/references and disputed room state; two new regression cases. Focused24/full276,state0,SEO31zeroerrors/fiveprioradvisories, saved-report/public-output parity and whitespace pass. Cycle-two read-only review required before push; no site changes or new source collection.
+
+Exact15paths registered before edits; six unrelated files excluded, five prior immutable result backfills included. Remaining44hotel records map retained setup/activity interpretation, prices and bounded reviews with original baseline dates and independent narrow overlays; two fee facts additionally mapped. All prices/public output must remain unchanged. New report retains prior checkpoints;455-source offline inventory/no requests. Focused/full native QA and independent read-only review pending; no push/public release.
+
 ## 2026-09-30 - FT-STD-002 San Diego legacy normalization
+
+Mechanical release result: reviewed16-path commit `1d98c07d2497b53bd3a70673f80797f57330b42a` successfully pushed to main after fresh fetch/no divergence and complete sole-range scope/whitespace inspection;HEAD/origin0/0. Six unrelated paths preserved; no site change or Pages wait. Immutable result stays local until the next substantive transaction.
 
 Cycle-two Franklin independent read-only PASS/noP0-P3. Prior source-reference P2 closed; adversarial inputs reject before serialization. Focused20/full267,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories, saved-report byte parity, sevenhotel output parity and whitespace pass. Prices, dates, conflicts, unknowns and historical baseline preserved; all six exclusions unchanged. Exact16-path tools/docs-only push next; no public deployment.
 

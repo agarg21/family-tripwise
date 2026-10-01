@@ -20,13 +20,24 @@
   ],
   "items": [
     {
+      "id": "FT-STD-003", "title": "Normalize remaining legacy hotel source and price records", "kind": "improvement", "status": "in_progress", "selected_on": "2026-09-30", "target_urls": [],
+      "target_paths": ["tools/legacy-hotel-sources.mjs", "tools/page-generation/remaining-hotel-evidence.mjs", "tools/remaining-hotel-evidence.test.mjs", "tools/hotel-evidence.mjs", "tools/hotel-evidence.test.mjs", "tools/page-quality.test.mjs", "ops/evidence-watch.json", "ops/page-quality/2026-09-30-legacy.json", "docs/research/legacy-hotel-evidence-normalization-2026-09-30.md", "docs/plan/page-quality-standard.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "backlog/product-learning-ledger.md"],
+      "evidence": "User continue-without-routine-input instruction; four retained property packs and narrow dated room/pool/notice overlays; prices/reviews remain July observations.",
+      "acceptance_criteria": ["All44remaining legacy identities have explicit source/date/class mapping without price duplication", "Retain historical bands, mixed price bases, conflicts and unknowns; reject source identity/date drift", "Historical report/public-output parity, focused/full native QA and independent read-only PASS/PASS_WITH_P3"],
+      "measurement_plan": "Mapped envelopes and remaining claim/price gaps, not freshness or ranking inflation.",
+      "production_invariant": "No site/public generator/URL/SEO/window changes; no source/paid/automation/external calls; six unrelated paths preserved.",
+      "decision": "IMPLEMENT remaining source normalization; current-price research and weekly stability validation remain separate stages.", "release_state": "review-clean-push-pending", "review_outcome": "PASS", "review_cycles": 2, "reviewer_agent_ids": ["01a0f4d2-a79a-7461-acae-1c182d134877"], "qa": "Focused24/full276,state0,79offline snapshots,SEO31zeroerrors/fivepriorwarnings,455offline sources,240mapped/13conflicts/386tasks; parity/whitespace/six exclusions pass"
+    },
+    {
       "id": "FT-STD-002", "title": "Normalize San Diego hotel evidence without factual renewal", "kind": "improvement", "status": "completed", "selected_on": "2026-09-30", "completed_on": "2026-09-30", "target_urls": [],
       "target_paths": ["tools/legacy-hotel-sources.mjs", "tools/legacy-hotel-sources.test.mjs", "tools/page-generation/san-diego-hotel-evidence.mjs", "tools/hotel-evidence.mjs", "tools/hotel-evidence.test.mjs", "tools/page-quality.mjs", "tools/page-quality.test.mjs", "ops/evidence-watch.json", "ops/page-quality/2026-09-30-san-diego.json", "docs/research/san-diego-hotel-evidence-normalization-2026-09-30.md", "docs/plan/page-quality-standard.md", "ops/current-cycle.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "ops/operator-review.md", "backlog/product-learning-ledger.md"],
       "evidence": "Direct-user go-ahead; existing eight-hotel pack, four-addition review and September27fee-only observations provide retained field sources/dates/classes.",
       "acceptance_criteria": ["All12SanDiego hotel source mappings with historical field dates, room/party/stay/fee unknowns and conflicts", "Prices/public output unchanged; no automatic evidence renewal", "Native focused/full QA and independent read-only PASS/PASS_WITH_P3"],
       "measurement_plan": "Mapped envelopes and actual remaining research gaps; no rank or freshness inflation.",
       "production_invariant": "No site/generator output/URL/SEO/observation-window change; no paid/network/automation/external mutation; six unrelated paths excluded.",
-      "decision": "IMPLEMENT first legacy comparison normalization, then reuse proven pattern; current price research remains a distinct task.", "release_state": "review-clean-tools-docs-ready",
+      "decision": "IMPLEMENT first legacy comparison normalization, then reuse proven pattern; current price research remains a distinct task.", "release_state": "tools-docs-only-pushed",
+      "release_commit": "1d98c07d2497b53bd3a70673f80797f57330b42a",
+      "release_verification": "Successful exact16-path main push after fresh fetch/no divergence and complete sole-outgoing-range scope/whitespace inspection;HEAD/origin0/0;no site change or Pages wait; six unrelated dirty paths preserved",
       "review_outcome": "PASS", "review_cycles": 2, "reviewer_agent_ids": ["01a0f4bc-7ca5-7a50-a084-bbdc17a51b0e"],
       "qa": "Focused20/full267,state0,79snapshot validations,localSEO31zeroerrors/fiveprioradvisories,saved-report/sevenhotel output parity,whitespace/six-exclusion preservation pass"
     },

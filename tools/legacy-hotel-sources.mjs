@@ -62,3 +62,57 @@ export function sanDiegoSources() {
   for (const id of Object.keys(additions)) if (base[id]) throw new Error(`Duplicate cross-pack source: ${id}`);
   return { ...base, ...additions };
 }
+
+export function parseNamedSourceList(markdown, start, end) {
+  if (markdown.split(start).length !== 2) throw new Error("Missing/duplicate named source section");
+  const section = markdown.split(start)[1];
+  if (!section.includes(end)) throw new Error("Missing named source section boundary");
+  const result = {};
+  for (const line of section.split(end)[0].split("\n")) {
+    if (!line.startsWith("- ")) continue;
+    const boundary = line.indexOf(": ");
+    if (boundary < 3) throw new Error("Invalid named source row");
+    const name = line.slice(2, boundary);
+    if (result[name]) throw new Error(`Duplicate named source: ${name}`);
+    const references = urls(line.slice(boundary + 2));
+    if (!references.length) throw new Error(`Empty named source: ${name}`);
+    result[name] = references;
+  }
+  if (!Object.keys(result).length) throw new Error("Empty named source list");
+  return result;
+}
+
+export function parseRetainedTable(markdown, heading, columns) {
+  if (markdown.split(heading + "\n").length !== 2) throw new Error("Missing/duplicate retained table");
+  const result = {};
+  const section = markdown.split(heading + "\n")[1].split("\n## ")[0];
+  for (const line of section.split("\n")) {
+    if (!line.startsWith("| ") || line.startsWith("| Hotel |") || line.startsWith("|---")) continue;
+    const cells = line.split("|").slice(1, -1).map((cell) => cell.trim());
+    if (cells.length !== columns || !cells.every(Boolean) || result[cells[0]]) throw new Error("Invalid/duplicate retained table row");
+    result[cells[0]] = cells.slice(1);
+  }
+  if (!Object.keys(result).length) throw new Error("Empty retained table");
+  return result;
+}
+
+export function parsePropertyLedger(markdown) {
+  const section = markdown.split("## Selected Property Evidence\n")[1]?.split("\n## ")[0];
+  if (!section) throw new Error("Missing retained property ledger");
+  const result = {};
+  for (const block of section.split("\n### ").slice(1)) {
+    const name = block.split("\n")[0];
+    if (!name || result[name]) throw new Error("Invalid/duplicate retained property");
+    const values = {};
+    for (const line of block.split("\n")) {
+      const match = line.match(/^- (Official facts|Official and public facts|Public price basis|Page range|Review sample|Family context|Directional themes): (.+)$/);
+      if (!match) continue;
+      if (values[match[1]]) throw new Error("Duplicate retained property field");
+      values[match[1]] = match[2];
+    }
+    if (!(values["Official facts"] || values["Official and public facts"]) || !values["Public price basis"] || !values["Page range"] || !values["Review sample"]) throw new Error(`Incomplete retained property: ${name}`);
+    result[name] = values;
+  }
+  if (!Object.keys(result).length) throw new Error("Empty retained property ledger");
+  return result;
+}

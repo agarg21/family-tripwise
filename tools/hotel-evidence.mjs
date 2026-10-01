@@ -3,6 +3,7 @@ import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.
 import { suites, sources, checkedOn } from "./page-generation/orlando-suite-data.mjs";
 import { sanDiegoSources } from "./legacy-hotel-sources.mjs";
 import { normalizeSanDiegoHotel } from "./page-generation/san-diego-hotel-evidence.mjs";
+import { remainingCityResearch, normalizeRemainingHotel } from "./page-generation/remaining-hotel-evidence.mjs";
 
 export const SCHEMA_VERSION = 1;
 export const EVIDENCE_CLASSES = ["OFFICIAL_PROPERTY_FACT", "BOOKING_CHECK", "REVIEW_SIGNAL", "COMMUNITY_SIGNAL", "EDITORIAL_INTERPRETATION", "HUMAN_VERIFIED"];
@@ -27,6 +28,7 @@ export function hotelEvidence() {
   const { hotelCatalog } = createFamilyHotelPages({});
   for (const [city, hotels] of Object.entries(hotelCatalog)) {
     const registry = city === "san-diego" ? sanDiegoSources() : null;
+    const research = city === "san-diego" ? null : remainingCityResearch(city);
     hotels.forEach((hotel) => {
       const path = legacyPath(city);
       const unmapped = (value, evidenceClass = "EDITORIAL_INTERPRETATION") => field(value ?? null, "unmapped", evidenceClass, null, [], path, "Existing published interpretation retained; individual facts/dates/source IDs need mapping.", "unmapped");
@@ -44,6 +46,9 @@ export function hotelEvidence() {
       if (registry) {
         record.fields = normalizeSanDiegoHotel(hotel, record.fields.price, registry);
         record.model_path = "tools/page-generation/san-diego-hotel-evidence.mjs";
+      } else {
+        record.fields = normalizeRemainingHotel(hotel, record.fields, research);
+        record.model_path = "tools/page-generation/remaining-hotel-evidence.mjs";
       }
       records.push(record);
     });

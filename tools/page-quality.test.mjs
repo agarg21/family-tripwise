@@ -14,14 +14,14 @@ test("quality report is reproducible, bounded and never renews dates or publishe
   assert.equal(report.summary.hotels, 65);
   assert.equal(report.summary.due_price_records, 56);
   assert.equal(report.summary.price_gaps, 3);
-  assert.equal(report.summary.conflicts, 6);
-  assert.equal(report.summary.source_mapped_fields, 62);
+  assert.equal(report.summary.conflicts, 13);
+  assert.equal(report.summary.source_mapped_fields, 240);
   assert.equal(report.automatic_fact_renewal, false);
   assert.equal(report.automatic_publication, false);
   assert.ok(report.tasks.slice(0, 3).every((t) => t.priority === 1));
   assert.ok(report.pages.every((p) => p.state !== "PASS"));
   await validateCatalogPaths(records);
-  const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-san-diego.json", import.meta.url), "utf8"));
+  const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-legacy.json", import.meta.url), "utf8"));
   assert.deepEqual(saved, report);
 });
 
