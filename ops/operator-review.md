@@ -1,6 +1,20 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-MAINT-009 weekly review workflow
+
+Cycle-three Bohr independent read-only PASS/noP0-P3. All threeP2s closed. Independently verified focused17/state0/79snapshots/SEO31zeroerrorsfivepriorwarnings/whitespace, null versus actual attempt identity, required-source coverage, deferred triage, immutable saved-repeat/model-date-basis/public-output invariants. Full284 is operator-run, not independently rerun under read-only restrictions. Registered14-path tools/docs scope ready for exact changed-path push; no new public claim/fact renewal. Weekly-triage-ready state follows this verdict; October7due unchanged.
+
+Bohr cycle-two FAIL: original twoP2s closed; one additionalP2 found for legitimate never-attempted sources carried across dated limited runs. Attempt identity now preserves null when no HTTP/hash/denial or explicit attempt exists, matching collector semantics; added two-dated-run regression. Actual saved repeat/review unchanged; cycle-three read-only re-review remains before push. Earlier full283 checkpoint is history.
+
+Bohr (`01a0f4e4-c505-7c00-af9c-8454603d2729`) cycle-one FAIL: twoP2s, newly deferred sources omitted from triage and required source coverage not validated. Corrected required page/model source union checks and explicit new/carried deferred count/queue, with two regressions. Saved actual repeat has no deferred sources; collection counts/data unchanged. Independent cycle-two re-review required; original baseline/public bytes remain untouched.
+
+Operator checkpoint: focused14/full281,state0,79offline snapshots,SEO31zeroerrors/fivepriorwarnings, deterministic report/current390-model parity and whitespace pass.31pages/455sources,120seconds,89prior denials carried with original dates;39/210comparable text deltas unreconciled and explicit noise limitation. Immutable baseline/public bytes unchanged. Independent read-only review required before push; no new price or fact dates.
+
+Exact14paths registered before edits; bounded public-source repeat, original denied-access history, immutable audit output and compact review queue required. No public model/site changes or new scheduler; six exclusions preserved. Focused/full QA and independent read-only review remain before push.
+
 ## 2026-09-30 - FT-STD-003 remaining legacy normalization
+
+Mechanical release result: exact15 reviewed paths pushed as `3df352034d2cf87ab90f56f97a95ec68a49b1fce` after fresh fetch/no divergence/fullsole-range scope/whitespace checks;HEAD/origin0/0. No site change/Pages wait; six unrelated paths preserved. Earlier push-pending labels are history.
 
 Cycle-two Halley independent read-only PASS/noP0-P3 closes all fourP2s. Independently verified focused24/full276,state0,79offline snapshots,SEO31zeroerrors/fivepriorwarnings,455sources not fetched,240mapped/13conflicts/386tasks, historical-report/public-price/output parity, whitespace and six unchanged exclusions. Exact15-path tools/docs-only push next; current prices and atomic claim mapping remain gaps.
 

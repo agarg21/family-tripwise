@@ -78,6 +78,8 @@ This saves hashes, statuses, dated field gaps and unverified structured-price ca
 
 `node tools/seo-opportunity-pull.mjs` is a no-charge research preflight. `--execute` makes the explicitly budgeted API calls, using protected local authentication. It refuses an existing output to prevent accidental billed repeats; never delete that guard or rerun a partially billed batch without reconciliation. Change the dated batch/output explicitly for a new authorized research action.
 
+After collecting a new evidence audit, run `node tools/weekly-evidence-review.mjs --current ops/evidence-audits/NEW.json --previous ops/evidence-audits/PRIOR.json --output ops/evidence-audits/NEW-review.json`. It validates all-page/shared-model coverage and denial history, then separates unreconciled source changes from collection gaps and due fields. Audit/review outputs cannot overwrite existing evidence. The existing operator owns the weekly schedule; instructions and limitations are in `docs/plan/weekly-evidence-audit.md`. Hash changes never update a price or publish a claim automatically.
+
 ### Release Checks
 
 Run the full repository tests, operating-state consistency check, and static SEO QA before release:

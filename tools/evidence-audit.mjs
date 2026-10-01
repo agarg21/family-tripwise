@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { resolve, dirname, sep } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -9,6 +9,11 @@ const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const DAY = 86400000;
 const hash = (text) => createHash("sha256").update(text).digest("hex");
 export const easternDate = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+
+export async function requireNewOutput(path) {
+  try { await access(path); } catch (error) { if (error.code === "ENOENT") return; throw error; }
+  throw new Error("Audit output already exists; preserve evidence and select a new registered path");
+}
 
 export function modelRecords() {
   return hotelAuditRecords();
@@ -186,9 +191,10 @@ async function main() {
   const previous = value("--previous", null);
   const limit = Number(value("--limit", 250));
   if (!Number.isInteger(limit) || limit < 1 || limit > 500) throw new Error("--limit must be 1-500");
-  const result = await audit(config, { collect: args.includes("--collect"), previous: previous ? JSON.parse(await readFile(previous, "utf8")) : null, today: value("--date", easternDate()), limit });
   const output = value("--output", null);
-  if (output) { await mkdir(dirname(resolve(output)), { recursive: true }); await writeFile(output, JSON.stringify(result, null, 2) + "\n"); }
+  if (output) await requireNewOutput(resolve(output));
+  const result = await audit(config, { collect: args.includes("--collect"), previous: previous ? JSON.parse(await readFile(previous, "utf8")) : null, today: value("--date", easternDate()), limit });
+  if (output) { await mkdir(dirname(resolve(output)), { recursive: true }); await writeFile(output, JSON.stringify(result, null, 2) + "\n", { flag: "wx" }); }
   console.log(JSON.stringify({ ...result.summary, elapsed_seconds: result.elapsed_seconds, output }, null, 2));
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) await main();

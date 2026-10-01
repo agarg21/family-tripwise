@@ -1,0 +1,5143 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-10-01T00:34:45.474Z",
+  "previous_collected_at": "2026-09-30T20:30:02.332Z",
+  "automatic_fact_renewal": false,
+  "automatic_publication": false,
+  "summary": {
+    "canonical_pages": 31,
+    "sources": 455,
+    "newly_inventoried_sources": 123,
+    "comparable_retrieved_sources": 210,
+    "carried_denials": 89,
+    "deferred_sources": 0,
+    "changed_sources": 39,
+    "collection_gaps": 147,
+    "due_or_unknown_fields": 349,
+    "model_records_checked": 390,
+    "elapsed_seconds": 120
+  },
+  "source_review_queue": [
+    {
+      "url": "https://bookingsthegrandpr.moonpalace.com/rooms?&skd-total-rooms=1&adult_room1=2&child_room1_age0=1&skd-checkin=2026-10-18&skd-checkout=2026-10-23&skd-language-code=en&promocode=RETURN5&",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html"
+      ],
+      "mapped_record_ids": [
+        "cancun-grand-family-suite-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://disneyworld.disney.go.com/resorts/art-of-animation-resort/amenities/",
+      "state": "unsupported-format-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "orlando-art-of-animation-fees",
+        "orlando-art-of-animation-transport"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://disneyworld.disney.go.com/resorts/art-of-animation-resort/rates-rooms/",
+      "state": "unsupported-format-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "orlando-art-of-animation-room"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://excalibur.mgmresorts.com/en/hotel.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-excalibur-hotel-casino-room",
+        "las-vegas-excalibur-hotel-casino-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://mandalaybay.mgmresorts.com/en/contact-us.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-mandalay-bay-resort-and-casino-room",
+        "las-vegas-mandalay-bay-resort-and-casino-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://mandalaybay.mgmresorts.com/en/hotel.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-mandalay-bay-resort-and-casino-room",
+        "las-vegas-mandalay-bay-resort-and-casino-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://marriott.cdn.tambourine.com/royalton-resorts/media/rsplashcun_factsheet_spanish-67d1f4b2a8644.pdf",
+      "state": "unsupported-format-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html"
+      ],
+      "mapped_record_ids": [
+        "cancun-royalton-splash-two-bedroom-room"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://newsroom.mgmresorts.com/download/Excalibur%2BFact%2BSheet%2B2026%2B%281%29.pdf",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-excalibur-hotel-casino-room",
+        "las-vegas-excalibur-hotel-casino-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://newsroom.mgmresorts.com/download/New%2BYork-New%2BYork%2BFact%2BSheet%2B2026%2B%281%29.pdf",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-new-york-new-york-hotel-casino-room",
+        "las-vegas-new-york-new-york-hotel-casino-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://newyorknewyork.mgmresorts.com/en.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-new-york-new-york-hotel-casino-room",
+        "las-vegas-new-york-new-york-hotel-casino-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://newyorknewyork.mgmresorts.com/en/amenities.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-new-york-new-york-hotel-casino-room",
+        "las-vegas-new-york-new-york-hotel-casino-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://paradisepoint.com/resort/beach-resort-amenities/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-paradise-point-resort-spa-room",
+        "san-diego-paradise-point-resort-spa-fees",
+        "san-diego-paradise-point-resort-spa-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://thedana.com/san-diego-accommodations/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-the-dana-on-mission-bay-room",
+        "san-diego-the-dana-on-mission-bay-activities"
+      ],
+      "priority": 1,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://thedana.com/san-diego-hotel/faq/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-the-dana-on-mission-bay-room",
+        "san-diego-the-dana-on-mission-bay-fees",
+        "san-diego-the-dana-on-mission-bay-activities"
+      ],
+      "priority": 1,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://vdara.mgmresorts.com/en.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-vdara-hotel-spa-room",
+        "las-vegas-vdara-hotel-spa-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://vdara.mgmresorts.com/en/hotel.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-vdara-hotel-spa-room"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://vdara.mgmresorts.com/en/hotel/studio-suite.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-vdara-hotel-spa-room",
+        "las-vegas-vdara-hotel-spa-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/hotel/us/las-vegas-hilton-at-resorts-world.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-las-vegas-hilton-at-resorts-world-price",
+        "las-vegas-las-vegas-hilton-at-resorts-world-activities",
+        "las-vegas-las-vegas-hilton-at-resorts-world-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/hotel/us/radio-city-apartments.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-radio-city-apartments-room"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/hotel/us/tryp-times-square-south.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-room"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/home2-suites-by-hilton-san-antonio-riverwalk.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-room",
+        "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-activities",
+        "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.druryhotels.com/locations/san-antonio-tx/drury-plaza-hotel-san-antonio-riverwalk",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-room",
+        "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-activities"
+      ],
+      "priority": 1,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Embassy-Suites-Chicago-Downtown-Magnificent-Mile.h570329.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-price",
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-activities",
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Four-Seasons-Hotel-Chicago.h25748.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-four-seasons-hotel-chicago-price",
+        "chicago-four-seasons-hotel-chicago-activities",
+        "chicago-four-seasons-hotel-chicago-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Hilton-Chicago.h12570.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-hilton-chicago-price",
+        "chicago-hilton-chicago-activities",
+        "chicago-hilton-chicago-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Homewood-Suites-By-Hilton-Chicago-Downtown.h281523.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-homewood-suites-by-hilton-chicago-downtown-price",
+        "chicago-homewood-suites-by-hilton-chicago-downtown-activities",
+        "chicago-homewood-suites-by-hilton-chicago-downtown-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Hotel-Zachary-Chicago.h23055991.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-price",
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-activities",
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-InterContinental-Chicago-Magnificent-Mile.h20205.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-intercontinental-chicago-magnificent-mile-price",
+        "chicago-intercontinental-chicago-magnificent-mile-activities",
+        "chicago-intercontinental-chicago-magnificent-mile-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Residence-Inn-By-Marriott-Chicago-Downtown-River-North.h1763534.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-residence-inn-chicago-downtown-river-north-price",
+        "chicago-residence-inn-chicago-downtown-river-north-activities",
+        "chicago-residence-inn-chicago-downtown-river-north-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Sable-At-Navy-Pier-Chicago.h57651125.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-price",
+        "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-activities",
+        "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-Swissotel-Chicago.h17288.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-swissotel-chicago-price",
+        "chicago-swissotel-chicago-activities",
+        "chicago-swissotel-chicago-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Chicago-Hotels-The-Langham.h6309326.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-the-langham-chicago-price",
+        "chicago-the-langham-chicago-activities",
+        "chicago-the-langham-chicago-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Coronado-Hotels-Hotel-Del-Coronado.h7496.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-hotel-del-coronado-price",
+        "san-diego-hotel-del-coronado-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Coronado-Hotels-Loews-Coronado-Bay-Resort.h25840.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-loews-coronado-bay-resort-price",
+        "san-diego-loews-coronado-bay-resort-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/La-Jolla-Hotels-La-Jolla-Shores-Hotel.h25973.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-la-jolla-shores-hotel-price",
+        "san-diego-la-jolla-shores-hotel-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Cancun-Resort-By-Diamond-Resorts.h1144016.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-room",
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-price",
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-activities",
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Excalibur-Hotel-Casino.h41308.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-excalibur-hotel-casino-price",
+        "las-vegas-excalibur-hotel-casino-activities",
+        "las-vegas-excalibur-hotel-casino-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Four-Seasons-Hotel-Las-Vegas.h460435.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-four-seasons-hotel-las-vegas-price",
+        "las-vegas-four-seasons-hotel-las-vegas-activities",
+        "las-vegas-four-seasons-hotel-las-vegas-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Mandalay-Bay-Resort-And-Casino.h203613.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-mandalay-bay-resort-and-casino-price",
+        "las-vegas-mandalay-bay-resort-and-casino-activities",
+        "las-vegas-mandalay-bay-resort-and-casino-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Marriotts-Grand-Chateau.h90332667.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-marriott-s-grand-chateau-price",
+        "las-vegas-marriott-s-grand-chateau-activities",
+        "las-vegas-marriott-s-grand-chateau-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-New-York-New-York-Hotel-Casino.h41080.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-new-york-new-york-hotel-casino-price",
+        "las-vegas-new-york-new-york-hotel-casino-activities",
+        "las-vegas-new-york-new-york-hotel-casino-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Red-Rock-Casino.h1380135.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-red-rock-casino-resort-spa-price",
+        "las-vegas-red-rock-casino-resort-spa-activities",
+        "las-vegas-red-rock-casino-resort-spa-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Tahiti-Village-Resort-Spa.h1445791.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-tahiti-village-resort-price",
+        "las-vegas-tahiti-village-resort-activities",
+        "las-vegas-tahiti-village-resort-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/Las-Vegas-Hotels-Vdara-Hotel-Spa-At-ARIA-Las-Vegas.h2565824.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-vdara-hotel-spa-price",
+        "las-vegas-vdara-hotel-spa-activities",
+        "las-vegas-vdara-hotel-spa-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-1-Hotel-Brooklyn-Bridge.h15399642.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-1-hotel-brooklyn-bridge-price",
+        "new-york-city-1-hotel-brooklyn-bridge-activities",
+        "new-york-city-1-hotel-brooklyn-bridge-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Conrad-New-York-Downtown.h423480.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-conrad-new-york-downtown-price",
+        "new-york-city-conrad-new-york-downtown-activities",
+        "new-york-city-conrad-new-york-downtown-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Embassy-Suites-By-Hilton-New-York-Manhattan-Times-Square.h17171021.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-room",
+        "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-price",
+        "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-activities",
+        "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Four-Seasons-Hotel-New-York-Downtown.h15438428.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-four-seasons-hotel-new-york-downtown-price",
+        "new-york-city-four-seasons-hotel-new-york-downtown-activities",
+        "new-york-city-four-seasons-hotel-new-york-downtown-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Homewood-Suites-New-YorkMidtown-Manhattan-Times-Square.h6830159.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-price",
+        "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-activities",
+        "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Hotel-Beacon.h7422476.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-hotel-beacon-price",
+        "new-york-city-hotel-beacon-activities",
+        "new-york-city-hotel-beacon-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Lotte-New-York-Palace.h4818.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-lotte-new-york-palace-price",
+        "new-york-city-lotte-new-york-palace-activities",
+        "new-york-city-lotte-new-york-palace-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-New-York-Marriott-Marquis.h15838.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-new-york-marriott-marquis-price",
+        "new-york-city-new-york-marriott-marquis-activities",
+        "new-york-city-new-york-marriott-marquis-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Radio-City-Apartments.h6842904.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-radio-city-apartments-room",
+        "new-york-city-radio-city-apartments-price",
+        "new-york-city-radio-city-apartments-activities",
+        "new-york-city-radio-city-apartments-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-Residence-Inn-New-York-ManhattanCentral-Park.h6434849.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-room",
+        "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-price",
+        "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-activities",
+        "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-The-Kimberly-Hotel.h21300.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-the-kimberly-hotel-price",
+        "new-york-city-the-kimberly-hotel-activities",
+        "new-york-city-the-kimberly-hotel-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/New-York-Hotels-TRYP-By-Wyndham-New-York-City-Times-Square-South.h4621019.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-room",
+        "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-price",
+        "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-activities",
+        "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Drury-Plaza-Hotel-San-Antonio-Riverwalk.h1534252.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Embassy-Suites-San-Antonio-Riverwalk-Downtown.h3257765.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-price",
+        "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-activities",
+        "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Home2-Suites-By-Hilton-San-Antonio-Riverwalk.h32150296.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Homewood-Suites-By-Hilton-San-Antonio-RiverwalkDowntown.h28373.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-price",
+        "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-activities",
+        "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Hotel-Contessa-Suites-On-The-Riverwalk.h1234369.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hotel-contessa-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Hyatt-Regency-Hill-Country-Resort-Spa.h21664.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-regency-hill-country-resort-and-villas-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Hyatt-Regency-San-Antonio-Riverwalk.h10636.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-regency-san-antonio-riverwalk-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Hyatt-Vacation-Club-At-Wild-Oak-Ranch.h1113168.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-JW-Marriott-San-Antonio-Hill-Country-Resort-Spa.h2841775.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-price",
+        "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-activities",
+        "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Omni-La-Mansion-Del-Rio.h17329.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-omni-la-mansion-del-rio-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-San-Antonio-Marriott-Rivercenter.h8023.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-price",
+        "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-activities",
+        "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Antonio-Hotels-Signia-By-Hilton-La-Cantera-Resort-Spa.h284306.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-price",
+        "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-activities",
+        "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-Bahia-Resort-Hotel.h18241.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-bahia-resort-hotel-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-Catamaran-Resort-And-Spa.h24669.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-catamaran-resort-hotel-and-spa-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-Homewood-Suites-By-Hilton-San-Diego-DowntownBayside.h13155016.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-homewood-suites-san-diego-downtown-bayside-price",
+        "san-diego-homewood-suites-san-diego-downtown-bayside-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-Hyatt-Regency-Mission-Bay-Spa-And-Marina.h858.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-hyatt-regency-mission-bay-spa-and-marina-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-Manchester-Grand-Hyatt-San-Diego.h12073.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-manchester-grand-hyatt-san-diego-price",
+        "san-diego-manchester-grand-hyatt-san-diego-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-Paradise-Point-Resort-Spa.h3731.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-paradise-point-resort-spa-price",
+        "san-diego-paradise-point-resort-spa-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-San-Diego-Mission-Bay-Resort.h25598.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-san-diego-mission-bay-resort-price",
+        "san-diego-san-diego-mission-bay-resort-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.expedia.com/San-Diego-Hotels-The-Dana-On-Mission-Bay.h40953.Hotel-Information",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-the-dana-on-mission-bay-price",
+        "san-diego-the-dana-on-mission-bay-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en-gb/hotels/sanrhol-shore-house-at-the-del/rooms/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-hotel-del-coronado-room"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/chirees-embassy-suites-chicago-downtown-magnificent-mile/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-room",
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/lascngv-hilton-vacation-club-cancun-resort-las-vegas/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-room",
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/lascngv-hilton-vacation-club-cancun-resort-las-vegas/hotel-info/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-room",
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "new-york-city-conrad-new-york-downtown-room",
+        "new-york-city-conrad-new-york-downtown-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/rslvhvh-resorts-world-las-vegas/rooms/las-vegas-hilton/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-las-vegas-hilton-at-resorts-world-room",
+        "las-vegas-las-vegas-hilton-at-resorts-world-price",
+        "las-vegas-las-vegas-hilton-at-resorts-world-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-room",
+        "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa/location/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-room",
+        "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hotels.com/ho163438/four-seasons-hotel-las-vegas-las-vegas-united-states-of-america/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-four-seasons-hotel-las-vegas-price",
+        "las-vegas-four-seasons-hotel-las-vegas-activities",
+        "las-vegas-four-seasons-hotel-las-vegas-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hotels.com/ho203580/catamaran-resort-and-spa-san-diego-united-states-of-america/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-catamaran-resort-hotel-and-spa-price"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hotels.com/ho421960512/homewood-suites-by-hilton-san-diego-downtown-bayside-san-diego-united-states-of-america/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-homewood-suites-san-diego-downtown-bayside-price",
+        "san-diego-homewood-suites-san-diego-downtown-bayside-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hotelzachary.com/pdf/Hotel%20Zachary%20-%20Fact%20Sheet%20%28December%202025%29.pdf",
+      "state": "unsupported-format-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-room",
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hyatt.com/hyatt-regency/en-US/sanhc-hyatt-regency-hill-country-resort-and-villas/policies",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-regency-hill-country-resort-and-villas-room",
+        "san-antonio-hyatt-regency-hill-country-resort-and-villas-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hyatt.com/hyatt-regency/en-US/satrs-hyatt-regency-san-antonio-riverwalk/faqs",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-regency-san-antonio-riverwalk-room",
+        "san-antonio-hyatt-regency-san-antonio-riverwalk-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hyatt.com/hyatt-regency/en-US/satrs-hyatt-regency-san-antonio-riverwalk/rooms",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-regency-san-antonio-riverwalk-room",
+        "san-antonio-hyatt-regency-san-antonio-riverwalk-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.kidsquest.com/location/redrock/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-red-rock-casino-resort-spa-room",
+        "las-vegas-red-rock-casino-resort-spa-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.ljshoreshotel.com/accommodations/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-la-jolla-shores-hotel-room",
+        "san-diego-la-jolla-shores-hotel-fees",
+        "san-diego-la-jolla-shores-hotel-activities"
+      ],
+      "priority": 1,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.ljshoreshotel.com/faqs/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-la-jolla-shores-hotel-fees",
+        "san-diego-la-jolla-shores-hotel-activities"
+      ],
+      "priority": 1,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.ljshoreshotel.com/resort-policies/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-la-jolla-shores-hotel-fees"
+      ],
+      "priority": 1,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.omnihotels.com/hotels/san-antonio-la-mansion-del-rio/accommodations",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-omni-la-mansion-del-rio-room",
+        "san-antonio-omni-la-mansion-del-rio-activities"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g60750-d83361-Reviews-Bahia_Resort_Hotel-San_Diego_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-bahia-resort-hotel-price",
+        "san-diego-bahia-resort-hotel-review_signal"
+      ],
+      "priority": 1,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/hotel/us/bahia-resort.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-bahia-resort-hotel-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/hotel/us/paradise-point-resort-spa.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-paradise-point-resort-spa-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/hotel/us/san-diego-mission-bay-resort.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-san-diego-mission-bay-resort-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/78205-112college.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-omni-la-mansion-del-rio-activities",
+        "san-antonio-omni-la-mansion-del-rio-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/contessa-riverwalk.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hotel-contessa-activities",
+        "san-antonio-hotel-contessa-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/drury-plaza-san-antonio-riverwalk.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-activities",
+        "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/four-seasons-las-vegas.en-gb.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-four-seasons-hotel-las-vegas-activities",
+        "las-vegas-four-seasons-hotel-las-vegas-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/hilton-vacation-club-cancun-resort-las-vegas.es-mx.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-activities",
+        "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/homewood-suites-by-hilton-r-chicago-downtown.en-gb.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-homewood-suites-by-hilton-chicago-downtown-activities",
+        "chicago-homewood-suites-by-hilton-chicago-downtown-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/hyatt-regency-hill-country-resort-spa.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-regency-hill-country-resort-and-villas-activities",
+        "san-antonio-hyatt-regency-hill-country-resort-and-villas-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/hyatt-regency-mission-bay-spa-and-marina.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-hyatt-regency-mission-bay-spa-and-marina-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/hyatt-wild-oak-ranch.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-activities",
+        "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/las-vegas-hilton-at-resorts-world.es.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-las-vegas-hilton-at-resorts-world-activities",
+        "las-vegas-las-vegas-hilton-at-resorts-world-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/marriott-s-grand-chateau-1-las-vegas.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-marriott-s-grand-chateau-activities",
+        "las-vegas-marriott-s-grand-chateau-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/red-rock-casino-resort-amp-spa.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-red-rock-casino-resort-spa-activities",
+        "las-vegas-red-rock-casino-resort-spa-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/residence-inn-chicago-downtown-river-north.en-gb.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-residence-inn-chicago-downtown-river-north-activities",
+        "chicago-residence-inn-chicago-downtown-river-north-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/sanantonio-123-losoya.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-antonio-hyatt-regency-san-antonio-riverwalk-activities",
+        "san-antonio-hyatt-regency-san-antonio-riverwalk-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/tahiti-village-vacation-club.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-tahiti-village-resort-activities",
+        "las-vegas-tahiti-village-resort-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.booking.com/reviews/us/hotel/zachary-chicago-a-tribute-portfolio.html",
+      "state": "challenge-or-empty-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-activities",
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/chihwhw-homewood-suites-chicago-downtown/hotel-info/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-homewood-suites-by-hilton-chicago-downtown-activities"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hilton.com/en/hotels/chirees-embassy-suites-chicago-downtown-magnificent-mile/hotel-info/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-activities"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hotels.com/ho203643/bahia-resort-hotel-san-diego-united-states-of-america/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-bahia-resort-hotel-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.hyatt.com/hyatt-regency/en-US/sanis-hyatt-regency-mission-bay-spa-and-marina/reviews",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-hyatt-regency-mission-bay-spa-and-marina-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g32171-d15120341-Reviews-LEGOLAND_Castle_Hotel-Carlsbad_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-legoland-hotel-or-castle-hotel-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g32171-d4471836-Reviews-LEGOLAND_California_Hotel-Carlsbad_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-legoland-hotel-or-castle-hotel-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g32250-d25840-Reviews-Loews_Coronado_Bay_Resort-Coronado_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-loews-coronado-bay-resort-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d114581-Reviews-Swissotel_Chicago-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-swissotel-chicago-activities",
+        "chicago-swissotel-chicago-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d114591-Reviews-Four_Seasons_Hotel_Chicago-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-four-seasons-hotel-chicago-activities",
+        "chicago-four-seasons-hotel-chicago-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d13827183-Reviews-Hotel_Zachary_Chicago_a_Tribute_Portfolio_Hotel-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-activities",
+        "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d21280367-Reviews-Sable_at_Navy_Pier_Chicago_Curio_Collection_by_Hilton-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-activities",
+        "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d223061-Reviews-Embassy_Suites_by_Hilton_Chicago_Downtown_Magnificent_Mile-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-activities",
+        "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d4046139-Reviews-The_Langham_Chicago-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-the-langham-chicago-activities",
+        "chicago-the-langham-chicago-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d674288-Reviews-Residence_Inn_by_Marriott_Chicago_Downtown_River_North-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-residence-inn-chicago-downtown-river-north-activities",
+        "chicago-residence-inn-chicago-downtown-river-north-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d87590-Reviews-Hilton_Chicago-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-hilton-chicago-activities",
+        "chicago-hilton-chicago-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d87620-Reviews-InterContinental_Chicago_Magnificent_Mile_by_IHG-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-intercontinental-chicago-magnificent-mile-activities",
+        "chicago-intercontinental-chicago-magnificent-mile-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g35805-d90959-Reviews-Homewood_Suites_by_Hilton_Chicago_Downtown-Chicago_Illinois.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "chicago-homewood-suites-by-hilton-chicago-downtown-activities",
+        "chicago-homewood-suites-by-hilton-chicago-downtown-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g45963-d1474086-Reviews-Vdara_Hotel_Spa-Las_Vegas_Nevada.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-vdara-hotel-spa-activities",
+        "las-vegas-vdara-hotel-spa-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g45963-d567617-Reviews-Marriott_s_Grand_Chateau-Las_Vegas_Nevada.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-marriott-s-grand-chateau-activities",
+        "las-vegas-marriott-s-grand-chateau-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g45963-d596543-Reviews-Red_Rock_Casino_Resort_Spa-Las_Vegas_Nevada.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-red-rock-casino-resort-spa-activities",
+        "las-vegas-red-rock-casino-resort-spa-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g45963-d628433-Reviews-Tahiti_Village-Las_Vegas_Nevada.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "las-vegas-tahiti-village-resort-activities",
+        "las-vegas-tahiti-village-resort-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g60750-d10243394-Reviews-Homewood_Suites_by_Hilton_San_Diego_Downtown_Bayside-San_Diego_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-homewood-suites-san-diego-downtown-bayside-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g60750-d24669-Reviews-Catamaran_Resort_Hotel_and_Spa-San_Diego_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-catamaran-resort-hotel-and-spa-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g60750-d25598-Reviews-San_Diego_Mission_Bay_Resort-San_Diego_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-san-diego-mission-bay-resort-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g60750-d3731-Reviews-Paradise_Point_Resort_Spa-San_Diego_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-paradise-point-resort-spa-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g60750-d858-Reviews-Hyatt_Regency_Mission_Bay_Spa_and_Marina-San_Diego_California.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "mapped_record_ids": [
+        "san-diego-hyatt-regency-mission-bay-spa-and-marina-review_signal"
+      ],
+      "priority": 2,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://andrettikarting.com/sanantonio/faq",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://andrettikarting.com/sanantonio/pricing",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://balboapark.org/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+        "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://balboapark.org/plan-your-visit/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+        "https://familytripwise.com/things-to-do/las-vegas-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+        "https://familytripwise.com/things-to-do/las-vegas-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://bpca.ny.gov/places/parks/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://brooklynbridgepark.org/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://brooklynbridgepark.org/places-to-see/playgrounds/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://events.atpearl.com/series/farmers-market/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://garfieldconservatory.org/visit/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://mandalaybay.mgmresorts.com/en/amenities/beach.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+        "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://movingimage.org/visit/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://newyorknewyork.mgmresorts.com/en/entertainment/the-big-apple-coaster-and-arcade.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://sabgtx.org/plan-your-visit/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://sandiegomuseumcouncil.org/specials/kidsfree/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://thinkplaycreate.org/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://thinkplaycreate.org/visit/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://vegasexperience.com/",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.adlerplanetarium.org/visit/tickets/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.bryantpark.org/the-park",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.choosechicago.com/blog/hotels/where-to-stay-in-chicago/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.choosechicago.com/neighborhoods/lincoln-park/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.choosechicago.com/neighborhoods/loop/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.choosechicago.com/neighborhoods/river-north/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.choosechicago.com/neighborhoods/south-loop/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.choosechicago.com/neighborhoods/streeterville/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.choosechicago.com/neighborhoods/west-loop/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.fleetscience.org/hours-admission",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.griffinmsi.org/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.griffinmsi.org/about",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/chicago-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.griffinmsi.org/tours/u-505-submarine-on-board-tour",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/chicago-with-teens.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.lpzoo.org/visit/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.sandiego.gov/lifeguards/beaches/cove",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.sandiego.gov/planning/community-plans/mission-valley",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+        "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+        "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+        "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.springspreserve.org/visitor-information/tickets.html",
+      "state": "unavailable-review",
+      "pages": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "collection-gap-not-factual-change"
+    },
+    {
+      "url": "https://www.transitchicago.com/accessibility/default.aspx",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.transitchicago.com/alerts/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.transitchicago.com/maps/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+        "https://familytripwise.com/family-itinerary/chicago-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    },
+    {
+      "url": "https://www.viainfo.net/service-alerts/",
+      "state": "text-changed-review",
+      "pages": [
+        "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html"
+      ],
+      "mapped_record_ids": [],
+      "priority": 3,
+      "classification": "hash-delta-unreconciled-may-be-noise"
+    }
+  ],
+  "field_review_queue": [
+    {
+      "id": "cancun-finest-family-suite-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "cancun-sunscape-family-junior-suite-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "cancun-sapphire-family-junior-suite-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "cancun-royalton-splash-two-bedroom-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "cancun-ziva-ocean-view-double-price",
+      "page_url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "field": "nightly-price",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "cancun-ziva-ocean-view-double-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "cancun-grand-family-suite-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "orlando-art-of-animation-price",
+      "page_url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "orlando-art-of-animation-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "orlando-cabana-bay-price",
+      "page_url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "orlando-cabana-bay-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "orlando-holiday-inn-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-prices",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-bahia-resort-hotel-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-bahia-resort-hotel-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-bahia-resort-hotel-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-bahia-resort-hotel-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-bahia-resort-hotel-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-san-diego-mission-bay-resort-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-san-diego-mission-bay-resort-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-san-diego-mission-bay-resort-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-san-diego-mission-bay-resort-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-san-diego-mission-bay-resort-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-san-diego-mission-bay-resort-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-hyatt-regency-mission-bay-spa-and-marina-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-hyatt-regency-mission-bay-spa-and-marina-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-hyatt-regency-mission-bay-spa-and-marina-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-hyatt-regency-mission-bay-spa-and-marina-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-hyatt-regency-mission-bay-spa-and-marina-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-hyatt-regency-mission-bay-spa-and-marina-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-paradise-point-resort-spa-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-paradise-point-resort-spa-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-paradise-point-resort-spa-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-paradise-point-resort-spa-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-paradise-point-resort-spa-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-paradise-point-resort-spa-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-catamaran-resort-hotel-and-spa-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-catamaran-resort-hotel-and-spa-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-catamaran-resort-hotel-and-spa-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-catamaran-resort-hotel-and-spa-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-catamaran-resort-hotel-and-spa-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-homewood-suites-san-diego-downtown-bayside-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-homewood-suites-san-diego-downtown-bayside-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-homewood-suites-san-diego-downtown-bayside-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-homewood-suites-san-diego-downtown-bayside-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-homewood-suites-san-diego-downtown-bayside-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-homewood-suites-san-diego-downtown-bayside-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-legoland-hotel-or-castle-hotel-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-legoland-hotel-or-castle-hotel-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-legoland-hotel-or-castle-hotel-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-legoland-hotel-or-castle-hotel-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-legoland-hotel-or-castle-hotel-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-legoland-hotel-or-castle-hotel-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-loews-coronado-bay-resort-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-loews-coronado-bay-resort-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-loews-coronado-bay-resort-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-loews-coronado-bay-resort-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-08-01"
+    },
+    {
+      "id": "san-diego-loews-coronado-bay-resort-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-18",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-loews-coronado-bay-resort-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-la-jolla-shores-hotel-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-la-jolla-shores-hotel-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-la-jolla-shores-hotel-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-la-jolla-shores-hotel-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-08-04"
+    },
+    {
+      "id": "san-diego-la-jolla-shores-hotel-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-09-19"
+    },
+    {
+      "id": "san-diego-la-jolla-shores-hotel-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-hotel-del-coronado-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-hotel-del-coronado-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-hotel-del-coronado-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-hotel-del-coronado-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-08-04"
+    },
+    {
+      "id": "san-diego-hotel-del-coronado-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-09-19"
+    },
+    {
+      "id": "san-diego-hotel-del-coronado-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-the-dana-on-mission-bay-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-the-dana-on-mission-bay-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-the-dana-on-mission-bay-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-08-04"
+    },
+    {
+      "id": "san-diego-the-dana-on-mission-bay-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-09-19"
+    },
+    {
+      "id": "san-diego-the-dana-on-mission-bay-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-diego-manchester-grand-hyatt-san-diego-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-manchester-grand-hyatt-san-diego-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-08-31"
+    },
+    {
+      "id": "san-diego-manchester-grand-hyatt-san-diego-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-08-17",
+      "state": "review-due",
+      "due_on": "2026-09-16"
+    },
+    {
+      "id": "san-diego-manchester-grand-hyatt-san-diego-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-08-04"
+    },
+    {
+      "id": "san-diego-manchester-grand-hyatt-san-diego-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-21",
+      "state": "review-due",
+      "due_on": "2026-09-19"
+    },
+    {
+      "id": "san-diego-manchester-grand-hyatt-san-diego-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-prices",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-mandalay-bay-resort-and-casino-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-mandalay-bay-resort-and-casino-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-mandalay-bay-resort-and-casino-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-mandalay-bay-resort-and-casino-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-mandalay-bay-resort-and-casino-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-mandalay-bay-resort-and-casino-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-four-seasons-hotel-las-vegas-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-four-seasons-hotel-las-vegas-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-four-seasons-hotel-las-vegas-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-four-seasons-hotel-las-vegas-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-four-seasons-hotel-las-vegas-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-four-seasons-hotel-las-vegas-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-vdara-hotel-spa-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-vdara-hotel-spa-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-vdara-hotel-spa-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-vdara-hotel-spa-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-vdara-hotel-spa-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-vdara-hotel-spa-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-marriott-s-grand-chateau-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-marriott-s-grand-chateau-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-marriott-s-grand-chateau-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-marriott-s-grand-chateau-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-marriott-s-grand-chateau-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-marriott-s-grand-chateau-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-tahiti-village-resort-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-tahiti-village-resort-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-tahiti-village-resort-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-tahiti-village-resort-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-tahiti-village-resort-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-tahiti-village-resort-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-hilton-vacation-club-cancun-resort-las-vegas-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-excalibur-hotel-casino-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-excalibur-hotel-casino-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-excalibur-hotel-casino-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-excalibur-hotel-casino-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-excalibur-hotel-casino-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-excalibur-hotel-casino-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-new-york-new-york-hotel-casino-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-new-york-new-york-hotel-casino-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-new-york-new-york-hotel-casino-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-new-york-new-york-hotel-casino-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-new-york-new-york-hotel-casino-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-new-york-new-york-hotel-casino-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-las-vegas-hilton-at-resorts-world-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-las-vegas-hilton-at-resorts-world-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-las-vegas-hilton-at-resorts-world-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-las-vegas-hilton-at-resorts-world-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-las-vegas-hilton-at-resorts-world-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-las-vegas-hilton-at-resorts-world-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "las-vegas-red-rock-casino-resort-spa-room",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-red-rock-casino-resort-spa-price",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-05"
+    },
+    {
+      "id": "las-vegas-red-rock-casino-resort-spa-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-red-rock-casino-resort-spa-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "las-vegas-red-rock-casino-resort-spa-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-08-21"
+    },
+    {
+      "id": "las-vegas-red-rock-casino-resort-spa-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-22",
+      "state": "review-due",
+      "due_on": "2026-09-20"
+    },
+    {
+      "id": "chicago-prices",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-embassy-suites-by-hilton-chicago-downtown-magnificent-mile-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-homewood-suites-by-hilton-chicago-downtown-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-homewood-suites-by-hilton-chicago-downtown-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-homewood-suites-by-hilton-chicago-downtown-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-homewood-suites-by-hilton-chicago-downtown-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-homewood-suites-by-hilton-chicago-downtown-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-homewood-suites-by-hilton-chicago-downtown-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-residence-inn-chicago-downtown-river-north-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-residence-inn-chicago-downtown-river-north-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-residence-inn-chicago-downtown-river-north-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-residence-inn-chicago-downtown-river-north-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-residence-inn-chicago-downtown-river-north-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-residence-inn-chicago-downtown-river-north-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-sable-at-navy-pier-chicago-curio-collection-by-hilton-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-swissotel-chicago-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-swissotel-chicago-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-swissotel-chicago-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-swissotel-chicago-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-swissotel-chicago-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-swissotel-chicago-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-intercontinental-chicago-magnificent-mile-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-intercontinental-chicago-magnificent-mile-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-intercontinental-chicago-magnificent-mile-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-intercontinental-chicago-magnificent-mile-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-intercontinental-chicago-magnificent-mile-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-intercontinental-chicago-magnificent-mile-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-hilton-chicago-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-hilton-chicago-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-hilton-chicago-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-hilton-chicago-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-hilton-chicago-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-hilton-chicago-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-hotel-zachary-chicago-a-tribute-portfolio-hotel-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-four-seasons-hotel-chicago-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-four-seasons-hotel-chicago-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-four-seasons-hotel-chicago-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-four-seasons-hotel-chicago-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-four-seasons-hotel-chicago-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-four-seasons-hotel-chicago-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "chicago-the-langham-chicago-room",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-the-langham-chicago-price",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-06"
+    },
+    {
+      "id": "chicago-the-langham-chicago-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-the-langham-chicago-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "chicago-the-langham-chicago-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-08-22"
+    },
+    {
+      "id": "chicago-the-langham-chicago-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-23",
+      "state": "review-due",
+      "due_on": "2026-09-21"
+    },
+    {
+      "id": "nyc-prices",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-hotel-beacon-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-hotel-beacon-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-hotel-beacon-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-hotel-beacon-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-hotel-beacon-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-hotel-beacon-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-homewood-suites-by-hilton-new-york-midtown-manhattan-times-square-south-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-residence-inn-by-marriott-new-york-manhattan-central-park-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-radio-city-apartments-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-radio-city-apartments-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-radio-city-apartments-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-radio-city-apartments-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-radio-city-apartments-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-radio-city-apartments-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-embassy-suites-by-hilton-new-york-manhattan-times-square-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-the-kimberly-hotel-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-the-kimberly-hotel-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-the-kimberly-hotel-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-the-kimberly-hotel-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-the-kimberly-hotel-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-the-kimberly-hotel-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-new-york-marriott-marquis-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-new-york-marriott-marquis-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-new-york-marriott-marquis-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-new-york-marriott-marquis-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-new-york-marriott-marquis-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-new-york-marriott-marquis-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-conrad-new-york-downtown-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-conrad-new-york-downtown-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-conrad-new-york-downtown-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-conrad-new-york-downtown-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-conrad-new-york-downtown-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-conrad-new-york-downtown-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-lotte-new-york-palace-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-lotte-new-york-palace-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-lotte-new-york-palace-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-lotte-new-york-palace-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-lotte-new-york-palace-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-lotte-new-york-palace-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-1-hotel-brooklyn-bridge-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-1-hotel-brooklyn-bridge-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-1-hotel-brooklyn-bridge-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-1-hotel-brooklyn-bridge-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-1-hotel-brooklyn-bridge-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-1-hotel-brooklyn-bridge-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "new-york-city-four-seasons-hotel-new-york-downtown-room",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-four-seasons-hotel-new-york-downtown-price",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-08"
+    },
+    {
+      "id": "new-york-city-four-seasons-hotel-new-york-downtown-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-four-seasons-hotel-new-york-downtown-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "new-york-city-four-seasons-hotel-new-york-downtown-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-08-24"
+    },
+    {
+      "id": "new-york-city-four-seasons-hotel-new-york-downtown-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-25",
+      "state": "review-due",
+      "due_on": "2026-09-23"
+    },
+    {
+      "id": "san-antonio-prices",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-hill-country-resort-and-villas-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-hill-country-resort-and-villas-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-hill-country-resort-and-villas-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hyatt-regency-hill-country-resort-and-villas-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hyatt-regency-hill-country-resort-and-villas-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-hill-country-resort-and-villas-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-jw-marriott-san-antonio-hill-country-resort-and-spa-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-signia-by-hilton-la-cantera-resort-and-spa-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-embassy-suites-by-hilton-san-antonio-riverwalk-downtown-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-homewood-suites-by-hilton-san-antonio-riverwalk-downtown-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-home2-suites-by-hilton-san-antonio-riverwalk-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-drury-plaza-hotel-san-antonio-riverwalk-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-hotel-contessa-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hotel-contessa-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-hotel-contessa-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hotel-contessa-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hotel-contessa-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hotel-contessa-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-san-antonio-riverwalk-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-san-antonio-riverwalk-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-san-antonio-riverwalk-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hyatt-regency-san-antonio-riverwalk-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-hyatt-regency-san-antonio-riverwalk-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-hyatt-regency-san-antonio-riverwalk-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-san-antonio-marriott-rivercenter-on-the-river-walk-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    },
+    {
+      "id": "san-antonio-omni-la-mansion-del-rio-room",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "room",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-omni-la-mansion-del-rio-price",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "nightly-price",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-09"
+    },
+    {
+      "id": "san-antonio-omni-la-mansion-del-rio-fees",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "fees",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-omni-la-mansion-del-rio-transport",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "transport",
+      "verified_on": null,
+      "state": "unknown",
+      "due_on": null
+    },
+    {
+      "id": "san-antonio-omni-la-mansion-del-rio-activities",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "activities",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-08-25"
+    },
+    {
+      "id": "san-antonio-omni-la-mansion-del-rio-review_signal",
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "field": "review_signal",
+      "verified_on": "2026-07-26",
+      "state": "review-due",
+      "due_on": "2026-09-24"
+    }
+  ],
+  "deferred_source_queue": [],
+  "limitations": [
+    "Hash changes include navigation, booking inventory and dynamic text; none is a reconciled fact change.",
+    "Newly inventoried sources are baselines, not growth or proof of fresh claims.",
+    "Unchanged bodies and successful collection never renew property/price/review observation dates.",
+    "Same-day repeat validates workflow controls, not long-term noise rate, complete claim coverage or all-family prices.",
+    "Denied sources remain narrow research gaps; no bypass or new attempt is authorized."
+  ]
+}

@@ -2,6 +2,10 @@
 
 Last updated: 2026-09-30
 
+FT-MAINT-009 review-clean: Bohr cycle-three PASS/noP0-P3, operatorfull284/focused17 and native state/snapshot/SEO/scope/immutability checks pass. Weekly-triage-ready via existing operator dueOctober7;13changed paths within registered14scope ready for tools/docs push. No public fact/price renewal; current quotes and atomic mapping remain next evidence gates.
+
+Current FT-MAINT-009:14paths registered for all-source repeat/denial/noise validation and reusable weekly review queue. Baseline remains immutable; original price/fact dates and public output unchanged. Existing operator weekly dueOctober7, no new scheduler. Native QA/independent review before tools/docs-only push. FT-STD-003 delivered at `3df352034d2cf87ab90f56f97a95ec68a49b1fce`, reviewed exact15-path push,HEAD/origin0/0, no site deployment.
+
 FT-STD-003 final gate: Halley cycle-two PASS/noP0-P3,focused24/full276 and all native state/snapshot/SEO/parity/scope checks green. Exact15-path tools/docs-only push next; no public output or evidence date renewal. Weekly repeat/noise validation follows.
 
 Current FT-STD-003: normalize remaining44legacy hotel identities, retaining historical price displays and original/narrow overlay dates. Exact15paths, evidence, acceptance, measurement and unchanged-public-site invariants registered before editing. User authorizes continued routine work without waiting; no new destination or external authority inferred. Weekly source repeat/noise validation follows this reviewed mapping.

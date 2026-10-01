@@ -4,7 +4,15 @@ Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and
 
 Last updated: 2026-09-30
 
+## LRN-070 / September30 / FT-MAINT-009
+
+Mechanical final gate: Bohr cycle-three PASS/noP0-P3; focused17/native state/79snapshots/SEO31zeroerrorsfivepriorwarnings/scope/immutability controls independently pass. Full284 operator-run. Weekly-triage-ready dueOctober7; registered14scope/13changed-path tools/docs push pending, no public or original-date renewal.
+
+Family decision: keep approximate hotel-budget and room/policy comparisons useful without renewing unsupported facts during weekly maintenance. Hypothesis: whole-source body hashes can identify which family facts need correction without manual reconciliation. Rejected as sufficient: September30same-day455-source repeat took120seconds;171bodies unchanged and39of210comparable sources changed, but bodies were discarded and exact fact changes remain unknown.123new source links are mapping coverage, not demand/growth.89prior denied sources retained original attempts without retry;390shared field/date/basis records match current models. Evidence class: dated public-source collection/hash/status evidence, maintained record parity and deterministic proxy controls, not current quotes, user testing or proof of inaccurate pages. Result IMPLEMENT noise-aware weekly triage and compact due/unknown queue, not mass rewriting;39unreconciled changes,147collection gaps plus89carried denials and349due/unknown fields. Confidence high in coverage/parity/access controls, low in hash-to-fact interpretation and unmeasured long-term noise rate. Reusable lesson: separate retrieval, extraction, original observation and publication; unchanged bodies cannot substitute for missing family-price basis. Next falsification trigger: October7weekly run, model/URL mismatch, changed permitted-access condition or a source-reconciled exact-room/fee/price discrepancy. Record: `docs/plan/weekly-evidence-audit.md`; QA/independent review/push remain; no public output/date change or new scheduler.
+
 ## LRN-069 / September30 / FT-STD-003
+
+Mechanical release result: reviewed15-path `3df352034d2cf87ab90f56f97a95ec68a49b1fce` pushed to main;HEAD/origin0/0, no public deployment or evidence renewal. Six exclusions preserved; earlier pending labels are history.
 
 Mechanical final gate: Halley cycle-two PASS/noP0-P3; focused24/full276,state0,79snapshots,SEO31zeroerrors/fivepriorwarnings,240mapped/13conflicts/386tasks, parity/whitespace/six exclusions pass. Exact15-path tools/docs-only push pending; no public release or new fact/price verification.
 
