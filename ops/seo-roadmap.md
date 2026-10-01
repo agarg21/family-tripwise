@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-30
 
+Current FT-RES-060: REJECT generic Disney2027dining calculator/newURL after current official-policy and two-tool structural overlap audit. Proposed quote/cash/tax-tip/unspent-credit surface already covered;2027child saving is menu-relative, not a flat plan-price discount. Reopen only after new terms or supported distinct meal/rest task gap and controlled overlap. Exact7paths registered, native/different read-only QA before docs-only push. FTRES070partialDCcorpus delivered4c4e725/PASS/full323isolated324workingtree; broaderDCresearch and Chicago visual/download gates unchanged. Earlier Current checkpoints are history.
+
 Current decision FT-RES-070: partial Washington DC exact-room/public-budget corpus, a bounded FT-RES-059 subaction.13paths registered; four category records, one dated public USD sample, two unresolved categories and remaining pricing/rest/review/controlled-overlap/publication gates explicit. Reusable USD/GBP observation matching, no conversion or published DC page. Focused/full/read-only review and tools/docs-only push next. STD004 completed29f8cec/SchrodingerPASS/319isolated320workingtree, no public change; Chicago remains local unshipped. Older Current checkpoints below are history.
 
 Current FT-STD-004:12SanDiego activity logistics/72field pilot and immutable quality reports, exact15paths registered in plan before tools edits. Mixed model dates/qualitative costs/estimates/prompts retained, five activity models unmapped; no public/model/fact renewal. Focused12/full320 workingtree green; isolated/native/different read-only tools-only gates next. FT-IMP-050 seven hold docs pushedb6ba823; five sitecode/CSVfiles still local pending normal preview-access and visual/download/release gates.
