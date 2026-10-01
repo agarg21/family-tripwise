@@ -6,6 +6,8 @@ State: operator policy; reusable all-page source-audit tooling implemented, pric
 
 Last updated: 2026-09-30
 
+FT-RES-058 adds an offline exact-configuration capacity-screen pilot: `node tools/family-room-task.mjs`, structured six-category London records and named older-child/infant controls in `docs/research/london-room-configurations-2026-09-30.json`. Base limits, infant-only extension, paid beds, requested versus named connections, stale-source checks and conflicts remain separate. It screens published rules, not booking acceptance or suitability. This initial schema deliberately retains unpriced GBP gaps and a detached offer lead; it cannot promote an unrelated starting offer into a room price. Comparable nightly observations, review/location evidence and publication gates remain required before a London page. Reuse the proven screening pattern for another pack rather than copy prose; reviewed price adapters are separate work.
+
 September30 collection layer: `tools/evidence-audit.mjs` inventories every canonical page and deduplicates allowlisted source fetches. Cancun/Orlando observation records are read directly from shared data modules; legacy city price packs have explicitly dated aggregate watches. Hash changes, structured-price candidates and HTTP success are not renewed facts. Weekly due state and agent reconciliation: `docs/plan/weekly-evidence-audit.md`. Dynamic booking prices still need source-specific, permitted room/party/date/fee adapters or reviewed public booking checks; never promote a zero-priced structured placeholder into a hotel rate.
 
 ## Purpose

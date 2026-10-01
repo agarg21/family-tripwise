@@ -1,6 +1,18 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-RES-058 London structured room screening
+
+Bernoulli cycle-two independent read-only PASS/noP0-P3, bothP2s closed. Independently11focused/current-historical-stale/timezone/smaller-party controls,state0,79snapshots,SEO31zeroerrors/fiveadvisories,scope/whitespace/primary-source carryforward and NYC production marker/bytes pass. Full298/browser remain operator evidence. Six exclusions/index/HEAD unchanged; exact11paths ready for tools/docs-only push. Separate later booking observations are outside this baseline approval.
+
+Bernoulli cycle-one read-only FAIL, twoP2s corrected: default screening used inspection date and bypassed staleness; now today's Eastern date with explicit historical replay and returned screened_on. Smaller-party configurations inherited/omitted bed conditions; distinct base/extended records now label derived screens separately and preserve requested-rollaway fee conflict. Two additional regressions; focused11 pass. Cycle-two read-only review required before push. Independent seven primary pages/11path scope/9focused/state/snapshot/SEO and NYC production-backfill checks passed; full/browser remain operator evidence.
+
+Operator checkpoint: focused9/full296,state0,79offline snapshots,SEO31zeroerrors/fiveprioradvisories,CLI named task,six-source-category provenance plus detached offer,public/model/history parity and whitespace pass. All six excluded hashes unchanged. Independent review exact11paths next; no public change or Pages wait.
+
+Exact11paths/evidence/acceptance/measurement/invariants registered in current-cycle before edits. Six official categories and three specialist guides inform a reusable offline task, not a public London page; comparable nightly prices, route/review corpus and publication approval remain separate gates. Different read-only review and focused/full native QA before tools/docs-only push; six exclusions unchanged.
+
 ## 2026-09-30 - FT-IMP-049 NYC comparison sharing
+
+Mechanical completed release: `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages `36802947632`, exact sha/run_id marker,50943byteHTML/18818byteCSV HTTP200/byte-identical; productionSEO31zeroerrors/fiveprioradvisories and declared invariants pass. Fresh fetch/no divergence/sole reviewed range and exact12paths; six exclusions preserved. No source/rate renewal. Earlier release checkpoints are history.
 
 Volta cycle-two independent read-only PASS/noP0-P3: prior release-state P2 closed. Independently37focused/related,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories,whitespace/exact scope/catalog/18818byteCSV/date/basis/Vegas/other-output parity pass. Operatorfull287 rerun and browser/download checks are not independently repeated. Six exclusions/index/HEAD unchanged during review. Exact12reviewed paths ready for commit/push and declared production verification.
 

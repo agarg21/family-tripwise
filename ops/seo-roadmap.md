@@ -2,9 +2,11 @@
 
 Last updated: 2026-09-30
 
-FT-IMP-049 QA complete:12same-record portable rows with price/date/basis retained;focused12/full287 and native/responsive/actualdownload/Vegas-byte-parity pass. Independent review and Pages verification remain; no new indexable URL or current quote.
+Current FT-RES-058: six source-dated London exact categories plus reusable age/party/extra-bed/connection screening. Exact11paths registered before edits; no London launch or unsupported GBP budget. Native/independent review then tools/docs-only push; precise quote/location/review/overlap/approval gates remain.
 
-Current FT-IMP-049: exact12paths registered for shareable NYC comparison/link and CSV, all prices/date/basis/room checks retained. QA/review/Pages gates next. FT-IMP-048 delivered and production-verified: reviewed13paths pushed as `9362c7387e16a4a73268e7acdcbadbab03c7ff2c`, successful Pages `36801593003`, exact marker and byte-identical NYC HTML, productionSEO31zeroerrors/fiveprioradvisories. All12price bands/room/review/maps/URL invariants retained. No current rate renewal or SEO outcome. Six exclusions preserved. Mechanical immutable result, not another learning unit.
+FT-IMP-049 delivered: `ebaccf241c15fc7c3171708cf3cae775884f98c6`, Pages36802947632 success, exact marker and NYC HTML/CSV bytes,productionSEO31zeroerrors/fivepriorwarnings.12same-record portable rows retain price/date/basis;Volta cycle-two PASS/full287/browser gates green. No new indexable URL/current quote.
+
+FT-IMP-049 registration history: exact12paths for shareable NYC comparison/link and CSV, all prices/date/basis/room checks retained; reviewed and released above. FT-IMP-048 delivered and production-verified: reviewed13paths pushed as `9362c7387e16a4a73268e7acdcbadbab03c7ff2c`, successful Pages `36801593003`, exact marker and byte-identical NYC HTML, productionSEO31zeroerrors/fiveprioradvisories. All12price bands/room/review/maps/URL invariants retained. No current rate renewal or SEO outcome. Six exclusions preserved. Mechanical immutable result, not another learning unit.
 
 FT-IMP-048 independent PASS/noP0-P3 (Ptolemy,cycle1); exact13reviewed paths released and verified as recorded above. No current-rate or SEO effect claimed.
 

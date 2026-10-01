@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-058",
+  "destination": "London UK",
+  "checked_on": "2026-09-30",
+  "refresh_days": 30,
+  "evidence_scope": "Preliminary source-text capacity screening, not booking acceptance, current prices, firsthand experience, suitability or routes.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "sleeping separation",
+      "kitchen preferred",
+      "museum/South Bank with midday reset"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "s1": {
+      "url": "https://www.mitrehousehotel.com/hotel-rooms",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "s2": {
+      "url": "https://www.marlin.com/london-serviced-apartments/london-city-queen-street/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "s3": {
+      "url": "https://montaguehotel.com/suites/the-guvnors-suite",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "s4": {
+      "url": "https://www.mandarinoriental.com/en/london/hyde-park/stay/mandarin-family-room",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "s5": {
+      "url": "https://www.doylecollection.com/hotels/the-bloomsbury-hotel/rooms/family-room",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "s6": {
+      "url": "https://www.doylecollection.com/hotels/the-kensington-hotel/rooms/luxury-suite",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "s7": {
+      "url": "https://www.doylecollection.com/hotels/the-kensington-hotel/packages/london-with-family",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "mitre-family-five",
+      "hotel": "Mitre House",
+      "category": "Family Suite for 5",
+      "source_id": "s1",
+      "configurations": [
+        {
+          "maximum": 5,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "One double and three singles; internal double/triple rooms share an exclusive suite bathroom.",
+      "kitchen": "not-established",
+      "connection": "named-connected-category",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "exact category/configuration rate",
+          "party and child ages",
+          "stay dates/rate plan",
+          "tax and mandatory fee total"
+        ]
+      },
+      "checks": [
+        "Confirm exact-party booking; separate bedrooms carry the hotel's young-child supervision caveat; breakfast listed, no air conditioning."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "marlin-queen-street-two-bedroom",
+      "hotel": "Marlin London City Queen Street",
+      "category": "Two Bedroom Apartment",
+      "source_id": "s2",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        },
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "paid double sofa bed included in reservation"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "Two kings in separate bedrooms; optional double sofa in living area.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "exact category/configuration rate",
+          "party and child ages",
+          "stay dates/rate plan",
+          "tax and mandatory fee total"
+        ]
+      },
+      "checks": [
+        "Extra sofa charge unknown; category rate without sofa is not five-person cost."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "montague-guvnor",
+      "hotel": "The Montague",
+      "category": "The Guv'nor's Suite",
+      "source_id": "s3",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "EDITORIAL_INTERPRETATION",
+          "basis": "Four fixed sleeping places inferred from king and two twins, not an explicit unextended occupancy limit"
+        },
+        {
+          "maximum": 5,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "confirm requested sofa bed"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "King and two twins; sofa on request, two bedrooms, three bathrooms.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "exact category/configuration rate",
+          "party and child ages",
+          "stay dates/rate plan",
+          "tax and mandatory fee total"
+        ]
+      },
+      "checks": [
+        "Sofa availability/charge and exact-party rate not established."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "mandarin-family-room",
+      "hotel": "Mandarin Oriental Hyde Park",
+      "category": "Mandarin Family Room",
+      "source_id": "s4",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "confirm base four-person bedding; exact unextended limit not expressly stated"
+          ],
+          "evidence_class": "EDITORIAL_INTERPRETATION",
+          "basis": "Four-person preliminary configuration inferred from published fifth-place rollaway; base beds not established"
+        },
+        {
+          "maximum": 5,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "additional rollaway included in reservation"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "Named combination of Mandarin and Superior connecting rooms; rollaway provides fifth place.",
+      "kitchen": "not-established",
+      "connection": "named-connected-category",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "exact category/configuration rate",
+          "party and child ages",
+          "stay dates/rate plan",
+          "tax and mandatory fee total"
+        ]
+      },
+      "checks": [
+        "Rollaway age/charge and reservation confirmation unknown; no numeric rate in inspected body."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "bloomsbury-family-room",
+      "hotel": "The Bloomsbury",
+      "category": "Family Room",
+      "source_id": "s5",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": 2,
+          "max_children": 2,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        },
+        {
+          "maximum": 5,
+          "max_adults": 2,
+          "max_children": 3,
+          "infant_extension": {
+            "places": 1,
+            "age_lt": 2
+          },
+          "conditions": [
+            "confirm cot"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "Body and feature label list two doubles; fifth occupant is an under-two child in cot.",
+      "kitchen": "not-established",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "exact category/configuration rate",
+          "party and child ages",
+          "stay dates/rate plan",
+          "tax and mandatory fee total"
+        ]
+      },
+      "checks": [
+        "Image alternative text gives different bed descriptions; use body/features provisionally and verify."
+      ],
+      "conflicts": [
+        "Image alternative text conflicts with body/features on beds."
+      ]
+    },
+    {
+      "id": "kensington-luxury-plus-cosy",
+      "hotel": "The Kensington",
+      "category": "Luxury Suite plus separately arranged Cosy Room",
+      "source_id": "s6",
+      "configurations": [
+        {
+          "maximum": 2,
+          "max_adults": 2,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "EDITORIAL_INTERPRETATION",
+          "basis": "Two-person non-rollaway preliminary screen within published2adult1child maximum; exact base bedding unestablished"
+        },
+        {
+          "maximum": 3,
+          "max_adults": 2,
+          "max_children": 1,
+          "infant_extension": null,
+          "conditions": [
+            "confirm requested rollaway and reconcile conflicting child age/fee terms"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        },
+        {
+          "maximum": 5,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "arrange and confirm separate Cosy Room connection"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "One-bedroom suite plus optional separate room; combined exact beds not established.",
+      "kitchen": "not-established",
+      "connection": "requested-separate-room",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "exact category/configuration rate",
+          "party and child ages",
+          "stay dates/rate plan",
+          "tax and mandatory fee total"
+        ]
+      },
+      "checks": [
+        "Base suite alone is not five-person accommodation; no combined-category price observed."
+      ],
+      "conflicts": [
+        "Narrative: rollaway free through age12, age13+ GBP70/night. Features: under12 rollaway GBP70/night. Age/fee conflict unresolved."
+      ]
+    }
+  ],
+  "offer_observations": [
+    {
+      "id": "kensington-family-offer",
+      "source_id": "s7",
+      "amount_from": 555,
+      "currency": "GBP",
+      "unit": null,
+      "room_basis": "Two adjoining guestrooms; exact categories unspecified",
+      "party_basis": null,
+      "stay_basis": "Minimum two nights; advertised available until2027-03-31",
+      "fee_basis": "VAT included; other fees unknown",
+      "terms": "Second room 50% off best flexible rate; breakfast all; children aged16 or below; evening meals through8 with adult before19:00; direct telephone arrangement required.",
+      "limitation": "Advertised from amount, no explicit nightly/package unit or exact five-person configuration; not Luxury Suite plus Cosy quote, not a value ranking."
+    }
+  ]
+}
