@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validDate } from "./hotel-evidence.mjs";
+import { roomPriceForTask, validateRoomPrices } from "./family-room-price.mjs";
 
 const text = value => typeof value === "string" && value.trim().length > 0;
 const positive = value => Number.isInteger(value) && value > 0;
@@ -75,9 +76,11 @@ function matchesCapacity(c, party) {
   return true;
 }
 
-export function screenRoomPack(pack, party = pack.scenario, asOf = currentEasternDate()) {
+export function screenRoomPack(pack, party = pack.scenario, asOf = currentEasternDate(), prices = []) {
   const errors = validateRoomPack(pack);
   if (errors.length) throw new Error(errors.join("; "));
+  const priceErrors = validateRoomPrices(prices, pack);
+  if (priceErrors.length) throw new Error(priceErrors.join("; "));
   if (!positive(party?.adults) || !Array.isArray(party.child_ages) ||
       !party.child_ages.every(age => Number.isInteger(age) && age >= 0 && age <= 17) ||
       !validDate(asOf) || asOf < pack.checked_on) throw new Error("Invalid party or screening date");
@@ -92,7 +95,8 @@ export function screenRoomPack(pack, party = pack.scenario, asOf = currentEaster
     return { id: r.id, hotel: r.hotel, category: r.category, screening,
       conditions: screening === "RECHECK_SOURCE" ? ["Recheck source before screening"] : selected?.conditions ?? [],
       sleeping_setup: r.sleeping_setup, kitchen: r.kitchen, connection: r.connection,
-      price: r.price, conflicts: r.conflicts, checked_on: source.checked_on, screened_on: asOf, source_url: source.url,
+      price: roomPriceForTask(prices, pack, r.id, party, asOf) ?? r.price,
+      conflicts: r.conflicts, checked_on: source.checked_on, screened_on: asOf, source_url: source.url,
       capacity_evidence_class: selected?.evidence_class ?? null, capacity_basis: selected?.basis ?? null,
       next_checks: [...r.checks, "Confirm child/adult age classification, exact reservation and available setup", "Collect comparable GBP nightly price with party/stay/tax/fee basis"],
       limitation: "Published capacity screen only; not availability, booking acceptance, safety, suitability, route practicality or price ranking." };
@@ -103,6 +107,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const path = process.argv[2] ?? "docs/research/london-room-configurations-2026-09-30.json";
   try {
     const pack = JSON.parse(readFileSync(path, "utf8"));
-    console.log(JSON.stringify(screenRoomPack(pack, pack.scenario, process.argv[3] ?? currentEasternDate()), null, 2));
+    const prices = process.argv[4] ? JSON.parse(readFileSync(process.argv[4], "utf8")) : [];
+    console.log(JSON.stringify(screenRoomPack(pack, pack.scenario, process.argv[3] ?? currentEasternDate(), prices), null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

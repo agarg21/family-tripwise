@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-30
 
+Current FT-RES-067: separate exact-family Mitre rate observation and reusable matching/age/date/nightly-basis adapter.12paths registered; preserve original category/public/history data, no London launch. Prior FT-RES-058 baseline delivered e2e56a1/PASS; current comparable budget remains incomplete across the candidate set.
+
 Current FT-RES-058: six source-dated London exact categories plus reusable age/party/extra-bed/connection screening. Exact11paths registered before edits; no London launch or unsupported GBP budget. Native/independent review then tools/docs-only push; precise quote/location/review/overlap/approval gates remain.
 
 FT-IMP-049 delivered: `ebaccf241c15fc7c3171708cf3cae775884f98c6`, Pages36802947632 success, exact marker and NYC HTML/CSV bytes,productionSEO31zeroerrors/fivepriorwarnings.12same-record portable rows retain price/date/basis;Volta cycle-two PASS/full287/browser gates green. No new indexable URL/current quote.

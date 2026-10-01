@@ -88,3 +88,13 @@ test("invalid party/date inputs are rejected without mutating evidence", () => {
   assert.throws(() => screenRoomPack(pack, pack.scenario, "2026-09-29"));
   assert.equal(JSON.stringify(pack), before);
 });
+
+test("optional separate price inputs enrich only the exact task without renewing category evidence", () => {
+  const samples = JSON.parse(readFileSync(new URL("../docs/research/london-mitre-price-observation-2026-09-30.json", import.meta.url)));
+  const rows = screenRoomPack(pack, pack.scenario, "2026-09-30", samples);
+  assert.equal(row(rows, "mitre-family-five").price.amount_from, 260);
+  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 1);
+  assert.ok(rows.every(r => r.checked_on === "2026-09-30"));
+  assert.equal(pack.records[0].price.status, "not-observed");
+  assert.equal(screenRoomPack(pack, pack.scenario, "2026-09-30")[0].price.status, "not-observed");
+});

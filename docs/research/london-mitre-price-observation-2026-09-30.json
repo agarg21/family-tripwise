@@ -1,0 +1,52 @@
+[
+  {
+    "schema_version": 1,
+    "action": "FT-RES-067",
+    "checked_on": "2026-09-30",
+    "source_url": "https://www.mitrehousehotel.com/hotel-rooms",
+    "source_surface": "Official Family Suite for5 BOOK NOW route to public GuestCentric rate engine; opaque booking URL parameters not retained",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "mitre-family-five",
+    "category": "Family Suite for 5",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ]
+    },
+    "engine_party": {
+      "adults": 3,
+      "child_ages": [
+        4,
+        8
+      ],
+      "adult_from_age": 11,
+      "child_age_from": 2,
+      "child_age_to": 10
+    },
+    "rates": [
+      {
+        "plan": "Non-refundable discounted plan",
+        "stay_amount": 1300,
+        "meals": "Bed & Breakfast",
+        "cancellation": "Non refundable"
+      },
+      {
+        "plan": "Standard rate",
+        "stay_amount": 1444,
+        "meals": "Bed & Breakfast",
+        "cancellation": "Free cancellation until2026-11-06 at11:00 local time"
+      }
+    ],
+    "fee_basis": "Tax/mandatory-fee inclusion not established on inspected rate cards; calendar warning says some taxes may not be included but its prices are explicitly two-adult orientation.",
+    "limitation": "Displayed rate-card samples only, not final checkout/confirmed availability or typical seasonal range. No Select/reservation/account/contact/payment action. One internally connected suite configuration is treated as one unit, not two separately priced rooms."
+  }
+]

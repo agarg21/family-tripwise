@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-RES-067 London rate-sample basis adapter
+
+Erdos (`01a0f53c-b613-7a20-99ed-a3fbc56c5c65`) cycle-one independent read-only PASS/no P0-P3. Exact12paths reviewed against e2e56a1; independent18focused plus CLI/API, date/age/party/stay/plan/unit/immutability/arithmetic/state/79snapshots/SEO31/privacy/source/scope/whitespace checks pass. Official room-page context independently inspected; dynamic booking rates, age-policy UI and cancellation remain operator-observed, and full305 remains operator QA. No reviewer writes or external mutations. Ready for exact-path tools/docs-only push, no Pages wait.
+
+Operator focused18/full305,state0,79snapshots,SEO31zeroerrors/fiveprioradvisories,CLI/API parity,unchanged category/site/model/history and whitespace pass. Public booking controls/party/ages/dates/category/two rate cards directly inspected in browser; no Select/hold/account action. Independent exact12path review next. No tax/final-checkout certainty inferred.
+
+Exact12paths registered before edits; new separate public booking observation, exact category/party/date and rate-plan adapter required. Original six-category/public/model/history unchanged; read-only native/independent review before tools/docs-only push. No room Select/hold/reservation or external account action.
+
 ## 2026-09-30 - FT-RES-058 London structured room screening
+
+Mechanical completed tools/docs-only release: e2e56a115847fc28473336579c3eae47ecce1ff1, exact11reviewed paths, freshfetch/no divergence/sole range/scope/whitespace checks andHEAD/origin0/0; no public change/Pages wait. Six exclusions preserved; earlier push checkpoints are history.
 
 Bernoulli cycle-two independent read-only PASS/noP0-P3, bothP2s closed. Independently11focused/current-historical-stale/timezone/smaller-party controls,state0,79snapshots,SEO31zeroerrors/fiveadvisories,scope/whitespace/primary-source carryforward and NYC production marker/bytes pass. Full298/browser remain operator evidence. Six exclusions/index/HEAD unchanged; exact11paths ready for tools/docs-only push. Separate later booking observations are outside this baseline approval.
 

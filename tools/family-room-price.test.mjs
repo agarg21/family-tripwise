@@ -1,0 +1,62 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import test from "node:test";
+import { roomPriceForTask, validateRoomPrices } from "./family-room-price.mjs";
+
+const pack = JSON.parse(readFileSync(new URL("../docs/research/london-room-configurations-2026-09-30.json", import.meta.url)));
+const observations = JSON.parse(readFileSync(new URL("../docs/research/london-mitre-price-observation-2026-09-30.json", import.meta.url)));
+const price = (samples = observations, party = pack.scenario, date = "2026-09-30") => roomPriceForTask(samples, pack, "mitre-family-five", party, date);
+
+test("public exact-family samples validate and convert stay totals to nightly equivalents", () => {
+  assert.deepEqual(validateRoomPrices(observations, pack), []);
+  const p = price();
+  assert.equal(p.amount_from, 260);
+  assert.equal(p.amount_to, 288.8);
+  assert.deepEqual(p.rates.map(r => r.stay_amount), [1300, 1444]);
+  assert.equal(p.unit, "configuration/night");
+  assert.equal(p.amount, null);
+  assert.match(p.fee_basis, /not established/);
+  assert.equal(p.engine_party.adults, 3);
+  assert.equal(p.derivation_class, "EDITORIAL_INTERPRETATION");
+});
+test("different party, child ages or stay cannot inherit this price", () => {
+  for (const party of [{ adults: 2, child_ages: [1, 4, 8] }, { adults: 3, child_ages: [4, 8] },
+    { ...pack.scenario, stay: { arrival: "2026-11-09", departure: "2026-11-14" } }])
+    assert.equal(price(observations, party), null);
+  assert.equal(roomPriceForTask(observations, pack, "bloomsbury-family-room", pack.scenario, "2026-09-30"), null);
+});
+test("ages are order-independent but provider age classification must reconcile", () => {
+  assert.equal(price(observations, { adults: 2, child_ages: [12, 4, 8] }).amount_from, 260);
+  const samples = structuredClone(observations);
+  samples[0].engine_party.adults = 2;
+  assert.match(validateRoomPrices(samples, pack).join(";"), /Engine party/);
+  assert.throws(() => price(samples));
+});
+test("stale samples retain amounts and original date without becoming current quotes", () => {
+  const p = price(observations, pack.scenario, "2026-10-15");
+  assert.equal(p.status, "historical-dated-stay-samples");
+  assert.equal(p.amount_to, 288.8);
+  assert.equal(p.observed_on, "2026-09-30");
+  assert.equal(price(observations, pack.scenario, "2026-10-14").status, "dated-stay-samples");
+  assert.equal(price(observations, pack.scenario, "2026-09-29"), null);
+});
+test("unsafe/mismatched source, unit, date, counts and negative amounts fail closed", () => {
+  for (const mutate of [
+    s => s[0].source_url += "?channelKey=not-retained",
+    s => s[0].category = "Standard Double",
+    s => s[0].nights = 4,
+    s => s[0].departure = "invalid",
+    s => s[0].configuration_count = 2,
+    s => s[0].rates[0].stay_amount = -1,
+    s => s[0].party.child_ages = [1, 4, 8],
+    s => s.push(structuredClone(s[0]))
+  ]) { const s = structuredClone(observations); mutate(s); assert.ok(validateRoomPrices(s, pack).length); assert.throws(() => price(s)); }
+});
+test("all source records stay immutable and fee unknown is not converted to zero", () => {
+  const before = JSON.stringify([pack, observations]);
+  price();
+  assert.equal(JSON.stringify([pack, observations]), before);
+  assert.equal(price().fee_total, undefined);
+  assert.equal(pack.records[0].price.amount, null);
+  assert.equal(pack.offer_observations[0].amount_from, 555);
+});
