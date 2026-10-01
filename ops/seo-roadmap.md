@@ -2,6 +2,14 @@
 
 Last updated: 2026-10-01
 
+FT-STD-006 final consensus: Hubble cycle-two PASS/noP0-P3,15focused/336network-free-subset/4409additional/native/preservation confirms all nine final paths and truthful source-collection/health distinction. Ampere357isolated/operator358working full remain separately recorded. Tools/docs-only push eligible, no public change/Pages wait; pending checkpoints below historical. Immutable reviewer result only.
+
+FT-STD-006 current release gate: independent cycle-two confirmation pending after the narrow no-source-collection/allowed own-site health wording correction. No staging/push yet; code/report unchanged. Cycle-one ready checkpoints below are historical.
+
+FT-STD-006 review-clean: Ampere cycle-one PASS/noP0-P3, independent357isolated/15focused/2097additional/native/preservation pass; operator358workingtree/native/productionSEO31zero5prior and unchanged marker/threepublicHTMLparity pass. Exact nine paths ready tools/docs-only push; no site change or Pages wait, no new learning unit, Chicago remains held. Immutable results only; current decision/next weekly step below unchanged.
+
+Current decision FT-STD-006: implement a separate editorial-card maintenance contract for 37 existing SanAntonio/Chicago/NYC comparisons. Preserve original labels and July page-source notes, explicitly unmapped individual fields and unverified exact visit budgets; a page source list is not claim provenance. Exact nine paths registered in current-cycle; focused/full native and different read-only PASS required before tools/docs-only push. No public/model/freshness change, Chicago held work preserved. October7 existing weekly operator combines separate contracts; toddler, stay-area, itinerary and automatic exact-party prices remain unfinished. Prior Current checkpoints below are historical.
+
 FT-QA-001 review-clean: Huygens cycle-two PASS/noP0-P3, independent11focused/351isolated/91additional/native/6812entry preservation and operator352workingtree/native/productionQA pass. Exact ten paths ready tools/docs-only push; no site change or Pages wait. Chicago browser/download/release gates and normal user/app check remain uncompleted. Immutable review/QA result, earlier checkpoints historical.
 
 Current FT-QA-001: reusable server-only preview preflight and narrow Chicago diagnosis. Prior localhost browser denial and required127.0.0.1Host are distinct; root client-block cause unknown. No workaround/retry/security change. Normal user/app access check requested; five Chicago implementation files stay untouched/unshipped. Exact ten registered paths need focused/full native and different read-only PASS before tools/docs-only push. No public changes or new learning unit; resume FT-IMP-050 browser/render/download/review/release once normal access is established. Older Current checkpoints below are historical.
