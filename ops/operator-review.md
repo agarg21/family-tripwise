@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-10-01 - FT-RES-074 Boston price and breakfast basis
+
+Hume (01a0f5bd-9d13-7a03-bcd4-b314e65f3006) cycle-one PASS/no P0-P3 for all8paths against43144789b22c3677eaefc3c72fc224e5498ad6ef. Independent343fullisolated/49focused/287additional assertions, state0/79snapshot validation/SEO31zeroerrors-fiveprioradvisories/privacy/scope/whitespace pass. All6430repository files including Git metadata, original Boston pack, six exclusions/five heldChicago files, HEAD/index/refs/status unchanged. Main344workingtree/49focused/native pass. Dynamic booking observations operator-attributed, not independently replayed. An initial incorrect reviewer GSC option exited before authentication; corrected validation-only run passed. No browser/network/booking/publication or SEO-causation approval. Exact8paths ready tools/docs-only push.
+
+Eight exact paths registered before substantive edits. Source-dated operator official rate-detail/room/guest modal observations; same named family/date/category with count-only ages and three public rate plans. Preserve original corpus/date/conditional fifth-bed gate, fee/tax/hold/meal/optional parking limits. Focused/full native and different read-only review before tools/docs-only push, no city launch or public change. FT-RES-073 pushed4314478/eight exact reviewed paths/KeplerPASS/340isolated341workingtree/freshfetch/no divergence/sole range/HEADorigin0/0.
+
 ## 2026-10-01 - FT-RES-073 Boston capacity and overlap
 
 Kepler (01a0f5af-07b1-7d10-88f8-bfeebbef306e) cycle-one independent read-only PASS/no P0-P3 for all eight paths against043c7c5. Independent46focused/340isolated/512additional-task-and-CSV assertions, state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/whitespace pass. All557repository-file hashes/HEAD/index/refs/status preserved, including six exclusions/five heldChicago paths. Current official and comparison sources checked; no booking acceptance, quote, rest-route validation, controlled ranking or launch approval claimed. Operator46focused/341workingtree/native pass. Fresh production marker ebaccf241c15fc7c3171708cf3cae775884f98c6/run36802947632 and NYC HTML/CSV/SanAntonio HTML exact parity; productionSEO31zeroerrors-fiveprioradvisories. Exact8reviewed paths ready tools/docs-only push, no public deployment.

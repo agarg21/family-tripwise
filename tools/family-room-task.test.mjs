@@ -4,11 +4,70 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { currentEasternDate, screenRoomPack, validateRoomPack } from "./family-room-task.mjs";
+import { comparisonHeadings, roomComparisonCsv } from "./family-room-comparison.mjs";
 
 const pack = JSON.parse(readFileSync(new URL("../docs/research/london-room-configurations-2026-09-30.json", import.meta.url)));
 const clone = () => structuredClone(pack);
 const row = (rows, id) => rows.find(r => r.id === id);
 const historicalScreen = (p, party = p.scenario, date = "2026-09-30") => screenRoomPack(p, party, date);
+
+test("Boston portable comparison retains three dated plans and two explicit budget gaps", () => {
+  const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
+  const samples = JSON.parse(readFileSync(new URL("../docs/research/boston-park-plaza-price-observation-2026-10-01.json", import.meta.url)));
+  const before = JSON.stringify([boston, samples]);
+  const cells = roomComparisonCsv(boston, boston.scenario, "2026-10-01", samples).trimEnd().split("\n")
+    .map(line => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m => m[1].replaceAll('""', '"')));
+  assert.deepEqual(cells[0], comparisonHeadings);
+  const rows = cells.slice(1);
+  const value = (r, h) => r[comparisonHeadings.indexOf(h)];
+  assert.equal(rows.length, 5);
+  assert.ok(rows.every(r => r.length === 35 && value(r, "Currency") === "USD"));
+  const breakfast = rows.find(r => value(r, "Public rate plan") === "Breakfast Included");
+  assert.equal(value(breakfast, "Nightly equivalent"), "528.68");
+  assert.equal(value(breakfast, "Displayed stay amount"), "2643.42");
+  assert.match(value(breakfast, "Meals"), /ages8\/12 not/);
+  assert.match(value(breakfast, "Capacity conditions"), /fifth sleeping place/);
+  assert.match(value(breakfast, "Fee and tax basis"), /included once/);
+  const unpriced = rows.filter(r => value(r, "Public rate plan") === "Unpriced");
+  assert.equal(unpriced.length, 2);
+  assert.ok(unpriced.every(r => value(r, "Nightly equivalent") === "" && value(r, "Price observed") === ""));
+  assert.equal(JSON.stringify([boston, samples]), before);
+});
+
+test("Boston public plans preserve mandatory fee, meal age limits and conditional sleeping place", () => {
+  const packPath = fileURLToPath(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url));
+  const pricePath = fileURLToPath(new URL("../docs/research/boston-park-plaza-price-observation-2026-10-01.json", import.meta.url));
+  const boston = JSON.parse(readFileSync(packPath, "utf8"));
+  const samples = JSON.parse(readFileSync(pricePath, "utf8"));
+  const before = JSON.stringify([boston, samples]);
+  const rows = screenRoomPack(boston, boston.scenario, "2026-10-01", samples);
+  const r = row(rows, "boston-park-plaza-deluxe-double");
+  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [fileURLToPath(new URL("./family-room-task.mjs", import.meta.url)), packPath, "2026-10-01", pricePath], {encoding:"utf8"})), rows);
+  assert.equal(r.screening, "CONDITIONAL_PUBLISHED_CAPACITY");
+  assert.match(r.conditions[0], /fifth sleeping place/);
+  assert.equal(r.price.age_input_mode, "provider-age-band-counts");
+  assert.deepEqual(r.price.rates.map(v => v.nightly_average), [372.10, 444.84, 528.68]);
+  assert.equal(r.price.amount, null);
+  assert.match(r.price.fee_basis, /included once/);
+  assert.match(r.price.rates[2].meals, /ages8\/12 not/);
+  assert.match(r.price.rates[1].cancellation, /November5,2026/);
+  assert.match(r.price.deposit_basis, /not an additional hotel charge/);
+  assert.equal(rows.filter(v => v.price.status === "dated-stay-samples").length, 1);
+  assert.equal(row(rows, "boston-four-seasons-plaza").price.amount, null);
+  assert.equal(row(rows, "boston-langham-club-two-bedroom").price.amount, null);
+  assert.equal(JSON.stringify([boston, samples]), before);
+});
+
+test("Boston sample cannot carry across ages, stay, stale dates or membership-only rates", () => {
+  const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
+  const samples = JSON.parse(readFileSync(new URL("../docs/research/boston-park-plaza-price-observation-2026-10-01.json", import.meta.url)));
+  for (const party of [{...boston.scenario, child_ages:[4,8,13]}, {...boston.scenario, stay:{arrival:"2026-11-09",departure:"2026-11-14"}}])
+    assert.equal(row(screenRoomPack(boston, party, "2026-10-01", samples), "boston-park-plaza-deluxe-double").price.status, "not-observed");
+  assert.equal(row(screenRoomPack(boston, boston.scenario, "2026-10-16", samples), "boston-park-plaza-deluxe-double").price.status, "historical-dated-stay-samples");
+  const member = structuredClone(samples);
+  member[0].rates.push({plan:"Member starting rate",eligibility:"membership-required",stay_amount:100,meals:"unknown",cancellation:"unknown"});
+  assert.equal(row(screenRoomPack(boston, boston.scenario, "2026-10-01", member), "boston-park-plaza-deluxe-double").price.amount_from, 372.10);
+});
 
 test("Boston partial capacity corpus is conditional and does not fabricate budget or omitted categories", () => {
   const path = fileURLToPath(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url));

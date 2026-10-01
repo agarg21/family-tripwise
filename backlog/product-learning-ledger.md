@@ -1,8 +1,12 @@
 # Product Learning Ledger
 
-Latest production evidence: September27 `LRN-058` / `FT-IMP-041` is released and production-verified at action commit `36034a723e6eb22a960200414e3c79a6a03b3155`, successful Pages run `36368504001`, matching marker and byte-identical Orlando HTML/two JS modules. Production SEO checked 31 canonical URLs with zero errors/five prior advisories. This is release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
+Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
 Last updated: 2026-10-01
+
+## LRN-085 / October1 / FT-RES-074
+
+Family decision: exact Nov8-13five-night Boston budget and whether breakfast covers two adults/children4,8,12. Hypothesis rejected: headline/member starting rate or breakfast/family label is a comparable whole-family budget. October1official BOOKING_CHECK count-only party/Deluxe category/three public rate-detail panels yield1860.52/2224.20/2643.42USDstay,372.10/444.84/528.68nightly equivalents with175USDmandatory destination fee included once and displayed taxes. Breakfast inclusion excludes ages8/12; their meal costs and fifth-bed allocation/charge unknown. IMPLEMENT separate immutable sample/task regressions; no corpus/date renewal or launch. Confidence high in source arithmetic/plan limits, medium in proxy relevance, unknown in older-child sleeping place/additional charges/meal value/user/SEO. Reusable lesson: retain age-scoped benefits and plan-specific cancellation alongside approximate nightly cost; a credit or incidental hold is not an invented price discount/extra fee. Next falsification: changed exact party/date/category/terms, fifth-bed confirmation, real menu costs or competing combined-task support. Sources and next gates: `docs/research/boston-price-task-progress-2026-10-01.md`. Not user-tested, seasonal band, allfee quote or booking acceptance.
 
 ## LRN-084 / October1 / FT-RES-073
 

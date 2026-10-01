@@ -2,6 +2,8 @@
 
 Last updated: 2026-10-01
 
+Current FT-RES-074: same-task Boston ParkPlaza public rate/35USDmandatory-fee/breakfast age-cap comparison, not another broad report. Exact8paths registered; original capacity pack/fifth-bed gate/all public pages unchanged. Three public plans require schema/task/CSV/native/different read-only PASS before tools/docs-only push. FT-RES-073 reviewed capacity/overlap research pushed4314478; Boston full-corpus/rest/review/controlled-overlap/publication gates remain.
+
 Current FT-RES-073: bounded Boston capacity/overlap follow-through under FT-RES-061. Six official audits/two comparison audits, three conditional reusable categories; no exact quote or complete review/rest/parking-fee layer. Capacity-only inventory already covered by current specialist; next exact ParkPlaza family-price/fifth-bed task and Copley modal, not another broad keyword report. Exact8paths registered/full-focused/different read-only review before docs/tools-only push; no Boston launch. FT-IMP-051 completed043c7c5tools/docs-only; Chicago unchanged.
 
 FT-IMP-051 final review: Galileo cycle-two PASS/no P0-P3,44focused/338isolated and339workingtree/native QA pass. Exact11paths ready tools/docs-only push; both output-alias and stale-condition P2s closed. No public destination/price renewal; Chicago remains unshipped.
