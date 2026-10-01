@@ -107,7 +107,11 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const path = process.argv[2] ?? "docs/research/london-room-configurations-2026-09-30.json";
   try {
     const pack = JSON.parse(readFileSync(path, "utf8"));
-    const prices = process.argv[4] ? JSON.parse(readFileSync(process.argv[4], "utf8")) : [];
+    const prices = process.argv.slice(4).flatMap(pricePath => {
+      const observations = JSON.parse(readFileSync(pricePath, "utf8"));
+      if (!Array.isArray(observations)) throw new Error("Each price file must contain an observation array");
+      return observations;
+    });
     console.log(JSON.stringify(screenRoomPack(pack, pack.scenario, process.argv[3] ?? currentEasternDate(), prices), null, 2));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

@@ -1,5 +1,15 @@
 # Operator Implementation Review Log
 
+## 2026-09-30 - FT-RES-069 third London sample and multi-file task
+
+Mencius (01a0f54e-47ad-7192-8187-61ce4d0d92d2) cycle-one read-only PASS/no P0-P3, exact10paths against214b49e. Independent25focused, CLI/API/multiple/single/default, fail-closed duplicate/non-array/trailing inputs, three-sample arithmetic/party/date/age, advance-deposit versus fee, requested-sofa limits, state79snapshots/SEO/privacy/scope pass. Official Montague/Mandarin categories independently inspected; full312 and dynamic booking observations remain operator evidence. No writes/mutations; six exclusions unchanged. Ready for tools/docs-only exact-path push, no Pages requirement.
+
+Operator25focused/full312/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories/multifileCLIAPI/singlefile/default/duplicate/nonarray/conditionalsofa/deposit/immutability/whitespace gates pass. Browser rate/age/date/suite/plan panels directly inspected; independent review exact10paths next. No public change/Pages requirement.
+
+Exact10paths registered before substantive edits. Third official exact-age/date suite rate cards, requested sofa and15%nonrefundable deposit remain separate; unresolved Mandarin loading is not availability evidence. Original category/Mitre/Marlin/public/model/history unchanged. Native/different read-only QA then tools/docs-only push, no London launch.
+
+FT-RES-068 immutable push214b49e771cfe9ad86fd03fa8a775a01aa07e880, exact10paths/freshfetch/no divergence/sole reviewed range/HEADorigin0/0; Herschel PASS/full309 stand, no public/Pages change; six exclusions preserved.
+
 ## 2026-09-30 - FT-RES-068 Marlin public-plan and age-input basis
 
 Herschel (01a0f546-d82f-7162-aadb-3bdb2e03ea73) cycle-one read-only PASS/no P0-P3 for exact10paths against de38956. Independent22focused/CLI/API/failclosed/returnedimmutability/public-plan filtering/age-input/conditional capacity/VAT-deposit arithmetic/state79snapshots/SEOprivacy/scope/whitespace pass. Official category independently inspected; dynamic booking panels and full309 remain operator evidence. No reviewer writes/mutations; six exclusions unchanged. Ready for tools/docs-only exact-path push, no Pages wait.

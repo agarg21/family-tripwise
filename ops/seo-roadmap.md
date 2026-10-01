@@ -2,6 +2,8 @@
 
 Last updated: 2026-09-30
 
+Current FT-RES-069: third dated London exact-age suite sample and multi-file offline price task; preserve conditional sofa and deposit basis, no new London page. Exact10paths registered. Prior068delivered214b49e/HerschelPASS/full309; remaining source-loading/location/review/current-overlap/launch gates stay explicit.
+
 Current FT-RES-068: second London public-plan sofa-specific observation, provider age-band-only input and refundable-deposit context retained by reusable adapter. Exact10paths registered; no London launch/public changes. FT-RES-067 delivered de38956/PASS/full305,12exactpaths/noPages; original category/Mitre sample immutable.
 
 Current FT-RES-067: separate exact-family Mitre rate observation and reusable matching/age/date/nightly-basis adapter.12paths registered; preserve original category/public/history data, no London launch. Prior FT-RES-058 baseline delivered e2e56a1/PASS; current comparable budget remains incomplete across the candidate set.

@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 import { currentEasternDate, screenRoomPack, validateRoomPack } from "./family-room-task.mjs";
 
 const pack = JSON.parse(readFileSync(new URL("../docs/research/london-room-configurations-2026-09-30.json", import.meta.url)));
@@ -97,4 +99,40 @@ test("optional separate price inputs enrich only the exact task without renewing
   assert.ok(rows.every(r => r.checked_on === "2026-09-30"));
   assert.equal(pack.records[0].price.status, "not-observed");
   assert.equal(screenRoomPack(pack, pack.scenario, "2026-09-30")[0].price.status, "not-observed");
+});
+
+const pricePaths = ["mitre", "marlin", "montague"].map(name =>
+  fileURLToPath(new URL(`../docs/research/london-${name}-price-observation-2026-09-30.json`, import.meta.url)));
+const sampleArrays = pricePaths.map(path => JSON.parse(readFileSync(path, "utf8")));
+const taskCli = fileURLToPath(new URL("./family-room-task.mjs", import.meta.url));
+const packPath = fileURLToPath(new URL("../docs/research/london-room-configurations-2026-09-30.json", import.meta.url));
+
+test("three dated samples preserve configuration conditions, payment basis and unpriced gaps", () => {
+  const before = JSON.stringify([pack, sampleArrays]);
+  const rows = screenRoomPack(pack, pack.scenario, "2026-09-30", sampleArrays.flat());
+  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 3);
+  const m = row(rows, "montague-guvnor");
+  assert.equal(m.price.amount_from, 1520);
+  assert.equal(m.price.amount_to, 1580);
+  assert.deepEqual(m.price.rates.map(r => r.stay_amount), [7600, 7900]);
+  assert.equal(m.price.age_input_mode, "individual-ages");
+  assert.equal(m.screening, "CONDITIONAL_PUBLISHED_CAPACITY");
+  assert.match(m.conditions[0], /sofa/);
+  assert.match(m.price.deposit_basis, /not an extra15%fee/);
+  assert.match(m.price.observation_limitation, /does not|do not confirm/);
+  assert.equal(row(rows, "bloomsbury-family-room").screening, "OUTSIDE_PUBLISHED_LIMIT");
+  assert.equal(row(rows, "mandarin-family-room").price.amount, null);
+  assert.equal(JSON.stringify([pack, sampleArrays]), before);
+});
+test("multi-file CLI has exact API parity and retains single-file compatibility", () => {
+  const run = paths => JSON.parse(execFileSync(process.execPath, [taskCli, packPath, "2026-09-30", ...paths], { encoding: "utf8" }));
+  assert.deepEqual(run(pricePaths), screenRoomPack(pack, pack.scenario, "2026-09-30", sampleArrays.flat()));
+  assert.deepEqual(run(pricePaths.slice(0, 1)), screenRoomPack(pack, pack.scenario, "2026-09-30", sampleArrays[0]));
+  assert.deepEqual(run([]), screenRoomPack(pack, pack.scenario, "2026-09-30"));
+});
+test("multi-file CLI rejects duplicate and non-array inputs rather than ignoring a file", () => {
+  for (const inputs of [[...pricePaths, pricePaths[0]], [packPath], [pricePaths[0], packPath]]) {
+    assert.throws(() => execFileSync(process.execPath, [taskCli, packPath, "2026-09-30", ...inputs],
+      { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }));
+  }
 });

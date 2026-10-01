@@ -1,0 +1,48 @@
+[
+  {
+    "schema_version": 2,
+    "action": "FT-RES-069",
+    "checked_on": "2026-09-30",
+    "source_url": "https://montaguehotel.com/suites/the-guvnors-suite",
+    "source_surface": "Official Guv'nor's Suite BOOK route to reservations.montaguehotel.com; guests, dates, suite filter and both public rate-details panels inspected. Dynamic parameters not retained.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "montague-guvnor",
+    "category": "The Guv'nor's Suite",
+    "booking_category": "The Guv'nor's Suite",
+    "configuration_basis": "Category-filtered five-person result, sleeps5; rate details retain sofa/extra bed on request. Exact fifth-place setup/charge not confirmed and published conditional capacity unchanged.",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": { "adults": 2, "child_ages": [4, 8, 12] },
+    "engine_party": {
+      "adults": 2,
+      "child_ages": [4, 8, 12],
+      "adult_from_age": 18,
+      "child_age_from": 0,
+      "child_age_to": 17,
+      "age_input_mode": "individual-ages"
+    },
+    "rates": [
+      {
+        "plan": "Daily Rate",
+        "eligibility": "public",
+        "stay_amount": 7600,
+        "meals": "Room only; WiFi and VAT listed",
+        "cancellation": "15% deposit nonrefundable if cancelled; remaining balance required if cancelled within7days of arrival"
+      },
+      {
+        "plan": "Daily Rate with Breakfast",
+        "eligibility": "public",
+        "stay_amount": 7900,
+        "meals": "Full English breakfast daily; WiFi and VAT listed",
+        "cancellation": "15% deposit nonrefundable if cancelled; remaining balance required if cancelled within7days of arrival"
+      }
+    ],
+    "fee_basis": "Both cards state including taxes and fees; details list VAT and total7600/7900GBP for5nights. Requested sofa/extra-bed charge and optional services not independently established; not final checkout.",
+    "deposit_basis": "Both plans require15%nonrefundable deposit charged at reservation. This is an advance portion of the displayed stay cost, not an extra15%fee added to it; cancellation can forfeit deposit and within7days requires remaining balance. No reservation made.",
+    "limitation": "Exact4/8/12ages entered under provider adult18+/child0-17rules, one suite/five nights. Displayed rates do not confirm the requested sofa/fifth-place setup. Booking summary shows1King and additional-bed labels, not a complete authoritative bedding plan; original official two-bedroom evidence remains separate. No BookNow/Select/cart/reservation/contact/account/payment, firm fit, final quote, future availability, cheapest ranking or seasonal range."
+  }
+]
