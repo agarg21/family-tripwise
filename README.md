@@ -46,6 +46,16 @@ Open `http://127.0.0.1:4173/` in the in-app browser. If that port is occupied, p
 
 Browser access must pass its normal permission checks. Do not disable protections, use another surface to evade a denial, or deploy to obtain a preview. A denied `file:` URL is not proof of HTTP preview permission. If an HTTP preview is denied, record the exact origin/error and ask for normal user/app permission resolution. Do not repeatedly retry it in scheduled runs. Pre-release desktop/mobile rendering, interactions and independent review remain required.
 
+Use the exact printed origin: the restricted server rejects a `localhost` Host even if it resolves to loopback. A server HTTP403 and a browser `ERR_BLOCKED_BY_CLIENT` are different failures; the Host check does not establish the cause of a client block.
+
+Before browser QA, check the intended public assets:
+
+```bash
+node tools/preview-preflight.mjs /index.html /styles.css
+```
+
+This preflight starts and closes its own temporary restricted snapshot, comparing exact bytes/hashes and protective headers. Its reported origin is diagnostic and stopped when the command returns; use the separately running preview's printed URL for normal browser access. It checks server readiness only, not browser permission, desktop/mobile rendering, interactions or an actual browser download. It cannot replace release gates or be used as a browser-denial workaround. Missing/changed assets require correction/restart, not a protection change. After a browser denial, retain its exact origin/error and obtain normal user/app access resolution; do not automatically try another origin or browser.
+
 The production site is configured for GitHub Pages at `familytripwise.com`.
 
 ### Community Answer Review

@@ -1,5 +1,7 @@
 # Needs User
 
+October1 narrow input: please open the running documented `http://127.0.0.1:4173/where-to-stay/chicago-family-hotels.html` in the in-app browser and report whether normal access succeeds or is blocked. No security/settings change requested. The prior denial used localhost, which the restricted server does not accept; that does not explain the client block. Server-only preflight cannot clear browser permission/render/download gates. Chicago's existing public page remains available; only FT-IMP-050's new export is held. Continue independent eligible work, not repeated denial checks. Historical labels below are superseded only as to this diagnosis, not release readiness.
+
 September30 FT-IMP-050: new actual HTTP preview denial supersedes the older cleared-preview checkpoint for this attempted origin only. In-app browser `ftTab.goto("http://localhost:4173/where-to-stay/chicago-family-hotels.html")` returned `net::ERR_BLOCKED_BY_CLIENT`. No repeated attempt, alternate tool/origin bypass or security change. Normal user/app browser access resolution is required; documented restricted snapshot preview is127.0.0.1:4173 and must restart after generation. Chicago export remains local/unpublished until permitted desktop/mobile and actual-download QA plus release gates pass. Owner: normal user/app preview access; recheck only after permission/environment change. Other tools/research can proceed; no project-wide stop or generic approval request.
 
 Last updated: 2026-09-22

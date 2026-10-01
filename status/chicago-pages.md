@@ -1,5 +1,7 @@
 # Chicago Page Status
 
+October1 diagnostic status: the public Chicago page is not known to be broken; only the local comparison-download addition is unshipped. The prior browser block was at localhost:4173, while the restricted server requires127.0.0.1Host. These are separate conditions; client-block cause unknown. FT-QA-001 adds server-only asset preflight, not visual QA or bypass authority. Normal user/app access check requested against the running documented preview; no denied-origin retry/settings change. FT-IMP-050 still needs desktop/mobile, actual browser download, current full QA/independent review and verified release. See `docs/plan/chicago-comparison-sharing-2026-09-30.md`; October11 price check unchanged. Older checkpoints below are history.
+
 Last updated: 2026-09-30
 
 FT-IMP-050 local/unpublished: ten-record comparison anchor and CSV implemented, all historical price bands/date/party/fee/room/review/pool caveats retained. Operator native17related/full313 pass; browser localhost4173 preview returned net::ERR_BLOCKED_BY_CLIENT. Required desktop/mobile rendering/actual-download QA remains undone, so no site-code commit/push/release or completed usefulness-learning claim. The independently reviewed hold documentation may be pushed without the local code/HTML/CSV. Narrow normal preview-access resolution in ops/needs-user.md; independent static review is not release approval. October11 price recheck unchanged.

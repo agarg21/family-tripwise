@@ -2,6 +2,10 @@
 
 FT-IMP-050 / September30,2026 / implementation, not released.
 
+## October1 Diagnostic Follow-Through
+
+FT-QA-001 separates the remaining gates rather than treating Chicago itself as broken. Code inspection finds that the restricted preview accepts only Host `127.0.0.1:<port>`; the prior browser attempt used `localhost:4173`. That mismatch would be rejected by the server, but does not prove why the browser returned `ERR_BLOCKED_BY_CLIENT`; the client-block cause remains unknown. No denied-origin retry, alternate browser/origin workaround or security change is performed. The documented preview is running only for the user's normal app-access check. A temporary-snapshot preflight checks expected public bytes/headers, closes itself and explicitly reports browser/render/download gates uncompleted. This is server QA, not preview permission, release approval or a completed learning unit. The five Chicago implementation files stay untouched/unshipped. Exact ten FT-QA-001 tool/doc/state paths require native QA and independent review, not publication. Once normal access is established, resume FT-IMP-050 desktop1280/mobile390/320, actual download, current full QA, different independent review and verified release. October11 price check and original research dates remain.
+
 ## Decision And Scope
 
 The user's hotel-table usefulness/sharing signal identifies a concrete product gap: Chicago's maintained ten-row comparison has no direct comparison anchor or portable download. Reuse the existing NYC/Vegas CSV helper, not a new price database or URL.

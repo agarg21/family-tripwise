@@ -2,6 +2,10 @@
 
 Last updated: 2026-10-01
 
+FT-QA-001 review-clean: Huygens cycle-two PASS/noP0-P3, independent11focused/351isolated/91additional/native/6812entry preservation and operator352workingtree/native/productionQA pass. Exact ten paths ready tools/docs-only push; no site change or Pages wait. Chicago browser/download/release gates and normal user/app check remain uncompleted. Immutable review/QA result, earlier checkpoints historical.
+
+Current FT-QA-001: reusable server-only preview preflight and narrow Chicago diagnosis. Prior localhost browser denial and required127.0.0.1Host are distinct; root client-block cause unknown. No workaround/retry/security change. Normal user/app access check requested; five Chicago implementation files stay untouched/unshipped. Exact ten registered paths need focused/full native and different read-only PASS before tools/docs-only push. No public changes or new learning unit; resume FT-IMP-050 browser/render/download/review/release once normal access is established. Older Current checkpoints below are historical.
+
 Current FT-STD-005: deliver missing LasVegas retained admission/cost-friction adapter into opt-in weekly quality checks. Preserve source-model dates and every original admission/fee/age/product/unknown string, not current exact-family quotes; weather/transport remain explicit field gaps. Exact13paths/native/different read-only PASS before tools/docs-only push; public/model/Chicago/windows unchanged. Boston074completed; no new research-report substitute for this qualified maintenance gap.
 
 Current FT-RES-074: same-task Boston ParkPlaza public rate/35USDmandatory-fee/breakfast age-cap comparison, not another broad report. Exact8paths registered; original capacity pack/fifth-bed gate/all public pages unchanged. Three public plans require schema/task/CSV/native/different read-only PASS before tools/docs-only push. FT-RES-073 reviewed capacity/overlap research pushed4314478; Boston full-corpus/rest/review/controlled-overlap/publication gates remain.
