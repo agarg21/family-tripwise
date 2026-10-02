@@ -1,5 +1,13 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-RES-081 location/rest gate
+
+Final Maxwell `01a0fd2b-9967-78d3-89d5-463118696485` cycle1PASS/noP0-P3: 53focused/383isolatedfull/560additional/state0/80snapshots/SEO0five-prior/588hashes unchanged, exact7delta/581baseline-identical/180unrelatedroadmap unchanged. Optional21GBP separated from unknown total, no rest/route/availability/full077 claim. Operator384workingfull/44additional/native/material/exclusion parity green; exact seven paths eligible docs-only push. Dynamic sources/prior push provenance operator-attributed; immutable outputs only.
+
+Pre-review native53focused/384workingfull,44 additional source/task/null-route/card-arithmetic/price-schema/exclusion assertions, state0/80snapshots/SEO31canonical34HTMLzero-errors-five-prior/whitespace pass. Exact7paths include053immutable completion and077stale-next-gate reconciliation; original quote/capacity/public/price/date/eleven exclusions unchanged. Dynamic source bodies operator-attributed, no route/user/public/full077 claim. Different read-only review required.
+
+Seven exact paths registered before edits in current-cycle. Source audit for reviewed same-six-party London apartment comparison's unresolved location/midday-return task; current official sources, no exact route/suitability/booking proof or price renewal. Focused/full native QA and different independent read-only PASS before docs-only push. Eleven exclusions/public/original evidence/scheduler preserved; immutable053completion backfill included.
+
 ## 2026-10-02 - FT-IMP-053 care comparison tooling
 
 Final cycle2 Chandrasekhar PASS/no P0-P3: prior two P2 closed; 11focused/383isolatedfull/60original adversarial/28additional controls/state0/80snapshots/SEO31canonical34HTMLzero-errors-five-prior/586hashes unchanged. Exact8delta,578baseline-identical,180unrelatedroadmap preserved. Operator384workingfull/native/exclusion/four-material-snapshot parity green; exact eight paths eligible tools/docs-only push. No public/new learning/full076 claim; immutable results only, earlier checkpoints historical.

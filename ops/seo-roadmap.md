@@ -2,6 +2,14 @@
 
 Last updated: 2026-10-02
 
+FT-RES-081 review-clean Maxwell1PASS/noP0-P3: 53focused/383isolatedfull/560additional/native/588hashes; operator384workingfull/44additional/material/exclusion parity green. Exact7paths docs-only push; location/fare-band learning only, public/route/full077 gates unchanged.
+
+FT-RES-081 pre-review: five current official sources resolve location/fare-band scope, not actual rest route or total; source-datedLRN092. Native53focused/384workingfull/44additional/native/scope pass; seven exact paths to different read-only review.077 second-price gate reconciled to079complete, route/review/corpus/controlledoverlap/URL gates remain.
+
+Current FT-RES-081 under077: resolve the named six-person location/midday-rest decision using current official property and transport rules; preserve same-party dated nightly comparison. Seven paths registered, second transaction before15:20:39UTC; no public/new-city/route-fit claim. Focused/full QA and different read-only PASS gate docs-only push. Prior077 second-price label will be reconciled to completed079, remaining controlled overlap/corpus gates retained.
+
+FT-IMP-053 completed tools/docs-only at `1129ccdffdd70f7a5b13b315d3099c9c95bd34cf`: exact8reviewedpaths/finalfetch/no divergence/sole outgoingrange/whitespace/push/remotemainmatch verified15:02:11UTC. Cycle2PASS and native unchanged; no public/Pages/newlearning claim. Immutable completion backfill carried in081.
+
 FT-IMP-053 review-clean cycle2ChandrasekharPASS/noP0-P3: 11focused/383isolatedfull/60adversarial/28additional/native/586hashes; operator384workingfull/material/exclusion parity green. Exact8paths tools/docs-only push, public corrections held; no duplicate learning or complete076 claim.
 
 FT-IMP-053 cycle1two-P2 strict-input findings fixed with string/dense-array regression coverage; 11focused/384workingfull pass. Cycle2independentPASS required before push; public/source/price state unchanged.

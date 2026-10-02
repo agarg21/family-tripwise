@@ -4,6 +4,9 @@ Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and
 
 Last updated: 2026-10-02
 
+## LRN-092 / October2 / FT-RES-081
+
+Family decision: same six-person Nov8-13budget plus20minute midday return from hypothetical TateModern outing. Hypothesis rejected: lower room quote and promotional access estimate settle rest. October2 official location/TfL audit distinguishes access claims from unknown actual return, hotel13+ versus transport11-15bands, optional two-new-Visitor-card GBP21 excluding postage/credit. Existing nightly prices and source dates unchanged. Selected reviews do not establish representative quietness. Result CANDIDATE: dated planner/fare and independent review/conflict gate next, full077overlap/corpus/maintainability/URLscope retained. Confidence high source distinctions/arithmetic, unknown route/rest/user/SEO. Lesson: join accommodation cost, return friction and age-specific fares without converting estimates into journeys or erasing nightly budget. Falsification: comparable route/total or changed policy/category/noise/competitor task. Evidence `docs/research/london-six-person-location-rest-2026-10-02.md`; bounded source audit, not monitoring/user testing. Zip tool error not retried; other direct sources suffice.
 ## LRN-091 / October2 / FT-RES-080
 
 Retained budget context: Finest official Family Suite fromUSD843perroom/night observedSeptember27, unknown party/travel-date/tax-fee basis; not renewed or used as this task quote. Exact-task room/care totals remain null. Historical approximate planning observations are not erased by missing task-specific quotes.

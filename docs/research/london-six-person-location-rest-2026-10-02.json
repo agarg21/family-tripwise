@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-081",
+  "learning": "LRN-092",
+  "checked_on": "2026-10-02",
+  "scope": "Internal named-task audit, not route testing, suitability, renewed room quotes or London publication approval",
+  "scenario": {"adults": 2, "child_ages": [4,8,12,15], "arrival": "2026-11-08", "departure": "2026-11-13", "outing": "Hypothetical Tate Modern morning; leave13:00 for lunch/apartment rest", "desired_return_minutes": 20, "basis": "Researcher-defined proxy requirement, not a parent report"},
+  "sources": {
+    "queen-location": {"url": "https://www.marlin.com/london-serviced-apartments/london-city-queen-street/", "checked_on": "2026-10-02", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "surface": "Property body, promotional access estimates and selected embedded reviews"},
+    "limehouse-location": {"url": "https://www.marlin.com/london-serviced-apartments/limehouse-serviced-apartments/", "checked_on": "2026-10-02", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "surface": "Property body, promotional access estimates and selected embedded reviews"},
+    "visitor-oyster": {"url": "https://tfl.gov.uk/travel-information/visiting-london/visitor-oyster-card", "checked_on": "2026-10-02", "published_on": null, "evidence_class": "OFFICIAL_TRANSPORT_POLICY", "surface": "Public card/child policy; no journey or purchase submitted"},
+    "children": {"url": "https://support.visitorshop.tfl.gov.uk/hc/en-gb/articles/16465480622354-Travelling-with-children", "checked_on": "2026-10-02", "published_on": "2025-12-17", "evidence_class": "OFFICIAL_TRANSPORT_POLICY", "surface": "Displayed update date, not policy-effective date"},
+    "fare-finder": {"url": "https://tfl.gov.uk/fares/find-fares/single-fare-finder", "checked_on": "2026-10-02", "published_on": null, "evidence_class": "OFFICIAL_TRANSPORT_POLICY", "surface": "Form/limitations only; no station-pair fare obtained"}
+  },
+  "records": [
+    {"id": "marlin-queen-street-two-bedroom", "source_id": "queen-location", "address": "30 Queen Street, London EC4R 1BR", "published_access": "City base; property describes rail access and three minutes to the Thames", "return_minutes": null, "return_fare_gbp": null, "rest_verdict": "Unknown; river proximity is not a Tate Modern door-to-door return", "price_observation": "docs/research/london-marlin-six-person-price-observation-2026-10-02.json"},
+    {"id": "marlin-limehouse-two-bedroom", "source_id": "limehouse-location", "address": "577 Commercial Road, London E1 0HJ", "published_access": "Between City/Canary Wharf; property describes five minutes along Commercial Road to the DLR", "return_minutes": null, "return_fare_gbp": null, "rest_verdict": "Unknown; access estimate omits walking legs, waits and transfers", "price_observation": "docs/research/london-limehouse-six-person-price-observation-2026-10-02.json"}
+  ],
+  "transport": {
+    "source_ids": ["visitor-oyster", "children", "fare-finder"],
+    "under_11_ages": [4,8],
+    "under_11_basis": "Accompanied Tube/DLR free within four children per fare-paying adult; not universal airport/boat/National Rail exemption",
+    "young_visitor_ages": [12,15],
+    "young_visitor_basis": "Separate cards, staff-applied half-adult pay-as-you-go up to14days, child present; not hotel13+adult mapping",
+    "optional_visitor_card_fee": {"amount_each": 10.5, "currency": "GBP", "unit": "card", "count": 2, "subtotal": 21, "observed_on": "2026-10-02", "source_id": "visitor-oyster", "excludes": ["postage", "travel credit"], "applicability": "Only buying two new Visitor Oyster cards; not mandatory transport fee or standard-Oyster comparison"},
+    "exact_trip_total": null,
+    "missing": ["Actual route/stations/direction/time and fares", "Daily cap/existing card basis", "Travel-date service changes and door-to-door return", "Quiet/rest/child-bed review evidence"]
+  },
+  "review_signal": {"evidence_class": "PROPERTY_SELECTED_REVIEW_SURFACE", "source_ids": ["queen-location", "limehouse-location"], "result": "Selected feed cannot establish recurrent quietness or representative child-specific rest success; dates ambiguous, no identities/copied text retained", "complete_independent_corpus": false},
+  "proxy_result": {"hypothesis": "Lower room quote plus short access estimate settles midday rest", "result": "REJECT", "answerable": ["Distinct locations and marketing estimate scope", "Saved same-party/nightly budgets and payment terms", "Child fare bands and optional card basis"], "unanswered": ["Twenty-minute return", "Room-plus-transport total", "Quietness/actual child bedding"], "decision": "CANDIDATE; no rest winner or new URL", "confidence": "High source distinctions/saved arithmetic, unknown actual route/rest/user/SEO", "next_gate": "Dated planner/fare-cap comparison for both addresses/outing plus independent category-linked review/conflict sampling; then077 controlledUSoverlap/materiality/corpus/maintainability/URLscope", "falsification_trigger": "Comparable route/total or changed policy/category/noise evidence; competing same-task completion"},
+  "failed_source": {"url": "https://tfl.gov.uk/fares/free-and-discounted-travel/11-15-zip-oyster-photocard", "checked_on": "2026-10-02", "tool": "web open", "result": "Internal Error, no body", "impact": "No Zip application/residency claims used; other direct sources suffice", "owner": "Public source/tool availability", "next_check": "Only later Zip-specific eligibility task; no retry or alternate-tool workaround"},
+  "limits": ["No paid API, purchase, contact, identities, copied threads or preview-denial retry", "Original packs/price observations unchanged, dates not renewed", "No exact route/stroller, safety, firm family fit or room availability assurance", "Two options are not six complete hotel records; full077 demand/corpus/URL gates remain"]
+}
