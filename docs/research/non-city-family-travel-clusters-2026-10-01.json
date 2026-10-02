@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-075",
+  "learning_unit": "LRN-087",
+  "as_of": "2026-10-01",
+  "publication_changes": false,
+  "new_urls_authorized": false,
+  "method": {
+    "market": "US for saved provider estimates only",
+    "numeric_record": "docs/research/family-expansion-2026-09-30.json",
+    "numeric_collected_at": "2026-09-30T20:26:36.065Z",
+    "numeric_dates": "September12-16,2026 except missing child-offer metric datedJune15; histories at latestAugust2026",
+    "live_method": "Free public query-family search samples and direct representative bodies onOctober1; pooled result samples are preliminary, not authenticated US rank or quantified pairwise overlap",
+    "new_paid_cost_usd": 0,
+    "cumulative_prior_reported_cost_usd": 0.17996,
+    "limitations": [
+      "Null/not-batched demand is unknown, never zero.",
+      "Do not sum variants or equate providerKD0 with an easy ranking opportunity.",
+      "Average estimates are not current monthly counts; no CTR/query-cohort intervention.",
+      "Publisher credentials/firsthand/reviews/booking inventory are not transferable authority.",
+      "No community identities/copied threads/rawcompletequeries/sourcebodies/credentials retained.",
+      "No exact-family booking acceptance, user test, quote or SEO outcome inferred."
+    ]
+  },
+  "metrics": [
+    {
+      "query": "family vacation deals",
+      "average_monthly_searches": 5400,
+      "kd": 3,
+      "metrics_updated_at": "2026-09-13 18:58:00 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 2900
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 3600
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 4400
+        }
+      ]
+    },
+    {
+      "query": "family vacation packages",
+      "average_monthly_searches": 5400,
+      "kd": 6,
+      "metrics_updated_at": "2026-09-13 12:40:32 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 2900
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 3600
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 4400
+        }
+      ]
+    },
+    {
+      "query": "all inclusive family vacation deals",
+      "average_monthly_searches": 2900,
+      "kd": 9,
+      "metrics_updated_at": "2026-09-12 02:18:23 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 2400
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 2400
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 2400
+        }
+      ]
+    },
+    {
+      "query": "kids stay free all inclusive resorts",
+      "average_monthly_searches": null,
+      "kd": null,
+      "metrics_updated_at": "2026-06-15 07:53:25 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 0
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 0
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 0
+        }
+      ]
+    },
+    {
+      "query": "cancun kids stay free",
+      "average_monthly_searches": null,
+      "kd": null,
+      "metrics_updated_at": null,
+      "recent_months": []
+    },
+    {
+      "query": "all inclusive resorts for family of 6",
+      "average_monthly_searches": 140,
+      "kd": 0,
+      "metrics_updated_at": "2026-09-12 18:00:32 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 90
+        }
+      ]
+    },
+    {
+      "query": "multigenerational family vacations",
+      "average_monthly_searches": 110,
+      "kd": 15,
+      "metrics_updated_at": "2026-09-16 07:46:59 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 170
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 260
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 110
+        }
+      ]
+    },
+    {
+      "query": "family hotels connecting rooms",
+      "average_monthly_searches": null,
+      "kd": null,
+      "metrics_updated_at": null,
+      "recent_months": []
+    },
+    {
+      "query": "family travel on a budget",
+      "average_monthly_searches": 50,
+      "kd": 0,
+      "metrics_updated_at": "2026-09-15 07:07:16 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 20
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 50
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 40
+        }
+      ]
+    },
+    {
+      "query": "disney dining plan 2027",
+      "average_monthly_searches": 320,
+      "kd": 9,
+      "metrics_updated_at": "2026-09-12 16:30:08 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 880
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 880
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 590
+        }
+      ]
+    },
+    {
+      "query": "epic universe height requirements",
+      "average_monthly_searches": 1300,
+      "kd": 0,
+      "metrics_updated_at": "2026-09-14 11:40:45 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 880
+        }
+      ]
+    },
+    {
+      "query": "orlando hotels with water parks",
+      "average_monthly_searches": 8100,
+      "kd": 19,
+      "metrics_updated_at": "2026-09-15 14:13:34 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 6600
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 12100
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 12100
+        }
+      ]
+    },
+    {
+      "query": "orlando hotels with lazy river",
+      "average_monthly_searches": 3600,
+      "kd": 0,
+      "metrics_updated_at": "2026-09-14 15:33:43 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 4400
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 6600
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 6600
+        }
+      ]
+    },
+    {
+      "query": "family cruises 2027",
+      "average_monthly_searches": 590,
+      "kd": 13,
+      "metrics_updated_at": "2026-09-12 05:11:44 +00:00",
+      "recent_months": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 1600
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 1600
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 880
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "hilton",
+      "url": "https://www.hilton.com/en/connecting-rooms/faqs/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_PUBLISHED_POLICY",
+      "finding": "Participating direct/app Confirmed Connecting Rooms differs from a request; rates may be higher. Not every property/channel/date is guaranteed."
+    },
+    {
+      "id": "connecting-specialist",
+      "url": "https://findconnectingrooms.com/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": "July 2026",
+      "evidence_class": "COMPETITOR_STRUCTURE",
+      "finding": "Dated source-linked guaranteed/conditional/request-only comparison already exists; table format and guarantee taxonomy alone are not novel."
+    },
+    {
+      "id": "room-setup",
+      "url": "https://hotelinfo.com/best-hotel-room-setup-family-of-five/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": "July 25, 2026",
+      "evidence_class": "COMPETITOR_STRUCTURE",
+      "finding": "Suite-versus-connection narrative already exists; exact-party dated cross-property total comparison not observed."
+    },
+    {
+      "id": "large-family",
+      "url": "https://whichfamilyvacation.com/answers/best-all-inclusive-resorts-for-large-families",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": "Reviewed June 2026",
+      "evidence_class": "COMPETITOR_STRUCTURE",
+      "finding": "Capacity/nightly-band shortlist exists; inspected bands lacked full stay-party-fee basis. Cabana Bay bedding description conflicts with the specific official category inspected; no bathroom conclusion."
+    },
+    {
+      "id": "cabana-official",
+      "url": "https://www.loewshotels.com/cabana-bay-hotel/rooms-showcase/courtyard-family-suite-poolside",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "finding": "Earlier successful body: named exterior-entry Poolside Family Suite, two queens plus sleeper, maximum six, sliding partition. Later repeat timed out; not a quote or independent physical/booking verification."
+    },
+    {
+      "id": "ota",
+      "url": "https://www.cheapcaribbean.com/deals/family-friendly-vacations/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "COMPETITOR_BOOKING_INTERFACE",
+      "finding": "Date/airport/package/price filters and booking inventory; default two-adult party is not a family-room quote. Search interface inspected, no completed booking task."
+    },
+    {
+      "id": "palace",
+      "url": "https://www.palaceresorts.com/offers/kids-teens-free",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_OFFER_PARTIAL",
+      "finding": "Headline ages17orunder; book by October31,2026/stay by December20,2026. Terms heading but body unavailable; cached snippets differ. Eligibility/savings unresolved."
+    },
+    {
+      "id": "finest",
+      "url": "https://www.finestresorts.com/cancun/finest-playa-mujeres/finest-for-kids/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_PUBLISHED_POLICY",
+      "finding": "Mini0-2parentsrequired;3-6registration;Maxi7-11registration. Separate Imagine Lounge potty-trained3+/90min. Already correctly represented in our Cancun model; no new public defect."
+    },
+    {
+      "id": "clubmed",
+      "url": "https://www.clubmed.us/faq",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_PUBLISHED_POLICY",
+      "finding": "Participating resorts distinguish included4-17clubs from extra-cost4months-3care. Not universal resort availability or an exact childcare price."
+    },
+    {
+      "id": "petit",
+      "url": "https://www.clubmed.us/l/kids-petit",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_PUBLISHED_POLICY",
+      "finding": "Petit ages2-3/additionalcost/property-dependent; Cancun listed. Exact dated childcare cost/capacity not collected."
+    },
+    {
+      "id": "toddler-list",
+      "url": "https://thetravelmommy.com/posts/best-all-inclusive-resorts-for-toddlers/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": "08.03.26 (displayed; locale ambiguous)",
+      "evidence_class": "COMPETITOR_STRUCTURE",
+      "finding": "Toddler-age/care/room/transfer narrative already exists; no inspected same-date care-inclusive price comparison. Do not adopt safety or exact practical verdicts."
+    },
+    {
+      "id": "waterplay",
+      "url": "https://www.orlandocompass.com/hotels-and-resorts/hotels-with-water-parks",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": "June 2026",
+      "evidence_class": "COMPETITOR_STRUCTURE",
+      "finding": "Water-feature/rest-day comparisons exist. No height-text match in inspected HTML; exact per-property admission/height/fees/party-rate join not observed, not a whole-site absence claim."
+    },
+    {
+      "id": "multigen",
+      "url": "https://familyvacationist.com/grandparent-alert-resorts-perfect-for-multigenerational-family-trips/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "COMPETITOR_STRUCTURE",
+      "finding": "Resort/villa/shared-space inspiration exists; firsthand/publisher/photo advantages cannot be claimed. Exact group room/guarantee/cost comparison not observed."
+    },
+    {
+      "id": "cruise-faq",
+      "url": "https://www.royalcaribbean.com/faq/questions/what-is-kids-sail-free-promotion",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_OFFER_PARTIAL",
+      "finding": "Age12orunder/sailing/party/blackout restrictions; taxes/port expenses still apply. Displayed offer period may be stale; not a current eligible quote."
+    },
+    {
+      "id": "cruise-guide",
+      "url": "https://www.cruisecritic.com/articles/best-cruises-for-a-family-of-5",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": "August 5, 2024",
+      "evidence_class": "COMPETITOR_STRUCTURE",
+      "finding": "Ship/cabin/connecting-versus-suite/cost tradeoff narrative exists. Do not adopt firm suitability, unchanged2024policy or cabin-assignment advice; exact2027sailing costs unresolved."
+    },
+    {
+      "id": "rail",
+      "url": "https://www.amtrak.com/deals-discounts/rail-vacations-rail-tours/family-adventures-by-train.html",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_PRODUCT_DISCOVERY",
+      "finding": "Family rail offer/itinerary discovery exists; headline child fares are not complete fare terms. No arrival/stroller/car-free-route or total-budget validation."
+    },
+    {
+      "id": "roadtrip",
+      "url": "https://www.letsgofamilytrip.com/",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "COMPETITOR_INTERFACE",
+      "finding": "Age/nap/hourly AI planning interface exists; no generated plan tested and verification claims not independently established."
+    },
+    {
+      "id": "universal-news",
+      "url": "https://www.nbcuniversal.com/newsroom/destinations-experiences/universal-kids-resort",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": "July 1, 2026 opening item",
+      "evidence_class": "OFFICIAL_DATED_NEWS",
+      "finding": "Current official opening/now-open items contradict treating the park as an upcoming empty2027niche. Newness alone does not establish easy ranking/demand."
+    },
+    {
+      "id": "universal-hotel",
+      "url": "https://www.universalkidsresort.com/en/us/places-to-stay/universal-kids-resort-hotel",
+      "accessed_on": "2026-10-01",
+      "published_or_displayed_date": null,
+      "evidence_class": "OFFICIAL_PRODUCT_DISCOVERY",
+      "finding": "Hotel nowopen and separate park admission requirement. Exactparty total/current calendar and numeric demand remain missing; no Frisco launch authority inferred."
+    }
+  ],
+  "clusters": [
+    {
+      "key": "party-room",
+      "priority": 1,
+      "dimension": "Family size and sleeping setup",
+      "query_examples": [
+        "all inclusive resorts for family of 6",
+        "family hotels connecting rooms",
+        "family of 5 suite vs connecting rooms"
+      ],
+      "metric_queries": [
+        "all inclusive resorts for family of 6",
+        "family hotels connecting rooms"
+      ],
+      "source_ids": [
+        "hilton",
+        "connecting-specialist",
+        "room-setup",
+        "large-family",
+        "cabana-official"
+      ],
+      "result_types": [
+        "official booking policies",
+        "specialist tables",
+        "editorial room guides",
+        "advisor shortlists"
+      ],
+      "family_task": "Two adults/children4,8,12 compare exact sleeping places, confirmed-versus-requested connections and same-stay approximate nightly/full mandatory costs.",
+      "information_gain": "Join named category, ages, booking channel, date-valid connection status, rest-space layout, fee basis and dated prices; a generic capacity/guarantee table is insufficient.",
+      "existing_fit": "Shared constraint layer and existing hotel comparisons first; London/DC/Boston research packs reusable, not new city authorization.",
+      "outcome": "CANDIDATE",
+      "roadmap_owner": "FT-RES-077",
+      "remaining_gate": "Controlled same-market two-query-family overlap; material distinct cross-destination job versus city fits; six exact-category records including two same-party dated price observations and current conflicts; named proxy task; URL authorization if needed.",
+      "next_eligible_step": "Next unblocked research/delivery run: reuse validated room packs to test the cross-destination selection task and collect the two missing comparable price observations."
+    },
+    {
+      "key": "budget-offers",
+      "priority": 2,
+      "dimension": "Budget, packages and offer eligibility",
+      "query_examples": [
+        "family vacation deals",
+        "all inclusive family vacation deals",
+        "kids stay free all inclusive resorts",
+        "family vacation under 3000"
+      ],
+      "metric_queries": [
+        "family vacation deals",
+        "family vacation packages",
+        "all inclusive family vacation deals",
+        "kids stay free all inclusive resorts",
+        "family travel on a budget"
+      ],
+      "source_ids": [
+        "ota",
+        "palace"
+      ],
+      "result_types": [
+        "OTA package search",
+        "brand offers",
+        "budget inspiration"
+      ],
+      "family_task": "Compare one party's full stay costs for an eligible offer versus an otherwise comparable non-offer plan, retaining nightly budgets and exclusions.",
+      "information_gain": "Age/room/date/channel eligibility plus same-basis totals, not unverified headline discounts or a generic deals essay.",
+      "existing_fit": "Existing Cancun comparison and budget fields.",
+      "outcome": "CANDIDATE",
+      "roadmap_owner": "FT-RES-064",
+      "remaining_gate": "Readable first-party full terms and dated same-party offer/non-offer totals; preserve October11price trigger unless verified defect.",
+      "next_eligible_step": "At existing price trigger or new verified conflict, resolve exact offer terms and same-family totals; do not launch generic daily-deals pages."
+    },
+    {
+      "key": "child-age-care",
+      "priority": 3,
+      "dimension": "Child age, care and rest",
+      "query_examples": [
+        "all inclusive resorts with childcare for 2 year olds",
+        "resorts with baby club",
+        "best all inclusive resorts for toddlers",
+        "resorts with teen clubs"
+      ],
+      "metric_queries": [],
+      "source_ids": [
+        "finest",
+        "clubmed",
+        "petit",
+        "toddler-list"
+      ],
+      "result_types": [
+        "official age-band club pages",
+        "toddler specialist guides"
+      ],
+      "family_task": "Parents with children2and7 distinguish parent-present play from separately paid care, registration and limited restaurant care; compare dated room plus care budgets.",
+      "information_gain": "Exact age/service-specific parent/training/session/cost rules with price basis; broaden maintained corpus, not repeat existing correct Finest filters.",
+      "existing_fit": "Existing Cancun comparison first; shared service-level records if useful.",
+      "outcome": "CANDIDATE",
+      "roadmap_owner": "FT-RES-076",
+      "remaining_gate": "Specific numeric demand remains unknown; controlled paired SERP overlap and four property/service records with dated care fees plus same-party room prices; task must outperform existing model without unsupported drop-off promise.",
+      "next_eligible_step": "Next unblocked run after party-room qualification: audit four exact service records and identify a named failure in existing age/cost comparison before editing."
+    },
+    {
+      "key": "amenity-waterplay",
+      "priority": 4,
+      "dimension": "Amenities and access",
+      "query_examples": [
+        "orlando hotels with water parks",
+        "orlando hotels with lazy river",
+        "family resorts with splash pads"
+      ],
+      "metric_queries": [
+        "orlando hotels with water parks",
+        "orlando hotels with lazy river"
+      ],
+      "source_ids": [
+        "waterplay",
+        "cabana-official"
+      ],
+      "result_types": [
+        "water-feature comparisons",
+        "hotel search filters",
+        "firsthand publishers"
+      ],
+      "family_task": "Choose a room/base for a water-focused rest day while separating slide height/access/date/fees from room capacity and nightly price.",
+      "information_gain": "Join6-8official exact room/access/height/date/fee records and comparable budget; existing guides already contain structured water-feature advice.",
+      "existing_fit": "Orlando existing lodging comparison first.",
+      "outcome": "CANDIDATE",
+      "roadmap_owner": "FT-RES-063",
+      "remaining_gate": "Fresh controlled overlap/task gap and6-8records with prices; preserve October22observation window absent verified defect.",
+      "next_eligible_step": "Collect missing official records without changing the observed page; decide at the protected window or verified material-defect trigger."
+    },
+    {
+      "key": "multigen",
+      "priority": 5,
+      "dimension": "Grandparents and larger groups",
+      "query_examples": [
+        "multigenerational family vacations",
+        "multigenerational resorts",
+        "family reunion vacations"
+      ],
+      "metric_queries": [
+        "multigenerational family vacations"
+      ],
+      "source_ids": [
+        "multigen",
+        "hilton"
+      ],
+      "result_types": [
+        "editorial resort/villa inspiration",
+        "booking policies"
+      ],
+      "family_task": "Grandparents and children compare linked rooms, separate quiet space, meeting points and whole-group budget.",
+      "information_gain": "Room-link/cost constraint overlay; no accessibility or firm suitability inference.",
+      "existing_fit": "Existing Cancun overlay; share party-room data rather than create near-duplicate resort URLs.",
+      "outcome": "CANDIDATE",
+      "roadmap_owner": "FT-RES-066",
+      "remaining_gate": "Exact party/connection/price records and named task; accessibility claims require separate evidence; existing observation gates.",
+      "next_eligible_step": "Reuse party-room outputs inside existing FT-RES-066 instead of another standalone report."
+    },
+    {
+      "key": "cruise",
+      "priority": 6,
+      "dimension": "Trip type: cruises",
+      "query_examples": [
+        "family cruises 2027",
+        "best cruises for a family of 5",
+        "kids sail free cruises"
+      ],
+      "metric_queries": [
+        "family cruises 2027"
+      ],
+      "source_ids": [
+        "cruise-guide",
+        "cruise-faq"
+      ],
+      "result_types": [
+        "cruise-line offers",
+        "ship/cabin guides",
+        "booking inventory"
+      ],
+      "family_task": "One ship/sailing: five-person cabin versus confirmed connected cabins, child fares, gratuities/taxes and total budget.",
+      "information_gain": "Exact sailing/cabin/age/mandatory-total comparison; established guides already explain layouts.",
+      "existing_fit": "No current cruise owner; qualification watch only, not a new URL.",
+      "outcome": "WATCH",
+      "roadmap_owner": "FT-RES-075-watch",
+      "remaining_gate": "Controlled current distinct-job/demand/overlap and maintainable ship/sailing cabin-price corpus; scope approval before publication.",
+      "next_eligible_step": "Only after higher-priority unblocked work, test one ship/sailing feasibility; no recurring cruise inventory program inferred."
+    },
+    {
+      "key": "rail-carfree",
+      "priority": 7,
+      "dimension": "Transport and car-free trips",
+      "query_examples": [
+        "family vacations by train",
+        "car free family vacations",
+        "family train vacations"
+      ],
+      "metric_queries": [],
+      "source_ids": [
+        "rail"
+      ],
+      "result_types": [
+        "rail offers",
+        "tour packages",
+        "destination guides"
+      ],
+      "family_task": "Compare arrival-to-base friction and family fare/hotel costs without claiming an exact stroller-route verdict.",
+      "information_gain": "Supported transit/budget handoff; official rail offers alone do not solve local arrival or rest planning.",
+      "existing_fit": "Existing NYC/Chicago/SanAntonio stay/itinerary components first.",
+      "outcome": "WATCH",
+      "roadmap_owner": "FT-RES-075-watch",
+      "remaining_gate": "Numeric demand unknown, controlled overlap and maintained route/fare/room feasibility; human evidence for exact practical verdicts.",
+      "next_eligible_step": "Qualify a single existing-city transport task, not a nationwide train-page batch."
+    },
+    {
+      "key": "roadtrip-pace",
+      "priority": 8,
+      "dimension": "Trip pace and road-trip constraints",
+      "query_examples": [
+        "road trip planner with kids",
+        "road trips with toddlers",
+        "family road trip budget"
+      ],
+      "metric_queries": [],
+      "source_ids": [
+        "roadtrip"
+      ],
+      "result_types": [
+        "interactive planners",
+        "itinerary tools",
+        "road-trip editorial"
+      ],
+      "family_task": "Route with ages/rest/meal/weather/drive budget outputs supported by maintained corridor facts.",
+      "information_gain": "Reliable corridor/rest/cost constraints, not generic LLM itinerary prose.",
+      "existing_fit": "Current itinerary/rest modules before a standalone planner.",
+      "outcome": "REJECT_GENERIC_WATCH_SPECIFIC",
+      "roadmap_owner": "FT-RES-075-watch",
+      "remaining_gate": "Specific numeric demand unknown; distinct controlled SERP task and maintainable corridor data; practical route claims need required evidence.",
+      "next_eligible_step": "Reopen only for a named corridor task absent from existing pages and tested tools."
+    }
+  ],
+  "trend_watch": {
+    "metric_queries": [
+      "family cruises 2027",
+      "disney dining plan 2027",
+      "epic universe height requirements"
+    ],
+    "source_ids": [
+      "universal-news",
+      "universal-hotel"
+    ],
+    "result": "Cruises2027June880/July1600/August1600; Disney2027June590/July880/August880; EpicheightJune880/July1000/August1000. Advance-year/height interest increased versusJune but plateaued; no causation/lowcompetition/currentacceleration proof. DealsJune4400toAugust2900 declined.",
+    "decision": "Preserve FT-RES-060 genericDisneycalculator rejection; FT-RES-065Frisco watch needs missing metrics and total-cost/calendar data. Current opening/policy changes are research triggers, not year-variant URLs."
+  },
+  "next_decision": "First qualify room-party/budget shared task, then toddler-care costs; existing offer/waterplay/multigen owners remain. A new canonical URL still requires controlled overlap/material demand/maintainability/noexistingfit/authorization."
+}

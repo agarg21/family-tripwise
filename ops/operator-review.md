@@ -1,5 +1,15 @@
 # Operator Implementation Review Log
 
+## 2026-10-01 - FT-RES-075 non-city demand qualification
+
+Final cycle1Lagrange01a0fa38-3e54-7672-bafc-25bd51a46de5 PASS/noP0-P3:368isolatedfull/state0/80snapshots/localSEO31zero5prior/metric-date-history/source-reference/privacy/candidate-gate checks,573snapshotfiles preserved after declared refresh. QA001/STD007 identities inspected after correction and matched retained history; exact baseline-to-overlay diff/byteexact QA001 restoration operator-attributed. Operator369workingfull/focusedparity/QA001exactrestoration/unrelatedrecord-and11excludedhash/state0/80snapshots/localSEO31zero5prior/whitespace pass. No originalrepo/Git/writes/prohibitedretry/externalmutation by reviewer, no production/newURLapproval. Exact7paths eligible docs-only push; immutable reviewer/QA output only.
+
+Scope inspection caught a mechanical roadmap-result targeting error in the preceding STD007 push: Newton's STD007 output attached to QA001 due to a stale line-number read. Restore QA001 exactly from reviewed a85c68b state and attach the immutable Newton/STD007/push outputs to STD007 by ID. No code/site/evidence decision changed; this7-path independent review explicitly includes identity/provenance correction.
+
+Operator pre-review QA:369workingtree full/native; focused14metric exact-value/date/history parity,19sourceURL/date/privacy and Markdown references,8uniquecluster/owner/gate checks and3uniqueaction IDs pass; state0/80offline GSC snapshots/whitespace pass. Public site/model and eleven held paths unchanged. Different independent review next; no delivery or ranking claim yet.
+
+Exact7paths registered before edits; saved normalizedUS estimates and October1free public/primary/competitor audits. Eight dimensions with separate unknown demand and controlled-overlap gates; room-party/budget and toddler-care candidates added, existing offer/waterplay/multigen/watch owners retained. No new paidcall/site/model/price/date/window/URL/account/automation change. Named prior hypotheses falsified; no claim of current ranks, easyKD, complete eligibility or new Finest defect. Native full/focused/parity/privacy/scope and different independent read-only review required before docs-only push.
+
 ## 2026-10-01 - FT-STD-007 complete maintenance framework
 
 Final Newton cycle-three PASS/noP0-P3. All previous findings closed;368isolatedfull/11focused/15independent malformednestedzero-requestfixtures/native size-limit and extraction roundtrips/state0/80snapshots/localSEO31zero5prior/freshness0expired-fouryearless/baselinebyteparity/immutableoutput/571filepreservation verified. Operator369workingtreefull/11focused/native/whitespace pass. Only declared three fixes since cycle2, exact13overall scope. No real collection/browser/paid/site change, tools/docs-only release eligible; long-term weekly stability not tested. Immutable reviewer/QA output only.
