@@ -1,6 +1,18 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-IMP-053 care comparison tooling
+
+Final cycle2 Chandrasekhar PASS/no P0-P3: prior two P2 closed; 11focused/383isolatedfull/60original adversarial/28additional controls/state0/80snapshots/SEO31canonical34HTMLzero-errors-five-prior/586hashes unchanged. Exact8delta,578baseline-identical,180unrelatedroadmap preserved. Operator384workingfull/native/exclusion/four-material-snapshot parity green; exact eight paths eligible tools/docs-only push. No public/new learning/full076 claim; immutable results only, earlier checkpoints historical.
+
+Cycle1 Chandrasekhar `01a0fd19-950d-7542-8b8d-063f1fb96eab` FAIL/two P2: URL/currency/source-ID coercion and sparse child/training arrays. Fixed explicit strings/dense arrays including scenario/source/missing/limits, with regression test. Operator11focused/384full pass; cycle2 independent review required. Independent382full/10focused/52-of-60 adversarial/state0/80snapshots/SEO0five-prior/586files unchanged; public/inventory/180prior-roadmap entries preserved. No release yet.
+
+Pre-review: 10 focused/383 working-tree full tests, state zero errors/80 snapshots/local SEO 31 canonical/34 HTML/zero errors/five prior advisories/whitespace green. Mixed source-date, explicit-null, all-service, historical-price, CLI/CSV and immutability fixtures pass; inventory/eleven exclusions preserved. Different read-only review pending, tools/docs-only scope.
+
+Exact eight paths registered in current-cycle before edits. Reviewed FT-RES-080 inventory reused, no new learning entry or public model update. Read-only strict schema/source validation and all-service child/floor screens retain parent/training/registration/session/inclusion uncertainty and original room budget basis. JSON/CSV stdout only, no network/file writes; public correction remains preview-gated and no denied-origin/tool retry occurred. Focused/full native and different independent read-only PASS required before tools/docs-only release. Prior FT-OPS-009 four-state immutable completion backfills included; eleven exclusions preserved.
+
 ## 2026-10-02 - FT-OPS-009 reusable work modes
+
+Immutable completion: seven reviewed paths pushed at `e6024a57838612be611e417e40476a4a97934007`; final fetch/no divergence, sole complete outgoing range, exact staging, whitespace, material reviewed-byte parity and remote main match verified at 14:31:57 UTC. No live scheduler mutation/public change/Pages wait; current sprint and all eleven exclusions preserved. Four-state result retained locally for the next substantive transaction; no separate metadata commit.
 
 Final cycle-one Wegener `01a0fd03-875e-72b0-90d5-c0998a06b8d3` PASS/no P0-P3: isolated 372 full tests, 36 focused policy/date/DST/scope assertions, state zero errors, 80 valid snapshots, local SEO 31 canonical/34 HTML/zero errors/five prior advisories and 583 files unchanged. Exact seven-path delta and prior completion backfills verified; normal defaults/current dated sprint unchanged. Operator 373 full/native/exclusion/saved-config parity green. Policy readiness, not actual activation/restoration/public delivery/learning; prior Git/scheduler provenance operator-attributed. Immutable results only; earlier pending labels historical.
 

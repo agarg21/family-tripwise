@@ -17,6 +17,7 @@ Seven destinations now have public guides, including Cancun and Orlando lodging 
 
 ## Starter Docs
 
+- [Read-only service-level childcare comparison](docs/plan/family-care-comparison.md): run `node tools/family-care-comparison.mjs docs/research/cancun-care-services-2026-10-02.json --format csv` for dated per-child/service rules, unknown care fees and retained room-price context; no network collection or public changes.
 - [Codex instructions](AGENTS.md)
 - [Project brief](docs/PROJECT_BRIEF.md)
 - [Semrush research summary](docs/research/semrush-family-travel-opportunity.md)
