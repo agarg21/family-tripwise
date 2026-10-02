@@ -1,5 +1,13 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-RES-083 care inclusion/billing
+
+Fermat `01a0fd65-465f-75a3-97a6-a1551df50363` cycle1PASS/noP0-P3:13carefocused/378network-free(11sockettests excluded)/1058scopedassertions/state0/80snapshots/localSEO31URLs34HTML0errors-fiveunchangedwarnings;590baseline592candidatehashes unchanged/183unrelatedroadmap identical. Mini inclusion separate from numerical fees/admission/parentpolicy; other3properties/prior sources/Petit/budgets preserved. Sources/push provenance operator-attributed, not independently live verified. Operator390full/native green. Exact9review-clean tools/docs-only push; no completequote/public/full076authority. Existing second action only; actual clock past start deadline.
+
+Operator13focused/390workingfull/state0/80snapshots/SEO0fiveprior/whitespace green; explicit3other-record/prior-source/Petit/budget/hash/date-arithmetic/null preservation pass. Numeric quote never invented or called blocked. Exact9to read-only review, source bodies operator-attributed.
+
+Nine paths registered before edits: official Cancun guide resolves Mini inclusion; offer terms billing language scoped by expired/relative eligibility, no numeric care fee or task-room quote. Source/inventory/test change and narrow receipt; native/different read-only review required, public/model/other records/prices/exclusions unchanged. Prior082exact7pushed0bde00f1fb9ed6ae6a733e60f986bd07d66c10e7/remoteSHA16:08:21UTC; GaussPASS/operator389full, no public/Pages.
+
 ## 2026-10-02 - FT-RES-082 London journey comparison
 
 Gauss `01a0fd57-d5e7-7460-871a-5bb671fd055a` cycle1PASS/noP0-P3:57focused/377network-free with11sockettests excluded/1028bounded evidence-scope-preservation assertions/state0/80snapshots/SEO31URL34HTML0errors-fivebaseline warnings;588baseline590candidatehashes unchanged, manifest matches,182unrelatedroadmap unchanged. Sources operator-attributed, no independent replay or production claim. Operator389full/native green. Exact7review-clean docs-only release, immutable results only.

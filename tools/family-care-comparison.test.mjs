@@ -72,6 +72,29 @@ test("different child inputs never repurpose historical room observations as tas
   assert.deepEqual(result.research_scenario.child_ages, [2, 7]);
 });
 
+test("Cancun Mini inclusion has its own source and never prices toddler care", () => {
+  const clubmed = record(screenCareInventory(pack, {}, date), "clubmed-cancun-care");
+  const mini = service(clubmed, 1, "mini");
+  assert.equal(mini.age_status, "within-published-band-not-admission");
+  assert.equal(mini.cost_status, "published-included-eligible-program");
+  assert.equal(mini.parent_presence, "supervised-program-parent-policy-not-established");
+  assert.equal(mini.fee_amount, null);
+  assert.equal(mini.registration, null);
+  assert.equal(mini.session_max_minutes, null);
+  assert.ok(mini.sources.some(source => source.id === "clubmed-inclusion" && source.source_scope.includes("not dated quote")));
+  assert.equal(service(clubmed, 0, "mini").age_status, "below-published-minimum");
+  assert.equal(service(clubmed, 0, "petit").cost_status, "extra-charge-numeric-fee-unknown");
+  assert.equal(clubmed.budget.care_total_amount, null);
+  const csv = careComparisonCsv(pack, {}, date);
+  const rows = csv.split("\n").filter(row => row.startsWith('"Club Med Cancun"') && row.includes('"Mini Club Med age band"'));
+  assert.equal(rows.length, 2);
+  for (const row of rows) {
+    assert.match(row, /published-included-eligible-program/);
+    assert.match(row, /what-to-know-about-all-inclusive-resorts-cancun/);
+    assert.match(row, /full-day\/full-stay billing applicability/);
+  }
+});
+
 test("weekly review status never renews evidence or discards dated price context", () => {
   const current = screenCareInventory(pack, {}, "2026-10-08");
   const due = screenCareInventory(pack, {}, "2026-10-09");

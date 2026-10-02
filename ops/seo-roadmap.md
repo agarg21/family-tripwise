@@ -2,6 +2,12 @@
 
 Last updated: 2026-10-02
 
+FT-RES-083 review-clean Fermat1PASS/noP0-P3,13focused/378network-free11excluded/1058assertions/native/hashscope green, operator390full. Exact9tools/docs-only release; no public/full076quote. Actual clock beyond new-action deadline, no third transaction starts.
+
+FT-RES-083 pre-review: Mini4-10source/inclusion correction flows through existing JSON/CSV; historical prices and other services untouched.13focused/390full/native/preservation green;9paths pending read-onlyPASS. Petit numeric price and exactpartyroom quote remain uncollected, not a technical blocker.
+
+Current FT-RES-083 under076: close verified Mini4-10inclusion unknown in maintained research/JSON-CSV, retain scoped offer billing conditions and unknown numeric fees/room totals. Nine paths registered before edits; native and different read-only review gate tools/docs-only push, not public ClubMed addition.082reviewed docs-only result pushed0bde00f/remoteSHA16:08:21UTC, original nightly prices intact.
+
 FT-RES-082 review-clean Gauss1PASS/noP0-P3;57focused/377network-free(11excluded)/1028assertions/native/hash-preservation, operator389full green. Exact7eligible docs-only push; no public/full077/firsthandroute completion.
 
 FT-RES-082 pre-review: dated four-request planner evidence answers proxy time tradeoff, not actual route suitability; Queen18minute/Limehouse55minute earliest return, conditional uncapped fare budget retained with null current cap/fullstay.389full/focused/native/exclusion checks green, exact seven paths pending independent read-only PASS before docs-only push.

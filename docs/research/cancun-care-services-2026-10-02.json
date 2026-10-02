@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "action": "FT-RES-080",
+  "action": "FT-RES-083",
   "checked_on": "2026-10-02",
   "evidence_class": "OFFICIAL_PROPERTY_FACT",
   "scope": "Research service inventory, not booking acceptance, safety/suitability assurance, complete childcare quote or public model update. Publication/effective dates unknown; null is unknown, not false or zero.",
@@ -9,6 +9,7 @@
     "finest": {"url": "https://www.finestresorts.com/cancun/finest-playa-mujeres/finest-for-kids/", "checked_on": "2026-10-02", "published_on": null, "surface": "Current official text", "source_scope": "Finest Playa Mujeres"},
     "clubmed-resort": {"url": "https://www.clubmed.us/r/cancun/y", "checked_on": "2026-10-02", "published_on": null, "surface": "Current official resort text; age headings and named Petit/Mini programs", "source_scope": "Club Med Cancun"},
     "clubmed-petit": {"url": "https://www.clubmed.us/l/kids-petit", "checked_on": "2026-10-02", "published_on": null, "surface": "Current brand program text/FAQ explicitly lists Cancun and extra cost varying by resort", "source_scope": "Brand program; numeric Cancun fee/session/admission terms not established"},
+    "clubmed-inclusion": {"url": "https://www.clubmed.us/l/what-to-know-about-all-inclusive-resorts-cancun", "checked_on": "2026-10-02", "published_on": null, "surface": "Official Cancun guide includes Mini4-10 in standard package, Petit2-3 extra cost; advance place reservation recommended", "source_scope": "Club Med Cancun published package inclusion, not dated quote/session admission"},
     "ziva": {"url": "https://www.resortsbyhyatt.com/ziva/ziva-cancun/all-inclusive-resort-activities", "checked_on": "2026-10-02", "published_on": null, "surface": "Current official KidZ Club included section", "source_scope": "Hyatt Ziva Cancun"},
     "grand": {"url": "https://thegrand.moonpalace.com/things-to-do/playroom", "checked_on": "2026-10-02", "published_on": null, "surface": "Rendered official body read with browser accessibility; text fetch returned only headings", "source_scope": "Moon Palace The Grand Cancun floor-specific rules"}
   },
@@ -34,11 +35,11 @@
       "existing_model_id": null,
       "services": [
         {"id": "petit", "name": "Petit Club Med", "source_ids": ["clubmed-resort", "clubmed-petit"], "min_age": 2, "max_age": 3, "parent_presence": "parents-away-described", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "extra-charge-numeric-fee-unknown", "fee_amount": null, "fee_currency": null, "fee_unit": null},
-        {"id": "mini", "name": "Mini Club Med age band", "source_ids": ["clubmed-resort"], "min_age": 4, "max_age": 10, "parent_presence": "not-established", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "service-inclusion-not-established-from-this-source", "fee_amount": null, "fee_currency": null, "fee_unit": null}
+        {"id": "mini", "name": "Mini Club Med age band", "source_ids": ["clubmed-resort", "clubmed-inclusion"], "min_age": 4, "max_age": 10, "parent_presence": "supervised-program-parent-policy-not-established", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "published-included-eligible-program", "fee_amount": null, "fee_currency": null, "fee_unit": null}
       ],
-      "task_result": "Age2 matches named additional-cost Petit; age7 matches resort4-10 band. Same90-minute simultaneous booking availability and care conditions are unconfirmed; generic evening-care examples are not imported as Cancun promises.",
+      "task_result": "Age2 matches additional-cost Petit; age7 matches published included Mini4-10. Same90-minute simultaneous booking availability and care conditions unconfirmed; general evening-care examples are not Cancun promises.",
       "budget": {"exact_task_room_nightly_amount": null, "currency": "USD", "room_price_status": "not-observed-for-this-task", "care_total_amount": null, "care_total_status": "additional-cost-unpriced", "basis": "No numeric resort-specific care rate/unit/tax/session quote or exact family room quote; advertised under4 accommodation offer is not free childcare."},
-      "missing": ["Current Petit per-child/day-or-session rate, tax, cancellation and minimum package", "Cancun admission/training/session and older-club inclusion", "Exact room/party/stay quote"],
+      "missing": ["Current Petit per-child/day-or-session rate, tax, cancellation and minimum package", "Cancun admission/training/session; older Mini inclusion published but acceptance unconfirmed", "Exact room/party/stay quote; offer-specific full-day/full-stay billing applicability, see cancun-care-billing-basis-2026-10-02.json"],
       "decision": "CANDIDATE comparison evidence only; not an added public hotel"
     },
     {
