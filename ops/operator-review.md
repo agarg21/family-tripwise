@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-OPS-009 reusable work modes
+
+Final cycle-one Wegener `01a0fd03-875e-72b0-90d5-c0998a06b8d3` PASS/no P0-P3: isolated 372 full tests, 36 focused policy/date/DST/scope assertions, state zero errors, 80 valid snapshots, local SEO 31 canonical/34 HTML/zero errors/five prior advisories and 583 files unchanged. Exact seven-path delta and prior completion backfills verified; normal defaults/current dated sprint unchanged. Operator 373 full/native/exclusion/saved-config parity green. Policy readiness, not actual activation/restoration/public delivery/learning; prior Git/scheduler provenance operator-attributed. Immutable results only; earlier pending labels historical.
+
+Pre-review: 373 working-tree native tests pass; state zero errors, 80 snapshots valid, local SEO zero errors/five prior advisories and whitespace clean. Focused profile/default/date-DST/cutoff/prior-item/eleven-exclusion preservation checks pass; saved scheduler, normal prompt and dated sprint byte-identical. Independent read-only review pending; no live activation/public delivery claimed.
+
+Registered exact seven paths before material edits under the new direct user request. Define recurring default and explicitly requested date-bounded full-day continuation, capture/verify exact normal restoration baseline, avoid nested overrides and restore-or-fail-closed before project work. Today's saved scheduler and dated sprint remain unchanged; no new automation or public/learning claim. Prior FT-RES-080 immutable completion backfills included; eleven unrelated dirty paths excluded. Focused policy/date/scope validation, full native QA and different independent read-only PASS required before docs/config-only push.
+
 ## 2026-10-02 - FT-RES-080 service-level care audit
+
+Immutable completion: exact seven reviewed paths pushed at `3af9863e5da59a265bb9534c6ee577169e9d3226`; fresh fetch/no divergence, sole outgoing range, exact staging, whitespace, three material-file snapshot parity and remote main SHA match verified at 14:20:57 UTC. Hume cycle-two PASS/native results unchanged; eleven exclusions preserved. Research/docs-only, no public correction or Pages wait. Four-state completion backfill stays local until the next substantive reviewed transaction; earlier pending labels are historical.
 
 Final cycle2Hume01a0fcf0-7455-7243-a112-0587d854974b PASS/noP0-P3: Finest843historyP2closed, originaldate/source/unknownbasis retained, exacttaskprice/caretotalsnull. Independent372full/23focused/273assertions/state0/80snapshots/SEO31zero5prior/582files unchanged. Operator373workingfull/native/11exclusionhash pass. Exact7paths review-clean docs-only, no publiccorrection/full076qualification/Pageswait; dynamic facts operator-attributed. Immutable result only, earlierpending labels historical.
 

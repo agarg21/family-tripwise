@@ -2,6 +2,12 @@
 
 Last updated: 2026-10-02
 
+FT-OPS-009 review-clean: Wegener cycle-one PASS/no P0-P3, 372 isolated full/36 focused/native/583-file preservation; operator 373 working full and saved-scheduler/normal-prompt/sprint/exclusion parity pass. Exact seven paths eligible docs/config-only push. No actual mode switch or public-site change in this transaction; immutable reviewer outputs only, earlier pending labels historical.
+
+Current FT-OPS-009: reusable recurring/full-day-on-request procedure, not another sprint activation. Exact seven registered paths; normal defaults and current October2 saved scheduler unchanged, no additional automation. Complete focused/full QA, independent read-only review and docs/config-only push. Prior FT-RES-080 immutable completion backfills included; public work and all evidence/security/spending/publication gates unchanged. Details: `docs/plan/operator-work-modes.md`.
+
+FT-RES-080 completed docs-only at `3af9863e5da59a265bb9534c6ee577169e9d3226`: exact seven reviewed paths, final fetch/no divergence, sole outgoing range, whitespace, material snapshot parity, push and remote main match verified at 14:20:57 UTC. Hume cycle-two PASS/native QA and eleven exclusions unchanged. Public corrections remain unshipped; no Pages wait. Immutable four-state completion backfill retained for the next substantive transaction, not another metadata commit. Third/final transaction this run complete.
+
 FT-RES-080 review-clean cycle2HumePASS/noP0-P3/372full/23focused/273assertions/native/582preservation; Finest843startinghistory retained andP2closed. Operator373workingfull/native/11exclusionsgreen. Exact7paths eligible docs-onlypush; qualified existing-field corrections stillunshipped andfull076cost/demandgates open. Immutable outputs only; earlierpending labels historical.
 
 FT-RES-080 cycle1P2 fixed before release: Finest historicalfrom843USD/night/Sept27/unknownparty-date-taxfee nowretained rather thanincorrectlynull; exacttaskbudget remainsunknown. Cycle2Hume re-reviewrequired; no public/model changes, originalprices preserved.

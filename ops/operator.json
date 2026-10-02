@@ -16,6 +16,35 @@
   },
   "maximum_substantive_actions_per_run": 1,
   "maximum_substantive_actions_per_day": 2,
+  "execution_modes": {
+    "policy": "docs/plan/operator-work-modes.md",
+    "default_mode": "recurring",
+    "same_automation_only": true,
+    "same_thread_only": true,
+    "single_writer": true,
+    "recurring": {
+      "run_hours": [5, 13],
+      "maximum_substantive_actions_per_run": 1,
+      "maximum_substantive_actions_per_day": 2
+    },
+    "full_day": {
+      "activation": "fresh explicit user request for a dated window; never credits, generic encouragement or heartbeat authority alone",
+      "default_window": "request's actual America/New_York calendar day, ending at next local midnight; global cycle cutoff always earlier when applicable",
+      "cadence": "hourly-existing-heartbeat",
+      "maximum_substantive_actions_per_run": 3,
+      "new_action_start_budget_minutes": 45,
+      "daily_cap_override": "only within the explicitly registered window, no shipping quota",
+      "sequential_only": true,
+      "registration_and_independent_review_required": true,
+      "saved_scheduler_verification_required": true,
+      "restoration": "exact captured normal baseline on first expired-window wakeup or explicit early-stop request; verify then return without project work",
+      "unconfirmed_restoration": "no project work, report narrow scheduler dependency",
+      "mode_policy_update_restarts_active_sprint": false
+    },
+    "evidence_review_security_spending_publication_gates_unchanged": true,
+    "global_cycle_cutoff_unchanged": true,
+    "guaranteed_uninterrupted_runtime": false
+  },
   "temporary_continuous_work": {
     "action_id": "FT-OPS-008",
     "authorized_on": "2026-10-02",
