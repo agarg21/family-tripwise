@@ -1,0 +1,29 @@
+[
+  {
+    "schema_version": 2,
+    "action": "FT-RES-079",
+    "checked_on": "2026-10-02",
+    "source_url": "https://www.marlin.com/london-serviced-apartments/limehouse-serviced-apartments/rooms/two-bedroom-apartment/",
+    "source_surface": "Official Limehouse Two Bedroom Apartment date/guest search to reservations.marlin.com; current guest bands and two public rate-detail panels inspected; session parameters not retained",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "marlin-limehouse-two-bedroom",
+    "category": "Two Bedroom Apartment",
+    "booking_category": "Two Bedroom Apartment: Apartment with 2 King size beds and 1 Sofa Bed",
+    "configuration_basis": "Selected result explicitly lists two king beds and one sofa bed, Sleeps6 and kitchen. Official category base4 extends to6 with optional paid double sofa; displayed sofa-specific category not final checkout/booking acceptance. Size badge78-92m2 conflicts with description60-70m2, unresolved. Alternative 2 Bedroom Family Apartment not selected or priced.",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {"adults": 2, "child_ages": [4, 8, 12, 15]},
+    "engine_party": {"adults": 3, "child_ages": [4, 8, 12], "adult_from_age": 13, "child_age_from": 0, "child_age_to": 12, "age_input_mode": "provider-age-band-counts"},
+    "rates": [
+      {"plan": "Non Refundable Saver Rate", "eligibility": "public", "stay_amount": 1543.50, "meals": "Meal inclusion not established; apartment kitchen listed", "cancellation": "Pay in full at least seven days in advance; full non-refundable payment at booking; no changes or cancellation, 100% charge"},
+      {"plan": "Book with Confidence", "eligibility": "public", "stay_amount": 1715.00, "meals": "Meal inclusion not established; apartment kitchen listed", "cancellation": "Cancel by23:00 day before arrival; later one night's charge including VAT; valid card guarantee, chip-and-PIN payment on arrival"}
+    ],
+    "fee_basis": "Both public cards/details state including taxes and fees. Saver1286.25GBP accommodation plus257.25GBP INC20PC VAT equals1543.50GBP. Flexible1429.17GBP accommodation plus285.83GBP INC20PC VAT equals1715GBP. Optional services, meals, final checkout and any extras beyond sofa-specific displayed category unknown. Refundable authorisation is separate from stay amount, no invented sofa fee added.",
+    "deposit_basis": "Saver full non-refundable payment required at booking, not an additional stay fee. Both detail panels describe PIN-verified card authorisation at check-in: other London locations GBP200 midweek/GBP500 weekend; exact Sunday-Friday applied hold unknown. Flexible requires valid card guarantee, chip-and-PIN payment on arrival and possible extras guarantee.",
+    "limitation": "Actual synthetic two-adult children4/8/12/15 task; current provider labels adults13+ and children0-12, engine3adults/3children. Individual ages not submitted; younger saved ages are mapping provenance only. Public non-member plans retained; membership and third-party price overlay excluded. No rate BookNow/Select/cart/hold/account/contact/payment; cart0. One dated stay-plan span, not seasonal range, current guaranteed availability, complete final quote or suitability/safety/route verdict. Exact category source publication/effective date unknown; optional twins not guaranteed and room-size conflict unresolved. Original QueenStreet pack/sample dates not refreshed."
+  }
+]

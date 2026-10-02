@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-079",
+  "destination": "London UK",
+  "checked_on": "2026-10-02",
+  "refresh_days": 30,
+  "evidence_scope": "Two-option research task only; source-text capacity and separate dated booking samples, not complete hotel evidence, routes, suitability, booking acceptance or London publication approval.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [4, 8, 12, 15],
+    "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"},
+    "preferences": ["separate bedrooms", "kitchen", "midday rest with location tradeoffs unresolved"],
+    "budget": null
+  },
+  "sources": {
+    "queen-street": {
+      "url": "https://www.marlin.com/london-serviced-apartments/london-city-queen-street/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "limehouse": {
+      "url": "https://www.marlin.com/london-serviced-apartments/limehouse-serviced-apartments/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "marlin-queen-street-two-bedroom",
+      "hotel": "Marlin London City Queen Street",
+      "category": "Two Bedroom Apartment",
+      "source_id": "queen-street",
+      "configurations": [
+        {"maximum": 4, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Published category occupancy/conditions"},
+        {"maximum": 6, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": ["paid double sofa bed included in reservation"], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Published category occupancy/conditions"}
+      ],
+      "sleeping_setup": "Two kings in separate bedrooms; optional double sofa in living area.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {"currency": "GBP", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["exact category/configuration rate", "party and child ages", "stay dates/rate plan", "tax and mandatory fee total"]},
+      "checks": ["Extra sofa charge unknown; category rate without sofa is not five-person cost."],
+      "conflicts": []
+    },
+    {
+      "id": "marlin-limehouse-two-bedroom",
+      "hotel": "Marlin Apartments Commercial Road - Limehouse",
+      "category": "Two Bedroom Apartment",
+      "source_id": "limehouse",
+      "configurations": [
+        {"maximum": 4, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Published category occupancy/conditions"},
+        {"maximum": 6, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": ["paid double sofa bed included in reservation"], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Published category occupancy/conditions"}
+      ],
+      "sleeping_setup": "Two king bedrooms; second bedroom twins on request, not guaranteed; optional paid double sofa in living area. Two bathrooms listed.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {"currency": "GBP", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Separate exact-task price sample required; no seasonal range in capacity record"]},
+      "checks": ["Confirm sofa-specific booked category, child sleeping allocation and any optional extra charges; no final checkout inspected.", "Location and midday-return friction not evaluated; lower displayed price does not settle value or rest convenience."],
+      "conflicts": ["Booking category size badge78-92m2 versus description60-70m2; size unresolved, not used to rank space or infer bedding."]
+    }
+  ],
+  "offer_observations": []
+}

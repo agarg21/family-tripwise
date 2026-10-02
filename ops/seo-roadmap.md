@@ -2,6 +2,14 @@
 
 Last updated: 2026-10-02
 
+FT-RES-079 review-clean: Avicenna1PASS/noP0-P3/372full/53focused/162additional/native/580filepreservation; operator373workingfull/native/11exclusionhash green. Exact8paths eligible docs-only push; second comparable budget gate only, no public change or full077/URLapproval. Immutable outputs only, earlier pending labels historical.
+
+FT-RES-079 pre-review: two exact-task accommodation choices retained,53focused/373workingfull/native/newpack-sample/task/context/history/immutability/11exclusionhash and whitespace green. Exact8paths pending independent read-only PASS, docs-only push; full077 maintainedreview/rest/controlledoverlap/URL gates unchanged.
+
+Current FT-RES-079 under077: complete second same-city/same-six-party/stay budget comparison from Limehouse official capacity and public plans; exact8paths registered before edits. Separate two-option pack/sample, unchanged original evidence, tax/payment/cancellation/hold and size conflict explicit. Native focused/full and different read-only PASS then docs-only push; no new London URL or complete077 qualification. Next complete maintained review/conflict/rest corpus and controlledUSoverlap, or independent076work after this bounded gate.
+
+FT-OPS-008 completed docs/config-only at79e71aff486431ba3b120a138c657d836d4de42c: exact8reviewedpaths/finalfetch/no divergence/complete sole outgoing range/whitespace/push/remote main SHA match. Peirce1PASS/native QA and verified saved same-heartbeat hourly continuation unchanged; no public delivery/Pages wait/newlearningunit. Eleven exclusions preserved; immutable four-state backfill local until next substantive transaction, earlier pending labels historical.
+
 FT-OPS-008 review/application verified: Peirce1PASS/noP0-P3/372isolated/native/177priorroadmap/577files; operator373workingfull/default/suffix/date/scope/11exclusionhash pass. Existing heartbeat update succeeded13:37:01Z; saved reviewed prompt/hourly/globalend/originalidentity/thread/status/notification verified. Exact8paths eligible docs/config-only push; today-only date guard and automatic restoration preserved. No public improvement/learning or new scheduler; earlier pending labels historical.
 
 Current direct-user FT-OPS-008: enable only today's hourly same-thread/same-heartbeat sprint with sequential reviewed work, up to3transactions/run and45minute new-start budget, ending midnightEastern. Eight paths registered before edits; defaults1/run2/day and all evidence/spending/review/security/URL gates remain. First post-midnight wakeup restores original cadence/prompt and returns; failure blocks project work. Independent PASS and saved-configuration verification gate activation; no new scheduler, public change or learning unit. Next backlog077 second exact-six-party accommodation, then076 or verified existing-page gap; Chicago stays held.

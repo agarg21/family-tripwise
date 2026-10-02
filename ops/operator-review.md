@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-RES-079 second six-person option
+
+Final Avicenna01a0fce1-fa67-7c81-ad09-22015fff3796 cycle1PASS/noP0-P3:372full/53focused/162independent schema-task-CSV-arithmetic-exclusion-mismatch-history-future-sourceparity-immutability assertions/state0/80snapshots/SEO31zeroerrors-fiveprior/580files preserved. No originalrepo/Git/browser/paidcalls/writes/deniedpreviewretry; dynamic facts/archive-Git-release provenance operator-attributed. Operator373workingfull/native/11exclusions green. Exact8paths eligible docs-only push, not full077 qualification or public delivery. Immutable output only; earlier pending checkpoints historical.
+
+Operator pre-review53focused/373workingfull/state0/80publicsnapshots/localSEO31zeroerrors-fiveprior/whitespace pass. Newpack/sample schema, exacttask rates/VAT, CSV payment/hold/conflict/date context, wrongparty/date/future/historical controls, originalQueenStreetrecord/source equality and11exclusionhash preservation pass. Different independent read-only review pending; dynamic browser facts operator-attributed, no public delivery.
+
+Exact8paths registered before edits in current-cycle/roadmap. Current official Limehouse category and two public-rate details are operator evidence; actual six-person party mapped to provider age-band counts, no individual ages submitted or booking action. Keep two-option dated budget separate from original six-category/five-person packs; source size conflict, paidsofa, VAT/payment/cancellation/hold and meal/finalquote unknowns retained. Focused/full native QA and different independent read-only PASS required before docs-only push. OPS008 four-state mechanical completion backfill included; all11excluded paths/public/pricehistory/scheduler invariant.
+
 ## 2026-10-02 - FT-OPS-008 today-only continuous work
+
+Immutable completion: exact8reviewedpaths pushed79e71aff486431ba3b120a138c657d836d4de42c; finalfetch/no divergence/complete sole outgoing range/whitespace and remote main SHA match. Peirce1PASS/native QA/saved scheduler verification unchanged. No public page change or Pages wait; eleven excluded dirty paths preserved. Four-state completion backfill stays local for next substantive transaction, no metadata-onlycommit; earlier pending labels historical.
 
 Final Peirce01a0fcd2-29fa-7991-b357-e3a1e6758311 cycle1PASS/noP0-P3:372full/native/state0/80snapshots/localSEO0errors-fiveprior/177priorroadmap/four078backfills/577snapshotfiles preserved. Date/DST/cutoff/sequentialbudget/restoration/default/suffix/noauthorityexpansion verified; scheduler/Git/heldworkingtree/production not independent. Operator373workingfull/focusedparity/datefixtures/scope/11exclusionhash pass. Predeclared app step succeeded at13:37:01Z: original heartbeat updated, saved exact reviewed prompt/hourly/globalend/id/name/kind/thread/status/notification/keyset verified, normal restore suffix exact. Eight paths eligible docs/config-only push, no public/learning claim or Pages wait. Immutable results only; earlier pending checkpoints historical.
 
