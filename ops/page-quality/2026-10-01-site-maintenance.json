@@ -1,0 +1,905 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-01",
+  "mode": "offline-maintenance-coverage",
+  "automatic_fact_renewal": false,
+  "automatic_publication": false,
+  "summary": {
+    "canonical_pages": 31,
+    "travel_pages": 28,
+    "utility_pages": 3,
+    "unclassified_pages": 0,
+    "contract_pages": {
+      "hotel": 7,
+      "activity-logistics": 2,
+      "activity-cards": 3,
+      "utility": 3,
+      "stay": 5,
+      "itinerary": 5,
+      "teen": 5,
+      "toddler": 1
+    },
+    "hotel_price_basis_gaps": 54,
+    "hotel_due_price_records": 56,
+    "activity_card_atomic_source_gaps": 333,
+    "planning_unmapped_decision_fields": 1512,
+    "planning_missing_page_source_notes": 4
+  },
+  "pages": [
+    {
+      "url": "https://familytripwise.com/",
+      "contract": "utility",
+      "applicability": "travel-decision-records-not-applicable"
+    },
+    {
+      "url": "https://familytripwise.com/about.html",
+      "contract": "utility",
+      "applicability": "travel-decision-records-not-applicable"
+    },
+    {
+      "url": "https://familytripwise.com/contributors/miles-rowan.html",
+      "contract": "utility",
+      "applicability": "travel-decision-records-not-applicable"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "contract": "activity-cards",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/chicago-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+      "contract": "activity-cards",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "contract": "activity-logistics",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "contract": "activity-logistics",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+      "contract": "activity-cards",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/chicago-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+      "contract": "toddler",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    }
+  ],
+  "contract_summaries": {
+    "hotel": {
+      "pages": 7,
+      "hotels": 65,
+      "fields": 390,
+      "review_tasks": 386,
+      "conflicts": 13,
+      "price_gaps": 3,
+      "due_price_records": 56,
+      "unstructured_price_basis": 54,
+      "source_mapped_fields": 240
+    },
+    "activity": {
+      "mapped_pages": 2,
+      "attractions": 24,
+      "fields": 120,
+      "unpriced_exact_visit_budgets": 24,
+      "unmapped_activity_pages": 4,
+      "unmapped_fields": 24
+    },
+    "cards": {
+      "retained_pages": 3,
+      "attractions": 37,
+      "fields": 333,
+      "atomic_source_gaps": 333,
+      "unpriced_exact_visit_budgets": 37
+    },
+    "planning": {
+      "pages": 16,
+      "decision_records": 338,
+      "unmapped_decision_fields": 1512,
+      "missing_page_source_notes": 4
+    }
+  },
+  "planning_pages": [
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 14,
+      "unmapped_decision_fields": 58,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 4,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 0,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-22",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 71,
+        "due_on": "2026-08-21"
+      },
+      "source_inventory_count": 10,
+      "decision_records": 16,
+      "unmapped_decision_fields": 57,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 6
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 67,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 8,
+      "decision_records": 16,
+      "unmapped_decision_fields": 62,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 70,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 12,
+      "decision_records": 16,
+      "unmapped_decision_fields": 57,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 6
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 67,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 13,
+      "decision_records": 16,
+      "unmapped_decision_fields": 62,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 17,
+      "unmapped_decision_fields": 68,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 6,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 70,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 11,
+      "decision_records": 24,
+      "unmapped_decision_fields": 90,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        },
+        {
+          "name": "base-handoff",
+          "records": 3,
+          "fields_per_record": 3
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 67,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 13,
+      "decision_records": 21,
+      "unmapped_decision_fields": 66,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/chicago-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 70,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 15,
+      "decision_records": 21,
+      "unmapped_decision_fields": 81,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-27",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 66,
+        "due_on": "2026-08-26"
+      },
+      "source_inventory_count": 17,
+      "decision_records": 21,
+      "unmapped_decision_fields": 66,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 22,
+      "unmapped_decision_fields": 138,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 6,
+          "fields_per_record": 11
+        },
+        {
+          "name": "quick",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 6,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 2,
+          "fields_per_record": 2
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-22",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 71,
+        "due_on": "2026-08-21"
+      },
+      "source_inventory_count": 13,
+      "decision_records": 28,
+      "unmapped_decision_fields": 166,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 8,
+          "fields_per_record": 11
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 67,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 22,
+      "decision_records": 30,
+      "unmapped_decision_fields": 149,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 10,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 70,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 18,
+      "decision_records": 27,
+      "unmapped_decision_fields": 126,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 8,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 4,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-27",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 66,
+        "due_on": "2026-08-26"
+      },
+      "source_inventory_count": 22,
+      "decision_records": 30,
+      "unmapped_decision_fields": 149,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 10,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+      "type": "toddler",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 19,
+      "unmapped_decision_fields": 117,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 11
+        },
+        {
+          "name": "quick",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 2,
+          "fields_per_record": 2
+        },
+        {
+          "name": "planning-rules",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    }
+  ],
+  "review_priorities": [
+    "Reconcile current source conflicts and expired operational notices before aesthetic edits.",
+    "Retain approximate nightly bands and their basis; research missing/stale room-party-date-fee observations first.",
+    "Use source diffs only to queue named claim checks; never renew observations from hashes or retrieval success.",
+    "Map age, access, weather and reset constraints without promoting them to safety or firsthand assurances."
+  ],
+  "limitations": [
+    "Framework coverage is not atomic fact completeness or a fresh-publication certificate.",
+    "Utility pages have an explicit non-travel classification, not invented destination records.",
+    "The compact report references existing native adapters; run their detailed reports to inspect retained values and tasks.",
+    "No public page, estimate, observation date or URL-specific measurement window is changed by this command.",
+    "Weekly stability requires the next actual weekly run and claim reconciliation, not a same-day fixture or repeat."
+  ]
+}

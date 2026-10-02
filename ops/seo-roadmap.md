@@ -2,6 +2,14 @@
 
 Last updated: 2026-10-01
 
+FT-STD-007 final consensus: Newton cycle-three PASS/noP0-P3,368isolatedfull/11focused/15malformedzero-requestfixtures/native/immutablebaseline/571filepreservation; operator369workingfull/native pass. Exact13paths ready tools/docs-only push; all-page framework coverage, not renewed facts or proven weekly stability. Earlier pending checkpoints historical.
+
+FT-STD-007 implementation checkpoint: all31existing canonical URLs classified,16remaining decision models/1512unmapped fields/fourunknown page-source notes; one offline/opt-in weekly runner. Sevenfocused/full365workingtree/native checks pass; different read-only review required before tools/docs-only push. Existing prices/dates/54price-basis gaps/windows and eleven exclusions preserved. Latest fresh API orientation `ops/gsc-snapshots/2026-10-01.json` through finalizedSeptember29:1332impressions11clicks47.66property average, not a query/CTR diagnosis. Framework coverage is not fresh facts or automated exact-party prices; live non-city research next.
+
+Current direct-user decision FT-STD-007: finish all existing page-type maintenance contracts and one weekly runner, not merely another activity checkpoint. Thirteen exact paths registered before edits. Framework done criteria:31canonical URLs accounted for, strict type-specific schemas/stable IDs/unknown provenance, all original value/price/date parity, combined queues, immutable opt-in existing source audit, focused/full native and independent PASS. Factual freshness and 54 legacy price-basis research gaps remain separate evidence work, not grounds to call old quotes current. No public change/new automation/Chicago bypass. Then separately deliver non-city demand research from existing numeric evidence and current result types.
+
+FT-STD-006 completed tools/docs-only: exact nine reviewed paths pushed114ae9e6ce1996848d15ff67c2e9d580d6a5716e after fresh fetch/no divergence/complete sole-range checks;HEAD/origin0/0. No public change/Pages wait/new learning unit, Chicago held work and eleven exclusions preserved. Existing October7 combined maintenance step unchanged. Immutable completion stays local in four already-reviewed state paths for the next substantive transaction; no metadata-only commit. Prior pending/ready checkpoints historical.
+
 FT-STD-006 final consensus: Hubble cycle-two PASS/noP0-P3,15focused/336network-free-subset/4409additional/native/preservation confirms all nine final paths and truthful source-collection/health distinction. Ampere357isolated/operator358working full remain separately recorded. Tools/docs-only push eligible, no public change/Pages wait; pending checkpoints below historical. Immutable reviewer result only.
 
 FT-STD-006 current release gate: independent cycle-two confirmation pending after the narrow no-source-collection/allowed own-site health wording correction. No staging/push yet; code/report unchanged. Cycle-one ready checkpoints below are historical.

@@ -1,5 +1,21 @@
 # Weekly Evidence Audit
 
+## Unified Weekly Entry Point / FT-STD-007
+
+October1: `tools/site-maintenance.mjs` now validates all 31 canonical URLs against explicit hotel, activity, stay-area, itinerary, teen/toddler and utility contracts before any collection. The offline default makes no network request. It preserves every retained value and exposes research gaps; three utility pages explicitly have no travel-decision record requirement. Full native QA and independent read-only review are release gates, not implied by these implementation notes.
+
+Use this one command at the existing October7 weekly gate, with the **latest** retained audit as previous and three distinct, newly registered outputs:
+
+```sh
+node tools/site-maintenance.mjs --collect --limit 500 --date 2026-10-07 --previous ops/evidence-audits/2026-09-30-repeat.json --output ops/page-quality/2026-10-07-site-maintenance.json --audit-output ops/evidence-audits/2026-10-07.json --review-output ops/evidence-audits/2026-10-07-review.json
+```
+
+The runner performs offline contract/coverage checks, the existing allowlisted bounded source audit, and its denial-preserving comparison queue. It validates the prior audit's schema, timestamp, unique identities, public source records and required-source coverage before collection, checks all output paths before requests, rejects unknown/duplicate/incomplete flags and overlapping outputs, and writes exclusively without replacing evidence. Collection is opt-in; an offline `--output` is just a local report. Partial limits stay explicit deferred evidence, not a full fresh scan. Network access remains only the existing public-source workflow; no paid API, login, source-body retention or browser bypass. Existing HTTP401/403/challenge denials retain their original attempt dates. An interrupted collection that did not save its result is a narrow dependency: record the failed run and reconcile access/attempt state before any retry rather than claiming completed comparison.
+
+All-page **type coverage** is now implemented, not full atomic provenance: source diffs still consume the existing critical-watch/shared-hotel registry and page-level source inventory. New planning/card records expose unmapped field sources and are not relabeled source-linked. Collection cannot renew factual dates, publish pages or establish family-room rates. Approximate nightly prices are retained even when live quotes are unavailable. October7 remains the first real weekly run; automatic exact-party pricing and long-term collection reliability are separate, unproved capabilities. The existing operator owns this check; no recurring automation is added or changed.
+
+Earlier collection checkpoints and component commands below remain useful history; the unified command replaces the multi-command operator entry point, not its evidence or human gates.
+
 Action FT-ACC-001; source date September30,2026. This is collection infrastructure, not a mass rewrite or a new scheduler.
 
 FT-MAINT-009 final gate September30: Bohr cycle-three independent read-only PASS/noP0-P3, focused17/state0/79snapshots/SEO31zeroerrorsfivepriorwarnings and immutability/scope controls independently verified; operator full284 passed. All three reviewP2s closed. The existing operator is weekly-triage-ready, first dueOctober7. Tools/docs push remains; no public update or current-rate verification claimed.
