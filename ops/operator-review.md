@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-IMP-052 exact family task controls
+
+Final cycle1Kierkegaard01a0fb06-1bd8-7fe2-a3a9-d455198cafad PASS/noP0-P3:53focused/372isolatedfull/64independent atomic/default/API/CLI/exact-party/budget-basis fixtures/state0/80snapshots/localSEO0errors-fiveprior;574snapshot files preserved. Prior075 completion backfills match baseline; no originalrepo/Git access/write. October2 source availability/policy not independently reverified. Operator53focused/373workingfull/native/11excludedhashes/unrelatedroadmap records/whitespace pass. Exact nine paths eligible tools/docs-only push; no public publication or release confirmation yet. Immutable output only; earlier pending statements historical.
+
+Operator pre-review53focused/373workingtreefull/state0/80snapshots/localSEO31zero5prior/whitespace pass. All original evidence and public models unchanged; exact nine-path independent read-only review next. No production change or Pages wait.
+
+Nine paths registered in current-cycle before substantive edits. Existing CLI forced pack.scenario despite task-capable validated API; October2 Mitre/Marlin/Bloomsbury source-body audit supports bounded five/six/infant control test. Atomic adults/individual child ages/arrival/departure options; matching prices preserved, mismatches blank, original source files/dates unchanged. Focused53 tests pass; full/native, scope preservation and different read-only review pending. Tools/docs-only, not public delivery/new URL/booking or complete FT-RES-077 qualification. Retain separate Chicago hold and11excluded paths; previous075 completion backfills included.
+
 ## 2026-10-01 - FT-RES-075 non-city demand qualification
+
+Immutable completion: exact7reviewedpaths pushed74b98ba0d1cad6b728656a1921ddd738f5456152 after finalfetch/no divergence/sole outgoingrange/scope/whitespace and research-ledger byteparity to reviewed snapshot;HEADorigin0/0. LagrangePASS/native results unchanged. Docs-only, no public change/Pages wait;11excludedpaths preserved. This4path immutable release backfill stays local until next substantive reviewed transaction, not another metadata-onlycommit.
 
 Final cycle1Lagrange01a0fa38-3e54-7672-bafc-25bd51a46de5 PASS/noP0-P3:368isolatedfull/state0/80snapshots/localSEO31zero5prior/metric-date-history/source-reference/privacy/candidate-gate checks,573snapshotfiles preserved after declared refresh. QA001/STD007 identities inspected after correction and matched retained history; exact baseline-to-overlay diff/byteexact QA001 restoration operator-attributed. Operator369workingfull/focusedparity/QA001exactrestoration/unrelatedrecord-and11excludedhash/state0/80snapshots/localSEO31zero5prior/whitespace pass. No originalrepo/Git/writes/prohibitedretry/externalmutation by reviewer, no production/newURLapproval. Exact7paths eligible docs-only push; immutable reviewer/QA output only.
 

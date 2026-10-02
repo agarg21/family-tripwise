@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-01
+Last updated: 2026-10-02
+
+## LRN-088 / October2 / FT-IMP-052
+
+Family decision: screen two adults/four children4,8,12,15 and an infant1,4,8 control for Nov8-13 without rewriting room evidence or importing five-person prices. Hypothesis rejected: scenario-bound export CLI is sufficient for shared5/6 qualification. October2 OFFICIAL_PROPERTY_FACT source-text audit of Mitre/Marlin/Bloomsbury preserves five-person limit, paid-sofa six-person condition and infant-only fifth place; publication/effective dates unknown. Existing six-category pack and all original prices/dates unchanged. IMPLEMENT atomic exact-party/stay controls with CLI/API proxy fixtures; same-task nightly amounts and full basis retained, changed party/ages/stay unpriced, invalid partial tasks rejected. Confidence high in source-condition and deterministic parity, medium in researcher usefulness, unknown booking/user/SEO. Reusable lesson: parameterize tasks rather than evidence and keep each budget tied to exact category/party/stay. Next falsification: changed capacity/fee/age rules, mismatched quote surviving export, accepted partial task or no information gain against competing task. Evidence/gates: `docs/research/family-room-party-controls-2026-10-02.md`. Three current bodies only, not full-corpus renewal or desktop/mobile user testing; full077 quote/overlap/publication gates remain. Independent review/release still required.
 
 ## LRN-087 / October1 / FT-RES-075
 

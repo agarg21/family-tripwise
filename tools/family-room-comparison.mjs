@@ -62,12 +62,13 @@ async function researchOutputPath(output) {
   return path;
 }
 
-async function main() {
-  const args = process.argv.slice(2);
+export function parseRoomComparisonOptions(input) {
+  const args = [...input];
   const packPath = args.shift();
   if (!packPath || packPath.startsWith("--")) throw new Error("Provide a room configuration JSON path");
   let date = currentEasternDate(), output, dateSet = false, pricesSet = false;
   const pricePaths = [];
+  const taskOptions = new Map();
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--date" && !dateSet && args[i + 1] && !args[i + 1].startsWith("--")) {
       date = args[++i]; dateSet = true;
@@ -76,8 +77,31 @@ async function main() {
     } else if (args[i] === "--prices" && !pricesSet && args[i + 1] && !args[i + 1].startsWith("--")) {
       pricesSet = true;
       while (args[i + 1] && !args[i + 1].startsWith("--")) pricePaths.push(args[++i]);
+    } else if (["--adults", "--child-ages", "--arrival", "--departure"].includes(args[i]) &&
+        !taskOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
+      taskOptions.set(args[i], args[++i]);
     } else throw new Error(`Unknown, duplicate or incomplete comparison option: ${args[i]}`);
   }
+  if (!validDate(date)) throw new Error("Invalid screening date");
+  let task = null;
+  if (taskOptions.size) {
+    if (taskOptions.size !== 4) throw new Error("Supply adults, child ages, arrival and departure together");
+    const integer = value => /^\d+$/.test(value) && Number.isSafeInteger(Number(value));
+    const adults = taskOptions.get("--adults");
+    const ageText = taskOptions.get("--child-ages");
+    const ages = ageText === "none" ? [] : ageText.split(",");
+    if (!integer(adults) || Number(adults) < 1 ||
+        !ages.every(age => integer(age) && Number(age) <= 17)) throw new Error("Invalid adults or individual child ages (0-17; none for no children)");
+    const arrival = taskOptions.get("--arrival"), departure = taskOptions.get("--departure");
+    if (!validDate(arrival) || !validDate(departure) || departure <= arrival)
+      throw new Error("Invalid exact arrival/departure task");
+    task = { adults: Number(adults), child_ages: ages.map(Number), stay: { arrival, departure } };
+  }
+  return { packPath, date, output, pricePaths, task };
+}
+
+async function main() {
+  const { packPath, date, output, pricePaths, task } = parseRoomComparisonOptions(process.argv.slice(2));
   const pack = JSON.parse(await readFile(packPath, "utf8"));
   const prices = [];
   for (const path of pricePaths) {
@@ -85,12 +109,14 @@ async function main() {
     if (!Array.isArray(observations)) throw new Error("Each price file must contain an observation array");
     prices.push(...observations);
   }
-  const csv = roomComparisonCsv(pack, pack.scenario, date, prices);
+  const party = task ?? pack.scenario;
+  const csv = roomComparisonCsv(pack, party, date, prices);
   if (output) {
     const path = await researchOutputPath(output);
     await mkdir(dirname(path), { recursive: true });
     await writeFile(await researchOutputPath(path), csv, { flag: "wx" });
-    console.log(JSON.stringify({ as_of: date, categories: pack.records.length, output, public_changes: false }));
+    console.log(JSON.stringify({ as_of: date, categories: pack.records.length, output, public_changes: false,
+      task: { adults: party.adults, child_ages: party.child_ages, stay: party.stay } }));
   } else process.stdout.write(csv);
 }
 

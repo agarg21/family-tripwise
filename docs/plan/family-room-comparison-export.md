@@ -10,6 +10,14 @@ Each row retains the destination/category, capacity screen and conditions, sleep
 
 ## Reuse
 
+October2 FT-IMP-052 adds an explicit task override without changing the evidence pack. Supply all four controls together: `--adults`, `--child-ages` (comma-separated individual ages0-17, or `none`), `--arrival` and `--departure`. Without them, the original pack scenario remains the default. Partial/duplicate controls, invalid dates, noninteger adults/ages and ages above17 fail before output. Age order does not affect matching; repeated ages represent different children, not duplicates to remove. Adults must be a positive safe integer. This changes the research task only, not an observed booking party or source date.
+
+```bash
+node tools/family-room-comparison.mjs docs/research/london-room-configurations-2026-09-30.json --date 2026-10-02 --adults 2 --child-ages 4,8,12,15 --arrival 2026-11-08 --departure 2026-11-13 --prices docs/research/london-mitre-price-observation-2026-09-30.json docs/research/london-marlin-price-observation-2026-09-30.json docs/research/london-montague-price-observation-2026-09-30.json --output /tmp/family-tripwise-london-six-2026-10-02.csv
+```
+
+The six-person task retains six capacity/gap rows but cannot inherit the five-person observations. Approximate nightly values remain available for a matching party and stay, with their original currency/unit/plan/age-input/tax/fee/deposit/date context. A changed task produces blank numeric price cells rather than zero or an extrapolated per-person amount. Saved checkpoint summaries include the requested party and stay. No new price collection, public URL or destination approval is implied. Current qualification and next gates: `docs/research/family-room-party-controls-2026-10-02.md`.
+
 ```bash
 node tools/family-room-comparison.mjs docs/research/washington-dc-room-configurations-2026-09-30.json --date 2026-09-30 --prices docs/research/washington-dc-embassy-price-observation-2026-09-30.json docs/research/washington-dc-homewood-price-observation-2026-09-30.json docs/research/washington-dc-residence-price-observation-2026-09-30.json --output /tmp/family-tripwise-dc-2026-09-30.csv
 node tools/family-room-comparison.mjs docs/research/london-room-configurations-2026-09-30.json --date 2026-09-30 --prices docs/research/london-mitre-price-observation-2026-09-30.json docs/research/london-marlin-price-observation-2026-09-30.json docs/research/london-montague-price-observation-2026-09-30.json --output /tmp/family-tripwise-london-2026-09-30.csv

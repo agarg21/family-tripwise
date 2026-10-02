@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
-import { comparisonHeadings, roomComparisonCsv } from "./family-room-comparison.mjs";
+import { comparisonHeadings, parseRoomComparisonOptions, roomComparisonCsv } from "./family-room-comparison.mjs";
 
 const path = name => fileURLToPath(new URL(`../docs/research/${name}`, import.meta.url));
 const dcPath = path("washington-dc-room-configurations-2026-09-30.json");
@@ -20,6 +20,82 @@ const cli = fileURLToPath(new URL("./family-room-comparison.mjs", import.meta.ur
 const rows = csv => csv.trimEnd().split("\n").map(line => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(match => match[1].replaceAll('""', '"')));
 const value = (row, heading) => row[comparisonHeadings.indexOf(heading)];
 const output = (pack = dc, observations = prices, date = "2026-09-30", party = pack.scenario) => roomComparisonCsv(pack, party, date, observations);
+
+const taskArgs = party => ["--adults", String(party.adults), "--child-ages", party.child_ages.join(",") || "none",
+  "--arrival", party.stay.arrival, "--departure", party.stay.departure];
+
+test("explicit CLI tasks screen family six, an infant extension and changed stays without evidence edits", () => {
+  const before = JSON.stringify([london, londonPrices]);
+  for (const party of [
+    { adults: 2, child_ages: [4, 8, 12, 15], stay: london.scenario.stay },
+    { adults: 2, child_ages: [1, 4, 8], stay: london.scenario.stay },
+    { adults: 2, child_ages: [4, 8, 12], stay: { arrival: "2026-11-09", departure: "2026-11-14" } }
+  ]) {
+    const csv = execFileSync(process.execPath, [cli, path("london-room-configurations-2026-09-30.json"),
+      "--date", "2026-10-02", ...taskArgs(party), "--prices", ...londonPaths], { encoding: "utf8" });
+    assert.equal(csv, output(london, londonPrices, "2026-10-02", party));
+    const data = rows(csv).slice(1);
+    assert.equal(data.length, 6);
+    assert.ok(data.every(row => value(row, "Nightly equivalent") === "" && value(row, "Public rate plan") === "Unpriced"));
+    const marlin = data.find(row => value(row, "Hotel").startsWith("Marlin"));
+    assert.equal(value(marlin, "Capacity screen"), "CONDITIONAL_PUBLISHED_CAPACITY");
+    assert.match(value(marlin, "Capacity conditions"), /paid double sofa/);
+    const bloomsbury = data.find(row => value(row, "Hotel").includes("Bloomsbury"));
+    assert.equal(value(bloomsbury, "Capacity screen"), party.child_ages.includes(1) ? "CONDITIONAL_PUBLISHED_CAPACITY" : "OUTSIDE_PUBLISHED_LIMIT");
+    assert.ok(data.every(row => value(row, "Category checked") === "2026-09-30"));
+  }
+  assert.equal(JSON.stringify([london, londonPrices]), before);
+});
+
+test("matching explicit task retains nightly estimates, reordered ages match, adults-only stays unpriced", () => {
+  for (const child_ages of [[4, 8, 12], [12, 4, 8], []]) {
+    const party = { adults: 2, child_ages, stay: dc.scenario.stay };
+    const csv = execFileSync(process.execPath, [cli, dcPath, "--date", "2026-10-02", ...taskArgs(party), "--prices", ...pricePaths], { encoding: "utf8" });
+    assert.equal(csv, output(dc, prices, "2026-10-02", party));
+    const data = rows(csv).slice(1);
+    assert.equal(data.filter(row => value(row, "Nightly equivalent") !== "").length, child_ages.length ? 6 : 0);
+    if (child_ages.length) assert.ok(data.some(row => value(row, "Nightly equivalent") === "288.97"));
+  }
+});
+
+test("task parser rejects partial, duplicate, malformed ages/adults and invalid dates before output", () => {
+  const base = taskArgs(dc.scenario);
+  const bad = [base.slice(0, 2), [...base, "--adults", "2"], ["--child-ages", "none"],
+    ...["0", "-2", "2.5", "2x", "9007199254740992"].map(adults => ["--adults", adults, ...base.slice(2)]),
+    ...["18", "-1", "1.5", "4,,8", ",4", "4,", "4 8", "4,x", ""].map(ages => [...base.slice(0, 2), "--child-ages", ages, ...base.slice(4)]),
+    [...base.slice(0, 4), "--arrival", "2026-02-30", "--departure", "2026-11-13"],
+    [...base.slice(0, 4), "--arrival", "2026-11-13", "--departure", "2026-11-13"],
+    [...base.slice(0, 4), "--arrival", "2026-11-14", "--departure", "2026-11-13"]];
+  const dir = mkdtempSync(join(tmpdir(), "ft-room-task-invalid-"));
+  try {
+    const destination = join(dir, "uncreated", "task.csv");
+    for (const options of bad) {
+      assert.throws(() => parseRoomComparisonOptions([dcPath, ...options]));
+      assert.throws(() => execFileSync(process.execPath, [cli, dcPath, "--date", "2026-10-02", "--output", destination, ...options], { stdio: "pipe" }));
+      assert.equal(existsSync(join(dir, "uncreated")), false);
+    }
+    const input = [dcPath, "--date", "2026-10-02", ...base];
+    const original = [...input];
+    assert.deepEqual(parseRoomComparisonOptions(input).task, { adults: 2, child_ages: [4, 8, 12], stay: dc.scenario.stay });
+    assert.deepEqual(input, original);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test("explicit output checkpoint records the requested family and stay", () => {
+  const dir = mkdtempSync(join(tmpdir(), "ft-room-task-summary-"));
+  try {
+    const party = { adults: 2, child_ages: [4, 8, 12, 15], stay: dc.scenario.stay };
+    const destination = join(dir, "six.csv");
+    const summary = JSON.parse(execFileSync(process.execPath, [cli, dcPath, "--date", "2026-10-02", ...taskArgs(party), "--prices", ...pricePaths, "--output", destination], { encoding: "utf8" }));
+    assert.deepEqual(summary.task, party);
+    assert.equal(summary.public_changes, false);
+    const data = rows(readFileSync(destination, "utf8")).slice(1);
+    assert.equal(data.length, 4);
+    assert.ok(data.every(row => value(row, "Nightly equivalent") === ""));
+    assert.equal(value(data.find(row => value(row, "Hotel").startsWith("Residence")), "Capacity screen"), "WITHIN_PUBLISHED_CAPACITY");
+    assert.equal(value(data.find(row => value(row, "Hotel").startsWith("Homewood")), "Capacity screen"), "OUTSIDE_PUBLISHED_LIMIT");
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
 
 test("same-task CSV has one public-plan row, exact budget context and explicit unpriced category", () => {
   const before = JSON.stringify([dc, prices]);

@@ -1,6 +1,12 @@
 # Family Tripwise SEO Roadmap
 
-Last updated: 2026-10-01
+Last updated: 2026-10-02
+
+FT-IMP-052 review-clean: Kierkegaard1PASS/noP0-P3,53focused/372isolated/64additional/native/574filepreservation; operator373workingfull/native/11exclusionhash and unrelatedroadmap parity. Exact9paths ready tools/docs-only push, no public change/Pages wait; full077 gates and Chicago hold unchanged. Immutable reviewer output only; earlier pending labels historical.
+
+Current FT-IMP-052 under FT-RES-077: implement exact party/stay controls on the existing research CSV without editing evidence. Nine registered paths; October2 three-primary-condition audit plus six-person/infant/matching-budget task fixtures. No public URL or current price collection; original approximate nightly basis/date/fee context preserved. Full/focused native and different read-only review before tools/docs-only push. FT-RES-077 remains candidate with complete-corpus, two comparable six-person prices, controlled US overlap and publication gates; next eligible step one exact-party Marlin price, then second comparator. Weekly dueOctober7 and Chicago narrow hold unchanged. Earlier current checkpoints historical.
+
+FT-RES-075 completed research/docs-only at74b98ba0d1cad6b728656a1921ddd738f5456152: exact7reviewedpaths/freshfetch/no divergence/sole-range/whitespace/research-ledger parity/push/HEADorigin0/0;Lagrange1PASS/368isolated/operator369workingfull. Eight non-city dimensions and candidate gates recorded, no publicpage/newURL/Pages wait. Next FT-RES-077room-party/budget task; weekly maintenance dueOct7. Eleven exclusions preserved. Immutable release backfill retained for next substantive transaction, not metadata-onlycommit.
 
 FT-RES-075 review-clean: Lagrange cycle1PASS/noP0-P3,368isolatedfull/native/metric-date-history/source-reference/privacy/gates/573filepreservation; operator369workingfull/focused/QA001exactrestoration/unrelatedrecordand11exclusionhash checks pass. Exact7paths ready docs-only push, no newURL/publication approval. Earlier pending checkpoints historical; immutable QA output only.
 
