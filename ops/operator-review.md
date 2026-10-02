@@ -1,5 +1,19 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-IMP-054 complete room inputs
+
+Final Locke `01a0fd33-c67e-7a22-90dc-6618411cc0cf` cycle2PASS/noP0-P3: room/care iteratorP2 and validated-pack contractP3 closed. Independent69focused/377network-free with11networktests excluded/744parity/761adversarial-contract/state0/80snapshots/SEO31URLs34HTMLzero-errors-five-prior/588hashes unchanged; exact10delta/578baseline-identical/182unrelatedroadmap preserved. Operator389full/69focused/51parity-exclusion/568other-baseline-files/six-material-snapshot/whitespace pass. Exact10paths eligible tools/docs-only push, not public or newlearning; immutable outputs only.
+
+Cycle2pre-review69focused/389workingfull/51valid-output/exclusion assertions green: four room packs/all matching price samples and three care tasks keep exact JSON/CSV; indexed ordinary-array validation and stored-age identity/comparison reject iterator attacks. Standalone price helpers explicitly require validateRoomPack-approved pack; screening/export enforce provenance rejection. Ten registered paths need cycle2readonlyPASS; no public/source/price/date/learning change.
+
+Cycle1Locke `01a0fd33-c67e-7a22-90dc-6618411cc0cf` FAIL/P2: Array.from accepts iterator-supplied rather than stored ages, returning incorrect conditional capacity/260night; sparse provenance/engine variants reproduced. P3 direct price helpers assume validated pack; screening rejects malformed provenance, document boundary. Independent55focused/374network-free(11networktests excluded)/724parity/176adversarial/8P3/state0/80snapshots/SEO0five-prior/588hashes unchanged/182unrelatedroadmap preserved. Before further edits register same-defect exact10scope: add care tool/test to original8 after readonly care undefined-age/iterator2-7 acceptance repro. Direct indexed ordinary arrays/stored-age comparator plus regression/contract fixes and ten-path cycle2 review required; no new action or publication.
+
+Pre-review:55focused/386workingfull/45parity-exclusion assertions pass across four existing packs and every matching saved quote; state0/80snapshots/SEO31canonical34HTMLzero-errors-five-prior/whitespace. Actual pre-edit start15:17:45UTC, third/final within15:20:39budget; no new action afterward. Different read-only review pending, no public/evidence/date/learning change.
+
+Eight paths registered before edits for verified sparse missing-child-age acceptance in room screening; reject incomplete party and coercive source/reference/text inputs without changing valid output/history. Focused/full native/different independent read-only PASS before tools/docs-only push. Public/evidence/prices/dates/scheduler/eleven exclusions invariant; no new learning. Third/final transaction before deadline;081immutable completion backfill included.
+
+FT-RES-081 immutable completion: `f9a1985ae33984d76ecab732223df1572f6b218f`, seven reviewed paths/finalfetch/no divergence/complete sole outgoing range/material parity/whitespace/push/remotemainmatch at15:16:27UTC. Maxwell1PASS/native unchanged; no public/Pages/route/full077 claim. Backfill carried in054 without another metadata commit.
+
 ## 2026-10-02 - FT-RES-081 location/rest gate
 
 Final Maxwell `01a0fd2b-9967-78d3-89d5-463118696485` cycle1PASS/noP0-P3: 53focused/383isolatedfull/560additional/state0/80snapshots/SEO0five-prior/588hashes unchanged, exact7delta/581baseline-identical/180unrelatedroadmap unchanged. Optional21GBP separated from unknown total, no rest/route/availability/full077 claim. Operator384workingfull/44additional/native/material/exclusion parity green; exact seven paths eligible docs-only push. Dynamic sources/prior push provenance operator-attributed; immutable outputs only.

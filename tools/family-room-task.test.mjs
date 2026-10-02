@@ -11,6 +11,52 @@ const clone = () => structuredClone(pack);
 const row = (rows, id) => rows.find(r => r.id === id);
 const historicalScreen = (p, party = p.scenario, date = "2026-09-30") => screenRoomPack(p, party, date);
 
+test("sparse child ages and coercive provenance cannot produce room screening or CSV", () => {
+  for (const ages of [new Array(3), [4,,12], [4,undefined,12]]) {
+    const party = {...pack.scenario, child_ages:ages};
+    assert.throws(() => historicalScreen(pack, party));
+    assert.throws(() => roomComparisonCsv(pack, party, "2026-09-30"));
+  }
+  for (const mutate of [
+    p => p.sources[Object.keys(p.sources)[0]].url = [p.sources[Object.keys(p.sources)[0]].url],
+    p => p.records[0].source_id = [p.records[0].source_id],
+    p => p.records[0].source_id = "toString",
+    p => p.records[0].checks = new Array(1),
+    p => p.records[0].conflicts = new Array(1),
+    p => p.records[0].configurations[0].conditions = new Array(1),
+    p => p.records[0].price.missing_basis = new Array(1)
+  ]) {
+    const altered = clone(); mutate(altered);
+    assert.ok(validateRoomPack(altered).length);
+    assert.throws(() => historicalScreen(altered));
+    assert.throws(() => roomComparisonCsv(altered, altered.scenario, "2026-09-30"));
+  }
+  assert.doesNotThrow(() => historicalScreen(pack, {...pack.scenario, child_ages:[]}));
+});
+
+test("custom iterators cannot hide stored ages or provenance", () => {
+  for (const ages of [[undefined,undefined,undefined], new Array(3), [4,8,11]]) {
+    ages[Symbol.iterator] = function* () { yield* [4,8,12]; };
+    const party = {...pack.scenario,child_ages:ages};
+    assert.throws(() => historicalScreen(pack,party));
+    assert.throws(() => roomComparisonCsv(pack,party,"2026-09-30"));
+  }
+  const altered = clone();
+  altered.records[0].checks = new Array(1);
+  altered.records[0].checks[Symbol.iterator] = function* () {};
+  assert.ok(validateRoomPack(altered).length);
+  assert.throws(() => historicalScreen(altered));
+  const badSource = clone(); badSource.sources[badSource.records[0].source_id].url = [badSource.sources[badSource.records[0].source_id].url];
+  assert.ok(validateRoomPack(badSource).length);
+  assert.throws(() => historicalScreen(badSource));
+  for (const field of ["records","configurations","offer_observations"]) {
+    const p = clone(), values = field === "configurations" ? p.records[0].configurations : p[field];
+    values[Symbol.iterator] = function* () {};
+    assert.ok(validateRoomPack(p).length);
+    assert.throws(() => historicalScreen(p));
+  }
+});
+
 test("Boston portable comparison retains three dated plans and two explicit budget gaps", () => {
   const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
   const samples = JSON.parse(readFileSync(new URL("../docs/research/boston-park-plaza-price-observation-2026-10-01.json", import.meta.url)));

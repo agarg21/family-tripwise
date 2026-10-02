@@ -7,7 +7,12 @@ import { roomPriceForTask, validateRoomPrices } from "./family-room-price.mjs";
 const text = value => typeof value === "string" && value.trim().length > 0;
 const positive = value => Number.isInteger(value) && value > 0;
 const optionalLimit = value => value === null || positive(value);
-const strings = value => Array.isArray(value) && value.every(text);
+const denseArray = (value, predicate) => {
+  if (!Array.isArray(value) || Object.getPrototypeOf(value) !== Array.prototype || Object.hasOwn(value, Symbol.iterator)) return false;
+  for (let index = 0; index < value.length; index++) if (!Object.hasOwn(value, index) || !predicate(value[index])) return false;
+  return true;
+};
+const strings = value => denseArray(value, text);
 
 export function currentEasternDate(now = new Date()) {
   const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
@@ -24,6 +29,7 @@ export function validateRoomPack(pack) {
   for (const [id, source] of Object.entries(pack.sources)) {
     if (!source || typeof source !== "object" || Array.isArray(source)) { fail(`${id}: invalid source`); continue; }
     try {
+      if (!text(source.url)) throw new Error("Source URL must be a string");
       const url = new URL(source.url);
       if (url.protocol !== "https:" || url.username || url.password || url.search || url.hash) fail(`${id}: unsafe source URL`);
     } catch { fail(`${id}: invalid source URL`); }
@@ -32,16 +38,16 @@ export function validateRoomPack(pack) {
         source.evidence_class !== "OFFICIAL_PROPERTY_FACT" ||
         source.date_basis !== "source-text-inspected-not-policy-effective") fail(`${id}: invalid source date/class`);
   }
-  if (!Array.isArray(pack.records) || !pack.records.length) return [...errors, "Missing records"];
+  if (!denseArray(pack.records, r => r && typeof r === "object" && !Array.isArray(r)) || !pack.records.length) return [...errors, "Missing records"];
   const ids = new Set();
   for (const r of pack.records) {
     if (!r || !text(r.id) || ids.has(r.id)) { fail("Invalid/duplicate record ID"); continue; }
     ids.add(r.id);
-    if (!text(r.hotel) || !text(r.category) || !pack.sources[r.source_id] || !text(r.sleeping_setup) ||
+    if (!text(r.hotel) || !text(r.category) || !text(r.source_id) || !Object.hasOwn(pack.sources, r.source_id) || !text(r.sleeping_setup) ||
         !["published-kitchen", "not-established"].includes(r.kitchen) ||
         !["named-connected-category", "requested-separate-room", "not-applicable"].includes(r.connection) ||
         !strings(r.checks) || !strings(r.conflicts)) fail(`${r.id}: invalid facts/provenance`);
-    if (!Array.isArray(r.configurations) || !r.configurations.length) { fail(`${r.id}: missing configurations`); continue; }
+    if (!denseArray(r.configurations, c => c && typeof c === "object" && !Array.isArray(c)) || !r.configurations.length) { fail(`${r.id}: missing configurations`); continue; }
     for (const c of r.configurations) {
       if (!c || !positive(c.maximum) || !optionalLimit(c.max_adults) || !optionalLimit(c.max_children) ||
           !strings(c.conditions) || !["OFFICIAL_PROPERTY_FACT", "EDITORIAL_INTERPRETATION"].includes(c.evidence_class) ||
@@ -55,9 +61,9 @@ export function validateRoomPack(pack) {
         r.price.amount !== null || r.price.observed_on !== null || r.price.status !== "not-observed" ||
         !strings(r.price.missing_basis) || !r.price.missing_basis.length) fail(`${r.id}: unsupported price`);
   }
-  if (!Array.isArray(pack.offer_observations)) fail("Invalid offer observations");
+  if (!denseArray(pack.offer_observations, offer => offer && typeof offer === "object" && !Array.isArray(offer))) fail("Invalid offer observations");
   else for (const offer of pack.offer_observations) {
-    if (!offer || !pack.sources[offer.source_id] || !Number.isFinite(offer.amount_from) || offer.amount_from <= 0 ||
+    if (!offer || !text(offer.source_id) || !Object.hasOwn(pack.sources, offer.source_id) || !Number.isFinite(offer.amount_from) || offer.amount_from <= 0 ||
         !["GBP", "USD"].includes(offer.currency) || offer.unit !== null || offer.party_basis !== null ||
         ![offer.id, offer.room_basis, offer.stay_basis, offer.fee_basis, offer.terms, offer.limitation].every(text)) fail("Invalid separated offer observation");
   }
@@ -81,8 +87,7 @@ export function screenRoomPack(pack, party = pack.scenario, asOf = currentEaster
   if (errors.length) throw new Error(errors.join("; "));
   const priceErrors = validateRoomPrices(prices, pack);
   if (priceErrors.length) throw new Error(priceErrors.join("; "));
-  if (!positive(party?.adults) || !Array.isArray(party.child_ages) ||
-      !party.child_ages.every(age => Number.isInteger(age) && age >= 0 && age <= 17) ||
+  if (!positive(party?.adults) || !denseArray(party.child_ages, age => Number.isInteger(age) && age >= 0 && age <= 17) ||
       !validDate(asOf) || asOf < pack.checked_on) throw new Error("Invalid party or screening date");
   return pack.records.map(r => {
     const source = pack.sources[r.source_id];

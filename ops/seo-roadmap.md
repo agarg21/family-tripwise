@@ -2,6 +2,18 @@
 
 Last updated: 2026-10-02
 
+FT-IMP-054 review-clean Locke2PASS/noP0-P3:69focused/377network-free(11excluded)/744parity/761adversarial/native/588hashes; operator389full/51parity-exclusion/material-preservation green. Ten reviewed paths tools/docs-only push; no public/newlearning, third/final transaction.
+
+FT-IMP-054 cycle2pre-review:69focused/389workingfull/51room-care valid-output/exclusion assertions pass; indexed ordinary arrays/stored-age identity and explicit price-helper contract fixed. Exact10paths to independent re-review, no public/newlearning or fourth action.
+
+FT-IMP-054 cycle1P2 iterator finding and P3 validated-pack contract identified. Same care API repro confirmed; before cycle2 edits exact10scope adds care tool/test to original8, not a fourth action. Direct indexed ordinary-array validation/stored-age comparator/contract and regression fixes require full ten-path re-review; no public/source/price/newlearning change.
+
+FT-IMP-054 pre-review55focused/386workingfull/45four-pack valid-output/default-quote JSON-CSV parity/exclusion assertions/native green. Actual pre-edit start15:17:45UTC within deadline, third/final; no new action this run. Exact8paths pending independent read-only PASS, public/evidence/prices/dates unchanged.
+
+Current FT-IMP-054: reject reproducible missing child ages and coercive provenance in room tooling, preserve valid defaults/dated budgets; eight paths registered before edits15:16UTC, third/final transaction before15:20:39deadline. Native/parity/different read-only PASS then tools/docs-only push; no public/date/learning claim.
+
+FT-RES-081 completed docs-only at `f9a1985ae33984d76ecab732223df1572f6b218f`: exact7reviewedpaths/fetch/no divergence/sole outgoingrange/material parity/whitespace/push/remotemainmatch15:16:27UTC. Source-datedLRN092 partial location gate, public/route/full077 held; immutable completion backfill carried054.
+
 FT-RES-081 review-clean Maxwell1PASS/noP0-P3: 53focused/383isolatedfull/560additional/native/588hashes; operator384workingfull/44additional/material/exclusion parity green. Exact7paths docs-only push; location/fare-band learning only, public/route/full077 gates unchanged.
 
 FT-RES-081 pre-review: five current official sources resolve location/fare-band scope, not actual rest route or total; source-datedLRN092. Native53focused/384workingfull/44additional/native/scope pass; seven exact paths to different read-only review.077 second-price gate reconciled to079complete, route/review/corpus/controlledoverlap/URL gates remain.

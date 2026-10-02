@@ -10,6 +10,44 @@ const dcPack = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-r
 const dcPrices = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-embassy-price-observation-2026-09-30.json", import.meta.url)));
 const price = (samples = observations, party = pack.scenario, date = "2026-09-30") => roomPriceForTask(samples, pack, "mitre-family-five", party, date);
 
+test("sparse actual or provider child ages cannot validate or inherit a room quote", () => {
+  for (const field of ["party", "engine_party"]) {
+    for (const ages of [new Array(3), [4,,12], [4,undefined,12]]) {
+      const samples = structuredClone(observations); samples[0][field].child_ages = ages;
+      assert.ok(validateRoomPrices(samples, pack).length);
+      assert.throws(() => price(samples));
+    }
+  }
+  for (const ages of [new Array(3), [4,,12], [4,undefined,12]])
+    assert.throws(() => price(observations, {...pack.scenario, child_ages:ages}));
+  assert.equal(price(observations, {...pack.scenario, child_ages:[]}), null);
+});
+
+test("price matching and identity cannot consume alternate age iterators", () => {
+  for (const field of ["party","engine_party"]) {
+    const samples = structuredClone(observations);
+    samples[0][field].child_ages = [undefined,undefined,undefined];
+    samples[0][field].child_ages[Symbol.iterator] = function* () { yield* [4,8,12]; };
+    assert.ok(validateRoomPrices(samples,pack).length);
+    assert.throws(() => price(samples));
+  }
+  const ages = [...pack.scenario.child_ages]; ages[0] = 5;
+  ages[Symbol.iterator] = function* () { yield* pack.scenario.child_ages; };
+  assert.throws(() => price(observations,{...pack.scenario,child_ages:ages}));
+  const samples = structuredClone(residence);
+  for (const field of ["party","engine_party"]) {
+    samples[0][field].child_ages = new Array(3);
+    samples[0][field].child_ages[Symbol.iterator] = function* () {};
+  }
+  assert.ok(validateRoomPrices(samples,dcPack).length);
+  for (const field of ["observations","rates"]) {
+    const p = structuredClone(observations), values = field === "rates" ? p[0].rates : p;
+    values[Symbol.iterator] = function* () {};
+    assert.ok(validateRoomPrices(p,pack).length);
+    assert.throws(() => price(p));
+  }
+});
+
 const residence = JSON.parse(readFileSync(new URL("../docs/research/washington-dc-residence-price-observation-2026-09-30.json", import.meta.url)));
 test("schema3 keeps unpublished cutoffs unknown for an exact individually entered party", () => {
   assert.deepEqual(validateRoomPrices(residence, dcPack), []);

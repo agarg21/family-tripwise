@@ -142,6 +142,26 @@ test("coercive evidence and sparse programmatic arrays fail closed", () => {
   }
 });
 
+test("care screens reject iterator-supplied ages and hidden admission evidence", () => {
+  for (const ages of [[undefined,undefined],new Array(2),[2,8]]) {
+    ages[Symbol.iterator] = function* () { yield* [2,7]; };
+    assert.throws(() => screenCareInventory(pack,{child_ages:ages},date));
+    assert.throws(() => careComparisonCsv(pack,{child_ages:ages},date));
+  }
+  const training = new Array(2); training[Symbol.iterator] = function* () {};
+  assert.throws(() => screenCareInventory(pack,{potty_trained:training},date));
+  const altered = structuredClone(pack);
+  altered.records[0].services[0].source_ids = new Array(1);
+  altered.records[0].services[0].source_ids[Symbol.iterator] = function* () { yield "finest"; };
+  assert.throws(() => validateCareInventory(altered,date));
+  for (const field of ["records","services"]) {
+    const p = structuredClone(pack), values = field === "services" ? p.records[0].services : p.records;
+    values[Symbol.iterator] = function* () {};
+    assert.throws(() => validateCareInventory(p,date));
+    assert.throws(() => screenCareInventory(p,{},date));
+  }
+});
+
 test("CSV retains all 22 property-child-service rows and dated budget/source context", () => {
   const csv = careComparisonCsv(pack, {}, date);
   const lines = csv.trimEnd().split("\n");

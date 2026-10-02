@@ -9,7 +9,11 @@ const costs = new Set(["numeric-service-fee-not-established", "extra-charge-nume
 const text = value => typeof value === "string" && value.trim().length > 0;
 const age = value => Number.isInteger(value) && value >= 0 && value <= 17;
 const optionalBoolean = value => value === null || typeof value === "boolean";
-const denseArray = (value, predicate) => Array.isArray(value) && Array.from(value).every((item, index) => Object.hasOwn(value, index) && predicate(item));
+const denseArray = (value, predicate) => {
+  if (!Array.isArray(value) || Object.getPrototypeOf(value) !== Array.prototype || Object.hasOwn(value, Symbol.iterator)) return false;
+  for (let index = 0; index < value.length; index++) if (!Object.hasOwn(value, index) || !predicate(value[index])) return false;
+  return true;
+};
 const currency = value => typeof value === "string" && /^[A-Z]{3}$/.test(value);
 const requireValue = (condition, message) => { if (!condition) throw new Error(message); };
 const keys = (value, required, optional = []) => {
@@ -37,11 +41,11 @@ export function validateCareInventory(pack, asOf = currentEasternDate()) {
     requireValue(https(source.url) && validDate(source.checked_on) && source.checked_on <= pack.checked_on &&
       (source.published_on === null || (validDate(source.published_on) && source.published_on <= source.checked_on)) && text(source.surface) && text(source.source_scope), "Invalid source URL, date or scope");
   }
-  requireValue(Array.isArray(pack.records) && pack.records.length > 0 && new Set(pack.records.map(record => record?.id)).size === pack.records.length, "Missing records or duplicate property IDs");
+  requireValue(denseArray(pack.records, record => record && typeof record === "object" && !Array.isArray(record)) && pack.records.length > 0 && new Set(pack.records.map(record => record?.id)).size === pack.records.length, "Missing records or duplicate property IDs");
   for (const record of pack.records) {
     keys(record, ["id", "property", "existing_model_id", "services", "task_result", "budget", "missing", "decision"]);
     requireValue(text(record.id) && text(record.property) && (record.existing_model_id === null || text(record.existing_model_id)) && text(record.task_result) && text(record.decision), "Invalid property record");
-    requireValue(Array.isArray(record.services) && record.services.length > 0 && new Set(record.services.map(service => service?.id)).size === record.services.length, "Missing services or duplicate service IDs");
+    requireValue(denseArray(record.services, service => service && typeof service === "object" && !Array.isArray(service)) && record.services.length > 0 && new Set(record.services.map(service => service?.id)).size === record.services.length, "Missing services or duplicate service IDs");
     for (const service of record.services) {
       keys(service, ["id", "name", "source_ids", "min_age", "max_age", "parent_presence", "registration", "potty_training", "session_max_minutes", "hours", "cost_status", "fee_amount", "fee_currency", "fee_unit"]);
       requireValue(text(service.id) && text(service.name) && denseArray(service.source_ids, id => text(id) && Object.hasOwn(pack.sources, id)) && service.source_ids.length > 0 &&

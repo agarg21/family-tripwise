@@ -1,12 +1,29 @@
 import { validDate } from "./hotel-evidence.mjs";
 
 const text = value => typeof value === "string" && value.trim().length > 0;
-const sameAges = (a, b) => JSON.stringify([...a].sort((x, y) => x - y)) === JSON.stringify([...b].sort((x, y) => x - y));
-const validParty = p => p && Number.isInteger(p.adults) && p.adults > 0 && Array.isArray(p.child_ages) &&
-  p.child_ages.every(age => Number.isInteger(age) && age >= 0 && age <= 17);
+const ordinaryDense = values => {
+  if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype || Object.hasOwn(values, Symbol.iterator)) return false;
+  for (let index = 0; index < values.length; index++) if (!Object.hasOwn(values, index)) return false;
+  return true;
+};
+const sortedAges = ages => {
+  const values = [];
+  for (let index = 0; index < ages.length; index++) values.push(ages[index]);
+  return values.sort((a, b) => a - b);
+};
+const sameAges = (a, b) => JSON.stringify(sortedAges(a)) === JSON.stringify(sortedAges(b));
+const validParty = p => {
+  if (!p || !Number.isInteger(p.adults) || p.adults <= 0 || !ordinaryDense(p.child_ages)) return false;
+  for (let index = 0; index < p.child_ages.length; index++) {
+    const age = p.child_ages[index];
+    if (!Object.hasOwn(p.child_ages, index) || !Number.isInteger(age) || age < 0 || age > 17) return false;
+  }
+  return true;
+};
 
+// Standalone price helpers require a validateRoomPack-approved pack; screening enforces it.
 export function validateRoomPrices(observations, pack) {
-  if (!Array.isArray(observations)) return ["Price observations must be an array"];
+  if (!ordinaryDense(observations)) return ["Price observations must be an ordinary dense array"];
   const errors = [];
   const identities = new Set();
   for (const o of observations) {
@@ -43,10 +60,10 @@ export function validateRoomPrices(observations, pack) {
       if (o.party.child_ages.some(age => age < engine.child_age_from) || engine.adults !== adultCount ||
           !sameAges(younger, engine.child_ages)) fail("Engine party does not match actual ages");
     }
-    const identity = JSON.stringify([o.record_id, o.checked_on, o.arrival, o.departure, o.party.adults, [...o.party.child_ages].sort((a, b) => a - b)]);
+    const identity = JSON.stringify([o.record_id, o.checked_on, o.arrival, o.departure, o.party.adults, sortedAges(o.party.child_ages)]);
     if (identities.has(identity)) fail("Duplicate price identity");
     identities.add(identity);
-    if (!Array.isArray(o.rates) || !o.rates.length) { fail("Missing rate plans"); continue; }
+    if (!ordinaryDense(o.rates) || !o.rates.length) { fail("Missing rate plans"); continue; }
     const plans = new Set();
     for (const rate of o.rates) {
       if (o.schema_version >= 2 && !["public", "membership-required"].includes(rate?.eligibility))
