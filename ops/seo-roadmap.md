@@ -2,6 +2,14 @@
 
 Last updated: 2026-10-02
 
+FT-RES-078 review-clean: Laplace cycle1PASS/noP0-P3,372isolatedfull/53focused/113additional/native/576filepreservation; operator373workingfull/native/exacttaskquote/11exclusionhash/scope green. Exact7paths eligible docs-only push, no public changes or Pages wait; full077 second accommodation/overlap/completeness gates and Chicago hold remain. Immutable results only; earlier pending checkpoints historical.
+
+FT-RES-078 pre-review: one six-person priced apartment/two public plans,53focused/373workingfull/native/exacttask-price fixtures pass;11exclusions/unrelatedroadmap unchanged. Seven paths require independent read-only PASS before docs-only push. Full077 second accommodation/completeness/overlap gates and Chicago hold unchanged.
+
+Current FT-RES-078: record and validate one exact six-person Marlin two-king/sofa public-price sample under FT-RES-077. Seven paths registered in current-cycle before edits; retain actual child ages and current provider13+ adult band, nightly/full-stay/tax/deposit/cancellation basis. Original five-person samples and all public pages unchanged. Focused/full QA and different independent read-only PASS before docs-only push. Then one comparable second six-person option, not another broad keyword report; full corpus/controlledUSoverlap/newURL gates and Chicago hold remain.
+
+FT-IMP-052 completed tools/docs-only at1c76175d8b4466eb6b5b1561b5b40e7d0cc5c8ba: exact9reviewedpaths/finalfetch/no divergence/sole reviewed range/whitespace/artifactparity/push/HEADorigin0/0. Kierkegaard1PASS/native results unchanged; no public change or Pages wait,11exclusions preserved. Immutable completion backfill held for next substantive transaction. Earlier pending labels historical; full077 qualification and next six-person quote gate unchanged.
+
 FT-IMP-052 review-clean: Kierkegaard1PASS/noP0-P3,53focused/372isolated/64additional/native/574filepreservation; operator373workingfull/native/11exclusionhash and unrelatedroadmap parity. Exact9paths ready tools/docs-only push, no public change/Pages wait; full077 gates and Chicago hold unchanged. Immutable reviewer output only; earlier pending labels historical.
 
 Current FT-IMP-052 under FT-RES-077: implement exact party/stay controls on the existing research CSV without editing evidence. Nine registered paths; October2 three-primary-condition audit plus six-person/infant/matching-budget task fixtures. No public URL or current price collection; original approximate nightly basis/date/fee context preserved. Full/focused native and different read-only review before tools/docs-only push. FT-RES-077 remains candidate with complete-corpus, two comparable six-person prices, controlled US overlap and publication gates; next eligible step one exact-party Marlin price, then second comparator. Weekly dueOctober7 and Chicago narrow hold unchanged. Earlier current checkpoints historical.
