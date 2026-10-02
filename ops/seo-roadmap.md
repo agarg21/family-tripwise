@@ -2,6 +2,12 @@
 
 Last updated: 2026-10-02
 
+FT-OPS-008 review/application verified: Peirce1PASS/noP0-P3/372isolated/native/177priorroadmap/577files; operator373workingfull/default/suffix/date/scope/11exclusionhash pass. Existing heartbeat update succeeded13:37:01Z; saved reviewed prompt/hourly/globalend/originalidentity/thread/status/notification verified. Exact8paths eligible docs/config-only push; today-only date guard and automatic restoration preserved. No public improvement/learning or new scheduler; earlier pending labels historical.
+
+Current direct-user FT-OPS-008: enable only today's hourly same-thread/same-heartbeat sprint with sequential reviewed work, up to3transactions/run and45minute new-start budget, ending midnightEastern. Eight paths registered before edits; defaults1/run2/day and all evidence/spending/review/security/URL gates remain. First post-midnight wakeup restores original cadence/prompt and returns; failure blocks project work. Independent PASS and saved-configuration verification gate activation; no new scheduler, public change or learning unit. Next backlog077 second exact-six-party accommodation, then076 or verified existing-page gap; Chicago stays held.
+
+FT-RES-078 completed research/docs-only at3edac7c6f1fcdf5163b3c51eef42e83726da866b: exact7reviewedpaths/finalfetch/no divergence/sole outgoing range/whitespace/materialparity/push/HEADorigin0/0/remote main match. Laplace1PASS/372isolated/operator373workingfull/native;11exclusions preserved, no public change or Pages wait. Full077 second same-task accommodation/completecorpus/controlledoverlap/publication gates and Chicago hold unchanged. Four-state immutable completion backfill stays local for next substantive transaction; earlier pending labels historical.
+
 FT-RES-078 review-clean: Laplace cycle1PASS/noP0-P3,372isolatedfull/53focused/113additional/native/576filepreservation; operator373workingfull/native/exacttaskquote/11exclusionhash/scope green. Exact7paths eligible docs-only push, no public changes or Pages wait; full077 second accommodation/overlap/completeness gates and Chicago hold remain. Immutable results only; earlier pending checkpoints historical.
 
 FT-RES-078 pre-review: one six-person priced apartment/two public plans,53focused/373workingfull/native/exacttask-price fixtures pass;11exclusions/unrelatedroadmap unchanged. Seven paths require independent read-only PASS before docs-only push. Full077 second accommodation/completeness/overlap gates and Chicago hold unchanged.
