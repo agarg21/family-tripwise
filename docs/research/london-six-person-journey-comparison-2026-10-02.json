@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-082",
+  "learning": "LRN-093",
+  "checked_on": "2026-10-02",
+  "evidence_class": "OFFICIAL_PLANNER_ESTIMATE",
+  "scenario": {"adults": 2, "child_ages": [4,8,12,15], "arrival": "2026-11-08", "departure": "2026-11-13", "outing_date": "2026-11-09", "outward_departure": "09:00", "return_departure": "13:00", "time_zone": "Europe/London", "desired_return_minutes": 20, "basis": "Researcher-defined proxy, not actual family travel"},
+  "method": {"endpoint_basis": "Property and council-listed postcodes, not verified building entrances", "outing_postcode": "SE1 9TG", "walkingSpeed": "Slow", "journeyPreference": "LeastTime", "mode": "tube,dlr,walking", "timeIs": "Departing", "calcOneDirection": true, "useRealTimeLiveArrivals": false, "accessibilityPreference": "Not specified; no accessibility assurance", "selection": "Earliest returned arrival, not shortest duration after a later departure", "recheck": "Historical October2 planning snapshot; API recommendedMaxAgeMinutes5 is not a fact-validity guarantee. Refresh near travel including planned works/actual entrances."},
+  "sources": {
+    "api-docs": {"url": "https://api.tfl.gov.uk/swagger/docs/v1", "checked_on": "2026-10-02", "published_on": null, "evidence_class": "OFFICIAL_API_DOCUMENTATION"},
+    "outing-address": {"url": "https://www.southwark.gov.uk/culture-and-sport/arts-and-culture/explore-culture-southwark/tate-modern", "checked_on": "2026-10-02", "published_on": "2024-10-14", "evidence_class": "OFFICIAL_COUNCIL_DIRECTORY", "date_basis": "Displayed last update, not venue-policy effective date"},
+    "fare-corroboration": {"url": "https://foi.tfl.gov.uk/FOI-4180-2526/TRU157_Redacted.pdf", "checked_on": "2026-10-02", "published_on": "2026-01", "evidence_class": "OFFICIAL_HISTORICAL_FARE_PUBLICATION", "surface": "Issue157 cover and page3 rendered locally from accessible PDF; March revisions described provisionally", "limit": "Zone1-2 proposed GBP3.60/3.10 corroborates interpretation of current API360/310 as pence; historical publication alone does not prove current/future cap or fare"},
+    "prior-policy": {"record": "docs/research/london-six-person-location-rest-2026-10-02.json", "checked_on": "2026-10-02", "evidence_class": "REUSED_REVIEWED_OFFICIAL_TRANSPORT_POLICY", "limit": "Under11 accompaniment and staff-applied11-15YoungVisitor discount; not hotel13+ mapping"}
+  },
+  "journeys": [
+    {
+      "id": "queen-outward", "record_id": "marlin-queen-street-two-bedroom", "direction": "outward", "from": "EC4R1BR", "to": "SE19TG",
+      "source_url": "https://api.tfl.gov.uk/Journey/JourneyResults/EC4R1BR/to/SE19TG?date=20261109&time=0900&timeIs=Departing&journeyPreference=LeastTime&mode=tube%2Cdlr%2Cwalking&walkingSpeed=Slow&calcOneDirection=true&useRealTimeLiveArrivals=false",
+      "http_status": 200, "observed_at": null, "observation_time_basis": "Collected October2 in this registered run; exact timestamp not retained", "start": "2026-11-09T09:00:00", "end": "2026-11-09T09:18:00", "duration_minutes": 18, "requested_time_to_arrival_minutes": 18,
+      "legs": [{"mode": "walking", "minutes": 18, "walk_metres": 851, "from": "EC4R 1BR", "to": "SE1 9TG"}],
+      "adult_fare_raw": null, "walking_fare_estimate_gbp": 0, "fare_basis": "No fare object; zero is editorial transport fare for walking only, not total outing cost", "alternatives": [], "returned_disruption_count": 0
+    },
+    {
+      "id": "queen-return", "record_id": "marlin-queen-street-two-bedroom", "direction": "return", "from": "SE19TG", "to": "EC4R1BR",
+      "source_url": "https://api.tfl.gov.uk/Journey/JourneyResults/SE19TG/to/EC4R1BR?date=20261109&time=1300&timeIs=Departing&journeyPreference=LeastTime&mode=tube%2Cdlr%2Cwalking&walkingSpeed=Slow&calcOneDirection=true&useRealTimeLiveArrivals=false",
+      "http_status": 200, "observed_at": "2026-10-02T15:52:44.486Z", "start": "2026-11-09T13:00:00", "end": "2026-11-09T13:18:00", "duration_minutes": 18, "requested_time_to_arrival_minutes": 18,
+      "legs": [{"mode": "walking", "minutes": 18, "walk_metres": 851, "from": "SE1 9TG", "to": "EC4R 1BR"}],
+      "adult_fare_raw": null, "walking_fare_estimate_gbp": 0, "fare_basis": "No fare object; walking-only transport estimate", "alternatives": [], "returned_disruption_count": 0
+    },
+    {
+      "id": "limehouse-outward", "record_id": "marlin-limehouse-two-bedroom", "direction": "outward", "from": "E10HJ", "to": "SE19TG",
+      "source_url": "https://api.tfl.gov.uk/Journey/JourneyResults/E10HJ/to/SE19TG?date=20261109&time=0900&timeIs=Departing&journeyPreference=LeastTime&mode=tube%2Cdlr%2Cwalking&walkingSpeed=Slow&calcOneDirection=true&useRealTimeLiveArrivals=false",
+      "http_status": 200, "observed_at": "2026-10-02T15:52:45.301Z", "start": "2026-11-09T09:01:00", "end": "2026-11-09T09:54:00", "duration_minutes": 53, "requested_time_to_arrival_minutes": 54,
+      "legs": [{"mode": "walking", "minutes": 10, "walk_metres": 353, "from": "E1 0HJ", "to": "Limehouse DLR"}, {"mode": "dlr", "minutes": 6, "walk_metres": null, "from": "Limehouse DLR", "to": "Bank DLR"}, {"mode": "walking", "minutes": 37, "walk_metres": 1388, "from": "Bank DLR", "to": "SE1 9TG"}],
+      "adult_fare_raw": 360, "adult_fare_interpreted_gbp": 3.60, "fare_level": "Peak", "fare_basis": "API labels single adult PAYG, zones1-2; pence interpretation corroborated by historical official fare table, not future-price guarantee",
+      "alternatives": [{"start": "09:06", "arrival": "09:59", "duration_minutes": 53}, {"start": "09:08", "arrival": "10:01", "duration_minutes": 53}], "returned_disruption_count": 0
+    },
+    {
+      "id": "limehouse-return", "record_id": "marlin-limehouse-two-bedroom", "direction": "return", "from": "SE19TG", "to": "E10HJ",
+      "source_url": "https://api.tfl.gov.uk/Journey/JourneyResults/SE19TG/to/E10HJ?date=20261109&time=1300&timeIs=Departing&journeyPreference=LeastTime&mode=tube%2Cdlr%2Cwalking&walkingSpeed=Slow&calcOneDirection=true&useRealTimeLiveArrivals=false",
+      "http_status": 200, "observed_at": "2026-10-02T15:52:46.350Z", "start": "2026-11-09T13:00:00", "end": "2026-11-09T13:55:00", "duration_minutes": 55, "requested_time_to_arrival_minutes": 55,
+      "legs": [{"mode": "walking", "minutes": 22, "walk_metres": 827, "from": "SE1 9TG", "to": "Blackfriars Underground"}, {"mode": "tube", "minutes": 6, "walk_metres": null, "from": "Blackfriars", "to": "Tower Hill"}, {"mode": "walking", "minutes": 12, "walk_metres": 264, "from": "Tower Hill", "to": "Tower Gateway DLR"}, {"mode": "dlr", "minutes": 4, "walk_metres": null, "from": "Tower Gateway", "to": "Limehouse DLR"}, {"mode": "walking", "minutes": 11, "walk_metres": 328, "from": "Limehouse DLR", "to": "E1 0HJ"}],
+      "adult_fare_raw": 310, "adult_fare_interpreted_gbp": 3.10, "fare_level": "Off Peak", "fare_basis": "Single adult PAYG, zones1-2; not per-family/per-day or guaranteed future fare",
+      "alternatives": [{"start": "13:03", "arrival": "13:57", "duration_minutes": 54}, {"start": "13:06", "arrival": "14:00", "duration_minutes": 54}], "returned_disruption_count": 0
+    }
+  ],
+  "budget": {
+    "original_price_records": ["docs/research/london-marlin-six-person-price-observation-2026-10-02.json", "docs/research/london-limehouse-six-person-price-observation-2026-10-02.json"],
+    "conditional_limehouse_round_trip_gbp": 20.10, "arithmetic": "(3.60+3.10)*(2 adults+2*0.5 discounted11-15children)=20.10; ages4/8 accompanied free within policy",
+    "basis": "Editorial uncapped single outing estimate, only if both older children have YoungVisitor discount applied and routes/fare basis retained; not checkout/final transport quote",
+    "conditional_queen_walking_round_trip_gbp": 0,
+    "optional_new_visitor_cards_gbp": 21, "card_basis": "Only buying two new VisitorOyster cards; excludes postage/travel credit, not obligatory charge; prior081 source",
+    "current_daily_cap_gbp": null, "complete_stay_transport_gbp": null, "complete_room_plus_transport_gbp": null,
+    "unresolved": ["Current/future cap and existing/new card choice", "All other outings/airport travel", "Actual entrances and family pace/accessibility", "Optional sofa/extras/final booking acceptance from original room quotes"]
+  },
+  "result": {"hypothesis": "Cheaper room quote plus brief station access is enough for the20minute rest return", "verdict": "REJECT", "decision": "CANDIDATE with planner gate progressed; no public route or suitability winner", "finding": "Selected slow-walking postcode estimate Queen18minutes versus Limehouse55minutes earliest arrival; Queen within20minute proxy threshold only before entrance/family variation. Limehouse does not meet threshold in these returned options, not proof all modes fail.", "confidence": "High recorded response/arithmetic, medium named-task tradeoff, unknown real family practicality/user/SEO", "next_gate": "Independent category-linked review/conflict sample and actual-entrance/alternative-mode sensitivity; cap and full077 controlledUSoverlap/materiality/six-complete-records/maintainability/URLscope remain", "falsification_trigger": "Changed planner/service/fare or materially different entrance/mode/pace evidence; independent same-task comparison"},
+  "access_limits": [{"url": "https://www.tate.org.uk/visit/tate-modern", "tool": "web open", "result": "403 Forbidden; not retried or fetched through another tool", "impact": "No venue hours/entry claim; independent council address attributed separately"}, {"url": "https://tfl.gov.uk/fares/find-fares/tube-and-rail-fares/pay-as-you-go-caps", "tool": "web open", "result": "Internal Error; not retried", "impact": "Cap remains unknown; historical provisional table not treated as current cap"}, {"url": "https://foi.tfl.gov.uk/FOI-4180-2526/TRU157_Redacted.pdf", "tool": "web screenshot", "result": "Screenshot content-type resolution unavailable", "impact": "Accessible200PDF downloaded/rendered with pdftoppm and visually read; no security denial or source bypass"}],
+  "limits": ["Public read-only anonymous official API; no credentials/paid calls/purchase/account change", "Mode subset excludes bus/rail/taxi/cycle; no universal shortest journey claim", "Walk leg duration can contain station/access allowances; explicit wait component not independently separated", "No reported disruptions is not proof of future normal service", "Postcode estimates are not door-to-door, step-free/stroller/route safety/firsthand assurances", "No room-price renewal or public/new-London launch; original files unchanged"]
+}

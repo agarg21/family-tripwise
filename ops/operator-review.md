@@ -1,6 +1,16 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-RES-082 London journey comparison
+
+Gauss `01a0fd57-d5e7-7460-871a-5bb671fd055a` cycle1PASS/noP0-P3:57focused/377network-free with11sockettests excluded/1028bounded evidence-scope-preservation assertions/state0/80snapshots/SEO31URL34HTML0errors-fivebaseline warnings;588baseline590candidatehashes unchanged, manifest matches,182unrelatedroadmap unchanged. Sources operator-attributed, no independent replay or production claim. Operator389full/native green. Exact7review-clean docs-only release, immutable results only.
+
+Operator pre-review:389/389full tests; focused source-request/leg arithmetic/three retained raw-response parity/fare scenario/null complete totals/eleven exclusion hashes pass, state0/80snapshots/SEO31URLs34HTML0errors-fiveprior/whitespace. Dynamic API responses operator-collected, not independent journey testing. Seven paths to frozen read-only review.
+
+Exact seven paths preregistered; four dated anonymous official TfL requests200, same slow-walking/modes/outward-return time, postcode proxies not verified entrances. Recorded selected legs/alternatives/earliest-arrival distinction, preserved original nightly quotes, conditional uncapped fare arithmetic and null cap/full-stay totals. Source failures not retried; accessible PDF rendered after screenshot resolution limitation. Native focused/full QA and different independent read-only review pending, no public/newcity/URL/preview/paid action. Eleven exclusions and original evidence unchanged;054immutable completion backfills included.
+
 ## 2026-10-02 - FT-IMP-054 complete room inputs
+
+Immutable completion: ten reviewed paths pushed at `92114f3d205f69e79ea893238e91dbe14e72b7b2`; finalfetch/no divergence/complete sole outgoing range/exact staging/whitespace/six-material-snapshot parity/remotemainmatch15:43:03UTC. Locke2PASS/operator389full/native/exclusions unchanged; no public/Pages/newlearning. Third/final transaction complete; four-state backfill retained locally for next substantive transaction, no standalone metadata commit.
 
 Final Locke `01a0fd33-c67e-7a22-90dc-6618411cc0cf` cycle2PASS/noP0-P3: room/care iteratorP2 and validated-pack contractP3 closed. Independent69focused/377network-free with11networktests excluded/744parity/761adversarial-contract/state0/80snapshots/SEO31URLs34HTMLzero-errors-five-prior/588hashes unchanged; exact10delta/578baseline-identical/182unrelatedroadmap preserved. Operator389full/69focused/51parity-exclusion/568other-baseline-files/six-material-snapshot/whitespace pass. Exact10paths eligible tools/docs-only push, not public or newlearning; immutable outputs only.
 
