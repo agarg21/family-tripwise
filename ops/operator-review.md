@@ -1,6 +1,18 @@
 # Operator Implementation Review Log
 
+## 2026-10-02 - FT-RES-080 service-level care audit
+
+Final cycle2Hume01a0fcf0-7455-7243-a112-0587d854974b PASS/noP0-P3: Finest843historyP2closed, originaldate/source/unknownbasis retained, exacttaskprice/caretotalsnull. Independent372full/23focused/273assertions/state0/80snapshots/SEO31zero5prior/582files unchanged. Operator373workingfull/native/11exclusionhash pass. Exact7paths review-clean docs-only, no publiccorrection/full076qualification/Pageswait; dynamic facts operator-attributed. Immutable result only, earlierpending labels historical.
+
+Cycle1Hume01a0fcf0-7455-7243-a112-0587d854974b FAIL/P2: Finest retained843USDstartingprice wronglydescribednull in research. Corrected three research/ledger artifacts keepSept27FamilySuite/room-night/unknownparty-stay-taxfee sourcehistory, currenttask room/caretotalsnull and no re-fetch/date renewal; added exactmodel-parityfixture. Independent372full/23focused/219of222assertions/state0/80snapshots/SEO31zero5prior/582filepreservation, three failures onlythisP2; noP0/P1/P3. Different reviewer cycle2 required; no publicrelease.
+
+Operator pre-review23focused/373workingfull/state0/80snapshots/SEO31zeroerrors-fiveprior/whitespace green; source-scope/age2and7/accompanied-floor-exceptions/nullfee/knowninclusion/privatecare-distinction/currentmodelgap/originalGrandbudgetbasis/11exclusionhash fixtures pass. Exact7paths pending different independent read-only review; all public/model/price/date/window/scheduler values unchanged. RenderedGrand source facts operator-attributed, no public release claim.
+
+Exact7paths registered before substantive edits, third/final today-sprint transaction in this run. Four current official service audits retain parent-present versus age-eligible programs, training/session rules, brand-versus-property scope and unknown numeric carefee/exactpartyroomprice basis. CurrentZiva/Grand model unknowns are evidence-qualified correction candidates; Finestalreadycorrect preserved. No model/public/date/price/window/scheduler/excluded edits, no deniedpreviewretry or bookings. Focused/fullnative and different independent read-onlyPASS before docs-onlypush; live renderedGrand floor facts operator-attributed.
+
 ## 2026-10-02 - FT-RES-079 second six-person option
+
+Immutable completion: exact8reviewedpaths pushedaf7ab76e54599f525afcadc7b755fb772e77d4b8; finalfetch/no divergence/sole outgoing range/exactpath staging/whitespace/materialresearch-ledger parity and remote mainSHA match. Avicenna1PASS/native outputs unchanged;11exclusions preserved, no public change/Pages wait. Four-state completion backfill carried by080; earlier pending labels historical.
 
 Final Avicenna01a0fce1-fa67-7c81-ad09-22015fff3796 cycle1PASS/noP0-P3:372full/53focused/162independent schema-task-CSV-arithmetic-exclusion-mismatch-history-future-sourceparity-immutability assertions/state0/80snapshots/SEO31zeroerrors-fiveprior/580files preserved. No originalrepo/Git/browser/paidcalls/writes/deniedpreviewretry; dynamic facts/archive-Git-release provenance operator-attributed. Operator373workingfull/native/11exclusions green. Exact8paths eligible docs-only push, not full077 qualification or public delivery. Immutable output only; earlier pending checkpoints historical.
 

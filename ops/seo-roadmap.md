@@ -2,6 +2,16 @@
 
 Last updated: 2026-10-02
 
+FT-RES-080 review-clean cycle2HumePASS/noP0-P3/372full/23focused/273assertions/native/582preservation; Finest843startinghistory retained andP2closed. Operator373workingfull/native/11exclusionsgreen. Exact7paths eligible docs-onlypush; qualified existing-field corrections stillunshipped andfull076cost/demandgates open. Immutable outputs only; earlierpending labels historical.
+
+FT-RES-080 cycle1P2 fixed before release: Finest historicalfrom843USD/night/Sept27/unknownparty-date-taxfee nowretained rather thanincorrectlynull; exacttaskbudget remainsunknown. Cycle2Hume re-reviewrequired; no public/model changes, originalprices preserved.
+
+FT-RES-080 pre-review: fourcareproperty/service records and exactexistingZiva/Grand correctioncandidate,23focused/373workingfull/native/source-nullcost-age-floor-modelgap-pricebasis/11exclusionhash green. Exact7paths pending independentreview/docs-onlypush;076 numericcarefee/exacttaskroomprices/controlleddemand-overlap still open. No public/model changes, third/final this run.
+
+FT-RES-079 completed docs-only ataf7ab76e54599f525afcadc7b755fb772e77d4b8: exact8reviewedpaths/finalfetch/no divergence/sole outgoingrange/exactstaging/whitespace/materialparity/push/remotemainmatch; Avicenna1PASS/native/11exclusionsunchanged. No publicchange/Pageswait; secondbudgetoption not full077qualification. Immutable completion backfill carried by080.
+
+Current FT-RES-080 under076: four-property dated care corpus forchildren2and7, preserve currentFinestcorrectness and source-specific fee/roombudget gaps; qualify exactZivaage/Grandfloor unknown-field correction. Exact7paths registered before edits; independentreview/native/docs-onlypush then publiccandidate retains full preview/release gates. No publicrewritefromcadence or assumption of zero-cost toddlercare. Third/final transaction this run, hourly continuation remains today-only.
+
 FT-RES-079 review-clean: Avicenna1PASS/noP0-P3/372full/53focused/162additional/native/580filepreservation; operator373workingfull/native/11exclusionhash green. Exact8paths eligible docs-only push; second comparable budget gate only, no public change or full077/URLapproval. Immutable outputs only, earlier pending labels historical.
 
 FT-RES-079 pre-review: two exact-task accommodation choices retained,53focused/373workingfull/native/newpack-sample/task/context/history/immutability/11exclusionhash and whitespace green. Exact8paths pending independent read-only PASS, docs-only push; full077 maintainedreview/rest/controlledoverlap/URL gates unchanged.

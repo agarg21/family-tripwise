@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-080",
+  "checked_on": "2026-10-02",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "scope": "Research service inventory, not booking acceptance, safety/suitability assurance, complete childcare quote or public model update. Publication/effective dates unknown; null is unknown, not false or zero.",
+  "scenario": {"adults": 2, "child_ages": [2, 7], "arrival": "2026-11-08", "departure": "2026-11-13", "care_request": "One 90-minute daytime break for both children, three days; not a requested or booked service"},
+  "sources": {
+    "finest": {"url": "https://www.finestresorts.com/cancun/finest-playa-mujeres/finest-for-kids/", "checked_on": "2026-10-02", "published_on": null, "surface": "Current official text", "source_scope": "Finest Playa Mujeres"},
+    "clubmed-resort": {"url": "https://www.clubmed.us/r/cancun/y", "checked_on": "2026-10-02", "published_on": null, "surface": "Current official resort text; age headings and named Petit/Mini programs", "source_scope": "Club Med Cancun"},
+    "clubmed-petit": {"url": "https://www.clubmed.us/l/kids-petit", "checked_on": "2026-10-02", "published_on": null, "surface": "Current brand program text/FAQ explicitly lists Cancun and extra cost varying by resort", "source_scope": "Brand program; numeric Cancun fee/session/admission terms not established"},
+    "ziva": {"url": "https://www.resortsbyhyatt.com/ziva/ziva-cancun/all-inclusive-resort-activities", "checked_on": "2026-10-02", "published_on": null, "surface": "Current official KidZ Club included section", "source_scope": "Hyatt Ziva Cancun"},
+    "grand": {"url": "https://thegrand.moonpalace.com/things-to-do/playroom", "checked_on": "2026-10-02", "published_on": null, "surface": "Rendered official body read with browser accessibility; text fetch returned only headings", "source_scope": "Moon Palace The Grand Cancun floor-specific rules"}
+  },
+  "records": [
+    {
+      "id": "finest-playa-mujeres-care",
+      "property": "Finest Playa Mujeres",
+      "existing_model_id": "finest-family-suite",
+      "services": [
+        {"id": "mini-accompanied", "name": "Mini Club accompanied access", "source_ids": ["finest"], "min_age": 0, "max_age": 2, "parent_presence": "required", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": "09:00-17:00", "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null},
+        {"id": "mini", "name": "Mini Club", "source_ids": ["finest"], "min_age": 3, "max_age": 6, "parent_presence": "not-established", "registration": true, "potty_training": null, "session_max_minutes": null, "hours": "09:00-17:00", "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null},
+        {"id": "maxi", "name": "Maxi Club", "source_ids": ["finest"], "min_age": 7, "max_age": 11, "parent_presence": "not-established", "registration": true, "potty_training": null, "session_max_minutes": null, "hours": "09:00-17:00", "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null},
+        {"id": "imagine-lounge", "name": "Imagine Lounge restaurant daycare", "source_ids": ["finest"], "min_age": 3, "max_age": null, "parent_presence": "parents-dining-elsewhere-described", "registration": true, "potty_training": true, "session_max_minutes": 90, "hours": "Breakfast07:00-11:00; dinner17:00-22:30", "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null}
+      ],
+      "task_result": "Two-year-old requires parent for Mini access and is below restaurant-daycare minimum; seven-year-old matches registered Maxi. This does not establish a simultaneous parent-free break.",
+      "budget": {"exact_task_room_nightly_amount": null, "currency": "USD", "room_price_status": "existing-unbound-starting-sample-retained", "care_total_amount": null, "care_total_status": "not-priceable-for-requested-care", "basis": "Retained September27 official Family Suite starting observation: fromUSD843perroom/night, guest mix/travel dates and tax/fee inclusion unstated. This is not this exact-party/stay room quote or numeric care fee; no source date renewed.", "retained_room_observation": {"amount_from": 843, "amount_to": null, "currency": "USD", "unit": "room/night", "category": "Family Suite", "observed_on": "2026-09-27", "source_url": "https://www.finestresorts.com/cancun/finest-playa-mujeres/rooms/family-suite/", "party_basis": "not-stated", "stay_basis": "not-stated", "fee_basis": "tax-and-fee-inclusion-not-stated", "kind": "official-starting", "retrieval_status": "retained-model-observation-not-newly-fetched"}},
+      "missing": ["Age-specific private care terms and dated fee if offered", "Session availability, registration and exact family room quote"],
+      "decision": "PRESERVE existing age distinctions; no Finest defect claimed"
+    },
+    {
+      "id": "clubmed-cancun-care",
+      "property": "Club Med Cancun",
+      "existing_model_id": null,
+      "services": [
+        {"id": "petit", "name": "Petit Club Med", "source_ids": ["clubmed-resort", "clubmed-petit"], "min_age": 2, "max_age": 3, "parent_presence": "parents-away-described", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "extra-charge-numeric-fee-unknown", "fee_amount": null, "fee_currency": null, "fee_unit": null},
+        {"id": "mini", "name": "Mini Club Med age band", "source_ids": ["clubmed-resort"], "min_age": 4, "max_age": 10, "parent_presence": "not-established", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "service-inclusion-not-established-from-this-source", "fee_amount": null, "fee_currency": null, "fee_unit": null}
+      ],
+      "task_result": "Age2 matches named additional-cost Petit; age7 matches resort4-10 band. Same90-minute simultaneous booking availability and care conditions are unconfirmed; generic evening-care examples are not imported as Cancun promises.",
+      "budget": {"exact_task_room_nightly_amount": null, "currency": "USD", "room_price_status": "not-observed-for-this-task", "care_total_amount": null, "care_total_status": "additional-cost-unpriced", "basis": "No numeric resort-specific care rate/unit/tax/session quote or exact family room quote; advertised under4 accommodation offer is not free childcare."},
+      "missing": ["Current Petit per-child/day-or-session rate, tax, cancellation and minimum package", "Cancun admission/training/session and older-club inclusion", "Exact room/party/stay quote"],
+      "decision": "CANDIDATE comparison evidence only; not an added public hotel"
+    },
+    {
+      "id": "hyatt-ziva-cancun-care",
+      "property": "Hyatt Ziva Cancun",
+      "existing_model_id": "ziva-ocean-view-double",
+      "services": [
+        {"id": "kidz", "name": "KidZ Club", "source_ids": ["ziva"], "min_age": 4, "max_age": 12, "parent_presence": "supervised-program-parent-policy-not-established", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "published-included-eligible-program", "fee_amount": null, "fee_currency": null, "fee_unit": null}
+      ],
+      "task_result": "Age7 is within published included KidZ4-12 band; age2 is outside it. Included KidZ does not mean included private toddler care or guarantee acceptance.",
+      "budget": {"exact_task_room_nightly_amount": null, "currency": "USD", "room_price_status": "not-observed-for-this-task", "care_total_amount": null, "care_total_status": "toddler-care-unpriced", "basis": "Eligible KidZ inclusion is qualitative, not a priced toddler service; old room price null retained. Existing model notes extra-charge advance-arranged babysitting but no current numeric age-specific quote."},
+      "missing": ["Registration, training, session and parent-presence terms", "Two-year-old private care admission/fee and exact room quote"],
+      "decision": "IMPLEMENT candidate replacing unknown club-age field with dated4-12 source; public preview/review/release gates still required"
+    },
+    {
+      "id": "moon-palace-grand-care",
+      "property": "Moon Palace The Grand Cancun",
+      "existing_model_id": "grand-family-suite",
+      "services": [
+        {"id": "mezzanine", "name": "Playroom mezzanine older-child band", "source_ids": ["grand"], "min_age": 4, "max_age": 7, "parent_presence": "dropoff-admission-not-established", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null},
+        {"id": "mezzanine-accompanied", "name": "Playroom mezzanine accompanied younger-child access", "source_ids": ["grand"], "min_age": 0, "max_age": 3, "parent_presence": "required", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null},
+        {"id": "ground", "name": "Playroom ground floor older-child band", "source_ids": ["grand"], "min_age": 8, "max_age": 17, "parent_presence": "dropoff-admission-not-established", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null},
+        {"id": "ground-accompanied", "name": "Playroom ground floor accompanied younger-child access", "source_ids": ["grand"], "min_age": 0, "max_age": 7, "parent_presence": "required", "registration": null, "potty_training": null, "session_max_minutes": null, "hours": null, "cost_status": "numeric-service-fee-not-established", "fee_amount": null, "fee_currency": null, "fee_unit": null}
+      ],
+      "task_result": "Age2 needs adult accompaniment on mezzanine; age7 is in mezzanine band but needs adult on ground floor. Do not flatten the floors into generic4-12 dropoff or presume both children can attend without a parent.",
+      "budget": {"exact_task_room_nightly_amount": null, "currency": "USD", "room_price_status": "different-stay-existing-sample-retained", "care_total_amount": null, "care_total_status": "requested-parent-free-care-not-established", "basis": "Original September27 sample stays unchanged:USD8191total/displayed1638night, Oct18-23five nights/twoadults/one4-17child/one0-3infant/count-only/GrandFamilySuite/RETURN5/taxesfeesdisplayed included/locallevyunknown. It is not this Nov8-13 task or care-inclusive quote."},
+      "missing": ["Floor-specific registration/session and any numeric care fee", "Two-year-old separate care admission/fee if offered", "Exact task stay price including current levy/fees"],
+      "decision": "IMPLEMENT candidate replacing unknown floor-age field with dated property rules, not a babysitting promise; public gates remain"
+    }
+  ],
+  "research_limits": ["No controlled paired US SERP overlap or current numeric demand established", "No exact room-plus-care complete budget yet", "No firsthand, safety, firm suitability or guaranteed dropoff claim", "No source/model/public date or price renewed", "ClubMed FAQ and linked Mini page fetch denied403: no unchanged retry or alternate-tool bypass; only independently accessible named sources used", "Public model correction requires its complete preview/review/release gates; this corpus is research-only"]
+}
