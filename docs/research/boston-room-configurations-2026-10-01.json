@@ -2,9 +2,9 @@
   "schema_version": 1,
   "action": "FT-RES-073",
   "destination": "Boston",
-  "checked_on": "2026-10-01",
+  "checked_on": "2026-10-03",
   "refresh_days": 30,
-  "evidence_scope": "Partial three-category capacity screen from six property audits. No exact-party prices, complete fee/parking inventory, verified rest routes, booking acceptance or Boston publication approval.",
+  "evidence_scope": "Partial five-category corpus: original three conditional five-person candidates plus two October3 Copley exclusion controls. Family Suite marketing identity/capacity remains unresolved; original source dates and separate ParkPlaza price evidence unchanged. No complete fee/current-review/rest corpus, booking acceptance or Boston publication approval.",
   "scenario": {
     "adults": 2,
     "child_ages": [4, 8, 12],
@@ -15,9 +15,28 @@
   "sources": {
     "park": {"url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/rooms/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
     "four": {"url": "https://www.fourseasons.com/boston/accommodations/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
-    "langham": {"url": "https://www.langhamhotels.com/en/the-langham/boston/stay/suites/two-bedroom-suite/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"}
+    "langham": {"url": "https://www.langhamhotels.com/en/the-langham/boston/stay/suites/two-bedroom-suite/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
+    "copley": {"url": "https://www.marriott.com/en-us/hotels/bosco-boston-marriott-copley-place/rooms/", "checked_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"}
   },
   "records": [
+    {
+      "id": "boston-copley-king-jste", "hotel": "Boston Marriott Copley Place", "category": "1 Bedroom Suite, 1 King, Sofa bed (JSTE)", "source_id": "copley",
+      "sleeping_setup": "One king plus sofa; privacy wall separates bed and living area; 450 square feet.",
+      "kitchen": "not-established", "connection": "not-applicable",
+      "configurations": [{"maximum": 3, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Normal exact JSTE modal publishes maximum3; king category is not the marketing two-queen Family Suite."}],
+      "checks": ["Outside five-person limit; do not treat crib as occupancy extension", "No rollaway or connecting rooms in this category", "Refrigerator only, cooking not established", "Exact-party public rate required for any different supported task"],
+      "conflicts": ["Two-queen Family Suite marketing identity/capacity unresolved; do not inherit this king limit."],
+      "price": {"currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Excluded for named five-person task; no actual-party/stay rate adopted"]}
+    },
+    {
+      "id": "boston-copley-two-queen-dbdb", "hotel": "Boston Marriott Copley Place", "category": "Guest room, 2 Queen (DBDB)", "source_id": "copley",
+      "sleeping_setup": "Two queen beds; 275 square feet; no sofa or separate living room listed.",
+      "kitchen": "not-established", "connection": "requested-separate-room",
+      "configurations": [{"maximum": 4, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Normal exact DBDB modal publishes maximum4; not a Family Suite or named connecting bundle."}],
+      "checks": ["Outside five-person single-room limit; no rollaway and no established crib extension", "Some rooms connect; pair, guarantee and charge unverified, not an invented bundle", "Refrigerator only, cooking not established", "Exact-party public rate required for any different supported task"],
+      "conflicts": ["Generic selector8 and marketing Family Suite wording do not extend this exact guest-room limit."],
+      "price": {"currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Excluded for named five-person task; no actual-party/stay rate adopted"]}
+    },
     {
       "id": "boston-park-plaza-deluxe-double", "hotel": "Hilton Boston Park Plaza", "category": "2 Double Beds Deluxe Guestroom", "source_id": "park",
       "sleeping_setup": "Two double beds; fifth sleeping place not established.",

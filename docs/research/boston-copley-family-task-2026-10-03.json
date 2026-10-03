@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-117",
+  "learning_unit": "LRN-130",
+  "inspected_on": "2026-10-03",
+  "task": {"adults": 2, "child_ages": [4,8,12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "accommodations": 1, "no_car": true, "kitchen_preferred": true, "separate_rest_preferred": true, "anchors": ["New England Aquarium", "Boston Children's Museum"], "evidence_class": "EDITORIAL_PROXY_TASK"},
+  "sources": [
+    {"id": "suite-marketing", "url": "https://www.marriott.com/en-us/hotels/bosco-boston-marriott-copley-place/rooms/suites/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "retrieval": "Web-extracted official body; tool crawl label yesterday, not independently timed live booking", "evidence_class": "OFFICIAL_PROPERTY_FACT"},
+    {"id": "category-modals", "url": "https://www.marriott.com/en-us/hotels/bosco-boston-marriott-copley-place/rooms/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "retrieval": "Normal public browser room cards, expanded occupancy FAQ and exact View More modals; no hidden booking API", "evidence_class": "OFFICIAL_PROPERTY_FACT"}
+  ],
+  "marketing_candidate": {"name": "One Bedroom Family Suite", "source_id": "suite-marketing", "description_basis": "Two queen beds, separate bedroom/living area and pull-out sofa", "exact_maximum": null, "exact_card_found": false, "category_identity_reconciled": false, "bookable_or_sold_out": "unknown", "reason_for_absence": null},
+  "category_controls": [
+    {"record_id": "boston-copley-king-jste", "category": "1 Bedroom Suite, 1 King, Sofa bed (JSTE)", "source_id": "category-modals", "published_maximum": 3, "size_sqft": 450, "sleeping_setup": "One king plus sofa; privacy wall separates living and bed", "rollaway_permitted": false, "cribs_permitted": 1, "crib_extends_occupancy": "not-established", "connections_available": false, "cooking_kitchen": "not-established; refrigerator only listed in kitchen section", "actual_five_person_screen": "OUTSIDE_PUBLISHED_LIMIT", "family_suite_maximum_inherited": false},
+    {"record_id": "boston-copley-two-queen-dbdb", "category": "Guest room, 2 Queen (DBDB)", "source_id": "category-modals", "published_maximum": 4, "size_sqft": 275, "sleeping_setup": "Two queen beds; no sofa/separate room listed", "rollaway_permitted": false, "cribs_permitted": 1, "crib_extends_occupancy": "not-established", "connections_available": "some rooms, not a named guaranteed bundle", "cooking_kitchen": "not-established; refrigerator only listed in kitchen section", "actual_five_person_screen": "OUTSIDE_PUBLISHED_LIMIT", "family_suite_maximum_inherited": false}
+  ],
+  "property_faq": {"source_id": "category-modals", "largest_occupancy_published": 4, "transfer_to_unidentified_family_suite": false, "generic_search_maximum": 8, "generic_selector_is_category_capacity": false},
+  "budget_gate": {
+    "observations_file": "docs/research/boston-copley-price-observation-2026-10-03.json",
+    "observation_count": 0,
+    "exact_party_submitted": false,
+    "requested_stay_submitted": false,
+    "public_rate_selected": false,
+    "comparable_configuration_nightly": null,
+    "currency": "USD",
+    "unit": "configuration/night",
+    "full_stay_total": null,
+    "mandatory_fees": null,
+    "deposit": null,
+    "cancellation": null,
+    "reason": "Inspected single-room controls cannot accommodate five; marketing Family Suite has no reconciled exact card/maximum. Do not price smaller controls as family substitutes or invent a connected bundle",
+    "missing_basis": ["Exact Family Suite identity and maximum", "Actual child-age acceptance", "Same-party five-night public-plan price, taxes/mandatory fees, deposit and cancellation", "Confirmed connections/charges if a separately defined multi-room task is later selected"]
+  },
+  "maintained_inputs": {
+    "room_corpus": "docs/research/boston-room-configurations-2026-10-01.json",
+    "original_category_count": 3,
+    "added_exclusion_controls": 2,
+    "five_person_eligible_candidates_added": 0,
+    "old_record_values_or_source_dates_renewed": false,
+    "old_screened_json_rows_unchanged": true,
+    "old_csv_columns_1_to_34_unchanged": true,
+    "old_csv_column_35_scope_updated": true,
+    "old_park_plaza_price_changed": false,
+    "price_provenance": "Original October1 ParkPlaza public plans retain original party/date/fee and unresolved fifth-bed basis"
+  },
+  "decision": {
+    "hypothesis": "Marketing Family Suite and generic selector8 settle this five-person category",
+    "outcome": "REJECT qualification from labels; IMPLEMENT two exact negative controls, HOLD unresolved Family Suite identity/capacity/price",
+    "confidence": "High inspected modal limits and deterministic exclusion; unknown marketing-category inventory cause, Family Suite maximum, actual booking acceptance, cost, rest routes, users or SEO",
+    "remaining_gate": "Reconciled Family Suite exact card/maximum and actual-party public budget, or separately defined supported multi-room task; remaining six-property fee/current-review/rest corpus, materiality/controlled overlap/no existing fit and named Boston approval",
+    "next_eligible_action": "Independent non-city water-play entitlement/category corpus gate, not repeated broad cluster report or forced five-person quote",
+    "falsification_trigger": "New exact Family Suite card/occupancy evidence, corrected category/FAQ mapping, requested-party quote or changed room limits",
+    "paid_calls": 0,
+    "public_change": false,
+    "city_launch_approved": false,
+    "route_stroller_safety_assurance": false,
+    "security_denial_retried": false,
+    "contact_account_or_reservation_mutation": false
+  }
+}

@@ -57,16 +57,16 @@ test("custom iterators cannot hide stored ages or provenance", () => {
   }
 });
 
-test("Boston portable comparison retains three dated plans and two explicit budget gaps", () => {
+test("Boston portable comparison retains dated plans, budget gaps and outside-capacity controls", () => {
   const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
   const samples = JSON.parse(readFileSync(new URL("../docs/research/boston-park-plaza-price-observation-2026-10-01.json", import.meta.url)));
   const before = JSON.stringify([boston, samples]);
-  const cells = roomComparisonCsv(boston, boston.scenario, "2026-10-01", samples).trimEnd().split("\n")
+  const cells = roomComparisonCsv(boston, boston.scenario, "2026-10-03", samples).trimEnd().split("\n")
     .map(line => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m => m[1].replaceAll('""', '"')));
   assert.deepEqual(cells[0], comparisonHeadings);
   const rows = cells.slice(1);
   const value = (r, h) => r[comparisonHeadings.indexOf(h)];
-  assert.equal(rows.length, 5);
+  assert.equal(rows.length, 7);
   assert.ok(rows.every(r => r.length === 35 && value(r, "Currency") === "USD"));
   const breakfast = rows.find(r => value(r, "Public rate plan") === "Breakfast Included");
   assert.equal(value(breakfast, "Nightly equivalent"), "528.68");
@@ -75,8 +75,11 @@ test("Boston portable comparison retains three dated plans and two explicit budg
   assert.match(value(breakfast, "Capacity conditions"), /fifth sleeping place/);
   assert.match(value(breakfast, "Fee and tax basis"), /included once/);
   const unpriced = rows.filter(r => value(r, "Public rate plan") === "Unpriced");
-  assert.equal(unpriced.length, 2);
+  assert.equal(unpriced.length, 4);
   assert.ok(unpriced.every(r => value(r, "Nightly equivalent") === "" && value(r, "Price observed") === ""));
+  const excluded = rows.filter(r => value(r, "Capacity screen") === "OUTSIDE_PUBLISHED_LIMIT");
+  assert.equal(excluded.length, 2);
+  assert.ok(excluded.every(r => value(r, "Nightly equivalent") === "" && value(r, "Category checked") === "2026-10-03"));
   assert.equal(JSON.stringify([boston, samples]), before);
 });
 
@@ -86,14 +89,16 @@ test("Boston public plans preserve mandatory fee, meal age limits and conditiona
   const boston = JSON.parse(readFileSync(packPath, "utf8"));
   const samples = JSON.parse(readFileSync(pricePath, "utf8"));
   const before = JSON.stringify([boston, samples]);
-  const rows = screenRoomPack(boston, boston.scenario, "2026-10-01", samples);
+  const rows = screenRoomPack(boston, boston.scenario, "2026-10-03", samples);
   const r = row(rows, "boston-park-plaza-deluxe-double");
-  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [fileURLToPath(new URL("./family-room-task.mjs", import.meta.url)), packPath, "2026-10-01", pricePath], {encoding:"utf8"})), rows);
+  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [fileURLToPath(new URL("./family-room-task.mjs", import.meta.url)), packPath, "2026-10-03", pricePath], {encoding:"utf8"})), rows);
   assert.equal(r.screening, "CONDITIONAL_PUBLISHED_CAPACITY");
   assert.match(r.conditions[0], /fifth sleeping place/);
   assert.equal(r.price.age_input_mode, "provider-age-band-counts");
   assert.deepEqual(r.price.rates.map(v => v.nightly_average), [372.10, 444.84, 528.68]);
   assert.equal(r.price.amount, null);
+  assert.equal(r.checked_on, "2026-10-01");
+  assert.equal(r.price.observed_on, "2026-10-01");
   assert.match(r.price.fee_basis, /included once/);
   assert.match(r.price.rates[2].meals, /ages8\/12 not/);
   assert.match(r.price.rates[1].cancellation, /November5,2026/);
@@ -108,11 +113,11 @@ test("Boston sample cannot carry across ages, stay, stale dates or membership-on
   const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
   const samples = JSON.parse(readFileSync(new URL("../docs/research/boston-park-plaza-price-observation-2026-10-01.json", import.meta.url)));
   for (const party of [{...boston.scenario, child_ages:[4,8,13]}, {...boston.scenario, stay:{arrival:"2026-11-09",departure:"2026-11-14"}}])
-    assert.equal(row(screenRoomPack(boston, party, "2026-10-01", samples), "boston-park-plaza-deluxe-double").price.status, "not-observed");
+    assert.equal(row(screenRoomPack(boston, party, "2026-10-03", samples), "boston-park-plaza-deluxe-double").price.status, "not-observed");
   assert.equal(row(screenRoomPack(boston, boston.scenario, "2026-10-16", samples), "boston-park-plaza-deluxe-double").price.status, "historical-dated-stay-samples");
   const member = structuredClone(samples);
   member[0].rates.push({plan:"Member starting rate",eligibility:"membership-required",stay_amount:100,meals:"unknown",cancellation:"unknown"});
-  assert.equal(row(screenRoomPack(boston, boston.scenario, "2026-10-01", member), "boston-park-plaza-deluxe-double").price.amount_from, 372.10);
+  assert.equal(row(screenRoomPack(boston, boston.scenario, "2026-10-03", member), "boston-park-plaza-deluxe-double").price.amount_from, 372.10);
 });
 
 test("Boston partial capacity corpus is conditional and does not fabricate budget or omitted categories", () => {
@@ -120,25 +125,53 @@ test("Boston partial capacity corpus is conditional and does not fabricate budge
   const boston = JSON.parse(readFileSync(path, "utf8"));
   const before = JSON.stringify(boston);
   assert.deepEqual(validateRoomPack(boston), []);
-  const rows = screenRoomPack(boston, boston.scenario, "2026-10-01");
-  assert.equal(rows.length, 3);
-  assert.ok(rows.every(r => r.screening === "CONDITIONAL_PUBLISHED_CAPACITY"));
+  const rows = screenRoomPack(boston, boston.scenario, "2026-10-03");
+  assert.equal(rows.length, 5);
+  const conditional = rows.filter(r => r.screening === "CONDITIONAL_PUBLISHED_CAPACITY");
+  assert.equal(conditional.length, 3);
   assert.ok(rows.every(r => r.price.amount === null && r.price.currency === "USD" && r.kitchen === "not-established"));
-  assert.ok(rows.every(r => r.conditions.length > 0 && r.checked_on === "2026-10-01"));
+  assert.ok(conditional.every(r => r.conditions.length > 0 && r.checked_on === "2026-10-01"));
+  assert.equal(rows.filter(r => r.screening === "OUTSIDE_PUBLISHED_LIMIT" && r.checked_on === "2026-10-03").length, 2);
   assert.match(row(rows, "boston-park-plaza-deluxe-double").conditions[0], /fifth sleeping place/);
   assert.match(row(rows, "boston-four-seasons-plaza").conditions[0], /crib/);
-  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [fileURLToPath(new URL("./family-room-task.mjs", import.meta.url)), path, "2026-10-01"], {encoding:"utf8"})), rows);
+  assert.deepEqual(JSON.parse(execFileSync(process.execPath, [fileURLToPath(new URL("./family-room-task.mjs", import.meta.url)), path, "2026-10-03"], {encoding:"utf8"})), rows);
   assert.equal(JSON.stringify(boston), before);
 });
 
 test("Boston does not merge adult-only and child configurations or silently renew old sources", () => {
   const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
-  const six = screenRoomPack(boston, {adults:2,child_ages:[4,8,12,16]}, "2026-10-01");
+  const six = screenRoomPack(boston, {adults:2,child_ages:[4,8,12,16]}, "2026-10-03");
   assert.equal(row(six, "boston-park-plaza-deluxe-double").screening, "OUTSIDE_PUBLISHED_LIMIT");
   assert.equal(row(six, "boston-four-seasons-plaza").screening, "CONDITIONAL_PUBLISHED_CAPACITY");
-  assert.equal(row(screenRoomPack(boston, {adults:3,child_ages:[4,8]}, "2026-10-01"), "boston-four-seasons-plaza").screening, "OUTSIDE_PUBLISHED_LIMIT");
-  assert.ok(screenRoomPack(boston, {adults:2,child_ages:[1,4,8,12,16]}, "2026-10-01").every(r => r.screening === "OUTSIDE_PUBLISHED_LIMIT"));
-  assert.ok(screenRoomPack(boston, boston.scenario, "2026-11-01").every(r => r.screening === "RECHECK_SOURCE" && r.checked_on === "2026-10-01"));
+  assert.equal(row(screenRoomPack(boston, {adults:3,child_ages:[4,8]}, "2026-10-03"), "boston-four-seasons-plaza").screening, "OUTSIDE_PUBLISHED_LIMIT");
+  assert.ok(screenRoomPack(boston, {adults:2,child_ages:[1,4,8,12,16]}, "2026-10-03").every(r => r.screening === "OUTSIDE_PUBLISHED_LIMIT"));
+  const mixed = screenRoomPack(boston, boston.scenario, "2026-11-01");
+  assert.equal(mixed.filter(r => r.screening === "RECHECK_SOURCE" && r.checked_on === "2026-10-01").length, 3);
+  assert.equal(mixed.filter(r => r.screening === "OUTSIDE_PUBLISHED_LIMIT" && r.checked_on === "2026-10-03").length, 2);
+  const expired = screenRoomPack(boston, boston.scenario, "2026-11-03");
+  assert.ok(expired.every(r => r.screening === "RECHECK_SOURCE"));
+  assert.ok(expired.every(r => r.checked_on === boston.sources[boston.records.find(record => record.id === r.id).source_id].checked_on));
+});
+
+test("Copley controls reject five guests without transferring suite, crib or selector limits", () => {
+  const boston = JSON.parse(readFileSync(new URL("../docs/research/boston-room-configurations-2026-10-01.json", import.meta.url)));
+  const samples = JSON.parse(readFileSync(new URL("../docs/research/boston-park-plaza-price-observation-2026-10-01.json", import.meta.url)));
+  const ids = ["boston-copley-king-jste", "boston-copley-two-queen-dbdb"];
+  const rows = screenRoomPack(boston, boston.scenario, "2026-10-03", samples);
+  for (const [index, id] of ids.entries()) {
+    const record = boston.records.find(r => r.id === id), output = row(rows, id);
+    assert.equal(record.configurations[0].maximum, index + 3);
+    assert.equal(record.configurations[0].infant_extension, null);
+    assert.equal(output.screening, "OUTSIDE_PUBLISHED_LIMIT");
+    assert.equal(output.price.status, "not-observed");
+    assert.equal(output.price.amount, null);
+    assert.equal(output.checked_on, "2026-10-03");
+    assert.match(output.conflicts.join(" "), /Family Suite/);
+  }
+  assert.equal(row(screenRoomPack(boston, {adults:2,child_ages:[4,8]}, "2026-10-03"), ids[0]).screening, "OUTSIDE_PUBLISHED_LIMIT");
+  assert.equal(row(screenRoomPack(boston, {adults:2,child_ages:[4,8]}, "2026-10-03"), ids[1]).screening, "WITHIN_PUBLISHED_CAPACITY");
+  assert.equal(row(screenRoomPack(boston, {adults:2,child_ages:[0,4,8]}, "2026-10-03"), ids[1]).screening, "OUTSIDE_PUBLISHED_LIMIT");
+  assert.throws(() => screenRoomPack(boston, boston.scenario, "2026-10-01"), /screening date/);
 });
 
 test("six current official categories validate with exact price gaps", () => {
