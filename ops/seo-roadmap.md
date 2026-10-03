@@ -1,5 +1,9 @@
 # Family Tripwise SEO Roadmap
 
+Current110 decision: PRESERVE current review gap, REJECT search-label freshness; current qualifying sample0/0 and only historical Homewood question prompts. Canonical Residence throttling remains narrow/change-triggered, no hourly retry or alternate-domain/tool bypass. Structured dates/attempts: `docs/research/washington-dc-kitchen-review-signals-2026-10-03.json`. NativeQA/read-onlyPASS/docs release next; original prices/corpus/fee/eleven held untouched, DC approval separate.
+
+Current110: bounded dated guest-review evidence for Homewood Downtown/Residence National Mall kitchen-task gate. Seven paths registered before collection, original corpus/prices/eleven held preserved; nativeQA/different read-onlyPASS before docs-only release.109 research release64517f14f6fbf693ce9bedb4b606975981c5f56c remoteverified17:40:06.353Z/BernoulliPASS/0-0, no public production change. Second transaction, no launch authority expansion.
+
 Current109 decision: CANDIDATE meal/optional-cost inputs/PRESERVE mandatory/hold/setup and service conflict; no full-budget winner. LRN120/source-class/crawl limits: `docs/research/washington-dc-kitchen-fee-audit-2026-10-03.md`. Native QA/read-only review before exact seven-path research release.059next exact fee/setup/review/rest/materiality/approval gates;11held/original corpus and prices unchanged.
 
 Current109: resolve Homewood/Residence published kitchen-task fee/meal constraints while preserving dated exact-party budget observations. Seven paths registered before collection; no full quote, route-fit or DC publication inference. First action of new17:20:02UTC run/deadline18:05:02/maxthree,11held/063completion retained; nativeQA/read-onlyPASS before docs-only release.

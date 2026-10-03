@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-110",
+  "parent_item": "FT-RES-059",
+  "learning_unit": "LRN-121",
+  "inspected_on": "2026-10-03",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "car": false,
+    "pets": false,
+    "evidence_class": "EDITORIAL_PROXY",
+    "actual_user_test": false
+  },
+  "hypothesis": "Current search labels supply a current two-property guest-review corpus for the kitchen and sleeping task.",
+  "collection": {
+    "queries": [
+      "Homewood Suites Washington DC Downtown reviews kitchen breakfast sofa bed 2026",
+      "Residence Inn Washington DC National Mall reviews breakfast kitchen sofa 2026"
+    ],
+    "market": "Qualitative search-tool sample, not controlled US Google ranks",
+    "body_open_attempts": 3,
+    "paid_calls": 0,
+    "alternate_domains_or_tools_used": false
+  },
+  "sources": [
+    {
+      "id": "homewood-search",
+      "url": "https://www.tripadvisor.com/Hotel_Review-g28970-d224337-Reviews-Homewood_Suites_By_Hilton_Washington_D_c_Downtown-Washington_DC_District_of_Columbia.html",
+      "class": "SEARCH_LEAD_NOT_ADOPTED",
+      "inspected_on": "2026-10-03",
+      "crawl_label": "last month",
+      "listing_year_label": 2026,
+      "individual_current_signals_adopted": 0
+    },
+    {
+      "id": "homewood-body",
+      "url": "https://www.tripadvisor.com/Hotel_Review-g28970-d224337-Reviews-Homewood_Suites_By_Hilton_Washington_D_c_Downtown-Washington_DC_District_of_Columbia.html",
+      "class": "HISTORICAL_INDIVIDUAL_REVIEW_SIGNAL",
+      "inspected_on": "2026-10-03",
+      "crawl_label": "last year",
+      "listing_year_label": 2025,
+      "body_line_locator": "432-468",
+      "sorting": "Detailed reviews, recency and descriptiveness; selected favorite label visible",
+      "published_month": "2025-01",
+      "stay_month": "2025-01",
+      "selection_bias": "Featured historical report, not random or complete sample; stay and family label self-reported, not independently verified"
+    },
+    {
+      "id": "residence-search",
+      "url": "https://www.tripadvisor.com/Hotel_Review-g28970-d498950-Reviews-Residence_Inn_by_Marriott_Washington_DC_National_Mall-Washington_DC_District_of_Columbia.html",
+      "class": "SEARCH_LEAD_NOT_ADOPTED",
+      "inspected_on": "2026-10-03",
+      "crawl_label": "3 weeks ago",
+      "listing_year_label": 2026,
+      "individual_current_signals_adopted": 0
+    },
+    {
+      "id": "residence-body",
+      "url": "https://www.tripadvisor.com/Hotel_Review-g28970-d498950-Reviews-Residence_Inn_by_Marriott_Washington_DC_National_Mall-Washington_DC_District_of_Columbia.html",
+      "class": "UNAVAILABLE_BODY",
+      "inspected_on": "2026-10-03",
+      "attempts": [
+        {
+          "attempt": 1,
+          "result": "Internal Error"
+        },
+        {
+          "attempt": 2,
+          "result": "Failed to fetch: Online fetch throttled",
+          "reason": "One same-canonical-URL retry for the initially ambiguous transient error"
+        }
+      ],
+      "retry_again": false
+    }
+  ],
+  "historical_signals": [
+    {
+      "id": "HW-HIST-01",
+      "source_id": "homewood-body",
+      "property": "Homewood Suites by Hilton Washington DC Downtown",
+      "published_month": "2025-01",
+      "stay_month": "2025-01",
+      "trip_label": "Family (self-reported)",
+      "exact_category": null,
+      "party_size": null,
+      "child_ages": null,
+      "paraphrase": "One family described using the kitchen and sofa bed, limited cooking utensils and refrigerator noise near the sofa sleeper; breakfast met that family's needs.",
+      "class": "HISTORICAL_INDIVIDUAL_REVIEW_SIGNAL",
+      "theme_prevalence": null,
+      "current_operation_confirmed": false,
+      "independently_verified_stay": false
+    }
+  ],
+  "current_qualifying_sample": {
+    "homewood": 0,
+    "residence": 0,
+    "representative_sample": false
+  },
+  "excluded": [
+    "Search-only recent review leads, aggregate ratings/counts, marketing descriptions, other DC properties, regional duplicates, management replies, default unrelated prices and route/safety claims"
+  ],
+  "blocker": {
+    "failed_tool": "web.run open canonical Residence Inn Tripadvisor URL",
+    "affected_gate": "Current individual-body review-signal corpus",
+    "owner": "External review source/tool availability; operator owns recheck selection",
+    "unblock_condition": "Canonical body becomes accessible without throttling or a genuinely changed authorized evidence route",
+    "next_check": "Next relevant evidence-eligible run after an access-state change, not an unchanged hourly retry",
+    "attempts": 2,
+    "security_bypass_allowed": false
+  },
+  "decision": {
+    "result": "PRESERVE current review-signal gap; REJECT current-corpus inference from search labels",
+    "confidence": "High in inspected fetch/crawl limitations; low in current guest experience",
+    "reusable_lesson": "Inspection date does not renew a historical guest report; kitchen amenities do not settle utensil stock or appliance noise for a sofa sleeper.",
+    "next_falsification_trigger": "Accessible current dated individual bodies for the exact properties, or exact-category evidence resolving meal/sleep constraints",
+    "next_action": "Independent eligible work; current review gate remains held until changed source access/fresh body evidence",
+    "public_change": false,
+    "city_launch_approved": false,
+    "firm_suitability_claim": false
+  },
+  "preservation": {
+    "room_corpus": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "price_observations": [
+      "docs/research/washington-dc-homewood-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-residence-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-embassy-price-observation-2026-09-30.json"
+    ],
+    "fee_audit": "docs/research/washington-dc-kitchen-fee-audit-2026-10-03.json",
+    "old_observations_renewed": false
+  }
+}
