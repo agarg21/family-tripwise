@@ -1,5 +1,13 @@
 # Family Tripwise SEO Roadmap
 
+FT-IMP-067 Pascal01a103ce-8129-7071-8d63-d915cfa2cea5 cycle1PASS/noP0-P3; independent486full99focused/0failures-skips-cancellations/state0/GSC82/SEO31URLs34HTML0-fiveprior/708baseline710candidate9paths55public237prioritems/11held preserved. Original120cost/date/ageunknowns and063onlythreefields verified. No independent live/production; all sessions finished. Immutable consensus, exact sharedtool-record/docs release next.
+
+Current FT-IMP-067 IMPLEMENTED limited numeric Homewood sample with age-unresolved status, pending nativeQA/read-onlyPASS/exact9path push. Remaining actual age acceptance/full-cost/transport/corpus gates separate; evidence `docs/research/orlando-unknown-age-price-integration-2026-10-03.md`. PublicOctober22/oldquotes retained; DCfamilytask next.
+
+Current FT-IMP-067 finishes120 useful budget preservation through strict age-unresolved family-count sample; exact9paths/fullfocusedQA/read-onlyPASS/release before delivery. Unknown child policy/actual ages remain unresolved and locally exported, not best-price or age-accepted booking. PublicOctober22 preserved; DC task next eligible.
+
+FT-RES-120 docs/shared-record releaseef3ab3ca67bd2ca87d05e9cbe19172e5388a15b8 remoteverified2026-10-03T21:44:05.317Z/HEADorigin0-0/exact10paths/all707index/threeGitguards/freshfetch/sole reviewedrange/normalpush/JasonPASS. No public production change/Pageswait;11held and oldquotes preserved.119/066/120 complete this actual21:01:02run'sthree transactions/no fourth. Mechanical completion retained locally for next substantive transaction, no metadata-onlycommit.
+
 FT-RES-120 Jason01a103b6-48a7-76c2-85b5-2ffcaca0a931 cycle1PASS/noP0-P3. Independent479full92focused/0failures-skips-cancellations/state0/GSC82/localSEO0fiveprior/tenhashes707candidate703baseline55public236prioritems/11held preserved;063onlythreefields/066completion unchanged. No independent live/production. All sessions finished; immutable consensus, exact10path docs/record push next, third/final/no fourth.
 
 Current FT-RES-120: IMPLEMENTED cooking-category control with held anonymous count-only budget, pending nativeQA/read-onlyPASS/exact10path release. CANDIDATE explicit child-age basis or reviewed conservative unknown-count schema nexteligiblewake; preserve publicOctober22/oldquotes. Evidence `docs/research/orlando-homewood-room-task-2026-10-03.json`. Floridays dependency changed-state only; no fourthtransaction/newcitylaunch.

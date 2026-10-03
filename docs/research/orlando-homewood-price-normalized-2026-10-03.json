@@ -1,0 +1,72 @@
+[
+  {
+    "schema_version": 5,
+    "action": "FT-IMP-067",
+    "derived_from": "docs/research/orlando-homewood-room-task-2026-10-03.json",
+    "record_id": "orlando-homewood-theme-parks-two-queen-one-bedroom",
+    "category": "2 Queen Beds 1 Bedroom Suite",
+    "source_url": "https://www.hilton.com/en/hotels/orlwwhw-homewood-suites-orlando-theme-parks/rooms/",
+    "source_surface": "https://www.hilton.com/en/book/reservation/rates/ | Ordinary anonymous IAB link from exact NQS room card; propertyORLWWHW, no login/reservation/rate selection",
+    "checked_on": "2026-10-03",
+    "evidence_class": "BOOKING_CHECK",
+    "configuration_count": 1,
+    "currency": "USD",
+    "currency_basis": "Visible selected USD - US Dollar option and Price in US Dollar modal",
+    "currency_evidence_class": "OBSERVED_ISO_CURRENCY",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12,
+        15
+      ]
+    },
+    "party_basis": "requested-task-context-not-provider-age-acceptance",
+    "requested_individual_ages_confirmed": false,
+    "engine_party": {
+      "adults": 2,
+      "children": 4,
+      "child_ages": null,
+      "adult_from_age": 18,
+      "child_age_from": null,
+      "child_age_to": null,
+      "age_input_mode": "provider-counts-unknown-child-band",
+      "individual_ages_entered": false,
+      "requested_individual_ages_confirmed": false,
+      "classification_basis": "published-adult-cutoff-unknown-child-band-counts"
+    },
+    "booking_category": "2 Queen Beds 1 Bedroom Suite",
+    "configuration_basis": "One NQS suite; persisted two-adult/four-child counts only. Requested ages4/8/12/15 are task context, not provider-age acceptance. Child band/infant policy unknown.",
+    "fee_basis": "Displayed estimated room plus government taxes; additional fees/charges during stay excluded, unknown complete mandatory extras. No-car task does not select parking.",
+    "deposit_basis": "Pay when staying; credit card guarantee required; incidental hold may apply and duration variable",
+    "rates": [
+      {
+        "plan": "Flexible Rate",
+        "eligibility": "public",
+        "eligibility_basis": "Anonymous non-Honors plan; membership prices and from144 discarded",
+        "stay_amount": 952.88,
+        "room_subtotal": 847,
+        "displayed_taxes": 105.88,
+        "displayed_tax_rates_percent": [
+          6.5,
+          6
+        ],
+        "nightly_before_displayed_tax": [
+          216,
+          170,
+          152,
+          159,
+          150
+        ],
+        "meals": "Breakfast included; remaining meals not priced",
+        "cancellation": "Observed free cancellation before23:59 local hotel time November7 2026; early departure may change price"
+      }
+    ],
+    "limitation": "Dated age-unresolved count-only search sample. Actual individual ages were neither entered nor confirmed; published adult18+ does not establish child/infant policy. Not age-qualified or final-fee/booking acceptance, current/future availability, seasonal range or property value ranking. Original120 facts/quote/date/held-array retained; no new provider observation."
+  }
+]

@@ -28,7 +28,7 @@ export function validateRoomPrices(observations, pack) {
   const identities = new Set();
   for (const o of observations) {
     const fail = message => errors.push(`${o?.record_id ?? "observation"}: ${message}`);
-    if (!o || ![1, 2, 3, 4].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
+    if (!o || ![1, 2, 3, 4, 5].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
       fail("Invalid date/class"); continue;
     }
     const record = pack.records.find(r => r.id === o.record_id);
@@ -41,8 +41,10 @@ export function validateRoomPrices(observations, pack) {
     if (!validParty(o.party)) { fail("Invalid family party"); continue; }
     const engine = o.engine_party;
     if (o.schema_version >= 2 && (!text(o.booking_category) || !text(o.configuration_basis) ||
-        !text(o.deposit_basis) || !["individual-ages", "provider-age-band-counts"].includes(engine?.age_input_mode)))
+        !text(o.deposit_basis) || !["individual-ages", "provider-age-band-counts", "provider-counts-unknown-child-band"].includes(engine?.age_input_mode)))
       fail("Missing priced-configuration, age-input or deposit basis");
+    if (engine?.age_input_mode === "provider-counts-unknown-child-band" && o.schema_version !== 5)
+      fail("Unknown child-band mode requires schema5");
     const individualUnknown = o.schema_version === 3 && engine?.age_input_mode === "individual-ages" &&
       engine.adult_from_age === null && engine.child_age_from === null && engine.child_age_to === null &&
       engine.classification_basis === "unpublished-cutoffs-exact-individual-party";
@@ -53,9 +55,23 @@ export function validateRoomPrices(observations, pack) {
       engine.classification_basis === "unpublished-adult-cutoff-published-child-band-counts" &&
       o.requested_individual_ages_confirmed === false && text(o.currency_basis) &&
       ["OBSERVED_ISO_CURRENCY", "EDITORIAL_INTERPRETATION"].includes(o.currency_evidence_class);
+    const childBandUnknown = o.schema_version === 5 && engine?.age_input_mode === "provider-counts-unknown-child-band" &&
+      Number.isInteger(engine.adult_from_age) && engine.adult_from_age > 0 &&
+      engine.child_age_from === null && engine.child_age_to === null && engine.child_ages === null &&
+      engine.individual_ages_entered === false && engine.requested_individual_ages_confirmed === false &&
+      engine.classification_basis === "published-adult-cutoff-unknown-child-band-counts" &&
+      o.requested_individual_ages_confirmed === false && o.party_basis === "requested-task-context-not-provider-age-acceptance" &&
+      text(o.currency_basis) && ["OBSERVED_ISO_CURRENCY", "EDITORIAL_INTERPRETATION"].includes(o.currency_evidence_class);
     if (o.schema_version === 3 && !individualUnknown) fail("Schema3 requires explicit unknown cutoffs and individual ages");
     if (o.schema_version === 4 && !countUnknown) { fail("Schema4 requires explicit count-only, child-band, unknown-adult-cutoff and currency basis"); continue; }
-    if (countUnknown) {
+    if (o.schema_version === 5 && !childBandUnknown) { fail("Schema5 requires explicit unknown child-band, unconfirmed task ages, count mode and currency basis"); continue; }
+    if (childBandUnknown) {
+      // Match recorded search context, not provider acceptance of the requested ages.
+      if (!Number.isInteger(engine.adults) || engine.adults !== o.party.adults ||
+          !Number.isInteger(engine.children) || engine.children < 1 || engine.children !== o.party.child_ages.length ||
+          o.party.child_ages.some(age => age >= engine.adult_from_age))
+        fail("Unknown-child-band counts mismatch or conflict with published adult cutoff");
+    } else if (countUnknown) {
       // Published child bands can qualify requested ages without inventing the complementary adult cutoff.
       if (!Number.isInteger(engine.adults) || engine.adults !== o.party.adults ||
           !Number.isInteger(engine.children) || engine.children !== o.party.child_ages.length ||
@@ -68,7 +84,7 @@ export function validateRoomPrices(observations, pack) {
         !Number.isInteger(engine.child_age_from) || engine.child_age_from < 0 ||
         engine.child_age_to !== engine.adult_from_age - 1 || engine.child_age_from > engine.child_age_to ||
         !validParty(engine)) { fail("Invalid engine age basis"); continue; }
-    if (!individualUnknown && !countUnknown) {
+    if (!individualUnknown && !countUnknown && !childBandUnknown) {
       const younger = o.party.child_ages.filter(age => age >= engine.child_age_from && age < engine.adult_from_age);
       const adultCount = o.party.adults + o.party.child_ages.filter(age => age >= engine.adult_from_age).length;
       if (o.party.child_ages.some(age => age < engine.child_age_from) || engine.adults !== adultCount ||
@@ -105,7 +121,8 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     nightly_average: Math.round(rate.stay_amount * 100 / observation.nights) / 100 }));
   if (!rates.length) return null;
   const age = (Date.parse(asOf) - Date.parse(observation.checked_on)) / 86400000;
-  const status = observation.schema_version === 4 ? "dated-count-only-stay-samples" : "dated-stay-samples";
+  const status = observation.schema_version === 5 ? "dated-age-unresolved-count-samples" :
+    observation.schema_version === 4 ? "dated-count-only-stay-samples" : "dated-stay-samples";
   return { status: age > 14 ? `historical-${status}` : status,
     currency: observation.currency, unit: "configuration/night", amount: null,
     amount_from: Math.min(...rates.map(rate => rate.nightly_average)), amount_to: Math.max(...rates.map(rate => rate.nightly_average)),
@@ -114,13 +131,15 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     booking_category: observation.booking_category ?? observation.category,
     configuration_basis: observation.configuration_basis ?? "See source-surface and limitation context",
     age_input_mode: observation.engine_party.age_input_mode ?? "not-recorded",
-    ...(observation.schema_version === 4 ? { requested_individual_ages_confirmed: false,
+    ...(observation.schema_version >= 4 ? { requested_individual_ages_confirmed: false,
       currency_basis: observation.currency_basis, currency_evidence_class: observation.currency_evidence_class } : {}),
+    ...(observation.schema_version === 5 ? { party_basis: observation.party_basis } : {}),
     deposit_basis: observation.deposit_basis ?? "not-established",
     excluded_rate_plans: observation.rates.filter(rate => observation.schema_version >= 2 && rate.eligibility !== "public").map(rate => rate.plan),
     stay: { arrival: observation.arrival, departure: observation.departure, nights: observation.nights },
     rates, fee_basis: observation.fee_basis, source_url: observation.source_url, source_surface: observation.source_surface,
     evidence_class: "BOOKING_CHECK", derivation_class: "EDITORIAL_INTERPRETATION",
     observation_limitation: observation.limitation,
-    limitation: "Nightly equivalents of displayed rate plans for one dated stay, not a typical seasonal range, final fee-inclusive quote, future availability or hotel value ranking." };
+    limitation: "Nightly equivalents of displayed rate plans for one dated stay, not a typical seasonal range, final fee-inclusive quote, future availability or hotel value ranking." +
+      (observation.schema_version === 5 ? " Child-age applicability unresolved; requested task ages were not confirmed by the provider." : "") };
 }
