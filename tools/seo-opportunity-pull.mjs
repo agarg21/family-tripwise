@@ -24,8 +24,13 @@ function taskStrings(value, limit, required) {
 }
 function preflight(input) {
   if (!input || typeof input !== "object" || types.isProxy(input) || Array.isArray(input)) throw new Error("Invalid research manifest");
+  const hasAction = Object.hasOwn(input, "action");
+  const action = hasAction ? ownData(input, "action") : "FT-ACC-001";
+  if (typeof action !== "string" || !/^FT-(?:ACC|RES|IMP|OPS)-[0-9]{3}$/.test(action)) throw new Error("Invalid research action ID");
   // Copy approved data before any await; callers cannot widen later requests.
   const batch = Object.freeze({
+    action,
+    action_source: hasAction ? "manifest" : "legacy-default",
     prior_spend_usd: ownData(input, "prior_spend_usd"),
     cumulative_ceiling_usd: ownData(input, "cumulative_ceiling_usd"),
     batch_ceiling_usd: ownData(input, "batch_ceiling_usd"),
@@ -63,7 +68,7 @@ function loadAuth(raw) {
 export async function runBatch(batch, output, { auth, fetcher = fetch } = {}) {
   batch = preflight(batch).batch;
   try { await access(output); throw new Error("Output already exists; do not repeat a potentially billed batch"); } catch (e) { if (e.code !== "ENOENT") throw e; }
-  const report = { schema_version: 1, action: "FT-ACC-001", collected_at: new Date().toISOString(), market: "US", location_code: 2840, language_code: "en", budget: { batch_ceiling_usd: 0.5, cumulative_ceiling_usd: batch.cumulative_ceiling_usd, prior_spend_usd: batch.prior_spend_usd }, calls: [], keywords: [], serps: [], limitations: ["Provider estimates, not people or traffic forecasts", "Null metrics are unknown, not zero", "KD zero is not proof of easy ranking", "Monthly history can lag launches; seasonality is not trend proof", "No paid automatic retries; unknown outcomes require reconciliation"] };
+  const report = { schema_version: 1, action: batch.action, action_source: batch.action_source, collected_at: new Date().toISOString(), market: "US", location_code: 2840, language_code: "en", budget: { batch_ceiling_usd: 0.5, cumulative_ceiling_usd: batch.cumulative_ceiling_usd, prior_spend_usd: batch.prior_spend_usd }, calls: [], keywords: [], serps: [], limitations: ["Provider estimates, not people or traffic forecasts", "Null metrics are unknown, not zero", "KD zero is not proof of easy ranking", "Monthly history can lag launches; seasonality is not trend proof", "No paid automatic retries; unknown outcomes require reconciliation"] };
   const save = async () => { await mkdir(dirname(output), { recursive: true }); await writeFile(output, JSON.stringify(report, null, 2) + "\n"); };
   await save();
   async function call(endpoint, payload, label) {

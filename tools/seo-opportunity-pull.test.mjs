@@ -5,6 +5,64 @@ import { mkdtemp, readFile, rm, access } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 const batch = { keywords: ["family hotels london"], serp_keywords: ["family hotels london"], batch_ceiling_usd: 0.5, prior_spend_usd: 0.14832, cumulative_ceiling_usd: 5 };
+test("receipts preserve registered action or explicitly disclose legacy attribution", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "tripwise-action-success-"));
+  try {
+    for (const [index, manifest] of [batch, { ...batch, action: "FT-RES-115" }].entries()) {
+      const output = join(dir, `${index}.json`);
+      const report = await runBatch(manifest, output, { auth: "test-only", fetcher: async () => new Response(JSON.stringify({ cost: 0.002, tasks: [{ status_code: 20000, result: [{ items: [] }] }] })) });
+      assert.equal(report.action, index ? "FT-RES-115" : "FT-ACC-001");
+      assert.equal(report.action_source, index ? "manifest" : "legacy-default");
+      assert.deepEqual(JSON.parse(await readFile(output, "utf8")), report);
+      assert.equal(report.total_cost_usd, 0.004);
+    }
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+test("invalid action IDs and accessors reject before receipt or network effects", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "tripwise-action-reject-"));
+  let calls = 0, reads = 0;
+  try {
+    const getter = { ...batch };
+    Object.defineProperty(getter, "action", { get() { reads++; return "FT-RES-115"; }, enumerable: true });
+    const hidden = { ...batch };
+    Object.defineProperty(hidden, "action", { value: "FT-RES-115", enumerable: false });
+    const invalid = [null, 115, "", " FT-RES-115", "FT-RES-115\n", "FT-RES-115 extra", "FT-RES-1150", "FT-FOO-115"].map(action => ({ ...batch, action }));
+    for (const manifest of [...invalid, getter, hidden]) {
+      const output = join(dir, "rejected.json");
+      assert.throws(() => validateBatch(manifest));
+      await assert.rejects(runBatch(manifest, output, { auth: "test-only", fetcher: async () => { calls++; throw new Error("must not fetch"); } }));
+      await assert.rejects(access(output), { code: "ENOENT" });
+    }
+    assert.equal(reads, 0); assert.equal(calls, 0);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+test("action identity stays pinned across caller mutation and partial failure", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "tripwise-action-pin-"));
+  const manifest = { ...batch, action: "FT-RES-115" };
+  let calls = 0;
+  try {
+    const output = join(dir, "partial.json");
+    await assert.rejects(runBatch(manifest, output, { auth: "test-only", fetcher: async () => {
+      calls++; manifest.action = "FT-RES-116";
+      return new Response(JSON.stringify({ cost: 0.002, tasks: [{ status_code: calls === 1 ? 20000 : 40101, result: [{ items: [] }] }] }));
+    } }), /no automatic paid retry/);
+    const report = JSON.parse(await readFile(output, "utf8"));
+    assert.equal(report.action, "FT-RES-115"); assert.equal(report.action_source, "manifest");
+    assert.equal(report.calls[1].status, "provider-failure"); assert.equal(calls, 2);
+    await assert.rejects(runBatch(manifest, output, { auth: "test-only", fetcher: async () => { calls++; } }), /already exists/);
+    assert.equal(calls, 2);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+test("inherited action is not adopted as registered manifest attribution", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "tripwise-action-inherited-"));
+  let reads = 0;
+  const prototype = Object.defineProperty({}, "action", { get() { reads++; return "FT-RES-115"; } });
+  const manifest = Object.assign(Object.create(prototype), batch);
+  try {
+    const report = await runBatch(manifest, join(dir, "legacy.json"), { auth: "test-only", fetcher: async () => new Response(JSON.stringify({ cost: 0.002, tasks: [{ status_code: 20000, result: [{ items: [] }] }] })) });
+    assert.equal(report.action, "FT-ACC-001"); assert.equal(report.action_source, "legacy-default"); assert.equal(reads, 0);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
 test("research bounds, budget and SERP subset are explicit", () => {
   assert.ok(validateBatch(batch) < 0.5);
   assert.throws(() => validateBatch({ ...batch, keywords: Array(201).fill("a") }));
