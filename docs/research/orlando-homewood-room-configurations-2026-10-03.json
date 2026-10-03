@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-120",
+  "destination": "Orlando",
+  "checked_on": "2026-10-03",
+  "refresh_days": 30,
+  "evidence_scope": "One independent cooking-suite category, not a waterpark/property review corpus. Capacity and budget basis remain conditional. No public page/new URL/fit/availability/operations claim; raw count-only quote held outside age-qualified numeric comparison.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "one accommodation",
+      "no car",
+      "hotel-only water/rest day",
+      "cooking kitchen preferred"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "homewood": {
+      "url": "https://www.hilton.com/en/hotels/orlwwhw-homewood-suites-orlando-theme-parks/rooms/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "orlando-homewood-theme-parks-two-queen-one-bedroom",
+      "hotel": "Homewood Suites by Hilton Orlando Theme Parks",
+      "category": "2 Queen Beds 1 Bedroom Suite",
+      "source_id": "homewood",
+      "sleeping_setup": "Two queen beds plus full-sized sofa bed; separate bedroom and living area.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm individual child age classification, sleeping allocation and dated reservation; published total maximum is not exact-age acceptance"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact category card and expanded modal publish Sleeps6; not inferred from beds or generic connecting-room amenity."
+        }
+      ],
+      "checks": [
+        "Kitchen publishes twin-burner stove, refrigerator, microwave and dishwasher; only four place settings, confirm extras for six",
+        "Outdoor pool only; no waterpark/lazy-river entitlement or November operation verified",
+        "Free breakfast; grocery/meal costs, airport transport and nap-return practicality not evaluated",
+        "Hotel-info policy source separately records no airport shuttle, cribs or childcare; not a safety or accessibility verdict",
+        "Retain held count-only price with context; resolve age basis before numeric comparison"
+      ],
+      "conflicts": [
+        "Page browser title says Convention Center, but H1/address identify Theme Parks at6940WestwoodBlvd; no transfer from Disney Western Entrance property",
+        "Total capacity6 versus four place settings: equipment count does not reduce occupancy or prove six-person dining readiness"
+      ],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Held count-only sample, not an age-qualified numeric comparison: October3 anonymous Flexible Rate for 2 Queen Beds 1 Bedroom Suite, one room, two adults/four kids, individual ages and child band unknown, Nov8-13 2026 five nights. USD847 room +105.88 displayed taxes =952.88 stay /190.58 derived per room/night; additional charges excluded/unknown, breakfast included. Source Hilton rate-detail UI; no-car task excludes optional parking. Full context in orlando-homewood-room-task-2026-10-03.json; not zero/sold out or a seasonal range.",
+          "No age-qualified normalized observation: provider adult control says18+, but no individual-age input or explicit child band. Schema1-4 cannot preserve all observed/unknown basis without invention."
+        ]
+      }
+    }
+  ],
+  "offer_observations": []
+}

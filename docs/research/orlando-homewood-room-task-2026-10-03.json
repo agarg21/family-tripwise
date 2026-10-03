@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-120",
+  "checked_on": "2026-10-03",
+  "family_decision": "Can six people choose a cooking-suite alternative without borrowing a smaller-party rate or mistaking a pool for a waterpark?",
+  "hypothesis": "Exact six-person cooking-suite facts plus a dated anonymous family-count quote can resolve the next comparison gate.",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "one accommodation",
+      "no car",
+      "hotel-only water/rest day",
+      "cooking kitchen preferred"
+    ],
+    "budget": null
+  },
+  "sources": [
+    {
+      "id": "room",
+      "url": "https://www.hilton.com/en/hotels/orlwwhw-homewood-suites-orlando-theme-parks/rooms/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "surface": "Normal IAB exact room card and expanded modal; web text omitted dynamic categories",
+      "facts": {
+        "maximum": 6,
+        "beds": "two queens and full-sized sofa bed",
+        "separation": "separate bedroom/living",
+        "cooking": "twin burner stove",
+        "equipment": [
+          "full-size refrigerator",
+          "microwave",
+          "dishwasher"
+        ],
+        "place_settings": 4
+      },
+      "limitation": "Published facts not personally verified or reservation acceptance; exact child allocation unknown"
+    },
+    {
+      "id": "info",
+      "url": "https://www.hilton.com/en/hotels/orlwwhw-homewood-suites-orlando-theme-parks/hotel-info/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "surface": "Web current official hotel-info body",
+      "facts": {
+        "pool": "outdoor",
+        "breakfast": "included buffet",
+        "airport_shuttle": "not available",
+        "cribs": "not available",
+        "childcare": "not available",
+        "self_parking": {
+          "amount": 27,
+          "currency": "USD",
+          "unit": "day",
+          "tax_basis": "unknown",
+          "selected": false
+        },
+        "check_in": "16:00",
+        "check_out": "11:00"
+      },
+      "limitation": "No future operations/nap-return/route/child-safety assurances; home page after-fifth-night parking exception not priced for no-car task"
+    }
+  ],
+  "booking_observation": {
+    "evidence_class": "BOOKING_CHECK",
+    "checked_on": "2026-10-03",
+    "source_url": "https://www.hilton.com/en/book/reservation/rates/",
+    "source_surface": "Ordinary anonymous IAB link from exact NQS room card; propertyORLWWHW, no login/reservation/rate selection",
+    "hotel": "Homewood Suites by Hilton Orlando Theme Parks",
+    "category": "2 Queen Beds 1 Bedroom Suite",
+    "category_code": "NQS",
+    "configuration_count": 1,
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "requested_party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12,
+        15
+      ]
+    },
+    "persisted_party": {
+      "adults": 2,
+      "children": 4,
+      "child_ages": null,
+      "individual_ages_entered": false,
+      "adult_control": "ages18andolder",
+      "child_age_from": null,
+      "child_age_to": null
+    },
+    "currency": "USD",
+    "currency_basis": "Visible selected USD - US Dollar option and Price in US Dollar modal",
+    "currency_evidence_class": "OBSERVED_ISO_CURRENCY",
+    "plan": "Flexible Rate",
+    "eligibility": "public",
+    "eligibility_basis": "Anonymous non-Honors plan; membership prices and from144 discarded",
+    "nightly_room_amounts": [
+      216,
+      170,
+      152,
+      159,
+      150
+    ],
+    "room_subtotal": 847,
+    "displayed_taxes": 105.88,
+    "displayed_tax_rates_percent": [
+      6.5,
+      6
+    ],
+    "displayed_stay_amount": 952.88,
+    "derived_nightly_with_displayed_tax": 190.58,
+    "derivation_class": "EDITORIAL_INTERPRETATION",
+    "unit": "one room/night derived over five nights",
+    "meals": "Breakfast included; remaining meals not priced",
+    "cancellation": "Observed free cancellation before23:59 local hotel time November7 2026; early departure may change price",
+    "payment": "Pay when staying; credit card guarantee required; incidental hold may apply and duration variable",
+    "fee_basis": "Displayed estimated room plus government taxes; additional fees/charges during stay excluded, unknown complete mandatory extras. No-car task does not select parking.",
+    "status": "HELD_AGE_BASIS",
+    "normalized": false,
+    "limitation": "Requested individual ages not entered/confirmed; adult18+control alone does not establish an explicit child band or classify infants. Do not normalize into schemas1-4, rank against Cabana or renew as current booking availability."
+  },
+  "dependency": {
+    "command": "web__run.open https://floridaysresortorlando.com/orlando-suites.htm",
+    "result": "URL not accessible via this tool",
+    "gate": "Floridays exact-category official facts",
+    "owner": "official source/tool availability",
+    "unblock_condition": "Source accessibility changes or independently supplied authorized official evidence; no alternate-tool recovery",
+    "next_check": "Only after changed source/tool state, not repeated next hourly wake",
+    "attempts": 1,
+    "workaround": false
+  },
+  "outcome": "IMPLEMENT validated cooking-category screen/export and preserved limited price context; CANDIDATE exact-age price normalization; PRESERVE public/October22 window",
+  "remaining_gates": [
+    "Explicit provider child-age basis or accepted exact-age quote before normalized comparison; optional reviewed schema for wholly unknown count-only age basis without invented policy",
+    "Same-party/stay full-fee/sleep/meal/transport decision; outdoor pool does not qualify waterpark corpus",
+    "Six-to-eight maintained water-property records, current review signals, named task/material information gain and existing-page fit/observation/approval gates"
+  ],
+  "confidence": "High official observed category and arithmetic; unknown age-specific acceptance, complete fees, future operation, parent outcomes and SEO",
+  "next_falsification_trigger": "Changed category/age-input policy or explicit child-age basis; source stale after30days, price recheck after14days; never cadence-only public edits"
+}
