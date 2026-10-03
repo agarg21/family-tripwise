@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-114",
+  "parent_item": "FT-RES-063",
+  "learning_unit": "LRN-126",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "The Family Standard connecting category yields a comparable six-person dated nightly budget through ordinary public rate search",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "car": false,
+    "class": "EDITORIAL_PROXY",
+    "actual_user_test": false
+  },
+  "sources": [
+    {
+      "id": "CATEGORY",
+      "url": "https://www.cocokeyorlando.com/resort-accommodations/family-standard",
+      "class": "OFFICIAL_EXACT_CATEGORY_UI",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null
+    },
+    {
+      "id": "ENGINE",
+      "url": "https://direct-book.com/properties/CocoKeyHotelWaterParkResortdirect",
+      "class": "OFFICIAL_PUBLIC_BOOKING_UI_OBSERVATION",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null
+    },
+    {
+      "id": "POLICY",
+      "url": "https://direct-book.com/properties/CocoKeyHotelWaterParkResortdirect/policies",
+      "class": "OFFICIAL_GENERAL_BOOKING_POLICY",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null
+    }
+  ],
+  "method": {
+    "normal_iab": true,
+    "visible_UI_and_screenshot": true,
+    "party_and_dates_set_through_controls": true,
+    "hidden_api": false,
+    "forced_input": false,
+    "rate_selected": false,
+    "cart_empty": true,
+    "reservation": false,
+    "default_rates_adopted": false,
+    "changed_dates_or_party_to_obtain_rate": false,
+    "paid_calls": 0,
+    "denials_retried": false
+  },
+  "provider_party": {
+    "adult_min_age": 13,
+    "child_min_age": 2,
+    "child_max_age": 12,
+    "infant_max_age_exclusive": 2,
+    "adults": 3,
+    "children": 3,
+    "infants": 0,
+    "rooms_input": 1,
+    "basis": "Age-band counts; requested ages not individually entered",
+    "requested_to_provider_mapping": "Two parents plus15-year-old in adult count;4/8/12 in child count",
+    "engine_vs_outer_widget": "Engine age bands differ from earlier outer widget ages5-12; engine controls govern this search",
+    "individual_age_acceptance_confirmed": false
+  },
+  "category": {
+    "engine_label": "Family Room",
+    "engine_room_type": "306533",
+    "property_label": "Family Standard",
+    "identity_basis": "Engine description names Family Standard/two connecting run-of-house rooms and same654sqft/eight-guest/eight-ticket basis",
+    "physical_rooms": 2,
+    "configuration_units_searched": 1,
+    "published_guests": 8,
+    "beds_per_physical_room": {
+      "type": "Queen",
+      "count": 2
+    },
+    "bathrooms": 2,
+    "connection": "Published connecting configuration; no reservation or assignment confirmation",
+    "other_family_suite_not_substituted": true
+  },
+  "budget": {
+    "currency": "USD",
+    "requested_unit": "per two-room configuration per night",
+    "rate_plans": [],
+    "nightly_amount": null,
+    "stay_amount": null,
+    "exact_category_rate_returned": false,
+    "observation": "Exact Family Room result displayed requested November8-13 unavailable; reason unknown, not hotel-wide sold-out or permanent party rejection",
+    "disabled_other_categories": "Four/five-guest cards displayed six-guest price labels while Select disabled/maximum warning; excluded, no amounts adopted",
+    "fee": {
+      "general_base": 45,
+      "general_tax_inclusive_display": 50.63,
+      "unit": "per room per night",
+      "due": "check-in",
+      "exception": "Unless rate states otherwise",
+      "family_configuration_charge_multiplicity": null,
+      "quote_inclusion": null,
+      "stay_total": null
+    },
+    "incidentals": {
+      "authorization": 100,
+      "currency": "USD",
+      "basis": "General credit-card hold, not extra room price; release on checkout policy, processing timing unknown"
+    },
+    "cancellation": {
+      "general_policy_conflict": "Cancellation section24hours/first-night deposit versus terms24/48/non-refundable and differing deposit language",
+      "exact_rate_terms": null
+    },
+    "complete_cost": false
+  },
+  "gate": {
+    "failed_command": "Ordinary direct-book date/occupancy controls then Family Room displayed-result read",
+    "affected": "Exact same-stay Family Standard price/fee/rate-term comparison",
+    "owner": "Master; official property public inventory",
+    "unblock": "A changed public inventory/category/party state or explicit different task; no repeated unchanged search or contact without authority",
+    "next_check": "On named inventory/source change, not next hourly run",
+    "security_denial": false
+  },
+  "decision": {
+    "result": "CANDIDATE category/age/general-fee inputs; REJECT comparable-price hypothesis for this observed task/PRESERVE public page",
+    "confidence": "High observed UI distinctions; unknown inventory cause/individual acceptance/full cost/operation/user/SEO",
+    "reusable_lesson": "A six-guest price label is not admissible when category capacity/Select state rejects six; generic fee unit does not settle bundled two-room repetition",
+    "next_gate": "Independent existing-corpus water-entitlement/season task or controlled overlap; exact CoCo quote only after changed inventory;6-8maintained property corpus/materiality/named comparison remain",
+    "observation_until": "2026-10-22",
+    "public_change": false,
+    "new_url_approved": false
+  },
+  "preservation": {
+    "prior_113_immutable": true,
+    "prior_cabana_quotes_immutable": true,
+    "eleven_held_unchanged": true,
+    "all_public_bytes_unchanged": true
+  }
+}
