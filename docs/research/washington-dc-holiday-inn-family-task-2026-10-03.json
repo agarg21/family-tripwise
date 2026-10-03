@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-116",
+  "learning_unit": "LRN-129",
+  "inspected_on": "2026-10-03",
+  "task": {"adults": 2, "child_ages": [4,8,12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "accommodations": 1, "no_car": true, "kitchen_preferred": true, "separation_preferred": true, "indoor_pool_preferred": true, "museum_room_rest": true, "evidence_class": "EDITORIAL_PROXY_TASK"},
+  "sources": [
+    {"id": "rooms", "url": "https://www.ihg.com/holidayinn/hotels/us/en/washington/wassm/hoteldetail/rooms", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "retrieval": "Web-extracted body and normal public browser UI; tool crawl label today, exact policy-effective date unknown"},
+    {"id": "amenities", "url": "https://www.ihg.com/holidayinn/hotels/us/en/washington/wassm/hoteldetail/amenities", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "retrieval": "Web-extracted body, tool crawl label today; future operation not established"}
+  ],
+  "category_audit": {
+    "hotel": "Holiday Inn Washington Capitol - National Mall",
+    "source_id": "rooms",
+    "named_categories": ["One Bedroom Suite: 1 King", "Premium: 1 King or 2 Queen", "Standard: 1 King or 2 Queen or 1 Queen", "Suite: 1 King or 2 Queen"],
+    "suite_card_sofa": "May include sofa bed; not a guaranteed exact configuration",
+    "published_maximum": null,
+    "exact_five_person_category": null,
+    "separate_sleeping_space_confirmed_for_party": false,
+    "cooking_kitchen": "not-established",
+    "general_room_features": ["Mini refrigerator", "Coffee equipment", "Connecting rooms by request"],
+    "connection_guaranteed": false,
+    "corpus_record_added": false,
+    "reason": "Bed labels and a conditional sofa do not establish category capacity or five-person booking acceptance"
+  },
+  "amenity_audit": {
+    "source_id": "amenities",
+    "pool_type": "seasonal outdoor rooftop",
+    "published_pool_hours": "10:00-20:00",
+    "november_operation_confirmed": false,
+    "indoor_pool_established": false,
+    "self_service_laundry_listed": true,
+    "hotel_local_or_airport_shuttle_listed": false,
+    "optional_self_parking": {"amount": 65, "currency": "USD", "unit": "day", "tax_included": true, "included_in_no_car_task_total": false},
+    "kids_eat_free_task_entitlement": "not-established; generic label does not prove actual ages, meals or room-plan conditions",
+    "museum_return_minutes": null,
+    "stroller_or_safety_verdict": null
+  },
+  "booking_audit": {
+    "evidence_class": "BOOKING_UI_OBSERVATION",
+    "requested_dates_rendered": true,
+    "rendered_dates": "Nov 8 - 13, 2026",
+    "rendered_nights": 5,
+    "party_submitted": false,
+    "child_ages_submitted": false,
+    "exact_category_selected": false,
+    "calendar_price_adopted": false,
+    "calendar_price_reason": "Date-calendar headline has no verified requested-party or exact-category basis; excluded from maintained quotes",
+    "comparable_nightly_price": null,
+    "full_stay_total": null,
+    "mandatory_fee_total": null,
+    "availability_result": "unknown; no exact-party category search completed",
+    "observations_file": "docs/research/washington-dc-holiday-inn-price-observation-2026-10-03.json",
+    "observation_count": 0,
+    "reservation_or_rate_selected": false,
+    "dependency": {"failed_operation": "Normal public date-calendar CONTINUE click timed out after 3000ms; subsequent getAXState reported tab33 no longer part of browser session", "affected_gate": "Exact-party/category/fee quote and expanded capacity inspection", "owner": "browser session availability", "unblock": "Normal public tab/session available for a separately scoped exact-party/category task", "next_check": "Next eligible capacity-and-price task with normal available session, not an unchanged security-denial retry", "security_denial_observed": false, "alternate_tool_or_browser_used": false}
+  },
+  "maintained_inputs": {
+    "room_corpus": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "qualified_record_count": 4,
+    "old_records_or_dates_renewed": false,
+    "old_price_files": ["docs/research/washington-dc-embassy-price-observation-2026-09-30.json", "docs/research/washington-dc-homewood-price-observation-2026-09-30.json", "docs/research/washington-dc-residence-price-observation-2026-09-30.json"],
+    "old_prices_changed": false
+  },
+  "decision": {
+    "hypothesis": "Capitol location plus suite and pool labels supplies a fifth qualified five-person November alternative",
+    "outcome": "REJECT current qualification; PRESERVE as unresolved candidate until capacity/party/price evidence",
+    "result": "Current source establishes seasonal outdoor, not indoor, water backup; exact five-person capacity, cooking, separation and cost remain unproved",
+    "confidence": "High inspected label distinctions; unknown exact occupancy, booking acceptance, November operation, costs, rest journeys, actual-user preference or SEO effect",
+    "remaining_gate": "Exact category maximum and child-age booking acceptance, dated configuration-night/public-plan taxes-fees budget, meal/separation constraints; DC corpus/current reviews/rest/material demand/no-existing-fit and named publication approval remain",
+    "next_eligible_action": "Independent Boston exact family-category capacity/price gate; no need to stop the project for this session dependency",
+    "falsification_trigger": "Normal expanded exact-category evidence or requested-party dated public quote; changed pool season/amenity facts or supported museum-rest task",
+    "paid_calls": 0,
+    "public_change": false,
+    "city_launch_approved": false,
+    "route_safety_stroller_assurance": false
+  }
+}
