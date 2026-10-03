@@ -1,0 +1,1764 @@
+{
+  "schema_version": 1,
+  "action": "FT-ACC-001",
+  "collected_at": "2026-10-03T15:42:11.708Z",
+  "market": "US",
+  "location_code": 2840,
+  "language_code": "en",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 5,
+    "prior_spend_usd": 0.2168
+  },
+  "calls": [
+    {
+      "endpoint": "dataforseo_labs/google/keyword_overview/live",
+      "label": "keyword-overview",
+      "status": "success",
+      "cost_usd": 0.01236,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "washington dc family hotels",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "best family hotels in washington dc",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "where to stay in washington dc with kids",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "best area to stay in washington dc with kids",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "washington dc hotels for family of 5",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "washington dc hotels with kitchens",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "washington dc family hotels",
+      "search_volume": 320,
+      "keyword_difficulty": 0,
+      "cpc": 2.47,
+      "metrics_updated_at": "2026-09-13 19:27:43 +00:00",
+      "monthly_searches": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 210
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 260
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 210
+        },
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 260
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 390
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 390
+        },
+        {
+          "year": 2026,
+          "month": 2,
+          "search_volume": 390
+        },
+        {
+          "year": 2026,
+          "month": 1,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 12,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 11,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 10,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 9,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 8,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 2900
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 4400
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 3600
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 3600
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 2400
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 2400
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 1900
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 1900
+        },
+        {
+          "year": 2024,
+          "month": 7,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 6,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 5,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 4,
+          "search_volume": 2400
+        },
+        {
+          "year": 2024,
+          "month": 3,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 2,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 1,
+          "search_volume": 2400
+        },
+        {
+          "year": 2023,
+          "month": 12,
+          "search_volume": 1600
+        },
+        {
+          "year": 2023,
+          "month": 11,
+          "search_volume": 1000
+        },
+        {
+          "year": 2023,
+          "month": 10,
+          "search_volume": 1300
+        },
+        {
+          "year": 2023,
+          "month": 9,
+          "search_volume": 1600
+        },
+        {
+          "year": 2023,
+          "month": 8,
+          "search_volume": 1600
+        },
+        {
+          "year": 2023,
+          "month": 7,
+          "search_volume": 1900
+        },
+        {
+          "year": 2023,
+          "month": 6,
+          "search_volume": 1900
+        },
+        {
+          "year": 2023,
+          "month": 5,
+          "search_volume": 1300
+        },
+        {
+          "year": 2023,
+          "month": 4,
+          "search_volume": 1900
+        },
+        {
+          "year": 2023,
+          "month": 3,
+          "search_volume": 2400
+        },
+        {
+          "year": 2023,
+          "month": 2,
+          "search_volume": 2400
+        },
+        {
+          "year": 2023,
+          "month": 1,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 12,
+          "search_volume": 1000
+        },
+        {
+          "year": 2022,
+          "month": 11,
+          "search_volume": 880
+        },
+        {
+          "year": 2022,
+          "month": 10,
+          "search_volume": 720
+        },
+        {
+          "year": 2022,
+          "month": 9,
+          "search_volume": 590
+        },
+        {
+          "year": 2022,
+          "month": 8,
+          "search_volume": 720
+        },
+        {
+          "year": 2022,
+          "month": 7,
+          "search_volume": 880
+        },
+        {
+          "year": 2022,
+          "month": 6,
+          "search_volume": 880
+        },
+        {
+          "year": 2022,
+          "month": 5,
+          "search_volume": 720
+        },
+        {
+          "year": 2022,
+          "month": 4,
+          "search_volume": 1000
+        },
+        {
+          "year": 2022,
+          "month": 3,
+          "search_volume": 1300
+        },
+        {
+          "year": 2022,
+          "month": 2,
+          "search_volume": 1000
+        },
+        {
+          "year": 2022,
+          "month": 1,
+          "search_volume": 720
+        },
+        {
+          "year": 2021,
+          "month": 12,
+          "search_volume": 390
+        },
+        {
+          "year": 2021,
+          "month": 11,
+          "search_volume": 320
+        },
+        {
+          "year": 2021,
+          "month": 10,
+          "search_volume": 320
+        },
+        {
+          "year": 2021,
+          "month": 9,
+          "search_volume": 260
+        },
+        {
+          "year": 2021,
+          "month": 8,
+          "search_volume": 260
+        },
+        {
+          "year": 2021,
+          "month": 7,
+          "search_volume": 390
+        },
+        {
+          "year": 2021,
+          "month": 6,
+          "search_volume": 390
+        },
+        {
+          "year": 2021,
+          "month": 5,
+          "search_volume": 390
+        },
+        {
+          "year": 2021,
+          "month": 4,
+          "search_volume": 320
+        },
+        {
+          "year": 2021,
+          "month": 3,
+          "search_volume": 480
+        },
+        {
+          "year": 2021,
+          "month": 2,
+          "search_volume": 210
+        },
+        {
+          "year": 2021,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2020,
+          "month": 12,
+          "search_volume": 210
+        },
+        {
+          "year": 2020,
+          "month": 11,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 10,
+          "search_volume": 320
+        },
+        {
+          "year": 2020,
+          "month": 9,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 8,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 7,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 6,
+          "search_volume": 210
+        },
+        {
+          "year": 2020,
+          "month": 5,
+          "search_volume": 210
+        },
+        {
+          "year": 2020,
+          "month": 4,
+          "search_volume": 170
+        },
+        {
+          "year": 2020,
+          "month": 3,
+          "search_volume": 390
+        },
+        {
+          "year": 2020,
+          "month": 2,
+          "search_volume": 880
+        },
+        {
+          "year": 2020,
+          "month": 1,
+          "search_volume": 720
+        },
+        {
+          "year": 2019,
+          "month": 12,
+          "search_volume": 480
+        },
+        {
+          "year": 2019,
+          "month": 11,
+          "search_volume": 390
+        },
+        {
+          "year": 2019,
+          "month": 10,
+          "search_volume": 390
+        },
+        {
+          "year": 2019,
+          "month": 9,
+          "search_volume": 260
+        },
+        {
+          "year": 2019,
+          "month": 8,
+          "search_volume": 480
+        },
+        {
+          "year": 2019,
+          "month": 7,
+          "search_volume": 590
+        },
+        {
+          "year": 2019,
+          "month": 6,
+          "search_volume": 480
+        },
+        {
+          "year": 2019,
+          "month": 5,
+          "search_volume": 390
+        },
+        {
+          "year": 2019,
+          "month": 4,
+          "search_volume": 590
+        },
+        {
+          "year": 2019,
+          "month": 3,
+          "search_volume": 720
+        },
+        {
+          "year": 2019,
+          "month": 2,
+          "search_volume": 480
+        },
+        {
+          "year": 2019,
+          "month": 1,
+          "search_volume": 390
+        },
+        {
+          "year": 2018,
+          "month": 12,
+          "search_volume": 210
+        },
+        {
+          "year": 2018,
+          "month": 11,
+          "search_volume": 170
+        },
+        {
+          "year": 2018,
+          "month": 10,
+          "search_volume": 210
+        },
+        {
+          "year": 2018,
+          "month": 9,
+          "search_volume": 390
+        },
+        {
+          "year": 2018,
+          "month": 8,
+          "search_volume": 390
+        },
+        {
+          "year": 2018,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2018,
+          "month": 6,
+          "search_volume": 590
+        },
+        {
+          "year": 2018,
+          "month": 5,
+          "search_volume": 880
+        },
+        {
+          "year": 2018,
+          "month": 4,
+          "search_volume": 880
+        }
+      ],
+      "data_state": "provider-estimate"
+    },
+    {
+      "keyword": "best family hotels in washington dc",
+      "search_volume": 720,
+      "keyword_difficulty": 0,
+      "cpc": 2.78,
+      "metrics_updated_at": "2026-09-14 21:13:57 +00:00",
+      "monthly_searches": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 590
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 590
+        },
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 720
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 720
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 2,
+          "search_volume": 880
+        },
+        {
+          "year": 2026,
+          "month": 1,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 12,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 11,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 10,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 9,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 8,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 2900
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 4400
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 3600
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 5400
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 1900
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 2400
+        },
+        {
+          "year": 2024,
+          "month": 7,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 6,
+          "search_volume": 2400
+        },
+        {
+          "year": 2024,
+          "month": 5,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 4,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 3,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 2,
+          "search_volume": 3600
+        },
+        {
+          "year": 2024,
+          "month": 1,
+          "search_volume": 4400
+        },
+        {
+          "year": 2023,
+          "month": 12,
+          "search_volume": 2400
+        },
+        {
+          "year": 2023,
+          "month": 11,
+          "search_volume": 2400
+        },
+        {
+          "year": 2023,
+          "month": 10,
+          "search_volume": 1900
+        },
+        {
+          "year": 2023,
+          "month": 9,
+          "search_volume": 2400
+        },
+        {
+          "year": 2023,
+          "month": 8,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 7,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 6,
+          "search_volume": 2400
+        },
+        {
+          "year": 2023,
+          "month": 5,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 4,
+          "search_volume": 3600
+        },
+        {
+          "year": 2023,
+          "month": 3,
+          "search_volume": 4400
+        },
+        {
+          "year": 2023,
+          "month": 2,
+          "search_volume": 3600
+        },
+        {
+          "year": 2023,
+          "month": 1,
+          "search_volume": 3600
+        },
+        {
+          "year": 2022,
+          "month": 12,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 11,
+          "search_volume": 1300
+        },
+        {
+          "year": 2022,
+          "month": 10,
+          "search_volume": 1300
+        },
+        {
+          "year": 2022,
+          "month": 9,
+          "search_volume": 1300
+        },
+        {
+          "year": 2022,
+          "month": 8,
+          "search_volume": 1600
+        },
+        {
+          "year": 2022,
+          "month": 7,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 6,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 5,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 4,
+          "search_volume": 2400
+        },
+        {
+          "year": 2022,
+          "month": 3,
+          "search_volume": 2900
+        },
+        {
+          "year": 2022,
+          "month": 2,
+          "search_volume": 2400
+        },
+        {
+          "year": 2022,
+          "month": 1,
+          "search_volume": 1600
+        },
+        {
+          "year": 2021,
+          "month": 12,
+          "search_volume": 720
+        },
+        {
+          "year": 2021,
+          "month": 11,
+          "search_volume": 1000
+        },
+        {
+          "year": 2021,
+          "month": 10,
+          "search_volume": 720
+        },
+        {
+          "year": 2021,
+          "month": 9,
+          "search_volume": 590
+        },
+        {
+          "year": 2021,
+          "month": 8,
+          "search_volume": 590
+        },
+        {
+          "year": 2021,
+          "month": 7,
+          "search_volume": 1000
+        },
+        {
+          "year": 2021,
+          "month": 6,
+          "search_volume": 880
+        },
+        {
+          "year": 2021,
+          "month": 5,
+          "search_volume": 880
+        },
+        {
+          "year": 2021,
+          "month": 4,
+          "search_volume": 590
+        },
+        {
+          "year": 2021,
+          "month": 3,
+          "search_volume": 720
+        },
+        {
+          "year": 2021,
+          "month": 2,
+          "search_volume": 390
+        },
+        {
+          "year": 2021,
+          "month": 1,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 12,
+          "search_volume": 210
+        },
+        {
+          "year": 2020,
+          "month": 11,
+          "search_volume": 210
+        },
+        {
+          "year": 2020,
+          "month": 10,
+          "search_volume": 320
+        },
+        {
+          "year": 2020,
+          "month": 9,
+          "search_volume": 170
+        },
+        {
+          "year": 2020,
+          "month": 8,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 7,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 6,
+          "search_volume": 170
+        },
+        {
+          "year": 2020,
+          "month": 5,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 4,
+          "search_volume": 170
+        },
+        {
+          "year": 2020,
+          "month": 3,
+          "search_volume": 390
+        },
+        {
+          "year": 2020,
+          "month": 2,
+          "search_volume": 1300
+        },
+        {
+          "year": 2020,
+          "month": 1,
+          "search_volume": 1300
+        },
+        {
+          "year": 2019,
+          "month": 12,
+          "search_volume": 720
+        },
+        {
+          "year": 2019,
+          "month": 11,
+          "search_volume": 590
+        },
+        {
+          "year": 2019,
+          "month": 10,
+          "search_volume": 720
+        },
+        {
+          "year": 2019,
+          "month": 9,
+          "search_volume": 480
+        },
+        {
+          "year": 2019,
+          "month": 8,
+          "search_volume": 720
+        },
+        {
+          "year": 2019,
+          "month": 7,
+          "search_volume": 880
+        },
+        {
+          "year": 2019,
+          "month": 6,
+          "search_volume": 880
+        },
+        {
+          "year": 2019,
+          "month": 5,
+          "search_volume": 880
+        },
+        {
+          "year": 2019,
+          "month": 4,
+          "search_volume": 1000
+        },
+        {
+          "year": 2019,
+          "month": 3,
+          "search_volume": 1300
+        },
+        {
+          "year": 2019,
+          "month": 2,
+          "search_volume": 880
+        },
+        {
+          "year": 2019,
+          "month": 1,
+          "search_volume": 880
+        },
+        {
+          "year": 2018,
+          "month": 12,
+          "search_volume": 590
+        },
+        {
+          "year": 2018,
+          "month": 11,
+          "search_volume": 480
+        }
+      ],
+      "data_state": "provider-estimate"
+    },
+    {
+      "keyword": "where to stay in washington dc with kids",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    },
+    {
+      "keyword": "best area to stay in washington dc with kids",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": "2026-06-14 06:10:45 +00:00",
+      "monthly_searches": [
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 0
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 0
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 0
+        },
+        {
+          "year": 2026,
+          "month": 2,
+          "search_volume": 0
+        },
+        {
+          "year": 2026,
+          "month": 1,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 12,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 11,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 10,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 9,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 8,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 0
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 7,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 6,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 5,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 4,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 3,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 2,
+          "search_volume": 0
+        },
+        {
+          "year": 2024,
+          "month": 1,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 12,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 11,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 10,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 9,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 8,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 7,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 6,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 5,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 4,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 3,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 2,
+          "search_volume": 0
+        },
+        {
+          "year": 2023,
+          "month": 1,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 12,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 11,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 10,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 9,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 8,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 7,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 6,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 5,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 4,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 3,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 2,
+          "search_volume": 0
+        },
+        {
+          "year": 2022,
+          "month": 1,
+          "search_volume": 0
+        },
+        {
+          "year": 2021,
+          "month": 12,
+          "search_volume": 0
+        },
+        {
+          "year": 2021,
+          "month": 11,
+          "search_volume": 0
+        },
+        {
+          "year": 2021,
+          "month": 10,
+          "search_volume": 0
+        }
+      ],
+      "data_state": "provider-estimate"
+    },
+    {
+      "keyword": "washington dc hotels for family of 5",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    },
+    {
+      "keyword": "washington dc hotels with kitchens",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    },
+    {
+      "keyword": "washington dc hotels near museums for families",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    }
+  ],
+  "serps": [
+    {
+      "keyword": "washington dc family hotels",
+      "checked_at": "2026-10-03 15:42:15 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "perspectives",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.hotelgeorge.com",
+          "url": "https://www.hotelgeorge.com/washington-dc-boutique-hotels/family-friendly/"
+        },
+        {
+          "rank": 2,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/Hotels-g28970-zff4-Washington_DC_District_of_Columbia-Hotels.html"
+        },
+        {
+          "rank": 3,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/marriott/comments/17k5qyc/suggestions_for_dc_hotel_with_kids/"
+        },
+        {
+          "rank": 4,
+          "domain": "www.fourseasons.com",
+          "url": "https://www.fourseasons.com/washington/services-and-amenities/family/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/dctraveltips/posts/1687437618832598/"
+        },
+        {
+          "rank": 6,
+          "domain": "www.lyledc.com",
+          "url": "https://www.lyledc.com/life-at-lyle/families-at-lyle/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.bigbravenomad.com",
+          "url": "https://www.bigbravenomad.com/blog/the-best-family-friendly-hotels-in-washington-dc"
+        },
+        {
+          "rank": 8,
+          "domain": "www.marriott.com",
+          "url": "https://www.marriott.com/en-us/destinations/united-states/district-of-columbia/washington-dc/family-friendly-hotels.mi"
+        },
+        {
+          "rank": 9,
+          "domain": "www.cntraveler.com",
+          "url": "https://www.cntraveler.com/gallery/the-best-hotels-in-washington-dc"
+        },
+        {
+          "rank": 10,
+          "domain": "washington.org",
+          "url": "https://washington.org/places-to-stay/family-friendly-hotels"
+        }
+      ]
+    },
+    {
+      "keyword": "best family hotels in washington dc",
+      "checked_at": "2026-10-03 15:42:20 +00:00",
+      "result_types": [
+        "ai_overview",
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.hotelgeorge.com",
+          "url": "https://www.hotelgeorge.com/washington-dc-boutique-hotels/family-friendly/"
+        },
+        {
+          "rank": 2,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/marriott/comments/17k5qyc/suggestions_for_dc_hotel_with_kids/"
+        },
+        {
+          "rank": 3,
+          "domain": "www.marriott.com",
+          "url": "https://www.marriott.com/en-us/destinations/united-states/district-of-columbia/washington-dc/family-friendly-hotels.mi"
+        },
+        {
+          "rank": 4,
+          "domain": "www.lyledc.com",
+          "url": "https://www.lyledc.com/life-at-lyle/families-at-lyle/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/dctraveltips/posts/1687437618832598/"
+        },
+        {
+          "rank": 6,
+          "domain": "www.cntraveler.com",
+          "url": "https://www.cntraveler.com/gallery/the-best-hotels-in-washington-dc"
+        },
+        {
+          "rank": 7,
+          "domain": "www.fourseasons.com",
+          "url": "https://www.fourseasons.com/washington/services-and-amenities/family/"
+        },
+        {
+          "rank": 8,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/Hotels-g28970-zff4-Washington_DC_District_of_Columbia-Hotels.html"
+        },
+        {
+          "rank": 9,
+          "domain": "www.booking.com",
+          "url": "https://www.booking.com/family/city/us/washington.html"
+        },
+        {
+          "rank": 10,
+          "domain": "washington.org",
+          "url": "https://washington.org/places-to-stay/family-friendly-hotels"
+        }
+      ]
+    },
+    {
+      "keyword": "where to stay in washington dc with kids",
+      "checked_at": "2026-10-03 15:42:34 +00:00",
+      "result_types": [
+        "ai_overview",
+        "organic",
+        "people_also_ask",
+        "hotels_pack",
+        "paid"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.hometogo.com",
+          "url": "https://www.hometogo.com/washington-d-c/family-vacation/"
+        },
+        {
+          "rank": 2,
+          "domain": "www.tripadvisor.ca",
+          "url": "https://www.tripadvisor.ca/ShowTopic-g28970-i40-k10161809-Where_to_stay_with_Kids_in_D_C-Washington_DC_District_of_Columbia.html"
+        },
+        {
+          "rank": 3,
+          "domain": "www.dcurbanmom.com",
+          "url": "https://www.dcurbanmom.com/jforum/posts/list/1166883.page"
+        },
+        {
+          "rank": 4,
+          "domain": "www.traveltowith.com",
+          "url": "https://www.traveltowith.com/en/united-states/washington-dc/hotel/detail/pendry-washington-dc-the-wharf/family-with-kids"
+        },
+        {
+          "rank": 5,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/dctraveltips/posts/1936583783917979/"
+        },
+        {
+          "rank": 6,
+          "domain": "www.tripadvisor.in",
+          "url": "https://www.tripadvisor.in/ShowTopic-g28970-i40-k14659983-Family_of_5_visiting_DC-Washington_DC_District_of_Columbia.html"
+        },
+        {
+          "rank": 7,
+          "domain": "www.instagram.com",
+          "url": "https://www.instagram.com/reel/DbevezhxDB3/"
+        },
+        {
+          "rank": 8,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/ShowTopic-g28970-i40-k13184979-Safe_areas_to_stay_for_family_visit-Washington_DC_District_of_Columbia.html"
+        },
+        {
+          "rank": 9,
+          "domain": "www.getaroom.co.uk",
+          "url": "https://www.getaroom.co.uk/destination/washington-district-of-columbia.htm"
+        },
+        {
+          "rank": 10,
+          "domain": "breakfastwithnick.com",
+          "url": "https://breakfastwithnick.com/2022/06/23/what-to-do-with-kids-in-washington-d-c/"
+        }
+      ]
+    },
+    {
+      "keyword": "best area to stay in washington dc with kids",
+      "checked_at": "2026-10-03 15:42:39 +00:00",
+      "result_types": [
+        "ai_overview",
+        "organic",
+        "people_also_ask",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "shebuystravel.com",
+          "url": "https://shebuystravel.com/best-family-hotels-in-washington-dc/"
+        },
+        {
+          "rank": 2,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/dctraveltips/posts/2069469930629363/"
+        },
+        {
+          "rank": 3,
+          "domain": "www.tripadvisor.com.my",
+          "url": "https://www.tripadvisor.com.my/ShowTopic-g28970-i40-k14287003-Area_to_stay_with_kids-Washington_DC_District_of_Columbia.html"
+        },
+        {
+          "rank": 4,
+          "domain": "www.lyledc.com",
+          "url": "https://www.lyledc.com/life-at-lyle/families-at-lyle/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/washingtondc/comments/1jtst80/visiting_with_kids_area_recommendation/"
+        },
+        {
+          "rank": 6,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/876147053531924/posts/1765721201241167/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.hotels.com",
+          "url": "https://www.hotels.com/de1467359-ty2/family-friendly-hotels-washington-district-of-columbia/"
+        },
+        {
+          "rank": 8,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/ShowTopic-g28970-i40-k14776320-Best_Area_Neighborhood_to_Stay_w_Kids-Washington_DC_District_of_Columbia.html"
+        },
+        {
+          "rank": 9,
+          "domain": "travelwewill.com",
+          "url": "https://travelwewill.com/lyle-washington-dc/"
+        }
+      ]
+    },
+    {
+      "keyword": "washington dc hotels for family of 5",
+      "checked_at": "2026-10-03 15:42:42 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "people_also_ask",
+        "organic",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.sonesta.com",
+          "url": "https://www.sonesta.com/locations/us/district-columbia/washington/downtown-washington-dc"
+        },
+        {
+          "rank": 2,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/Hotels-g28970-zfn13211516-Washington_DC_District_of_Columbia-Hotels.html"
+        },
+        {
+          "rank": 3,
+          "domain": "www.agoda.com",
+          "url": "https://www.agoda.com/hotels-near-nationals-park/attractions/washington-d-c-us.html"
+        },
+        {
+          "rank": 4,
+          "domain": "www.skyscanner.com",
+          "url": "https://www.skyscanner.com/hotels/united-states/washington%2C-d-c--hotels/ci-27538424/pool"
+        },
+        {
+          "rank": 5,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/ShowTopic-g28970-i40-k15528001-Suggest_DC_hotel_with_kitchen_and_complementary_breakfast-Washington_DC_District_of_Columbia.html"
+        },
+        {
+          "rank": 6,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/dctraveltips/posts/1774555800120779/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.hotelplanner.com",
+          "url": "https://www.hotelplanner.com/zip/Washington-DC-hotels-in-20265"
+        },
+        {
+          "rank": 8,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/awardtravel/comments/5nyclo/washington_dc_hotels/"
+        },
+        {
+          "rank": 9,
+          "domain": "www.wyndhamhotels.com",
+          "url": "https://www.wyndhamhotels.com/en-ca/wyndham-garden/cheverly-maryland/wyndham-garden-washington-dc-area/overview"
+        },
+        {
+          "rank": 10,
+          "domain": "www.thehotelguru.com",
+          "url": "https://www.thehotelguru.com/en-us/best-hotels/united-states-of-america/washington-dc-hotels-near-the-capitol"
+        }
+      ]
+    },
+    {
+      "keyword": "washington dc hotels with kitchens",
+      "checked_at": "2026-10-03 15:42:48 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "people_also_search",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.marriott.com",
+          "url": "https://www.marriott.com/en-us/destinations/united-states/district-of-columbia/washington-dc/hotels-with-kitchen.mi"
+        },
+        {
+          "rank": 2,
+          "domain": "www.expedia.com",
+          "url": "https://www.expedia.com/Washington-Hotels-Hotels-With-Kitchens.0-0-d178318-tHotelswithKitchens.Travel-Guide-Filter-Hotels"
+        },
+        {
+          "rank": 3,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/HotelsList-Washington_DC-Hotels-With-Kitchenette-zfp26457.html"
+        },
+        {
+          "rank": 4,
+          "domain": "www.hilton.com",
+          "url": "https://www.hilton.com/en/locations/usa/district-of-columbia/washington/in-room-kitchen/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.lyledc.com",
+          "url": "https://www.lyledc.com/rooms-suites/deluxe-double-queen-with-kitchenette/"
+        },
+        {
+          "rank": 6,
+          "domain": "www.hotels.com",
+          "url": "https://www.hotels.com/de1467359-am32/kitchen-hotels-washington-district-of-columbia/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/washingtondc/comments/12vne0i/hotel_with_kitchenette_for_tourist_visit/"
+        },
+        {
+          "rank": 8,
+          "domain": "www.sonesta.com",
+          "url": "https://www.sonesta.com/locations/us/district-columbia/washington/hotels-kitchens-and-kitchenettes"
+        },
+        {
+          "rank": 9,
+          "domain": "us.trip.com",
+          "url": "https://us.trip.com/hotels/kitchens/city/us/washington-dc.html"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Provider estimates, not people or traffic forecasts",
+    "Null metrics are unknown, not zero",
+    "KD zero is not proof of easy ranking",
+    "Monthly history can lag launches; seasonality is not trend proof",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.024360000000000007,
+  "completed_at": "2026-10-03T15:42:48.957Z"
+}

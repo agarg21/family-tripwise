@@ -1,5 +1,11 @@
 # Family Tripwise SEO Roadmap
 
+FT-RES-105 review-clean: Hegel1PASS_WITH_P3/noP0-P2/449full22focused/state0/GSC82/SEO0-fiveprior/hash-scope-public-held parity. P3 format wording doesnotverify fiveperson capacity; no propertyfact adopted. Exact8path research/docs release next, no DC publiclaunch.
+
+FT-RES-105 current decision: CANDIDATE combinedDC room/base/budget/PRESERVE URLs. Hotel synonyms9/11sharedURLset; fiveperson/kitchen/area currentmaterialdemand unknown, no splitting fromlowoverlap/KD0. Controlledsixcaptures retained datedmetrics/nulls/actualcounts; LRN115/0.02436USD/cumulative0.24116of5.059audits/threebudgetobservations alreadycomplete; remaining sixproperty/conflicts/reviews/rest/incremental-output/approval gates. Focused/fullQA and independentPASS before exact8path push; no publicchange.
+
+Current FT-RES-105: DC hotel/area/fiveperson/kitchen controlled search ownership, exact8paths registered before one bounded paid batch. Reuse070/071 room-price/bodydates; no new city launch or URL split inferred.059remaining controlledgate selected, sixproperty/rest/review/approval still open.011released425525931441d2a549df88f92e8733cdf4e0583d/remoteverified15:40:39UTC, schedulerhourly savedverified, no publicchange.
+
 FT-OPS-011 scheduler enabled and saved fields verified2026-10-03T15:39:30Z, Hooke1PASS/noP0-P3/449full22focused/state0/GSC82/SEO0-fiveprior/hash-scope-public-held parity. Exact prompt/hourly/global cutoff and unchanged identity/thread/notifications/keyset verified; normal suffix unchanged. Eight-path repository push next. Mechanical result only; no new page or SEO outcome.
 
 Latest snapshot: `ops/gsc-snapshots/2026-10-03.json`, finalizedOctober1; priorOctober2 finalizedSeptember30. Read-only API evidence newly ingested by fast-forward, reused for this decision; aggregate orientation only.
