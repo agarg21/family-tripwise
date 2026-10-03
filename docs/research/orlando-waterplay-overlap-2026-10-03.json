@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-115",
+  "parent_item": "FT-RES-063",
+  "learning_unit": "LRN-127",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "Waterpark and lazy-river modifiers share organic ownership with broad family hotels, or establish independent maintainable jobs.",
+  "receipt": "docs/research/orlando-waterplay-demand-2026-10-03.json",
+  "collector_action_label": "FT-ACC-001",
+  "collector_label_note": "Reusable collector hardcodes historical label; FT-RES-115 manifest and this analysis identify current transaction. Generated receipt unchanged.",
+  "method": {
+    "market": "US",
+    "location_code": 2840,
+    "language": "en",
+    "device": "desktop",
+    "os": "windows",
+    "requested_depth": 10,
+    "collection_completed": "2026-10-03T19:19:19.274Z",
+    "paid_calls": 4,
+    "retries": 0,
+    "cost_usd": 0.01836,
+    "prior_spend_usd": 0.24116,
+    "cumulative_spend_usd": 0.25952,
+    "cumulative_ceiling_usd": 5,
+    "scope": "One provider snapshot of returned organic sets, not complete guaranteed top ten, user test or future ranking",
+    "url_normalization": "URL parser; lowercase hostname; remove leading www only; fragment and trailing non-root slash removed; retain scheme/path case/query/subdomains/country hosts",
+    "host_normalization": "Normalized URL hostname only; regional Tripadvisor hosts distinct; no brand/eTLD collapse",
+    "threshold": "No arbitrary overlap threshold qualifies a URL"
+  },
+  "estimates": [
+    {
+      "keyword": "orlando family hotels",
+      "volume": 720,
+      "kd": 0,
+      "updated": "2026-09-17 20:59:40 +00:00",
+      "recent": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 480
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 1300
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 2900
+        }
+      ],
+      "evidence_class": "PROVIDER_ESTIMATE",
+      "latest_history_month": "2026-08",
+      "collection_not_metric_renewal": true
+    },
+    {
+      "keyword": "orlando hotels with water parks",
+      "volume": 8100,
+      "kd": 19,
+      "updated": "2026-09-15 14:13:34 +00:00",
+      "recent": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 6600
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 12100
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 12100
+        }
+      ],
+      "evidence_class": "PROVIDER_ESTIMATE",
+      "latest_history_month": "2026-08",
+      "collection_not_metric_renewal": true
+    },
+    {
+      "keyword": "orlando hotels with lazy river",
+      "volume": 3600,
+      "kd": 0,
+      "updated": "2026-09-14 15:33:43 +00:00",
+      "recent": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 4400
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 6600
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 6600
+        }
+      ],
+      "evidence_class": "PROVIDER_ESTIMATE",
+      "latest_history_month": "2026-08",
+      "collection_not_metric_renewal": true
+    }
+  ],
+  "sets": [
+    {
+      "keyword": "orlando family hotels",
+      "checked_at": "2026-10-03 19:19:04 +00:00",
+      "returned_organic": 10,
+      "urls": [
+        "https://floridaysresortorlando.com/orlando-suites.htm",
+        "https://hotel-scoop.com/best-family-friendly-hotels-walt-disney-world-orlando-florida",
+        "https://fourseasons.com/orlando/family-resort",
+        "https://tripadvisor.com/Hotels-g34515-zff4-Orlando_Florida-Hotels.html",
+        "https://westgateresorts.com/hotels/family",
+        "https://travelocity.com/Orlando-Hotels-Family-Hotel.0-0-d178294-tFamilyHotel.Travel-Guide-Filter-Hotels",
+        "https://familytravelmagazine.com/kid-friendly-hotels-in-orlando",
+        "https://travel.usnews.com/hotels/family-orlando_fl",
+        "https://marriott.com/en-us/destinations/united-states/florida/orlando/family-friendly-hotels.mi",
+        "https://visitingorlandowithkids.com/the-best-hotels-for-families-in-orlando"
+      ],
+      "hosts": [
+        "floridaysresortorlando.com",
+        "hotel-scoop.com",
+        "fourseasons.com",
+        "tripadvisor.com",
+        "westgateresorts.com",
+        "travelocity.com",
+        "familytravelmagazine.com",
+        "travel.usnews.com",
+        "marriott.com",
+        "visitingorlandowithkids.com"
+      ]
+    },
+    {
+      "keyword": "orlando hotels with water parks",
+      "checked_at": "2026-10-03 19:19:09 +00:00",
+      "returned_organic": 8,
+      "urls": [
+        "https://holidays.com/orlando-hotels-with-lazy-river",
+        "https://tripadvisor.com.sg/Hotel_Review-g34515-d651575-Reviews-Coco_Key_Hotel_And_Water_Park_Resort-Orlando_Florida.html",
+        "https://reddit.com/r/worldkidstravel/comments/1dlnvfr/10_best_hotel_water_parks_in_orlando",
+        "https://visitorlando.com/listing/fairfield-inn-%26-suites-orlando-at-seaworld/31684",
+        "https://disboards.com/threads/best-orlando-waterpark.3846482",
+        "https://disneyparknerds.com/resorts-near-disney-world-with-water-park",
+        "https://reddit.com/r/worldkidstravel/comments/1evdoom/orlando_hotels_with_water_slides",
+        "https://travelocity.com/Central-East-Coast-Florida-Hotels-Waterpark-Hotels.0-0-d6047879-tWaterparkHotels.Travel-Guide-Filter-Hotels"
+      ],
+      "hosts": [
+        "holidays.com",
+        "tripadvisor.com.sg",
+        "reddit.com",
+        "visitorlando.com",
+        "disboards.com",
+        "disneyparknerds.com",
+        "travelocity.com"
+      ]
+    },
+    {
+      "keyword": "orlando hotels with lazy river",
+      "checked_at": "2026-10-03 19:19:18 +00:00",
+      "returned_organic": 8,
+      "urls": [
+        "https://staygenie.app/Blog/orlando/orlando-hotels-with-lazy-river",
+        "https://hotels.com/ho3809536544",
+        "https://no.pinterest.com/pin/15-of-the-best-orlando-hotels-with-a-lazy-river-the-family-vacation-guide--512003051405164938",
+        "https://reddit.com/r/florida/comments/1ednbd0/hotels_or_motels_with_a_waterslide_near_orlando",
+        "https://themeparks-guide.com/orlando-hotels-with-water-parks",
+        "https://tripadvisor.co.uk/ShowTopic-g34515-i19-k11295924-Resorts_with_Lazy_River-Orlando_Florida.html",
+        "https://travelocity.com/Orlando-Hotels-Private-PoolLazy-RiverNear-DisneyResortPool-Table.h114350903.Hotel-Information",
+        "https://disboards.com/threads/orlando-resorts-with-waterslides-lazy-river-for-teens.3803347"
+      ],
+      "hosts": [
+        "staygenie.app",
+        "hotels.com",
+        "no.pinterest.com",
+        "reddit.com",
+        "themeparks-guide.com",
+        "tripadvisor.co.uk",
+        "travelocity.com",
+        "disboards.com"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "orlando family hotels",
+      "b": "orlando hotels with water parks",
+      "urls": {
+        "a_count": 10,
+        "b_count": 8,
+        "shared": [],
+        "shared_count": 0,
+        "union_count": 18,
+        "jaccard": 0,
+        "smaller_set_overlap": 0
+      },
+      "hosts": {
+        "a_count": 10,
+        "b_count": 7,
+        "shared": [
+          "travelocity.com"
+        ],
+        "shared_count": 1,
+        "union_count": 16,
+        "jaccard": 0.0625,
+        "smaller_set_overlap": 0.14285714285714285
+      }
+    },
+    {
+      "a": "orlando family hotels",
+      "b": "orlando hotels with lazy river",
+      "urls": {
+        "a_count": 10,
+        "b_count": 8,
+        "shared": [],
+        "shared_count": 0,
+        "union_count": 18,
+        "jaccard": 0,
+        "smaller_set_overlap": 0
+      },
+      "hosts": {
+        "a_count": 10,
+        "b_count": 8,
+        "shared": [
+          "travelocity.com"
+        ],
+        "shared_count": 1,
+        "union_count": 17,
+        "jaccard": 0.058823529411764705,
+        "smaller_set_overlap": 0.125
+      }
+    },
+    {
+      "a": "orlando hotels with water parks",
+      "b": "orlando hotels with lazy river",
+      "urls": {
+        "a_count": 8,
+        "b_count": 8,
+        "shared": [],
+        "shared_count": 0,
+        "union_count": 16,
+        "jaccard": 0,
+        "smaller_set_overlap": 0
+      },
+      "hosts": {
+        "a_count": 7,
+        "b_count": 8,
+        "shared": [
+          "reddit.com",
+          "disboards.com",
+          "travelocity.com"
+        ],
+        "shared_count": 3,
+        "union_count": 12,
+        "jaccard": 0.25,
+        "smaller_set_overlap": 0.42857142857142855
+      }
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.staygenie.app/Blog/orlando/orlando-hotels-with-lazy-river",
+      "class": "COMPETITOR_RENDERED_BODY",
+      "inspected_on": "2026-10-03",
+      "displayed_update": "September2026",
+      "crawl_label": "4 weeks ago",
+      "observation": "Eight-property guide displays nightly prices without visible exact room, party, stay-date or fee basis. Some entries describe pools/splash areas rather than a river. Property facts and amounts not adopted; verification labels not independent proof.",
+      "limitations": "One returned body only, not every result or current booking availability"
+    },
+    {
+      "record": "docs/research/orlando-waterplay-search-task-2026-10-03.json",
+      "class": "REUSED_OCTOBER3_OFFICIAL_AND_TOURISM_BODY",
+      "renewed": false,
+      "scope": "Tourism guide separates hotel rivers and parks; CoCo room-versus-admission/height/operation gaps remain."
+    },
+    {
+      "record": "docs/research/orlando-coco-family-budget-2026-10-03.json",
+      "class": "REUSED_OCTOBER3_EXACT_TASK_OBSERVATION",
+      "renewed": false,
+      "scope": "Exact Family Room unavailable for observed six-person November8-13 count-only search; comparable rate, bundle-fee multiplicity and cancellation terms not established."
+    }
+  ],
+  "interpretation": {
+    "url_overlap": "Zero exact normalized URLs each returned pair; low host overlap with broad hotels, greater water/lazy host overlap. Weakens broad-owner equivalence but alone cannot establish three distinct jobs.",
+    "modifier_path_evidence": "Water rank1 lazy-river path; lazy rank5 water-parks path and rank4 waterslide path. Path-only discovery inference, not inspected-body facts.",
+    "trend": "September estimates/August history lagged; summer variation not emerging October trend. Water/lazy estimates unchanged from Sept30; no additive volume or easy-rank inference from KD0.",
+    "information_gain": "Candidate exact category/party/nightly-price/entitlement/height/season comparison, not generic format or first-hand authority."
+  },
+  "decision": "CANDIDATE water-feature family subjob, conditional existing-owner module; HOLD new-URL qualification/PRESERVE public page.",
+  "remaining_gates": [
+    "6-8 maintained property records with exact-family source-backed nightly basis/fees, water admission and height/season unknowns",
+    "Named comparison/task materiality and controlled no-clean-existing-fit decision; overlap alone insufficient",
+    "Preserve October22 observation absent verified defect; any future distinct destination requires named approval",
+    "CoCo recheck only changed inventory/category/party or distinct defined task; previous source denials remain narrow holds"
+  ],
+  "confidence": "High arithmetic/observed body boundaries; medium candidate job inference; unknown complete corpus, actual user decisions, fresh narrow demand and SEO outcomes.",
+  "next_falsification_trigger": "New controlled snapshot or maintained exact-family task demonstrating equivalence, separate no-existing-fit job, or competing category/fee/season evidence.",
+  "production": {
+    "changed": false,
+    "new_urls": false,
+    "price_adopted": false,
+    "actual_user_test": false,
+    "source_denial_retried": false
+  }
+}
