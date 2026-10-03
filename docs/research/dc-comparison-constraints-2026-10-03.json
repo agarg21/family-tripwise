@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-064",
+  "parent_item": "FT-RES-059",
+  "learning_unit": "LRN-124",
+  "implemented_on": "2026-10-03",
+  "evidence_class": "MAINTAINED_EVIDENCE_EDITORIAL_TASK",
+  "hypothesis": "Existing maintained Next checks can expose seating and sofa unknowns without a new schema or old fact renewal.",
+  "sources": [
+    {
+      "path": "docs/research/washington-dc-homewood-exact-setup-2026-10-03.json",
+      "inspected_on": "2026-10-03",
+      "class": "OFFICIAL_EXACT_CATEGORY_UI_FACT",
+      "finding": "Published equipment and full-sized sofa description, but unknown dining quantities and sofa geometry."
+    },
+    {
+      "path": "docs/research/washington-dc-comparison-task-2026-10-03.json",
+      "inspected_on": "2026-10-03",
+      "class": "EDITORIAL_PROXY",
+      "finding": "Explicit seating quantity unknown absent from retained CSV Next checks; generic sofa verification present."
+    }
+  ],
+  "change": {
+    "path": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "record_id": "dc-homewood-two-queen",
+    "only_field": "checks",
+    "new_official_facts": false,
+    "old_dates_renewed": false,
+    "new_schema": false,
+    "question_changes": 2,
+    "scope": "Replace sofa prompt with named dimensions/deployment check; add dining quantity verification question. Existing other three prompts retained."
+  },
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "actual_user_test": false
+  },
+  "result": {
+    "single_export": "Questions appear in all three Homewood dated-plan rows",
+    "joined_export": "Same owning record/questions, no duplicate evidence layer",
+    "kitchen_export": "Questions retained with three Homewood rates; Residence existing table seats4 warning unchanged",
+    "other_party": "Unknown price remains unpriced, questions retained",
+    "stale_source": "October31 output retains September30 dates/RECHECK_SOURCE/historical samples",
+    "public_production_change": false
+  },
+  "preservation": {
+    "original_pack_checked_on": "2026-09-30",
+    "original_homewood_source_checked_on": "2026-09-30",
+    "category_capacity_and_price_fields_unchanged": true,
+    "other_records_unchanged": true,
+    "original_three_price_files_unchanged": true,
+    "historical_112_csv_unchanged": true,
+    "eleven_held_paths_unchanged": true
+  },
+  "decision": {
+    "result": "IMPLEMENT NOW existing shared-record constraint questions",
+    "confidence": "High deterministic question routing; unknown actual physical setup/bookability/users/SEO",
+    "reusable_lesson": "Use the validated record's existing verification field to route unresolved evidence without inventing facts or changing freshness.",
+    "next_falsification_trigger": "Exact-category quantity/geometry evidence resolves questions or outputs lose the owning checks/basis",
+    "next_gate": "Remaining corpus/current reviews/rest/full cost/materiality/noexistingfit/fresh DC approval; water-play independent lane next eligible transaction",
+    "paid_calls": 0,
+    "city_launch_approved": false,
+    "firm_suitability_claim": false
+  }
+}

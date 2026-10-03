@@ -51,7 +51,7 @@
       "sleeping_setup": "Two queen beds in separate bedroom, sofa bed in living area; exact category published sleeps5.",
       "kitchen": "published-kitchen", "connection": "not-applicable",
       "configurations": [{ "maximum": 5, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Exact category card and quick-look highlights publish sleeps5 and separate bedroom/living spaces; do not transfer to Premium category." }],
-      "checks": ["Confirm sofa setup and exact bedding allocation", "Full kitchen lists stove/dishwasher/full-size refrigerator/microwave", "Collect actual family/date/public-plan rate with taxes and fee basis", "Verify museum-rest transport and pool status; amenities list does not establish indoor pool"],
+      "checks": ["Confirm sofa dimensions, deployment clearance and exact bedding allocation; full-sized sofa label does not establish usable geometry", "Confirm dining chair, utensil and place-setting quantities for the actual party; kitchen equipment does not establish five-person dining", "Full kitchen lists stove/dishwasher/full-size refrigerator/microwave", "Collect actual family/date/public-plan rate with taxes and fee basis", "Verify museum-rest transport and pool status; amenities list does not establish indoor pool"],
       "conflicts": ["Premium 2Queen 1Bedroom card publishes sleeps4 while standard 2Queen suite publishes sleeps5; do not assume all two-queen categories accept5."],
       "price": { "currency": "USD", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["No Nov8-13five-person public rate inspected; default one-guest/date price discarded"] }
     },
