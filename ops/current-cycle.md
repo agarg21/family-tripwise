@@ -1,5 +1,7 @@
 # Current Operating Cycle
 
+FT-OPS-010 completed tools/research/docs-only release: user-approved normal merge `8514b1a47811be262796a7d999ba4dd15e94c392` preserves028cfc1 and6fec783; remote main independently matches at2026-10-03T04:16:47Z. Socrates `01a0fff0-016f-7a43-b45d-c525bb1fa561` cycle1PASS_WITH_P3/noP0-P2;441release-tree/58focused/442working/state0/GSC81/SEO31URLs34HTML0-fivebaseline, exact64scope647tree and26priorreviewedactions released. P3 release-time nativechecks verify all647regularblobmodes/no grafts or activeoperations; genericguard unchanged. All eleven excluded dirtypaths byte-preserved/unshipped, publicsite unchanged/no Pageswaitrequired.083Git blocker resolved; family evidence/Chicagopreview/Londonapproval gates remain. Immutable release record only, no new learning/sprint extension.
+
 ## FT-OPS-010 - User-Approved History Reconciliation
 
 Incoming snapshot `ops/gsc-snapshots/2026-10-02.md` / `ops/gsc-snapshots/2026-10-02.json` now present via pinned no-commit merge: reused recent API collection October2 16:16:36.663UTC finalizedSeptember30, priorOctober1 finalizedSeptember29. Property1403impressions12clicks/46.36position orientation only, no query-cohort/CTR experiment. Initial merge index exactlytwoGSCpaths/no conflicts; separately composed64path tools-research-docs pending release excludes all eleven held/unrelated dirtypaths. Allsource/price/publicdates unchanged.
