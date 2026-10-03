@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-113",
+  "parent_item": "FT-RES-063",
+  "learning_unit": "LRN-125",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "Lazy-river and waterpark modifiers justify separate hotel pages, and included admission resolves the six-person rest-day choice.",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "child_heights_inches": null,
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "car": false,
+    "hotel_only_water_rest_day": true,
+    "evidence_class": "EDITORIAL_PROXY",
+    "actual_user_test": false,
+    "booking_tested": false
+  },
+  "search": {
+    "queries": [
+      "Orlando hotels with lazy river family suites",
+      "Orlando hotels with water parks families included admission"
+    ],
+    "method": "Free web search returned pooled discovery results; not controlled paired US organic sets or authenticated rank positions",
+    "current_numeric_demand_collected": false,
+    "controlled_overlap": null,
+    "overlap_gate_complete": false,
+    "qualitative_pattern": "Official hotel/booking pages, lists and tourism guides blend hotel aquatic features with separately ticketed parks; no distinct canonical role established",
+    "representative_discovery_urls": [
+      "https://www.visitorlando.city/browse/places-to-stay/lazy-river",
+      "https://mommypoppins.com/orlando-kids/family-travel/best-hotel-water-parks-in-orlando",
+      "https://www.cocokeyorlando.com/",
+      "https://www.visitorlando.com/blog/post/orlando-lazy-rivers/"
+    ],
+    "discovery_not_official_fact": true,
+    "no_community_identities_or_threads_retained": true
+  },
+  "reused_demand": {
+    "record": "docs/research/non-city-family-travel-clusters-2026-10-01.json",
+    "original_collection": "2026-09-30",
+    "market": "US English",
+    "waterpark": {
+      "monthly_estimate": 8100,
+      "kd": 19
+    },
+    "lazy_river": {
+      "monthly_estimate": 3600,
+      "kd": 0
+    },
+    "current_metrics": false,
+    "summed": false,
+    "easy_rank_inferred": false
+  },
+  "sources": [
+    {
+      "id": "CK_HOME",
+      "url": "https://www.cocokeyorlando.com/",
+      "class": "OFFICIAL_PROPERTY_POLICY",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "today"
+    },
+    {
+      "id": "CK_FAMILY",
+      "url": "https://www.cocokeyorlando.com/resort-accommodations/family-standard",
+      "class": "OFFICIAL_EXACT_CATEGORY_FACT",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "5 days ago"
+    },
+    {
+      "id": "CK_WATER",
+      "url": "https://www.cocokeyorlando.com/water-park",
+      "class": "OFFICIAL_WATER_ACCESS_POLICY",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "today"
+    },
+    {
+      "id": "CK_FAQ",
+      "url": "https://www.cocokeyorlando.com/faq-page",
+      "class": "OFFICIAL_PROPERTY_POLICY",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "today"
+    },
+    {
+      "id": "VISIT",
+      "url": "https://www.visitorlando.com/blog/post/orlando-lazy-rivers/",
+      "class": "TOURISM_EDITORIAL_BODY",
+      "inspected_on": "2026-10-03",
+      "displayed_updated_on": "2026-02-02",
+      "search_publication_label": "2.7 years ago",
+      "crawl_label": "today",
+      "paraphrase": "Already separates hotel/resort rivers from waterpark rivers, with map, closure checks and some height information. Not an empty comparison niche; generic operating/age claims not adopted."
+    },
+    {
+      "id": "MP",
+      "url": "https://mommypoppins.com/orlando-kids/family-travel/best-hotel-water-parks-in-orlando",
+      "class": "UNAVAILABLE_BODY",
+      "inspected_on": "2026-10-03",
+      "search_publication_label": "2 months ago",
+      "attempts": 1,
+      "error": "web.open returned403Forbidden",
+      "body_claims_adopted": false,
+      "retried": false,
+      "owner": "Master; external publisher access",
+      "unblock_condition": "Recorded access/provider-policy state change or permitted source becomes available; no tool/domain/browser workaround",
+      "next_check": "Only after changed access evidence, not next hourly wake"
+    }
+  ],
+  "candidate_property": {
+    "hotel": "CoCo Key Hotel & Water Park Orlando",
+    "category": "Family Standard",
+    "category_source": "CK_FAMILY",
+    "published_configuration": {
+      "connecting_standard_rooms": 2,
+      "run_of_house": true,
+      "published_guest_maximum": 8,
+      "adult_child_specific_limits": null,
+      "published_ticket_maximum": 8,
+      "ticket_basis": "Entire stay",
+      "bed_allocation": null
+    },
+    "configuration_vs_general": {
+      "general_water_source": "CK_WATER",
+      "general_passes_per_room": 4,
+      "additional_pass_purchase_published": true,
+      "connection_reservation_confirmed": false,
+      "party_age_acceptance_confirmed": false,
+      "room_capacity_not_inferred_from_passes": true,
+      "no_two_extra_tickets_assumed": true
+    },
+    "admission": {
+      "source": "CK_WATER",
+      "under_height_inches": 36,
+      "complimentary_when_below_threshold": true,
+      "task_heights": null,
+      "child_age_not_converted_to_height": true,
+      "ride_eligibility": null,
+      "november_hours": null,
+      "dated_operation_confirmed": false,
+      "weather_policy": "Hours weather-dependent; below59F may close; lightning within10miles may affect operation",
+      "safety_assurance": false
+    },
+    "budget": {
+      "source_refs": [
+        "CK_HOME",
+        "CK_FAQ"
+      ],
+      "displayed_resort_fee": 45,
+      "displayed_unit": "daily",
+      "currency_interpretation": "USD from US property/$ symbol; not explicit ISO",
+      "tax_treatment": "plus tax on homepage",
+      "waiver_basis_conflict": "Homepage7+nights; FAQ7+days; five-night task cannot establish exemption from either wording",
+      "family_configuration_charge_unit_or_repetition": null,
+      "quote_inclusion": null,
+      "complete_fee_total": null,
+      "nightly_room_price": null,
+      "dated_quote_observed_on": null,
+      "price_gap_priority": "Next eligible source task: exact Family Standard two-adult/four-child Nov8-13 public configuration/night price, fee application/inclusions/age/connection terms; no unrelated two-adult substitution",
+      "free_waterpark_is_not_zero_total": true
+    }
+  },
+  "existing_fit": {
+    "path": "site/where-to-stay/orlando-family-hotels.html",
+    "owner": "Existing family hotel comparison, provisional",
+    "already_exposes": "Room category versus water admission, seasonal exclusions and unknown heights/fees/operation",
+    "observed_defect": false,
+    "public_change_justified": false,
+    "observation_until": "2026-10-22",
+    "preserve": true,
+    "scope": "Three suite examples, not a complete waterpark directory; no inventory quota or new URL inferred"
+  },
+  "preservation": {
+    "records": [
+      "docs/research/orlando-cabana-family-price-2026-10-02.json",
+      "docs/research/orlando-cabana-fee-basis-2026-10-02.json",
+      "docs/research/orlando-rest-day-task-2026-09-26.md"
+    ],
+    "old_observations_renewed": false,
+    "public_bytes_unchanged": true,
+    "eleven_held_unchanged": true,
+    "paid_calls": 0,
+    "booking_links_followed": false
+  },
+  "decision": {
+    "result": "CANDIDATE exact-category water entitlement/cost join in existing owner; REJECT separate modifier URL qualification/PRESERVE current page",
+    "confidence": "High inspected source/category-policy distinctions; medium provisional job fit; unknown controlled overlap/materiality/current demand/booking/operation/user/SEO",
+    "reusable_lesson": "Included water access is category/guest/height/date/fee scoped; neither wristbands nor beds alone prove a family's complete stay.",
+    "next_falsification_trigger": "Controlled paired US sets establish separate job, current exact-family quotation resolves entitlements/cost or existing named comparison fails materially",
+    "next_gate": "Next eligible run exact Family Standard budget/terms, then maintained6-8property room/access/season/fee corpus and controlled overlap/materiality/named comparison; observe page untilOctober22 absent verified defect",
+    "new_url_approved": false,
+    "new_city_approved": false,
+    "firm_suitability_claim": false
+  }
+}
