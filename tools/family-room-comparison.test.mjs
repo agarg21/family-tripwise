@@ -35,6 +35,78 @@ const joinedTask = { adults: 2, child_ages: [4, 8, 12, 15], stay: { arrival: "20
 const joinedArgs = [joinedPaths[0], "--packs", ...joinedPaths.slice(1), "--date", "2026-10-03",
   ...taskArgs(joinedTask), "--prices", ...joinedPricePaths];
 
+test("published kitchen filter retains full dated price basis and default bytes", () => {
+  const before = JSON.stringify([dc, prices]);
+  const all = rows(output(dc, prices, "2026-10-03")).slice(1);
+  const csv = roomComparisonCsv(dc, dc.scenario, "2026-10-03", prices, { kitchen: "published" });
+  const data = rows(csv).slice(1);
+  assert.equal(all.length, 7); assert.equal(data.length, 4);
+  assert.equal(new Set(data.map(r => value(r, "Hotel"))).size, 2);
+  const expected = all.filter(r => value(r, "Kitchen evidence") === "published-kitchen");
+  assert.deepEqual(data.map(r => r.slice(0, -1)), expected.map(r => r.slice(0, -1)));
+  assert.deepEqual(data.map(r => value(r, "Nightly equivalent")), ["288.97", "316.61", "339.97", "433.65"]);
+  assert.ok(data.every(r => value(r, "Research scope and limits").includes("dated published kitchen evidence; not revalidated")));
+  assert.equal(roomComparisonCsv(dc, dc.scenario, "2026-10-03", prices, { kitchen: "any" }), output(dc, prices, "2026-10-03"));
+  assert.equal(execFileSync(process.execPath, [cli, dcPath, "--date", "2026-10-03", ...taskArgs(dc.scenario), "--prices", ...pricePaths, "--kitchen", "published"], { encoding: "utf8" }), csv);
+  assert.equal(JSON.stringify([dc, prices]), before);
+});
+
+test("kitchen filter keeps unpriced, historical and outside-capacity evidence explicit", () => {
+  const filtered = (party = dc.scenario, date = "2026-10-03", observations = prices) => rows(roomComparisonCsv(dc, party, date, observations, { kitchen: "published" })).slice(1);
+  for (const party of [{ ...dc.scenario, child_ages: [4, 8, 13] },
+    { ...dc.scenario, stay: { arrival: "2026-11-09", departure: "2026-11-14" } },
+    { ...dc.scenario, adults: 8 }]) {
+    const data = filtered(party); assert.equal(data.length, 2);
+    assert.ok(data.every(r => value(r, "Nightly equivalent") === "" && value(r, "Public rate plan") === "Unpriced"));
+  }
+  const old = filtered(dc.scenario, "2026-10-31");
+  assert.ok(old.every(r => value(r, "Capacity screen") === "RECHECK_SOURCE" && value(r, "Price status") === "historical-dated-stay-samples"));
+  assert.ok(old.every(r => value(r, "Price observed") === "2026-09-30"));
+  const member = structuredClone(prices); for (const rate of member[1].rates) rate.eligibility = "membership-required";
+  const homewood = filtered(dc.scenario, "2026-10-03", member).find(r => value(r, "Hotel").startsWith("Homewood"));
+  assert.equal(value(homewood, "Nightly equivalent"), "");
+  const noKitchen = structuredClone(dc); for (const record of noKitchen.records) record.kitchen = "not-established";
+  assert.deepEqual(rows(roomComparisonCsv(noKitchen, noKitchen.scenario, "2026-10-03", prices, { kitchen: "published" })), [comparisonHeadings]);
+});
+
+test("joined kitchen filter reuses owning evidence and validates even excluded observations", () => {
+  const csv = roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices, { kitchen: "published" });
+  const data = rows(csv).slice(1), all = rows(roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices)).slice(1);
+  assert.deepEqual(data.map(r => r.slice(0, -1)), all.filter(r => value(r, "Kitchen evidence") === "published-kitchen").map(r => r.slice(0, -1)));
+  assert.equal(execFileSync(process.execPath, [cli, ...joinedArgs, "--kitchen", "published"], { encoding: "utf8" }), csv);
+  assert.equal(roomComparisonsCsv([dc], dc.scenario, "2026-10-03", prices, { kitchen: "published" }), roomComparisonCsv(dc, dc.scenario, "2026-10-03", prices, { kitchen: "published" }));
+  const bad = structuredClone(prices); bad[0].currency = "GBP";
+  assert.throws(() => roomComparisonCsv(dc, dc.scenario, "2026-10-03", bad, { kitchen: "published" }), /currency/);
+  assert.throws(() => roomComparisonsCsv([dc], dc.scenario, "2026-10-03", bad, { kitchen: "published" }), /currency/);
+});
+
+test("invalid API and CLI kitchen filters fail before output; writes remain protected", () => {
+  const getter = {}; Object.defineProperty(getter, "kitchen", { get() { throw new Error("Do not invoke"); } });
+  for (const filters of [null, [], "published", { kitchen: "yes" }, { kitchen: undefined }, { kitchen: "published", extra: true },
+    Object.create({ kitchen: "published" }), { [Symbol("kitchen")]: "published" }, getter]) {
+    assert.throws(() => roomComparisonCsv(dc, dc.scenario, "2026-10-03", prices, filters));
+    assert.throws(() => roomComparisonsCsv([dc], dc.scenario, "2026-10-03", prices, filters));
+  }
+  const dir = mkdtempSync(join(tmpdir(), "ft-kitchen-filter-"));
+  try {
+    const dest = join(dir, "uncreated", "out.csv");
+    const base = [cli, dcPath, "--date", "2026-10-03", ...taskArgs(dc.scenario), "--prices", ...pricePaths];
+    for (const flags of [["--kitchen"], ["--kitchen", "yes"], ["--kitchen", "published", "--kitchen", "any"]]) {
+      assert.throws(() => execFileSync(process.execPath, [...base, ...flags, "--output", dest], { stdio: "pipe" }), error => { assert.equal(error.stdout.toString(), ""); return true; });
+      assert.equal(existsSync(join(dir, "uncreated")), false);
+    }
+    const out = join(dir, "kitchen.csv"), args = [...base, "--kitchen", "published", "--output", out];
+    const summary = JSON.parse(execFileSync(process.execPath, args, { encoding: "utf8" }));
+    assert.deepEqual(summary.filters, { kitchen: "published" }); assert.equal(summary.categories_are_input_count, true); assert.equal(summary.categories, 4);
+    assert.equal(readFileSync(out, "utf8"), roomComparisonCsv(dc, dc.scenario, "2026-10-03", prices, { kitchen: "published" }));
+    assert.throws(() => execFileSync(process.execPath, args, { stdio: "pipe" }), /EEXIST/);
+    const site = fileURLToPath(new URL("../site/", import.meta.url)), alias = join(dir, "site"); symlinkSync(site, alias, "dir");
+    for (const path of [join(site, "downloads", "never-kitchen.csv"), join(alias, "new-kitchen", "out.csv")])
+      assert.throws(() => execFileSync(process.execPath, [...base, "--kitchen", "published", "--output", path], { stdio: "pipe" }), /public site/);
+    assert.equal(existsSync(join(alias, "new-kitchen")), false);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
 test("joined exact-family task retains eleven dated plan rows and two unpriced categories", () => {
   const before = JSON.stringify([joinedPacks, joinedPrices, joinedTask]);
   const csv = roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices);

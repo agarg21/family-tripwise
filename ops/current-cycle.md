@@ -2,6 +2,12 @@
 
 ## Current Decision
 
+FT-IMP-063 Parfit1PASS/noP0-P3/453full78focused/state0/GSC82/SEO0-fiveprior/default-basis-invalid/hash-scope-public-held controls passed. Exact nine-path shared offline-tool release next, not public-site delivery. All three selected transactions will then be complete; no fourth/new action after deadline. Immutable review result only.
+
+FT-IMP-063 implemented LRN119; optional dated kitchen evidence filter works on single/joined exact-family budget exports, preserving all default CSV bytes and useful price context.453frozen full78focused/operator0/GSC82/SEO0-fiveprior/40default byteparity/exact9delta657preserved/11held green. Different read-only review/release next, no public UI/page or DC approval claim. Third/final transaction started before deadline; no fourth. Details: `docs/research/family-room-kitchen-task-2026-10-03.md`.
+
+FT-IMP-063 third/final action registered before edits at17:01UTC, actual priorclock17:00:49UTC, before17:07:48 new-action deadline; no fourth. Exact nine paths, published-kitchen CLI/API filter for existing DC cooking/budget task; failed --kitchen option observed before selection. Default CSV/prices/source dates/parent059 and eleven held preserved. Full/focused QA and different read-only PASS required; no public page/newcity/paid/scheduler change.108 research release2947f67ae5fea774c4514fbcc4b9858a89b3f252 remoteverified17:00:34.897UTC/all664index/all3Gitguards/freshfetch/normalpush/0-0, no site or Pages wait; HilbertPASS stands. Unavailable museum sources remain narrow holds.
+
 FT-RES-108 Hilbert1PASS/noP0-P3 with449full74focused/operator0/GSC82/SEO0-fiveprior/wholehash-scope-public-held parity. Research-only exact seven-path release next; source observations Master-attributed, actual hotel-return remains unknown. Immutable review result only.
 
 FT-RES-108 collected LRN118: supported museum-side constraints do not settle actual hotel-return feasibility. American History current visitor body failed500 on one same-URL transient retry; linked institution policy404 once. Narrow external holds recorded, no alternate-tool or unchanged retry. Four room categories/three dated prices and107 exclusions preserved. Evidence: `docs/research/washington-dc-museum-rest-task-2026-10-03.md`. Next native QA/read-only review/exact seven-path research release; no public city launch. Existing cooking/budget task is the next independent eligible lane.

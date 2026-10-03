@@ -20,13 +20,24 @@ const cell = value => {
   return `"${safe.replaceAll('"', '""')}"`;
 };
 
-function roomComparisonRows(pack, party, asOf, prices) {
+function kitchenFilter(filters) {
+  if (!filters || Object.getPrototypeOf(filters) !== Object.prototype ||
+      Reflect.ownKeys(filters).some(key => key !== "kitchen")) throw new Error("Invalid comparison filters");
+  const field = Object.getOwnPropertyDescriptor(filters, "kitchen");
+  const kitchen = field ? field.value : "any";
+  if (field && !Object.hasOwn(field, "value") || !["any", "published"].includes(kitchen))
+    throw new Error("Kitchen filter must be any or published");
+  return kitchen;
+}
+
+function roomComparisonRows(pack, party, asOf, prices, kitchen) {
   const screened = screenRoomPack(pack, party, asOf, prices);
   const stay = party.stay ?? pack.scenario?.stay;
   const nights = (Date.parse(stay?.departure) - Date.parse(stay?.arrival)) / 86400000;
   if (!validDate(stay?.arrival) || !validDate(stay?.departure) || !Number.isInteger(nights) || nights < 1)
     throw new Error("Comparison requires an exact arrival/departure task");
   return screened.flatMap((room, index) => {
+    if (kitchen === "published" && room.kitchen !== "published-kitchen") return [];
     const price = room.price;
     return (price.rates ?? [null]).map(rate => [
       pack.destination, room.hotel, room.category, room.screening, room.conditions.join("; "), JSON.stringify(pack.records[index].configurations),
@@ -39,18 +50,20 @@ function roomComparisonRows(pack, party, asOf, prices) {
       price.deposit_basis ?? "Unknown", rate?.meals ?? "Unknown", rate?.cancellation ?? "Unknown",
       room.conflicts.join("; "), room.next_checks.join("; "), room.source_url, price.source_url,
       price.observation_limitation ?? price.missing_basis?.join("; ") ?? "Not observed",
-      [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed"].join("; ")
+      [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed",
+        ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : [])].join("; ")
     ]);
   });
 }
 
 const comparisonCsv = rows => [comparisonHeadings, ...rows].map(row => row.map(cell).join(",")).join("\n") + "\n";
 
-export function roomComparisonCsv(pack, party = pack.scenario, asOf = currentEasternDate(), prices = []) {
-  return comparisonCsv(roomComparisonRows(pack, party, asOf, prices));
+export function roomComparisonCsv(pack, party = pack.scenario, asOf = currentEasternDate(), prices = [], filters = {}) {
+  return comparisonCsv(roomComparisonRows(pack, party, asOf, prices, kitchenFilter(filters)));
 }
 
-export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), prices = []) {
+export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), prices = [], filters = {}) {
+  const kitchen = kitchenFilter(filters);
   const dense = values => {
     if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype || Object.hasOwn(values, Symbol.iterator)) return false;
     for (let i = 0; i < values.length; i++) if (!Object.hasOwn(values, i)) return false;
@@ -76,7 +89,7 @@ export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), pr
     if (!owner) throw new Error(`Unowned price observation: ${observation?.record_id ?? "invalid"}`);
     byPack.get(owner).push(observation);
   }
-  return comparisonCsv(packs.flatMap(pack => roomComparisonRows(pack, party, asOf, byPack.get(pack))));
+  return comparisonCsv(packs.flatMap(pack => roomComparisonRows(pack, party, asOf, byPack.get(pack), kitchen)));
 }
 
 async function researchOutputPath(output) {
@@ -100,7 +113,8 @@ export function parseRoomComparisonOptions(input) {
   const args = [...input];
   const packPath = args.shift();
   if (!packPath || packPath.startsWith("--")) throw new Error("Provide a room configuration JSON path");
-  let date = currentEasternDate(), output, dateSet = false, pricesSet = false, packsSet = false;
+  let date = currentEasternDate(), output, dateSet = false, pricesSet = false, packsSet = false, kitchenSet = false;
+  const filters = {};
   const pricePaths = [], additionalPackPaths = [];
   const taskOptions = new Map();
   for (let i = 0; i < args.length; i++) {
@@ -114,12 +128,15 @@ export function parseRoomComparisonOptions(input) {
     } else if (args[i] === "--packs" && !packsSet && args[i + 1] && !args[i + 1].startsWith("--")) {
       packsSet = true;
       while (args[i + 1] && !args[i + 1].startsWith("--")) additionalPackPaths.push(args[++i]);
+    } else if (args[i] === "--kitchen" && !kitchenSet && args[i + 1] && !args[i + 1].startsWith("--")) {
+      filters.kitchen = args[++i]; kitchenSet = true;
     } else if (["--adults", "--child-ages", "--arrival", "--departure"].includes(args[i]) &&
         !taskOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
       taskOptions.set(args[i], args[++i]);
     } else throw new Error(`Unknown, duplicate or incomplete comparison option: ${args[i]}`);
   }
   if (!validDate(date)) throw new Error("Invalid screening date");
+  kitchenFilter(filters);
   let task = null;
   if (taskOptions.size) {
     if (taskOptions.size !== 4) throw new Error("Supply adults, child ages, arrival and departure together");
@@ -135,11 +152,11 @@ export function parseRoomComparisonOptions(input) {
     task = { adults: Number(adults), child_ages: ages.map(Number), stay: { arrival, departure } };
   }
   if (additionalPackPaths.length && !task) throw new Error("Joined packs require an explicit family/stay task");
-  return { packPath, additionalPackPaths, date, output, pricePaths, task };
+  return { packPath, additionalPackPaths, date, output, pricePaths, task, filters };
 }
 
 async function main() {
-  const { packPath, additionalPackPaths, date, output, pricePaths, task } = parseRoomComparisonOptions(process.argv.slice(2));
+  const { packPath, additionalPackPaths, date, output, pricePaths, task, filters } = parseRoomComparisonOptions(process.argv.slice(2));
   const pack = JSON.parse(await readFile(packPath, "utf8"));
   const packs = [pack];
   for (const path of additionalPackPaths) packs.push(JSON.parse(await readFile(path, "utf8")));
@@ -150,12 +167,13 @@ async function main() {
     prices.push(...observations);
   }
   const party = task ?? pack.scenario;
-  const csv = packs.length === 1 ? roomComparisonCsv(pack, party, date, prices) : roomComparisonsCsv(packs, party, date, prices);
+  const csv = packs.length === 1 ? roomComparisonCsv(pack, party, date, prices, filters) : roomComparisonsCsv(packs, party, date, prices, filters);
   if (output) {
     const path = await researchOutputPath(output);
     await mkdir(dirname(path), { recursive: true });
     await writeFile(await researchOutputPath(path), csv, { flag: "wx" });
     console.log(JSON.stringify({ as_of: date, categories: packs.reduce((total, p) => total + p.records.length, 0), packs: packs.length, output, public_changes: false,
+      ...(filters.kitchen === "published" ? { filters, categories_are_input_count: true } : {}),
       task: { adults: party.adults, child_ages: party.child_ages, stay: party.stay } }));
   } else process.stdout.write(csv);
 }

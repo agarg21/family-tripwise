@@ -19,11 +19,12 @@
     "Build useful tools and source-worthy assets rather than generic travel prose."
   ],
   "items": [
+    {"id":"FT-IMP-063","title":"Filter exact-family comparisons by published kitchen evidence","kind":"implementation","status":"in-progress","parent_item":"FT-RES-059","selected_on":"2026-10-03","target_paths":["tools/family-room-comparison.mjs","tools/family-room-comparison.test.mjs","docs/plan/family-room-comparison-export.md","docs/research/family-room-kitchen-task-2026-10-03.md","backlog/product-learning-ledger.md","ops/current-cycle.md","ops/operator-review.md","ops/seo-roadmap.json","ops/seo-roadmap.md"],"target_urls":[],"evidence":"Named DC two-adult ages4,8,12 November8-13 cooking/budget task: maintained four categories/seven rows; actual CLI --kitchen published fails unknown option.108 rest unknowns do not block offline evidence filtering","acceptance_criteria":["Optional published-kitchen filter reuses validated room/price adapters and preserves all default CSV bytes and source dates; all supplied evidence validated before filtering","Filtered single/joined exports retain full capacity/price/date/party/fee/unknown context; nonpublished excluded as unknown, not proven absent; unpriced/historical/wrongparty remain explicit, no route/fit winner","Strict invalid/duplicate/partial API/CLI filters fail before writes; existing public-site/symlink/exclusive protections remain. Native focused/full QA and different independent read-only PASS before exact nine-path release"],"measurement_plan":"Reproduce named kitchen-and-budget task: four public-plan rows across two published-kitchen categories vs seven unfiltered rows; proxy offline usability, not real-user/booking/ranking validation","production_invariant":"No site/newcity/public URL/paid/source-date renewal/scheduler/booking/account/unchanged source retry. Eleven held paths preserved, parent059 unchanged,108 completion mechanical only","decision":"Implemented optional dated kitchen evidence filter; four matched public-plan rows retain complete basis, default CSV unchanged across40 tasks","next_gate":"Different frozen read-only review and exact nine-path shared-tool release; parent059 fee/review/corpus/rest/publication still gated","release_state":"review-clean-shared-tool-release-pending","review_outcome":"PASS","review_cycles":1,"reviewer_agent_ids":["01a102bc-c94b-79b3-a99b-5684201fad0c"],"qa":"Parfit1PASS/noP0-P3/453full78focused/0failure-skips/operator0/GSC82/SEO31URLs34HTML0-fiveprior/40plus60default-basis cases/16excluded-invalid controls/all665baseline665candidate hashes/exact9delta657preserved/55publicHEADparity/11held/prior221items/LRN119only/no running sessions"},
     {
       "id": "FT-RES-108",
       "title": "Qualify DC museum rest breaks without route assurances",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "parent_item": "FT-RES-059",
       "selected_on": "2026-10-03",
       "target_paths": [
@@ -45,8 +46,11 @@
       "measurement_plan": "Does generic Mall proximity settle a two-session museum day with a hotel rest; proxy constraints, not a rendered route or real-user task",
       "production_invariant": "No newcity/public URL/oldsource renewal/paid/account/contact/booking/indexing/automation/denied retry;059 only three current gate fields",
       "decision": "CANDIDATE museum-side inputs; PRESERVE actual hotel-return feasibility as unknown. LRN118 rejects proximity/free-admission as a complete rest plan",
-      "next_gate": "Structured/focused/full QA, different read-only review and release; then existing five-person cooking/budget task. Unavailable American History and linked policy stay narrow holds",
-      "release_state": "review-clean-research-release-pending",
+      "next_gate": "Research release complete; existing five-person cooking/budget task next. Unavailable American History and linked policy stay narrow holds",
+      "release_state": "completed-research-docs-pushed",
+      "completed_on": "2026-10-03",
+      "release_commit": "2947f67ae5fea774c4514fbcc4b9858a89b3f252",
+      "remote_verified_at": "2026-10-03T17:00:34.897Z",
       "review_outcome": "PASS",
       "review_cycles": 1,
       "reviewer_agent_ids": ["01a102b1-b94c-7320-a801-53b6d630fdba"],

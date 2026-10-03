@@ -1,5 +1,11 @@
 # Family Tripwise SEO Roadmap
 
+FT-IMP-063 independent Parfit1PASS/noP0-P3/453full78focused/operator0/GSC82/SEO0-fiveprior/100default-basis cases/16excluded-invalid/hash-scope-public-held controls. Exact nine-path shared offline-tool release next; no public-page deployment. Third/final transaction, no fourth; DC qualification gates unchanged.
+
+Current063 decision: implemented shared kitchen evidence filter, not another evidence corpus/article or family-fit winner. LRN119 and task: `docs/research/family-room-kitchen-task-2026-10-03.md`. Native453full78focused/state0/GSC82/SEO0-fiveprior/40default byteparity/exact nine paths green; read-only review then push. Parent059 rest/fee/review/publication gates remain; three actions selected this run, no fourth.
+
+Current FT-IMP-063: published-kitchen evidence filter for retained exact-family cooking/budget exports; nine paths registered before edits, third/final sprint transaction. Default bytes/full nightly context/source dates/unknowns unchanged; no rank/booking/route/public approval inference.108 museum research pushed2947f67ae5fea774c4514fbcc4b9858a89b3f252/remoteverified17:00:34.897UTC, no public change. Native QA/read-only review before shared-tool release;059 publication/corpus/rest gates remain.
+
 FT-RES-108 independent Hilbert1PASS/noP0-P3/449full74focused/state0/GSC82/SEO0-fiveprior/hash-scope-public-held preservation. Exact seven-path research release next; no public change or route verdict. Immutable review result only.
 
 Current108 decision: CANDIDATE museum-side inputs/PRESERVE actual hotel-return unknown. Narrow American History500 and linked-policy404 holds; no unchanged retry. LRN118 and sources: `docs/research/washington-dc-museum-rest-task-2026-10-03.md`. Native QA/read-only review/exact seven-path research release next, then retained five-person cooking/budget task. DC approval and remaining corpus/rest evidence stay separate.
