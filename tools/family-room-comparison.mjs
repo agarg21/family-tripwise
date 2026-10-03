@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir, realpath } from "node:fs/promises";
 import { basename, dirname, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validDate } from "./hotel-evidence.mjs";
-import { currentEasternDate, screenRoomPack } from "./family-room-task.mjs";
+import { currentEasternDate, screenRoomPack, validateRoomPack } from "./family-room-task.mjs";
 
 export const comparisonHeadings = Object.freeze([
   "Destination", "Hotel", "Published category", "Capacity screen", "Capacity conditions", "Recorded capacity rules (dated; not revalidated)",
@@ -20,13 +20,13 @@ const cell = value => {
   return `"${safe.replaceAll('"', '""')}"`;
 };
 
-export function roomComparisonCsv(pack, party = pack.scenario, asOf = currentEasternDate(), prices = []) {
+function roomComparisonRows(pack, party, asOf, prices) {
   const screened = screenRoomPack(pack, party, asOf, prices);
   const stay = party.stay ?? pack.scenario?.stay;
   const nights = (Date.parse(stay?.departure) - Date.parse(stay?.arrival)) / 86400000;
   if (!validDate(stay?.arrival) || !validDate(stay?.departure) || !Number.isInteger(nights) || nights < 1)
     throw new Error("Comparison requires an exact arrival/departure task");
-  const rows = screened.flatMap((room, index) => {
+  return screened.flatMap((room, index) => {
     const price = room.price;
     return (price.rates ?? [null]).map(rate => [
       pack.destination, room.hotel, room.category, room.screening, room.conditions.join("; "), JSON.stringify(pack.records[index].configurations),
@@ -42,7 +42,41 @@ export function roomComparisonCsv(pack, party = pack.scenario, asOf = currentEas
       [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed"].join("; ")
     ]);
   });
-  return [comparisonHeadings, ...rows].map(row => row.map(cell).join(",")).join("\n") + "\n";
+}
+
+const comparisonCsv = rows => [comparisonHeadings, ...rows].map(row => row.map(cell).join(",")).join("\n") + "\n";
+
+export function roomComparisonCsv(pack, party = pack.scenario, asOf = currentEasternDate(), prices = []) {
+  return comparisonCsv(roomComparisonRows(pack, party, asOf, prices));
+}
+
+export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), prices = []) {
+  const dense = values => {
+    if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype || Object.hasOwn(values, Symbol.iterator)) return false;
+    for (let i = 0; i < values.length; i++) if (!Object.hasOwn(values, i)) return false;
+    return true;
+  };
+  if (!dense(packs) || !packs.length || !dense(prices)) throw new Error("Provide ordinary dense pack and price arrays");
+  if (!validDate(party?.stay?.arrival) || !validDate(party?.stay?.departure) || party.stay.departure <= party.stay.arrival)
+    throw new Error("Joined comparison requires an explicit family and exact arrival/departure task");
+  const owners = new Map();
+  for (const pack of packs) {
+    const errors = validateRoomPack(pack);
+    if (errors.length) throw new Error(errors.join("; "));
+    if (pack.destination !== packs[0].destination) throw new Error("Joined packs must have the same destination");
+    for (const record of pack.records) {
+      if (owners.has(record.id)) throw new Error(`Duplicate record ownership: ${record.id}`);
+      owners.set(record.id, pack);
+    }
+  }
+  // Partition observations by their owning category, never by order or a similar hotel name.
+  const byPack = new Map(packs.map(pack => [pack, []]));
+  for (const observation of prices) {
+    const owner = owners.get(observation?.record_id);
+    if (!owner) throw new Error(`Unowned price observation: ${observation?.record_id ?? "invalid"}`);
+    byPack.get(owner).push(observation);
+  }
+  return comparisonCsv(packs.flatMap(pack => roomComparisonRows(pack, party, asOf, byPack.get(pack))));
 }
 
 async function researchOutputPath(output) {
@@ -66,8 +100,8 @@ export function parseRoomComparisonOptions(input) {
   const args = [...input];
   const packPath = args.shift();
   if (!packPath || packPath.startsWith("--")) throw new Error("Provide a room configuration JSON path");
-  let date = currentEasternDate(), output, dateSet = false, pricesSet = false;
-  const pricePaths = [];
+  let date = currentEasternDate(), output, dateSet = false, pricesSet = false, packsSet = false;
+  const pricePaths = [], additionalPackPaths = [];
   const taskOptions = new Map();
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--date" && !dateSet && args[i + 1] && !args[i + 1].startsWith("--")) {
@@ -77,6 +111,9 @@ export function parseRoomComparisonOptions(input) {
     } else if (args[i] === "--prices" && !pricesSet && args[i + 1] && !args[i + 1].startsWith("--")) {
       pricesSet = true;
       while (args[i + 1] && !args[i + 1].startsWith("--")) pricePaths.push(args[++i]);
+    } else if (args[i] === "--packs" && !packsSet && args[i + 1] && !args[i + 1].startsWith("--")) {
+      packsSet = true;
+      while (args[i + 1] && !args[i + 1].startsWith("--")) additionalPackPaths.push(args[++i]);
     } else if (["--adults", "--child-ages", "--arrival", "--departure"].includes(args[i]) &&
         !taskOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
       taskOptions.set(args[i], args[++i]);
@@ -97,12 +134,15 @@ export function parseRoomComparisonOptions(input) {
       throw new Error("Invalid exact arrival/departure task");
     task = { adults: Number(adults), child_ages: ages.map(Number), stay: { arrival, departure } };
   }
-  return { packPath, date, output, pricePaths, task };
+  if (additionalPackPaths.length && !task) throw new Error("Joined packs require an explicit family/stay task");
+  return { packPath, additionalPackPaths, date, output, pricePaths, task };
 }
 
 async function main() {
-  const { packPath, date, output, pricePaths, task } = parseRoomComparisonOptions(process.argv.slice(2));
+  const { packPath, additionalPackPaths, date, output, pricePaths, task } = parseRoomComparisonOptions(process.argv.slice(2));
   const pack = JSON.parse(await readFile(packPath, "utf8"));
+  const packs = [pack];
+  for (const path of additionalPackPaths) packs.push(JSON.parse(await readFile(path, "utf8")));
   const prices = [];
   for (const path of pricePaths) {
     const observations = JSON.parse(await readFile(path, "utf8"));
@@ -110,12 +150,12 @@ async function main() {
     prices.push(...observations);
   }
   const party = task ?? pack.scenario;
-  const csv = roomComparisonCsv(pack, party, date, prices);
+  const csv = packs.length === 1 ? roomComparisonCsv(pack, party, date, prices) : roomComparisonsCsv(packs, party, date, prices);
   if (output) {
     const path = await researchOutputPath(output);
     await mkdir(dirname(path), { recursive: true });
     await writeFile(await researchOutputPath(path), csv, { flag: "wx" });
-    console.log(JSON.stringify({ as_of: date, categories: pack.records.length, output, public_changes: false,
+    console.log(JSON.stringify({ as_of: date, categories: packs.reduce((total, p) => total + p.records.length, 0), packs: packs.length, output, public_changes: false,
       task: { adults: party.adults, child_ages: party.child_ages, stay: party.stay } }));
   } else process.stdout.write(csv);
 }

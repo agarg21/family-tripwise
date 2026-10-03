@@ -10,6 +10,18 @@ Each row retains the destination/category, capacity screen and conditions, sleep
 
 ## Reuse
 
+October3 FT-IMP-062 joins multiple maintained packs for **one explicit family and stay** using `--packs` after the first pack path. All packs must name the same destination and every record ID must have exactly one owner; duplicate/overlapping packs fail rather than silently choosing a newer category or transferring a price. Every supplied observation must belong to a selected record and pass its original category/source/currency/party/rate validator before any output or directory creation. Different pack scenarios never supply implicit joined tasks. API: `roomComparisonsCsv(packs, party, asOf, prices)`; existing single-pack API/CSV bytes remain compatible.
+
+The joined CSV has one header and the unchanged, ordered per-pack rows. It does not rank hotels, merge source dates, convert currencies or normalize unlike fee/cancellation terms into a final total. Category and price dates/conditions remain independent; an unpriced record stays visible. Source IDs can repeat across packs because provenance stays within the owning pack, while record IDs cannot. All existing exclusive-write/public-site/symlink protections remain.
+
+Reproducible eight-category, thirteen-row task (eleven public-plan rows, two unpriced categories):
+
+```bash
+node tools/family-room-comparison.mjs docs/research/london-six-person-comparison-2026-10-02.json --packs docs/research/london-aldgate-six-person-task-2026-10-02.json docs/research/london-bridge-six-person-task-2026-10-02.json docs/research/london-connected-six-person-task-2026-10-02.json docs/research/london-canary-family-task-2026-10-02.json --date 2026-10-03 --adults 2 --child-ages 4,8,12,15 --arrival 2026-11-08 --departure 2026-11-13 --prices docs/research/london-marlin-six-person-price-observation-2026-10-02.json docs/research/london-limehouse-six-person-price-observation-2026-10-02.json docs/research/london-aldgate-six-person-price-2026-10-02.json docs/research/london-bridge-six-person-price-2026-10-02.json docs/research/london-connected-six-person-price-2026-10-02.json docs/research/london-canary-family-price-2026-10-02.json --output /tmp/family-tripwise-london-joined-2026-10-03.csv
+```
+
+Use a fresh output path for another run. This command is an offline research export, not a public London comparison/download or complete corpus qualification. Named task, limitations and next gates: `docs/research/family-room-joined-task-2026-10-03.md`. To maintain it, refresh the owning records/observations through the existing evidence workflow, not the assembled CSV or its screening date. No added scheduler, automatic scraping or date renewal.
+
 October2 FT-IMP-052 adds an explicit task override without changing the evidence pack. Supply all four controls together: `--adults`, `--child-ages` (comma-separated individual ages0-17, or `none`), `--arrival` and `--departure`. Without them, the original pack scenario remains the default. Partial/duplicate controls, invalid dates, noninteger adults/ages and ages above17 fail before output. Age order does not affect matching; repeated ages represent different children, not duplicates to remove. Adults must be a positive safe integer. This changes the research task only, not an observed booking party or source date.
 
 ```bash

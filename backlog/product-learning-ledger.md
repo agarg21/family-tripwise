@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-02
+Last updated: 2026-10-03
+
+## LRN-113 / October3 / FT-IMP-062
+
+Family decision: compare exact six-person apartments versus a named connected configuration for2adults/ages4,8,12,15 Nov8-13five nights. Hypothesis supported: separate packs cannot complete the joined budget task through the original interface without manual assembly; pre-edit `--packs` fails. Integrated offline task validation implements five-pack/eight-category/thirteen-row export, eleven public-plan rows/six priced categories and two unpriced categories. Evidence: maintained OFFICIAL_PROPERTY_FACT/BOOKING_CHECK records used as repository task evidence, September30/October2 dates unchanged; October2 competitor audit reused, today's403 not retried or fresh evidence. Exact-family/date/source-owner controls retain nightly/stay/currency/fee/deposit/cancel/unknowns; changed-task/member/future/old samples qualified or empty, not extrapolated. IMPLEMENT shared tool/PRESERVE URLs,077not fully qualified: concentrated corpus, independent budget/rest/entrance/materiality/Londonapproval remain. Confidence high deterministic joins/provenance, medium proxy workflow benefit, unknown user/competitive/SEO effect. Lesson: explicit task/unique category ownership join evidence without another factual layer. Falsify on wrong-task inheritance/duplicate ambiguity/changed terms or independent equivalent output. Evidence `docs/research/family-room-joined-task-2026-10-03.md`; QA/read-onlyreview/release gates separate, no public change/date renewal/paid call/bypass.
 
 ## LRN-112 / October2 / FT-RES-103
 

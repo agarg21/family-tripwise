@@ -76,8 +76,8 @@
     "new_destination_authority": false,
     "review_and_security_gates_unchanged": true,
     "guaranteed_continuous_runtime": false,
-    "scheduler_application_state": "enabled-and-saved-fields-verified",
-    "scheduler_verified_at": "2026-10-02T13:37:01Z"
+    "scheduler_application_state": "recurring-restored-and-saved-fields-verified",
+    "scheduler_verified_at": "2026-10-03T04:25:10.398Z"
   },
   "weekly_evidence_audit": {
     "owner": "existing-independent-operator",

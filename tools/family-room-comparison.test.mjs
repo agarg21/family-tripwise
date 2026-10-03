@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
-import { comparisonHeadings, parseRoomComparisonOptions, roomComparisonCsv } from "./family-room-comparison.mjs";
+import { comparisonHeadings, parseRoomComparisonOptions, roomComparisonCsv, roomComparisonsCsv } from "./family-room-comparison.mjs";
 
 const path = name => fileURLToPath(new URL(`../docs/research/${name}`, import.meta.url));
 const dcPath = path("washington-dc-room-configurations-2026-09-30.json");
@@ -23,6 +23,124 @@ const output = (pack = dc, observations = prices, date = "2026-09-30", party = p
 
 const taskArgs = party => ["--adults", String(party.adults), "--child-ages", party.child_ages.join(",") || "none",
   "--arrival", party.stay.arrival, "--departure", party.stay.departure];
+
+const joinedPaths = ["london-six-person-comparison", "london-aldgate-six-person-task", "london-bridge-six-person-task",
+  "london-connected-six-person-task", "london-canary-family-task"].map(name => path(`${name}-2026-10-02.json`));
+const joinedPacks = joinedPaths.map(p => JSON.parse(readFileSync(p)));
+const joinedPricePaths = ["london-marlin-six-person-price-observation", "london-limehouse-six-person-price-observation",
+  "london-aldgate-six-person-price", "london-bridge-six-person-price", "london-connected-six-person-price",
+  "london-canary-family-price"].map(name => path(`${name}-2026-10-02.json`));
+const joinedPrices = joinedPricePaths.flatMap(p => JSON.parse(readFileSync(p)));
+const joinedTask = { adults: 2, child_ages: [4, 8, 12, 15], stay: { arrival: "2026-11-08", departure: "2026-11-13" } };
+const joinedArgs = [joinedPaths[0], "--packs", ...joinedPaths.slice(1), "--date", "2026-10-03",
+  ...taskArgs(joinedTask), "--prices", ...joinedPricePaths];
+
+test("joined exact-family task retains eleven dated plan rows and two unpriced categories", () => {
+  const before = JSON.stringify([joinedPacks, joinedPrices, joinedTask]);
+  const csv = roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices);
+  const [header, ...data] = rows(csv);
+  assert.deepEqual(header, comparisonHeadings);
+  assert.equal(data.length, 13);
+  assert.ok(data.every(row => row.length === header.length && value(row, "Currency") === "GBP" &&
+    value(row, "Actual party") === JSON.stringify({ adults: 2, child_ages: [4, 8, 12, 15] }) &&
+    value(row, "Arrival") === "2026-11-08" && value(row, "Departure") === "2026-11-13" && value(row, "Nights") === "5"));
+  assert.deepEqual(data.filter(row => value(row, "Nightly equivalent") !== "").map(row => value(row, "Nightly equivalent")),
+    ["406.98", "452.2", "308.7", "343", "276.3", "307", "337.5", "610", "694", "432.18", "480.2"]);
+  const unpriced = data.filter(row => value(row, "Public rate plan") === "Unpriced");
+  assert.equal(unpriced.length, 2);
+  assert.ok(unpriced.some(row => value(row, "Hotel").includes("Metropole")));
+  assert.ok(unpriced.some(row => value(row, "Published category").includes("two sofa beds")));
+  assert.ok(unpriced.every(row => value(row, "Nightly equivalent") === "" && value(row, "Displayed stay amount") === ""));
+  const queen = data.find(row => value(row, "Hotel").includes("Queen Street"));
+  assert.equal(value(queen, "Category checked"), "2026-09-30");
+  assert.equal(value(queen, "Price observed"), "2026-10-02");
+  assert.match(value(queen, "Engine party and age basis"), /provider-age-band-counts/);
+  assert.match(value(queen, "Engine party and age basis"), /"adults":3/);
+  const connected = data.find(row => value(row, "Hotel").includes("Shoreditch"));
+  assert.match(value(connected, "Engine party and age basis"), /individual-ages/);
+  assert.equal(value(connected, "Connection evidence"), "named-connected-category");
+  assert.match(value(connected, "Fee and tax basis"), /5%/);
+  assert.match(value(connected, "Research scope and limits"), /not.*final fee-inclusive quote/);
+  assert.equal(JSON.stringify([joinedPacks, joinedPrices, joinedTask]), before);
+});
+
+test("joined CSV is the ordered single-pack rows with one header, not a new evidence layer", () => {
+  const csv = roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices);
+  const expected = joinedPacks.flatMap(pack => rows(roomComparisonCsv(pack, joinedTask, "2026-10-03",
+    joinedPrices.filter(p => pack.records.some(r => r.id === p.record_id)))).slice(1));
+  assert.deepEqual(rows(csv).slice(1), expected);
+  assert.equal(roomComparisonsCsv([dc], dc.scenario, "2026-09-30", prices), output());
+  assert.equal(execFileSync(process.execPath, [cli, ...joinedArgs], { encoding: "utf8" }), csv);
+});
+
+test("joined task matching, historical and member exclusions remain per-category", () => {
+  for (const party of [
+    { ...joinedTask, adults: 3 }, { ...joinedTask, child_ages: [4, 8, 12, 16] },
+    { ...joinedTask, stay: { arrival: "2026-11-09", departure: "2026-11-14" } }
+  ]) assert.ok(rows(roomComparisonsCsv(joinedPacks, party, "2026-10-03", joinedPrices)).slice(1)
+    .every(row => value(row, "Nightly equivalent") === ""));
+  assert.equal(roomComparisonsCsv(joinedPacks, { ...joinedTask, child_ages: [15, 12, 8, 4] }, "2026-10-03", joinedPrices)
+    .replaceAll('[15,12,8,4]', '[4,8,12,15]'), roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices));
+  const old = rows(roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-31", joinedPrices)).slice(1);
+  assert.equal(old.filter(row => value(row, "Price status") === "historical-dated-stay-samples").length, 11);
+  assert.ok(old.filter(row => value(row, "Price observed")).every(row => value(row, "Price observed") === "2026-10-02"));
+  const member = structuredClone(joinedPrices);
+  for (const rate of member[0].rates) rate.eligibility = "membership-required";
+  assert.ok(rows(roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", member)).slice(1)
+    .filter(row => value(row, "Hotel").includes("Queen Street")).every(row => value(row, "Nightly equivalent") === ""));
+  const future = structuredClone(joinedPrices); future[0].checked_on = "2026-10-04";
+  assert.ok(rows(roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", future)).slice(1)
+    .filter(row => value(row, "Hotel").includes("Queen Street")).every(row => value(row, "Nightly equivalent") === ""));
+});
+
+test("joined comparison rejects ambiguous owners, destinations, implicit tasks and malformed arrays", () => {
+  const join = (packs = joinedPacks, party = joinedTask, observations = joinedPrices) => roomComparisonsCsv(packs, party, "2026-10-03", observations);
+  for (const packs of [[], null, new Array(1), [null], [...joinedPacks, joinedPacks[0]]]) assert.throws(() => join(packs));
+  const iterator = [...joinedPacks]; iterator[Symbol.iterator] = function* () { yield joinedPacks[0]; };
+  assert.throws(() => join(iterator), /dense/);
+  assert.throws(() => join([joinedPacks[0], dc]), /same destination/);
+  for (const party of [null, {}, { ...joinedTask, stay: undefined }, { ...joinedTask, adults: 0 },
+    { ...joinedTask, child_ages: [18] }, { ...joinedTask, stay: { arrival: "2026-11-13", departure: "2026-11-08" } }]) assert.throws(() => join(joinedPacks, party));
+  assert.throws(() => roomComparisonsCsv(joinedPacks), /explicit/);
+  for (const observations of [null, new Array(1), [null], [...joinedPrices, prices[0]], [...joinedPrices, joinedPrices[0]]]) assert.throws(() => join(joinedPacks, joinedTask, observations));
+  const mismatched = structuredClone(joinedPrices); mismatched.at(-1).source_url = joinedPrices[0].source_url;
+  assert.throws(() => join(joinedPacks, joinedTask, mismatched), /mismatched category source/);
+  const currency = structuredClone(joinedPrices); currency.at(-1).currency = "USD";
+  assert.throws(() => join(joinedPacks, joinedTask, currency), /currency/);
+});
+
+test("joined CLI validates the entire task and price set before any output", () => {
+  const dir = mkdtempSync(join(tmpdir(), "ft-room-joined-invalid-"));
+  try {
+    const dest = join(dir, "never-created", "joined.csv");
+    const badPrice = structuredClone(joinedPrices.at(-1)); badPrice.rates[0].stay_amount = 0;
+    const badPath = join(dir, "bad.json"); writeFileSync(badPath, JSON.stringify([badPrice]));
+    const variants = [
+      [joinedPaths[0], "--packs", ...joinedPaths.slice(1)],
+      [joinedPaths[0], "--packs"],
+      [...joinedArgs, "--packs", joinedPaths[1]],
+      [joinedPaths[0], "--packs", joinedPaths[0], "--date", "2026-10-03", ...taskArgs(joinedTask)],
+      [...joinedArgs.slice(0, -joinedPricePaths.length), ...joinedPricePaths.slice(0, -1), badPath]
+    ];
+    for (const args of variants) {
+      assert.throws(() => execFileSync(process.execPath, [cli, ...args, "--output", dest], { stdio: "pipe" }), error => {
+        assert.equal(error.stdout.toString(), ""); return true;
+      });
+      assert.equal(existsSync(join(dir, "never-created")), false);
+    }
+    const out = join(dir, "joined.csv");
+    const args = [cli, ...joinedArgs, "--output", out];
+    const summary = JSON.parse(execFileSync(process.execPath, args, { encoding: "utf8" }));
+    assert.equal(summary.categories, 8); assert.equal(summary.packs, 5); assert.equal(summary.public_changes, false);
+    assert.deepEqual(summary.task, joinedTask);
+    assert.equal(readFileSync(out, "utf8"), roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices));
+    assert.throws(() => execFileSync(process.execPath, args, { stdio: "pipe" }), /EEXIST/);
+    assert.throws(() => execFileSync(process.execPath, [cli, ...joinedArgs, "--output", fileURLToPath(new URL("../site/downloads/never-joined.csv", import.meta.url))], { stdio: "pipe" }), /public site/);
+    const alias = join(dir, "public"); symlinkSync(fileURLToPath(new URL("../site/", import.meta.url)), alias, "dir");
+    assert.throws(() => execFileSync(process.execPath, [cli, ...joinedArgs, "--output", join(alias, "uncreated-join", "out.csv")], { stdio: "pipe" }), /public site/);
+    assert.equal(existsSync(join(alias, "uncreated-join")), false);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
 
 test("explicit CLI tasks screen family six, an infant extension and changed stays without evidence edits", () => {
   const before = JSON.stringify([london, londonPrices]);

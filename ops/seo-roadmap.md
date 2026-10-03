@@ -1,5 +1,9 @@
 # Family Tripwise SEO Roadmap
 
+Current FT-IMP-062: one maintained exact-family comparison across same-destination packs, under077incremental-output gate. Ten registered paths; explicit family/stay, unique category ownership, complete price validation, original context/dates and unknowns, single-pack compatibility/research-only writer. Focused/full native QA and different read-only PASS before exact-path push. Integrated task learning, not new URL or production delivery. Existing Chicago hold/evidence/publication gates unchanged; no paid call or repeated403.
+
+FT-OPS-008 October2 sprint expired; original recurring heartbeat restored and saved fields verified2026-10-03T04:25:10.398Z. Same identity/thread/notifications/global cutoff, exact normal prompt baseline, normal1action/run2/day caps. Mechanical restoration only; backlog decisions and held work unchanged, next normal trigger resumes project work. This local restoration record is not a new shipped product or learning unit.
+
 FT-OPS-010 RELEASED: approved normalmerge8514b1a47811be262796a7d999ba4dd15e94c392/remoteverified2026-10-03T04:16:47Z,028cfc1+6fec783 preserved/no force-reset-rebase.26existing reviewedtools/research/docs actions nowpushed; no publicpage delivery. Socrates1PASS_WITH_P3/noP0-P2/441release58focused442working/native0/GSC81/SEO0-fivebaseline/exact64scope647tree; P3mode-operationchecks supplemented natively. Elevenexcluded dirtypaths intact;083Git dependency resolved,077/076evidence andChicagopreview/Londonapproval unchanged. Allolderhold prose is history, notcurrentGit stop.
 
 FT-OPS-010 ingests `ops/gsc-snapshots/2026-10-02.json` / `ops/gsc-snapshots/2026-10-02.md` through approved pinned merge. Reused recent API finalizedSeptember30/priorOctober1September29; aggregates orientation/noCTR diagnosis. Initial index onlytwoincomingpaths/no conflicts; composed64path pending release excludes eleven held/unrelated paths, no public changes.
