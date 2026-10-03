@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-123",
+  "parent_item": "FT-RES-059",
+  "learning_unit": "LRN-139",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "A two-queen kitchen-suite and Wharf base can become a fifth five-person DC category with November rest/pool/budget support.",
+  "task": {
+    "class": "EDITORIAL_PROXY_NOT_USER_TEST",
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "car": false,
+    "preferences": [
+      "kitchen",
+      "midday room rest",
+      "indoor pool preferred"
+    ],
+    "budget": null,
+    "museum_entrance": null,
+    "journey_minutes": null,
+    "desired_rest_minutes": null
+  },
+  "sources": [
+    {
+      "url": "https://www.hyatt.com/hyatt-house/en-US/wasxs-hyatt-house-washington-dc-the-wharf/rooms/1BVQ",
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "status": "body-inspected",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "last month",
+      "scope": "Exact standard Riverview One Bedroom Suite | Two Queen Beds"
+    },
+    {
+      "url": "https://www.hyatt.com/hyatt-house/en-US/wasxs-hyatt-house-washington-dc-the-wharf/rooms/AVQT",
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "status": "body-inspected",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "3 weeks ago",
+      "scope": "Exact accessible Riverview One Bedroom Suite/Tub | Two Queen Beds"
+    },
+    {
+      "url": "https://www.hyatt.com/hyatt-house/en-US/wasxs-hyatt-house-washington-dc-the-wharf/rooms",
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "status": "body-inspected",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "today",
+      "scope": "Category distinctions and named Connecting Suite; no published maximum in returned body"
+    },
+    {
+      "url": "https://www.hyatt.com/hyatt-house/en-US/wasxs-hyatt-house-washington-dc-the-wharf?src=corp_lclb_gmb_seo_wasxs",
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "status": "body-inspected",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "crawl_label": "2 months ago",
+      "scope": "Published seasonal pool, breakfast, market and location labels; not actual journey or November operation"
+    }
+  ],
+  "property": "Hyatt House Washington DC / The Wharf",
+  "address": "725 Wharf Street SW, Washington DC 20024, United States",
+  "categories": [
+    {
+      "id": "1BVQ",
+      "category": "Riverview One Bedroom Suite | Two Queen Beds",
+      "source_index": 0,
+      "square_feet": 520,
+      "bedrooms": 1,
+      "beds": "two queen beds",
+      "kitchen_label": "kitchenette",
+      "listed_equipment": [
+        "microwave",
+        "full refrigerator",
+        "coffee maker"
+      ],
+      "stove_confirmed": null,
+      "dining_places": null,
+      "sofa_confirmed": null,
+      "published_maximum": null,
+      "booking_child_age_policy": null,
+      "five_person_capacity": "UNKNOWN"
+    },
+    {
+      "id": "AVQT",
+      "category": "Accessible Riverview One Bedroom Suite/Tub | Two Queen Beds",
+      "source_index": 1,
+      "square_feet": 520,
+      "bedrooms": 1,
+      "beds": "two queen beds",
+      "kitchen_label": "full kitchen",
+      "listed_equipment": [
+        "microwave",
+        "full refrigerator",
+        "coffee maker"
+      ],
+      "stove_confirmed": null,
+      "dining_places": null,
+      "sofa_confirmed": null,
+      "published_maximum": null,
+      "booking_child_age_policy": null,
+      "five_person_capacity": "UNKNOWN",
+      "accessibility_task_verified": false
+    },
+    {
+      "id": "named-connecting",
+      "category": "Connecting Suite",
+      "source_index": 2,
+      "square_feet": 753,
+      "beds": "two king beds in separate sleeping areas plus sofa sleeper",
+      "composition": "One Bedroom Suite 468 square feet plus Den Guestroom 285 square feet",
+      "named_connection_published": true,
+      "reservation_linkage_guaranteed": null,
+      "published_maximum": null,
+      "booking_child_age_policy": null,
+      "five_person_capacity": "UNKNOWN",
+      "kitchen_equipment_inherited": false,
+      "award_restriction": "World of Hyatt Suite Upgrade Awards cannot be used with this room type"
+    }
+  ],
+  "amenities": {
+    "source_index": 3,
+    "pool_type": "seasonal-outdoor",
+    "published_season": {
+      "opening": "last weekend of May",
+      "closing": "first weekend of September",
+      "year": null
+    },
+    "november_pool_task": "OUTSIDE_PUBLISHED_RECURRING_SEASON_NOT_INDOOR_BACKUP",
+    "actual_november_operation_verified": false,
+    "registered_guests_only": true,
+    "under_18_accompanied_by_adult": true,
+    "breakfast": "published complimentary breakfast",
+    "actual_date_service_verified": false,
+    "market": "published 24-hour guest market",
+    "cooking_in_all_categories_inferred": false
+  },
+  "base_task": {
+    "marketing_proximity_not_measured_route": true,
+    "actual_entrance_to_room_route": null,
+    "journey_minutes": null,
+    "stroller_verdict": null,
+    "nap_return_feasible": null
+  },
+  "price": {
+    "amount": null,
+    "currency": null,
+    "unit": "configuration/night",
+    "observed_on": null,
+    "room_category": null,
+    "party_entered": false,
+    "stay_dates_entered": false,
+    "tax_fee_inclusions": null,
+    "mandatory_fees": null,
+    "parking_selected_no_car": 0,
+    "parking_policy_amount": null,
+    "full_cost": null,
+    "status": "not-observed-not-zero-not-soldout",
+    "missing_basis": [
+      "Exact category capacity and accepted child-age input",
+      "Comparable public five-person Nov8-13 rate and ISO currency",
+      "Tax/mandatory fee and cancellation context"
+    ]
+  },
+  "dependency": {
+    "tool": "cua.createBrowserTab browser2 then normal screenshot/document-load/AX",
+    "url": "https://www.hyatt.com/hyatt-house/en-US/wasxs-hyatt-house-washington-dc-the-wharf/rooms/1BVQ",
+    "tab_id": "40",
+    "attempts": 1,
+    "result": "AX root only; white screenshot; domcontentloaded completed but controls did not render",
+    "affected_gate": "Normal exact capacity/party/date public-price check",
+    "owner": "Normal provider page rendering/session availability",
+    "unblock_condition": "Changed normal rendering/session; no policy or security weakening",
+    "next_check": "Only changed state in a separately eligible exact-task price action; avoid further unchanged Hyatt blank-page attempts across properties",
+    "tab_closed": true,
+    "alternate_quote_tool_used": false,
+    "security_denial_diagnosed": false
+  },
+  "decision": {
+    "outcome": "REJECT adding an unqualified fifth capacity record; CANDIDATE exact-category clarification/PRESERVE launch",
+    "shared_pack_modified": false,
+    "current_four_category_count": 4,
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0,
+    "next_gate": "Published exact maximum/booking-age basis and changed normal quote rendering; current review/fullcost and actual rest task remain. Do not infer maximum from two beds or transfer accessible kitchen/sofa/connection facts.",
+    "confidence": "High inspected label distinctions and recurring season exclusion; unknown exact capacity, cooking appliance details, dining, actual booking/operation/rest/users/SEO",
+    "falsification_trigger": "New exact published maximum/category equipment evidence, changed normal party/date price rendering or supported date-specific pool/rest task"
+  }
+}
