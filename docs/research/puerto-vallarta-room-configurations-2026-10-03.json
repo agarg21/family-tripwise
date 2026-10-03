@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-069",
+  "destination": "Puerto Vallarta",
+  "checked_on": "2026-10-03",
+  "refresh_days": 30,
+  "evidence_scope": "Five exact variants/categories at two properties, reused reviewed121 observations without source renewal. Bahia Mita is Nayarit coast, not Puerto Vallarta city. Capacity screen only, not complete corpus, review, club admission, exact booking ages, route, availability or family price. Separate teen URL and city launch held.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "one accommodation",
+      "no car",
+      "mixed-age care"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "bahia-rooms": {
+      "url": "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/bahia-mita-surf-spa-resort/accommodations/rooms-suites/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "vallarta-club-rooms": {
+      "url": "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/vallarta-bay-resort-spa/accommodations/club-level/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "bahia-junior-king",
+      "hotel": "Dreams Bahia Mita Surf & Spa Resort",
+      "category": "Junior Suite Tropical View (king variant)",
+      "source_id": "bahia-rooms",
+      "sleeping_setup": "King bed; published variant only",
+      "kitchen": "not-established",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 3,
+          "max_adults": 2,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm booking age policy, exact reservation and sleeping allocation; published maximum is not exact-age acceptance"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact category/variant published maximum and adult limit, not inferred from bed count"
+        }
+      ],
+      "checks": [
+        "Booking child/adult age classification and dated reservation acceptance unknown; club ages are not room booking ages",
+        "No exact-family November8-13 quote; ISO currency, fees, deposits, meals and cancellation terms unconfirmed",
+        "Kitchen equipment and dining capacity not established",
+        "No-car transfer cost and nap-return journey unknown; no route assurance",
+        "Base: Nayarit coast, not Puerto Vallarta city; exact municipality and route not verified",
+        "Explorer published3-12; readiness/registration/places and teen band unknown; do not inherit Vallarta potty-training policy"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": null,
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "ISO currency not confirmed; ambiguous source dollar sign not adopted",
+          "Exact family category/party/stay and full tax/fee/care terms unobserved; per-person two-adult low-season samples not family nightly prices"
+        ]
+      }
+    },
+    {
+      "id": "bahia-junior-queens",
+      "hotel": "Dreams Bahia Mita Surf & Spa Resort",
+      "category": "Junior Suite Tropical View (two-queen variant)",
+      "source_id": "bahia-rooms",
+      "sleeping_setup": "Two queens; published variant only",
+      "kitchen": "not-established",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": 3,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm booking age policy, exact reservation and sleeping allocation; published maximum is not exact-age acceptance"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact category/variant published maximum and adult limit, not inferred from bed count"
+        }
+      ],
+      "checks": [
+        "Booking child/adult age classification and dated reservation acceptance unknown; club ages are not room booking ages",
+        "No exact-family November8-13 quote; ISO currency, fees, deposits, meals and cancellation terms unconfirmed",
+        "Kitchen equipment and dining capacity not established",
+        "No-car transfer cost and nap-return journey unknown; no route assurance",
+        "Base: Nayarit coast, not Puerto Vallarta city; exact municipality and route not verified",
+        "Explorer published3-12; readiness/registration/places and teen band unknown; do not inherit Vallarta potty-training policy"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": null,
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "ISO currency not confirmed; ambiguous source dollar sign not adopted",
+          "Exact family category/party/stay and full tax/fee/care terms unobserved; per-person two-adult low-season samples not family nightly prices"
+        ]
+      }
+    },
+    {
+      "id": "bahia-family",
+      "hotel": "Dreams Bahia Mita Surf & Spa Resort",
+      "category": "Family Suite Tropical View",
+      "source_id": "bahia-rooms",
+      "sleeping_setup": "Published bedding heading: One king-size bed or two queens x 2; allocation unconfirmed",
+      "kitchen": "not-established",
+      "connection": "named-connected-category",
+      "configurations": [
+        {
+          "maximum": 7,
+          "max_adults": 4,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm booking age policy, exact reservation and sleeping allocation; published maximum is not exact-age acceptance"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact category/variant published maximum and adult limit, not inferred from bed count"
+        }
+      ],
+      "checks": [
+        "Booking child/adult age classification and dated reservation acceptance unknown; club ages are not room booking ages",
+        "No exact-family November8-13 quote; ISO currency, fees, deposits, meals and cancellation terms unconfirmed",
+        "Kitchen equipment and dining capacity not established",
+        "No-car transfer cost and nap-return journey unknown; no route assurance",
+        "Base: Nayarit coast, not Puerto Vallarta city; exact municipality and route not verified",
+        "Explorer published3-12; readiness/registration/places and teen band unknown; do not inherit Vallarta potty-training policy",
+        "Named connected category does not guarantee booked linkage or bedding allocation"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": null,
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "ISO currency not confirmed; ambiguous source dollar sign not adopted",
+          "Exact family category/party/stay and full tax/fee/care terms unobserved; per-person two-adult low-season samples not family nightly prices"
+        ]
+      }
+    },
+    {
+      "id": "vallarta-junior",
+      "hotel": "Dreams Vallarta Bay Resort & Spa",
+      "category": "Preferred Club Junior Suite Garden View",
+      "source_id": "vallarta-club-rooms",
+      "sleeping_setup": "Exact bedding allocation not recorded in121; do not inherit another category",
+      "kitchen": "not-established",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": 3,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm booking age policy, exact reservation and sleeping allocation; published maximum is not exact-age acceptance"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact category/variant published maximum and adult limit, not inferred from bed count"
+        }
+      ],
+      "checks": [
+        "Booking child/adult age classification and dated reservation acceptance unknown; club ages are not room booking ages",
+        "No exact-family November8-13 quote; ISO currency, fees, deposits, meals and cancellation terms unconfirmed",
+        "Kitchen equipment and dining capacity not established",
+        "No-car transfer cost and nap-return journey unknown; no route assurance",
+        "Base: Puerto Vallarta city / Las Glorias; no measured route",
+        "Explorer3-12 requires fully potty trained; requested readiness/registration/places/admission unknown; teen13-17; separate paid child care amount unknown"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": null,
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "ISO currency not confirmed; ambiguous source dollar sign not adopted",
+          "Exact family category/party/stay and full tax/fee/care terms unobserved; per-person two-adult low-season samples not family nightly prices"
+        ]
+      }
+    },
+    {
+      "id": "vallarta-master-base",
+      "hotel": "Dreams Vallarta Bay Resort & Spa",
+      "category": "Preferred Club Master Suite Partial Ocean View (base category)",
+      "source_id": "vallarta-club-rooms",
+      "sleeping_setup": "Exact bedding allocation not recorded in121; adjoining configuration capacity unknown",
+      "kitchen": "not-established",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 2,
+          "max_adults": null,
+          "max_children": 0,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm booking age policy, exact reservation and sleeping allocation; published maximum is not exact-age acceptance"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published base maximum2/adults-only; no combined adjoining-category maximum inherited"
+        }
+      ],
+      "checks": [
+        "Booking child/adult age classification and dated reservation acceptance unknown; club ages are not room booking ages",
+        "No exact-family November8-13 quote; ISO currency, fees, deposits, meals and cancellation terms unconfirmed",
+        "Kitchen equipment and dining capacity not established",
+        "No-car transfer cost and nap-return journey unknown; no route assurance",
+        "Base: Puerto Vallarta city / Las Glorias; no measured route",
+        "Explorer3-12 requires fully potty trained; requested readiness/registration/places/admission unknown; teen13-17; separate paid child care amount unknown",
+        "Adult-only base excludes children; adjoining combined configuration not qualified"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": null,
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "ISO currency not confirmed; ambiguous source dollar sign not adopted",
+          "Exact family category/party/stay and full tax/fee/care terms unobserved; per-person two-adult low-season samples not family nightly prices"
+        ]
+      }
+    }
+  ],
+  "offer_observations": [],
+  "maintained_evidence": "docs/research/puerto-vallarta-room-club-feasibility-2026-10-03.json"
+}

@@ -43,7 +43,7 @@ function roomComparisonRows(pack, party, asOf, prices, kitchen) {
       pack.destination, room.hotel, room.category, room.screening, room.conditions.join("; "), JSON.stringify(pack.records[index].configurations),
       room.sleeping_setup, room.kitchen, room.connection, room.checked_on, room.screened_on,
       JSON.stringify({ adults: party.adults, child_ages: party.child_ages }), stay.arrival, stay.departure,
-      nights, price.status, price.observed_on, price.currency, price.unit, rate?.plan ?? "Unpriced",
+      nights, price.status, price.observed_on, price.currency ?? "Unknown", price.unit, rate?.plan ?? "Unpriced",
       rate?.stay_amount, rate?.nightly_average, price.booking_category,
       price.engine_party ? JSON.stringify(price.engine_party) : "Not observed",
       price.configuration_basis ?? "Not observed", price.fee_basis ?? "Unknown",

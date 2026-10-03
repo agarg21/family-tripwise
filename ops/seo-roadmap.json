@@ -20,10 +20,47 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-069",
+      "title": "Integrate Puerto Vallarta exact category screens without inferred currency",
+      "kind": "implementation",
+      "status": "in_progress",
+      "parent_item": "FT-RES-062",
+      "selected_on": "2026-10-03",
+      "target_paths": [
+        "tools/family-room-task.mjs",
+        "tools/family-room-comparison.mjs",
+        "tools/puerto-vallarta-family-room.test.mjs",
+        "docs/research/puerto-vallarta-room-configurations-2026-10-03.json",
+        "docs/research/puerto-vallarta-room-screen-integration-2026-10-03.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Reviewed121 exact official categories and122 ownership candidate. Existing shared model wrongly requires known ISO currency even for unpriced configurations; retain unknown currency, not infer USD from ambiguous dollar sign. Five exact category/variant records reused without source renewal.",
+      "acceptance_criteria": [
+        "Explicit null currency only for strict unpriced placeholder; observed prices retain known currency equality, no wildcard or inference",
+        "Five categories match121 maxima/adult-only/ambiguous bedding and source date; five-person conditional candidate plus four exclusions; unknown booking ages/kitchen/care/base/fees visible in screen and CSV",
+        "CSV explicit Unknown currency/no numeric sample conversion; fresh/stale, adult/child/party, null/schema, CLI and observed-price mismatch regressions",
+        "Full/focused nativeQA/different read-onlyPASS/exact10path release; preserve121/122/123completion/oldrecords/public/11held;062onlydecision/next_gate/evidence_record"
+      ],
+      "measurement_plan": "Reproduce5and6person conditional screens/8person andadult-only controls, stale recheck and CSV/CLI parity; proxy constraints not user/SEO or booking verification",
+      "production_invariant": "No site/newcity/route/safety/price/clubacceptance claim, provider retry, paid call, scheduler mutation. Third/final23:01:05run action registered23:32before23:46:05deadline; no fourth.",
+      "decision": "Implement reviewed capacity evidence into existing shared screen/export; maintain exact-family price and city launch hold",
+      "next_gate": "Implement then nativeQA/independent review/exact release; actual comparable price/care/base/currentreview corpus and fresh namedcityapproval separate",
+      "release_state": "review-clean-awaiting-release",
+      "review_verdict": "PASS",
+      "reviewer": "Newton 01a1041f-f3a2-7242-82e0-003ea93b3424",
+      "review_cycles": 1,
+      "qa_result": "500full/84focused/0failures-skips-cancellations;state0;GSC82;SEO0-fiveprior;scope723baseline725candidate/10paths/55public/11held/242prioritems062threefields/ledger139down/source121preserved"
+    },
+    {
       "id": "FT-RES-123",
       "title": "Qualify DC Wharf kitchen suite against exact five-person rest task",
       "kind": "research",
-      "status": "in_progress",
+      "status": "completed",
       "parent_item": "FT-RES-059",
       "selected_on": "2026-10-03",
       "target_paths": [
@@ -47,12 +84,15 @@
       "decision": "REJECT adding unqualified fifth capacity record; kitchen labels differ and exact maxima remain unknown, November outside published outdoorseason; candidate exact-category clarification/PRESERVE launch",
       "next_gate": "Nativefull/focusedQA/different read-onlyPASS/exact7path docs release; exactmaximum/booking-age/category-equipment and same-family budget onlyafter changednormalrender; originalfour/currentreview/rest/corpus gates remain",
       "evidence_record": "docs/research/dc-wharf-kitchen-suite-2026-10-03.json",
-      "release_state": "review-clean-awaiting-release",
+      "release_state": "released-remote-verified-docs-only",
       "review_verdict": "PASS",
       "reviewer": "Helmholtz 01a10412-48b3-7932-bf3c-02e6ad8d3708",
       "review_cycles": 2,
       "prior_review_result": "Cycle1PASS_WITH_P3: maxima-differ and bounded-exclusion wording corrected; cycle2PASS noP0-P3",
-      "qa_result": "493full/77focused/0failures-skips-cancellations;state0;GSC82;SEO0-fiveprior;scope/privacy/source/category/season/nulls/public/held/hash checks pass"
+      "qa_result": "493full/77focused/0failures-skips-cancellations;state0;GSC82;SEO0-fiveprior;scope/privacy/source/category/season/nulls/public/held/hash checks pass",
+      "completed_on": "2026-10-03",
+      "release_commit": "dd4407ec3876af6f142b153a9f1f683a22f02fb9",
+      "remote_verified_at": "2026-10-03T23:26:10.871Z"
     },
     {
       "id": "FT-RES-122",
@@ -1119,7 +1159,7 @@
     {"id":"FT-RES-059","title":"Validate Washington DC museum-trip family lodging","kind":"research","status":"planned","priority":3,"target_urls":[],"evidence":"September30US720/KD0 and OTA/forum/location-result mix","decision":"CANDIDATE maintained four-category budget and conditional rest tool;123Wharf additionalcategory notqualified without maximum, standard/accessible kitchens notinherited and seasonaloutdoor notNovember backup; no citylaunch","next_gate":"Exacthotel/entrance/date journey/rest/entry evidence plus currentreviews/fullcost/corpus/materiality/noexistingfit/freshDCapproval.123category maximum/bookingage/equipment/same-family price requireschangednormalrender; avoid unchangedHyattblank attempts acrossproperties;108116other holds changedstate-only","target_paths":[],"measurement_plan":"Comparable family room/base outputs, not ranking promise","production_invariant":"No firsthand transit/stroller assurance or launch from metrics alone","evidence_record":"docs/research/dc-wharf-kitchen-suite-2026-10-03.json"},
     {"id":"FT-RES-060","title":"Validate Disney2027 family dining-plan cost tool","kind":"research","status":"completed","priority":4,"target_urls":[],"evidence":"September30officialUS2027plan/child-savings terms and two current competitor tool audits; prior paidSERP missingness and dated demand limits retained","decision":"REJECT generic quote/cash/unspent-credit calculator prototype and newURL; direct competitor already covers proposed job","next_gate":"Reopen after new first-party2027terms or3-5current recurring meal/rest decisions plus competing-tool task gap and controlled query overlap; no new prototype from unchanged monitoring","target_paths":["docs/research/disney-2027-dining-opportunity-2026-09-30.md","backlog/product-learning-ledger.md","ops/current-cycle.md","ops/seo-roadmap.json","ops/seo-roadmap.md","ops/operator-review.md","docs/research/washington-dc-room-budget-task-2026-09-30.md"],"measurement_plan":"Meal-use and comparable total answerability, no guaranteed savings","production_invariant":"No unsupported price/discount or new URL before normal gates","selected_on":"2026-09-30","acceptance_criteria":["Distinguish2026free offer from2027menu-relative up-to20%childsavings, no stale price or flat plan discount","Current two-tool overlap supports explicit build/reject decision; no prototype if distinct job disproved","Full/native QA and different read-only PASS before docs-only push"],"evidence_record":"docs/research/disney-2027-dining-opportunity-2026-09-30.md","review_outcome":"PASS","review_cycles":2,"reviewer_agent_ids":["01a0f57c-33c6-7111-a74a-1ef1cc166183"],"qa":"Independent48focused/full323isolated/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories; cycle-two correction hashes/JSON/state/whitespace","release_state":"completed-research-decision-pushed","completed_on":"2026-09-30","release_commit":"d9cdddb22433a9e9237c8151f40826e575898208"},
     {"id":"FT-RES-061","title":"Validate Boston family room/base comparison","kind":"research","status":"planned","priority":5,"target_urls":[],"evidence":"September30US590/KD0,best-family480/KD0,five-person20/KD0; official/editorial result mix","decision":"IMPLEMENT two exact Copley outside-limit controls JSTE3/DBDB4; HOLD FamilySuite unidentified maximum/price, no transferred FAQ4/generic8; original3records and dated ParkPlaza budgets unchanged","next_gate":"Reconcile marketed two-queen FamilySuite exact card/maximum before actual-party price; six-property current reviews/fee/rest corpus, controlled overlap/materiality/noexistingfit/named Boston approval remain. Independent noncity corpus next","target_paths":[],"measurement_plan":"Distinct maintained lodging comparison","production_invariant":"No new city/URL from KD0 alone","evidence_record":"docs/research/boston-copley-family-task-2026-10-03.json"},
-    {"id":"FT-RES-062","title":"Validate Puerto Vallarta family all-inclusive resort job","kind":"research","status":"planned","priority":6,"target_urls":[],"evidence":"September30USresort phrase1000/KD10 versus generalfamilyhotels110/KD9","decision":"CANDIDATE one maintained exact-family resort comparison; controlled122URLoverlap low but teen metrics unknown/genericfamilycoverage already present; HOLD separate teenURL/citylaunch.121category/club/base and priceunknowns retained","next_gate":"Maintain multi-property configuration/bookingage/programprerequisite/base/fullcost/currentreview corpus and named mixed-age/no-car budget task;121exact Bahia five-person Nov8-13 quote onlyafter normalrenderchanges; materiality/noexistingfit/two representative same-job queries for any distinctURL/fresh namedPV publication approval","target_paths":[],"measurement_plan":"Maintainable room/age/base/cost comparison","production_invariant":"No safety or firm family-suitability assurance","evidence_record":"docs/research/puerto-vallarta-ownership-2026-10-03.json"},
+    {"id":"FT-RES-062","title":"Validate Puerto Vallarta family all-inclusive resort job","kind":"research","status":"planned","priority":6,"target_urls":[],"evidence":"September30USresort phrase1000/KD10 versus generalfamilyhotels110/KD9","decision":"CANDIDATE exact-family comparison;069shared five-category screen/CSV implemented with unknown currency/no family quote.122ownership retained/HOLD teenURL/citylaunch","next_gate":"Current-review/corpus and mixed-age/no-car budget inputs; exactparty/category nightly/fee/ISO quote onlyafter changednormalrender/no unchanged Hyattblank attempts; booking ages/bedding/care/base unknown, materiality/noexistingfit/fresh namedPV approval remain","target_paths":[],"measurement_plan":"Maintainable room/age/base/cost comparison","production_invariant":"No safety or firm family-suitability assurance","evidence_record":"docs/research/puerto-vallarta-room-screen-integration-2026-10-03.md"},
     {"id":"FT-RES-063","title":"Test Orlando water-play lodging coverage gap","kind":"research","status":"planned","priority":7,"target_urls":["https://familytripwise.com/where-to-stay/orlando-family-hotels.html"],"evidence":"September30USwaterpark8100/KD19,lazyriver3600/KD0; current three-suite surface is not a complete waterpark inventory","decision":"IMPLEMENTED067 age-unresolved count-only Homewood budget alongside066Cabana and119exclusions;120original held source preserved. CANDIDATE waterjob/PRESERVE page","next_gate":"DC independent family task next; Orlando actual child-age acceptance/fullfee/transport/water corpus/current reviews/materiality/noexistingfit remain; October22public window, Floridays changed-state only","target_paths":[],"measurement_plan":"Room versus water-access decision clarity","production_invariant":"No cadence rewrite or room-capacity/admission conflation","evidence_record":"docs/research/orlando-unknown-age-price-integration-2026-10-03.md"},
     {"id":"FT-RES-064", "title":"Validate Cancun child-offer eligibility and comparable cost", "kind":"research", "status":"planned", "priority":8, "target_urls":["https://familytripwise.com/where-to-stay/cancun-family-resorts.html"], "evidence":"FT-RES-057 plus September30USbroaddeals5400/KD3,all-inclusive2900/KD9,exactchildphraseunknown; brand/OTA SERP", "decision":"CANDIDATE within existing Cancun decision, no generic deals URL", "next_gate":"Readable first-party age/room/date/channel terms and same-basis offer/non-offer totals; October11price trigger or verified conflict", "target_paths":[], "measurement_plan":"Eligibility and true comparable total, not headline discount", "production_invariant":"No unverified savings or daily-deals publishing"},
     {"id":"FT-RES-065", "title":"Watch Universal Kids Resort Frisco family decision demand", "kind":"research", "status":"planned", "priority":9, "target_urls":[], "evidence":"September30officialNowOpen hotel page; current brand/OTA SERP, missing phrase metrics and one40101SERPfailure", "decision":"WATCH; missing coverage is neither zero demand nor low KD", "next_gate":"Current numeric-demand coverage plus official calendar/room/price/park-total feasibility; no unchanged paid retry and destination launch needs publication scope authorization", "target_paths":[], "measurement_plan":"Whether a maintainable distinct family job emerges", "production_invariant":"No suitability/safety claim or launch from newness alone"},

@@ -58,7 +58,7 @@ export function validateRoomPack(pack) {
           c.infant_extension.places > c.max_children || c.conditions.length === 0)) fail(`${r.id}: invalid infant extension`);
     }
     // No price is synthesized from beds, another category, or the detached offer.
-    if (!r.price || !["GBP", "USD"].includes(r.price.currency) || r.price.unit !== "configuration/night" ||
+    if (!r.price || (r.price.currency !== null && !["GBP", "USD"].includes(r.price.currency)) || r.price.unit !== "configuration/night" ||
         r.price.amount !== null || r.price.observed_on !== null || r.price.status !== "not-observed" ||
         !strings(r.price.missing_basis) || !r.price.missing_basis.length) fail(`${r.id}: unsupported price`);
   }
@@ -104,7 +104,9 @@ export function screenRoomPack(pack, party = pack.scenario, asOf = currentEaster
       price: roomPriceForTask(prices, pack, r.id, party, asOf) ?? r.price,
       conflicts: r.conflicts, checked_on: source.checked_on, screened_on: asOf, source_url: source.url,
       capacity_evidence_class: selected?.evidence_class ?? null, capacity_basis: selected?.basis ?? null,
-      next_checks: [...r.checks, "Confirm child/adult age classification, exact reservation and available setup", `Collect comparable ${r.price.currency} nightly price with party/stay/tax/fee basis`],
+      next_checks: [...r.checks, "Confirm child/adult age classification, exact reservation and available setup", r.price.currency === null
+        ? "Confirm ISO currency and collect comparable nightly price with party/stay/tax/fee basis"
+        : `Collect comparable ${r.price.currency} nightly price with party/stay/tax/fee basis`],
       limitation: "Published capacity screen only; not availability, booking acceptance, safety, suitability, route practicality or price ranking." };
   });
 }

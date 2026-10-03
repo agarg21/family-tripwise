@@ -1,5 +1,13 @@
 # Operator Implementation Review Log
 
+FT-IMP-069 Newton01a1041f-f3a2-7242-82e0-003ea93b3424 cycle1PASS/noP0-P3; independent500full84focused/0failure-skip-cancel/state0/GSC82/SEO0-fiveprior/723baseline725candidate/exact10hashes/55publicHEAD/11held/242prioritems062threefields/ledger139down/121122123completion preserved. Five-category maxima/date/nullcurrency/observed-price-equality/35CSVcols/CLI controls verified. Offline/no provider replay/production claim/all sessionsfinished; immutable consensus/exact shared-tool release next.
+
+FT-IMP-069/LRN140 implemented strict null-only unpriced currency, Unknown CSV, five reviewed category records and seven regressions/pass.121dates/source/sample/bedding/care/base unknowns preserved, observed-currency validator unchanged/no wildcard. Full/focused nativeQA/different read-onlyPASS/exact10path release next; third/final/no fourth/public/paid/provider/11held change.062onlythreefields/currentreview-corpus and exact-family budget gates remain.
+
+FT-IMP-069 exact10paths registered before edits23:32UTC, third/final currentrun/before23:46:05/no fourth. Integrate reviewed121 five exact categories in shared room-screen/CSV; strict null-only unpriced currency without observation wildcard or dollar-symbol inference. Preserve121/122/123completion/public/11held;062onlythreefields. NativeQA/different read-onlyPASS/exact shared-tool release required; actual prices/care/base/currentreview/cityapproval remain held.
+
+FT-RES-123 docs-only release dd4407ec3876af6f142b153a9f1f683a22f02fb9 remote verified2026-10-03T23:26:10.871Z/HEAD-origin0-0/exact7paths/freshfetch/normalpush/Helmholtzcycle2PASS. No publicproduction change;11held intact. Second currentrun transaction complete.
+
 FT-RES-123 Helmholtz01a10412-48b3-7932-bf3c-02e6ad8d3708 cycle2PASS/noP0-P3; priorcycle1PASS_WITH_P3two wording issues corrected/re-reviewed. Independent493full77focused/0failure-skip-cancel/state0/GSC82/SEO0-fiveprior/721baseline722candidate/sevenhashes/55publicHEAD/11held/241prioritems059threefields/ledger138down/122completion andoldDC unchanged. Offline/no sourceUI replay/all sessionsfinished. Immutable consensus/exact7path docs-only release next.
 
 FT-RES-123/LRN139 qualifies no additionalcapacityrecord: standard/accessible kitchen labels differ; namedconnection has no exactmaximum; seasonaloutdoor pool notNovemberindoorbackup. OriginalfourDC/prices/museum/122completion unchanged; nightly/fee/rest nulls. Normal categoryUI blank/root-white-load once/closed/no alternate recovery, changednormalrender-only/avoid unchangedHyatt attempts acrossproperties. Full/focusedQA/different read-onlyPASS/exact7path docsrelease next; second currentrun/no public or11held mutation.
