@@ -1,5 +1,11 @@
 # Family Tripwise SEO Roadmap
 
+Current109 decision: CANDIDATE meal/optional-cost inputs/PRESERVE mandatory/hold/setup and service conflict; no full-budget winner. LRN120/source-class/crawl limits: `docs/research/washington-dc-kitchen-fee-audit-2026-10-03.md`. Native QA/read-only review before exact seven-path research release.059next exact fee/setup/review/rest/materiality/approval gates;11held/original corpus and prices unchanged.
+
+Current109: resolve Homewood/Residence published kitchen-task fee/meal constraints while preserving dated exact-party budget observations. Seven paths registered before collection; no full quote, route-fit or DC publication inference. First action of new17:20:02UTC run/deadline18:05:02/maxthree,11held/063completion retained; nativeQA/read-onlyPASS before docs-only release.
+
+FT-IMP-063 completed shared offline-tool releasef9321a50335b20a7e24c5beaf106b1cb5cdfb740, remote main verified2026-10-03T17:17:38.285Z after exact9scope/all665index/all3Gitguards/freshfetch/normalpush. No public production change or Pages trigger. Three transactions complete this run, no fourth;059 existing remaining gates and narrow holds unchanged. Mechanical local completion only.
+
 FT-IMP-063 independent Parfit1PASS/noP0-P3/453full78focused/operator0/GSC82/SEO0-fiveprior/100default-basis cases/16excluded-invalid/hash-scope-public-held controls. Exact nine-path shared offline-tool release next; no public-page deployment. Third/final transaction, no fourth; DC qualification gates unchanged.
 
 Current063 decision: implemented shared kitchen evidence filter, not another evidence corpus/article or family-fit winner. LRN119 and task: `docs/research/family-room-kitchen-task-2026-10-03.md`. Native453full78focused/state0/GSC82/SEO0-fiveprior/40default byteparity/exact nine paths green; read-only review then push. Parent059 rest/fee/review/publication gates remain; three actions selected this run, no fourth.

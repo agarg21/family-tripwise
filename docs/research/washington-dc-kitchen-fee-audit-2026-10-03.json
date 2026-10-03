@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-109",
+  "learning_unit": "LRN-120",
+  "inspected_on": "2026-10-03",
+  "task": {"adults": 2, "child_ages": [4,8,12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "car": false, "pets": false, "kitchen_preferred": true, "actual_booking_tested": false, "evidence_class": "EDITORIAL_PROXY_TASK"},
+  "sources": [
+    {"id": "homewood-overview", "url": "https://www.hilton.com/en/hotels/washwhw-homewood-suites-washington-dc-downtown/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "crawl_label": "today", "retrieval": "web-extracted body; not a live browser or booking result"},
+    {"id": "homewood-info", "url": "https://www.hilton.com/en/hotels/washwhw-homewood-suites-washington-dc-downtown/hotel-info/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "evidence_class": "PUBLISHED_PROPERTY_POLICY", "crawl_label": "today", "retrieval": "Clean canonical body inspected; initial linked default-party query body crawl label four weeks ago is not an exact-family price. Policy headings present, payment/cancellation panel details not extracted"},
+    {"id": "homewood-rooms", "url": "https://www.hilton.com/en/hotels/washwhw-homewood-suites-washington-dc-downtown/rooms/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "crawl_label": "yesterday", "retrieval": "Extracted body lacks exact-category cards/details; no capacity, kitchen-equipment or bedding renewal"},
+    {"id": "residence-overview", "url": "https://www.marriott.com/en-us/hotels/wascp-residence-inn-washington-dc-national-mall/overview/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "crawl_label": "today", "retrieval": "web-extracted overview/amenities/FAQ body; not exact-category modal or booking result"},
+    {"id": "residence-rooms", "url": "https://www.marriott.com/en-us/hotels/wascp-residence-inn-washington-dc-national-mall/rooms/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "crawl_label": "today", "retrieval": "Generic room body and unanswered FAQ placeholders; no current ONQQ maximum/table/sofa-fee details"}
+  ],
+  "candidates": [
+    {
+      "record_id": "dc-homewood-two-queen",
+      "source_ids": ["homewood-overview", "homewood-info", "homewood-rooms"],
+      "breakfast": {"published_included": true, "format": "hot/buffet", "hours": null, "five_person_seating": null, "dietary_fit": null, "future_operation_confirmed": false, "estimated_savings": null},
+      "other_meals": {"wednesday_social_published": true, "full_dinner_or_all_inclusive_established": false, "meal_value": null},
+      "parking": {"amount": 59, "currency": "USD", "unit": "Not stated in inspected current body", "type": "valet", "mandatory": false, "included_in_no_car_task": false, "tax_basis": null},
+      "pets": {"five_or_more_night_fee": 125, "currency": "USD", "unit": "Published nonrefundable pet-fee stay-length tier; per-pet basis not established", "included_in_no_pet_task": false, "tier_note": "Generic75 display versus125 for5+n tier, not a flat75 amount for every stay"},
+      "transport": {"airport_shuttle_published": false, "actual_museum_return_minutes": null},
+      "kitchen": {"property_level_published": true, "exact_category_revalidated": false, "current_equipment_or_meal_seating_revalidated": false},
+      "money_unknowns": {"mandatory_destination_or_other_fee": null, "sofa_setup_fee": null, "incidental_authorization_amount": null, "authorization_release_timing": null, "full_stay_total": null},
+      "capacity_or_bedding_revalidated": false,
+      "prior_rate_terms_renewed": false
+    },
+    {
+      "record_id": "dc-residence-two-queen-onqq",
+      "source_ids": ["residence-overview", "residence-rooms"],
+      "breakfast": {"published_included": true, "format": "conflicting grab-and-go versus full/hot wording", "hours": {"weekday": "06:30-09:30", "weekend": "07:00-10:00"}, "five_person_seating": null, "dietary_fit": null, "future_operation_confirmed": false, "estimated_savings": null},
+      "parking": {"amount": 59, "currency": "USD", "unit": "day", "type": "on-site self parking, limited spaces", "mandatory": false, "included_in_no_car_task": false, "tax_basis": null},
+      "pets": {"amount": 150, "currency": "USD", "unit": "Published nonrefundable pet fee/stay", "included_in_no_pet_task": false},
+      "transport": {"airport_shuttle_published": false, "actual_museum_return_minutes": null, "third_party_shuttle_prices_adopted": false},
+      "kitchen": {"property_level_published": true, "generic_equipment": ["full-size refrigerator", "stovetop", "microwave", "coffee maker"], "grocery_service_published": true, "grocery_service_fee": null, "exact_category_revalidated": false, "current_five_person_seating_revalidated": false},
+      "money_unknowns": {"mandatory_destination_or_other_fee": null, "sofa_setup_fee": null, "safe_charge": null, "incidental_authorization_amount": null, "authorization_release_timing": null, "full_stay_total": null},
+      "capacity_or_bedding_revalidated": false,
+      "prior_rate_terms_renewed": false
+    }
+  ],
+  "preservation": {"room_corpus": "docs/research/washington-dc-room-configurations-2026-09-30.json", "price_observations": ["docs/research/washington-dc-embassy-price-observation-2026-09-30.json", "docs/research/washington-dc-homewood-price-observation-2026-09-30.json", "docs/research/washington-dc-residence-price-observation-2026-09-30.json"], "exclusion_audit": "docs/research/washington-dc-candidate-conflicts-2026-10-03.json", "observations_renewed": false, "price_context_retained": true},
+  "decision": {"outcome": "CANDIDATE current meal/optional-cost inputs; PRESERVE mandatory fee, cash-flow, sofa and exact-category unknowns", "hypothesis": "Published kitchen/free-breakfast labels settle a five-person all-in meal and room budget", "result": "rejected; service-format conflict and exact setup/mandatory-cost unknowns remain", "confidence": "High inspected policy distinctions; unknown exact stay, service operation, fees, seating, booking, reviews, routes or SEO", "remaining_gate": "Exact-category and sofa/hold/mandatory-fee evidence, review-signal corpus and named hotel-rest journey; maintained narrower output/materiality and DC publication approval", "next_eligible_action": "Bounded review-signal task or supported evidence-product gap, no unchanged payment-tab/tax/museum/calendar retry", "falsification_trigger": "Changed official fee/meal policy, resolved service conflict, exact-party accepted current cost/sofa/hold evidence or current-category detail", "paid_calls": 0, "public_change": false, "city_launch_approved": false, "route_safety_stroller_assurance": false}
+}
