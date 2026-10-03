@@ -23,7 +23,7 @@
       "id": "FT-IMP-062",
       "title": "Join maintained room packs into one exact-family comparison",
       "kind": "improvement",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-03",
       "target_paths": [
         "tools/family-room-comparison.mjs",
@@ -47,8 +47,16 @@
       "measurement_plan": "Reproduce same-task apartment/connected comparison and audit missing-budget/context fields; proxy workflow improvement, not satisfaction or SEO proof",
       "production_invariant": "No site/new URL/destination/source-price-date/window/paid-budget/scheduler change; existing research-only writer protection preserved; include only mechanical prior scheduler restoration results",
       "decision": "IMPLEMENT shared research comparison; PRESERVE public URLs and publication gates",
-      "next_gate": "Implement and validate exact-task joined output, native QA and independent review",
-      "release_state": "implementation-pending"
+      "next_gate": "Implementation/native QA/independent review/exact-path push complete; separate077publication gates unchanged",
+      "release_state": "completed-tools-docs-pushed",
+      "completed_on": "2026-10-03",
+      "release_commit": "6296d6a8e046a902ffd059f82cb892d20e21c870",
+      "release_verified_at": "2026-10-03T05:17:53Z",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a1002d-6640-7d80-919e-3c18e05bccb5"],
+      "qa": "Independent446full62focused/no failures-skips/state0/GSC81/localSEO31URLs34HTML0errors-fiveprior;648release and648baseline hashes unchanged, single-pack-byte parity/13row task/exact10scope/077only3fields/11exclusions/publicHEADparity",
+      "release_verification": "Freshfetch/no divergence/complete sole outgoing commit reviewed; all648index bytes and modes match frozen review tree, all3native Git gates pass; normalpush and remoteSHA verified. No public change/Pages wait/source renewal/scheduler mutation."
     },
     {
       "id":"FT-OPS-010", "title":"Complete user-approved reviewed history reconciliation", "kind":"maintenance", "status":"completed", "selected_on":"2026-10-02",
