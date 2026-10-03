@@ -1,5 +1,13 @@
 # Family Tripwise SEO Roadmap
 
+FT-IMP-066 James01a103a6-403a-7111-b77b-4de801cdbcef cycle1PASS/noP0-P3; independent473full86focused/0failures-skips-cancellations/state0/GSC82/SEO31URLs34HTML0fiveprior/whitespace/699baseline702candidate/exact10scope55public235olditems/11held and original091093 preserved. Joined35cols3exclusions2datedplans/basis controls verified. No independent live/production; all sessions finished, immutable consensus/shared-tool-record docs push next.
+
+Current FT-IMP-066 IMPLEMENTED qualified Cabana dated-budget integration, pending full/focusedQA/read-onlyPASS/exact10path push. Five joined rows preserve3base exclusions+2count-only nightly samples and unknown currency/fees/terms; parent063onlythreefields. No public change; next independent water-property or city gate within actual sprint budget.
+
+Current FT-IMP-066 delivers qualified091Cabana count-only budget observations into shared comparison without invented adult cutoff/age confirmation. OriginalOct2taxinclusive nightly plan equivalents/unknown completefees/terms/currency interpretation retained; no public rewrite. Exact10paths/nativeQA/read-onlyPASS/push required; second currentrun transaction.
+
+FT-RES-119 shared-tool/record docs releasec215a55eabb32254ffaee3200d0f8ba5e52d11b6 remoteverified2026-10-03T21:17:04.901Z/HEADorigin0-0/exact11paths/all698index/threeGitguards/freshfetch/sole reviewedrange/normalpush/BoylePASS_WITH_P3. No public production change/Pageswait;11held preserved. First currentrun transaction complete; next qualified Cabana count-only price integration before21:46:02.
+
 FT-RES-119 Boyle01a1039c-d210-7b92-a469-f649f42257c7 cycle1PASS_WITH_P3/noP0-P2; nonblocking stale ten-path acceptance wording, actual11registered/reviewed. Independent467full80focused/0failures-skips-cancellations/state0/GSC82/SEO31URLs34HTML0fiveprior/whitespace/694baseline698candidate55public234olditems/11held preserved. Zero-child controls/source-budget/expanded-only distinction verified; no independent live/production. All sessions finished; immutable consensus, exact shared-tool-record/docs push next.
 
 FT-RES-119 current decision IMPLEMENT shared capacity controls/CANDIDATE expanded6person quote/PRESERVE public. Three base categories excluded; no force/smaller-party rate/contact substitution. Next independent comparable water-property or city gate after QA/read-onlyPASS/release, expanded source only on changed evidence; see `docs/research/orlando-four-seasons-room-task-2026-10-03.json`.

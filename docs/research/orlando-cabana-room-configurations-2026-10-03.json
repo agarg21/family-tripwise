@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-066",
+  "destination": "Orlando",
+  "checked_on": "2026-10-03",
+  "refresh_days": 30,
+  "evidence_scope": "One maintained Cabana exact-category record from October2 evidence, not a complete water-property corpus. Price sample preserves count-only child band, interpreted USD and unknown extras/terms; no individual-age acceptance, guaranteed pool/park operations, booking availability or public page change.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "one accommodation",
+      "no car",
+      "hotel-only water/rest day",
+      "separate sleep preferred"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "cabana": {
+      "url": "https://www.loewshotels.com/cabana-bay-hotel/rooms-showcase/courtyard-family-suite-poolside",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "orlando-cabana-poolside-family-exterior",
+      "hotel": "Universal Cabana Bay Beach Resort",
+      "category": "Poolside Family Suite Exterior Entry",
+      "source_id": "cabana",
+      "sleeping_setup": "Two queen beds and a sleeper sofa; Privacy partition between bedroom and living space.",
+      "kitchen": "not-established",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm actual individual age classification and sleeping allocation; count-only quote does not confirm ages"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "October2 exact official category publishes maximum6; no child-to-bed allocation or adult age policy inferred."
+        }
+      ],
+      "checks": [
+        "Kitchenette supplies mini fridge/microwave/sink, not a published cooking kitchen",
+        "Verify plan-specific deposit/cancellation and offer eligibility; Flexible name does not establish refundability",
+        "All-fee completeness, meals/tickets, optional tubes and actual November hotel water operations unknown",
+        "Current parking26plus-tax per vehicle has unknown billing frequency; no car task does not choose parking",
+        "Volcano Bay closure notice is separate from hotel pool/lazy-river operation"
+      ],
+      "conflicts": [
+        "General double-occupancy rate wording versus six-person result headers; individual child pricing not confirmed",
+        "General cancellation policy not mapped to original two rate plans"
+      ],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Use separate validated October2 count-only dated sample; base record does not invent a seasonal range or all-fee amount"
+        ]
+      }
+    }
+  ],
+  "offer_observations": []
+}

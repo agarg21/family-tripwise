@@ -28,7 +28,7 @@ export function validateRoomPrices(observations, pack) {
   const identities = new Set();
   for (const o of observations) {
     const fail = message => errors.push(`${o?.record_id ?? "observation"}: ${message}`);
-    if (!o || ![1, 2, 3].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
+    if (!o || ![1, 2, 3, 4].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
       fail("Invalid date/class"); continue;
     }
     const record = pack.records.find(r => r.id === o.record_id);
@@ -46,15 +46,29 @@ export function validateRoomPrices(observations, pack) {
     const individualUnknown = o.schema_version === 3 && engine?.age_input_mode === "individual-ages" &&
       engine.adult_from_age === null && engine.child_age_from === null && engine.child_age_to === null &&
       engine.classification_basis === "unpublished-cutoffs-exact-individual-party";
+    const countUnknown = o.schema_version === 4 && engine?.age_input_mode === "provider-age-band-counts" &&
+      engine.adult_from_age === null && Number.isInteger(engine.child_age_from) && engine.child_age_from >= 0 &&
+      Number.isInteger(engine.child_age_to) && engine.child_age_to >= engine.child_age_from && engine.child_age_to <= 17 &&
+      engine.child_ages === null && engine.individual_ages_entered === false &&
+      engine.classification_basis === "unpublished-adult-cutoff-published-child-band-counts" &&
+      o.requested_individual_ages_confirmed === false && text(o.currency_basis) &&
+      ["OBSERVED_ISO_CURRENCY", "EDITORIAL_INTERPRETATION"].includes(o.currency_evidence_class);
     if (o.schema_version === 3 && !individualUnknown) fail("Schema3 requires explicit unknown cutoffs and individual ages");
-    if (individualUnknown) {
+    if (o.schema_version === 4 && !countUnknown) { fail("Schema4 requires explicit count-only, child-band, unknown-adult-cutoff and currency basis"); continue; }
+    if (countUnknown) {
+      // Published child bands can qualify requested ages without inventing the complementary adult cutoff.
+      if (!Number.isInteger(engine.adults) || engine.adults !== o.party.adults ||
+          !Number.isInteger(engine.children) || engine.children !== o.party.child_ages.length ||
+          o.party.child_ages.some(age => age < engine.child_age_from || age > engine.child_age_to))
+        fail("Count-only engine party does not match requested party within published child band");
+    } else if (individualUnknown) {
       if (!validParty(engine) || engine.adults !== o.party.adults || !sameAges(engine.child_ages, o.party.child_ages))
         fail("Individually entered party does not match; unknown cutoffs cannot reclassify ages");
     } else if (!engine || !Number.isInteger(engine.adult_from_age) || engine.adult_from_age < 1 ||
         !Number.isInteger(engine.child_age_from) || engine.child_age_from < 0 ||
         engine.child_age_to !== engine.adult_from_age - 1 || engine.child_age_from > engine.child_age_to ||
         !validParty(engine)) { fail("Invalid engine age basis"); continue; }
-    if (!individualUnknown) {
+    if (!individualUnknown && !countUnknown) {
       const younger = o.party.child_ages.filter(age => age >= engine.child_age_from && age < engine.adult_from_age);
       const adultCount = o.party.adults + o.party.child_ages.filter(age => age >= engine.adult_from_age).length;
       if (o.party.child_ages.some(age => age < engine.child_age_from) || engine.adults !== adultCount ||
@@ -87,11 +101,12 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     o.arrival === stay.arrival && o.departure === stay.departure && o.party.adults === party.adults &&
     sameAges(o.party.child_ages, party.child_ages)).sort((a, b) => b.checked_on.localeCompare(a.checked_on))[0];
   if (!observation) return null;
-  const rates = observation.rates.filter(rate => observation.schema_version === 1 || rate.eligibility === "public").map(rate => ({ ...rate,
+  const rates = observation.rates.filter(rate => observation.schema_version === 1 || rate.eligibility === "public").map(rate => ({ ...structuredClone(rate),
     nightly_average: Math.round(rate.stay_amount * 100 / observation.nights) / 100 }));
   if (!rates.length) return null;
   const age = (Date.parse(asOf) - Date.parse(observation.checked_on)) / 86400000;
-  return { status: age > 14 ? "historical-dated-stay-samples" : "dated-stay-samples",
+  const status = observation.schema_version === 4 ? "dated-count-only-stay-samples" : "dated-stay-samples";
+  return { status: age > 14 ? `historical-${status}` : status,
     currency: observation.currency, unit: "configuration/night", amount: null,
     amount_from: Math.min(...rates.map(rate => rate.nightly_average)), amount_to: Math.max(...rates.map(rate => rate.nightly_average)),
     observed_on: observation.checked_on, category: observation.category, configuration_count: 1,
@@ -99,6 +114,8 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     booking_category: observation.booking_category ?? observation.category,
     configuration_basis: observation.configuration_basis ?? "See source-surface and limitation context",
     age_input_mode: observation.engine_party.age_input_mode ?? "not-recorded",
+    ...(observation.schema_version === 4 ? { requested_individual_ages_confirmed: false,
+      currency_basis: observation.currency_basis, currency_evidence_class: observation.currency_evidence_class } : {}),
     deposit_basis: observation.deposit_basis ?? "not-established",
     excluded_rate_plans: observation.rates.filter(rate => observation.schema_version >= 2 && rate.eligibility !== "public").map(rate => rate.plan),
     stay: { arrival: observation.arrival, departure: observation.departure, nights: observation.nights },

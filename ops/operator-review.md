@@ -1,5 +1,13 @@
 # Operator Implementation Review Log
 
+FT-IMP-066 James01a103a6-403a-7111-b77b-4de801cdbcef cycle1PASS/noP0-P3; independent473full86focused/0failures-skips-cancellations/state0/GSC82/SEO31URLs34HTML0fiveprior/whitespace/699baseline702candidate/exact10scope55public235olditems/11held and original091093 preserved. Joined35cols3exclusions2datedplans/basis controls verified. No independent live/production; all sessions finished, immutable consensus/shared-tool-record docs push next.
+
+FT-IMP-066 implemented exact10paths/count-only unknown-cutoff strict branch/deep rate copies/new regressions/reused dated records.23price tests pass; full/focused nativeQA/different read-only review pending. Original091093/119public and11held preserved, no individual-age/eligibleplan/fullfee/safety/booking guarantee.
+
+FT-IMP-066 exact10paths registered before core/data edits. Qualified091count-only budget sample remains unjoined because schemas require known adult cutoff or exact age entry; new strict count-only/unknown-cutoff branch plus regressions and maintained dated records required. Independent read-only review/nativeQA before release; old evidence/public/11held untouched.
+
+FT-RES-119 shared-tool/record docs releasec215a55eabb32254ffaee3200d0f8ba5e52d11b6 remoteverified2026-10-03T21:17:04.901Z/HEADorigin0-0/exact11paths/all698index/threeGitguards/freshfetch/sole reviewedrange/normalpush/BoylePASS_WITH_P3. No public production change/Pageswait;11held preserved. First currentrun transaction complete; next qualified Cabana count-only price integration before21:46:02.
+
 FT-RES-119 Boyle01a1039c-d210-7b92-a469-f649f42257c7 cycle1PASS_WITH_P3/noP0-P2; nonblocking stale ten-path acceptance wording, actual11registered/reviewed. Independent467full80focused/0failures-skips-cancellations/state0/GSC82/SEO31URLs34HTML0fiveprior/whitespace/694baseline698candidate55public234olditems/11held preserved. Zero-child controls/source-budget/expanded-only distinction verified; no independent live/production. All sessions finished; immutable consensus, exact shared-tool-record/docs push next.
 
 FT-RES-119 implemented exact11paths/shared child-limit validation/three-category exclusions, six focused regressions pass. Full/focused QA/read-only reviewer pending; no public UI/production or exact-family price claim. Base exclusions not full-property rejection, brochure2024source/month and ordinary maxparty distinct; historical118/11held preserved.

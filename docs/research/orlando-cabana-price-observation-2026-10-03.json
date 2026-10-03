@@ -1,0 +1,85 @@
+[
+  {
+    "schema_version": 4,
+    "action": "FT-IMP-066",
+    "derived_from": "docs/research/orlando-cabana-family-price-2026-10-02.json",
+    "record_id": "orlando-cabana-poolside-family-exterior",
+    "category": "Poolside Family Suite Exterior Entry",
+    "source_url": "https://www.loewshotels.com/cabana-bay-hotel/rooms-showcase/courtyard-family-suite-poolside",
+    "source_surface": "October2 normal anonymous official booking UI, one suite/two adults/four count-only children band0-17; https://reservations.universalorlando.com/ibe/index.aspx?hotelID=14844&lang=en-us&currID=1",
+    "checked_on": "2026-10-02",
+    "evidence_class": "BOOKING_CHECK",
+    "configuration_count": 1,
+    "currency": "USD",
+    "currency_basis": "US Orlando official storefront and dollar display; USD is an editorial interpretation, not an observed ISO label. No conversion.",
+    "currency_evidence_class": "EDITORIAL_INTERPRETATION",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12,
+        15
+      ]
+    },
+    "requested_individual_ages_confirmed": false,
+    "engine_party": {
+      "adults": 2,
+      "children": 4,
+      "child_ages": null,
+      "adult_from_age": null,
+      "child_age_from": 0,
+      "child_age_to": 17,
+      "age_input_mode": "provider-age-band-counts",
+      "individual_ages_entered": false,
+      "classification_basis": "unpublished-adult-cutoff-published-child-band-counts"
+    },
+    "booking_category": "Poolside Family Suite Exterior Entry",
+    "configuration_basis": "One exact suite; persisted counts agree with requested task but individual ages and adult cutoff not established",
+    "fee_basis": "Displayed five-night room subtotal plus Taxes only: Special Offer906+113.25=1019.25; Flexible1294+161.75=1455.75 interpretedUSD. Resort fee, meals and other mandatory extras unknown. No-car task selects no parking; current26plus-tax per vehicle frequency/inclusion unknown, not multiplied or added.",
+    "deposit_basis": "Original plan-specific deposit not observed; general hotel policy not substituted",
+    "rates": [
+      {
+        "plan": "Special Offer",
+        "eligibility": "public",
+        "stay_amount": 1019.25,
+        "room_subtotal": 906,
+        "displayed_taxes": 113.25,
+        "nightly_before_displayed_tax": [
+          196,
+          169,
+          151,
+          181,
+          209
+        ],
+        "meals": "Not established; room-only sample does not include or price theme-park tickets",
+        "cancellation": "Original plan-specific terms not observed; Flexible label is not refundability",
+        "eligibility_basis": "Shown in anonymous six-person results without login; no residency/passholder/member verification observed. Unshown eligibility and final terms remain unknown.",
+        "restrictions": "Not combinable with other offers/discounts. Valid theme park admission required for described early admission; select attractions."
+      },
+      {
+        "plan": "Flexible Rate",
+        "eligibility": "public",
+        "stay_amount": 1455.75,
+        "room_subtotal": 1294,
+        "displayed_taxes": 161.75,
+        "nightly_before_displayed_tax": [
+          280,
+          242,
+          216,
+          258,
+          298
+        ],
+        "meals": "Not established; room-only sample does not include or price theme-park tickets",
+        "cancellation": "Original plan-specific terms not observed; Flexible label is not refundability",
+        "eligibility_basis": "Public anonymous result; name Flexible alone does not establish refundable cancellation or payment conditions.",
+        "restrictions": "General description calls it lowest published non-discounted double-occupancy rate before tax. The actual result/detail headers retained 1 room, 2 adults, 4 children; no assumption of individualized child pricing."
+      }
+    ],
+    "limitation": "Count-only family search. Requested ages fall within displayed band but engine did not request or confirm individual ages. Not an exact-age booking acceptance. US Orlando official storefront and dollar display; USD is an editorial interpretation, not an observed ISO label. No conversion. Public means displayed anonymously, not confirmed eligibility or final terms. Two public plans for one November8-13 stay, not a seasonal range/final all-fee quote. Original091 preserved;093 general fees do not renew the price or establish plan-specific terms."
+  }
+]
