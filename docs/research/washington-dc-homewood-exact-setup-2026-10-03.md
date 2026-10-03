@@ -1,0 +1,11 @@
+# Homewood Exact-Category Setup
+
+October 3, 2026; FT-RES-111 / LRN-122 / FT-RES-059. Research-based source inspection, not firsthand room experience. Proxy task: two adults and ages 4, 8, 12, November 8-13, five nights.
+
+**CANDIDATE published standard-category facts; PRESERVE seating/sofa/cost unknowns.** [Official rooms](https://www.hilton.com/en/hotels/washwhw-homewood-suites-washington-dc-downtown/rooms/) was inspected in the normal IAB via THWN card, Read more, expanded More room details, AX and screenshot. The standard modal supports the maintained capacity/cooking distinction; the premium NQSP card is a separate four-person control. It does not publish chair count, utensil quantity, sofa dimensions/clearance or current condition. Quantities, fee/hold and November bookability remain unknown; no safe/comfortable-fit verdict. The hypothesis that the modal settles dining and sofa usability is rejected.
+
+Browser defaults were October 3-4 for one adult, not the task party/stay. No default price or availability was adopted, no Check prices/Explore Rates, booking/account/contact/payment call or hidden API used. Publication/effective dates are not shown. New dated audit is separate from all original corpus/price records, which remain unchanged; neither quote nor historical review dates are renewed.
+
+Undated modal reception/connection labels do not override the narrower Wednesday property policy or establish a guaranteed exact-category pairing. Kitchen stock and physical sofa use still require their own evidence. Source fields and explicit nulls: sibling JSON. Current Tripadvisor access hold remains untouched; this official UI inspection is a separate setup gate, not a bypass.
+
+Confidence high in visible category distinctions, unknown actual condition, booking and satisfaction. Reusable lesson: capacity/equipment do not settle seating, sofa geometry or meal entitlement. Falsify with explicit exact-category quantities/dimensions/fees or conflicting exact-party evidence. Next comparison task should expose these unknowns; full maintained corpus, rest/materiality/no-existing-fit and fresh DC approval remain. Third/final transaction this run, no fourth; native QA and independent review precede docs-only release.

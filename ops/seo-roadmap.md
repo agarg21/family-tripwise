@@ -1,5 +1,9 @@
 # Family Tripwise SEO Roadmap
 
+Current111 decision: CANDIDATE official exact-category equipment inputs/PRESERVE seating/sofa geometry/condition/cost unknowns. Dated normal UI source and default-search exclusions: `docs/research/washington-dc-homewood-exact-setup-2026-10-03.json`. No price/review renewal; nativeQA/different read-onlyPASS/docs-only release next. Third/final/no fourth, DC launch remains separate and eleven held unchanged.
+
+Current111: resolve official Homewood exact-category kitchen/seating/sofa gate with ordinary room UI, not the held review source. Seven paths registered before collection; no oldprice/date renewal/public launch. Third/final transaction,18:05:02startdeadline/no fourth/nativeQA/read-onlyPASS required.110 research release228d6693d95d74d3ba769e80c50693967b6779a9 remote17:50:51.334Z/CarsonPASS/0-0, no Pages change;11held preserved.
+
 Current110 decision: PRESERVE current review gap, REJECT search-label freshness; current qualifying sample0/0 and only historical Homewood question prompts. Canonical Residence throttling remains narrow/change-triggered, no hourly retry or alternate-domain/tool bypass. Structured dates/attempts: `docs/research/washington-dc-kitchen-review-signals-2026-10-03.json`. NativeQA/read-onlyPASS/docs release next; original prices/corpus/fee/eleven held untouched, DC approval separate.
 
 Current110: bounded dated guest-review evidence for Homewood Downtown/Residence National Mall kitchen-task gate. Seven paths registered before collection, original corpus/prices/eleven held preserved; nativeQA/different read-onlyPASS before docs-only release.109 research release64517f14f6fbf693ce9bedb4b606975981c5f56c remoteverified17:40:06.353Z/BernoulliPASS/0-0, no public production change. Second transaction, no launch authority expansion.

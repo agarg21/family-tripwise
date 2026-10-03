@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-111",
+  "parent_item": "FT-RES-059",
+  "learning_unit": "LRN-122",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "An exact kitchen/sleep modal settles dining together and sofa setup for the five-person family.",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "evidence_class": "EDITORIAL_PROXY",
+    "actual_user_test": false,
+    "exact_party_booking_tested": false
+  },
+  "source": {
+    "url": "https://www.hilton.com/en/hotels/washwhw-homewood-suites-washington-dc-downtown/rooms/",
+    "class": "OFFICIAL_EXACT_CATEGORY_UI_FACT",
+    "inspected_on": "2026-10-03",
+    "published_on": null,
+    "effective_on": null,
+    "method": "Normal IAB room-card click, Read more and More room details expansion; visible AX plus screenshot",
+    "card_id": "roomCardNameLinkTHWN",
+    "modal_label": "2 Queen Beds 1 Bedroom Suite Nonsmoking",
+    "default_search": {
+      "arrival": "2026-10-03",
+      "departure": "2026-10-04",
+      "rooms": 1,
+      "adults": 1,
+      "children": 0
+    },
+    "prices_or_availability_adopted": false,
+    "no_hidden_api_or_forced_interaction": true
+  },
+  "standard": {
+    "code": "THWN",
+    "published_sleeps": 5,
+    "bedroom_queen_beds": 2,
+    "sofa_description": "Full-sized sofa bed",
+    "separate_living_and_bedroom": true,
+    "kitchen_published": [
+      "Two-burner cooktop",
+      "Microwave",
+      "Full-size refrigerator",
+      "Dishwasher",
+      "Coffee maker",
+      "Utensils",
+      "Place settings"
+    ],
+    "dining_table_and_chairs_published": true,
+    "blackout_curtains_published": true,
+    "chair_count": null,
+    "utensil_and_place_setting_quantity": null,
+    "sofa_dimensions": null,
+    "sofa_deployment_clearance": null,
+    "current_noise_or_condition": null,
+    "extra_sofa_fee": null,
+    "mandatory_fees": null,
+    "authorization_hold": null
+  },
+  "premium_control": {
+    "code": "NQSP",
+    "card_id": "roomCardNameLinkNQSP",
+    "published_sleeps": 4,
+    "capacity_inherited_from_standard": false,
+    "modal_inspected": false
+  },
+  "scope_conflicts": {
+    "reception": "Exact modal contains an undated reception amenity label; retain109 property's Wednesday-specific social, not a daily dinner or all-inclusive entitlement.",
+    "connections": "Generic connection amenity does not establish a guaranteed paired exact-category reservation or adjacency."
+  },
+  "decision": {
+    "result": "CANDIDATE current standard-category equipment facts; PRESERVE five-chair/sofa-size/fee/condition unknowns",
+    "confidence": "High in visible published category distinctions, unknown present inventory/condition and November bookability",
+    "reusable_lesson": "Published equipment and capacity do not settle dining seat count, usable sofa geometry or meal entitlement.",
+    "next_falsification_trigger": "Explicit exact-category chair/utensil quantity, sofa dimensions/deployment or fee terms, or conflicting exact-party booking evidence",
+    "next_action": "Named comparison/proxy task should expose unresolved seating and sofa constraints; full corpus/materiality/rest and DC approval still required",
+    "public_change": false,
+    "city_launch_approved": false,
+    "firm_suitability_claim": false,
+    "quote_renewed": false,
+    "paid_calls": 0
+  },
+  "preservation": {
+    "room_corpus": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "price_observations": [
+      "docs/research/washington-dc-homewood-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-residence-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-embassy-price-observation-2026-09-30.json"
+    ],
+    "fee_audit": "docs/research/washington-dc-kitchen-fee-audit-2026-10-03.json",
+    "review_audit": "docs/research/washington-dc-kitchen-review-signals-2026-10-03.json",
+    "old_observations_renewed": false
+  }
+}
