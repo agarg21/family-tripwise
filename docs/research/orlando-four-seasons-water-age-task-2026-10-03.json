@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-118",
+  "learning_unit": "LRN-131",
+  "parent_item": "FT-RES-063",
+  "inspected_on": "2026-10-03",
+  "property": "Four Seasons Resort Orlando",
+  "task": {"adults": 2, "child_ages": [4,8,12,15], "child_heights_inches": null, "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "accommodations": 1, "no_car": true, "hotel_only_water_rest_day": true, "evidence_class": "EDITORIAL_PROXY_TASK", "actual_user_test": false},
+  "sources": [
+    {"id": "family", "url": "https://www.fourseasons.com/orlando/family-resort/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "crawl_label": "today", "evidence_class": "OFFICIAL_PROPERTY_FACT"},
+    {"id": "water", "url": "https://www.fourseasons.com/orlando/landing-pages/property/water-park/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "crawl_label": "today", "evidence_class": "OFFICIAL_PROPERTY_FACT"},
+    {"id": "takeover", "url": "https://www.fourseasons.com/orlando/experiences/for-the-kids/explorer-island-takeover/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "crawl_label": "3 weeks ago", "retrieval": "Followed official family-page link; removed marketing attribution query in retained canonical reference only, not another retrieval", "evidence_class": "OFFICIAL_EXPERIENCE_POLICY"},
+    {"id": "explorer", "url": "https://www.fourseasons.com/orlando/services-and-amenities/explorer-island/", "inspected_on": "2026-10-03", "published_on": null, "effective_on": null, "crawl_label": "today", "evidence_class": "OFFICIAL_PROPERTY_POLICY"}
+  ],
+  "regular_program": {
+    "name": "Kids For All Seasons", "source_id": "family", "published_age_min": 4, "published_age_max": 12, "published_charge_label": "complimentary supervised activities",
+    "task_ages_within_published_band": [4,8,12], "task_ages_outside_published_band": [15],
+    "enrolment_guaranteed": false, "november_hours": null, "capacity": null, "reservation_terms": null, "toilet_training_or_other_requirements": null,
+    "babysitting": "Requested service, not an included room or program entitlement; terms and price not established",
+    "teen_activity_claim": "Family page mentions a teen lounge; no age15 supervised-program entitlement established"
+  },
+  "water_and_games": {
+    "water_source_id": "water", "published_features": ["lazy river", "slides", "splash zone", "adult-only pool"],
+    "admission_source_id": "explorer", "facilities_basis": "Registered resort guests; residents and club members have separate select-date pool access, not transferred program entitlement",
+    "day_pass_established": false, "november_operations_confirmed": false, "guest_room_entitlement_confirmed": false,
+    "slide_source_id": "family", "slide_minimum_height_inches": 42, "task_slide_eligibility": "unknown for every child; actual heights not supplied",
+    "adult_only_pool_minimum_age": null,
+    "hideout_source_id": "explorer", "published_under_age_requires_supervision": 12, "task_ages_requiring_published_supervision": [4,8],
+    "unsupervised_access_or_safety_assurance": false,
+    "tube_source_id": "water", "tubes_offered": true, "tube_charge": null, "all_optional_extras_included": false
+  },
+  "separate_takeover": {
+    "age_source_id": "takeover", "published_age_min": 4, "published_age_max": 12,
+    "fee_source_id": "explorer", "published_fee": {"amount": 125, "currency": "USD", "unit": "child/reservation", "tax_or_other_fee_inclusion": null, "observed_on": "2026-10-03", "included_in_room_quote": null},
+    "scheduled_weekday": "Saturday", "task_has_saturday_night": false, "task_future_availability": "unknown; advertised recurring Saturday is outside selected stay",
+    "advance_reservation_required": true, "source_lists_phone_reservation": true, "contact_or_booking_made": false,
+    "included_source_id": "takeover", "included_items": ["dinner", "swim shirt"], "holiday_exceptions_possible": true,
+    "cancellation_notice_hours": 48, "cancellation_time_zone": null, "refund_or_penalty_terms": null,
+    "schedule_conflict": {"family_page_start": "17:00", "family_page_end": "20:00", "family_page_listed_duration_hours": 4, "explorer_page_start": "17:00", "explorer_page_end": "21:00", "resolved_end_time": null, "source_ids": ["family", "explorer"], "state": "conflict retained; no winner or future slot inferred"},
+    "task_cost_added": false,
+    "complimentary_regular_program_is_same_product": false
+  },
+  "room_and_budget": {"exact_six_person_category": null, "published_capacity": null, "room_party_acceptance": null, "nightly_amount": null, "currency": "USD", "unit": "configuration/night", "stay_basis": "Requested November8-13 five nights; not a quoted stay", "observed_price_on": null, "taxes_and_mandatory_fees": null, "full_stay_total": null, "price_status": "prioritized research gap; no room rate collected in age-entitlement audit", "room_price_required_before_comparison": true},
+  "demand_context": {"record": "docs/research/orlando-waterplay-overlap-2026-10-03.json", "reused": true, "new_paid_calls": 0, "market": "US", "numeric_metrics_are_current_october": false, "low_kd_proves_easy_rank": false, "distinct_new_url_qualified": false},
+  "decision": {
+    "hypothesis": "A family water resort and complimentary kids-program label gives all four children the same included dated activity plan",
+    "outcome": "REJECT equal entitlement/free-takeover assumption; CANDIDATE source-dated mixed-age and optional-cost record, PRESERVE public page",
+    "result": "Age band excludes teen from named program, slide access still needs heights, recurring Saturday misses task, separate paid product and source time conflict prevent complete activity/budget promise",
+    "confidence": "High inspected policy distinctions and calendar arithmetic; unknown enrolment, dates, water operations, room occupancy/prices/fees, actual users or SEO",
+    "remaining_gate": "Exact six-person category and dated nightly/fee/public-plan cost; current program terms/operation/height facts and unresolved Saturday schedule; 6-8 comparable records/current reviews/named task/materiality/no-clean-existing-fit",
+    "next_eligible_run": "Next actual October3 sprint wake within midnight limit: exact FourSeasons six-person room/price gate or an independent qualified existing-page delivery; no fourth action this run",
+    "falsification_trigger": "Changed age/height/access/fee policy, reconciled schedules or exact requested-party room/activity quote",
+    "no_unblocked_public_qualification": "Water-play corpus/full task/materiality remains incomplete; existing October22 observation protected absent verified defect. DC/Boston require their evidence and named approval; Chicago preview hold remains narrow",
+    "public_change": false, "paid_calls": 0, "old_quotes_or_source_dates_renewed": false, "new_url_or_city_approved": false, "route_stroller_safety_or_firm_fit_claim": false
+  }
+}
