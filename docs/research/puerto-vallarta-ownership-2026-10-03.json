@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-122",
+  "parent_item": "FT-RES-062",
+  "learning_unit": "LRN-138",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "All-inclusive family resorts and teen modifiers are synonyms of broad family hotels or justify separate maintainable page jobs.",
+  "receipt": "docs/research/puerto-vallarta-ownership-demand-2026-10-03.json",
+  "method": {
+    "market": "US",
+    "location_code": 2840,
+    "language": "en",
+    "device": "desktop",
+    "os": "windows",
+    "requested_depth": 10,
+    "collection_completed": "2026-10-03T23:07:00.279Z",
+    "paid_calls": 4,
+    "retries": 0,
+    "cost_usd": 0.01824,
+    "prior_spend_usd": 0.25952,
+    "cumulative_spend_usd": 0.27776,
+    "cumulative_ceiling_usd": 5,
+    "url_normalization": "URL parser; lowercase host; remove leading www only, fragments and one non-root trailing slash; retain scheme, path case, queries, subdomains and country hosts",
+    "host_normalization": "URL hostname only; no brand/eTLD or regional Tripadvisor collapse",
+    "scope": "One returned organic snapshot, not guaranteed complete top ten, user test or future ranking",
+    "threshold": "No arbitrary overlap threshold qualifies a new URL"
+  },
+  "estimates": [
+    {
+      "keyword": "family friendly hotels puerto vallarta",
+      "volume": 110,
+      "kd": 9,
+      "updated": "2026-09-13 07:25:38 +00:00",
+      "recent": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 70
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 70
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 90
+        }
+      ],
+      "evidence_class": "PROVIDER_ESTIMATE",
+      "data_state": "provider-estimate",
+      "latest_history_month": "2026-08",
+      "collection_not_metric_renewal": true
+    },
+    {
+      "keyword": "puerto vallarta all inclusive family resorts",
+      "volume": 1000,
+      "kd": 10,
+      "updated": "2026-09-12 02:00:04 +00:00",
+      "recent": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 1300
+        }
+      ],
+      "evidence_class": "PROVIDER_ESTIMATE",
+      "data_state": "provider-estimate",
+      "latest_history_month": "2026-08",
+      "collection_not_metric_renewal": true
+    },
+    {
+      "keyword": "puerto vallarta resorts for teens",
+      "volume": null,
+      "kd": null,
+      "updated": null,
+      "recent": [],
+      "evidence_class": "PROVIDER_ESTIMATE",
+      "data_state": "unavailable-not-zero",
+      "latest_history_month": null,
+      "collection_not_metric_renewal": true
+    }
+  ],
+  "sets": [
+    {
+      "keyword": "family friendly hotels puerto vallarta",
+      "checked_at": "2026-10-03 23:06:43 +00:00",
+      "returned_organic": 9,
+      "result_types": [
+        "hotels_pack",
+        "people_also_ask",
+        "organic",
+        "discussions_and_forums",
+        "related_searches"
+      ],
+      "urls": [
+        "https://tripadvisor.com/HotelsList-Puerto_Vallarta-Beachfront-All_Inclusive-Hotels-Motels-zfp13540873.html",
+        "https://expedia.com/Destinations-In-Puerto-Vallarta.d553248635996998010.Hotel-Destinations",
+        "https://marriott.com/en-us/destinations/mexico/puerto-vallarta.mi?pg=2",
+        "https://facebook.com/groups/1044871540211470/posts/1484491789582774",
+        "https://travelocity.com/Puerto-Vallarta-Hotels-Waterpark-Hotels.0-0-d180016-tWaterparkHotels.Travel-Guide-Filter-Hotels",
+        "https://theroamingfamily.com/puerto-vallarta-with-family",
+        "https://tripadvisor.com.au/ShowTopic-g150793-i46-k14807248-Help_with_location_and_stay_options_for_a_large_family-Puerto_Vallarta.html",
+        "https://travelocity.com/Destinations-In-Mexico-Family-Hotel.0-0-d117-tFamilyHotel.Hotel-Filter-Destinations",
+        "https://expedia.com/Puerto-Vallarta-Hotels-Secluded-Hotels.0-0-d180016-tSecludedHotels.Travel-Guide-Filter-Hotels"
+      ],
+      "hosts": [
+        "tripadvisor.com",
+        "expedia.com",
+        "marriott.com",
+        "facebook.com",
+        "travelocity.com",
+        "theroamingfamily.com",
+        "tripadvisor.com.au"
+      ]
+    },
+    {
+      "keyword": "puerto vallarta all inclusive family resorts",
+      "checked_at": "2026-10-03 23:06:53 +00:00",
+      "returned_organic": 9,
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "perspectives"
+      ],
+      "urls": [
+        "https://tripadvisor.com.au/HotelsList-Puerto_Vallarta-Family_friendly-All_Inclusive-Resort-zfp13573820.html",
+        "https://expedia.com/Hotel-Zone-Puerto-Vallarta-Hotels-All-Inclusive-Hotel.0-n6051314-0-tAllinclusiveHotel.Travel-Guide-Filter-Hotels",
+        "https://goholibay.com/blog/10-best-all-inclusive-resorts-in-puerto-vallarta-for-families",
+        "https://paradisevillage.com/all-inclusive/new/pv/allinclusive-family-vacations-hotels.html",
+        "https://garzablancaresort.com/puerto-vallarta/blog/family-vacations/puerto-vallarta-family-suite-space-comfort-time-together",
+        "https://facebook.com/groups/girlsjustwanttotravel/posts/2567682036962278",
+        "https://travelocity.com/inspire/the-11-best-luxury-puerto-vallarta-all-inclusive-resorts",
+        "https://vacatia.com/puerto-vallarta-vacation-rentals/kid-friendly-resorts",
+        "https://marcieinmommyland.com/best-all-inclusive-resorts-in-puerto-vallarta-for-families"
+      ],
+      "hosts": [
+        "tripadvisor.com.au",
+        "expedia.com",
+        "goholibay.com",
+        "paradisevillage.com",
+        "garzablancaresort.com",
+        "facebook.com",
+        "travelocity.com",
+        "vacatia.com",
+        "marcieinmommyland.com"
+      ]
+    },
+    {
+      "keyword": "puerto vallarta resorts for teens",
+      "checked_at": "2026-10-03 23:06:59 +00:00",
+      "returned_organic": 9,
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "perspectives",
+        "related_searches"
+      ],
+      "urls": [
+        "https://tripadvisor.com/ShowTopic-g150793-i46-k14901674-Need_help_choosing_hotel_for_family_with_teens-Puerto_Vallarta.html",
+        "https://reddit.com/r/puertovallarta/comments/1kvixcz/best_all_inclusive_with_teens",
+        "https://familyadventuresblog.com/2025/09/10/family-friendly-resorts-puerto-vallarta",
+        "https://garzablancaresort.com/puerto-vallarta",
+        "https://facebook.com/groups/girlsjustwanttotravel/posts/2441642709566212",
+        "https://littlefamilyadventure.com/puerto-vallarta-travel-tips",
+        "https://velasvallarta.com/",
+        "https://travel.usnews.com/hotels/family-puerto_vallarta_mexico",
+        "https://practicalwanderlust.com/puerto-vallarta-resort-for-families"
+      ],
+      "hosts": [
+        "tripadvisor.com",
+        "reddit.com",
+        "familyadventuresblog.com",
+        "garzablancaresort.com",
+        "facebook.com",
+        "littlefamilyadventure.com",
+        "velasvallarta.com",
+        "travel.usnews.com",
+        "practicalwanderlust.com"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "family friendly hotels puerto vallarta",
+      "b": "puerto vallarta all inclusive family resorts",
+      "urls": {
+        "a_count": 9,
+        "b_count": 9,
+        "shared": [],
+        "shared_count": 0,
+        "union_count": 18,
+        "jaccard": 0,
+        "smaller_set_overlap": 0
+      },
+      "hosts": {
+        "a_count": 7,
+        "b_count": 9,
+        "shared": [
+          "expedia.com",
+          "facebook.com",
+          "travelocity.com",
+          "tripadvisor.com.au"
+        ],
+        "shared_count": 4,
+        "union_count": 12,
+        "jaccard": 0.3333333333333333,
+        "smaller_set_overlap": 0.5714285714285714
+      }
+    },
+    {
+      "a": "family friendly hotels puerto vallarta",
+      "b": "puerto vallarta resorts for teens",
+      "urls": {
+        "a_count": 9,
+        "b_count": 9,
+        "shared": [],
+        "shared_count": 0,
+        "union_count": 18,
+        "jaccard": 0,
+        "smaller_set_overlap": 0
+      },
+      "hosts": {
+        "a_count": 7,
+        "b_count": 9,
+        "shared": [
+          "tripadvisor.com",
+          "facebook.com"
+        ],
+        "shared_count": 2,
+        "union_count": 14,
+        "jaccard": 0.14285714285714285,
+        "smaller_set_overlap": 0.2857142857142857
+      }
+    },
+    {
+      "a": "puerto vallarta all inclusive family resorts",
+      "b": "puerto vallarta resorts for teens",
+      "urls": {
+        "a_count": 9,
+        "b_count": 9,
+        "shared": [],
+        "shared_count": 0,
+        "union_count": 18,
+        "jaccard": 0,
+        "smaller_set_overlap": 0
+      },
+      "hosts": {
+        "a_count": 9,
+        "b_count": 9,
+        "shared": [
+          "garzablancaresort.com",
+          "facebook.com"
+        ],
+        "shared_count": 2,
+        "union_count": 16,
+        "jaccard": 0.125,
+        "smaller_set_overlap": 0.2222222222222222
+      }
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.marcieinmommyland.com/best-all-inclusive-resorts-in-puerto-vallarta-for-families/",
+      "class": "COMPETITOR_BODY",
+      "status": "body-inspected",
+      "inspected_on": "2026-10-03",
+      "published_on": "2023-09-25",
+      "displayed_update": "2025-06-16",
+      "observation": "Affiliate ten-property list groups city and regional resorts. It already covers activity, proximity and value criteria, kids/teen club labels, rooms and occupancy questions. The returned body supplies no same-party/same-stay exact-category nightly comparison or club prerequisite matrix. Broad safety and all-ages assurances are not adopted.",
+      "limitations": "Sampled returned text only; booking links not followed, current property facts and safety not validated or copied"
+    },
+    {
+      "url": "https://familyadventuresblog.com/2025/09/10/family-friendly-resorts-puerto-vallarta/",
+      "class": "COMPETITOR_BODY",
+      "status": "body-inspected",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "displayed_update": null,
+      "url_date_not_body_publication": "2025-09-10",
+      "observation": "A generic family-resort guide ranks for the teen query. Its body already addresses family-of-five space, optional all-inclusive versus kitchens, a capacity limitation, regional location and anecdotal transport costs. It claims firsthand experience; no current same-party/stay category-price-fee matrix is visible. This is a counterexample to claiming that existing guides omit larger-family or budget decisions entirely.",
+      "limitations": "Firsthand and safety assertions, transport amounts, room limits and program ages not adopted as Family Tripwise facts; inspection does not renew them"
+    },
+    {
+      "url": "https://goholibay.com/blog/10-best-all-inclusive-resorts-in-puerto-vallarta-for-families/",
+      "class": "COMPETITOR_BODY",
+      "status": "body-inspected",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "displayed_update": "21 Nov; year not shown",
+      "observation": "Travel-agency ten-property list covers packages, some kids-program ages and regional resorts, with a booking-service call to action. General spacious-suite or all-inclusive budget claims are not an exact five-person room/age/cost check. No matched-party dated fee comparison is visible in the returned body.",
+      "limitations": "Property/program/price claims unvalidated; date year unknown, no booking/contact or embedded social content retained"
+    },
+    {
+      "record": "docs/research/puerto-vallarta-room-club-feasibility-2026-10-03.json",
+      "class": "REUSED_OFFICIAL_CATEGORY_PROGRAM_ADDRESS_AND_PROXY_TASK",
+      "renewed": false,
+      "scope": "Category exclusions, Bahia larger-category candidate, Vallarta toilet-training prerequisite versus unknown readiness, regional/city base and missing actual-family quote retained; no blocked quote recovery"
+    }
+  ],
+  "family_task_actual_price": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "amount": null,
+    "currency": null,
+    "recovered_quote": false,
+    "original_record_renewed": false,
+    "dependency": "121 blank normal Hyatt quote page; check only changed rendering/session during eligible exact-family task, no unchanged retry or alternate tool"
+  },
+  "interpretation": {
+    "class": "EDITORIAL_INFERENCE",
+    "broad_family": "Returned broad set mixes hotel lists, OTA filters, property/destination pages and community leads; not coherent proof of a clean resort comparison job",
+    "all_inclusive": "More explicit resort comparison and package intent, but city versus Nayarit-region scope needs local labels and an exact family configuration/age/cost evidence layer",
+    "teens": "Community leads and generic family guides suggest an age-mix decision hypothesis, not demonstrated separate teen-page demand. Null provider metric is unknown, not zero.",
+    "low_overlap": "Zero exact URLs does not show mutually exclusive jobs. Shared hosts and generic family guide in teen set support checking age constraints inside one maintained resort comparison first.",
+    "information_gain": "Candidate normalized exact-category occupancy, booking-age basis, program prerequisites and costs, city/regional base, per-configuration dated nightly/fee context. Already-covered rooms/kitchens/transport are not novelty by themselves."
+  },
+  "decision": {
+    "outcome": "CANDIDATE one maintained resort-comparison job; HOLD separate teen URL and city launch",
+    "new_url_qualified": false,
+    "city_launch_approved": false,
+    "public_change": false,
+    "demand_variants_added": false,
+    "next_gate": "Maintain multi-property exact configuration/age/base/full-cost and current-review corpus; run named mixed-age and no-car budget task against specialist coverage; materiality and no-existing-fit plus fresh named PV publication approval. Exact-family quote only after changed normal rendering.",
+    "confidence": "High deterministic overlap/budget/date controls; medium sampled intent/information-gain inference; unknown actual family task completion, full corpus, current teen demand, user outcomes or rankings",
+    "falsification_trigger": "A new controlled sample and two representative same-job queries, maintained exact-party dated corpus/task evidence, equivalent competitor comparison, or changed normal quote rendering; never cadence-only"
+  }
+}

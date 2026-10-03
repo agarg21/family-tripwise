@@ -1,0 +1,1234 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-122",
+  "action_source": "manifest",
+  "collected_at": "2026-10-03T23:06:37.719Z",
+  "market": "US",
+  "location_code": 2840,
+  "language_code": "en",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 5,
+    "prior_spend_usd": 0.25952
+  },
+  "calls": [
+    {
+      "endpoint": "dataforseo_labs/google/keyword_overview/live",
+      "label": "keyword-overview",
+      "status": "success",
+      "cost_usd": 0.01224,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "family friendly hotels puerto vallarta",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "puerto vallarta all inclusive family resorts",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "puerto vallarta resorts for teens",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "family friendly hotels puerto vallarta",
+      "search_volume": 110,
+      "keyword_difficulty": 9,
+      "cpc": 2.68,
+      "metrics_updated_at": "2026-09-13 07:25:38 +00:00",
+      "monthly_searches": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 70
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 70
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 90
+        },
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 90
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 110
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 40
+        },
+        {
+          "year": 2026,
+          "month": 2,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 12,
+          "search_volume": 110
+        },
+        {
+          "year": 2025,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2025,
+          "month": 10,
+          "search_volume": 140
+        },
+        {
+          "year": 2025,
+          "month": 9,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 8,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 6,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 5,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 4,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 3,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 2,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 1,
+          "search_volume": 1000
+        },
+        {
+          "year": 2023,
+          "month": 12,
+          "search_volume": 1000
+        },
+        {
+          "year": 2023,
+          "month": 11,
+          "search_volume": 880
+        },
+        {
+          "year": 2023,
+          "month": 10,
+          "search_volume": 720
+        },
+        {
+          "year": 2023,
+          "month": 9,
+          "search_volume": 720
+        },
+        {
+          "year": 2023,
+          "month": 8,
+          "search_volume": 590
+        },
+        {
+          "year": 2023,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2023,
+          "month": 6,
+          "search_volume": 880
+        },
+        {
+          "year": 2023,
+          "month": 5,
+          "search_volume": 590
+        },
+        {
+          "year": 2023,
+          "month": 4,
+          "search_volume": 590
+        },
+        {
+          "year": 2023,
+          "month": 3,
+          "search_volume": 590
+        },
+        {
+          "year": 2023,
+          "month": 2,
+          "search_volume": 480
+        },
+        {
+          "year": 2023,
+          "month": 1,
+          "search_volume": 720
+        },
+        {
+          "year": 2022,
+          "month": 12,
+          "search_volume": 390
+        },
+        {
+          "year": 2022,
+          "month": 11,
+          "search_volume": 390
+        },
+        {
+          "year": 2022,
+          "month": 10,
+          "search_volume": 390
+        },
+        {
+          "year": 2022,
+          "month": 9,
+          "search_volume": 260
+        },
+        {
+          "year": 2022,
+          "month": 8,
+          "search_volume": 260
+        },
+        {
+          "year": 2022,
+          "month": 7,
+          "search_volume": 320
+        },
+        {
+          "year": 2022,
+          "month": 6,
+          "search_volume": 320
+        },
+        {
+          "year": 2022,
+          "month": 5,
+          "search_volume": 260
+        },
+        {
+          "year": 2022,
+          "month": 4,
+          "search_volume": 260
+        },
+        {
+          "year": 2022,
+          "month": 3,
+          "search_volume": 390
+        },
+        {
+          "year": 2022,
+          "month": 2,
+          "search_volume": 320
+        },
+        {
+          "year": 2022,
+          "month": 1,
+          "search_volume": 170
+        },
+        {
+          "year": 2021,
+          "month": 12,
+          "search_volume": 140
+        },
+        {
+          "year": 2021,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2021,
+          "month": 10,
+          "search_volume": 70
+        },
+        {
+          "year": 2021,
+          "month": 9,
+          "search_volume": 70
+        },
+        {
+          "year": 2021,
+          "month": 8,
+          "search_volume": 50
+        },
+        {
+          "year": 2021,
+          "month": 7,
+          "search_volume": 110
+        },
+        {
+          "year": 2021,
+          "month": 6,
+          "search_volume": 170
+        },
+        {
+          "year": 2021,
+          "month": 5,
+          "search_volume": 140
+        },
+        {
+          "year": 2021,
+          "month": 4,
+          "search_volume": 170
+        },
+        {
+          "year": 2021,
+          "month": 3,
+          "search_volume": 170
+        },
+        {
+          "year": 2021,
+          "month": 2,
+          "search_volume": 140
+        },
+        {
+          "year": 2021,
+          "month": 1,
+          "search_volume": 110
+        },
+        {
+          "year": 2020,
+          "month": 12,
+          "search_volume": 90
+        },
+        {
+          "year": 2020,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2020,
+          "month": 10,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 9,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 8,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 7,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 6,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 5,
+          "search_volume": 110
+        },
+        {
+          "year": 2020,
+          "month": 4,
+          "search_volume": 90
+        },
+        {
+          "year": 2020,
+          "month": 3,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 2,
+          "search_volume": 170
+        },
+        {
+          "year": 2020,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2019,
+          "month": 12,
+          "search_volume": 140
+        },
+        {
+          "year": 2019,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2019,
+          "month": 10,
+          "search_volume": 110
+        },
+        {
+          "year": 2019,
+          "month": 9,
+          "search_volume": 50
+        },
+        {
+          "year": 2019,
+          "month": 8,
+          "search_volume": 10
+        },
+        {
+          "year": 2019,
+          "month": 7,
+          "search_volume": 40
+        },
+        {
+          "year": 2019,
+          "month": 6,
+          "search_volume": 20
+        },
+        {
+          "year": 2019,
+          "month": 5,
+          "search_volume": 20
+        },
+        {
+          "year": 2019,
+          "month": 4,
+          "search_volume": 30
+        },
+        {
+          "year": 2019,
+          "month": 3,
+          "search_volume": 20
+        },
+        {
+          "year": 2019,
+          "month": 2,
+          "search_volume": 30
+        },
+        {
+          "year": 2019,
+          "month": 1,
+          "search_volume": 20
+        },
+        {
+          "year": 2018,
+          "month": 12,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 11,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 10,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 9,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 8,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 7,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 6,
+          "search_volume": 20
+        },
+        {
+          "year": 2018,
+          "month": 5,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 4,
+          "search_volume": 20
+        }
+      ],
+      "data_state": "provider-estimate"
+    },
+    {
+      "keyword": "puerto vallarta all inclusive family resorts",
+      "search_volume": 1000,
+      "keyword_difficulty": 10,
+      "cpc": 2.67,
+      "metrics_updated_at": "2026-09-12 02:00:04 +00:00",
+      "monthly_searches": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 1300
+        },
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 1000
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 880
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 480
+        },
+        {
+          "year": 2026,
+          "month": 2,
+          "search_volume": 1300
+        },
+        {
+          "year": 2026,
+          "month": 1,
+          "search_volume": 1600
+        },
+        {
+          "year": 2025,
+          "month": 12,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 11,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 10,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 9,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 8,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 4400
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 5400
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 6600
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 9900
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 5400
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 5400
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 7,
+          "search_volume": 5400
+        },
+        {
+          "year": 2024,
+          "month": 6,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 5,
+          "search_volume": 3600
+        },
+        {
+          "year": 2024,
+          "month": 4,
+          "search_volume": 3600
+        },
+        {
+          "year": 2024,
+          "month": 3,
+          "search_volume": 5400
+        },
+        {
+          "year": 2024,
+          "month": 2,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 1,
+          "search_volume": 5400
+        },
+        {
+          "year": 2023,
+          "month": 12,
+          "search_volume": 3600
+        },
+        {
+          "year": 2023,
+          "month": 11,
+          "search_volume": 3600
+        },
+        {
+          "year": 2023,
+          "month": 10,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 9,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 8,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 7,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 6,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 5,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 4,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 3,
+          "search_volume": 2900
+        },
+        {
+          "year": 2023,
+          "month": 2,
+          "search_volume": 3600
+        },
+        {
+          "year": 2023,
+          "month": 1,
+          "search_volume": 4400
+        },
+        {
+          "year": 2022,
+          "month": 12,
+          "search_volume": 2400
+        },
+        {
+          "year": 2022,
+          "month": 11,
+          "search_volume": 2400
+        },
+        {
+          "year": 2022,
+          "month": 10,
+          "search_volume": 2400
+        },
+        {
+          "year": 2022,
+          "month": 9,
+          "search_volume": 1600
+        },
+        {
+          "year": 2022,
+          "month": 8,
+          "search_volume": 1600
+        },
+        {
+          "year": 2022,
+          "month": 7,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 6,
+          "search_volume": 1600
+        },
+        {
+          "year": 2022,
+          "month": 5,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 4,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 3,
+          "search_volume": 2400
+        },
+        {
+          "year": 2022,
+          "month": 2,
+          "search_volume": 1900
+        },
+        {
+          "year": 2022,
+          "month": 1,
+          "search_volume": 1600
+        },
+        {
+          "year": 2021,
+          "month": 12,
+          "search_volume": 880
+        },
+        {
+          "year": 2021,
+          "month": 11,
+          "search_volume": 1300
+        },
+        {
+          "year": 2021,
+          "month": 10,
+          "search_volume": 880
+        },
+        {
+          "year": 2021,
+          "month": 9,
+          "search_volume": 590
+        },
+        {
+          "year": 2021,
+          "month": 8,
+          "search_volume": 720
+        },
+        {
+          "year": 2021,
+          "month": 7,
+          "search_volume": 1000
+        },
+        {
+          "year": 2021,
+          "month": 6,
+          "search_volume": 1300
+        },
+        {
+          "year": 2021,
+          "month": 5,
+          "search_volume": 1000
+        },
+        {
+          "year": 2021,
+          "month": 4,
+          "search_volume": 1300
+        },
+        {
+          "year": 2021,
+          "month": 3,
+          "search_volume": 1300
+        },
+        {
+          "year": 2021,
+          "month": 2,
+          "search_volume": 720
+        },
+        {
+          "year": 2021,
+          "month": 1,
+          "search_volume": 880
+        },
+        {
+          "year": 2020,
+          "month": 12,
+          "search_volume": 390
+        },
+        {
+          "year": 2020,
+          "month": 11,
+          "search_volume": 320
+        },
+        {
+          "year": 2020,
+          "month": 10,
+          "search_volume": 320
+        },
+        {
+          "year": 2020,
+          "month": 9,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 8,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 7,
+          "search_volume": 260
+        },
+        {
+          "year": 2020,
+          "month": 6,
+          "search_volume": 320
+        },
+        {
+          "year": 2020,
+          "month": 5,
+          "search_volume": 170
+        },
+        {
+          "year": 2020,
+          "month": 4,
+          "search_volume": 140
+        },
+        {
+          "year": 2020,
+          "month": 3,
+          "search_volume": 390
+        },
+        {
+          "year": 2020,
+          "month": 2,
+          "search_volume": 720
+        },
+        {
+          "year": 2020,
+          "month": 1,
+          "search_volume": 880
+        },
+        {
+          "year": 2019,
+          "month": 12,
+          "search_volume": 480
+        },
+        {
+          "year": 2019,
+          "month": 11,
+          "search_volume": 390
+        },
+        {
+          "year": 2019,
+          "month": 10,
+          "search_volume": 390
+        },
+        {
+          "year": 2019,
+          "month": 9,
+          "search_volume": 590
+        },
+        {
+          "year": 2019,
+          "month": 8,
+          "search_volume": 260
+        },
+        {
+          "year": 2019,
+          "month": 7,
+          "search_volume": 320
+        },
+        {
+          "year": 2019,
+          "month": 6,
+          "search_volume": 720
+        },
+        {
+          "year": 2019,
+          "month": 5,
+          "search_volume": 590
+        },
+        {
+          "year": 2019,
+          "month": 4,
+          "search_volume": 390
+        },
+        {
+          "year": 2019,
+          "month": 3,
+          "search_volume": 720
+        },
+        {
+          "year": 2019,
+          "month": 2,
+          "search_volume": 590
+        },
+        {
+          "year": 2019,
+          "month": 1,
+          "search_volume": 390
+        },
+        {
+          "year": 2018,
+          "month": 12,
+          "search_volume": 390
+        },
+        {
+          "year": 2018,
+          "month": 11,
+          "search_volume": 390
+        }
+      ],
+      "data_state": "provider-estimate"
+    },
+    {
+      "keyword": "puerto vallarta resorts for teens",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    }
+  ],
+  "serps": [
+    {
+      "keyword": "family friendly hotels puerto vallarta",
+      "checked_at": "2026-10-03 23:06:43 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "people_also_ask",
+        "organic",
+        "discussions_and_forums",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/HotelsList-Puerto_Vallarta-Beachfront-All_Inclusive-Hotels-Motels-zfp13540873.html"
+        },
+        {
+          "rank": 2,
+          "domain": "www.expedia.com",
+          "url": "https://www.expedia.com/Destinations-In-Puerto-Vallarta.d553248635996998010.Hotel-Destinations"
+        },
+        {
+          "rank": 3,
+          "domain": "www.marriott.com",
+          "url": "https://www.marriott.com/en-us/destinations/mexico/puerto-vallarta.mi?pg=2"
+        },
+        {
+          "rank": 4,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/1044871540211470/posts/1484491789582774/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.travelocity.com",
+          "url": "https://www.travelocity.com/Puerto-Vallarta-Hotels-Waterpark-Hotels.0-0-d180016-tWaterparkHotels.Travel-Guide-Filter-Hotels"
+        },
+        {
+          "rank": 6,
+          "domain": "theroamingfamily.com",
+          "url": "https://theroamingfamily.com/puerto-vallarta-with-family/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.tripadvisor.com.au",
+          "url": "https://www.tripadvisor.com.au/ShowTopic-g150793-i46-k14807248-Help_with_location_and_stay_options_for_a_large_family-Puerto_Vallarta.html"
+        },
+        {
+          "rank": 8,
+          "domain": "www.travelocity.com",
+          "url": "https://www.travelocity.com/Destinations-In-Mexico-Family-Hotel.0-0-d117-tFamilyHotel.Hotel-Filter-Destinations"
+        },
+        {
+          "rank": 9,
+          "domain": "www.expedia.com",
+          "url": "https://www.expedia.com/Puerto-Vallarta-Hotels-Secluded-Hotels.0-0-d180016-tSecludedHotels.Travel-Guide-Filter-Hotels"
+        }
+      ]
+    },
+    {
+      "keyword": "puerto vallarta all inclusive family resorts",
+      "checked_at": "2026-10-03 23:06:53 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "perspectives"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.tripadvisor.com.au",
+          "url": "https://www.tripadvisor.com.au/HotelsList-Puerto_Vallarta-Family_friendly-All_Inclusive-Resort-zfp13573820.html"
+        },
+        {
+          "rank": 2,
+          "domain": "www.expedia.com",
+          "url": "https://www.expedia.com/Hotel-Zone-Puerto-Vallarta-Hotels-All-Inclusive-Hotel.0-n6051314-0-tAllinclusiveHotel.Travel-Guide-Filter-Hotels"
+        },
+        {
+          "rank": 3,
+          "domain": "goholibay.com",
+          "url": "https://goholibay.com/blog/10-best-all-inclusive-resorts-in-puerto-vallarta-for-families/"
+        },
+        {
+          "rank": 4,
+          "domain": "www.paradisevillage.com",
+          "url": "https://www.paradisevillage.com/all-inclusive/new/pv/allinclusive-family-vacations-hotels.html"
+        },
+        {
+          "rank": 5,
+          "domain": "www.garzablancaresort.com",
+          "url": "https://www.garzablancaresort.com/puerto-vallarta/blog/family-vacations/puerto-vallarta-family-suite-space-comfort-time-together"
+        },
+        {
+          "rank": 6,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/girlsjustwanttotravel/posts/2567682036962278/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.travelocity.com",
+          "url": "https://www.travelocity.com/inspire/the-11-best-luxury-puerto-vallarta-all-inclusive-resorts/"
+        },
+        {
+          "rank": 8,
+          "domain": "vacatia.com",
+          "url": "https://vacatia.com/puerto-vallarta-vacation-rentals/kid-friendly-resorts"
+        },
+        {
+          "rank": 9,
+          "domain": "www.marcieinmommyland.com",
+          "url": "https://www.marcieinmommyland.com/best-all-inclusive-resorts-in-puerto-vallarta-for-families/"
+        }
+      ]
+    },
+    {
+      "keyword": "puerto vallarta resorts for teens",
+      "checked_at": "2026-10-03 23:06:59 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "perspectives",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/ShowTopic-g150793-i46-k14901674-Need_help_choosing_hotel_for_family_with_teens-Puerto_Vallarta.html"
+        },
+        {
+          "rank": 2,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/puertovallarta/comments/1kvixcz/best_all_inclusive_with_teens/"
+        },
+        {
+          "rank": 3,
+          "domain": "familyadventuresblog.com",
+          "url": "https://familyadventuresblog.com/2025/09/10/family-friendly-resorts-puerto-vallarta/"
+        },
+        {
+          "rank": 4,
+          "domain": "www.garzablancaresort.com",
+          "url": "https://www.garzablancaresort.com/puerto-vallarta"
+        },
+        {
+          "rank": 5,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/girlsjustwanttotravel/posts/2441642709566212/"
+        },
+        {
+          "rank": 6,
+          "domain": "littlefamilyadventure.com",
+          "url": "https://littlefamilyadventure.com/puerto-vallarta-travel-tips/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.velasvallarta.com",
+          "url": "https://www.velasvallarta.com/"
+        },
+        {
+          "rank": 8,
+          "domain": "travel.usnews.com",
+          "url": "https://travel.usnews.com/hotels/family-puerto_vallarta_mexico/"
+        },
+        {
+          "rank": 9,
+          "domain": "practicalwanderlust.com",
+          "url": "https://practicalwanderlust.com/puerto-vallarta-resort-for-families/"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Provider estimates, not people or traffic forecasts",
+    "Null metrics are unknown, not zero",
+    "KD zero is not proof of easy ranking",
+    "Monthly history can lag launches; seasonality is not trend proof",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.01824,
+  "completed_at": "2026-10-03T23:07:00.279Z"
+}
