@@ -17,7 +17,9 @@ Seven destinations now have public guides, including Cancun and Orlando lodging 
 
 ## Starter Docs
 
+- [Dated hotel rate comparison export](docs/plan/family-hotel-quote.md): run `node tools/family-hotel-quote.mjs docs/research/orlando-cabana-family-price-2026-10-02.json --format csv` for original count-only family rate plans with nightly prices, displayed taxes, stay dates, currency interpretation and unresolved fee context; offline only, no repricing or publication.
 - [Read-only service-level childcare comparison](docs/plan/family-care-comparison.md): run `node tools/family-care-comparison.mjs docs/research/cancun-care-services-2026-10-02.json --format csv` for dated per-child/service rules, unknown care fees and retained room-price context; no network collection or public changes.
+- [Dated room-and-care quote export](docs/plan/family-care-quote.md): run `node tools/family-care-quote.mjs docs/research/cancun-room-care-quote-2026-10-02.json --room-evidence docs/research/cancun-superior-room-capacity-2026-10-02.json --format csv` for original-party before/after package prices, sourced room-count conflict and complete date, fee, care and source context; no repricing, network or publication.
 - [Codex instructions](AGENTS.md)
 - [Project brief](docs/PROJECT_BRIEF.md)
 - [Semrush research summary](docs/research/semrush-family-travel-opportunity.md)
@@ -89,9 +91,13 @@ This saves hashes, statuses, dated field gaps and unverified structured-price ca
 
 `node tools/seo-opportunity-pull.mjs` is a no-charge research preflight. `--execute` makes the explicitly budgeted API calls, using protected local authentication. It refuses an existing output to prevent accidental billed repeats; never delete that guard or rerun a partially billed batch without reconciliation. Change the dated batch/output explicitly for a new authorized research action.
 
+The collector rejects duplicate or malformed task lists and snapshots approved task/budget scope before async work. Its request-scope guard and local fake-fetch regressions are documented in [Budgeted search collection](docs/plan/seo-opportunity-collection.md); no new spending or retry authority is implied.
+
 After collecting a new evidence audit, run `node tools/weekly-evidence-review.mjs --current ops/evidence-audits/NEW.json --previous ops/evidence-audits/PRIOR.json --output ops/evidence-audits/NEW-review.json`. It validates all-page/shared-model coverage and denial history, then separates unreconciled source changes from collection gaps and due fields. Audit/review outputs cannot overwrite existing evidence. The existing operator owns the weekly schedule; instructions and limitations are in `docs/plan/weekly-evidence-audit.md`. Hash changes never update a price or publish a claim automatically.
 
 ### Release Checks
+
+After fetch/incoming inspection and independent review, run the read-only Git gate before staging, immediately before commit, and after the final fetch before push. It checks pinned refs, reviewed hashes and exact staged/outgoing scope. A nonzero result must stop subsequent mutations; never continue an orchestration unconditionally. Manifest formats and limitations: `docs/plan/release-git-guard.md`. It does not fetch, repair divergence or replace review, QA and production verification.
 
 Run the full repository tests, operating-state consistency check, and static SEO QA before release:
 

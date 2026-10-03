@@ -1,8 +1,204 @@
 # Family Tripwise SEO Roadmap
 
+FT-OPS-010 ingests `ops/gsc-snapshots/2026-10-02.json` / `ops/gsc-snapshots/2026-10-02.md` through approved pinned merge. Reused recent API finalizedSeptember30/priorOctober1September29; aggregates orientation/noCTR diagnosis. Initial index onlytwoincomingpaths/no conflicts; composed64path pending release excludes eleven held/unrelated paths, no public changes.
+
+Current FT-OPS-010: direct-user authorized normal reviewed history reconciliation, pin028cfc1/6fec783/base0bde00f. Preserve dirtywork; no-commit merge/nativeQA/differentPASS then normalpush, no unattendedmerge/force/rebase/reset. Subsequent eligible backlog release separate; Chicago/evidence gates not cleared by Git approval.
+
+FT-RES-103 final Ptolemy1PASS/noP0-P3:10focused442full/20scratchGitguards/no failures-skips/native0/GSC80/SEO0-fivebaseline/whitespace/parity; all642baseline645candidate hashes/manifests intact/exact8delta637preserved/212prioritems except077threefields/ledgerLRN112only. Localreview-clean/uncommitted/unpushed/083holdsrelease; no publicdelivery/thirdfinal/no fourth. Next077incremental taskoutput/corpus-maintainability/Citadinesbudget or076carebedding; publicationgates unchanged.
+
+FT-RES-103 pre-review10focused442full/no failures-skips/state0/GSC80/SEO0-fivebaseline/whitespace. Different frozenread-onlyreview next;083holdsrelease/no fourth.
+
+FT-RES-103 collection: LRN112/CANDIDATE maintainedfamily-size taskbudget/PRESERVE URLs. Fivequeries/sixsuccesses0.02236USD/cumulative0.21680; actualcounts/mixedjob0URLoverlap/unknowncomparison-London6demand cannot qualifyseparatearticles. Incremental gain/corpus-maintainability/task/rest/approval remain; nativeQA/read-onlyreview next,083releaseheld/thirdfinal/no fourth.
+
+Current FT-RES-103 third/final03run: newfamily-size controlledUSpairedownership/materiality, existingUSD5/batch0.50/prior0.19444/reserve0.151. Not086failedtoddlertask replay, anynewfailurestop/no automaticretry/unknownoverlapnotzero. Exact8paths/nativefullfocusedQA/different read-onlyPASS/allpriorprices-dates-public intact/077onlythreefields/083holdsrelease/no fourth/no newURL.
+
+FT-RES-102 final Volta1PASS/noP0-P3:57focused442full/20Gitguards/no failures-skips/716controls/native0/GSC80/SEO0-fivebaseline/whitespace/exact8delta634preserved/all639baseline642candidatehashes/manifests intact/211prioritems except077threefields/ledgerLRN111only. Localreview-clean/uncommitted/unpushed/083holdsrelease/no publicdelivery. Next077controlledUSoverlap/ownership/informationgain or076carebedding.
+
+FT-RES-102 pre-review57focused442full/no skips/native0/GSC80/SEO0-fivebaseline/whitespace/taskCSV/parity/exact8delta634preserved639baseline intact. Independentread-onlyreview next; public337.50only/separate375uncertain/olderwork intact/083releaseheld.
+
+FT-RES-102 collection: LondonBridge exactone-sofa max6/kitchen ownpublic337.50GBP night, flexible375unqualifiedeligibilityconflict retainedseparately; no falsepublicrange/memberrequirement. NativeQA/read-onlyreview next,083releaseheld/allpriorquotes-dates-public intact. Next077controlledUSoverlap/ownership/informationgain or076carebedding.
+
+Current FT-RES-102 second03run transaction: LondonBridge exactone-sofa/ownsamefamily-stay budget orboundedgap; exact8paths/nativefullfocusedQA/different read-onlyPASS/allpriorquotes/source dates/public intact/077onlythreefields/083releasehold. Deadline03:45:28/maxthree, no booking/paid/deniedretry/bypass.
+
+FT-RES-101 final Galileo1PASS/noP0-P3:57focused442full/no skips-denials/20Gitguards/597controls/native0/GSC80/SEO0-fivebaseline/whitespace/exact8delta631preserved/all636baseline639candidatehashes/manifests intact/210prioritems except077threefields/ledgerLRN110only. Localreview-clean/uncommitted/unpushed,083approval holdsrelease/no publicdelivery. NextLondonBridge ownsofa/budget or076carebedding.
+
+FT-RES-101 pre-review57focused442full/no skips/native0/GSC80/SEO0-fivebaseline/whitespace/schema1-2 taskCSV/parity/exact8delta631preserved636baseline intact. Different read-onlyreview next,083releaseheld; oldprices/source dates/public unchanged.
+
+FT-RES-101 collection resolves Aldgate kitchen/selectedone-sofa max6/own276.30-307GBP mappedsamefamily-stay budget, preserves area disagreement/fees/deposit/restunknowns and allolderquotes/dates/public. NativeQA/read-onlyreview next,083releaseheld.077stillcandidate; nextLondonBridge ownsofa/budget or076carebedding.
+
+Current FT-RES-101 first03run transaction: resolve Aldgate exact standardcategory kitchen/sofa/ownsamefamily-stay budget or boundedgap; exact8paths/nativefullQA/different read-onlyPASS/allprior evidence-prices-dates-public intact/077onlythreefields/083releasehold. New-action deadline03:45:28/maxthree; no booking/paid/deniedretry/securitybypass.
+
+FT-RES-100 final Averroes1PASS/noP0-P3:57focused442full/20Gitguards/no skips-denials/401assertions/parity/native0/GSC80/SEO0-fivebaseline/whitespace/exact8delta628preserved/all633baseline636candidatehashes/manifests intact/209prioritems except077threefields/ledgerLRN109only/priorprices-dates-public unchanged. Thisrun098/099/100review-clean local/uncommitted/unpushed,083approval holdsrelease/no publicdelivery. Next077Aldgate exact kitchen-sofa/budget or076carebedding; thirdfinal/no fourth.
+
+FT-RES-100 pre-review57focused442full/native0/GSC80/SEO0-fivebaseline/whitespace/task-priceCSV/aging/mapping/nonmutation/parity/exact8delta628preserved633baseline intact. Different frozen read-onlyreview next;083releaseheld/no publicdelivery/thirdfinal/no fourth.
+
+FT-RES-100 collection: Familyvariant binding rejected forinspectedresult, conditional/unpriced retained; separatePenthouseone-sofa/max6exacttask own432.18/480.20GBP budget/kitchen/bedding adds candidate withoutcategorysubstitution or096overwrite. NativeQA/read-onlyreview next,083releaseheld/thirdfinal/no fourth.
+
+Current FT-RES-100 third/final02:29UTC transaction: Canary namedtwo-sofa FamilyApartment binding/ownsameparty-stay budget or boundedfailure; exact8paths/fullfocusedQA/different read-onlyPASS/allpriorquotes-source dates-public preserved/077onlythreefields/083releasehold. No fourth thisrun, no booking/paid/deniedretry/securitybypass.
+
+FT-RES-099 final Kepler1PASS/noP0-P3:57focused442full/20Gitguards/no skips-denials/119controls/native0/GSC80/SEO0-fivebaseline/whitespace/exact7delta626preserved/all631baseline633candidatehashes intact/208prioritems except077threefields/ledgerLRN108only/oldquotes/CSV/public unchanged. Localreview-clean/uncommitted/unpushed under083approval, no delivered/independentliveclaim. Next independent077Canary variant-budget or076bedding-care.
+
+FT-RES-099 pre-review57focused442full/native0/GSC80/SEO0-fivebaseline/whitespace/customparity/exact7delta626preserved631baseline intact; separate frozen read-onlyreview next,083releaseheld/no publicdelivery.
+
+FT-RES-099 collected CANDIDATE_WITH_AGE_INPUT_GAP/LRN108: public count-only namedMetropole two-room491.36/608.40GBP approximateconfiguration-night; exactages4/8/12/15notcollected, keepnativeCSVunpriced and preliminarybudget separately. Room-area/pennyrounding/fee/refund/age limits preserved;098/oldquotes/source dates/public intact. NativeQA/read-onlyreview next,083releaseheld; no repeatedunchangedUIsearch.
+
+Current FT-RES-099 secondtransaction: exactsamefamily/stay alternate Metropole namedconnecting configuration budget or explicit narrowfailure, full/focusednativeQA/different read-onlyPASS/exact7paths, all098/oldprice/source dates/public intact/077onlythreefields/083releaseheld. No booking/paid/deniedretry/securitybypass; deadline02:45:58/maxthree.
+
+FT-RES-098 final Turing1PASS/noP0-P3;57focused442full/all20Gitguards/no skips/62controls/state0/GSC80/SEO0-fivebaseline/whitespace/exact7delta624preserved/all631candidate629baselinehashes intact/207prioritems except077threefields/ledgerLRN107only/oldprices intact. Localreview-clean/uncommitted/unpushed under083approval, no publicdelivery/independentlive claim. Next077alternate connected budget/confirmation or076independent bedding-care gate.
+
+FT-RES-098 pre-review57focused442full/native0/GSC80/SEO0-fiveprior/whitespace/parity/exact7delta624preserved629baseline intact; separate frozen read-onlyreview next,083releaseheld.
+
+FT-RES-098 collected own exactfamily/stay public610/694GBP namedconnecting configuration-night; displayedtaxincluded3050/3470stay, separate discretionary5%and prepaid amendment conflict;532member excluded. Oldquotes/dates/096/097/public intact,077onlythreegatefields; nativeQA/independentreview next,083releaseheld.
+
+Current FT-RES-098: collect own samefamily/date namedconnecting nightly budget and persisted category/channel basis, not apartment or single-room substitution. Exact7paths/fullfocusedQA/different read-onlyPASS, allprices/dates/public intact,077onlythreegatefields,083releaseheld. First02:00:58run transaction/deadline02:45:58/maxthree; normal public UI no contact/account/cart/hold/paid/deniedretry.
+
+FT-RES-097 final Mencius cycle1 PASS/noP0-P3;57focused442full/all20Gitguards/no skips/67 controls/parity/state0/GSC80/SEO0-fivebaseline/whitespace/exact7delta622preserved/206prioritems except077threefields/oldledgerLRN106only/all629candidate627baseline hashes intact. Local review-clean/uncommitted/unpushed under083approval; both own nightly budgets/confirmation remain unknown. Thirdfinal/no fourth, no public delivery or independent live-source claim.
+
+FT-RES-097 pre-review57focused442full/state0/GSC80/SEO0-fivebaseline/whitespace/exact7delta622preserved/206prioritems except077threefields/ledgerLRN106only/oldquote-corpus byteparity; separate frozen read-only review next,083releaseheld/no fourth.
+
+FT-RES-097 collected CANDIDATE/LRN106 two named connected-category count screens6/8, not confirmed reservations/completebudget/kitchen/rest or full077qualification. Sameparty/stay own nightlyprice/channelconfirmation next; original078/079quotes/dates and096records preserved. Nativefull/focusedQA/different read-onlyreview pending,083releaseheld/no fourth.
+
+Current FT-RES-097 third/final transaction: namedconnected-room counterexample to096all-apartment corpus. Up to two official property/category bodies, exact seven paths/nativefullQA/read-onlyPASS and source-dated result; no generic connection/independent-maxima or unknown-price assurance. Existing nightly budgets/dates/public unchanged;077onlythreegatefields update,083releaseheld/no fourth.
+
+FT-RES-096 final McClintock cycle1 PASS/noP0-P3; Master/independent57focused442full/all20Gitguards/24adversarial/state0/GSC80/SEO0-five baseline/CSVparity/whitespace/exact7delta620 preserved205prioritems except077threefields/all627candidate625baseline hashes intact. Six source-count records, five conditional; no connected alternative/four missing prices, not full077 qualification. Local review-clean/uncommitted/unpushed under083approval, no production/source renewal.
+
+Current FT-RES-096 second transaction: test077exact-six category corpus, not assume older058five-person inventory qualifies. Exact seven paths; two prior category/price records keep original dates plus up to four new official category bodies. Supported records only, missing budgets/connection/rest/acceptance explicit, no new URL. Native full/focused QA/read-only PASS required;083historyapproval holds release,077onlythreegate fields update.
+
+FT-IMP-061 final Plato cycle1 PASS/no P0-P3: Master/independent17focused442full/all20Gitguards,24export36invalid3import controls, state0/GSC80/SEO0-five baseline/whitespace/exact7delta618 preserved204priorrecords/all625hashes intact. Local review-clean/uncommitted/unpushed; FT-RES-083 approval holds release, no public/source renewal. First transaction complete locally; next077exact-six corpus or076care billing/slots.
+
+Current transaction FT-IMP-061: fix reproduced care-quote symlink CLI defect, exact seven paths/full native QA/different read-only PASS. First action of 01:03:56 UTC run, deadline 01:48:56 UTC/max three. Prices/room-rule conflicts/public and older dirty work remain intact; FT-RES-083 history approval holds release. Then resume FT-RES-077 exact-six category corpus or FT-RES-076 care billing/slots, not another broad strategy report.
+
+FT-RES-095 final Tesla1PASS/noP0-P3: Master440full, independent26focused429network-free11socketexcluded20Gitguards/native0/80GSC/SEO0-fivebaseline/exact7delta618outside203prior except076threefields/oldledgeronlyLRN104/625candidate623baselinehashes intact.060/094/095allreview-clean locally/uncommitted/unpushed;083historyapproval holdsrelease/no publicdelivery. Thirdfinal/no fourth; next076carebilling-slots/bedding or077corpus, no repeatedprice/count audit.
+
+FT-RES-095 pre-review26focused440full/native0/80GSC/SEO0-fiveprior/whitespace/15paritychecks/exact7delta618outside203prior except076threefields/oldledgeronlyLRN104 intact. Frozen different read-onlyreview next, priorquote/public/source dates preserved;083releaseheld, thirdfinal/no fourth.
+
+FT-RES-095 collected CANDIDATE/LRN104: ownFamilyOasisDeluxeOceanfront exact2adult/ages2,7Nov8-13five-night749.09/808.29interpretedUSDpackage-night before/after296Petit, displayedtax/member180included. Separatelevy/careunit-slots/bedding/finalacceptance unknown. Original084prices/conflict094source dates/public intact, no badge/two-room substitution. NativeQA/read-onlyreview next;083releaseheld, thirdfinal/no fourth.
+
+Current FT-RES-095 third/final00:22UTC/actualOctober2Eastern transaction: sameparty/stay exactFamilyOasisDeluxeOceanfront own approximate nightlybudget, no084Superior substitution. Exact7paths/nativefullQA/different read-onlyPASS/public-prices preservation;083releaseheld, no fourth. Ordinaryanonymous officialUI only/no cart/hold/account/purchase/paid/bypass/deniedretry;076threegatefields mayupdate.
+
+FT-RES-094 final Singer1PASS/noP0-P3: Master440full, independent26focused429network-free11excluded20Gitguards/20prototype/native0/80GSC/SEO0-fivebaseline/exact7delta616outside202prior except076threefields/oldledgeronlyLRN103/623candidate621baselinehashes intact. Localreview-clean/uncommitted/unpushed; own alternativecategoryprice unresolved,083releaseheld/no publicdelivery.
+
+FT-RES-094 pre-review26focused440full/native0/80GSC/SEO0-fiveprior/whitespace/9paritychecks/exact7delta616outside202prioritems except076threefields/oldledgeronlyLRN103 intact. Frozen different read-onlyreview next; category-specificprice notcollected/publicnotchanged,083releaseheld.
+
+FT-RES-094 collection CANDIDATE/LRN103: exact official Family Oasis Deluxe Oceanfront max5 passes allfourcountscreen, not bed/age/booking/availability guarantee; its own approximate nightlyprice remains prioritizednextgate. OriginalSuperior price/max3conflict preserved, no quote substitution/publicedit. NativeQA/different read-onlyreview next,083releaseheld.
+
+Current FT-RES-094 secondtransaction00:12UTC/actualOctober2Eastern before00:46:59deadline: resolve076/087capacity gate through exact official alternativecategory, not relabel084Superior rate. Exact7paths/nativefullQA/different read-onlyPASS/public-prices preservation. No deniedendpoint retry/booking/account/paid/bypass;083releaseheld.076onlythree decision/gate fields may update;077remainingcorpus stayseligible.
+
+FT-IMP-060 final Bacon1PASS/noP0-P3, Master440full, independent11focused429network-free/11socketexcluded20Gitguards/36JSON36CSV99invalidCLI32imports/native0/80GSC/SEO0-fivebaseline/621candidate621baselinehashes/exact7delta614outside201prior preserved.059P3 closed by separately reviewed060; original059verdict retained. Localreview-clean/uncommitted/unpushed,083historyapproval holdsrelease/no publicdelivery or source renewal.
+
+FT-IMP-060 implementedlocally11focused440full/native0/80GSC/SEO0-fivebaseline/whitespace/exact7delta614outside201priorrecords/ledgerquotesREADMEpublic intact. Symlinkentry exports andinvalidoptions/imports checked; different frozen read-onlyreview next,083historyapproval holdsrelease.
+
+Current FT-IMP-060 firsttransaction00:03UTC actualOctober2Eastern/runstart00:01:59/deadline00:46:59/maxthree. Fixverified059P3CLI symlinkentryidentity with focusedregressions, exact7paths/nativefullQA/different read-onlyPASS. Preserveallsourcequotes/public/ledger/README/exclusions/otherCLIs, no network or newlearning;freshfetch083one/one historyapproval holdsrelease. RecentGSC reusedorientationonly, notCTRdiagnosis.
+
+FT-RES-093 finalcycle1PASS/noP0-P3, Master438full, independent20focused427network-free11excluded20Gitguards/state0/80GSC/SEO0-fivebaseline/whitespace/621candidate619baselinehashes/exact7delta614outside200priorledgerinsertion intact. Localreview-clean/uncommitted/unpushed, sourcefactsnotindependentlyliveverified/no publicdelivery,083historyapproval holdsrelease. Allthree transactionscheckpointed locally; no fourth.
+
+FT-RES-093 pre-review20focused438full/native0/80GSC/SEO0-fivebaseline/whitespace/exact7delta614outside200prioritems/oldledgeronlyLRN102 insertion/091quote059tool-public intact. Frozen different read-onlyreview next, sourcefactsnotindependentlyliveverified;083releaseheld, third/final/no fourth.
+
+FT-RES-093 collection CANDIDATE/LRN102: currentofficialparking26plus tax pervehicle lacks explicitnightly unit, so no130five-night calculation; generalrefundtiers cannot settle091plans, optionalextras remain scoped/unpriced. Two datedbody sources/JSONMD preserve originalprices/public/059tool; tabclosed/no externalmutation. NativeQA/read-onlyreview next,083releaseheld, third/final/no fourth.
+
+Current FT-RES-093 third/final23:24UTCtransaction before23:45:28deadline, exact7paths registered. Resolve091currentseparateparking/fee/inclusion basis from ordinary officialLoews hotel/services sources; conditionalone-car illustration only/no checkouttotal or doublecount. Preserve091/059/allpriorquotes/public/source dates/oldledger/exclusions/scheduler/spend, nativeQA/different read-onlyPASS;083releaseapproval holds publication, no fourth or deniedproviderretry.
+
+FT-IMP-059 finalPASS_WITH_P3/noP0-P2: Master438full, independent9focused427network-free11excluded20Gitguards/5adversarial747API11option11canonicalCLI24CSV/native0/80GSC/SEO0-fiveprior/619hashes/exact8delta611outside199prior preserved. Localreview-clean/uncommitted/unpushed, no publicintegration;083releaseheld. P3 symlinkedabsoluteCLI entrypath alias may exit0empty, normalize/addtest next maintenance; documented repository invocation passes.
+
+FT-IMP-059 implemented locally:9focused438full/native0/80GSC/SEO0-fiveprior/whitespace,611outsidebaseline199priorrecords/sourcepackledgerREADMEoldbytes preserved. Complete dated rate-plan context and explicitaging validated; frozen different read-onlyreview next,083historyapproval holdsrelease/no publicintegration.
+
+Current FT-IMP-059: secondtransaction23:09UTC of23:00:28run/deadline23:45:28/maxthree, exact8paths registered. Offline validated091hotelquote JSON/CSV keeps dates/count-only family/category/nightly-tax-stay/currencyinterpretation/terms/unknownfees/explicitdue. No defaultmodel/publicintegration/source renewal/repricing/newlearning/network. Full/focusedQA/different read-onlyPASS;083historyapproval holds release,092sourcehold stays narrow.
+
+FT-RES-092 finalcycle1HOLD-RECORD PASS/noP0-P3:12focused/418network-free11excluded20Gitguards/native0/80GSC/SEO0-fiveprior/616hashes/exact4delta612outside198prioritemsledgerunchanged; Master429full. Sourceheld/no priceorlearning/publicdelivery,083releasehold separate; immutable reviewed checkpoint complete.
+
+FT-RES-092 sourceheld: officialroomURL normalbrowser deniedERR_BLOCKED_BY_CLIENT/tab16, no retry/bypass/newprice/fact/learning/researchpack. Actualfourstatepaths, focused/fullQA/read-only holdreview next. Owner normaluser/appaccess; actualpermittedaccess/environmentchange required. No projectwide stop, independentCabana091offline normalization possible;083releasehistory remains separate.
+
+Current FT-RES-092: firstaction of actual23:00:28UTCrun, new-startdeadline23:45:28/maxthree. NormalofficialanonymousNemo-suite budget collection for2adult4children4/8/12/15Nov8-13five nights; exact7paths/QA/read-onlyPASS/publicpreservation gates registered. Existing083historyapproval holds release, prior091pricepack remains intact; not cadence or broad exploration.
+
+FT-RES-091 final Meitner1PASS/noP0-P3, Master429full; independent418network-free11excluded(all20scratchGitguards)/19focused/native/616hashes/exact7/609outside/197priorrecords/oldledgeronlyLRN101 intact. Localreview-clean/uncommitted/unpushed, sourcesnotindependentlyliveverified/no publicdelivery;083historyapproval remains. This run's089/090/091transactions safelyfinishedlocally or source-held; no fourth.
+
+FT-RES-091 collection CANDIDATE/LRN101: source-backed special/flexible suite plans203.85/291.15interpretedUSDroom-night withdisplayedtax forNov8-13/count-only2adult4child party; fullbasis/nulls in dated JSON/MD. No seasonalband/exactages/allfee/booking/publicclaim; QA/read-onlyreview next,083historyreleaseheld. Third/final transaction, no fourth.
+
+Current FT-RES-091: third/final actualrun action22:26UTC, exact7paths for missingCabanaPoolsideFamilySuiteExteriorEntry datedfamilybudget via normal anonymous officialUI;2adults/ages4,8,12,15Nov8-13five nights. Retain nightlycurrency/unit/party/stay/fee/cancel/source context, mismatchesunknown; no account/cart/purchase/bypass/paidcall/publicedit. NativeQA/read-onlyPASS/083approval gates unchanged, no fourth.
+
+FT-RES-090 final Zeno1HOLD-RECORD PASS/noP0-P3, Master429full; independent12focused/418network-free11excluded/native/exact4/610outsidefiles/196priorrecords/614hashes preserved. Sourceheld/no quote/newlearning/publicdelivery; reviewed holdstate only,083releasehistory separate. Next independent eligible price gap can proceed, no retry of unchanged blankZiva.
+
+FT-RES-090 pre-review429full/native/state0/80GSC/SEO0-fiveprior/whitespace/610outsidefourstatefiles/196priorrecords/ledger unchanged; independent holdrecordreview next. No price collection/newlearning/publicdelivery.
+
+FT-RES-090 source UI held: official Ziva room tab rendered blankAX/screenshot/DOM with no errorlogs, no usable availability/price form. No security/sold-out diagnosis/retry/bypass/priceinvented/newledger unit; tabclosed. Owner provider/browser rendering, unblock visibleofficialbody/changednormalaccess. Onlyfourstatefiles changed withinregistered7, QA/read-onlyreview next. IndependentCabana missingnightlybudget can proceed;083releasehistory remains separate.
+
+Current FT-RES-090: second actualrun transaction registered22:18UTC, exact7paths to fill named ZivaOceanViewDouble missing nightlybudget via permitted official anonymous availability,2adults/ages2,7/Nov8-13five nights. No unsupported starting-to-family conversion/member/purchase/bypass; preserve all priorprices/dates/public, nativeQA/read-onlyPASS/083historyapproval before release.
+
+FT-RES-089 final Carver1PASS/noP0-P3, Master429full/293focused; independent418network-free11excluded/110focused/8evidenceparity/native/exact7/607outsidebaseline/195priorrecords/614hashes preserved. Learnedonly/localreview-clean/uncommitted/unpushed, no publicdelivery;083historyapproval remains release dependency.
+
+FT-RES-089 pre-review429full/293focused/native/exact7/607outsidebaselinefiles/source-times-price-arithmetic/oldledger/priorroadmap parity pass; different read-onlyreview next. No publicdelivery/quote renewal/cap inference;083historyheld.
+
+FT-RES-089 collected four currentofficial controls: Limehouse bus59 versusrail55/Queen18walking; no20minute bus result in inspected subset, not universalroute verdict. Original nightly budgets/context/source dates preserved, LRN100/CANDIDATE077, QA/read-onlyreview pending;083releaseheld.
+
+Current FT-RES-089: first22:01:59actualrun action registered22:04UTC; exact7paths for samepostcodes/date/time/Slow London return rail-walk versus bus-walk sensitivity. Four current officialanonymous API calls max/no retry;20minute proxy/earliestarrival, no exactroute/stroller/safety/fit assertion. Preserve all priorprices/source dates/public/windows; nativeQA/different read-onlyPASS and083historyapproval before release.
+
+FT-RES-088 final Mendel1PASS/noP0-P3, Master429full/257focused; independent418network-free11socketexcluded/147focusednative/9evidence-parity-privacy/native/612hashes/exact7delta/605baselinefiles/194prioritems preserved. Source audit learned only, review-clean local/uncommitted/unpushed with083historyapproval hold; no publicdelivery.087/058/088threeactualrun transactions finished locally, no fourth. Priorpending labels historical.
+
+FT-RES-088 pre-review429full/257focused/native/state0/80GSC/SEO0-fiveprior/exact7/605baseline preservation pass, frozen different read-onlyreview pending. No publicdelivery/commit/push/fourthaction.
+
+FT-RES-088 collected currentFAQ child-scope distinction; provider283identity/current official amount/frequency/applicable count and hotel inclusion unresolved. Municipal searchbody/failedsize read and emptyINEGI extraction explicitly provisional/no rate computation. Original nightly budgets/context/prior material retained, LRN099, focused/fullQA/read-onlyreview next. No publicdelivery/fourthaction;083historyapproval holds release.
+
+Current FT-RES-088: third/final actualrun transaction21:41UTC, exact7paths registered for primarygovernment basis of084separate283MXN/person warning. Eligibility/age/unit/date distinctions, no payment or actual-liability/currencytotal inference. Preserve all priorquotes/public/windows, nativeQA/read-onlyPASS and083historyapproval before release.
+
+FT-IMP-058 final Copernicus1PASS/noP0-P3/Master429full/independent418network-free11excluded plus15focused/adversarial/native/exactscope/parity. Capacity-conflict export implemented locally/review-clean/uncommitted/unpushed under083historyapproval. Prices/receipts/dates/ledger/public/exclusions preserved, no publicdelivery or newsource unit.
+
+FT-IMP-058 implemented locally/15focused green, fullQA/read-onlyreview pending. Optional dated official max rule joins exactsingle-room quote; max3/party4 conflict visible in JSON/bothCSV configurations, no rule unchecked/within-count not acceptance. Prices/fullreceipt/source dates retained, no newlearning/publicrelease while083historyheld.
+
+Current FT-IMP-058: exact9paths registered21:31UTC to join087maintained category max/age-exception unknown into056JSON/CSV with explicit conflict, not rejection. Sameoriginalreceipt/nightlyprice/source dates/fullcontext preserved. NativeQA/read-onlyPASS required,083historyapproval stillholds release; no newresearch unit/publicchange.
+
+FT-RES-087 final Ohm1PASS/noP0-P3, Master423full, independent79focused/393eligible plus native/parity/hash checks. Research locally review-clean/uncommitted/unpushed under083historyapproval; original prices/public preserved. No capacity-qualified family option or complete076gate claimed.
+
+FT-RES-087 collection: Superior maximum3 versus084party4 conflict; capacity-qualified use requires explicit age/category/bedding evidence. Current Petit evening registration scope not selected296temporal unit/daytime slot confirmation. Original527.78/586.98package-night context retained. LRN098; QA/review pending, release083history-held.
+
+Current FT-RES-087: resolve084quoted Superior-room sleeping setup/selected-care temporal scope through current permitted official details; exact7paths registered21:18UTC. Prior price/party/stay/fee and unknowns retained. Focused/fullQA/read-onlyPASS before review-clean,083historyapproval holds release. No deniedsource retry/paidcalls/publicchange; first action of actual21:13:59run.
+
 Last updated: 2026-10-02
 
-FT-RES-083 review-clean Fermat1PASS/noP0-P3,13focused/378network-free11excluded/1058assertions/native/hashscope green, operator390full. Exact9tools/docs-only release; no public/full076quote. Actual clock beyond new-action deadline, no third transaction starts.
+FT-IMP-057 final Planck2PASS/noP0-P3, proxylength P2closed. Independent10focused/412network-free11excluded/5adversarial74invalid10legacy/16extraproxyrejections/native/607hashes/exact8delta/599baseline/191priorrecords preserved; Master423full. Local review-clean/uncommitted/unpushed under083historyapproval; spend0.19444/source dates/prices/ledger/public unchanged. Three runtransactions085/086/057 now locally reviewed/held, no fourth or productiondelivery. Mechanical result only afterPASS.
+
+FT-IMP-057 cycle2pre-review:10focused/423full/native/whitespace green afterproxy rejection/pinnedlength, no traps/output/fetch at bothentrypoints. Same independent read-only reviewer receives updated exact8candidate; no further edits duringreview/newaction/release or paidcall.
+
+FT-IMP-057 cycle1PlanckFAIL/oneP2 Proxylength bypass in exportedAPI; nativeproxy rejection/pinned own arraylength and validator/runBatch zero-side-effect regressions fixed locally. Independent411network-free/9focused/native/607hashes/exact8delta/191priorrecords preserved; cycle2QA/read-onlyPASS next, no paidcalls/release/fourthaction.
+
+FT-IMP-057 pre-review:9focused/422full/native/state0/80snapshots/SEO0-fiveprior/whitespace pass; valid old/current manifests retain reserves. Immutable task/budget snapshot rejects duplicate/sparse/accessor input beforewrites/calls and survives mocked caller mutation. Exact8candidate to different read-onlyreview; allpriorresearch/ledger/prices/public/exclusions andUSD0.19444spend preserved, no paidcalls/fourthaction/release.
+
+Current FT-IMP-057: verified paidcollector preflight/taskmutation defect, exact8paths registered20:57UTCthird/final action. Localfakefetch proves duplicatedSERP and post-validation unapprovedtask can reachrequests; dense own-data/duplicate guards plus immutable budget/task snapshot beforeasync and regressions, no paidAPIcalls. QA/read-onlyPASS required, priorresearch/quotes/source dates/public/exclusions intact; existing083historyholdscommit/push. No fourthaction.
+
+FT-RES-086 final Curie1PASS/noP0-P3:6collector/408network-free11excluded/native/606hashes/exact8delta/190priorrecords and prior material preserved; Master419full. Review-clean local research/learning, uncommitted/unpushed under083historyhold; failedcontrolledSERP remains incomplete/no public or full076qualification. KnowncumulativeUSD0.19444of5, no retry. Mechanical result only afterPASS.
+
+FT-RES-086 result PRESERVE provisional Cancun ownership/CANDIDATE076; two numerical phrases with different scopes and sixunknowns do not establish cluster materiality. First controlledSERP40101failed, zero successful sets/overlap UNKNOWN; stop/no retry. Officialerror classification and current representativebody task audit recorded, no newrank assertion. Cost0.01448/cumulative0.19444of5, LRN097; original prices/source dates/public intact. Specific changed-provider-state/explicitretry gate separate from next independent care-billing/corpus or permitted correction; QA/review pending and083releaseheld.
+
+Current FT-RES-086 under076: controlledUS toddler-care versus broader resort search ownership/materiality gate, eightmetricphrases/fourSERPs and bounded representative bodies. Registered8paths20:46UTCsecond transaction; existingUSD5cap/prior0.17996/batch0.50, no retry/priorfailedUniversalquery/paidauthority expansion. Source dates/prices/public preserved, QA/read-onlyPASS before review-clean; no publicdelivery/newURL or divergence release.
+
+FT-RES-085 final Anscombe1PASS/noP0-P3:79focused/408network-free11excluded/native/603hashes/exact8delta/189prioritems and prior material preserved; Master419full. Review-clean local research/learning only, uncommitted/unpushed under083history approval. Actual-six sofa/rest gate remains incomplete; no public delivery or new quote/source renewal. Mechanical result only afterPASS.
+
+FT-RES-085 collection result CANDIDATE: dated body-inspected signals do not establish six-person sofa comfort or dependable rest. Exact-category historical/smaller-party current versus partner-collected unknown-category opposing reports and provider syndication remain distinct. LRN096; original nightly prices/source dates retained. Exact-category actual-six/sofa/rest corpus plus entrance/mode/cap and controlled overlap/demand/maintainability/authority gates remain; QA/read-only review pending, no public/release claim.
+
+Current FT-RES-085 under077: category-linked independent bedding/rest/conflict audit for two six-person London options, not another price/planner report. Exact8paths registered20:29UTCfirst action of20:27:51run, deadline21:12:51newstarts. Source/date/category/publication/sample limits, approximate nightly basis and precise remaininggate required; full QA/different read-onlyPASS. Existing release/Chicago holds stay narrow, no mergeapproval inferred/public launch/source-date renewal or paidcalls.
+
+FT-IMP-056 final Dalton2PASS/noP0-P3:9focused/62combined/408network-free11excluded/345hidden-property/36CSVparity/8formula-prefix/native/601hashes/exact8delta/188priorrecords and prior material preserved; Master419full. Local review-clean uncommitted/unpushed, no public/source renewal. Three run transactions now finished locally/held, actual20:25:37past20:10:56new-start deadline. Next release dependency is explicit083history reconciliation; no fourth action or repeated quote/inclusion audit.
+
+FT-IMP-056 cycle2pre-review:9quote-focused/62combined/419full/state0/80snapshots/SEO0-fiveprior/whitespace green after enumerable-descriptor fix. Exact8candidate to same independent read-only review, no fourth action/public or release.
+
+FT-IMP-056 cycle1DaltonFAIL/oneP2 non-enumerable properties disappeared in cloned export; enumerable data descriptors and seven nested regression families fixed locally. Independent407network-free/8focused/61combined/native/601hashes/exact8delta/188prioritems preserved; cycle2PASS required, no release/newaction.
+
+FT-IMP-056 pre-review:8quote-focused/61combinedcare-room/418full/native/11exclusions/9prior material/README prior bytes/188roadmap parity green. Full receipt in two-configuration JSON/CSV, original-task-only/weekly-age/null guarantees, no source renewal/public edit. Different independent read-only review then local hold, no fourth transaction or release while diverged.
+
+Current FT-IMP-056: separate strict read-only datedroom-care quote JSON/CSV from084reviewed receipt, exact8paths registered20:09UTCthird/final before20:10:56deadline. Original-task-only price/care/tax/source/cancel/null context, no inventoryschema weakening/price transfer/source renewal/public change. Full QA/different read-onlyPASS; divergence stillholds commit/push, prior055/084material intact.
+
+FT-RES-084 final Harvey1PASS/noP0-P3:399network-free/70focusedcare-room/20guard/2868assertions/native/598hashes/exact7delta/186unrelatedroadmap and exclusions preserved. Master410full. Dated family-price learning is local review-clean/uncommitted/unpushed; existing history-reconciliation approval is release dependency. No public/Pages or complete076claim.
+
+FT-RES-084 pre-review:410full/focused receipt-arithmetic-null/native/state0/80snapshots/SEO0-fiveprior/whitespace green; exact7delta/598candidatefiles/186unrelatedroadmap preserved. Pending different read-onlyPASS; existing divergence holds all new commit/push, no public delivery.
+
+Current FT-RES-084 under076: October2 exactfamily/SuperiorRoom/Nov8-13five-night package2638.91before/2934.91afterPetit296selection; nightlyequivalent527.78/586.98, US-storefront USD interpretation explicit. Membership180alreadyincluded; separate283MXN/person levy applicability unknown. Care temporalunit/minimum/three90minute slots and final sleeping setup unknown. Seven research/state paths plusLRN095 pending QA/read-onlyPASS, no public/priorprice renewal.076numeric gate progressed, demand/controlledoverlap/corpus/maintainability remain. Existing divergence holds new commit/push;055PASS preserved uncommitted.
+
+FT-IMP-055 cycle2ArendtPASS/noP0-P3:20focused/399network-free11excluded/87rejections6controls/native/596hashes/8delta/588baselinefiles/186prioritems preserved; Master410full. Local implemented/review-clean, uncommitted/unpushed until explicitly approved083history reconciliation. No public delivery or duplicate learning; eleven exclusions unchanged.
+
+FT-IMP-055 cycle1ArendtFAIL/twoP2(active operation markers, legacy graft bypass); both corrected locally, cycle2independentPASS required before review-clean status. Prior independent17focused/396network-free11excluded/native/596hashes/8delta/186prioritem parity stand; no commit/push/reconciliation or public change.
+
+Current FT-IMP-055 pre-review:17focused/407workingfull/state0/80snapshots/localSEO0-fiveprior/whitespace pass; all three real-repository gates reject one/one divergence without mutation. Exact eight paths to frozen independent read-only review; no further divergent commit or push. Pinned references, exact reviewed hashes and complete outgoing records fail closed; unrelated dirty work preserved.083history reconciliation remains explicitly user-gated, not repaired by this tool. Daily learning already complete; no unchanged monitoring ledger entry.
+
+FT-RES-083 review-clean but push-held: exact9 local commit `028cfc1a46c7477203c15ae84b2ee9a9f82bc0f8` diverges one/one with incoming GSC-only `6fec783d577f3f02c7b3eddcecac3658ea4b3be4` after operator continued committing despite fetched behind state. No push/rebase/reset/force/unattended merge; explicit history-reconciliation approval is next release dependency. Fermat1PASS/noP0-P3,13focused/378network-free11excluded/1058assertions/native/hashscope green, operator390full remain intact. No public/full076quote; no third transaction after deadline. Incoming October2 public-safe snapshot validated read-only, not ingested; finalizedSeptember30 property orientation only.
 
 FT-RES-083 pre-review: Mini4-10source/inclusion correction flows through existing JSON/CSV; historical prices and other services untouched.13focused/390full/native/preservation green;9paths pending read-onlyPASS. Petit numeric price and exactpartyroom quote remain uncollected, not a technical blocker.
 

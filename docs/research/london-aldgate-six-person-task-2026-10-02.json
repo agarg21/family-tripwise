@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-101",
+  "destination": "London UK",
+  "checked_on": "2026-10-02",
+  "refresh_days": 30,
+  "evidence_scope": "Separate exact Aldgate one-sofa category kitchen/bedding and same-task dated budget audit. Original096 records/source dates and all other quotes remain unchanged; published count not booking/rest/comfort/access/safety guarantee.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "separate bedrooms",
+      "kitchen",
+      "midday rest with location tradeoffs unresolved"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "aldgate-detail": {
+      "url": "https://www.marlin.com/london-serviced-apartments/aldgate-tower-bridge-serviced-apartments/aldgate-tower-bridge-apartment-types/two-bedroom-apartments/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "aldgate-engine-category": {
+      "url": "https://reservations.marlin.com/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective",
+      "source_surface": "Official Aldgate detail-page calendar/search to Marlin Apartments Aldgate; native Adults13+/Children0-12 mapped actualparty to3adults3children, November8-13persisted. Selected Apartment with2KingBedsand1SofaBed room-detail body publishes exact max6/bedding/kitchen. Clean source root; no session/query retained."
+    }
+  },
+  "records": [
+    {
+      "id": "marlin-aldgate-two-bedroom-one-sofa",
+      "hotel": "Marlin Aldgate Tower Bridge",
+      "category": "Two Bedroom Apartment: Apartment with 2 King Beds and 1 Sofa Bed",
+      "source_id": "aldgate-engine-category",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact offered one-sofa room-detail body explicitly Sleeps6; not bare no-sofa/max4, Familytwo-sofa/max8 or penthouse"
+        }
+      ],
+      "sleeping_setup": "Two separate150x200cmking bedrooms and one135x190cm double sofa in living area. Kitchen cooker/oven/grill/microwave/fridge-freezer/washer-dryer. Area conflict: officialdetail78-93sqm, nativecard78-92sqm, nativeprose69-93sqm; no exactunit area. Optionaltwins not selected/guaranteed. Doors/rest/comfort/bedding allocation/access unknown.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Own separately dated exact-task observations required; no othercategory/member quote"
+        ]
+      },
+      "checks": [
+        "Own public rates join exactcategory/party/stay; namedsofa included in category identity but separate sofa fee/finalextras unresolved",
+        "Separate bedrooms/open-plan living not verified nap isolation, entrances, lift or route practicality",
+        "No Family/Penthouse capacity or price substitution; area disagreement not normalized"
+      ],
+      "conflicts": [
+        "Official category78-93sqm/nativecard78-92sqm/nativeprose69-93sqm disagree; cannot rank exactfloorarea"
+      ]
+    }
+  ],
+  "offer_observations": [],
+  "privacy": "Synthetic party/stay only; clean source URLs and public paraphrases. No account/contact/rateSelect/BookNow/cart/hold/payment/paidcall/hiddenAPI/CAPTCHA/deniedretry/bypass. Cart0/tab25closed; Master-attributed source observations, not independently liveverified. Allolder records/quotes/dates/public intact."
+}

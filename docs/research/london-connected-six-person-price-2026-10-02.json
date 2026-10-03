@@ -1,0 +1,31 @@
+[
+  {
+    "schema_version": 3,
+    "action": "FT-RES-098",
+    "checked_on": "2026-10-02",
+    "source_url": "https://www.onehundredshoreditch.com/hotel-info/rooms-for-more/",
+    "source_surface": "Official on-site book-a-room manual selection, Rooms For More filter, result and two public price-breakdown dialogs; persisted dates, two adults and four individually entered child ages inspected. Session/data parameters not retained. Direct category reservation link failed Invalid Request; distinct visible on-site form worked, not a security denial or bypass.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "one-hundred-shoreditch-rooms-for-six",
+    "category": "Rooms For Six: Studio Extra connecting to Studio Double Double",
+    "booking_category": "studio extra + studio double double",
+    "configuration_basis": "One named combination consists of Studio Extra king bed for two plus Studio Double Double two double beds for four; result amenities name Connecting Rooms, average48sqm/521sqft. One priced configuration represents two connecting physical rooms, not one independently priced room. Actual doors, bed dimensions, kitchen, sound isolation, rest and reservation/channel guarantee not established; no bedding or source-date overwrite of097.",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {"adults": 2, "child_ages": [4,8,12,15]},
+    "engine_party": {"adults": 2, "child_ages": [4,8,12,15], "adult_from_age": null, "child_age_from": null, "child_age_to": null, "classification_basis": "unpublished-cutoffs-exact-individual-party", "age_input_mode": "individual-ages"},
+    "rates": [
+      {"plan": "plan ahead", "eligibility": "public", "stay_amount": 3050, "meals": "No breakfast inclusion established; separate breakfast plans were offered but not selected or normalized", "cancellation": "Detailed policy: fully prepaid at booking, non-refundable and non-amendable. Summary instead allows amendments subject to terms; conflict unresolved, do not promise amendments."},
+      {"plan": "flexible stay", "eligibility": "public", "stay_amount": 3470, "meals": "No breakfast inclusion established; separate breakfast plans were offered but not selected or normalized", "cancellation": "Cancel by6pm one day before arrival to avoid one-night room-and-tax penalty; timezone not explicit. Credit-card guarantee required; displayed deposit0/remaining3470."}
+    ],
+    "fee_basis": "Public plan ahead displayed room2542 plus taxes508, VAT included508 and total3050 Including Taxes & Fees. Flexible room2892 plus taxes578, VAT included578 and total3470 Including Taxes & Fees. VAT repeated as disclosure, not another added charge. Both policies separately say discretionary5% accommodation service charge added to checkout bill; inclusion/calculation/removal process not established, not a mandatory-fee total or added arithmetic. Meals, optional extras and final checkout unknown.",
+    "deposit_basis": "Plan ahead100% full-stay deposit3050 due at booking/remaining0, not extra stay fee. Flexible credit-card guarantee at booking, displayed deposit0/remaining3470; authorisation amount and incidental hold unknown.",
+    "limitation": "Exact synthetic two-adult ages4/8/12/15 and Nov8-13five nights persisted beside named result. Policy says children16+ fully charged, but billing wording does not establish an adult classification cutoff; schema3 keeps cutoffs unknown, no age reclassification. Public non-member base plans only:532from headline is member-rate orientation, not accepted family price; special In Good Company and breakfast plans excluded from normalized comparison. One dated two-plan span610-694GBP configuration/night, not seasonal range/final all-fee quote/availability guarantee/booking acceptance or family suitability. No reserve/log-in/contact/cart/hold/payment/paidcall/CAPTCHA solving/security bypass/denied retry; original078/079prices and096/097records/dates/public unchanged. Source facts observed by Master, no independent live verification. Price recheckOct16 or changed task/terms; historical after14days.",
+    "conflicts": ["Prepaid summary permits amendment subject to terms; detailed cancellation policy says non-amendable"],
+    "collection_failure": {"surface": "Official category Book now link", "url": "https://reservations.onehundredshoreditch.com/114054", "observed_message": "INVALID REQUEST :(", "security_denial": false, "retries": 0, "effect": "That link supplied no task or price; distinct official on-site manual search succeeded. Do not retry unchanged link or infer sold out."}
+  }
+]

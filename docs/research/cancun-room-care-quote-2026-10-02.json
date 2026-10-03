@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-084",
+  "observed_on": "2026-10-02",
+  "evidence_class": "BOOKING_CHECK",
+  "source": {
+    "property_url": "https://www.clubmed.us/r/cancun/y",
+    "booking_url": "https://www.clubmed.us/booking/accommodation",
+    "method": "Operator-observed anonymous public UI; accommodation step1 and optional-childcare step3 of7. Not independently replayed or a completed booking.",
+    "publication_date": null,
+    "privacy": "Synthetic age representatives only; no actual personal birthdates, names, account, payment, raw session URLs or proposal identifiers retained. No quote saved/shared, hold or reservation submitted."
+  },
+  "task": {
+    "adults": 2,
+    "child_ages": [2, 7],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "requested_care_breaks": 3,
+    "minutes_per_break": 90,
+    "simultaneous_daytime_care_required": true,
+    "flights_selected": false,
+    "transfer_selected": false,
+    "party_confirmation": "2 Adults + 2 Children persisted in both accommodation and selected-care receipts",
+    "age_input_method": "Synthetic January1 birthdate representatives for years2024/2019, ages2/7 at observation and throughout stay; not real family data. Normal native ISO date input verified before proceeding."
+  },
+  "room": {
+    "property": "Club Med Cancun",
+    "category": "Superior Room",
+    "room_count": 1,
+    "room_count_basis": "Selected Single room in public UI, not booking acceptance",
+    "area_sq_ft": 419.79,
+    "balcony": "Furnished balcony displayed",
+    "baby_bed": "On demand displayed; availability unconfirmed",
+    "sleeping_assignment": null,
+    "final_party_acceptance": null
+  },
+  "price_basis": {
+    "displayed_currency_symbol": "$",
+    "currency": "USD",
+    "currency_evidence": "Editorial interpretation of US storefront dollar amounts; ISO USD was not explicitly visible in inspected receipt",
+    "unit": "Whole-party single-room all-inclusive package for five nights; derived per-night equivalent, not a pure room rate or seasonal range",
+    "rate_terms": "Non-refundable rate; no cancellations or modifications displayed",
+    "membership_fee_displayed": 180.00,
+    "membership_fee_treatment": "Receipt line included in displayed total; do not add again",
+    "tax_fee_statement": "Taxes and fees included displayed, with separate external green-tax warning",
+    "included_services": ["Full board and drinks", "Bar and snacks", "Activities", "Entertainment", "Wi-Fi", "One Mini Club Med+ selection"],
+    "before_care": {
+      "initial_strikethrough_total": 5239.50,
+      "displayed_discounts": [2327.37, 273.22],
+      "stay_total": 2638.91,
+      "derived_package_per_night": 527.78
+    },
+    "after_selected_care": {
+      "stay_total": 2934.91,
+      "derived_package_per_night": 586.98,
+      "additional_care_selection": 296.00,
+      "receipt_selection": "One Mini Club Med+ and one Petit Club Med"
+    },
+    "external_levy": {
+      "provider_label": "Green tax",
+      "currency": "MXN",
+      "amount_per_person_displayed": 283.00,
+      "payment_channel_displayed": "Local government website",
+      "applicable_person_count": null,
+      "age_exemptions": null,
+      "total": null,
+      "interpretation": "Separate provider warning, not a verified legal liability or converted addition to the dollar receipt"
+    },
+    "complete_all_currency_mandatory_total": null,
+    "optional_roundtrip_transfer_displayed": 112.00,
+    "transfer_treatment": "Not selected or included in either displayed total; not a route/time guarantee"
+  },
+  "care": [
+    {
+      "service": "Petit Club Med",
+      "displayed_ages": [2, 3],
+      "task_child_age": 2,
+      "included": false,
+      "selected_addon_amount": 296.00,
+      "displayed_price_unit": "Per person",
+      "temporal_billing_unit": null,
+      "billable_days": null,
+      "minimum_package": null,
+      "prorated_90_minute_price": null,
+      "indicative_daytime_hours": "08:45-17:30",
+      "indicative_evening_hours": "19:30-21:00",
+      "closure_displayed": "Saturday",
+      "availability": "Limited places and advance booking indicated; specific slots not confirmed",
+      "training_admission_terms": null,
+      "parent_presence_terms": null,
+      "three_breaks_confirmed": null
+    },
+    {
+      "service": "Mini Club Med+",
+      "displayed_ages": [4, 10],
+      "task_child_age": 7,
+      "included": true,
+      "additional_selected_charge": 0,
+      "charge_basis": "Included receipt selection; not assurance of admission or requested slots",
+      "indicative_daytime_hours": "08:45-17:30",
+      "indicative_evening_hours": "19:00-21:00",
+      "closure_displayed": "Saturday",
+      "three_breaks_confirmed": null
+    }
+  ],
+  "rejected_observation": {
+    "adult_only_total": 2087,
+    "reason": "Initial DOM date fills did not persist children; receipt showed only two adults. Rejected as family price before normal native input corrected party. No zero availability or sold-out inference."
+  },
+  "decision": "CANDIDATE: numeric same-party room/package and selected-care subtotal gate progressed; specific three-break care admission, duration/minimum and external levy remain unresolved",
+  "next_gate": "Clarify current selected-care duration/minimum/billable-days and slots plus levy applicability and final room sleeping setup; retain076 demand/controlled-overlap/corpus/maintainability/URL gates. No public resort addition from this sample.",
+  "preservation": "Prior083 inventory, original September nightly observations and dates, public pages, all observation windows and scheduler unchanged. Review/release pending; existing Git divergence prevents commit/push."
+}

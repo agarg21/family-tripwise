@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-097",
+  "destination": "London UK",
+  "checked_on": "2026-10-02",
+  "refresh_days": 30,
+  "evidence_scope": "Two official named connected-category count screens, not reservations, exact-age acceptance, recommendations or a complete suite-versus-connection budget. No new quote; existing078/079 nightly observations and096 apartment records unchanged. Research only, no London publication authority.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [4, 8, 12, 15],
+    "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"},
+    "preferences": ["separate bedrooms", "kitchen", "midday rest with location tradeoffs unresolved"],
+    "budget": null
+  },
+  "sources": {
+    "shoreditch": {
+      "url": "https://www.onehundredshoreditch.com/hotel-info/rooms-for-more/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "metropole": {
+      "url": "https://www.hilton.com/en/hotels/lonmetw-hilton-london-metropole/rooms/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "one-hundred-shoreditch-rooms-for-six",
+      "hotel": "One Hundred Shoreditch",
+      "category": "Rooms For Six: Studio Extra connecting to Studio Double Double",
+      "source_id": "shoreditch",
+      "configurations": [{"maximum": 6, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Official body names this connecting combination for up to six; no exact-age acceptance or reservation inspected"}],
+      "sleeping_setup": "Named Studio Extra plus Studio Double Double combination. Bed numbers, dimensions and allocation not established by inspected body; do not infer them from category names.",
+      "kitchen": "not-established",
+      "connection": "named-connected-category",
+      "price": {"currency": "GBP", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Exact named combination and two adults/ages4,8,12,15", "November8-13 five-night total and configuration/night equivalent", "Currency confirmation, tax/mandatory fees, meal extras and cancellation"]},
+      "checks": ["Confirm exact category, child/adult age classification, bed allocation and connection confirmation in the selected channel; no reservation or channel guarantee inspected", "Kitchen, actual layout/doors, rest space, access and midday return unknown", "Budget collection is the next priority; do not substitute an apartment rate or detached promotion"],
+      "conflicts": []
+    },
+    {
+      "id": "hilton-london-metropole-four-queen-connecting",
+      "hotel": "Hilton London Metropole",
+      "category": "Four Queen Bed Family Connecting Room",
+      "source_id": "metropole",
+      "configurations": [{"maximum": 8, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Official named connecting category lists sleeps8; six is within published count only"}],
+      "sleeping_setup": "Four queen beds named in category title; dimensions, bed-to-room distribution and actual layout not established by inspected list.",
+      "kitchen": "not-established",
+      "connection": "named-connected-category",
+      "price": {"currency": "GBP", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Exact named combination and two adults/ages4,8,12,15", "November8-13 five-night total and configuration/night equivalent", "Currency confirmation, tax/mandatory fees, meal extras and cancellation"]},
+      "checks": ["Confirm exact selected category, adult/child ages and connection confirmation in the selected channel; no reservation inspected", "Kitchen, door/layout, rest, access and return journey unknown", "Loading Price is neither a quote, zero cost nor sold-out evidence; collect task-bound budget next"],
+      "conflicts": []
+    }
+  ],
+  "offer_observations": []
+}

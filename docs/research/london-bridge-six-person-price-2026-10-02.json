@@ -1,0 +1,69 @@
+[
+  {
+    "schema_version": 2,
+    "action": "FT-RES-102",
+    "checked_on": "2026-10-02",
+    "source_url": "https://reservations.marlin.com/",
+    "source_surface": "Official LondonBridge categorypage date/guestsearch andnative13+/0-12bandconfirmation, actual2adults ages4/8/12/15=>3adults3children persisted Nov8-13five nights. Exactone-sofa apartment andpublicNon-Refundable details. Flexibleunbadged375GBP plan has membershipdescriptionconflict, not accepted aspublic. No session/query retained.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "marlin-london-bridge-two-bedroom-one-sofa",
+    "category": "Two Bedroom Apartment: Apartment with 2 King Beds and 1 Sofa Bed",
+    "booking_category": "Two Bedroom Apartment: Apartment with 2 King Beds and 1 Sofa Bed",
+    "configuration_basis": "One wholeLondonBridgeEmpireSquare two-bedroom apartment,2x150x200kingbeds+one135x190sofa/max6/kitchen/74-88sqm, notFamilyvariant. Sofaadditionalfees onofficialpage; selectedrate explicitlynamedsofa butinclusion/additionalamount/finalextras unknown. Optionaltwins onrequest notselected. Rest/comfort/access/bookingacceptance unknown; flexible375GBP eligibilitysignal separate/unqualified.",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12,
+        15
+      ]
+    },
+    "engine_party": {
+      "adults": 3,
+      "child_ages": [
+        4,
+        8,
+        12
+      ],
+      "adult_from_age": 13,
+      "child_age_from": 0,
+      "child_age_to": 12,
+      "age_input_mode": "provider-age-band-counts"
+    },
+    "rates": [
+      {
+        "plan": "Non-Refundable",
+        "eligibility": "public",
+        "stay_amount": 1687.5,
+        "meals": "No meal inclusion established; apartment kitchen",
+        "cancellation": "Deposit required atbooking, amount unspecified; no cancellation/modifications, changes/cancellation100%charge, nonrefundable anytime"
+      }
+    ],
+    "fee_basis": "Acceptedpublicnonrefund accommodation1406.25GBP+VAT281.25=1687.50five-night total, card/details337.50night/includingtaxesandfees. Accommodationcoincidentally equalsmemberstay, not memberplan accepted. Officialadditionalsofa fees apply butselectedsofa category inclusion/extraamount and finalmandatorytotal unknown. No inventedfee or flexiblepublicclassification.",
+    "deposit_basis": "Publicnonrefund depositrequired atbooking/nonrefund, amountunspecified notfullstay assumption; PINverifiedcard/photoIDatcheckin. Damageauthorisation otherLondonlocationsGBP200midweek/500weekend; exactSun-Fridayhold unknown/notstaycost. Unqualifiedflexiblecard/extrasguarantee context separate, no zero-depositassumption.",
+    "limitation": "Public337.50GBP wholeapartment/night datedsample(1687.50stay), notseasonalrange/finalall-extra/Familyvariant or availability/acceptance guarantee. Explicitprovider13+/0-12countmapping, individualagesnotentered, initial2adult4child ignored. Member281.25/318.75night/thirdpartyoverlay excluded. Flexible375GBPnight/1875stay unbadged butdescription membershipwording conflicts; keep unqualified signal not publicnormalizedrate. SourceMasterattributed/notindependentlyliveverified. No booking/paid/contact/account/deniedretry/bypass; Oct16price/Nov1fact recheck orchangedtask/terms. Allpriorprices/096/101/source dates/public intact.",
+    "unqualified_rate_signals": [
+      {
+        "plan": "Book with confidence",
+        "eligibility": "not-established",
+        "displayed_nightly": 375,
+        "displayed_stay": 1875,
+        "currency": "GBP",
+        "unit": "configuration/stay",
+        "nights": 5,
+        "checked_on": "2026-10-02",
+        "task_basis": "Samepersisted actualfamily/date/one-sofa configuration; no Memberratebadge butdescription MarlinMembersReceiveExclusiveDiscounts",
+        "fee_basis": "Displayedaccommodation1562.49+VAT312.51=1875, includingtaxesandfees; sofaextras/finalmandatorytotal unknown",
+        "cancellation": "Cancel23:00daybeforearrival,timezonenoexplicit, laterone-nightincludingVAT; validcard guarantee/arrivalchipPIN/extras mayapply",
+        "decision": "PRESERVE as eligibility-uncertain signal; not nativepublic rate until scopedofficialeligibility resolvescopyconflict"
+      }
+    ]
+  }
+]

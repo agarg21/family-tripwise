@@ -1,17 +1,46 @@
 import { readFile, writeFile, access, mkdir } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { types } from "node:util";
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 
-export function validateBatch(batch) {
+function ownData(object, key) {
+  const field = Object.getOwnPropertyDescriptor(object, key);
+  if (!field?.enumerable || !("value" in field)) throw new Error("Research manifest requires own enumerable data fields");
+  return field.value;
+}
+function taskStrings(value, limit, required) {
+  if (types.isProxy(value) || !Array.isArray(value)) throw new Error("Invalid bounded task list");
+  const length = Object.getOwnPropertyDescriptor(value, "length").value;
+  if (length > limit || (required && !length)) throw new Error("Invalid bounded task list");
+  const strings = [];
+  for (let index = 0; index < length; index++) {
+    const item = ownData(value, index);
+    if (typeof item !== "string" || !item.trim() || item !== item.trim() || item.length > 120) throw new Error("Invalid bounded keyword");
+    strings.push(item);
+  }
+  if (new Set(strings).size !== strings.length) throw new Error("Duplicate research tasks");
+  return Object.freeze(strings);
+}
+function preflight(input) {
+  if (!input || typeof input !== "object" || types.isProxy(input) || Array.isArray(input)) throw new Error("Invalid research manifest");
+  // Copy approved data before any await; callers cannot widen later requests.
+  const batch = Object.freeze({
+    prior_spend_usd: ownData(input, "prior_spend_usd"),
+    cumulative_ceiling_usd: ownData(input, "cumulative_ceiling_usd"),
+    batch_ceiling_usd: ownData(input, "batch_ceiling_usd"),
+    keywords: taskStrings(ownData(input, "keywords"), 200, true),
+    serp_keywords: taskStrings(ownData(input, "serp_keywords"), 12, false),
+  });
   if (!Number.isFinite(batch.prior_spend_usd) || batch.prior_spend_usd < 0 || batch.cumulative_ceiling_usd !== 5) throw new Error("Invalid authorized research budget");
-  if (!Array.isArray(batch.keywords) || !batch.keywords.length || batch.keywords.length > 200 || batch.keywords.some((k) => typeof k !== "string" || !k.trim() || k.length > 120)) throw new Error("Invalid bounded keyword batch");
-  if (new Set(batch.keywords).size !== batch.keywords.length) throw new Error("Duplicate keywords");
-  if (!Array.isArray(batch.serp_keywords) || batch.serp_keywords.length > 12 || batch.serp_keywords.some((k) => !batch.keywords.includes(k))) throw new Error("Invalid SERP subset");
+  if (batch.serp_keywords.some((k) => !batch.keywords.includes(k))) throw new Error("Invalid SERP subset");
   // Conservative guard above the documented September17 observed prices; no clickstream/deeper SERPs.
   const reserved = 0.1 + batch.keywords.length * 0.0002 + batch.serp_keywords.length * 0.01;
   if (batch.batch_ceiling_usd !== 0.5 || batch.prior_spend_usd + reserved > batch.cumulative_ceiling_usd || reserved > batch.batch_ceiling_usd) throw new Error("Budget preflight failed");
-  return reserved;
+  return { batch, reserved };
+}
+export function validateBatch(batch) {
+  return preflight(batch).reserved;
 }
 export function keywordRows(json, requested) {
   const rows = json.tasks?.[0]?.result?.[0]?.items || [];
@@ -32,7 +61,7 @@ function loadAuth(raw) {
   return auth;
 }
 export async function runBatch(batch, output, { auth, fetcher = fetch } = {}) {
-  validateBatch(batch);
+  batch = preflight(batch).batch;
   try { await access(output); throw new Error("Output already exists; do not repeat a potentially billed batch"); } catch (e) { if (e.code !== "ENOENT") throw e; }
   const report = { schema_version: 1, action: "FT-ACC-001", collected_at: new Date().toISOString(), market: "US", location_code: 2840, language_code: "en", budget: { batch_ceiling_usd: 0.5, cumulative_ceiling_usd: batch.cumulative_ceiling_usd, prior_spend_usd: batch.prior_spend_usd }, calls: [], keywords: [], serps: [], limitations: ["Provider estimates, not people or traffic forecasts", "Null metrics are unknown, not zero", "KD zero is not proof of easy ranking", "Monthly history can lag launches; seasonality is not trend proof", "No paid automatic retries; unknown outcomes require reconciliation"] };
   const save = async () => { await mkdir(dirname(output), { recursive: true }); await writeFile(output, JSON.stringify(report, null, 2) + "\n"); };

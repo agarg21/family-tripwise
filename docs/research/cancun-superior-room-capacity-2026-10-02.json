@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "property": "Club Med Cancun",
+  "category": "Superior Room",
+  "property_url": "https://www.clubmed.us/r/cancun/y",
+  "source_record": "docs/research/cancun-quoted-room-care-basis-2026-10-02.json",
+  "observed_on": "2026-10-02",
+  "published_on": null,
+  "published_max_guests": 3,
+  "baby_bed": "on demand",
+  "age_count_exception": null,
+  "sleeping_assignment": null,
+  "booking_acceptance": null
+}

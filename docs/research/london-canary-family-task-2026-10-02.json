@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-100",
+  "destination": "London UK",
+  "checked_on": "2026-10-02",
+  "refresh_days": 30,
+  "evidence_scope": "New separate Canary variant check: official Family two-sofa maximum8 not offered in the inspected same-task result; do not infer sold out or apply8to penthouse. A separately named one-sofa penthouse publishes6 and owns two public dated budget samples. No replacement of096Family record or older quotes/dates; count screens not rest/booking/safety/route/suitability guarantees.",
+  "scenario": {"adults": 2, "child_ages": [4,8,12,15], "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"}, "preferences": ["separate bedrooms", "kitchen", "midday rest with location tradeoffs unresolved"], "budget": null},
+  "sources": {
+    "canary-category": {"url": "https://www.marlin.com/london-serviced-apartments/canary-wharf-serviced-apartments/rooms/two-bedroom-apartment/", "checked_on": "2026-10-02", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
+    "canary-engine-category": {"url": "https://reservations.marlin.com/", "checked_on": "2026-10-02", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective", "source_surface": "Native category-page date/guest search ->Marlin Apartments Canary Wharf, one configuration, Nov8-13; guest panel13+/0-12bands mapped actualage15toadult; Threeadults/threechildren persisted. Offered Two Bedroom Penthouse room-detail body publishes exact bedding/max6/kitchen. Source is official provider category text, not price or experience; no session/query retention."}
+  },
+  "records": [
+    {
+      "id": "marlin-canary-wharf-family-two-sofas",
+      "hotel": "Marlin Canary Wharf",
+      "category": "Family Apartment variant within Two Bedroom Apartment options; two sofa beds",
+      "source_id": "canary-category",
+      "configurations": [{"maximum": 8, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": ["Select and confirm the named two-sofa Family Apartment variant; not present in inspected same-task result"], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Official category page Family Apartments with two Sofa beds sleep up to8; not an offered reservation category"}],
+      "sleeping_setup": "Two king bedrooms, each published150x200cm; named Family option two sofas, sofa dimensions/allocation unknown",
+      "kitchen": "published-kitchen", "connection": "not-applicable",
+      "price": {"currency": "GBP", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Named Family variant not offered in inspected Nov8-13same-task result; own quote uncollected, not zero", "Exact booking identity/age acceptance/sofa fees remain unknown"]},
+      "checks": ["Normal source result offered only a separately named penthouse; no Family sold-out inference or repeated search", "Familymaximum8and two sofas must not transfer to penthouse or standard option", "Rest, bedding allocation and booking acceptance unverified"],
+      "conflicts": ["Official Family variant exists in category copy but was not bound to a sellable category in the inspected result"]
+    },
+    {
+      "id": "marlin-canary-wharf-penthouse-one-sofa",
+      "hotel": "Marlin Canary Wharf",
+      "category": "Two Bedroom Penthouse: Penthouse with 2 King Beds and 1 Sofa Bed",
+      "source_id": "canary-engine-category",
+      "configurations": [{"maximum": 6, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Exact offered namedone-sofa penthouse room-detail body explicitly Sleeps6; not Familymax8 or generic independent beds"}],
+      "sleeping_setup": "Two separate150x200cm king bedrooms and one135x190cm double sofa in living area. Category90-111sqm, kitchen cooker/oven/microwave/fridge-freezer/washer-dryer. Comfort, bed allocation, rest isolation, doors and access unverified",
+      "kitchen": "published-kitchen", "connection": "not-applicable",
+      "price": {"currency": "GBP", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Own separately dated exact-task price observations required; never use Family or member rate"]},
+      "checks": ["Own dated saver/flexible samples join byexactcategory/party/stay; not Familyvariant quote", "Sofa-specific category named, but fee/extra inclusion and final checkout unverified", "Terrace/balcony general imagery not exact-unit access or safety evidence; rest/entrance/journey unknown"],
+      "conflicts": []
+    }
+  ],
+  "offer_observations": [],
+  "collection_gap": {"failed_gate": "Same-task booking binding/own price for FamilyApartmenttwo-sofas", "command": "Normal official category date/guest search, native13+/0-12guest mapping, loaded result/category/details", "tool_failure": null, "security_denial": false, "owner": "Provider booking inventory/category labeling and operator evidence collection", "unblock_condition": "Changed native result or explicit official sellable Familyvariant identity and same-task quote", "next_check": "Changed inventory/category evidence or price recheckOctober16; no immediate unchanged search or sold-out assertion"},
+  "privacy": "Synthetic party/stay only; clean source roots and public paraphrases, no session/query/private data/account/cart/hold/contact/payment/paidcall/deniedretry/securitybypass. Tab24closed/cart0. Old096/098/099/078079data/public unchanged; source observations Master-attributed, not independentliveverified."
+}

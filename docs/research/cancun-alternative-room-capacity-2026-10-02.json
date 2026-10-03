@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-094",
+  "learning_id": "LRN-103",
+  "observed_on": "2026-10-02",
+  "observed_at_utc": "2026-10-03T00:12:53Z",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "source": {
+    "url": "https://www.clubmed.us/r/cancun/y",
+    "publication_date": null,
+    "effective_date": null,
+    "method": "Anonymous official UI: Rooms & Suites Family Oasis card opened modal with exact Deluxe Oceanfront selected; Amenities tab inspected. Operator observation, not independently live replayed"
+  },
+  "task": {
+    "adults": 2,
+    "child_ages": [2, 7],
+    "guest_count": 4,
+    "room_count": 1,
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "care_request": "Three simultaneous 90-minute daytime breaks; not verified by this room audit"
+  },
+  "room": {
+    "category": "Family Oasis, Deluxe Room - Oceanfront",
+    "area_sq_ft": 678.13,
+    "published_max_guests": 5,
+    "published_location": "Aguamarina buildings",
+    "published_features": ["Sea View", "Lounge area", "Children's Separate Room", "Furnished balcony"],
+    "baby_bed": "on demand",
+    "baby_welcome_pack": "listed",
+    "bed_types_and_counts": null,
+    "sleeping_assignment": null,
+    "under_three_counting_rule": null,
+    "infant_exception": null,
+    "exact_layout_guaranteed": false,
+    "layout_limit": "Room Plan panel says informational/non-contractual floor maps; layout may slightly change among rooms of same type",
+    "dated_availability": null,
+    "booking_acceptance": null
+  },
+  "capacity_screen": {
+    "task_people_counted": 4,
+    "published_max_guests": 5,
+    "within_published_count": true,
+    "interpretation": "Candidate category passes a simple all-four-person count screen without needing an infant exception; not a guarantee of age eligibility, bedding, availability, booking acceptance or suitability"
+  },
+  "price": {
+    "currency": null,
+    "room_per_night": null,
+    "whole_party_package_per_night": null,
+    "stay_total": null,
+    "tax_fee_inclusion": null,
+    "care_price": null,
+    "terms": null,
+    "next_check": "Obtain its own same-party/same-stay exact-category price and care basis; preserve useful approximate nightly price with currency/unit/party/stay/observation/fees context"
+  },
+  "retained_evidence": {
+    "original_quote_record": "docs/research/cancun-room-care-quote-2026-10-02.json",
+    "original_capacity_record": "docs/research/cancun-quoted-room-care-basis-2026-10-02.json",
+    "original_category": "Superior Room",
+    "original_prices_unchanged": true,
+    "original_capacity_conflict_unchanged": true,
+    "prices_apply_to_alternative": false,
+    "use": "Do not transfer Superior room/package/care amounts to this Family Oasis category or renew original observation dates"
+  },
+  "result": {
+    "decision": "CANDIDATE: exact alternative category clears published-count subgate; original Superior capacity conflict and remaining076 gates remain",
+    "confidence": "High exact selected-category official wording/count; unknown sleeping assignment, current availability, booking acceptance, category-specific budget and care admission",
+    "next_gate": "Same-party/same-stay exact Family Oasis Deluxe Oceanfront quote, explicit bedding and care duration/minimum/slots; levy and controlledSERP/corpus/materiality/maintainability/preview gates unchanged",
+    "trigger": "Changed category/occupancy terms, observed exact-party rate, supported bed assignment or October9 recheck",
+    "recheck_on": "2026-10-09",
+    "release_state": "local-review-pending-uncommitted-unpushed"
+  },
+  "limits": [
+    "No floorplan image or adjacent Superior Oceanfront panel used as bed evidence",
+    "Baby bed on demand does not establish age acceptance or availability; count screen is not a booking confirmation",
+    "No booking search, new price, contact, account, cart, hold, purchase, paid call or denied FAQ/Mini endpoint retry",
+    "No new URL/public edit/model integration/source renewal; prior quotes and nightly context preserved",
+    "083 Git-history approval holds release separately; research narrows existing task rather than claiming SEO performance"
+  ]
+}

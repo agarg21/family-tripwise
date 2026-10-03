@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-087",
+  "learning_id": "LRN-098",
+  "observed_on": "2026-10-02",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "source": {
+    "url": "https://www.clubmed.us/r/cancun/y",
+    "publication_date": null,
+    "method": "Anonymous official UI room carousel and expanded Cancun Petit service cards; operator-observed, not independently replayed"
+  },
+  "room": {
+    "category": "Superior Room",
+    "area_sq_ft": 419.79,
+    "published_max_guests": 3,
+    "baby_bed": "on demand",
+    "under_three_capacity_exception": null,
+    "sleeping_assignment": null,
+    "four_person_acceptance": null,
+    "conflict": "Published maximum3 versus retained084party4; infant-count exception and booking-category mapping unresolved",
+    "attribution": "Native Next carousel selected exact unqualified Superior Room; direct-tab attempts left Lagoon selected and were not used as exact-category evidence"
+  },
+  "care": {
+    "service": "Petit Club Med",
+    "evening_min_age": 2,
+    "evening_inclusion_basis": "day-or-week registration",
+    "half_day_or_unregistered_evening": "on request; subject to availability",
+    "pyjamas_min_age_months": 4,
+    "pyjamas_status": "on demand; certain periods; price in resort",
+    "selected_296_temporal_unit": null,
+    "minimum_package": null,
+    "billable_days": null,
+    "three_daytime_breaks_confirmed": null
+  },
+  "retained_quote": {
+    "record": "docs/research/cancun-room-care-quote-2026-10-02.json",
+    "observation_date": "2026-10-02",
+    "adults": 2,
+    "child_ages": [2, 7],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "room_count": 1,
+    "category": "Superior Room",
+    "currency": "USD",
+    "currency_basis": "US storefront interpretation; ISO not explicitly visible",
+    "unit": "Whole-party five-night all-inclusive package, not pure room rate",
+    "stay_before_care": 2638.91,
+    "stay_after_care": 2934.91,
+    "package_per_night_before_care": 527.78,
+    "package_per_night_after_care": 586.98,
+    "selected_petit_delta": 296,
+    "membership_included_once": 180,
+    "external_levy": {"currency": "MXN", "provider_warning_per_person": 283, "applicable_persons": null, "total": null},
+    "optional_transfer_excluded": 112,
+    "terms": "Non-refundable; no cancellations or modifications displayed",
+    "complete_mandatory_total": null,
+    "use": "Retained nonbinding price observation only; not a capacity-qualified family option, repricing or completed booking"
+  },
+  "result": {
+    "decision": "CANDIDATE; reject treating quote selection or included evening as confirmation of room acceptance or requested daytime care",
+    "confidence": "High observed capacity and evening distinctions; unknown capacity exception, exact mapping, bedding, selected fee duration and admission",
+    "next_gate": "Resolve infant-count/category mapping and actual sleeping places before capacity-qualified use; obtain task-specific care duration/minimum/slots, remaining076qualification unchanged",
+    "trigger": "Explicit current category/age exception, binding party setup, selected service duration or changed policy",
+    "release_state": "local-review-pending-uncommitted-unpushed"
+  },
+  "limits": [
+    "No baby-bed or accommodation-discount occupancy exception inferred; no definitive rejection or source deception claim",
+    "First tab clicks did not change selected marker; native carousel then confirmed exact category. Hidden adjacent DOM panels and floorplan photos not used to infer bed assignment",
+    "No new booking UI quote, denied endpoint retry, contact, account, paid API call or personal data retention",
+    "Prior084receipt, all earlier prices/source dates, public pages/models/windows, eleven exclusions and scheduler unchanged",
+    "Git083history approval holds release independently; no new divergent commit"
+  ]
+}

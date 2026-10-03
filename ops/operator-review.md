@@ -1,6 +1,264 @@
 # Operator Implementation Review Log
 
+## FT-OPS-010 - Authorized Reconciliation Registration
+
+Direct user approved the pending normal reviewed Git reconciliation October2Eastern. Pinned028cfc1/6fec783/base0bde00f; exact plan/fourops/needs-user/incomingGSCpaths only, no pre-existing dirtywork in merge. NativeQA/privacy/index-tree/ancestor/differentread-onlyPASS/freshfetch before normalpush required. Genericguard unchanged; manual boundedapprovedmerge path, no failingguard ignored/force/rebase/reset/discard/public releaseclaim.
+
+## 2026-10-02 - FT-RES-103 Family-Size Ownership
+
+Final Ptolemy `01a0ffdb-d8f7-70c2-9b01-d22420813d72` cycle1PASS/noP0-P3:10focused442full/20scratchGitguards/no failures-skips/state0/GSC80/SEO0-fivebaseline/whitespace/parity;1287baseline-candidate hashes/manifests intact/exact8delta637preserved/212prioritems except077threefields/ledgerLRN112only. Independently recomputed organic9/10/9/10/10 and fourURL/hostsets/cost0.02236 cumulative0.21680/privacy/086held. No independentlive/production/Gitmutation/publishing;083holds localreview-clean/uncommitted/unpushed state. Immutable result only/no fourth.
+
+Master10focused442full/no failures-skips/state0/GSC80/SEO0-fivebaseline/whitespace pass; different frozenread-onlyreview next. No productionclaim/083releaseheld/no fourth.
+
+Collected immutablefive-query report/sixsuccessfulcalls0.02236USD/cumulative0.21680, actualoverlap/nulls/dates/two boundedbodyaudits. LRN112/CANDIDATE comparison/PRESERVE URLs; no easyKD/newURL/productionclaim/086failureclearance. Focused/fullQA/differentread-onlyreview next,083holdsrelease/allpriorquotes-dates-public intact.
+
+Registered exact8paths beforecollection, third/final03run/no fourth. Newfive USfamily-size pairedqueries under existingUSD5/batch0.50/prior0.19444/reserve0.151; not086toddlertask replay. Existingprotectedcollector/no rawcredentials/no retry/failurestop; actualoverlapdenominators/unknowns/metricdates. Optionaltwo relevantbodyaudits onlyifresults. Nativefocused-fullQA/different read-onlyPASS/allolderwork intact/077onlythreefields/083releasehold; no public/booking/account/indexing/outreach/bypass.
+
+## 2026-10-02 - FT-RES-102 London Bridge Budget
+
+Final Volta `01a0ffcb-b184-70d0-bff3-9ef5e29fad87` cycle1PASS/noP0-P3:57focused442full/20Gitguards/no failures-skips/716controls/state0/GSC80/SEO0-fivebaseline/whitespace/exact8delta634preserved/all639baseline642candidatehashes/manifests intact/211prioritems except077threefields/ledgerLRN111only. No independentlive/production/realGitmutation/publishing; localreview-clean/uncommitted/unpushed/083holdsrelease. Immutable result only.
+
+Master57focused442full/no skips/state0/GSC80/SEO0-fivebaseline/whitespace/task-priceCSV/parity; exact8delta634preserved639baseline intact/211prioritems except077threefields/ledgerLRN111only. Different frozen read-onlyreview next; no productionclaim/083releaseheld.
+
+Collected separate schema1pack/schema2ownpublic337.50GBP datedbudget plusunqualified375eligibilitysignal. NativeCSV only acceptedpublic plan; sofafee/hold/refund/mapping/unknowns retained. No source renewal/publicchange; focused/fullQA and independentreview next,083releaseheld.
+
+Registered exact8paths beforecollection, second03run transaction/deadline03:45:28/maxthree. LondonBridge exactone-sofa/category/samefamily-stay ownbudget or boundedgap; nativefull/focusedQA/different read-onlyPASS/allpriorwork intact/077onlythreefields/083releasehold. No booking/paid/deniedretry/bypass.
+
+## 2026-10-02 - FT-RES-101 Aldgate Task Budget
+
+Final Galileo `01a0ffc0-8275-7ea1-8b56-367debdad901` cycle1PASS/noP0-P3:57focused442full/no skips-failures-denials/20scratchGitguards/597controls/state0/GSC80/SEO0-fivebaseline/whitespace/exact8delta631preserved/all636baseline639candidatehashes/manifests intact/210prioritems except077threefields/ledgerLRN110only. Initial broadtemp discovery unrelatedmacOSdenials, finalnativeQA clean/no bypass. No sourceindependentlive/production/realGitmutation; localreview-clean/uncommitted/unpushed/083approval holdsrelease. Immutablecompletion only.
+
+Master57focused442full/no skips/state0/GSC80/SEO0-fivebaseline/whitespace/task-priceCSV/parity pass; exact8delta631preserved636baseline intact/210prioritems except077threefields/ledgerLRN110only. Separate frozen read-onlyreview next; sourceMaster-attributed, no productionclaim/083releaseheld.
+
+Collected schema1ownexactcategory pack/schema2public276.30/307GBP taskbudget with age-bandmapping/VAT/fees/refund/deposit/area conflict/unknowns. No olderrecord renewal/publicmutation; nativefocused-fullQA and separate frozen read-onlyreview next,083releaseheld.
+
+Registered exact8paths beforecollection, first03:00:28run transaction/deadline03:45:28/maxthree. Aldgate standardTwoBedroom kitchen/sofa and own sameparty/stay price or boundedfailure. Keep approximate nightly/context, all prior evidence/dates/public intact,077onlythreefields. Nativefull/focusedQA/different read-onlyPASS/exactpath preservation;083releaseheld. No booking/paid/contact/account/deniedretry/bypass.
+
+## 2026-10-02 - FT-RES-100 Canary Variant Budget
+
+Final Averroes `01a0ffa0-1e4d-78a2-8b57-475d11f68d3d` cycle1PASS/noP0-P3:57focused442full/20Gitguards/no skips-denials/401assertions/parity/state0/GSC80/SEO0-fivebaseline/whitespace/exact8delta628preserved/all633baseline636candidatehashes andmanifests intact/209prioritems except077threefields/ledgerLRN109only/priorquotes-dates-public preserved. Reviewer scratchno-index exit assumption corrected withoutcandidateedit; no live/production/freshGSC/realGitmutation/publishing. Localreview-clean/uncommitted/unpushed/083approval holdsrelease;098/099/100threefinaltransactions/no fourth. Immutable result only.
+
+Master57focused442full/state0/GSC80/SEO0-fivebaseline/whitespace/nativepack-price-taskCSV/parity pass; scratchCSVheader label corrected, product/data unchanged. Exact8delta628preserved633baseline intact/209prioritems except077threefields/ledgerLRN109only/priorquotes-dates-corpus-public intact. Freeze for different read-onlyreview, sourceMaster-attributed/083holdsrelease/thirdfinal/no fourth.
+
+Collected separate schema1two-record pack/schema2ownpenthousebudget: Familyunpriced/notoffered(no sold-out/denial), penthouseexplicitmax6/one135x190sofa/432.18-480.20GBP mappedexacttask. Retain datedcurrency/configuration/tax/fee/refund/deposit/meal/unknowns; nativeQA/read-onlyreview next, sourceMaster-attributed/no publicclaim/083releaseheld.
+
+Registered exact8paths beforecollection, third/final02:00:58run/deadline02:45:58/no fourth. Nativeofficial namedFamilyApartment variant/category/task price or boundedfailure; eight-person capacity nottransferred to standard/penthouse. Approximateprice/context preserved, nativefull/focusedQA/different read-onlyPASS,077onlythreefields/allpriorwork intact/083releaseheld. No booking/paid/contact/account/deniedretry/bypass.
+
+## 2026-10-02 - FT-RES-099 Alternate Connecting Budget
+
+Final Kepler `01a0ff92-7de0-7fd0-8a91-dfac2d284b3c` cycle1PASS/noP0-P3:57focused442full/20Gitguards/no skips-denials/119controls/parity/state0/GSC80/SEO0-fivebaseline/whitespace/exact7delta626preserved/all631baseline633candidatehashes intact/208prioritems except077threefields/ledgerLRN108only/priorquotes-dates-CSV-public intact. Sources notindependentlyliveverified, no frozenedit/realGitmutation/publishing; localreview-clean/uncommitted/unpushed/083approval holdsrelease. Immutable result only.
+
+Master57focused442full/state0/GSC80/SEO0-fivebaseline/whitespace/customcountprice-emptyexacttask-CSV-parity pass. Exact7delta626preserved631baseline hashes intact/208prioritems except077threefields/ledgerLRN108only/priorquotes/source dates/public intact. Freeze for different read-onlyreview; no independentlive or productionclaim,083holdsrelease.
+
+Collected count-only planning estimates491.36/608.40GBP versus empty exact-age observations; namedcategory/counts/datepersisted, agesnotcollected. Officialarea/pennyrounding conflicts, tax/fee/plan/deposit/meal limits retained; sourceMaster-attributed, allpriorquotes/public unchanged. NativeQA/frozen different read-onlyreview next,083releaseheld.
+
+Registered exact7paths beforecollection, second02:00:58run/deadline02:45:58/maxthree. Native official Metropole namedfour-queen connecting exactfamily/stay price/channel context or bounded specificfailure; no room/party/member substitution/booking/paid/deniedretry/bypass. Full/focusednativeQA/different read-onlyPASS, oldprices/source dates/public preserved,077onlythreefields/083releasehold.
+
+## 2026-10-02 - FT-RES-098 Connecting Budget
+
+Final Turing `01a0ff84-d461-7130-a5ce-fa291fe1e8d7` cycle1 PASS/noP0-P3:57focused442full/all20Gitguards/no skips/62controls/parity/state0/GSC80/SEO0-fivebaseline/whitespace/exact7delta624preserved/all631candidate629baselinehashes intact/207prioritems except077threefields/ledgerLRN107only/oldprices intact. No live-source/production/protectedwrites/network/realGitmutation; localreview-clean/uncommitted/unpushed under083approval. Immutable completion only.
+
+Master57focused442full/state0/GSC80/SEO0-fivebaseline/whitespace/parity/exact7delta624preserved629baseline intact. schema3/public610-694/sameparty-date/fees-conflict/3-rowCSV/wrongtask/aging/nonmutation/207prioritems except077threefields/ledgerLRN107only/oldprices intact. Freeze for different read-onlyreview,083releaseheld.
+
+Collected schema3individualparty/stay/namedtwo-room configuration610/694GBP public samples with displayedtax/fees/deposit/meal/cancel/conflict/discretionary5%limits. Alloldrecords unchanged, sourceobservations Master-attributed; nativeQA/frozen read-onlyreview pending,083releaseheld.
+
+Registered exact7paths before collection, first02:00:58run transaction/deadline02:45:58/maxthree. Own dated2adult/fourchild Nov8-13namedconnecting budget/confirmation, ordinary anonymous official UI only, no reservation/cart/hold/contact/account/paid/deniedretry/bypass. Retain source/party/fees/terms and unknowns, allpriorprices/097/public/dirtywork unchanged. Nativefocused/fullQA/different read-onlyPASS;077onlythreegatefields,083releaseapproval separate.
+
+## 2026-10-02 - FT-RES-097 Connected-room task
+
+Final Mencius `01a0ff66-830e-7ea0-9401-54bfabbab780` cycle1 PASS/noP0-P3:57focused442full/all20Gitguards/no skips/67 independent controls/parity/state0/GSC80/SEO31URLs34HTML0-fivebaseline/whitespace/exact7delta622preserved/all629candidate627baseline hashes intact/206prioritems except077threefields/ledgerLRN106only/oldquote-corpus unchanged. No live-source/production verification/protected writes/realGitmutation; local review-clean/uncommitted/unpushed under083approval, thirdfinal/no fourth. Immutable completion only.
+
+Pre-review Master57focused442full/state0/GSC80/SEO0-fivebaseline/whitespace/parity script and exact7delta622preserved627baseline intact. Named connected count scope/unpricedCSV/source dates/206prioritems except077threefields/oldledgerLRN106only/oldquote-corpus byteparity pass. Freeze for different read-only review; no independent live-source or production claim,083holdsrelease.
+
+Collected two official named category/count screens with explicit unknown exact-task prices, age/connection/channel/layout/rest; no generic-maxima addition or firmfit. LRN106/CANDIDATE narrows077nextgate only, originalquotes/096/public preserved. NativeQA/frozen independent review pending;083releaseheld/thirdfinal/no fourth.
+
+Registered exact seven paths beforecollection, third/final01:03:56run transaction/deadline01:48:56/no fourth. Resolve096missing named-connected alternative for actualsix task through up to two official category/property bodies; preserve unknown prices/booking/age/request limits and all prior quotes/public/dirty work. Nativefull/focusedQA/different read-onlyPASS;077onlythree gate fields may update,083releaseapproval remains separate. No paid/externalmutation/newURL/deniedretry.
+
+## 2026-10-02 - FT-RES-096 Six-person corpus
+
+Final McClintock `01a0ff59-dfaa-7fd0-af4c-5e05248044ac` cycle1 PASS/noP0-P3; independent442full57focused/all20Gitguards/24adversarial/state0/GSC80/SEO0-five baseline/CSVparity/whitespace/exact7delta620 preserved205prioritems except077threefields/oldledgerLRN105 only/all625baseline627candidate hashes intact. Original quotes/records/dates and four unpriced gaps preserved; provenance/remaining-gate claims pass, no live-source/production confirmation. No protected writes/credentials/real Git mutation/release; local review-clean/uncommitted/unpushed under083approval. Immutable result only.
+
+Registered exact seven paths before collection, second01:03:56run transaction/deadline01:48:56/maxthree. Resolve077exact-category corpus with two dated prior records and up to four additional official bodies; unknown/failed capacity remains excluded, no quota/price/category substitution/controlledSERP claim. Preserve all source prices/dates/public/older dirty files; native focused/full QA/different read-only PASS required. FT-RES-083 release approval remains separate;077onlythree gate fields may update.
+
+## 2026-10-02 - FT-IMP-061 Care quote CLI entry
+
+Final Plato `01a0ff4d-270c-7422-ba1f-e39fa7ca85da` cycle1 PASS/no P0-P3. Independent17focused442full/all20Gitguards; baseline symlink defect reproduced,24 byte-equivalent exports/36 invalid-option/3quiet-import checks; state0/GSC80/SEO0-five baseline/whitespace/exact7delta618 preserved204priorrecords/all625 hashes/manifests intact. Master442full. No denials/exclusions/live QA sessions, protected writes/browser/credentials/real Git mutation/release. Final candidate `ft-imp061-review-final-HcpPLX`; immutable result, local review-clean/uncommitted/unpushed under083approval.
+
+Registered exact seven paths before edits; first transaction of 01:03:56 UTC run, deadline 01:48:56 UTC/max three. Verified symlink entry silently skips both quote output and invalid-option rejection. Native focused/full QA and separate read-only review required; all original receipts, public/dirty files and room-rule semantics preserved. FT-RES-083 approval holds commit/push; this is a tool defect fix, not renewed travel evidence.
+
+## 2026-10-02 - FT-RES-095 Family Oasis budget
+
+Final Tesla `01a0ff2a-15ae-7973-88c4-cd8b5687bf38` cycle1PASS/noP0-P3:26focused429network-free/exact11socketexcluded/all20scratchGitguards/native0/80GSC/SEO0-fivebaseline/whitespace/exact7delta618outside203prior except076threefields/oldledgeronlyLRN104/625candidate623baselinehashes+manifests preserved. Master440full. Receiptidentity/arithmetic/qualifications/remaininggates pass, no independentliveverification/protectedwrite/network/browser/credential/realGitmutation/releaseauthority. Localreview-clean/uncommitted/unpushed under083historyapproval, thirdfinal/no fourth. Immutablecompletion only.
+
+Pre-review26focused440full/native0/80GSC/SEO0-fivebaseline/whitespace/15paritychecks/exact7delta618outside203prior except076threefields/oldledgeronlyLRN104 intact. Sourcefactsoperator-attributed/notindependentlyliveverified. Different frozen read-onlyreview next;083holdsrelease, thirdfinal/no fourth.
+
+Collected CANDIDATE/LRN104 exactparty/stay/singlecategory receipts749.09/808.29interpretedUSDpackage-night; ownnewquote not084substitution. Alltax/member/levy/carebilling-slot/bedding limits retained, originalprices094capacitydate/public/exclusions preserved. Normalsteps1/3only, tab19closed/no hold/account/purchase/paid/deniedretry. NativeQA/different read-onlyreview required;083releaseheld/thirdfinal/no fourth.
+
+Exact7paths registered00:22UTC beforecollection, third/final/no fourth of00:01:59run/deadline00:46:59UTC. Reviewed094alternativecategory needs own2adult/ages2,7/Nov8-13five-night price. Anonymousnonbinding officialUI only, persistparty/stay/exactcategory; retain currency/package-night/tax/fee/terms/unknowns, no084Superior substitution. Nativefocused/fullQA/different read-onlyPASS,083historyapproval holdsrelease. No contact/account/cart/hold/save-share/purchase/paid/securitybypass/deniedretry; preservepriorwork/public/exclusions/ledgeroldbytes,076onlythreegatefields.
+
+## 2026-10-02 - FT-RES-094 alternative Cancun room
+
+Final Singer `01a0ff1e-0590-73f2-a7e0-e2188db0677d` cycle1PASS/noP0-P3:26focused429network-free11socketexcluded/all20Gitguards/20prototype/native0/80GSC/SEO0-fiveprior/whitespace/exact7delta616outside202prior except076threefields/oldledgeronlyLRN103/623candidate621baselinehashes+manifests intact. Master440full. No protectedwrites/liveverification/network/browser/credentials/realGitmutation/releaseauthority; localreview-clean/uncommitted/unpushed under083historyapproval. Originalprice/conflict preserved; immutablecompletion onlyafterPASS.
+
+Pre-review26focused440full/native0/80GSC/SEO0-fivebaseline/whitespace/9evidenceparity/exact7delta616outside202prioritems except076threefields/oldledgeronlyLRN103 intact. Sourceobservations notindependentlyliveverified; different frozen read-onlyreview next, no newprice/public/release.
+
+Collection CANDIDATE/LRN103: exact selected Family Oasis Deluxe Oceanfront max5/678.13sqft/separatechildrenroom/lounge; allfour countscreen only, babybedondemand/layoutnoncontractual/bedassignment/currentprice unknown. Original084quote/087conflict unchanged, tab18closed/no booking/paid/deniedretry. Exact7delta/nativeQA/different read-onlyreview required,083historyapproval releasehold separate.
+
+Exact7paths registered00:12UTC beforecollection, secondtransaction/maxthree/deadline00:46:59UTC. Current Superior maximum3 versusparty4 requires exact alternativecategory officialcapacity, not another unqualifiedprice. Normal permitted resort nativecarousel only; no deniedFAQ/Mini retry/account/booking/cart/purchase/paid/bypass. Preserve084pricebasis/no category substitution/public/ledgeroldbytes/exclusions. Focused/fullnativeQA/different read-onlyPASS required;083historyapproval holdsrelease, no public/newURL.
+
+## 2026-10-02 - FT-IMP-060 CLI entry identity
+
+Final Bacon `01a0ff14-feaf-72e2-992a-e420ecb5db12` cycle1 PASS/noP0-P3:11focused429network-free/exact11socket exclusions/all20scratchGitguards;36JSON36CSV99invalidCLI32quietimports/native0/80GSC/SEO0-fivebaseline/whitespace/exact7delta614outside201prioritems/621candidate621baseline hashes preserved. Master440full. Baseline defect reproduced, FT-IMP-059 P3 mechanically closed by060PASS while original verdict retained. No protected writes/network/browser/sourceverification/realGitmutation/releaseauthority; localreview-clean/uncommitted/unpushed under083historyapproval. Immutable completion only.
+
+Pre-review11focused440full/native0/80GSC/SEO0-fiveprior/whitespace/exact7delta614outside201prioritems/ledgerquotesREADMEpublic unchanged. Canonicalentry identity regressions cover file/directory/relative/canonical JSONCSV/invalidflags plusquiet libraryimports. Different frozen read-onlyPASS next, no source/public/release.
+
+Exact7paths registered00:03UTC/October2Eastern beforeedits, firstofmaxthree actual00:01:59run/deadline00:46:59UTC.059independentP3 symlinkabsoluteentry exits0empty; canonicalizeentryandregress aliasfile/directory/relative/importnoargv sideeffects. Full/focusednativeQA/different read-onlyPASS; keep allsourceprices/CSV/freshness/public/ledger/README/elevenexclusions/otherCLIs intact. Freshfetch one/one083historyapproval stillpending, no commit/push/sourcecollection/network.
+
+## 2026-10-02 - FT-RES-093 Cabana separate fees
+
+Final Feynman `01a0fef3-62b6-7052-ad59-ea6668329692` cycle1PASS/noP0-P3:20independentfocused427network-free11socketexcluded(all20Gitguards)/state0/80GSC/SEO31URLs34HTML0-fivebaseline/whitespace/exact7delta614outside200prioritems/oldledgeronlyLRN102/621candidate619baselinehashes intact. Master438full. Reviewer no live/network/browser/realGitmutation/sourceverification/releaseauthority. Localreview-clean/uncommitted/unpushed under083historyapproval; no public/defaultmodel/quote renewal. Immutable results only afterPASS; third/final complete locally, no fourth.
+
+Pre-review20focused/438full/state0/80GSC/SEO31URLs34HTML0-fiveprior/whitespace/exact7delta614outside200priorrecords/oldledgerinsertion-only/091quote059tool/public preservation pass. Different frozen read-onlyreview required, sourcecollectionoperator-attributed; no new quote/public/release. Third/final/no fourth.
+
+Two ordinaryofficialbody observations complete, narrow parkingfrequency/general-versus-plan cancellation limits retained inJSON/MD/LRN102. Reject five-night130multiplication, no allfee/zeroresortfee/freemeal/planrefundability claim. Original091quote/059tool/priorpublic unchanged, tab17closed/no paid/contact/account/booking/bypass. Nativefocused/fullQA then different read-onlyreview,083releaseheld/no fourth.
+
+Exact7paths registered23:24UTCbeforecollection, third/finalaction.091same-stay room-taxquote has missingcurrentparking/extras. Known officialLoews hotel/services bodyaudit; source-date/unit/tax/fee/inclusion/nullcontext and conditionalone-car illustration only, no allfeequote/doublecount/priorrenewal. Nativefocused/fullQA/different read-onlyPASS required;083historyapproval holds release. No account/contact/booking/cart/hold/purchase/paid/deniedretry/bypass/publicedit.059review-clean and allpriorwork preserved; no fourth.
+
+## 2026-10-02 - FT-IMP-059 hotel quote export
+
+Final Noether `01a0fee7-84ab-7911-8bc5-348466c1f1a2` cycle1PASS_WITH_P3/noP0-P2:9focused/427network-free11socketexcluded(all20Gitguards)/5adversarial747API11option11canonicalCLI24CSV/zeroaccessorproxytraps/state0/80GSC/SEO0-fivebaseline/619candidate616baselinehashes/exact8delta611outside199priorrecords/091sourcepack-ledger-READMEoldbytes intact. Master438full. P3 at toolentryguard: absolute symlinked /tmp CLI may exit0empty onmacOS; repository-relative invocation passes, normalize entrypath/add regression in next maintenance. Source not independentlyliveverified, no public/defaultintegration/commit/push;083hold remains. Immutable completion only.
+
+Pre-review9focused/438full/state0/80GSC/SEO31URLs34HTML0-fivebaseline/whitespace/exact8delta611outside199prioritems/READMEoldbytes/091pack-ledger-public preservation green. Proxy/accessor/hidden/sparse/arithmetic/context/CSV/CLI/aging regression checks pass; separatefrozen read-onlyreview required. No source/publicdelivery/commit/push claimed.
+
+Exact8paths registered23:09UTCbefore edits, secondtransaction.091reviewed count-only datedsuiteprice cannot feed reusablecomparison yet. Offline strictsource-record validator and original-task plan JSON/CSV with completeprice/currency/party/stay/source/fee/terms/nullcontext, explicitaging/no renewal. Focused/fullnativeQA/different read-onlyPASS required; no public/defaultmodel/network/paid/repricing/ledgerchange.083historyapproval holds commit/push; preserve allpriorwork/elevenexclusions.
+
+## 2026-10-02 - FT-RES-092 Disney suite price
+
+Final Heisenberg `01a0fedc-bce9-75c2-afdf-7f6ce0a33cab` cycle1HOLD-RECORD PASS/noP0-P3:12focused/418network-free11socketexcluded(all20scratchGitguards)/state0/80GSC/SEO0-fivebaseline/exact4delta/612outsidefiles/198prioritems/ledgerunchanged/616hashes preserved. Master429full. No live/source/price/learning/publicsuccess or releaseauthority; immutable completion only. Sourcehold and083historyapproval remain distinct; continueeligibleoffline work withinrunlimits.
+
+Normalofficialbrowser `createBrowserTab` targetroomURL returnedERR_BLOCKED_BY_CLIENT/tab16; stopped/no unchangedretry/alternatebrowser-origin-tool/securitychange. Exact sourcegate owner normaluser/appaccess, unblock actualpermitted officialpageaccess. No price/sourcefact/ledgerunit/researchfiles; actualfourstate delta, nativeQA/read-only holdreview required.083historyapproval separate, independent091offline normalization remains possible.
+
+Exact7paths registeredbefore collection, actual23:00:28run firstaction/deadline23:45:28/maxthree. MissingexistingNemo-suite budget,2adultages4/8/12/15Nov8-13five nights. Normalanonymous officialUI only, source-backed roughnightly/context/nulls; no cart/hold/member/purchase/contact/paid/bypass/retry. Priorprices/public/source dates/11exclusions/scheduler/spend preserved. Full/focusednativeQA/different read-onlyPASS;083historyapproval holds allcommit/push.
+
+## 2026-10-02 - FT-RES-091 Cabana family suite price
+
+Final Meitner `01a0fec1-fac9-7883-bd72-90669d88ba35` cycle1PASS/noP0-P3:418network-free11socketexcluded including20scratchGitguards/19independentfocused/state0/80GSC/SEO31URLs34HTML0-fivebaseline/616manifesthashes/exact7delta/609outsidefiles/197prioritems/oldledgeronlyLRN101 preserved. Master429full/native/focused parity pass. Reviewer no source/network/browser/realGitmutation or release authority; price evidence operator-attributed, localreview-clean/uncommitted/unpushed under083historyapproval. No publicdelivery/fourthaction; immutable completion only afterPASS.
+
+Collected price/context evidence andLRN101, exact7delta. Public details persist named suite/count-only sixpersons/Nov8-13five nights;181.20/258.80pre-taxroom-night,203.85/291.15withdisplayedtax; unshown currencyISO/individualages/cancellation/parking-currentfees/finaltotal explicitunknown. No cart/hold/purchase/public renewal. Focused/fullnativeQA then frozen different read-onlyreview,083releaseheld, no fourth.
+
+Exact7paths registered22:26UTCbefore officialanonymous UI collection, third/final runaction. Named existingpagePoolsideFamilySuiteExteriorEntry missingprice,2adultages4,8,12,15Nov8-13five nights. No account/member/cart/hold/purchase/contact/paid/deniedretry; retain allsource-budget-terms/nullcontext. Focused/fullnativeQA/different read-onlyPASS, no public/source renewal;083releaseheld, no fourth.
+
+## 2026-10-02 - FT-RES-090 Ziva nightly price
+
+Final Zeno `01a0feb4-fb2b-7463-9190-70290b59ebf6` cycle1HOLD-RECORD PASS/noP0-P3:12focused/418network-free11excluded/all20scratchGitguards/state0/80GSC/SEO0-fivebaseline/exact4/610outsidefiles/196priorrecords/614hashes/ledger-prices-public preserved. Master429full. No price success/newfacts/learning/live-sourceverification/releaseauthority; sourceheld/notshipped,083historyapproval distinct. Immutable results only afterPASS.
+
+Pre-review429full/native/state0/80GSC/SEO0-fiveprior/whitespace/610outsidefourstate files/196priorroadmap records/ledger parity pass. No researchpricefiles/fakefacts/learningunit. Separate frozen read-onlyreview next, sourceheld/releaseheld distinct.
+
+Collectionheld before form/rate: anonymous official tab13 AXempty/screenshotwhite/DOMempty/logs[], no navigation/securityerror. Tabclosed/no reload/alternatefetch/bypass. No newfacts/quote/ledger unit/researchfiles; actualfourstate delta withinregisteredseven. Priorpublic/prices/ledger preserved. NativeQA/read-onlyreview for holdrecord, independently eligible Cabana lane remains possible;083releasehold unchanged.
+
+Exact7paths registered22:18UTC before normal anonymous official UI availability check, second transaction. Named missing existing-page budget field/2adultages2,7/Nov8-13OceanViewDouble target, no member/account/cart/hold/purchase/contact/paidcall/deniedretry. Retain exactobservations/context/nulls, focused/fullQA/different read-onlyPASS; all priorpublic/price/source/exclusions preserved,083releaseheld.
+
+## 2026-10-02 - FT-RES-089 return mode sensitivity
+
+Final Carver `01a0fead-3345-7f60-bbf0-db395f140b49` cycle1PASS/noP0-P3:418network-free11socketexcluded(all20scratchGitguards included)/110focused/8independent evidenceparity/native/state0/80GSC/SEO31URLs34HTML0-fiveprior/exact7delta/607outsidefiles/195priorrecords except077twofields/oldledger-prices/614hashes+rawinput preserved. Master429full/293focused. No network/live/realGitmutation/publicrelease authority; review-clean local/uncommitted/unpushed,083hold. Immutable outputs only afterPASS.
+
+Pre-review429full/293focused/native/state0/80GSC/SEO0-fiveprior/whitespace/exact7/607outsidebaselinefiles/rawresponse-price-oldledger-priorroadmap parity pass. Atomic failedcompact-line patch did not write any source files; corrected patch nowmatches. Different frozen read-onlyreview required, no public/release.
+
+Collection complete four200/currentsame-time controls, narrow bus20minute hypothesis rejected, source times/selected and alternate durations/earliestarrival retained. Original exactparty/nightlyfees/terms/source context preserved, raw adultfare not family/cap estimate. Exact7candidate/LRN100 requiresfocused/fullnativeQA/different read-onlyPASS, no public/release.
+
+Exact7paths registered before collection22:04UTCfirst actualrun action, named077/082missingbus mode versus20minute rest proxy; four max documented read-only publicAPI requests, no retry/credential/paidcall/route assurance. Original room/transport evidence dates/budgets/public/exclusions preserved; focused/fullnativeQA/different read-onlyPASS, release083held.
+
+## 2026-10-02 - FT-RES-088 external levy basis
+
+Final Mendel `01a0fe98-cb5d-75a0-88a6-f564f52d7bda` cycle1PASS/noP0-P3:418network-free11socketexcluded(all20scratchGitguardtests included)/147focusednative/9independent evidence-parity-privacy/native/state0/80GSC/SEO31URLs34HTML0-fiveprior/612hashes/exact7delta/605outsidebaselinefiles/194prioritems preserved except076threegatefields/oldledgeronlyLRN099insertion. Master429full/257focused. No independentlive/production/network/browser/paid/realGitmutation; sourcesoperator-attributed. Review-clean local/uncommitted/unpushed,083approval releasehold. Third/final completed, no fourth; immutable outputs only afterPASS.
+
+Pre-review Master429full/257focused/native/state0/80GSC/SEO0-fiveprior/whitespace/exact7 preservation605baselinefiles/priorroadmap-oldledger pass. Initial ad-hoc check overmatched editorial-use wording; corrected check retains all shared numeric/context parity. No source/tool/public modification from check, different independent frozen read-onlyreview next.
+
+Source pack/LRN099 complete locally: direct currentFAQ child-scope distinction, no current rate/frequency, provisional municipal searchbody explicitly not directverification after400sizefailure. All taskliability/identity/inclusion/total unknown, no currency/283multiplication. Exact7candidate requires focused/fullnativeQA/read-onlyPASS, original prices/source dates/public preserved; no release/fourthaction.
+
+Exact7paths registered21:41UTCbeforecollection, third/final action. Primarygovernment identity/eligibility/age/unit/datedamount audit for084warning, no assumed nationality/residency/fullliability or price renewal. Focused/fullQA/different read-onlyPASS; originalquote/087058/prices/public/exclusions preserved, releasehistoryheld.
+
+## 2026-10-02 - FT-IMP-058 capacity conflict quote join
+
+Final Copernicus `01a0fe8b-3d28-72f0-8b60-66172b339fc1` cycle1PASS/noP0-P3:15focused/418network-free11socketexcluded/6adversarial394API12CLIrejectionszeroaccessorproxytraps10CSVparityrows/native/state0/80GSC/SEO0-fiveprior/whitespace/exact9delta/193prioritems/610candidate609baselinehashes unchanged. Master429full. Source retained087, no live/newcollection/paid/browser/public/realGitmutation. Review-clean local/uncommitted/unpushed under083historyapproval; immutable completion only afterPASS.
+
+Local implementation15focused pass: conflict/unverified/within-count controls, twoCSV rows fullrule/receipt/parity, independent aging, strict identity/single-room/date/max/unknown/getter/hidden/proxy rejections and CLI parity. FullnativeQA and different read-onlyreview next;087/priorquotes/ledger/public/exclusions unchanged, releasehistoryheld.
+
+Exact9paths registered21:31UTCbeforeedits, second transaction.087source-derived rule joins056quote exports without receipt rewrite or bookingacceptance claim. Wrong identity/multiroom/unsafe fields reject, no-ruleexplicitunchecked. Focused/fullnativeQA/different read-onlyPASS required; originalprice/source/ledger/public/exclusions preserved, no release whilediverged.
+
+## 2026-10-02 - FT-RES-087 quoted room and care basis
+
+Final Ohm `01a0fe82-3026-7b63-9198-3d5efc90c394` cycle1PASS/noP0-P3:79focused/393eligible tools (11socket+19temporaryGit-mutating excluded)/state0/80GSC/freshness/SEO0-fiveprior/609candidate607baseline unchanged hashes/exact7delta/191prioritems preserved. Master423full pass, independent live/423full not claimed. Local review-clean/uncommitted/unpushed under083historyhold; only immutable completion appended.
+
+Current official exactcategory capacity/care-unit conflict retained without definitive rejection or infant exception;087source pack/LRN098/076gate updated within7paths. Original084receipt/prices/public preserved. Native focused/full QA then separate frozen read-only review, release history-held.
+
+Exact7paths registered before collection21:18UTC; first transaction of21:13:59actualrun. Named084sleeping/temporal-care unknowns, no price/source renewal or publicedit. Full/focused nativeQA and different independent read-onlyreview required. Prior dirtywork preserved;083historyapproval holds commit/push separately.
+
+## 2026-10-02 - FT-IMP-057 paid research manifest snapshot
+
+Final Planck `01a0fe6a-c5c7-7820-893c-b0387e7c15d4` cycle2PASS/noP0-P3, P2closed. Independent10focused/412network-free11socketexcluded/prior5adversarial74invalid10legacy/16extraentrypointproxyrejections-zero-traps-outputs-fetch/native/state0/80GSC/freshness0expired/SEO0-fiveprior/607hashes/exact8delta/599baselinefiles/191priorrecords and README/ledger/quotes/public/exclusions preserved. Master423full; bothdatedreserves unchanged. No actualAPI/paid/provider/browser/production/socket verification; no commit/push. Local implementation review-clean with083historyhold, third/final transaction; immutable outputs only afterPASS.
+
+Cycle2Master10focused/423full/native/state0/80snapshots/SEO0-fiveprior/whitespace green. Nativeutilproxy rejection beforetraps and pinned ownarraylength closes demonstrated bounds route; updated frozen exact8candidate to same independent read-only re-review. No paidcalls/fourthaction/public/historymutation.
+
+Planck `01a0fe6a-c5c7-7820-893c-b0387e7c15d4` cycle1FAIL/oneP2 at taskStrings(): repeated callercontrolledlength permitted13SERPs/201keywords. Reject proxies beforetraps/pinactualownlength; validator/runBatch/no-output/no-fetch regressions added. Independent9focused/411network-free11excluded/74invalidfixtures/10legacy/native/607hashes/exact8delta/191prioritems preserved. No otherfindings; cycle2QA/reviewrequired, no paidcalls/public/release.
+
+Master9focused/422full/native/state0/80snapshots/SEO0-fiveprior/whitespace pass; valid dated manifests identical reservation. Localmock regressions cover dense own-data/duplicate rejection/no output-fetched effects and asynchronous caller mutation. Different exact8frozen read-onlyreview required; priorresearch/ledger/public/quotes/exclusions/spend intact, no actualAPIcall.
+
+Exact8paths registered20:57UTCthird/final action. Mock-only proof: duplicate/sparse manifests accepted, caller mutation widened futureSERPtasks afteroverview. Tighten dense owned-data/duplicate validation and pin approved budget/task arrays beforeasync; validcollection/output/no-retry semantics preserved. Fullnative/focused/different read-onlyPASS required; prior086085/price/ledger/public/exclusions intact, no paidcalls or release whilediverged.
+
+## 2026-10-02 - FT-RES-086 controlled toddler-care search ownership
+
+Final Curie `01a0fe63-3406-79f1-b7e7-cec8350fa6e4` cycle1PASS/noP0-P3. Independent6collector/408network-free11excluded/native/606hashes/exact8delta/190priorrecords/preservation/privacy/cost/source-limit/whitespace pass. Master419full. No independentlive/API/browser/production/socket verification;1/1divergence confirmed read-only. Review-clean local partial-batch research/learning only, uncommitted/unpushed; no newURL/full076claim. Immutable result only afterPASS.
+
+Collection stopped truthfully after overview success/firstSERP40101failure; known0.01448cost/cumulative0.19444, no retry or missing-overlap-as-zero. Source-coded diagnosis and representativebody audit retained, no current rank/authenticity/firsthand/safety claim. PRESERVE existingowner/CANDIDATE076, LRN097; original quotes/source dates and085/public/exclusions unchanged. Focused/full native QA/different read-onlyreview next; release divergence held.
+
+Exact8paths registered before calls20:46UTC, second sequential action. ExistingUSD5research authority/prior0.17996/batch0.50 guarded, eightmetrics/four controlledUSdesktopSERPs with no retries; ownership/materiality/representative task evidence, not another price audit or newURL. Focused/full native QA/different read-onlyPASS required; prior085/price/public/exclusions unchanged, release divergence held.
+
+## 2026-10-02 - FT-RES-085 category review/conflict gate
+
+Final Anscombe `01a0fe59-753c-73c3-8dbc-c6156a344367` cycle1PASS/noP0-P3. Independent79focused/408network-free11socketexcluded/state0/80snapshots/SEO0-fiveprior/603hashes/exact8delta/189prioritems/packs/prices/ledger/055056084/public/11exclusions preserved. Master419full/79focused pass. No independent live/browser/production/socket verification; existing1/1divergence confirmed read-only. Local review-clean uncommitted/unpushed; no full077corpus or public claim. Immutable outputs only afterPASS.
+
+Collection complete in exact8scope: four body-inspected qualitative records, third-party hosting versus partner collection/provider repeat and stale/unknown category fields separated; no copied bodies/identities/public or budget edits. CANDIDATE/remaining corpus not complete, LRN096. Native focused/full QA and different frozen read-only review next; existing divergence holds commit/push.
+
+Exact8research/ledger/state/needs-user paths registered before collection, first action of20:27:51actualrun with21:12:51new-start deadline. Bounded independent QueenStreet/Limehouse two-bedroom bedding/rest review evidence, attribution/date/conflict unknowns and preserved comparable nightly budgets. Different read-onlyPASS/full native QA required; no public/newsource-date-renewal/booking/representativeness or full077claim. Prior055/056/084material and11exclusions preserved; release history approval still pending, no newcommit/push.
+
+## 2026-10-02 - FT-IMP-056 dated quote adapter
+
+Final Dalton `01a0fe42-37dd-7d92-840a-a7c03be02677` cycle2PASS/noP0-P3. PriorP2 closed in dense()/fields(). Independent9/9focused,62/62combined,408/408network-free11socketexcluded,345hidden-property rejections,36parsedCSVparity and8formula-prefix probes pass; state0/80snapshots/SEO0-fiveprior/whitespace.601hashes+manifest/exact8delta/188priorroadmap/README prior bytes/inventory/084receipt-ledger/public/exclusions intact. Master419full. No source live verification or release authority; local review-clean uncommitted/unpushed with same divergence hold. Third/final transaction, actual20:25:37past startdeadline, no fourth. Mechanical immutable result only.
+
+Cycle2Master9focused/62combined/419workingfull/native/state0/80snapshots/SEO0-fiveprior/whitespace green; descriptor correction prevents loss before structuredClone, all normal JSON/CSV preserved. Same independent reviewer receives updated exact8frozen candidate; no review PASS presumed or source/public/history mutation.
+
+Dalton cycle1FAIL/oneP2 at dense()/fields(): non-enumerable room.category, child/care index accepted then disappeared during cloning. Correct enumerable data descriptor requirement and seven nested object/array regression families across validator/JSON/CSV; cycle2review required. Independent8focused/61combined/407network-free11excluded/state0/80snapshots/SEO0-fiveprior/601hashes/exact8delta/188priorrecords and all exclusion/receipt/inventory bytes preserved. No review approval or release; no other findings reported.
+
+Master8focusedquote/61combinedcare-room/418full/native/state0/80snapshots/SEO31URL34HTML0errors-fiveprior/whitespace pass. Prior11exclusionhashes/9material paths/README prior bytes/188roadmap records preserved; all084receipt/ledger and055material except own newREADMEline intact. Strict fields/arrays/no getter-toJSON/cent safety/fullCSVreceipt/null/date/arithmetic regressions. Different frozen read-only review pending; no commit/push or new source/public claim.
+
+Exact8paths registered before20:10:56new-start deadline as third/final action. Separate read-only084BOOKING_CHECK schema and JSON/CSV retains original task/budget/unknowns; does not weaken053unknown-fee inventory or repurpose quotes. Native focused/full QA and different read-only review gate local cleanliness; all commit/push remains divergence-held. No new learning/source/public claim.
+
+## 2026-10-02 - FT-RES-084 public room/care quote
+
+Harvey `01a0fe36-6cdf-7723-988e-eec437a00864` cycle1PASS/noP0-P3. Independent399/399network-free native,70/70focusedcare-room,20/20guard,2868evidence-preservation assertions/state0/80snapshots/localSEO31URLs34HTML0errors-fiveprior/whitespace. Eleven socket tests excluded, Master410operator-reported. Exact7delta/598candidatehashes+manifest/baseline unchanged,186unrelatedroadmap preserved,055fourmaterial/083material/11exclusions intact. Source UI operator-attributed, not independently live verified. Local uncommitted/unpushed result under existing divergence hold; no production/public/full076completion. Immutable outputs only afterPASS.
+
+Master410full/focused date-party-discount-delta-nightly-null-currency/native/state0/80snapshots/SEO31URL34HTML0errors-fiveprior/whitespace pass. Frozen exact7delta/598files/186unrelatedroadmap parity established; source UI observations operator-attributed. Different independent read-only review next; no release.
+
+Operator collection complete: exactparty5nights/SuperiorRoom/2638.91beforecare/2934.91afterPetit296selection, membership180notdoublecounted, separate283MXN/person unknown liability; care duration/minimum/slots null, currency interpretation explicit. JSON/MD/LRN095/076remaining gates updated, no public claim or prior source/price renewal. Focused/full QA and frozen different read-only review pending. Existing divergence holds new commit/push;055reviewed material and eleven exclusions preserved.
+
+Seven paths registered before collection, second sequential transaction. Exact2adult/ages2,7/Nov8-13hotel-only public quote and separate Petit fee/unit/minimum check; source denial stops, no account/purchase/contact/paid or personal data. Record only supported dated result/nulls; full native QA and different independent read-only review required, release remains divergence-held. Prior055cycle2PASS/410operatorfull preserved.
+
+## 2026-10-02 - FT-IMP-055 Git release guard
+
+Final cycle2ArendtPASS/noP0-P3, bothP2closed. Independent20focused/399network-free11excluded/8fixtures87rejections6positivecontrols/threeGitlayouts/native/state0/80snapshots/SEO0-fiveprior/whitespace;596hashes+manifest/exact8delta/588baselinefiles/186prioritems unchanged. Master410full pass. Local review cleanliness only; tool uncommitted/unpushed under existing history-reconciliation hold. No original/snapshot/network edit by reviewer and no production/source/push claim; immutable results only.
+
+Cycle2operator20focused/410workingfull/native/state0/80snapshotfiles/localSEO0-fiveprior/whitespace green. Explicit active marker checks before graph/count scope, graft and environment refusal; new resolved-merge, all-operation and graft-bypass regressions. Exact8updated frozen candidate to independent re-review, no release.
+
+Cycle1ArendtFAIL/twoP2/noP0-P1-P3: resolved merge/cherry-pick/revert operations passed precommit; legacy graft could hide side commit/merge parent. Master adds explicit active-marker/graft rejection and regressions; frozen cycle2review required. Independent17focused/396network-free11excluded/seven extra fixtures/state0/80snapshots/SEO0-fiveprior/596hashes/8delta588baseline-identical/186prioritems unchanged. No production or release claim.
+
+Operator pre-review:17focused/407workingfull pass; state0/80snapshotfiles/localSEO31URLs34HTML0errors-fiveprior/whitespace pass. Three real-repository phase checks reject1local/1remote without status mutation. Exact eight paths require different frozen read-only reviewer; no new commit/push or claim of atomic protection/release authority.
+
+Eight paths registered before implementation. Read-only branch/pin/scope/content/outgoing-range gate addresses reproduced083sequencing defect; temporary Git-repository regressions, focused/full native QA and different independent read-only review required. No release or history mutation while current one/one divergence remains; prior material and eleven exclusions preserved. No new daily-learning claim.
+
 ## 2026-10-02 - FT-RES-083 care inclusion/billing
+
+Immutable release outcome: exact nine reviewed paths committed locally at `028cfc1a46c7477203c15ae84b2ee9a9f82bc0f8`, not pushed. Final fetch returned an incoming GSC-only commit; operator sequencing error continued committing before resolving behind state. One local/one remote divergence with `6fec783d577f3f02c7b3eddcecac3658ea4b3be4`; no rebase/reset/force/unattended merge. Preserve PASS/material bytes and exclusions; history reconciliation requires explicit approval before release resumes. Incoming snapshot passes public-safe validator via read-only Git-object validation, but remains outside checkout. Mechanical hold backfill only, no product judgment or new review cycle.
 
 Fermat `01a0fd65-465f-75a3-97a6-a1551df50363` cycle1PASS/noP0-P3:13carefocused/378network-free(11sockettests excluded)/1058scopedassertions/state0/80snapshots/localSEO31URLs34HTML0errors-fiveunchangedwarnings;590baseline592candidatehashes unchanged/183unrelatedroadmap identical. Mini inclusion separate from numerical fees/admission/parentpolicy; other3properties/prior sources/Petit/budgets preserved. Sources/push provenance operator-attributed, not independently live verified. Operator390full/native green. Exact9review-clean tools/docs-only push; no completequote/public/full076authority. Existing second action only; actual clock past start deadline.
 

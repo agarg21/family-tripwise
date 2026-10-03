@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-093",
+  "learning_id": "LRN-102",
+  "observed_on": "2026-10-02",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "property": "Universal Cabana Bay Beach Resort",
+  "collection": "Normal anonymous official browser tab17. Hotel Useful Information and Terms + Conditions expanded, then visible services link followed and Other Services plus recreation sections expanded. No booking, account, contact, purchase or paid call. Temporary tab closed.",
+  "sources": [
+    {
+      "id": "CB1",
+      "url": "https://www.loewshotels.com/cabana-bay-hotel",
+      "publication_date": null,
+      "effective_date": null,
+      "scope": "General hotel Useful Information; not original rate-plan checkout conditions"
+    },
+    {
+      "id": "CB2",
+      "url": "https://www.loewshotels.com/cabana-bay-hotel/discover/services-amenities",
+      "publication_date": null,
+      "effective_date": null,
+      "scope": "General service and optional recreation charges; not dated availability or an operating guarantee"
+    }
+  ],
+  "currency": {
+    "displayed_symbol": "$",
+    "code_interpretation": "USD",
+    "explicit_iso_code_observed": false,
+    "basis": "US Orlando property and dollar amounts; editorial interpretation, no conversion"
+  },
+  "parking": {
+    "source_ref": "CB1",
+    "section": "Overnight Guest Parking",
+    "type": "Self-parking",
+    "amount": 26,
+    "unit_displayed": "per vehicle",
+    "tax_treatment": "Plus tax",
+    "tax_amount": null,
+    "explicit_billing_frequency": null,
+    "subject_to_change": true,
+    "quote_inclusion": null,
+    "task_vehicle_count": null,
+    "conditional_one_vehicle_five_night_total": null,
+    "limitation": "Overnight section does not explicitly say per night in the inspected current text. Do not multiply by five or renew the older per-night interpretation."
+  },
+  "general_policy": {
+    "source_ref": "CB1",
+    "extra_adult_charge": { "amount": 20, "trigger": "More than two adult guests per room", "explicit_billing_frequency": null, "adult_age_definition": null, "application_to_original_quote": null },
+    "standard_cancellation": {
+      "six_or_more_days_before_arrival": "Full refund in the general policy",
+      "zero_to_five_days_before_arrival": "One room night plus tax in the general policy",
+      "early_checkout": "Deposit forfeiture noted",
+      "cutoff_time_and_timezone": null,
+      "night_used_for_penalty": null,
+      "applicability_to_091_plans": null,
+      "limitation": "Do not overwrite original plan-specific unknown deposit/cancellation terms or infer Flexible Rate refundability."
+    },
+    "late_checkout": { "additional_charge": true, "amount": null }
+  },
+  "optional_services": {
+    "source_ref": "CB2",
+    "parcel_handling": { "amount": 5, "unit": "per received package through Luggage Service", "tax_treatment": null, "groceries_and_perishable_mail_accepted": false },
+    "poolside_cabana": { "rental_basis": "Daily", "amount": null, "tax_treatment": null },
+    "lazy_river_tubes": { "purchase_described": true, "amount": null, "required_purchase": null },
+    "limitation": "Optional services are not assumed family selections, room inclusions, or confirmed November operations. No linked rental PDF, reservation or vendor contact opened."
+  },
+  "unresolved_budget": {
+    "resort_fee": null,
+    "meals_or_breakfast_included_in_091_plans": null,
+    "parking_billing_frequency": null,
+    "parking_tax_and_original_quote_inclusion": null,
+    "plan_specific_cancellation_and_deposit": null,
+    "complete_all_fee_total": null,
+    "basis": "No explicit answers in these inspected sections. Absence is not a zero fee, free meals, or refundable rate."
+  },
+  "retained_quote": {
+    "record": "docs/research/orlando-cabana-family-price-2026-10-02.json",
+    "original_action": "FT-RES-091",
+    "observed_on": "2026-10-02",
+    "category": "Poolside Family Suite Exterior Entry",
+    "task_basis": "One suite, two adults and four count-only children; requested ages4/8/12/15 not individually confirmed; November8-13,2026, five nights",
+    "price_use": "Preserve original separate nightly pre-tax/with-displayed-tax plans and room-tax stay totals, interpreted USD and all unknown extras. No price, party, terms or source-date rewrite."
+  },
+  "result": {
+    "decision": "CANDIDATE; reject a verified130plus-tax five-night parking add-on or applying general refund policy to the two quoted plans",
+    "confidence": "High in narrowly inspected wording; unknown billing repetition, tax, plan applicability, final budget, availability and user/SEO impact",
+    "source_recheck_due": "2026-10-09",
+    "next_gate": "Explicit parking billing frequency/tax/quote inclusion and original-plan conditions; current resort fee and meal inclusion before complete-budget comparison; separately reviewed public integration after083history approval",
+    "trigger": "Current dated frequency/inclusion or plan-specific terms evidence, changed charge, or October9source recheck",
+    "release_state": "local-review-pending-uncommitted-unpushed"
+  },
+  "preservation": {
+    "original_quote_changed": false,
+    "old_model_source_dates_renewed": false,
+    "public_changed": false,
+    "paid_api_calls": 0,
+    "security_denials_retried": false,
+    "limits": "No checkout total, seasonal range, currency conversion, personal suitability, safety or operational assurance. Existing Disney/Ziva access holds untouched; Git history approval remains separate."
+  }
+}

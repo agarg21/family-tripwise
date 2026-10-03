@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-095",
+  "learning_id": "LRN-104",
+  "observed_on": "2026-10-02",
+  "observed_at_utc": "2026-10-03T00:25:02Z",
+  "evidence_class": "BOOKING_CHECK",
+  "source": {
+    "property_url": "https://www.clubmed.us/r/cancun/y",
+    "booking_url": "https://www.clubmed.us/booking/accommodation",
+    "care_url": "https://www.clubmed.us/booking/services",
+    "publication_date": null,
+    "method": "Anonymous official native date/party input, alternative-room filter and single-room selection, accommodation and care receipts at steps1/3of7; operator-observed, not independently live replayed",
+    "privacy": "Synthetic age representatives only; no real family data, account, proposal/session IDs, raw URLs, saved/shared quote, option hold or reservation retained/submitted"
+  },
+  "task": {
+    "adults": 2,
+    "child_ages": [2, 7],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "requested_care_breaks": 3,
+    "minutes_per_break": 90,
+    "simultaneous_daytime_care_required": true,
+    "flights_selected": false,
+    "transfer_selected": false,
+    "party_confirmation": "Both exact-category receipts persist2adults/2children and Nov8-13five nights; native date fields retained synthetic ages2/7 before search",
+    "age_input_method": "Synthetic January1 representatives in years2024/2019; native ISO date input verified, not real birthdates"
+  },
+  "room": {
+    "property": "Club Med Cancun",
+    "category": "Family Oasis, Deluxe Room - Oceanfront",
+    "room_count": 1,
+    "room_count_basis": "Selected single-room offer, not neighboring two-room proposals or final booking acceptance",
+    "area_sq_ft": 678.13,
+    "published_features": ["Furnished balcony", "Lounge area", "Sea View", "Separate children's bedroom described"],
+    "baby_bed": "on demand; availability unconfirmed",
+    "sleeping_assignment": null,
+    "final_party_acceptance": null,
+    "availability_display": "Available at observation, not future availability guarantee",
+    "capacity_record": "docs/research/cancun-alternative-room-capacity-2026-10-02.json",
+    "capacity_use": "094published maximum5 permits allfour countscreen only; no age/bedding/booking assurance or renewed source date"
+  },
+  "price_basis": {
+    "displayed_currency_symbol": "$",
+    "currency": "USD",
+    "currency_evidence": "US storefront interpretation; explicit ISO USD not visible in inspected receipt",
+    "unit": "Whole-party single-room five-night all-inclusive package; per-night equivalent, not pure room rate or seasonal range",
+    "rate_terms": "Selected Non-refundable rate - No cancellations; no cancellations or modifications allowed displayed",
+    "membership_fee_displayed": 180,
+    "membership_fee_treatment": "Displayed receipt line already inside total; do not add again",
+    "tax_fee_statement": "Taxes and fees included displayed with separate provider green-tax warning",
+    "included_services": ["Full board with drinks", "Open bar and all-day snacks", "Sports and activities options", "Day and night entertainment", "Wi-Fi", "One Mini Club Med+ selection"],
+    "before_care": {
+      "initial_strikethrough_total": 7516.28,
+      "displayed_discounts": [3374.68, 396.15],
+      "stay_total": 3745.45,
+      "derived_package_per_night": 749.09,
+      "care_selection": "One Mini Club Med+ included; Petit not selected"
+    },
+    "after_selected_care": {
+      "initial_strikethrough_total": 7812.28,
+      "displayed_discounts": [3374.68, 396.15],
+      "stay_total": 4041.45,
+      "derived_package_per_night": 808.29,
+      "additional_care_selection": 296,
+      "receipt_selection": "One Mini Club Med+ and one Petit Club Med"
+    },
+    "external_levy": {
+      "provider_label": "Green tax",
+      "currency": "MXN",
+      "amount_per_person_displayed": 283,
+      "payment_channel_displayed": "Local government website",
+      "charge_identity": null,
+      "applicable_person_count": null,
+      "age_exemptions": null,
+      "temporal_unit": null,
+      "total": null,
+      "interpretation": "Provider warning only, not independently verified legal liability/current rate; not multiplied or converted into displayed dollar receipt"
+    },
+    "complete_all_currency_mandatory_total": null,
+    "optional_roundtrip_transfer_displayed": 112,
+    "transfer_treatment": "Not selected; excluded from both totals, no route/time/car-seat assurance",
+    "unselected_flexible_plan": "An upgrade was displayed but not selected or fully priced; not a verified alternative quote or free-cancellation assurance",
+    "rounded_upgrade_badge_used_for_arithmetic": false
+  },
+  "care": {
+    "petit": {
+      "task_child_age": 2,
+      "published_age_band": [2, 3],
+      "selected_amount": 296,
+      "displayed_unit": "per person",
+      "temporal_billing_unit": null,
+      "minimum_package": null,
+      "billable_days": null,
+      "prorated_90_minute_price": null,
+      "three_breaks_confirmed": null,
+      "admission_training_parent_presence": null,
+      "slots": "Limited places/advance booking indicated; specific slots unconfirmed",
+      "indicative_hours": "08:45-17:30 and19:30-21:00; Saturday closed"
+    },
+    "mini": {
+      "task_child_age": 7,
+      "published_age_band": [4, 10],
+      "selected_additional_charge": 0,
+      "charge_basis": "Included receipt selection only, not admission or requested-slot confirmation",
+      "three_breaks_confirmed": null,
+      "indicative_hours": "08:45-17:30 and19:00-21:00; Saturday closed"
+    }
+  },
+  "preservation": {
+    "original_superior_quote": "docs/research/cancun-room-care-quote-2026-10-02.json",
+    "original_superior_capacity_conflict": "docs/research/cancun-quoted-room-care-basis-2026-10-02.json",
+    "original_prices_and_dates_unchanged": true,
+    "original_prices_transferred": false,
+    "public_or_model_integration": false
+  },
+  "result": {
+    "decision": "CANDIDATE: alternative exact-category/count-compatible same-party datedpackage/night and selected-care subtotal now observed; not completed076 or binding family option",
+    "confidence": "High observed receipt identity/count/date/price arithmetic; medium roughbudget usefulness; unknown finalacceptance/bedassignment/care duration-slots/fullmandatorytotal/user/SEO",
+    "next_gate": "Exact bedding and selected-care duration/minimum/billable-days/three simultaneous slots; external levy applicability and remaining076controlledSERP/corpus/materiality/maintainability/preview gates",
+    "recheck_on": "2026-10-09",
+    "trigger": "Changed category/party/stay/offer/fee/care terms or October9 recheck",
+    "release_state": "local-review-pending-uncommitted-unpushed"
+  },
+  "limits": [
+    "Normal quote-only steps1/3of7; stopped before traveler information, option hold, checkout or payment",
+    "No save/share/contact/account/promo/member action, paid API, security bypass or denied FAQ/Mini endpoint retry",
+    "Other two-room proposals were not selected; rounded upgrade and default Superior prices did not calculate the alternative receipt",
+    "No firm family-suitability/childcare safety/firsthand/stroller/route claim, new URL or public source renewal",
+    "083history approval remains a separate release hold; source observation is not independent live verification"
+  ]
+}

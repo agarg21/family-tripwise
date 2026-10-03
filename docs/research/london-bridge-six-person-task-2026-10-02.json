@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-102",
+  "destination": "London UK",
+  "checked_on": "2026-10-02",
+  "refresh_days": 30,
+  "evidence_scope": "Separate LondonBridge exactone-sofa category and own publicnonrefund budget; flexible375GBP signal eligibilityconflict not promoted. Original096/101/allquotes/dates untouched; publishedcount not rest/comfort/access/booking guarantee.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "separate bedrooms",
+      "kitchen",
+      "midday rest with location tradeoffs unresolved"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "bridge-detail": {
+      "url": "https://www.marlin.com/london-serviced-apartments/london-bridge-empire-square/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "bridge-engine-category": {
+      "url": "https://reservations.marlin.com/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective",
+      "source_surface": "Official LondonBridgeEmpireSquare two-bedroom page calendar/search ->nativeprovider exactApartmentwith2KingBedsand1SofaBed, Nov8-13five nights, actual2adults ages4/8/12/15 mapped3adults3children afterexplicit13+/0-12bands. Room-detailbodymax6/bedding/kitchen; sourcecategoryfacts notprices, cleanroot/nosessionquery."
+    }
+  },
+  "records": [
+    {
+      "id": "marlin-london-bridge-two-bedroom-one-sofa",
+      "hotel": "Marlin London Bridge Empire Square",
+      "category": "Two Bedroom Apartment: Apartment with 2 King Beds and 1 Sofa Bed",
+      "source_id": "bridge-engine-category",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exactoffered Apartmentwith2KingBedsand1SofaBed roomdetail explicitlySleeps6; notFamilyvariant or bare no-sofa category"
+        }
+      ],
+      "sleeping_setup": "Two150x200cmking bedrooms andone135x190cm double sofa in livingarea;74-88sqm/kitchen cooker-oven-grill-microwave-fridge-freezer-washer-dryer. Optionaltwins onrequest notselected/guaranteed. Exactdoors/napisolation/comfort/access unknown.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Own separately dated exact-task observations required; no othercategory/member quote"
+        ]
+      },
+      "checks": [
+        "Officialdetail says sofa additionalfees apply; selectedcategory explicitly includes sofa, inclusion/extraamount/finalcheckout unverified, do notinventcharge",
+        "Own publicnonrefund exacttask sample accepted;375GBP flexibleeligible status unresolved from membershipcopy, not normalized aspublic",
+        "Open-plan living/separatebedrooms not rest/entrance/lift/route guarantee"
+      ],
+      "conflicts": [
+        "Officialpage additionalsofa fees versus offeredsofa-category taxincluded rate: separate sofa extra/inclusion unknown",
+        "Flexibleplan has no Memberrate badge butdescription MarlinMembersReceiveExclusiveDiscounts; eligibilityunresolved, not acceptedpublicrate"
+      ]
+    }
+  ],
+  "offer_observations": [],
+  "privacy": "Syntheticparty/stay/cleanroots/paraphrases only; no rateSelect/BookNow/cart/hold/account/contact/payment/paid/hiddenAPI/CAPTCHA/deniedretry/bypass. Cart0/tab26closed. Masterattributed/notindependentlyliveverified; original096/101/oldquotes/dates/public intact."
+}

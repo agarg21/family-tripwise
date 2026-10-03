@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-085",
+  "observed_on": "2026-10-02",
+  "evidence_class": "ONLINE_REVIEW_SIGNAL",
+  "task": {
+    "adults": 2,
+    "child_ages": [4, 8, 12, 15],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "required_outputs": ["Separate bedrooms", "Kitchen", "Six sleeping places including sofa configuration", "Rest after hypothetical Tate Modern morning and 13:00 return"],
+    "proxy_reviewed": true,
+    "user_tested": false
+  },
+  "sources": [
+    {"id": "queen-booking-reviews", "url": "https://www.booking.com/reviews/gb/hotel/marlin-apartments-queen-street.es.html", "source_publication_date": null, "access": "Opened review body; Spanish category and stay labels paraphrased", "freshness_limit": "Search snippets and opened body differed in coverage. Access date does not renew historical stays."},
+    {"id": "lime-tripadvisor-reviews", "url": "https://www.tripadvisor.co.uk/Hotel_Review-g186338-d1225752-Reviews-Marlin_Apartments_Limehouse-London_England.html", "source_publication_date": null, "access": "Opened review body", "freshness_limit": "Individual review/stay months retained; selected visible sample, not a complete corpus."},
+    {"id": "lime-selected-reviews", "url": "https://www.marlin.com/london-serviced-apartments/limehouse-serviced-apartments/", "source_publication_date": null, "access": "Opened provider-selected reviews", "freshness_limit": "Quiet-couple report repeats third-party wording; provider date 4/01/2026 has ambiguous locale, not independently dated corroboration."}
+  ],
+  "signals": [
+    {"id": "queen-category-historical", "source_id": "queen-booking-reviews", "property": "Marlin Queen Street", "published_date": "2025-09-03", "stay_month": "2025-09", "nights": 3, "category": "Two-bedroom apartment with sofa bed (six adults label)", "actual_party_size": null, "child_ages": null, "sofa_used": null, "collection_relationship": "Not established in inspected excerpt", "paraphrase": "Guest noticed train noise/vibration but reported no lost night rest; space and cleanliness were positive.", "task_limit": "Over twelve months old; category capacity label is not actual six-person occupancy. No midday rest or sofa-comfort evidence."},
+    {"id": "lime-two-bedroom-three-guests", "source_id": "lime-tripadvisor-reviews", "property": "Marlin Limehouse", "published_month": "2026-04", "stay_month": "2026-04", "nights": null, "category": "Two-bedroom flat; exact booking subcategory unknown", "actual_party_size": 3, "child_ages": null, "sofa_used": null, "collection_relationship": "Review collected in partnership with hotel", "paraphrase": "Three guests valued the kitchen and location.", "task_limit": "Reviewer speculation about additional sleepers is excluded; not proof for six occupants, sofa use or rest."},
+    {"id": "lime-quiet-couple", "source_id": "lime-tripadvisor-reviews", "property": "Marlin Limehouse", "published_month": "2026-04", "stay_month": "2026-04", "nights": null, "category": null, "actual_party_size": 2, "child_ages": null, "sofa_used": null, "collection_relationship": "Review collected in partnership with hotel; also repeated by provider", "paraphrase": "Couple described a quiet apartment with its own entrance.", "task_limit": "Room category and applicability to target family unknown; repeated provider testimonial is the same report, not independent corroboration."},
+    {"id": "lime-noise-report", "source_id": "lime-tripadvisor-reviews", "property": "Marlin Limehouse", "published_month": "2026-07", "stay_month": "2026-07", "nights": null, "category": null, "actual_party_size": null, "child_ages": null, "sofa_used": null, "collection_relationship": "Review collected in partnership with hotel", "paraphrase": "Guest reported noise from other guests.", "task_limit": "Category, floor, time and exposure unknown; contrasting subjective signal, not prevalence or a safety verdict."}
+  ],
+  "excluded_discovery": [
+    {"url": "https://www.tripadvisor.com/Hotel_Review-g186338-d1012550-Reviews-Marlin_Apartments_Queen_Street-London_England.html", "reason": "Search indexed newer material than opened body. Newer snippet dates not promoted to body-verified records."},
+    {"url": "https://www.booking.com/hotel/gb/marlin-apartments-queen-street.html", "reason": "Opened body lacked usable room detail. Search-only queen-versus-official-king wording remains unverified; no bed-model correction."},
+    {"url": "https://www.booking.com/hotel/gb/marlin-apartments-mission-court.html", "reason": "Opened body lacked usable room detail. Search-only alternate categories/bed labels not transferred to target room."}
+  ],
+  "preserved_budget_records": [
+    "docs/research/london-marlin-six-person-price-observation-2026-10-02.json",
+    "docs/research/london-limehouse-six-person-price-observation-2026-10-02.json",
+    "docs/research/london-six-person-comparison-2026-10-02.json"
+  ],
+  "budget_boundary": "Original dated same-party five-night saver/flexible per-apartment nightly and stay amounts, currency, tax/fee display, sofa surcharge uncertainty, authorisation and cancellation context remain in linked records unchanged. This audit is not a new quote or full mandatory cost.",
+  "result": {
+    "decision": "CANDIDATE",
+    "hypothesis": "Current category-linked reviews establish six-person sofa comfort and dependable midday rest for either apartment.",
+    "hypothesis_supported": false,
+    "category_corpus_gate_complete": false,
+    "quietness_winner": null,
+    "six_person_sofa_comfort": null,
+    "midday_rest_reliability": null,
+    "confidence": "High source/category/date distinctions; low applicability to six-person rest; unknown representativeness, actual acceptance and SEO effect.",
+    "next_gate": "Obtain current exact-category six-occupant/sofa-use evidence and resolve exposure/bed-dimension uncertainty before a firm rest or bedding claim. Independently complete entrance/mode/cap, six-record corpus, controlled US paired SERP/demand/no-existing-fit, maintainability and new-destination/URL authority gates.",
+    "next_falsification_trigger": "A recent category-linked report with actual six-person occupancy, sofa use and rest timing; current category/bed policy changes; or stronger competing same-task evidence.",
+    "public_page_change_eligible": false,
+    "new_destination_launch_authorized": false
+  },
+  "privacy": "Paraphrases and public source dates/URLs only; no identities, copied review bodies, private inputs, ratings-as-demand or raw source archive retained. No account, contact, booking, paid call or denied-source retry."
+}

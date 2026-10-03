@@ -1,0 +1,28 @@
+{
+  "action": "FT-RES-099",
+  "checked_on": "2026-10-02",
+  "decision": "CANDIDATE_WITH_AGE_INPUT_GAP",
+  "source_url": "https://www.hilton.com/en/hotels/lonmetw-hilton-london-metropole/rooms/",
+  "source_surface": "Official rooms category details, native November8-13 date selection, category Explore link and anonymous rates stay editor; changed default one adult to two adults/four kids, Update persisted counts/dates. Two public rate-detail dialogs and prepaid optional-services disclosure inspected. Only count controls, no individual child-age inputs shown. Clean rates path https://www.hilton.com/en/book/reservation/rates/; no session/query data retained.",
+  "evidence_class": "BOOKING_CHECK",
+  "record_id": "hilton-london-metropole-four-queen-connecting",
+  "category": "Four Queen Bed Family Connecting Room",
+  "intended_task": {"adults": 2, "child_ages": [4,8,12,15], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5},
+  "observed_engine_task": {"adults": 2, "children_count": 4, "child_ages": null, "adult_control_label": "ages 18 and older", "configuration_count": 1, "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "age_input_mode": "counts-only"},
+  "configuration_basis": "One named sellable configuration comprises two connecting rooms with four queen beds; category text says sleeps8adults or4adults+4children. No individual ages, booking acceptance, channel/door guarantee, bed dimensions, sound isolation, rest or kitchen established. Mini refrigerator is not kitchen evidence.",
+  "currency": "GBP",
+  "unit": "configuration/stay",
+  "planning_samples": [
+    {"plan": "Stay Longer and Save", "eligibility": "public", "stay_amount": 2456.81, "approximate_configuration_night": 491.36, "displayed_rounded_average": 492, "displayed_nightly_amounts": [402.14,455.43,563.77,563.90,471.58], "meals": "No meal inclusion established; separate breakfast plans are not this rate", "cancellation": "Pay now; cancellation, modification or no-show makes payment non-refundable; early departure may change price", "deposit_basis": "Full stay2456.81GBP card deposit; potential incidental/full anticipated amount card hold at check-in, release72hours or longer by issuer, not an added stay fee"},
+    {"plan": "Flexible Rate", "eligibility": "public", "stay_amount": 3042, "approximate_configuration_night": 608.4, "displayed_rounded_average": 609, "displayed_nightly_amounts": [498,564,698,698,584], "meals": "Room only", "cancellation": "Free cancellation before11:59PM local hotel time November7,2026; early departure may change price", "deposit_basis": "Credit card required; possible anticipated stay plus incidentals hold at check-in; no deposit amount established, not assumed zero"}
+  ],
+  "fee_basis": "Total taxes/government charges displayed Included in price. Totals estimated using current taxes, charges and exchange rates where applicable; additional fees during stay excluded. Prepaid disclosure lists optional selfparking42GBP/night and pet35GBP nonrefundable fee with75lbmaximum; not added to a no-car/no-pet task or transferred as a flexible-plan confirmation. Final mandatory-fee completeness unknown.",
+  "billing_policy": "Breakfast only: under6 complimentary, ages6-11halfprice,12+fullrate,termsapply. Not a room-adult classification or proof breakfast is included in either base rate. Adult count control explicitly18+, but children ages not collected; do not invent a schema2/3 exact-age task.",
+  "conflicts": [
+    {"evidence_class": "OFFICIAL_PROPERTY_FACT", "field": "area", "observed": "Each room is60-68sq.m./323-366sq.ft.", "effect": "Inconsistent metric/imperial conversion, neither used as a space/rest score or silently corrected"},
+    {"field": "prepaid_nightly_sum", "observed": "Displayed nightly amounts sum2456.82GBP, displayed stay total2456.81GBP", "effect": "Retain one-penny rounding discrepancy; normalize approximate491.36from displayed stay total, not replace with rounded492card or summed amount"}
+  ],
+  "validated_exact_task_observations": [],
+  "gap": {"failed_gate": "Individual child ages4/8/12/15 not entered or persisted by visible native count-only editor", "command": "Normal rates Edit stay -> Rooms and guests ->2adults4kids ->Done ->Update ->namedcategory ->Rate details", "tool_failure": null, "security_denial": false, "owner": "Hilton booking interface/property confirmation or operator evidence collection", "unblock_condition": "Explicit native same-category age capture/acknowledgment or scoped official age policy establishes exact task eligibility and cost without reservation/contact", "next_check": "Only after changed interface/scoped policy evidence; dated count-only planning sample recheck byOctober16 or changed stay/party/terms; not an unchanged failed-tool retry"},
+  "limitation": "Useful dated count-only planning span491.36-608.40GBP per whole connecting configuration/night, not seasonal range, exact-age quote, cheapest room, final all-fee total, reservation guarantee or ranking advantage.467from member headline excluded; initial one-adult rates not accepted. Empty validated exact-task array deliberately keeps native comparison Metropole unpriced until age gate resolved, while research retains useful budget observations. Original078/079/098prices and096/097facts/dates/public unchanged. Master observed sources, independent reviewer did not verify live. No Select rate/reservation/cart/hold/account/contact/payment/paidcall/CAPTCHA solving/security bypass or deniedretry; agent tabs22/23closed. Named room-count category permits no maximum9 inference from optional child rollaway."
+}

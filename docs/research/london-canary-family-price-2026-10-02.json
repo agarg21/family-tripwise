@@ -1,0 +1,25 @@
+[
+  {
+    "schema_version": 2,
+    "action": "FT-RES-100",
+    "checked_on": "2026-10-02",
+    "source_url": "https://reservations.marlin.com/",
+    "source_surface": "Official Canary category-page search to normal anonymous provider result; native13+/0-12bands confirmed, mapped engine3adults3children, Nov8-13five nights persisted. Offered exactPenthouseone-sofa category and two public rate-detail panels inspected. Familytwo-sofa variant not offered; no substitution. No session/query URLs retained.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "marlin-canary-wharf-penthouse-one-sofa",
+    "category": "Two Bedroom Penthouse: Penthouse with 2 King Beds and 1 Sofa Bed",
+    "booking_category": "Two Bedroom Penthouse: Penthouse with 2 King Beds and 1 Sofa Bed",
+    "configuration_basis": "One separately named penthouse configuration, two150x200cmking bedrooms plus one135x190cm living-area sofa, explicitSleeps6/kitchen/90-111sqm; not Familytwo-sofa/max8, not standardcategory. Sofa fee inclusion beyond named category/finalcheckout/booking acceptance unknown; no rest/comfort/safety/access or terrace-unit guarantee.",
+    "configuration_count": 1, "currency": "GBP", "unit": "configuration/stay",
+    "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5,
+    "party": {"adults": 2, "child_ages": [4,8,12,15]},
+    "engine_party": {"adults": 3, "child_ages": [4,8,12], "adult_from_age": 13, "child_age_from": 0, "child_age_to": 12, "age_input_mode": "provider-age-band-counts"},
+    "rates": [
+      {"plan": "Non Refundable Rate", "eligibility": "public", "stay_amount": 2160.9, "meals": "No meal inclusion established; apartment kitchen", "cancellation": "Pay in full at least7days advance; full non-refundable payment at booking; changes/cancellation100%charge"},
+      {"plan": "Book with Confidence", "eligibility": "public", "stay_amount": 2401, "meals": "No meal inclusion established; apartment kitchen", "cancellation": "Cancel by23:00day beforearrival, timezone notexplicit; later one-night charge includingVAT; valid card guarantee, chip/PINpayment arrival, extras guarantee may apply"}
+    ],
+    "fee_basis": "Public saver accommodation1800.75GBP plus360.15INC20PC VAT =2160.90total, flexible2000.83plus400.17=2401.00; cards/details Including taxes and fees. Saveraccommodation1800.75coincidentally equals excludedmemberstaytotal, not member plan accepted. No invented sofa/optional-extra fee; final checkout/optionalextras/breakfast and fullmandatorytotal unknown.",
+    "deposit_basis": "Saverfullnonrefundable stay payment atbooking, not additional fee. Both details describe PIN-verified check-in authorisation otherLondon locations200GBPmidweek/500weekend; exactSunday-Friday appliedhold unknown, no amountadded as stay cost. Flexiblevalidcard/arrivalchipPIN/extrasguarantee, not assumed zero deposit.",
+    "limitation": "Approximate432.18/480.20GBP wholepenthouse/night for one dated stay-plan sample, not seasonal range/cheapest/generalLondon/Familyvariant rate/final all-extra cost/availability or acceptance guarantee. Native explicitbandcounts map actual15toadult; individual ages notsubmitted. Initial2adult4child result notaccepted; member360.15/408.17andthird-partyoverlay excluded. Fourleftscarcity is not durableavailability. Familyvariant remains separately unpriced with explicitgap; original096/098/099/078079quotes/dates/public preserved. Master source observation, not independentlyliveverified. No rateBookNow/Select/cart/hold/account/contact/payment/paidcall/CAPTCHA solving/bypass/deniedretry. RecheckpriceOct16/changedtask or terms; historical after14days."
+  }
+]

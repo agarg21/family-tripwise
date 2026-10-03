@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-091",
+  "observed_on": "2026-10-02",
+  "evidence_class": "BOOKING_CHECK",
+  "collection": "Normal anonymous official browser UI; Loews room link followed to Universal reservation engine, explicit dates and counts updated, public rate details inspected. No Book Now, cart, hold, account, purchase or contact action.",
+  "property": "Universal Cabana Bay Beach Resort",
+  "room_category": "Poolside Family Suite Exterior Entry",
+  "room_source_url": "https://www.loewshotels.com/cabana-bay-hotel/rooms-showcase/courtyard-family-suite-poolside",
+  "booking_source_url": "https://reservations.universalorlando.com/ibe/index.aspx?hotelID=14844&lang=en-us&currID=1",
+  "task": {
+    "rooms": 1,
+    "adults": 2,
+    "requested_child_ages": [4, 8, 12, 15],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5
+  },
+  "persisted_party": {
+    "rooms": 1,
+    "adults": 2,
+    "children": 4,
+    "child_band_displayed": "0 - 17 yrs",
+    "individual_ages_entered": false,
+    "individual_ages_verified": null,
+    "basis": "Count-only family search. Requested ages fall within displayed band but engine did not request or confirm individual ages. Not an exact-age booking acceptance."
+  },
+  "currency": {
+    "code_interpretation": "USD",
+    "displayed_symbol": "$",
+    "explicit_iso_code_observed": false,
+    "basis": "US Orlando official storefront and dollar display; USD is an editorial interpretation, not an observed ISO label. No conversion."
+  },
+  "room_facts_observed": {
+    "maximum_occupancy": 6,
+    "area_sqft": 430,
+    "sleeping_places": "Two queen beds and a sleeper sofa",
+    "separation": "Privacy partition between bedroom and living space",
+    "kitchenette": "Mini fridge, microwave and sink",
+    "basis": "Official room page and exact named booking category agree; no allocation of children to beds or firsthand rest/suitability verdict."
+  },
+  "plans": [
+    {
+      "name": "Special Offer",
+      "source_url": "https://reservations.universalorlando.com/ibe/details.aspx?hotelID=14844&lang=en-us&voucher=&rcID=299720&currID=1&access=",
+      "unit": "per room per night",
+      "nightly_before_displayed_tax": [196, 169, 151, 181, 209],
+      "average_before_displayed_tax": 181.2,
+      "room_subtotal": 906,
+      "displayed_taxes": 113.25,
+      "displayed_stay_total": 1019.25,
+      "derived_average_with_displayed_tax": 203.85,
+      "inclusions": "Five room nights and displayed Taxes line. This is the rate-detail subtotal, not a final all-fee checkout quote.",
+      "offer_restrictions_observed": "Not combinable with other offers/discounts. Valid theme park admission required for described early admission; select attractions.",
+      "minimum_stay": null,
+      "booking_deadline": null,
+      "deposit_terms": null,
+      "cancellation_terms": null,
+      "eligibility_limit": "Shown in anonymous six-person results without login; no residency/passholder/member verification observed. Unshown eligibility and final terms remain unknown."
+    },
+    {
+      "name": "Flexible Rate",
+      "source_url": "https://reservations.universalorlando.com/ibe/details.aspx?hotelID=14844&lang=en-us&voucher=&rcID=299711&currID=1&access=",
+      "unit": "per room per night",
+      "nightly_before_displayed_tax": [280, 242, 216, 258, 298],
+      "average_before_displayed_tax": 258.8,
+      "room_subtotal": 1294,
+      "displayed_taxes": 161.75,
+      "displayed_stay_total": 1455.75,
+      "derived_average_with_displayed_tax": 291.15,
+      "inclusions": "Five room nights and displayed Taxes line. This is the rate-detail subtotal, not a final all-fee checkout quote.",
+      "offer_restrictions_observed": "General description calls it lowest published non-discounted double-occupancy rate before tax. The actual result/detail headers retained 1 room, 2 adults, 4 children; no assumption of individualized child pricing.",
+      "minimum_stay": null,
+      "booking_deadline": null,
+      "deposit_terms": null,
+      "cancellation_terms": null,
+      "eligibility_limit": "Public anonymous result; name Flexible alone does not establish refundable cancellation or payment conditions."
+    }
+  ],
+  "unresolved_budget": {
+    "parking": "Separate unresolved current add-on. Existing model retains Sept24 $26 plus tax per vehicle/night; not rechecked or renewed by this collection and not added to quoted subtotal.",
+    "resort_fee": null,
+    "meals": null,
+    "tickets": "Theme park admission is not included or priced by these room-only samples.",
+    "optional_extras": null,
+    "final_all_fee_total": null
+  },
+  "park_notice_observed": "Booking results say Volcano Bay seasonal closure begins October26,2026; expected reopening on or before April1,2027, not confirmed. Walking path unavailable during closure. This does not establish hotel-pool/lazy-river operations or ticket inclusion.",
+  "use": {
+    "decision": "CANDIDATE",
+    "result": "Existing Cabana nightly budget gap narrowed with two source-backed same-count/same-stay/exact-category plan observations. Not a seasonal price band, cheapest claim, complete family budget or age-confirmed booking.",
+    "source_recheck_due": "2026-10-09",
+    "next_gate": "Map reviewed sample into existing structured comparison only after approved release-history reconciliation and separate reviewed implementation/QA; preserve original facts and observation window. Recheck offer eligibility, current parking and final terms before any complete-budget claim.",
+    "release_state": "local-evidence-review-pending-uncommitted-unpushed",
+    "public_model_changed": false,
+    "prior_source_dates_renewed": false,
+    "paid_api_calls": 0
+  }
+}

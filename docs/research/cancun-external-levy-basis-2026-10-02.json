@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-088",
+  "learning_id": "LRN-099",
+  "observed_on": "2026-10-02",
+  "evidence_class": "OFFICIAL_GOVERNMENT_GUIDANCE",
+  "sources": [
+    {
+      "url": "https://www.visitax.gob.mx/sitio/",
+      "method": "Direct public HTML FAQ read; no payment or receipt form opened",
+      "publication_date": null,
+      "effective_date": null,
+      "scope": "State foreign-tourist contribution",
+      "result": "FAQ cites Quintana Roo Law of Rights Article51octies and says all foreign tourists pay, including in its children/infants answer; inspected FAQ provides no numeric rate or frequency",
+      "current_numeric_rate_mxn": null,
+      "billing_frequency": null,
+      "young_child_exemption_supported": false,
+      "limit": "Current government guidance, not independently inspected statute or personal liability determination"
+    },
+    {
+      "url": "https://cancun.gob.mx/imdai/",
+      "method": "Search-result excerpt only; direct web.open failed400 Content length too large4194305+, not retried",
+      "publication_date": null,
+      "effective_date": null,
+      "scope": "Municipal environmental sanitation business declaration",
+      "result": "Excerpt describes lodging-sector monthly declarations, occupied rooms and72.80%UMA, citing municipal finance Articles147-150; not a verified current guest charge or final quote inclusion",
+      "current_guest_rate_mxn": null,
+      "limit": "Search excerpt is provisional; direct body/effective policy unavailable, no family charge calculated"
+    },
+    {
+      "url": "https://www.inegi.org.mx/temas/uma/",
+      "method": "Direct public HTML yielded zero extracted lines; search table not promoted to direct source verification",
+      "publication_date": null,
+      "effective_date": null,
+      "result": "No usable directly extracted table retained; no derived municipal rate",
+      "limit": "Representation gap, not security denial or proof of absent data"
+    }
+  ],
+  "retained_quote": {
+    "record": "docs/research/cancun-room-care-quote-2026-10-02.json",
+    "context_record": "docs/research/cancun-quoted-room-care-basis-2026-10-02.json",
+    "observation_date": "2026-10-02",
+    "adults": 2,
+    "child_ages": [2, 7],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "room_count": 1,
+    "category": "Superior Room",
+    "currency": "USD",
+    "currency_basis": "US storefront interpretation; ISO not explicitly visible",
+    "unit": "Whole-party five-night all-inclusive package, not pure room rate",
+    "stay_before_care": 2638.91,
+    "stay_after_care": 2934.91,
+    "package_per_night_before_care": 527.78,
+    "package_per_night_after_care": 586.98,
+    "selected_petit_delta": 296,
+    "membership_included_once": 180,
+    "optional_transfer_excluded": 112,
+    "terms": "Non-refundable; no cancellations or modifications displayed",
+    "provider_warning": {"label": "green tax", "currency": "MXN", "per_person": 283, "payment_basis": "government website warning; exact charge identity not explicitly established"},
+    "nationality": null,
+    "residency": null,
+    "visitax_identity_confirmed": null,
+    "applicable_persons": null,
+    "current_government_rate_mxn": null,
+    "external_levy_total_mxn": null,
+    "municipal_charge_included_in_quote": null,
+    "complete_mandatory_total": null,
+    "use": "Original nonbinding observation retained, not current government tariff, accepted capacity or complete budget"
+  },
+  "result": {
+    "decision": "CANDIDATE; reject unsupported young-child exemption and treating all green/environmental labels as the same charge",
+    "provider_to_visitax_mapping": "Plausible editorial hypothesis from government-payment/person basis only, unconfirmed",
+    "confidence": "High in narrow inspected FAQ and absence of numeric rate there; provisional municipal excerpt; unknown task liability, current amount, frequency and inclusion",
+    "next_gate": "Explicit provider charge identity, current government numeric/unit basis, task nationality/residency and hotel charge inclusion before computing a mandatory total; capacity/care/corpus/controlledSERP gates remain",
+    "trigger": "Current dated primary fee/unit clarification or explicit quote inclusion/charge identity; municipal direct-read representation repaired without payment access",
+    "release_state": "local-review-pending-uncommitted-unpushed"
+  },
+  "limits": [
+    "No283times4 calculation, currency conversion, guest municipal levy estimate, infant exemption, exact liability or legal assurance",
+    "Incidental personal payment receipts in search were excluded: none opened, retained or used; no identities or receipt links stored",
+    "No account, personal form, payment, contact, paid API call, denied-source retry or external mutation",
+    "Original084quote/087source/058adapter and all prior prices/source dates/public/models/windows/exclusions/scheduler/spend preserved",
+    "Direct municipal size failure and empty INEGI extraction do not block independent work; no unchanged retries or rate inferred from search receipts",
+    "Git083history approval holds release independently; third/final action of this run, no new divergent commit"
+  ]
+}

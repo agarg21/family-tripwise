@@ -1,0 +1,60 @@
+[
+  {
+    "schema_version": 2,
+    "action": "FT-RES-101",
+    "checked_on": "2026-10-02",
+    "source_url": "https://reservations.marlin.com/",
+    "source_surface": "Normal official Aldgate category search and guest edit confirmed13+/0-12mapping, actual2adults children4/8/12/15=>engine3adults3children; Nov8-13five nights, oneconfiguration and exactone-sofa category persisted. Publicnonrefundable/flexible detail panels inspected; no session/query retained.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "marlin-aldgate-two-bedroom-one-sofa",
+    "category": "Two Bedroom Apartment: Apartment with 2 King Beds and 1 Sofa Bed",
+    "booking_category": "Two Bedroom Apartment: Apartment with 2 King Beds and 1 Sofa Bed",
+    "configuration_basis": "One whole Aldgate two-bedroom apartment with2KingBedsand1SofaBed, eachking150x200cm/sofa135x190cm/max6/kitchen. NotFamilytwo-sofa, no-sofa orPenthouse; optionaltwins unselected. Area conflict78-93/78-92/69-93sqm, exactunit unknown. Sofa extras/finalcheckout/rest/comfort/access/bookingacceptance unknown.",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12,
+        15
+      ]
+    },
+    "engine_party": {
+      "adults": 3,
+      "child_ages": [
+        4,
+        8,
+        12
+      ],
+      "adult_from_age": 13,
+      "child_age_from": 0,
+      "child_age_to": 12,
+      "age_input_mode": "provider-age-band-counts"
+    },
+    "rates": [
+      {
+        "plan": "Non-Refundable",
+        "eligibility": "public",
+        "stay_amount": 1381.5,
+        "meals": "No meal inclusion established; apartment kitchen",
+        "cancellation": "Deposit required atbooking, amount notexplicit; non-refundable ifcancelled anytime; summary no cancellation/modifications"
+      },
+      {
+        "plan": "Book with Confidence",
+        "eligibility": "public",
+        "stay_amount": 1535,
+        "meals": "No meal inclusion established; apartment kitchen",
+        "cancellation": "Validcreditcard guarantee andarrivalChip/PINpayment/extras guarantee mayapply; cancel23:00daybeforearrival,timezonenoexplicit; laterone-night includingVAT"
+      }
+    ],
+    "fee_basis": "Publicnonrefundable accommodation1151.25GBP+INC20PC VAT230.25=1381.50, flexible1279.16+255.84=1535.00. Bothcards/details Includingtaxesandfees; same source displayed276.30/307.00night. Nonrefundableaccommodation coincidentally equals excludedmemberstay, not memberplan accepted. Namedsofa fee inclusion beyondcategory/optionalextras/finalmandatorycheckouttotal unknown; no invented fee.",
+    "deposit_basis": "Nonrefundabledeposit atbooking required/nonrefund, amount unspecified; do not assume fullstay. Flexiblevalidcard/arrivalChipPIN/extrasguarantee notzero-deposit assumption. Bothdamagepolicy refundable PINauthorisation otherLondonlocationsGBP200midweek/500weekend; exactSunday-Friday hold unknown, not added tostay cost.",
+    "limitation": "Dated public276.30/307GBP wholeapartment/night samples, notseasonalrange/lowestLondon/FamilyPenthouse/finalall-extra quote or availability/acceptance guarantee. Providerexplicitbandcounts map actual15toadult, individualages notsubmitted; initial2adult4child ignored. Member230.25/260.94night and third-partyoverlay excluded. Area conflict retained inconfiguration. No rateSelect/BookNow/cart/hold/account/contact/payment/paid/hiddenAPI/securitybypass/deniedretry. SourceMaster-attributed, not independentlyliveverified. RecheckpriceOctober16/changedtask or terms, historicalafter14days; original096/078079/098099100records/dates/public intact."
+  }
+]

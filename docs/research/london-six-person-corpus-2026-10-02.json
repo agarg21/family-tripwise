@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-096",
+  "destination": "London UK",
+  "checked_on": "2026-10-02",
+  "refresh_days": 30,
+  "evidence_scope": "Six source-text category/variant count screens for the original six-person task, not six fully qualified recommendations. Five records are Marlin, one Citadines; no representative or connected-room coverage. Original Queen/Lime dates and separate078/079 price samples remain unchanged. Other four exact-task prices uncollected; no availability, rest, safety, suitability, route or London publication assurance.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "separate bedrooms",
+      "kitchen",
+      "midday rest with location tradeoffs unresolved"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "queen-street": {
+      "url": "https://www.marlin.com/london-serviced-apartments/london-city-queen-street/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-09-30",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "limehouse": {
+      "url": "https://www.marlin.com/london-serviced-apartments/limehouse-serviced-apartments/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "london-bridge": {
+      "url": "https://www.marlin.com/london-serviced-apartments/london-bridge-empire-square/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "canary-family": {
+      "url": "https://www.marlin.com/london-serviced-apartments/canary-wharf-serviced-apartments/rooms/two-bedroom-apartment/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "citadines-trafalgar": {
+      "url": "https://www.discoverasr.com/en/citadines/united-kingdom/citadines-trafalgar-square-london/2-bedroom-apartment",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "aldgate-two-bedroom": {
+      "url": "https://www.marlin.com/london-serviced-apartments/aldgate-tower-bridge-serviced-apartments/aldgate-tower-bridge-apartment-types/",
+      "checked_on": "2026-10-02",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "marlin-queen-street-two-bedroom",
+      "hotel": "Marlin London City Queen Street",
+      "category": "Two Bedroom Apartment",
+      "source_id": "queen-street",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        },
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "paid double sofa bed included in reservation"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "Two kings in separate bedrooms; optional double sofa in living area.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "exact category/configuration rate",
+          "party and child ages",
+          "stay dates/rate plan",
+          "tax and mandatory fee total"
+        ]
+      },
+      "checks": [
+        "Extra sofa charge unknown; category rate without sofa is not five-person cost."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "marlin-limehouse-two-bedroom",
+      "hotel": "Marlin Apartments Commercial Road - Limehouse",
+      "category": "Two Bedroom Apartment",
+      "source_id": "limehouse",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        },
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "paid double sofa bed included in reservation"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published category occupancy/conditions"
+        }
+      ],
+      "sleeping_setup": "Two king bedrooms; second bedroom twins on request, not guaranteed; optional paid double sofa in living area. Two bathrooms listed.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Separate exact-task price sample required; no seasonal range in capacity record"
+        ]
+      },
+      "checks": [
+        "Confirm sofa-specific booked category, child sleeping allocation and any optional extra charges; no final checkout inspected.",
+        "Location and midday-return friction not evaluated; lower displayed price does not settle value or rest convenience."
+      ],
+      "conflicts": [
+        "Booking category size badge78-92m2 versus description60-70m2; size unresolved, not used to rank space or infer bedding."
+      ]
+    },
+    {
+      "id": "marlin-london-bridge-two-bedroom",
+      "hotel": "Marlin London Bridge Empire Square",
+      "category": "Two Bedroom Apartment",
+      "source_id": "london-bridge",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Added double sofa bed included in the reservation; additional fee amount/inclusion uncollected"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published named category/variant occupancy and conditions; not exact-age booking acceptance"
+        }
+      ],
+      "sleeping_setup": "Two separate bedrooms with150x200cm UK kings, twins in one on request; living-area double sofa, extra fee. Category74-88m2; one bathroom listed.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Exact selected category/sofa variant public plan",
+          "Two adults and children4,8,12,15",
+          "November8-13 five-night stay",
+          "Tax and mandatory fee inclusion, sofa charge and cancellation"
+        ]
+      },
+      "checks": [
+        "Confirm the sofa-specific selected configuration, optional twins, bedding allocation and exact-party acceptance.",
+        "Living area is also a sleeping area when sofa is used; sofa dimensions/comfort, midday rest, entrances and return journey are unverified."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "marlin-canary-wharf-family-two-sofas",
+      "hotel": "Marlin Canary Wharf",
+      "category": "Family Apartment variant within Two Bedroom Apartment options; two sofa beds",
+      "source_id": "canary-family",
+      "configurations": [
+        {
+          "maximum": 8,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Select and confirm the named two-sofa Family Apartment variant; do not apply its maximum to standard or penthouse options"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published named category/variant occupancy and conditions; not exact-age booking acceptance"
+        }
+      ],
+      "sleeping_setup": "Two separate bedrooms with150x200cm UK kings; named Family Apartment option has two sofas and maximum8. Sofa sizes and sleeping allocation unestablished.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Exact selected category/sofa variant public plan",
+          "Two adults and children4,8,12,15",
+          "November8-13 five-night stay",
+          "Tax and mandatory fee inclusion, sofa charge and cancellation"
+        ]
+      },
+      "checks": [
+        "Exact reservation category identity, sofa charge/inclusion and six-person child/adult acceptance unknown.",
+        "Standard two-bedroom sofa option has no explicit numeric maximum in this inspected body; do not infer six there.",
+        "Living-area rest, sofa comfort and arrival/return friction remain unverified."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "citadines-trafalgar-two-bedroom",
+      "hotel": "Citadines Trafalgar Square London",
+      "category": "2-Bedroom Apartment",
+      "source_id": "citadines-trafalgar",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published named category/variant occupancy and conditions; not exact-age booking acceptance"
+        }
+      ],
+      "sleeping_setup": "Published70m2 duplex: double160x200cm in first bedroom, two singles90x200cm in second, and double sofa in living area; one bathroom with separate toilet.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Exact selected category/sofa variant public plan",
+          "Two adults and children4,8,12,15",
+          "November8-13 five-night stay",
+          "Tax and mandatory fee inclusion, sofa charge and cancellation"
+        ]
+      },
+      "checks": [
+        "Confirm the exact category for all six ages and whether sofa setup/charges are included in the selected rate.",
+        "Duplex is published; internal stairs, child access, lift/entrance and rest suitability are not verified.",
+        "Sofa dimensions/comfort, rate-specific fees and cancellation unknown."
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "marlin-aldgate-two-bedroom",
+      "hotel": "Marlin Aldgate Tower Bridge",
+      "category": "Two Bedroom Apartment (not Family Apartment or Penthouse)",
+      "source_id": "aldgate-two-bedroom",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Added sofa bed included in the selected reservation; fees and setup confirmation unknown"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published named category/variant occupancy and conditions; not exact-age booking acceptance"
+        }
+      ],
+      "sleeping_setup": "Category78-93m2 with two separate king bedrooms, optional twins in one, plus living-area sofa for maximum6. Do not transfer nearby Family8 or Penthouse6 category wording.",
+      "kitchen": "not-established",
+      "connection": "not-applicable",
+      "price": {
+        "currency": "GBP",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Exact selected category/sofa variant public plan",
+          "Two adults and children4,8,12,15",
+          "November8-13 five-night stay",
+          "Tax and mandatory fee inclusion, sofa charge and cancellation"
+        ]
+      },
+      "checks": [
+        "Inspected official category-list body establishes this category's beds/count, but kitchen and sofa fee need exact-detail evidence.",
+        "Optional twin request is not guaranteed; exact selected category, bedding allocation and acceptance unknown.",
+        "No rest, entrances, quietness or route claim established."
+      ],
+      "conflicts": []
+    }
+  ],
+  "offer_observations": []
+}
