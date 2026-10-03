@@ -23,7 +23,7 @@
       "id": "FT-RES-104",
       "title": "Resolve Citadines exact six-person apartment budget",
       "kind": "research",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-03",
       "target_paths": ["docs/research/london-citadines-six-person-task-2026-10-03.json", "docs/research/london-citadines-six-person-price-2026-10-03.json", "docs/research/london-citadines-six-person-task-2026-10-03.md", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
       "target_urls": [],
@@ -32,8 +32,16 @@
       "measurement_plan": "Resolve one independent-provider same-task budget/bedding decision, not rankings, user satisfaction or booking assurance",
       "production_invariant": "No public page/new URL/city approval/source-price renewal/scheduler/paid-budget change; no BookNow/rateSelect/cart/hold/account/contact/payment/hidden API/denied retry/security bypass;077onlythreegatefields",
       "decision": "Collect named remaining gate; PRESERVE public URLs",
-      "next_gate": "Native collection, QA, independent review and exact-path release",
-      "release_state": "registered-not-shipped"
+      "next_gate": "Collection/native QA/independent review/exact-path push complete; separate077publication gates unchanged",
+      "release_state": "completed-research-docs-pushed",
+      "completed_on": "2026-10-03",
+      "release_commit": "8777581acc68705a5858ec65b5ed091a4763c26b",
+      "release_verified_at": "2026-10-03T13:20:31Z",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a101e6-fb5d-7812-adfc-de8766c7ae6b"],
+      "qa": "Ramanujan446frozenfull62focused/no failures-skips/state0/GSC81/SEO31URLs34HTML0-fiveprior/all651candidate649baseline hashes/exact8scope/077only3fields/LRN114only/11held/site parity/schema3-task-member-aging-CLI-15row controls",
+      "release_verification": "All651index regularblob bytes/modes match frozen review tree; all3native Git gates pass, freshfetch/no divergence/complete sole reviewed outgoing commit/normalpush and remoteSHA verified. Research/data-only/no public change or Pageswait; source observations Master-attributed."
     },
     {
       "id": "FT-IMP-062",
