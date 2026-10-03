@@ -7,6 +7,7 @@ import { roomPriceForTask, validateRoomPrices } from "./family-room-price.mjs";
 const text = value => typeof value === "string" && value.trim().length > 0;
 const positive = value => Number.isInteger(value) && value > 0;
 const optionalLimit = value => value === null || positive(value);
+const optionalChildLimit = value => value === null || (Number.isInteger(value) && value >= 0);
 const denseArray = (value, predicate) => {
   if (!Array.isArray(value) || Object.getPrototypeOf(value) !== Array.prototype || Object.hasOwn(value, Symbol.iterator)) return false;
   for (let index = 0; index < value.length; index++) if (!Object.hasOwn(value, index) || !predicate(value[index])) return false;
@@ -49,7 +50,7 @@ export function validateRoomPack(pack) {
         !strings(r.checks) || !strings(r.conflicts)) fail(`${r.id}: invalid facts/provenance`);
     if (!denseArray(r.configurations, c => c && typeof c === "object" && !Array.isArray(c)) || !r.configurations.length) { fail(`${r.id}: missing configurations`); continue; }
     for (const c of r.configurations) {
-      if (!c || !positive(c.maximum) || !optionalLimit(c.max_adults) || !optionalLimit(c.max_children) ||
+      if (!c || !positive(c.maximum) || !optionalLimit(c.max_adults) || !optionalChildLimit(c.max_children) ||
           !strings(c.conditions) || !["OFFICIAL_PROPERTY_FACT", "EDITORIAL_INTERPRETATION"].includes(c.evidence_class) ||
           !text(c.basis)) { fail(`${r.id}: invalid capacity`); continue; }
       if (c.infant_extension !== null && (!positive(c.infant_extension?.places) ||

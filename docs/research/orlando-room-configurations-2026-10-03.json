@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-119",
+  "destination": "Orlando",
+  "checked_on": "2026-10-03",
+  "refresh_days": 30,
+  "evidence_scope": "Partial three-category exclusion-control corpus, not three qualified six-person hotels. Base categories only; expanded connected configurations lack exact combined capacity and dated cost. No booking acceptance, water entitlement, complete fees/reviews, family suitability or public launch proof.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "one accommodation",
+      "no car",
+      "hotel-only water/rest day",
+      "separate sleep preferred"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "lake": {
+      "url": "https://www.fourseasons.com/orlando/accommodations/suites/lake_view_deluxe_suite/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "grand": {
+      "url": "https://www.fourseasons.com/orlando/accommodations/specialty-suites/grand-suite/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    },
+    "royal": {
+      "url": "https://www.fourseasons.com/orlando/accommodations/specialty-suites/royal-suite/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "orlando-four-seasons-lake-deluxe-base",
+      "hotel": "Four Seasons Resort Orlando",
+      "category": "Lake View Deluxe Suite (base category)",
+      "source_id": "lake",
+      "sleeping_setup": "King or two queens plus queen sofa; separate living/sleeping spaces and two bathrooms.",
+      "kitchen": "not-established",
+      "connection": "requested-separate-room",
+      "configurations": [
+        {
+          "maximum": 3,
+          "max_adults": 3,
+          "max_children": 0,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published alternative adult-only occupancy."
+        },
+        {
+          "maximum": 4,
+          "max_adults": 2,
+          "max_children": 2,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published two-adult/two-child occupancy ages0-18; tool only screens supplied ages0-17, not an eighteen-year-old policy conversion."
+        }
+      ],
+      "checks": [
+        "Base excludes named six-person task regardless of beds; expanded category capacity/connection guarantee and cost unresolved",
+        "Refrigerator not guest cooking; confirm equipment and dining setup",
+        "Current brochure connection options are historical, not exact November acceptance"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Requested six-person category not established; no accepted same-party November8-13 rate, taxes, fees or terms observed"
+        ]
+      }
+    },
+    {
+      "id": "orlando-four-seasons-grand-base",
+      "hotel": "Four Seasons Resort Orlando",
+      "category": "Grand Suite (base category)",
+      "source_id": "grand",
+      "sleeping_setup": "King and queen sofa; dining area for eight is not sleeping occupancy.",
+      "kitchen": "not-established",
+      "connection": "requested-separate-room",
+      "configurations": [
+        {
+          "maximum": 3,
+          "max_adults": 3,
+          "max_children": 0,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published alternative adult-only occupancy."
+        },
+        {
+          "maximum": 4,
+          "max_adults": 2,
+          "max_children": 2,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Published two-adult/two-child occupancy ages0-18; tool only screens supplied ages0-17, not an eighteen-year-old policy conversion."
+        }
+      ],
+      "checks": [
+        "Expanded bedroom option needs exact combined capacity, bedding, party acceptance and price",
+        "Historical brochure mentions pantry; current equipment, guest cooking access and costs unverified"
+      ],
+      "conflicts": [
+        "Expanded-room marketing must not replace the base category occupancy."
+      ],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Requested six-person category not established; no accepted same-party November8-13 rate, taxes, fees or terms observed"
+        ]
+      }
+    },
+    {
+      "id": "orlando-four-seasons-royal-base",
+      "hotel": "Four Seasons Resort Orlando",
+      "category": "Royal Suite (base category)",
+      "source_id": "royal",
+      "sleeping_setup": "One king; added-bedroom option is distinct from base.",
+      "kitchen": "not-established",
+      "connection": "requested-separate-room",
+      "configurations": [
+        {
+          "maximum": 2,
+          "max_adults": 2,
+          "max_children": 0,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Base detail publishes two adults; added-bedroom capacity not established."
+        }
+      ],
+      "checks": [
+        "Pantry kitchen listed; guest cooking access/equipment not established",
+        "Calls-to-book not contacted; expanded bundle capacity/nightly fee basis unresolved"
+      ],
+      "conflicts": [
+        "Page title suggests nine bedrooms while detail is base occupancy; neither establishes exact requested expanded configuration."
+      ],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Requested six-person category not established; no accepted same-party November8-13 rate, taxes, fees or terms observed"
+        ]
+      }
+    }
+  ],
+  "offer_observations": []
+}

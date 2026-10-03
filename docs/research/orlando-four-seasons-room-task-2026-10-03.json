@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-119",
+  "learning_unit": "LRN-132",
+  "parent_item": "FT-RES-063",
+  "inspected_on": "2026-10-03",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "one accommodation",
+      "no car",
+      "hotel-only water/rest day",
+      "separate sleep preferred"
+    ],
+    "budget": null,
+    "nights": 5,
+    "evidence_class": "EDITORIAL_PROXY_TASK",
+    "actual_user_test": false
+  },
+  "sources": [
+    {
+      "id": "index",
+      "url": "https://www.fourseasons.com/orlando/accommodations/",
+      "crawl_label": "today",
+      "published_on": null,
+      "inspected_on": "2026-10-03",
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT"
+    },
+    {
+      "id": "lake",
+      "url": "https://www.fourseasons.com/orlando/accommodations/suites/lake_view_deluxe_suite/",
+      "crawl_label": "2 days ago",
+      "published_on": null,
+      "inspected_on": "2026-10-03",
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT"
+    },
+    {
+      "id": "grand",
+      "url": "https://www.fourseasons.com/orlando/accommodations/specialty-suites/grand-suite/",
+      "crawl_label": "today",
+      "published_on": null,
+      "inspected_on": "2026-10-03",
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT"
+    },
+    {
+      "id": "royal",
+      "url": "https://www.fourseasons.com/orlando/accommodations/specialty-suites/royal-suite/",
+      "crawl_label": "today",
+      "published_on": null,
+      "inspected_on": "2026-10-03",
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT"
+    },
+    {
+      "id": "buyout",
+      "url": "https://www.fourseasons.com/orlando/accommodations/suites/ultimate_suites_experience_floor_buy_out/",
+      "crawl_label": "3 days ago",
+      "published_on": null,
+      "inspected_on": "2026-10-03",
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT"
+    },
+    {
+      "id": "brochure",
+      "url": "https://www.fourseasons.com/content/dam/fourseasons/images/web/ORL/PDF/ORL-Suites-2024.pdf",
+      "crawl_label": "3 days ago",
+      "published_on": null,
+      "publication_month": "2024-09",
+      "pages_used": [
+        7,
+        25
+      ],
+      "visual_check": "Page7 screenshot requested; page25 screenshot timed out; month from extracted final-page text, no independent full visual validation",
+      "inspected_on": "2026-10-03",
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_HISTORICAL_BROCHURE"
+    }
+  ],
+  "shared_record": "docs/research/orlando-room-configurations-2026-10-03.json",
+  "booking_ui": {
+    "source_id": "index",
+    "browser": "normal in-app browser",
+    "tab": 35,
+    "form_opened": true,
+    "adults": 2,
+    "rooms": 1,
+    "children_selected": 2,
+    "add_child_disabled": true,
+    "add_adult_disabled": true,
+    "adult_label": "19+ years",
+    "individual_ages_entered": false,
+    "requested_children": 4,
+    "exact_party_entered": false,
+    "requested_stay_entered": false,
+    "submitted_search": false,
+    "quote_observations": 0,
+    "currency_selected": "USD",
+    "outcome": "Ordinary one-room control cannot enter requested party; no force, DOM mutation, multiroom substitute, hidden endpoint, contact, account or reservation.",
+    "cookie_legal_agreement_accepted": false
+  },
+  "published_family_policy": {
+    "source_id": "index",
+    "same_room_child_no_extra_fee_max_age": 17,
+    "conditional_space_permitting": true,
+    "optional_rollaways_available": false,
+    "occupancy_extended_by_policy": false
+  },
+  "expanded_configuration": {
+    "source_ids": [
+      "grand",
+      "royal",
+      "buyout",
+      "brochure"
+    ],
+    "brochure_month": "2024-09",
+    "brochure_not_renewed_as_current_policy": true,
+    "connections_are_options_not_guaranteed_bundle": true,
+    "named_six_person_category": null,
+    "combined_capacity": null,
+    "exact_party_acceptance": null,
+    "nightly_amount": null,
+    "observed_price_on": null,
+    "taxes_fees": null,
+    "total": null,
+    "calls_made": false
+  },
+  "decision": {
+    "hypothesis": "Two queen beds plus sofa or more-bedroom marketing establishes a six-person room and comparable nightly quote",
+    "outcome": "REJECT inference; IMPLEMENT three exact base-category exclusions in validated shared screen/export; CANDIDATE expanded bundle only after current exact capacity and party-price proof; PRESERVE public page",
+    "confidence": "High inspected base capacity and normal UI limit; unknown expanded acceptance/availability/cost, future water operations, users and SEO",
+    "remaining_gate": "Expanded six-person configuration identity/capacity/accepted party and same-stay nightly taxes/fee terms, otherwise select independent existing water property; maintain6-8comparable records/current reviews/task/materiality/no-clean-existing-fit",
+    "next_eligible_run": "After reviewed release, next sequential transaction within October3 run start budget; no unchanged request or contact workaround",
+    "no_unblocked_public_change": "October22 observation protected absent verified defect; maintained water corpus/task incomplete. Shared exclusions can ship without public rewrite; city launches require separate evidence and named approval.",
+    "falsification_trigger": "Changed ordinary selector, current expanded category capacity or accepted same-party/stay public rate; no cadence retry",
+    "old_evidence_renewed": false,
+    "public_change": false,
+    "paid_calls": 0,
+    "booking_or_account_mutation": false,
+    "route_stroller_safety_or_firm_fit_assurance": false
+  }
+}
