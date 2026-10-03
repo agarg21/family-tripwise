@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-107",
+  "learning_unit": "LRN-117",
+  "destination": "Washington DC",
+  "inspected_on": "2026-10-03",
+  "refresh_due": "2026-11-02",
+  "task": {
+    "adults": 2,
+    "child_ages": [4, 8, 12],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "no_car": true,
+    "no_pets": true,
+    "evidence_class": "EDITORIAL_PROXY_TASK",
+    "booking_acceptance_tested": false
+  },
+  "sources": [
+    {"id": "hyatt-rooms", "url": "https://www.hyatt.com/hyatt-house/en-US/wasxc-hyatt-house-washington-dc-convention-center/rooms", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "retrieval": "web-extracted body; tool reports crawled today, exact crawl time unknown"},
+    {"id": "hyatt-faq", "url": "https://www.hyatt.com/hyatt-house/en-US/wasxc-hyatt-house-washington-dc-convention-center/faqs", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "retrieval": "web-extracted body; tool reports crawled today, exact crawl time unknown"},
+    {"id": "hyatt-policy", "url": "https://www.hyatt.com/hyatt-house/en-US/wasxc-hyatt-house-washington-dc-convention-center/policies", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PUBLISHED_POLICY", "retrieval": "web-extracted body; tool reports crawled today, exact crawl time unknown"},
+    {"id": "capitol-rooms", "url": "https://www.ihg.com/holidayinn/hotels/us/en/washington/wassm/hoteldetail/rooms", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "retrieval": "web-extracted body; tool initially reports crawled two days ago, exact crawl time unknown"},
+    {"id": "capitol-amenities", "url": "https://www.ihg.com/holidayinn/hotels/us/en/washington/wassm/hoteldetail/amenities", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "retrieval": "web-extracted body; initial crawl label yesterday, subsequent label today; no live browser verification"}
+  ],
+  "candidates": [
+    {
+      "id": "dc-hyatt-house-convention-center",
+      "hotel": "Hyatt House Washington DC / Downtown / Convention Center",
+      "category_under_audit": "2 Queen Beds Den with Sofa Bed Kitchenette",
+      "source_ids": ["hyatt-rooms", "hyatt-faq", "hyatt-policy"],
+      "category_join": "unresolved",
+      "facts": {
+        "heading_beds": "two queens plus sofa",
+        "paragraph_beds": "king plus sofa",
+        "area_heading_sq_m": 39,
+        "area_paragraph_sq_ft": 371,
+        "separate_non_kitchenette_category": "two-queen den guestroom with sofa; not interchangeable with kitchenette category",
+        "category_maximum": null,
+        "category_cooking_equipment": null,
+        "pool": "FAQ says property has no pool",
+        "connection": "FAQ: on request, dependent on availability",
+        "refrigerator_conflict": "Room amenities list full-size and mini refrigerators; FAQ says all rooms have mini refrigerator and generic suites have full kitchens. Exact-category equipment not reconciled."
+      },
+      "budget": {
+        "nightly_room_price": null,
+        "price_currency": "USD",
+        "price_unit": "configuration/night",
+        "price_observed_on": null,
+        "price_missing_basis": ["No exact category/party/date public rate inspected", "Category maximum and cooking identity unresolved"],
+        "incidental_authorization": {"amount": 100, "currency": "USD", "unit": "night", "source_id": "hyatt-policy", "evidence_class": "OFFICIAL_PUBLISHED_POLICY", "is_stay_fee": false, "five_night_derived_amount": 500, "derivation": "100 * declared 5 nights; cash-flow authorization only, room and tax remain separate", "release_basis": "Policy says unused debit authorization released within 7-10 business days after checkout depending on bank; not a promise for all card types"},
+        "mandatory_stay_total": null
+      },
+      "positive_five_person_shortlist": false,
+      "decision": "EXCLUDE pending exact category capacity and conflict reconciliation; not proof the property cannot accommodate five",
+      "unblock": "Unambiguous named-category beds/equipment and published maximum or actual exact-party booking acceptance, with its own dated public price/fee basis"
+    },
+    {
+      "id": "dc-holiday-inn-capitol",
+      "hotel": "Holiday Inn Washington Capitol - Natl Mall",
+      "category_under_audit": "Suite: king or two-queen alternatives",
+      "source_ids": ["capitol-rooms", "capitol-amenities"],
+      "category_join": "unresolved",
+      "facts": {
+        "category_maximum": null,
+        "sofa_or_rollaway_for_fifth_person": null,
+        "cooking_equipment": "mini refrigerator and coffee equipment; stove not established",
+        "connection": "available by request, not a named guaranteed configuration",
+        "pool": "published seasonal outdoor rooftop pool; November operation unknown",
+        "local_shuttle": "amenities say hotel does not offer local shuttle"
+      },
+      "budget": {
+        "nightly_room_price": null,
+        "price_currency": "USD",
+        "price_unit": "configuration/night",
+        "price_observed_on": null,
+        "price_missing_basis": ["No exact five-person category/party/date public rate inspected", "Published maximum and fifth sleeping place unknown"],
+        "optional_parking": {"amount": 65, "currency": "USD", "unit": "day", "tax_basis": "official detail says inclusive of tax", "source_id": "capitol-amenities", "included_in_no_car_task": false},
+        "mandatory_stay_total": null
+      },
+      "positive_five_person_shortlist": false,
+      "decision": "EXCLUDE from positive five-person and indoor-pool task matches; capacity and November availability are unknown, not a sold-out or closed-property verdict",
+      "unblock": "Named five-person suite/fifth-bed capacity and current exact-party rate; independent pool-season and arrival/rest evidence if those preferences are retained"
+    }
+  ],
+  "preservation": {
+    "room_corpus": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "price_observations": [
+      "docs/research/washington-dc-embassy-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-homewood-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-residence-price-observation-2026-09-30.json"
+    ],
+    "older_records_renewed": false,
+    "all_three_dated_samples_retained": true
+  },
+  "decision": {
+    "outcome": "PRESERVE four-category corpus and three dated prices; EXCLUDE both controls from positive five-person shortlist",
+    "hypothesis": "Generic kitchen, suite or connecting-room labels resolve the two missing positive candidates",
+    "result": "rejected; current category conflicts or absent maximum remain, and incidental cash flow is separate from room cost",
+    "confidence": "High inspected body distinctions and authorization arithmetic; unknown actual five-person acceptance, quote, service operation, review signals and user fit",
+    "next_gate": "059 needs replacement qualified properties or a narrower maintained comparison, remaining fee/review/rest evidence and explicit DC publication approval; next eligible action is named museum-rest task, not unchanged category rechecks",
+    "falsification_trigger": "Changed exact-category policy/body, exact-party accepted public plan, or independent matching-category evidence; otherwise recheck on November2 only if still relevant",
+    "paid_calls": 0,
+    "public_change": false,
+    "city_launch_approved": false,
+    "route_safety_stroller_assurance": false
+  }
+}

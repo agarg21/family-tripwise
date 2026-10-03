@@ -1,5 +1,11 @@
 # Family Tripwise SEO Roadmap
 
+Current107 decision: PRESERVE four-category corpus/three independent nightly samples; EXCLUDE both unresolved controls from positive five-person matches without inability/closure claims. Source audit and new cash-flow distinction resolve059's exclusion gate, not full corpus/launch. Next native QA/read-only review/release, then named museum-rest task. Evidence: `docs/research/washington-dc-candidate-conflicts-2026-10-03.md`.
+
+Current FT-RES-107: resolve or exclude the two remaining DC Hyatt/Capitol category conflicts, preserving the original four-category corpus and three dated public price samples. Exact seven paths registered; source classes/dates and missing capacity/budget/rest evidence explicit. First action this16:22:48UTC run, deadline17:07:48UTC/maxthree. No publication, paid expansion or scheduler mutation; native QA/read-only PASS before release.
+
+FT-RES-106 completed research/docs-only release671d4f4f60c1221a66aefe0a56aeada7faeea264 remote verified2026-10-03T16:19:23.800Z/HEADorigin0-0 after exact7paths/all660index/all3Gitguards/freshfetch/normalpush. No public production change or Pages wait.011/105/106 complete this sprint run; no fourth. DC corpus/rest gates remain next as already reviewed. Mechanical local backfill only; earlier pending labels historical.
+
 FT-RES-106 final Cicero2PASS/noP0-P3:449full12focused/state0/GSC82/localSEO0-fiveprior/whitespace/all659baseline660candidate hashes/exact7scope/55publicHEADparity/11held654nonaction preserved. Parent075/time corrections verified; no research/ledger change. Review-clean exact7path research/docs release next; no public delivery or fourth action. Immutable review result only.
 
 FT-RES-106 pre-review QA green:449full12focused/state0/GSC82/localSEO0-fiveprior/whitespace/exact7delta654preserved/baseline659candidate660hashes/structured-null-price-demand-algebra/LRN116-only. Different frozen read-only review next; research-only, no public delivery.
