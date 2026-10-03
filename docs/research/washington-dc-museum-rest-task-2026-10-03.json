@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-108",
+  "learning_unit": "LRN-118",
+  "inspected_on": "2026-10-03",
+  "task": {"adults": 2, "child_ages": [4,8,12], "arrival": "2026-11-08", "departure": "2026-11-13", "anchors_on_separate_days": ["National Museum of Natural History", "National Museum of American History"], "no_car": true, "room_rest_minutes": null, "hotel": null, "actual_journey_tested": false, "evidence_class": "EDITORIAL_PROXY_TASK"},
+  "sources": [
+    {"id": "nmnh-visit", "url": "https://naturalhistory.si.edu/visit", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_VISITOR_FACT", "retrieval": "web-extracted body, tool crawl label today; exact crawl and policy-effective time unknown", "status": "body-inspected"},
+    {"id": "nmah-visit", "url": "https://americanhistory.si.edu/visit", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "SOURCE_UNAVAILABLE", "status": "unavailable", "attempts": 2, "http_status": 500, "retry_basis": "One same-URL transient server-error retry; same failure, stopped", "failed_operation": "web.open https://americanhistory.si.edu/visit ->500 Internal Server Error", "affected_gate": "American History current visitor-body constraints", "owner": "external museum source availability", "unblock": "Successful normal current official body after external availability changes", "next_check": "Only after availability change or next substantive American History task; no repeated hourly retry or alternate-tool bypass"},
+    {"id": "smithsonian-linked-guidelines", "url": "https://www.si.edu/visit/guidelines", "inspected_on": "2026-10-03", "published_on": null, "evidence_class": "SOURCE_UNAVAILABLE", "status": "unavailable", "attempts": 1, "http_status": 404, "failed_operation": "web.click NMNH security-information link ->404 Not Found", "affected_gate": "Linked institution-wide policy details not adopted", "owner": "external source link maintenance", "unblock": "Corrected authoritative link/body", "next_check": "Only if detailed policy gate becomes relevant and authoritative link changes; no guessed variants"}
+  ],
+  "museum_constraints": [
+    {
+      "museum": "National Museum of Natural History",
+      "source_id": "nmnh-visit",
+      "published_daily_open": "10:00",
+      "published_daily_close": "17:30",
+      "closed_date_exception": "December25",
+      "future_november_operation_confirmed": false,
+      "general_admission": {"amount": 0, "currency": "USD", "unit": "general museum admission/person", "tickets_required": false, "special_paid_experiences_included": false, "family_food_transport_total": null},
+      "entry_points": ["Madison Drive on National Mall", "Constitution Avenue"],
+      "screening": "Published visitor page requires security screening for visitors; no queue duration or expedited re-entry claim",
+      "storage": "No coat, bag or locker storage offered",
+      "packed_lunch": "Must be stored away during visit and eaten outside; no lunch seating or refrigerated lunch storage offered",
+      "room_return_duration_minutes": null,
+      "second_entry_wait_minutes": null,
+      "specific_hotel_route": null,
+      "stroller_route_assessed": false
+    },
+    {"museum": "National Museum of American History", "source_id": "nmah-visit", "published_daily_open": null, "published_daily_close": null, "general_admission": null, "entry_points": null, "screening": null, "storage": null, "packed_lunch": null, "room_return_duration_minutes": null, "specific_hotel_route": null, "future_november_operation_confirmed": false, "stroller_route_assessed": false}
+  ],
+  "editorial_derivation": {
+    "published_nmnh_window_minutes": 450,
+    "basis": "17:30 minus10:00, only the displayed general schedule; not usable visit time or November availability",
+    "two_session_condition": "Morning visit + outward journey + room rest + return journey + entry wait + afternoon visit must fit actual operating window",
+    "morning_visit_minutes": null,
+    "outward_journey_minutes": null,
+    "return_journey_minutes": null,
+    "entry_wait_minutes": null,
+    "afternoon_visit_minutes": null,
+    "feasibility": "unknown",
+    "hotel_winner": null,
+    "admission_is_full_trip_total": false,
+    "weather_backup_meal_verified": false
+  },
+  "maintained_inputs": {
+    "room_corpus": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "price_observations": ["docs/research/washington-dc-embassy-price-observation-2026-09-30.json", "docs/research/washington-dc-homewood-price-observation-2026-09-30.json", "docs/research/washington-dc-residence-price-observation-2026-09-30.json"],
+    "category_exclusions": "docs/research/washington-dc-candidate-conflicts-2026-10-03.json",
+    "observations_renewed": false,
+    "nightly_price_context_retained": true
+  },
+  "decision": {
+    "outcome": "CANDIDATE museum-side constraint inputs; PRESERVE hotel-return feasibility as unknown",
+    "hypothesis": "A Mall-side hotel label plus free museum admission settles a midday room-rest plan",
+    "result": "rejected; exact entrance, journeys, rest and repeated entry wait are missing, and an indoor packed-lunch fallback is unsupported",
+    "confidence": "High inspected NMNH visitor facts and window arithmetic; unknown American History current rules, November operations, routes, queues, full budget, family fit or SEO",
+    "remaining_gate": "American History body after availability change; named hotel/entrance/out-and-back transport evidence, actual rest preference and future operation check; fee/review corpus and DC publication scope remain",
+    "next_eligible_action": "Use retained room/price inputs for an existing five-person cooking/budget task without route winner; no unchanged source retry",
+    "falsification_trigger": "Changed visitor rules/operation, restored second-anchor body, supported exact-hotel journey/rest/entry evidence or a competing same-task complete output",
+    "paid_calls": 0,
+    "public_change": false,
+    "route_safety_stroller_assurance": false,
+    "city_launch_approved": false
+  }
+}

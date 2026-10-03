@@ -1,5 +1,11 @@
 # Family Tripwise SEO Roadmap
 
+FT-RES-108 independent Hilbert1PASS/noP0-P3/449full74focused/state0/GSC82/SEO0-fiveprior/hash-scope-public-held preservation. Exact seven-path research release next; no public change or route verdict. Immutable review result only.
+
+Current108 decision: CANDIDATE museum-side inputs/PRESERVE actual hotel-return unknown. Narrow American History500 and linked-policy404 holds; no unchanged retry. LRN118 and sources: `docs/research/washington-dc-museum-rest-task-2026-10-03.md`. Native QA/read-only review/exact seven-path research release next, then retained five-person cooking/budget task. DC approval and remaining corpus/rest evidence stay separate.
+
+Current108: museum-side midday-rest constraints for the existing DC family task, exact seven paths registered before collection. Hours/admission/security are not an actual hotel-return route or family-fit verdict.107 exclusion research releasedfc11f60d0a3eb4c179de6a291765c7c9563ad351/remoteverified16:41:20.562UTC, not a publicpage. Second action this sprint run/deadline17:07:48UTC; old corpus/prices/dates/eleven held unchanged. NativeQA/read-onlyreview before docs-only release.
+
 Current107 decision: PRESERVE four-category corpus/three independent nightly samples; EXCLUDE both unresolved controls from positive five-person matches without inability/closure claims. Source audit and new cash-flow distinction resolve059's exclusion gate, not full corpus/launch. Next native QA/read-only review/release, then named museum-rest task. Evidence: `docs/research/washington-dc-candidate-conflicts-2026-10-03.md`.
 
 Current FT-RES-107: resolve or exclude the two remaining DC Hyatt/Capitol category conflicts, preserving the original four-category corpus and three dated public price samples. Exact seven paths registered; source classes/dates and missing capacity/budget/rest evidence explicit. First action this16:22:48UTC run, deadline17:07:48UTC/maxthree. No publication, paid expansion or scheduler mutation; native QA/read-only PASS before release.
