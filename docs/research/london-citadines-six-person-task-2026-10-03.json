@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-104",
+  "destination": "London UK",
+  "checked_on": "2026-10-03",
+  "refresh_days": 30,
+  "evidence_scope": "Separate current official Citadines named category and matched individual-age budget; original October2 corpus and every older price remain immutable. Published capacity and returned rates are not booking acceptance, safety, rest or comfort assurances.",
+  "scenario": {"adults": 2, "child_ages": [4,8,12,15], "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"}, "preferences": ["separate bedrooms", "kitchen", "midday rest with location tradeoffs unresolved"], "budget": null},
+  "sources": {
+    "citadines-trafalgar": {"url": "https://www.discoverasr.com/en/citadines/united-kingdom/citadines-trafalgar-square-london/2-bedroom-apartment", "checked_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective", "source_surface": "Official rendered category inspected October3; named apartment max6,70sqm duplex, double bedroom plus twin bedroom and double sofa in living area, kitchen, one bathroom/separate toilet. No effective policy publication date established."},
+    "citadines-engine": {"url": "https://www.discoverasr.com/en/booking/property-listing/booking-journey", "checked_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective", "source_surface": "Category calendar and guest steppers ->View Rates, one room/two adults/four individually entered ages4,8,12,15 November8-13. Native result names2-Bedroom Apartment/max6/same beds/kitchen. Clean booking path only; session/query identifiers not retained. Source facts separate from BOOKING_CHECK price observation."}
+  },
+  "records": [{
+    "id": "citadines-trafalgar-two-bedroom",
+    "hotel": "Citadines Trafalgar Square London",
+    "category": "2-Bedroom Apartment",
+    "source_id": "citadines-engine",
+    "configurations": [{"maximum": 6, "max_adults": null, "max_children": null, "infant_extension": null, "conditions": [], "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Official category and matched native result publish maximum6; actual individual-age search returned this category, not completed reservation acceptance"}],
+    "sleeping_setup": "Published70sqm duplex: first bedroom double160x200cm, second two singles90x200cm, double sofa in living area; one bathroom with separate toilet. Kitchen includes hob, microwave, refrigerator, dishwasher and utensils. Sofa dimensions/comfort, stairs and rest isolation unverified.",
+    "kitchen": "published-kitchen",
+    "connection": "not-applicable",
+    "price": {"currency": "GBP", "unit": "configuration/night", "amount": null, "observed_on": null, "status": "not-observed", "missing_basis": ["Separate own dated exact-task price array required; no headline member-rate or other-property inheritance"]},
+    "checks": ["Own public prepaid/flexible dated samples are separately joined for the exact ages/stay; adult classification cutoffs not established", "Double sofa is published in the returned category, but setup inclusion and separate charges/final checkout not established", "Duplex/internal stairs, lift/entrance, rest isolation and suitability remain unknown", "Advance full prepayment is not an additional stay fee; flexible credit-card guarantee is not a zero incidental hold assurance"],
+    "conflicts": []
+  }],
+  "offer_observations": [],
+  "privacy": "Synthetic family/stay, public-safe paraphrases and stable official URLs only. No session/query/identity/raw export retained; no Book/rate selection/cart/hold/account/contact/payment/paidcall/hiddenAPI/security denial bypass. Temporary tab29closed; facts Master-observed, not independent live verification."
+}

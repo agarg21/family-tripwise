@@ -1,0 +1,34 @@
+[
+  {
+    "schema_version": 3,
+    "action": "FT-RES-104",
+    "checked_on": "2026-10-03",
+    "source_url": "https://www.discoverasr.com/en/booking/property-listing/booking-journey",
+    "source_surface": "Ordinary official category calendar and one-room guest steppers, View Rates, then GBP currency selector. Two adults and four exact ages4,8,12,15 entered; visible generated search retained these ages and Nov8-13five nights. Named max6 category returned; public Advance Purchase and Flexible Rate detail panels inspected, no Book button used. Initial USD display expressly estimated exchange rate, excluded in favour of displayed GBP. Stable path only, no session/query parameters retained.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "citadines-trafalgar-two-bedroom",
+    "category": "2-Bedroom Apartment",
+    "booking_category": "2-Bedroom Apartment",
+    "configuration_basis": "One whole70sqm apartment with two bedrooms: double160x200cm, two singles90x200cm, double sofa in living area, fully equipped kitchen, maximum6. Category duplex published on official detail. Not per person, unrelated two-adult room or guaranteed reservation; sofa setup/extra cost and actual access/rest unverified.",
+    "configuration_count": 1,
+    "currency": "GBP",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {"adults": 2, "child_ages": [4,8,12,15]},
+    "engine_party": {"adults": 2, "child_ages": [4,8,12,15], "adult_from_age": null, "child_age_from": null, "child_age_to": null, "classification_basis": "unpublished-cutoffs-exact-individual-party", "age_input_mode": "individual-ages"},
+    "rates": [
+      {"plan": "Advance Purchase", "eligibility": "public", "stay_amount": 2636, "meals": "No meal inclusion established in inspected public plan details", "cancellation": "Online payment,100% full prepayment; cannot be changed and non-refundable"},
+      {"plan": "Flexible Rate", "eligibility": "public", "stay_amount": 2926, "meals": "No meal inclusion established in inspected public plan details", "cancellation": "Cancel by2PM on arrival day to avoid one-night rental charge; timezone not specified. Valid credit-card guarantee, no deposit or charge at booking; pay upon arrival."},
+      {"plan": "ASR Flash Sale", "eligibility": "membership-required", "stay_amount": 2048.20, "meals": "Not established; member plan detail not inspected", "cancellation": "Non-refundable badge; detailed payment/amendment/cancellation terms not inspected"},
+      {"plan": "ASR Stay Longer Save More", "eligibility": "membership-required", "stay_amount": 2253.60, "meals": "Not established; member plan detail not inspected", "cancellation": "Non-refundable badge; detailed payment/amendment/cancellation terms not inspected"},
+      {"plan": "ASR Advance Purchase", "eligibility": "membership-required", "stay_amount": 2372.40, "meals": "Not established; member plan detail not inspected", "cancellation": "Non-refundable badge; detailed payment/amendment/cancellation terms not inspected"},
+      {"plan": "ASR Flexible Rate", "eligibility": "membership-required", "stay_amount": 2633.40, "meals": "Not established; member plan detail not inspected", "cancellation": "Detailed member cancellation and payment policy not inspected; do not inherit public Flexible Rate terms"}
+    ],
+    "fee_basis": "Both public GBP2636/2926 five-night totals explicitly displayed Inclusive of taxes & fees. Itemised tax amounts, sofa setup inclusion/separate charges, optional extras and final checkout not established; no fee added or double-counted. Not a complete guaranteed all-in quote. ASR member headline2048.20 is not a public price.",
+    "deposit_basis": "Public Advance Purchase100% stay prepayment2636, not extra fee. Public Flexible Rate valid credit-card guarantee, expressly no deposit/no card charge at booking and pay upon arrival. Incidental/security authorisation or hold amount not established; member deposit policies not inspected.",
+    "limitation": "Exact synthetic ages individually entered and search retained; unpublished classification cutoffs remain null, no reclassification. Anonymous result offers two non-ASR public plans alongside four explicitly ASR-exclusive plans; latter excluded from default public comparison. Public nightly equivalents527.20/585.20 derived by five-night division, one dated stay/plan span, not typical seasonal range, current booking guarantee, final all-fee total or suitability assurance. No Book/rate selection/cart/hold/guestdetails/account/contact/payment/paid/hiddenAPI/CAPTCHA/security bypass or denied retry. Source observation by Master, not independent live verification. Recheck priceOctober17 or changed task/terms; historical after14days. Older corpus/quotes/dates/public unchanged.",
+    "conflicts": []
+  }
+]

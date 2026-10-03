@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+## 2026-10-03 - FT-RES-104 Registration
+
+Master native schema3/pack/price/task/CLI/parity/wrongparty-stay-future-aging-owner/memberfilter/nonmutation controls pass. Sixpacks9categories15rows13publicplans7pricedcategories2gaps; prior13rows identical.62focused447working full/no failures-skips/state0/GSC81/localSEO31URLs34HTML0errors-fiveprior/whitespace pass. Frozen release-tree full QA and different read-only reviewer next; sources Master-attributed, not independent live verification. No public release claimed.
+
+Exact eight paths registered before collection. Citadines official namedcategory and anonymous same-party/stay budget only; source classes/age mapping/wholeconfiguration nightly context/unknowns preserved. Native pack-price-task validation, focused/full QA, frozen different read-only PASS and exact-path release required. All prior evidence/eleven held paths/public pages unchanged;077onlythreegatefields. No paid research/booking/contact/account/denied retry/bypass/newcity authority. Research-only closes a remaining independent-provider gate while public candidates remain ineligible.
+
 FT-IMP-062 final cycle1Raman `01a1002d-6640-7d80-919e-3c18e05bccb5` PASS/noP0-P3. Independent446full62focused/no failures-skips/operator0/GSC81/localSEO31URLs34HTML0-fiveprior;13row8category5pack task/11publicplans2gaps/original price-context/single-pack bytes/exact10scope/077only3gatefields/prioractiontruth/all648release and648baseline hashes/no extra-missing files/publicHEADparity. No live source/preview/account/Git/report mutation by reviewer. Operator447working and446frozen suites, native schema/whitespace/parity green; mistaken optional GSC path corrected to existing validator81, archive buffer sizing fixed before valid freeze. Ten exact paths staged after PASS, entire648index bytes/modes match frozen tree, freshfetch/sole outgoing range/all3Gitgates/normalpush. Action6296d6a8e046a902ffd059f82cb892d20e21c870 remoteverified2026-10-03T05:17:53Z; no Pages/public release/date renewal, elevenheldpaths preserved. Mechanical immutable results only; earlier pending checkpoints historical.
 
 ## 2026-10-03 - FT-IMP-062 Registration
