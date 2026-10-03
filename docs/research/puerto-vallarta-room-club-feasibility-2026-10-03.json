@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-121",
+  "parent_item": "FT-RES-062",
+  "learning_unit": "LRN-137",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "Family-resort and junior-suite labels plus club ages establish a five-person room and useful nightly family price",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "configurations": 1,
+    "no_car": true,
+    "arrival_time": null,
+    "evidence_class": "EDITORIAL_PROXY_TASK",
+    "real_user_test": false
+  },
+  "sources": [
+    {
+      "id": "bahia-rooms",
+      "url": "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/bahia-mita-surf-spa-resort/accommodations/rooms-suites/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_CATEGORY_AND_PRICE_BASIS",
+      "retrieval": "web extracted current body; crawl label today; policy-effective date unknown",
+      "status": "body-inspected"
+    },
+    {
+      "id": "vallarta-club-rooms",
+      "url": "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/vallarta-bay-resort-spa/accommodations/club-level/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_CATEGORY_AND_PRICE_BASIS",
+      "retrieval": "web extracted current body; crawl label2daysago; exact crawl time unknown",
+      "status": "body-inspected"
+    },
+    {
+      "id": "bahia-home",
+      "url": "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/bahia-mita-surf-spa-resort/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_PROGRAM_FACT",
+      "retrieval": "web extracted current body; crawl label today",
+      "status": "body-inspected"
+    },
+    {
+      "id": "vallarta-home",
+      "url": "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/vallarta-bay-resort-spa/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_PROGRAM_AND_TRANSPORT_POLICY",
+      "retrieval": "web extracted current body; crawl label yesterday",
+      "status": "body-inspected"
+    },
+    {
+      "id": "vallarta-activities",
+      "url": "https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/vallarta-bay-resort-spa/activities/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_PROGRAM_AND_SEPARATE_CARE_POLICY",
+      "retrieval": "web extracted current body; crawl label today",
+      "status": "body-inspected"
+    },
+    {
+      "id": "bahia-address",
+      "url": "https://www.hyatt.com/en-US/hotel/mexico/dreams-bahia-mita/drbmi",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_ADDRESS",
+      "retrieval": "web extracted current body; crawl label today; not a browser quote",
+      "status": "body-inspected"
+    },
+    {
+      "id": "vallarta-address",
+      "url": "https://www.hyatt.com/en-US/hotel/mexico/vallarta-bay-resort-spa/drvpv",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_ADDRESS",
+      "retrieval": "web extracted current body; crawl label today",
+      "status": "body-inspected"
+    }
+  ],
+  "properties": [
+    {
+      "id": "dreams-bahia-mita",
+      "name": "Dreams Bahia Mita Surf & Spa Resort",
+      "address": {
+        "source_id": "bahia-address",
+        "published": "Carretera Cruz De Huanacaxtle, Nayarit, Mexico, 63762",
+        "normalized_base": "Nayarit coast; not Puerto Vallarta city",
+        "exact_municipality_verified": false,
+        "transfer_minutes": null,
+        "route_verified": false
+      },
+      "categories": [
+        {
+          "name": "Junior Suite Tropical View",
+          "source_id": "bahia-rooms",
+          "variants": [
+            {
+              "beds": "king",
+              "max_guests": 3,
+              "max_adults": 2
+            },
+            {
+              "beds": "two queens",
+              "max_guests": 4,
+              "max_adults": 3
+            }
+          ],
+          "task_screen": "EXCLUDE these individual categories for five",
+          "property_wide_exclusion": false
+        },
+        {
+          "name": "Family Suite Tropical View",
+          "source_id": "bahia-rooms",
+          "max_guests": 7,
+          "max_adults": 4,
+          "composition": "Published connected pair of the tropical junior-suite category",
+          "beds_heading_raw": "One king-size bed or two queens x 2",
+          "bedding_allocation_confirmed": false,
+          "connection_reservation_guarantee": null,
+          "task_screen": "CANDIDATE published limit only; exact booking and sleeping allocation unconfirmed"
+        }
+      ],
+      "programs": {
+        "source_id": "bahia-home",
+        "explorer_age_from": 3,
+        "explorer_age_to": 12,
+        "requested_age_band_screen": [
+          true,
+          true,
+          true
+        ],
+        "core_zone_age_from": null,
+        "core_zone_age_to": null,
+        "conditions_registration_training_slots": null,
+        "future_november_operation_confirmed": false,
+        "booking_child_age_policy": null
+      }
+    },
+    {
+      "id": "dreams-vallarta-bay",
+      "name": "Dreams Vallarta Bay Resort & Spa",
+      "address": {
+        "source_id": "vallarta-address",
+        "published": "David Alfaro Siqueiros 164, Zona Hotelera, Las Glorias, Puerto Vallarta, Mexico, 48333",
+        "normalized_base": "Puerto Vallarta city / Las Glorias",
+        "transfer_minutes": null,
+        "route_verified": false
+      },
+      "categories": [
+        {
+          "name": "Preferred Club Junior Suite Garden View",
+          "source_id": "vallarta-club-rooms",
+          "max_guests": 4,
+          "max_adults": 3,
+          "task_screen": "EXCLUDE this category for five",
+          "property_wide_exclusion": false
+        },
+        {
+          "name": "Preferred Club Master Suite Partial Ocean View",
+          "source_id": "vallarta-club-rooms",
+          "max_guests": 2,
+          "adults_only": true,
+          "adjoining_option": "Additional junior-suite category through private hallway is described; no combined child limit or guarantee adopted",
+          "task_screen": "EXCLUDE base category; separate combined configuration remains unknown",
+          "combined_capacity": null
+        }
+      ],
+      "programs": {
+        "source_ids": [
+          "vallarta-home",
+          "vallarta-activities"
+        ],
+        "explorer_age_from": 3,
+        "explorer_age_to": 12,
+        "core_zone_age_from": 13,
+        "core_zone_age_to": 17,
+        "requested_age_band_screen": [
+          true,
+          true,
+          true
+        ],
+        "requested_teen_band_screen": [
+          false,
+          false,
+          false
+        ],
+        "published_explorer_open": "09:00",
+        "published_explorer_close": "22:00",
+        "teen_hours": "season-dependent",
+        "uninterrupted_care_confirmed": false,
+        "future_november_operation_confirmed": false,
+        "booking_child_age_policy": null,
+        "published_prerequisites": {
+          "source_id": "vallarta-activities",
+          "fully_potty_trained": true
+        },
+        "requested_child_readiness": [
+          null,
+          null,
+          null
+        ],
+        "registration_requirements": null,
+        "available_places": null,
+        "actual_admission_confirmed": false,
+        "separate_child_care": {
+          "source_id": "vallarta-activities",
+          "separate_from_clubs": true,
+          "additional_charges_published": true,
+          "actual_cost": null,
+          "terms_subject_to_change": true
+        }
+      },
+      "transport": {
+        "source_id": "vallarta-home",
+        "guests_responsible_for_airport_costs": true,
+        "selected_transfer_cost": null,
+        "marketing_journey_minutes_adopted": false
+      }
+    }
+  ],
+  "price_context": {
+    "status": "NO_EXACT_TASK_QUOTE",
+    "family_nightly_amount": null,
+    "currency": null,
+    "unit": "one requested family configuration/night",
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ]
+    },
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "observed_on": null,
+    "fees_taxes_final_total": null,
+    "care_additional_cost": null,
+    "sold_out_claim": false,
+    "source_starting_samples": [
+      {
+        "source_id": "bahia-rooms",
+        "category": "Family Suite Tropical View",
+        "displayed_amount": 399,
+        "displayed_currency_symbol": "$",
+        "iso_currency_confirmed": false,
+        "unit": "per-person/per-night",
+        "party_basis": "double occupancy / two adults",
+        "stay_basis": "September low season; year not specified",
+        "source_inspected_on": "2026-10-03",
+        "tax_fee_basis": "specific-plan components unknown",
+        "usable_as_task_family_rate": false
+      },
+      {
+        "source_id": "vallarta-club-rooms",
+        "category": "Preferred Club Junior Suite Garden View",
+        "displayed_amount": 206,
+        "displayed_currency_symbol": "$",
+        "iso_currency_confirmed": false,
+        "unit": "per-person/per-night",
+        "party_basis": "double occupancy / two adults",
+        "stay_basis": "September low season; year not specified",
+        "source_inspected_on": "2026-10-03",
+        "tax_fee_basis": "specific-plan components unknown",
+        "usable_as_task_family_rate": false
+      }
+    ]
+  },
+  "conditional_fee": {
+    "source_id": "bahia-rooms",
+    "currency": "MXN",
+    "unit": "per-person early-check-in event",
+    "condition": "arrival before12:00",
+    "adult_from_age": 13,
+    "adult_amount": 500,
+    "child_age_from": 3,
+    "child_age_to": 12,
+    "child_amount": 250,
+    "hypothetical_party_amount": 1750,
+    "calculation": "2*500 + 3*250",
+    "selected_task_fee": null,
+    "arrival_time_unknown": true,
+    "tax_basis": null,
+    "booking_child_band_inferred": false,
+    "parking": {
+      "amount": 50,
+      "currency": "MXN",
+      "unit": "per vehicle; frequency unspecified",
+      "selected_no_car_charge": 0,
+      "complete_fee_free_claim": false
+    }
+  },
+  "price_dependency": {
+    "failed_operation": "cua.createBrowserTab browser2 official Hyatt Bahia overview; getAXState remained AXWebArea only, screenshot white; normal domcontentloaded completed but same blank state",
+    "url": "https://www.hyatt.com/en-US/hotel/mexico/dreams-bahia-mita/drbmi",
+    "attempts": 1,
+    "owner": "external normal page rendering / browser availability",
+    "affected_gate": "anonymous exact requested-party/date/category price, child age entry, fee/connection terms",
+    "unblock": "normal visible page and quote controls load, without another browser/tool workaround",
+    "next_check": "next eligible substantive exact-family quote task after changed rendering/session; no unchanged hourly retry",
+    "security_denial_claim": false,
+    "dates_party_entered": false,
+    "alternate_tool_used_to_recover_quote": false,
+    "tab_closed": true
+  },
+  "decision": {
+    "result": "CANDIDATE Bahia exact family category; REJECT five-person individual junior-suite and two-adult sample-price inheritance; PRESERVE public launch",
+    "confidence": "High inspected official maxima/bands/address and conditional fee arithmetic; unknown booking/connection/actual care/fees/transfers/reviews/SEO",
+    "reusable_lesson": "Room capacity, program age bands, specific fee classification and priced party are independent; regional resort naming cannot settle city-base logistics",
+    "next_gate": "Normal exact Bahia Family Suite2adults/children4,8,12 Nov8-13 quote with currency/unit/fees/child-policy/bed linkage; specific club prerequisites and requested readiness/registration/places; controlled US current resort overlap/comparison audit, maintained multi-property review corpus, base task/noexistingfit and fresh named publication approval remain",
+    "next_eligible_run": "next eligible actual sprint wake or recurring run after date restoration; no repeated broad report or blank quote retry",
+    "next_falsification_trigger": "Changed exact category/policy, available normal same-task quote, supported linkage/registration/transport terms or current controlled comparison evidence",
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0,
+    "new_reservation": false
+  },
+  "preservation": {
+    "old_source_price_records_renewed": false,
+    "public_pages_unchanged": true,
+    "held_paths_unchanged": true,
+    "observation_windows_unchanged": true,
+    "qualitative_web_is_controlled_us_serp": false,
+    "retained_lagged_demand_source": "docs/research/family-expansion-2026-09-30.json"
+  }
+}
