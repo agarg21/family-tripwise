@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-068",
+  "learning_unit": "LRN-136",
+  "parent_item": "FT-RES-059",
+  "validated_on": "2026-10-03",
+  "evidence_class": "MAINTAINED_SOURCE_TASK_VALIDATION_AND_MODEL_DERIVED_ARITHMETIC",
+  "maintained_source": "docs/research/washington-dc-museum-rest-task-2026-10-03.json",
+  "original_source_inspected_on": "2026-10-03",
+  "source_renewed": false,
+  "new_provider_calls": 0,
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "car": false,
+    "hotel": null,
+    "real_user_test": false,
+    "journey_tested": false
+  },
+  "hypothesis": "A published450minute window can settle midday hotel-return feasibility without measured journeys/rest/entry inputs",
+  "actual_task_result": {
+    "museum": "National Museum of Natural History",
+    "assessed_on": "2026-10-03",
+    "inspected_on": "2026-10-03",
+    "source_url": "https://naturalhistory.si.edu/visit",
+    "source_class": "OFFICIAL_VISITOR_FACT",
+    "source_freshness": "dated-not-revalidated",
+    "published_window_minutes": 450,
+    "duration_basis": "user-supplied hypothetical minutes; not observed journeys or entry waits",
+    "durations": {
+      "morning_visit_minutes": null,
+      "outward_journey_minutes": null,
+      "room_rest_minutes": null,
+      "return_journey_minutes": null,
+      "entry_wait_minutes": null,
+      "afternoon_visit_minutes": null
+    },
+    "missing_durations": [
+      "morning_visit_minutes",
+      "outward_journey_minutes",
+      "room_rest_minutes",
+      "return_journey_minutes",
+      "entry_wait_minutes",
+      "afternoon_visit_minutes"
+    ],
+    "known_component_minutes": 0,
+    "total_required_minutes": null,
+    "remaining_window_minutes": null,
+    "time_budget_status": "UNKNOWN",
+    "actual_hotel_return_feasibility": "UNKNOWN",
+    "hotel_winner": null,
+    "future_operation_confirmed": false,
+    "route_stroller_safety_assessed": false,
+    "limitation": "MODEL_DERIVED conditional arithmetic only. Published opening window is not usable visit time, dated-stay operation, entry/re-entry entitlement, a validated route, or family suitability. Unknown inputs are not zero; known-component sum is not a complete plan."
+  },
+  "hypothetical_durations": {
+    "morning_visit_minutes": 120,
+    "outward_journey_minutes": 30,
+    "room_rest_minutes": 90,
+    "return_journey_minutes": 30,
+    "entry_wait_minutes": 30,
+    "afternoon_visit_minutes": 120
+  },
+  "hypothetical_result": {
+    "museum": "National Museum of Natural History",
+    "assessed_on": "2026-10-03",
+    "inspected_on": "2026-10-03",
+    "source_url": "https://naturalhistory.si.edu/visit",
+    "source_class": "OFFICIAL_VISITOR_FACT",
+    "source_freshness": "dated-not-revalidated",
+    "published_window_minutes": 450,
+    "duration_basis": "user-supplied hypothetical minutes; not observed journeys or entry waits",
+    "durations": {
+      "morning_visit_minutes": 120,
+      "outward_journey_minutes": 30,
+      "room_rest_minutes": 90,
+      "return_journey_minutes": 30,
+      "entry_wait_minutes": 30,
+      "afternoon_visit_minutes": 120
+    },
+    "missing_durations": [],
+    "known_component_minutes": 420,
+    "total_required_minutes": 420,
+    "remaining_window_minutes": 30,
+    "time_budget_status": "within-published-window-only",
+    "actual_hotel_return_feasibility": "UNKNOWN",
+    "hotel_winner": null,
+    "future_operation_confirmed": false,
+    "route_stroller_safety_assessed": false,
+    "limitation": "MODEL_DERIVED conditional arithmetic only. Published opening window is not usable visit time, dated-stay operation, entry/re-entry entitlement, a validated route, or family suitability. Unknown inputs are not zero; known-component sum is not a complete plan."
+  },
+  "decision": {
+    "result": "IMPLEMENT conditional missing-input time budget; REJECT actual hotel-return feasibility from opening hours",
+    "confidence": "High deterministic arithmetic and missing-input routing; unknown actual journey, queues, dated operation, family satisfaction or SEO",
+    "next_gate": "Exact named hotel/entrances/date journeys, desired rest and actual entry rules; original narrow108availability dependencies and DC corpus/review/full-cost/materiality/noexistingfit/fresh publication approval remain",
+    "next_falsification_trigger": "Any unknown duration converted to zero, stripped hypothetical/source limits, changed official hours or supported measured exact-task inputs",
+    "public_change": false,
+    "new_city_approved": false
+  },
+  "preservation": {
+    "old_room_price_fee_records_unchanged": true,
+    "source_dates_unchanged": true,
+    "held_paths_unchanged": true,
+    "protected_observation_windows_unchanged": true
+  }
+}
