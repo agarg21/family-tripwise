@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+FT-OPS-011 Hooke `01a10266-b62a-7d92-b7bd-e72da43d28f2` cycle1PASS/noP0-P3. Independent449full22focused/state0/GSC82/SEO0-fiveprior/all655candidate654baseline hashes/exact8scope/55publicHEADparity/11held. Same-heartbeat update applied only after PASS; structured saved readback verified2026-10-03T15:39:30Z exact intended prompt/hourly/cutoff plus preserved keyset/created_at/id/name/kind/ACTIVE/thread/absent-default notifications. Only prompt/rrule/updated_at differ. Mechanical immutable results appended only; exact-path release next, no public production claim.
+
+## October 3 Sprint Registration
+
+FT-OPS-011 exact eight paths registered before edits. Fresh direct user October3 sprint request; original recurring saved fields, normal prompt suffix and Git3edac7c baseline must agree before mutation. Focused/full native QA and different independent read-only PASS required before same-heartbeat update. Date/global cutoff precede work; expired restoration fails closed and returns without project work. Preserve eleven held paths, all prior source/price dates, normal caps, spending, destination approval and public site. No scheduler activation or delivery claimed yet.
+
 FT-RES-104 final Ramanujan `01a101e6-fb5d-7812-adfc-de8766c7ae6b` cycle1PASS/noP0-P3. Independent446full62focused/no failures-skips/state0/GSC81/localSEO31URLs34HTML0-fiveprior; schema3/exacttask/527.20-585.20/memberexclusion/aging/CLI/parity/older13rows/all651candidate-and649baseline hashes/no missing-extra/exact8scope/077only3fields/LRN114only/11held/publicHEADparity. Canonical/privatevar scratch CLI passed; no source/external/repository/Git mutation by reviewer, sources Master-observed only. Entire651index regularblob bytes/modes/no activeoperation matched frozen reviewed tree; all3nativeGitgates/freshfetch/sole outgoingreviewedrange/normalpush. Commit8777581acc68705a5858ec65b5ed091a4763c26b remoteverified2026-10-03T13:20:31Z. Research/data-only/noPageswait/no publicrelease/old source renewal; mechanical immutable completion only.
 
 ## 2026-10-03 - FT-RES-104 Registration

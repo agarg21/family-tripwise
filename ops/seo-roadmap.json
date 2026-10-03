@@ -20,6 +20,41 @@
   ],
   "items": [
     {
+      "id": "FT-OPS-011",
+      "title": "Activate October 3 city and keyword qualification sprint",
+      "kind": "maintenance",
+      "status": "in-progress",
+      "selected_on": "2026-10-03",
+      "target_paths": [
+        "docs/plan/continuous-work-sprint-2026-10-03.md",
+        "ops/autopilot-prompt.md",
+        "ops/operator.json",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "tools/operator-sprint.test.mjs"
+      ],
+      "target_urls": [],
+      "evidence": "Direct user requests sprint today and city/non-city keyword expansion; actual clock October3Eastern; saved recurring baseline captured before mutation",
+      "acceptance_criteria": [
+        "Same existing heartbeat hourly only October3Eastern, max3 sequential transactions/run and45minute new-action start budget; global cutoff precedes all work",
+        "Preserve exact captured normal prompt/cadence/identity/thread/status/notification settings; restore on first expired wake and return without project work",
+        "Focused/full native QA, different independent read-only PASS, exact-path release; eleven held paths/public site/prior evidence unchanged"
+      ],
+      "measurement_plan": "Verify exact saved scheduler fields and bounded eligibility sequencing, not guaranteed runtime or SEO traction",
+      "production_invariant": "No public/new destination approval/paid authority expansion/security bypass/additional scheduler; normal caps and observation windows unchanged",
+      "decision": "Activate date-bounded requested sprint after independent PASS; WashingtonDC qualification and bounded non-city demand next",
+      "next_gate": "Prepare dated controls, native QA and independent read-only review before scheduler update",
+      "release_state": "reviewed-scheduler-verified-release-pending",
+      "review_outcome": "PASS",
+      "review_cycles": 1,
+      "reviewer_agent_ids": ["01a10266-b62a-7d92-b7bd-e72da43d28f2"],
+      "scheduler_verified_at": "2026-10-03T15:39:30Z",
+      "qa": "Hooke449full22focused/state0/GSC82/SEO0-fiveprior/all655release654baseline hashes/exact8scope/55publicHEADparity/11held",
+      "scheduler_verification": "Exact intended prompt/hourly cadence/global cutoff saved; keyset/created_at/id/name/kind/ACTIVE/thread/absent-default notification behavior preserved. Only prompt/rrule/updated_at differ."
+    },
+    {
       "id": "FT-RES-104",
       "title": "Resolve Citadines exact six-person apartment budget",
       "kind": "research",
