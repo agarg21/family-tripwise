@@ -1,6 +1,14 @@
 # Current Operating Cycle
 
+FT-RES-112 Schrodinger01a102fa-f851-7a91-b7c5-7cc5e5ad943d cycle1PASS/noP0-P3. Independent453full85focused/0failures-skips-cancellations/state0/GSC82/localSEO31URLs34HTML0-fiveprior/whitespace, exact8scope/all672baseline674candidate hashes/55publicHEAD/11held/LRN123only/059threefields/111completion verified. Master-observed source limits preserved, no independent live/production verification. All sessions finished; immutable consensus, docs-only release next.
+
+FT-RES-112 collected LRN123: narrower exact-category dated-budget information gain, decision completeness rejected/public launch preserved. Current two specialist bodies and seven-row/35-column export limits in `docs/research/washington-dc-comparison-task-2026-10-03.json`. Original records/eleven held unchanged;059onlythreefields/111completion retained. Full/focused nativeQA and different read-only review before docs-only release, no public delivery claim. Next latest setup unknowns/corpus/current review/rest/full-cost/materiality/noexistingfit/DC approval, no unchanged denial retry.
+
 ## Current Decision
+
+FT-RES-112 first transaction/new actual18:04:02UTC run/new-action deadline18:49:02UTC/maxthree, registered before collection. Named DC capacity/kitchen/rest/budget export versus specialist guides, exact8paths; no new public authority. No eligible unfinished public launch: Chicago preview and DC maintained corpus/rest/approval remain gated; this resolves059's explicit comparison/output gate. GSC reused recentOct3API14:43:20 finalizedOct1/priorOct2Sept30, orientation not CTR; fetch0-0/no incoming paths.111mechanical completion/eleven held/oldrecords retained. NativeQA/different read-onlyPASS before docs-only release; no scheduler or unchanged denial retry.
+
+FT-RES-111 research/docs release98b898a2768848aadf78cdfaebb5d5e49b9a42b0 remoteverified2026-10-03T18:01:20.876Z/HEADorigin0-0/exact7paths/all671index bytes-modes/all3Gitguards/freshfetch/sole reviewedrange/normalpush. ConfuciusPASS stands.109/110/111 complete all three transactions this17:20:02 run; no fourth or new public page/production delivery/Pages wait. Eleven held intact. Previously reviewed next gate remains explicit-unknown comparison/corpus/rest/materiality/DC approval; current review source hold unchanged. Immutable mechanical local completion only, retained for next actual transaction, no separate metadata-only commit.
 
 FT-RES-111 collected LRN122/current exact-category official UI facts with chair/utensil quantity/sofa geometry/current-condition/fee unknowns. Source/method/default one-adult Oct3-4 exclusion in `docs/research/washington-dc-homewood-exact-setup-2026-10-03.json`; no November availability/rate/review renewal, safety or fit verdict.059only3currentfields/110completion/11held/oldcorpus-prices-fee-review preserved. NativeQA/different read-onlyreview/docs release next; third/final transaction/no fourth, public launch still gated.
 

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-112",
+  "parent_item": "FT-RES-059",
+  "learning_unit": "LRN-123",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "The maintained exact-family CSV supplies decision-complete information gain beyond specialist family hotel guides.",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "car": false,
+    "kitchen_required": true,
+    "midday_room_rest": true,
+    "evidence_class": "EDITORIAL_PROXY",
+    "actual_user_test": false,
+    "booking_tested": false
+  },
+  "sources": [
+    {
+      "url": "https://travelforkids.mobi/family-hotels/washington-dc/washington-dc-family-hotels.html",
+      "class": "CURRENT_COMPETITOR_BODY",
+      "inspected_on": "2026-10-03",
+      "displayed_updated_on": null,
+      "crawl_label": "2 days ago",
+      "paraphrase": "Area-organized guide already compares kitchens, breakfast, pool, laundry and transit. Category descriptions differ from maintained exact-category records; verify identity rather than declaring the guide false. No task-matched dated room/party/stay price and fee table in inspected body.",
+      "official_facts_adopted": false
+    },
+    {
+      "url": "https://www.lovewashingtondc.com/family-hotels-in-washington-dc",
+      "class": "CURRENT_COMPETITOR_BODY",
+      "inspected_on": "2026-10-03",
+      "displayed_updated_on": "2026-07",
+      "displayed_reviewed_on": "2026-07-12",
+      "crawl_label": "2 days ago",
+      "paraphrase": "Guide already discusses age, sleep separation, rest, amenities, occupancy and full-cost checks. Inspected body lacks named exact-category task-matched dated rate plans. Its experience claims are not independently verified or adopted.",
+      "official_facts_adopted": false
+    }
+  ],
+  "export": {
+    "path": "docs/research/washington-dc-comparison-task-2026-10-03.csv",
+    "generator": "tools/family-room-comparison.mjs",
+    "as_of": "2026-10-03",
+    "columns": 35,
+    "rows": 7,
+    "categories": 4,
+    "dated_rate_rows": 6,
+    "unpriced_categories": 1,
+    "priced_properties": 3,
+    "original_price_observed_on": "2026-09-30",
+    "old_observations_renewed": false,
+    "public_output": false,
+    "ui_or_mobile_test": false,
+    "scope": "Offline editorial task artifact, not public comparison UX or current quote."
+  },
+  "outputs": {
+    "exact_category_capacity": "SUPPORTED dated published screen; no reservation or bedding acceptance",
+    "cooking": "PARTIAL two published-kitchen categories; absent kitchen evidence is not absence",
+    "nightly_budget": "SUPPORTED dated samples with party/category/fee/cancellation context, not comparable final stay cost",
+    "dining_together": "PARTIAL Residence four-seat table warning retained; Homewood chair/utensil quantities unknown in111 and not explicitly joined into CSV",
+    "sleep_setup": "PARTIAL separate spaces and sofa labels; numeric geometry, allocation and actual condition unresolved",
+    "midday_rest": "UNKNOWN actual entrance-to-room journeys/queues and usable rest time",
+    "complete_cost": "UNKNOWN taxes/components/mandatory sofa fees/holds unresolved, no best-value winner",
+    "review_signals": "UNKNOWN current qualifying kitchen/sleep evidence gap from110",
+    "decision_complete": "NO"
+  },
+  "price_limits": {
+    "nightly_values_usd": [
+      334.68,
+      408.14,
+      288.97,
+      316.61,
+      339.97,
+      433.65
+    ],
+    "unit": "configuration/night",
+    "not_current_quotes": true,
+    "not_typical_seasonal_ranges": true,
+    "residence_original_free_cancellation_cutoff": "2026-10-01",
+    "residence_cutoff_is_past_as_of": true,
+    "free_cancellation_claim_now": false,
+    "mixed_tax_and_fee_completeness": true,
+    "lowest_price_is_not_recommendation": true
+  },
+  "decision": {
+    "result": "CANDIDATE exact-category dated-budget information gain; REJECT decision completeness; PRESERVE public launch",
+    "confidence": "High deterministic export/category and inspected-body scope; medium editorial usefulness; unknown users/booking/SEO",
+    "reusable_lesson": "Exact-category and same-task dated prices add a narrower job than generic amenities, but dated cost and unresolved seating/rest cannot become a recommendation.",
+    "next_falsification_trigger": "Current exact-category task resolves seating/sofa/full mandatory cost/rest, or specialist body supplies equivalent same-task evidence",
+    "next_gate": "Surface latest explicit setup unknowns without renewing old facts; maintain corpus/current review/rest/full cost/material demand/no-existing-fit and fresh DC publication approval",
+    "next_eligible_run": "Next eligible transaction within today's actual-clock start budget, otherwise recurring run",
+    "public_change": false,
+    "city_launch_approved": false,
+    "firm_suitability_claim": false,
+    "paid_calls": 0
+  },
+  "preservation": {
+    "room_corpus": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "price_observations": [
+      "docs/research/washington-dc-embassy-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-homewood-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-residence-price-observation-2026-09-30.json"
+    ],
+    "audit_records": [
+      "docs/research/washington-dc-museum-rest-task-2026-10-03.json",
+      "docs/research/washington-dc-kitchen-fee-audit-2026-10-03.json",
+      "docs/research/washington-dc-kitchen-review-signals-2026-10-03.json",
+      "docs/research/washington-dc-homewood-exact-setup-2026-10-03.json"
+    ],
+    "unchanged_denial_retried": false
+  }
+}
