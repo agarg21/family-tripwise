@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-106",
+  "learning_unit": "LRN-116",
+  "as_of": "2026-10-03",
+  "method": {
+    "paid_calls": 0,
+    "market": "US planning task; free web sampling has no controlled market/rank",
+    "queries": [
+      "family train vacations USA New York with kids",
+      "Amtrak with kids children discount family room bedroom"
+    ],
+    "result_types": "Pooled qualitative discovery: operator discount/room/vacation pages, scenic editorial guides, tour packages and discussions; no quantified overlap or demand",
+    "community_bodies_retained": false,
+    "numeric_demand": null,
+    "kd": null,
+    "trend": null
+  },
+  "task": {
+    "destination": "New York City",
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "origin": null,
+    "service": null,
+    "preferences": [
+      "no car",
+      "compare party fare and sleeping eligibility before hotel handoff"
+    ],
+    "evidence_class": "EDITORIAL_PROXY_TASK",
+    "booking_tested": false
+  },
+  "sources": [
+    {
+      "id": "child-fare",
+      "url": "https://www.amtrak.com/deals-discounts/everyday-discounts/children-discounts",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PUBLISHED_POLICY",
+      "finding": "Ages2-12: half adult base fare with adult18+ in same reservation;13+ adult fare. Sleeping-accommodation charges excluded; further restrictions may apply."
+    },
+    {
+      "id": "family-room",
+      "url": "https://www.amtrak.com/family-bedroom",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PUBLISHED_CATEGORY",
+      "finding": "Published up to2adults and2children ages2-12; four daytime places/nighttime beds; route availability not inspected."
+    },
+    {
+      "id": "room-comparison",
+      "url": "https://www.amtrak.com/family-room-vs-bedroom-suite",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_CATEGORY_GUIDANCE",
+      "finding": "Bedroom Suite joins two bedrooms and publishes up to4people, not5."
+    },
+    {
+      "id": "rail-discovery",
+      "url": "https://www.amtrak.com/deals-discounts/rail-vacations-rail-tours/family-adventures-by-train.html",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_MARKETING_GUIDANCE",
+      "finding": "Rail family-trip discovery and child-discount headline already exist; not a route-specific family quote or arrival-base check."
+    },
+    {
+      "id": "scenic-competitor",
+      "url": "https://familyvacationist.com/amtrak-vacations-scenic-train-rides-north-america/",
+      "checked_on": "2026-10-03",
+      "published_on": null,
+      "displayed_updated_on": "2025-01-08",
+      "evidence_class": "SECONDARY_FORMAT_AUDIT",
+      "finding": "Eleven scenic-journey entries include a NYC-linked route; inspected body does not supply this exact-party fare/room/hotel-handoff total. No route facts or firsthand authority adopted."
+    }
+  ],
+  "outputs": {
+    "child_base_fare_screen": "all three declared ages within published child band; source restrictions still apply",
+    "family_room_screen": "party exceeds published two-child capacity; no verified match",
+    "bedroom_suite_screen": "five people exceeds published four-person maximum; no verified match",
+    "conditional_base_fare_algebra": {
+      "evidence_class": "EDITORIAL_DERIVATION_NOT_QUOTE",
+      "assumptions": [
+        "identical eligible adult base fare F for all five travelers on one selected service/reservation",
+        "no additional discount, fare-bucket, tax/fee, sleeper or package adjustment"
+      ],
+      "expression": "2*F + 3*(0.5*F) = 3.5*F",
+      "rail_only_savings_vs_5F_percent": 30,
+      "complete_trip_discount": false
+    },
+    "quoted_total": null,
+    "quoted_currency": null,
+    "quoted_rail_fare": null,
+    "sleeping_charge": null,
+    "route_or_room_availability": null,
+    "hotel_budget": null,
+    "arrival_to_base_practicality": null
+  },
+  "decision": {
+    "outcome": "WATCH existing-city rail budget handoff; REJECT generic national scenic-list URL",
+    "hypothesis": "A child-discount headline and family-room name establish a cheap five-person rail holiday",
+    "result": "rejected; age-based fare and room capacity are distinct, complete cost and current job materiality unknown",
+    "confidence": "High inspected policy/category distinctions and conditional algebra; unknown route availability, exact fare, narrow demand, user fit or SEO outcome",
+    "remaining_gate": "Controlled distinct-job/material-demand/overlap where authorized; one named service's exact-party public fare/class/fees/refund and available sleeping configuration; dated same-party hotel budget and independently supported arrival-to-base task. Existing NYC owner first, no newURL approval",
+    "next_eligible_run": "One higher-priority city corpus/rest gate first; reopen rail watch only for current demand evidence or a named service-budget/arrival feasibility task, not another generic cluster summary",
+    "falsification_trigger": "Official age/category terms change, exact-party service quote contradicts screen, or replicated distinct demand plus maintained output exceeds existing-city fit"
+  },
+  "invariants": {
+    "public_change": false,
+    "new_url_approved": false,
+    "scheduler_change": false,
+    "paid_scope_expanded": false,
+    "old_sources_renewed": false,
+    "route_safety_stroller_assurance": false
+  }
+}
