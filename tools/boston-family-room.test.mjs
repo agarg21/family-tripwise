@@ -5,7 +5,7 @@ import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {validateRoomPack,screenRoomPack} from './family-room-task.mjs';
 import {validateRoomPrices} from './family-room-price.mjs';
-import {roomComparisonCsv} from './family-room-comparison.mjs';
+import {roomComparisonCsv,roomComparisonsCsv} from './family-room-comparison.mjs';
 const file=n=>new URL('../docs/research/'+n,import.meta.url);
 const pack=JSON.parse(readFileSync(file('boston-room-configurations-2026-10-01.json')));
 const prices=JSON.parse(readFileSync(file('boston-fenway-price-observation-2026-10-03.json')));
@@ -14,6 +14,32 @@ const audit=JSON.parse(readFileSync(file('boston-fenway-family-task-2026-10-03.j
 const rows=(party=pack.scenario,date='2026-10-03',samples=prices)=>screenRoomPack(pack,party,date,samples);
 const positive='boston-fenway-two-bedroom-tobt',negative='boston-fenway-one-bedroom-onbt';
 const find=(list,id)=>list.find(r=>r.id===id);
+
+test('Fenway current bodies do not establish priced TOBT category or renew old defects',()=>{
+  const e=JSON.parse(readFileSync(file('boston-fenway-review-signals-2026-10-03.json')));
+  assert.equal(e.method.qualifying_reports,2);assert.equal(e.reports.length,2);
+  assert.equal(e.method.exact_tobt_category_reports,0);assert.equal(e.method.party_match_reports,0);
+  assert.equal(e.method.complete_current_corpus,false);assert.equal(e.method.independent_authenticity_verified,false);
+  for(const r of e.reports){assert.equal(r.category_label,'King Bed Studio');assert.equal(r.translated,true);assert.equal(r.party_basis,null);assert.equal(r.exact_tobt_match,false);
+    assert.ok(r.posted_on>='2026-04-01'&&r.posted_on<='2026-10-03');assert.ok(r.stay_month>='2026-04'&&r.stay_month<='2026-10');
+    assert.deepEqual(Object.keys(r).sort(),['id','source_id','locator','posted_on','stay_month','trip_type','category_label','translated','party_basis','signal','exact_tobt_match'].sort());}
+  for(const k of ['prevalence','exact_tobt_condition','exact_party_equipment','sofa_condition','pool_current_closure','actual_museum_return_or_rest'])assert.equal(e.interpretation[k],null);
+  assert.equal(e.interpretation.historical_reports_renewed,false);
+  assert.equal(e.sources.trip.aggregate_rating_or_ai_summary_adopted,false);
+  assert.equal(e.decision.city_launch_approved,false);assert.equal(e.decision.public_change,false);assert.equal(e.decision.paid_calls,0);
+});
+test('Fenway dated review checks preserve single/joined budget basis and exclusions',()=>{
+  const samples=[...original,...prices],csv=roomComparisonCsv(pack,pack.scenario,'2026-10-03',samples);
+  assert.equal(roomComparisonsCsv([pack],pack.scenario,'2026-10-03',samples),csv);
+  const parse=s=>s.trimEnd().split('\n').map(line=>[...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m=>m[1].replaceAll('""','"')));
+  const data=parse(csv),index=n=>data[0].indexOf(n),r=data.slice(1).find(r=>r[index('Published category')].includes('TOBT'));
+  assert.equal(r[index('Nightly equivalent')],'781');assert.equal(r[index('Displayed stay amount')],'3905');
+  assert.match(r[index('Next checks')],/not TOBT category or five-person confirmation/);
+  assert.match(r[index('Next checks')],/Older pool\/sofa\/noise reports not renewed/);
+  assert.match(r[index('Fee and tax basis')],/unchecked/);
+  assert.equal(find(rows({...pack.scenario,child_ages:[4,8,13]},'2026-10-03',samples),positive).price.status,'not-observed');
+  assert.equal(find(rows(),negative).screening,'OUTSIDE_PUBLISHED_LIMIT');
+});
 test('Boston Fenway exact categories retain independent source dates and cooking controls',()=>{
   assert.deepEqual(validateRoomPack(pack),[]);assert.deepEqual(validateRoomPrices(prices,pack),[]);
   assert.equal(pack.records.length,7);assert.equal(pack.sources.park.checked_on,'2026-10-01');assert.equal(pack.sources.copley.checked_on,'2026-10-03');

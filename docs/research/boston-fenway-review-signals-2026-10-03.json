@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-131",
+  "learning_unit": "LRN-149",
+  "parent_item": "FT-RES-061",
+  "inspected_on": "2026-10-03",
+  "hotel": "Residence Inn Boston Back Bay/Fenway",
+  "address": "125 Brookline Ave, Boston MA 02215",
+  "evidence_class": "ONLINE_REVIEW_SIGNAL",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "real_user_test": false
+  },
+  "sources": {
+    "trip": {
+      "url": "https://www.trip.com/hotels/boston-hotel-detail-2197842/residence-inn-boston-back-bay-fenway/review.html",
+      "inspected_on": "2026-10-03",
+      "search_crawl_label": "3 weeks ago",
+      "opened_crawl_label": "last month",
+      "published_on": null,
+      "body_available": true,
+      "aggregate_rating_or_ai_summary_adopted": false
+    }
+  },
+  "method": {
+    "inclusion": "Visible individual bodies labeled Family, publication April1-October3 2026 and stated stay month April2026 onward",
+    "selection": "Purposeful visible-body sample up to6; two qualify. Not random/exhaustive/representative; filters/pagination untested; regional duplicates not added as independent evidence",
+    "qualifying_reports": 2,
+    "complete_current_corpus": false,
+    "independent_authenticity_verified": false,
+    "exact_tobt_category_reports": 0,
+    "party_match_reports": 0
+  },
+  "reports": [
+    {
+      "id": "fenway-family-01",
+      "source_id": "trip",
+      "locator": "lines72-88",
+      "posted_on": "2026-06-16",
+      "stay_month": "2026-05",
+      "trip_type": "Family",
+      "category_label": "King Bed Studio",
+      "translated": true,
+      "party_basis": null,
+      "signal": "Breakfast choice was limited despite positive cleanliness and service.",
+      "exact_tobt_match": false
+    },
+    {
+      "id": "fenway-family-02",
+      "source_id": "trip",
+      "locator": "lines192-208",
+      "posted_on": "2026-06-02",
+      "stay_month": "2026-04",
+      "trip_type": "Family",
+      "category_label": "King Bed Studio",
+      "translated": true,
+      "party_basis": null,
+      "signal": "A kettle was reported unavailable.",
+      "exact_tobt_match": false
+    }
+  ],
+  "excluded": [
+    {
+      "locator": "lines94-109",
+      "reason": "Business traveler/February stay outside window despite June publication."
+    },
+    {
+      "locator": "lines115-185;214-374",
+      "reason": "Older stays/publications outside window; historical pool closure, sofa/noise/equipment reports not current TOBT defects or November operations."
+    }
+  ],
+  "interpretation": {
+    "supported": "Dated property-level meal/equipment questions only",
+    "prevalence": null,
+    "exact_tobt_condition": null,
+    "exact_party_equipment": null,
+    "sofa_condition": null,
+    "pool_current_closure": null,
+    "actual_museum_return_or_rest": null,
+    "future_operations_confirmed": false,
+    "route_stroller_safety_assessed": false,
+    "category_identity": "King Studio is not exact two-bedroom TOBT or one-bedroom ONBT; no limit/equipment/condition transfer",
+    "historical_reports_renewed": false
+  },
+  "decision": {
+    "result": "IMPLEMENT dated comparison uncertainty check; CANDIDATE two current property-level signals; REJECT exact-category/full-corpus certainty",
+    "confidence": "High extraction/date limits; low representativeness, unknown family rest/budget/service/users/SEO",
+    "next_gate": "Representative reconciled exact-suite corpus, inclusivefees/deposit, actual no-car return/rest, fullcorpus/materiality/noexistingfit/fresh namedBostonapproval; no unchanged117/tax retry",
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0
+  },
+  "preservation": {
+    "seven_categories_five_properties_unchanged": true,
+    "source_price_dates_unchanged": true,
+    "fenway_781night_3905pretax_observation_unchanged": true,
+    "park_plaza_prices_unchanged": true,
+    "capacity_view_070_unchanged": true,
+    "held_work_unchanged": true
+  }
+}
