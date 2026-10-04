@@ -102,6 +102,11 @@ export function validateRoomPrices(observations, pack) {
           !Number.isFinite(rate.stay_amount) || rate.stay_amount <= 0 ||
           !Number.isSafeInteger(Math.round(rate.stay_amount * 100)) || plans.has(rate.plan)) fail("Invalid/duplicate rate plan");
       plans.add(rate?.plan);
+      if (rate && ["object", "function"].includes(typeof rate) && "cancellation_deadline_local_date" in rate) {
+        const deadline = Object.getOwnPropertyDescriptor(rate, "cancellation_deadline_local_date");
+        if (!deadline || !Object.hasOwn(deadline, "value") || !deadline.enumerable || !validDate(deadline.value))
+          fail("Cancellation deadline must be an own enumerable ISO calendar date");
+      }
     }
   }
   return errors;
@@ -117,8 +122,12 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     o.arrival === stay.arrival && o.departure === stay.departure && o.party.adults === party.adults &&
     sameAges(o.party.child_ages, party.child_ages)).sort((a, b) => b.checked_on.localeCompare(a.checked_on))[0];
   if (!observation) return null;
-  const rates = observation.rates.filter(rate => observation.schema_version === 1 || rate.eligibility === "public").map(rate => ({ ...structuredClone(rate),
-    nightly_average: Math.round(rate.stay_amount * 100 / observation.nights) / 100 }));
+  const rates = observation.rates.filter(rate => observation.schema_version === 1 || rate.eligibility === "public").map(rate => {
+    const deadline = rate.cancellation_deadline_local_date;
+    return { ...structuredClone(rate), nightly_average: Math.round(rate.stay_amount * 100 / observation.nights) / 100,
+      ...(deadline ? { cancellation_deadline_date_relation: asOf < deadline ? "BEFORE_RECORDED_LOCAL_DATE" :
+        asOf === deadline ? "SAME_RECORDED_LOCAL_DATE" : "AFTER_RECORDED_LOCAL_DATE" } : {}) };
+  });
   if (!rates.length) return null;
   const age = (Date.parse(asOf) - Date.parse(observation.checked_on)) / 86400000;
   const status = observation.schema_version === 5 ? "dated-age-unresolved-count-samples" :

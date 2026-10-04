@@ -58,6 +58,11 @@ function observedNightlyBudget(price, rate, budget) {
   return [`Observed nightly budget ${status}: limit ${budget.nightly_limit} ${budget.currency}/configuration/night; price-only dated sample, not final all-fee budget, booking acceptance, future availability or hotel ranking`];
 }
 
+function cancellationDateCheck(rate, asOf) {
+  if (!rate?.cancellation_deadline_local_date) return [];
+  return [`Cancellation deadline date check ${rate.cancellation_deadline_date_relation}: recorded hotel-local date ${rate.cancellation_deadline_local_date}; comparison date ${asOf}; calendar dates only, no timezone conversion or current cancellability/availability guarantee; recheck current rate terms`];
+}
+
 function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budget }) {
   const screened = screenRoomPack(pack, party, asOf, prices);
   const stay = party.stay ?? pack.scenario?.stay;
@@ -82,7 +87,7 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budg
       [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed",
         ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : []),
         ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : []),
-        ...observedNightlyBudget(price, rate, budget)].join("; ")
+        ...observedNightlyBudget(price, rate, budget), ...cancellationDateCheck(rate, asOf)].join("; ")
     ]);
   });
 }

@@ -77,8 +77,8 @@
     "new_destination_authority": false,
     "review_and_security_gates_unchanged": true,
     "guaranteed_continuous_runtime": false,
-    "scheduler_application_state": "hourly-sprint-enabled-and-saved-fields-verified",
-    "scheduler_verified_at": "2026-10-03T15:39:30Z",
+    "scheduler_application_state": "recurring-restored-and-saved-fields-verified",
+    "scheduler_verified_at": "2026-10-04T04:01:53.429572Z",
     "normal_prompt_sha256": "bff531f4cfdf5bbf9260403966bcea6482d7717cd1d7a314f69eb620ad97c77f",
     "sprint_rrule": "RRULE:FREQ=HOURLY;INTERVAL=1;BYMINUTE=0;BYSECOND=0;UNTIL=20261113T220000Z"
   },

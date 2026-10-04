@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-072",
+  "learning_unit": "LRN-152",
+  "checked_on": "2026-10-04",
+  "evidence_classes": [
+    "REUSED_BOOKING_CHECK",
+    "OFFLINE_MAINTAINED_RECORD_TASK_VALIDATION"
+  ],
+  "hypothesis": "Price-age freshness suffices to interpret observed cancellation terms.",
+  "family_decision": "Preserve the exact five-person November8-13 DC budget while exposing a recorded cancellation-date mismatch.",
+  "source": {
+    "record": "docs/research/washington-dc-residence-price-observation-2026-09-30.json",
+    "original_action": "FT-RES-072",
+    "observed_on": "2026-09-30",
+    "source_url": "https://www.marriott.com/en-us/hotels/wascp-residence-inn-washington-dc-national-mall/rooms/",
+    "record_id": "dc-residence-two-queen-onqq",
+    "rate_plan": "Prepay Non-refundable",
+    "retained_raw_terms": "Full-cost prepayment; source allows no-charge cancellation before11:59PM hotel-local October1,2026, thereafter nonrefundable. Date changes allowed until11:59PMlocal three days before arrival; new rates may apply, lower-cost difference forfeited, higher-cost difference charged. This is not Hilton's cancellation policy.",
+    "normalized_field": "cancellation_deadline_local_date",
+    "normalized_value": "2026-10-01",
+    "normalization": "Editorial calendar-date extraction from retained original terms; no provider visit or date renewal."
+  },
+  "task": {
+    "comparison_date": "2026-10-04",
+    "comparison_date_basis": "America/New_York calendar date, not hotel-local instant",
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ]
+    },
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13",
+      "nights": 5
+    },
+    "budget": {
+      "currency": "USD",
+      "nightly_limit": 350,
+      "basis": "Hypothetical task input, not observed customer budget"
+    }
+  },
+  "result": {
+    "decision": "IMPLEMENT",
+    "hypothesis_result": "REJECT date-age-only sufficiency",
+    "calendar_relation": "AFTER_RECORDED_LOCAL_DATE",
+    "rows": 7,
+    "columns": 35,
+    "annotated_rows": 1,
+    "retained_stay_amount": 2168.27,
+    "retained_nightly_equivalent": 433.65,
+    "currency": "USD",
+    "unit": "configuration/night",
+    "original_observed_on": "2026-09-30",
+    "budget_counts": {
+      "at_or_below": 4,
+      "above": 2,
+      "unknown_unpriced": 1
+    },
+    "current_cancellability": null,
+    "current_refundability": null,
+    "exact_deadline_instant": null,
+    "final_all_fee_total": null
+  },
+  "controls": [
+    "Before/same/after all require current-term recheck, never policy PASS",
+    "Seven rows/all34non-scope cells retained; absent-date rates unchanged",
+    "Historical prices remain historical; changed family/stay inherits no quote/date",
+    "Malformed/inherited/accessor/nonenumerable fields fail including hidden/membership observations without invoking deadline getter",
+    "Single/joined API and CLI parity; original price/fee/deposit/source/age/date context remains"
+  ],
+  "confidence": {
+    "date_relation": "high",
+    "retained_terms_normalization": "high",
+    "current_provider_terms": "unknown",
+    "real_user_validation": "not performed",
+    "seo_effect": "unknown"
+  },
+  "lesson": "Cancellation and observed-price dates are separate. Flag calendar mismatch without removing useful budget or inventing current eligibility.",
+  "next_falsification_trigger": "Supported changed terms, failed date boundary, lost original context or BEFORE/SAME incorrectly treated as policy eligibility.",
+  "remaining_gates": [
+    "Current terms only after changed authorized access; no unchanged denial retry",
+    "DC mandatory/sofa/hold fees, representative exact-category corpus and actual rest task",
+    "Material information gain/no existing-page fit and fresh named DC approval"
+  ],
+  "scope": {
+    "provider_requests": 0,
+    "paid_cost_usd": 0,
+    "public_site_changed": false,
+    "scheduler_changed": false,
+    "human_firsthand_evidence": false
+  }
+}

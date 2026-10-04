@@ -109,6 +109,10 @@ test("DC maintained checks change only Homewood and Embassy questions, not histo
     if (value(current, "Hotel").startsWith("Embassy")) {
       assert.match(value(current, "Next checks"), /property-level signals, not prevalence/);
       assert.deepEqual(current.filter((_, index) => index !== checkIndex), prior.filter((_, index) => index !== checkIndex));
+    } else if (value(current, "Hotel").startsWith("Residence")) {
+      const scope = comparisonHeadings.indexOf("Research scope and limits");
+      assert.deepEqual(current.filter((_, index) => index !== scope), prior.filter((_, index) => index !== scope));
+      assert.equal(current[scope], prior[scope] + "; Cancellation deadline date check AFTER_RECORDED_LOCAL_DATE: recorded hotel-local date 2026-10-01; comparison date 2026-10-03; calendar dates only, no timezone conversion or current cancellability/availability guarantee; recheck current rate terms");
     } else if (!value(current, "Hotel").startsWith("Homewood")) assert.deepEqual(current, prior);
     else {
       assertQuestions(current);

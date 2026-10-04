@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
+
+## LRN-152 / October4 / FT-IMP-072
+
+Family decision/hypothesis: price-age freshness suffices to interpret recorded cancellation terms. REUSED_BOOKING_CHECK and OFFLINE_MAINTAINED_RECORD_TASK_VALIDATION [evidence](../docs/research/family-room-deadline-task-2026-10-04.json) rejects it. IMPLEMENT normalized calendar date and current-term recheck: original September30 ONQQ quote carries October1 date; October4 relation AFTER_RECORDED_LOCAL_DATE is not an instant or current refundability verdict. Seven rows/35columns/34non-scope cells and USD2168.27stay/433.65night retain original party/stay/fee/deposit/source context; hypothetical budget4below/2above/1unpriced unchanged. Confidence high deterministic boundary/extraction, unknown currentprovider/users/SEO. Lesson cancellation and observed-price dates are separate; flag mismatch without discarding budget or inventing eligibility. Trigger supported changed terms, failed boundary or lost context; BEFORE/SAME also require recheck. Next currentterms only after changed authorized access, DC fullfees/corpus/actualrest/materiality/noexistingfit/fresh namedapproval. First October4 normal action;132completion/mechanical restoration/public11held preserved; no provider/paid/public/scheduler mutation. Native full/focused QA and different read-only PASS required before exact13path release.
 
 ## LRN-151 / October3 / FT-RES-132
 

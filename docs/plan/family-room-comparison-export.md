@@ -4,9 +4,17 @@ FT-IMP-051, September 30, 2026. This is a reusable offline research/review surfa
 
 ## Single Maintained Input
 
-`tools/family-room-comparison.mjs` calls the existing validated room-capacity and exact-task price adapters. It does not retype prices, fetch hotel pages, run a paid API, renew source dates, convert currencies, sort by price or rank hotels. Original pack/sample files remain immutable. One row is emitted for each public rate plan; an unpriced category remains one row with empty numeric price cells and explicit unknowns, never zero. Membership-required prices and detached starting offers do not enter the comparison.
+`tools/family-room-comparison.mjs` calls the existing validated room-capacity and exact-task price adapters. It does not retype prices, fetch hotel pages, run a paid API, renew source dates, convert currencies, sort by price or rank hotels. Original facts, prices, source dates and terms remain intact; reviewed normalization may add a structured field from those retained terms. One row is emitted for each public rate plan; an unpriced category remains one row with empty numeric price cells and explicit unknowns, never zero. Membership-required prices and detached starting offers do not enter the comparison.
 
 Each row retains the destination/category, capacity screen and conditions, sleeping setup, kitchen/connection context, category and price observation dates separately, screening date, actual adults/individual child ages, exact arrival/departure/night count, currency/per-configuration-night unit, plan, displayed stay amount and derived nightly equivalent. Provider party/age-input/cutoff basis, priced configuration, fee/tax, deposit, meals, cancellation, conflicts, next checks, clean source URLs and uncertainty limits travel with the numbers. A prepaid stay amount is not added again as an extra fee. Requested beds/connections and historical samples remain labeled. Capacity, budget and booking acceptance are separate questions.
+
+## Recorded Cancellation Date
+
+October4 FT-IMP-072 adds an optional per-rate `cancellation_deadline_local_date` normalized from retained source terms, not parsed automatically from prose. It must be an own enumerable data field containing a valid ISO calendar date. Invalid, inherited or accessor fields fail before export, including hidden observations. The price adapter adds `cancellation_deadline_date_relation`: `BEFORE_RECORDED_LOCAL_DATE`, `SAME_RECORDED_LOCAL_DATE` or `AFTER_RECORDED_LOCAL_DATE` against the explicit comparison date. The scope cell shows both dates and requires a current rate-term recheck in every case.
+
+This is calendar-date arithmetic only. The comparison date is normally Eastern; the recorded date is hotel-local. There is no timezone conversion, exact passed-instant test or current cancellability, refundability, availability or booking-acceptance guarantee. Neither before nor same date is a policy pass. No price is removed or declared invalid because of the relation; raw terms, fees, party, stay and source dates remain. Rates without the optional date keep their prior objects and CSV bytes. The 35-column export changes only the scope cell for annotated rates.
+
+The retained September30 Residence Inn ONQQ rate has an October1 hotel-local cancellation date. The October4 task flags `AFTER_RECORDED_LOCAL_DATE` while preserving USD2168.27 for the five-night November8-13 stay, USD433.65/configuration-night, two adults and children4/8/12, and unresolved fee/prepayment context. This is not a fresh quote or a determination of what a newly booked rate would allow. [Task evidence and limits](../research/family-room-deadline-task-2026-10-04.json).
 
 ## Observed Nightly Budget
 
