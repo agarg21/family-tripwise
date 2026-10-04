@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-129",
+  "learning_unit": "LRN-147",
+  "inspected_on": "2026-10-03",
+  "destination": "Washington DC",
+  "record_id": "dc-embassy-deluxe-double",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "car": false,
+    "pets": false,
+    "early_departure_requested": false,
+    "late_checkout_requested": false,
+    "evidence_class": "EDITORIAL_PROXY_TASK",
+    "booking_tested": false
+  },
+  "sources": [
+    {
+      "id": "embassy-info",
+      "url": "https://www.hilton.com/en/hotels/wascces-embassy-suites-washington-dc-convention-center/hotel-info/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "PUBLISHED_PROPERTY_POLICY",
+      "web_crawl_label": "yesterday",
+      "retrieval": "Canonical extracted body plus normal in-app browser rendered Payment, Check-in/Check-out and Cancellation panels; screenshot inspected. Default one-guest Oct3-4 controls are not a family booking or quote."
+    },
+    {
+      "id": "embassy-dining",
+      "url": "https://www.hilton.com/en/hotels/wascces-embassy-suites-washington-dc-convention-center/dining/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "web_crawl_label": "today",
+      "retrieval": "Canonical extracted dining body, not a reservation or future-service confirmation"
+    }
+  ],
+  "policy": {
+    "currency": "USD",
+    "check_in": "16:00",
+    "check_out": "11:00",
+    "minimum_registering_age": 18,
+    "early_checkout_fee": {
+      "amount": 300,
+      "currency": "USD",
+      "unit": "Published early checkout fee; assessment basis and tax treatment not stated",
+      "front_desk_coordination_required": true,
+      "included_in_unchanged_stay": false
+    },
+    "late_checkout_fee": {
+      "amount": 100,
+      "currency": "USD",
+      "unit": "Published late checkout fee; time threshold and tax treatment not stated",
+      "front_desk_coordination_required": true,
+      "included_in_unchanged_stay": false
+    },
+    "optional_valet": {
+      "amount": 75,
+      "currency": "USD",
+      "unit": null,
+      "tax_basis": null,
+      "included_in_no_car_task": false
+    },
+    "pet_fee_five_plus_nights": {
+      "amount": 125,
+      "currency": "USD",
+      "unit": "Published nonrefundable stay-length tier; per-pet assessment basis not stated",
+      "included_in_no_pet_task": false
+    },
+    "cancellation_basis": "Varies by rate and reservation dates; no original rate terms renewed",
+    "payment_panel_fee_or_hold_amount": null,
+    "mandatory_stay_fee": null,
+    "sofa_setup_fee": null,
+    "incidental_authorization_amount": null,
+    "authorization_release_timing": null,
+    "full_stay_total": null
+  },
+  "meals": {
+    "breakfast_included_published": true,
+    "format_labels": [
+      "made-to-order amenity label",
+      "buffet dining label"
+    ],
+    "weekday_hours": {
+      "opens": "06:30",
+      "closes": "10:00"
+    },
+    "weekend_hours": {
+      "opens": "06:30",
+      "closes": "10:30"
+    },
+    "location": "Lobby level",
+    "source_id": "embassy-dining",
+    "evening_reception_published": true,
+    "full_dinner_included_established": false,
+    "five_person_seating": null,
+    "dietary_fit": null,
+    "future_operation_confirmed": false,
+    "estimated_food_savings": null
+  },
+  "preservation": {
+    "room_source_date": "2026-09-30",
+    "price_observation_date": "2026-09-30",
+    "room_and_price_observations_renewed": false,
+    "old_capacity_and_price_arrays_unchanged": true,
+    "review127_questions_preserved": true,
+    "model128_questions_preserved": true
+  },
+  "result": {
+    "outcome": "IMPLEMENT dated policy and meal qualifications in shared comparison; CANDIDATE policy inputs, PRESERVE final-cost unknowns",
+    "hypothesis": "Public payment and breakfast policies settle the complete unchanged-family stay cost",
+    "rejected": true,
+    "confidence": "High inspected policy distinction; unknown exact-family final cost, bedding acceptance, service operation and physical rest task",
+    "remaining_gate": "Exact-category mandatory/sofa/hold reconciliation, current representative review corpus, actual child-paced rest task, materiality/no existing-page fit and fresh named DC publication approval",
+    "next_check": "Changed official policy or supported exact-party fee-inclusive result; do not repeat the unchanged policy panels merely to seek missing amounts",
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0,
+    "provider_booking_calls": 0,
+    "account_or_contact_mutation": false,
+    "denial_bypass": false,
+    "route_stroller_safety_assessed": false
+  }
+}
