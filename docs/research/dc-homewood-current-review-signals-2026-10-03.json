@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-130",
+  "learning_unit": "LRN-148",
+  "parent_item": "FT-RES-059",
+  "inspected_on": "2026-10-03",
+  "hotel": "Homewood Suites by Hilton Washington DC Downtown",
+  "address": "1475 Massachusetts Ave, Washington DC 20005",
+  "evidence_class": "ONLINE_REVIEW_SIGNAL",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "real_user_test": false
+  },
+  "sources": {
+    "trip": {
+      "url": "https://us.trip.com/hotels/washington-dc-hotel-detail-1611038/homewood-suites-by-hilton-washington-dc-downtown/review.html",
+      "inspected_on": "2026-10-03",
+      "crawl_label": "last month",
+      "published_on": null,
+      "body_available": true
+    }
+  },
+  "method": {
+    "inclusion": "Individual visible bodies labeled Family; published April1-October3 2026 and stay month April2026 onward",
+    "selection": "Purposeful visible-body sample, not random, exhaustive or representative; no pagination/filter validation",
+    "qualifying_reports": 5,
+    "complete_current_corpus": false,
+    "independent_authenticity_verified": false,
+    "two_queen_label_reports": 2,
+    "exact_standard_category_reports": 0,
+    "party_match_reports": 0
+  },
+  "reports": [
+    {
+      "id": "homewood-family-01",
+      "locator": "lines82-95",
+      "posted_on": "2026-06-27",
+      "stay_month": "2026-05",
+      "category_label": "Premium One Bedroom King Suite",
+      "translated": false,
+      "signal": "Cooking appliances and dishwasher were useful.",
+      "source_id": "trip",
+      "trip_type": "Family",
+      "party_basis": null,
+      "exact_standard_match": false
+    },
+    {
+      "id": "homewood-family-02",
+      "locator": "lines103-116",
+      "posted_on": "2026-05-26",
+      "stay_month": "2026-04",
+      "category_label": "One Bedroom King Suite with City View",
+      "translated": true,
+      "signal": "An outlet problem contrasted with clean bedding.",
+      "source_id": "trip",
+      "trip_type": "Family",
+      "party_basis": null,
+      "exact_standard_match": false
+    },
+    {
+      "id": "homewood-family-03",
+      "locator": "lines124-137",
+      "posted_on": "2026-07-12",
+      "stay_month": "2026-06",
+      "category_label": "One-Bedroom King Suite-Non-Smoking",
+      "translated": false,
+      "signal": "Kitchen and room space were useful.",
+      "source_id": "trip",
+      "trip_type": "Family",
+      "party_basis": null,
+      "exact_standard_match": false
+    },
+    {
+      "id": "homewood-family-04",
+      "locator": "lines143-156",
+      "posted_on": "2026-07-03",
+      "stay_month": "2026-05",
+      "category_label": "One Bedroom Two Queen Suite",
+      "translated": false,
+      "signal": "Included breakfast was described positively.",
+      "source_id": "trip",
+      "trip_type": "Family",
+      "party_basis": null,
+      "exact_standard_match": false
+    },
+    {
+      "id": "homewood-family-05",
+      "locator": "lines206-221",
+      "posted_on": "2026-05-25",
+      "stay_month": "2026-04",
+      "category_label": "One Bedroom Two Queen Suite",
+      "translated": true,
+      "signal": "Breakfast was considered average.",
+      "source_id": "trip",
+      "trip_type": "Family",
+      "party_basis": null,
+      "exact_standard_match": false
+    }
+  ],
+  "excluded": [
+    {
+      "locator": "lines162-177",
+      "reason": "Current stay but solo traveler, not family."
+    },
+    {
+      "locator": "lines183-198;227-383",
+      "reason": "Stay and/or publication outside window; no current renewal of historical utensils, noise, breakfast hours, routing or prices."
+    }
+  ],
+  "interpretation": {
+    "supported": "Dated property-level kitchen/meal/maintenance questions, not exact five-person acceptance",
+    "category_identity": "Two-queen label is not independently reconciled to maintained standard THWN; King/Premium reports do not establish its equipment or condition.",
+    "prevalence": null,
+    "exact_room_condition": null,
+    "sofa_dimensions": null,
+    "utensil_or_chair_quantity": null,
+    "actual_rest_minutes": null,
+    "future_operations_confirmed": false,
+    "route_stroller_safety_assessed": false,
+    "historical_january2025_noise_utensil_signals_renewed": false
+  },
+  "decision": {
+    "result": "IMPLEMENT dated uncertainty checks; CANDIDATE limited current signals; REJECT full-corpus/exact-room verdict",
+    "confidence": "High body/date extraction; low representativeness, unknown actual family task/SEO",
+    "next_gate": "Reconciled representative exact-category corpus, full fees, actual rest task, materiality/noexistingfit and fresh named DC approval",
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0
+  },
+  "preservation": {
+    "old_four_categories_three_prices_unchanged": true,
+    "source_dates_unchanged": true,
+    "embassy_127_128_129_checks_unchanged": true,
+    "held_work_unchanged": true
+  }
+}

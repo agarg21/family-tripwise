@@ -52,6 +52,48 @@ test("dated Embassy policies travel with the original nightly and party basis", 
   assert.equal(value(changed, "Nightly equivalent"), "");
   assert.match(value(changed, "Next checks"), /not added to unchanged stay/);
 });
+test("Homewood current selected reports retain category, date and privacy limits", () => {
+  const evidence = JSON.parse(read("dc-homewood-current-review-signals-2026-10-03.json"));
+  assert.equal(evidence.reports.length, 5);
+  assert.equal(evidence.method.qualifying_reports, 5);
+  assert.equal(evidence.method.two_queen_label_reports, 2);
+  assert.equal(evidence.method.exact_standard_category_reports, 0);
+  assert.equal(evidence.method.party_match_reports, 0);
+  assert.equal(evidence.method.complete_current_corpus, false);
+  assert.equal(evidence.method.independent_authenticity_verified, false);
+  assert.equal(evidence.reports.filter(r => r.translated).length, 2);
+  for (const r of evidence.reports) {
+    assert.ok(r.posted_on >= "2026-04-01" && r.posted_on <= "2026-10-03");
+    assert.ok(r.stay_month >= "2026-04" && r.stay_month <= "2026-10");
+    assert.equal(r.trip_type, "Family"); assert.equal(r.party_basis, null);
+    assert.equal(r.exact_standard_match, false);
+    assert.deepEqual(Object.keys(r).sort(), ["id","locator","posted_on","stay_month","category_label","translated","signal","source_id","trip_type","party_basis","exact_standard_match"].sort());
+  }
+  for (const k of ["prevalence","exact_room_condition","sofa_dimensions","utensil_or_chair_quantity","actual_rest_minutes"]) assert.equal(evidence.interpretation[k], null);
+  assert.equal(evidence.interpretation.historical_january2025_noise_utensil_signals_renewed, false);
+  assert.equal(evidence.decision.public_change, false);
+  assert.equal(evidence.decision.city_launch_approved, false);
+  assert.equal(evidence.decision.paid_calls, 0);
+  assert.equal(new URL(evidence.sources.trip.url).search, "");
+});
+
+test("Homewood current review checks retain single and joined dated budget context", () => {
+  const csv = roomComparisonCsv(pack, pack.scenario, "2026-10-03", prices);
+  assert.equal(roomComparisonsCsv([pack], pack.scenario, "2026-10-03", prices), csv);
+  const homewood = rows(csv).slice(1).filter(r => value(r, "Hotel").startsWith("Homewood"));
+  assert.deepEqual(homewood.map(r => value(r, "Nightly equivalent")), ["288.97","316.61","339.97"]);
+  for (const r of homewood) {
+    assertQuestions(r);
+    assert.match(value(r, "Next checks"), /not prevalence or a five-person room verdict/);
+    assert.match(value(r, "Next checks"), /not reconciled to standard THWN/);
+    assert.equal(value(r, "Category checked"), "2026-09-30");
+    assert.equal(value(r, "Price observed"), "2026-09-30");
+  }
+  const changed = rows(roomComparisonCsv(pack, {...pack.scenario, child_ages:[4,8,13]}, "2026-10-03", prices)).slice(1).find(r => value(r, "Hotel").startsWith("Homewood"));
+  assert.equal(value(changed, "Nightly equivalent"), "");
+  assert.match(value(changed, "Next checks"), /January2025.*remain historical/);
+});
+
 const assertQuestions = row => {
   assert.match(value(row, "Next checks"), /Confirm dining chair, utensil and place-setting quantities/);
   assert.match(value(row, "Next checks"), /does not establish five-person dining/);

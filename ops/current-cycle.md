@@ -1,5 +1,11 @@
 # Current Operating Cycle
 
+FT-RES-130 Epicurus01a104b7-32eb-7e31-8c96-8ebcf2d8b963 cycle1PASS/noP0-P3; independent70focused/stateSEO0/exact9/all746candidate745baselinehashes/250prior059threefields/ledger147down/129completion/34noncheckCSVcells/55public11held preserved. Master526full110focused/0fail-skip-cancel/state0/GSC82/SEO0-fiveprior. Current bodies corroborated; all sessionsfinished. Mechanical consensus only, exact shared-record push next.
+
+FT-RES-130 / LRN148 implements dated Homewood review questions from five current selected bodies/two unreconciled twoqueenlabels; not representative/exactparty acceptance. Oldfourcategories-threeprices/source dates/Embassy127128129/129completion/public/11held preserved. Second02:02run transaction; nativefocused/fullQA/different read-onlyPASS/exact9release next, no paid/public/city/providerdenial/scheduler mutation.
+
+FT-RES-129 shared-record/docs release ea3a354560994ae0d87c8cc2beab254742bd39b7 remote verified 2026-10-04T02:13:53.691Z; HEADorigin0-0/exact9/all744index/threeGitguards/freshfetch/sole reviewedrange/normalpush/RussellPASS. Dated budget/meal checks delivered, no publicproduction change or Pageswait.11held/sourceprice/category/prior127128 intact. First02:02run transaction complete; next independent eligible DC corpus gate before02:47:03UTC. Mechanical completion retained locally/no metadata-onlycommit.
+
 FT-RES-129 Russell01a104ab-9198-7263-900b-82a8841f80f3 cycle1PASS/noP0-P3; independent63focused/state0/16taskcontrols/twopackCSV34noncheckcells/exact9/all744hashes/249prioritems059threefields/ledger146down/070completion/oldfourcategories-threeprices/prior127128/11held verified. Master524full108focused/0fail-skip-cancel/state0/GSC82/SEO0-fiveprior/55publicHEAD intact. Source bodies corroborated; rendered policy panels operator-attributed. Mechanical consensus only; exact shared-record release next.
 
 FT-RES-129 / LRN147: normal Embassy policy panels expose conditional early checkout300USD/late checkout100USD; unchanged stay adds neither. Dated breakfast hours added to shared checks, mandatory/sofa/hold/fullstay unknowns retained. Oldfourcategories-threeprices/127review128model/070completion/public/11held preserved. First02:02run action; native focused/fullQA, different read-onlyPASS and exact nine-path shared-record release next. No paid/public/city/booking/scheduler mutation.
