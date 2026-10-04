@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-070",
+  "learning_id": "LRN-146",
+  "checked_on": "2026-10-03",
+  "evidence_class": "OFFLINE_MAINTAINED_RECORD_TASK_VALIDATION",
+  "decision": "IMPLEMENT optional research capacity view; city candidates remain unapproved",
+  "hypothesis": "The maintained Boston five-person comparison can remove only current published capacity exclusions without losing uncertain candidates or budget context.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    }
+  },
+  "inputs": [
+    "docs/research/boston-room-configurations-2026-10-01.json",
+    "docs/research/boston-park-plaza-price-observation-2026-10-01.json",
+    "docs/research/boston-fenway-price-observation-2026-10-03.json"
+  ],
+  "source_dates_renewed": false,
+  "provider_calls": 0,
+  "paid_calls": 0,
+  "public_changes": false,
+  "filter": {
+    "capacity": "not-excluded",
+    "removes_only": "OUTSIDE_PUBLISHED_LIMIT",
+    "retains": [
+      "CONDITIONAL",
+      "RECHECK_SOURCE",
+      "Unpriced categories"
+    ],
+    "booking_acceptance": false,
+    "availability_confirmed": false,
+    "hotel_ranking": false
+  },
+  "default_parity_tasks": [
+    {
+      "destination": "Washington DC",
+      "default_rows": 7,
+      "filtered_rows": 7,
+      "default_bytes_equal_baseline": true,
+      "single_joined_parity": true
+    },
+    {
+      "destination": "London",
+      "default_rows": 9,
+      "filtered_rows": 8,
+      "default_bytes_equal_baseline": true,
+      "single_joined_parity": true
+    },
+    {
+      "destination": "Boston",
+      "default_rows": 9,
+      "filtered_rows": 6,
+      "default_bytes_equal_baseline": true,
+      "single_joined_parity": true
+    }
+  ],
+  "boston_controls": {
+    "current_rows": 9,
+    "filtered_rows": 6,
+    "excluded_categories": 3,
+    "columns": 35,
+    "budget_columns_changed": false,
+    "filtered_scope_note_added": true,
+    "fenway_nightly_equivalent": 781,
+    "currency": "USD",
+    "unit": "per configuration per night",
+    "stay_amount": 3905,
+    "nights": 5,
+    "tax_fee_basis": "Before taxes; fee-inclusive total and deposit unresolved. Preserve the complete original observation basis.",
+    "all_source_records_unchanged": true
+  },
+  "negative_controls": {
+    "stale_as_of": "2026-11-04",
+    "stale_rows_retained": 9,
+    "stale_capacity_state": "RECHECK_SOURCE",
+    "changed_child_ages": [
+      4,
+      8,
+      13
+    ],
+    "changed_party_numeric_prices_absent": true,
+    "combined_published_kitchen_capacity_rows": 1,
+    "invalid_excluded_category_price_rejected_before_output": true,
+    "invalid_accessor_inherited_symbol_duplicate_incomplete_filters_rejected": true,
+    "input_mutation": false,
+    "single_joined_cli_parity": true,
+    "exclusive_write_public_site_symlink_guards_retained": true
+  },
+  "interpretation": "Deterministic proxy task, not real-user satisfaction or live provider acceptance. A current published-capacity exclusion may be hidden by an explicit opt-in; unknown or stale capacity is not accepted. Dates, price eligibility, party, stay, currency, fee/deposit, meal and cancellation qualifications remain independent.",
+  "remaining_gate": "Boston current full-fee/deposit checks, representative review corpus, actual no-car museum-return/rest task, material demand, no clean existing-page fit and fresh named city approval. Washington DC remains first city qualification priority. Preserve unchanged provider and Chicago preview holds.",
+  "next_falsification_trigger": "A stale or conditional row disappears, an excluded observation escapes validation, default output changes, budget context drops, or maintained capacity/price evidence changes."
+}

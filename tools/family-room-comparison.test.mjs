@@ -35,6 +35,83 @@ const joinedTask = { adults: 2, child_ages: [4, 8, 12, 15], stay: { arrival: "20
 const joinedArgs = [joinedPaths[0], "--packs", ...joinedPaths.slice(1), "--date", "2026-10-03",
   ...taskArgs(joinedTask), "--prices", ...joinedPricePaths];
 
+const capacityBostonPath = path("boston-room-configurations-2026-10-01.json");
+const capacityBoston = JSON.parse(readFileSync(capacityBostonPath));
+const capacityBostonPricePaths = ["boston-park-plaza-price-observation-2026-10-01.json", "boston-fenway-price-observation-2026-10-03.json"].map(path);
+const capacityBostonPrices = capacityBostonPricePaths.flatMap(p => JSON.parse(readFileSync(p)));
+
+test("capacity view removes only current exclusions and preserves exact Boston budget basis", () => {
+  const all = roomComparisonCsv(capacityBoston, capacityBoston.scenario, "2026-10-03", capacityBostonPrices);
+  const filtered = roomComparisonCsv(capacityBoston, capacityBoston.scenario, "2026-10-03", capacityBostonPrices, {capacity: "not-excluded"});
+  const expected = rows(all).slice(1).filter(row => value(row, "Capacity screen") !== "OUTSIDE_PUBLISHED_LIMIT");
+  const data = rows(filtered).slice(1);
+  assert.equal(rows(all).length - 1, 9);
+  assert.equal(data.length, 6);
+  assert.deepEqual(data.map(row => row.slice(0, -1)), expected.map(row => row.slice(0, -1)));
+  assert.ok(data.every(row => value(row, "Research scope and limits").includes("not booking acceptance or availability")));
+  assert.ok(data.some(row => value(row, "Public rate plan") === "Unpriced"));
+  assert.ok(data.some(row => value(row, "Capacity screen") === "CONDITIONAL_PUBLISHED_CAPACITY"));
+  const fenway = data.find(row => value(row, "Priced category").includes("2 Bedroom"));
+  assert.equal(value(fenway, "Nightly equivalent"), "781");
+  assert.match(value(fenway, "Fee and tax basis"), /unchecked/);
+  assert.equal(roomComparisonCsv(capacityBoston, capacityBoston.scenario, "2026-10-03", capacityBostonPrices, {capacity: "any"}), all);
+  assert.equal(roomComparisonsCsv([capacityBoston], capacityBoston.scenario, "2026-10-03", capacityBostonPrices, {capacity: "not-excluded"}), filtered);
+  assert.equal(execFileSync(process.execPath, [cli, capacityBostonPath, "--date", "2026-10-03", "--prices", ...capacityBostonPricePaths, "--capacity", "not-excluded"], {encoding: "utf8"}), filtered);
+});
+
+test("capacity and kitchen filters preserve stale and changed-party unknowns", () => {
+  const filtered = (party, date, filters) => rows(roomComparisonCsv(capacityBoston, party, date, capacityBostonPrices, filters)).slice(1);
+  const stale = filtered(capacityBoston.scenario, "2026-11-04", {capacity: "not-excluded"});
+  assert.equal(stale.length, 9);
+  assert.ok(stale.every(row => value(row, "Capacity screen") === "RECHECK_SOURCE"));
+  const changed = filtered({...capacityBoston.scenario, child_ages: [4, 8, 13]}, "2026-10-03", {capacity: "not-excluded"});
+  assert.ok(changed.every(row => value(row, "Nightly equivalent") === "" && value(row, "Public rate plan") === "Unpriced"));
+  const combined = filtered(capacityBoston.scenario, "2026-10-03", {capacity: "not-excluded", kitchen: "published"});
+  assert.equal(combined.length, 1);
+  assert.equal(value(combined[0], "Nightly equivalent"), "781");
+  assert.match(value(combined[0], "Research scope and limits"), /dated published kitchen/);
+  assert.match(value(combined[0], "Research scope and limits"), /not booking acceptance/);
+  const before = JSON.stringify([capacityBoston, capacityBostonPrices]);
+  filtered(capacityBoston.scenario, "2026-10-03", {capacity: "not-excluded"});
+  assert.equal(JSON.stringify([capacityBoston, capacityBostonPrices]), before);
+});
+
+test("joined capacity filters validate observations even when their room is excluded", () => {
+  const limited = structuredClone(dc);
+  limited.records[0].configurations[0].maximum = 4;
+  const bad = structuredClone(prices);
+  bad[0].currency = "GBP";
+  for (const filters of [{capacity: "not-excluded"}, {capacity: "not-excluded", kitchen: "published"}]) {
+    assert.throws(() => roomComparisonCsv(limited, limited.scenario, "2026-10-03", bad, filters), /currency/);
+    assert.throws(() => roomComparisonsCsv([limited], limited.scenario, "2026-10-03", bad, filters), /currency/);
+  }
+  const all = rows(roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices)).slice(1);
+  const filtered = rows(roomComparisonsCsv(joinedPacks, joinedTask, "2026-10-03", joinedPrices, {capacity: "not-excluded"})).slice(1);
+  assert.deepEqual(filtered.map(row => row.slice(0, -1)), all.filter(row => value(row, "Capacity screen") !== "OUTSIDE_PUBLISHED_LIMIT").map(row => row.slice(0, -1)));
+});
+
+test("invalid capacity filters fail before output while explicit filter summaries retain input counts", () => {
+  const getter = {}; Object.defineProperty(getter, "capacity", {get() {throw new Error("Do not invoke");}});
+  for (const filters of [{capacity: undefined}, {capacity: "eligible"}, {capacity: "NOT-EXCLUDED"}, getter, Object.create({capacity: "any"}), {[Symbol("capacity")]: "any"}]) {
+    assert.throws(() => roomComparisonCsv(dc, dc.scenario, "2026-10-03", prices, filters));
+    assert.throws(() => roomComparisonsCsv([dc], dc.scenario, "2026-10-03", prices, filters));
+  }
+  const dir = mkdtempSync(join(tmpdir(), "ft-capacity-filter-"));
+  try {
+    const dest = join(dir, "new", "out.csv"), base = [cli, capacityBostonPath, "--date", "2026-10-03", "--prices", ...capacityBostonPricePaths];
+    for (const flags of [["--capacity"], ["--capacity", "eligible"], ["--capacity", "any", "--capacity", "not-excluded"]]) {
+      assert.throws(() => execFileSync(process.execPath, [...base, ...flags, "--output", dest], {stdio: "pipe"}), error => {assert.equal(error.stdout.toString(), ""); return true;});
+      assert.equal(existsSync(join(dir, "new")), false);
+    }
+    const out = join(dir, "capacity.csv");
+    const summary = JSON.parse(execFileSync(process.execPath, [...base, "--capacity", "not-excluded", "--output", out], {encoding: "utf8"}));
+    assert.deepEqual(summary.filters, {capacity: "not-excluded"});
+    assert.equal(summary.categories, 7);
+    assert.equal(summary.categories_are_input_count, true);
+    assert.equal(readFileSync(out, "utf8"), roomComparisonCsv(capacityBoston, capacityBoston.scenario, "2026-10-03", capacityBostonPrices, {capacity: "not-excluded"}));
+  } finally {rmSync(dir, {recursive: true, force: true});}
+});
+
 test("published kitchen filter retains full dated price basis and default bytes", () => {
   const before = JSON.stringify([dc, prices]);
   const all = rows(output(dc, prices, "2026-10-03")).slice(1);

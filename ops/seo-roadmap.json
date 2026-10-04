@@ -20,10 +20,56 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-070",
+      "title": "Make exact-family capacity exclusions optionally filterable",
+      "kind": "improvement",
+      "status": "review_clean",
+      "parent_item": "FT-RES-061",
+      "selected_on": "2026-10-03",
+      "target_paths": [
+        "tools/family-room-comparison.mjs",
+        "tools/family-room-comparison.test.mjs",
+        "docs/plan/family-room-comparison-export.md",
+        "docs/research/family-capacity-filter-validation-2026-10-03.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "126Boston exactcooking task has9comparison rows including3knowncapacity exclusions; detailed35column audit requires manualscan despite distinct validated capacity states.128DC source-qualified shared output complete; no eligible publiccity whilecorpus/approval gates open.",
+      "acceptance_criteria": [
+        "Optional API/CLI capacity any/not-excluded; remove only OUTSIDE_PUBLISHED_LIMIT after original fullvalidation; retain conditional/stale/unpriced rows and all nightly/party/stay/fee/source/uncertainty columns; defaultsbyteidentical",
+        "Single/joined parity, combinedkitchen controls, malformed/accessor/duplicate/incomplete filters rejected before output; existing exclusivewrite/publicsite/symlink protections unchanged; no datarenewal/ranking/acceptanceclaim",
+        "Focused/fullnative QA and different read-onlyPASS/exact9pathnormalpush;061onlythreefields/248prioritems/ledger145down/128completion/55public/11held/all sourceprice records unchanged"
+      ],
+      "measurement_plan": "Five-person Boston task separates3published exclusions while retaining6comparison rows with conditional and budget limits; stale results remain visible rather than accepted",
+      "production_invariant": "October3Eastern third/final01:02run transaction before01:47UTCdeadline/no fourth; no public/newcity/paid/network/indexing/scheduler mutation",
+      "decision": "Implement source-preserving capacity-exclusion research view; not a bookable shortlist",
+      "next_gate": "Focused/fullQA/native task validation/different read-onlyPASS/exactsharedtool release; all citypublication gates remain",
+      "qa": {
+        "full_tests": 522,
+        "focused_tests": 106,
+        "failures": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "operator_state_errors": 0,
+        "gsc_public_safe_files": 82,
+        "local_seo_errors": 0,
+        "local_seo_existing_advisories": 5
+      },
+      "review_status": "PASS",
+      "review_cycles": 1,
+      "reviewer": "01a1048c-990d-70b2-9fda-b6af68364878",
+      "review_summary": "Lorentz cycle1 PASS/noP0-P3. Independent71focused/state0/default7-7,9-8,9-6/non-scope34cells/sourcepreservation/validation-before-filter/malformedfilter/outputguards/exact9scope/742baselinehashes/91researchJSON/248prioritems061threefields/128completion/ledger145down verified. No edits/network/paid/provider/Git mutation.",
+      "release_state": "QA and independent consensus complete; exact-path normal push and remote verification pending"
+    },
+    {
       "id": "FT-RES-128",
       "title": "Resolve named DC museum-to-Embassy return planning inputs",
       "kind": "research",
-      "status": "in_progress",
+      "status": "completed",
       "parent_item": "FT-RES-059",
       "selected_on": "2026-10-03",
       "target_paths": [
@@ -48,11 +94,14 @@
       "production_invariant": "October3Eastern second01:02run transaction before01:47UTC; no paid/public/newcity/booking/contact/indexing/scheduler/route-assurance mutation",
       "decision": "Resolve named proxy journey inputs or preserve documented exact missing gate",
       "next_gate": "Ordinary official planner and anchor source evidence, nativeQA/read-onlyreview/exactrelease",
-      "release_state": "review-clean-pending-push",
+      "release_state": "pushed-remote-verified",
       "review_verdict": "PASS",
       "reviewer": "Sartre 01a10480-f039-7633-9428-3febd656a45e",
       "review_cycles": 1,
-      "qa_result": "518full/102focused/0fail-skip-cancel;independent66/state0/GSC82/SEO0-fiveprior;740baseline741candidate/exact9/55public/11held/247prioritems059threefields/ledger144down/127completion/oldfourcategories-threeprices-reviewquestions"
+      "qa_result": "518full/102focused/0fail-skip-cancel;independent66/state0/GSC82/SEO0-fiveprior;740baseline741candidate/exact9/55public/11held/247prioritems059threefields/ledger144down/127completion/oldfourcategories-threeprices-reviewquestions",
+      "completed_on": "2026-10-03",
+      "release_commit": "7609cbf77450e6cd32a9596f6d834734404c342f",
+      "release_verified_at": "2026-10-04T01:26:03.158Z"
     },
     {
       "id": "FT-RES-127",
@@ -1351,7 +1400,7 @@
     {"id":"FT-RES-058","title":"Validate London UK family-of-five room and price comparison","kind":"research","status":"completed","priority":2,"target_urls":[],"evidence":"Sept30 official six exact categories, age-conditional negative control, sofa/connection and internal fee conflicts; Sept30 demand record and three existing specialist guides","decision":"IMPLEMENT six-record offline screen, research phase complete; London public comparison remains CANDIDATE","next_gate":"SeparateFT-RES-067pricing research; broader price/review/base/reset corpus,currentqueryoverlap and fresh London launch scope before public page","target_paths":["tools/family-room-task.mjs","tools/family-room-task.test.mjs","docs/research/london-room-configurations-2026-09-30.json","docs/research/london-room-configurations-2026-09-30.md","docs/plan/hotel-research-engine.md","backlog/product-learning-ledger.md","ops/current-cycle.md","ops/seo-roadmap.json","ops/seo-roadmap.md","ops/operator-review.md","status/new-york-city-pages.md"],"measurement_plan":"Proxy distinguishes generic capacity, infant-only capacity, extra-bed and requested connection; comparable budget remains unpriced, not SEO/user outcome","production_invariant":"All site/public/model/31URL and historical price/date/window bytes unchanged; no paid calls, contacts/accounts/indexing/automation/new destination launch","selected_on":"2026-09-30","acceptance_criteria":["Six source-dated structured category records with base/extended capacity and constraints, GBP price gap explicit; separate advertised offer not relabeled exact-family quote","Reusable offline validator/task evaluator with age/party/staleness/conflict controls and tests; no booking acceptance, quote or suitability guarantee","Named proxy task and three specialist comparisons; current price/location/review/publication gaps stated; full native QA and independent read-only PASS before docs/tools-only push"],"review_outcome":"PASS","review_cycles":2,"reviewer_agent_ids":["01a0f52e-da5f-7732-b74d-1e023498453f"],"release_state":"tools-docs-only-pushed","evidence_record":"docs/research/london-room-configurations-2026-09-30.md","qa":"Focused11/operatorfull298,independent11+current/historical/stale/timezone/smaller-partyCLI/state0/79snapshots/SEO31zeroerrorsfiveadvisories/primaryprovenance/scope/NYCproductionbackfill checks pass","completed_on":"2026-09-30","release_commit":"e2e56a115847fc28473336579c3eae47ecce1ff1","release_verification":"Exact11reviewed paths pushed after freshfetch/no divergence/sole reviewed range/scope checks;HEAD/origin0/0,no site/Pages change,six exclusions preserved"},
     {"id":"FT-RES-059","title":"Validate Washington DC museum-trip family lodging","kind":"research","status":"planned","priority":3,"target_urls":[],"evidence":"September30US720/KD0 and OTA/forum/location-result mix","decision":"CANDIDATE maintained DC comparison:128named Embassy/NaturalHistory two-leg walking model0.74mile/18min each, clock17 unresolved.127reviews remain limited;124fare/068time conditional. Actual child-paced roomrest/route and citylaunch unqualified.","next_gate":"Actual doorway/internal journey/child pace/rest/re-entry and second-anchor after changed access; exact-category representative reviews/fullfees/materiality/noexistingfit/fresh namedDC approval. No unchanged108110116/Hyatt denial retry; oldfourcategories-threeprices preserved.","target_paths":[],"measurement_plan":"Comparable family room/base outputs, not ranking promise","production_invariant":"No firsthand transit/stroller assurance or launch from metrics alone","evidence_record":"docs/research/dc-embassy-museum-return-task-2026-10-03.json"},
     {"id":"FT-RES-060","title":"Validate Disney2027 family dining-plan cost tool","kind":"research","status":"completed","priority":4,"target_urls":[],"evidence":"September30officialUS2027plan/child-savings terms and two current competitor tool audits; prior paidSERP missingness and dated demand limits retained","decision":"REJECT generic quote/cash/unspent-credit calculator prototype and newURL; direct competitor already covers proposed job","next_gate":"Reopen after new first-party2027terms or3-5current recurring meal/rest decisions plus competing-tool task gap and controlled query overlap; no new prototype from unchanged monitoring","target_paths":["docs/research/disney-2027-dining-opportunity-2026-09-30.md","backlog/product-learning-ledger.md","ops/current-cycle.md","ops/seo-roadmap.json","ops/seo-roadmap.md","ops/operator-review.md","docs/research/washington-dc-room-budget-task-2026-09-30.md"],"measurement_plan":"Meal-use and comparable total answerability, no guaranteed savings","production_invariant":"No unsupported price/discount or new URL before normal gates","selected_on":"2026-09-30","acceptance_criteria":["Distinguish2026free offer from2027menu-relative up-to20%childsavings, no stale price or flat plan discount","Current two-tool overlap supports explicit build/reject decision; no prototype if distinct job disproved","Full/native QA and different read-only PASS before docs-only push"],"evidence_record":"docs/research/disney-2027-dining-opportunity-2026-09-30.md","review_outcome":"PASS","review_cycles":2,"reviewer_agent_ids":["01a0f57c-33c6-7111-a74a-1ef1cc166183"],"qa":"Independent48focused/full323isolated/state0/79snapshots/SEO31zeroerrors-fiveprioradvisories; cycle-two correction hashes/JSON/state/whitespace","release_state":"completed-research-decision-pushed","completed_on":"2026-09-30","release_commit":"d9cdddb22433a9e9237c8151f40826e575898208"},
-    {"id":"FT-RES-061","title":"Validate Boston family room/base comparison","kind":"research","status":"planned","priority":5,"target_urls":[],"evidence":"September30US590/KD0,best-family480/KD0,five-person20/KD0; official/editorial result mix","decision":"CANDIDATE one Boston comparison:126adds exact cooking TOBT conditional6/ONBT4 exclusion and retained exact-age pre-tax781USDnight.125ownership/117hold/oldquotes preserved; no separatefivepersonURL/citylaunch.","next_gate":"Normal fee-inclusive sameparty breakdown/deposit; current family review signals, actual no-car museumreturn/rest budget/full representativecorpus/materiality/noexistingfit/fresh namedBostonapproval; do not retry117unresolvedcategory or unchangedtax control","target_paths":[],"measurement_plan":"Distinct maintained lodging comparison","production_invariant":"No new city/URL from KD0 alone","evidence_record":"docs/research/boston-fenway-family-task-2026-10-03.json"},
+    {"id":"FT-RES-061","title":"Validate Boston family room/base comparison","kind":"research","status":"planned","priority":5,"target_urls":[],"evidence":"September30US590/KD0,best-family480/KD0,five-person20/KD0; official/editorial result mix","decision":"CANDIDATE one Boston comparison:070 optional capacity view removes only3current exclusions from9rows;6conditional/budget-qualified rows remain.126 exact cooking/pre-tax781USDnight/125ownership/117holds preserved; no separatefivepersonURL or citylaunch.","next_gate":"Normal fee-inclusive sameparty breakdown/deposit; current representative family reviews, actual no-car museum-return/rest budget, full corpus/materiality/noexistingfit/fresh namedBoston approval. DC remains first city priority; no unchanged117category/tax retry.","target_paths":[],"measurement_plan":"Distinct maintained lodging comparison","production_invariant":"No new city/URL from KD0 alone","evidence_record":"docs/research/family-capacity-filter-validation-2026-10-03.json"},
     {"id":"FT-RES-062","title":"Validate Puerto Vallarta family all-inclusive resort job","kind":"research","status":"planned","priority":6,"target_urls":[],"evidence":"September30USresort phrase1000/KD10 versus generalfamilyhotels110/KD9","decision":"CANDIDATE exact-family comparison;069shared five-category screen/CSV implemented with unknown currency/no family quote.122ownership retained/HOLD teenURL/citylaunch","next_gate":"Current-review/corpus and mixed-age/no-car budget inputs; exactparty/category nightly/fee/ISO quote onlyafter changednormalrender/no unchanged Hyattblank attempts; booking ages/bedding/care/base unknown, materiality/noexistingfit/fresh namedPV approval remain","target_paths":[],"measurement_plan":"Maintainable room/age/base/cost comparison","production_invariant":"No safety or firm family-suitability assurance","evidence_record":"docs/research/puerto-vallarta-room-screen-integration-2026-10-03.md"},
     {"id":"FT-RES-063","title":"Test Orlando water-play lodging coverage gap","kind":"research","status":"planned","priority":7,"target_urls":["https://familytripwise.com/where-to-stay/orlando-family-hotels.html"],"evidence":"September30USwaterpark8100/KD19,lazyriver3600/KD0; current three-suite surface is not a complete waterpark inventory","decision":"IMPLEMENTED067 age-unresolved count-only Homewood budget alongside066Cabana and119exclusions;120original held source preserved. CANDIDATE waterjob/PRESERVE page","next_gate":"DC independent family task next; Orlando actual child-age acceptance/fullfee/transport/water corpus/current reviews/materiality/noexistingfit remain; October22public window, Floridays changed-state only","target_paths":[],"measurement_plan":"Room versus water-access decision clarity","production_invariant":"No cadence rewrite or room-capacity/admission conflation","evidence_record":"docs/research/orlando-unknown-age-price-integration-2026-10-03.md"},
     {"id":"FT-RES-064", "title":"Validate Cancun child-offer eligibility and comparable cost", "kind":"research", "status":"planned", "priority":8, "target_urls":["https://familytripwise.com/where-to-stay/cancun-family-resorts.html"], "evidence":"FT-RES-057 plus September30USbroaddeals5400/KD3,all-inclusive2900/KD9,exactchildphraseunknown; brand/OTA SERP", "decision":"CANDIDATE within existing Cancun decision, no generic deals URL", "next_gate":"Readable first-party age/room/date/channel terms and same-basis offer/non-offer totals; October11price trigger or verified conflict", "target_paths":[], "measurement_plan":"Eligibility and true comparable total, not headline discount", "production_invariant":"No unverified savings or daily-deals publishing"},

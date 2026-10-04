@@ -20,17 +20,20 @@ const cell = value => {
   return `"${safe.replaceAll('"', '""')}"`;
 };
 
-function kitchenFilter(filters) {
+function comparisonFilters(filters) {
   if (!filters || Object.getPrototypeOf(filters) !== Object.prototype ||
-      Reflect.ownKeys(filters).some(key => key !== "kitchen")) throw new Error("Invalid comparison filters");
-  const field = Object.getOwnPropertyDescriptor(filters, "kitchen");
-  const kitchen = field ? field.value : "any";
-  if (field && !Object.hasOwn(field, "value") || !["any", "published"].includes(kitchen))
-    throw new Error("Kitchen filter must be any or published");
-  return kitchen;
+      Reflect.ownKeys(filters).some(key => !["kitchen", "capacity"].includes(key))) throw new Error("Invalid comparison filters");
+  const value = (key, allowed) => {
+    const field = Object.getOwnPropertyDescriptor(filters, key);
+    const selected = field ? field.value : "any";
+    if (field && !Object.hasOwn(field, "value") || !allowed.includes(selected))
+      throw new Error(`${key} filter must be ${allowed.join(" or ")}`);
+    return selected;
+  };
+  return { kitchen: value("kitchen", ["any", "published"]), capacity: value("capacity", ["any", "not-excluded"]) };
 }
 
-function roomComparisonRows(pack, party, asOf, prices, kitchen) {
+function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity }) {
   const screened = screenRoomPack(pack, party, asOf, prices);
   const stay = party.stay ?? pack.scenario?.stay;
   const nights = (Date.parse(stay?.departure) - Date.parse(stay?.arrival)) / 86400000;
@@ -38,6 +41,7 @@ function roomComparisonRows(pack, party, asOf, prices, kitchen) {
     throw new Error("Comparison requires an exact arrival/departure task");
   return screened.flatMap((room, index) => {
     if (kitchen === "published" && room.kitchen !== "published-kitchen") return [];
+    if (capacity === "not-excluded" && room.screening === "OUTSIDE_PUBLISHED_LIMIT") return [];
     const price = room.price;
     return (price.rates ?? [null]).map(rate => [
       pack.destination, room.hotel, room.category, room.screening, room.conditions.join("; "), JSON.stringify(pack.records[index].configurations),
@@ -51,7 +55,8 @@ function roomComparisonRows(pack, party, asOf, prices, kitchen) {
       room.conflicts.join("; "), room.next_checks.join("; "), room.source_url, price.source_url,
       price.observation_limitation ?? price.missing_basis?.join("; ") ?? "Not observed",
       [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed",
-        ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : [])].join("; ")
+        ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : []),
+        ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : [])].join("; ")
     ]);
   });
 }
@@ -59,11 +64,11 @@ function roomComparisonRows(pack, party, asOf, prices, kitchen) {
 const comparisonCsv = rows => [comparisonHeadings, ...rows].map(row => row.map(cell).join(",")).join("\n") + "\n";
 
 export function roomComparisonCsv(pack, party = pack.scenario, asOf = currentEasternDate(), prices = [], filters = {}) {
-  return comparisonCsv(roomComparisonRows(pack, party, asOf, prices, kitchenFilter(filters)));
+  return comparisonCsv(roomComparisonRows(pack, party, asOf, prices, comparisonFilters(filters)));
 }
 
 export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), prices = [], filters = {}) {
-  const kitchen = kitchenFilter(filters);
+  const selected = comparisonFilters(filters);
   const dense = values => {
     if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype || Object.hasOwn(values, Symbol.iterator)) return false;
     for (let i = 0; i < values.length; i++) if (!Object.hasOwn(values, i)) return false;
@@ -89,7 +94,7 @@ export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), pr
     if (!owner) throw new Error(`Unowned price observation: ${observation?.record_id ?? "invalid"}`);
     byPack.get(owner).push(observation);
   }
-  return comparisonCsv(packs.flatMap(pack => roomComparisonRows(pack, party, asOf, byPack.get(pack), kitchen)));
+  return comparisonCsv(packs.flatMap(pack => roomComparisonRows(pack, party, asOf, byPack.get(pack), selected)));
 }
 
 async function researchOutputPath(output) {
@@ -113,7 +118,7 @@ export function parseRoomComparisonOptions(input) {
   const args = [...input];
   const packPath = args.shift();
   if (!packPath || packPath.startsWith("--")) throw new Error("Provide a room configuration JSON path");
-  let date = currentEasternDate(), output, dateSet = false, pricesSet = false, packsSet = false, kitchenSet = false;
+  let date = currentEasternDate(), output, dateSet = false, pricesSet = false, packsSet = false, kitchenSet = false, capacitySet = false;
   const filters = {};
   const pricePaths = [], additionalPackPaths = [];
   const taskOptions = new Map();
@@ -130,13 +135,15 @@ export function parseRoomComparisonOptions(input) {
       while (args[i + 1] && !args[i + 1].startsWith("--")) additionalPackPaths.push(args[++i]);
     } else if (args[i] === "--kitchen" && !kitchenSet && args[i + 1] && !args[i + 1].startsWith("--")) {
       filters.kitchen = args[++i]; kitchenSet = true;
+    } else if (args[i] === "--capacity" && !capacitySet && args[i + 1] && !args[i + 1].startsWith("--")) {
+      filters.capacity = args[++i]; capacitySet = true;
     } else if (["--adults", "--child-ages", "--arrival", "--departure"].includes(args[i]) &&
         !taskOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
       taskOptions.set(args[i], args[++i]);
     } else throw new Error(`Unknown, duplicate or incomplete comparison option: ${args[i]}`);
   }
   if (!validDate(date)) throw new Error("Invalid screening date");
-  kitchenFilter(filters);
+  comparisonFilters(filters);
   let task = null;
   if (taskOptions.size) {
     if (taskOptions.size !== 4) throw new Error("Supply adults, child ages, arrival and departure together");
@@ -173,7 +180,7 @@ async function main() {
     await mkdir(dirname(path), { recursive: true });
     await writeFile(await researchOutputPath(path), csv, { flag: "wx" });
     console.log(JSON.stringify({ as_of: date, categories: packs.reduce((total, p) => total + p.records.length, 0), packs: packs.length, output, public_changes: false,
-      ...(filters.kitchen === "published" ? { filters, categories_are_input_count: true } : {}),
+      ...(filters.kitchen === "published" || filters.capacity === "not-excluded" ? { filters, categories_are_input_count: true } : {}),
       task: { adults: party.adults, child_ages: party.child_ages, stay: party.stay } }));
   } else process.stdout.write(csv);
 }
