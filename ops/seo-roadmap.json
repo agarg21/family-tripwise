@@ -20,10 +20,45 @@
   ],
   "items": [
 {
+    "id": "FT-RES-133",
+    "title": "Resolve San Diego Homewood exact-family kitchen-suite budget gap",
+    "kind": "research",
+    "status": "in_progress",
+    "selected_on": "2026-10-04",
+    "target_paths": [
+        "docs/research/san-diego-homewood-room-task-2026-10-04.json",
+        "docs/research/san-diego-homewood-price-observation-2026-10-04.json",
+        "docs/research/san-diego-homewood-budget-task-2026-10-04.json",
+        "docs/research/san-diego-homewood-budget-task-2026-10-04.md",
+        "tools/san-diego-homewood-room.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+    ],
+    "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+    ],
+    "evidence": "October4native hotel-quality queue flags existing Homewood Bayside price78days old, exact category/family/dates/fees unknown. Original July18twoadult265-350+orientation retained; current official exact-five-person cooking room and dated public price needed, no rewrite from broad GSC or expansion quota.",
+    "acceptance_criteria": [
+        "Inspect official category maximum/bedding/kitchen and exact2adults children4/8/12 Nov8-13five-night publicplan with currency/unit/category/date/party/source/fee/deposit/cancellation basis; exclude member/default/starting prices and unknowns remain null",
+        "Implement supported category/quote in existing validated capacity-price-CSV shared tool inputs, no new adapter or public page required; exact boundaries/changed ages-stay/stale/member/CLI controls, historical publicrange and allsource records retained",
+        "If exact price inaccessible preserve named narrow hold and useful supported category evidence, never same-denial retry/alternate tool or paid/provider expansion; no Book/Select/cart/account/contact/payment",
+        "Nativefull/focusedQA/different independentread-onlyPASS/exact10pathGitrelease; all255prioritems/ledger152down/072completion/63publicstatus11held preserved"
+    ],
+    "measurement_plan": "Resolve one overdue existing-page exact-family budget field, maintaining useful dated per-configuration/night arithmetic and all fee/party/context limits. Proxy task not real-user satisfaction or hotel ranking.",
+    "production_invariant": "Second actual October4 Eastern normalrun13:01:08UTC; one action only/no public page or observationwindow change/newcity/paid/indexing/account/scheduler mutation; source holds not replayed.",
+      "decision": "IMPLEMENT supported NQS category and age-unresolved count-only exact-task publicplan inputs: sleeps6/kitchen/queen sofa; estimated tax-government-inclusive Nonrefundable1355.19stay271.04night and Flexible1647.58stay329.52nightUSD. Schema5 provider child band/individualages unknown; observed budget UNKNOWN_AGE_BASIS while amounts remain visible. Not finalallfee/seasonal range/publicintegration; historical July18range/reviews retained",
+      "next_gate": "Focused/fullnativeQA, different read-onlyPASS and exact10path sharedrecord/docs release; applicable mandatory/sofa/hold, usable setup/current representative corpus before public maintained-record integration; actual napreturn separate",
+      "reviewer": "Erdos01a1070e-ad22-7ef0-aed1-bc4910ced66a cycle2PASS/noP0-P3; agebasisP2resolved. Independent7tests/32controls/32priorbytes/all762hashes/exact10/prior255/ledger152/072completion/63publicstatus11held verified; manifestSHA25685175f21545fb692b85c7ee082f303c12353d3c30c9b72ebafb04e3a596150b6. Cycle2 strictlyread-only; source UI operator-attributed",
+      "qa": "Master554full127helperfocused7newfocused/0fail-skip-cancel/state0/GSC82/localSEO31canon34HTML0errors-fiveprior/all762hashes intact/all sessions complete"
+},
+{
     "id": "FT-IMP-072",
     "title": "Flag recorded cancellation dates in exact-family price comparisons",
     "kind": "implementation",
-    "status": "in_progress",
+    "status": "completed",
     "parent_item": "FT-RES-059",
     "selected_on": "2026-10-04",
     "target_paths": [
@@ -53,9 +88,12 @@
     "measurement_plan": "October4 proxy family task retains Residence2168.27USD stay/433.65night and flags AFTER_RECORDED_LOCAL_DATE for October1; other rows and optional budget4below/2above/1unknown unchanged. Deterministic validation, not real-user testing.",
     "production_invariant": "First October4 Eastern normal-mode action, actualrun05:00:36UTC; no public-site/newcity/paid/provider/indexing/account/scheduler mutation. Existing held work intact; docs/offline-tool release only.",
     "decision": "IMPLEMENT dated calendar relation and current-rate recheck while preserving useful observed budget; current cancellability and complete fees remain unknown",
-    "next_gate": "Independent review PASS and native QA green; exact-path shared-tool/docs Git release pending, not public production",
+    "next_gate": "Completed reviewed shared-tool/docs release; current terms/fullfees/corpus/actualrest/cityapproval remain separate",
     "reviewer": "Leibniz01a10554-7d9c-7da3-93f0-e2f45f05abc4 cycle2PASS/noP0-P3; primitive-rate P3resolved. Independent24focused/10primitivecontrols/prior32absent-datebytechecks/all14reviewed757archivehashes/63site-statusHEAD11held preserved; finalmanifestSHA256cd44374349511f1e40aa8a9cad6c802d8ede0a889443051a56686821a017df39",
-    "qa": "Master547full127focused/0fail-skip-cancel/state0/GSC82/localSEO31canon34HTML0errors-fiveprior; all757frozenhashes intact/allsessionscomplete"
+    "qa": "Master547full127focused/0fail-skip-cancel/state0/GSC82/localSEO31canon34HTML0errors-fiveprior; all757frozenhashes intact/allsessionscomplete",
+    "release_commit": "37624fc89442c8f7bf2eacaa3e76a08650d12e84",
+    "release_verified_at": "2026-10-04T05:20:06.129Z",
+    "release_result": "Remote main equals HEAD/0-0/exact14/all757index/threeGitguards/freshfetch/sole reviewedrange/normalpush; shared offline-tool/docs only, no public production or Pages change"
 },
 {
     "id": "FT-RES-132",

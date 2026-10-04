@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-133",
+  "destination": "San Diego",
+  "checked_on": "2026-10-04",
+  "refresh_days": 30,
+  "evidence_scope": "One exact-category published-capacity record and separate dated public-plan samples for an existing page. Not a complete hotel corpus, live availability, final all-fee checkout, family suitability or verified nap-return route.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "kitchen preferred",
+      "separate sleeping and living spaces",
+      "midday rest",
+      "no car",
+      "no pets"
+    ],
+    "budget": null
+  },
+  "sources": {
+    "homewood": {
+      "url": "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/rooms/",
+      "checked_on": "2026-10-04",
+      "published_on": null,
+      "evidence_class": "OFFICIAL_PROPERTY_FACT",
+      "date_basis": "source-text-inspected-not-policy-effective"
+    }
+  },
+  "records": [
+    {
+      "id": "sd-homewood-one-bedroom-two-queen",
+      "hotel": "Homewood Suites San Diego Downtown/Bayside",
+      "category": "1 Bedroom Suite - 2 Queen Beds",
+      "source_id": "homewood",
+      "sleeping_setup": "Two queen beds in a separate bedroom and queen-sized sofa bed in living area; published 570 square feet.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact NQS category highlights publish sleeps6, separate bedroom/living and full kitchen; not inherited from accessible, studio or two-bedroom categories."
+        }
+      ],
+      "checks": [
+        "Confirm actual bedding allocation, sofa setup/clearance and any sofa fee; capacity is not comfortable sleeping proof",
+        "Kitchen lists full-size refrigerator, microwave, dishwasher and twin-burner stove; confirm five-person chair, cookware and place-setting quantities",
+        "Counts only: adult18+ control and2adults/3kids; no individual4/8/12age inputs or confirmation, provider child band unknown; requested ages are task context, not acceptance",
+        "Flexible card285USD and nonrefundable card234USD are rounded before-tax averages, not the retained tax-inclusive nightly equivalents",
+        "Optional valet65USD/night excluded for no-car task; optional pet125USD for5+nights excluded for no-pet task; applicable service/mandatory/sofa fees and incidental hold amount remain unknown",
+        "Confirm future breakfast/pool operation and actual family-paced nap-return journey; no transport or stroller verdict"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Category facts do not contain a price; use separate October4 exact-task public-plan observation"
+        ]
+      }
+    }
+  ],
+  "offer_observations": []
+}

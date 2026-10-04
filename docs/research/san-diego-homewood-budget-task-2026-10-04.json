@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-133",
+  "learning_id": "LRN-153",
+  "checked_on": "2026-10-04",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "preferences": [
+      "kitchen preferred",
+      "separate sleeping and living spaces",
+      "midday rest",
+      "no car",
+      "no pets"
+    ],
+    "budget": null
+  },
+  "method": {
+    "evidence_classes": [
+      "OFFICIAL_PROPERTY_FACT",
+      "BOOKING_CHECK",
+      "DERIVED_ARITHMETIC",
+      "EDITORIAL_INTERPRETATION"
+    ],
+    "synthetic_task": true,
+    "real_user_testing": false,
+    "provider": "Hilton",
+    "individual_child_ages_confirmed": false,
+    "adult_control_from_age": 18,
+    "provider_child_age_from": null,
+    "provider_child_age_to": null,
+    "observed_budget_status": "UNKNOWN_AGE_BASIS",
+    "source_url": "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/rooms/",
+    "paid_calls": 0,
+    "booking_actions": 0
+  },
+  "category": {
+    "record_id": "sd-homewood-one-bedroom-two-queen",
+    "code": "NQS",
+    "maximum": 6,
+    "queen_beds": 2,
+    "queen_sofa_bed": true,
+    "separate_bedroom": true,
+    "kitchen": true,
+    "chair_or_cookware_quantity": null,
+    "sofa_setup_fee": null
+  },
+  "observations": [
+    {
+      "plan": "Non-refundable",
+      "stay_amount": 1355.19,
+      "nightly_equivalent": 271.04,
+      "currency": "USD",
+      "unit": "configuration/night",
+      "basis": "Derived from displayed tax/government-inclusive estimated five-night total; not final all-fee checkout"
+    },
+    {
+      "plan": "Flexible Rate",
+      "stay_amount": 1647.58,
+      "nightly_equivalent": 329.52,
+      "currency": "USD",
+      "unit": "configuration/night",
+      "basis": "Derived from displayed tax/government-inclusive estimated five-night total; not final all-fee checkout"
+    }
+  ],
+  "unresolved": {
+    "mandatory_stay_fee": null,
+    "applicable_service_fee": null,
+    "incidental_hold_amount": null,
+    "valet_tax": null,
+    "exact_sofa_allocation": null,
+    "five_person_dining": null,
+    "actual_nap_return": null,
+    "representative_review_corpus": null
+  },
+  "preservation": {
+    "old_public_range": "$265-$350+",
+    "old_observation_date": "2026-07-18",
+    "old_range_renewed": false,
+    "old_reviews_renewed": false,
+    "other_city_records_changed": false,
+    "public_change": false,
+    "held_work_preserved": true
+  },
+  "decision": {
+    "result": "implement-supported-shared-record-now",
+    "public_page_update_ready": false,
+    "next_gate": "Resolve applicable mandatory/sofa/hold basis, exact setup and current representative review evidence before integrating into public maintained hotel record. Historical page band stays labeled and unchanged; do not use this two-plan sample as a seasonal range."
+  }
+}

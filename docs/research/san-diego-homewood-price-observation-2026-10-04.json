@@ -1,0 +1,64 @@
+[
+  {
+    "schema_version": 5,
+    "action": "FT-RES-133",
+    "checked_on": "2026-10-04",
+    "source_url": "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/rooms/",
+    "source_surface": "Official date/guest controls, NQS room quick-look and public Flexible/Non-refundable rate-detail panels. Clean rooms URL retained; booking query/session URLs omitted.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "sd-homewood-one-bedroom-two-queen",
+    "category": "1 Bedroom Suite - 2 Queen Beds",
+    "booking_category": "1 Bedroom Suite - 2 Queen Beds",
+    "configuration_basis": "One NQS standard suite, published sleeps6/full kitchen/separate bedroom with2queens and queen sofa; rate panels show2adults/3kids/Nov8-13five nights. Not reservation acceptance or individual child-age confirmation.",
+    "configuration_count": 1,
+    "currency": "USD",
+    "currency_basis": "Official rate detail explicitly labels USD/US Dollar; no conversion.",
+    "currency_evidence_class": "OBSERVED_ISO_CURRENCY",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ]
+    },
+    "requested_individual_ages_confirmed": false,
+    "party_basis": "requested-task-context-not-provider-age-acceptance",
+    "engine_party": {
+      "adults": 2,
+      "children": 3,
+      "child_ages": null,
+      "adult_from_age": 18,
+      "child_age_from": null,
+      "child_age_to": null,
+      "age_input_mode": "provider-counts-unknown-child-band",
+      "individual_ages_entered": false,
+      "requested_individual_ages_confirmed": false,
+      "classification_basis": "published-adult-cutoff-unknown-child-band-counts"
+    },
+    "rates": [
+      {
+        "plan": "Non-refundable",
+        "eligibility": "public",
+        "stay_amount": 1355.19,
+        "meals": "Free breakfast",
+        "cancellation": "Full prepayment charged immediately; nonrefundable/nonmodifiable headline. Detailed US/Mexico/Caribbean discretionary cancellation-and-rebooking exception may apply with25USDHomewood service fee, not automatic refund; separate24-hour policy linked, eligibility not established. Purchase at least7days before arrival."
+      },
+      {
+        "plan": "Flexible Rate",
+        "eligibility": "public",
+        "stay_amount": 1647.58,
+        "meals": "Free breakfast",
+        "cancellation": "Pay when staying; free cancellation before11:59PM local hotel time November7,2026. Early departure can change rate. Recheck current terms; recorded local date is not a current refundable guarantee.",
+        "cancellation_deadline_local_date": "2026-11-07"
+      }
+    ],
+    "fee_basis": "Nonrefundable nightly room bases224.68/224.68/224.71/241.08/253.67USD total1168.82+186.37tax/government=1355.19USD. Flexible274/274/274/294/305 total1421+226.58tax/government=1647.58USD. Displayed13.75% and2.20%per-room/night tax lines. Totals estimated; additional stay/applicable service charges and optional incidentals excluded. Optional valet65USD/night and5+n pet125USD excluded for no-car/no-pet task; valet tax and other mandatory/sofa fees unknown. Rounded cards234/285USD before-tax averages and starting225USDmember offer not retained as nightly samples. No package used.",
+    "deposit_basis": "Nonrefundable full advance payment; Flexible card guarantee/pay when staying. Anticipated stay plus estimated incidentals may be held through checkout and released72hours or longer after departure; amount unknown, not an added stay fee.",
+    "limitation": "Counts only: adult18+ label and2adults/3kids, no individual4/8/12 inputs or confirmation; provider child band unknown. Requested ages are task context, not provider age acceptance. Exact stay/category, public plans only; default prices and Honors discounts excluded. Not seasonal range, final all-fee checkout, live availability, comfort/safety/suitability or cheapest-hotel ranking. No Select/Book/account/contact/payment."
+  }
+]
