@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-124",
+  "parent_item": "FT-RES-059",
+  "learning_unit": "LRN-141",
+  "inspected_on": "2026-10-03",
+  "hypothesis": "Free museum admission or one child-free fare implies zero cost for the family room-rest return",
+  "policy": {
+    "schema_version": 1,
+    "currency": "USD",
+    "refresh_days": 30,
+    "free_child_age_lt": 5,
+    "free_children_per_paying_adult": 2,
+    "rail_fare_bands": {
+      "weekday-day": {
+        "minimum_cents": 225,
+        "maximum_cents": 675
+      },
+      "weekday-late": {
+        "minimum_cents": 225,
+        "maximum_cents": 250
+      },
+      "weekend": {
+        "minimum_cents": 225,
+        "maximum_cents": 250
+      }
+    },
+    "source": {
+      "url": "https://www.wmata.com/pay.html",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_TRANSIT_FARE_FACT",
+      "status": "body-inspected",
+      "retrieval": "web current extracted body; crawl label today, exact crawl time unknown"
+    },
+    "policy_scope": "Regular rail one-way fares; weekday day5am-9:30pm, late after9:30pm. Children5plus require own payment. Transfers/pass/media excluded from arithmetic; no visiting student discount assumed."
+  },
+  "corroborating_source": {
+    "url": "https://www.wmata.com/ride/guides/new-riders.html",
+    "requested_url": "https://wmata.com/rider-guide/new-riders/index.cfm",
+    "inspected_on": "2026-10-03",
+    "published_on": null,
+    "effective_on": null,
+    "evidence_class": "OFFICIAL_TRANSIT_RIDER_FACT",
+    "status": "body-inspected",
+    "retrieval": "normal redirect, web extracted body; crawl today",
+    "facts": "Internal rail interchange does not add another charged journey; specific stations/time/fare need trip planner. No accessibility claim or schedules adopted."
+  },
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "hotel": null,
+    "stations": null,
+    "date_time": null,
+    "rail_trips": null,
+    "fare_product": "regular-pay-as-you-go",
+    "fare_period": "weekday-day",
+    "one_way_fare_cents": null,
+    "real_user_test": false,
+    "journey_tested": false
+  },
+  "conditional_inputs": [
+    {
+      "label": "Two extra room-rest rail trips; weekday daytime hypothesis",
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ],
+      "rail_trips": 2,
+      "fare_product": "regular-pay-as-you-go",
+      "fare_period": "weekday-day",
+      "one_way_fare_cents": null
+    },
+    {
+      "label": "Four separate daily rail trips; weekday daytime hypothesis",
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ],
+      "rail_trips": 4,
+      "fare_product": "regular-pay-as-you-go",
+      "fare_period": "weekday-day",
+      "one_way_fare_cents": null
+    },
+    {
+      "label": "Two extra room-rest rail trips; ordinary weekend hypothesis, not future service confirmation",
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ],
+      "rail_trips": 2,
+      "fare_product": "regular-pay-as-you-go",
+      "fare_period": "weekend",
+      "one_way_fare_cents": null
+    }
+  ],
+  "maintained_inputs": {
+    "room_pack": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "museum_task": "docs/research/washington-dc-museum-rest-task-2026-10-03.json",
+    "rest_budget": "docs/research/dc-rest-time-budget-2026-10-03.json",
+    "old_sources_prices_renewed": false
+  },
+  "decision": {
+    "outcome": "IMPLEMENT conditional rail-cost input; reject zero transit from free museum/child admission. Actual hotel-return plan remains UNKNOWN",
+    "confidence": "High inspected fare/age arithmetic; unknown route/date operations/pass/transfer/fullfamilybudget/fit/users/SEO",
+    "next_gate": "Named hotel/entrances/date journeys/rest/entry, current-review corpus and exact cost context; fresh namedDC publication approval remains",
+    "paid_calls": 0,
+    "public_change": false,
+    "city_launch_approved": false
+  },
+  "validation": {
+    "actual": {
+      "free_children": 1,
+      "paying_riders": 4,
+      "minimum": null,
+      "maximum": null,
+      "estimate_status": "UNKNOWN_INPUTS",
+      "actual_trip_cost": null,
+      "hotel_return_feasible": "UNKNOWN"
+    },
+    "conditional": [
+      {
+        "label": "Two extra room-rest rail trips; weekday daytime hypothesis",
+        "free_children": 1,
+        "paying_riders": 4,
+        "minimum": 18,
+        "maximum": 54,
+        "estimate_status": "CONDITIONAL_NETWORK_BAND",
+        "actual_trip_cost": null,
+        "hotel_return_feasible": "UNKNOWN"
+      },
+      {
+        "label": "Four separate daily rail trips; weekday daytime hypothesis",
+        "free_children": 1,
+        "paying_riders": 4,
+        "minimum": 36,
+        "maximum": 108,
+        "estimate_status": "CONDITIONAL_NETWORK_BAND",
+        "actual_trip_cost": null,
+        "hotel_return_feasible": "UNKNOWN"
+      },
+      {
+        "label": "Two extra room-rest rail trips; ordinary weekend hypothesis, not future service confirmation",
+        "free_children": 1,
+        "paying_riders": 4,
+        "minimum": 18,
+        "maximum": 20,
+        "estimate_status": "CONDITIONAL_NETWORK_BAND",
+        "actual_trip_cost": null,
+        "hotel_return_feasible": "UNKNOWN"
+      }
+    ]
+  }
+}
