@@ -1,0 +1,53 @@
+[
+  {
+    "schema_version": 3,
+    "action": "FT-RES-126",
+    "checked_on": "2026-10-03",
+    "source_url": "https://www.marriott.com/en-us/hotels/bosfn-residence-inn-boston-back-bay-fenway/rooms/",
+    "source_surface": "Normal official TOBT modal, exact1room2adults/ages4,8,12/Nov8-13 search; results retain5guests/dates and reopened party modal retains individual ages. Flexible Non-Member card and Rate Details. Clean rooms URL, no session/product IDs retained.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "boston-fenway-two-bedroom-tobt",
+    "category": "2 Bedroom Suite, Bedroom 1: 1 King, Bedroom 2: 1 Queen, Sofa bed (TOBT)",
+    "booking_category": "2 Bedroom Suite, 2 Bedroom Suite, Bedroom 1: 1 King, Bedroom 2: 1 Queen, Sofa bed",
+    "configuration_basis": "One exact TOBT category, maximum6; king/queen/sofa, separate living and kitchen. Published screen and actual entered ages, not reservation or confirmed bed allocation.",
+    "configuration_count": 1,
+    "currency": "USD",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ]
+    },
+    "engine_party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ],
+      "adult_from_age": null,
+      "child_age_from": null,
+      "child_age_to": null,
+      "age_input_mode": "individual-ages",
+      "classification_basis": "unpublished-cutoffs-exact-individual-party"
+    },
+    "rates": [
+      {
+        "plan": "Flexible Rate",
+        "eligibility": "public",
+        "stay_amount": 3905,
+        "meals": "Property publishes complimentary breakfast; exact registered-child meal terms/dietary requirements unverified, not deducted from cost.",
+        "cancellation": "No-charge cancellation before11:59PM local hotel time Nov5,2026; thereafter displayed872.21USDfee. Conditional prepayment retention/card charge, payment timing not independently established."
+      }
+    ],
+    "fee_basis": "Displayed USD781average/night and3905totalperroom rounded whole-dollar cards with Show with taxes and fees unchecked. Not tax-inclusive/finalallfee total. Mandatoryfee/tax amounts and extra bedding/incidentals unknown. Optional valet72USDdaily/85outside standard times and pet150USDperroom/stay+tax not included for no-car/no-pet task. Tax-checkbox click remained0; documented semantic check failed to change state; no workaround/retry or checkout.",
+    "deposit_basis": "Guarantee/deposit/incidentals and prepayment timing unknown; cancellation panel conditional prepayment wording is not proof of charge timing. No Select/payment/booking.",
+    "limitation": "Same exact-age5person five-night dated pre-tax plan sample, not typicalseasonal range/finalallfee/availability/suitability/value ranking. UI shows rounded amounts; nightlyequivalent3905/5=781. Genericeligibility boilerplate in terms retained as uncertainty despite non-memberlabel. SeptemberSale663night/3319stay/min2nights15percentoffer/741.38latecancel observed but excluded from normalized public comparison: eligibility/fullfees/bookingwindow unknown. Capacity/rest/dining/childmeal terms and actual museumreturn remain unresolved."
+  }
+]

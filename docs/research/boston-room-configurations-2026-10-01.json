@@ -4,7 +4,7 @@
   "destination": "Boston",
   "checked_on": "2026-10-03",
   "refresh_days": 30,
-  "evidence_scope": "Partial five-category corpus: original three conditional five-person candidates plus two October3 Copley exclusion controls. Family Suite marketing identity/capacity remains unresolved; original source dates and separate ParkPlaza price evidence unchanged. No complete fee/current-review/rest corpus, booking acceptance or Boston publication approval.",
+  "evidence_scope": "Partial seven-category/five-property corpus: five prior Boston records unchanged plus Fenway TOBT conditional cooking candidate and ONBT exclusion control. Source dates remain individual; exact-party dated pre-tax flexible quote is separate. No complete current-review/full-fee/rest corpus or Boston publication approval.",
   "scenario": {
     "adults": 2,
     "child_ages": [4, 8, 12],
@@ -16,9 +16,87 @@
     "park": {"url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/rooms/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
     "four": {"url": "https://www.fourseasons.com/boston/accommodations/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
     "langham": {"url": "https://www.langhamhotels.com/en/the-langham/boston/stay/suites/two-bedroom-suite/", "checked_on": "2026-10-01", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
-    "copley": {"url": "https://www.marriott.com/en-us/hotels/bosco-boston-marriott-copley-place/rooms/", "checked_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"}
+    "copley": {"url": "https://www.marriott.com/en-us/hotels/bosco-boston-marriott-copley-place/rooms/", "checked_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"},
+    "fenway": {"url": "https://www.marriott.com/en-us/hotels/bosfn-residence-inn-boston-back-bay-fenway/rooms/", "checked_on": "2026-10-03", "published_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "date_basis": "source-text-inspected-not-policy-effective"}
   },
   "records": [
+    {
+      "id": "boston-fenway-two-bedroom-tobt",
+      "hotel": "Residence Inn Boston Back Bay/Fenway",
+      "category": "2 Bedroom Suite, Bedroom 1: 1 King, Bedroom 2: 1 Queen, Sofa bed (TOBT)",
+      "source_id": "fenway",
+      "sleeping_setup": "King, queen and sofa; two bathrooms; separate living room; dining table seats4.",
+      "kitchen": "published-kitchen",
+      "connection": "not-applicable",
+      "configurations": [
+        {
+          "maximum": 6,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [
+            "Confirm sofa sleeping allocation and fifth dining place for ages4/8/12; exact booking setup still required"
+          ],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact TOBT modal maximum6;700sqft, stovetop/oven/full refrigerator/microwave/dishwasher. No generic selector8 transfer."
+        }
+      ],
+      "checks": [
+        "No rollaway; one crib is not extra occupancy for these children",
+        "Pre-tax flexible quote in separate dated observation; full taxes/mandatoryfees/deposit unknown",
+        "Optional valet72USD/day or85outside standard times not included for no-car task",
+        "Verify actual Aquarium/Children'sMuseum midday-return journey and rest allocation"
+      ],
+      "conflicts": [
+        "Property member-internet wording versus exact modal complimentary wireless/wired; entitlement must be confirmed"
+      ],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Use separate October3 exact-age/date flexible observation; not final all-fee cost"
+        ]
+      }
+    },
+    {
+      "id": "boston-fenway-one-bedroom-onbt",
+      "hotel": "Residence Inn Boston Back Bay/Fenway",
+      "category": "1 Bedroom Suite, 1 King, Sofa bed (ONBT)",
+      "source_id": "fenway",
+      "sleeping_setup": "King and sofa; separate living room; table seats2.",
+      "kitchen": "published-kitchen",
+      "connection": "requested-separate-room",
+      "configurations": [
+        {
+          "maximum": 4,
+          "max_adults": null,
+          "max_children": null,
+          "infant_extension": null,
+          "conditions": [],
+          "evidence_class": "OFFICIAL_PROPERTY_FACT",
+          "basis": "Exact ONBT modal maximum4;400sqft/stovetop/full refrigerator/microwave/dishwasher. Some rooms connect, not guaranteed bundle."
+        }
+      ],
+      "checks": [
+        "Outside named five-person single-accommodation task; kitchen does not increase occupancy",
+        "No rollaway; one crib not established occupancy extension",
+        "No price adopted for this excluded category"
+      ],
+      "conflicts": [],
+      "price": {
+        "currency": "USD",
+        "unit": "configuration/night",
+        "amount": null,
+        "observed_on": null,
+        "status": "not-observed",
+        "missing_basis": [
+          "Excluded for named five-person task; not priced as substitute"
+        ]
+      }
+    },
     {
       "id": "boston-copley-king-jste", "hotel": "Boston Marriott Copley Place", "category": "1 Bedroom Suite, 1 King, Sofa bed (JSTE)", "source_id": "copley",
       "sleeping_setup": "One king plus sofa; privacy wall separates bed and living area; 450 square feet.",

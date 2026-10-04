@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-126",
+  "learning_unit": "LRN-143",
+  "inspected_on": "2026-10-03",
+  "calendar_basis": "October4UTC collection remains October3Eastern",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "accommodations": 1,
+    "no_car": true,
+    "no_pet": true,
+    "kitchen_preferred": true,
+    "separate_rest_preferred": true,
+    "anchors": [
+      "New England Aquarium",
+      "Boston Children's Museum"
+    ],
+    "evidence_class": "EDITORIAL_PROXY_TASK"
+  },
+  "sources": [
+    {
+      "id": "fenway-rooms",
+      "url": "https://www.marriott.com/en-us/hotels/bosfn-residence-inn-boston-back-bay-fenway/rooms/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "retrieval": "Normal public room cards and exact TOBT/ONBT View More modals; no hidden API",
+      "evidence_class": "OFFICIAL_PROPERTY_FACT"
+    },
+    {
+      "id": "fenway-overview",
+      "url": "https://www.marriott.com/en-us/hotels/bosfn-residence-inn-boston-back-bay-fenway/overview/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "retrieval": "Web official body, crawl today; not policy-effective date",
+      "evidence_class": "OFFICIAL_PROPERTY_FACT"
+    },
+    {
+      "id": "rate-search",
+      "url": "https://www.marriott.com/en-us/hotels/bosfn-residence-inn-boston-back-bay-fenway/rooms/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "retrieval": "Normal public exact-age/date search and terms; session URLs not retained",
+      "evidence_class": "BOOKING_CHECK"
+    }
+  ],
+  "categories": [
+    {
+      "record_id": "boston-fenway-two-bedroom-tobt",
+      "category": "2 Bedroom Suite, Bedroom 1: 1 King, Bedroom 2: 1 Queen, Sofa bed (TOBT)",
+      "maximum": 6,
+      "kitchen": "published-kitchen",
+      "conditions": [
+        "Confirm sofa sleeping allocation and fifth dining place for ages4/8/12; exact booking setup still required"
+      ],
+      "actual_five_person_screen": "CONDITIONAL_PUBLISHED_CAPACITY",
+      "source_id": "fenway-rooms"
+    },
+    {
+      "record_id": "boston-fenway-one-bedroom-onbt",
+      "category": "1 Bedroom Suite, 1 King, Sofa bed (ONBT)",
+      "maximum": 4,
+      "kitchen": "published-kitchen",
+      "conditions": [],
+      "actual_five_person_screen": "OUTSIDE_PUBLISHED_LIMIT",
+      "source_id": "fenway-rooms"
+    }
+  ],
+  "property_facts": {
+    "source_id": "fenway-overview",
+    "check_in": "16:00",
+    "check_out": "12:00",
+    "minimum_check_in_age": 21,
+    "breakfast": "Complimentary weekday06:30-09:30/weekend07:00-10:00; individual-child terms unverified",
+    "pool": "Indoor listed; actual November operation/access/hours unknown, not waterpark",
+    "valet_usd_daily": 72,
+    "parking_outside_standard_times_usd": 85,
+    "parking_unit_outside_times": "not-independently-established",
+    "pet_fee_usd_per_room_stay": 150,
+    "pet_fee_tax": "additional",
+    "internet_conflict": "Property member-free wording vs exact modal complimentary; confirm",
+    "no_route_or_firsthand_claim": true
+  },
+  "budget_gate": {
+    "observation_file": "docs/research/boston-fenway-price-observation-2026-10-03.json",
+    "exact_party_and_dates_verified": true,
+    "normalized_public_plans": 1,
+    "displayed_pre_tax_stay_usd": 3905,
+    "derived_pre_tax_nightly_usd": 781,
+    "display_rounding": "whole-dollar",
+    "taxes_and_mandatory_fees": null,
+    "final_all_fee_stay": null,
+    "deposit": null,
+    "alternative_sale": {
+      "name": "September Sale",
+      "displayed_pre_tax_avg_nightly_usd": 663,
+      "displayed_pre_tax_stay_usd": 3319,
+      "minimum_nights": 2,
+      "stated_discount_percent": 15,
+      "late_cancel_usd": 741.38,
+      "included_in_normalized_public_prices": false,
+      "eligibility": "unresolved",
+      "booking_window": "unknown"
+    }
+  },
+  "dependency": {
+    "failed_tool": "fenwayRates126.playwright.getByRole('checkbox',{name:'Show with taxes and fees'}).check()",
+    "result": "Click did not change checked state to true; preceding native click left value0",
+    "gate": "Tax/mandatory-fee inclusive actual-family total",
+    "owner": "Public booking UI/provider rendering",
+    "unblock_condition": "Normal public control changes state or legitimate visible breakdown becomes available without checkout/account/security bypass",
+    "next_check": "Only changed normal UI/control state; no unchanged retry"
+  },
+  "maintained_inputs": {
+    "pack": "docs/research/boston-room-configurations-2026-10-01.json",
+    "original_records_preserved": 5,
+    "added_records": 2,
+    "old_sources_and_prices_renewed": false,
+    "copley_family_suite_hold_preserved": true,
+    "complete_corpus": false
+  },
+  "decision": {
+    "outcome": "IMPLEMENT exact kitchen category and negative control plus dated pre-tax family price in shared comparison; HOLD finalbudget/rest/fullcorpus/Bostonlaunch",
+    "hypothesis": "Kitchen suite alone settles five-person budget/rest task",
+    "result": "Exact TOBT supports conditional capacity; ONBT excluded. Actualages/date quote narrows budget but missing fees/table4/bedallocation/rest/currentreviews remain.",
+    "confidence": "High observed modal/search/pre-tax card evidence and deterministicscreen; unknown finalfees/bedallocation/service/rest/currentreviews/users/SEO",
+    "remaining_gate": "Normal fee-inclusive sameparty breakdown/deposit; current family review signals, actual no-car museumreturn/rest budget/full representativecorpus/materiality/noexistingfit/fresh namedBostonapproval; do not retry117unresolvedcategory or unchangedtax control",
+    "next_falsification_trigger": "Changed official roomlimit/fees/price or sourceexpiry, supported fullbudget/rest/currentreviews or named publicationapproval",
+    "paid_calls": 0,
+    "public_change": false,
+    "city_launch_approved": false,
+    "security_denial_retried": false,
+    "contact_account_or_reservation_mutation": false
+  }
+}
