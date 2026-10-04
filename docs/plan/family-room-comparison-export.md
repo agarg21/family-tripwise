@@ -8,6 +8,18 @@ FT-IMP-051, September 30, 2026. This is a reusable offline research/review surfa
 
 Each row retains the destination/category, capacity screen and conditions, sleeping setup, kitchen/connection context, category and price observation dates separately, screening date, actual adults/individual child ages, exact arrival/departure/night count, currency/per-configuration-night unit, plan, displayed stay amount and derived nightly equivalent. Provider party/age-input/cutoff basis, priced configuration, fee/tax, deposit, meals, cancellation, conflicts, next checks, clean source URLs and uncertainty limits travel with the numbers. A prepaid stay amount is not added again as an extra fee. Requested beds/connections and historical samples remain labeled. Capacity, budget and booking acceptance are separate questions.
 
+## Observed Nightly Budget
+
+October3 FT-IMP-071 adds a price-only budget annotation. Supply both `--nightly-budget 350 --budget-currency USD`, or use fifth API argument `{ budget: { currency: "USD", nightly_limit: 350 } }` with either export. Currency must be USD or GBP and the limit a positive cent-precision number. A hypothetical limit is task input, not an observed customer budget. It does not filter or sort rows or convert currencies; combine with the existing kitchen and capacity views as needed.
+
+Each plan's scope cell shows `AT_OR_BELOW_OBSERVED_AMOUNT` or `ABOVE_OBSERVED_AMOUNT` only for a matching current dated amount. `UNKNOWN_UNPRICED`, `UNKNOWN_HISTORICAL_PRICE`, `UNKNOWN_CURRENCY_MISMATCH` and `UNKNOWN_AGE_BASIS` keep the respective evidence gaps explicit. Price-only means no final all-fee budget, eligibility, future availability or hotel-ranking inference. All original price, party, stay, tax/fee, cancellation and source fields remain; default exports are byte-identical. Malformed/partial/duplicate controls fail before output. Saved checkpoints record the chosen budget and retain input-category counts and existing exclusive/public-site/symlink protections.
+
+```bash
+node tools/family-room-comparison.mjs docs/research/washington-dc-room-configurations-2026-09-30.json --date 2026-10-03 --prices docs/research/washington-dc-embassy-price-observation-2026-09-30.json docs/research/washington-dc-homewood-price-observation-2026-09-30.json docs/research/washington-dc-residence-price-observation-2026-09-30.json --nightly-budget 350 --budget-currency USD
+```
+
+The maintained seven-row DC task gives four observed amounts at/below this hypothetical threshold, two above and one unpriced. This is not a final-budget pass. [Validation and limits](../research/family-room-budget-screen-2026-10-03.json) preserve the unchanged evidence and task controls.
+
 ## Reuse
 
 October3 FT-IMP-070 adds optional `--capacity not-excluded` (default `any`) and fifth API argument `{ capacity: "not-excluded" }` to either single or joined export. It hides only `OUTSIDE_PUBLISHED_LIMIT` results from the existing dated capacity screen. Conditional, stale and unpriced rows remain visible; they are not booking acceptance or availability. Combine with `--kitchen published` or `{ capacity: "not-excluded", kitchen: "published" }` for recorded cooking evidence. Every supplied record and observation is validated before filtering, including prices belonging to a hidden room. Defaults remain byte-identical.

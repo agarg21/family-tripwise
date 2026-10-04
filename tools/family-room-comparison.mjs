@@ -22,7 +22,7 @@ const cell = value => {
 
 function comparisonFilters(filters) {
   if (!filters || Object.getPrototypeOf(filters) !== Object.prototype ||
-      Reflect.ownKeys(filters).some(key => !["kitchen", "capacity"].includes(key))) throw new Error("Invalid comparison filters");
+      Reflect.ownKeys(filters).some(key => !["kitchen", "capacity", "budget"].includes(key))) throw new Error("Invalid comparison filters");
   const value = (key, allowed) => {
     const field = Object.getOwnPropertyDescriptor(filters, key);
     const selected = field ? field.value : "any";
@@ -30,10 +30,35 @@ function comparisonFilters(filters) {
       throw new Error(`${key} filter must be ${allowed.join(" or ")}`);
     return selected;
   };
-  return { kitchen: value("kitchen", ["any", "published"]), capacity: value("capacity", ["any", "not-excluded"]) };
+  const field = Object.getOwnPropertyDescriptor(filters, "budget");
+  let budget;
+  if (field) {
+    if (!Object.hasOwn(field, "value") || !field.value || Object.getPrototypeOf(field.value) !== Object.prototype ||
+        Reflect.ownKeys(field.value).length !== 2 || Reflect.ownKeys(field.value).some(key => !["currency", "nightly_limit"].includes(key)))
+      throw new Error("Invalid observed nightly budget");
+    const currency = Object.getOwnPropertyDescriptor(field.value, "currency");
+    const limit = Object.getOwnPropertyDescriptor(field.value, "nightly_limit");
+    if (!currency || !Object.hasOwn(currency, "value") || !["USD", "GBP"].includes(currency.value) ||
+        !limit || !Object.hasOwn(limit, "value") || !Number.isFinite(limit.value) || limit.value <= 0 ||
+        !Number.isSafeInteger(Math.round(limit.value * 100)) || Math.round(limit.value * 100) / 100 !== limit.value)
+      throw new Error("Budget requires USD or GBP and a positive cent-precision nightly limit");
+    budget = { currency: currency.value, nightly_limit: limit.value };
+  }
+  return { kitchen: value("kitchen", ["any", "published"]), capacity: value("capacity", ["any", "not-excluded"]), ...(budget ? { budget } : {}) };
 }
 
-function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity }) {
+function observedNightlyBudget(price, rate, budget) {
+  if (!budget) return [];
+  let status;
+  if (!rate) status = "UNKNOWN_UNPRICED";
+  else if (price.currency !== budget.currency) status = "UNKNOWN_CURRENCY_MISMATCH";
+  else if (price.status.startsWith("historical-")) status = "UNKNOWN_HISTORICAL_PRICE";
+  else if (price.requested_individual_ages_confirmed === false) status = "UNKNOWN_AGE_BASIS";
+  else status = rate.nightly_average <= budget.nightly_limit ? "AT_OR_BELOW_OBSERVED_AMOUNT" : "ABOVE_OBSERVED_AMOUNT";
+  return [`Observed nightly budget ${status}: limit ${budget.nightly_limit} ${budget.currency}/configuration/night; price-only dated sample, not final all-fee budget, booking acceptance, future availability or hotel ranking`];
+}
+
+function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budget }) {
   const screened = screenRoomPack(pack, party, asOf, prices);
   const stay = party.stay ?? pack.scenario?.stay;
   const nights = (Date.parse(stay?.departure) - Date.parse(stay?.arrival)) / 86400000;
@@ -56,7 +81,8 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity }) {
       price.observation_limitation ?? price.missing_basis?.join("; ") ?? "Not observed",
       [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed",
         ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : []),
-        ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : [])].join("; ")
+        ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : []),
+        ...observedNightlyBudget(price, rate, budget)].join("; ")
     ]);
   });
 }
@@ -122,6 +148,7 @@ export function parseRoomComparisonOptions(input) {
   const filters = {};
   const pricePaths = [], additionalPackPaths = [];
   const taskOptions = new Map();
+  const budgetOptions = new Map();
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--date" && !dateSet && args[i + 1] && !args[i + 1].startsWith("--")) {
       date = args[++i]; dateSet = true;
@@ -137,12 +164,21 @@ export function parseRoomComparisonOptions(input) {
       filters.kitchen = args[++i]; kitchenSet = true;
     } else if (args[i] === "--capacity" && !capacitySet && args[i + 1] && !args[i + 1].startsWith("--")) {
       filters.capacity = args[++i]; capacitySet = true;
+    } else if (["--nightly-budget", "--budget-currency"].includes(args[i]) &&
+        !budgetOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
+      budgetOptions.set(args[i], args[++i]);
     } else if (["--adults", "--child-ages", "--arrival", "--departure"].includes(args[i]) &&
         !taskOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
       taskOptions.set(args[i], args[++i]);
     } else throw new Error(`Unknown, duplicate or incomplete comparison option: ${args[i]}`);
   }
   if (!validDate(date)) throw new Error("Invalid screening date");
+  if (budgetOptions.size) {
+    const amount = budgetOptions.get("--nightly-budget");
+    if (budgetOptions.size !== 2 || !/^(?:0|[1-9]\d*)(?:\.\d{1,2})?$/.test(amount ?? ""))
+      throw new Error("Supply nightly budget and budget currency together, using a decimal amount");
+    filters.budget = { nightly_limit: Number(amount), currency: budgetOptions.get("--budget-currency") };
+  }
   comparisonFilters(filters);
   let task = null;
   if (taskOptions.size) {
@@ -180,7 +216,7 @@ async function main() {
     await mkdir(dirname(path), { recursive: true });
     await writeFile(await researchOutputPath(path), csv, { flag: "wx" });
     console.log(JSON.stringify({ as_of: date, categories: packs.reduce((total, p) => total + p.records.length, 0), packs: packs.length, output, public_changes: false,
-      ...(filters.kitchen === "published" || filters.capacity === "not-excluded" ? { filters, categories_are_input_count: true } : {}),
+      ...(filters.kitchen === "published" || filters.capacity === "not-excluded" || filters.budget ? { filters, categories_are_input_count: true } : {}),
       task: { adults: party.adults, child_ages: party.child_ages, stay: party.stay } }));
   } else process.stdout.write(csv);
 }

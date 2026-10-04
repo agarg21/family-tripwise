@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-071",
+  "learning_unit": "LRN-150",
+  "parent_item": "FT-RES-059",
+  "validated_on": "2026-10-03",
+  "evidence_class": "OFFLINE_MAINTAINED_RECORD_TASK_VALIDATION",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "budget": {
+      "currency": "USD",
+      "nightly_limit": 350,
+      "unit": "configuration/night",
+      "basis": "Hypothetical task threshold, not supplied customer budget"
+    },
+    "as_of": "2026-10-03",
+    "real_user_test": false
+  },
+  "sources": {
+    "room_pack": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+    "prices": [
+      "docs/research/washington-dc-embassy-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-homewood-price-observation-2026-09-30.json",
+      "docs/research/washington-dc-residence-price-observation-2026-09-30.json"
+    ],
+    "source_class": "Reused official category facts/dated booking observations; no new source inspection or renewal"
+  },
+  "baseline": {
+    "rows": 7,
+    "explicit_budget_status": false,
+    "failure": "Parent must repeat per-plan threshold arithmetic; schema has no explicit budget input and no current versus unresolved-price screen"
+  },
+  "result": {
+    "rows": 7,
+    "at_or_below_observed_amount": 4,
+    "above_observed_amount": 2,
+    "unpriced": 1,
+    "derived_rows": [
+      {
+        "hotel": "Embassy Suites Washington DC Convention Center",
+        "plan": "Non-refundable",
+        "nightly_amount": "334.68",
+        "status": "AT_OR_BELOW_OBSERVED_AMOUNT"
+      },
+      {
+        "hotel": "Embassy Suites Washington DC Convention Center",
+        "plan": "Flexible Rate",
+        "nightly_amount": "408.14",
+        "status": "ABOVE_OBSERVED_AMOUNT"
+      },
+      {
+        "hotel": "Homewood Suites Washington DC Downtown",
+        "plan": "Non-refundable",
+        "nightly_amount": "288.97",
+        "status": "AT_OR_BELOW_OBSERVED_AMOUNT"
+      },
+      {
+        "hotel": "Homewood Suites Washington DC Downtown",
+        "plan": "Semi-Flex",
+        "nightly_amount": "316.61",
+        "status": "AT_OR_BELOW_OBSERVED_AMOUNT"
+      },
+      {
+        "hotel": "Homewood Suites Washington DC Downtown",
+        "plan": "Flexible Rate",
+        "nightly_amount": "339.97",
+        "status": "AT_OR_BELOW_OBSERVED_AMOUNT"
+      },
+      {
+        "hotel": "Pendry Washington DC The Wharf",
+        "plan": "Unpriced",
+        "nightly_amount": null,
+        "status": "UNKNOWN_UNPRICED"
+      },
+      {
+        "hotel": "Residence Inn Washington DC National Mall",
+        "plan": "Prepay Non-refundable",
+        "nightly_amount": "433.65",
+        "status": "ABOVE_OBSERVED_AMOUNT"
+      }
+    ],
+    "full_fee_budget_pass": null,
+    "hotel_winner": null,
+    "capacity_or_booking_acceptance_established": false,
+    "default_bytes_unchanged": true,
+    "non_scope_columns_unchanged": 34
+  },
+  "controls": {
+    "threshold_equality": true,
+    "one_cent_lower": true,
+    "current_and_historical_price": true,
+    "currency_mismatch_no_conversion": true,
+    "changed_ages_no_price": true,
+    "unknown_provider_child_band_retains190_58_but_unknown_budget": true,
+    "unpriced_unknown_currency_visible": true,
+    "kitchen_capacity_compatibility": true,
+    "all_observations_validated_before_filtering": true,
+    "api_cli_single_joined_parity": true,
+    "invalid_inputs_fail_before_output": true,
+    "exclusive_output_and_public_site_guard": true
+  },
+  "decision": {
+    "result": "IMPLEMENT optional price-only annotation; REJECT complete-cost/booking-acceptance inference",
+    "confidence": "High deterministic arithmetic/preservation; unknown actual user satisfaction, final hotel cost/rest and SEO",
+    "next_gate": "DC reconciled representative category corpus, mandatory/sofa/hold fees, actual child-paced room rest, materiality/noexistingfit and fresh named DC approval; original holds unchanged",
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0,
+    "source_renewal": false
+  },
+  "preservation": {
+    "all_original_room_price_records": true,
+    "capacity_view_070": true,
+    "prior131_completion": true,
+    "public_and_held_work": true
+  }
+}
