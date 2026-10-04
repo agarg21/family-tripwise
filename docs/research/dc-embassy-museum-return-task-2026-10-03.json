@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-128",
+  "learning_unit": "LRN-145",
+  "parent_item": "FT-RES-059",
+  "inspected_on": "2026-10-03",
+  "evidence_class": "OFFICIAL_VISITOR_AND_PROPERTY_FACT_WITH_PUBLIC_JOURNEY_MODEL",
+  "sources": {
+    "museum": {
+      "url": "https://naturalhistory.si.edu/visit",
+      "inspected_on": "2026-10-03",
+      "crawl_label": "today",
+      "published_on": null,
+      "effective_on": null,
+      "locator": "Visit Location and Getting Here"
+    },
+    "hotel": {
+      "url": "https://www.hilton.com/en/hotels/wascces-embassy-suites-washington-dc-convention-center/hotel-location/",
+      "inspected_on": "2026-10-03",
+      "crawl_label": "today",
+      "published_on": null,
+      "effective_on": null,
+      "locator": "Property header address"
+    },
+    "planner": {
+      "url": "https://www.wmata.com/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "surface": "Normal anonymous public From/To suggestions, Travel Options, rendered Available Trips map and Itinerary Detail; no hidden API/network/session URLs retained."
+    }
+  },
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "car": false,
+    "hotel": "Embassy Suites Washington DC Convention Center",
+    "hotel_address": "900 10th Street NW, Washington DC 20001",
+    "museum": "National Museum of Natural History",
+    "museum_anchor": "10th St. & Constitution Ave. NW, Washington, DC 20560, USA",
+    "museum_entry_basis": "Official museum publishes Constitution Avenue and Madison Drive entrances; planner geocoded museum result resolves the Constitution-side intersection, not a confirmed specific accessible doorway.",
+    "real_user_test": false,
+    "journey_tested": false
+  },
+  "planner_inputs": {
+    "travel_date": "2026-11-10",
+    "time_zone": "America/New_York",
+    "date_basis": "Editorial proxy date within stay, not confirmed user itinerary",
+    "departure_mode": "Leave at",
+    "travel_by": "All",
+    "route_preference": "Fastest route (Default)",
+    "walking_preference": "Default Walking",
+    "accessibility_preference": "I need an elevator",
+    "preference_basis": "Editorial planner option, not a user disability disclosure or proof of functioning accessible route",
+    "user_location_shared": false
+  },
+  "legs": [
+    {
+      "direction": "museum-to-hotel",
+      "departure": "13:00",
+      "displayed_arrival": "13:17",
+      "displayed_duration_minutes": 18,
+      "displayed_clock_difference_minutes": 17,
+      "displayed_distance_miles": 0.74,
+      "mode": "walking-only",
+      "returned_options": 1,
+      "fare_amount": null,
+      "fare_basis": "Cost of trip section has headings without numeric amount; blank is not an observed zero-fare quote."
+    },
+    {
+      "direction": "hotel-to-museum",
+      "departure": "15:00",
+      "displayed_arrival": "15:17",
+      "displayed_duration_minutes": 18,
+      "displayed_clock_difference_minutes": 17,
+      "displayed_distance_miles": 0.74,
+      "mode": "walking-only",
+      "returned_options": 1,
+      "fare_amount": null,
+      "fare_basis": "No numeric amount displayed."
+    }
+  ],
+  "model_summary": {
+    "combined_stated_minutes": 36,
+    "combined_stated_miles": 1.48,
+    "combined_clock_difference_minutes": 34,
+    "duration_conflict": "Both legs show18minutes but their displayed clocks differ by17; precision unresolved, no corrected time inferred.",
+    "model_not_physical_journey": true,
+    "reverse_independently_requested": true,
+    "rail_bus_absence_not_unavailability": true,
+    "door_to_room_minutes": null,
+    "room_rest_minutes": null,
+    "desired_rest_minutes": null,
+    "entry_wait_minutes": null,
+    "internal_museum_exit_minutes": null,
+    "child_pace_minutes": null,
+    "actual_hotel_return_feasibility": "UNKNOWN",
+    "complete_day_budget": null,
+    "hotel_winner": null,
+    "future_operation_confirmed": false,
+    "route_stroller_safety_assessed": false
+  },
+  "method_limits": [
+    "Planner geocoded anchors and two rendered map/detail views inspected; map line not proof of sidewalk conditions, crossings, gradients, construction, elevators or exact entrances.",
+    "Two departure times are independent editorial inputs; the interval between them is not room-rest duration or booking acceptance.",
+    "No child-pace, weather, queues, return screening, detours, internal hotel/museum travel or future service measured; no rail-cost band inherited for walking model.",
+    "One stale suggestion-node click failed with shadow-root error; fresh visible state showed changed suggestions, correct museum text selected normally. No security denial/bypass/reload/network alternative."
+  ],
+  "decision": {
+    "result": "IMPLEMENT dated planner question in shared comparison; CANDIDATE named two-leg model, REJECT actual rest/route feasibility",
+    "confidence": "High displayed input/model extraction; unknown physical journey, rest, child pace, future operation and SEO",
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0,
+    "next_gate": "Actual entrance/door-to-room/child-pace/rest/re-entry evidence and second anchor after changed access; exact-category current corpus/full fees/materiality/noexisting fit/fresh named DC approval"
+  },
+  "preservation": {
+    "old_108_068_124_records_dates_unchanged": true,
+    "old_four_categories_three_prices_unchanged": true,
+    "review_127_questions_preserved": true,
+    "held_work_unchanged": true
+  }
+}

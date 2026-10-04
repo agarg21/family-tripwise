@@ -96,3 +96,39 @@ test("Embassy review questions survive single and joined CSV without renewing ol
   assert.equal(value(changed, "Nightly equivalent"), "");
   assert.match(value(changed, "Next checks"), /not prevalence/);
 });
+
+test("named Embassy model preserves independently requested legs and rest unknowns", () => {
+  const evidence = JSON.parse(read("dc-embassy-museum-return-task-2026-10-03.json"));
+  assert.equal(evidence.planner_inputs.travel_date, "2026-11-10");
+  assert.deepEqual(evidence.legs.map(leg => leg.departure), ["13:00", "15:00"]);
+  assert.deepEqual(evidence.legs.map(leg => leg.mode), ["walking-only", "walking-only"]);
+  assert.equal(evidence.model_summary.reverse_independently_requested, true);
+  assert.equal(evidence.legs.reduce((sum, leg) => sum + leg.displayed_duration_minutes, 0), 36);
+  assert.equal(evidence.model_summary.combined_stated_minutes, 36);
+  assert.equal(evidence.legs.reduce((sum, leg) => sum + leg.displayed_clock_difference_minutes, 0), 34);
+  assert.equal(evidence.model_summary.combined_clock_difference_minutes, 34);
+  for (const leg of evidence.legs) assert.equal(leg.fare_amount, null);
+  for (const field of ["room_rest_minutes", "desired_rest_minutes", "entry_wait_minutes", "child_pace_minutes", "door_to_room_minutes", "complete_day_budget", "hotel_winner"])
+    assert.equal(evidence.model_summary[field], null);
+  assert.equal(evidence.model_summary.actual_hotel_return_feasibility, "UNKNOWN");
+  assert.equal(evidence.model_summary.route_stroller_safety_assessed, false);
+  assert.equal(evidence.model_summary.future_operation_confirmed, false);
+  assert.equal(evidence.decision.city_launch_approved, false);
+  assert.equal(evidence.decision.public_change, false);
+  assert.equal(evidence.planner_inputs.user_location_shared, false);
+  assert.doesNotMatch(JSON.stringify(evidence), /searchOriginLat|activeItinerary|searchDestinationLat|access_token|refresh_token/i);
+});
+
+test("shared Embassy checks expose model limits without changing dated budget values", () => {
+  const csv = roomComparisonCsv(pack, pack.scenario, "2026-10-03", prices);
+  const embassy = rows(csv).slice(1).filter(row => value(row, "Hotel").startsWith("Embassy"));
+  for (const row of embassy) {
+    assert.match(value(row, "Next checks"), /official WMATA model/);
+    assert.match(value(row, "Next checks"), /not child-paced, stroller-tested or door-to-room/);
+    assert.match(value(row, "Next checks"), /queue\/rest unknown/);
+    assert.match(value(row, "Next checks"), /property-level signals, not prevalence/);
+    assert.equal(value(row, "Category checked"), "2026-09-30");
+    assert.equal(value(row, "Price observed"), "2026-09-30");
+  }
+  assert.equal(roomComparisonsCsv([pack], pack.scenario, "2026-10-03", prices), csv);
+});
