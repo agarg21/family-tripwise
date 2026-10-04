@@ -16,13 +16,16 @@ const assertQuestions = row => {
   assert.match(value(row, "Next checks"), /Confirm sofa dimensions, deployment clearance/);
 };
 
-test("DC maintained checks change only Homewood questions, not historical output basis", () => {
+test("DC maintained checks change only Homewood and Embassy questions, not historical output basis", () => {
   const before = rows(read("washington-dc-comparison-task-2026-10-03.csv"));
   const after = rows(roomComparisonCsv(pack, pack.scenario, "2026-10-03", prices));
   assert.deepEqual(after[0], before[0]); assert.equal(after.length, 8);
   for (let i = 1; i < after.length; i++) {
     const current = after[i], prior = before[i];
-    if (!value(current, "Hotel").startsWith("Homewood")) assert.deepEqual(current, prior);
+    if (value(current, "Hotel").startsWith("Embassy")) {
+      assert.match(value(current, "Next checks"), /property-level signals, not prevalence/);
+      assert.deepEqual(current.filter((_, index) => index !== checkIndex), prior.filter((_, index) => index !== checkIndex));
+    } else if (!value(current, "Hotel").startsWith("Homewood")) assert.deepEqual(current, prior);
     else {
       assertQuestions(current);
       assert.deepEqual(current.filter((_, index) => index !== checkIndex), prior.filter((_, index) => index !== checkIndex));
@@ -55,4 +58,41 @@ test("setup questions do not renew stale sources or transfer dated prices to ano
   const otherParty = { ...pack.scenario, child_ages: [4, 8, 13] };
   const row = rows(roomComparisonCsv(pack, otherParty, "2026-10-03", prices)).slice(1).find(row => value(row, "Hotel").startsWith("Homewood"));
   assertQuestions(row); assert.equal(value(row, "Nightly equivalent"), ""); assert.equal(value(row, "Public rate plan"), "Unpriced");
+});
+
+test("Embassy selected review evidence retains dates, category and privacy limits", () => {
+  const evidence = JSON.parse(read("dc-embassy-family-review-signals-2026-10-03.json"));
+  assert.equal(evidence.method.qualifying_reports, 5);
+  assert.equal(evidence.reports.length, 5);
+  assert.equal(evidence.method.complete_current_corpus, false);
+  assert.equal(evidence.method.exact_deluxe_category_reports, 0);
+  assert.equal(evidence.method.party_match_reports, 0);
+  assert.equal(evidence.reports.filter(report => report.translated).length, 4);
+  for (const report of evidence.reports) {
+    assert.equal(report.exact_deluxe_match, false);
+    assert.ok(report.posted_on >= "2026-04-01" && report.posted_on <= "2026-10-03");
+    assert.ok(report.stay_month >= "2026-04" && report.stay_month <= "2026-10");
+    assert.deepEqual(Object.keys(report).sort(), ["id", "source_id", "locator", "posted_on", "stay_month", "trip_type", "category_label", "translated", "party_basis", "signal", "exact_deluxe_match"].sort());
+  }
+  assert.equal(evidence.interpretation.actual_museum_return_minutes, null);
+  assert.equal(evidence.interpretation.prevalence, null);
+  assert.equal(evidence.decision.city_launch_approved, false);
+  assert.equal(evidence.decision.public_change, false);
+  assert.equal(evidence.decision.paid_calls, 0);
+  assert.match(evidence.excluded[0].reason, /conflicts/);
+});
+
+test("Embassy review questions survive single and joined CSV without renewing old facts", () => {
+  const single = roomComparisonCsv(pack, pack.scenario, "2026-10-03", prices);
+  assert.equal(roomComparisonsCsv([pack], pack.scenario, "2026-10-03", prices), single);
+  const embassy = rows(single).slice(1).filter(row => value(row, "Hotel").startsWith("Embassy"));
+  assert.equal(embassy.length, 2);
+  for (const row of embassy) {
+    assert.match(value(row, "Next checks"), /not reconciled to this Deluxe Double/);
+    assert.equal(value(row, "Category checked"), "2026-09-30");
+    assert.equal(value(row, "Price observed"), "2026-09-30");
+  }
+  const changed = rows(roomComparisonCsv(pack, {...pack.scenario, child_ages: [4, 8, 13]}, "2026-10-03", prices)).slice(1).find(row => value(row, "Hotel").startsWith("Embassy"));
+  assert.equal(value(changed, "Nightly equivalent"), "");
+  assert.match(value(changed, "Next checks"), /not prevalence/);
 });

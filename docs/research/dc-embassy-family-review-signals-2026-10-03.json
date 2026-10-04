@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-127",
+  "learning_unit": "LRN-144",
+  "parent_item": "FT-RES-059",
+  "inspected_on": "2026-10-03",
+  "hotel": "Embassy Suites Washington DC Convention Center",
+  "evidence_class": "ONLINE_REVIEW_SIGNAL",
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "car": false,
+    "real_user_test": false
+  },
+  "sources": {
+    "trip": {
+      "url": "https://www.trip.com/hotels/washington-dc-hotel-detail-2194011/embassy-suites-washington-dc-convention-center/review.html",
+      "inspected_on": "2026-10-03",
+      "crawl_label": "5 days ago",
+      "published_on": null,
+      "effective_on": null,
+      "body_available": true
+    },
+    "tripadvisor": {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g28970-d574805-Reviews-Embassy_Suites_by_Hilton_Washington_DC_Convention_Center-Washington_DC_District_of_Colum.html",
+      "inspected_on": "2026-10-03",
+      "search_crawl_label": "3 weeks ago",
+      "opened_crawl_label": "5 months ago",
+      "published_on": null,
+      "body_available": true
+    }
+  },
+  "method": {
+    "inclusion": "Visible individual bodies labeled Family, publication dates from April 1 through October 3, 2026 and stated stay month April 2026 or later; source dates not operations/future-stay confirmation",
+    "selection": "Purposeful visible-body task sample, not random, exhaustive or representative. Translation marker retained; no filters/pagination/interaction tested.",
+    "complete_current_corpus": false,
+    "qualifying_reports": 5,
+    "independent_authenticity_verified": false,
+    "exact_deluxe_category_reports": 0,
+    "party_match_reports": 0
+  },
+  "reports": [
+    {
+      "id": "embassy-family-01",
+      "source_id": "trip",
+      "locator": "lines 125-139",
+      "posted_on": "2026-07-09",
+      "stay_month": "2026-06",
+      "trip_type": "Family",
+      "category_label": "1 King 1 Bdrm Mobility Access W/Tub No Smok",
+      "translated": false,
+      "party_basis": "Two children; narrative later refers to three guests; adult count and ages unresolved.",
+      "signal": "Sofa cleaning and additional towels were requested.",
+      "exact_deluxe_match": false
+    },
+    {
+      "id": "embassy-family-02",
+      "source_id": "trip",
+      "locator": "lines 146-163",
+      "posted_on": "2026-07-03",
+      "stay_month": "2026-05",
+      "trip_type": "Family",
+      "category_label": "Modern Two Room Suite With 1 King Bed",
+      "translated": true,
+      "party_basis": "Counts and ages unknown.",
+      "signal": "Breakfast variety was described positively.",
+      "exact_deluxe_match": false
+    },
+    {
+      "id": "embassy-family-03",
+      "source_id": "trip",
+      "locator": "lines 190-206",
+      "posted_on": "2026-09-24",
+      "stay_month": "2026-07",
+      "trip_type": "Family",
+      "category_label": "Hearing Accessible One Bedroom King Suite",
+      "translated": true,
+      "party_basis": "Counts and ages unknown.",
+      "signal": "Living space was useful; limited laundry machines could mean waiting.",
+      "exact_deluxe_match": false
+    },
+    {
+      "id": "embassy-family-04",
+      "source_id": "trip",
+      "locator": "lines 293-311",
+      "posted_on": "2026-08-05",
+      "stay_month": "2026-07",
+      "trip_type": "Family",
+      "category_label": "Modern Two Room Suite With 2 Double Beds",
+      "translated": true,
+      "party_basis": "Counts and ages unknown.",
+      "signal": "Room cleanliness and breakfast were described positively.",
+      "exact_deluxe_match": false
+    },
+    {
+      "id": "embassy-family-05",
+      "source_id": "trip",
+      "locator": "lines 377-396",
+      "posted_on": "2026-05-16",
+      "stay_month": "2026-04",
+      "trip_type": "Family",
+      "category_label": "1 King 1 Bdrm Mobility Access W/Tub No Smok",
+      "translated": true,
+      "party_basis": "Counts and ages unknown.",
+      "signal": "Sofa-bed comfort was questioned.",
+      "exact_deluxe_match": false
+    }
+  ],
+  "excluded": [
+    {
+      "source_id": "trip",
+      "locator": "lines 210-228",
+      "posted_on": "2026-07-11",
+      "stay_month": "2026-06",
+      "reason": "June stay label conflicts with narrative referring to a completed anniversary celebration; excluded from qualifying sample, no inferred corrected stay date or route use."
+    },
+    {
+      "source_id": "tripadvisor",
+      "locator": "lines 494-550",
+      "posted_month": "2026-02",
+      "stay_month": "2026-02",
+      "reason": "Outside defined date window. Search freshness does not renew individual-body dates."
+    }
+  ],
+  "interpretation": {
+    "supported": "Candidate property-level meal/sleep questions only.",
+    "prevalence": null,
+    "exact_room_condition": null,
+    "sofa_dimensions": null,
+    "breakfast_for_exact_rate_party": null,
+    "actual_museum_return_minutes": null,
+    "future_operations_confirmed": false,
+    "route_stroller_safety_assessed": false,
+    "category_identity": "Modern double label is not independently reconciled to maintained Deluxe Double category; accessible King reports do not establish Deluxe condition."
+  },
+  "decision": {
+    "result": "IMPLEMENT dated uncertainty questions in shared comparison; CANDIDATE limited property-level signals; REJECT exact-room or route verdict",
+    "confidence": "High extraction/date/category limits; low representativeness and unknown actual task/experience/SEO",
+    "next_gate": "Representative exact-category current corpus, actual named journeys/rest, full costs, maintained information gain/materiality/no-existing fit and fresh named DC approval",
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0
+  },
+  "preservation": {
+    "capacity_price_source_dates_unchanged": true,
+    "old_four_categories_three_prices_unchanged": true,
+    "held_work_unchanged": true
+  }
+}
