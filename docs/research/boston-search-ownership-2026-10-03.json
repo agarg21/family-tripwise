@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-125",
+  "parent_item": "FT-RES-061",
+  "learning_unit": "LRN-142",
+  "inspected_on": "2026-10-03",
+  "collected_at": "2026-10-04T00:14:04.629Z",
+  "calendar_basis": "October3Eastern; UTC collection on October4 is not a sprint extension",
+  "receipt": "docs/research/boston-search-ownership-demand-2026-10-03.json",
+  "manifest": "docs/research/boston-search-ownership-keywords-2026-10-03.json",
+  "controlled_scope": {
+    "market": "US",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "os": "windows",
+    "depth": 10,
+    "organic_counts": [
+      8,
+      9,
+      10
+    ],
+    "complete_ten_organic_each": false,
+    "limitation": "Returned bounded organic sets; nonorganic features not treated as page overlap. General phrase includes tangential pool/station/medical/regional inventory. No paid retry."
+  },
+  "normalization": "URL parser; lowercase host/remove leadingwww/fragment/one nonroot trailing slash, preserve scheme/path case/query/subdomains",
+  "sets": [
+    {
+      "keyword": "family friendly hotels boston",
+      "checked_at": "2026-10-04 00:13:52 +00:00",
+      "urls": [
+        "https://boutiquehotelhub.com/boutique-hotels/category/swimming-pool/united-states/massachusetts/boston",
+        "https://smartluxury.com/advice/the-eliot-hotel",
+        "https://guestreservations.com/marriotts-boston-custom-house-villas/booking",
+        "https://ca.kayak.com/Boston-Hotels_South-Station.L8425.25588.hotel.ksp",
+        "https://tripadvisor.com/ShowTopic-g60745-i48-k10725404-Best_location_reasonable_to_stay_for_Children_s_Hosp_Visit-Boston_Massachusetts.html",
+        "https://expedia.com/Harvard-Art-Museums-Hotels.0-l6070081-0.Travel-Guide-Filter-Hotels",
+        "https://priceline.com/hotel-deals/en-us/P3000008602/H8354605/the-liberty-a-luxury-collection-hotel-boston.ssp",
+        "https://ihg.com/dedham-massachusetts"
+      ],
+      "hosts": [
+        "boutiquehotelhub.com",
+        "smartluxury.com",
+        "guestreservations.com",
+        "ca.kayak.com",
+        "tripadvisor.com",
+        "expedia.com",
+        "priceline.com",
+        "ihg.com"
+      ]
+    },
+    {
+      "keyword": "best family hotels in boston",
+      "checked_at": "2026-10-04 00:13:56 +00:00",
+      "urls": [
+        "https://cntraveler.com/gallery/where-to-stay-in-boston-with-kids-for-lego-adventures-secret-snack-vaults-and-fenway-views",
+        "https://fourseasons.com/boston/services-and-amenities/family",
+        "https://bostonharborhotel.com/offer/kidventure",
+        "https://tripadvisor.com/Hotels-g60745-zff4-Boston_Massachusetts-Hotels.html",
+        "https://the-modern-dad.com/best-boston-hotels-family-fun-a-kid-approved-guide",
+        "https://omnihotels.com/hotels/boston-parker-house/property-details/omni-kids",
+        "https://facebook.com/groups/bostontraveltips/posts/1291422275929148",
+        "https://booking.com/family/city/us/boston.html",
+        "https://hotelmarlowe.com/boston-boutique-hotels/family-friendly"
+      ],
+      "hosts": [
+        "cntraveler.com",
+        "fourseasons.com",
+        "bostonharborhotel.com",
+        "tripadvisor.com",
+        "the-modern-dad.com",
+        "omnihotels.com",
+        "facebook.com",
+        "booking.com",
+        "hotelmarlowe.com"
+      ]
+    },
+    {
+      "keyword": "boston hotels for family of 5",
+      "checked_at": "2026-10-04 00:14:04 +00:00",
+      "urls": [
+        "https://sixsuitcasetravel.com/boston-big-family-hotels-sleep-5-6-7-8",
+        "https://familytravelmagazine.com/where-to-stay-in-boston-with-kids",
+        "https://reddit.com/r/boston/comments/1iuscwe/best_hotel_to_stay_for_kiddos",
+        "https://fourseasons.com/boston/services-and-amenities/family",
+        "https://meetboston.com/stay/family-friendly-hotels",
+        "https://facebook.com/groups/bostontraveltips/posts/1270292074708835",
+        "https://the-modern-dad.com/best-boston-hotels-family-fun-a-kid-approved-guide",
+        "https://omnihotels.com/hotels/boston-parker-house/property-details/omni-kids",
+        "https://tripadvisor.com/ShowTopic-g60745-i48-k14363124-Best_family_friendly_neighborhood_to_stay_in_Boston-Boston_Massachusetts.html",
+        "https://bostonharborhotel.com/offer/kidventure"
+      ],
+      "hosts": [
+        "sixsuitcasetravel.com",
+        "familytravelmagazine.com",
+        "reddit.com",
+        "fourseasons.com",
+        "meetboston.com",
+        "facebook.com",
+        "the-modern-dad.com",
+        "omnihotels.com",
+        "tripadvisor.com",
+        "bostonharborhotel.com"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "queries": [
+        "family friendly hotels boston",
+        "best family hotels in boston"
+      ],
+      "shared_urls": [],
+      "url_union": 17,
+      "shared_hosts": [
+        "tripadvisor.com"
+      ],
+      "host_union": 16
+    },
+    {
+      "queries": [
+        "family friendly hotels boston",
+        "boston hotels for family of 5"
+      ],
+      "shared_urls": [],
+      "url_union": 18,
+      "shared_hosts": [
+        "tripadvisor.com"
+      ],
+      "host_union": 17
+    },
+    {
+      "queries": [
+        "best family hotels in boston",
+        "boston hotels for family of 5"
+      ],
+      "shared_urls": [
+        "https://fourseasons.com/boston/services-and-amenities/family",
+        "https://bostonharborhotel.com/offer/kidventure",
+        "https://the-modern-dad.com/best-boston-hotels-family-fun-a-kid-approved-guide",
+        "https://omnihotels.com/hotels/boston-parker-house/property-details/omni-kids"
+      ],
+      "url_union": 15,
+      "shared_hosts": [
+        "fourseasons.com",
+        "bostonharborhotel.com",
+        "tripadvisor.com",
+        "the-modern-dad.com",
+        "omnihotels.com",
+        "facebook.com"
+      ],
+      "host_union": 13
+    }
+  ],
+  "metrics": [
+    {
+      "keyword": "family friendly hotels boston",
+      "search_volume": 590,
+      "keyword_difficulty": 0,
+      "metrics_updated_at": "2026-09-16 10:23:55 +00:00",
+      "latest_month": {
+        "year": 2026,
+        "month": 8,
+        "search_volume": 480
+      },
+      "evidence_class": "LAGGED_PROVIDER_ESTIMATE",
+      "limitation": "Nonadditive estimates; Augusthistory and Septemberupdate not Octobertrend/easyKD/trafficforecast"
+    },
+    {
+      "keyword": "best family hotels in boston",
+      "search_volume": 480,
+      "keyword_difficulty": 0,
+      "metrics_updated_at": "2026-09-17 02:35:20 +00:00",
+      "latest_month": {
+        "year": 2026,
+        "month": 8,
+        "search_volume": 390
+      },
+      "evidence_class": "LAGGED_PROVIDER_ESTIMATE",
+      "limitation": "Nonadditive estimates; Augusthistory and Septemberupdate not Octobertrend/easyKD/trafficforecast"
+    },
+    {
+      "keyword": "boston hotels for family of 5",
+      "search_volume": 20,
+      "keyword_difficulty": 0,
+      "metrics_updated_at": "2026-09-15 01:04:07 +00:00",
+      "latest_month": {
+        "year": 2026,
+        "month": 8,
+        "search_volume": 20
+      },
+      "evidence_class": "LAGGED_PROVIDER_ESTIMATE",
+      "limitation": "Nonadditive estimates; Augusthistory and Septemberupdate not Octobertrend/easyKD/trafficforecast"
+    }
+  ],
+  "bodies": [
+    {
+      "url": "https://sixsuitcasetravel.com/boston-big-family-hotels-sleep-5-6-7-8",
+      "inspected_on": "2026-10-03",
+      "displayed_publication_date": null,
+      "published_on": null,
+      "status": "body-inspected",
+      "retrieval": "web extracted; crawl yesterday; exact crawl time unknown",
+      "evidence_class": "COMPETITOR_COMPARISON_BODY",
+      "already_solves": "Larger-party directory with beds/sleep bands/kitchen/bedroom/pool/breakfast fields, visible compare/filter/map affordances. City and regional properties mixed; no interaction validation.",
+      "remaining_gap_in_visible_body": "No dated exact-party category/booking-age/fullfee comparison or measured named midday-return task. No property/capacity/review facts adopted.",
+      "authority_limits": "Affiliate/partner booking links not followed; no firsthand authority or corpus completeness transferred"
+    },
+    {
+      "url": "https://www.familytravelmagazine.com/where-to-stay-in-boston-with-kids/",
+      "inspected_on": "2026-10-03",
+      "displayed_date": "2025-08-15",
+      "date_label": "Displayed body date, publication versus update not independently distinguished",
+      "published_on": null,
+      "status": "body-inspected",
+      "retrieval": "web extracted; crawl4daysago; exact crawl time unknown",
+      "evidence_class": "COMPETITOR_EDITORIAL_BODY",
+      "already_solves": "City/suburb guide already covers kitchens, space, pools, base choices and busy-event budget context; hosted-stay/affiliate disclosure and personal experience belong to publisher.",
+      "remaining_gap_in_visible_body": "No same-party/date category/fee/bedding comparison in visible article. Generic family amenities or listing length not new information gain.",
+      "authority_limits": "No route, suitablity, property or firsthand claims adopted; affiliate links not followed"
+    }
+  ],
+  "maintained_inputs": {
+    "room_pack": "docs/research/boston-room-configurations-2026-10-01.json",
+    "copley_task": "docs/research/boston-copley-family-task-2026-10-03.json",
+    "source_price_dates_renewed": false,
+    "existing_public_boston_url": false
+  },
+  "decision": {
+    "outcome": "CANDIDATE one maintained Boston lodging comparison with party-capacity constraint; HOLD separate five-person URL and citylaunch",
+    "reason": "Best/fiveparty overlap4of15 and shared mixed guides/operator pages; general phrase lowcoherence means0overlap does not prove separate jobs. Narrow20estimate onlyone representative query and no complete exactparty corpus; no newURL eligibility.",
+    "information_gain_hypothesis": "Source-versioned exact category/child-age/bedding/nightly-fee/base comparison, not kitchen/filter/location novelty; unproven until task/corpus checks",
+    "confidence": "High receipt/overlap arithmetic and visible-body fields; medium sampled intent, unknown material subtype demand/fullcorpus/useroutcomes/SEO",
+    "remaining_gate": "Current official capacity/kitchen/fees and family-price/current-review/rest corpus; next independent Residence Inn Boston Back Bay/Fenway category check. Preserve117 unresolved FamilySuite and old prices; materiality/noexistingfit/two samejob representative queries if a separate subtype proposed/fresh namedBoston publication approval.",
+    "next_falsification_trigger": "Current samejob corpus/task resolves fullbudget or competitor supplies equivalent; distinct subtype supported by material representative queries and no clean fit in one owner",
+    "paid_calls": 4,
+    "batch_cost_usd": 0.01836,
+    "prior_spend_usd": 0.27776,
+    "cumulative_spend_usd": 0.29612,
+    "cumulative_ceiling_usd": 5,
+    "public_change": false,
+    "city_launch_approved": false
+  }
+}

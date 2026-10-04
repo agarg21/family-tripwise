@@ -1,5 +1,13 @@
 # Family Tripwise SEO Roadmap
 
+FT-RES-125 Descartes01a10448-be08-7ec2-a46a-15aacd5ca03d cycle1PASS/noP0-P3; independent508full92focused/0fail-skip-cancel/state0/GSC82/SEO0-fiveprior/730baseline733candidate/exact9scope/55public/11held/244prioritems061threefields/ledger141down/124completion preserved. Receipt counts8/9/10 overlap0of17-0of18-4of15/cost0.01836 cumulative0.29612 reconcile; no network/provider replay/production/all sessionsfinished. Immutable consensus/exact docs-only release next.
+
+FT-RES-125/LRN142 controlled Boston ownership supports onecomparison candidate/HOLD separatefiveperson URL/citylaunch.8/9/10organic and URL0/17,0/18,4/15; broadweakcoherence, competitors alreadycapacity/kitchen/base, exactfamilycost corpus stillhypothesis. Four successfulcallsUSD0.01836/cumulative0.29612of5/no retry. Full/focusedQA/read-onlyPASS/exact9path docsrelease next;061onlythreefields/117oldprice/124completion/public/11held intact. Independent Fenway exactcategory/fee next.
+
+FT-RES-125 exact9paths registered before collection:061controlled Boston broad/best/fiveperson ownership gate, notanother generalcluster report. GuardedUS/en/desktop/windows/depth10/prior0.27776USD/cumulative5/batch0.50/no paidretry; exactoverlap/current2body audit/nativeQA/different read-onlyPASS/docs release required. Second00:01:01run action/before00:46:01; originalroomprice117/124completion/public/11held unchanged, no citypublication approval.
+
+FT-RES-124 shared-tool/record release f6ae1d5ec1b10fd867d4874ddfd693c2a7fe61cd remoteverified2026-10-04T00:11:55.754Z/HEADorigin0-0/exact9paths/all729index/threeGitguards/freshfetch/sole reviewedrange/normalpush/ArchimedesPASS. No publicproduction change/Pageswait/paid call;11held intact. First00:01:01run transaction complete; next independent Boston ownership before00:46:01deadline.
+
 FT-RES-124 Archimedes01a1043d-ebcf-7bc0-8a26-0c95d091c4b4 cycle1PASS/noP0-P2;508full92focused/0fail-skip-cancel/420additional arithmetic-stale controls/state0/GSC82/SEO0-fiveprior/726baseline729candidate/exact9scope/55public/11held/069completion/oldrecords/ledger140down verified. Offline-only/no provider replay/production check/all sessionsfinished. Immutable consensus/exact shared-tool/record release next.
 
 FT-RES-124/LRN141 current WMATA rail/child policy supports conditional payable-rider and separately-charged-trip arithmetic. Four regular riders/one free young child; actualtripcount/cost/route null, twoextra weekday18-54USD/weekend18-20 network bands hypothetical/notlocalquote. Eight regressions pass; full/focusedQA/different read-onlyPASS/exact9path release next.059onlythreefields/oldroom-price-108068/069completion/public/11held unchanged; no paid/providerhold retry/scheduler change.
