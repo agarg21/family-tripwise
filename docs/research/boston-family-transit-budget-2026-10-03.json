@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-132",
+  "learning_unit": "LRN-151",
+  "inspected_on": "2026-10-03",
+  "collected_at": null,
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    },
+    "room_record_id": "boston-fenway-two-bedroom-tobt",
+    "requested_separately_charged_subway_trips": 2,
+    "basis": "EDITORIAL_PROXY_TASK; hypothetical extra midday return, not chosen stations/service or actual travel"
+  },
+  "sources": {
+    "children": {
+      "url": "https://mycharlie.mbta.com/reduced/free",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_TRANSIT_CHILD_FARE_POLICY",
+      "status": "body-inspected",
+      "locator": "Children11yearsandyounger, lines14-16",
+      "finding": "Published free travel for age11andunder; groups10+children require field-trip registration. No current numeric fare, per-adult cap or gate procedure inspected."
+    },
+    "payment": {
+      "url": "https://www.charlie.mbta.com/",
+      "inspected_on": "2026-10-03",
+      "published_on": null,
+      "effective_on": null,
+      "evidence_class": "OFFICIAL_PAYMENT_SYSTEM_DESCRIPTION",
+      "status": "body-inspected",
+      "locator": "Staged rollout lines8-10/26-38",
+      "finding": "Contactless payment currently available; other features limited/tested. No multi-rider device entitlement, fare amount, cap or transfer price adopted."
+    }
+  },
+  "policy": {
+    "free_child_age_lte": 11,
+    "group_registration_children_gte": 10,
+    "accompanied_task": true,
+    "free_children_per_paying_adult": null,
+    "gate_entry_procedure": null,
+    "currency": "USD",
+    "regular_subway_one_way_amount": null,
+    "regular_subway_fare_source_status": "blocked-unverified",
+    "refresh_days": 30
+  },
+  "outputs": {
+    "evidence_class": "MODEL_DERIVED_AGE_SCREEN_NOT_FARE_QUOTE",
+    "free_child_ages": [
+      4,
+      8
+    ],
+    "regular_child_ages": [
+      12
+    ],
+    "regular_fare_riders": 3,
+    "free_children": 2,
+    "field_trip_group_threshold_reached": false,
+    "conditional_expression": "3 paying riders * 2 independently charged subway trips * unknown F = 6F",
+    "conditional_subway_total": null,
+    "actual_trip_count": null,
+    "actual_stations": null,
+    "actual_service": null,
+    "actual_route": null,
+    "actual_trip_cost": null,
+    "hotel_return_feasible": "UNKNOWN",
+    "future_service_confirmed": false,
+    "stroller_safety_access_assessed": false,
+    "transfer_or_pass_savings_applied": false,
+    "multiple_riders_on_one_contactless_device_confirmed": false,
+    "room_plus_transit_all_fee_total": null
+  },
+  "blocker": {
+    "failed_tool": "web.run open https://www.mbta.com/fares",
+    "result": "robots.txt Fetch denied by robots.txt (OAI-SearchBot)",
+    "affected_gate": "Current canonical regular-subway fare amount, transfer/pass/payment rules and precise return cost",
+    "owner": "MBTA/source access and Master evidence gate",
+    "unblock_condition": "Accessible authorized primary fare body or user-supplied current primary evidence; no unchanged denial retry or mirror/tool/domain workaround",
+    "next_check": "Only on changed authorized source access or supplied primary evidence",
+    "attempts": 1,
+    "mirrors_or_alternate_tools_used": false
+  },
+  "preservation": {
+    "room_price_record": "docs/research/boston-fenway-price-observation-2026-10-03.json",
+    "nightly_sample_amount": 781,
+    "currency": "USD",
+    "unit": "configuration/night",
+    "stay_sample_amount": 3905,
+    "fee_basis": "Original exact-age flexible pre-tax sample; tax/mandatoryfees/deposit unresolved",
+    "price_date_renewed": false,
+    "all_previous_records_renewed": false
+  },
+  "decision": {
+    "outcome": "IMPLEMENT dated child-fare check; HOLD numeric return fare and actual no-car rest",
+    "hypothesis": "All three visiting children ride free or DC child-fare rules can be transferred to Boston",
+    "result": "rejected; published Boston band includes4/8, excludes12. Three ordinary payable riders absent separately supported discount; numeric cost unavailable, not zero.",
+    "confidence": "High inspected age boundary and deterministic declared-party arithmetic; unknown current fare/transfer/payment products/actual travel/November service/users/SEO",
+    "remaining_gate": "Changed authorized fare evidence, exact stations/date/time/payment/transfer/service and actual child-paced rest; inclusive room fees/current exact-suite corpus/materiality/noexistingfit/fresh namedBostonapproval remain",
+    "falsification_trigger": "Changed MBTA child policy, current canonical numeric-fare evidence or supported exact-family journey/payment task",
+    "public_change": false,
+    "paid_calls": 0,
+    "new_city_approved": false
+  }
+}
