@@ -137,7 +137,7 @@ test("kitchen filter keeps unpriced, historical and outside-capacity evidence ex
     assert.ok(data.every(r => value(r, "Nightly equivalent") === "" && value(r, "Public rate plan") === "Unpriced"));
   }
   const old = filtered(dc.scenario, "2026-10-31");
-  assert.ok(old.every(r => value(r, "Capacity screen") === "RECHECK_SOURCE" && value(r, "Price status") === "historical-dated-stay-samples"));
+  assert.ok(old.every(r => value(r, "Capacity screen") === "RECHECK_SOURCE" && value(r, "Price status") === (value(r, "Hotel").startsWith("Homewood") ? "historical-dated-age-unresolved-count-samples" : "historical-dated-stay-samples")));
   assert.ok(old.every(r => value(r, "Price observed") === "2026-09-30"));
   const member = structuredClone(prices); for (const rate of member[1].rates) rate.eligibility = "membership-required";
   const homewood = filtered(dc.scenario, "2026-10-03", member).find(r => value(r, "Hotel").startsWith("Homewood"));
@@ -379,7 +379,7 @@ test("same-task CSV has one public-plan row, exact budget context and explicit u
   assert.equal(value(homewood, "Arrival"), "2026-11-08");
   assert.equal(value(homewood, "Departure"), "2026-11-13");
   assert.equal(value(homewood, "Nights"), "5");
-  assert.match(value(homewood, "Engine party and age basis"), /provider-age-band-counts/);
+  assert.match(value(homewood, "Engine party and age basis"), /provider-counts-unknown-child-band/);
   assert.match(value(homewood, "Fee and tax basis"), /15\.95/);
   const pendry = data.find(r => value(r, "Hotel").startsWith("Pendry"));
   assert.equal(value(pendry, "Public rate plan"), "Unpriced");
@@ -420,7 +420,8 @@ test("London keeps GBP, requested beds and conflicts; no sorting, conversion or 
 test("historical observations and wrong-task gaps remain distinct, member amounts excluded", () => {
   assert.ok(rows(output(dc, prices, "2026-10-31")).slice(1).every(r => value(r, "Capacity screen") === "RECHECK_SOURCE"));
   const old = rows(output(dc, prices, "2026-10-15")).slice(1);
-  assert.equal(old.filter(r => value(r, "Price status") === "historical-dated-stay-samples").length, 6);
+  assert.equal(old.filter(r => value(r, "Price status") === "historical-dated-stay-samples").length, 1);
+  assert.equal(old.filter(r => value(r, "Price status") === "historical-dated-age-unresolved-count-samples").length, 5);
   const other = rows(output(dc, prices, "2026-09-30", { adults: 2, child_ages: [4, 8, 13], stay: dc.scenario.stay })).slice(1);
   assert.equal(other.length, 4);
   assert.ok(other.every(r => value(r, "Public rate plan") === "Unpriced"));

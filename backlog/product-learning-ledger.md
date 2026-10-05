@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-04
+Last updated: 2026-10-05
+
+## LRN-154 / October5 / FT-IMP-073
+
+Family decision/hypothesis: adult18+ plus child counts establishes individual4/8/12 applicability and a complementary0-17 child band for the DC budget comparison. MAINTAINED_EVIDENCE_PROVENANCE_AUDIT, REUSED_BOOKING_CHECK (September30) and OFFLINE_PROXY_TASK_VALIDATION [evidence](../docs/research/dc-hilton-age-basis-audit-2026-10-05.json) rejects it. IMPLEMENT existing schema5 correction for two Hilton inputs; requested ages remain task context, provider band/individual confirmation unknown. Preserve five useful USD nightly samples334.68/408.14/288.97/316.61/339.97 with original category/stay/date/fee/deposit/terms; all five budget statuses now UNKNOWN_AGE_BASIS, not deleted or treated as accepted. Seven rows/35columns retain Residence433.65above350 and Pendry unpriced; historical checkpoint unchanged. Confidence high retained-record extraction/arithmetic/routing, unknown provider eligibility/fullfees/setup/rest/users/SEO. Lesson adult cutoff alone cannot establish child eligibility; a dated price need not become a budget pass. Trigger exact supported provider age evidence, failed control/lost context or source freshness expiry. Next named unblocked evidence gate after reviewed release; DC fullfees/corpus/actualrest/materiality/noexistingfit/fresh namedapproval remain. First October5 normalrun/oneaction; source dates not renewed, no provider/paid/public/scheduler mutation; ledger153down/133completion/public11held preserved. Nativefull/focusedQA/different read-onlyPASS/exact17path release required.
 
 ## LRN-153 / October4 / FT-RES-133
 

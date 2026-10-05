@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-073",
+  "learning_unit": "LRN-154",
+  "checked_on": "2026-10-05",
+  "evidence_classes": [
+    "REUSED_BOOKING_CHECK",
+    "MAINTAINED_EVIDENCE_PROVENANCE_AUDIT",
+    "OFFLINE_PROXY_TASK_VALIDATION",
+    "DERIVED_ARITHMETIC"
+  ],
+  "hypothesis": "Published adult18+ and three child counts establish individual4/8/12 applicability and a complementary child0-17 band.",
+  "family_decision": "Can a five-person DC museum-trip comparison qualify recorded Hilton amounts against an observed budget?",
+  "sources": [
+    {
+      "id": "embassy",
+      "url": "https://www.hilton.com/en/hotels/wascces-embassy-suites-washington-dc-convention-center/rooms/",
+      "observed_on": "2026-09-30",
+      "record": "docs/research/washington-dc-embassy-price-observation-2026-09-30.json",
+      "original_action": "FT-RES-070",
+      "access_this_run": false
+    },
+    {
+      "id": "homewood",
+      "url": "https://www.hilton.com/en/hotels/washwhw-homewood-suites-washington-dc-downtown/rooms/",
+      "observed_on": "2026-09-30",
+      "record": "docs/research/washington-dc-homewood-price-observation-2026-09-30.json",
+      "original_action": "FT-RES-071",
+      "access_this_run": false
+    }
+  ],
+  "defect": {
+    "retained_limit": "Count-only input, published adult18+; individual ages neither entered nor confirmed.",
+    "unsupported_prior_fields": {
+      "child_ages": [
+        4,
+        8,
+        12
+      ],
+      "child_age_from": 0,
+      "child_age_to": 17,
+      "age_input_mode": "provider-age-band-counts"
+    },
+    "basis": "Adult cutoff alone does not establish a complementary child band. FT-RES-133 independent P2/cycle2 correction supports existing schema5 usage, not new DC provider evidence."
+  },
+  "correction": {
+    "adapter_changed": false,
+    "schema_version": 5,
+    "provider_child_ages": null,
+    "provider_child_band": null,
+    "individual_ages_confirmed": false,
+    "requested_ages_are_task_context": true,
+    "currency": "USD",
+    "currency_evidence_class": "EDITORIAL_INTERPRETATION",
+    "currency_basis": "Retained September30 USD/tax arithmetic; no fresh ISO verification or conversion.",
+    "source_dates_renewed": false
+  },
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "screened_on": "2026-10-05",
+    "car": false,
+    "pets": false,
+    "hypothetical_budget": {
+      "currency": "USD",
+      "nightly_limit": 350
+    },
+    "real_user_test": false
+  },
+  "retained_plans": [
+    {
+      "record_id": "dc-embassy-deluxe-double",
+      "plan": "Non-refundable",
+      "stay_amount": 1673.39,
+      "nightly_equivalent": 334.68
+    },
+    {
+      "record_id": "dc-embassy-deluxe-double",
+      "plan": "Flexible Rate",
+      "stay_amount": 2040.72,
+      "nightly_equivalent": 408.14
+    },
+    {
+      "record_id": "dc-homewood-two-queen",
+      "plan": "Non-refundable",
+      "stay_amount": 1444.85,
+      "nightly_equivalent": 288.97
+    },
+    {
+      "record_id": "dc-homewood-two-queen",
+      "plan": "Semi-Flex",
+      "stay_amount": 1583.04,
+      "nightly_equivalent": 316.61
+    },
+    {
+      "record_id": "dc-homewood-two-queen",
+      "plan": "Flexible Rate",
+      "stay_amount": 1699.83,
+      "nightly_equivalent": 339.97
+    }
+  ],
+  "price_basis": {
+    "currency": "USD",
+    "nightly_unit": "configuration/night",
+    "configuration_count": 1,
+    "category_basis": "Exact original TOTN Deluxe Two Room Suite with 2 Double Beds and THWN standard 2 Queen Beds 1 Bedroom Suite Nonsmoking, not Premium.",
+    "observed_on": "2026-09-30",
+    "stay_dates": "2026-11-08/2026-11-13",
+    "seasonal_range": false,
+    "displayed_tax_government_included": true,
+    "final_all_fee_total": null,
+    "mandatory_sofa_fees": null,
+    "incidentals_hold_amount": null,
+    "original_fee_deposit_meals_and_cancellation_strings_unchanged": true,
+    "member_and_default_rates_excluded": true
+  },
+  "result": {
+    "decision": "IMPLEMENT provenance correction; REJECT inferred child eligibility",
+    "rows": 7,
+    "columns": 35,
+    "budget_statuses": {
+      "UNKNOWN_AGE_BASIS": 5,
+      "ABOVE_OBSERVED_AMOUNT": 1,
+      "UNKNOWN_UNPRICED": 1
+    },
+    "residence_stay_amount": 2168.27,
+    "residence_nightly_equivalent": 433.65,
+    "kitchen_rows": 4,
+    "kitchen_age_unresolved": 3,
+    "capacity_screen_does_not_confirm_provider_age_acceptance": true,
+    "historical_checkpoint_unchanged": true,
+    "public_change": false,
+    "city_launch_approved": false,
+    "paid_calls": 0,
+    "provider_calls": 0,
+    "confidence": "High retained-record extraction, deterministic routing and arithmetic; unknown provider age applicability, final cost, actual rest, user satisfaction and SEO effect.",
+    "next_gate": "Provider-confirmed child-age applicability only on changed authorized evidence; full fees/usable setup/representative exact-category corpus/actual rest/materiality/noexistingfit/fresh named DC publication approval.",
+    "next_eligible_run": "Next actual normal run, after this action's release.",
+    "falsification_trigger": "Supported provider age-band or individual-age evidence for this exact party/stay/category, failed routing control, lost dated context, or source freshness expiry."
+  },
+  "preservation": {
+    "original_source_observation_dates": "2026-09-30",
+    "audit_date_not_quote_date": true,
+    "unchanged_checkpoint": "docs/research/washington-dc-comparison-task-2026-10-03.csv",
+    "original_price_context_sha256": [
+      "c34ce24d5b57e26eca85d8447767823e64bfffc6c58859fc1b2607e341011aea",
+      "dbb6a81e1ff3b9ea074fa13aa2e55f0d7f22bb8d1aa66bf94fc5800103cb8354"
+    ],
+    "public_site_unchanged": true,
+    "held_paths_preserved": 11,
+    "gsc": "Reused October4 API snapshot finalizedOct2; orientation only, no CTR diagnosis.",
+    "no_scheduler_mutation": true,
+    "no_denial_retry": true
+  },
+  "validation": "Seven new regressions pass. Full native QA and different independent read-only review required before exact release."
+}

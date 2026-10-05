@@ -26,8 +26,8 @@ test("optional observed budget retains seven rows and all 34 non-scope columns",
   const a=rows(plain),b=rows(current);assert.equal(b.length,8);assert.deepEqual(a[0],b[0]);
   for(let i=1;i<b.length;i++){assert.deepEqual(a[i].filter((_,j)=>j!==scope),b[i].filter((_,j)=>j!==scope));
     assert.match(b[i][scope],/not final all-fee budget, booking acceptance/);}
-  assert.equal(statuses(current).filter(x=>x==="AT_OR_BELOW_OBSERVED_AMOUNT").length,4);
-  assert.equal(statuses(current).filter(x=>x==="ABOVE_OBSERVED_AMOUNT").length,2);
+  assert.equal(statuses(current).filter(x=>x==="UNKNOWN_AGE_BASIS").length,5);
+  assert.equal(statuses(current).filter(x=>x==="ABOVE_OBSERVED_AMOUNT").length,1);
   assert.equal(statuses(current).filter(x=>x==="UNKNOWN_UNPRICED").length,1);
   assert.equal(csv(dc.scenario,"2026-10-03",{kitchen:"any",capacity:"any"}),plain);
   assert.equal(roomComparisonsCsv([dc],dc.scenario,"2026-10-03",prices,filters),current);
@@ -35,10 +35,10 @@ test("optional observed budget retains seven rows and all 34 non-scope columns",
 });
 
 test("threshold equality and partial fee amounts do not turn into final affordability", () => {
-  const at=rows(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:334.68}})).slice(1);
-  const r=at.find(r=>v(r,"Nightly equivalent")==="334.68");
+  const at=rows(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:433.65}})).slice(1);
+  const r=at.find(r=>v(r,"Nightly equivalent")==="433.65");
   assert.match(r[scope],/AT_OR_BELOW_OBSERVED_AMOUNT/);assert.match(r[scope],/price-only dated sample/);
-  const below=rows(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:334.67}})).slice(1).find(r=>v(r,"Nightly equivalent")==="334.68");
+  const below=rows(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:433.64}})).slice(1).find(r=>v(r,"Nightly equivalent")==="433.65");
   assert.match(below[scope],/ABOVE_OBSERVED_AMOUNT/);
   assert.equal(statuses(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:0.01}})).length,7);
   const b=read("boston-room-configurations-2026-10-01.json"),p=read("boston-fenway-price-observation-2026-10-03.json");
@@ -69,7 +69,7 @@ test("age-unresolved count samples keep numbers but cannot pass the budget scree
 test("budget coexists with filters, validates hidden prices and leaves inputs immutable", () => {
   const before=JSON.stringify([dc,prices,filters]),f={...filters,kitchen:"published",capacity:"not-excluded"};
   const current=csv(dc.scenario,"2026-10-03",f);assert.equal(rows(current).length,5);
-  assert.ok(statuses(current).every(x=>["AT_OR_BELOW_OBSERVED_AMOUNT","ABOVE_OBSERVED_AMOUNT"].includes(x)));
+  assert.deepEqual(statuses(current),["UNKNOWN_AGE_BASIS","UNKNOWN_AGE_BASIS","UNKNOWN_AGE_BASIS","ABOVE_OBSERVED_AMOUNT"]);
   const bad=structuredClone(prices);bad[0].currency="GBP";
   assert.throws(()=>roomComparisonCsv(dc,dc.scenario,"2026-10-03",bad,f),/currency/);
   assert.throws(()=>roomComparisonsCsv([dc],dc.scenario,"2026-10-03",bad,f),/currency/);

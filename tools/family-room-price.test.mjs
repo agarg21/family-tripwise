@@ -198,14 +198,14 @@ test("matched separate observations do not enrich other parties or mutate throug
   assert.equal(roomPriceForTask(samples, pack, marlin[0].record_id, pack.scenario, "2026-10-15").status, "historical-dated-stay-samples");
 });
 
-test("USD public stay totals retain taxes, membership exclusions and count-band age limits", () => {
+test("USD public stay totals retain taxes, membership exclusions and unresolved count-only ages", () => {
   assert.deepEqual(validateRoomPrices(dcPrices, dcPack), []);
   const p = roomPriceForTask(dcPrices, dcPack, dcPrices[0].record_id, dcPack.scenario, "2026-09-30");
   assert.equal(p.currency, "USD");
   assert.deepEqual(p.rates.map(r => r.stay_amount), [1673.39, 2040.72]);
   assert.equal(p.amount_from, 334.68);
   assert.equal(p.amount_to, 408.14);
-  assert.equal(p.age_input_mode, "provider-age-band-counts");
+  assert.equal(p.age_input_mode, "provider-counts-unknown-child-band");
   assert.match(p.observation_limitation, /individual4\/8\/12ages were not entered/);
   assert.match(p.fee_basis, /Member card283USD discarded/);
   assert.match(p.fee_basis, /additional stay charges/);

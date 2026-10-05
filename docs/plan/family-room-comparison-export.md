@@ -8,6 +8,12 @@ FT-IMP-051, September 30, 2026. This is a reusable offline research/review surfa
 
 Each row retains the destination/category, capacity screen and conditions, sleeping setup, kitchen/connection context, category and price observation dates separately, screening date, actual adults/individual child ages, exact arrival/departure/night count, currency/per-configuration-night unit, plan, displayed stay amount and derived nightly equivalent. Provider party/age-input/cutoff basis, priced configuration, fee/tax, deposit, meals, cancellation, conflicts, next checks, clean source URLs and uncertainty limits travel with the numbers. A prepaid stay amount is not added again as an extra fee. Requested beds/connections and historical samples remain labeled. Capacity, budget and booking acceptance are separate questions.
 
+## Count-Only Age Correction
+
+October5 FT-IMP-073 corrects the two maintained September30 DC Hilton inputs using existing schema5. An adult18+ label does not publish a complementary child0-17 band. The provider entered two adults/three children, not individual4/8/12 ages; requested ages remain task context, provider child bounds remain null. The five public-plan amounts and all original source/category/stay/fee/deposit/term context remain visible. No observation date is renewed, currency is retained USD with editorial provenance rather than a new ISO check, and the historical CSV checkpoint remains unchanged. This is a provenance correction, not a refreshed quote, booking acceptance or new adapter.
+
+At October5 screening, the seven-row DC task with hypothetical350USD/night keeps five `UNKNOWN_AGE_BASIS` Hilton plans, one Residence `ABOVE_OBSERVED_AMOUNT` and one unpriced Pendry. Kitchen filtering keeps three age-unresolved Homewood plans plus Residence. Stale sources still require recheck; changed ages or stay inherit no numeric samples. [Audit and remaining gate](../research/dc-hilton-age-basis-audit-2026-10-05.json).
+
 ## Recorded Cancellation Date
 
 October4 FT-IMP-072 adds an optional per-rate `cancellation_deadline_local_date` normalized from retained source terms, not parsed automatically from prose. It must be an own enumerable data field containing a valid ISO calendar date. Invalid, inherited or accessor fields fail before export, including hidden observations. The price adapter adds `cancellation_deadline_date_relation`: `BEFORE_RECORDED_LOCAL_DATE`, `SAME_RECORDED_LOCAL_DATE` or `AFTER_RECORDED_LOCAL_DATE` against the explicit comparison date. The scope cell shows both dates and requires a current rate-term recheck in every case.
@@ -26,7 +32,7 @@ Each plan's scope cell shows `AT_OR_BELOW_OBSERVED_AMOUNT` or `ABOVE_OBSERVED_AM
 node tools/family-room-comparison.mjs docs/research/washington-dc-room-configurations-2026-09-30.json --date 2026-10-03 --prices docs/research/washington-dc-embassy-price-observation-2026-09-30.json docs/research/washington-dc-homewood-price-observation-2026-09-30.json docs/research/washington-dc-residence-price-observation-2026-09-30.json --nightly-budget 350 --budget-currency USD
 ```
 
-The maintained seven-row DC task gives four observed amounts at/below this hypothetical threshold, two above and one unpriced. This is not a final-budget pass. [Validation and limits](../research/family-room-budget-screen-2026-10-03.json) preserve the unchanged evidence and task controls.
+The original October3 checkpoint gave four observed amounts at/below this hypothetical threshold, two above and one unpriced. That immutable [validation record](../research/family-room-budget-screen-2026-10-03.json) is historical: the October5 age-provenance correction above supersedes the five Hilton qualifications, without removing their prices. No result is a final-budget pass.
 
 ## Reuse
 

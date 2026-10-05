@@ -100,15 +100,18 @@ const assertQuestions = row => {
   assert.match(value(row, "Next checks"), /Confirm sofa dimensions, deployment clearance/);
 };
 
-test("DC maintained checks change only Homewood and Embassy questions, not historical output basis", () => {
+test("DC maintained checks and Hilton age correction retain historical price context", () => {
   const before = rows(read("washington-dc-comparison-task-2026-10-03.csv"));
   const after = rows(roomComparisonCsv(pack, pack.scenario, "2026-10-03", prices));
   assert.deepEqual(after[0], before[0]); assert.equal(after.length, 8);
+  const hiltonChanges = ["Next checks", "Price status", "Engine party and age basis", "Observation limits", "Research scope and limits"].map(h => comparisonHeadings.indexOf(h));
   for (let i = 1; i < after.length; i++) {
     const current = after[i], prior = before[i];
     if (value(current, "Hotel").startsWith("Embassy")) {
       assert.match(value(current, "Next checks"), /property-level signals, not prevalence/);
-      assert.deepEqual(current.filter((_, index) => index !== checkIndex), prior.filter((_, index) => index !== checkIndex));
+      assert.equal(value(current, "Price status"), "dated-age-unresolved-count-samples");
+      assert.match(value(current, "Observation limits"), /provider child band unknown/);
+      assert.deepEqual(current.filter((_, index) => !hiltonChanges.includes(index)), prior.filter((_, index) => !hiltonChanges.includes(index)));
     } else if (value(current, "Hotel").startsWith("Residence")) {
       const scope = comparisonHeadings.indexOf("Research scope and limits");
       assert.deepEqual(current.filter((_, index) => index !== scope), prior.filter((_, index) => index !== scope));
@@ -116,7 +119,9 @@ test("DC maintained checks change only Homewood and Embassy questions, not histo
     } else if (!value(current, "Hotel").startsWith("Homewood")) assert.deepEqual(current, prior);
     else {
       assertQuestions(current);
-      assert.deepEqual(current.filter((_, index) => index !== checkIndex), prior.filter((_, index) => index !== checkIndex));
+      assert.equal(value(current, "Price status"), "dated-age-unresolved-count-samples");
+      assert.match(value(current, "Observation limits"), /provider child band unknown/);
+      assert.deepEqual(current.filter((_, index) => !hiltonChanges.includes(index)), prior.filter((_, index) => !hiltonChanges.includes(index)));
     }
   }
   assert.equal(pack.checked_on, "2026-09-30");
@@ -141,7 +146,7 @@ test("setup questions do not renew stale sources or transfer dated prices to ano
     assertQuestions(row); assert.equal(value(row, "Category checked"), "2026-09-30");
     assert.equal(value(row, "Price observed"), "2026-09-30");
     assert.equal(value(row, "Capacity screen"), "RECHECK_SOURCE");
-    assert.equal(value(row, "Price status"), "historical-dated-stay-samples");
+    assert.equal(value(row, "Price status"), "historical-dated-age-unresolved-count-samples");
   }
   const otherParty = { ...pack.scenario, child_ages: [4, 8, 13] };
   const row = rows(roomComparisonCsv(pack, otherParty, "2026-10-03", prices)).slice(1).find(row => value(row, "Hotel").startsWith("Homewood"));

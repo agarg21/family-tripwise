@@ -107,7 +107,7 @@ test("primitive malformed rates retain validator errors rather than throwing a t
   }
 });
 
-test("single and joined CLI/API exports agree and optional observed budget stays four/two/one", () => {
+test("single and joined CLI/API exports agree and budget retains five age gaps, one above and one unpriced", () => {
   const filters = {budget:{currency:"USD", nightly_limit:350}};
   const csv = roomComparisonCsv(pack, pack.scenario, "2026-10-04", prices, filters);
   assert.equal(roomComparisonsCsv([pack], pack.scenario, "2026-10-04", prices, filters), csv);
@@ -115,7 +115,7 @@ test("single and joined CLI/API exports agree and optional observed budget stays
   assert.equal(execFileSync(process.execPath, [cli, packPath, "--date", "2026-10-04", "--prices", ...pricePaths,
     "--nightly-budget", "350", "--budget-currency", "USD"], {encoding:"utf8"}), csv);
   const statuses = rows(csv).slice(1).map(r => r[scope].match(/Observed nightly budget ([A-Z_]+):/)[1]);
-  assert.equal(statuses.filter(s => s === "AT_OR_BELOW_OBSERVED_AMOUNT").length, 4);
-  assert.equal(statuses.filter(s => s === "ABOVE_OBSERVED_AMOUNT").length, 2);
+  assert.equal(statuses.filter(s => s === "UNKNOWN_AGE_BASIS").length, 5);
+  assert.equal(statuses.filter(s => s === "ABOVE_OBSERVED_AMOUNT").length, 1);
   assert.equal(statuses.filter(s => s === "UNKNOWN_UNPRICED").length, 1);
 });

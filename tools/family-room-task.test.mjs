@@ -281,7 +281,8 @@ test("three DC dated public observations retain unknown cutoffs and category bas
   const before = JSON.stringify([dc, samples]);
   const rows = screenRoomPack(dc, dc.scenario, "2026-09-30", samples);
   assert.deepEqual(JSON.parse(execFileSync(process.execPath, [taskCli, dcPath, "2026-09-30", ...paths], { encoding: "utf8" })), rows);
-  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 3);
+  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 1);
+  assert.equal(rows.filter(r => r.price.status === "dated-age-unresolved-count-samples").length, 2);
   const r = row(rows, "dc-residence-two-queen-onqq");
   assert.equal(r.checked_on, "2026-09-25");
   assert.equal(r.price.observed_on, "2026-09-30");
@@ -329,7 +330,7 @@ test("DC partial corpus and public price screen retain exact categories, origina
   assert.equal(dc.records.length, 4);
   const rows = screenRoomPack(dc, dc.scenario, "2026-09-30", prices);
   assert.deepEqual(JSON.parse(execFileSync(process.execPath, [taskCli, dcPath, "2026-09-30", dcPricePath], { encoding: "utf8" })), rows);
-  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 1);
+  assert.equal(rows.filter(r => r.price.status === "dated-age-unresolved-count-samples").length, 1);
   assert.equal(row(rows, "dc-embassy-deluxe-double").price.amount_from, 334.68);
   assert.equal(row(rows, "dc-homewood-two-queen").kitchen, "published-kitchen");
   assert.match(row(rows, "dc-homewood-two-queen").conflicts[0], /Premium.*sleeps4/);
@@ -359,7 +360,7 @@ test("two DC public samples retain plan-specific cancellation, tax and exact-tas
   const before = JSON.stringify([dc, samples]);
   const rows = screenRoomPack(dc, dc.scenario, "2026-09-30", samples);
   assert.deepEqual(JSON.parse(execFileSync(process.execPath, [taskCli, dcPath, "2026-09-30", dcPricePath, homewoodPath], { encoding: "utf8" })), rows);
-  assert.equal(rows.filter(r => r.price.status === "dated-stay-samples").length, 2);
+  assert.equal(rows.filter(r => r.price.status === "dated-age-unresolved-count-samples").length, 2);
   const homewood = row(rows, "dc-homewood-two-queen");
   assert.equal(homewood.price.amount_from, 288.97);
   assert.equal(homewood.price.amount_to, 339.97);
@@ -369,10 +370,10 @@ test("two DC public samples retain plan-specific cancellation, tax and exact-tas
   assert.match(row(rows, "dc-embassy-deluxe-double").price.rates[1].cancellation, /November7,2026/);
   assert.match(homewood.price.fee_basis, /225USDmember-only.*discarded/);
   assert.match(homewood.price.deposit_basis, /not an added stay fee/);
-  assert.equal(homewood.price.age_input_mode, "provider-age-band-counts");
+  assert.equal(homewood.price.age_input_mode, "provider-counts-unknown-child-band");
   assert.equal(row(rows, "dc-residence-two-queen-onqq").price.amount, null);
   for (const changed of [{ ...dc.scenario, child_ages: [4, 8, 13] }, { ...dc.scenario, stay: { arrival: "2026-11-09", departure: "2026-11-14" } }])
     assert.equal(row(screenRoomPack(dc, changed, "2026-09-30", samples), "dc-homewood-two-queen").price.status, "not-observed");
-  assert.equal(row(screenRoomPack(dc, dc.scenario, "2026-10-15", samples), "dc-homewood-two-queen").price.status, "historical-dated-stay-samples");
+  assert.equal(row(screenRoomPack(dc, dc.scenario, "2026-10-15", samples), "dc-homewood-two-queen").price.status, "historical-dated-age-unresolved-count-samples");
   assert.equal(JSON.stringify([dc, samples]), before);
 });

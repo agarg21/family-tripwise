@@ -1,5 +1,13 @@
 # Family Tripwise SEO Roadmap
 
+FT-IMP-073 independent cycle1PASS/noP0-P3 and Master561full127focused/state-GSC-localSEO green. Exact17path shared-record/docs release eligible; five numeric Hilton samples retain original dates/context with UNKNOWN_AGE_BASIS. Allprior256except059threefields/ledger153/133completion/public11held preserved. Immutable review/QA evidence only, no publicproduction/Pages change.
+
+Latest GSC selection evidence: reused [ops/gsc-snapshots/2026-10-04.json](gsc-snapshots/2026-10-04.json), finalizedOctober2; priorOctober3 finalizedOctober1. Recent API evidence, not collected this run and not an aligned-query CTR qualification.
+
+FT-IMP-073 is the first October5 normal-mode action: correct the two DC Hilton price inputs' unsupported child-band inference without deleting useful dated prices. Initial16paths registered before edits, expanded to17before the full-QA-exposed dependent price-test correction; existing schema5, full/focused QA, independent read-only consensus and exact shared-record/docs release required. No public city, source-date renewal, paid/provider replay or scheduler change; RES059 current decision may change only its registered threefields.
+
+FT-RES-133 reviewed sharedrecord/docs commit07641dd63085c335f58535e288c9d1e76d9ec406 remoteverified2026-10-04T13:28:40.916Z/mainHEAD0-0. One normal-run action/LRN153 complete; no publicproduction/Pages change. Dated amounts preserved with UNKNOWN_AGE_BASIS; fee/setup/corpus/rest and publicintegration gates remain.11held intact; completion receipt local for next substantive transaction.
+
 FT-RES-133 cycle2 independentPASS and Master554full127helperfocused7newfocused/native state-GSC-localSEO green. Exact10path shared-record/docs release eligible; repaired schema5 keeps both dated amounts and UNKNOWN_AGE_BASIS. Allprior255items/ledger152/072completion/public11held preserved. Immutable result only, no public production/Pages change.
 
 FT-RES-133 implements an existing-page budget gap before further city exploration: exact Homewood San Diego NQS capacity/kitchen and two age-unresolved count-only family/stay public plans now feed shared comparisons. USD271.04/329.52night include displayed tax/government, not finalallfees or seasonal range. [Evidence and remaining gate](../docs/research/san-diego-homewood-budget-task-2026-10-04.md). Exact10paths/nativeQA/read-onlyreview/release required; publicpage/historicalrange/reviews/072completion/11held unchanged. Fee/hold/setup/corpus required before public integration; no newcity approval inferred.

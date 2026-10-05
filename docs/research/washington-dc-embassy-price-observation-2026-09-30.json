@@ -1,21 +1,26 @@
 [
   {
-    "schema_version": 2, "action": "FT-RES-070", "checked_on": "2026-09-30",
+    "schema_version": 5, "action": "FT-RES-070", "checked_on": "2026-09-30",
+    "normalization_action": "FT-IMP-073", "normalization_checked_on": "2026-10-05",
     "source_url": "https://www.hilton.com/en/hotels/wascces-embassy-suites-washington-dc-convention-center/rooms/",
     "source_surface": "Official room-page guest/date controls and exact Deluxe category Explore Rates route to Hilton rate details. Clean category source retained; booking/session/query URLs not retained.",
     "evidence_class": "BOOKING_CHECK", "record_id": "dc-embassy-deluxe-double",
     "category": "Deluxe Two Room Suite with 2 Double Beds", "booking_category": "Deluxe Two Room Suite with 2 Double Beds",
     "configuration_basis": "One exact Deluxe category, room code TOTN, published sleeps5/full-sized sofa bed; result and rate panels show2adults/3kids/five nights. No reservation or bedding allocation confirmation.",
     "configuration_count": 1, "currency": "USD", "unit": "configuration/stay",
+    "currency_basis": "USD retained from the September30 observation and tax arithmetic; October5 provenance audit is not a new provider ISO-currency check or conversion.",
+    "currency_evidence_class": "EDITORIAL_INTERPRETATION",
     "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5,
     "party": { "adults": 2, "child_ages": [4, 8, 12] },
-    "engine_party": { "adults": 2, "child_ages": [4, 8, 12], "adult_from_age": 18, "child_age_from": 0, "child_age_to": 17, "age_input_mode": "provider-age-band-counts" },
+    "requested_individual_ages_confirmed": false,
+    "party_basis": "requested-task-context-not-provider-age-acceptance",
+    "engine_party": { "adults": 2, "children": 3, "child_ages": null, "adult_from_age": 18, "child_age_from": null, "child_age_to": null, "age_input_mode": "provider-counts-unknown-child-band", "individual_ages_entered": false, "requested_individual_ages_confirmed": false, "classification_basis": "published-adult-cutoff-unknown-child-band-counts" },
     "rates": [
       { "plan": "Non-refundable", "eligibility": "public", "stay_amount": 1673.39, "meals": "Free breakfast", "cancellation": "Full prepayment at reservation; nonrefundable/nonmodifiable headline. Detailed terms describe a discretionary US/Mexico/Caribbean cancellation-and-rebooking exception with service fee; not free cancellation." },
       { "plan": "Flexible Rate", "eligibility": "public", "stay_amount": 2040.72, "meals": "Free breakfast", "cancellation": "Pay when staying; free cancellation before11:59PM local hotel time November7,2026; early departure may change rate" }
     ],
     "fee_basis": "Nonrefundable base1443.20USD+230.19tax/government=1673.39USD; flexible base1760USD+280.72tax/government=2040.72USD. Details show15.95%per-room/night. Estimated totals exclude additional stay charges, applicable service charges and optional incidentals; sofa/other mandatory fees not independently established. Rounded public card289/352USD is before-tax average, not tax-inclusive nightly equivalent. Member card283USD discarded.",
     "deposit_basis": "Nonrefundable full advance payment, flexible card guarantee/pay when staying. Card hold may include anticipated stay and estimated incidentals and may remain72hours or longer after departure; unknown hold amount, not an added stay fee. No payment or reservation.",
-    "limitation": "Two adults/three kids entered with adult18+ label; individual4/8/12ages were not entered or confirmed, only consistent with provider age-band counts. Exact dates/category retained, initial default one-guest September30/October1prices discarded. Public plans only; no Honors discount/package used. Not typical seasonal range, guaranteed availability, final fee-inclusive checkout, suitability or cheapest-hotel ranking. No Select/Book/cart/account/contact/payment."
+    "limitation": "Counts only: two adults/three kids entered with adult18+ label; individual4/8/12ages were not entered or confirmed and provider child band unknown. Requested ages are task context, not provider age acceptance. October5 provenance correction, not refreshed price or policy. Exact dates/category retained, initial default one-guest September30/October1prices discarded. Public plans only; no Honors discount/package used. Not typical seasonal range, guaranteed availability, final fee-inclusive checkout, suitability or cheapest-hotel ranking. No Select/Book/cart/account/contact/payment."
   }
 ]
