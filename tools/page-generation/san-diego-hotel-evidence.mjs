@@ -1,4 +1,7 @@
 import { sanDiegoSources, SAN_DIEGO_ADDITIONS, SAN_DIEGO_FEES } from "../legacy-hotel-sources.mjs";
+import { readFileSync } from "node:fs";
+
+const currentLaJollaFees = JSON.parse(readFileSync(new URL("../../docs/research/la-jolla-shores-fees-2026-10-05.json", import.meta.url), "utf8")).fee_envelope;
 
 const rules = {
   "Bahia Resort Hotel": {
@@ -118,5 +121,6 @@ export function normalizeSanDiegoHotel(hotel, retainedPrice, registry = sanDiego
     transport: rule.transport ? envelope(rule.transport) : { value: null, state: "unknown", evidence_class: "EDITORIAL_INTERPRETATION", observed_on: null,
       source_urls: [], evidence_path: path, date_basis: "field-observation", limitation: "Transport not established in retained property research; no route/stroller assurance." }
   };
+  if (hotel.name === "La Jolla Shores Hotel") fields.fees = currentLaJollaFees;
   return structuredClone(fields);
 }

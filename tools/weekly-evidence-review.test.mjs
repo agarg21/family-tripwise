@@ -87,6 +87,7 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   const expectedUrls = baseline.pages.map((p) => p.url);
   const report = reviewAudit(repeat, baseline, { expectedRecords: retainedRecords, expectedUrls });
   const changed = [];
+  const laterFeeChanges = [];
   for (const record of retainedRecords) {
     const currentRecord = currentRecords.get(record.id);
     if (record.id.startsWith("new-york-city-") && record.field === "nightly-price") {
@@ -94,10 +95,23 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.equal(record.verified_on, currentRecord.verified_on);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
       changed.push(record.id);
+    } else if (record.id === "san-diego-la-jolla-shores-hotel-fees") {
+      assert.equal(record.verified_on, "2026-08-17");
+      assert.equal(record.mapping_state, "disputed");
+      assert.equal(currentRecord.verified_on, "2026-10-05");
+      assert.equal(currentRecord.mapping_state, "known");
+      assert.equal(currentRecord.evidence_path, "docs/research/la-jolla-shores-fees-2026-10-05.json");
+      assert.equal(currentRecord.interval_days, record.interval_days);
+      assert.notEqual(currentRecord.basis, record.basis);
+      laterFeeChanges.push(record.id);
     } else assert.deepEqual(record, currentRecord);
   }
   assert.equal(changed.length, 12);
-  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls }), /Model\/date\/basis drift: new-york-city-/);
+  assert.deepEqual(laterFeeChanges, ["san-diego-la-jolla-shores-hotel-fees"]);
+  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls }), /Model\/date\/basis drift: san-diego-la-jolla-shores-hotel-fees/);
+  const priorFee = retainedRecords.find(record => record.id === "san-diego-la-jolla-shores-hotel-fees");
+  const feeRestored = modelRecords().map(record => record.id === priorFee.id ? priorFee : record);
+  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: feeRestored, expectedUrls }), /Model\/date\/basis drift: new-york-city-/);
   assert.deepEqual(report, await read("2026-09-30-review.json"));
   assert.equal(report.summary.canonical_pages, 31);
   assert.equal(report.summary.sources, 455);

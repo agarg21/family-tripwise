@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-134",
+  "hotel": "La Jolla Shores Hotel",
+  "checked_on": "2026-10-05",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "decision": "IMPLEMENT_FEE_ENVELOPE_ONLY",
+  "prior_record": {
+    "checked_on": "2026-08-17",
+    "evidence_path": "docs/research/san-diego-activity-hotel-expansion-review.md",
+    "parking_conflict": "FAQ45versus accommodations/policy55",
+    "resort_fee_usd": 50
+  },
+  "observations": [
+    {"id": "LJS-FEE-FAQ", "url": "https://www.ljshoreshotel.com/faqs/", "checked_on": "2026-10-05", "collection": "web.open primary page body", "parking_amount": 55, "parking_unit": "day", "resort_fee_amount": null, "result": "Room account daily parking charge55; limited availability. No parking tax statement or exact stay charge count established."},
+    {"id": "LJS-FEE-ROOMS", "url": "https://www.ljshoreshotel.com/accommodations/", "checked_on": "2026-10-05", "collection": "web.open primary page body", "parking_amount": 55, "parking_unit": "day", "resort_fee_amount": 50, "resort_fee_unit": "night", "result": "Amenities section lists nightly resort fee50 plus taxes and daily parking55; embedded FAQ also states55. No room-rate inclusion or parking tax basis established."},
+    {"id": "LJS-FEE-POLICY", "url": "https://www.ljshoreshotel.com/resort-policies/", "checked_on": "2026-10-05", "collection": "web.open primary page body", "parking_amount": 55, "parking_unit": "day", "resort_fee_amount": 50, "resort_fee_unit": "daily bill", "result": "On-site garage parking55 daily; resort fee50 plus taxes added to daily bill. Accommodation page supplies explicit nightly unit. No exact date/room quote collected."}
+  ],
+  "fee_envelope": {
+    "value": {
+      "currency": "USD",
+      "currency_evidence_class": "EDITORIAL_INTERPRETATION",
+      "currency_basis": "Dollar amounts on this US property's own pages; no explicit ISO currency selector checked.",
+      "resort_fee_usd": 50,
+      "resort_fee_unit": "night",
+      "resort_fee_tax": "Plus taxes; rate/amount unknown",
+      "parking_usd": 55,
+      "parking_unit": "day",
+      "parking_basis": "On-site garage; limited availability; applicable use/charge count requires booking recheck",
+      "parking_conflict": null,
+      "parking_tax_inclusion": null,
+      "tax_inclusion": null,
+      "room_rate_fee_inclusion": null,
+      "exact_room_party_stay": null,
+      "unknowns": ["Parking tax and exact billable days", "Rate-specific resort-fee inclusion", "Exact family room/party/stay total", "Other applicable charges and incidental authorization amount"]
+    },
+    "state": "known",
+    "evidence_class": "OFFICIAL_PROPERTY_FACT",
+    "observed_on": "2026-10-05",
+    "source_urls": ["https://www.ljshoreshotel.com/faqs/", "https://www.ljshoreshotel.com/accommodations/", "https://www.ljshoreshotel.com/resort-policies/"],
+    "source_refs": [
+      {"id": "LJS-FEE-FAQ", "evidence_class": "OFFICIAL_PROPERTY_FACT", "checked_on": "2026-10-05", "evidence_path": "docs/research/la-jolla-shores-fees-2026-10-05.json", "urls": ["https://www.ljshoreshotel.com/faqs/"]},
+      {"id": "LJS-FEE-ROOMS", "evidence_class": "OFFICIAL_PROPERTY_FACT", "checked_on": "2026-10-05", "evidence_path": "docs/research/la-jolla-shores-fees-2026-10-05.json", "urls": ["https://www.ljshoreshotel.com/accommodations/"]},
+      {"id": "LJS-FEE-POLICY", "evidence_class": "OFFICIAL_PROPERTY_FACT", "checked_on": "2026-10-05", "evidence_path": "docs/research/la-jolla-shores-fees-2026-10-05.json", "urls": ["https://www.ljshoreshotel.com/resort-policies/"]}
+    ],
+    "evidence_path": "docs/research/la-jolla-shores-fees-2026-10-05.json",
+    "date_basis": "field-observation",
+    "limitation": "Partial published fee policy, not a final quote or all-fee stay total. USD is editorially inferred from this US property's dollar amounts. No exact room/party/date, parking tax/charge count or rate inclusion confirmed; recheck before booking. Only fee evidence renewed; historical room/price/review/activities/transport dates unchanged."
+  },
+  "budget_proxy": {
+    "evidence_class": "EDITORIAL_INTERPRETATION",
+    "room_count": 1,
+    "nights": 5,
+    "billable_parking_days_assumed": 5,
+    "party": "Not selected; no family occupancy/age acceptance implied",
+    "stay_dates": "Hypothetical only; no dated stay quote",
+    "no_parking_resort_fee_before_tax_usd": 250,
+    "assumed_parking_before_unknown_tax_usd": 275,
+    "combined_fee_components_before_tax_usd": 525,
+    "limitation": "50*5 and55*5 policy-component arithmetic only, assuming five resort nights and five charged parking days. Not an additional amount to add blindly to tax/fee-inclusive historical samples; unknown inclusions may double count. No-car scenario excludes assumed parking, not a confirmed waiver or transport plan."
+  },
+  "confidence": "High current amount agreement/extraction; unknown exact rate, occupancy, billable parking days, tax/other fees and full family budget.",
+  "next_gate": "Separate existing-page public fee-label reconciliation with permitted local preview, focused/full QA, independent review and verified Pages release. Current exact family-room nightly price/fees and reviewed setup remain separate; no new city launch."
+}

@@ -20,12 +20,34 @@
   ],
   "items": [
     {
+      "id": "FT-RES-134",
+      "title": "Reconcile La Jolla Shores official parking conflict",
+      "kind": "research",
+      "status": "in_progress",
+      "selected_on": "2026-10-05",
+      "priority": 1,
+      "target_paths": ["docs/research/la-jolla-shores-fees-2026-10-05.json", "docs/research/la-jolla-shores-fees-2026-10-05.md", "tools/page-generation/san-diego-hotel-evidence.mjs", "tools/la-jolla-shores-fees.test.mjs", "tools/legacy-hotel-sources.test.mjs", "tools/page-quality.test.mjs", "tools/weekly-evidence-review.test.mjs", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
+      "target_urls": ["https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"],
+      "evidence": "Native hotel-quality priority1 disputed fees; August17 official FAQ45 versus accommodations/policy55 parking; September30 source audit recorded text changes for all three permitted sources with HTTP200, no denial.",
+      "acceptance_criteria": ["Check only existing official FAQ/accommodations/policy sources; preserve differing current statements or null if inaccessible, never infer tax/fee inclusion or final family-room cost", "Integrate only the dated supported fee envelope into existing shared hotel evidence; preserve every other field/hotel, historical price bands/dates and source packs; hypothetical nightly/stay arithmetic labels assumptions", "Focused and full native QA, independent read-only PASS or PASS_WITH_P3, exact12path reviewed push; no site or generator-output change"],
+      "measurement_plan": "Resolve one named first-party fee conflict for car/no-car budget comparison; distinguish mandatory nightly fees from optional parking and unknown taxes, not booking acceptance, satisfaction or SEO effects.",
+      "production_invariant": "Second actual October5 normal run13:00:49UTC; clock13:07:11UTC confirms October5Eastern before action. One action only. All public/status files,11held paths,257prior roadmap items, ledger154down,073completion and source prices intact. No city publication, current quote, paid/account/booking/indexing/scheduler mutation or unchanged-denial retry.",
+      "decision": "IMPLEMENT fee-only shared envelope: three current primary bodies agree55daily parking; accommodations50nightly resortfee plus tax corroborated by policy. USD editorial interpretation, tax/parking days/rate inclusion/exact family total unknown. Historical prices and all non-fee fields unchanged; separate public-label release next",
+      "next_gate": "Source agreement confirmed; exact scope expanded10to11 then12 before dependent historical fixture test repairs. Final focused/full native QA, different independent read-only consensus and exact-path push",
+      "reviewer": "Hooke01a10c32-a36a-7a52-8b6c-29653a5c8cde cycle1PASS/noP0-P3 finalvvljav; independently6tests/65records390fieldpairs/all770frozen768baselinehashes/exact12/257prioritems/ledger154down/073completion/11held/primaryfeeagreement/historicalreports verified. ReviewmanifestSHA256502882667ef803dac3fe76755571fb6a458941748661674a41771c0b7b191de3; strictlyread-only",
+      "qa": "Master567full127helperfocused31fee-focused/0fail-skip-cancel/state0/GSC83/localSEO31canonical34HTML0errors-fiveprior/389nonfee-otherhotel fields unchanged/all770hashes intact; allsessionscomplete. Earlier failed historical-fixture candidates superseded, no release on them"
+    },
+    {
       "id": "FT-IMP-073",
+      "completed_on": "2026-10-05",
+      "release_commit": "338a2d1e61d36a2936d50d594359c65fd81093c7",
+      "release_verified_at": "2026-10-05T05:25:18.365Z",
+      "release_result": "Remote main equalsHEAD/0-0/exact17/all767indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush; shared-record/docs only, no publicproduction or Pages change",
       "reviewer": "Archimedes01a10a7f-6048-7f11-8a42-9aaa6e6ce81f cycle1PASS/noP0-P3; independent18tests/34nonDCbytecomparisons/all767candidate765baselinehashes/exact17/256prioritems except059threefields/ledger153suffix/133completion/63public-status11held/incomingGSC intact. ManifestSHA256182eb7296de1c90f396aaa1f2a5885a9aa6b9174de545959e5f84934a645dd5b. Read-only/no edits/outputwriting/provider/paid/holdreplay",
       "qa": "Master561full/127helperfocused/sevennew includedfull/0fail-skip-cancel/state0/GSC83/localSEO31canonical34HTML0errors-fiveprior/all767hashes unchanged/all sessionscomplete",
       "title": "Correct DC Hilton count-only child-age provenance without losing dated prices",
       "kind": "implementation",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-05",
       "target_paths": [
         "docs/research/washington-dc-embassy-price-observation-2026-09-30.json",
@@ -56,8 +78,8 @@
       ],
       "measurement_plan": "LRN154 maintained-evidence provenance audit and offline proxy task validation, not new provider collection/real-user testing/SEO effect. Compare immutable price-context projection and35column exports; adult cutoff cannot settle child eligibility or final affordability.",
       "production_invariant": "FirstactualOctober5 normalrun05:02:26UTC/one action only; source observation dates remainSeptember30, no publicsite/newURL/cityapproval/paid/providerhold-replay/indexing/account/scheduler mutation. Master solewriter. Baseline765files at a7c3a6915a18240cc86a2ce30f934a234f61a582; preserve incomingOct4GSC snapshot and11held.",
-      "decision": "IMPLEMENT existing schema5 correction for two DC Hilton count-only inputs: five dated publicplan amounts retained, requested ages taskcontext not provider acceptance. Sevenrow/35column350USDnight task now fiveUNKNOWN_AGE_BASIS/oneResidenceabove/onePendryunpriced; original prices/fees/terms/source dates intact. Seven new regressions pass; fullnativeQA/independent consensus pending",
-      "next_gate": "Exact reviewed shared-record/docs release, then DC provider-confirmed child-age eligibility only on changed authorized evidence, fullfees/corpus/actualrest/materiality/noexistingfit/fresh namedDC publication approval"
+      "decision": "IMPLEMENT existing schema5 correction for two DC Hilton count-only inputs: five dated publicplan amounts retained, requested ages taskcontext not provider acceptance. Sevenrow/35column350USDnight task now fiveUNKNOWN_AGE_BASIS/oneResidenceabove/onePendryunpriced; original prices/fees/terms/source dates intact. Seven new regressions/fullnativeQA/independentPASS/exact17path remoteverifiedrelease complete",
+      "next_gate": "Completed reviewed shared-record/docs release; DC provider-confirmed child-age eligibility only on changed authorized evidence, fullfees/corpus/actualrest/materiality/noexistingfit/fresh namedDC publication approval remain"
     },
 {
       "id": "FT-RES-133",
