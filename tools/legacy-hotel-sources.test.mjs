@@ -55,7 +55,9 @@ test("narrow September fee checks and unresolved bedding/parking conflicts stay 
     assert.notEqual(r.fields.price.observed_on, "2026-09-27");
   }
   assert.equal(find("Bahia Resort Hotel").fields.room.state, "disputed");
-  assert.equal(find("Loews Coronado Bay Resort").fields.fees.state, "disputed");
+  assert.equal(find("Loews Coronado Bay Resort").fields.fees.state, "known");
+  assert.equal(find("Loews Coronado Bay Resort").fields.fees.observed_on, "2026-10-06");
+  assert.equal(find("Loews Coronado Bay Resort").fields.fees.value.self_parking_usd, 50);
   assert.equal(find("La Jolla Shores Hotel").fields.fees.state, "known");
   assert.equal(find("La Jolla Shores Hotel").fields.fees.observed_on, "2026-10-05");
   assert.equal(find("La Jolla Shores Hotel").fields.fees.value.parking_usd, 55);

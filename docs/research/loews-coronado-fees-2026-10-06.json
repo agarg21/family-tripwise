@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-135",
+  "hotel": "Loews Coronado Bay Resort",
+  "checked_on": "2026-10-06",
+  "decision": "IMPLEMENT_FEE_ENVELOPE_ONLY",
+  "prior_record": {"checked_on": "2026-08-17", "evidence_path": "docs/research/san-diego-family-hotel-evidence-pack.md", "self_parking_conflict": "FAQ50versus amenities47", "resort_fee_usd": 42, "valet_usd": 55},
+  "observations": [
+    {"id": "LOEWS-FEE-FAQ", "url": "https://www.loewshotels.com/coronado-bay-resort/faqs", "checked_on": "2026-10-06", "collection": "web.open primary body; crawl today", "self_parking_amount": 50, "valet_amount": 55, "parking_unit": "night", "parking_tax": "Plus tax", "processing_fee_amount": 1.99, "processing_fee_unit": "one-time if applicable", "resort_fee_amount": 42, "resort_fee_unit": "night", "result": "Self and valet are alternatives with in/out privileges. Conditional parking processing charge billed by provider; no final rate/party/date or tax amount."},
+    {"id": "LOEWS-FEE-AMENITIES", "url": "https://www.loewshotels.com/coronado-bay-resort/discover/services-amenities", "checked_on": "2026-10-06", "collection": "web.open primary body; crawl yesterday", "self_parking_amount": null, "valet_amount": null, "parking_unit": null, "processing_fee_amount": null, "resort_fee_amount": 42, "resort_fee_unit": "room/night", "result": "Nightly resort charge42 per room plus tax; current returned body contains no parking amount. Historical47 statement is absent, not independently confirmed as50."}
+  ],
+  "fee_envelope": {
+    "value": {
+      "currency": "USD",
+      "currency_evidence_class": "EDITORIAL_INTERPRETATION",
+      "currency_basis": "Dollar amounts on the official US property pages; no explicit ISO selector checked.",
+      "resort_fee_usd": 42,
+      "resort_fee_unit": "room/night",
+      "resort_fee_tax": "Plus tax; amount/rate unknown",
+      "self_parking_usd": 50,
+      "valet_usd": 55,
+      "parking_unit": "night",
+      "parking_basis": "Self or valet alternatives with in/out privileges; current numeric amounts from FAQ only",
+      "parking_tax": "Plus tax; amount/rate unknown",
+      "self_parking_conflict": null,
+      "parking_processing_fee_usd": 1.99,
+      "parking_processing_fee_unit": "one-time if applicable",
+      "parking_processing_fee_required": null,
+      "parking_processing_fee_billed_by": "Parking provider",
+      "parking_processing_fee_tax_inclusion": null,
+      "tax_inclusion": false,
+      "room_rate_fee_inclusion": null,
+      "exact_room_party_stay": null,
+      "unknowns": ["Rate-specific resort/parking inclusion", "Exact parking nights/vehicle and processing-charge applicability", "Tax rate/amount and processing-charge tax basis", "Other charges/incidental authorization and exact family-room total"]
+    },
+    "state": "known",
+    "evidence_class": "OFFICIAL_PROPERTY_FACT",
+    "observed_on": "2026-10-06",
+    "source_urls": ["https://www.loewshotels.com/coronado-bay-resort/faqs", "https://www.loewshotels.com/coronado-bay-resort/discover/services-amenities"],
+    "source_refs": [
+      {"id": "LOEWS-FEE-FAQ", "evidence_class": "OFFICIAL_PROPERTY_FACT", "checked_on": "2026-10-06", "evidence_path": "docs/research/loews-coronado-fees-2026-10-06.json", "urls": ["https://www.loewshotels.com/coronado-bay-resort/faqs"]},
+      {"id": "LOEWS-FEE-AMENITIES", "evidence_class": "OFFICIAL_PROPERTY_FACT", "checked_on": "2026-10-06", "evidence_path": "docs/research/loews-coronado-fees-2026-10-06.json", "urls": ["https://www.loewshotels.com/coronado-bay-resort/discover/services-amenities"]}
+    ],
+    "evidence_path": "docs/research/loews-coronado-fees-2026-10-06.json",
+    "date_basis": "field-observation",
+    "limitation": "Partial published fee policy, not a final family-room quote. Parking values supported by FAQ; amenities body no longer exposes the historical competing47 amount, not a second numeric parking confirmation. Resort42 corroborated. USD inferred editorially; tax amounts, rate inclusion, conditional processing and actual stay total unknown. All non-fee evidence retains original dates."
+  },
+  "budget_proxy": {
+    "evidence_class": "EDITORIAL_INTERPRETATION",
+    "room_count": 1,
+    "nights": 5,
+    "vehicle_count_assumed": 1,
+    "charged_parking_nights_assumed": 5,
+    "party": "Family budget proxy, exact room and adult/child eligibility not selected",
+    "stay_dates": "Hypothetical; no dated availability or room quote",
+    "resort_component_before_tax_usd": 210,
+    "self_parking_component_before_tax_usd": 250,
+    "valet_component_before_tax_usd": 275,
+    "self_plus_resort_components_before_tax_usd": 460,
+    "valet_plus_resort_components_before_tax_usd": 485,
+    "conditional_one_time_processing_component_usd": 1.99,
+    "self_plus_resort_with_one_processing_component_usd": 461.99,
+    "valet_plus_resort_with_one_processing_component_usd": 486.99,
+    "limitation": "Five charged nights, one room/vehicle and one processing charge are assumptions; applicability/charge count unknown. Self and valet alternatives, never additive together. No-car proxy retains210resort component, not a parking waiver or transport assurance. Components exclude unknown taxes and room cost; do not add blindly to historical inclusive samples or report as full stay totals."
+  },
+  "confidence": "High amount/unit extraction, unknown exact tax/rate/party/inclusion/applicability and full family budget.",
+  "next_gate": "Separate public fee-label integration after recorded normal preview access resolves and independent reviewed/verified release; exact family room/stay cost and applicable total remain unqualified. Recheck fees on changed source/booking terms or native14day freshness boundary."
+}

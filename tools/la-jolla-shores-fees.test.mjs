@@ -52,7 +52,7 @@ test("fee renewal leaves historical price room review activity and transport evi
   assert.equal(fields.review_signal.observed_on, "2026-07-21");
   assert.equal(fields.review_signal.value.representative, false);
   assert.equal(fields.transport.state, "unknown");
-  assert.equal(hotelEvidence().find(r => r.hotel === "Loews Coronado Bay Resort").fields.fees.state, "disputed");
+  assert.equal(hotelEvidence().find(r => r.hotel === "Loews Coronado Bay Resort").fields.fees.state, "known");
 });
 
 test("fresh fee reconciliation removes only its dispute task and ordinary freshness expiry returns it", () => {

@@ -9,12 +9,14 @@ import { hotelEvidence } from "./hotel-evidence.mjs";
 async function historicalRecords() {
   const records = hotelEvidence();
   const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-nyc-price-labels.json", import.meta.url), "utf8"));
-  const prior = saved.tasks.find(t => t.id === "san-diego-la-jolla-shores-hotel-fees");
-  const hotel = records.find(r => r.hotel === "La Jolla Shores Hotel");
-  // Replay the historical checkpoint, not October's newly checked fee policy.
-  hotel.fields.fees = {value: prior.retained_value, state: "disputed", observed_on: "2026-08-17",
-    evidence_class: prior.evidence_class, evidence_path: prior.evidence_path, source_urls: prior.source_urls,
-    source_refs: prior.source_refs, date_basis: "field-observation", limitation: prior.limitation};
+  // Replay the historical checkpoint, not October's newly checked fee policies.
+  for (const name of ["La Jolla Shores Hotel", "Loews Coronado Bay Resort"]) {
+    const prior = saved.tasks.find(t => t.hotel === name && t.field === "fees");
+    const hotel = records.find(r => r.hotel === name);
+    hotel.fields.fees = {value: prior.retained_value, state: "disputed", observed_on: "2026-08-17",
+      evidence_class: prior.evidence_class, evidence_path: prior.evidence_path, source_urls: prior.source_urls,
+      source_refs: prior.source_refs, date_basis: "field-observation", limitation: prior.limitation};
+  }
   return records;
 }
 

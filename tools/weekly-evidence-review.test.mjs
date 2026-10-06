@@ -95,22 +95,26 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.equal(record.verified_on, currentRecord.verified_on);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
       changed.push(record.id);
-    } else if (record.id === "san-diego-la-jolla-shores-hotel-fees") {
+    } else if (["san-diego-la-jolla-shores-hotel-fees", "san-diego-loews-coronado-bay-resort-fees"].includes(record.id)) {
       assert.equal(record.verified_on, "2026-08-17");
       assert.equal(record.mapping_state, "disputed");
-      assert.equal(currentRecord.verified_on, "2026-10-05");
+      const loews = record.id === "san-diego-loews-coronado-bay-resort-fees";
+      assert.equal(currentRecord.verified_on, loews ? "2026-10-06" : "2026-10-05");
       assert.equal(currentRecord.mapping_state, "known");
-      assert.equal(currentRecord.evidence_path, "docs/research/la-jolla-shores-fees-2026-10-05.json");
+      assert.equal(currentRecord.evidence_path, loews ? "docs/research/loews-coronado-fees-2026-10-06.json" : "docs/research/la-jolla-shores-fees-2026-10-05.json");
       assert.equal(currentRecord.interval_days, record.interval_days);
       assert.notEqual(currentRecord.basis, record.basis);
       laterFeeChanges.push(record.id);
     } else assert.deepEqual(record, currentRecord);
   }
   assert.equal(changed.length, 12);
-  assert.deepEqual(laterFeeChanges, ["san-diego-la-jolla-shores-hotel-fees"]);
-  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls }), /Model\/date\/basis drift: san-diego-la-jolla-shores-hotel-fees/);
+  assert.deepEqual(laterFeeChanges, ["san-diego-loews-coronado-bay-resort-fees", "san-diego-la-jolla-shores-hotel-fees"]);
+  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls }), /Model\/date\/basis drift: san-diego-loews-coronado-bay-resort-fees/);
+  const priorLoews = retainedRecords.find(record => record.id === "san-diego-loews-coronado-bay-resort-fees");
+  const loewsRestored = modelRecords().map(record => record.id === priorLoews.id ? priorLoews : record);
+  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: loewsRestored, expectedUrls }), /Model\/date\/basis drift: san-diego-la-jolla-shores-hotel-fees/);
   const priorFee = retainedRecords.find(record => record.id === "san-diego-la-jolla-shores-hotel-fees");
-  const feeRestored = modelRecords().map(record => record.id === priorFee.id ? priorFee : record);
+  const feeRestored = loewsRestored.map(record => record.id === priorFee.id ? priorFee : record);
   assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: feeRestored, expectedUrls }), /Model\/date\/basis drift: new-york-city-/);
   assert.deepEqual(report, await read("2026-09-30-review.json"));
   assert.equal(report.summary.canonical_pages, 31);

@@ -1,5 +1,13 @@
 # Family Tripwise SEO Roadmap
 
+FT-RES-135 final exact13path shared-record/docs candidate independentlyPASS/noP0-P3; Master573full127helperfocused33fee-focused/state-GSC-localSEO green. Only Loews fee envelope changed among390fields; all258prioritems, historicalsourceprices and11held preserved. Immutable QA/consensus results only; exact Git release eligible, no publicproduction/Pages or city launch.
+
+FT-RES-135 final13paths registered before dependent LaJolla control edit. CurrentFAQ supports50self/55valet plus tax and conditional1.99once; amenities no47statement, resort42plus tax corroborated. Shared fee-only implementation/QA/review/exact release next; no publicproduction change.
+
+FT-RES-135 selected independent priority1 Loews self-parking conflict while public-label preview prerequisite remains held. Exact12paths registered, fee-only shared record/nativefullfocusedQA/read-onlyreview/verifiedGitrelease required; no publicsite/newcity/paid/scheduler mutation. Current GSC: recent reused [ops/gsc-snapshots/2026-10-05.json](gsc-snapshots/2026-10-05.json), finalizedOctober3, not an aligned-query CTR gate. Original prices/otherfields/LaJolla fee record/public11held and all258prioritems preserved.
+
+FT-RES-134 reviewed shared-record/docs commitc7075460ff25df6c232c258418cc252f0ff24120 remoteverified2026-10-05T13:19:29.463Z/mainHEAD0-0. La Jolla shared parking conflict resolved without renewing historical prices or other fields; one second-run action/LRN155 complete. No publicproduction/Pages or city launch. Separate permitted-preview public fee-label integration and exactroom/inclusion gates remain;11held intact. Mechanical completion local for next substantive transaction.
+
 FT-RES-134 final exact12path shared-record/docs candidate independentlyPASS/noP0-P3, Master567full127helperfocused31fee-focused/native state-GSC-localSEO green. One fee-envelope change/389fields unchanged/257prioritems and11held preserved. Immutable QA/consensus results only; exact Git release eligible, no publicproduction/Pages or city launch.
 
 FT-RES-134 final exact12scope registered before weekly historical-model fixture repair; all original snapshots/source packs remain intact. Final QA/independent review/release pending.

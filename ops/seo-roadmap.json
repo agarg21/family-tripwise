@@ -20,10 +20,28 @@
   ],
   "items": [
     {
+      "id": "FT-RES-135",
+      "title": "Reconcile Loews Coronado fee conflict in shared evidence",
+      "kind": "research",
+      "status": "in_progress",
+      "selected_on": "2026-10-06",
+      "priority": 1,
+      "target_paths": ["docs/research/loews-coronado-fees-2026-10-06.json", "docs/research/loews-coronado-fees-2026-10-06.md", "tools/page-generation/san-diego-hotel-evidence.mjs", "tools/loews-coronado-fees.test.mjs", "tools/la-jolla-shores-fees.test.mjs", "tools/legacy-hotel-sources.test.mjs", "tools/page-quality.test.mjs", "tools/weekly-evidence-review.test.mjs", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
+      "target_urls": ["https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"],
+      "evidence": "Native shared quality priority1 disputed Loews fees: retained August17 FAQ50 versus amenities47 self-parking, resort42plus tax/valet55. Both canonical sources permitted HTTP200 in latest September30 audit, no recorded denial; exact current fee agreement required before car/no-car budget use. La Jolla public-label release still requires recorded normal preview-access resolution; no retry or tool/origin bypass.",
+      "acceptance_criteria": ["Check only maintained official FAQ and services-amenities bodies, record current differing amounts or null/denial without retry; retain units/tax/rate inclusion and USD evidence limits", "Implement only current Loews fee envelope in existing shared hotel model, preserving all other389fields, historical prices/room/reviews/transit/activities, original source packs and La Jolla October5 fee envelope", "Focused/full native QA and independent read-only PASS/PASS_WITH_P3, exact13path reviewed push; historical fixture updates isolate only intended current fee changes, never rewrite saved evidence"],
+      "measurement_plan": "Resolve named self-parking conflict and distinguish resort/optional alternative parking components for a hypothetical family budget; no final room/stay quote, eligibility, user satisfaction or ranking claim.",
+      "production_invariant": "First actual October6 normalrun05:02:19UTC/01:02:19EDT, clock05:03:18UTC before transaction; one action only.258prioritems, ledger155down,134completion, incoming Oct5 GSC and public/status11held unchanged. No public/site/generator output/URL/window/city/paid/account/booking/indexing/scheduler mutation; weekly audit dueOctober7 not run prematurely.",
+      "decision": "IMPLEMENT current fee-only envelope: FAQ50self/55valet pernight plus tax and conditional1.99one-time processing; amenities no competing47parking statement. Both support42resort perroom/night plus tax. Parking source is FAQ only, not agreement of two numeric statements; USD editorial and exactparty/rate/tax/inclusion unknown",
+      "next_gate": "Exactscope expanded12to13 before LaJolla dependent control edit. Shared fee implementation, nativeQA, independent read-only consensus and exact reviewed release; public fee-label preview/release and exactfamily total separate",
+      "reviewer": "Curie01a10f9b-3b4c-7251-8ce5-bc3dc21d9995 cycle1PASS/noP0-P3 finalP6v30J; independently6tests/65models389nonfee-fieldbytes/all775freeze773baselinehashes/exact13/258prioritems/ledger155down/134completion/incomingGSC/11held/primarysourcefee-extraction/historicalreport reproduction-three driftguards verified. ReviewmanifestSHA256841cc1661536b7016ecfa9cffa3395ad59136c29cd3e550ceac4b835b155a029; strictlyread-only",
+      "qa": "Master573full127helperfocused33fee-adapter-quality-weeklyfocused/0fail-skip-cancel/state0/GSC84/localSEO31canonical34HTML0errors-fiveprior/all775hashes intact/389otherfields unchanged; allsessionscomplete"
+    },
+    {
       "id": "FT-RES-134",
       "title": "Reconcile La Jolla Shores official parking conflict",
       "kind": "research",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-05",
       "priority": 1,
       "target_paths": ["docs/research/la-jolla-shores-fees-2026-10-05.json", "docs/research/la-jolla-shores-fees-2026-10-05.md", "tools/page-generation/san-diego-hotel-evidence.mjs", "tools/la-jolla-shores-fees.test.mjs", "tools/legacy-hotel-sources.test.mjs", "tools/page-quality.test.mjs", "tools/weekly-evidence-review.test.mjs", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
@@ -33,9 +51,12 @@
       "measurement_plan": "Resolve one named first-party fee conflict for car/no-car budget comparison; distinguish mandatory nightly fees from optional parking and unknown taxes, not booking acceptance, satisfaction or SEO effects.",
       "production_invariant": "Second actual October5 normal run13:00:49UTC; clock13:07:11UTC confirms October5Eastern before action. One action only. All public/status files,11held paths,257prior roadmap items, ledger154down,073completion and source prices intact. No city publication, current quote, paid/account/booking/indexing/scheduler mutation or unchanged-denial retry.",
       "decision": "IMPLEMENT fee-only shared envelope: three current primary bodies agree55daily parking; accommodations50nightly resortfee plus tax corroborated by policy. USD editorial interpretation, tax/parking days/rate inclusion/exact family total unknown. Historical prices and all non-fee fields unchanged; separate public-label release next",
-      "next_gate": "Source agreement confirmed; exact scope expanded10to11 then12 before dependent historical fixture test repairs. Final focused/full native QA, different independent read-only consensus and exact-path push",
+      "next_gate": "Completed reviewed exact12path shared-record/docs release; separate public fee-label integration requires permitted preview, independent review and verified Pages release. Exact family-room total/inclusions remain unknown",
       "reviewer": "Hooke01a10c32-a36a-7a52-8b6c-29653a5c8cde cycle1PASS/noP0-P3 finalvvljav; independently6tests/65records390fieldpairs/all770frozen768baselinehashes/exact12/257prioritems/ledger154down/073completion/11held/primaryfeeagreement/historicalreports verified. ReviewmanifestSHA256502882667ef803dac3fe76755571fb6a458941748661674a41771c0b7b191de3; strictlyread-only",
-      "qa": "Master567full127helperfocused31fee-focused/0fail-skip-cancel/state0/GSC83/localSEO31canonical34HTML0errors-fiveprior/389nonfee-otherhotel fields unchanged/all770hashes intact; allsessionscomplete. Earlier failed historical-fixture candidates superseded, no release on them"
+      "qa": "Master567full127helperfocused31fee-focused/0fail-skip-cancel/state0/GSC83/localSEO31canonical34HTML0errors-fiveprior/389nonfee-otherhotel fields unchanged/all770hashes intact; allsessionscomplete. Earlier failed historical-fixture candidates superseded, no release on them",
+      "release_commit": "c7075460ff25df6c232c258418cc252f0ff24120",
+      "release_verified_at": "2026-10-05T13:19:29.463Z",
+      "release_verification": "Freshfetch/threeGitguards/all770indexbytes-modes/sole reviewed exact12range/normalpush/lsremote mainmatches/HEADorigin0-0; eight nonmechanical files identical to consensus. No site change or Pages gate. Completion mechanicallocal/no standalone metadata commit"
     },
     {
       "id": "FT-IMP-073",

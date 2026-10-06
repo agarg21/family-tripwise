@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-05
+Last updated: 2026-10-06
+
+## LRN-156 / October6 / FT-RES-135
+
+Family decision/hypothesis: retained Loews FAQ50/amenities47 self-parking disagreement still applies, and a parking headline suffices for car-versus-no-car fee comparison. Current OFFICIAL_PROPERTY_FACT bodies [evidence](../docs/research/loews-coronado-fees-2026-10-06.json) reject both: FAQ50self/55valet pernight plus tax, conditional1.99one-time provider processing; amenities no longer states47, not a second numeric parking confirmation. Resort42perroom/night plus tax corroborated. IMPLEMENT fee-only shared envelope; USD editorial, tax/rate inclusion/exactparking nights/processing applicability/exactfamily total unknown. Hypothetical1room5nights/1vehicle5parkingnights gives210resort/460self-plus-resort/485valet-plus-resort beforetax; conditional1.99onlyonce, never self+valet together or blindaddition to inclusive historicalsamples. Confidence high amount/unit extraction, unknown exact rate/party/users/SEO. Lesson removal of a conflicting statement is not independent numeric corroboration; conditional one-time parking charges differ from nightly fees. Trigger current source/terms conflict or14day fee boundary. Next exactfamily room/stay total and public fee labels after recorded normalpreview/independentreview/verifiedrelease; no unchangeddenial retry. First actual October6 normalrun/oneaction;258prioritems/ledger155down/134completion/newGSC/public11held preserved, no paid/providerhold/booking/scheduler mutation. Nativefocused/fullQA/different read-onlyPASS/exact13path shared-record/docs release required.
 
 ## LRN-155 / October5 / FT-RES-134
 
