@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-074",
+  "learning_id": "LRN-157",
+  "checked_on": "2026-10-06",
+  "evidence_class": "OFFLINE_PROXY_TASK_VALIDATION",
+  "decision": "IMPLEMENT_VALIDATION_BOUNDARY",
+  "family_decision": "Do not project malformed observed stay amounts into shared nightly-price and budget comparisons.",
+  "hypothesis": "Existing positive finite safe-rounded-cent validation rejects sub-cent USD/GBP stay amounts before derived nightly output.",
+  "result": "REJECT hypothesis: synthetic stay_amount0.001USD validated with no errors and projected nightly_average0. Three of six new regression tests failed before repair; all must pass after repair.",
+  "synthetic_controls": {
+    "not_real_hotel_quotes": true,
+    "rejected_amounts": [0.001, 0.004, 0.005, 1.001, 1.005, 1355.191],
+    "currencies": ["GBP", "USD"],
+    "schemas": [1, 2, 3, 4, 5],
+    "public_and_member_plans_validated": true,
+    "retained_valid_rounding": "Positive cent-precision stay amounts keep existing rounded nightly equivalents. A synthetic valid one-cent five-night stay can still round to zero per night; this change does not ban all zero rounded equivalents or assert real availability."
+  },
+  "reused_records": [
+    {"pack": "docs/research/london-room-configurations-2026-09-30.json", "prices": "docs/research/london-mitre-price-observation-2026-09-30.json", "schema": 1},
+    {"pack": "docs/research/london-room-configurations-2026-09-30.json", "prices": "docs/research/london-marlin-price-observation-2026-09-30.json", "schema": 2},
+    {"pack": "docs/research/washington-dc-room-configurations-2026-09-30.json", "prices": "docs/research/washington-dc-residence-price-observation-2026-09-30.json", "schema": 3},
+    {"pack": "docs/research/orlando-cabana-room-configurations-2026-10-03.json", "prices": "docs/research/orlando-cabana-price-observation-2026-10-03.json", "schema": 4},
+    {"pack": "docs/research/san-diego-homewood-room-task-2026-10-04.json", "prices": "docs/research/san-diego-homewood-price-observation-2026-10-04.json", "schema": 5}
+  ],
+  "source_date_renewal": false,
+  "public_change": false,
+  "real_user_testing": false,
+  "network_calls": 0,
+  "paid_calls": 0,
+  "confidence": "High reproducible validation-boundary evidence; no observed real malformed price or user harm, booking, final affordability, satisfaction or SEO outcome established.",
+  "lesson": "A positive raw amount and a safe rounded-cent value do not establish currency-cent precision. Reject malformed observations before rounding, including plans later excluded from output.",
+  "falsification_trigger": "A valid maintained cent amount or unchanged output regresses; a new supported currency/unit requires a separately evidenced minor-unit contract.",
+  "next_gate": "Focused/full native QA, different read-only PASS and exact9path shared-tool/docs release. Public fee-label normal-preview/review/release and exact-family source gates remain separate."
+}

@@ -20,10 +20,28 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-074",
+      "title": "Reject sub-cent stay prices before family-budget comparisons",
+      "kind": "improvement",
+      "status": "in_progress",
+      "selected_on": "2026-10-06",
+      "priority": 1,
+      "target_paths": ["docs/research/family-room-price-precision-2026-10-06.json", "docs/research/family-room-price-precision-2026-10-06.md", "tools/family-room-price.mjs", "tools/family-room-price-precision.test.mjs", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
+      "target_urls": [],
+      "evidence": "Read-only October6 synthetic control using retained Homewood pack: stay_amount0.001USD validates with no errors and emits nightly_average0. Existing API nightly-budget controls already require positive cent-precision money; price ingestion does not. This is a tool boundary defect, not a real hotel quote or new source check. Homewood main source's September30 403 remains unretired and was not retried.",
+      "acceptance_criteria": ["Reject sub-cent USD/GBP stay amounts for every supported observation schema and both public/member plans before projection/export; do not silently round malformed input", "Keep supported positive cent-precision samples and their existing rounded nightly equivalents unchanged; preserve source dates, ages, fees, eligibility and historical warnings", "Focused/full native QA, different read-only PASS/PASS_WITH_P3 and exact9path shared-tool/docs push with fresh-fetch and complete outgoing-range guards"],
+      "measurement_plan": "Synthetic malformed-price controls must throw rather than emit zero/rounded observed budget inputs; valid maintained price/comparison outputs byte-stable. No user-test, booking acceptance, all-fee total, CTR or ranking claim.",
+      "production_invariant": "Second actual October6 recurring run started13:00:18UTC/09:00:18EDT; pre-transaction clock13:02:44UTC. One action only. All259prioritems including135completion, ledger156down, all real research/price/source files, public/status11held and scheduler unchanged. GSC recent reused October5 finalizedOctober3/priorOctober4 finalizedOctober2, no fresh collection or query-CTR qualification. No network/paid/provider denial retry/public deployment/new city/account/indexing mutation.",
+      "decision": "IMPLEMENT narrow positive cent-precision validation, not a new pricing abstraction or source renewal",
+      "next_gate": "Implement focused regression controls, full native QA, independent read-only review and exact9path release; public fee-label preview and exact-family evidence gates remain separate",
+      "reviewer": "Darwin01a11152-6b27-7170-b345-ac72a457a8b6 cycle1PASS/noP0-P3 finaljGJggE. Independently6tests/old0.001defect/valid0.01rounding/18pricefiles46pack-date outputparities/all778candidate776baselinehashes/rootinventories/exact9/11held/259prioritems/ledger156suffix/135completion verified. InventorySHA256e33b26a348b82d5da390ee806612e70fc7d1c698bada7a00c67962003c97de1c; strict read-only/no network-generated-Git mutations",
+      "qa": "Master579full133helperfocused31price-budgetfocused/0fail-skip-cancel/state0/GSC84/localSEO31canonical34HTML0errors-fiveprior/all778hashes intact;18realpricefiles46pack-date exact price and single/joined CSV parity,259prioritems/ledger156suffix/11held intact. ReviewmanifestSHA256d51ac834c1ad26a6358e737b025d23c7cc418b1967ee56b3248ec9d0c0be9a82; allsessionscomplete"
+    },
+    {
       "id": "FT-RES-135",
       "title": "Reconcile Loews Coronado fee conflict in shared evidence",
       "kind": "research",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-06",
       "priority": 1,
       "target_paths": ["docs/research/loews-coronado-fees-2026-10-06.json", "docs/research/loews-coronado-fees-2026-10-06.md", "tools/page-generation/san-diego-hotel-evidence.mjs", "tools/loews-coronado-fees.test.mjs", "tools/la-jolla-shores-fees.test.mjs", "tools/legacy-hotel-sources.test.mjs", "tools/page-quality.test.mjs", "tools/weekly-evidence-review.test.mjs", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
@@ -33,9 +51,12 @@
       "measurement_plan": "Resolve named self-parking conflict and distinguish resort/optional alternative parking components for a hypothetical family budget; no final room/stay quote, eligibility, user satisfaction or ranking claim.",
       "production_invariant": "First actual October6 normalrun05:02:19UTC/01:02:19EDT, clock05:03:18UTC before transaction; one action only.258prioritems, ledger155down,134completion, incoming Oct5 GSC and public/status11held unchanged. No public/site/generator output/URL/window/city/paid/account/booking/indexing/scheduler mutation; weekly audit dueOctober7 not run prematurely.",
       "decision": "IMPLEMENT current fee-only envelope: FAQ50self/55valet pernight plus tax and conditional1.99one-time processing; amenities no competing47parking statement. Both support42resort perroom/night plus tax. Parking source is FAQ only, not agreement of two numeric statements; USD editorial and exactparty/rate/tax/inclusion unknown",
-      "next_gate": "Exactscope expanded12to13 before LaJolla dependent control edit. Shared fee implementation, nativeQA, independent read-only consensus and exact reviewed release; public fee-label preview/release and exactfamily total separate",
+      "next_gate": "Completed reviewed exact13path shared-record/docs release. Public fee-label integration requires recorded normalpreview resolution, separate reviewed/verified release; exactfamily room/stay cost and applicable total remain unknown",
       "reviewer": "Curie01a10f9b-3b4c-7251-8ce5-bc3dc21d9995 cycle1PASS/noP0-P3 finalP6v30J; independently6tests/65models389nonfee-fieldbytes/all775freeze773baselinehashes/exact13/258prioritems/ledger155down/134completion/incomingGSC/11held/primarysourcefee-extraction/historicalreport reproduction-three driftguards verified. ReviewmanifestSHA256841cc1661536b7016ecfa9cffa3395ad59136c29cd3e550ceac4b835b155a029; strictlyread-only",
-      "qa": "Master573full127helperfocused33fee-adapter-quality-weeklyfocused/0fail-skip-cancel/state0/GSC84/localSEO31canonical34HTML0errors-fiveprior/all775hashes intact/389otherfields unchanged; allsessionscomplete"
+      "qa": "Master573full127helperfocused33fee-adapter-quality-weeklyfocused/0fail-skip-cancel/state0/GSC84/localSEO31canonical34HTML0errors-fiveprior/all775hashes intact/389otherfields unchanged; allsessionscomplete",
+      "release_commit": "9749c550a70fea9ad4b4c35539b48aa1a78cb5ea",
+      "release_verified_at": "2026-10-06T05:09:03.664Z",
+      "release_verification": "Freshfetch/threeGitguards/all775indexbytes-modes/sole reviewed exact13range/normalpush/lsremote mainmatches/HEADorigin0-0; nine nonmechanical files identical to consensus. No site change or Pages gate; mechanicalcompletion local/no standalone metadata commit"
     },
     {
       "id": "FT-RES-134",

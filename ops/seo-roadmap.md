@@ -1,5 +1,11 @@
 # Family Tripwise SEO Roadmap
 
+FT-IMP-074 exact9path shared-tool/docs candidate Darwin cycle1PASS/noP0-P3; Master579full133helperfocused31price-budgetfocused/native state-GSC-localSEO green. Independently18pricefiles46pack-dateparities/all778candidate776baselinehashes/exact9/11held/259prioritems/ledger156suffix/135completion verified; immutable consensus only, exact Git release next, no publicproduction/Pages or newcity.
+
+FT-IMP-074 selected one verified shared-tool budget defect: invalid sub-cent stay input can project zero nightly. Exact9paths registered before edits; retain valid prices/context/output bytes, reject malformed prices before comparison/export, full/focused nativeQA/different read-onlyPASS/exact release required. Second October6 recurring action, no publicdeployment or newcity. Recent reused ops/gsc-snapshots/2026-10-05.json finalizedOctober3 is orientation only.259prioritems/ledger156down/135completion/public11held preserved; Homewood403 and publicpreview holds not retried.
+
+FT-RES-135 reviewed shared-record/docs commit9749c550a70fea9ad4b4c35539b48aa1a78cb5ea remoteverified2026-10-06T05:09:03.664Z/mainHEAD0-0. Loews fee-only conflict/tax/conditionalprocessing correction delivered, historicalprices/389otherfields unchanged. FirstOctober6 normaloneaction/LRN156 complete; no publicproduction/Pages or city launch. Publicfee-label normalpreview/review/release and exactfamily total gates remain;11held intact. Mechanicalcompletion local for next substantive transaction.
+
 FT-RES-135 final exact13path shared-record/docs candidate independentlyPASS/noP0-P3; Master573full127helperfocused33fee-focused/state-GSC-localSEO green. Only Loews fee envelope changed among390fields; all258prioritems, historicalsourceprices and11held preserved. Immutable QA/consensus results only; exact Git release eligible, no publicproduction/Pages or city launch.
 
 FT-RES-135 final13paths registered before dependent LaJolla control edit. CurrentFAQ supports50self/55valet plus tax and conditional1.99once; amenities no47statement, resort42plus tax corroborated. Shared fee-only implementation/QA/review/exact release next; no publicproduction change.

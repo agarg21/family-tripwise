@@ -100,7 +100,8 @@ export function validateRoomPrices(observations, pack) {
         fail("Missing/unsupported rate eligibility");
       if (!rate || ![rate.plan, rate.meals, rate.cancellation].every(text) ||
           !Number.isFinite(rate.stay_amount) || rate.stay_amount <= 0 ||
-          !Number.isSafeInteger(Math.round(rate.stay_amount * 100)) || plans.has(rate.plan)) fail("Invalid/duplicate rate plan");
+          !Number.isSafeInteger(Math.round(rate.stay_amount * 100)) ||
+          Math.round(rate.stay_amount * 100) / 100 !== rate.stay_amount || plans.has(rate.plan)) fail("Invalid/duplicate rate plan");
       plans.add(rate?.plan);
       if (rate && ["object", "function"].includes(typeof rate) && "cancellation_deadline_local_date" in rate) {
         const deadline = Object.getOwnPropertyDescriptor(rate, "cancellation_deadline_local_date");
