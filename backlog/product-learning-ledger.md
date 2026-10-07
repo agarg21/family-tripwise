@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-06
+Last updated: 2026-10-07
+
+## LRN-158 / October7 / FT-MAINT-010
+
+Family decision/hypothesis: new structured offers or a changed source hash establish family-room prices or changed core fees. Current OFFICIAL_PROPERTY_FACT and STRUCTURED_PRICE_CANDIDATE triage [receipt](../docs/research/weekly-evidence-triage-2026-10-07.md) rejects it: event transport offers are not hotel nights; retained Dana fees agree while an incidentals authorization is not a payable fee. PRESERVE historical nightly context, shared amounts and factual dates. CANDIDATE separate maintained Dana hold envelope with unit/conditional-cost/unknown applicability controls at next eligible run; no second action now. Confidence high source classification, unknown exact family totals/users/SEO. Lesson classify offer semantics and holds before arithmetic; HTTP/hash success is not fact renewal. Trigger supported category/party/stay/inclusion evidence, changed primary claim or failed control. Once-only all-page weekly collection preserves denials; 390 model fields reviewed, no auto-publication. First October7 recurring run/oneaction, no paid/scheduler/publiccity/indexing mutation or unchanged denial retry. NativefullfocusedQA/different read-onlyPASS/exact10path docs/config release required; public preview and city approval gates separate. Ledger157down/260prioritems/074completion/11held retained.
 
 ## LRN-157 / October6 / FT-IMP-074
 

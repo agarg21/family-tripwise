@@ -20,10 +20,28 @@
   ],
   "items": [
     {
+      "id": "FT-MAINT-010",
+      "title": "Complete first actual weekly all-page evidence triage",
+      "kind": "research",
+      "status": "in_progress",
+      "selected_on": "2026-10-07",
+      "priority": 1,
+      "target_paths": ["ops/page-quality/2026-10-07-site-maintenance.json", "ops/evidence-audits/2026-10-07.json", "ops/evidence-audits/2026-10-07-review.json", "docs/research/weekly-evidence-triage-2026-10-07.md", "backlog/product-learning-ledger.md", "ops/operator.json", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
+      "target_urls": [],
+      "evidence": "Registered October7 weekly gate in operator/weekly-evidence-audit policy; first real weekly collection against latest September30-repeat. Named decision: whether source deltas/availability identify an unblocked claim/price correction after recent fee reconciliation, without promoting retrieval success or replaying prior denials. Public fee-label/export implementations still require unchanged normalpreview dependency; city and exact-family source gates remain separate.",
+      "acceptance_criteria": ["Run existing bounded allowlisted collection exactly once on isolated released tree with latest prior and three new non-overwriting outputs; preserve denial timestamps and unchanged factual dates/public files", "Reproduce all-page/390field model review and classify high-priority named claim/price candidates versus noise, denials and extraction-only amounts; retain historical nightly price context, do not invent current quotes", "Record one bounded evidence-freshness/conflict learning result and weekly verified-outcome/candidate-age/blocker summary, exact next claim gate; nativefullfocusedQA and different read-onlyPASS before exact10path docs/config push"],
+      "measurement_plan": "Named maintenance decision and source/field follow-up readiness, not source-count productivity, automatic renewal, final family pricing, user satisfaction, CTR or ranking gain.",
+      "production_invariant": "First actual October7 recurring run started05:00:52UTC/01:00:52EDT; one action only.260prioritems/ledger157down/074completion/11held and all public/source observations unchanged. Incoming GSC-only3b1de33 safely fast-forwarded; reused Oct6 collected16:49:15.627UTC finalizedOct4/priorOct5 finalizedOct3, no fresh collection/queryCTR qualification. No scheduler/paid/account/indexing/publiccity mutation, automatic factual renewal or denial/tool-origin bypass. Interrupted unsaved collection must be held, not blindly rerun.",
+      "decision": "PRESERVE public facts/historical nightly context after once-only October7 audit; CANDIDATE separate Dana authorization-hold envelope. Evidence/weekly outcomes/LRN158 in docs/research/weekly-evidence-triage-2026-10-07.md; no automatic fact renewal or current-family quote",
+      "next_gate": "NativefullfocusedQA/different independent read-only consensus/exact10path docs-config release; next eligible action separately registers maintained Dana hold versus fee units/conditional context/unknown applicability. Publicpreview and fresh namedcity approvals unchanged",
+      "reviewer": "Aristotle01a114c4-40de-75d3-95ac-dde3563d2f75 cycle2PASS/noP0-P3 finalTMfSrD; cycle1P3 due-entry label corrected. Independent781baseline784candidate/exact10/three outputbyteparities/maintenance-review reproduction/455classifications390fields146carried timestamps/eightcontrols/260prioritems/ledger157suffix/074receipts/11held verified, only docline9 changed in cycle2. Strict read-only/no writes-network-browser-Git mutation; Dana primary check Master-attributed not replayed",
+      "qa": "Master579full33focused/0fail-skip-cancel/state0/GSC85/localSEO31canonical34HTML0errors-fiveprior/all784frozenhashes unchanged. Final consensus reviewmanifestSHA256e55db8a9030050a1ba5b893cb5fe35ee208ee18d389abd8c612fcd1f3ea44685; allsessionscomplete. No public production or Pages check"
+    },
+    {
       "id": "FT-IMP-074",
       "title": "Reject sub-cent stay prices before family-budget comparisons",
       "kind": "improvement",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-06",
       "priority": 1,
       "target_paths": ["docs/research/family-room-price-precision-2026-10-06.json", "docs/research/family-room-price-precision-2026-10-06.md", "tools/family-room-price.mjs", "tools/family-room-price-precision.test.mjs", "backlog/product-learning-ledger.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md"],
@@ -35,7 +53,10 @@
       "decision": "IMPLEMENT narrow positive cent-precision validation, not a new pricing abstraction or source renewal",
       "next_gate": "Implement focused regression controls, full native QA, independent read-only review and exact9path release; public fee-label preview and exact-family evidence gates remain separate",
       "reviewer": "Darwin01a11152-6b27-7170-b345-ac72a457a8b6 cycle1PASS/noP0-P3 finaljGJggE. Independently6tests/old0.001defect/valid0.01rounding/18pricefiles46pack-date outputparities/all778candidate776baselinehashes/rootinventories/exact9/11held/259prioritems/ledger156suffix/135completion verified. InventorySHA256e33b26a348b82d5da390ee806612e70fc7d1c698bada7a00c67962003c97de1c; strict read-only/no network-generated-Git mutations",
-      "qa": "Master579full133helperfocused31price-budgetfocused/0fail-skip-cancel/state0/GSC84/localSEO31canonical34HTML0errors-fiveprior/all778hashes intact;18realpricefiles46pack-date exact price and single/joined CSV parity,259prioritems/ledger156suffix/11held intact. ReviewmanifestSHA256d51ac834c1ad26a6358e737b025d23c7cc418b1967ee56b3248ec9d0c0be9a82; allsessionscomplete"
+      "qa": "Master579full133helperfocused31price-budgetfocused/0fail-skip-cancel/state0/GSC84/localSEO31canonical34HTML0errors-fiveprior/all778hashes intact;18realpricefiles46pack-date exact price and single/joined CSV parity,259prioritems/ledger156suffix/11held intact. ReviewmanifestSHA256d51ac834c1ad26a6358e737b025d23c7cc418b1967ee56b3248ec9d0c0be9a82; allsessionscomplete",
+      "release_commit": "bb39f0f3001eb43a435c963dd02a3af301747ceb",
+      "release_verified_at": "2026-10-06T13:11:47.324Z",
+      "release_verification": "Freshfetch/threeGitguards/all778indexbytes-modes/sole reviewed exact9range/normalpush/lsremote mainmatches/HEADorigin0-0; five nonmechanicalfiles identical to consensus. No public/site change or Pages gate; completionmechanicallocal/no standalone metadata commit"
     },
     {
       "id": "FT-RES-135",
