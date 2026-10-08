@@ -1,5 +1,7 @@
 # San Diego Page Status
 
+October8 FT-RES-136 implements [Dana fee/authorization shared record](../docs/research/dana-fee-hold-2026-10-08.md), not public page delivery. All current public HTML and historical nightly bands remain unchanged. NativeQA/read-onlyreview/exact shared-tool docs release pending;075 public preview gate and its intact unshipped candidate remain separate. No whole-property date renewal or exact-family cash total.
+
 Last updated: 2026-09-17
 
 Production completion: `FT-IMP-029` / `IMP-052` is released at `70a6b5a044959c14afbb6bebf7e7629feaa37b97`; Pages run `35226367636` succeeded, matching marker and live HTML verified `2026-09-17T13:20:31Z`. Removing the one paragraph still reproduces prior HTML exactly. Production SEO and all three viewport/navigation/Teen-All/table-scroll checks pass with112/352/448px added card depth, no clipping or page errors. No retry/rollback. August29 remains the pre-release crawl boundary; no ranking benefit is claimed. Earlier review/open-gate text is chronology.

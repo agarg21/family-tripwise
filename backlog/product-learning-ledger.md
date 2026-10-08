@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-07
+Last updated: 2026-10-08
+
+## LRN-160 / October8 / FT-RES-136
+
+Family decision/hypothesis: the shared Dana record already separates payable fees from card authorization and conditional bedding expense. Current OFFICIAL_PROPERTY_FACT [October8 FAQ record](../docs/research/dana-fee-hold-2026-10-08.json) plus OFFLINE_PROXY_TASK rejects it: old fee record omitted authorization/day and rollaway/night context. IMPLEMENT Dana fee envelope only, keep hold non-payable/actual day count-release-rate applicability unknown and hypothetical partial fees separate from exact-room prices. Confidence high source/record parity, unknown booking/user/SEO outcomes. Lesson cash authorization is not stay cost; unknown days cannot become nights or zero. Trigger fee-hold conflation, source change, guessed release/billable days, other-field drift or lost price basis. Next nativefullfocusedQA/read-onlyPASS/exact shared-record push; public integration remains normal-preview held. One firstOctober8run action, no paid/public/scheduler/city/indexing/denial retry. All preaction work preserved; clean released candidate excludes held075 code/public/tests/plan and LRN159, not a claim that159 vanished locally.
 
 ## LRN-158 / October7 / FT-MAINT-010
 

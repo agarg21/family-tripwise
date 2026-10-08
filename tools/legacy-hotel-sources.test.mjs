@@ -47,7 +47,7 @@ test("twelve hotels gain 62 source-linked fields without renewing the price/room
 test("narrow September fee checks and unresolved bedding/parking conflicts stay separate", () => {
   const records = hotelEvidence().filter((r) => r.id.startsWith("san-diego-"));
   const find = (hotel) => records.find((r) => r.hotel === hotel);
-  for (const hotel of ["Bahia Resort Hotel", "Catamaran Resort Hotel and Spa", "The Dana on Mission Bay"]) {
+  for (const hotel of ["Bahia Resort Hotel", "Catamaran Resort Hotel and Spa"]) {
     const r = find(hotel);
     assert.equal(r.fields.fees.observed_on, "2026-09-27");
     assert.equal(r.fields.fees.evidence_path, SAN_DIEGO_FEES);
@@ -55,6 +55,12 @@ test("narrow September fee checks and unresolved bedding/parking conflicts stay 
     assert.notEqual(r.fields.price.observed_on, "2026-09-27");
   }
   assert.equal(find("Bahia Resort Hotel").fields.room.state, "disputed");
+  const dana = find("The Dana on Mission Bay");
+  assert.equal(dana.fields.fees.observed_on, "2026-10-08");
+  assert.equal(dana.fields.fees.evidence_path, "docs/research/dana-fee-hold-2026-10-08.json");
+  assert.equal(dana.fields.fees.value.incidental_authorization.payable_fee, false);
+  assert.equal(dana.fields.room.observed_on, "2026-08-17");
+  assert.equal(dana.fields.price.observed_on, "2026-07-21");
   assert.equal(find("Loews Coronado Bay Resort").fields.fees.state, "known");
   assert.equal(find("Loews Coronado Bay Resort").fields.fees.observed_on, "2026-10-06");
   assert.equal(find("Loews Coronado Bay Resort").fields.fees.value.self_parking_usd, 50);

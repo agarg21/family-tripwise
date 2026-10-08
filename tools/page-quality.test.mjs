@@ -17,6 +17,8 @@ async function historicalRecords() {
       evidence_class: prior.evidence_class, evidence_path: prior.evidence_path, source_urls: prior.source_urls,
       source_refs: prior.source_refs, date_basis: "field-observation", limitation: prior.limitation};
   }
+  const dana = JSON.parse(await readFile(new URL("../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8"));
+  records.find(r => r.hotel === "The Dana on Mission Bay").fields.fees = dana.prior_fee_envelope;
   return records;
 }
 

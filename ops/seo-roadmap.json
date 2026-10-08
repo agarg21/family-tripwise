@@ -20,6 +20,25 @@
   ],
   "items": [
     {
+      "id": "FT-RES-136",
+      "title": "Separate Dana payable fees from incidentals authorization in shared evidence",
+      "kind": "research",
+      "status": "in_progress",
+      "priority": 1,
+      "selected_on": "2026-10-08",
+      "target_paths": ["docs/research/dana-fee-hold-2026-10-08.json", "docs/research/dana-fee-hold-2026-10-08.md", "tools/page-generation/san-diego-hotel-evidence.mjs", "tools/dana-fee-hold.test.mjs", "backlog/product-learning-ledger.md", "status/san-diego-pages.md", "ops/current-cycle.md", "ops/operator-review.md", "ops/seo-roadmap.json", "ops/seo-roadmap.md", "tools/legacy-hotel-sources.test.mjs", "tools/page-quality.test.mjs", "tools/weekly-evidence-review.test.mjs"],
+      "target_urls": ["https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"],
+      "evidence": "Reviewed October7 weekly triage qualifies a separate Dana envelope: retained25resort/35parking agree,50perday authorization is not a fee and limited10nightly rollaway is conditional. Public integration075/Chicago050 remain preview-held without changed access; no unblocked public candidate can release. Resolve this bounded shared-record gate, not another broad report.",
+      "acceptance_criteria": ["One current primary FAQ body check; preserve observation class/date/ISO interpretation, units/tax/inclusion limits and hold-versus-payable distinction", "Update Dana fees only in shared model; retain390field inventory,389other field bytes/historical nightly band and room/review dates/public artifacts. Hypothetical partial fee arithmetic cannot add authorization or invent billed days/release timing/fullstay quote", "Focused/full native QA, different independent read-only PASS, exact clean released-tree blobs; all pre-existing789workspace files and held075/Chicago/Cancun/Orlando work preserved except owned additions in mixed paths; freshfetch/no divergence/full outgoing review/normal shared-tool docs push"],
+      "measurement_plan": "Shared evidence can answer fee-versus-authorization cash requirement without treating a hold as stay cost. Proxy validation, not user satisfaction or exact booking/SEO improvement.",
+      "production_invariant": "First actual October8 recurringrun2026-10-08T05:01:52Z; transactionclock05:02:46Z/oneaction. HEADorigin197064e0-0. Recent reusedOct7API finalizedOct5/priorOct6 finalizedOct4, no alignedqueryCTR. No preview denial retry, public edit, city/URL/scheduler/paid/account/indexing mutation. Isolated HEAD candidate excludes unshipped075 code/public/tests/plan; apply only owned136 delta to mixed normalizer and metadata.075 future release must rebuild atop latest HEAD, never stage its older normalizer blob over136.",
+      "decision": "IMPLEMENTED shared fee-hold envelope after current primary FAQ agreement; preserve historical prices. Authorization remains non-payable with unknown day count/release/applicability; no public release or hold-to-total inference.",
+      "next_gate": "Final native QA, independent read-only review and exact shared-record release.075 public release remains separately held for changed permitted normal preview and final browser/release gates.",
+      "evidence_record": "docs/research/dana-fee-hold-2026-10-08.json",
+      "qa_result": "Master586full/28new-historicalfocused/19fee-focused/33maintenance pass/state0/GSC86/localSEO31canonical34HTML0errors-fiveprior/whitespace;65models390fields onlyDanafees changed,389others/prior envelope/public outputs identical. All sessionscomplete2026-10-08T05:14:03Z.",
+      "review_result": "Feynman01a119ec-1410-7dd1-b795-982a7b32d9b2 cycle1PASS/noP0-P3/seven independent puretests;789hashes/exact13scope/worktree preservation/owned-delta equality/historical replay and drift controls verified. Manifest9476bbc3ed42c045e5c5c643d8d4126d40a2f1f28d387865ace5c97a9be301ec. Candidate-only staging/Gitguards/fullindex byte-mode match/freshfetch/fulloutgoing/normalshared-record push next;075/050 held, no publicdeployment/Pages required."
+    },
+    {
       "id": "FT-MAINT-010",
       "title": "Complete first actual weekly all-page evidence triage",
       "kind": "research",

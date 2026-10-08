@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 
 const currentLaJollaFees = JSON.parse(readFileSync(new URL("../../docs/research/la-jolla-shores-fees-2026-10-05.json", import.meta.url), "utf8")).fee_envelope;
 const currentLoewsFees = JSON.parse(readFileSync(new URL("../../docs/research/loews-coronado-fees-2026-10-06.json", import.meta.url), "utf8")).fee_envelope;
+const currentDanaFees = JSON.parse(readFileSync(new URL("../../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8")).fee_envelope;
 
 const rules = {
   "Bahia Resort Hotel": {
@@ -124,5 +125,6 @@ export function normalizeSanDiegoHotel(hotel, retainedPrice, registry = sanDiego
   };
   if (hotel.name === "La Jolla Shores Hotel") fields.fees = currentLaJollaFees;
   if (hotel.name === "Loews Coronado Bay Resort") fields.fees = currentLoewsFees;
+  if (hotel.name === "The Dana on Mission Bay") fields.fees = currentDanaFees;
   return structuredClone(fields);
 }
