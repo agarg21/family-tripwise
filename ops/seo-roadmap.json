@@ -20,10 +20,41 @@
   ],
   "items": [
     {
+      "id": "FT-RES-141",
+      "title": "Resolve Boston Langham exact-family suite budget",
+      "kind": "research",
+      "status": "selected",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-09T23:03:02Z",
+      "target_paths": [
+        "docs/research/boston-langham-family-budget-2026-10-09.json",
+        "docs/research/boston-langham-family-budget-2026-10-09.md",
+        "tools/boston-langham-family-budget.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Published Boston comparison has an unpriced Club Two Bedroom Suite; maintained exact-category maximum6, full bed allocation and actual individually entered ages/fees unresolved. No prior Langham booking denial in maintained pack. Existing three city publications and075/050 already production verified.",
+      "acceptance_criteria": [
+        "Use ordinary official category and booking UI for2adults/ages4,8,12/Nov8-13five nights; exact room identity/party/date/public-plan/currency/unit/source dates/tax-fee-cancellation-deposit basis or precise held gate",
+        "Never transfer price/bed/capacity from another category, default2adult/member rate or inferred child-age complement; no contact/booking/security bypass",
+        "Focused/full native QA and different read-only PASS/PASS_WITH_P3 before exact research-data release; public integration requires amended exact paths and full visual/production gates"
+      ],
+      "measurement_plan": "Can the five-person task compare its currently unpriced exact suite without inventing cost or bed allocation? source-dated research/proxy not human or SEO proof",
+      "production_invariant": "All34publicURLs/sitebytes/CSV/source observations/sprint and existing held work preserved until explicit reviewed public scope amendment; no automated fact renewal",
+      "decision": "PRESERVE unpriced Club suite; reject Family/member starting labels as target rate. Exact ages4/8/12 retained but only different Family returned. No soldout, acceptance, bed allocation or fee assurance; original public/source/price dates unchanged.",
+      "next_gate": "Changed ordinary target-category inventory or supplied primary exact-category/party/date public-plan terms; independent Park Plaza public breakfast-budget task eligible next, no unchanged Langham replay.",
+      "evidence_record": "docs/research/boston-langham-family-budget-2026-10-09.json",
+      "review_receipt": "FT-RES-141 Noether01a122eb-40a7-7491-9872-94b5087b032e PASS/noP0-P3 at23:08:39Z on caa6cc85060797ce16a27552594ab92c21ebb3a132613d8ec145257f77f0d05a; exact8/all274prioritems-order/threeopsMDtails/ledgerheldscope/829nonownedHEAD/all64sitebytes/originalsource-price dates preserved. Independent read-only audit of data/provenance/source-result screenshot and Master645full38maintenance/state0/GSC88/localSEO0fiveprior green; no writing suites/network/browser/release. Club exact price/fullbed list held, Family756/member741 labels excluded, no soldout/firsthand/acceptance/publicvalue claim. Immutable receipt only; exact research-data push next/sprint unchanged."
+    },
+    {
       "id": "FT-IMP-078",
       "title": "Surface AREA15 and DC fare review clocks in offline maintenance",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "started_at": "2026-10-09T22:21:16Z",
       "target_paths": [
@@ -47,7 +78,11 @@
       "production_invariant": "All34publicURLs/sitebytes/room-price-originalpolicydata/sourceobservationdates/sprintstate remain unchanged; no automaticpublicrenewal or providerretry.",
       "decision": "IMPLEMENT narrow offline clock integration for two independently verified P3 gaps; third/final sequential transaction of22:02:22Zrun, before22:47:22Zstartingbudget and unchanged sprint expiry.",
       "next_gate": "Focused/full native QA, different read-only consensus and exact tools/docs-only push",
-      "review_receipt": "FT-IMP-078 independent Chandrasekhar01a122c3-d366-7532-92ce-6db3478a4ce0 cycle2 PASS/noP0-P3 at2026-10-09T22:30:10Z on9897cafe0e91e11b967df21c302ba9388d056066461f5f72149fb3f7814f8ace. Cycle1P2 release-state-loss closed: all273prior baselineitems/order/14mechanicalrelease deltas and threeopsMarkdownhistories verbatim retained. All834hashes/exact7/827nonownedHEAD/heldMasterfiles/all64sitebytes verified. Independent12focused/state0/GSC88/localSEO0errors-fiveprior; Master642full38maintenance/state0/GSC88/SEO34canonical37HTML0errors-fiveprior, complete cycle2 log. AREA15Nov8/DCfareNov2 due and historical/future/invalid-source controls passed; no source/date/public renewal. Immutable consensus receipt only; guarded exact tools-docs push/remote verification pending, no public-delivery claim; third/final transaction/sprint unchanged."
+      "review_receipt": "FT-IMP-078 independent Chandrasekhar01a122c3-d366-7532-92ce-6db3478a4ce0 cycle2 PASS/noP0-P3 at2026-10-09T22:30:10Z on9897cafe0e91e11b967df21c302ba9388d056066461f5f72149fb3f7814f8ace. Cycle1P2 release-state-loss closed: all273prior baselineitems/order/14mechanicalrelease deltas and threeopsMarkdownhistories verbatim retained. All834hashes/exact7/827nonownedHEAD/heldMasterfiles/all64sitebytes verified. Independent12focused/state0/GSC88/localSEO0errors-fiveprior; Master642full38maintenance/state0/GSC88/SEO34canonical37HTML0errors-fiveprior, complete cycle2 log. AREA15Nov8/DCfareNov2 due and historical/future/invalid-source controls passed; no source/date/public renewal. Immutable consensus receipt only; guarded exact tools-docs push/remote verification pending, no public-delivery claim; third/final transaction/sprint unchanged.",
+      "release_receipt": "FT-IMP-078 offline maintenance tooling release ff807cd298ee65279d47447dd549f9718dd6b276 remote verified 2026-10-09T22:31:06.984Z; main0-0/empty index/exact7/all834index bytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Chandrasekhar cycle2PASS/noP0-P3; prior273items andthreeMarkdown histories retained. Master final642full38maintenance/state0/GSC88/SEO34canonical37HTML0errors-fiveprior; reviewed9897cafe0e91e11b967df21c302ba9388d056066461f5f72149fb3f7814f8ace, finaldd9a5a5a3eb05dc055227e0cc25965354a5f251a11a8b0b2afa69d122ae27f6b, three nonmechanical files unchanged after consensus. All34publicURLs/sitebytes/originalpolicy-source-room-price records and827nonowned baseline paths preserved. AREA15Nov8/DCfareNov2 review clocks now exposed with due/historical/invalid provenance controls, no fact/date renewal or public page change. Both independent076/077P3 clock omissions closed in shared offline tooling; not new public delivery/Pages verification. Third/final22:02:22Zrun transaction; dailyLRN169/170 done. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-09T22:31:06.990Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "ff807cd298ee65279d47447dd549f9718dd6b276"
     },
     {
       "id": "FT-IMP-077",
