@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-137",
+  "learning_id": "LRN-161",
+  "observed_on": "2026-10-09",
+  "observed_at_utc": "2026-10-09T05:03:30Z",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "method": "Current primary public text, operator-observed; no booking interaction or independently replayed live source",
+  "task": {"adults": 2, "child_ages": [2, 7], "arrival": "2026-11-08", "departure": "2026-11-13", "hotel_nights": 5, "requested_breaks": 3, "minutes_per_break": 90, "simultaneous_daytime_care": true},
+  "historical_quote": {
+    "path": "docs/research/cancun-family-oasis-price-2026-10-02.json",
+    "sha256": "268b170965b881fb9735203d88cab39b4767f02e9f9a54055f35cb4e54c3e3d8",
+    "observation_on": "2026-10-02",
+    "category": "Family Oasis, Deluxe Room - Oceanfront",
+    "room_count": 1,
+    "currency": "USD",
+    "currency_basis": "Original US storefront interpretation, not displayed ISO",
+    "unit": "Whole-party all-inclusive package/night equivalent, not room-only or seasonal band",
+    "before_selected_care_per_night": 749.09,
+    "after_selected_care_per_night": 808.29,
+    "selected_care_increment": 296,
+    "selected_care_displayed_unit": "per person",
+    "renewed": false,
+    "inclusions_limits": "Original displayed tax-fee inclusion,180membership inside total,112optional transfer excluded, separate283MXN/person warning unresolved; no complete mandatory total"
+  },
+  "sources": [
+    {"id": "terms", "url": "https://www.clubmed.us/l/termsandconditions", "publication_date": null, "effective_date": null, "accessed_on": "2026-10-09"},
+    {"id": "petit", "url": "https://www.clubmed.us/l/kids-petit", "publication_date": null, "effective_date": null, "accessed_on": "2026-10-09"}
+  ],
+  "offer_checks": [
+    {"section": "1 NIGHT FREE", "source_id": "terms", "booking_deadline": "2025-06-24", "latest_checkout": "2025-12-20", "billing_language": "day-rate whole-stay language", "task_applicability": "REJECTED_EXPIRED"},
+    {"section": "Early Booking Rates", "source_id": "terms", "booking_deadline": "2025-06-24", "latest_checkout": "2026-06-27", "billing_language": "day-rate whole-stay language", "task_applicability": "REJECTED_EXPIRED"},
+    {"section": "Last Minute Deals", "source_id": "terms", "departure_within_days": 21, "task_days_until_arrival": 30, "billing_language": "day-rate whole-stay language", "task_applicability": "REJECTED_OUTSIDE_LEAD_TIME", "other_offer_conditions_confirmed": false},
+    {"section": "Non Refundable Rates", "source_id": "terms", "closest_quote_rate_label": true, "exact_selected_offer_mapping_confirmed": false, "care_billing_clause_present_in_section": false, "task_applicability": "UNKNOWN_SELECTED_OFFER", "result": "Cancellation language cannot establish care duration or price unit"}
+  ],
+  "program_check": {"source_id": "petit", "resort_list_contains_cancun": true, "published_age_band": [2, 3], "additional_cost_varies_by_resort": true, "numeric_cancun_tariff": null, "minimum_care_package": null, "billing_days": null},
+  "task_result": {
+    "temporal_unit_for_296": null,
+    "minimum_package": null,
+    "billable_care_days": null,
+    "prorated_90_minute_cost": null,
+    "three_simultaneous_slots_confirmed": null,
+    "admission_confirmed": null,
+    "sleeping_assignments": null,
+    "complete_all_currency_mandatory_total": null,
+    "decision": "PRESERVE_HISTORICAL_QUOTE_PENDING_SELECTED_CARE_TERMS",
+    "confidence": "High scoped source and date comparison; unknown actual care billing, acceptance, complete cost or user/SEO outcomes",
+    "next_gate": "Permitted anonymous exact-party selected-care terms with price unit, minimum, billable days and requested slots; do not prorate or treat nights as days",
+    "next_trigger": "Changed primary billing language or a readable selected-care receipt supplying missing scope; October18 is only the first arithmetic21-day lead-time date, not automatic LastMinute qualification or a booked-care tariff",
+    "conditional_21_day_date": "2026-10-18",
+    "public_or_shared_model_changed": false
+  },
+  "limits": ["No fresh room/care quote or renewed historical source date", "No denied FAQ/Mini retry, alternate-source recovery, preview retry, contact/account/hold/payment or paid call", "No firsthand, safety, guaranteed admission, exact stroller/route or firm family-fit assurance; original bedding/levy/corpus/publication gates remain"]
+}

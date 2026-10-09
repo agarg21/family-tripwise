@@ -2,7 +2,11 @@
 
 Latest production evidence: September30 `LRN-072` / `FT-IMP-049` is released and production-verified at action commit `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages run `36802947632`, matching marker and byte-identical NYC hotel HTML/CSV. October1 read-only checks retain that marker and NYC/SanAntonio byte parity; production SEO checked31canonicalURLs with zero errors/five prior advisories. This is immutable release evidence for the existing learning unit, not another unit; earlier pending labels are historical.
 
-Last updated: 2026-10-08
+Last updated: 2026-10-09
+
+## LRN-161 / October9 / FT-RES-137
+
+Family decision/hypothesis: similarly named non-refundable offer terms establish the296selected Petit fee's duration for two adults/ages2,7/Nov8-13/three90-minute daytime breaks. Current OFFICIAL_PROPERTY_FACT [scoped receipt](../docs/research/cancun-care-billing-gate-2026-10-09.json) rejects the inference: matching cancellation section supplies no care unit and exact-offer mapping remains unknown. Other billing clauses are expired or outside today's30-day lead time. PRESERVE historical095quote/749.09-808.29interpretedUSDpackage-night, original date/category/party/tax-fee limits; no five-nights-to-care-days or prorated-slot inference. Confidence high source/date scope, unknown billing/admission/user/SEO. Lesson cancellation label does not bind add-on duration. Trigger readable exact selected-care terms or changed primary billing language; Oct18 only conditional lead-time arithmetic, not automatic qualification or calendar-only retry. FirstOctober9normalrun/oneaction; public075/050 and DC changed-access gates remain held, no broad report/quote renewal/model/public/paid/denial retry. Focused/fullQA/read-onlyPASS/exact research-only push next; all held work preserved, candidate clean ledger excludes159 but workspace retains it.
 
 ## LRN-160 / October8 / FT-RES-136
 

@@ -1,5 +1,15 @@
 # Family Tripwise SEO Roadmap
 
+FT-RES-137 final Kuhn cycle1PASS/noP0-P3/independent24puretests/state0/all794candidate-baselinehashes/exact8scope/262prioritems except076threefields/heldquote-public-model preservation. Master593full24focused33maintenance/GSC87/SEO0-fiveprior green; consensusmanifest a8950ae2e9358879b8d97eb57576072d19cc8f11fd2d2c79a31c6b2646f917bd. Immutable mechanicalops receipt only; exactresearch push next/no publicproduction/Pages.075/050 normalpreview gate remains,137learned-only not public value.
+
+FT-RES-137 final native593full/24focused/33maintenance/state0/GSC87/localSEO0-fiveprior/whitespace green. Exact8clean research-only delta/262prioritems except076threefields/794baseline outside owned changes intact. Independent read-onlyreview/exactpush next; original095pricing and public/model artifacts unchanged, no public verification claim.
+
+Latest GSC ops/gsc-snapshots/2026-10-08.json / ops/gsc-snapshots/2026-10-08.md is recent reusedAPI/finalizedOct6, not freshcollectionthisrun or query-cohortCTR evidence.137full593/33maintenance pass; latest-snapshot path references corrected before finalstateQA/review.
+
+FT-RES-137/LRN161 current selected-care scope audit supports PRESERVE original095budget, not a day tariff or confirmed breaks. [Receipt](../docs/research/cancun-care-billing-gate-2026-10-09.json) and seven regressions separate matching cancellation language from missing add-on billing contract.076next gate is readable exact selected-care terms or independent bedding/corpus evidence; no calendar-only repeat/automaticOct18qualification. Old083historyapproval is resolved byOPS010; publicpreview hold remains. NativefullQA/read-onlyPASS/exact8research push pending, no public/model change.
+
+FT-RES-137 selects October9 due care-billing recheck for076/095 exact family task. Exact8paths/current primary permitted source bodies, preserve historical price basis/public pages and denied FAQ/Mini endpoints. No qualified public candidate can release while075/050 normalpreview remains held; DC changed-access age/rest gate remains narrow. One firstOctober9normalrun action/LRN161 pending; focused/fullQA/different read-onlyPASS/exact research-only push required. [October8 GSC](gsc-snapshots/2026-10-08.json) is recent reusedAPI/finalizedOct6, not query-cohortCTR evidence.
+
 FT-RES-136 final independent Feynman cycle1PASS/noP0-P3 and native586full/28new-historicalfocused/19fee-focused/33maintenance/state0/GSC86/SEO0-fiveprior green. Exact13 clean released-tree paths/789files and all original held work verified. Immutable consensus manifest9476bbc3ed42c045e5c5c643d8d4126d40a2f1f28d387865ace5c97a9be301ec; exact shared-record push next, no public Pages release.075/050 normalpreview gates unchanged.
 
 Latest GSC ops/gsc-snapshots/2026-10-07.json is recent reused API evidence finalizedOctober5, not collected this run. FT-RES-136 shared Dana envelope implemented; full586 and maintenance33 pass, final state/SEO and independent review/release pending. No public page or preview change.
