@@ -1,8 +1,67 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { maintenanceReport, maintenanceOptions, maintenanceCycle, validateCoverage, validatePriorAudit } from "./site-maintenance.mjs";
+import { maintenanceReport, maintenanceOptions, maintenanceCycle, validateCoverage, validatePriorAudit, policyReviewClocks } from "./site-maintenance.mjs";
 import { fetchSource } from "./evidence-audit.mjs";
+
+async function policyInputs() {
+  return {
+    teenAccess: JSON.parse(await readFile(new URL("../docs/research/las-vegas-teen-access-2026-10-09.json", import.meta.url), "utf8")),
+    transitEvidence: JSON.parse(await readFile(new URL("../docs/research/dc-family-transit-cost-2026-10-03.json", import.meta.url), "utf8"))
+  };
+}
+
+test("policy-specific review clocks retain observations and exact due-day boundaries", async () => {
+  const inputs = await policyInputs();
+  const current = policyReviewClocks({ ...inputs, today: "2026-10-09" });
+  assert.deepEqual(current.map(record => record.observed_on), ["2026-10-09", "2026-10-03"]);
+  assert.deepEqual(current.map(record => record.freshness.due_on), ["2026-11-08", "2026-11-02"]);
+  assert.ok(current.every(record => record.freshness.state === "within-review-interval"));
+  for (const [date, states] of [["2026-11-01", [false,false]], ["2026-11-02", [false,true]], ["2026-11-03", [false,true]], ["2026-11-08", [true,true]]])
+    assert.deepEqual(policyReviewClocks({ ...inputs, today: date }).map(record => record.freshness.state === "review-due"), states);
+});
+
+test("historical policy clocks never promote not-yet-observed evidence", async () => {
+  const inputs = await policyInputs();
+  const historical = policyReviewClocks({ ...inputs, today: "2026-10-02" });
+  assert.ok(historical.every(record => record.evidence_state === "not-yet-observed-at-report-date" && record.freshness.state === "future-date-review" && record.freshness.due_on === null));
+  assert.deepEqual(policyReviewClocks({ ...inputs, today: "2026-10-03" }).map(record => record.evidence_state), ["not-yet-observed-at-report-date", "dated-records-available"]);
+});
+
+test("invalid policy dates, provenance, intervals and unsafe URLs fail closed without mutation", async () => {
+  const inputs = await policyInputs(), original=structuredClone(inputs);
+  for (const mutate of [
+    data => data.teenAccess.observed_on="2026-02-30",
+    data => data.teenAccess.next_review_due="2026-10-09",
+    data => data.teenAccess.sources[0].observed_on="2026-10-08",
+    data => data.teenAccess.sources=[],
+    data => data.teenAccess.evidence_class="HUMAN_VERIFIED",
+    data => data.teenAccess.sources[0].url="https://user:password@example.com/",
+    data => data.transitEvidence.policy.source.url="https://www.wmata.com/pay.html?token=synthetic",
+    data => data.transitEvidence.policy.source.status="blocked-unverified",
+    data => data.transitEvidence.policy.refresh_days=0,
+    data => data.transitEvidence.policy.source.inspected_on=null
+  ]) { const invalid=structuredClone(inputs);mutate(invalid);assert.throws(()=>policyReviewClocks({ ...invalid, today:"2026-10-09" })); }
+  assert.throws(()=>policyReviewClocks({ ...inputs, today:"2026-02-30" }));
+  policyReviewClocks({ ...inputs, today:"2026-11-09" });
+  assert.deepEqual(inputs,original);
+});
+
+test("offline maintenance surfaces policy due counts while preserving room and price clocks", async () => {
+  const current=await maintenanceReport({today:"2026-10-09"});
+  assert.equal(current.policy_review_clocks.length,2);
+  assert.equal(current.summary.policy_review_clocks,2);
+  assert.equal(current.summary.policy_due_records,0);
+  assert.equal(current.summary.policy_not_yet_observed,0);
+  const future=await maintenanceReport({today:"2026-11-03"});
+  assert.equal(future.summary.policy_due_records,1);
+  assert.equal(future.policy_review_clocks.find(record=>record.id==="dc-regular-rail-fare").freshness.state,"review-due");
+  assert.equal(future.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
+  assert.equal(future.automatic_fact_renewal,false);assert.equal(future.automatic_publication,false);
+  const historical=await maintenanceReport({today:"2026-10-01"});
+  assert.equal(historical.summary.policy_not_yet_observed,2);assert.equal(historical.summary.policy_due_records,0);
+  assert.deepEqual(future.pages,current.pages);
+});
 
 test("all 34 canonical URLs have one explicit owner without renewing facts", async () => {
   const report = await maintenanceReport({ today: "2026-10-01" });

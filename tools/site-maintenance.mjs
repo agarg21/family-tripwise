@@ -28,6 +28,35 @@ export function validateCoverage(urls, groups) {
   return urls.map(url => ({ url, contract: owners.get(url), applicability: owners.get(url) === "utility" ? "travel-decision-records-not-applicable" : "decision-records-covered-not-facts-verified" }));
 }
 
+export function policyReviewClocks({ today, teenAccess, transitEvidence }) {
+  if (!validDate(today) || teenAccess?.evidence_class !== "OFFICIAL_VENUE_POLICY" ||
+      !validDate(teenAccess.observed_on) || !validDate(teenAccess.next_review_due) ||
+      !Array.isArray(teenAccess.sources) || !teenAccess.sources.length ||
+      teenAccess.sources.some(source => source.observed_on !== teenAccess.observed_on))
+    throw new Error("Invalid maintained venue policy clock");
+  const interval = (Date.parse(teenAccess.next_review_due) - Date.parse(teenAccess.observed_on)) / 86400000;
+  const policy = transitEvidence?.policy;
+  if (!Number.isInteger(interval) || interval < 1 || interval > 365 ||
+      !validDate(policy?.source?.inspected_on) || policy.source.evidence_class !== "OFFICIAL_TRANSIT_FARE_FACT" ||
+      policy.source.status !== "body-inspected" || !Number.isInteger(policy.refresh_days) || policy.refresh_days < 1 || policy.refresh_days > 365)
+    throw new Error("Invalid maintained transit or venue review interval");
+  const records = [
+    { id: "las-vegas-area15-under18", page_url: "https://familytripwise.com/things-to-do/las-vegas-with-teens.html", record_path: "docs/research/las-vegas-teen-access-2026-10-09.json", observed_on: teenAccess.observed_on, interval_days: interval, evidence_class: teenAccess.evidence_class, source_urls: teenAccess.sources.map(source => source.url) },
+    { id: "dc-regular-rail-fare", page_url: `https://familytripwise.com/${dcPath}`, record_path: "docs/research/dc-family-transit-cost-2026-10-03.json", observed_on: policy.source.inspected_on, interval_days: policy.refresh_days, evidence_class: policy.source.evidence_class, source_urls: [policy.source.url] }
+  ];
+  return records.map(record => {
+    for (const value of record.source_urls) {
+      const url = new URL(value);
+      if (typeof value !== "string" || url.protocol !== "https:" || url.username || url.password || url.port || url.search || url.hash)
+        throw new Error("Unsafe policy clock source URL");
+    }
+    const freshness = ageState(record.observed_on, record.interval_days, today);
+    return { ...record, evidence_state: today < record.observed_on ? "not-yet-observed-at-report-date" : "dated-records-available", freshness,
+      next_step: freshness.state === "review-due" ? "review-current-official-policy-before-relying-on-it" : freshness.state === "future-date-review" ? "do-not-use-future-evidence-in-historical-report" : "preserve-dated-policy-until-named-change-or-review-due",
+      limitation: "Review clock only, not a source reinspection, current admission/fare guarantee or automatic public fact renewal." };
+  });
+}
+
 export async function maintenanceReport({ root = ROOT, today = easternDate() } = {}) {
   if (!validDate(today)) throw new Error("Invalid maintenance date");
   const hotels = hotelEvidence(), activities = [...activityEvidence(), ...vegasActivityEvidence()], cards = activityCardEvidence(), planning = planningPageEvidence();
@@ -53,10 +82,15 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
     await readFile(resolve(root, "site", url.pathname === "/" ? "index.html" : url.pathname.slice(1)), "utf8");
   }
   const reports = { hotel: qualityReport(hotels, { today }), activity: activityQualityReport(activities, { today }), cards: activityCardQualityReport(cards, { today }), planning: planningPageQualityReport(planning, { today }) };
+  const policies = policyReviewClocks({ today,
+    teenAccess: JSON.parse(await readFile(resolve(root, "docs/research/las-vegas-teen-access-2026-10-09.json"), "utf8")),
+    transitEvidence: JSON.parse(await readFile(resolve(root, "docs/research/dc-family-transit-cost-2026-10-03.json"), "utf8")) });
   return { schema_version: 1, as_of: today, mode: "offline-maintenance-coverage", automatic_fact_renewal: false, automatic_publication: false,
     summary: { canonical_pages: pages.length, travel_pages: pages.filter(page => page.contract !== "utility").length, utility_pages: UTILITY.length, unclassified_pages: 0, contract_pages: Object.fromEntries(Object.entries(groups).map(([type, members]) => [type, members.length])),
       hotel_price_basis_gaps: reports.hotel.summary.unstructured_price_basis, hotel_due_price_records: reports.hotel.summary.due_price_records,
-      activity_card_atomic_source_gaps: reports.cards.summary.atomic_source_gaps, planning_unmapped_decision_fields: reports.planning.summary.unmapped_decision_fields, planning_missing_page_source_notes: reports.planning.summary.missing_page_source_notes },
+      activity_card_atomic_source_gaps: reports.cards.summary.atomic_source_gaps, planning_unmapped_decision_fields: reports.planning.summary.unmapped_decision_fields, planning_missing_page_source_notes: reports.planning.summary.missing_page_source_notes,
+      policy_review_clocks: policies.length, policy_due_records: policies.filter(record => record.freshness.state === "review-due").length, policy_not_yet_observed: policies.filter(record => record.evidence_state === "not-yet-observed-at-report-date").length },
+    policy_review_clocks: policies,
     pages, contract_summaries: Object.fromEntries(Object.entries(reports).map(([type, report]) => [type, report.summary])), planning_pages: reports.planning.pages,
     exact_room_comparisons: [{ page_url: `https://familytripwise.com/${dcPath}`, model_path: "tools/page-generation/washington-dc-family-hotels-page.mjs", records: dc.map(room => ({ id: room.id, category: room.category, category_age: ageState(room.checked_on, dcPack.refresh_days, today), price_observed_on: room.price.observed_on, price_age: ageState(room.price.observed_on, 14, today), price_status: room.price.status, next_checks: room.next_checks })), limitation: "Scoped room and dated-price ownership, not all atomic facts verified; unknown child-age/fee/rest claims remain unresolved. No automatic source renewal or publication." },
       { page_url: `https://familytripwise.com/${bostonPath}`, model_path: "tools/page-generation/boston-family-hotels-page.mjs", evidence_state: today < bostonPack.checked_on ? "not-yet-observed-at-report-date" : "dated-records-available", records: boston.map(room => ({ id: room.id, category: room.category, category_age: ageState(room.checked_on, bostonPack.refresh_days, today), price_observed_on: room.price.observed_on, price_age: ageState(room.price.observed_on, 14, today), price_status: room.price.status, next_checks: room.next_checks })), limitation: "Four conditional categories, not all atomic facts verified. Park Plaza counts do not establish a child-age band; fees, bedding, rest and two category prices remain unresolved. Historical reports before the pack date cannot screen later evidence. No automatic renewal or publication." },
