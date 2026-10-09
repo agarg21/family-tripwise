@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, relative } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
+import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pagePath = join(root, "site", "where-to-stay", "chicago-family-hotels.html");
@@ -19,6 +20,42 @@ function filesUnder(directory, base = directory) {
     return statSync(path).isDirectory() ? filesUnder(path, base) : [relative(base, path)];
   });
 }
+
+test("portable Chicago comparison retains the same records, budgets and caveats", () => {
+  const pages = createFamilyHotelPages({ esc: (value) => String(value), pageShell: (value) => value });
+  const expected = pages.hotelCatalog.chicago;
+  const csv = readFileSync(join(root, "site/downloads/chicago-family-hotels.csv"), "utf8");
+  const rows = csv.trimEnd().split("\n").map((line) => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map((match) => match[1].replaceAll('""', '"')));
+  assert.equal(csv, pages.chicagoHotelComparisonCsv());
+  assert.equal(rows.length, 11);
+  assert.ok(rows.every((row) => row.length === 14));
+  assert.deepEqual(rows.slice(1).map((row) => row[0]), expected.map((hotel) => hotel.name));
+  for (const [index, row] of rows.slice(1).entries()) {
+    const hotel = expected[index];
+    assert.deepEqual(row.slice(0, 5), [hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-23"]);
+    assert.match(row[5], /two-adult public examples/);
+    assert.match(row[5], /summer-2026 stay examples/);
+    assert.match(row[5], /exact room and stay-date details incomplete/);
+    assert.match(row[5], /two example date labels ambiguous/);
+    assert.match(row[5], /tax and mandatory-fee inclusion varies; parking separate/);
+    assert.match(row[5], /not a family-room or Kids Suite quote/);
+    assert.deepEqual(row.slice(6, 11), [hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck]);
+    assert.equal(row[11], `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`);
+    assert.equal(row[12], "https://familytripwise.com/where-to-stay/chicago-family-hotels.html#sources-checked");
+    assert.equal(row[13], "https://familytripwise.com/where-to-stay/chicago-family-hotels.html#hotel-comparison");
+    assert.ok(row.every((cell) => !/^\s*[=+\-@]/.test(cell)));
+  }
+  assert.match(rows[6][7], /Notice rechecked September 22, 2026/);
+  assert.match(rows[6][7], /completion and current access are unconfirmed/);
+  assert.match(rows[6][7], /7am-10pm.*5am-10pm/);
+  assert.match(rows[5][6], /not a Kids Suite quote/);
+  const html = readFileSync(pagePath, "utf8");
+  assert.match(html, /href="#hotel-comparison">Jump to the hotel comparison/);
+  assert.match(html, /class="band" id="hotel-comparison"/);
+  assert.match(html, /href="\.\.\/downloads\/chicago-family-hotels\.csv" download/);
+  assert.match(html, /source-section" id="sources-checked"/);
+  assert.match(html, /class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0"/);
+});
 
 test("publishes one canonical ten-hotel Chicago comparison", () => {
   const html = readFileSync(pagePath, "utf8");

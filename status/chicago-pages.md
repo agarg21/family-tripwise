@@ -1,5 +1,7 @@
 # Chicago Page Status
 
+October9 FT-IMP-050 resumed after documented user-confirmed normal preview access. Existing13paths, current32URL preservation, historical ten-hotel price/room/review/fee context and October11 check retained. Responsive/download QA, different final independent review and production verification remain operator gates; not delivered yet. Earlier localhost denial is historical and not retried.
+
 October1 diagnostic status: the public Chicago page is not known to be broken; only the local comparison-download addition is unshipped. The prior browser block was at localhost:4173, while the restricted server requires127.0.0.1Host. These are separate conditions; client-block cause unknown. FT-QA-001 adds server-only asset preflight, not visual QA or bypass authority. Normal user/app access check requested against the running documented preview; no denied-origin retry/settings change. FT-IMP-050 still needs desktop/mobile, actual browser download, current full QA/independent review and verified release. See `docs/plan/chicago-comparison-sharing-2026-09-30.md`; October11 price check unchanged. Older checkpoints below are history.
 
 Last updated: 2026-09-30

@@ -4014,6 +4014,8 @@
     },
     {
       "id": "FT-IMP-050",
+      "review_receipt": "FT-IMP-050 Huygens01a12235-e017-7b20-9622-c38c174a4bf6 finalPASS/noP0-P3 on807file freeze9c09a576e6997f29a2b5626fb7bd02aa973d3e63951bd60a7b2471b1f8fd332f; independently exact13scope/catalog/bands/dates/schema/title/meta/sitemap32/allotherpublic/dirtybaseline/download/screenshots/4focused/state/SEO verified. Master605full5focused33maintenance/state0/GSC88/localSEO0-fiveprior green. Immutable consensus receipt only; guarded exactpush/Pages/marker/productionSEO/affectedHTML-CSV required before delivery.",
+      "resumed_on": "2026-10-09T19:43:16Z",
       "title": "Make Chicago hotel and historical budget comparison shareable",
       "kind": "improvement",
       "status": "blocked",
@@ -4043,8 +4045,8 @@
         "Focused/full/responsive actual-download QA, different read-only PASS and verified Pages"
       ],
       "measurement_plan": "Proxy export/share preserves approximate nightly budget and research limitations; not user-tested or SEO result",
-      "production_invariant": "31URLs/titleH1meta/schema/canonical/indexability/sitemap/priceband/fact-date/catalog/other public output/windows unchanged; no current-price renewal, external or paid mutation",
-      "decision": "IMPLEMENTED native QA green; preserve unshipped until normal browser preview access is resolved and desktop/mobile actual-download QA completes",
+      "production_invariant": "Current32URLs/titleH1meta/schema/canonical/indexability/sitemap/priceband/fact-date/catalog/other public output/windows unchanged; no current-price renewal, external or paid mutation",
+      "decision": "October9 normal user-confirmed preview access restored; resume existing thirteen-path implementation through current responsive/download QA, independent review and verified release. Historical denied localhost origin is not retried; use documented normal preview. No new price inspection or family-room quote claim.",
       "blocker": {
         "tool": "cua ftTab.goto",
         "target": "http://localhost:4173/where-to-stay/chicago-family-hotels.html",

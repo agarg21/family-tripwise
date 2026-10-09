@@ -1,5 +1,9 @@
 # Operator Implementation Review Log
 
+FT-IMP-050 Huygens01a12235-e017-7b20-9622-c38c174a4bf6 finalPASS/noP0-P3 on807file freeze9c09a576e6997f29a2b5626fb7bd02aa973d3e63951bd60a7b2471b1f8fd332f; independently exact13scope/catalog/bands/dates/schema/title/meta/sitemap32/allotherpublic/dirtybaseline/download/screenshots/4focused/state/SEO verified. Master605full5focused33maintenance/state0/GSC88/localSEO0-fiveprior green. Immutable consensus receipt only; guarded exactpush/Pages/marker/productionSEO/affectedHTML-CSV required before delivery.
+
+FT-IMP-050 October9 registered resumption of existing13paths after documented normal preview access change. Current32URL preservation and historical quote/room/review caveats retained. Current full/focused/responsive/download QA and different independent final read-only review required; no release from old code-only consensus.
+
 FT-PUB-009 final independent Faraday01a12223-b3e4-75c3-9054-603a7c6d1e32 cycle2 PASS/noP0-P3 against806file freeze fa70011a267f29932a3e8a6c80f39da2674c1365d72f1cbefd4711bdc4cf0e74. Exact24scope/held work preserved; independent66tests/state/SEO and scope recheck. Master604full/14focused/33maintenance/state0/GSC88/SEO32zeroerrors-fiveprior; corrected1280-390-320/kitchen/fees/actualCSVdownload/image/home/noerrors proof. Original source-price dates retained. Only immutable four-ops receipt after consensus; exact reviewed push/Pages/marker/productionSEO/7affectedresources still required, no delivered claim yet.
 
 FT-PUB-009 current review envelope24paths, dependency amendment registered before edits. Master604full/14focused/33maintenance/state0/GSC88/SEO32zeroerrors-fiveprior; actual1280/390/320/filter/fee/download/image/home browser proof private `/tmp/ft-pub009-browser`. No source-price renewal, unsupported age/fee/rest claim or other city launch. Different independent final read-only review pending; not delivered.

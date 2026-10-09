@@ -840,6 +840,19 @@ const chicagoHotelSources = [
   ["The Langham child policy", "https://www.langhamhotels.com/en/the-langham/chicago/policy/"]
 ];
 
+function chicagoHotelComparisonCsv() {
+  const page = "https://familytripwise.com/where-to-stay/chicago-family-hotels.html";
+  const headings = ["Hotel", "Trip style", "Area", "Approx USD per room per night", "Price checked", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
+  const priceBasis = "Historical July 23, 2026 research-pack planning bands from summer-2026 stay examples and two-adult public examples where party size was shown, widened editorially for room and date variation; exact room and stay-date details incomplete, two example date labels ambiguous; tax and mandatory-fee inclusion varies; parking separate; not a family-room or Kids Suite quote";
+  const rows = chicagoFamilyHotels.map((hotel) => [
+    hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-23", priceBasis,
+    hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
+    `${page}#sources-checked`, `${page}#hotel-comparison`
+  ]);
+  return hotelComparisonCsv(headings, rows);
+}
+
 function chicagoFamilyHotelPage() {
   const hotels = chicagoFamilyHotels;
   const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
@@ -908,6 +921,7 @@ function chicagoFamilyHotelPage() {
             <h2>Let the room setup and first two days choose the hotel</h2>
             <p>Start with Embassy Suites, Homewood, or Residence Inn when sleep separation, breakfast, or a kitchen drives the stay. Use Sable for a Navy Pier-centered trip, Swissotel for its specific Kids Suite, InterContinental for the historic pool, Hilton Chicago for Museum Campus, and Hotel Zachary for Wrigleyville. Four Seasons and Langham are the two luxury comparisons.</p>
             <p><a class="text-link" href="./chicago-with-kids.html">Compare Chicago stay areas before choosing a property</a></p>
+            <p><a class="text-link" href="#hotel-comparison">Jump to the hotel comparison</a></p>
           </div>
           <dl class="snapshot">
             <div><dt>Hotels covered</dt><dd>10 distinct options</dd></div>
@@ -927,11 +941,12 @@ function chicagoFamilyHotelPage() {
           <article class="quick-pick"><span>Wrigley or luxury</span><strong>Hotel Zachary, Four Seasons, or Langham</strong><p>Use Zachary for an older-kid ballpark trip; compare Four Seasons and Langham on exact room, pool, play space, service, and full price.</p></article>
         </div>
       </section>
-      <section class="band">
+      <section class="band" id="hotel-comparison">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
+          <p><a class="text-link" href="../downloads/chicago-family-hotels.csv" download>Download Chicago hotel comparison (CSV)</a></p>
           <p class="review-label">USD per-room/night planning ranges from the July 23 research pack use two-adult public examples where party size was shown, widened for date and room variation. Two example dates are ambiguous; tax and mandatory-fee inclusion varies, and parking is separate. These are not family-room quotes, including the Swissotel Kids Suite. Compare exact room, child ages, dates and full total.</p>
-          <div class="comparison-scroll">
+          <div class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
@@ -953,7 +968,7 @@ ${cards}
 ${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
         </div>
       </section>
-      <section class="container page-section source-section">
+      <section class="container page-section source-section" id="sources-checked">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
         <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. Price ranges use volatile public examples rather than live booking quotes.</p>
         <ul class="source-list">
@@ -1634,6 +1649,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     lasVegasFamilyHotelPage,
     lasVegasHotelComparisonCsv,
     chicagoFamilyHotelPage,
+    chicagoHotelComparisonCsv,
     newYorkCityFamilyHotelPage,
     newYorkCityHotelComparisonCsv,
     sanAntonioFamilyHotelPage

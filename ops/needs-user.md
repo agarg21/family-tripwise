@@ -1,5 +1,7 @@
 # Needs User
 
+October9 Chicago050 normal preview prerequisite is resolved by the user's successful normal access confirmation and successful same documented preview checks. Final responsive/download/native QA, independent read-only release review and production verification are operator-owned, not another user permission request. No historical denied-origin retry or security change.
+
 October9 direct user approved Washington DC, Boston and Puerto Vallarta by name for expansion/publication subject to evidence and QA. No repeat city-authorization request is needed for these three; approval is not a launch, paid-budget expansion, unsupported claim or larger batch approval. The user also explicitly confirmed the documented local preview opens. Normal in-app preview of the isolated San Diego075 candidate now succeeds; final responsive QA/review/release remains operator work, not another generic permission gate. Earlier unanswered-preview/city paragraphs are history. Sprint expiry is unchanged.
 
 October9 sprint is active through October12 14:29:58EDT. Two bounded questions were sent: approve WashingtonDC as next city after evidence/QA gates; has normal localpreview access actually changed/succeeded? No reply or changed-access fact yet. This does not renew a denial, waive browserQA, approve Boston/PuertoVallarta, or grant paid/external authority. SanDiego075 latest-HEAD/thirdDana-note candidate remains unshipped pending normalpreview; Chicago050 preserved.
