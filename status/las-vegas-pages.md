@@ -1,5 +1,7 @@
 # Las Vegas Page Status
 
+FT-IMP-076: current October9 AREA15 FAQ and Code of Conduct agree on adult accompaniment for under18 visitors throughout the visit. Existing eight-choice teen page now makes that split-plan gate concrete in comparison/check/FAQ, from one maintained record. Other attraction/city facts remain July22; no assumed evening cutoff, independent-route or suitability assurance. Native/browser/read-only review and production verification required before delivery. Evidence: `docs/research/las-vegas-teen-access-2026-10-09.json`.
+
 Last updated: 2026-09-29
 
 FT-IMP-046 final state: ten-hotel CSV and table permalink delivered and production-verified at `dbd7250fb4d36a5030ad8615412f9b82ec29b0fb`, successful Pages `36552578880`. Marker and HTML/CSV exact bytes, CSV MIME and production SEO31URLs/zero errors/five prior advisories passed. July 22 USD per-room/night bands, mixed-basis caveats, ten hotel order and four September 16 capacity records remain. Dirac cycle-two read-only PASS/no P0-P3; no observed use or SEO gain claimed. Earlier pending lines below are chronology.

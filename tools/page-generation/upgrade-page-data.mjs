@@ -1,3 +1,7 @@
+import { readFileSync } from "node:fs";
+
+const teenAccess = JSON.parse(readFileSync(new URL("../../docs/research/las-vegas-teen-access-2026-10-09.json", import.meta.url), "utf8"));
+
 export const activityPages = {
   "things-to-do/san-diego-with-kids.html": {
     title: "Things to Do in San Diego With Kids: Age, Stroller, Rain and Nap Guide",
@@ -2362,7 +2366,7 @@ export const teenPages = {
     comparisonNote: "Every row stays only because it offers an older-kid reason to choose it: immersive novelty, desert contrast, thrill, games, skyline, photo/design interest, or a current large-format show. Age, time, cost, indoor, and fit labels are editorial estimates, not venue guarantees.",
     comparisonHeaders: ["Activity", "Teen fit", "Time", "Cost", "Area", "Walking", "Indoor", "Flexibility", "Current check", "Why it earns teen space", "Pair nearby"],
     rows: [
-      ["AREA15 / one exact experience", "Older kids; exact experience varies", "2-4 hrs", "Paid", "Off Strip", "Experience-specific", "Yes", "Medium", "Check exact attraction and minor policy", "Immersive choice with genuine older-kid novelty", "Food or hotel reset"],
+      ["AREA15 / one exact experience", "Older kids; exact experience varies", "2-4 hrs", "Paid", "Off Strip", "Experience-specific", "Yes", "Medium", teenAccess.public_copy.comparison_check, "Immersive choice with genuine older-kid novelty", "Food or hotel reset"],
       ["Red Rock Canyon Scenic Drive", "Teens interested in desert scenery", "Half day", "Low cost", "West of Strip", "Choice-specific", "No", "Medium", "Check weather, road and seasonal entry", "A real visual and pace contrast to the Strip", "Quiet hotel evening"],
       ["Big Apple Coaster and Arcade", "Coaster: 54 inches; arcade broader", "1-2 hrs", "Paid", "South Strip", "Resort route", "Partial", "High", "Check height, weather and hours", "A concrete thrill choice with a sibling fallback", "New York-New York meal"],
       ["High Roller observation wheel", "Teens who want skyline over thrill", "45-60 min", "Paid", "LINQ", "Boarding route", "Yes", "Medium", "Check ticket and cabin terms", "Contained skyline payoff without a long show", "LINQ meal"],
@@ -2400,17 +2404,19 @@ export const teenPages = {
     officialChecks: [
       ["Exact attraction, not destination name", "AREA15 and Sphere contain changing experiences or productions. Select the exact ticket first, then check age, height, effects, duration, accessibility, and refund terms.", [["https://www.area15.com/visit-us", "AREA15 visit information"], ["https://www.thesphere.com/shows/the-sphere-experience", "Sphere current experience"]]],
       ["Weather, height, and timed entry", "Big Apple Coaster requires a current 54-inch minimum; Red Rock and Neon Museum plans change with weather and operating conditions. Recheck near the visit.", [["https://newyorknewyork.mgmresorts.com/en/entertainment/the-big-apple-coaster-and-arcade.html", "Big Apple Coaster"], ["https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon", "Red Rock Canyon NCA"], ["https://neonmuseum.org/faqs/", "Neon Museum visit FAQ"]]],
-      ["Minor and late-night rules", "Do not assume a teen can enter every event or wander independently late at night. Check the exact venue's adult-supervision policy and the City of Las Vegas youth-curfew guidance.", [["https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer", "City youth-curfew guide"], ["https://www.area15.com/experiences/pass-bundles/level-1", "AREA15 pass restrictions"]]]
+      ["Minor and late-night rules", teenAccess.public_copy.official_check, [[teenAccess.sources[0].url, "AREA15 age-policy FAQ"], [teenAccess.sources[1].url, "AREA15 Code of Conduct"], ["https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer", "City youth-curfew guide"]]]
     ],
     visibleFaqs: true,
     faqTitle: "Las Vegas with teens FAQ",
     faqs: [
       ["What are the strongest Las Vegas choices for teens?", "Start with the teen's interest: AREA15 for one selected immersive experience, Red Rock for desert contrast, Big Apple Coaster for thrills, Pinball for flexible games, or Sphere, High Roller, and Neon Museum for different kinds of visual payoff."],
-      ["Can teenagers explore Las Vegas on their own?", "Do not assume they can. Check current city curfew guidance, the exact venue's minor policy, and whether adult accompaniment is required for the ticket or time of day."],
+      ["Can teenagers explore Las Vegas on their own?", teenAccess.public_copy.faq],
       ["How should a mixed-age family use this page?", "Let the teen choose one anchor, then use the all-ages guide, arcade, hotel reset, or split plan for younger siblings instead of forcing every child through the same activity."]
     ],
-    sourcesIntro: "Official attraction and city sources checked July 22, 2026. Use the exact event or attraction page again near the visit because productions, effects, prices, hours, weather rules, and minor policies can change.",
+    sourcesIntro: "Other attraction and city sources checked July 22, 2026. AREA15 adult-accompaniment policy separately checked October 9, 2026. Use the exact event or attraction page again near the visit because productions, effects, prices, hours, weather rules, and minor policies can change.",
     sources: [
+      ["AREA15 age-policy FAQ (October 9, 2026)", teenAccess.sources[0].url],
+      ["AREA15 Code of Conduct (October 9, 2026)", teenAccess.sources[1].url],
       ["AREA15 visit information", "https://www.area15.com/visit-us"],
       ["AREA15 pass restrictions", "https://www.area15.com/experiences/pass-bundles/level-1"],
       ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],

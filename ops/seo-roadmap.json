@@ -20,6 +20,41 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-076",
+      "title": "Make AREA15 adult-accompaniment gate answerable on Las Vegas teen page",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-09T22:05:34Z",
+      "target_paths": [
+        "docs/research/las-vegas-teen-access-2026-10-09.json",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/las-vegas-teen-page.test.mjs",
+        "site/things-to-do/las-vegas-with-teens.html",
+        "status/las-vegas-pages.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-teens.html"
+      ],
+      "evidence": "Current October9 official AREA15 FAQ expanded in ordinary UI and Code of Conduct agree under18 adult accompaniment; existing page only generic verify-minor-policy. Documented age/teen family-decision gap, not aggregate CTR or calendar rewrite.",
+      "acceptance_criteria": [
+        "Parent can see under18 adult accompaniment for entire AREA15 visit and separate experience age/height limits before selecting ticket",
+        "Maintain source-specific October9 access date and July22 other-fact date; no inferred evening cutoff, safety or independent-entry promise",
+        "Same eight activities, title/H1/meta/canonical/FAQ-count/ItemList/sitemap34/all unrelated public bytes; native full+focused and desktop/mobile task validation",
+        "Different read-only PASS/PASS_WITH_P3, exact reviewed stage/push and Pages/marker/productionSEO/target-byte verification"
+      ],
+      "measurement_plan": "Page-only proxy task two adults with teens13and17 deciding whether split independent visit works; official rule rejects unsupervised split. Not human usability or SEO evidence.",
+      "production_invariant": "One existing teen URL only; same eight choices and all prior34 URLs/indexability/metadata/catalog/hotel nightly prices/source clocks except dated AREA15 access addendum. No external mutation or scheduler/paid/human gates changed.",
+      "decision": "IMPLEMENT current adult-accompaniment constraint from maintained source; no 21+ evening cutoff inferred. First transaction of actual22:02:22Z run; starting budget22:47:22Z/sprint expiry unchanged.",
+      "next_gate": "focused/full native QA, normal permitted desktop/mobile preview, different independent read-only review, exact release and production verification",
+      "review_receipt": "FT-IMP-076 Maxwell01a122b6-6422-7c70-ad8d-8edca322a7bc PASS_WITH_P3/noP0-P2 on frozen86e11dc13ea279b93ed18bf354026e94356476eaf7f9216415c1bd2c0b3e0040/all832/exact10/all271prioritems/822nonownedbaseline and held tails preserved. P3: policy November8due not surfaced in maintenance report; later scoped integration, current dated copy accurate. Independent13pure tests/stateGSCSEO/in-memory21prioritypages twice/officialFAQ-Code agreement/screenshot/full636log audited. Master636full/6focused/34maintenance/state0/GSC88/SEO34canon37HTML0errors-fiveprior;1280/390/320 nooverflow/currentpolicy visible/keyboard-source links/loadedphoto/no console. Immutable consensus receipt only; exact push and production checks next, no delivery claim yet."
+    },
+    {
       "id": "FT-PUB-011",
       "title": "Publish scoped Puerto Vallarta family resort room and cost comparison",
       "kind": "implementation",

@@ -9,6 +9,7 @@ import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const target = "things-to-do/las-vegas-with-teens.html";
+const access = JSON.parse(readFileSync(join(root, "docs/research/las-vegas-teen-access-2026-10-09.json"), "utf8"));
 
 function schemas(html) {
   return [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
@@ -96,4 +97,26 @@ test("priority regeneration is idempotent and changes no unrelated site file", (
   } finally {
     rmSync(temp, { recursive: true, force: true });
   }
+});
+
+test("maintains source-dated district policy without inferred event or evening eligibility", () => {
+  assert.equal(access.observed_on, "2026-10-09");
+  assert.equal(access.evidence_class, "OFFICIAL_VENUE_POLICY");
+  assert.equal(access.sources.length, 2);
+  assert.ok(access.sources.every(source => source.observed_on === access.observed_on && source.published_on === null));
+  assert.equal(access.family_task.human_tested, false);
+  assert.match(access.family_task.result, /Neither teen qualifies for an unaccompanied visit/);
+  assert.ok(access.unknowns.some(value => value.includes("No numeric evening cutoff")));
+  assert.equal(access.next_review_due, "2026-11-08");
+});
+
+test("visible comparison, access check and FAQ schema use the same maintained policy copy", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  for (const copy of Object.values(access.public_copy)) assert.ok(html.includes(copy), copy);
+  for (const source of access.sources) assert.ok(html.includes(`href="${source.url}"`));
+  const faq = schemas(html).find(block => block["@type"] === "FAQPage");
+  assert.equal(faq.mainEntity.find(item => item.name === "Can teenagers explore Las Vegas on their own?").acceptedAnswer.text, access.public_copy.faq);
+  assert.match(html, /Other attraction and city sources checked July 22, 2026/);
+  assert.match(html, /AREA15 adult-accompaniment policy separately checked October 9, 2026/);
+  assert.doesNotMatch(html, /21\+ after|21 or older after|after 9\s*(?:pm|p\.m\.)|all attraction.*checked October 9/i);
 });

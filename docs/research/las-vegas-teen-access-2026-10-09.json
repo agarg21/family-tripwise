@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-076",
+  "observed_on": "2026-10-09",
+  "evidence_class": "OFFICIAL_VENUE_POLICY",
+  "scope": "AREA15 district adult accompaniment only; individual experiences retain separate requirements. Not a safety or independent-route verdict.",
+  "sources": [
+    {"url": "https://www.area15.com/faqs", "surface": "Expanded Is AREA15 suitable for all ages? FAQ in ordinary public browser UI", "observed_on": "2026-10-09", "published_on": null, "facts": ["District open to all ages", "Visitors younger than 18 require an adult throughout the visit", "Experience-specific height/weight requirements and intensity guidance remain separate"]},
+    {"url": "https://www.area15.com/code-of-conduct", "surface": "Public Primary Conduct Rules", "observed_on": "2026-10-09", "published_on": null, "facts": ["Under-18 visitors require adult accompaniment"]}
+  ],
+  "family_task": {"party": "Two adults and teens aged 13 and 17", "decision": "Can both teens visit AREA15 independently while adults take a separate stop?", "hypothesis": "Generic check-minor-policy wording already answers the split-visit decision", "result": "REJECT hypothesis; IMPLEMENT the verified accompaniment rule. Neither teen qualifies for an unaccompanied visit under the published district rule.", "evidence_class": "PAGE_ONLY_PROXY_TASK", "human_tested": false},
+  "unknowns": ["Selected ticket/event eligibility and visit-date changes", "No numeric evening cutoff established by this audit", "No adult minimum age beyond the source's term adult inferred", "No city curfew-law interpretation or firsthand practicality claim"],
+  "public_copy": {
+    "comparison_check": "Under 18: adult throughout; check exact experience",
+    "official_check": "AREA15 minor policy checked October 9, 2026: under-18 visitors must stay with an adult throughout the visit. Its FAQ says the district is open to all ages; individual experiences can have separate requirements. Check the selected ticket or event and current city curfew guidance before a late-night plan.",
+    "faq": "AREA15 requires under-18 visitors to stay with an adult throughout the visit (policy checked October 9, 2026). Elsewhere, check the exact venue's minor policy and current city curfew guidance; do not assume independent entry."
+  },
+  "confidence": "High agreement between current official district-policy sources; unknown event eligibility, visit-date admission, observed parent success or SEO impact.",
+  "lesson": "A concrete accompaniment constraint can resolve a teen split-plan decision without manufacturing an evening cutoff or renewing other attraction facts.",
+  "decision": "IMPLEMENT existing page; no new URL",
+  "next_review_due": "2026-11-08",
+  "next_falsification_trigger": "Changed official minor policy, conflicting event rule, source unavailable, or failed page-only age/accompaniment task"
+}
