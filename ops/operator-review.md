@@ -1,5 +1,11 @@
 # Operator Implementation Review Log
 
+FT-PUB-009 final independent Faraday01a12223-b3e4-75c3-9054-603a7c6d1e32 cycle2 PASS/noP0-P3 against806file freeze fa70011a267f29932a3e8a6c80f39da2674c1365d72f1cbefd4711bdc4cf0e74. Exact24scope/held work preserved; independent66tests/state/SEO and scope recheck. Master604full/14focused/33maintenance/state0/GSC88/SEO32zeroerrors-fiveprior; corrected1280-390-320/kitchen/fees/actualCSVdownload/image/home/noerrors proof. Original source-price dates retained. Only immutable four-ops receipt after consensus; exact reviewed push/Pages/marker/productionSEO/7affectedresources still required, no delivered claim yet.
+
+FT-PUB-009 current review envelope24paths, dependency amendment registered before edits. Master604full/14focused/33maintenance/state0/GSC88/SEO32zeroerrors-fiveprior; actual1280/390/320/filter/fee/download/image/home browser proof private `/tmp/ft-pub009-browser`. No source-price renewal, unsupported age/fee/rest claim or other city launch. Different independent final read-only review pending; not delivered.
+
+FT-PUB-009 registered exact15paths before first DC implementation. Bounded maintained three-category room/kitchen/dated-budget job, no actual rest/full-fee/age acceptance claim. Independent final review follows native/responsive QA; no public delivery yet. Direct named DC/Boston/PV approval, sprint unchanged.
+
 FT-IMP-075 final Poincare01a1220f-04c9-78d3-9351-7d3f65b6ff33 PASS/noP0-P3: independently799frozen hashes/exact18HEADdelta/all390fields/heldChicago exclusions/12hotels/historicalpricecontext/screenshots1280-390-320 verified,10focused/state/localSEO green. Master599full/12focused/33maintenance/GSC88/SEO0-fiveprior; functional/responsive browserQA passes after user-confirmed normal access. Consensus manifest634cbdb2b3314df152a1082768b293f8e205282ab7eb3c21af4143f0448c6d0b. Immutable consensus only; exact release/Pages-marker-production verification next, no public delivery claim yet.
 
 FT-IMP-075 final release-review resumption October9: documented user-confirmed changed preview access and successful normal in-app load. Same18paths; final responsive browser/native QA and different independent release review pending. Prior Hilbert PASS CODE ONLY is not final release consensus. No public release or city launch claimed.

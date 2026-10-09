@@ -6,6 +6,7 @@ import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs
 import { cities, agePages } from "./page-generation/city-data.mjs";
 import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { writeOrlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
+import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
@@ -455,7 +456,7 @@ ${staticNav("./")}
       </section>
       <section class="container trust-panel about-summary" aria-label="Review status">
         <p><strong>Last updated:</strong> September 26, 2026</p>
-        <p><strong>Current scope:</strong> Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio, with lodging comparisons for Cancun and Orlando. Coverage varies by destination. We update pages as official sources, planning needs, and review findings improve the research.</p>
+        <p><strong>Current scope:</strong> Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio, with lodging comparisons for Cancun, Orlando and Washington DC. Coverage varies by destination. We update pages as official sources, planning needs, and review findings improve the research.</p>
         <p><strong>Meet the contributors:</strong> <a href="#apoorva-garg">Apoorva Garg, founder</a> and <a href="#miles-rowan">Miles Rowan, AI research contributor</a>.</p>
       </section>
       <section class="container page-section methodology-section" aria-labelledby="contributors">
@@ -596,6 +597,7 @@ writeSite("about.html", aboutPage());
 writeSite("contributors/miles-rowan.html", milesProfilePage());
 writeCancunResortPage(writeSite);
 writeOrlandoSuitePage(writeSite);
+writeWashingtonDcFamilyHotelsPage(writeSite);
 
 const oldRedirects = [
   ["san-diego-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
@@ -650,8 +652,8 @@ ${staticNav("./")}
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Current scope">
-        <p><strong>Seven destinations:</strong> San Diego, Las Vegas, New York City, Chicago and San Antonio have stay, activity and itinerary guides. Cancun and Orlando currently focus on family lodging comparisons.</p>
-        <p><a href="#destinations">Browse all seven destinations</a> · <a href="./where-to-stay/cancun-family-resorts.html">Cancun resort rooms and club ages</a> · <a href="./where-to-stay/orlando-family-hotels.html">Orlando family suites and fees</a></p>
+        <p><strong>Eight destinations:</strong> San Diego, Las Vegas, New York City, Chicago and San Antonio have stay, activity and itinerary guides. Cancun, Orlando and Washington DC currently focus on family lodging comparisons.</p>
+        <p><a href="#destinations">Browse all eight destinations</a> · <a href="./where-to-stay/cancun-family-resorts.html">Cancun resort rooms and club ages</a> · <a href="./where-to-stay/orlando-family-hotels.html">Orlando family suites and fees</a> · <a href="./where-to-stay/washington-dc-family-hotels.html">Washington DC suites and dated prices</a></p>
         <p><strong>How to use this site:</strong> Start with the page that matches your hardest constraint. If lodging drives the trip, use where-to-stay first. If kid age or weather drives the trip, use things-to-do first. If you already know the city and base, use the itinerary page to avoid overpacking the day.</p>
       </section>
       <section class="band intro-band">
@@ -672,7 +674,7 @@ ${staticNav("./")}
       </section>
       <section class="container page-section" id="destinations">
         <div class="section-heading">
-          <p class="eyebrow">Seven destinations</p>
+          <p class="eyebrow">Eight destinations</p>
           <h2>Destination guides</h2>
         </div>
         <div class="card-grid">
@@ -695,6 +697,11 @@ ${cities.map((city) => `          <article class="activity-card">
             <h3>Orlando with kids</h3>
             <p>Family lodging comparison: Disney, Universal and off-site suites, room-capacity checks, published fees and dated water benefits.</p>
             <p><a href="./where-to-stay/orlando-family-hotels.html">Compare Orlando family hotels</a></p>
+          </article>
+          <article class="activity-card">
+            <h3>Washington DC with kids</h3>
+            <p>Compare three exact suite categories, separate sleeping spaces, cooking equipment and dated nightly costs with age and fee limits.</p>
+            <p><a href="./where-to-stay/washington-dc-family-hotels.html">Compare Washington DC family hotels</a></p>
           </article>
         </div>
       </section>
@@ -792,6 +799,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://familytripwise.com/contributors/miles-rowan.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/cancun-family-resorts.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/orlando-family-hotels.html</loc></url>
+  <url><loc>https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/san-diego-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/chicago-family-hotels.html</loc></url>

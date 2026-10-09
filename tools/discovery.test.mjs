@@ -21,14 +21,14 @@ test("all canonical pages have another canonical page linking to them and are re
   assert.equal(seen.size, urls.length);
 });
 
-test("homepage primary directory distinguishes seven destinations and links all hotel comparisons", () => {
+test("homepage primary directory distinguishes eight destinations and links all hotel comparisons", () => {
   const home = read("index.html");
   const directory = home.split('id="destinations"')[1].split("</section>")[0];
-  assert.equal((directory.match(/<article /g) ?? []).length, 7);
-  for (const slug of ["san-diego", "las-vegas", "new-york-city", "chicago", "san-antonio", "orlando"]) {
+  assert.equal((directory.match(/<article /g) ?? []).length, 8);
+  for (const slug of ["san-diego", "las-vegas", "new-york-city", "chicago", "san-antonio", "orlando", "washington-dc"]) {
     assert.ok(directory.includes(`where-to-stay/${slug}-family-hotels.html`));
   }
   assert.ok(directory.includes("where-to-stay/cancun-family-resorts.html"));
-  assert.match(home, /Cancun and Orlando currently focus on family lodging comparisons/);
+  assert.match(home, /Cancun, Orlando and Washington DC currently focus on family lodging comparisons/);
   assert.doesNotMatch(home, /Five active destination clusters/);
 });

@@ -4,10 +4,10 @@ import { readFile } from "node:fs/promises";
 import { maintenanceReport, maintenanceOptions, maintenanceCycle, validateCoverage, validatePriorAudit } from "./site-maintenance.mjs";
 import { fetchSource } from "./evidence-audit.mjs";
 
-test("all 31 canonical URLs have one explicit owner without renewing facts", async () => {
+test("all 32 canonical URLs have one explicit owner without renewing facts", async () => {
   const report = await maintenanceReport({ today: "2026-10-01" });
-  assert.equal(report.summary.canonical_pages, 31);
-  assert.equal(report.summary.travel_pages, 28);
+  assert.equal(report.summary.canonical_pages, 32);
+  assert.equal(report.summary.travel_pages, 29);
   assert.equal(report.summary.utility_pages, 3);
   assert.equal(report.summary.unclassified_pages, 0);
   assert.equal(report.summary.hotel_price_basis_gaps, 54);
@@ -15,6 +15,9 @@ test("all 31 canonical URLs have one explicit owner without renewing facts", asy
   assert.equal(report.automatic_fact_renewal, false);
   assert.equal(report.automatic_publication, false);
   assert.equal(report.pages.filter(page => page.contract === "itinerary").length, 5);
+  assert.equal(report.exact_room_comparisons[0].records.length, 3);
+  assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on, "2026-09-30");
+  assert.equal(report.exact_room_comparisons[0].records[2].price_observed_on, null);
   let requests = 0;
   const cycle = await maintenanceCycle({ today: "2026-10-01", fetcher: () => { requests++; throw new Error("No network"); } });
   assert.equal(requests, 0); assert.equal(cycle.source_audit, null);
@@ -41,7 +44,7 @@ test("bounded source cycle carries denials and does not publish or renew claims"
     return new Response("<html><body>Fixture only; no observed travel facts.</body></html>", { status: 200, headers: { "content-type": "text/html" } });
   } });
   assert.ok(calls <= 1);
-  assert.equal(result.source_review.summary.canonical_pages, 31);
+  assert.equal(result.source_review.summary.canonical_pages, 32);
   assert.equal(result.source_review.summary.carried_denials, denied.size);
   assert.equal(result.source_audit.factual_dates_renewed, false);
   assert.equal(result.source_review.automatic_publication, false);
