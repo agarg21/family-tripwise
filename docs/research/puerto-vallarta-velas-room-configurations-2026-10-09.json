@@ -1,0 +1,46 @@
+{
+  "schema_version":1,
+  "action":"FT-RES-139",
+  "destination":"Puerto Vallarta",
+  "checked_on":"2026-10-09",
+  "refresh_days":30,
+  "evidence_scope":"Two named Velas Vallarta category controls at Marina Vallarta, Puerto Vallarta city. Strict requested-child-count screen, not provider age reclassification or exact booking rejection. No representative review corpus, family price, care or route/rest assurance.",
+  "scenario":{"adults":2,"child_ages":[4,8,12],"stay":{"arrival":"2026-11-08","departure":"2026-11-13"},"preferences":["one accommodation","no car"],"budget":null},
+  "sources":{
+    "three-bedroom-es":{"url":"https://www.velasvallarta.com.mx/suites/suite-familiar-de-tres-recamaras","checked_on":"2026-10-09","published_on":null,"evidence_class":"OFFICIAL_PROPERTY_FACT","date_basis":"source-text-inspected-not-policy-effective"},
+    "lock-off":{"url":"https://www.velasvallarta.com/suites/lock-off-suite-","checked_on":"2026-10-09","published_on":null,"evidence_class":"OFFICIAL_PROPERTY_FACT","date_basis":"source-text-inspected-not-policy-effective"}
+  },
+  "records":[
+    {
+      "id":"pv-velas-three-bedroom",
+      "hotel":"Velas Vallarta",
+      "category":"Three Bedroom Family Suite",
+      "source_id":"three-bedroom-es",
+      "sleeping_setup":"King, queen and two individual beds; exact fifth-person allocation unconfirmed",
+      "kitchen":"published-kitchen",
+      "connection":"not-applicable",
+      "configurations":[
+        {"maximum":7,"max_adults":7,"max_children":0,"infant_extension":null,"conditions":["Adult-only published alternative; never reclassify requested children as adults to pass"],"evidence_class":"OFFICIAL_PROPERTY_FACT","basis":"Seven-adult published alternative, distinct from mixed branch"},
+        {"maximum":8,"max_adults":6,"max_children":2,"infant_extension":null,"conditions":["Published mixed branch uses minors; exact requested-age classification remains unknown","Confirm exact reservation and sleeping allocation"],"evidence_class":"OFFICIAL_PROPERTY_FACT","basis":"Six-adult/two-minor published alternative; not eight unconstrained guests"}
+      ],
+      "checks":["Three requested children fail strict count screen; not a provider exact-age rejection","Spanish category supports equipped kitchen; English omission does not negate it, equipment still unverified","General widget2adults/3children is not category acceptance","No sourced same-family amount/currency/stay/fees/payment or representative reviews","No measured no-car transfer or rest-return assurance"],
+      "conflicts":[],
+      "price":{"currency":null,"unit":"configuration/night","amount":null,"observed_on":null,"status":"not-observed","missing_basis":["Requested-age category acceptance and exact-family nightly currency/stay/date/tax/fee/payment basis unobserved"]}
+    },
+    {
+      "id":"pv-velas-lock-off",
+      "hotel":"Velas Vallarta",
+      "category":"Two-Bedroom Lock-Off Suite",
+      "source_id":"lock-off",
+      "sleeping_setup":"Two kings and living-room sofa bed; exact allocation and linkage booking unconfirmed",
+      "kitchen":"published-kitchen",
+      "connection":"named-connected-category",
+      "configurations":[{"maximum":7,"max_adults":4,"max_children":3,"infant_extension":{"places":1,"age_lt":4},"conditions":["Two regular minors are published aged4-15; the third child place requires infant0-3","Confirm booking age classification, exact named linkage and sleeping allocation; source is not reservation acceptance"],"evidence_class":"OFFICIAL_PROPERTY_FACT","basis":"Four adults/two minors4-15/one infant0-3, not three unrestricted children"}],
+      "checks":["Age4 is not an infant0-3 even when FAQ pricing says free through4","Do not increase occupancy using promotional discounts or general guest widget","No exact-family quote/currency/fees/payment or measured route/rest evidence"],
+      "conflicts":[],
+      "price":{"currency":null,"unit":"configuration/night","amount":null,"observed_on":null,"status":"not-observed","missing_basis":["No usable same-category five-person4-8-12 quote; unknown currency, taxes, fees, meal-plan and payment terms"]}
+    }
+  ],
+  "offer_observations":[],
+  "maintained_evidence":"docs/research/puerto-vallarta-velas-family-budget-2026-10-09.json"
+}

@@ -20,6 +20,36 @@
   ],
   "items": [
     {
+      "id": "FT-RES-139",
+      "title": "Qualify Velas Vallarta larger-suite family budget",
+      "kind": "research",
+      "status": "selected",
+      "selected_on": "2026-10-09T20:31:23Z",
+      "parent": "FT-RES-062",
+      "target_paths": [
+        "docs/research/puerto-vallarta-velas-family-budget-2026-10-09.json",
+        "docs/research/puerto-vallarta-velas-room-configurations-2026-10-09.json",
+        "docs/research/puerto-vallarta-velas-family-budget-2026-10-09.md",
+        "tools/puerto-vallarta-velas-family-budget.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Approved PV062 still lacks supported city five-person category and same-family approximate nightly price.138 Hilton exclusion is remoteverified, not eligible retry. Resolve a different primary Velas Vallarta larger-suite gate. Earlier eligible public075/050/DC/Boston delivered; Orlando observation/age/fee and London human gates remain narrow.",
+      "acceptance_criteria": [
+        "Inspect independent official exact larger-suite capacity/kitchen/base; ordinary anonymous quote only for supported2adults/children4-8-12 Nov8-13five nights",
+        "Retain sourced currency/unit/party/category/stay/date/fee/payment basis or exact missing gate; implement maintained schema/screen/CSV, no smaller-party price transplant",
+        "Focused/full nativeQA/different independent read-onlyPASS/exact clean research-data push/remote verification; no public PV launch without separately registered reviewed production transaction"
+      ],
+      "measurement_plan": "Can a maintained larger city-suite resolve the actual five-person room and nightly-budget decision? Proxy task only, no ranking/satisfaction inference.",
+      "production_invariant": "All33publicURLs/sitebytes/originalPV069-121/138 and817baselinefiles outside scope preserved. No unchanged Hilton/Hyatt/security retry, paid/account/indexing/outreach/scheduler mutation or sprint extension.",
+      "decision": "IMPLEMENT two maintained mixed-capacity/kitchen/infant controls; REJECT guest-count/free-child-as-extra-place shortcut. PRESERVE exact-age category and same-family nightly-price gate. Strict child-count screen is not exact provider rejection. Native/review/research-data release pending, no publicPV launch. First20:30:36Z run action; sprint unchanged.",
+      "review_receipt": "FT-RES-139 independent read-only Boyle PASS 2026-10-09T21:13:13Z; frozen aac73319a29ec43f7f3450eb4e69498dcbb9399d222656aefa1e194f8d890436/all821/exact9/HEAD e363222a82fcb72022b0659a623601d4512e956a. No P0-P3. Reviewer5 focused/32 combined/state0 and primary category/kitchen/FAQ/promotion corroboration; Master621 full/34 maintenance/state0/GSC88/SEO33canonical36HTML0errors-fiveprior. Research-only; exact-age acceptance and same-family nightly price remain unknown. All prior roadmap items except declared parent062 preserved; no public changes. After consensus only mechanical review/release evidence appended."
+    },
+    {
       "id": "FT-RES-138",
       "title": "Resolve Puerto Vallarta five-person Hilton room and price gate",
       "kind": "research",
@@ -4691,12 +4721,12 @@
       "priority": 6,
       "target_urls": [],
       "evidence": "September30USresort phrase1000/KD10 versus generalfamilyhotels110/KD9",
-      "decision": "October9 named user approval satisfied; PV remains unpublished after DC/Boston verified launches.138 rejects inspected Hilton individual categories for five-person task and implements two exclusion controls without a price.069five-category screen/CSV and122ownership unchanged; unknown currency/no usable same-family quote remains the current gate, separate teen URL held.",
-      "next_gate": "Next actual sprint wake qualify an independent supported larger Puerto Vallarta city-category and source-backed approximate nightly currency/unit/category/party4-8-12/stayNov8-13/date/fee basis. Preserve bedding/care/rest unknowns; no unchanged Hilton/Hyatt retry. Publication approval satisfied, evidence/QA/review/release not waived.",
+      "decision": "October9 approval satisfied; PV remains unpublished after DC/Boston verified launches.139 maintains Velas kitchen/mixed-capacity/infant controls but count entry is not exact-age category acceptance or familyprice.138 Hilton/069Hyatt and122ownership unchanged. Current gate usable supported family-budget basis, not another approval or broad cluster report; teen URL held.",
+      "next_gate": "Independently unambiguous larger PuertoVallarta city-category or readable primary exact-age clarification, then same-family approximate nightly currency/unit/category/party4-8-12/stayNov8-13/date/fee basis. No unchanged Velascount/Hilton/Hyatt retry, no free-child or infant reclassification. Preserve bedding/care/rest unknowns; evidence/QA/review/release remain.",
       "target_paths": [],
       "measurement_plan": "Maintainable room/age/base/cost comparison",
       "production_invariant": "No safety or firm family-suitability assurance",
-      "evidence_record": "docs/research/puerto-vallarta-hilton-family-price-gate-2026-10-09.md"
+      "evidence_record": "docs/research/puerto-vallarta-velas-family-budget-2026-10-09.md"
     },
     {
       "id": "FT-RES-063",
