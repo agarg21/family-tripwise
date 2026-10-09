@@ -37,7 +37,7 @@ test("unavailable and challenges do not become fresh evidence", async () => {
 test("repository inventory covers every canonical page and retains price context", async () => {
   const config = JSON.parse(await readFile(new URL("../ops/evidence-watch.json", import.meta.url), "utf8"));
   const r = await audit(config, { today: "2026-09-30" });
-  assert.equal(r.summary.canonical_pages, 33);
+  assert.equal(r.summary.canonical_pages, 34);
   assert.equal(r.factual_dates_renewed, false);
   assert.ok(r.pages.some((p) => p.records.some((x) => x.field === "nightly-price" && x.basis.includes("party"))));
   assert.ok(r.sources.every((s) => s.state === "not-fetched"));

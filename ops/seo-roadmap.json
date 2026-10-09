@@ -20,6 +20,58 @@
   ],
   "items": [
     {
+      "id": "FT-PUB-011",
+      "title": "Publish scoped Puerto Vallarta family resort room and cost comparison",
+      "kind": "implementation",
+      "status": "selected",
+      "selected_on": "2026-10-09T21:32:47.313Z",
+      "parent": "FT-RES-062",
+      "target_paths": [
+        "tools/page-generation/puerto-vallarta-family-resorts-page.mjs",
+        "tools/puerto-vallarta-family-resorts-page.test.mjs",
+        "tools/washington-dc-family-hotels-page.test.mjs",
+        "tools/about-page.test.mjs",
+        "tools/contributors.test.mjs",
+        "tools/discovery.test.mjs",
+        "docs/research/puerto-vallarta-public-task-2026-10-09.json",
+        "docs/plan/puerto-vallarta-family-resorts-launch-2026-10-09.md",
+        "tools/generate-pages.mjs",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs",
+        "tools/evidence-audit.test.mjs",
+        "ops/evidence-watch.json",
+        "ops/gsc-monitor.json",
+        "README.md",
+        "docs/plan/page-quality-standard.md",
+        "site/where-to-stay/puerto-vallarta-family-resorts.html",
+        "site/downloads/puerto-vallarta-family-resorts.csv",
+        "site/index.html",
+        "site/about.html",
+        "site/sitemap.xml",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html",
+        "https://familytripwise.com/",
+        "https://familytripwise.com/about.html"
+      ],
+      "evidence": "Direct October9 named city approval; RES122 controlled US ownership/demand and140 exact-age nightly samples; no existing Puerto Vallarta owner in33URLs. Qualify current specialist body fit and limited current review/base task in this transaction before public build. No paid research.",
+      "acceptance_criteria": [
+        "Current two representative queries and sampled comparison bodies preserve one distinct geographic lodging job, maintainable information gain and no clean existing fit",
+        "Same maintained exact-category records feed visible comparison and CSV; three conditional categories at two properties, one city and one explicitly Nayarit regional control; no price/kitchen/age inheritance",
+        "Preserve actual price currency/unit/category/party/stay/date/tax/fee/deposit/conflict, excluded controls and unknowns; source-dated limited reviews are not firsthand or representative",
+        "Focused/full native QA, desktop1280/mobile390/320 and actual download/filter/keyboard/image checks, different read-only PASS, exact-path push then Pages/marker/productionSEO and five affected-resource invariants"
+      ],
+      "measurement_plan": "Can two adults/ages4-8-12/Nov8-13/no-car compare one five-person configuration, kitchen versus actual priced category, public meal plans and city versus regional base without invalid age/free-child or all-fee assumptions? Proxy task only; preserve query/CTR/observation gates.",
+      "production_invariant": "All prior33URLs and unaffected public bytes retained; only new page/CSV plus home/About/sitemap public change. Original069/121/122/138/139/140 records and825baseline outside26 unchanged. Native DC/About/contributor/discovery expectations registered before updates on October9. No safety/actual rest/care/firm suitability, booking, denied retry, paid/account/indexing/analytics/contact/scheduler mutation. Sprint expiresOct12 18:29:58Z.",
+      "decision": "IMPLEMENT qualified scoped three-category/two-property city-versus-Nayarit comparison using current body/review/base task and140 price. All native/browser/read-onlyPASS/production gates still pending; no public delivered claim.",
+      "review_receipt": "FT-PUB-011 independent read-only Tesla 01a1229e-e8ea-7523-9b8d-105169906227 PASS on frozen iqkRTx manifest7a75a8d82fe7d901553fa6f197113e614abc8113dbc3a82598a6204feb0a202f: no P0-P3;831 hashes/exact26scope/originalrecords/prior33URLs/unaffectedpublicbytes preserved. Reviewer focused56/56, maintenance34/unclassified0, operator0/GSC88/SEO34-37-0errors-fiveprior; audited Master634full/34maintenance and browser proof/actual4row35columnCSV. Reviewer did not rerun temporary-file-writing tests, nowrites/release. Master focused5/full634/maintenance34/state0/GSC88/SEO34canon37HTML0errors5prior;1280/390/320/filter3-1-3/detailmatching/keyboardscroll/downloadexact-fullCSV/fee-disclosure/image/home/nooverflow/console0. Immutable mechanical consensus receipt only; production remains pending."
+    },
+    {
       "id": "FT-RES-140",
       "title": "Resolve an independent Puerto Vallarta larger-suite nightly budget",
       "kind": "research",
@@ -4755,12 +4807,12 @@
       "priority": 6,
       "target_urls": [],
       "evidence": "September30USresort phrase1000/KD10 versus generalfamilyhotels110/KD9",
-      "decision": "October9 named approval satisfied;140 supplies exact entered-age Garza Sanctuary family-night public pre-tax sample while preserving Panoramic kitchen distinction, partial teen bands and cancellation conflict.069/121/138/139 and122ownership unchanged. CANDIDATE scoped public comparison qualification, not another price report or approval; separate teen URL held.",
-      "next_gate": "Current comparison-body fit, source-dated limited review evidence and maintained property/category/base join for useful scoped family task; separately register public build/native/browser/read-onlyreview/verified release if qualified. Fullfees/bed allocation/care/actual rest remain claim limits. No repeated unchanged quote, guest-count or free-child shortcuts.",
+      "decision": "October9 named approval and bounded PUB011 current body/review/base task qualify one scoped maintained resort comparison, not representative ranking/teen URL. Three conditional categories/two properties, only Sanctuary priced; original source dates/unknowns intact.",
+      "next_gate": "Finish PUB011 desktop/mobile/native/different read-onlyPASS/exactpush/Pages-marker-productionSEO and all affected invariants before public delivery. Unpriced-category costs and measured rest/care remain future task gaps, not claims.",
       "target_paths": [],
       "measurement_plan": "Maintainable room/age/base/cost comparison",
       "production_invariant": "No safety or firm family-suitability assurance",
-      "evidence_record": "docs/research/puerto-vallarta-garza-family-budget-2026-10-09.md"
+      "evidence_record": "docs/research/puerto-vallarta-public-task-2026-10-09.json"
     },
     {
       "id": "FT-RES-063",

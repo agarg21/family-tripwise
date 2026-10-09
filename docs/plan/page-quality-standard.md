@@ -1,5 +1,7 @@
 # Page Building And Maintenance Standard
 
+FT-PUB-011 adds a third exact-room maintenance owner: Puerto Vallarta's three scoped categories at two properties. Current inventory34canonical pages includes DC/Boston/PV; original31-page baseline remains immutable history. Source clocks remain category-specific October3/9 and the actual dated Sanctuary price stays October9, with two unpriced categories/fees/rest/care unknown. Future category records are excluded from earlier report dates; no source or public fact renewal is automatic.
+
 ## All-Page Framework / FT-STD-007
 
 October1 implementation: every existing canonical URL now has an explicit maintenance owner: seven hotel comparisons, two activity-logistics pages, three activity-card pages, five stay-area pages, five itineraries, five teen pages, one toddler page and three utility pages. `tools/site-maintenance.mjs` joins the native contracts and rejects unknown, removed, duplicate or multiply-owned canonical URLs. The 31-page offline baseline is `ops/page-quality/2026-10-01-site-maintenance.json`. Focused/full QA and independent read-only review remain release gates.

@@ -55,7 +55,7 @@ test("one discoverable canonical DC job, constrained factual schema and licensed
   assert.equal(schema.url,url); assert.equal(schema["@type"],"WebPage");
   assert.equal(schema.dateModified,"2026-10-09");
   assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g)||[]).length,33);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g)||[]).length,34);
   assert.ok(read("site/index.html").includes(dcPath));
   assert.match(html,/Johnny Bivera/); assert.match(html,/2005/); assert.match(html,/public-domain record/);
 });

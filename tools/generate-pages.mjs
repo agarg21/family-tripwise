@@ -8,6 +8,7 @@ import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs"
 import { writeOrlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
 import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
+import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
@@ -458,7 +459,7 @@ ${staticNav("./")}
       </section>
       <section class="container trust-panel about-summary" aria-label="Review status">
         <p><strong>Last updated:</strong> September 26, 2026</p>
-        <p><strong>Current scope:</strong> Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio, with lodging comparisons for Cancun, Orlando, Washington DC and Boston. Coverage varies by destination. We update pages as official sources, planning needs, and review findings improve the research.</p>
+        <p><strong>Current scope:</strong> Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio, with lodging comparisons for Cancun, Orlando, Washington DC, Boston and Puerto Vallarta. Puerto Vallarta also labels a Nayarit regional comparison separately. Coverage varies by destination. We update pages as official sources, planning needs, and review findings improve the research.</p>
         <p><strong>Meet the contributors:</strong> <a href="#apoorva-garg">Apoorva Garg, founder</a> and <a href="#miles-rowan">Miles Rowan, AI research contributor</a>.</p>
       </section>
       <section class="container page-section methodology-section" aria-labelledby="contributors">
@@ -602,6 +603,7 @@ writeCancunResortPage(writeSite);
 writeOrlandoSuitePage(writeSite);
 writeWashingtonDcFamilyHotelsPage(writeSite);
 writeBostonFamilyHotelsPage(writeSite);
+writePuertoVallartaFamilyResortsPage(writeSite);
 
 const oldRedirects = [
   ["san-diego-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
@@ -656,8 +658,8 @@ ${staticNav("./")}
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Current scope">
-        <p><strong>Nine destinations:</strong> San Diego, Las Vegas, New York City, Chicago and San Antonio have stay, activity and itinerary guides. Cancun, Orlando, Washington DC and Boston currently focus on family lodging comparisons.</p>
-        <p><a href="#destinations">Browse all nine destinations</a> · <a href="./where-to-stay/cancun-family-resorts.html">Cancun resort rooms and club ages</a> · <a href="./where-to-stay/orlando-family-hotels.html">Orlando family suites and fees</a> · <a href="./where-to-stay/washington-dc-family-hotels.html">Washington DC suites and dated prices</a> · <a href="./where-to-stay/boston-family-hotels.html">Boston rooms, kitchens and dated prices</a></p>
+        <p><strong>Ten destinations:</strong> San Diego, Las Vegas, New York City, Chicago and San Antonio have stay, activity and itinerary guides. Cancun, Orlando, Washington DC, Boston and Puerto Vallarta currently focus on family lodging comparisons.</p>
+        <p><a href="#destinations">Browse all ten destinations</a> · <a href="./where-to-stay/cancun-family-resorts.html">Cancun resort rooms and club ages</a> · <a href="./where-to-stay/orlando-family-hotels.html">Orlando family suites and fees</a> · <a href="./where-to-stay/washington-dc-family-hotels.html">Washington DC suites and dated prices</a> · <a href="./where-to-stay/boston-family-hotels.html">Boston rooms, kitchens and dated prices</a> · <a href="./where-to-stay/puerto-vallarta-family-resorts.html">Puerto Vallarta resort rooms and dated costs</a></p>
         <p><strong>How to use this site:</strong> Start with the page that matches your hardest constraint. If lodging drives the trip, use where-to-stay first. If kid age or weather drives the trip, use things-to-do first. If you already know the city and base, use the itinerary page to avoid overpacking the day.</p>
       </section>
       <section class="band intro-band">
@@ -678,7 +680,7 @@ ${staticNav("./")}
       </section>
       <section class="container page-section" id="destinations">
         <div class="section-heading">
-          <p class="eyebrow">Nine destinations</p>
+          <p class="eyebrow">Ten destinations</p>
           <h2>Destination guides</h2>
         </div>
         <div class="card-grid">
@@ -711,6 +713,11 @@ ${cities.map((city) => `          <article class="activity-card">
             <h3>Boston with kids</h3>
             <p>Compare four conditional room categories, published kitchens, sleeping limits and dated nightly-price samples.</p>
             <p><a href="./where-to-stay/boston-family-hotels.html">Compare Boston family hotels</a></p>
+          </article>
+          <article class="activity-card">
+            <h3>Puerto Vallarta with kids</h3>
+            <p>Compare exact resort categories, cooking versus priced suites, public meal-plan samples and a separately labeled Nayarit regional base.</p>
+            <p><a href="./where-to-stay/puerto-vallarta-family-resorts.html">Compare Puerto Vallarta family resorts</a></p>
           </article>
         </div>
       </section>
@@ -810,6 +817,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://familytripwise.com/where-to-stay/orlando-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/boston-family-hotels.html</loc></url>
+  <url><loc>https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/san-diego-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/chicago-family-hotels.html</loc></url>

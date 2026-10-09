@@ -33,10 +33,10 @@ test("About preserves metadata and URL inventory while correcting coverage", () 
   assert.match(html, /<h1>How Family Tripwise builds family travel guides<\/h1>/);
   assert.match(html, /rel="canonical" href="https:\/\/familytripwise\.com\/about\.html"/);
   assert.doesNotMatch(html, /noindex|focused 5-city test/);
-  assert.match(html, /lodging comparisons for Cancun, Orlando, Washington DC and Boston/);
+  assert.match(html, /lodging comparisons for Cancun, Orlando, Washington DC, Boston and Puerto Vallarta/);
   assert.match(html, /Coverage varies by destination/);
   const sitemap = readFileSync("site/sitemap.xml", "utf8");
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 33);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 34);
   assert.match(html, /href="\.\/contributors\/miles-rowan\.html"/);
   assert.equal((sitemap.match(/<loc>https:\/\/familytripwise\.com\/about\.html<\/loc>/g) || []).length, 1);
 });
