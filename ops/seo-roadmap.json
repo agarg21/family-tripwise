@@ -20,6 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-RES-140",
+      "title": "Resolve an independent Puerto Vallarta larger-suite nightly budget",
+      "kind": "research",
+      "status": "selected",
+      "selected_on": "2026-10-09T21:16:33Z",
+      "parent": "FT-RES-062",
+      "target_paths": [
+        "docs/research/puerto-vallarta-garza-family-budget-2026-10-09.json",
+        "docs/research/puerto-vallarta-garza-room-configurations-2026-10-09.json",
+        "docs/research/puerto-vallarta-garza-family-budget-2026-10-09.md",
+        "tools/puerto-vallarta-garza-family-budget.test.mjs",
+        "tools/family-room-price.mjs",
+        "docs/plan/family-room-comparison-export.md",
+        "docs/plan/hotel-research-engine.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Named PV approval and maintained ownership062/122;139 leaves exact-age/price unresolved. Earlier eligible075/050/DC/Boston releases production-verified; no qualified public release waits. Independent Garza Blanca Puerto Vallarta exact larger category can resolve price without unchanged Velas/Hilton/Hyatt flow retry.",
+      "acceptance_criteria": [
+        "Primary exact city-category capacity/kitchen/age basis before ordinary anonymous same-family quote",
+        "Retain source-backed USD or other confirmed ISO currency, configuration/night,2adults/children4-8-12,November8-13five nights, source dates and fee/plan/payment context or exact unresolved gate",
+        "Maintained schema/screen/CSV parity, focused/full QA, different read-only PASS, exact clean research-only commit/push and remote verification"
+      ],
+      "measurement_plan": "Does an independently supported larger city category supply a usable same-family nightly budget, rather than another guest-count or two-adult starting-price shortcut?",
+      "production_invariant": "All33publicURLs/sitebytes/original069-121-138-139 and821baseline outside exact12 intact. No public launch, denied retry, paid/contact/account/indexing/analytics/scheduler mutation or sprint extension.",
+      "scope_amendment": "Before implementation: exact12 paths include shared price adapter and two existing policy docs. Official exact-age UI publishes adult18+,children4-12,infants0-3 but no13-17 classification; current schemas cannot preserve these partial bands with exact individual ages. Add narrow schema6, never invent13+ adult or erase published bands. No other model/tool/public scope.",
+      "decision": "IMPLEMENT exact entered-age Sanctuary public pre-tax4382/5881USD five-night plans and derived876.40/1176.20night, separate unpriced Panoramic kitchen control and schema6 partial-band preservation. CANDIDATE scoped public comparison qualification next, not price-flow retry; cancellation conflict/fullfees/reviews/rest unknown. Native/read-onlyPASS/exact research-data release pending; first21:15:52Z run action/sprint unchanged.",
+      "review_receipt": "FT-RES-140 Raman01a1228d-8891-71d3-8312-bec9bce8efd8 cycle2 PASS2026-10-09T21:28:06Z/noP0-P3 on33958262f5d1c10c424b1f277ca17fb0f0ce869c3684d125b7efce86185b7d38/all825/exact12. Cycle1P2 projection closed with exact-age and budget/historical CSV regressions; independent44 tests green/legacy4-5 preserved/publicbytes/originalrecords unchanged. Master629full8focused25price-combined34maintenance/state0/GSC88/SEO33canonical36HTML0errors-fiveprior. Consensus research/tooling only, no publicPV launch or final booking acceptance; only mechanical immutable receipts after consensus."
+    },
+    {
       "id": "FT-RES-139",
       "title": "Qualify Velas Vallarta larger-suite family budget",
       "kind": "research",
@@ -4721,12 +4755,12 @@
       "priority": 6,
       "target_urls": [],
       "evidence": "September30USresort phrase1000/KD10 versus generalfamilyhotels110/KD9",
-      "decision": "October9 approval satisfied; PV remains unpublished after DC/Boston verified launches.139 maintains Velas kitchen/mixed-capacity/infant controls but count entry is not exact-age category acceptance or familyprice.138 Hilton/069Hyatt and122ownership unchanged. Current gate usable supported family-budget basis, not another approval or broad cluster report; teen URL held.",
-      "next_gate": "Independently unambiguous larger PuertoVallarta city-category or readable primary exact-age clarification, then same-family approximate nightly currency/unit/category/party4-8-12/stayNov8-13/date/fee basis. No unchanged Velascount/Hilton/Hyatt retry, no free-child or infant reclassification. Preserve bedding/care/rest unknowns; evidence/QA/review/release remain.",
+      "decision": "October9 named approval satisfied;140 supplies exact entered-age Garza Sanctuary family-night public pre-tax sample while preserving Panoramic kitchen distinction, partial teen bands and cancellation conflict.069/121/138/139 and122ownership unchanged. CANDIDATE scoped public comparison qualification, not another price report or approval; separate teen URL held.",
+      "next_gate": "Current comparison-body fit, source-dated limited review evidence and maintained property/category/base join for useful scoped family task; separately register public build/native/browser/read-onlyreview/verified release if qualified. Fullfees/bed allocation/care/actual rest remain claim limits. No repeated unchanged quote, guest-count or free-child shortcuts.",
       "target_paths": [],
       "measurement_plan": "Maintainable room/age/base/cost comparison",
       "production_invariant": "No safety or firm family-suitability assurance",
-      "evidence_record": "docs/research/puerto-vallarta-velas-family-budget-2026-10-09.md"
+      "evidence_record": "docs/research/puerto-vallarta-garza-family-budget-2026-10-09.md"
     },
     {
       "id": "FT-RES-063",

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-140",
+  "destination": "Puerto Vallarta",
+  "checked_on": "2026-10-09",
+  "refresh_days": 30,
+  "evidence_scope": "Two exact Garza Blanca Puerto Vallarta categories, not representative resort coverage. Normal same-family search priced Sanctuary, not Panoramic; no kitchen inheritance, booking, measured rest/transfer, club admission or suitability assurance.",
+  "scenario": {"adults":2,"child_ages":[4,8,12],"stay":{"arrival":"2026-11-08","departure":"2026-11-13"},"preferences":["one accommodation","no car"],"budget":null},
+  "sources": {
+    "sanctuary": {"url":"https://www.garzablancaresort.com/puerto-vallarta/sanctuary/suites/sanctuary-two-bedroom-suite","checked_on":"2026-10-09","published_on":null,"evidence_class":"OFFICIAL_PROPERTY_FACT","date_basis":"source-text-inspected-not-policy-effective"},
+    "panoramic": {"url":"https://www.garzablancaresort.com/puerto-vallarta/suites/two-bedroom-panoramic-suite","checked_on":"2026-10-09","published_on":null,"evidence_class":"OFFICIAL_PROPERTY_FACT","date_basis":"source-text-inspected-not-policy-effective"}
+  },
+  "records": [
+    {
+      "id":"pv-garza-sanctuary-two-bedroom",
+      "hotel":"Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+      "category":"Sanctuary Two Bedroom Suite",
+      "source_id":"sanctuary",
+      "sleeping_setup":"One king and two queens; exact fifth-person allocation unconfirmed",
+      "kitchen":"not-established",
+      "connection":"not-applicable",
+      "configurations":[{"maximum":6,"max_adults":null,"max_children":null,"infant_extension":null,"conditions":["Published six-person limit is not final reservation acceptance; confirm sleeping allocation"],"evidence_class":"OFFICIAL_PROPERTY_FACT","basis":"Named category six-guest limit, not inferred from bedroom or bed count"}],
+      "checks":["Actual search entered individual ages4/8/12 and returned this exact category; no reservation or payment","Published search bands adults18+,children4-12,infants0-3 leave13-17 unclassified; no complementary inference","No published cooking kitchen established for Sanctuary; Panoramic facts cannot transfer","No current representative review corpus, measured no-car transfer or rest-return verdict","Full taxes, mandatory fees, incidentals and exact meal eligibility unresolved"],
+      "conflicts":["Rate card says free cancellation before October28,2026 at23:59; both opened plan terms instead describe a10-day window and one-night late penalty. Exact deadline/timezone requires clarification."],
+      "price":{"currency":"USD","unit":"configuration/night","amount":null,"observed_on":null,"status":"not-observed","missing_basis":["Base record remains separate from dated same-category public price observations; final taxes/fees unknown"]}
+    },
+    {
+      "id":"pv-garza-panoramic-two-bedroom",
+      "hotel":"Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+      "category":"Two Bedroom Panoramic Suite",
+      "source_id":"panoramic",
+      "sleeping_setup":"One king, two queens and sofa; exact allocation unconfirmed",
+      "kitchen":"published-kitchen",
+      "connection":"not-applicable",
+      "configurations":[{"maximum":6,"max_adults":null,"max_children":null,"infant_extension":null,"conditions":["Confirm exact booking age classification, sleeping allocation and category inventory"],"evidence_class":"OFFICIAL_PROPERTY_FACT","basis":"Named six-guest category and explicit equipped kitchen"}],
+      "checks":["Official address Puerto Vallarta,Jalisco; no central-city or measured route assurance","Normal same-family search returned Sanctuary categories; this category's requested-stay price remains unobserved, not proven sold out","Per-person maximum-occupancy starting/member card excludes taxes and is not this family's nightly rate","No kitchen or rates inherited between Sanctuary and Panoramic","No exact care, transport/rest or representative review evidence"],
+      "conflicts":[],
+      "price":{"currency":null,"unit":"configuration/night","amount":null,"observed_on":null,"status":"not-observed","missing_basis":["No exact Panoramic category/party/stay quote; separate per-person starting offer not normalized"]}
+    }
+  ],
+  "offer_observations":[],
+  "maintained_evidence":"docs/research/puerto-vallarta-garza-family-budget-2026-10-09.json"
+}

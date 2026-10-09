@@ -1,5 +1,7 @@
 # Family Hotel Research Engine
 
+FT-RES-140 adds price schema6 for exact individual ages within published but non-complementary bands. Preserve the observed adult and child limits, unresolved uncovered-age policy, ISO-currency evidence and exact entered party. Never turn a missing teen band into adult classification or hide known bands as unknown. Prices join only the same category/party/stay; member plans remain excluded. First sample: `docs/research/puerto-vallarta-garza-family-budget-2026-10-09.json`. Sanctuary rates do not inherit Panoramic kitchen facts; taxes and cancellation conflict remain explicit. Shared evidence only, not public publication.
+
 September30 FT-STD-001: a versioned hotel adapter and offline field-quality queue cover seven hotel comparisons without re-entering prices. Run `node tools/page-quality.mjs` before selecting hotel refresh work. Building/refresh procedure and remaining migrations: `docs/plan/page-quality-standard.md`. This is normalization coverage, not proof that all claims are mapped or current; collection never automatically renews observations.
 
 State: operator policy; reusable all-page source-audit tooling implemented, price adapters incomplete

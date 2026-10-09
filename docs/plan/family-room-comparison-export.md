@@ -1,5 +1,7 @@
 # Exact Family Room Research Export
 
+FT-RES-140: price schema6 preserves exact individual ages inside published partial bands, with uncovered ages held rather than reclassified. The same adapter excludes member plans, joins only the exact party/category/stay and carries taxes, deposit and cancellation uncertainty into CSV. Garza Sanctuary public plans and an unpriced Panoramic kitchen control demonstrate category isolation; no public page or automatic fact renewal is implied.
+
 FT-IMP-051, September 30, 2026. This is a reusable offline research/review surface, not a public destination page, verified browser download or publishing approval.
 
 ## Single Maintained Input

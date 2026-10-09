@@ -28,7 +28,7 @@ export function validateRoomPrices(observations, pack) {
   const identities = new Set();
   for (const o of observations) {
     const fail = message => errors.push(`${o?.record_id ?? "observation"}: ${message}`);
-    if (!o || ![1, 2, 3, 4, 5].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
+    if (!o || ![1, 2, 3, 4, 5, 6].includes(o.schema_version) || o.evidence_class !== "BOOKING_CHECK" || !validDate(o.checked_on)) {
       fail("Invalid date/class"); continue;
     }
     const record = pack.records.find(r => r.id === o.record_id);
@@ -62,10 +62,23 @@ export function validateRoomPrices(observations, pack) {
       engine.classification_basis === "published-adult-cutoff-unknown-child-band-counts" &&
       o.requested_individual_ages_confirmed === false && o.party_basis === "requested-task-context-not-provider-age-acceptance" &&
       text(o.currency_basis) && ["OBSERVED_ISO_CURRENCY", "EDITORIAL_INTERPRETATION"].includes(o.currency_evidence_class);
+    const partialIndividual = o.schema_version === 6 && engine?.age_input_mode === "individual-ages" &&
+      Number.isInteger(engine.adult_from_age) && engine.adult_from_age > 0 &&
+      Number.isInteger(engine.child_age_from) && engine.child_age_from >= 0 &&
+      Number.isInteger(engine.child_age_to) && engine.child_age_to >= engine.child_age_from &&
+      engine.child_age_to < engine.adult_from_age - 1 && engine.child_age_to <= 17 &&
+      engine.classification_basis === "published-partial-bands-exact-individual-party" &&
+      engine.uncovered_ages_policy === "not-established-no-reclassification" &&
+      text(o.currency_basis) && o.currency_evidence_class === "OBSERVED_ISO_CURRENCY";
     if (o.schema_version === 3 && !individualUnknown) fail("Schema3 requires explicit unknown cutoffs and individual ages");
     if (o.schema_version === 4 && !countUnknown) { fail("Schema4 requires explicit count-only, child-band, unknown-adult-cutoff and currency basis"); continue; }
     if (o.schema_version === 5 && !childBandUnknown) { fail("Schema5 requires explicit unknown child-band, unconfirmed task ages, count mode and currency basis"); continue; }
-    if (childBandUnknown) {
+    if (o.schema_version === 6 && !partialIndividual) { fail("Schema6 requires published partial bands, individual ages, uncovered-age hold and observed currency basis"); continue; }
+    if (partialIndividual) {
+      if (!validParty(engine) || engine.adults !== o.party.adults || !sameAges(engine.child_ages, o.party.child_ages) ||
+          o.party.child_ages.some(age => age < engine.child_age_from || age > engine.child_age_to))
+        fail("Individually entered party must match within published partial child band; uncovered ages cannot be reclassified");
+    } else if (childBandUnknown) {
       // Match recorded search context, not provider acceptance of the requested ages.
       if (!Number.isInteger(engine.adults) || engine.adults !== o.party.adults ||
           !Number.isInteger(engine.children) || engine.children < 1 || engine.children !== o.party.child_ages.length ||
@@ -84,7 +97,7 @@ export function validateRoomPrices(observations, pack) {
         !Number.isInteger(engine.child_age_from) || engine.child_age_from < 0 ||
         engine.child_age_to !== engine.adult_from_age - 1 || engine.child_age_from > engine.child_age_to ||
         !validParty(engine)) { fail("Invalid engine age basis"); continue; }
-    if (!individualUnknown && !countUnknown && !childBandUnknown) {
+    if (!individualUnknown && !countUnknown && !childBandUnknown && !partialIndividual) {
       const younger = o.party.child_ages.filter(age => age >= engine.child_age_from && age < engine.adult_from_age);
       const adultCount = o.party.adults + o.party.child_ages.filter(age => age >= engine.adult_from_age).length;
       if (o.party.child_ages.some(age => age < engine.child_age_from) || engine.adults !== adultCount ||
@@ -141,7 +154,7 @@ export function roomPriceForTask(observations, pack, recordId, party, asOf) {
     booking_category: observation.booking_category ?? observation.category,
     configuration_basis: observation.configuration_basis ?? "See source-surface and limitation context",
     age_input_mode: observation.engine_party.age_input_mode ?? "not-recorded",
-    ...(observation.schema_version >= 4 ? { requested_individual_ages_confirmed: false,
+    ...(observation.schema_version >= 4 ? { requested_individual_ages_confirmed: observation.schema_version === 6,
       currency_basis: observation.currency_basis, currency_evidence_class: observation.currency_evidence_class } : {}),
     ...(observation.schema_version === 5 ? { party_basis: observation.party_basis } : {}),
     deposit_basis: observation.deposit_basis ?? "not-established",
