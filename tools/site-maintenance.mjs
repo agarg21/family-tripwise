@@ -10,6 +10,7 @@ import { planningPageEvidence, planningPageQualityReport } from "./planning-page
 import { audit, ageState, easternDate, modelRecords, permittedUrl, requireNewOutput } from "./evidence-audit.mjs";
 import { reviewAudit } from "./weekly-evidence-review.mjs";
 import { dcPath, dcPack, dcPrices } from "./page-generation/washington-dc-family-hotels-page.mjs";
+import { bostonPath, bostonPack, bostonPrices } from "./page-generation/boston-family-hotels-page.mjs";
 import { screenRoomPack } from "./family-room-task.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
@@ -35,8 +36,10 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   const sitemap = await readFile(resolve(root, "site/sitemap.xml"), "utf8");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
   const groups = { hotel: [...new Set(hotels.map(record => record.page_url))], "activity-logistics": [...new Set(activities.map(record => record.page_url))], "activity-cards": cards.map(page => page.page_url), utility: UTILITY };
-  groups["exact-room-comparison"] = [`https://familytripwise.com/${dcPath}`];
+  groups["exact-room-comparison"] = [`https://familytripwise.com/${dcPath}`, `https://familytripwise.com/${bostonPath}`];
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);
+  // A historical report cannot screen a pack that had not yet been observed.
+  const boston = today < bostonPack.checked_on ? [] : screenRoomPack(bostonPack, bostonPack.scenario, today, bostonPrices.filter(price => price.checked_on <= today));
   for (const page of planning) (groups[page.type] ||= []).push(page.page_url);
   const pages = validateCoverage(urls, groups);
   for (const page of pages) {
@@ -50,7 +53,8 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
       hotel_price_basis_gaps: reports.hotel.summary.unstructured_price_basis, hotel_due_price_records: reports.hotel.summary.due_price_records,
       activity_card_atomic_source_gaps: reports.cards.summary.atomic_source_gaps, planning_unmapped_decision_fields: reports.planning.summary.unmapped_decision_fields, planning_missing_page_source_notes: reports.planning.summary.missing_page_source_notes },
     pages, contract_summaries: Object.fromEntries(Object.entries(reports).map(([type, report]) => [type, report.summary])), planning_pages: reports.planning.pages,
-    exact_room_comparisons: [{ page_url: `https://familytripwise.com/${dcPath}`, model_path: "tools/page-generation/washington-dc-family-hotels-page.mjs", records: dc.map(room => ({ id: room.id, category: room.category, category_age: ageState(room.checked_on, dcPack.refresh_days, today), price_observed_on: room.price.observed_on, price_age: ageState(room.price.observed_on, 14, today), price_status: room.price.status, next_checks: room.next_checks })), limitation: "Scoped room and dated-price ownership, not all atomic facts verified; unknown child-age/fee/rest claims remain unresolved. No automatic source renewal or publication." }],
+    exact_room_comparisons: [{ page_url: `https://familytripwise.com/${dcPath}`, model_path: "tools/page-generation/washington-dc-family-hotels-page.mjs", records: dc.map(room => ({ id: room.id, category: room.category, category_age: ageState(room.checked_on, dcPack.refresh_days, today), price_observed_on: room.price.observed_on, price_age: ageState(room.price.observed_on, 14, today), price_status: room.price.status, next_checks: room.next_checks })), limitation: "Scoped room and dated-price ownership, not all atomic facts verified; unknown child-age/fee/rest claims remain unresolved. No automatic source renewal or publication." },
+      { page_url: `https://familytripwise.com/${bostonPath}`, model_path: "tools/page-generation/boston-family-hotels-page.mjs", evidence_state: today < bostonPack.checked_on ? "not-yet-observed-at-report-date" : "dated-records-available", records: boston.map(room => ({ id: room.id, category: room.category, category_age: ageState(room.checked_on, bostonPack.refresh_days, today), price_observed_on: room.price.observed_on, price_age: ageState(room.price.observed_on, 14, today), price_status: room.price.status, next_checks: room.next_checks })), limitation: "Four conditional categories, not all atomic facts verified. Park Plaza counts do not establish a child-age band; fees, bedding, rest and two category prices remain unresolved. Historical reports before the pack date cannot screen later evidence. No automatic renewal or publication." }],
     review_priorities: ["Reconcile current source conflicts and expired operational notices before aesthetic edits.", "Retain approximate nightly bands and their basis; research missing/stale room-party-date-fee observations first.", "Use source diffs only to queue named claim checks; never renew observations from hashes or retrieval success.", "Map age, access, weather and reset constraints without promoting them to safety or firsthand assurances."],
     limitations: ["Framework coverage is not atomic fact completeness or a fresh-publication certificate.", "Utility pages have an explicit non-travel classification, not invented destination records.", "The compact report references existing native adapters; run their detailed reports to inspect retained values and tasks.", "No public page, estimate, observation date or URL-specific measurement window is changed by this command.", "Weekly stability requires the next actual weekly run and claim reconciliation, not a same-day fixture or repeat."] };
 }

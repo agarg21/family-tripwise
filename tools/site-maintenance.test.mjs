@@ -4,10 +4,10 @@ import { readFile } from "node:fs/promises";
 import { maintenanceReport, maintenanceOptions, maintenanceCycle, validateCoverage, validatePriorAudit } from "./site-maintenance.mjs";
 import { fetchSource } from "./evidence-audit.mjs";
 
-test("all 32 canonical URLs have one explicit owner without renewing facts", async () => {
+test("all 33 canonical URLs have one explicit owner without renewing facts", async () => {
   const report = await maintenanceReport({ today: "2026-10-01" });
-  assert.equal(report.summary.canonical_pages, 32);
-  assert.equal(report.summary.travel_pages, 29);
+  assert.equal(report.summary.canonical_pages, 33);
+  assert.equal(report.summary.travel_pages, 30);
   assert.equal(report.summary.utility_pages, 3);
   assert.equal(report.summary.unclassified_pages, 0);
   assert.equal(report.summary.hotel_price_basis_gaps, 54);
@@ -18,9 +18,22 @@ test("all 32 canonical URLs have one explicit owner without renewing facts", asy
   assert.equal(report.exact_room_comparisons[0].records.length, 3);
   assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on, "2026-09-30");
   assert.equal(report.exact_room_comparisons[0].records[2].price_observed_on, null);
+  assert.equal(report.exact_room_comparisons[1].evidence_state, "not-yet-observed-at-report-date");
+  assert.equal(report.exact_room_comparisons[1].records.length, 0);
   let requests = 0;
   const cycle = await maintenanceCycle({ today: "2026-10-01", fetcher: () => { requests++; throw new Error("No network"); } });
   assert.equal(requests, 0); assert.equal(cycle.source_audit, null);
+});
+
+test("Boston dated ownership retains price ages and unresolved counts", async () => {
+  const report = await maintenanceReport({ today: "2026-10-09" });
+  const boston = report.exact_room_comparisons[1];
+  assert.equal(boston.records.length, 4);
+  assert.equal(boston.evidence_state, "dated-records-available");
+  assert.deepEqual(boston.records.slice(0, 2).map(r => r.price_observed_on), ["2026-10-03", "2026-10-01"]);
+  assert.equal(boston.records[1].price_status, "dated-age-unresolved-count-samples");
+  assert.equal(boston.records[2].price_observed_on, null);
+  assert.equal(boston.records[0].price_age.due_on, "2026-10-17");
 });
 
 test("unknown, removed, duplicate and multiply-owned canonicals fail closed", () => {
@@ -44,7 +57,7 @@ test("bounded source cycle carries denials and does not publish or renew claims"
     return new Response("<html><body>Fixture only; no observed travel facts.</body></html>", { status: 200, headers: { "content-type": "text/html" } });
   } });
   assert.ok(calls <= 1);
-  assert.equal(result.source_review.summary.canonical_pages, 32);
+  assert.equal(result.source_review.summary.canonical_pages, 33);
   assert.equal(result.source_review.summary.carried_denials, denied.size);
   assert.equal(result.source_audit.factual_dates_renewed, false);
   assert.equal(result.source_review.automatic_publication, false);

@@ -1,0 +1,73 @@
+[
+  {
+    "schema_version": 5,
+    "action": "FT-RES-074",
+    "checked_on": "2026-10-01",
+    "source_url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/rooms/",
+    "source_surface": "Official Deluxe room More Details/comfort panel, Explore Rates, Nov8-13 date selection, guest-count modal, rate cards and three public rate-detail panels. Clean rooms URL retained, no session URLs.",
+    "evidence_class": "BOOKING_CHECK",
+    "record_id": "boston-park-plaza-deluxe-double",
+    "category": "2 Double Beds Deluxe Guestroom",
+    "booking_category": "2 Double Beds Deluxe Guestroom",
+    "configuration_basis": "One D2D category, published sleeps5/two double beds/280-380square feet; Nov8-13five nights/one room2adults3kids displayed. Fifth sleeping place, rollaway availability/charge, separate rest space and kitchen remain unconfirmed. Not a reservation or bed-allocation acceptance.",
+    "configuration_count": 1,
+    "currency": "USD",
+    "unit": "configuration/stay",
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "party": {
+      "adults": 2,
+      "child_ages": [
+        4,
+        8,
+        12
+      ]
+    },
+    "engine_party": {
+      "adults": 2,
+      "children": 3,
+      "child_ages": null,
+      "adult_from_age": 18,
+      "child_age_from": null,
+      "child_age_to": null,
+      "age_input_mode": "provider-counts-unknown-child-band",
+      "individual_ages_entered": false,
+      "requested_individual_ages_confirmed": false,
+      "classification_basis": "published-adult-cutoff-unknown-child-band-counts"
+    },
+    "rates": [
+      {
+        "plan": "Non-refundable",
+        "eligibility": "public",
+        "stay_amount": 1860.52,
+        "meals": "Room only; mandatory-fee daily15USD food/beverage credit excludes room service, redemption/tax/gratuity details unknown; not free meals.",
+        "cancellation": "Immediate full advance payment; no refund/modification/no-show refund. Detailed US/Mexico/Caribbean discretionary cancellation-and-new-booking exception may apply with50USDHiltonservicefee, not free cancellation or automatic refund."
+      },
+      {
+        "plan": "Flexible Rate",
+        "eligibility": "public",
+        "stay_amount": 2224.2,
+        "meals": "Room only; mandatory-fee daily15USD food/beverage credit excludes room service, further redemption details unknown.",
+        "cancellation": "Pay when staying/card guarantee; free cancellation before11:59PM local hotel time November5,2026. Early departure may change the rate."
+      },
+      {
+        "plan": "Breakfast Included",
+        "eligibility": "public",
+        "stay_amount": 2643.42,
+        "meals": "Breakfast for registered adults and children5andunder sharing the room: scenario2adults/age4 within published meal scope, ages8/12 not within that inclusion; their breakfast cost unknown. Mandatory-fee food/beverage credit not deducted.",
+        "cancellation": "Pay when staying/card guarantee; free cancellation before11:59PM local hotel time November5,2026. Early departure may change the rate."
+      }
+    ],
+    "fee_basis": "Nonrefundable nightly room bases245.18/294.38/294.38/294.38/294.38USD sum1422.70+175mandatoryfee+262.82tax/government=1860.52. Flexible299/359/359/359/359 sum1735+175fee+314.20tax=2224.20. Breakfast371/431/431/431/431 sum2095+175fee+373.42tax=2643.42. Mandatory destination charge35USDper-room/night included once; displayed6.50/5.70/2.75/1.50percent tax components, unnamed jurisdictions. Estimated totals exclude additional charges incurred during stay; fifth-bed/rollaway cost not established. Optional selfparking42USD/night/valet70USD/night not added for no-car task; no pets. Destination-fee internet/fitness/PressReader/15USDdailyfoodcredit(excludes roomservice)/15USDdailydrycleaningcredit are not subtracted from stay cost. Rounded room/rate cards309(member),320/382/454(public inclfee beforetax) are not tax-inclusive nightly equivalents. No Honors/points/package discounts imported.",
+    "deposit_basis": "Nonrefundable full stay charged immediately, not an extra fee. Flexible/Breakfast card guarantee/pay when staying. Anticipated stay and estimated incidentals may be held through checkout, released72hours or longer afterward depending on card issuer; hold amount unknown, not an additional hotel charge. No payment/booking made.",
+    "limitation": "October1 counts-only search: 2adults/3kids and adult18+ label, no individual ages4/8/12 entered or confirmed; provider child band unknown. Requested ages are task context, not age acceptance. October9 corrects the inferred0-17 complement, not the source price or policy date. Category/dates/public plans and all numeric amounts retained. Breakfast plan published inclusion covers registered adults and children5andunder; it does not establish breakfast for ages8/12. Extra bedding/mandatory charges and hold amount remain unknown; not typicalseasonal range, currentquote, finalallfeecheckout, five older-child sleeping places, kitchen/rest separation, availability, suitability or cheapest ranking. No provider replay, payment, reservation or contact.",
+    "normalization_action": "FT-PUB-010",
+    "normalization_checked_on": "2026-10-09",
+    "original_observation_path": "docs/research/boston-park-plaza-price-observation-2026-10-01.json",
+    "currency_basis": "USD retained from the October1 saved observation and arithmetic; October9 normalization is not a new provider ISO currency check or conversion.",
+    "currency_evidence_class": "EDITORIAL_INTERPRETATION",
+    "requested_individual_ages_confirmed": false,
+    "party_basis": "requested-task-context-not-provider-age-acceptance"
+  }
+]

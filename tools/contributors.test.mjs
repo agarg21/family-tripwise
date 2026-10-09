@@ -8,8 +8,8 @@ const sitemap = readFileSync("site/sitemap.xml", "utf8");
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
 const guides = urls.filter(url => /\/(where-to-stay|things-to-do|family-itinerary)\//.test(url));
 
-test("all 29 guides have one disclosed AI credit immediately after their title", () => {
-  assert.equal(guides.length, 29);
+test("all 30 guides have one disclosed AI credit immediately after their title", () => {
+  assert.equal(guides.length, 30);
   for (const url of guides) {
     const path = `site${new URL(url).pathname}`;
     const html = readFileSync(path, "utf8");
@@ -36,7 +36,7 @@ test("Miles profile is generated, linked and honest about AI and historical attr
 
 test("supporting profile inventory is complete without attributing non-guide pages", () => {
   const inventory = JSON.parse(readFileSync("ops/gsc-monitor.json", "utf8"));
-  assert.equal(urls.length, 32);
+  assert.equal(urls.length, 33);
   assert.deepEqual([...urls].sort(), [...inventory.urls].sort());
   assert.equal(urls.filter(url => url.endsWith(`/${milesContributor.path}`)).length, 1);
   for (const path of ["index.html", "about.html", milesContributor.path]) {

@@ -1,5 +1,9 @@
 # Operator Implementation Review Log
 
+FT-PUB-010 independent Singer01a1224a-d2be-7c11-a3c4-eb3c61da4b26 finalPASS/noP0-P3 against813file freeze fdb431a6f7845ef4e2589a9a516a23351acafa83796b34b0f63db0b04d8e9288; exact24scope/807baseline789nonownedpreserved/allprior32URLs and unaffectedpublicbytes intact. Independent17focused/state0/GSC88/SEO33-36 and age/history probes; Master611full/13focused/34maintenance/state0/GSC88/localSEO0errors-fiveprior. Final1280-390-320/filter4-1-4/keyboard/actualfullCSV/image/home/nooverflow evidence retained. Original source-price dates and amounts preserved. Only immutable fourops receipt after consensus; exact reviewed push/Pages/marker/exactfiveaffectedresources/productionSEO still required before delivered claim.
+
+FT-PUB-010 exact24paths registered before Boston implementation/source qualification. Named approval supplied; same maintained-record single lodging job, no blanket ranking/fullcost/rest claim. Separate ParkPlaza count-age normalization preserves original observation. Current focused/full/browser QA and different read-only final review required; not delivered.
+
 FT-IMP-050 Huygens01a12235-e017-7b20-9622-c38c174a4bf6 finalPASS/noP0-P3 on807file freeze9c09a576e6997f29a2b5626fb7bd02aa973d3e63951bd60a7b2471b1f8fd332f; independently exact13scope/catalog/bands/dates/schema/title/meta/sitemap32/allotherpublic/dirtybaseline/download/screenshots/4focused/state/SEO verified. Master605full5focused33maintenance/state0/GSC88/localSEO0-fiveprior green. Immutable consensus receipt only; guarded exactpush/Pages/marker/productionSEO/affectedHTML-CSV required before delivery.
 
 FT-IMP-050 October9 registered resumption of existing13paths after documented normal preview access change. Current32URL preservation and historical quote/room/review caveats retained. Current full/focused/responsive/download QA and different independent final read-only review required; no release from old code-only consensus.
