@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {bostonPath,bostonPack,bostonPrices,bostonRooms,bostonCsv,bostonExcluded,bostonFamilyHotelPage} from "./page-generation/boston-family-hotels-page.mjs";
+import {bostonPath,bostonPack,bostonPrices,bostonRooms,bostonCsv,bostonExcluded,bostonFamilyHotelPage,bostonBreakfastUpgrade} from "./page-generation/boston-family-hotels-page.mjs";
 import {validateRoomPack} from "./family-room-task.mjs";
 import {roomComparisonCsv} from "./family-room-comparison.mjs";
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),"utf8");
@@ -33,4 +33,26 @@ test("Boston refresh registry uses maintained exact sources and original dates",
  const sources=Object.values(bostonPack.sources).map(s=>s.url);
  for(const record of watch)for(const url of record.source_urls)assert.ok(sources.includes(url),url);
  assert.ok(JSON.parse(read("ops/gsc-monitor.json")).urls?.includes(`https://familytripwise.com/${bostonPath}`) || read("ops/gsc-monitor.json").includes(`https://familytripwise.com/${bostonPath}`));
+});
+
+test("Boston breakfast premium uses stay-total cents, not rounded nightly subtraction",()=>{
+ const b=bostonBreakfastUpgrade();assert.equal(b.stay_increment,419.22);assert.equal(b.nightly_equivalent,83.84);
+ assert.notEqual(b.stay_increment,(528.68-444.84)*5);
+ assert.equal(b.observation.checked_on,"2026-10-01");assert.equal(b.observation.requested_individual_ages_confirmed,false);
+ assert.equal(b.included_adults,2);assert.deepEqual(b.included_child_ages,[4]);assert.deepEqual(b.uncovered_child_ages,[8,12]);
+ assert.deepEqual(b.plans.map(p=>p.plan),["Flexible Rate","Breakfast Included"]);
+ assert.equal(b.plans[0].cancellation,b.plans[1].cancellation);
+});
+test("breakfast join rejects wrong source, party, dates, member, duplicate and cancellation basis without mutation",()=>{
+ const saved=structuredClone(bostonPrices);
+ for(const mutate of [p=>p[1].checked_on="2026-10-09",p=>p[1].party.child_ages=[4,8,13],p=>p[1].arrival="2026-11-09",p=>p[1].currency="GBP",p=>p[1].rates[2].eligibility="member",p=>p[1].rates.push({...p[1].rates[2]}),p=>p[1].rates[2].cancellation="Different",p=>p.push({...p[1]}),p=>p[1].rates[2].meals="Breakfast for registered adults only",p=>p[1].rates[1].meals="Breakfast included for everyone",p=>{p[1].rates[1].cancellation=p[1].rates[2].cancellation="Free cancellation November1";},p=>p[1].fee_basis="Taxes and destination fee excluded",p=>p[1].deposit_basis="Nonrefundable payment in advance",p=>p[1].engine_party.individual_ages_entered=true]){
+  const invalid=structuredClone(bostonPrices);mutate(invalid);assert.throws(()=>bostonBreakfastUpgrade(invalid));
+ }
+ bostonBreakfastUpgrade();assert.deepEqual(bostonPrices,saved);
+});
+test("public meal comparison preserves count-only uncertainty, partial fees and original clocks",()=>{
+ const html=bostonFamilyHotelPage();for(const text of ["USD 419.22", "USD 83.84", "Not breakfast for all five", "Ages 8 and 12 outside", "not individual age acceptance", "already included once", "not a value winner", "not re-priced", "due October 15", "no number of breakfasts"]){assert.ok(html.toLowerCase().includes(text.toLowerCase()),text);}
+ assert.match(html,/id="breakfast-upgrade" data-room="boston-park-plaza-deluxe-double" data-kitchen="not-established" class="dc-room"/);
+ assert.match(html,/tabindex="0" role="region" aria-label="Park Plaza breakfast upgrade"/);
+ assert.equal(bostonCsv,roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices));
 });

@@ -1,7 +1,9 @@
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { screenRoomPack } from "../family-room-task.mjs";
 import { roomComparisonCsv } from "../family-room-comparison.mjs";
 import { contributorCredit } from "./contributors.mjs";
+import { validateRoomPrices } from "../family-room-price.mjs";
 
 export const bostonPath = "where-to-stay/boston-family-hotels.html";
 export const bostonScreenedOn = "2026-10-09";
@@ -19,6 +21,52 @@ const link = (url, label) => `<a href="${e(url)}">${e(label)}</a>`;
 const cooking = room => room.kitchen === "published-kitchen" ? "Published stovetop, oven, full refrigerator, microwave and dishwasher; dining table seats four, fifth dining place unknown." : "Cooking kitchen not established. A dining-service Private Kitchen label is not guest cooking equipment.";
 const band = room => room.price.rates ? [...new Set(room.price.rates.map(rate => amount(rate.nightly_average)))].join(" / ") : "Unpriced";
 const party = room => room.id === "boston-fenway-two-bedroom-tobt" ? "Individual ages 4, 8 and 12 were entered and retained in the October 3 search. No reservation or bed-allocation confirmation." : "October 1 search entered 2 adult / 3 child counts only. Adult label 18+; child-age band and individual age acceptance unknown.";
+const breakfastEvidence = read("boston-breakfast-upgrade-task-2026-10-09.json");
+
+export function bostonBreakfastUpgrade(prices = bostonPrices, evidence = breakfastEvidence) {
+  const observations = prices.filter(record => record.record_id === evidence.record_id);
+  const observation = observations[0];
+  if (observations.length !== 1 || validateRoomPrices(observations, bostonPack).length ||
+      evidence.evidence_class !== "REUSED_BOOKING_CHECK_POLICY_AND_PAGE_ONLY_PROXY_TASK" ||
+      evidence.source_observed_on !== observation.checked_on || evidence.source_url !== observation.source_url ||
+      evidence.meal_scope.registered_adults_included !== true || evidence.meal_scope.children_age_lte !== 5 ||
+      evidence.meal_scope.credit_deducted !== false || observation.currency !== "USD" ||
+      JSON.stringify(observation.party) !== JSON.stringify({ adults: evidence.scenario.adults, child_ages: evidence.scenario.child_ages }) ||
+      observation.arrival !== evidence.scenario.arrival || observation.departure !== evidence.scenario.departure || observation.nights !== evidence.scenario.nights)
+    throw new Error("Mismatched Boston breakfast observation or policy");
+  const plans = [evidence.comparison.baseline_plan, evidence.comparison.upgrade_plan].map(name => {
+    const matches = observation.rates.filter(rate => rate.plan === name && rate.eligibility === "public");
+    if (matches.length !== 1) throw new Error("Missing or ambiguous public breakfast plan");
+    return matches[0];
+  });
+  if (plans[0].cancellation !== plans[1].cancellation) throw new Error("Different breakfast cancellation basis");
+  // A new meal, fee or booking basis requires requalification of the derived comparison.
+  const terms = { category: observation.category, configuration_count: observation.configuration_count,
+    engine_party: observation.engine_party,
+    terms: plans.map(rate => ({ plan: rate.plan, meals: rate.meals, cancellation: rate.cancellation })),
+    fee_basis: observation.fee_basis, deposit_basis: observation.deposit_basis };
+  if (createHash("sha256").update(JSON.stringify(terms)).digest("hex") !== evidence.maintained_terms_sha256)
+    throw new Error("Boston breakfast source terms changed; review required");
+  const cents = plans.map(rate => Math.round(rate.stay_amount * 100));
+  if (cents.some(value => !Number.isSafeInteger(value)) || cents[1] < cents[0]) throw new Error("Invalid breakfast total cents");
+  const increment = cents[1] - cents[0];
+  return { observation, plans, stay_increment: increment / 100, nightly_equivalent: Math.round(increment / observation.nights) / 100,
+    included_adults: observation.party.adults,
+    included_child_ages: observation.party.child_ages.filter(age => age <= evidence.meal_scope.children_age_lte),
+    uncovered_child_ages: observation.party.child_ages.filter(age => age > evidence.meal_scope.children_age_lte) };
+}
+
+function breakfastSection() {
+  const budget = bostonBreakfastUpgrade();
+  return `<div id="breakfast-upgrade" data-room="${e(budget.observation.record_id)}" data-kitchen="not-established" class="dc-room"><h3>Park Plaza: what does breakfast add?</h3>
+<p><strong>${amount(budget.stay_increment)} more for the five-night sampled stay</strong> than Flexible Rate, equivalent to ${amount(budget.nightly_equivalent)} per configuration/night. The increment is calculated from the displayed stay totals, before rounding the nightly equivalent. Both plans had the same November 5 hotel-local cancellation deadline and card-guarantee terms.</p>
+<div class="dc-table-scroll" tabindex="0" role="region" aria-label="Park Plaza breakfast upgrade"><table><caption>October 1, 2026 observation &middot; 2 Double Beds Deluxe Guestroom &middot; November 8-13, five nights &middot; 1 room / 2 adults / 3 child counts</caption><thead><tr><th scope="col">Dated public plan</th><th scope="col">Displayed stay total, USD</th><th scope="col">Breakfast scope for requested ages 4, 8 and 12</th></tr></thead><tbody>
+<tr><th scope="row">${e(budget.plans[0].plan)}</th><td>${amount(budget.plans[0].stay_amount)}</td><td>Room only. No included breakfast established.</td></tr>
+<tr><th scope="row">${e(budget.plans[1].plan)}</th><td>${amount(budget.plans[1].stay_amount)}</td><td>Registered adults and children aged 5 and under: ${budget.included_adults} adults and age ${budget.included_child_ages.join(", ")} within published meal scope. Ages ${budget.uncovered_child_ages.join(" and ")} outside that inclusion; their breakfast cost is unknown.</td></tr>
+</tbody></table></div>
+<p class="dc-caution">Not breakfast for all five, and not a value winner: compare the ${amount(budget.stay_increment)} increment with what the covered guests would otherwise spend. No number of breakfasts, food-credit savings or older-child meal price is assumed. Displayed tax and destination fee are already included once; extra bedding, other charges and actual meal service remain unresolved. The original search retained child counts, not individual age acceptance.</p>
+<p>${link(budget.observation.source_url,"Dated official booking-check source")} &middot; source and prices observed October 1; comparison assembled October 9, not re-priced. Original price review due October 15. This is a historical planning comparison, not a current offer or full-family food budget.</p></div>`;
+}
 const bookingChecks = {
   "boston-fenway-two-bedroom-tobt": ["Confirm sofa allocation and a fifth dining place; no rollaway or extra occupancy is established by a crib.", "Obtain current taxes, mandatory charges, payment timing and card-hold terms. Optional valet was USD 72/day (USD 85 outside standard times), excluded from this no-car task.", "Confirm registered-child breakfast terms, dietary needs, internet entitlement and current pool service.", "Check the actual museum-to-room return and usable rest time. MBTA's October 3 published age-11-and-under band includes ages 4 and 8, not 12; two adults plus age 12 imply three regular-fare riders unless another eligibility applies. Current fare, transfers, payment and stroller access remain unverified."],
   "boston-park-plaza-deluxe-double": ["Confirm each child's age, the fifth sleeping place, rollaway availability and any extra bedding charge.", "Obtain a current same-category rate, all mandatory charges, card-hold amount and exact cancellation terms.", "Breakfast-included terms cover the adults and age 4, not ages 8 and 12; obtain their meal costs before comparing plans.", "Check room separation and the actual museum-to-room return before relying on a rest break."],
@@ -47,6 +95,7 @@ ${contributorCredit()}
 ${bostonRooms.map((room,index)=>`<tr data-room="${room.id}" data-kitchen="${room.kitchen}"><th scope="row"><a href="#${room.id}">${e(room.hotel)}</a><p>${e(room.category)}</p></th><td>${e(room.sleeping_setup)}<p>Published maximum ${bostonPack.records[index].configurations[0].maximum}${bostonPack.records[index].configurations[0].max_adults !== null ? `, no more than ${bostonPack.records[index].configurations[0].max_adults} adults and ${bostonPack.records[index].configurations[0].max_children} children in this configuration` : ""}. ${room.conditions.map(e).join("; ")}</p></td><td>${e(cooking(room))}</td><td><strong>${band(room)}</strong><p>${room.price.rates ? room.id === "boston-fenway-two-bedroom-tobt" ? "October 3 pre-tax/fee flexible sample, exact entered ages." : "October 1 public-plan samples including displayed tax and destination fee; ages unresolved, fifth bedding charges unknown." : "No same-category/party/date rate observed. Not evidence of sold-out inventory."}</p></td></tr>`).join("\n")}
 </tbody></table></div><p>Fenway's kitchen belongs to its exact two-bedroom TOBT category. Four Seasons is Hotel Boston, not One Dalton; its published child configuration does not settle older-child bed allocation. Langham's full bedroom bed list remains unresolved.</p></section>
 <section id="prices"><h2>What each price includes and leaves open</h2><p>One displayed stay total divided by five hotel nights gives the approximate nightly equivalent. These are dated plan samples, not seasonal ranges or a cheapest-hotel ranking. Fenway's pre-tax amount cannot be compared as an all-in budget with Park Plaza's displayed tax-and-destination-fee totals. Additional bedding, incidentals and mandatory charges can remain unknown.</p>
+${breakfastSection()}
 ${bostonRooms.map(room=>`<article id="${room.id}" class="dc-room" data-room="${room.id}" data-kitchen="${room.kitchen}"><h3>${e(room.hotel)}</h3><p><strong>${e(room.category)}</strong></p><p>${e(room.sleeping_setup)}</p><p>${link(room.source_url,"Official category source")} &middot; facts checked ${room.checked_on}. ${room.conditions.map(e).join("; ")}</p>${room.conflicts.length ? `<p class="dc-caution">${room.conflicts.map(e).join("; ")}</p>` : ""}
 ${room.price.rates ? `<p>${party(room)}</p><div class="dc-table-scroll" tabindex="0" role="region" aria-label="${e(room.hotel)} dated rates"><table><caption>Observed ${room.price.observed_on} &middot; November 8-13 &middot; one configuration &middot; requested 2 adults / ages 4, 8 and 12</caption><thead><tr><th scope="col">Public plan</th><th scope="col">Approx. nightly</th><th scope="col">Displayed five-night total</th><th scope="col">Cancellation / meals</th></tr></thead><tbody>${room.price.rates.map(rate=>`<tr><th scope="row">${e(rate.plan)}</th><td>${amount(rate.nightly_average)}</td><td>${amount(rate.stay_amount)}</td><td>${e(rate.cancellation)}<p>${e(rate.meals)}</p></td></tr>`).join("")}</tbody></table></div><details><summary>Tax, fee and card-hold basis</summary><p>${e(room.price.fee_basis)}</p><p>${e(room.price.deposit_basis)}</p><p>${e(room.price.observation_limitation)}</p><p>${link(room.price.source_url,"Dated booking-check source")}; checked ${room.price.observed_on}, not checked again at launch. ${room.id.includes("park-plaza") ? "USD retained from saved observation; not a new provider ISO currency verification." : "USD retained from the dated booking check."}</p></details>` : `<p><strong>Unpriced:</strong> exact-party/date public price, fee total and deposit basis are not established. Compare the same category and every child's age before deciding cost.</p>`}
 <p><strong>Before booking:</strong></p><ul>${bookingChecks[room.id].map(check=>`<li>${e(check)}</li>`).join("")}</ul></article>`).join("\n")}</section>

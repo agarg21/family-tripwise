@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-079",
+  "learning_unit": "LRN-172",
+  "assessed_on": "2026-10-09",
+  "evidence_class": "REUSED_BOOKING_CHECK_POLICY_AND_PAGE_ONLY_PROXY_TASK",
+  "source_observed_on": "2026-10-01",
+  "source_url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/rooms/",
+  "price_record_path": "docs/research/boston-park-plaza-count-price-normalization-2026-10-09.json",
+  "original_price_path": "docs/research/boston-park-plaza-price-observation-2026-10-01.json",
+  "record_id": "boston-park-plaza-deluxe-double",
+  "maintained_terms_sha256": "88f8dde65a12bd503fd96fa81d07a9ffff43785b88602787602f1e542f084cfb",
+  "term_guard_basis": "SHA256 of structured category/configuration count/engine-party, selected public plan names/meal/cancellation strings and observation fee/deposit basis in that order; a maintained term change requires explicit requalification, not automatic reuse of derived age/fee/cancellation wording.",
+  "scenario": {"adults":2,"child_ages":[4,8,12],"arrival":"2026-11-08","departure":"2026-11-13","nights":5},
+  "comparison": {"baseline_plan":"Flexible Rate","upgrade_plan":"Breakfast Included","basis":"Same named room, count-only search, dates, public plan, displayed tax-and-destination-fee stay totals and published cancellation terms. Compare total cents before deriving nightly equivalent, not rounded nightly values."},
+  "meal_scope": {"registered_adults_included":true,"children_age_lte":5,"older_child_meal_cost":null,"all_five_breakfasts_per_guest_confirmed":false,"credit_deducted":false},
+  "task": {"family_decision":"Does the dated breakfast upgrade cover this whole family and what does it add to the flexible room plan?","hypothesis":"Published rates and long fee notes already expose incremental cost and full-family meal coverage","result":"Rejected in page-only task: parents must subtract totals and join meal age limits. Implement direct source-derived increment and included-versus-uncovered child comparison; do not infer a value winner.","confidence":"High maintained amount/age/date/plan parity and arithmetic; unknown current rates, exact age acceptance, meal prices/service, bedding, users and SEO","falsification_trigger":"Source/price/meal/cancellation change, record join or visible task failure; original price review October15","next_gate":"Focused/full/responsive/filter/download QA, different read-only PASS and exact production-verified release"},
+  "limitations": ["Requested ages are task context, not entered or provider-confirmed ages in the original counts-only search","Displayed tax and destination fee included once, not complete all-fee or fifth-bed budget","Children8/12 breakfast cost unknown; no all-family free meal or cheaper/value claim","Stay premium is not an amount per breakfast/person, no assumed number of breakfasts or meal consumption","No food credits subtracted, cancellation/card hold not another fee, nonrefundable plan is not the comparison baseline","October9 assessment does not renew October1 source/price or October15 review clock; no provider replay"],
+  "public_change": "Existing approved Boston URL only; no new URL or original CSV/data change"
+}

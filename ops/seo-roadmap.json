@@ -20,10 +20,44 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-079",
+      "title": "Expose Boston breakfast upgrade cost and child coverage",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-09T23:09:37Z",
+      "target_paths": [
+        "docs/research/boston-breakfast-upgrade-task-2026-10-09.json",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "tools/boston-family-hotels-page.test.mjs",
+        "site/where-to-stay/boston-family-hotels.html",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html"
+      ],
+      "evidence": "Maintained RES074/PUB010 October1 public Flexible2224.20 andBreakfast2643.42USDfive-night totals/same cancellation and published adults/children5-and-under meals. Public page requires parent to derive premium and join inclusion; budget/deals task asks whether breakfast plan feeds allfive and costs less. PAGE_ONLY_PROXY_TASK, not new quote/demand refresh.",
+      "acceptance_criteria": [
+        "Derive exact419.22USDstay increment and83.84configuration-night equivalent from original total cents; source/category/party/stay/date/taxfee inclusion explicit, no difference from roundednightly multiplication",
+        "Visible included2adults/age4 versus uncovered8/12, their meal costs unknown; counts-only hotel acceptance unknown, no free-meal/valuewinner/creditdouble subtraction",
+        "Same original4categories/4publicplans/CSV/title-H1-schema/34URLs/source dates/held work unchanged except declared existing-page section; focused/full/responsive/keyboard/filter/download QA and different independentPASS",
+        "Exact reviewed main push/Pages/release marker/production SEO/HTML-CSV-unaffectedbyte invariants verified before delivery"
+      ],
+      "measurement_plan": "Parent can see source-dated plan increment and which requested children remain outside breakfast scope without comparing unlike cancellation or reconstructing totals. Proxy nothuman/SEO satisfaction.",
+      "production_invariant": "Only declared Boston HTML changes; original6rowCSV/4categories/4publicplans/titleH1meta-schema/home/About/sitemap34/client/CSS andallotherpublicbytes retained. No newURL/sourceprice renewal or hotelbooking/cancellation/allfee/rest assurance.",
+      "decision": "IMPLEMENT small maintained source-derived meal-plan comparison on existing approvedBoston URL; second23:02:22Zrun transaction before23:47:22Zstart budget",
+      "next_gate": "Build/derive task, full/focused/browser/different read-only consensus, exact production-verified release",
+      "review_receipt": "FT-IMP-079 independent Kant01a122f3-5645-7f20-9947-8312e7e981a5 cycle2 PASS/noP0-P3 at23:18:25Z on be66d7add332c8c660a0c4a4d1cba6131c76c85ec77787b3cc1f82cb85837d46. Cycle1P2 stale-meal-fee-cancel drift closed by structured maintained terms guard/adversarial tests. Independently all838hashes/exact9/all275prioritems-releases/heldscope/publicHTML-identical verified. Master648full8focused38maintenance/state0/GSC88/localSEO0-fiveprior; desktop1280/mobile390-320/nooverflow/photo1280/anchor/keyboardscroll40/filter4-1-4/full6row35columnCSV/no console proof. OriginalOct1price/reviewOct15/count-only age/partialfees retained; no quote/valuewinner/fullfamilymeal claim. Immutable consensus receipt only; exact release/Pages-marker-productionSEO-allinvariants next, no public delivery yet; sprint unchanged."
+    },
+    {
       "id": "FT-RES-141",
       "title": "Resolve Boston Langham exact-family suite budget",
       "kind": "research",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "started_at": "2026-10-09T23:03:02Z",
       "target_paths": [
@@ -48,7 +82,11 @@
       "decision": "PRESERVE unpriced Club suite; reject Family/member starting labels as target rate. Exact ages4/8/12 retained but only different Family returned. No soldout, acceptance, bed allocation or fee assurance; original public/source/price dates unchanged.",
       "next_gate": "Changed ordinary target-category inventory or supplied primary exact-category/party/date public-plan terms; independent Park Plaza public breakfast-budget task eligible next, no unchanged Langham replay.",
       "evidence_record": "docs/research/boston-langham-family-budget-2026-10-09.json",
-      "review_receipt": "FT-RES-141 Noether01a122eb-40a7-7491-9872-94b5087b032e PASS/noP0-P3 at23:08:39Z on caa6cc85060797ce16a27552594ab92c21ebb3a132613d8ec145257f77f0d05a; exact8/all274prioritems-order/threeopsMDtails/ledgerheldscope/829nonownedHEAD/all64sitebytes/originalsource-price dates preserved. Independent read-only audit of data/provenance/source-result screenshot and Master645full38maintenance/state0/GSC88/localSEO0fiveprior green; no writing suites/network/browser/release. Club exact price/fullbed list held, Family756/member741 labels excluded, no soldout/firsthand/acceptance/publicvalue claim. Immutable receipt only; exact research-data push next/sprint unchanged."
+      "review_receipt": "FT-RES-141 Noether01a122eb-40a7-7491-9872-94b5087b032e PASS/noP0-P3 at23:08:39Z on caa6cc85060797ce16a27552594ab92c21ebb3a132613d8ec145257f77f0d05a; exact8/all274prioritems-order/threeopsMDtails/ledgerheldscope/829nonownedHEAD/all64sitebytes/originalsource-price dates preserved. Independent read-only audit of data/provenance/source-result screenshot and Master645full38maintenance/state0/GSC88/localSEO0fiveprior green; no writing suites/network/browser/release. Club exact price/fullbed list held, Family756/member741 labels excluded, no soldout/firsthand/acceptance/publicvalue claim. Immutable receipt only; exact research-data push next/sprint unchanged.",
+      "release_receipt": "FT-RES-141 release 3d4338a796ce060f3e73cf49a2acf840d00b354d remote verified 2026-10-09T23:09:37.269Z; main0-0/emptyindex/exact8/all837indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Research-data-only/learned PRESERVE, no public/Pages delivery. NoetherPASS/Masterfinal645full38maintenance/state0/GSC88/SEO0fiveprior; final5c9d711d4ea176d9f89d8ec5be504cc10a7e3009bdc82b83e7fe474611990d1d/four nonmechanicalfiles unchanged after consensus. LRN171 excludes Family starting/member labels from unpriced Club suite; exact input retained, target-price/bed hold only on changed evidence. All34URLs/sitebytes/originalsource-price data/829nonownedbaseline/held work preserved. First23:02:22Zrun transaction complete; eligible independent Park Plaza public meal-plan budget task next. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-09T23:09:37.282Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "3d4338a796ce060f3e73cf49a2acf840d00b354d"
     },
     {
       "id": "FT-IMP-078",
