@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-077",
+  "task_checked_on": "2026-10-09",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_OFFICIAL_TRANSIT_FARE_FACT",
+  "maintained_input": "docs/research/dc-family-transit-cost-2026-10-03.json",
+  "source_inspected_on": "2026-10-03",
+  "source_url": "https://www.wmata.com/pay.html",
+  "fresh_source_inspection": false,
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "fare_product": "regular-pay-as-you-go"},
+  "family_decision": "Can the parent bound hypothetical extra rail cost for a museum-day room rest instead of interpreting free museums or one free child as free family travel?",
+  "hypothesis": "The current public DC rest paragraph already gives an answerable conditional family transport budget",
+  "baseline": "REJECT: the room comparison preserves rest uncertainty but does not display payable riders or conditional extra rail costs. Reviewed FT-RES-124 records already support the bounded arithmetic; named city approval and normal preview are now resolved.",
+  "expected_examples": [
+    {"fare_period": "weekday-day", "rail_trips": 2, "paying_riders": 4, "free_children": 1, "minimum_usd": 18, "maximum_usd": 54},
+    {"fare_period": "weekday-day", "rail_trips": 4, "paying_riders": 4, "free_children": 1, "minimum_usd": 36, "maximum_usd": 108},
+    {"fare_period": "weekend", "rail_trips": 2, "paying_riders": 4, "free_children": 1, "minimum_usd": 18, "maximum_usd": 20}
+  ],
+  "scope": "Derived from original source-dated policy through the existing assessFamilyTransit library. Network bands for hypothetical separately charged journeys, not a specific hotel/museum route or November quote. Existing internal rail interchange is not an extra charged journey. No pass, transfer or payment-media savings assumed.",
+  "unknowns": ["Actual stations and selected hotel/entrances", "Trip count, date/time service and visit-date fares", "Actual family transit cost and room-plus-transit all-fee total", "Gate/payment arrangements, stroller access and useful rest-return duration"],
+  "human_tested": false,
+  "decision": "IMPLEMENT on existing DC hotel comparison; no new URL, no change to hotel CSV or room/price source records",
+  "confidence": "High shared-policy arithmetic and date/party parity; unknown real-user task success, transport feasibility or SEO impact",
+  "lesson": "Show the conditional payable-rider budget separately from hotel-nightly cost and actual return feasibility; dated network arithmetic is not a route quote.",
+  "next_review_due": "2026-11-02",
+  "next_falsification_trigger": "Changed official fare/child policy, failed arithmetic/date/party control, actual route requirement or source-review interval elapsed"
+}

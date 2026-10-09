@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { runInNewContext } from "node:vm";
-import { dcPath, dcPack, dcPrices, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
+import { dcPath, dcPack, dcPrices, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { roomComparisonCsv } from "./family-room-comparison.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -75,4 +75,40 @@ test("kitchen filter is reversible and retains details/price context without tra
   assert.doesNotMatch(client,/fetch\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage|document.cookie/);
   assert.match(dcFamilyHotelPage(),/class="dc-toolbar" hidden/);
   assert.equal((dcFamilyHotelPage().match(/class="dc-room"/g)||[]).length,3);
+});
+
+test("DC public extra-trip examples retain maintained party, source date and shared conditional arithmetic", () => {
+  const task = JSON.parse(read("docs/research/dc-public-transit-budget-task-2026-10-09.json"));
+  assert.equal(task.fresh_source_inspection, false);
+  assert.equal(task.source_inspected_on, dcTransitEvidence.policy.source.inspected_on);
+  assert.deepEqual(task.scenario.child_ages, [4,8,12]);
+  assert.equal(task.scenario.adults,2);
+  assert.equal(task.human_tested,false);
+  assert.equal(task.next_review_due,"2026-11-02");
+  assert.equal(dcTransitExamples.length,3);
+  dcTransitExamples.forEach(({input,result},index) => {
+    const expected = task.expected_examples[index];
+    assert.equal(input.fare_period,expected.fare_period);
+    assert.equal(input.rail_trips,expected.rail_trips);
+    assert.equal(result.paying_riders,expected.paying_riders);
+    assert.equal(result.free_children,expected.free_children);
+    assert.equal(result.minimum,expected.minimum_usd);
+    assert.equal(result.maximum,expected.maximum_usd);
+    assert.equal(result.actual_trip_cost,null);
+    assert.equal(result.hotel_return_feasible,"UNKNOWN");
+    assert.equal(result.estimate_status,"CONDITIONAL_NETWORK_BAND");
+    assert.equal(result.inspected_on,"2026-10-03");
+  });
+});
+
+test("public rail budget is no-JS, age-bounded, source-linked and never a hotel-night or November quote", () => {
+  const html=dcFamilyHotelPage(), section=html.match(/<section id="rail-budget">([\s\S]*?)<\/section>/)[1];
+  assert.equal((section.match(/<tr>/g)||[]).length,4);
+  for(const value of ["USD 18.00-USD 54.00","USD 36.00-USD 108.00","USD 18.00-USD 20.00","age 4 is free","four regular-fare riders","not per night or a route quote","not four trains","review due November 2","visit-date fare remain unknown","not establish a workable rest return","Hotel price and property check dates are unchanged"])
+    assert.ok(section.includes(value),value);
+  assert.ok(section.includes(`href="${dcTransitEvidence.policy.source.url}"`));
+  assert.ok(section.includes(`href="${dcTransitEvidence.corroborating_source.url}"`));
+  assert.match(section,/tabindex="0" role="region" aria-label="Conditional family rail budget"/);
+  assert.doesNotMatch(section,/hidden|current quote|free family travel|per room|all-fee total is|verified nap-friendly/);
+  assert.match(html,/href="#rail-budget">Family rail budget/);
 });

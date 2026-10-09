@@ -20,6 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-077",
+      "title": "Expose conditional family rail costs on the DC hotel comparison",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-09T22:13:45Z",
+      "target_paths": [
+        "docs/research/dc-public-transit-budget-task-2026-10-09.json",
+        "tools/page-generation/washington-dc-family-hotels-page.mjs",
+        "tools/washington-dc-family-hotels-page.test.mjs",
+        "site/where-to-stay/washington-dc-family-hotels.html",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html"
+      ],
+      "evidence": "Maintained reviewed FT-RES-124 October3 WMATA fares/under5 accompanied child limits and tested shared arithmetic; public DC rest section has no answerable family cost examples. Same2adults ages4/8/12 task, no observation window on DC; daily learning complete/no quota. Current source reuse not new inspection.",
+      "acceptance_criteria": [
+        "Public no-JS dated table shows4paying riders for example2adults/4-8-12 and three separately charged rail-trip scenarios:18-54,36-108,18-20USD from existing shared policy/assessFamilyTransit",
+        "Regular pay-as-you-go network bands only; transfers/passes/devices/actualroute/date operations/wholetrip/staytotal and nap-return feasibility remain unverified; displayed October3source/reviewNovember2, no old hotel-price renewal",
+        "Original3categories5plans/CSV/nightly-party-tax-fee-source context/titleH1meta-schema/sitemap34/unaffectedsite bytes preserved",
+        "Focused/full native and desktop/mobile table/keyboard/filter/task QA, different read-only consensus/exact release/Pages marker/productionSEO"
+      ],
+      "measurement_plan": "Page-only proxy asks can parent bound hypothetical extra rail spending instead of treating free museum or one free child as a free family rest-return? Not current itinerary, human testing or SEO proof.",
+      "production_invariant": "Existing DC URL only, no broad city ranking or new URL; original room/price data and downloads unchanged. No numeric transit cost joined to old room prices as all-fee budget. Current source dates and unknown actual route/return gates remain.",
+      "decision": "IMPLEMENT maintained conditional budget examples on approved public DC page; second finish-first transaction of22:02:22Zrun, start budget22:47:22Z/sprint expiry unchanged.",
+      "next_gate": "Native/full/responsive/different independent read-only PASS/PASS_WITH_P3 and exact verified production release",
+      "review_receipt": "FT-IMP-077 Linnaeus01a122bd-b3c1-7fe1-9844-b927d4f52306 PASS_WITH_P3/noP0-P2 on frozen7844b71d47381de324de0469cd56c5c0fae586e8be6d6083d2115cc85b5ad7c3/all833/all832baseline/exact9/all272prioritems/heldtails/unaffectedpublic/CSV/metadata-schema preserved. P3: fixedOct9fare assessment and room-only maintenance omit November2fare due clock; separate scoped follow-up, current source-dated wording accurate. Independent15focused/state0/GSC88/localSEO0-fiveprior/Master638full-log/browser screenshots audited. Master638full15focused34maintenance/state0/GSC88/localSEO34canon37HTML0errors-fiveprior,1280/390/320 nooverflow/keyboard table scroll/photo/railanchor/filter3-1-3-threebudgetrows. Fourregularriders/1freechild/18-54-36-108-18-20 hypothetical network bands correct; sourceOct3/reviewNov2/actualroute-rest-finalbudget unknown. Immutable consensus receipt only; exact release and production verification next."
+    },
+    {
       "id": "FT-IMP-076",
       "title": "Make AREA15 adult-accompaniment gate answerable on Las Vegas teen page",
       "kind": "improvement",
