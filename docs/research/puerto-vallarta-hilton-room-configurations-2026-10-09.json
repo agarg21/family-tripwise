@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-138",
+  "destination": "Puerto Vallarta",
+  "checked_on": "2026-10-09",
+  "refresh_days": 30,
+  "evidence_scope": "Two exclusion controls from 12 displayed official individual categories. Not a whole-property rejection, connecting bundle, availability check, care admission, review corpus or family price. Original Hyatt pack remains separate and unchanged.",
+  "scenario": {"adults":2,"child_ages":[4,8,12],"stay":{"arrival":"2026-11-08","departure":"2026-11-13"},"preferences":["one accommodation","no car"],"budget":null},
+  "sources": {"hilton-rooms":{"url":"https://www.hilton.com/en/hotels/pvrpahh-hilton-vallarta-riviera-all-inclusive-resort/rooms/","checked_on":"2026-10-09","published_on":null,"evidence_class":"OFFICIAL_PROPERTY_FACT","date_basis":"source-text-inspected-not-policy-effective"}},
+  "records": [
+    {
+      "id":"pv-hilton-standard-two-queen",
+      "hotel":"Hilton Vallarta Riviera All-Inclusive Resort",
+      "category":"Standard Oceanfront - 2 Queen Beds",
+      "source_id":"hilton-rooms",
+      "sleeping_setup":"Two queens; extra sleeping place not established",
+      "kitchen":"not-established",
+      "connection":"not-applicable",
+      "configurations":[{"maximum":4,"max_adults":null,"max_children":null,"infant_extension":null,"conditions":["No fifth-person extension established"],"evidence_class":"OFFICIAL_PROPERTY_FACT","basis":"Exact official card and room modal maximum, not a bed-count inference"}],
+      "checks":["Outside the named single-category five-person task","Do not adopt default two-adult/date prices or fabricate a connection","Any separately named combined configuration requires its own occupancy, booking, sleeping and price evidence"],
+      "conflicts":[],
+      "price":{"currency":null,"unit":"configuration/night","amount":null,"observed_on":null,"status":"not-observed","missing_basis":["No supported same-category five-person quote; unknown currency, taxes, fees and payment terms"]}
+    },
+    {
+      "id":"pv-hilton-presidential-king",
+      "hotel":"Hilton Vallarta Riviera All-Inclusive Resort",
+      "category":"Enclave Presidential Ste 1kg- Lg Walkout Terr",
+      "source_id":"hilton-rooms",
+      "sleeping_setup":"King label; complete sleeping allocation not established",
+      "kitchen":"not-established",
+      "connection":"not-applicable",
+      "configurations":[{"maximum":3,"max_adults":null,"max_children":null,"infant_extension":null,"conditions":["No fifth-person extension established"],"evidence_class":"OFFICIAL_PROPERTY_FACT","basis":"Exact official category card maximum; suite name does not increase occupancy"}],
+      "checks":["Outside the named single-category five-person task","Do not infer capacity, kitchen or connecting category from suite size","Any separately named combined configuration requires its own occupancy, booking, sleeping and price evidence"],
+      "conflicts":[],
+      "price":{"currency":null,"unit":"configuration/night","amount":null,"observed_on":null,"status":"not-observed","missing_basis":["No supported same-category five-person quote; unknown currency, taxes, fees and payment terms"]}
+    }
+  ],
+  "offer_observations": [],
+  "maintained_evidence": "docs/research/puerto-vallarta-hilton-family-price-gate-2026-10-09.json"
+}

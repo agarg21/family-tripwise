@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-138",
+  "checked_on": "2026-10-09",
+  "destination": "Puerto Vallarta",
+  "hypothesis": "Hilton's larger-suite or family-resort labels supply a supported single-category five-person quote independent of the unchanged Hyatt flow",
+  "evidence_class": ["OFFICIAL_PROPERTY_FACT", "READ_ONLY_UI_PROXY_TASK"],
+  "sources": [
+    {"url":"https://www.hilton.com/en/hotels/pvrpahh-hilton-vallarta-riviera-all-inclusive-resort/","inspected_on":"2026-10-09","published_on":null,"result":"Readable current official home body; Puerto Vallarta property address, all-inclusive marketing, not an occupancy or dated price contract"},
+    {"url":"https://www.hilton.com/en/hotels/pvrpahh-hilton-vallarta-riviera-all-inclusive-resort/rooms/","inspected_on":"2026-10-09","published_on":null,"result":"Readable official body and normal browser room selector; 12 displayed individual categories with headcounts two through four. Standard two-queen modal independently shows maximum four. This is sampled displayed-category coverage, not every inventory configuration."}
+  ],
+  "family_task": {"adults":2,"child_ages":[4,8,12],"arrival":"2026-11-08","departure":"2026-11-13","nights":5,"configuration":"one named accommodation","transport":"no car"},
+  "ui_observation": {
+    "initial_adults":2,
+    "initial_children":0,
+    "initial_displayed_categories":12,
+    "final_adults":2,
+    "final_children":2,
+    "third_child_control_disabled":true,
+    "displayed_guest_limit_message":true,
+    "final_displayed_categories":10,
+    "individual_ages_entered":false,
+    "requested_party_accepted":false,
+    "default_arrival":"2026-10-09",
+    "default_departure":"2026-10-10",
+    "requested_stay_entered":false,
+    "quote_flow_opened":false,
+    "limitation":"Room filters are not exact reservation acceptance. Initial prices loaded as unavailable for the default one-night/two-adult context; do not transfer availability to November or five people. Age selectors are not a booking policy or admission promise. A convenience accordion was empty; it establishes no connecting bundle. A stale generated-ID read timed out before clicks; a disabled third-child click failed and was not retried or overridden."
+  },
+  "price_observation": {"currency":null,"unit":"configuration/night","amount":null,"observed_on":null,"rates":[],"status":"not-observed","reason":"No inspected named individual category supports five; collecting a smaller-party/default-date rate would not answer the task"},
+  "retained_pack":"docs/research/puerto-vallarta-hilton-room-configurations-2026-10-09.json",
+  "decision":"REJECT the inspected Hilton individual-category shortcut for the five-person task; PRESERVE PV publication until another supported category and family price qualify",
+  "confidence":"High for inspected category maxima and observed disabled control; unknown for uninspected linked categories, exact reservation, final fees, care, transport/rest and real-user outcomes",
+  "next_falsification_trigger":"A primary named larger/connected category with published combined occupancy and a readable exact-party/date/currency/fee quote, or a separately approved multi-configuration family task",
+  "next_eligible_run":"Next actual sprint wake: independently qualify a different five-person city-category and its family-night budget, not an unchanged Hilton/Hyatt attempt",
+  "privacy":"Public-safe facts and task paraphrases only; no copied reviews, identities, source bodies, credentials or booking. No paid call, account, contact, indexing or scheduler mutation."
+}
