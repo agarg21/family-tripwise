@@ -1,4 +1,5 @@
 import { contributorCredit } from "./contributors.mjs";
+import { sanDiegoCurrentFeeNote } from "./san-diego-hotel-evidence.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
 const sanDiegoFamilyHotels = [
@@ -107,10 +108,10 @@ const sanDiegoFamilyHotels = [
     priceRange: "$235-$360+",
     strengths: ["Official materials list three heated pools on a waterfront Coronado resort", "No-reservation Village shuttle service can reduce one Coronado transfer", "Pool/service/family amenity positives recur in online review patterns"],
     tradeoffs: ["More isolated from Coronado Village and San Diego attractions than central bases", "Parking/fees and property-condition comments appear in conflicts"],
-    familySetup: "Official pages list three heated pools, a $42 resort fee, no-reservation Coronado Village shuttle service, and on-demand beach shuttle service. The current FAQ says $50 self-parking and $55 valet, while the amenities page still says $47 self-parking; exact room layout and occupancy remain room-specific.",
+    familySetup: "Official pages list three heated pools, no-reservation Coronado Village shuttle service, and on-demand beach shuttle service; exact room layout and occupancy remain room-specific.",
     priceNote: "Room view, season, parking, and Coronado logistics can move the total.",
     reviewSignal: "Pool, service, family amenities, toddler/family pool enjoyment, children's pool, crib, laundry, and supervised-activity positives; conflicts around isolation, parking/fees, and property condition.",
-    parentCheck: "Verify final total and which self-parking figure applies, shuttle hours, room/suite layout, pool/kids-program status, driving plan, and whether isolation helps or hurts the family.",
+    parentCheck: "Verify rate-specific fee inclusion, applicable parking nights and processing charge, final total, shuttle hours, room/suite layout, pool/kids-program status, and driving plan.",
     mapQuery: "Loews Coronado Bay Resort",
     sources: ["LOEWS-1", "LOEWS-P", "LOEWS-R"]
   },
@@ -120,11 +121,11 @@ const sanDiegoFamilyHotels = [
     area: "La Jolla Shores",
     priceRange: "$350-$550+",
     strengths: ["Beachfront location creates a distinct La Jolla trip shape", "The official site now lists a refreshed heated pool and children's wading pool", "Beach, location, staff, and refreshed-room positives recur in online review patterns"],
-    tradeoffs: ["Official first-party pages conflict between $45 and $55 parking", "Exact kitchen and sofa-bed setups remain room-specific"],
+    tradeoffs: ["Parking availability, billed days and tax basis need checking", "Exact kitchen and sofa-bed setups remain room-specific"],
     familySetup: "Official room pages show two-queen rooms plus selected suites with sofa beds, kitchenettes, or a full kitchen. The site now lists a refreshed heated pool and children's wading pool; verify the exact room name because room features are not property-wide.",
     priceNote: "Larger rooms and peak dates can move much higher.",
     reviewSignal: "Beach access, location, staff, and refreshed-room positives recur; fees, noise/value, and room-condition variability appear in conflicts.",
-    parentCheck: "Verify current pool operations, exact room kitchen and bedding, which published $45/$55 parking amount applies, final total, and cancellation terms.",
+    parentCheck: "Verify current pool operations, exact room kitchen and bedding, parking availability and billed days, rate-specific fee inclusion, final total, and cancellation terms.",
     mapQuery: "La Jolla Shores Hotel",
     sources: ["LJS-OFFICIAL-ROOMS", "LJS-OFFICIAL-FAQ", "LJS-OFFICIAL-POLICY", "LJS-PRICE-EXPEDIA", "LJS-REVIEWS-EXPEDIA", "LJS-REVIEWS-TRIPADVISOR"]
   },
@@ -149,10 +150,10 @@ const sanDiegoFamilyHotels = [
     priceRange: "$250-$400+",
     strengths: ["Official pages publish two heated pools, exact room capacities, and many suite layouts", "Crib, rollaway, connecting-room, refrigerator, microwave, parking, and resort-fee details are unusually clear", "Location, pools, grounds, and family-activity positives recur"],
     tradeoffs: ["There are no full kitchens", "Room condition, parking walks, and fee/value perception vary"],
-    familySetup: "Standard rooms list a maximum occupancy of four; many junior suites and suites list up to six with sofa sleepers. Official pages list free cribs, limited $10 rollaways, request-only connecting rooms, refrigerators and microwaves rather than kitchens, two heated pools, a $25 resort fee, and $35 parking.",
+    familySetup: "Standard rooms list a four-person maximum; many junior suites and suites list up to six with sofa sleepers. Official pages list free cribs, request-only connecting rooms, refrigerators, microwaves and two heated pools, but no kitchens.",
     priceNote: "Suites and peak weekends can move higher.",
     reviewSignal: "Mission Bay location, pools, grounds, staff, and family activities recur positively; room size or condition, parking distance, and total-value concerns vary.",
-    parentCheck: "Verify exact room layout and occupancy, final total with parking and resort fee, connecting request if needed, pool/activity schedule, and cancellation terms.",
+    parentCheck: "Verify exact room layout and occupancy, rollaway availability, payable stay total, card authorization and release terms, connecting request, pool/activity schedule, and cancellation.",
     mapQuery: "The Dana on Mission Bay",
     sources: ["DANA-OFFICIAL-FAQ", "DANA-OFFICIAL-ROOMS", "DANA-PRICE-EXPEDIA", "DANA-REVIEWS-EXPEDIA", "DANA-REVIEWS-BOOKING", "DANA-REVIEWS-TRIPADVISOR"]
   },
@@ -222,7 +223,9 @@ const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfc
 
 function sanDiegoFamilyHotelPage() {
   const hotels = sanDiegoFamilyHotels;
-  const hotelCards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
+  const hotelCards = hotels.map((hotel) => {
+    const feeNote = sanDiegoCurrentFeeNote(hotel.name);
+    return `          <article class="detail-card hotel-card">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
@@ -231,10 +234,11 @@ function sanDiegoFamilyHotelPage() {
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
             <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
-          </article>`).join("\n");
+          </article>`;
+  }).join("\n");
 
   const comparisonRows = hotels.map((hotel) => `              <tr>
                 <td>${esc(hotel.name)}</td>
@@ -277,7 +281,7 @@ function sanDiegoFamilyHotelPage() {
           <article class="quick-pick"><span>Downtown base</span><strong>Homewood or Manchester Grand Hyatt</strong><p>Choose Homewood for suite, kitchen, and breakfast function; Manchester for a large full-service waterfront hotel, after checking renovation and pool status.</p></article>
           <article class="quick-pick"><span>LEGOLAND-heavy trip</span><strong>LEGOLAND Hotel/Castle</strong><p>Use when the park is the anchor; compare package, tickets, and parking as one total.</p></article>
           <article class="quick-pick"><span>Coronado resort trip</span><strong>Hotel del or Loews</strong><p>Choose Hotel del for the iconic beachfront experience or Loews for a more isolated bay resort; price the full stay before deciding.</p></article>
-          <article class="quick-pick"><span>La Jolla beach trip</span><strong>La Jolla Shores Hotel</strong><p>Compare for direct beach access and the refreshed pool, then verify the exact room setup and which published parking amount applies.</p></article>
+          <article class="quick-pick"><span>La Jolla beach trip</span><strong>La Jolla Shores Hotel</strong><p>Compare for direct beach access and the refreshed pool, then verify the exact room setup, parking availability and billed days.</p></article>
         </div>
         <dl class="snapshot">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
@@ -339,7 +343,7 @@ ${hotelCards}
           <p class="eyebrow">Sources checked</p>
           <h2>How the hotel information was checked</h2>
         </div>
-        <p>Room, fee, parking, pool, and renovation facts come from official hotel pages checked August 17. Review notes summarize a small directional sample from public travel review and booking sites; the themes are not representative ratings, copied reviews, or firsthand stays. Prices are broad planning ranges from older public examples, not renewed or live quotes.</p>
+        <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays. Prices are older broad planning ranges, not renewed or live quotes.</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>

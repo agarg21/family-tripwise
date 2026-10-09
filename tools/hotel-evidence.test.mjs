@@ -72,6 +72,7 @@ test("catalog reads and regeneration do not change published hotel comparisons",
   const temp = mkdtempSync(join(tmpdir(), "ft-hotel-standard-"));
   try {
     for (const folder of ["site", "tools", "src"]) cpSync(join(root, folder), join(temp, folder), { recursive: true });
+    cpSync(join(root, "docs/research"), join(temp, "docs/research"), { recursive: true });
     const paths = [...new Set(hotelEvidence().map((r) => new URL(r.page_url).pathname.slice(1)))];
     const original = paths.map((p) => readFileSync(join(temp, "site", p)));
     execFileSync(process.execPath, [join(temp, "tools/generate-pages.mjs")], { cwd: temp, stdio: "pipe" });

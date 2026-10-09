@@ -128,3 +128,22 @@ export function normalizeSanDiegoHotel(hotel, retainedPrice, registry = sanDiego
   if (hotel.name === "The Dana on Mission Bay") fields.fees = currentDanaFees;
   return structuredClone(fields);
 }
+
+export function sanDiegoCurrentFeeNote(name) {
+  const envelope = name === "Loews Coronado Bay Resort" ? currentLoewsFees
+    : name === "La Jolla Shores Hotel" ? currentLaJollaFees
+    : name === "The Dana on Mission Bay" ? currentDanaFees : null;
+  if (!envelope) return null;
+  const fee = envelope.value;
+  const basis = `USD (interpreted); checked ${envelope.observed_on}: `;
+  let text;
+  if (name === "Loews Coronado Bay Resort") {
+    text = `${basis}resort $${fee.resort_fee_usd} per ${fee.resort_fee_unit} plus tax; FAQ self-parking $${fee.self_parking_usd}/${fee.parking_unit} or valet $${fee.valet_usd}/${fee.parking_unit}, each plus tax. Conditional $${fee.parking_processing_fee_usd} ${fee.parking_processing_fee_unit} processing may apply. Parking: FAQ only, not numeric amenities corroboration. Rate inclusion, taxes, charged nights and family-room total remain unknown.`;
+  } else if (name === "La Jolla Shores Hotel") {
+    text = `${basis}resort $${fee.resort_fee_usd}/${fee.resort_fee_unit} plus taxes; parking $${fee.parking_usd}/${fee.parking_unit}, limited availability. Parking tax, billed days and rate inclusion unknown; not an all-fee family-room quote.`;
+  } else {
+    const hold = fee.incidental_authorization;
+    text = `${basis}resort $${fee.resort_fee_usd}/${fee.resort_fee_unit} plus tax; self-parking $${fee.self_parking_usd}/${fee.parking_unit}, no valet. Optional $${fee.rollaway_usd}/${fee.rollaway_unit} rollaway: selected rooms, limited, not guaranteed. Card authorization: stay amount plus $${hold.amount_usd}/${hold.unit} incidentals; a hold, not an extra payable fee. Hold days, release timing, parking/rollaway taxes, billed nights and rate inclusion unknown; not an all-fee quote or full cash requirement.`;
+  }
+  return { text, sourceUrls: [...envelope.source_urls] };
+}

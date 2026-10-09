@@ -1,6 +1,14 @@
 # San Diego Page Status
 
+FT-IMP-075 October9 final responsive QA passes at1280/390/320 after user-confirmed changed normal-preview access. Three dated fee notes are readable; table scrolling, keyboard source focus, hero and local navigation checked, no page overflow or console errors. Native599full/12focused/33maintenance/state-GSC-localSEO green. Different independent final release review and Pages-marker-productionSEO remain; not yet public delivery. Earlier preview/QA holds below are historical.
+
+October9 final native QA: Master599full/22focused/33maintenance passed; state0/GSC88/localSEO31canonical34HTML0errors-fiveprior/whitespace. Same18path isolated delta,264prior released items and800preaction outside-owned files preserved; held Chicago suffix intact/ownedSDprefix parity/latestDana envelope retained. Initial editorial-length failure fixed by concise fee/source prose; existing3200word ceiling unchanged, final3198words. All sessionscomplete; browser and production not checked. Different read-only code consensus next; explicit public HOLD until normal browser access, desktop/mobile/narrow validation and final release/production gates. Earlier pending test statements are chronology, not final QA state.
+
+FT-IMP-075 October9 latest-HEAD candidate integrates LaJolla/Loews current fee notes and Dana fee-versus-authorization policy from October8. Same12hotel inventory/historicalnightlybands/non-fee dates. Nativefull/focusedQA/different read-only code review pending; publicbrowser/production UNKNOWN and release HOLD until documented changednormalpreview access. No denied retry, wholemixedgenerator staging or deployment to preview.
+
 October8 FT-RES-136 implements [Dana fee/authorization shared record](../docs/research/dana-fee-hold-2026-10-08.md), not public page delivery. All current public HTML and historical nightly bands remain unchanged. NativeQA/read-onlyreview/exact shared-tool docs release pending;075 public preview gate and its intact unshipped candidate remain separate. No whole-property date renewal or exact-family cash total.
+
+October7 FT-IMP-075 public fee correction candidate is implemented locally, NOT released or production-verified. Two card notes derive from reviewed October5LaJolla/October6Loews envelopes; obsolete parking conflicts removed from candidate card/table/quickpick, all12historicalbands and non-fee facts preserved. [Exact scope and gates](../docs/plan/san-diego-public-fees-2026-10-07.md). Focused9pass initially; fullnativeQA/read-onlyreview and normal permitted desktop/mobile preview remain. Recorded client denial unresolved, no retry/bypass or deployment to obtainpreview. Existing public fee wording stays unchanged until all release gates complete; isolated generator excludes heldChicago/export hunks.
 
 Last updated: 2026-09-17
 

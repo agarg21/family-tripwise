@@ -76,10 +76,11 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
   assert.doesNotMatch(html, /What online reviews commonly mention|recurring positives and concerns/);
   assert.doesNotMatch(html, /review[- ]signal/i);
   assert.match(html, /refreshed heated pool and children(?:'|&#39;)s wading pool/i);
-  assert.match(html, /published \$45\/\$55 parking amount applies/i);
+  assert.match(html, /parking availability and billed days/i);
   assert.doesNotMatch(html, /La Jolla Shores[^]*?current construction, pool\/deck operations/i);
-  assert.match(html, /three heated pools, a \$42 resort fee/i);
-  assert.match(html, /current FAQ says \$50 self-parking and \$55 valet, while the amenities page still says \$47 self-parking/i);
+  assert.match(html, /three heated pools, no-reservation Coronado Village shuttle service/i);
+  assert.match(html, /resort \$42 per room\/night plus tax; FAQ self-parking \$50\/night or valet \$55\/night, each plus tax/i);
+  assert.doesNotMatch(html, /amenities page still says \$47 self-parking|\$45\/\$55 parking|which self-parking figure applies/i);
   assert.match(html, /no-reservation Coronado Village shuttle service/i);
   assert.match(html, /December 2026 fourth-floor-pool schedule/i);
   assert.match(html, /Official amenities list a \$46 fee and \$49 reserved doorstep parking/i);

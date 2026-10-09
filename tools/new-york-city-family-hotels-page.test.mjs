@@ -152,6 +152,7 @@ test("full generation is idempotent and leaves current output unchanged", () => 
   const siteCopy = join(temp, "site");
   cpSync(join(root, "site"), siteCopy, { recursive: true });
   cpSync(join(root, "tools"), join(temp, "tools"), { recursive: true });
+  cpSync(join(root, "docs/research"), join(temp, "docs/research"), { recursive: true });
   cpSync(join(root, "src/prototypes/cancun-resort-comparison"), join(temp, "src/prototypes/cancun-resort-comparison"), { recursive: true });
 
   try {
