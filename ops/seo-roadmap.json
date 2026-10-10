@@ -20,10 +20,47 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-084",
+      "title": "Compare DC public plan premiums from exact dated stay totals",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T07:03:55Z",
+      "target_paths": [
+        "docs/research/dc-plan-premium-task-2026-10-10.json",
+        "docs/research/dc-plan-premium-task-2026-10-10.md",
+        "tools/dc-plan-premium.mjs",
+        "tools/dc-plan-premium.test.mjs",
+        "tools/page-generation/washington-dc-family-hotels-page.mjs",
+        "tools/washington-dc-family-hotels-page.test.mjs",
+        "site/where-to-stay/washington-dc-family-hotels.html",
+        "site/washington-dc-comparison.css",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html"
+      ],
+      "evidence": "October10 existing live DC rate-table proxy task: all five totals and terms exist, but same-category plan premiums require subtraction and dividing rounded nightly labels gives a cent error. Reuse September30 reviewed Hilton observations with October5 count-only age correction; no new provider flow. LatestOct9/priorOct8 GSC reused finalizedOct7/6 orientation only, no alignedCTR evidence; dailyLRN178-180 complete.",
+      "acceptance_criteria": [
+        "Same-category premium versus public Non-refundable baseline from integer-cent five-night totals, not rounded nightly differences",
+        "All original plan, payment/cancellation terms, price context and source clocks retained; no current refund assurance or exact-age acceptance",
+        "Focused/full native QA, responsive keyboard/filter/image/download verification, different read-only PASS, exact-path release and production verification"
+      ],
+      "measurement_plan": "Proxy task: find Homewood Semi-Flex USD138.19 per five-night configuration premium and USD27.64 nightly equivalent without a calculator, with original Nov1 cancellation deadline beside it. Not human testing or SEO proof.",
+      "production_invariant": "Only one explanatory paragraph, one new premium column and scoped dc-rate-table class in each of the two existing DC priced detail tables, plus DCstylesheet query v=ft-imp084 for cache delivery. Strip those additions to reproduce original HTML byteexact. CSS only adds scoped1000px rate-table minimum and280px last-column width; all prior rules unchanged. All five original amounts/plans/terms, sources/September30 and October5 provenance/October14 price clock, original CSV, three categories/one kitchen/one unpriced, metadata/schema/sitemap34, all other public and prior research bytes, held work and sprint unchanged. No quote refresh, final fee total, age acceptance, recommendation or external mutation.",
+      "decision": "IMPLEMENT bounded derived premium beside existing dated plans; public terms are historical observations, not current cancellation guarantees.",
+      "next_gate": "Finish QA/read-only review/release and production checks; later originalOctober14 price review or changed permitted exact-age/fee evidence, never unchanged provider retry.",
+      "review_receipt": "FT-IMP-084 independent Copernicus PASS recorded at actual clock2026-10-10T07:14:37Z; noP0-P3. Frozen865/exact13/manifest397ebe0e71e4d7dba62c272f9ff554d80985176f434d2db76d4a6d1cf4609b04/allhashesnodrift/284prioritems/heldisolation intact. Independently12tests/read-only strippedHTML-CSS invariant/screenshots/actualCSV(3)byteexact. Master683full/12focused/41maintenance/state0/GSC88/localSEO0fiveprior; actual1280x900-390x844-320x844nooverflow/1000pxrate-table280pxterms/keyboard320557max712and390406.5max642/filter3-1-3/image1280/errors[]. Same-category stay-cent premiums only, originalSeptember30-October5 provenance/October14review/terms/age-feeunknowns retained; noquote/refundright/winner claim. Immutable consensus only, publicrelease/productionverification pending."
+    },
+    {
       "id": "FT-IMP-083",
       "title": "Name DC public rate plans beside every dated nightly sample",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T06:01:28Z",
       "target_paths": [
@@ -51,7 +88,11 @@
       "production_invariant": "Only two priced DC overview strong-label contents change. All five original amounts/plans/fees/cancellation/count-only age provenance/source dates/clocks, original CSV, three categories/one kitchen/one unpriced, public bytes elsewhere, metadata/schema/sitemap34 and held dirty work remain exact. No provider quote, price renewal, winner/eligibility assurance or external/scheduler mutation.",
       "decision": "IMPLEMENT plan identity beside all five existing DC dated nightly samples; preserve current quote, exact child-age acceptance and full costs unknown.",
       "next_gate": "Finish native/responsive/different read-only consensus/exact push and production verification; next evidence gate remains original October14 price review or changed exact-category age/fee source, not unchanged provider retry.",
-      "review_receipt": "FT-IMP-083 independent Rawls PASS recorded at actual clock2026-10-10T06:08:02Z/noP0-P3; exact10/all861hashes/no drift/32c2fadd54f2f7823a5c21bac92520a3c515fca80fa4ae1945b1702ce0c3c07c,851nonowned and283prioritems/heldwork preserved. Read-only8tests/screenshots/actualCSVbyteexact; onlytwooverview strongcontents change, allfive originalplan-amount-dates-terms-fees-ageunknowns/metadata/schema/34URLs unchanged. Master679full/8focused/41maintenance/state0/GSC88/localSEO0fiveprior/responsive1280-390-320nooverflow/keyboard15to442-491.5/filter3-1-3/image1280/downloadCSV(2)/errorconsoleempty. Immutable consensus only; publicrelease and productionverification pending."
+      "review_receipt": "FT-IMP-083 independent Rawls PASS recorded at actual clock2026-10-10T06:08:02Z/noP0-P3; exact10/all861hashes/no drift/32c2fadd54f2f7823a5c21bac92520a3c515fca80fa4ae1945b1702ce0c3c07c,851nonowned and283prioritems/heldwork preserved. Read-only8tests/screenshots/actualCSVbyteexact; onlytwooverview strongcontents change, allfive originalplan-amount-dates-terms-fees-ageunknowns/metadata/schema/34URLs unchanged. Master679full/8focused/41maintenance/state0/GSC88/localSEO0fiveprior/responsive1280-390-320nooverflow/keyboard15to442-491.5/filter3-1-3/image1280/downloadCSV(2)/errorconsoleempty. Immutable consensus only; publicrelease and productionverification pending.",
+      "completed_on": "2026-10-10T06:10:14.416Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "01f306f1e30dd43966947c745cde69e10fb28bf5",
+      "production_receipt": "FT-IMP-083 delivered and production-verified 2026-10-10T06:10:14.416Z at 01f306f1e30dd43966947c745cde69e10fb28bf5; Pages38029902406success/matchingmarker/exact200DCHTML-originalCSV/onlytwooverviewlabels/34URLs/allpriorpublic-research-source-price-metadata-schema-bytes/productionSEO0fiveprior. All five original public plans now named beside nightly samples, including316.61USD Semi-Flex; originalSeptember30/October5agecorrection/October14review unchanged, no currentquote/ageacceptance/cancellation guarantee/fullbudget/winner. Master679full/8focused/41maintenance/state0/GSC88/responsive1280-390-320nooverflow/newlabelsfit/keyboard390to442and320to491.5/filter3-1-3/image1280/actualCSV(2)byteexact/noerrorconsole; different read-only consensus above/exact10/all861indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. LRN180 proxy learning, not human/SEO proof. Next gate originalOctober14price review or changed exact-category age/fee evidence; no unchanged provider retry. Mechanical completion only/no metadata-onlycommit; heldwork/sprint preserved."
     },
     {
       "id": "FT-RES-145",

@@ -52,6 +52,18 @@ test("DC overview names every dated public plan rather than hiding the middle ra
   assert.equal((overview.match(/<strong>Unpriced<\/strong>/g)||[]).length,1);
   assert.doesNotMatch(overview,/USD 334\.68-USD 408\.14|USD 288\.97-USD 339\.97|USD 350|guaranteed cancellation|cheapest/);
 });
+test("DC premium cells retain original terms and exact stay-total arithmetic", () => {
+  const html = dcFamilyHotelPage();
+  assert.equal((html.match(/<th scope="col" data-plan-premium>/g) || []).length, 2);
+  assert.equal((html.match(/<td data-plan-premium>/g) || []).length, 5);
+  assert.equal((html.match(/<table class="dc-rate-table">/g) || []).length, 2);
+  assert.match(read("site/washington-dc-comparison.css"), /\.dc-page \.dc-rate-table \{ min-width: 1000px; \}/);
+  assert.match(read("site/washington-dc-comparison.css"), /\.dc-page \.dc-rate-table th:last-child \{ width: 280px; \}/);
+  assert.equal((html.match(/<td data-plan-premium>Baseline<\/td>/g) || []).length, 2);
+  for (const value of ["USD 367.33", "USD 73.47", "USD 138.19", "USD 27.64", "USD 254.98", "USD 51.00", "before rounding", "do not buy or guarantee current cancellation rights", "price review remains due October 14"])
+    assert.ok(html.includes(value), value);
+  assert.doesNotMatch(html, /USD 73\.46|guaranteed refund|current refundable quote/);
+});
 test("unknown age, fee, route and unpriced status cannot become a family-budget winner", () => {
   const html = dcFamilyHotelPage();
   for (const phrase of ["child-age band", "individual ages", "not a new price", "Unpriced", "Not evidence of sold-out", "not typical seasonal", "incidentals authorization", "entrance-to-room", "not a representative DC", "Premium category"]) assert.ok(html.includes(phrase),phrase);

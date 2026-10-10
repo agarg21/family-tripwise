@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-084",
+  "observed_on": "2026-10-10",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK",
+  "human_tested": false,
+  "fresh_source_inspection": false,
+  "family_decision": "What did a different public cancellation plan cost above the same room's Non-refundable sample for five nights?",
+  "hypothesis": "Existing totals and rounded nightly prices alone make the plan premium immediately comparable.",
+  "before": "October10 live DC page has five public plan totals and original cancellation terms, but no premium. Subtracting rounded Embassy nightly amounts gives73.46 rather than73.47USD when dividing the exact367.33USD stay difference by five. Parents must reconstruct the comparison themselves.",
+  "result": "REJECT immediate-comparison sufficiency; IMPLEMENT stay-cent-derived premiums in the two existing tables with original terms alongside, no new URL or quote.",
+  "source_records": ["docs/research/washington-dc-embassy-price-observation-2026-09-30.json", "docs/research/washington-dc-homewood-price-observation-2026-09-30.json"],
+  "source_sha256": "d6e9b534f802182bef38d69c34f0024601f7c370c5d5a8e1e76e87df8d793040",
+  "source_observed_on": "2026-09-30",
+  "age_provenance_corrected_on": "2026-10-05",
+  "review_due": "2026-10-14",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "individual_ages_confirmed": false},
+  "expected": [
+    {"record_id": "dc-embassy-deluxe-double", "plan": "Flexible Rate", "stay_increment": 367.33, "nightly_increment": 73.47},
+    {"record_id": "dc-homewood-two-queen", "plan": "Semi-Flex", "stay_increment": 138.19, "nightly_increment": 27.64},
+    {"record_id": "dc-homewood-two-queen", "plan": "Flexible Rate", "stay_increment": 254.98, "nightly_increment": 51.00}
+  ],
+  "limits": "Within each original category/configuration/date/party only; no cross-hotel ranking. Retained interpreted USD, displayed government tax included, additional fees and exact child-age acceptance unknown. Original cancellation/payment terms and discretionary rebooking exceptions remain, not a current refund right. Nightly equivalent is rounded after stay-total subtraction, not another quote. CSV already includes original totals and terms; unchanged. October14 review and original source clocks not renewed.",
+  "confidence": "High arithmetic and observed proxy task gap; unknown current quotes, human outcomes and SEO impact.",
+  "lesson": "Compute plan-choice increments from exact stay totals before per-night rounding, and keep the dated terms beside the premium.",
+  "next_falsification_trigger": "Source hash drift, failed rendered plan-choice task, or originalOctober14 price review; exact ages/fees only on changed permitted evidence, no unchanged provider retry."
+}

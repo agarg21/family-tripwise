@@ -15,6 +15,8 @@
 .dc-toolbar p { margin: 0; }
 .dc-table-scroll { overflow-x: auto; max-width: 100%; margin: 20px 0; }
 .dc-page table { border-collapse: collapse; width: 100%; min-width: 800px; table-layout: fixed; }
+.dc-page .dc-rate-table { min-width: 1000px; }
+.dc-page .dc-rate-table th:last-child { width: 280px; }
 .dc-page caption { text-align: left; padding: 12px 0; font-size: 15px; color: #4f5b57; }
 .dc-page th, .dc-page td { padding: 16px; vertical-align: top; text-align: left; border-bottom: 1px solid #dbe0dc; overflow-wrap: anywhere; }
 .dc-page thead { background: #eef4f0; }
