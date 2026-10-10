@@ -20,10 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-RES-142",
+      "title": "Resolve Boston Four Seasons Plaza Suite family-budget gap",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-10T00:02:55Z",
+      "target_paths": [
+        "docs/research/boston-four-seasons-family-budget-2026-10-09.json",
+        "docs/research/boston-four-seasons-family-budget-2026-10-09.md",
+        "tools/boston-four-seasons-family-budget.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "tools/boston-family-hotels-page.test.mjs",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs",
+        "ops/evidence-watch.json",
+        "site/where-to-stay/boston-family-hotels.html",
+        "site/downloads/boston-family-hotels.csv"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html"
+      ],
+      "evidence": "Existing approved Boston public comparison has unpriced Plaza Suite. Maintained October1 exact property/category maximum2adults4children, king/sofa/crib, older-child sleeping allocation and exact-family rate/fees unknown. No recorded Four Seasons denial; Langham141 and MBTA fare holds are independent, not replayed. Latest079 and all city releases verified. October9 exact Plaza Suite detail, publicly inspected00:04-00:06Z, publishes two-bedroom category, gourmet kitchen/island/custom pantry, unchanged relevant2adult4child maximum and king/sofa/crib ambiguity. Category labels monthly pricing/call to book without amount; room amenities do not establish cooking appliance list. Correct verified public kitchen defect in same transaction, keep exact-family rate/fees held and no contact.",
+      "acceptance_criteria": [
+        "Ordinary official category and booking UI for2adults/ages4,8,12/Nov8-13five nights; exact category/party/date/public-plan/currency/unit/source-date/taxes-fees-cancellation-deposit basis or precise held gate",
+        "Do not substitute One Dalton, another room/default2adult/member/per-person starting price or invent age complement/bed allocation. No booking/contact/account/paid/security bypass",
+        "Focused/full native QA, different independent read-only PASS/PASS_WITH_P3, exact research-data main push. Amend public exact paths before integration only if category/party/stay evidence qualifies, then browser/production gates",
+        "Fresh exact-category overlay changes only Plaza Suite kitchen/source/checks and dated monthly-call-only price limitation; original pack/price bytes and other categories clocks preserved. No appliance/short-stay/booking or full-bed assumption. Page, full CSV and offline adapter share overlay; historical maintenance beforeOctober9 uses prior record, not future facts. Desktop/mobile kitchen filter4-2-4, responsive table/fullCSV/keyboard, unchanged079meal totals and34URLs."
+      ],
+      "measurement_plan": "Can this five-person family compare the currently unpriced exact Plaza Suite cost without inheriting a different category or inventing confirmed child beds? Source-dated research/UI proxy, not human/SEO proof.",
+      "production_invariant": "Only declared Boston HTML/CSV public bytes change; title/H1/meta/WebPage schema/date/sitemap34/home/About/all other public bytes and original room/price data unchanged. Four categories/fourpublicplans/twounpriced; Plaza sourceOct9 kitchen and monthly-call pricing limitation, all other category/price clocks original; no appliance guarantee/minimumstay/availability/childbeds. Current shared model and maintenance/registry exact provenance, historicalreport preOct9 preserves oldfacts. Full QA/different read-onlyPASS/exact mainpush/Pagesmarker/productionSEO/all declared invariants before claim.",
+      "decision": "IMPLEMENT verified exact-category kitchen correction plus explicit monthly/call-only unpriced gate, not a numerical price or generic booking substitution.",
+      "next_gate": "Validated overlay/shared page+CSV/offline clocks, full/focused/browser QA, different read-only consensus, exact production-verified release.",
+      "review_receipt": "FT-RES-142 independent Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 cycle2 final PASS/nofindings at00:12Z on abb92aa2c64a388240a1ce092e77e9642d6f3f7d813de0e135c8923f0ec4f785. Cycle1PASS; only registryformat minimized same parsedJSON and2added1removed, independently841hashes/exact15/all276priorroadmapitems/helddirtyexcluded/HTMLCSV identical. Master653full/25focused/39maintenance/state0/GSC88/localSEO0fiveprior; browser1280/390/320nooverflow/filter4-2-4/detailcorrespondence/keyboardregion40/actual6row35columnCSVwhilefiltered exact/image1280/no console. CurrentPlazaOct9kitchenonly sourcefacts; appliances/childbeds/pricefees/5nightavailability/minstay unknown, no monthly conversion/contact. Originalroompack-pricebytes/otherclocks/079mealpremium preserved; historicalOct8usespriorfacts. Immutable consensus receipt only; exactrelease/Pagesmarker/productionSEO/invariants next, no delivery claim yet; sprint unchanged."
+    },
+    {
       "id": "FT-IMP-079",
       "title": "Expose Boston breakfast upgrade cost and child coverage",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "started_at": "2026-10-09T23:09:37Z",
       "target_paths": [
@@ -51,7 +91,11 @@
       "production_invariant": "Only declared Boston HTML changes; original6rowCSV/4categories/4publicplans/titleH1meta-schema/home/About/sitemap34/client/CSS andallotherpublicbytes retained. No newURL/sourceprice renewal or hotelbooking/cancellation/allfee/rest assurance.",
       "decision": "IMPLEMENT small maintained source-derived meal-plan comparison on existing approvedBoston URL; second23:02:22Zrun transaction before23:47:22Zstart budget",
       "next_gate": "Build/derive task, full/focused/browser/different read-only consensus, exact production-verified release",
-      "review_receipt": "FT-IMP-079 independent Kant01a122f3-5645-7f20-9947-8312e7e981a5 cycle2 PASS/noP0-P3 at23:18:25Z on be66d7add332c8c660a0c4a4d1cba6131c76c85ec77787b3cc1f82cb85837d46. Cycle1P2 stale-meal-fee-cancel drift closed by structured maintained terms guard/adversarial tests. Independently all838hashes/exact9/all275prioritems-releases/heldscope/publicHTML-identical verified. Master648full8focused38maintenance/state0/GSC88/localSEO0-fiveprior; desktop1280/mobile390-320/nooverflow/photo1280/anchor/keyboardscroll40/filter4-1-4/full6row35columnCSV/no console proof. OriginalOct1price/reviewOct15/count-only age/partialfees retained; no quote/valuewinner/fullfamilymeal claim. Immutable consensus receipt only; exact release/Pages-marker-productionSEO-allinvariants next, no public delivery yet; sprint unchanged."
+      "review_receipt": "FT-IMP-079 independent Kant01a122f3-5645-7f20-9947-8312e7e981a5 cycle2 PASS/noP0-P3 at23:18:25Z on be66d7add332c8c660a0c4a4d1cba6131c76c85ec77787b3cc1f82cb85837d46. Cycle1P2 stale-meal-fee-cancel drift closed by structured maintained terms guard/adversarial tests. Independently all838hashes/exact9/all275prioritems-releases/heldscope/publicHTML-identical verified. Master648full8focused38maintenance/state0/GSC88/localSEO0-fiveprior; desktop1280/mobile390-320/nooverflow/photo1280/anchor/keyboardscroll40/filter4-1-4/full6row35columnCSV/no console proof. OriginalOct1price/reviewOct15/count-only age/partialfees retained; no quote/valuewinner/fullfamilymeal claim. Immutable consensus receipt only; exact release/Pages-marker-productionSEO-allinvariants next, no public delivery yet; sprint unchanged.",
+      "completed_on": "2026-10-09T23:20:26.133Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "6b1ba74bafe4eb1a0bc469d6dda7f585f54d2566",
+      "production_receipt": "FT-IMP-079 delivered and production-verified 2026-10-09T23:20:26.133Z at 6b1ba74bafe4eb1a0bc469d6dda7f585f54d2566; successful Pages 38003829626/matchingmarker/exact200BostonHTML-originalCSV/metadata-schema-fourcategories-fourplans-twounpriced/sitemap34/all other publicbytes/productionSEO0errors-fiveprior. Source-derived419.22USDstay/83.84configuration-night breakfast premium and registered2adults/age4 coverage, ages8/12costunknown; originalOct1price/reviewOct15/count-only/fees/hold/cancel retained. Master648full/8focused/38maintenance/state0/GSC88 and desktop1280/mobile390-320/nooverflow/photo1280/anchor/tablekeyboard40/filter4-1-4/fullCSV/no console; independent reviewer consensus above. LRN172 is page-only proxy, not human or SEO. RES141 research-only Langham Club exact price/bed remains held; no unchanged replay. Mechanical completion only/no metadata-onlycommit; sprint unchanged."
     },
     {
       "id": "FT-RES-141",

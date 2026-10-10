@@ -10,7 +10,7 @@ import { planningPageEvidence, planningPageQualityReport } from "./planning-page
 import { audit, ageState, easternDate, modelRecords, permittedUrl, requireNewOutput } from "./evidence-audit.mjs";
 import { reviewAudit } from "./weekly-evidence-review.mjs";
 import { dcPath, dcPack, dcPrices } from "./page-generation/washington-dc-family-hotels-page.mjs";
-import { bostonPath, bostonPack, bostonPrices } from "./page-generation/boston-family-hotels-page.mjs";
+import { bostonPath, bostonPackForDate, bostonPrices } from "./page-generation/boston-family-hotels-page.mjs";
 import { pvPath, pvPack, pvPrices } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import { screenRoomPack } from "./family-room-task.mjs";
 
@@ -69,6 +69,7 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   groups["exact-room-comparison"] = [`https://familytripwise.com/${dcPath}`, `https://familytripwise.com/${bostonPath}`, `https://familytripwise.com/${pvPath}`];
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);
   // A historical report cannot screen a pack that had not yet been observed.
+  const bostonPack = bostonPackForDate(today);
   const boston = today < bostonPack.checked_on ? [] : screenRoomPack(bostonPack, bostonPack.scenario, today, bostonPrices.filter(price => price.checked_on <= today));
   const observedPvRecords = pvPack.records.filter(record => pvPack.sources[record.source_id].checked_on <= today);
   const observedPvSources = Object.fromEntries(observedPvRecords.map(record => [record.source_id, pvPack.sources[record.source_id]]));

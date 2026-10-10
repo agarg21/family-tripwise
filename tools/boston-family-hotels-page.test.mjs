@@ -29,7 +29,7 @@ test("Boston has one canonical job and maintained discovery without removing pre
 });
 test("Boston refresh registry uses maintained exact sources and original dates",()=>{
  const watch=JSON.parse(read("ops/evidence-watch.json")).records.filter(r=>r.page_url.endsWith(bostonPath));
- assert.equal(watch.length,3);assert.deepEqual(watch.map(r=>r.verified_on),["2026-10-01","2026-10-03","2026-10-01"]);
+ assert.equal(watch.length,4);assert.deepEqual(watch.map(r=>r.verified_on),["2026-10-01","2026-10-03","2026-10-01","2026-10-09"]);
  const sources=Object.values(bostonPack.sources).map(s=>s.url);
  for(const record of watch)for(const url of record.source_urls)assert.ok(sources.includes(url),url);
  assert.ok(JSON.parse(read("ops/gsc-monitor.json")).urls?.includes(`https://familytripwise.com/${bostonPath}`) || read("ops/gsc-monitor.json").includes(`https://familytripwise.com/${bostonPath}`));

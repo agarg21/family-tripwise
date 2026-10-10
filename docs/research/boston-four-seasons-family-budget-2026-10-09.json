@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-142",
+  "record_id": "boston-four-seasons-plaza",
+  "hotel": "Four Seasons Hotel Boston",
+  "category": "Plaza Suite",
+  "source": {
+    "url": "https://www.fourseasons.com/boston/accommodations/specialty_suites/plaza-suite/",
+    "checked_on": "2026-10-09",
+    "published_on": null,
+    "evidence_class": "OFFICIAL_PROPERTY_FACT",
+    "date_basis": "source-text-inspected-not-policy-effective"
+  },
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "configuration_count": 1, "car": false},
+  "facts": {
+    "bedrooms": 2,
+    "beds": "King bed, sofa bed and crib on request; complete two-bedroom bed list and three older-child sleeping allocation unresolved.",
+    "maximum_adults": 2,
+    "maximum_children": 4,
+    "kitchen": "published-kitchen",
+    "kitchen_description": "Published gourmet kitchen with island and custom pantry; cooking appliances and dining capacity not specified.",
+    "appliances_verified": false,
+    "pricing_basis": "monthly-call-to-book"
+  },
+  "budget": {
+    "status": "held-no-exact-task-price",
+    "amount": null,
+    "currency": "USD",
+    "unit": "configuration/night",
+    "price_observed_on": null,
+    "limitation": "Exact category advertises monthly pricing by phone without an amount. Five-night availability, minimum stay, exact-party price, tax/fee total, extra bedding, meals, cancellation and card-hold terms are not established. No monthly-to-nightly conversion is made.",
+    "next_gate": "A permitted publicly displayed exact Plaza Suite price with party/individual-age, November 8-13 stay, USD/configuration-night and mandatory fee/terms basis, or separately authorized human evidence. No unchanged call-only replay."
+  },
+  "checks": [
+    "Confirm complete two-bedroom bed list, individual child-age acceptance and three older-child sleeping places; a crib does not settle ages 4/8/12",
+    "Confirm cooking appliances, usable kitchen equipment and dining capacity; published kitchen is not an equipment guarantee",
+    "Obtain an exact Plaza Suite price for your dates and each child's age; the monthly-pricing phone label does not establish a five-night rate or minimum stay",
+    "Verify extra bedding, meals, taxes/fees, cancellation, deposit and actual museum-rest journey"
+  ],
+  "observation": {
+    "inspected_at": "2026-10-10T00:06:00Z",
+    "method": "Ordinary official category listing followed to exact detail; visible DETAILS and expanded AMENITIES read in browser. No booking search, phone, contact form, account, payment or bypass.",
+    "result": "IMPLEMENT verified kitchen/source correction; exact-party/date nightly price remains CANDIDATE with a public-rate or separately authorized human-evidence gate.",
+    "confidence": "High for category-published kitchen and pricing handoff; no confidence asserted for appliances, five-night availability, exact child beds or amount.",
+    "next_falsification_trigger": "Exact category text changes, conflicting equipment evidence, or permitted exact-family public short-stay price becomes available; kitchen review due 2026-11-08. Not automatic renewal."
+  }
+}

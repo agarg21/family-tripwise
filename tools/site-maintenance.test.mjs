@@ -95,6 +95,18 @@ test("Boston dated ownership retains price ages and unresolved counts", async ()
   assert.equal(boston.records[0].price_age.due_on, "2026-10-17");
 });
 
+test("Boston exact Plaza source clock does not renew other categories or historical reports", async () => {
+  const current=(await maintenanceReport({today:"2026-10-09"})).exact_room_comparisons[1];
+  const prior=(await maintenanceReport({today:"2026-10-08"})).exact_room_comparisons[1];
+  assert.equal(prior.records.length,4);
+  assert.equal(prior.records[2].category_age.age_days,7);
+  assert.equal(prior.records[2].category_age.due_on,"2026-10-31");
+  assert.equal(current.records[2].category_age.age_days,0);
+  assert.equal(current.records[2].category_age.due_on,"2026-11-08");
+  assert.equal(current.records[2].price_observed_on,null);
+  for (const index of [0,1,3]) assert.equal(current.records[index].category_age.due_on,prior.records[index].category_age.due_on);
+});
+
 test("unknown, removed, duplicate and multiply-owned canonicals fail closed", () => {
   assert.throws(() => validateCoverage(["a", "b"], { type: ["a"] }));
   assert.throws(() => validateCoverage(["a"], { type: ["a", "b"] }));
