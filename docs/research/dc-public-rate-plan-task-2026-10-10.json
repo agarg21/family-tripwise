@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-083",
+  "observed_on": "2026-10-10",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK",
+  "human_tested": false,
+  "fresh_source_inspection": false,
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "sample_ceiling_usd_configuration_night": 350},
+  "family_decision": "Which historical public plan belongs to each DC nightly sample? Does Homewood's middle Semi-Flex sample fit the hypothetical USD350 nightly ceiling, without treating an anonymous range as a refundable offer?",
+  "hypothesis": "Min-max nightly bands alone are sufficient to compare the plan choice in the room overview.",
+  "before": "Live DC overview inspected October10 at #comparison shows Embassy USD334.68-408.14 and Homewood USD288.97-339.97 without plan names. Homewood Semi-Flex USD316.61 is absent from the overview; its identity and cancellation terms require reconstructing a separate detailed table. This is proxy scan friction, not human testing or a missing underlying rate record.",
+  "result": "REJECT overview sufficiency; IMPLEMENT every validated plan name beside its original nightly sample, including Semi-Flex, not a lowest-rate winner or current quote.",
+  "source_records": ["docs/research/washington-dc-embassy-price-observation-2026-09-30.json", "docs/research/washington-dc-homewood-price-observation-2026-09-30.json"],
+  "source_observed_on": "2026-09-30",
+  "age_provenance_corrected_on": "2026-10-05",
+  "expected_overview": [
+    {"record_id": "dc-embassy-deluxe-double", "plans": [{"name": "Non-refundable", "nightly_usd": 334.68}, {"name": "Flexible Rate", "nightly_usd": 408.14}]},
+    {"record_id": "dc-homewood-two-queen", "plans": [{"name": "Non-refundable", "nightly_usd": 288.97}, {"name": "Semi-Flex", "nightly_usd": 316.61}, {"name": "Flexible Rate", "nightly_usd": 339.97}]}
+  ],
+  "limits": "Amounts retain interpreted USD per configuration/night, displayed government tax included, unknown additional charges and count-only two-adult/three-child provider basis. Individual4/8/12age acceptance remains unknown. Plan names are not current cancellation guarantees; all original detailed terms, sofa-fee/card-hold uncertainty, source dates and October14 price review remain. USD350 is hypothetical, not a family budget, all-fee total, hotel ranking or recommendation. No provider flow or contact repeated.",
+  "confidence": "High maintained plan/amount identity and observed overview ambiguity; unknown actual parent outcomes, current rates and SEO impact.",
+  "lesson": "A min-max band can hide both a middle plan and cancellation choice. Preserve all public plan identities beside dated prices rather than compressing them to a cheapest-rate comparison.",
+  "next_falsification_trigger": "Plan/amount record drift or failed rendered overview task; original October14 price review, not renewed by implementation. Exact age acceptance and full charges still need changed permitted source evidence."
+}

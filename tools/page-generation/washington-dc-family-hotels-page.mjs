@@ -18,7 +18,7 @@ export const dcCsv = roomComparisonCsv(dcPack, dcPack.scenario, dcScreenedOn, dc
 const e = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const amount = value => `USD ${Number(value).toFixed(2)}`;
 const link = (url, label) => `<a href="${e(url)}">${e(label)}</a>`;
-const band = room => room.price.rates ? `${amount(Math.min(...room.price.rates.map(rate => rate.nightly_average)))}-${amount(Math.max(...room.price.rates.map(rate => rate.nightly_average)))}` : "Unpriced";
+const band = room => room.price.rates ? room.price.rates.map(rate => `${amount(rate.nightly_average)} ${e(rate.plan)}`).join(" / ") : "Unpriced";
 const cooking = record => record.kitchen === "published-kitchen" ? record.checks.find(check => check.startsWith("Full kitchen lists")) : record.checks.find(check => /Microwave and mini|Coffee\/minibar/.test(check));
 
 export function dcFamilyHotelPage() {

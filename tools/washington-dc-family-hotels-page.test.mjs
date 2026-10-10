@@ -35,6 +35,23 @@ test("all five public plans retain correct nightly and stay arithmetic and payme
     assert.ok(dcFamilyHotelPage().includes(room.price.deposit_basis));
   }
 });
+test("DC overview names every dated public plan rather than hiding the middle rate in a band", () => {
+  const task=JSON.parse(read("docs/research/dc-public-rate-plan-task-2026-10-10.json"));
+  assert.equal(task.human_tested,false); assert.equal(task.fresh_source_inspection,false);
+  assert.equal(task.source_observed_on,"2026-09-30"); assert.equal(task.age_provenance_corrected_on,"2026-10-05");
+  assert.deepEqual(task.scenario.child_ages,[4,8,12]); assert.equal(task.scenario.nights,5);
+  const overview=dcFamilyHotelPage().match(/<section id="comparison">([\s\S]*?)<\/section>/)[1];
+  for(const expected of task.expected_overview) {
+    const room=dcRooms.find(room=>room.id===expected.record_id);
+    assert.deepEqual(room.price.rates.map(rate=>({name:rate.plan,nightly_usd:rate.nightly_average})),expected.plans);
+    const row=overview.split(`<tr data-room="${room.id}"`)[1].split("</tr>")[0];
+    for(const rate of room.price.rates) assert.ok(row.includes(`USD ${rate.nightly_average.toFixed(2)} ${rate.plan}`));
+    assert.ok(row.includes("September 30 sample")); assert.ok(row.includes("Unconfirmed child-age basis"));
+  }
+  assert.equal((overview.match(/<tr data-room=/g)||[]).length,3);
+  assert.equal((overview.match(/<strong>Unpriced<\/strong>/g)||[]).length,1);
+  assert.doesNotMatch(overview,/USD 334\.68-USD 408\.14|USD 288\.97-USD 339\.97|USD 350|guaranteed cancellation|cheapest/);
+});
 test("unknown age, fee, route and unpriced status cannot become a family-budget winner", () => {
   const html = dcFamilyHotelPage();
   for (const phrase of ["child-age band", "individual ages", "not a new price", "Unpriced", "Not evidence of sold-out", "not typical seasonal", "incidentals authorization", "entrance-to-room", "not a representative DC", "Premium category"]) assert.ok(html.includes(phrase),phrase);
