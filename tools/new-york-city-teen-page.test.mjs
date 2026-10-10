@@ -10,6 +10,7 @@ import { summitPolicyEvidence } from "./nyc-summit-policy.mjs";
 import { teenPages } from "./page-generation/upgrade-page-data.mjs";
 import { momaComparison } from "./nyc-moma-budget.mjs";
 import { ferryComparison } from "./nyc-ferry-budget.mjs";
+import { spygamesPolicyEvidence } from "./nyc-spygames-policy.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const target = "things-to-do/new-york-city-with-teens.html";
@@ -108,11 +109,20 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
 test("SUMMIT shared policy answers split visits in visible and structured outputs without general fact renewal", () => {
   const html=readFileSync(join(root,"site",target),"utf8"),page=teenPages[target],copy=summitPolicyEvidence.public_copy;
   assert.equal(page.rows[0][5],copy.comparison_check);assert.equal(page.details[0][4],copy.detail_check);
-  assert.equal(page.officialChecks[0][1],copy.official_check);assert.equal(page.faqs[2][1],copy.faq);
-  for(const text of Object.values(copy)) assert.ok(html.includes(text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),text);
-  assert.equal(schemas(html).find(s=>s['@type']==='FAQPage').mainEntity[2].acceptedAnswer.text,copy.faq);
+  assert.ok(page.officialChecks[0][1].startsWith(copy.official_check));assert.equal(page.faqs[2][1].replace(`${spygamesPolicyEvidence.public_copy.faq} `,''),copy.faq);
+  for(const text of [copy.comparison_check,copy.detail_check,copy.official_check]) assert.ok(html.includes(text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),text);
+  assert.equal(schemas(html).find(s=>s['@type']==='FAQPage').mainEntity[2].acceptedAnswer.text,page.faqs[2][1]);
   assert.match(html,/July 26, 2026/);assert.match(html,/policy checked October 10, 2026/);
   assert.doesNotMatch(html,/16 and older can enter independently|17-year-old qualifies as an adult|adult must be 18/i);
+});
+
+test("SPYGAMES shared policy distinguishes physical-game accompaniment without museum permission",()=>{
+ const html=readFileSync(join(root,"site",target),"utf8"),p=teenPages[target],copy=spygamesPolicyEvidence.public_copy;
+ assert.equal(p.rows[2][5],copy.comparison_check);assert.equal(p.details[1][4],copy.detail_check);
+ assert.equal(p.officialChecks[0][1],`${summitPolicyEvidence.public_copy.official_check} ${copy.official_check}`);
+ assert.ok(p.faqs[2][1].includes(copy.faq));assert.equal(schemas(html).find(s=>s['@type']==='FAQPage').mainEntity[2].acceptedAnswer.text,p.faqs[2][1]);
+ for(const text of Object.values(copy))assert.ok(html.includes(text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),text);
+ assert.match(html,/July 26, 2026/);assert.doesNotMatch(html,/SPYGAMES requires.*adult throughout|SPYSCAPE requires visitors under 16/i);
 });
 
 test("MoMA admission-only party totals, conditional ID and ticket-preserving breaks are discoverable without JS", () => {

@@ -1,5 +1,9 @@
 # Product Learning Ledger
 
+## LRN-186 / Accompaniment Belongs To The Exact Experience / 2026-10-10
+
+FT-IMP-0892adults/teens13and17 split-visit proxy rejects generic check-minor-rule sufficiency. October10 [official NYC tickets](https://spyscape.com/tickets-new-york) names SPYGAMES under16 adult accompaniment; [All Access](https://spyscape.com/all-access) distinguishes physical games from museum, not supervision permission. [Maintained record](../docs/research/nyc-spygames-minor-policy-2026-10-10.json) preserves unknown adult minimum age/older-teen independent entry/separate museum rule; duration conflict retained, no new timing or price assertion. High narrow official-policy confidence, not visitor/human/safety/SEO proof. IMPLEMENT dated comparison/detail/check/FAQ through native/responsive/differentPASS/exact verified release. Lesson: an age rule for physical games does not establish the museum rule or qualify an older sibling as adult. Falsify changed exact policy/ticket conflict, failed task or November9review; July26/general and prior attraction source clocks unchanged.
+
 ## LRN-185 / Valid Fragments Can Hide Budget Headings / 2026-10-10
 
 FT-IMP-088 family task: open a shared MoMA or NYC Ferry budget link and identify the comparison without scrolling back. [Public browser task](../docs/research/nyc-budget-anchor-task-2026-10-10.json) rejects existing-fragments-suffice: both desktop headings land at approximately0px, entirely behind65px fixed navigation;390/320 mobile headers scroll away, no mobile-header defect established. IMPLEMENT two scoped128px scroll margins, verify six direct-link cases and table keyboard access. Confidence high reproduced desktop geometry, proxy only/not human or SEO proof. Lesson: HTTP200 and a valid fragment do not prove visible context. Falsify changed header/targets/breakpoints or failed heading task. Travel facts/dates/clocks/prices/other URLs unchanged; QA/differentPASS/production gates remain.

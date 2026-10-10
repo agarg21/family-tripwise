@@ -49,17 +49,17 @@ test("invalid policy dates, provenance, intervals and unsafe URLs fail closed wi
 
 test("offline maintenance surfaces policy due counts while preserving room and price clocks", async () => {
   const current=await maintenanceReport({today:"2026-10-09"});
-  assert.equal(current.policy_review_clocks.length,8);
-  assert.equal(current.summary.policy_review_clocks,8);
+  assert.equal(current.policy_review_clocks.length,9);
+  assert.equal(current.summary.policy_review_clocks,9);
   assert.equal(current.summary.policy_due_records,0);
-  assert.equal(current.summary.policy_not_yet_observed,5);
+  assert.equal(current.summary.policy_not_yet_observed,6);
   const future=await maintenanceReport({today:"2026-11-03"});
   assert.equal(future.summary.policy_due_records,4);
   assert.equal(future.policy_review_clocks.find(record=>record.id==="dc-regular-rail-fare").freshness.state,"review-due");
   assert.equal(future.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
   assert.equal(future.automatic_fact_renewal,false);assert.equal(future.automatic_publication,false);
   const historical=await maintenanceReport({today:"2026-10-01"});
-  assert.equal(historical.summary.policy_not_yet_observed,8);assert.equal(historical.summary.policy_due_records,0);
+  assert.equal(historical.summary.policy_not_yet_observed,9);assert.equal(historical.summary.policy_due_records,0);
   assert.equal(current.policy_review_clocks.find(record=>record.id==="boston-museum-admission-return").freshness.due_on,"2026-10-23");
   assert.equal((await maintenanceReport({today:"2026-10-23"})).summary.policy_due_records,2);
   assert.deepEqual(future.pages,current.pages);
@@ -87,6 +87,16 @@ test("SUMMIT policy clock is scoped to the teen page without renewing general so
  assert.equal((await maintenanceReport({today:"2026-11-09"})).policy_review_clocks.find(r=>r.id===policy.id).freshness.state,"review-due");
  assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
  assert.equal(report.automatic_fact_renewal,false);assert.equal(report.automatic_publication,false);
+});
+
+test("SPYGAMES policy has its own review clock without renewing prior attraction facts",async()=>{
+ const report=await maintenanceReport({today:"2026-10-10"}),p=report.policy_review_clocks.find(r=>r.id==="nyc-spygames-under16");
+ assert.equal(p.observed_on,"2026-10-10");assert.equal(p.freshness.due_on,"2026-11-09");
+ assert.equal((await maintenanceReport({today:"2026-10-09"})).policy_review_clocks.find(r=>r.id===p.id).evidence_state,"not-yet-observed-at-report-date");
+ assert.equal((await maintenanceReport({today:"2026-11-09"})).policy_review_clocks.find(r=>r.id===p.id).freshness.state,"review-due");
+ assert.equal(report.policy_review_clocks.find(r=>r.id==="nyc-ferry-fare-return").freshness.due_on,"2026-10-19");
+ assert.equal(report.policy_review_clocks.find(r=>r.id==="nyc-moma-admission-return").freshness.due_on,"2026-10-24");
+ assert.equal(report.automatic_fact_renewal,false);
 });
 
 test("PV generic meal policy has its own clock without re-pricing selected plans",async()=>{

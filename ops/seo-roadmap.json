@@ -20,10 +20,49 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-089",
+      "title": "Distinguish SPYGAMES adult accompaniment from SPYSCAPE guidance",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T12:04:11Z",
+      "target_paths": [
+        "docs/research/nyc-spygames-minor-policy-2026-10-10.json",
+        "tools/nyc-spygames-policy.mjs",
+        "tools/nyc-spygames-policy.test.mjs",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/new-york-city-teen-page.test.mjs",
+        "site/things-to-do/new-york-city-with-teens.html",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs",
+        "ops/evidence-watch.json",
+        "status/new-york-city-pages.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-teens.html"
+      ],
+      "evidence": "October10 official NYC ticket FAQ explicitly requires adult accompaniment for SPYGAMES under16. Existing comparison/detail/FAQ route requires the parent to reconstruct this product-specific rule. Official all-access page corroborates distinct products, not separate museum supervision permission; duration conflicts are not resolved or published as new facts.",
+      "acceptance_criteria": [
+        "One validated source-dated policy supplies comparison/detail/check/FAQ with visible-schema parity",
+        "Scope under16 adult accompaniment to SPYGAMES only; adult minimum age, independent16/17 entry and separate SPYSCAPE supervision unknown; no adult-throughout inference",
+        "Own30day November9 clock, no July26 general renewal or prior MoMA/Ferry/SUMMIT clocks/prices/source changes",
+        "Focused/full native QA, normal desktop/mobile browser task, different independent read-only PASS, exact-path guarded main release and Pages/marker/productionSEO/exactHTML checks"
+      ],
+      "measurement_plan": "Proxy split-visit task for2adults/teens13and17: identify adult accompaniment for13 at SPYGAMES while not assuming17 qualifies as adult or museum rule is identical. Not human, safety, ranking or booking evidence.",
+      "production_invariant": "Reverse only SPY row check/detail planning sentence and appended official-check/FAQ policy sentences (including FAQ schema) to restore ed0ed9b NYC HTML byteexact. Ten choices, metadata/generaldate, all budget sections and128px headings, prior policies/source clocks, other public and prior research bytes/sitemap34 unchanged. No current price/availability/refund/independent-entry promise/newURL/paid/provider/security/scheduler mutation; held11 preserved. Actualrun12:01:40Z/startdeadline12:46:40Z fixed sprint unchanged.",
+      "decision": "IMPLEMENT current product-specific adult-accompaniment rule on existing teen page; preserve unknown adult qualification/older-teen independent entry and separate museum supervision. GSC reusedOct9/priorOct8 finalizedOct7/6 orientation only; dailyLRN185 alreadycomplete. Higher-priority075/050 and approvedcities alreadyproductionverified, not unshipped backlog. SanDiegoHomewood133 public integration held on exact setup/fee/corpus gate; no bypass.",
+      "review_receipt": "FT-IMP-089 independent read-only Rawls PASS/no P0-P3 findings on final878-file candidate; review digest edac39f06b3c23325a9bf6b97bddb1b37107a8c61f9229c1c247c68e0493a9e5, files digest75a15425e04051752ba69c3500cf56ec457ea9e3049f91aab3e3891c5a2df86d. Exact15/nooutside/nodeleted/all289priorroadmap judgments/heldledger preserved. Scoped SPYGAMES policy/source/FAQ-schema/November9clock/reversal-to-priorHTML/allotherpublicresearchpricesclocks34URLs verified. Master final704full/14focused/45maintenance/state0/GSC88/localSEO0fiveprior; 1280-390-320contained/whole320policy/imagecomplete1280/errors[]/finalFAQverified/defaultviewport1280 restored. Reviewer no writes/network/generator/tests; Master release/production pending. Mechanical immutable consensus only."
+    },
+    {
       "id": "FT-IMP-088",
       "title": "Keep NYC family-budget deep links clear of fixed navigation",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T11:02:12Z",
       "target_paths": [
@@ -50,7 +89,11 @@
       "measurement_plan": "Browser geometry and screenshots of direct family-budget links; no real-user satisfaction or ranking claim. Falsify header-height/responsive changes or heading occlusion.",
       "production_invariant": "Remove exactly the two scroll-margin-top:128px attributes from NYC budget headings to restore a3775dc HTML byteexact; every other public file and prior research byteexact. No CSS-global, JS, evidence clock, new URL, SEO, paid, scheduler or security change. Held11 preserved; actualrun11:00:40Z/deadline11:45:40Z fixed sprint unchanged.",
       "decision": "IMPLEMENT only if current direct-link task reproduces occlusion; otherwise PRESERVE. Prior075/050/DC/Boston/PV production receipts supersede stale status labels. ReusedOct9/priorOct8 finalizedOct7/6 GSC orientation only; daily learning184 complete.",
-      "review_receipt": "FT-IMP-088 independent read-only Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 PASS/noP0-P3 at2026-10-10 11:12:13 UTC; exact10/all875hashes/manifest fde6af4766d183a67fca426bb9b7c965732ea9fd82c578967bdf7921cc11df79/288prioritems andheldisolation preserved. Independently10focusedtests/temporaryfixturecleaned/screenshots-proxygeometry; generator and NYC HTML byteexact after removingtwo headingstyleattributes/allotherpublicresearch34URLsunchanged. No repo-candidate-git-network-delegationwrites/receipt. Master699full/10focused/44maintenance/state0/GSC88/localSEO0fiveprior/generatorNYConly-idempotent; six1280-390-320direct-fragments fullheadings top127.7578to128.1641px/nooverflow; narrowkeyboard focustrue movement184max798/tab0/notfulltravel/image1280/errors[]/viewportreset. Desktop65pxfixedheader occlusion only; no mobile-headerdefect/human/all-device/SEOclaim ortravel-fact-date-clock-price renewal. Immutable consensus only; exact release and production verification pending."
+      "review_receipt": "FT-IMP-088 independent read-only Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 PASS/noP0-P3 at2026-10-10 11:12:13 UTC; exact10/all875hashes/manifest fde6af4766d183a67fca426bb9b7c965732ea9fd82c578967bdf7921cc11df79/288prioritems andheldisolation preserved. Independently10focusedtests/temporaryfixturecleaned/screenshots-proxygeometry; generator and NYC HTML byteexact after removingtwo headingstyleattributes/allotherpublicresearch34URLsunchanged. No repo-candidate-git-network-delegationwrites/receipt. Master699full/10focused/44maintenance/state0/GSC88/localSEO0fiveprior/generatorNYConly-idempotent; six1280-390-320direct-fragments fullheadings top127.7578to128.1641px/nooverflow; narrowkeyboard focustrue movement184max798/tab0/notfulltravel/image1280/errors[]/viewportreset. Desktop65pxfixedheader occlusion only; no mobile-headerdefect/human/all-device/SEOclaim ortravel-fact-date-clock-price renewal. Immutable consensus only; exact release and production verification pending.",
+      "completed_on": "2026-10-10T11:13:36.382Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "ed0ed9ba048b273f2f38723530a71cd8bb416848",
+      "production_receipt": "FT-IMP-088 delivered and production-verified 2026-10-10T11:13:36.382Z at ed0ed9ba048b273f2f38723530a71cd8bb416848; Pages38047599308success/matchingmarker/exact200NYCteenHTML/twoheading128pxscroll-margins only/allotherpublic-priorresearch-metadata-FAQ-tenchoices-dates-clocks-34URLbytes preserved/productionSEO0fiveprior. Public desktop MoMA/Ferry fragment headings behind65pxnav corrected; six1280-390-320preview fragment cases visible127.7578to128.1641px/noouteroverflow. Narrowkeyboard focustrue scroll184max798/tab0 verifiesmovement notfulltravel; image1280/errors[]/viewportreset. Master699full/10focused/44maintenance/state0/GSC88/generatorNYConly-idempotent; different read-onlyPASS/exact10/all875indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. LRN185 dated public geometry/proxy learning, not realusers/SEO/all-device accessibility evidence. No travel-fact/source-price-date renewal or deniedsource retry; other holds unchanged. Next falsify changed navigation/target/breakpoint or failed fragment task. Mechanical completion only/no metadata-onlycommit; held11/sprint preserved."
     },
     {
       "id": "FT-IMP-087",

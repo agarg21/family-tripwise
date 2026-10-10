@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-089",
+  "observed_on": "2026-10-10",
+  "next_review_due": "2026-11-09",
+  "evidence_class": "OFFICIAL_VENUE_POLICY",
+  "sources": [
+    {"url": "https://spyscape.com/tickets-new-york", "observed_on": "2026-10-10", "published_on": null, "updated_on": null, "scope": "NYC age FAQ names SPYGAMES under16 adult accompaniment; no separate museum supervision rule inferred."},
+    {"url": "https://spyscape.com/all-access", "observed_on": "2026-10-10", "published_on": null, "updated_on": null, "scope": "Corroborates two distinct experiences; does not establish accompaniment rule itself."}
+  ],
+  "policy": {"product": "SPYGAMES", "under_age": 16, "adult_accompaniment": true, "adult_throughout": null, "adult_minimum_age": null, "independent_16_17_entry": "not-established", "spyscape_museum_supervision": "not-established"},
+  "unresolved": ["Whether17qualifies as accompanying adult", "Older-teen independent entry", "Separate museum supervision", "All-access duration conflicts: cards2hours versus NYCFAQ2.5hours; no new duration or price promise"],
+  "family_task": {"adults": 2, "child_ages": [13,17], "decision": "Can one adult leave the physical-game visit with the other adult or17-year-old supervising13?", "hypothesis": "Generic check-minor-rule wording already answers the split-visit decision", "result": "REJECT; show under16 adult accompaniment for physical games, without qualifying17as adult or extending rule to separate museum", "confidence": "High narrow published policy; admission acceptance, actual supervision and visitor outcomes unknown", "evidence_class": "PAGE_ONLY_PROXY_TASK", "human_tested": false},
+  "public_copy": {
+    "comparison_check": "SPYGAMES under 16: adult accompaniment; exact product, team, effects and physical fit",
+    "detail_check": "SPYGAMES requires visitors under 16 to be accompanied by an adult (NYC policy checked October 10, 2026). This does not establish the separate SPYSCAPE museum's supervision rule. Do not assume a 17-year-old qualifies as the accompanying adult.",
+    "official_check": "SPYGAMES policy checked October 10, 2026: under-16 visitors need adult accompaniment. The separate SPYSCAPE museum rule and independent older-teen entry remain unverified.",
+    "faq": "SPYGAMES also requires an adult for visitors under 16 (NYC policy checked October 10, 2026). This does not establish the separate SPYSCAPE museum's rule. Adult qualification and independent older-teen entry remain unverified."
+  },
+  "candidate_browser_task": {"checked_on": "2026-10-10", "viewports": [1280,390,320], "document_width_matches_viewport": true, "narrow_policy_paragraph": {"width":242,"top":241.9453125,"bottom":601.9453125}, "image_complete": true, "image_natural_width":1280, "console_errors":[], "result":"Adult accompaniment and unknown older-sibling/museum permission readable; proxy only, not actual admission or human testing"},
+  "decision": "IMPLEMENT existing-page rule through focused/fullQA, independent read-only review and production verification. PRESERVE unknowns until exact source clarification or November9review; no ticketing checkout, contact, account, paid research, firsthand or safety assurance. General July26 and prior source dates unchanged."
+}

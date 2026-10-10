@@ -1,5 +1,7 @@
 # New York City Page Status
 
+FT-IMP-089 candidate: product-specific SPYGAMES under16 adult accompaniment now answers split-visit planning in the teen comparison/detail/check/FAQ. Shared October10policy/November9review; separate museum, adult qualification and independent older-teen entry remain unknown. Prior SUMMIT/MoMA/Ferry and general dates unchanged; QA/differentPASS/production gates remain.
+
 FT-IMP-088 candidate: two direct budget heading offsets address reproduced desktop fixed-header occlusion. All public copy, dates, fares, policies, schema and previous source-specific clocks unchanged. Pending full/native/responsive/differentPASS and verified release; no travel-fact renewal.
 
 FT-IMP-087 candidate: observed October10 and announced October19 NYC Ferry standard four-rider18/36versus20/40USD one-way/return comparison, not discount/pass/checkout/service or route assurance. [Maintained record](../docs/research/nyc-ferry-family-budget-2026-10-10.json); review dueOctober19, announcement never auto-promoted. QA/review/verified release pending; all086MoMA/085SUMMIT source and general dates retained.
