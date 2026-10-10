@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-146",
+  "learning_id": "LRN-190",
+  "task": {
+    "adults": 2,
+    "child_ages": [2, 7],
+    "check_in": "2026-11-08",
+    "check_out": "2026-11-13",
+    "nights": 5,
+    "rooms": 1,
+    "category": "Family Oasis, Deluxe Room - Oceanfront",
+    "decision": "Can the maintained room-plus-care candidate establish each child's sleeping setup?"
+  },
+  "source": {
+    "url": "https://factsheets.clubmed/en-us/factsheet_canc.pdf",
+    "discovered_from": "https://www.clubmed.us/r/cancun/y",
+    "discovery": "Ordinary anonymous resort body Get the Factsheet link; no denied endpoint recovery",
+    "evidence_class": "OFFICIAL_PROPERTY_FACT",
+    "inspected_on": "2026-10-10",
+    "method": "Web PDF extracted complete relevant accommodation page; operator-attributed, not independently live replayed or visual floorplan inference",
+    "publication_label": "10/02/2026",
+    "publication_date_iso": null,
+    "publication_date_limit": "Locale interpretation unresolved; inspection date is not publication or effective date",
+    "pdf_page_one_based": 6,
+    "printed_page_numbers": [10, 11],
+    "document_limit": "Information may change; illustrations are non-contractual"
+  },
+  "category_facts": {
+    "published_occupancy_range": [3, 5],
+    "minimum_area_sq_ft": 678.13,
+    "separate_child_room_listed": true,
+    "baby_bed_basis": "on-demand",
+    "adult_bed_types": null,
+    "child_bed_types": null,
+    "bed_counts": null,
+    "child_sleeping_assignments": null,
+    "baby_bed_confirmed": null
+  },
+  "screen": {
+    "all_person_count": 4,
+    "within_published_count_range": true,
+    "age_acceptance_established": false,
+    "bedding_established": false,
+    "stay_availability_established": false,
+    "booking_acceptance_established": false,
+    "inference": "A room partition and count range do not specify actual beds or confirm a requested cot"
+  },
+  "prior_evidence": {
+    "capacity": "docs/research/cancun-alternative-room-capacity-2026-10-02.json",
+    "quote": "docs/research/cancun-family-oasis-price-2026-10-02.json",
+    "quote_sha256": "268b170965b881fb9735203d88cab39b4767f02e9f9a54055f35cb4e54c3e3d8",
+    "care_gate": "docs/research/cancun-care-billing-gate-2026-10-09.json",
+    "renewed": false,
+    "use": "Original quote remains historical and category-specific; no new price, fee, care policy or source date"
+  },
+  "result": {
+    "hypothesis": "The independently linked official brochure may specify the exact-category child beds",
+    "hypothesis_supported": false,
+    "decision": "PRESERVE",
+    "public_change_qualified": false,
+    "confidence": "High for extracted category row and missing sleeping specification on that page; unknown actual room allocation",
+    "remaining_gate": "Explicit category-specific beds/counts/child assignment; selected-care unit/minimum/days/slots and levy applicability plus maintained corpus/ownership qualification remain separate",
+    "next_trigger": "Changed explicit sleeping specification or supplied primary category evidence; do not repeat this brochure/modal on cadence",
+    "lesson": "Treat numeric occupancy and requested baby equipment as separate from a resolved sleeping plan"
+  },
+  "limits": [
+    "No current quote, firsthand experience, safety, exact route or firm family suitability assurance",
+    "No booking selection, account, contact, purchase, paid call or external mutation",
+    "No denied FAQ, Mini or MBTA source retry, mirror or alternate-tool bypass",
+    "No public/model/URL/observation-window/scheduler/budget change or prior evidence renewal",
+    "New narrow linked-brochure test, not a repeated broad keyword-cluster report or public delivery"
+  ]
+}

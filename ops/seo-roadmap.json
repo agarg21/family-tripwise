@@ -20,10 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-RES-146",
+      "title": "Test whether the official Family Oasis factsheet resolves sleeping assignments",
+      "kind": "research",
+      "status": "in-progress",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T18:05:00Z",
+      "target_paths": [
+        "docs/research/cancun-family-oasis-bedding-2026-10-10.json",
+        "tools/family-oasis-bedding.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "FT-RES-076 independent bedding gate; resort-linked official factsheet newly inspected October10, exact Deluxe Oceanfront range3-5 and on-demand baby bed, no bed types/counts/child assignment. Prior094modal/095quote and137care audit unchanged. Source publication label10/02/2026 retained without assuming locale.",
+      "acceptance_criteria": [
+        "Bind exact category and original two-adult/ages2,7/Nov8-13five-night task; keep four-person count screen separate from age eligibility, guaranteed beds, availability and acceptance.",
+        "Record source page, inspection versus ambiguous publication label, exact occupancy range and unresolved sleeping fields; no floorplan/photo inference or renewal of prior quote/source dates.",
+        "Focused/full native QA, different independent read-only PASS or PASS_WITH_P3, exact-path guarded push-only release and remote-main verification. All prior roadmap judgments and public/source bytes unchanged."
+      ],
+      "measurement_plan": "LRN190 source-dated negative bedding test, not human experience/current quote/SEO outcome. ReusedOct10 API finalizedOct8 and priorOct9 finalizedOct7 orientation only; daily learning already complete, no quota.",
+      "production_invariant": "Exact7paths/886baseline/held11 preserved; no public/model/price/source-clock/34URL/window/scheduler/budget mutation; no booking/contact/account/paid/denied FAQ-Mini-MBTA retry. Actualrun18:01:14Z/startdeadline18:46:14Z/fixed sprint unchanged.",
+      "decision": "PRESERVE public Cancun and076candidate: independently linked brochure clarifies minimum as well as maximum occupancy but cannot resolve actual beds. Research-only because075/050/DC/Boston/PV releases already verified and no current complete076room-care-billing-slots-levy/corpus qualification; not a project-wide blocker.",
+      "next_gate": "QA/read-only review/push-only verification. Exact bedding requires explicit category-specific bed types/counts and assignment or supplied primary evidence; care terms/slots/levy/corpus/URL gates remain separate.",
+      "next_eligible_run": "Changed explicit sleeping specification or named independent corpus task, not repeat brochure/modal checking on cadence; October11 separate offer checkpoint remains. No new URL or public addition qualified.",
+      "review_receipt": "FT-RES-146 independent read-only Galileo PASS/noP0-P3 at2026-10-10T18:09:48Z; exact7/all888hashes/881nonowned unchanged/293priorjudgments and heldledger isolated. Review5febd8a20bb3a8a0d8f07e5d0b2613d59b2471c14d4949ab4bf7f07c888f65d0 inventory62f6fbeab81faa4aba94c524b6f8bfa4fa2e5490630a74c47bb5ddde3322e9c4. Master727full/5focused/46maintenance/state0/GSC89/localSEO0fiveprior; independent5tests/state0/GSC89/SEO0fiveprior. PDF claims reviewed against supplied extraction/provenance, not independent live fetch; no writes/network/delegation. PRESERVE occupancy3-5 versus unknown actualbeds and literal ambiguouspublicationlabel; originalquote hash/dates/allpublic-priorresearch unchanged. LRN190 narrow official-source learning, research-only not public delivery. Mechanical immutable consensus only; guarded exact push-only release pending."
+    },
+    {
       "id": "FT-IMP-092",
       "title": "Keep exact stay cents in observed nightly budget comparisons",
       "kind": "improvement",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T15:05:53Z",
       "target_paths": [
@@ -48,7 +78,11 @@
       "production_invariant": "All site/public/prior research/price/source-clock bytes and34URLs unchanged; default exports and all non-scope fields byteexact; unpriced/currency/historical/age unknown precedence unchanged. Exact9paths,883baseline/held11/fixed sprint preserved; actualrun15:01:09Z/startdeadline15:46:09Z.",
       "decision": "IMPLEMENT verified shared research-product arithmetic defect, no new public page. Prior075/050/DC/Boston/PV already delivered; other provider/human/new-URL gates unchanged.",
       "next_gate": "Focused/full QA/different read-only review/guarded push-only release; falsify changed validated money schema/night count or failed exact budget task. No unchanged provider retry.",
-      "review_receipt": "FT-IMP-092 independent read-only Ampere PASS/noP0-P3 at2026-10-10T15:10:52Z for frozen p2zW0e against22114ef4, review32a92b05da2a5fbf30fe2b4886f9e9c72dae027a9a0ea3c0f60224541f8516b6. All884hashes/exact9/292priorjudgments/heldisolation verified. Master722full/16focused/46maintenance/state0/GSC88/localSEO0fiveprior; independent16focused/invariant72defaultsingle-joinedexports byteexact/only1intendedbudgetstatus correction/875nonownedHEAD andheldworkspace unchanged. Validated BigInt cents times exactnights/equality inclusive/unknown precedence/display unchanged; actual2168.27USDfive-night sample two cents above433.65nightly limit remainsABOVE. Public/prior evidence/source clocks unchanged; synthetic amounts notquotes, task nothuman/currentbooking/SEO outcome. No reviewer writes/network/delegation/commits/receipts. Mechanical immutable consensus only; exact push-only release/remote verification pending, no Pages release required."
+      "review_receipt": "FT-IMP-092 independent read-only Ampere PASS/noP0-P3 at2026-10-10T15:10:52Z for frozen p2zW0e against22114ef4, review32a92b05da2a5fbf30fe2b4886f9e9c72dae027a9a0ea3c0f60224541f8516b6. All884hashes/exact9/292priorjudgments/heldisolation verified. Master722full/16focused/46maintenance/state0/GSC88/localSEO0fiveprior; independent16focused/invariant72defaultsingle-joinedexports byteexact/only1intendedbudgetstatus correction/875nonownedHEAD andheldworkspace unchanged. Validated BigInt cents times exactnights/equality inclusive/unknown precedence/display unchanged; actual2168.27USDfive-night sample two cents above433.65nightly limit remainsABOVE. Public/prior evidence/source clocks unchanged; synthetic amounts notquotes, task nothuman/currentbooking/SEO outcome. No reviewer writes/network/delegation/commits/receipts. Mechanical immutable consensus only; exact push-only release/remote verification pending, no Pages release required.",
+      "release_receipt": "FT-IMP-092 release 477692d7a2f4a735072dee481e22e2519f4abe8d remote verified 2026-10-10T15:11:48.853Z; main0-0/emptyindex/exact9/all884indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared research-export exact stay-cent budget repair only: maintained2168.27USD/5nights nowABOVE433.65USD/configuration/night; display433.65 unchanged. Reviewed AmperePASS/noP0-P3,722full/16focused/46maintenance/state0/GSC88/localSEO0fiveprior;72defaultexports byteexact/875nonownedpublic-priorresearch-source clocks unchanged. LRN189 dated internal proxy, no currentquote/human/SEO evidence; no new public page or production change, docs/tools push-only. Next failed exact-budget task or changed money-schema/night count; other provider/human/publication holds remain. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-10T15:11:48.870Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "477692d7a2f4a735072dee481e22e2519f4abe8d"
     },
     {
       "id": "FT-IMP-091",
