@@ -34,16 +34,43 @@ test("optional observed budget retains seven rows and all 34 non-scope columns",
   assert.equal(roomComparisonsCsv([dc],dc.scenario,"2026-10-03",prices),plain);
 });
 
-test("threshold equality and partial fee amounts do not turn into final affordability", () => {
+test("rounded nightly equality cannot hide an exact stay overage or imply final affordability", () => {
   const at=rows(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:433.65}})).slice(1);
   const r=at.find(r=>v(r,"Nightly equivalent")==="433.65");
-  assert.match(r[scope],/AT_OR_BELOW_OBSERVED_AMOUNT/);assert.match(r[scope],/price-only dated sample/);
+  assert.equal(v(r,"Displayed stay amount"),"2168.27");
+  assert.match(r[scope],/ABOVE_OBSERVED_AMOUNT/);assert.match(r[scope],/price-only dated sample/);
   const below=rows(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:433.64}})).slice(1).find(r=>v(r,"Nightly equivalent")==="433.65");
   assert.match(below[scope],/ABOVE_OBSERVED_AMOUNT/);
   assert.equal(statuses(csv(dc.scenario,"2026-10-03",{budget:{currency:"USD",nightly_limit:0.01}})).length,7);
   const b=read("boston-room-configurations-2026-10-01.json"),p=read("boston-fenway-price-observation-2026-10-03.json");
   const fenway=rows(roomComparisonCsv(b,b.scenario,"2026-10-03",p,{budget:{currency:"USD",nightly_limit:800}})).slice(1).find(r=>v(r,"Nightly equivalent")==="781");
   assert.match(fenway[scope],/AT_OR_BELOW_OBSERVED_AMOUNT/);assert.match(v(fenway,"Fee and tax basis"),/unchecked/);
+});
+
+test("synthetic exact stay cents preserve below, equal and above boundaries without mutating evidence", () => {
+  const original=read("washington-dc-residence-price-observation-2026-09-30.json");
+  const before=JSON.stringify(original),f={budget:{currency:"USD",nightly_limit:433.65}};
+  for(const [stay_amount,status] of [[2168.24,"AT_OR_BELOW_OBSERVED_AMOUNT"],[2168.25,"AT_OR_BELOW_OBSERVED_AMOUNT"],[2168.26,"ABOVE_OBSERVED_AMOUNT"]]){
+    const fixture=structuredClone(original);fixture[0].rates[0].stay_amount=stay_amount;
+    const output=roomComparisonCsv(dc,dc.scenario,"2026-10-10",fixture,f);
+    const r=rows(output).slice(1).find(r=>v(r,"Displayed stay amount")===String(stay_amount));
+    assert.equal(v(r,"Nightly equivalent"),"433.65");assert.match(r[scope],new RegExp(status));
+    assert.equal(roomComparisonsCsv([dc],dc.scenario,"2026-10-10",fixture,f),output);
+  }
+  const fixture=structuredClone(original);fixture[0].rates[0].stay_amount=60000000000000;
+  const large={budget:{currency:"USD",nightly_limit:30000000000000}};
+  const r=rows(roomComparisonCsv(dc,dc.scenario,"2026-10-10",fixture,large)).slice(1).find(r=>v(r,"Displayed stay amount")==="60000000000000");
+  assert.match(r[scope],/AT_OR_BELOW_OBSERVED_AMOUNT/);
+  assert.equal(Number.isSafeInteger(large.budget.nightly_limit*100*5),false);
+  assert.equal(JSON.stringify(original),before);
+});
+
+test("CLI and joined exports agree on the maintained two-cent over-budget task", () => {
+  const f={budget:{currency:"USD",nightly_limit:433.65}},output=csv(dc.scenario,"2026-10-10",f);
+  assert.equal(roomComparisonsCsv([dc],dc.scenario,"2026-10-10",prices,f),output);
+  assert.equal(execFileSync(process.execPath,[cli,dcPath,"--date","2026-10-10","--prices",...pricePaths,"--nightly-budget","433.65","--budget-currency","USD"],{encoding:"utf8"}),output);
+  assert.equal(statuses(output).filter(s=>s==="ABOVE_OBSERVED_AMOUNT").length,1);
+  assert.equal(statuses(output).filter(s=>s==="AT_OR_BELOW_OBSERVED_AMOUNT").length,0);
 });
 
 test("historical, wrong-currency and changed-party rows stay unresolved and visible", () => {

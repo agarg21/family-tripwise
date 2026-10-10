@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-092",
+  "checked_on": "2026-10-10",
+  "evidence_class": "INTERNAL_TASK_VALIDATION",
+  "family_decision": "Does this exact-party dated room amount exceed a hypothetical per-configuration nightly limit?",
+  "hypothesis": "Rounded nightly equality is sufficient to classify the exact stay at or below a nightly budget.",
+  "sources": [
+    {
+      "path": "docs/research/washington-dc-room-configurations-2026-09-30.json",
+      "role": "Maintained exact party/stay/category task; not renewed."
+    },
+    {
+      "path": "docs/research/washington-dc-residence-price-observation-2026-09-30.json",
+      "observed_on": "2026-09-30",
+      "source_url": "https://www.marriott.com/en-us/hotels/wascp-residence-inn-washington-dc-national-mall/rooms/",
+      "role": "Reused dated booking observation, not rechecked or current quote."
+    },
+    {
+      "path": "tools/family-room-comparison.mjs",
+      "role": "Offline API and CLI reproduction on October10."
+    }
+  ],
+  "task": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12
+    ],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "category": "1 Bedroom Suite, 2 Queen, Sofa bed (ONQQ)",
+    "public_plan": "Prepay Non-refundable",
+    "currency": "USD",
+    "unit": "configuration/stay",
+    "displayed_stay_amount": 2168.27,
+    "displayed_nightly_equivalent": 433.65,
+    "hypothetical_nightly_limit": 433.65,
+    "stay_limit_cents": 216825,
+    "observed_stay_cents": 216827,
+    "over_budget_cents": 2
+  },
+  "before": "AT_OR_BELOW_OBSERVED_AMOUNT",
+  "required_result": "ABOVE_OBSERVED_AMOUNT",
+  "decision": "IMPLEMENT exact stay-cent comparison; reject rounded-nightly threshold hypothesis.",
+  "confidence": "High for narrow validated-cent arithmetic; no booking, suitability, human, current quote or organic outcome evidence.",
+  "limits": [
+    "Hypothetical limit is internal task input, not a customer's budget.",
+    "Retain September30 observation and all unresolved tax/fee/deposit/meal/age/cancellation provenance; not final affordability.",
+    "Synthetic equality and large operand fixtures are tests, not booking evidence.",
+    "All public files/default exports remain unchanged; no new URL or independent demand qualification."
+  ],
+  "acceptance": {
+    "comparison": "Validated stay cents <= validated nightly-limit cents multiplied by exact nights, using BigInt after existing cent-safe validation.",
+    "boundaries": "Below/equal/above and maintained2cent overage; single/joined/CLI parity.",
+    "guards": "Unknown unpriced/currency/historical/age precedence and input validation unchanged.",
+    "delivery": "Native full/focused QA and different read-only reviewer before exact9-path push-only release; no public-site release claim."
+  },
+  "reusable_lesson": "Display rounding is not decision arithmetic. Compare exact stay cents to a stay-sized budget.",
+  "next_falsification_trigger": "Money schema or night-count changes, or any exact-budget task failure."
+}

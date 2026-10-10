@@ -47,14 +47,19 @@ function comparisonFilters(filters) {
   return { kitchen: value("kitchen", ["any", "published"]), capacity: value("capacity", ["any", "not-excluded"]), ...(budget ? { budget } : {}) };
 }
 
-function observedNightlyBudget(price, rate, budget) {
+function observedNightlyBudget(price, rate, budget, nights) {
   if (!budget) return [];
   let status;
   if (!rate) status = "UNKNOWN_UNPRICED";
   else if (price.currency !== budget.currency) status = "UNKNOWN_CURRENCY_MISMATCH";
   else if (price.status.startsWith("historical-")) status = "UNKNOWN_HISTORICAL_PRICE";
   else if (price.requested_individual_ages_confirmed === false) status = "UNKNOWN_AGE_BASIS";
-  else status = rate.nightly_average <= budget.nightly_limit ? "AT_OR_BELOW_OBSERVED_AMOUNT" : "ABOVE_OBSERVED_AMOUNT";
+  else {
+    // Display rounding must not erase a stay-total overage.
+    const stayCents = BigInt(Math.round(rate.stay_amount * 100));
+    const limitCents = BigInt(Math.round(budget.nightly_limit * 100)) * BigInt(nights);
+    status = stayCents <= limitCents ? "AT_OR_BELOW_OBSERVED_AMOUNT" : "ABOVE_OBSERVED_AMOUNT";
+  }
   return [`Observed nightly budget ${status}: limit ${budget.nightly_limit} ${budget.currency}/configuration/night; price-only dated sample, not final all-fee budget, booking acceptance, future availability or hotel ranking`];
 }
 
@@ -87,7 +92,7 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budg
       [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed",
         ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : []),
         ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : []),
-        ...observedNightlyBudget(price, rate, budget), ...cancellationDateCheck(rate, asOf)].join("; ")
+        ...observedNightlyBudget(price, rate, budget, nights), ...cancellationDateCheck(rate, asOf)].join("; ")
     ]);
   });
 }
