@@ -20,10 +20,51 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-086",
+      "title": "Compare MoMA teen admission budgets and ticket-preserving breaks",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T09:03:57Z",
+      "target_paths": [
+        "docs/research/nyc-moma-family-admission-2026-10-10.json",
+        "tools/nyc-moma-budget.mjs",
+        "tools/nyc-moma-budget.test.mjs",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "tools/new-york-city-teen-page.test.mjs",
+        "site/things-to-do/new-york-city-with-teens.html",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs",
+        "ops/evidence-watch.json",
+        "status/new-york-city-pages.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-teens.html"
+      ],
+      "evidence": "October10 MoMA official visit price list and visitorFAQ:30adult/17full-time-student-with-ID/16underfree-but-ticket-required; same-day return with retained ticket. Existing teen page gives age-free shorthand but not party budget or ticket-preserving break. Three four-person proxy scenarios, not actual visitor/checkout observations. ReusedOct9/priorOct8GSC finalizedOct7/6 orientation only; noCTR diagnosis. Prior public releases verified, dailyLRN178-182complete.",
+      "acceptance_criteria": [
+        "One source-validated no-JS party comparison from integer cents:2adults+13/16base60USD;13/17standard90USD;13/17eligiblefull-time-ID student77USD",
+        "Separate published base admission from unknown tax/fees/visit-date inventory and student eligibility; free child still needs ticket and same-day return keeps ticket",
+        "Only one new unframed NYC section; original10choices/FAQ3/metadata/SUMMITpolicy/generalJuly26facts/allotherpublicbytes preserved; no independent entry/rest/suitability assurance",
+        "Source-specific14day clock dueOct24/watch parity/history nonpromotion; focused/full native/responsive keyboard/image QA/different read-onlyPASS/exact reviewed release/Pages-marker-productionSEO-invariants"
+      ],
+      "measurement_plan": "Page-only family decision: compare13/16versus13/17 budgets without treating17asfree or automatically student-eligible; plan an outside break without losing re-entry ticket. No real-user or ranking outcome claim.",
+      "production_invariant": "Exactly one marked MoMA admission section added after teen activity table; remove that block to reproduce priorNYCHTML byteexact. Original10choices/FAQ3/July26general source dates/October10SUMMITrecord/schema/meta/sitemap34 and allotherpublic/priorresearch/pricebytes unchanged. No checkout/reservation/provider/account/external/scheduler mutation. Published USD category prices not final checkout or ticket availability; studentID conditional, numeric adolescent adult/supervision and actual rest unknown.",
+      "decision": "IMPLEMENT existing-page admission/break comparison; student eligibility and checkout totals remain unknown, no new URL.",
+      "next_gate": "Native/responsive/different read-only consensus/exact reviewed release and production; later changed official admissions/return rule orOctober24review.",
+      "review_receipt": "FT-IMP-086 independent read-only Rawls01a1232b-1240-7ef3-a260-35bc6be54dbd PASS/noP0-P3 at2026-10-10T09:13:55Z; immutable consensus reviewed exact16/all871hashes/manifest08c48dba5ac38bbdd0ba5c41c27116e96b309ada0368306976595c9ec9ec1f45/286prioritems with085mechanicalcompletion only/heldledgerexcluded. Reviewer11tests with isolatedcleanedfixture, screenshotinspection, no repo-candidate-network-delegation-gitwrites. Master693full/28focused/43maintenance/state0/GSC88/localSEO0fiveprior; desktop1280-390-320nooverflow/320keyboard798max798/image1280/errors[]; generatorNYConly/idempotent, newblockreversal restorespriorHTML/allotherpublicresearchdatesFAQSUMMIT34URLsbyteexact. October10publishedadmission-only USD60/90/77/conditionalID/freechildticket/retained-ticketreturn; not checkoutinventory-IDacceptance-independent-entry-actualrest-safety evidence. Production release pending."
+    },
+    {
       "id": "FT-IMP-085",
       "title": "Answer SUMMIT under-16 split-visit supervision on the NYC teen guide",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T08:06:00Z",
       "target_paths": [
@@ -57,7 +98,11 @@
       "production_invariant": "Only SUMMIT comparison/detail check/first official-check text and independent-teen FAQ answer change from sharedrecord. Reverse exact replacements including escapedFAQ schema to reproduce original NYC HTML. All other public files,10choices/metadata/ItemList/FAQ3/July26general dates/sitemap34/old evidence/prices/heldwork unchanged. Terms retainJune28,2023 lastupdate distinct fromOctober10inspection. No safety/legal/firsthand/independent16plus/adultage assurance or external/provider/scheduler mutation.",
       "decision": "IMPLEMENT verified under16 adult-throughout rule on existing teen page;17-year-old adult eligibility and independent older-teen admission not established.",
       "next_gate": "Finish QA/responsive/read-only consensus/exact release/production; preserve until changed source orNovember9review.",
-      "review_receipt": "FT-IMP-085 independent Ampere PASS recorded2026-10-10T08:14:02Z/noP0-P3. Frozen868/exact15/manifestae4dd0804735ecb31a371060c5d63070c39c0b6f9078d8a9520c549c194de9a6/allhashesnodrift/285prioritems/heldisolation verified. Reviewer26focusedtests/three screenshots/exactfourcopy-plusFAQschema reversal/allotherpublic-priorresearch-July26generaldate-metadata-34URLbytes preserved/Nov9clock-history-watch parity/unsupportedclaim limits. Reviewer fixture-only test generation cleaned outside repository/candidate; no network/delegation or repository/candidate/git mutation. Master688full/26focused/42maintenance/state0/GSC88/localSEO0fiveprior/generatorNYConly-idempotent/1280-390-320nooverflow/keyboard320558.5max561/image1280/errors[]. Official under16 adult-throughout only; adultage/independent16-17unknown/June28,2023terms date retained. Immutable consensus only; public release and production verification pending."
+      "review_receipt": "FT-IMP-085 independent Ampere PASS recorded2026-10-10T08:14:02Z/noP0-P3. Frozen868/exact15/manifestae4dd0804735ecb31a371060c5d63070c39c0b6f9078d8a9520c549c194de9a6/allhashesnodrift/285prioritems/heldisolation verified. Reviewer26focusedtests/three screenshots/exactfourcopy-plusFAQschema reversal/allotherpublic-priorresearch-July26generaldate-metadata-34URLbytes preserved/Nov9clock-history-watch parity/unsupportedclaim limits. Reviewer fixture-only test generation cleaned outside repository/candidate; no network/delegation or repository/candidate/git mutation. Master688full/26focused/42maintenance/state0/GSC88/localSEO0fiveprior/generatorNYConly-idempotent/1280-390-320nooverflow/keyboard320558.5max561/image1280/errors[]. Official under16 adult-throughout only; adultage/independent16-17unknown/June28,2023terms date retained. Immutable consensus only; public release and production verification pending.",
+      "completed_on": "2026-10-10T08:15:47.359Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "4c2af14f2f7b9c44563125a3a63599c6668dfa97",
+      "production_receipt": "FT-IMP-085 delivered and production-verified 2026-10-10T08:15:47.359Z at 4c2af14f2f7b9c44563125a3a63599c6668dfa97; Pages38037209486success/matchingmarker/exact200NYCteenHTML/allfourcopy-plusFAQschema invariants/allotherpublic-priorresearch-metadata-July26generaldate-34URLbytes preserved/productionSEO0fiveprior. SUMMIT under16 adult throughout fromOctober10twoofficialpolicies; adult minimumage and independent16/17unknown, termsJune28,2023update distinct frominspection. Sharedvalidatedrecord/November9clock/watch; no safety/firsthand/SEO proof. Master688full/26focused/42maintenance/state0/GSC88/responsive1280-390-320nooverflow/keyboard320558.5max561/image1280/errors[]; different read-only consensus/exact15/all868indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. LRN182 policy/task learning, not human testing. Next changedpolicy/ticket conflict orNovember9review; other London/provider holds unchanged. Mechanical completion only/no metadata-onlycommit; heldwork/sprint preserved."
     },
     {
       "id": "FT-IMP-084",

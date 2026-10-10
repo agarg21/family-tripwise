@@ -460,6 +460,20 @@ ${officialCheckSection}${faqSection}${markerEnd}
 }
 
 function renderTeenUpgrade(page) {
+  const budget = page.admissionBudget;
+  const admissionSection = budget ? `      <!-- moma-admission:start -->
+      <section class="container page-section rank-ready-section" aria-labelledby="moma-budget-title">
+        <div class="section-heading">
+          <p class="eyebrow">Admission and breaks</p>
+          <h2 id="moma-budget-title">${esc(budget.heading)}</h2>
+        </div>
+        <p class="review-label">${esc(budget.note)}</p>
+${renderActivityComparison(budget.rows, budget.headers, "moma-budget-comparison", {accessibleLabel:"MoMA family admission comparison",rowHeaders:true})}
+        <p>${esc(budget.return_note)}</p>
+        <p><a class="text-link" href="${esc(budget.sources[0])}">MoMA admission prices</a> <a class="text-link" href="${esc(budget.sources[1])}">MoMA ticket and return policy</a></p>
+      </section>
+      <!-- moma-admission:end -->
+` : "";
   const indexDecision = page.indexDecision
     ? `        <p class="review-label">${esc(page.indexDecision)}</p>\n`
     : "";
@@ -513,7 +527,7 @@ ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page
         <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
 ${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
       </section>
-
+${admissionSection}
       <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">

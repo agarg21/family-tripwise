@@ -1,5 +1,7 @@
 # New York City Page Status
 
+FT-IMP-086 candidate: one maintained MoMA teen admission/break comparison, published-category totals not checkoutquotes. Evidence: `docs/research/nyc-moma-family-admission-2026-10-10.json`; October10/October24clock, conditional studentID/free-child ticket/same-day return retainedticket. No generaldate or SUMMITpolicy renewal. QA/review/release pending.
+
 FT-IMP-085 candidate: SUMMIT under16 adult-throughout rule resolves13/17split-visit task; older-teen adult qualification and independent entry unknown. October10inspection/November9review distinct from July26general facts and June28,2023terms update. Evidence: `docs/research/new-york-city-summit-teen-access-2026-10-10.json`; QA/review/release pending.
 
 FT-IMP-049 delivered and production-verified: `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages `36802947632`, exact sha/run marker,50943byteHTML/18818byteCSV HTTP200 and identical to reviewed files; productionSEO31zeroerrors/fiveprioradvisories. Same twelve historical price records in anchored comparison/no-JS CSV; actual download,1280/390/320 routing/wrapping/no-overflow,focused12/full287/state/SEO/output gates pass; Volta cycle-two PASS. No fact/date renewal. Evidence: `docs/plan/nyc-comparison-sharing-2026-09-30.md`.

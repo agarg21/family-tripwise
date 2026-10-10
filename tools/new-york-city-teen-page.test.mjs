@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
 import { summitPolicyEvidence } from "./nyc-summit-policy.mjs";
 import { teenPages } from "./page-generation/upgrade-page-data.mjs";
+import { momaComparison } from "./nyc-moma-budget.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const target = "things-to-do/new-york-city-with-teens.html";
@@ -102,6 +103,19 @@ test("SUMMIT shared policy answers split visits in visible and structured output
   assert.equal(schemas(html).find(s=>s['@type']==='FAQPage').mainEntity[2].acceptedAnswer.text,copy.faq);
   assert.match(html,/July 26, 2026/);assert.match(html,/policy checked October 10, 2026/);
   assert.doesNotMatch(html,/16 and older can enter independently|17-year-old qualifies as an adult|adult must be 18/i);
+});
+
+test("MoMA admission-only party totals, conditional ID and ticket-preserving breaks are discoverable without JS", () => {
+ const html=readFileSync(join(root,"site",target),"utf8"),start=html.indexOf('<!-- moma-admission:start -->'),end=html.indexOf('<!-- moma-admission:end -->');
+ assert.ok(start>html.indexOf('Teen activity decision table'));assert.ok(end>start);
+ const block=html.slice(start,end),comparison=momaComparison();
+ assert.match(block,/tabindex="0" role="region" aria-label="MoMA family admission comparison"/);
+ assert.equal((block.match(/<tr>/g)||[]).length,4);assert.equal((block.match(/scope="col"/g)||[]).length,3);
+ assert.equal((block.match(/role="rowheader"/g)||[]).length,3);
+ for(const row of comparison.rows)for(const cell of row)assert.ok(block.includes(cell));
+ assert.match(block,/not checkout totals/);assert.match(block,/full-time students with ID/);assert.match(block,/Free child admission still needs a ticket/);assert.match(block,/same day if you retain your ticket/);
+ assert.doesNotMatch(block,/<script|student admission guaranteed|rest guaranteed|final checkout total/i);
+ assert.match(html,/July 26, 2026/);assert.match(html,/SUMMIT minor policy checked October 10, 2026/);
 });
 
 test("routes from the all-ages page and home while preserving one sitemap URL", () => {

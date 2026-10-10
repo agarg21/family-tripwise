@@ -1,0 +1,26 @@
+{
+  "schema_version":1,
+  "action_id":"FT-IMP-086",
+  "observed_on":"2026-10-10",
+  "refresh_days":14,
+  "evidence_class":"OFFICIAL_ADMISSION_SCHEDULE_AND_POLICY",
+  "source_urls":["https://www.moma.org/visit/","https://www.moma.org/visit/tips"],
+  "published_on":null,
+  "source_status":"body-inspected",
+  "currency":"USD",
+  "currency_basis":"USD interpretation of dollar-denominated prices on the official Manhattan museum admission page",
+  "unit":"per person, general museum admission",
+  "prices":{"adult_cents":3000,"student_cents":1700,"child_cents":0},
+  "policy":{"free_child_max_age":16,"student_requires_full_time_ID":true,"free_child_ticket_required":true,"same_day_return_with_ticket":true},
+  "scenarios":[
+    {"id":"younger-teens","adults":2,"child_ages":[13,16],"older_teen_student_ID":false},
+    {"id":"older-teen-standard","adults":2,"child_ages":[13,17],"older_teen_student_ID":false},
+    {"id":"older-teen-student","adults":2,"child_ages":[13,17],"older_teen_student_ID":true}
+  ],
+  "family_task":{"decision":"Compare a four-person MoMA visit with younger versus older teens, and decide whether an outside meal/rest break needs a new ticket","hypothesis":"The original free-child shorthand and high flexibility label answer both decisions","result":"REJECT; implement three conditional category totals and retained-ticket same-day return rule","evidence_class":"PAGE_ONLY_PROXY_TASK","human_tested":false},
+  "unknowns":["Actual full-time student-ID acceptance for the 17-year-old","Visit-date inventory and any checkout taxes or fees","No actual rest, independent-entry, accompaniment or safety verdict","No dated booking quote or reserved admission"],
+  "confidence":"High published category arithmetic and official ticket-policy evidence; conditional student eligibility and final payment remain unverified",
+  "lesson":"A free-child threshold does not imply all teenagers are free, and free admission does not eliminate ticket handling for a break",
+  "decision":"IMPLEMENT one existing-page comparison; no new URL",
+  "next_falsification_trigger":"Changed admission category/price/ID or return rule, failed party-budget task, unavailable official source, or October24 review"
+}

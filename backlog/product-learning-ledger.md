@@ -1,5 +1,9 @@
 # Product Learning Ledger
 
+## LRN-183 / Free Teen Age Boundary And Retained Tickets / 2026-10-10
+
+FT-IMP-086 family decision: four-person MoMA budget with13/16 versus13/17, plus outside meal/rest break. Hypothesis: free-child shorthand and high flexibility already suffice. REJECT; implement conditional admission-only60/90/77USD category totals from current official30adult/17full-time-ID-student/16underfree and explicit free-child ticket/same-day return retention. [Dated record](../docs/research/nyc-moma-family-admission-2026-10-10.json) includes officialURLs, class, source unknownpublicationdate, proxy task, arithmetic/limits. High published-category/policy confidence, no actualIDacceptance/checkout/visitor/rest/SEO evidence. Lesson: age17 is not free-by-age or automatically student-eligible; free admission still has ticket handling. Falsify source/category/ID/return change, failed task orOctober24review. IMPLEMENT existing URL through QA/differentPASS/exact production release; generalJuly26facts and priorSUMMIT unchanged.
+
 ## LRN-182 / Under-16 Is Not Older-Teen Permission / 2026-10-10
 
 FT-IMP-085: two adults with teens13/17 deciding a split SUMMIT visit. Hypothesis: generic check-accompaniment wording answers it. REJECT; current official ticket terms section7 and code agree under16 needs adult throughout.17-year-old adult qualification and independent16/17 entry remain unknown. Official policy inspectedOctober10; terms showJune28,2023update, code date unknown. Sources/evidence/class/task/publiccopy: `docs/research/new-york-city-summit-teen-access-2026-10-10.json`. High agreement on narrow rule; page-only proxy, not human/safety/SEO proof. IMPLEMENT existing teen comparison/detail/check/FAQ via shared validated record plus30day clock. Lesson: a threshold does not grant permission above it. Falsification: source/ticket conflict, failed task orNovember9review. Public delivery pending QA/read-only consensus/release.

@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { summitPolicy } from "../nyc-summit-policy.mjs";
+import { momaComparison } from "../nyc-moma-budget.mjs";
 
 const summitAccess = summitPolicy().evidence;
 
@@ -2229,6 +2230,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/new-york-city-with-teens.html": {
+    admissionBudget: momaComparison(),
     title: "Things to Do in New York City With Teens: 10 Picks by Trip Style",
     description:
       "Compare 10 things to do in New York City with teens by interest, time, cost, location, flexibility, mixed-age fit, and current official checks.",
