@@ -52,11 +52,22 @@ test("Boston has one canonical job and maintained discovery without removing pre
  const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);assert.equal(schema["@type"],"WebPage");assert.equal(schema.url,url);
 });
 test("Boston refresh registry uses maintained exact sources and original dates",()=>{
- const watch=JSON.parse(read("ops/evidence-watch.json")).records.filter(r=>r.page_url.endsWith(bostonPath));
+ const watch=JSON.parse(read("ops/evidence-watch.json")).records.filter(r=>r.page_url.endsWith(bostonPath)&&r.id!=="boston-museum-admission-return");
  assert.equal(watch.length,4);assert.deepEqual(watch.map(r=>r.verified_on),["2026-10-01","2026-10-03","2026-10-01","2026-10-09"]);
  const sources=Object.values(bostonPack.sources).map(s=>s.url);
  for(const record of watch)for(const url of record.source_urls)assert.ok(sources.includes(url),url);
  assert.ok(JSON.parse(read("ops/gsc-monitor.json")).urls?.includes(`https://familytripwise.com/${bostonPath}`) || read("ops/gsc-monitor.json").includes(`https://familytripwise.com/${bostonPath}`));
+});
+
+test("museum admission component is source-dated, keyboard-readable and never a checkout or reentry promise",()=>{
+ const html=bostonFamilyHotelPage(),section=html.match(/<div id="museum-budget" class="dc-room">([\s\S]*?)<\/div>\n<p>Two selected/)[1];
+ for(const text of ["USD 24.00","USD 120.00 admission component","USD 4.00 per transaction","Not a final checkout total","do not add it again","Tax inclusion is unknown","TJX $1 Sunday Afternoon","does not establish exit and re-entry","cannot be applied after purchase","inspected October 9","Review due October 23","not checked again"]){assert.ok(section.includes(text),text);}
+ assert.match(section,/tabindex="0" role="region" aria-label="Museum admission budget"/);
+ assert.match(section,/cg=TT&amp;c=TT/);assert.doesNotMatch(section,/USD 124|"@type":"Offer"|guaranteed|per night/);
+ const watch=JSON.parse(read("ops/evidence-watch.json")).records.find(r=>r.id==="boston-museum-admission-return");
+ assert.equal(watch.verified_on,"2026-10-09");assert.equal(watch.interval_days,14);
+ assert.equal(watch.evidence_path,"docs/research/boston-museum-return-policy-2026-10-09.json");
+ assert.ok(watch.source_urls.every(url=>section.includes(url.replaceAll('&','&amp;'))));
 });
 
 test("Boston breakfast premium uses stay-total cents, not rounded nightly subtraction",()=>{

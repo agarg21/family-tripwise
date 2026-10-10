@@ -20,10 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-081",
+      "title": "Expose Boston museum admission component and return-policy boundary",
+      "kind": "improvement",
+      "status": "candidate",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-10T01:02:40.092Z",
+      "target_paths": [
+        "docs/research/boston-public-admission-budget-task-2026-10-09.json",
+        "tools/boston-museum-admission.mjs",
+        "tools/boston-museum-admission.test.mjs",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "tools/boston-family-hotels-page.test.mjs",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs",
+        "ops/evidence-watch.json",
+        "site/where-to-stay/boston-family-hotels.html",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html"
+      ],
+      "evidence": "Named2adults/ages4,8,12 museum/hotel-break budget task fails current generic rest-check paragraph: no admission unit, party component, transaction fee or all-day-stay versus reentry distinction. Reuse reviewed FT-RES-143 official policy inspectedOct9, no reinspection or unchanged denial. 075/050/DC/Boston/PV/079/080/142 already production-verified; no higher-priority eligible unfinished release.",
+      "acceptance_criteria": [
+        "Validated one maintained143 source for published24USD/person age1+ and included4USD/transaction fee description; five standard tickets yield120USD admission component, never124checkout or nightly hotel amount; editorialUSD/unknowntaxes/dateavailability/discount limits clear",
+        "All-day ordinary stay excludes TJX1Sunday ticket, does not prove exit/reentry. No actualroute/rest/agefit/safety/Novemberticket or human-user assurance. SourceOct9/reviewOct23 clocks exposed in same public/offline/watch lane without renewal",
+        "Existing four room categories/fourplans/twounpriced/twokitchens/CSV/079breakfast/142Plaza facts and originalroom-price source bytes unchanged. Boston titleH1canonicalmetaWebPage/sitemap34/allotherpublicbytes/dirty/sprint preserved",
+        "Focused/full native QA, desktop/mobile/nooverflow/tablekeyboard/filter/fullCSV/image, different independent read-onlyPASS and exactmainrelease/Pagesmarker/productionSEO/affected invariant verification"
+      ],
+      "measurement_plan": "Page-only proxy: parent can separate admission component from transaction fee and unknown final/return costs without reconstructing public venue pages. Not real-user or SEO causality.",
+      "production_invariant": "Only BostonHTML public bytes change; sameURL/titleH1meta/schema/canonical/sitemap34/CSV/roomprices/sourceclocks/079meal/142kitchen/080labels/allotherpublicbytes. No indexing/analytics/externalaccount/contact/paid/scheduler/provider retry.",
+      "decision": "IMPLEMENT same-record museum admission component, separate transaction fee and all-day/re-entry boundary; public HTML candidate/27focusedgreen, not delivered yet. Original hotel prices/CSV/source evidence unchanged.",
+      "next_gate": "Focused/full/browser/different independent read-only review/exactrelease/productionverification.",
+      "evidence_record": "docs/research/boston-public-admission-budget-task-2026-10-09.json",
+      "review_receipt": "FT-IMP-081 Copernicus01a12358-e768-7072-b298-2ddc342d7f28 PASS/noP0-P3/exact14/all848hashes/all279prioritems/helddirty preserved on b803578e3712308c67f7771fac5d2985f7795a4e386968a66773a3a94a9ce85b. Independent27focused/read-only screenshot-inspection. Master662full/27focused/39maintenance/state0/GSC88/localSEO0fiveprior; actual1280-390-320nooverflow/image1280/keyboardtable510of512/filter4-2-4/museum unaffected/actualCSV(5)byteexact/noerrorconsole; freshhash heading152px/margin128, older-snapshot navigation not counted. Same143sourceOct9/no price renewal/checkout-tax-date-reentry unknowns intact/all34URLs-otherpublicbytes. Immutable mechanical consensus only; production pending."
+    },
+    {
       "id": "FT-RES-143",
       "title": "Resolve Boston museum same-admission rest-return gate",
       "kind": "research",
-      "status": "candidate",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "started_at": "2026-10-10T00:20:55.922Z",
       "target_paths": [
@@ -48,7 +88,11 @@
       "decision": "PRESERVE public re-entry/rest unknown: current official ordinary admission allows all-day stay, not explicit exit/re-entry. Maintained dated price24USD/person age1+ and included4USD/transaction fee separate from checkout/date/tax assurance. Research-only; public/model/watch paths unchanged.",
       "next_gate": "Explicit changed official return rule or separately authorized human evidence; independent candidate admission-budget task at next eligible run retains units/exceptions/source date/currency interpretation/unknown taxes. No unchanged policy replay.",
       "qa_state": "Focused3/full/native state/privacy/localSEO pending; different independent read-only review and exact docs-only push required.",
-      "review_receipt": "FT-RES-143 Galileo01a12333 PASS cycle1/noP0-P3/read-only; candidate845files/exact8/source-reviewSHA75a44d0b4e6c1e22a0990d3e0cddea1b8de1feb7338d7c36a957c2d5561cc962. Master658full/3focused/39maintenance/state0/GSC88/localSEO0fivepriorwarnings. Whole845inventory zero drift; 278prioritems/64publicfiles/all34URLs/helddirty preserved. Research-only; no page or source-model renewal. Immutable mechanical consensus only."
+      "review_receipt": "FT-RES-143 Galileo01a12333 PASS cycle1/noP0-P3/read-only; candidate845files/exact8/source-reviewSHA75a44d0b4e6c1e22a0990d3e0cddea1b8de1feb7338d7c36a957c2d5561cc962. Master658full/3focused/39maintenance/state0/GSC88/localSEO0fivepriorwarnings. Whole845inventory zero drift; 278prioritems/64publicfiles/all34URLs/helddirty preserved. Research-only; no page or source-model renewal. Immutable mechanical consensus only.",
+      "release_receipt": "FT-RES-143 release 06d8e02b3634a290375139a43959417e222fe4d3 remote verified 2026-10-10T00:27:52.703Z; main0-0/emptyindex/exact8/all845indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Research-only PRESERVE/learningLRN175; explicit re-entry/new-ticket/route/rest remain unknown. Source-record/focused3/full658/maintenance39/state0/GSC88/localSEO0/differentGalileoPASS. All34URLs/64publicfiles unchanged; no Pages wait required. 142and080 earlier public release receipts production-verified; final thirdtransaction complete, no fourth action. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-10T00:27:52.720Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "06d8e02b3634a290375139a43959417e222fe4d3"
     },
     {
       "id": "FT-IMP-080",

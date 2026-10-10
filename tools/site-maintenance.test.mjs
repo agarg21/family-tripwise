@@ -49,17 +49,19 @@ test("invalid policy dates, provenance, intervals and unsafe URLs fail closed wi
 
 test("offline maintenance surfaces policy due counts while preserving room and price clocks", async () => {
   const current=await maintenanceReport({today:"2026-10-09"});
-  assert.equal(current.policy_review_clocks.length,2);
-  assert.equal(current.summary.policy_review_clocks,2);
+  assert.equal(current.policy_review_clocks.length,3);
+  assert.equal(current.summary.policy_review_clocks,3);
   assert.equal(current.summary.policy_due_records,0);
   assert.equal(current.summary.policy_not_yet_observed,0);
   const future=await maintenanceReport({today:"2026-11-03"});
-  assert.equal(future.summary.policy_due_records,1);
+  assert.equal(future.summary.policy_due_records,2);
   assert.equal(future.policy_review_clocks.find(record=>record.id==="dc-regular-rail-fare").freshness.state,"review-due");
   assert.equal(future.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
   assert.equal(future.automatic_fact_renewal,false);assert.equal(future.automatic_publication,false);
   const historical=await maintenanceReport({today:"2026-10-01"});
-  assert.equal(historical.summary.policy_not_yet_observed,2);assert.equal(historical.summary.policy_due_records,0);
+  assert.equal(historical.summary.policy_not_yet_observed,3);assert.equal(historical.summary.policy_due_records,0);
+  assert.equal(current.policy_review_clocks.find(record=>record.id==="boston-museum-admission-return").freshness.due_on,"2026-10-23");
+  assert.equal((await maintenanceReport({today:"2026-10-23"})).summary.policy_due_records,1);
   assert.deepEqual(future.pages,current.pages);
 });
 

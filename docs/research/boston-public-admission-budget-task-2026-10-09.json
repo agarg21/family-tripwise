@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-081",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_OFFICIAL_VENUE_POLICY",
+  "record_path": "docs/research/boston-museum-return-policy-2026-10-09.json",
+  "source_observed_on": "2026-10-09",
+  "maintained_policy_sha256": "b9109151893d641d6eb3614d0756ff1db48a7d159a377b161e82a788c722aff1",
+  "refresh_days": 14,
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12]},
+  "hypothesis": "The existing Boston hotel-rest paragraph lets a family distinguish museum admission, transaction fees and return uncertainty without reconstructing venue pages.",
+  "result": "REJECT paragraph sufficiency; IMPLEMENT one same-record admission component table on existing Boston page, not an activity URL or final quote.",
+  "admission_component": {"tickets": 5, "amount": 120, "currency": "USD", "unit": "five standard admission tickets", "includes_transaction_fee_assumed": false, "checkout_total": null},
+  "limitations": "24 per person times five is displayed-price arithmetic, not a final checkout or November quote. Published4/transaction included-fee wording stays separate; do not silently add124 or double-charge an inclusive quote. Tax inclusion, discounts, future-date availability and exit/re-entry remain unresolved. USD is editorial interpretation; no actual route, user, rest, safety or firm suitability evidence.",
+  "confidence": "High maintained record identity and arithmetic; page-only scan proxy, not real-user satisfaction or SEO outcome.",
+  "next_falsification_trigger": "Changed policy/source hash, units, admission amount, fee basis, explicit return rule or failed public table task; review due October23, not automatic fact renewal."
+}
