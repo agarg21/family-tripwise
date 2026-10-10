@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-085",
+  "observed_on": "2026-10-10",
+  "evidence_class": "OFFICIAL_VENUE_POLICY",
+  "scope": "SUMMIT under-16 adult accompaniment only; not independent-roaming, safety or legal advice.",
+  "sources": [
+    {"url":"https://summitov.com/ticketterms/","observed_on":"2026-10-10","published_on":"2021-08-10","updated_on":"2023-06-28","surface":"Public ticket terms section 7 Admission; displayed effective and last-updated dates retained","fact":"Visitors younger than 16 must remain with an adult throughout their visit"},
+    {"url":"https://summitov.com/codeofconduct/","observed_on":"2026-10-10","published_on":null,"updated_on":null,"surface":"Public guest code of conduct; no policy publication date established","fact":"Children younger than 16 require adult accompaniment for the whole visit"}
+  ],
+  "policy": {"under_age":16,"adult_throughout":true,"adult_minimum_age":null,"independent_16_17_entry":"not-established"},
+  "family_task": {"party":"Two adults and teens aged 13 and 17","decision":"Can the 13-year-old visit SUMMIT with the 17-year-old while adults take a separate stop?","hypothesis":"Generic check-accompaniment wording answers the split-visit decision","result":"REJECT hypothesis; IMPLEMENT published adult-throughout constraint. A 13-year-old requires an adult. A 17-year-old's qualification as that adult is not established.","evidence_class":"PAGE_ONLY_PROXY_TASK","human_tested":false},
+  "unknowns": ["SUMMIT's numeric definition of adult", "Independent admission for visitors aged 16 or 17", "Selected-ticket eligibility and visit-date policy changes", "No firsthand, route practicality, safety or satisfaction evidence"],
+  "public_copy": {
+    "comparison_check":"Under 16: adult throughout; check ticket, effects, footwear and visibility",
+    "detail_check":"Under-16 accompaniment: an adult must remain throughout the SUMMIT visit (policy checked October 10, 2026). Check the exact ticket, effects, footwear and visibility before buying.",
+    "official_check":"SUMMIT minor policy checked October 10, 2026: visitors under 16 must stay with an adult throughout the visit. Do not assume an older teen qualifies as the required adult. SUMMIT and SPYSCAPE use exact tickets with different effects, durations, and minor rules. Choose the product before comparing the price.",
+    "faq":"SUMMIT requires visitors under 16 to stay with an adult throughout the visit (policy checked October 10, 2026). A 13-year-old therefore needs an adult; these sources do not establish whether a 17-year-old qualifies as that adult or whether older teens can enter independently. Elsewhere, check the exact venue's minor rule and your family's supervision plan. This guide makes no independent-roaming or safety assurances."
+  },
+  "confidence":"High agreement between two official sources for the under-16 constraint; adult age and independent older-teen admission remain unknown.",
+  "lesson":"Publish a concrete verified accompaniment rule beside a teen choice without inferring permission for ages outside its stated threshold.",
+  "decision":"IMPLEMENT existing page; no new URL",
+  "next_review_due":"2026-11-09",
+  "next_falsification_trigger":"Changed official minor policy, conflicting ticket or event rule, source unavailable, failed split-visit task, or November9 source review"
+}

@@ -1,5 +1,7 @@
 # New York City Page Status
 
+FT-IMP-085 candidate: SUMMIT under16 adult-throughout rule resolves13/17split-visit task; older-teen adult qualification and independent entry unknown. October10inspection/November9review distinct from July26general facts and June28,2023terms update. Evidence: `docs/research/new-york-city-summit-teen-access-2026-10-10.json`; QA/review/release pending.
+
 FT-IMP-049 delivered and production-verified: `ebaccf241c15fc7c3171708cf3cae775884f98c6`, successful Pages `36802947632`, exact sha/run marker,50943byteHTML/18818byteCSV HTTP200 and identical to reviewed files; productionSEO31zeroerrors/fiveprioradvisories. Same twelve historical price records in anchored comparison/no-JS CSV; actual download,1280/390/320 routing/wrapping/no-overflow,focused12/full287/state/SEO/output gates pass; Volta cycle-two PASS. No fact/date renewal. Evidence: `docs/plan/nyc-comparison-sharing-2026-09-30.md`.
 
 FT-IMP-048 delivered and production-verified: reviewed13paths pushed as `9362c7387e16a4a73268e7acdcbadbab03c7ff2c`, successful Pages `36801593003`, exact marker and byte-identical NYC HTML, productionSEO31zeroerrors/fiveprioradvisories. All12price bands/room/review/maps/URL invariants retained. No current rate renewal or SEO outcome. Six exclusions preserved. Mechanical immutable result, not another learning unit.

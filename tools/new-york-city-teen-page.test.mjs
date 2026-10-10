@@ -6,6 +6,8 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
+import { summitPolicyEvidence } from "./nyc-summit-policy.mjs";
+import { teenPages } from "./page-generation/upgrade-page-data.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const target = "things-to-do/new-york-city-with-teens.html";
@@ -81,7 +83,7 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
 
   for (const required of [
     "Growler requires a 40-inch minimum",
-    "under-16 accompaniment",
+    "Under-16 accompaniment",
     "16 and under free",
     "movingimage.org/education/game-design-lab/",
     "summitov.com/ticketterms/",
@@ -90,6 +92,16 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
     "family-itinerary/new-york-city-with-kids.html",
     "Central_Park_New_York_City_New_York_23_cropped.jpg"
   ]) assert.match(html, new RegExp(required));
+});
+
+test("SUMMIT shared policy answers split visits in visible and structured outputs without general fact renewal", () => {
+  const html=readFileSync(join(root,"site",target),"utf8"),page=teenPages[target],copy=summitPolicyEvidence.public_copy;
+  assert.equal(page.rows[0][5],copy.comparison_check);assert.equal(page.details[0][4],copy.detail_check);
+  assert.equal(page.officialChecks[0][1],copy.official_check);assert.equal(page.faqs[2][1],copy.faq);
+  for(const text of Object.values(copy)) assert.ok(html.includes(text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),text);
+  assert.equal(schemas(html).find(s=>s['@type']==='FAQPage').mainEntity[2].acceptedAnswer.text,copy.faq);
+  assert.match(html,/July 26, 2026/);assert.match(html,/policy checked October 10, 2026/);
+  assert.doesNotMatch(html,/16 and older can enter independently|17-year-old qualifies as an adult|adult must be 18/i);
 });
 
 test("routes from the all-ages page and home while preserving one sitemap URL", () => {
