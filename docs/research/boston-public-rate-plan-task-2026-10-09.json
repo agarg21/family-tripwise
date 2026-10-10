@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-080",
+  "observed_on": "2026-10-09",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "sample_ceiling_usd_configuration_night": 500},
+  "family_decision": "Which public plan owns each dated nightly sample in the room comparison? A low anonymous amount is not the same cancellation or meal choice as a flexible rate.",
+  "hypothesis": "Grouped nightly numbers without plan labels are sufficient for the overview budget decision.",
+  "before": "Current approved Boston comparison groups Park Plaza USD 372.10 / 444.84 / 528.68 without their plan names; parent must move to detailed tables to distinguish the non-refundable, flexible and breakfast choices. This is a page-only proxy observation, not human testing.",
+  "result": "REJECT sufficiency; IMPLEMENT labels from the same validated public price records beside every nightly amount, retaining all plans rather than a lowest-price ranking.",
+  "source_records": ["docs/research/boston-fenway-price-observation-2026-10-03.json", "docs/research/boston-park-plaza-count-price-normalization-2026-10-09.json"],
+  "source_observed_on": ["2026-10-03", "2026-10-01"],
+  "limits": "No new price inspection, live offer, final all-fee budget, exact Park Plaza age acceptance, cancellation guarantee, cheapest/suitable hotel or price-only booking recommendation. The USD 500 ceiling is hypothetical; tax/fee and meals differ, extra bedding and actual setup remain unknown.",
+  "confidence": "High in maintained plan/amount identity and the visible ambiguity; unknown actual parent satisfaction or SEO impact.",
+  "lesson": "Keep plan identity beside price when comparing rooms; do not strip cancellation and inclusion choices into an anonymous amount band.",
+  "next_falsification_trigger": "Plan/amount record drift or a failed overview task; original Park Plaza price review October 15, Fenway October 17. No automatic renewal."
+}

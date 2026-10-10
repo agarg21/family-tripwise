@@ -2,6 +2,30 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {bostonPath,bostonPack,bostonPrices,bostonRooms,bostonCsv,bostonExcluded,bostonFamilyHotelPage,bostonBreakfastUpgrade} from "./page-generation/boston-family-hotels-page.mjs";
+
+test("overview retains each exact public plan beside its own nightly sample",()=>{
+ const html=bostonFamilyHotelPage();
+ for(const room of bostonRooms){
+  const row=html.match(new RegExp(`<tr data-room="${room.id}"[^>]*>(.*?)</tr>`))[1];
+  const samples=[...row.matchAll(/<p><strong>USD ([\d.]+)<\/strong><br>([^<]+)<\/p>/g)].map(m=>({amount:Number(m[1]),plan:m[2]}));
+  assert.deepEqual(samples,(room.price.rates??[]).map(rate=>({amount:rate.nightly_average,plan:rate.plan})));
+  if(!room.price.rates)assert.ok(row.includes("<strong>Unpriced</strong>"));
+ }
+ assert.doesNotMatch(html,/<strong><p>/);
+});
+
+test("rate-plan task is dated proxy evidence and never renews prices or ranks hotels",()=>{
+ const task=JSON.parse(read("docs/research/boston-public-rate-plan-task-2026-10-09.json"));
+ assert.equal(task.action,"FT-IMP-080");assert.equal(task.evidence_class,"PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK");
+ assert.deepEqual(task.source_observed_on,bostonRooms.slice(0,2).map(room=>room.price.observed_on));
+ assert.equal(task.scenario.sample_ceiling_usd_configuration_night,500);
+ const row=bostonFamilyHotelPage().match(/<tr data-room="boston-park-plaza-deluxe-double"[^>]*>(.*?)<\/tr>/)[1];
+ assert.match(row,/<strong>USD 372.10<\/strong><br>Non-refundable/);
+ assert.match(row,/<strong>USD 444.84<\/strong><br>Flexible Rate/);
+ assert.match(row,/<strong>USD 528.68<\/strong><br>Breakfast Included/);
+ assert.match(row,/October 1 public-plan samples including displayed tax and destination fee; ages unresolved/);
+ assert.doesNotMatch(row,/cheapest|live quote|all-in|fits.*budget/i);
+});
 import {validateRoomPack} from "./family-room-task.mjs";
 import {roomComparisonCsv} from "./family-room-comparison.mjs";
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),"utf8");

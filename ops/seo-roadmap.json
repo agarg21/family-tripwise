@@ -20,10 +20,43 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-080",
+      "title": "Name Boston public rate plans beside nightly samples",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-10T00:15:33.893Z",
+      "target_paths": [
+        "docs/research/boston-public-rate-plan-task-2026-10-09.json",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "tools/boston-family-hotels-page.test.mjs",
+        "site/where-to-stay/boston-family-hotels.html",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html"
+      ],
+      "evidence": "Current Boston table row renders372.10/444.84/528.68USD unlabeled, though same validated Park Plaza plans are Non-refundable/Flexible/Breakfast. Named family budget task500USDsample ceiling cannot identify non-refundable versus flexible sample from comparison without jumping into details; PAGE_ONLY_PROXY_TASK plus reused October1/3booking data, documented noncitybudget/room demand075. Fresh142source kitchen and pricehold preserved. No pending eligible review/release; London/provider/Orlando/Cancun gates narrow.",
+      "acceptance_criteria": [
+        "Every existing public plan beside its own maintained nightly amount in main comparison, not deduplicated anonymous price list; no new amount, cheapest ranking, refundable assertion beyond plan name or currentquote",
+        "Original fourcategories/fourpublicplans/twounpriced/twokitchens/CSV/room-source-pricebytes/079breakfast419.22 and142provenance preserved. Mandatoryfee/date/count-age uncertainty remains. Label budget task as proxy not human",
+        "Focused/full nativeQA, different independent read-onlyPASS, desktop/mobile/narrow/keyboard/filter/download parity; exact9reviewed paths mainpush/Pages-marker-productionSEO/declared invariants"
+      ],
+      "measurement_plan": "Can parent map the displayed historical sub500 sample to its public plan without leaving the overview, while recognizing tax/fee/date/age/cancellation limits? Proxy ease-of-decision, no user or SEO outcome claim.",
+      "production_invariant": "Only BostonHTML overview sample labels change. TitleH1meta-schema/sitemap34/allotherpublicbytes/CSV/priceplans/totals/amounts/otherclocks/kitchencontrols/079meal/142facts andoriginalsources unchanged; no newURL/source renewal or observedquote. No security/provider/contact/booking/indexing/analytics/account/scheduler mutation.",
+      "decision": "IMPLEMENT exact-source plan labels in existing approved Boston comparison; second actual00:02:22Zrun transaction before00:47:22Zstarting deadline.",
+      "next_gate": "Focused/full/browserQA/different read-only consensus/exact production-verified release; do not rank unlike final-cost samples.",
+      "review_receipt": "FT-IMP-080 independent Rawls01a1232b-1240-7ef3-a260-35bc6be54dbd PASS/noP0-P3 at00:19Z on23a34f69076bf4697fa4cd76318d5d97548afde353655461d3624d381fc16346. Independently842hashes/exact9/all277priorroadmapitems incl142productioncompletion/helddirtyexcluded/onlyBostonpublicHTML/planescaping-no-dedup verified;14focusedpass. Master655full/39maintenance/state0/GSC88/localSEO0fiveprior/desktop1280/actualmobile390-320nooverflow/tablekeyboard40/filter4-2-4/detailsmatch/actualCSV6rows35colswhilefilteredexact/image1280/noerrorconsole. An initial oldtabviewport request remained1280 and wasn'tcounted; dedicatedsamepermittedpreviewtab gave actual390/320. Allsourceprice/date/fee-age/cancelunknowns/079premium/142kitchen-originalCSV preserved; proxytasknotrealuser/currentquote/cheapest. Immutable consensus receipt only; exactmainpush/Pages-marker-productionSEO-allinvariants next, no deliveryclaim yet; sprint unchanged."
+    },
+    {
       "id": "FT-RES-142",
       "title": "Resolve Boston Four Seasons Plaza Suite family-budget gap",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "started_at": "2026-10-10T00:02:55Z",
       "target_paths": [
@@ -57,7 +90,11 @@
       "production_invariant": "Only declared Boston HTML/CSV public bytes change; title/H1/meta/WebPage schema/date/sitemap34/home/About/all other public bytes and original room/price data unchanged. Four categories/fourpublicplans/twounpriced; Plaza sourceOct9 kitchen and monthly-call pricing limitation, all other category/price clocks original; no appliance guarantee/minimumstay/availability/childbeds. Current shared model and maintenance/registry exact provenance, historicalreport preOct9 preserves oldfacts. Full QA/different read-onlyPASS/exact mainpush/Pagesmarker/productionSEO/all declared invariants before claim.",
       "decision": "IMPLEMENT verified exact-category kitchen correction plus explicit monthly/call-only unpriced gate, not a numerical price or generic booking substitution.",
       "next_gate": "Validated overlay/shared page+CSV/offline clocks, full/focused/browser QA, different read-only consensus, exact production-verified release.",
-      "review_receipt": "FT-RES-142 independent Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 cycle2 final PASS/nofindings at00:12Z on abb92aa2c64a388240a1ce092e77e9642d6f3f7d813de0e135c8923f0ec4f785. Cycle1PASS; only registryformat minimized same parsedJSON and2added1removed, independently841hashes/exact15/all276priorroadmapitems/helddirtyexcluded/HTMLCSV identical. Master653full/25focused/39maintenance/state0/GSC88/localSEO0fiveprior; browser1280/390/320nooverflow/filter4-2-4/detailcorrespondence/keyboardregion40/actual6row35columnCSVwhilefiltered exact/image1280/no console. CurrentPlazaOct9kitchenonly sourcefacts; appliances/childbeds/pricefees/5nightavailability/minstay unknown, no monthly conversion/contact. Originalroompack-pricebytes/otherclocks/079mealpremium preserved; historicalOct8usespriorfacts. Immutable consensus receipt only; exactrelease/Pagesmarker/productionSEO/invariants next, no delivery claim yet; sprint unchanged."
+      "review_receipt": "FT-RES-142 independent Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 cycle2 final PASS/nofindings at00:12Z on abb92aa2c64a388240a1ce092e77e9642d6f3f7d813de0e135c8923f0ec4f785. Cycle1PASS; only registryformat minimized same parsedJSON and2added1removed, independently841hashes/exact15/all276priorroadmapitems/helddirtyexcluded/HTMLCSV identical. Master653full/25focused/39maintenance/state0/GSC88/localSEO0fiveprior; browser1280/390/320nooverflow/filter4-2-4/detailcorrespondence/keyboardregion40/actual6row35columnCSVwhilefiltered exact/image1280/no console. CurrentPlazaOct9kitchenonly sourcefacts; appliances/childbeds/pricefees/5nightavailability/minstay unknown, no monthly conversion/contact. Originalroompack-pricebytes/otherclocks/079mealpremium preserved; historicalOct8usespriorfacts. Immutable consensus receipt only; exactrelease/Pagesmarker/productionSEO/invariants next, no delivery claim yet; sprint unchanged.",
+      "completed_on": "2026-10-10T00:13:51.604Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "ac12b8369cb39af2e85e0d7c2b7a8ffe56c901df",
+      "production_receipt": "FT-RES-142 delivered and production-verified 2026-10-10T00:13:51.604Z at ac12b8369cb39af2e85e0d7c2b7a8ffe56c901df; successful Pages 38008065213/matchingmarker/exact200BostonHTML-CSV/metadata-schema-fourcategories-fourplans-twounpriced/twopublishedkitchens/sitemap34/allotherpublicbytes/productionSEO0errors-fiveprior. ExactPlazaSuiteOct9 kitchen/island/pantry, appliances/dining/olderchildbeds unknown; monthly phone pricing noamount/minstay/5nightavailability established. Originalroompack-pricebytes/othercategoryclocks/079meal419.22 unchanged; sharedoverlay/CSV/current-historicalmaintenance clocks/watch preserved. Master653full/25focused/39maintenance/state0/GSC88/browser1280-390-320/nooverflow/photo1280/keyboard40/filter4-2-4/actualfull6row35columnCSV/no console, independentAmpere consensus above. LRN173 sourcefact correction, not human/SEO or price delivery. Exactfamilyprice/fees held until changed permitted public evidence or separately authorized human collection; no unchangedcallonly/provider replay/contact. Mechanical completion only/no metadata-onlycommit; sprint unchanged."
     },
     {
       "id": "FT-IMP-079",
