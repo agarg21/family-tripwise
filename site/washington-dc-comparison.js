@@ -15,8 +15,10 @@
   function revealHashTarget() {
     let id;
     try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
-    const target = details.find(element => element.id === id);
-    if (!target || !target.hidden) return;
+    if (!id) return;
+    const target = document.getElementById(id);
+    const detail = target && details.find(element => element === target || element.contains(target));
+    if (!detail || !detail.hidden) return;
     checkbox.checked = false;
     update();
     target.scrollIntoView({ block: "start" });

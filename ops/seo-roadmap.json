@@ -20,10 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-093",
+      "title": "Reveal nested room-policy targets on filtered history navigation",
+      "kind": "improvement",
+      "status": "in-progress",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T20:03:31Z",
+      "target_paths": [
+        "site/washington-dc-comparison.js",
+        "tools/room-comparison-navigation.test.mjs",
+        "tools/page-generation/washington-dc-family-hotels-page.mjs",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "tools/page-generation/puerto-vallarta-family-resorts-page.mjs",
+        "site/where-to-stay/washington-dc-family-hotels.html",
+        "site/where-to-stay/boston-family-hotels.html",
+        "site/where-to-stay/puerto-vallarta-family-resorts.html",
+        "docs/research/room-comparison-nested-target-task-2026-10-10.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+        "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html"
+      ],
+      "evidence": "October10 live Boston proxy: open park-plaza-gym-policy, Compare rooms, check cooking kitchen, Back. Hash returns to nested policy but checkbox remains checked, Park Plaza article hidden and policy height0. IMP090 handles only top-level detail IDs. Current public policy/room/price records unchanged.",
+      "acceptance_criteria": [
+        "Resolve decoded fragment by exact DOM ID, find its owned room-detail container, clear kitchen filter only when that container is hidden, restore all maintained rows/details/count and scroll actual target. Preserve top-level, visible, unrelated, unknown, empty and malformed fragment behavior.",
+        "Actual Boston nested-policy Back/Forward regression and synthetic descendant controls on all three consumers; initial restored checked state and encoded fragments supported without hash selector interpolation or history/storage/network mutation.",
+        "Focused/full native QA and actual desktop/mobile1280/390/320 browser checks, different independent read-only PASS or PASS_WITH_P3, exact14path guarded commit/push, Pages/release marker/productionSEO/three affected page and shared-script invariants before delivery."
+      ],
+      "measurement_plan": "LRN191 dated internal proxy navigation task, not human testing, current quote or SEO improvement evidence. ReusedOct10 API finalizedOct8 and priorOct9 finalizedOct7 orientation only; daily learning already complete. Compare hidden height0 before against visible positioned policy after, counts, overflow, normal filter and history controls.",
+      "production_invariant": "Three HTML and three generator changes are script-version-only ft-imp090 to ft-imp093; shared client is the only runtime change. All visible facts/prices/party/stay/source dates/fees, CSV bytes, metadata/schema, other public/prior evidence/source clocks, 34URLs/observation windows/293prior judgments/held11 remain unchanged. Exact14paths/888baseline; actualrun20:00:44Z/startdeadline20:45:44Z/fixed sprint unchanged. No new URL/destination/provider retry/account/paid/indexing/security/scheduler mutation.",
+      "decision": "IMPLEMENT verified public room-policy navigation defect; no broad cluster report or new URL. Prior075/050/DC/Boston/PV releases verified; remaining room/care/corpus and London approval gates unchanged.",
+      "next_gate": "Native/browser/different read-only review/guarded release/production; next falsification changed nested IDs, new consumer or failed fragment navigation task.",
+      "review_receipt": "FT-IMP-093 independent read-only Copernicus PASS/noP0-P3 at2026-10-10T20:08:43Z; frozen review3daf278c379ff7b989f2e3a6f3c77224c75cabb51944868812d60eeb154fc2b2/all889hashes/exact14/294prior records unchanged and heldledger isolation verified. Registration293prior count is clerical; actual294verified, no judgment change. Independent42focused/state0/GSC89/SEO0fiveprior/VMbaseline failure-final recovery/nine screenshot inspection; no writes-network-delegation. Master731full/42focused/46maintenance/state0/GSC89/localSEO0fiveprior; final candidate nine1280-390-320actual Back/Forward cases restoredcounts4-3-3/targettop127.7656to128.1406/no documentoverflow/three actual filtered CSVdownloads byteexact/errors[]/keyboardfocus and narrow1to18px movement, not fulltravel. ThreeHTML/generators version-only, allfacts-prices-party-stay-fees-sourceclocks-CSV-metadata-schema-otherpublic-priorresearch-34URLs unchanged. Initial730of731 legacy emptyhash fixture failure resolved with early emptyfragment guard; finalgreen not weakened test. LRN191 internal proxy not human/quote/SEO evidence. Mechanical immutable consensus only; exact guarded release/production pending."
+    },
+    {
       "id": "FT-RES-146",
       "title": "Test whether the official Family Oasis factsheet resolves sleeping assignments",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T18:05:00Z",
       "target_paths": [
@@ -47,7 +87,11 @@
       "decision": "PRESERVE public Cancun and076candidate: independently linked brochure clarifies minimum as well as maximum occupancy but cannot resolve actual beds. Research-only because075/050/DC/Boston/PV releases already verified and no current complete076room-care-billing-slots-levy/corpus qualification; not a project-wide blocker.",
       "next_gate": "QA/read-only review/push-only verification. Exact bedding requires explicit category-specific bed types/counts and assignment or supplied primary evidence; care terms/slots/levy/corpus/URL gates remain separate.",
       "next_eligible_run": "Changed explicit sleeping specification or named independent corpus task, not repeat brochure/modal checking on cadence; October11 separate offer checkpoint remains. No new URL or public addition qualified.",
-      "review_receipt": "FT-RES-146 independent read-only Galileo PASS/noP0-P3 at2026-10-10T18:09:48Z; exact7/all888hashes/881nonowned unchanged/293priorjudgments and heldledger isolated. Review5febd8a20bb3a8a0d8f07e5d0b2613d59b2471c14d4949ab4bf7f07c888f65d0 inventory62f6fbeab81faa4aba94c524b6f8bfa4fa2e5490630a74c47bb5ddde3322e9c4. Master727full/5focused/46maintenance/state0/GSC89/localSEO0fiveprior; independent5tests/state0/GSC89/SEO0fiveprior. PDF claims reviewed against supplied extraction/provenance, not independent live fetch; no writes/network/delegation. PRESERVE occupancy3-5 versus unknown actualbeds and literal ambiguouspublicationlabel; originalquote hash/dates/allpublic-priorresearch unchanged. LRN190 narrow official-source learning, research-only not public delivery. Mechanical immutable consensus only; guarded exact push-only release pending."
+      "review_receipt": "FT-RES-146 independent read-only Galileo PASS/noP0-P3 at2026-10-10T18:09:48Z; exact7/all888hashes/881nonowned unchanged/293priorjudgments and heldledger isolated. Review5febd8a20bb3a8a0d8f07e5d0b2613d59b2471c14d4949ab4bf7f07c888f65d0 inventory62f6fbeab81faa4aba94c524b6f8bfa4fa2e5490630a74c47bb5ddde3322e9c4. Master727full/5focused/46maintenance/state0/GSC89/localSEO0fiveprior; independent5tests/state0/GSC89/SEO0fiveprior. PDF claims reviewed against supplied extraction/provenance, not independent live fetch; no writes/network/delegation. PRESERVE occupancy3-5 versus unknown actualbeds and literal ambiguouspublicationlabel; originalquote hash/dates/allpublic-priorresearch unchanged. LRN190 narrow official-source learning, research-only not public delivery. Mechanical immutable consensus only; guarded exact push-only release pending.",
+      "release_receipt": "FT-RES-146 release 0d61b9da88906a123458882002875c3a532014bd remote verified 2026-10-10T18:10:36.583Z; main0-0/emptyindex/exact7/all888indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Research-only LRN190 supportedPRESERVE: exactcategory range3-5 is not childbed assignment; ambiguouspublicationlabel retained, original095quote hash and allprior evidence/public/sourceclock bytes unchanged. GalileoPASS/noP0-P3;727full/5focused/46maintenance/state0/GSC89/localSEO0fiveprior. No new public delivery or production change; docs/tools push-only. Next changed explicit category sleeping specification or independent corpus task; care billing/slots/levy/URL gates remain separate, October11offer checkpoint unchanged. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-10T18:10:36.598Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "0d61b9da88906a123458882002875c3a532014bd"
     },
     {
       "id": "FT-IMP-092",

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-093",
+  "learning_unit_id": "LRN-191",
+  "observed_on": "2026-10-10",
+  "evidence_class": "internal public-page proxy task, not real-user testing",
+  "source_url": "https://familytripwise.com/where-to-stay/boston-family-hotels.html#park-plaza-gym-policy",
+  "baseline_commit": "0d61b9da88906a123458882002875c3a532014bd",
+  "family_decision": "Return to the Park Plaza child-access boundary and room-cost context without losing the policy beneath a kitchen filter.",
+  "hypothesis": "The existing fragment handler also reveals nested policy targets inside hidden room details.",
+  "steps": ["Open the gym-policy fragment", "Select Compare rooms", "Check Published cooking kitchen only", "Browser Back"],
+  "baseline_result": {"hash": "#park-plaza-gym-policy", "kitchen_checked": true, "owner_hidden": true, "target_height_px": 0},
+  "decision": "IMPLEMENT exact DOM-ID lookup and owned-detail containment; scroll the actual nested target only when clearing a filter hiding its owner.",
+  "confidence": "High for this reproduced navigation defect; no hotel, age, route, quote or family-suitability evidence is renewed.",
+  "controls": ["Three current shared-client consumers", "Top-level fragments", "Synthetic descendant fragments, not new public IDs", "Visible/unrelated/unknown/malformed fragments", "Initial checked-state and encoded IDs", "Full comparison counts and unchanged complete CSV"],
+  "acceptance": "Focused/full native QA, three-page desktop/mobile browser task, independent read-only PASS and guarded release plus production verification required; no delivery claimed by this record alone.",
+  "lesson": "Hash visibility follows the owned hidden ancestor, not only an element whose own ID is in the filter list.",
+  "next_falsification_trigger": "Changed nested target IDs, new shared-client consumer or failed fragment-navigation task.",
+  "preserve": "All public facts, prices, party/stay/source dates, fees, CSV, metadata/schema and other pages unchanged. HTML and generators only advance the shared-script version. No new URL or source renewal."
+}
