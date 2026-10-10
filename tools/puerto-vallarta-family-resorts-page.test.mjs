@@ -5,7 +5,18 @@ import {pvPath,pvPack,pvPrices,pvRooms,pvCsv,pvExcluded,pvTaskEvidence,puertoVal
 import {validateRoomPack,screenRoomPack} from "./family-room-task.mjs";
 import {roomComparisonCsv,comparisonHeadings} from "./family-room-comparison.mjs";
 import {maintenanceReport} from "./site-maintenance.mjs";
+import {pvMealPlanComparison} from "./pv-meal-plan-comparison.mjs";
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),"utf8");
+test("PV exposes same-record meal-plan increment and preserves unknown cost rights",()=>{
+ const html=puertoVallartaFamilyResortsPage(),comparison=pvMealPlanComparison(pvPrices);
+ assert.equal(comparison.stay_increment,1499);assert.equal(comparison.nightly_increment,299.8);
+ for(const text of ['id="meal-plan-increment"','USD 1499.00 more','USD 299.80 per configuration/night',
+   'not a per-person food budget','exclude tax','rounded whole-dollar','conflicts with opened ten-day',
+   '35% deposit is payment timing','not an extra fee','age 12 is not under 12','not re-priced','Original price review due October 23'])assert.ok(html.includes(text),text);
+ assert.equal((html.match(/id="meal-plan-increment"/g)||[]).length,1);
+ for(const rate of pvRooms[0].price.rates)assert.ok(html.includes(`${rate.nightly_average.toFixed(2)} <span>${rate.plan}</span>`));
+ assert.equal(pvCsv,read('site/downloads/puerto-vallarta-family-resorts.csv'));
+});
 test("PV comparison and full CSV share original maintained category/price joins",()=>{
  assert.deepEqual(validateRoomPack(pvPack),[]);assert.equal(pvRooms.length,3);assert.equal(pvExcluded.length,6);
  assert.equal(read(`site/${pvPath}`),puertoVallartaFamilyResortsPage());assert.equal(read("site/downloads/puerto-vallarta-family-resorts.csv"),pvCsv);

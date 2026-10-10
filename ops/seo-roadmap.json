@@ -20,10 +20,47 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-082",
+      "title": "Compare Puerto Vallarta public meal-plan increment without inclusion assumptions",
+      "kind": "improvement",
+      "status": "candidate",
+      "selected_on": "2026-10-09",
+      "started_at": "2026-10-10T02:30:40.475Z",
+      "target_paths": [
+        "docs/research/puerto-vallarta-public-meal-plan-task-2026-10-09.json",
+        "tools/pv-meal-plan-comparison.mjs",
+        "tools/pv-meal-plan-comparison.test.mjs",
+        "tools/page-generation/puerto-vallarta-family-resorts-page.mjs",
+        "tools/puerto-vallarta-family-resorts-page.test.mjs",
+        "site/where-to-stay/puerto-vallarta-family-resorts.html",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html"
+      ],
+      "evidence": "PAGE_ONLY_PROXY_TASK: named two-adult/ages4,8,12 five-night Sanctuary meal-plan budget requires subtracting unlabelled overview samples and hunting cancellation/meal limits. Reuse reviewed October9 RES140 exact-family public4382/5881USD pre-tax samples; no new provider access/quote. All earlier eligible075/050/DC/Boston/PV/081 releases verified; no higher-priority unfinished eligible release.",
+      "acceptance_criteria": [
+        "Validated same-category/public-plan exactparty/dates/currency/unit records yield1499USD five-night increment and299.80USD configuration-night equivalent using integer cents; no per-person/food-budget/allfee/savings/value ranking",
+        "Show exact plan identity beside overview amounts and dedicated increment with tax exclusion, rounded-card observations, exact meals unknown, under12 promo limit, cancellation conflict and35percent deposit payment-timing distinction. SourceOct9/dueOct23 unchanged",
+        "Original three categories/two unpriced/one kitchen/two public plans/full original CSV/allsource bytes anddates/metadata/schema/sitemap34/allotherpublicbytes preserved",
+        "Focused/full nativeQA/current responsive keyboard/filter/fullCSV/image checks/different independent read-onlyPASS/exactscopecommitpush/PagesmarkerproductionSEO and allaffected invariants"
+      ],
+      "measurement_plan": "Can a parent read the same-room pre-tax plan increment and recognize why it is not meal savings or final family cost without calculator/source tabs? Proxy, not human satisfaction or SEO causality.",
+      "production_invariant": "Only PV publicHTML overview plan identities and increment insertion change; existing original HTML elsewhere/CSV/researchsources/34URLs/schema/clocks/dirty/sprint unchanged. No newURL, provider replay, quote renewal, contacts, paid expansion, indexing, analytics, scheduler or external-account mutation.",
+      "decision": "IMPLEMENT same-record public plan identity and1499USDstay/299.80configuration-night increment, not allfeefoodbudget/savings/confirmedcancellation. Originalprice-source-CSV bytes unchanged;16focused green, release pending.",
+      "next_gate": "Focused/full/browser/different read-onlyreview/exactreviewed release/productionverification.",
+      "evidence_record": "docs/research/puerto-vallarta-public-meal-plan-task-2026-10-09.json",
+      "review_receipt": "FT-IMP-082 independent read-only Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 PASS/no actionable findings on1be745da9e653432ebac9af206a96c575d486542b5798f3d2eaf18478e1acecc/all851hashes/exact11/all280prioritems-helddirty preserved. Independent17focusedpass/screenshotinspection/actualCSVbyte-match/sourceguard-arithmetic-limits. Master666full/16focused/39maintenance/state0/GSC88/localSEO0fiveprior,1280-390-320nooverflow/image1280/keyboard434.5of442 (End0notcounted)/filter3-1-3/incrementunaffected/actualfullCSV(1)byteexact/noerrorconsole. Same140sourceOct9/reviewOct23/alloriginalpublicexceptincrementandlabels/CSV-sourcebytes-34URLs preserved. Only immutable mechanical consensus receipt; exactrelease/production gates pending, no delivery claim."
+    },
+    {
       "id": "FT-IMP-081",
       "title": "Expose Boston museum admission component and return-policy boundary",
       "kind": "improvement",
-      "status": "candidate",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "started_at": "2026-10-10T01:02:40.092Z",
       "target_paths": [
@@ -57,7 +94,11 @@
       "decision": "IMPLEMENT same-record museum admission component, separate transaction fee and all-day/re-entry boundary; public HTML candidate/27focusedgreen, not delivered yet. Original hotel prices/CSV/source evidence unchanged.",
       "next_gate": "Focused/full/browser/different independent read-only review/exactrelease/productionverification.",
       "evidence_record": "docs/research/boston-public-admission-budget-task-2026-10-09.json",
-      "review_receipt": "FT-IMP-081 Copernicus01a12358-e768-7072-b298-2ddc342d7f28 PASS/noP0-P3/exact14/all848hashes/all279prioritems/helddirty preserved on b803578e3712308c67f7771fac5d2985f7795a4e386968a66773a3a94a9ce85b. Independent27focused/read-only screenshot-inspection. Master662full/27focused/39maintenance/state0/GSC88/localSEO0fiveprior; actual1280-390-320nooverflow/image1280/keyboardtable510of512/filter4-2-4/museum unaffected/actualCSV(5)byteexact/noerrorconsole; freshhash heading152px/margin128, older-snapshot navigation not counted. Same143sourceOct9/no price renewal/checkout-tax-date-reentry unknowns intact/all34URLs-otherpublicbytes. Immutable mechanical consensus only; production pending."
+      "review_receipt": "FT-IMP-081 Copernicus01a12358-e768-7072-b298-2ddc342d7f28 PASS/noP0-P3/exact14/all848hashes/all279prioritems/helddirty preserved on b803578e3712308c67f7771fac5d2985f7795a4e386968a66773a3a94a9ce85b. Independent27focused/read-only screenshot-inspection. Master662full/27focused/39maintenance/state0/GSC88/localSEO0fiveprior; actual1280-390-320nooverflow/image1280/keyboardtable510of512/filter4-2-4/museum unaffected/actualCSV(5)byteexact/noerrorconsole; freshhash heading152px/margin128, older-snapshot navigation not counted. Same143sourceOct9/no price renewal/checkout-tax-date-reentry unknowns intact/all34URLs-otherpublicbytes. Immutable mechanical consensus only; production pending.",
+      "completed_on": "2026-10-10T02:27:52.579Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "5a7c99a9fbab180c4e4ecbdd8795b33ed6fa65a3",
+      "production_receipt": "FT-IMP-081 delivered and production-verified 2026-10-10T02:27:52.579Z at 5a7c99a9fbab180c4e4ecbdd8795b33ed6fa65a3; successfulPages38016909413/matchingmarker/exact200BostonHTML-originalCSV/onlynewmuseumblock/sitemap34/allpriorpubliccontent-otherpublicbytes/productionSEO0fiveprior. Published24/person times5=120USD admission component,4/transaction separate, unknowncheckout-tax-date-return; sourceOct9 reused/reviewOct23/no hotelprice renewal. Original079meal142kitchen080planlabels/roomprices sourcebytes preserved. Master662full/27focused/39maintenance/state0/GSC88/actual1280-390-320nooverflow/image1280/tablekeyboard510of512/filter4-2-4/museum unaffected/actualfullCSV(5)byteexact/noerrorconsole; finalfreshhashheading152px/margin128, older-snapshot navigation not counted. IndependentCopernicus consensus above. LRN176 proxy, not human/SEO/quote/rest assurance; exactprice and reentry gates remain narrow. Mechanical completion only/no metadata-onlycommit; sprint unchanged."
     },
     {
       "id": "FT-RES-143",

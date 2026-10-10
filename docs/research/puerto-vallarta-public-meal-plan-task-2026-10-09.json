@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-082",
+  "checked_on": "2026-10-09",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK",
+  "source_record": "docs/research/puerto-vallarta-garza-family-budget-2026-10-09.json",
+  "source_sha256": "90535fd184265a4f3fc08e063429357720603835d397bf905f72ababc2de9788",
+  "family_decision": "How much more did the same Sanctuary public All Inclusive plan cost than Room Only, and what does that difference not establish?",
+  "hypothesis": "Two adjacent prices without plan names or a computed increment force avoidable subtraction and can be mistaken for a hotel range or full meal budget.",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "configuration_count": 1},
+  "baseline": "Overview showed anonymous USD876.40 /1176.20 with a Room Only/All Inclusive note; detail plans and terms existed but no same-room increment. Source prices are dated October9, not rechecked in this task.",
+  "result": "IMPLEMENT public plan identity and integer-cent subtraction: USD1499.00 per sampled five-night stay, USD299.80 per configuration/night. Not per-person, savings, meal entitlement, seasonal range or final fee-inclusive cost.",
+  "review_due": "2026-10-23",
+  "preserve": ["Tax not included; rounded whole-dollar booking cards", "Unknown mandatory fees, bedding, incidentals and exact meals/outlets", "Two-under12 promotion does not cover all three children; age12 not under12", "October28at23:59 card versus ten-day terms remains a cancellation conflict", "35percent deposit is payment timing, not an extra charge; exact deposit base/hold unknown", "No source or price renewal; two unpriced categories remain priority research gaps"],
+  "confidence": "High dated arithmetic and proxy scan gap; actual users, current inventory, full costs and value unknown",
+  "lesson": "Compare like-for-like public plans using stay totals before nightly rounding; do not convert a meal-plan increment into meal savings or entitlements.",
+  "falsification_trigger": "Source hash, category, public eligibility, exact party, dates, currency/unit, tax/meal/cancellation basis drift or failed rendered budget task",
+  "human_validation": false,
+  "new_url": false
+}
