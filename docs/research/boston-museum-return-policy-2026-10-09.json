@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-143",
+  "venue": "Boston Children's Museum",
+  "checked_on": "2026-10-09",
+  "inspected_at": "2026-10-10T00:25:00Z",
+  "evidence_class": "OFFICIAL_VENUE_POLICY",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "job": "morning museum visit, hotel break, same-day afternoon return"},
+  "sources": [
+    "https://bostonchildrensmuseum.org/visit/",
+    "https://bostonchildrensmuseum.org/visit/visitor-services-information/",
+    "https://bostonchildrensmuseum.org/ticketing/",
+    "https://estore.bostonchildrensmuseum.org/webstore/shop/viewItems.aspx?cg=TT&c=TT"
+  ],
+  "admission": {
+    "validity": "all-day-except-TJX-one-dollar-Sunday-afternoon",
+    "entry_time_basis": "Selected entry time helps the museum plan arrivals; visitors may stay all day.",
+    "same_day_reentry": "not-established",
+    "new_ticket_required_after_exit": null,
+    "standard_admission": {"amount": 24, "currency": "USD", "currency_basis": "editorial interpretation of dollar symbol at US venue", "unit": "person age one or older", "observed_on": "2026-10-09", "stay_date": null, "date_availability_verified": false},
+    "transaction_fee": {"amount": 4, "currency": "USD", "unit": "transaction", "basis": "Official general-admission description says price will include this fee; do not add it twice to a later inclusive quote."},
+    "tax_inclusion": "unknown",
+    "checkout_total": null,
+    "refunds": "non-refundable; transfer to another date subject to availability",
+    "discounts": "discount or membership cannot be applied after purchase"
+  },
+  "hours": {
+    "general_pattern": "Wednesday-Monday 09:00-16:00; closed Tuesdays; first Saturday opens 10:00",
+    "exact_future_date_verified": false,
+    "limitations": "Ticketing warns hours may change. Yearless holiday dates on the Visit page are not used as a 2026 calendar. Some spaces may close briefly midday for staff lunch breaks; this is not a museum closure or return policy."
+  },
+  "method": "Ordinary public homepage/Visit/Visitor Information/ticketing/linked general-admission store and Complete Details dialog. No date or quantity selected, cart addition, purchase, contact, account, hidden API or alternate-origin bypass. Tracking parameters removed from retained source URL.",
+  "result": "PRESERVE public re-entry/rest uncertainty. All-day stay validity does not establish permission to leave and return or whether a second ticket is needed.",
+  "confidence": "High for displayed general-admission validity, amount, fee and transfer conditions; unresolved re-entry, future-date availability, taxes, exact family checkout, route and actual rest feasibility.",
+  "next_gate": "Explicit current official exit/re-entry rule or separately authorized human evidence before any same-admission hotel-break claim. Candidate budget integration must separately preserve per-person/transaction units, age basis, exceptions, currency interpretation, source date, unknown taxes and no checkout/date promise.",
+  "next_falsification_trigger": "Changed public admission or explicit return policy; not an unchanged replay or a cadence-only rewrite.",
+  "public_change": false
+}
