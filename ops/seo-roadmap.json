@@ -20,10 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-090",
+      "title": "Restore hidden room details on comparison history navigation",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T13:03:47Z",
+      "target_paths": [
+        "site/washington-dc-comparison.js",
+        "tools/room-comparison-navigation.test.mjs",
+        "tools/washington-dc-family-hotels-page.test.mjs",
+        "tools/page-generation/washington-dc-family-hotels-page.mjs",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "tools/page-generation/puerto-vallarta-family-resorts-page.mjs",
+        "site/where-to-stay/washington-dc-family-hotels.html",
+        "site/where-to-stay/boston-family-hotels.html",
+        "site/where-to-stay/puerto-vallarta-family-resorts.html",
+        "docs/research/room-comparison-back-task-2026-10-10.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+        "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html"
+      ],
+      "evidence": "October10 live DC browser task: select Embassy detail, return to comparison, enable kitchen-only, browser Back yields #dc-embassy-deluxe-double but article hidden/height0. Shared client used by DC, Boston, Puerto Vallarta filters rows and details without hash reconciliation.",
+      "acceptance_criteria": [
+        "Hash/history navigation to a hidden maintained detail clears kitchen-only, restores all rows/details/count and scrolls to selected detail; visible/unrelated/malformed targets do not clear filter",
+        "Normal toggle stays intentional/reversible; initial restored filter reconciles only hidden current target; no history writes/storage/transmission/new controls",
+        "Regression tests all three consumer pages, full native QA, desktop/mobile Back/Forward/filter/keyboard/download task, independent read-only PASS and exact guarded main release/production checks"
+      ],
+      "measurement_plan": "Named page-only proxy: recover previously selected non-kitchen category after kitchen filtering and browser Back; not human/SEO/room-fit testing. ReusedOct9/priorOct8GSC finalizedOct7/6 orientation only; daily186alreadycomplete.",
+      "production_invariant": "Three HTML outputs differ only by script version ft-imp090; visible room/price/fee/source/policy/date metadata/schema/CSV and all other public/research bytes identical to4651e00. Shared JS exact production bytes and three navigation tasks; no new URL or facts/clock renewals. Held11 preserved. Actualrun13:01:42Z/startdeadline13:46:42Z/fixed sprint expiry unchanged.",
+      "decision": "IMPLEMENT reproduced shared-client navigation defect for all three existing consumers as one bounded family comparison task. Higher-priority075/050 and three approved cities already production-verified despite stale statuses. Other human/provider/price gates unchanged; no denied retries/external/scheduler mutation.",
+      "review_receipt": "FT-IMP-090 independent read-only Galileo PASS/noP0-P3; review digestdda70db494ac684b5c7ca7bd41fa99739c7df62c3a2e67ff39a4d4980026a7d3/filesdf6cda7f0a7847fef41912ebc2ae53011256e096d297761d627259135abf4b2b/worktree397c7b15f24c6d75913a2fe93daa4afcd294dce52f3aee0b1296e80dc79de050. Exact15/all880hashes/runtimeedgecases/threepagebatch/290priorjudgments with089mechanicalcompletion only/heldledgerisolated. Independent38tests/state0/GSC88/localSEO0fiveprior/invariants/screenshots, Master714full/38focused/45maintenance/nine1280-390-320actualBack-Forwardcases/docwidthcontained/target127.7734-128.2344/filter3-1-3,4-2-4,3-1-3/keyboardfocus-narrowmovement-notfulltravel/threeactualCSVbyteexact/errors[]/viewportreset. ThreeHTMLscript-version-only/allvisiblefacts-prices-clocks-metadata-schema-CSV-otherpublic-priorresearch34URLs unchanged. No reviewer writes/network/delegation/receipt. Mechanical immutable consensus only; Master release/production pending."
+    },
+    {
       "id": "FT-IMP-089",
       "title": "Distinguish SPYGAMES adult accompaniment from SPYSCAPE guidance",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T12:04:11Z",
       "target_paths": [
@@ -56,7 +96,11 @@
       "measurement_plan": "Proxy split-visit task for2adults/teens13and17: identify adult accompaniment for13 at SPYGAMES while not assuming17 qualifies as adult or museum rule is identical. Not human, safety, ranking or booking evidence.",
       "production_invariant": "Reverse only SPY row check/detail planning sentence and appended official-check/FAQ policy sentences (including FAQ schema) to restore ed0ed9b NYC HTML byteexact. Ten choices, metadata/generaldate, all budget sections and128px headings, prior policies/source clocks, other public and prior research bytes/sitemap34 unchanged. No current price/availability/refund/independent-entry promise/newURL/paid/provider/security/scheduler mutation; held11 preserved. Actualrun12:01:40Z/startdeadline12:46:40Z fixed sprint unchanged.",
       "decision": "IMPLEMENT current product-specific adult-accompaniment rule on existing teen page; preserve unknown adult qualification/older-teen independent entry and separate museum supervision. GSC reusedOct9/priorOct8 finalizedOct7/6 orientation only; dailyLRN185 alreadycomplete. Higher-priority075/050 and approvedcities alreadyproductionverified, not unshipped backlog. SanDiegoHomewood133 public integration held on exact setup/fee/corpus gate; no bypass.",
-      "review_receipt": "FT-IMP-089 independent read-only Rawls PASS/no P0-P3 findings on final878-file candidate; review digest edac39f06b3c23325a9bf6b97bddb1b37107a8c61f9229c1c247c68e0493a9e5, files digest75a15425e04051752ba69c3500cf56ec457ea9e3049f91aab3e3891c5a2df86d. Exact15/nooutside/nodeleted/all289priorroadmap judgments/heldledger preserved. Scoped SPYGAMES policy/source/FAQ-schema/November9clock/reversal-to-priorHTML/allotherpublicresearchpricesclocks34URLs verified. Master final704full/14focused/45maintenance/state0/GSC88/localSEO0fiveprior; 1280-390-320contained/whole320policy/imagecomplete1280/errors[]/finalFAQverified/defaultviewport1280 restored. Reviewer no writes/network/generator/tests; Master release/production pending. Mechanical immutable consensus only."
+      "review_receipt": "FT-IMP-089 independent read-only Rawls PASS/no P0-P3 findings on final878-file candidate; review digest edac39f06b3c23325a9bf6b97bddb1b37107a8c61f9229c1c247c68e0493a9e5, files digest75a15425e04051752ba69c3500cf56ec457ea9e3049f91aab3e3891c5a2df86d. Exact15/nooutside/nodeleted/all289priorroadmap judgments/heldledger preserved. Scoped SPYGAMES policy/source/FAQ-schema/November9clock/reversal-to-priorHTML/allotherpublicresearchpricesclocks34URLs verified. Master final704full/14focused/45maintenance/state0/GSC88/localSEO0fiveprior; 1280-390-320contained/whole320policy/imagecomplete1280/errors[]/finalFAQverified/defaultviewport1280 restored. Reviewer no writes/network/generator/tests; Master release/production pending. Mechanical immutable consensus only.",
+      "completed_on": "2026-10-10T12:17:15.209Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "4651e000f892d617e6dfa68891027c9bfa4730da",
+      "production_receipt": "FT-IMP-089 delivered and production-verified 2026-10-10T12:17:15.209Z at 4651e000f892d617e6dfa68891027c9bfa4730da; Pages38051349426success/matchingmarker/exact200NYCteenHTML/scopedSPYGAMESrow-detail-check-visibleFAQ-schema replacements reverse to priorHTML/allotherpublic-priorresearch-tenchoices-budgets-dates-clocks-128pxheadings-34URLbytes preserved/productionSEO0fiveprior. October10NYCofficialFAQ: SPYGAMESunder16adultaccompaniment only; adultthroughout/minimumage/independent16-17/separatemuseum rule unknown, durationconflict not resolved or newprice asserted. Master704full/14focused/45maintenance/state0/GSC88/generatorNYConly-idempotent/1280-390-320contained/320policyparagraph242px/image1280/errors[]/viewportreset; different read-onlyPASS/exact15/all878indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. LRN186 official-policy/proxy learning, not human/safety/SEO/admission proof. November9ownclock, priorSUMMIT-MoMA-Ferry/generalJuly26dates untouched. Initial export-only invocation and old maintenance count/test escaping expectations corrected before finalgreenQA/review. Other holds unchanged; next changedexactpolicy/ticket conflict/failedtask orNovember9review. Mechanical completion only/no metadata-onlycommit; held11/sprint preserved."
     },
     {
       "id": "FT-IMP-088",

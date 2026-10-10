@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-090",
+  "observed_on": "2026-10-10",
+  "evidence_class": "LIVE_PUBLIC_BROWSER_PROXY_TASK",
+  "sources": [
+    {"url": "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html", "observed_on": "2026-10-10", "scope": "Actual rendered navigation and hidden-state task; no fresh hotel-source inspection"},
+    {"path": "site/washington-dc-comparison.js", "scope": "Same client filters rows and detail blocks on DC, Boston and Puerto Vallarta"}
+  ],
+  "family_decision": "Return to previously selected hotel category and its budget/fee context after narrowing the comparison to cooking kitchens",
+  "hypothesis": "The reversible kitchen filter already preserves browser Back navigation to room details",
+  "steps": ["Open Embassy Suites detail from the DC comparison", "Return to Compare rooms", "Enable Published cooking kitchen only", "Use browser Back"],
+  "before": {"fragment": "#dc-embassy-deluxe-double", "kitchen_checked": true, "detail_hidden": true, "detail_height": 0, "status": "1 room category with a dated published cooking kitchen"},
+  "result": "REJECT; browser history targets a zero-height filtered detail. Implement hash reconciliation for hidden maintained details only.",
+  "confidence": "High reproduced live DOM/keyboard-history task and shared-client cause; prevalence and human satisfaction unknown",
+  "human_tested": false,
+  "fresh_hotel_source_inspection": false,
+  "acceptance": ["Hidden detail fragment clears the filter, restores all rows/details and count, then scrolls to the selected block", "Visible and unrelated fragments keep kitchen filtering; malformed encoding is harmless", "Normal filter changes stay intentional and reversible; initial restored filter reconciles only a hidden current detail", "No history rewrites, input persistence/transmission, hotel-fact/price/source-date/CSV changes"],
+  "candidate_browser_qa": {
+    "checked_on": "2026-10-10",
+    "viewports": [1280,390,320],
+    "cases": 9,
+    "restored_row_counts": {"Washington DC":3,"Boston":4,"Puerto Vallarta":3},
+    "filtered_row_counts": {"Washington DC":1,"Boston":2,"Puerto Vallarta":1},
+    "hidden_target_restored": true,
+    "checkbox_cleared_for_hidden_target_only": true,
+    "target_top_range_px": [127.7734375,128.234375],
+    "forward_and_normal_filter": "PASS",
+    "outer_document_overflow": false,
+    "console_errors": [],
+    "keyboard": "All comparison regions focusable; narrow-screen movement observed DC16px and Boston/PV0.5px, not full-width traversal proof",
+    "actual_browser_csv_downloads": "All three byte-exact against unchanged full CSV; DC downloaded while kitchen filter active",
+    "proxy_only": true
+  },
+  "decision": "IMPLEMENT exact shared-client defect through three consumer-page tests, focused/full native QA, normal responsive browser QA, independent read-only PASS, guarded release and production verification",
+  "reusable_lesson": "A filter is reversible without being compatible with same-document history; verify the target remains rendered when Back selects it.",
+  "next_falsification_trigger": "Changed shared filter or maintained detail IDs, new consumer page, or failed Back/Forward/direct-fragment task"
+}

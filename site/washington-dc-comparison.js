@@ -12,7 +12,18 @@
     const visible = rows.filter(row => !row.hidden).length;
     status.textContent = `${visible} room ${visible === 1 ? "category" : "categories"}${checkbox.checked ? " with a dated published cooking kitchen" : ""}`;
   }
+  function revealHashTarget() {
+    let id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+    const target = details.find(element => element.id === id);
+    if (!target || !target.hidden) return;
+    checkbox.checked = false;
+    update();
+    target.scrollIntoView({ block: "start" });
+  }
   checkbox.addEventListener("change", update);
+  window.addEventListener("hashchange", revealHashTarget);
   toolbar.hidden = false;
   update();
+  revealHashTarget();
 })();

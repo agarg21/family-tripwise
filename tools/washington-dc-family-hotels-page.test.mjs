@@ -94,7 +94,8 @@ test("kitchen filter is reversible and retains details/price context without tra
   const toolbar={hidden:true}, status={textContent:""}, checkbox={checked:false,addEventListener(name,fn){this.change=fn;assert.equal(name,"change");}};
   const document={querySelector(selector){return {".dc-toolbar":toolbar,"#kitchen-only":checkbox,"#comparison-status":status}[selector];},querySelectorAll(selector){return selector.startsWith("#comparison")?rows:details;}};
   const client=read("site/washington-dc-comparison.js");
-  runInNewContext(client,{document});
+  const window={location:{hash:""},addEventListener(name,fn){assert.equal(name,"hashchange");this.hashchange=fn;}};
+  runInNewContext(client,{document,window});
   assert.equal(toolbar.hidden,false); assert.equal(status.textContent,"3 room categories");
   checkbox.checked=true;checkbox.change();
   assert.deepEqual(rows.map(row=>row.hidden),[true,false,true]);
