@@ -1,0 +1,11 @@
+# Puerto Vallarta Child Meal Boundaries
+
+FT-RES-145 answers a bounded existing-page question for two adults and ages 4, 8 and 12: what does generic child meal pricing establish beyond the dated Sanctuary plan increment?
+
+October10 [official property policy](https://www.garzablancaresort.com/puerto-vallarta/all-inclusive), reached from the Sanctuary category's visible link and expanded terms, assigns ages4-12 half price and ages13+ adult pricing. All guests in a room must take the Gourmet Culinary plan, which cannot combine with promotions. All three example children fall within the generic band, but no monetary adult or child price or selected Fall Sale entitlement is established. An under12 promotion and inclusive4-12 pricing are different rules; no discount is deducted.
+
+General tax/gratuity inclusion is scoped differently from the October9 selected booking cards' explicit tax exclusion. Preserve those historical amounts, their source dates and fee limits; do not transform them into tax-inclusive quotes. Full GC coverage follows arrival15:00/departure12:00, while the separately named Meal Plan has a minimum three uninterrupted days and cannot restart or transfer. Five hotel nights do not establish billable meal units.
+
+IMPLEMENT one dated generic-policy block in the existing comparison, with one validated record supplying public/watch/offline review dueNovember9. No new URL or quote. PRESERVE exact selected-plan eligibility, itemized meal amounts, accepted tax terms and stay-date service unknown. Current qualified public releases are complete; this audit resolves a pending meal decision rather than substituting a report for waiting delivery. DailyLRN178 was already complete; this independent learning unit adds scope discipline, not proof of users or SEO outcomes.
+
+Confidence is high for displayed terms, unknown for actual offers, amounts and service. Falsify on changed selected-offer entitlements/itemized units/tax basis or changed general policy, not an unchanged quote or contact attempt. Full/focused QA, responsive/filter/download/image checks, different independent read-only consensus and exact production verification remain required. No contact, subscription, booking/payment, account, paid scope, indexing, analytics, automation or security change.

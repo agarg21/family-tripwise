@@ -1,0 +1,14 @@
+import {readFileSync} from 'node:fs';
+import {validDate} from './hotel-evidence.mjs';
+import {ageState} from './evidence-audit.mjs';
+
+export const pvMealPolicyEvidence=JSON.parse(readFileSync(new URL('../docs/research/puerto-vallarta-child-meals-2026-10-10.json',import.meta.url)));
+const general={plan:'Gourmet Culinary All-Inclusive',all_room_guests_required:true,promotion_combination_allowed:false,child_age_from:4,child_age_to:12,child_price_fraction:0.5,adult_price_from_age:13,tax_and_gratuities_included:true,starts_arrival_local:'15:00',ends_departure_local:'12:00'};
+export function pvMealPolicy(evidence=pvMealPolicyEvidence,asOf='2026-10-10'){
+  if(!validDate(asOf)||evidence?.schema_version!==1||evidence.action!=='FT-RES-145'||evidence.hotel!=='Garza Blanca Preserve Resort & Spa Puerto Vallarta'||evidence.observed_on!=='2026-10-10'||evidence.published_on!==null||evidence.refresh_days!==30||evidence.evidence_class!=='OFFICIAL_PROPERTY_POLICY'||evidence.source_url!=='https://www.garzablancaresort.com/puerto-vallarta/all-inclusive'||JSON.stringify(evidence.general_policy)!==JSON.stringify(general)||JSON.stringify(evidence.scenario)!==JSON.stringify({adults:2,child_ages:[4,8,12],arrival:'2026-11-08',departure:'2026-11-13',nights:5})||evidence.separate_meal_plan?.minimum_consecutive_days!==3||['interruptible','restartable','transferable'].some(k=>evidence.separate_meal_plan[k]!==false)||evidence.selected_offer?.confirmed_applicability!==false||['adult_meal_amount','child_meal_amount','price_adjustment','checkout_total'].some(k=>evidence.selected_offer[k]!==null))throw new Error('PV generic meal policy basis changed; requalification required');
+  return {evidence,freshness:ageState(evidence.observed_on,evidence.refresh_days,asOf),evidence_state:asOf<evidence.observed_on?'not-yet-observed-at-report-date':'dated-records-available',generic_child_band_ages:asOf<evidence.observed_on?null:evidence.scenario.child_ages.filter(age=>age>=general.child_age_from&&age<=general.child_age_to),selected_offer_confirmed:false,meal_amount:null,price_adjustment:null};
+}
+export function pvMealPolicyClock(today,evidence=pvMealPolicyEvidence){
+  const p=pvMealPolicy(evidence,today);
+  return {id:'pv-generic-meal-policy',page_url:'https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html',record_path:'docs/research/puerto-vallarta-child-meals-2026-10-10.json',observed_on:evidence.observed_on,interval_days:evidence.refresh_days,evidence_class:evidence.evidence_class,source_urls:[evidence.source_url],freshness:p.freshness,evidence_state:p.evidence_state,next_step:p.freshness.state==='review-due'?'review-current-generic-policy-before-relying-on-it':p.freshness.state==='future-date-review'?'do-not-use-future-evidence-in-historical-report':'preserve-dated-policy-until-named-change-or-review-due',limitation:'Generic age, all-room and tax/promotion scope only; no selected-offer acceptance or room/price/service renewal.'};
+}

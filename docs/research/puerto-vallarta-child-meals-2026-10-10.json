@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-145",
+  "hotel": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+  "observed_on": "2026-10-10",
+  "published_on": null,
+  "refresh_days": 30,
+  "evidence_class": "OFFICIAL_PROPERTY_POLICY",
+  "source_url": "https://www.garzablancaresort.com/puerto-vallarta/all-inclusive",
+  "source_surface": "Sanctuary exact-category visible All Inclusive link to property page; expanded Terms and Conditions. No rates, selected plan, quote or booking flow opened.",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5},
+  "general_policy": {"plan": "Gourmet Culinary All-Inclusive", "all_room_guests_required": true, "promotion_combination_allowed": false, "child_age_from": 4, "child_age_to": 12, "child_price_fraction": 0.5, "adult_price_from_age": 13, "tax_and_gratuities_included": true, "starts_arrival_local": "15:00", "ends_departure_local": "12:00"},
+  "separate_meal_plan": {"minimum_consecutive_days": 3, "interruptible": false, "restartable": false, "transferable": false, "limitation": "Named Meal Plan terms are distinct from full GC check-in/check-out coverage. Hotel nights do not establish meal-plan billable units, current availability or price."},
+  "selected_offer": {"confirmed_applicability": false, "adult_meal_amount": null, "child_meal_amount": null, "price_adjustment": null, "checkout_total": null, "tax_basis": "Original October9 selected public plan cards say Tax not included; general GC tax/gratuity inclusion cannot replace that quote's basis", "promotion_basis": "Original up-to-two-under12 offer is not this generic inclusive4-12half-price rule. Age12 is not under12; no free-child or combined-discount deduction."},
+  "result": "IMPLEMENT generic age/all-room/promotion/tax-scope distinction in existing PV meal comparison; PRESERVE selected-offer acceptance and amounts unknown",
+  "confidence": "High displayed generic policy, unknown selected Fall Sale applicability, monetary adult/child meal units, checkout taxes/fees, service on stay dates, users and SEO",
+  "learning": "A generic child pricing band, promotional free-child threshold, selected room quote and meal-plan billing period have different scopes; do not merge them into a cheaper family total.",
+  "next_gate": "Changed exact selected-offer meal entitlements and itemized adult/child units/tax basis, or changed general policy; review November9, no unchanged quote replay or contact",
+  "limits": "Inspection date is not policy-effective date; no price, room or full-property renewal, accepted terms, care/transfer/route/safety or firm suitability assurance. No review identities, copied threads, phone/contact, form, account, payment, waiver, member or paid action. Default two-adult rate widgets not used. Private source screenshot is not public evidence."
+}

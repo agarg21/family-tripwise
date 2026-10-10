@@ -15,6 +15,7 @@ import { pvPath, pvPack, pvPrices } from "./page-generation/puerto-vallarta-fami
 import { screenRoomPack } from "./family-room-task.mjs";
 import { bostonMuseumReviewClock } from "./boston-museum-admission.mjs";
 import { parkPlazaPolicyClock } from "./boston-park-plaza-policy.mjs";
+import { pvMealPolicyClock } from "./pv-meal-policy.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const UTILITY = ["https://familytripwise.com/", "https://familytripwise.com/about.html", "https://familytripwise.com/contributors/miles-rowan.html"];
@@ -90,6 +91,7 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
     transitEvidence: JSON.parse(await readFile(resolve(root, "docs/research/dc-family-transit-cost-2026-10-03.json"), "utf8")) });
   policies.push(bostonMuseumReviewClock(today,JSON.parse(await readFile(resolve(root,"docs/research/boston-museum-return-policy-2026-10-09.json"),"utf8"))));
   policies.push(parkPlazaPolicyClock(today,JSON.parse(await readFile(resolve(root,"docs/research/boston-park-plaza-fifth-bed-2026-10-10.json"),"utf8"))));
+  policies.push(pvMealPolicyClock(today,JSON.parse(await readFile(resolve(root,"docs/research/puerto-vallarta-child-meals-2026-10-10.json"),"utf8"))));
   return { schema_version: 1, as_of: today, mode: "offline-maintenance-coverage", automatic_fact_renewal: false, automatic_publication: false,
     summary: { canonical_pages: pages.length, travel_pages: pages.filter(page => page.contract !== "utility").length, utility_pages: UTILITY.length, unclassified_pages: 0, contract_pages: Object.fromEntries(Object.entries(groups).map(([type, members]) => [type, members.length])),
       hotel_price_basis_gaps: reports.hotel.summary.unstructured_price_basis, hotel_due_price_records: reports.hotel.summary.due_price_records,

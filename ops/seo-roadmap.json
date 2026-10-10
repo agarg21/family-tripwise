@@ -20,10 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-RES-145",
+      "title": "Qualify Puerto Vallarta child meal eligibility without promotion inheritance",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T05:02:33Z",
+      "target_paths": [
+        "docs/research/puerto-vallarta-child-meals-2026-10-10.json",
+        "docs/research/puerto-vallarta-child-meals-2026-10-10.md",
+        "tools/puerto-vallarta-child-meals.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "tools/pv-meal-policy.mjs",
+        "tools/page-generation/puerto-vallarta-family-resorts-page.mjs",
+        "tools/puerto-vallarta-family-resorts-page.test.mjs",
+        "site/where-to-stay/puerto-vallarta-family-resorts.html",
+        "ops/evidence-watch.json",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html"
+      ],
+      "evidence": "Existing approved PV comparison and082 same-room plan increment leave exact child meals unresolved. Audit current official Garza PV all-inclusive/promotion policy for2adults/ages4,8,12; no repeat quote flow, Panoramic substitution or unchanged denial. All eligible075/050/city/079-082/144 releases production verified. ReusedOct9GSC finalizedOct7/priorOct8finalizedOct6 orientation only, old31inspection/28discovery predates3newURLs. DailyOct10LRN178 already complete.",
+      "acceptance_criteria": [
+        "Resolve exact dated published meal scope, age/program limits or explicit unresolved gate from official property evidence, distinguishing generic plan inclusions from selected offer acceptance",
+        "Preserve all original price/room/source records and public bytes unless exact public scope separately registered before implementation; no promotion deduction or price renewal",
+        "Focused/full native QA, different independent read-only PASS, exact clean research release and remote verification; no contact/payment/account/security/scheduler or paid scope mutation"
+      ],
+      "measurement_plan": "Can parents distinguish generic plan meals, promotional child age eligibility and exact selected-plan acceptance for ages4/8/12? Research/proxy, not human or SEO proof.",
+      "production_invariant": "Only one new dated PV generic-meal-policy block among public bytes; all originalHTMLelsewhere/CSV/3categories/2plans/2unpriced/1kitchen/price-sourcebytes/clocks/metadata/schema/34URLs/855baselineoutsideexact15/helddirty/sprint preserved. No quote replay, half-price calculation, promotion deduction, child-care/transfer/safety or suitability assurance.",
+      "scope_amendment": "Before implementation exact15paths: current official all-inclusive expanded terms establish4-12half-price/13plusadult/allroomguests/no promo combination; general plan tax inclusion does not override original selected offer Tax not included. FullGC arrival15:00departure12:00 distinct from standaloneMealPlanminimum3consecutive days, not five nights as billablemeal units. Add one validated generic-policy block and separate30daywatch/offline clock dueNov9. No new quote or accepted booking terms.",
+      "decision": "IMPLEMENT generic child-age/all-room/promotion and tax-scope boundary in existing meal comparison; PRESERVE exact accepted offer and monetary meal amounts unknown.",
+      "next_gate": "Focused/full native and responsive/filter/download/image QA, different read-only consensus, exact reviewed release and Pages/marker/productionSEO/invariants",
+      "review_receipt": "FT-RES-145 independent Galileo PASS 2026-10-10T05:10:25Z; no P0-P3 findings; frozen859/exact15/SHA2566082f5d2badc660cc080f9273788cbf26d8080fe0c92fa9eaab0c477c9a9863a,844nonowned unchanged/282prioritems/heldwork preserved. Read-only policy4of4/officialAX and screenshots/actualCSV byteexact; generic policy distinct from selected acceptance, amounts and tax exclusion. Master full678of678/focused26of26/maintenance41of41/state0/GSC88/localSEO0fiveprior/1280-390-320 responsive keyboard filter download passed. Immutable consensus only; release and production verification pending."
+    },
+    {
       "id": "FT-RES-144",
       "title": "Resolve Boston extra-bed uncertainty and destination-fee gym age limit",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T04:01:49.743Z",
       "target_paths": [
@@ -59,7 +99,11 @@
       "production_invariant": "Only BostonHTML one dated Park Plaza policy check/source note changes among public files. OriginalCSV/4categories/4plans/2unpriced/2kitchens/allprice-source bytes/clocks/metadata/schema/34URLs/allotherpublic/held/sprint preserved. Extra bed remains unknown;18plus gym is not whole-property child exclusion or fitness/safety suitability assurance.",
       "decision": "IMPLEMENT current gym-age/fee-benefit boundary in existing Boston booking checks; PRESERVE fifth-bed/rollaway charge unknown. No contact or unchanged quote replay.",
       "next_gate": "Focused/full/native/responsive/different read-only consensus/exact production verified release",
-      "review_receipt": "FT-RES-144 independent Rawls READ-ONLY PASS/no P0-P3 at 2026-10-10T04:14Z; reviewed frozen855/exact15 manifest90abe26983b47fe13d2e29e618e31ff01ddd57225a68c6a4eab22ed5224e854b/allhashesnodrift; pure23/23/officialsourceproof/finalresponsiveimages/actualCSVbytes/281priorroadmapitems/held isolation. Master672/672full/30focused/40maintenance/state0/GSC88/localSEO0fiveprior; fresh1280-390-320nooverflow/note128px/image1280/filter4-2-4/tablekeyboard24/downloadCSV(6)byteexact/noerrorconsole. Only new Park Plaza18plus gym-fee paragraph; all old public/research/price/source/CSV/metadata/schema/34URLs preserved. No price renewal, fee deduction/waiver, fifthbed assertion or contact. Mechanical immutable consensus; release/production verification still pending."
+      "review_receipt": "FT-RES-144 independent Rawls READ-ONLY PASS/no P0-P3 at 2026-10-10T04:14Z; reviewed frozen855/exact15 manifest90abe26983b47fe13d2e29e618e31ff01ddd57225a68c6a4eab22ed5224e854b/allhashesnodrift; pure23/23/officialsourceproof/finalresponsiveimages/actualCSVbytes/281priorroadmapitems/held isolation. Master672/672full/30focused/40maintenance/state0/GSC88/localSEO0fiveprior; fresh1280-390-320nooverflow/note128px/image1280/filter4-2-4/tablekeyboard24/downloadCSV(6)byteexact/noerrorconsole. Only new Park Plaza18plus gym-fee paragraph; all old public/research/price/source/CSV/metadata/schema/34URLs preserved. No price renewal, fee deduction/waiver, fifthbed assertion or contact. Mechanical immutable consensus; release/production verification still pending.",
+      "completed_on": "2026-10-10T04:14:47.549Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "d3687a7758bd566e04845f631f371ff517d44c4b",
+      "production_receipt": "FT-RES-144 delivered and production-verified 2026-10-10T04:14:47.549Z at d3687a7758bd566e04845f631f371ff517d44c4b; successfulPages38023331448/matchingmarker/exact200BostonHTML-originalCSV/onlynewgymparagraph/34URLs/allpriorpublic-research-source-price-metadata-schema-bytes/productionSEO0fiveprior. Published Park Plaza daily USD35 destination-fee gym benefit is hotelguests18plus/firstwaiver, not child indoor activity or fee exemption/deduction; sampled fee counted once and fifthbed/rollaway/charge still unknown. Policy inspectedOct10/dueNov9 separate from Oct1room-price clocks. Master672full/30focused/40maintenance/state0/GSC88/actual1280-390-320nooverflow/note128px/image1280/filter4-2-4/tablekeyboard24/actualCSV(6)byteexact/noerrorconsole. Independent review above; exact15/all855indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. LRN178 learning complete, not human/SEO/stayquote/safety evidence. Mechanical completion only/no metadata-onlycommit; heldwork and sprint expiry unchanged."
     },
     {
       "id": "FT-IMP-082",

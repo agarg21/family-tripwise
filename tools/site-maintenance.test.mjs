@@ -49,20 +49,24 @@ test("invalid policy dates, provenance, intervals and unsafe URLs fail closed wi
 
 test("offline maintenance surfaces policy due counts while preserving room and price clocks", async () => {
   const current=await maintenanceReport({today:"2026-10-09"});
-  assert.equal(current.policy_review_clocks.length,4);
-  assert.equal(current.summary.policy_review_clocks,4);
+  assert.equal(current.policy_review_clocks.length,5);
+  assert.equal(current.summary.policy_review_clocks,5);
   assert.equal(current.summary.policy_due_records,0);
-  assert.equal(current.summary.policy_not_yet_observed,1);
+  assert.equal(current.summary.policy_not_yet_observed,2);
   const future=await maintenanceReport({today:"2026-11-03"});
   assert.equal(future.summary.policy_due_records,2);
   assert.equal(future.policy_review_clocks.find(record=>record.id==="dc-regular-rail-fare").freshness.state,"review-due");
   assert.equal(future.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
   assert.equal(future.automatic_fact_renewal,false);assert.equal(future.automatic_publication,false);
   const historical=await maintenanceReport({today:"2026-10-01"});
-  assert.equal(historical.summary.policy_not_yet_observed,4);assert.equal(historical.summary.policy_due_records,0);
+  assert.equal(historical.summary.policy_not_yet_observed,5);assert.equal(historical.summary.policy_due_records,0);
   assert.equal(current.policy_review_clocks.find(record=>record.id==="boston-museum-admission-return").freshness.due_on,"2026-10-23");
   assert.equal((await maintenanceReport({today:"2026-10-23"})).summary.policy_due_records,1);
   assert.deepEqual(future.pages,current.pages);
+});
+
+test("PV generic meal policy has its own clock without re-pricing selected plans",async()=>{
+ const report=await maintenanceReport({today:"2026-10-10"}),p=report.policy_review_clocks.find(r=>r.id==="pv-generic-meal-policy");assert.equal(p.observed_on,"2026-10-10");assert.equal(p.freshness.due_on,"2026-11-09");assert.equal((await maintenanceReport({today:"2026-10-09"})).policy_review_clocks.find(r=>r.id===p.id).evidence_state,"not-yet-observed-at-report-date");assert.equal(report.exact_room_comparisons[2].records[0].price_observed_on,"2026-10-09");assert.equal(report.exact_room_comparisons[2].records[0].price_age.due_on,"2026-10-23");
 });
 
 test("Park Plaza gym/fee policy clock does not renew original room or price evidence",async()=>{

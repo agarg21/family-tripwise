@@ -26,6 +26,13 @@ test("PV comparison and full CSV share original maintained category/price joins"
  assert.deepEqual(pvRooms.map(r=>r.checked_on),["2026-10-09","2026-10-09","2026-10-03"]);
  assert.ok(pvRooms.every(r=>r.screening==="CONDITIONAL_PUBLISHED_CAPACITY"));
 });
+test("generic child meal block separates policy, promotion, selected tax and billing units",()=>{
+ const html=puertoVallartaFamilyResortsPage(),block=html.match(/<div id="meal-policy-boundaries"[\s\S]*?<\/div>(?=<article id="pv-garza-sanctuary)/)[0];
+ for(const text of ["Ages 4-12: half price", "13+: adult price", "Ages 4, 8, 12", "All guests in the same room", "cannot combine with promotions", "no child discount is deducted", "selected cards exclude tax", "pre-tax amounts stay unchanged", "at least 3 consecutive days", "Five hotel nights do not establish billable meal units", "Selected Fall Sale applicability", "remain unverified", "review due November 9"])assert.ok(block.includes(text),text);
+ assert.match(block,/tabindex="0" role="region" aria-label="Generic child meal policy"/);assert.match(block,/scroll-margin-top:128px/);
+ assert.doesNotMatch(block,/USD \d|free for all|confirmed meals/);
+ const watch=JSON.parse(read('ops/evidence-watch.json')).records.find(r=>r.id==='pv-generic-meal-policy');assert.equal(watch.verified_on,'2026-10-10');assert.equal(watch.interval_days,30);assert.ok(block.includes(watch.source_urls[0]));
+});
 test("Sanctuary price never inherits Panoramic kitchen or prices regional category",()=>{
  assert.equal(pvRooms[0].kitchen,"not-established");assert.equal(pvRooms[1].kitchen,"published-kitchen");
  assert.deepEqual(pvRooms[0].price.rates.map(p=>p.nightly_average),[876.4,1176.2]);
@@ -47,7 +54,7 @@ test("PV owns one canonical job with discovery and original-source watches",()=>
  const url=`https://familytripwise.com/${pvPath}`,html=puertoVallartaFamilyResortsPage();assert.equal((html.match(/<h1>/g)||[]).length,1);
  assert.ok(html.includes(`<link rel="canonical" href="${url}">`));assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);
  assert.ok(read("site/index.html").includes(pvPath));assert.ok(read("site/about.html").includes("Puerto Vallarta"));assert.ok(read("ops/gsc-monitor.json").includes(url));
- const watch=JSON.parse(read("ops/evidence-watch.json")).records.filter(r=>r.page_url===url);assert.equal(watch.length,4);
+ const watch=JSON.parse(read("ops/evidence-watch.json")).records.filter(r=>r.page_url===url&&r.id!=="pv-generic-meal-policy");assert.equal(watch.length,4);
  assert.deepEqual(watch.map(r=>r.verified_on),["2026-10-09","2026-10-03","2026-10-09","2026-10-09"]);
  const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);assert.equal(schema["@type"],"WebPage");assert.equal(schema.url,url);
 });
