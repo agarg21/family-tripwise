@@ -19,6 +19,7 @@ import { pvMealPolicyClock } from "./pv-meal-policy.mjs";
 import { summitPolicyClock } from "./nyc-summit-policy.mjs";
 import { momaReviewClock } from "./nyc-moma-budget.mjs";
 import { ferryReviewClock } from "./nyc-ferry-budget.mjs";
+import { omnyReviewClock } from "./nyc-omny-budget.mjs";
 import { spygamesPolicyClock } from "./nyc-spygames-policy.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
@@ -99,6 +100,7 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   policies.push(summitPolicyClock(today,JSON.parse(await readFile(resolve(root,"docs/research/new-york-city-summit-teen-access-2026-10-10.json"),"utf8"))));
   policies.push(momaReviewClock(today,JSON.parse(await readFile(resolve(root,"docs/research/nyc-moma-family-admission-2026-10-10.json"),"utf8"))));
   policies.push(ferryReviewClock(today,JSON.parse(await readFile(resolve(root,"docs/research/nyc-ferry-family-budget-2026-10-10.json"),"utf8"))));
+  policies.push(omnyReviewClock(today,JSON.parse(await readFile(resolve(root,"docs/research/nyc-omny-family-budget-2026-10-10.json"),"utf8"))));
   policies.push(spygamesPolicyClock(today,JSON.parse(await readFile(resolve(root,"docs/research/nyc-spygames-minor-policy-2026-10-10.json"),"utf8"))));
   return { schema_version: 1, as_of: today, mode: "offline-maintenance-coverage", automatic_fact_renewal: false, automatic_publication: false,
     summary: { canonical_pages: pages.length, travel_pages: pages.filter(page => page.contract !== "utility").length, utility_pages: UTILITY.length, unclassified_pages: 0, contract_pages: Object.fromEntries(Object.entries(groups).map(([type, members]) => [type, members.length])),

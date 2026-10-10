@@ -10,6 +10,7 @@ import { summitPolicyEvidence } from "./nyc-summit-policy.mjs";
 import { teenPages } from "./page-generation/upgrade-page-data.mjs";
 import { momaComparison } from "./nyc-moma-budget.mjs";
 import { ferryComparison } from "./nyc-ferry-budget.mjs";
+import { omnyComparison } from "./nyc-omny-budget.mjs";
 import { spygamesPolicyEvidence } from "./nyc-spygames-policy.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -17,11 +18,29 @@ const target = "things-to-do/new-york-city-with-teens.html";
 
 test("budget deep-link headings reserve space below desktop fixed navigation", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
-  for (const id of ["moma-budget-title", "ferry-budget-title"]) {
+  for (const id of ["moma-budget-title", "ferry-budget-title", "omny-budget-title"]) {
     assert.equal((html.match(new RegExp(`id="${id}"`, "g")) || []).length, 1);
     assert.ok(html.includes(`<h2 id="${id}" style="scroll-margin-top:128px">`));
   }
-  assert.equal((html.match(/<h2[^>]*style="scroll-margin-top:128px"/g) || []).length, 2);
+  assert.equal((html.match(/<h2[^>]*style="scroll-margin-top:128px"/g) || []).length, 3);
+});
+
+test("OMNY group budget is visible without JS and keeps conditional payment limits", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const start = html.indexOf("<!-- omny-budget:start -->"), end = html.indexOf("<!-- omny-budget:end -->");
+  assert.ok(start > html.indexOf("<!-- ferry-budget:end -->")); assert.ok(end > start);
+  const block = html.slice(start, end), c = omnyComparison();
+  assert.match(block, /tabindex="0" role="region" aria-label="OMNY family payment comparison"/);
+  assert.equal((block.match(/<tr>/g) || []).length, 3);
+  assert.equal((block.match(/scope="col"/g) || []).length, 4);
+  assert.equal((block.match(/role="rowheader"/g) || []).length, 2);
+  for (const row of c.rows) for (const cell of row) assert.ok(block.includes(cell));
+  for (const source of c.sources) assert.ok(block.includes(source));
+  assert.match(block, /first tap earns the cap/); assert.match(block, /not a first-ever tap/);
+  assert.match(block, /physical card and its wallet version have separate caps/);
+  assert.match(block, /Setup\/card costs are excluded/); assert.match(block, /No teen bank account/);
+  assert.doesNotMatch(block, /<script|<input|<form|guaranteed|free for everyone/i);
+  assert.match(html, /July 26, 2026/); assert.match(html, /MoMA: teen ages change/);
 });
 
 function schemas(html) {

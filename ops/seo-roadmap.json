@@ -20,10 +20,51 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-091",
+      "title": "Compare separate versus shared OMNY family payment caps",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T14:04:31Z",
+      "target_paths": [
+        "docs/research/nyc-omny-family-budget-2026-10-10.json",
+        "tools/nyc-omny-budget.mjs",
+        "tools/nyc-omny-budget.test.mjs",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "tools/new-york-city-teen-page.test.mjs",
+        "site/things-to-do/new-york-city-with-teens.html",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs",
+        "ops/evidence-watch.json",
+        "status/new-york-city-pages.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-teens.html"
+      ],
+      "evidence": "October10 official MTA and OMNY fare-cap/weekly pages establish USD3 ordinary tap fare/USD35 seven-day cap, only first group tap accrues/caps and physical card versus wallet separate methods. Existing NYC teen page has no MTA family payment-budget surface; two adults/13-and17-teens full-fare proxy cannot compare four methods versus one shared method without reconstructing rules.",
+      "acceptance_criteria": [
+        "One validated dated record and no-JS table: four full-fare riders,8/14 chargeable fare trips each within one seven-day period; four stable separate methods96/140USD versus one already-enabled group method96/161, fare-only and no discounts assumed",
+        "First-use pass-back restriction and same exact method per rider explicit; no claim teens have bank accounts/devices, no account creation/card purchase or payment test. Reusable OMNY card alternative linked; card acquisition/topup/payment authorization/visit service/route/safety unknown",
+        "Own30day November9 maintenance/watch clock and historical future-evidence controls; all prior sources/prices/generalJuly26/10choices/FAQ/schema/34URLs preserved",
+        "Focused/full native QA, desktop/mobile table keyboard/heading/source/photo checks, different read-only PASS, exact-path guarded release, Pages/marker/productionSEO/exactHTML/all invariant verification"
+      ],
+      "measurement_plan": "Dated source and page-only proxy: avoid treating one weekly cap as four-rider unlimited coverage. Not real-user, payment/route/lowest-cost or SEO proof. ReusedOctober9 GSC finalizedOctober7/priorOct8-finalizedOct6 orientation only; dailyLRN187 complete.",
+      "production_invariant": "Only one marked OMNY section added after existing Ferry section; removing it restores b8bc040 HTML byteexact. Other public/prior research/source-price-clock bytes, metadata/FAQ/10choices,34sitemap URLs, held11 and fixed sprint preserved. Actualrun14:02:11Z/startdeadline14:47:11Z. No new URL/destination/provider or unchangeddenial retry/paid/security/account/indexing/scheduler mutation.",
+      "decision": "IMPLEMENT supported current family-payment budget within existing teen URL, not new generic transit page. Prior075/050 and named DC/Boston/PV already production-verified; their historical status labels not new release obligations. Other human/provider/room corpus gates remain separate.",
+      "next_gate": "Native/responsive/independentread-onlyPASS/exact release/production; falsify changed fare-cap/group rule, payment-method identity or failed budget task, reviewNovember9.",
+      "review_receipt": "FT-IMP-091 independent read-only Rawls PASS/noP0-P3 at 2026-10-10T14:18:54Z. Reviewed883/exact16/review5a796f33d84ed82290446632d5f50125bedb91fd155521d59c09cd92e1e2a346/worktree610b6b19c42ccf6ada826434506a0c3fe512086853837a0bb840bbbd9f91f255; all291prior roadmapitems/867untouchedfiles/heldworkisolation preserved. Independent15read-onlyfocusedtests/screenshots/no writes-network-delegation. Master720full/16focused/46maintenance/state0/GSC88/localSEO0fiveprior/1280-390-320responsive docwidthcontained/deeplink headings128desktop48mobile/keyboard40px movement/completehero. One OMNY block only restores prior HTML byteexact; current official group rules, conditional integer-cent budget and November9 ownclock pass. No human/payment/SEO outcome or prior fact-price-clock renewal. Mechanical immutable consensus only; release/production pending."
+    },
+    {
       "id": "FT-IMP-090",
       "title": "Restore hidden room details on comparison history navigation",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T13:03:47Z",
       "target_paths": [
@@ -57,7 +98,11 @@
       "measurement_plan": "Named page-only proxy: recover previously selected non-kitchen category after kitchen filtering and browser Back; not human/SEO/room-fit testing. ReusedOct9/priorOct8GSC finalizedOct7/6 orientation only; daily186alreadycomplete.",
       "production_invariant": "Three HTML outputs differ only by script version ft-imp090; visible room/price/fee/source/policy/date metadata/schema/CSV and all other public/research bytes identical to4651e00. Shared JS exact production bytes and three navigation tasks; no new URL or facts/clock renewals. Held11 preserved. Actualrun13:01:42Z/startdeadline13:46:42Z/fixed sprint expiry unchanged.",
       "decision": "IMPLEMENT reproduced shared-client navigation defect for all three existing consumers as one bounded family comparison task. Higher-priority075/050 and three approved cities already production-verified despite stale statuses. Other human/provider/price gates unchanged; no denied retries/external/scheduler mutation.",
-      "review_receipt": "FT-IMP-090 independent read-only Galileo PASS/noP0-P3; review digestdda70db494ac684b5c7ca7bd41fa99739c7df62c3a2e67ff39a4d4980026a7d3/filesdf6cda7f0a7847fef41912ebc2ae53011256e096d297761d627259135abf4b2b/worktree397c7b15f24c6d75913a2fe93daa4afcd294dce52f3aee0b1296e80dc79de050. Exact15/all880hashes/runtimeedgecases/threepagebatch/290priorjudgments with089mechanicalcompletion only/heldledgerisolated. Independent38tests/state0/GSC88/localSEO0fiveprior/invariants/screenshots, Master714full/38focused/45maintenance/nine1280-390-320actualBack-Forwardcases/docwidthcontained/target127.7734-128.2344/filter3-1-3,4-2-4,3-1-3/keyboardfocus-narrowmovement-notfulltravel/threeactualCSVbyteexact/errors[]/viewportreset. ThreeHTMLscript-version-only/allvisiblefacts-prices-clocks-metadata-schema-CSV-otherpublic-priorresearch34URLs unchanged. No reviewer writes/network/delegation/receipt. Mechanical immutable consensus only; Master release/production pending."
+      "review_receipt": "FT-IMP-090 independent read-only Galileo PASS/noP0-P3; review digestdda70db494ac684b5c7ca7bd41fa99739c7df62c3a2e67ff39a4d4980026a7d3/filesdf6cda7f0a7847fef41912ebc2ae53011256e096d297761d627259135abf4b2b/worktree397c7b15f24c6d75913a2fe93daa4afcd294dce52f3aee0b1296e80dc79de050. Exact15/all880hashes/runtimeedgecases/threepagebatch/290priorjudgments with089mechanicalcompletion only/heldledgerisolated. Independent38tests/state0/GSC88/localSEO0fiveprior/invariants/screenshots, Master714full/38focused/45maintenance/nine1280-390-320actualBack-Forwardcases/docwidthcontained/target127.7734-128.2344/filter3-1-3,4-2-4,3-1-3/keyboardfocus-narrowmovement-notfulltravel/threeactualCSVbyteexact/errors[]/viewportreset. ThreeHTMLscript-version-only/allvisiblefacts-prices-clocks-metadata-schema-CSV-otherpublic-priorresearch34URLs unchanged. No reviewer writes/network/delegation/receipt. Mechanical immutable consensus only; Master release/production pending.",
+      "completed_on": "2026-10-10T13:16:43.402Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "b8bc04003c318ac43ce9c38d74a6bf5b4642038f",
+      "production_receipt": "FT-IMP-090 delivered and production-verified 2026-10-10T13:16:43.402Z at b8bc04003c318ac43ce9c38d74a6bf5b4642038f; Pages38054952465success/matchingmarker/exact200sharedJS-threeHTML-threeunchangedCSV/productionSEO0fiveprior. Back to filtered detail now clears kitchen filter, restores all maintained rows/details/count and scrolls to selected block; visible/unrelated/malformed targets and normal toggles preserved. Master714full/38focused/45maintenance/state0/GSC88/nine1280-390-320browsercases/docwidthcontained/targettop127.7734-128.2344/keyboardfocus-narrowmovement-notfulltravel/threeactualCSVbyteexact/threeproductionBack-Forwardcases/errors[]/viewportreset. Independent read-onlyPASS/exact15/all880indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. ThreeHTMLscript-version-only/allvisiblefacts-prices-sourceclocks-metadata-schema-priorresearch-otherpublic-34URLs preserved; LRN187 proxy navigation learning not human/SEO/room-fit evidence. Next changedfilter/detailIDs/newconsumer or failednavigationtask; other evidence holds unchanged. Mechanical completion only/no metadata-onlycommit; held11/fixedsprint preserved."
     },
     {
       "id": "FT-IMP-089",

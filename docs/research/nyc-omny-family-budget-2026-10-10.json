@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-091",
+  "observed_on": "2026-10-10",
+  "refresh_days": 30,
+  "evidence_class": "OFFICIAL_FARE_AND_GROUP_PAYMENT_POLICY",
+  "source_status": "body-inspected",
+  "source_urls": ["https://www.mta.info/fares-tolls/subway-bus/tap-and-ride", "https://omny.info/faq/fare-cap", "https://omny.info/fares"],
+  "source_publication_dates": [null, null, null],
+  "currency": "USD",
+  "currency_basis": "Editorial USD interpretation of New York official dollar-denominated fares",
+  "unit": "per full-fare rider, chargeable subway/local-bus fare trip before cap",
+  "fare_cents": 300,
+  "cap_cents": 3500,
+  "cap_days": 7,
+  "party": {"adults": 2, "teen_ages": [13, 17], "standard_fare_riders": 4, "discounts_assumed": false},
+  "policy": {"only_first_group_tap_counts": true, "additional_taps_full_fare_after_cap": true, "maximum_additional_riders": 3, "physical_card_wallet_separate_methods": true, "free_transfers_do_not_count": true, "first_use_group_payment_not_assumed": true},
+  "scenario_trips_per_rider": [8, 14],
+  "source_findings": [
+    "MTA describes a rolling seven-day cap starting at first tap, stable method identity, separate first-trip methods before bank authorization and up to four riders on a later trip. No precise wait duration is guaranteed here.",
+    "OMNY group FAQ limits cap accrual and free rides to the first tap; other taps remain full fare. A physical card and its mobile-wallet version accrue separately.",
+    "OMNY weekly page's example uses3USD ordinary tap fare and35USD cap, not the3.50USD non-reusable Single-Ride ticket or36USD proposal. Scope excludes express/airport/commuter/ferry fare comparisons."
+  ],
+  "family_task": {"decision": "Budget four full-fare riders' NYC subway/local-bus trips using separate consistent methods versus one shared method", "hypothesis": "One shared weekly cap makes all four riders free after the threshold", "result": "REJECT; IMPLEMENT conditional96/140 versus96/161USD fare-only table and first-use/method-identity limits", "evidence_class": "PAGE_ONLY_PROXY_TASK", "human_tested": false},
+  "unknowns": ["Actual payment authorization, transaction behavior and visit-date operation untested", "Card purchase, reload or other setup costs excluded; no assumption teens own bank cards or devices", "No visitor student/reduced-fare eligibility, transfers/itinerary count, cheapest ticket or exact route assurance", "Shared scenario assumes group payment already enabled and all fourteen group journeys fall within the same cap period; not a first-trip promise", "No generalJuly26fact renewal, prior Ferry/MoMA/SUMMIT/SPYGAMES source changes or community identities"],
+  "confidence": "High narrow current official rate/group-rule agreement and integer-cent arithmetic; unknown human/payment/SEO outcome",
+  "lesson": "A family sharing one payment method does not share four independent fare caps; a physical card and wallet are not interchangeable cap identities",
+  "decision": "IMPLEMENT one existing-page payment comparison, not a new transit URL",
+  "next_falsification_trigger": "Changed fare/cap/group/identity rule, failed family-budget task orNovember9source review"
+}

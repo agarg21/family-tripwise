@@ -460,6 +460,25 @@ ${officialCheckSection}${faqSection}${markerEnd}
 }
 
 function renderTeenUpgrade(page) {
+  const payment = page.paymentBudget;
+  const paymentSection = payment ? `      <!-- omny-budget:start -->
+      <section class="container page-section rank-ready-section" aria-labelledby="omny-budget-title">
+        <div class="section-heading">
+          <p class="eyebrow">Family transit budget</p>
+          <h2 id="omny-budget-title" style="scroll-margin-top:128px">${esc(payment.heading)}</h2>
+        </div>
+        <p class="review-label">${esc(payment.note)}</p>
+${renderActivityComparison(payment.rows, payment.headers, "omny-budget-comparison", {accessibleLabel:"OMNY family payment comparison",rowHeaders:true})}
+        <p>${esc(payment.rule)}</p>
+        <p>${esc(payment.method_note)}</p>
+        <ul class="source-list">
+          <li><a href="${esc(payment.sources[0])}">MTA tap-and-ride and first-use rules</a></li>
+          <li><a href="${esc(payment.sources[1])}">OMNY group taps and method identity</a></li>
+          <li><a href="${esc(payment.sources[2])}">OMNY ordinary fare and weekly cap</a></li>
+        </ul>
+      </section>
+      <!-- omny-budget:end -->
+` : "";
   const transport = page.transportBudget;
   const transportSection = transport ? `      <!-- ferry-budget:start -->
       <section class="container page-section rank-ready-section" aria-labelledby="ferry-budget-title">
@@ -547,7 +566,7 @@ ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page
         <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
 ${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
       </section>
-${admissionSection}${transportSection}
+${admissionSection}${transportSection}${paymentSection}
       <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">

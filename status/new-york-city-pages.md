@@ -1,5 +1,7 @@
 # New York City Page Status
 
+FT-IMP-091 implements one OMNY family-payment budget on the existing teen URL: fourfullfare riders8/14chargeable trips each inone7day period, separate96/140 versusalready-enabledshared96/161USD; setupcosts/firstuseauthorization/payment outcome unknown. October10 official source record andNovember9clock separate fromgeneralJuly26andpriorattraction/ferry clocks. Exact16/gates/invariants inroadmap; proxy not realuser/route/lowestcost assurance. Public release pending native/browser/different read-onlyPASS/production verification; no URL or observation-window reset.
+
 FT-IMP-089 candidate: product-specific SPYGAMES under16 adult accompaniment now answers split-visit planning in the teen comparison/detail/check/FAQ. Shared October10policy/November9review; separate museum, adult qualification and independent older-teen entry remain unknown. Prior SUMMIT/MoMA/Ferry and general dates unchanged; QA/differentPASS/production gates remain.
 
 FT-IMP-088 candidate: two direct budget heading offsets address reproduced desktop fixed-header occlusion. All public copy, dates, fares, policies, schema and previous source-specific clocks unchanged. Pending full/native/responsive/differentPASS and verified release; no travel-fact renewal.
