@@ -20,10 +20,52 @@
   ],
   "items": [
     {
+      "id": "FT-RES-144",
+      "title": "Resolve Boston extra-bed uncertainty and destination-fee gym age limit",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T04:01:49.743Z",
+      "target_paths": [
+        "docs/research/boston-park-plaza-fifth-bed-2026-10-10.json",
+        "docs/research/boston-park-plaza-fifth-bed-2026-10-10.md",
+        "tools/boston-park-plaza-fifth-bed.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "tools/boston-park-plaza-policy.mjs",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "tools/boston-family-hotels-page.test.mjs",
+        "site/where-to-stay/boston-family-hotels.html",
+        "ops/evidence-watch.json",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html"
+      ],
+      "evidence": "Existing Boston published Deluxe maximum5/two-double category leaves fifth older-child sleeping place and rollaway price unresolved. Bounded exact-category/property policy source audit, not repeat quote flow or unchanged denial. Prior075/050/DC/Boston/PV/079-082 releases production verified; no eligible unfinished release. ReusedOct9GSC/finalizedOct7 and priorOct8/finalizedOct6 orientation only, old31inspection/28discovery predates new URLs. First actual Oct10Eastern run; daily learning due. October10 exact Deluxe modal still lists two doubles/sleeps5 without fifth-bed allocation. Newly inspected hotel-info publishes mandatory daily35USD charge including Lynx Fitness Club, whose facilities are for hotel guests18andolder with first-visit waiver. Existing fee benefit lacks age context; add conditional family-budget check, not a family gym recommendation.",
+      "acceptance_criteria": [
+        "Inspect current official room/setup/policy source for exact Deluxe fifth sleeping place, rollaway availability/fee or explicit unresolved gate; no generic crib or other-category substitution",
+        "Preserve originalOct1/3 prices/source clocks, count-only age limits and all public bytes until amended public scope and independently reviewed implementation",
+        "Focused/full native QA, different independent read-only PASS or PASS_WITH_P3, exact research release; no contact/payment/booking/member/account/security/scheduler mutation",
+        "Source-backed18plus facility access, first-visit waiver and destination-fee inclusion from one maintained policy record; ages4/8/12 outside access band, no replacement child activity or fee waiver/deduction",
+        "Public addition only inside Park Plaza existing booking checks, direct dated source and November9 review; original public HTML elsewhere, CSV/nightly prices/source clocks/metadata/schema/34URLs untouched",
+        "Current responsive/filter/download/image checks and production Pages marker/SEO/all declared target invariants before delivery"
+      ],
+      "measurement_plan": "Can family2adults/ages4,8,12 distinguish published maximum5 from five confirmed sleeping places and price any established additional-bed component? Research/proxy, not human or SEO proof.",
+      "production_invariant": "Only BostonHTML one dated Park Plaza policy check/source note changes among public files. OriginalCSV/4categories/4plans/2unpriced/2kitchens/allprice-source bytes/clocks/metadata/schema/34URLs/allotherpublic/held/sprint preserved. Extra bed remains unknown;18plus gym is not whole-property child exclusion or fitness/safety suitability assurance.",
+      "decision": "IMPLEMENT current gym-age/fee-benefit boundary in existing Boston booking checks; PRESERVE fifth-bed/rollaway charge unknown. No contact or unchanged quote replay.",
+      "next_gate": "Focused/full/native/responsive/different read-only consensus/exact production verified release",
+      "review_receipt": "FT-RES-144 independent Rawls READ-ONLY PASS/no P0-P3 at 2026-10-10T04:14Z; reviewed frozen855/exact15 manifest90abe26983b47fe13d2e29e618e31ff01ddd57225a68c6a4eab22ed5224e854b/allhashesnodrift; pure23/23/officialsourceproof/finalresponsiveimages/actualCSVbytes/281priorroadmapitems/held isolation. Master672/672full/30focused/40maintenance/state0/GSC88/localSEO0fiveprior; fresh1280-390-320nooverflow/note128px/image1280/filter4-2-4/tablekeyboard24/downloadCSV(6)byteexact/noerrorconsole. Only new Park Plaza18plus gym-fee paragraph; all old public/research/price/source/CSV/metadata/schema/34URLs preserved. No price renewal, fee deduction/waiver, fifthbed assertion or contact. Mechanical immutable consensus; release/production verification still pending."
+    },
+    {
       "id": "FT-IMP-082",
       "title": "Compare Puerto Vallarta public meal-plan increment without inclusion assumptions",
       "kind": "improvement",
-      "status": "candidate",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "started_at": "2026-10-10T02:30:40.475Z",
       "target_paths": [
@@ -54,7 +96,11 @@
       "decision": "IMPLEMENT same-record public plan identity and1499USDstay/299.80configuration-night increment, not allfeefoodbudget/savings/confirmedcancellation. Originalprice-source-CSV bytes unchanged;16focused green, release pending.",
       "next_gate": "Focused/full/browser/different read-onlyreview/exactreviewed release/productionverification.",
       "evidence_record": "docs/research/puerto-vallarta-public-meal-plan-task-2026-10-09.json",
-      "review_receipt": "FT-IMP-082 independent read-only Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 PASS/no actionable findings on1be745da9e653432ebac9af206a96c575d486542b5798f3d2eaf18478e1acecc/all851hashes/exact11/all280prioritems-helddirty preserved. Independent17focusedpass/screenshotinspection/actualCSVbyte-match/sourceguard-arithmetic-limits. Master666full/16focused/39maintenance/state0/GSC88/localSEO0fiveprior,1280-390-320nooverflow/image1280/keyboard434.5of442 (End0notcounted)/filter3-1-3/incrementunaffected/actualfullCSV(1)byteexact/noerrorconsole. Same140sourceOct9/reviewOct23/alloriginalpublicexceptincrementandlabels/CSV-sourcebytes-34URLs preserved. Only immutable mechanical consensus receipt; exactrelease/production gates pending, no delivery claim."
+      "review_receipt": "FT-IMP-082 independent read-only Ampere01a12323-dccf-7e23-b25d-9dfe97f0bb22 PASS/no actionable findings on1be745da9e653432ebac9af206a96c575d486542b5798f3d2eaf18478e1acecc/all851hashes/exact11/all280prioritems-helddirty preserved. Independent17focusedpass/screenshotinspection/actualCSVbyte-match/sourceguard-arithmetic-limits. Master666full/16focused/39maintenance/state0/GSC88/localSEO0fiveprior,1280-390-320nooverflow/image1280/keyboard434.5of442 (End0notcounted)/filter3-1-3/incrementunaffected/actualfullCSV(1)byteexact/noerrorconsole. Same140sourceOct9/reviewOct23/alloriginalpublicexceptincrementandlabels/CSV-sourcebytes-34URLs preserved. Only immutable mechanical consensus receipt; exactrelease/production gates pending, no delivery claim.",
+      "completed_on": "2026-10-10T02:36:54.169Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "e9b76fcafccaffe064bace587b351eb2c3f27cec",
+      "production_receipt": "FT-IMP-082 delivered and production-verified 2026-10-10T02:36:54.169Z at e9b76fcafccaffe064bace587b351eb2c3f27cec; Pages38017537689success/matchingmarker/exact200PVHTML-originalCSV/onlyincrement-and-overviewlabels/sitemap34/alloriginalpublic-sourcebytes/productionSEO0fiveprior. Samefamily public1499USDstay/299.80configuration-night increment, not food savings or fullcost; taxexcluded/roundedcards/unknownmeals-fees/cancellationconflict/deposit35percenttiming/under12limit/sourceOct9-reviewOct23 intact. Master666full/16focused/39maintenance/state0/GSC88/1280-390-320nooverflow/image1280/keyboard434.5of442/filter3-1-3/actualfullCSV(1)byteexact/noerrorconsole. IndependentAmpere consensus above; LRN177 proxy not human/SEO/currentquote. Exactunpriced-category cost and realrest-care gates remain narrow. Mechanical completion only/no metadata-onlycommit; sprint unchanged."
     },
     {
       "id": "FT-IMP-081",

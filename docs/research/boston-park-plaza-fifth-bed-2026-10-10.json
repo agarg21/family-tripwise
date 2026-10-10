@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-144",
+  "checked_on": "2026-10-10",
+  "evidence_class": "OFFICIAL_PROPERTY_POLICY_AND_EXACT_CATEGORY_FACT",
+  "refresh_days": 30,
+  "hotel": "Hilton Boston Park Plaza",
+  "record_id": "boston-park-plaza-deluxe-double",
+  "category": "2 Double Beds Deluxe Guestroom",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5},
+  "sources": [
+    {"url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/rooms/", "observed_on": "2026-10-10", "published_on": null, "surface": "Exact Deluxe modal, description and expanded comfort/convenience panels; no availability or rate flow opened"},
+    {"url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/hotel-info/", "observed_on": "2026-10-10", "published_on": null, "surface": "Lynx Fitness Club text and expanded Resort Fees policy"}
+  ],
+  "bedding": {"published_maximum": 5, "published_double_beds": 2, "fifth_sleeping_place": "not-established", "rollaway_availability": "not-established", "rollaway_charge": null, "limitation": "Omission is not a no-rollaway policy. Generic cribs, a different suite or default one-adult availability cannot resolve this five-person sleeping task."},
+  "fitness": {"facility": "Lynx Fitness Club", "minimum_guest_age": 18, "hotel_guest_required": true, "first_visit_waiver_required": true, "scenario_children_outside_band": [4, 8, 12], "limitation": "Published facility access rule, not a whole-property child exclusion, other-service age rule, November operating guarantee, supervised care or fitness/safety suitability advice."},
+  "fee": {"displayed_daily_amount": 35, "currency": "USD", "currency_basis": "Editorial interpretation of dollar symbol at this US property; original October1 booking observation also supplies USD", "unit": "daily mandatory destination charge", "includes_fitness_access": true, "credit_deducted": false, "fee_waiver_assumed": false, "current_checkout_total": null, "limitation": "Fee inclusion does not override the facility's age rule. Original October1 per-room/night175USD five-night charge is already included once in old sampled totals; no new quote, subtraction, exemption or all-fee total established."},
+  "result": "IMPLEMENT gym-age/fee-benefit boundary in existing public Park Plaza booking checks; PRESERVE fifth-bed and rollaway cost unknown",
+  "confidence": "High observed category and facility/fee text; unknown extra-bed setup/price, current booking acceptance, service on stay dates, users and SEO outcomes",
+  "learning": "Published room maximum, sleeping places and mandatory-fee benefit eligibility are independent constraints. A fee benefit can exclude every child in the task without making the fee optional.",
+  "next_gate": "Requalify on changed exact-category fifth-bed/rollaway evidence or changed gym/fee policy; policy review due November9. No unchanged quote replay or contact authority.",
+  "limits": "Source inspection date, not policy-effective date. No source-wide room/price renewal, actual child age acceptance, booking, contact, payment, waiver signature, membership, paid research or security change. One locator no-match after closing modal was resolved from fresh visible AX navigation, not a denial or access workaround. Automatic default October10-11 one-adult unavailable labels were not evaluated as November family inventory."
+}

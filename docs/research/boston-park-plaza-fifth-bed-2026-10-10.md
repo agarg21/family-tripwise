@@ -1,0 +1,13 @@
+# Boston Sleeping Places and Fee Benefits
+
+FT-RES-144 resolves a bounded decision on the approved existing Boston comparison: can two adults and children aged 4, 8 and 12 rely on five sleeping places and the mandatory-fee gym benefit?
+
+On October 10, the [exact Deluxe category](https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/rooms/) still publishes two double beds and maximum five. Its description and expanded comfort/convenience panels do not establish a fifth bed, rollaway availability or charge. This is an unresolved allocation, not proof rollaways are prohibited. No availability or rate flow was opened; automatic one-adult October 10-11 inventory labels do not answer November's family task.
+
+The [official hotel-info policy](https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/hotel-info/) publishes Lynx Fitness Club access for hotel guests aged 18 and over, with a first-visit waiver. Its expanded fee policy lists a daily $35 mandatory destination charge including Lynx access. These are facility-specific terms, not a whole-property child restriction or gym suitability advice. All three scenario children are outside that access band; the fee benefit does not establish an exemption, deduction, supervised care or replacement child activity.
+
+Decision: implement one source-dated policy check within the existing Park Plaza room detail. Preserve the original October 1 and 3 historical prices, their taxes/fees/count-only limitations, the unresolved fifth bed, original CSV, all other public content and all 34 canonical URLs. One maintained [record](boston-park-plaza-fifth-bed-2026-10-10.json) supplies the public check and offline/watch review clock due November 9; it does not renew every room fact or price.
+
+Confidence is high for the displayed source text, unknown for bed allocation, current quote, actual service on stay dates, real users and SEO outcomes. The reusable lesson is that capacity, sleeping places and fee-benefit eligibility are separate gates. Requalify on changed exact-category extra-bed evidence or gym/fee policy, not an unchanged booking flow or calendar-only retry. No higher-priority qualified release waits: San Diego, Chicago and the three named city launches plus subsequent Boston/PV budget improvements are already production-verified; their narrow provider and human-evidence holds remain separate.
+
+Full/focused native QA, responsive/filter/download/image checks, a different independent read-only reviewer, exact-path release and production verification remain required. Human evidence is not replaced by proxy inspection. No contact, booking, payment, waiver, account, paid scope, indexing, analytics or scheduler change.

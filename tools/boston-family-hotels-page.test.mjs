@@ -52,11 +52,22 @@ test("Boston has one canonical job and maintained discovery without removing pre
  const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);assert.equal(schema["@type"],"WebPage");assert.equal(schema.url,url);
 });
 test("Boston refresh registry uses maintained exact sources and original dates",()=>{
- const watch=JSON.parse(read("ops/evidence-watch.json")).records.filter(r=>r.page_url.endsWith(bostonPath)&&r.id!=="boston-museum-admission-return");
+ const watch=JSON.parse(read("ops/evidence-watch.json")).records.filter(r=>r.page_url.endsWith(bostonPath)&&!["boston-museum-admission-return","boston-park-plaza-gym-fee"].includes(r.id));
  assert.equal(watch.length,4);assert.deepEqual(watch.map(r=>r.verified_on),["2026-10-01","2026-10-03","2026-10-01","2026-10-09"]);
  const sources=Object.values(bostonPack.sources).map(s=>s.url);
  for(const record of watch)for(const url of record.source_urls)assert.ok(sources.includes(url),url);
  assert.ok(JSON.parse(read("ops/gsc-monitor.json")).urls?.includes(`https://familytripwise.com/${bostonPath}`) || read("ops/gsc-monitor.json").includes(`https://familytripwise.com/${bostonPath}`));
+});
+
+test("Park Plaza gym benefit retains18plus age boundary and separate source clock without renewing prices",()=>{
+ const html=bostonFamilyHotelPage(),note=html.match(/<p id="park-plaza-gym-policy"[^>]*>(.*?)<\/p>/)[1];
+ for(const text of ["USD 35", "18 and over", "first-visit waiver", "Ages 4, 8, 12", "outside that access band", "fee exemption or deduction", "October 1", "already include", "inspected October 10, 2026", "due November 9", "Actual service"]){assert.ok(note.includes(text),text);}
+ assert.doesNotMatch(note,/free for|fee waived|rollaway.*USD|guaranteed/i);
+ assert.match(html,/id="park-plaza-gym-policy"[^>]*scroll-margin-top:128px/);
+ const watch=JSON.parse(read("ops/evidence-watch.json")).records.find(r=>r.id==="boston-park-plaza-gym-fee");
+ assert.equal(watch.verified_on,"2026-10-10");assert.equal(watch.interval_days,30);
+ assert.equal(watch.evidence_path,"docs/research/boston-park-plaza-fifth-bed-2026-10-10.json");
+ assert.ok(watch.source_urls.every(url=>note.includes(url)));
 });
 
 test("museum admission component is source-dated, keyboard-readable and never a checkout or reentry promise",()=>{
