@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-088",
+  "observed_on": "2026-10-10",
+  "evidence_class": "PUBLIC_PAGE_BROWSER_GEOMETRY_AND_PROXY_TASK",
+  "source_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+  "source_release": "a3775dcd1a8862c67159b4da5432d67e03017ac8",
+  "family_decision": "Open a shared direct link to the MoMA admission or NYC Ferry family budget and identify its heading without scrolling back.",
+  "hypothesis": "Existing budget fragments already land with the heading unobscured.",
+  "baseline": [
+    {"width":1280,"height":900,"id":"ferry-budget-title","heading_top":-0.2421875,"heading_bottom":50.15625,"header_bottom":65,"clear":false},
+    {"width":1280,"height":900,"id":"moma-budget-title","heading_top":-0.0625,"heading_bottom":50.3359375,"header_bottom":65,"clear":false},
+    {"width":390,"height":844,"id":"ferry-budget-title","heading_top":0.015625,"heading_bottom":85.703125,"header_bottom":-6175.390625,"clear":true},
+    {"width":390,"height":844,"id":"moma-budget-title","heading_top":-0.03125,"heading_bottom":57.09375,"header_bottom":-5275.890625,"clear":true},
+    {"width":320,"height":844,"id":"ferry-budget-title","heading_top":-0.2265625,"heading_bottom":85.4609375,"header_bottom":-6634.890625,"clear":true},
+    {"width":320,"height":844,"id":"moma-budget-title","heading_top":0.1640625,"heading_bottom":85.8515625,"header_bottom":-5610.390625,"clear":true}
+  ],
+  "result": "REJECT on desktop: both complete headings land behind the 65px fixed header. Mobile header is not fixed at these sizes; no mobile header occlusion established.",
+  "decision": "IMPLEMENT 128px scroll margin only on these two heading targets, following existing scoped anchor-offset conventions. Validate all six direct-link cases and keyboard table access before release.",
+  "confidence": "High for reproduced desktop geometry; proxy task is not real-user testing, proof of satisfaction, all-device accessibility or SEO evidence.",
+  "reusable_lesson": "A valid fragment and successful HTTP response do not establish that its heading is visible below fixed navigation.",
+  "next_falsification_trigger": "Changed navigation height, responsive breakpoint, target markup, fragment behavior, or failed heading-visibility task.",
+  "preservation": "No travel facts, source dates, price observations, clocks, metadata, schema, FAQ, sitemap, other pages or shared CSS are renewed or changed. No blocked-source retry.",
+  "human_testing": false,
+  "candidate_browser_validation": {
+    "origin": "http://127.0.0.1:4173",
+    "viewports": [{"width":1280,"height":900},{"width":390,"height":844},{"width":320,"height":844}],
+    "direct_fragment_cases": 6,
+    "all_headings_fully_visible": true,
+    "heading_top_range_px": [127.7578125,128.1640625],
+    "desktop_header_bottom_px": 65,
+    "outer_overflow_cases": 0,
+    "narrow_table_keyboard": {"focused":true,"scroll_left":184,"maximum_scroll":798,"tabindex":0,"scope":"Movement and focus verified, not complete scroll travel"},
+    "image_complete": true,
+    "image_natural_width": 1280,
+    "console_errors": [],
+    "temporary_viewport_reset": true
+  }
+}

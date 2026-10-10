@@ -465,7 +465,7 @@ function renderTeenUpgrade(page) {
       <section class="container page-section rank-ready-section" aria-labelledby="ferry-budget-title">
         <div class="section-heading">
           <p class="eyebrow">Ferry fare and return</p>
-          <h2 id="ferry-budget-title">${esc(transport.heading)}</h2>
+          <h2 id="ferry-budget-title" style="scroll-margin-top:128px">${esc(transport.heading)}</h2>
         </div>
         <p class="review-label">${esc(transport.note)}</p>
 ${renderActivityComparison(transport.rows, transport.headers, "ferry-budget-comparison", {accessibleLabel:"NYC Ferry family fare comparison",rowHeaders:true})}
@@ -485,7 +485,7 @@ ${renderActivityComparison(transport.rows, transport.headers, "ferry-budget-comp
       <section class="container page-section rank-ready-section" aria-labelledby="moma-budget-title">
         <div class="section-heading">
           <p class="eyebrow">Admission and breaks</p>
-          <h2 id="moma-budget-title">${esc(budget.heading)}</h2>
+          <h2 id="moma-budget-title" style="scroll-margin-top:128px">${esc(budget.heading)}</h2>
         </div>
         <p class="review-label">${esc(budget.note)}</p>
 ${renderActivityComparison(budget.rows, budget.headers, "moma-budget-comparison", {accessibleLabel:"MoMA family admission comparison",rowHeaders:true})}

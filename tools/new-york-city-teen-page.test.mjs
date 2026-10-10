@@ -14,6 +14,15 @@ import { ferryComparison } from "./nyc-ferry-budget.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const target = "things-to-do/new-york-city-with-teens.html";
 
+test("budget deep-link headings reserve space below desktop fixed navigation", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  for (const id of ["moma-budget-title", "ferry-budget-title"]) {
+    assert.equal((html.match(new RegExp(`id="${id}"`, "g")) || []).length, 1);
+    assert.ok(html.includes(`<h2 id="${id}" style="scroll-margin-top:128px">`));
+  }
+  assert.equal((html.match(/<h2[^>]*style="scroll-margin-top:128px"/g) || []).length, 2);
+});
+
 function schemas(html) {
   return [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
 }
