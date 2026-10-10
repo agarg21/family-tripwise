@@ -20,10 +20,51 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-087",
+      "title": "Compare observed and announced NYC Ferry family return budgets",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-10T10:03:19Z",
+      "target_paths": [
+        "docs/research/nyc-ferry-family-budget-2026-10-10.json",
+        "tools/nyc-ferry-budget.mjs",
+        "tools/nyc-ferry-budget.test.mjs",
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "tools/new-york-city-teen-page.test.mjs",
+        "site/things-to-do/new-york-city-with-teens.html",
+        "tools/site-maintenance.mjs",
+        "tools/site-maintenance.test.mjs",
+        "ops/evidence-watch.json",
+        "status/new-york-city-pages.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/new-york-city-with-teens.html"
+      ],
+      "evidence": "October10 current operator ticketing and NYC311 agree4.50single; dated September28,2026operator notice announces5.00fromOctober19. July22,2024NYCEDC dated chronology resolves escaped4.00footer as superseded legacy text. Existing page lower-cost shorthand does not answer four-standard-rider one-way/return budget or announced change. Proxy task, not actual quote/boarding. ReusedOct9GSC finalizedOct7/priorOct8 finalizedOct6 orientation only; no alignedCTR evidence.075/050/DC/Boston/PV/086 releases verified; dailyLRN178-183done.",
+      "acceptance_criteria": [
+        "Single maintained no-JS comparison: four standard riders twoadults+13/17over44inches; observed4.50 gives18one-way/36returnUSD, announced5 gives20/40; announced never becomes observed through clock",
+        "Published regular single-ticket fare arithmetic, not best-pass/discount/checkout/service/boarding or route verdict; return excluded from120minuteone-waytransfer; tourist teens not presumed NYCstudent-eligible; exact44boundary unknown",
+        "One marked section after MoMA; allpriorpublic/research/metadata/FAQ/tenchoices/MoMA/SUMMIT/generalJuly26/sitemap34bytes preserved",
+        "Nine-day source clock dueOct19 and watch parity, no future-source historical promotion; focused/full native/desktop390-320keyboard/imageQA/different read-onlyPASS/exact release/Pages marker/productionSEO/invariants"
+      ],
+      "measurement_plan": "Four-person NYC Ferry out-and-back proxy can distinguish observed versus announced fares and avoid applying free one-way transfers to return trip; no real-user satisfaction or SEO outcome claim.",
+      "production_invariant": "Only one marked NYC Ferry section added after MoMA. Stripblock restores priorNYCHTMLbyteexact; allotherpublic/priorresearch/metadata/FAQ10choices/MoMAOctober24/SUMMITNovember9/generalJuly26/34URLbytes unchanged. USD editorial dollar interpretation, standard single fares not checkout/best-ticket quote, actual service/boarding/safety/stroller/route/discount eligibility unknown. Source notice datedSep28 and plannedOct19, not observedfuturefare. No provider/account/spending/scheduler/external mutation.",
+      "decision": "IMPLEMENT existing-page standard-fare date/return comparison; planned schedule remains announced until source verification.",
+      "next_gate": "Native/responsive/read-only consensus/reviewed release/production; changedsource orOctober19review before promoting announced prices.",
+      "review_receipt": "FT-IMP-087 independent read-only Galileo01a12333-09a7-7733-9243-3fbaf32afae9 PASS/noP0-P3 at2026-10-10 10:15:43 UTC; exact16/all874hashes/manifest a556c1c315c8f69295c288c22da524fb2b882c3ee132d357b69034cce82c7211/287prioritems with086five-field mechanicalcompletion only/heldledgerexcluded. Independently47native tests/state0/GSC88/localSEO0fiveprior/invariants/screenshots; isolatedfixturescleaned/no repo-candidate-git-network-delegationwrites; full698Master-reported. Master698full/30focused/44maintenance/state0/GSC88/localSEO0fiveprior; generatorNYConly-idempotent/1280-390-320nooverflow/keyboard320787max798/image1280/errors[]. ObservedOctober10USD4.50/18/36 vs September28notice announcedOctober19USD5/20/40; fourstandardriders/allover44/no discounts-bestpass-checkout-service-safety assurance;120minuteonewaytransfer excludesreturn/legacy4superseded by dated2024history. RemovingFerryblock restorespriorHTML byteexact/allotherpublic-priorresearch-metadata-schema-July26-MoMA-SUMMIT-34URLs preserved; October19clock neverpromotes announcedfare. Immutable consensus only; production release and verification pending."
+    },
+    {
       "id": "FT-IMP-086",
       "title": "Compare MoMA teen admission budgets and ticket-preserving breaks",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-10T09:03:57Z",
       "target_paths": [
@@ -58,7 +99,11 @@
       "production_invariant": "Exactly one marked MoMA admission section added after teen activity table; remove that block to reproduce priorNYCHTML byteexact. Original10choices/FAQ3/July26general source dates/October10SUMMITrecord/schema/meta/sitemap34 and allotherpublic/priorresearch/pricebytes unchanged. No checkout/reservation/provider/account/external/scheduler mutation. Published USD category prices not final checkout or ticket availability; studentID conditional, numeric adolescent adult/supervision and actual rest unknown.",
       "decision": "IMPLEMENT existing-page admission/break comparison; student eligibility and checkout totals remain unknown, no new URL.",
       "next_gate": "Native/responsive/different read-only consensus/exact reviewed release and production; later changed official admissions/return rule orOctober24review.",
-      "review_receipt": "FT-IMP-086 independent read-only Rawls01a1232b-1240-7ef3-a260-35bc6be54dbd PASS/noP0-P3 at2026-10-10T09:13:55Z; immutable consensus reviewed exact16/all871hashes/manifest08c48dba5ac38bbdd0ba5c41c27116e96b309ada0368306976595c9ec9ec1f45/286prioritems with085mechanicalcompletion only/heldledgerexcluded. Reviewer11tests with isolatedcleanedfixture, screenshotinspection, no repo-candidate-network-delegation-gitwrites. Master693full/28focused/43maintenance/state0/GSC88/localSEO0fiveprior; desktop1280-390-320nooverflow/320keyboard798max798/image1280/errors[]; generatorNYConly/idempotent, newblockreversal restorespriorHTML/allotherpublicresearchdatesFAQSUMMIT34URLsbyteexact. October10publishedadmission-only USD60/90/77/conditionalID/freechildticket/retained-ticketreturn; not checkoutinventory-IDacceptance-independent-entry-actualrest-safety evidence. Production release pending."
+      "review_receipt": "FT-IMP-086 independent read-only Rawls01a1232b-1240-7ef3-a260-35bc6be54dbd PASS/noP0-P3 at2026-10-10T09:13:55Z; immutable consensus reviewed exact16/all871hashes/manifest08c48dba5ac38bbdd0ba5c41c27116e96b309ada0368306976595c9ec9ec1f45/286prioritems with085mechanicalcompletion only/heldledgerexcluded. Reviewer11tests with isolatedcleanedfixture, screenshotinspection, no repo-candidate-network-delegation-gitwrites. Master693full/28focused/43maintenance/state0/GSC88/localSEO0fiveprior; desktop1280-390-320nooverflow/320keyboard798max798/image1280/errors[]; generatorNYConly/idempotent, newblockreversal restorespriorHTML/allotherpublicresearchdatesFAQSUMMIT34URLsbyteexact. October10publishedadmission-only USD60/90/77/conditionalID/freechildticket/retained-ticketreturn; not checkoutinventory-IDacceptance-independent-entry-actualrest-safety evidence. Production release pending.",
+      "completed_on": "2026-10-10T09:15:37.510Z",
+      "release_state": "completed-production-verified",
+      "release_commit": "7361eb23d4de1ecb3ad85d1607324efbbd8f1f59",
+      "production_receipt": "FT-IMP-086 delivered and production-verified 2026-10-10T09:15:37.510Z at 7361eb23d4de1ecb3ad85d1607324efbbd8f1f59; Pages38040688418success/matchingmarker/exact200NYCteenHTML/newmarkedMoMAsection only/allotherpublic-priorresearch-metadata-FAQ-tenchoices-July26generaldate-SUMMIT-34URLbytes preserved/productionSEO0fiveprior. October10 official published rates yield conditional admission-only USD60/90/77 for maintained four-person parties; free-child ticket and retained-ticket same-day return. Not checkouttaxfees/inventory/IDacceptance/independent-entry/actualrest or safety assurance. Sharedvalidatedrecord/October24clock/watch. Master693full/28focused/43maintenance/state0/GSC88/responsive1280-390-320nooverflow/keyboard320798max798/image1280/errors[]; different read-only consensus/exact16/all871indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. LRN183 official source/task learning, not human testing. Next changed admission/return/ID rule orOctober24review; London/provider holds unchanged. Mechanical completion only/no metadata-onlycommit; heldwork/sprint preserved."
     },
     {
       "id": "FT-IMP-085",

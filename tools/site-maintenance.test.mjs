@@ -49,20 +49,26 @@ test("invalid policy dates, provenance, intervals and unsafe URLs fail closed wi
 
 test("offline maintenance surfaces policy due counts while preserving room and price clocks", async () => {
   const current=await maintenanceReport({today:"2026-10-09"});
-  assert.equal(current.policy_review_clocks.length,7);
-  assert.equal(current.summary.policy_review_clocks,7);
+  assert.equal(current.policy_review_clocks.length,8);
+  assert.equal(current.summary.policy_review_clocks,8);
   assert.equal(current.summary.policy_due_records,0);
-  assert.equal(current.summary.policy_not_yet_observed,4);
+  assert.equal(current.summary.policy_not_yet_observed,5);
   const future=await maintenanceReport({today:"2026-11-03"});
-  assert.equal(future.summary.policy_due_records,3);
+  assert.equal(future.summary.policy_due_records,4);
   assert.equal(future.policy_review_clocks.find(record=>record.id==="dc-regular-rail-fare").freshness.state,"review-due");
   assert.equal(future.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
   assert.equal(future.automatic_fact_renewal,false);assert.equal(future.automatic_publication,false);
   const historical=await maintenanceReport({today:"2026-10-01"});
-  assert.equal(historical.summary.policy_not_yet_observed,7);assert.equal(historical.summary.policy_due_records,0);
+  assert.equal(historical.summary.policy_not_yet_observed,8);assert.equal(historical.summary.policy_due_records,0);
   assert.equal(current.policy_review_clocks.find(record=>record.id==="boston-museum-admission-return").freshness.due_on,"2026-10-23");
-  assert.equal((await maintenanceReport({today:"2026-10-23"})).summary.policy_due_records,1);
+  assert.equal((await maintenanceReport({today:"2026-10-23"})).summary.policy_due_records,2);
   assert.deepEqual(future.pages,current.pages);
+});
+
+test("NYC Ferry October19 clock preserves announced evidence and other source clocks",async()=>{
+ const report=await maintenanceReport({today:"2026-10-19"}),c=report.policy_review_clocks.find(r=>r.id==="nyc-ferry-fare-return");
+ assert.equal(c.freshness.due_on,"2026-10-19");assert.equal(c.freshness.state,"review-due");assert.equal(c.announced_state,"announced-not-observed");assert.equal((await maintenanceReport({today:"2026-10-09"})).policy_review_clocks.find(r=>r.id===c.id).evidence_state,"not-yet-observed-at-report-date");
+ assert.equal(report.policy_review_clocks.find(r=>r.id==="nyc-moma-admission-return").freshness.due_on,"2026-10-24");assert.equal(report.policy_review_clocks.find(r=>r.id==="nyc-summit-under16").freshness.due_on,"2026-11-09");
 });
 
 test("MoMA admission/return clock uses its October10 source without promoting future examples or renewing SUMMIT",async()=>{

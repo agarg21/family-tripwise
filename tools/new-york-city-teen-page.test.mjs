@@ -9,6 +9,7 @@ import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
 import { summitPolicyEvidence } from "./nyc-summit-policy.mjs";
 import { teenPages } from "./page-generation/upgrade-page-data.mjs";
 import { momaComparison } from "./nyc-moma-budget.mjs";
+import { ferryComparison } from "./nyc-ferry-budget.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const target = "things-to-do/new-york-city-with-teens.html";
@@ -116,6 +117,13 @@ test("MoMA admission-only party totals, conditional ID and ticket-preserving bre
  assert.match(block,/not checkout totals/);assert.match(block,/full-time students with ID/);assert.match(block,/Free child admission still needs a ticket/);assert.match(block,/same day if you retain your ticket/);
  assert.doesNotMatch(block,/<script|student admission guaranteed|rest guaranteed|final checkout total/i);
  assert.match(html,/July 26, 2026/);assert.match(html,/SUMMIT minor policy checked October 10, 2026/);
+});
+
+test("NYC Ferry fare dates and return budgets are no-JS, accessible and not discount or future-checkout assurances",()=>{
+ const html=readFileSync(join(root,"site",target),"utf8"),start=html.indexOf('<!-- ferry-budget:start -->'),end=html.indexOf('<!-- ferry-budget:end -->'),b=html.slice(start,end),c=ferryComparison();
+ assert.ok(start>html.indexOf('<!-- moma-admission:end -->'));assert.ok(end>start);assert.match(b,/tabindex="0" role="region" aria-label="NYC Ferry family fare comparison"/);assert.equal((b.match(/<tr>/g)||[]).length,3);assert.equal((b.match(/scope="col"/g)||[]).length,4);assert.equal((b.match(/role="rowheader"/g)||[]).length,2);
+ for(const row of c.rows)for(const cell of row)assert.ok(b.includes(cell));for(const source of c.sources)assert.ok(b.includes(source));
+ assert.match(b,/Announced from October 19, 2026/);assert.match(b,/not an observed future checkout price/);assert.match(b,/not a return trip/);assert.match(b,/not checkout totals or the cheapest/);assert.match(b,/all over 44 inches/);assert.match(b,/older USD 4.00/);assert.doesNotMatch(b,/<script|free return|student fare guaranteed|boarding guaranteed/i);assert.match(html,/July 26, 2026/);assert.match(html,/MoMA: teen ages change/);
 });
 
 test("routes from the all-ages page and home while preserving one sitemap URL", () => {

@@ -1,0 +1,16 @@
+{
+  "schema_version":1,"action_id":"FT-IMP-087","observed_on":"2026-10-10","refresh_days":9,
+  "evidence_class":"OFFICIAL_FARE_SCHEDULE_AND_ANNOUNCEMENT","source_status":"body-inspected",
+  "source_urls":["https://www.ferry.nyc/ticketing-info/","https://static.ferry.nyc/blog/fare-change/","https://portal.311.nyc.gov/article/?kanumber=KA-02376","https://edc.nyc/press-release/amidst-record-ridership-nycedc-announces-new-initiatives-support-nyc-ferry-forward"],
+  "source_publication_dates":[null,"2026-09-28",null,"2024-07-22"],
+  "currency":"USD","currency_basis":"Editorial USD interpretation of official New York dollar-denominated fare schedules","unit":"per person, regular one-way single ticket",
+  "party":{"adults":2,"teen_ages":[13,17],"all_riders_over_44_inches":true,"standard_fare_riders":4,"discounts_assumed":false},
+  "fares":[{"state":"observed","observed_on":"2026-10-10","effective_on":null,"single_cents":450},{"state":"announced","published_on":"2026-09-28","effective_on":"2026-10-19","single_cents":500}],
+  "policy":{"one_way_transfer_minutes":120,"round_trip_free_transfer":false},
+  "conflict":{"legacy_single_cents":400,"resolution":"Escaped footer carries older4.00/27.50/1.35schedule; July22,2024NYCEDC release explicitly changed single4.00to4.50effectiveSeptember9,2024. Current operator pricing panel and NYC311 agree4.50. September28,2026dated operator announcement separately plans5.00fromOctober19. No broad source freshness inferred from copyright or crawl date.","confidence":"High current main-panel/NYC311 agreement and explicit dated schedule chronology; future implementation unverified"},
+  "family_task":{"decision":"Budget a four-person NYC Ferry outbound and return visit around the announced fare-change date","hypothesis":"The existing lower-cost ferry label and generic fare check answer the family budget","result":"REJECT; implement dated standard-single-ticket totals and distinguish a return from one-way transfers","evidence_class":"PAGE_ONLY_PROXY_TASK","human_tested":false},
+  "unknowns":["Actual checkout total, taxes/fees, boarding capacity and service on visit date","No cheapest-pass or discount comparison; NYC student program not assumed for visiting teens","Exactly44-inch child boundary not resolved; example specifies allridersover44","October19 announced fare implementation needs fresh source verification; calendar alone never promotes it","No exact-route, stroller, independent-entry, safety or firsthand verdict"],
+  "lesson":"A dated future fare notice and a legacy footer are different evidence states; a free one-way transfer is not a free return trip",
+  "decision":"IMPLEMENT one existing teen-page comparison, retain observed and announced labels",
+  "next_falsification_trigger":"Changed ticket/transfer/notice source, failed date/return task or October19 source review before announced fare promotion"
+}

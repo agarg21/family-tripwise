@@ -460,6 +460,26 @@ ${officialCheckSection}${faqSection}${markerEnd}
 }
 
 function renderTeenUpgrade(page) {
+  const transport = page.transportBudget;
+  const transportSection = transport ? `      <!-- ferry-budget:start -->
+      <section class="container page-section rank-ready-section" aria-labelledby="ferry-budget-title">
+        <div class="section-heading">
+          <p class="eyebrow">Ferry fare and return</p>
+          <h2 id="ferry-budget-title">${esc(transport.heading)}</h2>
+        </div>
+        <p class="review-label">${esc(transport.note)}</p>
+${renderActivityComparison(transport.rows, transport.headers, "ferry-budget-comparison", {accessibleLabel:"NYC Ferry family fare comparison",rowHeaders:true})}
+        <p>${esc(transport.rule)}</p>
+        <p>${esc(transport.conflict)}</p>
+        <ul class="source-list">
+          <li><a href="${esc(transport.sources[0])}">Current NYC Ferry ticketing</a></li>
+          <li><a href="${esc(transport.sources[1])}">September 28 fare-change notice</a></li>
+          <li><a href="${esc(transport.sources[2])}">NYC311 tickets and transfers</a></li>
+          <li><a href="${esc(transport.sources[3])}">NYCEDC 2024 fare-change history</a></li>
+        </ul>
+      </section>
+      <!-- ferry-budget:end -->
+` : "";
   const budget = page.admissionBudget;
   const admissionSection = budget ? `      <!-- moma-admission:start -->
       <section class="container page-section rank-ready-section" aria-labelledby="moma-budget-title">
@@ -527,7 +547,7 @@ ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page
         <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
 ${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
       </section>
-${admissionSection}
+${admissionSection}${transportSection}
       <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">

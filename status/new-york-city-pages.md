@@ -1,5 +1,7 @@
 # New York City Page Status
 
+FT-IMP-087 candidate: observed October10 and announced October19 NYC Ferry standard four-rider18/36versus20/40USD one-way/return comparison, not discount/pass/checkout/service or route assurance. [Maintained record](../docs/research/nyc-ferry-family-budget-2026-10-10.json); review dueOctober19, announcement never auto-promoted. QA/review/verified release pending; all086MoMA/085SUMMIT source and general dates retained.
+
 FT-IMP-086 candidate: one maintained MoMA teen admission/break comparison, published-category totals not checkoutquotes. Evidence: `docs/research/nyc-moma-family-admission-2026-10-10.json`; October10/October24clock, conditional studentID/free-child ticket/same-day return retainedticket. No generaldate or SUMMITpolicy renewal. QA/review/release pending.
 
 FT-IMP-085 candidate: SUMMIT under16 adult-throughout rule resolves13/17split-visit task; older-teen adult qualification and independent entry unknown. October10inspection/November9review distinct from July26general facts and June28,2023terms update. Evidence: `docs/research/new-york-city-summit-teen-access-2026-10-10.json`; QA/review/release pending.
