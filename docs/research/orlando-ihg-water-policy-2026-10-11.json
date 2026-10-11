@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-109",
+  "learning_unit": "LRN-206",
+  "inspected_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "property": "Holiday Inn Resort Orlando Suites - Waterpark",
+  "family_decision": "Can a mixed-age family plan specific rides and assume an optional FlowRider session costs nothing?",
+  "evidence_class": "OFFICIAL_PROPERTY_POLICY",
+  "sources": [
+    {"id": "ihg-amenities", "url": "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/amenities", "published_on": null, "effective_on": null, "inspected_on": "2026-10-11", "facts": "General resort-fee access up to six; FlowRider excluded."},
+    {"id": "ihg-water", "url": "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/amenities/waterpark", "published_on": null, "effective_on": null, "inspected_on": "2026-10-11", "facts": "FlowRider reservations required and excluded from resort fee; Learn More links to inspected operator site."},
+    {"id": "operator-faq", "url": "https://www.surfandsplashorlandowaterpark.com/faqs/", "published_on": null, "effective_on": null, "inspected_on": "2026-10-11", "facts": "Expanded exact slide, FlowRider height and session-cost questions through ordinary anonymous native UI."}
+  ],
+  "ride_minimums_inches": {"Duel Drop Racers": 42, "Surf Spin body slide": 40, "FlowRider bodyboarding": 42, "FlowRider stand-up surfing": 52},
+  "flowrider": {
+    "ihg_resort_fee_inclusion": false,
+    "ihg_reservation_required": true,
+    "faq_session_minutes": 30,
+    "faq_instructor": "pro instructor",
+    "faq_charge_label": "complimentary",
+    "applicable_charge": null,
+    "currency": null,
+    "session_entitlement_for_requested_stay": null,
+    "resolved_cost_policy": null,
+    "state": "OFFICIAL_SOURCE_CONFLICT",
+    "no_free_price_or_included_session_inferred": true
+  },
+  "limits": {"minimum_height_is_complete_eligibility": false, "child_heights_supplied": false, "age_to_height_inference": false, "ride_admission_confirmed": false, "operations_on_stay_dates_confirmed": false, "firsthand_or_safety_assurance": false, "room_quotes_renewed": false, "resort_fee_renewed": false},
+  "method": {"ordinary_iab": true, "linked_primary_operator": true, "expanded_policy_answers": true, "offer_overlay_dismissed": true, "account_contact_booking": false, "denied_origin_or_tool_retried": false, "paid_calls": 0},
+  "hypothesis": "Existing unconditional exclusion and all-ages attraction marketing are sufficient for the family's optional ride budget.",
+  "result": "REJECT assumed cost or age-derived eligibility; IMPLEMENT exact published minimums and explicit official-cost conflict on existing comparison.",
+  "confidence": "High displayed-source distinctions and numeric minimums, unknown applicable cost, complete restrictions, reservations, room/party/date acceptance or actual family outcomes.",
+  "lesson": "An official complimentary-session label can conflict with official rate inclusions; preserve both product-specific statements rather than selecting a zero-price winner.",
+  "falsification_trigger": "Changed ride/cost policy, reconciled provider inclusion/entitlement or October18 source review.",
+  "remaining_gates": "FT-RES-063 wider water-property corpus, exact requested-age room budgets, operations/current review signals/materiality and URL ownership remain; no broad cluster qualification or new URL.",
+  "proof": "/tmp/ft-imp109-browser/{slides-ax.txt,flow-height-ax.txt,flow-cost-ax.txt,ihg-ax.txt,flow-cost.png}"
+}

@@ -5,6 +5,11 @@ import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-mode
 
 export const orlandoPath = "where-to-stay/orlando-family-hotels.html";
 const cite = (key, label) => `<a href="${e(sources[key])}">${label}</a>`;
+const waterPolicy = suite => {
+  const policy = suite.waterPolicy;
+  if (!policy) return "";
+  return `\n            <div data-water-policy="${e(suite.id)}"><dt>Ride heights &amp; session cost</dt><dd><ul>${policy.rides.map(ride => `<li>${e(ride.name)}: published minimum ${ride.minimumInches} inches.</li>`).join("")}</ul><p>${e(policy.costConflict)} ${cite(suite.waterSource, "IHG fee inclusions")} ${cite(policy.source, "Waterpark FAQ")}</p><p>${e(policy.limitation)} Policy checked ${e(policy.checkedOn)}; recheck ${e(policy.recheckOn)}.</p></dd></div>`;
+};
 const nightlySample = suite => {
   const sample = suite.priceSample;
   if (!sample) return "A matching room/party/date quote has not been observed.";
@@ -66,7 +71,7 @@ export function orlandoSuitePage() {
           <dl>
             <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>
             <div><dt>Park access</dt><dd>${e(suite.transport)} ${cite(suite.transportSource, "Transport terms")}</dd></div>
-            <div><dt>Water features &amp; admission</dt><dd>${e(suite.water)} ${cite(suite.waterSource, "Water terms")}</dd></div>
+            <div><dt>Water features &amp; admission</dt><dd>${e(suite.water)} ${cite(suite.waterSource, "Water terms")}</dd></div>${waterPolicy(suite)}
             <div><dt>Important limitation</dt><dd>${e(suite.caution)} ${cite(suite.cautionSource ?? suite.capacitySource, "Check the notice or benefit")}</dd></div>
             <div><dt>Approx. nightly price</dt><dd>${nightlySample(suite)}</dd></div>
             <div><dt>Cost evidence</dt><dd>${e(suite.costNote)} ${cite(suite.parkingSource, "Published fees")}</dd></div>

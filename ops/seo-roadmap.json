@@ -20,11 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-109",
+      "title": "Expose Orlando ride-height gates and conflicting FlowRider cost policies",
+      "kind": "implementation",
+      "lane": "verified-public-trust-defect",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T15:08:38Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/orlando-suite-data.mjs",
+        "tools/page-generation/orlando-suite-page.mjs",
+        "site/orlando/orlando-suite-data.mjs",
+        "site/where-to-stay/orlando-family-hotels.html",
+        "tools/orlando-water-policy.test.mjs",
+        "docs/research/orlando-ihg-water-policy-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Current ordinary October11 IHG amenities/waterpark say FlowRider excluded from resort fee and reservation required; linked operator FAQ calls standard30minute instructor session complimentary. Published minimums DuelDrop42in/SurfSpin40in/FlowRiderbodyboard42in/standup52in. Existing public exclusion lacks this actual official cost conflict and named height gates.",
+      "acceptance_criteria": [
+        "One shared scoped policy record renders four exact ride minimums and both cost statements, never free entitlement, price0, admission, safe or age-derived height assurance.",
+        "October11 inspection/October18 recheck are policy-only; preserve every original fact, room-price sample, Cabana108 correction, fee arithmetic, metadata/schema and34URLs.",
+        "Focused/full nativeQA, actual1280-390-320 controls/keyboard/source links/images/nooverflow, different independent read-onlyPASS, exact11guardedcommitpush and Pages-marker-productionSEO-exactassets/invariants before delivery."
+      ],
+      "measurement_plan": "Internal mixed-age family water-day task can distinguish four numeric minimums and unresolved optional-session cost without guessing heights or selecting a winner. Not real-user/SEO evidence. Falsify changed policy, reconciled inclusion/price or October18 review.",
+      "production_invariant": "Baseline932/held11 intact; remove new policy dd and waterPolicy/source key restores old Orlando HTML/data; all other public and prior research byteexact. Catalog global dates and original water string unchanged, policy paragraph links distinct inspected sources. Carry108 immutable closure only. Actual first known clock15:05:18Z; conservative action-start deadline15:46:41Z from nominal15:01:41 wake, not an extension; fixed sprint unchanged. No newURL/city/paid/security/account/indexing/automation/unchanged denial retry.",
+      "gsc_evidence_classification": "ReusedOct10API finalizedOct8 versusOct9finalOct7 orientation only; no alignedquerycohort/CTR diagnosis, July27sitemapstale.",
+      "decision": "IMPLEMENT verified official-cost conflict and failed height-decision gate now; preserve063full waterplay corpus/room-budget/URL gates.",
+      "release_state": "review-and-production-pending",
+      "review_receipt": "FT-IMP-109 independent read-only Rawls PASS/noP0-P3; corrected manifest af436022a139f66aff059790c8ca44010fb383697a7e917464ff01420f958e94/all934hashes/exact11/923nonowned/310priorordereditems/held11-ledgerisolation verified. Master810full/47maintenance/16focused/state0/GSC89/localSEO0fiveprior/invariantsPASS; independent16focused/invariants/state/source-savedUIproof, no full/livebrowser/network/writes claim. ActualIAB1280-390-320 nativefamily6/reset3/sourcekeyboard/nooverflow/errors0/image1280loaded; finalwholepolicy390top107-bottom814/320top54-bottom840, /tmp/ft-imp109-browser/local-final-framed-390.png and320.png. Initialdiffcheck two whitespace-only lines removed before correctedreview/fullrerun, no productcopychange. Currentofficial four minimumheights and unresolved FlowRider fee-exclusion versus complimentary30minute session preserved; ownOct11/18clock, allolddata-price-fee-clocks/Cabana108/otherpublic-priorresearch-src/meta-schema/34URLs unchanged. LRN206 policy audit plusinternalproxy, not admission/safety/currentroomquote/humanSEO or fullwaterclusterqualification. Mechanical consensus only; guardedproduction pending/fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-108",
       "title": "Correct Cabana parking multiplication with unknown billing frequency",
       "kind": "implementation",
       "lane": "verified-public-trust-defect",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T14:05:50Z",
       "allowed_during_observation": true,
@@ -60,8 +99,14 @@
       "production_invariant": "Baseline930/held11 preserved; only Cabana parking fields/date/arithmetic. Other public/priorresearch/quotes/water/transport/globalclocks/meta-schema/34URLs/nonCabanarecords and outputs byteexact. Initial14registered beforeedits; scope amendment before repair adds tools/page-quality.test.mjs and tools/weekly-evidence-review.test.mjs, exact16, to replay retained historical fee wording explicitly without audit overwrite. Catalog conservative whole-fee baseline remainsSep24, own parkingOct11date/recheck is retained in costnote; no renewal of unrelated fee claims.107immutableclosure only. Actualrun14:02:16Z/startdeadline14:47:16Z/fixed sprint unchanged. No newURL/city/paid/security/account/indexing/automation/unchanged denial retry.",
       "gsc_evidence_classification": "ReusedOct10API finalizedOct8 versusOct9finalOct7, no alignedquerycohort/CTR diagnosis; July27sitemapstale.",
       "decision": "IMPLEMENT verified unit-trust defect now; preserve063waterplay corpus/roombudget/observation gates.",
-      "release_state": "implementation-review-pending",
-      "review_receipt": "FT-IMP-108 Ampere independent read-only PASS/noP0-P3; reviewed9b7d4bbf01143646aa1b5de880c107fb255ee6af7072dd3fe8be4981bc3b7918/all932hashes/exact16/916nonowned/309priorordereditems/held11-ledgerisolation verified. Initial14 amended before repair to16; acceptance corrected16. Master807full/47maintenance/13focused/state0/GSC89/localSEO0fiveprior/invariantsPASS; independent27focused-historical/invariants/state-GSC-SEO/source-savedresponsiveproof, not independent full/livebrowser. ActualIAB1280/390/320 one-none-unknown vehicle/one-night date/edit/reset/nativeEnter/nooverflow/errors0/image1280loaded; extra fee-result framing390top209-bottom713 and320top222-bottom806 inside900. Screenshotproof /tmp/ft-imp108-browser/local-fees-1280.png local-fees-390.png local-fees-320.png and perwidthtaskJSON. Initial full8073historical replay failures repaired against unchanged original fixtures, fullrerun green. Initial label locator unmatched corrected observedcombobox; disabled stringeval never used, explicit native harness no product/security/tool/origin bypass. Current official26plus-tax/pervehicle-only wording and production130failedtask/sourceAX saved; scopedparkingOct11/Oct18, wholefee conservativeSep24 andallotherfact-price-water-transport-globalclocks/meta-schema/34URLs unchanged. LRN205 source-dated plusinternalproxy, nothuman/roomquote/SEO or fullwaterclusterqualification. Only mechanical consensus receipt; guardedrelease-production pending/fixed sprint unchanged."
+      "release_state": "released-and-production-verified",
+      "pages_run": 38146634243,
+      "production_verified_at": "2026-10-11T14:19:57Z",
+      "production_verification": "Releaseaab4b8b56b2bc4fb04ba3c7c84e571201b68dfc7/Pages38146634243/fourexactHTTP200assets/moduleJavaScript/SEO0fiveprior/invariantsPASS; actualIAB1280-390-320 vehiclemodes/date/reset/nativeEnter/nooverflow/errors0/image1280/fee-resultframing. Proof /tmp/ft-imp108-production.json and /tmp/ft-imp108-browser/production-context.png. Other facts-price-water-transport-globalclocks/34URLs unchanged.",
+      "review_receipt": "FT-IMP-108 Ampere independent read-only PASS/noP0-P3; reviewed9b7d4bbf01143646aa1b5de880c107fb255ee6af7072dd3fe8be4981bc3b7918/all932hashes/exact16/916nonowned/309priorordereditems/held11-ledgerisolation verified. Initial14 amended before repair to16; acceptance corrected16. Master807full/47maintenance/13focused/state0/GSC89/localSEO0fiveprior/invariantsPASS; independent27focused-historical/invariants/state-GSC-SEO/source-savedresponsiveproof, not independent full/livebrowser. ActualIAB1280/390/320 one-none-unknown vehicle/one-night date/edit/reset/nativeEnter/nooverflow/errors0/image1280loaded; extra fee-result framing390top209-bottom713 and320top222-bottom806 inside900. Screenshotproof /tmp/ft-imp108-browser/local-fees-1280.png local-fees-390.png local-fees-320.png and perwidthtaskJSON. Initial full8073historical replay failures repaired against unchanged original fixtures, fullrerun green. Initial label locator unmatched corrected observedcombobox; disabled stringeval never used, explicit native harness no product/security/tool/origin bypass. Current official26plus-tax/pervehicle-only wording and production130failedtask/sourceAX saved; scopedparkingOct11/Oct18, wholefee conservativeSep24 andallotherfact-price-water-transport-globalclocks/meta-schema/34URLs unchanged. LRN205 source-dated plusinternalproxy, nothuman/roomquote/SEO or fullwaterclusterqualification. Only mechanical consensus receipt; guardedrelease-production pending/fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-108 release aab4b8b56b2bc4fb04ba3c7c84e571201b68dfc7 remote verified 2026-10-11T14:20:36.498Z; main0-0/emptyindex/exact16/all932indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified Orlando parking trust correction: Pages38146634243success/matching aab4b8b56b2bc4fb04ba3c7c84e571201b68dfc7/fourHTTP200exactassets/moduleJavaScript/productionSEO0errors5prior/allregistered invariants at2026-10-11T14:19:35.274Z. ActualIAB1280/390/320 vehicleone-none-unknown/one-nightdate/reset/nativeEnter/nooverflow/errors0/loaded1280licensedimage, allfeechecksframedinside900; proof /tmp/ft-imp108-browser/production-{1280,390,320}.json production-fees-{1280,390,320}.png production-context.png. Master807full/47maintenance/13focused and differentAmperePASS. LRN205 current26plus-tax/pervehicle preserves unknownfrequency/tax/inclusion, not roomprice/wholebudget/humanSEO or fullwaterclusterqualification. Original roomquotes-water-transport-clocks/allotherpublic-priorresearch/meta-schema/34URLs/held11 intact;063corpus-roomcost-materiality-ownership gates preserved. One finish-first transaction completed, no quota or allsixcluster completion claim. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T14:20:36.523Z",
+      "release_commit": "aab4b8b56b2bc4fb04ba3c7c84e571201b68dfc7"
     },
     {
       "id": "FT-IMP-107",

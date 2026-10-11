@@ -11,7 +11,8 @@ export const sources = {
   universalBenefits: "https://www.loewshotels.com/universal-orlando-resort/exclusive-theme-park-benefits",
   ihgRoom: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/rooms",
   ihgBooking: "https://www.ihg.com/holidayinnresorts/hotels/us/en/find-hotels/select-roomrate?qDest=18000%20International%20Drive%20S,%20Orlando,%20FL,%20US&qPt=CASH&qCiD=8&qCoD=13&qCiMy=102026&qCoMy=102026&qAdlt=2&qChld=3&qRms=1&qChAge=..&qRtP=6CBARC&qSlH=DISFS&srb_u=1&qFS=false&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.kd.ma.sp.va.sp.re.vx.nd.sx.we.lx.rn.sn.sn.sn.sn.sn.nu.ge.fa&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false&qRCC=CG020&qpMbw=0&qErm=false&qpMn=0&qpMbx=0&qRmFltr=",
-  ihgAmenities: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/amenities"
+  ihgAmenities: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/amenities",
+  ihgWaterFaq: "https://www.surfandsplashorlandowaterpark.com/faqs/"
 };
 
 // Null means not established by the cited evidence, never a zero charge or a match.
@@ -45,6 +46,17 @@ export const suites = [
     layout: "IHG lists queen/bunk, king/bunk or queen/two-single layouts at 595 sq ft. Its September 27 booking result lists a six-person maximum for these exact configurations; ages and availability still need confirmation.",
     transport: "Disney shuttle service is listed in the resort-fee inclusions. Exact park stops, timetable and reservations need confirmation; no Universal service is established here.", transportSource: "ihgAmenities",
     water: "The general resort fee lists Surf & Splash access for up to six guests. FlowRider is excluded. Admission count alone does not establish room occupancy or individual ride eligibility.", waterSource: "ihgAmenities",
+    waterPolicy: {
+      checkedOn: "2026-10-11", recheckOn: "2026-10-18", source: "ihgWaterFaq",
+      rides: [
+        { name: "Duel Drop Racers", minimumInches: 42 },
+        { name: "Surf Spin body slide", minimumInches: 40 },
+        { name: "FlowRider bodyboarding", minimumInches: 42 },
+        { name: "FlowRider stand-up surfing", minimumInches: 52 }
+      ],
+      costConflict: "Official cost conflict: IHG says FlowRider is not included in the resort fee and reservations are required; the waterpark FAQ calls a standard 30-minute session with a pro instructor complimentary. The applicable charge and entitlement for your stay remain unresolved; do not budget zero or assume a session is included.",
+      limitation: "These are published minimum heights, not complete ride rules or confirmed admission. Do not infer height from age. Confirm other restrictions, reservations and operations for your dates. Room prices, resort fees and other property facts are not renewed by this policy check."
+    },
     caution: "The general IHG amenities page lists a $65 plus tax nightly resort fee; September 27 booking-rate details displayed $54 plus tax. Use the actual rate's fee and inclusions, not one universal amount.", cautionSource: "ihgBooking",
     parking: 31, parkingSource: "ihgAmenities", resortFee: 65,
     costNote: "Parking: $31 plus tax per vehicle per night. Check the actual rate's fee inclusion before adding anything again.",
