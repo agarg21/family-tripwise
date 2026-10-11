@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-105",
+  "checked_on": "2026-10-11",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK",
+  "family_decision": "Compare a hypothetical whole-family food budget with Sanctuary's dated same-family public-plan increment without implying equivalent meal coverage or savings",
+  "hypothesis": "A static USD1499 stay increment still forces off-page multiplication for a parent's own budget; a blank conditional worksheet can remove that task without inventing current meal prices",
+  "sources": ["docs/research/puerto-vallarta-public-meal-plan-task-2026-10-09.json", "docs/research/puerto-vallarta-garza-family-budget-2026-10-09.json", "docs/research/puerto-vallarta-child-meals-2026-10-10.json"],
+  "scenario": {"adults":2,"child_ages":[4,8,12],"arrival":"2026-11-08","departure":"2026-11-13","nights":5,"configuration_count":1},
+  "source_observed_on": "2026-10-09",
+  "price_review_due": "2026-10-23",
+  "increment_cents": 149900,
+  "maximum_budgeted_calendar_days": 6,
+  "result": "IMPLEMENT blank whole-family daily USD budget and hypothetical whole days; five times200USD is1000USD,499below dated pre-tax1499USD. One day1499 equals, five times350 is1750USD,251above. No actual meal quote or same-coverage substitution.",
+  "preserve": ["Original dated room-only4382USD and all-inclusive5881USD pre-tax five-night samples", "Original source/review clocks and three-room CSV", "Generic4-12half-price policy does not resolve selected offer or justify automatic discounts", "Six calendar dates not six billable meal units or entitlements", "Tax, mandatory fees, child coverage and cancellation conflict unresolved", "Other unpriced categories do not inherit amounts"],
+  "confidence": "High arithmetic and internal task gap; current prices, equivalent service, actual savings, human satisfaction and SEO outcomes unknown",
+  "lesson": "A parent's hypothetical whole-family food budget can be compared with a dated room-plan increment without merging generic child policy into selected-offer pricing",
+  "falsification_trigger": "Guarded source/party/stay/tax/units change, named task fails or exact selected-offer terms establish a different comparison",
+  "human_validation": false,
+  "new_url": false
+}

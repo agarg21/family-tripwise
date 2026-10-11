@@ -4,6 +4,7 @@ import {roomComparisonCsv} from "../family-room-comparison.mjs";
 import {contributorCredit} from "./contributors.mjs";
 import {pvMealPlanComparison} from "../pv-meal-plan-comparison.mjs";
 import {pvMealPolicy} from "../pv-meal-policy.mjs";
+import {assessFamilyFoodBudget} from "../../src/shared/family-food-budget.mjs";
 
 export const pvPath = "where-to-stay/puerto-vallarta-family-resorts.html";
 export const pvScreenedOn = "2026-10-09";
@@ -38,6 +39,29 @@ function mealPlanSection() {
 <p class="dc-source"><a href="${e(comparison.source_url)}">Official category and dated booking-check source</a> &middot; prices observed October 9, reused here, not re-priced. Original price review due October 23. Neither unpriced category inherits these costs or meal terms.</p></div>`;
 }
 
+export function pvFoodBudgetBasis() {
+ const comparison = pvMealPlanComparison(pvPrices,pvScreenedOn);
+ const config = {increment_cents:Math.round(comparison.stay_increment*100),maximum_days:comparison.nights+1};
+ assessFamilyFoodBudget(config);
+ return config;
+}
+
+export function pvFoodBudgetSection() {
+ const config=pvFoodBudgetBasis(),example=assessFamilyFoodBudget(config,{daily_budget:200,budgeted_days:5});
+ return `<!-- FT-IMP-105 food start -->
+<div id="food-budget" class="dc-rest-budget"><h3>Your food budget versus the plan increment</h3>
+<p>Fixed task: two adults and children aged 4, 8 and 12, November 8-13. Enter a hypothetical daily food budget for all five people, not per person. The six calendar dates do not establish six paid meal days or included meal entitlements. The original October 9 USD 1,499.00 plan increment excludes tax; prices are not renewed here.</p>
+<script id="food-budget-basis" type="application/json">${JSON.stringify(config)}</script>
+<form id="food-budget-form" hidden><fieldset><legend>Hypothetical whole-family food budget</legend><div class="dc-rest-inputs" style="align-items:end">
+<label for="food-daily">All five people / budgeted day, USD<input id="food-daily" name="daily_budget" type="number" min="0" max="10000" step="0.01" inputmode="decimal" autocomplete="off"></label>
+<label for="food-days">Hypothetical budgeted days<input id="food-days" name="budgeted_days" type="number" min="0" max="${config.maximum_days}" step="1" inputmode="numeric" autocomplete="off"></label>
+</div></fieldset><div class="dc-rest-actions"><button type="submit">Compare food budget</button><button type="reset">Clear estimates</button></div></form>
+<p id="food-budget-status" class="dc-rest-status" role="status" aria-live="polite" aria-atomic="true">Comparison unresolved. Both hypothetical inputs are unknown.</p>
+<p>Example only: five budgeted days at USD 200 for all five people total ${money(example.alternative_cents/100)}, ${money(Math.abs(example.difference_cents)/100)} below the dated ${money(config.increment_cents/100)} increment. This does not establish cheaper equivalent meals or actual savings. No child discounts, credits or tax adjustments are deducted; exact outlets, meal coverage, billable units, mandatory charges and cancellation still need confirmation.</p></div>
+<script type="module" src="../shared/family-food-budget-form.mjs"></script>
+<!-- FT-IMP-105 food end -->`;
+}
+
 export function puertoVallartaFamilyResortsPage() {
  const title="Puerto Vallarta Family Resorts: Exact Rooms & Dated Costs";
  const canonical=`https://familytripwise.com/${pvPath}`;
@@ -55,9 +79,11 @@ ${contributorCredit()}
 <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Panorama_Puerto_Vallarte%2C_meksi%C4%8Dkoga_grada_na_pacifi%C4%8Dkoj_obali.jpg/1280px-Panorama_Puerto_Vallarte%2C_meksi%C4%8Dkoga_grada_na_pacifi%C4%8Dkoj_obali.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="Puerto Vallarta city panorama photographed in November 2022."><figcaption>Puerto Vallarta, November 23, 2022. Photo by <a href="https://commons.wikimedia.org/wiki/User:August_Dominus">August Dominus</a>, via <a href="https://commons.wikimedia.org/wiki/File:Panorama_Puerto_Vallarte,_meksi%C4%8Dkoga_grada_na_pacifi%C4%8Dkoj_obali.jpg">Wikimedia Commons</a>. Photograph licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; uncropped resized orientation image, not a current hotel or route photo.</figcaption></figure></section>
 <section id="reviews"><h2>Limited review signals, not our hotel review</h2><p>Two selected <a href="https://www.expedia.mx/en/Puerto-Vallarta-Hotels-Garza-Blanca-Preserve-Resort-Spa.h2614708.Hotel-Information">Garza Expedia review bodies</a>, inspected October 9, were published July 29, 2026 for five- and six-night July stays. They prompt meal, club and membership-sales questions. Exact category and child ages were absent; these are not Sanctuary or Panoramic experience verification. The platform's verified-review label is not Family Tripwise verification.</p><p>Two selected <a href="https://www.tripadvisor.com/Hotel_Review-g499443-d23546474-Reviews-Dreams_Bahia_Mita_Surf_Spa_Resort-Punta_de_Mita_Pacific_Coast.html">Bahia Mita January 2026 family reports</a> described positive space, water-play and meal/club experiences. One concerns a Preferred Junior Suite with children aged 4 and 8, not this five-person Family Suite Tropical View. Later April reports in the returned body raise contrasting activity, pool-seat, noise and room-service questions; none is adopted as an established defect, price, safety verdict or representative outcome. Some reviews were collected in partnership with Hyatt. Small selected samples and differing rooms cannot establish suitability.</p><p>We have not stayed at either property. No aggregate score, verified safety, guaranteed care or personally tested route is implied. Confirm current service and conditions directly; source and stay dates are different clocks.</p></section>
 <section id="methodology"><h2>Research-based records behind the comparison</h2><p>Official category facts, actual booking-check observations, arithmetic nightly estimates, selected online-review signals and editorial interpretation remain distinct. The complete CSV shares these three validated room records and both public price plans, plus unpriced categories. It always contains the full comparison regardless of the kitchen filter; excluded controls are shown separately, not exported as qualified candidates. No inputs are saved or transmitted.</p><p>Garza facts are from October 9; Bahia facts retain October 3, not renewed by this launch. Review prices by October 23, Bahia room facts by November 2 and Garza facts by November 8; dates do not renew facts automatically. Exact bed allocation, final inventory, comprehensive fees and measured rest-return remain open. The next research priority is comparable family costs for the unpriced categories, not copying a two-adult offer or repeating an unchanged failed quote flow.</p><p><a href="../about.html">How Family Tripwise handles evidence and uncertainty</a></p></section></main><footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><a href="../index.html">Browse destinations</a></footer><script src="../washington-dc-comparison.js?v=ft-imp093" defer></script></body></html>\n`;
- return html.replace('<article id="pv-garza-sanctuary-two-bedroom"',`${mealPlanSection()}${mealPolicySection()}<article id="pv-garza-sanctuary-two-bedroom"`);
+ return html.replace('<article id="pv-garza-sanctuary-two-bedroom"',`${mealPlanSection()}\n${pvFoodBudgetSection()}${mealPolicySection()}<article id="pv-garza-sanctuary-two-bedroom"`);
 }
 export function writePuertoVallartaFamilyResortsPage(writeSite) {
  writeSite(pvPath,puertoVallartaFamilyResortsPage());
  writeSite("downloads/puerto-vallarta-family-resorts.csv",pvCsv);
+ for (const name of ["family-food-budget.mjs","family-food-budget-form.mjs"])
+  writeSite(`shared/${name}`,readFileSync(new URL(`../../src/shared/${name}`,import.meta.url),"utf8"));
 }

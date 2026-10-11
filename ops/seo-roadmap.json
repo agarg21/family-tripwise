@@ -20,11 +20,52 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-105",
+      "title": "Compare hypothetical family food budget with Puerto Vallarta plan increment",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T11:04:48Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html"
+      ],
+      "target_paths": [
+        "src/shared/family-food-budget.mjs",
+        "src/shared/family-food-budget-form.mjs",
+        "site/shared/family-food-budget.mjs",
+        "site/shared/family-food-budget-form.mjs",
+        "tools/pv-food-budget.test.mjs",
+        "tools/page-generation/puerto-vallarta-family-resorts-page.mjs",
+        "site/where-to-stay/puerto-vallarta-family-resorts.html",
+        "docs/research/puerto-vallarta-food-budget-task-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Maintained source-hash-guarded PV meal comparison shows same-category/party/stay pre-tax USD1499 increment; named family task still requires off-page alternative food-budget multiplication. Internal task, reused October9 observation and October10 general policy, no fact renewal. Langham141 exact-category hold already recorded: preserve without unchanged replay.",
+      "acceptance_criteria": [
+        "Two native blank inputs: hypothetical whole-family daily food budget in USD and whole budgeted calendar days0-6. Integer-cent multiplication and below/equal/above dated stay increment; blank or partial UNKNOWN, explicitzero distinct, invalid input rejection, reset and edit invalidation; no network/storage.",
+        "Basis derives only from existing guarded same-suite public plan comparison. No automatic five/six meal units, child discount, credit, meal entitlement, tax/fee/cancellation correction or savings recommendation. All oldPVHTML byteexact after removing additive105 section/script; unchangedCSV/prices/rooms/source-reviewclocks/34URLs/all other public and prior research.",
+        "LRN202 bounded page-only proxy; focused/full native QA, actual1280/390/320 calculator/filter/nativeCSV/photo/nooverflow/errors, different read-onlyPASS, exact guardedpush/Pages-marker-productionSEO/all invariants before delivery."
+      ],
+      "measurement_plan": "Parent can compare an explicitly hypothetical food budget with the dated plan increment on-page; not actual savings, same-entitlement substitution, human preference or SEO outcome. Requalify if guarded source/party/units change or task fails; original price reviewOctober23 unchanged.",
+      "production_invariant": "919baseline files/306prior ordered roadmap items/11dirty heldwork preserved. Only additive105 PV worksheet and two newshared modules publicly differ; source/public copies byteexact. Prior104 immutable completion carried. Actualrun11:00:45Z/startdeadline11:45:45Z/fixed sprintOct12expiry unchanged. No newURL/destination/provider retry/contact/paid/account/indexing/analytics/outreach/ControlRoom/scheduler mutation.",
+      "gsc_evidence_classification": "Reused recentOct10API-finalizedOct8 versusOct9-finalizedOct7; no fresh querycohort/CTR diagnosis; July27sitemap staleorientation.",
+      "decision": "IMPLEMENT bounded existing-page conditional family-food worksheet; preserve selected-offer meals, billing, fullfees and cancellation unknowns.",
+      "release_state": "registered",
+      "review_receipt": "FT-IMP-105 independent read-only Rawls PASS/noP0-P3; frozen d5138518de5fc1539bb2c5cde2ade510a4b47bc1b99c7e2200bd38a897eeb64e/all925hashes/exact13/912untouched/306priorordereditems/registrationparity/heldledgerisolation verified. Master790full/9focused/47maintenance/state0/GSC89/localSEO0fiveprior/invariants PASS; independent9focused/invariants/source/savedUIproof, no independent full-suite or livebrowser claim. Final actual permittedIAB1280/390/320 blankpartial/below1000-499/equal1499/above1750-251/zero/nativeinvalid/edit/reset/filter3-1-3/3nativeCSVexact/loadedphoto/nooverflow/errors[]; alignedinputbottoms. Removing105block restores oldPVHTML byteexact; unchangedCSV/prices-fees-source-reviewclocks/priorresearch/otherpublic/34URLs. LRN202 internalproxy/reusedfacts, not current meals/entitlements/billing/savings/humanSEO. Carry104 immutablecompletion only. Mechanical consensus receipt; guarded release-production gates pending."
+    },
+    {
       "id": "FT-IMP-104",
       "title": "Expose source-dated Park Plaza breakfast menu and service checks",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T10:04:42Z",
       "allowed_during_observation": true,
@@ -53,8 +94,14 @@
       "production_invariant": "917baseline files/305prior ordered roadmap items/held11 and ledger suffix preserved; only additive104 Boston block differs publicly. Source record refresh applies only current menu/hours, never existing booking/price/fee clocks. Carry103 immutable completion only. Actualrun10:00:45Z/06:00:45EDT/startdeadline10:45:45Z/fixedOct12expiry unchanged. No denied-source retry/provider call/newURL/city/paid/indexing/analytics/outreach/ControlRoom/scheduler mutation.",
       "gsc_evidence_classification": "Reused recentOct10API-finalizedOct8 versusOct9-finalizedOct7; no fresh query cohort or CTR diagnosis; July27 sitemap stale orientation.",
       "decision": "IMPLEMENT supported service/menu verification layer on existing Boston owner; preserve older-child/package/currency unknowns.",
-      "release_state": "registered-before-edits",
-      "review_receipt": "FT-IMP-104 independent read-only Ampere PASS/noP0-P3; frozen658c439c6823dfc58770fab17e630debe1188f7b9d13bc84dde13a278f79b5e2/all919hashes/exact9/305prioritems/held11-ledger preserved. Master784full/27focused/47maintenance/state0/GSC89/localSEO0fiveprior/invariants PASS; independent27focused/invariants/stateGSCSEO/source-and-screenshot proof inspected, no independent full-suite/livebrowser claim. Actual permittedIAB1280/390/320 calculator300-119.22below419.22/reset/filter4-2-4/sixnativeCSVexact/nooverflow/errors[]; mobile table288client/800scroll/right512reachable; image1280loaded. Initial proofharness wrong statusselector/inheritedactivefilter corrected and complete task rerun; no product change. Removing104block restores all oldBostonHTML byteexact; bothCSV/sharedmodules/priorpublic-research/34URLs/sourceOct1-reviewOct15 intact. Current official general menu/hours qualify discovery/timing only, not USDlabel/childprice/planentitlement/credit/future service/savings. Carry103immutableclosure only. Mechanical consensus receipt; guardedrelease-production pending."
+      "release_state": "released-and-production-verified",
+      "review_receipt": "FT-IMP-104 independent read-only Ampere PASS/noP0-P3; frozen658c439c6823dfc58770fab17e630debe1188f7b9d13bc84dde13a278f79b5e2/all919hashes/exact9/305prioritems/held11-ledger preserved. Master784full/27focused/47maintenance/state0/GSC89/localSEO0fiveprior/invariants PASS; independent27focused/invariants/stateGSCSEO/source-and-screenshot proof inspected, no independent full-suite/livebrowser claim. Actual permittedIAB1280/390/320 calculator300-119.22below419.22/reset/filter4-2-4/sixnativeCSVexact/nooverflow/errors[]; mobile table288client/800scroll/right512reachable; image1280loaded. Initial proofharness wrong statusselector/inheritedactivefilter corrected and complete task rerun; no product change. Removing104block restores all oldBostonHTML byteexact; bothCSV/sharedmodules/priorpublic-research/34URLs/sourceOct1-reviewOct15 intact. Current official general menu/hours qualify discovery/timing only, not USDlabel/childprice/planentitlement/credit/future service/savings. Carry103immutableclosure only. Mechanical consensus receipt; guardedrelease-production pending.",
+      "release_receipt": "FT-IMP-104 release cf121c3887e121d2d218b60672412d1e61c8320a remote verified 2026-10-11T10:14:23.667Z; main0-0/emptyindex/exact9/all919indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified Boston breakfast-menu/service layer: Pages38131133115 success, matchingcf121c3887e121d2d218b60672412d1e61c8320a/run release marker, sevenHTTP200 exactassets/modulesJavaScript, productionSEO0errors5prior/allregistered invariantsPASS at2026-10-11T10:13:35.334Z. ActualIAB1280/390/320 table4rows/sourcehref/calculator300USD-119.22below419.22/reset/filter4-2-4/sixnativeCSVexact/nooverflow/errors[]; mobiletable288client800scroll/right512reachable, image1280loaded. Proof /tmp/ft-imp104-browser/production-task.json and production-context.png. LRN201 current officialmenu/hours learning delivered as bounded planning check, not childprice/actualsavings/currencylabel/packageentitlement/future-service proof. OriginalOct1 roomprice/Oct15review/103math/bothCSV/otherpublic/priorresearch/34URLs intact; Sapphire101/Ziva090/Disney092/MBTA holds unchanged and narrow. One finish-first public transaction complete, no transaction or allsixcluster quota. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T10:14:23.692Z",
+      "release_commit": "cf121c3887e121d2d218b60672412d1e61c8320a",
+      "pages_run": 38131133115,
+      "production_verified_at": "2026-10-11T10:13:35.334Z",
+      "production_verification": "Matching release marker and successful Pages; seven HTTP200 exact assets and module MIME; productionSEO0errors/five prior warnings/all registered invariants. Actual1280/390/320 calculator/reset/filter4-2-4/six native CSV exact/nooverflow/errors, scrollable mobile table and loaded licensed image; proof /tmp/ft-imp104-browser/production-task.json and production-context.png. Menu/child/currency/plan/future-service boundaries and original price clocks retained."
     },
     {
       "id": "FT-IMP-103",
