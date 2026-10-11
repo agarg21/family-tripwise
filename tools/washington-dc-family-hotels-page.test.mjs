@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { runInNewContext } from "node:vm";
-import { dcPath, dcPack, dcPrices, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples } from "./page-generation/washington-dc-family-hotels-page.mjs";
+import { dcPath, dcPack, dcPrices, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples, dcFamilyRailForm } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { roomComparisonCsv } from "./family-room-comparison.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -18,7 +18,7 @@ test("DC exact-owner page and complete CSV match maintained shared records", () 
   const generated = new Map();
   writeWashingtonDcFamilyHotelsPage((path, value) => generated.set(path,value));
   assert.deepEqual([...generated.keys()], [dcPath,"downloads/washington-dc-family-hotels.csv",
-    "shared/rest-time-budget.mjs", "shared/museum-rest-budget.mjs"]);
+    "shared/rest-time-budget.mjs", "shared/museum-rest-budget.mjs", "shared/family-transit-cost.mjs", "shared/family-rail-budget.mjs"]);
   assert.equal(generated.get(dcPath), dcFamilyHotelPage());
   assert.equal(generated.get("downloads/washington-dc-family-hotels.csv"), dcCsv);
 });
@@ -140,6 +140,9 @@ test("public rail budget is no-JS, age-bounded, source-linked and never a hotel-
   assert.ok(section.includes(`href="${dcTransitEvidence.policy.source.url}"`));
   assert.ok(section.includes(`href="${dcTransitEvidence.corroborating_source.url}"`));
   assert.match(section,/tabindex="0" role="region" aria-label="Conditional family rail budget"/);
-  assert.doesNotMatch(section,/hidden|current quote|free family travel|per room|all-fee total is|verified nap-friendly/);
+  assert.ok(section.includes(dcFamilyRailForm()));
+  assert.match(dcFamilyRailForm(), /<form id="family-rail-form" hidden/);
+  assert.doesNotMatch(section.replace(dcFamilyRailForm(), ""), /hidden/);
+  assert.doesNotMatch(section,/current quote|free family travel|per room|all-fee total is|verified nap-friendly/);
   assert.match(html,/href="#rail-budget">Family rail budget/);
 });

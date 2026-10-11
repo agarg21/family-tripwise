@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-118",
+  "learning_id": "LRN-215",
+  "assessed_on": "2026-10-11",
+  "evidence_class": "INTERNAL_EXISTING_PAGE_TASK_AND_MODEL_DERIVED_ARITHMETIC",
+  "maintained_policy": "docs/research/dc-family-transit-cost-2026-10-03.json",
+  "source_inspected_on": "2026-10-03",
+  "source_renewed": false,
+  "family_decision": "Calculate the conditional extra rail-journey band for a different family party without borrowing the static example's free-child count.",
+  "hypothesis": "The fixed four-paying-rider public examples answer a family with age5 or excess accompanied under5 children.",
+  "result": "REJECT fixed-example answerability; IMPLEMENT own-party calculator using the unchanged strict maintained transit core.",
+  "controls": ["All required blanks remain unresolved", "2adults/4,8,12/two weekday journeys:4paying/1free/USD18-54", "2adults/5,8,12:5paying/0free/USD22.50-67.50", "1adult/0,1,4:2free/1unresolved/no family total", "0children with2adults/two weekend journeys:USD9-10", "Changed/invalid inputs clear earlier positive result", "Source older than30days prevents a new estimate", "Reset empties ages and returns unknown"],
+  "limits": ["Dated regular rail network arithmetic, not current station-pair fare", "No routes, queues, service, actual hotel return or stroller/safety assurance", "No passes, transfer discounts, visiting-student discounts or excess-young-child fare inference", "No input transmission, storage, account/provider or paid call", "Hotel sources, prices, CSV and rail facts retain original clocks"],
+  "confidence": "High shared-engine arithmetic and validation parity; moderate internal task usefulness; unknown actual trip, user satisfaction or SEO effect.",
+  "next_falsification_trigger": "Core/UI parity drift, failed blank/age/excess/stale/reset task, supported changed primary policy, or source review due2026-11-02.",
+  "verification_gate": "Focused/full nativeQA, actual1280/390/320 interactive/kitchen/fullCSV/rest/image checks, different read-only PASS and guarded production verification before delivery."
+}

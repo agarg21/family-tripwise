@@ -55,3 +55,17 @@
   .dc-page section { padding: 24px 0; }
   .dc-rest-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+.dc-rail-budget { margin: 28px 0; padding: 24px 0; border-top: 1px solid #dbe0dc; }
+.dc-rail-budget form { max-width: 800px; }
+.dc-rail-budget fieldset { border: 0; padding: 0; margin: 24px 0; min-width: 0; }
+.dc-rail-budget legend { font-weight: 600; margin-bottom: 14px; }
+.dc-rail-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px; }
+.dc-rail-budget label { display: flex; flex-direction: column; align-items: stretch; gap: 8px; padding: 0; border: 0; border-radius: 0; background: transparent; font-weight: 600; overflow-wrap: anywhere; }
+.dc-rail-period { grid-column: 1 / -1; max-width: 420px; }
+.dc-rail-budget input, .dc-rail-budget select { min-width: 0; width: 100%; height: 44px; box-sizing: border-box; padding: 8px 12px; border: 1px solid #71817a; border-radius: 4px; color: #202b2a; background: #fff; font: inherit; }
+.dc-rail-budget input:focus-visible, .dc-rail-budget select:focus-visible, .dc-rail-actions button:focus-visible { outline: 3px solid #a44822; outline-offset: 4px; }
+.dc-rail-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.dc-rail-actions button { min-height: 44px; padding: 10px 16px; border: 1px solid #116454; border-radius: 4px; font: inherit; font-weight: 600; color: #fff; background: #116454; cursor: pointer; white-space: normal; }
+.dc-rail-actions button[type="reset"] { color: #116454; background: #fff; }
+.dc-rail-status { min-height: 96px; padding: 16px 0; font-weight: 600; box-sizing: border-box; }
+@media (max-width: 600px) { .dc-rail-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
