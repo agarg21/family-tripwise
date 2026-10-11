@@ -1,0 +1,17 @@
+{
+  "action_id": "FT-IMP-114",
+  "inspected_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "evidence_class": "OFFICIAL_FACT",
+  "source": "https://www.loewshotels.com/cabana-bay-hotel/rooms-showcase/courtyard-family-suite-poolside",
+  "room": "Poolside Family Suite Exterior Entry",
+  "equipment": ["Mini refrigerator", "Microwave", "Small sink"],
+  "unknowns": ["Stovetop or oven availability", "Cookware", "Freezer capacity", "Dining space for the party", "Meal-cost savings"],
+  "method": "Read-only ordinary permitted IAB exact-room page; room heading and visible ROOM FEATURES inspected October11. No booking, account, checkout, contact, security bypass or alternate denied origin. October2 maintained record agrees; no other fact renewal.",
+  "family_decision": "Two adults and children aged4/8/12 considering this exact suite: can meals be planned around reheating, or is stovetop cooking established? This is an internal proxy task, not real-user testing.",
+  "hypothesis": "The current generic kitchenette label hides equipment and permits unsupported full-cooking or meal-savings assumptions.",
+  "result": "IMPLEMENT in existing comparison: listed microwave/refrigerator/sink and explicit unknowns distinguish published equipment from full kitchen assumptions. No claim that a stove is absent; no food-safety or suitability assurance.",
+  "confidence": "High in exact-category published equipment; moderate in internal decision usefulness; unknown in current inventory, meal cost and human outcomes.",
+  "falsification_trigger": "Changed exact-room equipment, source-category mismatch, failed mobile/source task or October18 scoped review.",
+  "remaining_gates": "Focused/full native QA, independent read-only review, guarded exact-path release and production verification. Full063/077 corpus/demand/noexistingfit/human/full-budget gates remain separate."
+}

@@ -33,6 +33,12 @@ export const suites = [
     id: "cabana-bay", name: "Universal Cabana Bay Beach Resort", base: "Universal Orlando",
     room: "Poolside Family Suite - Exterior Entry", maximum: 6, capacitySource: "cabanaRoom",
     layout: "Two queen beds and a sofa bed; sliding privacy partition and kitchenette. Published maximum: six people.",
+    kitchenPolicy: {
+      checkedOn: "2026-10-11", recheckOn: "2026-10-18", source: "cabanaRoom",
+      equipment: ["Mini refrigerator", "Microwave", "Small sink"],
+      planningNote: "Research-based meal planning: the listed microwave supports planning around reheating, not an assumption of a full cooking kitchen.",
+      limitation: "Stovetop or oven availability, cookware, freezer capacity and dining space for your party are not established here. Confirm what your meals need before choosing this suite; no meal-cost savings are calculated or guaranteed. This equipment check does not renew room prices, occupancy acceptance or other property facts."
+    },
     transport: "Complimentary Universal shuttle buses are listed. Cross-resort travel to Disney needs separate planning.", transportSource: "cabanaHotel",
     water: "Hotel pools include a lazy river and slide. They are separate from ticketed Volcano Bay, whose seasonal closure starts October 26, 2026; reopening is expected on or before April 1, 2027, not confirmed.", waterSource: "cabanaHotel",
     caution: "Complimentary Universal Express Unlimited is NOT included at Cabana Bay. Early Park Admission needs valid admission and is limited to participating parks, attractions and operating dates.", cautionSource: "universalBenefits",

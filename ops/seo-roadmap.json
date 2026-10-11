@@ -20,11 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-114",
+      "title": "Clarify Cabana Bay kitchenette equipment for the meal-budget decision",
+      "kind": "implementation",
+      "lane": "existing-page-room-kitchen",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T19:04:36Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/orlando-suite-data.mjs",
+        "site/orlando/orlando-suite-data.mjs",
+        "tools/page-generation/orlando-suite-page.mjs",
+        "site/where-to-stay/orlando-family-hotels.html",
+        "tools/orlando-kitchen-policy.test.mjs",
+        "docs/research/orlando-cabana-kitchen-policy-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Current comparison says kitchenette without equipment; internal family-of-five meal task cannot distinguish microwave reheating from stovetop cooking. Exact official Poolside Family Suite Exterior Entry page inspected October11 in ordinary permitted IAB: mini refrigerator, microwave, small sink. Oct2 record agrees. Stovetop, oven, cookware, freezer capacity, meal savings and suitability are not established.",
+      "gsc_evidence_classification": "Reused October11 API16:19:30.924Z finalized October9 versus October10 finalized October8; orientation only, no aligned query-cohort or CTR diagnosis.",
+      "acceptance_criteria": [
+        "One scoped shared kitchen record for the exact Cabana category with linked official equipment, checked/recheck dates, research-based meal planning interpretation and explicit unknowns; no absence-of-stove claim or guaranteed savings.",
+        "Static and enhanced page parity; escaping and per-category scope; desktop1280/mobile390/320 keyboard source/form-reset/overflow/image checks; focused/full native QA and different independent read-only PASS/PASS_WITH_P3.",
+        "Exact11-path guarded main push, Pages success/matching release marker, production SEO and exact affected assets/invariants before delivery."
+      ],
+      "measurement_plan": "LRN211 current source audit and internal meal task: parent can identify published reheating equipment and unverified cooking assumptions. Not human satisfaction/SEO/full meal budget. Falsify source equipment change, misplaced category, stale scoped date or failed task; recheck October18.",
+      "production_invariant": "Add only Cabana kitchen block and scoped shared field; stripping field/block restores prior data/HTML. Preserve all rate/currency/party/fee/water/parking records and clocks, global dates, legacy and combined CSV bytes, model/client/style/catalog/config/all other public/prior research/src/meta-schema/34URLs/946 baseline/held11/all315 prior roadmap items. Carry112/113 immutable closure only; no newURL, booking/safety/suitability assurance, automated fact renewal or security/provider/account/scheduler mutation.",
+      "decision": "IMPLEMENT bounded failed meal-planning task in existing URL during fixed sprint. First transaction actualrun19:01:16Z/15:01:16EDT/startdeadline19:46:16Z. Broad063/077 qualification and human/full-budget gates remain separate.",
+      "release_state": "implementation-review-pending",
+      "review_receipt": "FT-IMP-114 different Rawls independent read-only PASS/noP0-P3; manifest6a06d394b4985c971aa7c62dddd10287a806b1f067e74efdbe97a3eb4874323c/all948hashes/exact11/937nonowned/315priorordereditems/held11-ledgerisolation verified/no drift. Independent9focused/invariants/state0/GSC90/localSEO0fiveprior; Master825full/47maintenance9focused/finalreview-candidate rerun825green inspected, not independentfull. Saved ordinary official exact-category equipment DOM/screenshot and actualIAB1280/390/320 source keyboard focus/form6people-reset5people/containedtext/nooverflow/errors0/image1280x920 loaded inspected; no reviewer writes/network/livebrowser/delegation. Scoped mini refrigerator/microwave/small sink supported; reheating explicitly interpretive, cooking equipment/freezer/dining-space/meal-savings unknown. Remove field/block restores prior data/HTML; all prices fees CSV clocks models catalog config other public-prior research-src metadata34URLs intact. LRN211 currentsource/internalproxy, not humanSEO/fullbudget or broad063/077 qualification. Only mechanical immutable consensus receipt; guarded release and production pending/fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-113",
       "title": "Make the two-property Orlando dated-rate comparison portable",
       "kind": "implementation",
       "lane": "existing-page-family-budget",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T18:20:05Z",
       "allowed_during_observation": true,
@@ -55,8 +94,15 @@
       "measurement_plan": "LRN210 internal portability task from maintained dated sources, not human satisfaction or SEO outcome. Falsify failed export/context mismatch or changed record. No source freshness renewal.",
       "production_invariant": "Only additive combined-download link and new22column four-plan CSV; legacy21column IHG export unchanged. Shared rate/fact/catalog records/source clocks/112budget rendering/108parking109water/model-client-style/otherpublic/priorresearch/src/meta-schema/34canonicalURLs/943baseline/held11/all314prior items unchanged. Carry112 immutable completion only. No all-fee/age-acceptance/livequote/safety guarantee or provider/account/security/scheduler mutation.",
       "decision": "IMPLEMENT bounded failed portability task now; separate broad063 corpus/materiality and actual-age/full-trip gates remain. Second sequential transaction, conservative run18:00:11Z/startdeadline18:45:11Z/fixed sprint unchanged.",
-      "release_state": "not-shipped",
-      "review_receipt": "FT-IMP-113 different Ampere independent read-only PASS/noP0-P3; manifest79d6d09171c6686dbe4edea9a453adf53bec07b41376299e98a0cbd512459bb2/all946hashes/exact11/935nonowned/314priorordereditems/held11-ledgerisolation verified, no drift/deletions. Independent21focused/invariants/state0/GSC90/localSEO0fiveprior; Master822full/47maintenance/21focused and final rerun822green logs inspected, not independentfull. Three saved actualIAB1280/390/320 native4row22column downloads exactbytes/changed6person-reset5person/focusedlink-contained/nooverflow/image1280loaded/errors0 inspected; no independent livebrowser/network/writes. Allsharedprice-fee-policy-clocks/model-client/catalog/config/legacyIHGCSV/otherpublic-priorresearch-src/meta-schema/34URLs intact. Reused110/112 sources, no renewal/humanSEO/fullfee ranking/age acceptance/broader063 qualification. Only mechanical consensus receipt; guardedrelease and production pending, fixed sprint unchanged."
+      "release_state": "completed-remote-verified",
+      "review_receipt": "FT-IMP-113 different Ampere independent read-only PASS/noP0-P3; manifest79d6d09171c6686dbe4edea9a453adf53bec07b41376299e98a0cbd512459bb2/all946hashes/exact11/935nonowned/314priorordereditems/held11-ledgerisolation verified, no drift/deletions. Independent21focused/invariants/state0/GSC90/localSEO0fiveprior; Master822full/47maintenance/21focused and final rerun822green logs inspected, not independentfull. Three saved actualIAB1280/390/320 native4row22column downloads exactbytes/changed6person-reset5person/focusedlink-contained/nooverflow/image1280loaded/errors0 inspected; no independent livebrowser/network/writes. Allsharedprice-fee-policy-clocks/model-client/catalog/config/legacyIHGCSV/otherpublic-priorresearch-src/meta-schema/34URLs intact. Reused110/112 sources, no renewal/humanSEO/fullfee ranking/age acceptance/broader063 qualification. Only mechanical consensus receipt; guardedrelease and production pending, fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-113 release 1c9d63059ec75618108a4365d7fdcb3209059a7f remote verified 2026-10-11T18:31:04.654Z; main0-0/emptyindex/exact11/all946indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified combined two-property four-plan22column nativeCSV; Pages38163988206success/matching1c9d63059ec75618108a4365d7fdcb3209059a7f/run/sixexactHTTP200assets/invariantsPASS at2026-10-11T18:29:50.189Z/productionSEO0errors-fiveprior. ActualIAB1280-390-320 keyboarddownloads4rows22cols/exactbytes/changed6person-reset5person/focusedlink-contained/nooverflow/image1280loaded/errors0; proof /tmp/ft-imp113-browser/production-width.json andpng plusproduction-context.png. Initial390 assertion found production still1280 because override targeted the remaining local tab; inspected DOM, closed completed localtab, confirmed production390 then reran390/320 in sameIAB/origin/tool, no denial/bypass/productchange. Master822full/47maintenance/21focused/differentAmperePASS. LRN210 internal portability learned from reused110/112 sources, no renewal/humanSEO/fullfee ranking/age acceptance/full063qualification. LegacyIHG21columnCSV/sharedfacts-prices-clocks/models/catalog/config/otherpublic-priorresearch-src/meta-schema/34URLs/held11 preserved. Two sequential public transactions complete this actualrun; no quota/wholecluster claim. Next bounded room-kitchen or meal-budget evidence qualification, not unchanged provider holds or broad repeated report. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T18:31:04.674Z",
+      "release_commit": "1c9d63059ec75618108a4365d7fdcb3209059a7f",
+      "pages_run": 38163988206,
+      "production_verified_at": "2026-10-11T18:29:50.189Z",
+      "review_outcome": "PASS",
+      "reviewer": "Ampere"
     },
     {
       "id": "FT-IMP-112",
@@ -105,7 +151,11 @@
       "review_receipt": "FT-IMP-112 different Copernicus independent read-only PASS/noP0-P3; manifest28dcdd27ed40edfb20c1212d018dd0509cc275406af4e0f4c731b2b2846ef35f/all943hashes/exact18/925nonowned/313priorordereditems/held11-ledgerisolation verified. Independent55native/invariants/state0/GSC90/localSEO0fiveprior; Master819full/47maintenance/43focused/invariantsPASS. Source and browser evidence inspected offline, no independent livebrowser/production/full rerun; one native test created and removed a temporary clone outside candidate, repository and candidate unchanged. Saved official1013.63-1446.75 suite/date/count-only party/deposit-cancellation/currencylimits/unknownextras and unenteredages preserved; actualIHG3downloads exactbytes, 1280-390-320 screenshots nooverlap/image-loadedproof inspected; final inventorydrift0. Public output is dated observation, not currentquote/completefees/ageacceptance/humanSEO or full063qualification. Only mechanical immutable consensus receipt; exact guardedrelease and production pending, fixed sprint unchanged.",
       "release_receipt": "FT-IMP-112 release 7c1bebf9ccb080d84df9bb366e349b2751a1b5d9 remote verified 2026-10-11T18:19:21.473Z; main0-0/emptyindex/exact18/all943indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified Cabana exact-suite two-plan dated budget; Pages38163190558success/matching7c1bebf9ccb080d84df9bb366e349b2751a1b5d9/run/fiveexactHTTP200assets/invariantsPASS at2026-10-11T18:18:41.102Z/productionSEO0errors-fiveprior. ActualIAB1280-390-320 family4sixpeople/reset3fivepeople/static1013.63-1446.75/nativeIHGdownload2rows21cols/exactbytes/nooverflow/errors0; officialsourcekeyboardfocus/image1280loaded, proof /tmp/ft-imp112-browser/production-width.json andpng plusproduction-source-image.json/production-context.png. Master819full/47maintenance/43focused/differentCopernicusPASS55native. LRN209 currentofficialsource and internalproxy, not humanSEO/currentquote/fullfees/individualageacceptance/full063qualification. OriginalIHGrates-CSV/parking-water/globalclocks/otherpublic-priorresearch-src/meta-schema/34URLs/held11 preserved. One finish-first transaction completed, no quota/wholecluster claim; next independent eligible family decision. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
       "completed_on": "2026-10-11T18:19:21.492Z",
-      "release_commit": "7c1bebf9ccb080d84df9bb366e349b2751a1b5d9"
+      "release_commit": "7c1bebf9ccb080d84df9bb366e349b2751a1b5d9",
+      "pages_run": 38163190558,
+      "production_verified_at": "2026-10-11T18:18:41.102Z",
+      "review_outcome": "PASS",
+      "reviewer": "Copernicus"
     },
     {
       "id": "FT-IMP-111",

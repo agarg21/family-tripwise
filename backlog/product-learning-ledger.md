@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-211 - A kitchenette label is not a cooking specification - 2026-10-11
+
+FT-IMP-114 [exact-category source audit and meal task](../docs/research/orlando-cabana-kitchen-policy-2026-10-11.json). Family decision: two adults and children4/8/12 need to separate microwave reheating from assumed stovetop cooking and meal savings. Current comparison's generic kitchenette label fails this internal proxy task. October11 ordinary permitted official room inspection lists mini refrigerator, microwave and small sink; October2 evidence agrees. IMPLEMENT those shared facts with explicit stovetop/oven, cookware, freezer and dining-space unknowns. No proof a stove is absent, no safety/suitability/meal savings guarantee, and no renewal of price, age acceptance or other facts.
+
+High confidence in published exact-room equipment, moderate internal task usefulness, unknown human/SEO/full-budget outcome. Lesson: keep equipment facts separate from meal capability and savings assumptions. Falsify changed category/equipment, failed source/mobile task or October18 scoped review. Focused/full QA, independent read-only review and verified release remain required; broad063/077 qualification is separate.
+
 ## LRN-210 - Keep unequal fee evidence in a portable comparison - 2026-10-11
 
 FT-IMP-113 [bounded export task](../docs/research/orlando-combined-rate-download-task-2026-10-11.json). Family decision: retain dated Cabana and IHG room-plan costs for the same November8-13/count-only five-person stay outside the comparison page. Current production task finds four visible plans but only two IHG rows in the export, so the portability hypothesis is supported. Reused October11 official BOOKING_CHECK records from110/112, not another provider check or fact renewal. IMPLEMENT a shared-record four-plan/22column native CSV, preserving the legacy IHG asset, Cabana interpreted currency/unknown resort fee and mandatory extras, individual-age unknowns and both properties' payment/cancellation caveats. Master21focused/822full/47maintenance/invariantsPASS; actual1280/390/320 keyboard downloads exact four-row bytes, changed6person form/reset5person, nooverflow/loadedimage/errors0. Different read-only review and verified production gates remain required.

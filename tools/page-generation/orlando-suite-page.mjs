@@ -40,6 +40,11 @@ export function orlandoCombinedRateComparisonCsv(records = suites) {
   return rateCsv([[...rateHeadings, "Currency basis"], ...rows]);
 }
 const cite = (key, label) => `<a href="${e(sources[key])}">${label}</a>`;
+export const kitchenPolicy = suite => {
+  const policy = suite.kitchenPolicy;
+  if (!policy) return "";
+  return `\n            <div data-kitchen-policy="${e(suite.id)}"><dt>Kitchenette &amp; meal planning</dt><dd><p>Published equipment: ${policy.equipment.map(e).join(", ")}. ${cite(policy.source, "Official suite equipment")}</p><p>${e(policy.planningNote)}</p><p>${e(policy.limitation)} Equipment checked ${e(policy.checkedOn)}; recheck ${e(policy.recheckOn)}.</p></dd></div>`;
+};
 const waterPolicy = suite => {
   const policy = suite.waterPolicy;
   if (!policy) return "";
@@ -111,7 +116,7 @@ export function orlandoSuitePage() {
         <article id="${suite.id}" class="suite">
           <p class="eyebrow">${e(suite.base)}</p><h3>${e(suite.name)}</h3><p><strong>${e(suite.room)}</strong></p>
           <dl>
-            <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>
+            <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>${kitchenPolicy(suite)}
             <div><dt>Park access</dt><dd>${e(suite.transport)} ${cite(suite.transportSource, "Transport terms")}</dd></div>
             <div><dt>Water features &amp; admission</dt><dd>${e(suite.water)} ${cite(suite.waterSource, "Water terms")}</dd></div>${waterPolicy(suite)}
             <div><dt>Important limitation</dt><dd>${e(suite.caution)} ${cite(suite.cautionSource ?? suite.capacitySource, "Check the notice or benefit")}</dd></div>
