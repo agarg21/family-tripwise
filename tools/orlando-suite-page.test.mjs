@@ -67,7 +67,7 @@ test("park warnings include checkout day; fee nights exclude it; reopening is no
 });
 test("published fee components preserve nulls and avoid double counting", () => {
   const result = compareStay({feeIncluded:"no"});
-  assert.deepEqual(result.rows.map(x => x.parking), [0,130,155]);
+  assert.deepEqual(result.rows.map(x => x.parking), [0,null,155]);
   assert.deepEqual(result.rows.map(x => x.resortExtra), [null,null,325]);
   assert.equal(compareStay({feeIncluded:"yes"}).rows[2].resortExtra, 0);
   assert.deepEqual(compareStay({car:"none"}).rows.map(x=>x.parking), [0,0,0]);

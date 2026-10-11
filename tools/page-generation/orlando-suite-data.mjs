@@ -35,7 +35,8 @@ export const suites = [
     water: "Hotel pools include a lazy river and slide. They are separate from ticketed Volcano Bay, whose seasonal closure starts October 26, 2026; reopening is expected on or before April 1, 2027, not confirmed.", waterSource: "cabanaHotel",
     caution: "Complimentary Universal Express Unlimited is NOT included at Cabana Bay. Early Park Admission needs valid admission and is limited to participating parks, attractions and operating dates.", cautionSource: "universalBenefits",
     parking: 26, parkingSource: "cabanaHotel", resortFee: null,
-    costNote: "Published overnight parking: $26 plus tax per vehicle, subject to change. This is not a room or whole-trip quote.",
+    parkingUnit: null, parkingCheckedOn: "2026-10-11", parkingRecheckOn: "2026-10-18",
+    costNote: "Overnight guest self-parking: $26 plus tax per vehicle, subject to change. The inspected wording does not establish billing frequency, tax amount or inclusion in your rate; no stay subtotal is calculated. Amount interpreted as USD from the US property context, not a displayed ISO label. Parking wording checked October 11, 2026; recheck October 18. Other property facts and room prices are not renewed.",
     next: "Confirm pool operations, your park's early-entry schedule and ticket requirements; do not treat a Volcano Bay view as park access."
   },
   {

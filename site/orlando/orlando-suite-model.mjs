@@ -26,7 +26,7 @@ export function compareStay({ arrival = "2026-11-08", departure = "2026-11-13", 
           ? "Your stay overlaps the announced Volcano Bay closure/reopening window. Do not rely on park or walking-path access; an early reopening is not confirmed. This is not a hotel-pool closure notice."
           : "The selected dates are outside the announced Volcano Bay closure window; this does not confirm park or hotel-pool operations. Check the current calendar.";
       }
-      const parking = car === "unknown" ? null : nights * suite.parking * (car === "one" ? 1 : 0);
+      const parking = car === "none" ? 0 : car === "unknown" || suite.parkingUnit === null ? null : nights * suite.parking;
       const resortExtra = suite.resortFee === null || feeIncluded === "unknown" ? null : feeIncluded === "yes" ? 0 : suite.resortFee * nights;
       return { id: suite.id, capacity, dateNote, parking, resortExtra };
     })
@@ -37,9 +37,12 @@ export const escapeHtml = value => String(value).replaceAll("&", "&amp;").replac
 
 export function renderChecks(result, row) {
   const money = value => `$${value.toLocaleString("en-US")}`;
+  const parkingText = row.id === "cabana-bay"
+    ? row.parking === 0 ? "$0 selected because no vehicle is planned; parking itself is not free." : "Unknown: $26 plus tax per vehicle is published, but billing frequency, tax and rate inclusion are not established. Do not multiply by the number of nights."
+    : row.parking === null ? "Unknown until vehicle use is decided." : `${money(row.parking)} before any applicable tax; published parking rate only.`;
   return `<p class="capacity"><strong>${escapeHtml(row.capacity)}</strong></p>
     <p>${escapeHtml(row.dateNote)}</p>
-    <p><strong>Parking illustration (${result.nights} ${result.nights === 1 ? "night" : "nights"}):</strong> ${row.parking === null ? "Unknown until vehicle use is decided." : `${money(row.parking)} before any applicable tax; published parking rate only.`}</p>
+    <p><strong>${row.id === "cabana-bay" ? "Parking stay subtotal:" : `Parking illustration (${result.nights} ${result.nights === 1 ? "night" : "nights"}):`}</strong> ${parkingText}</p>
 ${row.id === "holiday-inn" ? `<p><strong>Standard resort-fee add-on illustration:</strong> ${row.resortExtra === null ? "Unknown until your rate's inclusions are confirmed." : row.resortExtra === 0 ? "$0 added here because you selected fee already included; the fee is not free." : `${money(row.resortExtra)} before tax, only if the standard $65 nightly fee applies and is not included.`}</p>` : ""}
     <p class="unknown">${row.id === "holiday-inn" ? "Your current room rate, parking, tickets, cross-resort transport and complete trip total: unknown. The dated nightly sample above is not a quote for your booking." : "Room price, taxes, tickets, cross-resort transport and complete stay total: unknown. These partial amounts cannot rank value."}</p>`;
 }

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-108",
+  "learning_unit": "LRN-205",
+  "parent_item": "FT-RES-063",
+  "inspected_on": "2026-10-11",
+  "source": {"url": "https://www.loewshotels.com/cabana-bay-hotel", "section": "Useful Information / Overnight Guest Parking", "published_on": null, "effective_on": null, "evidence_class": "OFFICIAL_PROPERTY_FACT", "inspection": "Ordinary permitted anonymous IAB page and expanded disclosure; no booking/account/contact or denied-source retry", "proof": "/tmp/ft-imp108-browser/source-ax.txt"},
+  "parking": {"amount": 26, "currency": "USD", "currency_basis": "Editorial interpretation from US Orlando property context and dollar display, not an observed ISO code", "displayed_unit": "per vehicle", "billing_frequency": null, "tax_amount": null, "tax_included": false, "rate_inclusion": null, "subject_to_change": true, "checked_on": "2026-10-11", "recheck_on": "2026-10-18"},
+  "task": {"arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "adults": 2, "children": 3, "vehicles": 1, "evidence_class": "PAGE_ONLY_PROXY_TASK", "actual_user_test": false, "previous_public_subtotal": 130, "supported_subtotal": null, "failure": "Nightly repetition inferred from a per-vehicle fee; actual production checks contain130 despite Oct2 reviewed frequency unknown", "prior_proof": "/tmp/ft-imp108-browser/prior-task.json"},
+  "preserve": {"prior_fee_record": "docs/research/orlando-cabana-fee-basis-2026-10-02.json", "old_quotes_and_dates_renewed": false, "room_capacity_acceptance": "unknown", "water_operation": "unknown", "full_trip_total": null, "other_records_changed": false, "broader_waterplay_job_qualified": false},
+  "decision": "IMPLEMENT verified public unit-trust correction during protected observation, not broad waterplay or nightly-room-price release. Selected no-vehicle zero is not free parking; one/undecided vehicle subtotal stays unknown.",
+  "confidence": "High current wording and deterministic failed arithmetic; unknown frequency, taxes, rate inclusion, future charges, users and SEO",
+  "next_falsification_trigger": "Explicit changed official billing frequency or scoped October18 review",
+  "remaining_gate": "063 maintained water-property/height/admission/season/room-price/fees/reviews corpus, materiality and existing-page fit; current correction does not complete those gates"
+}

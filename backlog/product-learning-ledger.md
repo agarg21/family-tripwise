@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-205 - Per vehicle is not a confirmed nightly billing unit - 2026-10-11
+
+FT-IMP-108 /063. Family decision: five-night Orlando parking budget for one vehicle. Hypothesis that the published26USD pervehicle supports130stay subtotal is rejected by current ordinary official Useful Information and actual production task; October2 reviewed record already retained unknown frequency. OFFICIAL_PROPERTY_FACT plus PAGE_ONLY_PROXY_TASK, not actual user/roomquote/SEO. Maintained record docs/research/orlando-cabana-parking-unit-2026-10-11.json and its primary URL. IMPLEMENT narrow verified trust correction during observation: preserve26plus-tax/pervehicle and interpreted currency, unknown repetition/tax/rate inclusion; zero only when no vehicle selected, not free parking. Other room/price/water/transport facts/globaldates remain unchanged.
+
+Confidence high current wording/failed arithmetic, unknown future fee/availability/user outcome. Lesson: a fee can be retained usefully without multiplying an unestablished billing unit. Trigger explicit official frequency change or scopedOctober18review. Broader waterplay corpus/budget/materiality/ownership gates unchanged; not all-six-cluster completion. Focused/full/native1280-390-320/differentPASS/guardedproduction required.
+
 ## LRN-204 - Ziva included clubs are not private toddler care - 2026-10-11
 
 FT-IMP-107 /083/076. Family decision: two adults with ages2/7 cannot distinguish KidZ club-band match from toddler care on the current model because Ziva clubs are all unknown. Hypothesis rejected by October11 ordinary current official activities body and separate Learn More disclosures. OFFICIAL_PROPERTY_FACT plus internal PAGE_ONLY_PROXY; maintained source record `docs/research/cancun-ziva-club-age-2026-10-11.json`. IMPLEMENT unfinished scoped integration: KidZ4-12 and @Moods10-17, explicit10-12 overlap, accompanied younger family time separate, extra-charge babysitting unpriced. Seven-year-old published match is not admission; two-year-old lack of club-band match is not no activities or no babysitting. No confirmed simultaneous parent-free break or room-plus-care total.
