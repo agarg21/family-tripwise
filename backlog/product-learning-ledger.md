@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-209 - Match the quoted room and family counts before comparing budgets - 2026-10-11
+
+FT-IMP-112 [current official booking audit](../docs/research/orlando-cabana-rate-plans-2026-10-11.json). Family decision: compare the existing Cabana Poolside Family Suite Exterior Entry for one room/two adults/three children, November8-13/five nights, against dated IHG options. Hypothesis that historical six-person evidence resolves this five-person gap is REJECTED. Today's ordinary anonymous result retains requested counts, not individual ages4/8/12: Special Offer901room+112.63tax=1013.63, Flexible1286+160.75=1446.75 interpretedUSD, derived202.73/289.35 per-room/night. Both show refundable one-night deposit at booking and five-day/6PMlocal cancellation cutoff. Generic double-occupancy language and crossed-out daily average do not establish individualized child pricing or savings. Resort fee/other mandatory extras remain unknown; parking/meals/tickets/transfers unpriced.
+
+IMPLEMENT source-dated comparison and maintained catalog from one shared envelope; no live/typical/all-fee quote or exact-age/accessibility/suitability guarantee. High displayed-room/count/date/arithmetic confidence, limited acceptance/currency/fullcost; desktop/mobile task is internal proxy, not actual-user or SEO proof. Lesson: preserve payable rows, plan restrictions and basis together; never transfer a different party quote or sum unknown fees as zero. Falsify changed official evidence, lost context or October18 review. Broader063 water-corpus/materiality/noexistingfit gates,108parking/109water/110IHG/111CSV and prior evidence remain separate.
+
 ## LRN-208 - Portable rates must retain the reason plans differ - 2026-10-11
 
 FT-IMP-111 [internal task](../docs/research/orlando-rate-download-task-2026-10-11.json), with reused October11 booking evidence110. Family decision: save both same-suite public plans with another caregiver without losing the five-night/count-only party, fee inclusions or cancellation conditions. Hypothesis that the live paragraphs already supply a structured portable comparison is REJECTED: ordinary public task has no download link. This is PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK, not a reported real-user failure or fresh provider inspection.

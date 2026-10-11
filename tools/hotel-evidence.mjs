@@ -76,12 +76,13 @@ export function hotelEvidence() {
   for (const hotel of suites) {
     const fact = (value, ids, observedOn = checkedOn) => field(value, "known", "OFFICIAL_PROPERTY_FACT", observedOn, ids.filter(Boolean).map((id) => sources[id]), orlandoPath,
       "Model-baseline source check; exact party acceptance/operations remain unverified.", "model-baseline");
-    const p = hotel.priceSample;
+    const booking = hotel.bookingRates;
+    const p = hotel.priceSample ?? (booking ? { ...booking.plans[0], observedOn: booking.checkedOn, room: booking.room, party: booking.party, stay: booking.stay, nights: booking.nights, source: booking.source, feeBasis: booking.feeBasis, bookingBasis: booking } : null);
     records.push({ schema_version: SCHEMA_VERSION, id: `orlando-${hotel.id}`, hotel: hotel.name, page_url: pageUrl("orlando-family-hotels"), model_path: orlandoPath, coverage: "shared-model-partial",
       fields: {
         room: fact({ category: hotel.room, maximum: hotel.maximum, layout: hotel.layout, checks: hotel.next }, [hotel.capacitySource, hotel.layoutSource], hotel.id === "holiday-inn" ? "2026-09-27" : checkedOn),
         price: price(p ? { kind: "derived-dated-stay-total", currency: "USD", unit: "room/night", amount_from: Math.round(p.estimatedTotal / p.nights * 100) / 100, amount_to: null, display: null,
-          room_basis: p.room, party_basis: p.party, stay_basis: p.stay, fee_basis: "Estimated total includes listed resort fees and taxes; parking and other purchases separate.",
+          room_basis: p.room, party_basis: p.party, stay_basis: p.stay, fee_basis: p.feeBasis ?? "Estimated total includes listed resort fees and taxes; parking and other purchases separate.",
           source_basis: JSON.stringify(p), structured_basis: true } : null, orlandoPath, p ? [sources[p.source]] : [], p?.observedOn ?? null),
         fees: { ...fact({ parking: hotel.parking, resort_fee: hotel.resortFee, cost_note: hotel.costNote, caution: hotel.caution }, [hotel.parkingSource, hotel.cautionSource]), state: hotel.id === "holiday-inn" ? "disputed" : "known" },
         transport: fact(hotel.transport, [hotel.transportSource]), activities: fact(hotel.water, [hotel.waterSource]), review_signal: unknown(orlandoPath)

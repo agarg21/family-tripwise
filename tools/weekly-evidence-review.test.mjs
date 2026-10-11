@@ -159,6 +159,15 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, /amount_from\":151\.88/);
       assert.match(currentRecord.basis, /ages not entered/);
       assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis }, currentRecord);
+    } else if (record.id === "orlando-cabana-bay-price") {
+      assert.equal(record.verified_on, null);
+      assert.equal(record.mapping_state, "unknown");
+      assert.equal(currentRecord.verified_on, "2026-10-11");
+      assert.equal(currentRecord.mapping_state, "known");
+      assert.match(currentRecord.basis, /amount_from\":202\.73/);
+      assert.match(currentRecord.basis, /individual ages not entered/);
+      assert.match(currentRecord.basis, /Resort fee and other mandatory extras were not established/);
+      assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis, mapping_state: currentRecord.mapping_state, source_urls: currentRecord.source_urls }, currentRecord);
     } else if (record.id === "orlando-cabana-bay-fees") {
       assert.equal(currentRecord.verified_on, record.verified_on);
       assert.equal(currentRecord.verified_on, "2026-09-24");

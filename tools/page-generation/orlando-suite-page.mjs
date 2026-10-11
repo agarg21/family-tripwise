@@ -27,6 +27,11 @@ const waterPolicy = suite => {
   return `\n            <div data-water-policy="${e(suite.id)}"><dt>Ride heights &amp; session cost</dt><dd><ul>${policy.rides.map(ride => `<li>${e(ride.name)}: published minimum ${ride.minimumInches} inches.</li>`).join("")}</ul><p>${e(policy.costConflict)} ${cite(suite.waterSource, "IHG fee inclusions")} ${cite(policy.source, "Waterpark FAQ")}</p><p>${e(policy.limitation)} Policy checked ${e(policy.checkedOn)}; recheck ${e(policy.recheckOn)}.</p></dd></div>`;
 };
 const nightlySample = suite => {
+  const booking = suite.bookingRates;
+  if (booking) {
+    const usd = value => `USD${value.toFixed(2)}`;
+    return `<div data-booking-rates="${e(suite.id)}">${booking.plans.map(rate => `<p>Observed ${e(booking.checkedOn)} for ${e(booking.stay)}, ${e(booking.room)}, ${e(booking.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / booking.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} displayed for ${booking.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.taxes)} displayed taxes). ${e(rate.restrictions)}</p>`).join("")}<p>${e(booking.terms)}</p><p>${e(booking.feeBasis)} ${e(booking.currencyBasis)}</p><p>${e(booking.limitation)} Price and terms checked ${e(booking.checkedOn)}; recheck ${e(booking.recheckOn)}. ${cite(booking.source, "Official Cabana Bay rate details")}</p></div>`;
+  }
   const sample = suite.priceSample;
   if (!sample) return "A matching room/party/date quote has not been observed.";
   const usd = value => `USD${value.toFixed(2)}`;

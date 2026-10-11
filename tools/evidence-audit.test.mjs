@@ -41,6 +41,12 @@ test("Finest's observed public booking source uses one exact host without relaxi
   assert.equal(requests, 1); assert.equal(result.state, "unavailable-review");
 });
 test("unavailable and challenges do not become fresh evidence", async () => {
+  const config = JSON.parse(await readFile(new URL("../ops/evidence-watch.json", import.meta.url), "utf8"));
+  const cabana = JSON.parse(await readFile(new URL("../docs/research/orlando-cabana-rate-plans-2026-10-11.json", import.meta.url), "utf8"));
+  assert.equal(new URL(cabana.source_url).hostname, "reservations.universalorlando.com");
+  assert.equal(config.allowed_hosts.filter(h => h === "reservations.universalorlando.com").length, 1);
+  assert.equal(permittedUrl(cabana.source_url, config.allowed_hosts), cabana.source_url);
+  for (const url of ["http://reservations.universalorlando.com/", "https://reservations.universalorlando.com:8443/", "https://user:pass@reservations.universalorlando.com/", "https://reservations.universalorlando.com/?session=x", "https://unapproved.universalorlando.com/"]) assert.throws(() => permittedUrl(url, config.allowed_hosts));
   for (const [response, state] of [[new Response("denied", { status: 403 }), "unavailable-review"], [new Response("Just a moment " + " ".repeat(120), { headers: { "content-type": "text/html" } }), "challenge-or-empty-review"], [new Response("pdf", { headers: { "content-type": "application/pdf" } }), "unsupported-format-review"]]) {
     assert.equal((await fetchSource("https://a.test/", ["a.test"], [], { fetcher: async () => response })).state, state);
   }

@@ -20,11 +20,57 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-112",
+      "title": "Resolve Cabana Bay matching-family dated room budget",
+      "kind": "implementation",
+      "lane": "existing-page-family-budget",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T18:03:07Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/orlando-suite-data.mjs",
+        "tools/page-generation/orlando-suite-page.mjs",
+        "site/orlando/orlando-suite-data.mjs",
+        "site/where-to-stay/orlando-family-hotels.html",
+        "tools/hotel-evidence.mjs",
+        "tools/page-quality.test.mjs",
+        "tools/weekly-evidence-review.test.mjs",
+        "tools/page-generation/orlando-suite-model.mjs",
+        "site/orlando/orlando-suite-model.mjs",
+        "ops/evidence-watch.json",
+        "tools/evidence-audit.test.mjs",
+        "tools/orlando-cabana-current-rate.test.mjs",
+        "docs/research/orlando-cabana-rate-plans-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Existing comparison lacks matching five-person Cabana quote; October2 historical quote is count-only six-person and due October9. One normal previously permitted official booking flow for November8-13/one Poolside Family Suite Exterior Entry/two adults/three children; no denied-provider retry, checkout or account.",
+      "gsc_evidence_classification": "Reused recent October11 API16:19:30.924Z finalized October9 versus October10 finalized October8; orientation only, no query cohort/CTR diagnosis.",
+      "acceptance_criteria": [
+        "Only implement visibly verified same-category/count-party/dates public rate components and terms; retain interpreted USD versus observed ISO, nightly/stay unit, taxes/fee exclusions, unentered ages, unknown fees and payment conflicts. Never reuse six-person price as five-person or call a public plan refundable from its name.",
+        "Focused and full native QA; actual1280/390/320 form-reset/nooverflow/unchanged IHG native CSV and source links; different read-only PASS/PASS_WITH_P3. Amend exact scope before any additional edits.",
+        "Guarded exact-path main push, Pages-marker/productionSEO/declared affected exact-assets and invariant verification before delivery. If official body unavailable, trim hold scope and preserve all public evidence without retry/bypass."
+      ],
+      "measurement_plan": "Source-dated matched-family room budget audit and internal proxy, not human outcome/SEO proof. Learn whether current count-only quote resolves this comparison gap; falsify source change or scoped October18 review.",
+      "production_invariant": "Only Cabana dated price envelope/visible rendering/catalog plus current-quote caution wording in shared renderChecks; historical replay fixtures restore saved unknown-price envelope and explicitly test new drift. No mutation of IHG110 rates/111CSV/108parking/109water/arithmetic/client/style/other suites or public pages/prior research/src/meta-schema/34URLs/source clocks. No total-all-fee/current-live/age-acceptance/safety guarantee. Preserve941 baseline and11held dirty paths/all313prior items; carry111 immutable closure only.",
+      "decision": "Resolve exact matched five-person quote then implement in same transaction if qualified; no broader063 corpus/URL qualification or quota.",
+      "release_state": "unshipped",
+      "review_receipt": "FT-IMP-112 different Copernicus independent read-only PASS/noP0-P3; manifest28dcdd27ed40edfb20c1212d018dd0509cc275406af4e0f4c731b2b2846ef35f/all943hashes/exact18/925nonowned/313priorordereditems/held11-ledgerisolation verified. Independent55native/invariants/state0/GSC90/localSEO0fiveprior; Master819full/47maintenance/43focused/invariantsPASS. Source and browser evidence inspected offline, no independent livebrowser/production/full rerun; one native test created and removed a temporary clone outside candidate, repository and candidate unchanged. Saved official1013.63-1446.75 suite/date/count-only party/deposit-cancellation/currencylimits/unknownextras and unenteredages preserved; actualIHG3downloads exactbytes, 1280-390-320 screenshots nooverlap/image-loadedproof inspected; final inventorydrift0. Public output is dated observation, not currentquote/completefees/ageacceptance/humanSEO or full063qualification. Only mechanical immutable consensus receipt; exact guardedrelease and production pending, fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-111",
       "title": "Make Orlando dated suite-rate terms portable",
       "kind": "implementation",
       "lane": "existing-page-family-budget",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T17:04:06Z",
       "allowed_during_observation": true,
@@ -54,8 +100,16 @@
       "measurement_plan": "LRN208 task-based portability check with reused source-dated booking evidence; internal proxy only, no human or SEO outcome. Falsify failed download/context-loss or changed rate record.",
       "production_invariant": "Only native download link/ID in existing Orlando price component and new CSV asset. All room-price facts/110terms/108parking/109water/model-client/style/source dates/other public/prior research/src/34canonicalURLs/title-H1-description-schema unchanged. Baseline938/held11 and all prior ordered items intact; carry110 immutable closure only. No new city/indexableURL/paid/provider/account/security/automation mutation.",
       "decision": "IMPLEMENT bounded portable two-plan task now; broad063 water-corpus/materiality/noexistingfit and exact-age/full-budget gates remain separate.",
-      "release_state": "implementation-review-required",
-      "review_receipt": "FT-IMP-111 different Rawls independent read-only PASS/noP0-P3; manifestef9f8c95f8e702970f35b8fcb28bbec308985cc5cc5b701eedb0663906d39fed/all941hashes/exact10/931unchangednonowned/312priorordereditems/held-ledgerisolation verified. Independent22focused/invariants/state0/GSC90/localSEO0fiveprior and three saved native downloads exactbytes; no independentfull/livebrowser/network/writes/delegation. Master816full/47maintenance/22focused/state0/GSC90/localSEO0fiveprior/invariantsPASS; actualIAB1280/390/320 nativefamily4sixpeople/reset3fivepeople/keyboarddownload2rows21cols/exactbytes/nooverflow/image1280loaded/errors0. At320 immediate reset snapshot raced existing asynchronous handler; fresh settled DOM5people/children3 then scoped download recheckPASS, not security denial. Proof /tmp/ft-imp111-browser/local-{1280,390,320}.json andpng, before-dom.txt. Remove only new link/id restores priorHTML exactly; shared110records/prices/terms/sourceclocks/108parking/109water/model-client-style/allotherpublic-priorresearch-src/meta-schema/34URLs unchanged. LRN208 internal portability task/reusedOct11booking, not source renewal/currentquote/humanSEO/full063qualification. Mechanical consensus only; exact guarded release and production pending, fixed sprint unchanged."
+      "release_state": "released-and-production-verified",
+      "pages_run": 38158649612,
+      "production_verified_at": "2026-10-11T17:13:13.911Z",
+      "review_outcome": "PASS",
+      "reviewer": "Rawls",
+      "review_cycles": 1,
+      "review_receipt": "FT-IMP-111 different Rawls independent read-only PASS/noP0-P3; manifestef9f8c95f8e702970f35b8fcb28bbec308985cc5cc5b701eedb0663906d39fed/all941hashes/exact10/931unchangednonowned/312priorordereditems/held-ledgerisolation verified. Independent22focused/invariants/state0/GSC90/localSEO0fiveprior and three saved native downloads exactbytes; no independentfull/livebrowser/network/writes/delegation. Master816full/47maintenance/22focused/state0/GSC90/localSEO0fiveprior/invariantsPASS; actualIAB1280/390/320 nativefamily4sixpeople/reset3fivepeople/keyboarddownload2rows21cols/exactbytes/nooverflow/image1280loaded/errors0. At320 immediate reset snapshot raced existing asynchronous handler; fresh settled DOM5people/children3 then scoped download recheckPASS, not security denial. Proof /tmp/ft-imp111-browser/local-{1280,390,320}.json andpng, before-dom.txt. Remove only new link/id restores priorHTML exactly; shared110records/prices/terms/sourceclocks/108parking/109water/model-client-style/allotherpublic-priorresearch-src/meta-schema/34URLs unchanged. LRN208 internal portability task/reusedOct11booking, not source renewal/currentquote/humanSEO/full063qualification. Mechanical consensus only; exact guarded release and production pending, fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-111 release 235bf1fda8404acd91c2bf49b205b63f87315864 remote verified 2026-10-11T17:14:27.661Z; main0-0/emptyindex/exact10/all941indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified native Orlando two-plan21columnCSV; Pages38158649612success/matching235bf1fda8404acd91c2bf49b205b63f87315864/run/fiveexactHTTP200assets/invariantsPASS at2026-10-11T17:13:13.911Z/productionSEO0errors-fiveprior. ActualIABproduction1280/390/320 nativekeyboarddownload2rows/exactCSV/nooverflow/family4sixpeople/reset3fivepeople/image1280loaded/errors0; proof /tmp/ft-imp111-browser/production-width.json andpng. Master816full/47maintenance/22focused/differentRawlsPASS. LRN208 internal portability/context learning from reused110 record, not source renewal/humanSEO/currentquote/full063qualification. Alloriginalratefacts/sourceclocks/108parking/109water/model-client-style/otherpublic-priorresearch-src/meta-schema/34URLs andheld11 unchanged. Next eligible evidence gap remains separately gated; no quota/allcluster completion claim. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T17:14:27.682Z",
+      "release_commit": "235bf1fda8404acd91c2bf49b205b63f87315864"
     },
     {
       "id": "FT-IMP-110",
