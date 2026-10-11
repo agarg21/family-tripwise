@@ -20,11 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-113",
+      "title": "Make the two-property Orlando dated-rate comparison portable",
+      "kind": "implementation",
+      "lane": "existing-page-family-budget",
+      "status": "selected",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T18:20:05Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/orlando-suite-page.mjs",
+        "site/where-to-stay/orlando-family-hotels.html",
+        "site/downloads/orlando-dated-rates.csv",
+        "tools/orlando-rate-download.test.mjs",
+        "tools/orlando-combined-rate-download.test.mjs",
+        "docs/research/orlando-combined-rate-download-task-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Current production internal task after112: Cabana two dated plans are visible, but native CSV contains only two IHG plans. Comparing the same November8-13/count-only five-person stays outside the page loses Cabana terms and fee unknowns. Reuse independently reviewed110/112 records; no source renewal/provider retry or price ranking.",
+      "gsc_evidence_classification": "Reused October11 API16:19:30.924Z finalized October9 versus October10 finalized October8; orientation only, no CTR or query-cohort diagnosis.",
+      "acceptance_criteria": [
+        "One native combined CSV from shared records: four plans/two properties, exact room/party/date/currency-unit/components/terms/unknown fees/deposit conflict/source clocks and links. Explicit Cabana interpreted currency and Unknown resort fee; missing costs never zero/full-value ranking. Preserve legacy IHG CSV bytes.",
+        "No-JS link; actual1280/390/320 native keyboard download/exact four-row context/form-reset/static observations/formula protection/escaping. Focused/full native QA and different read-only PASS/PASS_WITH_P3.",
+        "Exact11paths guarded main push, successful Pages/matching marker/productionSEO/exact affected assets/registered invariants before delivery."
+      ],
+      "measurement_plan": "LRN210 internal portability task from maintained dated sources, not human satisfaction or SEO outcome. Falsify failed export/context mismatch or changed record. No source freshness renewal.",
+      "production_invariant": "Only additive combined-download link and new22column four-plan CSV; legacy21column IHG export unchanged. Shared rate/fact/catalog records/source clocks/112budget rendering/108parking109water/model-client-style/otherpublic/priorresearch/src/meta-schema/34canonicalURLs/943baseline/held11/all314prior items unchanged. Carry112 immutable completion only. No all-fee/age-acceptance/livequote/safety guarantee or provider/account/security/scheduler mutation.",
+      "decision": "IMPLEMENT bounded failed portability task now; separate broad063 corpus/materiality and actual-age/full-trip gates remain. Second sequential transaction, conservative run18:00:11Z/startdeadline18:45:11Z/fixed sprint unchanged.",
+      "release_state": "not-shipped",
+      "review_receipt": "FT-IMP-113 different Ampere independent read-only PASS/noP0-P3; manifest79d6d09171c6686dbe4edea9a453adf53bec07b41376299e98a0cbd512459bb2/all946hashes/exact11/935nonowned/314priorordereditems/held11-ledgerisolation verified, no drift/deletions. Independent21focused/invariants/state0/GSC90/localSEO0fiveprior; Master822full/47maintenance/21focused and final rerun822green logs inspected, not independentfull. Three saved actualIAB1280/390/320 native4row22column downloads exactbytes/changed6person-reset5person/focusedlink-contained/nooverflow/image1280loaded/errors0 inspected; no independent livebrowser/network/writes. Allsharedprice-fee-policy-clocks/model-client/catalog/config/legacyIHGCSV/otherpublic-priorresearch-src/meta-schema/34URLs intact. Reused110/112 sources, no renewal/humanSEO/fullfee ranking/age acceptance/broader063 qualification. Only mechanical consensus receipt; guardedrelease and production pending, fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-112",
       "title": "Resolve Cabana Bay matching-family dated room budget",
       "kind": "implementation",
       "lane": "existing-page-family-budget",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T18:03:07Z",
       "allowed_during_observation": true,
@@ -62,8 +101,11 @@
       "measurement_plan": "Source-dated matched-family room budget audit and internal proxy, not human outcome/SEO proof. Learn whether current count-only quote resolves this comparison gap; falsify source change or scoped October18 review.",
       "production_invariant": "Only Cabana dated price envelope/visible rendering/catalog plus current-quote caution wording in shared renderChecks; historical replay fixtures restore saved unknown-price envelope and explicitly test new drift. No mutation of IHG110 rates/111CSV/108parking/109water/arithmetic/client/style/other suites or public pages/prior research/src/meta-schema/34URLs/source clocks. No total-all-fee/current-live/age-acceptance/safety guarantee. Preserve941 baseline and11held dirty paths/all313prior items; carry111 immutable closure only.",
       "decision": "Resolve exact matched five-person quote then implement in same transaction if qualified; no broader063 corpus/URL qualification or quota.",
-      "release_state": "unshipped",
-      "review_receipt": "FT-IMP-112 different Copernicus independent read-only PASS/noP0-P3; manifest28dcdd27ed40edfb20c1212d018dd0509cc275406af4e0f4c731b2b2846ef35f/all943hashes/exact18/925nonowned/313priorordereditems/held11-ledgerisolation verified. Independent55native/invariants/state0/GSC90/localSEO0fiveprior; Master819full/47maintenance/43focused/invariantsPASS. Source and browser evidence inspected offline, no independent livebrowser/production/full rerun; one native test created and removed a temporary clone outside candidate, repository and candidate unchanged. Saved official1013.63-1446.75 suite/date/count-only party/deposit-cancellation/currencylimits/unknownextras and unenteredages preserved; actualIHG3downloads exactbytes, 1280-390-320 screenshots nooverlap/image-loadedproof inspected; final inventorydrift0. Public output is dated observation, not currentquote/completefees/ageacceptance/humanSEO or full063qualification. Only mechanical immutable consensus receipt; exact guardedrelease and production pending, fixed sprint unchanged."
+      "release_state": "completed-remote-verified",
+      "review_receipt": "FT-IMP-112 different Copernicus independent read-only PASS/noP0-P3; manifest28dcdd27ed40edfb20c1212d018dd0509cc275406af4e0f4c731b2b2846ef35f/all943hashes/exact18/925nonowned/313priorordereditems/held11-ledgerisolation verified. Independent55native/invariants/state0/GSC90/localSEO0fiveprior; Master819full/47maintenance/43focused/invariantsPASS. Source and browser evidence inspected offline, no independent livebrowser/production/full rerun; one native test created and removed a temporary clone outside candidate, repository and candidate unchanged. Saved official1013.63-1446.75 suite/date/count-only party/deposit-cancellation/currencylimits/unknownextras and unenteredages preserved; actualIHG3downloads exactbytes, 1280-390-320 screenshots nooverlap/image-loadedproof inspected; final inventorydrift0. Public output is dated observation, not currentquote/completefees/ageacceptance/humanSEO or full063qualification. Only mechanical immutable consensus receipt; exact guardedrelease and production pending, fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-112 release 7c1bebf9ccb080d84df9bb366e349b2751a1b5d9 remote verified 2026-10-11T18:19:21.473Z; main0-0/emptyindex/exact18/all943indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified Cabana exact-suite two-plan dated budget; Pages38163190558success/matching7c1bebf9ccb080d84df9bb366e349b2751a1b5d9/run/fiveexactHTTP200assets/invariantsPASS at2026-10-11T18:18:41.102Z/productionSEO0errors-fiveprior. ActualIAB1280-390-320 family4sixpeople/reset3fivepeople/static1013.63-1446.75/nativeIHGdownload2rows21cols/exactbytes/nooverflow/errors0; officialsourcekeyboardfocus/image1280loaded, proof /tmp/ft-imp112-browser/production-width.json andpng plusproduction-source-image.json/production-context.png. Master819full/47maintenance/43focused/differentCopernicusPASS55native. LRN209 currentofficialsource and internalproxy, not humanSEO/currentquote/fullfees/individualageacceptance/full063qualification. OriginalIHGrates-CSV/parking-water/globalclocks/otherpublic-priorresearch-src/meta-schema/34URLs/held11 preserved. One finish-first transaction completed, no quota/wholecluster claim; next independent eligible family decision. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T18:19:21.492Z",
+      "release_commit": "7c1bebf9ccb080d84df9bb366e349b2751a1b5d9"
     },
     {
       "id": "FT-IMP-111",

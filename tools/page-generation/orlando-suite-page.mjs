@@ -5,20 +5,39 @@ import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-mode
 
 export const orlandoPath = "where-to-stay/orlando-family-hotels.html";
 export const orlandoRateCsvPath = "downloads/orlando-ihg-dated-rates.csv";
-export function orlandoRateComparisonCsv(records = suites) {
-  const headings = ["Property", "Exact room", "Party and age basis", "Stay dates", "Nights", "Currency", "Price unit", "Dated public plan", "Estimated stay total", "Derived approximate nightly", "Room subtotal", "Included resort fees", "Included displayed taxes", "Plan terms", "Fee and acceptance limits", "Deposit timing conflict", "Price observed", "Terms checked", "Recheck due", "Dated source", "Live comparison"];
-  const rows = records.flatMap(suite => [suite.priceSample, suite.alternatePriceSample].filter(Boolean).map(rate => [
+export const orlandoCombinedRateCsvPath = "downloads/orlando-dated-rates.csv";
+const rateHeadings = ["Property", "Exact room", "Party and age basis", "Stay dates", "Nights", "Currency", "Price unit", "Dated public plan", "Estimated stay total", "Derived approximate nightly", "Room subtotal", "Included resort fees", "Included displayed taxes", "Plan terms", "Fee and acceptance limits", "Deposit timing conflict", "Price observed", "Terms checked", "Recheck due", "Dated source", "Live comparison"];
+const ihgRateRows = records => records.flatMap(suite => [suite.priceSample, suite.alternatePriceSample].filter(Boolean).map(rate => [
     suite.name, rate.room, rate.party, rate.stay, rate.nights, "USD", "one room / per night; stay total for stated nights",
     rate.plan, rate.estimatedTotal.toFixed(2), (rate.estimatedTotal / rate.nights).toFixed(2), rate.roomSubtotal.toFixed(2),
     rate.resortFees.toFixed(2), rate.taxes.toFixed(2), rate.terms, suite.priceTerms.limitation, suite.priceTerms.depositConflict,
     rate.observedOn, suite.priceTerms.checkedOn, suite.priceTerms.recheckOn, sources[rate.source], `https://familytripwise.com/${orlandoPath}#ihg-rate-plans`
   ]));
+const rateCsv = rows => {
   const cell = value => {
     const plain = String(value ?? "").replaceAll(/[\r\n\t]+/g, " ");
     const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
     return `"${safe.replaceAll('"', '""')}"`;
   };
-  return [headings, ...rows].map(row => row.map(cell).join(",")).join("\n") + "\n";
+  return rows.map(row => row.map(cell).join(",")).join("\n") + "\n";
+};
+export function orlandoRateComparisonCsv(records = suites) {
+  return rateCsv([rateHeadings, ...ihgRateRows(records)]);
+}
+export function orlandoCombinedRateComparisonCsv(records = suites) {
+  const rows = records.flatMap(suite => {
+    const booking = suite.bookingRates;
+    if (!booking) return ihgRateRows([suite]).map(row => [...row, "USD displayed in the dated IHG currency selector and rate disclosures."]);
+    return booking.plans.map(rate => [
+      suite.name, booking.room, booking.party, booking.stay, booking.nights, booking.currency,
+      "one room / per night; stay total for stated nights", rate.plan, rate.estimatedTotal.toFixed(2),
+      (rate.estimatedTotal / booking.nights).toFixed(2), rate.roomSubtotal.toFixed(2), "Unknown", rate.taxes.toFixed(2),
+      `${rate.restrictions} ${booking.terms}`, `${booking.feeBasis} ${booking.limitation}`, "Deposit amount and applicable cancellation deadline require confirmation.",
+      booking.checkedOn, booking.checkedOn, booking.recheckOn, sources[booking.source],
+      `https://familytripwise.com/${orlandoPath}#${suite.id}`, booking.currencyBasis
+    ]);
+  });
+  return rateCsv([[...rateHeadings, "Currency basis"], ...rows]);
 }
 const cite = (key, label) => `<a href="${e(sources[key])}">${label}</a>`;
 const waterPolicy = suite => {
@@ -67,6 +86,7 @@ export function orlandoSuitePage() {
     </section>
     <section id="quick-compare">
       <h2>Start with the park days you will repeat</h2>
+      <p><a href="../${orlandoCombinedRateCsvPath}" download>Download dated Cabana Bay and IHG rates (CSV)</a></p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Suite overview"><table><caption>Published room categories, not live availability</caption><thead><tr><th scope="col">Base / property</th><th scope="col">Exact room category</th><th scope="col">Published headcount</th></tr></thead><tbody>
         ${suites.map(suite => `<tr><th scope="row">${e(suite.base)}<br><a href="#${suite.id}">${e(suite.name)}</a></th><td>${e(suite.room)}</td><td>${suite.maximum === null ? "Unresolved" : `Up to ${suite.maximum}`}<br>${cite(suite.capacitySource, suite.id === "holiday-inn" ? "Dated IHG rate details" : "Official rooms")}</td></tr>`).join("\n")}
       </tbody></table></div>
@@ -132,5 +152,6 @@ export function orlandoSuitePage() {
 export function writeOrlandoSuitePage(writeSite) {
   writeSite(orlandoPath, orlandoSuitePage());
   writeSite(orlandoRateCsvPath, orlandoRateComparisonCsv());
+  writeSite(orlandoCombinedRateCsvPath, orlandoCombinedRateComparisonCsv());
   for (const name of ["data", "model", "client"]) writeSite(`orlando/orlando-suite-${name}.mjs`, readFileSync(new URL(`./orlando-suite-${name}.mjs`, import.meta.url), "utf8"));
 }

@@ -55,6 +55,6 @@ test("no-JS native link and generated asset stay in parity without changing shar
   writeOrlandoSuitePage((path, value) => out.set(path, value));
   assert.equal(out.get(orlandoRateCsvPath), orlandoRateComparisonCsv());
   assert.equal(readFileSync(new URL(`../site/${orlandoRateCsvPath}`, import.meta.url), "utf8"), orlandoRateComparisonCsv());
-  assert.equal(out.size, 5);
+  assert.equal(out.size, 6);
   assert.equal(out.get("where-to-stay/orlando-family-hotels.html"), html);
 });

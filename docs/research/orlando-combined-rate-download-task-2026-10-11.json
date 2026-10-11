@@ -1,0 +1,15 @@
+{
+  "id": "FT-IMP-113",
+  "observed_on": "2026-10-11",
+  "evidence_class": "INTERNAL_TASK_PROXY",
+  "family_decision": "Carry dated November8-13 five-person Cabana and IHG room-plan costs and booking caveats outside the page without losing unknown fees or ages.",
+  "hypothesis": "The legacy IHG-only download cannot preserve the now-qualified two-property price decision.",
+  "before": "Production7c1bebf: four visible plans, one native download with only two IHG rows. Cabana currency interpretation, unknown mandatory extras and cancellation terms are not portable.",
+  "source_records": ["docs/research/orlando-ihg-rate-plans-2026-10-11.json", "docs/research/orlando-cabana-rate-plans-2026-10-11.json", "tools/page-generation/orlando-suite-data.mjs"],
+  "implementation": "One additive native download of four plans, generated from maintained records; legacy IHG file remains byte-identical. 22 columns retain currency basis, exact room/party/stay, components, terms, source clocks and links. Cabana resort fees are Unknown, not zero.",
+  "result": "IMPLEMENT_NOW; Master21focused/822full/47maintenance/state0/GSC90/localSEO0errors-fiveprior/invariantsPASS. Actual1280/390/320 keyboard downloads each four rows/22columns/exactbytes with changed6person form and restored5person example, nooverflow, focused link, image1280loaded/errors0. Different read-only consensus and verified production remain required before delivery.",
+  "confidence": "High for internal portability/context preservation; no real-user or SEO outcome evidence.",
+  "lesson": "A cross-property export must retain unequal fee and currency evidence instead of making totals falsely comparable.",
+  "next_falsification_trigger": "Download failure, source-record drift, lost fee/age/term context or scoped October18 rate review.",
+  "limits": "No provider revisit or fact renewal; no live quote, all-fee ranking, booking, exact-age acceptance, human experience or full063 corpus qualification."
+}
