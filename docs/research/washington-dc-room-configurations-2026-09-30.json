@@ -67,6 +67,7 @@
     },
     {
       "id": "dc-residence-two-queen-onqq", "hotel": "Residence Inn Washington DC National Mall",
+      "dining_seats": {"count": 4, "checked_on": "2026-09-25", "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Retained exact ONQQ inspection: dining table seats4; source not renewed by transcription."},
       "category": "1 Bedroom Suite, 2 Queen, Sofa bed (ONQQ)", "source_id": "residence",
       "sleeping_setup": "Two queen beds, sofa bed and separated living space; maintained September25 exact-category inspection states maximum6, no rollaway or connecting rooms.",
       "kitchen": "published-kitchen", "connection": "not-applicable",

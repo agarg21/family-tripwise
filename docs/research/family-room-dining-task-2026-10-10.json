@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-094",
+  "checked_on": "2026-10-10",
+  "evidence_class": "INTERNAL_TASK_VALIDATION",
+  "family_decision": "Can five people use the recorded in-room dining table together, separately from kitchen availability and sleeping capacity?",
+  "hypothesis": "The existing kitchen plus not-excluded capacity filters resolve a five-person meal-place screen.",
+  "task": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "minimum_dining_seats": 5},
+  "maintained_sources": [
+    {"path": "docs/research/washington-dc-room-configurations-2026-09-30.json", "record_id": "dc-residence-two-queen-onqq", "source_url": "https://www.marriott.com/en-us/hotels/wascp-residence-inn-washington-dc-national-mall/rooms/", "observed_on": "2026-09-25", "recorded_seats": 4},
+    {"path": "docs/research/boston-room-configurations-2026-10-01.json", "record_id": "boston-fenway-two-bedroom-tobt", "source_url": "https://www.marriott.com/en-us/hotels/bosfn-residence-inn-boston-back-bay-fenway/rooms/", "observed_on": "2026-10-03", "recorded_seats": 4},
+    {"path": "docs/research/boston-room-configurations-2026-10-01.json", "record_id": "boston-fenway-one-bedroom-onbt", "source_url": "https://www.marriott.com/en-us/hotels/bosfn-residence-inn-boston-back-bay-fenway/rooms/", "observed_on": "2026-10-03", "recorded_seats": 2}
+  ],
+  "before": {"dc_kitchen_rows": 4, "dc_known_under_five_rows": 1, "boston_original_october3_pack_kitchen_not_excluded_rows": 1, "boston_known_under_five_rows": 1, "current_boston_published_pack_kitchen_rows": 2},
+  "required_result": {"dc_retained_unknown_seating_rows": 3, "boston_original_october3_pack_retained_rows": 0, "current_boston_published_pack_retained_unknown_seating_rows": 1, "current_boston_retained_category": "Four Seasons Hotel Boston Plaza Suite; October9 cooking evidence retained, unpriced dining count unknown", "stale_recorded_counts": "Retain with RECHECK_SOURCE; never silently renew", "missing_counts": "Retain with NOT_ESTABLISHED; never interpret retained as eligible"},
+  "decision": "IMPLEMENT optional source-dated seating screen in existing shared comparison, reject kitchen-as-dining shortcut. No new URL or public page change.",
+  "confidence": "High for narrow existing recorded-count routing; no current policy, equipment availability, human testing, booking acceptance, suitability or SEO proof.",
+  "limits": ["October10 is task-validation date, not a new source inspection or price observation.", "Counts are structured transcriptions of maintained exact-category evidence, not prose inference or a complete dining-equipment corpus.", "Fresh means within the existing source review interval, not current revalidation; table count is not usable child-seat geometry, high-chair availability or meal fit.", "Actual five-person price ages, tax/fee and configuration unknowns remain; six-person tasks cannot inherit five-person prices.", "All public pages/default exports/prices/party/stay/fees/source clocks and observation windows unchanged; full cluster and new-URL gates remain."],
+  "reusable_lesson": "Room capacity, cooking equipment and dining seating are separate constraints; unknowns remain visible during routing.",
+  "next_falsification_trigger": "Changed exact-category seating evidence, source dates or failed meal-place task."
+}

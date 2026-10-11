@@ -22,7 +22,7 @@ const cell = value => {
 
 function comparisonFilters(filters) {
   if (!filters || Object.getPrototypeOf(filters) !== Object.prototype ||
-      Reflect.ownKeys(filters).some(key => !["kitchen", "capacity", "budget"].includes(key))) throw new Error("Invalid comparison filters");
+      Reflect.ownKeys(filters).some(key => !["kitchen", "capacity", "budget", "minimum_dining_seats"].includes(key))) throw new Error("Invalid comparison filters");
   const value = (key, allowed) => {
     const field = Object.getOwnPropertyDescriptor(filters, key);
     const selected = field ? field.value : "any";
@@ -44,7 +44,21 @@ function comparisonFilters(filters) {
       throw new Error("Budget requires USD or GBP and a positive cent-precision nightly limit");
     budget = { currency: currency.value, nightly_limit: limit.value };
   }
-  return { kitchen: value("kitchen", ["any", "published"]), capacity: value("capacity", ["any", "not-excluded"]), ...(budget ? { budget } : {}) };
+  const seating = Object.getOwnPropertyDescriptor(filters, "minimum_dining_seats");
+  if (seating && (!Object.hasOwn(seating, "value") || !Number.isSafeInteger(seating.value) || seating.value < 1))
+    throw new Error("Minimum dining seats must be a positive safe integer");
+  return { kitchen: value("kitchen", ["any", "published"]), capacity: value("capacity", ["any", "not-excluded"]), ...(budget ? { budget } : {}),
+    ...(seating ? { minimum_dining_seats: seating.value } : {}) };
+}
+
+function diningSeatScreen(record, minimum, asOf, refreshDays) {
+  if (!minimum) return null;
+  const seating = record.dining_seats;
+  if (!seating) return { status: "NOT_ESTABLISHED", excludes: false, basis: "No recorded exact-category count" };
+  const stale = (Date.parse(asOf) - Date.parse(seating.checked_on)) / 86400000 > refreshDays;
+  const insufficient = seating.count < minimum;
+  return { status: stale ? "RECHECK_SOURCE" : insufficient ? "BELOW_REQUESTED_SEATS" : "AT_LEAST_REQUESTED_PUBLISHED_SEATS",
+    excludes: !stale && insufficient, basis: `${seating.count} recorded seats; checked ${seating.checked_on}; ${seating.basis}` };
 }
 
 function observedNightlyBudget(price, rate, budget, nights) {
@@ -68,7 +82,7 @@ function cancellationDateCheck(rate, asOf) {
   return [`Cancellation deadline date check ${rate.cancellation_deadline_date_relation}: recorded hotel-local date ${rate.cancellation_deadline_local_date}; comparison date ${asOf}; calendar dates only, no timezone conversion or current cancellability/availability guarantee; recheck current rate terms`];
 }
 
-function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budget }) {
+function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budget, minimum_dining_seats }) {
   const screened = screenRoomPack(pack, party, asOf, prices);
   const stay = party.stay ?? pack.scenario?.stay;
   const nights = (Date.parse(stay?.departure) - Date.parse(stay?.arrival)) / 86400000;
@@ -77,6 +91,8 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budg
   return screened.flatMap((room, index) => {
     if (kitchen === "published" && room.kitchen !== "published-kitchen") return [];
     if (capacity === "not-excluded" && room.screening === "OUTSIDE_PUBLISHED_LIMIT") return [];
+    const dining = diningSeatScreen(pack.records[index], minimum_dining_seats, asOf, pack.refresh_days);
+    if (dining?.excludes) return [];
     const price = room.price;
     return (price.rates ?? [null]).map(rate => [
       pack.destination, room.hotel, room.category, room.screening, room.conditions.join("; "), JSON.stringify(pack.records[index].configurations),
@@ -92,6 +108,7 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budg
       [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed",
         ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : []),
         ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : []),
+        ...(dining ? [`Dated dining seating ${dining.status}: requested minimum ${minimum_dining_seats}; ${dining.basis}; excludes only fresh recorded undersized counts, unknown and stale counts retained; not current equipment, usable seating geometry, meal fit or booking acceptance`] : []),
         ...observedNightlyBudget(price, rate, budget, nights), ...cancellationDateCheck(rate, asOf)].join("; ")
     ]);
   });
@@ -177,6 +194,9 @@ export function parseRoomComparisonOptions(input) {
     } else if (["--nightly-budget", "--budget-currency"].includes(args[i]) &&
         !budgetOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
       budgetOptions.set(args[i], args[++i]);
+    } else if (args[i] === "--minimum-dining-seats" && !Object.hasOwn(filters, "minimum_dining_seats") &&
+        /^(?:[1-9]\d*)$/.test(args[i + 1] ?? "")) {
+      filters.minimum_dining_seats = Number(args[++i]);
     } else if (["--adults", "--child-ages", "--arrival", "--departure"].includes(args[i]) &&
         !taskOptions.has(args[i]) && args[i + 1] && !args[i + 1].startsWith("--")) {
       taskOptions.set(args[i], args[++i]);
@@ -226,7 +246,7 @@ async function main() {
     await mkdir(dirname(path), { recursive: true });
     await writeFile(await researchOutputPath(path), csv, { flag: "wx" });
     console.log(JSON.stringify({ as_of: date, categories: packs.reduce((total, p) => total + p.records.length, 0), packs: packs.length, output, public_changes: false,
-      ...(filters.kitchen === "published" || filters.capacity === "not-excluded" || filters.budget ? { filters, categories_are_input_count: true } : {}),
+      ...(filters.kitchen === "published" || filters.capacity === "not-excluded" || filters.budget || filters.minimum_dining_seats ? { filters, categories_are_input_count: true } : {}),
       task: { adults: party.adults, child_ages: party.child_ages, stay: party.stay } }));
   } else process.stdout.write(csv);
 }

@@ -22,6 +22,7 @@
   "records": [
     {
       "id": "boston-fenway-two-bedroom-tobt",
+      "dining_seats": {"count": 4, "checked_on": "2026-10-03", "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Retained exact TOBT modal: dining table seats4; source not renewed by transcription."},
       "hotel": "Residence Inn Boston Back Bay/Fenway",
       "category": "2 Bedroom Suite, Bedroom 1: 1 King, Bedroom 2: 1 Queen, Sofa bed (TOBT)",
       "source_id": "fenway",
@@ -65,6 +66,7 @@
     },
     {
       "id": "boston-fenway-one-bedroom-onbt",
+      "dining_seats": {"count": 2, "checked_on": "2026-10-03", "evidence_class": "OFFICIAL_PROPERTY_FACT", "basis": "Retained exact ONBT modal: table seats2; source not renewed by transcription."},
       "hotel": "Residence Inn Boston Back Bay/Fenway",
       "category": "1 Bedroom Suite, 1 King, Sofa bed (ONBT)",
       "source_id": "fenway",

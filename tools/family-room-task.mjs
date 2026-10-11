@@ -44,6 +44,24 @@ export function validateRoomPack(pack) {
   for (const r of pack.records) {
     if (!r || !text(r.id) || ids.has(r.id)) { fail("Invalid/duplicate record ID"); continue; }
     ids.add(r.id);
+    if ("dining_seats" in r) {
+      const field = Object.getOwnPropertyDescriptor(r, "dining_seats");
+      const seating = field?.value;
+      const keys = ["count", "checked_on", "evidence_class", "basis"];
+      if (!field || !Object.hasOwn(field, "value") || !field.enumerable || !seating ||
+          Object.getPrototypeOf(seating) !== Object.prototype || Reflect.ownKeys(seating).length !== keys.length ||
+          keys.some(key => {
+            const property = Object.getOwnPropertyDescriptor(seating, key);
+            return !property || !Object.hasOwn(property, "value") || !property.enumerable;
+          }) ||
+          Reflect.ownKeys(seating).some(key => !keys.includes(key))) {
+        fail(`${r.id}: invalid dining seating evidence`);
+      } else if (!Number.isSafeInteger(seating.count) || seating.count < 0 || !validDate(seating.checked_on) ||
+          !pack.sources[r.source_id] || seating.checked_on > pack.sources[r.source_id].checked_on ||
+          seating.evidence_class !== "OFFICIAL_PROPERTY_FACT" || !text(seating.basis)) {
+        fail(`${r.id}: invalid dining seating count/date/basis`);
+      }
+    }
     if (!text(r.hotel) || !text(r.category) || !text(r.source_id) || !Object.hasOwn(pack.sources, r.source_id) || !text(r.sleeping_setup) ||
         !["published-kitchen", "not-established"].includes(r.kitchen) ||
         !["named-connected-category", "requested-separate-room", "not-applicable"].includes(r.connection) ||
