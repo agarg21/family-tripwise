@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-119",
+  "observed_on": "2026-10-11",
+  "evidence_class": "INTERNAL_PAGE_TASK_WITH_REUSED_OFFICIAL_VISITOR_FACT",
+  "human_tested": false,
+  "source_record": "docs/research/washington-dc-museum-rest-task-2026-10-03.json",
+  "source_inspected_on": "2026-10-03",
+  "source_renewed": false,
+  "current_source_check": {
+    "operation": "web.open https://naturalhistory.si.edu/visit",
+    "checked_on": "2026-10-11",
+    "result": "403 Forbidden",
+    "attempts": 1,
+    "affected_gate": "Current visitor-fact confirmation only",
+    "owner": "Official source permitted-access availability",
+    "unblock": "Documented changed permitted access yielding a current official body",
+    "next_check": "Only after documented access change; no unchanged retry, alternate tool/origin or security bypass",
+    "prior_denied_links_retried": false
+  },
+  "family_decision": "Can a family plan an indoor packed lunch or leave bags at Natural History during a museum/rest day, and which hours and costs have actually been checked?",
+  "hypothesis": "The public DC museum-rest paragraph and time arithmetic expose maintained museum-side meal, storage and admission constraints.",
+  "before_result": "REJECT: public rest section mentions general meal checks and unknown return feasibility but does not expose the maintained packed-lunch-outside/no lunch seating/refrigerated storage/no bag-coat-locker storage constraints. Its hypothetical 450-minute allowance is not identified there as the dated museum opening window. This is an internal answerability gap, not an observed parent failure or feature preference.",
+  "decision": "IMPLEMENT one compact dated source-derived block beside the existing rest tool. No export or new control. PRESERVE current November operation, re-entry permission, queues, routes, hotel-return feasibility and complete meal/transport costs as unknown.",
+  "public_scope": "Natural History only. General admission is not all experiences or a full trip budget. October3 source facts reused, not renewed by October11 failed check or page publication. American History500 and linked Smithsonian guidelines404 holds are not retried or generalized.",
+  "confidence": "High fidelity to maintained official record; current policy and real-parent usefulness unconfirmed. Internal task review is proxy evidence, not user testing, demand, satisfaction or SEO lift.",
+  "lesson": "Place the maintained constraints that can change the day plan beside the decision, rather than adding an export whose demand has not been established. Opening hours do not establish usable time; free general admission does not establish free meals, transport or paid experiences.",
+  "next_falsification_trigger": "Changed permitted official body, record drift, loss of dated/source/unknown scope, failed mobile or keyboard source access, or actual user evidence that the block does not help the meal/rest decision. No calendar-only source retry."
+}

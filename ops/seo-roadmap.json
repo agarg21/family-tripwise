@@ -20,11 +20,47 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-119",
+      "title": "Expose Natural History lunch and entry constraints beside the DC rest decision",
+      "kind": "implementation",
+      "lane": "existing-page-museum-meal-rest-decision",
+      "status": "selected",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T23:03:37Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/dc-museum-meal-rest-public-task-2026-10-11.json",
+        "tools/page-generation/washington-dc-family-hotels-page.mjs",
+        "site/where-to-stay/washington-dc-family-hotels.html",
+        "tools/dc-museum-visit-context.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Maintained RES108 October3 official Natural History visitor record contains operating window, general admission, packed-lunch and storage/screening limits missing beside public DC rest arithmetic. Bounded museum-day task cannot tell whether indoor packed lunch/locker storage is supported. One current web.open https://naturalhistory.si.edu/visit returned403Forbidden; no retry, alternate browser/tool/origin or linked prior404/500 retry. Reuse dated record without renewal; user CSV feedback excludes assumed export demand as action rationale.",
+      "gsc_evidence_classification": "Reused recent October11 read-only API collected16:19Z finalizedOct9 and priorOctober10 finalizedOct8; July27 sitemap discovery stale. Orientation only, no CTR/query-cohort or indexing action.",
+      "acceptance_criteria": [
+        "One compact unframed source-derived context block in existing museum-rest section: dated10:00-17:30/450-minute opening window, December25 exception, general admissionUSD0/person/no general ticket and excluded paid experiences/food/transit, packed-lunch outside/no lunch seating-refrigerated storage, security screening/no bag-coat-locker storage. No actual usable day, visit-date operation, queue/re-entry permission/route/stroller/safety or family suitability assurance.",
+        "Strict source scope/provenance and unknown checks; sourceOctober3 not renewed by failedOctober11recheck or publication. No new export/control/URL, no change to old hotel rooms/prices/fees/age-party-stay-source dates/CSV/rail/rest behavior. Removing one generated block restores1e0840dcHTML exactly.",
+        "Focused/full native QA, actual1280/390/320 visible source context/keyboard source focus/containednooverflow/photo and existing kitchen/rail/rest controls; different independent read-onlyPASS/PASS_WITH_P3, exact9path guardedpush/Pages/release-marker/productionSEO/affectedURL invariants."
+      ],
+      "measurement_plan": "LRN216 internal decision task plus reused OFFICIAL_VISITOR_FACT, not human preference or current visitor/source confirmation. Can reader reject indoor packed-lunch/locker assumption and identify dated hours and separate paid costs before choosing room return? Falsify record drift, label/date/uncertainty loss, responsive/source failure or changed permitted official body. No CSV demand claim.",
+      "production_invariant": "Only one additive data-museum-visit-context block before existing rest-budget tool; remove it with its newline restores1e0840dc target exactly. Preserve all site/src/priorresearch/config/catalog/price-room-fee-currency-unit-party-stay-sourceclocks/downloads/meta-schema34URLs/960baseline/held11/320priorordereditems. Source task originalOctober3 unchanged, no denied-source retry or new provider/account/security/scheduler/indexing mutation.",
+      "decision": "IMPLEMENT maintained partial visitor constraints on existing approved DC lodging decision; no current-source renewal. First transaction actualrun23:01:17Z/startdeadline23:46:17Z; fixed sprint endsOctober12at18:29:58Z unchanged. No assumed-download work.",
+      "review_receipt": "FT-IMP-119 different Ptolemy independent read-only PASS/noP0-P3; manifest53251869210e37ed5e4540a5b8e1fff2657afb4bdcd3c0d6c464979cc42947ff/all962hashes/exact9/953nonowned/320priorordereditems/held11-cleanledgerisolation/worktreeguard/finaldrift0 verified. Independent19focused/invariants/state0/GSC90/localSEO0errors-sixwarnings(fiveprior plus annualDecember25year-unspecified, not confirmed2026operation); Master844full47maintenance completed log inspected, not independentlyfull. Six saved localPNG/three viewport-regressionJSONpairs1280/390/320 inspected: source keyboardfocus/containednooverflow/kitchen1to3/rest420planned30remaining-reset/rail2adultweekend2journeyUSD9-10-reset/image1280x830/errors0. One additive source-derived block removal reproduces1e0840dcHTMLexactly; original rooms-prices-fees-currency-unit-party-stay-sourceclocks/CSV/rail-rest/meta-schema34URLs/otherpublic-src-priorresearch/config preserved. October3 official visitor facts reused, not renewed; singleOctober11web.open403 remains narrow current-confirmation hold/no retry-tool-origin-bypass. Novemberoperation/queues/re-entry/hotelreturn unknown. LRN216 internal answerability task nothuman/SEO or CSV-demand evidence; no new export. Reviewer no writes/network/livebrowser/delegation. Only immutable mechanical consensus receipt; guarded production gates remain/fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-118",
       "title": "Calculate a family's conditional DC rail budget from maintained age rules",
       "kind": "implementation",
       "lane": "existing-page-car-free-family-budget",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T22:02:20Z",
       "allowed_during_observation": true,
@@ -60,7 +96,11 @@
       "measurement_plan": "LRN215 internal task with reused officialOct3 policy and model-derived arithmetic, not real user/SEO/currentfare/journey proof. Can same dated engine expose paying count and unknown excess-child fares for changed parties? Falsify core drift, blank/invalid treatedzero, stale computation, failed keyboard/reset/unknown result or sourceNov2expiry.",
       "production_invariant": "Only additive DC rail calculator/config/script and DC CSSversion change; strip those restores88e022dDCHTML. CSS appended dc-rail-only selectors, original CSS prefix identical. All existing CSV/rates/fee-room-age-sourceclocks/rail examples/rest artifacts/catalog/research/otherpublic-src/34URLs/954baseline/held11/319prioritems preserved. Existing Node API/CLI strict behavior unchanged; no fresh fare/source collection, provider/account/booking/security/scheduler/newURL mutation.",
       "decision": "IMPLEMENT failed own-family rail-budget task on existing approved DC page using maintained proven logic; first sequential transaction actualrun22:00:47Z/startdeadline22:45:47Z/fixed sprint endsOct12at18:29:58Z unchanged.",
-      "review_receipt": "FT-IMP-118 different Rawls independent read-only PASS/noP0-P3; manifest9ac32c4412d904a60facb01898ddd1d900f7a7bf8468dc7bbff5584833d72675/all960hashes/exact16/944nonowned/319priorordereditems/held11-cleanledgerisolation/zero-finaldrift verified. Independent26focused/324additionalparitycases(108native matrix)/invariants/state0/GSC90/localSEO0fiveprior/saved responsive proofs-three28372byteCSV inspection; Master840full47maintenance green reruns inspected, not independentlyfull/livebrowser. Strict existingcore body andCLI preserved; sharedbrowsermodules no Node/network/persistence/string-codegen. ActualIAB1280/390/320 blank/age5/excess/invalid-missing/changed/nokids/reset/keyboard/contained-nooverflow-errors0; original1to3kitchenfilter/fullCSVEnter byteexact/420minutes30remainingrest-reset/image1280x830. Initial historical4asset/no-hidden fixtures adapted before edits with exactpathregistration; no fact checks relaxed. Eval-harness rejection recorded/no retry/bypass; explicit supportedlocators/freshAX corrected old320paint-lag proof. DatedOct3policy notrenewed/stale>30days noestimate/excessyoung unknown. All prices-fees-currency-unit-party-stay-sourceclocks/CSV/fixedexamples/rest/otherpublic-priorresearch-src/meta-schema34URLs preserved; LRN215 internalproxy reusedofficial nothumanSEO/journey/currentquote. Only immutable mechanical consensus; guardedrelease-production pending/fixed sprint unchanged."
+      "review_receipt": "FT-IMP-118 different Rawls independent read-only PASS/noP0-P3; manifest9ac32c4412d904a60facb01898ddd1d900f7a7bf8468dc7bbff5584833d72675/all960hashes/exact16/944nonowned/319priorordereditems/held11-cleanledgerisolation/zero-finaldrift verified. Independent26focused/324additionalparitycases(108native matrix)/invariants/state0/GSC90/localSEO0fiveprior/saved responsive proofs-three28372byteCSV inspection; Master840full47maintenance green reruns inspected, not independentlyfull/livebrowser. Strict existingcore body andCLI preserved; sharedbrowsermodules no Node/network/persistence/string-codegen. ActualIAB1280/390/320 blank/age5/excess/invalid-missing/changed/nokids/reset/keyboard/contained-nooverflow-errors0; original1to3kitchenfilter/fullCSVEnter byteexact/420minutes30remainingrest-reset/image1280x830. Initial historical4asset/no-hidden fixtures adapted before edits with exactpathregistration; no fact checks relaxed. Eval-harness rejection recorded/no retry/bypass; explicit supportedlocators/freshAX corrected old320paint-lag proof. DatedOct3policy notrenewed/stale>30days noestimate/excessyoung unknown. All prices-fees-currency-unit-party-stay-sourceclocks/CSV/fixedexamples/rest/otherpublic-priorresearch-src/meta-schema34URLs preserved; LRN215 internalproxy reusedofficial nothumanSEO/journey/currentquote. Only immutable mechanical consensus; guardedrelease-production pending/fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-118 release 1e0840dc4c6df5b1bd16409f0837e38fd8a87681 remote verified 2026-10-11T22:22:26.819Z; main0-0/emptyindex/exact16/all960indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified DC own-family conditional rail calculator. Pages38179871598success/matching1e0840dc4c6df5b1bd16409f0837e38fd8a87681/run/eightHTTP200exactassets/JavaScriptMIME/allinvariantsPASS at2026-10-11T22:19:32.903Z/productionSEO0errors-fiveprior. ActualIAB1280/390/320 blank/example/age5/excess/invalid-missing/changed/nokids/reset/keyboard/nooverflow-contained/errors0; all three original fullCSVEnter downloads28372bytes exact/kitchen1to3/rest420planned30remaining-reset/image1280x830. Saved production-width JSON/age5-excessPNG/regressionJSON/CSV/context under/tmp/ft-imp118-browser, inspected. Master840full47maintenance26focused/differentRawlsPASS with324additionalparitycases. LRN215 integrated internalproxy/reusedOct3policy andconditionalarithmetic, no research-only report or currentfare/journey/humanSEOproof. StrictNode/browsercore/CLI unchanged; excessyoungfares/missing/stale notzero, no sourceclock renewal. All oldroom-prices-fees-currency-units-party-stay-clocks/CSV/fixedexamples/rest/otherpublic-priorresearch-src/meta-schema34URLs/held11 preserved. One finish-first transaction completed, no quota. Next bounded existing-page transport or exact-room-budget qualification; DCprice review remainsOctober14/fare reviewNovember2, Homewood133 fullfee-review gate held until newprimary evidence and denied providers notretried. Runtime continuation remainslocalapp-dependent, fixed sprint unchanged. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T22:22:26.841Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "1e0840dc4c6df5b1bd16409f0837e38fd8a87681"
     },
     {
       "id": "FT-IMP-117",

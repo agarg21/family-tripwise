@@ -19,7 +19,8 @@ export const dcRooms = screenRoomPack(dcPack, dcPack.scenario, dcScreenedOn, dcP
 export const dcCsv = roomComparisonCsv(dcPack, dcPack.scenario, dcScreenedOn, dcPrices);
 export const dcPremiums = dcPlanPremiums(dcPrices);
 const restRecord = read("dc-rest-time-budget-2026-10-03.json");
-export const dcRestExample = assessMuseumRest(read("washington-dc-museum-rest-task-2026-10-03.json"),
+const museumRecord = read("washington-dc-museum-rest-task-2026-10-03.json");
+export const dcRestExample = assessMuseumRest(museumRecord,
   "National Museum of Natural History", restRecord.hypothetical_durations, dcScreenedOn);
 const restLabels = ["Morning visit", "Museum to room", "Room rest", "Room to museum", "Entry wait", "Afternoon visit"];
 const e = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
@@ -31,6 +32,30 @@ const premium = (room, rate) => {
   return result.stay_increment === 0 ? "Baseline" : `${amount(result.stay_increment)} / five-night stay<p>Approx. ${amount(result.nightly_increment)} / night equivalent</p>`;
 };
 const cooking = record => record.kitchen === "published-kitchen" ? record.checks.find(check => check.startsWith("Full kitchen lists")) : record.checks.find(check => /Microwave and mini|Coffee\/minibar/.test(check));
+
+export function dcMuseumVisitContext(record = museumRecord) {
+  const museum = record.museum_constraints.find(row => row.museum === "National Museum of Natural History");
+  const source = record.sources.find(row => row.id === museum?.source_id);
+  if (source?.status !== "body-inspected" || source.evidence_class !== "OFFICIAL_VISITOR_FACT" ||
+      source.url !== "https://naturalhistory.si.edu/visit" || source.inspected_on !== "2026-10-03" ||
+      museum.published_daily_open !== "10:00" || museum.published_daily_close !== "17:30" ||
+      museum.closed_date_exception !== "December25" || museum.future_november_operation_confirmed !== false ||
+      museum.general_admission?.amount !== 0 || museum.general_admission.currency !== "USD" ||
+      museum.general_admission.unit !== "general museum admission/person" || museum.general_admission.tickets_required !== false ||
+      museum.general_admission.special_paid_experiences_included !== false || museum.room_return_duration_minutes !== null ||
+      museum.second_entry_wait_minutes !== null || museum.specific_hotel_route !== null || museum.stroller_route_assessed !== false ||
+      museum.packed_lunch !== "Must be stored away during visit and eaten outside; no lunch seating or refrigerated lunch storage offered" ||
+      museum.storage !== "No coat, bag or locker storage offered" ||
+      museum.screening !== "Published visitor page requires security screening for visitors; no queue duration or expedited re-entry claim" ||
+      record.editorial_derivation.published_nmnh_window_minutes !== 450)
+    throw new Error("Natural History public context needs reviewed visitor-source reconciliation");
+  return `<div id="nmnh-visit-context" data-museum-visit-context><h3>Natural History: lunch and entry constraints</h3>
+<ul><li><strong>Dated hours:</strong> ${e(museum.published_daily_open)}-${e(museum.published_daily_close)} daily; closed December 25. The ${record.editorial_derivation.published_nmnh_window_minutes}-minute opening window is not usable visit time or confirmation of November operation.</li>
+<li><strong>General admission:</strong> ${e(museum.general_admission.currency)} ${museum.general_admission.amount} per person; no general-admission ticket required. Paid experiences, food and transport are not included.</li>
+<li><strong>Packed lunch:</strong> keep it stored away during the visit and eat outside. No lunch seating or refrigerated lunch storage is offered.</li>
+<li><strong>Bags and entry:</strong> security screening is required; no coat, bag or locker storage is offered. Queue time and return-entry conditions remain unknown.</li></ul>
+<p>${link(source.url, "Official Natural History visitor source")} &middot; facts checked ${e(source.inspected_on)}. October 11, 2026 recheck unavailable; these facts have not been renewed. Confirm visit-date hours, lunch arrangements and return-entry rules before relying on a hotel-rest plan.</p></div>`;
+}
 
 export function dcFamilyRailForm() {
   return `<div id="family-rail-budget" class="dc-rail-budget"><h3>Your family rail budget</h3>
@@ -85,6 +110,7 @@ ${dcTransitExamples.map(({ input, result }) => `<tr><th scope="row">${input.rail
 ${dcFamilyRailForm()}
 <p class="dc-caution">The station pair, travel time, actual service, trip count and visit-date fare remain unknown. These amounts do not establish a workable rest return or a room-plus-transport all-fee budget. Fare source checked October 3; review due November 2, before the example November stay. Recheck ${link(dcTransitEvidence.policy.source.url, "WMATA fares and child eligibility")} and ${link(dcTransitEvidence.corroborating_source.url, "WMATA new-rider guidance")} for the actual trip. Hotel price and property check dates are unchanged.</p></section>
 <section id="rest"><h2>Can you return for a museum-day rest?</h2><p>This comparison does not establish a child-paced, entrance-to-room return, stroller route, queue time, re-entry or useful rest duration for any of these hotels. A property address or map walking estimate cannot answer that task. Choose the museum entrance, hotel category and actual rest window before relying on a midday return; include meals, internal hotel travel and the second activity.</p><p>Indoor-pool operation, meal seating and dietary fit also remain separate checks. None of the rooms is presented as a verified nap-friendly or safest base.</p>
+${dcMuseumVisitContext()}
 <div id="rest-budget" class="dc-rest-budget"><h3>Museum-day time budget</h3>
 <p>Conditional minutes only, not a hotel recommendation. Available time must reflect the actual visit date and opening, entry and re-entry limits; these are not verified here. Journey estimates include entrance-to-room travel; meals and internal hotel travel need time too. Blank durations are unknown, not zero.</p>
 <form id="rest-budget-form" hidden>
