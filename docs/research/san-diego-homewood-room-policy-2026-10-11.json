@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-117",
+  "learning_id": "LRN-214",
+  "hotel": "Homewood Suites San Diego Downtown/Bayside",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT",
+  "source_url": "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/rooms/",
+  "policy_source_url": "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/hotel-info/",
+  "source_surface": "Ordinary permitted in-app browser: exact queen-suite View room details, expanded Read more and room highlights; visible Hotel Info and expanded Payment. No booking, account, contact or payment action.",
+  "category": "1 Bedroom Suite - 2 Queen Beds",
+  "published_maximum": 6,
+  "size_sq_ft": 570,
+  "sleeping_setup": "Two queen beds in a separate bedroom; queen-sized sofa bed in the living area.",
+  "equipment": ["full-size refrigerator", "microwave", "dishwasher", "twin-burner stove"],
+  "dining_scope": "Dining table and chairs are listed, but chair, cookware and place-setting quantities for five are unknown.",
+  "unknowns": {
+    "five_person_dining": null,
+    "sofa_allocation_and_clearance": null,
+    "sofa_setup_fee": null,
+    "applicable_mandatory_fee": null,
+    "incidental_hold_amount": null,
+    "exact_age_acceptance": null,
+    "meal_savings": null,
+    "nap_return_route": null
+  },
+  "limitation": "Published capacity is not confirmed booking acceptance, comfortable sleeping or sofa allocation for your family. Sofa setup charges, applicable mandatory fees and incidental-hold amount remain unknown. Confirm actual child-age acceptance and the selected room's setup before booking. No meal savings or nap-return assurance is established. The older hotel-wide price band is not a quote for this category; prices, fee records and sampled reviews are not renewed here.",
+  "policy_audit": "Hotel Info lists optional valet and pet terms and Payment currency/methods, but does not settle the named sofa, applicable mandatory-charge or hold-amount gaps. Missing policy text is not proof of zero fees. No new numeric fee is adopted.",
+  "task": {
+    "party_context": "Two adults and children aged 4, 8 and 12, kitchen preferred and separate sleeping spaces",
+    "synthetic": true,
+    "real_user_testing": false,
+    "decision": "implement-scoped-room-facts-now",
+    "not_qualified": "RES133 full price/fee/review integration and actual nap-return remain held; this independent factual partial answer does not waive those gates.",
+    "proof_directory": "/tmp/ft-imp117-browser"
+  }
+}

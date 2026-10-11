@@ -82,5 +82,12 @@ test("keeps both pages detailed without returning to their prior repetition", ()
     .split(/\s+/).length;
 
   assert.ok(visibleWords(stay) >= 900 && visibleWords(stay) <= 1800);
-  assert.ok(visibleWords(hotels) >= 2000 && visibleWords(hotels) <= 3200);
+  const roomNote = hotels.match(/<p class="hotel-room-note" data-room-policy="homewood-bayside">[\s\S]*?<\/p>/g) ?? [];
+  const roomScope = hotels.match(/<span data-room-source-scope>[\s\S]*?<\/span> /g) ?? [];
+  assert.equal(roomNote.length, 1);
+  assert.equal(roomScope.length, 1);
+  assert.ok(visibleWords(roomNote[0]) <= 180);
+  assert.ok(visibleWords(roomScope[0]) <= 30);
+  const retainedHotels = hotels.replace(roomNote[0], "").replace(roomScope[0], "");
+  assert.ok(visibleWords(retainedHotels) >= 2000 && visibleWords(retainedHotels) <= 3200);
 });

@@ -4,6 +4,17 @@ import { readFileSync } from "node:fs";
 const currentLaJollaFees = JSON.parse(readFileSync(new URL("../../docs/research/la-jolla-shores-fees-2026-10-05.json", import.meta.url), "utf8")).fee_envelope;
 const currentLoewsFees = JSON.parse(readFileSync(new URL("../../docs/research/loews-coronado-fees-2026-10-06.json", import.meta.url), "utf8")).fee_envelope;
 const currentDanaFees = JSON.parse(readFileSync(new URL("../../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8")).fee_envelope;
+const currentHomewoodRoom = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-room-policy-2026-10-11.json", import.meta.url), "utf8"));
+
+export function sanDiegoCurrentRoomNote(name) {
+  if (name !== currentHomewoodRoom.hotel) return null;
+  const room = currentHomewoodRoom;
+  return {
+    text: `Exact room facts checked ${room.checked_on} (review due ${room.recheck_on}): ${room.category}, ${room.size_sq_ft} sq ft, published sleeps ${room.published_maximum}. ${room.sleeping_setup} Published kitchen equipment: ${room.equipment.join(", ")}. ${room.dining_scope} ${room.limitation}`,
+    sourceUrl: room.source_url,
+    policySourceUrl: room.policy_source_url
+  };
+}
 
 const rules = {
   "Bahia Resort Hotel": {
