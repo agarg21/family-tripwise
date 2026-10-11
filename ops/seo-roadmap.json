@@ -20,11 +20,49 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-116",
+      "title": "Make exact-room Orlando meal evidence portable",
+      "kind": "implementation",
+      "lane": "existing-page-family-meal-sharing",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T20:13:00Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/orlando-suite-page.mjs",
+        "site/where-to-stay/orlando-family-hotels.html",
+        "site/downloads/orlando-meal-planning.csv",
+        "tools/orlando-meal-export.test.mjs",
+        "tools/orlando-rate-download.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Current internal offline co-planning task fails: existing dated rate downloads do not carry reviewed Cabana114 exact-room equipment or IHG115 kitchen scope/venue hours and their unknowns. Maintained source-dated JSON/shared records under114/115 already production-verified. Export those same records without source renewal or a new canonical page; no broad report.",
+      "gsc_evidence_classification": "Reused recent October11 API/finalizedOct9 versus October10/finalOct8; stale sitemap discovery. Orientation only, no CTR/cohort or indexing action.",
+      "acceptance_criteria": [
+        "Generate four-plan/two-room meal CSV from existing validated shared records only, retaining all22 dated price/party/currency/unit/stay/fee/term fields plus category-specific equipment/unknowns, breakfast scope, scoped dates, source URLs and comparison anchors. No free-breakfast/savings/cooking guarantee or fabricated numeric food cost.",
+        "Preserve existing HTML except one additive download link, no changes to data/prices/fees/global dates/other CSV/model-client/styles/catalog/config/research/src/meta-schema/34URLs; proper CSV quote/formula defenses and deterministic parity.",
+        "Actual keyboard download at1280/390/320 returns exact four-plan CSV, readable contained link/formreset/image preserved; focused/full native QA/different independent read-only PASS and exact10 guarded release/Pages/marker/productionSEO/assets/invariants."
+      ],
+      "measurement_plan": "LRN213 internal offline-sharing task is proxy evidence, not real-user/SEO/fullmealbudget proof. Parent can compare exact equipment evidence and breakfast limitations without losing dates or source/category context. Trigger record mismatch, failed native download, changed source scope or scopedOctober18recheck.",
+      "production_invariant": "Remove additive link restores9661994 HTML. New four-plan/two-roomCSV only, preserving every original22 price-context cell; all preexisting shared data/models/CSV/prices/fees/Cabana-IHGfacts/sourceclocks/research/src/otherpublic/styles/catalog/config/meta-schema/34URLs/950baseline/held11/317priorordereditems preserved. Carry115 mechanical immutable completion only. No new source/provider/account/security/scheduler or canonicalURL mutation.",
+      "decision": "IMPLEMENT bounded failed offline-sharing task from maintained reviewed records; second sequential transaction actualrun20:00:47Z/startdeadline20:45:47Z/fixed sprint unchanged. No quota or broad063077 qualification.",
+      "release_state": "implementation-review-pending",
+      "review_receipt": "FT-IMP-116 different Copernicus independent read-only PASS/noP0-P3; manifest119144c87e6a174641d2c372e38685696f60d5af0186fb62096029aba582d65a/all952hashes/exact10/942nonowned/317priorordereditems/held11-ledgerisolation verified/finaldriftzero. Independent15focused/invariants/state0/GSC90/localSEO0fiveprior; Master831full47maintenance rerun inspected not independentfull. Initial full831 failed stale six-asset inventory assertion only, registered exacttestpath before seven-asset+presence correction; no QA weakening. ActualIAB1280/390/320 keyboardENTERdownloads/form6people-reset5/containedlink/nooverflow/errors0/image1280x920 saved and inspected offline; all actual10,488byte4row32columnCSV match. All original22pricecontextcells preserved+10maintained114115mealfields, sourceclocks unchanged/unknown equipment-cooking-coverage-foodcost-savings explicit. One additive link/newCSV only; no sharedfacts/models/oldCSVs/fees/prices/styles/catalog/config/research/src/otherpublic/meta-schema34URL/security/provider/account/scheduler changes. LRN213 proxy offline-sharing task nothumanSEO/fullbudget/broad063077 qualification. Only mechanical immutable consensus receipt; guarded release/production pending, fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-115",
       "title": "Separate IHG exact-room kitchen unknowns from breakfast venue and package coverage",
       "kind": "implementation",
       "lane": "existing-page-family-meal-budget",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T20:02:24Z",
       "allowed_during_observation": true,
@@ -55,8 +93,11 @@
       "measurement_plan": "LRN212 current two-source audit plus internal morning-meal task, not real-user/SEO outcome or complete meal budget. Parent can distinguish generic room amenity, actual compared configuration, breakfast operating window and rate coverage. Falsify assigned exact-room equipment, changed hours, published coverage, source/record mismatch or October18 review.",
       "production_invariant": "Add only IHG mealPolicy field, exact ihgDining source URL and one additive block. Stripping them restores prior data/HTML. All existing price/party/date/currency/fees/deposit-breakfast rate terms/Cabana114 equipment/water/parking/global clocks/legacy-combined CSV/model-client/style/catalog/config/other public-prior research-src/meta-schema/34URLs/948baseline/held11/all316priorroadmap items intact. Carry114 immutable completion only; no source renewal outside scoped meal audit/security/provider/account/scheduler/newURL mutation.",
       "decision": "IMPLEMENT bounded existing-page failed morning-meal task; room-source transfer hypothesis REJECTED, coverage remains unknown. First transaction actualrun20:00:47Z/16:00:47EDT/startdeadline20:45:47Z/fixed sprint unchanged. Broader063/077 corpus and human/full-budget gates remain separate.",
-      "release_state": "implementation-review-pending",
-      "review_receipt": "FT-IMP-115 different Galileo independent read-only PASS/noP0-P3; manifestd45624c1dc80e64059e8c13048e0019622a24b4a1b240b87e848faf2a70ed744/all950hashes/exact11/937nonowned/316priorordereditems/held11-ledgerisolation verified/no drift. Independent6focused/invariants/state0/GSC90/localSEO0fiveprior; Master828full/47maintenance green, saved actualIAB1280/390/320 room-Dining keyboardfocus/form6people-reset5people/containedtext/nooverflow/errors0/image1280x920 inspected, not independentfull/livebrowser. Saved ordinary permitted current official rooms/dining DOM/screenshot supports source-scoped unknown exactTwoBedroom kitchen/equipment and LakesideCafe Marketplace published6:30AM-10:30AM; no mealprice/coverage/traveldatehours guarantee or ratefeeage renewal. Remove field/source/block restores prior data/HTML; rates fees Cabana114equipment CSV clocks models catalog config otherpublic-priorresearch-src meta-schema34URLs heldwork intact. LRN212 currentsource/internalproxy nothumanSEO/fullmealbudget/broad063077 qualification. Only mechanical immutable consensus receipt; guarded release and production pending/fixed sprint unchanged."
+      "release_state": "completed-remote-verified",
+      "review_receipt": "FT-IMP-115 different Galileo independent read-only PASS/noP0-P3; manifestd45624c1dc80e64059e8c13048e0019622a24b4a1b240b87e848faf2a70ed744/all950hashes/exact11/937nonowned/316priorordereditems/held11-ledgerisolation verified/no drift. Independent6focused/invariants/state0/GSC90/localSEO0fiveprior; Master828full/47maintenance green, saved actualIAB1280/390/320 room-Dining keyboardfocus/form6people-reset5people/containedtext/nooverflow/errors0/image1280x920 inspected, not independentfull/livebrowser. Saved ordinary permitted current official rooms/dining DOM/screenshot supports source-scoped unknown exactTwoBedroom kitchen/equipment and LakesideCafe Marketplace published6:30AM-10:30AM; no mealprice/coverage/traveldatehours guarantee or ratefeeage renewal. Remove field/source/block restores prior data/HTML; rates fees Cabana114equipment CSV clocks models catalog config otherpublic-priorresearch-src meta-schema34URLs heldwork intact. LRN212 currentsource/internalproxy nothumanSEO/fullmealbudget/broad063077 qualification. Only mechanical immutable consensus receipt; guarded release and production pending/fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-115 release 9661994214d14c98291bf32c4b7126550d953cf1 remote verified 2026-10-11T20:12:47.997Z; main0-0/emptyindex/exact11/all950indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified IHG exact-room kitchen scope and breakfast venue/hours block. Pages38171114347success/matching9661994214d14c98291bf32c4b7126550d953cf1/run/sixexactHTTP200assets/invariantsPASS at2026-10-11T20:12:02.488Z/productionSEO0errors-fiveprior. ActualIAB1280-390-320 room/Dining keyboardfocus/form6people-reset5people/containedtext/nooverflow/errors0/image1280x920loaded; saved production-width JSON/PNG andproduction-context.png under/tmp/ft-imp115-browser. Initial immediate reset snapshot raced existing setTimeout0; freshDOM confirmed5people then semantic headingwait passed allwidths, no productchange. Master828full47maintenance6focused/differentGalileoPASS. LRN212 currentofficial source-scope/internalproxy learning, not humanSEO/fullmealbudget/063077 qualification. Exact kitchen/equipment, packagecoveredguestcount, mealprices and traveldatehours unresolved; no meal savings claim or ratefee renewal. All rates fees Cabana114 CSV clocks models catalog config otherpublic-priorresearch-src metadata34URLs andheld11 intact. One finish-first transaction completed this run; next bounded portable meal decision export can use maintained records, no denied retry or quota. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T20:12:48.018Z",
+      "release_commit": "9661994214d14c98291bf32c4b7126550d953cf1"
     },
     {
       "id": "FT-IMP-114",

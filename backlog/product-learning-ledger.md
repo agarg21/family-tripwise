@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-213 - Offline meal decisions need their dated room-budget context - 2026-10-11
+
+FT-IMP-116 internal co-planning task: sharing the current Orlando rate CSV loses Cabana114 exact-suite equipment and IHG115 kitchen/venue/coverage scope. Hypothesis: a same-record export can carry both meal limits and dated budget context without renewing facts or calculating food savings. IMPLEMENT four-plan/two-room32-column export: all22 existing dated price/party/currency/unit/stay/fee/cancellation/source cells preserved, plus10 maintained meal fields. Evidence is October11 task inspection and reviewed official-source records [Cabana](../docs/research/orlando-cabana-kitchen-policy-2026-10-11.json)/[IHG](../docs/research/orlando-ihg-meal-policy-2026-10-11.json), not fresh source collection or human testing.
+
+High confidence in record parity, moderate internal task usefulness, unknown real-user/SEO/full-budget outcome. Lesson: portable amenity evidence must keep exact room identity, rate context, independent dates and unknowns; no inferred stove absence, covered guests or zero food cost. Falsify record mismatch, failed keyboard/native download, changed scope or October18 recheck. Focused/full QA, responsive real downloads, different independent read-only PASS and verified release required; broad063077/human/full-budget gates remain separate.
+
 ## LRN-212 - A breakfast venue is not a family meal entitlement - 2026-10-11
 
 FT-IMP-115 [current official room/dining audit](../docs/research/orlando-ihg-meal-policy-2026-10-11.json). Family decision: two adults and children4/8/12 need to distinguish exact-room cooking equipment, morning location/hours and breakfast coverage under the dated IHG plan. Hypothesis that general suite kitchen wording or a three-bedroom image supports this two-bedroom kitchen is REJECTED. Ordinary permitted October11 source inspection establishes Lakeside Cafe in Marketplace with published6:30AM-10:30AM breakfast, but no meal price or package guest entitlement. IMPLEMENT the bounded existing-page partial answer with exact kitchen/equipment and coverage unknowns, travel-date hours confirmation and no meal-savings calculation. Preserve all dated price and fee terms; this is not automatic fact renewal.
