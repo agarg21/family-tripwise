@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-095",
+  "checked_on": "2026-10-10",
+  "evidence_class": "INTERNAL_TASK_VALIDATION_WITH_REUSED_OFFICIAL_CATEGORY_RECORDS",
+  "family_decision": "For two adults and ages4/8/12, distinguish a cooking kitchen from five places at one table and retain unresolved alternatives without a fit claim.",
+  "maintained_inputs": ["docs/research/family-room-dining-task-2026-10-10.json", "docs/research/boston-room-configurations-2026-10-01.json", "docs/research/boston-four-seasons-family-budget-2026-10-09.json", "tools/page-generation/boston-family-hotels-page.mjs"],
+  "hypothesis": "Current Boston room comparison can expose a separate meal-place decision using reviewed source-dated constraints, without a new canonical page or price renewal.",
+  "result": "IMPLEMENT additive existing-page section and presetCSV. FenwayTOBT four seats recordedOctober3, fifth place unknown. FourSeasonsPlaza cooking checkedOctober9, dining count and exact-task price unknown; only this unresolved row retained in minimum5 kitchenpreset.",
+  "acceptance": {"csv": "Current bostonPack/party/prices; screenedOctober10 not new source inspection; kitchenpublished/capacitynotexcluded/minimum_dining_seats5. One unpriced unknown row, full comparison stayssix data rows and four categories.", "public_invariants": "Removing marked095section restores exact prior BostonHTML; original fullCSV/allotherpublic/metadata/schema/34indexableURLs/prices/sourceclocks and prior research unchanged.", "release": "Focused/full native QA, desktop/mobile and actual download, different independent read-only PASS, exact10paths push, Pages/release marker/productionSEO and affectedURL invariants required."},
+  "confidence": "High narrow constraint/export integrity; proxy not real-user testing, current hotel inspection, equipment availability, meal suitability, booking acceptance or SEO outcome.",
+  "limits": ["Kitchen and table places are not a complete room or meal-fit verdict.", "Recorded counts are not high-chair availability or usable geometry; unknown rows are not eligible winners.", "No provider/source retry, new price, fact renewal, new city or canonical URL."],
+  "reusable_lesson": "Make the narrow family decision available beside the complete comparison, retaining both exclusions and unresolved alternatives.",
+  "next_falsification_trigger": "Changed exact-category dining evidence/current public pack or failed CSV/meal-place task."
+}

@@ -20,10 +20,44 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-095",
+      "title": "Publish Boston five-person cooking and dining decision download",
+      "kind": "improvement",
+      "status": "selected",
+      "selected_on": "2026-10-10",
+      "started_at": "2026-10-11T03:10:39Z",
+      "target_paths": [
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "site/where-to-stay/boston-family-hotels.html",
+        "site/downloads/boston-cooking-dining-five.csv",
+        "tools/boston-dining-download.test.mjs",
+        "docs/research/boston-dining-download-task-2026-10-10.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+        "https://familytripwise.com/downloads/boston-cooking-dining-five.csv"
+      ],
+      "evidence": "Completed094 shared five-person kitchen/dining task: current public Boston cooking candidates are dated FenwayTOBT table4 and unpriced FourSeasonsPlaza unknown seating. Existing full comparison remains complete; named parent must reconstruct meal-place constraints across prose and export. Current maintained published pack and reviewed source-dated dining screen qualify one bounded existing-page/download addition, no new canonical job.",
+      "acceptance_criteria": [
+        "One source-backed unframed dining section and preset CSV using current bostonPack/094 filters kitchenpublished-capacitynotexcluded-minimum5; retain only unpriced Plaza with explicit unknown seating, not a verified shortlist. Fenway table4 and fifth-place unknown visible with originalOctober3 date; FourSeasonsOctober9 cooking record and unknowns retained.",
+        "Public fullCSV, all existing HTML outside added marked section, prices, dates, source clocks, metadata/schema, other public and prior research bytes unchanged. Generator-onlyBoston idempotence, focused/full nativeQA, actual1280/390/320browser+download bytecheck, different read-onlyPASS, exact10path guarded release/Pages-marker/productionSEO/affectedURL invariants before delivery."
+      ],
+      "measurement_plan": "LRN193 current internal family-meal decision task, not human/SEO/currentquote proof. Validate section clarity and actual download one unresolved category atdesktop/mobile; kitchenfilter and history remain unchanged, fulldownload byteexact.",
+      "production_invariant": "Existing Boston page only additive marked dining section; default4categories/allprices/party/stay/fees/sourceclocks/schema/canonical/completeCSV and allotherpublic-priorresearch/34indexableURLs/296priorroadmapitems/held11 unchanged. Newdownload is noncanonical asset, not newSEOURL. Fixedsprint and03:47:12Z actionstartdeadline preserved;891baseline. No newproviderinspection/denialretry/paid/account/indexing/scheduler mutation.",
+      "decision": "IMPLEMENT qualified existing Boston family-meal decision and maintained download, not another report or new city URL. Kitchen, seats and family suitability remain separate.",
+      "next_gate": "Native/responsive/actualdownload/read-onlyconsensus/guardedpublicrelease/production verification; falsify changed dining count/category/publicpack or faileddownload task. Full cluster/corpus qualification remains separate.",
+      "review_receipt": "FT-IMP-095 immutable consensus: Ampere independent read-only PASS/no P0-P3; frozen review e188018ee5d00de00b2d8e5c96354e6ec33945789b234cd80807e119ab793230/all894hashes/exact10/all296prioritems/heldwork isolated; independent15focused/all3screenshots/browserJSON/source-party-unknown checks. Master744native/46maintenance/state0/GSC89/localSEO0errors5prior; exact section removal/fullCSV/allotherpublic-priorresearch/sourceclocks/metadata/schema/34URLs preserved. Actual1280-390-320 contained layout/keyboardscroll40-to0/native preset desktop+mobile and full download byteexact/kitchen4-2-4/hash-back-forward. Proxy not realuser/current hotel inspection/newprice/fit evidence. Only mechanical receipt appended after PASS; Pages/marker/productionSEO/affectedURL verification pending."
+    },
+    {
       "id": "FT-IMP-094",
       "title": "Screen dated dining seating separately from kitchen and room capacity",
       "kind": "improvement",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-11T03:03:03Z",
       "target_paths": [
@@ -49,7 +83,11 @@
       "production_invariant": "No public bytes, URLs, clocks, prices, party/stay/fee evidence, observation windows or prior295roadmap records change. Only structured transcription of three maintained exact-category seat counts: DC ONQQ4 September25; Boston TOBT4 and ONBT2 October3. No website release claim, new destination, denied source retry, paid or external mutation. Preserve held11 and fixed sprint; actualrun03:02:12Z/startdeadline03:47:12Z/889baseline.",
       "decision": "IMPLEMENT bounded existing shared-tool room/kitchen decision; no broad report or new URL. Room capacity, dining seats, equipment, booking acceptance and suitability remain separate.",
       "next_gate": "Native QA/read-only review/guarded push-only release; next trigger changed exact-category seating/source dates or failed meal-screen task. Remaining public cluster qualification gates unchanged.",
-      "review_receipt": "FT-IMP-094 independent read-only Rawls PASS/noP0-P3 on final891file candidate VatbK7; reviewed manifestb449c0ae14bc6b05ff5ede4f0de683f5f7d9f566d902d8cf06516613b32f0b77. Exact11/all891hashes/880untouched/295priorjudgments/heldisolation/public34URLsunchanged. Independent20focused/144baseline default-export comparisons; Master741full/20focused/46maintenance/state0/GSC89/localSEO0fiveprior/344defaultexports across18packs byteexact. Optional dining counts only3dated transcriptions; unknown/stale retained notfit, currentBostonOctober9FourSeasons kitchen retained unpriced/unknownseating. No source-price-date renewal/public change/reviewerwrites-network-delegation/productionclaim. Mechanical immutable consensus only; exact guarded push-only release pending."
+      "review_receipt": "FT-IMP-094 independent read-only Rawls PASS/noP0-P3 on final891file candidate VatbK7; reviewed manifestb449c0ae14bc6b05ff5ede4f0de683f5f7d9f566d902d8cf06516613b32f0b77. Exact11/all891hashes/880untouched/295priorjudgments/heldisolation/public34URLsunchanged. Independent20focused/144baseline default-export comparisons; Master741full/20focused/46maintenance/state0/GSC89/localSEO0fiveprior/344defaultexports across18packs byteexact. Optional dining counts only3dated transcriptions; unknown/stale retained notfit, currentBostonOctober9FourSeasons kitchen retained unpriced/unknownseating. No source-price-date renewal/public change/reviewerwrites-network-delegation/productionclaim. Mechanical immutable consensus only; exact guarded push-only release pending.",
+      "release_receipt": "FT-IMP-094 release 98ff7682e2171293f3a0c18c9a662e6423ca23d4 remote verified 2026-10-11T03:09:52.753Z; main0-0/emptyindex/exact11/all891indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared tools/evidence only, not a new public-page delivery or production change. Optional --minimum-dining-seats excludes dated recorded undersized tables, keeps unknown/stale explicit, preserves currentBostonOctober9FourSeasons kitchen overlay and all default public/CSV/price-party-stay-fee-source-date bytes. RawlsPASS/noP0-P3/891hashes/exact11/295priorrecords/heldisolation; Master741full/20focused/46maintenance/state0/GSC89/localSEO0fiveprior/344defaultexports and independent144defaults byteexact. LRN192 internal proxy, not human/currentquote/suitability/SEO proof. Next scoped public room-meal decision and remaining corpus gates; CancunOctober11offer checkpoint unchanged. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T03:09:52.763Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "98ff7682e2171293f3a0c18c9a662e6423ca23d4"
     },
     {
       "id": "FT-IMP-093",
