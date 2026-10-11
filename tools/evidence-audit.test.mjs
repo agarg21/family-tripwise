@@ -29,6 +29,17 @@ test("normalized hashes ignore scripts; prices are unverified candidates", () =>
   const legacy = { ...r }; delete legacy.price_sha256;
   assert.equal(compareSource(r, legacy).state, "text-unchanged");
 });
+test("Finest's observed public booking source uses one exact host without relaxing URL guards", async () => {
+  const config = JSON.parse(await readFile(new URL("../ops/evidence-watch.json", import.meta.url), "utf8"));
+  const source = JSON.parse(await readFile(new URL("../docs/research/cancun-finest-family-price-2026-10-11.json", import.meta.url), "utf8"));
+  assert.equal(new URL(source.source_url).hostname, "booking.finestresorts.com");
+  assert.equal(config.allowed_hosts.filter(h => h === "booking.finestresorts.com").length, 1);
+  assert.equal(permittedUrl(source.source_url, config.allowed_hosts), source.source_url);
+  for (const url of ["http://booking.finestresorts.com/", "https://booking.finestresorts.com:8443/", "https://user:pass@booking.finestresorts.com/", "https://booking.finestresorts.com/?session=x", "https://unapproved.finestresorts.com/"]) assert.throws(() => permittedUrl(url, config.allowed_hosts));
+  let requests = 0;
+  const result = await fetchSource(source.source_url, config.allowed_hosts, [], { fetcher: async () => { requests++; return new Response("", { status: 302, headers: { location: "https://unapproved.finestresorts.com/" } }); } });
+  assert.equal(requests, 1); assert.equal(result.state, "unavailable-review");
+});
 test("unavailable and challenges do not become fresh evidence", async () => {
   for (const [response, state] of [[new Response("denied", { status: 403 }), "unavailable-review"], [new Response("Just a moment " + " ".repeat(120), { headers: { "content-type": "text/html" } }), "challenge-or-empty-review"], [new Response("pdf", { headers: { "content-type": "application/pdf" } }), "unsupported-format-review"]]) {
     assert.equal((await fetchSource("https://a.test/", ["a.test"], [], { fetcher: async () => response })).state, state);

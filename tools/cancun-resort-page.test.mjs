@@ -35,7 +35,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
     }
   }
   assert.equal(cancunEvidence.records.filter(record => record.price).length, 5);
-  assert.match(quick, /From USD 843\/night \(official start\)/);
+  assert.match(quick, /USD 1,177\/night \(dated family sample\)/);
   assert.match(quick, /USD 311\/night \(dated family sample\)/);
   assert.match(quick, /Non-member Sun-Kissed Savings \+ Kids Stay Free/);
   assert.match(checklist, /USD 934 displayed total/);

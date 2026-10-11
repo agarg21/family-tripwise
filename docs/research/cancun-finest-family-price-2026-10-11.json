@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-100",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "family_decision": "One dated five-person Family Suite budget, separate from starting and locked member rates.",
+  "evidence_class": "official-booking-observation",
+  "source_provenance": "Followed the official F1 Family Suite page's Book this suite link to booking.finestresorts.com, then native date/guest selectors. Exact public-source host registered only after inventory-only QA failure; no access denial or outbound collector retry, and all HTTPS/credentials/sensitive-parameter/redirect protections retained.",
+  "source_url": "https://booking.finestresorts.com/en/bookcore/availability/finestplaya/2026-11-09/2026-11-12/2;3;7;12/?rrc=1&adults=2&children-ages=3%2C7%2C12&ninos=3&occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25203%252C%2520%2522ages%2522%253A%2520%25223%253B7%253B12%2522%257D%255D&occp=1",
+  "observation": {
+    "property": "Finest Playa Mujeres",
+    "category": "Family Suite",
+    "rooms": 1,
+    "adults": 2,
+    "child_ages": [
+      3,
+      7,
+      12
+    ],
+    "exact_child_ages_entered": true,
+    "checkin": "2026-11-09",
+    "checkout": "2026-11-12",
+    "nights": 3,
+    "currency": "USD",
+    "unit": "per room per night",
+    "plan": "Reserve Now And Pay Later / All Inclusive",
+    "membership_required": false,
+    "nightly_display": 1177,
+    "total_display": 3532,
+    "nightly_display_rounded": true,
+    "displayed_tax_fee_basis": "All fees & taxes included",
+    "separately_payable_local_levy": null,
+    "optional_extras_itemized": false,
+    "child_offer_counterfactual": false
+  },
+  "terms": {
+    "cancellation": "24 hours or more prior: no fee; 24 hours or less: whole-stay penalty. Exact 24-hour boundary overlaps; confirm deadline/timezone.",
+    "unused_stay": "No refund for unused portion",
+    "payment": "Full charge 30 days before arrival; booked within four days balance at check-in. This October11 observation is 29 days before November9; timing inside30days/outside4days unresolved.",
+    "card_cancellation_date": "11/08/2026; exact time/timezone unknown",
+    "transfer": "Plan card says free transfer minimum three nights; arrangements and exact booking terms require confirmation, no cost saving inferred.",
+    "booking_acceptance": "Not established; no reservation/account/payment/personal-data action"
+  },
+  "excluded_comparisons": [
+    "Locked rewards USD3426 total is not the public nonmember rate; no account created.",
+    "Crossed-out USD6196/43% is not a matched child-offer counterfactual or savings.",
+    "Cheaper rooms below More options available with other occupancy are not this exact-party category.",
+    "Current room-page From USD849/night lacks party/stay basis; original September27USD843 observation remains historical."
+  ],
+  "preserved": [
+    "Only Finest.price and added F4 dated price source change; all older room/club/transfer/extras/policy clocks remain exact.",
+    "All other five records including Grand097/Sunscape098/Royalton099,096offer section,metadata/schema/34URLs/prior research remain exact."
+  ],
+  "result": "IMPLEMENT dated exact-party public sample in existing comparison and shared downloads, not a typical range, complete stay-cost or booking guarantee.",
+  "confidence": "High in displayed exact ages/dates/category/public amounts/terms; limited final acceptance, fee completeness, payment boundary and care admission.",
+  "next_falsification_trigger": "October18 scoped recheck, changed availability/terms or exact written booking/fee/payment confirmation.",
+  "local_proof": {
+    "rate": "/tmp/ft-imp100-browser/family-rate.png",
+    "guests": "/tmp/ft-imp100-browser/guests.png",
+    "conditions": "/tmp/ft-imp100-browser/conditions.png",
+    "results_ax": "/tmp/ft-imp100-browser/results-ax.txt",
+    "guests_ax": "/tmp/ft-imp100-browser/guests-ax.txt",
+    "conditions_ax": "/tmp/ft-imp100-browser/conditions-ax.txt"
+  }
+}

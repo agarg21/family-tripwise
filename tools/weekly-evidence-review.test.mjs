@@ -115,6 +115,15 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.equal(currentRecord.interval_days, record.interval_days);
       assert.notEqual(currentRecord.basis, record.basis);
       laterFeeChanges.push(record.id);
+    } else if (record.id === "cancun-finest-family-suite-price") {
+      assert.equal(record.verified_on, "2026-09-27");
+      assert.equal(currentRecord.verified_on, "2026-10-11");
+      assert.match(record.basis, /amount_from\":843/);
+      assert.match(currentRecord.basis, /amount_from\":1177/);
+      assert.match(currentRecord.basis, /children aged 3, 7 and 12/);
+      assert.equal(record.evidence_class, "OFFICIAL_PROPERTY_FACT");
+      assert.equal(currentRecord.evidence_class, "BOOKING_CHECK");
+      assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis, source_urls: currentRecord.source_urls, evidence_class: currentRecord.evidence_class }, currentRecord);
     } else if (record.id === "cancun-grand-family-suite-price") {
       assert.equal(record.verified_on, "2026-09-27");
       assert.equal(currentRecord.verified_on, "2026-10-11");

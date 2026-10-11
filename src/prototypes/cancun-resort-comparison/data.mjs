@@ -10,6 +10,7 @@ export const cancunEvidence = {
     F1: "https://www.finestresorts.com/cancun/finest-playa-mujeres/rooms/family-suite/",
     F2: "https://www.finestresorts.com/cancun/finest-playa-mujeres/finest-for-kids/",
     F3: "https://www.finestresorts.com/cancun/finest-playa-mujeres/frequently-asked-questions/",
+    F4: "https://booking.finestresorts.com/en/bookcore/availability/finestplaya/2026-11-09/2026-11-12/2;3;7;12/?rrc=1&adults=2&children-ages=3%2C7%2C12&ninos=3&occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25203%252C%2520%2522ages%2522%253A%2520%25223%253B7%253B12%2522%257D%255D&occp=1",
     S1: "https://www.hyattinclusivecollection.com/en/resorts-hotels/sunscape/mexico/cancun-resort-spa/accommodations/rooms-suites/",
     S2: "https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/cancun-all-inclusive-family-suites",
     S3: "https://www.resortsbyhyatt.com/sunscape/sunscape-cancun/all-inclusive-hotel-cancun-activities",
@@ -44,9 +45,10 @@ export const cancunEvidence = {
         checks: ["Published combinations include two adults and three children; exact-age rate classification and dated availability are unverified."]
       },
       price: {
-        kind: "official-starting", usdFrom: 843, usdTo: null,
-        basis: "Family Suite starting rate; guest mix and travel dates not stated by the property.",
-        fees: "Tax and fee inclusion not stated.", observedOn: "2026-09-27", sourceIds: ["F1"]
+        kind: "dated-single-plan-sample", usdFrom: 1177, usdTo: null,
+        basis: "November 9-12, 2026; one Family Suite, two adults and children aged 3, 7 and 12, three nights. Public non-member Reserve Now And Pay Later / All Inclusive: USD 3,532 displayed total and USD 1,177 rounded per room/night; the displayed nightly figures do not sum exactly to the total. The locked rewards USD 3,426 total is excluded. One dated plan, not confirmed booking acceptance, a typical range, child-offer savings or guaranteed future price.",
+        fees: "Booking display says all fees and taxes included; optional extras and any separately payable local levy are not itemized. Plan card says free transfer with a three-night minimum; confirm arrangements and your booking terms. Conditions say no cancellation fee 24 hours or more before arrival, but a whole-stay penalty 24 hours or less; the exact boundary overlaps, so confirm the cutoff and timezone. Unused stay is not refunded. Full charge is stated 30 days before arrival, with a separate check-in rule for bookings within four days; payment timing for this 29-days-before-arrival observation is unresolved.",
+        observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["F4"]
       },
       clubs: {
         sourceIds: ["F2", "F3"],

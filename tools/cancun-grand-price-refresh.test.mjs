@@ -36,7 +36,10 @@ test("a no-code sample does not imply non-offer savings or exact party acceptanc
 });
 
 test("other price and policy dates are not renewed by a one-room refresh", () => {
-  for (const r of cancunEvidence.records.filter(r => !["grand-family-suite", "sunscape-family-junior-suite", "royalton-splash-two-bedroom"].includes(r.id) && r.price)) assert.equal(r.price.observedOn, "2026-09-27", r.id);
+  for (const r of cancunEvidence.records.filter(r => !["grand-family-suite", "sunscape-family-junior-suite", "royalton-splash-two-bedroom", "finest-family-suite"].includes(r.id) && r.price)) assert.equal(r.price.observedOn, "2026-09-27", r.id);
+  const finest = JSON.parse(read("docs/research/cancun-finest-family-price-2026-10-11.json"));
+  assert.equal(cancunEvidence.records.find(r => r.id === "finest-family-suite").price.observedOn, finest.checked_on);
+  assert.equal(finest.action_id, "FT-IMP-100");
   const sunscape = JSON.parse(read("docs/research/cancun-sunscape-price-refresh-2026-10-11.json"));
   assert.equal(cancunEvidence.records.find(r => r.id === "sunscape-family-junior-suite").price.observedOn, sunscape.checked_on);
   assert.equal(sunscape.action_id, "FT-IMP-098");

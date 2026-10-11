@@ -20,11 +20,58 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-100",
+      "title": "Resolve Finest's dated five-person suite budget gap",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T07:03:04Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html"
+      ],
+      "target_paths": [
+        "docs/research/cancun-finest-family-price-2026-10-11.json",
+        "src/prototypes/cancun-resort-comparison/data.mjs",
+        "site/cancun/data.mjs",
+        "site/where-to-stay/cancun-family-resorts.html",
+        "site/downloads/cancun-booking-checklist.txt",
+        "site/downloads/cancun-room-comparison.csv",
+        "tools/cancun-finest-family-price.test.mjs",
+        "tools/cancun-grand-price-refresh.test.mjs",
+        "tools/cancun-resort-page.test.mjs",
+        "tools/page-quality.test.mjs",
+        "tools/weekly-evidence-review.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/evidence-watch.json",
+        "tools/evidence-audit.test.mjs"
+      ],
+      "evidence": "Current Finest Family Suite retains Sep27 undated USD843 officialstarting rate/unknown party-stay-fees; exact family5 with2adults/ages3,7,12 room-budget task unresolved. Official room page previouslypermitted/no known unchanged denial. No broad cluster report or CTR diagnosis; preserve newly reviewed Grand097/Sunscape098/Royalton099.",
+      "acceptance_criteria": [
+        "Inspect official exact Family Suite via normal first-party navigation; one Nov9-12 three-night/2adults/ages3,7,12/oneunit public nonmember scenario. No account/reservation/payment/paid/security mutation. Record category/ages/dates/currency/unit/fees/rate/refund/uncertainty; don't borrow a twoadult/otherroom rate.",
+        "If supported current exactcategoryparty publicsample qualifies, replace only Finest.price with own Oct11 observation/Oct18 review and dated source, preserve historical843 record/allotherfive/allpolicyclocks/096offer/metadata/schema/34URLs. Native generator outputs and historical QA parity. Amend exactpaths before any additional scope edit.",
+        "If denied/unavailable/not exact-party or no trustworthy current replacement, PRESERVE historical starting rate explicitly, record exact gate without retry/tool-origin bypass; trim action to bounded reviewed source record/test/ledger/4ops before content edits. Full/focused nativeQA and different read-onlyPASS; site change actual1280-390-320/form/nativeDownloads/exactguardedrelease/Pages-marker-productionSEO/declaredbytes; docs-only push not public delivery."
+      ],
+      "measurement_plan": "LRN198 bounded official five-person room-budget evidence and internal proxy; not booking acceptance/realuser/satisfaction/SEO. Exactfamily prices support077 task only, do not qualify all077corpus/newURL.",
+      "production_invariant": "Exact16preregistered; only Finest.price and an added datedprice source maydiffer initially, allotherfive includingcurrent097-099/policySep23-Oct23/globaldueOct11/lastUpdatedSep27/096section/titleH1/meta-schema/canonical/34URLs/otherpublic/priorresearch preserved. 902baseline/301prioritems/11dirty/heldledger suffix retained; prior099 completion mechanical receipt maycarry, no judgment change. Actualrun07:02:12Z/startdeadline07:47:12Z/fixedsprintOct12expiry unchanged. No denied-provider retry/another automation/ControlRoom/newcityURL/indexing/analytics/outreach/paid/account/securitymutation.",
+      "gsc_evidence_classification": "Reused recentOct10API finalizedOct8 versuspriorOct9finalizedOct7; no freshAPI/querycohort thisrun; July27sitemap stale orientationonly.",
+      "decision": "IMPLEMENT exact five-person public Family Suite sample: November9-12/three nights/twoadults/ages3,7,12/USD1177 rounded per room-night and3532total. Exclude locked3426; retain rounding/refund boundary/payment timing/fee completeness uncertainties. Only Finest.price/F4/four outputs; allotherfive/policy clocks/prior evidence preserved. Full/focused/responsive/export/differentread-only review and guarded production verification pending.",
+      "release_state": "pending-review",
+      "scope_amendment": "Before config/test edits: exact18 adds ops/evidence-watch.json and tools/evidence-audit.test.mjs. Full native inventory rejects new F4 host not yet registered; no outbound denial/request occurred. Official F1 Book this suite native link established booking.finestresorts.com. Register only this exact public HTTPS evidence host, not wildcard/redirect/credentials/security-rule relaxation; all remaining config/allowlist members and denied-source carriage unchanged. No collector run or denial retry. Independent review required.",
+      "review_receipt": "FT-IMP-100 independent Rawls PASS/noP0-P3/read-only no writes-network-browser-delegation. Frozen review3e5e01f165af69ff8ef25a2d5947790cf463e6fbc7e79f51d89d196462ffc2fb/all904hashes/exact18/886untouched/301priorjudgments/heldledger isolation. Master765full/47maintenance/44focused/state0/GSC89/localSEO0errors5prior; reviewer34focused/invariants/sourcecorrectFamilyrate-guests-conditions andthree local screenshots inspected. Actual1280-390-320 contained/sixcards/form3children3-7-12/reset/nativeCSV-TXTdownloads6byteexact/errors[] /tmp/ft-imp100-browser/local-task.json. OnlyFinest.price/F4/fourpublicoutputs andexactpublicsourcehost registration; HTTPS-credential-sensitivequery-redirect-denialguards unchanged, inventoryonlyhostabsence/nooutboundcollector-denialretry. Otherfive097-099/policyclocks/096section/metadata-schema/34URLs/priorresearch preserved. Dated public sample not lockedprice/savings/completecost/bookingacceptance/care/human-SEOproof. Onlymechanicalimmutableconsensus appended; guardedrelease/production remain required; fixedsprint unchanged."
+    },
+    {
       "id": "FT-IMP-099",
       "title": "Resolve the due Royalton exact two-bedroom family-budget checkpoint",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T06:15:03Z",
       "allowed_during_observation": true,
@@ -59,9 +106,64 @@
       "measurement_plan": "LRN197 boundedofficial datedfamily-budget/plan audit with proxy comparison/download validation, notrealuser/satisfaction/CTR. ReusedOct10finalizedOct8/priorOct9finalOct7 orientationonly; nexttrigger fromsource result.",
       "production_invariant": "Pre-edit evidence amendment: exact16paths; current plan names unchanged so remove unusedsource/publicrender paths. OnlyRoyalton.price and its datedroom-conflict check/sourceR4 addition maychange. CurrentLXUU2 booking titleTwoBedroomLuxuryJuniorSuite/mangroves/differentbed descriptions mustnot be smoothed into olderSunsetView/bedding; preserve originalroomcategory/maximum/disputedchildlimit/beds anddate earliercheck, addOctober11unresolvedidentity-view-bedding warning. AllotherRoyaltonroomfields/clubs/transfers/extras/other5includingSunscape098-Grand097/sources/policySep23-Oct23/globaldueOct11/lastUpdatedSep27/096section/meta-schema/titleH1/canonical/34URLs/allotherpublic-priorresearch unchanged. HistoricalQA explicitly replays priorRoyaltonroomandprice. Preserve11dirty/900baseline/300prioritems/heldledger suffix; baseline recaptured after registration and immutable098receipt schema correction pages_run fromsuccessfulPages38117364501, not judgmentchange. CancunOct21 narrowstaleprice-trust intervention; actualsecondtransaction clock06:15:03Z/runstart06:01:15Z/startdeadline06:46:15Z/fixedsprintOct12expiry. No newURL/city/account/payment/paid/security/scheduler/indexing/analytics/outreachmutation.",
       "gsc_evidence_classification": "Reused recentOct10API finalizedOct8/priorOct9finalizedOct7; July27sitemap stale orientationonly.",
-      "decision": "IMPLEMENT the current LXUU2 exact-entered-party dated Flexible997.70night/2993.10total andStandard1247.75night/3743.25total, with explicit title/view/bedding continuity unknown, oldlevy amountnotrenewed and datedrefund/payment terms. OnlyRoyalton.price/dateroom-conflict check/sourceR4; otherfiveinclSunscape098-Grand097 preserved. Currentrecord docs/research/cancun-royalton-price-refresh-2026-10-11.json/LRN197; reviewOct18 orchangedprovider/exactunitconfirmation. No savings/transfer/booking/layout/fullcost guarantee. Focused34green; fullnative/responsive/nativeDownloads/differentreview/production pending.",
-      "release_state": "pending-evidence-review",
-      "review_receipt": "FT-IMP-099 independent Galileo PASS/noP0-P2; read-only/no writes-network-delegation. Reviewed c33b7b305b31e26b30b420d820af6db6ec6f24477520a110f0280f61ccbd9fe5 inventory f818c895d9a35855f0115e155f5f2a171810d390d3136526fab381e544c62f58; 902files/exact16/886nonowned/300prior preserved. Master full760/maintenance46/focused34/state0/GSC89/localSEO0errors5prior; reviewer independently focused34/invariants/state/GSC89/SEO. Source guests/flexible/standard screenshots and text, local1280-390-320 nooverflow/form2children3-7/reset3/sixcards/errorlogs empty, 3native CSV-TXT downloads byteexact /tmp/ft-imp099-browser/local-downloads.json. OnlyRoyalton price/datedroom-conflict check/R4; otherfive includingSunscape098-Grand097/allpolicyclocks/096section/schema/34URLs/historicalrecords retained. Proxy only/no satisfaction-SEO-human claims. Mechanical immutable result only; production pending."
+      "decision": "IMPLEMENT the current LXUU2 exact-entered-party dated Flexible997.70night/2993.10total andStandard1247.75night/3743.25total, with explicit title/view/bedding continuity unknown, oldlevy amountnotrenewed and datedrefund/payment terms. OnlyRoyalton.price/dateroom-conflict check/sourceR4; otherfiveinclSunscape098-Grand097 preserved. Currentrecord docs/research/cancun-royalton-price-refresh-2026-10-11.json/LRN197; reviewOct18 orchangedprovider/exactunitconfirmation. No savings/transfer/booking/layout/fullcost guarantee. Mechanical result: focused34/full760/maintenance46 green; responsive/nativeDownloads verified; different Galileo PASS; successfulPages38118243991 and production verified2026-10-11T06:30:43.988Z at18a420cac56484f3383567ea092e8cae2a9b6fa3. See immutable review/release receipts.",
+      "release_state": "released-and-production-verified",
+      "review_receipt": "FT-IMP-099 independent Galileo PASS/noP0-P2; read-only/no writes-network-delegation. Reviewed c33b7b305b31e26b30b420d820af6db6ec6f24477520a110f0280f61ccbd9fe5 inventory f818c895d9a35855f0115e155f5f2a171810d390d3136526fab381e544c62f58; 902files/exact16/886nonowned/300prior preserved. Master full760/maintenance46/focused34/state0/GSC89/localSEO0errors5prior; reviewer independently focused34/invariants/state/GSC89/SEO. Source guests/flexible/standard screenshots and text, local1280-390-320 nooverflow/form2children3-7/reset3/sixcards/errorlogs empty, 3native CSV-TXT downloads byteexact /tmp/ft-imp099-browser/local-downloads.json. OnlyRoyalton price/datedroom-conflict check/R4; otherfive includingSunscape098-Grand097/allpolicyclocks/096section/schema/34URLs/historicalrecords retained. Proxy only/no satisfaction-SEO-human claims. Mechanical immutable result only; production pending.",
+      "release_receipt": "FT-IMP-099 release 18a420cac56484f3383567ea092e8cae2a9b6fa3 remote verified 2026-10-11T06:31:23.540Z; main0-0/emptyindex/exact16/all902indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified2026-10-11T06:30:43.988Z successfulPages38118243991/matchingrelease18a420cac56484f3383567ea092e8cae2a9b6fa3/eightCancun200exact/allregistered invariants/productionSEO0errors5prior. Live1280-390-320contained/Royalton998-1248 exactfamily2993.10-3743.25/datedroomcontinuity-warning/form2children3-7sixcards/reset3/errors[]/CSV-TXTnative downloadsbyteexact /tmp/ft-imp099-browser/production-task.json. LRN197 officialsource andproxy; otherfiveinclSunscape098-Grand097/allpolicyclocks unchanged. Exactunit/bedding/levyamount/acceptance andsamebasisoffer-savings remain unconfirmed. Next currentroom-party-budget orcare gate; reviewOctober18 orchangedsource. Noautomaticfact renewal/newURL/city/human-SEOproof. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T06:31:23.561Z",
+      "release_commit": "18a420cac56484f3383567ea092e8cae2a9b6fa3",
+      "production_verified_at": "2026-10-11T06:30:43.988Z",
+      "pages_run": 38118243991,
+      "production_verification": {
+        "verified_at": "2026-10-11T06:30:43.988Z",
+        "release": {
+          "sha": "18a420cac56484f3383567ea092e8cae2a9b6fa3",
+          "run_id": "38118243991"
+        },
+        "results": [
+          {
+            "url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/downloads/cancun-booking-checklist.txt",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/downloads/cancun-room-comparison.csv",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/data.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/compare.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/render.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/client.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/share.mjs",
+            "status": 200,
+            "exact_bytes": true
+          }
+        ],
+        "all_registered_invariants": true
+      }
     },
     {
       "id": "FT-IMP-098",
