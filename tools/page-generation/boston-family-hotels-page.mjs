@@ -7,6 +7,7 @@ import { contributorCredit } from "./contributors.mjs";
 import { validateRoomPrices } from "../family-room-price.mjs";
 import { bostonMuseumAdmission } from "../boston-museum-admission.mjs";
 import { parkPlazaFitnessPolicy } from "../boston-park-plaza-policy.mjs";
+import { assessBreakfastUpgrade } from "../../src/shared/breakfast-upgrade-budget.mjs";
 
 export const bostonPath = "where-to-stay/boston-family-hotels.html";
 export const bostonScreenedOn = "2026-10-09";
@@ -112,7 +113,33 @@ function breakfastSection() {
 <tr><th scope="row">${e(budget.plans[1].plan)}</th><td>${amount(budget.plans[1].stay_amount)}</td><td>Registered adults and children aged 5 and under: ${budget.included_adults} adults and age ${budget.included_child_ages.join(", ")} within published meal scope. Ages ${budget.uncovered_child_ages.join(" and ")} outside that inclusion; their breakfast cost is unknown.</td></tr>
 </tbody></table></div>
 <p class="dc-caution">Not breakfast for all five, and not a value winner: compare the ${amount(budget.stay_increment)} increment with what the covered guests would otherwise spend. No number of breakfasts, food-credit savings or older-child meal price is assumed. Displayed tax and destination fee are already included once; extra bedding, other charges and actual meal service remain unresolved. The original search retained child counts, not individual age acceptance.</p>
-<p>${link(budget.observation.source_url,"Dated official booking-check source")} &middot; source and prices observed October 1; comparison assembled October 9, not re-priced. Original price review due October 15. This is a historical planning comparison, not a current offer or full-family food budget.</p></div>`;
+<p>${link(budget.observation.source_url,"Dated official booking-check source")} &middot; source and prices observed October 1; comparison assembled October 9, not re-priced. Original price review due October 15. This is a historical planning comparison, not a current offer or full-family food budget.</p>
+${bostonBreakfastBudgetSection()}</div>`;
+}
+
+export function bostonBreakfastBudgetBasis() {
+  const budget = bostonBreakfastUpgrade();
+  const config = { adults: budget.included_adults, included_children: budget.included_child_ages.length,
+    upgrade_cents: Math.round(budget.stay_increment * 100), maximum_mornings: budget.observation.nights + 1 };
+  assessBreakfastUpgrade(config);
+  return config;
+}
+
+export function bostonBreakfastBudgetSection() {
+  const config = bostonBreakfastBudgetBasis();
+  const example = assessBreakfastUpgrade(config, { adult_cost: 25, child_cost: 10, mornings: 5 });
+  return `<!-- FT-IMP-103 breakfast start -->
+<div id="breakfast-budget" class="dc-rest-budget"><h3>Separate breakfasts versus the dated upgrade</h3>
+<p>This fixed comparison covers two registered adults and requested child age 4 only, not ages 8 and 12. Meal amounts and mornings below are hypothetical, not observed prices or confirmed included breakfasts. The six calendar dates in November 8-13 do not establish six meal entitlements. Credits, actual service, child-age acceptance and older-child meals remain unresolved.</p>
+<script id="breakfast-budget-basis" type="application/json">${JSON.stringify(config)}</script>
+<form id="breakfast-budget-form" hidden><fieldset><legend>Hypothetical covered-guest meals</legend><div class="dc-rest-inputs">
+<label for="breakfast-adult">Per adult / breakfast, USD<input id="breakfast-adult" name="adult_cost" type="number" min="0" max="10000" step="0.01" inputmode="decimal" autocomplete="off"></label>
+<label for="breakfast-child">Age 4 / breakfast, USD<input id="breakfast-child" name="child_cost" type="number" min="0" max="10000" step="0.01" inputmode="decimal" autocomplete="off"></label>
+<label for="breakfast-mornings">Hypothetical mornings<input id="breakfast-mornings" name="mornings" type="number" min="0" max="${config.maximum_mornings}" step="1" inputmode="numeric" autocomplete="off"></label>
+</div></fieldset><div class="dc-rest-actions"><button type="submit">Compare breakfast costs</button><button type="reset">Clear meal estimates</button></div></form>
+<p id="breakfast-budget-status" class="dc-rest-status" role="status" aria-live="polite" aria-atomic="true">Comparison unresolved. All three hypothetical inputs are unknown.</p>
+<p>For example, five hypothetical mornings at USD 25 per adult and USD 10 for age 4 total ${amount(example.alternative_cents / 100)} for those three guests, ${amount(Math.abs(example.difference_cents) / 100)} ${example.comparison} the dated ${amount(config.upgrade_cents / 100)} increment. This is conditional arithmetic, not current meal pricing, guaranteed savings or a booking recommendation. No food credits are deducted.</p></div>
+<!-- FT-IMP-103 breakfast end -->`;
 }
 const bookingChecks = {
   "boston-fenway-two-bedroom-tobt": ["Confirm sofa allocation and a fifth dining place; no rollaway or extra occupancy is established by a crib.", "Obtain current taxes, mandatory charges, payment timing and card-hold terms. Optional valet was USD 72/day (USD 85 outside standard times), excluded from this no-car task.", "Confirm registered-child breakfast terms, dietary needs, internet entitlement and current pool service.", "Check the actual museum-to-room return and usable rest time. MBTA's October 3 published age-11-and-under band includes ages 4 and 8, not 12; two adults plus age 12 imply three regular-fare riders unless another eligibility applies. Current fare, transfers, payment and stroller access remain unverified."],
@@ -168,10 +195,12 @@ ${room.id === bostonPlazaEvidence.record_id ? `<p>${e(cooking(room))} ${e(boston
 ${museumBudgetSection()}
 <p>Two selected Family-labeled Fenway review bodies, inspected October 3, describe April/May 2026 King Studio stays posted in June, with translation markers. They prompt breakfast-variety and kettle questions, not established defects, representative ratings or five-person TOBT evidence. Older pool, sofa and noise reports were not renewed. We have not stayed in these hotels; none is a verified safety or firm suitability recommendation.</p>
 <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Boston_-_Skyline_%2848718902556%29.jpg/1280px-Boston_-_Skyline_%2848718902556%29.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="Boston skyline and harbor in a 2019 photograph."><figcaption>Boston, August 31, 2019. Photo by <a href="https://www.flickr.com/photos/ajay_suresh">Ajay Suresh</a>, via <a href="https://commons.wikimedia.org/wiki/File:Boston_-_Skyline_(48718902556).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Uncropped resized orientation photo, not a current hotel or route image.</figcaption></figure></section>
-<section id="methodology"><h2>Research-based evidence, shared with the download</h2><p>Official published categories, dated booking observations, arithmetic estimates, limited review signals and unresolved questions are distinct. The complete CSV uses the same validated four-category room and price records, including all four public plans and the two unpriced categories. It does not change when the kitchen filter is active; the three excluded controls are shown separately on the page, not exported as candidates.</p><p>Room limits are a headcount screen, not a reservation or bed-sharing assurance. The Park Plaza provenance correction removes an inferred child-age band without changing amounts, original source dates or the original saved observation. No live inventory is queried, and no inputs are saved or transmitted.</p><p>${link("../about.html","How Family Tripwise handles evidence and uncertainty")}</p></section></main><footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><a href="../index.html">Browse destinations</a></footer><script src="../washington-dc-comparison.js?v=ft-imp093" defer></script></body></html>\n`;
+<section id="methodology"><h2>Research-based evidence, shared with the download</h2><p>Official published categories, dated booking observations, arithmetic estimates, limited review signals and unresolved questions are distinct. The complete CSV uses the same validated four-category room and price records, including all four public plans and the two unpriced categories. It does not change when the kitchen filter is active; the three excluded controls are shown separately on the page, not exported as candidates.</p><p>Room limits are a headcount screen, not a reservation or bed-sharing assurance. The Park Plaza provenance correction removes an inferred child-age band without changing amounts, original source dates or the original saved observation. No live inventory is queried, and no inputs are saved or transmitted.</p><p>${link("../about.html","How Family Tripwise handles evidence and uncertainty")}</p></section></main><footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><a href="../index.html">Browse destinations</a></footer><script src="../washington-dc-comparison.js?v=ft-imp093" defer></script><script type="module" src="../shared/breakfast-upgrade-form.mjs?v=ft-imp103"></script></body></html>\n`;
 }
 export function writeBostonFamilyHotelsPage(writeSite) {
   writeSite(bostonPath,bostonFamilyHotelPage());
   writeSite("downloads/boston-family-hotels.csv",bostonCsv);
   writeSite("downloads/boston-cooking-dining-five.csv",bostonDiningCsv);
+  for (const file of ["breakfast-upgrade-budget.mjs", "breakfast-upgrade-form.mjs"])
+    writeSite(`shared/${file}`, readFileSync(new URL(`../../src/shared/${file}`, import.meta.url), "utf8"));
 }

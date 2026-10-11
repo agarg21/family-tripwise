@@ -36,9 +36,11 @@ test("additive public section distinguishes recorded tables, unknowns and origin
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
 });
 
-test("Boston-only writer adds one asset without changing complete comparison or indexable inventory", () => {
+test("Boston-only writer retains dining and complete comparisons with additive shared modules and unchanged indexable inventory", () => {
   const output = new Map(); writeBostonFamilyHotelsPage((path, bytes) => output.set(path, bytes));
-  assert.deepEqual([...output.keys()], ["where-to-stay/boston-family-hotels.html", "downloads/boston-family-hotels.csv", "downloads/boston-cooking-dining-five.csv"]);
+  assert.deepEqual([...output.keys()], ["where-to-stay/boston-family-hotels.html", "downloads/boston-family-hotels.csv", "downloads/boston-cooking-dining-five.csv", "shared/breakfast-upgrade-budget.mjs", "shared/breakfast-upgrade-form.mjs"]);
+  for (const name of ["breakfast-upgrade-budget.mjs", "breakfast-upgrade-form.mjs"])
+    assert.equal(output.get(`shared/${name}`), read(`src/shared/${name}`));
   assert.equal(output.get("downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(read("site/downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(rows(bostonCsv).length, 7);

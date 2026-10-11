@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {bostonPath,bostonPack,bostonPrices,bostonRooms,bostonCsv,bostonExcluded,bostonFamilyHotelPage,bostonBreakfastUpgrade} from "./page-generation/boston-family-hotels-page.mjs";
+import {bostonPath,bostonPack,bostonPrices,bostonRooms,bostonCsv,bostonExcluded,bostonFamilyHotelPage,bostonBreakfastUpgrade,bostonBreakfastBudgetBasis} from "./page-generation/boston-family-hotels-page.mjs";
 
 test("overview retains each exact public plan beside its own nightly sample",()=>{
  const html=bostonFamilyHotelPage();
@@ -83,6 +83,7 @@ test("museum admission component is source-dated, keyboard-readable and never a 
 
 test("Boston breakfast premium uses stay-total cents, not rounded nightly subtraction",()=>{
  const b=bostonBreakfastUpgrade();assert.equal(b.stay_increment,419.22);assert.equal(b.nightly_equivalent,83.84);
+ assert.equal(bostonBreakfastBudgetBasis().upgrade_cents,41922);
  assert.notEqual(b.stay_increment,(528.68-444.84)*5);
  assert.equal(b.observation.checked_on,"2026-10-01");assert.equal(b.observation.requested_individual_ages_confirmed,false);
  assert.equal(b.included_adults,2);assert.deepEqual(b.included_child_ages,[4]);assert.deepEqual(b.uncovered_child_ages,[8,12]);

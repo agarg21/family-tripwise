@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-103",
+  "learning_unit": "LRN-200",
+  "assessed_on": "2026-10-11",
+  "evidence_class": "INTERNAL_EXISTING_PAGE_TASK_AND_REUSED_GUARDED_BOOKING_OBSERVATION",
+  "family_decision": "Compare hypothetical separate breakfasts for the covered guests with the dated breakfast-plan increment, without claiming current savings or all-family meal inclusion.",
+  "hypothesis": "The existing increment and meal-age table already let a parent evaluate their own breakfast-cost estimates without off-page arithmetic.",
+  "result": "REJECT task answerability for hypothetical separate costs; IMPLEMENT one additive existing-owner conditional worksheet with shared integer-cent arithmetic.",
+  "maintained_records": ["docs/research/boston-breakfast-upgrade-task-2026-10-09.json", "docs/research/boston-park-plaza-count-price-normalization-2026-10-09.json"],
+  "original_price_observed_on": "2026-10-01",
+  "source_renewed": false,
+  "provider_calls": 0,
+  "scenario": {"adults": 2, "requested_child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "exact_ages_entered_in_original_search": false},
+  "fixed_basis": {"plans": ["Flexible Rate", "Breakfast Included"], "stay_increment_cents": 41922, "currency": "USD", "covered_adults": 2, "covered_child_ages": [4], "uncovered_child_ages": [8, 12], "maximum_hypothetical_mornings": 6, "maximum_basis": "Six calendar dates, not confirmed included meals"},
+  "task_cases": [{"adult_cost_usd": 25, "covered_child_cost_usd": 10, "mornings": 5, "alternative_cents": 30000, "difference_cents": -11922}, {"adult_cost_usd": 200, "covered_child_cost_usd": 19.22, "mornings": 1, "alternative_cents": 41922, "difference_cents": 0}, {"adult_cost_usd": 45, "covered_child_cost_usd": 10, "mornings": 5, "alternative_cents": 50000, "difference_cents": 8078}],
+  "controls": "Blank unknown by default; explicit zero distinct; USD nonnegative0-10000 with at most two decimals; whole hypothetical mornings0-6; changes invalidate previous output, calculate/reset reversible; no persistence or transmission.",
+  "limits": ["Not observed meal prices, guaranteed savings, live offers or a value winner", "No assumed five breakfasts, confirmed meal service or credit deduction", "Older-child meals, exact age acceptance, fifth bedding and full-family costs remain unknown", "OriginalOctober1 prices/October15review, source and fee clocks and both original CSVs preserved", "Internal proxy, not real-user testing, firsthand experience or SEO outcome"],
+  "confidence": "High maintained join and integer-cent arithmetic; unknown actual meals, entitlements, credits, current prices and family satisfaction.",
+  "reusable_lesson": "Show conditional family-budget arithmetic without converting covered guests into whole-family inclusion or hypothetical separate costs into savings.",
+  "next_falsification_trigger": "Changed guarded rate/meal/source terms, originalOctober15price review, shared-core drift, invalid-input/responsive/keyboard/reset/filter/download failure.",
+  "verification_gate": "Focused/full native QA, actual desktop/mobile task, different read-only PASS, exact guarded push and Pages/marker/productionSEO/all affected invariants before public delivery."
+}
