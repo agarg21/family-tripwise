@@ -114,7 +114,36 @@ function breakfastSection() {
 </tbody></table></div>
 <p class="dc-caution">Not breakfast for all five, and not a value winner: compare the ${amount(budget.stay_increment)} increment with what the covered guests would otherwise spend. No number of breakfasts, food-credit savings or older-child meal price is assumed. Displayed tax and destination fee are already included once; extra bedding, other charges and actual meal service remain unresolved. The original search retained child counts, not individual age acceptance.</p>
 <p>${link(budget.observation.source_url,"Dated official booking-check source")} &middot; source and prices observed October 1; comparison assembled October 9, not re-priced. Original price review due October 15. This is a historical planning comparison, not a current offer or full-family food budget.</p>
-${bostonBreakfastBudgetSection()}</div>`;
+${bostonBreakfastBudgetSection()}
+${bostonBreakfastMenuSection()}</div>`;
+}
+
+const breakfastMenuEvidence = read("boston-park-plaza-breakfast-menu-2026-10-11.json");
+
+export function bostonBreakfastMenuSection(evidence = breakfastMenuEvidence) {
+  if (evidence?.schema_version !== 1 || evidence.record_id !== "boston-park-plaza-deluxe-double" ||
+      evidence.source_url !== "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/dining/off-the-common/" ||
+      !validDate(evidence.observed_on) || !validDate(evidence.review_due) || evidence.review_due <= evidence.observed_on ||
+      evidence.venue !== "Off the Common" || evidence.breakfast_hours?.weekdays !== "Monday-Friday 6:30-11 am" ||
+      evidence.breakfast_hours?.weekends !== "Saturday-Sunday 7-11 am" || evidence.breakfast_hours.stay_date_service_confirmed !== false ||
+      evidence.price_basis?.currency !== null || evidence.price_basis.unit !== "general menu entry, not an age-specific quote" ||
+      evidence.price_basis.tax_included !== false || evidence.price_basis.menu_stated_meals_tax_percent !== 7 ||
+      evidence.price_basis.menu_stated_group_gratuity_percent !== 18 || evidence.price_basis.menu_stated_gratuity_group_minimum !== 6 ||
+      evidence.price_basis.child_prices_established !== false || evidence.price_basis.package_menu_equivalence_established !== false ||
+      evidence.price_basis.credit_eligibility_established !== false ||
+      JSON.stringify(evidence.menu) !== JSON.stringify([{ name: "Premium Buffet", displayed_amount: 38 },
+        { name: "Buttermilk Pancakes", displayed_amount: 22 }, { name: "Breakfast Cereal", displayed_amount: 10 },
+        { name: "Regular or Decaf Coffee", displayed_amount: 7 }]))
+    throw new Error("Boston breakfast menu basis changed; requalification required");
+  return `<!-- FT-IMP-104 menu start -->
+<section id="breakfast-menu"><h3 style="scroll-margin-top:128px">Park Plaza breakfast: menu and timing checks</h3>
+<p>${e(evidence.venue)} publishes breakfast hours of ${e(evidence.breakfast_hours.weekdays)} and ${e(evidence.breakfast_hours.weekends)}. These are published venue hours, not confirmed service for November 8-13 or meal entitlements under the dated room plan.</p>
+<div class="dc-table-scroll" tabindex="0" role="region" aria-label="Park Plaza general breakfast menu"><table><caption>Official breakfast menu checked ${e(evidence.observed_on)} &middot; general menu entries, not child-specific quotes</caption><thead><tr><th scope="col">Menu entry</th><th scope="col">Printed amount</th><th scope="col">Basis still to confirm</th></tr></thead><tbody>
+${evidence.menu.map(item => `<tr><th scope="row">${e(item.name)}</th><td>${e(item.displayed_amount)}</td><td>Currency not labeled on the source; child-age applicability and complete meal cost unknown.</td></tr>`).join("\n")}
+</tbody></table></div>
+<p>The menu states ${e(evidence.price_basis.menu_stated_meals_tax_percent)}% meals tax is added and ${e(evidence.price_basis.menu_stated_group_gratuity_percent)}% gratuity is added for groups of ${e(evidence.price_basis.menu_stated_gratuity_group_minimum)} or more. Other charges and gratuity for this five-person task remain unresolved. No credit is deducted.</p>
+<p>Ages 8 and 12 still need meal-cost confirmation. General menu amounts do not establish child prices, buffet inclusion under Breakfast Included, or credit redemption. The USD calculator above stays hypothetical and blank. ${link(evidence.source_url, "Official breakfast menu and hours")} &middot; menu review due ${e(evidence.review_due)}. Original room-price observation October 1 and review October 15 are unchanged.</p></section>
+<!-- FT-IMP-104 menu end -->`;
 }
 
 export function bostonBreakfastBudgetBasis() {

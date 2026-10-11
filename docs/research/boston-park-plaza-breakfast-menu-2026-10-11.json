@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-104",
+  "learning_unit": "LRN-201",
+  "evidence_class": "CURRENT_OFFICIAL_MENU_AND_INTERNAL_FAMILY_DECISION_TASK",
+  "record_id": "boston-park-plaza-deluxe-double",
+  "venue": "Off the Common",
+  "source_url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/dining/off-the-common/",
+  "navigation_source_url": "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/dining/",
+  "observed_on": "2026-10-11",
+  "review_due": "2026-10-18",
+  "source_method": "Ordinary permitted IAB dining overview, visible Discover Off the Common link, selected Breakfast tab; no booking search, reservation, contact or denied-source retry.",
+  "breakfast_hours": {"timezone_basis": "Published venue-local hours; no explicit zone label", "weekdays": "Monday-Friday 6:30-11 am", "weekends": "Saturday-Sunday 7-11 am", "stay_date_service_confirmed": false},
+  "menu": [
+    {"name": "Premium Buffet", "displayed_amount": 38},
+    {"name": "Buttermilk Pancakes", "displayed_amount": 22},
+    {"name": "Breakfast Cereal", "displayed_amount": 10},
+    {"name": "Regular or Decaf Coffee", "displayed_amount": 7}
+  ],
+  "price_basis": {"currency": null, "unit": "general menu entry, not an age-specific quote", "tax_included": false, "menu_stated_meals_tax_percent": 7, "menu_stated_group_gratuity_percent": 18, "menu_stated_gratuity_group_minimum": 6, "child_prices_established": false, "package_menu_equivalence_established": false, "credit_eligibility_established": false},
+  "task": {"family_decision": "Where can a parent verify breakfast timing and general menu amounts before budgeting uncovered ages8/12?", "hypothesis": "Existing upgrade and hypothetical worksheet provide the current restaurant-menu route and service constraints", "result": "REJECT answerability; IMPLEMENT one compact dated menu/service layer. General menu amounts are supported; specific child cost, package entitlement, currency label and actual November service remain unknown.", "confidence": "High visible official menu/hours transcription; unknown age-specific pricing, package service, redemption and future service.", "reusable_lesson": "A restaurant menu can resolve source discovery and timing without becoming a child quote or a hotel's included-plan entitlement.", "next_falsification_trigger": "Changed or removed menu/hours/terms, menu reviewOctober18, or failed family task; original room-price reviewOctober15 remains separate."},
+  "preserved": ["October1 room price observation and October15 review", "USD419.22 sampled plan increment and103 hypothetical calculator", "Age8/12 meal cost and exact ages acceptance unknown", "No food-credit deduction, meal-count assumption or savings claim", "Both original Boston CSVs, all room/fee records and34canonical URLs"],
+  "source_proof": "/tmp/ft-imp104-browser/official-source-dom.txt",
+  "limitations": ["Menu has no printed currency symbol/code; do not label these amounts USD or feed them into the USD calculator automatically", "Amounts are selected general menu entries, not a complete meal, child menu, minimum family budget or current stay quote", "Published7percent/18percent are this menu's stated terms, not independent legal or complete bill verification; a five-person party does not establish absence of other charges", "Breakfast buffet marketing does not establish what the observed Breakfast Included plan covers", "No firsthand visit, real-user testing, dietary/safety assurance or SEO outcome"]
+}

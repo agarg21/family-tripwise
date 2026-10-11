@@ -20,11 +20,48 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-104",
+      "title": "Expose source-dated Park Plaza breakfast menu and service checks",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "selected",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T10:04:42Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/boston-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/boston-park-plaza-breakfast-menu-2026-10-11.json",
+        "tools/boston-breakfast-menu.test.mjs",
+        "tools/page-generation/boston-family-hotels-page.mjs",
+        "site/where-to-stay/boston-family-hotels.html",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Current ordinary official dining route and Off the Common breakfast tab provide weekday/weekend service hours, general menu amounts and menu-stated tax/gratuity terms. No currency label or child-specific prices/age bands/package entitlement observed. Existing Boston family breakfast task lacks direct service/menu verification route; source qualifies planning checks, not older-child prices or actual savings.",
+      "acceptance_criteria": [
+        "One maintained source-dated record and guarded additive public section generated from it; breakfast hours and four general menu entries retain currency-not-labeled, per-menu-item basis, tax extra, unknown child applicability and no November service/plan guarantee.",
+        "No calculator default or arithmetic change, no credit deduction, no five-meal assumption, no age8/12 prices or package/buffet equivalence. Preserve sourceOct1/reviewOct15, all prior prices/fees/room records, full/diningCSV and existing HTML exactly after removing additive104 block; all other site outputs and34URLs unchanged.",
+        "LRN201 bounded official-source learning; focused/full nativeQA, actual1280/390/320 table/link/calculator/filter/twoCSV/image checks, different independent read-only PASS, exact guarded push and Pages/marker/productionSEO/all declared invariants."
+      ],
+      "measurement_plan": "Parent can locate a dated general menu and breakfast time window while seeing exactly which child/plan/credit/currency checks remain; not human satisfaction, savings or SEO causality. Review menuOctober18 or changed official terms.",
+      "production_invariant": "917baseline files/305prior ordered roadmap items/held11 and ledger suffix preserved; only additive104 Boston block differs publicly. Source record refresh applies only current menu/hours, never existing booking/price/fee clocks. Carry103 immutable completion only. Actualrun10:00:45Z/06:00:45EDT/startdeadline10:45:45Z/fixedOct12expiry unchanged. No denied-source retry/provider call/newURL/city/paid/indexing/analytics/outreach/ControlRoom/scheduler mutation.",
+      "gsc_evidence_classification": "Reused recentOct10API-finalizedOct8 versusOct9-finalizedOct7; no fresh query cohort or CTR diagnosis; July27 sitemap stale orientation.",
+      "decision": "IMPLEMENT supported service/menu verification layer on existing Boston owner; preserve older-child/package/currency unknowns.",
+      "release_state": "registered-before-edits",
+      "review_receipt": "FT-IMP-104 independent read-only Ampere PASS/noP0-P3; frozen658c439c6823dfc58770fab17e630debe1188f7b9d13bc84dde13a278f79b5e2/all919hashes/exact9/305prioritems/held11-ledger preserved. Master784full/27focused/47maintenance/state0/GSC89/localSEO0fiveprior/invariants PASS; independent27focused/invariants/stateGSCSEO/source-and-screenshot proof inspected, no independent full-suite/livebrowser claim. Actual permittedIAB1280/390/320 calculator300-119.22below419.22/reset/filter4-2-4/sixnativeCSVexact/nooverflow/errors[]; mobile table288client/800scroll/right512reachable; image1280loaded. Initial proofharness wrong statusselector/inheritedactivefilter corrected and complete task rerun; no product change. Removing104block restores all oldBostonHTML byteexact; bothCSV/sharedmodules/priorpublic-research/34URLs/sourceOct1-reviewOct15 intact. Current official general menu/hours qualify discovery/timing only, not USDlabel/childprice/planentitlement/credit/future service/savings. Carry103immutableclosure only. Mechanical consensus receipt; guardedrelease-production pending."
+    },
+    {
       "id": "FT-IMP-103",
       "title": "Compare hypothetical covered-guest breakfast costs on existing Boston page",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T09:04:04Z",
       "allowed_during_observation": true,
@@ -59,8 +96,14 @@
       "production_invariant": "Baseline911files/304prioritems/held11ledger suffix preserved; only additive Boston breakfast worksheet/script/newshared modules may differ publicly. Other34canonical URLs/DC102/Cancun096-100/price-fee-room-source records/fullBostonCSV/diningCSV/sharedCSS unchanged. Carry102 immutable productionclosure only. Actualrun09:01:43Z/05:01:43EDT/startdeadline09:46:43Z/transaction09:04:04Z/fixed sprintOct12 unchanged; no denied source retry/provider call/newcityURL/accounts/paid/indexing/analytics/outreach/ControlRoom/scheduler mutation.",
       "gsc_evidence_classification": "Reused recentOct10API-finalizedOct8 versusOct9-finalizedOct7; no freshAPI/querycohort or CTR diagnosis, July27 sitemap stale orientation.",
       "decision": "IMPLEMENT one bounded existing Boston hypothetical covered-guest breakfast worksheet; current meals/service-count-credit/older-child/fullfamily cost unknown.",
-      "release_state": "pending-implementation-review",
-      "review_receipt": "FT-IMP-103 independent read-only Copernicus PASS hardened candidate H4G5j1, noP0-P3, exact15 paths/all917 hashes; review manifest2fa2e7b5f2a7d38b513ebf8b687eef7bc596ff978aeb083476273a86ecd7c684. Master full780/focused20/maintenance47/state0/GSC89/localSEO34URL-37HTML0errors5priorwarnings; independent43/coercion-controls/10000integer-cent cases/stateGSCSEO/invariants PASS, no independent full-suite or livebrowser claim. Final actual permittedIAB1280/390/320 unknown-partial-below-equal-above-zero/reset/edit-invalidation/nativeinvalid/keyboard/filter4-2-4/two exactCSV eachwidth/lazyphoto/nooverflow/errors. All oldBostonHTML after additiveblock-script removal/otherpublic/priorresearch/full+diningCSV/sourceOct1/reviewOct15/schema/34URLs unchanged. 902nonowned baseline files/prior304ordereditems/heldledger suffix preserved; only mechanical102closure carried. Internalproxy not human satisfaction/financialvalue/currentquote. Immutable review/QA results only; release/production gates pending."
+      "release_state": "released-and-production-verified",
+      "review_receipt": "FT-IMP-103 independent read-only Copernicus PASS hardened candidate H4G5j1, noP0-P3, exact15 paths/all917 hashes; review manifest2fa2e7b5f2a7d38b513ebf8b687eef7bc596ff978aeb083476273a86ecd7c684. Master full780/focused20/maintenance47/state0/GSC89/localSEO34URL-37HTML0errors5priorwarnings; independent43/coercion-controls/10000integer-cent cases/stateGSCSEO/invariants PASS, no independent full-suite or livebrowser claim. Final actual permittedIAB1280/390/320 unknown-partial-below-equal-above-zero/reset/edit-invalidation/nativeinvalid/keyboard/filter4-2-4/two exactCSV eachwidth/lazyphoto/nooverflow/errors. All oldBostonHTML after additiveblock-script removal/otherpublic/priorresearch/full+diningCSV/sourceOct1/reviewOct15/schema/34URLs unchanged. 902nonowned baseline files/prior304ordereditems/heldledger suffix preserved; only mechanical102closure carried. Internalproxy not human satisfaction/financialvalue/currentquote. Immutable review/QA results only; release/production gates pending.",
+      "release_receipt": "FT-IMP-103 release db181c691c660ec3efbb6ab8e4cd9674460a164f remote verified 2026-10-11T09:24:07.095Z; main0-0/emptyindex/exact15/all917indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Public Boston covered-guest breakfast calculator delivered: Pages38128090913 success, matching release marker db181c691c660ec3efbb6ab8e4cd9674460a164f/run exact, all7assets HTTP200/exactbytes/modulesJavaScript; productionSEO0errors5priorwarnings/allinvariantsPASS at2026-10-11T09:22:34.767Z. ActualIAB1280/390/320 unknown-partial-below-equal-above-zero/reset/edit-invalidation/nativeinvalid/keyboard/filter4-2-4/two full+dining nativeCSV downloads eachwidth exactbytes; image1280loaded/nooverflow/errors[]. Proof /tmp/ft-imp103-browser/production-task.json and production-context.png. LRN200 internal proxy learned; originalOct1price/Oct15review/meal-service-entitlement-credit-older-child/fullcost unknowns not renewed. Sapphire101/Ziva090/Disney092 holds unchanged and narrow, no replay/bypass. One finish-first public transaction completed; no transaction quota or claim all six clusters finished. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T09:24:07.114Z",
+      "release_commit": "db181c691c660ec3efbb6ab8e4cd9674460a164f",
+      "pages_run": 38128090913,
+      "production_verified_at": "2026-10-11T09:22:34.767Z",
+      "production_verification": "Matching Pages and release marker; seven exact HTTP200 assets with JavaScript module MIME, all registered invariants and production SEO0errors/five prior warnings. Actual1280/390/320 calculator, blank/reset/keyboard/invalid/filter4-2-4, full+diningCSV downloads/image/nooverflow/errors proof in /tmp/ft-imp103-browser/production-task.json. Current meals/service/credits/older-child costs remain unknown."
     },
     {
       "id": "FT-IMP-102",
