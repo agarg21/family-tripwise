@@ -27,7 +27,7 @@ test("Conflicting session labels never become zero price or confirmed included e
   assert.match(policy.limitation, /not complete ride rules or confirmed admission/);
 });
 
-test("Static and enhanced page use the same policy without renewing other prices or arithmetic", () => {
+test("Static and enhanced page use the same policy and preserve fee arithmetic", () => {
   const html = orlandoSuitePage();
   assert.equal(html, readFileSync(new URL("../site/where-to-stay/orlando-family-hotels.html", import.meta.url), "utf8"));
   assert.equal(readFileSync(new URL("./page-generation/orlando-suite-data.mjs", import.meta.url), "utf8"), readFileSync(new URL("../site/orlando/orlando-suite-data.mjs", import.meta.url), "utf8"));
@@ -35,7 +35,8 @@ test("Static and enhanced page use the same policy without renewing other prices
   for (const ride of policy.rides) assert.ok(html.includes(`${ride.name}: published minimum ${ride.minimumInches} inches.`));
   assert.match(html, /Official cost conflict/);
   assert.match(html, /Policy checked 2026-10-11; recheck 2026-10-18/);
-  assert.deepEqual([checkedOn, pageUpdatedOn, priceRecheckOn, recheckOn], ["2026-09-24", "2026-09-27", "2026-10-11", "2026-10-24"]);
-  assert.match(html, /About USD153 per room\/night/);
+  assert.deepEqual([checkedOn, pageUpdatedOn, recheckOn], ["2026-09-24", "2026-09-27", "2026-10-24"]);
+  assert.equal(priceRecheckOn, suites[2].priceTerms.recheckOn);
+  assert.ok(html.includes(`About USD${Math.round(suites[2].priceSample.estimatedTotal / suites[2].priceSample.nights)} per room/night`));
   assert.deepEqual(compareStay({feeIncluded:"no"}).rows.map(r => [r.parking,r.resortExtra]), [[0,null],[null,null],[155,325]]);
 });

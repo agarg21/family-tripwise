@@ -1,7 +1,7 @@
 export const checkedOn = "2026-09-24";
 export const recheckOn = "2026-10-24";
 export const pageUpdatedOn = "2026-09-27";
-export const priceRecheckOn = "2026-10-11";
+export const priceRecheckOn = "2026-10-18";
 export const sources = {
   disneyRoom: "https://disneyworld.disney.go.com/resorts/art-of-animation-resort/rates-rooms/",
   disneyTransport: "https://disneyworld.disney.go.com/resorts/art-of-animation-resort/amenities/",
@@ -61,10 +61,23 @@ export const suites = [
     parking: 31, parkingSource: "ihgAmenities", resortFee: 65,
     costNote: "Parking: $31 plus tax per vehicle per night. Check the actual rate's fee inclusion before adding anything again.",
     priceSample: {
-      observedOn: "2026-09-27", stay: "November 8-13, 2026", nights: 5,
-      room: "Two Bedroom Suite 1 Queen 1 Bunk Bed", party: "two adults and three children (ages not entered)",
-      plan: "non-member Stay Longer And Save", roomSubtotal: 409, resortFees: 270, taxes: 84.90,
-      estimatedTotal: 763.90, source: "ihgBooking"
+      observedOn: "2026-10-11", stay: "November 8-13, 2026", nights: 5,
+      room: "2 Bedroom Suite 1 Queen 1 Bunk Bed", party: "two adults and three children (ages not entered)",
+      plan: "non-member Stay Longer And Save", roomSubtotal: 405, resortFees: 270, taxes: 84.40,
+      estimatedTotal: 759.40, source: "ihgBooking",
+      terms: "Breakfast is listed, but covered guest count is not established. Four-night minimum; book at least four days ahead. First-night deposit is non-refundable; cancellation or no-show costs the first night per room, with possible taxes. Early checkout or fewer nights may increase the room rate."
+    },
+    alternatePriceSample: {
+      observedOn: "2026-10-11", stay: "November 8-13, 2026", nights: 5,
+      room: "2 Bedroom Suite 1 Queen 1 Bunk Bed", party: "two adults and three children (ages not entered)",
+      plan: "non-member Best Flexible Rate", roomSubtotal: 455, resortFees: 270, taxes: 90.65,
+      estimatedTotal: 815.65, source: "ihgBooking",
+      terms: "Cancel before 6:00 PM local hotel time on November 6, 2026 for no cancellation charge. Later cancellation or no-show costs the first night per room, with possible taxes. A first-night deposit is required; breakfast coverage is not established for this plan."
+    },
+    priceTerms: {
+      checkedOn: "2026-10-11", recheckOn: "2026-10-18",
+      limitation: "Both samples include the displayed USD54 per-night resort fee and taxes; do not add that fee again. Parking is extra at USD31 plus tax per vehicle per night in these rate details. They are age-unverified headcount results, not typical ranges, live quotes, confirmed acceptance of ages 4, 8 and 12, or complete trip budgets.",
+      depositConflict: "Deposit timing conflict in both plans: Deposit Rules say the first-night deposit is due at booking, while Security Deposit text says seven days before arrival. Confirm payment timing before booking."
     },
     next: "Confirm your children's ages and the chosen suite's sleeping setup and availability, then rate-plan fee inclusion, height restrictions and shuttle details."
   }

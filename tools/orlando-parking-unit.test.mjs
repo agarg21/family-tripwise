@@ -16,7 +16,8 @@ test("Cabana fee retains amount and unknown unit with its own source clock", () 
   assert.equal(evidence.parking.billing_frequency, null);
   assert.equal(evidence.parking.tax_amount, null);
   assert.equal(evidence.parking.rate_inclusion, null);
-  assert.deepEqual([checkedOn,recheckOn,pageUpdatedOn,priceRecheckOn], ["2026-09-24","2026-10-24","2026-09-27","2026-10-11"]);
+  assert.deepEqual([checkedOn,recheckOn,pageUpdatedOn], ["2026-09-24","2026-10-24","2026-09-27"]);
+  assert.equal(priceRecheckOn, suites[2].priceTerms.recheckOn);
   assert.match(s.costNote, /not a displayed ISO label/);
   assert.match(s.costNote, /Other property facts and room prices are not renewed/);
   const fees = hotelEvidence().find(r=>r.id === "orlando-cabana-bay").fields.fees;
@@ -54,6 +55,6 @@ test("Static and generated public output share the corrected null, not hidden130
   assert.match(html, /Parking wording checked October 11, 2026/);
   assert.match(html, /no calculated stay subtotal/);
   assert.doesNotMatch(html, /\$130|per vehicle per night[^<]*Cabana/);
-  assert.match(html, /About USD153 per room\/night/);
+  assert.ok(html.includes(`About USD${Math.round(suites[2].priceSample.estimatedTotal / suites[2].priceSample.nights)} per room/night`));
   assert.match(html, /October 26, 2026/);
 });

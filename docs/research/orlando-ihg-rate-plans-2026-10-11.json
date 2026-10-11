@@ -1,0 +1,24 @@
+{
+  "action_id": "FT-IMP-110",
+  "observed_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "evidence_class": "BOOKING_CHECK",
+  "source": "https://www.ihg.com/holidayinnresorts/hotels/us/en/find-hotels/select-roomrate?qSlH=DISFS&qRms=1&qAdlt=2&qChld=3&qCiD=8&qCiMy=102026&qCoD=13&qCoMy=102026",
+  "workflow": "Ordinary official rooms page Select dates, November8/five nights, Continue; changed adults1to2 and children0to3 in native guest controls then Search. Disabled member discount for exact queen-bunk suite; opened each public rate disclosure. No selection, booking, payment, contact or account action.",
+  "currency": "USD",
+  "currency_basis": "Displayed USD in currency selector and both rate disclosures",
+  "unit": "one room, five nights; approximate room/night derived from displayed estimated total",
+  "room": "2 Bedroom Suite 1 Queen 1 Bunk Bed",
+  "maximum_displayed": 6,
+  "stay": {"arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5},
+  "party": {"adults": 2, "children": 3, "requested_ages": [4, 8, 12], "entered_ages": null, "status": "COUNT_ONLY_AGE_UNRESOLVED", "reason": "Guest controls expose counts, not age inputs; generated query contains blank child ages. No acceptance of requested ages is established."},
+  "plans": [
+    {"plan": "non-member Stay Longer And Save", "room_subtotal": 405, "resort_fees": 270, "taxes": 84.40, "estimated_total": 759.40, "derived_nightly": 151.88, "minimum_nights": 4, "advance_booking_days": 4, "breakfast": "Listed; covered guest count unknown", "cancellation": "First-night nonrefundable deposit; cancel/no-show first night per room with possible tax. Shorter stay may increase rate."},
+    {"plan": "non-member Best Flexible Rate", "room_subtotal": 455, "resort_fees": 270, "taxes": 90.65, "estimated_total": 815.65, "derived_nightly": 163.13, "breakfast": "Not established", "cancellation": "No cancellation charge before6PM local hotel time Nov6; after deadline/no-show first night per room, possible tax."}
+  ],
+  "fee_basis": "Both include displayed54USD nightly resort fee and listed taxes6%plus6.5% on rate and fee. Parking31USDplus-tax/night/vehicle excluded. No further purchases assumed; complete trip total unknown.",
+  "deposit_conflict": "Both disclosures require first-night deposit. Deposit Rules: due at booking. Security Deposit: seven days before arrival. Timing unresolved.",
+  "other_scope": "No renewal of general amenities65USD fee or other room/transport/water facts. Prior September27 observation retained in existing dated evidence. Not a typical range, live quote, real-user test, confirmed booking acceptance, best-value ranking, newURL or fullwater-corpus qualification.",
+  "proof": "/tmp/ft-imp110-browser/{stay-longer,flexible,party}-dom.txt and rate screenshots",
+  "result": "IMPLEMENT count-only dated price/terms comparison; preserve exact-age and complete-budget gates. Review on changed source/plan or October18."
+}

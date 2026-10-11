@@ -14,7 +14,8 @@ const nightlySample = suite => {
   const sample = suite.priceSample;
   if (!sample) return "A matching room/party/date quote has not been observed.";
   const usd = value => `USD${value.toFixed(2)}`;
-  return `Observed ${e(sample.observedOn)} for ${e(sample.stay)}, ${e(sample.room)}, ${e(sample.party)}: ${e(sample.plan)}. <strong>About USD${Math.round(sample.estimatedTotal / sample.nights)} per room/night</strong> from ${usd(sample.estimatedTotal)} estimated for ${sample.nights} nights (${usd(sample.roomSubtotal)} room + ${usd(sample.resortFees)} resort fee + ${usd(sample.taxes)} displayed taxes). Parking is extra. Breakfast is listed; a four-night minimum, one-night deposit and cancellation penalties apply. This is one age-unverified sample, not a typical or current quote. ${cite(sample.source, "Dated IHG rate details")}`;
+  const render = rate => `<p>Observed ${e(rate.observedOn)} for ${e(rate.stay)}, ${e(rate.room)}, ${e(rate.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / rate.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} estimated for ${rate.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.resortFees)} resort fee + ${usd(rate.taxes)} displayed taxes). ${e(rate.terms)} ${cite(rate.source, "Dated IHG rate details")}</p>`;
+  return `<div data-rate-plans="${e(suite.id)}">${[sample, suite.alternatePriceSample].filter(Boolean).map(render).join("")}<p>${e(suite.priceTerms.limitation)}</p><p>${e(suite.priceTerms.depositConflict)} Price terms checked ${e(suite.priceTerms.checkedOn)}; recheck ${e(suite.priceTerms.recheckOn)}.</p></div>`;
 };
 
 export function orlandoSuitePage() {
@@ -40,7 +41,7 @@ export function orlandoSuitePage() {
       ${contributorCredit()}
       <p class="lede">Room for everyone, the right park base, and water benefits that actually apply to your dates.</p>
       <p>Three suite options across Disney, Universal and an off-site waterpark base. This is a focused comparison for a family considering one room, not a best-hotel ranking or a complete Orlando directory.</p>
-      <p>Base sources checked <time datetime="${checkedOn}">September 24, 2026</time>; IHG booking capacity, fee and sample checked <time datetime="${pageUpdatedOn}">September 27, 2026</time>. <span id="freshness">Price sample recheck due ${priceRecheckOn}; other source review due ${recheckOn}. Verify changing terms before paying.</span></p>
+      <p>Base sources checked <time datetime="${checkedOn}">September 24, 2026</time>; IHG booking capacity and general fee comparison checked <time datetime="${pageUpdatedOn}">September 27, 2026</time>. Dated IHG price plans checked October 11, 2026. <span id="freshness">Price sample recheck due ${priceRecheckOn}; other source review due ${recheckOn}. Verify changing terms before paying.</span></p>
       <div class="jump-links"><a href="#quick-compare">Compare bases</a><a href="#stay-check">Check dates &amp; fees</a><a href="#before-booking">Booking questions</a></div>
     </section>
     <section id="quick-compare">
@@ -87,7 +88,7 @@ export function orlandoSuitePage() {
         <li><strong>Send the exact party:</strong> every child's age at travel, the named room category and your dates. A published maximum is only a preliminary screen; it does not confirm inventory, child-pricing rules, accessible-room availability or acceptance of your party.</li>
         <li><strong>Agree the sleeping plan:</strong> who shares each bed, whether a sofa or pull-down suits your family, and whether a door or partition gives the separation you need. Bed count alone is not an occupancy policy.</li>
         <li><strong>Plan the rest day:</strong> ask about pool opening, slide and ride height rules, paid extras and weather closures. A waterpark benefit is not supervision, a safety assurance or a promise every child can use every attraction.</li>
-        <li><strong>Price the same trip:</strong> obtain comparable room totals including tax, mandatory fees, parking, tickets and transfers. Do not add a fee twice when the rate already includes it. The one IHG sample lacks child ages and does not price these other rooms or future bookings.</li>
+        <li><strong>Price the same trip:</strong> obtain comparable room totals including tax, mandatory fees, parking, tickets and transfers. Do not add a fee twice when the rate already includes it. The two IHG plans lack child ages and do not price these other rooms or future bookings.</li>
         <li><strong>Check the journeys:</strong> verify each park stop, booking requirement and last return service. We have not tested travel times, stroller routes or the ease of returning for naps.</li>
       </ol>
     </section>
@@ -97,7 +98,7 @@ export function orlandoSuitePage() {
     </section>
     <section id="methodology"><h2>Research, not a hotel review</h2>
       <p>These three room categories illustrate different park-base and water-benefit decisions. We have not stayed at these properties, tested the journeys or assessed service quality. No review score, best-value winner or firm family-suitability verdict is implied.</p>
-      <p>Official facts are linked beside each comparison. The fee arithmetic is an illustration from published components, not a booking quote. Cabana Bay parking has no calculated stay subtotal because its published per-vehicle amount does not establish billing frequency. The dated IHG sample is one observed party-count/rate-plan result, not a transferable family price; exact-age acceptance and comparable totals remain unknown. The page does not infer a room maximum from waterpark wristbands, treat an expected reopening as confirmed, or extend a seasonal offer to unspecified dates.</p>
+      <p>Official facts are linked beside each comparison. The fee arithmetic is an illustration from published components, not a booking quote. Cabana Bay parking has no calculated stay subtotal because its published per-vehicle amount does not establish billing frequency. The dated IHG plans are observed party-count/rate-plan results, not transferable family prices; exact-age acceptance and comparable totals remain unknown. The page does not infer a room maximum from waterpark wristbands, treat an expected reopening as confirmed, or extend a seasonal offer to unspecified dates.</p>
       <p>Inputs are processed locally and are not saved or submitted. This page does not book, contact hotels or check live inventory. Source dates describe our inspection, not when a property's terms last changed.</p>
       <p><a href="../about.html">How Family Tripwise handles research and uncertainty</a></p>
     </section>

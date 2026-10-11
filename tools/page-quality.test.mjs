@@ -9,6 +9,11 @@ import { hotelEvidence } from "./hotel-evidence.mjs";
 async function historicalRecords() {
   const records = hotelEvidence();
   const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-nyc-price-labels.json", import.meta.url), "utf8"));
+  const priorAudit = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
+  const priorPrice = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-holiday-inn-price");
+  const ihgPrice = records.find(r => r.id === "orlando-holiday-inn").fields.price;
+  ihgPrice.value = JSON.parse(priorPrice.basis.split("Record-specific room/party/date/fees: ")[1]);
+  ihgPrice.observed_on = priorPrice.verified_on;
   // Replay historical prices and policies, not October's new observations.
   for (const name of ["La Jolla Shores Hotel", "Loews Coronado Bay Resort"]) {
     const prior = saved.tasks.find(t => t.hotel === name && t.field === "fees");
