@@ -7,6 +7,37 @@ import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, 
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export const cancunChildOffer = JSON.parse(readFileSync(new URL("../../docs/research/cancun-child-offer-eligibility-2026-10-11.json", import.meta.url), "utf8"));
+export const cancunGrandparentsBudget = JSON.parse(readFileSync(new URL("../../docs/research/cancun-grandparents-budget-2026-10-11.json", import.meta.url), "utf8"));
+const groupMoney = value => `USD ${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+export function cancunGrandparentsCsv() {
+  const e = cancunGrandparentsBudget, o = e.observation;
+  const headings = ["Hotel", "Booking category", "Room code", "Suites", "Adults", "Child ages", "Arrival", "Departure", "Nights", "Currency", "Nightly unit", "Plan", "Displayed nightly", "Displayed stay total", "Meals", "Tax and fee basis", "Payment and refund", "Offer eligibility", "Connection", "Room conflicts", "Checked", "Recheck due", "Source", "Limits"];
+  const rows = o.plans.map(p => [o.hotel, o.category, o.room_code, o.rooms, o.adults, o.child_ages.join(" | "), o.checkin, o.checkout, o.nights, o.currency, o.unit, p.name, p.nightly_display, p.total_display, o.meals, o.fee_basis, o.terms, o.eligibility, o.connection, o.room_conflict, e.checked_on, e.recheck_on, e.source_url, "Dated one-suite party search, not guaranteed connection, booking acceptance, full stay cost, formal group rate, savings or suitability. Grand Family Suite four-adult group price not observed; two-adult examples cannot be borrowed."]);
+  const cell = value => {
+    const plain = String(value).replaceAll(/[\r\n\t]+/g, " ");
+    const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
+    return `"${safe.replaceAll('"', '""')}"`;
+  };
+  return [headings, ...rows].map(row => row.map(cell).join(",")).join("\r\n") + "\r\n";
+}
+export function cancunGrandparentsSection() {
+  const e = cancunGrandparentsBudget, o = e.observation;
+  return `    <!-- FT-IMP-106 grandparents start -->
+    <section id="grandparents-budget" aria-labelledby="grandparents-title" style="scroll-margin-top:128px">
+      <h2 id="grandparents-title">A trip with grandparents: room linkage and budget</h2>
+      <p><strong>Example: two parents, two grandparents and children aged ${o.child_ages.map(esc).join(" and ")}.</strong> Four adults, two children; one suite for November 9-12, 2026 (${o.nights} nights). This is a dated party search, not a confirmed booking or a price for a reunion block.</p>
+      <p><strong>${esc(o.hotel)}:</strong> booking code ${esc(o.room_code)}, ${esc(o.category)}. Connection is <strong>not established</strong>; two bedrooms do not by themselves guarantee a connecting door. <a href="#royalton-splash-two-bedroom">Older room facts and unresolved child limits</a>.</p>
+      <div class="quick-table-scroll" tabindex="0" role="region" aria-label="Four-adult two-child dated suite prices"><table class="quick-table"><caption>One suite for all six guests - official direct USD examples</caption><thead><tr><th scope="col">Public plan</th><th scope="col">Per suite per night</th><th scope="col">Three-night displayed total</th></tr></thead><tbody>${o.plans.map(p => `<tr><th scope="row">${esc(p.name)}</th><td data-label="Per suite per night">${esc(groupMoney(p.nightly_display))}</td><td data-label="Three-night displayed total">${esc(groupMoney(p.total_display))}</td></tr>`).join("")}</tbody></table></div>
+      <p>${esc(o.fee_basis)} ${esc(o.meals)}</p>
+      <details><summary>Room conflicts and rate conditions</summary><p>${esc(o.room_conflict)}</p><p>${esc(o.terms)}</p><p>${esc(o.eligibility)}</p></details>
+      <p class="source-date">Price and booking text checked <time datetime="${esc(e.checked_on)}">${esc(e.checked_on)}</time>; review due ${esc(e.recheck_on)}. <a href="${esc(e.source_url)}">Official four-adult, two-child rate search</a>. The source may reset dates, ages or category; confirm the displayed selection.</p>
+      <p><a href="../downloads/cancun-grandparents-budget.csv" download>Download this party's two-plan budget (.csv)</a></p>
+      <p><strong>Moon Palace The Grand:</strong> the <a href="${esc(e.grand_check.category_source_url)}">Grand Family Suite category</a> specifies two connecting rooms; this is not a reservation guarantee. <strong>A four-adult, two-child price is not verified.</strong> Its existing two-adult sample is not this party's budget. <a href="#grand-family-suite">Grand room and separate price basis</a>.</p>
+      <p>Before choosing either, get written exact-party acceptance, the sleeping places assigned to each generation, connecting-door confirmation and all mandatory charges. Quiet/shared space, step-free access and rest-return practicality remain unverified. Neither result is a savings or family-suitability recommendation.</p>
+    </section>
+    <!-- FT-IMP-106 grandparents end -->
+`;
+}
 export function cancunChildOfferSection() {
   const offer = cancunChildOffer;
   return `    <!-- FT-IMP-096 offer start -->
@@ -59,7 +90,7 @@ export function cancunResortPage() {
       <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Next source review due October 23, 2026; verify volatile details before booking.</span></p>
       <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#comparison">Full policy checks</a><a href="#family-check">Your children's ages</a><a href="#before-booking">Before booking</a></div>
     </section>
-    <section id="quick-comparison" aria-labelledby="quick-title">
+${cancunGrandparentsSection()}    <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
       <p>Start with capacity, sleeping places and the nightly price examples. Each price has its own party, date and fee basis; these are not like-for-like family totals. Check club admission and transfers in each detailed record.</p>
       <div class="comparison-sharing">
@@ -131,6 +162,7 @@ export function writeCancunResortPage(writeSite) {
   writeSite(cancunPath, cancunResortPage());
   writeSite("downloads/cancun-booking-checklist.txt", bookingChecklistText());
   writeSite("downloads/cancun-room-comparison.csv", comparisonCsv());
+  writeSite("downloads/cancun-grandparents-budget.csv", cancunGrandparentsCsv());
   // Copy the reviewed modules unchanged so public and native checks share one model.
   for (const name of ["data", "compare", "render", "client", "share"]) {
     writeSite(`cancun/${name}.mjs`, readFileSync(new URL(`../../src/prototypes/cancun-resort-comparison/${name}.mjs`, import.meta.url), "utf8"));

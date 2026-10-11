@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-106",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "evidence_class": "official-booking-observation",
+  "family_decision": "Two parents, two grandparents and children aged3/7: distinguish a dated one-suite party price from an unconfirmed connection or sleeping arrangement.",
+  "source_url": "https://book.royaltonresorts.com/?adult=4&arrive=2026-11-09&chain=26025&child=2&childages=3%7C7&currency=USD&depart=2026-11-12&hotel=38092&level=hotel&locale=en-US&productcurrency=USD&room=LXUU2&rooms=1",
+  "observation": {
+    "hotel": "Royalton Splash Riviera Cancun",
+    "category": "Two Bedroom Luxury Junior Suite",
+    "room_code": "LXUU2",
+    "rooms": 1,
+    "adults": 4,
+    "child_ages": [3, 7],
+    "exact_child_ages_entered": true,
+    "checkin": "2026-11-09",
+    "checkout": "2026-11-12",
+    "nights": 3,
+    "currency": "USD",
+    "unit": "per suite per night",
+    "channel": "official direct booking engine",
+    "plans": [
+      {"name": "Fall into Savings: Flexible Stay", "nightly_display": 1193, "total_display": 3579, "pre_tax_total": 2909.76, "room_taxes_fees": 669.24, "pre_tax_nightly_rows": [969.92, 969.92, 969.92]},
+      {"name": "Standard Rate", "nightly_display": 1491.87, "total_display": 4475.61, "pre_tax_total": null, "room_taxes_fees": null}
+    ],
+    "meals": "Both inspected plans display All Meals Included; detailed child/service entitlements not independently established.",
+    "fee_basis": "Displayed taxes and fees included; environmental sanitation excluded and payable at the resort. Current notice has no numeric amount and fees may change. No full-stay total established.",
+    "terms": "Both inspected plans: full card charge two days before arrival; original card and cardholder required at arrival. Full refund outside 48 hours; first-night penalty within 48 hours; no modifications within 48 hours; two-night no-show penalty. Exact deadline timezone not established.",
+    "eligibility": "Flexible offer is new-reservations-only, nontransferable and excludes group bookings. A six-person one-suite search is not proof of formal group-rate eligibility; confirm how the resort classifies the reservation.",
+    "connection": "Not established; a two-bedroom title is not a guaranteed connecting-door arrangement.",
+    "room_conflict": "Booking card says Sleeps 8 and 2 king beds; description says two kings or four queens; Additional Beds lists one sofa bed and two queens. Older Royalton room evidence also lists eight total, but child limits disagree (six versus two), with Sunset View and different bed wording. The same LXUU2 code does not establish category continuity, view, exact sleeping places or reservation acceptance. The displayed total maximum does not resolve the child-limit conflict."
+  },
+  "grand_check": {
+    "category_source_url": "https://thegrand.moonpalace.com/accommodations/grand-family-suite",
+    "category_observation": "Current official category specifies two connecting rooms, one king and two doubles, maximum7 with rollaway for seventh guest(child); not a reservation confirmation or exact adult/child acceptance.",
+    "linked_booking_url": "https://bookingsthegrandpr.moonpalace.com/rooms?skd-room-code=F1",
+    "failed_task": "Ordinary linked engine defaults November12-16/two adults. Page remained covered by a loading overlay; clicks on adult/child increment controls did not change2adults/0children/0infants and Update remained disabled. No four-adult quote obtained; no refresh, alternate origin/tool or guessed inventory fallback.",
+    "owner": "Official booking engine availability/loading state",
+    "unblock_condition": "Changed visible ordinary booking state with operable controls and readable exact-category group quote, or supplied primary dated exact-party evidence; do not repeat unchanged overlay.",
+    "group_price": null,
+    "old_price_limit": "097's9723USD/1945roundednight sample is two adults/one4-17child/one0-3infant forOctober18-23, not a four-adult/two-child price. Preserved unchanged."
+  },
+  "excluded": ["Crossed-out20.03percent is not a child-offer or grandparents savings calculation.", "Transportation and US-only financing plans not adopted; selected-plan transfers remain unknown.", "No booking/account/payment/contact/personal-data submission or quiet-room/accessibility/firsthand/suitability assurance."],
+  "result": "IMPLEMENT bounded exact-party Royalton budget and explicit Grand group-unpriced/linkage checks within existing Cancun owner. PRESERVE066 guaranteed reservation linkage, full itemized group cost, rest/accessibility and corpus gates; no new canonical URL.",
+  "confidence": "High displayed exact-party/date/code/plan/price/refund evidence; low unresolved unit continuity/bed assignment/connection/full cost. Page task is proxy, not human testing.",
+  "next_falsification_trigger": "October18 scoped quote recheck; changed exact-category/party/fees/terms, written unit confirmation or failed public decision task. Grand requires changed ordinary booking state before another attempt.",
+  "local_proof": {
+    "guests": "/tmp/ft-imp106-browser/guests.png",
+    "guests_ax": "/tmp/ft-imp106-browser/guests-ax.txt",
+    "flexible": "/tmp/ft-imp106-browser/flexible.png",
+    "flexible_text": "/tmp/ft-imp106-browser/flexible.txt",
+    "standard": "/tmp/ft-imp106-browser/standard.png",
+    "standard_text": "/tmp/ft-imp106-browser/standard.txt",
+    "rates_ax": "/tmp/ft-imp106-browser/rates-ax.txt",
+    "grand_category": "/tmp/ft-imp106-browser/grand-category-ax.txt",
+    "grand_loading": "/tmp/ft-imp106-browser/grand-loading.png"
+  }
+}

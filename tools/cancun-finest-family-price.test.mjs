@@ -44,7 +44,7 @@ test("price does not recertify policy, capacity, care or unrelated price dates",
 
 test("all generated outputs and exports retain exact-family total and limits", () => {
   const output = new Map(); writeCancunResortPage((path, bytes) => output.set(path, bytes));
-  assert.equal(output.size, 8);
+  assert.equal(output.size, 9);
   for (const [path, bytes] of output) assert.equal(read(`site/${path}`), bytes, path);
   for (const path of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
     for (const term of ["USD 3,532", "3, 7 and 12", "locked rewards", "29-days-before-arrival", "boundary overlaps"]) assert.ok(output.get(path).includes(term), `${path}: ${term}`);

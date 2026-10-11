@@ -41,6 +41,6 @@ test("additive section is accessible without JavaScript and remains outside fact
 
 test("scoped writer preserves all comparison modules and existing downloads", () => {
   const output = new Map(); writeCancunResortPage((path, bytes) => output.set(path, bytes));
-  assert.equal(output.size, 8);
+  assert.equal(output.size, 9);
   for (const [path, bytes] of output) assert.equal(read(`site/${path}`), bytes, path);
 });

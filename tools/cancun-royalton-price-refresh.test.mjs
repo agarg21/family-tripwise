@@ -44,7 +44,7 @@ test("current fee exclusion and refund terms do not renew the old levy amount", 
 
 test("all generated outputs agree on current plans and dated room-continuity warning", () => {
   const output = new Map(); writeCancunResortPage((p, b) => output.set(p, b));
-  assert.equal(output.size, 8); for (const [p,b] of output) assert.equal(read(`site/${p}`),b,p);
+  assert.equal(output.size, 9); for (const [p,b] of output) assert.equal(read(`site/${p}`),b,p);
   for (const p of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
     for (const term of ["USD 2,993.10 total", "USD 3,743.25 total", "LXUU2", "earlier view and bedding are not reconfirmed", "amount is not refreshed", "2026-10-11"]) assert.ok(output.get(p).includes(term),`${p}: ${term}`);
   }

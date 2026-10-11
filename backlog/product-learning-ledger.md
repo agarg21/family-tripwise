@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-203 - Grandparents party budget versus room linkage - 2026-10-11
+
+FT-IMP-106 /066. Family decision: two parents, two grandparents and ages3/7 cannot use a two-adult quote or infer a connected door from a two-bedroom title. Hypothesis: join exact six-person budget with separate room-linkage evidence on existing Cancun owner. Evidence OFFICIAL_BOOKING_OBSERVATION plus PAGE_ONLY_PROXY_TASK; inspectedOctober11 Royalton primary rendered guests, dates, LXUU2, publicplans and refund/tax disclosures. Grand category specifies connected rooms but its ordinary linked engine loading overlay prevented group controls; no group quote or unchanged retry. Maintained evidence `docs/research/cancun-grandparents-budget-2026-10-11.json`.
+
+IMPLEMENT bounded public case and two-planCSV: four adults/children3-7/one suite/November9-12 three nights,1193USDnight/3579totalFlexible or1491.87USDnight/4475.61totalStandard. Locallevy extra/unknownamount, exactbed/category conflict and connection unresolved. Grand group budget explicitlyunpriced; 097twoadultquote preserved. Formalgroupbooking excluded fromFlexible, six-person search does not establish eligibility. Confidence high dated displayedprice/party/terms; unknown bookingacceptance/fullcost/quiet/accessibility/rest/guaranteedunit/savings/humanSEO. Lesson: separate group headcount, physical linkage and exact-party budget rather than transfer smaller-party prices. FalsifyOctober18 orchangedcategory/party/fees/terms/writtenconfirmation/failedtask; Grand requires changed ordinary visible source state. Preserveall sixoldroomrecords/sourceclocks/downloads/066remaininggates/34URLs. Full/focused/browser/differentreview/production required.
+
 ## LRN-202 - Puerto Vallarta conditional whole-family food budget - 2026-10-11
 
 FT-IMP-105. Family decision: compare a parent's hypothetical all-five daily food budget with Sanctuary's dated same-suite public-plan increment. Hypothesis: the static USD1499 increment still requires off-page multiplication. Evidence class PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK; source October9, general policy October10, internal task October11, no current fact renewal or human test. Maintained records and exact task in `docs/research/puerto-vallarta-food-budget-task-2026-10-11.json`.

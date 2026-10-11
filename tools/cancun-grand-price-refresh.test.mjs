@@ -56,7 +56,7 @@ test("other price and policy dates are not renewed by a one-room refresh", () =>
 
 test("all generated comparison outputs use the maintained refreshed price", () => {
   const output = new Map(); writeCancunResortPage((path, bytes) => output.set(path, bytes));
-  assert.equal(output.size, 8);
+  assert.equal(output.size, 9);
   for (const [path, bytes] of output) assert.equal(read(`site/${path}`), bytes, path);
   for (const path of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
     assert.ok(output.get(path).includes("USD 9,723 total"), path);
