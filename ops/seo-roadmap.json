@@ -20,11 +20,46 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-101",
+      "title": "Resolve Sapphire exact-family suite budget gap",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "blocked",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T08:03:31Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html"
+      ],
+      "target_paths": [
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Maintained Sapphire Preferred Club Family Junior Suite Tropical View retains September27 USD1015 derived from two-adult low-season per-person start, not five-person budget. Existing-page exact-room family task unresolved; official D1 normal source has no recorded unchanged denial. Preserve newly reviewed097-100.",
+      "acceptance_criteria": [
+        "Inspect official exact category via ordinary first-party navigation; one Nov9-12 three-night/oneunit/twoadults/ages3,7,12 anonymous public scenario, persisted category-date-party-plan/currency-unit/fees/refund. No account/cart/hold/payment/contact/paidcall or denial bypass.",
+        "If supported dated exactcategoryparty public price qualifies, replace only Sapphire.price/add D5 with Oct11 observation/Oct18 scoped review and regenerate four public outputs; preserve original1015 historical record/allotherfive including097-100/allpolicyclocks/096section/metadata/schema/34URLs/prior research. Scope amendment before other edits.",
+        "If no supported replacement, PRESERVE useful historical derived-twoadult start explicitly and record exact missing gate without unchanged retry/tool-origin bypass. Trim exactscope to source/test/ledger/4ops before material edits. Focused/full nativeQA/different read-onlyPASS/exactguardedrelease; site change actual1280-390-320/form/nativeCSV-TXT/Pages-marker-productionSEO/allinvariants."
+      ],
+      "measurement_plan": "LRN199 bounded official five-person suite budget source audit and internal responsive-export proxy, not human testing/booking/completecost/savings/SEO proof or automatic077newURL qualification.",
+      "production_invariant": "Only Sapphire.price and added dated source may differ; allotherfive097-100/room-club-transfer-extras policy clocks/Sep23-Oct23/globalpriceOct11/lastUpdatedSep27/096section/titleH1-metadata-schema/canonical/34URLs/otherpublic/priorresearch exact. Preserve904baseline/302prioritems/11dirty-heldledger suffix; carry100mechanical closure only. Actualrun08:00:16Z/startdeadline08:45:16Z/fixedsprintOct12expiry unchanged. No deniedprovider retry/another automation/ControlRoom/newcityURL/indexing/analytics/outreach/paid/account/security mutation.",
+      "gsc_evidence_classification": "Reused recentOct10API finalizedOct8 vspriorOct9finalizedOct7; no freshAPI/querycohort thisrun; July27 sitemap stale inventory orientation only.",
+      "decision": "PRESERVE public/model/historical Sapphire1015 twoadultstarting context, no familyrate observed. First ordinary D1 returned emptyAX, blank screenshot, emptyDOM/noforms/nolinks/errorlogs[]. Not security denial or unavailable-room diagnosis; no unchanged retry/alternatetool-origin. No learningunit from blankcheck.",
+      "release_state": "local-source-held-no-price-collected",
+      "source_hold": "cua.createBrowserTab D1 official Sapphire club-level page/tab79 returned emptyAX; loaded state unchanged, screenshot blank/DOMbodyempty/forms0/links0/errors[]. Owner normalprovider/browser rendering. Unblock visible officialbody or documented changed permitted access; nextcheck only changed source/access, not calendar/repeated blank reload. Proof /tmp/ft-imp101-browser/source.png.",
+      "scope_amendment": "Before any material research/model/test/public edit: trim16toexact4ops hold-only fields. No sourceJSON/test/ledger learning created, allpublic/model/priorquote/sourcepolicyclocks exact. Carry100 immutable completion only, independently review/nativeQA/exactpush.",
+      "next_gate": "Independent read-only hold-record review/fullnativeQA/exactguarded docs-onlypush; separate source gate visibleofficialbody or changed normalaccess before priceattempt. Select independent eligible existing-page family job next.",
+      "review_receipt": "FT-IMP-101 independent Ampere read-only PASS/noP0-P3; manifest8de78d4f85e639cfd00fd51d4e12cc112d3e674c181f41c8a570d3a82e85ca2a/inventory9ce8bb1f7cbbeba3b612c891f686c8074b07db823b60a01b2884a742bab3a6ae/all904hashes/exact4/900nonowned/302prioritems/held11 preserved. Master765full/47maintenance/7focused/state0/GSC89/localSEO0fiveprior. Ordinary Sapphire blank source hold, no price/public/model/date renewal/learningunit/retry/bypass. Eligible only guardedexact4 docs-only holdrecord push, not successfulprice/publicdelivery. Immutable mechanical consensus only; next independent DC rest-budget public task."
+    },
+    {
       "id": "FT-IMP-100",
       "title": "Resolve Finest's dated five-person suite budget gap",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T07:03:04Z",
       "allowed_during_observation": true,
@@ -61,10 +96,16 @@
       "measurement_plan": "LRN198 bounded official five-person room-budget evidence and internal proxy; not booking acceptance/realuser/satisfaction/SEO. Exactfamily prices support077 task only, do not qualify all077corpus/newURL.",
       "production_invariant": "Exact16preregistered; only Finest.price and an added datedprice source maydiffer initially, allotherfive includingcurrent097-099/policySep23-Oct23/globaldueOct11/lastUpdatedSep27/096section/titleH1/meta-schema/canonical/34URLs/otherpublic/priorresearch preserved. 902baseline/301prioritems/11dirty/heldledger suffix retained; prior099 completion mechanical receipt maycarry, no judgment change. Actualrun07:02:12Z/startdeadline07:47:12Z/fixedsprintOct12expiry unchanged. No denied-provider retry/another automation/ControlRoom/newcityURL/indexing/analytics/outreach/paid/account/securitymutation.",
       "gsc_evidence_classification": "Reused recentOct10API finalizedOct8 versuspriorOct9finalizedOct7; no freshAPI/querycohort thisrun; July27sitemap stale orientationonly.",
-      "decision": "IMPLEMENT exact five-person public Family Suite sample: November9-12/three nights/twoadults/ages3,7,12/USD1177 rounded per room-night and3532total. Exclude locked3426; retain rounding/refund boundary/payment timing/fee completeness uncertainties. Only Finest.price/F4/four outputs; allotherfive/policy clocks/prior evidence preserved. Full/focused/responsive/export/differentread-only review and guarded production verification pending.",
-      "release_state": "pending-review",
+      "decision": "IMPLEMENT exact five-person public Family Suite sample: November9-12/three nights/twoadults/ages3,7,12/USD1177 rounded per room-night and3532total. Exclude locked3426; retain rounding/refund boundary/payment timing/fee completeness uncertainties. Only Finest.price/F4/four outputs; allotherfive/policy clocks/prior evidence preserved. Rawls PASS/full765/focused44/maintenance47; Pages38120872400/matchingrelease/eightassets/live1280-390-320/form/nativeexports production verified; immutable receipts linked below.",
+      "release_state": "released-and-production-verified",
+      "pages_run": 38120872400,
+      "production_verified_at": "2026-10-11T07:18:20.610Z",
+      "production_verification": "Successful Pages38120872400/matching c553aeacc393f396655262c6e45e161d46cedca4 marker; eight Cancun assets200exact and all registered invariants; productionSEO0errors5prior; live1280-390-320contained/sixcards/form3ages3-7-12-reset/sixnativeCSV-TXTdownloadsbyteexact/errors[] /tmp/ft-imp100-browser/production-task.json. Datedsource and internalproxy only, not booking/completecost/care/savings/human-SEO evidence.",
       "scope_amendment": "Before config/test edits: exact18 adds ops/evidence-watch.json and tools/evidence-audit.test.mjs. Full native inventory rejects new F4 host not yet registered; no outbound denial/request occurred. Official F1 Book this suite native link established booking.finestresorts.com. Register only this exact public HTTPS evidence host, not wildcard/redirect/credentials/security-rule relaxation; all remaining config/allowlist members and denied-source carriage unchanged. No collector run or denial retry. Independent review required.",
-      "review_receipt": "FT-IMP-100 independent Rawls PASS/noP0-P3/read-only no writes-network-browser-delegation. Frozen review3e5e01f165af69ff8ef25a2d5947790cf463e6fbc7e79f51d89d196462ffc2fb/all904hashes/exact18/886untouched/301priorjudgments/heldledger isolation. Master765full/47maintenance/44focused/state0/GSC89/localSEO0errors5prior; reviewer34focused/invariants/sourcecorrectFamilyrate-guests-conditions andthree local screenshots inspected. Actual1280-390-320 contained/sixcards/form3children3-7-12/reset/nativeCSV-TXTdownloads6byteexact/errors[] /tmp/ft-imp100-browser/local-task.json. OnlyFinest.price/F4/fourpublicoutputs andexactpublicsourcehost registration; HTTPS-credential-sensitivequery-redirect-denialguards unchanged, inventoryonlyhostabsence/nooutboundcollector-denialretry. Otherfive097-099/policyclocks/096section/metadata-schema/34URLs/priorresearch preserved. Dated public sample not lockedprice/savings/completecost/bookingacceptance/care/human-SEOproof. Onlymechanicalimmutableconsensus appended; guardedrelease/production remain required; fixedsprint unchanged."
+      "review_receipt": "FT-IMP-100 independent Rawls PASS/noP0-P3/read-only no writes-network-browser-delegation. Frozen review3e5e01f165af69ff8ef25a2d5947790cf463e6fbc7e79f51d89d196462ffc2fb/all904hashes/exact18/886untouched/301priorjudgments/heldledger isolation. Master765full/47maintenance/44focused/state0/GSC89/localSEO0errors5prior; reviewer34focused/invariants/sourcecorrectFamilyrate-guests-conditions andthree local screenshots inspected. Actual1280-390-320 contained/sixcards/form3children3-7-12/reset/nativeCSV-TXTdownloads6byteexact/errors[] /tmp/ft-imp100-browser/local-task.json. OnlyFinest.price/F4/fourpublicoutputs andexactpublicsourcehost registration; HTTPS-credential-sensitivequery-redirect-denialguards unchanged, inventoryonlyhostabsence/nooutboundcollector-denialretry. Otherfive097-099/policyclocks/096section/metadata-schema/34URLs/priorresearch preserved. Dated public sample not lockedprice/savings/completecost/bookingacceptance/care/human-SEOproof. Onlymechanicalimmutableconsensus appended; guardedrelease/production remain required; fixedsprint unchanged.",
+      "release_receipt": "FT-IMP-100 release c553aeacc393f396655262c6e45e161d46cedca4 remote verified 2026-10-11T07:19:00.540Z; main0-0/emptyindex/exact18/all904indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified2026-10-11T07:18:20.610Z successfulPages38120872400/matchingreleasec553aeacc393f396655262c6e45e161d46cedca4/eightCancun200exact/allregistered invariants/productionSEO0errors5prior. Live1280-390-320contained/Finest1177roundednight-3532total/Nov9-12three nights2adults3-7-12/form3children-reset6cards/errors[]/6nativeCSV-TXTdownloadsbyteexact /tmp/ft-imp100-browser/production-task.json. LRN198 sourceaudit andproxy, not booking/completecost/care/savings/human-SEOproof; locked3426excluded/refund-payment-levyunknowns retained. Otherfive097-099/policyclocks/096section/schema/34URLs/priorrecords unchanged. Next remaining exactparty-room-budget or care gate; reviewOctober18 orchangedsource. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T07:19:00.561Z",
+      "release_commit": "c553aeacc393f396655262c6e45e161d46cedca4"
     },
     {
       "id": "FT-IMP-099",
