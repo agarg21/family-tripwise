@@ -4,6 +4,7 @@ import { roomComparisonCsv } from "../family-room-comparison.mjs";
 import { contributorCredit } from "./contributors.mjs";
 import { assessFamilyTransit } from "../family-transit-cost.mjs";
 import { dcPlanPremiums } from "../dc-plan-premium.mjs";
+import { assessMuseumRest, restDurationFields } from "../museum-rest-task.mjs";
 
 export const dcPath = "where-to-stay/washington-dc-family-hotels.html";
 export const dcScreenedOn = "2026-10-09";
@@ -17,6 +18,10 @@ export const dcPrices = ["washington-dc-embassy-price-observation-2026-09-30.jso
 export const dcRooms = screenRoomPack(dcPack, dcPack.scenario, dcScreenedOn, dcPrices);
 export const dcCsv = roomComparisonCsv(dcPack, dcPack.scenario, dcScreenedOn, dcPrices);
 export const dcPremiums = dcPlanPremiums(dcPrices);
+const restRecord = read("dc-rest-time-budget-2026-10-03.json");
+export const dcRestExample = assessMuseumRest(read("washington-dc-museum-rest-task-2026-10-03.json"),
+  "National Museum of Natural History", restRecord.hypothetical_durations, dcScreenedOn);
+const restLabels = ["Morning visit", "Museum to room", "Room rest", "Room to museum", "Entry wait", "Afternoon visit"];
 const e = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const amount = value => `USD ${Number(value).toFixed(2)}`;
 const link = (url, label) => `<a href="${e(url)}">${e(label)}</a>`;
@@ -34,7 +39,7 @@ export function dcFamilyHotelPage() {
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title><meta name="description" content="Compare three exact Washington DC suite categories by sleeping setup, kitchen evidence and dated nightly prices. See age, cancellation and fee limits before booking.">
-<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-imp084">
+<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-imp102">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
 <body class="dc-page"><a class="skip-link" href="#main">Skip to comparison</a>
 <header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav aria-label="Site navigation"><a href="../index.html">Destinations</a><a href="../about.html">Our research</a></nav></header>
@@ -65,12 +70,22 @@ ${dcTransitExamples.map(({ input, result }) => `<tr><th scope="row">${input.rail
 <p>Two trips might mean one extra outward-and-back room-rest journey; four means four separately charged journeys, not four trains. An internal rail interchange does not by itself add another paid journey. Passes, eligible transfers and payment-media arrangements may change cost and are not applied here.</p>
 <p class="dc-caution">The station pair, travel time, actual service, trip count and visit-date fare remain unknown. These amounts do not establish a workable rest return or a room-plus-transport all-fee budget. Fare source checked October 3; review due November 2, before the example November stay. Recheck ${link(dcTransitEvidence.policy.source.url, "WMATA fares and child eligibility")} and ${link(dcTransitEvidence.corroborating_source.url, "WMATA new-rider guidance")} for the actual trip. Hotel price and property check dates are unchanged.</p></section>
 <section id="rest"><h2>Can you return for a museum-day rest?</h2><p>This comparison does not establish a child-paced, entrance-to-room return, stroller route, queue time, re-entry or useful rest duration for any of these hotels. A property address or map walking estimate cannot answer that task. Choose the museum entrance, hotel category and actual rest window before relying on a midday return; include meals, internal hotel travel and the second activity.</p><p>Indoor-pool operation, meal seating and dietary fit also remain separate checks. None of the rooms is presented as a verified nap-friendly or safest base.</p>
+<div id="rest-budget" class="dc-rest-budget"><h3>Museum-day time budget</h3>
+<p>Conditional minutes only, not a hotel recommendation. Available time must reflect the actual visit date and opening, entry and re-entry limits; these are not verified here. Journey estimates include entrance-to-room travel; meals and internal hotel travel need time too. Blank durations are unknown, not zero.</p>
+<form id="rest-budget-form" hidden>
+<label class="dc-rest-window" for="rest-available">Available museum-day minutes<input id="rest-available" name="available_minutes" type="number" min="0.01" max="1440" step="any" inputmode="decimal" autocomplete="off"></label>
+<fieldset><legend>Planned minutes</legend><div class="dc-rest-inputs">${restDurationFields.map((key, index) => `<label for="rest-${key}">${restLabels[index]}<input id="rest-${key}" name="${key}" type="number" min="0" max="1440" step="any" inputmode="decimal" autocomplete="off"></label>`).join("")}</div></fieldset>
+<div class="dc-rest-actions"><button type="submit">Calculate time budget</button><button type="reset">Clear values</button></div></form>
+<p id="rest-budget-status" class="dc-rest-status" role="status" aria-live="polite" aria-atomic="true">Time budget unresolved. Available minutes and all six durations are unknown.</p>
+<details class="dc-rest-example"><summary>Hypothetical time example</summary><p>${restDurationFields.map((key, index) => `${restLabels[index]} ${dcRestExample.durations[key]}`).join(" + ")} = ${dcRestExample.total_required_minutes} planned minutes. A hypothetical ${dcRestExample.published_window_minutes}-minute allowance leaves ${dcRestExample.remaining_window_minutes} minutes. No spare time at ${dcRestExample.published_window_minutes} planned minutes; exceeding it creates a shortfall.</p><p>Original October 3, 2026 task arithmetic, not observed journeys, current opening hours, a November schedule or re-entry permission. Actual hotel-return feasibility remains unknown. Neither this example nor a positive calculation establishes a workable rest return.</p></details></div>
 <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/WashingtonDCMallAerialNavyPhoto.jpg/1280px-WashingtonDCMallAerialNavyPhoto.jpg" width="1280" height="830" loading="lazy" decoding="async" alt="Historic aerial view of the National Mall, with the Lincoln Memorial, Washington Monument and US Capitol."><figcaption>National Mall, 2005. US Navy photo by Chief Photographer's Mate Johnny Bivera; <a href="https://commons.wikimedia.org/wiki/File:WashingtonDCMallAerialNavyPhoto.jpg">source and public-domain record</a>. Uncropped historic orientation image, not a current route or hotel photograph.</figcaption></figure></section>
 <section id="methodology"><h2>Research, not firsthand hotel reviews</h2><p>Published property facts, dated booking observations, arithmetic estimates and unresolved questions are kept separate. We have not stayed in these suites, tested journeys or verified family suitability. This is a focused three-category comparison, not a representative DC hotel ranking. A published maximum does not confirm inventory, sleeping comfort or provider acceptance.</p><p>The downloadable CSV uses the same maintained room and price records and retains date, party, age, fee, deposit and cancellation context. It includes all three categories and all five observed public plans regardless of the on-page kitchen filter. No inputs are transmitted or saved, and no live inventory is queried.</p><p>${link("../about.html", "How Family Tripwise handles evidence and uncertainty")}</p></section>
-</main><footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><a href="../index.html">Browse destinations</a></footer><script src="../washington-dc-comparison.js?v=ft-imp093" defer></script></body></html>\n`;
+</main><footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><a href="../index.html">Browse destinations</a></footer><script src="../washington-dc-comparison.js?v=ft-imp093" defer></script><script type="module" src="../shared/museum-rest-budget.mjs?v=ft-imp102"></script></body></html>\n`;
 }
 
 export function writeWashingtonDcFamilyHotelsPage(writeSite) {
   writeSite(dcPath, dcFamilyHotelPage());
   writeSite("downloads/washington-dc-family-hotels.csv", dcCsv);
+  for (const file of ["rest-time-budget.mjs", "museum-rest-budget.mjs"])
+    writeSite(`shared/${file}`, readFileSync(new URL(`../../src/shared/${file}`, import.meta.url), "utf8"));
 }

@@ -154,6 +154,7 @@ test("full generation is idempotent and leaves unrelated output unchanged", () =
   cpSync(join(root, "tools"), join(temp, "tools"), { recursive: true });
   cpSync(join(root, "docs/research"), join(temp, "docs/research"), { recursive: true });
   cpSync(join(root, "src/prototypes/cancun-resort-comparison"), join(temp, "src/prototypes/cancun-resort-comparison"), { recursive: true });
+  cpSync(join(root, "src/shared"), join(temp, "src/shared"), { recursive: true });
 
   try {
     const before = new Map(filesUnder(siteCopy).map((path) => [path, readFileSync(join(siteCopy, path))]));

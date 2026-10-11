@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-102",
+  "learning_unit": "LRN-199",
+  "assessed_on": "2026-10-11",
+  "evidence_class": "INTERNAL_EXISTING_PAGE_TASK_AND_MODEL_DERIVED_ARITHMETIC",
+  "family_decision": "Compare a museum-day room-rest plan with the minutes actually available, without inventing route or re-entry evidence.",
+  "hypothesis": "The existing warning-only rest section lets parents evaluate their own six-component time budget immediately.",
+  "result": "REJECT warning-only answerability; IMPLEMENT additive conditional worksheet in the existing approved DC comparison, using one shared pure core for maintained Node evidence and browser output.",
+  "maintained_records": ["docs/research/dc-rest-time-budget-2026-10-03.json", "docs/research/washington-dc-museum-rest-task-2026-10-03.json"],
+  "original_source_date": "2026-10-03",
+  "source_renewed": false,
+  "provider_calls": 0,
+  "task": {"adults": 2, "child_ages": [4, 8, 12], "no_car": true, "hotel": null, "actual_journey_tested": false, "real_user_test": false},
+  "controls": {"available_minutes": null, "durations": ["morning_visit_minutes", "outward_journey_minutes", "room_rest_minutes", "return_journey_minutes", "entry_wait_minutes", "afternoon_visit_minutes"], "defaults": "All blank/unknown; explicit zero is different from missing", "window_limit": "positive through1440 minutes", "duration_limit": "zero through1440 finite minutes", "transmission": "None; no persistence or inventory queries"},
+  "validation_cases": ["Initial and partial inputs remain UNKNOWN, not zero-minute complete plan", "120+30+90+30+30+120=420; hypothetical450available leaves30", "450planned has no spare;451planned exceeds450by1", "Invalid or missing duration cannot retain a previous positive result", "Clear/recalculate and kitchen filter/native fullCSV independent"],
+  "limits": ["Available window is user supplied, not current museum opening hours", "OriginalOctober3 static example is not November operation or re-entry permission", "Actual hotel-return feasibility, route, queues, stroller/safety and family suitability remain unknown", "No source/price/fee/policy date renewal, newURL or human/SEO proof"],
+  "confidence": "High shared arithmetic and missing-input validation; unknown real journeys, actual schedule, re-entry and user satisfaction.",
+  "reusable_lesson": "A useful rest tool can expose conditional arithmetic while keeping missing inputs and actual feasibility separate.",
+  "next_falsification_trigger": "Failed responsive/keyboard/blank-invalid-reset task, shared-core parity drift, supported exact-hotel journeys or changed source schedule/entry evidence.",
+  "verification_gate": "Focused/full native QA; actual desktop/mobile numeric flows, filter/nativeCSV/image; different read-only PASS; exact-path guarded push and Pages/marker/productionSEO/affected invariants before delivery."
+}

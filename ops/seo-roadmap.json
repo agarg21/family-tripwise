@@ -20,6 +20,56 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-102",
+      "title": "Expose conditional museum-rest time budget on existing DC page",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T08:08:25Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html"
+      ],
+      "target_paths": [
+        "src/shared/rest-time-budget.mjs",
+        "src/shared/museum-rest-budget.mjs",
+        "site/shared/rest-time-budget.mjs",
+        "site/shared/museum-rest-budget.mjs",
+        "tools/museum-rest-task.mjs",
+        "tools/rest-time-budget.test.mjs",
+        "tools/dc-rest-budget.test.mjs",
+        "tools/washington-dc-family-hotels-page.test.mjs",
+        "tools/chicago-family-hotels-page.test.mjs",
+        "tools/new-york-city-family-hotels-page.test.mjs",
+        "tools/san-antonio-family-hotels-page.test.mjs",
+        "tools/san-diego-hero-image.test.mjs",
+        "tools/page-generation/washington-dc-family-hotels-page.mjs",
+        "site/where-to-stay/washington-dc-family-hotels.html",
+        "site/washington-dc-comparison.css",
+        "docs/research/dc-public-rest-budget-task-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Existing published DCrest section lists missing journey-rest-entry inputs but gives no conditional sum. Maintained068/108 exact six-duration task/tool distinguishes420hypothetical from450published window and actual UNKNOWN. Source-dated internal proxy family2adults4-8-12 cannot evaluate changed preferences on current page. Implement existing-owner arithmetic, not newURL/provider report or route claim.",
+      "acceptance_criteria": [
+        "Extract existing tested duration fields/validation/missing-input/sum/budget status into one pure shared browser-Node module; preserve full assessMuseumRest return contract/historicalreport replay/source-clocks. Browser uses same core and public copies byteexact, no handrolled divergent math.",
+        "Add exactly one unframed existingDCrest tool: available minutes and six durations numeric/native labeled controls, initialblank/unknown, partialunknown, explicitzero valid, complete spare/boundary/shortfall, clear/recalculate reversible, positivewindow and0-1440finite durations; no network/storage/transmission. Static noJS hypothetical420of450 retains originalOct3 observation/examplebasis, not November operation/entry or hotel feasibility.",
+        "Only additive rest markup/module/version/CSS; oldDCroom-price-fee-transit-rest paragraphs/fullCSV/image/titleH1-metadata-schema/34URLs/allotherpublic/priorresearch exact. Source-dated LRN199/proxy high arithmeticconfidence not realuser/route-safety-stroller/care/booking/SEOproof. Native focused/full QA, actual1280-390-320 keyboard-numeric-invalidblank-filter-reset/nativeCSV/download/image/noerrors, differentread-onlyPASS/exactguardedpush/Pages-marker-productionSEO/allinvariants."
+      ],
+      "measurement_plan": "Named samefamily DCrest-minute decision gains conditional answer and explicit missing-input state; LRN199 task audit/actual responsive proxy, not observedjourneys/user satisfaction/factrenewal/SEO. Test420within450/450boundary/451shortfall/partialinvalidreset with exact existingCSV parity.",
+      "production_invariant": "All904baseline/303prioritems/11dirty-heldledgersuffix preserved; only declared restblock/module/CSS/version additions maydiffer on DC; allotherpublic34URLs/fullDC CSV/source-price records/096Cancun and097-100 unchanged. 101mechanical docs-only holdcompletion maycarry no sourcegate change. Actualrun08:00:16Z/startdeadline08:45:16Z/newtransaction08:08:25Z/sprintOct12fixed unchanged. No newURLs/cities/deniedproviderretry/securitybypass/networkcollector/accounts/paid/indexing/analytics/outreach/ControlRoom/scheduler mutation.",
+      "gsc_evidence_classification": "Reused Oct10recentAPI-finalizedOct8 vspriorOct9-finalOct7, not freshAPI/querycohort or CTR diagnosis; oldJuly27 sitemapdiscovery orientation only.",
+      "decision": "IMPLEMENT one existing-page conditionalrest worksheet and sharedmath now from maintained task; preserve actual hotel-return feasibility UNKNOWN and every source/price clock.",
+      "release_state": "pending-implementation-review",
+      "scope_amendment": "Pre-edit exact21 scope: adapter source/public names moved to src/shared and site/shared for byteexact import parity. Add DC generator output regression and four existing generator fixtures to copy new sharedsource dependency; original idempotency/unchanged-output assertions retained, no QA weakening. All original product/evidence/source-clock invariants unchanged.",
+      "review_receipt": "FT-IMP-102 Galileo independent read-only PASS correctedcandidate review f6cb95f239bf4a2436ebe49462f6c06cd55598e8d6ba1fd1c7e173be071b2f0a inventory7d5b3154d7bd81717d3d94dcfed47436d76c0cef8790b060c7b6203a93985945; no P0-P3 remaining. Verified911hashes/exact21/890nonowned/303prior/heldisolation; Master772full/47maintenance/23focused/state0/GSC89/localSEO0fiveprior/invariantsPASS; actualIAB1280/390/320 nativecalculator unknown/partial/positive/boundary/shortfall/zero/reset/invalid/keyboard/filter3-1-3/fullCSV3downloads/image/noerrors; decimal1.1+2.2vs3.3zero/0.1display/reset verified after correctedgeneration. Earlier stalegeneratedcopy4QA failures repaired, fullsuite rerun green. Oct3 museum sources not renewed, no hotel/route/reentry assurance. Immutable mechanical receipt only; productionverification pending."
+    },
+    {
       "id": "FT-IMP-101",
       "title": "Resolve Sapphire exact-family suite budget gap",
       "kind": "implementation",
@@ -48,11 +98,14 @@
       "production_invariant": "Only Sapphire.price and added dated source may differ; allotherfive097-100/room-club-transfer-extras policy clocks/Sep23-Oct23/globalpriceOct11/lastUpdatedSep27/096section/titleH1-metadata-schema/canonical/34URLs/otherpublic/priorresearch exact. Preserve904baseline/302prioritems/11dirty-heldledger suffix; carry100mechanical closure only. Actualrun08:00:16Z/startdeadline08:45:16Z/fixedsprintOct12expiry unchanged. No deniedprovider retry/another automation/ControlRoom/newcityURL/indexing/analytics/outreach/paid/account/security mutation.",
       "gsc_evidence_classification": "Reused recentOct10API finalizedOct8 vspriorOct9finalizedOct7; no freshAPI/querycohort thisrun; July27 sitemap stale inventory orientation only.",
       "decision": "PRESERVE public/model/historical Sapphire1015 twoadultstarting context, no familyrate observed. First ordinary D1 returned emptyAX, blank screenshot, emptyDOM/noforms/nolinks/errorlogs[]. Not security denial or unavailable-room diagnosis; no unchanged retry/alternatetool-origin. No learningunit from blankcheck.",
-      "release_state": "local-source-held-no-price-collected",
+      "release_state": "hold-record-remote-verified-no-price-collected",
       "source_hold": "cua.createBrowserTab D1 official Sapphire club-level page/tab79 returned emptyAX; loaded state unchanged, screenshot blank/DOMbodyempty/forms0/links0/errors[]. Owner normalprovider/browser rendering. Unblock visible officialbody or documented changed permitted access; nextcheck only changed source/access, not calendar/repeated blank reload. Proof /tmp/ft-imp101-browser/source.png.",
       "scope_amendment": "Before any material research/model/test/public edit: trim16toexact4ops hold-only fields. No sourceJSON/test/ledger learning created, allpublic/model/priorquote/sourcepolicyclocks exact. Carry100 immutable completion only, independently review/nativeQA/exactpush.",
       "next_gate": "Independent read-only hold-record review/fullnativeQA/exactguarded docs-onlypush; separate source gate visibleofficialbody or changed normalaccess before priceattempt. Select independent eligible existing-page family job next.",
-      "review_receipt": "FT-IMP-101 independent Ampere read-only PASS/noP0-P3; manifest8de78d4f85e639cfd00fd51d4e12cc112d3e674c181f41c8a570d3a82e85ca2a/inventory9ce8bb1f7cbbeba3b612c891f686c8074b07db823b60a01b2884a742bab3a6ae/all904hashes/exact4/900nonowned/302prioritems/held11 preserved. Master765full/47maintenance/7focused/state0/GSC89/localSEO0fiveprior. Ordinary Sapphire blank source hold, no price/public/model/date renewal/learningunit/retry/bypass. Eligible only guardedexact4 docs-only holdrecord push, not successfulprice/publicdelivery. Immutable mechanical consensus only; next independent DC rest-budget public task."
+      "review_receipt": "FT-IMP-101 independent Ampere read-only PASS/noP0-P3; manifest8de78d4f85e639cfd00fd51d4e12cc112d3e674c181f41c8a570d3a82e85ca2a/inventory9ce8bb1f7cbbeba3b612c891f686c8074b07db823b60a01b2884a742bab3a6ae/all904hashes/exact4/900nonowned/302prioritems/held11 preserved. Master765full/47maintenance/7focused/state0/GSC89/localSEO0fiveprior. Ordinary Sapphire blank source hold, no price/public/model/date renewal/learningunit/retry/bypass. Eligible only guardedexact4 docs-only holdrecord push, not successfulprice/publicdelivery. Immutable mechanical consensus only; next independent DC rest-budget public task.",
+      "release_receipt": "FT-IMP-101 release a8548e9242985bee0ddb30f2eb2871fc8b2e017c remote verified 2026-10-11T08:08:25.123Z; main0-0/emptyindex/exact4/all904indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Docs-only hold record remote verified, not publicdelivery/pricecollection/learningunit. Source gate remains visible officialbody or documented changed permitted access; no unchangedretry/bypass. Independent DC public rest-time task next. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T08:08:25.139Z",
+      "release_commit": "a8548e9242985bee0ddb30f2eb2871fc8b2e017c"
     },
     {
       "id": "FT-IMP-100",

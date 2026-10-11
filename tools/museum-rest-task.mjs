@@ -4,10 +4,8 @@ import { fileURLToPath } from "node:url";
 import { validDate } from "./hotel-evidence.mjs";
 import { currentEasternDate } from "./family-room-task.mjs";
 
-export const restDurationFields = Object.freeze([
-  "morning_visit_minutes", "outward_journey_minutes", "room_rest_minutes",
-  "return_journey_minutes", "entry_wait_minutes", "afternoon_visit_minutes"
-]);
+import { assessRestTimeBudget, restDurationFields } from "../src/shared/rest-time-budget.mjs";
+export { restDurationFields };
 
 function plain(value) {
   return value && Object.getPrototypeOf(value) === Object.prototype &&
@@ -36,14 +34,6 @@ export function assessMuseumRest(evidence, museumName, durations = {}, asOf = cu
       !validDate(evidence.inspected_on) || evidence.inspected_on > asOf ||
       !denseObjects(evidence.museum_constraints) || !denseObjects(evidence.sources) ||
       typeof museumName !== "string" || !museumName.trim()) throw new Error("Invalid maintained museum evidence or assessment date");
-  if (!plain(durations) || Reflect.ownKeys(durations).some(key => !restDurationFields.includes(key)))
-    throw new Error("Provide only named ordinary duration inputs");
-  const inputs = Object.fromEntries(restDurationFields.map(key => [key, durations[key] ?? null]));
-  for (const key of restDurationFields) {
-    if (Object.hasOwn(durations, key) && durations[key] !== null &&
-        (typeof durations[key] !== "number" || !Number.isFinite(durations[key]) ||
-         durations[key] < 0 || durations[key] > 1440)) throw new Error(`Invalid duration: ${key}`);
-  }
   const matches = evidence.museum_constraints.filter(row => row.museum === museumName);
   if (matches.length !== 1) throw new Error("Require one exact maintained museum, not a hotel or approximate name");
   const museum = matches[0];
@@ -60,11 +50,7 @@ export function assessMuseumRest(evidence, museumName, durations = {}, asOf = cu
   const supported = source.status === "body-inspected" && source.evidence_class === "OFFICIAL_VISITOR_FACT";
   if (!supported && (opens !== null || closes !== null)) throw new Error("Unavailable source cannot support schedule arithmetic");
   const window = opens === null || closes === null ? null : closes - opens;
-  const missing = restDurationFields.filter(key => inputs[key] === null);
-  const known = restDurationFields.reduce((sum, key) => sum + (inputs[key] ?? 0), 0);
-  const complete = missing.length === 0;
-  const total = complete ? known : null;
-  const remaining = total !== null && window !== null ? window - total : null;
+  const budget = assessRestTimeBudget(window, durations);
   const sourceAgeDays = (Date.parse(asOf) - Date.parse(source.inspected_on)) / 86400000;
   return {
     museum: museumName, assessed_on: asOf, inspected_on: source.inspected_on,
@@ -72,9 +58,7 @@ export function assessMuseumRest(evidence, museumName, durations = {}, asOf = cu
     source_freshness: sourceAgeDays > 30 ? "RECHECK_SOURCE" : "dated-not-revalidated",
     published_window_minutes: window,
     duration_basis: "user-supplied hypothetical minutes; not observed journeys or entry waits",
-    durations: inputs, missing_durations: missing,
-    known_component_minutes: known, total_required_minutes: total, remaining_window_minutes: remaining,
-    time_budget_status: remaining === null ? "UNKNOWN" : remaining < 0 ? "exceeds-published-window" : "within-published-window-only",
+    ...budget,
     actual_hotel_return_feasibility: "UNKNOWN", hotel_winner: null,
     future_operation_confirmed: false, route_stroller_safety_assessed: false,
     limitation: "MODEL_DERIVED conditional arithmetic only. Published opening window is not usable visit time, dated-stay operation, entry/re-entry entitlement, a validated route, or family suitability. Unknown inputs are not zero; known-component sum is not a complete plan."

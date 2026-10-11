@@ -34,6 +34,7 @@ test("the full generator reproduces the five dimensioned San Diego pages", () =>
     cpSync(join(root, "tools"), join(temp, "tools"), { recursive: true });
     cpSync(join(root, "docs/research"), join(temp, "docs/research"), { recursive: true });
     cpSync(join(root, "src/prototypes/cancun-resort-comparison"), join(temp, "src/prototypes/cancun-resort-comparison"), { recursive: true });
+    cpSync(join(root, "src/shared"), join(temp, "src/shared"), { recursive: true });
     cpSync(join(root, "site"), join(temp, "site"), { recursive: true });
     execFileSync(process.execPath, [join(temp, "tools", "generate-pages.mjs")], {
       cwd: temp,

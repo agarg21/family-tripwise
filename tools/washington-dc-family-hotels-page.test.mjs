@@ -17,7 +17,8 @@ test("DC exact-owner page and complete CSV match maintained shared records", () 
   assert.doesNotMatch(dcFamilyHotelPage(), /Residence Inn|Hyatt|AggregateRating|"@type":"Offer"/);
   const generated = new Map();
   writeWashingtonDcFamilyHotelsPage((path, value) => generated.set(path,value));
-  assert.deepEqual([...generated.keys()], [dcPath,"downloads/washington-dc-family-hotels.csv"]);
+  assert.deepEqual([...generated.keys()], [dcPath,"downloads/washington-dc-family-hotels.csv",
+    "shared/rest-time-budget.mjs", "shared/museum-rest-budget.mjs"]);
   assert.equal(generated.get(dcPath), dcFamilyHotelPage());
   assert.equal(generated.get("downloads/washington-dc-family-hotels.csv"), dcCsv);
 });
