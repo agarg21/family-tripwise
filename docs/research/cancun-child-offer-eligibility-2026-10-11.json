@@ -1,0 +1,21 @@
+{
+  "action_id": "FT-IMP-096",
+  "evidence_class": "official-published-policy",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "source_url": "https://www.moonpalacecancun.com/offers/kids-teens-free",
+  "source_method": "Normal permitted first-party IAB rendered DOM; terms readable after page hydration. Static web extraction retained headline dates but omitted terms. No booking, account or payment.",
+  "offer_name": "Moon Palace Kids & Teens Stay Free",
+  "scope": "The terms name all Moon Palace properties. This is not a six-resort offer or a confirmed Grand Family Suite rate.",
+  "rows": [
+    {"check": "Booking and stay dates", "published": "Book by October 31, 2026; displayed stays end December 20, with checkout by December 21.", "unresolved": "January 2027 is outside this offer window."},
+    {"check": "Children and paying adult", "published": "Ages 0-17; at least one paying adult in the same room. Age proof required.", "unresolved": "A child turning 18 during the stay incurs the difference. Single parents pay the applicable single-occupancy rate."},
+    {"check": "Minimum nights", "published": "Normally one night; November 21-27 requires three nights.", "unresolved": "Christmas minimum-night text also appears, but does not extend the displayed December cutoff. Confirm conflicting dates."},
+    {"check": "Room and channel", "published": "Category occupancy still applies; Presidential Suites and adults-only rooms excluded.", "unresolved": "Travel-agent, tour-operator and reduced-rate exclusions apply. Package inclusion and stacking need confirmation; cancellation/rebooking to obtain the offer is denied."}
+  ],
+  "task": "October 18-23 clears the displayed date and minimum-night gates only. Exact ages, category, channel and availability remain separate.",
+  "price_limit": "The September 27 Grand RETURN5 example is not a verified quote for this offer. No savings established: compare the same party, dates, category, channel, inclusions, refund terms and mandatory fees.",
+  "remaining_gate": "Same-basis offer/nonoffer totals remain unobserved. The research permits an eligibility decision on the existing page, not a best-value/deals ranking or new URL.",
+  "conflicts": ["September29 indexed September30 booking deadline differed from live October31; October11 rendered headline confirms October31, not an assurance it cannot change.", "Christmas2026 minimum-night text extends beyond the displayed offer stay window; not promoted into eligible dates."],
+  "limits": "Publication can change or be suspended. Freshness applies to this offer only, not prior property facts, room acceptance, price observations or human fit. No firsthand evidence or numeric demand renewal."
+}

@@ -20,10 +20,51 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-096",
+      "title": "Separate Cancun kids-stay-free eligibility from savings",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in-progress",
+      "selected_on": "2026-10-11",
+      "impact": 4,
+      "confidence": 4,
+      "learning_value": 4,
+      "effort": 2,
+      "risk": 2,
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html"
+      ],
+      "target_paths": [
+        "docs/research/cancun-child-offer-eligibility-2026-10-11.json",
+        "tools/page-generation/cancun-resort-page.mjs",
+        "tools/cancun-child-offer.test.mjs",
+        "site/where-to-stay/cancun-family-resorts.html",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "October11 first-party Moon Palace Cancun offer rendered terms now readable in normal permitted IAB. Current book deadline October31, last displayed stay December20, checkout December21; ages0-17 through stay, one paying adult same room, category occupancy and excluded channels apply. Resolves September29 missing-terms/deadline gate. Direct user October10 build constraint clusters quickly permits bounded existing-page decision, not a new URL or unsupported savings. January2027 task is out of window. September27 Grand RETURN5 price is a different observation and is not proof of this offer or savings.",
+      "acceptance_criteria": [
+        "One maintained official-source record supplies additive existing-page eligibility table, scope/conflict/unknown boundaries and original dates.",
+        "Explain November21-27 three-night minimum, under18 throughout stay/proof-of-age, one paying adult, exact category occupancy and excluded channels; Christmas minimum text cannot extend December20/21 displayed window.",
+        "January2027 not covered; October18-23 clears displayed date/minimum-night gates only, not room/age/channel/availability/cost confirmation. No comparable savings or rate renewal.",
+        "1280/390/320 source-link/fragment/table-keyboard/default family-form checks; focused/full native QA, different read-only PASS before exact push, Pages marker and production SEO/affected bytes."
+      ],
+      "measurement_plan": "LRN194 official-source learning plus parent-task proxy: reject January2027 offer assumption, separate five-night October date gate from Grand RETURN5 price and unresolved same-basis quote. No real-user satisfaction/SEO causality. Fresh offer review October18 or changed/expired terms; remaining FT-RES-064 cost gate requires same party/category/dates/channel/inclusions/refund offer and nonoffer totals.",
+      "production_invariant": "Removing only marked096section must restore Cancun HTML at782bebc byteexact. All six category/prices/party/stay/fees/source clocks, title/H1/canonical/meta/schema, all client modules/downloads and every other public file/sitemap34URLs unchanged. No firsthand/safety/route/firmfit/savings promise, new destination, new canonical, indexing, analytics, paid call, account/outreach or automation mutation. All297priorroadmapitems and preexistingheldwork unchanged;095UIhold not retried.",
+      "gsc_evidence_classification": "Reused recent October10 read-only API finalizedOctober8; priorOctober9 finalizedOctober7. Property/page averages orientation only; sitemap July27 inventory stale. No current-run collection, query cohort or CTR action.",
+      "release_state": "registered-review-pending",
+      "review_receipt": "FT-IMP-096 immutable consensus: independent read-only Rawls PASS/noP0-P3; reviewed manifest7dbd9f566c60a4f512e194b2fe9b59f070aa69cd278de844ab5940049f8753c3/all896hashes/exact9/887untouched/297priorrecords/heldwork isolated. Master final748full/12focused/46maintenance/state0/GSC89/localSEO0fiveprior; reviewer12focused/sourceDOM-proof/three screenshots. Three actual1280-390-320 contained layouts/four offer rows/source link/defaultform enhanced/standalone Grand link navigates all3; table keyboardfocus and two-child5-7 sixresults/resetthree sixresults/errors[] verified. Source-only eligibility, not same-basis savings/currentprice/booking/human/SEO evidence. Additive section removal restores priorHTML, allotherpublic/priorresearch/price-sourceclocks/modules/downloads/schema/34URLs unchanged. Only mechanical immutable consensus appended; guarded release and production verification remain required.095UIhold untouched/fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-095",
       "title": "Publish Boston five-person cooking and dining decision download",
       "kind": "improvement",
-      "status": "selected",
+      "status": "blocked",
       "selected_on": "2026-10-10",
       "started_at": "2026-10-11T03:10:39Z",
       "target_paths": [
@@ -51,7 +92,51 @@
       "production_invariant": "Existing Boston page only additive marked dining section; default4categories/allprices/party/stay/fees/sourceclocks/schema/canonical/completeCSV and allotherpublic-priorresearch/34indexableURLs/296priorroadmapitems/held11 unchanged. Newdownload is noncanonical asset, not newSEOURL. Fixedsprint and03:47:12Z actionstartdeadline preserved;891baseline. No newproviderinspection/denialretry/paid/account/indexing/scheduler mutation.",
       "decision": "IMPLEMENT qualified existing Boston family-meal decision and maintained download, not another report or new city URL. Kitchen, seats and family suitability remain separate.",
       "next_gate": "Native/responsive/actualdownload/read-onlyconsensus/guardedpublicrelease/production verification; falsify changed dining count/category/publicpack or faileddownload task. Full cluster/corpus qualification remains separate.",
-      "review_receipt": "FT-IMP-095 immutable consensus: Ampere independent read-only PASS/no P0-P3; frozen review e188018ee5d00de00b2d8e5c96354e6ec33945789b234cd80807e119ab793230/all894hashes/exact10/all296prioritems/heldwork isolated; independent15focused/all3screenshots/browserJSON/source-party-unknown checks. Master744native/46maintenance/state0/GSC89/localSEO0errors5prior; exact section removal/fullCSV/allotherpublic-priorresearch/sourceclocks/metadata/schema/34URLs preserved. Actual1280-390-320 contained layout/keyboardscroll40-to0/native preset desktop+mobile and full download byteexact/kitchen4-2-4/hash-back-forward. Proxy not realuser/current hotel inspection/newprice/fit evidence. Only mechanical receipt appended after PASS; Pages/marker/productionSEO/affectedURL verification pending."
+      "review_receipt": "FT-IMP-095 immutable consensus: Ampere independent read-only PASS/no P0-P3; frozen review e188018ee5d00de00b2d8e5c96354e6ec33945789b234cd80807e119ab793230/all894hashes/exact10/all296prioritems/heldwork isolated; independent15focused/all3screenshots/browserJSON/source-party-unknown checks. Master744native/46maintenance/state0/GSC89/localSEO0errors5prior; exact section removal/fullCSV/allotherpublic-priorresearch/sourceclocks/metadata/schema/34URLs preserved. Actual1280-390-320 contained layout/keyboardscroll40-to0/native preset desktop+mobile and full download byteexact/kitchen4-2-4/hash-back-forward. Proxy not realuser/current hotel inspection/newprice/fit evidence. Only mechanical receipt appended after PASS; Pages/marker/productionSEO/affectedURL verification pending.",
+      "release_state": "deployed-production-bytes-verified-ui-download-held",
+      "release_commit": "782bebc8648ef7768695206f86237fa8dc02b6cd",
+      "pages_run": 38107972641,
+      "production_byte_verification": {
+        "verified_at": "2026-10-11T03:19:43.643Z",
+        "release": {
+          "sha": "782bebc8648ef7768695206f86237fa8dc02b6cd",
+          "run_id": "38107972641"
+        },
+        "results": [
+          {
+            "url": "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/downloads/boston-cooking-dining-five.csv",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/downloads/boston-family-hotels.csv",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/washington-dc-comparison.js",
+            "status": 200,
+            "exact_bytes": true
+          }
+        ],
+        "all_registered_invariants": true
+      },
+      "release_verification_receipt": "FT-IMP-095 checkpoint 2026-10-11T03:22:21.176Z: reviewed exact10 release 782bebc8648ef7768695206f86237fa8dc02b6cd pushed main0-0/emptyindex/all894indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange. Pages38107972641success and matchingmarker; productionSEO0errors5prior; BostonHTML/newpreset/fullCSV/unchangedJS200exact at2026-10-11T03:19:43.643Z; all declared byte invariants preserved. Live1280/390/320 contained layouts/screenshots observed; local native preset desktop-mobile/full downloads byteexact. Production UI download confirmation HELD: CUA IAB waitForEvent(download) before native link click timed out at30seconds, one transient retry timed out15000ms; console no errors, no new CSV file. No completed download interaction or fully verified release claim. Owner Master/browser capability; unblock only documented changed permitted download behavior, then one live check; no unchanged retry, alternate control/origin bypass or deploy-to-preview. Product/review unchanged, no confirmed critical regression or rollback. LRN192-193 internal proxy/reused facts, not renewed price/humanfit/SEOproof; remaining full cluster/corpus gates unchanged. Next independent eligible corpus decision; CancunOctober11offer checkpoint remains. Mechanical immutable checkpoint only/no metadata-onlycommit; fixed sprint unchanged.",
+      "verification_hold": {
+        "gate": "Production native-download interaction confirmation",
+        "tool": "CUA IAB waitForEvent(download) before link click",
+        "observed": "30s execution timeout; one retry15s download timeout; no console errors or new CSV file",
+        "owner": "Master/browser capability",
+        "unblock_condition": "Documented changed permitted live-download behavior",
+        "next_check": "Only after unblock condition; select independent eligible work meanwhile",
+        "local_downloads": "Desktop/mobile preset and full comparison byte-exact PASS",
+        "rollback": "No confirmed critical regression; no rollback"
+      }
     },
     {
       "id": "FT-IMP-094",

@@ -3,9 +3,28 @@ import { contributorCredit } from "./contributors.mjs";
 import { comparisonUrl } from "../../src/prototypes/cancun-resort-comparison/share.mjs";
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { bookingChecklistText, childFields, comparisonCsv, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
+export const cancunChildOffer = JSON.parse(readFileSync(new URL("../../docs/research/cancun-child-offer-eligibility-2026-10-11.json", import.meta.url), "utf8"));
+export function cancunChildOfferSection() {
+  const offer = cancunChildOffer;
+  return `    <!-- FT-IMP-096 offer start -->
+    <section id="child-offer" aria-labelledby="child-offer-title" style="scroll-margin-top:128px">
+      <h2 id="child-offer-title">Kids stay free: eligibility before savings</h2>
+      <p>${esc(offer.scope)}</p>
+      <p class="source-date">Offer checked <time datetime="${esc(offer.checked_on)}">${esc(offer.checked_on)}</time>; review due ${esc(offer.recheck_on)}. <a href="${esc(offer.source_url)}">Official offer and terms</a>. Conditions can change or be suspended.</p>
+      <div class="quick-table-scroll" tabindex="0" role="region" aria-label="Child-offer eligibility conditions">
+        <table class="quick-table"><caption>Published conditions and remaining checks</caption><thead><tr><th scope="col">Check</th><th scope="col">Published condition</th><th scope="col">Limit or unresolved check</th></tr></thead><tbody>${offer.rows.map(row => `<tr><th scope="row">${esc(row.check)}</th><td data-label="Published condition">${esc(row.published)}</td><td data-label="Limit or unresolved check">${esc(row.unresolved)}</td></tr>`).join("")}</tbody></table>
+      </div>
+      <p>${esc(offer.task)}</p>
+      <p>${esc(offer.price_limit)}</p>
+      <p><a href="#grand-family-suite">Grand room and dated price</a></p>
+      <p>Other room and price source dates are unchanged. This is an eligibility check, not booking acceptance or a savings quote.</p>
+    </section>
+    <!-- FT-IMP-096 offer end -->
+`;
+}
 export function cancunResortPage() {
   const canonical = `https://familytripwise.com/${cancunPath}`;
   const title = "Cancun Family Resorts: Compare Rooms, Club Ages & Transfers";
@@ -78,7 +97,7 @@ export function cancunResortPage() {
       <h3 id="results-title">Example: children aged 3, 7 and 12</h3>
       <div id="family-results" tabindex="-1" aria-labelledby="results-title">${renderResults(compareCancunFamily({childAges:[3,7,12], asOf:cancunEvidence.checkedOn}))}</div>
     </section>
-    <section id="before-booking">
+${cancunChildOfferSection()}    <section id="before-booking">
       <h2>Resolve these points before paying</h2>
       <ol>
         <li><strong>Exact party and category:</strong> supply every child's age at travel and ask whether that exact rate accepts everyone in one booked unit. A club age does not establish the hotel's child-pricing cutoff.</li>
