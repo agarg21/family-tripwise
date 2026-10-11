@@ -40,6 +40,12 @@ export function orlandoCombinedRateComparisonCsv(records = suites) {
   return rateCsv([[...rateHeadings, "Currency basis"], ...rows]);
 }
 const cite = (key, label) => `<a href="${e(sources[key])}">${label}</a>`;
+export const mealPolicy = suite => {
+  const policy = suite.mealPolicy;
+  if (!policy) return "";
+  const breakfast = policy.breakfast;
+  return `\n            <div data-meal-policy="${e(suite.id)}"><dt>Kitchen &amp; breakfast</dt><dd><p>${e(policy.kitchenNote)} ${cite(policy.roomSource, "IHG room kitchen scope")}</p><p>Published breakfast buffet: ${e(breakfast.venue)}, ${e(breakfast.location)}, ${e(breakfast.opens)}-${e(breakfast.closes)}. ${cite(policy.diningSource, "IHG breakfast details")}</p><p>${e(policy.limitation)} Meal sources checked ${e(policy.checkedOn)}; recheck ${e(policy.recheckOn)}.</p></dd></div>`;
+};
 export const kitchenPolicy = suite => {
   const policy = suite.kitchenPolicy;
   if (!policy) return "";
@@ -116,7 +122,7 @@ export function orlandoSuitePage() {
         <article id="${suite.id}" class="suite">
           <p class="eyebrow">${e(suite.base)}</p><h3>${e(suite.name)}</h3><p><strong>${e(suite.room)}</strong></p>
           <dl>
-            <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>${kitchenPolicy(suite)}
+            <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>${kitchenPolicy(suite)}${mealPolicy(suite)}
             <div><dt>Park access</dt><dd>${e(suite.transport)} ${cite(suite.transportSource, "Transport terms")}</dd></div>
             <div><dt>Water features &amp; admission</dt><dd>${e(suite.water)} ${cite(suite.waterSource, "Water terms")}</dd></div>${waterPolicy(suite)}
             <div><dt>Important limitation</dt><dd>${e(suite.caution)} ${cite(suite.cautionSource ?? suite.capacitySource, "Check the notice or benefit")}</dd></div>

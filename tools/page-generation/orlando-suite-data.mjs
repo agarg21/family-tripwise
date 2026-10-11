@@ -11,6 +11,7 @@ export const sources = {
   cabanaBooking: "https://reservations.universalorlando.com/ibe/details.aspx?hotelID=14844&lang=en-us&rmID=75837&voucher=&currID=1&access=",
   universalBenefits: "https://www.loewshotels.com/universal-orlando-resort/exclusive-theme-park-benefits",
   ihgRoom: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/rooms",
+  ihgDining: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/dining",
   ihgBooking: "https://www.ihg.com/holidayinnresorts/hotels/us/en/find-hotels/select-roomrate?qDest=18000%20International%20Drive%20S,%20Orlando,%20FL,%20US&qPt=CASH&qCiD=8&qCoD=13&qCiMy=102026&qCoMy=102026&qAdlt=2&qChld=3&qRms=1&qChAge=..&qRtP=6CBARC&qSlH=DISFS&srb_u=1&qFS=false&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.kd.ma.sp.va.sp.re.vx.nd.sx.we.lx.rn.sn.sn.sn.sn.sn.nu.ge.fa&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false&qRCC=CG020&qpMbw=0&qErm=false&qpMn=0&qpMbx=0&qRmFltr=",
   ihgAmenities: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/amenities",
   ihgWaterFaq: "https://www.surfandsplashorlandowaterpark.com/faqs/"
@@ -63,6 +64,13 @@ export const suites = [
   {
     id: "holiday-inn", name: "Holiday Inn Resort Orlando Suites - Waterpark", base: "Off-site Orlando base",
     room: "Two Bedroom Suite (configuration must be selected)", maximum: 6, capacitySource: "ihgBooking", layoutSource: "ihgRoom",
+    mealPolicy: {
+      checkedOn: "2026-10-11", recheckOn: "2026-10-18", roomSource: "ihgRoom", diningSource: "ihgDining",
+      kitchenType: null, equipment: null,
+      kitchenNote: "The room page describes kitchenettes or full kitchens across suites, but does not map a kitchen type or appliance list to this Two Bedroom Suite. Confirm the selected configuration; a three-bedroom kitchen photo is not evidence for this room.",
+      breakfast: { venue: "Lakeside Cafe", location: "Marketplace", opens: "6:30 AM", closes: "10:30 AM" },
+      limitation: "The dining listing does not establish meal prices or breakfast coverage for every adult and child. Confirm hours for your travel dates and each guest's entitlement under the selected rate. No meal-cost savings are calculated; this check does not renew room prices, fees or exact-age acceptance."
+    },
     layout: "IHG lists queen/bunk, king/bunk or queen/two-single layouts at 595 sq ft. Its September 27 booking result lists a six-person maximum for these exact configurations; ages and availability still need confirmation.",
     transport: "Disney shuttle service is listed in the resort-fee inclusions. Exact park stops, timetable and reservations need confirmation; no Universal service is established here.", transportSource: "ihgAmenities",
     water: "The general resort fee lists Surf & Splash access for up to six guests. FlowRider is excluded. Admission count alone does not establish room occupancy or individual ride eligibility.", waterSource: "ihgAmenities",

@@ -20,11 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-115",
+      "title": "Separate IHG exact-room kitchen unknowns from breakfast venue and package coverage",
+      "kind": "implementation",
+      "lane": "existing-page-family-meal-budget",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T20:02:24Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/orlando-suite-data.mjs",
+        "site/orlando/orlando-suite-data.mjs",
+        "tools/page-generation/orlando-suite-page.mjs",
+        "site/where-to-stay/orlando-family-hotels.html",
+        "tools/orlando-meal-policy.test.mjs",
+        "docs/research/orlando-ihg-meal-policy-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "Current family-of-five morning meal task lacks IHG exact-room kitchen scope and breakfast hours. Ordinary permitted current IHG room page describes kitchenettes or full kitchens generally, not the compared Two Bedroom Suite appliance/kitchen assignment; three-bedroom kitchen imagery must not transfer. Dining lists Lakeside Cafe Marketplace breakfast buffet6:30AM-10:30AM but no price/covered guest count. Existing110 rate-plan breakfast coverage remains unknown, not renewed.",
+      "gsc_evidence_classification": "Reused recent October11 API16:19:30.924Z finalized October9 vs October10 finalOctober8; stale sitemap discovery lastreadJuly27. Orientation only, no CTR/query-cohort or indexing action.",
+      "acceptance_criteria": [
+        "Scoped shared IHG meal record: null exact-room kitchen/equipment, dated official room-scope interpretation and linked breakfast venue/location/hours. No full-kitchen/absent-stove/five-covered-guests/free-breakfast/meal-savings guarantee.",
+        "Static/enhanced record parity, HTML escaping and category isolation; desktop1280/mobile390/320 keyboard source links/form-reset/contained text/image checks; focused/full native QA and different independent read-only PASS/PASS_WITH_P3.",
+        "Exact11-path guarded main push; Pages success/matching marker/production SEO/exact assets/all registered invariants before delivery."
+      ],
+      "measurement_plan": "LRN212 current two-source audit plus internal morning-meal task, not real-user/SEO outcome or complete meal budget. Parent can distinguish generic room amenity, actual compared configuration, breakfast operating window and rate coverage. Falsify assigned exact-room equipment, changed hours, published coverage, source/record mismatch or October18 review.",
+      "production_invariant": "Add only IHG mealPolicy field, exact ihgDining source URL and one additive block. Stripping them restores prior data/HTML. All existing price/party/date/currency/fees/deposit-breakfast rate terms/Cabana114 equipment/water/parking/global clocks/legacy-combined CSV/model-client/style/catalog/config/other public-prior research-src/meta-schema/34URLs/948baseline/held11/all316priorroadmap items intact. Carry114 immutable completion only; no source renewal outside scoped meal audit/security/provider/account/scheduler/newURL mutation.",
+      "decision": "IMPLEMENT bounded existing-page failed morning-meal task; room-source transfer hypothesis REJECTED, coverage remains unknown. First transaction actualrun20:00:47Z/16:00:47EDT/startdeadline20:45:47Z/fixed sprint unchanged. Broader063/077 corpus and human/full-budget gates remain separate.",
+      "release_state": "implementation-review-pending",
+      "review_receipt": "FT-IMP-115 different Galileo independent read-only PASS/noP0-P3; manifestd45624c1dc80e64059e8c13048e0019622a24b4a1b240b87e848faf2a70ed744/all950hashes/exact11/937nonowned/316priorordereditems/held11-ledgerisolation verified/no drift. Independent6focused/invariants/state0/GSC90/localSEO0fiveprior; Master828full/47maintenance green, saved actualIAB1280/390/320 room-Dining keyboardfocus/form6people-reset5people/containedtext/nooverflow/errors0/image1280x920 inspected, not independentfull/livebrowser. Saved ordinary permitted current official rooms/dining DOM/screenshot supports source-scoped unknown exactTwoBedroom kitchen/equipment and LakesideCafe Marketplace published6:30AM-10:30AM; no mealprice/coverage/traveldatehours guarantee or ratefeeage renewal. Remove field/source/block restores prior data/HTML; rates fees Cabana114equipment CSV clocks models catalog config otherpublic-priorresearch-src meta-schema34URLs heldwork intact. LRN212 currentsource/internalproxy nothumanSEO/fullmealbudget/broad063077 qualification. Only mechanical immutable consensus receipt; guarded release and production pending/fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-114",
       "title": "Clarify Cabana Bay kitchenette equipment for the meal-budget decision",
       "kind": "implementation",
       "lane": "existing-page-room-kitchen",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T19:04:36Z",
       "allowed_during_observation": true,
@@ -55,8 +94,11 @@
       "measurement_plan": "LRN211 current source audit and internal meal task: parent can identify published reheating equipment and unverified cooking assumptions. Not human satisfaction/SEO/full meal budget. Falsify source equipment change, misplaced category, stale scoped date or failed task; recheck October18.",
       "production_invariant": "Add only Cabana kitchen block and scoped shared field; stripping field/block restores prior data/HTML. Preserve all rate/currency/party/fee/water/parking records and clocks, global dates, legacy and combined CSV bytes, model/client/style/catalog/config/all other public/prior research/src/meta-schema/34URLs/946 baseline/held11/all315 prior roadmap items. Carry112/113 immutable closure only; no newURL, booking/safety/suitability assurance, automated fact renewal or security/provider/account/scheduler mutation.",
       "decision": "IMPLEMENT bounded failed meal-planning task in existing URL during fixed sprint. First transaction actualrun19:01:16Z/15:01:16EDT/startdeadline19:46:16Z. Broad063/077 qualification and human/full-budget gates remain separate.",
-      "release_state": "implementation-review-pending",
-      "review_receipt": "FT-IMP-114 different Rawls independent read-only PASS/noP0-P3; manifest6a06d394b4985c971aa7c62dddd10287a806b1f067e74efdbe97a3eb4874323c/all948hashes/exact11/937nonowned/315priorordereditems/held11-ledgerisolation verified/no drift. Independent9focused/invariants/state0/GSC90/localSEO0fiveprior; Master825full/47maintenance9focused/finalreview-candidate rerun825green inspected, not independentfull. Saved ordinary official exact-category equipment DOM/screenshot and actualIAB1280/390/320 source keyboard focus/form6people-reset5people/containedtext/nooverflow/errors0/image1280x920 loaded inspected; no reviewer writes/network/livebrowser/delegation. Scoped mini refrigerator/microwave/small sink supported; reheating explicitly interpretive, cooking equipment/freezer/dining-space/meal-savings unknown. Remove field/block restores prior data/HTML; all prices fees CSV clocks models catalog config other public-prior research-src metadata34URLs intact. LRN211 currentsource/internalproxy, not humanSEO/fullbudget or broad063/077 qualification. Only mechanical immutable consensus receipt; guarded release and production pending/fixed sprint unchanged."
+      "release_state": "completed-remote-verified",
+      "review_receipt": "FT-IMP-114 different Rawls independent read-only PASS/noP0-P3; manifest6a06d394b4985c971aa7c62dddd10287a806b1f067e74efdbe97a3eb4874323c/all948hashes/exact11/937nonowned/315priorordereditems/held11-ledgerisolation verified/no drift. Independent9focused/invariants/state0/GSC90/localSEO0fiveprior; Master825full/47maintenance9focused/finalreview-candidate rerun825green inspected, not independentfull. Saved ordinary official exact-category equipment DOM/screenshot and actualIAB1280/390/320 source keyboard focus/form6people-reset5people/containedtext/nooverflow/errors0/image1280x920 loaded inspected; no reviewer writes/network/livebrowser/delegation. Scoped mini refrigerator/microwave/small sink supported; reheating explicitly interpretive, cooking equipment/freezer/dining-space/meal-savings unknown. Remove field/block restores prior data/HTML; all prices fees CSV clocks models catalog config other public-prior research-src metadata34URLs intact. LRN211 currentsource/internalproxy, not humanSEO/fullbudget or broad063/077 qualification. Only mechanical immutable consensus receipt; guarded release and production pending/fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-114 release 0b770fae97fe01b7538742944ff4a409728007be remote verified 2026-10-11T19:14:01.118Z; main0-0/emptyindex/exact11/all948indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified exact-category Cabana kitchenette meal-planning block. Pages38167035661success/matching0b770fae97fe01b7538742944ff4a409728007be/run/sixexactHTTP200assets/invariantsPASS at2026-10-11T19:13:37.224Z/productionSEO0errors-fiveprior. ActualIAB1280-390-320 source keyboard focus/form6people-reset5people/containedtext/nooverflow/errors0/existingimage1280x920 loaded; saved production-width JSON/PNG andproduction-context.png under/tmp/ft-imp114-browser. Master825full47maintenance9focused/differentRawlsPASS. LRN211 current exact-room officialsource and internal meal-task learning; published mini refrigerator/microwave/small sink, reheating interpretation distinct from unknown cooking equipment/freezer/dining-space/savings. Not humanSEO/fullmealbudget/corpus063-077 qualification. All rates fees party-currency sourceclocks CSVs models catalog config otherpublic-priorresearch-src metadata34URLs andheld11 intact. One finish-first public transaction completed, no quota or wholecluster claim; next qualify another exact-room meal equipment or breakfast coverage gate from maintained sources without unchanged denied retries. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T19:14:01.135Z",
+      "release_commit": "0b770fae97fe01b7538742944ff4a409728007be"
     },
     {
       "id": "FT-IMP-113",

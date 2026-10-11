@@ -1,0 +1,22 @@
+{
+  "action_id": "FT-IMP-115",
+  "inspected_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "property": "Holiday Inn Resort Orlando Suites - Waterpark",
+  "room": "Two Bedroom Suite (configuration must be selected)",
+  "family_decision": "Can two adults and children aged 4, 8 and 12 plan in-room breakfast or assume five breakfasts are covered by the dated rate?",
+  "evidence_class": "current official room/dining facts and source-scope audit; internal family-task proxy, not firsthand or human suitability evidence",
+  "room_source": "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/rooms",
+  "dining_source": "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/dining",
+  "room_scope": "General suite introduction offers kitchenettes or full kitchens. The inspected Two Bedroom Suite section names configurations but does not assign a kitchen type or appliances. A kitchen image is under Three Bedroom Suite. Generic Additional Amenities names coffee/tea facilities and a mini refrigerator, not a two-bedroom-specific appliance inventory.",
+  "kitchen_type": null,
+  "equipment": null,
+  "breakfast": { "venue": "Lakeside Cafe", "location": "Marketplace", "opens": "6:30 AM", "closes": "10:30 AM" },
+  "meal_prices": null,
+  "breakfast_covered_guests": null,
+  "interpretation": "Reject transferring general suite wording or three-bedroom imagery into an exact two-bedroom full-kitchen claim. The dining venue and published hours answer a morning-location question, not November hours or package entitlement. Previously reviewed Stay Longer And Save breakfast wording remains unchanged; five-guest coverage is unresolved.",
+  "decision": "IMPLEMENT a bounded additive existing-page meal-policy block; keep exact kitchen equipment, food costs, guest coverage and meal savings unknown.",
+  "confidence": "High for inspected venue/location/hours and source-scope limits; no conclusion about actual missing equipment or meal coverage.",
+  "next_falsification_trigger": "October 18 recheck, or an exact selected-room inventory and rate-specific adult/child breakfast entitlement with meal prices.",
+  "remaining_gates": "Full comparable family budget, exact-age acceptance, broader FT-RES-063/077 qualification and any human experience/suitability gate remain separate. Independent review and release verification are required before publishing."
+}
