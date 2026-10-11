@@ -29,6 +29,9 @@ const csvCell = value => {
   return `"${safe.replaceAll('"', '""')}"`;
 };
 const sourceUrls = ids => [...new Set(ids)].map(id => cancunEvidence.sources[id]).join(" | ");
+const clubClockText = clubs => clubs.checkedOn ? `Club rules checked ${clubs.checkedOn}; review due ${clubs.recheckOn}. Other room, price and policy source dates are unchanged.` : "";
+const clubClockHtml = clubs => clubs.checkedOn ? `<p class="source-date">${esc(clubClockText(clubs))}</p>` : "";
+const priorClubSources = clubs => clubs.priorSourceIds ? `<p class="source-date">Earlier property pages checked ${esc(clubs.priorCheckedOn)}; not a current club-rule verification.</p>${sources(clubs.priorSourceIds, "Retained earlier property source")}` : "";
 
 export function comparisonCsv() {
   const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price checked", "Price refresh due", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy checked", "Policy recheck due", "Live record"];
@@ -85,11 +88,12 @@ Beds: ${record.room.beds}
 Price: ${priceText(record)}
 ${record.room.checks.map(check => `Room check: ${check}`).join("\n")}
 Club bands: ${record.clubs.programs.length ? record.clubs.programs.map(p => `${p.min}-${p.max} ${p.name}${p.parentRequired ? "; parent must stay" : ""}${p.registration ? "; registration required" : ""}${p.pottyRequired ? "; fully toilet-trained" : ""}`).join(" | ") : "Exact age rules unknown in this record"}
+${clubClockText(record.clubs) ? `${clubClockText(record.clubs)}\n` : ""}\
 ${record.clubs.checks.map(check => `Club check: ${check}`).join("\n")}
 ${record.transfers.rule === "direct-offer" ? `Transfer offer: ${record.transfers.airport}, minimum ${record.transfers.minimumNights} nights.\n` : ""}${record.transfers.checks.map(check => `Transfer check: ${check}`).join("\n")}
 ${record.extras.checks.map(check => `Cost check: ${check}`).join("\n")}
 Complete stay cost and availability: unknown.
-${recordSources([...record.room.sourceIds, ...(record.price?.sourceIds ?? []), ...record.clubs.sourceIds, ...record.transfers.sourceIds, ...record.extras.sourceIds])}`).join("\n\n")}
+${recordSources([...record.room.sourceIds, ...(record.price?.sourceIds ?? []), ...record.clubs.sourceIds, ...(record.clubs.priorSourceIds ?? []), ...record.transfers.sourceIds, ...record.extras.sourceIds])}`).join("\n\n")}
 `;
 }
 
@@ -97,7 +101,7 @@ export function renderOverview() {
   return cancunEvidence.records.map(record => `<article class="resort-row" id="${esc(record.id)}">
     <header><h3>${esc(record.hotel)}</h3><p class="area">${esc(record.area)}</p><a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(record.hotel + " Mexico")}">Map location</a></header>
     <div><h4>Room</h4><p><strong>${esc(record.room.category)}</strong></p><p class="key-fact">${record.room.capacityStatus === "disputed" ? esc(record.room.capacityConflict ?? "Capacity disputed: 4 versus 5") : `Published maximum: ${record.room.maximum}`}</p><p>${esc(record.room.beds)}</p>${list(record.room.checks)}${sources(record.room.sourceIds, "Official room details")}</div>
-    <div><h4>Club ages</h4>${record.clubs.programs.length ? list(record.clubs.programs.map(program => `${program.min}-${program.max}: ${program.name}${program.parentRequired ? "; parent must stay" : ""}${program.registration ? "; registration required" : ""}${program.pottyRequired ? "; fully toilet-trained" : ""}`)) : "<p>Exact club-age rules: unknown in this record.</p>"}${sources(record.clubs.sourceIds, record.clubs.programs.length ? "Official club rules" : "Official pages checked")}<details><summary>Admission checks</summary>${list(record.clubs.checks)}</details></div>
+    <div><h4>Club ages</h4>${record.clubs.programs.length ? list(record.clubs.programs.map(program => `${program.min}-${program.max}: ${program.name}${program.parentRequired ? "; parent must stay" : ""}${program.registration ? "; registration required" : ""}${program.pottyRequired ? "; fully toilet-trained" : ""}`)) : "<p>Exact club-age rules: unknown in this record.</p>"}${clubClockHtml(record.clubs)}${sources(record.clubs.sourceIds, record.clubs.programs.length ? "Official club rules" : "Official pages checked")}${priorClubSources(record.clubs)}<details><summary>Admission checks</summary>${list(record.clubs.checks)}</details></div>
     <div><h4>Price, transfers &amp; extra costs</h4>${priceHtml(record)}${record.transfers.rule === "direct-offer" ? `<p>Round-trip ${esc(record.transfers.airport)} airport offer: minimum ${record.transfers.minimumNights} nights.</p>` : ""}${list(record.transfers.checks)}${sources(record.transfers.sourceIds, record.transfers.rule === "unknown" ? "Official page checked" : "Official transfer terms")}${list(record.extras.checks)}${sources(record.extras.sourceIds, "Official extras")}<p><strong>Stay total: unknown for your dates and party.</strong> Availability is not confirmed.</p></div>
   </article>`).join("\n");
 }
@@ -129,7 +133,8 @@ export function renderResults(result) {
     <h3><a href="#${esc(record.id)}">${esc(record.hotel)}</a></h3>
     <p class="room-status" data-status="${esc(record.room.status)}">${esc(roomMessages[record.room.status])}</p>
 ${record.room.layoutStatus === "unknown" ? "<p><strong>Sleeping layout unresolved:</strong> confirm every sleeping place and whether connection is guaranteed.</p>" : ""}
-    <ul class="child-results">${record.children.map((child, index) => `<li data-status="${esc(child.status)}"><strong>Child ${index + 1}, age ${child.age}${child.program ? `: ${esc(child.program)}` : ""}.</strong> ${esc(childMessages[child.status])}${child.registration === true ? " Registration required." : ""}</li>`).join("")}</ul>
+${record.clubEvidence ? `    ${clubClockHtml(record.clubEvidence)}${record.clubEvidence.needsRecheck ? '<p class="notice">Club source review due; confirm the current rules.</p>' : ""}<details><summary>Current club conditions</summary>${list(record.clubChecks)}</details>\n` : ""}\
+    <ul class="child-results">${record.children.map((child, index) => `<li data-status="${esc(child.status)}"><strong>Child ${index + 1}, age ${child.age}${child.program ? `: ${esc(child.program)}` : ""}.</strong> ${esc(childMessages[child.status])}${child.otherPrograms?.length ? ` Also listed for this age: ${child.otherPrograms.map(esc).join(" / ")}; confirm its separate admission rules.` : ""}${child.registration === true ? " Registration required." : ""}</li>`).join("")}</ul>
     <p data-transfer="${esc(record.transfers.status)}">${esc(transferMessages[record.transfers.status])}</p>
     ${sources(record.room.sourceIds, "Confirm room")}${sources([...new Set(record.children.flatMap(child => child.sources.map(source => source.id)))], "Confirm club")}${sources(record.transfers.sources.map(source => source.id), "Confirm transfer")}
   </article>`).join("")}</div>`;

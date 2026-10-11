@@ -31,7 +31,8 @@ export const cancunEvidence = {
     G5: "https://bookingsthegrandpr.moonpalace.com/rooms?&skd-total-rooms=1&adult_room1=2&child_room1_age0=1&skd-checkin=2026-10-18&skd-checkout=2026-10-23&skd-language-code=en&",
     Z1: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun/rooms/2VWD",
     Z2: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun/faqs",
-    Z3: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun"
+    Z3: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun",
+    Z4: "https://www.resortsbyhyatt.com/ziva/ziva-cancun/all-inclusive-resort-activities"
   },
   records: [
     {
@@ -152,8 +153,13 @@ export const cancunEvidence = {
       },
       price: null,
       clubs: {
-        sourceIds: ["Z2", "Z3"], programs: [],
-        checks: ["Current exact club-age and admission rules were not established from the inspected official pages. Ask about each child; unknown does not mean no club or activities."]
+        sourceIds: ["Z4"], checkedOn: "2026-10-11", recheckOn: "2026-10-18",
+        priorSourceIds: ["Z2", "Z3"], priorCheckedOn: "2026-09-23",
+        programs: [
+          { name: "KidZ Club", min: 4, max: 12, parentRequired: null, registration: null, pottyRequired: null },
+          { name: "@Moods Lounge and Club", min: 10, max: 17, parentRequired: null, registration: null, pottyRequired: null }
+        ],
+        checks: ["Both programs are listed as included; ages 10-12 overlap. Published age matches do not confirm admission, registration, training requirements, current hours or capacity.", "Younger-child family time with a parent is described separately; its exact age cutoff and access conditions are not established. It is not parent-free care.", "The KidZ disclosure says babysitting should be requested through Concierge upon arrival and costs extra. The retained older FAQ says advance arrangements; confirm the timing rather than assuming arrival is sufficient. Numeric fee, billing unit, minimum, toddler acceptance and availability remain unknown; included clubs do not make private care free."]
       },
       transfers: { rule: "extra", sourceIds: ["Z2"], checks: ["The FAQ excludes airport transport from standard inclusions; the resort offers it at additional cost. Confirm any package exception."] },
       extras: { sourceIds: ["Z2"], checks: ["Babysitting costs extra and needs advance arrangements. The FAQ's Interval International package section lists MXN 79 per room/night environmental tax; confirm whether that amount applies to your rate.", "Spa services and rented beach cabanas are extra. Complete stay cost remains unknown."] }

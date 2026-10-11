@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-204 - Ziva included clubs are not private toddler care - 2026-10-11
+
+FT-IMP-107 /083/076. Family decision: two adults with ages2/7 cannot distinguish KidZ club-band match from toddler care on the current model because Ziva clubs are all unknown. Hypothesis rejected by October11 ordinary current official activities body and separate Learn More disclosures. OFFICIAL_PROPERTY_FACT plus internal PAGE_ONLY_PROXY; maintained source record `docs/research/cancun-ziva-club-age-2026-10-11.json`. IMPLEMENT unfinished scoped integration: KidZ4-12 and @Moods10-17, explicit10-12 overlap, accompanied younger family time separate, extra-charge babysitting unpriced. Seven-year-old published match is not admission; two-year-old lack of club-band match is not no activities or no babysitting. No confirmed simultaneous parent-free break or room-plus-care total.
+
+High visible source/boundary confidence, unknown current admission/training/registration/slots/privatecare cost/safety/userSEO outcome. Lesson: age bands can overlap and inclusion attaches to named programs, not every child or private care. Own October11/October18 club clock; all original room/price/fee/transfer dates, other five properties and106grandparents layer preserved. Trigger changed official rules or scopedOctober18 review; selected ClubMed296 billing/minimum/slots and bedding unchanged, no retry. Full/focused/actualresponsive/native-download/differentPASS/guardedproduction gates required; no broad report/newURL/newhotel.
+
 ## LRN-203 - Grandparents party budget versus room linkage - 2026-10-11
 
 FT-IMP-106 /066. Family decision: two parents, two grandparents and ages3/7 cannot use a two-adult quote or infer a connected door from a two-bedroom title. Hypothesis: join exact six-person budget with separate room-linkage evidence on existing Cancun owner. Evidence OFFICIAL_BOOKING_OBSERVATION plus PAGE_ONLY_PROXY_TASK; inspectedOctober11 Royalton primary rendered guests, dates, LXUU2, publicplans and refund/tax disclosures. Grand category specifies connected rooms but its ordinary linked engine loading overlay prevented group controls; no group quote or unchanged retry. Maintained evidence `docs/research/cancun-grandparents-budget-2026-10-11.json`.

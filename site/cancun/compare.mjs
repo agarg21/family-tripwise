@@ -39,7 +39,7 @@ function transferStatus(rule, input) {
 // Independent fields prevent a club-age match from becoming a booking/room-fit claim.
 export function compareCancunFamily(input) {
   const request = validate(input);
-  const sourceLinks = ids => ids.map(id => ({ id, url: cancunEvidence.sources[id], checkedOn: cancunEvidence.checkedOn, publishedOn: null, evidenceClass: "official-published-fact" }));
+  const sourceLinks = (ids, checkedOn = cancunEvidence.checkedOn) => ids.map(id => ({ id, url: cancunEvidence.sources[id], checkedOn, publishedOn: null, evidenceClass: "official-published-fact" }));
   return {
     adults: 2,
     childAges: [...request.childAges],
@@ -57,13 +57,15 @@ export function compareCancunFamily(input) {
         bookingAcceptance: "unknown"
       },
       children: request.childAges.map((age, index) => {
-        const program = record.clubs.programs.find(item => age >= item.min && age <= item.max);
+        const matches = record.clubs.programs.filter(item => age >= item.min && age <= item.max);
+        const program = matches[0];
         const training = request.pottyTrained[index];
         const status = !program ? "no-published-age-match" : program.parentRequired ? "parent-required" :
           program.pottyRequired && training === false ? "published-condition-not-met" :
           program.pottyRequired && training === null ? "toilet-training-check-needed" : "published-age-match-confirm-admission";
-        return { age, status, program: program?.name ?? null, registration: program?.registration ?? null, sources: sourceLinks(record.clubs.sourceIds) };
+        return { age, status, program: program?.name ?? null, otherPrograms: matches.slice(1).map(item => item.name), registration: program?.registration ?? null, sources: sourceLinks(record.clubs.sourceIds, record.clubs.checkedOn) };
       }),
+      clubEvidence: record.clubs.checkedOn ? { checkedOn: record.clubs.checkedOn, recheckOn: record.clubs.recheckOn, needsRecheck: dateValue(request.asOf) >= dateValue(record.clubs.recheckOn) } : null,
       clubChecks: [...record.clubs.checks],
       transfers: { status: transferStatus(record.transfers, request), airport: record.transfers.airport ?? "confirm-route", checks: [...record.transfers.checks], sources: sourceLinks(record.transfers.sourceIds) },
       cost: { total: null, currency: null, status: "unknown-not-quoted", checks: [...record.extras.checks], sources: sourceLinks(record.extras.sourceIds) }

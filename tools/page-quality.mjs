@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { hotelEvidence, validateHotelEvidence, validDate } from "./hotel-evidence.mjs";
+import { hotelEvidence, validateHotelEvidence, validDate, hotelFieldInterval } from "./hotel-evidence.mjs";
 import { ageState, easternDate, requireNewOutput } from "./evidence-audit.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
@@ -17,7 +17,7 @@ export function qualityReport(records, { today = easternDate() } = {}) {
     pages.get(r.page_url).hotels++;
     for (const [name, f] of Object.entries(r.fields)) {
       const reasons = [];
-      const interval = name === "price" || name === "fees" ? 14 : name === "review_signal" ? 60 : 30;
+      const interval = hotelFieldInterval(name, f);
       const freshness = ageState(f.observed_on, interval, today);
       if (f.state !== "known") reasons.push(f.state);
       if (!f.source_urls.length) reasons.push("source-mapping-needed");

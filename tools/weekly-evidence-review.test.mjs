@@ -152,6 +152,15 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, /On October 11 the same LXUU2 booking code/);
       assert.ok(currentRecord.source_urls.includes(cancunEvidence.sources.R4));
       assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls }, currentRecord);
+    } else if (record.id === "cancun-ziva-ocean-view-double-activities") {
+      assert.equal(record.verified_on, "2026-09-23");
+      assert.equal(record.mapping_state, "unknown");
+      assert.equal(currentRecord.verified_on, "2026-10-11");
+      assert.equal(currentRecord.interval_days, 7);
+      assert.equal(currentRecord.date_basis, "field-observation");
+      assert.deepEqual(currentRecord.source_urls, [cancunEvidence.sources.Z4]);
+      assert.match(currentRecord.basis, /KidZ Club.*@Moods Lounge and Club/);
+      assert.match(currentRecord.basis, /admission remains unconfirmed/);
     } else assert.deepEqual(record, currentRecord);
   }
   assert.equal(changed.length, 12);

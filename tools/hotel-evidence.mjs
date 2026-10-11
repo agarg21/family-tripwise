@@ -67,7 +67,8 @@ export function hotelEvidence() {
           source_basis: p.basis, structured_basis: false } : null, path, urls(p?.sourceIds), p?.observedOn ?? null,
           p?.kind === "official-starting" ? "OFFICIAL_PROPERTY_FACT" : p?.kind === "derived-two-adult-starting" ? "EDITORIAL_INTERPRETATION" : "BOOKING_CHECK"),
         fees: official(hotel.extras), transport: official(hotel.transfers, hotel.transfers.rule === "unknown" ? "unknown" : "known"),
-        activities: official(hotel.clubs, hotel.clubs.programs.length ? "known" : "unknown"), review_signal: unknown(path)
+        activities: hotel.clubs.checkedOn ? field(hotel.clubs, "known", "OFFICIAL_PROPERTY_FACT", hotel.clubs.checkedOn, urls(hotel.clubs.sourceIds), path,
+          "Published program bands only; admission remains unconfirmed. Scoped club review date does not renew other property facts or retained prior sources.") : official(hotel.clubs, hotel.clubs.programs.length ? "known" : "unknown"), review_signal: unknown(path)
       }
     });
   }
@@ -148,12 +149,23 @@ export function validateHotelEvidence(records) {
   return errors;
 }
 
+export function hotelFieldInterval(name, envelope) {
+  if (name === "activities" && envelope.value?.checkedOn && envelope.value?.recheckOn) {
+    const { checkedOn, recheckOn } = envelope.value;
+    if (!validDate(checkedOn) || !validDate(recheckOn) || envelope.observed_on !== checkedOn) throw new Error("Invalid scoped activity dates");
+    const days = (Date.parse(recheckOn) - Date.parse(checkedOn)) / 86400000;
+    if (!Number.isInteger(days) || days < 1) throw new Error("Invalid scoped activity interval");
+    return days;
+  }
+  return name === "price" || name === "fees" ? 14 : name === "review_signal" ? 60 : 30;
+}
+
 export function hotelAuditRecords() {
   const records = hotelEvidence();
   const errors = validateHotelEvidence(records);
   if (errors.length) throw new Error(errors.join("\n"));
   return records.flatMap((r) => Object.entries(r.fields).map(([name, f]) => ({ id: `${r.id}-${name}`, page_url: r.page_url,
-    field: name === "price" ? "nightly-price" : name, verified_on: f.observed_on, interval_days: name === "price" || name === "fees" ? 14 : name === "review_signal" ? 60 : 30,
+    field: name === "price" ? "nightly-price" : name, verified_on: f.observed_on, interval_days: hotelFieldInterval(name, f),
     basis: `${f.limitation} Record-specific room/party/date/fees: ${JSON.stringify(f.value)}`, source_urls: f.source_urls, evidence_path: f.evidence_path,
     evidence_class: f.evidence_class, mapping_state: f.state, date_basis: f.date_basis, ...(f.source_refs ? { source_refs: f.source_refs } : {}) })));
 }

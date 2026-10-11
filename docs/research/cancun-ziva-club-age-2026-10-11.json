@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-107",
+  "learning_id": "LRN-204",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "evidence_class": "OFFICIAL_PROPERTY_FACT_AND_PAGE_ONLY_PROXY",
+  "source_url": "https://www.resortsbyhyatt.com/ziva/ziva-cancun/all-inclusive-resort-activities",
+  "publication_date": null,
+  "method": "Ordinary permitted rendered official body and separate KidZ/@Moods Learn More disclosures; no booking, contact or denied-source retry.",
+  "programs": [
+    {"name": "KidZ Club", "min": 4, "max": 12, "inclusion": "published-included-program", "parent_presence": null, "registration": null, "potty_training": null, "admission": null},
+    {"name": "@Moods Lounge and Club", "min": 10, "max": 17, "inclusion": "published-included-program", "parent_presence": null, "registration": null, "potty_training": null, "admission": null}
+  ],
+  "overlap": "Ages10-12 appear in both published bands. Neither an exclusive teen13+ cutoff nor confirmed admission is inferred.",
+  "younger_children": "KidZ disclosure describes younger-child family time with parents; exact younger-age cutoff and access conditions are not given. This is not parent-free care.",
+  "babysitting": {"extra_charge": true, "request": "Published KidZ disclosure says request through Concierge upon arrival", "fee_amount": null, "currency": null, "unit": null, "minimum": null, "availability": null, "toddler_acceptance": null},
+  "scope_limits": "Do not transfer club inclusion to private babysitting. Confirm registration, training, current hours, capacity and admission. Current arrival-request wording conflicts with retained older FAQ advance-arrangement wording; preserve both dates and require timing confirmation. No safety, dropoff, booking acceptance, current family-room quote, complete care budget or suitability assurance.",
+  "task": {"adults": 2, "child_ages": [2, 7], "result": "Age2 has no recorded club-band match, with accompanied younger family time separately described; age7 has a published KidZ match only. No simultaneous parent-free break or numeric care total established."},
+  "proxy_boundaries": [3, 4, 9, 10, 12, 13, 17],
+  "decision": "IMPLEMENT scoped Ziva club evidence in existing maintained model, live routing and portable checklist; preserve all room/price/fee/transfer dates and five other properties. No new URL or new hotel.",
+  "confidence": "High current visible band/inclusion/transcription; unknown actual admission, private care costs, safety, satisfaction or SEO outcomes.",
+  "next_trigger": "Changed official program rules or October18 scoped source review;076 numeric billing, slots, ClubMed bedding and corpus gates remain independent.",
+  "source_proof": "/tmp/ft-imp107-browser/activities-ax.txt, activities-dom.txt, kidz-ax.txt, moods-ax.txt and screenshots; reviewer may inspect saved source proof, not claim independent live source replay."
+}

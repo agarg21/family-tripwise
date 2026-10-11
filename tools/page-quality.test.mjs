@@ -32,6 +32,12 @@ async function historicalRecords() {
   room.value = priorRoom.retained_value;
   room.source_urls = priorRoom.source_urls;
   room.source_refs = priorRoom.source_refs;
+  const priorClubs = saved.tasks.find(t => t.id === "cancun-ziva-ocean-view-double-activities");
+  records.find(r => r.id === "cancun-ziva-ocean-view-double").fields.activities = {
+    value: priorClubs.retained_value, state: "unknown", observed_on: "2026-09-23",
+    evidence_class: priorClubs.evidence_class, evidence_path: priorClubs.evidence_path,
+    source_urls: priorClubs.source_urls, date_basis: "model-baseline", limitation: priorClubs.limitation
+  };
   return records;
 }
 

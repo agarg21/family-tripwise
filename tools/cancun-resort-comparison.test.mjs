@@ -131,7 +131,8 @@ test("unknown transfer and club policy never inherits another property's offer o
     assert.ok(grand.children.every(child => child.status === "no-published-age-match"));
     assert.deepEqual(royalton.children.map(child => child.program), [null, "Kids Club", "Kids Club", null, null]);
     const ziva = records.find(record => record.id === "ziva-ocean-view-double");
-    assert.ok(ziva.children.every(child => child.status === "no-published-age-match"));
+    assert.deepEqual(ziva.children.map(child => child.program), [null, "KidZ Club", "KidZ Club", "@Moods Lounge and Club", "@Moods Lounge and Club"]);
+    assert.deepEqual(ziva.children[2].otherPrograms, ["@Moods Lounge and Club"]);
     assert.equal(ziva.transfers.status, "extra-under-standard-terms");
     assert.equal(ziva.cost.total, null);
   }

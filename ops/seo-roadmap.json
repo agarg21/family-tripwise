@@ -20,11 +20,59 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-107",
+      "title": "Integrate Ziva published club-age rules without promising toddler care",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "selected",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T13:04:28Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html"
+      ],
+      "target_paths": [
+        "docs/research/cancun-ziva-club-age-2026-10-11.json",
+        "src/prototypes/cancun-resort-comparison/data.mjs",
+        "src/prototypes/cancun-resort-comparison/compare.mjs",
+        "src/prototypes/cancun-resort-comparison/render.mjs",
+        "site/cancun/data.mjs",
+        "site/cancun/compare.mjs",
+        "site/cancun/render.mjs",
+        "site/where-to-stay/cancun-family-resorts.html",
+        "site/downloads/cancun-booking-checklist.txt",
+        "tools/cancun-resort-comparison.test.mjs",
+        "tools/cancun-ziva-club-age.test.mjs",
+        "tools/hotel-evidence.mjs",
+        "tools/page-quality.mjs",
+        "tools/page-quality.test.mjs",
+        "tools/weekly-evidence-review.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "FT-RES-083 retained source-qualified unfinished Ziva KidZ4-12 integration; live model still gives no exact band for every child. Verify ordinary permitted named official activities source before adopting current rules. Existing care076 billing/bedding holds remain independent and unchanged; no unchanged provider retry.",
+      "acceptance_criteria": [
+        "Only Ziva club evidence changes after current direct primary verification, with its own source/review dates; age2 outside published club band is not absence of all toddler services, age7 match not confirmed admission or private care.",
+        "Current model, rendered overview, child routing and portable TXT use same retained club fields. No club fee amount invented, no care budget/hourly proration/safety/dropoff/acceptance promise. Other five club rules, all room/price/fee/transfer records and their clocks, existingCSV/grandparentsCSV/096-106 overlays remain byteexact.",
+        "Full/focused native QA, actual1280/390/320 form/boundaries/keyboard/download checks and different independent read-onlyPASS; exact guarded release and productionPages/marker/SEO/affected bytes before delivery."
+      ],
+      "measurement_plan": "Named internal task: two adults with ages2and7 distinguish toddler outside KidZ band from seven-year-old published match, and neither from guaranteed care. Boundary3/4/12/13 tests and scoped freshness/recheck. Proxy only, not human or SEO outcome. Trigger changed official terms or scoped October18 review.",
+      "production_invariant": "Baseline928files/held11 preserved; initial16 paths registered before edits. Scope amendment before maintenance fixes adds tools/hotel-evidence.mjs, tools/page-quality.mjs, tools/page-quality.test.mjs and tools/weekly-evidence-review.test.mjs: exact20. Preserve historical audit fixtures and retained older denied-source links with their prior dates, while current Ziva club catalog uses its independent observed/recheck dates. One existing URL/no metadata or canonical change/no new property. Preserve all unrelated source-price clocks, all prior research and public pages,34URLs. Actualrun13:02:15Z/startdeadline13:47:15Z/fixed sprintOct12 unchanged. Carry106 immutable closure only; no security/paid/account/outreach/indexing/automation changes.",
+      "gsc_evidence_classification": "Reused recentOctober10 API finalizedOctober8 versusOctober9 finalizedOctober7; no current querycohort or CTR diagnosis. July27sitemap stale orientation.",
+      "decision": "Verify then IMPLEMENT unfinished bounded existing-page age decision; preserve076 numeric care/billing/slots and Grand floor-specific gate.",
+      "release_state": "evidence-and-review-pending",
+      "review_receipt": "FT-IMP-107 independent read-only Rawls PASS_WITH_P3/noP0-P2; reviewed manifest d2dea566e0080cd6e798f85a4701b88a7a5a3f4a58acc2aab82ca9120ff38306/all930hashes/exact20HEADdiffs/910unchanged-nonowned/308priorordereditems/heldledgerisolation verified. Initial16 scope amended before maintenance fixes to exact20; this mechanical receipt clarifies prior Exact16 summaries (P3). Independent47 tests/invariants/source-screenshot-and-savedresponsive proof; no independent livebrowser or full-suite claim. Master803full/52focused/47maintenance/state0/GSC89/localSEO0fiveprior/invariants PASS. Actual permittedIAB1280/390/320 ages2and7,10and12overlap,13and17,keyboardoverview/resultdetails/reset6cards18children/TXT and bothCSV exact/nooverflow/errors0/photo1280loaded. LRN204 current Ziva bands/date, not admission/privatecareprice/currentroomquote/humanSEO. CurrentOct11clubs/Oct18recheck; olderSep23FAQ-arrivalconflict retained without renewal. Initial unpublished fullQA failures reconciled through scoped catalog date/interval and historical replay preservation, not weakened denial guards. All other model facts/clocks/room-prices-fees-transfers/CSV/otherpublic/priorresearch/34URLs byteexact; six old dirty docs preserved. Mechanical consensus receipt; guarded release-production pending/fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-106",
       "title": "Join a grandparents-trip party price with explicit Cancun room-linkage limits",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T12:07:24Z",
       "allowed_during_observation": true,
@@ -59,9 +107,15 @@
       "measurement_plan": "LRN203 current official booking observation plus internal proxy. Check whether a parent can distinguish one four-adult two-child dated price from a two-adult price and a requested connection from a named connected category. Not user testing or CTR evidence. Own price recheckOctober18; changed exact category/party/terms or failed task falsifies.066 connection/written acceptance/rest/accessibility and comparable corpus gates remain.",
       "production_invariant": "Removing only the additive106 HTML block restores prior Cancun HTML byte-exact. Existing model/modules/TXT/six-roomCSV/096section/metadata/schema/34canonicalURLs/priorresearch/otherpublic unchanged; new CSV derives only maintained106 record and explicitly preserves every price/party/fee basis. Preserve925baseline/307priororderedroadmapitems/held11-ledger suffix. No denied retry, alternate-origin bypass, booking/payment/accounts/outreach/paid expansion/indexing/analytics/automation mutation. Carry105 immutable closure only.",
       "gsc_evidence_classification": "Reused recent Oct10 API finalizedOct8; priorOct9 finalizedOct7; page/property orientation only, July27 sitemap stale inventory.",
-      "release_state": "review-and-production-pending",
+      "release_state": "released-and-production-verified",
+      "pages_run": 38139153430,
+      "production_verified_at": "2026-10-11T12:26:23Z",
+      "production_verification": "Successful Pages and matching release marker; nine HTTP200 exactassets/moduleJavaScript; productionSEO0errors5prior/allregistered byte invariants. Actual permittedIAB1280/390/320 two plans, keyboard disclosures, three nativeCSVexact, currentform6cards-twochildren-resetthree, nooverflow/errors and loaded1280licensedphoto. Proof /tmp/ft-imp106-browser/production-task.json production-framing.json production-image.json production-context.png. Preserved original source/price/policy clocks and all prior facts.",
       "scope_amendment": "2026-10-11T12:10:21Z before modifying historical generator tests: register five existing tests solely for new nine-output count (eight original outputs plus separate106CSV). Existing price assertions remain; preserve old eight outputs except additiveHTML. Exact15 total paths.",
-      "review_receipt": "FT-IMP-106 independent read-only Galileo PASS/noP0-P3; reviewe57b1123bf9085ce2ae2a5d86abe8fe8c2527b130c8c8b8d67b4546a459bbd4e/inventory75d52276041da9368d12958d876e95a2ec14cbc3d06d66f035af17a5b78f5d1e/all928hashes/exact15/913nonowned/307priorordereditems/registration-heldledger isolation verified. Independent26focused/invariants/state0/GSC89/localSEO0fiveprior/source-and-savedresponsive proof; full796/maintenance47 Master-reported, no independent livebrowser/network/writes. Master796full/26focused/47maintenance/state0/GSC89/SEO0fiveprior/invariants green. Actual permittedIAB1280/390/320 keyboarddetails/nativeCSVexact/sourcehref/current6cards2children-reset3/nooverflow/errors[]; explicitframing proof and1280licensedimage loaded. Initial test assumed literal escaped quotes in current record corrected with synthetic injection coverage; label-name/scroll-framing harness corrected without product or security changes. Initial unpublished max6 cross-property misattribution corrected against Royalton total8/childlimits6vs2 before review. AdditiveHTML removal restoresoldCancun; allsixoldrecords/modules/TXT/sixroomCSV/source clocks/priorresearch/otherpublic/34URLs byteexact. LRN203 current exact4adults-ages3/7 dated Royaltonprice, not connection/acceptance/fullcost/group-rate/savings/humanSEO; Grandgroupunpriced/ordinaryoverlay hold no unchanged retry. Carry105 immutableclosure only. Mechanical consensus receipt; guardedrelease-production pending/fixed sprint unchanged."
+      "review_receipt": "FT-IMP-106 independent read-only Galileo PASS/noP0-P3; reviewe57b1123bf9085ce2ae2a5d86abe8fe8c2527b130c8c8b8d67b4546a459bbd4e/inventory75d52276041da9368d12958d876e95a2ec14cbc3d06d66f035af17a5b78f5d1e/all928hashes/exact15/913nonowned/307priorordereditems/registration-heldledger isolation verified. Independent26focused/invariants/state0/GSC89/localSEO0fiveprior/source-and-savedresponsive proof; full796/maintenance47 Master-reported, no independent livebrowser/network/writes. Master796full/26focused/47maintenance/state0/GSC89/SEO0fiveprior/invariants green. Actual permittedIAB1280/390/320 keyboarddetails/nativeCSVexact/sourcehref/current6cards2children-reset3/nooverflow/errors[]; explicitframing proof and1280licensedimage loaded. Initial test assumed literal escaped quotes in current record corrected with synthetic injection coverage; label-name/scroll-framing harness corrected without product or security changes. Initial unpublished max6 cross-property misattribution corrected against Royalton total8/childlimits6vs2 before review. AdditiveHTML removal restoresoldCancun; allsixoldrecords/modules/TXT/sixroomCSV/source clocks/priorresearch/otherpublic/34URLs byteexact. LRN203 current exact4adults-ages3/7 dated Royaltonprice, not connection/acceptance/fullcost/group-rate/savings/humanSEO; Grandgroupunpriced/ordinaryoverlay hold no unchanged retry. Carry105 immutableclosure only. Mechanical consensus receipt; guardedrelease-production pending/fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-106 release bb6094ec47c08daa92637a46371d77d79d44e961 remote verified 2026-10-11T12:26:23.466Z; main0-0/emptyindex/exact15/all928indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified Cancun grandparents budget: Pages38139153430success/matching release bb6094ec47c08daa92637a46371d77d79d44e961, nineHTTP200exactassets/moduleJavaScript/productionSEO0errors5prior/all registered invariants verified2026-10-11T12:25:38.648Z. Actual permittedIAB1280/390/320 two plans/Grandgroupunpriced/keyboarddisclosures/currentform6cards-twochildren-resetthree/three nativeCSVexact/nooverflow/errors[]/loaded1280licensedphoto, proof /tmp/ft-imp106-browser/production-task.json production-framing.json production-image.json production-context.png. Full796 and independentGalileoPASS. LRN203 current four-adult exact-party price, not fullstaycost/savings/connection/acceptance/humanSEO; Grandgroup quote ordinary loading-overlay hold remains narrow, no unchanged retry. Original Cancun public bytes after block removal/records/downloads/research/source clocks/34URLs and held11 preserved. CSV CRLF exact convention diff-check passed with command-local cr-at-eol setting. One transaction completed; no allsixclusters completion claim. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T12:26:23.488Z",
+      "release_commit": "bb6094ec47c08daa92637a46371d77d79d44e961"
     },
     {
       "id": "FT-IMP-105",
