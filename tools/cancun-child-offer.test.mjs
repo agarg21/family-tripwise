@@ -25,7 +25,7 @@ test("eligibility is not a renewed RETURN5 price, comparable savings or acceptan
   assert.doesNotMatch(section, /USD \d|best value|guaranteed|confirmed booking/);
   assert.equal(cancunEvidence.checkedOn, "2026-09-23");
   assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11");
-  assert.equal(cancunEvidence.records.find(r => r.id === "grand-family-suite").price.observedOn, "2026-09-27");
+  assert.equal(cancunEvidence.records.find(r => r.id === "grand-family-suite").price.observedOn, "2026-10-11");
 });
 
 test("additive section is accessible without JavaScript and remains outside factual schema", () => {

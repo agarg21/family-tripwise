@@ -47,11 +47,11 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   assert.match(checklist, /USD 3,107\.18 total/);
   assert.match(quick, /two adults and children aged 3 and 7/);
   assert.match(quick, /sanitation fee is payable at the resort and excluded/);
-  assert.match(quick, /USD 1,638\/night \(dated family sample\)/);
-  assert.match(quick, /Automatically applied RETURN5 promo/);
+  assert.match(quick, /USD 1,945\/night \(dated family sample\)/);
+  assert.match(quick, /No entered promo code after removing RETURN5/);
   assert.match(quick, /Set both child age bands in the booking selector/);
   assert.match(quick, /one child aged 4-17 and one infant aged 0-3/);
-  assert.match(quick, /USD 8,191 total/);
+  assert.match(quick, /USD 9,723 total/);
   assert.match(quick, /Free cancellation until four days before arrival/);
   assert.equal(cancunEvidence.records.find(record => record.id === "ziva-ocean-view-double")?.price, null);
   assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
@@ -94,9 +94,9 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
   assert.match(csv, /About USD 1,015\/night for two adults/);
   assert.match(csv, /USD 3,107\.18 total/);
   assert.match(csv, /environmental tax; whether this particular displayed total includes it is unconfirmed/);
-  assert.match(csv, /USD 1,638\/night \(dated family sample\)/);
-  assert.match(csv, /Automatically applied RETURN5 promo/);
-  assert.match(csv, /USD 8,191 total/);
+  assert.match(csv, /USD 1,945\/night \(dated family sample\)/);
+  assert.match(csv, /No entered promo code after removing RETURN5/);
+  assert.match(csv, /USD 9,723 total/);
   assert.equal((csv.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
   assert.equal((csv.match(/Request a dated quote for the exact room and party/g) ?? []).length, 1);
   assert.match(csv, /Capacity disputed: 4 versus 5/);
@@ -132,7 +132,11 @@ test("no-JavaScript surface retains six records, conflicts, costs and source lin
   assert.equal((html.match(/class="result-card"/g) ?? []).length, 6);
   assert.match(html, /<form id="family-form" hidden>/);
   assert.match(html, /<noscript>/);
-  for (const source of Object.values(cancunEvidence.sources)) assert.ok(overview.includes(source.replaceAll("&", "&amp;")));
+  const sourceIds = new Set(cancunEvidence.records.flatMap(record => [
+    ...record.room.sourceIds, ...(record.price?.sourceIds ?? []), ...record.clubs.sourceIds,
+    ...record.transfers.sourceIds, ...record.extras.sourceIds
+  ]));
+  for (const id of sourceIds) assert.ok(overview.includes(cancunEvidence.sources[id].replaceAll("&", "&amp;")), id);
   assert.match(overview, /Capacity disputed: 4 versus 5/);
   assert.match(overview, /minimum 3 nights/);
   assert.match(overview, /Round-trip CUN/);

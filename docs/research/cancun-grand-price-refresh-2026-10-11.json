@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-097",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "family_decision": "Dated Grand Family Suite room-and-party budget; distinguish no entered RETURN5 code from absence of a child offer.",
+  "evidence_class": "official-booking-observation",
+  "source_url": "https://bookingsthegrandpr.moonpalace.com/rooms?&skd-total-rooms=1&adult_room1=2&child_room1_age0=1&skd-checkin=2026-10-18&skd-checkout=2026-10-23&skd-language-code=en&",
+  "observation": {
+    "property": "Moon Palace The Grand Cancun",
+    "category": "Grand Family Suite",
+    "rooms": 1,
+    "adults": 2,
+    "children": [
+      {
+        "count": 1,
+        "min": 4,
+        "max": 17
+      },
+      {
+        "count": 1,
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "exact_child_ages_entered": false,
+    "checkin": "2026-10-18",
+    "checkout": "2026-10-23",
+    "nights": 5,
+    "currency": "USD",
+    "unit": "per room per night",
+    "channel": "official direct booking engine",
+    "plan": "All Inclusive BEST FLEXIBLE RATE",
+    "entered_promo_code": null,
+    "average_nightly_display": 1945,
+    "total_display": 9723,
+    "average_is_rounded": true,
+    "displayed_tax_fee_basis": "Taxes and fees included",
+    "separately_payable_local_levy": "unconfirmed",
+    "child_offer_counterfactual": false,
+    "kids_free_benefit_displayed": true
+  },
+  "terms": {
+    "free_cancellation": "Up until four days before arrival",
+    "late_cancellation_modification_no_show": "One-night penalty within three days",
+    "payment": "Full credit-card charge 72 hours before arrival",
+    "early_departure": "One-night penalty; stated remaining-balance reimbursement 14-21 business days",
+    "bank_currency_fees": "Possible bank/card USD charges not established as included",
+    "booking_acceptance": "Not established; no reservation/payment/account/personal-data action"
+  },
+  "conflicts": [
+    "Deep link reopened with older-child counter zero; explicitly set4-17child to1 and retained0-3infant1 before update.",
+    "Remembered-search summary remained2People/1Room while current controls showed2adults/1child/1infant; do not claim exact-party acceptance.",
+    "Grand card remained a spinner after Update while other categories showed prices. Removing RETURN5 through visible UI produced the readable Grand card; no earlier wrong-party amount adopted."
+  ],
+  "excluded_comparisons": [
+    "No-code rate still displays kids-and-teens-free benefit, so not non-offer counterfactual.",
+    "Pay-in-full USD1849/night/9247total has different refund/payment terms and is not the selected flexible sample.",
+    "Crossed-out amounts or RETURN5 differences are not child-offer savings.",
+    "Other categories/party mixes/date suggestions not adopted."
+  ],
+  "preserved": [
+    "September27 Grand RETURN5 sample remains historical in its original research file; not a current quote.",
+    "Five other room records and price dates unchanged; global October11 price checkpoint not extended.",
+    "Policy checkedSeptember23/recheckOctober23 and other source clocks unchanged; October11 eligibility096record unchanged."
+  ],
+  "result": "IMPLEMENT one scoped shared Grand price refresh in existing comparison and downloads; PRESERVE FT-RES-064 comparable child-offer cost gate and existing URL.",
+  "confidence": "High in displayed dated rate/basis/terms, limited by age-band and remembered-summary conflict; no booking acceptance, savings, live inventory guarantee, typical-rate or family-of-five claim.",
+  "next_falsification_trigger": "Grand October18 recheck, changed source/availability/terms, or matched non-child-offer exact-party quote.",
+  "local_proof": {
+    "quote": "/tmp/ft-imp097-browser/quote.png",
+    "quote_ax": "/tmp/ft-imp097-browser/quote-ax.txt",
+    "terms": "/tmp/ft-imp097-browser/terms.png",
+    "terms_ax": "/tmp/ft-imp097-browser/terms-ax.txt"
+  }
+}

@@ -9,7 +9,7 @@ import { hotelEvidence } from "./hotel-evidence.mjs";
 async function historicalRecords() {
   const records = hotelEvidence();
   const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-nyc-price-labels.json", import.meta.url), "utf8"));
-  // Replay the historical checkpoint, not October's newly checked fee policies.
+  // Replay historical prices and policies, not October's new observations.
   for (const name of ["La Jolla Shores Hotel", "Loews Coronado Bay Resort"]) {
     const prior = saved.tasks.find(t => t.hotel === name && t.field === "fees");
     const hotel = records.find(r => r.hotel === name);
@@ -19,6 +19,11 @@ async function historicalRecords() {
   }
   const dana = JSON.parse(await readFile(new URL("../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8"));
   records.find(r => r.hotel === "The Dana on Mission Bay").fields.fees = dana.prior_fee_envelope;
+  const grand = saved.tasks.find(t => t.id === "cancun-grand-family-suite-price");
+  const price = records.find(r => r.id === "cancun-grand-family-suite").fields.price;
+  price.value = grand.retained_value;
+  price.observed_on = "2026-09-27";
+  price.source_urls = grand.source_urls;
   return records;
 }
 

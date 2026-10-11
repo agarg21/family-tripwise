@@ -27,6 +27,7 @@ export const cancunEvidence = {
     G2: "https://thegrand.moonpalace.com/things-to-do/playroom",
     G3: "https://thegrand.moonpalace.com/",
     G4: "https://bookingsthegrandpr.moonpalace.com/rooms?&skd-total-rooms=1&adult_room1=2&child_room1_age0=1&skd-checkin=2026-10-18&skd-checkout=2026-10-23&skd-language-code=en&promocode=RETURN5&",
+    G5: "https://bookingsthegrandpr.moonpalace.com/rooms?&skd-total-rooms=1&adult_room1=2&child_room1_age0=1&skd-checkin=2026-10-18&skd-checkout=2026-10-23&skd-language-code=en&",
     Z1: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun/rooms/2VWD",
     Z2: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun/faqs",
     Z3: "https://www.hyatt.com/ziva/en-US/canif-hyatt-ziva-cancun"
@@ -166,10 +167,10 @@ export const cancunEvidence = {
         checks: ["The named category publishes seven guests. Confirm your exact ages, rate classification, rollaway arrangement and availability; this does not confirm a booking."]
       },
       price: {
-        kind: "dated-single-plan-sample", usdFrom: 1638, usdTo: null,
-        basis: "October 18-23, 2026; one Grand Family Suite, two adults, one child aged 4-17 and one infant aged 0-3, five nights. Set both child age bands in the booking selector; the link may reopen with only the infant. Automatically applied RETURN5 promo; All Inclusive Best Flexible Rate showed USD 8,191 total and USD 1,638 average per room/night. Exact child ages were not entered; one dated plan, not a typical rate or a family-of-five quote.",
+        kind: "dated-single-plan-sample", usdFrom: 1945, usdTo: null,
+        basis: "October 18-23, 2026; one Grand Family Suite, two adults, one child aged 4-17 and one infant aged 0-3, five nights. Set both child age bands in the booking selector; the link may reopen with only the infant. No entered promo code after removing RETURN5; All Inclusive Best Flexible Rate showed USD 9,723 total and USD 1,945 average per room/night (rounded display). The kids-and-teens-free benefit was still displayed: this is not a non-offer rate or proof of savings. Exact child ages were not entered; the remembered-search summary still said two people despite the four-person age-band controls. One dated plan, not confirmed party acceptance, a typical rate or a family-of-five quote.",
         fees: "Booking display says taxes and fees included; any separately payable local levy is unconfirmed. Free cancellation until four days before arrival, then a one-night penalty; full card charge 72 hours before arrival. Recheck terms and exact-party eligibility.",
-        observedOn: "2026-09-27", sourceIds: ["G4", "G1"]
+        observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["G5", "G1"]
       },
       clubs: {
         sourceIds: ["G2"], programs: [],

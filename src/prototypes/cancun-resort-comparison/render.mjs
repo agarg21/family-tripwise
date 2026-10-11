@@ -8,6 +8,7 @@ const capacity = record => record.room.capacityStatus === "disputed"
   ? record.room.capacityConflict ?? "Capacity disputed: 4 versus 5"
   : `Published maximum: ${record.room.maximum}`;
 const money = value => `USD ${Math.round(value).toLocaleString("en-US")}`;
+const priceObservationDates = () => [...new Set(cancunEvidence.records.flatMap(record => record.price ? [record.price.observedOn] : []))].sort().join(", ");
 const priceLabel = price => price.kind === "official-starting"
   ? `From ${money(price.usdFrom)}/night (official start)`
   : price.kind === "derived-two-adult-starting"
@@ -16,10 +17,10 @@ const priceLabel = price => price.kind === "official-starting"
       ? `${money(price.usdFrom)}/night (dated family sample)`
     : `About ${money(price.usdFrom)}/night (Fall into Savings) or ${money(price.usdTo)}/night (Standard Rate)`;
 const priceHtml = record => record.price
-  ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(record.price.basis)}</p><p>${esc(record.price.fees)} Price checked ${esc(record.price.observedOn)}; verify for your family and dates.</p>${sources(record.price.sourceIds, "Price source")}`
+  ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(record.price.basis)}</p><p>${esc(record.price.fees)} Price checked ${esc(record.price.observedOn)}; verify for your family and dates.${record.price.recheckOn ? ` Next price review due ${esc(record.price.recheckOn)}.` : ""}</p>${sources(record.price.sourceIds, "Price source")}`
   : "<p><strong>Exact-room nightly price: not verified.</strong> Request a dated quote for your party.</p>";
 const priceText = record => record.price
-  ? `${priceLabel(record.price)}\nBasis: ${record.price.basis}\nFees: ${record.price.fees}\nPrice checked: ${record.price.observedOn}. Verify for your family and dates.`
+  ? `${priceLabel(record.price)}\nBasis: ${record.price.basis}\nFees: ${record.price.fees}\nPrice checked: ${record.price.observedOn}. Verify for your family and dates.${record.price.recheckOn ? ` Next price review due ${record.price.recheckOn}.` : ""}`
   : "Exact-room nightly price: not verified. Request a dated quote for your party.";
 
 const csvCell = value => {
@@ -36,7 +37,7 @@ export function comparisonCsv() {
     record.price ? priceLabel(record.price) : "Exact-room nightly price: not verified",
     record.price?.basis ?? "Request a dated quote for the exact room and party",
     record.price?.fees ?? "Complete stay cost unknown; request an itemized quote",
-    record.price?.observedOn ?? "", record.price ? cancunEvidence.priceRecheckOn : "",
+    record.price?.observedOn ?? "", record.price ? record.price.recheckOn ?? cancunEvidence.priceRecheckOn : "",
     capacity(record), record.room.beds, record.room.checks.join(" | "), record.extras.checks.join(" | "),
     sourceUrls(record.price?.sourceIds ?? []), sourceUrls(record.room.sourceIds), sourceUrls(record.extras.sourceIds),
     cancunEvidence.checkedOn, cancunEvidence.recheckOn,
@@ -47,7 +48,7 @@ export function comparisonCsv() {
 
 export function renderQuickComparison() {
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
-    <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples checked ${esc(cancunEvidence.lastUpdatedOn)}, refresh due ${esc(cancunEvidence.priceRecheckOn)} · Policy recheck due ${esc(cancunEvidence.recheckOn)}</caption>
+    <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples checked ${esc(priceObservationDates())}, earliest refresh due ${esc(cancunEvidence.priceRecheckOn)} · Policy recheck due ${esc(cancunEvidence.recheckOn)}</caption>
     <thead><tr><th scope="col">Resort and exact room</th><th scope="col">Approx nightly price and booking checks</th><th scope="col">Published capacity and sleeping places</th></tr></thead>
     <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Approx nightly price and booking checks">${priceHtml(record)}${list(record.room.checks)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td><td data-label="Published capacity and sleeping places"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
@@ -58,7 +59,7 @@ export function bookingChecklistText() {
   return `FAMILY TRIPWISE - CANCUN BOOKING CHECKLIST
 https://familytripwise.com/where-to-stay/cancun-family-resorts.html#quick-comparison
 Sources checked: ${cancunEvidence.checkedOn}; recheck due: ${cancunEvidence.recheckOn}.
-Price examples checked: ${cancunEvidence.lastUpdatedOn}; refresh due: ${cancunEvidence.priceRecheckOn}. Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
+Price examples checked: ${priceObservationDates()}; earliest refresh due: ${cancunEvidence.priceRecheckOn}. Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
 
 YOUR BOOKING
 Travel dates: ____________________ Adults: ____ Children's ages at travel: ____________________
