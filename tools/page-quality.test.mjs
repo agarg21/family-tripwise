@@ -19,11 +19,13 @@ async function historicalRecords() {
   }
   const dana = JSON.parse(await readFile(new URL("../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8"));
   records.find(r => r.hotel === "The Dana on Mission Bay").fields.fees = dana.prior_fee_envelope;
-  const grand = saved.tasks.find(t => t.id === "cancun-grand-family-suite-price");
-  const price = records.find(r => r.id === "cancun-grand-family-suite").fields.price;
-  price.value = grand.retained_value;
-  price.observed_on = "2026-09-27";
-  price.source_urls = grand.source_urls;
+  for (const id of ["grand-family-suite", "sunscape-family-junior-suite"]) {
+    const prior = saved.tasks.find(t => t.id === `cancun-${id}-price`);
+    const price = records.find(r => r.id === `cancun-${id}`).fields.price;
+    price.value = prior.retained_value;
+    price.observed_on = "2026-09-27";
+    price.source_urls = prior.source_urls;
+  }
   return records;
 }
 
@@ -72,8 +74,8 @@ test("NYC wording checkpoint preserves every historical field except twelve pric
   assert.deepEqual(saved, current);
 });
 
-test("review triggers distinguish missing, stale, conflicting and unnormalized evidence", () => {
-  const report = qualityReport(hotelEvidence(), { today: "2026-10-12" });
+test("review triggers distinguish missing, stale, conflicting and unnormalized evidence", async () => {
+  const report = qualityReport(await historicalRecords(), { today: "2026-10-12" });
   const sunscape = report.tasks.find((t) => t.id === "cancun-sunscape-family-junior-suite-price");
   assert.equal(sunscape.freshness.state, "review-due");
   assert.ok(sunscape.reasons.includes("structured-room-party-stay-basis-needed"));

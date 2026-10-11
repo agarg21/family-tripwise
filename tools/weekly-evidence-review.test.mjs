@@ -122,6 +122,14 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, /not a non-offer rate or proof of savings/);
       assert.notEqual(record.basis, currentRecord.basis);
       assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis, source_urls: currentRecord.source_urls }, currentRecord);
+    } else if (record.id === "cancun-sunscape-family-junior-suite-price") {
+      assert.equal(record.verified_on, "2026-09-27");
+      assert.equal(currentRecord.verified_on, "2026-10-11");
+      assert.match(record.basis, /amount_from\":330/);
+      assert.match(currentRecord.basis, /amount_from\":311/);
+      assert.match(currentRecord.basis, /Child-offer eligibility conflicts/);
+      assert.notEqual(record.basis, currentRecord.basis);
+      assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis }, currentRecord);
     } else assert.deepEqual(record, currentRecord);
   }
   assert.equal(changed.length, 12);

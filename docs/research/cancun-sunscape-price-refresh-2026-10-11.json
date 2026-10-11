@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-098",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "family_decision": "Exact family-suite budget with a conflicting child-offer travel window and cancellation boundary.",
+  "evidence_class": "official-booking-observation",
+  "source_url": "https://secure.resortsbyhyatt.com/?adult=2&arrive=2026-10-27&chain=17001&child=2&childages=3%7C7&config=PlayaWebsite&currency=USD&depart=2026-10-30&hotel=95607&level=hotel&locale=en-US&productcurrency=USD&rate=BARWEB%2CWEBRCK&rooms=1&theme=PlayaWebsite",
+  "observation": {
+    "property": "Sunscape Cancun Resort & Spa",
+    "category": "Family Junior Suite, King, Bunk and Trundle Bed",
+    "rooms": 1,
+    "adults": 2,
+    "child_ages": [
+      3,
+      7
+    ],
+    "exact_child_ages_entered": true,
+    "checkin": "2026-10-27",
+    "checkout": "2026-10-30",
+    "nights": 3,
+    "currency": "USD",
+    "unit": "per room per night",
+    "channel": "official direct booking engine",
+    "plan": "Sun-Kissed Savings + Kids Stay Free (12 & under)",
+    "membership_required": false,
+    "nightly_display": 311,
+    "total_display": 934,
+    "nightly_rows": [
+      311,
+      311,
+      311
+    ],
+    "nightly_display_is_rounded": true,
+    "displayed_tax_fee_basis": "Including taxes and fees",
+    "separately_payable_local_levy": "unconfirmed; MXN79 per room/night from September27 FAQ observation, not refreshed",
+    "child_offer_counterfactual": false
+  },
+  "terms": {
+    "promotion_booking_through": "2026-11-02",
+    "general_promotion_stays": [
+      "2026-10-01",
+      "2027-12-20"
+    ],
+    "child_benefit_stays": [
+      "2027-04-01",
+      "2027-12-20"
+    ],
+    "child_age_band": [
+      3,
+      12
+    ],
+    "children_per_paid_adult": 1,
+    "maximum_children_per_room": 2,
+    "blackouts": [
+      [
+        "2027-06-17",
+        "2027-08-14"
+      ],
+      [
+        "2027-11-24",
+        "2027-11-27"
+      ]
+    ],
+    "quoted_october_child_offer_eligibility": "unresolved: general and narrower benefit travel clauses conflict",
+    "free_cancellation_summary": "up to 14 days before arrival",
+    "free_cancellation_detail": "15 days prior; 100% penalty14-0days",
+    "payment": "100% charged by resort30days prior toarrival; queried booking already inside30days, timing unknown",
+    "booking_acceptance": "Not established; no reservation/payment/account/personal-data action"
+  },
+  "conflicts": [
+    "General promotion covers October2026 while narrower child-benefit clause startsApril2027; labeled quoted plan is not proof of child-free eligibility or savings.",
+    "Summary/detailed free-cancellation boundary14versus15days; retain both rather than promising14days.",
+    "Three displayed311nightly rows sum933, but displayedtotal934; preserve source rounding.",
+    "Publishedcapacity4versus5 remains unresolved; current sleeps5display does not establish exact-party acceptance."
+  ],
+  "excluded_comparisons": [
+    "Membership-only295/night887total is not selected public nonmember plan.",
+    "Crossed-out346, prior330/990plan, otherroomprices and unmatched plans are not child-offer savings.",
+    "No non-child-offer exact-party counterfactual or full stay total established."
+  ],
+  "preserved": [
+    "September27 Sunscape sample stays historical in its original research file.",
+    "All five other room and price records including Grand097 unchanged; all room/club/transfer/extra fields unchanged.",
+    "Policy checkedSeptember23/recheckOctober23, globalprice checkpointOctober11, page/schemaSeptember27 and child-offer096section unchanged; no new URL."
+  ],
+  "result": "IMPLEMENT the scoped dated Sunscape price and its conflicts in the existing comparison/downloads; PRESERVE comparable savings and childcare acceptance gates.",
+  "confidence": "High for visible exact ages, dates, room, rate and provider conflicts; not eligibility, savings, booking acceptance, live availability or typical price.",
+  "next_falsification_trigger": "October18 recheck, provider correction, changed rate/availability/policy, or matched exact-party non-child-offer quote.",
+  "local_proof": {
+    "guests": "/tmp/ft-imp098-browser/guests.png",
+    "terms": "/tmp/ft-imp098-browser/terms.png",
+    "rate": "/tmp/ft-imp098-browser/rate.png",
+    "expanded_rate_text": "/tmp/ft-imp098-browser/final-rate.txt"
+  }
+}

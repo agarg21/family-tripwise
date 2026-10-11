@@ -36,9 +36,9 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   }
   assert.equal(cancunEvidence.records.filter(record => record.price).length, 5);
   assert.match(quick, /From USD 843\/night \(official start\)/);
-  assert.match(quick, /USD 330\/night \(dated family sample\)/);
-  assert.match(quick, /Non-member Book Early, Save More \+ Kids Stay Free/);
-  assert.match(checklist, /USD 990 displayed total/);
+  assert.match(quick, /USD 311\/night \(dated family sample\)/);
+  assert.match(quick, /Non-member Sun-Kissed Savings \+ Kids Stay Free/);
+  assert.match(checklist, /USD 934 displayed total/);
   assert.match(quick, /whether this particular displayed total includes it is unconfirmed/);
   assert.match(quick, /About USD 1,015\/night for two adults/);
   assert.match(quick, /About USD 1,036\/night \(Fall into Savings\) or USD 1,295\/night \(Standard Rate\)/);
@@ -89,8 +89,8 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
       assert.ok(csv.includes(record.price.observedOn));
     }
   }
-  assert.match(csv, /USD 330\/night \(dated family sample\)/);
-  assert.match(csv, /USD 990 displayed total/);
+  assert.match(csv, /USD 311\/night \(dated family sample\)/);
+  assert.match(csv, /USD 934 displayed total/);
   assert.match(csv, /About USD 1,015\/night for two adults/);
   assert.match(csv, /USD 3,107\.18 total/);
   assert.match(csv, /environmental tax; whether this particular displayed total includes it is unconfirmed/);

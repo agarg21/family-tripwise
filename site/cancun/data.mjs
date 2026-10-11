@@ -71,10 +71,10 @@ export const cancunEvidence = {
         checks: ["One official page lists four guests; another lists two adults and three children. Retain both publications until exact-party acceptance is confirmed."]
       },
       price: {
-        kind: "dated-single-plan-sample", usdFrom: 330, usdTo: null,
-        basis: "October 27-30, 2026; one Family Junior Suite, two adults and children aged 3 and 7, three nights. Non-member Book Early, Save More + Kids Stay Free (12 & under): USD 990 displayed total. One dated plan, not a typical range or guaranteed future price.",
-        fees: "Booking display says taxes and fees included. The property's FAQ separately lists a MXN 79 per-room/night environmental tax; whether this particular displayed total includes it is unconfirmed.",
-        observedOn: "2026-09-27", sourceIds: ["S5", "S4"]
+        kind: "dated-single-plan-sample", usdFrom: 311, usdTo: null,
+        basis: "October 27-30, 2026; one Family Junior Suite, King, Bunk and Trundle Bed, two adults and children aged 3 and 7, three nights. Non-member Sun-Kissed Savings + Kids Stay Free (12 & under): USD 934 displayed total and USD 311 rounded per room/night; the displayed nightly figures do not sum exactly to the total. Child-offer eligibility conflicts: general promotion stays start October 1, 2026, but the narrower child-benefit clause starts April 1, 2027. Do not infer kids-free eligibility or savings for this October stay; confirm the applicable terms. One dated plan, not confirmed booking acceptance, a typical range or guaranteed future price.",
+        fees: "Booking display says taxes and fees included. The property's September 27 FAQ observation separately lists a MXN 79 per-room/night environmental tax; whether this particular displayed total includes it is unconfirmed. Cancellation summary says free up to 14 days before arrival, but detailed terms say free 15 days prior and 100% penalty 14-0 days; confirm the boundary. Full charge is stated 30 days before arrival, but payment timing for a booking already inside that window is unknown.",
+        observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["S5", "S4"]
       },
       clubs: {
         sourceIds: ["S3"],
