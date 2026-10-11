@@ -4,6 +4,22 @@ import { checkedOn, pageUpdatedOn, priceRecheckOn, recheckOn, sources, suites } 
 import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-model.mjs";
 
 export const orlandoPath = "where-to-stay/orlando-family-hotels.html";
+export const orlandoRateCsvPath = "downloads/orlando-ihg-dated-rates.csv";
+export function orlandoRateComparisonCsv(records = suites) {
+  const headings = ["Property", "Exact room", "Party and age basis", "Stay dates", "Nights", "Currency", "Price unit", "Dated public plan", "Estimated stay total", "Derived approximate nightly", "Room subtotal", "Included resort fees", "Included displayed taxes", "Plan terms", "Fee and acceptance limits", "Deposit timing conflict", "Price observed", "Terms checked", "Recheck due", "Dated source", "Live comparison"];
+  const rows = records.flatMap(suite => [suite.priceSample, suite.alternatePriceSample].filter(Boolean).map(rate => [
+    suite.name, rate.room, rate.party, rate.stay, rate.nights, "USD", "one room / per night; stay total for stated nights",
+    rate.plan, rate.estimatedTotal.toFixed(2), (rate.estimatedTotal / rate.nights).toFixed(2), rate.roomSubtotal.toFixed(2),
+    rate.resortFees.toFixed(2), rate.taxes.toFixed(2), rate.terms, suite.priceTerms.limitation, suite.priceTerms.depositConflict,
+    rate.observedOn, suite.priceTerms.checkedOn, suite.priceTerms.recheckOn, sources[rate.source], `https://familytripwise.com/${orlandoPath}#ihg-rate-plans`
+  ]));
+  const cell = value => {
+    const plain = String(value ?? "").replaceAll(/[\r\n\t]+/g, " ");
+    const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
+    return `"${safe.replaceAll('"', '""')}"`;
+  };
+  return [headings, ...rows].map(row => row.map(cell).join(",")).join("\n") + "\n";
+}
 const cite = (key, label) => `<a href="${e(sources[key])}">${label}</a>`;
 const waterPolicy = suite => {
   const policy = suite.waterPolicy;
@@ -15,7 +31,7 @@ const nightlySample = suite => {
   if (!sample) return "A matching room/party/date quote has not been observed.";
   const usd = value => `USD${value.toFixed(2)}`;
   const render = rate => `<p>Observed ${e(rate.observedOn)} for ${e(rate.stay)}, ${e(rate.room)}, ${e(rate.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / rate.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} estimated for ${rate.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.resortFees)} resort fee + ${usd(rate.taxes)} displayed taxes). ${e(rate.terms)} ${cite(rate.source, "Dated IHG rate details")}</p>`;
-  return `<div data-rate-plans="${e(suite.id)}">${[sample, suite.alternatePriceSample].filter(Boolean).map(render).join("")}<p>${e(suite.priceTerms.limitation)}</p><p>${e(suite.priceTerms.depositConflict)} Price terms checked ${e(suite.priceTerms.checkedOn)}; recheck ${e(suite.priceTerms.recheckOn)}.</p></div>`;
+  return `<div id="ihg-rate-plans" data-rate-plans="${e(suite.id)}"><p><a href="../${orlandoRateCsvPath}" download>Download dated IHG rates (CSV)</a></p>${[sample, suite.alternatePriceSample].filter(Boolean).map(render).join("")}<p>${e(suite.priceTerms.limitation)}</p><p>${e(suite.priceTerms.depositConflict)} Price terms checked ${e(suite.priceTerms.checkedOn)}; recheck ${e(suite.priceTerms.recheckOn)}.</p></div>`;
 };
 
 export function orlandoSuitePage() {
@@ -110,5 +126,6 @@ export function orlandoSuitePage() {
 
 export function writeOrlandoSuitePage(writeSite) {
   writeSite(orlandoPath, orlandoSuitePage());
+  writeSite(orlandoRateCsvPath, orlandoRateComparisonCsv());
   for (const name of ["data", "model", "client"]) writeSite(`orlando/orlando-suite-${name}.mjs`, readFileSync(new URL(`./orlando-suite-${name}.mjs`, import.meta.url), "utf8"));
 }

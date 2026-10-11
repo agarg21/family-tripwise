@@ -20,11 +20,49 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-111",
+      "title": "Make Orlando dated suite-rate terms portable",
+      "kind": "implementation",
+      "lane": "existing-page-family-budget",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T17:04:06Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/orlando-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/orlando-suite-page.mjs",
+        "site/where-to-stay/orlando-family-hotels.html",
+        "site/downloads/orlando-ihg-dated-rates.csv",
+        "tools/orlando-rate-download.test.mjs",
+        "docs/research/orlando-rate-download-task-2026-10-11.json",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "October11 live internal task: no download links; two same-room nonmember plans exist only in page paragraphs. Reuse110 BOOKING_CHECK currentOct11/Oct18recheck, no provider retry or price renewal.",
+      "gsc_evidence_classification": "Reused recentOct11API16:19:30.924Z/finalOct9 versusOct10/finalOct8. Orientation only; no querycohort/CTR diagnosis.",
+      "acceptance_criteria": [
+        "One native CSV generated from the same two suite price records, exact dates/category/count-only party/currency-unit/components/derived nightly/terms/fee and deposit conflicts/recheck/source/live links. No manual prices or full-trip-total claim.",
+        "No-JS download alongside rate details; actual1280/390/320 keyboard/download/form-restore/image/nooverflow QA; formula-prefix protection and CSV round-trip tests.",
+        "Focused/full native QA, different read-only PASS or PASS_WITH_P3, exact10 paths guarded commit/push and Pages-marker-productionSEO/exactHTML-CSV verification before delivery."
+      ],
+      "measurement_plan": "LRN208 task-based portability check with reused source-dated booking evidence; internal proxy only, no human or SEO outcome. Falsify failed download/context-loss or changed rate record.",
+      "production_invariant": "Only native download link/ID in existing Orlando price component and new CSV asset. All room-price facts/110terms/108parking/109water/model-client/style/source dates/other public/prior research/src/34canonicalURLs/title-H1-description-schema unchanged. Baseline938/held11 and all prior ordered items intact; carry110 immutable closure only. No new city/indexableURL/paid/provider/account/security/automation mutation.",
+      "decision": "IMPLEMENT bounded portable two-plan task now; broad063 water-corpus/materiality/noexistingfit and exact-age/full-budget gates remain separate.",
+      "release_state": "implementation-review-required",
+      "review_receipt": "FT-IMP-111 different Rawls independent read-only PASS/noP0-P3; manifestef9f8c95f8e702970f35b8fcb28bbec308985cc5cc5b701eedb0663906d39fed/all941hashes/exact10/931unchangednonowned/312priorordereditems/held-ledgerisolation verified. Independent22focused/invariants/state0/GSC90/localSEO0fiveprior and three saved native downloads exactbytes; no independentfull/livebrowser/network/writes/delegation. Master816full/47maintenance/22focused/state0/GSC90/localSEO0fiveprior/invariantsPASS; actualIAB1280/390/320 nativefamily4sixpeople/reset3fivepeople/keyboarddownload2rows21cols/exactbytes/nooverflow/image1280loaded/errors0. At320 immediate reset snapshot raced existing asynchronous handler; fresh settled DOM5people/children3 then scoped download recheckPASS, not security denial. Proof /tmp/ft-imp111-browser/local-{1280,390,320}.json andpng, before-dom.txt. Remove only new link/id restores priorHTML exactly; shared110records/prices/terms/sourceclocks/108parking/109water/model-client-style/allotherpublic-priorresearch-src/meta-schema/34URLs unchanged. LRN208 internal portability task/reusedOct11booking, not source renewal/currentquote/humanSEO/full063qualification. Mechanical consensus only; exact guarded release and production pending, fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-110",
       "title": "Compare dated Orlando suite rates and cancellation terms",
       "kind": "implementation",
       "lane": "existing-page-family-budget",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T16:09:03Z",
       "allowed_during_observation": true,
@@ -61,7 +99,15 @@
       "measurement_plan": "LRN207 current official booking audit plus internal responsive proxy task; high displayed-price confidence, exact-age/full-family-budget unconfirmed. Falsify on changed named rate/terms or Oct18 recheck. No human satisfaction/SEO result claim.",
       "success_signal": "Parents can compare the dated759.40 vs815.65 USD five-night room costs and nonrefundable-vs-deadline terms without adding resort fees twice or treating unentered ages as accepted.",
       "next_gate": "Implement qualified public count-only budget comparison now; exact-age acceptance and broader063 corpus/URL gates remain separate.",
-      "release_state": "implementation-review-required",
+      "release_state": "released-and-production-verified",
+      "completed_on": "2026-10-11T16:24:14Z",
+      "release_commit": "c6fa4cfbbf1ed40ab74e600e1911e91b51b36556",
+      "pages_run": 38154957918,
+      "production_verified_at": "2026-10-11T16:20:38.907Z",
+      "review_outcome": "PASS_WITH_P3",
+      "reviewer": "Galileo",
+      "review_cycles": 1,
+      "release_receipt": "FT-IMP-110 delivered and production-verified: release c6fa4cfbbf1ed40ab74e600e1911e91b51b36556, Pages38154957918 success, matching release marker and four exact HTTP200 assets at2026-10-11T16:20:38.907Z; all registered invariants PASS, production SEO0 errors/five prior warnings. Master813full/47maintenance/19focused/14historical; different Galileo PASS_WITH_P3/noP0-P2; live1280/390/320 comparison-reset/source-keyboard/nooverflow/loadedimage/errors0. Dated queen-bunk suite plans for Nov8-13,2026/2adults3children/count-only:759.40and815.65USD, derived151.88and163.13USD/room/night with displayed resort fee and taxes included; parking extra/cancellation terms preserved. Exact ages/breakfast coverage/deposit timing remain unconfirmed; LRN207 source audit/internal proxy is not human or SEO outcome/full063 qualification. Original held work preserved; reviewed16paths authoritative. Closure helper safely refused when new remote93b604e snapshot arrived; inspected only two GSC paths/no dirty overlap/no site changes and fast-forwarded. Snapshot Oct11 collected16:19:30.924Z/finalOct9,90files privacy-schema validated; orientation only/no CTR or indexing action. Original reviewed release remains ancestor, no material change or metadata-only commit. Mechanical completion only; sprint window unchanged.",
       "review_receipt": "FT-IMP-110 different Galileo independent read-only PASS_WITH_P3/noP0-P2; reviewe24f42ec6159db2187d4bb5a28216657dadad17e7d8b53e754e11de5d6ad3930/inventory937a684550a311ed275b9f94ea9c641039e70914152d63057c604a1e21aae18d/all936hashes/exact16/920nonowned/311priorordereditems/held11-ledger isolation verified. P3 scope-label only: initial12 registration amended to reviewed16 before repairs; exact16paths authoritative. Master813full/47maintenance/19focused/14historical/state0/GSC89/localSEO0fiveprior/invariantsPASS; independent19focused/14historical/invariants/state-GSC-SEO/source-saved screenshots, not independent full/livebrowser/network/writes. ActualIAB1280-390-320 nativechild4sixpeople/reset3fivepeople/bothsourcekeyboard/nooverflow/paragraphwidths/image1280loaded/errorlogs0, proof /tmp/ft-imp110-browser/local-width-plan0-plan1.png and widthJSON. Native source2adults3kids noagefields; two nonmember same-suite Nov8-13 five-night totals759.40and815.65USD/derived151.88and163.13night including54night fee and tax; cancellation/deposit conflict/breakfast coverage/parkingextra/age acceptance unknowns preserved. LRN207 source-dated learning plusinternalproxy, not current quote/human-SEO/full063qualification. Initial full8133historical fixture failures corrected, rerun allgreen; saved records immutable. All nonprice108parking109water/otherpublic-priorresearch-src/meta-schema/34URLs andheld11 intact. Mechanical consensus only; guardedrelease-production pending/fixed sprint unchanged."
     },
     {
