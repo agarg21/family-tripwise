@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-099",
+  "checked_on": "2026-10-11",
+  "recheck_on": "2026-10-18",
+  "family_decision": "Dated exact-room-code two-bedroom budget with an unresolved category/view/bedding continuity check.",
+  "evidence_class": "official-booking-observation",
+  "source_url": "https://book.royaltonresorts.com/?adult=2&arrive=2026-11-09&chain=26025&child=2&childages=3%7C7&currency=USD&depart=2026-11-12&hotel=38092&level=hotel&locale=en-US&productcurrency=USD&room=LXUU2&rooms=1",
+  "observation": {
+    "property": "Royalton Splash Riviera Cancun",
+    "room_code": "LXUU2",
+    "current_category": "Two Bedroom Luxury Junior Suite",
+    "prior_category": "Luxury Two Bedroom Junior Suite",
+    "rooms": 1,
+    "adults": 2,
+    "child_ages": [
+      3,
+      7
+    ],
+    "exact_child_ages_entered": true,
+    "checkin": "2026-11-09",
+    "checkout": "2026-11-12",
+    "nights": 3,
+    "currency": "USD",
+    "unit": "per room per night",
+    "channel": "official direct booking engine",
+    "membership_required": false,
+    "plans": [
+      {
+        "name": "Fall into Savings: Flexible Stay",
+        "nightly_display": 997.7,
+        "total_display": 2993.1,
+        "pre_tax_nightly_rows": [
+          811.14,
+          811.14,
+          811.14
+        ],
+        "pre_tax_total": 2433.42,
+        "room_taxes_fees": 559.68
+      },
+      {
+        "name": "Standard Rate",
+        "nightly_display": 1247.75,
+        "total_display": 3743.25,
+        "room_taxes_fees": null
+      }
+    ],
+    "displayed_tax_fee_basis": "Including taxes and fees; separately payable environmental sanitation excluded",
+    "separately_payable_local_levy": "Current notice has no numeric amount, payable at resort and subject to exchange/fee changes; prior September27 price record's MXN85.40 per room/night not refreshed.",
+    "child_offer_counterfactual": false
+  },
+  "terms": {
+    "applies_to": "Both inspected plans",
+    "payment": "100% charged by resort2days prior toarrival; originalcard/cardholder requiredatarrival",
+    "cancellation": "Full refund outside48hours; first-night penalty within48hours; no modifications within48hours",
+    "no_show": "Two-night penalty",
+    "deadline_timezone": "Not established",
+    "flexible_plan": "New reservations only; no group booking, nontransferable",
+    "booking_acceptance": "Not established; no reservation/account/payment/personal-data action"
+  },
+  "room_conflicts": {
+    "mapping": "Same retained room code LXUU2; title word order differs, category continuity not confirmed",
+    "view": "Earlier recordSunsetView; currentbooking descriptionmangroves",
+    "beds": "Earlier officialrecordtwo kings oroneking/twoqueens; currentcard2Kingbeds, descriptiontwo kings/fourqueens, AdditionalBeds1sofabed/2Queen. Do not add these as guaranteed sleeping places.",
+    "result": "Retain older source-dated roomfields, date older Sunset View check and append October11 unresolved code/title/view/bedding warning withR4source; no room-acceptance assertion."
+  },
+  "excluded_comparisons": [
+    "Transportation plan998.16/night2994.48total not selected; its name is not proof of transfer inclusion for selectedFlexible/Standardplans.",
+    "Financing plan998.19/night2994.57total US-only/nonrefundable is not an equivalent publicflexibleprice.",
+    "Crossedoutamount/SAVE20.04% and loweroldcurrentrate are not child-offer savings, fullstaycost or like-for-like room-layout proof."
+  ],
+  "preserved": [
+    "All five other room and price records includingSunscape098/Grand097 unchanged; Royaltonclubs/transfers/extras remain unchanged.",
+    "Royaltonprimarycategory/beds/capacity/disputedchildlimit and policySeptember23/October23clocks unchanged; only datedconflict check/sourceR4 added.",
+    "All sources/globalpricecheckpointOctober11/latestUpdatedSeptember27/096offer/metadata/schema/34URLs/priorresearch unchanged; originalSeptember27Royaltonsample retained as history."
+  ],
+  "result": "IMPLEMENT current exact-party LXUU2 dated plan sample and explicit unresolved roomcontinuity/fee/refund checks in existingcomparison/downloads; no new URL or savings/ranking claim.",
+  "confidence": "High in displayed exact ages/dates/code/plans/amounts/policy; limited in category/view/bedding continuity, fullcost, inventory and acceptance.",
+  "next_falsification_trigger": "October18 scopedrecheck, changedplans/availability/policies, exactunit writtenconfirmation or same-basis non-child-offer quote.",
+  "local_proof": {
+    "guests": "/tmp/ft-imp099-browser/guests.png",
+    "guests_ax": "/tmp/ft-imp099-browser/guests-ax.txt",
+    "flexible": "/tmp/ft-imp099-browser/flexible.png",
+    "flexible_text": "/tmp/ft-imp099-browser/flexible.txt",
+    "standard": "/tmp/ft-imp099-browser/standard.png",
+    "standard_text": "/tmp/ft-imp099-browser/standard.txt",
+    "rates_ax": "/tmp/ft-imp099-browser/rates-ax.txt"
+  }
+}

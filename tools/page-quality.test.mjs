@@ -19,13 +19,18 @@ async function historicalRecords() {
   }
   const dana = JSON.parse(await readFile(new URL("../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8"));
   records.find(r => r.hotel === "The Dana on Mission Bay").fields.fees = dana.prior_fee_envelope;
-  for (const id of ["grand-family-suite", "sunscape-family-junior-suite"]) {
+  for (const id of ["grand-family-suite", "sunscape-family-junior-suite", "royalton-splash-two-bedroom"]) {
     const prior = saved.tasks.find(t => t.id === `cancun-${id}-price`);
     const price = records.find(r => r.id === `cancun-${id}`).fields.price;
     price.value = prior.retained_value;
     price.observed_on = "2026-09-27";
     price.source_urls = prior.source_urls;
   }
+  const priorRoom = saved.tasks.find(t => t.id === "cancun-royalton-splash-two-bedroom-room");
+  const room = records.find(r => r.id === "cancun-royalton-splash-two-bedroom").fields.room;
+  room.value = priorRoom.retained_value;
+  room.source_urls = priorRoom.source_urls;
+  room.source_refs = priorRoom.source_refs;
   return records;
 }
 

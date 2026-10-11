@@ -121,14 +121,14 @@ export const cancunEvidence = {
         category: "Luxury Two Bedroom Junior Suite", maximum: 8, capacityStatus: "disputed",
         capacityConflict: "Child limit disputed: 6 versus 2; total maximum 8",
         beds: "Two bedrooms; two kings or one king and two queens. The description also mentions a sofa bed.",
-        layoutStatus: "published", sourceIds: ["R1", "R3"],
-        checks: ["The current suites page lists up to six children; the official Spanish factsheet lists two for the matching category. Both list eight guests total. Obtain exact-party confirmation; do not add adult and child limits together.", "This is the Sunset View category, not the similarly named Diamond Club category. Confirm bed allocation and the sofa bed for your party."]
+        layoutStatus: "published", sourceIds: ["R1", "R3", "R4"],
+        checks: ["The current suites page lists up to six children; the official Spanish factsheet lists two for the matching category. Both list eight guests total. Obtain exact-party confirmation; do not add adult and child limits together.", "The September 23 room record describes the non-Diamond Sunset View category. On October 11 the same LXUU2 booking code is titled Two Bedroom Luxury Junior Suite, describes mangrove views, and gives different bed descriptions. The earlier view and bedding are not reconfirmed; ask which exact unit and sleeping places your rate supplies."]
       },
       price: {
-        kind: "dated-rate-plan-sample", usdFrom: 1035.73, usdTo: 1295.28,
-        basis: "November 9-12, 2026; two adults and children aged 3 and 7, one suite, three nights. Fall into Savings: Flexible Stay (USD 3,107.18 total); Standard Rate (USD 3,885.85 total). These are rate-plan examples, not a seasonal range.",
-        fees: "Booking display says taxes and fees included, but the separate MXN 85.40 per-room/night sanitation fee is payable at the resort and excluded.",
-        observedOn: "2026-09-27", sourceIds: ["R4"]
+        kind: "dated-rate-plan-sample", usdFrom: 997.70, usdTo: 1247.75,
+        basis: "November 9-12, 2026; two adults and children aged 3 and 7, one suite, three nights. Booking code LXUU2 is now titled Two Bedroom Luxury Junior Suite; its mangrove-view and bed descriptions differ from the older room record, so category continuity and sleeping layout need confirmation. Fall into Savings: Flexible Stay (USD 997.70 per room/night; USD 2,993.10 total); Standard Rate (USD 1,247.75 per room/night; USD 3,743.25 total). These are public dated rate-plan examples, not a seasonal range, child-offer savings or confirmed booking acceptance.",
+        fees: "Booking display says taxes and fees included, but environmental sanitation is payable at the resort and excluded; the current notice gives no numeric amount. The September 27 price record used MXN 85.40 per-room/night from the earlier suites source; that amount is not refreshed and fees may change. Flexible total includes USD 559.68 room taxes/fees; Standard's modal does not separately itemize them. Both inspected plans say full charge two days before arrival, full refund outside 48 hours, a first-night penalty and no modifications within 48 hours, and a two-night no-show penalty. Confirm exact deadlines, room and final charges.",
+        observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["R4"]
       },
       clubs: {
         sourceIds: ["R2"],

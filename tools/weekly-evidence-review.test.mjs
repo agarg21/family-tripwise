@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { reviewAudit } from "./weekly-evidence-review.mjs";
 import { modelRecords, requireNewOutput } from "./evidence-audit.mjs";
+import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 
 const at = "2026-09-30T12:00:00Z";
 const page = "https://familytripwise.com/example.html";
@@ -130,6 +131,18 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, /Child-offer eligibility conflicts/);
       assert.notEqual(record.basis, currentRecord.basis);
       assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis }, currentRecord);
+    } else if (record.id === "cancun-royalton-splash-two-bedroom-price") {
+      assert.equal(record.verified_on, "2026-09-27");
+      assert.equal(currentRecord.verified_on, "2026-10-11");
+      assert.match(record.basis, /amount_from\":1035.73/);
+      assert.match(currentRecord.basis, /amount_from\":997.7/);
+      assert.match(currentRecord.basis, /category continuity and sleeping layout need confirmation/);
+      assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis }, currentRecord);
+    } else if (record.id === "cancun-royalton-splash-two-bedroom-room") {
+      assert.equal(currentRecord.verified_on, record.verified_on);
+      assert.match(currentRecord.basis, /On October 11 the same LXUU2 booking code/);
+      assert.ok(currentRecord.source_urls.includes(cancunEvidence.sources.R4));
+      assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls }, currentRecord);
     } else assert.deepEqual(record, currentRecord);
   }
   assert.equal(changed.length, 12);

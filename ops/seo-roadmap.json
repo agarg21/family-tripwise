@@ -20,11 +20,55 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-099",
+      "title": "Resolve the due Royalton exact two-bedroom family-budget checkpoint",
+      "kind": "implementation",
+      "lane": "existing-page-user-value",
+      "status": "in_progress",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-11T06:15:03Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/cancun-family-resorts.html"
+      ],
+      "target_paths": [
+        "docs/research/cancun-royalton-price-refresh-2026-10-11.json",
+        "src/prototypes/cancun-resort-comparison/data.mjs",
+        "site/cancun/data.mjs",
+        "site/where-to-stay/cancun-family-resorts.html",
+        "site/downloads/cancun-booking-checklist.txt",
+        "site/downloads/cancun-room-comparison.csv",
+        "tools/cancun-royalton-price-refresh.test.mjs",
+        "tools/cancun-grand-price-refresh.test.mjs",
+        "tools/cancun-resort-page.test.mjs",
+        "tools/page-quality.test.mjs",
+        "tools/weekly-evidence-review.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "DueOctober11 datedRoyalton non-Diamond LuxuryTwoBedroomJuniorSuiteSunsetView November9-12 oneunit/twoadults/ages3-7 September27 Flexible3107.18/Standard3885.85USD totals. Inspect sameofficial exactpartyURL; no known unchanged denial. Sunscape098 andGrand097 justproductionverified, preservecurrentrecords. Staleexactfamily budget is the intervention, notcadence/CTR.",
+      "acceptance_criteria": [
+        "Update onlyRoyalton.price with a supported currentexactcategory/party/stay publicplan; preserveUSDperroom-night/totals/fees/refund/channel/uncertainty and originalhistoricalsample. Never member/otherroom/twoadultonly rate or child-offer-savings inference. No reservation/account/payment/securitychange.",
+        "If currentrate names differ, display maintained exactplan labels rather than stalehardcodednames; source/publicrender own amendment preregistered. Nootherdata/clocks/copy/schema/URLrenewal; historicalQA replays retainedrecords.",
+        "If no supportedreplacement, PRESERVE oldSep27price andname exactevidence/unblock gate; no unchangeddenialretry or alternativeoriginbypass. Full/focusednative/browser1280-390-320/form/download/differentread-onlyPASS/exactguardedrelease and productionwhereapplicable."
+      ],
+      "measurement_plan": "LRN197 boundedofficial datedfamily-budget/plan audit with proxy comparison/download validation, notrealuser/satisfaction/CTR. ReusedOct10finalizedOct8/priorOct9finalOct7 orientationonly; nexttrigger fromsource result.",
+      "production_invariant": "Pre-edit evidence amendment: exact16paths; current plan names unchanged so remove unusedsource/publicrender paths. OnlyRoyalton.price and its datedroom-conflict check/sourceR4 addition maychange. CurrentLXUU2 booking titleTwoBedroomLuxuryJuniorSuite/mangroves/differentbed descriptions mustnot be smoothed into olderSunsetView/bedding; preserve originalroomcategory/maximum/disputedchildlimit/beds anddate earliercheck, addOctober11unresolvedidentity-view-bedding warning. AllotherRoyaltonroomfields/clubs/transfers/extras/other5includingSunscape098-Grand097/sources/policySep23-Oct23/globaldueOct11/lastUpdatedSep27/096section/meta-schema/titleH1/canonical/34URLs/allotherpublic-priorresearch unchanged. HistoricalQA explicitly replays priorRoyaltonroomandprice. Preserve11dirty/900baseline/300prioritems/heldledger suffix; baseline recaptured after registration and immutable098receipt schema correction pages_run fromsuccessfulPages38117364501, not judgmentchange. CancunOct21 narrowstaleprice-trust intervention; actualsecondtransaction clock06:15:03Z/runstart06:01:15Z/startdeadline06:46:15Z/fixedsprintOct12expiry. No newURL/city/account/payment/paid/security/scheduler/indexing/analytics/outreachmutation.",
+      "gsc_evidence_classification": "Reused recentOct10API finalizedOct8/priorOct9finalizedOct7; July27sitemap stale orientationonly.",
+      "decision": "IMPLEMENT the current LXUU2 exact-entered-party dated Flexible997.70night/2993.10total andStandard1247.75night/3743.25total, with explicit title/view/bedding continuity unknown, oldlevy amountnotrenewed and datedrefund/payment terms. OnlyRoyalton.price/dateroom-conflict check/sourceR4; otherfiveinclSunscape098-Grand097 preserved. Currentrecord docs/research/cancun-royalton-price-refresh-2026-10-11.json/LRN197; reviewOct18 orchangedprovider/exactunitconfirmation. No savings/transfer/booking/layout/fullcost guarantee. Focused34green; fullnative/responsive/nativeDownloads/differentreview/production pending.",
+      "release_state": "pending-evidence-review",
+      "review_receipt": "FT-IMP-099 independent Galileo PASS/noP0-P2; read-only/no writes-network-delegation. Reviewed c33b7b305b31e26b30b420d820af6db6ec6f24477520a110f0280f61ccbd9fe5 inventory f818c895d9a35855f0115e155f5f2a171810d390d3136526fab381e544c62f58; 902files/exact16/886nonowned/300prior preserved. Master full760/maintenance46/focused34/state0/GSC89/localSEO0errors5prior; reviewer independently focused34/invariants/state/GSC89/SEO. Source guests/flexible/standard screenshots and text, local1280-390-320 nooverflow/form2children3-7/reset3/sixcards/errorlogs empty, 3native CSV-TXT downloads byteexact /tmp/ft-imp099-browser/local-downloads.json. OnlyRoyalton price/datedroom-conflict check/R4; otherfive includingSunscape098-Grand097/allpolicyclocks/096section/schema/34URLs/historicalrecords retained. Proxy only/no satisfaction-SEO-human claims. Mechanical immutable result only; production pending."
+    },
+    {
       "id": "FT-IMP-098",
       "title": "Resolve the due Sunscape exact-family nightly budget checkpoint",
       "kind": "implementation",
       "lane": "existing-page-user-value",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T06:02:19Z",
       "allowed_during_observation": true,
@@ -60,8 +104,63 @@
       "production_invariant": "Only Sunscape.price/newsource may change; otherfive records inclGrand097/room-club-transfer-extras/policySep23-Oct23/globaldueOct11/latestUpdatedSep27/096eligibility/meta-schema/title-H1/canonical/34URLs/allotherpublic-priorresearch unchanged. CancunOct21 observation window narrow staleprice intervention only. Preserve11dirty/898baseline/299prioritems and heldledger suffix. Sprint fixed Oct12expiry; runstart06:01:15Z/newactionstartdeadline06:46:15Z. No deniedproviderretry/newURL/newcity/security/paid/account/payment/scheduler/indexing/analytics/outreachmutation.",
       "gsc_evidence_classification": "Reused recentOct10API finalizedOct8 and priorOct9finalizedOct7; July27sitemap inventory stale, aggregate orientation only.",
       "decision": "IMPLEMENT only the October11 exact Sunscape public-suite USD311 rounded/room/night and934 three-night sample with generalOctober2026 versus narrowerApril2027 child-benefit conflict,14/15dayrefund boundary/inside30daypayment/oldlevy uncertainty; no child-offer savings or acceptance claim. OnlySunscape.price/fourpublicoutputs; dated source/newfocusedtests/historicalreplay. Current evidence docs/research/cancun-sunscape-price-refresh-2026-10-11.json and LRN196; nextscopedOctober18check. Fullnative/responsive/downloadQA/differentread-onlyreview/production pending.",
-      "release_state": "pending-evidence-review",
-      "review_receipt": "FT-IMP-098 immutable consensus: Ampere independent read-only PASS/noP0-P3; reviewedmanifest87dbf4e7234af74b1d114611c4b8617ca95391baa9dc6a2b097b6c8562d3e357/all900hashes/exact16/299priorrecords/held11isolated. Independent30focused/invariants/source-local screenshots/browserJSON/threeactualdownloadbytesexact. Master756full/46maintenance/30focused/state0/GSC89/localSEO0fiveprior/invariantsgreen. Actual1280-390-320contained/currentSunscape311-934-eligibility/refund/feeconflicts/unchangedGrand097/mixedcaption/formenhanced-sixcards/native2child3-7/reset3/errors[]. Wrappedpointerlink didnotnavigate; sameCUAfocusednativeEnter fragmenttop20 andCSV-TXT downloads succeeded, no unchangedretry/origin-toolbypass/securitydenial. OnlySunscape.price/fourpublicpriceoutputs changed; allother5records/policyclocks/096section/metadata/schema/priorresearch/otherpublic/34URLs preserved. Source observation not child-free eligibility/savings/booking acceptance/typicalrate/humanfit/SEOproof. Onlymechanicalimmutableconsensus appended; guardedpush/Pages-marker-productionSEO/liveinvariants pending; fixed sprint unchanged."
+      "release_state": "released-and-production-verified",
+      "review_receipt": "FT-IMP-098 immutable consensus: Ampere independent read-only PASS/noP0-P3; reviewedmanifest87dbf4e7234af74b1d114611c4b8617ca95391baa9dc6a2b097b6c8562d3e357/all900hashes/exact16/299priorrecords/held11isolated. Independent30focused/invariants/source-local screenshots/browserJSON/threeactualdownloadbytesexact. Master756full/46maintenance/30focused/state0/GSC89/localSEO0fiveprior/invariantsgreen. Actual1280-390-320contained/currentSunscape311-934-eligibility/refund/feeconflicts/unchangedGrand097/mixedcaption/formenhanced-sixcards/native2child3-7/reset3/errors[]. Wrappedpointerlink didnotnavigate; sameCUAfocusednativeEnter fragmenttop20 andCSV-TXT downloads succeeded, no unchangedretry/origin-toolbypass/securitydenial. OnlySunscape.price/fourpublicpriceoutputs changed; allother5records/policyclocks/096section/metadata/schema/priorresearch/otherpublic/34URLs preserved. Source observation not child-free eligibility/savings/booking acceptance/typicalrate/humanfit/SEOproof. Onlymechanicalimmutableconsensus appended; guardedpush/Pages-marker-productionSEO/liveinvariants pending; fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-098 release 853f7ed133929f9b88bcee9debd6471ec1c1c850 remote verified 2026-10-11T06:15:03.693Z; main0-0/emptyindex/exact16/all900indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified2026-10-11T06:14:22.469Z: successfulPages38117364501/matchingmarker/eightCancun200exact/allregisteredinvariants/productionSEO0errors5prior; live1280-390-320contained/Sunscape311-934offer-refundconflicts/nativeEnterfragmenttop20/form2children3-7sixcards/reset3sixcards/errors[]/CSV-TXTnative downloadsbyteexact. LRN196 source audit/proxy validation; child-freeeligibility and same-basis savings/care gates remain unresolved, not acceptance/humanfit/SEOproof. Otherfive recordsinclGrand097/policyclocksunchanged. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T06:15:03.712Z",
+      "release_commit": "853f7ed133929f9b88bcee9debd6471ec1c1c850",
+      "production_verified_at": "2026-10-11T06:14:22.469Z",
+      "pages_run": 38117364501,
+      "production_verification": {
+        "verified_at": "2026-10-11T06:14:22.469Z",
+        "release": {
+          "sha": "853f7ed133929f9b88bcee9debd6471ec1c1c850",
+          "run_id": "38117364501"
+        },
+        "results": [
+          {
+            "url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/downloads/cancun-booking-checklist.txt",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/downloads/cancun-room-comparison.csv",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/data.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/compare.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/render.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/client.mjs",
+            "status": 200,
+            "exact_bytes": true
+          },
+          {
+            "url": "https://familytripwise.com/cancun/share.mjs",
+            "status": 200,
+            "exact_bytes": true
+          }
+        ],
+        "all_registered_invariants": true
+      }
     },
     {
       "id": "FT-IMP-097",

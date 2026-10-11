@@ -41,12 +41,12 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   assert.match(checklist, /USD 934 displayed total/);
   assert.match(quick, /whether this particular displayed total includes it is unconfirmed/);
   assert.match(quick, /About USD 1,015\/night for two adults/);
-  assert.match(quick, /About USD 1,036\/night \(Fall into Savings\) or USD 1,295\/night \(Standard Rate\)/);
+  assert.match(quick, /About USD 998\/night \(Fall into Savings\) or USD 1,248\/night \(Standard Rate\)/);
   assert.match(quick, /USD 507\.50 per-person\/night/);
-  assert.match(quick, /USD 3,107\.18 total/);
-  assert.match(checklist, /USD 3,107\.18 total/);
+  assert.match(quick, /USD 2,993\.10 total/);
+  assert.match(checklist, /USD 2,993\.10 total/);
   assert.match(quick, /two adults and children aged 3 and 7/);
-  assert.match(quick, /sanitation fee is payable at the resort and excluded/);
+  assert.match(quick, /sanitation is payable at the resort and excluded/);
   assert.match(quick, /USD 1,945\/night \(dated family sample\)/);
   assert.match(quick, /No entered promo code after removing RETURN5/);
   assert.match(quick, /Set both child age bands in the booking selector/);
@@ -92,7 +92,7 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
   assert.match(csv, /USD 311\/night \(dated family sample\)/);
   assert.match(csv, /USD 934 displayed total/);
   assert.match(csv, /About USD 1,015\/night for two adults/);
-  assert.match(csv, /USD 3,107\.18 total/);
+  assert.match(csv, /USD 2,993\.10 total/);
   assert.match(csv, /environmental tax; whether this particular displayed total includes it is unconfirmed/);
   assert.match(csv, /USD 1,945\/night \(dated family sample\)/);
   assert.match(csv, /No entered promo code after removing RETURN5/);
