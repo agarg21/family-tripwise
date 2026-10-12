@@ -9,6 +9,11 @@ import { hotelEvidence } from "./hotel-evidence.mjs";
 async function historicalRecords() {
   const records = hotelEvidence();
   const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-nyc-price-labels.json", import.meta.url), "utf8"));
+  const beacon = records.find(record => record.hotel === "Hotel Beacon");
+  for (const name of ["room", "price", "activities"]) {
+    const prior = saved.tasks.find(task => task.hotel === beacon.hotel && task.field === name);
+    Object.assign(beacon.fields[name], { value: prior.retained_value, state: "known", source_urls: prior.source_urls, source_refs: prior.source_refs, limitation: prior.limitation });
+  }
   // Replay the retained September RadioCity envelopes, not October's scoped sample.
   const radio = records.find(record => record.hotel === "Radio City Apartments");
   for (const name of ["room", "price"]) {

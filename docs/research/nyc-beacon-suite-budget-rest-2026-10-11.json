@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "NYC-BEACON-SUITE-2026-10-11",
+  "checked_on": "2026-10-11",
+  "hotel": "Hotel Beacon",
+  "category": "Two Bedroom Suite 800 SQ FT",
+  "rate_plan": "Regular Rates",
+  "evidence_classes": { "price": "BOOKING_CHECK", "room_body": "OFFICIAL_PROPERTY_FACT", "renovation_notice": "OFFICIAL_PROPERTY_FACT" },
+  "currency": "USD",
+  "arrival": "2026-11-08",
+  "departure": "2026-11-13",
+  "nights": 5,
+  "rooms": 1,
+  "adults": 2,
+  "adult_band": "Ages 13 or above",
+  "children": 3,
+  "child_band": "Ages 0-12",
+  "child_ages": [4, 8, 12],
+  "individual_child_ages_entered": true,
+  "party_acceptance": "unresolved",
+  "nightly_room_cents": [219400, 219800, 220600, 221200, 223100],
+  "room_total_cents": 1104100,
+  "displayed_card_nightly_cents": 220900,
+  "displayed_tax_lines": [
+    { "label": "State Tax", "cents": 98044 },
+    { "label": "City Tax", "cents": 64921 },
+    { "label": "Occupancy Tax Two bedroom Suites", "cents": 4000 },
+    { "label": "City Hotel Fee", "cents": 750 }
+  ],
+  "displayed_tax_total_cents": 167715,
+  "displayed_stay_total_cents": 1271815,
+  "nightly_basis": "The card displayed USD2209/night, but its five-night room charge is USD11041. Derived average is USD2208.20/suite/night before tax, not card times nights; the display method causing the difference is not established. Displayed-tax average is USD2543.63; not a typical planning band.",
+  "renovation_notice": {
+    "state": "published-notice",
+    "workdays": "weekdays",
+    "start_local": "09:00",
+    "end_local": "17:00",
+    "end_date": null,
+    "affected_floors": null,
+    "november_dates_confirmed": false,
+    "actual_noise_observed": false,
+    "scope": "Official booking Hotel Alerts announces renovation work on weekdays from9am to5pm. End date, affected floors, selected November dates and actual disruption/noise are not established. Not a closure, completion claim or rest-room guarantee."
+  },
+  "narrative_beds": "Two double beds in one bedroom, king bed in the second bedroom, and queen-size living-room pullout sofa; two bathrooms and kitchenette.",
+  "compact_booking_beds": "4 Double beds",
+  "bed_state": "disputed",
+  "published_capacity": "Up to eight guests, including up to six adults and two children. Do not silently reinterpret the two-child wording as acceptance for the entered three children.",
+  "search_limit": "The same two-adult/three-child result also returns other categories labeled Sleeps4. Returned results and exact ages entered do not prove capacity acceptance. Do not use those other rates for a five-person recommendation.",
+  "optional_rollaway_cents_per_night": 3000,
+  "rollaway_basis": "Official named suite body permits one optional rollaway at USD30/night. Five billed nights would be USD150 before tax. Availability, necessity and inclusion in the displayed total are unverified; do not add automatically.",
+  "facility_fee": "Official room source and booking Hotel Alerts state no facility/resort fee. This does not remove displayed taxes or establish every possible extra.",
+  "guarantee": "Credit-card guarantee required; deposit/hold amount and payment timing are not established. No card or reservation supplied.",
+  "cancellation": "Regular Rates policy says cancel at least two days before arrival by3pm local time to avoid a charge. Amount of a late charge is not stated in the inspected policy; do not infer a one-night penalty.",
+  "sources": [
+    "https://www.beaconhotel.com/rooms/two-bedroom-suite/",
+    "https://be.synxis.com/?Hotel=33053&Chain=1037"
+  ],
+  "workflow": "Followed observed ordinary official room/booking links. Anonymous USD one-room search for November8-13five nights,2adults and3children with individual4/8/12 ages. Regular Rates expanded room cards, exact suite detail modal, Nightly Rates and View More narrative. Cart0; no Select/Book/account/member/finance/contact/guestinformation/payment. Public source URL retains only fixed property/chain identifiers, not party, dates, tracking or session parameters.",
+  "unknowns": [
+    "Three-child acceptance versus six-adult/two-child published wording; bed allocation and compact four-double label conflict.",
+    "Renovation end date, selected dates/floors and actual sound/rest disruption.",
+    "Rollaway availability/necessity/tax/inclusion, guarantee or hold amount, payment timing, late-charge amount and other mandatory-charge completeness.",
+    "Food, transport, parking and optional extras; future rate, policy and inventory."
+  ],
+  "learning": {
+    "family_decision": "Can the named suite budget and hotel-return rest plan be evaluated without mistaking search output for confirmed occupancy or quiet conditions?",
+    "hypothesis": "The retained historical studio range and generic larger-suite description cover the five-person budget/rest decision.",
+    "result": "REJECT. Implement the dated named-suite sample and newly observed weekday renovation notice with unresolved bed/party limits. Neither a returned price nor published bed count proves acceptance.",
+    "confidence": "High observed amounts, input ages and published notice/conflict; limited actual occupancy acceptance, affected dates/floors, noise and additional-charge completeness.",
+    "reusable_lesson": "Exact ages entered are stronger input evidence than counts, but contradictory returned room capacity still blocks acceptance claims. A weekday work notice is a rest-planning constraint without being a guaranteed noise report.",
+    "next_falsification_trigger": "Changed official renovation/bed/party/policy evidence or actual property clarification. Reprice and confirm selected category/party/rest constraints before booking; no unchanged denied-source retry."
+  }
+}

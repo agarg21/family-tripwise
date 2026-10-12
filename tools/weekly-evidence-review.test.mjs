@@ -91,7 +91,17 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   const laterFeeChanges = [];
   for (const record of retainedRecords) {
     const currentRecord = currentRecords.get(record.id);
-    if (record.id === "new-york-city-radio-city-apartments-room" || record.id === "new-york-city-radio-city-apartments-price") {
+    if (["room", "price", "activities"].some(name => record.id === `new-york-city-hotel-beacon-${name}`)) {
+      assert.equal(currentRecord.verified_on, "2026-07-25");
+      assert.equal(record.verified_on, currentRecord.verified_on);
+      assert.ok(currentRecord.source_urls.includes("https://be.synxis.com/?Hotel=33053&Chain=1037"));
+      assert.equal(currentRecord.source_refs.at(-1).checked_on, "2026-10-11");
+      assert.match(currentRecord.source_refs.at(-1).id, /^NYC-BEACON-SUITE-2026-10-11-/);
+      assert.equal(currentRecord.mapping_state, record.id.endsWith("-room") ? "disputed" : record.mapping_state);
+      assert.match(currentRecord.basis, record.id.endsWith("-price") ? /date_specific_samples.*1271815/ : record.id.endsWith("-room") ? /compact_booking_beds.*4 Double beds/ : /renovation|published-notice/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls, source_refs: currentRecord.source_refs, mapping_state: currentRecord.mapping_state }, currentRecord);
+      if (record.id.endsWith("-price")) changed.push(record.id);
+    } else if (record.id === "new-york-city-radio-city-apartments-room" || record.id === "new-york-city-radio-city-apartments-price") {
       assert.equal(currentRecord.verified_on, "2026-07-25");
       assert.equal(record.verified_on, currentRecord.verified_on);
       assert.ok(currentRecord.source_urls.includes("https://radiocityapartments.book.pegsbe.com/"));

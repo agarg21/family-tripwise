@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { parseNamedSourceList, parseRetainedTable, parsePropertyLedger } from "../legacy-hotel-sources.mjs";
 import { radioCityPrice, radioCityPricePath } from "./nyc-radio-city-price.mjs";
+import { beaconSuite, beaconSuitePath } from "./nyc-beacon-suite.mjs";
 
 const root = new URL("../../", import.meta.url);
 const read = (path) => readFileSync(new URL(path, root), "utf8");
@@ -197,6 +198,19 @@ export function normalizeRemainingHotel(hotel, retainedFields, research) {
     result.room.source_refs.push(ref);
     result.room.source_urls = [...new Set([...result.room.source_urls, ...sample.sources])];
     result.room.value.overlays.push({ observed_on: sample.checked_on, source_id: sample.id, record: { room_page_beds: sample.room_page_beds, booking_beds: sample.booking_beds, bed_state: sample.bed_state, published_capacity: sample.published_capacity, checks: sample.unknowns } });
+  }
+  if (city === "new-york-city" && index === 1) {
+    const sample = structuredClone(beaconSuite);
+    for (const name of ["room", "price", "activities"]) {
+      const ref = reference(`${sample.id}-${name.toUpperCase()}`, name === "price" ? "BOOKING_CHECK" : "OFFICIAL_PROPERTY_FACT", sample.checked_on, beaconSuitePath, name === "activities" ? [sample.sources[1]] : sample.sources);
+      result[name].source_refs.push(ref);
+      result[name].source_urls = [...new Set([...result[name].source_urls, ...ref.urls])];
+    }
+    result.price.value.date_specific_samples = [sample];
+    result.price.limitation += " October11 named-suite sample is separate from historical standard-room band; exact entered ages do not resolve contradictory capacity wording, beds or extra-charge completeness.";
+    result.room.state = "disputed";
+    result.room.value.overlays.push({ observed_on: sample.checked_on, source_id: `${sample.id}-ROOM`, record: { narrative_beds: sample.narrative_beds, compact_booking_beds: sample.compact_booking_beds, bed_state: sample.bed_state, published_capacity: sample.published_capacity, party_acceptance: sample.party_acceptance, rollaway_basis: sample.rollaway_basis, checks: sample.unknowns } });
+    result.activities.value.overlays.push({ observed_on: sample.checked_on, source_id: `${sample.id}-ACTIVITIES`, record: sample.renovation_notice });
   }
   if (city === "chicago" && index === 3) {
     result.price.state = "unmapped";
