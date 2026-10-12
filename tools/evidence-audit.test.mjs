@@ -29,6 +29,30 @@ test("normalized hashes ignore scripts; prices are unverified candidates", () =>
   const legacy = { ...r }; delete legacy.price_sha256;
   assert.equal(compareSource(r, legacy).state, "text-unchanged");
 });
+test("authorization-shaped keys reject before collection and after redirects", async () => {
+  const source = "https://be.synxis.com/?Hotel=33053&Chain=1037";
+  const keys = ["authorization", "Authorization", "AUTHORIZATION", "authorisation", "author%69zation", "%61uthorization", "auth%6Frisation", "authorization_code", "sourceAuthorization", "authorization[]"];
+  for (const key of keys) {
+    const url = `${source}&${key}=fixture`;
+    assert.throws(() => permittedUrl(url, ["be.synxis.com"]), { message: "Sensitive source parameters are not permitted" });
+    let calls = 0;
+    const result = await fetchSource(url, ["be.synxis.com"], [], { fetcher: async () => { calls++; throw new Error("Must not fetch sensitive URL"); } });
+    assert.equal(calls, 0);
+    assert.equal(result.state, "unavailable-review");
+    assert.equal(result.error_kind, "fetch-or-policy-error");
+  }
+  assert.throws(() => permittedUrl(`${source}&safe=1&authorization=&authorization=fixture`, ["be.synxis.com"]), /Sensitive source parameters/);
+  for (const location of ["/?authorization=fixture", "https://be.synxis.com/?author%69sation=fixture"]) {
+    const requests = [];
+    const result = await fetchSource(source, ["be.synxis.com"], [], { fetcher: async url => { requests.push(url); return new Response("", { status: 302, headers: { location } }); } });
+    assert.deepEqual(requests, [source]);
+    assert.equal(result.state, "unavailable-review");
+    assert.equal(result.error_kind, "fetch-or-policy-error");
+  }
+  assert.equal(permittedUrl(source, ["be.synxis.com"]), source);
+  assert.equal(permittedUrl(`${source}&currency=USD&rooms=1#details`, ["be.synxis.com"]), `${source}&currency=USD&rooms=1`);
+  for (const key of ["token", "password", "secret", "api_key", "email", "session"]) assert.throws(() => permittedUrl(`${source}&${key}=fixture`, ["be.synxis.com"]));
+});
 test("Finest's observed public booking source uses one exact host without relaxing URL guards", async () => {
   const config = JSON.parse(await readFile(new URL("../ops/evidence-watch.json", import.meta.url), "utf8"));
   const source = JSON.parse(await readFile(new URL("../docs/research/cancun-finest-family-price-2026-10-11.json", import.meta.url), "utf8"));

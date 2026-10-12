@@ -37,7 +37,7 @@ export function ageState(date, interval, today) {
 export function permittedUrl(value, hosts) {
   const url = new URL(value);
   if (url.protocol !== "https:" || url.port || url.username || url.password || !hosts.includes(url.hostname)) throw new Error("Source outside explicit HTTPS host allowlist");
-  if ([...url.searchParams.keys()].some((key) => /token|password|secret|api.?key|email|session/i.test(key))) throw new Error("Sensitive source parameters are not permitted");
+  if ([...url.searchParams.keys()].some((key) => /token|password|secret|api.?key|email|session|authori[sz]ation/i.test(key))) throw new Error("Sensitive source parameters are not permitted");
   url.hash = "";
   return url.href;
 }
