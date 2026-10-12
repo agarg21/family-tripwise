@@ -1261,3 +1261,30 @@ p.contributor-credit {
 #nyc-teen-intro ~ section[aria-labelledby] .comparison-table td:last-child {
   width: 128px;
 }
+
+#san-antonio-hotel-intro {
+  padding: 32px 0;
+  background: var(--surface);
+}
+
+#san-antonio-hotel-intro h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+#san-antonio-hotel-intro + .trust-panel {
+  margin-top: 0;
+  padding: 12px 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+#san-antonio-hotel-intro ~ #hotel-comparison table {
+  min-width: 1080px;
+}
+
+#san-antonio-hotel-intro ~ section details.hotel-card {
+  scroll-margin-top: 80px;
+}

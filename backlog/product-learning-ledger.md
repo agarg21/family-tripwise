@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-225 - Put room and water-play checks before setup - 2026-10-12
+
+FT-IMP-129 [task](../docs/research/san-antonio-glance-first-task-2026-10-12.json). Family decision: compare SanAntonio room function, water-play role, area and historical budget, then reach five-party room/admission/rest limits. Actual production table2623px desktop/3926mobile afterlargeheading/photo/summary/snapshot/sixpicks; firstrows3003/4346. REJECT hypothesis that maintained checks are already quick to scan. IMPLEMENT compactheader/tablefirst/keyboardregion/scoped80px disclosureanchor margin while preserving all routing and12cards.
+
+PAGE_ONLY_PROXY plus directuser direction, not parenttesting/preferences/satisfaction/readingtime or SEOoutcome. High observed geometry/parity confidence, moderate expectedscan benefit. Lesson: expose maintained occupancy/water/rest distinctions before broad setup; original useful triprouting can remain belowcomparison. Falsify lost family5 or pricebasis limits, source-date drift, failed keyboard/mobile/disclosure/image, or contraryactualuser evidence. Full/focused/idempotence/differentstrictread-onlyPASS andverifiedrelease required. NoCSV/newURL/source renewal.
+
 ## LRN-224 - Expose teen activity comparisons and existing budgets - 2026-10-12
 
 FT-IMP-128 [task](../docs/research/nyc-teen-glance-first-task-2026-10-12.json). Family decision: choose a teen interest/area/time-cost anchor and reach age-specific admission, ferry-return or group-payment budgets. Actual production table starts2113px desktop/2791mobile, firstrows2427/3115 afterlargeheader/image/fivepicks. MoMA/Ferry/OMNY budget headings start3838/4535/5289desktop, with no earlylinks. REJECT hypothesis that current comparison and budget paths are glance-first. IMPLEMENT compactheader/tablefirst/3nativebudgetlinks while retaining all ten choices, fivepicks/details, three routes and exact datedbudget blocks.

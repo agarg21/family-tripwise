@@ -1206,23 +1206,31 @@ function sanAntonioFamilyHotelPage() {
   };
 
   const body = `    <main>
-      <section class="page-hero hotel-hero">
+      <section id="san-antonio-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">San Antonio family hotels</p>
-          <h1>Top Family Hotels in San Antonio: 12 Options by Trip Style</h1>
+          <h1>San Antonio Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare twelve San Antonio family hotels and resorts by water features, room function, breakfast or kitchen utility, location, approximate per-room nightly budget, and themes from recent online reviews.</p>
+          <p>Compare 12 hotels by room function, water-play role, area and historical nightly budget.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Information freshness">
         <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Price examples and online-review sources checked:</strong> July 26, 2026.</p>
         <p>USD per-room, per-night planning bands use July 26 public examples, mostly for two adults in a standard room, then widen for room and date variation. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Price the exact room, child ages, dates, fees, pool operations and cancellation terms before choosing.</p>
       </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200" srcset="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200 1200w" sizes="(max-width: 700px) calc(100vw - 36px), 1160px" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="eager" decoding="async" fetchpriority="high">
-          <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</figcaption>
-        </figure>
+      <section id="hotel-comparison" class="band" data-glance-first>
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
+          <p class="review-label">July 26 USD per-room/night planning bands start from public examples, mostly two adults in standard rooms; upper edges are editorial planning ceilings, not observed quotes. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Compare exact room, child ages, dates and full stay total.</p>
+          <div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">
+            <table class="comparison-table hotel-comparison">
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
+              <tbody>
+${rows}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
       <section class="band intro-band">
         <div class="container answer-grid">
@@ -1251,19 +1259,11 @@ function sanAntonioFamilyHotelPage() {
           <article class="quick-pick"><span>Classic Downtown trip</span><strong>Contessa, Hyatt Regency, Marriott Rivercenter, or Omni</strong><p>Compare suite space, indoor-pool access, River Walk location, event noise, and parking rather than treating central hotels as interchangeable.</p></article>
         </div>
       </section>
-      <section class="band">
-        <div class="container">
-          <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="review-label">July 26 USD per-room/night planning bands start from public examples, mostly two adults in standard rooms; upper edges are editorial planning ceilings, not observed quotes. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Compare exact room, child ages, dates and full stay total.</p>
-          <div class="comparison-scroll teen-comparison">
-            <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
-              <tbody>
-${rows}
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200" srcset="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200 1200w" sizes="(max-width: 700px) calc(100vw - 36px), 1160px" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="lazy" decoding="async">
+          <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</figcaption>
+        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>

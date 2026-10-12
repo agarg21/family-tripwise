@@ -1,0 +1,36 @@
+{
+  "action_id":"FT-IMP-129",
+  "checked_on":"2026-10-12",
+  "evidence_class":"PAGE_ONLY_PROXY",
+  "url":"https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+  "task":"Compare room-waterplay roles and reach maintained five-party occupancy/admission/rest limits without treating historical room bands as a family quote.",
+  "before":[
+    {"width":1280,"comparison_top":2622.9140625,"first_row_top":3002.9453125,"visible_words":1658,"first_identity_width":276.6015625,"page_overflow":false},
+    {"width":390,"comparison_top":3925.75,"first_row_top":4345.9453125,"visible_words":1658,"first_identity_width":205.6953125,"page_overflow":false}
+  ],
+  "result":"IMPLEMENT compactheader/tablefirst/keyboardregion/80px card-anchor margin; retain all existing routing and card/price limits.",
+  "local_validation":{
+    "widths":[1280,390,320],
+    "comparison_tops":[432.5,729.6953125,826.890625],
+    "first_row_tops":[741.7265625,1134.921875,1337.7109375],
+    "visible_words_with_cards_closed":1636,
+    "sticky_identity_width":180,
+    "keyboard_scroll_offsets":[0,320,778],
+    "native_card_anchor_checks":36,
+    "native_summary_open_close_checks":36,
+    "card_anchor_top_px":"79.75-80.23",
+    "expanded_jw_wild_oak_source_checks":6,
+    "page_overflow":false,
+    "loaded_image_natural_widths":[1237,377,302],
+    "browser_errors":[],
+    "proof":"/tmp/ft129-browser/local-responsive.json, local-roomchecks.json, local-context.png and local-roomcheck-* screenshots",
+    "limitations":"First comparison rows still below the initial viewport on narrow phones; horizontal scrolling and native disclosure expansion remain. This is task proxy, not actual-parent, provider renewal or SEO-outcome evidence."
+  },
+  "maintained_records":["docs/research/san-antonio-wild-oak-five-person-room-2026-09-30.md","docs/research/san-antonio-room-rest-notice-validation-2026-09-19.md","docs/research/san-antonio-family-hotel-evidence-pack.md"],
+  "preserve":"July26two-adult-standardroom price/review basis, September5 generalfacts, September22JWroom-rest notice andfivewristbands, September30WildOakroom categories; source dates are not renewed.",
+  "confidence":"High observed geometry/parity, moderate expected scan benefit; no actual-user or SEO proof.",
+  "gsc":"ReusedOct11API finalOct9 versusOct10finalOct8 orientation only, not aligned-query/CTR evidence.",
+  "no_source_renewal":true,
+  "no_new_export":true,
+  "falsification":"Lost role/room/water/rest/budget limits, failed responsive/keyboard/disclosure/image, sourceclock drift, contraryactualuser evidence."
+}

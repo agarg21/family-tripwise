@@ -20,10 +20,47 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-129",
+      "title": "Expose San Antonio room and water-play comparison first",
+      "kind": "existing-page-usability",
+      "status": "in-progress",
+      "selected_on": "2026-10-12",
+      "started_at": "2026-10-12T15:03:44Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/family-hotel-pages.mjs",
+        "site/where-to-stay/san-antonio-family-hotels.html",
+        "site/styles.css",
+        "tools/san-antonio-glance-first.test.mjs",
+        "tools/san-antonio-family-hotels-page.test.mjs",
+        "docs/research/san-antonio-glance-first-task-2026-10-12.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "Direct Oct12 user direction: simpler useful pages and glanceable tables, not assumed CSV demand. Actual production1280/390 comparison top2622.91/3925.75px, firstrows3002.95/4345.95,1658visiblewords; largeheader/image/shortanswer/snapshot/sixtripstarts precede room-water checks. Existing WildOak five-guest category versus wateraccess and JWfivewristbands/room-rest limits are maintained, not reverified.",
+      "acceptance_criteria": [
+        "Compact literal San Antonio Family Hotels visibleH1/promise, exactdatedtrust then existing12hotel comparison with accessible keyboard region/stable180px identities. Preserve exactSEOtitle/meta/canonical/FAQ-schema.",
+        "Move complete shortanswer/snapshot/sixtripstarts and licensedphoto after comparison, before unchanged12disclosurecards. Keep12native row-card href/IDs, add scoped80px scrollmargin; verify row anchor then native summaryEnter opens actual checks and closes again.",
+        "Allcardbodies/tablevalues/pricebasis paragraphs remain exact, including Sep30WildOak four-versus-eight guest/sixadult/category/price-water limits and Sep22JWrest notice/fivewristbands. Preserve July26twoadult-standardroom planningbands/uppereditorialceiling/taxfee-parking/date-currency-unit/category-party limits; no new quote or renewal.",
+        "NoCSV/newURL/sourceattempt; all65records/allother33URLs/allCSV/evidence unchanged. Focused/fullnative/idempotence/actual1280-390-320 nooverflow/tablekeyboard/12anchor-and-disclosure/image checks; different strict read-only PASS then exact guardedpush/Pages-marker-productionSEO/affectedbyte verification."
+      ],
+      "measurement_plan": "LRN225 PAGE_ONLY_PROXY scan room/waterplay roles and reach exact occupancy, admission, rest and historical budget limits. Geometry/navigation/retained-fact parity, not realparent preference/satisfaction/readingtime or SEOgain. ReusedOct11APIfinalOct9/priorOct10finalOct8 orientation only, no queryCTR action. Falsify lost limits/routing, failed keyboard/mobile/image, sourceclock drift or contraryactualuser evidence.",
+      "production_invariant": "All12disclosurecard bodies/6tripstarts/shortanswer-snapshot/table values/12href-IDs/sourcefooter/trust/FAQ-schema/headmeta/photoURL-srcset-sizes-attribution exact (lazyallowed); all65records/evidence/other33URLs/allCSV unchanged. CSS oldprefix plus SanAntonio-onlyID-scoped compact/scroll styles; reuse data-glance-first table rules. Preserve984baseline/331priorordereditems/held11; carry128mechanicalclosure only. Actualrun15:01:59Z/11:01:59EDT/startdeadline15:46:59Z/fixed18:29:58Zsprint expiry; no deniedsource retry/security-account-spending-indexing-analytics-scheduler mutation.",
+      "decision": "IMPLEMENT one reproduced existing room/water-play scan defect with original useful routing retained below the table; not new evidence, destination or export demand.",
+      "review_receipt": "FT-IMP-129 independent Godel strict read-only PASS/no P0-P3: reviewed manifest81c6e973860357df5cf10a3ce0e575f3d47ca8394ce7874f247e0f86bbd1f72a; all986candidate/984base hashes-modes/exact11/975nonowned/331prior ordered items/held dirty work/LRN225-only ledger/FT128closure/emptyindex/zero drift verified. Reviewer pure3/3 and read-only invariants PASS; complete Master890/890+48/48/state0/GSC90/localSEO0errors-six priorwarnings inspected. Master QA log sha256ca6da988f389d34cf4294314b7909eb600390eb2b026fe7f35baddfc31b5cc38. Saved responsive/disclosure screenshots inspected; UI-proof HTML/CSS exact. Maintained hotel facts/historical prices/source dates preserved; 36anchors and explicit open-close/6expanded room-limit checks/nooverflow/images passed Master. Mobile rows below initial viewport; links reach closed cards requiring explicit activation. No reviewer writes/network/browser/delegation/git mutation; no independent live/production/parent-testing/SEO-lift claim. Guarded release/production verification pending. Mechanical receipt only."
+    },
+    {
       "id": "FT-IMP-128",
       "title": "Expose NYC teen activities and dated budget comparisons first",
       "kind": "existing-page-usability",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-12",
       "started_at": "2026-10-12T14:03:30Z",
       "allowed_during_observation": true,
@@ -55,7 +92,11 @@
       "measurement_plan": "LRN224 PAGE_ONLY_PROXY current activity/budget discovery task integrateddelivery; compare geometry, native navigation and retainedfacts. Reused Oct11API finalOct9/priorOct10finalOct8 orientation only, not queryCTR/SEOgain/customer preference. Falsify fact/date/party/route loss, failed keyboard/mobile/image, broader output drift, or contrary actual-user evidence.",
       "production_invariant": "Tenrowvalues/5quickpicks/5details/3plans/all3datedbudgetblocks/FAQ-schema/headmetadata/trust/sourcefooter/licensedphotoURL-attribution exact (photo lazy allowed); shared teenpage data only opt-in/header replacements change, all evidence and65hotelrecords/allCSV/other33URLs unchanged. CSS prefix exact plus NYCteen-ID-scoped compact/table styles. Preserve982baseline/330priorordereditems/held11; carry127mechanicalclosure only. Actualrun14:01:55Z/10:01:55EDT/startdeadline14:46:55Z/fixed18:29:58Zsprint expiry; no provider retry/security/account/spending/indexing/analytics/scheduler mutation.",
       "decision": "IMPLEMENT one reproduced existing teen-activity/budget discovery failure under direct table-first direction, not a bulk rewrite or broad report.",
-      "review_receipt": "FT-IMP-128 Banach different independent STRICT READ-ONLY PASS/noP0-P3 forcb2e613eb7ac9843663c8b0732fd3a8e71db884a4616680ffe709ab10a61ed88/all984hashes-modes/exact12/972nonowned/330priorordereditems/held11ledgerisolated/127mechanicalclosure/finaldrift0. Independent3puretests/read-onlyinvariants PASS; Master887full48maintenance/state0/GSC90/localSEO0sixprior completedhash55583c563bfb14ff0b34ca8ff12780b1457a3cdf2c3a25274a838832559f0e36 inspected incl idempotence, not fullsuite repeated. All10rowvalues/5quickpicks/5details/3plans/three datedbudgetblocks/trust-sourceclocks/currentSUMMIT-SPYGAMESpolicy/FAQ-meta-schema/maps/evidence/65hotelrecords/allCSV/other33URLs preserved; CSS previousprefix+NYC-only selectors. Saved local-green-responsive/budget-end proof andscreens inspectedsameHTML-CSS candidate: table384-659-708/firstrows687-1041-1150/2814words/10rows/9budgetEnter~128px/16px navgap/sticky180activity-160budget/128amount/9fullnumerictext-visiblebesidelabelchecks/image1280loaded/nooverflow-errors0. Horizontal scroll/mobilefirstrowsbelowinitialviewport remain, no universalonescreen/realparent-demand-satisfaction-readingtime-SEOgain claim. Earlierframes superseded; dynamic-string helperrefactor blockedbeforeaction/notretried-enabled-bypassed, directexistingdocumentedAPI checks used. No file-temp-generated-cache-report/network-browser-delegation-staging-commit-push writes. ReusedGSCorientation, no newCSV/sourceattempt-renewal-deniedretry/security-account-spending-indexing-analytics-scheduler mutation. Only mechanical consensus appended; guardedpush/Pages-marker-productionSEO/affectedbyte/livebrowser verification required."
+      "review_receipt": "FT-IMP-128 Banach different independent STRICT READ-ONLY PASS/noP0-P3 forcb2e613eb7ac9843663c8b0732fd3a8e71db884a4616680ffe709ab10a61ed88/all984hashes-modes/exact12/972nonowned/330priorordereditems/held11ledgerisolated/127mechanicalclosure/finaldrift0. Independent3puretests/read-onlyinvariants PASS; Master887full48maintenance/state0/GSC90/localSEO0sixprior completedhash55583c563bfb14ff0b34ca8ff12780b1457a3cdf2c3a25274a838832559f0e36 inspected incl idempotence, not fullsuite repeated. All10rowvalues/5quickpicks/5details/3plans/three datedbudgetblocks/trust-sourceclocks/currentSUMMIT-SPYGAMESpolicy/FAQ-meta-schema/maps/evidence/65hotelrecords/allCSV/other33URLs preserved; CSS previousprefix+NYC-only selectors. Saved local-green-responsive/budget-end proof andscreens inspectedsameHTML-CSS candidate: table384-659-708/firstrows687-1041-1150/2814words/10rows/9budgetEnter~128px/16px navgap/sticky180activity-160budget/128amount/9fullnumerictext-visiblebesidelabelchecks/image1280loaded/nooverflow-errors0. Horizontal scroll/mobilefirstrowsbelowinitialviewport remain, no universalonescreen/realparent-demand-satisfaction-readingtime-SEOgain claim. Earlierframes superseded; dynamic-string helperrefactor blockedbeforeaction/notretried-enabled-bypassed, directexistingdocumentedAPI checks used. No file-temp-generated-cache-report/network-browser-delegation-staging-commit-push writes. ReusedGSCorientation, no newCSV/sourceattempt-renewal-deniedretry/security-account-spending-indexing-analytics-scheduler mutation. Only mechanical consensus appended; guardedpush/Pages-marker-productionSEO/affectedbyte/livebrowser verification required.",
+      "release_receipt": "FT-IMP-128 release 8b1e9bd31eb326405942a9d666dfaac532475d2c remote verified 2026-10-12T14:25:44.156Z; main0-0/emptyindex/exact12/all984indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified NYCteen comparison and budget discovery at2026-10-12T14:24:13.976Z: Pages38262507757SUCCESS/head8b1e9bd31eb326405942a9d666dfaac532475d2c/release marker exact; affectedHTML-stylesHTTP200byteexact/allregistered invariants PASS/productionSEO0sixpriorwarnings. Actualproduction1280-390-320 comparison384-659-708px versus2113desktop-2791mobile; firstrows687-1041-1150 notfirstviewportallmobile;2814words vs2820;10rows/sticky180activity/16pxnav-notegap/9nativebudgetEnter~128px/9completeUSDtotaltext checks beside160sticky labels-128amounts/keyboardscrollers/image1280loaded/nooverflow-errors0. Saved /tmp/ft128-browser/production-responsive.json/production-budget-end.json/production-context.png and mobileferry-end320 screenshot visually inspected. Alltenrows/5picks/5details/3plans/all3datedbudgetblocks/FAQ-meta-schema/trust/sourcefooter/currentSUMMIT-SPYGAMESOct10/oldJuly26clocks/evidence/65hotelrecords/allCSV/other33URLs unchanged. LRN224current-page proxy integratedpublicdelivery, GSCreusedorientation, not actualparent preference/satisfaction/readingtime/SEOgain or factrenewal. Master887full48maintenance/BanachSTRICT READ-ONLY PASS; exact12guardedrelease, heldwork preserved. Allpreview/native-invariant-index-guard-push-Pages-production sessions complete/reviewerclosed/viewportreset/verification144closed. Dynamic-string helperrefactor rejection beforeaction not retried or enabled; original documented directUI checks only, no alternatetool-origin-security bypass. No newCSV/sourceattempt-deniedretry/URL/city/account-spending-indexing-analytics-scheduler mutation. Onefinishedtransaction actualrun14:01:55Z/noquota; next bounded existingpage familydecision or maintained exact-room-budget gate, not assumed export demand. Fixedsprint18:29:58Z andglobalcutoff unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-12T14:25:44.182Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "8b1e9bd31eb326405942a9d666dfaac532475d2c"
     },
     {
       "id": "FT-IMP-127",

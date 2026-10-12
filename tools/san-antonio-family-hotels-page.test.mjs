@@ -39,7 +39,7 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   ];
 
   assert.match(html, /<title>Top Family Hotels in San Antonio: 12 Options by Trip Style<\/title>/);
-  assert.match(html, /<h1>Top Family Hotels in San Antonio: 12 Options by Trip Style<\/h1>/);
+  assert.match(html, /<h1>San Antonio Family Hotels<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/san-antonio-family-hotels\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-antonio-family-hotels\.html/g) || []).length, 1);
@@ -49,7 +49,7 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.equal((html.match(/href="#san-antonio-hotel-/g) || []).length, 12);
   assert.equal((html.match(/<h4>Themes in recent online reviews<\/h4>/g) || []).length, 12);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
-  assert.match(html, /<div class="comparison-scroll teen-comparison">\s*<table class="comparison-table hotel-comparison">/);
+  assert.match(html, /<div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">\s*<table class="comparison-table hotel-comparison">/);
   assert.match(html, /Planning USD\/room\/night/);
   assert.match(html, /mostly for two adults in a standard room/);
   assert.match(html, /Tax and mandatory-fee inclusion varies/);
