@@ -20,11 +20,45 @@
   ],
   "items": [
     {
+      "id": "FT-OPS-013",
+      "title": "Close already verified releases in the operator queue",
+      "kind": "operator-state-correction",
+      "lane": "finish-first-release-state",
+      "status": "selected",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-12T00:05:17Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [],
+      "target_paths": [
+        "docs/plan/release-queue-reconciliation-2026-10-11.json",
+        "tools/release-queue-reconciliation.test.mjs",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "tools/content-freshness.mjs",
+        "tools/content-freshness.test.mjs"
+      ],
+      "evidence": "Seven actions have recorded verified October9 releases but stale blocked/selected status. Four public release receipts corroborated by successful matching GitHub Pages runs; three research-only remote receipts and all seven SHA ancestors verified. This is an operator eligibility defect, not missing public delivery or renewed hotel/source facts. Direct user CSV feedback excludes presumed export demand; correcting the queue prevents reselecting already-shipped release work.",
+      "gsc_evidence_classification": "Reused October11 API16:19Z/finalOct9 and priorOctober10/finalOct8; staleJuly27sitemap discovery. Orientation only, no query/CTR/indexing work.",
+      "acceptance_criteria": [
+        "Set completed status and original verified completion timestamps on only075/050/PUB009/PUB010/RES138/139/140; add missing original release identity fields to075/050. Preserve original receipts, decisions, blocker/next-gate historical text, approvals, source dates and all remaining evidence gates. Research-only completion is not public delivery or cleared price/age/corpus gates.",
+        "One immutable hash-based reconciliation record and focused regression tests bind each named item to original receipt/unchanged fields and expected changes. All314otherprioritems/allpriorpublic-src-research-config/held11 unchanged. No new CSV, page, source observation, scheduler, paid, provider, account or security mutation; daily learning alreadycomplete, this administrative source audit not a new family-learning unit.",
+        "Focused/full nativeQA/state/GSC/localSEO/whitespace/exactscope, different independent read-onlyPASS/PASS_WITH_P3 and exact8 guardedmainpush/remoteverification. Docs/tool-only release, no Pages wait or new-public-value claim. Preserve real closure detection while excluding only failed source-recheck dates before/after the original day, including yearless/JSON/mixed true-expiry controls."
+      ],
+      "measurement_plan": "Queue eligibility matches immutable outcomes: zero of seven already-released actions remains selected/blocked, four historical public deliveries distinct from three historical research-only releases. Falsify missing receipt, SHA/chronology/hash mismatch, unrecorded field drift or weakened remaining gates. No productivity claim from counts or extra publication.",
+      "production_invariant": "No deployable code or site bytes change; all34URLs/source-price-fee-party-date facts/exports/observation/human-newcity-provider holds retained. Only eightregisteredpaths, sevenpredeclaredprioritemfieldchanges plus newaction; allother314orderedprioritems unchanged. Original elevenhelddirty paths preserved and119mechanicalclosure carried only. Same existing automation unchanged; sprint endOctober12at18:29:58Z/globalcutoff unchanged.",
+      "decision": "IMPLEMENT verified stale-queue correction; original completed-on datesOctober9, not this run. No new public deliverable; first transaction actualrun00:01:20Z/20:01:20EDT with newactionstartdeadline00:46:20Z inside fixed sprint. Separate pending hotel-family-budget and approval gates preserved.",
+      "scope_amendment": "Before edits: add exactly tools/content-freshness.mjs and its existing tests to repair a reproduced release-gate false positive. At UTC October12, existing public October11recheck-unavailable audit date was misclassified as expired museum operation. Distinguish only date-leading failed source rechecks from actual operational dates; same-sentence true expiries, yearless closures, JSON coverage and prior warnings remain. No timezone change, public rewrite or source renewal. Exact8finalpaths/full native and independent final candidate re-review required.",
+      "review_receipt": "FT-OPS-013 Boole independent read-only PASS_WITH_P3/noP0-P2 for finalPKhj7A freeze e3e9556f85bd1f1942d69a71c96369df9104b394701df8c4e99f2cc2aa95300d/all964hashes/exact8/956nonowned/314otherorderedprioritems/7exactexpected_changes/held11/worktreeguards/finaldrift0 verified. All7localancestorSHA identities and originalreceipt/unchangedfield hashes preserved; fourhistoricalpublic outcomes distinct from threeresearch-only remote completions. Independent52focused/576additionalin-memory adversarial assertions/invariants/state0/GSC90/localSEO0-sixunchanged/whitespace/actualbeforestage0-0. Master849full47maintenance completedlog inspected, not independentlyfull. Tightenedfaileddate-leadingrecheck exception retains preceding real operationalterms/true-mixed-yearless-future-JSON expiry checks and unchanged sourcechecksuffix. Originalpublicwording/sourceclocks/rooms-prices-fees-party-stay-currency-units/allCSVs/ledger/config/scheduler/34URLs unchanged; no source renewal/newexport/newpublicdelivery/newdailyunit. P3 existing operator-state-qa doesnotrecognize completed-production-verified convention; dedicated receipt-bound testscoverthiscorrection, broaderguardcoverage separate. Reviewer no projectwrites/stage/commit/push/network/browser/delegation; live workflowstatus not independentlyrefreshed. Only mechanical immutable consensus; guarded docs-tool-only release/remoteverification required, earliercandidates superseded/notstaged/fixed sprint unchanged."
+    },
+    {
       "id": "FT-IMP-119",
       "title": "Expose Natural History lunch and entry constraints beside the DC rest decision",
       "kind": "implementation",
       "lane": "existing-page-museum-meal-rest-decision",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-11T23:03:37Z",
       "allowed_during_observation": true,
@@ -53,7 +87,11 @@
       "measurement_plan": "LRN216 internal decision task plus reused OFFICIAL_VISITOR_FACT, not human preference or current visitor/source confirmation. Can reader reject indoor packed-lunch/locker assumption and identify dated hours and separate paid costs before choosing room return? Falsify record drift, label/date/uncertainty loss, responsive/source failure or changed permitted official body. No CSV demand claim.",
       "production_invariant": "Only one additive data-museum-visit-context block before existing rest-budget tool; remove it with its newline restores1e0840dc target exactly. Preserve all site/src/priorresearch/config/catalog/price-room-fee-currency-unit-party-stay-sourceclocks/downloads/meta-schema34URLs/960baseline/held11/320priorordereditems. Source task originalOctober3 unchanged, no denied-source retry or new provider/account/security/scheduler/indexing mutation.",
       "decision": "IMPLEMENT maintained partial visitor constraints on existing approved DC lodging decision; no current-source renewal. First transaction actualrun23:01:17Z/startdeadline23:46:17Z; fixed sprint endsOctober12at18:29:58Z unchanged. No assumed-download work.",
-      "review_receipt": "FT-IMP-119 different Ptolemy independent read-only PASS/noP0-P3; manifest53251869210e37ed5e4540a5b8e1fff2657afb4bdcd3c0d6c464979cc42947ff/all962hashes/exact9/953nonowned/320priorordereditems/held11-cleanledgerisolation/worktreeguard/finaldrift0 verified. Independent19focused/invariants/state0/GSC90/localSEO0errors-sixwarnings(fiveprior plus annualDecember25year-unspecified, not confirmed2026operation); Master844full47maintenance completed log inspected, not independentlyfull. Six saved localPNG/three viewport-regressionJSONpairs1280/390/320 inspected: source keyboardfocus/containednooverflow/kitchen1to3/rest420planned30remaining-reset/rail2adultweekend2journeyUSD9-10-reset/image1280x830/errors0. One additive source-derived block removal reproduces1e0840dcHTMLexactly; original rooms-prices-fees-currency-unit-party-stay-sourceclocks/CSV/rail-rest/meta-schema34URLs/otherpublic-src-priorresearch/config preserved. October3 official visitor facts reused, not renewed; singleOctober11web.open403 remains narrow current-confirmation hold/no retry-tool-origin-bypass. Novemberoperation/queues/re-entry/hotelreturn unknown. LRN216 internal answerability task nothuman/SEO or CSV-demand evidence; no new export. Reviewer no writes/network/livebrowser/delegation. Only immutable mechanical consensus receipt; guarded production gates remain/fixed sprint unchanged."
+      "review_receipt": "FT-IMP-119 different Ptolemy independent read-only PASS/noP0-P3; manifest53251869210e37ed5e4540a5b8e1fff2657afb4bdcd3c0d6c464979cc42947ff/all962hashes/exact9/953nonowned/320priorordereditems/held11-cleanledgerisolation/worktreeguard/finaldrift0 verified. Independent19focused/invariants/state0/GSC90/localSEO0errors-sixwarnings(fiveprior plus annualDecember25year-unspecified, not confirmed2026operation); Master844full47maintenance completed log inspected, not independentlyfull. Six saved localPNG/three viewport-regressionJSONpairs1280/390/320 inspected: source keyboardfocus/containednooverflow/kitchen1to3/rest420planned30remaining-reset/rail2adultweekend2journeyUSD9-10-reset/image1280x830/errors0. One additive source-derived block removal reproduces1e0840dcHTMLexactly; original rooms-prices-fees-currency-unit-party-stay-sourceclocks/CSV/rail-rest/meta-schema34URLs/otherpublic-src-priorresearch/config preserved. October3 official visitor facts reused, not renewed; singleOctober11web.open403 remains narrow current-confirmation hold/no retry-tool-origin-bypass. Novemberoperation/queues/re-entry/hotelreturn unknown. LRN216 internal answerability task nothuman/SEO or CSV-demand evidence; no new export. Reviewer no writes/network/livebrowser/delegation. Only immutable mechanical consensus receipt; guarded production gates remain/fixed sprint unchanged.",
+      "release_receipt": "FT-IMP-119 release 017977d927506217418fcdd1bcd486cd7f2bf1fa remote verified 2026-10-11T23:14:41.228Z; main0-0/emptyindex/exact9/all962indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified one compact Natural History lunch/admission/storage/entry context block beside DC rest decision. Pages38183424191success/matching017977d927506217418fcdd1bcd486cd7f2bf1fa/run/eightHTTP200exactassets/JavaScriptMIME/allinvariantsPASS at2026-10-11T23:13:48.902Z/productionSEO0errors-sixwarnings(fiveprior plus annualDecember25year-unspecified). ActualIAB1280/390/320 datedcontext/source keyboardfocus/containednooverflow/kitchen1to3/rest420planned30remaining-reset/rail2adultweekend2journeyUSD9-10-reset/image1280x830/errors0; saved production-widthJSON/PNG/contextPNG/regressionJSON under/tmp/ft-imp119-browser and inspected. Master844full47maintenance19focused/differentPtolemyPASS. LRN216 internal answerability with reusedOctober3official facts, not currentconfirmation/parent-demand/SEOproof; oneOctober11web.open403/no retry or alternateaccess/date renewal. Novemberoperation/queues/re-entry/hotelreturn unknown. Only additive block; oldrooms-prices-fees-currency-unit-party-stay-sourceclocks/allCSVs/rail-rest/meta-schema34URLs/otherpublic-src-priorresearch/config/held11 intact. No new export or report-only substitute. One finish-first transaction completed/no quota; existing exact-room budget and narrow source freshness gates remain for subsequent eligible selection, no unchanged denied retry. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-11T23:14:41.250Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "017977d927506217418fcdd1bcd486cd7f2bf1fa"
     },
     {
       "id": "FT-IMP-118",
@@ -2496,7 +2534,7 @@
       "id": "FT-RES-140",
       "title": "Resolve an independent Puerto Vallarta larger-suite nightly budget",
       "kind": "research",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09T21:16:33Z",
       "parent": "FT-RES-062",
       "target_paths": [
@@ -2527,13 +2565,14 @@
       "review_receipt": "FT-RES-140 Raman01a1228d-8891-71d3-8312-bec9bce8efd8 cycle2 PASS2026-10-09T21:28:06Z/noP0-P3 on33958262f5d1c10c424b1f277ca17fb0f0ce869c3684d125b7efce86185b7d38/all825/exact12. Cycle1P2 projection closed with exact-age and budget/historical CSV regressions; independent44 tests green/legacy4-5 preserved/publicbytes/originalrecords unchanged. Master629full8focused25price-combined34maintenance/state0/GSC88/SEO33canonical36HTML0errors-fiveprior. Consensus research/tooling only, no publicPV launch or final booking acceptance; only mechanical immutable receipts after consensus.",
       "release_receipt": "FT-RES-140 research-data-only release aa66e59ee5016ca0966080fbe39ff921526e66d2 remote verified 2026-10-09T21:31:17.412Z; main0-0/empty index/exact12/all825 index bytes-modes/three Git guards/fresh fetch/sole reviewed range/normal push. Final native QA629/34/state0/GSC88/SEO33canonical36HTML0errors-fiveprior; frozen5806f8a422e7e2dd8ccc14fcbbff7ae015f0b5e75c7403c2587eb8208c84d028; 8 judgment paths identical to cycle2PASS33958262f5d1c10c424b1f277ca17fb0f0ce869c3684d125b7efce86185b7d38. All33 public URLs/site bytes/original069-121-138 and813 nonowned baseline paths preserved. LRN167 exact individually entered family public pre-tax876.40/1176.20USD configuration-night samples; separate unpriced Panoramic kitchen; partial bands, deposits and cancellation conflict preserved. Shared research/tooling only, no public PV launch/Pages claim. Mechanical completion only/no metadata-only commit; sprint expiry unchanged.",
       "release_state": "completed-remote-verified",
-      "release_commit": "aa66e59ee5016ca0966080fbe39ff921526e66d2"
+      "release_commit": "aa66e59ee5016ca0966080fbe39ff921526e66d2",
+      "completed_on": "2026-10-09T21:31:17.412Z"
     },
     {
       "id": "FT-RES-139",
       "title": "Qualify Velas Vallarta larger-suite family budget",
       "kind": "research",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09T20:31:23Z",
       "parent": "FT-RES-062",
       "target_paths": [
@@ -2560,13 +2599,14 @@
       "review_receipt": "FT-RES-139 independent read-only Boyle PASS 2026-10-09T21:13:13Z; frozen aac73319a29ec43f7f3450eb4e69498dcbb9399d222656aefa1e194f8d890436/all821/exact9/HEAD e363222a82fcb72022b0659a623601d4512e956a. No P0-P3. Reviewer5 focused/32 combined/state0 and primary category/kitchen/FAQ/promotion corroboration; Master621 full/34 maintenance/state0/GSC88/SEO33canonical36HTML0errors-fiveprior. Research-only; exact-age acceptance and same-family nightly price remain unknown. All prior roadmap items except declared parent062 preserved; no public changes. After consensus only mechanical review/release evidence appended.",
       "release_receipt": "FT-RES-139 research-data-only release 3879336c6827ea69673dfca04d9ef2fda72f3ff1 remote verified 2026-10-09T21:14:23.527Z; main0-0/empty index/exact9/all821 index bytes-modes/three Git guards/fresh fetch/sole reviewed range/normal push. Boyle01a12281-796e-7610-99b9-36a645154b54 PASS; focused5/combined32/state0 independent; Master621full/34maintenance/state0/GSC88/SEO33canonical36HTML0errors-fiveprior; final full QA repeated green. First and final transaction of actual20:30:36Z run; no further transaction started. All33 public URLs/site bytes/original069-121-138 and812 nonowned baseline paths preserved. LRN166 maintained category/kitchen controls, no sourced family price or public PV launch/Pages claim. Mechanical completion only/no metadata-only commit; sprint expiry unchanged.",
       "release_state": "completed-remote-verified",
-      "release_commit": "3879336c6827ea69673dfca04d9ef2fda72f3ff1"
+      "release_commit": "3879336c6827ea69673dfca04d9ef2fda72f3ff1",
+      "completed_on": "2026-10-09T21:14:23.527Z"
     },
     {
       "id": "FT-RES-138",
       "title": "Resolve Puerto Vallarta five-person Hilton room and price gate",
       "kind": "research",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09T20:16:46Z",
       "parent": "FT-RES-062",
       "target_paths": [
@@ -2593,13 +2633,14 @@
       "review_receipt": "FT-RES-138 independent Dirac01a12258-8af1-77d2-934b-6a85e301c75d finalPASS/noP0-P3 on817file freeze86baa46b16386bd5bd033dfcc6804dc04d49802cdc6c4a2dadd811050b65ef28; exact9scope/all813baseline/808nonowned/public33sitebytes/originalPV records unchanged. Independent117focused-shared/28maintenance-state/state0/GSC88/SEO33canonical36HTML0errors-fiveprior and officialsource/screenshot corroboration. Master616full5focused34maintenance/state0/GSC88/SEO0-fiveprior green. Only immutable fourops consensus receipt; exact research-only push/remoteverification pending, no public PVlaunch or familyquote. Third/finaltransaction/no fourth/sprint expiry unchanged.",
       "release_receipt": "FT-RES-138 maintained-record/research-only release e363222a82fcb72022b0659a623601d4512e956a remoteverified2026-10-09T20:30:00.561Z/main0-0/emptyindex/exact9/all817indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. DiracPASS/native616full5focused34maintenance/state0/GSC88/SEO33canonical36HTML0errors-fiveprior; all33publicURLs/sitebytes/original069-121 and808nonownedbaseline preserved. LRN165 supported REJECT inspectedHilton five-person shortcut; two exclusioncontrols, no familyprice or public PVlaunch/Pages claim. Third/final transaction this run; no fourth action, sprint expiry unchanged. Next independent supported largerPVcity-category/samefamilybudget gate. Mechanical completion only/no metadata-onlycommit.",
       "release_state": "completed-remote-verified",
-      "release_commit": "e363222a82fcb72022b0659a623601d4512e956a"
+      "release_commit": "e363222a82fcb72022b0659a623601d4512e956a",
+      "completed_on": "2026-10-09T20:30:00.561Z"
     },
     {
       "id": "FT-PUB-010",
       "title": "Publish Boston exact family-room and dated-budget comparison",
       "kind": "publication",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09T19:54:07Z",
       "parent": "FT-RES-061",
       "target_paths": [
@@ -2643,7 +2684,8 @@
       "review_receipt": "FT-PUB-010 independent Singer01a1224a-d2be-7c11-a3c4-eb3c61da4b26 finalPASS/noP0-P3 against813file freeze fdb431a6f7845ef4e2589a9a516a23351acafa83796b34b0f63db0b04d8e9288; exact24scope/807baseline789nonownedpreserved/allprior32URLs and unaffectedpublicbytes intact. Independent17focused/state0/GSC88/SEO33-36 and age/history probes; Master611full/13focused/34maintenance/state0/GSC88/localSEO0errors-fiveprior. Final1280-390-320/filter4-1-4/keyboard/actualfullCSV/image/home/nooverflow evidence retained. Original source-price dates and amounts preserved. Only immutable fourops receipt after consensus; exact reviewed push/Pages/marker/exactfiveaffectedresources/productionSEO still required before delivered claim.",
       "production_receipt": "FT-PUB-010 delivered and production-verified2026-10-09T20:15:47.893Z at fa60eace9afbdb72cb8438007ee010fab71843d2; successfulPages37985691177, matchingmarker/exact200HTML-CSV-home-About-sitemap/33canonicals-allprior32preserved/unaffectedpublicbytespreserved/productionSEO0errors-fiveprior. Four conditionalcategories/threeexcludedcontrols/fourpublicplans/sixCSVrows; schema5Parkcounts-ageunknown versus Fenwayenteredages and original source-price dates preserved. Master focused13/full611/maintenance34/state0/GSC88; independent SingerPASS and final1280-390-320/keyboard/filter/actualdownload/image/home/nooverflow proof. No currentquote/fullcost/rest/safety/suitability or user/SEO assurance. PV next approvedcity, not published; sprint expiry unchanged. Mechanical receipt only/no metadata-onlycommit.",
       "release_state": "completed-production-verified",
-      "release_commit": "fa60eace9afbdb72cb8438007ee010fab71843d2"
+      "release_commit": "fa60eace9afbdb72cb8438007ee010fab71843d2",
+      "completed_on": "2026-10-09T20:15:47.893Z"
     },
     {
       "id": "FT-PUB-009",
@@ -2654,7 +2696,7 @@
       "review_receipt": "FT-PUB-009 final independent Faraday01a12223-b3e4-75c3-9054-603a7c6d1e32 cycle2 PASS/noP0-P3 against806file freeze fa70011a267f29932a3e8a6c80f39da2674c1365d72f1cbefd4711bdc4cf0e74. Exact24scope/held work preserved; independent66tests/state/SEO and scope recheck. Master604full/14focused/33maintenance/state0/GSC88/SEO32zeroerrors-fiveprior; corrected1280-390-320/kitchen/fees/actualCSVdownload/image/home/noerrors proof. Original source-price dates retained. Only immutable four-ops receipt after consensus; exact reviewed push/Pages/marker/productionSEO/7affectedresources still required, no delivered claim yet.",
       "title": "Publish Washington DC exact-suite and dated-budget comparison",
       "kind": "publication",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-09",
       "parent_item": "FT-RES-059",
       "target_paths": [
@@ -2696,7 +2738,8 @@
       "production_invariant": "32canonical URLs, all previous31 preserved; home/About/newpage/CSV/client/CSS/sitemap200, selfcanonical/indexable schema, exact HTML/download source parity and Pages marker/productionSEO. Preserve all800baseline files outside amended exact24paths and held Chicago/Cancun/Orlando work. No scheduler/paid/security/indexing/account expansion.",
       "decision": "IMPLEMENT now: one focused DC comparison under fresh named approval; source dates and amounts not renewed by publication. Boston/PV approved candidates, not live launches.",
       "next_gate": "Implement, focused/full/browser QA and separate read-only consensus; exact clean reviewed release and production verification before delivery claim.",
-      "evidence_record": "docs/plan/washington-dc-family-hotels-launch-2026-10-09.md"
+      "evidence_record": "docs/plan/washington-dc-family-hotels-launch-2026-10-09.md",
+      "completed_on": "2026-10-09T19:38:16.399Z"
     },
     {
       "id": "FT-OPS-012",
@@ -2813,7 +2856,7 @@
       "id": "FT-IMP-075",
       "title": "Integrate reconciled San Diego parking fees into the public page candidate",
       "kind": "improvement",
-      "status": "blocked",
+      "status": "completed",
       "selected_on": "2026-10-07",
       "priority": 1,
       "target_paths": [
@@ -2852,7 +2895,11 @@
       "qa_receipt": "Master599full/22focused/33maintenance passed; state0/GSC88/localSEO31canonical34HTML0errors-fiveprior/whitespace. Same18path isolated delta,264prior released items and800preaction outside-owned files preserved; held Chicago suffix intact/ownedSDprefix parity/latestDana envelope retained. Initial editorial-length failure fixed by concise fee/source prose; existing3200word ceiling unchanged, final3198words. All sessionscomplete; browser and production not checked.",
       "review_receipt": "FT-IMP-075 delivered and production-verified2026-10-09T19:11:25.339Z at c5e9c451c48c809c9df898b125163f7e26bed182, successfulPages37978385914/matchingmarker/200exactliveHTML/threefeeNotes/12cards/selfcanonicalindexable/productionSEO0errors-fiveprior/main0-0/emptyindex. Poincare finalPASS/native599/12/33/responsive1280-390-320. Initial production assertion counted exact class incorrectly; checker repaired to exact article token, live bytes already matched, no site fix/rollback/transient retry. Original held work preserved; no metadata-onlycommit. City authorization received, no newcity publicpage yet.",
       "resumed_on": "2026-10-09",
-      "resumed_at": "2026-10-09T18:42:46Z"
+      "resumed_at": "2026-10-09T18:42:46Z",
+      "completed_on": "2026-10-09T19:11:25.339Z",
+      "release_commit": "c5e9c451c48c809c9df898b125163f7e26bed182",
+      "release_state": "completed-production-verified",
+      "release_verified_at": "2026-10-09T19:11:25.339Z"
     },
     {
       "id": "FT-MAINT-010",
@@ -6660,7 +6707,7 @@
       "resumed_on": "2026-10-09T19:43:16Z",
       "title": "Make Chicago hotel and historical budget comparison shareable",
       "kind": "improvement",
-      "status": "blocked",
+      "status": "completed",
       "selected_on": "2026-09-30",
       "target_paths": [
         "tools/page-generation/family-hotel-pages.mjs",
@@ -6697,7 +6744,11 @@
         "owner": "Normal user/app browser access resolution",
         "unblock": "Permitted documented preview origin accessible through normal checks; restart snapshot after generation, no alternate-surface bypass",
         "next_check": "Only after permission/environment change, not unchanged automatic retries"
-      }
+      },
+      "completed_on": "2026-10-09T19:53:39.321Z",
+      "release_commit": "6233ef1741f66cbdbcc39b701f8e96a1fe1e81c4",
+      "release_state": "completed-production-verified",
+      "release_verified_at": "2026-10-09T19:53:39.321Z"
     },
     {
       "id": "FT-RES-069",

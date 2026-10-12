@@ -8,6 +8,36 @@ import { findExpiredOperationalNotices, findYearlessOperationalNotices } from ".
 
 const now = new Date("2026-07-28T12:00:00Z");
 
+test("date-leading failed source rechecks are inspection dates, not operating expiries", () => {
+  for (const note of ["recheck unavailable", "source recheck failed", "recheck was blocked"]) {
+    for (const date of ["2026-10-11T23:59:59Z", "2026-10-12T00:00:00Z", "2027-01-01T12:00:00Z"]) {
+      const html = `<p>October 11, 2026 ${note}; these facts have not been renewed.</p>`;
+      assert.deepEqual(findExpiredOperationalNotices(html, { now: new Date(date) }), []);
+    }
+    assert.deepEqual(findYearlessOperationalNotices(`<p>October 11 ${note}; these facts have not been renewed.</p>`), []);
+  }
+  const dc = readFileSync(new URL("../site/where-to-stay/washington-dc-family-hotels.html", import.meta.url), "utf8");
+  assert.deepEqual(findExpiredOperationalNotices(dc, { now: new Date("2026-10-12T00:00:00Z") }), []);
+  assert.deepEqual(findYearlessOperationalNotices(dc).map(notice => notice.dateText), ["December 25"]);
+});
+
+test("failed recheck dates cannot hide actual same-sentence operating limits", () => {
+  const after = new Date("2026-10-12T12:00:00Z");
+  for (const html of [
+    "<p>October 11, 2026 rooms unavailable.</p>",
+    "<p>Rooms unavailable through October 11, 2026.</p>",
+    "<p>Rooms unavailable through October 11, 2026 recheck unavailable.</p>",
+    "<p>October 10, 2026 recheck unavailable; the pool closed October 11, 2026.</p>",
+    '<script type="application/json">{"note":"October 10, 2026 source recheck failed; pool closed October 11, 2026."}</script>'
+  ]) {
+    assert.deepEqual(findExpiredOperationalNotices(html, { now: after }).map(notice => notice.endDate), ["2026-10-11"]);
+  }
+  assert.deepEqual(findYearlessOperationalNotices("<p>October 10 recheck unavailable; pool closed October 11.</p>").map(notice => notice.dateText), ["October 11"]);
+  assert.deepEqual(findYearlessOperationalNotices("<p>Rooms unavailable through October 11.</p>").map(notice => notice.dateText), ["October 11"]);
+  assert.deepEqual(findYearlessOperationalNotices("<p>Rooms unavailable through October 11 recheck unavailable.</p>").map(notice => notice.dateText), ["October 11"]);
+  assert.deepEqual(findExpiredOperationalNotices("<p>October 10, 2026 recheck unavailable; pool closed October 20, 2026.</p>", { now: after }), []);
+});
+
 test("flags an expired dated closure", () => {
   const html = "<p>The museum announced a July 21-26, 2026 closure.</p>";
   const notices = findExpiredOperationalNotices(html, { now });

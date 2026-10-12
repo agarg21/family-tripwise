@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "action": "FT-OPS-013",
+  "checked_on": "2026-10-11",
+  "checked_at": "2026-10-12T00:05:17Z",
+  "timezone": "America/New_York",
+  "evidence_class": "IMMUTABLE_RELEASE_RECEIPT_AND_GIT_ANCESTRY_AUDIT",
+  "baseline_head": "017977d927506217418fcdd1bcd486cd7f2bf1fa",
+  "prior_item_count": 321,
+  "daily_learning_claimed": false,
+  "new_public_delivery": false,
+  "source_facts_renewed": false,
+  "new_exports": false,
+  "scheduler_changed": false,
+  "public_workflow_corroboration": [
+    {
+      "id": "FT-IMP-075",
+      "run_id": 37978385914,
+      "head_sha": "c5e9c451c48c809c9df898b125163f7e26bed182",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": "FT-IMP-050",
+      "run_id": 37983214596,
+      "head_sha": "6233ef1741f66cbdbcc39b701f8e96a1fe1e81c4",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": "FT-PUB-009",
+      "run_id": 37981391338,
+      "head_sha": "37a68913d02a160956172eea019e5646132573ca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": "FT-PUB-010",
+      "run_id": 37985691177,
+      "head_sha": "fa60eace9afbdb72cb8438007ee010fab71843d2",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "records": [
+    {
+      "id": "FT-IMP-075",
+      "prior_status": "blocked",
+      "release_commit": "c5e9c451c48c809c9df898b125163f7e26bed182",
+      "verified_at": "2026-10-09T19:11:25.339Z",
+      "evidence_kind": "PUBLIC_PRODUCTION_VERIFIED",
+      "receipt_field": "review_receipt",
+      "receipt_sha256": "6bea80fd1b1e1e0484a3d9584c2f7931c83de1ac905050a5a375e7baa5a1af91",
+      "unchanged_fields_sha256": "7cbdc068d10b23e42c9c7fbeaaf625a6b589ea56d02fe8f35fcb6ea700bc3113",
+      "expected_changes": {
+        "status": "completed",
+        "completed_on": "2026-10-09T19:11:25.339Z",
+        "release_commit": "c5e9c451c48c809c9df898b125163f7e26bed182",
+        "release_state": "completed-production-verified",
+        "release_verified_at": "2026-10-09T19:11:25.339Z"
+      }
+    },
+    {
+      "id": "FT-IMP-050",
+      "prior_status": "blocked",
+      "release_commit": "6233ef1741f66cbdbcc39b701f8e96a1fe1e81c4",
+      "verified_at": "2026-10-09T19:53:39.321Z",
+      "evidence_kind": "PUBLIC_PRODUCTION_VERIFIED",
+      "receipt_field": "production_receipt",
+      "receipt_sha256": "9db3389515de86588df2fc3a41ef61e38c9d2b92aaea6e9fc4dd53d13735fc87",
+      "unchanged_fields_sha256": "c6ce77f9905689e93397667b69e99866b2641f2dde65a85ecab055704a3c2291",
+      "expected_changes": {
+        "status": "completed",
+        "completed_on": "2026-10-09T19:53:39.321Z",
+        "release_commit": "6233ef1741f66cbdbcc39b701f8e96a1fe1e81c4",
+        "release_state": "completed-production-verified",
+        "release_verified_at": "2026-10-09T19:53:39.321Z"
+      }
+    },
+    {
+      "id": "FT-PUB-009",
+      "prior_status": "selected",
+      "release_commit": "37a68913d02a160956172eea019e5646132573ca",
+      "verified_at": "2026-10-09T19:38:16.399Z",
+      "evidence_kind": "PUBLIC_PRODUCTION_VERIFIED",
+      "receipt_field": "production_receipt",
+      "receipt_sha256": "f29e25310c890ed77489c6711bf0530dd530b213174dc9fc458936cd391302a3",
+      "unchanged_fields_sha256": "81f211c83085b3a800bda3346bcb851dae7589c048910e970097b5a3ed1122a1",
+      "expected_changes": {
+        "status": "completed",
+        "completed_on": "2026-10-09T19:38:16.399Z"
+      }
+    },
+    {
+      "id": "FT-PUB-010",
+      "prior_status": "selected",
+      "release_commit": "fa60eace9afbdb72cb8438007ee010fab71843d2",
+      "verified_at": "2026-10-09T20:15:47.893Z",
+      "evidence_kind": "PUBLIC_PRODUCTION_VERIFIED",
+      "receipt_field": "production_receipt",
+      "receipt_sha256": "34d6d9e96f05dc7748db74d45b23b5d3fa1920c4eabea0eb15ed787750206c24",
+      "unchanged_fields_sha256": "eaa9093d5b00a22db1f1fa18abf36869b3c6fa2c033f53061625c293cbb2b96b",
+      "expected_changes": {
+        "status": "completed",
+        "completed_on": "2026-10-09T20:15:47.893Z"
+      }
+    },
+    {
+      "id": "FT-RES-138",
+      "prior_status": "selected",
+      "release_commit": "e363222a82fcb72022b0659a623601d4512e956a",
+      "verified_at": "2026-10-09T20:30:00.561Z",
+      "evidence_kind": "RESEARCH_DATA_REMOTE_VERIFIED_NOT_PUBLIC_DELIVERY",
+      "receipt_field": "release_receipt",
+      "receipt_sha256": "e81346ddab89854986311437148e3780f7134e2307d666e4e0ea49047e64148c",
+      "unchanged_fields_sha256": "c2c2bb26295fae5160a3a25453cf7fd0d72349ece9d80689452ab01432eb4f8a",
+      "expected_changes": {
+        "status": "completed",
+        "completed_on": "2026-10-09T20:30:00.561Z"
+      }
+    },
+    {
+      "id": "FT-RES-139",
+      "prior_status": "selected",
+      "release_commit": "3879336c6827ea69673dfca04d9ef2fda72f3ff1",
+      "verified_at": "2026-10-09T21:14:23.527Z",
+      "evidence_kind": "RESEARCH_DATA_REMOTE_VERIFIED_NOT_PUBLIC_DELIVERY",
+      "receipt_field": "release_receipt",
+      "receipt_sha256": "b9a9a6876885cb6087d95d027b9327e3e1f77bbc4d7308b7692cb837f2501c28",
+      "unchanged_fields_sha256": "8bbec578cf53feb2057bd3f1cdf1f82168546a7752ef7da0fc9bfd501426927e",
+      "expected_changes": {
+        "status": "completed",
+        "completed_on": "2026-10-09T21:14:23.527Z"
+      }
+    },
+    {
+      "id": "FT-RES-140",
+      "prior_status": "selected",
+      "release_commit": "aa66e59ee5016ca0966080fbe39ff921526e66d2",
+      "verified_at": "2026-10-09T21:31:17.412Z",
+      "evidence_kind": "RESEARCH_DATA_REMOTE_VERIFIED_NOT_PUBLIC_DELIVERY",
+      "receipt_field": "release_receipt",
+      "receipt_sha256": "411b56861da586e86a69d2fc39ac32fbc1080b6e8d175b0961763867d683c15f",
+      "unchanged_fields_sha256": "693cf0df18adb82a1d81b945490c6d32a16c5151ef0205fad1bbf9ab532b2b30",
+      "expected_changes": {
+        "status": "completed",
+        "completed_on": "2026-10-09T21:31:17.412Z"
+      }
+    }
+  ],
+  "hypothesis": "The open queue represents unfinished release work.",
+  "result": "REJECT for these seven records. IMPLEMENT only original verified completion fields; do not replay source, export or publication work.",
+  "remaining_gates": "Completing the historical actions does not resolve London approval, individual-age acceptance, mandatory-fee/sofa/review evidence, museum-return feasibility, ongoing observation windows or denied provider access. Original decision/blocker/next-gate prose is retained as phase history; completed status and immutable receipts govern this release's eligibility.",
+  "confidence": "High recorded outcome/commit/workflow identity; no new user, SEO, hotel fact or current production check.",
+  "next_falsification_trigger": "A receipt/commit/hash mismatch, actual release regression or unauthorized field drift. New defects require a separately registered action, not re-opening a historical release or assuming fresh export demand."
+}
