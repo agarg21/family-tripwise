@@ -1067,3 +1067,29 @@ p.contributor-credit {
     width: 100%;
   }
 }
+
+#dated-family-budgets {
+  padding: 40px 0;
+}
+
+#dated-family-budgets h2 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+#dated-family-budgets th:first-child {
+  width: 156px;
+  min-width: 156px;
+  max-width: 156px;
+}
+
+#dated-family-budgets tbody th {
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#dated-family-budgets tbody th a {
+  font-weight: 700;
+}

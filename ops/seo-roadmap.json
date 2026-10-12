@@ -20,10 +20,50 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-124",
+      "title": "Compare dated five-person NYC room budgets on-page",
+      "kind": "existing-page-family-budget-task",
+      "status": "selected",
+      "selected_on": "2026-10-12",
+      "started_at": "2026-10-12T04:02:09Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/nyc-dated-budget-comparison-task-2026-10-12.json",
+        "tools/page-generation/nyc-dated-budget-comparison.mjs",
+        "tools/nyc-dated-budget-comparison.test.mjs",
+        "tools/page-generation/family-hotel-pages.mjs",
+        "site/where-to-stay/new-york-city-family-hotels.html",
+        "site/styles.css",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "Current internal five-person November8-13 budget task: main12-hotel comparison has only July historical two-adult bands, while Oct11 exact-category samples120/121/123 are buried separately in3cards. Current maintained records provide same five-night/count basis but different layouts, age-input evidence and charge completeness. Named scan/decision gap, not parent export demand or a new fact inspection.",
+      "gsc_evidence_classification": "REUSED October11 API collected16:19:30Z/finalOct9 versus Oct10/finalOct8; orientation only, no aligned CTR/query diagnosis or indexing.",
+      "acceptance_criteria": [
+        "Single compact visible3-row comparison before historical12-hotel table, generated from existing validated120/121/123 records. Exact categories/plan/currency/native nightly unit/one room-five nights-two adults-three children/source date and actual age-entry evidence remain adjacent to prices.",
+        "Separate displayed stay totals from deposits, optional rollaway and unknown charge completeness. Do not add TRYP fees twice, transfer RadioCity count-only ages, imply accepted occupancy, stable quote, representative ranking, typical band, savings or identical rooms.",
+        "Native focused/full QA, actual1280/390/320 horizontal-scroll containment, sticky row identity, keyboard/each existing detail anchor/media/error checks, different independent read-only PASS or PASS_WITH_P3, exact guardedmain push/Pages marker/productionSEO and affected asset verification.",
+        "Preserve all existing public HTML outside additive block,12historical bands/cards/metadata-schema,34URLs, allCSVs, all65hotel records/source/price/review clocks, all prior ordered roadmap items and held11 work. No browser/provider/source-audit retry, new source, export, URL, city, account, spending or scheduler mutation."
+      ],
+      "decision": "IMPLEMENT maintained-record comparison for the named scan task, not more price collection or CSV.",
+      "next_gate": "Focused/full/task-responsive QA and different read-only consensus before guarded verified release.",
+      "measurement_plan": "Can the exact-party dated budgets and their differing charge/age/room limits be recovered together without reconstructing3cards? Internal proxy, not real-user satisfaction or SEO lift.",
+      "production_invariant": "One additive comparison plus scoped dated-family-budgets CSS only; oldHTML/styles recover after removing additions, all other site and CSV bytes unchanged; marker and3affectedassets exact; all original record/date clocks preserved.",
+      "next_eligible_run": "Finish this current comparison task; no unchanged provider or denied-source retry.",
+      "review_receipt": "FT-IMP-124 Hubble independent read-only PASS/noP0-P3; review735ebe87bfc1d907165089cc6d33830b469f6f6941f5065a3d2632ea38689765/all976hashes-modes/exact11/965nonowned/326priorordereditems/held11/oldledgerisolation/finaldrift0. Independent36focused-navigation/invariants/state0/GSC90/localSEO0sixunchanged; Master872full48maintenance completed loghashfbbc210d603ca3a089e99a721a80009d0803b70ffcb9ffd889c84f7c08e1fab3 inspected/notduplicated. All65hotelrecords/sourcepricefee-party-stay-reviewclocks/oldHTML/styles except additiveblock-five scopedselectors/allotherURLs-CSV preserved. Final local-qualified1280/390/320region1160-354-284/fixed156rowidentity/whiteRGB255-andtealRGB11-73-70 labels/readable/keyboardscroll0-400-398/sticky/nooverflow-clipping/all9Enterdetailanchorscorrect-visible/images1237-377-302loaded/errors0 proof inspected, no independentlivebrowser or actualparent/SEO claim. Oct12LRN220currenttaskproxy reusesOct11bookingrecords; differentcategories-ageinput-completeness maintained, deposits/optionalrollaway separate andTRYPfeesnotdoublecounted. Earliercontrast/specificity/stylesheet-navigation frames superseded; only finalqualifiedproofs used. No source/provider/deniedretry/newCSV/URL/city/account/payment/spending/indexing/scheduler/security mutation. Only immutable mechanical consensus appended; exact guardedpush/Pages-marker-productionSEO and3affectedassets verification pending; fixedsprint unchanged."
+    },
+    {
       "id": "FT-IMP-123",
       "title": "Resolve TRYP exact-family room budget basis",
       "kind": "existing-page-family-budget",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-12T03:07:33Z",
       "allowed_during_observation": true,
@@ -60,7 +100,11 @@
       "decision": "IMPLEMENT dated TRYP FAMILY Standard Rate sample: exact entered ages4/8/12;2615USDroom+153.60fees+385.73tax=3154.33five-nightdisplaytotal. No member/sale rates, booking acceptance or complete trip cost claim. Shared room/price overlays only; general fees remain unknown outside this exact sample.",
       "next_gate": "Exact source basis, focused/full/responsive QA, different read-only consensus and guarded verified release.",
       "next_eligible_run": "Finish this registered family budget task, or hold source dependency without bypass.",
-      "review_receipt": "FT-IMP-123 Plato independent read-only PASS/noP0-P3. Frozen c841c14afe1ed1a4d5d4ae030551748f4525e1a2fd679233cc3ab79ceaa83b46:973hashes-modes/exact14/finaldrift0/959nonowned/325priorordereditems/held11/oldledger preserved. Independent28focused/invariants/state0/GSC90/localSEO0sixunchanged; Master865full48maintenance logsha032d2c74f344b7621db13eb939dc9c485f3cd8a1b88100c06f5c5fca1e856c41 inspected/notduplicated. Sourceproof3154.33USD=2615room+153.60fees+385.73tax;553.72card includes27.22resort3.50citynightlyfee/no doublecount. Exact individuallyenteredages4/8/12/oneTRYPFAMILYStandardRate/Nov8-13five nights; acceptance/allocation/cooking/feecompleteness/cancellationtimezone-penalty/guaranteehold-payment unknowns remain. July provenance/64otherhotels/33otherURLs/CSV unchanged. Saved1280-390-320 contained530-312-242/media1237-531-426/noerrors/sourceexact/nooverlap proofs inspected, not independentlivebrowser or actualparents/SEO. Tenement accidental unchangedretry material excluded/no follow-up or access-clearance. Only immutable mechanical consensus appended; guardedpush/Pages/marker/productionSEO and affected-byte verification pending; fixedsprint unchanged."
+      "review_receipt": "FT-IMP-123 Plato independent read-only PASS/noP0-P3. Frozen c841c14afe1ed1a4d5d4ae030551748f4525e1a2fd679233cc3ab79ceaa83b46:973hashes-modes/exact14/finaldrift0/959nonowned/325priorordereditems/held11/oldledger preserved. Independent28focused/invariants/state0/GSC90/localSEO0sixunchanged; Master865full48maintenance logsha032d2c74f344b7621db13eb939dc9c485f3cd8a1b88100c06f5c5fca1e856c41 inspected/notduplicated. Sourceproof3154.33USD=2615room+153.60fees+385.73tax;553.72card includes27.22resort3.50citynightlyfee/no doublecount. Exact individuallyenteredages4/8/12/oneTRYPFAMILYStandardRate/Nov8-13five nights; acceptance/allocation/cooking/feecompleteness/cancellationtimezone-penalty/guaranteehold-payment unknowns remain. July provenance/64otherhotels/33otherURLs/CSV unchanged. Saved1280-390-320 contained530-312-242/media1237-531-426/noerrors/sourceexact/nooverlap proofs inspected, not independentlivebrowser or actualparents/SEO. Tenement accidental unchangedretry material excluded/no follow-up or access-clearance. Only immutable mechanical consensus appended; guardedpush/Pages/marker/productionSEO and affected-byte verification pending; fixedsprint unchanged.",
+      "release_receipt": "FT-IMP-123 release db98550ea738b3fa88e6291b1a890176e34a5439 remote verified 2026-10-12T03:27:32.736Z; main0-0/emptyindex/exact14/all973indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified TRYP dated exact-family room budget at2026-10-12T03:26:18.970Z; Pages38199655378 success/markerdb98550 exact, threeassetsHTTP200/exactbytes/productionSEO0sixunchanged. Actualproduction1280-390-320block530-312-242/nooverflow-nooverlap-no clipping/media1237-531-426/errors0/exactsource/title112above65header. Screenshot /tmp/ft-imp123-browser/production-1280.png andproduction-responsive.json. Sample3154.33USD/523net630.87displaytax-feesaverage retains oneTRYPFAMILYStandardRate/Nov8-13five nights/twoadults/individuallyentered4-8-12;553.72cardfeesalreadyincluded. Sharedroom-price overlay andLRN219integratedsource/tasklearning delivered, not actualparents/preference/SEO evidence or newreport-only candidate. Childacceptance/allocation/bunk/cooking/fullcharge/cancellationtimezone-penalty/guaranteehold-payment holds unchanged; oldJulybands-reviews/64otherhotelrecords/33otherURLs/allCSV/held11 retained. Tenement accidentalunchangedretrymaterial excluded/no follow-up or accessclearance. Onefinishedtransaction actualrun03:01:20Z/23:01:20EDT; no additionaltransaction started. Preview65509stopped/provider138 andverification139closed/viewportreset/reviewerPlato closed/allQA-guard-push-Pagesverification sessions complete. No newCSV/account/contact/payment/spending/security-scheduler/indexing mutation or factrenewal. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-12T03:27:32.756Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "db98550ea738b3fa88e6291b1a890176e34a5439"
     },
     {
       "id": "FT-IMP-122",

@@ -3,6 +3,7 @@ import { sanDiegoCurrentFeeNote, sanDiegoCurrentRoomNote } from "./san-diego-hot
 import { radioCityPriceHtml } from "./nyc-radio-city-price.mjs";
 import { beaconSuiteHtml } from "./nyc-beacon-suite.mjs";
 import { trypPriceHtml } from "./nyc-tryp-price.mjs";
+import { datedBudgetComparisonHtml } from "./nyc-dated-budget-comparison.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
 const sanDiegoFamilyHotels = [
@@ -1592,6 +1593,7 @@ function newYorkCityFamilyHotelPage() {
           <article class="quick-pick"><span>Brooklyn or pool splurge</span><strong>1 Hotel Brooklyn Bridge or Four Seasons Downtown</strong><p>Choose 1 Hotel for a DUMBO-first premium base; compare Four Seasons only for its indoor pool, published occupancy, and no-rollaway limits.</p></article>
         </div>
       </section>
+      ${datedBudgetComparisonHtml()}
       <section id="hotel-comparison" class="band">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>

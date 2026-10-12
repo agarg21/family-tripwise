@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-124",
+  "task_checked_on": "2026-10-12",
+  "evidence_class": "PAGE_ONLY_PROXY_TASK_WITH_REUSED_BOOKING_CHECK",
+  "page_url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+  "family_decision": "Scan the three dated one-unit/five-person November8-13 room budgets and identify age/charge/room limits without reconstructing three separate cards.",
+  "hypothesis": "The current main hotel comparison already provides these exact-category budgets together.",
+  "baseline": "REJECT: the main12-hotel table retains July two-adult historical bands; October11 Beacon/RadioCity/TRYP exact-category samples appear only in their separate cards. All three have one unit, two adults, three children and the same five-night dates, but not identical rooms, age-input proof, acceptance or fee completeness.",
+  "result": "IMPLEMENT one compact same-record comparison on the existing URL; preserve individual details and all original evidence clocks, unknowns and historical bands. No price recollection, parent testing, ranking, savings claim or new CSV.",
+  "maintained_records": [
+    { "id": "NYC-BEACON-SUITE-2026-10-11", "path": "docs/research/nyc-beacon-suite-budget-rest-2026-10-11.json", "source_checked_on": "2026-10-11" },
+    { "id": "NYC-RADIO-CITY-2026-10-11", "path": "docs/research/nyc-radio-city-family-price-2026-10-11.json", "source_checked_on": "2026-10-11" },
+    { "id": "NYC-TRYP-FAMILY-2026-10-11", "path": "docs/research/nyc-tryp-family-price-2026-10-11.json", "source_checked_on": "2026-10-11" }
+  ],
+  "source_use": "Reused reviewed booking observations and source links; no new browser/provider/network source inspection and no automatic fact renewal. No blocked-source retry.",
+  "confidence": "High maintained-record parity and arithmetic; moderate internal scan-task usefulness. Actual parent preference, satisfaction, booking acceptance, complete costs and SEO outcomes unknown.",
+  "reusable_lesson": "Bring dated totals, native nightly units and basis limitations into one view rather than treating historical standard-room bands or portable exports as the family decision.",
+  "next_falsification_trigger": "Record or source-scope drift, changed rate/room/party/date evidence, failed scroll/keyboard/detail-anchor task, or actual contrary parent evidence.",
+  "privacy": "No user data, raw booking/session URLs, copied reviews or identities retained.",
+  "publication_gates": "Focused/full native QA,1280/390/320 real browser comparison and detail-link checks, different independent read-only PASS, exact guardedpush and Pages/marker/productionSEO/asset invariants. No new URL or city."
+}
