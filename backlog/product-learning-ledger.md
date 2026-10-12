@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-222 - Remove repeated setup before the Chicago comparison - 2026-10-12
+
+FT-IMP-126 [scan task](../docs/research/chicago-glance-first-task-2026-10-12.json). Family decision: scan room function, pool/kitchen, area and historical nightly orientation then open specific hotel checks. Current production comparison starts2687px desktop/3784mobile after photo, intro, snapshot and five trip-start summaries; CSV promoted first. REJECT hypothesis that existing glance task is already served. IMPLEMENT compactheader/tablefirst/nativehotellinks, one full historical basis with adjacent dated cautions, unchangedCSV secondary and licensed photo after comparison. All ten unique cards, price/tax/date ambiguities, Swissotel specialty scope and IHG pool-completion unknowns retained.
+
+Direct user direction plus PAGE_ONLY_PROXY, not actual parent demand/satisfaction, reading-time, fresh source verification or SEO lift. High observed position/retained-field parity, moderate proxy benefit. Lesson: improve the scan route without changing underlying facts or inventing certainty; absence of a prequalified queue item is not evidence of no eligible task. Falsify failed responsive/keyboard/detail/basis/image checks, fact/date drift or contrary actual-user evidence. Full/focused/different strict read-only PASS and verified release required; no newCSV/source retry/URL.
+
 ## LRN-221 - Tables first, repeated caveats once - 2026-10-12
 
 FT-IMP-125 [bounded scan record](../docs/research/nyc-glance-first-task-2026-10-12.json). Direct user asks simpler pages with quick-glance tables, not presumed CSV value. Current production NYC desktop main comparison starts3611.56px, dated table2689.63px;14 identical full historical-basis paragraphs and repeated starter layers precede or surround the decision. REJECT hypothesis that comparison-first scan is already served. IMPLEMENT tables before photo, eliminate redundant introductory layers, keep one full historical basis plus adjacent dated non-family-quote labels/links, preserve unique hotel/budget facts and source dates, and place existing CSV in secondary native disclosure.

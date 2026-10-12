@@ -1140,3 +1140,26 @@ p.contributor-credit {
   box-shadow: none;
   background: none;
 }
+
+#chicago-hotel-intro {
+  padding: 32px 0;
+  background: var(--surface);
+}
+
+#chicago-hotel-intro h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+#chicago-hotel-intro + .trust-panel {
+  margin-top: 0;
+  padding: 12px 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+#chicago-hotel-intro ~ #hotel-comparison table {
+  min-width: 1080px;
+}

@@ -20,10 +20,47 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-126",
+      "title": "Bring Chicago hotel comparison ahead of repeated setup",
+      "kind": "existing-page-usability",
+      "status": "in_progress",
+      "selected_on": "2026-10-12",
+      "started_at": "2026-10-12T12:03:29Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/chicago-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/family-hotel-pages.mjs",
+        "site/where-to-stay/chicago-family-hotels.html",
+        "site/styles.css",
+        "tools/chicago-glance-first.test.mjs",
+        "tools/chicago-family-hotels-page.test.mjs",
+        "docs/research/chicago-glance-first-task-2026-10-12.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "Direct October12 user direction: simpler SEO-useful pages and quick-glance tables, not assumed CSV demand. Current production task: comparison top2686.91 desktop/3783.67 mobile, firstrow3106.95/4315.87,2964words; photo/intro/snapshot/five trip-start summaries precede the table and CSV promoted before it. Same room-function/area/budget job is already held in ten rows and detailed cards.",
+      "acceptance_criteria": [
+        "Compact Chicago Family Hotels H1 and short dated trust note, then existing ten-hotel table, with stay-area handoff and ten native card links. Move licensed photo after comparison; remove redundant starter layers.",
+        "Preserve full historical July23 price basis once with adjacent caution before table and date/non-family-quote/basis link by each card. Preserve date ambiguities, tax/fee/parking exclusions, Swissotel specialty-price limitation and IHG September22 unresolved pool notice exactly.",
+        "Keep all ten unique hotel-card facts, source URLs/maps, all65sharedrecords, original price-review-policy clocks, FAQs/schema/SEOtitle/meta/canonical/34URLs and allCSV/otherpublic bytes unchanged. Existing CSV stays secondary closed native disclosure, not new feature or fact renewal.",
+        "Focused/full nativeQA, actual1280/390/320 nooverflow/keyboardscroll-stickyidentity/ten card links/pricebasis/nativeCSVdisclosure-download/image, different independent STRICT read-only PASS, exact guarded push and Pages/marker/productionSEO/affected-byte verification."
+      ],
+      "measurement_plan": "LRN222 internal scan proxy under fresh user direction: compare table placement, retained fields and interaction outcomes. Reused Oct11API finalOct9 versus Oct10finalOct8 orientation only; no queryCTR experiment, reading-time/parent demand/satisfaction/SEOgain claim. Falsify lost facts/limits or source clocks, failed mobile navigation/image, contrary actual-user evidence.",
+      "production_invariant": "All10cardfacts/tablevalues/65records/FAQ-schema/meta/sources/maps/other33URLs/allCSV byteexact; CSS previousprefix preserved plus Chicago-only header selectors, reuse existing opted-in comparison styling. Preserve978baseline/328prior ordered items/held11; carry125 mechanical closure only. Actualrun12:01:29Z/08:01:29EDT/startdeadline12:46:29Z/fixed sprint expiry18:29:58Z unchanged. No new source attempt/renewal/cityURL/account/spending/security/indexing/analytics/scheduler mutation.",
+      "decision": "IMPLEMENT one verified Chicago scan simplification; not a portfolio-wide rewrite, price refresh, pool-clearance claim or new download.",
+      "review_receipt": "FT-IMP-126 Avicenna different independent STRICT READ-ONLY PASS/noP0-P3; reviewed82c7fecb5e50ae3570e655e49bea5157b7aa713b03165dc00d2705d2b6f38016/all980hashes-modes/exact11/969nonowned/328prior/held11-ledgerisolated/125mechanicalclosure/finaldrift0. No file-temp-scratch-generated/network/browser/delegation/staging/commit writes; pure16focused/invariants/state0/GSC90/localSEO0sixold. Master881full48maintenance completedlogcf010eb344f9d9f310a9319999d40ec703d6c04992d012b649f28f3a2c5170db inspected/notduplicated. All10unique cardfacts/tablevalues/65records/historicalprice-date-taxfee-Swissotel-IHGpoollimits/sourceclocks/FAQ-meta-schema/other33URLs/allCSV byteexact; actual15434byte download unchanged. Saved1280-390-320/30cardEnter/3basis/3secondarydisclosures/readablesticky180/image/nooverflow-errors0 inspected, not independentlivebrowser/production/userpreference/SEOgain. Mobilefirstrowsbelowinitialviewport explicit. GSCreusedOct11finalOct9 orientationonly/no source renewal/newCSV/deniedretry/security-spending-account-indexing-scheduler mutation. Only mechanical immutable consensus appended; guardedpush/Pages-marker-productionSEO/affectedbytes/livebrowser verification required."
+    },
+    {
       "id": "FT-IMP-125",
       "title": "Simplify NYC hotels into a glance-first comparison",
       "kind": "existing-page-usability",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-12",
       "started_at": "2026-10-12T11:15:08Z",
       "allowed_during_observation": true,
@@ -55,7 +92,11 @@
       "measurement_plan": "LRN221 direct user direction plus internal scan proxy. Compare first-table position and duplicate text count; no reading-time, real-user success, demand, rankings or CTR claims. Reused Oct11 GSC finalOct9 vs Oct10 finalOct8 is orientation only. Falsify lost unique decision facts, detached price limits, broken native navigation, contrary actual-user evidence or source drift.",
       "production_invariant": "All65 shared hotel records, three Oct11 source/budget blocks, all12 source facts and maps, FAQs/schema/meta/canonical,34URLs and every other public asset including allCSV bytes unchanged. CSS only additive NYC-scoped comparison selectors. Preserve976baseline/327prior ordered items/held11; carry124 mechanical completion only. Actual direct run11:13:52Z/07:13:52EDT, start budget ends11:58:52Z, fixed sprint expiry unchanged. No new source attempt, price renewal, city/URL/account/paid/indexing/analytics/scheduler mutation.",
       "decision": "IMPLEMENT one table-first simplification from the verified scan failure; not a portfolio-wide rewrite or export removal. No prequalified queue item was not proof there was no useful work.",
-      "review_receipt": "FT-IMP-125 Popper clean independent STRICT READ-ONLY PASS/noP0-P3; reviewed1608389f8793fb6a8b53f8bb6e4aaf5014f038b4bd51ffb55c2bd71de1c9052c/all978hashes-modes/exact12/966nonowned/327prior/held11-ledgerisolated/finaldrift0. No file-scratch-temp-generated/network/browser/delegation/staging/commit writes; pure12focused/invariants/state0/GSC90/localSEO0sixprior. Master877full48maintenance completed log04138518a75984523e6d63bae1fc0d473230054c452d7262a97f21e9b7cbe5a7 inspected/notduplicated. All12unique cardfacts/65records/tablevalues/three datedbudgetblocks-clocks/meta-schema/other33URLs/allCSV exact; actual18818byte download preserved. Saved1280-390-320/36cardlinks/3basis/9budgets/secondarydisclosure/images/nooverflow/errors0 proof inspected, no independentlivebrowser/production/userpreference/SEOgain. Mobile firstrows belowinitialviewport;320scrollstart160 notzero. Only mechanicalAquniasexceptionreceipt differs from originalcandidate; cleanre-review clearsproceduralgate, no productchange. Guardedpush/Pages-marker-productionSEO/affectedbytes/livebrowser verification still required. No new CSV/factrenewal/source retry or scheduler mutation."
+      "review_receipt": "FT-IMP-125 Popper clean independent STRICT READ-ONLY PASS/noP0-P3; reviewed1608389f8793fb6a8b53f8bb6e4aaf5014f038b4bd51ffb55c2bd71de1c9052c/all978hashes-modes/exact12/966nonowned/327prior/held11-ledgerisolated/finaldrift0. No file-scratch-temp-generated/network/browser/delegation/staging/commit writes; pure12focused/invariants/state0/GSC90/localSEO0sixprior. Master877full48maintenance completed log04138518a75984523e6d63bae1fc0d473230054c452d7262a97f21e9b7cbe5a7 inspected/notduplicated. All12unique cardfacts/65records/tablevalues/three datedbudgetblocks-clocks/meta-schema/other33URLs/allCSV exact; actual18818byte download preserved. Saved1280-390-320/36cardlinks/3basis/9budgets/secondarydisclosure/images/nooverflow/errors0 proof inspected, no independentlivebrowser/production/userpreference/SEOgain. Mobile firstrows belowinitialviewport;320scrollstart160 notzero. Only mechanicalAquniasexceptionreceipt differs from originalcandidate; cleanre-review clearsproceduralgate, no productchange. Guardedpush/Pages-marker-productionSEO/affectedbytes/livebrowser verification still required. No new CSV/factrenewal/source retry or scheduler mutation.",
+      "release_receipt": "FT-IMP-125 release 2ebc5d582b632f5d9fa06ff5779d3ab23beee654 remote verified 2026-10-12T11:42:33.021Z; main0-0/emptyindex/exact12/all978indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified NYC glance-first simplification at2026-10-12T11:41:31.286Z; Pages38244072193success/matching2ebc5d5 marker/threeaffectedassetsHTTP200byteexact/productionSEO0sixoldwarnings/alldeclaredinvariants. Actual production1280-390-320 comparison355-586-611px/firstrows658-961-1068/4429words vs5248/fullbasis14to1/36detailEnter-3basis-9budget-3secondarydisclosure checks/white-tealsticky180/images1237-377-302/nooverflow/errors0; screenshot /tmp/ft125-browser/production-context.png and production-responsive.json inspected. ExistingCSV preserved secondary, not newexport;65records/12cardfacts/threeOct11budgetblocks-clocks/meta-schema/other33URLs/allCSV exact. LRN221 integrated source-dated proxy and direct user direction, not learned-onlyreport/currentfactrenewal/actual-user demand/satisfaction/SEOgain. Existing source/acceptance/fullfee/human holds unchanged. One direct-user transaction; preview10085stopped/QA-index-guard-push-Pages-prod sessions complete/Popper andAquinasclosed. No source retry/city-URL/account-spending-indexing-analytics-security-scheduler mutation. Original heldwork preserved. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-12T11:42:33.050Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "2ebc5d582b632f5d9fa06ff5779d3ab23beee654"
     },
     {
       "id": "FT-IMP-124",

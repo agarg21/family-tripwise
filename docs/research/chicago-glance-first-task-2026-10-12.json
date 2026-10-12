@@ -1,0 +1,18 @@
+{
+  "action_id": "FT-IMP-126",
+  "task_checked_on": "2026-10-12",
+  "evidence_class": "DIRECT_USER_DIRECTION_AND_PAGE_ONLY_PROXY",
+  "family_decision": "Compare room function, pool versus kitchen, area and historical nightly budget without crossing repeated starter sections or using a spreadsheet; reach hotel-specific limits and source checks.",
+  "hypothesis": "The current Chicago hotel page exposes its main comparison promptly and gives downloads only secondary prominence.",
+  "before": [{"width": 1280, "height": 900, "comparison_top_px": 2686.9140625, "first_row_top_px": 3106.9453125}, {"width": 390, "height": 900, "comparison_top_px": 3783.671875, "first_row_top_px": 4315.8671875}],
+  "before_words": 2964,
+  "before_download": "Promoted before the comparison table.",
+  "result": "REJECT hypothesis; implement compact header/table-first ordering, remove duplicate starter layers, preserve one full historical basis with adjacent dated cautions and native detail links; existing CSV stays secondary.",
+  "after": {"words": 2790, "comparison_top_px_by_width": {"1280": 402.5, "390": 585.6953125, "320": 634.890625}, "first_row_top_px_by_width": {"1280": 705.7265625, "390": 960.921875, "320": 1067.7109375}, "no_page_overflow": true, "detail_keyboard_links": 30, "price_basis_links": 3, "keyboard_disclosures": 3, "desktop_horizontal_scroll": 0, "mobile_horizontal_scroll_observed": true, "sticky_identity_width_px": 180, "images_loaded": true, "browser_errors": 0, "existing_native_csv_bytes": 15434},
+  "proof": "/tmp/ft126-browser/local-final-responsive.json, local-final-context.png and existing-csv-download.csv. First mobile rows remain below the first viewport; no universal one-screen or reading-time promise. Earlier width1180 frames superseded by final1080minimum/desktop1160full-width table.",
+  "maintained_source": "tools/page-generation/family-hotel-pages.mjs Chicago catalog, current rendered page and same-record unchanged CSV; no fresh external source collection.",
+  "source_dates": "Facts/prices/reviews July23; indoor-pool September14 and IHG notice September22 retain original scope and unknown completion. No dates renewed.",
+  "confidence": "High measured placement/retained record parity; moderate internal scan benefit. Actual parent preferences, outcomes and SEO gains unknown.",
+  "limits": "Proxy task, not real-user testing or CSV-demand evidence. Standard-room bands do not price family layouts or Swissotel Kids Suite; two example dates ambiguous, tax/fees vary, parking separate; pool access remains unresolved.",
+  "falsification_trigger": "Lost unique facts, detached historical price limits, failed keyboard/mobile/link/image behavior, changed source or contrary actual-user evidence."
+}

@@ -50,7 +50,7 @@ test("portable Chicago comparison retains the same records, budgets and caveats"
   assert.match(rows[6][7], /7am-10pm.*5am-10pm/);
   assert.match(rows[5][6], /not a Kids Suite quote/);
   const html = readFileSync(pagePath, "utf8");
-  assert.match(html, /href="#hotel-comparison">Jump to the hotel comparison/);
+  assert.match(html, /href="\.\/chicago-with-kids.html">Compare Chicago stay areas/);
   assert.match(html, /class="band" id="hotel-comparison"/);
   assert.match(html, /href="\.\.\/downloads\/chicago-family-hotels\.csv" download/);
   assert.match(html, /source-section" id="sources-checked"/);
@@ -74,19 +74,19 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   ];
 
   assert.match(html, /<title>Top Family Hotels in Chicago: 10 Options by Trip Style<\/title>/);
-  assert.match(html, /<h1>Top Family Hotels in Chicago: 10 Options by Trip Style<\/h1>/);
+  assert.match(html, /<h1>Chicago Family Hotels<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/chicago-family-hotels\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/chicago-family-hotels\.html/g) || []).length, 1);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
-  assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 10);
+  assert.equal((html.match(/<article class="detail-card hotel-card" id="chicago-hotel-\d+"/g) || []).length, 10);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
   assert.match(html, /Planning USD\/room\/night/);
-  assert.match(html, /two adults where party size was shown/);
+  assert.match(html, /two-adult public examples where party size was shown/);
   assert.match(html, /not family-room quotes/);
-  assert.match(html, /tax and mandatory-fee inclusion varies by example/i);
-  assert.match(html, /Two example date labels in that pack are ambiguous/);
+  assert.match(html, /tax and mandatory-fee inclusion varies/i);
+  assert.match(html, /Two example dates are ambiguous/);
   assert.ok(html.indexOf("not family-room quotes") < html.indexOf("<table class=\"comparison-table hotel-comparison\""));
   for (const range of ["$280-$550+", "$210-$450+", "$270-$500+", "$310-$650+", "$240-$550+", "$300-$600+", "$320-$650+", "$360-$750+", "$630-$1,200+", "$600-$1,200+"]) {
     assert.ok(html.includes(range), `missing price band ${range}`);

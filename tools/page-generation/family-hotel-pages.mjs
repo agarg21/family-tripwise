@@ -860,7 +860,7 @@ function chicagoHotelComparisonCsv() {
 
 function chicagoFamilyHotelPage() {
   const hotels = chicagoFamilyHotels;
-  const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
+  const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="chicago-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
@@ -871,11 +871,11 @@ function chicagoFamilyHotelPage() {
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>July 23 historical USD/room/night band, not a family-room quote. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p></section>
           </article>`).join("\n");
 
-  const rows = hotels.map((hotel) => `              <tr>
-                <td>${esc(hotel.name)}</td>
+  const rows = hotels.map((hotel, index) => `              <tr>
+                <td><a href="#chicago-hotel-${index + 1}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
                 <td>${esc(hotel.priceRange)}</td>
@@ -901,56 +901,23 @@ function chicagoFamilyHotelPage() {
   };
 
   const body = `    <main>
-      <section class="page-hero hotel-hero">
+      <section id="chicago-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">Chicago family hotels</p>
-          <h1>Top Family Hotels in Chicago: 10 Options by Trip Style</h1>
+          <h1>Chicago Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare ten Chicago family hotels by room setup, breakfast or kitchen utility, indoor pool, location, approximate per-room nightly budget, and themes from sampled online reviews.</p>
+          <p>Compare ten hotels by room setup, kitchens, pools, area and historical nightly budget.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts, prices, and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
-        <p>USD per-room, per-night planning ranges come from a July 23 research pack of public examples for two adults where party size was shown, then widen for room and date variation. Two example date labels in that pack are ambiguous. These are not family-room quotes; tax and mandatory-fee inclusion varies by example, and parking is separate. Price your exact dates, child ages, room type, fees and cancellation terms before choosing.</p>
+        <p>Historical prices are not family-room quotes. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
       </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG" alt="Millennium Park and the Chicago skyline at dusk." width="1280" height="960" loading="eager" decoding="async">
-          <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
-        </figure>
-      </section>
-      <section class="band intro-band">
-        <div class="container answer-grid">
-          <div>
-            <p class="eyebrow">Short answer</p>
-            <h2>Let the room setup and first two days choose the hotel</h2>
-            <p>Start with Embassy Suites, Homewood, or Residence Inn when sleep separation, breakfast, or a kitchen drives the stay. Use Sable for a Navy Pier-centered trip, Swissotel for its specific Kids Suite, InterContinental for the historic pool, Hilton Chicago for Museum Campus, and Hotel Zachary for Wrigleyville. Four Seasons and Langham are the two luxury comparisons.</p>
-            <p><a class="text-link" href="./chicago-with-kids.html">Compare Chicago stay areas before choosing a property</a></p>
-            <p><a class="text-link" href="#hotel-comparison">Jump to the hotel comparison</a></p>
-          </div>
-          <dl class="snapshot">
-            <div><dt>Hotels covered</dt><dd>10 distinct options</dd></div>
-            <div><dt>Price format</dt><dd>July 23 research-pack USD/room/night bands; family-room total unverified</dd></div>
-            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
-            <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
-          </dl>
-        </div>
-      </section>
-      <section class="container page-section rank-ready-section">
-        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
-        <div class="quick-pick-grid hotel-pick-grid">
-          <article class="quick-pick"><span>Suite plus breakfast</span><strong>Embassy Suites or Homewood</strong><p>Choose Embassy for a two-room suite and made-to-order breakfast; choose Homewood when a full kitchen matters more.</p></article>
-          <article class="quick-pick"><span>Kitchen without pool</span><strong>Residence Inn River North</strong><p>Use it for full kitchens, breakfast, and on-site laundry when pool time is not part of the plan.</p></article>
-          <article class="quick-pick"><span>Young-child or kids-room trip</span><strong>Sable or Swissotel</strong><p>Choose Sable to start on Navy Pier; choose Swissotel only when the specific two-room Kids Suite is available and worth the total.</p></article>
-          <article class="quick-pick"><span>Pool plus location</span><strong>InterContinental or Hilton Chicago</strong><p>Choose InterContinental for Magnificent Mile and its historic pool; choose Hilton Chicago for Grant Park and Museum Campus.</p></article>
-          <article class="quick-pick"><span>Wrigley or luxury</span><strong>Hotel Zachary, Four Seasons, or Langham</strong><p>Use Zachary for an older-kid ballpark trip; compare Four Seasons and Langham on exact room, pool, play space, service, and full price.</p></article>
-        </div>
-      </section>
-      <section class="band" id="hotel-comparison">
+      <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p><a class="text-link" href="../downloads/chicago-family-hotels.csv" download>Download Chicago hotel comparison (CSV)</a></p>
-          <p class="review-label">USD per-room/night planning ranges from the July 23 research pack use two-adult public examples where party size was shown, widened for date and room variation. Two example dates are ambiguous; tax and mandatory-fee inclusion varies, and parking is separate. These are not family-room quotes, including the Swissotel Kids Suite. Compare exact room, child ages, dates and full total.</p>
+          <p><a href="./chicago-with-kids.html">Compare Chicago stay areas</a></p>
+          <p>July 23, 2026 historical two-adult examples with editorial room/date widening, not family-room quotes. Two example dates are ambiguous; taxes and mandatory fees vary, and parking is separate. <a href="#chicago-price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
@@ -959,7 +926,15 @@ ${rows}
               </tbody>
             </table>
           </div>
+          <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px">USD per-room/night planning ranges from the July 23 research pack use two-adult public examples where party size was shown, widened for date and room variation. Two example dates are ambiguous; tax and mandatory-fee inclusion varies, and parking is separate. These are not family-room quotes, including the Swissotel Kids Suite. Compare exact room, child ages, dates and full total.</p>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download Chicago hotel comparison (CSV)</a>. The same historical comparison records and price limitations.</p></details>
         </div>
+      </section>
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG" alt="Millennium Park and the Chicago skyline at dusk." width="1280" height="960" loading="lazy" decoding="async">
+          <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
+        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
