@@ -112,6 +112,14 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, room ? /room_page_beds.*two twins.*booking_beds.*two double beds/i : /date_specific_samples.*425114/);
       assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls, source_refs: currentRecord.source_refs, mapping_state: currentRecord.mapping_state }, currentRecord);
       if (!room) changed.push(record.id);
+    } else if (["room", "price"].some(name => record.id === `new-york-city-tryp-by-wyndham-new-york-city-times-square-midtown-${name}`)) {
+      assert.equal(currentRecord.verified_on, "2026-07-25");
+      assert.equal(record.verified_on, currentRecord.verified_on);
+      assert.equal(currentRecord.source_refs.at(-1).checked_on, "2026-10-11");
+      assert.equal(currentRecord.source_refs.at(-1).id, "NYC-TRYP-FAMILY-2026-10-11");
+      assert.match(currentRecord.basis, record.id.endsWith("-room") ? /TRYP FAMILY.*published_capacity.*8/ : /date_specific_samples.*315433/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls, source_refs: currentRecord.source_refs }, currentRecord);
+      if (record.id.endsWith("-price")) changed.push(record.id);
     } else if (record.id.startsWith("new-york-city-") && record.field === "nightly-price") {
       assert.notEqual(record.basis, currentRecord.basis);
       assert.equal(record.verified_on, currentRecord.verified_on);

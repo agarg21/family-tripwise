@@ -20,6 +20,11 @@ async function historicalRecords() {
     const prior = saved.tasks.find(task => task.hotel === radio.hotel && task.field === name);
     Object.assign(radio.fields[name], { value: prior.retained_value, state: "known", source_urls: prior.source_urls, source_refs: prior.source_refs, limitation: prior.limitation });
   }
+  const tryp = records.find(record => record.hotel.startsWith("TRYP by Wyndham"));
+  for (const name of ["room", "price"]) {
+    const prior = saved.tasks.find(task => task.hotel === tryp.hotel && task.field === name);
+    Object.assign(tryp.fields[name], { value: prior.retained_value, state: "known", source_urls: prior.source_urls, source_refs: prior.source_refs, limitation: prior.limitation });
+  }
   const priorAudit = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
   const priorPrice = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-holiday-inn-price");
   const ihgPrice = records.find(r => r.id === "orlando-holiday-inn").fields.price;

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "NYC-TRYP-FAMILY-2026-10-11",
+  "hotel": "TRYP by Wyndham New York City Times Square / Midtown",
+  "evidence_class": "BOOKING_CHECK",
+  "checked_on": "2026-10-11",
+  "review_on": "2026-10-18",
+  "category": "TRYP FAMILY",
+  "rate_plan": "Standard Rate",
+  "currency": "USD",
+  "unit": "room/night",
+  "arrival": "2026-11-08",
+  "departure": "2026-11-13",
+  "nights": 5,
+  "rooms": 1,
+  "adults": 2,
+  "children": 3,
+  "child_ages": [4, 8, 12],
+  "individual_child_ages_entered": true,
+  "party_acceptance": "Unconfirmed: returned rate and entered ages are not final registered occupancy or bed allocation.",
+  "published_capacity": 8,
+  "beds": "Two queen beds, one sofa bed and one bunk bed; one bathroom. Exact sleeping allocation, bunk restrictions and setup charges are unconfirmed.",
+  "equipment": "Mini refrigerator and coffee maker are listed; cooking equipment is not established by this category description.",
+  "nightly_room_cents": [48900, 49900, 48900, 51900, 61900],
+  "room_total_cents": 261500,
+  "nightly_fee_lines": [
+    { "label": "City Hotel Fee", "cents": 350 },
+    { "label": "Resort Fee", "cents": 2722 }
+  ],
+  "displayed_fee_total_cents": 15360,
+  "nightly_tax_lines": [
+    { "date": "2026-11-08", "sales_tax_cents": 4340, "city_accommodation_tax_cents": 2873 },
+    { "date": "2026-11-09", "sales_tax_cents": 4429, "city_accommodation_tax_cents": 2932 },
+    { "date": "2026-11-10", "sales_tax_cents": 4340, "city_accommodation_tax_cents": 2873 },
+    { "date": "2026-11-11", "sales_tax_cents": 4606, "city_accommodation_tax_cents": 3049 },
+    { "date": "2026-11-12", "sales_tax_cents": 5494, "city_accommodation_tax_cents": 3637 }
+  ],
+  "displayed_tax_total_cents": 38573,
+  "displayed_stay_total_cents": 315433,
+  "displayed_fee_inclusive_nightly_cents": 55372,
+  "cancellation": "Displayed Standard Rate policy requires cancellation 24 hours before 4 PM on arrival day to avoid a one-night charge plus tax; timezone and penalty basis are not independently established.",
+  "guarantee": "Valid credit card guarantee required. Charge/hold amount and timing are not stated in this disclosure.",
+  "unknowns": [
+    "Final exact-age acceptance, sleeping allocation, bunk restrictions and bed setup charges",
+    "Additional-charge completeness, parking, meals and other optional extras",
+    "Guarantee charge/hold amount, timing and payment schedule",
+    "Cancellation timezone and exact one-night penalty calculation"
+  ],
+  "sources": ["https://www.wyndhamhotels.com/tryp/new-york-city-new-york/tryp-new-york-city-times-square-south-midtown/overview"],
+  "source_method": "Ordinary anonymous official USD search; one room, two adults and individual ages4/8/12, November8-13. Exact TRYP FAMILY Standard Rate Total for Stay disclosure. No account, member rate, cart, Book & Pay Later, reservation, contact or payment action. Source link normalized to observed clean overview; session/query URLs excluded.",
+  "source_proof": "Ephemeral official-standard-total.txt/png, official-family-room.txt and official-party.json/png under /tmp/ft-imp123-browser; public record is a scoped paraphrase, not a copied review or full source export.",
+  "scope": "Dated sample, not a current quote, typical planning band, complete trip budget, booking acceptance, safety, comfort or family-suitability guarantee. Original July standard-room range and review sample remain unchanged. No newly observed review data is retained or synthesized. Accidental Tenement denial retry material is excluded and unrelated."
+}

@@ -129,7 +129,11 @@ test("mixed community and review components remain separately referenced or unma
   assert.equal(chicago.state, "unmapped");
   assert.ok(chicago.value.mapping_gaps[0].includes("Community"));
   const tryp = find("TRYP by Wyndham New York City Times Square / Midtown").fields.price;
-  assert.deepEqual(tryp.source_refs.map((ref) => ref.evidence_class), ["BOOKING_CHECK", "REVIEW_SIGNAL"]);
+  assert.deepEqual(tryp.source_refs.map((ref) => ref.evidence_class), ["BOOKING_CHECK", "REVIEW_SIGNAL", "BOOKING_CHECK"]);
+  assert.equal(tryp.source_refs[0].checked_on, "2026-07-25");
+  assert.equal(tryp.source_refs[1].checked_on, "2026-07-25");
+  assert.equal(tryp.source_refs[2].checked_on, "2026-10-11");
+  assert.equal(tryp.source_refs[2].id, "NYC-TRYP-FAMILY-2026-10-11");
   assert.ok(tryp.limitation.includes("review-reported"));
   const fourSeasons = find("Four Seasons Hotel New York Downtown").fields.review_signal;
   assert.equal(fourSeasons.state, "unmapped");

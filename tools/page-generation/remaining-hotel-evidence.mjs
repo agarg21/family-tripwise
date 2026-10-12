@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { parseNamedSourceList, parseRetainedTable, parsePropertyLedger } from "../legacy-hotel-sources.mjs";
 import { radioCityPrice, radioCityPricePath } from "./nyc-radio-city-price.mjs";
 import { beaconSuite, beaconSuitePath } from "./nyc-beacon-suite.mjs";
+import { trypPrice, trypPricePath } from "./nyc-tryp-price.mjs";
 
 const root = new URL("../../", import.meta.url);
 const read = (path) => readFileSync(new URL(path, root), "utf8");
@@ -219,6 +220,17 @@ export function normalizeRemainingHotel(hotel, retainedFields, research) {
   if (city === "new-york-city" && index === 6) {
     const priceValue = result.price.value;
     result.price = { ...result.price, ...envelope(priceValue, [priceRef, reviewRef]), limitation: result.price.limitation + " The654USD family amount is review-reported, not an observed comparable booking quote." };
+  }
+  if (city === "new-york-city" && index === 6) {
+    const sample = structuredClone(trypPrice);
+    const ref = reference(sample.id, "BOOKING_CHECK", sample.checked_on, trypPricePath, sample.sources);
+    for (const name of ["room", "price"]) {
+      result[name].source_refs.push(ref);
+      result[name].source_urls = [...new Set([...result[name].source_urls, ...sample.sources])];
+    }
+    result.price.value.date_specific_samples = [sample];
+    result.price.limitation += " October11 exact-family Standard Rate sample separately includes its displayed resort/city fees and taxes; not a general fee inventory, current quote, final child acceptance or renewal of the July band.";
+    result.room.value.overlays.push({ observed_on: sample.checked_on, source_id: sample.id, record: { category: sample.category, published_capacity: sample.published_capacity, beds: sample.beds, equipment: sample.equipment, party_acceptance: sample.party_acceptance, checks: sample.unknowns } });
   }
   if (city === "new-york-city" && index === 12) {
     result.review_signal.state = "unmapped";
