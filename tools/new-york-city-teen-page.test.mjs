@@ -71,7 +71,7 @@ test("keeps one canonical, indexable ten-choice New York City teen page", () => 
   ];
 
   assert.match(html, /<title>Things to Do in New York City With Teens: 10 Picks by Trip Style<\/title>/);
-  assert.match(html, /<h1>Things to Do in New York City With Teens: 10 Picks by Trip Style<\/h1>/);
+  assert.match(html, /<h1>New York City With Teens<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-teens\.html/g) || []).length, 1);
@@ -178,9 +178,9 @@ test("routes from the all-ages page and home while preserving one sitemap URL", 
 test("keeps the seven-column comparison readable in the mobile scroller", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const css = readFileSync(join(root, "site", "styles.css"), "utf8");
-  const table = html.match(/<div class="comparison-scroll teen-comparison">([\s\S]*?)<\/table>/)?.[1] || "";
+  const table = html.match(/<div class="comparison-scroll teen-comparison"[^>]*>([\s\S]*?)<\/table>/)?.[1] || "";
 
-  assert.equal((table.match(/<th>/g) || []).length, 7);
+  assert.equal((table.match(/<th scope="col">/g) || []).length, 7);
   assert.equal((table.match(/<tr>/g) || []).length, 11);
   assert.match(css, /\.teen-comparison \.comparison-table \{[\s\S]*?min-width: 820px/);
   assert.match(css, /\.teen-comparison \.comparison-table th:first-child,[\s\S]*?position: sticky/);

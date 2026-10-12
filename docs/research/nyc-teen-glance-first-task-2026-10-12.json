@@ -1,0 +1,38 @@
+{
+  "action_id":"FT-IMP-128",
+  "checked_on":"2026-10-12",
+  "evidence_class":"PAGE_ONLY_PROXY",
+  "url":"https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+  "task":"Scan ten teen interests/time-cost/areas/current checks and reach existing age/party admission or transit budgets.",
+  "before":[
+    {"width":1280,"comparison_top":2113.40625,"first_row_top":2426.7265625,"budget_tops":[3837.9375,4534.7578125,5288.578125],"words":2820,"page_overflow":false},
+    {"width":390,"comparison_top":2791.0625,"first_row_top":3115.2578125,"budget_tops":[5298.46875,6198.015625,7299.125],"words":2820,"page_overflow":false}
+  ],
+  "result":"IMPLEMENT compactheader/tablefirst/three native budget links; retain existing choices/quickpicks/details/routes/date-specific evidence.",
+  "local_validation": {
+    "widths":[1280,390,320],
+    "comparison_tops":[384.5,658.890625,708.0859375],
+    "first_row_tops":[687.3359375,1040.53125,1150.125],
+    "visible_words":2814,
+    "budget_navigation_note_gap_px":16,
+    "activity_row_count":10,
+    "activity_sticky_identity_width":180,
+    "budget_sticky_identity_width":160,
+    "budget_final_amount_column_width":128,
+    "native_budget_anchor_checks":9,
+    "budget_total_visibility_checks":9,
+    "complete_visible_totals":["USD 60.00","USD 90.00","USD 77.00","USD 36.00","USD 40.00","USD 0.00","USD 21.00"],
+    "page_overflow":false,
+    "loaded_image_natural_width":1280,
+    "browser_errors":[],
+    "proof":"/tmp/ft128-browser/local-green-responsive.json, local-green-budget-end.json and local-green-context.png; earlier local/local-final/local-verified frames superseded.",
+    "limitations":"First activity rows remain below the initial viewport on narrow phones; horizontal scrolling is still required. Ten ArrowRight presses at390 do not always reach full totals; subsequent20-key checks verify complete text beside sticky labels. No one-screen, reading-time, real-parent or SEO-outcome claim."
+  },
+  "confidence":"High observed geometry/navigation/parity; moderate expected scan benefit, not actual-parent or SEO proof.",
+  "maintained_records":["docs/research/new-york-city-teen-activity-review.md","docs/research/new-york-city-summit-teen-access-2026-10-10.json","docs/research/nyc-ferry-family-budget-2026-10-10.json"],
+  "preserve":"All10rows/5picks/5details/3routes/three datedbudget blocks, current SUMMIT-SPYGAMES policy and olderJuly26attraction clock; other33URLs/allCSV/65hotelrecords and all evidence unchanged.",
+  "no_source_renewal":true,
+  "no_new_export":true,
+  "gsc":"ReusedOct11publicAPI finalOct9 versusOct10finalOct8 orientation only, not querycohort/CTR experiment.",
+  "falsification":"Lost facts/policy/date/party/exclusions, failed native/mobile/image navigation, unrelatedpage drift, contrary actual-user evidence."
+}

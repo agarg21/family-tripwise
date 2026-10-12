@@ -459,7 +459,7 @@ ${officialCheckSection}${faqSection}${markerEnd}
 `;
 }
 
-function renderTeenUpgrade(page) {
+function renderTeenUpgrade(page, mediaSection = "") {
   const payment = page.paymentBudget;
   const paymentSection = payment ? `      <!-- omny-budget:start -->
       <section class="container page-section rank-ready-section" aria-labelledby="omny-budget-title">
@@ -547,8 +547,7 @@ ${renderFaqs(page.faqs)}
       </section>
 `
     : "";
-  return `${markerStart}
-      <section class="band rank-ready-section">
+  const quickSection = `      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Teen quick picks</p>
@@ -556,17 +555,19 @@ ${renderFaqs(page.faqs)}
           </div>
 ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>\n` : ""}${renderQuickPicks(page.quick)}
         </div>
-      </section>
-
-      <section class="container page-section rank-ready-section">
+      </section>`;
+  const budgetLinks = page.glanceFirst ? `        <nav aria-label="Family budget comparisons"><a href="#moma-budget-title">MoMA admission</a> &middot; <a href="#ferry-budget-title">NYC Ferry return</a> &middot; <a href="#omny-budget-title">OMNY fares</a></nav>\n` : "";
+  const comparisonSection = `      <section${page.glanceFirst ? ' id="nyc-teen-comparison"' : ""} class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Compare teen activities</p>
           <h2>Teen activity decision table</h2>
         </div>
-        <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
-${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
-      </section>
-${admissionSection}${transportSection}${paymentSection}
+${budgetLinks}        <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
+${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.glanceFirst ? {accessibleLabel: "New York City teen activity comparison", rowHeaders: true} : {})}
+      </section>`;
+  return `${markerStart}
+${page.glanceFirst ? comparisonSection : `${quickSection}\n\n${comparisonSection}`}
+${admissionSection}${transportSection}${paymentSection}${page.glanceFirst ? `${quickSection}\n\n${mediaSection}\n` : ""}
       <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
@@ -1019,10 +1020,19 @@ function applyBaseReplacements(html, replacements = []) {
 function upgradeFile(outDir, path, page, type) {
   const full = join(outDir, path);
   let html = readFileSync(full, "utf8");
+  let mediaSection = "";
+  if (page.glanceFirst) {
+    // Preserve the image before stripping a prior upgraded body during regeneration.
+    html = applyBaseReplacements(html, page.baseReplacements);
+    const media = html.match(/      <section class="container media-section">[\s\S]*?<\/section>/g);
+    if (media?.length !== 1) throw new Error("Expected one glance-first licensed media section");
+    mediaSection = media[0];
+    html = html.replace(mediaSection, "");
+  }
   html = stripMarked(html, markerStart, markerEnd);
   html = stripMarked(html, schemaStart, schemaEnd);
   html = updateHead(html, page);
-  html = applyBaseReplacements(html, page.baseReplacements);
+  if (!page.glanceFirst) html = applyBaseReplacements(html, page.baseReplacements);
   html = replaceBaseActivitySection(html, page);
   html = removeBaseActivitySiblingBand(html, page);
   if (page.removeGeneratedAgeSections) html = removeGeneratedAgeSections(html);
@@ -1034,7 +1044,7 @@ function upgradeFile(outDir, path, page, type) {
     : type === "itinerary"
       ? renderItineraryUpgrade(page)
       : type === "teen"
-        ? renderTeenUpgrade(page)
+        ? renderTeenUpgrade(page, mediaSection)
       : renderStayUpgrade(page);
   const schema = `${itemListSchema(page)}${faqSchema(page)}`;
   html = page.placement === "after-intro" ? insertAfterIntroBand(html, section) : insertBeforeMainEnd(html, section);

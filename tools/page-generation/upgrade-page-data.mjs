@@ -2235,6 +2235,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/new-york-city-with-teens.html": {
+    glanceFirst: true,
     admissionBudget: momaComparison(),
     transportBudget: ferryComparison(),
     paymentBudget: omnyComparison(),
@@ -2246,11 +2247,12 @@ export const teenPages = {
     compactDetails: true,
     removeGeneratedAgeSections: true,
     baseReplacements: [
-      ["<h1>Things to do in New York City with teens</h1>", "<h1>Things to Do in New York City With Teens: 10 Picks by Trip Style</h1>"],
-      ["<p>A focused activity guide for teens in New York City, with the main kids guide kept as the broader planning hub.</p>", "<p>Compare 10 older-kid choices by actual teen payoff, time, cost, location, flexibility, mixed-age fit, and the exact rule that can change the plan.</p>"],
+      ["<section class=\"page-hero\">", "<section id=\"nyc-teen-intro\" class=\"page-hero\">"],
+      ["<h1>Things to do in New York City with teens</h1>", "<h1>New York City With Teens</h1>"],
+      ["<p>A focused activity guide for teens in New York City, with the main kids guide kept as the broader planning hub.</p>", "<p>Compare 10 activities by teen interest, time, cost and area, with dated family admission and transit budgets.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 26, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Teen fit, time, cost, walking, flexibility, and mixed-age labels are Family Tripwise editorial estimates. Check the exact ticket, age or minor rule, content, effects, weather, access, and schedule before committing.</p>"],
-      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"]
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"lazy\" decoding=\"async\">"]
     ],
     links: {
       allAges: "../things-to-do/new-york-city-with-kids.html",

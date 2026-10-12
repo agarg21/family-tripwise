@@ -1,5 +1,13 @@
 # Product Learning Ledger
 
+## LRN-224 - Expose teen activity comparisons and existing budgets - 2026-10-12
+
+FT-IMP-128 [task](../docs/research/nyc-teen-glance-first-task-2026-10-12.json). Family decision: choose a teen interest/area/time-cost anchor and reach age-specific admission, ferry-return or group-payment budgets. Actual production table starts2113px desktop/2791mobile, firstrows2427/3115 afterlargeheader/image/fivepicks. MoMA/Ferry/OMNY budget headings start3838/4535/5289desktop, with no earlylinks. REJECT hypothesis that current comparison and budget paths are glance-first. IMPLEMENT compactheader/tablefirst/3nativebudgetlinks while retaining all ten choices, fivepicks/details, three routes and exact datedbudget blocks.
+
+Integrated mobile task also found oversized budget firstlabels (ferry386px in354px region) and loss of row context when scrolling. Final scoped160px sticky labels/128px amount column expose complete existing totals; nine native jumps and nine numeric-text visibility checks pass across1280/390/320, with16px navigation/note gap. First activity rows still below initial narrow-phone viewport; horizontal scroll remains. No evidence or price renewal.
+
+PAGE_ONLY_PROXY plus fresh direct user direction, not realparent demand/satisfaction/reading-time/SEOoutcome evidence. High observed geometry/navigation/parity confidence, moderate expected scan benefit. Lesson: maintained age/party budgets need a discoverable handoff, not another download. Falsify lost policy/date/party/fees/route cautions, failed mobile/keyboard/image, altered unrelatedpages or contraryactualuser evidence. Full/focused/idempotence/different strict read-only PASS and verified release required. No newCSV/sourcecollection/URL.
+
 ## LRN-223 - Bring the San Diego hotel comparison ahead of setup - 2026-10-12
 
 FT-IMP-127 [scan task](../docs/research/san-diego-glance-first-task-2026-10-12.json). Family decision: scan hotel function, area and historical nightly orientation, then reach exact room/fee checks. Production table begins2513px at1280/3243px at390 after six category picks, a snapshot and image; names are not detail links. REJECT hypothesis that the current page gives a quick comparison first. IMPLEMENT compactheader/table-first/native12detail links while retaining complete trip-routing/split-base guidance after comparison and all12cardfacts/latestDana-Homewood notes.
