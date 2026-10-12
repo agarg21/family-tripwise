@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "NYC-RADIO-CITY-2026-10-11",
+  "checked_on": "2026-10-11",
+  "evidence_class": "BOOKING_CHECK",
+  "hotel": "Radio City Apartments",
+  "category": "Two Bedroom Apartment",
+  "rate_plan": "Best Available Rate",
+  "currency": "USD",
+  "arrival": "2026-11-08",
+  "departure": "2026-11-13",
+  "nights": 5,
+  "rooms": 1,
+  "adults": 2,
+  "children": 3,
+  "child_band": "under 13",
+  "individual_child_ages_entered": false,
+  "task_ages": [4, 8, 12],
+  "nightly_room_cents": [62000, 62100, 76300, 85200, 81600],
+  "room_total_cents": 367200,
+  "displayed_tax_lines": [
+    { "label": "NY State Tax", "cents": 32590 },
+    { "label": "City Tax", "cents": 21574 },
+    { "label": "NY Occupancy Tax", "cents": 3000 },
+    { "label": "Convention Tax", "cents": 750 }
+  ],
+  "displayed_tax_total_cents": 57914,
+  "displayed_stay_total_cents": 425114,
+  "deposit_cents": 25000,
+  "deposit_basis": "Per apartment, due at check-in; refundability, refund timing and charge-versus-hold type not established. Separate from the displayed stay total, not classified as an extra stay fee.",
+  "cancellation": "The selected offer states a one-night fee for cancellations after November 6, 2026 at 4:00 PM local hotel time, and a first-night charge for no-show.",
+  "payment": "First night charged 48 hours before check-in; remaining balance due at check-in. This is payment timing, not an additional room charge.",
+  "room_page_beds": "One queen in one bedroom, two twins in the second bedroom, and a living-room sofa bed.",
+  "booking_beds": "Queen bed, two double beds, sofa bed, kitchenette.",
+  "bed_state": "disputed",
+  "published_capacity": "Up to five guests plus one child age 12 or under; not a six-adult configuration or confirmation of every age/bed allocation.",
+  "room_facts": "Approximately 470 square feet; dining area; kitchenette with fridge, microwave, stove, cookware and utensils. Exact dining seats and sofa-bed comfort are not established.",
+  "sources": [
+    "https://www.radiocityapartments.com/en/apartments-to-rent-new-york-city/two-bedroom-apartment/",
+    "https://radiocityapartments.book.pegsbe.com/"
+  ],
+  "workflow": "Official room page Book now link, anonymous USD search, one room/two adults/three children under13, November8-13 2026, category View Offers, Best Available Rate policy and price breakdown. Cart remained empty; no sign-in, reward registration, guest information or booking. Calendar default one-person rates discarded. Clean source URLs only; no session/query URL retained.",
+  "unknowns": [
+    "Individual child-age acceptance: intended task ages4/8/12 were not separately entered; count-only child-band result is not exact-age confirmation.",
+    "Conflicting twin versus double second-bedroom beds; exact allocation, sofa-bed dimensions and comfort require property confirmation.",
+    "Deposit refundability, timing and charge-versus-hold type; additional mandatory-charge completeness beyond displayed breakdown.",
+    "Food, transit, parking and optional extras; future inventory or unchanged rate/policy not guaranteed."
+  ],
+  "learning": {
+    "family_decision": "What does the named apartment cost for five people, and what room/payment uncertainties remain?",
+    "hypothesis": "The historical studio band alone is sufficient for a five-person apartment budget.",
+    "result": "REJECT; implement one dated exact-category sample and the current official-source bedding conflict, without replacing historical bands or claiming exact ages accepted.",
+    "confidence": "High for observed count/date/category/amounts and existence of source conflict; limited for individual ages, bed allocation and extra-fee completeness.",
+    "reusable_lesson": "A named party/category stay breakdown is more useful than extrapolating a two-adult studio price. Counts and broad child bands do not establish individual-age acceptance.",
+    "next_falsification_trigger": "Changed official category/price-policy evidence or explicit individual-age/bed confirmation. Reprice before booking; do not treat this snapshot as a current quote."
+  }
+}

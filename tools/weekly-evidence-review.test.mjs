@@ -91,7 +91,18 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   const laterFeeChanges = [];
   for (const record of retainedRecords) {
     const currentRecord = currentRecords.get(record.id);
-    if (record.id.startsWith("new-york-city-") && record.field === "nightly-price") {
+    if (record.id === "new-york-city-radio-city-apartments-room" || record.id === "new-york-city-radio-city-apartments-price") {
+      assert.equal(currentRecord.verified_on, "2026-07-25");
+      assert.equal(record.verified_on, currentRecord.verified_on);
+      assert.ok(currentRecord.source_urls.includes("https://radiocityapartments.book.pegsbe.com/"));
+      assert.equal(currentRecord.source_refs.at(-1).checked_on, "2026-10-11");
+      assert.equal(currentRecord.source_refs.at(-1).id, "NYC-RADIO-CITY-2026-10-11");
+      const room = record.id.endsWith("-room");
+      assert.equal(currentRecord.mapping_state, room ? "disputed" : record.mapping_state);
+      assert.match(currentRecord.basis, room ? /room_page_beds.*two twins.*booking_beds.*two double beds/i : /date_specific_samples.*425114/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls, source_refs: currentRecord.source_refs, mapping_state: currentRecord.mapping_state }, currentRecord);
+      if (!room) changed.push(record.id);
+    } else if (record.id.startsWith("new-york-city-") && record.field === "nightly-price") {
       assert.notEqual(record.basis, currentRecord.basis);
       assert.equal(record.verified_on, currentRecord.verified_on);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);

@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { parseNamedSourceList, parseRetainedTable, parsePropertyLedger } from "../legacy-hotel-sources.mjs";
+import { radioCityPrice, radioCityPricePath } from "./nyc-radio-city-price.mjs";
 
 const root = new URL("../../", import.meta.url);
 const read = (path) => readFileSync(new URL(path, root), "utf8");
@@ -184,6 +185,18 @@ export function normalizeRemainingHotel(hotel, retainedFields, research) {
   if (city === "san-antonio" && index === 3) {
     result.room.date_basis = "model-baseline";
     result.room.limitation += " Current Hilton source URLs were observed September5, not July26. Retained July interpretation is separate; atomic claim dates remain a mapping gap.";
+  }
+  if (city === "new-york-city" && index === 4) {
+    const sample = structuredClone(radioCityPrice);
+    const ref = reference(sample.id, "BOOKING_CHECK", sample.checked_on, radioCityPricePath, sample.sources);
+    result.price.value.date_specific_samples = [sample];
+    result.price.source_refs.push(ref);
+    result.price.source_urls = [...new Set([...result.price.source_urls, ...sample.sources])];
+    result.price.limitation += " October11 named apartment sample is separate from the historical studio band; no individual-age or extra-fee completeness confirmation.";
+    result.room.state = "disputed";
+    result.room.source_refs.push(ref);
+    result.room.source_urls = [...new Set([...result.room.source_urls, ...sample.sources])];
+    result.room.value.overlays.push({ observed_on: sample.checked_on, source_id: sample.id, record: { room_page_beds: sample.room_page_beds, booking_beds: sample.booking_beds, bed_state: sample.bed_state, published_capacity: sample.published_capacity, checks: sample.unknowns } });
   }
   if (city === "chicago" && index === 3) {
     result.price.state = "unmapped";

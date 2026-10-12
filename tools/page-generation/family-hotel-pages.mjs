@@ -1,5 +1,6 @@
 import { contributorCredit } from "./contributors.mjs";
 import { sanDiegoCurrentFeeNote, sanDiegoCurrentRoomNote } from "./san-diego-hotel-evidence.mjs";
+import { radioCityPriceHtml } from "./nyc-radio-city-price.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
 const sanDiegoFamilyHotels = [
@@ -1514,7 +1515,7 @@ function newYorkCityFamilyHotelPage() {
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>${esc(priceBasis)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>${esc(priceBasis)}</p></section>${hotel.name === "Radio City Apartments" ? `\n            ${radioCityPriceHtml()}` : ""}
           </article>`).join("\n");
 
   const rows = hotels.map((hotel) => `              <tr>

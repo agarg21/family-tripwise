@@ -9,6 +9,12 @@ import { hotelEvidence } from "./hotel-evidence.mjs";
 async function historicalRecords() {
   const records = hotelEvidence();
   const saved = JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-nyc-price-labels.json", import.meta.url), "utf8"));
+  // Replay the retained September RadioCity envelopes, not October's scoped sample.
+  const radio = records.find(record => record.hotel === "Radio City Apartments");
+  for (const name of ["room", "price"]) {
+    const prior = saved.tasks.find(task => task.hotel === radio.hotel && task.field === name);
+    Object.assign(radio.fields[name], { value: prior.retained_value, state: "known", source_urls: prior.source_urls, source_refs: prior.source_refs, limitation: prior.limitation });
+  }
   const priorAudit = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
   const priorPrice = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-holiday-inn-price");
   const ihgPrice = records.find(r => r.id === "orlando-holiday-inn").fields.price;

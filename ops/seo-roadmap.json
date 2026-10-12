@@ -20,11 +20,53 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-120",
+      "scope_amendment": "Before edits: exact14 adds evidence-watch.json for only the observed ordinary official public booking host radiocityapartments.book.pegsbe.com (no wildcard, HTTPS/credential/redirect/denial rules untouched, no collect/network audit), plus page-quality and weekly-evidence-review tests for faithful old snapshot replay and explicit dated current overlay drift. New source registration under reviewed maintained-evidence workflow is not permission to retry denied origins, broaden accounts/credentials or renew historical records. All remaining native/browser/review/publication gates unchanged.",
+      "title": "Radio City exact apartment budget and bed-source conflict",
+      "kind": "existing-page-family-budget",
+      "lane": "finish-first",
+      "status": "selected",
+      "selected_on": "2026-10-11",
+      "started_at": "2026-10-12T01:09:03Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "target_paths": [
+        "docs/research/nyc-radio-city-family-price-2026-10-11.json",
+        "tools/page-generation/nyc-radio-city-price.mjs",
+        "tools/nyc-radio-city-price.test.mjs",
+        "tools/page-generation/family-hotel-pages.mjs",
+        "tools/page-generation/remaining-hotel-evidence.mjs",
+        "site/where-to-stay/new-york-city-family-hotels.html",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/evidence-watch.json",
+        "tools/page-quality.test.mjs",
+        "tools/weekly-evidence-review.test.mjs"
+      ],
+      "evidence": "October11 ordinary official room page and anonymous USD booking UI: Two Bedroom Apartment Best Available Rate, November8-13 2026, five nights, one room/two adults/three children under13, no individual-age controls. Room3672/taxes579.14/displayedstay4251.14; policydeposit250 separate. Official room twin versus booking double bed conflict. Existing July two-adult studio band does not price this family category. No denied-source retries, cart/account/payment or rewards deduction.",
+      "gsc_evidence_classification": "Reused October11 API16:19Z/finalOct9 and priorOct10/finalOct8; staleJuly27sitemap discovery; orientation not query/CTR diagnosis.",
+      "acceptance_criteria": [
+        "One validated maintained JSON drives additive RadioCity card quote and shared evidence overlays. Preserve all old July price/review dates, approximate bands and existing CSV; dates/categories/count-only ages/fees/deposit/source conflict are explicit. No current/typical quote, all-fee guarantee, refundable-deposit claim or exact-age/sleep-comfort assurance.",
+        "Nightly620/621/763/852/816 sum3672; taxes325.90+215.74+30+7.50=579.14; displayed4251.14; averages734.40beforetax/850.23includingdisplayedtax. Deposit separate with refund/type/timing unknown; food/transit/parking/extras unknown. Exact Nov6at16:00local cancel firstnight penalty, firstnight payment48h beforecheckin balanceatcheckin.",
+        "Focused/fullnativeQA, desktop1280/mobile390/320 actualbrowser layout/source-link task, different read-only PASS/PASS_WITH_P3, exact14 guardedpush/Pages/marker/productionSEO/exactaffectedURL bytes. No newURL/CSV feature/analytics/indexing/security/provider mutation; preserveheld11 and orderedprioritems. Exact observed public booking-host registration only, no wildcard or denial/HTTPS/credential gate relaxation and no live source-audit collection."
+      ],
+      "measurement_plan": "Source-dated gap closure: parents can distinguish the named five-night apartment sample from historical studio band, see displayed taxes/separatedeposit and unresolved bed/individual-age limits. Proxy technical task only, not preference, human satisfaction or SEO lift. Falsify new source conflict or changed dates/party/rate terms.",
+      "production_invariant": "Only declared existing NYC page bytes may change; allother site/src/publicCSV/34URL inventory unchanged. Config differs only by exact observed public booking-host registration; no other hosts, credentials, HTTPS, redirect or denial protections change. Old broad facts/review clocks/Julybands retained. Shared room disputed overlay/price date_specific_sample retains original envelope date, no hotelwide renewal. No automatic source-retry/scheduler/spending/accountmutation. Exact14 registeredpaths, held11 preserved, allpriorroadmapitems unchanged except carried mechanicalOPS013closure alreadybaseline.",
+      "decision": "IMPLEMENT dated exact-category sample and conflict now from working official UI; no newCSV. First transaction actualrun01:00:50Z/21:00:51EDT/startdeadline01:45:50Z within fixed sprint; remaining existing human/provider/newdestination gates untouched.",
+      "review_receipt": "FT-IMP-120 Mencius independent read-only PASS/noP0-P3 for 5PHneB manifest751b86787728b1e239d11e644336daff93783c6ca3888abfdd5ae92cc7aef809/all967hashes/exact14/953nonowned/322priorordereditems/held11/finaldrift0. Independent12readonlycommands/45focused/22hostsecurityassertions/invariants/state0/GSC90/localSEO0sixexisting; Master854full47maintenance20focused finallogs inspected, fullnotindependentlyrepeated. OrdinaryofficialUSD count-only2adult3child-under13 oneTwoBedroomApartment BestAvailableRate Nov8-13five nights:3672room+579.14displayedtax=4251.14stay; averages734.40/850.23; separate250depositrefund/type/timingunknown; individualages4/8/12notentered, twin-versus-double bedconflict and extra-fee completeness held. Same validatedJSON drives visible sample/sharedrecordoverlay; Julyprice-review/sourceenvelopeclocks/oldbands/CSV/65hotelrecordscope/34URLs retained. Only exactpublicbookinghost registered; HTTPS/credentials/redirect/denial gates unchanged/no sourceauditcollect. ActualIAB1280/390/320priceheadingvisible/block530-312-242/nooverflow/image1237loaded/errors0/exactsourceroutes; desktopanchor80pxmargin protects65pxstickyheader. Rawsourcepolicy/tax/childband/categoryandresponsiveproofs saved and reviewed, no cart/account/payment/rewardsdeduction/contact/deniedretry/newCSVfeature. LRN217officialsource audit/taskproxy not parent desire or human satisfaction/SEO lift. Guarded release/Pages/marker/productionSEO/exactaffectedURL invariants remain pending; fixed sprint unchanged. Earliercandidates superseded/notstaged. Mechanical immutable consensus only."
+    },
+    {
       "id": "FT-OPS-013",
       "title": "Close already verified releases in the operator queue",
       "kind": "operator-state-correction",
       "lane": "finish-first-release-state",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-11",
       "started_at": "2026-10-12T00:05:17Z",
       "allowed_during_observation": true,
@@ -51,7 +93,11 @@
       "production_invariant": "No deployable code or site bytes change; all34URLs/source-price-fee-party-date facts/exports/observation/human-newcity-provider holds retained. Only eightregisteredpaths, sevenpredeclaredprioritemfieldchanges plus newaction; allother314orderedprioritems unchanged. Original elevenhelddirty paths preserved and119mechanicalclosure carried only. Same existing automation unchanged; sprint endOctober12at18:29:58Z/globalcutoff unchanged.",
       "decision": "IMPLEMENT verified stale-queue correction; original completed-on datesOctober9, not this run. No new public deliverable; first transaction actualrun00:01:20Z/20:01:20EDT with newactionstartdeadline00:46:20Z inside fixed sprint. Separate pending hotel-family-budget and approval gates preserved.",
       "scope_amendment": "Before edits: add exactly tools/content-freshness.mjs and its existing tests to repair a reproduced release-gate false positive. At UTC October12, existing public October11recheck-unavailable audit date was misclassified as expired museum operation. Distinguish only date-leading failed source rechecks from actual operational dates; same-sentence true expiries, yearless closures, JSON coverage and prior warnings remain. No timezone change, public rewrite or source renewal. Exact8finalpaths/full native and independent final candidate re-review required.",
-      "review_receipt": "FT-OPS-013 Boole independent read-only PASS_WITH_P3/noP0-P2 for finalPKhj7A freeze e3e9556f85bd1f1942d69a71c96369df9104b394701df8c4e99f2cc2aa95300d/all964hashes/exact8/956nonowned/314otherorderedprioritems/7exactexpected_changes/held11/worktreeguards/finaldrift0 verified. All7localancestorSHA identities and originalreceipt/unchangedfield hashes preserved; fourhistoricalpublic outcomes distinct from threeresearch-only remote completions. Independent52focused/576additionalin-memory adversarial assertions/invariants/state0/GSC90/localSEO0-sixunchanged/whitespace/actualbeforestage0-0. Master849full47maintenance completedlog inspected, not independentlyfull. Tightenedfaileddate-leadingrecheck exception retains preceding real operationalterms/true-mixed-yearless-future-JSON expiry checks and unchanged sourcechecksuffix. Originalpublicwording/sourceclocks/rooms-prices-fees-party-stay-currency-units/allCSVs/ledger/config/scheduler/34URLs unchanged; no source renewal/newexport/newpublicdelivery/newdailyunit. P3 existing operator-state-qa doesnotrecognize completed-production-verified convention; dedicated receipt-bound testscoverthiscorrection, broaderguardcoverage separate. Reviewer no projectwrites/stage/commit/push/network/browser/delegation; live workflowstatus not independentlyrefreshed. Only mechanical immutable consensus; guarded docs-tool-only release/remoteverification required, earliercandidates superseded/notstaged/fixed sprint unchanged."
+      "review_receipt": "FT-OPS-013 Boole independent read-only PASS_WITH_P3/noP0-P2 for finalPKhj7A freeze e3e9556f85bd1f1942d69a71c96369df9104b394701df8c4e99f2cc2aa95300d/all964hashes/exact8/956nonowned/314otherorderedprioritems/7exactexpected_changes/held11/worktreeguards/finaldrift0 verified. All7localancestorSHA identities and originalreceipt/unchangedfield hashes preserved; fourhistoricalpublic outcomes distinct from threeresearch-only remote completions. Independent52focused/576additionalin-memory adversarial assertions/invariants/state0/GSC90/localSEO0-sixunchanged/whitespace/actualbeforestage0-0. Master849full47maintenance completedlog inspected, not independentlyfull. Tightenedfaileddate-leadingrecheck exception retains preceding real operationalterms/true-mixed-yearless-future-JSON expiry checks and unchanged sourcechecksuffix. Originalpublicwording/sourceclocks/rooms-prices-fees-party-stay-currency-units/allCSVs/ledger/config/scheduler/34URLs unchanged; no source renewal/newexport/newpublicdelivery/newdailyunit. P3 existing operator-state-qa doesnotrecognize completed-production-verified convention; dedicated receipt-bound testscoverthiscorrection, broaderguardcoverage separate. Reviewer no projectwrites/stage/commit/push/network/browser/delegation; live workflowstatus not independentlyrefreshed. Only mechanical immutable consensus; guarded docs-tool-only release/remoteverification required, earliercandidates superseded/notstaged/fixed sprint unchanged.",
+      "release_receipt": "FT-OPS-013 release fc10aaae23714c70a76f5fbb88940dc99f267426 remote verified 2026-10-12T00:21:47.985Z; main0-0/emptyindex/exact8/all964indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared operator queue/QA tooling delivered and remote-verified; no new public-page delivery, fact renewal, CSV or family-learning unit. Seven historicalOctober9records nowcompleted usingoriginalverifieddates/identityfields: four public receipts with matching successfulhistoricalPagesruns; threeresearch-only remote completions, not publicdelivery or clearedremaininggates. Original receipts/decisions/blocker-nextgate history/hashbinding preserved. Failed source-recheck inspection dates no longer cause false operating-expiry blockers; preceding trueoperationalterms/mixed/yearless/JSON/future/oldsource-check checks retained. Master849full47maintenance52focused/state0/GSC90/SEO0sixunchanged/differentBoolePASS_WITH_P3 and576additionaladversarialassertions. ExistingP3 completed-production-verified broaderguardcoverage remains separate; dedicated7record tests protect correction. All34publicURLs/site-src-research/roomprice-fee-currency-unit-party-stay-sourceclocks/allCSVs/ledger/config/scheduler/held11 unchanged; 314otherorderedprioritems untouched. Docs/tool-only push-only, no Pageswait or newproductionverificationclaimed. One finish-first transaction thisrun/noquota; next independent exact-room budget gate, no assumed export demand or unchangeddenied source retry. Mechanical completion only/no metadata-onlycommit; sprint expiry unchanged.",
+      "completed_on": "2026-10-12T00:21:48.005Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "fc10aaae23714c70a76f5fbb88940dc99f267426"
     },
     {
       "id": "FT-IMP-119",
