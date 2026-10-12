@@ -1507,7 +1507,7 @@ function newYorkCityHotelComparisonCsv() {
 function newYorkCityFamilyHotelPage() {
   const hotels = newYorkCityFamilyHotels;
   const priceBasis = newYorkCityPriceBasis;
-  const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
+  const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="nyc-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
@@ -1518,11 +1518,11 @@ function newYorkCityFamilyHotelPage() {
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>${esc(priceBasis)}</p></section>${hotel.name === "Radio City Apartments" ? `\n            ${radioCityPriceHtml()}` : hotel.name === "Hotel Beacon" ? `\n            ${beaconSuiteHtml()}` : hotel.name === "TRYP by Wyndham New York City Times Square / Midtown" ? `\n            ${trypPriceHtml()}` : ""}
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>Historical USD/room/night, not a quote for your family. Two-adult samples checked July 25, 2026; taxes, fees and exact basis vary. <a href="#historical-price-basis">Full price basis and exclusions</a>.</p></section>${hotel.name === "Radio City Apartments" ? `\n            ${radioCityPriceHtml()}` : hotel.name === "Hotel Beacon" ? `\n            ${beaconSuiteHtml()}` : hotel.name === "TRYP by Wyndham New York City Times Square / Midtown" ? `\n            ${trypPriceHtml()}` : ""}
           </article>`).join("\n");
 
-  const rows = hotels.map((hotel) => `              <tr>
-                <td>${esc(hotel.name)}</td>
+  const rows = hotels.map((hotel, index) => `              <tr>
+                <td><a href="#nyc-hotel-${index + 1}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
                 <td>${esc(hotel.priceRange)}</td>
@@ -1548,58 +1548,24 @@ function newYorkCityFamilyHotelPage() {
   };
 
   const body = `    <main>
-      <section class="page-hero hotel-hero">
+      <section id="nyc-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">New York City family hotels</p>
-          <h1>Top Family Hotels in New York City: 12 Options by Trip Style</h1>
+          <h1>New York City Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare twelve New York City family hotels by room layout, published occupancy, kitchen or breakfast utility, location, historical per-room nightly budget ranges, and themes from sampled online reviews.</p>
+          <p>Room layouts, kitchens, areas and historical nightly budgets for twelve hotels.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts, prices, and review sources checked:</strong> July 25, 2026</p>
-        <p>${esc(priceBasis)}</p>
+        <p>Historical July 25 records; <a href="#historical-price-basis">price limits</a>. <a href="#dated-family-budgets">November five-person budgets</a> checked October 11, 2026.</p>
       </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200" srcset="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200 1200w" sizes="(max-width: 700px) calc(100vw - 36px), 1160px" alt="Central Park and the New York City skyline." width="1280" height="894" loading="eager" decoding="async" fetchpriority="high">
-          <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>.</figcaption>
-        </figure>
-      </section>
-      <section class="band intro-band">
-        <div class="container answer-grid">
-          <div>
-            <p class="eyebrow">Short answer</p>
-            <h2>Choose the room function before the hotel brand</h2>
-            <p>Start with Hotel Beacon, Homewood, Residence Inn, or Radio City Apartments when kitchen or breakfast utility leads. Use TRYP, Lotte, or a Hotel Beacon apartment when five-plus-person occupancy is the constraint. Compare Marriott Marquis for Broadway, Conrad for separate Downtown space, 1 Hotel for a Brooklyn-first trip, and Four Seasons only when the indoor pool and luxury service justify its price and occupancy limits.</p>
-            <p><a class="text-link" href="./new-york-city-with-kids.html">Compare New York City stay areas before choosing a property</a></p>
-          </div>
-          <dl class="snapshot">
-            <div><dt>Hotels covered</dt><dd>12 distinct options</dd></div>
-            <div><dt>Price format</dt><dd>Historical USD/room/night, not a quote</dd></div>
-            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
-            <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
-          </dl>
-        </div>
-      </section>
-      <section class="container page-section rank-ready-section">
-        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
-        <div class="quick-pick-grid hotel-pick-grid">
-          <article class="quick-pick"><span>Upper West Side kitchen</span><strong>Hotel Beacon</strong><p>Start here when Central Park and AMNH matter and a real kitchenette or larger suite is more useful than included breakfast.</p></article>
-          <article class="quick-pick"><span>Lower-cost kitchen or breakfast</span><strong>Homewood, Residence Inn, or Radio City</strong><p>Compare exact room size, beds, kitchen equipment, breakfast, and route; the lowest standard-room price does not represent every family layout.</p></article>
-          <article class="quick-pick"><span>Five or more people</span><strong>Radio City, TRYP, Hotel Beacon, or Lotte</strong><p>Use only the named large-family category and its published occupancy. Do not infer capacity from a hotel-wide family label.</p></article>
-          <article class="quick-pick"><span>Times Square and Broadway</span><strong>Embassy Suites or Marriott Marquis</strong><p>Choose Embassy for breakfast in a compact king-and-sofa setup; choose Marriott for two doubles or a paid family connector at the center of the theater district.</p></article>
-          <article class="quick-pick"><span>More space Downtown</span><strong>Conrad New York Downtown</strong><p>Separate living and sleeping areas can justify the location when Lower Manhattan anchors the plan; count the extra Midtown trips first.</p></article>
-          <article class="quick-pick"><span>Brooklyn or pool splurge</span><strong>1 Hotel Brooklyn Bridge or Four Seasons Downtown</strong><p>Choose 1 Hotel for a DUMBO-first premium base; compare Four Seasons only for its indoor pool, published occupancy, and no-rollaway limits.</p></article>
-        </div>
-      </section>
-      ${datedBudgetComparisonHtml()}
-      <section id="hotel-comparison" class="band">
+      <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p><a href="#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/new-york-city-family-hotels.csv" download>download the twelve-hotel comparison (.csv)</a>.</p>
-          <p class="review-label">${esc(priceBasis)}</p>
-          <div class="comparison-scroll">
+          <p><a href="./new-york-city-with-kids.html">Compare stay areas</a> | <a href="#dated-family-budgets">Five-person dated budgets</a></p>
+          <p>July 25, 2026 historical two-adult room bands, not family-room quotes. Exact party and stay basis is incomplete; taxes and fees vary. Upper ends are editorial ceilings, not observed quotes. <a href="#historical-price-basis">Full price basis</a>.</p>
+          <div class="comparison-scroll" role="region" aria-label="NYC twelve-hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Approx. USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
@@ -1607,7 +1573,16 @@ ${rows}
               </tbody>
             </table>
           </div>
+          <p id="historical-price-basis" class="review-label" style="scroll-margin-top: 80px">${esc(priceBasis)}</p>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/new-york-city-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Historical July 25 records; the separate October room-budget samples are not included.</p></details>
         </div>
+      </section>
+      ${datedBudgetComparisonHtml()}
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200" srcset="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200 1200w" sizes="(max-width: 700px) calc(100vw - 36px), 1160px" alt="Central Park and the New York City skyline." width="1280" height="894" loading="lazy" decoding="async">
+          <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>.</figcaption>
+        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>

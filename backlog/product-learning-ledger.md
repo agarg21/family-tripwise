@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-221 - Tables first, repeated caveats once - 2026-10-12
+
+FT-IMP-125 [bounded scan record](../docs/research/nyc-glance-first-task-2026-10-12.json). Direct user asks simpler pages with quick-glance tables, not presumed CSV value. Current production NYC desktop main comparison starts3611.56px, dated table2689.63px;14 identical full historical-basis paragraphs and repeated starter layers precede or surround the decision. REJECT hypothesis that comparison-first scan is already served. IMPLEMENT tables before photo, eliminate redundant introductory layers, keep one full historical basis plus adjacent dated non-family-quote labels/links, preserve unique hotel/budget facts and source dates, and place existing CSV in secondary native disclosure.
+
+Evidence DIRECT_USER_DIRECTION_AND_PAGE_ONLY_PROXY, not actual parent demand, satisfaction, reading-time or SEO lift. High observed placement/repetition confidence, moderate proxy usefulness. Lesson: no prequalified queued item is not proof there is no eligible task; discover a concrete scan failure, then finish its smallest correction. Falsify lost unique fields/price limits, failed mobile/keyboard/anchor task, source drift or contrary actual-user evidence. Full/focused/different read-only PASS and verified release required; no newCSV/fact renewal/provider retry/newURL.
+
 ## LRN-220 - Put dated room budgets and basis limits in one view - 2026-10-12
 
 FT-IMP-124 [current task record](../docs/research/nyc-dated-budget-comparison-task-2026-10-12.json). Family decision: scan three five-person November8-13/five-night NYC budgets without reconstructing separate cards or treating July standard-room bands as exact-party quotes. Hypothesis that the main comparison already answers this is REJECTED. IMPLEMENT one same-record3-row table before the old12-hotel table, with native suite/apartment/room-night units, named categories/plans, displayed totals and fee/deposit/age/room limits. October11 booking observations120/121/123 are reused, not rechecked or renewed. RadioCity count-only children/bed conflict, Beacon two-child-limit/bed/renovation unknowns, TRYP fee inclusion and acceptance/setup limits stay adjacent; deposit/optional bed not folded into stay totals.

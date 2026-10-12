@@ -1,0 +1,16 @@
+{
+  "action_id": "FT-IMP-125",
+  "task_checked_on": "2026-10-12",
+  "evidence_class": "DIRECT_USER_DIRECTION_AND_PAGE_ONLY_PROXY",
+  "family_decision": "Scan hotel function, area and historical nightly orientation, then reach exact room/budget limitations without reconstructing repeated introductions or needing a spreadsheet.",
+  "hypothesis": "The existing page exposes its main comparison early enough and duplicates only necessary price context.",
+  "before": {"viewport_width": 1280, "viewport_height": 900, "main_table_top_px": 3611.5625, "dated_table_top_px": 2689.625, "main_visible_words": 5248, "full_historical_basis_copies": 14, "csv_position": "Ahead of the main table"},
+  "result": "REJECT hypothesis; implement comparison-first ordering and eliminate redundant starter layers/full disclaimer copies while retaining unique decisions and adjacent dated cautions.",
+  "after": {"main_visible_words": 4429, "full_historical_basis_copies": 1, "comparison_section_top_px_by_width": {"1280": 354.5, "390": 585.6953125, "320": 610.890625}, "first_row_top_px_by_width": {"1280": 657.7265625, "390": 960.921875, "320": 1067.7109375}, "no_page_overflow": true, "keyboard_card_links_checked": 36, "price_basis_links_checked": 3, "existing_budget_links_checked": 9, "csv_disclosure_keyboard_checked": 3, "images_loaded": true, "browser_errors": 0},
+  "proof": "/tmp/ft125-browser/local-release-responsive.json and local-release-context.png; initial larger-heading/earlier frames superseded. Arrow-key position measurements can include native scroll animation; moving horizontal region and sticky readable identity verified, not a claim that every fast left-arrow batch reaches zero.",
+  "source_records": ["tools/page-generation/family-hotel-pages.mjs", "docs/research/nyc-radio-city-family-price-2026-10-11.json", "docs/research/nyc-beacon-suite-budget-rest-2026-10-11.json", "docs/research/nyc-tryp-family-price-2026-10-11.json"],
+  "source_dates": "Historical facts/reviews/bands stay July25; exact-category price checks stay October11. No fresh external source collection or renewal.",
+  "limits": "User direction is product direction, not measured parent demand. The task is an internal proxy, not actual-user testing, preference or satisfaction. No SEO lift, reading-time or booking-acceptance evidence. CSV utility remains unvalidated, existing bytes retained.",
+  "confidence": "High placement and repetition measurement; moderate proxy scan benefit. Actual user outcomes and ranking effects unknown.",
+  "next_falsification_trigger": "Lost unique field, inaccessible price basis, failed keyboard/mobile/card or old budget anchors, changed official record, contrary actual-user evidence."
+}

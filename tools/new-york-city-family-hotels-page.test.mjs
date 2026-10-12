@@ -40,12 +40,12 @@ test("publishes one canonical 12-hotel New York City comparison", () => {
   ];
 
   assert.match(html, /<title>Top Family Hotels in New York City: 12 Options by Trip Style<\/title>/);
-  assert.match(html, /<h1>Top Family Hotels in New York City: 12 Options by Trip Style<\/h1>/);
+  assert.match(html, /<h1>New York City Family Hotels<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/new-york-city-family-hotels\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/new-york-city-family-hotels\.html/g) || []).length, 1);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
-  assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 12);
+  assert.equal((html.match(/<article class="detail-card hotel-card" id="nyc-hotel-\d+"/g) || []).length, 12);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 12);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
   assert.match(html, /Historical USD\/room\/night, not a quote/);
@@ -86,15 +86,18 @@ test("preserves all twelve bands while making historical room and party limits a
   assert.equal(rows.length, bands.length);
   rows.forEach((row, index) => assert.ok(row[0].includes(`<td>${bands[index]}</td>`)));
   assert.match(table, /<th>Approx\. USD\/room\/night<\/th>/);
-  const cards = [...html.matchAll(/<article class="detail-card hotel-card">([\s\S]*?)<\/article>/g)];
+  const cards = [...html.matchAll(/<article class="detail-card hotel-card" id="nyc-hotel-\d+"[^>]*>([\s\S]*?)<\/article>/g)];
   cards.forEach((card, index) => {
     assert.ok(card[1].includes(`<dd>${bands[index]}</dd>`));
     assert.match(card[1], /sample checked July 25, 2026/);
-    assert.match(card[1], /two-adult room samples/);
-    assert.match(card[1], /Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded/);
-    assert.match(card[1], /Taxes and mandatory fees were included only where stated/);
-    assert.match(card[1], /a second room are separate/);
+    assert.match(card[1], /Two-adult samples checked July 25, 2026; taxes, fees and exact basis vary/);
+    assert.match(card[1], /not a quote for your family/);
+    assert.match(card[1], /href="#historical-price-basis"/);
   });
+  assert.match(html, /id="historical-price-basis"[^>]*>Historical USD\/room\/night planning ranges/);
+  assert.match(html, /Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded/);
+  assert.match(html, /Taxes and mandatory fees were included only where stated/);
+  assert.match(html, /a second room are separate/);
   assert.equal(cards.length, 12);
   assert.match(cards[5][1], /guest review reported about \$654 on another date; that anecdote is not a comparable family-room quote/);
   assert.doesNotMatch(html, /A recent (?:public|standard-room)|rough total per night|rough planning totals|approximate total nightly price/i);
@@ -141,10 +144,10 @@ test("portable comparison preserves same records, historical prices and source r
     assert.equal(row[13], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#hotel-comparison");
     assert.ok(!row.some((cell) => /^\s*[=+\-@]/.test(cell)));
   }
-  assert.match(html, /<section id="hotel-comparison" class="band">/);
+  assert.match(html, /<section id="hotel-comparison" class="band" data-glance-first>/);
   assert.match(html, /<section id="sources-checked" class="container page-section source-section">/);
   assert.match(html, /href="\.\.\/downloads\/new-york-city-family-hotels\.csv" download/);
-  assert.match(html, /href="#hotel-comparison"/);
+  assert.match(html, /<details><summary>Spreadsheet copy<\/summary>/);
 });
 
 test("full generation is idempotent and leaves current output unchanged", () => {

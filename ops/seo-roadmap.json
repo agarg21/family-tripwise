@@ -20,10 +20,48 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-125",
+      "title": "Simplify NYC hotels into a glance-first comparison",
+      "kind": "existing-page-usability",
+      "status": "in_progress",
+      "selected_on": "2026-10-12",
+      "started_at": "2026-10-12T11:15:08Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/family-hotel-pages.mjs",
+        "site/where-to-stay/new-york-city-family-hotels.html",
+        "site/styles.css",
+        "tools/nyc-glance-first.test.mjs",
+        "tools/nyc-dated-budget-comparison.test.mjs",
+        "tools/new-york-city-family-hotels-page.test.mjs",
+        "docs/research/nyc-glance-first-task-2026-10-12.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "Fresh direct user direction: simplify pages, prioritize quick-glance tables, not assumed CSV value. Production desktop task measured main comparison top3611.56px, dated comparison2689.63px, 5248 visible main words and14 identical full historical price paragraphs. Repeated photo/intro/snapshot/trip starts delay the decision; no CSV preference or SEO lift proven.",
+      "acceptance_criteria": [
+        "Put the twelve-hotel comparison immediately after a compact dated trust note, followed by the unchanged dated three-room budget table; retain licensed image after comparisons.",
+        "Remove redundant intro/snapshot/trip-start layer and twelve repeated full price paragraphs. Keep one full historical basis with adjacent short historical/non-family-quote labels and accessible links beside each card price.",
+        "Keep all twelve hotel facts, sampled reviews, unique price contexts, FAQs/schema, sources/maps, original price/evidence dates and three detailed budget blocks unchanged; table names link to their visible hotel details. Existing CSV bytes stay unchanged with link secondary in a closed native disclosure below the comparison.",
+        "Focused/full native QA, actual1280/390/320 scan/keyboard-scroll/card-link/disclosure/old-budget-anchor/image QA, different independent read-only PASS, exact-path guarded release and Pages/marker/productionSEO/all affected bytes."
+      ],
+      "measurement_plan": "LRN221 direct user direction plus internal scan proxy. Compare first-table position and duplicate text count; no reading-time, real-user success, demand, rankings or CTR claims. Reused Oct11 GSC finalOct9 vs Oct10 finalOct8 is orientation only. Falsify lost unique decision facts, detached price limits, broken native navigation, contrary actual-user evidence or source drift.",
+      "production_invariant": "All65 shared hotel records, three Oct11 source/budget blocks, all12 source facts and maps, FAQs/schema/meta/canonical,34URLs and every other public asset including allCSV bytes unchanged. CSS only additive NYC-scoped comparison selectors. Preserve976baseline/327prior ordered items/held11; carry124 mechanical completion only. Actual direct run11:13:52Z/07:13:52EDT, start budget ends11:58:52Z, fixed sprint expiry unchanged. No new source attempt, price renewal, city/URL/account/paid/indexing/analytics/scheduler mutation.",
+      "decision": "IMPLEMENT one table-first simplification from the verified scan failure; not a portfolio-wide rewrite or export removal. No prequalified queue item was not proof there was no useful work.",
+      "review_receipt": "FT-IMP-125 Popper clean independent STRICT READ-ONLY PASS/noP0-P3; reviewed1608389f8793fb6a8b53f8bb6e4aaf5014f038b4bd51ffb55c2bd71de1c9052c/all978hashes-modes/exact12/966nonowned/327prior/held11-ledgerisolated/finaldrift0. No file-scratch-temp-generated/network/browser/delegation/staging/commit writes; pure12focused/invariants/state0/GSC90/localSEO0sixprior. Master877full48maintenance completed log04138518a75984523e6d63bae1fc0d473230054c452d7262a97f21e9b7cbe5a7 inspected/notduplicated. All12unique cardfacts/65records/tablevalues/three datedbudgetblocks-clocks/meta-schema/other33URLs/allCSV exact; actual18818byte download preserved. Saved1280-390-320/36cardlinks/3basis/9budgets/secondarydisclosure/images/nooverflow/errors0 proof inspected, no independentlivebrowser/production/userpreference/SEOgain. Mobile firstrows belowinitialviewport;320scrollstart160 notzero. Only mechanicalAquniasexceptionreceipt differs from originalcandidate; cleanre-review clearsproceduralgate, no productchange. Guardedpush/Pages-marker-productionSEO/affectedbytes/livebrowser verification still required. No new CSV/factrenewal/source retry or scheduler mutation."
+    },
+    {
       "id": "FT-IMP-124",
       "title": "Compare dated five-person NYC room budgets on-page",
       "kind": "existing-page-family-budget-task",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-12",
       "started_at": "2026-10-12T04:02:09Z",
       "allowed_during_observation": true,
@@ -57,7 +95,11 @@
       "measurement_plan": "Can the exact-party dated budgets and their differing charge/age/room limits be recovered together without reconstructing3cards? Internal proxy, not real-user satisfaction or SEO lift.",
       "production_invariant": "One additive comparison plus scoped dated-family-budgets CSS only; oldHTML/styles recover after removing additions, all other site and CSV bytes unchanged; marker and3affectedassets exact; all original record/date clocks preserved.",
       "next_eligible_run": "Finish this current comparison task; no unchanged provider or denied-source retry.",
-      "review_receipt": "FT-IMP-124 Hubble independent read-only PASS/noP0-P3; review735ebe87bfc1d907165089cc6d33830b469f6f6941f5065a3d2632ea38689765/all976hashes-modes/exact11/965nonowned/326priorordereditems/held11/oldledgerisolation/finaldrift0. Independent36focused-navigation/invariants/state0/GSC90/localSEO0sixunchanged; Master872full48maintenance completed loghashfbbc210d603ca3a089e99a721a80009d0803b70ffcb9ffd889c84f7c08e1fab3 inspected/notduplicated. All65hotelrecords/sourcepricefee-party-stay-reviewclocks/oldHTML/styles except additiveblock-five scopedselectors/allotherURLs-CSV preserved. Final local-qualified1280/390/320region1160-354-284/fixed156rowidentity/whiteRGB255-andtealRGB11-73-70 labels/readable/keyboardscroll0-400-398/sticky/nooverflow-clipping/all9Enterdetailanchorscorrect-visible/images1237-377-302loaded/errors0 proof inspected, no independentlivebrowser or actualparent/SEO claim. Oct12LRN220currenttaskproxy reusesOct11bookingrecords; differentcategories-ageinput-completeness maintained, deposits/optionalrollaway separate andTRYPfeesnotdoublecounted. Earliercontrast/specificity/stylesheet-navigation frames superseded; only finalqualifiedproofs used. No source/provider/deniedretry/newCSV/URL/city/account/payment/spending/indexing/scheduler/security mutation. Only immutable mechanical consensus appended; exact guardedpush/Pages-marker-productionSEO and3affectedassets verification pending; fixedsprint unchanged."
+      "review_receipt": "FT-IMP-124 Hubble independent read-only PASS/noP0-P3; review735ebe87bfc1d907165089cc6d33830b469f6f6941f5065a3d2632ea38689765/all976hashes-modes/exact11/965nonowned/326priorordereditems/held11/oldledgerisolation/finaldrift0. Independent36focused-navigation/invariants/state0/GSC90/localSEO0sixunchanged; Master872full48maintenance completed loghashfbbc210d603ca3a089e99a721a80009d0803b70ffcb9ffd889c84f7c08e1fab3 inspected/notduplicated. All65hotelrecords/sourcepricefee-party-stay-reviewclocks/oldHTML/styles except additiveblock-five scopedselectors/allotherURLs-CSV preserved. Final local-qualified1280/390/320region1160-354-284/fixed156rowidentity/whiteRGB255-andtealRGB11-73-70 labels/readable/keyboardscroll0-400-398/sticky/nooverflow-clipping/all9Enterdetailanchorscorrect-visible/images1237-377-302loaded/errors0 proof inspected, no independentlivebrowser or actualparent/SEO claim. Oct12LRN220currenttaskproxy reusesOct11bookingrecords; differentcategories-ageinput-completeness maintained, deposits/optionalrollaway separate andTRYPfeesnotdoublecounted. Earliercontrast/specificity/stylesheet-navigation frames superseded; only finalqualifiedproofs used. No source/provider/deniedretry/newCSV/URL/city/account/payment/spending/indexing/scheduler/security mutation. Only immutable mechanical consensus appended; exact guardedpush/Pages-marker-productionSEO and3affectedassets verification pending; fixedsprint unchanged.",
+      "release_receipt": "FT-IMP-124 release b56dfed206be3b1dd7a3c7ecf4d8ba8a4898a2a6 remote verified 2026-10-12T04:27:04.278Z; main0-0/emptyindex/exact11/all976indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified existing NYC dated five-person comparison at2026-10-12T04:25:15.646Z; Pages38203632760 success/markerb56dfed exact/threeHTTP200assetsbyte-exact/productionSEO0sixunchanged. Actualproduction1280-390-320region1160-354-284/fixed156stickyreadablehotelidentities/whiteRGB255-linktealRGB11-73-70/nooverflow-clipping/keyboardhorizontal0-400-400/all9Enterdetailanchorscorrect-visible/images1237-377-302loaded/errors0. Screenshot /tmp/ft124-browser/production-context.png andproduction-responsive.json inspected. One same-record table surfaces12718.15/4251.14/3154.33USD five-night budgets with native nightly units, namedcategories/plans, count-only-versus-enteredage evidence and fee-deposit/room limits; not identical rooms, accepted party, ranking, savings or complete costs. LRN220firstOct12daily tasklearning integratedpublicdelivery, not learned-onlyreport/newprice/actualparents/SEOproof. All65records/Oct11sources andJulybands-reviewclocks/alloldHTML except additiveblock/allpriorstyles except fiveID-scopedrules/other33URLs/allCSV/held11 preserved. Existing childacceptance/bed/cooking/renovation/fullcharge/payment/cancellation/sourceholds remain. Firstfinishedtransaction actualrun04:00:25Z/00:00:25EDT; noadditionaltransaction started. Preview10084 stopped/verification140closed/viewportreset/Hubbleclosed/allnative-index-invariant-push-Pages-production sessions complete. No newCSV/sourcecollection/deniedretry/URL/city/account/spending/security/indexing/analytics/scheduler mutation or factrenewal. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-12T04:27:04.315Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "b56dfed206be3b1dd7a3c7ecf4d8ba8a4898a2a6"
     },
     {
       "id": "FT-IMP-123",

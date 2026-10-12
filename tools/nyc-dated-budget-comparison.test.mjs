@@ -39,10 +39,10 @@ test("deposit and optional rollaway are not folded into displayed stay arithmeti
   assert.match(rows[2].charges,/already includes resort\/city fees/);
 });
 
-test("generated NYC comparison precedes the historical table with all three existing detail anchors", () => {
+test("generated NYC dated comparison follows the glance table with all three existing detail anchors", () => {
   const html=readFileSync(new URL("../site/where-to-stay/new-york-city-family-hotels.html",import.meta.url),"utf8"),block=datedBudgetComparisonHtml();
   assert.ok(html.includes(block));
-  assert.ok(html.indexOf(block)<html.indexOf('<section id="hotel-comparison"'));
+  assert.ok(html.indexOf(block)>html.indexOf('<section id="hotel-comparison"'));
   assert.equal((html.match(/id="dated-family-budgets"/g)||[]).length,1);
   for(const row of datedBudgetRows()){
     assert.ok(block.includes(`href="#${row.anchor}"`));
