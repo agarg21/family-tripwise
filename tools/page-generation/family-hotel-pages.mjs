@@ -227,10 +227,10 @@ const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfc
 
 function sanDiegoFamilyHotelPage() {
   const hotels = sanDiegoFamilyHotels;
-  const hotelCards = hotels.map((hotel) => {
+  const hotelCards = hotels.map((hotel, index) => {
     const feeNote = sanDiegoCurrentFeeNote(hotel.name);
     const roomNote = sanDiegoCurrentRoomNote(hotel.name);
-    return `          <article class="detail-card hotel-card">
+    return `          <article class="detail-card hotel-card" id="san-diego-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
@@ -245,8 +245,8 @@ function sanDiegoFamilyHotelPage() {
           </article>`;
   }).join("\n");
 
-  const comparisonRows = hotels.map((hotel) => `              <tr>
-                <td>${esc(hotel.name)}</td>
+  const comparisonRows = hotels.map((hotel, index) => `              <tr>
+                <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
                 <td>${esc(hotel.priceRange)}</td>
@@ -267,12 +267,33 @@ function sanDiegoFamilyHotelPage() {
   };
 
   const body = `    <main>
-      <section class="page-hero hotel-hero">
+      <section id="san-diego-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
-          <h1>Top Family Hotels in San Diego: 12 Options by Trip Style</h1>
+          <h1>San Diego Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare 12 San Diego family hotels by pool and beach access, room setup, breakfast or kitchen needs, approximate nightly price, location, and themes from sampled online reviews.</p>
+          <p>Compare 12 hotels by stay style, area and historical nightly budget, then check room setup, kitchens and pools.</p>
+        </div>
+      </section>
+      <section class="container trust-panel" aria-label="Review status">
+        <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
+        <p>Approximate prices are broad July planning ranges. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking.</p>
+      </section>
+      <section id="hotel-comparison" class="band" data-glance-first>
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Comparison</p>
+            <h2>Quick hotel comparison</h2>
+          </div>
+          <p class="review-label">Approximate nightly prices remain broad July planning ranges. Use them to set a budget, then compare the final total for the same dates, occupancy, and room setup.</p>
+          <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
+            <table class="comparison-table hotel-comparison">
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <tbody>
+${comparisonRows}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
       <section class="container page-section rank-ready-section">
@@ -296,32 +317,11 @@ function sanDiegoFamilyHotelPage() {
         </dl>
         <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
       </section>
-      <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
-        <p>Approximate prices are broad July planning ranges. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking.</p>
-      </section>
       <section class="container media-section">
         <figure class="licensed-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/21a-san-diego-mission-bay.jpg" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="eager" decoding="async">
+          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/21a-san-diego-mission-bay.jpg" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="lazy" decoding="async">
           <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>.</figcaption>
         </figure>
-      </section>
-      <section class="band">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Comparison</p>
-            <h2>Quick hotel comparison</h2>
-          </div>
-          <p class="review-label">Approximate nightly prices remain broad July planning ranges. Use them to set a budget, then compare the final total for the same dates, occupancy, and room setup.</p>
-          <div class="comparison-scroll">
-            <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Approx. nightly price</th><th>Map</th><th>Most important check</th></tr></thead>
-              <tbody>
-${comparisonRows}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </section>
       <section class="container page-section">
         <div class="section-heading">

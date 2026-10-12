@@ -15,7 +15,7 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.doesNotMatch(html, /<meta[^>]+name=["']robots["'][^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html/g) || []).length, 1);
   assert.match(html, /<title>Top Family Hotels in San Diego: 12 Options by Trip Style<\/title>/);
-  assert.match(html, /<h1>Top Family Hotels in San Diego: 12 Options by Trip Style<\/h1>/);
+  assert.match(html, /<h1>San Diego Family Hotels<\/h1>/);
   assert.match(html, /Hotel facts checked:<\/strong> August 17, 2026/);
   assert.match(html, /Online-review themes sampled:<\/strong> July 18-21, 2026/);
   assert.match(html, /August checks did not provide consistent family totals/i);
@@ -67,7 +67,7 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
   assert.match(quickPicks, /<span>Bay plus Pacific Beach<\/span><strong>Catamaran Resort<\/strong>/);
   assert.doesNotMatch(quickPicks, /Six different stay shapes|Mission Bay Resort for a wading pool|Paradise Point for scale|The Dana for clearer room-capacity details/);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
-  assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 12);
+  assert.equal((html.match(/<article class="detail-card hotel-card" id="san-diego-hotel-\d+"/g) || []).length, 12);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 12);
   assert.equal((html.match(/<h4>Price context and key check<\/h4>/g) || []).length, 12);
   assert.doesNotMatch(html, /<h2>How to use this page<\/h2>/);
@@ -89,13 +89,14 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
   assert.equal((html.match(/The range uses older public examples/g) || []).length, 0);
 });
 
-test("starts with one trip-style decision surface before evidence and media", () => {
+test("starts with the comparison, retaining one trip-style surface before media", () => {
   const tripStyleIndex = html.indexOf("Pick the closest trip style");
   const reviewStatusIndex = html.indexOf('aria-label="Review status"');
   const mediaIndex = html.indexOf('class="container media-section"');
 
-  assert.ok(tripStyleIndex > html.indexOf("</section>", html.indexOf('class="page-hero hotel-hero"')));
-  assert.ok(tripStyleIndex < reviewStatusIndex);
+  const comparisonIndex = html.indexOf('id="hotel-comparison"');
+  assert.ok(reviewStatusIndex < comparisonIndex);
+  assert.ok(comparisonIndex < tripStyleIndex);
   assert.ok(tripStyleIndex < mediaIndex);
   assert.equal((html.match(/Pick the closest trip style/g) || []).length, 1);
   assert.doesNotMatch(html, /Start with the kind of trip you want/);
@@ -103,10 +104,10 @@ test("starts with one trip-style decision surface before evidence and media", ()
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
   assert.equal((html.match(/href="\.\.\/where-to-stay\/san-diego-with-kids\.html"/g) || []).length, 1);
   assert.match(html, /Compare San Diego stay areas first/);
-  assert.ok(html.indexOf("Compare San Diego stay areas first") < reviewStatusIndex);
+  assert.ok(html.indexOf("Compare San Diego stay areas first") > comparisonIndex);
   assert.equal((html.match(/<dl class="snapshot">/g) || []).length, 1);
-  assert.ok(html.indexOf('<dl class="snapshot">') < reviewStatusIndex);
-  assert.ok(html.indexOf("One base or split?") < reviewStatusIndex);
+  assert.ok(html.indexOf('<dl class="snapshot">') > comparisonIndex);
+  assert.ok(html.indexOf("One base or split?") > comparisonIndex);
   assert.ok(html.indexOf("One base or split?") < html.indexOf("Compare San Diego stay areas first"));
 });
 

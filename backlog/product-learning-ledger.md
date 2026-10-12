@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-223 - Bring the San Diego hotel comparison ahead of setup - 2026-10-12
+
+FT-IMP-127 [scan task](../docs/research/san-diego-glance-first-task-2026-10-12.json). Family decision: scan hotel function, area and historical nightly orientation, then reach exact room/fee checks. Production table begins2513px at1280/3243px at390 after six category picks, a snapshot and image; names are not detail links. REJECT hypothesis that the current page gives a quick comparison first. IMPLEMENT compactheader/table-first/native12detail links while retaining complete trip-routing/split-base guidance after comparison and all12cardfacts/latestDana-Homewood notes.
+
+Direct user direction plus PAGE_ONLY_PROXY, not actual-parent testing, preference, satisfaction, reading-time or SEO lift. High observed geometry/parity confidence, moderate expected scan benefit. Lesson: a useful routing section need not be deleted to expose the comparison first; downloads are not the default answer. Falsify lost routing/room/fee/price limitations, source-date drift, failed mobile/keyboard/image or contrary actual-user evidence. Full/focused/different strict read-only PASS and verified release required. No newCSV/source retry/URL.
+
 ## LRN-222 - Remove repeated setup before the Chicago comparison - 2026-10-12
 
 FT-IMP-126 [scan task](../docs/research/chicago-glance-first-task-2026-10-12.json). Family decision: scan room function, pool/kitchen, area and historical nightly orientation then open specific hotel checks. Current production comparison starts2687px desktop/3784mobile after photo, intro, snapshot and five trip-start summaries; CSV promoted first. REJECT hypothesis that existing glance task is already served. IMPLEMENT compactheader/tablefirst/nativehotellinks, one full historical basis with adjacent dated cautions, unchangedCSV secondary and licensed photo after comparison. All ten unique cards, price/tax/date ambiguities, Swissotel specialty scope and IHG pool-completion unknowns retained.

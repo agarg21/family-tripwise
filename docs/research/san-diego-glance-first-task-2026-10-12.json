@@ -1,0 +1,33 @@
+{
+  "action_id": "FT-IMP-127",
+  "checked_on": "2026-10-12",
+  "url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+  "evidence_class": "PAGE_ONLY_PROXY",
+  "user_direction": "Simpler useful pages and quick-glance tables; CSV preference is unproven.",
+  "task": "Compare12hotel functions/areas/historical budgets, then reach room/fee checks without reconstructing the whole page.",
+  "before": [
+    {"width":1280,"comparison_top":2512.75,"first_row_top":2844.78125,"words":3300,"page_overflow":false},
+    {"width":390,"comparison_top":3242.828125,"first_row_top":3567.0234375,"words":3300,"page_overflow":false}
+  ],
+  "result": "IMPLEMENT comparison before complete preserved category/snapshot routing and image; compact header and12native detail links.",
+  "local_validation": {
+    "widths": [1280,390,320],
+    "comparison_tops": [408.5,658.890625,732.0859375],
+    "first_row_tops": [669.7265625,968.1171875,1122.90625],
+    "visible_words": 3283,
+    "page_overflow": false,
+    "keyboard_detail_links_passed": 36,
+    "keyboard_scroll_offsets": [0,400,798],
+    "sticky_identity_width": 180,
+    "loaded_image_natural_width": 3951,
+    "browser_errors": [],
+    "screenshots": "/tmp/ft127-browser/local-1280.png, local-390.png, local-320.png and local-scrolled-*",
+    "limitation": "First rows still below initial viewport on narrow phones; no universal one-screen/reading-time claim. Proof is internal proxy, not real-parent testing."
+  },
+  "confidence": "High observed geometry and retained-field parity; moderate expected scan benefit, no actual-parent or SEO-outcome evidence.",
+  "preserve": "All12card bodies and category routing, current DanaOct8/HomewoodOct11/LoewsOct6/LJSOct5 notes, oldJulyprice andAug17fact/July18-21review clocks,65sharedrecords, allCSV and other33URLs.",
+  "falsification": "Lost routing/facts/limits, failed mobile/keyboard/image, source or quote-basis drift, contrary actual-user evidence.",
+  "no_source_renewal": true,
+  "no_new_export": true,
+  "gsc": "Reused Oct11 public API summary finalizedOct9 versusOct10finalOct8; orientation only, not CTR/action outcome evidence."
+}

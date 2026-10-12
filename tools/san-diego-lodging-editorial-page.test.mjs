@@ -60,7 +60,7 @@ test("keeps hotel-list intent on the hotel page instead of duplicating hotel pro
 
   assert.match(hotels, /12 options, with the useful checks up front/);
   assert.match(hotels, /Themes in sampled online reviews/);
-  assert.match(hotels, /Approx\. nightly price/);
+  assert.match(hotels, /Planning USD\/room\/night/);
 });
 
 test("uses concise source boundaries without defensive internal language", () => {

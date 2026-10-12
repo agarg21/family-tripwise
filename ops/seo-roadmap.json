@@ -20,10 +20,48 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-127",
+      "title": "Put the San Diego hotel comparison before trip-style setup",
+      "kind": "existing-page-usability",
+      "status": "in-progress",
+      "selected_on": "2026-10-12",
+      "started_at": "2026-10-12T13:04:14Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/family-hotel-pages.mjs",
+        "site/where-to-stay/san-diego-family-hotels.html",
+        "site/styles.css",
+        "tools/san-diego-glance-first.test.mjs",
+        "tools/san-diego-family-hotels-page.test.mjs",
+        "tools/san-diego-lodging-editorial-page.test.mjs",
+        "docs/research/san-diego-glance-first-task-2026-10-12.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "Fresh direct user instruction favors simpler pages and quick-glance tables rather than assumed CSV demand. Actual production San Diego task at1280/390: comparison starts2512.75/3242.83px and first rows2844.78/3567.02,3300words. Six trip starts, four snapshot fields and licensed image precede the table; hotel identities have no native detail links.",
+      "acceptance_criteria": [
+        "Compact literal San Diego Family Hotels visible H1 and concise promise; unchanged dated trust note then existing12hotel table with accessible keyboard scroll, sticky identities and12native card links. Keep document SEOtitle/meta/canonical/schema exact.",
+        "Move the complete existing category-picks/snapshot/one-base-versus-split decision after the comparison and before map/cards. Move licensed image after comparison with original URL/attribution; no loss of12unique card facts, trip-routing facts, fee/room notes or source clocks.",
+        "Retain older broad July bands and all original adjacent price limitations, explicitly label table USD/room/night planning unit and link preserved exact checks. Do not imply new family-room quotes, hotel renewal, comfortable occupancy or pool clearance.",
+        "No new CSV or export; all65sharedrecords/allCSV/other33URLs/sitemap unchanged. Focused/full nativeQA, actual1280/390/320 image/nooverflow/keyboard/card/price-context checks, different strict read-only PASS, exact guardedpush and Pages/marker/productionSEO/affectedbyte verification."
+      ],
+      "measurement_plan": "LRN223 PAGE_ONLY_PROXY integrated delivery: table placement and native scan-to-detail checks, retained facts/source clocks. Reused Oct11API finalOct9 versus Oct10finalOct8 is orientation only, not querycohort/CTR/SEOgain/customer preference evidence. Falsify lost unique routing/card facts, failed mobile/keyboard/image, drifted historical price or current Dana/Homewood notes, contrary actual-user evidence.",
+      "production_invariant": "All12card bodies (apart from added IDs), exact category/snapshot body, table values except links/unit heading, all65records/current DanaOct8/LoewsOct6/LJSOct5/HomewoodOct11 notes, oldJuly-Aug17-review clocks, schema/meta/sources/maps/other33URLs/allCSV exact. CSS oldprefix unchanged plus SanDiego-ID-scoped compact styles; reuse current data-glance-first table rules. Preserve980baseline/329priorordereditems/held11, carry only126mechanicalclosure. Actualrun13:02:29Z/09:02:29EDT/startdeadline13:47:29Z/fixed18:29:58Z sprint expiry. No source retry/renewal/security/account/spending/indexing/analytics/scheduler mutation.",
+      "decision": "IMPLEMENT one reproduced San Diego comparison-placement defect, retaining useful category routing instead of deleting it. Not a bulk rewrite or download-demand assumption.",
+      "review_receipt": "FT-IMP-127 Pascal different independent STRICT READ-ONLY PASS/noP0-P3 for31e362951cbb9bdc064b9d53a90392f3cc17b3fbaa6389e34d2ca8a49f6f67d7/all982hashes-modes/exact12/970nonowned/329priorordereditems/held11-ledgerisolated/126mechanicalclosure/finaldrift0. Independent21purefocused PASS; completed Master884full48maintenance/state0/GSC90/localSEO0sixold logf8e10311ce419c33f4c34358370465b0c394f395dda1303610616cb93180409c inspected, not fullsuite repeated. All12cardbodies/categoryrouting/trust/sources/maps/meta-schema/65records/other33URLs/allCSV unchanged; currentDanaOct8/HomewoodOct11/LoewsOct6/LJSOct5 andoldJuly-Aug17-review clocks/basis/limitations retained. Saved1280-390-320 table409-659-732/firstrows670-968-1123/3283words/36keyboardanchors/sticky180white-teal/horiz0-400-798/image3951loaded/nooverflow/errors0 inspected; mobilefirstrowsbelowinitialviewport explicit. Earlier bWeqNo HTML-CSS exact DIXNp6, no independentlivebrowser/production/realparent-demand-satisfaction-SEOgain claim. No file-temp-generated-cache-report/network-browser-delegation-staging-commit writes. GSCreusedorientation; no newCSV/source renewal/retry/security-account-spending-indexing-scheduler mutation. Only mechanical consensus appended; guardedpush/Pages-marker-productionSEO/affectedbytes/livebrowser required."
+    },
+    {
       "id": "FT-IMP-126",
       "title": "Bring Chicago hotel comparison ahead of repeated setup",
       "kind": "existing-page-usability",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-12",
       "started_at": "2026-10-12T12:03:29Z",
       "allowed_during_observation": true,
@@ -54,7 +92,11 @@
       "measurement_plan": "LRN222 internal scan proxy under fresh user direction: compare table placement, retained fields and interaction outcomes. Reused Oct11API finalOct9 versus Oct10finalOct8 orientation only; no queryCTR experiment, reading-time/parent demand/satisfaction/SEOgain claim. Falsify lost facts/limits or source clocks, failed mobile navigation/image, contrary actual-user evidence.",
       "production_invariant": "All10cardfacts/tablevalues/65records/FAQ-schema/meta/sources/maps/other33URLs/allCSV byteexact; CSS previousprefix preserved plus Chicago-only header selectors, reuse existing opted-in comparison styling. Preserve978baseline/328prior ordered items/held11; carry125 mechanical closure only. Actualrun12:01:29Z/08:01:29EDT/startdeadline12:46:29Z/fixed sprint expiry18:29:58Z unchanged. No new source attempt/renewal/cityURL/account/spending/security/indexing/analytics/scheduler mutation.",
       "decision": "IMPLEMENT one verified Chicago scan simplification; not a portfolio-wide rewrite, price refresh, pool-clearance claim or new download.",
-      "review_receipt": "FT-IMP-126 Avicenna different independent STRICT READ-ONLY PASS/noP0-P3; reviewed82c7fecb5e50ae3570e655e49bea5157b7aa713b03165dc00d2705d2b6f38016/all980hashes-modes/exact11/969nonowned/328prior/held11-ledgerisolated/125mechanicalclosure/finaldrift0. No file-temp-scratch-generated/network/browser/delegation/staging/commit writes; pure16focused/invariants/state0/GSC90/localSEO0sixold. Master881full48maintenance completedlogcf010eb344f9d9f310a9319999d40ec703d6c04992d012b649f28f3a2c5170db inspected/notduplicated. All10unique cardfacts/tablevalues/65records/historicalprice-date-taxfee-Swissotel-IHGpoollimits/sourceclocks/FAQ-meta-schema/other33URLs/allCSV byteexact; actual15434byte download unchanged. Saved1280-390-320/30cardEnter/3basis/3secondarydisclosures/readablesticky180/image/nooverflow-errors0 inspected, not independentlivebrowser/production/userpreference/SEOgain. Mobilefirstrowsbelowinitialviewport explicit. GSCreusedOct11finalOct9 orientationonly/no source renewal/newCSV/deniedretry/security-spending-account-indexing-scheduler mutation. Only mechanical immutable consensus appended; guardedpush/Pages-marker-productionSEO/affectedbytes/livebrowser verification required."
+      "review_receipt": "FT-IMP-126 Avicenna different independent STRICT READ-ONLY PASS/noP0-P3; reviewed82c7fecb5e50ae3570e655e49bea5157b7aa713b03165dc00d2705d2b6f38016/all980hashes-modes/exact11/969nonowned/328prior/held11-ledgerisolated/125mechanicalclosure/finaldrift0. No file-temp-scratch-generated/network/browser/delegation/staging/commit writes; pure16focused/invariants/state0/GSC90/localSEO0sixold. Master881full48maintenance completedlogcf010eb344f9d9f310a9319999d40ec703d6c04992d012b649f28f3a2c5170db inspected/notduplicated. All10unique cardfacts/tablevalues/65records/historicalprice-date-taxfee-Swissotel-IHGpoollimits/sourceclocks/FAQ-meta-schema/other33URLs/allCSV byteexact; actual15434byte download unchanged. Saved1280-390-320/30cardEnter/3basis/3secondarydisclosures/readablesticky180/image/nooverflow-errors0 inspected, not independentlivebrowser/production/userpreference/SEOgain. Mobilefirstrowsbelowinitialviewport explicit. GSCreusedOct11finalOct9 orientationonly/no source renewal/newCSV/deniedretry/security-spending-account-indexing-scheduler mutation. Only mechanical immutable consensus appended; guardedpush/Pages-marker-productionSEO/affectedbytes/livebrowser verification required.",
+      "release_receipt": "FT-IMP-126 release d68d6a489ea32b51070905cfb4fbf0905482e25c remote verified 2026-10-12T12:26:18.630Z; main0-0/emptyindex/exact11/all980indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Production verified 2026-10-12T12:21:55.807Z: Pages38248334160 SUCCESS/head exact; release marker d68d6a489ea32b51070905cfb4fbf0905482e25c; Chicago HTML/styles/existing CSV HTTP200 and exact bytes; all declared invariants PASS; production SEO0 errors/6 prior warnings. Production browser1280/390/320 comparison tops402.5/585.6953125/634.890625 and first rows705.7265625/960.921875/1067.7109375; visible words2790 versus2964 before;30 keyboard hotel links/3 price-basis links/3 disclosure checks PASS; images loaded/no page overflow/browser errors empty. Proof /tmp/ft126-browser/production-responsive.json and production-context.png visually inspected. Full native881/881 and maintenance48/48; independent read-only Avicenna PASS. Existing10 hotel facts/65 shared records/source clocks/historical price basis/IHG unresolved notice retained; no new CSV or fact renewal. Preview/session verification processes finished, viewport reset and verification tab closed. Reused GSC and PAGE_ONLY_PROXY learning, not real-parent preference or SEO-outcome evidence. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-12T12:26:18.655Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "d68d6a489ea32b51070905cfb4fbf0905482e25c"
     },
     {
       "id": "FT-IMP-125",
