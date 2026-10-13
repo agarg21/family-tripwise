@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-228 - Separate adult deal floors from family admission - 2026-10-13
+
+FT-IMP-131 [source and task gates](../docs/research/orlando-sea-life-ticket-basis-2026-10-13.md). Family decision: compare SEA LIFE budget without multiplying a USD29 adult package floor into a dated family quote or assuming the Eye bonus operates. OFFICIAL_PUBLISHED_MARKETING / OFFICIAL_CALENDAR_CONFLICT / TASK_PROXY. IMPLEMENT compact on-page orientation; HOLD child/date/tax-fee/family-total and bonus operation. Current official ticket listing and dated Eye calendar conflict; widget displays struck-through GatePrices with zero quantities, not an online quote, and selection controls fail. No checkout or bypass; next quote check only on documented changed permitted controls.
+
+Hypothesis supported at the source-product distinction level, not actual parent preference or SEO lift. High confidence in inspected wording/basis, low in complete cost/current operation. Lesson: adult floor, package identity, dated family quote and operation are separate fields. Vendor-selected undated positive review blurbs cannot establish family fit; existing limited samples unchanged. Falsify changed package, full dated family quote, reconciled operation, lost uncertainty or failed desktop/mobile/keyboard tasks. Same-run focused/full/different review and production required; not delivered by recording this unit.
+
 ## LRN-227 - Join outing admission, short visits and return permissions - 2026-10-13
 
 FT-PUB-006 [qualification and task gates](../docs/research/orlando-activity-page-review.md). Family decision: one Orlando park/nonpark day when age, budget, rain or lunch/rest changes the choice. Current eight qualitative result samples and three inspected alternatives reject another generic age list or budget table as information gain. IMPLEMENT one maintained official-field join with seven earned nonpark comparisons, three indoor short-visit/return checks and six visible persona defaults; park roles remain verification routes rather than invented rankings. Broad July US demand estimates and September Trends corroboration are retained, not renewed or transferred from hotels. No CSV or sibling modifier URL.

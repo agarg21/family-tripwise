@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {orlandoActivityPage,writeOrlandoActivityPage} from "./page-generation/orlando-activity-page.mjs";
-import {activityPath,activities,sources,checkedOn,orlandoActivityMaintenance} from "./page-generation/orlando-activity-data.mjs";
+import {activityPath,activities,sources,checkedOn,orlandoActivityMaintenance,seaLifeTicket} from "./page-generation/orlando-activity-data.mjs";
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 test("generated Orlando hub is exact, one new canonical and reachable",()=>{
   const html=orlandoActivityPage();assert.equal(read('site/'+activityPath),html);
@@ -53,4 +53,22 @@ test("maintenance is dated and fails closed on missing calendar input",()=>{
 });
 test("rendering is deterministic and does not mutate maintained data",()=>{
   const before=JSON.stringify({activities,sources});assert.equal(orlandoActivityPage(),orlandoActivityPage());assert.equal(JSON.stringify({activities,sources}),before);
+});
+test("SEA LIFE adult promotion never becomes standalone or dated family admission",()=>{
+  const r=seaLifeTicket,html=orlandoActivityPage();
+  assert.equal(r.currency,'USD');assert.equal(r.adult_from,29);assert.equal(r.checked_on,'2026-10-13');
+  for(const key of ['child_price','selected_visit_date','exact_family_total','tax_fee_inclusion'])assert.equal(r[key],null);
+  assert.equal(activities.find(a=>a.id==='sea-life').budget,null);
+  assert.match(html,/Family total unknown\. Advertised SEA LIFE \+ Orlando Eye FREE from USD 29\/adult, not standalone admission/);
+  assert.match(html,/Child\/date\/tax\/fee basis unconfirmed/);assert.match(html,/do not multiply it into a family total/);
+  assert.doesNotMatch(html,/USD 116|USD 194|Eye is (?:open|closed)|guaranteed free/);
+  assert.ok(html.includes(r.url));assert.ok(html.includes(r.hours_url));
+});
+test("Eye notices retain named product conflict and separate promotion freshness",()=>{
+  const html=orlandoActivityPage(),r=orlandoActivityMaintenance('2026-10-20');
+  assert.match(html,/separate Ultimate Florida Ticket/);assert.match(html,/maintenance notice/);assert.match(html,/October 12\/13 opening hours/);
+  assert.match(html,/Neither confirms your chosen date/);assert.match(html,/not a selected-date quote/);
+  assert.equal(r.ticket_promotion.freshness.state,'review-due');
+  assert.equal(r.official.length,13);assert.ok(r.official.every(s=>s.freshness.state==='within-review-interval'));
+  assert.equal(r.unknowns.find(a=>a.id==='sea-life').exact_family_cost,null);
 });
