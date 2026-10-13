@@ -47,6 +47,7 @@ export const cancunEvidence = {
       },
       price: {
         kind: "dated-single-plan-sample", usdFrom: 1177, usdTo: null,
+        scan: { basis: "One Family Suite; two adults + ages 3/7/12. November 9-12, 2026, three nights; USD 3,532 displayed total, nightly display rounded. Public non-member plan, not rewards pricing.", fees: "Displayed taxes/fees included; local levy and extras not itemized. Refund boundary and payment timing unresolved." },
         basis: "November 9-12, 2026; one Family Suite, two adults and children aged 3, 7 and 12, three nights. Public non-member Reserve Now And Pay Later / All Inclusive: USD 3,532 displayed total and USD 1,177 rounded per room/night; the displayed nightly figures do not sum exactly to the total. The locked rewards USD 3,426 total is excluded. One dated plan, not confirmed booking acceptance, a typical range, child-offer savings or guaranteed future price.",
         fees: "Booking display says all fees and taxes included; optional extras and any separately payable local levy are not itemized. Plan card says free transfer with a three-night minimum; confirm arrangements and your booking terms. Conditions say no cancellation fee 24 hours or more before arrival, but a whole-stay penalty 24 hours or less; the exact boundary overlaps, so confirm the cutoff and timezone. Unused stay is not refunded. Full charge is stated 30 days before arrival, with a separate check-in rule for bookings within four days; payment timing for this 29-days-before-arrival observation is unresolved.",
         observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["F4"]
@@ -75,6 +76,7 @@ export const cancunEvidence = {
       },
       price: {
         kind: "dated-single-plan-sample", usdFrom: 311, usdTo: null,
+        scan: { basis: "One Family Junior Suite; two adults + ages 3/7. October 27-30, 2026, three nights; USD 934 displayed total, nightly display rounded.", fees: "Displayed taxes/fees included; MXN 79 environmental-tax inclusion unconfirmed. Child-offer date clauses conflict; no kids-free savings established." },
         basis: "October 27-30, 2026; one Family Junior Suite, King, Bunk and Trundle Bed, two adults and children aged 3 and 7, three nights. Non-member Sun-Kissed Savings + Kids Stay Free (12 & under): USD 934 displayed total and USD 311 rounded per room/night; the displayed nightly figures do not sum exactly to the total. Child-offer eligibility conflicts: general promotion stays start October 1, 2026, but the narrower child-benefit clause starts April 1, 2027. Do not infer kids-free eligibility or savings for this October stay; confirm the applicable terms. One dated plan, not confirmed booking acceptance, a typical range or guaranteed future price.",
         fees: "Booking display says taxes and fees included. The property's September 27 FAQ observation separately lists a MXN 79 per-room/night environmental tax; whether this particular displayed total includes it is unconfirmed. Cancellation summary says free up to 14 days before arrival, but detailed terms say free 15 days prior and 100% penalty 14-0 days; confirm the boundary. Full charge is stated 30 days before arrival, but payment timing for a booking already inside that window is unknown.",
         observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["S5", "S4"]
@@ -102,6 +104,7 @@ export const cancunEvidence = {
       },
       price: {
         kind: "derived-two-adult-starting", usdFrom: 1015, usdTo: null,
+        scan: { basis: "Preferred Club category, two-adult room-night equivalent of a September low-season per-person start; exact dates and child rates not stated.", fees: "Tax/fee inclusion unknown. Not a family-room quote for added children." },
         basis: "Two-adult room-night equivalent of the property's USD 507.50 per-person/night September low-season starting sample for this exact Preferred Club category; exact dates and child rates not stated.",
         fees: "Tax and fee inclusion not stated.", observedOn: "2026-09-27", sourceIds: ["D4"]
       },
@@ -129,6 +132,7 @@ export const cancunEvidence = {
       },
       price: {
         kind: "dated-rate-plan-sample", usdFrom: 997.70, usdTo: 1247.75,
+        scan: { basis: "One LXUU2 suite; two adults + ages 3/7. November 9-12, 2026, three nights. Flexible / Standard plans, not a seasonal range.", fees: "Displayed taxes/fees included; environmental sanitation excluded, current amount unknown. Booking view/beds differ from older category; exact unit unresolved." },
         basis: "November 9-12, 2026; two adults and children aged 3 and 7, one suite, three nights. Booking code LXUU2 is now titled Two Bedroom Luxury Junior Suite; its mangrove-view and bed descriptions differ from the older room record, so category continuity and sleeping layout need confirmation. Fall into Savings: Flexible Stay (USD 997.70 per room/night; USD 2,993.10 total); Standard Rate (USD 1,247.75 per room/night; USD 3,743.25 total). These are public dated rate-plan examples, not a seasonal range, child-offer savings or confirmed booking acceptance.",
         fees: "Booking display says taxes and fees included, but environmental sanitation is payable at the resort and excluded; the current notice gives no numeric amount. The September 27 price record used MXN 85.40 per-room/night from the earlier suites source; that amount is not refreshed and fees may change. Flexible total includes USD 559.68 room taxes/fees; Standard's modal does not separately itemize them. Both inspected plans say full charge two days before arrival, full refund outside 48 hours, a first-night penalty and no modifications within 48 hours, and a two-night no-show penalty. Confirm exact deadlines, room and final charges.",
         observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["R4"]
@@ -176,6 +180,7 @@ export const cancunEvidence = {
       },
       price: {
         kind: "dated-single-plan-sample", usdFrom: 1945, usdTo: null,
+        scan: { basis: "One Grand Family Suite; two adults + one child 4-17 + one infant 0-3. October 18-23, 2026, five nights; USD 9,723 displayed total, nightly display rounded.", fees: "Displayed taxes/fees included; local levy unconfirmed. Exact ages not entered; remembered summary said two people. Not confirmed party acceptance or non-offer savings." },
         basis: "October 18-23, 2026; one Grand Family Suite, two adults, one child aged 4-17 and one infant aged 0-3, five nights. Set both child age bands in the booking selector; the link may reopen with only the infant. No entered promo code after removing RETURN5; All Inclusive Best Flexible Rate showed USD 9,723 total and USD 1,945 average per room/night (rounded display). The kids-and-teens-free benefit was still displayed: this is not a non-offer rate or proof of savings. Exact child ages were not entered; the remembered-search summary still said two people despite the four-person age-band controls. One dated plan, not confirmed party acceptance, a typical rate or a family-of-five quote.",
         fees: "Booking display says taxes and fees included; any separately payable local levy is unconfirmed. Free cancellation until four days before arrival, then a one-night penalty; full card charge 72 hours before arrival. Recheck terms and exact-party eligibility.",
         observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["G5", "G1"]

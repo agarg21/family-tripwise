@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-229 - Put Cancun room comparison before the specific party case - 2026-10-13
+
+FT-IMP-132 [bounded task](../docs/research/cancun-glance-first-task-2026-10-13.json). Current public1280/390/320 comparison1359/2607/3109px, firstroom1828/3228/3775 behind setup and grandparents case, no top grandparents route. REJECT already-glance-first hypothesis; IMPLEMENT exact six-room table before setup and grandparents, native top grandparents/offer links and existing exports secondary. Complete price-party-date-fee/room/age/context remains, not a new CSV or room fact.
+
+PAGE_ONLY_PROXY/direct user simplicity direction, not actual-parent preference/satisfaction/readingtime or SEOlift. Four task roles preserve four-adult-versus-two-adult budget, unknown connection/Grandgroup cost, five-person childbedroom and skepticallowestband distinctions. High observed geometry/parity confidence, moderate expected scan benefit. Lesson: a useful specialized budget should be directly reachable without preceding the primary comparison for every reader. Falsify lost constraints/clock parity, mobile/keyboard/form/share failure or actualuser evidence. Original source clocks/October21 observation and provider holds unchanged; native/different independent review and production remain required.
+
 ## LRN-228 - Separate adult deal floors from family admission - 2026-10-13
 
 FT-IMP-131 [source and task gates](../docs/research/orlando-sea-life-ticket-basis-2026-10-13.md). Family decision: compare SEA LIFE budget without multiplying a USD29 adult package floor into a dated family quote or assuming the Eye bonus operates. OFFICIAL_PUBLISHED_MARKETING / OFFICIAL_CALENDAR_CONFLICT / TASK_PROXY. IMPLEMENT compact on-page orientation; HOLD child/date/tax-fee/family-total and bonus operation. Current official ticket listing and dated Eye calendar conflict; widget displays struck-through GatePrices with zero quantities, not an online quote, and selection controls fail. No checkout or bypass; next quote check only on documented changed permitted controls.

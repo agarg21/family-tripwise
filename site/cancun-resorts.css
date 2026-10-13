@@ -112,3 +112,14 @@
     font-weight: 700;
   }
 }
+.cancun-page .page-intro { padding-bottom: 12px; }
+.cancun-page .page-intro h1 { font-size: 36px; letter-spacing: 0; }
+.cancun-page #quick-comparison { padding-top: 16px; }
+.cancun-page .quick-price-print { display: none; }
+@media print {
+  .cancun-page .quick-price-screen { display: none; }
+  .cancun-page .quick-price-print { display: block; }
+}
+@media (max-width: 540px) {
+  .cancun-page .page-intro h1 { font-size: 30px; }
+}

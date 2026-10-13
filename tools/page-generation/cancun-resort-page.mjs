@@ -31,7 +31,7 @@ export function cancunGrandparentsSection() {
       <p>${esc(o.fee_basis)} ${esc(o.meals)}</p>
       <details><summary>Room conflicts and rate conditions</summary><p>${esc(o.room_conflict)}</p><p>${esc(o.terms)}</p><p>${esc(o.eligibility)}</p></details>
       <p class="source-date">Price and booking text checked <time datetime="${esc(e.checked_on)}">${esc(e.checked_on)}</time>; review due ${esc(e.recheck_on)}. <a href="${esc(e.source_url)}">Official four-adult, two-child rate search</a>. The source may reset dates, ages or category; confirm the displayed selection.</p>
-      <p><a href="../downloads/cancun-grandparents-budget.csv" download>Download this party's two-plan budget (.csv)</a></p>
+      <details id="grandparents-download"><summary>Save this party's budget</summary><p><a href="../downloads/cancun-grandparents-budget.csv" download>Download this party's two-plan budget (.csv)</a></p></details>
       <p><strong>Moon Palace The Grand:</strong> the <a href="${esc(e.grand_check.category_source_url)}">Grand Family Suite category</a> specifies two connecting rooms; this is not a reservation guarantee. <strong>A four-adult, two-child price is not verified.</strong> Its existing two-adult sample is not this party's budget. <a href="#grand-family-suite">Grand room and separate price basis</a>.</p>
       <p>Before choosing either, get written exact-party acceptance, the sleeping places assigned to each generation, connecting-door confirmation and all mandatory charges. Quiet/shared space, step-free access and rest-return practicality remain unverified. Neither result is a savings or family-suitability recommendation.</p>
     </section>
@@ -81,18 +81,13 @@ export function cancunResortPage() {
       <h1>Cancun family resorts</h1>
       ${contributorCredit()}
       <p>Six all-inclusive resorts, compared by the room and policy details that can change a family booking. This is a focused planning comparison, not a ranking of every resort.</p>
-      <ul>
-        <li><strong>Two adults and two children, Hotel Zone:</strong> <a href="#ziva-ocean-view-double">Hyatt Ziva's Ocean View Double</a> publishes a four-person maximum; exact bedding and club-age rules still need checking.</li>
-        <li><strong>Five people:</strong> <a href="#finest-family-suite">Finest's Family Suite</a> publishes five places and a separate children's bedroom. <a href="#sapphire-family-junior-suite">Dreams Sapphire</a> publishes six, with sleeping layout unresolved. <a href="#sunscape-family-junior-suite">Sunscape's capacity listings disagree</a>.</li>
-        <li><strong>Six or seven people:</strong> <a href="#grand-family-suite">Moon Palace The Grand's Family Suite</a> publishes seven places across connecting rooms, with a rollaway for the seventh guest (a child). <a href="#royalton-splash-two-bedroom">Royalton Splash's two-bedroom category</a> has conflicting child limits. Confirm exact-age acceptance before relying on either.</li>
-      </ul>
-      <p>These are published-capacity starting points, not confirmed bookings or price recommendations.</p>
       <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Next source review due October 23, 2026; verify volatile details before booking.</span></p>
-      <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#comparison">Full policy checks</a><a href="#family-check">Your children's ages</a><a href="#before-booking">Before booking</a></div>
+      <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#grandparents-budget">Trip with grandparents</a><a href="#family-check">Your children's ages</a><a href="#child-offer">Child-offer checks</a><a href="#comparison">Full policy checks</a><a href="#before-booking">Before booking</a></div>
     </section>
-${cancunGrandparentsSection()}    <section id="quick-comparison" aria-labelledby="quick-title">
+    <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
       <p>Start with capacity, sleeping places and the nightly price examples. Each price has its own party, date and fee basis; these are not like-for-like family totals. Check club admission and transfers in each detailed record.</p>
+      ${renderQuickComparison()}
       <div class="comparison-sharing">
         <div id="comparison-actions" class="actions" hidden>
           <button id="copy-comparison" type="button">Copy comparison link</button>
@@ -101,11 +96,21 @@ ${cancunGrandparentsSection()}    <section id="quick-comparison" aria-labelledby
         <p id="share-status" role="status" aria-live="polite"></p>
         <div id="comparison-link-fallback" hidden><label for="comparison-link">Comparison link</label><input id="comparison-link" type="text" readonly value="${comparisonUrl}"></div>
       </div>
-      <p><a href="../downloads/cancun-booking-checklist.txt" download>Download the booking checklist and source records (.txt)</a></p>
-      <p><a href="../downloads/cancun-room-comparison.csv" download>Download the six-room comparison (.csv)</a> · Price examples have different party, date and fee bases; do not sort them as comparable stay totals.</p>
-      ${renderQuickComparison()}
+      <details id="comparison-downloads"><summary>Save this comparison</summary>
+        <p><a href="../downloads/cancun-booking-checklist.txt" download>Download the booking checklist and source records (.txt)</a></p>
+        <p><a href="../downloads/cancun-room-comparison.csv" download>Download the six-room comparison (.csv)</a> · Price examples have different party, date and fee bases; do not sort them as comparable stay totals.</p>
+      </details>
     </section>
-    <section id="comparison" aria-labelledby="comparison-title">
+    <section id="room-setup" aria-labelledby="room-setup-title">
+      <h2 id="room-setup-title">Choose by room setup</h2>
+      <ul>
+        <li><strong>Two adults and two children, Hotel Zone:</strong> <a href="#ziva-ocean-view-double">Hyatt Ziva's Ocean View Double</a> publishes a four-person maximum; exact bedding and club-age rules still need checking.</li>
+        <li><strong>Five people:</strong> <a href="#finest-family-suite">Finest's Family Suite</a> publishes five places and a separate children's bedroom. <a href="#sapphire-family-junior-suite">Dreams Sapphire</a> publishes six, with sleeping layout unresolved. <a href="#sunscape-family-junior-suite">Sunscape's capacity listings disagree</a>.</li>
+        <li><strong>Six or seven people:</strong> <a href="#grand-family-suite">Moon Palace The Grand's Family Suite</a> publishes seven places across connecting rooms, with a rollaway for the seventh guest (a child). <a href="#royalton-splash-two-bedroom">Royalton Splash's two-bedroom category</a> has conflicting child limits. Confirm exact-age acceptance before relying on either.</li>
+      </ul>
+      <p>These are published-capacity starting points, not confirmed bookings or price recommendations.</p>
+    </section>
+${cancunGrandparentsSection()}    <section id="comparison" aria-labelledby="comparison-title">
       <h2 id="comparison-title">Compare the exact room, not just the resort</h2>
       <p>Published policy, not firsthand experience. Location names distinguish the Hotel Zone, Playa Mujeres and Riviera Cancun; these are not interchangeable bases.</p>
       ${renderOverview()}

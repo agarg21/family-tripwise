@@ -22,6 +22,9 @@ const priceHtml = record => record.price
 const priceText = record => record.price
   ? `${priceLabel(record.price)}\nBasis: ${record.price.basis}\nFees: ${record.price.fees}\nPrice checked: ${record.price.observedOn}. Verify for your family and dates.${record.price.recheckOn ? ` Next price review due ${record.price.recheckOn}.` : ""}`
   : "Exact-room nightly price: not verified. Request a dated quote for your party.";
+const quickPriceHtml = record => record.price?.scan
+  ? `<div class="quick-price-screen"><p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(record.price.scan.basis)}</p><p>${esc(record.price.scan.fees)}</p><p class="source-date">Price checked ${esc(record.price.observedOn)}; review due ${esc(record.price.recheckOn ?? cancunEvidence.priceRecheckOn)}. Not a live quote.</p>${sources(record.price.sourceIds, "Price source")}<details><summary>Complete price basis and booking checks</summary>${priceHtml(record)}${list(record.room.checks)}</details></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
+  : `${priceHtml(record)}${list(record.room.checks)}`;
 
 const csvCell = value => {
   const plain = String(value ?? "").replaceAll(/[\r\n\t]+/g, " ");
@@ -53,7 +56,7 @@ export function renderQuickComparison() {
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
     <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples checked ${esc(priceObservationDates())}, earliest refresh due ${esc(cancunEvidence.priceRecheckOn)} · Policy recheck due ${esc(cancunEvidence.recheckOn)}</caption>
     <thead><tr><th scope="col">Resort and exact room</th><th scope="col">Approx nightly price and booking checks</th><th scope="col">Published capacity and sleeping places</th></tr></thead>
-    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Approx nightly price and booking checks">${priceHtml(record)}${list(record.room.checks)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td><td data-label="Published capacity and sleeping places"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
+    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Approx nightly price and booking checks">${quickPriceHtml(record)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td><td data-label="Published capacity and sleeping places"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
 }
 
