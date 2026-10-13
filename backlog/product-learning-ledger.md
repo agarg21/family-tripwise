@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-240 - Compare the teen payoff and decisive rule together - 2026-10-13
+
+FT-IMP-138 [Chicago teen task](../docs/research/chicago-teen-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: teen14/sibling8 compare indoor, skyline, movement or older-child evening choices. REJECT near-start comparison hypothesis: heading2122desktop2603mobile behindphoto5picks. IMPLEMENT same8rows7fields beforephoto/picks, three native sectionlinks and displayeddecisive-checklast; original source arrays/5picks4details4plans/cluster/FAQ/headH1/schema/photo/July23 evidence unchanged. No extra age-modifier URL or newCSV.
+
+Like-for-likeheading452desktop808mobile; section399/755/815 firstrows646/1050/1165 not allinitialmobile900viewport.9Enteranchors,180desktop130mobile identity150criticalfield/all8criticaltexts initialdesktop andatphoneend, arrow2/808/878then0/photo1280/nooverflow-console0. Native12rowall-ages recovery verifiedEnter pluspointer aftersettled state; initialunchangedclick andunsettledHomescreenshotexcluded. Two7stepPARTIAL roles for currenttickets/height/content/age/price/route/supervision unknowns, not actualparents/SEO/satisfaction/reading-time proof; no new reviews or factual renewal. Lesson: keep the desired payoff and its disqualifying rule paired, preserve the broader-family route and do not borrow a teen-only rule for a sibling. Falsify clipping/nativefailure/sourceconflict or actual-parent difficulty. Fullnative/differentread-onlyreview/guardedproduction required, not delivered by this record.
+
 ## LRN-239 - Expose Chicago choices with their booking constraints - 2026-10-13
 
 FT-IMP-137 [Chicago activity task](../docs/research/chicago-activity-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: parents/ages3and7 compare indoor anchors, lower-cost reset and Garfield residency/age-specific admission. REJECT near-start discovery hypothesis: comparisonheading4510desktop7828mobile afterphoto12cards5picks. IMPLEMENT same12rows11fields beforephoto/cards, four native comparison/filter/detail/admission links, displayedBookinglast only; source rows/age/cost/route/advice/map/schema/Garfield134/source clocks unchanged.

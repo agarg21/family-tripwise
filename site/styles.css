@@ -1417,3 +1417,5 @@ p.contributor-credit {
   #chi-activity-comparison .comparison-table :is(th,td):first-child { width: 130px; }
   .chi-activity-glance :is(#chi-activity-comparison,#chi-activity-filters,#chi-activity-notes,#garfield-admission) { scroll-margin-top: 160px; }
 }
+
+.chi-teen-glance #chi-activity-comparison .comparison-table { min-width: 1160px; }

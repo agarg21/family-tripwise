@@ -558,7 +558,7 @@ ${renderFaqs(page.faqs)}
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Teen quick picks</p>
-            <h2${page.frontComparison ? ' id="sa-activity-quick-picks" style="scroll-margin-top:80px"' : ""}>${esc(page.quickHeading || "Best choices by teen trip style")}</h2>
+            <h2${page.frontComparison ? ` id="${activitySectionId(page, "quick-picks")}" style="scroll-margin-top:80px"` : ""}>${esc(page.quickHeading || "Best choices by teen trip style")}</h2>
           </div>
 ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>\n` : ""}${renderQuickPicks(page.quick)}
         </div>
@@ -579,7 +579,7 @@ ${admissionSection}${transportSection}${paymentSection}${page.glanceFirst ? `${q
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">${esc(page.detailsEyebrow || "Teen logistics")}</p>
-            <h2${page.frontComparison ? ' id="sa-activity-notes"' : ""}>${esc(page.detailsTitle || "Detailed notes for older-kid planning")}</h2>
+            <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed notes for older-kid planning")}</h2>
           </div>
 ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
         </div>
@@ -1083,11 +1083,11 @@ ${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel
     const trust = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;
     if (!trust.test(html)) throw new Error("Expected activity trust panel");
     html = html.replace(trust, match => `${match}\n${comparison}`);
-    html = html.replace('<body>', `<body class="${page.frontComparisonClass || "sa-activity-glance"}${type === "teen" ? " sa-teen-glance" : ""}">`);
+    html = html.replace('<body>', `<body class="${page.frontComparisonClass || "sa-activity-glance"}${type === "teen" && !page.frontComparisonClass ? " sa-teen-glance" : ""}">`);
     const intro = esc(page.title);
     const creditAndCopy = new RegExp(`(<h1>${intro}</h1>[\\s\\S]*?<p>[^<]*</p>)`);
     if (!creditAndCopy.test(html)) throw new Error("Expected activity hero copy");
-    const middleLink = type === "teen" ? '<a href="#sa-activity-quick-picks">Quick picks</a>' : `<a href="#${activitySectionId(page, "filters")}">Filter choices</a>`;
+    const middleLink = type === "teen" ? `<a href="#${activitySectionId(page, "quick-picks")}">Quick picks</a>` : `<a href="#${activitySectionId(page, "filters")}">Filter choices</a>`;
     const extraLink = page.frontComparisonExtraLink ? `<a href="${esc(page.frontComparisonExtraLink[0])}">${esc(page.frontComparisonExtraLink[1])}</a>` : "";
     html = html.replace(creditAndCopy, `$1\n        <nav aria-label="${esc(page.city)} activity sections"><a href="#${activitySectionId(page, "comparison")}">Compare activities</a>${middleLink}<a href="#${activitySectionId(page, "notes")}">Detailed checks</a>${extraLink}</nav>`);
   }

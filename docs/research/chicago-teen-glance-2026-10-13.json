@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-138",
+  "learning_id": "LRN-240",
+  "checked_on": "2026-10-13",
+  "evidence_class": "CURRENT_PAGE_ONLY_TASK_PROXY",
+  "hypothesis": "A parent and teen can compare a preferred Chicago anchor with its decisive mixed-age rule near the start",
+  "hypothesis_result": "REJECT existing comparison discovery; IMPLEMENT original eight-choice table before photo and quick picks",
+  "baseline": [
+    {
+      "comparisonHeadingY": 2122.1171875,
+      "h1Height": 264.9375,
+      "headers": [
+        "Activity",
+        "Teen reason",
+        "Time / cost",
+        "Area / format",
+        "Flexibility",
+        "Check before choosing",
+        "Pair nearby"
+      ],
+      "imageLoaded": true,
+      "overflow": false,
+      "rows": 8,
+      "width": 1280
+    },
+    {
+      "comparisonHeadingY": 2602.6640625,
+      "h1Height": 158.96875,
+      "headers": [
+        "Activity",
+        "Teen reason",
+        "Time / cost",
+        "Area / format",
+        "Flexibility",
+        "Check before choosing",
+        "Pair nearby"
+      ],
+      "imageLoaded": true,
+      "overflow": false,
+      "rows": 8,
+      "width": 390
+    }
+  ],
+  "current": {
+    "frames": [
+      {
+        "comparisonY": 399.3046875,
+        "firstRowY": 646.1328125,
+        "h1Font": "36px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Teen reason",
+          "Time / cost",
+          "Area / format",
+          "Flexibility",
+          "Pair nearby",
+          "Check before choosing"
+        ],
+        "identityWidth": 180,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 8,
+        "width": 1280,
+        "headingY": 452.015625,
+        "criticalInitiallyReadable": true
+      },
+      {
+        "comparisonY": 755.3046875,
+        "firstRowY": 1050.1328125,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Teen reason",
+          "Time / cost",
+          "Area / format",
+          "Flexibility",
+          "Pair nearby",
+          "Check before choosing"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 8,
+        "width": 390,
+        "headingY": 808.015625,
+        "criticalInitiallyReadable": false
+      },
+      {
+        "comparisonY": 815.3046875,
+        "firstRowY": 1165.328125,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Teen reason",
+          "Time / cost",
+          "Area / format",
+          "Flexibility",
+          "Pair nearby",
+          "Check before choosing"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 8,
+        "width": 320,
+        "headingY": 868.015625,
+        "criticalInitiallyReadable": false
+      }
+    ],
+    "anchors": [
+      {
+        "hash": "#chi-activity-comparison",
+        "headerBottom": 65,
+        "id": "chi-activity-comparison",
+        "top": 79.8046875,
+        "width": 1280
+      },
+      {
+        "hash": "#chi-activity-quick-picks",
+        "headerBottom": 65,
+        "id": "chi-activity-quick-picks",
+        "top": 79.9765625,
+        "width": 1280
+      },
+      {
+        "hash": "#chi-activity-notes",
+        "headerBottom": 65,
+        "id": "chi-activity-notes",
+        "top": 79.8046875,
+        "width": 1280
+      },
+      {
+        "hash": "#chi-activity-comparison",
+        "headerBottom": -452.890625,
+        "id": "chi-activity-comparison",
+        "top": 159.8046875,
+        "width": 390
+      },
+      {
+        "hash": "#chi-activity-quick-picks",
+        "headerBottom": -2658.390625,
+        "id": "chi-activity-quick-picks",
+        "top": 80.2421875,
+        "width": 390
+      },
+      {
+        "hash": "#chi-activity-notes",
+        "headerBottom": -3693.390625,
+        "id": "chi-activity-notes",
+        "top": 159.8984375,
+        "width": 390
+      },
+      {
+        "hash": "#chi-activity-comparison",
+        "headerBottom": -512.890625,
+        "id": "chi-activity-comparison",
+        "top": 159.8046875,
+        "width": 320
+      },
+      {
+        "hash": "#chi-activity-quick-picks",
+        "headerBottom": -2794.390625,
+        "id": "chi-activity-quick-picks",
+        "top": 80.0703125,
+        "width": 320
+      },
+      {
+        "hash": "#chi-activity-notes",
+        "headerBottom": -3948.890625,
+        "id": "chi-activity-notes",
+        "top": 160.2265625,
+        "width": 320
+      }
+    ],
+    "keys": [
+      {
+        "critical": [
+          {
+            "name": "Chicago Architecture Center river cruise",
+            "readable": true,
+            "text": "Sailing, weather, boarding, accessibility"
+          },
+          {
+            "name": "Griffin Museum of Science and Industry",
+            "readable": true,
+            "text": "Admission, exhibit and add-on tickets"
+          },
+          {
+            "name": "Art Institute Teen Audio Guide",
+            "readable": true,
+            "text": "App, galleries, admission and hours"
+          },
+          {
+            "name": "360 CHICAGO and optional TILT",
+            "readable": true,
+            "text": "Visibility, ticket and 42-inch TILT rule"
+          },
+          {
+            "name": "Wrigley Field tour or selected game",
+            "readable": true,
+            "text": "Exact tour or game, weather and access"
+          },
+          {
+            "name": "Lakefront Trail, one bounded segment",
+            "readable": true,
+            "text": "Weather, closures, route, equipment and skill"
+          },
+          {
+            "name": "Flyover at Navy Pier",
+            "readable": true,
+            "text": "Current film, sensory effects, 40-inch rule and ticket"
+          },
+          {
+            "name": "Second City, one selected show",
+            "readable": true,
+            "text": "Rating, 13+ rule, adult accompaniment and fees"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 61,
+        "max": 2,
+        "offset": 2,
+        "regionLeft": 60,
+        "width": 1280
+      },
+      {
+        "returnOffset": 0,
+        "width": 1280
+      },
+      {
+        "critical": [
+          {
+            "name": "Chicago Architecture Center river cruise",
+            "readable": true,
+            "text": "Sailing, weather, boarding, accessibility"
+          },
+          {
+            "name": "Griffin Museum of Science and Industry",
+            "readable": true,
+            "text": "Admission, exhibit and add-on tickets"
+          },
+          {
+            "name": "Art Institute Teen Audio Guide",
+            "readable": true,
+            "text": "App, galleries, admission and hours"
+          },
+          {
+            "name": "360 CHICAGO and optional TILT",
+            "readable": true,
+            "text": "Visibility, ticket and 42-inch TILT rule"
+          },
+          {
+            "name": "Wrigley Field tour or selected game",
+            "readable": true,
+            "text": "Exact tour or game, weather and access"
+          },
+          {
+            "name": "Lakefront Trail, one bounded segment",
+            "readable": true,
+            "text": "Weather, closures, route, equipment and skill"
+          },
+          {
+            "name": "Flyover at Navy Pier",
+            "readable": true,
+            "text": "Current film, sensory effects, 40-inch rule and ticket"
+          },
+          {
+            "name": "Second City, one selected show",
+            "readable": true,
+            "text": "Rating, 13+ rule, adult accompaniment and fees"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 808,
+        "offset": 808,
+        "regionLeft": 18,
+        "width": 390
+      },
+      {
+        "returnOffset": 0,
+        "width": 390
+      },
+      {
+        "critical": [
+          {
+            "name": "Chicago Architecture Center river cruise",
+            "readable": true,
+            "text": "Sailing, weather, boarding, accessibility"
+          },
+          {
+            "name": "Griffin Museum of Science and Industry",
+            "readable": true,
+            "text": "Admission, exhibit and add-on tickets"
+          },
+          {
+            "name": "Art Institute Teen Audio Guide",
+            "readable": true,
+            "text": "App, galleries, admission and hours"
+          },
+          {
+            "name": "360 CHICAGO and optional TILT",
+            "readable": true,
+            "text": "Visibility, ticket and 42-inch TILT rule"
+          },
+          {
+            "name": "Wrigley Field tour or selected game",
+            "readable": true,
+            "text": "Exact tour or game, weather and access"
+          },
+          {
+            "name": "Lakefront Trail, one bounded segment",
+            "readable": true,
+            "text": "Weather, closures, route, equipment and skill"
+          },
+          {
+            "name": "Flyover at Navy Pier",
+            "readable": true,
+            "text": "Current film, sensory effects, 40-inch rule and ticket"
+          },
+          {
+            "name": "Second City, one selected show",
+            "readable": true,
+            "text": "Rating, 13+ rule, adult accompaniment and fees"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 878,
+        "offset": 878,
+        "regionLeft": 18,
+        "width": 320
+      },
+      {
+        "returnOffset": 0,
+        "width": 320
+      }
+    ]
+  },
+  "task": {
+    "decision": "Teen14 and sibling8 compare science/art/Flyover indoor choices with skyline, movement or an evening show without borrowing a teen-only rule for the sibling",
+    "steps": [
+      "Read originalJuly23 source clock and editorial-estimate caution",
+      "Use native Compareactivities link",
+      "Compare teen reason/time-cost/area-format/flexibility without invented numeric tickets",
+      "Read final decisive-check field alongside sticky activity identity",
+      "Use Quickpicks for one conditional teen-chosen anchor",
+      "Use Detailedchecks for preserved add-on/height/content/adult-accompaniment/route-skill boundaries",
+      "Trace existing source links or use actual all-ages route; exactdate/acceptance/price/weather/rest remains unknown"
+    ],
+    "roles": [
+      {
+        "role": "Teen14/sibling8 indoor anchor versus visibility-dependent skyline",
+        "result": "PARTIAL",
+        "remaining": "No current ticket, child height/sensory/selected add-on/price/route acceptance or actual family fit established; historical notes remain dated."
+      },
+      {
+        "role": "Teen-selected movement or older-child evening with younger sibling",
+        "result": "PARTIAL",
+        "remaining": "Exactroute/skill/conditions, show-rating/current13+adult-rule, split supervision/return/full price unresolved. No independent roaming or safety assurance."
+      }
+    ],
+    "proxy_not_real_parent": true
+  },
+  "source_review": {
+    "original_source_date": "2026-07-23",
+    "original_source_intro_preserved": true,
+    "official_facts_estimates_unknowns_distinct": true,
+    "new_online_review_samples": 0,
+    "new_activity_fit_safety_route_or_independence_judgments": false,
+    "source_renewal": false,
+    "limits": "Interface discovery/preservation only; no external source reinspection, current admission/price confirmation, representative reviews or actual-parent validation. Original venue/source/conditional advice remains visible."
+  },
+  "preservation": {
+    "rows": 8,
+    "fields": 7,
+    "display_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      5
+    ],
+    "original_rows_and_headers_unchanged": true,
+    "quick_picks": 5,
+    "details": 4,
+    "plans": 4,
+    "cluster_links": 4,
+    "official_check_groups": 3,
+    "faqs": 3,
+    "head_h1_schema_media_article_bodies_unchanged_required": true,
+    "old_css_prefix_unchanged_required": true,
+    "all35othercanonicals_including135136137_unchanged_required": true,
+    "new_csv": false,
+    "new_url": false
+  },
+  "qa_inventory": {
+    "viewports": [
+      1280,
+      390,
+      320
+    ],
+    "native_section_links": 9,
+    "desktop_all8critical_initially_readable": true,
+    "mobile_all8critical_end_readable": true,
+    "keyboard_end_offsets": [
+      2,
+      808,
+      878
+    ],
+    "keyboard_return_offsets": [
+      0,
+      0,
+      0
+    ],
+    "image_natural_width": 1280,
+    "source_cluster_routes": "/tmp/ft138-browser/local-source-routing.json",
+    "console": "/tmp/ft138-browser/local-console.json",
+    "pixels": "/tmp/ft138-browser/local-context.png",
+    "narrow_end_pixels": "/tmp/ft138-browser/local-end-320.png"
+  },
+  "limits": [
+    "Like-for-likeheading452desktop808mobilevs2122/2603; section399/755/815distinct; firstrows646/1050/1165 not allinitialmobile900viewport. No one-screen/reading-time/SEOgain claim.",
+    "Mobile horizontallyscrollable table preserves all fields and180desktop130mobile identity150criticalfield; teen-only1160px minimum, not all-ages1740px.",
+    "Initial native cluster click left page unchanged and was rejected after fresh state; Enter verified12rowall-ages destination. A separate settled-visible-state pointer click also verified12row destination; no source denial/retry, forced click, tool/origin/security bypass. Initial context screenshot unsettledHome excluded; settled1280scroll0 image accepted.",
+    "No invented teen filter controls, independently renewed facts/quotes or proxy satisfaction."
+  ],
+  "gsc": {
+    "classification": "REUSED",
+    "collected_at": "2026-10-12T19:48:27.188Z",
+    "finalized_through": "2026-10-10",
+    "prior_finalized_through": "2026-10-09",
+    "limit": "Orientation only, not aligned cohort/CTR/materiality/newURL qualification"
+  },
+  "result": {
+    "decision": "IMPLEMENT_NOW",
+    "public_delivered": false,
+    "confidence": "High observed discovery/native/preservation confidence, moderate expected usefulness, unknown actual-parent/current-source/SEO outcomes",
+    "next_gate": "Fullnative/preservation/different strictread-onlyPASS/exact12guardedpush/Pages-marker-productionSEO/twoassets/liveinvariants",
+    "next_falsification_trigger": "Clipped decisive-rule or identity, failed native/source route/current source conflict, or actual-parent task counterevidence"
+  }
+}

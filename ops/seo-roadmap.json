@@ -15309,7 +15309,7 @@
       "id": "FT-IMP-137",
       "title": "Bring Chicago activity choices and booking constraints forward",
       "kind": "implementation",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T16:05:09.234Z",
       "target_paths": [
@@ -15342,7 +15342,51 @@
       "evidence_record": "docs/research/chicago-activity-glance-2026-10-13.json",
       "next_gate": "Fullnative/preservation/different strictread-onlyPASS/exact13guardedpush/Pages-marker-productionSEO/twoassets/liveinvariants",
       "scope_amendment": "Pre-edit exact13 adds original Garfield fixture: require two distinct existing-card/new-native-nav admission links and one target, retain exact rendered3rows/eligibility/unknowns/current134dates. Initial960full959pass1fail linkcount NOTgreen; no admission/model/source change or weakened idempotence.",
-      "review_receipt": "FT-IMP-137 Volta01a13609-10eb-7b92-ab75-e7b37a31ef32 independentSTRICTREADONLY PASS/noP0-P3 at2026-10-13T16:15:58Z; reviewedf9e55bc01105ca4606e8c0554bee6ed380ab53dd125bb5d8ee0e94f3aa431939/all1028hash-modes/exact13/345olderactions/held11/LRN239-only/sourcearrays/headH1-schema-map-allarticles-photo-Garfield134/previousCSSprefix/35othercanonicals incl135136 verified. Independent11pure/serialinvariantsPASS; savedpixels/browser evidence and Master960full48maintenance21focus/state0/GSC91/SEO0sixprior log5aa366a6a4d08ad4e06f8178ddb095771fcb319a63b7616dbbbda82e3bff980e inspected, no independent live/source/fullsuite. Initial stale13focus10pass3fail/export-only invocation corrected; initial960full959pass1fail admissionlinkcount amended before edit13scope/assertbothlinks+onetarget/same3rows, idempotence intact. Finalheading452-808-868/section399-755-815/12original11fields/18cardfilterstates/12nativeanchors/180-130stickyidentity/150booking/all12textbounds/arrow582-1388-1458return0/photo3264/nooverflow-errors0; two7stepPARTIAL proxies/no actualparents/currentquotes/factreview renewal/SEOclaim. Only immutable mechanical consensus appended; guarded exactpush/Pages-marker-productionSEO/twoassets/livechecks pending;014unchanged."
+      "review_receipt": "FT-IMP-137 Volta01a13609-10eb-7b92-ab75-e7b37a31ef32 independentSTRICTREADONLY PASS/noP0-P3 at2026-10-13T16:15:58Z; reviewedf9e55bc01105ca4606e8c0554bee6ed380ab53dd125bb5d8ee0e94f3aa431939/all1028hash-modes/exact13/345olderactions/held11/LRN239-only/sourcearrays/headH1-schema-map-allarticles-photo-Garfield134/previousCSSprefix/35othercanonicals incl135136 verified. Independent11pure/serialinvariantsPASS; savedpixels/browser evidence and Master960full48maintenance21focus/state0/GSC91/SEO0sixprior log5aa366a6a4d08ad4e06f8178ddb095771fcb319a63b7616dbbbda82e3bff980e inspected, no independent live/source/fullsuite. Initial stale13focus10pass3fail/export-only invocation corrected; initial960full959pass1fail admissionlinkcount amended before edit13scope/assertbothlinks+onetarget/same3rows, idempotence intact. Finalheading452-808-868/section399-755-815/12original11fields/18cardfilterstates/12nativeanchors/180-130stickyidentity/150booking/all12textbounds/arrow582-1388-1458return0/photo3264/nooverflow-errors0; two7stepPARTIAL proxies/no actualparents/currentquotes/factreview renewal/SEOclaim. Only immutable mechanical consensus appended; guarded exactpush/Pages-marker-productionSEO/twoassets/livechecks pending;014unchanged.",
+      "release_receipt": "FT-IMP-137 release 425ade97f0b9537f91f625cc97566d37a9bf35cf remote verified 2026-10-13T16:19:12.772Z; main0-0/emptyindex/exact13/all1028indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified Chicago activity comparison:425ade97f0b9537f91f625cc97566d37a9bf35cf/Pages38429171759SUCCESS/marker/two200byteexact/productionSEO0sixprior/threepreflightwidths/like-for-likeheading452desktop808mobilevs4510-7828/section399-755-815/12rows11originalfields/18filterstates12-6-12-8-8-5/tablealways12/12nativeEnteranchors80desktop160mobile/sticky180-130/150Booking/all12criticaltextsreadable/arrow582-1388-1458then0/photo3264/nooverflow-console0/teenroute/originalGarfield3rows-age3unknown-residency/source clocks. Immutable /tmp/ft137-final-production-check.json and production-context.png. Master960full48maintenance21focused/state0/GSC91/differentVoltaSTRICTPASS11pure; initial13focus10pass3failstaleHTML viaexport-onlymodule corrected and actualgen; initial960full959pass1fail linkcount corrected after pre-edit13scope amendment without model/source/idempotence weakening. All345olderactions/held11/35othercanonicals incl135136/originalarrays/headH1schema-map-photo-allarticles/Garfield134/previousCSSprefix/CSV/prices retained. LRN239 pageproxy not actualparents/renewedfacts/SEOgain; no newCSV/URL/paidcall. Frisco149 andconnecting150 remain research-only with exact demand/query/price/source gates, no unchanged failedquery/provider retry; paid cumulative0.34636unchanged. One finished transaction; next independent eligible page or cluster task from current roadmap,014fixedexpiry unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T16:19:12.796Z",
+      "release_state": "released-and-production-verified",
+      "release_commit": "425ade97f0b9537f91f625cc97566d37a9bf35cf",
+      "released_at": "2026-10-13T16:19:12.332Z",
+      "pages_run": 38429171759,
+      "production_verification": "Immutable /tmp/ft137-final-production-check.json: matching marker/two200byteexact/productionSEO0/threepreflightwidths/12nativeanchors/18originalfilterstates/table12rows/sticky180-130/12bookingtexts-readable/keyboard582-1388-1458return0/photo3264/nooverflow-console0/teenclusterroute/originalGarfield source-arithmetic-unknownlimits. Original source clocks and heldwork retained."
+    },
+    {
+      "id": "FT-IMP-138",
+      "title": "Expose Chicago teen payoff with its decisive rule",
+      "kind": "implementation",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T17:03:18.351Z",
+      "target_paths": [
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "site/things-to-do/chicago-with-teens.html",
+        "site/styles.css",
+        "tools/chicago-teen-glance.test.mjs",
+        "tools/chicago-teen-page.test.mjs",
+        "docs/research/chicago-teen-glance-2026-10-13.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/chicago-with-teens.html"
+      ],
+      "evidence": "Actual current1280/390 comparisonheading2122.12/2602.66px behindphoto5quickpicks, h1height264.94/158.97. Mixed-age task: teen14/sibling8 compare indoor versus skyline/movement/evening option and exact rule. User table-first simplification and observed comparison discovery qualify bounded layout defect, not CTR/cadence. Preserve8rows7sourcefields/5picks4details4plans4clusterlinks3officialgroups3FAQs/July23clocks/photo1280/schema.",
+      "acceptance_criteria": [
+        "Enable scoped Chicago teen front-comparison; prefix/city/class and existing seven-field permutation, same source arrays; compacthero/tableaftertrust/native3links.180desktop130mobile identity150critical field/1160px teen-only minimum keeps allfields reachable without needless desktop scroll. Generalize existingteen quick/detail link IDs through pageprefix without changing SA outputs. No new facts/CSV/URL.",
+        "Focused/full native QA/idempotence and preservation of35othercanonicals especially135136137, alloriginalarticles/headH1-schema-media/oldCSSprefix/source-models-prices-CSV. Actual1280/390/320 screenshots/geometry/native9anchors/keyboardright-left/all8criticaltexts/image/nooverflow-console/youngerhubroute, two7stepPARTIAL proxies not actualparents/currentfit/safety/route/SEOlift. Different independent strictread-onlyPASS before release.",
+        "Exact12 review-clean guardedcommit/freshfetch/complete sole unpushedrange/no divergence push; PagesSUCCESS/marker/productionSEO/twoaffectedassets200byteexact and declared live invariants. Preserve346olderactions/held11/014scheduler/paid0.34636/observation/human/security gates."
+      ],
+      "measurement_plan": "LRN240 current page/mixed-age task proxy. GSC Oct12finalizedOct10 REUSED/priorOct11finalOct9 orientation only; no queryCTR/materiality/newURL inference.",
+      "production_invariant": "Only Chicago teen HTML and one appended teen-onlyCSS rule change publicly;35othercanonicals/137all-ages/CSSprefix/sourcearrays/July23facts/oldprices/reviews/CSV preserved. Material-usefulness exception comparison discovery only, no observation reset/source renewal/paidcall/newdestination/indexability/indexing/analytics/account/contact/scheduler or deniedsource retry.",
+      "decision": "IMPLEMENT Chicago teen comparison:heading452desktop808mobilevs2122-2603; same8rows7sourcefields/checklast/9nativeanchors/sticky180-130/all8criticaltextsinitialdesktop-endmobile/keyboard2-808-878return0. July23sources/unknowns and137all-ages output unchanged.",
+      "evidence_record": "docs/research/chicago-teen-glance-2026-10-13.json",
+      "next_gate": "Fullnative/preservation/different strictread-onlyPASS/exact12guardedpush/Pages-marker-productionSEO/twoassets/liveinvariants",
+      "review_receipt": "FT-IMP-138 immutable review: Mill 01a1363e-7cfd-76c3-a388-c0f238776e3e PASS 2026-10-13T17:16:04Z; no actionable P0-P2; manifest 4d507396f559777e40e7915d42e32aec03ca987ae196a2c3baa24cd899ac7ad5 exact12/all1030 hashes-modes/older346/held-work/LRN240-only/35othercanonicals preserved. Independent three pure tests and read-only invariants PASS; saved pixels/proofs and Master963full48maintenance14focused/state0/GSC91/SEO0sixprior/log ed689ca2546dbfc6c9d498a7bbb0d8130b71c0b01e74c3ad74253e69fd8089ef inspected, not independently rerun. No reviewer writes/network/browser/Git/delegation/scheduler; original July23 facts not renewed; task proxies PARTIAL. Production gate remains pending."
     }
   ]
 }

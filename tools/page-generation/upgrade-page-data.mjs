@@ -2143,6 +2143,9 @@ export const itineraryPages = {
 
 export const teenPages = {
   "things-to-do/chicago-with-teens.html": {
+    frontComparison: true,
+    frontComparisonPrefix: "chi",
+    frontComparisonClass: "chi-activity-glance chi-teen-glance",
     title: "Things to Do in Chicago With Teens: 8 Picks by Trip Style",
     description:
       "Compare eight things to do in Chicago with teens by interest, cost, time, weather, location, age rules, and mixed-age fit, with current official checks.",
