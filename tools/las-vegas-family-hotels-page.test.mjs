@@ -29,12 +29,12 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   ];
 
   assert.match(html, /<title>Top Family Hotels in Las Vegas: 10 Options by Trip Style<\/title>/);
-  assert.match(html, /<h1>Top Family Hotels in Las Vegas: 10 Options by Trip Style<\/h1>/);
+  assert.match(html, /<h1>Las Vegas Family Hotels<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-family-hotels\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-family-hotels\.html/g) || []).length, 1);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
-  assert.equal((html.match(/<article class="detail-card hotel-card">/g) || []).length, 10);
+  assert.equal((html.match(/<article class="detail-card hotel-card"[^>]*>/g) || []).length, 10);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
   assert.match(html, /Planning USD\/room\/night/);
@@ -47,7 +47,7 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   const expectedRanges = ["$110-$350+", "$350-$700+", "$150-$450+", "$200-$700+", "$130-$300+", "$120-$320+", "$60-$220+", "$80-$300+", "$150-$350+", "$220-$450+"];
   const table = html.match(/<table class="comparison-table hotel-comparison">([\s\S]*?)<\/table>/)[1];
   assert.deepEqual([...table.matchAll(/<td>(\$[\d,]+-\$[\d,]+\+)<\/td>/g)].map((match) => match[1]), expectedRanges);
-  for (const card of html.matchAll(/<article class="detail-card hotel-card">([\s\S]*?)<\/article>/g)) {
+  for (const card of html.matchAll(/<article class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/article>/g)) {
     const priceContext = card[1].match(/<section><h4>Price context and key check<\/h4>([\s\S]*?)<\/section>/)[1];
     assert.match(priceContext, /July 22/);
     assert.doesNotMatch(priceContext, /\b(recent|current) public/i);
@@ -97,7 +97,7 @@ test("routes from home, the stay guide, and the activity decision flow", () => {
 
 test("surfaces three source-backed five-plus starts without implying price or availability", () => {
   const html = readFileSync(pagePath, "utf8");
-  const snapshot = html.match(/<dl class="snapshot">([\s\S]*?)<\/dl>/)[1];
+  const snapshot = html.match(/<dl class="snapshot"[^>]*>([\s\S]*?)<\/dl>/)[1];
   const branch = snapshot.match(/<div><dt>Five or more<\/dt><dd>([\s\S]*?)<\/dd><\/div>/)[1];
   assert.equal((snapshot.match(/<dt>/g) || []).length, 4);
   assert.equal((branch.match(/<a /g) || []).length, 3);
@@ -161,7 +161,7 @@ test("exports the same ten hotels with dated price and capacity limits", () => {
     assert.equal(row[13], "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison");
     assert.ok(html.includes(esc(row[0])));
   }
-  assert.match(html, /<section id="hotel-comparison" class="band">/);
+  assert.match(html, /<section id="hotel-comparison" class="band" data-glance-first>/);
   assert.match(html, /href="\.\.\/downloads\/las-vegas-family-hotels\.csv" download/);
   assert.match(html, /href="https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-family-hotels\.html#hotel-comparison"/);
 });

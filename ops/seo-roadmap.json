@@ -20,10 +20,47 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-130",
+      "title": "Expose Las Vegas hotel comparison and five-person room checks first",
+      "kind": "existing-page-usability",
+      "status": "selected",
+      "selected_on": "2026-10-12",
+      "started_at": "2026-10-13T03:03:33Z",
+      "allowed_during_observation": true,
+      "requires_fresh_gsc": false,
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html"
+      ],
+      "target_paths": [
+        "tools/page-generation/family-hotel-pages.mjs",
+        "site/where-to-stay/las-vegas-family-hotels.html",
+        "site/styles.css",
+        "tools/las-vegas-glance-first.test.mjs",
+        "tools/las-vegas-family-hotels-page.test.mjs",
+        "docs/research/las-vegas-glance-first-task-2026-10-12.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "Fresh actual production task at1280/390 revalidates stopped prior inspection: comparison2868.75/3988.23px, firstrows3264.78/4520.43 afterlargeheader/photo/summary-snapshot/fivepicks; hotel names not detail links. Five-plus branch1508.88/2160.16px. UserOct12 table-first simplicity and reviewedquality direction selects scan/discovery correction; no source renewal or assumed CSV demand.",
+      "acceptance_criteria": [
+        "Compact literal Las Vegas Family Hotels H1/promise, unchanged dated trust then existing10hotel comparison/keyboardregion/stable180px identities; title/meta/canonical/FAQ-schema stay exact.",
+        "Add10native row-card links/stablearticleIDs and early five-or-more native branch link. Move complete summary/snapshot/fivepicks and licensedphoto after comparison; branch remains beforepicks and has directhandoff. Preserve all card bodies/table values and maps.",
+        "Retain fourSeptember16 named room-capacity records and July22 facts/prices/sampled-review clocks; Vdara4vs6/tworoom no-assumedconnector, GrandChateau8/no-crib-rollaway, TahitiRoyalTahitian8vsonebed4 and Cancun4-6/cribconflict/unknownbookingprice limits exact. No historicalband as five-person quote or factrenewal.",
+        "Existing8987byte CSV exact/secondary closed native disclosure, no newexport. All65hotelrecords/evidence/other33URLs/allCSV unchanged. Focused/full/idempotent QA; actual1280-390-320 keyboard/table/detail/branch/disclosure/image and taskcontrols; different strict read-only PASS/PASS_WITH_P3 then exact guardedpush/Pages-marker-productionSEO/affectedbyte/live checks."
+      ],
+      "measurement_plan": "LRN226 PAGE_ONLY_PROXY compare roles/budget/room function and reach maintained five-plus category limits; geometry/navigation/parity with five-person primary, four-person central-suite and skeptical-low-band/connector controls plus pool/teen/offStrip rolechecks. Not actual-parent preference/satisfaction/readingtime or SEOgain. LatestOct12API finalOct10/priorOct11finalOct9 REUSED orientation only. Falsify lost room-price-review limits or routing, failed keyboard/mobile/image, sourceclock drift or contrary actual-user evidence.",
+      "production_invariant": "10article bodies/table values/maps/trust/snapshot/5picks/sourcefooter/FAQ-schema/headmeta/photoURL-size-alt-attribution exact apart from newID/hrefs/lazy. CSV8987bytes/all65records/other33publicURLs/evidence/sourceclocks unchanged. CSSoldprefix plus LasVegas-onlyID styles; no source/browser-denialretry/security/account/spending/indexing/analytics/scheduler/newURL mutation. Preserve989baseline/333priorordereditems/held11; carry014mechanicalrelease only. Actualrun03:01:58Z/startdeadline03:46:58Z; active014expiryOct16 01:47:33Z unchanged.",
+      "decision": "IMPLEMENT reproduced scan/discovery defect; preserve useful original trip routing and all maintained room/review/price limits, not default export or new city work.",
+      "review_receipt": "FT-IMP-130 Sagan01a1333f-694d-7a63-8de3-4231c370b71a different independent STRICTREADONLY PASS/noP0-P3: manifest3a75265206c69d4f87373df52289a8481df78a5ee7acffd2b721ba878f21b05c/all989base-991candidate-final hashes-modes/exact11/333priorordereditems/heldwork/LRN226-onlyledger/014mechanicalclosure verified. Independent9purefocused/read-onlyinvariants PASS; Master895full48maintenance/state0/GSC91/localSEO0sixprior completedlogsha014552817d377a0372b934860728b71eba041622b9dcc936ef2254bd2e21ca6f inspected, notindependentfull. All10cardbodies/tablevalues-maps/schema-meta/trust/snapshot-fivepicks/photo-sourcefooter/sourceclocks/65records/allCSV/other33URLs preserved. Saved responsive/room/constraint/link-branch-export proofs and screenshots inspected, HTMLCSS exactcandidate. Table481-851-972/firstrows766-1256-1459 notinitialmobileviewport;30nativehotel+3branch~80px/12roomchecks/18constraintpresence/3secondary8987byteexactdownloads/sticky180white-teal/photo1280/nooverflow-errors0. Physicalfiveplus389desktop-677mobile deeper/earlylink253-394 recoversaccess; proxyonly/unknownbooking/actualroute/parentpreferences-SEOgain notclaimed. Reviewer nofile-temp-network-browser-delegation-gitwrites. Onlymechanical immutable consensus; exactguardedrelease/Pages-marker-productionSEO/liveverification pending,014sprintunchanged."
+    },
+    {
       "id": "FT-OPS-014",
       "title": "Activate the October 12-15 reviewed family-travel expansion sprint",
       "kind": "operations",
-      "status": "selected",
+      "status": "completed",
       "selected_on": "2026-10-12",
       "started_at": "2026-10-13T01:49:51Z",
       "target_paths": [
@@ -48,7 +85,11 @@
       "production_invariant": "Eight exact paths only; no site/src/evidence/CSV/public changes in activation. Preserve988baseline/332prior ordered items/12held dirty paths outside owned mechanical012-129 receipts. Same captured normal scheduler, no concurrent writer/replacement/ControlRoom/spending/security/indexing/analytics/outreach/posting/accounts/links. New dates do not restart012 or reset learning/observation/blocker history. GlobalNov13 17EST cutoff wins. Expiry/early-stop exact restoration-only verification and return.",
       "decision": "PREPARE fresh72hour override with explicitly delegated evidence-qualified destination selection during this sprint; all other new-URL, review, source, human, security, paid and release gates remain.",
       "next_gate": "Focused/full native QA and different independent strict read-only PASS before app mutation; verify exact saved fields, then guarded docs/config push.",
-      "review_receipt": "FT-OPS-014 Mendel01a132fb-3ce1-7a92-aa0b-4ec3680d3794 independent STRICTREADONLY PASS/noP0-P3: manifest90bcd9f6108ec5ef15b401b2bdeba19dc09fb094712839d01392624969edad1c/all989candidate-988baseline hashes-modes/exact8/332prior includinghistorical013/012archive/heldwork/emptyindex verified. Focused6/invariants PASS; completedMaster892full48maintenance/state0/GSC91/localSEO0sixprior logsha cf6b9f0bce0499be8a4040655efdc0c59c4cd42f18d0e4b86e102a000f408d6b inspected. No reviewer writes/temp/network/browser/delegation/scheduler/git mutation. App activation verified02:02:13Z: saved exact14361char reviewedprompt sha2569af515ca95ef8a2eaa19f72b6030b119d43c7738570e49625ffd5399453402e2/hourlycadence; only prompt-rrule-updated_at differ fromcapturednormalTOML, originalID/name/kind/thread/ACTIVE/version1/created_at/absentnotification/globalcutoff retained. Fresh72hOct12-15 21:47:33EDT window and boundedcityscope reviewed; originalnormal7643char/hash untouched. Only four immutable opsreceipts and two declaredoperator verification fields postconsensus; normalizedallotheroperator/threecontentpath parity PASS. InitialID013collision corrected014 before review/mutation without touchingprior013. No public delivery/learning/newCSV claim; guarded docs/config release pending."
+      "review_receipt": "FT-OPS-014 Mendel01a132fb-3ce1-7a92-aa0b-4ec3680d3794 independent STRICTREADONLY PASS/noP0-P3: manifest90bcd9f6108ec5ef15b401b2bdeba19dc09fb094712839d01392624969edad1c/all989candidate-988baseline hashes-modes/exact8/332prior includinghistorical013/012archive/heldwork/emptyindex verified. Focused6/invariants PASS; completedMaster892full48maintenance/state0/GSC91/localSEO0sixprior logsha cf6b9f0bce0499be8a4040655efdc0c59c4cd42f18d0e4b86e102a000f408d6b inspected. No reviewer writes/temp/network/browser/delegation/scheduler/git mutation. App activation verified02:02:13Z: saved exact14361char reviewedprompt sha2569af515ca95ef8a2eaa19f72b6030b119d43c7738570e49625ffd5399453402e2/hourlycadence; only prompt-rrule-updated_at differ fromcapturednormalTOML, originalID/name/kind/thread/ACTIVE/version1/created_at/absentnotification/globalcutoff retained. Fresh72hOct12-15 21:47:33EDT window and boundedcityscope reviewed; originalnormal7643char/hash untouched. Only four immutable opsreceipts and two declaredoperator verification fields postconsensus; normalizedallotheroperator/threecontentpath parity PASS. InitialID013collision corrected014 before review/mutation without touchingprior013. No public delivery/learning/newCSV claim; guarded docs/config release pending.",
+      "release_receipt": "FT-OPS-014 release bbe409a60dfa7b689b54b0d0fb5b4b95ebc6537a remote verified 2026-10-13T02:03:59.305Z; main0-0/emptyindex/exact8/all989indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Scheduler activation and exact8 docs/config release delivered/remote verified; no new public page, source renewal, export or learning-unit claim. Same heartbeat active exact reviewed14361char prompt sha2569af515ca95ef8a2eaa19f72b6030b119d43c7738570e49625ffd5399453402e2/hourlycadence preserved unrelatedsavedfields. Fresh72hour window Oct12 21:47:33EDT toOct15 21:47:33EDT; explicit dated evidence-qualified city-selection/publication and family-cluster quality scope recorded, all source/task-proxy/fullQA/different-review/human/URL/security/spending/release gates retained. Originalnormal7643char/hash/twicdaily restored at expiry bysameautomation only. Master892full48maintenance6focused/state0/GSC91/localSEO0sixprior; MendelSTRICTREADONLYPASS, archive012/prior332/heldwork/publicbytes preserved. Initial013collision corrected014 before mutation, historical013 unchanged. All native/invariant/guard/stage/index/push sessions complete/reviewerclosed. No Pages wait for docs/config-only action. Next highest-priority qualified public family decision or bounded SEO intent-overlap qualification; no repeated broadreports, defaultCSV or pagecountquota. Localcomputer/app availability needed; no guaranteed continuousruntime or backlogfinish. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T02:03:59.327Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "bbe409a60dfa7b689b54b0d0fb5b4b95ebc6537a"
     },
     {
       "id": "FT-IMP-129",

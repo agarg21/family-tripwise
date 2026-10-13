@@ -1,5 +1,13 @@
 # Product Learning Ledger
 
+## LRN-226 - Reach Vegas comparisons and exact larger-room limits directly - 2026-10-12
+
+FT-IMP-130 [task](../docs/research/las-vegas-glance-first-task-2026-10-12.json). Fresh page-only task: comparison2869px desktop/3988mobile, firstrows3265/4520 afterheader/photo/summary-snapshot/fivepicks; five-plus branch1509/2160 and no earlyhandoff or row-detail links. REJECT hypothesis that the current page is glance-first; IMPLEMENT compactheader/tablefirst/10native detailtargets/earlyfive-plus handoff/secondaryexistingCSV while retaining every maintained room/policy/review/price limit and trip-routing field.
+
+PAGE_ONLY_PROXY plus directuser simplicity/quality direction, not actual-parent preference/satisfaction/readingtime or SEOgain. High observed geometry/parity confidence, moderate expected scan benefit. Five-person primary/four-person central-suite/skeptical-low-band-connector controls retain category and price unknowns; pool/teen/offStrip roles remain distinct. Lesson: moving broad setup below a comparison must keep constraint routing discoverable through a direct path, not assume table bands price larger rooms. Falsify lost capacity/price/review/source-date limits, failed mobile/keyboard/image/branch, or contrary actual-user evidence. Full/focused/idempotence/differentstrictPASS/production gates remain. July22facts-prices-reviews and Sept16room capacity not renewed; no newCSV/URL.
+
+Local1280/390/320 comparison481/851/972px, firstrows766/1256/1459; closed-secondary3281visiblewords vs3317. Native30hotel/3branch jumps~80px,12room-limit checks/18constraint-presence checks/3existing8987byteCSV open-download-exact-close checks, sticky180white-teal/hscroll0-400-798/image1280/nooverflow/errors0. Detailedfiveplus branch moves389desktop/677at390 deeper; topnativehandoff253/394px recoversaccess, not unchangeddepth. Compare/Decide remainPARTIAL for currentquotes/inventory/bedding/ages/exactroutes. Actual-parent/readingtime/SEO/source-renewal claims remain excluded.
+
 ## LRN-225 - Put room and water-play checks before setup - 2026-10-12
 
 FT-IMP-129 [task](../docs/research/san-antonio-glance-first-task-2026-10-12.json). Family decision: compare SanAntonio room function, water-play role, area and historical budget, then reach five-party room/admission/rest limits. Actual production table2623px desktop/3926mobile afterlargeheading/photo/summary/snapshot/sixpicks; firstrows3003/4346. REJECT hypothesis that maintained checks are already quick to scan. IMPLEMENT compactheader/tablefirst/keyboardregion/scoped80px disclosureanchor margin while preserving all routing and12cards.

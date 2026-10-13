@@ -1,0 +1,52 @@
+{
+  "action_id": "FT-IMP-130",
+  "checked_on": "2026-10-12",
+  "evidence_class": "PAGE_ONLY_PROXY",
+  "url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+  "task": "Compare ten room/pool/casino/area/historical-budget roles and reach exact larger-room limits without treating July bands as family-five quotes.",
+  "before": [
+    {"width":1280,"comparison_top":2868.75,"first_row_top":3264.78125,"five_plus_top":1508.875,"visible_words":3317,"overflow":false},
+    {"width":390,"comparison_top":3988.234375,"first_row_top":4520.4296875,"five_plus_top":2160.15625,"visible_words":3317,"overflow":false}
+  ],
+  "decision": "IMPLEMENT compactheader/table-first/10native detaillinks/earlyfiveplus branch/secondaryexistingCSV; retain all room-price-review limits and triprouting.",
+  "task_controls": [
+    {"job":"Five-person room shortlist","source_basis":"September16 GrandChateau8/RoyalTahitian8/Cancun4-6; Vdara6/two-room fallback","limit":"Exact inventory, bedding, prices, child ages and casino route remain unknown."},
+    {"job":"Four-person central kitchenette","source_basis":"Vdara Studio four-person category and GrandChateau kitchen/laundry role","limit":"Exact bedding, kitchen supplies and total remain booking checks."},
+    {"job":"Skeptical low-band or assumed connector","source_basis":"July22 mixed-party room bands and September16 named-category limits","limit":"Never infer five-person suite price, available room or guaranteed connection."},
+    {"job":"Pool resort versus non-gaming luxury","source_basis":"Mandalay and FourSeasons distinct dated pool/property records","limit":"Season/date-specific water access and exact casino paths unverified."},
+    {"job":"Off-Strip kitchen and water time","source_basis":"Tahiti and Cancun roles and documented crib conflict","limit":"Transport, slide operations, crib availability and exact room price need checks."},
+    {"job":"Older-child energy versus NorthStrip or nature base","source_basis":"NewYorkNewYork/ResortsWorld/RedRock role and sampled-review conflicts","limit":"No guaranteed comfort, all-ages pool operation or suitability verdict."}
+  ],
+  "maintained_sources": ["docs/research/las-vegas-family-hotel-evidence-pack.md","docs/research/las-vegas-five-plus-room-branch-validation-2026-09-16.md"],
+  "source_dates": "July22 facts/prices/sampledreviews and September16 four room categories are preserved, not renewed.",
+  "confidence": "High observed geometry/parity; moderate expected scan benefit; not actual-parent testing, preference, satisfaction, readingtime or SEO proof.",
+  "gsc": "ReusedOct12APIfinalOct10/priorOct11finalOct9 page/crawl orientation only; no aligned query/CTR action.",
+  "local_validation": {
+    "widths": [1280,390,320],
+    "comparison_tops": [480.5,850.890625,972.0859375],
+    "first_row_tops": [765.7265625,1256.1171875,1458.90625],
+    "visible_words_with_secondary_export_closed": 3281,
+    "sticky_identity_width": 180,
+    "keyboard_horizontal_offsets": [0,400,798],
+    "native_hotel_anchor_checks": 30,
+    "native_five_plus_anchor_checks": 3,
+    "anchor_top_px": "79.75-80.23",
+    "four_named_room_checks_across_three_widths": 12,
+    "six_constraint_presence_controls_across_three_widths": 18,
+    "secondary_export_open_download_exact_close_checks": 3,
+    "unchanged_csv_bytes": 8987,
+    "loaded_image_natural_width": 1280,
+    "overflow": false,
+    "browser_errors": [],
+    "five_plus_document_tops": [1898.2265625,2837.015625,3087.8046875],
+    "early_five_plus_link_tops": [253.5,394.1953125,394.1953125],
+    "routing_tradeoff": "Detailedbranch moves389px desktop/677px at390 deeper thanbefore; earlynative link recovers directaccess. Firsttable rows remain belowinitial narrow-phone viewport; horizontal scroll remains.",
+    "proof": "/tmp/ft130-current-browser/local-responsive.json, local-roomchecks.json, local-task-controls.json, local-comparison.png, local-branch-320.png and local-roomcheck-* screenshots",
+    "limits": "Observed navigation, constraint presence and geometry are proxy evidence, not actual-parent preference, satisfaction, full booking choice or SEO lift. No official provider reopened; source clocks not renewed."
+  },
+  "task_adjudication": "Six bounded page-only controls retain named categories, roles, datedprice/review classes and explicit volatile checks. Five-person primary Start/Reduce/Trace/Verify/Recover supported through newdirectlink; Compare/Decide remainPARTIAL for current five-party quote, bedding, inventory, child-age and exactcasino-route unknowns. Four-person central-suite and skepticalconnector controls retain the four-guest Studio and no-assumedconnection/low-band limits; rolechecks are constraint presence, not suitability or independently renewed provider evidence.",
+  "remaining_gate": "Final fullnative and differentstrictread-onlyPASS; guardedproduction verification. Initial Master895full/48maintenance/9focused/state0/GSC91/localSEO0sixprior passed, with existing global generator idempotence included.",
+  "no_new_export": true,
+  "no_fact_renewal": true,
+  "falsification": "Lost role/occupancy/price/review/source-date limits, failed responsive keyboard or branch recovery, or contraryactual-user evidence."
+}

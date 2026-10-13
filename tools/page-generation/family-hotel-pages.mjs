@@ -563,7 +563,8 @@ function lasVegasHotelComparisonCsv() {
 
 function lasVegasFamilyHotelPage() {
   const hotels = lasVegasFamilyHotels;
-  const cards = hotels.map((hotel) => `          <article class="detail-card hotel-card">
+  const hotelId = index => `las-vegas-hotel-${index + 1}`;
+  const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="${hotelId(index)}">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
@@ -577,8 +578,8 @@ function lasVegasFamilyHotelPage() {
             <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>These dated room-rate examples do not establish a five-person suite quote; party or room basis is unknown where not stated, and tax or mandatory-fee inclusion varies.</p></section>
           </article>`).join("\n");
 
-  const rows = hotels.map((hotel) => `              <tr>
-                <td>${esc(hotel.name)}</td>
+  const rows = hotels.map((hotel, index) => `              <tr>
+                <td><a href="#${hotelId(index)}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
                 <td>${esc(hotel.priceRange)}</td>
@@ -604,23 +605,32 @@ function lasVegasFamilyHotelPage() {
   };
 
   const body = `    <main>
-      <section class="page-hero hotel-hero">
+      <section id="las-vegas-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">Las Vegas family hotels</p>
-          <h1>Top Family Hotels in Las Vegas: 10 Options by Trip Style</h1>
+          <h1>Las Vegas Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare ten Las Vegas family hotels by room setup, pool value, casino or non-gaming context, dated per-room nightly budget, location, and themes from sampled online reviews.</p>
+          <p>Compare ten hotels by room setup, pool role, casino context, area and historical nightly budget. <a href="#las-vegas-room-fit">Five or more guests</a>.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
         <p>July 22 USD per-room, per-night planning bands synthesize public examples and widen for room and date variation. Some examples used two adults; party and exact room are unknown for others. Taxes and mandatory fees were included only where displayed, while other examples were before or plus tax; parking is separate. These are not current five-person suite quotes. Price the exact room, party, dates, fees and full stay before choosing.</p>
       </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG" alt="The Bellagio fountains and Las Vegas Strip at night." width="1280" height="850" loading="eager" decoding="async">
-          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
-        </figure>
+      <section id="hotel-comparison" class="band" data-glance-first>
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
+          <p class="review-label">July 22 USD per-room/night planning bands start from mixed public examples. Some used two adults; other party and room bases are unknown. Tax and mandatory-fee inclusion varies, and parking is separate. These are not current five-person suite quotes. Compare the exact room, party, dates and full stay total.</p>
+          <div class="comparison-scroll" role="region" aria-label="Las Vegas hotel comparison" tabindex="0">
+            <table class="comparison-table hotel-comparison">
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <tbody>
+${rows}
+              </tbody>
+            </table>
+          </div>
+          <details><summary>Spreadsheet copy</summary><p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps the July 22 price basis and unknowns with each hotel.</p></details>
+        </div>
       </section>
       <section class="band intro-band">
         <div class="container answer-grid">
@@ -630,7 +640,7 @@ function lasVegasFamilyHotelPage() {
             <p>Mandalay Bay and Four Seasons share the strongest water-resort setup at different price and atmosphere levels. Vdara and Marriott's Grand Chateau solve two different central-suite needs. Tahiti Village and Cancun Resort trade centrality for kitchens and water time. Use the other four when themed value, older-kid energy, a modern North Strip resort, or a Summerlin base matters more.</p>
             <p><a class="text-link" href="./las-vegas-with-kids.html">Compare Las Vegas stay areas and property constraints</a></p>
           </div>
-          <dl class="snapshot">
+          <dl class="snapshot" id="las-vegas-room-fit">
             <div><dt>Five or more</dt><dd>${hotels.filter((hotel) => hotel.roomCapacity?.fivePlusStart).map((hotel) => `<a href="${esc(hotel.roomCapacity.source)}">${esc(hotel.roomCapacity.label)}</a> (${esc(hotel.roomCapacity.capacity)})`).join("; ")}. Vdara: two-bedroom luxury suite or two rooms. Compare same-date five-guest totals, not July room ranges.</dd></div>
             <div><dt>Price format</dt><dd>July 22 USD/room/night planning bands; five-person suite total unverified</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
@@ -648,20 +658,11 @@ function lasVegasFamilyHotelPage() {
           <article class="quick-pick"><span>North Strip or nature base</span><strong>Resorts World Hilton or Red Rock</strong><p>Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</p></article>
         </div>
       </section>
-      <section id="hotel-comparison" class="band">
-        <div class="container">
-          <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="review-label">July 22 USD per-room/night planning bands start from mixed public examples. Some used two adults; other party and room bases are unknown. Tax and mandatory-fee inclusion varies, and parking is separate. These are not current five-person suite quotes. Compare the exact room, party, dates and full stay total.</p>
-          <p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps the July 22 price basis and unknowns with each hotel.</p>
-          <div class="comparison-scroll">
-            <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
-              <tbody>
-${rows}
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <section class="container media-section">
+        <figure class="licensed-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG" alt="The Bellagio fountains and Las Vegas Strip at night." width="1280" height="850" loading="lazy" decoding="async">
+          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
+        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
