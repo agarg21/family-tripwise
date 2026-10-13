@@ -1395,3 +1395,5 @@ p.contributor-credit {
   #sa-activity-comparison .comparison-table :is(th,td):first-child { width: 130px; }
   .sa-activity-glance :is(#sa-activity-comparison,#sa-activity-filters,#sa-activity-notes) { scroll-margin-top: 160px; }
 }
+
+.sa-teen-glance #sa-activity-comparison .comparison-table { min-width: 1160px; }

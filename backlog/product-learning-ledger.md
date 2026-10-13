@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-237 - Let the teen compare an anchor and its decisive rule - 2026-10-13
+
+FT-IMP-136 [SanAntonio teen task](../docs/research/san-antonio-teen-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: olderchild and younger sibling compare indoor competition versus park/adventure, or a lower-pressure city block. REJECT quick-scan hypothesis: table2324desktop/2905mobile afterimage5picks. IMPLEMENT same10rows7fields upfront, decisive-check field last in display only, source arrays unchanged. Keep5picks/5details/3plans/routes/FAQs/July27 clocks.
+
+Local429/755/866 comparison; firstrows676/1050/1216 notallinitialmobileviewport.9native links, shared180desktop130mobile identity/150criticalfield; teen-only1160minimum makes all10criticalfields initially visible horizontallydesktop, all10readablephoneend. Arrow2/808/878then0/photo1280/nooverflow-errors0, native younger-hub route reachesreviewed135. Two reproducible seven-step PARTIAL roles for current rules/selectedactivity/quote/weather/return, not actualparents or SEO/satisfaction/reading-time proof. Historical facts/reviews not renewed; no newCSV or URL. Lesson: promote the decisive field without detaching its activity or dropping source context; reuse a layout without forcing unnecessary desktop scroll. Falsify clipping/route-failure/currentfactconflict or actualparent-task difficulty. Fullnative/differentread-onlyreview/production gates remain, no delivered claim yet.
+
 ## LRN-236 - Put the existing activity decision table before the cards - 2026-10-13
 
 FT-IMP-135 [SanAntonio activity task](../docs/research/san-antonio-activity-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: compare indoor younger-child anchor versus lower-cost short stop. REJECT quickly answerable hypothesis: comparison heading4687desktop/8314mobile after13cards. IMPLEMENT existing13row table before licensedimage/cards, compact heading and3native sectionlinks; preserve all facts, July26clocks, filters,5picks/6details/map/metadata/schema. No newCSV or keyword rewrite.

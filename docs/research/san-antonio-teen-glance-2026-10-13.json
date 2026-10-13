@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-136",
+  "learning_id": "LRN-237",
+  "checked_on": "2026-10-13",
+  "evidence_class": "CURRENT_PAGE_ONLY_TASK_PROXY",
+  "baseline": {
+    "comparison_heading_y": [
+      2323.5390625,
+      2904.6640625
+    ],
+    "widths": [
+      1280,
+      390
+    ],
+    "h1_height": [
+      264.9375,
+      158.96875
+    ],
+    "visible_words": 2237
+  },
+  "current": {
+    "frames": [
+      {
+        "comparisonY": 429.3046875,
+        "criticalInitiallyReadable": true,
+        "firstRowY": 676.1328125,
+        "h1Font": "36px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Teen reason",
+          "Time / cost",
+          "Area / format",
+          "Flexibility",
+          "Pair nearby",
+          "Check before choosing"
+        ],
+        "identityWidth": 180,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 10,
+        "width": 1280,
+        "words": 2243
+      },
+      {
+        "comparisonY": 755.3046875,
+        "criticalInitiallyReadable": false,
+        "firstRowY": 1050.1328125,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Teen reason",
+          "Time / cost",
+          "Area / format",
+          "Flexibility",
+          "Pair nearby",
+          "Check before choosing"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 10,
+        "width": 390,
+        "words": 2243
+      },
+      {
+        "comparisonY": 865.6953125,
+        "criticalInitiallyReadable": false,
+        "firstRowY": 1215.71875,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Teen reason",
+          "Time / cost",
+          "Area / format",
+          "Flexibility",
+          "Pair nearby",
+          "Check before choosing"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 10,
+        "width": 320,
+        "words": 2243
+      }
+    ],
+    "anchors": [
+      {
+        "hash": "#sa-activity-comparison",
+        "headerBottom": 65,
+        "id": "sa-activity-comparison",
+        "top": 79.8046875,
+        "width": 1280
+      },
+      {
+        "hash": "#sa-activity-quick-picks",
+        "headerBottom": 65,
+        "id": "sa-activity-quick-picks",
+        "top": 79.9765625,
+        "width": 1280
+      },
+      {
+        "hash": "#sa-activity-notes",
+        "headerBottom": 65,
+        "id": "sa-activity-notes",
+        "top": 80.2265625,
+        "width": 1280
+      },
+      {
+        "hash": "#sa-activity-comparison",
+        "headerBottom": -452.890625,
+        "id": "sa-activity-comparison",
+        "top": 159.8046875,
+        "width": 390
+      },
+      {
+        "hash": "#sa-activity-quick-picks",
+        "headerBottom": -3456.390625,
+        "id": "sa-activity-quick-picks",
+        "top": 80.2421875,
+        "width": 390
+      },
+      {
+        "hash": "#sa-activity-notes",
+        "headerBottom": -4769.390625,
+        "id": "sa-activity-notes",
+        "top": 159.8984375,
+        "width": 390
+      },
+      {
+        "hash": "#sa-activity-comparison",
+        "headerBottom": -562.890625,
+        "id": "sa-activity-comparison",
+        "top": 160.1953125,
+        "width": 320
+      },
+      {
+        "hash": "#sa-activity-quick-picks",
+        "headerBottom": -3642.890625,
+        "id": "sa-activity-quick-picks",
+        "top": 79.9609375,
+        "width": 320
+      },
+      {
+        "hash": "#sa-activity-notes",
+        "headerBottom": -5208.890625,
+        "id": "sa-activity-notes",
+        "top": 160.0390625,
+        "width": 320
+      }
+    ],
+    "keys": [
+      {
+        "critical": [
+          {
+            "name": "Natural Bridge Caverns, exact tour",
+            "readable": true,
+            "text": "Exact tour, minimum age, physical fit, clothing, waiver, availability, and refund rule"
+          },
+          {
+            "name": "Six Flags Fiesta Texas",
+            "readable": true,
+            "text": "Calendar, ride closures, exact height rules, weather, ticket scope, and chaperone policy"
+          },
+          {
+            "name": "Andretti Indoor Karting & Games",
+            "readable": true,
+            "text": "Exact activity, height or license rule, waiver, clothing, walk-in availability, and total spend"
+          },
+          {
+            "name": "SeaWorld San Antonio",
+            "readable": true,
+            "text": "Park versus Aquatica ticket, ride heights, showtimes, weather, closures, and active chaperone policy"
+          },
+          {
+            "name": "Alamo church and Ralston Family Collections Center",
+            "readable": true,
+            "text": "Free church reservation, exact paid exhibit, hours, entry time, content interest, and construction access"
+          },
+          {
+            "name": "Mission San Jose or one selected mission",
+            "readable": true,
+            "text": "Chosen site, visitor-center and program hours, heat, high-water closures, transport, and return plan"
+          },
+          {
+            "name": "Hopscotch San Antonio",
+            "readable": true,
+            "text": "Advance ticket, child-ticket cutoff, adult-only hours, current installations, effects, and parking"
+          },
+          {
+            "name": "GO RIO narrated cruise",
+            "readable": true,
+            "text": "Current hours, boarding location, wait, weather, river closure, and return to the next stop"
+          },
+          {
+            "name": "Pearl and Museum Reach, one teen-chosen stop",
+            "readable": true,
+            "text": "Chosen shop, meal or event, market date, heat, parking or ride plan, and return"
+          },
+          {
+            "name": "Southtown and Blue Star, one selected gallery or food stop",
+            "readable": true,
+            "text": "Exact gallery or shop hours, event date, weather, parking, walking limit, and evening return"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 61,
+        "max": 2,
+        "offset": 2,
+        "regionLeft": 60,
+        "width": 1280
+      },
+      {
+        "returnOffset": 0,
+        "width": 1280
+      },
+      {
+        "critical": [
+          {
+            "name": "Natural Bridge Caverns, exact tour",
+            "readable": true,
+            "text": "Exact tour, minimum age, physical fit, clothing, waiver, availability, and refund rule"
+          },
+          {
+            "name": "Six Flags Fiesta Texas",
+            "readable": true,
+            "text": "Calendar, ride closures, exact height rules, weather, ticket scope, and chaperone policy"
+          },
+          {
+            "name": "Andretti Indoor Karting & Games",
+            "readable": true,
+            "text": "Exact activity, height or license rule, waiver, clothing, walk-in availability, and total spend"
+          },
+          {
+            "name": "SeaWorld San Antonio",
+            "readable": true,
+            "text": "Park versus Aquatica ticket, ride heights, showtimes, weather, closures, and active chaperone policy"
+          },
+          {
+            "name": "Alamo church and Ralston Family Collections Center",
+            "readable": true,
+            "text": "Free church reservation, exact paid exhibit, hours, entry time, content interest, and construction access"
+          },
+          {
+            "name": "Mission San Jose or one selected mission",
+            "readable": true,
+            "text": "Chosen site, visitor-center and program hours, heat, high-water closures, transport, and return plan"
+          },
+          {
+            "name": "Hopscotch San Antonio",
+            "readable": true,
+            "text": "Advance ticket, child-ticket cutoff, adult-only hours, current installations, effects, and parking"
+          },
+          {
+            "name": "GO RIO narrated cruise",
+            "readable": true,
+            "text": "Current hours, boarding location, wait, weather, river closure, and return to the next stop"
+          },
+          {
+            "name": "Pearl and Museum Reach, one teen-chosen stop",
+            "readable": true,
+            "text": "Chosen shop, meal or event, market date, heat, parking or ride plan, and return"
+          },
+          {
+            "name": "Southtown and Blue Star, one selected gallery or food stop",
+            "readable": true,
+            "text": "Exact gallery or shop hours, event date, weather, parking, walking limit, and evening return"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 808,
+        "offset": 808,
+        "regionLeft": 18,
+        "width": 390
+      },
+      {
+        "returnOffset": 0,
+        "width": 390
+      },
+      {
+        "critical": [
+          {
+            "name": "Natural Bridge Caverns, exact tour",
+            "readable": true,
+            "text": "Exact tour, minimum age, physical fit, clothing, waiver, availability, and refund rule"
+          },
+          {
+            "name": "Six Flags Fiesta Texas",
+            "readable": true,
+            "text": "Calendar, ride closures, exact height rules, weather, ticket scope, and chaperone policy"
+          },
+          {
+            "name": "Andretti Indoor Karting & Games",
+            "readable": true,
+            "text": "Exact activity, height or license rule, waiver, clothing, walk-in availability, and total spend"
+          },
+          {
+            "name": "SeaWorld San Antonio",
+            "readable": true,
+            "text": "Park versus Aquatica ticket, ride heights, showtimes, weather, closures, and active chaperone policy"
+          },
+          {
+            "name": "Alamo church and Ralston Family Collections Center",
+            "readable": true,
+            "text": "Free church reservation, exact paid exhibit, hours, entry time, content interest, and construction access"
+          },
+          {
+            "name": "Mission San Jose or one selected mission",
+            "readable": true,
+            "text": "Chosen site, visitor-center and program hours, heat, high-water closures, transport, and return plan"
+          },
+          {
+            "name": "Hopscotch San Antonio",
+            "readable": true,
+            "text": "Advance ticket, child-ticket cutoff, adult-only hours, current installations, effects, and parking"
+          },
+          {
+            "name": "GO RIO narrated cruise",
+            "readable": true,
+            "text": "Current hours, boarding location, wait, weather, river closure, and return to the next stop"
+          },
+          {
+            "name": "Pearl and Museum Reach, one teen-chosen stop",
+            "readable": true,
+            "text": "Chosen shop, meal or event, market date, heat, parking or ride plan, and return"
+          },
+          {
+            "name": "Southtown and Blue Star, one selected gallery or food stop",
+            "readable": true,
+            "text": "Exact gallery or shop hours, event date, weather, parking, walking limit, and evening return"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 878,
+        "offset": 878,
+        "regionLeft": 18,
+        "width": 320
+      },
+      {
+        "returnOffset": 0,
+        "width": 320
+      }
+    ]
+  },
+  "task": {
+    "decision": "A teen and younger sibling choose an indoor competition anchor versus park/adventure, or a lower-pressure history/food block",
+    "steps": [
+      "Read originalJuly27 fact clock and editorial-estimate limits",
+      "Use native comparison link",
+      "Compare teen reason and time/cost-class for indoor versus park choices",
+      "Read decisive checks with sticky activity identity",
+      "Use Quickpicks to select a conditional trip shape",
+      "Use Detailedchecks to inspect preserved height/waiver/minor/ticket constraints",
+      "Use native all-ages route or original source links; exact current policy/quote/practical route remains unresolved"
+    ],
+    "roles": [
+      {
+        "role": "Teen14 and sibling8 heat-day planning",
+        "result": "PARTIAL",
+        "limit": "Original activity/height/license/waiver notes are dated; current acceptance, selected activity and total spend unknown"
+      },
+      {
+        "role": "Teen-selected low-pressure city block",
+        "result": "PARTIAL",
+        "limit": "Known role/time/cost-class comparison, exactdate tickets/openings/weather/access/return unknown"
+      }
+    ],
+    "proxy_not_real_parent": true
+  },
+  "source_review": {
+    "original_source_date": "2026-07-27",
+    "source_intro_preserved": true,
+    "official_facts_vs_editorial_estimates_distinct": true,
+    "online_review_new_samples": 0,
+    "new_family_fit_or_independence_judgments": false,
+    "source_renewal": false,
+    "limits": "No external fact reinspection or renewed prices/policies; original conditional advice and source dates remain. This is interface task review, not representative guest reviews or current suitability evidence."
+  },
+  "preservation": {
+    "source_rows": 10,
+    "fields_per_row": 7,
+    "display_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      5
+    ],
+    "underlying_rows_and_headers_unchanged": true,
+    "quick_picks": 5,
+    "detail_choices": 5,
+    "plans": 3,
+    "cluster_links": 4,
+    "official_check_groups": 4,
+    "faqs": 3,
+    "head_h1_schema_article_bodies_media_unchanged": true,
+    "previous_css_prefix_preserved": true,
+    "all_35_other_canonicals_including_135_unchanged_required": true,
+    "new_csv": false,
+    "new_url": false
+  },
+  "refinements": [
+    "Before review, one teen-only1160px minimum replaces borrowed1360px minimum so all10 decisive-field text bounds are horizontally visible at1280 without moving scroll; current CSS prefix/all-ages output preserved.",
+    "Native quick-pick heading uses80px scroll margin; other mobile targets160px. No fictional teen filters were added."
+  ],
+  "limits": [
+    "Initial mobile rows are below900px viewport; native comparison link reaches them, not a one-screen claim",
+    "Mobile needs horizontal scroll; all10 decisive-field text bounds readable beside130px identity at far-right, desktop180px identity",
+    "No actualparent preference/satisfaction/reading-time/SEOproof, independently renewed facts, current quote or guaranteed activity acceptance"
+  ],
+  "gsc": {
+    "classification": "REUSED",
+    "latest": "ops/gsc-snapshots/2026-10-12.json",
+    "finalized_through": "2026-10-10",
+    "prior": "ops/gsc-snapshots/2026-10-11.json",
+    "limit": "Page/property aggregates orientation only; no aligned CTR experiment"
+  },
+  "result": {
+    "decision": "IMPLEMENT_VERIFIED_TEEN_COMPARISON_DISCOVERY_DEFECT",
+    "local_task_validated": true,
+    "public_delivered": false,
+    "next_gate": "Final focused/full nativeQA/preservation and different strict read-onlyPASS, exact12 guard/push/Pages-marker/productionSEO/twoassets/liveinvariants"
+  }
+}

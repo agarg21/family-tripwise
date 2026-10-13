@@ -95,9 +95,9 @@ test("aligns FAQ, schema, current checks, sources, and cluster routes", () => {
 test("keeps the seven-column comparison readable in the mobile scroller", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const css = readFileSync(join(root, "site", "styles.css"), "utf8");
-  const table = html.match(/<div class="comparison-scroll teen-comparison">([\s\S]*?)<\/table>/)?.[1] || "";
+  const table = html.match(/<div class="comparison-scroll teen-comparison" tabindex="0" role="region" aria-label="San Antonio teen activity comparison">([\s\S]*?)<\/table>/)?.[1] || "";
 
-  assert.equal((table.match(/<th>/g) || []).length, 7);
+  assert.equal((table.match(/<th scope="col">/g) || []).length, 7);
   assert.equal((table.match(/<tr>/g) || []).length, 11);
   assert.match(css, /\.teen-comparison \.comparison-table \{[\s\S]*?min-width: 820px/);
   assert.match(css, /\.teen-comparison \.comparison-table th:first-child,[\s\S]*?position: sticky/);

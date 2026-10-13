@@ -15181,7 +15181,7 @@
       "id": "FT-IMP-135",
       "title": "Bring the San Antonio activity comparison forward",
       "kind": "implementation",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T13:47:42.375Z",
       "target_paths": [
@@ -15213,7 +15213,52 @@
       "evidence_record": "docs/research/san-antonio-activity-glance-2026-10-13.json",
       "next_gate": "Final focused/full/native/preservation/idempotence and different independent read-onlyPASS; exact12 guard/push/Pages-marker/productionSEO/twoassets/liveinvariants",
       "scope_amendment": "Pre-edit exact12 adds existing activity regression fixture: same13values/header semantics and idempotence retained after table moves outside old priority marker and gains accessibility attributes. Initial950full/931pass19fail NOTgreen; generator whitespace accumulation must be repaired, not expectations weakened.",
-      "review_receipt": "FT-IMP-135 Pauli01a13594-a47b-7eb0-83bb-6f5cae09c353 cycle1STRICT READONLY PASS/noP0-P3 for correctedkhCyF8 manifest9200185e47552cb6d5022053c81262cf2acfaf122e7f8fb19a02f5673d6ce9a6/all1020hash-modes/exact12/342olderactions/held11/LRN236-only/1008nonowned verified. Independent3puretests/read-onlyinvariantsPASS; savedpixels/nativeproofs and Master950full48maintenance/state0/GSC91/SEO0sixprior hash15bda383210a01b21135f4cfb4d7d218aa48d9e346b5c169c63e675a84c25b84 inspected, not independentfull/live. Original13row-card/7filter/5pick/6details/allarticle/headH1schema-map-source-media-Jul26/CSSprefix preserved. Final399-755-815comparison/mobilefirstrowsbelow900/21filter9links/sticky180-130/150critical-all13readable/arrow202-1008-1078then0/photo1280/nooverflow-errors0. Initial950/931pass19fail NOTgreen; scoped7byte whitespace/regression context repaired withnativeidempotence kept. Metadataexact11to12 corrected beforeconsensus; only currentfreeze approved. No newCSV/URL/price-review renewal/parent-satisfaction-SEOclaim/source retry. No reviewerwrites/network/browser/delegation/git/scheduler. Only immutable mechanical consensus appended; guardedpush/Pages-marker-productionSEO/twoassets/livechecks remain;014 unchanged."
+      "review_receipt": "FT-IMP-135 Pauli01a13594-a47b-7eb0-83bb-6f5cae09c353 cycle1STRICT READONLY PASS/noP0-P3 for correctedkhCyF8 manifest9200185e47552cb6d5022053c81262cf2acfaf122e7f8fb19a02f5673d6ce9a6/all1020hash-modes/exact12/342olderactions/held11/LRN236-only/1008nonowned verified. Independent3puretests/read-onlyinvariantsPASS; savedpixels/nativeproofs and Master950full48maintenance/state0/GSC91/SEO0sixprior hash15bda383210a01b21135f4cfb4d7d218aa48d9e346b5c169c63e675a84c25b84 inspected, not independentfull/live. Original13row-card/7filter/5pick/6details/allarticle/headH1schema-map-source-media-Jul26/CSSprefix preserved. Final399-755-815comparison/mobilefirstrowsbelow900/21filter9links/sticky180-130/150critical-all13readable/arrow202-1008-1078then0/photo1280/nooverflow-errors0. Initial950/931pass19fail NOTgreen; scoped7byte whitespace/regression context repaired withnativeidempotence kept. Metadataexact11to12 corrected beforeconsensus; only currentfreeze approved. No newCSV/URL/price-review renewal/parent-satisfaction-SEOclaim/source retry. No reviewerwrites/network/browser/delegation/git/scheduler. Only immutable mechanical consensus appended; guardedpush/Pages-marker-productionSEO/twoassets/livechecks remain;014 unchanged.",
+      "release_receipt": "FT-IMP-135 release bc0ddad965e3fbfc6f64370fc05e350c4cb22042 remote verified 2026-10-13T14:15:56.646Z; main0-0/emptyindex/exact12/all1020indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified SanAntonio activity comparison at2026-10-13T14:14:35.731Z:bc0ddad965e3fbfc6f64370fc05e350c4cb22042/Pages38410918163SUCCESS/matchingmarker/two200byteexactassets/productionSEO0sixprior. Actual1280-390-320/table399-755-815vs4687-8314/firstrows651-1079-1163 not initialviewportallmobile/21filterstates13-6-4-5-2-4-3/9Enteranchors/opaqueidentity180desktop130mobile/150criticalcolumn/all13criticaltextsreadable320/arrow202-1008-1078then0/photo1280/nooverflow-console0. /tmp/ft135-final-production-check.json and production-context.png. Initiallivewidthsall390 rejected; one complete samebrowserfresh162/per-widthpreflight PASS, no securitysource/tool-origin bypass. Master950full48maintenance8focused/state0/GSC91/differentPauliSTRICTPASS; initial950/931pass19fail NOTgreen and scopedgeneratorwhitespace/oldfixture contexts repaired withnativeidempotence intact; metadata12 corrected beforeconsensus. All13row-card/7filter/5picks/6details/allarticles-headH1schema-map-media-originalJul26clocks/35othercanonicals/model-oldCSV-sourceprice/held11 preserved. LRN236 integrated current-pageproxy not actualparents/source renewal/SEOgain, no newCSV. Learned-only149 Frisco WATCH remoteverifiedb33d4e3: null demand/matched quote-calendar-reviewfit pending named triggers, paid0.016 cumulative0.33036/5;076selectedbilling hold unchanged. Two finished transactions, no thirdstarted after conservative14:08Z; first confirmed actualclock13:29:08Z/09:29:08EDT,014fixedexpiry unchanged. Mechanical completion only; no metadata-only commit. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T14:15:56.673Z",
+      "release_state": "released-and-production-verified",
+      "release_commit": "bc0ddad965e3fbfc6f64370fc05e350c4cb22042",
+      "released_at": "2026-10-13T14:14:35.731Z",
+      "pages_run": 38410918163,
+      "production_verification": "Immutable /tmp/ft135-final-production-check.json: matching marker/two exact200 assets/productionSEO0/1280-390-320/nine native links/21filterstates/keyboard ends-return/sticky130-180/13readablecriticalcells/image1280/nooverflow-console0. Initialviewport-mismatch rejected; one complete samebrowser retry with preflight accepted. Source dates/held work unchanged."
+    },
+    {
+      "id": "FT-IMP-136",
+      "title": "Expose the teen anchor and decisive current-check comparison",
+      "kind": "implementation",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T14:22:39.371Z",
+      "target_paths": [
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "site/things-to-do/san-antonio-with-teens.html",
+        "tools/san-antonio-teen-glance.test.mjs",
+        "tools/san-antonio-teen-page.test.mjs",
+        "docs/research/san-antonio-teen-glance-2026-10-13.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "site/styles.css"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-teens.html"
+      ],
+      "evidence": "Current teen-and-younger-sibling planning task: compare indoor competition versus outdoor park/adventure and find decisive rule. Table heading2323.54desktop1280/2904.66mobile390 afterphoto/5picks, h1height264.94/158.97. User table-first direction supports reproduced discovery gap, not aggregateCTR/cadence. Preserve10rows/all7fields/5picks/5details/3plans/4clusterlinks/4officialchecks/3FAQs/July27clocks.",
+      "acceptance_criteria": [
+        "Extend existing scoped front-comparison path to this teen page: compacthero/tableaftertrust, native3links to comparison/quickpicks/details. Reorder only displayed lasttwo columns so decisive currentcheck islast; original source rows/headers retained. Reuse reviewed180desktop130mobile sticky identity/150lastcolumn CSS with one teen-only1160px table minimum so all seven fields fit desktop. Preserve fullsource/head-H1/schema/media/article bodies, no numeric quote/current policy renewal or newCSV/URL.",
+        "Focused3pure and existing native tests including unchanged idempotence guarantees; fullnativeQA, all35othercanonicals including135all-ages page/currentCSS/models/CSV/source-price immutable; exact343olderactions/held11 preserved. Actual1280/390/320/native9links/stickykeyboard/right-left/all10critical-cell/image/nooverflow-console/source-boundary task checks. Two reproducible seven-step PARTIAL proxies, not realparents/fit/safety/SEOproof; different independent strict read-only PASS before release.",
+        "Exact12 guarded commit/freshfetch/sole review-cleanpush; PagesSUCCESS/marker/productionSEO/affectedHTML200exactbytes/scopedCSS200byteexact and all declared live invariants beforedelivery. No source/provider denial retry/paidcall/account/contact/indexing/analytics/scheduler mutation."
+      ],
+      "measurement_plan": "LRN237 current-page task validation: olderchild anchor and younger sibling constraints, time/cost-class versus decisive current check. GSC Oct12 finalizedOct10 REUSED/priorOct11finalOct9; page/property averages orientationonly. No newreview/facts/parents/satisfaction/readingtime/SEOclaim.",
+      "production_invariant": "Only this existingteen HTML and one teen-only appendedCSS rule change;35othercanonicals/previous135CSSprefix/all models-records-CSV/July27sources/licenses/headH1-schema remain. Observation exception only verified material comparison-discovery defect.014fixed72h and cutoff unchanged.",
+      "decision": "IMPLEMENT current teen-family comparison discovery:429-755-866px versus2324desktop2905mobile; full7fields with decisivechecklast/source arrays unchanged;10criticalcellsreadable desktop without horizontal movement andmobileatend. PreserveJuly27facts/unknowns/all135output.",
+      "scope_amendment": "Pre-edit exact12 adds site/styles.css: seven-column desktop table1360px hides decisive lastfield; teen-only1160px minimum avoids needless desktop scrolling while keeping180-130identity/150critical field. All previous CSS prefix/all-ages output unchanged.",
+      "evidence_record": "docs/research/san-antonio-teen-glance-2026-10-13.json",
+      "next_gate": "Final focused/full nativeQA/preservation and different strict read-onlyPASS, exact12 guard/push/Pages-marker/productionSEO/twoassets/liveinvariants",
+      "review_receipt": "FT-IMP-136 independent Bernoulli 01a135af-95a3-7592-8d43-c11e20e5ca8e PASS 2026-10-13T14:38:14Z; reviewed d9942fbf86624077c4351bac8ad5b406ef21bdee3f930fd4681e4cff76fe4338 exact12/1022 modes-hashes/343 older/zero drift, independent pure3/3 and serial invariants; saved pixels/geometry reviewed, no independent live/full-suite rerun. Master953/953 full,48/48 maintenance,16/16 focused, stateSEO0, GSC91; log6be75ac20ad90f269af0c3fa384e35909cd0526bf24ed77572f7af6ebd63ad2e. No actionable P0-P2. Mechanical immutable receipt only; product unchanged. Production gates pending."
     }
   ]
 }

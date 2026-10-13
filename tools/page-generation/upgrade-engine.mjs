@@ -552,7 +552,7 @@ ${renderFaqs(page.faqs)}
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Teen quick picks</p>
-            <h2>${esc(page.quickHeading || "Best choices by teen trip style")}</h2>
+            <h2${page.frontComparison ? ' id="sa-activity-quick-picks" style="scroll-margin-top:80px"' : ""}>${esc(page.quickHeading || "Best choices by teen trip style")}</h2>
           </div>
 ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>\n` : ""}${renderQuickPicks(page.quick)}
         </div>
@@ -567,13 +567,13 @@ ${budgetLinks}        <p class="review-label">${esc(page.comparisonNote || "Plan
 ${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.glanceFirst ? {accessibleLabel: "New York City teen activity comparison", rowHeaders: true} : {})}
       </section>`;
   return `${markerStart}
-${page.glanceFirst ? comparisonSection : `${quickSection}\n\n${comparisonSection}`}
+${page.frontComparison ? quickSection : page.glanceFirst ? comparisonSection : `${quickSection}\n\n${comparisonSection}`}
 ${admissionSection}${transportSection}${paymentSection}${page.glanceFirst ? `${quickSection}\n\n${mediaSection}\n` : ""}
       <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">${esc(page.detailsEyebrow || "Teen logistics")}</p>
-            <h2>${esc(page.detailsTitle || "Detailed notes for older-kid planning")}</h2>
+            <h2${page.frontComparison ? ' id="sa-activity-notes"' : ""}>${esc(page.detailsTitle || "Detailed notes for older-kid planning")}</h2>
           </div>
 ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
         </div>
@@ -1055,22 +1055,29 @@ function upgradeFile(outDir, path, page, type) {
   html = page.placement === "after-intro" ? insertAfterIntroBand(html, section) : insertBeforeMainEnd(html, section);
   html = insertSchema(html, schema);
   if (page.frontComparison) {
+    if (type === "teen" && (page.comparisonHeaders?.length !== 7 || page.rows.some(row => row.length !== 7))) {
+      throw new Error("Expected seven teen comparison fields");
+    }
+    const order = [0, 1, 2, 3, 4, 6, 5];
+    const rows = type === "teen" ? page.rows.map(row => order.map(index => row[index])) : page.rows;
+    const headers = type === "teen" ? order.map(index => page.comparisonHeaders[index]) : page.comparisonHeaders;
     const comparison = `      <!-- activity-front:start -->
       <section class="container page-section" id="sa-activity-comparison">
-        <div class="section-heading"><p class="eyebrow">Compare activities</p><h2>Activity decision table</h2></div>
+        <div class="section-heading"><p class="eyebrow">${type === "teen" ? "Compare teen activities" : "Compare activities"}</p><h2>${type === "teen" ? "Teen activity decision table" : "Activity decision table"}</h2></div>
         <p class="review-label">${esc(page.comparisonNote)}</p>
-${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, {accessibleLabel: "San Antonio activity comparison", rowHeaders: true})}
+${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: type === "teen" ? "San Antonio teen activity comparison" : "San Antonio activity comparison", rowHeaders: true})}
       </section>
       <!-- activity-front:end -->
 `;
     const trust = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;
     if (!trust.test(html)) throw new Error("Expected activity trust panel");
     html = html.replace(trust, match => `${match}\n${comparison}`);
-    html = html.replace('<body>', '<body class="sa-activity-glance">');
+    html = html.replace('<body>', `<body class="sa-activity-glance${type === "teen" ? " sa-teen-glance" : ""}">`);
     const intro = esc(page.title);
     const creditAndCopy = new RegExp(`(<h1>${intro}</h1>[\\s\\S]*?<p>[^<]*</p>)`);
     if (!creditAndCopy.test(html)) throw new Error("Expected activity hero copy");
-    html = html.replace(creditAndCopy, '$1\n        <nav aria-label="San Antonio activity sections"><a href="#sa-activity-comparison">Compare activities</a><a href="#sa-activity-filters">Filter choices</a><a href="#sa-activity-notes">Detailed checks</a></nav>');
+    const middleLink = type === "teen" ? '<a href="#sa-activity-quick-picks">Quick picks</a>' : '<a href="#sa-activity-filters">Filter choices</a>';
+    html = html.replace(creditAndCopy, `$1\n        <nav aria-label="San Antonio activity sections"><a href="#sa-activity-comparison">Compare activities</a>${middleLink}<a href="#sa-activity-notes">Detailed checks</a></nav>`);
   }
   writeFileSync(full, html);
 }

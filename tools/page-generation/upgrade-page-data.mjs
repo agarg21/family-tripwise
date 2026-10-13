@@ -2496,6 +2496,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/san-antonio-with-teens.html": {
+    frontComparison: true,
     title: "Things to Do in San Antonio With Teens: 10 Picks by Trip Style",
     description:
       "Compare 10 things to do in San Antonio with teens by interest, time, cost, area, flexibility, mixed-age fit, and current official checks.",
