@@ -20,10 +20,41 @@
   ],
   "items": [
     {
+      "id": "FT-OPS-014",
+      "title": "Activate the October 12-15 reviewed family-travel expansion sprint",
+      "kind": "operations",
+      "status": "selected",
+      "selected_on": "2026-10-12",
+      "started_at": "2026-10-13T01:49:51Z",
+      "target_paths": [
+        "docs/plan/continuous-work-sprint-2026-10-12.md",
+        "ops/operator.json",
+        "ops/autopilot-prompt.md",
+        "tools/operator-sprint.test.mjs",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Fresh direct October12 user request for another3days, high-quality pages with important reviews, SEO-qualified family-travel clusters and city/tricks/activity expansion wherever justified. Actualrun starts2026-10-13T01:47:33Z/October12 21:47:33EDT; fixed72hour end2026-10-16T01:47:33Z/October15 21:47:33EDT. Previous012 normal restoration verified before activation; exact saved normal baseline captured privately at /tmp/ft-ops014-automation-baseline.toml. Initial013 identifier collision found by native state QA before review or scheduler mutation; reassigned014 without altering historical013.",
+      "acceptance_criteria": [
+        "Use the same heartbeat/Master only with exact72hour actual-clock window, hourly cadence, up to3sequential finish-first transactions and45minute new-action-start budget; no quota or runtime guarantee.",
+        "Prioritize reviewed public delivery and useful maintained comparisons. Require current demand/intent/overlap, distinct family job, material information gain, maintainable sources and no clean existing-page fit for new URLs. Record each selected city under this dated direct expansion approval, not blanket future or destructive/batch authority.",
+        "Require source/evidence and sampled online-review conflict quality, task-based proxy review, full/focused/browser QA, different strict read-only PASS/PASS_WITH_P3, guarded exact push and production verification. Keep tables glanceable; no new CSV from assumed demand and no synthetic-parent preference or SEO-lift claim.",
+        "Preserve exact original normal prompt/hash/cadence/identity/name/kind/thread/ACTIVE/absent notifications/globalcutoff; retain completed012 history, all held dirty work and public bytes. Full/focused native and independent read-only review before app update; exact saved-field readback then guarded eight-path docs/config push."
+      ],
+      "measurement_plan": "Scheduler activation is not public-page delivery or a learning unit. Subsequent actions measure qualified family decisions and production-verified improvements separately from research/candidates/holds. LatestOctober12API collected19:48:27Z/finalOct10 is reused page/crawl orientation, no aligned query/CTR diagnosis. No page-count, time or commit-volume success metric.",
+      "production_invariant": "Eight exact paths only; no site/src/evidence/CSV/public changes in activation. Preserve988baseline/332prior ordered items/12held dirty paths outside owned mechanical012-129 receipts. Same captured normal scheduler, no concurrent writer/replacement/ControlRoom/spending/security/indexing/analytics/outreach/posting/accounts/links. New dates do not restart012 or reset learning/observation/blocker history. GlobalNov13 17EST cutoff wins. Expiry/early-stop exact restoration-only verification and return.",
+      "decision": "PREPARE fresh72hour override with explicitly delegated evidence-qualified destination selection during this sprint; all other new-URL, review, source, human, security, paid and release gates remain.",
+      "next_gate": "Focused/full native QA and different independent strict read-only PASS before app mutation; verify exact saved fields, then guarded docs/config push.",
+      "review_receipt": "FT-OPS-014 Mendel01a132fb-3ce1-7a92-aa0b-4ec3680d3794 independent STRICTREADONLY PASS/noP0-P3: manifest90bcd9f6108ec5ef15b401b2bdeba19dc09fb094712839d01392624969edad1c/all989candidate-988baseline hashes-modes/exact8/332prior includinghistorical013/012archive/heldwork/emptyindex verified. Focused6/invariants PASS; completedMaster892full48maintenance/state0/GSC91/localSEO0sixprior logsha cf6b9f0bce0499be8a4040655efdc0c59c4cd42f18d0e4b86e102a000f408d6b inspected. No reviewer writes/temp/network/browser/delegation/scheduler/git mutation. App activation verified02:02:13Z: saved exact14361char reviewedprompt sha2569af515ca95ef8a2eaa19f72b6030b119d43c7738570e49625ffd5399453402e2/hourlycadence; only prompt-rrule-updated_at differ fromcapturednormalTOML, originalID/name/kind/thread/ACTIVE/version1/created_at/absentnotification/globalcutoff retained. Fresh72hOct12-15 21:47:33EDT window and boundedcityscope reviewed; originalnormal7643char/hash untouched. Only four immutable opsreceipts and two declaredoperator verification fields postconsensus; normalizedallotheroperator/threecontentpath parity PASS. InitialID013collision corrected014 before review/mutation without touchingprior013. No public delivery/learning/newCSV claim; guarded docs/config release pending."
+    },
+    {
       "id": "FT-IMP-129",
       "title": "Expose San Antonio room and water-play comparison first",
       "kind": "existing-page-usability",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-12",
       "started_at": "2026-10-12T15:03:44Z",
       "allowed_during_observation": true,
@@ -54,7 +85,11 @@
       "measurement_plan": "LRN225 PAGE_ONLY_PROXY scan room/waterplay roles and reach exact occupancy, admission, rest and historical budget limits. Geometry/navigation/retained-fact parity, not realparent preference/satisfaction/readingtime or SEOgain. ReusedOct11APIfinalOct9/priorOct10finalOct8 orientation only, no queryCTR action. Falsify lost limits/routing, failed keyboard/mobile/image, sourceclock drift or contraryactualuser evidence.",
       "production_invariant": "All12disclosurecard bodies/6tripstarts/shortanswer-snapshot/table values/12href-IDs/sourcefooter/trust/FAQ-schema/headmeta/photoURL-srcset-sizes-attribution exact (lazyallowed); all65records/evidence/other33URLs/allCSV unchanged. CSS oldprefix plus SanAntonio-onlyID-scoped compact/scroll styles; reuse data-glance-first table rules. Preserve984baseline/331priorordereditems/held11; carry128mechanicalclosure only. Actualrun15:01:59Z/11:01:59EDT/startdeadline15:46:59Z/fixed18:29:58Zsprint expiry; no deniedsource retry/security-account-spending-indexing-analytics-scheduler mutation.",
       "decision": "IMPLEMENT one reproduced existing room/water-play scan defect with original useful routing retained below the table; not new evidence, destination or export demand.",
-      "review_receipt": "FT-IMP-129 independent Godel strict read-only PASS/no P0-P3: reviewed manifest81c6e973860357df5cf10a3ce0e575f3d47ca8394ce7874f247e0f86bbd1f72a; all986candidate/984base hashes-modes/exact11/975nonowned/331prior ordered items/held dirty work/LRN225-only ledger/FT128closure/emptyindex/zero drift verified. Reviewer pure3/3 and read-only invariants PASS; complete Master890/890+48/48/state0/GSC90/localSEO0errors-six priorwarnings inspected. Master QA log sha256ca6da988f389d34cf4294314b7909eb600390eb2b026fe7f35baddfc31b5cc38. Saved responsive/disclosure screenshots inspected; UI-proof HTML/CSS exact. Maintained hotel facts/historical prices/source dates preserved; 36anchors and explicit open-close/6expanded room-limit checks/nooverflow/images passed Master. Mobile rows below initial viewport; links reach closed cards requiring explicit activation. No reviewer writes/network/browser/delegation/git mutation; no independent live/production/parent-testing/SEO-lift claim. Guarded release/production verification pending. Mechanical receipt only."
+      "review_receipt": "FT-IMP-129 independent Godel strict read-only PASS/no P0-P3: reviewed manifest81c6e973860357df5cf10a3ce0e575f3d47ca8394ce7874f247e0f86bbd1f72a; all986candidate/984base hashes-modes/exact11/975nonowned/331prior ordered items/held dirty work/LRN225-only ledger/FT128closure/emptyindex/zero drift verified. Reviewer pure3/3 and read-only invariants PASS; complete Master890/890+48/48/state0/GSC90/localSEO0errors-six priorwarnings inspected. Master QA log sha256ca6da988f389d34cf4294314b7909eb600390eb2b026fe7f35baddfc31b5cc38. Saved responsive/disclosure screenshots inspected; UI-proof HTML/CSS exact. Maintained hotel facts/historical prices/source dates preserved; 36anchors and explicit open-close/6expanded room-limit checks/nooverflow/images passed Master. Mobile rows below initial viewport; links reach closed cards requiring explicit activation. No reviewer writes/network/browser/delegation/git mutation; no independent live/production/parent-testing/SEO-lift claim. Guarded release/production verification pending. Mechanical receipt only.",
+      "release_receipt": "FT-IMP-129 release cafc2bcff93d84e7d8e73e19d6ef72147088f4b1 remote verified 2026-10-12T15:23:34.619Z; main0-0/emptyindex/exact11/all986indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified SanAntonio glance-first comparison at2026-10-12T15:21:31.278Z: Pages38269498930SUCCESS/headcafc2bcff93d84e7d8e73e19d6ef72147088f4b1/release marker exact; affectedHTML-stylesHTTP200byteexact/allregistered invariants PASS/productionSEO0sixpriorwarnings. Actualproduction1280-390-320 comparison433-730-827px versus2623desktop-3926mobile; firstrows742-1135-1338 notinitialviewportallmobile;1636words vs1658; sticky180white-teal/horizontalkeyboard offsets0-337-798,36native rowEnter correctclosedcards plus36explicitsummaryopen-close/6expandedJW-WildOak source-room-rest limits readable/photo1237-377-302/nooverflow-errors0. Saved /tmp/ft129-browser/production-responsive.json, production-roomchecks.json, production-context.png and production-comparison.png; comparison and both320roomcheck screenshots visually inspected. All12cardbodies/tablevalues/sixpicks-summary-snapshot/datedtrust-sourcefooter/FAQ-meta-schema/Sept22JWrest-fivewristbands/Sept30WildOakcategory/July26prices-reviews/Sep5general clocks/all65records/allCSV/other33URLs preserved. LRN225current-page proxy integrateddelivery; reusedGSC orientation/notparent-testing-demand-satisfaction-SEOgain/factrenewal. Master890full48maintenance/GodelSTRICTREADONLYPASS; exact11guardedrelease/helddirty preserved. All QA-invariant-index-guards-push-Pages-production sessions complete/reviewerclosed/preview10089stopped/viewportreset/verification145closed/userdeliverable141retained. No newCSV/sourceattempt-deniedretry/URL-city/security-account-spending-indexing-analytics-scheduler mutation. Onefinishedtransaction actualrun15:01:59Z/noquota; next bounded existingpage family-decision or maintained exact-room-budget qualification, not assumed export demand. Fixedsprint18:29:58Z/globalcutoff unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-12T15:23:34.646Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "cafc2bcff93d84e7d8e73e19d6ef72147088f4b1"
     },
     {
       "id": "FT-IMP-128",
@@ -3200,7 +3235,8 @@
       "scheduler_result": "Existing heartbeat updated through app tool and saved structuredTOML readback verified2026-10-09T18:40:25Z: only prompt/rrule/mechanical updated_at differ; original identity/name/kind/thread/ACTIVE/defaultnotification/version/created_at/globalcutoff retained. Exact reviewed72hprompt/hourly cadence applied, no replacement. Config/docs push next, no publicdelivery/Pages claim.",
       "release_commit": "b4c26c923d0cd83b1a32d329b6d632df7ee6cbb5",
       "release_verified_at": "2026-10-09T18:42:20Z",
-      "release_result": "Exact8reviewedconfig-docspaths/all797indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush; remote mainSHA matches and HEADorigin0-0. Scheduler activation delivered, no public production or Pages claim."
+      "release_result": "Exact8reviewedconfig-docspaths/all797indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush; remote mainSHA matches and HEADorigin0-0. Scheduler activation delivered, no public production or Pages claim.",
+      "restoration_receipt": "Mechanical expiry restoration verified2026-10-12T22:15:03Z: exact captured normal7643char prompt/hashbff531f4cfdf5bbf9260403966bcea6482d7717cd1d7a314f69eb620ad97c77f and original twice-daily cadence via same app-managed heartbeat. Saved structured TOML equals baseline except updated_at; identity/name/version/created_at/kind/thread/ACTIVE/absent notification/globalcutoff retained. No new action or public change after expiry; LasVegas audit stopped before registration/edits, temporary146 closed/viewport reset. Local mechanical receipt only/no commit-push/replacement; return without project work."
     },
     {
       "id": "FT-RES-137",
