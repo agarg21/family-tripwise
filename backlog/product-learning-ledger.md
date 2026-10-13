@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-236 - Put the existing activity decision table before the cards - 2026-10-13
+
+FT-IMP-135 [SanAntonio activity task](../docs/research/san-antonio-activity-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: compare indoor younger-child anchor versus lower-cost short stop. REJECT quickly answerable hypothesis: comparison heading4687desktop/8314mobile after13cards. IMPLEMENT existing13row table before licensedimage/cards, compact heading and3native sectionlinks; preserve all facts, July26clocks, filters,5picks/6details/map/metadata/schema. No newCSV or keyword rewrite.
+
+Local399/755/815px comparison, firstrows651/1079/1163 (not initialviewportallmobile),21filterstates13-6-4-5-2-4-3 and9nativeEnter links, sticky180desktop130mobile/150criticalcheck, arrowmax202/1008/1078then0, photo1280/nooverflow/errors0. Two reproducible seven-step roles PARTIAL for exactdate/quote/fit unknowns, not actualparents/satisfaction/reading-time/SEOproof. Earlier faulty count/nestedsection/filterkey/nonfocusableheading checks excluded and corrected before finalQA. High preservation/navigation confidence, historical facts not renewed or new sampledreviews. Lesson: expose maintained comparison without hiding uncertainty or breaking finalcolumn beside identity. Falsify new clipping/nativefailure/factconflict or actualparenttask difficulty. Final fullQA/different strictreview/production gates remain, no public delivery claimed yet.
+
 ## LRN-235 - Separate family room size from room-plus-park feasibility - 2026-10-13
 
 FT-RES-149 [Frisco room task](../docs/research/frisco-room-task-gate-2026-10-13.json). Two adults/ages4,8/November8-10/two park days. CURRENT_US_SERP_AND_PRIMARY_POLICY_AUDIT: four primary categories support capacities5/5/5/6; Family Suite has a private king room, but capacity is not booking acceptance or comfort. All four task guests require admission; hotel-only excludes it, and package-only1.5-day entry begins14:00 on day one, not two full days. Keep2%PID, unspecified parking, taxes, plan-specific cancellation/deposit and temporary50/day hold separate. No observed room/ticket rate or complete budget.

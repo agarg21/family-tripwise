@@ -302,7 +302,7 @@ ${page.garfieldAdmission && activity.name === page.garfieldAdmission.evidence.ve
   const section = `      <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Activity filters</p>
-          <h2>${esc(page.activityFilterTitle || "Kid-friendly activities by age, pace, and weather")}</h2>
+          <h2${page.frontComparison ? ' id="sa-activity-filters"' : ""}>${esc(page.activityFilterTitle || "Kid-friendly activities by age, pace, and weather")}</h2>
         </div>
         <div class="filter-bar" aria-label="Activity filters">
 ${filters.map(([value, label], index) => `          <button class="chip${index === 0 ? " active" : ""}" type="button" data-filter="${esc(value)}" aria-pressed="${index === 0 ? "true" : "false"}">${esc(label)}</button>`).join("\n")}
@@ -437,7 +437,7 @@ ${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>
         </div>
       </section>
 
-${page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote) : `      <section class="container page-section rank-ready-section">
+${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote) : `      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>
@@ -449,7 +449,7 @@ ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
-            <h2>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
+            <h2${page.frontComparison ? ' id="sa-activity-notes"' : ""}>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
           </div>
 ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
         </div>
@@ -1021,6 +1021,10 @@ function applyBaseReplacements(html, replacements = []) {
 function upgradeFile(outDir, path, page, type) {
   const full = join(outDir, path);
   let html = readFileSync(full, "utf8");
+  if (page.frontComparison) {
+    html = html.replace(/\n      <!-- activity-front:start -->[\s\S]*?      <!-- activity-front:end -->\n/, "");
+    html = html.replace(/\n        <nav aria-label="San Antonio activity sections">[\s\S]*?<\/nav>/, "");
+  }
   let mediaSection = "";
   if (page.glanceFirst) {
     // Preserve the image before stripping a prior upgraded body during regeneration.
@@ -1050,6 +1054,24 @@ function upgradeFile(outDir, path, page, type) {
   const schema = `${itemListSchema(page)}${faqSchema(page)}`;
   html = page.placement === "after-intro" ? insertAfterIntroBand(html, section) : insertBeforeMainEnd(html, section);
   html = insertSchema(html, schema);
+  if (page.frontComparison) {
+    const comparison = `      <!-- activity-front:start -->
+      <section class="container page-section" id="sa-activity-comparison">
+        <div class="section-heading"><p class="eyebrow">Compare activities</p><h2>Activity decision table</h2></div>
+        <p class="review-label">${esc(page.comparisonNote)}</p>
+${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, {accessibleLabel: "San Antonio activity comparison", rowHeaders: true})}
+      </section>
+      <!-- activity-front:end -->
+`;
+    const trust = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;
+    if (!trust.test(html)) throw new Error("Expected activity trust panel");
+    html = html.replace(trust, match => `${match}\n${comparison}`);
+    html = html.replace('<body>', '<body class="sa-activity-glance">');
+    const intro = esc(page.title);
+    const creditAndCopy = new RegExp(`(<h1>${intro}</h1>[\\s\\S]*?<p>[^<]*</p>)`);
+    if (!creditAndCopy.test(html)) throw new Error("Expected activity hero copy");
+    html = html.replace(creditAndCopy, '$1\n        <nav aria-label="San Antonio activity sections"><a href="#sa-activity-comparison">Compare activities</a><a href="#sa-activity-filters">Filter choices</a><a href="#sa-activity-notes">Detailed checks</a></nav>');
+  }
   writeFileSync(full, html);
 }
 

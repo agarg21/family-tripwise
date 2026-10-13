@@ -1375,3 +1375,23 @@ p.contributor-credit {
 .london-page figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
 @media (max-width: 600px) { .london-page h1 { font-size: 30px; } .london-page th:first-child { width: 130px; } }
 @media print { .london-scroll { overflow: visible; } .london-page table { min-width: 0; font-size: 10px; } .london-page th:first-child { position: static; width: 22%; } .london-page th, .london-page td { padding: 6px; } }
+
+.sa-activity-glance { background: var(--surface); }
+.sa-activity-glance .page-hero { padding: 28px 0 12px; background: none; }
+.sa-activity-glance h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
+.sa-activity-glance h2 { font-size: 24px; line-height: 1.3; letter-spacing: 0; }
+.sa-activity-glance .trust-panel { margin-top: 0; padding: 12px 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
+.sa-activity-glance nav[aria-label="San Antonio activity sections"] { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; margin-top: 16px; }
+.sa-activity-glance :is(#sa-activity-comparison,#sa-activity-filters,#sa-activity-notes) { scroll-margin-top: 80px; }
+#sa-activity-comparison { padding-top: 20px; }
+#sa-activity-comparison .comparison-scroll { max-width: 100%; overflow-x: auto; }
+#sa-activity-comparison .comparison-table { min-width: 1360px; table-layout: fixed; }
+#sa-activity-comparison .comparison-table :is(th,td):first-child { width: 180px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+#sa-activity-comparison .comparison-table thead th:first-child { background: var(--teal-dark); }
+#sa-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
+.sa-activity-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .sa-activity-glance h1 { font-size: 30px; }
+  #sa-activity-comparison .comparison-table :is(th,td):first-child { width: 130px; }
+  .sa-activity-glance :is(#sa-activity-comparison,#sa-activity-filters,#sa-activity-notes) { scroll-margin-top: 160px; }
+}

@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-135",
+  "learning_id": "LRN-236",
+  "checked_on": "2026-10-13",
+  "evidence_class": "CURRENT_PAGE_ONLY_TASK_PROXY",
+  "source_renewal": false,
+  "baseline": {
+    "widths": [
+      1280,
+      390
+    ],
+    "comparison_heading_y": [
+      4686.8984375,
+      8314.28125
+    ],
+    "h1_height": [
+      264.9375,
+      158.96875
+    ],
+    "visible_words": 2360
+  },
+  "current": {
+    "frames": [
+      {
+        "comparisonY": 399.3046875,
+        "firstRowY": 651.421875,
+        "h1Font": "36px",
+        "headingFont": "24px",
+        "identityWidth": 180,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 13,
+        "stickyBackground": "rgb(11, 73, 70)",
+        "width": 1280,
+        "words": 2366
+      },
+      {
+        "comparisonY": 755.3046875,
+        "firstRowY": 1079.421875,
+        "h1Font": "30px",
+        "headingFont": "24px",
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 13,
+        "stickyBackground": "rgb(11, 73, 70)",
+        "width": 390,
+        "words": 2366
+      },
+      {
+        "comparisonY": 815.3046875,
+        "firstRowY": 1163.421875,
+        "h1Font": "30px",
+        "headingFont": "24px",
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 13,
+        "stickyBackground": "rgb(11, 73, 70)",
+        "width": 320,
+        "words": 2366
+      }
+    ],
+    "filters": [
+      {
+        "key": "all",
+        "rows": 13,
+        "visible": 13,
+        "width": 1280
+      },
+      {
+        "key": "younger",
+        "rows": 13,
+        "visible": 6,
+        "width": 1280
+      },
+      {
+        "key": "short",
+        "rows": 13,
+        "visible": 4,
+        "width": 1280
+      },
+      {
+        "key": "teen",
+        "rows": 13,
+        "visible": 5,
+        "width": 1280
+      },
+      {
+        "key": "indoor",
+        "rows": 13,
+        "visible": 2,
+        "width": 1280
+      },
+      {
+        "key": "budget",
+        "rows": 13,
+        "visible": 4,
+        "width": 1280
+      },
+      {
+        "key": "theme-park",
+        "rows": 13,
+        "visible": 3,
+        "width": 1280
+      },
+      {
+        "key": "all",
+        "rows": 13,
+        "visible": 13,
+        "width": 390
+      },
+      {
+        "key": "younger",
+        "rows": 13,
+        "visible": 6,
+        "width": 390
+      },
+      {
+        "key": "short",
+        "rows": 13,
+        "visible": 4,
+        "width": 390
+      },
+      {
+        "key": "teen",
+        "rows": 13,
+        "visible": 5,
+        "width": 390
+      },
+      {
+        "key": "indoor",
+        "rows": 13,
+        "visible": 2,
+        "width": 390
+      },
+      {
+        "key": "budget",
+        "rows": 13,
+        "visible": 4,
+        "width": 390
+      },
+      {
+        "key": "theme-park",
+        "rows": 13,
+        "visible": 3,
+        "width": 390
+      },
+      {
+        "key": "all",
+        "rows": 13,
+        "visible": 13,
+        "width": 320
+      },
+      {
+        "key": "younger",
+        "rows": 13,
+        "visible": 6,
+        "width": 320
+      },
+      {
+        "key": "short",
+        "rows": 13,
+        "visible": 4,
+        "width": 320
+      },
+      {
+        "key": "teen",
+        "rows": 13,
+        "visible": 5,
+        "width": 320
+      },
+      {
+        "key": "indoor",
+        "rows": 13,
+        "visible": 2,
+        "width": 320
+      },
+      {
+        "key": "budget",
+        "rows": 13,
+        "visible": 4,
+        "width": 320
+      },
+      {
+        "key": "theme-park",
+        "rows": 13,
+        "visible": 3,
+        "width": 320
+      }
+    ],
+    "anchors": [
+      {
+        "hash": "#sa-activity-comparison",
+        "headerBottom": 65,
+        "id": "sa-activity-comparison",
+        "top": 79.8046875,
+        "width": 1280
+      },
+      {
+        "hash": "#sa-activity-filters",
+        "headerBottom": 65,
+        "id": "sa-activity-filters",
+        "top": 80.109375,
+        "width": 1280
+      },
+      {
+        "hash": "#sa-activity-notes",
+        "headerBottom": 65,
+        "id": "sa-activity-notes",
+        "top": 80.171875,
+        "width": 1280
+      },
+      {
+        "hash": "#sa-activity-comparison",
+        "headerBottom": -452.890625,
+        "id": "sa-activity-comparison",
+        "top": 159.8046875,
+        "width": 390
+      },
+      {
+        "hash": "#sa-activity-filters",
+        "headerBottom": -3503.890625,
+        "id": "sa-activity-filters",
+        "top": 160.1875,
+        "width": 390
+      },
+      {
+        "hash": "#sa-activity-notes",
+        "headerBottom": -9624.890625,
+        "id": "sa-activity-notes",
+        "top": 160.203125,
+        "width": 390
+      },
+      {
+        "hash": "#sa-activity-comparison",
+        "headerBottom": -512.890625,
+        "id": "sa-activity-comparison",
+        "top": 159.8046875,
+        "width": 320
+      },
+      {
+        "hash": "#sa-activity-filters",
+        "headerBottom": -3659.890625,
+        "id": "sa-activity-filters",
+        "top": 160.1875,
+        "width": 320
+      },
+      {
+        "hash": "#sa-activity-notes",
+        "headerBottom": -10606.890625,
+        "id": "sa-activity-notes",
+        "top": 160.046875,
+        "width": 320
+      }
+    ]
+  },
+  "keyboard": [
+    {
+      "identityBackground": "rgb(255, 255, 255)",
+      "identityLeft": 61,
+      "identityRight": 241,
+      "lastTextLeft": 1081,
+      "lastTextRight": 1193.234375,
+      "max": 202,
+      "offset": 202,
+      "regionLeft": 60,
+      "regionRight": 1220,
+      "width": 1280
+    },
+    {
+      "returnOffset": 0,
+      "width": 1280
+    },
+    {
+      "identityBackground": "rgb(255, 255, 255)",
+      "identityLeft": 19,
+      "identityRight": 149,
+      "lastTextLeft": 233,
+      "lastTextRight": 345.234375,
+      "max": 1008,
+      "offset": 1008,
+      "regionLeft": 18,
+      "regionRight": 372,
+      "width": 390
+    },
+    {
+      "returnOffset": 0,
+      "width": 390
+    },
+    {
+      "identityBackground": "rgb(255, 255, 255)",
+      "identityLeft": 19,
+      "identityRight": 149,
+      "lastTextLeft": 163,
+      "lastTextRight": 275.234375,
+      "max": 1078,
+      "offset": 1078,
+      "regionLeft": 18,
+      "regionRight": 302,
+      "width": 320
+    },
+    {
+      "returnOffset": 0,
+      "width": 320
+    }
+  ],
+  "task": {
+    "decision": "Find an indoor younger-child anchor or lower-cost short stop before reading13cards",
+    "steps": [
+      "Read July26 source date and research-based limitations",
+      "Use native comparison link",
+      "Contrast role/time/cost for DoSeum-Witte and Alamo-Hemisfair",
+      "Inspect weather/friction/current-check fields",
+      "Use Indoor/heat or Free/lowcost filters and restore All",
+      "Use Detailedchecks link for preserved constraints",
+      "Locate original official-source links; exact current policy/booking remains unresolved"
+    ],
+    "roles": [
+      {
+        "role": "Younger-child heat backup",
+        "result": "PARTIAL",
+        "choice": "DoSeum or Witte by child interest; current hours/admission unknown"
+      },
+      {
+        "role": "Lower-cost short Downtown reset",
+        "result": "PARTIAL",
+        "choice": "Alamo church reservation or Hemisfair; exact-date notices/paid extras unknown"
+      }
+    ],
+    "proxy_not_real_parent": true
+  },
+  "preservation": {
+    "rows": 13,
+    "cards": 13,
+    "filter_modes": 7,
+    "quick_picks": 5,
+    "detailed_choices": 6,
+    "map_data_unchanged": true,
+    "original_source_date": "2026-07-26",
+    "title_h1_schema_unchanged": true,
+    "original_source_and_photo_links_unchanged": true,
+    "online_reviews_new_samples": 0,
+    "new_fit_judgments": false,
+    "all_other_public_assets_unchanged_required": true,
+    "new_csv": false,
+    "new_url": false
+  },
+  "limits": [
+    "Initial mobile rows remain below initial900pxviewport; native comparison link reaches them, no one-screen claim",
+    "Source formatting/access date does not renew July26 facts or establish current tickets/fit/route/safety",
+    "Desktop/mobile/native proxy checks are not actual parents, reading-time savings, satisfaction or SEOlift"
+  ],
+  "failed_checks_excluded": [
+    "Initial focused test counted13whole-page detailcards as six detailedchoices; revised nested-section selector also countedone. Neither failed run accepted; final scope selects outer detailsection and passes3.",
+    "Initial filter test used nonexistent theme key; inspected actual theme-park key, final complete21states accepted.",
+    "NonfocusableH1 Home action failed; focusable brandlink Home used to capture actual scrollY0. No repeated failedheading action.",
+    "Initial pale stickyheader/undefined CSS variables repaired before review; final opaque darkteal header and white identities."
+  ],
+  "gsc": {
+    "classification": "REUSED",
+    "latest": "ops/gsc-snapshots/2026-10-12.json",
+    "finalized_through": "2026-10-10",
+    "prior": "ops/gsc-snapshots/2026-10-11.json",
+    "limit": "No aligned query/CTR experiment; reproduced public discovery defect"
+  },
+  "result": {
+    "decision": "IMPLEMENT_VERIFIED_COMPARISON_DISCOVERY_DEFECT",
+    "local_task_validated": true,
+    "public_delivered": false,
+    "next_gate": "Final focused/full/native/preservation/idempotence and different independent read-onlyPASS; exact12 guard/push/Pages-marker/productionSEO/twoassets/liveinvariants"
+  },
+  "initial_full_qa": {
+    "tests": 950,
+    "passed": 931,
+    "failed": 19,
+    "accepted_as_green": false,
+    "cause": "Front marker removal left seven whitespace bytes per repeated upgrade; seventeen shared regeneration checks failed, plus two old table-marker/accessibility-attribute assertions.",
+    "repair": "Remove complete scoped front marker with its own preceding/trailing newline; preserve native idempotence tests and exact13rows/8headers/uncertainty in existing activity fixture. Focused8including native repeated generation now pass; final full rerun required."
+  }
+}

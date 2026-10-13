@@ -64,16 +64,17 @@ test("publishes one canonical 13-choice San Antonio activity decision page", () 
 test("keeps the wider page compact, persona-routed, and uncertainty-aware", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const upgrade = html.slice(html.indexOf("<!-- priority-upgrade:start -->"), html.indexOf("<!-- priority-upgrade:end -->"));
+  const comparison = html.slice(html.indexOf("<!-- activity-front:start -->"), html.indexOf("<!-- activity-front:end -->"));
   const detailSection = upgrade.slice(upgrade.indexOf("Six choices that need an extra check"), upgrade.indexOf("Move from the shortlist"));
 
   assert.match(upgrade, /Five useful ways to start/);
   assert.equal((upgrade.match(/<article class="quick-pick">/g) || []).length, 5);
-  assert.equal((upgrade.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 13);
+  assert.equal((comparison.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 13);
   assert.equal((detailSection.match(/<article class="detail-card">/g) || []).length, 6);
   assert.equal((upgrade.match(/<article class="plan-card">/g) || []).length, 0);
   assert.equal((upgrade.match(/<h3>(Where to stay in San Antonio|San Antonio family itinerary|San Antonio with teens)<\/h3>/g) || []).length, 3);
   assert.match(upgrade, /conditional starts, not universal rankings/i);
-  assert.match(upgrade, /editorial planning estimates, not venue guarantees/i);
+  assert.match(comparison, /editorial planning estimates, not venue guarantees/i);
   assert.match(upgrade, /San Antonio with kids FAQ/);
   assert.equal((html.match(/<article class="activity-card"(?! data-tags)/g) || []).length, 0);
   assert.doesNotMatch(upgrade, /<h4>Pair nearby<\/h4><p><\/p>/);
@@ -94,8 +95,8 @@ test("aligns comparison, schema, FAQs, and official sources with the 13 choices"
   assert.deepEqual(itemList.itemListElement.map((item) => item.name), activityNames);
   assert.equal(faq.mainEntity.length, 3);
   assert.equal((html.match(/<article class="detail-card faq-card">/g) || []).length, 3);
-  assert.match(html, /<th>Activity<\/th><th>Best role<\/th><th>Time block<\/th><th>Cost<\/th><th>Area<\/th><th>Heat \/ rain role<\/th><th>Main friction<\/th><th>Check now<\/th>/);
-  assert.match(html, /<div class="comparison-scroll teen-comparison">/);
+  assert.match(html, /<th scope="col">Activity<\/th><th scope="col">Best role<\/th><th scope="col">Time block<\/th><th scope="col">Cost<\/th><th scope="col">Area<\/th><th scope="col">Heat \/ rain role<\/th><th scope="col">Main friction<\/th><th scope="col">Check now<\/th>/);
+  assert.match(html, /<div class="comparison-scroll teen-comparison" tabindex="0" role="region" aria-label="San Antonio activity comparison">/);
   assert.match(styles, /\.teen-comparison \.comparison-table th:first-child,[\s\S]*?position: sticky/);
   const visibleHtml = html.slice(0, html.indexOf("<!-- schema:start -->"));
   for (const question of faq.mainEntity.map((item) => item.name)) {

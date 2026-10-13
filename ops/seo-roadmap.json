@@ -15142,7 +15142,7 @@
       "id": "FT-RES-149",
       "title": "Qualify Frisco room-plus-park family planning feasibility",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T13:33:08.243Z",
       "parent_item": "FT-RES-065",
@@ -15171,7 +15171,49 @@
       "decision": "PRESERVE Frisco WATCH: four categories now sourced with capacities5/5/5/6, private-suite distinction and admission/partial-day/fee-hold boundaries. Both new US room-query metrics unknown, overlap2/13 insufficient ownership proof; no new URL or price/comfort claim.",
       "evidence_record": "docs/research/frisco-room-task-gate-2026-10-13.json",
       "next_gate": "Different read-only review/exact guarded research-only push; then changed material-demand evidence plus exact room/party/stay plus ticket-fee/calendar and dated category-review evidence. No more keyword variants or calendar-only repeat.",
-      "review_receipt": "FT-RES-149 Heisenberg01a1357d-4794-7772-b529-9049f04f799f independent STRICT READONLY PASS/noP0-P3; frozenbf8b7b20727b21d0af8054e1749eeda93f1c180ba2889a03ea6f2a6ccd8b8328/all1018hash-modes/exact9/341olderactions/065only4fields/held11/LRN235-only/public-model-CSV-price unchanged verified. Independent5puretests/read-only invariants PASS; Master947full48maintenance/state0/GSC91/localSEO0sixprior logbbbb770e46f091e07a0019bc444d5e07d2b5a27be62ad50a055a7c2971347a22 inspected, not independentfullsuite. Supplied source descriptions inspected, no live reopen/parent/UI/source-price renewal claim. WATCH only, no new public page; unknown demand/matched room-ticket-calendar/reviewfit. Bounded3callsUSD0.016/cumulative0.33036/5 and original dates preserved, no failed toddler/access retry. Registration ordering explicit. No reviewer writes/network/browser/delegation/git/scheduler. Only immutable mechanical consensus appended; guarded research-only exactpush/remoteverification next;014 unchanged."
+      "review_receipt": "FT-RES-149 Heisenberg01a1357d-4794-7772-b529-9049f04f799f independent STRICT READONLY PASS/noP0-P3; frozenbf8b7b20727b21d0af8054e1749eeda93f1c180ba2889a03ea6f2a6ccd8b8328/all1018hash-modes/exact9/341olderactions/065only4fields/held11/LRN235-only/public-model-CSV-price unchanged verified. Independent5puretests/read-only invariants PASS; Master947full48maintenance/state0/GSC91/localSEO0sixprior logbbbb770e46f091e07a0019bc444d5e07d2b5a27be62ad50a055a7c2971347a22 inspected, not independentfullsuite. Supplied source descriptions inspected, no live reopen/parent/UI/source-price renewal claim. WATCH only, no new public page; unknown demand/matched room-ticket-calendar/reviewfit. Bounded3callsUSD0.016/cumulative0.33036/5 and original dates preserved, no failed toddler/access retry. Registration ordering explicit. No reviewer writes/network/browser/delegation/git/scheduler. Only immutable mechanical consensus appended; guarded research-only exactpush/remoteverification next;014 unchanged.",
+      "release_receipt": "FT-RES-149 release b33d4e370a8464e3b45fdd4c860f697693b41384 remote verified 2026-10-13T13:44:15.873Z; main0-0/emptyindex/exact9/all1018indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only Frisco room-plus-park audit: four category capacities5-5-5-6/private-suite, separate4task admissions/1.5daynot2full/2%PID/50-daytemporaryhold; null2USmetrics/overlap2of13/source mixeddates preserved. No new publicpage, current quote/calendar/reviewfit or production UI claim/Pageswait. Master947full48maintenance5focused/state0/GSC91/SEO0sixprior/differentHeisenbergSTRICTPASS. Paid0.016/cumulative0.33036/5, no failed-query retry. Parent065WATCH with named material-demand/matchedbudget/calendar/review trigger;076unchanged billing hold. Held11/public/model/CSV/source-price immutable,014scheduler fixedexpiry unchanged. Next independent eligible current public family-task defect, not more Frisco variants or optional broadreports. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T13:44:15.896Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "b33d4e370a8464e3b45fdd4c860f697693b41384"
+    },
+    {
+      "id": "FT-IMP-135",
+      "title": "Bring the San Antonio activity comparison forward",
+      "kind": "implementation",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T13:47:42.375Z",
+      "target_paths": [
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "site/things-to-do/san-antonio-with-kids.html",
+        "site/styles.css",
+        "tools/san-antonio-activity-glance.test.mjs",
+        "docs/research/san-antonio-activity-glance-2026-10-13.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "tools/san-antonio-activities-page.test.mjs"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/san-antonio-with-kids.html"
+      ],
+      "evidence": "Current public table discovery defect: table headingY4686.9desktop1280/Y8314.3mobile390 after13cards, image/intro/fivepicks; h1height264.9desktop/159mobile. Direct user table-first simplification supports bounded named familytask, not CTR/cadence. Preserve originalJuly26facts/sources/13rows/13cards/filters/fivepicks/sixdetails/FAQ/schema/oldmedia.",
+      "acceptance_criteria": [
+        "Scoped existing SanAntonio activity comparison first after compact hero/trust; accessible native comparison region and3section links, stable180pxdesktop/130pxmobile sticky identity and150pxcritical-check column and horizontal keyboard access. Keep all13values/cards,7filtermodes,5quickpicks,6details, exact licensing/source clocks and metadata. No new CSV/URL/source renewal/familyfit claim.",
+        "Purefocused and fullnative QA; exact allotherpublicassets/model/source data unchanged, repeat generation idempotent. Actual1280/390/320 screenshots/geometry/filters/nativejump/keyboard/nooverflow/image/console checks; transparent PARTIAL proxy for unverified exacttrip/facts, not realparents or SEOlift. Different independent strict read-only PASS/PASS_WITH_P3 before release.",
+        "Exact12 review-clean guardedcommit/push, PagesSUCCESS/matchingmarker/productionSEO and twoaffectedassets200byteexact plus repeated live native invariants. Preserve original11held dirtypaths/342olderorderedactions/014scheduler/observation/human/security gates."
+      ],
+      "measurement_plan": "LRN236 present-page proxy: compare cheaper/free shortstop vs indoor youngerchildanchor without reading13cards; tablemovesearlier, documented native states rather than assumed satisfaction/readingtime/SEOgain. GSC Oct12 finalizedOct10 REUSED/priorOct11finalOct9; no queryCTR experiment.",
+      "production_invariant": "Only existing SanAntonio activity HTML and scoped CSS publicbytes change; 35othercanonicals and all oldsharedmodel/CSV/price/fact/media-source/title-H1-schema dates preserved. No paidcall/source-denial retry/URL-city/indexability/indexing/analytics/account/contact/scheduler mutation.",
+      "decision": "IMPLEMENT reproduced table-discovery defect: comparison399/755/815px beforemedia/cards versus4687desktop/8314mobile; native3links/21filterstates/130mobile identity and150criticalcheck remain readable. July26facts/source-price/style-only scope retained.",
+      "evidence_record": "docs/research/san-antonio-activity-glance-2026-10-13.json",
+      "next_gate": "Final focused/full/native/preservation/idempotence and different independent read-onlyPASS; exact12 guard/push/Pages-marker/productionSEO/twoassets/liveinvariants",
+      "scope_amendment": "Pre-edit exact12 adds existing activity regression fixture: same13values/header semantics and idempotence retained after table moves outside old priority marker and gains accessibility attributes. Initial950full/931pass19fail NOTgreen; generator whitespace accumulation must be repaired, not expectations weakened.",
+      "review_receipt": "FT-IMP-135 Pauli01a13594-a47b-7eb0-83bb-6f5cae09c353 cycle1STRICT READONLY PASS/noP0-P3 for correctedkhCyF8 manifest9200185e47552cb6d5022053c81262cf2acfaf122e7f8fb19a02f5673d6ce9a6/all1020hash-modes/exact12/342olderactions/held11/LRN236-only/1008nonowned verified. Independent3puretests/read-onlyinvariantsPASS; savedpixels/nativeproofs and Master950full48maintenance/state0/GSC91/SEO0sixprior hash15bda383210a01b21135f4cfb4d7d218aa48d9e346b5c169c63e675a84c25b84 inspected, not independentfull/live. Original13row-card/7filter/5pick/6details/allarticle/headH1schema-map-source-media-Jul26/CSSprefix preserved. Final399-755-815comparison/mobilefirstrowsbelow900/21filter9links/sticky180-130/150critical-all13readable/arrow202-1008-1078then0/photo1280/nooverflow-errors0. Initial950/931pass19fail NOTgreen; scoped7byte whitespace/regression context repaired withnativeidempotence kept. Metadataexact11to12 corrected beforeconsensus; only currentfreeze approved. No newCSV/URL/price-review renewal/parent-satisfaction-SEOclaim/source retry. No reviewerwrites/network/browser/delegation/git/scheduler. Only immutable mechanical consensus appended; guardedpush/Pages-marker-productionSEO/twoassets/livechecks remain;014 unchanged."
     }
   ]
 }

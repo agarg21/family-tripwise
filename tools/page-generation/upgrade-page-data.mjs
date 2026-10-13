@@ -298,6 +298,7 @@ export const activityPages = {
     ]
   },
   "things-to-do/san-antonio-with-kids.html": {
+    frontComparison: true,
     title: "Things to Do in San Antonio With Kids: 13 Picks by Trip Style",
     description:
       "Compare 13 things to do in San Antonio with kids by age, heat and indoor fit, budget, time, area, and trip style, with current official-source checks.",
