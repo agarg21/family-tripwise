@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "action": "FT-PUB-012",
+  "learning": "LRN-234",
+  "checked_on": "2026-10-13",
+  "destination": "London UK",
+  "authorization": "Fresh direct October12 FT-OPS-014 delegated city selection; this exact London action registered before public edits, fixed expiry unchanged.",
+  "qualification": "docs/research/london-comparison-qualification-2026-10-13.json",
+  "evidence_class": "MAINTAINED_SOURCE_AND_PAGE_ONLY_PROXY",
+  "hypothesis": "A single on-page comparison can preserve matched family-budget information and source limits without requiring CSV reconstruction or unsupported rest recommendations.",
+  "scenario": {
+    "adults": 2,
+    "child_ages": [
+      4,
+      8,
+      12,
+      15
+    ],
+    "stay": {
+      "arrival": "2026-11-08",
+      "departure": "2026-11-13"
+    }
+  },
+  "source_scope": "Original typed room/price inputs and085/147 selected guest signals, no new hotel/booking/review collection or clock renewal. Original Queen categorySep30, other categoriesOct2/3, pricesOct2/3; family-five rates do not inherit reference-six prices. REST/entrance/sofa comfort/actual acceptance and finalextras unknown.",
+  "public_scope": "One canonical London family-apartment comparison, three categories/twooperators/six publicplans, Home/About discovery and maintenance ownership. No best city ranking, new CSV, connected-room guarantee or firm rest/route claim.",
+  "photo": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Trafalgar_Square,_London_2_-_Jun_2009.jpg",
+    "checked_on": "2026-10-13",
+    "taken_on": "2009-06-19",
+    "author": "DAVID ILIFF",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modification": "Uncropped resized1280x847 orientation photo, not a hotel/room/currentroute image",
+    "access_note": "One guessed filename failed with web-tool internal not-accessible result; no HTTP security denial identified or unchanged retry. One focused Commons search then directly opened actual result supplies source/license/date and observed thumbnail link. No copied metadata identities or hidden endpoint."
+  },
+  "proxy_roles": [
+    {
+      "role": "Six-person budget",
+      "steps": [
+        "Find London owner",
+        "Read exact reference party/stay",
+        "Compare three dated whole-apartment prices",
+        "Reach selected row details",
+        "Read plan cancellation",
+        "Open tax/deposit/age basis",
+        "Identify final extras still unknown"
+      ],
+      "result": "PARTIAL",
+      "limit": "Not a final booking or real-parent result",
+      "step_outcomes": [
+        {
+          "step": "Find London owner",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read exact reference party/stay",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Compare three dated whole-apartment prices",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Reach selected row details",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read plan cancellation",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Open tax/deposit/age basis",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Identify final extras still unknown",
+          "outcome": "PARTIAL",
+          "basis": "Not a final booking or real-parent result"
+        }
+      ]
+    },
+    {
+      "role": "Five-person budget",
+      "steps": [
+        "Find family comparison",
+        "Identify six-person reference",
+        "Reach different-party section",
+        "Reject rate transfer",
+        "Read published conditional category limit",
+        "Find official verification",
+        "Keep own dated quote uncollected"
+      ],
+      "result": "PARTIAL",
+      "limit": "Five-person quote not established by this reference example",
+      "step_outcomes": [
+        {
+          "step": "Find family comparison",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Identify six-person reference",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Reach different-party section",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Reject rate transfer",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read published conditional category limit",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Find official verification",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Keep own dated quote uncollected",
+          "outcome": "PARTIAL",
+          "basis": "Five-person quote not established by this reference example"
+        }
+      ]
+    },
+    {
+      "role": "Duplex and review skeptic",
+      "steps": [
+        "Reach Citadines",
+        "Read published duplex",
+        "Read selected stay/publication dates",
+        "Separate smaller-category conflict",
+        "Identify unknown six-sofa/rest use",
+        "Read original fee/age basis",
+        "Keep entrance/rest judgment unknown"
+      ],
+      "result": "PARTIAL",
+      "limit": "Guest signals not representative or firsthand verification",
+      "step_outcomes": [
+        {
+          "step": "Reach Citadines",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read published duplex",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read selected stay/publication dates",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Separate smaller-category conflict",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Identify unknown six-sofa/rest use",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read original fee/age basis",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Keep entrance/rest judgment unknown",
+          "outcome": "PARTIAL",
+          "basis": "Guest signals not representative or firsthand verification"
+        }
+      ]
+    },
+    {
+      "role": "Kitchen and rest",
+      "steps": [
+        "Compare kitchen and bedroom setup",
+        "Reach selected room",
+        "Find sofa condition",
+        "Read published bed layout",
+        "Read known budget basis",
+        "Reach rest checks",
+        "Leave usable dining/return/comfort unknown"
+      ],
+      "result": "PARTIAL",
+      "limit": "Research-based capacity, not a firm suitability assurance",
+      "step_outcomes": [
+        {
+          "step": "Compare kitchen and bedroom setup",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Reach selected room",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Find sofa condition",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read published bed layout",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Read known budget basis",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Reach rest checks",
+          "outcome": "YES",
+          "basis": "Visible source-derived content, native navigation/disclosure proof or deterministic task-binding control; not a real-parent observation"
+        },
+        {
+          "step": "Leave usable dining/return/comfort unknown",
+          "outcome": "PARTIAL",
+          "basis": "Research-based capacity, not a firm suitability assurance"
+        }
+      ]
+    }
+  ],
+  "acceptance": "Actual1280/390/320 desktop-mobile and keyboard native anchors/details/scroll/source-context/image/overflow checks, focused/fullnative QA, distinct independent read-only review and exact production release. Persona walkthroughs are proxy evidence, not parent satisfaction or SEO-lift proof.",
+  "result": "IMPLEMENT qualified page; local source-derived four-role tasks PARTIAL with named budget/rest/booking unknowns, native responsive/navigation/disclosure/keyboard/image/source/discovery checks passed. Full native rerun, different independent review and production verification remain; not delivered yet.",
+  "falsification_trigger": "Wrong party/stay inheritance, hidden incomplete-cost/source context, source-clock promotion, failed mobile/keyboard navigation, changed rules or inability to maintain scoped three records.",
+  "gsc": "Oct12API finalizedOct10 REUSED/priorOct11finalOct9; orientation only, no London query-cohort/CTR diagnosis.148currentUS evidence separate.",
+  "held": "Exact current booking/five-personbudget/extras/sofa comfort/entrance/rest/connectionclaims unknown; older source denials and missing rival categories remain narrow, no unchanged retries or bypass.",
+  "local_validation": {
+    "proof": "/tmp/ftpub012-browser/local-responsive.json",
+    "discovery": "/tmp/ftpub012-browser/local-discovery.json",
+    "plan_keyboard": "/tmp/ftpub012-browser/local-plan-keyboard.json",
+    "source_console": "/tmp/ftpub012-browser/local-source-console.json",
+    "widths": [
+      1280,
+      390,
+      320
+    ],
+    "main_table_keyboard_offsets": [
+      0,
+      462,
+      532
+    ],
+    "returned": [
+      0,
+      0,
+      0
+    ],
+    "room_anchor_routes": 9,
+    "disclosure_open_close_pairs": 9,
+    "photo_natural_width": 1280,
+    "document_overflow": false,
+    "console_errors": 0,
+    "initial_mobile_rows": "Below900px landing view; native comparison route reaches them. Not claimed initial-viewport complete on phones.",
+    "repairs": "Narrow150px price column keeps dates/incomplete-total warning visible; explicit Not established review labels and exact category-versus-booking sources; contributor disclosure immediately afterH1/newline. End-page and unsettled same-cell arrow-return assertions excluded; final settled reads accepted. Unsupported heading-level locator excluded; exact supported heading succeeds.",
+    "first_native_run": "942tests/941pass1contributorcountfail, NOT finalgreen; current33-guide count and original credit rule maintained"
+  }
+}

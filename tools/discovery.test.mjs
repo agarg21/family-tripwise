@@ -21,11 +21,11 @@ test("all canonical pages have another canonical page linking to them and are re
   assert.equal(seen.size, urls.length);
 });
 
-test("homepage primary directory distinguishes ten destinations and links all hotel comparisons", () => {
+test("homepage primary directory distinguishes eleven destinations and links all hotel comparisons", () => {
   const home = read("index.html");
   const directory = home.split('id="destinations"')[1].split("</section>")[0];
-  assert.equal((directory.match(/<article /g) ?? []).length, 10);
-  for (const slug of ["san-diego", "las-vegas", "new-york-city", "chicago", "san-antonio", "orlando", "washington-dc", "boston"]) {
+  assert.equal((directory.match(/<article /g) ?? []).length, 11);
+  for (const slug of ["san-diego", "las-vegas", "new-york-city", "chicago", "san-antonio", "orlando", "washington-dc", "boston", "london"]) {
     assert.ok(directory.includes(`where-to-stay/${slug}-family-hotels.html`));
   }
   assert.ok(directory.includes("where-to-stay/cancun-family-resorts.html"));

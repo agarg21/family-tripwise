@@ -15038,7 +15038,7 @@
       "id": "FT-RES-148",
       "title": "Qualify the London family-room comparison owner and maintenance scope",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T12:04:53.334Z",
       "target_urls": [],
@@ -15064,7 +15064,64 @@
       "decision": "Resolve current London qualification gate, then implement if all remaining evidence and release gates permit; otherwise name the exact narrow candidate gate, not generic city approval during014.",
       "research_only_reason": "No unfinished review-clean public release remains;134 delivered. London077 has an explicit current intent/materiality/corpus gate. Other candidates076/063/064/065/066 retain billing/room/fee/connection/current-demand gates; no independent verified public defect currently identified. This bounded audit closes those London-specific decisions rather than substituting optional reports for eligible delivery.",
       "authorization": "September30 FT-ACC-001 existing scoped SEO research ceiling5/batch0.50;014 dated expansion/review authority delegates evidence-qualified London selection, not new paid scope or publication readiness.",
-      "review_receipt": "FT-RES-148 Helmholtz01a1352c-c367-76e3-bb3d-754ebd824fb2 independent STRICTREADONLY PASS/noP0-P3; frozen84ee235745b70a03cd01705f1d60226cf5f8fc66a489d70b69d25c54ad8416e6/all1010hash-modes/exact9/baseline1006/339orderedactions077only4fields/held11/LRN233-only verified. Independent5purefocused PASS; paid4success0.01824/prior0.29612/cumulative0.31436/ceilings0.50-5/6of13overlap/five170-sixunknown and wrong140 correction consistent. Claim-limited three-apartment/twooperator maintained scope defensible, not rest/comfort/route/booking guarantee; originaldates and sixreference-task prices not transferred to five. Master937full48maintenance/state0/GSC91/SEO0sixprior logf6f5258a176e86bacda3b959473da0cbe1aa98a001b7fb28a3ad6fd0eca5df1b inspected, not reviewerfullrun; supplied source descriptions not independently reopened. Master1001nonowned cleanHEAD/liveheld invariants PASS, earlier wrong dirty-base comparison excluded. No reviewerwrites/network/browser/git/delegation/scheduler. Only mechanical consensus appended; guarded exactdocs push/remoteverification required. Public implementation remains exactregistration/task/native/differentreview/release-production gates.014 unchanged."
+      "review_receipt": "FT-RES-148 Helmholtz01a1352c-c367-76e3-bb3d-754ebd824fb2 independent STRICTREADONLY PASS/noP0-P3; frozen84ee235745b70a03cd01705f1d60226cf5f8fc66a489d70b69d25c54ad8416e6/all1010hash-modes/exact9/baseline1006/339orderedactions077only4fields/held11/LRN233-only verified. Independent5purefocused PASS; paid4success0.01824/prior0.29612/cumulative0.31436/ceilings0.50-5/6of13overlap/five170-sixunknown and wrong140 correction consistent. Claim-limited three-apartment/twooperator maintained scope defensible, not rest/comfort/route/booking guarantee; originaldates and sixreference-task prices not transferred to five. Master937full48maintenance/state0/GSC91/SEO0sixprior logf6f5258a176e86bacda3b959473da0cbe1aa98a001b7fb28a3ad6fd0eca5df1b inspected, not reviewerfullrun; supplied source descriptions not independently reopened. Master1001nonowned cleanHEAD/liveheld invariants PASS, earlier wrong dirty-base comparison excluded. No reviewerwrites/network/browser/git/delegation/scheduler. Only mechanical consensus appended; guarded exactdocs push/remoteverification required. Public implementation remains exactregistration/task/native/differentreview/release-production gates.014 unchanged.",
+      "release_receipt": "FT-RES-148 release 6ab922abc0584305512943a214f6bd3e942ded58 remote verified 2026-10-13T12:17:33.647Z; main0-0/emptyindex/exact9/all1010indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only London qualification remote-verified, not a public page or production UI delivery. Current four-call US receipt0.01824/cumulative0.31436 under existing5; paired5-6overlap6of13/five170-sixunknown/140 attribution corrected. Three matched priced apartments/twooperators/6publicplans qualify a bounded one-owner comparison, source clocks and rest/entrance/comfort/booking unknowns intact. Master937full48maintenance5focused/state0/GSC91/SEO0sixprior/differentHelmholtzSTRICTPASS; all original sources/public/model/CSV/held11 and339orderedactions except077fourfields preserved. Next exact registered London implementation under014, no repeat audit/quotes/reviews/denials or genericapproval. No Pageswait applies to docs-only decision. One finished transaction/no quota;014 unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T12:17:33.667Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "6ab922abc0584305512943a214f6bd3e942ded58"
+    },
+    {
+      "id": "FT-PUB-012",
+      "title": "Publish the bounded London family-apartment comparison",
+      "kind": "publication",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T12:18:55.485Z",
+      "target_urls": [
+        "https://familytripwise.com/where-to-stay/london-family-hotels.html",
+        "https://familytripwise.com/",
+        "https://familytripwise.com/about.html"
+      ],
+      "target_paths": [
+        "docs/research/london-family-page-task-2026-10-13.json",
+        "tools/page-generation/london-family-hotels-page.mjs",
+        "tools/london-family-hotels-page.test.mjs",
+        "tools/generate-pages.mjs",
+        "site/where-to-stay/london-family-hotels.html",
+        "site/index.html",
+        "site/about.html",
+        "site/sitemap.xml",
+        "site/styles.css",
+        "ops/evidence-watch.json",
+        "ops/gsc-monitor.json",
+        "tools/site-maintenance.mjs",
+        "tools/about-page.test.mjs",
+        "tools/discovery.test.mjs",
+        "tools/boston-dining-download.test.mjs",
+        "tools/boston-breakfast-menu.test.mjs",
+        "tools/cancun-child-offer.test.mjs",
+        "tools/contributors.test.mjs",
+        "tools/evidence-audit.test.mjs",
+        "tools/orlando-activities-page.test.mjs",
+        "tools/washington-dc-family-hotels-page.test.mjs",
+        "tools/site-maintenance.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "evidence": "148 reviewed/current US five-six overlap6of13/five170-sixunknown and newcompetitor bodies qualify one owner. Queen Street/Limehouse/Citadines typed matched six-reference budget,085/147 selected reviews and source dates; bounded twooperator threecategory scope, not ninehotel ranking or connection/rest guarantee. No currentLondonURL. Fresh014 delegatedcity selection London UK recorded here.",
+      "acceptance_criteria": [
+        "Three maintained apartment rows from the existing typed join, prominent whole-configuration GBP/night samples with exact2adult/children4-8-12-15/Nov8-13five-night basis, originalOct2/3 dates and fee/deposit/cancellation/age/sofa unknowns. Native row anchors and concise selected review/source checks, no newCSV or client personaldata collection.",
+        "One canonical London lodging URL plus Home/About discovery and sitemap/monitor/offline-maintenance ownership. Licensed London orientation image with date/attribution/license and no room/route proof. Responsive stable table with scoped CSS, keyboard scroll and source/disclosure links, clear partial family-task outcomes. ThreeHTML changes only; existing other33canonicals/publicassets/model/oldCSV/originalrecords unchanged.",
+        "Source-derived focused and fullnative QA with inventory assertions updated only for current36canonicals/39HTML, historical snapshots unchanged; different independent strictread-only PASS or PASS_WITH_P3. Exact27guardedcommit/push then Pages-marker/affectedassets/productionSEO and all live desktop/mobile320-390/keyboard/anchors/source-context/image invariants. FixP0-P2 and rereview atmost3cycles."
+      ],
+      "measurement_plan": "LRN234 integrated reproducible page-only seven-step proxies for six-personbudget, five-personnoninheritance, skepticquietness/duplex, kitchen/rest choice. YES/PARTIAL/NO, not parentpreference/satisfaction/SEOlift. Source clocks Sept30/Oct2/3 and review085/147 notrenewed. GSC reusedOct12finalOct10 orientation only; currentUS qualification148 distinct.",
+      "production_invariant": "London canonical200/indexable/selfcanonical/one sitemap occurrence/HomeAboutreachable/contributor disclosure. Three exactcategories and6publicplans; known rates not all-in/fiveperson/currentquotes; unknown rest/entrance/comfort/booking remain. Old35 inventory remains, other33canonicals unchanged, all65hotelrecords/CSV/originalroom-price-review sources/held11 preserved; no new paid/account/indexing/analytics/posting/source-denialretry/scheduler mutation.014 fixedexpiry unchanged.",
+      "decision": "IMPLEMENT qualified bounded London comparison; familyproblem taken through native/task/review and production, no cadence or quota.",
+      "authorization": "Fresh directOctober12 FT-OPS-014 delegates evidence-qualified newcity London UK and exactpublicaction during fixed72hour window. This threeHTML batch is within scope, not futureunboundedcity/destructiveURL/spending authority.",
+      "review_receipt": "FT-PUB-012 Harvey01a1354e-833d-7150-94ed-2bc1de14c8b7 independent STRICTREADONLY PASS/noP0-P3: frozen1e6c8e5469a89019f12ef2f9b8f4cfc61d5d9957edb74c7d7cb97b626fbe9451/all1014hash-modes/baseline1010/exact27/340orderedactions/held11/LRN234-only verified. Independent5purefocused PASS; screenshot and recordednativeproofs inspected, not ownliveQA. Master942full48maintenance/state0/GSC91/localSEO0sixprior logf441082049dc146d2f4f2d1a511455451ace0a31f867d25b5772e917e65067ea inspected, not reviewerfullrun.36canonical39HTML/original35/other33canonical/all65hotelrecords-oldCSV-originalsources/CSSprefix/8watchrecords4exacthosts/security014unchanged. Shared3category6plans/referenceparty-stay noninheritance/source-review-date limits/distinctCitadinescategory-booking/photoDAVIDIliiff2009CCBYSA3/discovery-maintenance consistent. Actual1280-390-320/mainkeyboard0-462-532then0/9roomEnter9disclosurepairs/3secondary532then0/pricecol150fullincompletewarning/image1280/nooverflow-runtime-console0. Initial942-941pass1contributorcountfail and unsupportedlocator/End-unsettledassertions excluded; originalcreditrule preserved and scopedpricewarning repaired. Serial987nonowned74otherpublicassets/340actions/25oldwatch/CSS invariantsPASS, initialhelperCSS-prefix assumption excluded. No reviewerwrites/network/browser/git/accounts/delegation/scheduler, sourcesnotreopened; no parent-SEOlift-currentquote-firmfit inference. Only mechanical consensus appended; guarded exact release and Pages-marker-productionSEO/live pending.014fixedexpiry unchanged."
     }
   ]
 }

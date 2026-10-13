@@ -1347,3 +1347,31 @@ p.contributor-credit {
 #las-vegas-hotel-intro ~ section #las-vegas-room-fit {
   scroll-margin-top: 80px;
 }
+/* London exact-category comparison; other destination styles are unchanged. */
+.london-page { background: #fff; color: #23312e; letter-spacing: 0; }
+.london-page main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+.london-page main section { padding: 24px 0; border-bottom: 1px solid #d6dfdb; scroll-margin-top: 112px; }
+.london-page h1 { font-size: 36px; line-height: 1.15; margin: 10px 0; }
+.london-page h2 { font-size: 24px; line-height: 1.3; }
+.london-page h3 { font-size: 20px; line-height: 1.3; }
+.london-page p, .london-page li { line-height: 1.55; overflow-wrap: anywhere; }
+.london-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.london-source, .london-page small { font-size: 14px; line-height: 1.4; color: #485d55; }
+.london-scroll { max-width: 100%; overflow-x: auto; }
+.london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: collapse; font-size: 15px; }
+.london-page caption { text-align: left; padding: 8px 0; }
+.london-page th, .london-page td { padding: 12px; vertical-align: top; border: 1px solid #d6dfdb; }
+.london-page thead th { background: #e5f2ef; }
+.london-page th:first-child { width: 160px; position: sticky; left: 0; z-index: 1; }
+.london-comparison :is(th, td):nth-child(2) { width: 150px; }
+.london-page tbody th { background: #fff; }
+.london-page small { display: block; margin-top: 6px; }
+.london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
+.london-page details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
+.london-page summary { cursor: pointer; font-weight: 600; }
+.london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
+.london-page figure { margin: 0; }
+.london-page figure img { width: 100%; height: auto; display: block; }
+.london-page figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+@media (max-width: 600px) { .london-page h1 { font-size: 30px; } .london-page th:first-child { width: 130px; } }
+@media print { .london-scroll { overflow: visible; } .london-page table { min-width: 0; font-size: 10px; } .london-page th:first-child { position: static; width: 22%; } .london-page th, .london-page td { padding: 6px; } }
