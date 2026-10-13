@@ -2360,6 +2360,10 @@ export const teenPages = {
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {
+    frontComparison: true,
+    frontComparisonPrefix: "lv",
+    frontComparisonClass: "lv-teen-glance",
+    frontComparisonOrder: [0, 9, 1, 2, 3, 4, 5, 6, 7, 10, 8],
     title: "Things to Do in Las Vegas With Teens: 8 Picks by Trip Style",
     description:
       "Compare eight things to do in Las Vegas with teens by interest, cost, time, heat, location, age rules, and mixed-age fit, with current official checks.",

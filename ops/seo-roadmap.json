@@ -15355,7 +15355,7 @@
       "id": "FT-IMP-138",
       "title": "Expose Chicago teen payoff with its decisive rule",
       "kind": "implementation",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T17:03:18.351Z",
       "target_paths": [
@@ -15386,7 +15386,50 @@
       "decision": "IMPLEMENT Chicago teen comparison:heading452desktop808mobilevs2122-2603; same8rows7sourcefields/checklast/9nativeanchors/sticky180-130/all8criticaltextsinitialdesktop-endmobile/keyboard2-808-878return0. July23sources/unknowns and137all-ages output unchanged.",
       "evidence_record": "docs/research/chicago-teen-glance-2026-10-13.json",
       "next_gate": "Fullnative/preservation/different strictread-onlyPASS/exact12guardedpush/Pages-marker-productionSEO/twoassets/liveinvariants",
-      "review_receipt": "FT-IMP-138 immutable review: Mill 01a1363e-7cfd-76c3-a388-c0f238776e3e PASS 2026-10-13T17:16:04Z; no actionable P0-P2; manifest 4d507396f559777e40e7915d42e32aec03ca987ae196a2c3baa24cd899ac7ad5 exact12/all1030 hashes-modes/older346/held-work/LRN240-only/35othercanonicals preserved. Independent three pure tests and read-only invariants PASS; saved pixels/proofs and Master963full48maintenance14focused/state0/GSC91/SEO0sixprior/log ed689ca2546dbfc6c9d498a7bbb0d8130b71c0b01e74c3ad74253e69fd8089ef inspected, not independently rerun. No reviewer writes/network/browser/Git/delegation/scheduler; original July23 facts not renewed; task proxies PARTIAL. Production gate remains pending."
+      "review_receipt": "FT-IMP-138 immutable review: Mill 01a1363e-7cfd-76c3-a388-c0f238776e3e PASS 2026-10-13T17:16:04Z; no actionable P0-P2; manifest 4d507396f559777e40e7915d42e32aec03ca987ae196a2c3baa24cd899ac7ad5 exact12/all1030 hashes-modes/older346/held-work/LRN240-only/35othercanonicals preserved. Independent three pure tests and read-only invariants PASS; saved pixels/proofs and Master963full48maintenance14focused/state0/GSC91/SEO0sixprior/log ed689ca2546dbfc6c9d498a7bbb0d8130b71c0b01e74c3ad74253e69fd8089ef inspected, not independently rerun. No reviewer writes/network/browser/Git/delegation/scheduler; original July23 facts not renewed; task proxies PARTIAL. Production gate remains pending.",
+      "release_receipt": "FT-IMP-138 release 6c0aa0ed5e5ed8574dfa91aac380e066d67cdcc3 remote verified 2026-10-13T17:20:08.332Z; main0-0/emptyindex/exact12/all1030indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Pages38437484666SUCCESS/marker6c0aa0ed5e5ed8574dfa91aac380e066d67cdcc3/two200byteexact/productionSEO0sixprior/native1280-390-320/preflight9anchors/keys2-808-878return0/all8criticaltexts/sticky180-130/nooverflow-console0/photo1280/license-rulelinks/all-ages12rowEnter+settledpointer. Immutable /tmp/ft138-final-production-check.json verified2026-10-13T17:19:54.983Z; original July23 clocks and35othercanonicals preserved; no newURL/paidcall/parent-SEOproof. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T17:20:08.354Z",
+      "release_state": "released-and-production-verified",
+      "release_commit": "6c0aa0ed5e5ed8574dfa91aac380e066d67cdcc3",
+      "released_at": "2026-10-13T17:19:54.983Z",
+      "pages_run": 38437484666,
+      "production_verification": "Immutable /tmp/ft138-final-production-check.json: matching marker/two200byteexact/productionSEO0/threepreflightwidths/9nativeanchors/sticky180-130/all8criticaltextsdesktopinitial-mobileend/keyboard2-808-878return0/photo1280/nooverflow-console0/all-ages12rowrouteEnter+settledpointer/originalrule-license links. Original source clocks,137 and heldwork retained."
+    },
+    {
+      "id": "FT-IMP-139",
+      "title": "Pair Las Vegas teen appeal with the decisive access check",
+      "kind": "implementation",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T18:05:31.308Z",
+      "target_paths": [
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "site/things-to-do/las-vegas-with-teens.html",
+        "site/styles.css",
+        "tools/las-vegas-teen-glance.test.mjs",
+        "docs/research/las-vegas-teen-glance-2026-10-13.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/las-vegas-with-teens.html"
+      ],
+      "evidence": "Current actual1280/390 page comparison heading2208.117/2711.469 behindphoto5quickpicks. Teen14/sibling8 compare immersive/skyline/game/height-dependent/outdoor anchors and exact adult/height/weather/ticket gate. Eight original eleven-field rows preserve maintained076 AREA15 policy. No CTR/cadence or newURL inference.",
+      "acceptance_criteria": [
+        "Move original8x11 comparison before photo/picks via establishedfront renderer. Explicit display permutation0,9,1,2,3,4,5,6,7,10,8 only; original arrays and advice unchanged. Scoped lv IDs/class and CSS1740minimum/180desktop130mobile identity150critical field. Preserve default7fieldteen guard; explicit larger permutation must pass existing shape/index uniqueness guards.",
+        "Focused/full native QA/idempotence and35othercanonicals including135136137138 byteequal. Original head-H1/schema/photo/allarticlebodies/source arrays/July22 and separateOct9 AREA15 policies/CSV/models/prices/CSSprefix retained. Actual1280/390/320 screens/9Enteranchors/all8criticaltexts/keyboardscroll-return0/youngerhub/source-license routes/nooverflow-console0. Two7stepPARTIAL proxies, not parents/fit/safety/source renewal/SEOproof.",
+        "Different independent strictread-onlyPASS/PASS_WITH_P3; exact11 guardedcommit/freshfetch/sole complete reviewedrange/no divergence normalpush. PagesSUCCESS/matchingmarker/productionSEO/two200byteexact/public liveinvariants. Preserve347ordered prioractions/held11/paid0.34636/014scheduler and observation/human/privacy/security gates."
+      ],
+      "measurement_plan": "LRN241 current page-only mixed-age task. FreshOct13 GSC collected17:36:08.504Z finalizedOct11/priorOct12finalOct10, orientationonly2090impressions12clicks43.52avg;24of36inspectedindexed andoldJuly27sitemap28discovered are not queryCTR/demand proof.",
+      "production_invariant": "Only existingVegas teen HTML plus scopedCSS publicly change;35others/head-H1-schema-media-allarticles/originalrows/076policy/July22-Oct9clocks/prices/CSV retained. No newURL/CSV/paidcall/source renewal/indexability/indexing/analytics/account/contact/scheduler/denial retry. Chicago pool warning already preserves unresolved state; no unchanged denied source retry.",
+      "decision": "IMPLEMENT8x11Vegas teen comparisonfirst/appealsecond-currentchecklast/displayonly;452desktop759mobilevs2208-2711; all8checks at end/180-130identity/keys582-1388-1458return0/9nativeanchors. OriginalJuly22 andOct9policy unchanged.",
+      "evidence_record": "docs/research/las-vegas-teen-glance-2026-10-13.json",
+      "next_gate": "Fullnative/preservation/differentstrictreview/exact11guardedpush/Pages-marker-productionSEO/two200assets/liveinvariants",
+      "review_receipt": "FT-IMP-139 independent Kierkegaard01a13677-02a2-7b30-95ca-e74c175c0a6c strictREADONLY PASS/no actionableP0-P2 observed18:14:31Z; frozen e5fb486dddad4e7ab162fbd7cc0f9f7aff0e85346f5d15cd7916ca7af07cba0d exact11/all1034hash-modes/zero drift. Independent3pure andread-onlyinvariantsPASS; default7teen guard andexplicitcomplete-permutation valid;8x11rows/35othercanonicals/347olderactions/held11/LRN241-only/originalsourceclocks-schema-articles-photo-CSSprefix preserved. Savedpixels/browserproofs and Master966full48maintenance18focused/state0/GSC92/SEO0sixprior final log7f5befd820157947ba723acd9ef9bf9790c924f3484f7d9fb378a38221c13321 inspected, not independentfull/live/source/production run. InitialGSC-reference/testmarkup/previewhelp/measurement failures excluded andcorrected; partialproxies/no source renewal/currentprice/parent/SEOclaims. No reviewerwrites/network/browser/Git/delegation/scheduler; guardedrelease/liveproduction pending;014unchanged."
     }
   ]
 }

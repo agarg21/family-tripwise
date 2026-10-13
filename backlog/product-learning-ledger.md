@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-241 - Pair Vegas teen appeal with its decisive access check - 2026-10-13
+
+FT-IMP-139 [current page task](../docs/research/las-vegas-teen-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: teen14/sibling8 compare immersive, game/ride, skyline/event or outdoorcontrast anchor. REJECTnear-start discovery:heading2208desktop2711mobile afterphoto5picks. IMPLEMENTsame8rows11fields upfront with teenappealsecond/currentchecklast; originalJuly22 and separateOct9AREA15 adultthroughout record unchanged. No newURL/CSV/reviews/source renewal.
+
+Observedheading452desktop759mobile808narrow;firstrows670/1073/1201 not allinitialmobile900.9nativeEnteranchors/180desktop130mobile identity/all8criticaltexts afterscroll/keys582-1388-1458then0/photo1280/nooverflow-console0,12rowall-ages route verifiedEnter+settledpointer. Two7stepPARTIAL roles for exactproduct/height/effects/weather/fee/return/acceptance; not actualparents/safety/independence/SEO/reading-time proof. Initialtest rowheader assumption corrected without dropping cells; failedhelp/stringmeasurement excluded. Confidencehigh observed layout/preservation, moderate expectedusefulness, currentvenue/parent/SEOunknown. Lesson: expose appeal and limiting access rule without flattening eleven source fields or renewing policy dates. Falsifyclipping/nativefailure/sourceconflict/actual-parent difficulty. Fullnative/differentread-onlyreview/verifiedrelease remains required.
+
 ## LRN-240 - Compare the teen payoff and decisive rule together - 2026-10-13
 
 FT-IMP-138 [Chicago teen task](../docs/research/chicago-teen-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: teen14/sibling8 compare indoor, skyline, movement or older-child evening choices. REJECT near-start comparison hypothesis: heading2122desktop2603mobile behindphoto5picks. IMPLEMENT same8rows7fields beforephoto/picks, three native sectionlinks and displayeddecisive-checklast; original source arrays/5picks4details4plans/cluster/FAQ/headH1/schema/photo/July23 evidence unchanged. No extra age-modifier URL or newCSV.

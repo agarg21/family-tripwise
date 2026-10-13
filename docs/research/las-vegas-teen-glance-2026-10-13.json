@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-139",
+  "learning_id": "LRN-241",
+  "checked_on": "2026-10-13",
+  "evidence_class": "CURRENT_PAGE_ONLY_TASK_PROXY",
+  "hypothesis": "A teen and parent can compare the preferred Vegas anchor and its decisive access constraint near the start",
+  "hypothesis_result": "REJECT existing discovery; IMPLEMENT same eight eleven-field rows before photo and quick picks",
+  "baseline": [
+    {
+      "columns": 11,
+      "headingY": 2208.1171875,
+      "imageLoaded": true,
+      "overflow": false,
+      "rows": 8,
+      "width": 1280
+    },
+    {
+      "columns": 11,
+      "headingY": 2711.46875,
+      "imageLoaded": true,
+      "overflow": false,
+      "rows": 8,
+      "width": 390
+    }
+  ],
+  "current": {
+    "frames": [
+      {
+        "comparisonY": 399.3046875,
+        "firstRowY": 670.1328125,
+        "h1Font": "36px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Why it earns teen space",
+          "Teen fit",
+          "Time",
+          "Cost",
+          "Area",
+          "Walking",
+          "Indoor",
+          "Flexibility",
+          "Pair nearby",
+          "Current check"
+        ],
+        "identityWidth": 180,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 8,
+        "width": 1280,
+        "headingY": 452.015625,
+        "criticalInitiallyReadable": false
+      },
+      {
+        "comparisonY": 706.109375,
+        "firstRowY": 1072.9375,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Why it earns teen space",
+          "Teen fit",
+          "Time",
+          "Cost",
+          "Area",
+          "Walking",
+          "Indoor",
+          "Flexibility",
+          "Pair nearby",
+          "Current check"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 8,
+        "width": 390,
+        "headingY": 758.8203125,
+        "criticalInitiallyReadable": false
+      },
+      {
+        "comparisonY": 755.3046875,
+        "firstRowY": 1201.328125,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Why it earns teen space",
+          "Teen fit",
+          "Time",
+          "Cost",
+          "Area",
+          "Walking",
+          "Indoor",
+          "Flexibility",
+          "Pair nearby",
+          "Current check"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 1280,
+        "overflow": false,
+        "rows": 8,
+        "width": 320,
+        "headingY": 808.015625,
+        "criticalInitiallyReadable": false
+      }
+    ],
+    "anchors": [
+      {
+        "hash": "#lv-activity-comparison",
+        "headerBottom": 65,
+        "id": "lv-activity-comparison",
+        "top": 79.8046875,
+        "width": 1280
+      },
+      {
+        "hash": "#lv-activity-quick-picks",
+        "headerBottom": 65,
+        "id": "lv-activity-quick-picks",
+        "top": 79.9765625,
+        "width": 1280
+      },
+      {
+        "hash": "#lv-activity-notes",
+        "headerBottom": 65,
+        "id": "lv-activity-notes",
+        "top": 79.8046875,
+        "width": 1280
+      },
+      {
+        "hash": "#lv-activity-comparison",
+        "headerBottom": -403.390625,
+        "id": "lv-activity-comparison",
+        "top": 160.109375,
+        "width": 390
+      },
+      {
+        "hash": "#lv-activity-quick-picks",
+        "headerBottom": -2441.390625,
+        "id": "lv-activity-quick-picks",
+        "top": 80.046875,
+        "width": 390
+      },
+      {
+        "hash": "#lv-activity-notes",
+        "headerBottom": -3578.890625,
+        "id": "lv-activity-notes",
+        "top": 160.0078125,
+        "width": 390
+      },
+      {
+        "hash": "#lv-activity-comparison",
+        "headerBottom": -452.890625,
+        "id": "lv-activity-comparison",
+        "top": 159.8046875,
+        "width": 320
+      },
+      {
+        "hash": "#lv-activity-quick-picks",
+        "headerBottom": -2590.390625,
+        "id": "lv-activity-quick-picks",
+        "top": 80.0703125,
+        "width": 320
+      },
+      {
+        "hash": "#lv-activity-notes",
+        "headerBottom": -3902.890625,
+        "id": "lv-activity-notes",
+        "top": 160.2265625,
+        "width": 320
+      }
+    ],
+    "keys": [
+      {
+        "critical": [
+          {
+            "name": "AREA15 / one exact experience",
+            "readable": true,
+            "text": "Under 18: adult throughout; check exact experience"
+          },
+          {
+            "name": "Red Rock Canyon Scenic Drive",
+            "readable": true,
+            "text": "Check weather, road and seasonal entry"
+          },
+          {
+            "name": "Big Apple Coaster and Arcade",
+            "readable": true,
+            "text": "Check height, weather and hours"
+          },
+          {
+            "name": "High Roller observation wheel",
+            "readable": true,
+            "text": "Check ticket and cabin terms"
+          },
+          {
+            "name": "Pinball Hall of Fame",
+            "readable": true,
+            "text": "Check current hours"
+          },
+          {
+            "name": "Neon Museum",
+            "readable": true,
+            "text": "Check timed ticket and weather"
+          },
+          {
+            "name": "Bellagio Conservatory and fountains",
+            "readable": true,
+            "text": "Check display and fountain schedules"
+          },
+          {
+            "name": "Sphere film experience or selected event",
+            "readable": true,
+            "text": "Check exact production, age and effects"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 61,
+        "max": 582,
+        "offset": 582,
+        "regionLeft": 60,
+        "width": 1280
+      },
+      {
+        "returnOffset": 0,
+        "width": 1280
+      },
+      {
+        "critical": [
+          {
+            "name": "AREA15 / one exact experience",
+            "readable": true,
+            "text": "Under 18: adult throughout; check exact experience"
+          },
+          {
+            "name": "Red Rock Canyon Scenic Drive",
+            "readable": true,
+            "text": "Check weather, road and seasonal entry"
+          },
+          {
+            "name": "Big Apple Coaster and Arcade",
+            "readable": true,
+            "text": "Check height, weather and hours"
+          },
+          {
+            "name": "High Roller observation wheel",
+            "readable": true,
+            "text": "Check ticket and cabin terms"
+          },
+          {
+            "name": "Pinball Hall of Fame",
+            "readable": true,
+            "text": "Check current hours"
+          },
+          {
+            "name": "Neon Museum",
+            "readable": true,
+            "text": "Check timed ticket and weather"
+          },
+          {
+            "name": "Bellagio Conservatory and fountains",
+            "readable": true,
+            "text": "Check display and fountain schedules"
+          },
+          {
+            "name": "Sphere film experience or selected event",
+            "readable": true,
+            "text": "Check exact production, age and effects"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 1388,
+        "offset": 1388,
+        "regionLeft": 18,
+        "width": 390
+      },
+      {
+        "returnOffset": 0,
+        "width": 390
+      },
+      {
+        "critical": [
+          {
+            "name": "AREA15 / one exact experience",
+            "readable": true,
+            "text": "Under 18: adult throughout; check exact experience"
+          },
+          {
+            "name": "Red Rock Canyon Scenic Drive",
+            "readable": true,
+            "text": "Check weather, road and seasonal entry"
+          },
+          {
+            "name": "Big Apple Coaster and Arcade",
+            "readable": true,
+            "text": "Check height, weather and hours"
+          },
+          {
+            "name": "High Roller observation wheel",
+            "readable": true,
+            "text": "Check ticket and cabin terms"
+          },
+          {
+            "name": "Pinball Hall of Fame",
+            "readable": true,
+            "text": "Check current hours"
+          },
+          {
+            "name": "Neon Museum",
+            "readable": true,
+            "text": "Check timed ticket and weather"
+          },
+          {
+            "name": "Bellagio Conservatory and fountains",
+            "readable": true,
+            "text": "Check display and fountain schedules"
+          },
+          {
+            "name": "Sphere film experience or selected event",
+            "readable": true,
+            "text": "Check exact production, age and effects"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 1458,
+        "offset": 1458,
+        "regionLeft": 18,
+        "width": 320
+      },
+      {
+        "returnOffset": 0,
+        "width": 320
+      }
+    ]
+  },
+  "task": {
+    "decision": "Teen14/sibling8 compare immersive or skyline ticket with game/height-dependent/outdoor alternative, without inferring independent entry or ticket eligibility",
+    "steps": [
+      "Read July22 historical attraction clock and editorial-estimate scope",
+      "Use native comparison link",
+      "Compare original teen payoff and teen-fit category without treating estimates as guarantees",
+      "Compare time/cost/area/walking/indoor/flexibility and nearbypair fields",
+      "Scroll Currentcheck beside opaque pinned activity identity",
+      "Use native Quickpicks and Detailedchecks for original adult-accompaniment/54inch/weather/exactproduction limits",
+      "Trace preserved official links or take native all-ages route; actual date/acceptance/completeprice/rest remains unresolved"
+    ],
+    "roles": [
+      {
+        "role": "Teen14/sibling8 immersive anchor versus game or ride choice",
+        "result": "PARTIAL",
+        "remaining": "Under18 AREA15 adultthroughout remains explicit; exactexperience ticket/height/effects/full price/currententry acceptance unknown. No actual booking or familyfit."
+      },
+      {
+        "role": "Teen-selected outdoor contrast versus contained skyline/event",
+        "result": "PARTIAL",
+        "remaining": "Weather/road/seasonalentry/cabinterms/exactproduction/return and fees unverified; no exactroute/safety/independent-roaming assurance."
+      }
+    ],
+    "proxy_not_real_parent": true
+  },
+  "source_review": {
+    "general_attraction_clock": "2026-07-22",
+    "area15_policy_clock": "2026-10-09",
+    "maintained_policy": "docs/research/las-vegas-teen-access-2026-10-09.json",
+    "classes": [
+      "Historical official attraction sources",
+      "Separate maintained official venue-policy record",
+      "Editorial estimates and conditional interpretation",
+      "Explicit current ticket/event/weather/route/fee unknowns"
+    ],
+    "source_links": {
+      "license": [
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG",
+          "text": "Wikimedia Commons"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0"
+        }
+      ],
+      "rules": [
+        {
+          "href": "https://newyorknewyork.mgmresorts.com/en/entertainment/the-big-apple-coaster-and-arcade.html",
+          "text": "Big Apple Coaster"
+        },
+        {
+          "href": "https://neonmuseum.org/faqs/",
+          "text": "Neon Museum visit FAQ"
+        },
+        {
+          "href": "https://www.area15.com/faqs",
+          "text": "AREA15 age-policy FAQ"
+        },
+        {
+          "href": "https://www.area15.com/code-of-conduct",
+          "text": "AREA15 Code of Conduct"
+        },
+        {
+          "href": "https://neonmuseum.org/faqs/",
+          "text": "Neon Museum visit FAQ"
+        }
+      ]
+    },
+    "new_online_review_samples": 0,
+    "new_fit_or_safety_judgments": false,
+    "source_renewal": false,
+    "limits": "Layout/preservation audit only. No external reinspection or new hotel/activity review claims; original research-based guidance remains dated, not a personal review or representative rating."
+  },
+  "preservation": {
+    "rows": 8,
+    "fields": 11,
+    "display_order": [
+      0,
+      9,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      8
+    ],
+    "original_arrays_unchanged": true,
+    "quick_picks": 5,
+    "details": 5,
+    "plans": 4,
+    "cluster_links": 4,
+    "official_check_groups": 3,
+    "faqs": 3,
+    "head_h1_schema_photo_all_article_bodies_unchanged_required": true,
+    "old_css_prefix_unchanged_required": true,
+    "all35othercanonicals_including138_unchanged_required": true,
+    "new_csv": false,
+    "new_url": false
+  },
+  "qa_inventory": {
+    "viewports": [
+      1280,
+      390,
+      320
+    ],
+    "native_section_links": 9,
+    "critical_all8_readable_at_scroll_end": true,
+    "critical_initially_offscreen_all_widths": true,
+    "keyboard_end_offsets": [
+      582,
+      1388,
+      1458
+    ],
+    "keyboard_returns": [
+      0,
+      0,
+      0
+    ],
+    "source_cluster_routes": "/tmp/ft139-browser/local-source-routing.json",
+    "console": "/tmp/ft139-browser/local-console.json",
+    "context": "/tmp/ft139-browser/local-context.png",
+    "narrow": "/tmp/ft139-browser/local-end-320.png"
+  },
+  "gsc": {
+    "classification": "FRESH_API_EVIDENCE_FROM_EXISTING_SNAPSHOT",
+    "collected_at": "2026-10-13T17:36:08.504Z",
+    "finalized_through": "2026-10-11",
+    "prior_finalized_through": "2026-10-10",
+    "limit": "Page/property averages2090impressions12clicks43.52position not queryCTR/intent/demand;24of36inspectedindexed not SEOproof;old28discoveredsitemaplastJuly27 not currentURL count"
+  },
+  "excluded_attempts": [
+    "Initial966full and48maintenance passed but operator-state QA failed two missing latest GSC snapshot references. Added current Oct13 JSON/Markdown links in registered roadmap/current-cycle paths, rebuild candidate and rerun full sequence; initial sequence is not accepted as final green.",
+    "Initial18focused17pass1fail newtest assumed thscope row rather than established tdrole rowheader; corrected test to exact renderer markup, preserving all11 cells/order; final18pass.",
+    "Preview --help rejected Invalidpreviewport because CLI expects numeric positionalport; actual permitted documented snapshotpreview0 succeeded53583, no access-denial bypass.",
+    "Initialread-only measurement string returnedundefined; no failed measurements accepted. Literal DOMfunction and fullpreflightwidthrun subsequently completed with actual geometry."
+  ],
+  "limits": [
+    "Comparisonheading452.016/758.820/808.016 vs2208.117/2711.469 baseline; section399.305/706.109/755.305 and firstrows670.133/1072.938/1201.328 differ. Firstmobile rows below900viewport, no allchoices-firstscreen claim.",
+    "11fields retained1740minimum; criticalfield requires horizontalscroll on desktop andphone,8criticaltexts readable beside180desktop130mobile identity. No simultaneous allfields or reading-time promise.",
+    "Two7stepPARTIAL proxies not actualparents/SEOeffect/fit/satisfaction. Existingnoindependentroaming guarantee and separateOct9clock unchanged.",
+    "Chicago pool warning unchanged, no deniedsource retry. No paidcall/budget/automation/newcity or observationreset."
+  ],
+  "result": {
+    "decision": "IMPLEMENT_NOW",
+    "public_delivered": false,
+    "confidence": "High observed discovery/native/preservation; moderate expectedusefulness, unknown currentvenue/actualparent/SEO outcome",
+    "next_gate": "Fullnative/preservation/differentstrictreview/exact11guardedpush/Pages-marker-productionSEO/two200assets/liveinvariants",
+    "next_falsification_trigger": "Clipped identity/currentcheck, native-route regression, changed officialconstraint or actualparent counterevidence"
+  }
+}

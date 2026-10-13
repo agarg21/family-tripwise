@@ -1062,7 +1062,7 @@ function upgradeFile(outDir, path, page, type) {
   html = page.placement === "after-intro" ? insertAfterIntroBand(html, section) : insertBeforeMainEnd(html, section);
   html = insertSchema(html, schema);
   if (page.frontComparison) {
-    if (type === "teen" && (page.comparisonHeaders?.length !== 7 || page.rows.some(row => row.length !== 7))) {
+    if (type === "teen" && !page.frontComparisonOrder && (page.comparisonHeaders?.length !== 7 || page.rows.some(row => row.length !== 7))) {
       throw new Error("Expected seven teen comparison fields");
     }
     const sourceHeaders = page.comparisonHeaders || activityComparisonHeaders;
