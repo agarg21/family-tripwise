@@ -68,7 +68,10 @@ test("native public comparison exposes eligibility, reservation and unresolved f
   const h = html(), section = h.match(/<section[^>]+id="garfield-admission"[\s\S]*?<\/section>/)[0];
   assert.ok(h.includes(renderGarfieldAdmission(page.garfieldAdmission)));
   assert.equal((section.match(/<tr><th scope="row">/g) ?? []).length, 3);
-  assert.equal((h.match(/href="#garfield-admission"/g) ?? []).length, 1);
+  assert.equal((h.match(/href="#garfield-admission"/g) ?? []).length, 2);
+  assert.match(h, /href="#garfield-admission">Admission and reservation checks<\/a>/);
+  assert.match(h, /href="#garfield-admission">Admission checks<\/a>/);
+  assert.equal((h.match(/id="garfield-admission"/g) ?? []).length, 1);
   for (const phrase of ["Closed Monday/Tuesday", "30-minute reservation", "Under-seven rate unconfirmed", "not checkout totals",
     "Garden cost, taxes/fees and dated availability unconfirmed", "2026-10-13"]) assert.ok(section.includes(phrase));
   assert.match(section, /tabindex="0" role="region" aria-label="Garfield Park admission examples"/);

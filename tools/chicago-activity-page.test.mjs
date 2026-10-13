@@ -66,12 +66,13 @@ test("keeps the widened page compact, persona-routed, and current-source aware",
 
   assert.match(upgrade, /Five useful ways to start/);
   assert.equal((upgrade.match(/<article class="quick-pick">/g) || []).length, 5);
-  assert.equal((upgrade.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 12);
+  const comparison = html.match(/id="chi-activity-comparison"[\s\S]*?<\/table>/)[0];
+  assert.equal((comparison.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 12);
   assert.equal((detailSection.match(/<article class="detail-card">/g) || []).length, 6);
   assert.equal((upgrade.match(/<article class="plan-card">/g) || []).length, 0);
   assert.equal((upgrade.match(/<h3>(Where to stay in Chicago|Chicago family itinerary|Chicago with teens)<\/h3>/g) || []).length, 3);
   assert.match(upgrade, /starting routes, not universal rankings/i);
-  assert.match(upgrade, /editorial planning estimates, not venue guarantees/i);
+  assert.match(comparison, /editorial planning estimates, not venue guarantees/i);
   assert.match(upgrade, /Chicago with kids FAQ/);
   assert.equal((html.match(/<article class="activity-card"(?! data-tags)/g) || []).length, 0);
 

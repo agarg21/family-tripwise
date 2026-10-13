@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-239 - Expose Chicago choices with their booking constraints - 2026-10-13
+
+FT-IMP-137 [Chicago activity task](../docs/research/chicago-activity-glance-2026-10-13.json). CURRENT_PAGE_ONLY_TASK_PROXY: parents/ages3and7 compare indoor anchors, lower-cost reset and Garfield residency/age-specific admission. REJECT near-start discovery hypothesis: comparisonheading4510desktop7828mobile afterphoto12cards5picks. IMPLEMENT same12rows11fields beforephoto/cards, four native comparison/filter/detail/admission links, displayedBookinglast only; source rows/age/cost/route/advice/map/schema/Garfield134/source clocks unchanged.
+
+Like-for-like headings452desktop808mobile; section399/755/815, firstrows627/1079/1163 not allinitialmobileviewport.18original filterstates12-6-12-8-8-5 affectcards only, table12unchanged;12nativeEnterlinks,180desktop130mobile identity/150Bookingfield, arrow582/1388/1458then0/all12Bookingtexts readable, image3264/nooverflow. Two seven-step PARTIAL proxies for exactdate/price/age3/fees/weather/route/fit unknowns, not actualparents/SEO/satisfaction/reading-time proof; no new reviews or fact renewal. Initial13focus10pass3fail used staleHTML via export-only module; actual generator invocation fixed output, same13tests green, fullnative/different review/production required. Lesson: a maintained comparison and its exact admission limits should be directly reachable without preceding full attraction lists. Falsify clipping, failed native/source route/currentfact conflict or actual-parent difficulty. No newCSV/URL/source retry or paidcall.
+
 ## LRN-238 - Separate the room label, physical link and booking confirmation - 2026-10-13
 
 FT-RES-150 [connecting-room task](../docs/research/connecting-room-task-gate-2026-10-13.json). Parents/ages4and8 need an internal door; grandparents may consider a vestibule. CURRENT_US_SERP_AND_PRIMARY_POLICY/EVIDENCE_ONLY_TASK_PROXY. REJECT universal adjoining definition: BCD distinguishes hallway-only adjacency, Hilton uses both labels for its confirmed product, and Andaz names internal and vestibule links by category. Request, named category, selected channel and confirmed reservation remain separate. HiltonFAQ/help brand-count and telephone-detail conflicts are not silently resolved. No booking, fulfillment, quote, child allocation, rest or safety verified.

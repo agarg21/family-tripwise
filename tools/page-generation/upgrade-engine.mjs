@@ -51,8 +51,14 @@ function renderQuickRecovery(recovery) {
   return `\n        <p class="review-label stay-quick-recovery"><strong>${esc(lead)}</strong> ${esc(beforeLink)} <a href="${esc(href)}">${esc(linkLabel)}</a> ${esc(afterLink)}</p>`;
 }
 
+const activityComparisonHeaders = ["Activity", "Best ages", "Time", "Cost", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"];
+
+function activitySectionId(page, section) {
+  return `${page.frontComparisonPrefix || "sa"}-activity-${section}`;
+}
+
 function renderActivityComparison(rows, customHeaders, wrapperClass = "", options = {}) {
-  const headers = customHeaders || ["Activity", "Best ages", "Time", "Cost", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"];
+  const headers = customHeaders || activityComparisonHeaders;
   const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
   const wrapperAttributes = options.accessibleLabel
     ? ` tabindex="0" role="region" aria-label="${esc(options.accessibleLabel)}"`
@@ -302,7 +308,7 @@ ${page.garfieldAdmission && activity.name === page.garfieldAdmission.evidence.ve
   const section = `      <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Activity filters</p>
-          <h2${page.frontComparison ? ' id="sa-activity-filters"' : ""}>${esc(page.activityFilterTitle || "Kid-friendly activities by age, pace, and weather")}</h2>
+          <h2${page.frontComparison ? ` id="${activitySectionId(page, "filters")}"` : ""}>${esc(page.activityFilterTitle || "Kid-friendly activities by age, pace, and weather")}</h2>
         </div>
         <div class="filter-bar" aria-label="Activity filters">
 ${filters.map(([value, label], index) => `          <button class="chip${index === 0 ? " active" : ""}" type="button" data-filter="${esc(value)}" aria-pressed="${index === 0 ? "true" : "false"}">${esc(label)}</button>`).join("\n")}
@@ -449,7 +455,7 @@ ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
-            <h2${page.frontComparison ? ' id="sa-activity-notes"' : ""}>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
+            <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
           </div>
 ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
         </div>
@@ -1023,7 +1029,8 @@ function upgradeFile(outDir, path, page, type) {
   let html = readFileSync(full, "utf8");
   if (page.frontComparison) {
     html = html.replace(/\n      <!-- activity-front:start -->[\s\S]*?      <!-- activity-front:end -->\n/, "");
-    html = html.replace(/\n        <nav aria-label="San Antonio activity sections">[\s\S]*?<\/nav>/, "");
+    const navLabel = esc(`${page.city} activity sections`);
+    html = html.replace(new RegExp(`\\n        <nav aria-label="${navLabel}">[\\s\\S]*?<\\/nav>`), "");
   }
   let mediaSection = "";
   if (page.glanceFirst) {
@@ -1058,26 +1065,31 @@ function upgradeFile(outDir, path, page, type) {
     if (type === "teen" && (page.comparisonHeaders?.length !== 7 || page.rows.some(row => row.length !== 7))) {
       throw new Error("Expected seven teen comparison fields");
     }
-    const order = [0, 1, 2, 3, 4, 6, 5];
-    const rows = type === "teen" ? page.rows.map(row => order.map(index => row[index])) : page.rows;
-    const headers = type === "teen" ? order.map(index => page.comparisonHeaders[index]) : page.comparisonHeaders;
+    const sourceHeaders = page.comparisonHeaders || activityComparisonHeaders;
+    const order = page.frontComparisonOrder || (type === "teen" ? [0, 1, 2, 3, 4, 6, 5] : sourceHeaders.map((_, index) => index));
+    if (page.rows.some(row => row.length !== sourceHeaders.length) || order.length !== sourceHeaders.length || new Set(order).size !== order.length || order.some(index => !Number.isInteger(index) || index < 0 || index >= sourceHeaders.length)) {
+      throw new Error("Expected a complete activity comparison field permutation");
+    }
+    const rows = page.rows.map(row => order.map(index => row[index]));
+    const headers = order.map(index => sourceHeaders[index]);
     const comparison = `      <!-- activity-front:start -->
-      <section class="container page-section" id="sa-activity-comparison">
+      <section class="container page-section" id="${activitySectionId(page, "comparison")}">
         <div class="section-heading"><p class="eyebrow">${type === "teen" ? "Compare teen activities" : "Compare activities"}</p><h2>${type === "teen" ? "Teen activity decision table" : "Activity decision table"}</h2></div>
         <p class="review-label">${esc(page.comparisonNote)}</p>
-${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: type === "teen" ? "San Antonio teen activity comparison" : "San Antonio activity comparison", rowHeaders: true})}
+${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: `${page.city}${type === "teen" ? " teen" : ""} activity comparison`, rowHeaders: true})}
       </section>
       <!-- activity-front:end -->
 `;
     const trust = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;
     if (!trust.test(html)) throw new Error("Expected activity trust panel");
     html = html.replace(trust, match => `${match}\n${comparison}`);
-    html = html.replace('<body>', `<body class="sa-activity-glance${type === "teen" ? " sa-teen-glance" : ""}">`);
+    html = html.replace('<body>', `<body class="${page.frontComparisonClass || "sa-activity-glance"}${type === "teen" ? " sa-teen-glance" : ""}">`);
     const intro = esc(page.title);
     const creditAndCopy = new RegExp(`(<h1>${intro}</h1>[\\s\\S]*?<p>[^<]*</p>)`);
     if (!creditAndCopy.test(html)) throw new Error("Expected activity hero copy");
-    const middleLink = type === "teen" ? '<a href="#sa-activity-quick-picks">Quick picks</a>' : '<a href="#sa-activity-filters">Filter choices</a>';
-    html = html.replace(creditAndCopy, `$1\n        <nav aria-label="San Antonio activity sections"><a href="#sa-activity-comparison">Compare activities</a>${middleLink}<a href="#sa-activity-notes">Detailed checks</a></nav>`);
+    const middleLink = type === "teen" ? '<a href="#sa-activity-quick-picks">Quick picks</a>' : `<a href="#${activitySectionId(page, "filters")}">Filter choices</a>`;
+    const extraLink = page.frontComparisonExtraLink ? `<a href="${esc(page.frontComparisonExtraLink[0])}">${esc(page.frontComparisonExtraLink[1])}</a>` : "";
+    html = html.replace(creditAndCopy, `$1\n        <nav aria-label="${esc(page.city)} activity sections"><a href="#${activitySectionId(page, "comparison")}">Compare activities</a>${middleLink}<a href="#${activitySectionId(page, "notes")}">Detailed checks</a>${extraLink}</nav>`);
   }
   writeFileSync(full, html);
 }

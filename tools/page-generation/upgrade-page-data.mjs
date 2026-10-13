@@ -564,6 +564,11 @@ export const activityPages = {
     ]
   },
   "things-to-do/chicago-with-kids.html": {
+    frontComparison: true,
+    frontComparisonPrefix: "chi",
+    frontComparisonClass: "chi-activity-glance",
+    frontComparisonOrder: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 8],
+    frontComparisonExtraLink: ["#garfield-admission", "Admission checks"],
     title: "Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style",
     description:
       "Compare 12 things to do in Chicago with kids by age, weather, budget, time, area, stroller fit, and trip style, with current official-source checks.",

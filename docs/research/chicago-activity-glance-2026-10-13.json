@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-137",
+  "learning_id": "LRN-239",
+  "checked_on": "2026-10-13",
+  "evidence_class": "CURRENT_PAGE_ONLY_TASK_PROXY",
+  "hypothesis": "The current page lets a family compare indoor versus budget options and booking constraints near its start",
+  "hypothesis_result": "REJECT current comparison discovery; IMPLEMENT same original source table upfront",
+  "baseline": [
+    {
+      "cards": 12,
+      "h1Height": 353.25,
+      "headers": [
+        "Activity",
+        "Best ages",
+        "Time",
+        "Cost",
+        "Area",
+        "Stroller",
+        "Rain",
+        "Nap",
+        "Booking",
+        "Why worth it",
+        "Pair nearby"
+      ],
+      "imageLoaded": true,
+      "overflow": false,
+      "rows": 12,
+      "tableHeadingY": 4509.9453125,
+      "width": 1280
+    },
+    {
+      "cards": 12,
+      "h1Height": 198.7109375,
+      "headers": [
+        "Activity",
+        "Best ages",
+        "Time",
+        "Cost",
+        "Area",
+        "Stroller",
+        "Rain",
+        "Nap",
+        "Booking",
+        "Why worth it",
+        "Pair nearby"
+      ],
+      "imageLoaded": true,
+      "overflow": false,
+      "rows": 12,
+      "tableHeadingY": 7828.0234375,
+      "width": 390
+    }
+  ],
+  "current": {
+    "frames": [
+      {
+        "comparisonY": 399.3046875,
+        "firstRowY": 627.421875,
+        "h1Font": "36px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Best ages",
+          "Time",
+          "Cost",
+          "Area",
+          "Stroller",
+          "Rain",
+          "Nap",
+          "Why worth it",
+          "Pair nearby",
+          "Booking"
+        ],
+        "identityWidth": 180,
+        "imageLoaded": true,
+        "imageWidth": 3264,
+        "overflow": false,
+        "rows": 12,
+        "width": 1280,
+        "headingY": 452.015625
+      },
+      {
+        "comparisonY": 755.3046875,
+        "firstRowY": 1079.421875,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Best ages",
+          "Time",
+          "Cost",
+          "Area",
+          "Stroller",
+          "Rain",
+          "Nap",
+          "Why worth it",
+          "Pair nearby",
+          "Booking"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 3264,
+        "overflow": false,
+        "rows": 12,
+        "width": 390,
+        "headingY": 808.015625
+      },
+      {
+        "comparisonY": 815.3046875,
+        "firstRowY": 1163.421875,
+        "h1Font": "30px",
+        "h2Font": "24px",
+        "headers": [
+          "Activity",
+          "Best ages",
+          "Time",
+          "Cost",
+          "Area",
+          "Stroller",
+          "Rain",
+          "Nap",
+          "Why worth it",
+          "Pair nearby",
+          "Booking"
+        ],
+        "identityWidth": 130,
+        "imageLoaded": true,
+        "imageWidth": 3264,
+        "overflow": false,
+        "rows": 12,
+        "width": 320,
+        "headingY": 868.015625
+      }
+    ],
+    "anchors": [
+      {
+        "hash": "#chi-activity-comparison",
+        "headerBottom": 65,
+        "id": "chi-activity-comparison",
+        "top": 79.8046875,
+        "width": 1280
+      },
+      {
+        "hash": "#chi-activity-filters",
+        "headerBottom": 65,
+        "id": "chi-activity-filters",
+        "top": 80.109375,
+        "width": 1280
+      },
+      {
+        "hash": "#chi-activity-notes",
+        "headerBottom": 65,
+        "id": "chi-activity-notes",
+        "top": 79.796875,
+        "width": 1280
+      },
+      {
+        "hash": "#garfield-admission",
+        "headerBottom": 65,
+        "id": "garfield-admission",
+        "top": 80.1953125,
+        "width": 1280
+      },
+      {
+        "hash": "#chi-activity-comparison",
+        "headerBottom": -452.890625,
+        "id": "chi-activity-comparison",
+        "top": 159.8046875,
+        "width": 390
+      },
+      {
+        "hash": "#chi-activity-filters",
+        "headerBottom": -3198.390625,
+        "id": "chi-activity-filters",
+        "top": 160.1875,
+        "width": 390
+      },
+      {
+        "hash": "#chi-activity-notes",
+        "headerBottom": -9932.390625,
+        "id": "chi-activity-notes",
+        "top": 159.8125,
+        "width": 390
+      },
+      {
+        "hash": "#garfield-admission",
+        "headerBottom": -8915.390625,
+        "id": "garfield-admission",
+        "top": 159.9921875,
+        "width": 390
+      },
+      {
+        "hash": "#chi-activity-comparison",
+        "headerBottom": -512.890625,
+        "id": "chi-activity-comparison",
+        "top": 159.8046875,
+        "width": 320
+      },
+      {
+        "hash": "#chi-activity-filters",
+        "headerBottom": -3253.890625,
+        "id": "chi-activity-filters",
+        "top": 160.1875,
+        "width": 320
+      },
+      {
+        "hash": "#chi-activity-notes",
+        "headerBottom": -10787.390625,
+        "id": "chi-activity-notes",
+        "top": 160.234375,
+        "width": 320
+      },
+      {
+        "hash": "#garfield-admission",
+        "headerBottom": -9674.890625,
+        "id": "garfield-admission",
+        "top": 159.9140625,
+        "width": 320
+      }
+    ],
+    "filters": [
+      {
+        "key": "all",
+        "rows": 12,
+        "visible": 12,
+        "width": 1280
+      },
+      {
+        "key": "toddler",
+        "rows": 12,
+        "visible": 6,
+        "width": 1280
+      },
+      {
+        "key": "elementary",
+        "rows": 12,
+        "visible": 12,
+        "width": 1280
+      },
+      {
+        "key": "teen",
+        "rows": 12,
+        "visible": 8,
+        "width": 1280
+      },
+      {
+        "key": "indoor",
+        "rows": 12,
+        "visible": 8,
+        "width": 1280
+      },
+      {
+        "key": "budget",
+        "rows": 12,
+        "visible": 5,
+        "width": 1280
+      },
+      {
+        "key": "all",
+        "rows": 12,
+        "visible": 12,
+        "width": 390
+      },
+      {
+        "key": "toddler",
+        "rows": 12,
+        "visible": 6,
+        "width": 390
+      },
+      {
+        "key": "elementary",
+        "rows": 12,
+        "visible": 12,
+        "width": 390
+      },
+      {
+        "key": "teen",
+        "rows": 12,
+        "visible": 8,
+        "width": 390
+      },
+      {
+        "key": "indoor",
+        "rows": 12,
+        "visible": 8,
+        "width": 390
+      },
+      {
+        "key": "budget",
+        "rows": 12,
+        "visible": 5,
+        "width": 390
+      },
+      {
+        "key": "all",
+        "rows": 12,
+        "visible": 12,
+        "width": 320
+      },
+      {
+        "key": "toddler",
+        "rows": 12,
+        "visible": 6,
+        "width": 320
+      },
+      {
+        "key": "elementary",
+        "rows": 12,
+        "visible": 12,
+        "width": 320
+      },
+      {
+        "key": "teen",
+        "rows": 12,
+        "visible": 8,
+        "width": 320
+      },
+      {
+        "key": "indoor",
+        "rows": 12,
+        "visible": 8,
+        "width": 320
+      },
+      {
+        "key": "budget",
+        "rows": 12,
+        "visible": 5,
+        "width": 320
+      }
+    ],
+    "keys": [
+      {
+        "critical": [
+          {
+            "name": "Field Museum",
+            "readable": true,
+            "text": "Check tickets/exhibits"
+          },
+          {
+            "name": "Shedd Aquarium",
+            "readable": true,
+            "text": "Timed tickets helpful"
+          },
+          {
+            "name": "Griffin Museum of Science and Industry",
+            "readable": true,
+            "text": "Check add-ons"
+          },
+          {
+            "name": "Adler Planetarium",
+            "readable": true,
+            "text": "Check shows"
+          },
+          {
+            "name": "Lincoln Park Zoo",
+            "readable": true,
+            "text": "No general ticket"
+          },
+          {
+            "name": "Millennium Park and Maggie Daley Park",
+            "readable": true,
+            "text": "Check events"
+          },
+          {
+            "name": "Chicago Architecture Center river cruise",
+            "readable": true,
+            "text": "Book/check season"
+          },
+          {
+            "name": "Chicago Children's Museum",
+            "readable": true,
+            "text": "Check entry window"
+          },
+          {
+            "name": "Art Institute of Chicago",
+            "readable": true,
+            "text": "Check admission"
+          },
+          {
+            "name": "360 CHICAGO",
+            "readable": true,
+            "text": "Check visibility/TILT"
+          },
+          {
+            "name": "Garfield Park Conservatory",
+            "readable": true,
+            "text": "Entry ticket; separate 30-minute slot if visiting children's garden"
+          },
+          {
+            "name": "Chicago lakefront and beach time",
+            "readable": true,
+            "text": "Check season/status"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 61,
+        "max": 582,
+        "offset": 582,
+        "regionLeft": 60,
+        "width": 1280
+      },
+      {
+        "returnOffset": 0,
+        "width": 1280
+      },
+      {
+        "critical": [
+          {
+            "name": "Field Museum",
+            "readable": true,
+            "text": "Check tickets/exhibits"
+          },
+          {
+            "name": "Shedd Aquarium",
+            "readable": true,
+            "text": "Timed tickets helpful"
+          },
+          {
+            "name": "Griffin Museum of Science and Industry",
+            "readable": true,
+            "text": "Check add-ons"
+          },
+          {
+            "name": "Adler Planetarium",
+            "readable": true,
+            "text": "Check shows"
+          },
+          {
+            "name": "Lincoln Park Zoo",
+            "readable": true,
+            "text": "No general ticket"
+          },
+          {
+            "name": "Millennium Park and Maggie Daley Park",
+            "readable": true,
+            "text": "Check events"
+          },
+          {
+            "name": "Chicago Architecture Center river cruise",
+            "readable": true,
+            "text": "Book/check season"
+          },
+          {
+            "name": "Chicago Children's Museum",
+            "readable": true,
+            "text": "Check entry window"
+          },
+          {
+            "name": "Art Institute of Chicago",
+            "readable": true,
+            "text": "Check admission"
+          },
+          {
+            "name": "360 CHICAGO",
+            "readable": true,
+            "text": "Check visibility/TILT"
+          },
+          {
+            "name": "Garfield Park Conservatory",
+            "readable": true,
+            "text": "Entry ticket; separate 30-minute slot if visiting children's garden"
+          },
+          {
+            "name": "Chicago lakefront and beach time",
+            "readable": true,
+            "text": "Check season/status"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 1388,
+        "offset": 1388,
+        "regionLeft": 18,
+        "width": 390
+      },
+      {
+        "returnOffset": 0,
+        "width": 390
+      },
+      {
+        "critical": [
+          {
+            "name": "Field Museum",
+            "readable": true,
+            "text": "Check tickets/exhibits"
+          },
+          {
+            "name": "Shedd Aquarium",
+            "readable": true,
+            "text": "Timed tickets helpful"
+          },
+          {
+            "name": "Griffin Museum of Science and Industry",
+            "readable": true,
+            "text": "Check add-ons"
+          },
+          {
+            "name": "Adler Planetarium",
+            "readable": true,
+            "text": "Check shows"
+          },
+          {
+            "name": "Lincoln Park Zoo",
+            "readable": true,
+            "text": "No general ticket"
+          },
+          {
+            "name": "Millennium Park and Maggie Daley Park",
+            "readable": true,
+            "text": "Check events"
+          },
+          {
+            "name": "Chicago Architecture Center river cruise",
+            "readable": true,
+            "text": "Book/check season"
+          },
+          {
+            "name": "Chicago Children's Museum",
+            "readable": true,
+            "text": "Check entry window"
+          },
+          {
+            "name": "Art Institute of Chicago",
+            "readable": true,
+            "text": "Check admission"
+          },
+          {
+            "name": "360 CHICAGO",
+            "readable": true,
+            "text": "Check visibility/TILT"
+          },
+          {
+            "name": "Garfield Park Conservatory",
+            "readable": true,
+            "text": "Entry ticket; separate 30-minute slot if visiting children's garden"
+          },
+          {
+            "name": "Chicago lakefront and beach time",
+            "readable": true,
+            "text": "Check season/status"
+          }
+        ],
+        "identityBackground": "rgb(255, 255, 255)",
+        "identityLeft": 19,
+        "max": 1458,
+        "offset": 1458,
+        "regionLeft": 18,
+        "width": 320
+      },
+      {
+        "returnOffset": 0,
+        "width": 320
+      }
+    ]
+  },
+  "task": {
+    "decision": "Parents with children3and7 choose an indoor anchor, then distinguish a lower-cost outdoor reset or Garfield resident/nonresident admission case",
+    "steps": [
+      "Read originalJuly23 fact clock and editorial-estimate caution; Garfield has its separateOct13 clock",
+      "Enter native Compareactivities link",
+      "Compare original ages/time/cost/area/weather values, no invented numeric prices",
+      "Reach finalBookingfield beside sticky activityname using native horizontalkeys",
+      "Use Filterchoices and six original cardmodes, comparison table remains twelve rows",
+      "Use Detailedchecks or Admissionchecks for original current-check and unpricedunder7 limits",
+      "Trace existing source/cluster links; exactvisit-date tickets/eligibility/fees/rest/weather remain unknown"
+    ],
+    "roles": [
+      {
+        "role": "Indoor younger-child day versus older museum interest",
+        "result": "PARTIAL",
+        "remaining": "Source-based historical estimates are not current tickets, actual crowds, fit, exact stroller route, timed reservation or measured return."
+      },
+      {
+        "role": "Budget/residency comparison with age3and7",
+        "result": "PARTIAL",
+        "remaining": "Resident verification, age3 visitor rate, garden price/slot, date/tax/fee/transport remain unknown; original134 arithmetic and admission record retained, not rechecked."
+      }
+    ],
+    "proxy_not_real_parent": true
+  },
+  "source_review": {
+    "original_other_activity_source_date": "2026-07-23",
+    "original_garfield_date": "2026-10-13",
+    "original_source_intro_preserved": true,
+    "official_facts_estimates_unknowns_distinct": true,
+    "new_review_samples": 0,
+    "new_fit_or_stroller_or_safety_judgments": false,
+    "source_renewal": false,
+    "limits": "Interface discovery/preservation task only; no external fact reinspection, venue judgment, representative reviews or firsthand/parent validation. Original sources and all conditional advice remain visible."
+  },
+  "preservation": {
+    "activities": 12,
+    "fields": 11,
+    "display_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      8
+    ],
+    "original_rows_and_headers_unchanged": true,
+    "filters": 6,
+    "quick_picks": 5,
+    "detail_choices": 6,
+    "cluster_links": 3,
+    "faqs": 3,
+    "head_h1_schema_map_media_articles_garfield_unchanged_required": true,
+    "previous_css_prefix_unchanged_required": true,
+    "all35othercanonicals_including135and136_unchanged_required": true,
+    "new_csv": false,
+    "new_url": false
+  },
+  "qa_inventory": {
+    "viewports": [
+      1280,
+      390,
+      320
+    ],
+    "native_section_links": 12,
+    "native_filter_states": 18,
+    "filter_visible_counts": [
+      12,
+      6,
+      12,
+      8,
+      8,
+      5
+    ],
+    "table_always12rows": true,
+    "keyboard_end_offsets": [
+      582,
+      1388,
+      1458
+    ],
+    "keyboard_return_offsets": [
+      0,
+      0,
+      0
+    ],
+    "booking_cells_readable": 12,
+    "image_natural_width": 3264,
+    "source_and_cluster_routing": "/tmp/ft137-browser/local-source-routing.json",
+    "console": "/tmp/ft137-browser/local-console.json",
+    "pixel_context": "/tmp/ft137-browser/local-context.png",
+    "narrow_end_pixel": "/tmp/ft137-browser/local-end-320.png"
+  },
+  "limits": [
+    "All eleven fields retained, table needs horizontal scrolling even desktop; identity and final booking text remain readable at far edge. No single-screen all-field or reading-time claim.",
+    "Mobile initial rows below900px; comparison link reaches them. Baseline and new heading positions compared like-for-like4509.95to452.02desktop/7828.02to808.02mobile, section399/755/815distinct.",
+    "Initialfocused13/10pass3fail ran staleHTML because upgrade-priority-pages.mjs is export-only, not generatorCLI; actual exported generator invoked and all13 pass. This did not clear fullnativeQA or weaken idempotence.",
+    "No paidcall/source-denial retry or code-generated fact renewal; titleH1/schema/articles/data/otherpublic unchanged required.",
+    "Pre-edit exact13 adds original Garfield fixture: require two distinct existing-card/new-native-nav admission links and one target, retain exact rendered3rows/eligibility/unknowns/current134dates. Initial960full959pass1fail linkcount NOTgreen; no admission/model/source change or weakened idempotence."
+  ],
+  "gsc": {
+    "classification": "REUSED",
+    "collected_at": "2026-10-12T19:48:27.188Z",
+    "finalized_through": "2026-10-10",
+    "prior_finalized_through": "2026-10-09",
+    "limit": "Property/page orientation only; no queryCTR/material-demand/newURL inference"
+  },
+  "result": {
+    "decision": "IMPLEMENT_NOW",
+    "public_delivered": false,
+    "next_gate": "Fullnative/preservation/different strictread-onlyPASS/exact13guardedpush/Pages-marker-productionSEO/twoassets/liveinvariants",
+    "confidence": "High observed discovery/native/preservation confidence, moderate expected usefulness, unknown actual-parent preference/current source facts/SEO lift",
+    "next_falsification_trigger": "Clipped booking/identity/uncertainty, failed native link/filter/source route or verified source conflict; actual parent task counterevidence"
+  }
+}

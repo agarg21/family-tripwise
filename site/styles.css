@@ -1397,3 +1397,23 @@ p.contributor-credit {
 }
 
 .sa-teen-glance #sa-activity-comparison .comparison-table { min-width: 1160px; }
+
+.chi-activity-glance { background: var(--surface); }
+.chi-activity-glance .page-hero { padding: 28px 0 12px; background: none; }
+.chi-activity-glance h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
+.chi-activity-glance h2 { font-size: 24px; line-height: 1.3; letter-spacing: 0; }
+.chi-activity-glance .trust-panel { margin-top: 0; padding: 12px 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
+.chi-activity-glance nav[aria-label="Chicago activity sections"] { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; margin-top: 16px; }
+.chi-activity-glance :is(#chi-activity-comparison,#chi-activity-filters,#chi-activity-notes,#garfield-admission) { scroll-margin-top: 80px; }
+#chi-activity-comparison { padding-top: 20px; }
+#chi-activity-comparison .comparison-scroll { max-width: 100%; overflow-x: auto; }
+#chi-activity-comparison .comparison-table { min-width: 1740px; table-layout: fixed; }
+#chi-activity-comparison .comparison-table :is(th,td):first-child { width: 180px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+#chi-activity-comparison .comparison-table thead th:first-child { background: var(--teal-dark); }
+#chi-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
+.chi-activity-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .chi-activity-glance h1 { font-size: 30px; }
+  #chi-activity-comparison .comparison-table :is(th,td):first-child { width: 130px; }
+  .chi-activity-glance :is(#chi-activity-comparison,#chi-activity-filters,#chi-activity-notes,#garfield-admission) { scroll-margin-top: 160px; }
+}

@@ -15271,7 +15271,7 @@
       "id": "FT-RES-150",
       "title": "Qualify a family connecting-room booking decision guide",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T15:04:11.824Z",
       "target_paths": [
@@ -15299,7 +15299,50 @@
       "decision": "PRESERVE existing owners/CANDIDATE shared linkage fields: supplier labels differ, internal door/shared vestibule/request/confirmed reservation are separate. Both US volumes unknown and second SERP40101 charged; no new guide or public edit qualified.",
       "evidence_record": "docs/research/connecting-room-task-gate-2026-10-13.json",
       "next_gate": "Different strict read-only review/full nativeQA/exact9 guarded research-only push. Public guide requires reliable material demand plus complete two-query ownership and failed maintained task; no unchanged paid40101 or Booking verification recovery.",
-      "review_receipt": "FT-RES-150 Lovelace01a135cf-d95d-75b0-b5f3-a7742c1868ed independent strictREADONLY PASS/noP0-P3 at2026-10-13T15:11:57Z; frozen23d18b43a2838e7279b8bcc171f8241f92da3b4a9f9f3e9257303e0457ecc001 exact9/all1026hash-modes/344olderactions/held11/LRN238-only/public-model-sourceCSV-scheduler preserved. Independent4pure/serialinvariants green; Master957full48maintenance/state0/GSC91/SEO0sixprior log71ab38bc1ef94913cef50660f1aa4b30df55ebedb0526001cee50f65787edda0 inspected, no independent full/live/UI/source inspection. Two null volumes/one9rowSERP/second40101 charged0.002; allthree0.016/cumulative0.34636 reconciled, no paidretry or Booking verification recovery. Supplier terminology/physical-link/channel/confirmation distinct; Hilton18-24/telephone conflict retained, no parent/safety/fit/currentquote/SEOclaim. Initialfocus3-4 floatprecision failure corrected to five-decimal comparison, not weakened budget. PRESERVE owners/CANDIDATE sharedfields; no public guide/edit qualified. Immutable mechanical consensus only; exact guarded docs/testpush and remoteverification pending;014 unchanged."
+      "review_receipt": "FT-RES-150 Lovelace01a135cf-d95d-75b0-b5f3-a7742c1868ed independent strictREADONLY PASS/noP0-P3 at2026-10-13T15:11:57Z; frozen23d18b43a2838e7279b8bcc171f8241f92da3b4a9f9f3e9257303e0457ecc001 exact9/all1026hash-modes/344olderactions/held11/LRN238-only/public-model-sourceCSV-scheduler preserved. Independent4pure/serialinvariants green; Master957full48maintenance/state0/GSC91/SEO0sixprior log71ab38bc1ef94913cef50660f1aa4b30df55ebedb0526001cee50f65787edda0 inspected, no independent full/live/UI/source inspection. Two null volumes/one9rowSERP/second40101 charged0.002; allthree0.016/cumulative0.34636 reconciled, no paidretry or Booking verification recovery. Supplier terminology/physical-link/channel/confirmation distinct; Hilton18-24/telephone conflict retained, no parent/safety/fit/currentquote/SEOclaim. Initialfocus3-4 floatprecision failure corrected to five-decimal comparison, not weakened budget. PRESERVE owners/CANDIDATE sharedfields; no public guide/edit qualified. Immutable mechanical consensus only; exact guarded docs/testpush and remoteverification pending;014 unchanged.",
+      "release_receipt": "FT-RES-150 release 428f8799416d51c016d74d348a4dd748ac121235 remote verified 2026-10-13T15:12:57.907Z; main0-0/emptyindex/exact9/all1026indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only LRN238 connecting-room qualification; no public site change/newguide/CSV. Supplier label/internal-door/shared-vestibule/request/confirmed/channel/cost separate;18-24brand and telephone scope conflicts not resolved by inference. Two volumesnull/one9rowSERP/second40101 paidfailure0.002 included in0.016batch/cumulative0.34636/5, no retry; Booking robot-verification article body excluded without alternate recovery. Master957full48maintenance4focused/state0/GSC91/SEO0sixprior/differentLovelaceSTRICTPASS. Existing066/Frisco149 source-price/loading/publication holds unchanged, all344 olderactions andheld11/publicmodelCSV source clocks retained. Docs/test-only remoteverification, no Pageswait or fresh productionclaim required. Next connecting guide only on reliable material demand/complete two-query owner/failed maintained task or exact changed policy; independent eligible public family-decision work retains priority.014fixedexpiry unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T15:12:57.929Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "428f8799416d51c016d74d348a4dd748ac121235"
+    },
+    {
+      "id": "FT-IMP-137",
+      "title": "Bring Chicago activity choices and booking constraints forward",
+      "kind": "implementation",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T16:05:09.234Z",
+      "target_paths": [
+        "tools/page-generation/upgrade-page-data.mjs",
+        "tools/page-generation/upgrade-engine.mjs",
+        "site/things-to-do/chicago-with-kids.html",
+        "site/styles.css",
+        "tools/chicago-activity-glance.test.mjs",
+        "tools/chicago-activity-page.test.mjs",
+        "docs/research/chicago-activity-glance-2026-10-13.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "tools/garfield-admission.test.mjs"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/chicago-with-kids.html"
+      ],
+      "evidence": "Actual current1280/390 page comparison4509.95/7828.02px after photo/12cards/5quickpicks, h1height353.25/198.71. Named indoor-child/budget task cannot glance at maintained time/cost/booking table near start. User table-first simplification plus reproduced material discovery defect, not CTR/cadence; original11fields/12choices/6filters/5picks/6details/3clusterlinks/FAQ/map/schema/photo/July23 and separateOct13Garfield evidence preserved.",
+      "acceptance_criteria": [
+        "Extend established front-comparison renderer with explicit page-scoped identity/city/order/style. All11 original source fields retained, only displayed booking column moved last; compacthero/tableaftertrust/native4links to compare/filter/details/Garfield. Sticky180desktop130mobile identity and150pxbooking cells/horizontal keyboard access; no new fact or CSV/URL.",
+        "Focused/full native and idempotence/preservation; 35othercanonicals especially135/136 byteexact, original articles/source arrays/headH1/schema/map/photo/licenses/Garfield model/examples and source clocks unchanged. Actual1280/390/320 screenshots/geometry,18filterstates/12nativeanchors/keyboardbooking/name/image/nooverflow-console and source route checks, two7stepPARTIAL proxies not actualparents/safety/firmfit/SEOlift. Different independent strict read-onlyPASS.",
+        "Exact13 reviewed guarded commit/freshfetch/no divergence/sole reviewedrange push, PagesSUCCESS/marker/productionSEO/affectedHTMLCSS200byteexact and repeated live invariants before delivery. Preserve345olderactions/held11/scheduler/paidbudget0.34636/observation/human/security gates."
+      ],
+      "measurement_plan": "LRN239 current-page usability/task proxy only. Oct12GSC finalizedOct10 REUSED/priorOct11finalOct9; property/page orientation not queryCTR. No source renewal/new reviews or price claim.",
+      "production_invariant": "Only existing Chicago activity HTML and appended Chicago-scopedCSS public bytes change. All original sources/prices/Garfield134/advice/models/CSV and35othercanonicals preserved. Material-usefulness exception scoped to comparison discovery, no observation reset/city/indexability change/indexing/analytics/paidcall/source-denial retry/contact/account/scheduler mutation.",
+      "decision": "IMPLEMENT current Chicago comparison discovery:heading452desktop808mobile versus4510/7828; section399/755/815, twelve11field rows/bookinglast/18card-filterstates/12nativeanchors/sticky180-130/all12bookingtexts readable. July23 and134Oct13 admission facts not renewed.",
+      "evidence_record": "docs/research/chicago-activity-glance-2026-10-13.json",
+      "next_gate": "Fullnative/preservation/different strictread-onlyPASS/exact13guardedpush/Pages-marker-productionSEO/twoassets/liveinvariants",
+      "scope_amendment": "Pre-edit exact13 adds original Garfield fixture: require two distinct existing-card/new-native-nav admission links and one target, retain exact rendered3rows/eligibility/unknowns/current134dates. Initial960full959pass1fail linkcount NOTgreen; no admission/model/source change or weakened idempotence.",
+      "review_receipt": "FT-IMP-137 Volta01a13609-10eb-7b92-ab75-e7b37a31ef32 independentSTRICTREADONLY PASS/noP0-P3 at2026-10-13T16:15:58Z; reviewedf9e55bc01105ca4606e8c0554bee6ed380ab53dd125bb5d8ee0e94f3aa431939/all1028hash-modes/exact13/345olderactions/held11/LRN239-only/sourcearrays/headH1-schema-map-allarticles-photo-Garfield134/previousCSSprefix/35othercanonicals incl135136 verified. Independent11pure/serialinvariantsPASS; savedpixels/browser evidence and Master960full48maintenance21focus/state0/GSC91/SEO0sixprior log5aa366a6a4d08ad4e06f8178ddb095771fcb319a63b7616dbbbda82e3bff980e inspected, no independent live/source/fullsuite. Initial stale13focus10pass3fail/export-only invocation corrected; initial960full959pass1fail admissionlinkcount amended before edit13scope/assertbothlinks+onetarget/same3rows, idempotence intact. Finalheading452-808-868/section399-755-815/12original11fields/18cardfilterstates/12nativeanchors/180-130stickyidentity/150booking/all12textbounds/arrow582-1388-1458return0/photo3264/nooverflow-errors0; two7stepPARTIAL proxies/no actualparents/currentquotes/factreview renewal/SEOclaim. Only immutable mechanical consensus appended; guarded exactpush/Pages-marker-productionSEO/twoassets/livechecks pending;014unchanged."
     }
   ]
 }
