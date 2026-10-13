@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-150",
+  "checked_on": "2026-10-13",
+  "family_decision": "Parents with children aged4/8 need an internal connecting door confirmed before committing to two rooms; grandparents may instead accept a shared vestibule. Neither is a safety or supervision verdict.",
+  "hypothesis": "A universal adjoining-versus-connecting definition plus brand amenity labels is enough to establish the family's actual linked configuration.",
+  "hypothesis_result": "REJECT: supplier vocabulary, exact physical linkage, selected booking channel and reservation confirmation are separate fields.",
+  "evidence_classes": ["CURRENT_US_SERP_PROVIDER_ESTIMATES", "OFFICIAL_PUBLISHED_POLICY", "PROVIDER_GLOSSARY", "EVIDENCE_ONLY_TASK_PROXY"],
+  "search": {
+    "manifest": "docs/research/connecting-room-task-keywords-2026-10-13.json",
+    "report": "docs/research/connecting-room-task-demand-2026-10-13.json",
+    "market": "US",
+    "language": "en",
+    "device": "desktop",
+    "conservative_reserved_usd": 0.1204,
+    "prior_spend_usd": 0.33036,
+    "known_charged_batch_usd": 0.016,
+    "known_charged_cumulative_usd": 0.34636,
+    "charged_failed_call_included": true,
+    "calls_successful": 2,
+    "calls_failed": 1,
+    "monthly_estimates": [null, null],
+    "organic_rows": [9, null],
+    "normalized_url_intersection": null,
+    "normalized_url_union": null,
+    "paired_overlap_available": false,
+    "interpretation": "First query has definitions, official booking, forums and commercial room search. Second SERP failed40101 after a known0.002 charge. Missing metrics are not zero demand; a failed SERP is not an empty result or low competition. Primary-policy web search performed independently does not replace the missing controlled US query. No paid or alternate-query retry."
+  },
+  "sources": [
+    {
+      "id": "hilton-faq",
+      "url": "https://www.hilton.com/en/connecting-rooms/faqs/",
+      "accessed_on": "2026-10-13",
+      "publication_date": null,
+      "class": "OFFICIAL_PUBLISHED_POLICY",
+      "observations": "Defines the connection as an opening between rooms. Participating-property direct web/app flow selects a connecting combination and supplies a confirmation icon. A later connection request is availability-dependent and settled at arrival. An unsuccessful multiroom combination search can show ordinary available rooms instead. One confirmation covers the connected set; rates can be higher.",
+      "limits": "Published policy, not a tested booking or fulfillment guarantee. The page retains18-brand wording and2021 launch history. Do not turn those into a current inventory count, universal term definition, exact party capacity or named-property confirmation."
+    },
+    {
+      "id": "hilton-help",
+      "url": "https://www.hilton.com/en/help-center/reservations/confirmed-connecting-rooms/",
+      "accessed_on": "2026-10-13",
+      "publication_date": null,
+      "class": "OFFICIAL_PUBLISHED_POLICY",
+      "observations": "Uses both adjoining and connecting for its named confirmed product; lists direct web, app and Hilton Reservations channels, confirmation icons, possible rate premium, and cancellation/rebooking or hotel contact for changes.",
+      "limits": "Help body says24 brands whereas FAQ says18; telephone channel is listed here but not FAQ's exclusive web/app formulation. Neither page displays a reliable revision date. Retain the conflict; do not advise cancelling a paid reservation or infer a date-specific replacement offer, free cancellation or universal guarantee."
+    },
+    {
+      "id": "andaz-physical-link",
+      "url": "https://www.hyatt.com/andaz/en-US/nycam-andaz-5th-avenue/faqs",
+      "accessed_on": "2026-10-13",
+      "publication_date": null,
+      "class": "OFFICIAL_PUBLISHED_POLICY",
+      "observations": "Certain King/Deluxe King combinations have internal links; named Double City View Deluxe/Deluxe City View King and Wellness Suite/Deluxe King combinations use a shared vestibule. Details require property confirmation.",
+      "limits": "Illustrates exact-category physical-link distinction only; no stay availability, price, room count/party acceptance, exclusive vestibule, connection guarantee, noise/rest, supervision, accessibility or family-fit claim. Rating widget not sampled or adopted as review evidence."
+    },
+    {
+      "id": "bcd-glossary",
+      "url": "https://www.bcdtravel.com/glossary/adjoining-room/",
+      "accessed_on": "2026-10-13",
+      "publication_date": null,
+      "class": "PROVIDER_GLOSSARY",
+      "observations": "Defines adjoining as next-door rooms without an interior door and connecting as rooms joined by an interior door. Already provides a compact side-by-side definition.",
+      "limits": "Travel-management publisher's terminology, not a universal hotel standard or family guarantee. Hilton's wording shows why labels alone cannot determine the selected physical configuration. No corporate privacy/security marketing transferred to family safety."
+    }
+  ],
+  "access_failures": [
+    {
+      "tool": "runBatch /serp/google/organic/live/advanced",
+      "affected_gate": "Second current controlled US query and paired SERP overlap",
+      "result": "guaranteed connecting hotel rooms status40101 provider-failure, cost0.002USD",
+      "owner": "DataForSEO search result collection",
+      "unblock": "Documented changed provider result/access condition or separately authorized reconciliation; do not repeat unchanged billed task or modifier-fish",
+      "next_check": "Only on that named provider change, not next heartbeat",
+      "retried": false
+    },
+    {
+      "tool": "web.open https://www.booking.com/articles/adjoining-hotel-rooms-vs-connecting-hotel-rooms.en-gb.html",
+      "affected_gate": "First-ranked comparison body inspection",
+      "result": "JavaScript/robot-verification page only; article body uninspected",
+      "owner": "Booking.com normal public verification/access",
+      "unblock": "Documented changed permitted ordinary article access; no CAPTCHA solving, browser/tool/origin recovery or unchanged retry",
+      "next_check": "Only after changed permitted article access; inspected BCD/Hilton bodies remain independently useful, not recovery evidence",
+      "retried": false
+    }
+  ],
+  "decision_fields": [
+    {"field": "supplier_label", "known": "Hilton and BCD use adjoining differently", "not_implied": "Universal layout"},
+    {"field": "physical_link", "known": "Interior door, common vestibule and hallway-only adjacency are distinct", "not_implied": "Private access, supervision or safety"},
+    {"field": "booking_state", "known": "Named confirmed product differs from a later request", "not_implied": "Every listing or two independent reservations are confirmed"},
+    {"field": "channel", "known": "Hilton's own channel statements have a telephone-detail conflict", "not_implied": "All channels equivalent or another supplier follows Hilton policy"},
+    {"field": "exact_party_and_cost", "known": "No quote collected", "not_implied": "Double one-room rate, free premium, final all-fee price or child allocation"},
+    {"field": "change_and_fallback", "known": "Available ordinary rooms may appear after no connecting combination", "not_implied": "Safe substitution or cancellation/rebooking recommendation"}
+  ],
+  "proxies": [
+    {"id": "CR-P1", "task": "Two parents/ages4and8 need internal door, dates and budget not supplied", "start": "YES", "reduce": "PARTIAL", "compare": "PARTIAL", "trace": "YES", "decide": "PARTIAL", "verify": "YES", "recover": "PARTIAL", "remaining": "Exact property/category/channel selected and written reservation terms, room allocation, total price and family supervision plan. Evidence-only desk walkthrough, not page UI or actual parent test."},
+    {"id": "CR-P2", "task": "Parents/grandparents/ages3and7 can consider a shared vestibule, but require exact whole-party cost", "start": "YES", "reduce": "PARTIAL", "compare": "PARTIAL", "trace": "YES", "decide": "PARTIAL", "verify": "YES", "recover": "PARTIAL", "remaining": "Exclusive versus shared vestibule, party/capacity/price/confirmation/rest unknown; no Grand or Royalton record renewed, no provider loading retry. Evidence-only desk walkthrough."}
+  ],
+  "ownership": {
+    "inventory_canonical_urls": 36,
+    "new_url_qualified": false,
+    "material_demand_established": false,
+    "two_query_job_established": false,
+    "comparison_novelty_established": false,
+    "existing_fit": "Exact category, request/confirmation and dated party-cost fields belong inside current destination hotel comparisons or shared room records. Generic glossary tables already exist; no public defect from this audit establishes an eligible city-page edit.",
+    "maintainability": "Future structured field join could distinguish supplier label, internal/vestibule/hallway link, channel, request versus confirmation, price scope and change conditions with original clocks. Policy refresh30days/changed wording trigger, category/quote clocks independent. This is a candidate design, not implemented product or automatic renewal."
+  },
+  "review_signals": {"sampled": 0, "property_fit_judgment": false, "representative_rating": false, "reason": "Policy/terminology qualification only, no hotel or activity recommendation. Review body/date/category conflicts would be required for any later actual-rest/fit judgment."},
+  "gsc": {"classification": "REUSED", "collected_at": "2026-10-12T19:48:27.188Z", "finalized_through": "2026-10-10", "prior_finalized_through": "2026-10-09", "limit": "Orientation only, not aligned query cohort or complete36-URL coverage; no CTR hypothesis or indexing request"},
+  "result": {
+    "outcome": "PRESERVE_EXISTING_OWNERS_CANDIDATE_SHARED_FIELDS",
+    "public_delivered": false,
+    "publication_eligible": false,
+    "learning": "Do not normalize adjoining into one universal door rule. Record supplier-specific physical linkage and booking-state evidence; a named connecting category is not a confirmed reservation. Existing source policy contains useful contradictions, but material demand and a distinct two-query owner remain unestablished.",
+    "confidence": "High in inspected wording/provenance/cost reconciliation, moderate in proposed field usefulness, unknown material demand/current quotes/booking fulfillment/actual parent satisfaction or SEO lift.",
+    "next_trigger": "Reliable material-demand evidence and complete current two-query ownership plus a failed maintained comparison task; or changed exact property policy/confirmation evidence supporting an existing-page correction. Not another heartbeat, paid40101 retry, Booking verification bypass or broad cluster inventory.",
+    "next_eligible_run": "Select an independent source-backed existing family decision when available. Connecting guide stays unqualified until named trigger;066 price/guarantee and London apartment records remain unchanged."
+  }
+}

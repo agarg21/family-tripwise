@@ -15226,7 +15226,7 @@
       "id": "FT-IMP-136",
       "title": "Expose the teen anchor and decisive current-check comparison",
       "kind": "implementation",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T14:22:39.371Z",
       "target_paths": [
@@ -15258,7 +15258,48 @@
       "scope_amendment": "Pre-edit exact12 adds site/styles.css: seven-column desktop table1360px hides decisive lastfield; teen-only1160px minimum avoids needless desktop scrolling while keeping180-130identity/150critical field. All previous CSS prefix/all-ages output unchanged.",
       "evidence_record": "docs/research/san-antonio-teen-glance-2026-10-13.json",
       "next_gate": "Final focused/full nativeQA/preservation and different strict read-onlyPASS, exact12 guard/push/Pages-marker/productionSEO/twoassets/liveinvariants",
-      "review_receipt": "FT-IMP-136 independent Bernoulli 01a135af-95a3-7592-8d43-c11e20e5ca8e PASS 2026-10-13T14:38:14Z; reviewed d9942fbf86624077c4351bac8ad5b406ef21bdee3f930fd4681e4cff76fe4338 exact12/1022 modes-hashes/343 older/zero drift, independent pure3/3 and serial invariants; saved pixels/geometry reviewed, no independent live/full-suite rerun. Master953/953 full,48/48 maintenance,16/16 focused, stateSEO0, GSC91; log6be75ac20ad90f269af0c3fa384e35909cd0526bf24ed77572f7af6ebd63ad2e. No actionable P0-P2. Mechanical immutable receipt only; product unchanged. Production gates pending."
+      "review_receipt": "FT-IMP-136 independent Bernoulli 01a135af-95a3-7592-8d43-c11e20e5ca8e PASS 2026-10-13T14:38:14Z; reviewed d9942fbf86624077c4351bac8ad5b406ef21bdee3f930fd4681e4cff76fe4338 exact12/1022 modes-hashes/343 older/zero drift, independent pure3/3 and serial invariants; saved pixels/geometry reviewed, no independent live/full-suite rerun. Master953/953 full,48/48 maintenance,16/16 focused, stateSEO0, GSC91; log6be75ac20ad90f269af0c3fa384e35909cd0526bf24ed77572f7af6ebd63ad2e. No actionable P0-P2. Mechanical immutable receipt only; product unchanged. Production gates pending.",
+      "release_receipt": "FT-IMP-136 release 405d76216751e9bed62f7c4c3f362d2b7ac4746a remote verified 2026-10-13T14:43:01.012Z; main0-0/emptyindex/exact12/all1022indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Pages38415185134SUCCESS/release405d76216751e9bed62f7c4c3f362d2b7ac4746a/twoexact200/productionSEO0sixprior/three preflightwidths/nine anchors/ten critical rows/sticky130-180/keyboard2-808-878return0/image1280/console0/nooverflow/settled younger-route13rows; immutable /tmp/ft136-final-production-check.json. Learned LRN237 proxy layout/task only; original July27 source clocks retained, no new facts or CSV. Existing Frisco149 WATCH remains demand/category-price-calendar-review qualified, no new URL. Next choose a bounded eligible family-cluster decision from current roadmap, no unchanged denial retries. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T14:43:01.038Z",
+      "release_state": "released-and-production-verified",
+      "release_commit": "405d76216751e9bed62f7c4c3f362d2b7ac4746a",
+      "released_at": "2026-10-13T14:43:00.719Z",
+      "pages_run": 38415185134,
+      "production_verification": "Immutable /tmp/ft136-final-production-check.json: matching marker/two exact200 assets/productionSEO0/1280-390-320/nine native links/keyboard ends-return/sticky130-180/10 readable critical rows/image1280/nooverflow-console0/settled all-ages route13rows. Temporary proof-label and navigation-timing/hash assumptions corrected without product mutation. Source dates and held work unchanged."
+    },
+    {
+      "id": "FT-RES-150",
+      "title": "Qualify a family connecting-room booking decision guide",
+      "kind": "research",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T15:04:11.824Z",
+      "target_paths": [
+        "docs/research/connecting-room-task-keywords-2026-10-13.json",
+        "docs/research/connecting-room-task-demand-2026-10-13.json",
+        "docs/research/connecting-room-task-gate-2026-10-13.json",
+        "tools/connecting-room-task-gate.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "evidence": "066 and current London/Cancun records distinguish named connected categories, request-only inventory and reservation/channel guarantees. Audit a distinct practical decision: parents with children4/8 need an internal door guaranteed before committing to two rooms; adjoining or merely requested rooms cannot silently satisfy it. Prior broad family-size cluster research is not repeated.",
+      "acceptance_criteria": [
+        "Two US desktop/en queries only: connecting rooms vs adjoining rooms; guaranteed connecting hotel rooms. Existing FT-ACC-001 scope USD5 cumulative/0.50 batch, reconciled prior0.33036, reserve0.1204. Null metrics unknown, no automatic retry, no blocked source fallback.",
+        "Current primary terminology and channel/policy conditions, bounded ranking-body overlap and ownership/materiality/maintenance gate; no safety/supervision guarantee, named property availability, price, firsthand or representative review claims. Exact family ages are a task, not actual booking acceptance.",
+        "Focused/full native QA and different independent strict read-onlyPASS, exact9 guarded docs/test push remote verified. All344 older ordered items/public/model/CSV/source prices/scheduler/held11 unchanged. If gate supports public implementation, amend exact paths before edits and finish SAME family problem; otherwise precise candidate/preserve/reject and next trigger."
+      ],
+      "measurement_plan": "LRN238 primary-policy and current US intent task audit. GSC Oct12 finalizedOct10 REUSED/priorOct11finalOct9; aggregate orientation not CTR or demand diagnosis. Two page-only booking-decision proxies are not actual parents/SEO lift.",
+      "production_invariant": "Research-only initial scope; no public URL/CSV/source renewal, reservation/contact/account/payment, external mutation, indexing/analytics/scheduler or spending expansion. No unchanged Grand/Sapphire/Disney/Hyatt denied or blank/loading attempt.",
+      "research_only_reason": "136 teen comparison just production-verified. No unfinished qualified release; existing066 Grand quote requires changed ordinary loading state, exact reserve guarantee and all-fee group total remain unobserved; other candidates have named evidence/observation gates. This resolves a distinct terminology-versus-booking-channel decision, not another family-size inventory report.",
+      "authorization": "FT-OPS-014 dated cities/practical tips/activities selection plus existing FT-ACC-001 family lodging scope and budget only; no new destination selected or URL authorized by query alone.",
+      "decision": "PRESERVE existing owners/CANDIDATE shared linkage fields: supplier labels differ, internal door/shared vestibule/request/confirmed reservation are separate. Both US volumes unknown and second SERP40101 charged; no new guide or public edit qualified.",
+      "evidence_record": "docs/research/connecting-room-task-gate-2026-10-13.json",
+      "next_gate": "Different strict read-only review/full nativeQA/exact9 guarded research-only push. Public guide requires reliable material demand plus complete two-query ownership and failed maintained task; no unchanged paid40101 or Booking verification recovery.",
+      "review_receipt": "FT-RES-150 Lovelace01a135cf-d95d-75b0-b5f3-a7742c1868ed independent strictREADONLY PASS/noP0-P3 at2026-10-13T15:11:57Z; frozen23d18b43a2838e7279b8bcc171f8241f92da3b4a9f9f3e9257303e0457ecc001 exact9/all1026hash-modes/344olderactions/held11/LRN238-only/public-model-sourceCSV-scheduler preserved. Independent4pure/serialinvariants green; Master957full48maintenance/state0/GSC91/SEO0sixprior log71ab38bc1ef94913cef50660f1aa4b30df55ebedb0526001cee50f65787edda0 inspected, no independent full/live/UI/source inspection. Two null volumes/one9rowSERP/second40101 charged0.002; allthree0.016/cumulative0.34636 reconciled, no paidretry or Booking verification recovery. Supplier terminology/physical-link/channel/confirmation distinct; Hilton18-24/telephone conflict retained, no parent/safety/fit/currentquote/SEOclaim. Initialfocus3-4 floatprecision failure corrected to five-decimal comparison, not weakened budget. PRESERVE owners/CANDIDATE sharedfields; no public guide/edit qualified. Immutable mechanical consensus only; exact guarded docs/testpush and remoteverification pending;014 unchanged."
     }
   ]
 }
