@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-149",
+  "learning_id": "LRN-235",
+  "checked_on": "2026-10-13",
+  "evidence_classes": ["CURRENT_US_SERP", "PROVIDER_ESTIMATE_UNAVAILABLE", "OFFICIAL_PROPERTY_FACT"],
+  "method": "Current primary extracted bodies and bounded US provider results; no booking, browser task, firsthand visit or independent source replay",
+  "task": {"adults": 2, "child_ages": [4, 8], "arrival": "2026-11-08", "departure": "2026-11-10", "hotel_nights": 2, "requested_park_days": 2},
+  "search": {
+    "manifest": "docs/research/frisco-room-task-keywords-2026-10-13.json",
+    "report": "docs/research/frisco-room-task-demand-2026-10-13.json",
+    "conservative_reserved_usd": 0.12040000000000001,
+    "batch_cost_usd": 0.016,
+    "cumulative_usd": 0.33036,
+    "monthly_estimates": [null, null],
+    "organic_rows": [8, 7],
+    "normalized_url_intersection": 2,
+    "normalized_url_union": 13,
+    "intent": "Rooms query includes primary hotel, OTA listings and nearby-hotel directory; suite query includes OTA, family discussion/video, specialist guide and official FAQ. Two shared URLs do not establish one coherent new-URL job or two independent jobs.",
+    "materiality": "UNKNOWN, not zero, low competition or proven demand. No hotel-to-activity transfer, summed variants, traffic forecast or unchanged failed toddler retry. No further modifier collection until a named coverage/change trigger."
+  },
+  "sources": [
+    {"id": "hotel", "url": "https://www.universalkidsresort.com/en/us/places-to-stay/universal-kids-resort-hotel", "accessed_on": "2026-10-13", "publication_date": null, "effective_date": null, "quality": "Primary room and policy body; conceptual imagery, no category rates; policy changes and plan-specific conditions apply"},
+    {"id": "faq", "url": "https://www.universalkidsresort.com/en/us/information/faqs", "accessed_on": "2026-10-13", "publication_date": null, "effective_date": null, "quality": "Primary category capacities and admission rules; mixed current Now Open and future-tense/pre-opening text. No automatic whole-page freshness or firm-fit inference"},
+    {"id": "opening", "url": "https://www.nbcuniversal.com/article/universal-kids-resort-first-ever-theme-park-young-children-now-officially-open", "accessed_on": "2026-10-13", "publication_date": "2026-07-02", "effective_date": null, "quality": "Operator announcement and marketing, not independent review or exact November operating calendar"}
+  ],
+  "room_categories": [
+    {"name": "Standard Queen", "area_sqft": 288, "beds": "One queen and twin-over-full bunk", "published_max_guests": 5, "private_bedroom": null, "source_ids": ["hotel", "faq"]},
+    {"name": "Deluxe Queen", "area_sqft": 314, "beds": "One queen and twin-over-full bunk", "published_max_guests": 5, "private_bedroom": null, "source_ids": ["hotel", "faq"]},
+    {"name": "Signature Queen", "area_sqft": 424, "beds": "One queen and twin-over-full bunk; separate toilet", "published_max_guests": 5, "private_bedroom": null, "source_ids": ["hotel", "faq"]},
+    {"name": "Family Suite", "area_sqft": 486, "beds": "King in private room, bunk and queen pull-out sofa", "published_max_guests": 6, "private_bedroom": true, "source_ids": ["hotel", "faq"]}
+  ],
+  "cost_basis": {
+    "currency_for_published_hold": "USD",
+    "currency_basis": "Dollar symbol on US storefront, interpreted USD, not explicit ISO",
+    "nightly_room_price": null,
+    "room_price_unit": "Per room per night; no observed rate",
+    "room_and_party_basis": "Four listed categories; two adults and children4/8 not submitted to booking",
+    "stay_basis": "November8-10,2026 task, not quoted",
+    "price_observation_date": null,
+    "park_ticket_price": null,
+    "hotel_parking_price": null,
+    "published_pid_fee_percent": 2,
+    "published_pid_basis": "Taxable room rate charges; source hotel; rate quote inclusion unknown",
+    "published_incidental_hold_per_day": 50,
+    "incidental_hold_is_charge": false,
+    "taxes_final_at_stay": true,
+    "all_currency_mandatory_total": null,
+    "cancellation": "Hotel generic48-hour terms coexist with nonrefundable prepaid and rate-specific deposit conditions; selected plan unknown",
+    "deposit_amount_for_task": null
+  },
+  "park_basis": {
+    "source_id": "faq",
+    "hotel_only_includes_admission": false,
+    "early_entry_requires_separate_admission": true,
+    "under_two_free_published": true,
+    "ages_two_and_above_require_admission": true,
+    "task_people_requiring_admission": 4,
+    "one_and_two_day_products_listed": true,
+    "package_only_one_point_five_day": {"separate_product": false, "first_day_from": "14:00", "consecutive_days": true},
+    "one_point_five_day_equivalent_to_two_full_days": false,
+    "exact_november_dates_open": null,
+    "exact_hours": null,
+    "actual_entrance_to_room_return_minutes": null,
+    "child_height_eligibility": null
+  },
+  "review_signals": {"sampled": 0, "category_matched": 0, "family_fit_or_rest_established": false, "next_gate": "Dated independent category-matched online-review themes/conflicts before public family-fit judgments; no numeric representative rating"},
+  "access_failures": [
+    {"tool": "web click hotel link26", "resolved_url": "https://www.universalkidsresort.com/en/us/places-to-stay/en/us/calendar-and-hours", "result": "404", "gate": "Exact dated operating calendar", "owner": "Operator normal navigation", "unblock": "Valid observed primary calendar URL and readable exact task dates", "retried": false},
+    {"tool": "web click hotel link15", "resolved_url": "https://www.universalkidsresort.com/en/us/places-to-stay/en/us/tickets", "result": "400 Timeout fetching", "gate": "Exact dated admission prices", "owner": "Operator normal navigation", "unblock": "Valid observed primary ticket URL and permitted anonymous exact-date price body", "retried": false}
+  ],
+  "source_conflicts": ["FAQ mixes Now Open with pre-opening wording and later-information language; access date cannot renew every statement", "Hotel and FAQ support category capacity, not exact task booking acceptance, bunk/sofa comfort or measured rest return", "General hotel cancellation terms cannot override a selected prepaid/nonrefundable plan"],
+  "ownership": {"existing_frisco_or_park_owner": false, "canonical_count_at_audit": 36, "new_urls_authorized_during_014_only_after_gates": true, "new_url_qualified": false, "split_room_and_suite_urls_qualified": false},
+  "result": {
+    "decision": "PRESERVE_WATCH_UNTIL_DEMAND_AND_MATCHED_BUDGET_EVIDENCE",
+    "room_policy_gap_resolved": true,
+    "publication_eligible": false,
+    "public_delivered": false,
+    "confidence": "High in source attribution/category-policy distinctions; unknown demand, exact quote, calendar, guest comfort, actual acceptance and user/SEO outcomes",
+    "next_gate": "Independent review and exact research-only release; then a changed numeric-demand or non-inferred material-demand record, exact category/party/date nightly-plus-admission/fees, valid task calendar and dated review conflicts. No repeated variants or calendar-only audit.",
+    "next_trigger": "Published matched room/ticket costs, readable dated calendar, new reliable demand coverage or a concrete existing-page public defect; not another heartbeat or general opening announcement"
+  },
+  "gsc": {"classification": "REUSED", "latest": "ops/gsc-snapshots/2026-10-12.json", "finalized_through": "2026-10-10", "prior": "ops/gsc-snapshots/2026-10-11.json", "limit": "Page/property aggregates orientation only, no current Frisco query cohort or CTR diagnosis"},
+  "registration_boundary": "Scope-only keyword manifest created with registration helper before helper execution; action registered before any paid call or new task-evidence write. No retrospective action claim.",
+  "release_scope": "Research/record regression only; all public/model/CSV/source-price records preserved; no new URL, quote renewal, review-body recovery, security bypass, account/contact/indexing/analytics/scheduler mutation"
+}

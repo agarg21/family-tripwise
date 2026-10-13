@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-149",
+  "prior_spend_usd": 0.31436,
+  "cumulative_ceiling_usd": 5,
+  "batch_ceiling_usd": 0.5,
+  "keywords": ["universal kids resort hotel rooms", "universal kids resort family suite"],
+  "serp_keywords": ["universal kids resort hotel rooms", "universal kids resort family suite"]
+}

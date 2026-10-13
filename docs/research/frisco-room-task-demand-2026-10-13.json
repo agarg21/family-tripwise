@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-149",
+  "action_source": "manifest",
+  "collected_at": "2026-10-13T13:33:25.141Z",
+  "market": "US",
+  "location_code": 2840,
+  "language_code": "en",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 5,
+    "prior_spend_usd": 0.31436
+  },
+  "calls": [
+    {
+      "endpoint": "dataforseo_labs/google/keyword_overview/live",
+      "label": "keyword-overview",
+      "status": "success",
+      "cost_usd": 0.012,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "universal kids resort hotel rooms",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "universal kids resort family suite",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "universal kids resort hotel rooms",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    },
+    {
+      "keyword": "universal kids resort family suite",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    }
+  ],
+  "serps": [
+    {
+      "keyword": "universal kids resort hotel rooms",
+      "checked_at": "2026-10-13 13:33:28 +00:00",
+      "result_types": [
+        "organic",
+        "local_pack",
+        "video",
+        "people_also_ask",
+        "perspectives",
+        "paid",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.universalkidsresort.com",
+          "url": "https://www.universalkidsresort.com/en/us/places-to-stay/universal-kids-resort-hotel"
+        },
+        {
+          "rank": 2,
+          "domain": "www.expedia.com",
+          "url": "https://www.expedia.com/Dallas-Hotels-Universal-Kids-Resort-Hotel.h130103850.Hotel-Information"
+        },
+        {
+          "rank": 3,
+          "domain": "www.universalkidsresort.com",
+          "url": "https://www.universalkidsresort.com/en/us"
+        },
+        {
+          "rank": 4,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/universalkidsresort/posts/999114696231467/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.themeparkinsider.com",
+          "url": "https://www.themeparkinsider.com/flume/202606/12520/"
+        },
+        {
+          "rank": 6,
+          "domain": "www.instagram.com",
+          "url": "https://www.instagram.com/reel/DZuxluxRaBu/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.travelocity.com",
+          "url": "https://www.travelocity.com/Dallas-Hotels-Universal-Kids-Resort-Hotel.h130103850.Hotel-Information"
+        },
+        {
+          "rank": 8,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/HotelsNear-g55870-d34421328-Universal_Kids_Resort-Frisco_Texas.html"
+        }
+      ]
+    },
+    {
+      "keyword": "universal kids resort family suite",
+      "checked_at": "2026-10-13 13:33:33 +00:00",
+      "result_types": [
+        "ai_overview",
+        "video",
+        "organic",
+        "short_videos",
+        "hotels_pack",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.travelocity.com",
+          "url": "https://www.travelocity.com/Dallas-Hotels-Universal-Kids-Resort-Hotel.h130103850.Hotel-Information"
+        },
+        {
+          "rank": 2,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/universalkidsresort/posts/999114696231467/"
+        },
+        {
+          "rank": 3,
+          "domain": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=i4WXR40cJ34"
+        },
+        {
+          "rank": 4,
+          "domain": "www.undercovertourist.com",
+          "url": "https://www.undercovertourist.com/blog/universal-kids-resort/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/universaltipsforbusyfamilies/posts/1386438589674637/"
+        },
+        {
+          "rank": 6,
+          "domain": "www.universalkidsresort.com",
+          "url": "https://www.universalkidsresort.com/en/us/information/faqs"
+        },
+        {
+          "rank": 7,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/3937404276581845/posts/4375282809460654/"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Provider estimates, not people or traffic forecasts",
+    "Null metrics are unknown, not zero",
+    "KD zero is not proof of easy ranking",
+    "Monthly history can lag launches; seasonality is not trend proof",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.016,
+  "completed_at": "2026-10-13T13:33:34.064Z"
+}

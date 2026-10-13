@@ -6818,7 +6818,14 @@
       "next_eligible_run": "Implement the qualified three-apartment London comparison using the shared typed records and original six-person reference budget. Do not repeat148 US/competitor audit,104 prices,147 review samples or133 join; prices recheckOctober16/17 or retain dated historical context. Named connected-room/rest judgments remain independent candidates.",
       "measurement_plan": "Family5/6 can compare sleepingplaces/channelconnectionstatus/restspace and roughnightly/fullmandatorybudget without reading2adultrate asquote",
       "production_invariant": "Prices/basis/windows maintained; no safety/bookingacceptance/connectionguarantee extrapolation/newcity or URL fromKD0",
-      "evidence_record": "docs/research/london-six-person-review-conflicts-2026-10-02.md"
+      "evidence_record": "docs/research/london-six-person-review-conflicts-2026-10-02.md",
+      "delivery_receipt": {
+        "action": "FT-PUB-012",
+        "state": "released-and-production-verified",
+        "commit": "74f78260ffb81a9a981771f5b7cd92aa8e638ebe",
+        "verified_at": "2026-10-13T13:19:43.579Z",
+        "scope": "Reviewed three-apartment subset; deferred categories and firm rest/connection claims unchanged"
+      }
     },
     {
       "id": "FT-RES-076",
@@ -7861,12 +7868,13 @@
       "status": "planned",
       "priority": 9,
       "target_urls": [],
-      "evidence": "September30officialNowOpen hotel page; current brand/OTA SERP, missing phrase metrics and one40101SERPfailure",
-      "decision": "WATCH; missing coverage is neither zero demand nor low KD",
-      "next_gate": "Current numeric-demand coverage plus official calendar/room/price/park-total feasibility; no unchanged paid retry and destination launch needs publication scope authorization",
+      "evidence": "149 current official four-category capacities and room separation, separate park admission/1.5-day package/2%PID/$50-day hold distinctions; US room/suite pair numeric metrics null and2/13 overlap. No low-demand/KD/easy-ranking inference.",
+      "decision": "PRESERVE Frisco WATCH: four categories now sourced with capacities5/5/5/6, private-suite distinction and admission/partial-day/fee-hold boundaries. Both new US room-query metrics unknown, overlap2/13 insufficient ownership proof; no new URL or price/comfort claim.",
+      "next_gate": "Changed numeric or documented non-inferred material demand, exact category/party/stay nightly-plus-park/fees, valid dated calendar and category-matched review conflicts; docs/research/frisco-room-task-gate-2026-10-13.json. Dated014 city authority is not publication qualification.",
       "target_paths": [],
       "measurement_plan": "Whether a maintainable distinct family job emerges",
-      "production_invariant": "No suitability/safety claim or launch from newness alone"
+      "production_invariant": "No suitability/safety claim or launch from newness alone",
+      "next_eligible_run": "Named reliable demand/price/calendar/review change or concrete public family-task defect; no heartbeat/calendar-only repeat, failed toddler retry or variant fishing."
     },
     {
       "id": "FT-RES-066",
@@ -15074,7 +15082,7 @@
       "id": "FT-PUB-012",
       "title": "Publish the bounded London family-apartment comparison",
       "kind": "publication",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-13T12:18:55.485Z",
       "target_urls": [
@@ -15121,7 +15129,49 @@
       "production_invariant": "London canonical200/indexable/selfcanonical/one sitemap occurrence/HomeAboutreachable/contributor disclosure. Three exactcategories and6publicplans; known rates not all-in/fiveperson/currentquotes; unknown rest/entrance/comfort/booking remain. Old35 inventory remains, other33canonicals unchanged, all65hotelrecords/CSV/originalroom-price-review sources/held11 preserved; no new paid/account/indexing/analytics/posting/source-denialretry/scheduler mutation.014 fixedexpiry unchanged.",
       "decision": "IMPLEMENT qualified bounded London comparison; familyproblem taken through native/task/review and production, no cadence or quota.",
       "authorization": "Fresh directOctober12 FT-OPS-014 delegates evidence-qualified newcity London UK and exactpublicaction during fixed72hour window. This threeHTML batch is within scope, not futureunboundedcity/destructiveURL/spending authority.",
-      "review_receipt": "FT-PUB-012 Harvey01a1354e-833d-7150-94ed-2bc1de14c8b7 independent STRICTREADONLY PASS/noP0-P3: frozen1e6c8e5469a89019f12ef2f9b8f4cfc61d5d9957edb74c7d7cb97b626fbe9451/all1014hash-modes/baseline1010/exact27/340orderedactions/held11/LRN234-only verified. Independent5purefocused PASS; screenshot and recordednativeproofs inspected, not ownliveQA. Master942full48maintenance/state0/GSC91/localSEO0sixprior logf441082049dc146d2f4f2d1a511455451ace0a31f867d25b5772e917e65067ea inspected, not reviewerfullrun.36canonical39HTML/original35/other33canonical/all65hotelrecords-oldCSV-originalsources/CSSprefix/8watchrecords4exacthosts/security014unchanged. Shared3category6plans/referenceparty-stay noninheritance/source-review-date limits/distinctCitadinescategory-booking/photoDAVIDIliiff2009CCBYSA3/discovery-maintenance consistent. Actual1280-390-320/mainkeyboard0-462-532then0/9roomEnter9disclosurepairs/3secondary532then0/pricecol150fullincompletewarning/image1280/nooverflow-runtime-console0. Initial942-941pass1contributorcountfail and unsupportedlocator/End-unsettledassertions excluded; originalcreditrule preserved and scopedpricewarning repaired. Serial987nonowned74otherpublicassets/340actions/25oldwatch/CSS invariantsPASS, initialhelperCSS-prefix assumption excluded. No reviewerwrites/network/browser/git/accounts/delegation/scheduler, sourcesnotreopened; no parent-SEOlift-currentquote-firmfit inference. Only mechanical consensus appended; guarded exact release and Pages-marker-productionSEO/live pending.014fixedexpiry unchanged."
+      "review_receipt": "FT-PUB-012 Harvey01a1354e-833d-7150-94ed-2bc1de14c8b7 independent STRICTREADONLY PASS/noP0-P3: frozen1e6c8e5469a89019f12ef2f9b8f4cfc61d5d9957edb74c7d7cb97b626fbe9451/all1014hash-modes/baseline1010/exact27/340orderedactions/held11/LRN234-only verified. Independent5purefocused PASS; screenshot and recordednativeproofs inspected, not ownliveQA. Master942full48maintenance/state0/GSC91/localSEO0sixprior logf441082049dc146d2f4f2d1a511455451ace0a31f867d25b5772e917e65067ea inspected, not reviewerfullrun.36canonical39HTML/original35/other33canonical/all65hotelrecords-oldCSV-originalsources/CSSprefix/8watchrecords4exacthosts/security014unchanged. Shared3category6plans/referenceparty-stay noninheritance/source-review-date limits/distinctCitadinescategory-booking/photoDAVIDIliiff2009CCBYSA3/discovery-maintenance consistent. Actual1280-390-320/mainkeyboard0-462-532then0/9roomEnter9disclosurepairs/3secondary532then0/pricecol150fullincompletewarning/image1280/nooverflow-runtime-console0. Initial942-941pass1contributorcountfail and unsupportedlocator/End-unsettledassertions excluded; originalcreditrule preserved and scopedpricewarning repaired. Serial987nonowned74otherpublicassets/340actions/25oldwatch/CSS invariantsPASS, initialhelperCSS-prefix assumption excluded. No reviewerwrites/network/browser/git/accounts/delegation/scheduler, sourcesnotreopened; no parent-SEOlift-currentquote-firmfit inference. Only mechanical consensus appended; guarded exact release and Pages-marker-productionSEO/live pending.014fixedexpiry unchanged.",
+      "release_receipt": "FT-PUB-012 release 74f78260ffb81a9a981771f5b7cd92aa8e638ebe remote verified 2026-10-13T13:21:08.729Z; main0-0/emptyindex/exact27/all1014indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered and production-verified London family-apartment comparison at2026-10-13T13:19:43.579Z:74f78260ffb81a9a981771f5b7cd92aa8e638ebe/Pages38401522937SUCCESS/matchingmarker/five200exactassets/productionSEO0sixprior. Live1280-390-320/9roomEnter9disclosurepairs/mainarrow0-462-532then0/3plan532then0/stickywhite/150pxpricecolumn-fullwarning/image1280x847/nooverflow-runtime-console0/Home-London-Aboutnative discovery/source-category-booking-review boundaries. /tmp/ftpub012-final-production-check.json and production-context.png. Threeapartments/twooperators/six original publicplans; source clocks Sept30/Oct2/3 and085/147 guestdates retained. LRN234integrated delivery, fourPARTIAL proxies not actualparents/currentquotes/SEOlift/sofa-rest-booking guarantee. Learned-only148US qualification also remoteverified6ab922a; five170-sixunknown and wrong140 attribution corrected, paid0.01824/cumulative0.31436 withinexisting5. Remaining unknowns finalextras/ownpartydatequotes/sofa comfort/entrance/rest and deferredconnectedcategories remain narrow; no newCSV or unchangedsource retry. Master942full48maintenance5focused/state0/GSC91/differentHarveySTRICTPASS; original35URLs-other33canonical/all65hotelrecords-oldCSV-originalsources/held11 protected. Second finished transaction, no thirdstart after12:45:27Z;014scheduler and fixedexpiry unchanged. Next current076toddler-care billing/eligibility gate, no London relaunch or repeat completed price-review-demand-join audits. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-13T13:21:08.757Z",
+      "release_state": "released-and-production-verified",
+      "release_commit": "74f78260ffb81a9a981771f5b7cd92aa8e638ebe",
+      "pages_run": 38401522937,
+      "released_at": "2026-10-13T13:19:43.579Z",
+      "production_verification": "Pages38401522937SUCCESS/matchingmarker/five200exactassets/productionSEO0sixprior/live1280-390-320/native room-detail-table/discovery/source/image controls PASS; immutable /tmp/ftpub012-final-production-check.json"
+    },
+    {
+      "id": "FT-RES-149",
+      "title": "Qualify Frisco room-plus-park family planning feasibility",
+      "kind": "research",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-13T13:33:08.243Z",
+      "parent_item": "FT-RES-065",
+      "target_paths": [
+        "docs/research/frisco-room-task-keywords-2026-10-13.json",
+        "docs/research/frisco-room-task-demand-2026-10-13.json",
+        "docs/research/frisco-room-task-gate-2026-10-13.json",
+        "tools/frisco-room-task-gate.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "evidence": "065 lacks numeric materiality and exact room/park-total feasibility. Current readable official hotel body supplies four room categories, separate admission, fee/hold and rate-policy distinctions. Audit the named two-adult children4/8 November8-10 room-plus-two-park-days decision; no family-capacity inference from bed names or hotel-demand transfer to activity URLs.",
+      "acceptance_criteria": [
+        "Two new US desktop/en query tasks only: universal kids resort hotel rooms; universal kids resort family suite. Existing FT-ACC-001 5 cumulative/0.50 batch, prior reconciled0.31436, reserve0.1204. Preserve nulls/status/cost/date; no failed toddler retry or automatic paid retry.",
+        "Current primary category/price-fee/calendar sources with original publication/observation dates separated; unknown maximum occupancy, nightly price, exact dated admission/calendar and review signals remain null. Scope one candidate or reject/preserve with named trigger, not a thin launch or repeated broad cluster report.",
+        "Focused/full native QA, different strict read-only PASS, exact9 guarded docs/test push and remote verification. Preserve all public/model/CSV assets, 341 older actions except065 decision/next_gate/next_eligible_run/evidence, held11 dirty work and source clocks."
+      ],
+      "measurement_plan": "LRN235 source-dated numeric/SERP and official-fact gate audit, not actual parents/booking acceptance/safety/SEO lift. Latest Oct12 GSC finalizedOct10 REUSED/priorOct11 finalizedOct9, aggregates orientation only.",
+      "production_invariant": "No public launch/newCSV/source-quote renewal/paid scope expansion/indexing/analytics/scheduler/account/contact mutation. No unchanged denied sources/FAQ/Mini/failed toddler retry.014 fixedexpiry and all human/review gates retained.",
+      "research_only_reason": "London012 just production-verified; no unfinished eligible release or verified public defect.076 exact selected billing terms have no changed trigger;063 protected/room-fee gaps,064 matched offer gap,066 guaranteed linkage gap remain.065 has independently readable primary room facts and a bounded unresolved demand/task feasibility decision.",
+      "authorization": "Fresh014 dated expansion selection scope plus existing FT-ACC-001 paid scope only; selecting Frisco for qualification is not a city launch or waived URL/review/evidence gate.",
+      "decision": "PRESERVE Frisco WATCH: four categories now sourced with capacities5/5/5/6, private-suite distinction and admission/partial-day/fee-hold boundaries. Both new US room-query metrics unknown, overlap2/13 insufficient ownership proof; no new URL or price/comfort claim.",
+      "evidence_record": "docs/research/frisco-room-task-gate-2026-10-13.json",
+      "next_gate": "Different read-only review/exact guarded research-only push; then changed material-demand evidence plus exact room/party/stay plus ticket-fee/calendar and dated category-review evidence. No more keyword variants or calendar-only repeat.",
+      "review_receipt": "FT-RES-149 Heisenberg01a1357d-4794-7772-b529-9049f04f799f independent STRICT READONLY PASS/noP0-P3; frozenbf8b7b20727b21d0af8054e1749eeda93f1c180ba2889a03ea6f2a6ccd8b8328/all1018hash-modes/exact9/341olderactions/065only4fields/held11/LRN235-only/public-model-CSV-price unchanged verified. Independent5puretests/read-only invariants PASS; Master947full48maintenance/state0/GSC91/localSEO0sixprior logbbbb770e46f091e07a0019bc444d5e07d2b5a27be62ad50a055a7c2971347a22 inspected, not independentfullsuite. Supplied source descriptions inspected, no live reopen/parent/UI/source-price renewal claim. WATCH only, no new public page; unknown demand/matched room-ticket-calendar/reviewfit. Bounded3callsUSD0.016/cumulative0.33036/5 and original dates preserved, no failed toddler/access retry. Registration ordering explicit. No reviewer writes/network/browser/delegation/git/scheduler. Only immutable mechanical consensus appended; guarded research-only exactpush/remoteverification next;014 unchanged."
     }
   ]
 }
