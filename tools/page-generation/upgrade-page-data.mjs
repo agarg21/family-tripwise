@@ -4,9 +4,11 @@ import { momaComparison } from "../nyc-moma-budget.mjs";
 import { ferryComparison } from "../nyc-ferry-budget.mjs";
 import { omnyComparison } from "../nyc-omny-budget.mjs";
 import { spygamesPolicy } from "../nyc-spygames-policy.mjs";
+import { garfieldView } from "../garfield-admission.mjs";
 
 const summitAccess = summitPolicy().evidence;
 const spygamesAccess = spygamesPolicy().evidence;
+const garfieldAdmission = garfieldView();
 const teenIndependenceFaq = summitAccess.public_copy.faq.replace("Elsewhere,", `${spygamesAccess.public_copy.faq} Elsewhere,`);
 
 const teenAccess = JSON.parse(readFileSync(new URL("../../docs/research/las-vegas-teen-access-2026-10-09.json", import.meta.url), "utf8"));
@@ -565,6 +567,7 @@ export const activityPages = {
     description:
       "Compare 12 things to do in Chicago with kids by age, weather, budget, time, area, stroller fit, and trip style, with current official-source checks.",
     city: "Chicago",
+    garfieldAdmission,
     removeBaseActivitySiblingBand: true,
     supportCardClass: "detail-card",
     hidePlans: true,
@@ -709,12 +712,12 @@ export const activityPages = {
         tags: ["baby", "toddler", "preschool", "elementary", "tween", "teen", "stroller", "indoor", "rain", "budget"],
         age: "All ages",
         time: "1-2 hrs",
-        cost: "Free or current admission",
+        cost: garfieldAdmission.cost,
         area: "Garfield Park",
         stroller: "Good",
-        rain: "Yes",
+        rain: garfieldAdmission.rain,
         nap: "High",
-        summary: "A calm greenhouse reset with lower ticket pressure; check the current resident and nonresident admission model.",
+        summary: garfieldAdmission.summary,
       },
       {
         name: "Chicago lakefront and beach time",
@@ -752,7 +755,7 @@ export const activityPages = {
       ["Chicago Children's Museum", "1-9", "2-3 hrs", "Paid", "Navy Pier", "Good", "Yes", "High", "Check entry window", "Hands-on younger-child anchor", "Short lakefront walk"],
       ["Art Institute of Chicago", "6+", "90 min-3 hrs", "Kids under 14 free", "Loop", "Good", "Yes", "Medium", "Check admission", "Short art route with family resources", "Millennium Park"],
       ["360 CHICAGO", "6+", "60-90 min", "Paid", "Magnificent Mile", "Check venue", "Yes; views vary", "Medium", "Check visibility/TILT", "Contained skyline choice", "Streeterville meal"],
-      ["Garfield Park Conservatory", "All ages", "1-2 hrs", "Free/current admission", "Garfield Park", "Good", "Yes", "High", "Check admission", "Calmer greenhouse reset", "Keep the route simple"],
+      ["Garfield Park Conservatory", "All ages", "1-2 hrs", garfieldAdmission.cost, "Garfield Park", "Good", garfieldAdmission.rain, "High", garfieldAdmission.booking, "Calmer greenhouse reset", "Keep the route simple"],
       ["Chicago lakefront and beach time", "All ages", "1-3 hrs", "Free", "Lakefront", "Route-specific", "No", "High", "Check season/status", "Flexible outdoor recovery time", "Nearby neighborhood meal"]
     ],
     detailsEyebrow: "High-friction choices",

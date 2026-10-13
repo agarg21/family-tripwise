@@ -634,6 +634,37 @@ input {
   border-bottom: 0;
 }
 
+.garfield-admission-comparison .comparison-table {
+  min-width: 640px;
+  table-layout: fixed;
+}
+
+#garfield-admission h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+#garfield-admission .review-label {
+  margin-top: 12px;
+}
+
+.garfield-admission-comparison th:first-child {
+  width: 190px;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.garfield-admission-comparison th[scope="row"] {
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.garfield-admission-comparison thead th:first-child {
+  z-index: 2;
+}
+
 .logistics-comparison .comparison-table th:first-child {
   position: sticky;
   left: 0;

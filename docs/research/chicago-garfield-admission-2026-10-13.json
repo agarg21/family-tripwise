@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-134",
+  "venue": "Garfield Park Conservatory",
+  "checked_on": "2026-10-13",
+  "date_basis": "inspected-source-text-not-policy-effective-date",
+  "evidence_class": "OFFICIAL_VISITOR_FACT",
+  "currency": "USD",
+  "unit": "person/general-admission",
+  "source_url": "https://garfieldconservatory.org/visit/",
+  "ticket_url": "https://garfieldconservatory.org/tickets/",
+  "rates": [
+    {"min_age": 0, "max_age": 6, "amount": null, "evidence_class": "NOT_ESTABLISHED"},
+    {"min_age": 7, "max_age": 17, "amount": 5, "evidence_class": "OFFICIAL_VISITOR_FACT"},
+    {"min_age": 18, "max_age": 64, "amount": 10, "evidence_class": "OFFICIAL_VISITOR_FACT"},
+    {"min_age": 65, "max_age": null, "amount": 5, "evidence_class": "OFFICIAL_VISITOR_FACT"}
+  ],
+  "resident_admission": {"amount": 0, "eligibility": "each-visitor-verified-city-of-chicago-resident", "verification": "per-person resident ZIP and Chicago-address evidence"},
+  "closed_weekdays": ["Monday", "Tuesday"],
+  "childrens_garden": {"name": "EMG Children's Garden", "reservation_minutes": 30, "separate_reservation": true, "price": null, "availability": null},
+  "tax_fee_total": null,
+  "exact_visit_date": null,
+  "publication_date": null,
+  "exceptions": "Recheck holidays, available entry windows and discount eligibility; no dated availability inspected.",
+  "source_limits": [
+    "Ticket page has no admission or reservation controls in opened extraction and ordinary browser154; no unchanged retry, hidden API or alternative origin. Under-seven price and checkout fees remain unconfirmed.",
+    "Wednesday last entry conflicts: visit body19:15 versus normal footer19:30. Neither time is published here; Monday/Tuesday closure agrees.",
+    "Published-rate arithmetic is not checkout, all-day cost, guaranteed admission, review quality, quietness, rest or accessibility evidence."
+  ],
+  "scenarios": [
+    {"id": "visitors-older-children", "label": "Two visitors 18-64 + children 7 and 12", "ages": [35, 36, 7, 12], "residency": "nonresident"},
+    {"id": "visitors-younger-child", "label": "Two visitors 18-64 + children 3 and 7", "ages": [35, 36, 3, 7], "residency": "nonresident"},
+    {"id": "verified-residents", "label": "Two adults + children 3 and 7, all verified Chicago residents", "ages": [35, 36, 3, 7], "residency": "each-visitor-verified-city-of-chicago-resident"}
+  ],
+  "validation": {
+    "method": "Page-only source-grounded expert proxy, not actual-parent preference or satisfaction. Native filters, admission anchor and keyboard region used on actual1280/390/320; source/ticket URLs inspected, not re-opened after the blank ticket hold.",
+    "roles": [
+      {"task": "Two nonresident visitors18-64 with children7/12", "start": "YES", "reduce": "PARTIAL", "compare": "YES", "trace": "YES", "decide": "PARTIAL", "verify": "YES", "recover": "YES", "result": "Known-rate subtotal30 is now comparable with the resident waiver; exact date, fees, play-slot availability and other attractions' dated budgets remain unconfirmed."},
+      {"task": "Two nonresident visitors18-64 with children3/7", "start": "YES", "reduce": "PARTIAL", "compare": "PARTIAL", "trace": "YES", "decide": "PARTIAL", "verify": "YES", "recover": "YES", "result": "Known subtotal25 does not become a four-person price; unpricedage3 is visible directly below it on the narrow viewport."},
+      {"task": "Resident party with children3/7 and each person's Chicago address evidence", "start": "YES", "reduce": "PARTIAL", "compare": "YES", "trace": "YES", "decide": "PARTIAL", "verify": "YES", "recover": "YES", "result": "Published admission waiver is conditional on each visitor's verification, not a Chicago hotel or Illinois address; no verification data is collected."},
+      {"task": "Tuesday rain backup with children's-garden play", "start": "YES", "reduce": "YES", "compare": "PARTIAL", "trace": "YES", "decide": "PARTIAL", "verify": "YES", "recover": "YES", "result": "Ordinary Monday/Tuesday closure is visible before relying on the backup. Other indoor choices remain routes, not guaranteed opening; the children's garden has a separate30minute slot and unknown cost/availability."}
+    ],
+    "proofs": "/tmp/ft134-browser/pre-edit.json; local-final-responsive.json; final three-width comparison screenshots and console checks. Early repeated-fragment/Home-key loop positions were not successful navigation evidence; controlled fresh-document Enter routes supersede them.",
+    "native_first_run": "932tests/931pass/1historical-snapshot-equalityfailure, not finalgreen. Preserve immutableOctober1snapshot, amend exactscope to13 before editing its regression test, and re-run full suite; no source/snapshot rewriting.",
+    "remaining_production": "Only independent read-only consensus followed by exact guardedpush/Pages-marker-productionSEO/two exactassets and live filters/anchor/keyboard/warnings may establish public delivery."
+  },
+  "learning": {
+    "id": "LRN-232",
+    "family_decision": "Budget a greenhouse visit and avoid assuming an indoor option is open every weekday or includes children's play entry.",
+    "hypothesis": "Current Free/current admission and Yes rain labels answer a visitor family's admission and backup-day checks.",
+    "result": "REJECT; IMPLEMENT dated rates and eligibility, known-rate examples with unresolved younger-child/fee context, closure and separate garden slot. No new URL or CSV.",
+    "pre_edit": "Actual1280/390: Garfield card/map/mainrow vague cost, no numeric rate, Monday closure or30minute garden check; /tmp/ft134-browser/pre-edit.json.",
+    "evidence_class": "OFFICIAL_VISITOR_FACT_AND_PAGE_ONLY_PROXY",
+    "confidence": "High inspected rate and reservation distinctions; moderate expected task benefit; unknown complete ticket cost, availability or real-user/SEO effect.",
+    "lesson": "Missing age bands do not mean free entry. Resident waiver, paid general entry and a separate timed children's area are different checks.",
+    "falsification_trigger": "Changed rates/bands/eligibility/weekday/garden rule, readable checkout or a failed mobile/keyboard task.",
+    "review_scope": "Admission arithmetic and published booking rules only; no new subjective family-fit or online-review judgment. Other eleven attractions and July23 source clocks retained.",
+    "gsc": "Oct12API finalizedOct10 REUSED; priorOct11finalOct9, page/property orientation only; no CTR/demand diagnosis.",
+    "remaining_gate": "Focused/full/native task/different read-only PASS/exact release and production verification; under7, fee totals, dated entry and garden price/availability remain unknown."
+  }
+}

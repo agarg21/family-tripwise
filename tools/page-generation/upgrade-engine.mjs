@@ -7,6 +7,7 @@ const schemaStart = "<!-- schema:start -->";
 const schemaEnd = "<!-- schema:end -->";
 
 import { activityPages, stayPages, itineraryPages, teenPages } from "./upgrade-page-data.mjs";
+import { renderGarfieldAdmission } from "../garfield-admission.mjs";
 
 function esc(value) {
   return String(value ?? "")
@@ -280,7 +281,7 @@ function replaceBaseActivitySection(html, page) {
   const cards = page.activityCards.map((activity) => `          <article class="activity-card" data-tags="${esc(activity.tags.join(" "))}">
             <h3>${esc(activity.name)}</h3>
             <p>${esc(activity.summary)}</p>
-            <dl>
+${page.garfieldAdmission && activity.name === page.garfieldAdmission.evidence.venue ? '            <p><a href="#garfield-admission">Admission and reservation checks</a></p>\n' : ""}            <dl>
               <div><dt>Age fit</dt><dd>${esc(activity.age)}</dd></div>
               <div><dt>Time</dt><dd>${esc(activity.time)}</dd></div>
               <div><dt>Cost</dt><dd>${esc(activity.cost)}</dd></div>
@@ -444,7 +445,7 @@ ${page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFr
 ${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
       </section>`}
 
-${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">
+${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n\n" : ""}${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>

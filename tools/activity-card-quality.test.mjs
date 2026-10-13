@@ -31,7 +31,7 @@ test("all 37 cards retain exact source-model values and only page-level provenan
 });
 
 test("deterministic 333-field queue prioritizes exact budgets without inventing prices or dates", async () => {
-  const data = records(), before = JSON.stringify(data), report = activityCardQualityReport(data, { today: "2026-10-01" });
+  const data = records(), before = JSON.stringify(data), report = activityCardQualityReport(data, { today: "2026-10-13" });
   assert.deepEqual(report.summary, { retained_pages: 3, attractions: 37, fields: 333, atomic_source_gaps: 333, unpriced_exact_visit_budgets: 37 });
   assert.equal(report.automatic_fact_renewal, false); assert.equal(report.automatic_publication, false);
   assert.equal(report.other_activity_models.length, 3);
@@ -39,8 +39,11 @@ test("deterministic 333-field queue prioritizes exact budgets without inventing 
   assert.ok(report.tasks.every(task => task.verified_on === null && task.page_note_age.state === "review-due"));
   assert.ok(report.tasks.some(task => task.retained_value === "Free"));
   assert.equal(JSON.stringify(data), before);
-  assert.deepEqual(report, activityCardQualityReport(records(), { today: "2026-10-01" }));
-  assert.deepEqual(report, JSON.parse(await readFile(new URL("../ops/page-quality/2026-10-01-activity-cards.json", import.meta.url), "utf8")));
+  assert.deepEqual(report, activityCardQualityReport(records(), { today: "2026-10-13" }));
+  const historical = JSON.parse(await readFile(new URL("../ops/page-quality/2026-10-01-activity-cards.json", import.meta.url), "utf8"));
+  assert.deepEqual(historical, activityCardQualityReport(historical.pages, { today: historical.as_of }));
+  const previous = historical.pages.find(p => p.page_url.endsWith("chicago-with-kids.html"));
+  assert.equal(previous.cards.find(c => c.name === "Garfield Park Conservatory").cost, "Free or current admission");
   report.pages[0].cards[0].name = "changed"; assert.equal(JSON.stringify(data), before);
 });
 
@@ -88,10 +91,10 @@ test("CLI/API parity, strict options and immutable output including sentinel fil
   const directory = await mkdtemp(join(tmpdir(), "tripwise-card-quality-"));
   try {
     const output = join(directory, "new/report.json");
-    const summary = JSON.parse(execFileSync(process.execPath, [cli, "--date", "2026-10-01", "--output", output], { encoding: "utf8" }));
+    const summary = JSON.parse(execFileSync(process.execPath, [cli, "--date", "2026-10-13", "--output", output], { encoding: "utf8" }));
     assert.equal(summary.fields, 333); assert.equal(summary.public_changes, false);
     const before = await readFile(output, "utf8");
-    assert.deepEqual(JSON.parse(before), activityCardQualityReport(records(), { today: "2026-10-01" }));
+    assert.deepEqual(JSON.parse(before), activityCardQualityReport(records(), { today: "2026-10-13" }));
     assert.throws(() => execFileSync(process.execPath, [cli, "--output", output], { stdio: "pipe" }), /already exists/);
     assert.equal(await readFile(output, "utf8"), before);
     const sentinel = join(directory, "sentinel"); await writeFile(sentinel, "preserve");
