@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-230 - Share typed room evidence with on-page comparisons - 2026-10-13
+
+FT-IMP-133 [bounded maintenance/task audit](../docs/research/family-room-table-records-2026-10-13.json). Family decision: compare six-person apartments and named connected configurations without reconstructing price, party, stay and source conditions from display CSV cells. REJECT the hypothesis that the current joined tool exposes typed records; IMPLEMENT one-category records with nested public plans through the same ownership, source, task and filter pipeline. Nine London categories/seven priced/fifteen plan-or-unknown rows are coverage counts, not recommendations or demand. Citadines October3 budget and all prior dates/context retained, not renewed; Metropole/Canary family unpriced, not zero.
+
+MAINTAINED_EVIDENCE_AUDIT_AND_TASK_PROXY, not new source collection, real-parent preference or SEO lift. High deterministic parity/context confidence, moderate maintenance benefit. Existing CSV golden bytes, changed-task noninheritance, historical dates, input detachment, complete price/fee/age limits and fail-closed output controls are acceptance checks. Lesson: tables and exports need the same typed evidence join, not retyped facts or parsed display strings. Falsify wrong inheritance, lost context, input mutation, unsafe writes or a failed actual page task. Shared output only; London077 remains a candidate with entrance/rest/materiality/corpus and public review/QA/release gates. Native focused/full and different read-only review required before guarded push; no public page or new CSV.
+
 ## LRN-229 - Put Cancun room comparison before the specific party case - 2026-10-13
 
 FT-IMP-132 [bounded task](../docs/research/cancun-glance-first-task-2026-10-13.json). Current public1280/390/320 comparison1359/2607/3109px, firstroom1828/3228/3775 behind setup and grandparents case, no top grandparents route. REJECT already-glance-first hypothesis; IMPLEMENT exact six-room table before setup and grandparents, native top grandparents/offer links and existing exports secondary. Complete price-party-date-fee/room/age/context remains, not a new CSV or room fact.

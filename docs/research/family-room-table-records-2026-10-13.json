@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-133",
+  "learning": "LRN-230",
+  "checked_on": "2026-10-13",
+  "evidence_class": "MAINTAINED_EVIDENCE_AUDIT_AND_TASK_PROXY",
+  "family_decision": "Compare a six-person apartment or named connected configuration without reconstructing prices, conditions and dates from display-oriented CSV cells.",
+  "hypothesis": "The existing joined comparison has a structured, category-owned output suitable for on-page consumers.",
+  "pre_edit_result": "REJECT: family-room-comparison exposes CSV-only API/CLI. The validated join exists, but consumers otherwise parse display strings or recreate the join. This is an internal maintenance dependency, not measured reader preference or a verified public defect.",
+  "decision": "IMPLEMENT one shared structured output through the existing validated pipeline; PRESERVE public pages and London077 publication status.",
+  "implementation": {
+    "module": "tools/family-room-comparison.mjs",
+    "single_api": "roomComparisonRecords(pack, party, asOf, prices, filters)",
+    "joined_api": "roomComparisonsRecords(packs, explicitPartyAndStay, asOf, prices, filters)",
+    "cli": "Append --format json to the existing complete room-comparison command. CSV remains the default; JSON is opt-in. Existing exclusive research-only output protection applies to both formats.",
+    "unit": "One record per named category, with nested public rate plans. Category counts are not recommendation counts; plan counts are not independent property coverage.",
+    "preserved": ["Record ownership and all source/price validators", "Requested individual ages and exact stay", "Published versus conditional capacity and full original configurations", "Kitchen, connection, bedding, conflicts and next checks", "Price status, observed date, currency, unit, actual priced category and configuration", "Engine age input, nightly/stay amounts, taxes/fees, deposit, meals, cancellation and limitations", "Member exclusion, future/stale evidence handling and changed-task noninheritance", "Budget/cancellation checks and filtered research limitations", "Input nonmutation and detached output snapshots"]
+  },
+  "scenario": {
+    "adults": 2,
+    "child_ages": [4, 8, 12, 15],
+    "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"},
+    "basis": "Researcher-defined proxy, not a real parent task or reservation acceptance"
+  },
+  "packs": [
+    "docs/research/london-six-person-comparison-2026-10-02.json",
+    "docs/research/london-aldgate-six-person-task-2026-10-02.json",
+    "docs/research/london-bridge-six-person-task-2026-10-02.json",
+    "docs/research/london-connected-six-person-task-2026-10-02.json",
+    "docs/research/london-canary-family-task-2026-10-02.json",
+    "docs/research/london-citadines-six-person-task-2026-10-03.json"
+  ],
+  "price_records": [
+    "docs/research/london-marlin-six-person-price-observation-2026-10-02.json",
+    "docs/research/london-limehouse-six-person-price-observation-2026-10-02.json",
+    "docs/research/london-aldgate-six-person-price-2026-10-02.json",
+    "docs/research/london-bridge-six-person-price-2026-10-02.json",
+    "docs/research/london-connected-six-person-price-2026-10-02.json",
+    "docs/research/london-canary-family-price-2026-10-02.json",
+    "docs/research/london-citadines-six-person-price-2026-10-03.json"
+  ],
+  "source_dates": "All original category and booking observations reused at their September30/October2/October3 dates. October13 is the audit/screening date, not renewal. No current source or denied source was requested.",
+  "integrated_checks": {
+    "categories": 9,
+    "priced_categories": 7,
+    "public_plan_or_unpriced_rows": 15,
+    "citadines_nightly_equivalents_gbp": [527.20, 585.20],
+    "citadines_price_basis": "Historical October3 observation for one named apartment, the exact two-adult/four-child task and November8-13 five nights; complete original fee, payment, deposit, cancellation and age-input context remains nested. Not a current quote or seasonal range.",
+    "metropole_and_canary_family": "Unpriced, not zero; no count-only or adjacent-category inheritance.",
+    "default_csv_pre_edit_sha256": "e169a6a9cbd58539f88dfd34077ddc0be2bdd53f5dc9015f2a7464629e972e0b",
+    "combined_filters_csv_pre_edit_sha256": "397c74837c4a701ecdde23d6638eb558459dcebdf8e432416468fdf819487b13",
+    "golden_basis": "Captured before editing from the actual base module, same six packs/seven price files, October13 screening date and explicit task. Filter control: published kitchen, not-excluded capacity, GBP500 nightly budget, six dining seats. Both outputs must remain byte-identical.",
+    "task_controls": ["Changed adults, ages or stay must not inherit prices", "Reordered equivalent ages match", "November4 output preserves original dates and marks sources/prices historical", "Bad ownership, mixed destinations and invalid late price records fail before output, including filtered records", "Member plans remain excluded", "Returned records can be mutated without changing any input evidence", "Unknown dining seats remain, not proof of six usable seats", "JSON API/CLI parity and default CSV parity", "Research-output overwrite and public-site symlink writes fail closed"],
+    "browser_applicability": "No UI/site/public file changes. Desktop/mobile/keyboard and production visual gates remain mandatory for any future page consumer; no browser or usability result is claimed here."
+  },
+  "gsc": {"classification": "REUSED", "latest": "2026-10-12T19:48:27.188Z", "finalized_through": "2026-10-10", "prior": "2026-10-11T16:19:30.924Z", "prior_finalized_through": "2026-10-09", "limit": "Property/page orientation only; no aligned query-cohort, CTR diagnosis, new API collection or SEO-lift claim. Historical 34-URL inspection and July sitemap inventory do not cover all current35 URLs."},
+  "confidence": "High deterministic identity/context/parity and fail-closed checks; moderate expected maintenance benefit; unknown reader preference, competition, demand or SEO effect.",
+  "reusable_lesson": "On-page comparisons should consume the same typed category/price join as other outputs. Do not parse display-oriented cells or maintain a second set of facts for a table.",
+  "remaining_gate": "This closes the structured-output dependency only. London077 still needs bounded corpus/maintenance qualification, current distinct-job SERP/materiality/noexistingfit evidence, rest/entrance checks and claim-limited public design/source review/QA/release. Metropole exact-age pricing, Bridge flexible eligibility and sofa/extras remain unknown. Dated014 city delegation is available, not evidence or publication completion.",
+  "next_eligible_action": "Resolve London's actual-entrance/rest or bounded corpus ownership/materiality gate without repeating completed price collection or denied sources. A source-backed public comparison may retain explicit unknowns; this output alone does not select or qualify it.",
+  "falsification_trigger": "Any wrong-category/party/stay inheritance, changed CSV bytes, loss of uncertainty or source dates, input mutation, unsafe output path, or an actual page task showing the structured fields insufficient."
+}

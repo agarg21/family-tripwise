@@ -82,7 +82,7 @@ function cancellationDateCheck(rate, asOf) {
   return [`Cancellation deadline date check ${rate.cancellation_deadline_date_relation}: recorded hotel-local date ${rate.cancellation_deadline_local_date}; comparison date ${asOf}; calendar dates only, no timezone conversion or current cancellability/availability guarantee; recheck current rate terms`];
 }
 
-function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budget, minimum_dining_seats }) {
+function comparisonRecords(pack, party, asOf, prices, { kitchen, capacity, budget, minimum_dining_seats }) {
   const screened = screenRoomPack(pack, party, asOf, prices);
   const stay = party.stay ?? pack.scenario?.stay;
   const nights = (Date.parse(stay?.departure) - Date.parse(stay?.arrival)) / 86400000;
@@ -93,11 +93,25 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budg
     if (capacity === "not-excluded" && room.screening === "OUTSIDE_PUBLISHED_LIMIT") return [];
     const dining = diningSeatScreen(pack.records[index], minimum_dining_seats, asOf, pack.refresh_days);
     if (dining?.excludes) return [];
-    const price = room.price;
-    return (price.rates ?? [null]).map(rate => [
-      pack.destination, room.hotel, room.category, room.screening, room.conditions.join("; "), JSON.stringify(pack.records[index].configurations),
+    return [{ ...room, destination: pack.destination, configurations: pack.records[index].configurations,
+      task: { adults: party.adults, child_ages: party.child_ages, stay }, nights, dining_seat_screen: dining,
+      rate_checks: (room.price.rates ?? [null]).map(rate => [
+        ...observedNightlyBudget(room.price, rate, budget, nights), ...cancellationDateCheck(rate, asOf)]),
+      research_scope: [pack.evidence_scope, room.limitation, room.price.limitation ?? "No exact-task public price observed",
+        ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : []),
+        ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : []),
+        ...(dining ? [`Dated dining seating ${dining.status}: requested minimum ${minimum_dining_seats}; ${dining.basis}; excludes only fresh recorded undersized counts, unknown and stale counts retained; not current equipment, usable seating geometry, meal fit or booking acceptance`] : [])]
+    }];
+  });
+}
+
+function roomComparisonRows(records) {
+  return records.flatMap(room => {
+    const { price, task, nights } = room, stay = task.stay;
+    return (price.rates ?? [null]).map((rate, index) => [
+      room.destination, room.hotel, room.category, room.screening, room.conditions.join("; "), JSON.stringify(room.configurations),
       room.sleeping_setup, room.kitchen, room.connection, room.checked_on, room.screened_on,
-      JSON.stringify({ adults: party.adults, child_ages: party.child_ages }), stay.arrival, stay.departure,
+      JSON.stringify({ adults: task.adults, child_ages: task.child_ages }), stay.arrival, stay.departure,
       nights, price.status, price.observed_on, price.currency ?? "Unknown", price.unit, rate?.plan ?? "Unpriced",
       rate?.stay_amount, rate?.nightly_average, price.booking_category,
       price.engine_party ? JSON.stringify(price.engine_party) : "Not observed",
@@ -105,11 +119,7 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budg
       price.deposit_basis ?? "Unknown", rate?.meals ?? "Unknown", rate?.cancellation ?? "Unknown",
       room.conflicts.join("; "), room.next_checks.join("; "), room.source_url, price.source_url,
       price.observation_limitation ?? price.missing_basis?.join("; ") ?? "Not observed",
-      [pack.evidence_scope, room.limitation, price.limitation ?? "No exact-task public price observed",
-        ...(kitchen === "published" ? ["Filtered by dated published kitchen evidence; not revalidated availability, equipment or family fit"] : []),
-        ...(capacity === "not-excluded" ? ["Filtered only current published-capacity exclusions; conditional, stale and unpriced rows are not booking acceptance or availability"] : []),
-        ...(dining ? [`Dated dining seating ${dining.status}: requested minimum ${minimum_dining_seats}; ${dining.basis}; excludes only fresh recorded undersized counts, unknown and stale counts retained; not current equipment, usable seating geometry, meal fit or booking acceptance`] : []),
-        ...observedNightlyBudget(price, rate, budget, nights), ...cancellationDateCheck(rate, asOf)].join("; ")
+      [...room.research_scope, ...room.rate_checks[index]].join("; ")
     ]);
   });
 }
@@ -117,11 +127,14 @@ function roomComparisonRows(pack, party, asOf, prices, { kitchen, capacity, budg
 const comparisonCsv = rows => [comparisonHeadings, ...rows].map(row => row.map(cell).join(",")).join("\n") + "\n";
 
 export function roomComparisonCsv(pack, party = pack.scenario, asOf = currentEasternDate(), prices = [], filters = {}) {
-  return comparisonCsv(roomComparisonRows(pack, party, asOf, prices, comparisonFilters(filters)));
+  return comparisonCsv(roomComparisonRows(comparisonRecords(pack, party, asOf, prices, comparisonFilters(filters))));
 }
 
-export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), prices = [], filters = {}) {
-  const selected = comparisonFilters(filters);
+export function roomComparisonRecords(pack, party = pack.scenario, asOf = currentEasternDate(), prices = [], filters = {}) {
+  return structuredClone(comparisonRecords(pack, party, asOf, prices, comparisonFilters(filters)));
+}
+
+function joinedComparisonRecords(packs, party, asOf, prices, selected) {
   const dense = values => {
     if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype || Object.hasOwn(values, Symbol.iterator)) return false;
     for (let i = 0; i < values.length; i++) if (!Object.hasOwn(values, i)) return false;
@@ -147,7 +160,15 @@ export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), pr
     if (!owner) throw new Error(`Unowned price observation: ${observation?.record_id ?? "invalid"}`);
     byPack.get(owner).push(observation);
   }
-  return comparisonCsv(packs.flatMap(pack => roomComparisonRows(pack, party, asOf, byPack.get(pack), selected)));
+  return packs.flatMap(pack => comparisonRecords(pack, party, asOf, byPack.get(pack), selected));
+}
+
+export function roomComparisonsCsv(packs, party, asOf = currentEasternDate(), prices = [], filters = {}) {
+  return comparisonCsv(roomComparisonRows(joinedComparisonRecords(packs, party, asOf, prices, comparisonFilters(filters))));
+}
+
+export function roomComparisonsRecords(packs, party, asOf = currentEasternDate(), prices = [], filters = {}) {
+  return structuredClone(joinedComparisonRecords(packs, party, asOf, prices, comparisonFilters(filters)));
 }
 
 async function researchOutputPath(output) {
@@ -171,7 +192,7 @@ export function parseRoomComparisonOptions(input) {
   const args = [...input];
   const packPath = args.shift();
   if (!packPath || packPath.startsWith("--")) throw new Error("Provide a room configuration JSON path");
-  let date = currentEasternDate(), output, dateSet = false, pricesSet = false, packsSet = false, kitchenSet = false, capacitySet = false;
+  let date = currentEasternDate(), output, format = "csv", formatSet = false, dateSet = false, pricesSet = false, packsSet = false, kitchenSet = false, capacitySet = false;
   const filters = {};
   const pricePaths = [], additionalPackPaths = [];
   const taskOptions = new Map();
@@ -179,6 +200,8 @@ export function parseRoomComparisonOptions(input) {
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--date" && !dateSet && args[i + 1] && !args[i + 1].startsWith("--")) {
       date = args[++i]; dateSet = true;
+    } else if (args[i] === "--format" && !formatSet && ["csv", "json"].includes(args[i + 1])) {
+      format = args[++i]; formatSet = true;
     } else if (args[i] === "--output" && !output && args[i + 1] && !args[i + 1].startsWith("--")) {
       output = args[++i];
     } else if (args[i] === "--prices" && !pricesSet && args[i + 1] && !args[i + 1].startsWith("--")) {
@@ -225,11 +248,11 @@ export function parseRoomComparisonOptions(input) {
     task = { adults: Number(adults), child_ages: ages.map(Number), stay: { arrival, departure } };
   }
   if (additionalPackPaths.length && !task) throw new Error("Joined packs require an explicit family/stay task");
-  return { packPath, additionalPackPaths, date, output, pricePaths, task, filters };
+  return { packPath, additionalPackPaths, date, output, pricePaths, task, filters, format };
 }
 
 async function main() {
-  const { packPath, additionalPackPaths, date, output, pricePaths, task, filters } = parseRoomComparisonOptions(process.argv.slice(2));
+  const { packPath, additionalPackPaths, date, output, pricePaths, task, filters, format } = parseRoomComparisonOptions(process.argv.slice(2));
   const pack = JSON.parse(await readFile(packPath, "utf8"));
   const packs = [pack];
   for (const path of additionalPackPaths) packs.push(JSON.parse(await readFile(path, "utf8")));
@@ -240,15 +263,18 @@ async function main() {
     prices.push(...observations);
   }
   const party = task ?? pack.scenario;
-  const csv = packs.length === 1 ? roomComparisonCsv(pack, party, date, prices, filters) : roomComparisonsCsv(packs, party, date, prices, filters);
+  const content = format === "json"
+    ? JSON.stringify({ schema_version: 1, destination: pack.destination, as_of: date,
+      records: packs.length === 1 ? roomComparisonRecords(pack, party, date, prices, filters) : roomComparisonsRecords(packs, party, date, prices, filters) }, null, 2) + "\n"
+    : packs.length === 1 ? roomComparisonCsv(pack, party, date, prices, filters) : roomComparisonsCsv(packs, party, date, prices, filters);
   if (output) {
     const path = await researchOutputPath(output);
     await mkdir(dirname(path), { recursive: true });
-    await writeFile(await researchOutputPath(path), csv, { flag: "wx" });
+    await writeFile(await researchOutputPath(path), content, { flag: "wx" });
     console.log(JSON.stringify({ as_of: date, categories: packs.reduce((total, p) => total + p.records.length, 0), packs: packs.length, output, public_changes: false,
       ...(filters.kitchen === "published" || filters.capacity === "not-excluded" || filters.budget || filters.minimum_dining_seats ? { filters, categories_are_input_count: true } : {}),
       task: { adults: party.adults, child_ages: party.child_ages, stay: party.stay } }));
-  } else process.stdout.write(csv);
+  } else process.stdout.write(content);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url))
