@@ -6,6 +6,7 @@ import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs
 import { cities, agePages } from "./page-generation/city-data.mjs";
 import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { writeOrlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
+import { writeOrlandoActivityPage } from "./page-generation/orlando-activity-page.mjs";
 import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
 import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
@@ -459,7 +460,7 @@ ${staticNav("./")}
       </section>
       <section class="container trust-panel about-summary" aria-label="Review status">
         <p><strong>Last updated:</strong> September 26, 2026</p>
-        <p><strong>Current scope:</strong> Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio, with lodging comparisons for Cancun, Orlando, Washington DC, Boston and Puerto Vallarta. Puerto Vallarta also labels a Nayarit regional comparison separately. Coverage varies by destination. We update pages as official sources, planning needs, and review findings improve the research.</p>
+        <p><strong>Current scope:</strong> Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio. Orlando has an activity decision hub and a lodging comparison; Cancun, Washington DC, Boston and Puerto Vallarta currently have lodging comparisons. Puerto Vallarta also labels a Nayarit regional comparison separately. Coverage varies by destination. We update pages as official sources, planning needs, and review findings improve the research.</p>
         <p><strong>Meet the contributors:</strong> <a href="#apoorva-garg">Apoorva Garg, founder</a> and <a href="#miles-rowan">Miles Rowan, AI research contributor</a>.</p>
       </section>
       <section class="container page-section methodology-section" aria-labelledby="contributors">
@@ -601,6 +602,7 @@ writeSite("about.html", aboutPage());
 writeSite("contributors/miles-rowan.html", milesProfilePage());
 writeCancunResortPage(writeSite);
 writeOrlandoSuitePage(writeSite);
+writeOrlandoActivityPage(writeSite);
 writeWashingtonDcFamilyHotelsPage(writeSite);
 writeBostonFamilyHotelsPage(writeSite);
 writePuertoVallartaFamilyResortsPage(writeSite);
@@ -658,7 +660,7 @@ ${staticNav("./")}
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Current scope">
-        <p><strong>Ten destinations:</strong> San Diego, Las Vegas, New York City, Chicago and San Antonio have stay, activity and itinerary guides. Cancun, Orlando, Washington DC, Boston and Puerto Vallarta currently focus on family lodging comparisons.</p>
+        <p><strong>Ten destinations:</strong> San Diego, Las Vegas, New York City, Chicago and San Antonio have stay, activity and itinerary guides. Orlando has activity and lodging comparisons. Cancun, Washington DC, Boston and Puerto Vallarta currently focus on family lodging comparisons.</p>
         <p><a href="#destinations">Browse all ten destinations</a> · <a href="./where-to-stay/cancun-family-resorts.html">Cancun resort rooms and club ages</a> · <a href="./where-to-stay/orlando-family-hotels.html">Orlando family suites and fees</a> · <a href="./where-to-stay/washington-dc-family-hotels.html">Washington DC suites and dated prices</a> · <a href="./where-to-stay/boston-family-hotels.html">Boston rooms, kitchens and dated prices</a> · <a href="./where-to-stay/puerto-vallarta-family-resorts.html">Puerto Vallarta resort rooms and dated costs</a></p>
         <p><strong>How to use this site:</strong> Start with the page that matches your hardest constraint. If lodging drives the trip, use where-to-stay first. If kid age or weather drives the trip, use things-to-do first. If you already know the city and base, use the itinerary page to avoid overpacking the day.</p>
       </section>
@@ -702,7 +704,7 @@ ${cities.map((city) => `          <article class="activity-card">
           <article class="activity-card">
             <h3>Orlando with kids</h3>
             <p>Family lodging comparison: Disney, Universal and off-site suites, room-capacity checks, published fees and dated water benefits.</p>
-            <p><a href="./where-to-stay/orlando-family-hotels.html">Compare Orlando family hotels</a></p>
+            <p><a href="./where-to-stay/orlando-family-hotels.html">Compare Orlando family hotels</a> · <a href="./things-to-do/orlando-with-kids.html">Choose Orlando family activities</a></p>
           </article>
           <article class="activity-card">
             <h3>Washington DC with kids</h3>
@@ -815,6 +817,7 @@ writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://familytripwise.com/contributors/miles-rowan.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/cancun-family-resorts.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/orlando-family-hotels.html</loc></url>
+  <url><loc>https://familytripwise.com/things-to-do/orlando-with-kids.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/boston-family-hotels.html</loc></url>
   <url><loc>https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html</loc></url>

@@ -973,6 +973,8 @@ Result:
 
 ### SRR-034: Orlando All-Ages Candidate, Persona, Source, And Page Review
 
+October13 current decision: FT-PUB-006 selected under the October12 dated delegated scope. [Current review](../docs/research/orlando-activity-page-review.md) joins official admission/return/short-visit fields, screens25 roles and preserves limited sampled-review evidence; no generic age-list, default CSV or extra modifier URL. Publication awaits native/task/different independent review and verified release, not another generic approval. Older authority and hypothetical inventory below are history.
+
 Status: ready only after user approval for `FT-PUB-006`
 
 Roadmap ID: `FT-PUB-006`

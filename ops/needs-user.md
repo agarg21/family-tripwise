@@ -1,5 +1,7 @@
 # Needs User
 
+October13 FT-PUB-006: no new generic city approval is requested. Fresh October12 FT-OPS-014 authority delegates this bounded Orlando activity selection during the fixed sprint. Exact evidence/native/task/independent-review/release gates remain operator work. Direct review-body throttling affects only two sampled-review sources; no unchanged retry or alternate-tool bypass, and no project-wide blocker. Public launch is not yet claimed. Protected lodging and all human/paid/security gates unchanged; current evidence in `docs/research/orlando-activity-page-review.md`.
+
 October9 Chicago050 normal preview prerequisite is resolved by the user's successful normal access confirmation and successful same documented preview checks. Final responsive/download/native QA, independent read-only release review and production verification are operator-owned, not another user permission request. No historical denied-origin retry or security change.
 
 October9 direct user approved Washington DC, Boston and Puerto Vallarta by name for expansion/publication subject to evidence and QA. No repeat city-authorization request is needed for these three; approval is not a launch, paid-budget expansion, unsupported claim or larger batch approval. The user also explicitly confirmed the documented local preview opens. Normal in-app preview of the isolated San Diego075 candidate now succeeds; final responsive QA/review/release remains operator work, not another generic permission gate. Earlier unanswered-preview/city paragraphs are history. Sprint expiry is unchanged.

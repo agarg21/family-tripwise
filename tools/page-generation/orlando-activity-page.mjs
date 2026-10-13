@@ -1,0 +1,63 @@
+import { activityPath, checkedOn, activities, sources, reviewSignals } from "./orlando-activity-data.mjs";
+import { contributorCredit } from "./contributors.mjs";
+const e = value => String(value).replace(/([a-zA-Z])(\d)/g,"$1 $2").replace(/(\d)([a-zA-Z])/g,"$1 $2").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+const labels = {osc:"Science Center admission / visit",kids:"KidsTown age guidance",crayola:"Crayola visit FAQ",crayolaHours:"Crayola hours",sea:"SEA LIFE visit planning",seaFaq:"SEA LIFE FAQ",seaHours:"SEA LIFE dated hours",mennello:"Mennello visitor information",leu:"Leu admission / hours",gator:"Gatorland hours / prices",gatorRules:"Gatorland visit rules",lake:"City park information"};
+const sourceLinks = record => record.sourceIds.map(id=>`<a href="${sources[id]}">${labels[id]}</a>`).join("; ");
+export function orlandoActivityPage() {
+  const title="Things to Do in Orlando With Kids: Parks, Rest Days & Indoor Choices";
+  const schema={"@context":"https://schema.org","@type":"WebPage",name:title,url:`https://familytripwise.com/${activityPath}`,dateModified:checkedOn,publisher:{"@type":"Organization",name:"Family Tripwise"}};
+  return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${e(title)}</title><meta name="description" content="Choose an Orlando family outing with dated age-based admission, indoor and outdoor alternatives, short-visit limits and leave-and-return checks.">
+<link rel="canonical" href="https://familytripwise.com/${activityPath}"><link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">${JSON.stringify(schema)}</script>
+<style>
+body.orlando-activities h1{font-size:36px;line-height:1.15;letter-spacing:0}
+body.orlando-activities .intro{padding-top:28px;padding-bottom:16px}
+body.orlando-activities .page-section{padding-top:24px;padding-bottom:24px}
+body.orlando-activities h2{font-size:26px;letter-spacing:0}
+body.orlando-activities h3{font-size:21px;letter-spacing:0}
+body.orlando-activities .routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px}
+body.orlando-activities .routes p{margin:0}
+body.orlando-activities .table-wrap{overflow:auto;max-width:100%;border:1px solid #d6dfdc}
+body.orlando-activities table{border-collapse:collapse;min-width:1040px;width:100%;font-size:15px}
+body.orlando-activities th,body.orlando-activities td{padding:14px;vertical-align:top;border-bottom:1px solid #d6dfdc;line-height:1.5}
+body.orlando-activities th[scope=row]{position:sticky;left:0;background:#fff;color:#172521;min-width:180px;width:180px;z-index:1}
+body.orlando-activities th[scope=row] a{color:#0b4946}
+body.orlando-activities article{scroll-margin-top:80px;border-top:1px solid #d6dfdc;padding:20px 0}
+body.orlando-activities section[id]{scroll-margin-top:80px}
+body.orlando-activities .source-note{font-size:14px}
+body.orlando-activities figure{margin:24px 0;max-width:760px}
+body.orlando-activities figure img{width:100%;height:auto;display:block}
+body.orlando-activities figcaption{font-size:13px}
+body.orlando-activities :focus-visible{outline:3px solid #14776c;outline-offset:3px}
+@media(max-width:700px){body.orlando-activities .routes{grid-template-columns:1fr}body.orlando-activities h1{font-size:30px}body.orlando-activities article,body.orlando-activities section[id]{scroll-margin-top:130px}}
+</style></head>
+<body class="orlando-activities"><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav aria-label="Orlando planning"><a href="../where-to-stay/orlando-family-hotels.html">Orlando hotels</a><a href="../about.html">About</a></nav></header>
+<main><section class="container intro"><p class="eyebrow">Florida family days</p><h1>Orlando With Kids</h1>
+${contributorCredit()}<p>Choose one anchor: a booked park, an indoor outing, or a shorter outdoor break. A rest day need not mean another full-price ticket.</p><p class="source-note">Rules and published rates checked October 13, 2026. Research-based, not firsthand. Exact dates, fees and return travel still need checking.</p><p><a href="#compare">Compare outings</a> · <a href="#split-day">Lunch / rest breaks</a> · <a href="#park-day">Park-day checks</a></p></section>
+<section class="container page-section" id="compare" aria-labelledby="compare-title"><h2 id="compare-title">Compare Non-Park Choices</h2>
+<p>Examples: two adults 18+ and children 3/10, one visit, USD, October 13 published rates. Not dated availability or complete day costs. Discounts, meals, transport and optional activities are excluded; tax/fee uncertainty stays beside each price. Ticket ages are not enjoyment scores.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Orlando activity comparison"><table><caption>Seven outings by area, child ticket basis and the check that changes the choice</caption><thead><tr><th scope="col">Outing / area</th><th scope="col">Age / admission basis</th><th scope="col">Two adults + ages3/10</th><th scope="col">Weather / time</th><th scope="col">Before choosing</th></tr></thead><tbody>
+${activities.map(r=>`<tr><th scope="row"><a href="#${r.id}">${e(r.name)}</a><p>${e(r.role)}</p></th><td>${e(r.age)}</td><td>${e(r.price)}</td><td>${e(r.weather)}. ${e(r.time)}.</td><td>${e(r.blocker)} <a href="#${r.id}">Details &amp; sources</a></td></tr>`).join("\n")}
+</tbody></table></div></section>
+<section class="container page-section" aria-labelledby="start-title"><h2 id="start-title">Start With Your Day</h2><div class="routes">
+<p><strong>Park is the priority:</strong> <a href="#park-day">check the booked park, heights and day budget</a> before adding another outing.</p>
+<p><strong>Nap or meal break:</strong> <a href="#split-day">compare leave-and-return terms</a>; a hotel reset is not automatically practical.</p>
+<p><strong>Teen plus younger sibling:</strong> <a href="#science-center">start with shared interests and separate exhibit ages</a>, not an all-ages promise.</p>
+<p><strong>Pool / resort day:</strong> <a href="../where-to-stay/orlando-family-hotels.html">check room setup and included water access</a> before buying another ticket.</p>
+<p><strong>Lower-cost day:</strong> <a href="#mennello">Mennello's small admission example</a> or <a href="#lake-eola">a self-chosen park break</a>; transport and extras are separate.</p>
+<p><strong>No car / short return:</strong> choose by the table's area, then <a href="#base-check">verify the whole return journey</a>. No transfer time is assumed.</p>
+</div></section>
+<section class="container page-section" id="split-day"><h2>Can You Leave for Lunch or Rest?</h2><p>A 120-minute indoor visit with children 3/10 is not the same as completing every exhibit. These are published suggestions and return rules, not confirmed opening or transport plans.</p><div class="table-wrap" tabindex="0" role="region" aria-label="Indoor split-day checks"><table><caption>Short visit and leave-and-return checks</caption><thead><tr><th scope="col">Indoor choice</th><th scope="col">Two-hour time block</th><th scope="col">Leaving and returning</th><th scope="col">Meal constraint</th></tr></thead><tbody>
+${activities.slice(0,3).map(r=>`<tr><th scope="row"><a href="#${r.id}">${e(r.name)}</a></th><td>${r.duration ? (120 < r.duration[0] ? "Shorter than" : "At the lower end of")+` its ${r.duration[0]/60}-${r.duration[1]/60} hour suggestion; not a completion promise.` : "General official suggested duration not established."}</td><td>${e(r.returnRule ?? "Return policy unknown in inspected sources. Do not treat staying until closing as re-entry.")}</td><td>${e(r.meal)}</td></tr>`).join("\n")}
+</tbody></table></div><p>Wednesday: Science Center normally closes except OCPS breaks. Crayola and SEA LIFE calendars still need the exact date. A published daily pattern does not confirm your visit.</p></section>
+<section class="container page-section" id="park-day"><h2>When a Park Day Is Worth the Commitment</h2><p>Keep the park your family already chose as that day's anchor. Before buying, list each child's must-do experience, measure current heights and compare the actual ticket product, cancellation terms, transport and paid extras. If the younger child cannot do the older child's priority, decide whether splitting adults is workable before paying.</p><p>Use the operator's planning pages: <a href="https://disneyworld.disney.go.com/experience-updates/park-reservations/">Walt Disney World reservation rules</a>; <a href="https://www.universalorlando.com/web/en/us/plan-your-visit">Universal Orlando planning</a>; <a href="https://seaworld.com/orlando/park-info/">SeaWorld park information</a>. These are verification routes, not our assessment of every ride or a guaranteed park recommendation.</p><p>Do not turn a spare afternoon into a multi-park plan by default. A park ticket, shopping-district visit and rest day solve different jobs.</p></section>
+<section class="container page-section"><h2>Details That Change the Decision</h2>${activities.map(r=>`<article id="${r.id}"><h3>${e(r.name)}</h3><p>${e(r.detail)}</p><p class="source-note">${sourceLinks(r)}. Published facts inspected ${checkedOn}; recheck by October27 or sooner on a notice. Exact visit availability and whole-day cost remain unverified.</p></article>`).join("\n")}
+<article id="disney-springs"><h3>Disney Springs Is Not a Theme Park Day</h3><p>The official visit page lists complimentary self-parking, but shopping, meals and entertainment can add costs. Its advance-arrival guidance for reservations does not establish transfer time from your hotel. Treat it as a flexible district visit, not a promise of a free full day or a rainproof backup. <a href="${sources.springs}">Official visit and transport information</a>, checked October13.</p></article></section>
+<section class="container page-section" id="base-check"><h2>Protect the Return-to-Room Plan</h2><p>Choose the outing area first: downtown / Loch Haven, the Florida Mall, International Drive, or your booked park. Then check your hotel pickup, vehicle or transit schedule, parking, waiting time, child-seat needs and arrival buffer. No row here promises a stroller route, a short drive or a nap-friendly journey.</p><p>If returning is essential, confirm both admission re-entry and travel in both directions. Crayola's stamp answers only the admission part. When either is unknown, keep a continuous visit or a different outing as the fallback rather than counting on a split day.</p><p><a href="../where-to-stay/orlando-family-hotels.html">Compare Orlando room space, kitchens, dated hotel prices and water-feature limits</a>. The hotel page's dated observations are not renewed by this activity audit.</p>
+<figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Lake_eola_in_Orlando_Florida_with_fountain.jpg" width="1440" height="1080" loading="lazy" decoding="async" alt="Lake Eola fountain and downtown Orlando buildings."><figcaption>Lake Eola, David Akers. <a href="https://commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg">Wikimedia Commons, public domain</a>. Capture date not supplied; not evidence of current park conditions.</figcaption></figure></section>
+<section class="container page-section" id="review-signals"><h2>What the Sampled Reviews Can Tell Us</h2><p>These are dated online-review signals, not Family Tripwise reviews, firsthand visits or a representative rating. Retrieved October13; direct review bodies were throttled, so only the search-exposed excerpt sample is retained.</p>${reviewSignals.map(r=>`<p><strong>${e(r.venue)}:</strong> ${e(r.note)} ${e(r.dates)}. ${e(r.basis)}. <a href="${r.url}">Review source</a>.</p>`).join("\n")}<p>No comparable review sample was established for the other choices. Their inclusion is an official-fact / interest screen, not proof of family satisfaction. Ask what your children want to do; age tags alone cannot answer that.</p></section>
+</main><footer class="site-footer"><p>Family Tripwise compares dated research, official facts and clearly separated review signals. Confirm important visit details before booking.</p><p><a href="../about.html">How our guides are built</a></p></footer></body></html>\n`;
+}
+export function writeOrlandoActivityPage(writeSite) { writeSite(activityPath,orlandoActivityPage()); }

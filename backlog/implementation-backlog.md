@@ -452,7 +452,7 @@ Gate:
 
 ### IMP-041: Research And Publish The Orlando All-Ages Family Activity Hub
 
-Status: ready only after the August existing-city depth hold is lifted and explicit user approval is given for a new destination
+Status: selected October13,2026 under FT-OPS-014 fresh dated delegated expansion authority; exact current scope and gates in [activity review](../docs/research/orlando-activity-page-review.md) and roadmap. Native/task/independent-review/production gates remain, not shipped yet. Earlier maximum scope below is historical; current registered29 exact paths are authoritative.
 
 Roadmap ID: `FT-PUB-006`
 
