@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-147",
+  "learning": "LRN-231",
+  "checked_on": "2026-10-13",
+  "destination": "London UK",
+  "record_id": "citadines-trafalgar-two-bedroom",
+  "evidence_class": "ONLINE_REVIEW_SIGNAL",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12, 15], "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"}, "basis": "Researcher-defined proxy, not an actual family stay or participant test"},
+  "family_decision": "Does the named six-capacity duplex provide evidence-supported sleeping and midday-rest separation for this party, rather than only a capacity label and dated price?",
+  "hypothesis": "Inspected two-bedroom family reviews establish six-person sofa use and dependable midday rest.",
+  "sources": {
+    "tripcom": {
+      "url": "https://uk.trip.com/hotels/london-hotel-detail-730597/citadines-trafalgar-square-london/review.html",
+      "checked_on": "2026-10-13",
+      "status": "body-inspected",
+      "evidence_class": "ONLINE_REVIEW_SIGNAL",
+      "publication_date": null,
+      "collection_independence": null,
+      "limits": "Hosting labels reviews verified; not independently established here. Selected body reports, not all reviews or a representative distribution. Management replies and numeric scores excluded."
+    },
+    "tripadvisor": {
+      "url": "https://www.tripadvisor.com/Hotel_Review-g186338-d193043-Reviews-Citadines_Trafalgar_Square_London-London_England.html",
+      "checked_on": "2026-10-13",
+      "status": "body-inspected",
+      "evidence_class": "ONLINE_REVIEW_SIGNAL",
+      "publication_date": null,
+      "collection_independence": null,
+      "limits": "Opened body differs from search-exposed newer material; accept only inspected metadata. A historical general stair tip is not an exact-category field observation. AI summary, selected five-bubble highlights, scores and management replies excluded."
+    },
+    "official-category": {
+      "url": "https://www.discoverasr.com/en/citadines/united-kingdom/citadines-trafalgar-square-london/2-bedroom-apartment",
+      "checked_on": "2026-10-13",
+      "status": "category-detail-omitted-in-extraction",
+      "evidence_class": "OFFICIAL_SOURCE_EXTRACTION_LIMIT",
+      "publication_date": null,
+      "collection_independence": null,
+      "limits": "Gallery/navigation body lacks category capacity, duplex and feature text. HTTP/body access is not revalidation; October3 native category facts and prices are not renewed. No repeat browser/booking attempt or access workaround."
+    }
+  },
+  "method": {
+    "selection": "Two directly inspected named Two Bedrooms Apartment family reports, one smaller-category family sleep conflict, one historical general stair tip. Purposeful task sample, not random or representative.",
+    "accepted_surface": "Opened source body and displayed metadata, not search snippet, author profile, management reply or generated platform summary.",
+    "privacy": "Public-safe short paraphrases only; no names, profile links, copied review passages or numeric ratings retained.",
+    "date_basis": "Collection date differs from displayed review publication and stay month; exact stay days unavailable. No exact retrieval timestamp was captured.",
+    "observed_at": null,
+    "source_searches": "Qualitative London-six/hotel/apartment discovery and Citadines review search; no controlled US ranking, demand or representative SERP overlap result.",
+    "access": "Ordinary public web reader on newly selected Citadines review sources; no account, contact, booking, paid call, denied-source retry or alternate-tool/origin bypass. Earlier Tate/competitor/other-provider holds remain untouched."
+  },
+  "signals": [
+    {
+      "id": "two-bedroom-june",
+      "source_id": "tripcom",
+      "published_on": "2026-08-18",
+      "stay_month": "2026-06",
+      "displayed_category": "Two Bedrooms Apartment",
+      "category_match": "named-two-bedroom-label-not-reservation-verification",
+      "displayed_trip_type": "Family",
+      "occupants": null,
+      "child_ages": null,
+      "paraphrase": "A family report praises the location and room comfort; occupancy, sofa use and rest timing are unspecified.",
+      "supports": ["one subjective named-category comfort/location signal"],
+      "does_not_support": ["six occupants", "sofa comfort", "midday rest", "current room condition"]
+    },
+    {
+      "id": "two-bedroom-december",
+      "source_id": "tripcom",
+      "published_on": "2026-01-19",
+      "stay_month": "2025-12",
+      "displayed_category": "Two Bedrooms Apartment",
+      "category_match": "named-two-bedroom-label-not-reservation-verification",
+      "displayed_trip_type": "Family",
+      "occupants": null,
+      "child_ages": null,
+      "paraphrase": "An older family theatre-trip report values location and service while distinguishing the finish from more polished accommodation.",
+      "supports": ["historical named-category location/service/value perception"],
+      "does_not_support": ["six occupants", "sofa allocation", "internal layout", "midday quietness"]
+    },
+    {
+      "id": "one-bedroom-april",
+      "source_id": "tripcom",
+      "published_on": "2026-05-09",
+      "stay_month": "2026-04",
+      "displayed_category": "One Bedroom Apartment",
+      "category_match": "different-category",
+      "displayed_trip_type": "Family",
+      "occupants": 4,
+      "child_ages": null,
+      "paraphrase": "A four-person family report liked cooking facilities but described dishwasher upkeep problems and persistent night noise.",
+      "supports": ["smaller-category maintenance/sleep conflict worth checking"],
+      "does_not_support": ["two-bedroom noise prevalence", "six-person rest", "current equipment condition", "confirmed noise source"]
+    },
+    {
+      "id": "historical-stair-tip",
+      "source_id": "tripadvisor",
+      "published_on": "2025-12",
+      "stay_month": "2025-11",
+      "displayed_category": null,
+      "category_match": "unresolved-general-one-and-two-bedroom-tip",
+      "displayed_trip_type": "Solo",
+      "occupants": null,
+      "child_ages": null,
+      "paraphrase": "A historical solo report mentions a spiral stair between living space and bedrooms, with luggage difficulty.",
+      "supports": ["internal-level and luggage verification question"],
+      "does_not_support": ["every category has those stairs", "current exact layout", "step-free or stroller verdict", "family suitability", "route or safety assurance"]
+    }
+  ],
+  "excluded": [
+    {"surface": "Tripadvisor search exposure", "reason": "Newer two-storey family complaint and newer photo captions absent from opened body; not accepted or merged into the signal set. Search/opened-body date and content mismatch is preserved, not resolved by another domain or browser."},
+    {"surface": "Tripadvisor generated summary and positive highlights", "reason": "Generated/curated aggregate is not an independently sampled guest corpus or an additional report."},
+    {"surface": "Management replies", "reason": "Provider assertions are not guest corroboration or verified changes to physical layout, repairs or service."},
+    {"surface": "Other London accommodation search results", "reason": "Mixed roles and result geography do not establish distinct six-person material demand or current US paired-SERP ownership. No competitor facts or community identities copied."}
+  ],
+  "preserved_evidence": {
+    "docs/research/london-citadines-six-person-task-2026-10-03.json": "18a5f48a0faafa07d81c9722d7ee08f11eaac8989fb06274100dd6494ec1e651",
+    "docs/research/london-citadines-six-person-price-2026-10-03.json": "b34739217a7ca68c3e785b4aa1ef0b0819c6f1df71bab069ad17ebf3f186daa0",
+    "docs/research/london-six-person-review-conflicts-2026-10-02.json": "b8be36475bd89640a8852e917169e549ccdc0b278b2e379a4295f27e088f908f"
+  },
+  "budget_boundary": "Retain own October3 public GBP527.20/585.20 per whole apartment/night equivalents for two adults and children4/8/12/15, November8-13 five nights, with original plans/stay totals/tax-fee/deposit/age and sofa unknowns. This audit does not renew, calculate a complete group cost or treat review value opinions as price evidence.",
+  "result": {
+    "verdict": "REJECT",
+    "decision": "CANDIDATE with limited Citadines category-linked review evidence now collected; PRESERVE public URLs and exact-six sofa/rest claims as unknown.",
+    "target_category_signals": 2,
+    "six_person_signals": 0,
+    "midday_rest_signals": 0,
+    "finding": "Named-category positive reports do not identify six occupants or sofa use. The smaller-category sleep conflict and historical stair tip qualify verification questions, not a quietness or accessibility verdict.",
+    "confidence": "High source/category/date distinctions; low representativeness and current-category applicability; unknown actual family rest, satisfaction and SEO effects.",
+    "reusable_lesson": "A family label or positive room adjective cannot establish the requested occupancy, sleeping allocation or rest timing. Current search snippets also cannot renew older opened-body evidence.",
+    "next_gate": "Current exact-category layout/sofa-use/entrance evidence or explicitly unknown claim-limited public scope; independent current paired-US intent/materiality/noexistingfit and bounded corpus maintenance. Metropole exact-age prices/Bridge flexible eligibility/extras remain separate.014 delegates dated city selection, not facts or launch readiness.",
+    "next_eligible_action": "Qualify a bounded London comparison owner and maintainable public claim set against current material-job evidence, retaining entrance/rest unknowns unless permitted evidence resolves them; do not repeat this selected sample or unchanged denied sources.",
+    "falsification_trigger": "A readable newer named-category report identifies actual six occupants and sofa/rest use, verified category layout changes, or current job/competition evidence supports or rejects a bounded comparison."
+  },
+  "release_scope": "Seven docs/test/ledger/operator paths only; no public consumer or browser/desktop/mobile/keyboard delivery claim. All original room/price/review records and public assets immutable. Native focused/full/different read-only review then exact guarded docs/test push required; no Pages wait.",
+  "gsc": {"classification": "REUSED", "latest_collected": "2026-10-12T19:48:27.188Z", "finalized_through": "2026-10-10", "prior_collected": "2026-10-11T16:19:30.924Z", "prior_finalized_through": "2026-10-09", "limit": "Page/property orientation only, not aligned query-cohort/CTR/demand or current35-URL coverage proof."}
+}
