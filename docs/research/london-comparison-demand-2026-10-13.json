@@ -1,0 +1,1118 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-148",
+  "action_source": "manifest",
+  "collected_at": "2026-10-13T12:05:10.641Z",
+  "market": "US",
+  "location_code": 2840,
+  "language_code": "en",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 5,
+    "prior_spend_usd": 0.29612
+  },
+  "calls": [
+    {
+      "endpoint": "dataforseo_labs/google/keyword_overview/live",
+      "label": "keyword-overview",
+      "status": "success",
+      "cost_usd": 0.01224,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "london hotels for family of 5",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "london hotels for family of 6",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "label": "london hotels connecting rooms",
+      "status": "success",
+      "cost_usd": 0.002,
+      "status_code": 20000
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "london hotels for family of 5",
+      "search_volume": 170,
+      "keyword_difficulty": 0,
+      "cpc": 4.16,
+      "metrics_updated_at": "2026-09-16 03:11:41 +00:00",
+      "monthly_searches": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 170
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 170
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 170
+        },
+        {
+          "year": 2026,
+          "month": 2,
+          "search_volume": 210
+        },
+        {
+          "year": 2026,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 12,
+          "search_volume": 140
+        },
+        {
+          "year": 2025,
+          "month": 11,
+          "search_volume": 140
+        },
+        {
+          "year": 2025,
+          "month": 10,
+          "search_volume": 140
+        },
+        {
+          "year": 2025,
+          "month": 9,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 8,
+          "search_volume": 140
+        },
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 140
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 480
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 480
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 6,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 5,
+          "search_volume": 480
+        },
+        {
+          "year": 2024,
+          "month": 4,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 3,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 2,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 1,
+          "search_volume": 880
+        },
+        {
+          "year": 2023,
+          "month": 12,
+          "search_volume": 390
+        },
+        {
+          "year": 2023,
+          "month": 11,
+          "search_volume": 390
+        },
+        {
+          "year": 2023,
+          "month": 10,
+          "search_volume": 320
+        },
+        {
+          "year": 2023,
+          "month": 9,
+          "search_volume": 480
+        },
+        {
+          "year": 2023,
+          "month": 8,
+          "search_volume": 320
+        },
+        {
+          "year": 2023,
+          "month": 7,
+          "search_volume": 390
+        },
+        {
+          "year": 2023,
+          "month": 6,
+          "search_volume": 390
+        },
+        {
+          "year": 2023,
+          "month": 5,
+          "search_volume": 480
+        },
+        {
+          "year": 2023,
+          "month": 4,
+          "search_volume": 390
+        },
+        {
+          "year": 2023,
+          "month": 3,
+          "search_volume": 480
+        },
+        {
+          "year": 2023,
+          "month": 2,
+          "search_volume": 480
+        },
+        {
+          "year": 2023,
+          "month": 1,
+          "search_volume": 720
+        },
+        {
+          "year": 2022,
+          "month": 12,
+          "search_volume": 210
+        },
+        {
+          "year": 2022,
+          "month": 11,
+          "search_volume": 210
+        },
+        {
+          "year": 2022,
+          "month": 10,
+          "search_volume": 260
+        },
+        {
+          "year": 2022,
+          "month": 9,
+          "search_volume": 210
+        },
+        {
+          "year": 2022,
+          "month": 8,
+          "search_volume": 170
+        },
+        {
+          "year": 2022,
+          "month": 7,
+          "search_volume": 140
+        },
+        {
+          "year": 2022,
+          "month": 6,
+          "search_volume": 210
+        },
+        {
+          "year": 2022,
+          "month": 5,
+          "search_volume": 210
+        },
+        {
+          "year": 2022,
+          "month": 4,
+          "search_volume": 170
+        },
+        {
+          "year": 2022,
+          "month": 3,
+          "search_volume": 140
+        },
+        {
+          "year": 2022,
+          "month": 2,
+          "search_volume": 140
+        },
+        {
+          "year": 2022,
+          "month": 1,
+          "search_volume": 90
+        },
+        {
+          "year": 2021,
+          "month": 12,
+          "search_volume": 20
+        },
+        {
+          "year": 2021,
+          "month": 11,
+          "search_volume": 40
+        },
+        {
+          "year": 2021,
+          "month": 10,
+          "search_volume": 30
+        },
+        {
+          "year": 2021,
+          "month": 9,
+          "search_volume": 30
+        },
+        {
+          "year": 2021,
+          "month": 8,
+          "search_volume": 30
+        },
+        {
+          "year": 2021,
+          "month": 7,
+          "search_volume": 30
+        },
+        {
+          "year": 2021,
+          "month": 6,
+          "search_volume": 10
+        },
+        {
+          "year": 2021,
+          "month": 5,
+          "search_volume": 20
+        },
+        {
+          "year": 2021,
+          "month": 4,
+          "search_volume": 10
+        },
+        {
+          "year": 2021,
+          "month": 3,
+          "search_volume": 10
+        },
+        {
+          "year": 2021,
+          "month": 2,
+          "search_volume": 10
+        },
+        {
+          "year": 2021,
+          "month": 1,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 12,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 11,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 10,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 9,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 8,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 7,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 6,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 5,
+          "search_volume": 30
+        },
+        {
+          "year": 2020,
+          "month": 4,
+          "search_volume": 30
+        },
+        {
+          "year": 2020,
+          "month": 3,
+          "search_volume": 50
+        },
+        {
+          "year": 2020,
+          "month": 2,
+          "search_volume": 170
+        },
+        {
+          "year": 2020,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2019,
+          "month": 12,
+          "search_volume": 90
+        },
+        {
+          "year": 2019,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2019,
+          "month": 10,
+          "search_volume": 70
+        },
+        {
+          "year": 2019,
+          "month": 9,
+          "search_volume": 70
+        },
+        {
+          "year": 2019,
+          "month": 8,
+          "search_volume": 50
+        },
+        {
+          "year": 2019,
+          "month": 7,
+          "search_volume": 90
+        },
+        {
+          "year": 2019,
+          "month": 6,
+          "search_volume": 110
+        },
+        {
+          "year": 2019,
+          "month": 5,
+          "search_volume": 90
+        },
+        {
+          "year": 2019,
+          "month": 4,
+          "search_volume": 140
+        },
+        {
+          "year": 2019,
+          "month": 3,
+          "search_volume": 110
+        },
+        {
+          "year": 2019,
+          "month": 2,
+          "search_volume": 90
+        },
+        {
+          "year": 2019,
+          "month": 1,
+          "search_volume": 110
+        },
+        {
+          "year": 2018,
+          "month": 12,
+          "search_volume": 70
+        },
+        {
+          "year": 2018,
+          "month": 11,
+          "search_volume": 50
+        },
+        {
+          "year": 2018,
+          "month": 10,
+          "search_volume": 50
+        }
+      ],
+      "data_state": "provider-estimate"
+    },
+    {
+      "keyword": "london hotels for family of 6",
+      "search_volume": null,
+      "keyword_difficulty": null,
+      "cpc": null,
+      "metrics_updated_at": null,
+      "monthly_searches": [],
+      "data_state": "unavailable-not-zero"
+    },
+    {
+      "keyword": "london hotels connecting rooms",
+      "search_volume": 170,
+      "keyword_difficulty": 0,
+      "cpc": 6.86,
+      "metrics_updated_at": "2026-09-12 03:57:14 +00:00",
+      "monthly_searches": [
+        {
+          "year": 2026,
+          "month": 8,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "search_volume": 90
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "search_volume": 110
+        },
+        {
+          "year": 2026,
+          "month": 5,
+          "search_volume": 170
+        },
+        {
+          "year": 2026,
+          "month": 4,
+          "search_volume": 210
+        },
+        {
+          "year": 2026,
+          "month": 3,
+          "search_volume": 140
+        },
+        {
+          "year": 2026,
+          "month": 2,
+          "search_volume": 170
+        },
+        {
+          "year": 2026,
+          "month": 1,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 12,
+          "search_volume": 90
+        },
+        {
+          "year": 2025,
+          "month": 11,
+          "search_volume": 90
+        },
+        {
+          "year": 2025,
+          "month": 10,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 9,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 8,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 1300
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 1600
+        },
+        {
+          "year": 2024,
+          "month": 7,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 6,
+          "search_volume": 480
+        },
+        {
+          "year": 2024,
+          "month": 5,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 4,
+          "search_volume": 390
+        },
+        {
+          "year": 2024,
+          "month": 3,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 2,
+          "search_volume": 390
+        },
+        {
+          "year": 2024,
+          "month": 1,
+          "search_volume": 480
+        },
+        {
+          "year": 2023,
+          "month": 12,
+          "search_volume": 260
+        },
+        {
+          "year": 2023,
+          "month": 11,
+          "search_volume": 260
+        },
+        {
+          "year": 2023,
+          "month": 10,
+          "search_volume": 320
+        },
+        {
+          "year": 2023,
+          "month": 9,
+          "search_volume": 260
+        },
+        {
+          "year": 2023,
+          "month": 8,
+          "search_volume": 320
+        },
+        {
+          "year": 2023,
+          "month": 7,
+          "search_volume": 320
+        },
+        {
+          "year": 2023,
+          "month": 6,
+          "search_volume": 210
+        },
+        {
+          "year": 2023,
+          "month": 5,
+          "search_volume": 390
+        },
+        {
+          "year": 2023,
+          "month": 4,
+          "search_volume": 260
+        },
+        {
+          "year": 2023,
+          "month": 3,
+          "search_volume": 320
+        },
+        {
+          "year": 2023,
+          "month": 2,
+          "search_volume": 390
+        },
+        {
+          "year": 2023,
+          "month": 1,
+          "search_volume": 390
+        },
+        {
+          "year": 2022,
+          "month": 12,
+          "search_volume": 170
+        },
+        {
+          "year": 2022,
+          "month": 11,
+          "search_volume": 260
+        },
+        {
+          "year": 2022,
+          "month": 10,
+          "search_volume": 140
+        },
+        {
+          "year": 2022,
+          "month": 9,
+          "search_volume": 140
+        },
+        {
+          "year": 2022,
+          "month": 8,
+          "search_volume": 170
+        },
+        {
+          "year": 2022,
+          "month": 7,
+          "search_volume": 140
+        },
+        {
+          "year": 2022,
+          "month": 6,
+          "search_volume": 170
+        },
+        {
+          "year": 2022,
+          "month": 5,
+          "search_volume": 170
+        },
+        {
+          "year": 2022,
+          "month": 4,
+          "search_volume": 140
+        },
+        {
+          "year": 2022,
+          "month": 3,
+          "search_volume": 90
+        },
+        {
+          "year": 2022,
+          "month": 2,
+          "search_volume": 110
+        },
+        {
+          "year": 2022,
+          "month": 1,
+          "search_volume": 70
+        },
+        {
+          "year": 2021,
+          "month": 12,
+          "search_volume": 20
+        },
+        {
+          "year": 2021,
+          "month": 11,
+          "search_volume": 50
+        },
+        {
+          "year": 2021,
+          "month": 10,
+          "search_volume": 30
+        },
+        {
+          "year": 2021,
+          "month": 9,
+          "search_volume": 20
+        },
+        {
+          "year": 2021,
+          "month": 8,
+          "search_volume": 20
+        },
+        {
+          "year": 2021,
+          "month": 7,
+          "search_volume": 20
+        },
+        {
+          "year": 2021,
+          "month": 6,
+          "search_volume": 10
+        },
+        {
+          "year": 2021,
+          "month": 5,
+          "search_volume": 20
+        },
+        {
+          "year": 2021,
+          "month": 4,
+          "search_volume": 50
+        },
+        {
+          "year": 2021,
+          "month": 3,
+          "search_volume": 70
+        },
+        {
+          "year": 2021,
+          "month": 2,
+          "search_volume": 40
+        },
+        {
+          "year": 2021,
+          "month": 1,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 12,
+          "search_volume": 40
+        },
+        {
+          "year": 2020,
+          "month": 11,
+          "search_volume": 50
+        },
+        {
+          "year": 2020,
+          "month": 10,
+          "search_volume": 70
+        },
+        {
+          "year": 2020,
+          "month": 9,
+          "search_volume": 70
+        },
+        {
+          "year": 2020,
+          "month": 8,
+          "search_volume": 50
+        },
+        {
+          "year": 2020,
+          "month": 7,
+          "search_volume": 50
+        },
+        {
+          "year": 2020,
+          "month": 6,
+          "search_volume": 70
+        },
+        {
+          "year": 2020,
+          "month": 5,
+          "search_volume": 70
+        }
+      ],
+      "data_state": "provider-estimate"
+    }
+  ],
+  "serps": [
+    {
+      "keyword": "london hotels for family of 5",
+      "checked_at": "2026-10-13 12:05:15 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "ai_overview",
+        "organic",
+        "people_also_ask",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "jessicalynnwrites.com",
+          "url": "https://jessicalynnwrites.com/2024/10/where-to-stay-in-london-with-a-family/"
+        },
+        {
+          "rank": 2,
+          "domain": "sixsuitcasetravel.com",
+          "url": "https://sixsuitcasetravel.com/london-big-family-hotels-sleep-5-6-7-8"
+        },
+        {
+          "rank": 3,
+          "domain": "community.ricksteves.com",
+          "url": "https://community.ricksteves.com/travel-forum/england-reviews/london-hotel-recomendation-for-a-family-of-5"
+        },
+        {
+          "rank": 4,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/uktravel/comments/1itisdx/where_to_stay_family_of_5/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.cntraveler.com",
+          "url": "https://www.cntraveler.com/gallery/best-family-friendly-hotels-london"
+        },
+        {
+          "rank": 6,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/LondonWithKids/posts/2475401636138511/"
+        },
+        {
+          "rank": 7,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/ShowTopic-g186338-i17-k14832067-London_Hotel_stay_for_a_family_of_5_3_nights_total-London_England.html"
+        },
+        {
+          "rank": 8,
+          "domain": "www.stjameshotelandclub.com",
+          "url": "https://www.stjameshotelandclub.com/en/rooms-suites/family-rooms?srsltid=AU7gw4VyJ4Ar_fPxJp0U8Itxbn02s4ZQ6t2KDEW8vVcRdSUo-sfogMbC"
+        },
+        {
+          "rank": 9,
+          "domain": "asuffolkmum.co.uk",
+          "url": "https://asuffolkmum.co.uk/5-great-family-friendly-hotels-in-london-with-a-swimming-pool/"
+        }
+      ]
+    },
+    {
+      "keyword": "london hotels for family of 6",
+      "checked_at": "2026-10-13 12:05:21 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "jessicalynnwrites.com",
+          "url": "https://jessicalynnwrites.com/2024/10/where-to-stay-in-london-with-a-family/"
+        },
+        {
+          "rank": 2,
+          "domain": "sixsuitcasetravel.com",
+          "url": "https://sixsuitcasetravel.com/london-big-family-hotels-sleep-5-6-7-8"
+        },
+        {
+          "rank": 3,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/Hotels-g186338-zff4-London_England-Hotels.html"
+        },
+        {
+          "rank": 4,
+          "domain": "thesaucemag.com",
+          "url": "https://thesaucemag.com/12-family-friendly-hotels-in-london/"
+        },
+        {
+          "rank": 5,
+          "domain": "community.ricksteves.com",
+          "url": "https://community.ricksteves.com/travel-forum/england-reviews/london-hotel-recomendation-for-a-family-of-5"
+        },
+        {
+          "rank": 6,
+          "domain": "www.cntraveler.com",
+          "url": "https://www.cntraveler.com/gallery/best-family-friendly-hotels-london"
+        },
+        {
+          "rank": 7,
+          "domain": "www.facebook.com",
+          "url": "https://www.facebook.com/groups/LondonWithKids/posts/2366184533726889/"
+        },
+        {
+          "rank": 8,
+          "domain": "www.mummytravels.com",
+          "url": "https://www.mummytravels.com/where-to-stay-in-london-with-kids/"
+        },
+        {
+          "rank": 9,
+          "domain": "www.stjameshotelandclub.com",
+          "url": "https://www.stjameshotelandclub.com/en/rooms-suites/family-rooms?srsltid=AU7gw4WxN7qjDOuetCgUUNkTw3qVHxC2anKF6IJPHhLulTsVRtn8Zt5H"
+        },
+        {
+          "rank": 10,
+          "domain": "asuffolkmum.co.uk",
+          "url": "https://asuffolkmum.co.uk/5-great-family-friendly-hotels-in-london-with-a-swimming-pool/"
+        }
+      ]
+    },
+    {
+      "keyword": "london hotels connecting rooms",
+      "checked_at": "2026-10-13 12:05:25 +00:00",
+      "result_types": [
+        "hotels_pack",
+        "organic",
+        "people_also_ask",
+        "related_searches"
+      ],
+      "organic": [
+        {
+          "rank": 1,
+          "domain": "www.reddit.com",
+          "url": "https://www.reddit.com/r/FATTravel/comments/1qu60qd/londons_best_connecting_rooms_a_neighborhood_guide/"
+        },
+        {
+          "rank": 2,
+          "domain": "www.expedia.com",
+          "url": "https://www.expedia.com/London-Hotels-Hotels-With-Adjoining-Rooms.0-0-d178279-tHotelswithAdjoiningRooms.Travel-Guide-Filter-Hotels"
+        },
+        {
+          "rank": 3,
+          "domain": "www.tripadvisor.com",
+          "url": "https://www.tripadvisor.com/HotelsList-London-Hotels-With-Adjoining-Rooms-zfp41583.html"
+        },
+        {
+          "rank": 4,
+          "domain": "www.stjameshotelandclub.com",
+          "url": "https://www.stjameshotelandclub.com/en/rooms-suites/interconnecting-rooms?srsltid=AU7gw4X_butXkIZOh1fu7KN6o_LSE-umQg3Fi8xHist6yoKvyqyu-Miv"
+        },
+        {
+          "rank": 5,
+          "domain": "www.rosewoodhotels.com",
+          "url": "https://www.rosewoodhotels.com/en/london/offers/family-moments"
+        },
+        {
+          "rank": 6,
+          "domain": "www.hilton.com",
+          "url": "https://www.hilton.com/en/connecting-rooms/"
+        },
+        {
+          "rank": 7,
+          "domain": "loveandlondon.com",
+          "url": "https://loveandlondon.com/london-hotels-with-adjoining-rooms/"
+        },
+        {
+          "rank": 8,
+          "domain": "www.millenniumhotels.com",
+          "url": "https://www.millenniumhotels.com/en/offers/europe/the-baileys-hotel-london-kensington/baileys-interconnecting-room/"
+        },
+        {
+          "rank": 9,
+          "domain": "www.royallancaster.com",
+          "url": "https://www.royallancaster.com/results/family-hotels-in-london/"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Provider estimates, not people or traffic forecasts",
+    "Null metrics are unknown, not zero",
+    "KD zero is not proof of easy ranking",
+    "Monthly history can lag launches; seasonality is not trend proof",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.01824,
+  "completed_at": "2026-10-13T12:05:26.316Z"
+}

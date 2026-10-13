@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-148",
+  "learning": "LRN-233",
+  "checked_on": "2026-10-13",
+  "destination": "London UK",
+  "evidence_class": "CURRENT_US_SEARCH_AND_MAINTAINED_EVIDENCE_AUDIT",
+  "family_decision": "Compare named larger-family apartments by bedrooms, sofa conditions, kitchen and a whole-configuration dated budget without treating published capacity as reservation acceptance or a low room rate as a rest winner.",
+  "hypothesis": "A capacity table alone adds enough value, and the roadmap's 140 figure establishes London six-person demand.",
+  "result": {
+    "verdict": "REJECT",
+    "decision": "IMPLEMENT one bounded London family-room comparison from the three supported apartment records; not a broad best-hotel ranking, standalone five/six/connecting-room variants, or a dependable-rest recommendation.",
+    "publication_eligible_scope": true,
+    "public_launch_complete": false,
+    "confidence": "High deterministic record binding, arithmetic and current US sample provenance; moderate bounded information-gain judgment; unknown booking acceptance, actual rest, reader preference, representativeness and SEO effect.",
+    "next_gate": "Register exact public implementation paths and London selection under FT-OPS-014, then source-derived desktop/mobile/keyboard task QA, focused/full native QA, a different independent read-only PASS and exact guarded release plus production verification. No generic city-approval question during this dated delegated scope.",
+    "falsification_trigger": "Changed terms/category/party/stay, an independently verified task failure, materially different replicated relevant SERPs, a competitor that already completes the same matched budget task, or inability to maintain the bounded three-record scope."
+  },
+  "search": {
+    "report": "docs/research/london-comparison-demand-2026-10-13.json",
+    "manifest": "docs/research/london-comparison-keywords-2026-10-13.json",
+    "market": "US",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "desktop",
+    "os": "windows",
+    "requested_depth": 10,
+    "calls": 4,
+    "reported_cost_usd": 0.01824,
+    "prior_reconciled_spend_usd": 0.29612,
+    "cumulative_reported_spend_usd": 0.31436,
+    "conservative_reserved_usd": 0.1306,
+    "budget_authority": "Existing FT-ACC-001 original USD5 cumulative/USD0.50 batch scope, not a new spending authorization. Prior seven paid reports have finite known costs, including failed toddler tasks; no unknown billed outcome or automatic retry. Manifest is part of the exact-path registration bundle before paid collection.",
+    "queries": [
+      {"keyword": "london hotels for family of 5", "monthly_estimate": 170, "metrics_updated_at": "2026-09-16 03:11:41 +00:00", "organic_rows": 9},
+      {"keyword": "london hotels for family of 6", "monthly_estimate": null, "metrics_updated_at": null, "organic_rows": 10},
+      {"keyword": "london hotels connecting rooms", "monthly_estimate": 170, "metrics_updated_at": "2026-09-12 03:57:14 +00:00", "organic_rows": 9}
+    ],
+    "overlap": [
+      {"pair": [0, 1], "url_intersection": 6, "url_union": 13},
+      {"pair": [0, 2], "url_intersection": 0, "url_union": 18},
+      {"pair": [1, 2], "url_intersection": 0, "url_union": 19}
+    ],
+    "normalization": "URL hostname removes www. only; path removes trailing slash; query/hash excluded. Unique sets, not rank weighted. Country domains and subdomains remain distinct.",
+    "job_interpretation": "The five/six pair shares the same two leading larger-family lodging pages plus four other URLs, supporting one geographic lodging owner rather than modifier splits. Connecting results emphasize named properties, directories and booking-channel connection conditions; zero overlap alone does not establish a second URL. Current forms and actual returned row counts retained; one sample is not a universal ranking claim.",
+    "materiality": "170 provider-estimated US monthly searches for the five-person lodging task supports a modest bounded family-room comparison, not a volume forecast. Six-person volume remains unknown, not 140 or zero. Five-person and connecting figures are not summed; broad family-hotel demand is not reassigned to six-person or activity intent.",
+    "attribution_correction": "077 previously called family-of6 US140/KD0. Maintained103 London-six metrics are unknown; prior140 refers to an all-inclusive-family-six query. Correct the roadmap attribution, not the immutable earlier data or source dates. KD0 does not prove easy ranking."
+  },
+  "competitor_body_audit": [
+    {
+      "url": "https://jessicalynnwrites.com/2024/10/where-to-stay-in-london-with-a-family/",
+      "checked_on": "2026-10-13",
+      "sample_role": "Current US rank1 in both five/six samples",
+      "displayed_publication_date": null,
+      "paraphrase": "Mixed personal-stay and researched list with room capacities and location groupings; budget explicitly not the selection basis. Two membership-only illustrations do not create a matched public-party budget.",
+      "limit": "Inspected article body only; linked property/review/booking details not tested. No author identity, quoted prose, property rates or firsthand authority adopted."
+    },
+    {
+      "url": "https://sixsuitcasetravel.com/london-big-family-hotels-sleep-5-6-7-8",
+      "checked_on": "2026-10-13",
+      "sample_role": "Current US rank2 in both five/six samples",
+      "displayed_publication_date": null,
+      "paraphrase": "Directory exposes 32 results, first15, room-capacity and kitchen/bedding tags, map and compare controls. No same-party/same-stay nightly observation visible in the inspected listing body.",
+      "limit": "Controls, details, pagination and full-site prices not tested; do not claim the entire site lacks budgets or verified evidence. Numeric ratings, hotel facts and review counts not adopted."
+    },
+    {
+      "url": "https://roomsthatfit.com/guides/london-hotels-family-of-five-near-tube",
+      "checked_on": "2026-10-13",
+      "sample_role": "Separate current qualitative discovery, not a ranked US-result body",
+      "displayed_publication_date": "2026-08-20",
+      "paraphrase": "Three-property glance table already separates room categories and evidence limitations, but exact occupancy is unconfirmed and no matched dated family-rate example appears in the inspected body.",
+      "limit": "No linked dossiers or booking controls inspected; no legal, location, cost or suitability claim transferred."
+    },
+    {
+      "url": "https://www.shouthotels.com/london-hotels-family-of-5/",
+      "checked_on": "2026-10-13",
+      "sample_role": "Separate current qualitative discovery, not a ranked US-result body",
+      "displayed_publication_date": "2026-09-09",
+      "displayed_updated_date": "2026-09-14",
+      "paraphrase": "Three named room options and a capacity table distinguish category limits, extra beds and requested connections. No matched dated same-party full-configuration public-plan budget appears in the inspected body.",
+      "limit": "No linked legal/property evidence or booking controls inspected; conflicting legal/route claims across competitors are not resolved or adopted as facts."
+    }
+  ],
+  "information_gain": "A joined exact-category table with bedrooms/sofa/kitchen, independent source dates, same reference family/stay public-plan nightly and stay amounts, cancellation/tax/deposit context and selected dated review conflicts. Capacity tables alone, generic legal advice, approximate nearest-station claims and more property names do not differentiate.",
+  "ownership": {
+    "existing_clean_fit": false,
+    "canonical_count_at_audit": 35,
+    "london_owner_at_audit": false,
+    "basis": "Current 35-canonical sitemap has no London URL; other-city lodging owners cannot cleanly answer London named-category comparison. Home/About remain discovery and trust, not a detailed London lodging owner. Shared research exports are not a public indexable hotel comparison.",
+    "proposed_owner": "where-to-stay/london-family-hotels.html",
+    "separate_urls_rejected": ["five-person variant", "six-person variant", "suite-versus-connecting-room explainer", "London activity or itinerary page"],
+    "authorization": "Fresh October12 FT-OPS-014 delegates qualified London selection/publication during the fixed window; record exact London action before public edits. No destructive indexability change, extra spending or batch over three approved."
+  },
+  "maintained_output": {
+    "adapter": "tools/family-room-comparison.mjs:roomComparisonsRecords",
+    "input_manifest": "docs/research/family-room-table-records-2026-10-13.json",
+    "screened_on": "2026-10-13",
+    "scenario": {"adults": 2, "child_ages": [4, 8, 12, 15], "stay": {"arrival": "2026-11-08", "departure": "2026-11-13"}},
+    "joined_categories": 9,
+    "priced_categories": 7,
+    "public_plan_or_unpriced_rows": 15,
+    "eligible_initial_ids": ["marlin-queen-street-two-bedroom", "marlin-limehouse-two-bedroom", "citadines-trafalgar-two-bedroom"],
+    "initial_operators": ["Marlin", "Citadines/ASR"],
+    "initial_public_plans": 6,
+    "initial_price_nightly_equivalents_gbp": [[406.98, 452.2], [308.7, 343], [527.2, 585.2]],
+    "price_basis": "One whole apartment/configuration per night, November8-13 five nights, actual two adults and children4/8/12/15. Queen/Lime observedOctober2, CitadinesOctober3. Marlin uses three-adult/three-child age-band counts without individual-age confirmation; Citadines submits exact individual ages but adult classification cutoff unestablished. Not typical seasonal ranges, current quotes, full-extra totals or a five-person price.",
+    "record_dates": {"marlin-queen-street-two-bedroom": {"category": "2026-09-30", "price": "2026-10-02"}, "marlin-limehouse-two-bedroom": {"category": "2026-10-02", "price": "2026-10-02"}, "citadines-trafalgar-two-bedroom": {"category": "2026-10-03", "price": "2026-10-03"}},
+    "reviews": ["docs/research/london-six-person-review-conflicts-2026-10-02.json", "docs/research/london-citadines-rest-review-2026-10-13.json"],
+    "review_scope": "Selected guest signals with original stay/publication/category/occupancy and partnership limits; no rating, recurrence, representative coverage, sofa-six/rest evidence or firsthand Family Tripwise review. No new review collection or date renewal here.",
+    "deferred_ids": ["marlin-aldgate-two-bedroom-one-sofa", "marlin-london-bridge-two-bedroom-one-sofa", "one-hundred-shoreditch-rooms-for-six", "hilton-london-metropole-four-queen-connecting", "marlin-canary-wharf-family-two-sofas", "marlin-canary-wharf-penthouse-one-sofa"],
+    "deferral_basis": "Not enough task-linked reviewed family-fit corpus for a broad recommendation. Metropole exact-age price, Bridge flexible eligibility and Family-variant identity/pricing remain separate. Named connection and prices exist for Shoreditch, but no channel-specific guarantee or scoped review audit is inferred. Do not promote all nine records because they validate.",
+    "allowed_claims": ["Dated published bedroom/bed/sofa/kitchen description with capacity conditions", "Original matched reference-task public-plan amounts and complete tax/fee/deposit/cancellation limitations", "Selected dated review paraphrases with task applicability and conflict labels", "Rest, entrance, actual sleeping allocation and extra charges explicitly unknown"],
+    "forbidden_claims": ["Best, safest, quietest or representative city ranking", "Verified six-person comfort or dependable midday rest", "Exact stroller/entrance/step-free route verdict", "Current booking availability, child-age acceptance or complete final cost", "A six-person quote is also a five-person quote", "A named connected category guarantees connection in every channel"]
+  },
+  "maintenance": {
+    "owner": "Master operator, existing single writer and heartbeat",
+    "bounded_scope": "Three initial categories/two operators/six public plans/two maintained selected-review records. Existing typed adapter and unchanged original source records drive output, not retyped page facts or CSV parsing.",
+    "category_refresh_days": 30,
+    "price_refresh_days": 14,
+    "review_refresh_days": 60,
+    "next_price_checks": ["Queen/Lime October16", "Citadines October17"],
+    "category_checks": ["Queen October30", "Lime November1", "Citadines November2"],
+    "new_quote_required_for": ["changed adults or child ages", "changed dates", "different category/sofa variant", "different channel or public-plan eligibility"],
+    "fallback": "Retain explicitly dated historical budget context rather than delete useful amounts or silently renew dates; expose policy/source gaps. If a critical supported fact conflicts, downgrade or hold that row; do not add another property to meet a quota.",
+    "capacity_assessment": "Bounded scope reuses already validated maintained sources and joins; no new collection system or nine-property review burden. This is an operator-scoped capacity judgment, not a measured maintenance-time guarantee. Existing-city defects retain priority."
+  },
+  "reusable_lesson": "Qualify a claim-limited comparison, not every imaginable hotel/rest verdict. Search variants can share one owner while party-specific prices cannot. A competitor table changes the information-gain bar; a mismatched demand number must not survive in the roadmap.",
+  "release_scope": "Nine docs/test/ledger/operator paths, including immutable new paid receipts; only077 evidence/decision/next_gate/next_eligible_run may change among older actions. No public consumer, desktop/mobile/keyboard or production delivery claim. Focused/full native and different independent review plus exact guarded docs push required before this eligibility decision is release-clean.",
+  "gsc": {"classification": "REUSED", "latest_collected": "2026-10-12T19:48:27.188Z", "finalized_through": "2026-10-10", "prior_collected": "2026-10-11T16:19:30.924Z", "prior_finalized_through": "2026-10-09", "limit": "Orientation only; not query cohort, CTR diagnosis or London visibility proof."}
+}
