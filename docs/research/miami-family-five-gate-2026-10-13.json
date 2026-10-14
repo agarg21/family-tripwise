@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-151",
+  "learning_unit": "LRN-242",
+  "checked_on_eastern": "2026-10-13",
+  "source_access_on_utc": "2026-10-14",
+  "destination": "Miami",
+  "authorization": "FT-OPS-014 fresh October12 dated delegation; city selected for lodging qualification, not an automatic launch or spending expansion",
+  "decision": "CANDIDATE",
+  "public_ready": false,
+  "family_task": {
+    "adults": 2,
+    "child_ages": [4, 8, 12],
+    "job": "Compare a kitchen-equipped base with a beach-oriented suite without mistaking bed count for accepted occupancy or a two-adult teaser for a family price",
+    "reference_stay": {"arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "status": "next-collection-basis-not-observed-availability"}
+  },
+  "demand": {
+    "record": "docs/research/miami-family-five-demand-2026-10-13.json",
+    "estimates": [
+      {"query": "family friendly hotels in miami", "average_monthly_us": 1000, "metrics_updated_at": "2026-09-14 15:19:47 +00:00"},
+      {"query": "best family hotels in miami", "average_monthly_us": 480, "metrics_updated_at": "2026-09-13 00:04:31 +00:00"}
+    ],
+    "organic_counts": [10, 8],
+    "shared_exact_urls": 5,
+    "union_exact_urls": 13,
+    "jaccard": 0.38461538461538464,
+    "ownership_result": "Both samples support one lodging-selection job; no separate family-five modifier page or activity demand established",
+    "limits": "Provider estimates are not additive users, forecast traffic, easy-ranking evidence or current October measurement. Histories end August2026. Eight results in the second sample are not ten. Miami Beach and Surfside results require explicit geography.",
+    "paid_receipt": {"successful_calls": 3, "batch_usd": 0.01624, "prior_usd": 0.34636, "cumulative_usd": 0.3626, "batch_ceiling_usd": 0.5, "cumulative_ceiling_usd": 5, "automatic_retries": 0}
+  },
+  "existing_owner": {
+    "current_canonicals": 36,
+    "miami_owner": null,
+    "result": "No Miami destination page in current sitemap. Other-city owners cannot answer property-specific Miami lodging. An eventual single where-to-stay owner is a candidate, not a registered public URL.",
+    "ranked_body": {
+      "url": "https://bridgesandballoons.com/cool-places-to-stay-in-miami-beach-with-kids/",
+      "published_update": "2026-05-07",
+      "observed": "Rank1 in both samples. Body distinguishes two personally stayed hotels from additional shortlisted hotels; includes rooms, beach and pool discussion and a relative-price statement.",
+      "task_gap": "Opened main body does not provide matched five-person acceptance, kitchen equipment, mandatory fees and dated exact-category nightly prices in a normalized comparison.",
+      "limits": "One inspected ranking body is not a whole-SERP weakness audit or proof of superiority. The publisher's firsthand reports are theirs, not ours. Format novelty alone does not qualify publication."
+    }
+  },
+  "properties": [
+    {
+      "id": "residence-inn-miami-beach-surfside",
+      "name": "Residence Inn Miami Beach Surfside",
+      "area": "Surfside; 9200 Collins Avenue, not South Beach or Downtown Miami",
+      "category": "Two-queen-plus-sofa category to verify; exact product not confirmed",
+      "official": {
+        "url": "https://www.marriott.com/en-us/hotels/miaxb-residence-inn-miami-beach-surfside/rooms/",
+        "class": "OFFICIAL_PROPERTY_FACT",
+        "published_update": null,
+        "observed": "Room page lists king or two queens, sofas and kitchenette with full refrigerator, dishwasher and microwave; complimentary hot breakfast. Beach is across the street.",
+        "maximum_occupancy": null,
+        "limits": "Largest-occupancy FAQ answer is a dash. Exact selected category, five-person acceptance, enclosed bedroom, cooking hob/oven and complete mandatory charges are not confirmed. General kitchen wording does not guarantee every room's cooking facilities."
+      },
+      "booking_observation": {
+        "url": "https://www.expedia.com/Miami-Hotels-Residence-Inn-By-Marriott-Miami-Beach-Surfside.h11255332.Hotel-Information",
+        "class": "OTA_PROPERTY_TEXT_NOT_SELECTED_QUOTE",
+        "displayed_fees": [
+          {"kind": "destination", "amount": 37.74, "currency": "USD", "unit": "per accommodation per night"},
+          {"kind": "resort", "amount": 36.38, "currency": "USD", "unit": "per accommodation per night"},
+          {"kind": "optional self parking", "amount": 41, "currency": "USD", "unit": "per day"}
+        ],
+        "fee_resolution": "UNRESOLVED: source lists destination and resort charges together; do not sum or assume one replaces the other without selected-rate confirmation. Tax inclusion may vary and source warns charges can change.",
+        "nightly_family_quote": null,
+        "excluded_teaser": "Two-adult generic lowest-price FAQ, different October date and unspecified category; not retained as a family-five planning band",
+        "reviews": [
+          {"posted_on": "2026-10-06", "stay_month": "2026-09", "signal": "Positive value and location near beach/town"},
+          {"posted_on": "2026-08-26", "stay_month": "2026-08", "signal": "Room space and cleanliness positive; parking cost concern"},
+          {"posted_on": "2026-06-15", "stay_month": "2026-06", "signal": "Breakfast and property upkeep positive"},
+          {"posted_on": "2026-08-20", "stay_month": "2026-08", "signal": "Breakfast selection/refill timing and parking cost concerns despite positive location"}
+        ],
+        "review_limits": "Four purposively selected opened-body reports, not representative or a rating. Exact category, party size and child ages unknown; no quietness, sofa comfort, accepted five-person occupancy or firsthand claim. Expedia labels reviews verified; this is its attribution, not independent verification."
+      },
+      "next_checks": ["Exact category and published/selected occupancy for two adults plus ages4/8/12", "Dated selected-category nightly band or rate with full room/party/stay/channel basis", "Resolve destination/resort fee duplication and tax basis", "Kitchen equipment and room separation by category", "Review applicability and maintained source ownership"]
+    },
+    {
+      "id": "grand-beach-miami-beach",
+      "name": "Grand Beach Hotel Miami Beach",
+      "area": "Miami Beach; 4835 Collins Avenue, distinct from Surfside, Townside and Bay Harbor properties",
+      "category": "Two Bedroom Suite Ocean Front",
+      "official": {
+        "url": "https://www.grandbeachhotel.com/miami-beach/suites/two-bedroom-suite-ocean-front",
+        "class": "OFFICIAL_PROPERTY_FACT",
+        "published_update": null,
+        "maximum_occupancy": "6-8 people advertised",
+        "observed": "Named suite lists king, two doubles and queen sleeper sofa, two full bathrooms, balcony, coffee maker and mini-fridge.",
+        "limits": "Advertised capacity is not selected-date acceptance or availability for this exact family. Cooking kitchen, closed-bedroom layout and actual rest comfort remain unconfirmed.",
+        "policy_url": "https://www.grandbeachhotel.com/faq",
+        "policy_observed": "Miami Beach has direct beach access; chairs/umbrellas tied to a daily resort fee. Two family pools and a separate adults-only rooftop pool. Official fee amount not exposed.",
+        "policy_limits": "Do not borrow Surfside/Townside access or Bay Harbor breakfast terms; three pools do not mean three child-accessible pools."
+      },
+      "booking_observation": {
+        "url": "https://www.expedia.com/Miami-Hotels-Grand-Beach-Hotel.h2238836.Hotel-Information",
+        "class": "OTA_PROPERTY_TEXT_NOT_SELECTED_QUOTE",
+        "displayed_fees": [
+          {"kind": "resort", "amount": 68.4, "currency": "USD", "unit": "per accommodation per night"},
+          {"kind": "optional valet", "amount": 58, "currency": "USD", "unit": "per night"},
+          {"kind": "breakage deposit", "amount": 100, "currency": "USD", "unit": "per night; deposit not stay expense"}
+        ],
+        "fee_resolution": "Selected-rate inclusions and taxes unknown. Deposit release and extra-person charges must be checked; two children up to12 free using existing beds does not establish a third child free.",
+        "nightly_family_quote": null,
+        "excluded_teaser": "Two-adult generic lowest-price FAQ, different October date and unspecified category; not retained as a family-five planning band",
+        "reviews": [
+          {"posted_on": "2026-10-02", "stay_month": "2026-10", "signal": "Room space and family pool/beach experience positive"},
+          {"posted_on": "2026-09-14", "stay_month": "2026-09", "signal": "Clean spacious room positive; valet-only on-site parking concern"},
+          {"posted_on": "2026-09-07", "stay_month": "2026-09", "signal": "Clean bed positive; crowded beach seating and pool condition concerns"},
+          {"posted_on": "2026-09-30", "stay_month": "2026-09", "signal": "Room cleanliness, air conditioning and balcony-door condition concerns"}
+        ],
+        "review_limits": "Four purposively selected opened-body reports, not representative or a rating. Categories and exact families unknown; condition complaints do not prove a current property-wide defect or a safety verdict. Expedia's verified label is provider attribution only."
+      },
+      "next_checks": ["Selected category accepted for exact family and dates", "Dated nightly rate/band with room/party/stay/channel basis and third-child charge", "Reconcile taxes, mandatory resort fee and optional parking; separate deposit", "Category layout and kitchen limitations", "Maintain review applicability and all property identities"]
+    }
+  ],
+  "desk_personas": [
+    {"persona": "Meal-prep parent with children4/8/12", "steps": ["Find the Surfside property", "Identify exact two-queen-plus-sofa category", "Confirm five-person acceptance", "Identify kitchen equipment", "Separate beach-crossing description from route safety", "Compare nightly price and mandatory charges", "Choose only after resolving unknowns"], "result": "PARTIAL: equipment lead and geographic distinction supported; category, occupancy and price block a choice"},
+    {"persona": "Beach-priority parent with children4/8/12", "steps": ["Disambiguate Miami Beach property", "Find Two Bedroom Suite Ocean Front", "Read advertised capacity and bed setup", "Check exact family acceptance", "Separate family pools from adults-only rooftop", "Compare mandatory charges, deposit and nightly rate", "Review condition conflicts before choosing"], "result": "PARTIAL: named category and access facts supported; selected acceptance, price and category-specific review applicability remain"}
+  ],
+  "validation_limits": "Seven-step desk evidence proxies, not actual parents, preference, satisfaction, a page walkthrough, rendered desktop/mobile/keyboard QA or SEO-lift proof. No public UI changed; those gates apply before eventual site release.",
+  "next_eligible_action": {
+    "when": "Next actual sprint run after this independently reviewed research release; do not wait for a generic city approval or calendar trigger",
+    "task": "Collect accepted exact categories and dated nightly planning ranges or selected rates for two adults plus children4/8/12, Nov8-13,2026, at these two properties; retain currency/unit/category/party/stay/channel/observation date, mandatory-fee tax basis, deposits and cancellation terms. Resolve Residence fee duplication. If Residence cannot accept five, reject that category and qualify a specifically named kitchen alternative before public selection.",
+    "publication_gate": "Finish exact-category budget/occupancy evidence, maintainable record ownership and claim-limited comparison qualification; register public exact paths, implement in same family problem when eligible, audit source/review conflicts, run reproducible desktop/mobile/keyboard tasks and focused/full native QA, independent PASS and production verification.",
+    "access_rule": "Normal permitted access only, no security denial retry, alternate-origin/tool bypass, booking/payment/contact/account mutation or paid variant fishing"
+  },
+  "confidence": "High demand-receipt/provenance and official-versus-OTA separation; moderate single-body task gap; incomplete exact-family price/acceptance; user outcomes unknown",
+  "lesson": "An empty ready queue does not end a delegated expansion sprint: qualify a specific upstream decision. Hotel amenities and advertised capacity are separate from exact-family acceptance and category-matched budget.",
+  "falsification_trigger": "Readable selected-category occupancy/rate or changed primary fee policy; failure to distinguish property/category; unmaintainable source coverage; contrary intent ownership or failed actual public task"
+}
