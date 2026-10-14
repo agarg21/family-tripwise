@@ -44,14 +44,14 @@ export function validateCollectionSelection(plan,selection,registry) {
   return selection;
 }
 
-export async function executeSelectedSource(source,plan,selection,registry,{fetcher=fetch}={}) {
+export async function executeSelectedSource(source,plan,selection,registry,{fetcher=fetch,onCapture=null}={}) {
   plan=validatePlan(copy(plan));selection=copy(selection);registry=copy(registry);validateCollectionSelection(plan,selection,registry);
   const retained=plan.sources.find(s=>s.url===source.url);
   if(!retained||JSON.stringify(retained)!==JSON.stringify(source)||!selection.selected_source_urls.includes(source.url))throw Error('Source execution differs from reviewed selection');
   // One exact-address fetch; even a self-redirect needs separate reconciliation.
   let requested=false;
   const guarded=async(url,options)=>{if(requested||url!==retained.url)throw Error('Redirect requires separate exact-source reconciliation');requested=true;return fetcher(url,options);};
-  return compareSource(await fetchSource(retained.url,plan.allowed_hosts,retained.checks,{fetcher:guarded}),retained.prior);
+  return compareSource(await fetchSource(retained.url,plan.allowed_hosts,retained.checks,{fetcher:guarded,onCapture}),retained.prior);
 }
 
 function validateSourceScalars(source) {
@@ -208,7 +208,7 @@ export async function runCheckpointBatch(plan,index,directory,{collect=false,sel
       const source=plan.sources[row.index],attemptedAt=new Date().toISOString();
       // An immutable attempt precedes the request; a missing result becomes a hold.
       await writeNew(join(dir,name(row.index)+'.start.json'),{plan_sha256:plan.plan_sha256,index:row.index,url:source.url,attempted_at:attemptedAt});
-      const response=await executeSource(copy(source));
+      const response=await executeSource(copy(source),Object.freeze({plan_sha256:plan.plan_sha256,index:row.index,attempted_at:attemptedAt}));
       if(response?.url!==source.url)throw Error('Returned source identity mismatch');
       const result={plan_sha256:plan.plan_sha256,index:row.index,attempted_at:attemptedAt,source:{...response,url:source.url,pages:source.pages,last_attempt_at:attemptedAt}};
       validateResult(plan,row.index,result);

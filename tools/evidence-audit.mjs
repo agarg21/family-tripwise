@@ -63,7 +63,8 @@ export function sourceSignals(html, checks = []) {
   return { text_sha256: hash(text), price_sha256: hash(JSON.stringify(candidates)), text_length: text.length, fields, price_candidates: candidates };
 }
 
-export async function fetchSource(url, hosts, checks, { fetcher = fetch, timeout = 10000 } = {}) {
+export async function fetchSource(url, hosts, checks, { fetcher = fetch, timeout = 10000, onCapture = null } = {}) {
+  if (onCapture !== null && typeof onCapture !== "function") throw new Error("Invalid in-memory capture observer");
   try {
     let current = permittedUrl(url, hosts);
     const controller = new AbortController();
@@ -99,6 +100,13 @@ export async function fetchSource(url, hosts, checks, { fetcher = fetch, timeout
       const html = Buffer.concat(chunks).toString("utf8");
       const signals = sourceSignals(html, checks);
       if (signals.text_length < 100 || /(?:captcha|access denied|verify you are human|just a moment)/i.test(signals.text_length < 3000 ? normalizedText(html) : "")) return { url, state: "challenge-or-empty-review", http_status: response.status };
+      // A trusted observer may inspect transient text; failure must not erase a known retrieval.
+      if (onCapture) {
+        try {
+          const observed = onCapture(Object.freeze({ url, final_url: current, http_status: response.status, text: normalizedText(html), text_sha256: signals.text_sha256 }));
+          if (observed && typeof observed.then === "function") Promise.resolve(observed).catch(() => {});
+        } catch { /* The opt-in consumer records its own proposal-review failure. */ }
+      }
       return { url, final_url: current, state: "retrieved-baseline", http_status: response.status, ...signals };
     } finally { clearTimeout(timer); }
   } catch (error) {

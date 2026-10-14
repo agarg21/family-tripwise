@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "kind": "source-proposal-integration-controls",
+  "action_id": "FT-IMP-161",
+  "observed_on": "2026-10-14",
+  "evidence_class": "SYNTHETIC_TRANSPORT_AND_DISPOSABLE_JOURNAL_NOT_LIVE_CAPTURE",
+  "evidence_refs": [
+    "docs/research/dana-atomic-watch-2026-10-14.json",
+    "docs/research/semantic-proposal-review-2026-10-14.json",
+    "docs/plan/source-proposal-collection.md"
+  ],
+  "decision": "IMPLEMENT opt-in selected checkpoint capture-to-proposal join; preserve default weekly flow and public facts",
+  "focused_test_count": 14,
+  "read_only_control_count": 12,
+  "disposable_journal_control_count": 2,
+  "actual_source_requests": 0,
+  "llm_calls": 0,
+  "paid_calls": 0,
+  "source_body_persisted_by_adapter": false,
+  "public_fact_dates_renewed": false,
+  "weekly_baseline_advanced": false,
+  "semantic_precision": null,
+  "semantic_refresh_ready": false,
+  "processing_scope_authority": "operator-supplied-review-not-machine-authorized",
+  "live_approved_processing_scope_created": false,
+  "retained_original_fee_date": "2026-10-08",
+  "retained_named_room_category_date": null,
+  "controls": [
+    "exact one-request URL/text-hash/checkpoint-time join",
+    "explicit opt-in and due gate with synchronous local proposer",
+    "plan-selection-hold-field-registry processing pins",
+    "source-field-page-pattern ownership before collection",
+    "known retrieval retained on invalid or throwing proposer",
+    "promise-returning proposer rejected without await or copied error",
+    "no proposer on failure challenge type size or redirect",
+    "legacy default outcome unchanged by optional observer",
+    "attempt context checked and duplicate execution blocked",
+    "caller mutation cannot widen in-flight scope",
+    "named capacity remains unknown accepted party and null date",
+    "source instructions are inert with no publication authority",
+    "durable source result and proposal packet share one attempt clock",
+    "proposal rejection persists a completed source without replay"
+  ],
+  "maintainer_task": {
+    "steps": [
+      "Inspect160 scope and original158 source/field clocks",
+      "Register exact plan selection and operator-reviewed processing scope",
+      "Run controlled fake HTML through selected one-request collection",
+      "Join normalized text hash to untrusted typed pending proposals",
+      "Inspect known completed source even when a proposal is rejected",
+      "Match body-free packet attempt time to persisted checkpoint result",
+      "Hold missing durable packet and select sidecar coverage next"
+    ],
+    "result": "PARTIAL integration proxy, not parent or rendered UI testing"
+  },
+  "limitations": [
+    "No actual source capture, LLM service or production refresh happened in this transaction.",
+    "Operator processing scope is not robots/terms/license evaluation, independent remote authentication or source permission.",
+    "Trusted local callbacks are not sandboxed; the adapter does not enforce no-retention against malicious code.",
+    "Typed lexical support is not complete source context, semantic validity, current price or accepted family booking.",
+    "Proposal queue is memory-only; a missing packet after interruption is held without replay and blocks complete proposal handoff.",
+    "Two actual complete weekly cycles, source governance and broader demand remain unproven."
+  ],
+  "next_gate": "Durable body-free packet handoff and missing-packet coverage before live weekly integration; independent review and guarded tool release first"
+}

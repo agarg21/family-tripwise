@@ -15799,7 +15799,7 @@
       "id": "FT-IMP-160",
       "title": "Bind typed semantic proposals to source spans and mandatory context review",
       "kind": "tooling",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-14",
       "started_at": "2026-10-14T08:08:19.100Z",
       "target_paths": [
@@ -15830,7 +15830,47 @@
       "next_gate": "Finish nativefull/differentSTRICTREADONLYPASS/exact10guarded proposal-boundary release. Next register a permitted native capture-to-proposal adapter that joins actual capture hash/time/outcome/source scope before discarding body; complete source access/retention governance and context reconciliation. Optional model comparator only explicit credential/service/cost scope; no fullweekly/semanticaccuracy/cityscale readiness inferred. Broader demand/actual family-room price and two realweeklycycles remain separate.",
       "review_cycle_1": "Bohr01a13985-7169-7c73-9073-e071f4eb1ddf P2: clipped source span ended after $5 within $50; lexical support bypass despite allcontextpending. Initial15pure/1048full green did not constitute reviewerPASS. No writes; fix and re-review required.",
       "review_cycle_2": "Bohr01a13985-7169-7c73-9073-e071f4eb1ddf PASS_WITH_P3 for QjPXP1/fcbd7e2f.. only. Monetaryclipping P2closed; age regex can match7 suffix of17 in Children17to17. FixP3beforecycle3; priorapproval not latestcandidate approval.",
-      "review_receipt": "FT-IMP-160 Bohr01a13985-7169-7c73-9073-e071f4eb1ddf independent STRICTREADONLY cycle3 PASS for frozen aspg0I review0377328b115c50ef22e832e7525bc95638c2a8e7d23a71c776c614d0e6c41dd8. Monetary clipped-span P2 and complete-age P3 closed/no remaining actionable findings; only17pure tests independently executed. All1074hash-modes/exact10/357olderorderedactions/1064nonowned/held11/LRN251-only verified;14controls/sixpending/originalwatch-collector/publicmodelCSVpolicyclocks/immutable155-159 preserved. Master1050full/18focused/48maintenance/stateSEO0/GSC92/sixpriorwarnings log587b9f18802690a430a3d3ac9d70905b35eb4cc050ef2ffb5dae6a2a4fec9824 independently read/hashed, not full rerun. Strictreadonly/no writes/temp/network/browser/Git/scheduler/delegation. Synthetic source-span data boundary only/no nativecapture/LLM/semanticaccuracy/fullweekly/publicfact refresh proof; pending context and sourceauthentication retained. Only immutable mechanical consensus appended; guarded tools remote release pending. No newaction started beyond08:46:45Z;014 fixedend unchanged."
+      "review_receipt": "FT-IMP-160 Bohr01a13985-7169-7c73-9073-e071f4eb1ddf independent STRICTREADONLY cycle3 PASS for frozen aspg0I review0377328b115c50ef22e832e7525bc95638c2a8e7d23a71c776c614d0e6c41dd8. Monetary clipped-span P2 and complete-age P3 closed/no remaining actionable findings; only17pure tests independently executed. All1074hash-modes/exact10/357olderorderedactions/1064nonowned/held11/LRN251-only verified;14controls/sixpending/originalwatch-collector/publicmodelCSVpolicyclocks/immutable155-159 preserved. Master1050full/18focused/48maintenance/stateSEO0/GSC92/sixpriorwarnings log587b9f18802690a430a3d3ac9d70905b35eb4cc050ef2ffb5dae6a2a4fec9824 independently read/hashed, not full rerun. Strictreadonly/no writes/temp/network/browser/Git/scheduler/delegation. Synthetic source-span data boundary only/no nativecapture/LLM/semanticaccuracy/fullweekly/publicfact refresh proof; pending context and sourceauthentication retained. Only immutable mechanical consensus appended; guarded tools remote release pending. No newaction started beyond08:46:45Z;014 fixedend unchanged.",
+      "release_receipt": "FT-IMP-160 release d4672f17b023f6df699a522f876f52d28301616e remote verified 2026-10-14T08:52:55.652Z; main0-0/emptyindex/exact10/all1074indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Delivered shared synthetic source-bound proposal-review controls and remoteverified tool/evidence change, not public page or production-fact refresh.1050full18focused48maintenance/stateSEO0/GSC92/sixpriorwarnings/differentBohr cycle3PASS17pure.1074indexhash-modes/exact10/357olderorderedactions/1064nonowned/held11/LRN251-only/immutable155-159/publicmodelCSVpolicyclocks/currentwatchcollector/operatorweekly/sourceholds/scheduler preserved. Learned supported schema/span control does not authenticate capture or verify semantics;14synthetic controls7reject4pending1conflict2holds/sixadmittedallpending, no improved159detector/semanticprecision/currentquote/fullweekly/LLM/parent-SEO proof. P2price-span and P3age-boundary findings fixed and re-reviewed finalcycle; earlierfailures retained. Next registered permitted capture-to-proposal adapter/source-policy governance/context reconciliation before actual fullweekly and broad cityscale, optionalLLM only explicit service/credential/cost scope. No new transaction after08:46:45Z; finish160only/noquota/014fixedexpiry unchanged. Tools-doc-only/no Pageswait required; publicpages unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T08:52:55.678Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "d4672f17b023f6df699a522f876f52d28301616e"
+    },
+    {
+      "id": "FT-IMP-161",
+      "title": "Join in-memory source proposals to selected checkpoint attempts",
+      "kind": "tooling",
+      "status": "in-progress",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-14T09:04:02.032Z",
+      "target_paths": [
+        "tools/evidence-audit.mjs",
+        "tools/evidence-batch-pilot.mjs",
+        "tools/source-proposal-collection.mjs",
+        "tools/source-proposal-collection.test.mjs",
+        "docs/plan/source-proposal-collection.md",
+        "docs/research/source-proposal-collection-2026-10-14.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "014 fixed sprint and direct maintainability-before-growth instruction. Opt-in selected-source capture/proposal adapter with controlled fake-response and disposable-journal tests only this run; no actual source/LLM/paid/scheduler/public mutation.",
+      "evidence": "160 delivered typed proposal boundary requires independently permitted capture join;155-158 native bodies deliberately discarded. Need one-request selected capture with exact hash/time/URL/field ownership and proposal-rejection separated from known fetch outcome before fullweekly integration. GSC Oct13 finalizedOct11 REUSED fresh API/priorOct12 finalizedOct10, aggregate orientation only.",
+      "acceptance_criteria": [
+        "Reuse bounded existing collector and selected-source guard. Default fetch/weekly behavior unchanged; optional synchronous in-memory capture observer only on eligible retrieved HTML after existing size/challenge checks. No raw body in source result or review output. A observer/proposer failure never erases a known retrieval or authorizes replay.",
+        "Opt-in factory validates exact plan/selection/access-hold pins and operator-supplied reviewed processing scope before requests; no allowlist-as-permission inference. Only pilot official field/source/page ownership, explicit collection/due gate and exact checkpoint attempt context. Reject scope/identity/hash/time/field/authority changes; retain failed proposals as mandatory review without copied exception/text.",
+        "Trusted synchronous local proposer only, no model service/security sandbox claim. Join URL/hash/attempt time internally; source text untrusted. Return ordinary compatible source outcome to journal and separate body-free proposal queue; preserve all contextpending/unverified, no fact-date renewal or public authority. Unavailable/challenge/unsupported/size/redirect/denied and unknown starts remain no retry.",
+        "Controlled fake-response source/task and journal tests, focused/fullnative/state/GSC/SEO/privacy, exact11/358olderorderedactions/1067nonowned/held11/LRN252-only/immutable155-160/publicmodelsCSVpolicyclocks/holds/operator/scheduler unchanged. DifferentSTRICTREADONLYPASS and guarded tools/doc remote verification; no public UI or Pageswait."
+      ],
+      "measurement_plan": "Reproducible maintainer walkthrough joins one exact capture to typed pending proposals and keeps a known collection outcome even on proposal failure. Synthetic integration controls only, not actual new captures, semantics precision, family quotes, parent/SEO outcomes or weekly capacity.",
+      "production_invariant": "Only optional hooks in two shared tools plus standalone adapter/test/docs; old default outputs and deny/redirect/bounds preserved. No new source/paid/LLM call, native journal replay, publicpage/model/CSV/price/fact-date/hold/operator/scheduler change. Preserve all358olderactions/held11/LRN252-only/immutable155-160.",
+      "evidence_record": "docs/research/source-proposal-collection-2026-10-14.json",
+      "decision": "IMPLEMENT opt-in selected in-memory capture-to-proposal adapter.14new focused/59combined tests PASS; one exact fake request joins sourceURL/hash/checkpointtime, immutable field-registry scope and all contextpending/originalfeeOct8/categorynull. Invalid or throwing proposer preserves known source outcome with rejected-proposal review; failures/holds/redirects never yield proposals or retry. Current collector/CLI/weekly defaults unchanged. Queue memory-only; durable packet publication/missing coverage nextgate, no livepermission/capture/LLM/fullweekly/semanticaccuracy/publicdate claim. Fullnative/differentSTRICTPASS/guarded exact11 tools release required.",
+      "next_gate": "Finish nativefull/differentSTRICTREADONLYPASS/guarded exact11 tool release. Next durable body-free packet handoff and missing-packet coverage, then source-specific access/retention governance and next eligible actual weekly collection/context reconciliation. Missing proposal packet after completed source is held, never replayed or treated complete. OptionalLLM only explicit service/credential/costscope; two actual fullweeklycycles/broadernumericdemand/familyprice remain separate.",
+      "review_receipt": "FT-IMP-161 Schrodinger01a139ae-d2a3-7a61-99cf-ebcbc4a3a107 independent STRICTREADONLY cycle1PASS/no actionableP0-P3 for frozen HqvhNU review3a5d1c35dd02b057a72df959517add3d13d973f299ff644ab4689ec716b3e9df. All1078hash-modes/exact11/358olderorderedactions/1067nonowned/held11/LRN252-only/immutable155-160/publicmodelCSVpolicyclocks/operatorweekly/holds/scheduler preserved. Independent36pure PASS; completed Master1064full14new59combined48maintenance/stateSEO0/GSC92/sixpriorwarnings log92d1ae03247178b2bc6c4a83040e002cfe3928df3740648549d777f89481d55e independently read/hashed, no full rerun. Known retrieval survives proposal rejection, exact fake URL/hash/checkpointtime/originaldates/contextpending/privacy/mutation/default/no-replay controls verified. No actual source/model/paid/publicfactdate renewal; governance/authenticity/durablehandoff explicitly unproved. Strictreadonly/no writes/temp/network/browser/Git/scheduler/delegation. Only immutable mechanical consensus appended; guarded exact11 tools remote release pending;014fixedend unchanged."
     }
   ]
 }
