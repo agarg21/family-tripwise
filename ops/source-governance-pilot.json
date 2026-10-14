@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "kind": "dated-source-governance",
+  "evidence_class": "OPERATOR_REVIEWED_POLICY_RECORDS",
+  "observed_on": "2026-10-14",
+  "records": [
+    {"id":"dana-rooms-governance","source_url":"https://thedana.com/san-diego-accommodations/","decision":"HOLD","collector_token":"FamilyTripwiseEvidenceAudit","robots":{"status":"UNKNOWN","http_status":null,"matched_group":null,"path_verdict":"UNKNOWN","body_sha256":null,"checked_at":null},"use":{"automation":"UNKNOWN","retention":"UNKNOWN","reviewed_at":null,"evidence_path":"docs/research/source-governance-pilot-2026-10-14.json"},"expires_at":null,"hold_reason":"POLICY_ACCESS_AND_USE_UNRESOLVED"},
+    {"id":"dana-faq-governance","source_url":"https://thedana.com/san-diego-hotel/faq/","decision":"HOLD","collector_token":"FamilyTripwiseEvidenceAudit","robots":{"status":"UNKNOWN","http_status":null,"matched_group":null,"path_verdict":"UNKNOWN","body_sha256":null,"checked_at":null},"use":{"automation":"UNKNOWN","retention":"UNKNOWN","reviewed_at":null,"evidence_path":"docs/research/source-governance-pilot-2026-10-14.json"},"expires_at":null,"hold_reason":"POLICY_ACCESS_AND_USE_UNRESOLVED"},
+    {"id":"garfield-visit-governance","source_url":"https://garfieldconservatory.org/visit/","decision":"HOLD","collector_token":"FamilyTripwiseEvidenceAudit","robots":{"status":"UNKNOWN","http_status":null,"matched_group":null,"path_verdict":"UNKNOWN","body_sha256":null,"checked_at":null},"use":{"automation":"UNKNOWN","retention":"UNKNOWN","reviewed_at":null,"evidence_path":"docs/research/source-governance-pilot-2026-10-14.json"},"expires_at":null,"hold_reason":"POLICY_ACCESS_AND_USE_UNRESOLVED"}
+  ]
+}
