@@ -1,0 +1,554 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic-semantic-proposal-control-check",
+  "observed_on": "2026-10-14",
+  "evidence_class": "SYNTHETIC_NOT_LIVE_EXTRACTION",
+  "fixtures_sha256": "da14e57e2b9127cfbf3440967570ee428a43ec151698db91a1962d635b49ce44",
+  "corpus_sha256": "7dcdcab8732344205ce323e63f63cd73ccbd5c805909499e3326fa9c30af3ac1",
+  "summary": {
+    "cases": 14,
+    "passed": 14,
+    "rejected": 7,
+    "pending_review": 4,
+    "conflict_review": 1,
+    "held_review": 2
+  },
+  "results": [
+    {
+      "id": "retain-fee-disagreement",
+      "corpus_case_id": "fee-contradiction",
+      "expected": "conflict-review",
+      "actual": "conflict-review",
+      "passed": true,
+      "packet": {
+        "schema_version": 1,
+        "kind": "semantic-proposal-review",
+        "origin": "synthetic",
+        "source_url": "https://thedana.com/san-diego-hotel/faq/",
+        "source_attempted_at": null,
+        "state": "disputed-candidates-review",
+        "proposals": [
+          {
+            "id": "proposal-1",
+            "field_id": "dana-resort-fee-predicate",
+            "field": "mandatory-resort-fee-nightly",
+            "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+            "source_url": "https://thedana.com/san-diego-hotel/faq/",
+            "source_text_sha256": "ddbfdfed1534b9cebb8641f86c195b22d79ae9533910d8fc4b04b6c14a3e42f8",
+            "source_span": {
+              "start": 0,
+              "end": 136,
+              "offset_unit": "normalized-text-utf16"
+            },
+            "source_span_sha256": "ddbfdfed1534b9cebb8641f86c195b22d79ae9533910d8fc4b04b6c14a3e42f8",
+            "source_attempted_at": null,
+            "origin": "synthetic",
+            "source_authentication": "operator-supplied-not-authenticated-by-this-boundary",
+            "kind": "nightly-fee",
+            "value": {
+              "amount": 25,
+              "currency": "USD",
+              "currency_basis": "interpretation",
+              "unit": "night",
+              "tax_basis": "plus-tax",
+              "rate_inclusion": null,
+              "party_basis": null,
+              "stay_dates": null
+            },
+            "original_verified_on": "2026-10-08",
+            "evidence_path": "docs/research/dana-fee-hold-2026-10-08.json",
+            "evidence_class": "UNVERIFIED_STRUCTURED_PROPOSAL",
+            "unverified_context_flags": [
+              "conflicting-values"
+            ],
+            "context_review": {
+              "entity": "pending",
+              "category": "pending",
+              "party": "pending",
+              "stay": "pending",
+              "conditions": "pending",
+              "freshness": "pending",
+              "instructions": "pending"
+            },
+            "review_required": true,
+            "semantic_verified": false,
+            "public_update_authorized": false
+          },
+          {
+            "id": "proposal-2",
+            "field_id": "dana-resort-fee-predicate",
+            "field": "mandatory-resort-fee-nightly",
+            "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+            "source_url": "https://thedana.com/san-diego-hotel/faq/",
+            "source_text_sha256": "ddbfdfed1534b9cebb8641f86c195b22d79ae9533910d8fc4b04b6c14a3e42f8",
+            "source_span": {
+              "start": 0,
+              "end": 136,
+              "offset_unit": "normalized-text-utf16"
+            },
+            "source_span_sha256": "ddbfdfed1534b9cebb8641f86c195b22d79ae9533910d8fc4b04b6c14a3e42f8",
+            "source_attempted_at": null,
+            "origin": "synthetic",
+            "source_authentication": "operator-supplied-not-authenticated-by-this-boundary",
+            "kind": "nightly-fee",
+            "value": {
+              "amount": 30,
+              "currency": "USD",
+              "currency_basis": "interpretation",
+              "unit": "night",
+              "tax_basis": "plus-tax",
+              "rate_inclusion": null,
+              "party_basis": null,
+              "stay_dates": null
+            },
+            "original_verified_on": "2026-10-08",
+            "evidence_path": "docs/research/dana-fee-hold-2026-10-08.json",
+            "evidence_class": "UNVERIFIED_STRUCTURED_PROPOSAL",
+            "unverified_context_flags": [
+              "conflicting-values"
+            ],
+            "context_review": {
+              "entity": "pending",
+              "category": "pending",
+              "party": "pending",
+              "stay": "pending",
+              "conditions": "pending",
+              "freshness": "pending",
+              "instructions": "pending"
+            },
+            "review_required": true,
+            "semantic_verified": false,
+            "public_update_authorized": false
+          }
+        ],
+        "candidate_conflicts": [
+          {
+            "field_id": "dana-resort-fee-predicate",
+            "proposal_ids": [
+              "proposal-1",
+              "proposal-2"
+            ],
+            "state": "candidate-value-disagreement-not-policy-finding",
+            "resolved": false,
+            "chosen_proposal_id": null
+          }
+        ],
+        "review_required": true,
+        "retry_authorized": false,
+        "semantic_verified": false,
+        "public_update_authorized": false,
+        "limitations": [
+          "Lexical span support is not semantic validity, current source authenticity or condition completeness.",
+          "The trusted snapshot must come from an independently permitted capture; a hash or HTTPS URL does not authenticate that capture.",
+          "All source context and proposals remain pending review, including proposals with empty known conditions or positive matches.",
+          "Conflict lists compare submitted candidate values only; omitted or unsuggested contradictions are not automatically detected.",
+          "No nightly room quote, accepted party, verified policy, fact-date renewal or publication authority is provided."
+        ]
+      }
+    },
+    {
+      "id": "party-context-stays-pending",
+      "corpus_case_id": "suite-party-restriction",
+      "expected": "pending-review",
+      "actual": "pending-review",
+      "passed": true,
+      "packet": {
+        "schema_version": 1,
+        "kind": "semantic-proposal-review",
+        "origin": "synthetic",
+        "source_url": "https://thedana.com/san-diego-accommodations/",
+        "source_attempted_at": null,
+        "state": "unverified-candidates-review",
+        "proposals": [
+          {
+            "id": "proposal-1",
+            "field_id": "dana-junior-suite-capacity-predicate",
+            "field": "room-capacity-sunset-park-view-junior-suite",
+            "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+            "source_url": "https://thedana.com/san-diego-accommodations/",
+            "source_text_sha256": "0c8aee82aa6e4e0b99d63ce9236474d5785f6677d6870cdec031299f45468bf9",
+            "source_span": {
+              "start": 0,
+              "end": 156,
+              "offset_unit": "normalized-text-utf16"
+            },
+            "source_span_sha256": "0c8aee82aa6e4e0b99d63ce9236474d5785f6677d6870cdec031299f45468bf9",
+            "source_attempted_at": null,
+            "origin": "synthetic",
+            "source_authentication": "operator-supplied-not-authenticated-by-this-boundary",
+            "kind": "room-capacity",
+            "value": {
+              "category": "Sunset Park View Junior Suite",
+              "advertised_maximum": 6,
+              "bed_variant": null,
+              "accepted_party": null,
+              "stay_dates": null
+            },
+            "original_verified_on": null,
+            "evidence_path": "docs/research/dana-atomic-watch-2026-10-14.json",
+            "evidence_class": "UNVERIFIED_STRUCTURED_PROPOSAL",
+            "unverified_context_flags": [
+              "party-scope"
+            ],
+            "context_review": {
+              "entity": "pending",
+              "category": "pending",
+              "party": "pending",
+              "stay": "pending",
+              "conditions": "pending",
+              "freshness": "pending",
+              "instructions": "pending"
+            },
+            "review_required": true,
+            "semantic_verified": false,
+            "public_update_authorized": false
+          }
+        ],
+        "candidate_conflicts": [],
+        "review_required": true,
+        "retry_authorized": false,
+        "semantic_verified": false,
+        "public_update_authorized": false,
+        "limitations": [
+          "Lexical span support is not semantic validity, current source authenticity or condition completeness.",
+          "The trusted snapshot must come from an independently permitted capture; a hash or HTTPS URL does not authenticate that capture.",
+          "All source context and proposals remain pending review, including proposals with empty known conditions or positive matches.",
+          "Conflict lists compare submitted candidate values only; omitted or unsuggested contradictions are not automatically detected.",
+          "No nightly room quote, accepted party, verified policy, fact-date renewal or publication authority is provided."
+        ]
+      }
+    },
+    {
+      "id": "other-entity-stays-pending",
+      "corpus_case_id": "other-hotel-context",
+      "expected": "pending-review",
+      "actual": "pending-review",
+      "passed": true,
+      "packet": {
+        "schema_version": 1,
+        "kind": "semantic-proposal-review",
+        "origin": "synthetic",
+        "source_url": "https://thedana.com/san-diego-accommodations/",
+        "source_attempted_at": null,
+        "state": "unverified-candidates-review",
+        "proposals": [
+          {
+            "id": "proposal-1",
+            "field_id": "dana-junior-suite-capacity-predicate",
+            "field": "room-capacity-sunset-park-view-junior-suite",
+            "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+            "source_url": "https://thedana.com/san-diego-accommodations/",
+            "source_text_sha256": "fb40463e7828de9756fcf122fbd548efd384f2eec4f89064e5fed6e11e354d36",
+            "source_span": {
+              "start": 0,
+              "end": 119,
+              "offset_unit": "normalized-text-utf16"
+            },
+            "source_span_sha256": "fb40463e7828de9756fcf122fbd548efd384f2eec4f89064e5fed6e11e354d36",
+            "source_attempted_at": null,
+            "origin": "synthetic",
+            "source_authentication": "operator-supplied-not-authenticated-by-this-boundary",
+            "kind": "room-capacity",
+            "value": {
+              "category": "Sunset Park View Junior Suite",
+              "advertised_maximum": 6,
+              "bed_variant": null,
+              "accepted_party": null,
+              "stay_dates": null
+            },
+            "original_verified_on": null,
+            "evidence_path": "docs/research/dana-atomic-watch-2026-10-14.json",
+            "evidence_class": "UNVERIFIED_STRUCTURED_PROPOSAL",
+            "unverified_context_flags": [
+              "other-entity"
+            ],
+            "context_review": {
+              "entity": "pending",
+              "category": "pending",
+              "party": "pending",
+              "stay": "pending",
+              "conditions": "pending",
+              "freshness": "pending",
+              "instructions": "pending"
+            },
+            "review_required": true,
+            "semantic_verified": false,
+            "public_update_authorized": false
+          }
+        ],
+        "candidate_conflicts": [],
+        "review_required": true,
+        "retry_authorized": false,
+        "semantic_verified": false,
+        "public_update_authorized": false,
+        "limitations": [
+          "Lexical span support is not semantic validity, current source authenticity or condition completeness.",
+          "The trusted snapshot must come from an independently permitted capture; a hash or HTTPS URL does not authenticate that capture.",
+          "All source context and proposals remain pending review, including proposals with empty known conditions or positive matches.",
+          "Conflict lists compare submitted candidate values only; omitted or unsuggested contradictions are not automatically detected.",
+          "No nightly room quote, accepted party, verified policy, fact-date renewal or publication authority is provided."
+        ]
+      }
+    },
+    {
+      "id": "instruction-stays-inert",
+      "corpus_case_id": "visible-source-instruction",
+      "expected": "pending-review",
+      "actual": "pending-review",
+      "passed": true,
+      "packet": {
+        "schema_version": 1,
+        "kind": "semantic-proposal-review",
+        "origin": "synthetic",
+        "source_url": "https://thedana.com/san-diego-hotel/faq/",
+        "source_attempted_at": null,
+        "state": "unverified-candidates-review",
+        "proposals": [
+          {
+            "id": "proposal-1",
+            "field_id": "dana-resort-fee-predicate",
+            "field": "mandatory-resort-fee-nightly",
+            "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+            "source_url": "https://thedana.com/san-diego-hotel/faq/",
+            "source_text_sha256": "900505268e161974aa744b7601b54308fd1e1f655c8c42675388f06c01a82775",
+            "source_span": {
+              "start": 0,
+              "end": 127,
+              "offset_unit": "normalized-text-utf16"
+            },
+            "source_span_sha256": "900505268e161974aa744b7601b54308fd1e1f655c8c42675388f06c01a82775",
+            "source_attempted_at": null,
+            "origin": "synthetic",
+            "source_authentication": "operator-supplied-not-authenticated-by-this-boundary",
+            "kind": "nightly-fee",
+            "value": {
+              "amount": 25,
+              "currency": "USD",
+              "currency_basis": "interpretation",
+              "unit": "night",
+              "tax_basis": "plus-tax",
+              "rate_inclusion": null,
+              "party_basis": null,
+              "stay_dates": null
+            },
+            "original_verified_on": "2026-10-08",
+            "evidence_path": "docs/research/dana-fee-hold-2026-10-08.json",
+            "evidence_class": "UNVERIFIED_STRUCTURED_PROPOSAL",
+            "unverified_context_flags": [
+              "source-instructions"
+            ],
+            "context_review": {
+              "entity": "pending",
+              "category": "pending",
+              "party": "pending",
+              "stay": "pending",
+              "conditions": "pending",
+              "freshness": "pending",
+              "instructions": "pending"
+            },
+            "review_required": true,
+            "semantic_verified": false,
+            "public_update_authorized": false
+          }
+        ],
+        "candidate_conflicts": [],
+        "review_required": true,
+        "retry_authorized": false,
+        "semantic_verified": false,
+        "public_update_authorized": false,
+        "limitations": [
+          "Lexical span support is not semantic validity, current source authenticity or condition completeness.",
+          "The trusted snapshot must come from an independently permitted capture; a hash or HTTPS URL does not authenticate that capture.",
+          "All source context and proposals remain pending review, including proposals with empty known conditions or positive matches.",
+          "Conflict lists compare submitted candidate values only; omitted or unsuggested contradictions are not automatically detected.",
+          "No nightly room quote, accepted party, verified policy, fact-date renewal or publication authority is provided."
+        ]
+      }
+    },
+    {
+      "id": "younger-age-stays-unpriced",
+      "corpus_case_id": "unwatched-younger-age",
+      "expected": "pending-review",
+      "actual": "pending-review",
+      "passed": true,
+      "packet": {
+        "schema_version": 1,
+        "kind": "semantic-proposal-review",
+        "origin": "synthetic",
+        "source_url": "https://garfieldconservatory.org/visit/",
+        "source_attempted_at": null,
+        "state": "unverified-candidates-review",
+        "proposals": [
+          {
+            "id": "proposal-1",
+            "field_id": "garfield-youth-admission-price-predicate",
+            "field": "admission-price-youth-7-17",
+            "page_url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+            "source_url": "https://garfieldconservatory.org/visit/",
+            "source_text_sha256": "95bea43398240163aba003cc8dda9929ee149d15b2735f6d97aa76a0c7b5ccbb",
+            "source_span": {
+              "start": 0,
+              "end": 114,
+              "offset_unit": "normalized-text-utf16"
+            },
+            "source_span_sha256": "95bea43398240163aba003cc8dda9929ee149d15b2735f6d97aa76a0c7b5ccbb",
+            "source_attempted_at": null,
+            "origin": "synthetic",
+            "source_authentication": "operator-supplied-not-authenticated-by-this-boundary",
+            "kind": "admission-price",
+            "value": {
+              "amount": 5,
+              "currency": "USD",
+              "currency_basis": "interpretation",
+              "unit": "person",
+              "min_age": 7,
+              "max_age": 17,
+              "eligibility": null,
+              "visit_date": null,
+              "checkout_fees": null
+            },
+            "original_verified_on": "2026-10-13",
+            "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json",
+            "evidence_class": "UNVERIFIED_STRUCTURED_PROPOSAL",
+            "unverified_context_flags": [
+              "unpriced-age"
+            ],
+            "context_review": {
+              "entity": "pending",
+              "category": "pending",
+              "party": "pending",
+              "stay": "pending",
+              "conditions": "pending",
+              "freshness": "pending",
+              "instructions": "pending"
+            },
+            "review_required": true,
+            "semantic_verified": false,
+            "public_update_authorized": false
+          }
+        ],
+        "candidate_conflicts": [],
+        "review_required": true,
+        "retry_authorized": false,
+        "semantic_verified": false,
+        "public_update_authorized": false,
+        "limitations": [
+          "Lexical span support is not semantic validity, current source authenticity or condition completeness.",
+          "The trusted snapshot must come from an independently permitted capture; a hash or HTTPS URL does not authenticate that capture.",
+          "All source context and proposals remain pending review, including proposals with empty known conditions or positive matches.",
+          "Conflict lists compare submitted candidate values only; omitted or unsuggested contradictions are not automatically detected.",
+          "No nightly room quote, accepted party, verified policy, fact-date renewal or publication authority is provided."
+        ]
+      }
+    },
+    {
+      "id": "stale-price-cannot-be-promoted",
+      "corpus_case_id": "stale-two-adult-price",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "packet": null
+    },
+    {
+      "id": "source-cannot-approve-publication",
+      "corpus_case_id": "visible-source-instruction",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "packet": null
+    },
+    {
+      "id": "capacity-cannot-infer-party",
+      "corpus_case_id": "suite-party-restriction",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "packet": null
+    },
+    {
+      "id": "wrong-hash-rejected",
+      "corpus_case_id": "unchanged-fee",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "packet": null
+    },
+    {
+      "id": "invented-amount-rejected",
+      "corpus_case_id": "fee-amount-change",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "packet": null
+    },
+    {
+      "id": "missing-age-not-invented",
+      "corpus_case_id": "youth-age-missing",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "packet": null
+    },
+    {
+      "id": "denial-hold-preserved",
+      "corpus_case_id": "denied-source",
+      "expected": "held-review",
+      "actual": "held-review",
+      "passed": true,
+      "packet": {
+        "schema_version": 1,
+        "kind": "semantic-proposal-review",
+        "origin": "synthetic",
+        "source_url": "https://thedana.com/san-diego-hotel/faq/",
+        "source_attempted_at": null,
+        "state": "held-source-review",
+        "proposals": [],
+        "candidate_conflicts": [],
+        "review_required": true,
+        "retry_authorized": false,
+        "semantic_verified": false,
+        "public_update_authorized": false
+      }
+    },
+    {
+      "id": "unknown-hold-preserved",
+      "corpus_case_id": "interrupted-source",
+      "expected": "held-review",
+      "actual": "held-review",
+      "passed": true,
+      "packet": {
+        "schema_version": 1,
+        "kind": "semantic-proposal-review",
+        "origin": "synthetic",
+        "source_url": "https://thedana.com/san-diego-accommodations/",
+        "source_attempted_at": null,
+        "state": "held-source-review",
+        "proposals": [],
+        "candidate_conflicts": [],
+        "review_required": true,
+        "retry_authorized": false,
+        "semantic_verified": false,
+        "public_update_authorized": false
+      }
+    },
+    {
+      "id": "charge-not-authorization",
+      "corpus_case_id": "hold-becomes-charge",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "packet": null
+    }
+  ],
+  "semantic_precision": null,
+  "semantic_refresh_ready": false,
+  "factual_dates_renewed": false,
+  "automatic_publication": false,
+  "network_calls": 0,
+  "llm_calls": 0,
+  "limitations": [
+    "Synthetic manually authored proposals exercise data/provenance/authority controls, not a semantic extractor or improved159detector.",
+    "All admitted values and context flags remain unverified; accepted syntax is not a validated fact or source policy change.",
+    "No native capture or model integration is implemented; real source governance, source context reconciliation and two complete weekly cycles remain separate."
+  ]
+}

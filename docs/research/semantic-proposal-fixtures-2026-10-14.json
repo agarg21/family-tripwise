@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic-semantic-proposal-fixtures",
+  "observed_on": "2026-10-14",
+  "evidence_refs": [
+    "docs/research/predicate-review-corpus-2026-10-14.json",
+    "docs/research/predicate-review-evaluation-2026-10-14.json",
+    "docs/research/dana-atomic-watch-2026-10-14.json"
+  ],
+  "cases": [
+    {
+      "id": "retain-fee-disagreement",
+      "corpus_case_id": "fee-contradiction",
+      "expected": "conflict-review",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-resort-fee-predicate",
+          "value": {
+            "amount": 25,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "night",
+            "tax_basis": "plus-tax",
+            "rate_inclusion": null,
+            "party_basis": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "conflicting-values"
+          ]
+        },
+        {
+          "id": "proposal-2",
+          "field_id": "dana-resort-fee-predicate",
+          "value": {
+            "amount": 30,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "night",
+            "tax_basis": "plus-tax",
+            "rate_inclusion": null,
+            "party_basis": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "conflicting-values"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "party-context-stays-pending",
+      "corpus_case_id": "suite-party-restriction",
+      "expected": "pending-review",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-junior-suite-capacity-predicate",
+          "value": {
+            "category": "Sunset Park View Junior Suite",
+            "advertised_maximum": 6,
+            "bed_variant": null,
+            "accepted_party": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "party-scope"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other-entity-stays-pending",
+      "corpus_case_id": "other-hotel-context",
+      "expected": "pending-review",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-junior-suite-capacity-predicate",
+          "value": {
+            "category": "Sunset Park View Junior Suite",
+            "advertised_maximum": 6,
+            "bed_variant": null,
+            "accepted_party": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "other-entity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instruction-stays-inert",
+      "corpus_case_id": "visible-source-instruction",
+      "expected": "pending-review",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-resort-fee-predicate",
+          "value": {
+            "amount": 25,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "night",
+            "tax_basis": "plus-tax",
+            "rate_inclusion": null,
+            "party_basis": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "source-instructions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "younger-age-stays-unpriced",
+      "corpus_case_id": "unwatched-younger-age",
+      "expected": "pending-review",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "garfield-youth-admission-price-predicate",
+          "value": {
+            "amount": 5,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "person",
+            "min_age": 7,
+            "max_age": 17,
+            "eligibility": null,
+            "visit_date": null,
+            "checkout_fees": null
+          },
+          "proposed_context_flags": [
+            "unpriced-age"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stale-price-cannot-be-promoted",
+      "corpus_case_id": "stale-two-adult-price",
+      "expected": "reject",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-nightly-room-price",
+          "value": {
+            "amount": 300,
+            "currency": "USD",
+            "unit": "room-night"
+          },
+          "proposed_context_flags": [
+            "stale-price"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "source-cannot-approve-publication",
+      "corpus_case_id": "visible-source-instruction",
+      "expected": "reject",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-resort-fee-predicate",
+          "value": {
+            "amount": 25,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "night",
+            "tax_basis": "plus-tax",
+            "rate_inclusion": null,
+            "party_basis": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "source-instructions"
+          ],
+          "claim_verified": true
+        }
+      ]
+    },
+    {
+      "id": "capacity-cannot-infer-party",
+      "corpus_case_id": "suite-party-restriction",
+      "expected": "reject",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-junior-suite-capacity-predicate",
+          "value": {
+            "category": "Sunset Park View Junior Suite",
+            "advertised_maximum": 6,
+            "bed_variant": null,
+            "accepted_party": "two-adults-and-four-children",
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "party-scope"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrong-hash-rejected",
+      "corpus_case_id": "unchanged-fee",
+      "expected": "reject",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-resort-fee-predicate",
+          "source_text_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "value": {
+            "amount": 25,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "night",
+            "tax_basis": "plus-tax",
+            "rate_inclusion": null,
+            "party_basis": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "unknown"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "invented-amount-rejected",
+      "corpus_case_id": "fee-amount-change",
+      "expected": "reject",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-resort-fee-predicate",
+          "value": {
+            "amount": 99,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "night",
+            "tax_basis": "plus-tax",
+            "rate_inclusion": null,
+            "party_basis": null,
+            "stay_dates": null
+          },
+          "proposed_context_flags": [
+            "unknown"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "missing-age-not-invented",
+      "corpus_case_id": "youth-age-missing",
+      "expected": "reject",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "garfield-youth-admission-price-predicate",
+          "value": {
+            "amount": 5,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "person",
+            "min_age": 7,
+            "max_age": 17,
+            "eligibility": null,
+            "visit_date": null,
+            "checkout_fees": null
+          },
+          "proposed_context_flags": [
+            "unpriced-age"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "denial-hold-preserved",
+      "corpus_case_id": "denied-source",
+      "expected": "held-review",
+      "proposal_specs": []
+    },
+    {
+      "id": "unknown-hold-preserved",
+      "corpus_case_id": "interrupted-source",
+      "expected": "held-review",
+      "proposal_specs": []
+    },
+    {
+      "id": "charge-not-authorization",
+      "corpus_case_id": "hold-becomes-charge",
+      "expected": "reject",
+      "proposal_specs": [
+        {
+          "id": "proposal-1",
+          "field_id": "dana-incidental-hold-predicate",
+          "value": {
+            "amount": 50,
+            "currency": "USD",
+            "currency_basis": "interpretation",
+            "unit": "day",
+            "payable_fee": false,
+            "authorization_days": null,
+            "release_timing": null,
+            "rate_applicability": null
+          },
+          "proposed_context_flags": [
+            "unknown"
+          ]
+        }
+      ]
+    }
+  ]
+}
