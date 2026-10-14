@@ -20,6 +20,39 @@
   ],
   "items": [
     {
+      "id": "FT-OPS-015",
+      "title": "Reconcile reviewed audit history and delegate routine normal merges",
+      "kind": "operator-policy-and-history-reconciliation",
+      "status": "planned",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-14T22:09:18Z",
+      "authority": "Fresh direct user: Approve and move on, I think you can handle merge issues yourself. Approves this reconciliation and standing operator handling of routine non-destructive normal merges, not ambiguous conflict guesses, rebases, force pushes or discarding dirty work.",
+      "target_paths": [
+        "AGENTS.md",
+        "docs/plan/git-reconciliation-policy.md",
+        "tools/git-reconciliation-policy.test.mjs",
+        "ops/operator.json",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/gsc-snapshots/2026-10-14.json",
+        "ops/gsc-snapshots/2026-10-14.md"
+      ],
+      "evidence": "Pinned reviewed local fb045fb0b0e64db7adc5d3b6e300e3a680ee3f1e and incoming GSC-only028ac488cc03c9ded2161e92d4db0d6b06ada68f diverge from b1ab23a3b20b541887e9a9cfd53cee1b1678ae18. Incoming changes only collection timestamp in two snapshots. git merge-tree --write-tree succeeds with2319da5f478ea810a1c64b8d2dbe6a0080097d65; incoming paths do not overlap held11.168 already independently PASS, but composed release needs fresh QA/review.",
+      "acceptance_criteria": [
+        "Preserve both original commits as merge parents/ancestors and all seven nonowned dirty paths byte/mode-identically; carry four owned hold records as history and only explicitly authorized168 state fields may change.",
+        "Normal no-commit/no-ff merge; stop on conflicts or unexpected index paths. Candidate uses clean composed tree plus exact policy paths, never held ledger/other dirty bytes. Full native/focused/state/GSC/privacy/SEO QA and different read-only PASS before exact staging/merge commit.",
+        "Record standing routine merge authority in AGENTS/operator policy without weakening existing generic Git guard. Use bounded pinned whole-index/tree/parent/range checks for this explicitly authorized merge; fresh fetch immediately before normal push and stop on another remote advance.",
+        "No automation/scheduler/cadence/restoration-baseline changes, source requests, paid calls, public page/fact/price edits, rebase/reset/discard/force push or speculative conflict resolution. Docs-only remote verification, no public production claim."
+      ],
+      "measurement_plan": "Restore reviewed release sequencing without repeated user approval for routine safe merges; not a family-product, weekly-source reliability or SEO improvement.",
+      "production_invariant": "All public files/models/exports/source-price-review clocks/immutable evidence/journals/source holds/scheduler and sprint window unchanged. Old366 items unchanged except168 release_state,next_gate,reconciliation_authorization; original168 review/evidence preserved. Seven held nonowned files excluded from merge index and release, LIVE bytes retained. Only two snapshot collection timestamps are ingested.",
+      "decision": "REGISTER approved normal reconciliation and bounded standing authority; no merge or release completed yet.",
+      "next_gate": "Prepare normal merge index, policy candidate, focused/full native QA, different read-only PASS, exact composed-tree staging/parent checks, fresh fetch and normal push/remote verification.",
+      "review_receipt": "FT-OPS-015 Lorentz01a13c7a-665b-76d2-a5e8-0df8ac48c5f0 STRICTread-only PASS/noP0-P3 for frozenqBVpbS manifest292da780e12c9a27572292b1dad84d41fa2f9e958f2754560636259198868a63. Independent4policy+6originalpure10/10PASS; Master1132full48maintenance/stateSEO0/GSC93/sixpriorwarnings log6d76b8271e3c1b8b72fcbd405ac810a2b6d9d8484f3f59336e6c3dc79e52f3ed verified. All1108candidate/exact10/pinnedfb045fb-028ac48/baseb1ab23a/composed2319da5/original168review/sevennonownedheldbytes-modes/366olderitems exceptregistered168authorization/holdhistory/public-source-clocks/operatorweekly-scheduler-sprint preserved. Private readonly checker2e6ddf0e5e28ca777da041775c74ca5c4775891b778a687eb671c6a5010d3d04 reviewed; generic guard unchanged. No reviewerfiles/Git/network/browser/scheduler/artifact mutations. Standing routine merge authority bounded by evidence-backed deterministic resolution and humanstop forambiguity/lossrisk. Only immutable mechanical consensus appended; exactcandidate staging/index/orderedparents/fulltree/freshfetch/completeoutgoingrange/normalpush/remoteverify remain."
+    },
+    {
       "id": "FT-RES-168",
       "title": "Resolve whether the American stroller discrepancy is only an unlinked fragment",
       "kind": "source-quality-research",
@@ -48,7 +81,10 @@
       "decision": "REJECT unlinked-fragment-only explanation: family -> Bags -> normal web specialty page also carries over20lb counter instruction. HOLD controlling rule/precedence/effective date/cause/airport acceptance. Three desk proxies and six structural controls PASS, not rendered UI or semantic accuracy. Learned only/no public rule, collector or URL selected.",
       "next_gate": "Full native QA/different strict read-only PASS/guarded exact8 docs-test release. Preserve public pages until dated primary reconciliation and separate demand/ownership/actual browser task/review/production gates.",
       "next_eligible_run": "Dated primary precedence reconciliation or material section/navigation change; no calendar-only repeat. Broader volume remains separate scope-reply/exact-manifest gate.",
-      "review_receipt": "FT-RES-168 Einstein01a13af6-cfb8-71c3-9d30-87fee32fcb44 STRICTread-only PASS/noP0-P3 for frozen2GptOF manifest9e568839c4f5a6633c60ecec1b4491ac3f1482f3abfe3178528adae45c281f07. Independent6purePASS; Master1128full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log9f449604a4f9278724ecd12214f10f06b6fbbf664346ba5cfa971a294abdb28d verified. Firsttwo native statefailures2then1 retained/notgreen. Exact8/all1106candidate/1103clean-baseline/365olderordered/11LIVEheld/6nonownedexclusions/LRN259-only proof033041b8f579efe6eda1940aae803253ea2b12979e27d078404e225f88f6187f verified. Primary reader navigation rejects ONLYunlinked-fragment explanation; rule/precedence/effective-date/cause/acceptance unknown; bassinetweight notborrowed/three deskproxies notUI-parent-airport. No reviewerwrites/network/browser/otherQA/Gitmutations/scheduler/delegation/messaging. Research-only approval/no public-rule/production or weekly renewal. Only immutable mechanical consensus appended; guarded exact8 docs-test release pending."
+      "review_receipt": "FT-RES-168 Einstein01a13af6-cfb8-71c3-9d30-87fee32fcb44 STRICTread-only PASS/noP0-P3 for frozen2GptOF manifest9e568839c4f5a6633c60ecec1b4491ac3f1482f3abfe3178528adae45c281f07. Independent6purePASS; Master1128full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log9f449604a4f9278724ecd12214f10f06b6fbbf664346ba5cfa971a294abdb28d verified. Firsttwo native statefailures2then1 retained/notgreen. Exact8/all1106candidate/1103clean-baseline/365olderordered/11LIVEheld/6nonownedexclusions/LRN259-only proof033041b8f579efe6eda1940aae803253ea2b12979e27d078404e225f88f6187f verified. Primary reader navigation rejects ONLYunlinked-fragment explanation; rule/precedence/effective-date/cause/acceptance unknown; bassinetweight notborrowed/three deskproxies notUI-parent-airport. No reviewerwrites/network/browser/otherQA/Gitmutations/scheduler/delegation/messaging. Research-only approval/no public-rule/production or weekly renewal. Only immutable mechanical consensus appended; guarded exact8 docs-test release pending.",
+      "push_hold_receipt": "FT-RES-168 push HOLD observed2026-10-14T15:15:59Z: reviewed local fb045fb0b0e64db7adc5d3b6e300e3a680ee3f1e (PASS/exact8) and incoming 028ac488cc03c9ded2161e92d4db0d6b06ada68f (validated GSC-only2files, collected_at14:10:29.122Z->15:09:53.183Z; other snapshot facts unchanged) diverge1local/1remote from b1ab23a3b20b541887e9a9cfd53cee1b1678ae18. Exact failed gate: node tools/release-git-guard.mjs --phase before-push --manifest /var/folders/cx/0kt3mwqj4hq0nnmylzksc4tr0000gn/T/ft168-final-8CymJ9-push.json -> Commit pins changed/exit1 afterfreshfetch. No push/merge/rebase/reset/discard/forcepush attempted; emptyindex/7helddirty aftercommit preserved. Owner Master normal Git reconciliation; unblock fresh explicit normalmerge approval plus registered QA/differentreview/complete-range release gates. One precise asyncapproval question sent; no reply assumed. Nextcheck only authorization or actual branch-state change, not unchangedpushretry. Research learned/review-clean localcommit, NOT remote shipped or publicproduction verified; publicpages/factdates/weekly/scheduler untouched. Mechanical immutable hold receipt only/no metadata-onlycommit.",
+      "release_state": "review-clean-reconciliation-authorized",
+      "reconciliation_authorization": "Fresh direct October14 user approval: Approve and move on, I think you can handle merge issues yourself. FT-OPS-015 owns current reconciliation and release; prior hold receipt remains immutable history."
     },
     {
       "id": "FT-IMP-130",

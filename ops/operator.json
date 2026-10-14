@@ -4,6 +4,23 @@
   "mission": "Help parents make realistic family-trip decisions through trustworthy destination tools and evidence-aware planning guidance.",
   "lifecycle": "active",
   "autonomy": "independent-autopilot-reviewed-release",
+  "git_reconciliation": {
+    "authorized_on": "2026-10-14",
+    "authority": "Approve and move on, I think you can handle merge issues yourself",
+    "owner": "Family Tripwise Master / Operator",
+    "routine_normal_merges_authorized": true,
+    "repeat_user_approval_required": false,
+    "policy": "docs/plan/git-reconciliation-policy.md",
+    "independent_review_required": true,
+    "native_qa_required": true,
+    "dirty_work_preservation_required": true,
+    "complete_outgoing_range_review_required": true,
+    "conflict_resolution": "Only documented deterministic evidence-backed outcomes; ambiguous conflicts, uncertain ownership or possible user-work loss stop for human input",
+    "rebase_authorized": false,
+    "force_push_authorized": false,
+    "reset_or_discard_authorized": false,
+    "scheduler_or_sprint_change_authorized": false
+  },
   "scheduler": {
     "owner": "Family Tripwise Master / Operator",
     "automation_id": "family-tripwise-two-month-autopilot",
