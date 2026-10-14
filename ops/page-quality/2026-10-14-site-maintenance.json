@@ -1,0 +1,1692 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-14",
+  "mode": "offline-maintenance-coverage",
+  "automatic_fact_renewal": false,
+  "automatic_publication": false,
+  "summary": {
+    "canonical_pages": 36,
+    "travel_pages": 33,
+    "utility_pages": 3,
+    "unclassified_pages": 0,
+    "contract_pages": {
+      "hotel": 7,
+      "activity-logistics": 2,
+      "activity-cards": 3,
+      "utility": 3,
+      "exact-room-comparison": 4,
+      "orlando-activity-constraints": 1,
+      "stay": 5,
+      "itinerary": 5,
+      "teen": 5,
+      "toddler": 1
+    },
+    "hotel_price_basis_gaps": 54,
+    "hotel_due_price_records": 57,
+    "activity_card_atomic_source_gaps": 333,
+    "planning_unmapped_decision_fields": 1512,
+    "planning_missing_page_source_notes": 4,
+    "policy_review_clocks": 10,
+    "policy_due_records": 0,
+    "policy_not_yet_observed": 0
+  },
+  "policy_review_clocks": [
+    {
+      "id": "las-vegas-area15-under18",
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+      "record_path": "docs/research/las-vegas-teen-access-2026-10-09.json",
+      "observed_on": "2026-10-09",
+      "interval_days": 30,
+      "evidence_class": "OFFICIAL_VENUE_POLICY",
+      "source_urls": [
+        "https://www.area15.com/faqs",
+        "https://www.area15.com/code-of-conduct"
+      ],
+      "evidence_state": "dated-records-available",
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 5,
+        "due_on": "2026-11-08"
+      },
+      "next_step": "preserve-dated-policy-until-named-change-or-review-due",
+      "limitation": "Review clock only, not a source reinspection, current admission/fare guarantee or automatic public fact renewal."
+    },
+    {
+      "id": "dc-regular-rail-fare",
+      "page_url": "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
+      "record_path": "docs/research/dc-family-transit-cost-2026-10-03.json",
+      "observed_on": "2026-10-03",
+      "interval_days": 30,
+      "evidence_class": "OFFICIAL_TRANSIT_FARE_FACT",
+      "source_urls": [
+        "https://www.wmata.com/pay.html"
+      ],
+      "evidence_state": "dated-records-available",
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 11,
+        "due_on": "2026-11-02"
+      },
+      "next_step": "preserve-dated-policy-until-named-change-or-review-due",
+      "limitation": "Review clock only, not a source reinspection, current admission/fare guarantee or automatic public fact renewal."
+    },
+    {
+      "id": "boston-museum-admission-return",
+      "page_url": "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+      "record_path": "docs/research/boston-museum-return-policy-2026-10-09.json",
+      "observed_on": "2026-10-09",
+      "interval_days": 14,
+      "evidence_class": "OFFICIAL_VENUE_POLICY",
+      "source_urls": [
+        "https://estore.bostonchildrensmuseum.org/webstore/shop/viewItems.aspx?cg=TT&c=TT"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 5,
+        "due_on": "2026-10-23"
+      },
+      "evidence_state": "dated-records-available",
+      "next_step": "preserve-dated-policy-until-named-change-or-review-due",
+      "limitation": "Review clock only; no admission, fee, exit/re-entry, availability, route or hotel-price renewal."
+    },
+    {
+      "id": "boston-park-plaza-gym-fee",
+      "page_url": "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+      "record_path": "docs/research/boston-park-plaza-fifth-bed-2026-10-10.json",
+      "observed_on": "2026-10-10",
+      "interval_days": 30,
+      "evidence_class": "OFFICIAL_PROPERTY_POLICY_AND_EXACT_CATEGORY_FACT",
+      "source_urls": [
+        "https://www.hilton.com/en/hotels/bossrhh-hilton-boston-park-plaza/hotel-info/"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 4,
+        "due_on": "2026-11-09"
+      },
+      "evidence_state": "dated-records-available",
+      "next_step": "preserve-dated-policy-until-named-change-or-review-due",
+      "limitation": "Facility-specific age and fee-benefit review clock only; no bed, price, policy-effective-date or actual service renewal."
+    },
+    {
+      "id": "pv-generic-meal-policy",
+      "page_url": "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html",
+      "record_path": "docs/research/puerto-vallarta-child-meals-2026-10-10.json",
+      "observed_on": "2026-10-10",
+      "interval_days": 30,
+      "evidence_class": "OFFICIAL_PROPERTY_POLICY",
+      "source_urls": [
+        "https://www.garzablancaresort.com/puerto-vallarta/all-inclusive"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 4,
+        "due_on": "2026-11-09"
+      },
+      "evidence_state": "dated-records-available",
+      "next_step": "preserve-dated-policy-until-named-change-or-review-due",
+      "limitation": "Generic age, all-room and tax/promotion scope only; no selected-offer acceptance or room/price/service renewal."
+    },
+    {
+      "id": "nyc-summit-under16",
+      "page_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "record_path": "docs/research/new-york-city-summit-teen-access-2026-10-10.json",
+      "observed_on": "2026-10-10",
+      "interval_days": 30,
+      "evidence_class": "OFFICIAL_VENUE_POLICY",
+      "source_urls": [
+        "https://summitov.com/ticketterms/",
+        "https://summitov.com/codeofconduct/"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 4,
+        "due_on": "2026-11-09"
+      },
+      "evidence_state": "dated-records-available",
+      "next_step": "preserve-dated-policy-until-named-change-or-review-due",
+      "limitation": "Under-16 adult accompaniment only; no inferred adult minimum age or independent older-teen admission, source reinspection or general fact renewal."
+    },
+    {
+      "id": "nyc-moma-admission-return",
+      "page_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "record_path": "docs/research/nyc-moma-family-admission-2026-10-10.json",
+      "observed_on": "2026-10-10",
+      "interval_days": 14,
+      "evidence_class": "OFFICIAL_ADMISSION_SCHEDULE_AND_POLICY",
+      "source_urls": [
+        "https://www.moma.org/visit/",
+        "https://www.moma.org/visit/tips"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 4,
+        "due_on": "2026-10-24"
+      },
+      "evidence_state": "dated-records-available",
+      "next_step": "preserve-dated-categories-until-named-change-or-review-due",
+      "limitation": "Published category arithmetic only, not ID acceptance, checkout tax/fees, ticket inventory, observed rest or automatic source renewal."
+    },
+    {
+      "id": "nyc-ferry-fare-return",
+      "page_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "record_path": "docs/research/nyc-ferry-family-budget-2026-10-10.json",
+      "observed_on": "2026-10-10",
+      "interval_days": 9,
+      "evidence_class": "OFFICIAL_FARE_SCHEDULE_AND_ANNOUNCEMENT",
+      "source_urls": [
+        "https://www.ferry.nyc/ticketing-info/",
+        "https://static.ferry.nyc/blog/fare-change/",
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02376",
+        "https://edc.nyc/press-release/amidst-record-ridership-nycedc-announces-new-initiatives-support-nyc-ferry-forward"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 4,
+        "due_on": "2026-10-19"
+      },
+      "evidence_state": "dated-records-available",
+      "announced_effective_on": "2026-10-19",
+      "announced_state": "announced-not-observed",
+      "next_step": "preserve-observed-and-announced-labels-until-source-change-or-October19",
+      "limitation": "Clock never promotes an announced fare to observed; standard single-ticket arithmetic, not best pass, checkout, discount eligibility or service assurance"
+    },
+    {
+      "id": "nyc-omny-family-payment",
+      "page_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "record_path": "docs/research/nyc-omny-family-budget-2026-10-10.json",
+      "observed_on": "2026-10-10",
+      "interval_days": 30,
+      "evidence_class": "OFFICIAL_FARE_AND_GROUP_PAYMENT_POLICY",
+      "source_urls": [
+        "https://www.mta.info/fares-tolls/subway-bus/tap-and-ride",
+        "https://omny.info/faq/fare-cap",
+        "https://omny.info/fares"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 4,
+        "due_on": "2026-11-09"
+      },
+      "evidence_state": "dated-record-available",
+      "next_step": "preserve-until-source-change-or-November9",
+      "limitation": "Fare-only conditional arithmetic; no card setup, payment authorization, reduced-fare eligibility, route or service assurance"
+    },
+    {
+      "id": "nyc-spygames-under16",
+      "page_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "record_path": "docs/research/nyc-spygames-minor-policy-2026-10-10.json",
+      "observed_on": "2026-10-10",
+      "interval_days": 30,
+      "evidence_class": "OFFICIAL_VENUE_POLICY",
+      "source_urls": [
+        "https://spyscape.com/tickets-new-york",
+        "https://spyscape.com/all-access"
+      ],
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 4,
+        "due_on": "2026-11-09"
+      },
+      "evidence_state": "dated-records-available",
+      "next_step": "preserve-dated-policy-until-named-change-or-review-due",
+      "limitation": "SPYGAMES under16 adult accompaniment only; no adult-throughout, adult minimum age, independent older-teen or separate museum supervision inference, reinspection or general fact renewal."
+    }
+  ],
+  "orlando_activity_constraints": {
+    "page_url": "https://familytripwise.com/things-to-do/orlando-with-kids.html",
+    "model_path": "tools/page-generation/orlando-activity-data.mjs",
+    "automatic_fact_renewal": false,
+    "official": [
+      {
+        "id": "osc",
+        "url": "https://www.osc.org/visit/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "kids",
+        "url": "https://www.osc.org/visit/exhibits/kidstown/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "crayola",
+        "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/faqs",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "crayolaHours",
+        "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/hours",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "sea",
+        "url": "https://www.visitsealife.com/orlando/plan-your-day/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "seaFaq",
+        "url": "https://www.visitsealife.com/orlando/plan-your-day/information/faqs/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "seaHours",
+        "url": "https://www.visitsealife.com/orlando/plan-your-day/before-you-visit/opening-hours/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "mennello",
+        "url": "https://www.mennellomuseum.org/About/Visitor-Information",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "leu",
+        "url": "https://www.leugardens.org/Visit/Admission-Hours",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "gator",
+        "url": "https://www.gatorland.com/plan-your-visit/hours-and-prices/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "gatorRules",
+        "url": "https://www.gatorland.com/plan-your-visit/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "lake",
+        "url": "https://www.orlando.gov/Parks-the-Environment/Directory/Lake-Eola-Park",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      },
+      {
+        "id": "springs",
+        "url": "https://www.disneysprings.com/plan-your-visit/",
+        "checked_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-10-27"
+        }
+      }
+    ],
+    "reviews": [
+      {
+        "venue": "Orlando Science Center",
+        "url": "https://www.tripadvisor.com/AttractionProductReview-g34515-d34472127-Orlando_Science_Center_General_Admission_Ticket-Orlando_Florida.html",
+        "basis": "Search-exposed review excerpts, not a complete live review body",
+        "dates": "Written February25,2026; family visit August2026 (publication date not established)",
+        "note": "Two opposing signals: hands-on engagement and a complaint about value, exhibit condition and staffing. Neither establishes today's conditions or a representative rating.",
+        "retrieved_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-11-12"
+        }
+      },
+      {
+        "venue": "Crayola Experience",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g34515-d8395010-Reviews-or80-Crayola_Experience-Orlando_Florida.html",
+        "basis": "Publisher-selected positive excerpts exposed in search; direct body throttled",
+        "dates": "Visit labels August, July, March and January2026; publication dates unavailable",
+        "note": "Four positive excerpts mention creative family engagement or time spent. Positive-selection bias prevents an overall satisfaction or crowd verdict.",
+        "retrieved_on": "2026-10-13",
+        "freshness": {
+          "state": "within-review-interval",
+          "age_days": 1,
+          "due_on": "2026-11-12"
+        }
+      }
+    ],
+    "ticket_promotion": {
+      "checked_on": "2026-10-13",
+      "url": "https://www.visitsealife.com/orlando/tickets-passes/",
+      "hours_url": "https://www.theorlandoeye.com/plan-your-day/before-you-visit/opening-hours/",
+      "product": "SEA LIFE + Orlando Eye FREE",
+      "currency": "USD",
+      "adult_from": 29,
+      "child_price": null,
+      "selected_visit_date": null,
+      "exact_family_total": null,
+      "tax_fee_inclusion": null,
+      "note": "The listing's separate Ultimate Florida Ticket carries an Eye maintenance notice, while the Eye calendar lists October 12/13 opening hours. Neither confirms your chosen date. Check operation and the exact package terms before paying for a bonus you intend to use.",
+      "freshness": {
+        "state": "within-review-interval",
+        "age_days": 1,
+        "due_on": "2026-10-20"
+      },
+      "limitation": "Adult advertised floor only, no dated child quote, complete family cost or confirmed operation; recheck before booking."
+    },
+    "unknowns": [
+      {
+        "id": "sea-life",
+        "exact_family_cost": null
+      },
+      {
+        "id": "lake-eola",
+        "exact_family_cost": null
+      }
+    ],
+    "limitation": "Dated published rates and rules, not confirmed operation, a complete checkout, firsthand experience or family suitability. Future-dated reports cannot use these as already observed."
+  },
+  "pages": [
+    {
+      "url": "https://familytripwise.com/",
+      "contract": "utility",
+      "applicability": "travel-decision-records-not-applicable"
+    },
+    {
+      "url": "https://familytripwise.com/about.html",
+      "contract": "utility",
+      "applicability": "travel-decision-records-not-applicable"
+    },
+    {
+      "url": "https://familytripwise.com/contributors/miles-rowan.html",
+      "contract": "utility",
+      "applicability": "travel-decision-records-not-applicable"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/orlando-with-kids.html",
+      "contract": "orlando-activity-constraints",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
+      "contract": "exact-room-comparison",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+      "contract": "exact-room-comparison",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html",
+      "contract": "exact-room-comparison",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/london-family-hotels.html",
+      "contract": "exact-room-comparison",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+      "contract": "hotel",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "contract": "activity-cards",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/chicago-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
+      "contract": "activity-cards",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
+      "contract": "activity-logistics",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
+      "contract": "activity-logistics",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
+      "contract": "activity-cards",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+      "contract": "stay",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+      "contract": "itinerary",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/chicago-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+      "contract": "toddler",
+      "applicability": "decision-records-covered-not-facts-verified"
+    },
+    {
+      "url": "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
+      "contract": "teen",
+      "applicability": "decision-records-covered-not-facts-verified"
+    }
+  ],
+  "contract_summaries": {
+    "hotel": {
+      "pages": 7,
+      "hotels": 65,
+      "fields": 390,
+      "review_tasks": 384,
+      "conflicts": 13,
+      "price_gaps": 2,
+      "due_price_records": 57,
+      "unstructured_price_basis": 54,
+      "source_mapped_fields": 240
+    },
+    "activity": {
+      "mapped_pages": 2,
+      "attractions": 24,
+      "fields": 120,
+      "unpriced_exact_visit_budgets": 24,
+      "unmapped_activity_pages": 4,
+      "unmapped_fields": 24
+    },
+    "cards": {
+      "retained_pages": 3,
+      "attractions": 37,
+      "fields": 333,
+      "atomic_source_gaps": 333,
+      "unpriced_exact_visit_budgets": 37
+    },
+    "planning": {
+      "pages": 16,
+      "decision_records": 338,
+      "unmapped_decision_fields": 1512,
+      "missing_page_source_notes": 4
+    }
+  },
+  "planning_pages": [
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 14,
+      "unmapped_decision_fields": 58,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 4,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 0,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-22",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 84,
+        "due_on": "2026-08-21"
+      },
+      "source_inventory_count": 10,
+      "decision_records": 16,
+      "unmapped_decision_fields": 57,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 6
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 80,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 8,
+      "decision_records": 16,
+      "unmapped_decision_fields": 62,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 83,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 12,
+      "decision_records": 16,
+      "unmapped_decision_fields": 57,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 6
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
+      "type": "stay",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 80,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 13,
+      "decision_records": 16,
+      "unmapped_decision_fields": 62,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "booking-checks",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 17,
+      "unmapped_decision_fields": 68,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 6,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 83,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 11,
+      "decision_records": 24,
+      "unmapped_decision_fields": 90,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        },
+        {
+          "name": "base-handoff",
+          "records": 3,
+          "fields_per_record": 3
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 80,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 13,
+      "decision_records": 21,
+      "unmapped_decision_fields": 66,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/chicago-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 83,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 15,
+      "decision_records": 21,
+      "unmapped_decision_fields": 81,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html",
+      "type": "itinerary",
+      "retained_page_source_date": "2026-07-27",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 79,
+        "due_on": "2026-08-26"
+      },
+      "source_inventory_count": 17,
+      "decision_records": 21,
+      "unmapped_decision_fields": 66,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "quick",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "day-plans",
+          "records": 3,
+          "fields_per_record": 4
+        },
+        {
+          "name": "pivots",
+          "records": 5,
+          "fields_per_record": 5
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 22,
+      "unmapped_decision_fields": 138,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 6,
+          "fields_per_record": 11
+        },
+        {
+          "name": "quick",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 6,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 2,
+          "fields_per_record": 2
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-22",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 84,
+        "due_on": "2026-08-21"
+      },
+      "source_inventory_count": 15,
+      "decision_records": 28,
+      "unmapped_decision_fields": 166,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 8,
+          "fields_per_record": 11
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-26",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 80,
+        "due_on": "2026-08-25"
+      },
+      "source_inventory_count": 22,
+      "decision_records": 30,
+      "unmapped_decision_fields": 149,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 10,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-23",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 83,
+        "due_on": "2026-08-22"
+      },
+      "source_inventory_count": 18,
+      "decision_records": 27,
+      "unmapped_decision_fields": 126,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 8,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 4,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 3,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 4,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
+      "type": "teen",
+      "retained_page_source_date": "2026-07-27",
+      "page_note_age": {
+        "state": "review-due",
+        "age_days": 79,
+        "due_on": "2026-08-26"
+      },
+      "source_inventory_count": 22,
+      "decision_records": 30,
+      "unmapped_decision_fields": 149,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 10,
+          "fields_per_record": 7
+        },
+        {
+          "name": "quick",
+          "records": 5,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 3,
+          "fields_per_record": 2
+        },
+        {
+          "name": "official-checks",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "planning-rules",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    },
+    {
+      "page_url": "https://familytripwise.com/things-to-do/san-diego-with-toddlers.html",
+      "type": "toddler",
+      "retained_page_source_date": null,
+      "page_note_age": {
+        "state": "unknown",
+        "age_days": null,
+        "due_on": null
+      },
+      "source_inventory_count": 0,
+      "decision_records": 19,
+      "unmapped_decision_fields": 117,
+      "sections": [
+        {
+          "name": "comparison",
+          "records": 5,
+          "fields_per_record": 11
+        },
+        {
+          "name": "quick",
+          "records": 4,
+          "fields_per_record": 3
+        },
+        {
+          "name": "details",
+          "records": 5,
+          "fields_per_record": 8
+        },
+        {
+          "name": "faqs",
+          "records": 2,
+          "fields_per_record": 2
+        },
+        {
+          "name": "planning-rules",
+          "records": 3,
+          "fields_per_record": 2
+        }
+      ],
+      "next_step": "Map dated evidence to the named constraint before changing its value; page notes and access/weather/rest labels are not verified routes, suitability or safety."
+    }
+  ],
+  "exact_room_comparisons": [
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
+      "model_path": "tools/page-generation/washington-dc-family-hotels-page.mjs",
+      "records": [
+        {
+          "id": "dc-embassy-deluxe-double",
+          "category": "Deluxe Two Room Suite with 2 Double Beds",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 14,
+            "due_on": "2026-10-30"
+          },
+          "price_observed_on": "2026-09-30",
+          "price_age": {
+            "state": "review-due",
+            "age_days": 14,
+            "due_on": "2026-10-14"
+          },
+          "price_status": "dated-age-unresolved-count-samples",
+          "next_checks": [
+            "Confirm sofa setup and specific bedding allocation",
+            "Microwave and mini refrigerator established, stovetop not established",
+            "Confirm indoor-pool hours/closures and breakfast service",
+            "Verify actual museum entrance-to-room rest journey without a stroller verdict",
+            "October3 selected dated online family reports prompt sofa condition/comfort and exact-party breakfast checks; property-level signals, not prevalence or a Deluxe-category defect",
+            "Modern Double and accessible King review labels are not reconciled to this Deluxe Double category; exact category and child ages remain unknown",
+            "October3 official WMATA model for Nov10 at13:00 museum-to-hotel and15:00 reverse: walking-only0.74mile/18minutes each, displayed clock17minutes; not child-paced, stroller-tested or door-to-room, queue/rest unknown",
+            "October3 official policy publishes early checkout300USD/late checkout100USD with Front Desk coordination; not added to unchanged stay. Valet75USD unit/tax unknown and5+n pet125USD excluded for no-car/no-pet task. Mandatory/sofa fees and incidentals hold remain unknown.",
+            "October3 official breakfast hours weekday06:30-10:00/weekend06:30-10:30 on lobby level; made-to-order/buffet labels do not establish five-person seating, dietary fit, future service or full dinner from evening reception.",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        },
+        {
+          "id": "dc-homewood-two-queen",
+          "category": "2 Queen Beds 1 Bedroom Suite Nonsmoking",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 14,
+            "due_on": "2026-10-30"
+          },
+          "price_observed_on": "2026-09-30",
+          "price_age": {
+            "state": "review-due",
+            "age_days": 14,
+            "due_on": "2026-10-14"
+          },
+          "price_status": "dated-age-unresolved-count-samples",
+          "next_checks": [
+            "Confirm sofa dimensions, deployment clearance and exact bedding allocation; full-sized sofa label does not establish usable geometry",
+            "Confirm dining chair, utensil and place-setting quantities for the actual party; kitchen equipment does not establish five-person dining",
+            "Full kitchen lists stove/dishwasher/full-size refrigerator/microwave",
+            "Collect actual family/date/public-plan rate with taxes and fee basis",
+            "Verify museum-rest transport and pool status; amenities list does not establish indoor pool",
+            "October3 selected current family reports: kitchen positives and mixed breakfast signals are property-level, not prevalence or a five-person room verdict; January2025 noise/utensil reports remain historical",
+            "Two current two-queen review labels are not reconciled to standard THWN; party ages, sofa setup, cookware/chair quantities and actual rest remain unknown",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        },
+        {
+          "id": "dc-pendry-two-bedroom",
+          "category": "Two Bedroom Suite",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 14,
+            "due_on": "2026-10-30"
+          },
+          "price_observed_on": null,
+          "price_age": {
+            "state": "unknown",
+            "age_days": null,
+            "due_on": null
+          },
+          "price_status": "not-observed",
+          "next_checks": [
+            "Verify requested child-sofa allocation, age restrictions and fees",
+            "Collect exact public suite rate with taxes/mandatory fees",
+            "Coffee/minibar are not a cooking kitchen",
+            "Verify museum-rest journey, meal and pool access/hours",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        }
+      ],
+      "limitation": "Scoped room and dated-price ownership, not all atomic facts verified; unknown child-age/fee/rest claims remain unresolved. No automatic source renewal or publication."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+      "model_path": "tools/page-generation/boston-family-hotels-page.mjs",
+      "evidence_state": "dated-records-available",
+      "records": [
+        {
+          "id": "boston-fenway-two-bedroom-tobt",
+          "category": "2 Bedroom Suite, Bedroom 1: 1 King, Bedroom 2: 1 Queen, Sofa bed (TOBT)",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 11,
+            "due_on": "2026-11-02"
+          },
+          "price_observed_on": "2026-10-03",
+          "price_age": {
+            "state": "within-review-interval",
+            "age_days": 11,
+            "due_on": "2026-10-17"
+          },
+          "price_status": "dated-stay-samples",
+          "next_checks": [
+            "No rollaway; one crib is not extra occupancy for these children",
+            "Pre-tax flexible quote in separate dated observation; full taxes/mandatoryfees/deposit unknown",
+            "Optional valet72USD/day or85outside standard times not included for no-car task",
+            "Verify actual Aquarium/Children'sMuseum midday-return journey and rest allocation",
+            "October3 two selected current King Studio family reports prompt breakfast variety and kettle checks; not TOBT category or five-person confirmation. Older pool/sofa/noise reports not renewed; exact suite equipment/bed allocation/current service and actual rest still unknown",
+            "October3 MBTA publishes age11andunder free: declared4/8 free,12 outside band; twoadults plus12 imply three regular-fare riders absent other eligibility. Numeric fare/transfer/device/gate/actualreturn unknown after canonical fare-body robots denial; no DC rule transfer or all-fee budget.",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        },
+        {
+          "id": "boston-park-plaza-deluxe-double",
+          "category": "2 Double Beds Deluxe Guestroom",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 13,
+            "due_on": "2026-10-31"
+          },
+          "price_observed_on": "2026-10-01",
+          "price_age": {
+            "state": "within-review-interval",
+            "age_days": 13,
+            "due_on": "2026-10-15"
+          },
+          "price_status": "dated-age-unresolved-count-samples",
+          "next_checks": [
+            "Check exact individual ages and public plan for Nov8-13",
+            "Collect nightly/stay amount, tax, mandatory fee, cancellation, parking and deposit basis",
+            "Verify nap-return journey and rest-space separation",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        },
+        {
+          "id": "boston-four-seasons-plaza",
+          "category": "Plaza Suite",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 5,
+            "due_on": "2026-11-08"
+          },
+          "price_observed_on": null,
+          "price_age": {
+            "state": "unknown",
+            "age_days": null,
+            "due_on": null
+          },
+          "price_status": "not-observed",
+          "next_checks": [
+            "Confirm complete two-bedroom bed list, individual child-age acceptance and three older-child sleeping places; a crib does not settle ages 4/8/12",
+            "Confirm cooking appliances, usable kitchen equipment and dining capacity; published kitchen is not an equipment guarantee",
+            "Obtain an exact Plaza Suite price for your dates and each child's age; the monthly-pricing phone label does not establish a five-night rate or minimum stay",
+            "Verify extra bedding, meals, taxes/fees, cancellation, deposit and actual museum-rest journey",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        },
+        {
+          "id": "boston-langham-club-two-bedroom",
+          "category": "Club Two Bedroom Suite",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 13,
+            "due_on": "2026-10-31"
+          },
+          "price_observed_on": null,
+          "price_age": {
+            "state": "unknown",
+            "age_days": null,
+            "due_on": null
+          },
+          "price_status": "not-observed",
+          "next_checks": [
+            "Collect same-task public rate and age classifications",
+            "In-room dining Private Kitchen wording does not establish guest cooking facilities",
+            "Verify club child access/meals, fees, deposit, cancellation, parking and rest journey",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        }
+      ],
+      "limitation": "Four conditional categories, not all atomic facts verified. Park Plaza counts do not establish a child-age band; fees, bedding, rest and two category prices remain unresolved. Historical reports before the pack date cannot screen later evidence. No automatic renewal or publication."
+    },
+    {
+      "page_url": "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html",
+      "model_path": "tools/page-generation/puerto-vallarta-family-resorts-page.mjs",
+      "evidence_state": "dated-records-available",
+      "records": [
+        {
+          "id": "pv-garza-sanctuary-two-bedroom",
+          "category": "Sanctuary Two Bedroom Suite",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 5,
+            "due_on": "2026-11-08"
+          },
+          "price_observed_on": "2026-10-09",
+          "price_age": {
+            "state": "within-review-interval",
+            "age_days": 5,
+            "due_on": "2026-10-23"
+          },
+          "price_status": "dated-stay-samples",
+          "next_checks": [
+            "Actual search entered individual ages4/8/12 and returned this exact category; no reservation or payment",
+            "Published search bands adults18+,children4-12,infants0-3 leave13-17 unclassified; no complementary inference",
+            "No published cooking kitchen established for Sanctuary; Panoramic facts cannot transfer",
+            "No current representative review corpus, measured no-car transfer or rest-return verdict",
+            "Full taxes, mandatory fees, incidentals and exact meal eligibility unresolved",
+            "Base: Puerto Vallarta,Jalisco,official Km7.5 address checked October9; not central-city or measured route assurance",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Collect comparable USD nightly price with party/stay/tax/fee basis"
+          ]
+        },
+        {
+          "id": "pv-garza-panoramic-two-bedroom",
+          "category": "Two Bedroom Panoramic Suite",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 5,
+            "due_on": "2026-11-08"
+          },
+          "price_observed_on": null,
+          "price_age": {
+            "state": "unknown",
+            "age_days": null,
+            "due_on": null
+          },
+          "price_status": "not-observed",
+          "next_checks": [
+            "Official address Puerto Vallarta,Jalisco; no central-city or measured route assurance",
+            "Normal same-family search returned Sanctuary categories; this category's requested-stay price remains unobserved, not proven sold out",
+            "Per-person maximum-occupancy starting/member card excludes taxes and is not this family's nightly rate",
+            "No kitchen or rates inherited between Sanctuary and Panoramic",
+            "No exact care, transport/rest or representative review evidence",
+            "Base: Puerto Vallarta,Jalisco,official Km7.5 address checked October9; not central-city or measured route assurance",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Confirm ISO currency and collect comparable nightly price with party/stay/tax/fee basis"
+          ]
+        },
+        {
+          "id": "bahia-family",
+          "category": "Family Suite Tropical View",
+          "category_age": {
+            "state": "within-review-interval",
+            "age_days": 11,
+            "due_on": "2026-11-02"
+          },
+          "price_observed_on": null,
+          "price_age": {
+            "state": "unknown",
+            "age_days": null,
+            "due_on": null
+          },
+          "price_status": "not-observed",
+          "next_checks": [
+            "Booking child/adult age classification and dated reservation acceptance unknown; club ages are not room booking ages",
+            "No exact-family November8-13 quote; ISO currency, fees, deposits, meals and cancellation terms unconfirmed",
+            "Kitchen equipment and dining capacity not established",
+            "No-car transfer cost and nap-return journey unknown; no route assurance",
+            "Base: Nayarit coast, not Puerto Vallarta city; exact municipality and route not verified",
+            "Explorer published3-12; readiness/registration/places and teen band unknown; do not inherit Vallarta potty-training policy",
+            "Named connected category does not guarantee booked linkage or bedding allocation",
+            "Base: Nayarit coast, not Puerto Vallarta city; original October3 address, actual no-car return unknown",
+            "Confirm child/adult age classification, exact reservation and available setup",
+            "Confirm ISO currency and collect comparable nightly price with party/stay/tax/fee basis"
+          ]
+        }
+      ],
+      "limitation": "Three conditional categories, two properties; Bahia Mita is a Nayarit regional control. Only Sanctuary has dated exact-entered-age public prices. Category-specific source clocks, unknown fees/bed allocation/rest/care and limited reviews retained; historical reports exclude future source records. No automatic renewal or publication."
+    }
+  ],
+  "london_room_comparison": {
+    "page_url": "https://familytripwise.com/where-to-stay/london-family-hotels.html",
+    "model_path": "tools/page-generation/london-family-hotels-page.mjs",
+    "evidence_state": "dated-records-available",
+    "records": [
+      {
+        "id": "marlin-queen-street-two-bedroom",
+        "category": "Two Bedroom Apartment",
+        "category_checked_on": "2026-09-30",
+        "category_age": {
+          "state": "within-review-interval",
+          "age_days": 14,
+          "due_on": "2026-10-30"
+        },
+        "price_observed_on": "2026-10-02",
+        "price_age": {
+          "state": "within-review-interval",
+          "age_days": 12,
+          "due_on": "2026-10-16"
+        },
+        "price_status": "dated-stay-samples",
+        "next_checks": [
+          "Extra sofa charge unknown; category rate without sofa is not five-person cost.",
+          "Confirm child/adult age classification, exact reservation and available setup",
+          "Collect comparable GBP nightly price with party/stay/tax/fee basis"
+        ]
+      },
+      {
+        "id": "marlin-limehouse-two-bedroom",
+        "category": "Two Bedroom Apartment",
+        "category_checked_on": "2026-10-02",
+        "category_age": {
+          "state": "within-review-interval",
+          "age_days": 12,
+          "due_on": "2026-11-01"
+        },
+        "price_observed_on": "2026-10-02",
+        "price_age": {
+          "state": "within-review-interval",
+          "age_days": 12,
+          "due_on": "2026-10-16"
+        },
+        "price_status": "dated-stay-samples",
+        "next_checks": [
+          "Confirm sofa-specific booked category, child sleeping allocation and any optional extra charges; no final checkout inspected.",
+          "Location and midday-return friction not evaluated; lower displayed price does not settle value or rest convenience.",
+          "Confirm child/adult age classification, exact reservation and available setup",
+          "Collect comparable GBP nightly price with party/stay/tax/fee basis"
+        ]
+      },
+      {
+        "id": "citadines-trafalgar-two-bedroom",
+        "category": "2-Bedroom Apartment",
+        "category_checked_on": "2026-10-03",
+        "category_age": {
+          "state": "within-review-interval",
+          "age_days": 11,
+          "due_on": "2026-11-02"
+        },
+        "price_observed_on": "2026-10-03",
+        "price_age": {
+          "state": "within-review-interval",
+          "age_days": 11,
+          "due_on": "2026-10-17"
+        },
+        "price_status": "dated-stay-samples",
+        "next_checks": [
+          "Own public prepaid/flexible dated samples are separately joined for the exact ages/stay; adult classification cutoffs not established",
+          "Double sofa is published in the returned category, but setup inclusion and separate charges/final checkout not established",
+          "Duplex/internal stairs, lift/entrance, rest isolation and suitability remain unknown",
+          "Advance full prepayment is not an additional stay fee; flexible credit-card guarantee is not a zero incidental hold assurance",
+          "Confirm child/adult age classification, exact reservation and available setup",
+          "Collect comparable GBP nightly price with party/stay/tax/fee basis"
+        ]
+      }
+    ],
+    "limitation": "Three researched apartments/two operators, not a city ranking or booking acceptance; original dates/sofa/rest/entrance/fee unknowns retained. No automatic renewal."
+  },
+  "review_priorities": [
+    "Reconcile current source conflicts and expired operational notices before aesthetic edits.",
+    "Retain approximate nightly bands and their basis; research missing/stale room-party-date-fee observations first.",
+    "Use source diffs only to queue named claim checks; never renew observations from hashes or retrieval success.",
+    "Map age, access, weather and reset constraints without promoting them to safety or firsthand assurances."
+  ],
+  "limitations": [
+    "Framework coverage is not atomic fact completeness or a fresh-publication certificate.",
+    "Utility pages have an explicit non-travel classification, not invented destination records.",
+    "The compact report references existing native adapters; run their detailed reports to inspect retained values and tasks.",
+    "No public page, estimate, observation date or URL-specific measurement window is changed by this command.",
+    "Weekly stability requires the next actual weekly run and claim reconciliation, not a same-day fixture or repeat."
+  ]
+}

@@ -16,6 +16,44 @@ const exact = (value, keys) => value && typeof value === 'object' && !Array.isAr
 
 export const priorAttemptAt = (source,collectedAt) => source.last_attempt_at || (source.http_status || source.text_sha256 || denied(source) ? collectedAt : null);
 
+export function validateAccessHolds(registry) {
+  if(!exact(registry,['schema_version','kind','holds'])||registry.schema_version!==1||registry.kind!=='documented-source-access-holds'||!Array.isArray(registry.holds)||registry.holds.length>1000)throw Error('Invalid documented access registry');
+  const urls=new Set();
+  for(const hold of registry.holds) {
+    if(!exact(hold,['url','observed_on','reason','evidence_path'])||typeof hold.url!=='string'||hold.url.length>8192||urls.has(hold.url))throw Error('Invalid or duplicate documented access hold');
+    const u=new URL(hold.url);if(permittedUrl(hold.url,[u.hostname])!==hold.url)throw Error('Unsafe documented access URL');urls.add(hold.url);
+    date(hold.observed_on);if(hold.observed_on>easternDate()||!['documented-throttling-hold','documented-blank-ticket-hold','documented-nonretryable-access-hold'].includes(hold.reason))throw Error('Invalid access hold date or class');
+    if(typeof hold.evidence_path!=='string'||hold.evidence_path.length>512||!/^docs\/research\/[A-Za-z0-9._/-]+\.(json|md)$/.test(hold.evidence_path)||hold.evidence_path.split('/').some(x=>!x||x==='.'||x==='..'))throw Error('Invalid access evidence reference');
+  }
+  return registry;
+}
+
+export function collectionSelection(plan,registry,selectedUrls) {
+  const selection={schema_version:1,kind:'reviewed-source-selection',plan_sha256:plan.plan_sha256,hold_registry_sha256:hash(registry),selected_source_urls:[...selectedUrls].sort()};
+  return validateCollectionSelection(plan,selection,registry);
+}
+
+export function validateCollectionSelection(plan,selection,registry) {
+  validatePlan(plan);validateAccessHolds(registry);
+  if(!exact(selection,['schema_version','kind','plan_sha256','hold_registry_sha256','selected_source_urls'])||selection.schema_version!==1||selection.kind!=='reviewed-source-selection'||selection.plan_sha256!==plan.plan_sha256||selection.hold_registry_sha256!==hash(registry)||!Array.isArray(selection.selected_source_urls)||selection.selected_source_urls.length>500||new Set(selection.selected_source_urls).size!==selection.selected_source_urls.length)throw Error('Invalid or changed source selection');
+  if(JSON.stringify([...selection.selected_source_urls].sort())!==JSON.stringify(selection.selected_source_urls))throw Error('Source selection must be deterministic');
+  const sources=new Map(plan.sources.map(s=>[s.url,s])),holds=new Set(registry.holds.map(h=>h.url));
+  for(const url of selection.selected_source_urls) {
+    const source=sources.get(url);if(typeof url!=='string'||!source||denied(source.prior)||holds.has(url))throw Error('Unapproved or held source cannot be selected');
+  }
+  return selection;
+}
+
+export async function executeSelectedSource(source,plan,selection,registry,{fetcher=fetch}={}) {
+  plan=validatePlan(copy(plan));selection=copy(selection);registry=copy(registry);validateCollectionSelection(plan,selection,registry);
+  const retained=plan.sources.find(s=>s.url===source.url);
+  if(!retained||JSON.stringify(retained)!==JSON.stringify(source)||!selection.selected_source_urls.includes(source.url))throw Error('Source execution differs from reviewed selection');
+  // One exact-address fetch; even a self-redirect needs separate reconciliation.
+  let requested=false;
+  const guarded=async(url,options)=>{if(requested||url!==retained.url)throw Error('Redirect requires separate exact-source reconciliation');requested=true;return fetcher(url,options);};
+  return compareSource(await fetchSource(retained.url,plan.allowed_hosts,retained.checks,{fetcher:guarded}),retained.prior);
+}
+
 function validateSourceScalars(source) {
   if (!source || typeof source!=='object' || Array.isArray(source) || typeof source.url!=='string' || typeof source.state!=='string' || !Array.isArray(source.pages) || source.pages.some(p=>typeof p!=='string')) throw Error('Invalid scalar source identity');
   const boundedText=(key,max,allowEmpty=false)=>{if(Object.hasOwn(source,key)&&(typeof source[key]!=='string'||(!allowEmpty&&!source[key].length)||source[key].length>max||/[\r\n\0]/.test(source[key])))throw Error('Invalid scalar source metadata');};
@@ -153,15 +191,17 @@ export async function checkpointEvidence(plan,directory) {
   return evidence;
 }
 
-export async function runCheckpointBatch(plan,index,directory,{collect=false,executeSource=async s=>compareSource(await fetchSource(s.url,plan.allowed_hosts,s.checks),s.prior)}={}) {
+export async function runCheckpointBatch(plan,index,directory,{collect=false,selection=null,accessHolds=null,executeSource=null}={}) {
   plan=validatePlan(copy(plan));const today=easternDate(),batch=batches(plan)[index];
-  if(collect!==true||!Number.isInteger(index)||!batch||today<plan.collect_not_before||typeof executeSource!=='function')throw Error('Explicit eligible bounded collection required');
+  if(collect!==true||!Number.isInteger(index)||!batch||today<plan.collect_not_before||(executeSource!==null&&typeof executeSource!=='function'))throw Error('Explicit eligible bounded collection required');
+  accessHolds=validateAccessHolds(copy(accessHolds));selection=validateCollectionSelection(plan,copy(selection),accessHolds);const selected=new Set(selection.selected_source_urls);
+  executeSource ||= s=>executeSelectedSource(s,plan,selection,accessHolds);
   const dir=await safeDirectory(directory),lock=await open(join(dir,'writer.lock'),'wx',0o600);
   try {
     await lock.writeFile(plan.plan_sha256+'\n');await lock.sync();
     const status=await checkpointStatus(plan,dir);
     for(const row of status.rows.slice(batch.start,batch.start+batch.count)) {
-      if(row.state!=='deferred-no-attempt')continue;
+      if(row.state!=='deferred-no-attempt'||!selected.has(row.url))continue;
       const source=plan.sources[row.index],attemptedAt=new Date().toISOString();
       // An immutable attempt precedes the request; a missing result becomes a hold.
       await writeNew(join(dir,name(row.index)+'.start.json'),{plan_sha256:plan.plan_sha256,index:row.index,url:source.url,attempted_at:attemptedAt});
@@ -177,16 +217,16 @@ export async function runCheckpointBatch(plan,index,directory,{collect=false,exe
 
 async function main() {
   const args=process.argv.slice(2),opts={};
-  for(let i=0;i<args.length;i++){const k=args[i];if(Object.hasOwn(opts,k)||!['--create','--status','--collect','--checkpoint','--previous','--batch'].includes(k))throw Error('Unknown or duplicate pilot option');if(['--create','--status','--collect'].includes(k))opts[k]=true;else{if(!args[i+1]||args[i+1].startsWith('--'))throw Error('Missing pilot option value');opts[k]=args[++i];}}
+  for(let i=0;i<args.length;i++){const k=args[i];if(Object.hasOwn(opts,k)||!['--create','--status','--collect','--checkpoint','--previous','--batch','--selection'].includes(k))throw Error('Unknown or duplicate pilot option');if(['--create','--status','--collect'].includes(k))opts[k]=true;else{if(!args[i+1]||args[i+1].startsWith('--'))throw Error('Missing pilot option value');opts[k]=args[++i];}}
   if([opts['--create'],opts['--status'],opts['--collect']].filter(Boolean).length!==1||!opts['--checkpoint'])throw Error('Select one explicit pilot mode and checkpoint');
   const dir=resolve(opts['--checkpoint']);let plan;
   if(opts['--create']) {
-    if(!opts['--previous']||opts['--batch'])throw Error('Create requires prior audit only');
+    if(!opts['--previous']||opts['--batch']||opts['--selection'])throw Error('Create requires prior audit only');
     const operator=JSON.parse(await readFile(resolve(ROOT,'ops/operator.json'),'utf8'));
     plan=await currentPlan({previous:JSON.parse(await readFile(resolve(opts['--previous']),'utf8')),config:JSON.parse(await readFile(resolve(ROOT,'ops/evidence-watch.json'),'utf8')),notBefore:operator.weekly_evidence_audit.next_due_on});
     await initializeCheckpoint(plan,dir);console.log(JSON.stringify({source_count:plan.sources.length,batches:batches(plan),collect_not_before:plan.collect_not_before,network_calls:0}));
   } else {
-    if(opts['--previous']||(!opts['--collect']&&opts['--batch']))throw Error('Unexpected pilot option');
+    if(opts['--previous']||(!opts['--collect']&&(opts['--batch']||opts['--selection'])))throw Error('Unexpected pilot option');
     plan=validatePlan(await regular(join(dir,'manifest.json')));
     if(opts['--collect']) {
       const config=JSON.parse(await readFile(resolve(ROOT,'ops/evidence-watch.json'),'utf8'));
@@ -195,7 +235,14 @@ async function main() {
       const rebuilt=planSources({allowedHosts:config.allowed_hosts,observedOn:plan.observed_on,notBefore:plan.collect_not_before,limit:plan.limit,sources:inv.sources.map(s=>({url:s.url,pages:s.pages,prior:old.get(s.url)||null,checks:expanded.records.filter(r=>r.source_urls?.includes(s.url)&&r.pattern).map(r=>({id:r.id,pattern:r.pattern}))}))});
       if(JSON.stringify(rebuilt)!==JSON.stringify(plan))throw Error('Current inventory changed; reconcile before collection');
     }
-    const status=opts['--collect']?await runCheckpointBatch(plan,Number(opts['--batch']),dir,{collect:true}):await checkpointStatus(plan,dir);
+    let selection,accessHolds;
+    if(opts['--collect']) {
+      if(!opts['--selection'])throw Error('Collection requires explicit reviewed source selection');
+      await safeDirectory(resolve(ROOT,'ops'));accessHolds=validateAccessHolds(await regular(resolve(ROOT,'ops/source-access-holds.json')));
+      for(const hold of accessHolds.holds)await readFile(resolve(ROOT,hold.evidence_path));
+      await safeDirectory(dirname(resolve(opts['--selection'])));selection=validateCollectionSelection(plan,await regular(resolve(opts['--selection'])),accessHolds);
+    }
+    const status=opts['--collect']?await runCheckpointBatch(plan,Number(opts['--batch']),dir,{collect:true,selection,accessHolds}):await checkpointStatus(plan,dir);
     console.log(JSON.stringify({...status,rows:undefined}));
   }
 }

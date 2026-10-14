@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "kind": "reviewed-source-selection",
+  "plan_sha256": "3f1c0392354a1e60cae9132dd28c55f212551114ffb5c1190298a9554e534394",
+  "hold_registry_sha256": "bb4eff93674d8c95eeb7ef0cd4455fe8e5a0d5fbcc14a1890a402d80c0402dbb",
+  "selected_source_urls": [
+    "https://garfieldconservatory.org/visit/",
+    "https://thedana.com/san-diego-accommodations/",
+    "https://thedana.com/san-diego-hotel/faq/"
+  ]
+}

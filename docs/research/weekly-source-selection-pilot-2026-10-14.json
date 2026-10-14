@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-155",
+  "observed_on": "2026-10-14",
+  "evidence_class": "DOCUMENTED_ACCESS_CONFLICT_AND_BOUNDED_LIVE_SOURCE_METADATA",
+  "hypothesis": "The old weekly HTTP baseline is enough to prevent every documented unchanged access retry.",
+  "result": "REJECT:two October13 Orlando review throttles and the blank Garfield ticket hold are outside the October7 source-audit history. Explicit source selection and a pinned documented hold registry are required before using the new pilot.",
+  "implementation": "Strict hold-registry/source-selection validation, <=500 unique selected manifest URLs, plan/registry hash pins, prior and newer hold rejection, explicit scope in library and CLI, fixed repo registry, regular files/real parents, async scope snapshot. Default executor permits one exact-address fetch call; any redirect including self-redirect stops before a second call. No alternate-origin recovery.",
+  "checkpoint": {
+    "private_durable_path": "/Users/apoorvagarg/.codex/evidence-checkpoints/family-tripwise/2026-10-14-FT-IMP-155",
+    "plan_sha256": "3f1c0392354a1e60cae9132dd28c55f212551114ffb5c1190298a9554e534394",
+    "hold_registry_sha256": "bb4eff93674d8c95eeb7ef0cd4455fe8e5a0d5fbcc14a1890a402d80c0402dbb",
+    "source_count": 507,
+    "selected_sources": 3,
+    "completed_outcomes": 3,
+    "prior_access_holds": 154,
+    "deferred_no_attempt": 350,
+    "unknown_outcomes": 0,
+    "standard_audit_ready": false,
+    "factual_dates_renewed": false,
+    "automatic_publication": false,
+    "scope": "Three-source real pilot, not full weekly collection. Three newer documented holds are included within350unattempted entries, not mislabeled as old HTTP denials."
+  },
+  "source_results": [
+    {"url": "https://garfieldconservatory.org/visit/", "attempted_at": "2026-10-14T04:11:27.974Z", "http_status": 200, "state": "text-unchanged", "final_url_matches_selected": true, "text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee", "extracted_atomic_fields": 0, "meaningful_claim_delta": "UNRECONCILED"},
+    {"url": "https://thedana.com/san-diego-accommodations/", "attempted_at": "2026-10-14T04:11:28.369Z", "http_status": 200, "state": "text-changed-review", "final_url_matches_selected": true, "text_sha256": "986167249c7d39ee5272dab00c67e0a53405069641b98b149ed36f6c1d7c13cb", "extracted_atomic_fields": 0, "meaningful_claim_delta": "UNRECONCILED"},
+    {"url": "https://thedana.com/san-diego-hotel/faq/", "attempted_at": "2026-10-14T04:11:28.742Z", "http_status": 200, "state": "text-changed-review", "final_url_matches_selected": true, "text_sha256": "4905d3699b1d04028c712f787d3651a017c1738f751fb04ed010917fc35670c3", "extracted_atomic_fields": 0, "meaningful_claim_delta": "UNRECONCILED"}
+  ],
+  "source_method": "Explicit native pilot CLI, one initial request per selected source, all final addresses match initial addresses. No source bodies, raw headers or credentials retained. The stricter redirect wrapper was added after these direct successful requests; no live source was repeated to test it. Memory-only redirect fixtures prove target rejection, not a live redirect experiment.",
+  "maintainer_tasks": [
+    {"name": "Parent comparing Dana room capacity and fees", "steps": ["Select the maintained hotel page and two exact official sources", "Inspect current request outcomes without borrowing prices or dates", "Route two changed hashes to unreconciled review", "Check atomic extraction and detect zero mapped fields", "Keep original public room/fee dates unchanged"], "result": "PARTIAL:source selection/collection succeeds; hashes alone cannot establish whether occupancy or fees changed. Atomic room/fee adapter remains necessary."},
+    {"name": "Parent checking Garfield admission and reservations", "steps": ["Choose the readable official visit source", "Keep separately documented blank ticket URL unselected", "Observe unchanged visit hash", "Check admission field mapping and checkout unknowns", "Preserve published admission dates/limits until original-source claim reconciliation"], "result": "PARTIAL:source outcome known, not a renewed admission or checkout-fee claim. No ticket retry or fabricated under-seven price."}
+  ],
+  "native_task_proof": {"focused_tests": 27, "new_tests": 5, "read_only_pure_tests": 10, "fake_source_scope": "selected-only, no replay, immutable caller scope, current registry/plan pins, private/held/duplicate/unapproved rejection and redirect target rejection; actualCLI missing/changed/held/symlink selection tested with network replaced by a throwing fake fetch"},
+  "current_maintenance": {"canonical_pages": 36, "travel_pages": 33, "utility_pages": 3, "shared_model_fields": 390, "hotel_price_basis_gaps": 54, "hotel_due_price_records": 57, "activity_atomic_source_gaps": 333, "planning_unmapped_fields": 1512, "public_changes": false},
+  "decision": "IMPLEMENT guarded source selection with bounded real pilot. Preserve public facts; candidate atomic room/fee and admission reconciliation is next. Full weekly completion stays unclaimed and the old operator baseline/due date unchanged.",
+  "next_gate": "Next eligible registered transaction: deterministic source-specific atomic room/fee and Garfield admission candidates with exact provenance, clock separation, fixtures and independent review. Before broader source batches, finish per-source access/robots/terms reconciliation and durable handling of policy holds; then complete bounded weekly review and two real complete weekly cycles before broad city growth.",
+  "invariants": {"public_pages_unchanged": true, "claim_price_review_clocks_unchanged": true, "operator_weekly_baseline_and_due_date_unchanged": true, "old_collector_defaults_unchanged": true, "new_paid_calls": 0, "new_llm_service": false, "new_automation": false, "sprint_end_unchanged": true},
+  "limitations": ["Two source-grounded maintainer proxies, not actual-parent testing, desktop/mobile UI review or preference evidence. No public UI changed.", "Only three live direct sources attempted; long-term/full inventory reliability, semantic precision and two complete weeklycycles remain unproved.", "Initial three-entry documented hold registry is not exhaustive access governance or a robots/terms engine. Fixed registry/selection pins do not prove source permission.", "The original collector does not consume the registry; do not use it as a recovery bypass. Custom execution callbacks are trusted fixture hooks, not permission to fetch outside registered scope.", "Whole-page deltas may be noise; zero mapped extraction fields means no room/fee/admission fact renewal. No current family-room quote, safety, suitability, firsthand, rating or SEO claim."]
+}

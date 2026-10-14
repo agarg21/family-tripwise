@@ -15558,7 +15558,7 @@
       "id": "FT-IMP-154",
       "title": "Integrate checkpoint outcomes with the weekly review queue",
       "kind": "tooling",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-14T03:07:11.898Z",
       "target_paths": [
@@ -15587,7 +15587,51 @@
       "decision": "IMPLEMENT checkpoint weekly review adapter: partial507source/36canonical/390model packet keeps353deferred/154originalaccessholds; standardauditreadyfalse. Ninenew+13pilot tests and actualCLI pass with zero sourcecalls; complete fake known outcomes reuse native weekly review while unknowns block oldschema handoff. CLI outsidejournal/realparent/nooverwrite/duplicate guards; cycle-one independentP2 never-attempted timestamp fallback corrected consistently with null/missing-date regressions and native-aware normalization. No fact/price clocks renewed or collector/scheduler changed; fullQA/finalre-review required before release.",
       "evidence_record": "docs/research/evidence-checkpoint-review-2026-10-13.json",
       "next_gate": "Focused/fullnative/differentSTRICTREADONLY PASS/exact10 guarded tools remote release; then next actualeligible weeklyrun register durable checkpoint/audit/review/maintenance/operator outputs and permissions, collect bounded batches with unknown/denied holds retained and review complete known outcomes. Claim-delta room/fee plus attraction-admission pilot and two realweeklycycles before broadgrowth. Miami budget and pending broaderquery paid-scope remain independent.",
-      "review_receipt": "FT-IMP-154 Euler01a13866-854d-7792-8300-b3a4606c66b8 STRICTREADONLY cycle-two final-target PASS/no remaining findings; a890ab8ea2c11837543978bfbc4d7a2d4552861222d6e05543d94c446f117d96/all1050hash-modes/exact10/351olderorderedactions/held11/LRN245-only verified. Both P2s closed: outputaliasguard and null/missing never-attempted dates; independent7pure/memoryprobes/current507plan unchanged353deferred154holds390models. Master995full48maintenance22focused/state0/GSC92/SEO0sixprior logd27d67af306ddc419c00daae7519d7070979e167fe636a8e3e93920e87142dd4 inspected, not reviewerfullrun. ActualCLI507/36/390/353-154/readyfalse/network0; finalguard exercised via nativeCLIfixture. Reviewer no writes/network/browser/Git/delegation/scheduler/journal-fullQA. Offline tooling contract only, not liveweekly/claimprecision/publicfactfreshness/parents/SEO. Only immutable mechanical consensus appended; exact guarded tool-doc release pending,014fixedexpiry unchanged."
+      "review_receipt": "FT-IMP-154 Euler01a13866-854d-7792-8300-b3a4606c66b8 STRICTREADONLY cycle-two final-target PASS/no remaining findings; a890ab8ea2c11837543978bfbc4d7a2d4552861222d6e05543d94c446f117d96/all1050hash-modes/exact10/351olderorderedactions/held11/LRN245-only verified. Both P2s closed: outputaliasguard and null/missing never-attempted dates; independent7pure/memoryprobes/current507plan unchanged353deferred154holds390models. Master995full48maintenance22focused/state0/GSC92/SEO0sixprior logd27d67af306ddc419c00daae7519d7070979e167fe636a8e3e93920e87142dd4 inspected, not reviewerfullrun. ActualCLI507/36/390/353-154/readyfalse/network0; finalguard exercised via nativeCLIfixture. Reviewer no writes/network/browser/Git/delegation/scheduler/journal-fullQA. Offline tooling contract only, not liveweekly/claimprecision/publicfactfreshness/parents/SEO. Only immutable mechanical consensus appended; exact guarded tool-doc release pending,014fixedexpiry unchanged.",
+      "release_receipt": "FT-IMP-154 release 333ac7f0af2d4b1d4dd69242b92395a3712a8e50 remote verified 2026-10-14T03:24:37.245Z; main0-0/emptyindex/exact10/all1050indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared checkpoint weekly review tooling delivered/remoteverified, not a public page or production-fact refresh. Master995full48maintenance22focused/state0/GSC92/SEO0sixprior/differentEulercycle2PASS7pure+memoryprobes/current507plan unchanged353deferred154holds390models. Originalattempt and claim clocks preserved, unknown/deferred prevent standardaudit handoff, complete known fake outcomes nativecompatible. Outputalias and never-attempted timestamp P2s closed before release. All1050indexbytes-modes/exact10/351olderactions/held11/LRN245-only/public-model-CSV/operator/oldcollector unchanged; paid0.36260/no sourcecalls/LLM/newautomation/windowextension. Realweekly reliability/claimprecision/parent-SEO effects unproved. Next actualeligible weekly run register durable checkpoint/audit/review/maintenance/operator outputs, reconcile permissions, boundedcollection with holds and independent review, then atomic room-fee/admission pilot and two realweeklycycles before broadgrowth. Broaderpaidquery scope pending and Miami budget independent; no Pageswait,014unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T03:24:37.268Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "333ac7f0af2d4b1d4dd69242b92395a3712a8e50"
+    },
+    {
+      "id": "FT-IMP-155",
+      "title": "Guard weekly source selection against newer documented access holds",
+      "kind": "tooling",
+      "status": "in-progress",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-14T04:07:30.937Z",
+      "target_paths": [
+        "tools/evidence-batch-pilot.mjs",
+        "tools/evidence-batch-pilot.test.mjs",
+        "tools/evidence-checkpoint-review.test.mjs",
+        "docs/plan/evidence-batch-pilot.md",
+        "ops/source-access-holds.json",
+        "ops/evidence-collections/2026-10-14-selection.json",
+        "ops/evidence-audits/2026-10-14-checkpoint-review.json",
+        "ops/page-quality/2026-10-14-site-maintenance.json",
+        "docs/research/weekly-source-selection-pilot-2026-10-14.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "014 fixed sprint/direct maintainability-first direction and existing public-source weekly authority; first EasternOct14 run. No newpaid/LLM/publicpage or source-permission recovery.",
+      "evidence": "155preflight: current507plan carries154Oct7priorholds but two Oct13Orlando review-throttling holds and Garfieldblankticket hold are not in that audit. Blind full collection would retry documented holds via different tool. Register strict reviewed source-selection/hold-registry pins before any real request. Oct13GSCfinalOct11 reused orientation/priorOct12finalOct10; no CTR inference.",
+      "acceptance_criteria": [
+        "Strict public-safe documented hold registry with original observation days/evidence paths, separate from actual attempt timestamps. Explicit hashed selection tied to exact plan/current registry, unique approved URLs<=500, no prior denial/documented hold selectable; reject missing/changed/private/unknown scope before requests.",
+        "CLI collection requires selected source file and fixed repository hold registry; status/create remain offline. Library requires selection and registry too. Fakefixtures cover missingselection/denial/hold/pin/privacy and onlyselectedsource resume without replay. No bypass tool/origin/robot-solving, new scheduler or full collection mislabel.",
+        "Use new durable private checkpoint at /Users/apoorvagarg/.codex/evidence-checkpoints/family-tripwise/2026-10-14-FT-IMP-155, full507inventory limit500, only three explicitly selected official URLs: Garfieldvisit and Danaaccommodations/FAQ. They have priorHTTP200 and no recorded unchanged deny. No Garfieldtickets/Orlandoreview retries. Allothers deferred/held explicitly; no standardaudit/operator weekly completion or due-date advancement from partialpilot.",
+        "Nativefocused/full/state/GSC/SEO/privacy/invariants, live permitted bounded metadata/currentpartialreview/offlinemaintenance and two named maintainer proxies; different strictread-only PASS, exact14 guarded tooling/evidence remote release. Preserve352olderorderedactions/publicmodelCSVclocks/held11/oldcollector/operator/sprint, ledgeronlyLRN246."
+      ],
+      "measurement_plan": "LRN246 concrete weekly-maintainer decision: keep newer tool-level access holds out of source execution and prove selected real requests remain bounded/attributed while fullsourceaccounting stayspartial. Source outcome/date evidence, not claimrenewal, family-price quote, representative reviews or SEO lift. Claim-delta and two real complete weeklycycles remainnext gates.",
+      "production_invariant": "Tools/evidence/docs only. No publicHTML/data/CSV/claimdates, oldaudit/weeklyreview/defaultcollector/operator/scheduler/paid/LLM/accounts/indexing/analytics/outreach changes. New private journal durable/canonical, no rawsourcebody/credentials committed. Docs-tool push no Pageswait.",
+      "decision": "IMPLEMENT pinned source-selection/newer access-hold guard;27focused including fake-network CLI/redirect controls green. Actual selected3HTTP200:Garfieldvisit unchanged, Danaaccommodations/FAQ changed hashes; allzeroatomicfields/unreconciled. Full507packet350deferred154oldholds3known0unknown/standardauditfalse. Initial3doc-hold registry not exhaustive robots/terms; oldcollector/operator/publicclocks unchanged. Native/full/differentreview/exact14 guarded tooling-evidence release pending.",
+      "scope_amendment": "Before editing the dependent checkpoint-review fixtures, register that existing test path too: requiring explicit selection in the shared pilot API means its fake journal fixtures must supply an empty reviewed-hold registry and selected non-denied sources. Exact14 paths, no product/parser/weeklyreview changes.",
+      "evidence_record": "docs/research/weekly-source-selection-pilot-2026-10-14.json",
+      "next_gate": "Next eligible registered transaction: deterministic atomic room/fee and Garfield admission candidates with exact provenance/clock separation/fixtures/differentreview. Before broadersourcebatches finish per-source access/robots/terms reconciliation and durable policy-hold handling; fullweeklyreview and two actual completeweeklycycles precede broad citygrowth. Miami exact-family budget and pending paidquery scope separate. Current exact14 native/full/differentPASS/guarded tools remote release required; no publicfreshness or weeklydate advance.",
+      "review_receipt": "FT-IMP-155 Nietzsche01a138a2-7f25-7850-baff-4e317e4f87fb STRICTREADONLY final-target PASS/no findings;5053aeee2a81053e9df6a2cf3d16436dc7a4e984305c5ceaa7ac9c1639016bec/all1055hash-modes/exact14/352olderorderedactions/held11/LRN246-only/actualthree-source parity verified. Initial3fbtargetPASS notfinalselfredirectapproval; final10pure and oneexactfetch including selfredirect guard reproduced, no writes/network/journal/CLI-fullQA/Git/scheduler/delegation. Master1000full48maintenance27focused/state0/GSC92/SEO0sixprior logbdf77b6c49379987a3da1d1c006a55bc09c5646ef63fefe5e58c73741aba3b3a inspected not rerun. Durable3HTTP200 directfinalURLs/current507-350deferred154holds3known0unknown36pages390models/readyfalse/fields0/nativefakeCLI/accesssource-refs agree. Three documentedholds notexhaustive governance; oldcollector/operator/publicclocks unchanged, no weekly completion/factrenewal/quotes/LLM/parent-SEOproof. Only immutable mechanical consensus appended; exact guarded tool/evidence remote release pending,014 unchanged."
     }
   ]
 }

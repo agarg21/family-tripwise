@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "kind": "documented-source-access-holds",
+  "holds": [
+    {
+      "url": "https://garfieldconservatory.org/tickets/",
+      "observed_on": "2026-10-13",
+      "reason": "documented-blank-ticket-hold",
+      "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json"
+    },
+    {
+      "url": "https://www.tripadvisor.com/AttractionProductReview-g34515-d34472127-Orlando_Science_Center_General_Admission_Ticket-Orlando_Florida.html",
+      "observed_on": "2026-10-13",
+      "reason": "documented-throttling-hold",
+      "evidence_path": "docs/research/orlando-activity-page-review.md"
+    },
+    {
+      "url": "https://www.tripadvisor.com/Attraction_Review-g34515-d8395010-Reviews-or80-Crayola_Experience-Orlando_Florida.html",
+      "observed_on": "2026-10-13",
+      "reason": "documented-throttling-hold",
+      "evidence_path": "docs/research/orlando-activity-page-review.md"
+    }
+  ]
+}

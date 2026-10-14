@@ -3,12 +3,53 @@ import assert from 'node:assert/strict';
 import {mkdtemp,rm,writeFile,readFile,readdir,symlink,realpath} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {planSources,validatePlan,batches,initializeCheckpoint,checkpointStatus,runCheckpointBatch} from './evidence-batch-pilot.mjs';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import {planSources,validatePlan,batches,initializeCheckpoint,checkpointStatus,runCheckpointBatch as runBatch,collectionSelection,validateCollectionSelection,validateAccessHolds,executeSelectedSource,currentPlan} from './evidence-batch-pilot.mjs';
+const emptyHolds={schema_version:1,kind:'documented-source-access-holds',holds:[]};
+const selected=p=>p.sources.filter(s=>![401,403].includes(s.prior?.http_status)&&!['challenge-or-empty-review','access-denied-carried-forward'].includes(s.prior?.state)).map(s=>s.url);
+const runCheckpointBatch=(p,index,dir,options)=>runBatch(p,index,dir,{selection:collectionSelection(p,emptyHolds,selected(p)),accessHolds:emptyHolds,...options});
 const page='https://familytripwise.com/where-to-stay/test.html';
 const sources=count=>Array.from({length:count},(_,i)=>({url:`https://example.com/${String(i).padStart(6,'0')}`,pages:[page],prior:null,checks:[]}));
 const plan=count=>planSources({sources:sources(count),allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'});
 const reply=s=>({url:s.url,state:'retrieved-baseline',http_status:200,text_sha256:'a'.repeat(64),price_sha256:'b'.repeat(64),text_length:150,fields:[],price_candidates:[]});
 const withDir=async fn=>{const dir=await mkdtemp(join(await realpath(tmpdir()),'ft-batch-test-'));try{await fn(dir);}finally{await rm(dir,{recursive:true,force:true});}};
+
+test('pure: source selection rejects documented holds, denials, changed pins and private metadata',()=>{
+  const p=plan(3),holds={schema_version:1,kind:'documented-source-access-holds',holds:[{url:p.sources[1].url,observed_on:'2026-01-01',reason:'documented-throttling-hold',evidence_path:'docs/research/fixture.json'}]},s=collectionSelection(p,holds,[p.sources[0].url]);
+  assert.equal(s.selected_source_urls.length,1);assert.throws(()=>collectionSelection(p,holds,[p.sources[1].url]));assert.throws(()=>collectionSelection(p,holds,[p.sources[0].url,p.sources[0].url]));assert.throws(()=>collectionSelection(p,holds,['https://other.test/x']));
+  for(const x of [{...s,plan_sha256:'c'.repeat(64)},{...s,hold_registry_sha256:'d'.repeat(64)},{...s,raw_body:'private'}])assert.throws(()=>validateCollectionSelection(p,x,holds));
+  for(const x of [{...holds,extra:'private'},{...holds,holds:[{...holds.holds[0],reason:{private:'probe'}}]},{...holds,holds:[{...holds.holds[0],evidence_path:'docs/research/../private.json'}]},{...holds,holds:[{...holds.holds[0],url:'https://example.com/?token=private'}]}])assert.throws(()=>validateAccessHolds(x));
+  const ss=sources(1);ss[0].prior={url:ss[0].url,pages:[page],state:'unavailable-review',http_status:403,last_attempt_at:'2026-01-01T12:00:00.000Z'};const deniedPlan=planSources({sources:ss,allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'});assert.throws(()=>collectionSelection(deniedPlan,emptyHolds,[ss[0].url]));
+});
+test('pure: selections stay sorted, source-bounded and limited to500 entries',()=>{
+  const p=plan(1001);assert.throws(()=>collectionSelection(p,emptyHolds,selected(p)));const s=collectionSelection(p,emptyHolds,[p.sources[9].url,p.sources[1].url]);assert.deepEqual(s.selected_source_urls,[p.sources[1].url,p.sources[9].url]);
+});
+test('pure: default selected-source executor never follows redirects to held or unselected URLs',async()=>{
+  const p=plan(3),holds={schema_version:1,kind:'documented-source-access-holds',holds:[{url:p.sources[1].url,observed_on:'2026-01-01',reason:'documented-throttling-hold',evidence_path:'docs/research/fixture.json'}]},selection=collectionSelection(p,holds,[p.sources[0].url]);
+  for(const target of [p.sources[0].url,p.sources[1].url,p.sources[2].url,'https://other.test/private']){const calls=[];const result=await executeSelectedSource(p.sources[0],p,selection,holds,{fetcher:async url=>{calls.push(url);return new Response(null,{status:302,headers:{location:target}});}});assert.deepEqual(calls,[p.sources[0].url]);assert.equal(result.state,'unavailable-review');assert.equal(result.error_kind,'fetch-or-policy-error');}
+  await assert.rejects(()=>executeSelectedSource(p.sources[2],p,selection,holds,{fetcher:async()=>{throw Error('must not request');}}));
+});
+test('journal: only explicit selected sources run and registry mutation cannot widen async scope',()=>withDir(async dir=>{
+  const p=plan(4);await initializeCheckpoint(p,dir);let calls=0;
+  const holds={schema_version:1,kind:'documented-source-access-holds',holds:[{url:p.sources[2].url,observed_on:'2026-01-01',reason:'documented-throttling-hold',evidence_path:'docs/research/fixture.json'}]},selection=collectionSelection(p,holds,[p.sources[0].url]);
+  await assert.rejects(()=>runBatch(p,0,dir,{collect:true,executeSource:async()=>{calls++;}}));
+  const r=await runBatch(p,0,dir,{collect:true,selection,accessHolds:holds,executeSource:async s=>{calls++;selection.selected_source_urls.push(p.sources[2].url);holds.holds=[];return reply(s);}});assert.equal(calls,1);assert.equal(r.counts['attempt-completed'],1);assert.equal(r.counts['deferred-no-attempt'],3);assert.equal(r.attempts_finished_or_held,false);
+  const safe=collectionSelection(p,emptyHolds,[p.sources[0].url]);await runBatch(p,0,dir,{collect:true,selection:safe,accessHolds:emptyHolds,executeSource:async s=>{calls++;return reply(s);}});assert.equal(calls,1);
+}));
+test('journal: actual CLI rejects missing, changed, held or symlinked selection before fake fetch',()=>withDir(async dir=>{
+  const config=JSON.parse(await readFile(new URL('../ops/evidence-watch.json',import.meta.url))),previous=JSON.parse(await readFile(new URL('../ops/evidence-audits/2026-10-07.json',import.meta.url))),registry=JSON.parse(await readFile(new URL('../ops/source-access-holds.json',import.meta.url)));
+  const p=await currentPlan({config,previous,notBefore:'2026-01-01'});await initializeCheckpoint(p,dir);
+  const output=join(await realpath(tmpdir()),'selection-'+dir.split('/').pop()+'.json'),alias=output+'.link';
+  const cli=fileURLToPath(new URL('./evidence-batch-pilot.mjs',import.meta.url)),stub='data:text/javascript,'+encodeURIComponent('globalThis.fetch=async()=>{process.stderr.write("UNEXPECTED_FETCH\\n");throw Error("fake");};');
+  const invoke=selectionPath=>spawnSync(process.execPath,['--import',stub,cli,'--collect','--batch','0','--checkpoint',dir,...(selectionPath?['--selection',selectionPath]:[])],{encoding:'utf8'});
+  try {
+    const no=invoke();assert.equal(no.status,1);assert.match(no.stderr,/explicit reviewed source selection/);assert.ok(!no.stderr.includes('UNEXPECTED_FETCH'));
+    const safe=collectionSelection(p,registry,['https://garfieldconservatory.org/visit/']);
+    for(const bad of [{...safe,hold_registry_sha256:'c'.repeat(64)},{...safe,selected_source_urls:[registry.holds[0].url]}]){await writeFile(output,JSON.stringify(bad));const r=invoke(output);assert.equal(r.status,1);assert.ok(!r.stderr.includes('UNEXPECTED_FETCH'));}
+    await writeFile(output,JSON.stringify(safe));await symlink(output,alias);const r=invoke(alias);assert.equal(r.status,1);assert.match(r.stderr,/regular files/);assert.ok(!r.stderr.includes('UNEXPECTED_FETCH'));assert.deepEqual(await readdir(dir),['manifest.json']);
+  } finally {await rm(alias,{force:true});await rm(output,{force:true});}
+}));
 
 test('pure: 507 and1001 sources have complete deterministic bounded coverage',()=>{
   for(const count of [507,1001]){const p=plan(count),bs=batches(p);assert.deepEqual(bs.map(x=>x.count),count===507?[500,7]:[500,500,1]);assert.equal(bs.reduce((n,x)=>n+x.count,0),count);assert.deepEqual(p,planSources({sources:[...sources(count)].reverse(),allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'}));}
