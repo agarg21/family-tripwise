@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "kind": "source-proposal-handoff-controls",
+  "action_id": "FT-IMP-162",
+  "observed_on": "2026-10-14",
+  "evidence_class": "SYNTHETIC_TRANSPORT_AND_DISPOSABLE_JOURNAL_NOT_LIVE_HANDOFF",
+  "evidence_refs": ["docs/research/source-proposal-collection-2026-10-14.json", "docs/plan/source-proposal-handoff.md"],
+  "decision": "IMPLEMENT immutable outside-journal packet handoff and nonretryable missing-packet coverage",
+  "focused_test_count": 14,
+  "read_only_control_count": 11,
+  "disposable_journal_control_count": 3,
+  "initial_test_result": {"passed": 13, "failed": 1, "cause": "test attempted structuredClone of function-bearing options; fixture corrected before final green"},
+  "actual_source_requests": 0,
+  "llm_calls": 0,
+  "paid_calls": 0,
+  "source_body_persisted": false,
+  "source_journal_modified_by_handoff": false,
+  "public_fact_dates_renewed": false,
+  "weekly_baseline_advanced": false,
+  "semantic_precision": null,
+  "semantic_refresh_ready": false,
+  "live_approved_processing_scope_created": false,
+  "retained_original_fee_date": "2026-10-08",
+  "retained_named_room_category_date": null,
+  "controls": [
+    "full inventory accounting versus selected packet accounting",
+    "missing completed-source packet held without replay or invention",
+    "unknown and deferred states remain separate",
+    "out-of-scope prior denial retains original clock",
+    "exact pins outcome hash time status index and unique source joins",
+    "strict nested privacy and no approval authority",
+    "original field date spans units and null family context",
+    "submitted disagreements retained without chosen policy",
+    "rejected proposals and failed sources remain known review work",
+    "malformed future or unknown result cannot be reconstructed",
+    "explicit CLI paths without collection or retry mode",
+    "new0600 fsynced report outside unchanged checkpoint",
+    "no malformed inside-journal alias symlink or writer publication",
+    "bounded explicit CLI handoff refuses existing output"
+  ],
+  "maintainer_task": {
+    "steps": ["Inspect161 memory-only gap", "Read native checkpoint evidence", "Bind selection and processing pins", "Join saved fake-capture packets to exact outcomes", "Hold missing/unknown/deferred rows", "Publish a new body-free outside-journal report", "Preserve journal and select live governance next"],
+    "result": "PARTIAL integration proxy, not parents, rendered UI, full weekly operation or source-permission validation"
+  },
+  "limitations": [
+    "No real source collection, native production packet or weekly baseline advance occurred.",
+    "Complete selected packet accounting includes known failed/rejected review work and is not full collection or verified claims.",
+    "Saved hash/span metadata cannot independently revalidate lexical support, remote authenticity or access permission after body discard.",
+    "Operator sole-writer/no-replay rules remain; output sync is not a power-loss or distributed atomicity proof.",
+    "Full source governance, semantic context reconciliation and two actual weekly cycles remain gates."
+  ],
+  "next_gate": "Independent review/guarded tool release, then source-specific governance and registered actual weekly pilot with immutable handoff"
+}
