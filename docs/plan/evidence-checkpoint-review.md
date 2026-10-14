@@ -1,5 +1,13 @@
 # Checkpoint Weekly Review Adapter
 
+## Atomic Predicate Candidates
+
+FT-IMP-156 adds `extraction_review_queue`, independent of whole-page hash changes. Completed successful results must contain exactly the unique predicate IDs registered in their source plan. Unknown/duplicate/incomplete field identities fail before saving a result; the started request becomes an owner-reconciliation hold, not an automatic retry. A failed retrieval cannot supply extracted predicate results.
+
+Every extraction row joins the exact source, affected page/current field record, original observation date, cohort/unit/basis and public evidence reference. It keeps the request timestamp and source-text hash separately. `claim_verified:false` always remains false: text presence is only an extraction candidate, and a missing predicate means reconcile source wording or parser, not a proven policy revision. Both positive and missing candidates remain visible even if the hash is unchanged. Read this queue before any claim refresh or complete-audit handoff; the nested legacy `review` does not independently classify these atomic candidates. Schema-compatible collection is not editorial resolution.
+
+The bounded Garfield pilot registers six source-backed admission/operating predicates using the original October13 evidence date. One new-checks official visit request produced five expected labels and one missing resident-waiver predicate on an unchanged body. This is a first predicate baseline, not semantic delta precision or a waiver-change finding. Under-seven pricing, checkout fees, garden price/availability and conflicting last-entry times remain unknown. No public fact date or source-hold clock is renewed, and the blank ticket page is not attempted. Source packet and exact remaining reconciliation gate: `docs/research/garfield-atomic-watch-2026-10-14.json`. Next source-specific room/fee mapping and broader access reconciliation remain separate; no LLM or two complete weekly cycles is implied.
+
 FT-IMP-154 connects the bounded [checkpoint pilot](evidence-batch-pilot.md) to the existing weekly review semantics. It makes no source requests, changes no public facts and does not replace the scheduled collector or authorize another run.
 
 ## Operator Task

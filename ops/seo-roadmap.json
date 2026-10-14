@@ -15597,7 +15597,7 @@
       "id": "FT-IMP-155",
       "title": "Guard weekly source selection against newer documented access holds",
       "kind": "tooling",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-14",
       "started_at": "2026-10-14T04:07:30.937Z",
       "target_paths": [
@@ -15631,7 +15631,51 @@
       "scope_amendment": "Before editing the dependent checkpoint-review fixtures, register that existing test path too: requiring explicit selection in the shared pilot API means its fake journal fixtures must supply an empty reviewed-hold registry and selected non-denied sources. Exact14 paths, no product/parser/weeklyreview changes.",
       "evidence_record": "docs/research/weekly-source-selection-pilot-2026-10-14.json",
       "next_gate": "Next eligible registered transaction: deterministic atomic room/fee and Garfield admission candidates with exact provenance/clock separation/fixtures/differentreview. Before broadersourcebatches finish per-source access/robots/terms reconciliation and durable policy-hold handling; fullweeklyreview and two actual completeweeklycycles precede broad citygrowth. Miami exact-family budget and pending paidquery scope separate. Current exact14 native/full/differentPASS/guarded tools remote release required; no publicfreshness or weeklydate advance.",
-      "review_receipt": "FT-IMP-155 Nietzsche01a138a2-7f25-7850-baff-4e317e4f87fb STRICTREADONLY final-target PASS/no findings;5053aeee2a81053e9df6a2cf3d16436dc7a4e984305c5ceaa7ac9c1639016bec/all1055hash-modes/exact14/352olderorderedactions/held11/LRN246-only/actualthree-source parity verified. Initial3fbtargetPASS notfinalselfredirectapproval; final10pure and oneexactfetch including selfredirect guard reproduced, no writes/network/journal/CLI-fullQA/Git/scheduler/delegation. Master1000full48maintenance27focused/state0/GSC92/SEO0sixprior logbdf77b6c49379987a3da1d1c006a55bc09c5646ef63fefe5e58c73741aba3b3a inspected not rerun. Durable3HTTP200 directfinalURLs/current507-350deferred154holds3known0unknown36pages390models/readyfalse/fields0/nativefakeCLI/accesssource-refs agree. Three documentedholds notexhaustive governance; oldcollector/operator/publicclocks unchanged, no weekly completion/factrenewal/quotes/LLM/parent-SEOproof. Only immutable mechanical consensus appended; exact guarded tool/evidence remote release pending,014 unchanged."
+      "review_receipt": "FT-IMP-155 Nietzsche01a138a2-7f25-7850-baff-4e317e4f87fb STRICTREADONLY final-target PASS/no findings;5053aeee2a81053e9df6a2cf3d16436dc7a4e984305c5ceaa7ac9c1639016bec/all1055hash-modes/exact14/352olderorderedactions/held11/LRN246-only/actualthree-source parity verified. Initial3fbtargetPASS notfinalselfredirectapproval; final10pure and oneexactfetch including selfredirect guard reproduced, no writes/network/journal/CLI-fullQA/Git/scheduler/delegation. Master1000full48maintenance27focused/state0/GSC92/SEO0sixprior logbdf77b6c49379987a3da1d1c006a55bc09c5646ef63fefe5e58c73741aba3b3a inspected not rerun. Durable3HTTP200 directfinalURLs/current507-350deferred154holds3known0unknown36pages390models/readyfalse/fields0/nativefakeCLI/accesssource-refs agree. Three documentedholds notexhaustive governance; oldcollector/operator/publicclocks unchanged, no weekly completion/factrenewal/quotes/LLM/parent-SEOproof. Only immutable mechanical consensus appended; exact guarded tool/evidence remote release pending,014 unchanged.",
+      "release_receipt": "FT-IMP-155 release 240d42340a6e4b9a56abd562a34df87cc68daae3 remote verified 2026-10-14T04:29:05.253Z; main0-0/emptyindex/exact14/all1055indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared source-selection/access-hold tooling and bounded real-source evidence delivered/remoteverified, not a public page or fact refresh. Master1000full48maintenance27focused/state0/GSC92/SEO0sixprior/differentNietzschefinalPASS10pure/oneexactfetch selfredirect included. All1055indexbytes-modes/exact14/352olderactions/held11/LRN246-only/actual3sourcepacketjournalhash-date parity; initialobsoleteofflinehelper assertion repaired without productchange, serialPASS. Nativeactual3HTTP200 directsources:Garfieldvisitunchanged/Dana2hashchanges/fields0.507status350deferred154priorholds3known0unknown/36pages390models/readyfalse, three newerdoc-holds unattempted and separatelypinned. Originalpublic/modelCSV/sourceclocks/operatorweeklybaseline-due/oldcollector/scheduler preserved, no paid/LLM/bodyretention/publicUI/parent-SEOproof. Registry3notexhaustive governance, fullweekly/semanticprecision/twoactualcompletecycles still gates. Next registeredatomic room-fee/Garfieldadmission candidates; broadercollection needs sourcepermission/holdreconciliation, not oldcollector bypass. No Pageswait or global/sprint extension,014 unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T04:29:05.275Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "240d42340a6e4b9a56abd562a34df87cc68daae3"
+    },
+    {
+      "id": "FT-IMP-156",
+      "title": "Map Garfield admission predicates into atomic review candidates",
+      "kind": "tooling",
+      "status": "in-progress",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-14T04:31:59.867Z",
+      "target_paths": [
+        "ops/evidence-watch.json",
+        "tools/evidence-batch-pilot.mjs",
+        "tools/evidence-batch-pilot.test.mjs",
+        "tools/evidence-checkpoint-review.mjs",
+        "tools/evidence-checkpoint-review.test.mjs",
+        "tools/garfield-atomic-watch.test.mjs",
+        "docs/plan/evidence-checkpoint-review.md",
+        "ops/evidence-collections/2026-10-14-garfield-selection.json",
+        "ops/evidence-audits/2026-10-14-garfield-checkpoint-review.json",
+        "docs/research/garfield-atomic-watch-2026-10-14.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "014 fixed sprint/direct maintainability-first instruction; second sequential finish-first transaction after155remoteverification. One registered native official-source read for newly mapped admission predicates, not denial retry or repeat-reliability experiment; no publicfact/paid/LLM/scheduler change.",
+      "evidence": "155 actual Garfieldvisit HTTP200/unchangedbody but zeroatomicfields exposed failed claim-maintenance task. Existing134source facts atOct13 remain original: adult10/youth7-17five/seniorfive/residentwaiver/closures/gardenslot with under7/fees/lastentry unknowns. Need explicit source-backed presence predicates and field-level review separate from sourcehashes. GSCreusedOct13finalOct11 orientationonly.",
+      "acceptance_criteria": [
+        "Add exactly six named Garfield visitor admission/operating predicates to existing watch registry, retain originalOct13source dates/basis and oldrecords/hosts/order. Synthetic positive/missing/age-price/script-only cases; no genericAI prose or invented under7/free/checkout/lastentry claim.",
+        "Bind successful checkpoint field outcomes to unique planned predicate IDs and complete planned checks. Unknown/duplicate/missing result fields fail before persistence and become unknownhold, not retry. Separate atomic predicate review queue from hashqueue; positives notverified and missing means reconcile sourceorparser, not provenfactchange.",
+        "New durable private checkpoint /Users/apoorvagarg/.codex/evidence-checkpoints/family-tripwise/2026-10-14-FT-IMP-156; newpinnedselection only https://garfieldconservatory.org/visit/. Different purpose/newchecks from155, not replayrecovery; ticket/reviewholds untouched. One actual safe read, metadata/predicatestates only, allothersdeferred; oldweeklybaseline/due/publicclaimclocks unchanged.",
+        "Focused/fullnative/state/GSC/SEO/privacy/exact15/353olderactions/held11/oldwatch-hosts-records invariant checks, source-dated deskproxy notparents, differentSTRICTREADONLYPASS and guarded tool/evidence remote release. No publicUI change or Pageswait."
+      ],
+      "measurement_plan": "LRN247 namedfamily admission decision: detect specific expected policy labels independently of sourcehash changes, while exact cohort/unit/currency/originalsource clock and unknowns remain explicit. Predicate presence is candidate extraction, not semantic precision, sourceeffectivity, exact checkout, firsthand/fit or parent-SEO proof.",
+      "production_invariant": "Tools/watch/evidence/docs only. No publicHTML/models/CSV/prices/claimdates/sourceholds/oldcollector/operator/scheduler or newpaid/LLM/account/indexing/outreach mutation. Preserve353olderorderedactions/held11 and original watch records/hosts; ledgeronlyLRN247. No standardfullweeklycompletion or due-date advancement from one-source pilot.",
+      "decision": "IMPLEMENT six Garfield predicate watches/extraction_review_queue with strict unique/completeresult IDs and exactsource/date/basis joins. Actual one newchecks source requestHTTP200/bodyunchanged yielded5present/1missingresident;33focused/sixnew fixtures green. Missing means source-or-parser review, not changed waiver; allclaim_verifiedfalse/originalOct13dates/publicfacts unchanged. Full507packet352deferred154holds1known0unknown/readyfalse. Nativefull/differentreview/exact15guarded tooling release pending.",
+      "evidence_record": "docs/research/garfield-atomic-watch-2026-10-14.json",
+      "next_gate": "Finish nativefull/differentSTRICTPASS/exact15guarded remote release. Next eligible registered task reconcile resident-waiver source wording/parser fixture without hash-only public edit, then Dana exactroom/fee atomic candidates. Complete broaderpermission/holdgovernance and two actual completeweeklycycles before globalgrowth; no broadrepeatreport/cityquota. Missingpredicate/positivepresence are unverified, oldnestedreview does notclassify them; inspect extractionqueue beforeeditorial handoff.",
+      "review_receipt": "FT-IMP-156 Aristotle01a138b4-bd7c-7432-9baa-7048059d6f3a STRICTREADONLY PASS/noP0-P2;5a6862bab306e130f2d41b73cbe6a1e3d94e59f477d3a914fd363146162721ab/all1059hash-modes/exact15/353olderorderedactions/held11/LRN247-only/oldwatch-host-records-sourceclock invariants verified. Independent15pure PASS; Master1006full48maintenance33focused/state0/GSC92/SEO0sixprior log23c0ebb17ba795bbe36eebb188a04735b4ea89d45f208fc4434b1e671987ef79 hashinspected not reviewerfullrun. Six queue/journaljoins agree5present1missingresident/oldOct13dates/allclaimverifiedfalse/sourceattempt04:34:27.863Z/200direct/bodyunchanged; source507-352deferred154holds1known0unknown/readyfalse. Unknown/duplicate/incomplete/failure field controls and exactprovenance/context preserved. Residentcause unresolved, no publicfreshness/semanticprecision/completeweekly/parent-SEO/LLM/quote claim. No writes/temp/network/journal-CLI-fullQA/Git/scheduler/delegation. Only immutable mechanical consensus appended; guarded exact tools remote release pending,014 unchanged."
     }
   ]
 }

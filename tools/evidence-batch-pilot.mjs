@@ -76,7 +76,7 @@ export function planSources({sources, allowedHosts, observedOn, notBefore, limit
     if (!exact(source,['url','pages','prior','checks']) || permittedUrl(source.url,allowedHosts) !== source.url || urls.has(source.url)) throw Error('Unsafe or duplicate source identity');
     urls.add(source.url);
     if (!Array.isArray(source.pages) || !source.pages.length || new Set(source.pages).size !== source.pages.length || source.pages.some(p => {const u=new URL(p);return u.origin!=='https://familytripwise.com'||u.search||u.hash;})) throw Error('Invalid affected page');
-    if (!Array.isArray(source.checks) || source.checks.some(c => !exact(c,['id','pattern']) || typeof c.id!=='string' || typeof c.pattern!=='string' || !c.id || c.pattern.length>1000)) throw Error('Invalid extraction checks');
+    if (!Array.isArray(source.checks) || new Set(source.checks.map(c=>c?.id)).size!==source.checks.length || source.checks.some(c => !exact(c,['id','pattern']) || typeof c.id!=='string' || typeof c.pattern!=='string' || !c.id || c.pattern.length>1000)) throw Error('Invalid extraction checks');
     for (const c of source.checks) new RegExp(c.pattern,'i');
     if (source.prior && source.prior.url !== source.url) throw Error('Prior source identity mismatch');
     source.pages.sort();
@@ -130,6 +130,9 @@ function validateResult(plan,index,result) {
   validateSourceScalars(result?.source);
   if (!exact(result,['plan_sha256','index','attempted_at','source']) || result.plan_sha256!==plan.plan_sha256 || result.index!==index || !timestamp(result.attempted_at) || result.source?.url!==s.url || JSON.stringify(result.source.pages)!==JSON.stringify(s.pages)) throw Error('Invalid source result');
   if(!['retrieved-baseline','text-unchanged','text-changed-review','structured-price-changed-review','unavailable-review','challenge-or-empty-review','unsupported-format-review','size-limit-review'].includes(result.source.state)||Object.hasOwn(result.source,'collection_deferred'))throw Error('Result must describe an actual attempt outcome');
+  const ids=(result.source.fields||[]).map(f=>f.id),expected=s.checks.map(c=>c.id);
+  const retrieved=['retrieved-baseline','text-unchanged','text-changed-review','structured-price-changed-review'].includes(result.source.state);
+  if(new Set(ids).size!==ids.length||ids.some(id=>!expected.includes(id))||(retrieved?(!result.source.text_sha256||ids.length!==expected.length):(ids.length>0||result.source.text_sha256)))throw Error('Extraction must match planned predicates and known retrieval');
   validatePriorAudit({schema_version:1,mode:'public-source-diff',factual_dates_renewed:false,collected_at:result.attempted_at,pages:s.pages.map(url=>({url})),sources:[result.source],summary:{canonical_pages:s.pages.length,sources:1}},plan.allowed_hosts);
 }
 

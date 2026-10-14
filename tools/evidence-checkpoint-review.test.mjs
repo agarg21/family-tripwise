@@ -49,6 +49,14 @@ test('pure: null and absent dates on never-attempted priors remain null',()=>{
   }
   assert.equal(priorAttemptAt({state:'retrieved-baseline',text_sha256:'a'.repeat(64)},when),when);assert.equal(priorAttemptAt({state:'unavailable-review',http_status:403},when),when);assert.equal(priorAttemptAt({state:'unavailable-review'},when),null);
 });
+test('pure: atomic predicate queue preserves cohort basis and source clocks without hash-delta inference',()=>{
+  const f=fixture(),check={id:'adult',pattern:'adult'},record={id:'adult',page_url:page,field:'admission-price-adult',verified_on:'2025-12-01',interval_days:14,basis:'USD10/person ages18-64; checkout unknown',evidence_path:'docs/research/fixture.json',source_urls:[f.plan.sources[1].url]};
+  f.inv.pages[0].records.push({...record,freshness:{state:'review-due'}});f.expectedRecords.push(record);
+  const ss=clone(f.plan.sources);ss[1].checks=[check];f.plan=planSources({sources:ss,allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'});f.evidence.plan_sha256=f.plan.plan_sha256;
+  f.evidence.entries[1]={index:1,state:'attempt-completed',last_attempt_at:now,source:{...result(f.evidence.entries[1].source),state:'text-unchanged',fields:[{id:'adult',state:'expected-text-missing-review',evidence_class:'EXTRACTION_CANDIDATE'}]}};
+  const r=aggregateCheckpoint(f);assert.equal(r.summary.extraction_predicates,1);assert.equal(r.summary.missing_extraction_predicates,1);assert.equal(r.extraction_review_queue[0].claim_verified,false);assert.equal(r.extraction_review_queue[0].original_verified_on,'2025-12-01');assert.equal(r.extraction_review_queue[0].source_attempted_at,now);assert.equal(r.extraction_review_queue[0].classification,'predicate-missing-reconcile-source-or-parser');assert.equal(r.extraction_review_queue[0].basis,record.basis);assert.equal(r.standard_audit_ready,false);
+  f.evidence.entries[1].source.fields[0].state='expected-text-present';assert.equal(aggregateCheckpoint(f).extraction_review_queue[0].classification,'predicate-present-not-verified');
+});
 const withDir=async fn=>{const dir=await mkdtemp(join(await realpath(tmpdir()),'ft-checkpoint-review-'));try{await fn(dir);}finally{await rm(dir,{recursive:true,force:true});}};
 test('journal: read-only partial export, interrupted hold and complete native review handoff',()=>withDir(async dir=>{
   const f=fixture();await initializeCheckpoint(f.plan,dir);

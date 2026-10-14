@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-156",
+  "observed_on": "2026-10-14",
+  "evidence_class": "NEW_ATOMIC_WATCH_BASELINE_AND_REGISTERED_NATIVE_SOURCE_CAPTURE",
+  "family_decision": "Compare Garfield visitor admission cohorts/resident waiver and reservation constraints without assuming under-seven price or checkout total.",
+  "hypothesis": "A whole-page source hash is sufficient to tell the operator whether named admission fields remain reviewable.",
+  "result": "REJECT:the body is unchanged but six explicit predicates yield five label-presence candidates and one missing resident-waiver predicate. Missing can be parser/wording, not policy change; no claimed semantic precision or current fact renewal.",
+  "source": {
+    "url": "https://garfieldconservatory.org/visit/",
+    "attempted_at": "2026-10-14T04:34:27.863Z",
+    "outcome": "text-unchanged",
+    "http_status": 200,
+    "final_url_matches_selected": true,
+    "text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+    "original_fact_date": "2026-10-13",
+    "source_body_retained": false
+  },
+  "checkpoint": {
+    "private_durable_path": "/Users/apoorvagarg/.codex/evidence-checkpoints/family-tripwise/2026-10-14-FT-IMP-156",
+    "plan_sha256": "1a9df4001b126504f4ffde7d18c1d7d8e81552b22839dab428a8ea640033f34b",
+    "hold_registry_sha256": "bb4eff93674d8c95eeb7ef0cd4455fe8e5a0d5fbcc14a1890a402d80c0402dbb",
+    "selected_sources": 1,
+    "source_count": 507,
+    "completed_outcomes": 1,
+    "deferred_sources": 352,
+    "prior_access_holds": 154,
+    "unknown_outcomes": 0,
+    "standard_audit_ready": false,
+    "source_scope": "One distinct newly registered predicate-capture purpose after155 successful direct source check, not a denial retry or repeat-reliability experiment. Holds unchanged."
+  },
+  "predicate_candidates": [
+    {
+      "id": "garfield-adult-admission-price-predicate",
+      "source_url": "https://garfieldconservatory.org/visit/",
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "field": "admission-price-adult-18-64",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T04:34:27.863Z",
+      "source_text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+      "original_verified_on": "2026-10-13",
+      "basis": "Original134 official nonresident general admission USD10/person ages18-64. Regex presence is an extraction candidate, not current checkout/effective-date proof or automatic date renewal.",
+      "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "garfield-youth-admission-price-predicate",
+      "source_url": "https://garfieldconservatory.org/visit/",
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "field": "admission-price-youth-7-17",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T04:34:27.863Z",
+      "source_text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+      "original_verified_on": "2026-10-13",
+      "basis": "Original134 official nonresident general admission USD5/person ages7-17. Under7 remains unestablished; regex presence not a current family total or automatic date renewal.",
+      "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "garfield-senior-admission-price-predicate",
+      "source_url": "https://garfieldconservatory.org/visit/",
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "field": "admission-price-senior-65-plus",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T04:34:27.863Z",
+      "source_text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+      "original_verified_on": "2026-10-13",
+      "basis": "Original134 official nonresident general admission USD5/person age65plus; scoped label presence only, not other discount eligibility, checkout or date renewal.",
+      "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "garfield-resident-waiver-predicate",
+      "source_url": "https://garfieldconservatory.org/visit/",
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "field": "resident-admission-waiver",
+      "state": "expected-text-missing-review",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T04:34:27.863Z",
+      "source_text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+      "original_verified_on": "2026-10-13",
+      "basis": "Original134 waiver requires each visitor verified Chicago residency/ZIP/address evidence. Text presence alone never grants party eligibility or makes all visitors free.",
+      "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json",
+      "claim_verified": false,
+      "classification": "predicate-missing-reconcile-source-or-parser"
+    },
+    {
+      "id": "garfield-weekday-closure-predicate",
+      "source_url": "https://garfieldconservatory.org/visit/",
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "field": "operating-closure-monday-tuesday",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T04:34:27.863Z",
+      "source_text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+      "original_verified_on": "2026-10-13",
+      "basis": "Original134 Monday/Tuesday closure; holidays/exceptions and conflicting Wednesday last-entry times remain unestablished. Predicate missing may be parser drift, not proven closure change.",
+      "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "garfield-garden-slot-predicate",
+      "source_url": "https://garfieldconservatory.org/visit/",
+      "page_url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
+      "field": "garden-reservation-30-minute",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T04:34:27.863Z",
+      "source_text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+      "original_verified_on": "2026-10-13",
+      "basis": "Original134 separate EMG Children's Garden30minute reservation. Presence does not establish price, availability, all-day access, age enjoyment or family suitability.",
+      "evidence_path": "docs/research/chicago-garfield-admission-2026-10-13.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    }
+  ],
+  "maintainer_proxy": {
+    "steps": [
+      "Trace original134 cohort/currency/unit and unresolved ticket/fee basis",
+      "Map exactly six current watch IDs to the single official source",
+      "Capture one registered source result without bodies or account actions",
+      "Compare sourcehash and predicate outcomes separately",
+      "Route missing resident-waiver text to source-or-parser reconciliation",
+      "Keep all claim_verified flagsfalse and originalOct13dates",
+      "Preserve public scenarios, under7/fees/lastentry/garden unknowns and ticket hold"
+    ],
+    "result": "PARTIAL:field routing/provenance works, but resident predicate/parser and semantic claim verification remain unresolved. No real-parent, desktop/mobile UI or SEO test; no public UI changed."
+  },
+  "native_proof": {
+    "focused_tests": 33,
+    "new_tests": 6,
+    "pure_tests": 15,
+    "controls": "Duplicate plannedIDs/unknown or incomplete successful fields/failure-field injection reject; atomicqueue joins cohortbasis/originaldate/requesthash, positive candidates neververified; synthetic ages/prices/script-only changes produce review states."
+  },
+  "decision": "IMPLEMENT atomic predicate candidate routing and six bounded Garfield watches; PRESERVE public admission facts and originaldates pending source-or-parser reconciliation.",
+  "confidence": {
+    "bounded_schema_and_routing": "high",
+    "predicate_semantic_precision": "unmeasured",
+    "resident_missing_cause": "unresolved",
+    "full_weekly_reliability": "unmeasured",
+    "parents_or_seo": "unmeasured"
+  },
+  "next_gate": "Next eligible registered task: reconcile resident-waiver predicate against permitted source wording or parser fixture without changing public facts from a hash; then exact source-specific room/fee candidates for Dana. Before broadercollection, complete sourcepermission/hold handling and two actual completeweeklycycles. No optional broad report or unqualified city quota.",
+  "invariants": {
+    "public_pages_unchanged": true,
+    "claim_price_review_clocks_unchanged": true,
+    "old_watch_records_and_hosts_unchanged": true,
+    "operator_weekly_baseline_due_unchanged": true,
+    "old_collector_defaults_unchanged": true,
+    "new_paid_calls": 0,
+    "new_llm_service": false,
+    "new_automation": false,
+    "sprint_end_unchanged": true
+  },
+  "limitations": [
+    "Regex is candidate presence, not normalized amount extraction, source effectivity, semantic change precision, exact booking/checkout or firsthand/suitability evidence.",
+    "Only six declared fields are mapped here; all other atomic gaps remain. Registry and parser validation are not an exhaustive robots/terms engine.",
+    "The legacy nested weekly review does not classify this queue; operator must inspect extraction_review_queue before editorial/complete-audit handoff.",
+    "One successful native source request is not full weekly collection or two real completeweeklycycles. Under7, checkout fees, separate garden costs/availability and conflicting Wednesday last entry are unchanged unknowns.",
+    "No LLM/API or paid scope expansion, raw source text, rating synthesis, family-room quote, public-page change or schedule extension."
+  ]
+}

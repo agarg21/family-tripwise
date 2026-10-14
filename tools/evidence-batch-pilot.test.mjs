@@ -5,7 +5,7 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {planSources,validatePlan,batches,initializeCheckpoint,checkpointStatus,runCheckpointBatch as runBatch,collectionSelection,validateCollectionSelection,validateAccessHolds,executeSelectedSource,currentPlan} from './evidence-batch-pilot.mjs';
+import {planSources,validatePlan,batches,initializeCheckpoint,checkpointStatus,runCheckpointBatch as runBatch,collectionSelection,validateCollectionSelection,validateAccessHolds,executeSelectedSource,currentPlan,validateCheckpointEvidence} from './evidence-batch-pilot.mjs';
 const emptyHolds={schema_version:1,kind:'documented-source-access-holds',holds:[]};
 const selected=p=>p.sources.filter(s=>![401,403].includes(s.prior?.http_status)&&!['challenge-or-empty-review','access-denied-carried-forward'].includes(s.prior?.state)).map(s=>s.url);
 const runCheckpointBatch=(p,index,dir,options)=>runBatch(p,index,dir,{selection:collectionSelection(p,emptyHolds,selected(p)),accessHolds:emptyHolds,...options});
@@ -58,6 +58,19 @@ test('pure: duplicate unsafe altered and unbounded plans fail closed',()=>{
   const p=plan(1);assert.throws(()=>validatePlan({...p,limit:501}));assert.throws(()=>validatePlan({...p,collect_not_before:'2030-01-01'}));
   for(const s of [[...sources(1),...sources(1)],[{...sources(1)[0],url:'https://example.com/?token=secret'}],[{...sources(1)[0],url:'https://other.test/x'}]])assert.throws(()=>planSources({sources:s,allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'}));
 });
+test('pure: duplicate planned predicates and unknown or incomplete extraction outcomes fail closed',()=>{
+  const ss=sources(1);ss[0].checks=[{id:'adult',pattern:'adult'},{id:'adult',pattern:'adult'}];assert.throws(()=>planSources({sources:ss,allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'}));
+  ss[0].checks=[{id:'adult',pattern:'adult'}];const p=planSources({sources:ss,allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'}),at='2026-01-02T12:00:00.000Z',field={id:'adult',state:'expected-text-present',evidence_class:'EXTRACTION_CANDIDATE'};
+  const valid={...reply(p.sources[0]),pages:[page],fields:[field],last_attempt_at:at};const evidence=source=>({schema_version:1,kind:'checkpoint-evidence',plan_sha256:p.plan_sha256,entries:[{index:0,state:'attempt-completed',last_attempt_at:at,source}]});validateCheckpointEvidence(p,evidence(valid));
+  for(const fields of [[],[{...field,id:'other'}],[field,field]])assert.throws(()=>validateCheckpointEvidence(p,evidence({...valid,fields})));
+  const noHash={...valid};delete noHash.text_sha256;assert.throws(()=>validateCheckpointEvidence(p,evidence(noHash)));
+  assert.throws(()=>validateCheckpointEvidence(p,evidence({...valid,state:'unavailable-review'})));
+});
+test('journal: malformed predicate identities are held before result persistence',()=>withDir(async dir=>{
+  const ss=sources(1);ss[0].checks=[{id:'adult',pattern:'adult'}];const p=planSources({sources:ss,allowedHosts:['example.com'],observedOn:'2026-01-01',notBefore:'2026-01-01'});await initializeCheckpoint(p,dir);
+  await assert.rejects(()=>runCheckpointBatch(p,0,dir,{collect:true,executeSource:async s=>({...reply(s),fields:[{id:'other',state:'expected-text-present',evidence_class:'EXTRACTION_CANDIDATE'}]})}));
+  assert.deepEqual((await readdir(dir)).sort(),['00000000.start.json','manifest.json']);assert.equal((await checkpointStatus(p,dir)).counts['held-outcome-unknown'],1);
+}));
 test('pure: retained priors reject nested private payloads in scalar metadata',()=>{
   for(const key of ['reason','content_type','http_status','text_length','collection_deferred','error_kind','text_sha256','last_attempt_at']) {
     const ss=sources(1);ss[0].prior={url:ss[0].url,pages:[page],state:'unavailable-review',[key]:{raw_body:'private-probe',authorization:'private-probe'}};
