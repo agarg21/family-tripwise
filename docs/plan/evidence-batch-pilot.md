@@ -1,0 +1,34 @@
+# Bounded Source Checkpoint Pilot
+
+FT-IMP-153 / LRN-244, October13,2026 Eastern. Implements the first bounded collection/checkpoint step from [the global scale plan](global-english-scale-gates.md). This is a standalone opt-in tool, not a replacement for `site-maintenance.mjs`, an LLM service or automatic public fact renewal.
+
+## What Works
+
+`tools/evidence-batch-pilot.mjs` reuses the current source inventory, allowlist, model records, source fetcher, comparison logic and prior-audit schema/privacy checks. It sorts exact source identities and creates batches of at most500 inventory entries. Held sources occupy an accounted entry without making a request;500 is not a promise of500 accessible requests. Current offline inventory507 yields batches500/7 and154 carried denial/challenge holds. The prior source attempt dates remain original.
+
+Each checkpoint has an immutable hashed manifest, an exclusive writer lock and separate per-source attempt/result files. Attempt files are flushed before the request; result files are schema-checked before saving. Completed attempts are skipped on resume. An attempt without a result is `held-outcome-unknown`, never automatically repeated. A thrown callback can leave one unknown while a later resume continues other eligible sources. Corrupt/partial files, unexpected entries, changed manifests, wrong source identities and symlink paths fail closed. A stale writer lock blocks execution and requires owner investigation; do not delete it to force a retry.
+
+The public-safe records contain source identities, affected pages, original prior metadata, bounded extraction checks and validated result metadata, not source bodies or credentials. Scalar metadata is type-checked for both priors and results; nested payloads cannot be serialized through reason, content type or status fields. A caller cannot widen a running request scope by mutating its input after validation. The CLI also compares the saved source inventory/checks/allowlist with the current repo before collection. No source or factual observation date is renewed by a plan or status check.
+
+## Operator Usage
+
+First register the exact checkpoint path and outputs as part of a reviewed action. Use a new empty real directory, not a symlink or an alias path such as `/tmp` on macOS. Creation and status make no source requests. Creation reads the existing operator's next weekly due date; collection uses the actual Eastern date, has no date-override CLI and must wait until that gate. The operator must still enforce the active sprint/global cutoff, source permissions and normal action/review gates; this tool does not independently authorize execution or extend runtime.
+
+```sh
+node tools/evidence-batch-pilot.mjs --create --previous ops/evidence-audits/2026-10-07.json --checkpoint /absolute/registered/new-checkpoint
+node tools/evidence-batch-pilot.mjs --status --checkpoint /absolute/registered/new-checkpoint
+node tools/evidence-batch-pilot.mjs --collect --batch 0 --checkpoint /absolute/registered/new-checkpoint
+node tools/evidence-batch-pilot.mjs --collect --batch 1 --checkpoint /absolute/registered/new-checkpoint
+```
+
+`--collect` is explicit live-source collection, not a preview. A checkpoint cannot be relabeled as a new run to recover an unknown outcome or denied source. Owner reconciliation and documented changed permitted access remain required before a fresh baseline. The tool prevents replay within its checkpoint; cross-run reconciliation remains an operator responsibility. Do not edit journal files, reuse a directory for a changed manifest, switch origins/tools to recover blocked sources, or treat a new directory as permission to repeat an unknown request.
+
+Status lists every source as `deferred-no-attempt`, `held-prior-denial`, `held-outcome-unknown` or `attempt-completed`. `all_sources_accounted` means the manifest has a status for every entry, not that every entry is freshly fetched. `attempts_finished_or_held` still allows held/failed sources, not verified claims. Source outcomes retain retrieval/change/unavailable/challenge distinctions. Factual renewal and automatic publication are always false.
+
+## Validation And Next Gate
+
+Thirteen focused tests cover deterministic507/1001 partitions, duplicate/unsafe/altered/unbounded plans, multiple-batch replay prevention, interrupted unknown outcomes, original denial dates, explicit opt-in/actual-date gate, exclusive lock/manifest changes, wrong identity/private metadata/corruption, symlinks, asynchronous caller mutation, nested private metadata in priors/results and the existing fetcher's empty content-type outcome. An absent content-type header stays a known unsupported response, not an unknown interrupted attempt. Journal tests write only disposable canonical temporary directories and use fake callbacks; the three `pure:` tests are strictly read-only. Full native QA and a different independent read-only PASS remain release gates.
+
+No real source request occurred during this action. The initial temporary-path fixtures hit macOS's system symlink alias; fixtures now use the canonical temporary directory without weakening the tool's symlink guard. Actual source collection reliability, power-loss recovery and multi-platform filesystem behavior are not established by process-level fixtures.
+
+Next register the weekly aggregation adapter: validate completed journal records, preserve unknown/held/deferred states and feed a reviewed complete audit/review queue without silently converting holds to ordinary retryable failures. The existing weekly entry point is unchanged until that adapter and real weekly collection pass their gates. Afterwards pilot one exact room/fee and one attraction-admission claim delta with source provenance; evaluate two real weekly cycles before broad city growth. This tool is a useful checkpoint foundation, not proof of maintained worldwide coverage. Miami exact-family price/acceptance research and broader keyword paid-scope dependency remain separate.

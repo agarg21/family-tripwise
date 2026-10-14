@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-153",
+  "learning_unit": "LRN-244",
+  "as_of_eastern": "2026-10-13",
+  "decision": "IMPLEMENT_STANDALONE_CHECKPOINT_PILOT",
+  "tool": "tools/evidence-batch-pilot.mjs",
+  "documentation": "docs/plan/evidence-batch-pilot.md",
+  "source_audit_basis": "ops/evidence-audits/2026-10-07.json",
+  "current_inventory": {
+    "source_count": 507,
+    "batches": [{"index": 0, "start": 0, "count": 500}, {"index": 1, "start": 500, "count": 7}],
+    "held_prior_denials": 154,
+    "plan_sha256": "63e5150a8c42e465b84cce59fbedeb09b52092846a9d098c5788e7c5cde3de83",
+    "collect_not_before": "2026-10-14",
+    "network_calls": 0,
+    "method": "In-memory currentPlan and batches using current allowed source inventory, shared model records and validated retained prior audit; no live collection"
+  },
+  "implemented": ["Deterministic exact-identity <=500 inventory partitions", "Hashed immutable manifest and private file mode", "Exclusive writer lock", "Flushed immutable attempt before request and schema-checked result afterward", "Completed requests skipped on resume", "Interrupted missing results held, never automatic replay", "Original401/403/challenge hold dates carried without requests", "Wrong source/private metadata/changed manifest/corrupt or symlink paths fail closed", "Async caller input snapshot prevents scope widening", "CLI actual Eastern date/not-before gate and current inventory comparison"],
+  "fixture_results": {
+    "focused_tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "large_inventory_sizes": [507, 1001],
+    "large_partitions": [[500, 7], [500, 500, 1]],
+    "five_source_resume_calls": 5,
+    "interrupted_two_source_calls": 2,
+    "interrupted_source_retry_calls": 0,
+    "denial_fixture_calls": 0,
+    "early_or_non_opt_in_calls": 0,
+    "live_calls": 0,
+    "initial_fixture_failure": "Seven journal tests rejected the macOS temporary-directory symlink alias. Canonical trusted temporary-directory path used for fixtures, symlink rejection retained. Initial failure is not final green evidence.",
+    "review_cycle_one_p2": "Reused validator permitted objects in scalar metadata. Added strict boundary types for retained priors and results plus nested-private-payload regressions. Cycle-one FAIL is not release approval; full native QA and independent re-review required."
+  },
+  "desk_task": {
+    "persona": "Maintainer continuing a bounded weekly source job after interruption",
+    "steps": ["Inventory every approved source", "Build deterministic bounded manifests", "Inspect carried prior denials", "Persist attempt before request", "Read validated result or unknown hold", "Resume only unattempted eligible sources", "Account all entries without renewing facts"],
+    "result": "OFFLINE_AND_FAKE_FETCH_PROXY_PASS: current inventory has complete partition coverage and synthetic interruption/resume holds; not live weekly reliability, parent satisfaction or fresh facts"
+  },
+  "invariants": {"public_pages_unchanged": true, "existing_collector_defaults_unchanged": true, "weekly_operator_unchanged": true, "automatic_fact_renewal": false, "automatic_publication": false, "new_llm_service": false, "new_paid_calls": 0, "paid_cumulative_usd_unchanged": 0.3626, "new_scheduler": false},
+  "gsc": {"classification": "REUSED_EXISTING_API_SNAPSHOT", "latest_collected_at": "2026-10-13T17:36:08.504Z", "latest_finalized_through": "2026-10-11", "prior_finalized_through": "2026-10-10", "limitation": "Orientation only; no aligned query/CTR or demand diagnosis, indexing request or new protected collection"},
+  "remaining_gate": "Register and review journal-to-weekly-audit aggregation with complete source accounting, unknown/held/deferred preservation, then eligible actual weekly collection and claim reconciliation. Existing site-maintenance entry point remains unchanged. Cross-run unknown reconciliation and runtime authorization remain operator-owned.",
+  "limitations": "Standalone pilot uses existing authorized fetcher only behind opt-in. No source access recovery, robots/terms engine, PDF parser, exact-family pricing adapter, LLM classification, power-loss/multi-platform proof or automatic release is delivered. Hash/attempt completeness does not establish claim freshness. No public UI changes; desktop/mobile/keyboard page QA and production site release are not claimed.",
+  "confidence": "High deterministic bounded accounting and observed fake interruption controls; live reliability and source/claim quality unmeasured",
+  "lesson": "An attempt and its outcome must be separate durable events; a missing outcome is a hold, not permission to replay. Full inventory accounting and factual freshness remain different.",
+  "falsification_trigger": "Duplicate attempt, changed-manifest execution, denied/unknown replay, private result persistence, lost source clock, partial coverage labeled fresh, or a real weekly integration failure"
+}

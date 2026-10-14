@@ -15481,7 +15481,7 @@
       "id": "FT-RES-152",
       "title": "Research global English family-travel scale and weekly refresh gates",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-14T01:27:15.707Z",
       "target_paths": [
@@ -15510,7 +15510,45 @@
       "decision": "IMPLEMENT NEXT bounded coverage/checkpoint pilot before broad city growth: current36canonical coverage is not claim-complete;507source inventory exceeds500entry bound. Retained weekly116/216changed sources is not measured meaningful-change precision. Follow with atomic claim-delta/evaluation and isolated optionalLLM candidates; globalEnglish research conditional on maintained decision quality, not URLquota. Broader30phrase queue prepared; new numeric demand pending narrow existing-cap reply, zero paidcalls here.",
       "evidence_record": "docs/research/global-family-travel-scale-audit-2026-10-13.json",
       "next_gate": "Next eligible implementation run register exact bounded source-batching/checkpoint/coverage pilot paths;507/1001 fixtures, interrupted resume, no duplicate requests, denial/500limit preservation, immutable source accounting and native/different review gates. Then one hotel-room/fee plus one attraction-admission claim-delta pilot and two realweeklycycles before large expansion. Miami151 exact-family room/rate/fee task remains next destination test. Broader keyword volume/SERP collection requires answer to existing5cap scope question and exact manifest amendment; not a project-wide blocker. Plan/evidence fullnative/differentPASS/exact9 guarded remote release pending.",
-      "review_receipt": "FT-RES-152 Anscombe01a1380d-ffec-7de2-83cf-40d9865fae06 STRICTREADONLY PASS/no actionableP0-P2; frozen234081b1c16316f1594abd57a07ecf89a43469a5d51147f55202b6cacf1cdc38/all1042hash-modes/exact9/349olderorderedactions/held11/LRN243-only/public-model-CSV-clocks-operator preserved. Independent4pure/invariants/completeoffline report and inventory reproduced in memory, zero drift. Master973full48maintenance/state0/GSC92/localSEO0sixprior logd94ec54578d0d89c3964db3f0352128a54fd7b61318469ac0587bbf971446023 inspected, not rerun. External sources/history-model/UI/parents/production not independently verified. Proposed scale/LLM thresholds not measured or deployed; new numeric demand paid-scope gated. No writes/network/browser/Git/scheduler/delegation; only immutable mechanical consensus appended, guarded research release pending;014unchanged."
+      "review_receipt": "FT-RES-152 Anscombe01a1380d-ffec-7de2-83cf-40d9865fae06 STRICTREADONLY PASS/no actionableP0-P2; frozen234081b1c16316f1594abd57a07ecf89a43469a5d51147f55202b6cacf1cdc38/all1042hash-modes/exact9/349olderorderedactions/held11/LRN243-only/public-model-CSV-clocks-operator preserved. Independent4pure/invariants/completeoffline report and inventory reproduced in memory, zero drift. Master973full48maintenance/state0/GSC92/localSEO0sixprior logd94ec54578d0d89c3964db3f0352128a54fd7b61318469ac0587bbf971446023 inspected, not rerun. External sources/history-model/UI/parents/production not independently verified. Proposed scale/LLM thresholds not measured or deployed; new numeric demand paid-scope gated. No writes/network/browser/Git/scheduler/delegation; only immutable mechanical consensus appended, guarded research release pending;014unchanged.",
+      "release_receipt": "FT-RES-152 release 0208b4f1edb5078bd93a62be286cb2120d4b0f03 remote verified 2026-10-14T01:41:37.529Z; main0-0/emptyindex/exact9/all1042indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Research/plan/offline coverage delivered and remoteverified, not public-site refresh or implemented scalability/LLM service. Master973full48maintenance4focused/state0/GSC92/SEO0sixprior; differentAnscombeSTRICTPASS with completeoffline report/inventory independently reproduced in memory,1042hash-modes/exact9/349olderactions/held11/LRN243-only/sourceclocks/operator preserved. Current36canonical/507sources/53withoutprior/500bound; next boundedcoverage-checkpoint pilot then claim-delta and realweeklyevaluation before broadgrowth. Broader30phrase numericcollection awaits existing5cap scope reply; zero paidcalls here, cumulative0.36260 unchanged. Miami151 exact-roombudget nextdestinationqualification. No Pageswait/public changes/parent-SEOproof/newautomation/windowextension; only reviewedresearch checkpoint,014 unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T01:41:37.553Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "0208b4f1edb5078bd93a62be286cb2120d4b0f03"
+    },
+    {
+      "id": "FT-IMP-153",
+      "title": "Implement bounded source batch and durable checkpoint pilot",
+      "kind": "tooling",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-14T02:05:08.509Z",
+      "target_paths": [
+        "tools/evidence-batch-pilot.mjs",
+        "tools/evidence-batch-pilot.test.mjs",
+        "docs/plan/evidence-batch-pilot.md",
+        "docs/research/evidence-batch-pilot-2026-10-13.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "014 fixed sprint and direct globalEnglish maintainability instruction; finish152 selected pilot, not another optional report. Existing source collection authority only, zero live collection or new spending here.",
+      "evidence": "152 current507URL inventory exceeds500bound; existing collector saves only final audit. Need complete planned-source accounting and immutable attempts/results so interruption cannot cause silent replay. ReusedOct13GSCfinalOct11/priorOct12finalOct10 orientation only.",
+      "acceptance_criteria": [
+        "Reuse inventory/permittedUrl/fetchSource/compareSource and existing prior validation; new explicit opt-in standalone pilot, existing collector/site-maintenance defaults untouched. Batches <=500 with deterministic identities, all sources held/attempted/unknown/deferred explicitly accounted, no partial-fresh claim.",
+        "Immutable on-disk manifest/attempt/result journal, exclusive writer lock, interruption unknown never auto-retried, changedmanifest/corrupt/symlink/duplicate/unsafe records fail closed. Preserve held401/403/challenge dates. Live collection not-before gate and explicitflag; fixtures only now.",
+        "Pure507/1001 batching cases plus fake-fetch no duplicate/resume/interruption/denial/gate/journal safety fixtures; actual507 offline planning proof. No automaticfact renewal/publication/LLM/currentrate or large-scale reliability claim. Focused/fullnativeQA/different strictread-onlyPASS/exact9 guarded tool-doc push/remoteverification.",
+        "Preserve350older ordered actions/allpublic-model-CSV-price-policy-clocks/operator/scheduler/held11; ledgeronlyLRN244. Tool pilot is not a public page or full weekly replacement; integration and actualweekly claim reconciliation remain next gates."
+      ],
+      "measurement_plan": "LRN244 concrete maintainer task: map507 sourceinventory into bounded independent checkpoints, account interrupted outcomes without refetching. Fake fixtures proxy reliability only; two actual weekly cycles and claim precision remain unmeasured.",
+      "production_invariant": "Tools/docs/tests only. No existing collector/schema/source registry/default cadence changes, live requests/paidcalls/LLM/account/indexing/analytics/scheduler/denialretry/publicsource-date edits. No Pageswait needed.",
+      "decision": "IMPLEMENT standalone checkpoint pilot: actual507 inventory500/7 batches154priorholds;13fake/pure fixtures green, no live source requests. Cycle-one FeynmanP2 nested scalar metadata corrected with strict prior/result types and regressions; empty content-type retained as a known unsupported response. FullQA/re-review required before release. Immutable attempts/results, exclusive lock, unknown holds/no replay, currentmanifest and asyncinput guards. Source/price clocks and existing weekly default unchanged.",
+      "evidence_record": "docs/research/evidence-batch-pilot-2026-10-13.json",
+      "next_gate": "Focused/full native QA/different read-onlyPASS/exact9 guarded tool-doc remote release; then register journal-to-weekly-audit aggregation preserving unknown/held/deferred and source coverage before eligible real weekly collection. Standalone tool is not a replacement audit or live reliability proof; claim-delta pilot and two realweeklycycles still required before broadgrowth. Miami exact-room price/acceptance remains next destination task; broader paidquery question pending, not a project-widehold.",
+      "review_receipt": "FT-IMP-153 Feynman01a13833-d7e5-73d3-ab21-7f5c7134a687 STRICTREADONLY final-target PASS/no remaining findings; c914726038d869442ffa01e351215bc643c8eeaa6b685eaf1420f1954afb7d51/all1046hash-modes/exact9/350olderactions/held11/LRN244-only verified. Prior privacy/emptyheader findings closed;3pure and memory-only nested-private rejection/nativeemptyheader/current507-500/7-154holds/63e515planSHA reproduced. Master986full48maintenance13focused/state0/GSC92/SEO0sixprior log6ce41628b0d76aa429a47abb062c443a5e782bc51bfd6c9a42d28701806920bb inspected, not rerun. MasterCLI507/353unattempted154holds/earlyexit1/unchangedstatus, no sourcecalls. Reviewer no writes/network/browser/Git/delegation/scheduler/journal-CLI-fullQA. Live reliability/powerloss/crossrun/weekly aggregation unproved or deferred; no publicrefresh/LLM/paidcall. Mechanical consensus only; guarded tool-doc release pending,014 unchanged."
     }
   ]
 }
