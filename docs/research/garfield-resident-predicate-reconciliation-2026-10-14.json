@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-157",
+  "decision": "IMPLEMENT_NARROW_PARSER_CORRECTION_PRESERVE_PUBLIC_FACTS",
+  "source": {
+    "url": "https://garfieldconservatory.org/visit/",
+    "inspected_on": "2026-10-14",
+    "inspection_tool": "web.open exact official visit page, one read for unresolved source-versus-parser gate",
+    "retrieved_at_basis": "Inspection date from actual run clock; exact web request timestamp not exposed",
+    "returned_content_type": "text/html",
+    "returned_title": "Visit Garfield Park Conservatory Chicago",
+    "returned_lines": {"waiver": 97, "per_member_verification": 99},
+    "excerpt": "For our guests that reside within the City of Chicago, we kindly offer admission at no charge",
+    "excerpt_words": 17,
+    "evidence_class": "OFFICIAL_SOURCE_WORDING_FOR_EXTRACTION_FIXTURE",
+    "current_native_text_sha256": null,
+    "prior_native_text_sha256": "b23189dd8dc014e2c9b7b6a7789f226c2139518650ee1f7b357170037d2967ee",
+    "prior_native_attempted_at": "2026-10-14T04:34:27.863Z",
+    "prior_evidence": "ops/evidence-audits/2026-10-14-garfield-checkpoint-review.json",
+    "limits": "Web extraction is not a new native collector body hash, dated checkout, availability or policy-effective date. Original156 source outcome and candidate queue remain immutable. No source body, identities, ID/address data or contact details retained."
+  },
+  "reconciliation": {
+    "id": "garfield-resident-waiver-predicate",
+    "old_pattern": "(?:chicago residents[^.]{0,120}free|free[^.]{0,120}chicago residents)",
+    "old_fixture_state": "expected-text-missing-review",
+    "new_pattern": "guests that reside within the city of chicago\\s*,\\s*we kindly offer admission at no charge\\b",
+    "new_fixture_state": "expected-text-present",
+    "cause": "Source wording differs from synthetic156 assumption: residence within named city and no-charge admission rather than Chicago residents and free. The bounded current source excerpt reproduces old missing result and revised candidate presence.",
+    "claim_verified": false,
+    "original_verified_on": "2026-10-13",
+    "eligibility_unchanged": "Original134 conditional each-visitor city-residency waiver remains; current source separately describes per-member ZIP/address verification. No visitor eligibility established and no data collected.",
+    "not_established": ["complete current native six-predicate outcome", "verification-clause extraction", "policy effective date", "under-seven nonresident admission", "checkout fees", "dated availability", "representative semantic precision", "two complete weekly cycles"],
+    "next_falsification": "Different waiver or verification wording, changed city scope, missing fixture match or independent source conflict requires a fresh named reconciliation; never automatic eligibility/date mutation."
+  },
+  "task_validation": {
+    "type": "REPRODUCIBLE_MAINTAINER_DESK_PROXY_NOT_PARENT_OR_UI_TEST",
+    "family_decision": "Maintain the conditional resident admission comparison without turning parser drift into a public policy change.",
+    "steps": ["Read156 resident missing candidate and original134 eligibility", "Inspect only permitted official visit page admissions wording", "Run old predicate on bounded source excerpt and reproduce missing", "Run revised predicate on same excerpt and obtain unverified candidate", "Reject changed city, outside residency, paid/negated admission and free-parking fixtures", "Retain original dates and immutable prior queue", "Route remaining verification, native full-source and weekly coverage gaps to next gate"],
+    "result": "PARTIAL: narrow extraction mismatch resolved; verification-clause semantics, actual family eligibility, current checkout and full weekly refresh remain unknown.",
+    "desktop_mobile_keyboard": "Not applicable: no public UI or command-control change. Existing native CLI unchanged; focused parser fixtures and full native QA required. Not a rendered page walkthrough.",
+    "initial_test_failures": "Nine tests initially7pass2fail: incorrect hand-count20 corrected to actual17 words; inline markup normalization inserts a space before comma, so exact predicate now tolerates whitespace there. Initial run is not finalgreen; shared normalization unchanged."
+  },
+  "invariants": {"public_pages_unchanged": true, "public_fact_dates_unchanged": true, "immutable156_unchanged": true, "source_holds_unchanged": true, "weekly_baseline_due_unchanged": true, "new_paid_calls": 0, "new_llm_service": false, "new_automation": false},
+  "learning": {"id": "LRN-248", "hypothesis": "Missing resident predicate represents a changed waiver", "result": "REJECT; current bounded wording reproduces parser mismatch. Implement exact positive phrase, preserve public policy and review uncertainty.", "confidence": "High bounded wording/fixture diagnosis; no representative precision, parent preference or SEO effect measured.", "lesson": "Test source wording, not merely plausible invented policy prose; a missing predicate is a reconciliation request, not a factual delta.", "next_action": "Dana exact category/mandatory-fee atomic candidates from permitted official sources; full source governance and two actual complete weekly cycles still required before broad city scaling."}
+}
