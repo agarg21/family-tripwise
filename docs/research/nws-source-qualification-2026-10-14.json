@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-165",
+  "learning_id": "LRN-256",
+  "observed_on": "2026-10-14",
+  "evidence_class": "CURRENT_PRIMARY_DOCUMENTATION_AND_MAINTAINER_PROXY",
+  "family_decision": "For an existing San Antonio family itinerary, retain an indoor alternative and check a near-departure forecast without treating the weekly page review as current weather.",
+  "hypothesis": "An independent official structured API with explicit reuse conditions can support short-lived weather checks, but cannot establish global coverage or make weekly forecast storage trustworthy.",
+  "sources": [
+    {
+      "id": "api-docs",
+      "url": "https://www.weather.gov/documentation/services-web-api",
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "document_published_on": null,
+      "section_update_label": "Known Issues: Updated 3/24/2026; not the publication date of the entire document",
+      "native_http_status": null,
+      "result": "reader-available",
+      "summary": "API data are described as free open data. An identifying User-Agent is required; documentation mentions future API keys, not current key onboarding. Numeric rate limits are unpublished. Cache-aware JSON formats and coordinate-to-grid discovery are documented. Twelve-hour and hourly forecasts cover the next seven days; point/grid mappings can change. API times use ISO8601. Observations can lag upstream processing."
+    },
+    {
+      "id": "use-policy",
+      "url": "https://www.weather.gov/disclaimer/",
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "document_published_on": null,
+      "native_http_status": null,
+      "result": "reader-available",
+      "summary": "NWS material is generally public domain unless otherwise marked. Do not claim ownership, imply agency endorsement or present altered material as official. Third-party content has separate rights. Dates matter; timely Internet delivery is not guaranteed. Appropriate-use guidance calls for needed data only, update-aware request cycles, error handling and restrained retries; the six-hour forecast example is not a universal TTL."
+    },
+    {
+      "id": "attribution-faq",
+      "url": "https://www.weather.gov/logorequest-faq",
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "document_published_on": null,
+      "native_http_status": null,
+      "result": "reader-available",
+      "summary": "Source attribution may identify NOAA/NWS data while clearly separating it from the third-party display. Government data cannot be claimed as copyrighted private content. No logo license or endorsement is inferred."
+    }
+  ],
+  "collection": {
+    "search_queries": 2,
+    "explicit_document_opens": 3,
+    "underlying_http_requests": null,
+    "native_collector_requests": 0,
+    "forecast_requests": 0,
+    "api_specification_requests": 0,
+    "llm_calls": 0,
+    "paid_calls": 0,
+    "source_owner_contacts": 0,
+    "bodies_or_personal_data_retained": false
+  },
+  "existing_fit": {
+    "page": "site/family-itinerary/san-antonio-with-kids.html",
+    "job": "Existing heat/weather pivot and linked forecast check; no new weather URL or demand transfer from hotel queries.",
+    "gap": "Live forecast integration and expiry behavior are not implemented or validated. This is a maintenance-source qualification, not a discovered public factual error.",
+    "public_change_selected": false
+  },
+  "scope_verdict": {
+    "decision": "CANDIDATE_EXPLICIT_API_ADAPTER",
+    "documentation_access_and_reuse": "SUPPORTED_FOR_NWS_API_DATA_SUBJECT_TO_CURRENT_PUBLISHED_CONDITIONS",
+    "legal_assurance": false,
+    "native_endpoint_access_tested": false,
+    "robots_rules_inspected": false,
+    "html_scrape_permission": "NOT_ASSESSED",
+    "old_html_governance_registry_approved": false,
+    "coverage": "Pilot only the existing US San Antonio destination after exact coordinate/endpoint validation. No non-US or universal coverage claim.",
+    "independent_of_original_holds": "Weather data do not replace Dana room/fee or Garfield admission facts. Those three source-policy holds remain unchanged; no alternate retrieval or bypass.",
+    "next_eligible_run": "Next actual run inside the authorized window after this research passes review/release, provided the adapter is registered and current published access conditions remain unchanged.",
+    "owner": "Master operator with a different independent read-only reviewer",
+    "remaining_gate": "Register an API-specific adapter and exact point/request scope; inspect current OpenAPI schema and applicable endpoint access/response/cache rules; test deterministic parsing, units, nulls, geographic and validity bounds, cache expiry and denial/no-replay behavior; independently review before a bounded native pilot. Do not relax the old HTML guard to admit API data.",
+    "stop_condition": "Stop on an access denial/challenge, unsupported location, missing schema/date/unit, expired data or a conflicting source record. No alternate host, proxy, repeated unchanged denial, automatic publication or safety inference."
+  },
+  "proposed_adapter_contract": {
+    "status": "DESIGN_NOT_IMPLEMENTED_OR_SCHEMA_CONFIRMED",
+    "source": "https://api.weather.gov",
+    "discovery": "/points/{latitude},{longitude}; follow only a separately approved exact returned forecast URL after validating origin, path and location binding",
+    "identity": "Unique application User-Agent identifying familytripwise.com; do not invent or publish a personal contact email",
+    "method": "Deterministic JSON parser; no LLM required for structured period/date/unit/null handling",
+    "candidate_fields": ["source_url", "location_and_grid", "source_generated_time", "retrieved_time", "period_start", "period_end", "temperature_and_unit", "precipitation_probability_or_null", "forecast_summary", "cache_expiry_and_validation_headers", "provenance_hash"],
+    "field_names": "Internal proposed envelope names, not asserted NWS JSON property names; confirm exact OpenAPI types first",
+    "refresh": "Weekly source/schema health may be part of existing maintenance. Forecast checks require demand-driven source-cache/validity-aware expiry; weekly storage alone is rejected. No additional scheduler selected.",
+    "retention": "Proposed private short-lived normalized facts and response validators; public Git only bounded dated research metadata. No visitor exact location, saved family dates, full source archives or copied advisory feed. Retention implementation requires review.",
+    "nulls": "Missing precipitation is unknown, not dry; missing temperature is unknown, not zero. Do not extrapolate beyond the returned horizon or substitute observed past conditions for a forecast.",
+    "authority": "Keep data attribution separate from Family Tripwise planning interpretation. Forecasts are predictions, not actual conditions or a promise an attraction opens or an outdoor plan is suitable. Link official current advisories; do not summarize them into an all-clear."
+  },
+  "maintainer_task": {
+    "proxy_only": true,
+    "steps": [
+      {"task": "Find existing weather decision ownership", "result": "Existing San Antonio itinerary owns the pivot and forecast link; no new URL selected."},
+      {"task": "Identify permitted independent structured source", "result": "Current NWS API documentation explicitly describes open data; reuse conditions and attribution reviewed separately."},
+      {"task": "Select near-term versus distant trip", "result": "Seven-day documented horizon is near-term only; later dates remain unknown, not a seasonal prediction."},
+      {"task": "Check freshness contract", "result": "REJECT weekly-only current forecast. Cache/date/period validity and endpoint schema remain adapter gates."},
+      {"task": "Keep constraints and evidence separate", "result": "No attraction availability, room acceptance, stroller practicality, observed weather or safety claim follows from forecast data."},
+      {"task": "Handle failed or incomplete retrieval", "result": "Future pilot must preserve unknown/null/denied states and official source handoff without stale all-clear or tool bypass."},
+      {"task": "Choose next action", "result": "Candidate registered API adapter, not live integration, a refreshed page or proof of weekly/global readiness."}
+    ],
+    "result": "SOURCE_DOCUMENTATION_GATE_QUALIFIED; endpoint/schema/native pilot and user-facing usefulness remain untested"
+  },
+  "confidence": "High for observed documentation and separation of policy classes; unknown native endpoint availability, exact schema, location coverage, product usefulness and operational reliability.",
+  "reusable_lesson": "Weekly maintenance is not a single freshness clock. A reusable evidence system needs both source-policy/schema upkeep and field-specific validity; short-lived forecasts must expire independently of stable page comparisons.",
+  "falsification_trigger": "Documentation/use conditions change; exact endpoint denies; returned mapping/location differs; period expires or predates retrieval; omitted values become zero; display confuses predictions with observations or safety; unresolved critical maintenance backlog grows during expansion.",
+  "unchanged": {
+    "public_pages_models_csv_and_fact_dates": true,
+    "source_holds_and_original_pilot_registry": true,
+    "old_tools_and_default_collectors": true,
+    "weekly_last_collection_october7": true,
+    "scheduler_and_fixed_sprint": true,
+    "broader_numeric_query_research_pending_scope": true,
+    "two_actual_weekly_cycles_unproven": true
+  }
+}
