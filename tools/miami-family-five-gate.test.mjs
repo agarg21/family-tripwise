@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 const read = name => JSON.parse(readFileSync(new URL(`../docs/research/${name}-2026-10-13.json`, import.meta.url)));
 const gate = read('miami-family-five-gate');
 const demand = read('miami-family-five-demand');
+const followup = JSON.parse(readFileSync(new URL('../docs/research/miami-surfside-fee-conflict-2026-10-14.json', import.meta.url)));
 
 test('Miami demand preserves actual samples, estimates and reconciled paid costs', () => {
   assert.deepEqual(demand.keywords.map(x => x.search_volume), [1000, 480]);
@@ -55,4 +56,70 @@ test('Miami source signals retain dates and unknowns without identities or ratin
   assert.match(gate.properties[0].booking_observation.fee_resolution, /do not sum/);
   assert.match(gate.properties[1].booking_observation.fee_resolution, /third child/);
   assert.match(gate.validation_limits, /not actual parents/);
+});
+
+test('Surfside follow-up retains both primary fee/credit observations with unknown applicability', () => {
+  assert.equal(followup.action_id, 'FT-RES-169');
+  assert.equal(followup.property.id, gate.properties[0].id);
+  assert.equal(followup.property.marriott_code, 'miaxb');
+  assert.deepEqual(followup.sources.map(s => [s.destination_amenity_fee.amount, s.dining_credit.amount]), [[30, 30], [34, 17]]);
+  for (const s of followup.sources) {
+    assert.equal(s.checked_on, '2026-10-14');
+    assert.equal(s.publisher_effective_date, null);
+    assert.equal(s.native_http_status, null);
+    assert.match(s.url, /^https:\/\/www\.marriott\.com\/en-us\/hotels\/miaxb-residence-inn-miami-beach-surfside\/(rooms|overview)\/$/);
+    assert.equal(s.destination_amenity_fee.currency, 'USD');
+    assert.equal(s.destination_amenity_fee.time_unit, 'per night');
+    assert.equal(s.destination_amenity_fee.charge_basis, null);
+    assert.equal(s.destination_amenity_fee.tax_basis, 'plus tax');
+    assert.equal(s.dining_credit.time_unit, 'daily');
+    assert.equal(s.dining_credit.charge_basis, null);
+    assert.equal(s.dining_credit.rollover_or_cash_value, null);
+  }
+});
+
+test('Surfside body conflict cannot become a controlling policy or family quote', () => {
+  const r = followup.result;
+  assert.equal(r.decision, 'REJECT_SEARCH_ONLY_EXPLANATION');
+  assert.equal(r.applicability_status, 'HOLD_PRIMARY_CONFLICT_AND_SELECTED_RATE_GAPS');
+  for (const field of ['controlling_fee', 'controlling_credit', 'effective_policy_date', 'selected_rate', 'nightly_family_quote']) assert.equal(r[field], null);
+  assert.equal(r.public_ready, false);
+  assert.equal(followup.property.category, null);
+  assert.equal(followup.property.accepted_exact_family, null);
+  assert.deepEqual(followup.family_task.child_ages, gate.family_task.child_ages);
+  assert.equal(followup.family_task.arrival, gate.family_task.reference_stay.arrival);
+  assert.equal(followup.family_task.departure, gate.family_task.reference_stay.departure);
+  assert.equal(followup.family_task.nights, gate.family_task.reference_stay.nights);
+  assert.ok(r.rules.some(s => /Do not subtract/.test(s)));
+  assert.ok(r.rules.some(s => /generic8-guest/.test(s)));
+  assert.ok(r.rules.some(s => /Do not add or replace/.test(s)));
+  assert.match(r.next_eligible_run, /do not repeat identical bodies/);
+});
+
+test('Surfside follow-up separates body review from original OTA and historical clocks', () => {
+  assert.equal(followup.prior_record_renewed, false);
+  assert.equal(followup.prior_record, 'docs/research/miami-family-five-gate-2026-10-13.json');
+  assert.equal(gate.source_access_on_utc, '2026-10-14');
+  assert.deepEqual(gate.properties[0].booking_observation.displayed_fees.map(x => x.amount), [37.74, 36.38, 41]);
+  assert.equal(gate.properties[0].booking_observation.reviews[0].posted_on, '2026-10-06');
+  assert.equal(gate.properties[0].official.maximum_occupancy, null);
+  assert.equal(followup.collection.explicit_primary_opens, 2);
+  assert.equal(followup.collection.underlying_http_requests, null);
+  for (const field of ['native_requests', 'browser_attempts', 'paid_calls', 'llm_calls', 'source_owner_contacts', 'denied_retries', 'alternate_origin_or_tool_fallbacks']) assert.equal(followup.collection[field], 0);
+  assert.equal(followup.collection.source_bodies_retained, false);
+  assert.equal(followup.gsc.query_cohort_present, false);
+  assert.equal(followup.gsc.ctr_action_selected, false);
+});
+
+test('Surfside desk tasks remain unresolved cost evidence rather than rendered or parent proof', () => {
+  assert.equal(followup.desk_tasks.length, 2);
+  for (const task of followup.desk_tasks) {
+    assert.equal(task.steps.length, 6);
+    assert.match(task.result, /^HOLD_/);
+    assert.equal(task.cash_total, null);
+    assert.equal(task.net_fee_after_credit, null);
+  }
+  assert.match(followup.validation_limits, /not rendered desktop\/mobile\/keyboard/);
+  assert.match(followup.validation_limits, /Same-publisher pages are not independent corroboration/);
+  assert.ok(Object.values(followup.unchanged).every(x => x === true));
 });

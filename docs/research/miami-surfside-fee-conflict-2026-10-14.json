@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-169",
+  "learning_id": "LRN-260",
+  "observed_on": "2026-10-14",
+  "reader_open_window_utc": {"after_clock_sample": "2026-10-14T23:06:49Z", "before_clock_sample": "2026-10-14T23:07:19Z", "exact_retrieval_timestamp": null},
+  "evidence_class": "OFFICIAL_PROPERTY_READER_BODIES_AND_DESK_PROXY",
+  "prior_record": "docs/research/miami-family-five-gate-2026-10-13.json",
+  "prior_record_renewed": false,
+  "property": {
+    "id": "residence-inn-miami-beach-surfside",
+    "name": "Residence Inn Miami Beach Surfside",
+    "address": "9200 Collins Avenue, Surfside, Florida 33154",
+    "marriott_code": "miaxb",
+    "category": null,
+    "accepted_exact_family": null
+  },
+  "family_task": {
+    "adults": 2,
+    "child_ages": [4, 8, 12],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "nights": 5,
+    "stay_basis": "proposed151 comparison, not observed availability",
+    "decision": "Can mandatory cash charges and a restricted dining benefit support a fair kitchen-base versus beach-suite budget comparison?"
+  },
+  "hypothesis": "The30/30 versus34/17 discrepancy exists only in stale search excerpts, not the currently readable primary page bodies.",
+  "collection": {
+    "search_queries": 2,
+    "explicit_primary_opens": 2,
+    "underlying_http_requests": null,
+    "native_requests": 0,
+    "browser_attempts": 0,
+    "paid_calls": 0,
+    "llm_calls": 0,
+    "source_owner_contacts": 0,
+    "source_bodies_retained": false,
+    "denied_retries": 0,
+    "alternate_origin_or_tool_fallbacks": 0
+  },
+  "sources": [
+    {
+      "id": "rooms",
+      "url": "https://www.marriott.com/en-us/hotels/miaxb-residence-inn-miami-beach-surfside/rooms/",
+      "sections": ["Suite Spaces for Your Getaway", "Premium Surfside Beach Hotel Amenities"],
+      "reader_lines": [110, 128],
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "publisher_effective_date": null,
+      "native_http_status": null,
+      "destination_amenity_fee": {"amount": 30, "currency": "USD", "time_unit": "per night", "charge_basis": null, "tax_basis": "plus tax"},
+      "dining_credit": {"amount": 30, "currency": "USD", "time_unit": "daily", "charge_basis": null, "eligible_venues": ["Surfside 6 Lobby Bar", "Poolside Bar & Grill"], "rollover_or_cash_value": null},
+      "paraphrase": "Rooms body advertises a30USD daily dining credit and30USD nightly Destination Amenity Fee plus tax, with dining benefit tied to the two on-property venues."
+    },
+    {
+      "id": "overview",
+      "url": "https://www.marriott.com/en-us/hotels/miaxb-residence-inn-miami-beach-surfside/overview/",
+      "sections": ["Level-Up Your North Miami Beach Getaway"],
+      "reader_lines": [115, 116],
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "publisher_effective_date": null,
+      "native_http_status": null,
+      "destination_amenity_fee": {"amount": 34, "currency": "USD", "time_unit": "per night", "charge_basis": null, "tax_basis": "plus tax"},
+      "dining_credit": {"amount": 17, "currency": "USD", "time_unit": "daily", "charge_basis": null, "eligible_venues": ["Surfside 6 Lobby Bar", "Poolside Bar & Grill"], "rollover_or_cash_value": null},
+      "paraphrase": "Overview body advertises a34USD nightly Destination Amenity Fee plus tax and17USD daily dining credit at the same two venues."
+    }
+  ],
+  "result": {
+    "decision": "REJECT_SEARCH_ONLY_EXPLANATION",
+    "controlling_fee": null,
+    "controlling_credit": null,
+    "effective_policy_date": null,
+    "selected_rate": null,
+    "nightly_family_quote": null,
+    "public_ready": false,
+    "applicability_status": "HOLD_PRIMARY_CONFLICT_AND_SELECTED_RATE_GAPS",
+    "observed": "Same property and named fee/credit disagree in both reader-visible primary bodies. Current reader checks do not establish which page controls or why the mismatch exists.",
+    "unknowns": ["fee charged per room, accommodation or person", "effective dates and page precedence", "selected stay and rate applicability", "tax rate and total cash charges", "credit usage, rollover, per-room or party limits", "relationship to original151 OTA destination/resort entries", "exact category accepting this family", "category-matched nightly price and availability"],
+    "rules": ["Do not select a winner from crawl labels or page title", "Do not add or replace original OTA fee entries with these primary amounts", "Do not subtract a restricted dining benefit from mandatory cash payable", "Do not treat the generic8-guest booking-widget limit as named-category acceptance", "Do not renew historical quote, fee or review dates"],
+    "confidence": "High for these two observed body sections and identity alignment; controlling policy, exact-party costs and actual travel acceptance unknown.",
+    "owner": "Master evidence maintainer; no project contact or booking mutation authorized",
+    "next_eligible_run": "A material primary reconciliation or readable selected-category rate terms for the specified family/stay; do not repeat identical bodies merely on the next calendar run.",
+    "remaining_gate": "Reconcile dated effective fee/credit applicability and earlier OTA duplication, capture category-matched accepted-family nightly price/basis/taxes/deposit/cancellation; then maintainable comparison qualification and actual desktop/mobile/keyboard, native QA, independent review and production gates before site publication."
+  },
+  "desk_tasks": [
+    {
+      "persona": "Meal-prep parent comparing the five-night Surfside base",
+      "steps": ["Match property code and Surfside address", "Read rooms fee and credit", "Read overview fee and credit", "Separate advertised benefit from cash charge", "Check effective date, charge basis and selected-rate applicability", "Keep budget and category choice unresolved"],
+      "result": "HOLD_COST_COMPARISON",
+      "cash_total": null,
+      "net_fee_after_credit": null
+    },
+    {
+      "persona": "Maintainer joining primary terms to151's older OTA entries",
+      "steps": ["Load original151 observation without changing dates", "Identify destination/resort duplication", "Join new observations by exact property and named field", "Retain both conflicting primary amounts separately", "Reject additive/replacement and generic occupancy assumptions", "Require selected-rate evidence before publishing"],
+      "result": "HOLD_FEE_RECONCILIATION",
+      "cash_total": null,
+      "net_fee_after_credit": null
+    }
+  ],
+  "validation_limits": "Two reproducible desk evidence proxies, not rendered desktop/mobile/keyboard checks, actual parents, stays, representative review signals or SEO-lift proof. No hotel family-fit verdict or review refresh selected; original151 review dates/limits retained. Same-publisher pages are not independent corroboration; reader crawl labels are not publisher policy dates or independently measured native HTTP captures. No source automation/retention permission or full weekly reliability established.",
+  "gsc": {"classification": "REUSED_RECENT_READONLY_API_ORIENTATION", "collected_at": "2026-10-14T15:09:53.183Z", "finalized_through": "2026-10-12", "prior_finalized_through": "2026-10-11", "query_cohort_present": false, "ctr_action_selected": false},
+  "unchanged": {"public_pages_models_exports_dates": true, "original151": true, "all367_older_items": true, "seven_nonowned_held_changes": true, "held_ledger_tail": true, "source_holds_governance_journals": true, "weekly_operator_scheduler_restoration": true},
+  "lesson": "Primary-source preference is not conflict resolution. Maintain each fee and benefit with separate amount/unit/tax/applicability/effective-date fields; a restricted benefit is not a cash refund.",
+  "falsification_trigger": "Changed primary terms with explicit effective precedence, applicable selected-rate terms, contrary property identity, or a failed task revealing borrowed occupancy, summed fees, cash-credit netting or renewed historical dates."
+}
