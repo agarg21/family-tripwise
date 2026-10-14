@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-168",
+  "learning_id": "LRN-259",
+  "observed_on": "2026-10-14",
+  "evidence_class": "PRIMARY_READER_NAVIGATION_AND_DESK_PROXY",
+  "family_decision": "Can a family plan to keep a collapsible25lb stroller until the gate on an American-operated flight?",
+  "hypothesis": "The152 discrepancy exists only because the over20lb instruction came from an unlinked pubcontent fragment.",
+  "collection": {
+    "explicit_opens": 2,
+    "explicit_clicks": 3,
+    "underlying_http_requests": null,
+    "native_requests": 0,
+    "browser_attempts": 0,
+    "paid_calls": 0,
+    "llm_calls": 0,
+    "source_owner_contacts": 0,
+    "source_bodies_retained": false,
+    "access_denials": 0,
+    "security_or_origin_fallbacks": 0
+  },
+  "sources": [
+    {
+      "id": "family",
+      "url": "https://www.aa.com/web/i18n/travel-info/special-assistance/traveling-children.html",
+      "section": "Carry-on and checked bags / Strollers",
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "native_http_status": null,
+      "effective_date": null,
+      "paraphrase": "The stroller subsection permits one stroller and one car seat checked without charge per ticketed customer traveling with a child or to adopt. At most one of those items can be gate-checked. Noncollapsible strollers and specified strapless stroller wagons require counter checking; other strollers are directed to the gate.",
+      "weight_threshold_in_stroller_section_lb": null,
+      "outside_section_20lb_applies_to": "infant bassinet eligibility, not stroller checking"
+    },
+    {
+      "id": "fragment",
+      "url": "https://www.aa.com/pubcontent/en_US/travel-info/baggage/specialty-and-sports.html",
+      "section": "Infant seats or child restraint devices",
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "native_http_status": null,
+      "effective_date": null,
+      "paraphrase": "The stroller instruction lists large, noncollapsible or heavier-than20lb items for counter checking.",
+      "weight_threshold_lb": 20,
+      "weight_operator": "strictly-greater-than"
+    },
+    {
+      "id": "bags",
+      "url": "https://www.aa.com/web/i18n/travel-info/baggage/baggage.html?from=comp_nav",
+      "section": "Our policies / Special items and sports equipment",
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "2 days ago",
+      "native_http_status": null,
+      "effective_date": null,
+      "paraphrase": "The ordinary Bags navigation exposes a link to the normal web specialty page.",
+      "limit": "Reader retrieval now; its displayed crawl age is not a new publisher update or independently measured HTTP retrieval."
+    },
+    {
+      "id": "web-specialty",
+      "url": "https://www.aa.com/web/i18n/travel-info/baggage/specialty-and-sports.html",
+      "section": "Infant seats or child restraint devices",
+      "checked_on": "2026-10-14",
+      "reader_crawl_label": "today",
+      "native_http_status": null,
+      "effective_date": null,
+      "paraphrase": "The navigation-linked normal web page also lists large, noncollapsible or heavier-than20lb strollers for counter checking.",
+      "weight_threshold_lb": 20,
+      "weight_operator": "strictly-greater-than"
+    }
+  ],
+  "navigation": [
+    {"from": "family", "link_label": "Bags", "to": "bags"},
+    {"from": "bags", "link_label": "Special items and sports equipment", "to": "web-specialty"},
+    {"from": "fragment", "link_label": "Traveling with children", "requested_url": "https://www.aa.com/i18n/travel-info/special-assistance/traveling-children.jsp", "reader_reported_redirect_to": "family"}
+  ],
+  "result": {
+    "decision": "REJECT_UNLINKED_FRAGMENT_ONLY_EXPLANATION",
+    "rule_selection": "HOLD",
+    "weight_route_conflict": "UNRESOLVED",
+    "cause": "UNKNOWN",
+    "claim": "The over20lb instruction appears on the normal navigation-linked web specialty page too. The observed disagreement is not confined to pubcontent.",
+    "not_established": ["which page prevails", "actual airline enforcement", "policy change or effective date", "publisher canonical metadata", "all itineraries or partner operators", "source scraping or retention permission"],
+    "confidence": "High for these reader-visible sections/navigation; unknown for controlling rule and itinerary acceptance.",
+    "public_change_selected": false,
+    "new_url_qualified": false,
+    "numeric_demand": null,
+    "same_market_serp_overlap": null,
+    "owner": "Master evidence maintainer; any travel-specific confirmation remains the traveler's operating-carrier check, not authorized project outreach",
+    "next_eligible_run": "Only a dated primary reconciliation or material section/navigation change; no calendar-only repeat of these same pages. Broader search research separately awaits paid-scope reply and exact manifest.",
+    "remaining_gate": "Publisher-supported effective rule/precedence for the conflicting heavy collapsible case; then distinct demand/ownership/evidence and actual UI/review/release gates before any public comparison.",
+    "stop_condition": "Retain conflict and unknowns when precedence is unsupported; do not prefer a convenient or supposedly safer interpretation."
+  },
+  "desk_tasks": [
+    {
+      "persona": "Parent with a hypothetical collapsible25lb stroller, no wagon, American-operated itinerary",
+      "steps": ["Scope to stroller subsection", "Read family gate/counter instruction", "Follow Bags to normal specialty owner", "Compare heavy-stroller condition", "Check effective-date and precedence evidence", "Keep acceptance unresolved"],
+      "result": "HOLD_CONFLICT",
+      "gate_check_promised": false,
+      "counter_check_guaranteed": false
+    },
+    {
+      "persona": "Parent with a hypothetical noncollapsible10lb stroller",
+      "steps": ["Identify noncollapsible property", "Compare both primary instructions", "Separate consistent counter-check wording from airport acceptance"],
+      "result": "ALIGNED_COUNTER_INSTRUCTION_NOT_ACCEPTANCE",
+      "gate_check_promised": false,
+      "counter_check_guaranteed": false
+    },
+    {
+      "persona": "Parent carrying a hypothetical collapsible15lb stroller and one car seat",
+      "steps": ["Keep free checked-item allowance separate from gate allowance", "Apply family page's one-item gate constraint", "Retain undefined large-size and itinerary conditions"],
+      "result": "ONE_GATE_ITEM_RESEARCH_CONSTRAINT_NOT_TWO_ITEM_PROMISE",
+      "gate_check_promised": false,
+      "counter_check_guaranteed": false
+    }
+  ],
+  "validation_limits": "Reproducible desk proxies using supplied reader sections, not rendered desktop/mobile/keyboard checks, actual parents or firsthand airport experience. No hotel/activity judgment or online-review sample is used. Same-publisher documents are not independent corroboration. Source quality research only; no collector permission, semantic accuracy percentage, weekly reliability, worldwide coverage, new demand or SEO lift established.",
+  "gsc": {"classification": "REUSED_RECENT_READONLY_API_ORIENTATION", "collected_at": "2026-10-14T14:10:29.122Z", "finalized_through": "2026-10-12", "prior_finalized_through": "2026-10-11", "indexed": 24, "inspected": 36, "query_cohort_present": false, "ctr_action_selected": false},
+  "unchanged": {"public_pages": true, "models_and_exports": true, "fact_price_policy_review_dates": true, "original152": true, "all365_older_items": true, "held11": true, "source_holds_governance_journals": true, "operator_weekly_state": true, "scheduler_and_spending": true}
+}

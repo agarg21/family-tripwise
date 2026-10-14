@@ -1,0 +1,13 @@
+# American Stroller Source Reconciliation
+
+FT-RES-168 / LRN-259, October14,2026 Eastern. [Structured record](american-stroller-policy-conflict-2026-10-14.json). Narrow follow-up to152's source-version gate, not another broad keyword report.
+
+**Reject the unlinked-fragment-only explanation; keep the controlling rule unresolved.** The [family page](https://www.aa.com/web/i18n/travel-info/special-assistance/traveling-children.html) and [navigation-linked specialty page](https://www.aa.com/web/i18n/travel-info/baggage/specialty-and-sports.html) differ on the heavy collapsible stroller case. The latter includes a heavier-than20lb counter instruction, also present in the previously inspected pubcontent version. Neither inspected section supplies effective-date or precedence evidence. We do not select a winning rule, claim a recent change or promise airport acceptance.
+
+Reproduction: family-page Bags link -> [Bags owner](https://www.aa.com/web/i18n/travel-info/baggage/baggage.html?from=comp_nav) -> Special items and sports equipment -> normal web specialty page. The fragment's family link also redirects to the inspected family page. These are reader-observed link routes, not browser interaction or publisher canonical metadata. Bags was labeled crawled two days ago; the other pages today. Retrieval date is not a policy date or an independently measured HTTP timestamp.
+
+Three desk proxies retain separate decisions: a25lb collapsible case stays conflicted; a noncollapsible10lb control has aligned counter wording without acceptance proof; a stroller-plus-seat case keeps free checking separate from the family page's one-item gate constraint. The family page's other20lb mention concerns bassinets and must not be borrowed into the stroller field. No actual-parent, desktop/mobile/keyboard, firsthand, safety or airline enforcement validation was performed.
+
+Learned only: ordinary first-party navigation defeats one version hypothesis. No page, URL, widget, automatic scraper, public fact date or weekly baseline changed. Public delivery is not selected while normal browser attachment/task validation remains held; paid breadth remains scope-gated. This audit does not clear either dependency or substitute for a qualified release.
+
+Next: preserve the conflict until dated primary reconciliation or a material section/navigation change. Do not calendar-repeat these pages, contact the airline or turn a conservative interpretation into a guarantee. Broader query demand and same-market ownership remain unknown; a future public comparison needs those gates plus maintained carrier/itinerary evidence and actual task/review/release validation. No additional framework layer is proposed.

@@ -20,6 +20,37 @@
   ],
   "items": [
     {
+      "id": "FT-RES-168",
+      "title": "Resolve whether the American stroller discrepancy is only an unlinked fragment",
+      "kind": "source-quality-research",
+      "status": "planned",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-14T15:03:49Z",
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/american-stroller-policy-conflict-2026-10-14.json",
+        "docs/research/american-stroller-policy-conflict-2026-10-14.md",
+        "tools/american-stroller-policy-conflict.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "152 left a named mirror/version gate for American stroller counter-versus-gate advice. Current reader navigation through Bags reaches the normal specialty page with the same over20lb wording as pubcontent. Test the unlinked-fragment-only explanation, not select a winning rule. No denied retry. Qualified public release remains browser-task gated; broader paid metrics await scope reply, so no unblocked qualified public implementation is displaced.",
+      "acceptance_criteria": [
+        "Retain exact primary page/navigation URLs, checked date, paraphrases, unknown effective dates and reader-versus-native/rendered limits; distinguish observed mismatch from inferred version cause.",
+        "Reproducible desk tasks: collapsible25lb stroller, noncollapsible control and two-item gate constraint; no airport-acceptance, conservative-rule guarantee or safety assurance.",
+        "Resolve only the unlinked-fragment hypothesis; no new URL, numeric demand, automatic collector permission or source-body archive. Focused/full native QA/different strict read-only PASS/guarded exact8 docs-test release."
+      ],
+      "measurement_plan": "LRN259 primary-navigation audit/three desk proxies, not actual parent/UI/airport acceptance, volume or SEO proof.",
+      "production_invariant": "Public pages/models/CSV/source and price clocks, original152, all365 older ordered items, held11, journals, source holds/governance, operator weekly state/scheduler unchanged; onlyLRN259 ledger prefix may ship. Docs-only/no Pages or production claim. Run15:00:12Z/11:00:12EDT/startdeadline15:45:12Z/fixed014 expiry unchanged.",
+      "decision": "REJECT unlinked-fragment-only explanation: family -> Bags -> normal web specialty page also carries over20lb counter instruction. HOLD controlling rule/precedence/effective date/cause/airport acceptance. Three desk proxies and six structural controls PASS, not rendered UI or semantic accuracy. Learned only/no public rule, collector or URL selected.",
+      "next_gate": "Full native QA/different strict read-only PASS/guarded exact8 docs-test release. Preserve public pages until dated primary reconciliation and separate demand/ownership/actual browser task/review/production gates.",
+      "next_eligible_run": "Dated primary precedence reconciliation or material section/navigation change; no calendar-only repeat. Broader volume remains separate scope-reply/exact-manifest gate.",
+      "review_receipt": "FT-RES-168 Einstein01a13af6-cfb8-71c3-9d30-87fee32fcb44 STRICTread-only PASS/noP0-P3 for frozen2GptOF manifest9e568839c4f5a6633c60ecec1b4491ac3f1482f3abfe3178528adae45c281f07. Independent6purePASS; Master1128full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log9f449604a4f9278724ecd12214f10f06b6fbbf664346ba5cfa971a294abdb28d verified. Firsttwo native statefailures2then1 retained/notgreen. Exact8/all1106candidate/1103clean-baseline/365olderordered/11LIVEheld/6nonownedexclusions/LRN259-only proof033041b8f579efe6eda1940aae803253ea2b12979e27d078404e225f88f6187f verified. Primary reader navigation rejects ONLYunlinked-fragment explanation; rule/precedence/effective-date/cause/acceptance unknown; bassinetweight notborrowed/three deskproxies notUI-parent-airport. No reviewerwrites/network/browser/otherQA/Gitmutations/scheduler/delegation/messaging. Research-only approval/no public-rule/production or weekly renewal. Only immutable mechanical consensus appended; guarded exact8 docs-test release pending."
+    },
+    {
       "id": "FT-IMP-130",
       "title": "Expose Las Vegas hotel comparison and five-person room checks first",
       "kind": "existing-page-usability",
@@ -16079,7 +16110,7 @@
       "id": "FT-IMP-167",
       "title": "Read reviewed forecast journals with expiry and incomplete-state holds",
       "kind": "shared-evidence-tool",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-14",
       "started_at": "2026-10-14T13:08:36.402Z",
       "target_paths": [
@@ -16109,7 +16140,11 @@
       "next_gate": "Fullnative/differentreadonlyPASS/guarded exact9 sharedtools/docs remoteverify. Nexteligible publicforecast-handoff task ONLYafter documented changed successfulnormalIABattachment; no unchangedcreate retry/alternatetool-browser-origin/settings/deploytopreview. Independentlocalevidence work is notprojectwideblocked; do notmanufacture extra same-blocker reports or framework layers. Publicdisplay/maintainedcollectorintegration/globalfullweekly/broadernumericdemand remain unqualified.",
       "initial_review": "Sartre01a13a90-62ce-7ae1-b641-49eb458ca57c cycle1FAIL/P2: blocking O_RDONLY open beforefstat could hang on FIFO/no writer. Staticfinding/no reproduction byreviewer; allscope/privatejournalhash/mode/preservation and6pure PASS; Master1121full/48maintenance/stateSEO0/GSC92/sixpriorwarnings logced85c81223a8ded177a74d678710ae30799092b34e8ff5019a463f8d5356f55 inspected. Not independentPASS or release permission.",
       "repair": "O_NONBLOCK added to no-follow read beforefstat; isolatedmkfifo child with2secondtimeout regressionPASS,9focused6pure3fakefilesystem. Original166journal/publicassets/sourceholds/clocks/scheduler unchanged. FinalfullQA and cycle2re-review required; no newsource/browser attempts.",
-      "review_receipt": "FT-IMP-167 Sartre01a13a90-62ce-7ae1-b641-49eb458ca57c cycle2PASS/no remainingP0-P3 for frozenEfn5qd manifesta6a2c58fdf793d0acef49ac969f8a65203fa6077a7b289ec294b3ee7b16f8449. Cycle1FAIL/P2 blockingFIFO retained andclosed bynonblockingno-followdescriptorvalidation; isolatedMasterFIFO regression inspected/not independentlyexecuted. Independent6purePASS; Master1122full9focused6pure3filesystem48maintenance/stateSEO0/GSC92/sixpriorwarnings log9e192a58f3f63604128acd185c664155fea75a9f813314ea2195d025defceb99 read/hashed. Exact9/1101candidate1097clean/364olderordered/all11heldLIVEpreserved/sixnonowned exclusions/LRN258-only/publicassetsmodelsCSVfacts-oldtools-watch-holds-registry-166code/operatorweekly-scheduler verified; proof666e96b97014466045e76d206ac6f3df0f2fe7338b936991010b609f492f5d68. Original166fivehash-modes/sourceclocks and actual13:15expired/historicalavailable/boundary/pre-capture offlineobservations unchanged/0source or journalwrites. STRICTreadonly/no writes/temp/loader/network/browser/filesystem-otherQA/Gitmutations/scheduler/delegation. Only immutable mechanical consensus appended; guardedsharedtools/docs remote release pending, no publicforecast/page/authenticity permission or weeklyglobalproof."
+      "review_receipt": "FT-IMP-167 Sartre01a13a90-62ce-7ae1-b641-49eb458ca57c cycle2PASS/no remainingP0-P3 for frozenEfn5qd manifesta6a2c58fdf793d0acef49ac969f8a65203fa6077a7b289ec294b3ee7b16f8449. Cycle1FAIL/P2 blockingFIFO retained andclosed bynonblockingno-followdescriptorvalidation; isolatedMasterFIFO regression inspected/not independentlyexecuted. Independent6purePASS; Master1122full9focused6pure3filesystem48maintenance/stateSEO0/GSC92/sixpriorwarnings log9e192a58f3f63604128acd185c664155fea75a9f813314ea2195d025defceb99 read/hashed. Exact9/1101candidate1097clean/364olderordered/all11heldLIVEpreserved/sixnonowned exclusions/LRN258-only/publicassetsmodelsCSVfacts-oldtools-watch-holds-registry-166code/operatorweekly-scheduler verified; proof666e96b97014466045e76d206ac6f3df0f2fe7338b936991010b609f492f5d68. Original166fivehash-modes/sourceclocks and actual13:15expired/historicalavailable/boundary/pre-capture offlineobservations unchanged/0source or journalwrites. STRICTreadonly/no writes/temp/loader/network/browser/filesystem-otherQA/Gitmutations/scheduler/delegation. Only immutable mechanical consensus appended; guardedsharedtools/docs remote release pending, no publicforecast/page/authenticity permission or weeklyglobalproof.",
+      "release_receipt": "FT-IMP-167 release 6f617abac3b8100aef32abd3aeac51c97719c9dc remote verified 2026-10-14T13:29:49.065Z; main0-0/emptyindex/exact9/all1101indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared local reviewed-journal metadata state reader remoteverified tools/docs, not publicpage or productionfact refresh.1122full9focused6pure3fakefilesystem48maintenance/stateSEO0/GSC92/sixpriorwarnings/differentSartrecycle2PASS/P2blockingFIFOclosed, cycle1FAIL retained. Exact9/1101indexhash-modes/364olderordered/all11heldLIVEpreserved/sixnonowned exclusions/LRN258-only/publicassetsmodelsCSVfacts-oldtools-watch-holds-registry-166code/operatorweekly-scheduler preserved. Actualoriginal166 at13:15:10.362Z expired-review/historicalavailable/exactexpiryexpired/pre-captureunknown offline replays; all5originalhash-modes unchanged/report7724486404eaa8c8311681f494baf3c5e60e849739cc7e696cee28676be63b02 immutable. Report+eventpins/source-grid-clock joins, private metadata-only outputs/nonblockingno-follow regularfile checks;0source/API/model/paid/contact/journalwrites/retry/publicdate/weeklybaseline renewal. Pins are notauthenticity/review-permission/fullschema/parentUI or globalweekly proof; no newservice/URL/CSV. NormalIAB createproductionSanAntonioitinerary attachtimeout twiceincl1transientretry/providerHTTPunknown/no pageQA/defectinferred; no alternativebrowser-tool-origin/settings/deploy/bypass. Publicforecast-handoff task held untildocumentedchanged successfulnormalbrowserattachment; independentlocalwork remainseligible, no repetitiveblocker-report/framework quota. Original3sourceholds/broadernumericdemand/twoactualweeklycycles remain separate. Tools-doc-only/noPageswait/publicpagesunchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T13:29:49.088Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "6f617abac3b8100aef32abd3aeac51c97719c9dc"
     }
   ]
 }
