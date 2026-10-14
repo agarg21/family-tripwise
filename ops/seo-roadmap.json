@@ -15520,7 +15520,7 @@
       "id": "FT-IMP-153",
       "title": "Implement bounded source batch and durable checkpoint pilot",
       "kind": "tooling",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-14T02:05:08.509Z",
       "target_paths": [
@@ -15548,7 +15548,46 @@
       "decision": "IMPLEMENT standalone checkpoint pilot: actual507 inventory500/7 batches154priorholds;13fake/pure fixtures green, no live source requests. Cycle-one FeynmanP2 nested scalar metadata corrected with strict prior/result types and regressions; empty content-type retained as a known unsupported response. FullQA/re-review required before release. Immutable attempts/results, exclusive lock, unknown holds/no replay, currentmanifest and asyncinput guards. Source/price clocks and existing weekly default unchanged.",
       "evidence_record": "docs/research/evidence-batch-pilot-2026-10-13.json",
       "next_gate": "Focused/full native QA/different read-onlyPASS/exact9 guarded tool-doc remote release; then register journal-to-weekly-audit aggregation preserving unknown/held/deferred and source coverage before eligible real weekly collection. Standalone tool is not a replacement audit or live reliability proof; claim-delta pilot and two realweeklycycles still required before broadgrowth. Miami exact-room price/acceptance remains next destination task; broader paidquery question pending, not a project-widehold.",
-      "review_receipt": "FT-IMP-153 Feynman01a13833-d7e5-73d3-ab21-7f5c7134a687 STRICTREADONLY final-target PASS/no remaining findings; c914726038d869442ffa01e351215bc643c8eeaa6b685eaf1420f1954afb7d51/all1046hash-modes/exact9/350olderactions/held11/LRN244-only verified. Prior privacy/emptyheader findings closed;3pure and memory-only nested-private rejection/nativeemptyheader/current507-500/7-154holds/63e515planSHA reproduced. Master986full48maintenance13focused/state0/GSC92/SEO0sixprior log6ce41628b0d76aa429a47abb062c443a5e782bc51bfd6c9a42d28701806920bb inspected, not rerun. MasterCLI507/353unattempted154holds/earlyexit1/unchangedstatus, no sourcecalls. Reviewer no writes/network/browser/Git/delegation/scheduler/journal-CLI-fullQA. Live reliability/powerloss/crossrun/weekly aggregation unproved or deferred; no publicrefresh/LLM/paidcall. Mechanical consensus only; guarded tool-doc release pending,014 unchanged."
+      "review_receipt": "FT-IMP-153 Feynman01a13833-d7e5-73d3-ab21-7f5c7134a687 STRICTREADONLY final-target PASS/no remaining findings; c914726038d869442ffa01e351215bc643c8eeaa6b685eaf1420f1954afb7d51/all1046hash-modes/exact9/350olderactions/held11/LRN244-only verified. Prior privacy/emptyheader findings closed;3pure and memory-only nested-private rejection/nativeemptyheader/current507-500/7-154holds/63e515planSHA reproduced. Master986full48maintenance13focused/state0/GSC92/SEO0sixprior log6ce41628b0d76aa429a47abb062c443a5e782bc51bfd6c9a42d28701806920bb inspected, not rerun. MasterCLI507/353unattempted154holds/earlyexit1/unchangedstatus, no sourcecalls. Reviewer no writes/network/browser/Git/delegation/scheduler/journal-CLI-fullQA. Live reliability/powerloss/crossrun/weekly aggregation unproved or deferred; no publicrefresh/LLM/paidcall. Mechanical consensus only; guarded tool-doc release pending,014 unchanged.",
+      "release_receipt": "FT-IMP-153 release 7199eaf9dec3aee1369755c2f70955003824d0e0 remote verified 2026-10-14T02:38:52.886Z; main0-0/emptyindex/exact9/all1046indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared standalone checkpoint tooling delivered/remoteverified, not a public page or production-fact refresh. Master986full48maintenance13focused/state0/GSC92/SEO0sixprior/differentFeynmanfinalPASS3pure+memoryprobes/current507/500-7/154holds; initialprivacyP2 and emptyheadercompatibility corrected before release. ActualCLI507/353unattempted154holds/earlydateexit1/unchangedstatus, source requests0; prior dates preserved. All1046indexbytes-modes/exact9/350olderactions/held11/LRN244-only/public-model-CSV-price-policy-clocks/operator/oldcollector unchanged. Paid0.36260unchanged/noLLM/newautomation/windowextension. Liveweekly/powerloss/multiplatform/crossrun reliability unproved; next registered journal-to-weekly aggregation retaining unknown/held/deferred, then actualeligible collection and claimdelta. Miami budget and broaderquery numeric scope separate gates, not a blankethold. No Pageswait or parent/SEO claim,014 unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T02:38:52.911Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "7199eaf9dec3aee1369755c2f70955003824d0e0"
+    },
+    {
+      "id": "FT-IMP-154",
+      "title": "Integrate checkpoint outcomes with the weekly review queue",
+      "kind": "tooling",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-14T03:07:11.898Z",
+      "target_paths": [
+        "tools/evidence-batch-pilot.mjs",
+        "tools/evidence-checkpoint-review.mjs",
+        "tools/evidence-checkpoint-review.test.mjs",
+        "docs/plan/evidence-checkpoint-review.md",
+        "docs/research/evidence-checkpoint-review-2026-10-13.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "014 fixed sprint and direct user maintainability-first direction; finish153 selected adapter. Offline and fake source tasks only; no new paid scope, public page or scheduler mutation.",
+      "evidence": "153 immutable journal covers507 sources500/7,154priorholds. Existing reviewAudit cannot encode unknown attempts without turning them into ordinary retryable failures. Need a separate full-coverage checkpoint packet and fail-closed standard audit handoff. Oct13 GSCfinalOct11 reused API evidence/priorOct12finalOct10 orientation only.",
+      "acceptance_criteria": [
+        "Read and revalidate immutable journal outcomes without source requests or writes; reject active writer, corrupt/mismatched records, changed manifest and current inventory/check drift. Strict pure packet validator prevents nested/private payload or lost attempt dates.",
+        "Emit full-coverage partial review packet with mapped field priorities and distinct unknown/denied/deferred/known outcome states. Never mark missing outcomes fresh or retryable. Standard audit/review emitted only with zero deferred/unknown, preserving original denied dates and page/model parity; existing weekly defaults/schema unchanged.",
+        "Fake interruption/resume/denial/privacy/coverage/known-change tasks plus actual507 offline accounting; focused/fullnativeQA/different STRICTREADONLY PASS then exact10 guarded tools-doc commit/push and remoteverification.",
+        "Preserve351ordered older actions, public/model/CSV/policy clocks/operator and held11; ledgeronlyLRN245. No liveweekly collection before actualEasternOct14; no publicfreshness/LLM/reliability/SEO claim."
+      ],
+      "measurement_plan": "LRN245 maintainer task: route partial and completed checkpoints to a weekly queue without losing unknown outcomes, dates or canonical/model evidence. Proxy fixtures only, actualweekly reliability and claimprecision unmeasured.",
+      "production_invariant": "Tools/docs/tests only; no public HTML/models/CSV/price/source clocks, old audit/weeklyreview/default collector, operator/scheduler changes. No external source calls, newpaid/LLM/indexing/analytics/accounts/outreach. Docs-tool push only, no Pageswait.",
+      "decision": "IMPLEMENT checkpoint weekly review adapter: partial507source/36canonical/390model packet keeps353deferred/154originalaccessholds; standardauditreadyfalse. Ninenew+13pilot tests and actualCLI pass with zero sourcecalls; complete fake known outcomes reuse native weekly review while unknowns block oldschema handoff. CLI outsidejournal/realparent/nooverwrite/duplicate guards; cycle-one independentP2 never-attempted timestamp fallback corrected consistently with null/missing-date regressions and native-aware normalization. No fact/price clocks renewed or collector/scheduler changed; fullQA/finalre-review required before release.",
+      "evidence_record": "docs/research/evidence-checkpoint-review-2026-10-13.json",
+      "next_gate": "Focused/fullnative/differentSTRICTREADONLY PASS/exact10 guarded tools remote release; then next actualeligible weeklyrun register durable checkpoint/audit/review/maintenance/operator outputs and permissions, collect bounded batches with unknown/denied holds retained and review complete known outcomes. Claim-delta room/fee plus attraction-admission pilot and two realweeklycycles before broadgrowth. Miami budget and pending broaderquery paid-scope remain independent.",
+      "review_receipt": "FT-IMP-154 Euler01a13866-854d-7792-8300-b3a4606c66b8 STRICTREADONLY cycle-two final-target PASS/no remaining findings; a890ab8ea2c11837543978bfbc4d7a2d4552861222d6e05543d94c446f117d96/all1050hash-modes/exact10/351olderorderedactions/held11/LRN245-only verified. Both P2s closed: outputaliasguard and null/missing never-attempted dates; independent7pure/memoryprobes/current507plan unchanged353deferred154holds390models. Master995full48maintenance22focused/state0/GSC92/SEO0sixprior logd27d67af306ddc419c00daae7519d7070979e167fe636a8e3e93920e87142dd4 inspected, not reviewerfullrun. ActualCLI507/36/390/353-154/readyfalse/network0; finalguard exercised via nativeCLIfixture. Reviewer no writes/network/browser/Git/delegation/scheduler/journal-fullQA. Offline tooling contract only, not liveweekly/claimprecision/publicfactfreshness/parents/SEO. Only immutable mechanical consensus appended; exact guarded tool-doc release pending,014fixedexpiry unchanged."
     }
   ]
 }

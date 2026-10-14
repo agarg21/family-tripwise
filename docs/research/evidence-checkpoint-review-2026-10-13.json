@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-154",
+  "observed_on": "2026-10-13",
+  "evidence_class": "CURRENT_OFFLINE_INVENTORY_AND_FAKE_SOURCE_MAINTAINER_TASK",
+  "family_decision": "Keep room, fee and admission facts reviewable while worldwide English-first coverage grows, without treating missing scrape outcomes as refreshes.",
+  "hypothesis": "A distinct full-coverage checkpoint review packet can route partial work and preserve unknown/access holds, while a complete known-outcome packet safely reuses the native weekly audit queue.",
+  "sources": [
+    {"path": "tools/evidence-batch-pilot.mjs", "class": "IMPLEMENTED_CHECKPOINT_CONTRACT", "date": "2026-10-13"},
+    {"path": "tools/weekly-evidence-review.mjs", "class": "EXISTING_NATIVE_REVIEW_CONTRACT", "date": "2026-10-13"},
+    {"path": "ops/evidence-audits/2026-10-07.json", "class": "RETAINED_SOURCE_AUDIT_NOT_NEW_COLLECTION", "date": "2026-10-07"},
+    {"path": "ops/evidence-watch.json", "class": "CURRENT_ALLOWLIST_AND_FIELD_REGISTRY", "date": "2026-10-13"},
+    {"path": "ops/gsc-snapshots/2026-10-13.md", "class": "REUSED_API_ORIENTATION_ONLY", "finalized_through": "2026-10-11"}
+  ],
+  "current_inventory": {"canonical_pages": 36, "source_count": 507, "prior_access_holds": 154, "deferred_sources": 353, "completed_outcomes": 0, "standard_audit_ready": false, "network_calls": 0},
+  "proxy_tasks": [
+    {"step": 1, "task": "Inventory every current source and mapped field", "result": "PASS:507 accounted, current36canonical/shared-model coverage"},
+    {"step": 2, "task": "See unattempted sources without fresh evidence promotion", "result": "PASS:353deferred, audit/review absent"},
+    {"step": 3, "task": "Retain access holds and original attempt clocks", "result": "PASS:154holds, no source request"},
+    {"step": 4, "task": "Interrupt a fake request then resume independent work", "result": "PASS:unknown stays owner hold, no replay; remaining source may finish"},
+    {"step": 5, "task": "Complete known fake outcomes and use native weekly review", "result": "PASS:carried denial and two unreconciled changes, original field clocks"},
+    {"step": 6, "task": "Reject private/corrupt/mismatched/changed scope", "result": "PASS:strict schema, writer and source/model parity guards; CLI journal-output, symlink-parent, duplicate-option and overwrite cases fail without writes"},
+    {"step": 7, "task": "Separate shared tooling from refreshed public travel claims", "result": "PASS:false factual renewal/publication, no public changes or LLM"}
+  ],
+  "decision": "IMPLEMENT checkpoint weekly review adapter; full source accounting is not fact freshness. Complete audit handoff requires zero unknown/deferred, retains known failures and denials.",
+  "independent_correction": {"finding": "P2:unconditional legacy prior timestamp fallback invented dates for never-attempted priors", "resolution": "Use native actual-attempt-aware fallback in planning and aggregation; null/missing not-fetched/deferred-limit dates stay null. New pure regression plus real inventory planning probes; current baseline explicit dates unchanged.", "release_gate": "Fullnative QA and final different read-only re-review PASS required"},
+  "confidence": {"fixture_and_offline_contract": "high", "real_weekly_reliability": "unmeasured", "claim_precision": "unmeasured", "parent_or_seo_outcomes": "unmeasured"},
+  "next_gate": "Register actual eligible weekly checkpoint/audit/review/maintenance/operator outputs, reconcile permissions, collect bounded batches with no unknown or denied retries and independently review the complete source packet. Atomic room/fee and attraction-admission delta pilot plus two real weekly cycles precede broad growth.",
+  "invariants": {"public_pages_unchanged": true, "original_claim_price_review_clocks_unchanged": true, "old_collector_and_weekly_defaults_unchanged": true, "new_paid_calls": 0, "new_llm_service": false, "new_automation": false, "sprint_end_unchanged": true},
+  "limitations": ["Desk maintainer proxy, not actual parent testing or production SEO evidence.", "No real source request; whole-batch elapsed time, long-term noise and claim precision unknown.", "Read-side snapshot guards rely on the existing sole-writer boundary, not distributed atomicity.", "Nested compatible audit is not an approved baseline; maintained weekly/operator output changes need their own registered review and release."]
+}

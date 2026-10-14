@@ -14,6 +14,8 @@ const copy = value => JSON.parse(JSON.stringify(value));
 const timestamp = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(value) && new Date(value).toISOString() === value;
 const exact = (value, keys) => value && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).sort().join() === [...keys].sort().join();
 
+export const priorAttemptAt = (source,collectedAt) => source.last_attempt_at || (source.http_status || source.text_sha256 || denied(source) ? collectedAt : null);
+
 function validateSourceScalars(source) {
   if (!source || typeof source!=='object' || Array.isArray(source) || typeof source.url!=='string' || typeof source.state!=='string' || !Array.isArray(source.pages) || source.pages.some(p=>typeof p!=='string')) throw Error('Invalid scalar source identity');
   const boundedText=(key,max,allowEmpty=false)=>{if(Object.hasOwn(source,key)&&(typeof source[key]!=='string'||(!allowEmpty&&!source[key].length)||source[key].length>max||/[\r\n\0]/.test(source[key])))throw Error('Invalid scalar source metadata');};
@@ -61,7 +63,7 @@ export async function currentPlan({root=ROOT,today=easternDate(),notBefore,previ
   const expanded={...config,records:[...config.records,...(config.include_shared_models?modelRecords():[])]};
   const inv=await inventory(expanded,{root,today});
   const old=new Map(previous.sources.map(x=>[x.url,x]));
-  return validatePlan(planSources({allowedHosts:config.allowed_hosts,observedOn:today,notBefore,limit,sources:inv.sources.map(s=>({url:s.url,pages:s.pages,prior:old.has(s.url)?{...old.get(s.url),last_attempt_at:old.get(s.url).last_attempt_at||previous.collected_at}:null,checks:expanded.records.filter(r=>r.source_urls?.includes(s.url)&&r.pattern).map(r=>({id:r.id,pattern:r.pattern}))}))}));
+  return validatePlan(planSources({allowedHosts:config.allowed_hosts,observedOn:today,notBefore,limit,sources:inv.sources.map(s=>({url:s.url,pages:s.pages,prior:old.has(s.url)?{...old.get(s.url),last_attempt_at:priorAttemptAt(old.get(s.url),previous.collected_at)}:null,checks:expanded.records.filter(r=>r.source_urls?.includes(s.url)&&r.pattern).map(r=>({id:r.id,pattern:r.pattern}))}))}));
 }
 
 export function batches(plan) {
@@ -115,6 +117,40 @@ export async function checkpointStatus(plan,directory) {
   if(filenames.some(x=>!allowed.has(x)))throw Error('Unexpected journal entry');
   const counts=rows.reduce((a,x)=>(a[x.state]=(a[x.state]||0)+1,a),{});
   return {schema_version:1,plan_sha256:plan.plan_sha256,source_count:rows.length,counts,all_sources_accounted:rows.length===plan.sources.length,attempts_finished_or_held:!rows.some(x=>x.state==='deferred-no-attempt'),factual_dates_renewed:false,automatic_publication:false,rows,limitation:'Attempt accounting only, not verified facts or a replacement weekly audit; unknown outcomes require owner reconciliation, never automatic retry.'};
+}
+
+export function validateCheckpointEvidence(plan,evidence) {
+  validatePlan(plan);
+  if(!exact(evidence,['schema_version','kind','plan_sha256','entries'])||evidence.schema_version!==1||evidence.kind!=='checkpoint-evidence'||evidence.plan_sha256!==plan.plan_sha256||!Array.isArray(evidence.entries)||evidence.entries.length!==plan.sources.length)throw Error('Invalid complete checkpoint evidence');
+  for(let index=0;index<plan.sources.length;index++) {
+    const row=evidence.entries[index],s=plan.sources[index];
+    if(!exact(row,['index','state','last_attempt_at','source'])||row.index!==index)throw Error('Invalid checkpoint evidence identity');
+    if(row.last_attempt_at!==null&&!timestamp(row.last_attempt_at))throw Error('Invalid checkpoint evidence date');
+    if(['attempt-completed','held-outcome-unknown'].includes(row.state)&&s.prior?.last_attempt_at&&row.last_attempt_at<s.prior.last_attempt_at)throw Error('Attempt predates retained evidence');
+    if(row.state==='attempt-completed') {
+      if(denied(s.prior)||row.source?.last_attempt_at!==row.last_attempt_at)throw Error('Lost attempt date or retried denial');
+      validateResult(plan,index,{plan_sha256:plan.plan_sha256,index,attempted_at:row.last_attempt_at,source:row.source});
+    } else if(row.state==='held-outcome-unknown') {
+      if(denied(s.prior)||row.source!==null||!timestamp(row.last_attempt_at))throw Error('Unknown outcome must remain a hold');
+    } else if(['held-prior-denial','deferred-no-attempt'].includes(row.state)) {
+      if((row.state==='held-prior-denial')!==denied(s.prior)||JSON.stringify(row.source)!==JSON.stringify(s.prior)||row.last_attempt_at!==(s.prior?.last_attempt_at||null))throw Error('Prior evidence or original date drift');
+    } else throw Error('Unknown checkpoint evidence state');
+  }
+  return evidence;
+}
+
+export async function checkpointEvidence(plan,directory) {
+  plan=validatePlan(copy(plan));const dir=await safeDirectory(directory);
+  const noWriter=async()=>{if((await readdir(dir)).includes('writer.lock'))throw Error('Active or stale writer requires owner reconciliation before export');};
+  await noWriter();const before=await checkpointStatus(plan,dir),entries=[];
+  for(const row of before.rows) {
+    const source=row.state==='attempt-completed'?(await regular(join(dir,name(row.index)+'.result.json'))).source:row.state==='held-outcome-unknown'?null:plan.sources[row.index].prior;
+    entries.push({index:row.index,state:row.state,last_attempt_at:row.last_attempt_at,source});
+  }
+  const evidence=validateCheckpointEvidence(plan,{schema_version:1,kind:'checkpoint-evidence',plan_sha256:plan.plan_sha256,entries});
+  await noWriter();const after=await checkpointStatus(plan,dir);
+  if(JSON.stringify(before)!==JSON.stringify(after))throw Error('Checkpoint changed during export');
+  return evidence;
 }
 
 export async function runCheckpointBatch(plan,index,directory,{collect=false,executeSource=async s=>compareSource(await fetchSource(s.url,plan.allowed_hosts,s.checks),s.prior)}={}) {
