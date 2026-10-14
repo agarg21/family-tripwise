@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-167",
+  "learning_id": "LRN-258",
+  "observed_on": "2026-10-14",
+  "observed_at": "2026-10-14T13:15:10.362Z",
+  "evidence_class": "CURRENT_CLOCK_READONLY_ACTUAL_REVIEWED_JOURNAL_AND_SYNTHETIC_CONTROLS",
+  "family_decision": "Know whether persisted SanAntonio forecast evidence is usable now versus expired or incomplete without mistaking weekly page maintenance for current weather.",
+  "hypothesis": "A hash-pinned read-only journal consumer can join known attempts and expose expiry/unknown states without re-fetching, serving private forecast content or advancing public fact dates.",
+  "actual_source": {
+    "action_id": "FT-IMP-166",
+    "collected_at": "2026-10-14T12:18:38.030Z",
+    "source_expiry": "2026-10-14T13:03:12.000Z",
+    "report_sha256": "7724486404eaa8c8311681f494baf3c5e60e849739cc7e696cee28676be63b02",
+    "expected_event_sha256": {
+      "point-started.json": "8a2191e6c373d1635d9821ea847087071f9485c933c9ba6b849c43b16026442c",
+      "point-result.json": "a1b569f5a986a8d1d5922225667bdeb01a265bd127f086f520220b34684eaa0b",
+      "forecast-started.json": "1febcf5c4fef7b5a3b4a01d26f9b52d2733c6b84c23a9e011a1dd96a440b5de3",
+      "forecast-result.json": "6d44982fe047e71e7f8cbf1f65b351cf874d21882d5a315143bdbe66f04fc30c"
+    },
+    "files_before": {
+      "report.json": {
+        "sha256": "7724486404eaa8c8311681f494baf3c5e60e849739cc7e696cee28676be63b02",
+        "mode": 384
+      },
+      "point-started.json": {
+        "sha256": "8a2191e6c373d1635d9821ea847087071f9485c933c9ba6b849c43b16026442c",
+        "mode": 384
+      },
+      "point-result.json": {
+        "sha256": "a1b569f5a986a8d1d5922225667bdeb01a265bd127f086f520220b34684eaa0b",
+        "mode": 384
+      },
+      "forecast-started.json": {
+        "sha256": "1febcf5c4fef7b5a3b4a01d26f9b52d2733c6b84c23a9e011a1dd96a440b5de3",
+        "mode": 384
+      },
+      "forecast-result.json": {
+        "sha256": "6d44982fe047e71e7f8cbf1f65b351cf874d21882d5a315143bdbe66f04fc30c",
+        "mode": 384
+      }
+    },
+    "files_after": {
+      "report.json": {
+        "sha256": "7724486404eaa8c8311681f494baf3c5e60e849739cc7e696cee28676be63b02",
+        "mode": 384
+      },
+      "point-started.json": {
+        "sha256": "8a2191e6c373d1635d9821ea847087071f9485c933c9ba6b849c43b16026442c",
+        "mode": 384
+      },
+      "point-result.json": {
+        "sha256": "a1b569f5a986a8d1d5922225667bdeb01a265bd127f086f520220b34684eaa0b",
+        "mode": 384
+      },
+      "forecast-started.json": {
+        "sha256": "1febcf5c4fef7b5a3b4a01d26f9b52d2733c6b84c23a9e011a1dd96a440b5de3",
+        "mode": 384
+      },
+      "forecast-result.json": {
+        "sha256": "6d44982fe047e71e7f8cbf1f65b351cf874d21882d5a315143bdbe66f04fc30c",
+        "mode": 384
+      }
+    },
+    "private_journal_byte_mode_drift": 0,
+    "original_header_time_limitation_preserved": true,
+    "pin_authority": "Trusted operator supplies bytes/hash pins to different independent review; pins are not independent source or review authentication."
+  },
+  "actual_state_checks": {
+    "current": {
+      "schema_version": 1,
+      "evaluated_at": "2026-10-14T13:15:10.362Z",
+      "state": "expired-review",
+      "period_available": false,
+      "source_url": "https://api.weather.gov/gridpoints/EWX/126,54/forecast",
+      "generated_at": "2026-10-14T12:03:12.000Z",
+      "source_updated_at": "2026-10-14T11:46:19.000Z",
+      "retrieved_at": "2026-10-14T12:18:38.132Z",
+      "expires_at": "2026-10-14T13:03:12.000Z",
+      "official_current_check": "https://forecast.weather.gov/MapClick.php?lat=29.4241&lon=-98.4936",
+      "retry_authorized": false,
+      "public_publish_authorized": false,
+      "fact_dates_renewed": false,
+      "weekly_baseline_advanced": false,
+      "source_authenticity_assessed": false
+    },
+    "historical_explicit_clock": {
+      "schema_version": 1,
+      "evaluated_at": "2026-10-14T12:18:38.133Z",
+      "state": "available-reviewed-candidate",
+      "period_available": true,
+      "source_url": "https://api.weather.gov/gridpoints/EWX/126,54/forecast",
+      "generated_at": "2026-10-14T12:03:12.000Z",
+      "source_updated_at": "2026-10-14T11:46:19.000Z",
+      "retrieved_at": "2026-10-14T12:18:38.132Z",
+      "expires_at": "2026-10-14T13:03:12.000Z",
+      "official_current_check": "https://forecast.weather.gov/MapClick.php?lat=29.4241&lon=-98.4936",
+      "retry_authorized": false,
+      "public_publish_authorized": false,
+      "fact_dates_renewed": false,
+      "weekly_baseline_advanced": false,
+      "source_authenticity_assessed": false
+    },
+    "exact_expiry_boundary": {
+      "schema_version": 1,
+      "evaluated_at": "2026-10-14T13:03:12.000Z",
+      "state": "expired-review",
+      "period_available": false,
+      "source_url": "https://api.weather.gov/gridpoints/EWX/126,54/forecast",
+      "generated_at": "2026-10-14T12:03:12.000Z",
+      "source_updated_at": "2026-10-14T11:46:19.000Z",
+      "retrieved_at": "2026-10-14T12:18:38.132Z",
+      "expires_at": "2026-10-14T13:03:12.000Z",
+      "official_current_check": "https://forecast.weather.gov/MapClick.php?lat=29.4241&lon=-98.4936",
+      "retry_authorized": false,
+      "public_publish_authorized": false,
+      "fact_dates_renewed": false,
+      "weekly_baseline_advanced": false,
+      "source_authenticity_assessed": false
+    },
+    "pre_capture_explicit_clock": {
+      "schema_version": 1,
+      "evaluated_at": "2026-10-14T12:18:38.000Z",
+      "state": "before-capture",
+      "period_available": false,
+      "source_url": "https://api.weather.gov/gridpoints/EWX/126,54/forecast",
+      "generated_at": "2026-10-14T12:03:12.000Z",
+      "source_updated_at": "2026-10-14T11:46:19.000Z",
+      "retrieved_at": "2026-10-14T12:18:38.132Z",
+      "expires_at": "2026-10-14T13:03:12.000Z",
+      "official_current_check": "https://forecast.weather.gov/MapClick.php?lat=29.4241&lon=-98.4936",
+      "retry_authorized": false,
+      "public_publish_authorized": false,
+      "fact_dates_renewed": false,
+      "weekly_baseline_advanced": false,
+      "source_authenticity_assessed": false
+    },
+    "historical_and_boundary_are_offline_replays": true,
+    "new_collection": false
+  },
+  "synthetic_controls": {
+    "focused_pass": 9,
+    "pure_controls": 6,
+    "disposable_filesystem_controls": 3,
+    "network_calls": 0,
+    "result": "PASS",
+    "not_actual_parent_or_operational_population_evidence": true
+  },
+  "browser_dependency": {
+    "tool": "mcp__cua_repl.js",
+    "exact_command": "await cua.createBrowserTab(\"iab\", \"https://familytripwise.com/family-itinerary/san-antonio-with-kids.html\", { visible: true })",
+    "attempts": 2,
+    "transient_retries": 1,
+    "result": "Timed out waiting for the Browser webview to attach for this browser-use page",
+    "provider_http_status": null,
+    "page_loaded_confirmed": false,
+    "desktop_mobile_keyboard_qa_completed": false,
+    "affected_gate": "Existing SanAntonio itinerary family forecast-handoff walkthrough and any public-page release",
+    "owner": "Normal Codex app/browser bridge attachment",
+    "unblock_condition": "Documented changed successful normal in-app browser attachment; no security/settings change, alternate browser/origin/tool or deploy-to-preview.",
+    "next_check": "Only after changed successful normal attachment, not unchanged retry.",
+    "inventory_retained": false,
+    "personal_tabs_identities_or_screenshots_retained": false,
+    "public_page_defect_inferred": false,
+    "project_wide_blocker": false
+  },
+  "maintainer_proxy": {
+    "actual_parents": false,
+    "rendered_ui": false,
+    "steps": [
+      "Read current166 release and original immutable report",
+      "Pin report plus fixed start/result events",
+      "Join request/source/grid/clock/result records",
+      "Evaluate actual now after expiry",
+      "Replay pre-capture/historical/exact-expiry clocks offline",
+      "Hold corrupt/missing/denied/symlink/oversized fixtures without transport",
+      "Preserve publicpage while browser gate is unvalidated"
+    ],
+    "result": "PERSISTED_STATE_AND_ACTUAL_EXPIRY_CHECKS_PASS; browser/public usefulness and running refresh service untested"
+  },
+  "research_disposition": "IMPLEMENT offline reviewed-journal state reader; preserve published forecast handoff until a real permitted browser task validates a deficiency.",
+  "confidence": "High exact snapshot integrity and controlled state behavior; not source authenticity, full-schema validation, current forecast availability, real-parent usefulness or weekly/global reliability.",
+  "reusable_lesson": "A successfully captured forecast stops being usable when its own expiry passes, even if source retrieval succeeded and the weekly maintenance record is unchanged. Consumption must preserve unknown/held history without treating it as permission to recollect.",
+  "falsification_trigger": "Tampered/missing event accepted; expired or future candidate marked usable; private forecast text/values/paths or identities echoed; lookup performs request/write or renews fact dates; publicpage edited without actual browser/review release gates.",
+  "next_gate": "Native full QA, different strict read-only review and guarded exact9 tools release. Next eligible actualrun after documented changed normalbrowser attachment: bounded existing-page task; otherwise integrate only reviewed offline consumer into an eligible maintained diagnostic without default collection or new report factory.",
+  "request_accounting": {
+    "current_action_source_requests": 0,
+    "current_action_api_requests": 0,
+    "llm_calls": 0,
+    "paid_calls": 0,
+    "source_owner_contacts": 0,
+    "browser_create_attempts": 2,
+    "browser_get_state_inventory_operations": 1,
+    "browser_http_requests": null,
+    "original_native_report_writes": 0
+  },
+  "unchanged": {
+    "public_pages_models_csv_fact_dates": true,
+    "old_tools_watch_holds_registry_166_code_and_journal": true,
+    "weekly_october7_baseline": true,
+    "operator_scheduler_fixed_sprint": true,
+    "broader_paid_scope_and_two_actual_weekly_cycles": true
+  },
+  "review_correction": {
+    "cycle": 1,
+    "decision": "FAIL",
+    "reviewer": "Sartre",
+    "severity": "P2",
+    "finding": "Blocking O_RDONLY open could hang on a FIFO before descriptor regular-file validation",
+    "correction": "Add O_NONBLOCK with O_NOFOLLOW before fstat validation; isolated mkfifo child-process regression with2second timeout passed; no originaljournal/source write or network",
+    "original_master_qa": "1121full48maintenance/stateSEO0/GSC92/sixpriorwarnings; passing controls did not cover FIFO",
+    "initial_qa_log_sha256": "ced85c81223a8ded177a74d678710ae30799092b34e8ff5019a463f8d5356f55",
+    "re_review_required": true
+  }
+}
