@@ -15442,7 +15442,7 @@
       "id": "FT-RES-151",
       "title": "Qualify Miami family-of-five kitchen versus beach-suite lodging",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-13",
       "started_at": "2026-10-14T01:11:31.132Z",
       "target_paths": [
@@ -15471,7 +15471,46 @@
       "decision": "CANDIDATE Miami single lodging owner: current10/8 US SERP samples share5/13 URLs, estimates1000/480 retain September measurement dates. Two official property/category leads and8 dated selected OTA signals support bounded comparison research, not exact-family prices/acceptance or a launch. Empty ready queue does not end upstream sprint qualification.",
       "evidence_record": "docs/research/miami-family-five-gate-2026-10-13.json",
       "next_gate": "Next actual sprint run collect accepted exact categories and dated nightly planning ranges/rates for2adults/ages4,8,12 Nov8-13,2026 at Residence Surfside and Grand Beach Miami Beach; reconcile Residence destination/resort duplication, mandatory fees/taxes, third-child charges, deposits and cancellation. Reject nonaccepting category and qualify named kitchen alternative if needed. Then register claim-limited public scope and finish native desktop/mobile/keyboard/full QA/different review/production. Research release requires native/different PASS/exact9 remote verification first; no generic city approval inside014.",
-      "review_receipt": "FT-RES-151 Zeno01a137fe-c94c-7233-a067-6740e4fde710 STRICTREADONLY PASS/noP0-P3; frozenmanifest8bfd4b3e62a9ba7915ad4fc8469d15abeb7f13e6d98836fdc4bbf175eb2e8c73/all1038hash-modes/exact9/348olderactions/held11/LRN242-only/public-model-CSV-policy-clocks preserved. Independent3pure/invariantszero drift; Master969full48maintenance/state0/GSC92/SEO0sixprior log9856ec84b08c05df8a51889daf9ae88c72a7711146a65a7aba9256c03a0773b6 inspected, not rerun. Sources Master-opened, not independently reopened; no renderedUI/parent/production/fullQA claims. CANDIDATE/public_readyfalse/next actualrun exact-room-budget-fee gates retained. No writes/network/browser/Git/delegation/scheduler; only mechanical consensus appended; guarded research release pending;014unchanged."
+      "review_receipt": "FT-RES-151 Zeno01a137fe-c94c-7233-a067-6740e4fde710 STRICTREADONLY PASS/noP0-P3; frozenmanifest8bfd4b3e62a9ba7915ad4fc8469d15abeb7f13e6d98836fdc4bbf175eb2e8c73/all1038hash-modes/exact9/348olderactions/held11/LRN242-only/public-model-CSV-policy-clocks preserved. Independent3pure/invariantszero drift; Master969full48maintenance/state0/GSC92/SEO0sixprior log9856ec84b08c05df8a51889daf9ae88c72a7711146a65a7aba9256c03a0773b6 inspected, not rerun. Sources Master-opened, not independently reopened; no renderedUI/parent/production/fullQA claims. CANDIDATE/public_readyfalse/next actualrun exact-room-budget-fee gates retained. No writes/network/browser/Git/delegation/scheduler; only mechanical consensus appended; guarded research release pending;014unchanged.",
+      "release_receipt": "FT-RES-151 release f858ce8d8e93c78bde80b660b8a7037ffb02281b remote verified 2026-10-14T01:24:49.651Z; main0-0/emptyindex/exact9/all1038indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only Miami gate research, not a public page or production/UI claim. Master969full48maintenance3focused/state0/GSC92/localSEO0sixprior/differentZenoPASS/all1038indexbytes-modes/exact9/348olderactions/held11/LRN242-only preserved. Three successful calls0.01624/cumulative0.36260/5, September estimates1000/480 and current10/8 samples share5/13; two official property leads/eight dated selected OTA reports/two PARTIAL desk proxies; no exact-family quote or accepted category. Next actual sprint-run category-matched2adults/ages4,8,12 Nov8-13 nightly price/acceptance/fees, not generic city approval or empty-queue monitoring. No Pageswait/site changes/parent or SEO proof;014 unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T01:24:49.667Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "f858ce8d8e93c78bde80b660b8a7037ffb02281b"
+    },
+    {
+      "id": "FT-RES-152",
+      "title": "Research global English family-travel scale and weekly refresh gates",
+      "kind": "research",
+      "status": "in-progress",
+      "selected_on": "2026-10-13",
+      "started_at": "2026-10-14T01:27:15.707Z",
+      "target_paths": [
+        "docs/plan/global-english-scale-gates.md",
+        "docs/research/global-family-travel-scale-audit-2026-10-13.json",
+        "ops/page-quality/2026-10-13-scale-audit.json",
+        "tools/global-family-travel-scale-audit.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "Fresh direct current user: research worldwide English-first destinations, scalable weekly source-plus-LLM upkeep before many cities, broader family-travel query demand, and high-quality informational North Star. Research/plan only, no mass URL launch, new scheduler, sprint extension, translations or paid-scope expansion inferred. Broader use of existing5USD cap requested separately, awaiting reply.",
+      "evidence": "Audit current source-diff/site-maintenance/claim/price adapters and retained September30/October7 weekly results; current offline all-canonical coverage and provenance gaps. Distinguish English content, destination geography, traveler search market and source language. Prior non-city US demand remains September-measured; bounded live primary docs/SERP task evidence resolves fresh architecture and research gates.",
+      "acceptance_criteria": [
+        "Source-dated offline current report with original fact/price/review clocks untouched; retained weekly counts and comparative noise interpreted as triage only. Do not collect early scheduled audit, retry denied sources or imply scalability from one repeat.",
+        "Separate implemented deterministic collection from proposed LLM extraction: provenance/immutable events/entity-category-party joins, schema validation, privacy/injection protection, editorial/human gates. Staged concrete next implementation and acceptance/false-positive/due-queue metrics, no city-count quota or auto-refresh claim.",
+        "Broader query candidates need measured volume/paired ownership/value/cost evidence; preserve prior dates/nulls and no additive totals. Paid broader query collection only after exact authority and registered amendment; no forecasts or ranking guarantee.",
+        "Focused/full native QA/different strict read-only PASS before exact scope guarded research release/remote verification. Preserve349ordered older actions, all public/model/CSV/source clocks, held11, operator/scheduler/observation windows."
+      ],
+      "measurement_plan": "LRN243 system-scale/demand qualification research, two reproducible evidence-desk tasks, not parent testing. Current existingOct13 GSCfinalOct11 reused orientation only. Evaluate weekly comparable-source rates, meaningful-claim precision, provenance coverage, critical due queue, maintainer effort and task answerability, not commits/pages.",
+      "production_invariant": "Research/plan/offline evidence/test only; no public changes or rewritten dates. No external LLM/API credentials, paid calls unless separately approved, scrape denial bypass, accounts/payments/indexing/analytics/outreach/ControlRoom/automation changes. Global North Star does not extend November13 operational cutoff.",
+      "research_only_reason": "User explicitly asks research before broad expansion. Resolve maintainability prerequisites and query ownership, not launch many cities first or repeat generic inventory.",
+      "decision": "IMPLEMENT NEXT bounded coverage/checkpoint pilot before broad city growth: current36canonical coverage is not claim-complete;507source inventory exceeds500entry bound. Retained weekly116/216changed sources is not measured meaningful-change precision. Follow with atomic claim-delta/evaluation and isolated optionalLLM candidates; globalEnglish research conditional on maintained decision quality, not URLquota. Broader30phrase queue prepared; new numeric demand pending narrow existing-cap reply, zero paidcalls here.",
+      "evidence_record": "docs/research/global-family-travel-scale-audit-2026-10-13.json",
+      "next_gate": "Next eligible implementation run register exact bounded source-batching/checkpoint/coverage pilot paths;507/1001 fixtures, interrupted resume, no duplicate requests, denial/500limit preservation, immutable source accounting and native/different review gates. Then one hotel-room/fee plus one attraction-admission claim-delta pilot and two realweeklycycles before large expansion. Miami151 exact-family room/rate/fee task remains next destination test. Broader keyword volume/SERP collection requires answer to existing5cap scope question and exact manifest amendment; not a project-wide blocker. Plan/evidence fullnative/differentPASS/exact9 guarded remote release pending.",
+      "review_receipt": "FT-RES-152 Anscombe01a1380d-ffec-7de2-83cf-40d9865fae06 STRICTREADONLY PASS/no actionableP0-P2; frozen234081b1c16316f1594abd57a07ecf89a43469a5d51147f55202b6cacf1cdc38/all1042hash-modes/exact9/349olderorderedactions/held11/LRN243-only/public-model-CSV-clocks-operator preserved. Independent4pure/invariants/completeoffline report and inventory reproduced in memory, zero drift. Master973full48maintenance/state0/GSC92/localSEO0sixprior logd94ec54578d0d89c3964db3f0352128a54fd7b61318469ac0587bbf971446023 inspected, not rerun. External sources/history-model/UI/parents/production not independently verified. Proposed scale/LLM thresholds not measured or deployed; new numeric demand paid-scope gated. No writes/network/browser/Git/scheduler/delegation; only immutable mechanical consensus appended, guarded research release pending;014unchanged."
     }
   ]
 }

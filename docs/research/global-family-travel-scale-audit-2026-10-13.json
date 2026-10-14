@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-152",
+  "learning_unit": "LRN-243",
+  "as_of_eastern": "2026-10-13",
+  "source_access_on_utc": "2026-10-14",
+  "decision": "IMPLEMENT_NEXT_BOUNDED_COVERAGE_PILOT",
+  "public_changes": false,
+  "automatic_fact_renewal": false,
+  "automatic_publication": false,
+  "llm_service_deployed": false,
+  "new_paid_calls": 0,
+  "paid_scope": "Broader use of existing5USD cap requested separately; awaiting response. Prior reconciled spend0.36260, no top-up/subscription inferred.",
+  "user_direction": "Global English-first family-travel research and conditional scale after maintainability is proven; broader family queries and trustworthy informational North Star. No sprint/global-runtime extension, large batch launch or translation deployment.",
+  "plan": "docs/plan/global-english-scale-gates.md",
+  "current_offline_report": "ops/page-quality/2026-10-13-scale-audit.json",
+  "current_offline_summary": {
+    "canonical_pages": 36,
+    "travel_pages": 33,
+    "utility_pages": 3,
+    "unclassified_pages": 0,
+    "hotel_price_basis_gaps": 54,
+    "hotel_due_price_records": 57,
+    "activity_card_atomic_source_gaps": 333,
+    "planning_unmapped_decision_fields": 1512,
+    "planning_missing_page_source_notes": 4,
+    "policy_review_clocks": 10,
+    "policy_due_records": 0,
+    "policy_not_yet_observed": 0
+  },
+  "current_offline_inventory": {
+    "canonical_pages": 36,
+    "source_urls": 507,
+    "hosts": 170,
+    "not_fetched_without_prior_record": 53,
+    "network_calls": 0,
+    "collector_limit": 500,
+    "source_states": {"not-fetched": 53, "text-unchanged": 100, "access-denied-carried-forward": 154, "unsupported-format-review": 2, "unavailable-review": 82, "text-changed-review": 113, "structured-price-changed-review": 3},
+    "limits": "Prior states are carried offline, not current retrieval. Inventory differs from October7 as pages/sources changed. Source-count boundary does not mean507 permitted requests or exactly7 sources would be network-deferred; denied entries are handled separately. Full coverage needs explicit batching/accounting before fresh completeness claims."
+  },
+  "retained_weekly": {
+    "previous": "ops/evidence-audits/2026-09-30-repeat.json",
+    "previous_collected_at": "2026-10-01T00:34:45.474Z",
+    "latest": "ops/evidence-audits/2026-10-07.json",
+    "latest_review": "ops/evidence-audits/2026-10-07-review.json",
+    "latest_collected_at": "2026-10-07T05:04:53.384Z",
+    "canonical_pages": 31,
+    "sources": 455,
+    "comparable_retrieved_sources": 216,
+    "changed_sources": 116,
+    "carried_denials": 146,
+    "collection_gaps": 93,
+    "due_or_unknown_fields": 354,
+    "elapsed_seconds": 116,
+    "change_fraction_of_comparable_sources": 0.5370370370370371,
+    "meaningful_claim_precision": null,
+    "maintainer_minutes": null,
+    "limits": "Change fraction is116/216, not a measured false-positive rate or fresh claim count. Two retained collection dates do not prove reliable automatic refresh. October13 current report is offline; next real weekly gate is October14 Eastern under unchanged existing scheduler."
+  },
+  "implemented": ["All-page offline type/contract coverage", "Exact allowlist source inventory and deduplication", "Four global requests and one active request per host", "Ten-second timeout,3MB cap and revalidated redirects", "Denied/challenge carry-forward without unchanged retry", "Hash and limited structured-price candidates with source bodies discarded", "Deterministic due/unknown review queue", "Typed category-party-stay-price/policy adapters and reviewed releases"],
+  "not_proven_or_not_implemented": ["Coverage-aware source batching beyond500", "Durable per-source interrupted-run journal and resume reconciliation", "Complete atomic planning/activity provenance", "Runtime source-specific robots/terms/access governance in current collector", "Semantic meaningful-claim precision/noise measurements", "LLM extraction/evaluation and isolated worker pipeline", "Exact-family automatic dynamic-price collection", "Multi-market keyword adapter (existing collector fixesUS English)", "Maintenance effort and reliability at large-city scale"],
+  "llm_proposal": {
+    "role": "Bounded extraction/change-classification candidate producer after deterministic parsers",
+    "provenance_fields": ["source_id", "source_url", "source_hash", "source_section", "entity_id", "category_id", "field", "observed_value", "conditions", "source_language", "extraction_method", "accessed_at", "effective_date_if_stated", "uncertainty", "conflicts"],
+    "worker_privileges": {"network_tools": false, "credentials": false, "shell": false, "repo_write": false, "publication": false},
+    "output_gate": "Schema and exact supporting-source validation, same entity/category/party/stay join, null/contradiction handling, reviewed acceptance; self-confidence does not verify evidence",
+    "retention": "No public raw review bodies, identities, copied full source archives or private travel-party data. Source-specific permitted factual summaries/hashes; private processing retention requires reviewed policy.",
+    "status": "PROPOSED_NOT_DEPLOYED"
+  },
+  "fresh_primary_sources": [
+    {"id": "google-international", "url": "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites", "class": "OFFICIAL_SEARCH_GUIDANCE", "result": "Language and region targeting are distinct; later real language versions need appropriate URLs/annotations, not speculative variants", "published_update": null},
+    {"id": "google-spam", "url": "https://developers.google.com/search/docs/essentials/spam-policies", "class": "OFFICIAL_SEARCH_GUIDANCE", "result": "Scaled low-value generation/scraping intended to manipulate rankings is prohibited; original decision value must precede scale", "published_update": null},
+    {"id": "robots-rfc", "url": "https://www.rfc-editor.org/rfc/rfc9309.html", "class": "PROTOCOL_STANDARD", "result": "Robots matching/error/cache rules are separate from access authorization", "published_update": "2022-09"},
+    {"id": "scrapy-middleware", "url": "https://docs.scrapy.org/en/latest/topics/downloader-middleware.html", "class": "OFFICIAL_LIBRARY_DOCUMENTATION", "result": "Robots middleware needs enabled robots-obey setting; cache policies differ and default dummy cache is not factual revalidation", "published_update": null},
+    {"id": "scrapy-throttle", "url": "https://docs.scrapy.org/en/latest/topics/autothrottle.html", "class": "OFFICIAL_LIBRARY_DOCUMENTATION", "result": "Latency-aware delays respect concurrency bounds and non200 responses cannot decrease delay; no crawler migration selected", "published_update": null},
+    {"id": "owasp-injection", "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/", "class": "SECURITY_GUIDANCE", "result": "Retrieved external text can carry indirect instructions; isolate inputs and privileges with reviewed downstream controls", "published_update": null}
+  ],
+  "fresh_task_sources": [
+    {"id": "budget-tool", "url": "https://traveltoolshq.com/tools/family-vacation-budget-calculator", "class": "COMPETING_TOOL_BODY", "published_update": null, "result": "Already has adult/child user-input food and lodging/transport/activities budget; explicitly not looked-up prices. Generic calculator differentiation rejected.", "limits": "Inspected text/inputs only, no computed browser result or usability validation"},
+    {"id": "packing-tool", "url": "https://vacationchecklists.com/family-vacation-packing-list/", "class": "COMPETING_EDITORIAL_TOOL_BODY", "published_update": "2026-08", "result": "Already links person-specific generator and has a family/laundry worked table; generic checklist novelty rejected.", "limits": "Its suggested quantities, medical/document advice and personal authority are not our verified facts; generator not exercised"},
+    {"id": "aa-family", "url": "https://www.aa.com/web/i18n/travel-info/special-assistance/traveling-children.html", "class": "OFFICIAL_POLICY_BODY", "published_update": null, "result": "Lists free checked stroller/car-seat allowance and gate versus counter distinctions; non-collapsible and specific wagon restrictions appear.", "limits": "No universal policy, selected itinerary/operator acceptance or safety assurance"},
+    {"id": "aa-special", "url": "https://www.aa.com/pubcontent/en_US/travel-info/baggage/specialty-and-sports.html", "class": "OFFICIAL_POLICY_BODY", "published_update": null, "result": "Also lists over20lb among counter-check conditions, unlike the inspected family-page list. Keep potential policy/version conflict, do not silently choose a rule.", "limits": "Same publisher, not independent corroboration; mirrored/version/effective-date reconciliation required"},
+    {"id": "amtrak-fare", "url": "https://www.amtrak.com/deals-discounts/everyday-discounts/children-discounts", "class": "OFFICIAL_SEARCH_EXCERPT_ONLY", "published_update": null, "result": "Search excerpt separates ages2-12 base fare and accompanying-adult reservation condition", "limits": "Body not inspected in this action; no current fare/room/service/acceptance promise. Older indexed PDFs can have different historical rules; excluded from current rule selection."}
+  ],
+  "broader_query_research": {
+    "market": "US first; nonUS English markets are a separate unimplemented adapter task",
+    "free_serp_limits": "Public web samples are not authenticated US ranking positions or paired numeric overlap, material demand or whole-SERP audits",
+    "prior_metrics_record": "docs/research/family-expansion-2026-09-30.json",
+    "prior_metrics": [
+      {"query": "family vacation deals", "average_monthly_us": 5400, "metrics_updated_at": "2026-09-13 18:58:00 +00:00"},
+      {"query": "family vacation packages", "average_monthly_us": 5400, "metrics_updated_at": "2026-09-13 12:40:32 +00:00"},
+      {"query": "all inclusive family vacation deals", "average_monthly_us": 2900, "metrics_updated_at": "2026-09-12 02:18:23 +00:00"},
+      {"query": "all inclusive resorts for family of 6", "average_monthly_us": 140, "metrics_updated_at": "2026-09-12 18:00:32 +00:00"},
+      {"query": "multigenerational family vacations", "average_monthly_us": 110, "metrics_updated_at": "2026-09-16 07:46:59 +00:00"},
+      {"query": "family cruises 2027", "average_monthly_us": 590, "metrics_updated_at": "2026-09-12 05:11:44 +00:00"}
+    ],
+    "new_numeric_demand": null,
+    "proposed_bounded_queries": ["family vacation budget", "family travel on a budget", "family vacation packing list", "packing list for family vacation", "flying with a toddler", "flying with toddlers tips", "airline stroller policy", "can you bring a stroller on a plane", "family train vacations", "family vacations by train", "car free family vacations", "car free vacations with kids", "road trips with toddlers", "family road trip planner", "rainy day activities with kids on vacation", "travel with toddlers", "vacations with toddlers", "vacations with teenagers", "family cruises", "best cruises for families", "kids sail free cruises", "family vacation deals", "all inclusive family vacation deals", "all inclusive resorts for family of 5", "all inclusive resorts for family of 6", "resorts with childcare for toddlers", "resorts with baby club", "resorts with teen clubs", "multigenerational family vacations", "family reunion vacations"],
+    "new_url_gate": "Fresh controlled same-market paired ownership/material demand, current-owner fit, maintainable specific information gain, public scope registration and all review/release gates. No borrowed hotel/year-phrase demand, overlapping-volume sums or generic tool/list novelty.",
+    "next_collection": "After existing-cap broader-scope answer, register exact manifest/output amendment and collect estimated volumes plus paired SERPs for the most actionable distinct tasks; no automatic retries or extra subscription"
+  },
+  "scale_acceptance_proposal": {
+    "implemented": false,
+    "inventory_fixtures": [507, 1001],
+    "run_manifest_accounting_percent": 100,
+    "decisive_new_page_claim_provenance_percent": 100,
+    "seeded_critical_change_recall_percent": 100,
+    "labeled_pilot_change_precision_percent": 95,
+    "unreviewed_public_mutations": 0,
+    "real_weekly_cycles_to_observe": 2,
+    "limits": "Proposed acceptance thresholds, not measured outcomes/population accuracy. Track maintainer effort, dollars, missing/held/deferred sources and unresolved critical queue; no city quota, no guarantee every source refreshes weekly."
+  },
+  "desk_tasks": [
+    {"persona": "Maintainer checking a new city's weekly upkeep", "steps": ["Inventory canonicals", "Classify contracts", "Find decisive claim owners", "Account for source batches", "Reconcile changed claims versus hashes", "Check price-policy-review clocks", "Approve only reviewed release"], "result": "PARTIAL: framework coverage complete; atomic provenance/batching/claim-delta reliability incomplete"},
+    {"persona": "Parent choosing an airline-compatible stroller and family budget", "steps": ["Identify actual operating carrier", "Compare stroller gate/counter policy", "Retain weight/version conflict", "Check extra-item fees", "Join hotel room/party/stay basis", "Separate entered estimates from observed prices", "Choose only from supported conditions"], "result": "PARTIAL: useful policy/budget handoff hypothesis; conflicts, fresh query demand and actual task/UI remain unqualified"}
+  ],
+  "validation_limits": "Evidence-desk proxies, not parent preference, page desktop/mobile/keyboard validation, production delivery or SEO-lift proof. Research-only no site changes.",
+  "next_action": "Register bounded source batching/checkpoint/coverage pilot before broad city growth; preserve denial/500-bound/immutable-evidence gates. Miami exact-room price/acceptance remains next destination test. Broader numeric keyword collection awaits narrow paid-scope reply; no project-wide stop.",
+  "confidence": "High reproducible current inventory and retained-count/provenance distinctions; moderate proposed architecture/decision value; unknown broad new query volumes, long-term maintenance cost and user outcomes",
+  "lesson": "Scale the maintained claim and review pipeline before the URL inventory. Weekly source access, factual freshness, model extraction and publication are distinct events.",
+  "falsification_trigger": "Pilot fails bounded accounting/denial/prompt-injection/source joins, meaningful-change precision or real weekly reliability; critical due backlog grows with added pages; query ownership reveals redundancy"
+}
