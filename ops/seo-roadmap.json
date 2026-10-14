@@ -15685,7 +15685,7 @@
       "id": "FT-IMP-157",
       "title": "Reconcile Garfield resident-waiver predicate against current official wording",
       "kind": "tooling",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-14",
       "started_at": "2026-10-14T05:06:40.260Z",
       "target_paths": [
@@ -15711,7 +15711,46 @@
       "decision": "IMPLEMENT exact official-wording resident predicate correction. Current one web.open source body L97/99 supports parser mismatch, bounded17word fixture reproduces old missing/new present; no current native hash or renewed public date. Nine Garfield tests/sixnew and39focused PASS after correcting two initial fixture metadata/inline whitespace failures. All other watches, originalOct13dates, immutable156, publicmodelsCSV and weeklyclocks unchanged. Fullnative/differentSTRICTPASS/guarded exact8 remote release pending.",
       "evidence_record": "docs/research/garfield-resident-predicate-reconciliation-2026-10-14.json",
       "next_gate": "Complete nativefull/differentSTRICTREADONLY PASS/guarded exact8 remote release. Then Dana exact category/mandatory-fee atomic mapping. Broader keyword numeric demand awaits existing-budget scope answer; full source governance and two actual complete weekly cycles remain gates, no city-count quota or LLM deployment.",
-      "review_receipt": "FT-IMP-157 Fermat01a138d1-be00-76b0-8b87-15a716a02ccb independent STRICTREADONLY PASS/no findings; frozen e301e7f178a5a38b0f714acc47d9f5d0c8c2e9f7148bc7e83144844135ff08d0/all1060hash-modes/exact8/354olderorderedactions/1052nonowned/held11/LRN248-only/one-pattern-only/public-model-CSV-policy-clocks/immutable156 preserved. Independent21pure PASS including9Garfield; Master1012full48maintenance39focused/state0/GSC92/SEO0sixprior log6c50bae2a9a42c1a14cd69d6959d7a98b5a2bb96152cf2136854ded4d985b0ee independently hashed/read not full rerun; exit0 supplied. Official source description supplied not reopened; no writes/temp/network/browser/CLI-journal-fullQA/Git/scheduler/delegation. Narrow17word fixture oldmissing/newcandidate, no semanticverification/eligibility/currentnativehash/publicfreshness/weeklycompletion/parent-SEO/LLM claim. Only immutable mechanical consensus appended; exact guarded tools remote release pending,014 fixed end unchanged."
+      "review_receipt": "FT-IMP-157 Fermat01a138d1-be00-76b0-8b87-15a716a02ccb independent STRICTREADONLY PASS/no findings; frozen e301e7f178a5a38b0f714acc47d9f5d0c8c2e9f7148bc7e83144844135ff08d0/all1060hash-modes/exact8/354olderorderedactions/1052nonowned/held11/LRN248-only/one-pattern-only/public-model-CSV-policy-clocks/immutable156 preserved. Independent21pure PASS including9Garfield; Master1012full48maintenance39focused/state0/GSC92/SEO0sixprior log6c50bae2a9a42c1a14cd69d6959d7a98b5a2bb96152cf2136854ded4d985b0ee independently hashed/read not full rerun; exit0 supplied. Official source description supplied not reopened; no writes/temp/network/browser/CLI-journal-fullQA/Git/scheduler/delegation. Narrow17word fixture oldmissing/newcandidate, no semanticverification/eligibility/currentnativehash/publicfreshness/weeklycompletion/parent-SEO/LLM claim. Only immutable mechanical consensus appended; exact guarded tools remote release pending,014 fixed end unchanged.",
+      "release_receipt": "FT-IMP-157 release 38ca15d8765becb6db310e93233de6afcd18e586 remote verified 2026-10-14T05:14:06.516Z; main0-0/emptyindex/exact8/all1060indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared resident-waiver monitor correction delivered and remoteverified, not publicpage/fact refresh.1012full48maintenance39focused/state0/GSC92/SEO0sixprior/differentFermatPASS21pure. Originalpublic-model-CSV-dates/156packet/operatorweeklybaseline-due/holds and354olderactions/held11/LRN248-only preserved; only one watch pattern changes. Current officialwording17wordfixture reproduces oldmissing/newcandidate; no new native body hash, eligibility, semanticprecision, completeweekly, parent-SEO or LLM proof. Initial7of9 fixture failures corrected then finalgreen. Next Dana exact room/fee atomic mapping; broadervolumes awaiting existing-cap scope answer, fullgovernance/two actual completeweeklycycles still gates. One completed action/no quota;014 fixedend unchanged. No Pageswait for tools-doc-watch scope. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T05:14:06.535Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "38ca15d8765becb6db310e93233de6afcd18e586"
+    },
+    {
+      "id": "FT-IMP-158",
+      "title": "Map Dana room and fee rules into source-bound atomic review candidates",
+      "kind": "tooling",
+      "status": "in-progress",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-14T06:03:28.767Z",
+      "target_paths": [
+        "ops/evidence-watch.json",
+        "tools/dana-atomic-watch.test.mjs",
+        "docs/research/dana-atomic-watch-2026-10-14.json",
+        "ops/evidence-collections/2026-10-14-dana-selection.json",
+        "ops/evidence-audits/2026-10-14-dana-checkpoint-review.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "014 fixed sprint/direct maintainability-before-large-growth instruction. Bounded official room and FAQ inspection plus one native new-predicate baseline for each exact source. No held OTA/ticket retry, room booking, paid/LLM/public fact renewal or scheduler mutation.",
+      "evidence": "155 two Dana source hashes changed but had zero atomic candidates; whole-source changes cannot resolve exact capacity, kitchen equipment, nightly fee versus incidental hold. Maintained original room/amenity factsAug17 and field-specific feeOct8 with historicalJuly21 prices. Need source wording before exact watches, candidate semantics only. GSC Oct13finalOct11 REUSED, Oct12finalOct10 prior; orientation only.",
+      "acceptance_criteria": [
+        "Inspect only the two exact permitted official sources https://thedana.com/san-diego-accommodations/ and https://thedana.com/san-diego-hotel/faq/. Audit source wording for bounded room/meal/fee/hold monitor predicates; original general room records do not date-verify newly named categories. No current room quote or review-theme renewal.",
+        "Add six decisive room/capacity, meal-equipment and fee-versus-hold predicates with stable IDs and scoped basis/source/evidence. Preserve all previous records/hosts/order/dates. New named-category mapping must retain null verified date unless already supported by a dated exact-category record. Positive text remains candidate, not actual party acceptance or semantics. Test changed capacity/amount/unit/entity, missing text and script-only facts.",
+        "New durable private checkpoint /Users/apoorvagarg/.codex/evidence-checkpoints/family-tripwise/2026-10-14-FT-IMP-158 with exact two selected official URLs and fixed source-hold registry pins. Native bounded one-request-per-source newchecks baseline, full-source accounting but partial readiness; no replay of earlier journal, held recovery or weekly due/date advancement.",
+        "Focused/fullnative/state/GSC/SEO/privacy/exact10/355olderorderedactions/held11/onlyLRN249, source-date-hash-basis joins and strict independent read-only PASS, guarded exact tool/evidence remote release. No public UI changes or Pages delivery claim."
+      ],
+      "measurement_plan": "Maintainer proxy: detect expected room/cost labels independently of body hashes while keeping category/party/stay/unit/tax/hold and original clocks explicit. Synthetic checks are not measured real semantic precision or parent/SEO preference; full weekly operation remains separately gated.",
+      "production_invariant": "No site/public/sharedhotelmodels/CSV/price/date/hold/operator/scheduler/oldcollector mutation; preserve155-157 immutable artifacts, prior watch records and inherited11dirty paths. OldJuly21nightly prices/review samples not freshened. No native fullweeklycompletion or LLM/global readiness claim.",
+      "decision": "IMPLEMENT six Dana room/meal/fee-hold monitors with source-bound atomic queue. Two registered newchecks native direct200 captures at06:05:55.260Z/06:05:55.754Z yield6present/allclaimverifiedfalse; named category datesnull, equipmentAug17/feesOct8 preserved. Full507source packet351deferred154holds2known0unknown/36canonical390models/readyfalse. Eight new pure tests and fullnative/differentSTRICTPASS/guarded exact10 release required; no publicfact/price/review-date renewal.",
+      "evidence_record": "docs/research/dana-atomic-watch-2026-10-14.json",
+      "next_gate": "Register small labeled claim-delta evaluation with navigation-noise, critical changes, wrong category/party, missing ages, stale price, denial/interruption, contradiction and source-instruction cases. Then broader source governance/full actual weekly operation; no same-day repetition or LLM service inferred. Nativefull/differentSTRICTREADONLY PASS/exact10guarded release first. Broader paid-query scope and exact-family nightly quotes remain separate, no current public launch.",
+      "review_receipt": "FT-IMP-158 Hegel01a13907-a6f8-7520-a3db-8981075323ee independent STRICTREADONLY PASS/no findings; frozen5539aa3802a2d1f8a94edccfb1c41ad3c63013be951531a3be5deecfe90a41e0/all1064hash-modes/exact10/355olderorderedactions/1054nonowned/held11/LRN249-only/oldwatch-records-hosts/originalpublic-model-CSV-policy-clocks/immutable155-157 preserved. Independent29pure PASS; Master1020full48maintenance47focused/state0/GSC92/SEO0sixprior logc82b6d43a421a873f725894538609a3a9c253cf491cc746095880b3f92c64cc0 independently read/hashed not full rerun. Actualtwo direct200 journal outcomes and six candidate source-date-hash-basis joins verified;6present/allclaimverifiedfalse, roomcategorydatesnull/equipmentAug17/feeOct8,507sources351deferred154holds2known0unknown/readyfalse. Official wording descriptions supplied not reopened; no reviewerwrites/temp/network/browser/CLI-journal-fullQA/Git/scheduler/delegation. Candidate controls not semanticprecision/partyacceptance/currentquote/publicfreshness/completeweekly/parent-SEO/LLM proof. Only immutable mechanical consensus appended; guarded exact tools remote release pending;014 fixedend unchanged."
     }
   ]
 }

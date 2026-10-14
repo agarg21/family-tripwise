@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "action": "FT-IMP-158",
+  "learning_id": "LRN-249",
+  "decision": "IMPLEMENT_SIX_SOURCE_BOUND_CANDIDATE_MONITORS_PRESERVE_PUBLIC_FACTS",
+  "evidence_class": "OFFICIAL_SOURCE_WORDING_NATIVE_NEW_PREDICATE_BASELINE_AND_SYNTHETIC_MAINTAINER_TASK",
+  "as_of_eastern": "2026-10-14",
+  "source_quality": {
+    "sources": [
+      {
+        "url": "https://thedana.com/san-diego-accommodations/",
+        "inspected_on": "2026-10-14",
+        "method": "One web.open primary body, crawled today",
+        "selected_lines": [
+          73,
+          75,
+          152,
+          154
+        ],
+        "paraphrase": "Displayed room choices group king and two-queen variants. The standard listing advertises four; Sunset Park View Junior Suite advertises six. This does not confirm the selected family or variant.",
+        "effective_date": null
+      },
+      {
+        "url": "https://thedana.com/san-diego-hotel/faq/",
+        "inspected_on": "2026-10-14",
+        "method": "One web.open primary body, crawled today",
+        "selected_lines": [
+          76,
+          127,
+          158,
+          178
+        ],
+        "paraphrase": "FAQ equipment is refrigerator/microwave rather than kitchen. Interpreted USD: resort25 per night plus tax; optional self-parking35 per night; incidentals50 per day are a card authorization alongside stay amount, not an additional fee. Tax/inclusion, actual billed/held days and exact-rate applicability remain unknown.",
+        "effective_date": null
+      }
+    ],
+    "review_scope": "Official room/equipment/fee monitoring only; no new quality, personal-review, family-fit, safety or comfort judgments. Historical small May-July review sample remains unrevised and unrenewed; no held OTA/provider retried.",
+    "limits": "The FAQ contains unrelated expired2025 seasonal text, not used or renewed. An official body is not uniform freshness for all facts. Native bodies discarded; public facts remain source-dated original values, no current quote."
+  },
+  "maintained_basis": {
+    "room_general_original_verified_on": "2026-08-17",
+    "new_named_room_predicates_verified_on": null,
+    "meal_equipment_original_verified_on": "2026-08-17",
+    "fee_original_verified_on": "2026-10-08",
+    "nightly_price_original_verified_on": "2026-07-21",
+    "nightly_price": "Historical USD250-400+ per-room/per-night orientation; original exact-family/room/stay/fee basis not newly established. No quote retrieval or price renewal."
+  },
+  "checkpoint": {
+    "private_durable_path": "/Users/apoorvagarg/.codex/evidence-checkpoints/family-tripwise/2026-10-14-FT-IMP-158",
+    "plan_sha256": "95e68fc5b1beff2942bdf259da792b1d55a82a34ba0d6f64a7fcc8506aaec561",
+    "hold_registry_sha256": "bb4eff93674d8c95eeb7ef0cd4455fe8e5a0d5fbcc14a1890a402d80c0402dbb",
+    "selected_source_urls": [
+      "https://thedana.com/san-diego-accommodations/",
+      "https://thedana.com/san-diego-hotel/faq/"
+    ],
+    "source_count": 507,
+    "completed_outcomes": 2,
+    "deferred_sources": 351,
+    "prior_access_holds": 154,
+    "owner_reconciliation_holds": 0,
+    "canonical_pages": 36,
+    "model_records_checked": 390,
+    "standard_audit_ready": false,
+    "native_requests": 2,
+    "purpose": "New hotel predicate baseline, not replay of155 or repeat-reliability experiment. One exact native request/source with redirects denied; only two selected sources attempted, other507 states preserved.",
+    "not_complete_weekly": true
+  },
+  "sources": [
+    {
+      "url": "https://thedana.com/san-diego-accommodations/",
+      "final_url": "https://thedana.com/san-diego-accommodations/",
+      "attempted_at": "2026-10-14T06:05:55.260Z",
+      "http_status": 200,
+      "state": "text-changed-review",
+      "text_sha256": "32c2ff6c6ab6d6b902185690f86faa5a0b916be47b29f358d84a389e71260b37",
+      "fields": [
+        {
+          "id": "dana-standard-room-capacity-predicate",
+          "state": "expected-text-present",
+          "evidence_class": "EXTRACTION_CANDIDATE"
+        },
+        {
+          "id": "dana-junior-suite-capacity-predicate",
+          "state": "expected-text-present",
+          "evidence_class": "EXTRACTION_CANDIDATE"
+        }
+      ]
+    },
+    {
+      "url": "https://thedana.com/san-diego-hotel/faq/",
+      "final_url": "https://thedana.com/san-diego-hotel/faq/",
+      "attempted_at": "2026-10-14T06:05:55.754Z",
+      "http_status": 200,
+      "state": "text-changed-review",
+      "text_sha256": "e65e09433cd01ba0b1bf70d2f5242e4c1f310bf5cc7cf10c5a77a87c6681bde9",
+      "fields": [
+        {
+          "id": "dana-meal-equipment-predicate",
+          "state": "expected-text-present",
+          "evidence_class": "EXTRACTION_CANDIDATE"
+        },
+        {
+          "id": "dana-resort-fee-predicate",
+          "state": "expected-text-present",
+          "evidence_class": "EXTRACTION_CANDIDATE"
+        },
+        {
+          "id": "dana-self-parking-fee-predicate",
+          "state": "expected-text-present",
+          "evidence_class": "EXTRACTION_CANDIDATE"
+        },
+        {
+          "id": "dana-incidental-hold-predicate",
+          "state": "expected-text-present",
+          "evidence_class": "EXTRACTION_CANDIDATE"
+        }
+      ]
+    }
+  ],
+  "predicate_candidates": [
+    {
+      "id": "dana-standard-room-capacity-predicate",
+      "source_url": "https://thedana.com/san-diego-accommodations/",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room-capacity-san-diego-hotel-rooms",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T06:05:55.260Z",
+      "source_text_sha256": "32c2ff6c6ab6d6b902185690f86faa5a0b916be47b29f358d84a389e71260b37",
+      "original_verified_on": null,
+      "basis": "New exact displayed-category predicate mapped October14; no dated exact-category verified record. OlderAugust17 general standard-up-to4 summary is not exact-party/category acceptance. Expected advertised4 only; king-versus-two-queen allocation and booking availability unknown.",
+      "evidence_path": "docs/research/dana-atomic-watch-2026-10-14.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "dana-junior-suite-capacity-predicate",
+      "source_url": "https://thedana.com/san-diego-accommodations/",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room-capacity-sunset-park-view-junior-suite",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T06:05:55.260Z",
+      "source_text_sha256": "32c2ff6c6ab6d6b902185690f86faa5a0b916be47b29f358d84a389e71260b37",
+      "original_verified_on": null,
+      "basis": "New exact displayed-category predicate mapped October14, not renewedAugust17 general many-suites-up-to6 fact. Expected advertised6 under Sunset Park View Junior Suite only; selected bed variant, child-age/party acceptance, available stay and actual sleeping fit unknown.",
+      "evidence_path": "docs/research/dana-atomic-watch-2026-10-14.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "dana-meal-equipment-predicate",
+      "source_url": "https://thedana.com/san-diego-hotel/faq/",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "room-meal-equipment-no-kitchen",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T06:05:55.754Z",
+      "source_text_sha256": "e65e09433cd01ba0b1bf70d2f5242e4c1f310bf5cc7cf10c5a77a87c6681bde9",
+      "original_verified_on": "2026-08-17",
+      "basis": "OriginalAugust17 equipment/no-kitchen research date retained. Expected FAQ negative kitchen clause and refrigerator/microwave labels only; not kitchenette, cooking permission, inventory or specific-party suitability. Wet-bar wording cannot become a kitchen.",
+      "evidence_path": "docs/research/san-diego-family-hotel-freshness-audit-2026-08-17.md",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "dana-resort-fee-predicate",
+      "source_url": "https://thedana.com/san-diego-hotel/faq/",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "mandatory-resort-fee-nightly",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T06:05:55.754Z",
+      "source_text_sha256": "e65e09433cd01ba0b1bf70d2f5242e4c1f310bf5cc7cf10c5a77a87c6681bde9",
+      "original_verified_on": "2026-10-08",
+      "basis": "OriginalOct8 fee envelope: interpretedUSD25/night plus tax, not tax-inclusive total. Predicate requires amount/unit/tax/resort label; exact room-rate inclusion, applicable billed nights and family stay unknown. No historicalJuly21price renewal.",
+      "evidence_path": "docs/research/dana-fee-hold-2026-10-08.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "dana-self-parking-fee-predicate",
+      "source_url": "https://thedana.com/san-diego-hotel/faq/",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "optional-self-parking-fee-nightly",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T06:05:55.754Z",
+      "source_text_sha256": "e65e09433cd01ba0b1bf70d2f5242e4c1f310bf5cc7cf10c5a77a87c6681bde9",
+      "original_verified_on": "2026-10-08",
+      "basis": "OriginalOct8 fee envelope: interpretedUSD35/self-parking/night if used, no valet. Parking tax/inclusion and actual charged nights remain unknown; optional parking is not mandatory room cost, no exact stay-total or historicalprice renewal.",
+      "evidence_path": "docs/research/dana-fee-hold-2026-10-08.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    },
+    {
+      "id": "dana-incidental-hold-predicate",
+      "source_url": "https://thedana.com/san-diego-hotel/faq/",
+      "page_url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+      "field": "incidental-authorization-hold-daily",
+      "state": "expected-text-present",
+      "evidence_class": "EXTRACTION_CANDIDATE",
+      "source_attempted_at": "2026-10-14T06:05:55.754Z",
+      "source_text_sha256": "e65e09433cd01ba0b1bf70d2f5242e4c1f310bf5cc7cf10c5a77a87c6681bde9",
+      "original_verified_on": "2026-10-08",
+      "basis": "OriginalOct8 interpretedUSD50/day incidentals authorization in addition to full-stay authorization, not payable fee. Expected authorized/day/incidentals labels only; actual hold days, release timing, room-rate applicability and full cash requirement unknown.",
+      "evidence_path": "docs/research/dana-fee-hold-2026-10-08.json",
+      "claim_verified": false,
+      "classification": "predicate-present-not-verified"
+    }
+  ],
+  "task_validation": {
+    "method": "Seven-step reproducible maintainer desk proxy, not actual parents, rendered UI or SEO satisfaction",
+    "family_decision": "Maintain exact room-capacity and meal/budget screens without treating advertised beds as booked acceptance or an authorization as payable cost.",
+    "steps": [
+      "Trace155 changed body hashes with no atomic room/fee fields",
+      "Inspect exact official room/FAQ sections, excluding unrelated seasonal text",
+      "Bind room title to same displayed bed/capacity row, keep unverified exact-category dates null",
+      "Retain old equipment/fee clocks and dollar/temporal/tax/hold distinctions",
+      "Run synthetic changed-capacity/entity/amount/unit/tax/kitchen/charge and script-only regressions",
+      "Inspect native two-source journal and source-date-hash-basis joined six-candidate queue",
+      "Preserve public model/CSV/fact dates and route exact-family quote/semantic/weekly gaps separately"
+    ],
+    "result": "PARTIAL: six source-bound text candidates captured, not verified semantic delta, selected party acceptance or full current stay cost.",
+    "desktop_mobile_keyboard": "Not applicable to tools/watch/evidence-only change; public UI and existing CLI controls unchanged. Native focused/full QA covers parsers, journals and output contracts; no page-walkthrough claimed."
+  },
+  "invariants": {
+    "public_pages_unchanged": true,
+    "shared_hotel_models_csv_unchanged": true,
+    "all_older_watches_hosts_unchanged": true,
+    "original_fact_price_review_clocks_unchanged": true,
+    "immutable155_156_157_unchanged": true,
+    "source_holds_unchanged": true,
+    "weekly_baseline_due_operator_scheduler_unchanged": true,
+    "new_paid_calls": 0,
+    "new_llm_service": false,
+    "new_automation": false
+  },
+  "learning": {
+    "hypothesis": "Source hash changes suffice to maintain exact room and fee decisions",
+    "result": "REJECT; IMPLEMENT six explicit source-bound candidates with null exact-category verified dates and old equipment/fee clocks. Native6present does not validate semantics or current quote.",
+    "confidence": "High observed fixture/provenance accounting; real change precision, accepted party and maintenance capacity unmeasured.",
+    "lesson": "Category title, max occupancy and bed variant differ from a booking acceptance; nightly fees, optional parking and daily authorization require separate typed units and uncertainty.",
+    "next_falsification_trigger": "Changed title/capacity/bed-row/amount/unit/tax/negative-kitchen/authorization wording, entity mixing, missing predicate, contrary source, privacy leakage or automatic date renewal.",
+    "next_action": "Register small labeled claim-delta evaluation with navigation-noise, critical changes, wrong category/party, missing ages, stale price, denial/interruption, contradiction and source-instruction cases. Then broader source governance/full actual weekly operation; no same-day repetition or LLM service inferred."
+  }
+}
