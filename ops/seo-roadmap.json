@@ -15994,7 +15994,7 @@
       "id": "FT-RES-165",
       "title": "Qualify independent official weather data for existing family backup decisions",
       "kind": "research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-14",
       "started_at": "2026-10-14T11:06:53.999Z",
       "target_paths": [
@@ -16021,7 +16021,55 @@
       "evidence_record": "docs/research/nws-source-qualification-2026-10-14.json",
       "decision": "CANDIDATE_EXPLICIT_API_ADAPTER for existing San Antonio near-departure weather check. Current primary API/use/attribution documentation supports independent structured-data source qualification under published conditions, not native access, legal assurance or HTML scrape permission. Reject weekly-only forecast cache; exact schema/location/cache/expiry adapter and live access untested. Three docs opened/two searchqueries/underlyingHTTPunknown; no forecast/spec/native/model/paid/contact/publicdate renewal. No new URL/demand transfer or global/two-week proof.",
       "next_gate": "Next eligible actualrun after reviewed docs release: register exact API-specific point/forecast scope, current OpenAPI/access/cache/expiry audit, deterministic null/unit/date/location controls and different read-only review before bounded native pilot. Keep original three holds and HTML guard unchanged; no deniedretry/alternativehost/sourceownercontact. Public display is a separate task/desktop-mobile-keyboard/review/production gate; large expansion remains maintenance-first.",
-      "review_receipt": "FT-RES-165 Meitner01a13a1b-661c-7711-a3dc-19f6c7d71c53 independent STRICTREADONLY cycle1PASS/no P0-P3 for frozenIIfrqG reviewabab5fbdf9a3031af2f0302263e4209d4509d197a6c5216ab09c7ce4f9756140. Exact8/candidate1093/clean1090/362olderordered/held11/sixnonownedheldexcluded-livepreserved/LRN256-only/oldtools-publicmodelsCSV-sourceclocks-holds-registry-operatorweekly-scheduler verified; proofa259b5a5cd85cd58da90be099a2ef1cc122c7557d0a6bf5ec1ea6790366fd229. Independent5purePASS; supplied Master1102full48maintenance/stateSEO0/GSC92/sixpriorwarnings QAlogf6ecb9d5806c636f6b6fe6af3f01bb8b53efa7e94c0109a58a23755bfa611919 independentlyhashed/read. Current primarydocumentation qualified candidate, not nativeAPI/HTMLapproval/legal/global/weeklyfreshness. Exactschema/nativeaccess/cacheexpiry untested. No writes/temp/network/browser/Gitmutations/scheduler/delegation. Only immutable mechanical consensus appended; exact8 guarded docs release pending."
+      "review_receipt": "FT-RES-165 Meitner01a13a1b-661c-7711-a3dc-19f6c7d71c53 independent STRICTREADONLY cycle1PASS/no P0-P3 for frozenIIfrqG reviewabab5fbdf9a3031af2f0302263e4209d4509d197a6c5216ab09c7ce4f9756140. Exact8/candidate1093/clean1090/362olderordered/held11/sixnonownedheldexcluded-livepreserved/LRN256-only/oldtools-publicmodelsCSV-sourceclocks-holds-registry-operatorweekly-scheduler verified; proofa259b5a5cd85cd58da90be099a2ef1cc122c7557d0a6bf5ec1ea6790366fd229. Independent5purePASS; supplied Master1102full48maintenance/stateSEO0/GSC92/sixpriorwarnings QAlogf6ecb9d5806c636f6b6fe6af3f01bb8b53efa7e94c0109a58a23755bfa611919 independentlyhashed/read. Current primarydocumentation qualified candidate, not nativeAPI/HTMLapproval/legal/global/weeklyfreshness. Exactschema/nativeaccess/cacheexpiry untested. No writes/temp/network/browser/Gitmutations/scheduler/delegation. Only immutable mechanical consensus appended; exact8 guarded docs release pending.",
+      "release_receipt": "FT-RES-165 release dcbd586d3a74b39f28537ab36006f427baaf1465 remote verified 2026-10-14T11:15:36.116Z; main0-0/emptyindex/exact8/all1093indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only current primary NWS source qualification remoteverified docs/test, not publicpage or productionfact refresh.1102full5focused48maintenance/stateSEO0/GSC92/sixpriorwarnings/differentMeitnerPASS. Exact8/1093indexhash-modes/362olderordered/all11heldmapping/LRN256-only/nonowned-oldtools-publicmodelsCSV-holds-registry-policyclocks-operatorweekly-scheduler preserved. API source candidate under published conditions, no HTMLapproval/legalassurance/nativeaccess/globalcoverage/weeklyfreshness claim. REJECT weekly-only forecast cache; no actualforecast/spec/native/model/paid/contact/bodyarchive requests. Next registered API-specific schema/location/access/cache/expiry adapter and independentreview before bounded nativepilot; originalthreeholds, broadervolume scope and twoactualweeklycycles remain separate. Docs-test-only/noPageswait/publicpagesunchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T11:15:36.132Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "dcbd586d3a74b39f28537ab36006f427baaf1465"
+    },
+    {
+      "id": "FT-IMP-166",
+      "title": "Implement and validate a bounded short-lived NWS forecast pilot",
+      "kind": "shared-evidence-tool",
+      "status": "in-progress",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-14T12:03:00.865Z",
+      "target_paths": [
+        "tools/nws-forecast-pilot.mjs",
+        "tools/nws-forecast-pilot.test.mjs",
+        "docs/plan/nws-forecast-pilot.md",
+        "docs/research/nws-forecast-pilot-2026-10-14.json",
+        "backlog/product-learning-ledger.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md"
+      ],
+      "target_urls": [],
+      "authorization": "014 fixed sprint/direct maintenance-first instruction;165 qualified current explicit NWS API data use/attribution conditions. API-specific opt-in deterministic adapter, not HTMLcollector exception. At most two native schema documentation GETs https://api.weather.gov/openapi.json; after native QA and different independent code PASS, at most one exact points GET https://api.weather.gov/points/29.4241,-98.4936 and one exact discovered bound EWX grid forecast GET with manual redirects and no retry. Stop denial/unknown/challenge; no endpoint/origin alternative. No API/model key, spending, contact or automation.",
+      "evidence": "165 current primary documented open API data and existing SanAntonio forecast-link/weather-pivot ownership; weekly-only forecast storage rejected. Need exact schema/access and tested date/unit/null/cache/location binding before livepilot. GSC Oct13finalOct11 REUSEDAPI/priorOct12finalOct10 orientation only.",
+      "acceptance_criteria": [
+        "Inspect current primary API/schema documentation within exactscope; preserve response timestamp/status/hash and HTTPheaders metadata, discard bodies after parse. Unknown/denied schema holds nativepilot. No native forecasts before independent preliminary code PASS.",
+        "Implement pure deterministic normalization and bounded sequential exactscope HTTPS requests with identifyingUA, manualredirect/timeout/size/type/cache/null/date/unit/period/gridbinding checks. No retries, no oldHTMLguard change, no publicfacts/safety/allclear or observation-as-forecast. Future refresh requires separate transaction and persisted attempted scope; no runningservice/weeklyintegration selected.",
+        "Live pilot only after focused/fullnative and different independent readonly preliminaryPASS: exactSanAntonio point once and exactdiscovered forecast once. Bindreturnedgrid and city/state/distance; preserve sourceupdate/generated/valid/retrieval/cacheexpiry separately; store only bounded metadata/normalizedtypedperiods privately or publicsafe counts/hash, never rawbody/personalcoordinates. Denied/missing/unknown result explicithold no fallback. Then final immutable evidence and independent re-review before release.",
+        "Exact9 cleanrelease/LRN257-only/363olderordered/held11/nonowned/publicpagesmodelsCSVdates/oldtools-watch-holds-governanceregistry/operatorweekly-scheduler preserved. Fullnative/state/GSC/SEO and reviewerPASS/PASS_WITH_P3; guarded tools/docs remoteverify only/noPageswait or publicserviceclaim."
+      ],
+      "measurement_plan": "Maintainer proxy for existing SanAntonio near-departure weather check: dates outsidehorizon, missingPoP, wronggrid/unit, stale/no-cache/missingexpiry, failedrequest and duplicateattempt remain unknown/held. Deterministic control coverage and exact realpilotresult not actualparents/renderedUI/SEO/globalcoverage/two-week reliability.",
+      "production_invariant": "No site/models/CSV/oldHTMLtools/watch/holds/registry/operatorweekly/scheduler mutation; no LLM/paid/outreach/sourceownercontact/retries/proxies. Atmost2schema plus afterreview1point1boundforecast, manualredirect stops. Publicfacts/dateclocks unchanged; researchmetadata only sourcebodiesdiscarded.",
+      "evidence_record": "docs/research/nws-forecast-pilot-2026-10-14.json",
+      "decision": "IMPLEMENT shared opt-in boundedNWS adapter with real12:18:38Z native1point200/EWX126,54 and1forecast200/14periods, originaljournalimmutable/rawbodiesdiscarded/private normalizedfacts/publicmetadata only. Curiecycle1PASS_WITH_P3 preliminary; P1DT corrected and final bodycompletion timestamp regression without native retry.11focused9pureincluding1offlineactualmetadata/2fakejournalPASS. Sourceupdate/generated/period/retrieval/expiry distinct, forecast expires13:03:12Z atcapture notcurrentweather/allclear/publicdate or fullweekly/globalproof. FinalfullQA/re-review/guarded toolsrelease pending.",
+      "next_gate": "Finalfullnative/differentCurie cycle2review for frozenexact9/native immutablemetadata/P3closure -> guarded remote toolsrelease. Nexteligibleactualrun task-qualify existingSanAntonio forecast handoff and maintained request/expiry/state integration; preserve publicpage/no newURL/widget/service until actualfamilyusefulness/desktopmobilekeyboard/independentreview/production gates. No sourceholds retry; broadernumericdemand and twoactualweeklycycles unchanged.",
+      "schema_scope_amendment": {
+        "registered_at": "2026-10-14T12:05:00.201Z",
+        "prior_request": "2026-10-14T12:03:26.857Z",
+        "prior_http_status": 200,
+        "reason": "Initial successful transient schema capture selected legacy generic forecast names; current3.12.2 names Gridpoint12hForecast/Period discovered but required definitions not retained. One additional exactsame documentation endpoint request for these known definitions, no denial retry/alternative endpoint; preserve first immutable journal and do not claim complete schema inspection from first result.",
+        "maximum_schema_requests": 2,
+        "remaining_schema_requests": 1,
+        "forecast_requests_before_review": 0
+      },
+      "preliminary_review_receipt": "Curie01a13a54-dfa1-7f51-8412-cd87133bf615 cycle1PASS_WITH_P3/no P0-P2 for frozenjxargz manifest5090a68eea9b89ecc469501a959aa3e3c436d1d6b3fd7396aa29e8c6b7eaf909; pure7PASS/full1111/48maintenance/stateSEO0/GSC92/sixpriorwarnings logb6165da49b58ca22b798cb925b86ecc6f89c3fad457f353c66bf415adaf4f795 inspected/hashed; exact9/1097candidate1093clean/363olderordered/held11/LRN257-only/allprotected preservation verified. P3 invalid durationP1DT accepted; fix after nativepilot beforefinalreview. Gatepasses registered boundednativepilot ONLY using frozenapprovedcode, not release/publication.",
+      "review_receipt": "FT-IMP-166 Curie01a13a54-dfa1-7f51-8412-cd87133bf615 finalcycle2PASS/no P0-P3 for frozenBLEdeo manifestbbfa331143135f8f0829be0227a9504cdbf08413e7ba8f57fb7e1b52de857ad9. Cycle1P3P1DTclosed; postbody-clockregression verified, originalapprovednativeheader-time limitation preserved. Independent9purePASS; full1113/48maintenance/stateSEO0/GSC92/sixpriorwarnings logc63fe2e89b1e1ad30b4a30dd7396cdfd8c345b2b22e9f531fab6967aca3ac564 inspected/hashed. Native originalreport7724486404eaa8c8311681f494baf3c5e60e849739cc7e696cee28676be63b02 immutable, exact1point200/EWX126,54+1forecast200/14periods/publicmetadata/no secondpilot/currentweather claim. Exact9/1097candidate1093clean/363olderordered/all11heldLIVEpreserved/sixnonowned exclusions/LRN257-only/publicassetsmodelsCSVfacts-oldtools-watch-holds-registry-operatorweekly-scheduler verified; prooffb4b2870db39610c043d68186c856e83f3c65778c5d446532422331aa8f1c9ed. STRICTreadonly/no writes/temp/network/browser/journal/otherQA/Gitmutations/scheduler/delegation. Only immutable mechanical consensus appended; guarded tools/docs remote release pending, publicdisplay/maintainedintegration/weeklyglobal unqualified."
     }
   ]
 }

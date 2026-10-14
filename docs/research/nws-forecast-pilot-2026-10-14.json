@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-166",
+  "learning_id": "LRN-257",
+  "observed_on": "2026-10-14",
+  "evidence_class": "CURRENT_NATIVE_SCHEMA_AND_BOUNDED_NATIVE_API_PILOT_PLUS_SYNTHETIC_CONTROLS",
+  "family_decision": "Preserve the existing San Antonio itinerary's indoor/weather pivot while keeping a near-departure forecast short-lived and unknown on failed or expired data.",
+  "hypothesis": "A deterministic exact-scope API adapter can preserve source/grid/time/unit/null provenance and fail closed without changing public facts or adding an LLM/service.",
+  "primary_sources": [
+    {
+      "url": "https://www.weather.gov/documentation/services-web-api",
+      "checked_on": "2026-10-14",
+      "method": "web reader",
+      "native_http_status": null,
+      "summary": "Current API documentation supports identified requests, open API data, cache-friendly delivery and coordinate-to-grid forecast discovery; no rate-limit number inferred."
+    },
+    {
+      "url": "https://api.weather.gov/openapi.json",
+      "checked_on": "2026-10-14",
+      "method": "two registered native schema documentation GETs",
+      "http_statuses": [
+        200,
+        200
+      ],
+      "started_at": [
+        "2026-10-14T12:03:26.857Z",
+        "2026-10-14T12:05:00.278Z"
+      ],
+      "completed_at": [
+        "2026-10-14T12:03:27.287Z",
+        "2026-10-14T12:05:00.375Z"
+      ],
+      "body_sha256": "ae478b69cdac6449e3b834dca636300f830dde552ac6abc180b1d5e82e2f1d35",
+      "bytes_each": 122897,
+      "openapi": "3.1.2",
+      "api_version": "3.12.2",
+      "body_archives_retained": false,
+      "inspected_definitions": [
+        "Point",
+        "PointGeoJson",
+        "RelativeLocation",
+        "RelativeLocationGeoJson",
+        "Gridpoint12hForecast",
+        "Gridpoint12hForecastPeriod",
+        "Gridpoint12hForecastGeoJson",
+        "GridpointForecastUnits",
+        "QuantitativeValue"
+      ],
+      "capture_gap": "First successful capture used legacy generic forecast names and omitted current12h definitions. Current names were learned; scope amendment registered before one additional exactsame documentation request, preserving first immutable journal. Not a denied-access retry or a new origin.",
+      "field_result": "Current definitions distinguish generatedAt/updateTime/validTimes/periods; temperature supports integer or QuantitativeValue and separate deprecated F/C unit; probabilityOfPrecipitation is QuantitativeValue. Units/nulls/dates are checked conservatively, not a complete OpenAPI validator."
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "checked_on": "2026-10-14",
+      "method": "web reader",
+      "native_http_status": null,
+      "published_on": "2022-06",
+      "summary": "Private pilot expiry accounts for Date, Age and response delay; conflicting/invalid explicit validity is held. No heuristic or stale cache serving is implemented; not a full RFC-compliant cache service."
+    }
+  ],
+  "source_policy_basis": "165 current NWS explicit API data use and attribution qualification; same public API, no original held source recovery and no HTML robots approval inferred.",
+  "request_accounting": {
+    "native_schema_requests": 2,
+    "native_point_requests": 1,
+    "native_forecast_requests": 1,
+    "web_document_opens": 2,
+    "underlying_web_http_requests": null,
+    "llm_calls": 0,
+    "paid_calls": 0,
+    "source_owner_contacts": 0,
+    "body_archives_retained": false
+  },
+  "native_pilot": {
+    "state": "COMPLETED_ONE_POINT_AND_ONE_FORECAST; FINAL_REVIEW_RELEASE_PENDING",
+    "scope": "Exact registered publicSanAntonio point and discovered EWX126,54 forecast; approvedcycle1 frozen code, no redirects/retries/extra sources",
+    "requests": 2,
+    "started_at": "2026-10-14T12:18:38.030Z",
+    "completed_at": "2026-10-14T12:18:38.133Z",
+    "preliminary_review": {
+      "reviewer": "Curie",
+      "reviewer_id": "01a13a54-dfa1-7f51-8412-cd87133bf615",
+      "cycle": 1,
+      "decision": "PASS_WITH_P3",
+      "manifest_sha256": "5090a68eea9b89ecc469501a959aa3e3c436d1d6b3fd7396aa29e8c6b7eaf909"
+    },
+    "private_report_sha256": "7724486404eaa8c8311681f494baf3c5e60e849739cc7e696cee28676be63b02",
+    "packets": [
+      {
+        "url": "https://api.weather.gov/points/29.4241,-98.4936",
+        "started_at": "2026-10-14T12:18:38.031Z",
+        "retrieved_at": "2026-10-14T12:18:38.114Z",
+        "http_status": 200,
+        "body_retained": false,
+        "headers": {
+          "date": "Wed, 14 Oct 2026 12:18:38 GMT",
+          "age": null,
+          "cache-control": "public, max-age=63162, s-maxage=86400",
+          "expires": "Thu, 15 Oct 2026 05:51:20 GMT",
+          "etag": null,
+          "last-modified": null
+        },
+        "state": "parsed-candidate",
+        "bytes": 3924,
+        "body_sha256": "291d30d07869e12df4dcafc3ce7d93ff137f36a4c0674fedcbb7c085fdf06908",
+        "normalized": {
+          "grid_id": "EWX",
+          "grid_x": 126,
+          "grid_y": 54,
+          "source_generated_at": null,
+          "source_updated_at": null,
+          "retrieved_at": "2026-10-14T12:18:38.114Z",
+          "expires_at": "2026-10-14T18:18:38.114Z",
+          "period_count": null,
+          "null_rain_periods": null,
+          "temperature_units": null
+        }
+      },
+      {
+        "url": "https://api.weather.gov/gridpoints/EWX/126,54/forecast",
+        "started_at": "2026-10-14T12:18:38.116Z",
+        "retrieved_at": "2026-10-14T12:18:38.132Z",
+        "http_status": 200,
+        "body_retained": false,
+        "headers": {
+          "date": "Wed, 14 Oct 2026 12:18:38 GMT",
+          "age": null,
+          "cache-control": "public, max-age=2674, s-maxage=3600",
+          "expires": "Wed, 14 Oct 2026 13:03:12 GMT",
+          "etag": null,
+          "last-modified": "Wed, 14 Oct 2026 11:46:19 GMT"
+        },
+        "state": "parsed-candidate",
+        "bytes": 13848,
+        "body_sha256": "70bb3569396abb0712394a37e992d4883858253293c763c5fc22daa9a3d6d6bf",
+        "normalized": {
+          "grid_id": "EWX",
+          "grid_x": 126,
+          "grid_y": 54,
+          "source_generated_at": "2026-10-14T12:03:12+00:00",
+          "source_updated_at": "2026-10-14T11:46:19+00:00",
+          "retrieved_at": "2026-10-14T12:18:38.132Z",
+          "expires_at": "2026-10-14T13:03:12.000Z",
+          "period_count": 14,
+          "null_rain_periods": 0,
+          "temperature_units": [
+            "F"
+          ]
+        }
+      }
+    ],
+    "at_capture_lookup": "forecast-candidate-not-actual-weather",
+    "expiry_lookup": "unknown-or-expired",
+    "lookup_is_typed_record_replay_not_network": true,
+    "source_facts_published": false,
+    "weekly_baseline_advanced": false,
+    "raw_body_archives_retained": false,
+    "normalized_private_facts_retained": true,
+    "clock_limitation": "Cycle1 approved native collector recorded successful retrieved_at at responseheaders before body consumption. Original captured journal is unchanged. Final code measures after body consumption, validated by added fake-clock regression without another native request.",
+    "public_current_forecast_claim": false
+  },
+  "synthetic_controls": {
+    "initial_run": "8/9 passed; fake Response headers serialized null Age as the string null, causing the journal fixture to hold. Corrected fake-header construction, not a relaxed parser or native retry.",
+    "focused_pass": 11,
+    "pure_controls": 9,
+    "disposable_journal_controls": 2,
+    "transport": "FAKE_RESPONSE_ONLY",
+    "result": "PASS",
+    "not_native_access_proof": true,
+    "review_correction": "Cycle1 P3 invalid P1DT duration accepted; final code requires time component after T and added rejection assertion. Added end-of-body retrieval clock regression and conservative response-delay expiry check. Native captured validTimes P7DT20H is unaffected; no native retry.",
+    "offline_real_metadata_controls": 1
+  },
+  "adapter_limits": [
+    "Fixed downtown SanAntonio public coordinate only; no visitor-location or global source coverage",
+    "Trusted Master supplies review/scope metadata; not source authenticity, permission service or sandbox",
+    "Conservative JSON subset, bounded ISO interval subset and six-hour source-update cap; unsupported variants hold",
+    "Private explicit cache-validity subset, not conditional/shared/general HTTP caching",
+    "New private directory refuses same-journal replay; operator must not create another to evade held/unknown history",
+    "Exclusive process-level start/result files, no fsync/power-loss/distributed-atomicity guarantee",
+    "Normalized private predictions are not actual conditions, venue operations, suitability, hazard assessment or public release"
+  ],
+  "maintainer_proxy": {
+    "actual_parents": false,
+    "rendered_ui_tested": false,
+    "steps": [
+      "Inspect current API/schema definitions and record first capture gap",
+      "Bind fixed point/relative location/grid/URL",
+      "Keep generated/update/retrieval/period clocks separate",
+      "Preserve null probability and temperature units",
+      "Reject invalid cache validity and expire old predictions",
+      "Stop failed/redirected/unknown transport and preserve exclusive attempt evidence",
+      "Observe actual onepoint200/oneforecast200/14periods, replay typed-record atcapture and atexpiry without network, fix P3 and request final different independentreview before toolsrelease"
+    ],
+    "result": "BOUNDED_NATIVE_API_PILOT_AND_TYPED_EXPIRY_REPLAY_PASS; public usefulness/fullweekly/global operation untested"
+  },
+  "research_disposition": "IMPLEMENT opt-in bounded evidence adapter with one real nativepilot; final independent review/release remains required",
+  "confidence": "High for inspected schema, exact two native retrievals and controlled parsing/expiry behavior. One city/one captured forecast is not full-schema, global coverage, public usefulness or operational reliability proof.",
+  "reusable_lesson": "A source's open-data policy and successful schema GET do not prove a working forecast adapter. Observe exact variants, preserve failures and qualify live access separately; field expiry is independent of weekly page maintenance.",
+  "falsification_trigger": "Wrong location/grid or source dates admitted; null becomes zero/dry; explicit expiry ignored; duplicate or missing attempt is replayed; source instruction executes; predictions become safety or published facts; original source holds or public verification clocks change.",
+  "unchanged": {
+    "public_pages_models_csv_fact_dates": true,
+    "old_tools_watch_holds_governance_registry": true,
+    "weekly_october7_baseline": true,
+    "operator_scheduler_fixed_sprint": true,
+    "broader_paid_scope_pending": true,
+    "two_actual_weekly_cycles_unproven": true
+  }
+}
