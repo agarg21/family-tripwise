@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-174",
+  "learning_id": "LRN-264",
+  "observed_on": "2026-10-15",
+  "hypothesis": "A newly located primary infant rule or ordinary ticket handoff may resolve the standard individual-admission gap without borrowing another product's terms.",
+  "task": {"traveler_ages":[30,35,1,13],"party_size":4,"as_of":"2026-10-15","visit_date":"2026-10-20","tariff":"science-center","standard_family_subtotal_cents":null},
+  "group_source": {
+    "url":"https://www.osc.org/visit/groups/",
+    "evidence_class":"OFFICIAL_PUBLISHED_GROUP_POLICY",
+    "inspected_on":"2026-10-15",
+    "publication_date":null,
+    "minimum_group_size":15,
+    "majority_adult_group_required":true,
+    "under_two_complimentary_within_this_group_page":true,
+    "individual_admission_applicability_established":false,
+    "result":"REJECT_SCOPE_TRANSFER"
+  },
+  "secondary_screen": {"url":"https://artsinorlando.com/event/mission-astronaut/","basis":"Search result, not a reopened current primary tariff","event_end":"2026-05-03","expired_label_visible":true,"result":"REJECT_EXPIRED_EVENT_AS_CURRENT_INDIVIDUAL_PRICE"},
+  "ticket_handoff": {
+    "discovered_from":"https://www.osc.org/visit/",
+    "clean_requested_url":"https://my.osc.org/overview/ga27",
+    "navigation":"Ordinary General Admission Tickets link, then its reader-exposed iframe link; no ticket/date/cart selection or submitted form",
+    "result":"SECURITY_CHALLENGE_NO_TICKET_FACTS",
+    "provider_http_status":null,
+    "inventory_status":"unknown",
+    "infant_price":null,
+    "private_challenge_query_retained":false,
+    "raw_body_retained":false,
+    "retry_performed":false,
+    "challenge_interaction_performed":false,
+    "owner":"normal permitted ticket-provider/reader access; Master retains evidence scope",
+    "unblock":"Documented changed permitted ordinary access, or separately readable current individual-admission infant terms",
+    "next_check":"Only at that named trigger; no challenge retry, alternate tool/browser/origin, security-setting change or provider contact"
+  },
+  "decision":"PRESERVE_INDIVIDUAL_INFANT_PRICE_UNKNOWN",
+  "confidence":"High for the inspected group scope and reader challenge outcome; unknown individual infant charge, acceptance, selected-date inventory or complete cost.",
+  "lesson":"A primary publisher's free-infant statement still needs product and party applicability; an inaccessible ticket handoff cannot establish zero or sold-out inventory.",
+  "limits":["Two targeted search queries, one new group-body open and two ordinary reader clicks; no native HTTP/paid/model call, booking/account/contact or external mutation.","No challenge URL query, IP, incident id, token, body, identity or copied review retained.","Existing172 rates/checked dates and173 candidate remain unchanged; its browser hold is independent and was not retried.","No new UI/parent/SEO/family-fit evidence, fact renewal, public page, CSV or current family quote."]
+}
