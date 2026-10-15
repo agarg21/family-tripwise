@@ -1,13 +1,17 @@
 # Current Operating Cycle
 
+FT-IMP-172 Linnaeus01a13f46-ce9f-7803-ac9d-024db80eedd9 strict read-only PASS/noP0-P3 on pejtOb manifestc6eb736852e1ce49e612810f1959eaa70a64062556c7c838c5c34dfaf002d979. Independent13focused plus age0-120/invalid/sparse/date/default/party probes PASS. Master1159full50maintenance/stateSEO0/GSC93/sixexistingwarnings log73aaea93c9eedea6821449c6fb7bbff76eff5eef8fb6995e9cedd60d220a457a inspected, not independently rerun. Exact11/371olderordered/1104nonownedLIVE bytes-modes/all79sitefiles/oldmodel exports/heldledger-tail verified. Source provenance assessed from supplied records without network replay. Seven standard-admission choices, five calculable exact-age tariffs and2unpriced; fees/concessions/source-specific dates/unknown infant and totalday costs retained. Shared engine and CLI only; no public form/UI/parent/SEO/production proof. No writes/Git mutation/network/browser/scheduler/agents. Only immutable consensus appended; exact shared-tool release next.
+
+FT-OPS-016 release 226befe51356d2ce82ce6fabdba4d7b51e1afec7 remote verified 2026-10-15T11:09:09.840Z; main0-0/emptyindex/exact6/all1111indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Administrative current-state repair and32KiB regression guard delivered; HuygensPASS/1146full50maintenance9focused/stateSEO0/GSC93/sixexistingwarnings. Not new family research, publicpage or productionfact validation. All370olderordered and seven inherited nonowned dirty paths preserved; active014fixedexpiry/normalbrowserhold/source clocks/weekly/scheduler unchanged. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.
+
 FT-OPS-016 Huygens01a13f3d-0f59-7cf1-8779-d27f20180b4c read-only PASS/noP0-P2 on QryKmy manifest8f0a782378735a63be8e7103c9eda034f3e82f2e02a6b1a7d115bc959f3a3472. Exact6/370olderordered/1105nonownedLIVE bytes-modes/seven intentional clean-HEAD candidate exclusions verified. Current-cycle5970bytes from899820;32KiB guard/read-only assertions pass. Master1146full/50maintenance/9focused/stateSEO0/GSC93/sixexistingwarnings final log3c614ba23e958a1456f99fb6f06a52d690c1a50be1358864d5aa6d783f75bd84 inspected, fixture tests not independently executed. Fixed014window/holds/source-public clocks/weekly/scheduler unchanged. Administrative repair only, no family research/public delivery/production validation. Only immutable consensus appended; exact-path release next.
 
-Updated: 2026-10-15, 07:04 America/New_York. Current decision: FT-OPS-016 repairs overloaded operator state after the user's report of repeated sprint no-ops. This repair is operational work, not a new public improvement.
+Updated: 2026-10-15, 07:11 America/New_York. Current decision: FT-IMP-172 implements age-specific Orlando admission arithmetic as a shared product/data tool. FT-OPS-016's reviewed operational repair is complete; neither is a new public-page release.
 
 ## Active Window
 
 - FT-OPS-014 remains active through October15 at21:47:33EDT (2026-10-16T01:47:33Z). This is the original fixed72-hour window, not an extension or restart.
-- Up to three sequential finish-first transactions per actual run; stop starting actions45minutes after actual run start or at sprint expiry, whichever comes first. Current run began2026-10-15T11:00:21Z; start deadline11:45:21Z.
+- Up to three sequential finish-first transactions per actual run; stop starting actions45minutes after actual run start or at sprint expiry, whichever comes first. Current heartbeat began2026-10-15T11:09:59Z; start deadline11:54:59Z.
 - Daily learning is a minimum, not a stopping condition. LRN262 satisfies October15's minimum; it does not justify another no-op while independent qualified work exists.
 - At expiry, restore only the existing automation from the exact baseline in `ops/operator.json.active_sprint.restoration` and `/tmp/ft-ops014-automation-baseline.toml`, verify saved fields, and return without project work. Global cutoff November13 at17:00 America/New_York still takes precedence.
 
@@ -20,15 +24,13 @@ Updated: 2026-10-15, 07:04 America/New_York. Current decision: FT-OPS-016 repair
 
 ## Current Decision
 
-FT-OPS-016 replaces899820bytes/2556lines of accumulated cycle history with this current summary and adds a32KiB native QA guard. Exact six registered paths are in `ops/seo-roadmap.json`. Focused/full QA and different read-only review precede guarded release. Older roadmap items, held ledger changes and six unrelated dirty documents remain preserved and excluded.
-
-This addresses stale-state selection, not the whole productivity problem. Do not count administrative repair, repeated checks or additional framework layers as family-facing delivery.
+FT-IMP-172: the Orlando comparison's fixed two-adult/ages3,10 example cannot calculate another family's published admission. Five primary tariff bodies inspectedOctober15 support a pure age-specific cents calculator and offline CLI. Seven choices retain product/channel/source/fee context; infant pricing at ScienceCenter, SEA LIFE's standalone party price and LakeEola's complete cost stay unknown. Standard rates exclude conditional concessions and promotions; no lowest-cost or admission/suitability claim. Exact11 paths/full native QA/different read-only review/guarded shared-tool release required. Original public/source/review dates and every site byte stay unchanged; a public form is not delivered by this transaction.
 
 ## Next Work
 
-1. Finish this registered repair through QA, independent review and exact-path release.
-2. Revalidate FT-RES-076's remaining Cancun toddler-care decision against its child records before selecting collection. FT-RES-137 already tested billing; FT-RES-146 already tested the official bedding brochure and requires changed explicit specifications. Neither is work to repeat. An independently readable applicable selected-care unit/minimum/slot policy is a remaining gate; implement in the existing owner only when evidence qualifies it, retaining original prices/dates and unknowns.
-3. If that decision has no actionable gap or depends on a held source, select another independent qualified existing-page or evidence-data task. Research must resolve a named remaining gate; do not produce another broad cluster report or identical Miami source audit.
+1. Finish FT-IMP-172's reusable admission engine and CLI through focused/full native QA, independent review and exact-path release. Test changed2/13 ages, infant unknowns, original3/10 parity, stale evidence and explicit fee exclusions.
+2. Integrate this supported engine into the existing Orlando comparison in a separately registered affected-page transaction once required normal rendered access is documented changed. No-JS examples and source dates remain intact; desktop/mobile/keyboard and independent review are still release gates.
+3. Cancun FT-RES-076 child records137/146 remain evidence-triggered holds, not another identical source audit. Select independent qualified existing-page/data work if its distinct selected-care gate has no new readable evidence. No broad report or extra framework quota.
 
 Preparation of a supported candidate and native QA can proceed independently; a public candidate remains unshipped until its required rendered task checks and independent release review pass. Do not weaken those gates or deploy to obtain a preview.
 

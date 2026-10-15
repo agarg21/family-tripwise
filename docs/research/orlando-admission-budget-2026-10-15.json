@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-172",
+  "learning_id": "LRN-263",
+  "observed_on": "2026-10-15",
+  "family_decision": "Calculate standard published admission for each exact traveler age rather than reuse the page's fixed ages3/10 example.",
+  "sources": [
+    {"url":"https://www.osc.org/visit/","evidence_class":"OFFICIAL_PROPERTY_FACT","inspected_on":"2026-10-15","result":"Online standard youth2-12 USD22, teen13-17 USD27, adult18+ USD29. Under-two price absent from inspected table. Separate senior/member/other concessions are not applied. Parking and fees remain separate.","publication_date":null},
+    {"url":"https://www.crayolaexperience.com/orlando/plan-your-visit/faqs","evidence_class":"OFFICIAL_PROPERTY_FACT","inspected_on":"2026-10-15","result":"Standard USD30.99 plus tax per paying guest; ages2andunder free. Senior65+ requires ID at counter; online advance discount separate. This tool uses standard undiscounted rate, not lowest eligible price.","publication_date":null},
+    {"url":"https://www.mennellomuseum.org/About/Visitor-Information","evidence_class":"OFFICIAL_PROPERTY_FACT","inspected_on":"2026-10-15","result":"Adult USD8, child6-17 USD3, under6 free. Conditional concessions excluded. Old holiday paragraph is not a current operating calendar; tariff check does not validate hours or availability.","publication_date":null},
+    {"url":"https://www.leugardens.org/Visit/Admission-Hours","evidence_class":"OFFICIAL_PROPERTY_FACT","inspected_on":"2026-10-15","result":"Regular adult USD15, child4-17 USD10, under4 free. Special events, free days, memberships and conditional concessions not applied. Historic-house closure remains separate from garden admission.","publication_date":null},
+    {"url":"https://www.gatorland.com/plan-your-visit/hours-and-prices/","evidence_class":"OFFICIAL_PROPERTY_FACT","inspected_on":"2026-10-15","result":"Standard day-pass13+ USD34.99, ages3-12 USD24.99, under3 free. Senior-counter ID concession and online discount not applied; packages and annual passes are separate.","publication_date":null}
+  ],
+  "method": "Five ordinary web-reader primary opens, then same-body targeted finds/references. Five distinct primary URLs; no native HTTP, browser, booking, contact, paid or model API call. No copied source bodies, identities or review text retained.",
+  "review_audit": "No new family-fit judgment. Existing October13 review signals remain limited: ScienceCenter two opposing exposed excerpts; Crayola four publisher-selected positive excerpts, not representative. Direct review bodies remain held after throttling and were not retried. No rates are attributed to those reviews.",
+  "hypothesis": "Exact child ages can be routed through source-specific standard ticket bands without promoting admission arithmetic into a complete day budget.",
+  "result": "IMPLEMENT_NOW_SHARED_ENGINE_AND_CLI",
+  "tasks": [
+    {"id":"ORL-B1","ages":[30,35,2,13],"as_of":"2026-10-15","visit_date":"2026-10-20","expected_usd_subtotals":{"science-center":107,"crayola":92.97,"mennello":19,"leu":40,"gatorland":104.97,"sea-life":null,"lake-eola":null}},
+    {"id":"ORL-B2","ages":[30,35,1,13],"expected":"ScienceCenter whole-party subtotal null due to unmapped infant; no missing-band free inference."},
+    {"id":"ORL-B3","ages":[30,35,3,10],"expected":"Five numeric subtotals exactly equal existing maintained examples; generated HTML remains byte-identical."}
+  ],
+  "limits": [
+    "CLI/logic proxies, not rendered desktop/mobile/keyboard checks or actual-parent testing.",
+    "No chosen-date availability, admission acceptance, cheapest eligible ticket, complete fees/day cost, safety or suitability claim.",
+    "Known standard admission subtotal retains tax/fee uncertainty; missing age makes the whole-party subtotal null. Known explicit free bands remain zero only for that named tariff.",
+    "New structured tariff check dates are October15 for the five inspected bodies, not a renewal of October13 public facts, other fields, review dates or original prototypes.",
+    "ScienceCenter under-two rate not established. SEA LIFE standalone family rate and LakeEola complete cost remain unpriced from their original October13 records; neither source re-opened here.",
+    "No new public form/page/URL/CSV, browser retry, provider-hold recovery, external mutation, paid scope, weekly audit or scheduler change."
+  ],
+  "next_gate": "Focused/full native QA, different read-only PASS, exact-path shared-tool release; then a separately registered public integration after documented changed normal rendered access, with desktop/mobile/keyboard and production gates."
+}

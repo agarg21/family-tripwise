@@ -38,6 +38,25 @@ export const activities = [
   {id:"gatorland",name:"Gatorland",role:"Animal exhibits / South Orange Blossom Trail",weather:"Outdoor-led outing, not an indoor fallback",age:"13+ adult ticket USD34.99; ages3-12 USD24.99; under3 free.",price:"Example USD119.96 day-pass admission. Tax/transaction-fee inclusion not established; optional experiences extra.",budget:119.96,time:"Check show schedule before choosing your time block",blocker:"Do not assume zipline or other add-ons are included or suitable for your party.",detail:"Operator lists daily10am-5pm and an online discount, not a checked date-specific family quote. Outside food and coolers restricted; assess weather and your own child needs.",sourceIds:["gator","gatorRules"],duration:null,returnRule:null,meal:null},
   {id:"lake-eola",name:"Lake Eola Park",role:"Playground / downtown outdoor break",weather:"Outdoor park, not a rain backup",age:"City lists playground areas for2-5 and5-12; that is not an all-ages enjoyment guarantee.",price:"No park entry price listed in inspected city page; parking, boat rental and purchases separate. Complete cost unknown.",budget:null,time:"Self-chosen short park stop; no minimum visit asserted",blocker:"Swan boats listed closed Mondays, unlike the park itself.",detail:"City page lists a paved0.9mile lake circuit, playgrounds and restrooms. You need not complete the circuit. No exact stroller route or weather/safety assurance is made.",sourceIds:["lake"],duration:null,returnRule:null,meal:null}
 ];
+// Standard tariffs only; conditional concessions and advertised packages are separate products.
+const band = (label, minimumAge, maximumAge, cents) => ({ label, minimumAge, maximumAge, cents });
+const admissionBasis = {
+  "science-center": {sourceId:"osc",channel:"online general admission",bands:[band("Youth",2,12,2200),band("Teen",13,17,2700),band("Standard adult",18,null,2900)],unknownReason:"Under-two pricing was not established in the inspected admission table."},
+  crayola: {sourceId:"crayola",channel:"standard full admission",bands:[band("Under three",0,2,0),band("Standard admission",3,null,3099)],taxAndFeeStatus:"Tax is additional; final transaction fees unknown."},
+  "sea-life": {sourceId:"sea",channel:"unpriced standalone admission",bands:[],unknownReason:"The adult advertised floor belongs to a package; standalone age-specific family prices are not established."},
+  mennello: {sourceId:"mennello",channel:"standard museum admission",bands:[band("Under six",0,5,0),band("Child",6,17,300),band("Standard adult",18,null,800)]},
+  leu: {sourceId:"leu",channel:"regular daytime general admission",bands:[band("Under four",0,3,0),band("Child",4,17,1000),band("Standard adult",18,null,1500)]},
+  gatorland: {sourceId:"gator",channel:"standard day pass before online discount",bands:[band("Under three",0,2,0),band("Child",3,12,2499),band("Standard adult ticket",13,null,3499)]},
+  "lake-eola": {sourceId:"lake",channel:"unpriced park visit",bands:[],unknownReason:"No entry price was listed in the inspected city page; missing price is not a zero-cost day."}
+};
+export const admissionTariffs = activities.map(record => {
+  const basis = admissionBasis[record.id], inspected = basis.bands.length ? "2026-10-15" : checkedOn;
+  return {id:record.id,name:record.name,currency:"USD",product:"Single-visit standard admission",channel:basis.channel,
+    checkedOn:inspected,recheckOn:basis.bands.length ? "2026-10-29" : "2026-10-27",sourceUrl:sources[basis.sourceId],
+    taxAndFeeStatus:basis.taxAndFeeStatus ?? "Tax and transaction-fee inclusion unknown.",
+    exclusions:["Parking, transport, meals and optional experiences", "Senior, student, military, membership and other conditional concessions", "Online discounts, promotions, special events and annual passes"],
+    bands:basis.bands,unknownReason:basis.unknownReason ?? null};
+});
 export const reviewSignals = [
   {venue:"Orlando Science Center",url:"https://www.tripadvisor.com/AttractionProductReview-g34515-d34472127-Orlando_Science_Center_General_Admission_Ticket-Orlando_Florida.html",basis:"Search-exposed review excerpts, not a complete live review body",dates:"Written February25,2026; family visit August2026 (publication date not established)",note:"Two opposing signals: hands-on engagement and a complaint about value, exhibit condition and staffing. Neither establishes today's conditions or a representative rating."},
   {venue:"Crayola Experience",url:"https://www.tripadvisor.com/Attraction_Review-g34515-d8395010-Reviews-or80-Crayola_Experience-Orlando_Florida.html",basis:"Publisher-selected positive excerpts exposed in search; direct body throttled",dates:"Visit labels August, July, March and January2026; publication dates unavailable",note:"Four positive excerpts mention creative family engagement or time spent. Positive-selection bias prevents an overall satisfaction or crowd verdict."}
