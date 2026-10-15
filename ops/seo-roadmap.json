@@ -20,10 +20,51 @@
   ],
   "items": [
     {
+      "id": "FT-RES-175",
+      "title": "Draft a one-parent Orlando ride-supervision decision answer",
+      "kind": "community-answer-draft",
+      "status": "in_progress",
+      "selected_on": "2026-10-15",
+      "started_at": "2026-10-15T14:11:37.661Z",
+      "target_paths": [
+        "backlog/community-answer-drafts.json",
+        "tools/orlando-community-draft.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Current October13 public question asks about two park days with one adult and a10-year-old with different ride preferences. Primary Disney property/queue rules and Universal height table/USF-IOA rider guide distinguish entry, boarding and companion requirements. Sampled replies disagree on park choice and assume a queue exit; these are community hypotheses, not verified procedures. Community sidebar prohibits advertising.",
+      "acceptance_criteria": [
+        "Add only COMM-2026-002 as a public-safe paraphrased answer-first draft with source dates, non-firsthand/AI-assisted disclosure, conditional decision defaults and explicit unknown ride-specific nonrider exit/reunion. No firm suitability, safety, child-alone or staff-supervision assurance. Existing COMM001 unchanged.",
+        "Preserve posting_authorized=false, human wording review pending and omit Family Tripwise links. No posting, messages, account, ticket, browser retry or other external mutation. Different operator/park policies must not transfer; Epic not covered by USF-IOA PDF.",
+        "Focused/full native QA and different independent read-only PASS before exact7 docs-data-test release; candidate excludes173 private metadata and all held code, documents and ledger tail. Preserve374 older LIVE ordered items and all nonowned bytes/modes. Only175 plus mechanical174 completion backfill ship."
+      ],
+      "measurement_plan": "LRN265: desk task asks whether10-year-old age or a nominal ride height proves a lone parent may exit/reunite. Pass only when answer routes to exact ride confirmation and shared-ride fallback without assuming childcare. Proxy evidence, not actual parents, rendered UI, posting success or SEO gain.",
+      "production_invariant": "All79 public HEAD site files and all173 held bytes/state unchanged. No new page, public facts, hotel/price/review clocks, paid scope, weekly baseline or scheduler change. No external posting or approval demand. Current GSC reused Oct14/finalOct12 orientation only.",
+      "decision": "IMPLEMENT_NOW one validated pending answer draft, not public site delivery. Preserve unsupported queue handoff and child-alone details as unknown; reject generalized park winner and fast-line purchase before the boarding/companion decision.",
+      "next_gate": "Focused/full native QA and different read-only PASS, then isolated exact7 push. Draft stays pending human review; any future external posting needs fresh explicit authority and fresh source/rule checks.173 remains held for changed permitted rendered access.",
+      "research_dependency": {
+        "tool": "mcp__codex_apps__semrush_keyword_research({})",
+        "error_code": "no_api_units",
+        "retryable": false,
+        "gate": "FT-IMP-065 Frisco numeric demand remains unqualified",
+        "owner": "Semrush account API-unit entitlement",
+        "unblock": "Additional API units must become available before retry; no purchase or additional paid scope authorized.",
+        "next_check": "Only after documented changed API-unit entitlement; do not retry unchanged. No report ran or numeric evidence returned.",
+        "paid_request_or_purchase": false,
+        "observed_on": "2026-10-15"
+      },
+      "release_exclusions": "173 full private LIVE record and nine nonops targets remain untouched and unstaged. Build clean HEAD candidate with175 and mechanical174 completion only; preserve all older LIVE records and prior dirty evidence/ledger tail.",
+      "review_receipt": "FT-RES-175 Ptolemy01a13fe9-e1f4-7942-914f-4bb2a6b2a455 strict read-only PASS/noP0-P3 onw06C0V manifest8f1d1bfde1ddf3c6a366a59734f80784822678e830b6a7e8c6a80e7d2f00b49e. Independent13focusedPASS/processclean; Master1165full50maintenance/stateSEO0/GSC93/sixpriorwarnings log47eb07ab0fb61d5b384aeef3757f7f2cbd62dac56dd20970fee8be4ef0dfd533 inspected/hashverified, not independently rerun. Exact7/1118candidate/374olderLIVE/1116nonowned bytes-modes/all79publicHEADfiles preserved. OriginalCOMM001 unchanged; COMM002 source-scoped/AI-disclosed/nonfirsthand/privacy-safe/promotion-free/pending human review, postingfalse. Source provenance supplied/no networkreplay.173metadata/code/heldledger excluded; only175/LRN265 and mechanical174completion. No publicpage/rendered-parent-SEO/factrenewal/posting approval. No writes/network/Gitmutations byreviewer. Only immutable consensus appended; guarded isolated docs-data-test release next."
+    },
+    {
       "id": "FT-RES-174",
       "title": "Test the missing Science Center infant-price basis",
       "kind": "source-quality-research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-15",
       "started_at": "2026-10-15T13:02:34Z",
       "target_paths": [
@@ -47,7 +88,11 @@
       "decision": "PRESERVE infant standard-admission price as unknown; REJECT transfer from group terms and expired secondary event. Individual ticket handoff is now a narrow reader security hold. No public implementation is supported by these sources;173 still requires actual rendered QA.",
       "next_gate": "Focused/full native QA and different read-only PASS; isolated exact7 docs-test push. Price research next only after readable applicable individual-admission infant terms or documented changed permitted ticket access; never retry the challenge unchanged.",
       "release_exclusions": "FT-IMP-173 remains private/local and uncommitted, including its13 target paths. For shared ops paths, build174 candidate from cleanHEAD plus174 and mechanical172 completion only; preserve173's full LIVE record/state and all other older LIVE items exactly. No173 metadata or code may be staged in174.",
-      "review_receipt": "FT-RES-174 Harvey01a13fae-df4a-79b2-8de4-907812268c4a strict read-only PASS/noP0-P3 on5EtNRv manifestd60743efbf37d28f5ab5acabd1b8f2adbb70f74579f1aeb42b9a87931dc41822. Independent3focusedPASS; Master1162full50maintenance/stateSEO0/GSC93/sixexistingwarnings logedb326a8d10d5a528b92721052d54dfe7a00dfbdbaefde13463b45d219549967 inspected/hashverified, not rerun. Exact7/373olderLIVE/1115nonowned bytes-modes/372oldercandidate/79publicHEAD bytes preserved.173metadata/code excluded from release, allheld LIVE work unchanged; only174/LRN264 and mechanical172completion ship. Scope/expiredsource rejection/privacy/unknown individual price-HTTP-inventory/source clocks verified from supplied provenance, no webreplay. No writes/network/Gitmutations. Learned-only research approval, not173/public release. Only immutable consensus appended; isolated exact7 release next."
+      "review_receipt": "FT-RES-174 Harvey01a13fae-df4a-79b2-8de4-907812268c4a strict read-only PASS/noP0-P3 on5EtNRv manifestd60743efbf37d28f5ab5acabd1b8f2adbb70f74579f1aeb42b9a87931dc41822. Independent3focusedPASS; Master1162full50maintenance/stateSEO0/GSC93/sixexistingwarnings logedb326a8d10d5a528b92721052d54dfe7a00dfbdbaefde13463b45d219549967 inspected/hashverified, not rerun. Exact7/373olderLIVE/1115nonowned bytes-modes/372oldercandidate/79publicHEAD bytes preserved.173metadata/code excluded from release, allheld LIVE work unchanged; only174/LRN264 and mechanical172completion ship. Scope/expiredsource rejection/privacy/unknown individual price-HTTP-inventory/source clocks verified from supplied provenance, no webreplay. No writes/network/Gitmutations. Learned-only research approval, not173/public release. Only immutable consensus appended; isolated exact7 release next.",
+      "release_receipt": "FT-RES-174 release 37e86c6638f5fca28c3592e0738ba66b98840fc8 remote verified 2026-10-15T13:13:26.411Z; main0-0/emptyindex/exact7/all1117indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only infant-price source-scope record and3regressions remote verified; HarveyPASS/1162full50maintenance/stateSEO0/GSC93/sixpriorwarnings. No individual infant rate qualified; no price/model/sourceclock/public output change.173private metadata/code excluded from all7 staged paths; its held LIVE item and9nonops targets remain preserved. All373olderLIVE/1115nonowned bytes-modes/79publicHEAD files unchanged. Next infant check only readable applicable individual terms or documented changed permitted access;173 separately awaits actualnormal renderedQA. No challenge interaction/retry/sensitive query retention or newapproval request. Read-only index diagnostic ENOBUFS corrected by bounded64MiB buffer and assertion passed before commit; no data mutation. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-15T13:13:26.429Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "37e86c6638f5fca28c3592e0738ba66b98840fc8"
     },
     {
       "id": "FT-IMP-172",

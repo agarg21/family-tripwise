@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-08-12",
+  "last_updated": "2026-10-15",
   "repository_visibility": "public",
   "posting_authorized": false,
   "drafts": [
@@ -78,6 +78,74 @@
       },
       "created_on": "2026-08-12",
       "updated_on": "2026-08-12"
+    },
+    {
+      "id": "COMM-2026-002",
+      "destination": "Orlando",
+      "community": "r/AskFlorida",
+      "thread_url": "https://www.reddit.com/r/AskFlorida/comments/1x52xbl/3_nights_in_orlando_w_my_10yo_which_parks_should/",
+      "observed_on": "2026-10-15",
+      "rules": {
+        "checked_on": "2026-10-15",
+        "summary": "The readable community sidebar prohibits advertising. Omit Family Tripwise links and promotion. This is an AI-assisted, non-firsthand research draft, not a claim that moderators permit its posting. Human wording review remains pending; external posting requires separate fresh authority and a fresh rule/source check. The sidebar reader was crawled last week, not verified live moderation policy.",
+        "links": ["https://www.reddit.com/r/AskFlorida/"]
+      },
+      "question": "For two Orlando park days with one adult and a10-year-old, how should different coaster versus immersive-ride preferences affect park selection, and what must be confirmed before the child rides without the adult?",
+      "decision_job": "Resolve ride-specific boarding, companion and nonrider exit/reunion questions before choosing the park or buying queue upgrades; retain a shared-attraction fallback.",
+      "draft_answer": "Keep the one-Disney/one-Universal plan as your working outline, but choose the exact parks after checking the child's top three rides and the nonrider arrangement. A queue shortcut does not resolve whether your child can board without you. This is AI-assisted desk research checked October15, not firsthand parent experience.\n\nAt Disney, the property rules distinguish park entry (under14 needs someone14+) from boarding (under7 needs someone14+). Being10 is not, by itself, confirmation of every attraction's boarding rules or a parent exit/reunion procedure. [Disney rules](https://disneyworld.disney.go.com/en_CA/park-rules/).\n\nFor Universal Studios Florida and Islands of Adventure, the rider guide requires a supervising companion for a child who meets a ride's minimum but is below its48-inch ride-alone threshold; that companion must be14+ and meet the ride's other requirements. Some rides have higher minimums. The guide does not cover Epic Universe; use that park's own requirements rather than transferring this rule. [Universal height table](https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements).\n\nBefore buying, ask Guest Services about the exact must-do rides: can a child of this age and measured height board without the adult, can the nonrider accompany the queue, where must they leave, and where do they reunite? Confirm with the attraction attendant before joining its queue. I have not verified those arrangements; do not assume an employee will supervise your child. If the arrangement is unavailable or either of you is uncomfortable, drop that ride and choose the park with more attractions you both want to experience. Keep a shared meal/break rather than adding another park to compensate.\n\nFor Disney specifically, Single Rider separates parties and still requires all boarding conditions; availability, immediate boarding and seat choice are not guaranteed. Rider Switch describes parties taking turns, not an assigned adult companion for a child. Neither establishes your proposed nonrider handoff. [Disney queue services](https://www.disneyworld.co.uk/guest-services/accessing-attractions-queues/). Universal queue options need separate ride-specific confirmation. Price any queue upgrade only after this shortlist is settled; no faster-wait or specific park winner is established here.",
+      "evidence": [
+        {
+          "classification": "community-question",
+          "title": "One-adult Orlando park-pairing and nonrider logistics question",
+          "url": "https://www.reddit.com/r/AskFlorida/comments/1x52xbl/3_nights_in_orlando_w_my_10yo_which_parks_should/",
+          "checked_on": "2026-10-15",
+          "note": "Search publication date October13 corroborated by reader relative two-day timestamps. Public body and sampled replies inspected October15. Paraphrase only: two park days, different ride preferences and uncertain lone-parent queue logistics. Replies conflict on park choice and suggest unverified boarding exits. Qualitative question/conflict evidence, not representative preference, an operator policy, online-review rating or firsthand experience; no identities or copied comments retained."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Walt Disney World property rules",
+          "url": "https://disneyworld.disney.go.com/en_CA/park-rules/",
+          "checked_on": "2026-10-15",
+          "note": "Readable operator body, Canadian-English locale for the Florida resort. Separates under14 park entry accompanied by14+ from under7 attraction boarding accompanied by14+; also requires child supervision and attraction-specific rules. This does not establish a10-year-old's independent boarding or a queue exit/reunion procedure. No source publication/update date exposed."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Universal Orlando attraction-specific height requirements",
+          "url": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements",
+          "checked_on": "2026-10-15",
+          "note": "Current readable US-English operator body lists differing ride minimums, companion conditions and a separate Epic Universe section. Supports checking measured height and the exact attraction, not age-only eligibility, ride comfort, a universal48-inch minimum or nonrider queue/reunion permission. No selected-date availability verified."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Universal Studios Florida and Islands of Adventure rider guide, PDF page19",
+          "url": "https://www.universalorlando.com/webdata/k2/en/us/files/Documents/universal-orlando-riders-guide.pdf?Intsrch=transformers",
+          "checked_on": "2026-10-15",
+          "note": "Inspected extracted text on PDF page19, companion section; a screenshot was requested but no visual inspection is claimed. Minimum-height but below48-inch ride-alone children require a companion14+ meeting other ridership conditions. Scope USF/IOA only, not Epic. Exact edition date unestablished; official live height table is a separate cross-check, not a claim the PDF was updated today. No nonrider exit or reunion procedure established."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Disney attraction queue services: Single Rider and Rider Switch",
+          "url": "https://www.disneyworld.co.uk/guest-services/accessing-attractions-queues/",
+          "checked_on": "2026-10-15",
+          "note": "US operator queue URL normally redirected to UK-English Walt Disney World body, read without alternate-access retry. Single Rider separates parties, retains boarding requirements and does not guarantee immediate boarding/seat choice; Rider Switch describes parties taking turns. Accessibility-specific queue re-entry is not transferred into a general nonrider arrangement. Does not establish Universal policy or staff childcare."
+        },
+        {
+          "classification": "editorial-interpretation",
+          "title": "Conditional ride shortlist and shared-day fallback",
+          "url": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements",
+          "checked_on": "2026-10-15",
+          "note": "The draft's sequence (top three rides, operator confirmation, shared fallback, then queue-upgrade pricing) is desk decision support, not operator advice or a tested parent preference. Two desk tasks: age10 alone and minimum-height alone both fail to establish queue exit/reunion; both route to exact attraction confirmation before purchase. No park winner, ride suitability/safety, price, weather or wait-time guarantee."
+        }
+      ],
+      "family_tripwise_link": {
+        "recommendation": "omit",
+        "url": null,
+        "rationale": "Primary policy links answer the narrow question; a Family Tripwise link adds no unique help and the community prohibits advertising. No promotion or external posting is authorized."
+      },
+      "uncertainty": "Child's measured height, exact rides/dates, individual boarding eligibility, queue accompaniment, nonrider exit/reunion, closures, queue services, ticket prices and comfort remain unverified. The USF/IOA guide does not establish Epic policy. Operator confirmation is needed, not an inference from community anecdotes. This pending draft is proxy desk evidence, not actual-parent validation or proof of suitability, safety, satisfaction or SEO lift.",
+      "user_review": {"decision": "pending", "decided_on": null, "notes": ""},
+      "created_on": "2026-10-15",
+      "updated_on": "2026-10-15"
     }
   ]
 }
