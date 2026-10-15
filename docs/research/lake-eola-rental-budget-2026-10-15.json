@@ -1,0 +1,24 @@
+{
+  "action_id": "FT-IMP-176",
+  "checked_on": "2026-10-15",
+  "family_decision": "Price an optional Lake Eola rental for five versus six people without confusing per-boat charges with admission or approving a child seating plan.",
+  "result": "IMPLEMENT_NOW_OPTIONAL_RENTAL_ARITHMETIC",
+  "sources": [
+    {"url":"https://www.orlando.gov/Parks-the-Environment/Directory/Lake-Eola-Park/Rent-a-Swan-Boat-at-Lake-Eola","classification":"official-operator-fact","publication_date":null,"checked_on":"2026-10-15","method":"Ordinary reader click from the maintained city park page's rental service link; readable body, no booking or account interaction.","fields":"USD15/30-minute rental; max5 people/1400lb per boat; Tuesday-Sunday10am-7pm subject to change; no reservations/first-come/weather permitting; card only; final rental30minutes before close. Fee inclusion, child age/supervision and actual weights not established."},
+    {"url":"https://www.visitorlando.org/media/press-kits/post/wallet-friendly-orlando-experiences-under-20/","classification":"official-destination-publisher-fact","publication_date":null,"checked_on":"2026-10-15","method":"Ordinary reader body; crawl label3weeks old, not a live quote.","fields":"Explicit USD15 per boat/up to5/30minutes corroborates the city's rental-unit interpretation. Not the operator and not used for unrelated prices, free admission, route or suitability claims."}
+  ],
+  "scope": "One optional rental session per explicit boat-load count, separate from standard admission. No automatic minimum-boat or adult/child allocation; party-size arithmetic alone does not establish permission, suitable staffing or weight compliance.",
+  "source_model": "tools/page-generation/orlando-activity-data.mjs#lakeEolaSwanBoatRental",
+  "maintained_unknowns": ["Park admission remains unknown in existing model", "Tax/transaction-fee inclusion", "Actual weights", "Child-supervision/age requirements", "Weather, chosen-date operation, inventory and simultaneous boats", "Parking, transport, meals and whole-day cost"],
+  "tasks": [
+    {"id":"ORL-R1","ages":[30,35,4,8,13],"boat_loads":[5],"as_of":"2026-10-15","visit_date":"2026-10-20","published_rental_subtotal_cents":1500,"result":"COUNT_ONLY_ARITHMETIC_NOT_APPROVED_PLAN"},
+    {"id":"ORL-R2","ages":[30,35,4,8,10,13],"boat_loads":[6],"as_of":"2026-10-15","visit_date":"2026-10-20","published_rental_subtotal_cents":null,"result":"REJECT_LOAD_ABOVE_FIVE"},
+    {"id":"ORL-R3","ages":[30,35,4,8,10,13],"boat_loads":[3,3],"as_of":"2026-10-15","visit_date":"2026-10-20","published_rental_subtotal_cents":3000,"result":"COUNT_ONLY_ARITHMETIC_NOT_APPROVED_PLAN"},
+    {"id":"ORL-R4","ages":[30,35,4,8,13],"boat_loads":[5],"as_of":"2026-10-15","visit_date":"2026-10-19","published_rental_subtotal_cents":null,"result":"PUBLISHED_CLOSED_MONDAY"}
+  ],
+  "validation": "Reproducible offline task proxies and native tests, not rendered UI or actual-parent research. No new visitor review judgment or suitable-age recommendation; existing review signals are not renewed.",
+  "screened_not_changed": "SEA LIFE's readable ticket body still exposes a package adult floor, not the complete standalone age tariff. No button/store interaction or repeated denied source access. Preserve all prior admission outputs and clocks; no separate report or inferred family quote.",
+  "measurement": "Check five-versus-six unit math, Monday refusal, exact party counts, dates, defensive copies and unchanged baseline admission outputs. Recheck before Oct29 or on a changed primary term. No SEO-lift, safety, fit or checkout-price claim.",
+  "public_release": false,
+  "external_mutation": false
+}

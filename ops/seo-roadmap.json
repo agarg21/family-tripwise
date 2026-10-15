@@ -20,10 +20,44 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-176",
+      "title": "Separate Lake Eola boat-unit costs from unknown park-day admission",
+      "kind": "shared-product-data-tool",
+      "status": "in_progress",
+      "selected_on": "2026-10-15",
+      "started_at": "2026-10-15T15:03:30.888Z",
+      "target_paths": [
+        "tools/page-generation/orlando-activity-data.mjs",
+        "src/shared/lake-eola-rental.mjs",
+        "tools/orlando-admission-budget.mjs",
+        "tools/lake-eola-rental.test.mjs",
+        "docs/research/lake-eola-rental-budget-2026-10-15.json",
+        "README.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Existing seven-choice Orlando CLI has an explicit LakeEola unknown park-visit cost and excludes boat rental. Newly followed City rental-detail link supplies USD15 per30-minute rental, capacity5/weight1400lb, Monday closure/card-only/no reservation/weather/first-come conditions. Official tourism body corroborates per-boat unit. Named decision: party5 versus6 cannot silently price one boat or multiply a rental as per-person admission. Existing SEA LIFE package floor still does not supply standalone age rates.",
+      "acceptance_criteria": [
+        "Add one maintained optional-rental export and pure scoped calculator, consumed only when existing offline CLI receives explicit boat-load counts. Validate each load1-5 and summed party count; reject oversize, sparse, fractional, missing/duplicate/unknown flags and invalid dates. No automatic child/adult allocation or supervised/weight suitability approval.",
+        "Keep currency/unit/duration/capacity/weight/source/check/recheck/fees/conditions attached. Monday source schedule suppresses rental subtotal; other days remain unconfirmed. Future/stale evidence is historical arithmetic, never availability or complete cost. Preserve all existing admission outputs, original source/review dates, unknown park admission and SEA LIFE cost; no model-rendered public bytes or173 held modules change.",
+        "Five-person single-load USD15 and six-person explicit3/3 loads USD30 before unestablished fees; six in one boat fails. Focused/full native QA/different read-only PASS/isolated exact11 release with no173 private metadata/code or old held ledger changes. All375older LIVE items and nonowned bytes/modes preserved; only176 plus mechanical175completion backfill ship."
+      ],
+      "measurement_plan": "LRN266 source-dated unit/capacity audit and offline task proxies:5oneboat,6oneboat rejection,6two explicit loads, Monday, future recheck and missing fee/weight/supervision. Not an actual-parent task, rendered UI, weather/safety or SEO result.",
+      "production_invariant": "All79publicHEADfiles and nine173held nonops targets unchanged; current173 record intact. No new page/CSV/booking/outreach/paid/model/API/browserretry, park admission free inference, sourceclock renewal outside new rental record, observation/weekly/scheduler change. Latest GSC Oct14/finalOct12 reused orientation, priorOct13/finalOct11; no query/CTR action.",
+      "decision": "IMPLEMENT_NOW optional exact-unit rental arithmetic in shared product/CLI, not another generic tool layer or public page. Named boat-load input is necessary because party-count-only or automatic minimum-boat allocation would imply an unverified plan.",
+      "next_gate": "Focused/full native QA/different read-only PASS, isolated exact11 push. Public integration remains separate173 rendered-gated work, not cleared here. Recheck rental only changed primary terms or before itsOct29review boundary; all current weight/child-supervision/weather/inventory assumptions remain unresolved.",
+      "release_exclusions": "All173code/metadata and olderdirtydocs/ledger tail excluded from release; preserve375olderLIVE ordered records and every nonowned byte/mode. Candidate built from cleanHEAD plus176 and mechanical175completion only.",
+      "review_receipt": "FT-IMP-176 Wegener01a1401a-1496-70e0-84df-56e3d2ae42ce strict read-only PASS/noP0-P3 onhJ7zgj manifestcf87ad783fb6536fa501944444c911b02cd6b8646a8bee70cbb6b2f01f3db754. Independent24focused/14103valid-load combinations plusinvalid/date/copy probesPASS; Master36LIVEfocused inclheldform/1176full50maintenance/stateSEO0/GSC93/sixpriorwarnings log406da558e59bed637a46e35a5addb1b52a563cf4219a93c0e5784d6e80747337 inspected/hashverified, not fullrerun. Exact11/1121candidate/375olderLIVE/1115nonowned bytes-modes/all79publicHEADfiles/8prior model exports preserved; nine173held targets/record/oldledger excluded. Explicit optional rental counts/cents/unit/Monday/recheck/unknownfee-weight-supervision scope verified; no automatic allocation or publicUI/fit/safety/availability/parent/SEO claim. Source provenance supplied/no networkreplay. No reviewerwrites/network/browser/Gitmutations/delegation/scheduler. Only immutable consensus appended; isolated shared-tool release next."
+    },
+    {
       "id": "FT-RES-175",
       "title": "Draft a one-parent Orlando ride-supervision decision answer",
       "kind": "community-answer-draft",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-15",
       "started_at": "2026-10-15T14:11:37.661Z",
       "target_paths": [
@@ -58,7 +92,11 @@
         "observed_on": "2026-10-15"
       },
       "release_exclusions": "173 full private LIVE record and nine nonops targets remain untouched and unstaged. Build clean HEAD candidate with175 and mechanical174 completion only; preserve all older LIVE records and prior dirty evidence/ledger tail.",
-      "review_receipt": "FT-RES-175 Ptolemy01a13fe9-e1f4-7942-914f-4bb2a6b2a455 strict read-only PASS/noP0-P3 onw06C0V manifest8f1d1bfde1ddf3c6a366a59734f80784822678e830b6a7e8c6a80e7d2f00b49e. Independent13focusedPASS/processclean; Master1165full50maintenance/stateSEO0/GSC93/sixpriorwarnings log47eb07ab0fb61d5b384aeef3757f7f2cbd62dac56dd20970fee8be4ef0dfd533 inspected/hashverified, not independently rerun. Exact7/1118candidate/374olderLIVE/1116nonowned bytes-modes/all79publicHEADfiles preserved. OriginalCOMM001 unchanged; COMM002 source-scoped/AI-disclosed/nonfirsthand/privacy-safe/promotion-free/pending human review, postingfalse. Source provenance supplied/no networkreplay.173metadata/code/heldledger excluded; only175/LRN265 and mechanical174completion. No publicpage/rendered-parent-SEO/factrenewal/posting approval. No writes/network/Gitmutations byreviewer. Only immutable consensus appended; guarded isolated docs-data-test release next."
+      "review_receipt": "FT-RES-175 Ptolemy01a13fe9-e1f4-7942-914f-4bb2a6b2a455 strict read-only PASS/noP0-P3 onw06C0V manifest8f1d1bfde1ddf3c6a366a59734f80784822678e830b6a7e8c6a80e7d2f00b49e. Independent13focusedPASS/processclean; Master1165full50maintenance/stateSEO0/GSC93/sixpriorwarnings log47eb07ab0fb61d5b384aeef3757f7f2cbd62dac56dd20970fee8be4ef0dfd533 inspected/hashverified, not independently rerun. Exact7/1118candidate/374olderLIVE/1116nonowned bytes-modes/all79publicHEADfiles preserved. OriginalCOMM001 unchanged; COMM002 source-scoped/AI-disclosed/nonfirsthand/privacy-safe/promotion-free/pending human review, postingfalse. Source provenance supplied/no networkreplay.173metadata/code/heldledger excluded; only175/LRN265 and mechanical174completion. No publicpage/rendered-parent-SEO/factrenewal/posting approval. No writes/network/Gitmutations byreviewer. Only immutable consensus appended; guarded isolated docs-data-test release next.",
+      "release_receipt": "FT-RES-175 release a858342061a91f126a7b4529e0f56b6fb8939012 remote verified 2026-10-15T14:18:02.606Z; main0-0/emptyindex/exact7/all1118indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Validated Orlando one-parent ride-decision draft COMM002 remote verified; PtolemyPASS/13focused/1165full50maintenance/stateSEO0/GSC93/sixpriorwarnings. This is a pending answer draft and bounded learning, not publicpage delivery or externalposting; originalCOMM001/postingfalse/sourceclock boundaries retained. All173 private metadata/code excluded from staged scope and LIVE374older/1116nonowned heldbytes-modes preserved. Next exactride procedures only on new evidence;173 needs documented changed normal rendered access, no unchanged retry. Semrush no_api_units is a narrow nonretryable demand-report dependency, no paid purchase or metrics result. Docs-data-test only, no Pages wait. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-15T14:18:02.649Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "a858342061a91f126a7b4529e0f56b6fb8939012"
     },
     {
       "id": "FT-RES-174",

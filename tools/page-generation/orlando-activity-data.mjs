@@ -29,6 +29,20 @@ export const sources = {
   lake: "https://www.orlando.gov/Parks-the-Environment/Directory/Lake-Eola-Park",
   springs: "https://www.disneysprings.com/plan-your-visit/"
 };
+export const lakeEolaSwanBoatRental = {
+  id: "lake-eola-swan-boat", name: "Lake Eola swan boat rental", currency: "USD",
+  product: "Optional boat rental, not park admission", unit: "per boat per 30-minute rental",
+  centsPerRental: 1500, rentalMinutes: 30, maximumPeoplePerBoat: 5, maximumPoundsPerBoat: 1400,
+  checkedOn: "2026-10-15", recheckOn: "2026-10-29", closedWeekdays: [1],
+  sourceUrl: "https://www.orlando.gov/Parks-the-Environment/Directory/Lake-Eola-Park/Rent-a-Swan-Boat-at-Lake-Eola",
+  unitSourceUrl: "https://www.visitorlando.org/media/press-kits/post/wallet-friendly-orlando-experiences-under-20/",
+  taxAndFeeStatus: "Tax and transaction-fee inclusion not established.",
+  conditions: ["No reservations; first-come, first-served and weather permitting", "Debit or credit only",
+    "Published Tuesday-Sunday hours are subject to change; no chosen-date operation verified",
+    "Actual passenger weights and child-supervision/age requirements are not assessed"],
+  exclusions: ["Park admission remains separately unpriced in the maintained record", "Parking, transport, meals and purchases",
+    "Longer rentals, extra sessions and any unestablished tax or fees"]
+};
 export const activities = [
   {id:"science-center",name:"Orlando Science Center",role:"Hands-on science / Loch Haven",weather:"Indoor exhibits",age:"Youth 2-12; teen 13-17; adult 18+. KidsTown guidance: 7 and under, not a venue age limit.",price:"USD29 adult + USD22 youth online; onsite USD32 + USD25. Teen USD27 online / USD30 onsite. Example USD102 online; tax/checkout-fee inclusion unknown, parking extra.",budget:102,time:"No general official visit-length estimate established",blocker:"Normally closed Wednesdays except OCPS breaks; confirm your date.",detail:"Parking USD4/hour extra. Leaving and returning is not established in the inspected visit page. Do not budget a second session without checking return terms.",sourceIds:["osc","kids"],duration:null,returnRule:null,meal:"Outside meals cannot be eaten in exhibit halls or cafe; park picnic space is separate."},
   {id:"crayola",name:"Crayola Experience",role:"Creative activities / Florida Mall",weather:"Indoor attraction",age:"Every guest 3+ pays; ages 2 and under free. Under15 accompanied by an adult.",price:"USD30.99 per paying person plus tax. Example USD123.96 plus tax at full admission price.",budget:123.96,time:"Operator suggests 3-4 hours",blocker:"A two-hour visit is shorter than the suggestion, not prohibited.",detail:"Same-day return until closing requires a hand stamp before leaving. Free mall parking. Premium activities cost extra; online discount is not a checked dated quote.",sourceIds:["crayola","crayolaHours"],duration:[180,240],returnRule:"Hand stamp before exit; same-day return before closing.",meal:"No outside food/drink. Cafe listed weekends only; snack counter separately. Check your day."},
