@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-IMP-177",
+  "decision": "IMPLEMENT_CONFLICT_AWARE_SHARED_TOOL_PRESERVE_PUBLIC_PAGES",
+  "policy": {
+    "schema_version": 1,
+    "kind": "nyc-child-height",
+    "currency": "USD",
+    "fare_cents": 300,
+    "threshold_inches": 44,
+    "free_children_per_paying_adult": 3,
+    "threshold_conflict": true,
+    "inspected_on": "2026-10-15",
+    "recheck_on": "2026-10-29",
+    "visitor_source": {"url":"https://www.mta.info/fares-tolls/subway-bus","height_comparison":"lt","published_on":null},
+    "tariff_source": {"url":"https://www.mta.info/document/195636","height_comparison":"lte","effective_on":"2026-01-04","published_on":null}
+  },
+  "source_audit": [
+    {"url":"https://www.mta.info/fares-tolls/subway-bus","evidence_class":"OFFICIAL_TRANSIT_FARE_FACT","inspected_on":"2026-10-15","method":"Readable ordinary operator HTML body, crawl today","finding":"3USD ordinary subway/local-bus fare and up to3 children below44in with a paying adult; source wording excludes the exact boundary. Express, single-ride ticket, transfers and caps are different products/rules."},
+    {"url":"https://www.mta.info/document/195636","evidence_class":"OFFICIAL_TRANSIT_FARE_TARIFF","inspected_on":"2026-10-15","method":"Linked from operator fare page; extracted PDF text, not visual layout inspection","finding":"EffectiveJan4,2026; PDFpage2 faretable names ChildUnder44, but PDFpage3 sectionIII.A.5 describes44in andunder, maximum3 perpayingadult. Same3USD basefare. Do not silently choose a boundary or legal precedence."},
+    {"url":"https://www.mta.info/fares-tolls/2025-changes","evidence_class":"OFFICIAL_POLICY_SCOPE","inspected_on":"2026-10-15","method":"Readable ordinary operator HTML body","finding":"The child5-17 one-dollar FamilyFare paragraph belongs to commuter railroads, not subway/local-bus eligibility. Not imported as a subway child price."},
+    {"url":"https://www.mta.info/fares-tolls/subway-bus/tap-and-ride","evidence_class":"OFFICIAL_PAYMENT_SCOPE","inspected_on":"2026-10-15","method":"Readable ordinary operator HTML body","finding":"Cap accounting depends on consistent payment identity and chargeable fares; transfers/group taps are distinct. New height tool excludes caps and transfer entitlement rather than duplicating091's retained four-full-fare-rider comparison. No old091 source date renewal."}
+  ],
+  "community_question": {
+    "url":"https://www.reddit.com/r/visitingnyc/comments/1uoa1sn/tap_to_pay_37_cap_family_of_6/",
+    "publication_date":"2026-07-05",
+    "inspected_on":"2026-10-15",
+    "method":"Public body with3mo relative timestamp; exact July5 search publication label. Body crawl2weeks old, not a representative current preference sample.",
+    "public_safe_paraphrase":"A family of six asks whether child ages change subway fares and whether one payment method can earn a cap for everyone.",
+    "classification":"COMMUNITY_QUESTION_NOT_POLICY_OR_REVIEW"
+  },
+  "tasks": [
+    {"id":"NYC-H1","input":{"fare_paying_adults":2,"child_heights_inches":[43,50],"separately_charged_trips":2,"travel_together":true,"visit_date":"2026-10-20"},"family_total_cents":1800,"status":"CONDITIONAL_UNCAPPED_FARE"},
+    {"id":"NYC-H2","input":{"fare_paying_adults":2,"child_heights_inches":[44,50],"separately_charged_trips":2,"travel_together":true,"visit_date":"2026-10-20"},"family_total_cents":null,"status":"UNRESOLVED_CHILD_FARE"},
+    {"id":"NYC-H3","input":{"fare_paying_adults":1,"child_heights_inches":[40,41,42,43],"separately_charged_trips":2,"travel_together":true,"visit_date":"2026-10-20"},"family_total_cents":null,"status":"UNRESOLVED_CHILD_FARE"},
+    {"id":"NYC-H4","input":{"fare_paying_adults":2,"child_heights_inches":[null,50],"separately_charged_trips":2,"travel_together":true,"visit_date":"2026-10-20"},"family_total_cents":null,"status":"UNRESOLVED_CHILD_FARE"}
+  ],
+  "result": "IMPLEMENT mixed-height qualification only; PRESERVE exact44 and excess-child cost as unresolved. Reject age-only or commuter-rail child-price transfer. Conditional fare arithmetic is neither a paid trip nor a cheapest fare recommendation.",
+  "unknowns": ["Operator resolution of exact44in boundary", "Excess qualifying-height child fare treatment", "Unmeasured child heights", "Chosen route, transfer entitlement and separately charged journey count", "Payment authorization, card setup, cap accumulation, visiting-student/reduced programs", "Future service, elevator/stroller practicality, safety and actual family fit"],
+  "evidence_limit": "Hypothetical desk/CLI cases, not actual-parent research, a firsthand trip or SEO-lift proof. Source check date differs from tariff-effective and community-publication dates. No source denials or browser retries involved.",
+  "next_trigger": "Applicable operator clarification or changed agreeing primary boundary wording; otherwise review beforeOct29. Public change needs a separately qualified failed existing-page task and actual permitted renderedQA.",
+  "public_release": false
+}

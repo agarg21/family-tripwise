@@ -20,10 +20,43 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-177",
+      "title": "Keep NYC child-height fare uncertainty out of family budgets",
+      "kind": "shared-product-data-tool",
+      "status": "in_progress",
+      "selected_on": "2026-10-15",
+      "started_at": "2026-10-15T16:59:26.982Z",
+      "target_paths": [
+        "docs/research/nyc-child-height-fare-2026-10-15.json",
+        "src/shared/nyc-child-fare.mjs",
+        "tools/family-transit-cost.mjs",
+        "tools/nyc-child-fare.test.mjs",
+        "README.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Existing shared DC transit calculator is age-based; existing091 NYC public teen comparison assumes four full-fare riders and cannot classify mixed-height children. A current-read public family6 question asks whether child ages change fare/caps; paraphrase only. New current primary visitor body says under44 while linked effectiveJan4,2026 tariff defines44andunder. Both agree on3child allowance/perpayingadult and3USD basefare, but exact44 cannot be silently resolved. No071/091public edit or calendar refresh.",
+      "acceptance_criteria": [
+        "Add a maintained NYC height-policy conflict record and bounded named calculator reached through existing offline transit CLI. Heights below44 agree-free subject tothree/payadult; above44 ordinaryfullfare; exact44 or unknownheight remains unresolved. Excess below-threshold children remain unresolved, never automaticfullfare orfree. Reject age-only inputs and unaccompanied assumptions.",
+        "Whole-family standard uncapped fare arithmetic only when heights, allowance, chargeable trip count, dates and explicit traveling-together assumption qualify. Unknown/expired/futurevisit-source evidence withholds numeric totals. Keep dates/currency/per-family journey unit/sourceconflict and cap/transfer/payment/setup/airport/regional/express/safety limitations attached; no card identity, route or access promise.",
+        "Existing DC API/CLI, original091 OMNY record/defaultpublicteen comparison and all79publicHEADfiles unchanged. Exact10 focused/full native QA/different read-only PASS/guarded isolated shared-tool push must exclude173metadata/code, old heldledger anddirtydocs; preserve377olderLIVE records andallnonownedbytes/modes. Only177 and mechanical017/176completion backfill ship."
+      ],
+      "measurement_plan": "LRN267 new primary conflict/scope audit and executable desk cases:2fullfareadults/heights43,50/two separatelycharged trips=18USD uncapped; exact44 unknown; age-only unknown; oneadult/four below44 children unresolved excess. Proxy evidence, not actual parents/payment/rendered UI/SEO.",
+      "production_invariant": "No publicpage/URL/indexability/title/091clock/oldprices/reviewdates/173held changes. No browserretry/providerrecovery/newCSV/paid/API/model request, account/contact/posting/indexing/analytics/security/weekly/scheduler change. CurrentGSC Oct15/finalOct13 importedread-only evidence reused orientation; noqueryCTRaction.",
+      "decision": "IMPLEMENT_NOW conflict-aware NYC height qualification and uncapped fare-only desk arithmetic in existing transit CLI; no new generaltransit URL or duplicate capengine. PRESERVE091 teen page/OMNY record and173 heldform.",
+      "next_gate": "Focused/full native and different independent read-onlyPASS, exact10 shared-tool release. Exact44 must remain unresolved until applicable operator clarification or changed agreeing primary wording; no guessed precedence. Public integration only a separate evidence-qualified failed task with actual permitted renderedQA, never assumed from this shared tool.",
+      "release_exclusions": "All173private record/code and existingdirtydocs/ledgertail excluded. CleanHEAD candidate with177 and mechanical017/176completion only; all377olderLIVE records stay unchanged. Source record retains public-safe question paraphrase without identities/copiedthread or medical/personal details.",
+      "review_receipt": "FT-IMP-177 Confucius01a14083-fee3-7222-bd6d-c91f65610783 strict read-only PASS/noP0-P3 on9iSBcS manifest46d7f42bb8fe2484f8e21713b250ecef3c4e3bd65e433bdbae294e8b6eb6cadf. Independent22focused/15120boundarycombinations/effective-date/malformed probesPASS. Master1186full50maintenance/stateSEO0/GSC94/sixpriorwarnings logcbfebc836a1c21d524f789e2772b188dc5b6bb66e050dfefad6de38a4221cd1c inspected/hashverified, notfullrerun. Exact10/1127candidate/79publicHEAD/377olderLIVE/1122nonownedbytes-modes/173held/091comparison-clocks/DCcompatibility preserved. Exact44/unknownheight/excesschildren/expiry remainunknown; no caps, commute-fare transfer, payment/route/safety promise. Master tightened effective_on<=inspected_on beforeconsensus; replacementfullgreen and regressionreviewed. Sourceprovenance supplied/no networkreplay. No reviewerwrites/network/browser/delegation/Gitmutations/scheduler. Only sharedCLI/model approval, excludes173/publicUI/posting/parent/SEO/productionproof. Only immutable consensus appended; exactguarded release next."
+    },
+    {
       "id": "FT-OPS-017",
       "title": "Reconcile reviewed rental tool with incoming daily GSC snapshot",
       "kind": "routine-git-reconciliation",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-15",
       "started_at": "2026-10-15T15:12:42.179Z",
       "target_paths": [
@@ -54,13 +87,17 @@
         "composed_tree": "62a4fe6571284ceb2137cd0425155ff3e52dfa48"
       },
       "incident": "Freshfetch advanced origin after176review. tools/release-git-guard.mjs --phase before-push --manifest ft176-final-dZr2YI-push.json returned Commit pins changed. A subsequent ordinary git push origin main was incorrectly executed in the same orchestration despite that failure; Git rejected non-fast-forward, so no remote mutation occurred. No retry/forcepush. Correction: explicit fail-closed phase checks and separate reviewed normalmerge lane. OwnerMaster; unblock this pinnedQA/review/merge, nextcheck now.",
-      "review_receipt": "FT-OPS-017 Kierkegaard01a14021-afd0-79e0-ba5f-80babd4cc117 strict read-only PASS/no remainingP0-P3 onUOvK4Z manifest49ab72f933b661013585254295bc14a419da341afb71d6ce03d3688977ad0447. Independent7focused/state0/GSC94/privacy-date and frozen1124/exact7/pins/index/376olderLIVE/1122nonowned bytes-modes/nine173held/79public/original176elevenhash probesPASS. Master1176full50maintenance/stateSEO0/GSC94/sixpriorwarnings logd5e6ea39368b1b9547d714436be315725884650f99a29dc83957ddb0f3356eb8 inspected/hashverified, not fullrerun. Initial composedQA two missinglatestGSC state links repaired in017prefixes only; replacementfullgreen. Action-specific guard10740143b938327c6acaebdcfd337621cc44f0e99e9708dd85724c40a95c77fe and completione8315851f1d5f08869360d7c425a145d249067357b93a071e66dd412415303d8 reviewed source-only. No reviewerwrites/network/browser/Git-indexmutations/delegation/scheduler. Approval only017normalmerge with preserved reviewed176, not173/publicUI/parent/SEOproof. Only immutable consensus appended; exactstage/orderedparents/fulltree/outgoing/freshfetch/pinnedremote/normalpush still required."
+      "review_receipt": "FT-OPS-017 Kierkegaard01a14021-afd0-79e0-ba5f-80babd4cc117 strict read-only PASS/no remainingP0-P3 onUOvK4Z manifest49ab72f933b661013585254295bc14a419da341afb71d6ce03d3688977ad0447. Independent7focused/state0/GSC94/privacy-date and frozen1124/exact7/pins/index/376olderLIVE/1122nonowned bytes-modes/nine173held/79public/original176elevenhash probesPASS. Master1176full50maintenance/stateSEO0/GSC94/sixpriorwarnings logd5e6ea39368b1b9547d714436be315725884650f99a29dc83957ddb0f3356eb8 inspected/hashverified, not fullrerun. Initial composedQA two missinglatestGSC state links repaired in017prefixes only; replacementfullgreen. Action-specific guard10740143b938327c6acaebdcfd337621cc44f0e99e9708dd85724c40a95c77fe and completione8315851f1d5f08869360d7c425a145d249067357b93a071e66dd412415303d8 reviewed source-only. No reviewerwrites/network/browser/Git-indexmutations/delegation/scheduler. Approval only017normalmerge with preserved reviewed176, not173/publicUI/parent/SEOproof. Only immutable consensus appended; exactstage/orderedparents/fulltree/outgoing/freshfetch/pinnedremote/normalpush still required.",
+      "release_receipt": "FT-OPS-017 release e8b945be6f3a2f6cffe3214a0b08b89cc41a90ca remote verified 2026-10-15T15:19:44.798Z; ordered parents d27d4cc06954b1a5f008c79fa3e7921dd22879b0/1145ddbcebe789a202b7ecc3af8eefa309155320, both histories preserved, full1124file bytes-modes frozen parity, exact7 merge paths, complete outgoing176thenmerge inspected, freshfetch/pinnedremote/action-specific beforecommit-beforepush guards PASS/normalpush/main0-0/emptyindex. Independent read-only consensus and composed1176full50maintenance/stateSEO0/GSC94/sixpriorwarnings recorded. IncomingOct15/finalOct13 API snapshot is orientation, not CTR/query/SEO proof; no indexing requested. No conflict, stash/rebase/reset/discard/forcepush/security/scheduler/sourceclock or publicsite change;173private record and nineheldtargets preserved. Next173 only after documented changed normal rendered access and its final browser/review/release gates. Mechanical completion only; fixed014expiry unchanged.",
+      "completed_on": "2026-10-15T15:19:44.798Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "e8b945be6f3a2f6cffe3214a0b08b89cc41a90ca"
     },
     {
       "id": "FT-IMP-176",
       "title": "Separate Lake Eola boat-unit costs from unknown park-day admission",
       "kind": "shared-product-data-tool",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-15",
       "started_at": "2026-10-15T15:03:30.888Z",
       "target_paths": [
@@ -88,7 +125,11 @@
       "decision": "IMPLEMENT_NOW optional exact-unit rental arithmetic in shared product/CLI, not another generic tool layer or public page. Named boat-load input is necessary because party-count-only or automatic minimum-boat allocation would imply an unverified plan.",
       "next_gate": "Focused/full native QA/different read-only PASS, isolated exact11 push. Public integration remains separate173 rendered-gated work, not cleared here. Recheck rental only changed primary terms or before itsOct29review boundary; all current weight/child-supervision/weather/inventory assumptions remain unresolved.",
       "release_exclusions": "All173code/metadata and olderdirtydocs/ledger tail excluded from release; preserve375olderLIVE ordered records and every nonowned byte/mode. Candidate built from cleanHEAD plus176 and mechanical175completion only.",
-      "review_receipt": "FT-IMP-176 Wegener01a1401a-1496-70e0-84df-56e3d2ae42ce strict read-only PASS/noP0-P3 onhJ7zgj manifestcf87ad783fb6536fa501944444c911b02cd6b8646a8bee70cbb6b2f01f3db754. Independent24focused/14103valid-load combinations plusinvalid/date/copy probesPASS; Master36LIVEfocused inclheldform/1176full50maintenance/stateSEO0/GSC93/sixpriorwarnings log406da558e59bed637a46e35a5addb1b52a563cf4219a93c0e5784d6e80747337 inspected/hashverified, not fullrerun. Exact11/1121candidate/375olderLIVE/1115nonowned bytes-modes/all79publicHEADfiles/8prior model exports preserved; nine173held targets/record/oldledger excluded. Explicit optional rental counts/cents/unit/Monday/recheck/unknownfee-weight-supervision scope verified; no automatic allocation or publicUI/fit/safety/availability/parent/SEO claim. Source provenance supplied/no networkreplay. No reviewerwrites/network/browser/Gitmutations/delegation/scheduler. Only immutable consensus appended; isolated shared-tool release next."
+      "review_receipt": "FT-IMP-176 Wegener01a1401a-1496-70e0-84df-56e3d2ae42ce strict read-only PASS/noP0-P3 onhJ7zgj manifestcf87ad783fb6536fa501944444c911b02cd6b8646a8bee70cbb6b2f01f3db754. Independent24focused/14103valid-load combinations plusinvalid/date/copy probesPASS; Master36LIVEfocused inclheldform/1176full50maintenance/stateSEO0/GSC93/sixpriorwarnings log406da558e59bed637a46e35a5addb1b52a563cf4219a93c0e5784d6e80747337 inspected/hashverified, not fullrerun. Exact11/1121candidate/375olderLIVE/1115nonowned bytes-modes/all79publicHEADfiles/8prior model exports preserved; nine173held targets/record/oldledger excluded. Explicit optional rental counts/cents/unit/Monday/recheck/unknownfee-weight-supervision scope verified; no automatic allocation or publicUI/fit/safety/availability/parent/SEO claim. Source provenance supplied/no networkreplay. No reviewerwrites/network/browser/Gitmutations/delegation/scheduler. Only immutable consensus appended; isolated shared-tool release next.",
+      "release_receipt": "FT-IMP-176 release e8b945be6f3a2f6cffe3214a0b08b89cc41a90ca remote verified 2026-10-15T15:19:44.798Z; original reviewed rental commit d27d4cc06954b1a5f008c79fa3e7921dd22879b0 retained as mergeparent. WegenerPASS/24independentfocused/14103loadprobes; Master1176full50maintenance/stateSEO0 and original93snapshot QA. Exact11 reviewed code/content unchanged. Shared optional rental calculator/CLI delivered, not publicpage/UI/parent/SEO proof. Prior changed-pin guard and rejected ordinarypush did not mutate remote; reviewed017 normalmerge and action-specific release checks complete. No176metadata-onlycommit.173held/private targets unchanged; originaladmission outputs and clocks unchanged.",
+      "completed_on": "2026-10-15T15:19:44.798Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "e8b945be6f3a2f6cffe3214a0b08b89cc41a90ca"
     },
     {
       "id": "FT-RES-175",
