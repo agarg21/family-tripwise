@@ -7,6 +7,23 @@ import { checkOperatorState } from "./operator-state-qa.mjs";
 
 const releaseCommit = "1234567890abcdef1234567890abcdef12345678";
 
+test("current cycle rejects accumulated history beyond its UTF-8 byte budget", () => {
+  const root = fixture();
+  const path = join(root, "ops/current-cycle.md");
+  const current = readFileSync(path, "utf8");
+  assert.deepEqual(checkOperatorState(root), []);
+  writeFileSync(path, current + "\n" + "x".repeat(32 * 1024));
+  assert.ok(checkOperatorState(root).some((error) => error.includes("Current cycle exceeds 32KiB")));
+});
+
+test("current cycle budget counts multibyte text rather than characters", () => {
+  const root = fixture();
+  const path = join(root, "ops/current-cycle.md");
+  const current = readFileSync(path, "utf8");
+  writeFileSync(path, current + "\n" + "\u00e9".repeat(17 * 1024));
+  assert.ok(checkOperatorState(root).some((error) => error.includes("Current cycle exceeds 32KiB")));
+});
+
 function fixture({
   stale = false,
   badMetadata = false,

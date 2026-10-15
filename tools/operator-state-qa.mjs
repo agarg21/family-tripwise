@@ -63,6 +63,9 @@ export function checkOperatorState(root) {
   const roadmap = JSON.parse(read(root, "ops/seo-roadmap.json"));
   const roadmapMarkdown = read(root, "ops/seo-roadmap.md");
   const currentCycle = read(root, "ops/current-cycle.md");
+  if (Buffer.byteLength(currentCycle, "utf8") > 32 * 1024) {
+    errors.push("Current cycle exceeds 32KiB; retain current decisions and link historical evidence instead of accumulating history.");
+  }
   const snapshotDate = latestSnapshotDate(root);
 
   const ids = roadmap.items.map((item) => item.id);
