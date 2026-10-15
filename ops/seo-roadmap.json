@@ -20,10 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-RES-170",
+      "title": "Resolve Surfside's named five-person room discovery gate",
+      "kind": "source-quality-research",
+      "status": "in-progress",
+      "selected_on": "2026-10-14",
+      "started_at": "2026-10-15T02:01:51Z",
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/miami-surfside-room-gate-2026-10-14.json",
+        "tools/miami-family-five-gate.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "151's Surfside exact-category lead was unconfirmed;169 only resolved fee-disagreement provenance. Newly inspected OTA room rows expose a five-person two-queen/sofa suite alongside similarly titled king rooms with lower capacities. Resolve category discovery only, not live availability or accepted-family pricing. Public browser gate is unchanged and no public implementation is newly qualified; this upstream room audit is independent eligible work, not a browser fallback or repeated fee report.",
+      "acceptance_criteria": [
+        "Retain exact property/source, OTA title plus bed/capacity/advertised area identity, observed date and reader-age/relative-date limits; do not turn repeated room titles into durable booking IDs or cross-channel official category matches.",
+        "Separate OTA advertised sleeps from acceptance for2adults/children4,8,12/Nov8-13; preserve unknown selected rate/nightly price/fees/kitchen/layout/comfort and original151/169 records. No advertised alternative-hotel prices, aggregate ratings, identities or fresh review samples retained.",
+        "Two reproducible desk tasks plus structural controls; not actual desktop/mobile/keyboard, parents, stay or live booking validation. Full/focused native QA, different strict read-only PASS and guarded exact7 research-only release."
+      ],
+      "measurement_plan": "LRN261 named-room discovery and title-collision controls; not new material demand, current family quote, actual-parent preference, maintenance reliability or SEO lift.",
+      "production_invariant": "Public pages/models/exports/source-price-review clocks, original151/169, all368 older ordered items, held11 LIVE including six nonowned documents and historical ledger reorder, governance/holds/journals, weekly operator/scheduler/restoration remain unchanged. OnlyLRN261 prefix ships. Run02:00:48Z/Oct14 22:00:48EDT/startdeadline02:45:48Z; fixed014end unchanged. No newCSV, price arithmetic, browser retry, paid/model/contact/booking mutation.",
+      "decision": "REJECT no-named-room-lead hypothesis: OTA Suite1Bedroom/twoqueens-doublesofa/650sqft/advertised5 provides a specific lead. Same-title king/sofa460sqft advertises4, identical KingSuite titles advertise2/320sqft and4/400sqft. HOLD durable first-party/room ID, exact-family age acceptance, rate/quote/kitchen/layout/comfort and151-169fee conflict. Two PARTIAL desk proxies only, no public comparison selected.",
+      "next_gate": "Focused/full native QA and different strict read-only PASS before guarded docs-test release; selected-category accepted-family rate/fees and public task gates remain separate.",
+      "next_eligible_run": "Readable selected rate or authoritative exact-category mapping/age acceptance for the retained room lead and specified family/stay, or material listing change; no calendar-only same-body repetition.",
+      "review_receipt": "FT-RES-170 Ohm01a13d4e-9a05-71c3-99c8-b5dbe31ea56b STRICT read-only PASS/noP0-P3 on v5eZmz manifest46ebe2926b98454b90f48e302473c171719052a54f608cfcce824fd24446ab2f. Independent11focusedPASS4new; Master1140full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log37f4ae02c68c0bcf25be07071209926a31e467f4b191744301983624d6719834 inspected/hashverified, not rerun. Exact7/all1110hash-modes/368olderordered/original151-169/held11LIVE/sixnonownedclean-exclusions/ledger-tail/LRN261-only proofd274e5f0a3815df0ea5be42b126b81c46600683881794ba82987e0959c745476 verified. Cached OTA room lead, not accepted-family quote/officialcategory/production claim; IDs/kitchen/layout/fees unresolved. Supplied reader provenance assessed without network revalidation. No reviewerwrites/network/browser/Git/scheduler/tasks mutation. Only immutable mechanical consensus appended; exact7 guarded research release pending."
+    },
+    {
       "id": "FT-RES-169",
       "title": "Reconcile Surfside primary fee and dining-credit applicability",
       "kind": "source-quality-research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-14",
       "started_at": "2026-10-14T23:07:19Z",
       "target_urls": [],
@@ -47,7 +77,11 @@
       "decision": "REJECT search-only explanation: identical-property rooms body retains30USD/night plus tax and30USD daily dining credit, overview34USD/night plus tax and17USD daily credit. HOLD controlling fee/credit, effective dates, charge basis, old OTA duplication and accepted-family category/quote. Two desk evidence tasks and seven focused controls PASS, not actual UI or parent validation; research-only/no public cost selected.",
       "next_gate": "Complete focused/full QA and different strict read-only review before guarded exact7 research release; exact-family pricing/acceptance and public task gates remain separate.",
       "next_eligible_run": "Changed primary reconciliation or readable exact-category selected-rate fee terms for2adults/ages4,8,12/Nov8-13,2026, not calendar-only repeats of identical sources.",
-      "review_receipt": "FT-RES-169 Carson01a13cae-c36f-7f60-b042-7ddbc04588d8 STRICT read-only PASS/noP0-P3 for frozen gQnrAz manifest82d6660b8a2262c59fac35821d2e8a17f39c441a2a91418d8671cea7839c3f12. Independent7focusedPASS4new; Master1136full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log144e9a9366c7222ffba6124f74811fed0be320b3becb62476f9556c19cdc6353 hash/read verified. Exact7/all1109candidatehash-modes/367olderordered/original151/held11LIVE/sixnonownedclean-exclusions/heldledger-tail/LRN260-only proof f6b68c48516505c524039511a68947f4c2f7e8873d15937fb3b95896d0f44dda verified. Primary30-30versus34-17 body discrepancy retained; controllingfee-credit/effectiveprecedence/chargebasis/oldOTAduplication/category-familyquote unknown. Two deskproxies not renderedUI/parents/stay/SEO; supplied primaryretrievalprovenance assessed without reviewer reopening, fullQAinspected notrerun/productionchecks skipped. No reviewerfiles/network/browser/Git/scheduler/tasks mutation. Research-test-only approval; no publicfact/quote/weekly-source-date renewal. Only immutable mechanical consensus appended; guarded exact7 release pending."
+      "review_receipt": "FT-RES-169 Carson01a13cae-c36f-7f60-b042-7ddbc04588d8 STRICT read-only PASS/noP0-P3 for frozen gQnrAz manifest82d6660b8a2262c59fac35821d2e8a17f39c441a2a91418d8671cea7839c3f12. Independent7focusedPASS4new; Master1136full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log144e9a9366c7222ffba6124f74811fed0be320b3becb62476f9556c19cdc6353 hash/read verified. Exact7/all1109candidatehash-modes/367olderordered/original151/held11LIVE/sixnonownedclean-exclusions/heldledger-tail/LRN260-only proof f6b68c48516505c524039511a68947f4c2f7e8873d15937fb3b95896d0f44dda verified. Primary30-30versus34-17 body discrepancy retained; controllingfee-credit/effectiveprecedence/chargebasis/oldOTAduplication/category-familyquote unknown. Two deskproxies not renderedUI/parents/stay/SEO; supplied primaryretrievalprovenance assessed without reviewer reopening, fullQAinspected notrerun/productionchecks skipped. No reviewerfiles/network/browser/Git/scheduler/tasks mutation. Research-test-only approval; no publicfact/quote/weekly-source-date renewal. Only immutable mechanical consensus appended; guarded exact7 release pending.",
+      "release_receipt": "FT-RES-169 release ee411510f3e8c1fbc1dd3d90b75f44c0c14891b0 remote verified 2026-10-14T23:14:04.279Z; main0-0/emptyindex/exact7/all1109indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Research/test record remote delivered, not a publicpage or productionfact refresh. CarsonPASS/1136full7focused48maintenance/stateSEO0/GSC93/sixpriorwarnings; exact7/all1109indexbytes-modes/367olderordered/original151/held11LIVE/sixnonowned-exclusions/heldledger-tail/LRN260-only preserved. Reject search-only explanation; controllingfee-credit/effectiveprecedence/chargebasis/OTAduplication/category-accepted-familyquote remain HOLD. Next materialprimary reconciliation or readable applicable selected-rate/category/party/stay fee-price evidence, then actual publictask/review/production gates. No currentdemand/weeklyreliability/sourceclock/publicdate/scheduler renewal or repeated Gitapproval/browserretry. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-14T23:14:04.301Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "ee411510f3e8c1fbc1dd3d90b75f44c0c14891b0"
     },
     {
       "id": "FT-OPS-015",

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-170",
+  "learning_id": "LRN-261",
+  "observed_on_eastern": "2026-10-14",
+  "reader_open_window_utc": {"after_clock_sample": "2026-10-15T02:00:48Z", "before_clock_sample": "2026-10-15T02:01:51Z", "exact_retrieval_timestamp": null},
+  "evidence_class": "NEWLY_OBSERVED_OTA_ROOM_LISTING_NOT_LIVE_AVAILABILITY",
+  "prior_records": ["docs/research/miami-family-five-gate-2026-10-13.json", "docs/research/miami-surfside-fee-conflict-2026-10-14.json"],
+  "prior_records_renewed": false,
+  "property": {"id": "residence-inn-miami-beach-surfside", "name": "Residence Inn by Marriott Miami Beach Surfside", "address": "9200 Collins Ave, Surfside, FL 33154", "ota_hotel_id": "11255332", "first_party_category_mapping": null},
+  "family_task": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "stay_basis": "proposed151 comparison, not observed availability", "decision": "Identify a specifically described room lead without borrowing another similarly named room's beds, occupancy, accessibility variant or price."},
+  "hypothesis": "The Surfside property has no discoverable named five-person room lead beyond generic hotel-wide bed and guest-widget wording.",
+  "collection": {"explicit_ota_opens": 1, "search_queries": 0, "underlying_http_requests": null, "native_requests": 0, "browser_attempts": 0, "paid_calls": 0, "llm_calls": 0, "source_owner_contacts": 0, "booking_or_account_mutations": 0, "source_bodies_retained": false, "denied_retries": 0, "alternate_origin_or_tool_fallbacks": 0},
+  "source": {
+    "url": "https://www.expedia.com/Miami-Hotels-Residence-Inn-By-Marriott-Miami-Beach-Surfside.h11255332.Hotel-Information",
+    "section": "Room options",
+    "checked_on_eastern": "2026-10-14",
+    "reader_crawl_label": "yesterday",
+    "relative_date_control_text": "Tonight Oct13-Oct14; not the actual proposed stay or an entered search",
+    "publisher_effective_date": null,
+    "native_http_status": null,
+    "scope_limit": "Reader-visible OTA room cards only. Top property prose is marked AI-summarized and is not adopted as category-specific kitchen, rest or suitability evidence. Reader age and relative dates do not establish live inventory or a policy effective date."
+  },
+  "room_lead": {
+    "ota_title": "Suite, 1 Bedroom",
+    "bed_setup": "2 Queen Beds and 1 Double Sofa Bed",
+    "advertised_sleeps": 5,
+    "advertised_bedrooms": 1,
+    "advertised_area": {"amount": 650, "unit": "sq ft", "measured_by_project": false},
+    "reader_lines": [336, 346, 348, 350, 352],
+    "ota_room_id": null,
+    "cross_channel_category_id": null,
+    "accepted_exact_family": null,
+    "selected_rate": null,
+    "nightly_family_quote": null,
+    "price_state": "View prices button only; no selected-category/date/party rate observed",
+    "kitchen_equipment_by_category": null,
+    "enclosed_sleeping_layout": null,
+    "sofa_comfort_or_rest": null
+  },
+  "title_collision_controls": [
+    {"ota_title": "Suite, 1 Bedroom", "bed_setup": "1 King Bed and 1 Double Sofa Bed", "advertised_sleeps": 4, "advertised_area_sq_ft": 460, "reader_lines": [191, 201, 205, 207], "result": "Same title as lead does not identify the same room"},
+    {"ota_title": "Suite, 1 King Bed", "bed_setup": "1 King Bed", "advertised_sleeps": 2, "advertised_area_sq_ft": 320, "reader_lines": [220, 230, 234, 236], "result": "Title and king-bed count alone do not determine occupancy"},
+    {"ota_title": "Suite, 1 King Bed", "bed_setup": "1 King Bed", "advertised_sleeps": 4, "advertised_area_sq_ft": 400, "reader_lines": [249, 259, 263, 265], "result": "Other identically titled card has a different stated capacity; do not infer unlisted sofa or sleep allocation"}
+  ],
+  "excluded": ["Generic guest-widget maximum8 is not room acceptance", "Accessible room variants are separate products, not automatic substitutes or accessibility guarantees", "Top AI-summarized amenity prose is not exact-category cooking evidence", "Room/property aggregate ratings, review counts and reviewer identities were not retained", "Nearby advertising and alternative-hotel prices were not adopted", "No whole-property live availability, rate, full-cost, accepted-party, official category match or room-layout claim"],
+  "result": {
+    "decision": "REJECT_NO_NAMED_ROOM_LEAD_HYPOTHESIS",
+    "disposition": "CANDIDATE_SPECIFIC_OTA_ROOM_LEAD",
+    "public_ready": false,
+    "category_discovery": "PARTIAL: a bed/capacity/area-described OTA lead exists; title alone and durable first-party/category mapping remain insufficient",
+    "accepted_exact_family": null,
+    "nightly_family_quote": null,
+    "controlling_fee_or_credit": null,
+    "confidence": "High for the observed row distinctions and property identity; unknown live inventory, exact-family acceptance, controlling policy, first-party mapping and comfort.",
+    "remaining_gate": "Identify a durable selected-category mapping; observe acceptance for2adults/ages4,8,12/Nov8-13,2026 and category-matched nightly rate/band with currency/unit/party/stay/channel/observation/taxes/fees/deposit/cancellation. Reconcile169 primary fee-credit conflict and151 OTA duplication; category kitchen/layout remain unknown. Then actual public desktop/mobile/keyboard tasks, native QA, different review and production gates.",
+    "next_eligible_run": "Readable selected-category rate/age terms, authoritative room mapping or material listing change. No calendar-only re-open of identical cards; no booking/contact/account mutation or unchanged denied/browser retry.",
+    "owner": "Master evidence maintainer; independent source evidence is not held by the separate app-browser attachment dependency"
+  },
+  "desk_tasks": [
+    {"persona": "Parent with children4/8/12 seeking a one-room kitchen-base lead", "steps": ["Match exact Surfside hotel identity", "Find title plus two-queen/sofa/650sqft/sleeps5 row", "Reject same-title king/sleeps4 control", "Check durable category and age/rate acceptance evidence", "Retain missing nightly quote, fees and category kitchen/layout", "Keep booking and public comparison choice unresolved"], "result": "PARTIAL_ROOM_DISCOVERY_ONLY", "booking_acceptance_confirmed": false},
+    {"persona": "Maintainer matching channel room rows into151", "steps": ["Keep original151 and169 unchanged", "Distinguish same-title different-bed and king-capacity controls", "Keep anonymous row locator separate from durable booking ID", "Exclude accessible variants, AI overview, ratings and advertising prices", "Preserve fee conflict, historical review clocks and unknown quote", "Queue exact selected-category evidence, not public publication"], "result": "PARTIAL_IDENTITY_MAPPING_ONLY", "booking_acceptance_confirmed": false}
+  ],
+  "validation_limits": "Two reproducible desk evidence proxies, not rendered desktop/mobile/keyboard checks, actual parents, stay/room inspection or booking validation. No family-fit verdict or new sampled-review synthesis; original151 review signals and source dates remain distinct. OTA listing is not official property confirmation, current availability or exact-age acceptance; no semantic accuracy percentage, actual-user satisfaction, SEO lift or weekly maintenance reliability established.",
+  "gsc": {"classification": "REUSED_RECENT_READONLY_API_ORIENTATION", "collected_at": "2026-10-14T15:09:53.183Z", "finalized_through": "2026-10-12", "prior_finalized_through": "2026-10-11", "query_cohort_present": false, "ctr_action_selected": false},
+  "unchanged": {"public_pages_models_exports_dates": true, "original151_and169": true, "all368_older_items": true, "six_nonowned_documents_and_held_ledger_tail": true, "source_holds_governance_journals": true, "weekly_operator_scheduler_restoration": true},
+  "lesson": "A source-bound room title needs bed/capacity/context identity before it can support a category lead. A lead is not a durable cross-channel category or accepted, priced family booking.",
+  "falsification_trigger": "Changed room rows, first-party mapping or selected-rate terms; lost title-collision controls; a borrowed generic capacity, review rating, alternative-hotel price, accessibility claim, renewed historical date or false accepted-family quote."
+}
