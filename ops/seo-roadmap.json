@@ -20,10 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-RES-171",
+      "title": "Qualify Grand Beach's cost handoff without inventing a quote",
+      "kind": "source-quality-research",
+      "status": "in-progress",
+      "selected_on": "2026-10-15",
+      "started_at": "2026-10-15T04:03:49Z",
+      "target_urls": [],
+      "target_paths": [
+        "docs/research/miami-grand-beach-cost-handoff-2026-10-15.json",
+        "tools/miami-family-five-gate.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "evidence": "151 left Grand Beach Miami Beach family5 pricing, third-child charges and primary resort-fee amount unresolved. Ordinary FAQ -> exact Miami Beach -> amenities/category/BookNow navigation supplies property-scoped inclusion wording and a non-retryable reader booking redirect failure, not an accepted quote. Audit whether those primary paths close the cash-cost gate. This is independent source research; no unfinished review-clean release exists and public browser tasks remain held without changed normal access.",
+      "acceptance_criteria": [
+        "Separate official named room, published fee inclusion and missing numeric amount from older OTA amounts and selected-family acceptance; no cross-property Surfside/BayHarbor benefits or free-total inference.",
+        "Record exact ordinary booking click/request/redirect/error/owner/unblock gate once; tool-reported500 is not independently measured provider HTTP or sold-out inventory. No unchanged retry, manual redirect/alternate-origin/tool or booking/contact/account mutation.",
+        "Retain first-party link parameters as handoff provenance only: default1adult/1room/no dates/no child ages is not proposed2adults/ages4,8,12/Nov8-13 acceptance. Desk tasks are not renderedUI, actualparents or booking validation. Focused/full nativeQA/different strict read-only PASS/guarded exact7 research release."
+      ],
+      "measurement_plan": "LRN262 first actualOct15Eastern daily learning: named cost-handoff hypothesis and two desk proxies, not automatic fact renewal, new family quote, review refresh or public delivery.",
+      "production_invariant": "All public models/pages/exports/source-price-review clocks, original151/169/170 and369 older ordered items, held11 LIVE/six nonowned documents/ledger reorder, source governance/holds/journals, weekly operator/scheduler/restoration preserved; onlyLRN262 prefix ships. No newCSV/native/paid/model/browser/denial retry. Actualrun04:02:18Z/00:02:18EDT/startdeadline04:47:18Z/fixed014end unchanged.",
+      "decision": "PRESERVE unpriced exact-family/fee gaps; reject closure from these primary reader paths. Included chairs/internet belong to daily resort fee, numeric amount unexposed; default1adult/1room/no dates/ages and linkHotel98762/room542672 are not selectedfamily booking identity or quote. One non-retryable reader redirect failure/tool500 is not providerHTTP or unavailableinventory. Two PARTIAL desk evidence tasks, no public implementation qualified.",
+      "next_gate": "Focused/full native QA and different strict read-only PASS before guarded exact7 docs-test release; no public quote or implementation qualified.",
+      "next_eligible_run": "Changed permitted ordinary booking/read access or independently readable applicable first-party rate/fee terms; never an unchanged retry or manually followed blocked redirect. Public UI needs its separate documented changed normal attachment.",
+      "review_receipt": "FT-RES-171 Hooke01a13dbe-793c-7f80-8be1-8a71f5970df4 STRICT read-only PASS/noP0-P3 on QOVttZ manifestdd1579bf871790088156a5bef79b61d4c13bd4c0d128c958e96747c409fc107a. Independent15focusedPASS4new; Master1144full48maintenance/stateSEO0/GSC93/sixpriorwarnings logcc87f4a4d0908c9a4e35f99bbbc126615d7bd2757496a4c92d905870a196c905 inspected/hashverified, not rerun. Exact7/all1111hash-modes/369olderordered/original151-169-170/held11LIVE/sixnonownedclean-exclusions/ledger-tail/LRN262-only proofbff90c27f3dfa102f3083bc9a0c76e0d89a7f75ed939c8f355590f1db164bee3 verified. Price/fee/acceptance/inventory unknowns retained; no siblingbenefit transfer/provider500 diagnosis/retry/parentUI claim. Supplied source provenance assessed without network revalidation. No reviewerwrites/network/browser/Git/scheduler/tasks mutation. Only immutable mechanical consensus appended; exact7 guarded research release pending."
+    },
+    {
       "id": "FT-RES-170",
       "title": "Resolve Surfside's named five-person room discovery gate",
       "kind": "source-quality-research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-14",
       "started_at": "2026-10-15T02:01:51Z",
       "target_urls": [],
@@ -47,7 +77,11 @@
       "decision": "REJECT no-named-room-lead hypothesis: OTA Suite1Bedroom/twoqueens-doublesofa/650sqft/advertised5 provides a specific lead. Same-title king/sofa460sqft advertises4, identical KingSuite titles advertise2/320sqft and4/400sqft. HOLD durable first-party/room ID, exact-family age acceptance, rate/quote/kitchen/layout/comfort and151-169fee conflict. Two PARTIAL desk proxies only, no public comparison selected.",
       "next_gate": "Focused/full native QA and different strict read-only PASS before guarded docs-test release; selected-category accepted-family rate/fees and public task gates remain separate.",
       "next_eligible_run": "Readable selected rate or authoritative exact-category mapping/age acceptance for the retained room lead and specified family/stay, or material listing change; no calendar-only same-body repetition.",
-      "review_receipt": "FT-RES-170 Ohm01a13d4e-9a05-71c3-99c8-b5dbe31ea56b STRICT read-only PASS/noP0-P3 on v5eZmz manifest46ebe2926b98454b90f48e302473c171719052a54f608cfcce824fd24446ab2f. Independent11focusedPASS4new; Master1140full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log37f4ae02c68c0bcf25be07071209926a31e467f4b191744301983624d6719834 inspected/hashverified, not rerun. Exact7/all1110hash-modes/368olderordered/original151-169/held11LIVE/sixnonownedclean-exclusions/ledger-tail/LRN261-only proofd274e5f0a3815df0ea5be42b126b81c46600683881794ba82987e0959c745476 verified. Cached OTA room lead, not accepted-family quote/officialcategory/production claim; IDs/kitchen/layout/fees unresolved. Supplied reader provenance assessed without network revalidation. No reviewerwrites/network/browser/Git/scheduler/tasks mutation. Only immutable mechanical consensus appended; exact7 guarded research release pending."
+      "review_receipt": "FT-RES-170 Ohm01a13d4e-9a05-71c3-99c8-b5dbe31ea56b STRICT read-only PASS/noP0-P3 on v5eZmz manifest46ebe2926b98454b90f48e302473c171719052a54f608cfcce824fd24446ab2f. Independent11focusedPASS4new; Master1140full/48maintenance/stateSEO0/GSC93/sixpriorwarnings log37f4ae02c68c0bcf25be07071209926a31e467f4b191744301983624d6719834 inspected/hashverified, not rerun. Exact7/all1110hash-modes/368olderordered/original151-169/held11LIVE/sixnonownedclean-exclusions/ledger-tail/LRN261-only proofd274e5f0a3815df0ea5be42b126b81c46600683881794ba82987e0959c745476 verified. Cached OTA room lead, not accepted-family quote/officialcategory/production claim; IDs/kitchen/layout/fees unresolved. Supplied reader provenance assessed without network revalidation. No reviewerwrites/network/browser/Git/scheduler/tasks mutation. Only immutable mechanical consensus appended; exact7 guarded research release pending.",
+      "release_receipt": "FT-RES-170 release 8fd02add87c3555073f4441311a786c409ab2228 remote verified 2026-10-15T02:08:24.341Z; main0-0/emptyindex/exact7/all1110indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Research/test room-lead record delivered remotely, not a publicpage or productionfact refresh. OhmPASS/1140full11focused48maintenance/stateSEO0/GSC93/sixpriorwarnings; exact7/all1110indexhash-modes/368olderordered/original151-169/held11LIVE/sixnonownedclean-exclusions/ledger-tail/LRN261-only preserved. Newly observed cachedOTA suite advertised5/twoqueens-sofa is a lead only; durable first-party/category mapping/exact-family age acceptance/nightlyquote/kitchen-layout/fees remain unknown. Next readable selected-category rate/age terms or authoritative mapping/material listing change, then publictask/review/production gates. No newcurrentquote/price-reviewdate/weekly/scheduler/browserretry/approval request. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-15T02:08:24.362Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "8fd02add87c3555073f4441311a786c409ab2228"
     },
     {
       "id": "FT-RES-169",

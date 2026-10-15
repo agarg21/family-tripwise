@@ -6,6 +6,7 @@ const gate = read('miami-family-five-gate');
 const demand = read('miami-family-five-demand');
 const followup = JSON.parse(readFileSync(new URL('../docs/research/miami-surfside-fee-conflict-2026-10-14.json', import.meta.url)));
 const roomGate = JSON.parse(readFileSync(new URL('../docs/research/miami-surfside-room-gate-2026-10-14.json', import.meta.url)));
+const beachCost = JSON.parse(readFileSync(new URL('../docs/research/miami-grand-beach-cost-handoff-2026-10-15.json', import.meta.url)));
 
 test('Miami demand preserves actual samples, estimates and reconciled paid costs', () => {
   assert.deepEqual(demand.keywords.map(x => x.search_volume), [1000, 480]);
@@ -190,4 +191,83 @@ test('Surfside room audit distinguishes reader clocks and desk evidence from liv
   assert.match(roomGate.validation_limits, /not rendered desktop\/mobile\/keyboard/);
   assert.match(roomGate.validation_limits, /original151 review signals and source dates remain distinct/);
   assert.ok(Object.values(roomGate.unchanged).every(x => x === true));
+});
+
+test('Grand Beach primary navigation preserves exact property and fee-component scope', () => {
+  assert.equal(beachCost.action_id, 'FT-RES-171');
+  assert.equal(beachCost.property.id, gate.properties[1].id);
+  assert.equal(beachCost.property.category, gate.properties[1].category);
+  assert.equal(beachCost.sources.length, 4);
+  assert.deepEqual(beachCost.sources.map(s => s.id), ['faq', 'miami-beach', 'amenities', 'suite']);
+  assert.equal(beachCost.sources[3].url, gate.properties[1].official.url);
+  assert.ok(beachCost.sources.every(s => s.publisher_effective_date === null && s.native_http_status === null));
+  assert.equal(beachCost.fee_result.daily_resort_fee_published_as_existing, true);
+  assert.equal(beachCost.fee_result.numeric_fee_in_inspected_primary_bodies, null);
+  assert.equal(beachCost.fee_result.zero_fee_established, false);
+  assert.equal(beachCost.fee_result.other_property_benefits_applied, false);
+  assert.equal(beachCost.fee_result.original151_ota_amounts_rechecked, false);
+  assert.equal(beachCost.fee_result.original151_ota_amounts_promoted_to_primary_or_current_quote, false);
+  assert.equal(beachCost.fee_result.selected_stay_cash_total, null);
+  assert.equal(beachCost.fee_result.third_child_charge, null);
+});
+
+test('Grand Beach room handoff parameters are not a selected-family booking or final category', () => {
+  const h = beachCost.booking_handoff, requested = new URL(h.requested_url), redirect = new URL(h.reader_reported_redirect_url);
+  assert.equal(requested.origin, 'https://reservations.travelclick.com');
+  assert.equal(requested.pathname, '/98762');
+  assert.equal(redirect.origin, 'https://www.grandbeachhotel.com');
+  assert.equal(redirect.pathname, '/miami-beach/book/dates-of-stay');
+  for (const u of [requested, redirect]) {
+    assert.equal(u.searchParams.get('HotelId'), h.link_parameters.hotel_id);
+    assert.equal(u.searchParams.get('roomtypeid'), h.link_parameters.room_type_id);
+    assert.equal(u.searchParams.get('adults'), '1');
+    assert.equal(u.searchParams.get('rooms'), '1');
+    assert.equal(u.searchParams.get('languageid'), '1');
+    assert.deepEqual([...u.searchParams.keys()].sort(), ['HotelId', 'adults', 'languageid', 'rooms', 'roomtypeid'].sort());
+  }
+  assert.equal(h.link_parameters.room_type_id, '542672');
+  assert.equal(h.link_parameters.arrival, null);
+  assert.equal(h.link_parameters.departure, null);
+  assert.equal(h.link_parameters.child_ages, null);
+  assert.equal(h.selected_party_submitted, false);
+  assert.equal(h.selected_dates_submitted, false);
+  assert.equal(h.final_room_identity_verified, false);
+  for (const key of ['exact_family_acceptance', 'selected_rate', 'nightly_family_quote', 'availability']) assert.equal(h[key], null);
+  assert.deepEqual(beachCost.family_task.child_ages, gate.family_task.child_ages);
+  assert.equal(beachCost.family_task.adults, 2);
+});
+
+test('Grand Beach reader error cannot become provider HTTP, sold-out inventory or a retry permit', () => {
+  const f = beachCost.booking_handoff.failure, c = beachCost.collection;
+  assert.equal(f.tool, 'web.run.click');
+  assert.equal(f.reported_code, 500);
+  assert.equal(f.native_provider_http_status, null);
+  assert.equal(f.classification, 'READER_REDIRECT_ACCESS_FAILURE_NOT_INVENTORY_OR_PROVIDER_STATUS');
+  assert.equal(f.retry_authorized, false);
+  assert.equal(f.project_wide_blocker, false);
+  assert.match(f.next_check, /no unchanged click, manual redirect follow, alternate origin\/tool\/browser/);
+  assert.ok(f.owner && f.unblock_condition && f.gate);
+  assert.equal(c.explicit_primary_opens + c.explicit_navigation_clicks, c.explicit_url_operations);
+  assert.equal(c.readable_bodies + c.failed_booking_handoffs, c.explicit_url_operations);
+  assert.equal(c.failed_booking_handoffs, 1);
+  assert.equal(c.underlying_http_requests, null);
+  for (const key of ['native_requests', 'browser_attempts', 'paid_calls', 'llm_calls', 'source_owner_contacts', 'booking_or_account_mutations', 'manual_redirect_followups', 'denied_retries', 'alternate_origin_or_tool_fallbacks']) assert.equal(c[key], 0);
+  assert.equal(c.source_bodies_retained, false);
+});
+
+test('Grand Beach cost audit preserves unknowns and old observations without public or parent validation', () => {
+  assert.equal(beachCost.observed_on_eastern, '2026-10-15');
+  assert.equal(beachCost.prior_record_renewed, false);
+  assert.equal(beachCost.result.public_ready, false);
+  assert.equal(beachCost.result.decision, 'PRESERVE_UNPRICED_EXACT_FAMILY_AND_FEE_GAPS');
+  assert.equal(beachCost.result.hypothesis_result, 'REJECT_CLOSURE_FROM_THESE_PRIMARY_READER_PATHS');
+  assert.deepEqual(gate.properties[1].booking_observation.displayed_fees.map(f => f.amount), [68.4, 58, 100]);
+  assert.equal(gate.properties[1].booking_observation.nightly_family_quote, null);
+  assert.equal(gate.properties[1].booking_observation.reviews[0].posted_on, '2026-10-02');
+  assert.equal(beachCost.desk_tasks.length, 2);
+  assert.ok(beachCost.desk_tasks.every(t => t.steps.length === 6 && t.result.startsWith('PARTIAL_') && t.accepted_family_or_quote_confirmed === false));
+  assert.match(beachCost.validation_limits, /not rendered desktop\/mobile\/keyboard/);
+  assert.equal(beachCost.gsc.query_cohort_present, false);
+  assert.equal(beachCost.gsc.ctr_action_selected, false);
+  assert.ok(Object.values(beachCost.unchanged).every(x => x === true));
 });

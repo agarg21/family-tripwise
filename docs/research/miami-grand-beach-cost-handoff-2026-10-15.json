@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "action_id": "FT-RES-171",
+  "learning_id": "LRN-262",
+  "observed_on_eastern": "2026-10-15",
+  "reader_window_utc": {"after_clock_sample": "2026-10-15T04:02:18Z", "before_clock_sample": "2026-10-15T04:03:49Z", "exact_retrieval_timestamps": null},
+  "evidence_class": "PRIMARY_NAVIGATION_AND_READER_HANDOFF_FAILURE_WITH_DESK_PROXY",
+  "prior_record": "docs/research/miami-family-five-gate-2026-10-13.json",
+  "prior_record_renewed": false,
+  "property": {"id": "grand-beach-miami-beach", "name": "Grand Beach Hotel Miami Beach", "address": "4835 Collins Avenue, Miami Beach, Florida33140", "category": "Two Bedroom Suite Ocean Front"},
+  "family_task": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "stay_basis": "proposed151 comparison, not observed availability", "decision": "Can primary amenity inclusion and the named room's normal booking handoff establish the family's actual cash price and mandatory fees?"},
+  "hypothesis": "Readable ordinary primary paths for the named category provide a numeric resort fee or a usable selected-family quote that closes151's cost gate.",
+  "collection": {"explicit_primary_opens": 1, "explicit_navigation_clicks": 4, "explicit_url_operations": 5, "readable_bodies": 4, "failed_booking_handoffs": 1, "underlying_http_requests": null, "native_requests": 0, "browser_attempts": 0, "paid_calls": 0, "llm_calls": 0, "source_owner_contacts": 0, "booking_or_account_mutations": 0, "manual_redirect_followups": 0, "denied_retries": 0, "alternate_origin_or_tool_fallbacks": 0, "source_bodies_retained": false},
+  "sources": [
+    {"id": "faq", "url": "https://www.grandbeachhotel.com/faq", "reader_crawl_label": "yesterday", "reader_lines": [110, 126, 178, 197], "native_http_status": null, "publisher_effective_date": null, "paraphrase": "Group wording says chairs/umbrellas are included; Miami Beach detail ties them to a daily resort fee. Bay Harbor breakfast and no-Surfside-East-access rules concern that separate property.", "scope": "Property-scoped inclusion is not zero total resort fee; no numeric Miami Beach fee in the inspected body."},
+    {"id": "miami-beach", "url": "https://www.grandbeachhotel.com/miami-beach", "reader_crawl_label": "today", "reader_lines": [156, 158, 160, 164, 279], "native_http_status": null, "publisher_effective_date": null, "paraphrase": "Exact Miami Beach property lists the named ocean-front two-bedroom suite, its details link and Book Now handoff; no numeric rate appears beside Rates from."},
+    {"id": "amenities", "url": "https://www.grandbeachhotel.com/miami-beach/amenities", "reader_crawl_label": "yesterday", "reader_lines": [144, 148, 156, 197, 212], "native_http_status": null, "publisher_effective_date": null, "paraphrase": "Miami Beach amenities list beach chairs, two oceanfront pools, an adults-only rooftop pool and valet parking, without a numeric fee in the inspected body."},
+    {"id": "suite", "url": "https://www.grandbeachhotel.com/miami-beach/suites/two-bedroom-suite-ocean-front", "reader_crawl_label": "today", "reader_lines": [79, 96, 97, 98, 122, 187], "native_http_status": null, "publisher_effective_date": null, "paraphrase": "Named suite retains advertised6-8 capacity and bed/equipment wording from151; wireless internet is tied to the daily resort fee. No selected-family rate or numeric resort fee is exposed.", "limits": "Retained source observations do not establish exact-age acceptance, kitchen cooking, enclosed layout, comfort or a current booking."}
+  ],
+  "navigation": [
+    {"from": "faq", "label": "Miami Beach", "to": "miami-beach"},
+    {"from": "miami-beach", "label": "Amenities", "to": "amenities"},
+    {"from": "miami-beach", "label": "Suite Details beside Two Bedroom Suite Ocean Front", "to": "suite"},
+    {"from": "miami-beach", "label": "Book Now beside Two Bedroom Suite Ocean Front", "to": "booking-handoff", "outcome": "non-retryable reader redirect failure"}
+  ],
+  "booking_handoff": {
+    "provenance_class": "FIRST_PARTY_LINK_PARAMETER_ONLY_NOT_BOOKING_CONFIRMATION",
+    "requested_url": "https://reservations.travelclick.com/98762?HotelId=98762&adults=1&languageid=1&rooms=1&roomtypeid=542672",
+    "reader_reported_redirect_url": "https://www.grandbeachhotel.com/miami-beach/book/dates-of-stay?adults=1&HotelId=98762&languageid=1&rooms=1&roomtypeid=542672",
+    "link_parameters": {"hotel_id": "98762", "room_type_id": "542672", "adults": "1", "rooms": "1", "language_id": "1", "arrival": null, "departure": null, "child_ages": null},
+    "selected_party_submitted": false,
+    "selected_dates_submitted": false,
+    "final_room_identity_verified": false,
+    "exact_family_acceptance": null,
+    "selected_rate": null,
+    "nightly_family_quote": null,
+    "availability": null,
+    "failure": {
+      "tool": "web.run.click",
+      "exact_command": {"source_url": "https://www.grandbeachhotel.com/miami-beach", "observed_link_id": 38, "observed_link_label": "Book Now beside Two Bedroom Suite Ocean Front"},
+      "reported_code": 500,
+      "native_provider_http_status": null,
+      "message": "Failed to fetch; redirected target is not accessible via this tool; non-retryable error",
+      "classification": "READER_REDIRECT_ACCESS_FAILURE_NOT_INVENTORY_OR_PROVIDER_STATUS",
+      "gate": "Source-reader selected-category family quote and rate/fee terms",
+      "owner": "Master records hold; ordinary reader/booking-provider access is the external dependency, not a new user permission request",
+      "unblock_condition": "Documented changed permitted ordinary handoff access, or separately readable applicable first-party rate/fee terms",
+      "next_check": "Only changed permitted access or new applicable evidence; no unchanged click, manual redirect follow, alternate origin/tool/browser, account/contact/payment mutation or deployment workaround",
+      "retry_authorized": false,
+      "project_wide_blocker": false
+    }
+  },
+  "fee_result": {"daily_resort_fee_published_as_existing": true, "numeric_fee_in_inspected_primary_bodies": null, "zero_fee_established": false, "tax_basis": null, "selected_stay_cash_total": null, "third_child_charge": null, "original151_ota_amounts_rechecked": false, "original151_ota_amounts_promoted_to_primary_or_current_quote": false, "other_property_benefits_applied": false},
+  "result": {
+    "decision": "PRESERVE_UNPRICED_EXACT_FAMILY_AND_FEE_GAPS",
+    "hypothesis_result": "REJECT_CLOSURE_FROM_THESE_PRIMARY_READER_PATHS",
+    "public_ready": false,
+    "quote_gate": "HOLD_READER_HANDOFF_AND_APPLICABILITY",
+    "confidence": "High observed navigation, inclusion-versus-cash distinction and tool failure; controlling numeric fees, provider status, live inventory, exact-family acceptance and booking identity unknown.",
+    "remaining_gate": "Applicable category/party/date rate or planning band and exact-age acceptance; currency/unit/room/party/stay/channel/observation/taxes/fees/third-child charges/deposit/cancellation. Resolve original151 property-specific unknowns without importing Bay Harbor breakfast or Surfside access. Then actual public UI/native QA/different review/production gates.",
+    "next_eligible_run": "Changed permitted ordinary booking/read access or independently readable applicable first-party rate/fee terms; do not repeat these primary bodies on cadence or manually follow the failed redirect. Separate normal app-browser attachment still needs documented changed access.",
+    "stop_rule": "No quote, no numeric-fee substitution, no zero-charge inference and no unavailable-inventory diagnosis when the source cannot provide the scoped evidence."
+  },
+  "desk_tasks": [
+    {"persona": "Beach-priority parent with children4/8/12", "steps": ["Match Miami Beach4835Collins, not Surfside or BayHarbor", "Find named category and separate advertised capacity from ages", "Trace chairs and internet inclusion to daily fee", "Look for numeric fee and selected-family rate", "Inspect default handoff parameters and reader failure", "Leave cash budget and booking choice unresolved"], "result": "PARTIAL_PRIMARY_TRACE_COST_HELD", "accepted_family_or_quote_confirmed": false},
+    {"persona": "Maintainer preserving151 cost and access provenance", "steps": ["Keep original OTA fee/deposit and review clocks unchanged", "Distinguish group wording from property-specific conditions", "Record ordinary link parameters without declaring finalroom mapping", "Keep tool500/nativeHTTP/inventory distinct", "Hold exact failed source path without retry or alternate surface", "Select only changed access or new applicable rate terms next"], "result": "PARTIAL_HANDOFF_EVIDENCE_ONLY", "accepted_family_or_quote_confirmed": false}
+  ],
+  "validation_limits": "Two reproducible desk evidence proxies, not rendered desktop/mobile/keyboard checks, actualparents, stay or booking validation. No new review sample or family-fit verdict; original151 review signals/date limits remain. Reader crawl labels are not publisher effective dates or current availability. No source-processing permission, complete weekly factual renewal, parent satisfaction, semantic precision or SEO-lift proof.",
+  "gsc": {"classification": "REUSED_RECENT_READONLY_API_ORIENTATION", "collected_at": "2026-10-14T15:09:53.183Z", "finalized_through": "2026-10-12", "prior_finalized_through": "2026-10-11", "query_cohort_present": false, "ctr_action_selected": false},
+  "unchanged": {"public_pages_models_exports_dates": true, "original151_169_170": true, "all369_older_items": true, "six_nonowned_documents_and_held_ledger_tail": true, "source_holds_registry_governance_journals": true, "weekly_operator_scheduler_restoration": true},
+  "lesson": "Included amenity is a charge component, not proof of zero mandatory cash cost. A property-linked room parameter and default guest count are provenance, not a selected-family quote; a reader redirect failure says nothing about inventory.",
+  "falsification_trigger": "Readable applicable rate/fee and exact-family terms, changed permitted handoff access, contrary property identity, borrowed sibling benefits/old fees, false zero-cost/sold-out claim, or an unchanged failed-path replay."
+}
