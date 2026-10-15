@@ -20,6 +20,43 @@
   ],
   "items": [
     {
+      "id": "FT-OPS-017",
+      "title": "Reconcile reviewed rental tool with incoming daily GSC snapshot",
+      "kind": "routine-git-reconciliation",
+      "status": "in_progress",
+      "selected_on": "2026-10-15",
+      "started_at": "2026-10-15T15:12:42.179Z",
+      "target_paths": [
+        "ops/gsc-snapshots/2026-10-15.json",
+        "ops/gsc-snapshots/2026-10-15.md",
+        "docs/plan/git-reconciliation-2026-10-15.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "176 is locally committed after WegenerPASS but remote advanced with a two-file daily GSC snapshot. Local d27d4cc06954b1a5f008c79fa3e7921dd22879b0 and remote1145ddbcebe789a202b7ecc3af8eefa309155320 sharea858342061a91f126a7b4529e0f56b6fb8939012. Conflict-free merge-tree62a4fe6571284ceb2137cd0425155ff3e52dfa48. Incoming two snapshot paths do not overlap20dirty held paths. Standing October14 delegation applies; no repeated approval.",
+      "acceptance_criteria": [
+        "Pin both histories, ancestor and complete outgoing range; normal no-commit merge stages only two incoming files with no conflicts. Preserve376olderLIVE ordered records/allnonowned bytes-modes, nine173held paths and itsprivate record. No rebase/reset/stash/discard/forcepush.",
+        "Clean composed candidate retains176 exact reviewed code and all public bytes; isolated017 exact7 operating/plan/snapshot paths exclude173metadata/code and heldledger. Validate snapshot schema/privacy; APIcollectionOct15/finalOct13 is new imported orientation, not alignedquery/CTR proof or an indexing request.",
+        "Focused/full native QA and different read-only PASS review full candidate and action-specific pinned merge guards. Final merge orderedparents are exactlocal176 andremoteGSC, fulltreebytes-modes match frozen inventory, and both originalcommits remain ancestors. Freshfetch must still equalpinnedremote; completeoutgoingrange is only176then017merge before normalpush. Stop on any changedpins/guardfailure; no blindpush or consensusreuse."
+      ],
+      "measurement_plan": "Release integrity only, not newlearning/publicSEOvalue. Verify mergedindex/fulltree/parents/ancestors/range/remoteidentity, original176manifest and everyheldbyte. ExistingLRN266 is the substantive familylearning.",
+      "production_invariant": "No publicsite/model/176source judgement/173held work/fact-price-review dates/observation/weekly/scheduler/security change. No sourcebrowser/networkretry, paidrequest, indexing or externalaccount mutation. NewGSC snapshot remains public-safe/readonly and existing2026-10-14 history preserved.",
+      "decision": "IMPLEMENT normal deterministic reconciliation under standing delegation. Generic release guard unchanged; use separately reviewed action-specific native pinned merge checks, not ignore its denial.176 remains local/reviewed/unshipped until merged remoteverification.",
+      "next_gate": "Normalno-commitmerge, cleancomposed QA/different read-onlyPASS, exactcandidate staging, verified mergeparents/tree/range/freshremote and normalpush. If remote changes or ambiguity appears, stop thatpush and audit newpins.",
+      "release_exclusions": "All uncommitted173metadata/code and prior dirtydocuments/ledgertail excluded; fullLIVErecord remains unchanged. Only017 exact7 paths modify clean composedtree;176 prior reviewed commit is preserved, not rewritten.",
+      "pins": {
+        "local": "d27d4cc06954b1a5f008c79fa3e7921dd22879b0",
+        "remote": "1145ddbcebe789a202b7ecc3af8eefa309155320",
+        "ancestor": "a858342061a91f126a7b4529e0f56b6fb8939012",
+        "composed_tree": "62a4fe6571284ceb2137cd0425155ff3e52dfa48"
+      },
+      "incident": "Freshfetch advanced origin after176review. tools/release-git-guard.mjs --phase before-push --manifest ft176-final-dZr2YI-push.json returned Commit pins changed. A subsequent ordinary git push origin main was incorrectly executed in the same orchestration despite that failure; Git rejected non-fast-forward, so no remote mutation occurred. No retry/forcepush. Correction: explicit fail-closed phase checks and separate reviewed normalmerge lane. OwnerMaster; unblock this pinnedQA/review/merge, nextcheck now.",
+      "review_receipt": "FT-OPS-017 Kierkegaard01a14021-afd0-79e0-ba5f-80babd4cc117 strict read-only PASS/no remainingP0-P3 onUOvK4Z manifest49ab72f933b661013585254295bc14a419da341afb71d6ce03d3688977ad0447. Independent7focused/state0/GSC94/privacy-date and frozen1124/exact7/pins/index/376olderLIVE/1122nonowned bytes-modes/nine173held/79public/original176elevenhash probesPASS. Master1176full50maintenance/stateSEO0/GSC94/sixpriorwarnings logd5e6ea39368b1b9547d714436be315725884650f99a29dc83957ddb0f3356eb8 inspected/hashverified, not fullrerun. Initial composedQA two missinglatestGSC state links repaired in017prefixes only; replacementfullgreen. Action-specific guard10740143b938327c6acaebdcfd337621cc44f0e99e9708dd85724c40a95c77fe and completione8315851f1d5f08869360d7c425a145d249067357b93a071e66dd412415303d8 reviewed source-only. No reviewerwrites/network/browser/Git-indexmutations/delegation/scheduler. Approval only017normalmerge with preserved reviewed176, not173/publicUI/parent/SEOproof. Only immutable consensus appended; exactstage/orderedparents/fulltree/outgoing/freshfetch/pinnedremote/normalpush still required."
+    },
+    {
       "id": "FT-IMP-176",
       "title": "Separate Lake Eola boat-unit costs from unknown park-day admission",
       "kind": "shared-product-data-tool",
