@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-178",
+  "learning_unit": "LRN-268",
+  "parent_item": "FT-RES-059",
+  "checked_on": "2026-10-16",
+  "recheck_on": "2026-10-30",
+  "evidence_class": "OFFICIAL_PROPERTY_POLICY_WITH_EDITORIAL_PROXY_ARITHMETIC",
+  "hotel": "Pendry Washington DC The Wharf",
+  "source": {
+    "url": "https://www.pendry.com/washington-dc/faqs/",
+    "inspected_on": "2026-10-16",
+    "published_on": null,
+    "effective_on": null,
+    "retrieval": "Ordinary web-extracted primary body; crawler label yesterday is not a policy effective date",
+    "sections": ["Reservations: check in, check out, early check in, late check out"],
+    "booking_flow_used": false
+  },
+  "policy": {
+    "local_time_basis": "Hotel-local wall clock",
+    "standard_check_in": "16:00",
+    "standard_check_out": "11:00",
+    "early_check_in": "Complimentary only if available on arrival",
+    "waiting_fallback": "Luggage storage and amenity access while awaiting accommodation; not a private room or a verified rest space",
+    "late_check_out": {
+      "availability_required": true,
+      "fee_per_additional_hour_minor": 5000,
+      "currency": "USD",
+      "currency_basis": "Editorial interpretation of the primary dollar symbol for this US property; ISO currency not printed in the inspected fee sentence",
+      "unit": "Published additional hour after 11:00; room-count scaling not established",
+      "tax_included": false,
+      "tax_rate": null,
+      "partial_hour_rounding": null,
+      "after_local_time": "16:00",
+      "after_threshold_charge": "Additional night fee",
+      "additional_night_amount_minor": null,
+      "hourly_fee_stacking_with_extra_night": null,
+      "reservation_specific_acceptance": null
+    }
+  },
+  "scenario": {
+    "adults": 2,
+    "child_ages": [4, 8, 12],
+    "configuration": "Maintained Two Bedroom Suite task; no new category or party acceptance check",
+    "configuration_count": 1,
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "car": false,
+    "actual_user_or_booking": false,
+    "date_specific_policy_verified": false
+  },
+  "desk_cases": [
+    {
+      "id": "departure-1400-hypothetical-approval",
+      "requested_local_time": "14:00",
+      "assumption": "Hypothetical approval of three whole additional hours at the published hourly policy",
+      "whole_hours": 3,
+      "conditional_fee_component_minor": 15000,
+      "calculation_class": "MODEL_DERIVED_CONDITIONAL_COMPONENT_NOT_QUOTE",
+      "actual_room_access_confirmed": null,
+      "complete_incremental_cost_minor": null
+    },
+    {
+      "id": "departure-1430-rounding-unknown",
+      "requested_local_time": "14:30",
+      "assumption": "No half-hour proration or rounding rule supplied",
+      "whole_hours": null,
+      "conditional_fee_component_minor": null,
+      "calculation_class": "UNRESOLVED_PARTIAL_HOUR_BILLING",
+      "actual_room_access_confirmed": null,
+      "complete_incremental_cost_minor": null
+    },
+    {
+      "id": "departure-1601-extra-night-unknown",
+      "requested_local_time": "16:01",
+      "assumption": "After the published threshold; nightly amount and fee interaction unresolved",
+      "whole_hours": null,
+      "conditional_fee_component_minor": null,
+      "calculation_class": "UNRESOLVED_ADDITIONAL_NIGHT",
+      "actual_room_access_confirmed": null,
+      "complete_incremental_cost_minor": null
+    },
+    {
+      "id": "arrival-1300-room-not-promised",
+      "requested_local_time": "13:00",
+      "assumption": "Pre-check-in arrival; storage and amenities do not establish private-room access",
+      "whole_hours": null,
+      "conditional_fee_component_minor": null,
+      "calculation_class": "UNRESOLVED_EARLY_ROOM_ACCESS",
+      "actual_room_access_confirmed": null,
+      "complete_incremental_cost_minor": null
+    }
+  ],
+  "decision": {
+    "result": "IMPLEMENT maintained conditional policy input; PRESERVE actual room-rest access and complete cost as unknown",
+    "hypothesis": "The existing nightly-room comparison also covers a departure-day midday room rest",
+    "finding": "Rejected without hotel approval and applicable extension terms; luggage or amenity access is not room access",
+    "confidence": "High inspected published policy and whole-hour arithmetic; unknown exact-stay applicability, acceptance, tax, additional-night amount, actual rest or family fit",
+    "next_gate": "Applicable exact-reservation approval and fee/tax/rounding terms, plus permitted rendered QA and independent release review before any public integration",
+    "next_falsification_trigger": "Changed primary checkout terms or supplied applicable hotel confirmation; otherwise review before October30",
+    "why_research_only": "Existing173 public candidate lacks actual rendered QA; no new public change is released by this independent source audit. Older DC prices and museum facts are not revalidated."
+  },
+  "scope": {
+    "public_change": false,
+    "room_price_observation": false,
+    "existing_price_dates_renewed": false,
+    "review_signal_or_firsthand_claim": false,
+    "journey_stroller_safety_assessed": false,
+    "human_preference_or_seo_proof": false,
+    "contacts_bookings_paid_calls": 0
+  }
+}

@@ -20,10 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-RES-178",
+      "title": "Separate Pendry departure-day room access from a rest budget",
+      "kind": "maintained-official-policy-research",
+      "status": "in-progress",
+      "selected_on": "2026-10-16",
+      "started_at": "2026-10-16T05:04:04Z",
+      "target_paths": [
+        "docs/research/dc-pendry-departure-rest-2026-10-16.json",
+        "tools/dc-pendry-departure-rest.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md",
+        "ops/operator.json"
+      ],
+      "target_urls": [],
+      "evidence": "Existing DC parent059 and museum-rest108/068 lack departure-day room-access and incremental-cost inputs. New ordinary primary FAQ inspection on October16 establishes checkout and conditional hourly/extra-night terms without using the held booking calendar. Public009 already delivered; no relaunch. Oct15 GSC/finalOct13 is reused API orientation, not query or CTR evidence.",
+      "acceptance_criteria": [
+        "Maintain a dated primary-policy record with one-config two-adult/ages4,8,12 Nov8-13 synthetic task; no new family-room quote, booking acceptance, tax rate, price renewal or hotel-fit conclusion.",
+        "Keep whole-hour arithmetic conditional on explicit hypothetical approval. Partial-hour billing, additional-night interaction, applicable tax, future operation and actual rest remain unresolved. Early-arrival luggage/amenity access is not access to a private room.",
+        "Focused/full native QA and different strict read-only PASS; isolated exact8 release excludes173/private metadata/dirty ledger tail. All79 public files and prior room-price-policy records unchanged. Only mechanical177 completion and verified014 restoration may backfill."
+      ],
+      "measurement_plan": "Four reproducible desk cases: 14:00 conditional three-hour component, 14:30 unknown rounding, after16:00 unknown additional-night cost, arrival before16:00 no room guarantee. These are proxy checks, not rendered or real-parent evidence.",
+      "production_invariant": "No public changes or source-price-review renewal outside the new FAQ policy record. Preserve378older LIVE records and1132baseline files except exact8 paths, including all nine173held targets. Operator.json carries only the previously verified014 mechanical restoration. No browser retry, paid call, source-denial retry, account/contact, scheduler mutation, new destination or URL.",
+      "decision": "IMPLEMENT maintained policy/task evidence; PRESERVE actual room access and full departure-day budget as unknown. No unblocked public release qualifies while173actualUIQA remains held; this distinct field-level audit does not repeat its blocker report.",
+      "next_gate": "Focused/full native QA, different read-only consensus and exact guarded docs/data/test push. Public integration requires its own usefulness/rendered/review/release gates; no claim that this research is public delivery.",
+      "review_receipt": "FT-RES-178 Heisenberg01a1431b-000c-7123-aaab-554e5eecc12a strict read-only PASS/noP0-P3 onUBHDzF manifest6419637685ccd7264373ddbcb66abeac95a4f6e3876f38827474ab3a99980f3c. Independent3focusedPASS; Master1189full50maintenance/stateSEO0/GSC94/sixexistingwarnings log2ebafd2629ab35d13f10cac55a0c0cba364078d5222f99d276fd65ecc4ca54ff inspected, not fullrerun. Exact8/1129candidate/79publicHEAD/378olderLIVE/1126nonownedbytes-modes/historicalledger/private173preserved. Candidate excludes173; olderchanges only177completion; operatorjson onlypriorverified014restoration. Primarypolicy supplied-provenance assessed without replay; hypothetical arithmetic/editorialUSD/unknownapproval-tax-rounding-nightcost/research-only boundaries retained. No reviewerwrites/network/browser/production/schedulerinspection/delegation. No173release authority. Only immutable consensus appended; guarded docs-data-test release next."
+    },
+    {
       "id": "FT-IMP-177",
       "title": "Keep NYC child-height fare uncertainty out of family budgets",
       "kind": "shared-product-data-tool",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-15",
       "started_at": "2026-10-15T16:59:26.982Z",
       "target_paths": [
@@ -50,7 +80,11 @@
       "decision": "IMPLEMENT_NOW conflict-aware NYC height qualification and uncapped fare-only desk arithmetic in existing transit CLI; no new generaltransit URL or duplicate capengine. PRESERVE091 teen page/OMNY record and173 heldform.",
       "next_gate": "Focused/full native and different independent read-onlyPASS, exact10 shared-tool release. Exact44 must remain unresolved until applicable operator clarification or changed agreeing primary wording; no guessed precedence. Public integration only a separate evidence-qualified failed task with actual permitted renderedQA, never assumed from this shared tool.",
       "release_exclusions": "All173private record/code and existingdirtydocs/ledgertail excluded. CleanHEAD candidate with177 and mechanical017/176completion only; all377olderLIVE records stay unchanged. Source record retains public-safe question paraphrase without identities/copiedthread or medical/personal details.",
-      "review_receipt": "FT-IMP-177 Confucius01a14083-fee3-7222-bd6d-c91f65610783 strict read-only PASS/noP0-P3 on9iSBcS manifest46d7f42bb8fe2484f8e21713b250ecef3c4e3bd65e433bdbae294e8b6eb6cadf. Independent22focused/15120boundarycombinations/effective-date/malformed probesPASS. Master1186full50maintenance/stateSEO0/GSC94/sixpriorwarnings logcbfebc836a1c21d524f789e2772b188dc5b6bb66e050dfefad6de38a4221cd1c inspected/hashverified, notfullrerun. Exact10/1127candidate/79publicHEAD/377olderLIVE/1122nonownedbytes-modes/173held/091comparison-clocks/DCcompatibility preserved. Exact44/unknownheight/excesschildren/expiry remainunknown; no caps, commute-fare transfer, payment/route/safety promise. Master tightened effective_on<=inspected_on beforeconsensus; replacementfullgreen and regressionreviewed. Sourceprovenance supplied/no networkreplay. No reviewerwrites/network/browser/delegation/Gitmutations/scheduler. Only sharedCLI/model approval, excludes173/publicUI/posting/parent/SEO/productionproof. Only immutable consensus appended; exactguarded release next."
+      "review_receipt": "FT-IMP-177 Confucius01a14083-fee3-7222-bd6d-c91f65610783 strict read-only PASS/noP0-P3 on9iSBcS manifest46d7f42bb8fe2484f8e21713b250ecef3c4e3bd65e433bdbae294e8b6eb6cadf. Independent22focused/15120boundarycombinations/effective-date/malformed probesPASS. Master1186full50maintenance/stateSEO0/GSC94/sixpriorwarnings logcbfebc836a1c21d524f789e2772b188dc5b6bb66e050dfefad6de38a4221cd1c inspected/hashverified, notfullrerun. Exact10/1127candidate/79publicHEAD/377olderLIVE/1122nonownedbytes-modes/173held/091comparison-clocks/DCcompatibility preserved. Exact44/unknownheight/excesschildren/expiry remainunknown; no caps, commute-fare transfer, payment/route/safety promise. Master tightened effective_on<=inspected_on beforeconsensus; replacementfullgreen and regressionreviewed. Sourceprovenance supplied/no networkreplay. No reviewerwrites/network/browser/delegation/Gitmutations/scheduler. Only sharedCLI/model approval, excludes173/publicUI/posting/parent/SEO/productionproof. Only immutable consensus appended; exactguarded release next.",
+      "release_receipt": "FT-IMP-177 release 4c23d1691157281f9b395ec00a9a2880e0e808f6 remote verified 2026-10-15T17:07:07.419Z; main0-0/emptyindex/exact10/all1127indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared NYC child-height qualifier and existing transitCLI extension delivered/remoteverified; ConfuciusPASS/22focused/15120boundary probes/1186full50maintenance/stateSEO0/GSC94/sixpriorwarnings. Exact44 primary conflict, nullheights/excesschildren and expired/future-source windows withhold wholefamily fare; no age-only or commuter-familyfare transfer. Original091teencomparison/sourceclocks/DCAPI/public79bytes unchanged. All377olderLIVE/1122nonownedbytes-modes/173held record andnine targets preserved; private173code/metadata andoldledger excluded. Only177/LRN267 plusmechanical017/176completion backfill shipped. No publicpage/UI/posting/parent/SEO/productionproof. Next exactboundary only applicableoperatorclarification/agreeingchangedprimarytext orOct29review;173 separately awaits documentedchangednormalrenderedaccess. No newapproval, paidcall/browserretry/indexing/schedulerchange. Shared/docs-only no Pageswait. Mechanical completion only/no metadata-onlycommit; fixedsprint unchanged.",
+      "completed_on": "2026-10-15T17:07:07.444Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "4c23d1691157281f9b395ec00a9a2880e0e808f6"
     },
     {
       "id": "FT-OPS-017",
