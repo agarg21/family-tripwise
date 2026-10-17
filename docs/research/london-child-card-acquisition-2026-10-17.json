@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-179",
+  "learning_unit": "LRN-269",
+  "parent_item": "FT-RES-077",
+  "checked_on": "2026-10-17",
+  "recheck_on": "2026-10-31",
+  "evidence_class": "OFFICIAL_TRANSPORT_POLICY_WITH_EDITORIAL_COMPONENT_ARITHMETIC",
+  "sources": [
+    {
+      "id": "visitor-card",
+      "url": "https://tfl.gov.uk/travel-information/visiting-london/visitor-oyster-card",
+      "inspected_on": "2026-10-17",
+      "published_on": null,
+      "status": "body-inspected"
+    },
+    {
+      "id": "ordinary-card",
+      "url": "https://tfl.gov.uk/fares/ways-to-pay/where-to-buy-tickets-and-oyster",
+      "requested_url": "https://tfl.gov.uk/fares/how-to-pay-and-where-to-buy-tickets-and-oyster/buying-tickets-and-oyster",
+      "inspected_on": "2026-10-17",
+      "published_on": null,
+      "status": "normal-redirect-body-inspected"
+    },
+    {
+      "id": "children-support",
+      "url": "https://support.visitorshop.tfl.gov.uk/hc/en-gb/articles/16465480622354-Travelling-with-children",
+      "inspected_on": "2026-10-17",
+      "displayed_updated_on": "2025-12-17",
+      "policy_effective_on": null,
+      "status": "body-inspected",
+      "scope": "Selected fare/setup text only; general stroller and safety wording excluded"
+    }
+  ],
+  "scenario": {
+    "adults": 2,
+    "child_ages": [4, 8, 12, 15],
+    "arrival": "2026-11-08",
+    "departure": "2026-11-13",
+    "choice": "Acquisition of two cards for the two older children, not all-family travel payment",
+    "basis": "Researcher-defined desk task, not a real user or purchase",
+    "dated_service_or_discount_confirmed": false
+  },
+  "card_fees": {
+    "currency": "GBP",
+    "currency_basis": "ISO label interprets the primary pound symbol on London TfL pages",
+    "unit": "One newly acquired card; excludes travel credit",
+    "visitor": {"amount_minor": 1050, "source_id": "visitor-card", "postage_additional": true, "postage_amount_minor": null},
+    "ordinary": {"amount_minor": 1050, "source_id": "ordinary-card", "purchase_surface": "London station or other listed local outlet; no purchase attempted"},
+    "discount_activation_fee_minor": null,
+    "complete_family_transport_cost_minor": null
+  },
+  "child_setup": {
+    "visitor_discount_age_min": 11,
+    "visitor_discount_age_max": 15,
+    "maximum_days": 14,
+    "child_present_required": true,
+    "staff_application_required": true,
+    "visitor_discount_basis": "Half adult pay-as-you-go for the stated period; not an automatic card-purchase benefit",
+    "qualifying_setup_places": "Most Tube stations or Visitor Centres; no individual station or staff availability verified",
+    "ordinary_card_young_visitor_eligibility": null,
+    "existing_card_eligibility": null,
+    "contactless_discount_eligibility": null,
+    "under_11_boundary": "Published accompanied allowance covers up to four under11 children per fare-paying adult on specified rail modes; not every airport, river or rail product",
+    "under_11_new_cards_required_for_this_task": null,
+    "hotel_adult_age_band_used": false,
+    "actual_staff_setup_confirmed": false
+  },
+  "desk_cases": [
+    {"id": "two-new-visitor-cards", "new_card_count": 2, "fee_each_minor": 1050, "acquisition_component_minor": 2100, "postage_component_minor": null, "travel_credit_minor": null, "discount_eligibility_confirmed": false, "complete_trip_cost_minor": null},
+    {"id": "two-new-ordinary-cards", "new_card_count": 2, "fee_each_minor": 1050, "acquisition_component_minor": 2100, "postage_component_minor": null, "travel_credit_minor": null, "discount_eligibility_confirmed": false, "complete_trip_cost_minor": null},
+    {"id": "already-owned-cards-only", "new_card_count": 0, "fee_each_minor": null, "acquisition_component_minor": 0, "postage_component_minor": null, "travel_credit_minor": null, "discount_eligibility_confirmed": false, "complete_trip_cost_minor": null, "assumption": "No new cards are bought in this hypothetical case; zero acquisition is not evidence of valid reuse or free travel"}
+  ],
+  "failed_dependency": {
+    "operation": "web.click ordinary-card page linked Oyster entry",
+    "url": "https://tfl.gov.uk/fares/ways-to-pay/pay-as-you-go",
+    "checked_on": "2026-10-17",
+    "result": "403 Forbidden; no usable body",
+    "attempts": 1,
+    "retry_performed": false,
+    "affected_gate": "Additional general PAYG/card-compatibility details not adopted; retained inspected fee pages remain scoped evidence",
+    "owner": "Normal external source access",
+    "unblock": "Documented changed permitted access before this denied route is retried",
+    "next_check": "Changed access only; no alternate generic-PAYG source or tool to bypass403"
+  },
+  "decision": {
+    "hypothesis": "Buying ordinary Oyster instead of Visitor Oyster establishes a lower card-acquisition fee for the two older children",
+    "result": "REJECT lower published base-card fee; IMPLEMENT maintained acquisition comparison, PRESERVE full payment/eligibility decision unknown",
+    "finding": "Inspected base fees are equal. Postage, travel credit and child-discount application remain separate. An optional two-card component is not a mandatory all-family expense or a total saving.",
+    "confidence": "High inspected fee equality and integer-pence arithmetic; unknown exact-card eligibility, staff availability, complete travel costs and future operation",
+    "next_gate": "Applicable existing/ordinary-card discount terms through permitted evidence, actual party/payment/route/cap inputs and dated service; separate rendered/review/release gates before public integration",
+    "next_falsification_trigger": "Changed card fees or applicable discount/reuse terms; review before October31",
+    "why_research_only": "Existing173 public release still lacks actual rendered QA. This independent London cost-field audit resolves a different pending comparison without changing any public page."
+  },
+  "preservation": {
+    "existing_081_089_and_room_price_records_renewed": false,
+    "route_stroller_safety_or_family_fit_assured": false,
+    "public_change": false,
+    "actual_parent_or_seo_evidence": false,
+    "purchase_contact_paid_calls": 0
+  }
+}
