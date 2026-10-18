@@ -117,10 +117,10 @@ export function screenRoomPack(pack, party = pack.scenario, asOf = currentEaster
       selected.evidence_class === "EDITORIAL_INTERPRETATION" ? "DERIVED_CONFIGURATION_REQUIRES_CONFIRMATION" :
       selected.conditions.length ? "CONDITIONAL_PUBLISHED_CAPACITY" : "WITHIN_PUBLISHED_CAPACITY";
     return { id: r.id, hotel: r.hotel, category: r.category, screening,
-      conditions: screening === "RECHECK_SOURCE" ? ["Recheck source before screening"] : selected?.conditions ?? [],
+      conditions: screening === "RECHECK_SOURCE" ? ["Recheck source before screening"] : [...(selected?.conditions ?? [])],
       sleeping_setup: r.sleeping_setup, kitchen: r.kitchen, connection: r.connection,
-      price: roomPriceForTask(prices, pack, r.id, party, asOf) ?? r.price,
-      conflicts: r.conflicts, checked_on: source.checked_on, screened_on: asOf, source_url: source.url,
+      price: roomPriceForTask(prices, pack, r.id, party, asOf) ?? structuredClone(r.price),
+      conflicts: [...r.conflicts], checked_on: source.checked_on, screened_on: asOf, source_url: source.url,
       capacity_evidence_class: selected?.evidence_class ?? null, capacity_basis: selected?.basis ?? null,
       next_checks: [...r.checks, "Confirm child/adult age classification, exact reservation and available setup", r.price.currency === null
         ? "Confirm ISO currency and collect comparable nightly price with party/stay/tax/fee basis"

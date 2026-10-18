@@ -20,10 +20,42 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-180",
+      "initial_review": "Poincare01a14d60-91db-76c3-8779-e6fb7e4823e4 FAIL/processP2: fixture-writing tests ran despite strict no-writes instruction;75focused passed and no candidateP0-P3 found, but report is not read-only consensus. All frozen/live preservation proofs remain intact; no product change required.",
+      "review_repair": "Fresh different reviewer limited to read-only inspection and explicit in-memory API probes, no test-suite invocation or fixture-writing command. Retain first failure; require replacement PASS before release. This is cycle2, not a waived gate.",
+      "title": "Keep room-screen edits from mutating canonical family conditions",
+      "kind": "shared-product-trust-defect-fix",
+      "status": "in-progress",
+      "selected_on": "2026-10-18",
+      "started_at": "2026-10-18T04:57:24Z",
+      "target_paths": [
+        "tools/family-room-task.mjs",
+        "tools/family-room-task.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Reproduced current-code trust defect using the maintained London family2adults/ages4,8,12 task at explicitOct18: firstQueenStreet result is CONDITIONAL_PUBLISHED_CAPACITY with paid-sofa requirement. Clearing only returned.conditions also clears canonical configuration conditions; next screen incorrectly becomes WITHIN_PUBLISHED_CAPACITY. Conflicts and fallback unpriced price objects also alias canonical evidence. No real-parent/public production incidence is claimed.",
+      "acceptance_criteria": [
+        "Return independent copies of borrowed condition/conflict arrays and fallback price objects; editing results must never change source facts, future screenings or other result instances. Preserve exact values/statuses/CSV output for unmodified results, including priced/historical/recheck/outside cases.",
+        "Regression tests first fail against current code, then pass for condition laundering, conflicts/unpriced nested price, two-call isolation and frozen canonical inputs. Preserve all source/price/review dates and all79public bytes; no new evidence or publication assurance.",
+        "Focused shared room-screen/price/comparison tests plus full native QA; different strict read-only PASS; exact7 isolated guarded push excluding173/private metadata/dirty ledger tail. Only mechanical179completion may backfill."
+      ],
+      "measurement_plan": "Reproducible offline family-decision task: returned-row edit must not remove the paid-sofa condition or escalate a later classification; validate unmodified comparisons across maintained hotel packs. Native proxy evidence, not rendered, parent satisfaction or SEO proof.",
+      "production_invariant": "All79public files, all hotel fact/price/review packs and173held targets stay byte-identical. Preserve380older LIVE records/1140baseline files except exact7paths, all inherited dirty work and source clocks. No browser/source retry, new URL/city, paid call, account/contact/indexing/scheduler change.",
+      "gsc_evidence_classification": "Newly imported existing Oct17 read-only API collected13:44:08Z/finalOct15, priorOct16finalOct14. Reused orientation, no fresh API call/aligned query/CTR diagnosis. ops/gsc-snapshots/2026-10-17.md and ops/gsc-snapshots/2026-10-17.json",
+      "decision": "IMPLEMENT scoped defensive-copy fix now; verified shared trust defect qualifies independently of the held public form. No new research report or public-page edit.",
+      "next_gate": "Fail-before/pass-after focused regressions, full native QA, different read-only review and guarded exact7 tools/test release; no Pages wait when all public bytes stay unchanged.",
+      "review_receipt": "FT-IMP-180 Helmholtz01a14d64-1947-7e13-b503-c9087ad88e4e cycle2 strict read-only PASS/noP0-P3; cycle1processP2 retained, fresh no-write/no-test-runner review resolves gate.333independent in-memory screen/CSV cases/18packs; Master75focused/1196full50maintenance/stateSEO0/GSC96/sixexistingwarnings. Manifestf2667445eacd120c20d0492e744c1373678773770f1453af101e1be58e9b471e; finalQA1a9b4d74a983a3a919cd6b06f1f635a69cca499f5fe905525c34f516ec20c56f inspected, notrerun.1135candidate/exact7/79public/1133nonowned/380olderLIVE/private173 preserved; oldercandidate only179completion. No network/browser/scheduler/delegation/parent/productionproof or173releaseauthority. Guarded tools-only release next."
+    },
+    {
       "id": "FT-RES-179",
       "title": "Keep London child-card acquisition separate from discounted travel",
       "kind": "maintained-official-transport-policy-research",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-17",
       "started_at": "2026-10-17T04:59:05Z",
       "target_paths": [
@@ -47,7 +79,11 @@
       "gsc_evidence_classification": "Newly imported existing Oct16 read-only API snapshot, collected14:51:30Z/finalOct14; priorOct15finalOct13. Reused API orientation, not a fresh API call this run or aligned query/CTR proof. ops/gsc-snapshots/2026-10-16.md",
       "decision": "IMPLEMENT maintained fee-comparison evidence; REJECT lower ordinary-card acquisition fee from current bodies. PRESERVE complete travel/card-reuse eligibility as unknown; no public release qualifies while173rendered QA remains held.",
       "next_gate": "Focused/full native QA/different review/guarded data-test push. Existing-card eligibility and full fares/caps require applicable permitted policy evidence; denied generic PAYG route only after changed permitted access. Public integration retains separate rendered/review/release gates.",
-      "review_receipt": "FT-RES-179 Laplace01a1483b-b4f9-7772-b17b-8cf9bf3800e1 strict read-only PASS/no remainingP0-P3 onKCrYU5 manifest6bc9cd325c6b1b5920a0287bd0999322c77442fe19f233442efc68fd0e547950. Independent3focusedPASS; Master1192full50maintenance/stateSEO0/GSC95/sixexistingwarnings logbf25c5735f1075b7343466584f3f93ad87f706a67cad24c28b3b912ea85e588b inspected/hashverified, notfullrerun. InitialmissinglatestGSCjsonreference retained; sole replacementdelta adds it to179roadmapprefix before finalgreenQA. Exact7/1133candidate/79publicHEAD/379olderLIVE/1131nonownedbytes-modes/173private-exclusion/dirtyledger-tail preserved; oldercandidate changes only178completion. Suppliedsourceprovenance no replay; optionalcardunit/arithmetic/discount-reuseunknowns/sourceclocks/one403boundary verified. No writes/network/browser/Gitmutations/scheduler/delegation or rendered-parent-productionproof. No173releaseauthority. Only immutable consensus appended; exactguarded docs-data-test release next."
+      "review_receipt": "FT-RES-179 Laplace01a1483b-b4f9-7772-b17b-8cf9bf3800e1 strict read-only PASS/no remainingP0-P3 onKCrYU5 manifest6bc9cd325c6b1b5920a0287bd0999322c77442fe19f233442efc68fd0e547950. Independent3focusedPASS; Master1192full50maintenance/stateSEO0/GSC95/sixexistingwarnings logbf25c5735f1075b7343466584f3f93ad87f706a67cad24c28b3b912ea85e588b inspected/hashverified, notfullrerun. InitialmissinglatestGSCjsonreference retained; sole replacementdelta adds it to179roadmapprefix before finalgreenQA. Exact7/1133candidate/79publicHEAD/379olderLIVE/1131nonownedbytes-modes/173private-exclusion/dirtyledger-tail preserved; oldercandidate changes only178completion. Suppliedsourceprovenance no replay; optionalcardunit/arithmetic/discount-reuseunknowns/sourceclocks/one403boundary verified. No writes/network/browser/Gitmutations/scheduler/delegation or rendered-parent-productionproof. No173releaseauthority. Only immutable consensus appended; exactguarded docs-data-test release next.",
+      "release_receipt": "FT-RES-179 release 3f6b4144f9eb8cadc62a9941da0c4aeb42a6c396 remote verified 2026-10-17T05:03:13.920Z; main0-0/emptyindex/exact7/all1133indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only London acquisition comparison remote verified, not publicpage delivery. LaplacePASS/3focused/1192full50maintenance/stateSEO0/GSC95/sixexistingwarnings; initialmissinglatestGSCjsonlink fixed before consensus. Equal published10.50GBP cardfees reject lower ordinarycardbasefee; optional21GBP component excludes credit/postage, no fullfare or discount-reuse promise. Exact7/all1133indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush; all79publicHEADfiles and prior081089room-route-price-source-review clocks unchanged. Private173/code/dirtyledger excluded; all379olderLIVE/1131nonownedbytes-modes preserved. Only178mechanicalcompletion backfill shipped. One genericPAYG403 held/notretried; next applicable permitted card-eligibility terms/changedfees orOct31review.173 separately awaits documented normal rendered access/finalQA. No paid/account/contact/scheduler/city/URL action; docs-data-test only/no Pageswait. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-17T05:03:13.937Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "3f6b4144f9eb8cadc62a9941da0c4aeb42a6c396"
     },
     {
       "id": "FT-RES-178",

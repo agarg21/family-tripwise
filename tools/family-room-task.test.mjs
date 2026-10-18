@@ -11,6 +11,57 @@ const clone = () => structuredClone(pack);
 const row = (rows, id) => rows.find(r => r.id === id);
 const historicalScreen = (p, party = p.scenario, date = "2026-09-30") => screenRoomPack(p, party, date);
 
+test("editing returned capacity conditions cannot launder the next family screen", () => {
+  const p = clone(), before = structuredClone(p);
+  const id = "marlin-queen-street-two-bedroom";
+  const first = row(screenRoomPack(p, p.scenario, "2026-10-18"), id);
+  assert.equal(first.screening, "CONDITIONAL_PUBLISHED_CAPACITY");
+  assert.match(first.conditions[0], /paid double sofa/);
+  first.conditions.length = 0;
+  assert.deepEqual(p, before);
+  const second = row(screenRoomPack(p, p.scenario, "2026-10-18"), id);
+  assert.equal(second.screening, "CONDITIONAL_PUBLISHED_CAPACITY");
+  assert.match(second.conditions[0], /paid double sofa/);
+});
+
+test("returned conflicts and nested unpriced basis do not alias canonical evidence", () => {
+  const p = clone(), before = structuredClone(p);
+  const first = screenRoomPack(p, p.scenario, "2026-10-18")[0];
+  first.conflicts.push("display-only note");
+  first.price.missing_basis.push("display-only price note");
+  first.price.currency = "USD";
+  assert.deepEqual(p, before);
+});
+
+test("independent room screens never share mutable result containers", () => {
+  const p = clone();
+  const first = screenRoomPack(p, p.scenario, "2026-10-18");
+  const second = screenRoomPack(p, p.scenario, "2026-10-18");
+  const expected = structuredClone(second);
+  for (const entry of first) {
+    entry.conditions.push("display-only condition");
+    entry.conflicts.push("display-only conflict");
+    entry.price.missing_basis.length = 0;
+  }
+  assert.deepEqual(second, expected);
+  assert.deepEqual(screenRoomPack(p, p.scenario, "2026-10-18"), expected);
+});
+
+test("canonical room evidence can stay frozen while callers edit their result copies", () => {
+  const p = clone(), before = structuredClone(p);
+  const freeze = value => {
+    if (!value || typeof value !== "object") return value;
+    for (const child of Object.values(value)) freeze(child);
+    return Object.freeze(value);
+  };
+  freeze(p);
+  const first = screenRoomPack(p, p.scenario, "2026-10-18")[0];
+  first.conditions.push("display-only condition");
+  first.conflicts.push("display-only conflict");
+  first.price.missing_basis.push("display-only basis");
+  assert.deepEqual(p, before);
+});
+
 test("sparse child ages and coercive provenance cannot produce room screening or CSV", () => {
   for (const ages of [new Array(3), [4,,12], [4,undefined,12]]) {
     const party = {...pack.scenario, child_ages:ages};
