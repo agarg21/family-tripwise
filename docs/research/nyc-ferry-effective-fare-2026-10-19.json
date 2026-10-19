@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-181",
+  "learning_unit": "LRN-271",
+  "parent_action": "FT-IMP-087",
+  "checked_on": "2026-10-19",
+  "recheck_on": "2026-11-02",
+  "evidence_class": "OFFICIAL_CURRENT_PRICING_PANEL_WITH_DATED_NOTICE_AND_CONFLICTS",
+  "sources": [
+    {"id": "operator-panel", "url": "https://www.ferry.nyc/ticketing-info/", "inspected_on": "2026-10-19", "published_on": null, "status": "body-inspected"},
+    {"id": "operator-notice", "url": "https://static.ferry.nyc/blog/fare-change/", "inspected_on": "2026-10-19", "published_on": "2026-09-28", "announced_effective_on": "2026-10-19", "status": "body-inspected"},
+    {"id": "nyc311", "url": "https://portal.311.nyc.gov/article/?kanumber=KA-02376", "inspected_on": "2026-10-19", "published_on": null, "status": "body-inspected", "retrieval_limit": "Extracted body carries an offline/read-only banner; no live checkout or current inventory inferred"}
+  ],
+  "current_operator_panel": {
+    "currency": "USD",
+    "currency_basis": "Editorial USD interpretation of the operator's New York dollar-denominated panel",
+    "single_ticket_cents": 500,
+    "unit": "One standard rider, one-way single ticket",
+    "ten_trip_pack_cents": 3000,
+    "fare_state": "CURRENT_OPERATOR_PANEL_OBSERVED_NOT_CHECKOUT",
+    "observed_on": "2026-10-19",
+    "body_matches_dated_notice": true,
+    "checkout_observed": false,
+    "tax_fee_inclusion": null,
+    "dated_service_or_boarding_confirmed": false
+  },
+  "transfers": {
+    "source_ids": ["operator-panel", "nyc311"],
+    "one_way_minutes": 120,
+    "round_trip_free_transfer": false,
+    "fare_is_round_trip": false,
+    "exact_route_or_connection_assessed": false
+  },
+  "conflicts": [
+    {"source_id": "operator-panel", "surface": "Escaped legacy footer", "single_ticket_cents": 400, "ten_trip_pack_cents": 2750, "treatment": "Retain as conflicting legacy text, not the current main-panel tariff"},
+    {"source_id": "nyc311", "surface": "Single Rides and 10-Trip Pass tables", "single_ticket_cents": 450, "ten_trip_pack_cents": 2900, "treatment": "Municipal body retains old table alongside explicit October19 notice of5/30; not current-table corroboration of the new operator panel"}
+  ],
+  "scenario": {
+    "adults": 2,
+    "teen_ages": [13, 17],
+    "all_riders_over_44_inches": true,
+    "standard_fare_riders": 4,
+    "discounts_assumed": false,
+    "basis": "Original087 researcher-defined family task reused, not newly checked individual eligibility or actual travelers"
+  },
+  "desk_cases": [
+    {"id": "four-standard-one-way", "standard_riders": 4, "separately_charged_directions": 1, "fare_component_cents": 2000, "complete_checkout_total_cents": null},
+    {"id": "four-standard-out-and-back", "standard_riders": 4, "separately_charged_directions": 2, "fare_component_cents": 4000, "complete_checkout_total_cents": null},
+    {"id": "child-or-discount-eligibility-unresolved", "standard_riders": null, "separately_charged_directions": 2, "fare_component_cents": null, "complete_checkout_total_cents": null}
+  ],
+  "decision": {
+    "hypothesis": "The October19 announcement can now be treated as observed solely because its date arrived",
+    "result": "REJECT calendar-only promotion; IMPLEMENT separate newly inspected operator-panel evidence",
+    "finding": "The actual main panel now matches the dated notice. Legacy footer and municipal transitional table still conflict; current-panel observation is not checkout or universal source agreement.",
+    "confidence": "High inspected panel/notice/date distinctions and standard-single arithmetic; unknown checkout fees, pass suitability, exact child boundary, concessions, boarding and future service",
+    "next_gate": "Separately registered public integration with permitted desktop/mobile/keyboard QA, independent release review and production invariants; preserve old087 until those gates pass",
+    "next_falsification_trigger": "Changed panel, transfer terms or contradictory applicable current tariff; otherwise review before November2",
+    "why_research_only": "Actual rendered public QA remains held. The old public comparison already distinguishes the dated announcement; no silent source-clock or public-rate replacement is performed here."
+  },
+  "unknowns": [
+    "Exactly44-inch eligibility remains unresolved; no age-only free or student fare assumed",
+    "No pass-sharing, cheapest-ticket or unlimited-pass comparison performed",
+    "Actual checkout tax/fee total, capacity, weather and boarding/service unverified",
+    "No exact route, stroller, safety, independent-entry or firsthand assurance"
+  ],
+  "preservation": {
+    "original_record": "docs/research/nyc-ferry-family-budget-2026-10-10.json",
+    "original_observed_on": "2026-10-10",
+    "original_record_renewed": false,
+    "original_renderer_or_page_clock_changed": false,
+    "public_change": false,
+    "real_parent_or_seo_evidence": false,
+    "purchases_contacts_paid_calls": 0
+  }
+}

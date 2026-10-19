@@ -20,12 +20,42 @@
   ],
   "items": [
     {
+      "id": "FT-RES-181",
+      "title": "Requalify NYC Ferry's effective-date family fare evidence",
+      "kind": "maintained-fare-source-requalification",
+      "status": "in-progress",
+      "selected_on": "2026-10-19",
+      "started_at": "2026-10-19T05:06:40Z",
+      "target_paths": [
+        "docs/research/nyc-ferry-effective-fare-2026-10-19.json",
+        "tools/nyc-ferry-effective-fare.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "087 ferryReviewClock explicitly requires effective-fare/transfer source inspection onOctober19 before announcement promotion. New ordinary operator main panel now displays5USD one-way and30USD ten-trip; datedSep28 notice specifiesOct19. Operator footer still4USD; NYC311 has datedOct19notice5USD but old4.50single/29pack table. Both inspected transfer bodies exclude free returns. No checkout or source-wide agreement inferred.",
+      "acceptance_criteria": [
+        "Add new dated operator-body evidence and explicit four-standard-rider20USDoneway/40USDreturn arithmetic. Keep original087Oct10observed4.50/announced5 evidence, publiccomparison/code/clock immutable; no calendar-only promotion or current checkout/pass/discount/service claim.",
+        "Retain operatorfooter and municipal transitional-table conflicts, exact44height unknown and optional-pass/fees/boarding unknowns. Source inspection dates, dated notice and effective date remain distinct; no route/stroller/safety/firsthand conclusion.",
+        "Focused/full native QA, different strict read-only inspection/in-memory review (no fixture-writing test runner), exact7 guarded data/test push. Compact owned current-cycle below32KiB by linking committed history at3f226bc, preserving every inherited uncommitted block byte-for-byte in a marked local checkpoint excluded from the clean candidate. Carry only mechanical180completion."
+      ],
+      "measurement_plan": "Named October19 source gate and three desk cases: four standard riders one-way, out-and-back, and unresolved child/discount eligibility. Source-derived arithmetic/proxy evidence, not checkout, parent satisfaction or SEO proof.",
+      "production_invariant": "All79public files, original087source/code/public clocks and every other prior evidence pack stay exact. Preserve381olderLIVE/1142baseline files outside exact7paths, all173held targets/record and dirtyledger tail. Current-cycle committed history remains inGit and all private checkpoint bytes remain local. No browser/source-denial retry, paid/account/contact/indexing/scheduler/city/URL change.",
+      "gsc_evidence_classification": "Imported existingOct18 read-only API collected14:01:21Z/finalOct16 versus priorOct17finalOct15. Reused orientation, no fresh API call/aligned query/CTR proof. ops/gsc-snapshots/2026-10-18.md and ops/gsc-snapshots/2026-10-18.json",
+      "decision": "IMPLEMENT new field-scoped operator-body observation and conflict record; old087/public outputs stay preserved. Candidate for public integration only after separately registered rendered/review/release gates; existing173UIhold unchanged.",
+      "next_gate": "Focused/full native/different strict read-only PASS/exactpush for research-data-test only. Public integration needs permitted rendered access and independent release review; current source record is not public delivery.",
+      "review_receipt": "FT-RES-181 Dalton01a15292-8728-7890-8220-a774f6597c25 strict read-only PASS/noP0-P3 on d9vTgn manifestb6cded5c86a10902445499c0a22f155dd8fdf2b642d4167a8e6dd7b33ac06695.58in-memory assertions/three desk cases; Master6focused/1199full50maintenance/stateSEO0/GSC97/sixpriorwarnings log16e49786d71d1d46c3303d3e0193749782113049a27d14dfa41325dcc6686950 inspected/hashverified, not rerun. Exact7/all1139candidate bytes-modes/79publicHEAD/old087record-code-clocks/381olderLIVE/1137nonowned/173private-exclusion/dirtyledger preserved. Allfive inherited uncommitted cycleblocks preserved verbatimLIVE under historicalmarker and excludedclean; exact180completion once. Mode/restoration unchanged. Supplied source provenance assessed without network replay; panel-notice-footer-municipal conflict and standard-single fare-only arithmetic/unknowneligibility-checkout-pass-service retained. No reviewerwrites/testrunner/network/browser/Gitmutations/delegation/scheduler. Research-only consensus, not public delivery or173release authority. Only immutable result appended; guarded exact7 push next."
+    },
+    {
       "id": "FT-IMP-180",
       "initial_review": "Poincare01a14d60-91db-76c3-8779-e6fb7e4823e4 FAIL/processP2: fixture-writing tests ran despite strict no-writes instruction;75focused passed and no candidateP0-P3 found, but report is not read-only consensus. All frozen/live preservation proofs remain intact; no product change required.",
       "review_repair": "Fresh different reviewer limited to read-only inspection and explicit in-memory API probes, no test-suite invocation or fixture-writing command. Retain first failure; require replacement PASS before release. This is cycle2, not a waived gate.",
       "title": "Keep room-screen edits from mutating canonical family conditions",
       "kind": "shared-product-trust-defect-fix",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-18",
       "started_at": "2026-10-18T04:57:24Z",
       "target_paths": [
@@ -49,7 +79,11 @@
       "gsc_evidence_classification": "Newly imported existing Oct17 read-only API collected13:44:08Z/finalOct15, priorOct16finalOct14. Reused orientation, no fresh API call/aligned query/CTR diagnosis. ops/gsc-snapshots/2026-10-17.md and ops/gsc-snapshots/2026-10-17.json",
       "decision": "IMPLEMENT scoped defensive-copy fix now; verified shared trust defect qualifies independently of the held public form. No new research report or public-page edit.",
       "next_gate": "Fail-before/pass-after focused regressions, full native QA, different read-only review and guarded exact7 tools/test release; no Pages wait when all public bytes stay unchanged.",
-      "review_receipt": "FT-IMP-180 Helmholtz01a14d64-1947-7e13-b503-c9087ad88e4e cycle2 strict read-only PASS/noP0-P3; cycle1processP2 retained, fresh no-write/no-test-runner review resolves gate.333independent in-memory screen/CSV cases/18packs; Master75focused/1196full50maintenance/stateSEO0/GSC96/sixexistingwarnings. Manifestf2667445eacd120c20d0492e744c1373678773770f1453af101e1be58e9b471e; finalQA1a9b4d74a983a3a919cd6b06f1f635a69cca499f5fe905525c34f516ec20c56f inspected, notrerun.1135candidate/exact7/79public/1133nonowned/380olderLIVE/private173 preserved; oldercandidate only179completion. No network/browser/scheduler/delegation/parent/productionproof or173releaseauthority. Guarded tools-only release next."
+      "review_receipt": "FT-IMP-180 Helmholtz01a14d64-1947-7e13-b503-c9087ad88e4e cycle2 strict read-only PASS/noP0-P3; cycle1processP2 retained, fresh no-write/no-test-runner review resolves gate.333independent in-memory screen/CSV cases/18packs; Master75focused/1196full50maintenance/stateSEO0/GSC96/sixexistingwarnings. Manifestf2667445eacd120c20d0492e744c1373678773770f1453af101e1be58e9b471e; finalQA1a9b4d74a983a3a919cd6b06f1f635a69cca499f5fe905525c34f516ec20c56f inspected, notrerun.1135candidate/exact7/79public/1133nonowned/380olderLIVE/private173 preserved; oldercandidate only179completion. No network/browser/scheduler/delegation/parent/productionproof or173releaseauthority. Guarded tools-only release next.",
+      "release_receipt": "FT-IMP-180 release e931eca7476128ed333c87b1af84db708ab1a713 remote verified 2026-10-18T05:06:50.637Z; main0-0/emptyindex/exact7/all1135indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared room-screen defensive-copy fix delivered, not new publicpage delivery. Cycle1processP2 retained; fresh Helmholtzcycle2 strictPASS/333in-memory cases/18packs.75focused/1196full50maintenance/stateSEO0/GSC96/sixpriorwarnings; fourfail-before regressions passafter. Exact7/all1135indexbytes-modes/threeGitguards/sole reviewedrange.380olderLIVE/1133nonowned/173held/79publicbytes and allfact-price-review clocks preserved. Only179completion backfill. No browser/network/paid/scheduler mutation or observedproductionincident claim. Next173 only permitted renderedQA; tools-only/no Pageswait. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-18T05:06:50.674Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "e931eca7476128ed333c87b1af84db708ab1a713"
     },
     {
       "id": "FT-RES-179",
