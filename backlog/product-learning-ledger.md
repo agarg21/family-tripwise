@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-272 - Reviewed ferry evidence needs an executable consumer - 2026-10-19
+
+FT-IMP-182. MAINTAINED_EVIDENCE_NATIVE_TASK_INTEGRATION, reusing same-day181 sources without a new inspection or freshness claim. Family decision: four already-qualified standard riders outbound and back. Existing transit CLI rejects the new source record instead of returning its fare component. IMPLEMENT a pure shared assessor in that existing CLI: USD20 one-way/USD40 out-and-back, explicit unknown rider/direction counts withhold arithmetic, and assessment/visit recheck boundaries withhold stale components. No age/height/discount classification, complete checkout total, cheapest pass, free return or service promise.
+
+Native tasks retain current-panel versus notice/footer/municipal conflicts and original dates, reject changed policy/provenance or malformed inputs, and keep result edits separate from canonical data. High confidence in deterministic arithmetic/guards, unknown actual payment, boarding, family eligibility, parent satisfaction or SEO. Lesson: an inspected record is not usable decision support until its consumer preserves the same uncertainty. Next falsification: drift in181 tariff/source/conflict fields, a consumer losing unknowns or the November2 source-review boundary. Focused/full native and different strict read-only PASS/exact9 shared-tool release required; public pages/087/091/177/181 clocks and173held work unchanged. LRN271 already satisfies today's source-dated learning; this integration does not renew that observation.
+
 ## LRN-271 - An effective date needs an inspected tariff, not a clock promotion - 2026-10-19
 
 FT-RES-181 [new Ferry source record](../docs/research/nyc-ferry-effective-fare-2026-10-19.json). OFFICIAL_CURRENT_PRICING_PANEL_WITH_DATED_NOTICE_AND_CONFLICTS. Named087 October19 gate: budget four standard riders outbound and back without treating a free one-way transfer as a return. New operator body now displays5USD and matches the datedSeptember28 announcement. Its legacy4USD footer remains; NYC311 has an explicitOct19notice but retains4.50/29 in its tables and an offline/read-only banner. REJECT calendar-only promotion or universal-source agreement. IMPLEMENT a separate current-panel observation and20/40USD fare-only components; preserve uncertain eligibility and checkout totals as unknown.

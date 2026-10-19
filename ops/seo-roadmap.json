@@ -20,10 +20,42 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-182",
+      "title": "Use reviewed current ferry fares in the existing offline transit tool",
+      "kind": "shared-product-data-tool",
+      "status": "in-progress",
+      "selected_on": "2026-10-19",
+      "started_at": "2026-10-19T13:01:48Z",
+      "target_paths": [
+        "src/shared/nyc-ferry-fare.mjs",
+        "tools/nyc-ferry-fare.test.mjs",
+        "tools/family-transit-cost.mjs",
+        "README.md",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Named family task: four confirmed standard-fare riders, separately charged outbound/return. Existing transit CLI rejects reviewed181record with Invalid maintained fare policy or date. 181 current operator-panel evidence supports500cents/standard rider/direction, not checkout or pass eligibility. Source conflicts/unknown fees and exact44 eligibility remain. Use same-day maintained evidence, no source renewal or new network collection.",
+      "acceptance_criteria": [
+        "Extend existing offline transit CLI with a pure shared ferry assessor using181record as the sole fare source. Known standard-rider count1-20 and directions1-2; explicit null counts withhold subtotal. No age/height/discount or free-return inference. Four riders produces2000/4000 cents for one/two directions, never a checkout total.",
+        "Fail closed for changed tariff/provenance/transfer/conflict basis and malformed inputs. Retain inspection/publication/effective/recheck dates, currency/unit/source conflicts and unknown fees/pass/boarding/service/safety. Assessment before inspection invalid; assessment or visit on/afterNov2 withholds subtotal; no historical or future-source promotion. Returned nested fields cannot mutate maintained evidence.",
+        "Focused/full nativeQA and different strict read-only PASS, exact9 guarded shared-tool release. Preserve382olderLIVE/1144baseline and all1137nonowned bytes/modes; private173/code/dirtyledger excludedclean. Only181mechanicalcompletion backfill. All79public files and087/091/177/181 evidence/code clocks unchanged."
+      ],
+      "measurement_plan": "Reproduce current CLI rejection then executable outbound/return, unknown counts, source-window boundaries, malformed and mutation probes. Native proxy tasks, not actual-parent/rendered/checkout/SEO evidence. Daily LRN271 already complete; LRN272 records integration learning without source freshness renewal.",
+      "production_invariant": "No public UI/page/URL/indexability/source-price-review-clock/observation/scheduler/paid/account/contact/browser/denial-retry/analytics/indexing change. Existing DC and NYC height APIs/CLI behavior retained. Public integration and173 remain separately held for permitted rendered QA/final release review.",
+      "gsc_evidence_classification": "Reused Oct18 API collected14:01:21.637Z/finalOct16 vs priorOct17finalOct15; no fresh API or queryCTR diagnosis. ops/gsc-snapshots/2026-10-18.md and ops/gsc-snapshots/2026-10-18.json",
+      "decision": "IMPLEMENT_NOW evidence-qualified shared-tool integration rather than another source report. Native-only release scope has no browser dependency; public releases retain all rendered gates.",
+      "next_gate": "Focused/full native QA, different strict read-only inspection/in-memory PASS, exact9 guarded push and remote verification. Then173 public release only on documented changed permitted rendered access.",
+      "review_receipt": "FT-IMP-182 Euclid01a15443-9c32-7a01-a64b-55241eb07b0b strict read-only PASS/noP0-P3 on ESGWiZ manifesta212e8bef93789f7659f7cb9b2a5aa8ef23fe50912a22e6eb38974cf1e620e16.323independent in-memory guard/date/mutation/DC-NYCheight compatibility probes; Master32focused/1207full50maintenance/stateSEO0/GSC97/sixpriorwarnings log7527c8fd186ceb0d89613bed6916f1d20bdfc081e4e17c3cedc272423bfd6eab inspected/hashverified, not rerun. All1141candidate hashes-modes/exact9/79publicHEAD/382olderLIVE/1137nonowned/private173-exclusion/dirtyledger/historicalcheckpoint-tail preserved. Only181mechanicalcompletion backfill; operator/mode/scheduler/source clocks unchanged. Supplied source provenance assessed without replay; standard-single components retain conflicts/unknowncounts/source-window/fees/eligibility/pass/service limitations. No reviewerwrites/test runners/Gitmutations/network/browser/delegation/scheduler. Shared-tool approval only, not public delivery or173release. Only immutable consensus appended; guarded exact9 push next."
+    },
+    {
       "id": "FT-RES-181",
       "title": "Requalify NYC Ferry's effective-date family fare evidence",
       "kind": "maintained-fare-source-requalification",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-19",
       "started_at": "2026-10-19T05:06:40Z",
       "target_paths": [
@@ -47,7 +79,11 @@
       "gsc_evidence_classification": "Imported existingOct18 read-only API collected14:01:21Z/finalOct16 versus priorOct17finalOct15. Reused orientation, no fresh API call/aligned query/CTR proof. ops/gsc-snapshots/2026-10-18.md and ops/gsc-snapshots/2026-10-18.json",
       "decision": "IMPLEMENT new field-scoped operator-body observation and conflict record; old087/public outputs stay preserved. Candidate for public integration only after separately registered rendered/review/release gates; existing173UIhold unchanged.",
       "next_gate": "Focused/full native/different strict read-only PASS/exactpush for research-data-test only. Public integration needs permitted rendered access and independent release review; current source record is not public delivery.",
-      "review_receipt": "FT-RES-181 Dalton01a15292-8728-7890-8220-a774f6597c25 strict read-only PASS/noP0-P3 on d9vTgn manifestb6cded5c86a10902445499c0a22f155dd8fdf2b642d4167a8e6dd7b33ac06695.58in-memory assertions/three desk cases; Master6focused/1199full50maintenance/stateSEO0/GSC97/sixpriorwarnings log16e49786d71d1d46c3303d3e0193749782113049a27d14dfa41325dcc6686950 inspected/hashverified, not rerun. Exact7/all1139candidate bytes-modes/79publicHEAD/old087record-code-clocks/381olderLIVE/1137nonowned/173private-exclusion/dirtyledger preserved. Allfive inherited uncommitted cycleblocks preserved verbatimLIVE under historicalmarker and excludedclean; exact180completion once. Mode/restoration unchanged. Supplied source provenance assessed without network replay; panel-notice-footer-municipal conflict and standard-single fare-only arithmetic/unknowneligibility-checkout-pass-service retained. No reviewerwrites/testrunner/network/browser/Gitmutations/delegation/scheduler. Research-only consensus, not public delivery or173release authority. Only immutable result appended; guarded exact7 push next."
+      "review_receipt": "FT-RES-181 Dalton01a15292-8728-7890-8220-a774f6597c25 strict read-only PASS/noP0-P3 on d9vTgn manifestb6cded5c86a10902445499c0a22f155dd8fdf2b642d4167a8e6dd7b33ac06695.58in-memory assertions/three desk cases; Master6focused/1199full50maintenance/stateSEO0/GSC97/sixpriorwarnings log16e49786d71d1d46c3303d3e0193749782113049a27d14dfa41325dcc6686950 inspected/hashverified, not rerun. Exact7/all1139candidate bytes-modes/79publicHEAD/old087record-code-clocks/381olderLIVE/1137nonowned/173private-exclusion/dirtyledger preserved. Allfive inherited uncommitted cycleblocks preserved verbatimLIVE under historicalmarker and excludedclean; exact180completion once. Mode/restoration unchanged. Supplied source provenance assessed without network replay; panel-notice-footer-municipal conflict and standard-single fare-only arithmetic/unknowneligibility-checkout-pass-service retained. No reviewerwrites/testrunner/network/browser/Gitmutations/delegation/scheduler. Research-only consensus, not public delivery or173release authority. Only immutable result appended; guarded exact7 push next.",
+      "release_receipt": "FT-RES-181 release 0bc9f391f31e66e0a45383fdbcd9fdbe216d8a20 remote verified 2026-10-19T05:15:29.342Z; main0-0/emptyindex/exact7/all1139indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only ferry source requalification remote verified, not publicpage delivery. Dalton strictPASS/58in-memory/6focused/1199full50maintenance/stateSEO0/GSC97/sixpriorwarnings. Original087andall79publicHEADfiles/source clocks unchanged; fourstandardrider20/40USD farecomponents are not checkout/pass quotes.381olderLIVE/1137nonowned/173held/dirtyledger preserved; privatecycleblocks retained locally, committedhistory pinned3f226bc. Only180mechanicalcompletion backfill. No browser/denialretry/paid/account/contact/scheduler action; data/test only no Pageswait. Next public integration only after permitted renderedQA and separate registered finalreview/release. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-19T05:15:29.368Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "0bc9f391f31e66e0a45383fdbcd9fdbe216d8a20"
     },
     {
       "id": "FT-IMP-180",
