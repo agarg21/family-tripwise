@@ -20,10 +20,41 @@
   ],
   "items": [
     {
+      "id": "FT-RES-183",
+      "title": "Resolve Boston Langham club access scope for the five-person task",
+      "kind": "maintained-policy-and-component-cost-evidence",
+      "status": "in-progress",
+      "selected_on": "2026-10-20",
+      "started_at": "2026-10-20T12:14:30Z",
+      "target_paths": [
+        "docs/research/boston-langham-club-party-scope-2026-10-20.json",
+        "tools/boston-langham-club-scope.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "061/073 Boston task twoadults/ages4,8,12 retains Club Two Bedroom entitlement/bed/price gaps. Newly inspected category body advertises club privileges; linked club detail limits included access to2guests, separate age/season charges and tax. Linked floorplan reader returned empty extracted body; no bed inference or retry. Current room comparison cannot treat6guest capacity as allparty meal inclusion.",
+      "acceptance_criteria": [
+        "Record source-dated category/access scope and separate club-detail2guest limit, agebands, high/low add-on rates plus tax. Do not infer season calendar, allocation of included guests, actual party acceptance, meal savings or complete lodging/club cost.",
+        "Three desk cases: explicitly hypothetical2adults occupy includedplaces and under5free, two additional children8/12 imply150/180USD per selected day beforetax; five explicitly selected days750/900 not automatic from five nights; unknown guest allocation withholds amount. Floorplan emptybody not layout or availability result. Original073record/allprices/public/source clocks untouched.",
+        "Exact7 focused/fullnative/different strict read-only PASS/guarded research-test push. Preserve383olderLIVE/1148baseline and1143nonowned bytes/modes,173private and dirtyledger exclusion/historicaltail. Only182mechanicalcompletion backfill; no browserretry/paid/account/scheduler/public change."
+      ],
+      "measurement_plan": "LRN273 tests the named family-meal entitlement inference from six-person suite capacity and club marketing. Official fact audit plus conditional desk arithmetic, not actual-parent, checkout, stay or SEO proof.",
+      "production_invariant": "All79public files and prior Boston capacity/prices/meal observations/source-review dates unchanged. No review-signal/firsthand/safety/bed layout claim or denied-browser retry. GSC Oct19import finalOct17 vs Oct18final16 reused orientation; no queryCTR/indexing action.",
+      "decision": "IMPLEMENT separate maintained scope/cost record; PRESERVE exact whole-party entitlement, complete cost and bed allocation unknown. Candidate for public integration only after evidence and permitted rendered/release gates.",
+      "next_gate": "Native/different strict read-only PASS/exactpush. Next policy collection only applicable inclusion allocation/season-date/tax/bed evidence orNov3review; next eligible public transaction after documented changed rendered access.",
+      "why_research_only": "Highest unfinished173public release remains held for actual renderedQA. Shared182integration delivered last run; no new verified tool defect or unblocked public release gate established. This named061club entitlement gap requires source qualification before public integration; no speculative new calculator/URL/CSV created.",
+      "gsc_evidence_classification": "ops/gsc-snapshots/2026-10-19.md and ops/gsc-snapshots/2026-10-19.json collected2026-10-19T16:59:11.250Z finalOct17; priorOct18final16. Imported read-only API orientation, not fresh collection/alignedqueryCTR.",
+      "review_receipt": "FT-RES-183 Avicenna01a1593e-523e-7582-95c7-2f9f29404f2c strict read-only PASS/noP0-P3 on R1dbYf manifestfa9e447154b31818496e0cb2b280f36862c5d16b5cda18b2f62a271270b5f092.90independent in-memory assertions; Master3focused/1210full50maintenance/stateSEO0/GSC98/sixpriorwarnings log2fa354137c7df106d39884621ccbce4ffdaf5e3a19efb3555093b1f519da0dce inspected/hashverified, no rerun/processremaining. Exact7/all1145candidate1148baseline bytes-modes/79publicHEAD/383olderLIVE/1143nonowned/private173-exclusion/dirtyledger/historicaltail preserved. Only182mechanicalcompletion backfill; originalBostonclocks/operator/mode unchanged. Supplied provenance assessed without replay; conditional component arithmetic not confirmed entitlement/fullcost; emptyfloorplan no layoutclaim. No reviewerwrites/test runners/Gitmutations/network/browser/delegation/scheduler. Research-only approval, not173/public release. Only immutable consensus appended; guarded exact7 push next."
+    },
+    {
       "id": "FT-IMP-182",
       "title": "Use reviewed current ferry fares in the existing offline transit tool",
       "kind": "shared-product-data-tool",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-19",
       "started_at": "2026-10-19T13:01:48Z",
       "target_paths": [
@@ -49,7 +80,11 @@
       "gsc_evidence_classification": "Reused Oct18 API collected14:01:21.637Z/finalOct16 vs priorOct17finalOct15; no fresh API or queryCTR diagnosis. ops/gsc-snapshots/2026-10-18.md and ops/gsc-snapshots/2026-10-18.json",
       "decision": "IMPLEMENT_NOW evidence-qualified shared-tool integration rather than another source report. Native-only release scope has no browser dependency; public releases retain all rendered gates.",
       "next_gate": "Focused/full native QA, different strict read-only inspection/in-memory PASS, exact9 guarded push and remote verification. Then173 public release only on documented changed permitted rendered access.",
-      "review_receipt": "FT-IMP-182 Euclid01a15443-9c32-7a01-a64b-55241eb07b0b strict read-only PASS/noP0-P3 on ESGWiZ manifesta212e8bef93789f7659f7cb9b2a5aa8ef23fe50912a22e6eb38974cf1e620e16.323independent in-memory guard/date/mutation/DC-NYCheight compatibility probes; Master32focused/1207full50maintenance/stateSEO0/GSC97/sixpriorwarnings log7527c8fd186ceb0d89613bed6916f1d20bdfc081e4e17c3cedc272423bfd6eab inspected/hashverified, not rerun. All1141candidate hashes-modes/exact9/79publicHEAD/382olderLIVE/1137nonowned/private173-exclusion/dirtyledger/historicalcheckpoint-tail preserved. Only181mechanicalcompletion backfill; operator/mode/scheduler/source clocks unchanged. Supplied source provenance assessed without replay; standard-single components retain conflicts/unknowncounts/source-window/fees/eligibility/pass/service limitations. No reviewerwrites/test runners/Gitmutations/network/browser/delegation/scheduler. Shared-tool approval only, not public delivery or173release. Only immutable consensus appended; guarded exact9 push next."
+      "review_receipt": "FT-IMP-182 Euclid01a15443-9c32-7a01-a64b-55241eb07b0b strict read-only PASS/noP0-P3 on ESGWiZ manifesta212e8bef93789f7659f7cb9b2a5aa8ef23fe50912a22e6eb38974cf1e620e16.323independent in-memory guard/date/mutation/DC-NYCheight compatibility probes; Master32focused/1207full50maintenance/stateSEO0/GSC97/sixpriorwarnings log7527c8fd186ceb0d89613bed6916f1d20bdfc081e4e17c3cedc272423bfd6eab inspected/hashverified, not rerun. All1141candidate hashes-modes/exact9/79publicHEAD/382olderLIVE/1137nonowned/private173-exclusion/dirtyledger/historicalcheckpoint-tail preserved. Only181mechanicalcompletion backfill; operator/mode/scheduler/source clocks unchanged. Supplied source provenance assessed without replay; standard-single components retain conflicts/unknowncounts/source-window/fees/eligibility/pass/service limitations. No reviewerwrites/test runners/Gitmutations/network/browser/delegation/scheduler. Shared-tool approval only, not public delivery or173release. Only immutable consensus appended; guarded exact9 push next.",
+      "release_receipt": "FT-IMP-182 release e79fa642bfaf94a8ac3009d2427a2d7923e352b4 remote verified 2026-10-19T13:10:36.158Z; main0-0/emptyindex/exact9/all1141indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Shared ferry assessor/existing offline transit CLI delivered, not publicpage delivery. EuclidstrictPASS/323in-memory/32focused/1207full50maintenance/stateSEO0/GSC97/sixpriorwarnings. Fourknownstandardriders2000/4000cents farecomponents; unknowncounts/sourcewindows suppress totals, checkout/pass/eligibility/service stay unconfirmed. Exact9/all1141indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush.382olderLIVE/1137nonowned/173held/historicaltail/dirtyledger/79publicHEADbytes and087/091/177/181records-clocks preserved. Only181mechanicalcompletion backfill. No browser/denialretry/networksource/paid/scheduler change; shared-tool push only no Pageswait. Next173 only after documented changed permitted rendered access/finalQA-review-release; no source renewal. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-19T13:10:36.178Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "e79fa642bfaf94a8ac3009d2427a2d7923e352b4"
     },
     {
       "id": "FT-RES-181",

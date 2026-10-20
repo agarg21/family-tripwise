@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-183",
+  "learning_unit": "LRN-273",
+  "checked_on": "2026-10-20",
+  "recheck_on": "2026-11-03",
+  "evidence_class": "OFFICIAL_CATEGORY_AND_CLUB_POLICY_WITH_CONDITIONAL_COMPONENT_ARITHMETIC",
+  "sources": [
+    {"id": "category", "url": "https://www.langhamhotels.com/en/the-langham/boston/stay/suites/two-bedroom-suite/", "inspected_on": "2026-10-20", "published_on": null, "status": "body-inspected"},
+    {"id": "club", "url": "https://www.langhamhotels.com/en/the-langham/boston/stay/langham-club/", "inspected_on": "2026-10-20", "published_on": null, "status": "body-inspected"},
+    {"id": "floorplan", "url": "https://online.flippingbook.com/view/576686227/", "inspected_on": "2026-10-20", "published_on": null, "status": "empty-extracted-body", "http_status": null, "layout_verified": false, "retry_performed": false}
+  ],
+  "category": {"name": "Club Two Bedroom Suite", "published_guest_capacity": 6, "club_privileges_advertised": true, "complete_bed_allocation": null, "suite_price": null, "source_id": "category"},
+  "club_policy": {
+    "source_id": "club",
+    "included_guest_places": 2,
+    "included_guest_allocation": null,
+    "additional_guest_access_is_separately_priced": true,
+    "currency": "USD",
+    "currency_basis": "Editorial USD interpretation of the Boston property's dollar-denominated policy",
+    "unit": "additional guest/day",
+    "adult_from_age": 17,
+    "child_age_from": 5,
+    "child_age_to": 16,
+    "under_5_published_charge_cents": 0,
+    "low_season": {"adult_cents": 18000, "child_cents": 7500},
+    "high_season": {"adult_cents": 21500, "child_cents": 9000},
+    "tax_excluded": true,
+    "tax_amount": null,
+    "season_calendar": null,
+    "actual_party_entitlement_confirmed": false
+  },
+  "scenario": {
+    "adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13",
+    "hypothetical_included_allocation": "Two adults take the two included places; operator has not confirmed this assignment or this party",
+    "hypothetical_under_5_application": "Age4 independently receives the published under5 treatment; actual party entitlement remains unconfirmed",
+    "additional_priced_child_ages": [8, 12],
+    "automatically_inferred_access_days": null
+  },
+  "desk_cases": [
+    {"id": "conditional-one-selected-day", "selected_access_days": 1, "additional_children": 2, "low_season_component_cents": 15000, "high_season_component_cents": 18000, "tax_cents": null, "actual_total_cents": null},
+    {"id": "conditional-five-explicit-days", "selected_access_days": 5, "additional_children": 2, "low_season_component_cents": 75000, "high_season_component_cents": 90000, "tax_cents": null, "actual_total_cents": null, "days_are_not_inferred_from_nights": true},
+    {"id": "allocation-or-days-unresolved", "selected_access_days": null, "additional_children": null, "low_season_component_cents": null, "high_season_component_cents": null, "tax_cents": null, "actual_total_cents": null}
+  ],
+  "decision": {
+    "hypothesis": "A six-guest club suite automatically includes club access for the named five-person party",
+    "result": "REJECT automatic all-party inclusion; IMPLEMENT separate maintained policy record; PRESERVE actual entitlement and complete cost unknown",
+    "confidence": "High inspected category versus two-place policy distinction and conditional arithmetic; unknown actual allocation, season, taxes, accepted party, bedding and complete cost",
+    "next_falsification_trigger": "Changed applicable access terms or explicit guest-allocation/season/tax/category evidence; otherwise recheck beforeNovember3",
+    "next_eligible_run": "New applicable primary evidence for unresolved fields, or separately registered public integration after permitted rendered QA and independent release review",
+    "why_research_only": "Public173 and public integration require actual rendered QA, still held. No unblocked qualified public release or new shared-tool defect established; do not invent a calculator or URL from this one policy."
+  },
+  "unknowns": ["Published two included guests are not a confirmed allocation to these adults", "November dates do not establish high or low season", "Five nights do not establish five chargeable access days", "Suite bed list and complete room-plus-club cost remain unresolved", "No representative review, firsthand stay, meal savings, safety or firm family-fit claim"],
+  "preservation": {"original_room_pack": "docs/research/boston-room-configurations-2026-10-01.json", "original_pack_renewed": false, "prior_price_or_review_clock_changed": false, "public_change": false, "contact_booking_paid_calls": 0}
+}

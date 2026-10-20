@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-273 - Club-suite capacity does not establish whole-party meal access - 2026-10-20
+
+FT-RES-183 [Langham policy record](../docs/research/boston-langham-club-party-scope-2026-10-20.json). OFFICIAL_CATEGORY_AND_CLUB_POLICY_WITH_CONDITIONAL_COMPONENT_ARITHMETIC. Named061 family2adults/ages4,8,12: reject automatic allparty club inclusion from a six-guest suite. Linked club terms include only two places; selected additional children incur age/season charges plus tax. Conditional one-day/two-child components150/180USD and five explicitly selected days750/900 are not confirmed entitlement or full costs. Inclusion allocation, season calendar, taxes and actual days remain unknown.
+
+High confidence in inspected scope and arithmetic, no booking/parent/SEO proof. Newly followed floorplan has empty extracted body; no layout/HTTP/inventory inference or retry. Lesson: capacity, named benefits and per-guest entitlement require separate evidence. IMPLEMENT scoped record; PRESERVE whole-party access, bed assignment and complete budget unknown. Next falsification: changed applicable guest-allocation/season/tax/category terms orNovember3review; public integration only after its rendered/review gates. Original073room/price/review clocks and173held work unchanged. No unblocked qualified public release or new tool defect established; do not create speculative calculator/CSV/URL. Focused/full native/different strict read-only PASS required. GSC Oct19API/finalOct17 imported orientation only.
+
 ## LRN-272 - Reviewed ferry evidence needs an executable consumer - 2026-10-19
 
 FT-IMP-182. MAINTAINED_EVIDENCE_NATIVE_TASK_INTEGRATION, reusing same-day181 sources without a new inspection or freshness claim. Family decision: four already-qualified standard riders outbound and back. Existing transit CLI rejects the new source record instead of returning its fare component. IMPLEMENT a pure shared assessor in that existing CLI: USD20 one-way/USD40 out-and-back, explicit unknown rider/direction counts withhold arithmetic, and assessment/visit recheck boundaries withhold stale components. No age/height/discount classification, complete checkout total, cheapest pass, free return or service promise.
