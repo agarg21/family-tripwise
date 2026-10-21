@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-184",
+  "learning_unit": "LRN-274",
+  "checked_on": "2026-10-21",
+  "recheck_on": "2026-11-04",
+  "evidence_class": "OFFICIAL_HOTEL_POLICY_WITH_OPTIONAL_COMPONENT_SCOPE",
+  "source": {"url": "https://www.hilton.com/en/hotels/wascces-embassy-suites-washington-dc-convention-center/hotel-info/", "inspected_on": "2026-10-21", "published_on": null, "status": "body-inspected", "checkout_observed": false},
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "arrival": "2026-11-08", "departure": "2026-11-13", "nights": 5, "baseline_car_selected": false, "baseline_pet_selected": false, "actual_travelers": false},
+  "currency": "USD",
+  "currency_basis": "Editorial USD interpretation of the Washington DC property's dollar-denominated policy",
+  "parking": {"self_parking_available": false, "valet_headline_cents": 7500, "valet_unit_in_inspected_body": null, "valet_stay_component_cents": null, "tax_basis": null},
+  "pets": {"headline_cents": 7500, "nonrefundable": true, "one_to_four_night_stay_cents": 7500, "five_or_more_night_stay_cents": 12500, "unit": "selected pet stay under published policy; not per night", "maximum_pets": 2, "published_types": ["dog", "cat"], "tax_basis": null, "exact_pet_acceptance_confirmed": false},
+  "mandatory_stay_charges": {"sofa_fee_cents": null, "other_mandatory_fees_cents": null, "incidentals_hold_cents": null, "absence_from_policy_summary_means_zero": false},
+  "desk_cases": [
+    {"id": "no-car-no-pet-reference", "optional_selected_component_cents": 0, "mandatory_charges_cents": null, "complete_stay_total_cents": null, "basis": "Neither optional service selected; zero is not a mandatory-fee or checkout finding"},
+    {"id": "hypothetical-five-night-pet-selection", "selected_nights": 5, "published_pet_component_cents": 12500, "tax_cents": null, "complete_stay_total_cents": null, "acceptance_confirmed": false, "basis": "Conditional policy component only, not observed booking charge or multiplied headline"},
+    {"id": "hypothetical-five-night-valet-selection", "selected_nights": 5, "headline_cents": 7500, "stay_component_cents": null, "complete_stay_total_cents": null, "basis": "The inspected headline has no explicit billing unit; do not multiply by nights"}
+  ],
+  "decision": {"hypothesis": "Amenity fee headlines establish mandatory full-family stay charges", "result": "REJECT; IMPLEMENT scoped policy record and PRESERVE full-cost/hold/valetstay unknown", "confidence": "High inspected unit/tier and optional-selection distinctions; unknown applicable tax, pet acceptance, valet billing and complete checkout", "next_falsification_trigger": "Explicit applicable billing unit, mandatory-charge, hold, tax or exact-family checkout evidence; otherwise recheck beforeNovember4", "next_eligible_run": "New applicable primary evidence, or separately registered public integration after permitted rendered QA/finalreview", "why_research_only": "No newly qualified unblocked public release or verified shared-tool defect.173 remains held for actual renderedQA; source qualification is not permission to publish or invent a new calculator."},
+  "preservation": {"original_price_record": "docs/research/washington-dc-embassy-price-observation-2026-09-30.json", "original_observed_on": "2026-09-30", "original_quote_or_clock_renewed": false, "public_change": false, "booking_contact_paid_calls": 0},
+  "limits": ["No representative review, firsthand stay, safety, route or firm family-fit claim", "No infant/child acceptance, sofa placement or complete family budget inferred", "Inventory read of the normal browser showed no attached IAB tab; no page navigation, retry or access-restoration evidence"]
+}

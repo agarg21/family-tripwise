@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-274 - An optional fee headline is not a full-stay charge - 2026-10-21
+
+FT-RES-184 [DC Embassy policy record](../docs/research/dc-embassy-optional-fee-scope-2026-10-21.json). OFFICIAL_HOTEL_POLICY_WITH_OPTIONAL_COMPONENT_SCOPE. Named059five-night/no-car/no-pet family task: reject treating amenity headlines as mandatory or complete checkout costs. New hotel-info body distinguishes optional pet stay tiers; five-night hypothetical pet component125USD is not75times5. Valet75USD lacks an explicit billing unit in the inspected body, so stay cost remains unknown. Unselected optional services contribute zero only in that desk case; mandatory fees, sofa, tax and incidentals hold are not zeroed.
+
+IMPLEMENT scoped record; PRESERVE full quote/valetstay unknown. High confidence in inspected scope/tier/unit distinctions, unknown booking acceptance/full cost; not real-parent or SEO evidence. Next falsification: applicable billing-unit/mandatoryfee/hold/tax/actualfamilyquote evidence orNovember4review. Original070rates/age acceptance/source-review clocks/public and173held work unchanged. Normalbrowserinventoryonly returned0attachedIABtabs; no affected navigation or recovery claim. No unblocked qualified public release/new shared-tool defect established; no speculative calculator/CSV. Focused/full native/different strict read-only PASS required. GSC Oct20API/finalOct18 imported orientation, not queryCTRproof.
+
 ## LRN-273 - Club-suite capacity does not establish whole-party meal access - 2026-10-20
 
 FT-RES-183 [Langham policy record](../docs/research/boston-langham-club-party-scope-2026-10-20.json). OFFICIAL_CATEGORY_AND_CLUB_POLICY_WITH_CONDITIONAL_COMPONENT_ARITHMETIC. Named061 family2adults/ages4,8,12: reject automatic allparty club inclusion from a six-guest suite. Linked club terms include only two places; selected additional children incur age/season charges plus tax. Conditional one-day/two-child components150/180USD and five explicitly selected days750/900 are not confirmed entitlement or full costs. Inclusion allocation, season calendar, taxes and actual days remain unknown.

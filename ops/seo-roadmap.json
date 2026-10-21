@@ -20,10 +20,41 @@
   ],
   "items": [
     {
+      "id": "FT-RES-184",
+      "title": "Separate DC Embassy optional policy charges from the family stay total",
+      "kind": "maintained-fee-scope-audit",
+      "status": "in-progress",
+      "selected_on": "2026-10-21",
+      "started_at": "2026-10-21T05:03:10Z",
+      "target_paths": [
+        "docs/research/dc-embassy-optional-fee-scope-2026-10-21.json",
+        "tools/dc-embassy-optional-fee-scope.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "059/070 five-night twoadult/ages4,8,12 no-car reference budget retains additional-charge/hold uncertainty. New ordinary hotel-info body lists valet75USD without an explicit unit, pet headline75USD but detailed5+nights125USD, no childcare; does not establish mandatory sofa/fee/hold total. No checkout or quote refresh. Normal browser inventory only shows0attachedIABtabs, not successfulattachment; affected navigation not retried.",
+      "acceptance_criteria": [
+        "Keep optional parking/pet policies separate from no-car/no-pet task and mandatory stay-charge unknowns. Do not multiply parking headline by nights without a unit; distinguish pet1-4night75 and5+125 per stay, retain taxes/acceptance unknown and no automatic charge to no-pet family.",
+        "New primary policy record and three desk cases: baseline optional0 is not full mandatory-cost0; hypothetical5nightpet component125 beforeunknown tax/currentacceptance, not75*5; valet headline75 withoutunit yields unknownstaycomponent. Original070rate amounts, party/stay/child-age/tax/hold basis and all public/source-review clocks exact. No safety/childcare/wholefamily guarantee.",
+        "Exact7 focused/fullnative/different strict read-only PASS/guarded research-test push. Preserve384olderLIVE/1152baseline/1147nonowned/173private/dirtyledger/historicaltail. Only183mechanicalcompletion backfill. Include conciseOct14-21outcome recap without treating commitvolume or research as publicdelivery."
+      ],
+      "measurement_plan": "LRN274 tests whether amenity-policy charges can close a dated full-family checkout gap. Source audit and conditional component/unit cases, not actual-parent, provider acceptance, checkout or SEO evidence.",
+      "production_invariant": "All79publicHEADfiles and priorDC/Boston/NYC/Orlando evidence-price-review clocks unchanged. No newURL/tool/CSV, browsernavigationretry/alternatebrowser/providerbypass/paid/account/contact/indexing/analytics/scheduler action. ZeroattachedIABtabs is not clearance or securitydenial.",
+      "decision": "PRESERVE mandatory/fullstay and valetstay totals unknown; IMPLEMENT separate source-dated optional-policy record. Candidate public integration only with distinct failedtask/evidence and permitted rendered/finalreview gates.",
+      "next_gate": "Focused/full native and different strict read-only PASS/exactpush. Next fee collection only explicit applicable valetunit/mandatorycharge/tax/hold oractualfamilyquote evidence, otherwiseNov4review.173requires documented normalattachment andactualUI/releaseQA.",
+      "why_research_only": "Highestunfinished173 remains held for actual renderedQA; inventorycheck did not establish recovery. No new verified shared-tool defect or unblocked evidence-qualified public release. This resolves named059full-cost source-scope question without creating another speculative calculator.",
+      "gsc_evidence_classification": "ops/gsc-snapshots/2026-10-20.md and ops/gsc-snapshots/2026-10-20.json collected15:06:33.562Z/finalOct18 versus priorOct19final17; importedread-only API orientation, no newAPI/queryCTRdiagnosis.",
+      "review_receipt": "FT-RES-184 Gibbs01a15cd9-89bd-77e0-9293-6ff540a0ce2a strict read-only PASS/noP0-P3 on FHJKss manifest04fcb2601e1c0bb88f1db2dda8ea1d3a4f6d9c536988a8f15accea6467267d7b. Independent in-memory scope/optionalunit probesPASS; Master3focused/1213full50maintenance/stateSEO0/GSC99/sixpriorwarnings log4922f41005eb54f1f8ce3b51fdb7b744e07f13f2f3e3c729ce3d57cf37a8d225 inspected/hashverified, not rerun. All1149candidate bytes-modes/exact7/79publicHEAD/384olderLIVE/1147nonowned/historical-private173-dirtyledger preserved; only183mechanicalcompletion. Supplied provenance assessed without replay; optionalabsence not mandatoryfee0, pet5night125component not375, valetstayunitunknown. OriginalSep30prices/counts-only/childage/clocks/operator/mode unchanged. Inventory-only notbrowserrecovery; weeklytool-versus-public recap accurate. No reviewerwrites/tempfiles/testrunners/Gitmutations/network/browser/delegation/scheduler. Research-only approval; no173/public clearance. Master verified CVyci2all1149cloneparity before immutable receipt; finalclone not separately reviewerinspected. Only mechanical consensus appended; guarded exact7 push next."
+    },
+    {
       "id": "FT-RES-183",
       "title": "Resolve Boston Langham club access scope for the five-person task",
       "kind": "maintained-policy-and-component-cost-evidence",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-20",
       "started_at": "2026-10-20T12:14:30Z",
       "target_paths": [
@@ -48,7 +79,11 @@
       "next_gate": "Native/different strict read-only PASS/exactpush. Next policy collection only applicable inclusion allocation/season-date/tax/bed evidence orNov3review; next eligible public transaction after documented changed rendered access.",
       "why_research_only": "Highest unfinished173public release remains held for actual renderedQA. Shared182integration delivered last run; no new verified tool defect or unblocked public release gate established. This named061club entitlement gap requires source qualification before public integration; no speculative new calculator/URL/CSV created.",
       "gsc_evidence_classification": "ops/gsc-snapshots/2026-10-19.md and ops/gsc-snapshots/2026-10-19.json collected2026-10-19T16:59:11.250Z finalOct17; priorOct18final16. Imported read-only API orientation, not fresh collection/alignedqueryCTR.",
-      "review_receipt": "FT-RES-183 Avicenna01a1593e-523e-7582-95c7-2f9f29404f2c strict read-only PASS/noP0-P3 on R1dbYf manifestfa9e447154b31818496e0cb2b280f36862c5d16b5cda18b2f62a271270b5f092.90independent in-memory assertions; Master3focused/1210full50maintenance/stateSEO0/GSC98/sixpriorwarnings log2fa354137c7df106d39884621ccbce4ffdaf5e3a19efb3555093b1f519da0dce inspected/hashverified, no rerun/processremaining. Exact7/all1145candidate1148baseline bytes-modes/79publicHEAD/383olderLIVE/1143nonowned/private173-exclusion/dirtyledger/historicaltail preserved. Only182mechanicalcompletion backfill; originalBostonclocks/operator/mode unchanged. Supplied provenance assessed without replay; conditional component arithmetic not confirmed entitlement/fullcost; emptyfloorplan no layoutclaim. No reviewerwrites/test runners/Gitmutations/network/browser/delegation/scheduler. Research-only approval, not173/public release. Only immutable consensus appended; guarded exact7 push next."
+      "review_receipt": "FT-RES-183 Avicenna01a1593e-523e-7582-95c7-2f9f29404f2c strict read-only PASS/noP0-P3 on R1dbYf manifestfa9e447154b31818496e0cb2b280f36862c5d16b5cda18b2f62a271270b5f092.90independent in-memory assertions; Master3focused/1210full50maintenance/stateSEO0/GSC98/sixpriorwarnings log2fa354137c7df106d39884621ccbce4ffdaf5e3a19efb3555093b1f519da0dce inspected/hashverified, no rerun/processremaining. Exact7/all1145candidate1148baseline bytes-modes/79publicHEAD/383olderLIVE/1143nonowned/private173-exclusion/dirtyledger/historicaltail preserved. Only182mechanicalcompletion backfill; originalBostonclocks/operator/mode unchanged. Supplied provenance assessed without replay; conditional component arithmetic not confirmed entitlement/fullcost; emptyfloorplan no layoutclaim. No reviewerwrites/test runners/Gitmutations/network/browser/delegation/scheduler. Research-only approval, not173/public release. Only immutable consensus appended; guarded exact7 push next.",
+      "release_receipt": "FT-RES-183 release 821ba95c691e7e0ae917b73ee771939ea9eff4b1 remote verified 2026-10-20T12:21:12.504Z; main0-0/emptyindex/exact7/all1145indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only Langham club policy/component record remote verified, not public delivery. AvicennastrictPASS/90in-memory/3focused/1210full50maintenance/stateSEO0/GSC98/sixpriorwarnings. Conditional child-access examples not confirmed wholeparty entitlement, season, tax, actualdays or roomtotal; emptyfloorplan no layout. All79publicHEAD and originalBostoncapacity-price-review clocks unchanged.383olderLIVE/1143nonowned/173held/historicaltail/dirtyledger preserved; only182mechanicalcompletion backfill. No browserretry/paid/account/contact/scheduler mutation. Docs-data-test only no Pageswait. Next applicable inclusion-allocation/season-tax-bed primary evidence orNov3review;173 separately held for permitted renderedQA/finalrelease. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-20T12:21:12.524Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "821ba95c691e7e0ae917b73ee771939ea9eff4b1"
     },
     {
       "id": "FT-IMP-182",
