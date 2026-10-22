@@ -1,5 +1,11 @@
 # Product Learning Ledger
 
+## LRN-275 - Whole-party budgets require ordinary dense input arrays - 2026-10-22
+
+FT-IMP-185. REPRODUCIBLE_NATIVE_FAMILY_TASK_TRUST_DEFECT. Hypothesis: admission input validation rejects missing travelers before pricing. REJECT current code: three slots30/hole/13 plus an empty custom iterator pass Array.from-based dense validation; Crayola prices only two travelers6198cents and reports an empty party. Own array methods can substitute guest or tariff results, a band lookup, or exclusion iteration. This is a native API reproduction, not an observed public incident or normal CLI parsing failure.
+
+IMPLEMENT descriptor-based ordinary dense array guards at existing party/tariff/band/exclusion boundaries. Four regressions fail before; valid1-14party outputs, dates, source/fee/price context and result-copy behavior remain unchanged. High confidence in deterministic reproduction/repair; no new source observation, actual-parent, rendered or SEO proof. Lesson: validating by iteration can execute the very substitutions the guard must reject. Next falsification: any missing/overridden/accessor/prototype array produces an apparently complete budget or drops uncertainty; run regression on core contract changes.173held copies/dirtytests remain untouched and unshipped; their old native proof needs current-engine refresh before future rendered/finalrelease gates. Exact7 isolated shared-engine native/different strict read-only PASS required.063October22date alone supplies no page or URL authority; GSC Oct21API/finalOct19 imported orientation only.
+
 ## LRN-274 - An optional fee headline is not a full-stay charge - 2026-10-21
 
 FT-RES-184 [DC Embassy policy record](../docs/research/dc-embassy-optional-fee-scope-2026-10-21.json). OFFICIAL_HOTEL_POLICY_WITH_OPTIONAL_COMPONENT_SCOPE. Named059five-night/no-car/no-pet family task: reject treating amenity headlines as mandatory or complete checkout costs. New hotel-info body distinguishes optional pet stay tiers; five-night hypothetical pet component125USD is not75times5. Valet75USD lacks an explicit billing unit in the inspected body, so stay cost remains unknown. Unselected optional services contribute zero only in that desk case; mandatory fees, sofa, tax and incidentals hold are not zeroed.

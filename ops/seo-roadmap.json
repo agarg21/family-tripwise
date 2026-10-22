@@ -20,10 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-185",
+      "title": "Reject substituted admission arrays before whole-party arithmetic",
+      "kind": "shared-product-trust-defect",
+      "status": "in-progress",
+      "selected_on": "2026-10-22",
+      "started_at": "2026-10-22T05:01:33Z",
+      "target_paths": [
+        "src/shared/admission-budget.mjs",
+        "tools/admission-array-integrity.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Native reproduction: travelerAges[30,hole,13] with own empty iterator passes dense guard; output travelerAges[] but prices only30/13, Crayola6198cents as published-subtotal-not-quote. Current dense uses Array.from and invokes caller iterator. Overridden array methods can similarly substitute guest/rate rows or strip exclusions. Not an observed public incident; CLI parses ordinary arrays.",
+      "acceptance_criteria": [
+        "Replace dense helper with descriptor-based ordinary-array validation: exact Array.prototype, only length plus own dense data-index properties; reject holes, accessors, custom iterators/methods/prototypes without invoking supplied behavior. Apply at existing party/tariff/band/exclusion boundaries; no domain/tariff/date/price change.",
+        "Add fail-before/pass-after tests for sparsecustomiterator, substituted party arraymethods, tariff/band/exclusion method overrides, accessors/customprototypes; normal1-14party arithmetic and known valid outputs stay identical. Focused/fullnativeQA on isolated release candidate plus different strict read-only inspection/in-memory PASS.",
+        "Exact7 guarded shared-engine push. Preserve385olderLIVE/1156baseline/1150nonownedbytes-modes/79publicHEAD/173nineheldtargets/history/dirtyledger. Only184mechanicalcompletion backfill. Held173public module copy remains byteexact oldengine and unshipped; its old native candidate proof is pinned-old and must be refreshed against185 before eventual release. Do not regenerate/stage/discard heldfiles."
+      ],
+      "measurement_plan": "LRN275 reproducible native whole-party task and array-integrity regressions; proxy evidence, not current-source inspection, actualparent, production incident or SEO outcome.",
+      "production_invariant": "No publicpage/sharedsitecopy, price/evidence/source-review/date/window, CLI valid-input behavior, browser retry, paid/account/contact/indexing/analytics/scheduler change. Original172data and allolderevidence bytes exact; 063October22window alone does not authorize edit/newURL.",
+      "decision": "IMPLEMENT_NOW narrowly scoped admission-array fail-closed repair, ahead of observation/research work. Preserve original array-valid results and all held173bytes; do not re-use its old native PASS as proof after engine change.",
+      "next_gate": "Focused/full native, different strict read-only PASS, exact7 guarded remote release. Public173 remains held for refreshed current-engine candidate/native checks plus permitted actualrendered/finalreview/production gates.",
+      "gsc_evidence_classification": "ops/gsc-snapshots/2026-10-21.md and ops/gsc-snapshots/2026-10-21.json collected15:16:49.442Z/finalOct19 vs priorOct20final18; importedAPI orientation, no new collection/CTRquery diagnosis.",
+      "review_receipt": "FT-IMP-185 Pascal01a161ff-975d-7841-b3a7-680389474368 strict read-only PASS/noP0-P3 on JSshcf manifestc03ddea79bee01dac6b46aa6ab1b6312b80af0d488cb3298614bcd9410bb52c4. Independently reproducedoldsparsearray failure;436ordinarycompatibility/52rejections acrossfourboundaries/zerosuppliedcallbacks PASS. Master29focused/1218full50maintenance/stateSEO0/GSC100/sixpriorwarnings log869a956f3dcd77cba45984af9a17ab522555a4127b8e2257195d1c108a0edcdb inspected/hashverified, not rerun. Correctedcurrentbaseline4fail1pass log76e356ab3243e74ca7f9cd1c3354b01bec9829e3881bd2fb6a7dac94350a9a22;5after logfe226ed1a64e90c559f9e55c3a44e99e5bb38ac7261fe3172f703995af737d99. All1152candidate hashes-modes/exact7/79publicHEAD/385olderLIVE/1150nonowned/nine173held/historical-dirtyledger tails preserved; only184mechanicalcompletion. No source-parent-rendered-production-SEO renewal. No reviewerwrites/tempfiles/fixtures/Gitmutations/network/browser/delegation/scheduler. Shared-tool approval excludes173UI/public and uninspectedDywtKRclone; Master1152cloneparity before immutable receipt verified.173requires currentengine/native/rendered/finalrelease refresh. Only immutable consensus appended; guarded exact7 push next."
+    },
+    {
       "id": "FT-RES-184",
       "title": "Separate DC Embassy optional policy charges from the family stay total",
       "kind": "maintained-fee-scope-audit",
-      "status": "in-progress",
+      "status": "completed",
       "selected_on": "2026-10-21",
       "started_at": "2026-10-21T05:03:10Z",
       "target_paths": [
@@ -48,7 +78,11 @@
       "next_gate": "Focused/full native and different strict read-only PASS/exactpush. Next fee collection only explicit applicable valetunit/mandatorycharge/tax/hold oractualfamilyquote evidence, otherwiseNov4review.173requires documented normalattachment andactualUI/releaseQA.",
       "why_research_only": "Highestunfinished173 remains held for actual renderedQA; inventorycheck did not establish recovery. No new verified shared-tool defect or unblocked evidence-qualified public release. This resolves named059full-cost source-scope question without creating another speculative calculator.",
       "gsc_evidence_classification": "ops/gsc-snapshots/2026-10-20.md and ops/gsc-snapshots/2026-10-20.json collected15:06:33.562Z/finalOct18 versus priorOct19final17; importedread-only API orientation, no newAPI/queryCTRdiagnosis.",
-      "review_receipt": "FT-RES-184 Gibbs01a15cd9-89bd-77e0-9293-6ff540a0ce2a strict read-only PASS/noP0-P3 on FHJKss manifest04fcb2601e1c0bb88f1db2dda8ea1d3a4f6d9c536988a8f15accea6467267d7b. Independent in-memory scope/optionalunit probesPASS; Master3focused/1213full50maintenance/stateSEO0/GSC99/sixpriorwarnings log4922f41005eb54f1f8ce3b51fdb7b744e07f13f2f3e3c729ce3d57cf37a8d225 inspected/hashverified, not rerun. All1149candidate bytes-modes/exact7/79publicHEAD/384olderLIVE/1147nonowned/historical-private173-dirtyledger preserved; only183mechanicalcompletion. Supplied provenance assessed without replay; optionalabsence not mandatoryfee0, pet5night125component not375, valetstayunitunknown. OriginalSep30prices/counts-only/childage/clocks/operator/mode unchanged. Inventory-only notbrowserrecovery; weeklytool-versus-public recap accurate. No reviewerwrites/tempfiles/testrunners/Gitmutations/network/browser/delegation/scheduler. Research-only approval; no173/public clearance. Master verified CVyci2all1149cloneparity before immutable receipt; finalclone not separately reviewerinspected. Only mechanical consensus appended; guarded exact7 push next."
+      "review_receipt": "FT-RES-184 Gibbs01a15cd9-89bd-77e0-9293-6ff540a0ce2a strict read-only PASS/noP0-P3 on FHJKss manifest04fcb2601e1c0bb88f1db2dda8ea1d3a4f6d9c536988a8f15accea6467267d7b. Independent in-memory scope/optionalunit probesPASS; Master3focused/1213full50maintenance/stateSEO0/GSC99/sixpriorwarnings log4922f41005eb54f1f8ce3b51fdb7b744e07f13f2f3e3c729ce3d57cf37a8d225 inspected/hashverified, not rerun. All1149candidate bytes-modes/exact7/79publicHEAD/384olderLIVE/1147nonowned/historical-private173-dirtyledger preserved; only183mechanicalcompletion. Supplied provenance assessed without replay; optionalabsence not mandatoryfee0, pet5night125component not375, valetstayunitunknown. OriginalSep30prices/counts-only/childage/clocks/operator/mode unchanged. Inventory-only notbrowserrecovery; weeklytool-versus-public recap accurate. No reviewerwrites/tempfiles/testrunners/Gitmutations/network/browser/delegation/scheduler. Research-only approval; no173/public clearance. Master verified CVyci2all1149cloneparity before immutable receipt; finalclone not separately reviewerinspected. Only mechanical consensus appended; guarded exact7 push next.",
+      "release_receipt": "FT-RES-184 release 10f576f242e49fcb32017568942e8cd92a410e9c remote verified 2026-10-21T05:08:50.390Z; main0-0/emptyindex/exact7/all1149indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Learned-only DC optional-policy record and weeklyoutcome recap remote verified, not publicdelivery. GibbsstrictPASS/independentin-memory/3focused/1213full50maintenance/stateSEO0/GSC99/sixpriorwarnings. Optionalno-selection0 not mandatoryfee0; pet5night125component/valetunitunknown, originalSep30quote/counts-age/source-review clocks unchanged. All79publicHEAD/384olderLIVE/1147nonowned/private173/historicaltail/dirtyledger preserved; only183mechanicalcompletion. WeeklyOct14-21 no newproductionverifiedpublicpages;172176177180182sharedtools delivered,173candidate6days/renderedheld. Inventoryonly noattachedIABtab not recovery/denial; no affectednavigationretry/browserbypass/paid/account/contact/scheduler mutation. Docs-data-test only no Pageswait; next applicable feeunit/mandatory-hold-tax/actualfamilyquote orNov4review,173separate normalattachment/renderedfinalrelease gate. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-21T05:08:50.410Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "10f576f242e49fcb32017568942e8cd92a410e9c"
     },
     {
       "id": "FT-RES-183",

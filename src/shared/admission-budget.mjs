@@ -6,7 +6,13 @@ function dateValue(value) {
 }
 
 function dense(array) {
-  return Array.isArray(array) && Array.from(array).every((_, index) => Object.hasOwn(array, index));
+  if (!Array.isArray(array) || Object.getPrototypeOf(array) !== Array.prototype ||
+      Reflect.ownKeys(array).length !== array.length + 1) return false;
+  for (let index = 0; index < array.length; index += 1) {
+    const field = Object.getOwnPropertyDescriptor(array, index);
+    if (!field || !Object.hasOwn(field, "value")) return false;
+  }
+  return true;
 }
 
 function validateTariff(tariff) {
