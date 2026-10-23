@@ -11,7 +11,7 @@ test("Orlando answer uses the validated review queue, never posting authority", 
   assert.ok(draft);
   assert.equal(queue.posting_authorized, false);
   const reviewed = applyCommunityReview(structuredClone(queue), draft.id,
-    {decision: "approved", draft_answer: draft.draft_answer, notes: "Wording only"}, draft.updated_on);
+    {decision: "approved", draft_answer: draft.draft_answer, notes: "Wording only"}, queue.last_updated);
   assert.equal(reviewed.posting_authorized, false);
   assert.equal(draft.family_tripwise_link.recommendation, "omit");
   assert.equal(draft.family_tripwise_link.url, null);

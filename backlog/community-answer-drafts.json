@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-15",
+  "last_updated": "2026-10-23",
   "repository_visibility": "public",
   "posting_authorized": false,
   "drafts": [
@@ -146,6 +146,70 @@
       "user_review": {"decision": "pending", "decided_on": null, "notes": ""},
       "created_on": "2026-10-15",
       "updated_on": "2026-10-15"
+    },
+    {
+      "id": "COMM-2026-003",
+      "destination": "Boston",
+      "community": "r/boston",
+      "thread_url": "https://www.reddit.com/r/boston/comments/1wz0j34/how_would_you_spend_3_hours_in_boston_with_2_kids/",
+      "observed_on": "2026-10-23",
+      "rules": {
+        "checked_on": "2026-10-23",
+        "summary": "Readable sidebar prohibits advertising/self-affiliated promotion and posts from bot or spam accounts; it also asks visitors to research existing discussions. Omit promotion and our link. These rules do not establish permission for an AI-assisted answer or bot posting. This is an offline human-review draft only; any later human-authored contribution needs fresh rules/source checks and separate explicit authority. Sidebar crawled last week, not live moderation confirmation.",
+        "links": ["https://www.reddit.com/r/boston/"]
+      },
+      "question": "With children aged six and nine and about three hours in Boston, should the family combine an indoor attraction with the Freedom Trail, or choose one distinctive experience?",
+      "decision_job": "Choose one anchor after subtracting arrival/departure and reset time; distinguish a short history stop from the whole trail, and a museum visit from a guaranteed show or sensory fit.",
+      "draft_answer": "Make one experience the anchor and keep a short walk optional. Your proposed walk toward the trail's start is not the same as doing the whole trail. First subtract travel to and from your actual start/end points, a toilet/snack break and a departure buffer from those three hours. If very little remains, skip a timed ticket. This is AI-assisted desk research checked October23, not firsthand experience.\n\nYour edited priority is a distinctly Boston experience, so I would check a short history visit first rather than choosing a museum from the replies' rankings. If the weather works, choose a small part of the Freedom Trail around your starting point and one site the children both want to see. The Foundation describes the full trail as2.5miles with16 sites; that is not a promise you can visit them all in your available time. Check the chosen site's hours, admission and access before committing. Treat any second stop as optional and set your turn-back time from the actual departure point. [Trail scope](https://www.thefreedomtrail.org/about).\n\nIf rain or the children's interests favor the Museum of Science, make that the anchor instead. Check selected-date admission, hours and the day's program before buying. Do not build the plan around a lightning-show time that has not been confirmed. The museum identifies its Theater of Electricity as a louder, flashing-light environment; it lists a lower-sensory viewing area and noise-reducing headphones, not a guarantee that the experience will suit either child. Keep the option to skip the show and use other exhibits. [Visit planning](https://www.mos.org/visit) and [sensory information](https://www.mos.org/visit/accessibility).\n\nFor an October visit, do not add a Swan Boat ride as a fallback: the operator lists September7 as the last day of its2026 season and says it is closed until April2027. That is a boat-service closure, not a claim that the Public Garden is closed. [Season calendar](https://swanboats.com/plan-your-visit/).\n\nI would not turn the replies' museum rankings into a universal verdict for ages six and nine. Ask each child for one priority. If science wins, a short walk toward the trail's start can remain optional if the actual entry time, weather and departure point leave enough time; otherwise drop the walk. Do not assume it fits. Your visit date, entry availability, budget and transport still decide whether either version works; no exact route, walking time or full three-hour itinerary has been verified here.",
+      "evidence": [
+        {
+          "classification": "community-question",
+          "title": "Three-hour Boston family visit question and conflicting suggestions",
+          "url": "https://www.reddit.com/r/boston/comments/1wz0j34/how_would_you_spend_3_hours_in_boston_with_2_kids/",
+          "checked_on": "2026-10-23",
+          "note": "Search dates publication October6; opened body crawled3days ago shows13-day relative timestamps, not a live activity date. The question supplies6/9 ages, short window and a request for distinctive Boston value. Sampled replies disagree on indoor choices, age fit and electricity-show noise; seasonal water suggestions are not current operating evidence. Public-safe paraphrase only, no identities, copied comments, ratings or representative preference inference. Actual trip date and whether the question remains actionable are unknown."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Freedom Trail Foundation route extent",
+          "url": "https://www.thefreedomtrail.org/about",
+          "checked_on": "2026-10-23",
+          "note": "Readable primary body describes a2.5-mile route and16 historic sites. Does not establish a family's completion time, selected-site entry/hours, exact route or stroller practicality. No current numeric demand or new Boston activity owner follows from this fact."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Museum of Science visit-planning entry point",
+          "url": "https://www.mos.org/visit",
+          "checked_on": "2026-10-23",
+          "note": "Primary body links hours/pricing, the day's schedule, live presentations, accessibility and museum map. Displayed daily hours are not borrowed as the unknown family's selected-date hours. The linked live-presentations body exposes a placeholder rather than dated events; no lightning-show time, price or available ticket is established. No ticket route, transaction or account was used."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Museum of Science sensory provisions and limits",
+          "url": "https://www.mos.org/visit/accessibility",
+          "checked_on": "2026-10-23",
+          "note": "Primary sensory sections support the theater caveats and posted provisions in the draft, not measured sound levels, availability, personal suitability or safety. No unrelated construction, route or accommodation claim is borrowed."
+        },
+        {
+          "classification": "official-fact",
+          "title": "Swan Boats 2026 seasonal operating boundary",
+          "url": "https://swanboats.com/plan-your-visit/",
+          "checked_on": "2026-10-23",
+          "note": "Primary body lists September7,2026 as last day and seasonal closure until April2027. Applies to Swan Boat service, not Public Garden access, Frog Pond operation, a confirmed2027 opening date, weather or a current ride ticket. No old tariff reused as an available October price."
+        },
+        {
+          "classification": "editorial-interpretation",
+          "title": "Two reproducible time-box and sensory desk cases",
+          "url": "https://www.mos.org/visit/accessibility",
+          "checked_on": "2026-10-23",
+          "note": "Desk caseA: dry weather/history priority/unknown start-end travel -> subtract travel-reset-buffer, select one site/short segment, reject whole-trail promise and October boat fallback; selected-site access remains unknown. CaseB: rain/noise concern/unknown showtime -> check selected-date entry/program, one museum anchor, retain skip-show fallback; headphones/viewing area do not close fit. Both PARTIAL until inputs are known. Proxy reasoning, not executable route selection, actual parents, rendered desktop/mobile/keyboard, satisfaction or SEO proof."
+        }
+      ],
+      "family_tripwise_link": {"recommendation": "omit", "url": null, "rationale": "Official scope checks and the decision default answer the question; our lodging page is not a three-hour activity tool. Advertising and bot/spam rules preclude assuming promotion or automated posting permission."},
+      "uncertainty": "Actual visit date, whether the trip is still upcoming, start/end points, transport and departure buffer, weather, tickets, selected-site hours/admission/access, prices, interests and sensory comfort remain unknown. No full-trail timing, show slot, exact route/stroller practicality, medical/safety or firm age-fit assurance. Desk cases are not human evidence. Pending wording review never authorizes posting.",
+      "user_review": {"decision": "pending", "decided_on": null, "notes": ""},
+      "created_on": "2026-10-23",
+      "updated_on": "2026-10-23"
     }
   ]
 }
