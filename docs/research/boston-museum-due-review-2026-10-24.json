@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-188",
+  "observed_on": "2026-10-24",
+  "venue": "Boston Children's Museum",
+  "evidence_class": "OFFICIAL_PUBLISHED_POLICY_WITH_READER_LIMITS",
+  "decision": "PRESERVE",
+  "named_gate": "FT-IMP-081 admission-return policy review due October23; can the family leave for a hotel break and return on the same admission, and what cash total is established?",
+  "scenario": {"adults": 2, "child_ages": [4, 8, 12], "visit_date": null},
+  "sources": [
+    {
+      "url": "https://bostonchildrensmuseum.org/visit/",
+      "classification": "official-published-fact",
+      "checked_on": "2026-10-24",
+      "reader_crawl": "today",
+      "publication_date": null,
+      "scope": "Published adult/child admission24 dollars; child band1-15, infant under12months free. General hours are not selected-date availability. Yearless holiday entries and summer2026 advice are not an October itinerary. No exit/re-entry rule established."
+    },
+    {
+      "url": "https://bostonchildrensmuseum.org/visit/visitor-services-information/",
+      "classification": "official-published-fact",
+      "checked_on": "2026-10-24",
+      "reader_crawl": "yesterday",
+      "publication_date": null,
+      "scope": "Visitor-service body does not establish same-admission exit/re-entry. It is not evidence that return is prohibited. No route, stroller-practicality, care, safety or hotel-rest judgment collected."
+    },
+    {
+      "url": "https://bostonchildrensmuseum.org/ticketing/",
+      "classification": "official-published-fact",
+      "checked_on": "2026-10-24",
+      "reader_crawl": "today",
+      "publication_date": null,
+      "scope": "Advance reservations recommended and hours subject to change; first-Saturday exception retained. No chosen date, available entry, final charge or explicit leave-and-return rule verified."
+    },
+    {
+      "url": "https://estore.bostonchildrensmuseum.org/webstore/shop/viewItems.aspx?cg=TT&c=TT",
+      "classification": "official-published-policy-with-template-limit",
+      "checked_on": "2026-10-24",
+      "reader_crawl": "today",
+      "publication_date": null,
+      "scope": "Readable ticket rows24/0 dollars; ordinary admission permits remaining all day except TJX1Sunday-afternoon tickets. Description retains4dollar/transaction included-fee wording, nonrefundability and date-transfer subject to availability. No selected-date inventory or checkout verified.",
+      "reader_limit": "Body also contains unbound cart/calendar templates and generic offline/error/availability messages. Their presence is not proof that the shop is offline, a date is sold out, or a connection failed. Underlying HTTP status and rendered conditional visibility are unknown; no retry or alternate rendering attempted."
+    }
+  ],
+  "published_component": {
+    "currency": "USD",
+    "currency_basis": "editorial interpretation of dollar amounts at US venue",
+    "unit": "standard ticket per guest age one or older",
+    "per_ticket_cents": 2400,
+    "tickets": 5,
+    "component_cents": 12000,
+    "evidence_class": "published-tariff arithmetic, not checkout or selected-date quote",
+    "date_availability_verified": false
+  },
+  "transaction_fee": {
+    "currency": "USD",
+    "cents": 400,
+    "unit": "transaction",
+    "inclusion": "description says price will include fee",
+    "add_to_component_automatically": false,
+    "tax_inclusion": "unknown",
+    "checkout_total_cents": null
+  },
+  "return_policy": {
+    "ordinary_all_day_stay": true,
+    "exception": "TJX one-dollar Sunday-afternoon ticket",
+    "exit_reentry": "not-established",
+    "return_prohibited": null,
+    "new_ticket_required_after_exit": null,
+    "hotel_break_feasible": null
+  },
+  "desk_cases": [
+    {"case": "one ordinary visit", "result": "PARTIAL", "component_cents": 12000, "checkout_total_cents": null, "reason": "Five displayed ticket units; do not add400 or infer inclusive final charge, taxes, discounts, chosen-day admission or availability."},
+    {"case": "morning visit, hotel break, afternoon return", "result": "PARTIAL", "new_ticket_required_after_exit": null, "reason": "All-day stay does not establish exit/re-entry. Neither one-ticket return nor a second-ticket charge/ban is established; route, opening on actual date and actual rest remain unknown."}
+  ],
+  "preserved_inputs": [
+    {"path": "docs/research/boston-museum-return-policy-2026-10-09.json", "sha256": "f47063066988bc901ce9fc21cbf8969c7ffde2e67a0442e3008b3ea1300a0ae4"},
+    {"path": "docs/research/boston-public-admission-budget-task-2026-10-09.json", "sha256": "177c13e1f1072f136fbc1fb3e90232b46a69ef6785727800180b21e91541d04a"},
+    {"path": "tools/boston-museum-admission.mjs", "sha256": "4a723fc5048ca97adb93cf973d953160b26db34b1fb209bc96f7780c1f1f2912"}
+  ],
+  "old_public_clock": {"observed_on": "2026-10-09", "review_due_on": "2026-10-23", "renewed": false},
+  "method": "Four ordinary public reader opens, no date/quantity choice, details-dialog interaction, cart, purchase, account, contact, browser, hidden API, alternate access, paid call or complete-body archive. Supplied sources are policy text, not rendered booking observations.",
+  "confidence": "High scoped published distinctions; selected-date inventory, inclusive cash total and actual return remain unknown. Two desk cases are proxy reasoning, not actual parents, rendered checks, firsthand experience, satisfaction or SEO proof.",
+  "next_trigger": "Explicit applicable exit/re-entry rule, changed tariff/fee wording or a separately obtained selected-date inclusive quote. Do not repeat unchanged bodies merely because a heartbeat arrives.",
+  "public_change": false,
+  "shared_tool_change": false
+}

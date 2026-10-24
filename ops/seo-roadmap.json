@@ -20,12 +20,42 @@
   ],
   "items": [
     {
+      "id": "FT-RES-188",
+      "title": "Resolve the due Boston museum return-and-fee review",
+      "kind": "evidence-freshness-audit",
+      "status": "in_progress",
+      "selected_on": "2026-10-24",
+      "started_at": "2026-10-24T05:19:01Z",
+      "target_paths": [
+        "docs/research/boston-museum-due-review-2026-10-24.json",
+        "tools/boston-museum-due-review.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "081/143 maintained Boston admission-return record reached its explicit October23 review date. Four ordinary primary reader bodies checkedOctober24 to resolve whether same-admission hotel-break return, included transaction fee and selected-date cost can now be established. No unchanged browser/provider denial retry.186 refresh is complete but rendered/finalrelease held; no qualified public release has actual rendered checks. Unchanged published policy does not justify a new calculator or page edit.",
+      "acceptance_criteria": [
+        "New dated evidence record keeps primary published facts, reader/template limits, scoped arithmetic and unknowns separate. All-day stay is not exit/re-entry; absent permission is not a ban. Five24USD/person tickets give120USD component, not124checkout;4/transaction included wording cannot be double charged. No selected-date availability, tax or hotel-rest claim.",
+        "Preserve original143/081 records, assessor, watch/public/model/price/review clocks and79publicHEAD files. New observation does not renew old public labels or supply firsthand/rendered evidence. Two reproducible desk cases, no actual-parent/SEO/suitability assurance; no ticket/date/quantity/cart/account/contact/paid/browser/security/scheduler mutation.",
+        "Focused/full native QA and different strict read-only PASS; exact7 guarded research-only push. Preserve388olderLIVE and1162baseline nonowned bytes/modes/dirtyledger/historicaltail. CleanHEAD excludes private173/186 code/action records, isolates newledger prefix and backfills only187mechanicalcompletion. Currentcycle selected-state update scoped/reviewed; no standalone metadata release."
+      ],
+      "measurement_plan": "LRN277 resolves named due-review decision: PRESERVE historical public component and return uncertainty; candidate update only on explicit applicable return rule, actual date/fee-inclusive quote or changed policy. Inspectors distinguish template strings from booking state and included fee from final total.",
+      "production_invariant": "All public bytes, originalBoston records/tool/watch/clocks/operator/scheduler and otherheldwork unchanged. Docs-only push noPageswait; not public delivery or permission to rely on review-due public policy as freshly checked.",
+      "decision": "PRESERVE until named primary or selected-date evidence changes. Record bounded current audit, no public implementation or speculative shared tool.",
+      "next_gate": "Focused/full native and different read-only PASS then guarded exact7 research push; next substantive return/price action needs explicit scoped primary change or selected-date evidence, not unchanged policy replay.",
+      "gsc_evidence_classification": "Newly imported Oct23 API collected15:05:24.190Z/finalOct21, priorOct22finalOct20; reused orientation only. ops/gsc-snapshots/2026-10-23.md and ops/gsc-snapshots/2026-10-23.json; no aligned-query CTR eligibility.",
+      "review_receipt": "FT-RES-188 Plato01a16cc8-1284-75d2-aa37-b347d84f6166 strict read-only PASS/noP0-P3 on m1KpfO manifesta582442b8ab311669c682c7a92c6e7cd8737faf2e00e4c368ed41523ba6a4616. Reverified1159candidate1162baselinehashes-modes/exact7/388olderLIVE/1157nonowned/79publicHEAD/history/dirtyledger; clean excludesprivate173-186, only187mechanicalcompletion. BothdeskcasesPARTIAL:120USDcomponent notcheckout, return-ban-newticket-route-rest-dateavailability unproven; original143-081-assessor-watch-public clocks unchanged. Master9focused/1224full50maintenance/state0/GSC102/localSEO0sixprior log547bc659b33c6cf0fc3cbda05a6521034ef5013e86ecb06369e45219c3d2588c inspected/hashverified, not rerun. Supplied sourceprovenance assessedwithoutreplay; no reviewerwrites/tempfiles/runners/fixtures/network/browser/Gitmutation/delegation/scheduler. Researchcandidate approval only, notpublic/posting/UI/productionverification. Master11598jD4Recloneparity before mechanicalreceipt verified; clone not independently inspected. Only immutable consensus appended; exact guarded research push next."
+    },
+    {
       "id": "FT-RES-187",
       "initial_review": "Rawls01a16729-e14a-7e00-a22b-5e443d9aa5ef cycle1FAIL: P2draft invents whole-trail plan instead of preserving original optional walk toward start/edited distinctiveBoston priority; P3currentcycle altered185historicalreceipt exact7 to8. Remaining scope/preservation/QA checks passed. Strict read-only/no runner/source replay/mutation.",
       "repair": "Preserve optional short walk conditionally, explain history-first against edited priority, correct LRN276 framing and add intent assertions. Restore185exact7 immutable receipt. Full native/different read-only cycle2 review required; cycle1 retained, no release authority yet.",
       "title": "Draft a bounded three-hour Boston family decision",
       "kind": "community-answer-draft",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-23",
       "started_at": "2026-10-23T05:04:10Z",
       "target_paths": [
@@ -50,7 +80,11 @@
       "decision": "IMPLEMENT_NOW one review-queue draft, not new Boston activity URL/public release.173/186 final rendered/release hold separate.",
       "next_gate": "Focused/full native QA and different strict read-only PASS, then exact guarded push. External posting requires separate fresh authorization and rule/source checks.",
       "gsc_evidence_classification": "Newly imported Oct22 read-only API collected15:17:50.894Z/finalOct20, priorOct21finalOct19; reused orientation only, not aligned-query CTR eligibility. ops/gsc-snapshots/2026-10-22.md and ops/gsc-snapshots/2026-10-22.json",
-      "review_receipt": "FT-RES-187 Rawls01a16729-e14a-7e00-a22b-5e443d9aa5ef cycle2 strict read-only PASS/noP0-P3 on iCsmFX manifestb3163ae0379217fe973325d5c70b90c88bbaa3fb5734440b944c88d013545785. Intent repair preserves optionaltrailstart/history-first rationale without feasibility promise; LRN276/assertions align.185exact7 restored, cycle1FAIL retained. Reverified1155candidate hashes-modes/exact8/387olderLIVE/385oldercleanexcept185mechanical/2olderdrafts/1152nonowned/79publicHEAD/history/operator; private173/186 excluded. Master16focused/1221full50maintenance/state0/GSC101/SEO0sixprior log64ff26c635994ad8140b3c0ade9b9307ef49cc7ea42e2798dd20b9632850a8f6 inspected/hashverified, not rerun. No reviewerwrites/tempfiles/runners/fixtures/source-replay/browser/network/Gitmutation/delegation/scheduler. Approval only offline draft/docs/tests, not posting/public/actualparent/rendered/productionSEO. Master1155xwtSSfcloneparity before immutable receipt verified; clone not independently inspected. Only mechanical consensus appended; exact guarded research push next."
+      "review_receipt": "FT-RES-187 Rawls01a16729-e14a-7e00-a22b-5e443d9aa5ef cycle2 strict read-only PASS/noP0-P3 on iCsmFX manifestb3163ae0379217fe973325d5c70b90c88bbaa3fb5734440b944c88d013545785. Intent repair preserves optionaltrailstart/history-first rationale without feasibility promise; LRN276/assertions align.185exact7 restored, cycle1FAIL retained. Reverified1155candidate hashes-modes/exact8/387olderLIVE/385oldercleanexcept185mechanical/2olderdrafts/1152nonowned/79publicHEAD/history/operator; private173/186 excluded. Master16focused/1221full50maintenance/state0/GSC101/SEO0sixprior log64ff26c635994ad8140b3c0ade9b9307ef49cc7ea42e2798dd20b9632850a8f6 inspected/hashverified, not rerun. No reviewerwrites/tempfiles/runners/fixtures/source-replay/browser/network/Gitmutation/delegation/scheduler. Approval only offline draft/docs/tests, not posting/public/actualparent/rendered/productionSEO. Master1155xwtSSfcloneparity before immutable receipt verified; clone not independently inspected. Only mechanical consensus appended; exact guarded research push next.",
+      "release_receipt": "FT-RES-187 release 6c615679e24c2f85a434d0035a4d573de29aab37 remote verified 2026-10-23T05:16:48.852Z; main0-0/emptyindex/exact8/all1155indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Offline Boston answer draft/queue and fixture-date repair remote verified, not public delivery. Rawlscycle2strictPASS after retainedP2intent/P3receipt fixes;16focused/1221full50maintenance/state0/GSC101/SEO0sixprior. All79publicHEAD files/2olderdrafts/387olderLIVE/1152nonowned/private173-186/history/dirtyledger/operator preserved; only185mechanical completion backfill. No external posting, browser retry, sourceclock or paid/scheduler mutation. Docs-only noPageswait. LRN276 complete; human wording review pending/postingfalse. Next applicable selected-date/site/program or changed constraints;173-186normalattachment/rendered/finalrelease hold separate. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-23T05:16:48.874Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "6c615679e24c2f85a434d0035a4d573de29aab37"
     },
     {
       "id": "FT-IMP-185",
