@@ -20,10 +20,40 @@
   ],
   "items": [
     {
+      "id": "FT-IMP-189",
+      "title": "Isolate MoMA budget results from maintained evidence",
+      "kind": "shared-product-trust-fix",
+      "status": "in_progress",
+      "selected_on": "2026-10-25",
+      "started_at": "2026-10-25T05:06:39Z",
+      "target_paths": [
+        "tools/nyc-moma-budget.mjs",
+        "tools/moma-budget-isolation.test.mjs",
+        "backlog/product-learning-ledger.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [],
+      "evidence": "Reproduced native caller task: change returned younger-teen age16to17; shared source scenario also changes while returned6000cents remains, and next independent momaBudget request throws requalification. Budget evidence and comparison/review-clock source arrays also alias supplied records. This is a reproducible shared API isolation defect, not observed production incident/current admission research.186nativecomplete but finalrenderedreleaseheld; independent verified defect is eligible.",
+      "acceptance_criteria": [
+        "Clone returned evidence and nested scenario data independently; comparison and review-clock source arrays must not mutate canonical or supplied evidence. Ordinary callers may edit returned working data without changing next requests or the output source snapshot. No new wrapper/framework or policy/arithmetic/validation redesign.",
+        "Four regressions cover nested age edits, returned policy-price-source edits, comparison/clock source arrays and historical/fresh/overdue repeat-call isolation. Reproduce failures before fix, pass after; unchanged ordinary output values/JSON, existing requalification and historical/date guards. Old086prices/policy/sourceOct10/reviewOct24 and all79publicHEAD bytes unchanged; no source refresh, actualparent/UI/SEO or public incident claim.",
+        "Focused/full native QA, different strict read-only PASS and exact7 guarded shared-tool push. Preserve389olderLIVE/1166baseline nonowned bytes-modes/private173-186/dirtyledger/historicaltail. CleanHEAD excludes heldcode/actions; isolate newledger prefix and backfill only188mechanicalcompletion. No browser/network/denialretry/paid/account/contact/indexing/analytics/scheduler change."
+      ],
+      "measurement_plan": "LRN278 native exact-age task: one consumer edits16to17 in its working result; independent next comparison remains valid and original60/90/77USD component examples, source identity and unknown eligibility/checkout/date caveats remain intact. Defensive copies are not recalculation or current quote renewal.",
+      "production_invariant": "Shared code/test only; public page/generator/model/data/source dates/currency/fees/windows and pending188primary gates unchanged. No public deployment or rendered-QA claim; shared-only push noPageswait.",
+      "decision": "IMPLEMENT verified result-alias isolation fix, not new MoMA price audit or public page rewrite.",
+      "next_gate": "Fail-before regressions, focused/full native and different strict read-only PASS, exact guarded push.186public release separately requires changed permitted normal attachment/rendered/finalreview/production gates.",
+      "gsc_evidence_classification": "Newly imported Oct24 API collected14:01:14.927Z/finalOct22, priorOct23finalOct21; reused orientation only. ops/gsc-snapshots/2026-10-24.md and ops/gsc-snapshots/2026-10-24.json, no query-cohort/CTR eligibility.",
+      "review_receipt": "FT-IMP-189 Sartre01a17177-18fa-7f32-8111-96d49c559d1b strict read-only PASS/noP0-P3 on edLigz manifest108bf713839b98d8ea5a2099cf2b0e97bcf4d6a2413a84dfcb96f58dc9d429ab. Independently reproduced4oldaliasfailures;144JSONcompatibility/63rejection-dateparity and historical-fresh-overdue isolation PASS. All1162candidate1166baselinehashes-modes/exact7/389olderLIVE/387oldercleanexcept188mechanical/1160nonowned/79publicHEAD/history/dirtyledger/operator-watch/sourceclocks verified; private173-186excluded. Masterbefore4fail logcf015121a9ea8a18822286ec7cc6e5a370fd4673e42759d78f410849edbd6785,19focused log59cb032cd062a8a8cc67249c668412c537b877dfa8e31de2b523a84dcd5e606b,1228full50maintenance/state0/GSC103/localSEO0sixprior log5c572830dfa9c2f3fcec9471f814afcc82fa1d17fbd345713fe4718b8d283813 inspected/hashverified, not rerun. Old086sourceOct10/reviewOct24/ordinaryvalues unchanged, no newquote-ID-return/source-renewal claim. No reviewerwrites/tempfiles/runners/network/browser/Gitmutation/delegation/externalaction. Sharedtoolapproval only, not public/rendered/actualparent/productionSEO. Master1162e9PVkpcloneparity before immutable receipt verified; clone not independently inspected. Only mechanical consensus appended; exact guarded shared push next."
+    },
+    {
       "id": "FT-RES-188",
       "title": "Resolve the due Boston museum return-and-fee review",
       "kind": "evidence-freshness-audit",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-24",
       "started_at": "2026-10-24T05:19:01Z",
       "target_paths": [
@@ -47,7 +77,11 @@
       "decision": "PRESERVE until named primary or selected-date evidence changes. Record bounded current audit, no public implementation or speculative shared tool.",
       "next_gate": "Focused/full native and different read-only PASS then guarded exact7 research push; next substantive return/price action needs explicit scoped primary change or selected-date evidence, not unchanged policy replay.",
       "gsc_evidence_classification": "Newly imported Oct23 API collected15:05:24.190Z/finalOct21, priorOct22finalOct20; reused orientation only. ops/gsc-snapshots/2026-10-23.md and ops/gsc-snapshots/2026-10-23.json; no aligned-query CTR eligibility.",
-      "review_receipt": "FT-RES-188 Plato01a16cc8-1284-75d2-aa37-b347d84f6166 strict read-only PASS/noP0-P3 on m1KpfO manifesta582442b8ab311669c682c7a92c6e7cd8737faf2e00e4c368ed41523ba6a4616. Reverified1159candidate1162baselinehashes-modes/exact7/388olderLIVE/1157nonowned/79publicHEAD/history/dirtyledger; clean excludesprivate173-186, only187mechanicalcompletion. BothdeskcasesPARTIAL:120USDcomponent notcheckout, return-ban-newticket-route-rest-dateavailability unproven; original143-081-assessor-watch-public clocks unchanged. Master9focused/1224full50maintenance/state0/GSC102/localSEO0sixprior log547bc659b33c6cf0fc3cbda05a6521034ef5013e86ecb06369e45219c3d2588c inspected/hashverified, not rerun. Supplied sourceprovenance assessedwithoutreplay; no reviewerwrites/tempfiles/runners/fixtures/network/browser/Gitmutation/delegation/scheduler. Researchcandidate approval only, notpublic/posting/UI/productionverification. Master11598jD4Recloneparity before mechanicalreceipt verified; clone not independently inspected. Only immutable consensus appended; exact guarded research push next."
+      "review_receipt": "FT-RES-188 Plato01a16cc8-1284-75d2-aa37-b347d84f6166 strict read-only PASS/noP0-P3 on m1KpfO manifesta582442b8ab311669c682c7a92c6e7cd8737faf2e00e4c368ed41523ba6a4616. Reverified1159candidate1162baselinehashes-modes/exact7/388olderLIVE/1157nonowned/79publicHEAD/history/dirtyledger; clean excludesprivate173-186, only187mechanicalcompletion. BothdeskcasesPARTIAL:120USDcomponent notcheckout, return-ban-newticket-route-rest-dateavailability unproven; original143-081-assessor-watch-public clocks unchanged. Master9focused/1224full50maintenance/state0/GSC102/localSEO0sixprior log547bc659b33c6cf0fc3cbda05a6521034ef5013e86ecb06369e45219c3d2588c inspected/hashverified, not rerun. Supplied sourceprovenance assessedwithoutreplay; no reviewerwrites/tempfiles/runners/fixtures/network/browser/Gitmutation/delegation/scheduler. Researchcandidate approval only, notpublic/posting/UI/productionverification. Master11598jD4Recloneparity before mechanicalreceipt verified; clone not independently inspected. Only immutable consensus appended; exact guarded research push next.",
+      "release_receipt": "FT-RES-188 release dd648dd32c4d119200c9f3affc67b498f8dde493 remote verified 2026-10-24T08:56:20.050Z; main0-0/emptyindex/exact7/all1159indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Boston due-review record/three regressions remoteverified; learned-only PRESERVE, not public/shared-tool delivery. Plato strictPASS/9focused/1224full50maintenance/state0/GSC102/localSEO0sixprior. BothdeskcasesPARTIAL; published120USDcomponent notcheckout, return-ban-newticket-dateavailability-route-rest unknown. Original143-081-assessor-watch-public source clocks unchanged. All79publicHEAD/388olderLIVE/1157nonowned/private173-186/history/dirtyledger preserved; only187mechanicalcompletion. No browser/denialretry/date-quantity/cart/account/contact/paid/scheduler action. Docs-only noPageswait. LRN277 complete; next explicit applicable return/fee/tariff change or selected-date inclusive evidence, not unchanged replay.186normalattachment/rendered/finalrelease hold separate. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-24T08:56:20.075Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "dd648dd32c4d119200c9f3affc67b498f8dde493"
     },
     {
       "id": "FT-RES-187",
