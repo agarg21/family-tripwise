@@ -30,7 +30,7 @@ export function bostonMuseumAdmission(evidence = bostonMuseumEvidence, asOf = '2
   if (basis.admission_component?.tickets !== tickets || basis.admission_component.amount !== amount ||
       basis.admission_component.checkout_total !== null || basis.admission_component.includes_transaction_fee_assumed !== false)
     throw new Error('Invalid Boston museum admission component');
-  return {evidence, tickets, amount, transaction_fee:fee.amount, checkout_total:null, source_url:store,
+  return {evidence:structuredClone(evidence), tickets, amount, transaction_fee:fee.amount, checkout_total:null, source_url:store,
     freshness:ageState(evidence.checked_on,basis.refresh_days,asOf)};
 }
 
