@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "action": "FT-RES-190",
+  "observed_on": "2026-10-26",
+  "venue": "The Museum of Modern Art, Manhattan",
+  "evidence_class": "OFFICIAL_PUBLISHED_ADMISSION_AND_RETURN_POLICY",
+  "decision": "PRESERVE",
+  "named_gate": "FT-IMP-086 admission and return-policy review due October24; does a teen turning17 change the published category budget, and can the family leave and return?",
+  "sources": [
+    {
+      "url": "https://www.moma.org/visit/",
+      "classification": "official-published-fact",
+      "checked_on": "2026-10-26",
+      "reader_crawl": "today",
+      "publication_date": null,
+      "scope": "Manhattan MoMA: adult30 dollars, full-time student with ID17 dollars including international students, children16andunder free. Standard categories, not every visitor's lowest eligible fare. Hours and category prices are not selected-date ticket inventory or checkout evidence."
+    },
+    {
+      "url": "https://www.moma.org/visit/tips",
+      "classification": "official-published-fact",
+      "checked_on": "2026-10-26",
+      "reader_crawl": "today",
+      "publication_date": null,
+      "scope": "Free visitors16andunder still need tickets. Keep tickets after scanning; leaving and returning the same day is permitted with the ticket retained. Advance online purchase is required to guarantee entry; limited on-site tickets are first-come. This does not establish a chosen date's availability, ID acceptance or an actual family's return timing."
+    }
+  ],
+  "published_categories": {
+    "currency": "USD",
+    "currency_basis": "editorial interpretation of dollar amounts at US venue",
+    "unit": "per person, standard general museum admission",
+    "adult_cents": 3000,
+    "full_time_student_with_ID_cents": 1700,
+    "free_child_max_age": 16,
+    "child_cents": 0,
+    "basis": "Two standard adult tickets, nonmember examples without special promotions; eligible discounts are not exhaustively priced."
+  },
+  "policy": {
+    "free_child_ticket_required": true,
+    "student_requires_full_time_ID": true,
+    "same_day_return_with_ticket": true,
+    "ticket_must_be_retained": true,
+    "actual_student_ID_accepted": null,
+    "selected_date_available": null,
+    "tax_fee_inclusion": "unknown",
+    "checkout_total_cents": null,
+    "hotel_break_feasible": null,
+    "independent_teen_entry": "not-assessed"
+  },
+  "desk_cases": [
+    {
+      "case": "Two standard adults and teens13and16",
+      "adults": 2,
+      "child_ages": [13, 16],
+      "student_eligibility_assumed": false,
+      "category_counts": {"adult": 2, "student": 0, "free_child": 2},
+      "component_cents": 6000,
+      "result": "PARTIAL",
+      "reason": "Both teens fall within the published free-child category but still need tickets;60USD is admission-category arithmetic, not checkout or date availability."
+    },
+    {
+      "case": "Two standard adults and teens13and17 without assumed student eligibility",
+      "adults": 2,
+      "child_ages": [13, 17],
+      "student_eligibility_assumed": false,
+      "category_counts": {"adult": 3, "student": 0, "free_child": 1},
+      "component_cents": 9000,
+      "result": "PARTIAL",
+      "reason": "Age17 is outside free-child admission; standard-category example90USD does not rule out a separately qualified discount. Age alone never establishes student eligibility."
+    },
+    {
+      "case": "Two standard adults and teens13and17, eligible full-time student with ID, outside break",
+      "adults": 2,
+      "child_ages": [13, 17],
+      "student_eligibility_assumed": true,
+      "category_counts": {"adult": 2, "student": 1, "free_child": 1},
+      "component_cents": 7700,
+      "result": "PARTIAL",
+      "reason": "77USD is conditional on the17-year-old meeting the full-time student-with-ID category. Same-day return is permitted with retained ticket; actual ID acceptance, date inventory, hotel travel, rest and return timing remain unknown."
+    }
+  ],
+  "preserved_inputs": [
+    {"path": "docs/research/nyc-moma-family-admission-2026-10-10.json", "sha256": "dcbfc9448bd97bbf80332c8cefb795ccc0c3b5e667fda0ff3bb054c44214751c"}
+  ],
+  "old_public_clock": {"observed_on": "2026-10-10", "review_due_on": "2026-10-24", "renewed": false},
+  "method": "Two ordinary public reader opens, no booking link, selected date, quantity, cart, checkout, account, contact, browser, hidden API, paid call, alternate access or full-body archive. Reader crawl labels are not publication dates or rendered ticket observations. No review signals or firsthand evidence collected.",
+  "confidence": "High for scoped published policy and conditional arithmetic; operational family task remains PARTIAL. Three desk cases are proxy reasoning, not actual-parent, rendered, firsthand, safety, suitability, satisfaction or SEO proof.",
+  "next_trigger": "Changed applicable official tariff, student-ID category or same-day return rule; separately obtained selected-date inventory, ID or inclusive checkout evidence; or a failed named family task. Do not replay unchanged sources merely on cadence.",
+  "public_change": false,
+  "shared_tool_change": false
+}
