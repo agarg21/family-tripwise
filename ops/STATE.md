@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2026-11-13 17:00 America/New_York
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-27 transactions=5
-run: none
+run: {id: 2026-10-27T18:05:58Z, started_at: 2026-10-27T18:05:58Z}
 last_public_release: 03f9de1 (2026-10-27, Q03 sitemap lastmod + Orlando cross-link + Coronado ferry link)
 active: none
 
