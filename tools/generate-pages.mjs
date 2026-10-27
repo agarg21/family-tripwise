@@ -11,6 +11,7 @@ import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-
 import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
 import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import { writeLondonFamilyHotelsPage } from "./page-generation/london-family-hotels-page.mjs";
+import { writeSitemap } from "./page-generation/sitemap.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
@@ -817,31 +818,29 @@ ${cities.map((city) => `          <article class="activity-card">
 </html>
 `);
 
-writeSite("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://familytripwise.com/</loc></url>
-  <url><loc>https://familytripwise.com/about.html</loc></url>
-  <url><loc>https://familytripwise.com/contributors/miles-rowan.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/cancun-family-resorts.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/orlando-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/things-to-do/orlando-with-kids.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/boston-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/london-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/san-diego-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/chicago-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html</loc></url>
-  <url><loc>https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html</loc></url>
-${cities.flatMap((city) => [
-  `  <url><loc>https://familytripwise.com/things-to-do/${city.slug}-with-kids.html</loc></url>`,
-  `  <url><loc>https://familytripwise.com/where-to-stay/${city.slug}-with-kids.html</loc></url>`,
-  `  <url><loc>https://familytripwise.com/family-itinerary/${city.slug}-with-kids.html</loc></url>`
-]).join("\n")}
-${agePages.map((page) => `  <url><loc>https://familytripwise.com/things-to-do/${page.slug}-with-${page.age}.html</loc></url>`).join("\n")}
-</urlset>
-`);
+const sitemapUrls = [
+  "https://familytripwise.com/",
+  "https://familytripwise.com/about.html",
+  "https://familytripwise.com/contributors/miles-rowan.html",
+  "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
+  "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
+  "https://familytripwise.com/things-to-do/orlando-with-kids.html",
+  "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
+  "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+  "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html",
+  "https://familytripwise.com/where-to-stay/london-family-hotels.html",
+  "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
+  "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
+  "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
+  "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
+  "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
+  ...cities.flatMap((city) => [
+    `https://familytripwise.com/things-to-do/${city.slug}-with-kids.html`,
+    `https://familytripwise.com/where-to-stay/${city.slug}-with-kids.html`,
+    `https://familytripwise.com/family-itinerary/${city.slug}-with-kids.html`
+  ]),
+  ...agePages.map((page) => `https://familytripwise.com/things-to-do/${page.slug}-with-${page.age}.html`)
+];
 
 writeSite("robots.txt", `User-agent: *
 Allow: /
@@ -850,5 +849,6 @@ Sitemap: https://familytripwise.com/sitemap.xml
 `);
 
 upgradePriorityPages(outDir);
+writeSitemap(outDir, sitemapUrls);
 
 console.log("Generated 28 SEO pages plus about, index, redirects, robots, and sitemap.");

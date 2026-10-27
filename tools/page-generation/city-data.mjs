@@ -103,7 +103,7 @@ export const cities = [
       ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
       ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
       ["Balboa Park visitor info", "https://balboapark.org/"],
-      ["Coronado Ferry info", "https://coronadoferrylanding.com/ferry-info/"],
+      ["Flagship Coronado ferry routes and schedules (operator)", "https://www.flagshipsd.com/cruises/flagship-ferry"],
       ["Bahia Resort Hotel FAQ", "https://www.bahiahotel.com/faqs"],
       ["San Diego Mission Bay Resort FAQ", "https://www.missionbayresort.com/faq/"],
       ["Homewood Suites San Diego Downtown/Bayside", "https://www.hilton.com/en/hotels/sanhahw-homewood-suites-san-diego-downtown-bayside/"]
@@ -112,7 +112,7 @@ export const cities = [
       ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
       ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
       ["Balboa Park visitor info", "https://balboapark.org/"],
-      ["Coronado Ferry info", "https://coronadoferrylanding.com/ferry-info/"],
+      ["Flagship Coronado ferry routes and schedules (operator)", "https://www.flagshipsd.com/cruises/flagship-ferry"],
       ["SeaWorld San Diego park info", "https://seaworld.com/san-diego/park-info/"],
       ["LEGOLAND California plan your visit", "https://www.legoland.com/california/plan-your-visit/"],
       ["San Diego Zoo Safari Park plan your visit", "https://sandiegozoo.org/app/p/"],
