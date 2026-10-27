@@ -1,11 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q15 Next new page: itinerary for an existing destination that lacks one
-open · M · owner: none if existing destination (new destination needs approval) · gate: none (Q02–Q04 done)
-Why: itinerary pages are the only page type earning clicks (LV 8.1, SA 9.5, CHI 13.8 avg position). Orlando, Washington DC, Boston and Cancun have lodging pages but no itinerary.
-Acceptance: live SERP check shows a distinct itinerary job with demand; pick the strongest candidate; build it with dated official facts (hours, closures), nap/rest blocks, no unverified stroller/route claims; linked from that city's hotel and things-to-do pages; in sitemap; Chromium QA; reviewer PASS. If no candidate qualifies, record why and the next candidate.
-
 ## Q07 Refresh San Diego family-hotels (496 impressions, Aug 17 prices)
 open · M · owner: D7 Approved · gate: none · Acceptance (Q06 pattern, delivered e2c408e for NYC): no unobserved price bands; each hotel shows a dated future-stay official 2 adults + 2 kids rate, or "Check live rate" with its older dated sample; ≤3-line answer box (fits whom / rough cost / main catch); page, CSV, JSON-LD and evidence model agree. Q06 found official booking engines are JS-only (no scripted fetches), so expect "Check live rate". File: site/where-to-stay/san-diego-family-hotels.html.
 
@@ -16,6 +11,11 @@ open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/whe
 open · M · owner: none · gate: none (Q04 done)
 Files: site/family-itinerary/las-vegas-with-kids.html, site/family-itinerary/san-antonio-with-kids.html, their generator.
 Acceptance: one named deficiency fixed per page (e.g. top answer box; day-shape table with nap/rest blocks and dated hours). No unverified stroller/route claims. ≤3 pages.
+
+## Q15b Next itinerary page: Boston with kids
+open · M · owner: none (existing destination) · gate: none
+Why: Q15 delivered the DC itinerary (ab7d177). Boston was the runner-up: on 2026-10-27 "boston itinerary with kids" returned dedicated family itinerary pages (mommypoppins, Fora, twisttravelmag, viewboston). Orlando's SERP is split between theme-park and non-park plans; Cancun is resort-stay intent.
+Acceptance: re-run the SERP check with a second query; build with dated official facts (hours, passes, closures), rest blocks, no unverified stroller/route claims; follow the DC pattern (tools/page-generation/washington-dc-itinerary-page.mjs: venue cards with source + date, maintenance contract, inventory pins); linked from the Boston hotels page; sitemap; Chromium QA; reviewer PASS.
 
 ## Q02c Freshness-checker follow-ups (Q02b review P3s)
 open · S · owner: none (tools + 1 page) · gate: none
