@@ -436,9 +436,9 @@ function aboutPage() {
       </section>
       <section class="container trust-panel about-summary" aria-label="Review status">
         <p><strong>Last updated:</strong> October 27, 2026</p>
-        <p><strong>How guides are made:</strong> Every Family Tripwise guide is AI-assisted research from dated official sources. No guide is based on a firsthand visit by our team.</p>
         <p><strong>Current scope:</strong> Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio. Orlando has an activity decision hub and a lodging comparison; Cancun, Washington DC, Boston and Puerto Vallarta currently have lodging comparisons. London adds a bounded family-apartment comparison. Puerto Vallarta also labels a Nayarit regional comparison separately. Coverage varies by destination. We update pages as official sources, planning needs, and review findings improve the research.</p>
         <p><strong>Meet the contributors:</strong> <a href="#apoorva-garg">Apoorva Garg, founder</a> and <a href="#miles-rowan">Miles Rowan, AI research contributor</a>.</p>
+        <p><strong>How guides are made:</strong> Every Family Tripwise guide is AI-assisted research from dated official sources. No guide is based on a firsthand visit by our team.</p>
       </section>
       <section class="container page-section methodology-section" aria-labelledby="contributors">
         <div class="section-heading">
@@ -495,7 +495,7 @@ function aboutPage() {
             <p class="eyebrow">Source discipline</p>
             <h2>What we check before publishing</h2>
             <p>Each upgraded guide includes official source links for attraction planning, hotel policies, ticketing, parking, accessibility, and photo licensing where relevant. We use those sources to shape planning notes, then keep change-sensitive claims cautious.</p>
-            <p>For hotels, we separate area guidance from property checks. A hotel may appear as a research candidate because its official page lists a room type, pool, kitchenette, breakfast, parking policy, or location advantage, but that is not the same as a human-reviewed recommendation. Families should verify the exact booking screen, fees, cancellation terms, and room assignment rules before paying.</p>
+            <p>For hotels, we separate area guidance from property checks. A hotel may appear as a research candidate because its official page lists a room type, pool, kitchenette, breakfast, parking policy, or location advantage, but that is not a firsthand or human-verified recommendation. Families should verify the exact booking screen, fees, cancellation terms, and room assignment rules before paying.</p>
           </div>
           <dl class="snapshot">
             <div><dt>Official sources</dt><dd>Attractions, hotels, parks, transit, and destination organizations.</dd></div>
@@ -643,7 +643,7 @@ writeSite("index.html", `<!doctype html>
             <div><dt>Where should we stay?</dt><dd>Use area matrices and hotel verification checks before comparing room prices.</dd></div>
             <div><dt>What should we do?</dt><dd>Use activity tables by age, weather, stroller friction, budget, and nap fit.</dd></div>
             <div><dt>Can the day work?</dt><dd>Use itinerary variants for 1-day, 2-day, 3-day, toddler, teen, and rainy-day plans.</dd></div>
-            <div><dt>Can we trust the claim?</dt><dd>Use the methodology page to separate sourced facts, model-derived guidance, and human-reviewed claims.</dd></div>
+            <div><dt>Can we trust the claim?</dt><dd>Use the methodology page to separate sourced facts, booking observations, estimates, and model-derived guidance.</dd></div>
           </dl>
         </div>
       </section>
@@ -748,7 +748,7 @@ ${cities.map((city) => `          <article class="activity-card">
           <div>
             <p class="eyebrow">Trust and caveats</p>
             <h2>How Family Tripwise handles uncertain travel claims</h2>
-            <p>Family Tripwise uses research-based planning notes. We do not present hotel, safety, transit, stroller, area, or family-suitability claims as personally verified unless a human reviewer supplied that note. Where details can change, the page should point you toward what to verify before booking or promising a plan.</p>
+            <p>Family Tripwise uses research-based planning notes. We do not present hotel, safety, transit, stroller, area, or family-suitability claims as personally verified: our guides are AI-assisted research from dated official sources, not firsthand visits. Where details can change, the page should point you toward what to verify before booking or promising a plan.</p>
             <p>That means a hotel section may identify what to check on official property pages instead of naming a single “best” hotel. It also means a route note may say to verify elevator access, parking, timed-entry rules, weather, or child energy rather than claiming the route always works.</p>
             <p><a class="text-link" href="./about.html">Read how Family Tripwise builds and labels guides</a></p>
           </div>
