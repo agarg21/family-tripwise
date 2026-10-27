@@ -266,7 +266,7 @@ function sanDiegoFamilyHotelPage() {
     }))
   };
 
-  const body = `    <main>
+  const body = `    <main id="main">
       <section id="san-diego-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">San Diego family hotels</p>
@@ -604,7 +604,7 @@ function lasVegasFamilyHotelPage() {
     itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; July 22 USD per-room/night planning range ${hotel.priceRange}; party or room basis unknown where not stated, tax and mandatory-fee inclusion varies; not a current five-person suite quote` }))
   };
 
-  const body = `    <main>
+  const body = `    <main id="main">
       <section id="las-vegas-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">Las Vegas family hotels</p>
@@ -901,7 +901,7 @@ function chicagoFamilyHotelPage() {
     itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; USD per-room/night planning range ${hotel.priceRange} from July 23 research pack, not a family-room quote` }))
   };
 
-  const body = `    <main>
+  const body = `    <main id="main">
       <section id="chicago-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">Chicago family hotels</p>
@@ -1206,7 +1206,7 @@ function sanAntonioFamilyHotelPage() {
     itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; July 26 USD per-room/night planning range ${hotel.priceRange}, mostly based on two-adult standard-room examples; tax and mandatory-fee inclusion varies; not a family-room quote` }))
   };
 
-  const body = `    <main>
+  const body = `    <main id="main">
       <section id="san-antonio-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">San Antonio family hotels</p>
@@ -1523,7 +1523,7 @@ function newYorkCityFamilyHotelPage() {
     itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; historical USD/room/night planning range ${hotel.priceRange}, based on July 25, 2026 checks; not an exact family-room quote` }))
   };
 
-  const body = `    <main>
+  const body = `    <main id="main">
       <section id="nyc-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">New York City family hotels</p>

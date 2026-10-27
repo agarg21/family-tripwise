@@ -32,7 +32,7 @@ export function orlandoActivityPage() {
 body.orlando-activities h1{font-size:36px;line-height:1.15;letter-spacing:0}
 body.orlando-activities .intro{padding-top:28px;padding-bottom:16px}
 body.orlando-activities .page-section{padding-top:24px;padding-bottom:24px}
-body.orlando-activities h2{font-size:26px;letter-spacing:0}
+body.orlando-activities main h2{font-size:26px;letter-spacing:0}
 body.orlando-activities h3{font-size:21px;letter-spacing:0}
 body.orlando-activities .routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px}
 body.orlando-activities .routes p{margin:0}
@@ -64,7 +64,7 @@ body.orlando-activities .admission-results table{min-width:760px}
 @media(max-width:700px){body.orlando-activities .routes{grid-template-columns:1fr}body.orlando-activities h1{font-size:30px}body.orlando-activities article,body.orlando-activities section[id]{scroll-margin-top:130px}}
 </style></head>
 <body class="orlando-activities">${siteHeader("../", "things-to-do/orlando-with-kids.html")}
-<main><section class="container intro"><p class="eyebrow">Florida family days</p><h1>Orlando With Kids</h1>
+<main id="main"><section class="container intro"><p class="eyebrow">Florida family days</p><h1>Orlando With Kids</h1>
 ${contributorCredit()}<p>Choose one anchor: a booked park, an indoor outing, or a shorter outdoor break. A rest day need not mean another full-price ticket.</p><p class="source-note">Standard admission rates for the five priced outings observed ${longDate(ratesCheckedOn)} on official pages. Other rules, hours and visit details checked ${longDate(checkedOn)} unless a detail says otherwise. Research-based, not firsthand. Exact dates, fees and return travel still need checking.</p><p><a href="#compare">Compare outings</a> · <a href="#split-day">Lunch / rest breaks</a> · <a href="#park-day">Park-day checks</a></p></section>
 <section class="container page-section" id="compare" aria-labelledby="compare-title"><h2 id="compare-title">Compare Non-Park Choices</h2>
 <p>Examples: two adults 18+ and children 3/10, one visit, USD, standard rates observed ${longDate(ratesCheckedOn)}. Not dated availability or complete day costs. Discounts, meals, transport and optional activities are excluded; tax/fee uncertainty stays beside each price. Ticket ages are not enjoyment scores.</p>

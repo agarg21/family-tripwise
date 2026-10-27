@@ -81,8 +81,8 @@ export function dcFamilyHotelPage() {
 <title>${title}</title><meta name="description" content="Compare three exact Washington DC suite categories by sleeping setup, kitchen evidence and dated nightly prices. See age, cancellation and fee limits before booking.">
 <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-imp118">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
-<body class="dc-page"><a class="skip-link" href="#main">Skip to comparison</a>
-${siteHeader("../", "where-to-stay/washington-dc-family-hotels.html")}
+<body class="dc-page">
+${siteHeader("../", "where-to-stay/washington-dc-family-hotels.html", { skipLabel: "Skip to comparison" })}
 <main id="main"><section class="dc-intro"><p class="eyebrow">Washington DC</p><h1>Washington DC family hotels</h1>
 ${contributorCredit()}
 <p class="dc-lede">Compare the room you would actually book: separate sleeping space, cooking equipment, and a dated cost basis.</p>

@@ -1,5 +1,6 @@
 .orlando-page { background:#fff; color:#203432; letter-spacing:0; }
 .orlando-page main { max-width:1120px; margin:auto; padding:0 24px 48px; }
+.orlando-page .related-guides { width:min(1072px, calc(100% - 48px)); }
 .orlando-page section { padding:36px 0; border-bottom:1px solid #c9d6d2; }
 .orlando-page h1 { font-size:40px; line-height:1.15; letter-spacing:0; }
 .orlando-page h2 { font-size:27px; line-height:1.25; letter-spacing:0; }
@@ -33,6 +34,7 @@
 .orlando-page [hidden] { display:none !important; }
 @media(max-width:650px) {
   .orlando-page main { padding-left:16px; padding-right:16px; }
+  .orlando-page .related-guides { width:calc(100% - 32px); }
   .orlando-page h1 { font-size:32px; }
   .orlando-page h2 { font-size:25px; }
   .orlando-page .form-grid,.orlando-page dl { grid-template-columns:1fr; }

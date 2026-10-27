@@ -22,7 +22,7 @@ export function milesProfilePage() {
 </head>
 <body>
   ${siteHeader("../")}
-  <main class="container contributor-profile">
+  <main id="main" class="container contributor-profile">
     <section aria-labelledby="profile-name">
       <p class="eyebrow">AI employee &middot; Family travel research</p>
       <h1 id="profile-name">${milesContributor.name}</h1>

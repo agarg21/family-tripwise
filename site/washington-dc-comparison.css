@@ -1,5 +1,6 @@
 .dc-page { background: #fff; color: #202b2a; letter-spacing: 0; }
 .dc-page main { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+.dc-page .related-guides { width: min(1120px, calc(100% - 48px)); }
 .dc-page section { padding: 32px 0; border-bottom: 1px solid #dbe0dc; scroll-margin-top: 128px; }
 .dc-page h1 { font-size: 38px; line-height: 1.15; margin: 12px 0; letter-spacing: 0; }
 .dc-page h2 { font-size: 26px; line-height: 1.25; letter-spacing: 0; }
@@ -46,7 +47,7 @@
 .dc-rest-status { min-height: 96px; padding: 16px 0; font-weight: 600; box-sizing: border-box; }
 .dc-rest-example summary { min-height: 44px; padding: 10px 0; cursor: pointer; }
 @media (max-width: 600px) {
-  .dc-page main { width: calc(100% - 32px); }
+  .dc-page main, .dc-page .related-guides { width: calc(100% - 32px); }
   .dc-page h1 { font-size: 30px; }
   .dc-page h2 { font-size: 23px; }
   .dc-page h3 { font-size: 20px; }

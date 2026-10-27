@@ -109,8 +109,8 @@ test("preserves all twelve bands while making historical room and party limits a
 });
 
 test("routes from home and the existing stay guide without changing the activity page", () => {
-  const home = readFileSync(join(root, "site", "index.html"), "utf8");
-  const stay = readFileSync(join(root, "site", "where-to-stay", "new-york-city-with-kids.html"), "utf8");
+  const home = stripSiteChrome(readFileSync(join(root, "site", "index.html"), "utf8"));
+  const stay = stripSiteChrome(readFileSync(join(root, "site", "where-to-stay", "new-york-city-with-kids.html"), "utf8"));
   const activity = stripSiteChrome(readFileSync(join(root, "site", "things-to-do", "new-york-city-with-kids.html"), "utf8"));
 
   assert.match(home, /href="\.\/where-to-stay\/new-york-city-family-hotels\.html"/);
