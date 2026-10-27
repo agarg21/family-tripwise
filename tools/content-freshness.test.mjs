@@ -8,6 +8,36 @@ import { findExpiredOperationalNotices, findYearlessOperationalNotices } from ".
 
 const now = new Date("2026-07-28T12:00:00Z");
 
+test("explicit single closure starts are not expired end dates", () => {
+  for (const wording of ["closure starts", "closure begins on", "construction starts", "renovation begins", "closed starting", "unavailable beginning on"]) {
+    const html = `<p>The ${wording} October 26, 2026.</p>`;
+    assert.deepEqual(findExpiredOperationalNotices(html, { now: new Date("2026-10-27T12:00:00Z") }), []);
+  }
+});
+
+test("a start date cannot suppress a later expired reopening deadline", () => {
+  const text = "Seasonal closure starts October 26, 2026; reopening is expected on or before April 1, 2027, not confirmed.";
+  for (const html of [`<p>${text}</p>`, `<script type="application/json">${JSON.stringify({note: text})}</script>`]) {
+    for (const date of ["2026-10-27", "2027-03-31", "2027-04-01"])
+      assert.deepEqual(findExpiredOperationalNotices(html, { now: new Date(date + "T12:00:00Z") }), []);
+    assert.deepEqual(findExpiredOperationalNotices(html, { now: new Date("2027-04-02T12:00:00Z") }).map(row => row.endDate), ["2027-04-01"]);
+  }
+});
+
+test("start wording does not hide expired point closures, ranges or same-sentence limits", () => {
+  for (const text of [
+    "Pool closed October 26, 2026.",
+    "Closure starts October 25-26, 2026.",
+    "Closure starts October 20, 2026; pool closed through October 26, 2026."
+  ]) assert.deepEqual(findExpiredOperationalNotices(`<p>${text}</p>`, { now: new Date("2026-10-27T12:00:00Z") }).map(row => row.endDate), ["2026-10-26"]);
+});
+
+test("existing Orlando closure-start passage stays open for review at its future end", () => {
+  const html = readFileSync(new URL("../site/where-to-stay/orlando-family-hotels.html", import.meta.url), "utf8");
+  assert.deepEqual(findExpiredOperationalNotices(html, { now: new Date("2026-10-27T12:00:00Z") }), []);
+  assert.ok(findExpiredOperationalNotices(html, { now: new Date("2027-04-02T12:00:00Z") }).some(row => row.endDate === "2027-04-01"));
+});
+
 test("date-leading failed source rechecks are inspection dates, not operating expiries", () => {
   for (const note of ["recheck unavailable", "source recheck failed", "recheck was blocked"]) {
     for (const date of ["2026-10-11T23:59:59Z", "2026-10-12T00:00:00Z", "2027-01-01T12:00:00Z"]) {

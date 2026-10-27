@@ -29,6 +29,7 @@ const DATE_RANGE =
 const RESOLVED_TERMS = /\b(?:then\s+)?(?:reopened|resumed|resolved|completed|ended)\b/i;
 const SOURCE_CHECK_SUFFIX = /\b(?:rechecked|checked|updated|reviewed|verified|collected)(?:\s+on)?\s*:?\s*$/i;
 const FAILED_SOURCE_RECHECK_PREFIX = /^\s+(?:source\s+)?recheck\s+(?:was\s+)?(?:unavailable|failed|blocked)\b/i;
+const EXPLICIT_START_SUFFIX = /\b(?:(?:closure|closures|construction|renovation|outage|shutdown)\s+(?:starts?|begins?|commences?)|(?:closed|suspended|unavailable)\s+(?:starting|beginning))\s+(?:on\s+)?$/i;
 const CALENDAR_DATE =
   /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:\s*[-–]\s*(?:(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+)?(\d{1,2}))?(?:(?:\s*,\s*|\s+)(\d{4}))?\b/gi;
 
@@ -70,6 +71,8 @@ export function findExpiredOperationalNotices(html, { now = new Date() } = {}) {
     const beforeDate = text.slice(start, match.index);
     if (SOURCE_CHECK_SUFFIX.test(beforeDate) ||
         (!OPERATIONAL_TERMS.test(beforeDate) && FAILED_SOURCE_RECHECK_PREFIX.test(afterDate))) continue;
+    // A labelled single start is not an end; ranges and later deadlines still need review.
+    if (!match[3] && EXPLICIT_START_SUFFIX.test(beforeDate)) continue;
 
     if (end < today && OPERATIONAL_TERMS.test(excerpt) && !RESOLVED_TERMS.test(afterDate)) {
       notices.push({
