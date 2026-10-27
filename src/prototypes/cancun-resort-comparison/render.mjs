@@ -46,7 +46,7 @@ export function comparisonCsv() {
     record.price ? priceLabel(record.price) : "Exact-room nightly price: not verified",
     record.price?.basis ?? "Request a dated quote for the exact room and party",
     record.price?.fees ?? "Complete stay cost unknown; request an itemized quote",
-    record.price?.observedOn ?? "", record.price ? (stayDatesPassed(record.price) ? "yes; older observation" : "no") : "",
+    record.price?.observedOn ?? "", record.price ? (!record.price.stayStart ? "n/a (undated rate)" : stayDatesPassed(record.price) ? "yes; older observation" : "no") : "",
     capacity(record), record.room.beds, record.room.checks.join(" | "), record.extras.checks.join(" | "),
     sourceUrls(record.price?.sourceIds ?? []), sourceUrls(record.room.sourceIds), sourceUrls(record.extras.sourceIds),
     cancunEvidence.checkedOn,

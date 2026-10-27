@@ -141,8 +141,10 @@ const DATE_TOKEN = String.raw`(?:\d{4}-\d{2}-\d{2}|(?:Jan(?:uary)?|Feb(?:ruary)?
 const REVIEW_DUE_PATTERNS = [
   /\b(?:review|recheck|re-check|refresh|research)(?:\s+is)?(?:\s+next)?\s+due\b/i,
   /\bnext\s+(?:source\s+|price\s+)?review\s+date\b/i,
+  /\bnext\s+(?:source\s+|price\s+)?(?:review|recheck|refresh)\s*:/i,
+  /\b(?:review|recheck|refresh)\s+(?:is\s+)?scheduled\b/i,
   new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:on\s+|by\s+|before\s+)?${DATE_TOKEN}`, "i"),
-  /\bdue\s+(?:on\s+|by\s+)?(?:\d{4}-\d{2}-\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}\b)/i
+  /(?<!\b(?:payment|payments|balance|deposit|charge|charges|fee|fees|amount|paid|payable|full payment)\s)\bdue\s+(?:on\s+|by\s+)?(?:\d{4}-\d{2}-\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}\b)/i
 ];
 
 // Public pages state when a fact was observed, never when it will next be reviewed.
@@ -159,7 +161,8 @@ export function findReviewDueDates(text) {
 
 const MONTH_INDEX = (name) => MONTHS.get(name.toLowerCase().slice(0, 3));
 const STAY_RANGE =
-  /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})\s*[-–]\s*(?:(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+)?\d{1,2},?\s*(\d{4})\b[^.]{0,80}?\bnights?\b/gi;
+  /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})\s*[-–]\s*(?:(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+)?\d{1,2},?\s*(\d{4})\b/gi;
+const PRICED_STAY = /\bnights?\b|\bper (?:room|suite|apartment)\b|\bUSD\b|\bGBP\b|\$\s?\d/i;
 const PAST_STAY_LABEL = /older observation|dates passed|stay dates have passed/i;
 
 // A priced stay sample whose arrival date is today or earlier must say so in the same block.
@@ -170,7 +173,7 @@ export function findPastStaySamples(html, { now = new Date() } = {}) {
     for (const part of block.split("\u0000")) {
       for (const match of part.matchAll(STAY_RANGE)) {
         const start = Date.UTC(Number(match[3]), MONTH_INDEX(match[1]), Number(match[2]));
-        if (start <= today && !PAST_STAY_LABEL.test(part)) found.push(match[0]);
+        if (start <= today && PRICED_STAY.test(part) && !PAST_STAY_LABEL.test(part)) found.push(match[0]);
       }
     }
   }

@@ -125,6 +125,11 @@ for (const entry of existsSync(downloadsDir) ? readdirSync(downloadsDir) : []) {
   for (const excerpt of findReviewDueDates(readFileSync(join(downloadsDir, entry), "utf8"))) {
     errors.push(`site/downloads/${entry} shows a forward review/recheck date: ${excerpt}`);
   }
+  for (const line of readFileSync(join(downloadsDir, entry), "utf8").split(/\r?\n/)) {
+    for (const sample of findPastStaySamples(`<p>${line.replaceAll("<", " ")}</p>`)) {
+      errors.push(`site/downloads/${entry} has a past-stay sample without "older observation; dates passed": ${sample}`);
+    }
+  }
 }
 
 for (const filePath of htmlFiles) {
