@@ -1,10 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q04b Shared-chrome follow-ups (Q04 review P3s)
-open · S · owner: D4b Approved · gate: none
-Acceptance: siteHeader emits a skip link to #main on pages lacking one (each <main id="main">); .related-guides aligns with each layout's content width (Cancun extra indent/gap removed); page CSS no longer enlarges related/footer h2s; hotel-page "routes from home" tests strip chrome from home and stay pages too; sitemap lastmod hashes only <main> so boilerplate changes don't bump it.
-
 ## Q05 About page truth fix (byline stays Miles Rowan per D5)
 open · S · owner: none (1 page) · gate: none
 Files: site/about.html (or its generator).
@@ -33,7 +29,7 @@ Acceptance: one named deficiency fixed per page (e.g. top answer box; day-shape 
 
 ## Q02c Freshness-checker follow-ups (Q02b review P3s)
 open · S · owner: none (tools + 1 page) · gate: none
-Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3).
+Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3); Boston, London, DC and NYC-teen "home routes" tests strip the shared chrome from index.html; drop the duplicate Cancun .skip-link CSS (Q04b review P3s).
 
 ## Q09 Lodging-page readability fix
 open · M · owner: D4e Approved · gate: Q02 done
