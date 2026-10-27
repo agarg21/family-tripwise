@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {calculateAdmissionBudget} from '../src/shared/admission-budget.mjs';
 import {admissionTariffs} from './page-generation/orlando-activity-data.mjs';
-const task={travelerAges:[30,35,2,13],asOf:'2026-10-22',visitDate:'2026-10-23'};
+const task={travelerAges:[30,35,2,13],asOf:'2026-10-28',visitDate:'2026-10-29'};
 
 test('sparse party cannot hide missing travelers behind a custom iterator',()=>{
   const ages=[30,,13];let called=false;

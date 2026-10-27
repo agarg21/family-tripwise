@@ -7,7 +7,7 @@ import {calculateAdmissionBudget} from "../src/shared/admission-budget.mjs";
 import {compareOrlandoAdmission, admissionCliArguments} from "./orlando-admission-budget.mjs";
 import {lakeEolaSwanBoatRental as rental, admissionTariffs, checkedOn, seaLifeTicket} from "./page-generation/orlando-activity-data.mjs";
 
-const task = {travelerAges:[30,35,4,8,13], asOf:"2026-10-15", visitDate:"2026-10-20"};
+const task = {travelerAges:[30,35,4,8,13], asOf:"2026-10-27", visitDate:"2026-10-28"};
 const calculate = (patch = {}, record = rental) => calculateLakeEolaRental(record, {
   partySize:5, boatLoads:[5], asOf:task.asOf, visitDate:task.visitDate, ...patch
 });
@@ -36,7 +36,7 @@ test("six passengers cannot be assigned one boat; two explicit loads price two r
 });
 
 test("all source weekdays use the visit's calendar date and Monday withholds a subtotal", () => {
-  for (const [date, closed] of [["2026-10-18",false],["2026-10-19",true],["2026-10-20",false]]) {
+  for (const [date, closed] of [["2026-11-01",false],["2026-11-02",true],["2026-11-03",false]]) {
     const row = calculate({visitDate:date});
     assert.equal(row.publishedClosedWeekday, closed);
     assert.equal(row.publishedRentalSubtotalCents, closed ? null : 1500);
@@ -125,7 +125,10 @@ test("source-dated desk tasks match executable rental cases, without public deli
   const record=JSON.parse(readFileSync(new URL("../docs/research/lake-eola-rental-budget-2026-10-15.json",import.meta.url)));
   for (const row of record.tasks) {
     const input={travelerAges:row.ages,boatLoads:row.boat_loads,asOf:row.as_of,visitDate:row.visit_date};
-    if (row.result.startsWith("REJECT")) assert.throws(()=>compareOrlandoAdmission(input));
+    // Desk tasks dated before the newest admission observation are historical: the engine must refuse
+    // to assess them against later evidence rather than reuse the old arithmetic.
+    const predatesEvidence = admissionTariffs.some(tariff => row.as_of < tariff.checkedOn);
+    if (row.result.startsWith("REJECT") || predatesEvidence) assert.throws(()=>compareOrlandoAdmission(input));
     else assert.equal(compareOrlandoAdmission(input).optionalRental.publishedRentalSubtotalCents,row.published_rental_subtotal_cents);
   }
   assert.equal(record.public_release,false);

@@ -11,10 +11,10 @@ test("group infant statement does not establish individual-family applicability"
   assert.equal(record.group_source.individual_admission_applicability_established,false);
   assert.equal(record.group_source.result,"REJECT_SCOPE_TRANSFER");assert.equal(record.task.party_size,4);
   for(const age of [0,1]) {
-    const row=compareOrlandoAdmission({travelerAges:[30,35,age,13],asOf:"2026-10-15",visitDate:"2026-10-20"}).records[0];
+    const row=compareOrlandoAdmission({travelerAges:[30,35,age,13],asOf:"2026-10-27",visitDate:"2026-11-01"}).records[0];
     assert.equal(row.publishedAdmissionSubtotalCents,null);assert.deepEqual(row.missingAges,[age]);
   }
-  assert.equal(admissionTariffs[0].checkedOn,"2026-10-15");
+  assert.equal(admissionTariffs[0].checkedOn,"2026-10-27");
 });
 
 test("security handoff retains clean provenance and no bypass or availability diagnosis",()=>{
@@ -27,8 +27,8 @@ test("security handoff retains clean provenance and no bypass or availability di
 });
 
 test("one-family arithmetic cannot silently opt into a fifteen-person group rate",()=>{
-  assert.throws(()=>compareOrlandoAdmission({travelerAges:Array(15).fill(30),asOf:"2026-10-15",visitDate:"2026-10-20"}));
-  const row=compareOrlandoAdmission({travelerAges:[30,35,2,13],asOf:"2026-10-15",visitDate:"2026-10-20"}).records[0];
+  assert.throws(()=>compareOrlandoAdmission({travelerAges:Array(15).fill(30),asOf:"2026-10-27",visitDate:"2026-11-01"}));
+  const row=compareOrlandoAdmission({travelerAges:[30,35,2,13],asOf:"2026-10-27",visitDate:"2026-11-01"}).records[0];
   assert.equal(row.publishedAdmissionSubtotalCents,10700);assert.equal(row.channel,"online general admission");
   assert.equal(row.completeDayCostCents,null);assert.equal(row.admissionAcceptance,"unknown");
 });

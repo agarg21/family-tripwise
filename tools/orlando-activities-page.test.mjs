@@ -11,12 +11,12 @@ test("generated Orlando hub is exact, one new canonical and reachable",()=>{
   assert.equal((read('site/sitemap.xml').match(/<loc>/g)||[]).length,36);
   assert.equal(read('site/sitemap.xml').split(`https://familytripwise.com/${activityPath}`).length-1,1);
   assert.ok(read('site/index.html').includes(activityPath));
-  const out=new Map();writeOrlandoActivityPage((p,s)=>out.set(p,s));assert.equal(out.size,1);assert.equal(out.get(activityPath),html);
+  const out=new Map();writeOrlandoActivityPage((p,s)=>out.set(p,s));assert.equal(out.size,3);assert.equal(out.get(activityPath),html);
 });
 test("all seven choices retain exact sources and native detail targets",()=>{
   const html=orlandoActivityPage();assert.equal(activities.length,7);assert.equal(new Set(activities.map(r=>r.id)).size,7);
   for(const r of activities){assert.ok(html.includes(`id="${r.id}"`));assert.ok(html.includes(`href="#${r.id}"`));assert.ok(r.sourceIds.every(s=>sources[s]));for(const s of r.sourceIds)assert.ok(html.includes(sources[s]));}
-  assert.equal((html.match(/role="region"/g)||[]).length,2);assert.equal((html.match(/tabindex="0"/g)||[]).length,2);
+  assert.equal((html.match(/role="region"/g)||[]).length,3);assert.equal((html.match(/tabindex="0"/g)||[]).length,3);
   assert.doesNotMatch(html,/download|\.csv|<script src=/);
 });
 test("admission arithmetic retains ages, units, online versus onsite and tax unknowns",()=>{
@@ -34,7 +34,7 @@ test("split-day suggestions never become completion or return guarantees",()=>{
   assert.match(html,/not automatically practical/);assert.match(html,/normally closes except OCPS breaks/);
 });
 test("closures and source conflicts remain visible without importing stale holiday or parking facts",()=>{
-  const html=orlandoActivityPage();assert.match(html,/temporarily closed/);assert.match(html,/October 17,2026 closes 4 pm/);
+  const html=orlandoActivityPage();assert.match(html,/temporarily closed/);assert.match(html,/November 18 through January 3 the gardens close at 4 pm/);
   assert.match(html,/old dates/);assert.match(html,/hours differ/);assert.match(html,/old Science Center garage fee/);
   assert.doesNotMatch(html,/November 25|January 1, 2022|garage for a \$5/);
 });

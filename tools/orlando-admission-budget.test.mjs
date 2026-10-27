@@ -7,7 +7,7 @@ import { compareOrlandoAdmission, admissionCliArguments } from "./orlando-admiss
 import { activities, admissionTariffs, checkedOn, seaLifeTicket } from "./page-generation/orlando-activity-data.mjs";
 import { orlandoActivityPage } from "./page-generation/orlando-activity-page.mjs";
 
-const task = { travelerAges:[30,35,2,13], asOf:"2026-10-15", visitDate:"2026-10-20" };
+const task = { travelerAges:[30,35,2,13], asOf:"2026-10-27", visitDate:"2026-11-01" };
 const byId = result => Object.fromEntries(result.records.map(record => [record.id,record]));
 
 test("legacy family examples equal all maintained numeric page budgets", () => {
@@ -76,19 +76,19 @@ test("standard rate is not silently replaced by a conditional senior concession"
 });
 
 test("freshness boundary is separate from arithmetic and never implies dated availability", () => {
-  const fresh = byId(compareOrlandoAdmission({...task,visitDate:"2026-10-28"}));
-  const stale = byId(compareOrlandoAdmission({...task,visitDate:"2026-10-29"}));
+  const fresh = byId(compareOrlandoAdmission({...task,visitDate:"2026-11-09"}));
+  const stale = byId(compareOrlandoAdmission({...task,visitDate:"2026-11-10"}));
   assert.equal(fresh.crayola.status,"published-subtotal-not-quote");
   assert.equal(stale.crayola.status,"historical-subtotal-needs-recheck");
   assert.equal(stale.crayola.publishedAdmissionSubtotalCents,9297);
   assert.equal(stale.crayola.needsRecheck,true);
-  assert.throws(()=>compareOrlandoAdmission({...task,asOf:"2026-10-14"}));
+  assert.throws(()=>compareOrlandoAdmission({...task,asOf:"2026-10-26"}));
 });
 
 test("malformed, sparse and out-of-scope party/date inputs fail", () => {
   for (const ages of [[],[3,10],[30,-1],[30,2.5],[30,"3"],[121],Array(3),Array(15).fill(30)])
     assert.throws(()=>compareOrlandoAdmission({...task,travelerAges:ages}));
-  for (const patch of [{asOf:"2026-02-30"},{visitDate:"2026-10-14"},{visitDate:"2026-1-20"},{asOf:null}])
+  for (const patch of [{asOf:"2026-02-30"},{visitDate:"2026-10-26"},{visitDate:"2026-1-20"},{asOf:null}])
     assert.throws(()=>compareOrlandoAdmission({...task,...patch}));
 });
 
@@ -109,7 +109,7 @@ test("result changes cannot mutate maintained rates, party or exclusions", () =>
 });
 
 test("offline CLI is reproducible and rejects duplicate, empty or unknown arguments", () => {
-  const args=["--ages","30,35,2,13","--as-of","2026-10-15","--visit-date","2026-10-20"];
+  const args=["--ages","30,35,2,13","--as-of","2026-10-27","--visit-date","2026-11-01"];
   assert.deepEqual(admissionCliArguments(args),task);
   const output=JSON.parse(execFileSync(process.execPath,["tools/orlando-admission-budget.mjs",...args],{encoding:"utf8"}));
   assert.deepEqual(output,compareOrlandoAdmission(task));
@@ -120,6 +120,6 @@ test("offline CLI is reproducible and rejects duplicate, empty or unknown argume
   }
 });
 
-test("existing generated activity HTML is byte-identical", () => {
+test("generated activity HTML matches the maintained generator", () => {
   assert.equal(orlandoActivityPage(),readFileSync("site/things-to-do/orlando-with-kids.html","utf8"));
 });
