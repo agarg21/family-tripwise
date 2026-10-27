@@ -1,11 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q05 About page truth fix (byline stays Miles Rowan per D5)
-open · S · owner: none (1 page) · gate: none
-Files: site/about.html (or its generator).
-Acceptance: About no longer claims "human-verified experience"; it states plainly that guides are AI-assisted research from dated official sources and are not based on firsthand visits; Last-updated matches the latest change.
-
 ## Q06 Refresh NYC family-hotels (534 impressions, July "editorial ceilings")
 open · L · owner: D7 Approved · gate: none
 Files: site/where-to-stay/new-york-city-family-hotels.html, its data and generator.
