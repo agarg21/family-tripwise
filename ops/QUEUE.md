@@ -1,21 +1,16 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q06 Refresh NYC family-hotels (534 impressions, July "editorial ceilings")
-open · L · owner: D7 Approved · gate: none
-Files: site/where-to-stay/new-york-city-family-hotels.html, its data and generator.
-Acceptance: no unobserved price bands. Each hotel shows a dated future-stay observation for 2 adults + 2 kids from an official source, or "check live rate". A ≤3-line answer box at the top (fits whom / rough cost / main catch). ≤3 pages touched.
-
 ## Q15 Next new page: itinerary for an existing destination that lacks one
 open · M · owner: none if existing destination (new destination needs approval) · gate: none (Q02–Q04 done)
 Why: itinerary pages are the only page type earning clicks (LV 8.1, SA 9.5, CHI 13.8 avg position). Orlando, Washington DC, Boston and Cancun have lodging pages but no itinerary.
 Acceptance: live SERP check shows a distinct itinerary job with demand; pick the strongest candidate; build it with dated official facts (hours, closures), nap/rest blocks, no unverified stroller/route claims; linked from that city's hotel and things-to-do pages; in sitemap; Chromium QA; reviewer PASS. If no candidate qualifies, record why and the next candidate.
 
 ## Q07 Refresh San Diego family-hotels (496 impressions, Aug 17 prices)
-open · L · owner: D7 Approved · gate: none · Acceptance: as Q06 for site/where-to-stay/san-diego-family-hotels.html.
+open · M · owner: D7 Approved · gate: none · Acceptance (Q06 pattern, delivered e2c408e for NYC): no unobserved price bands; each hotel shows a dated future-stay official 2 adults + 2 kids rate, or "Check live rate" with its older dated sample; ≤3-line answer box (fits whom / rough cost / main catch); page, CSV, JSON-LD and evidence model agree. Q06 found official booking engines are JS-only (no scripted fetches), so expect "Check live rate". File: site/where-to-stay/san-diego-family-hotels.html.
 
 ## Q08 Refresh Chicago family-hotels (346 impressions, "editorial room/date widening")
-open · L · owner: D7 Approved · gate: none · Acceptance: as Q06 for site/where-to-stay/chicago-family-hotels.html.
+open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/chicago-family-hotels.html.
 
 ## Q10 Las Vegas and San Antonio itinerary usefulness pass (avg positions 8.1 and 9.5)
 open · M · owner: none · gate: none (Q04 done)
@@ -24,7 +19,7 @@ Acceptance: one named deficiency fixed per page (e.g. top answer box; day-shape 
 
 ## Q02c Freshness-checker follow-ups (Q02b review P3s)
 open · S · owner: none (tools + 1 page) · gate: none
-Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3); Boston, London, DC and NYC-teen "home routes" tests strip the shared chrome from index.html; drop the duplicate Cancun .skip-link CSS (Q04b review P3s).
+Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3); Boston, London, DC and NYC-teen "home routes" tests strip the shared chrome from index.html; drop the duplicate Cancun .skip-link CSS (Q04b review P3s); NYC CSV gets its own "Older two-adult sample" column, tools/hotel-evidence.mjs default source_basis matches the check-live-rate kind, and the NYC answer-box "Fits" line is shortened for phones (Q06 review P3s).
 
 ## Q09 Lodging-page readability fix
 open · M · owner: D4e Approved · gate: Q02 done
@@ -38,7 +33,7 @@ Files: the 9 pages using commons.wikimedia.org Special:Redirect originals, plus 
 Acceptance: each hero ≤200 KB WebP served from familytripwise.com, attribution/licence caption kept, fetchpriority="high", no layout shift at 390 px.
 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
-open · L · owner: D7 Approved · gate: none · Acceptance: as Q06 for site/where-to-stay/las-vegas-family-hotels.html.
+open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
 
 ## Q13 Weekly link and freshness report (report only)
 open · S · owner: none · gate: none
