@@ -1,15 +1,10 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q16 Relabel Nov 8-13 / Nov 9-12 stay samples before they pass
-open · S · owner: D4a Approved (staleness sweep) · gate: must ship by 2026-11-07
-Problem: from Nov 8 (Boston, DC, PV, London, NYC, Orlando hotels + Orlando CSVs) and Nov 9 (Cancun), example stays will have begun. seo-qa and the site-equals-generator tests fail from then, which blocks every release.
-Acceptance: each sample is re-observed for future dates from an official source, or labelled "Older observation; dates passed" (data-driven stayStart like Cancun, not hand-edited HTML). Optional: client-side relabel from stayStart. seo-qa clean when run with now=2026-11-14.
-
 ## Q02b Orlando activities follow-ups (Q01 review P3s)
 open · S · owner: none (1 page + docs) · gate: none
 Files: tools/page-generation/orlando-activity-*.mjs, src/shared/orlando-admission-form.mjs, docs/plan/orlando-admission-integration-2026-10-15.md.
-Acceptance: give per-fact dates (admission rates Oct 27, other facts Oct 13); name the Spanish official page as the Science Center rate source; add a no-JS line that points to the static table; drop the stale "October 12/13" Eye hours; add a form unit test for the "no standalone rate was established" wording; move the superseded note under its H1. Also (Q02 review P3): require the price signal in findPastStaySamples to sit near the matched range.
+Acceptance: give per-fact dates (admission rates Oct 27, other facts Oct 13); name the Spanish official page as the Science Center rate source; add a no-JS line that points to the static table; drop the stale "October 12/13" Eye hours; add a form unit test for the "no standalone rate was established" wording; move the superseded note under its H1. Also (Q02 review P3): require the price signal in findPastStaySamples to sit near the matched range. Also (Q16 review P3s): label the ISO-dated Nov stay samples in the Boston, DC, PV and Cancun-grandparents CSVs as older observations via their generators and extend tools/stay-sample-labels.test.mjs to ISO stay columns; rename the Cancun CSV "Stay dates passed" header to "Stay-date status"; narrow the new "review … by <date>" detector so booking-deadline copy is not flagged.
 
 ## Q03 Discovery fixes: sitemap lastmod, Orlando cross-link, dead Coronado link
 open · S · owner: D4c Approved · gate: none
