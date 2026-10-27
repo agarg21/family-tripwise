@@ -23,6 +23,7 @@ import { ferryReviewClock } from "./nyc-ferry-budget.mjs";
 import { omnyReviewClock } from "./nyc-omny-budget.mjs";
 import { spygamesPolicyClock } from "./nyc-spygames-policy.mjs";
 import { activityPath as orlandoActivityPath, orlandoActivityMaintenance } from "./page-generation/orlando-activity-data.mjs";
+import { dcItineraryPath, dcItineraryMaintenance } from "./page-generation/washington-dc-itinerary-page.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const UTILITY = ["https://familytripwise.com/", "https://familytripwise.com/about.html", "https://familytripwise.com/contributors/miles-rowan.html"];
@@ -78,6 +79,7 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   const groups = { hotel: [...new Set(hotels.map(record => record.page_url))], "activity-logistics": [...new Set(activities.map(record => record.page_url))], "activity-cards": cards.map(page => page.page_url), utility: UTILITY };
   groups["exact-room-comparison"] = [`https://familytripwise.com/${dcPath}`, `https://familytripwise.com/${bostonPath}`, `https://familytripwise.com/${pvPath}`, `https://familytripwise.com/${londonPath}`];
   groups["orlando-activity-constraints"] = [`https://familytripwise.com/${orlandoActivityPath}`];
+  groups["dc-itinerary-official-facts"] = [`https://familytripwise.com/${dcItineraryPath}`];
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);
   // A historical report cannot screen a pack that had not yet been observed.
   const bostonPack = bostonPackForDate(today);
@@ -112,6 +114,7 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
       policy_review_clocks: policies.length, policy_due_records: policies.filter(record => record.freshness.state === "review-due").length, policy_not_yet_observed: policies.filter(record => record.evidence_state === "not-yet-observed-at-report-date").length },
     policy_review_clocks: policies,
     orlando_activity_constraints: orlandoActivityMaintenance(today),
+    dc_itinerary_facts: dcItineraryMaintenance(today),
     pages, contract_summaries: Object.fromEntries(Object.entries(reports).map(([type, report]) => [type, report.summary])), planning_pages: reports.planning.pages,
     exact_room_comparisons: [{ page_url: `https://familytripwise.com/${dcPath}`, model_path: "tools/page-generation/washington-dc-family-hotels-page.mjs", records: dc.map(room => ({ id: room.id, category: room.category, category_age: ageState(room.checked_on, dcPack.refresh_days, today), price_observed_on: room.price.observed_on, price_age: ageState(room.price.observed_on, 14, today), price_status: room.price.status, next_checks: room.next_checks })), limitation: "Scoped room and dated-price ownership, not all atomic facts verified; unknown child-age/fee/rest claims remain unresolved. No automatic source renewal or publication." },
       { page_url: `https://familytripwise.com/${bostonPath}`, model_path: "tools/page-generation/boston-family-hotels-page.mjs", evidence_state: today < bostonPack.checked_on ? "not-yet-observed-at-report-date" : "dated-records-available", records: boston.map(room => ({ id: room.id, category: room.category, category_age: ageState(room.checked_on, bostonPack.refresh_days, today), price_observed_on: room.price.observed_on, price_age: ageState(room.price.observed_on, 14, today), price_status: room.price.status, next_checks: room.next_checks })), limitation: "Four conditional categories, not all atomic facts verified. Park Plaza counts do not establish a child-age band; fees, bedding, rest and two category prices remain unresolved. Historical reports before the pack date cannot screen later evidence. No automatic renewal or publication." },
