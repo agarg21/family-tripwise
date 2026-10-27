@@ -1,11 +1,8 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q07 Refresh San Diego family-hotels (496 impressions, Aug 17 prices)
-open · M · owner: D7 Approved · gate: none · Acceptance (Q06 pattern, delivered e2c408e for NYC): no unobserved price bands; each hotel shows a dated future-stay official 2 adults + 2 kids rate, or "Check live rate" with its older dated sample; ≤3-line answer box (fits whom / rough cost / main catch); page, CSV, JSON-LD and evidence model agree. Q06 found official booking engines are JS-only (no scripted fetches), so expect "Check live rate". File: site/where-to-stay/san-diego-family-hotels.html.
-
 ## Q08 Refresh Chicago family-hotels (346 impressions, "editorial room/date widening")
-open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/chicago-family-hotels.html.
+open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 (delivered 530633c for SD; show any official family sample with its unknowns) for site/where-to-stay/chicago-family-hotels.html.
 
 ## Q10 Las Vegas and San Antonio itinerary usefulness pass (avg positions 8.1 and 9.5)
 open · M · owner: none · gate: none (Q04 done)
