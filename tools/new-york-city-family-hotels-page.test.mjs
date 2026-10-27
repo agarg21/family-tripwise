@@ -116,7 +116,7 @@ test("answer box stays within three short lines of observed facts", () => {
   assert.deepEqual(lines, ["Fits", "Rough cost", "Main catch"]);
   assert.match(box, /no current family-room rate observed/);
   assert.match(box, /\$190-\$904 per room for two adults for one night \(July 25\)/);
-  assert.match(box, /\$631-\$2,544 per night for five-person units \(October 11, for November 8-13\)/);
+  assert.match(box, /\$631-\$2,544 per night with displayed taxes and fees for five-person units \(October 11, for November 8-13\)/);
   assert.ok(html.indexOf('id="nyc-hotel-answer"') < html.indexOf('id="hotel-comparison"'));
 });
 

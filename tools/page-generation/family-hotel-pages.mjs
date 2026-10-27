@@ -1551,7 +1551,7 @@ function newYorkCityFamilyHotelPage() {
       </section>
       <section id="nyc-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong> kitchens or apartments (Hotel Beacon, Homewood, Residence Inn, Radio City); five or more in one unit (Radio City, TRYP family room, Beacon suites, Lotte family suites); breakfast included (Homewood, Residence Inn, Embassy Suites).</p>
-        <p><strong>Rough cost:</strong> no current family-room rate observed. Older samples: about $190-$904 per room for two adults for one night (July 25); $631-$2,544 per night for five-person units (October 11, for November 8-13).</p>
+        <p><strong>Rough cost:</strong> no current family-room rate observed. Older samples: about $190-$904 per room for two adults for one night (July 25); $631-$2,544 per night with displayed taxes and fees for five-person units (October 11, for November 8-13).</p>
         <p><strong>Main catch:</strong> beds and registered occupancy differ by exact room, and several hotels publish conflicting bed or occupancy details, so confirm your party in writing and price it live before paying.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
