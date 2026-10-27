@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {orlandoActivityPage,writeOrlandoActivityPage} from "./page-generation/orlando-activity-page.mjs";
-import {activityPath,activities,sources,checkedOn,orlandoActivityMaintenance,seaLifeTicket} from "./page-generation/orlando-activity-data.mjs";
+import {activityPath,activities,sources,checkedOn,orlandoActivityMaintenance,seaLifeTicket,admissionTariffs} from "./page-generation/orlando-activity-data.mjs";
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 test("generated Orlando hub is exact, one new canonical and reachable",()=>{
   const html=orlandoActivityPage();assert.equal(read('site/'+activityPath),html);
@@ -46,9 +46,13 @@ test("table precedes six visible persona defaults and independent review signals
   assert.match(html,/not Family Tripwise reviews/);assert.match(html,/Positive-selection bias/);assert.match(html,/No comparable review sample/);
 });
 test("maintenance is dated and fails closed on missing calendar input",()=>{
-  const r=orlandoActivityMaintenance('2026-10-13');assert.equal(r.automatic_fact_renewal,false);assert.equal(r.official.length,13);assert.equal(r.unknowns.length,2);
-  assert.ok(r.official.every(s=>s.checked_on===checkedOn&&s.freshness.state==='within-review-interval'));
-  assert.ok(orlandoActivityMaintenance('2026-10-27').official.every(s=>s.freshness.state==='review-due'));
+  const r=orlandoActivityMaintenance('2026-10-13');assert.equal(r.automatic_fact_renewal,false);assert.equal(r.official.length,14);assert.equal(r.unknowns.length,2);
+  const rateIds=['oscRates','crayola','mennello','leu','gator'],general=r.official.filter(s=>!rateIds.includes(s.id));
+  assert.equal(general.length,9);assert.ok(general.every(s=>s.checked_on===checkedOn&&s.freshness.state==='within-review-interval'));
+  assert.ok(r.official.filter(s=>rateIds.includes(s.id)).every(s=>s.checked_on==='2026-10-27'));
+  const later=orlandoActivityMaintenance('2026-10-27').official;
+  assert.ok(later.filter(s=>!rateIds.includes(s.id)).every(s=>s.freshness.state==='review-due'));
+  assert.ok(later.filter(s=>rateIds.includes(s.id)).every(s=>s.freshness.state==='within-review-interval'));
   assert.ok(orlandoActivityMaintenance('2026-10-01').official.every(s=>s.freshness.state==='future-date-review'));
   assert.throws(()=>orlandoActivityMaintenance('bad'));
 });
@@ -67,9 +71,24 @@ test("SEA LIFE adult promotion never becomes standalone or dated family admissio
 });
 test("Eye notices retain named product conflict and separate promotion freshness",()=>{
   const html=orlandoActivityPage(),r=orlandoActivityMaintenance('2026-10-20');
-  assert.match(html,/separate Ultimate Florida Ticket/);assert.match(html,/maintenance notice/);assert.match(html,/October 12\/13 opening hours/);
-  assert.match(html,/Neither confirms your chosen date/);assert.match(html,/not a selected-date quote/);
+  assert.match(html,/separate Ultimate Florida Ticket/);assert.match(html,/maintenance notice/);assert.doesNotMatch(html,/October 12\/13/);
+  assert.match(html,/inspected on October 13, 2026/);assert.match(html,/does not confirm operation on your chosen date/);assert.match(html,/not a selected-date quote/);
   assert.equal(r.ticket_promotion.freshness.state,'review-due');
-  assert.equal(r.official.length,13);assert.ok(r.official.every(s=>s.freshness.state==='within-review-interval'));
+  assert.equal(r.official.length,14);assert.ok(r.official.filter(s=>s.checked_on===checkedOn).every(s=>s.freshness.state==='within-review-interval'));
   assert.equal(r.unknowns.find(a=>a.id==='sea-life').exact_family_cost,null);
+});
+
+test("Q02b: per-fact dates, Spanish rate source and no-JS pointer",()=>{
+  const html=orlandoActivityPage();
+  assert.match(html,/Standard admission rates for the five priced outings observed October 27, 2026 on official pages\. Other rules, hours and visit details checked October 13, 2026/);
+  assert.match(html,/standard rates observed October 27, 2026\./);assert.doesNotMatch(html,/October 13 published rates|Rules and published rates checked/);
+  assert.match(html,/<a href="https:\/\/www\.osc\.org\/es\/visita\/">Science Center admission rates \(official Spanish-language visit page\)<\/a>/);
+  for(const id of ["science-center","crayola","mennello","leu","gatorland"])
+    assert.match(html,new RegExp(`<article id="${id}">[\\s\\S]*?Admission rates observed 2026-10-27; other published facts inspected 2026-10-13`),id);
+  for(const id of ["sea-life","lake-eola"])
+    assert.doesNotMatch(html.split(`<article id="${id}">`)[1].split("</article>")[0],/Admission rates observed/,id);
+  assert.match(html,/<noscript><p>This calculator needs JavaScript\. Without it, use the <a href="#compare">comparison table above<\/a>/);
+  const tariff=admissionTariffs.find(t=>t.id==="science-center");assert.equal(tariff.sourceUrl,"https://www.osc.org/es/visita/");assert.equal(tariff.checkedOn,"2026-10-27");
+  const r=orlandoActivityMaintenance("2026-10-28");
+  assert.equal(r.official.find(s=>s.id==="oscRates").checked_on,"2026-10-27");assert.equal(r.official.find(s=>s.id==="sea").checked_on,"2026-10-13");
 });

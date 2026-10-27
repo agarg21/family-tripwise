@@ -1,5 +1,9 @@
 # Orlando Admission Form Candidate
 
+## Superseded 2026-10-27 (Q01)
+
+Released as Q01 after the tariffs were re-observed on 2026-10-27 (`docs/research/orlando-admission-refresh-2026-10-27.md`), headless Chromium QA and an independent review. The hold, schema-date and "reused, not renewed" notes below are historical. Q02b (2026-10-27) gave the public page per-fact dates (admission rates October 27, other facts October 13), named the Spanish-language official page as the Science Center rate source and added a no-JS pointer to the static table.
+
 ## October22 Native Refresh
 
 FT-IMP-186 refreshes this still-unshipped candidate against the reviewed FT-IMP-185 array guard at `ca09ef31c35abd0e985d9d1255f20d932440ca57`. Only the held served engine copy, its native parity/guard test and this current note change; the original form/generator/HTML and prior historical text below remain intact. Prior173 native receipts are pinned-old-engine, not renewed automatically. Fresh complete-candidate native QA, server-only byte preflight and a different strict read-only native review are required. No commit/push or public release: actual1280/390/320, keyboard, image/no-JS/interaction and final release review remain missing. No browser retry or source/rate/review-date renewal. Morning LRN275 already satisfies daily learning; this refresh is not another external learning unit.
@@ -24,10 +28,6 @@ The five primary tariffs were inspected October15 in [172's evidence record](../
 Reproducible fake-DOM interaction tests cover the30/35/2/13 task, infant1/teen13, original3/10 parity, cleared stale totals, resized parties, invalid/blank/past/future dates, reset, inaccessible/malformed data and safe text/link rendering. These are logic/DOM-fixture proxies, not real-browser rendering, keyboard tests, screenshots or actual-parent preference evidence.
 
 Run focused checks with `node --test tools/orlando-admission-form.test.mjs tools/orlando-admission-budget.test.mjs tools/orlando-activities-page.test.mjs`. The page writer emits exactly the affected HTML and two source-identical module copies. Native preview preflight checks server bytes/headers only, never permission or rendered usability.
-
-## Superseded 2026-10-27 (Q01)
-
-Released as Q01 after the tariffs were re-observed on 2026-10-27 (`docs/research/orlando-admission-refresh-2026-10-27.md`), headless Chromium QA and an independent review. The hold, schema-date and "reused, not renewed" notes below are historical.
 
 ## Release Hold
 

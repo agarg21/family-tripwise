@@ -279,3 +279,30 @@ async function main() {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url))
   main().catch(error => { console.error(error.message); process.exitCode = 1; });
+
+function parseQuotedCsv(text) {
+  const rows = [[]];let field = "", quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (quoted) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') quoted = false; else field += c; }
+    else if (c === '"') quoted = true;
+    else if (c === ",") { rows.at(-1).push(field); field = ""; }
+    else if (c === "\n") { rows.at(-1).push(field); field = ""; rows.push([]); }
+    else field += c;
+  }
+  if (field || rows.at(-1).length) rows.at(-1).push(field);
+  return rows.filter(row => row.length > 1);
+}
+
+export const OLDER_STAY_SAMPLE_LABEL = "Older observation for these example stay dates; not a current quote. ";
+// Published downloads: a priced example stay stays labelled as an older observation before and
+// after its dates pass (Q16/Q02b). The comparison engine's own CSV bytes are left unchanged.
+export function labelOlderStaySamples(csv) {
+  const [head, ...rows] = parseQuotedCsv(csv);
+  if (head.join("\u0000") !== comparisonHeadings.join("\u0000")) throw new Error("Unexpected comparison CSV headings");
+  const at = name => comparisonHeadings.indexOf(name);
+  const labelled = rows.map(row => row.map((value, index) =>
+    index === at("Observation limits") && row[at("Price observed")] && row[at("Displayed stay amount")] && !value.startsWith(OLDER_STAY_SAMPLE_LABEL)
+      ? OLDER_STAY_SAMPLE_LABEL + value : value));
+  return comparisonCsv(labelled);
+}

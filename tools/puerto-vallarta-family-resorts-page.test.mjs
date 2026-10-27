@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {pvPath,pvPack,pvPrices,pvRooms,pvCsv,pvExcluded,pvTaskEvidence,puertoVallartaFamilyResortsPage} from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import {validateRoomPack,screenRoomPack} from "./family-room-task.mjs";
-import {roomComparisonCsv,comparisonHeadings} from "./family-room-comparison.mjs";
+import {labelOlderStaySamples,roomComparisonCsv,comparisonHeadings} from "./family-room-comparison.mjs";
 import {maintenanceReport} from "./site-maintenance.mjs";
 import {pvMealPlanComparison} from "./pv-meal-plan-comparison.mjs";
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),"utf8");
@@ -20,7 +20,7 @@ test("PV exposes same-record meal-plan increment and preserves unknown cost righ
 test("PV comparison and full CSV share original maintained category/price joins",()=>{
  assert.deepEqual(validateRoomPack(pvPack),[]);assert.equal(pvRooms.length,3);assert.equal(pvExcluded.length,6);
  assert.equal(read(`site/${pvPath}`),puertoVallartaFamilyResortsPage());assert.equal(read("site/downloads/puerto-vallarta-family-resorts.csv"),pvCsv);
- assert.equal(pvCsv,roomComparisonCsv(pvPack,pvPack.scenario,"2026-10-09",pvPrices));
+ assert.equal(pvCsv,labelOlderStaySamples(roomComparisonCsv(pvPack,pvPack.scenario,"2026-10-09",pvPrices)));
  const rows=pvCsv.trimEnd().split("\n").map(line=>[...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m=>m[1].replaceAll('""','"')));
  assert.equal(rows.length,5);assert.deepEqual(rows[0],comparisonHeadings);assert.ok(rows.every(row=>row.length===35));
  assert.deepEqual(pvRooms.map(r=>r.checked_on),["2026-10-09","2026-10-09","2026-10-03"]);

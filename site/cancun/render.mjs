@@ -42,7 +42,7 @@ const clubClockHtml = clubs => clubs.checkedOn ? `<p class="source-date">${esc(c
 const priorClubSources = clubs => clubs.priorSourceIds ? `<p class="source-date">Earlier property pages checked ${esc(clubs.priorCheckedOn)}; not a current club-rule verification.</p>${sources(clubs.priorSourceIds, "Retained earlier property source")}` : "";
 
 export function comparisonCsv() {
-  const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price observed", "Stay dates passed", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy observed", "Live record"];
+  const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price observed", "Stay-date status", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy observed", "Live record"];
   const rows = cancunEvidence.records.map(record => [
     record.hotel, record.area, record.room.category,
     record.price ? priceLabel(record.price) : "Exact-room nightly price: not verified",

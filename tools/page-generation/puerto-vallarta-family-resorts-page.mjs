@@ -1,6 +1,6 @@
 import {readFileSync} from "node:fs";
 import {screenRoomPack} from "../family-room-task.mjs";
-import {roomComparisonCsv} from "../family-room-comparison.mjs";
+import {labelOlderStaySamples,roomComparisonCsv} from "../family-room-comparison.mjs";
 import {contributorCredit} from "./contributors.mjs";
 import {pvMealPlanComparison} from "../pv-meal-plan-comparison.mjs";
 import {pvMealPolicy} from "../pv-meal-policy.mjs";
@@ -16,7 +16,7 @@ export const pvTaskEvidence = read("puerto-vallarta-public-task-2026-10-09.json"
 export const pvPack = {...dreams, action:"FT-PUB-011", checked_on:garza.checked_on, evidence_scope:"Three conditional categories at two properties, including a clearly labeled Nayarit regional comparison; not a representative best-resort ranking.", scenario:{...garza.scenario}, sources:{...dreams.sources,...garza.sources}, records:[...garza.records,...dreams.records.filter(r=>r.id==="bahia-family")].map(record=>({...record,checks:[...record.checks,record.id==="bahia-family" ? "Base: Nayarit coast, not Puerto Vallarta city; original October3 address, actual no-car return unknown" : "Base: Puerto Vallarta,Jalisco,official Km7.5 address checked October9; not central-city or measured route assurance"]}))};
 export const pvPrices = read("puerto-vallarta-garza-family-budget-2026-10-09.json");
 export const pvRooms = screenRoomPack(pvPack,pvPack.scenario,pvScreenedOn,pvPrices);
-export const pvCsv = roomComparisonCsv(pvPack,pvPack.scenario,pvScreenedOn,pvPrices);
+export const pvCsv = labelOlderStaySamples(roomComparisonCsv(pvPack,pvPack.scenario,pvScreenedOn,pvPrices));
 export const pvExcluded = [...dreams.records.filter(r=>r.id!=="bahia-family"),...hilton.records];
 const e = v => String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
 const money = v => `USD ${Number(v).toFixed(2)}`;

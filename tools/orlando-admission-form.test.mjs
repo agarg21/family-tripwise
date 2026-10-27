@@ -138,3 +138,14 @@ test("generated form preserves native baseline, safe data and private local-only
     assert.equal(readFileSync(`site/shared/${name}`,"utf8"),out.get(`shared/${name}`));
   }
 });
+
+test("Q02b: unpriced outings say no standalone rate was established, priced ones cite the observation",()=>{
+  const f=fixture();f.ages([30,35,3,10]);f.visit.value="2026-11-01";f.submit();
+  const rows=f.results.querySelectorAll("tr").slice(1),text=name=>rows.find(row=>row.children[0].textContent===name).textContent;
+  for(const name of ["SEA LIFE Orlando","Lake Eola Park"]){
+    assert.match(text(name),/Official source inspected 2026-10-13; no standalone rate was established\./,name);
+    assert.doesNotMatch(text(name),/Rates observed/,name);
+  }
+  assert.match(text("Crayola Experience"),/Rates observed 2026-10-27 on the official site; check the current price before buying\./);
+  assert.doesNotMatch(text("Crayola Experience"),/no standalone rate/);
+});

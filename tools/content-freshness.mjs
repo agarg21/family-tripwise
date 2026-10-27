@@ -144,7 +144,8 @@ const REVIEW_DUE_PATTERNS = [
   /\bnext\s+(?:source\s+|price\s+)?(?:review|recheck|refresh)\s*:/i,
   /\b(?:review|recheck|refresh)\s+(?:is\s+)?scheduled\b/i,
   new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:on\s+|by\s+|before\s+)?${DATE_TOKEN}`, "i"),
-  new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:[a-z]+\s+){1,3}(?:by|before)\s+${DATE_TOKEN}`, "i"),
+  // "Review prices by <date>" is a forward review date; "review cancellation terms by <date>" is booking-deadline advice.
+  new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:(?!(?:the\s+)?(?:booking|bookings|cancel\w*|deposits?|payments?|deadlines?|reservations?|holds?|balances?|refunds?|check-?in|arrival)\b)[a-z]+\s+){1,3}(?:by|before)\s+${DATE_TOKEN}`, "i"),
   /(?<!\b(?:payment|payments|balance|deposit|charge|charges|fee|fees|amount|paid|payable|full payment)\s)\bdue\s+(?:on\s+|by\s+)?(?:\d{4}-\d{2}-\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}\b)/i
 ];
 
@@ -164,6 +165,7 @@ const MONTH_INDEX = (name) => MONTHS.get(name.toLowerCase().slice(0, 3));
 const STAY_RANGE =
   /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})\s*[-–]\s*(?:(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+)?\d{1,2},?\s*(\d{4})\b/gi;
 const PRICED_STAY = /\bnights?\b|\bper (?:room|suite|apartment)\b|\bUSD\b|\bGBP\b|\$\s?\d/i;
+const PRICE_WINDOW = 200;
 const PAST_STAY_LABEL = /older observation|dates passed|stay dates have passed/i;
 
 // A priced stay sample whose arrival date is today or earlier must say so in the same block.
@@ -174,7 +176,9 @@ export function findPastStaySamples(html, { now = new Date() } = {}) {
     for (const part of block.split("\u0000")) {
       for (const match of part.matchAll(STAY_RANGE)) {
         const start = Date.UTC(Number(match[3]), MONTH_INDEX(match[1]), Number(match[2]));
-        if (start <= today && PRICED_STAY.test(part) && !PAST_STAY_LABEL.test(part)) found.push(match[0]);
+        // The price signal must sit near the stay range, not anywhere in a long block.
+        const near = part.slice(Math.max(0, match.index - PRICE_WINDOW), match.index + match[0].length + PRICE_WINDOW);
+        if (start <= today && PRICED_STAY.test(near) && !PAST_STAY_LABEL.test(part)) found.push(match[0]);
       }
     }
   }

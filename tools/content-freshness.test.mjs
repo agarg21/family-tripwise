@@ -222,7 +222,8 @@ test("forward review or recheck dates are flagged; observation wording passes", 
     assert.ok(findReviewDueDates(text).length > 0, text);
   for (const text of ["<p>Price observed 2026-10-11; check live rates before booking.</p>", "<p>Notice rechecked September 22, 2026.</p>",
     "<p>October 11, 2026 recheck unavailable; these facts have not been renewed.</p>", "<p>Recheck venue and weather before leaving.</p>",
-    "<p>Payment due by November 1, 2026.</p>", "<p>Balance due 2026-11-01.</p>"])
+    "<p>Payment due by November 1, 2026.</p>", "<p>Balance due 2026-11-01.</p>",
+    "<p>Review cancellation terms by November 1, 2026.</p>", "<p>Review the booking deadline before Nov 5.</p>", "<p>Recheck deposit rules before 2026-11-02.</p>"])
     assert.deepEqual(findReviewDueDates(text), [], text);
 });
 
@@ -236,4 +237,7 @@ test("past-stay price samples need an older-observation label in the same block"
   const orlando = "<p>Observed 2026-10-11 for November 8-13, 2026, Poolside Family Suite Exterior Entry, two adults and three children (ages not entered): Special Offer, a long plan name and terms text that pushes the unit well past eighty characters, for 5 nights.</p>";
   assert.equal(findPastStaySamples(orlando, { now: new Date("2026-11-08T12:00:00Z") }).length, 1);
   assert.deepEqual(findPastStaySamples(orlando, { now }), []);
+  const far = `<p>Online-review themes sampled October 18-23, 2026. ${"Unrelated planning notes about naps, routes and weather. ".repeat(6)}Parking USD 40 per night.</p>`;
+  assert.deepEqual(findPastStaySamples(far, { now }), []);
+  assert.equal(findPastStaySamples("<p>Room sampled October 18-23, 2026 at USD 300 per night.</p>", { now }).length, 1);
 });
