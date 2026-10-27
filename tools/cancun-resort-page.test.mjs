@@ -74,7 +74,7 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
   assert.equal(read("site/downloads/cancun-room-comparison.csv"), csv);
   const lines = csv.trimEnd().split("\r\n");
   assert.equal(lines.length, 7);
-  for (const line of lines) assert.equal((line.match(/"(?:[^"]|"")*"(?=,|$)/g) ?? []).length, 18);
+  for (const line of lines) assert.equal((line.match(/"(?:[^"]|"")*"(?=,|$)/g) ?? []).length, 17);
   for (const record of cancunEvidence.records) {
     assert.ok(csv.includes(record.hotel));
     assert.ok(csv.includes(record.room.category));
@@ -163,7 +163,7 @@ test("rendered outputs retain per-child failures, unknowns and independent trans
   assert.match(result({channel: "third-party"}), /Outside the published direct-booking/);
   assert.match(result({childAges: [2, 3, 12, 13, 17]}), /Parent must stay/);
   assert.match(result({childAges: [2, 3, 12, 13, 17]}), /Your party exceeds/);
-  assert.match(result({asOf: cancunEvidence.recheckOn}), /Source refresh due/);
+  assert.match(result({asOf: cancunEvidence.recheckOn}), /Older observation\./);
 });
 
 test("age inputs are bounded, uniquely labelled and escaped", () => {

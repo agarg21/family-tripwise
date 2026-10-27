@@ -57,5 +57,5 @@ test("page and portable outputs keep the same dated amount and unresolved condit
   for (const p of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
     for (const term of ["USD 934 displayed total", "USD 311 rounded per room/night", "Child-offer eligibility conflicts", "April 1, 2027", "100% penalty 14-0 days", "2026-10-11"]) assert.ok(output.get(p).includes(term), `${p}: ${term}`);
   }
-  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"2026-10-11","2026-10-18"/);
+  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"2026-10-11","yes; older observation"/);
 });

@@ -7,7 +7,7 @@ import { orlandoRateComparisonCsv, orlandoRateCsvPath, orlandoSuitePage, writeOr
 const parse = csv => csv.trimEnd().split("\n").map(line => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m => m[1].replaceAll('""', '"')));
 test("portable rates retain both same-room plans and all dated fee/age/term boundaries", () => {
   const [head, ...rows] = parse(orlandoRateComparisonCsv());
-  assert.equal(head.length, 21);
+  assert.equal(head.length, 20);
   assert.equal(rows.length, 2);
   const hotel = suites[2];
   for (const [i, row] of rows.entries()) {
@@ -28,7 +28,7 @@ test("portable rates retain both same-room plans and all dated fee/age/term boun
     assert.equal(values["Deposit timing conflict"], hotel.priceTerms.depositConflict);
     assert.equal(values["Price observed"], p.observedOn);
     assert.equal(values["Terms checked"], "2026-10-11");
-    assert.equal(values["Recheck due"], "2026-10-18");
+    assert.equal(values["Recheck due"], undefined);
     assert.equal(values["Dated source"], sources[p.source]);
     assert.match(values["Live comparison"], /orlando-family-hotels\.html#ihg-rate-plans$/);
   }
@@ -43,7 +43,7 @@ test("CSV escaping and formula protection retain row boundaries", () => {
     sample.name = `${prefix}test, "quoted"\nnext\ttab`;
     const [, row] = parse(orlandoRateComparisonCsv([sample]));
     assert.equal(row[0], `'${prefix}test, "quoted" next tab`);
-    assert.equal(row.length, 21);
+    assert.equal(row.length, 20);
   }
 });
 test("no-JS native link and generated asset stay in parity without changing shared records", () => {

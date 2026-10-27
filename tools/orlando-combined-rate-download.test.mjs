@@ -7,17 +7,17 @@ import { orlandoCombinedRateComparisonCsv, orlandoCombinedRateCsvPath, orlandoRa
 const parse = csv => csv.trimEnd().split("\n").map(line => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m => m[1].replaceAll('""', '"')));
 test("combined export keeps four source-based plans and property-specific unknowns", () => {
   const [head, ...rows] = parse(orlandoCombinedRateComparisonCsv());
-  assert.equal(head.length, 22);
+  assert.equal(head.length, 21);
   assert.equal(rows.length, 4);
   const booking = suites[1].bookingRates;
   for (const [i, row] of rows.entries()) {
-    assert.equal(row.length, 22);
+    assert.equal(row.length, 21);
     const v = Object.fromEntries(head.map((name, j) => [name, row[j]]));
     assert.equal(v.Nights, "5");
     assert.equal(v.Currency, "USD");
     assert.equal(v["Stay dates"], "November 8-13, 2026");
     assert.equal(v["Price observed"], "2026-10-11");
-    assert.equal(v["Recheck due"], "2026-10-18");
+    assert.equal(v["Recheck due"], undefined);
     assert.match(v["Party and age basis"], /three children.*ages not entered/);
     if (i < 2) {
       const p = booking.plans[i];
@@ -50,7 +50,7 @@ test("combined CSV protects cells and never mutates shared records", () => {
     copy.bookingRates.plans[0].plan = `${prefix}plan, "quoted"\nnext\ttab`;
     const [, row] = parse(orlandoCombinedRateComparisonCsv([copy]));
     assert.equal(row[7], `'${prefix}plan, "quoted" next tab`);
-    assert.equal(row.length, 22);
+    assert.equal(row.length, 21);
   }
   orlandoCombinedRateComparisonCsv();
   assert.equal(JSON.stringify(suites), before);

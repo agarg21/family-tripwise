@@ -61,7 +61,7 @@ test("Boston refresh registry uses maintained exact sources and original dates",
 
 test("Park Plaza gym benefit retains18plus age boundary and separate source clock without renewing prices",()=>{
  const html=bostonFamilyHotelPage(),note=html.match(/<p id="park-plaza-gym-policy"[^>]*>(.*?)<\/p>/)[1];
- for(const text of ["USD 35", "18 and over", "first-visit waiver", "Ages 4, 8, 12", "outside that access band", "fee exemption or deduction", "October 1", "already include", "inspected October 10, 2026", "due November 9", "Actual service"]){assert.ok(note.includes(text),text);}
+ for(const text of ["USD 35", "18 and over", "first-visit waiver", "Ages 4, 8, 12", "outside that access band", "fee exemption or deduction", "October 1", "already include", "inspected October 10, 2026", "check current terms before booking", "Actual service"]){assert.ok(note.includes(text),text);}
  assert.doesNotMatch(note,/free for|fee waived|rollaway.*USD|guaranteed/i);
  assert.match(html,/id="park-plaza-gym-policy"[^>]*scroll-margin-top:128px/);
  const watch=JSON.parse(read("ops/evidence-watch.json")).records.find(r=>r.id==="boston-park-plaza-gym-fee");
@@ -72,7 +72,7 @@ test("Park Plaza gym benefit retains18plus age boundary and separate source cloc
 
 test("museum admission component is source-dated, keyboard-readable and never a checkout or reentry promise",()=>{
  const html=bostonFamilyHotelPage(),section=html.match(/<div id="museum-budget" class="dc-room">([\s\S]*?)<\/div>\n<p>Two selected/)[1];
- for(const text of ["USD 24.00","USD 120.00 admission component","USD 4.00 per transaction","Not a final checkout total","do not add it again","Tax inclusion is unknown","TJX $1 Sunday Afternoon","does not establish exit and re-entry","cannot be applied after purchase","inspected October 9","Review due October 23","not checked again"]){assert.ok(section.includes(text),text);}
+ for(const text of ["USD 24.00","USD 120.00 admission component","USD 4.00 per transaction","Not a final checkout total","do not add it again","Tax inclusion is unknown","TJX $1 Sunday Afternoon","does not establish exit and re-entry","cannot be applied after purchase","inspected October 9","check current admission before buying","not checked again"]){assert.ok(section.includes(text),text);}
  assert.match(section,/tabindex="0" role="region" aria-label="Museum admission budget"/);
  assert.match(section,/cg=TT&amp;c=TT/);assert.doesNotMatch(section,/USD 124|"@type":"Offer"|guaranteed|per night/);
  const watch=JSON.parse(read("ops/evidence-watch.json")).records.find(r=>r.id==="boston-museum-admission-return");
@@ -98,7 +98,7 @@ test("breakfast join rejects wrong source, party, dates, member, duplicate and c
  bostonBreakfastUpgrade();assert.deepEqual(bostonPrices,saved);
 });
 test("public meal comparison preserves count-only uncertainty, partial fees and original clocks",()=>{
- const html=bostonFamilyHotelPage();for(const text of ["USD 419.22", "USD 83.84", "Not breakfast for all five", "Ages 8 and 12 outside", "not individual age acceptance", "already included once", "not a value winner", "not re-priced", "due October 15", "no number of breakfasts"]){assert.ok(html.toLowerCase().includes(text.toLowerCase()),text);}
+ const html=bostonFamilyHotelPage();for(const text of ["USD 419.22", "USD 83.84", "Not breakfast for all five", "Ages 8 and 12 outside", "not individual age acceptance", "already included once", "not a value winner", "not re-priced", "check live rates before booking", "no number of breakfasts"]){assert.ok(html.toLowerCase().includes(text.toLowerCase()),text);}
  assert.match(html,/id="breakfast-upgrade" data-room="boston-park-plaza-deluxe-double" data-kitchen="not-established" class="dc-room"/);
  assert.match(html,/tabindex="0" role="region" aria-label="Park Plaza breakfast upgrade"/);
  assert.equal(bostonCsv,roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices));

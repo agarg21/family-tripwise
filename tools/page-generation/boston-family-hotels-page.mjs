@@ -113,7 +113,7 @@ function breakfastSection() {
 <tr><th scope="row">${e(budget.plans[1].plan)}</th><td>${amount(budget.plans[1].stay_amount)}</td><td>Registered adults and children aged 5 and under: ${budget.included_adults} adults and age ${budget.included_child_ages.join(", ")} within published meal scope. Ages ${budget.uncovered_child_ages.join(" and ")} outside that inclusion; their breakfast cost is unknown.</td></tr>
 </tbody></table></div>
 <p class="dc-caution">Not breakfast for all five, and not a value winner: compare the ${amount(budget.stay_increment)} increment with what the covered guests would otherwise spend. No number of breakfasts, food-credit savings or older-child meal price is assumed. Displayed tax and destination fee are already included once; extra bedding, other charges and actual meal service remain unresolved. The original search retained child counts, not individual age acceptance.</p>
-<p>${link(budget.observation.source_url,"Dated official booking-check source")} &middot; source and prices observed October 1; comparison assembled October 9, not re-priced. Original price review due October 15. This is a historical planning comparison, not a current offer or full-family food budget.</p>
+<p>${link(budget.observation.source_url,"Dated official booking-check source")} &middot; source and prices observed October 1; comparison assembled October 9, not re-priced; check live rates before booking. This is a historical planning comparison, not a current offer or full-family food budget.</p>
 ${bostonBreakfastBudgetSection()}
 ${bostonBreakfastMenuSection()}</div>`;
 }
@@ -142,7 +142,7 @@ export function bostonBreakfastMenuSection(evidence = breakfastMenuEvidence) {
 ${evidence.menu.map(item => `<tr><th scope="row">${e(item.name)}</th><td>${e(item.displayed_amount)}</td><td>Currency not labeled on the source; child-age applicability and complete meal cost unknown.</td></tr>`).join("\n")}
 </tbody></table></div>
 <p>The menu states ${e(evidence.price_basis.menu_stated_meals_tax_percent)}% meals tax is added and ${e(evidence.price_basis.menu_stated_group_gratuity_percent)}% gratuity is added for groups of ${e(evidence.price_basis.menu_stated_gratuity_group_minimum)} or more. Other charges and gratuity for this five-person task remain unresolved. No credit is deducted.</p>
-<p>Ages 8 and 12 still need meal-cost confirmation. General menu amounts do not establish child prices, buffet inclusion under Breakfast Included, or credit redemption. The USD calculator above stays hypothetical and blank. ${link(evidence.source_url, "Official breakfast menu and hours")} &middot; menu review due ${e(evidence.review_due)}. Original room-price observation October 1 and review October 15 are unchanged.</p></section>
+<p>Ages 8 and 12 still need meal-cost confirmation. General menu amounts do not establish child prices, buffet inclusion under Breakfast Included, or credit redemption. The USD calculator above stays hypothetical and blank. ${link(evidence.source_url, "Official breakfast menu and hours")} &middot; menu observed ${e(evidence.observed_on)}; check current menu and hours before booking. The original October 1 room-price observation is unchanged.</p></section>
 <!-- FT-IMP-104 menu end -->`;
 }
 
@@ -179,7 +179,7 @@ const bookingChecks = {
 
 function parkPlazaPolicyNote() {
   const policy = parkPlazaFitnessPolicy();
-  return `<p id="park-plaza-gym-policy" class="dc-caution" style="scroll-margin-top:128px"><strong>Destination-fee benefit, not children's gym access:</strong> the published daily USD ${policy.evidence.fee.displayed_daily_amount} mandatory destination charge includes ${e(policy.evidence.fitness.facility)} access, but its facilities are for hotel guests aged ${policy.evidence.fitness.minimum_guest_age} and over, with a first-visit waiver. Ages ${policy.excluded_child_ages.join(", ")} are outside that access band. Do not count this as a children's indoor activity or assume a fee exemption or deduction. The original October 1 sampled stay totals already include the destination charge once; no new price or extra-bed charge is established. ${link(policy.source_url,"Official gym and destination-fee policy")} inspected October 10, 2026; review due November 9. Actual service for your stay dates remains unverified.</p>`;
+  return `<p id="park-plaza-gym-policy" class="dc-caution" style="scroll-margin-top:128px"><strong>Destination-fee benefit, not children's gym access:</strong> the published daily USD ${policy.evidence.fee.displayed_daily_amount} mandatory destination charge includes ${e(policy.evidence.fitness.facility)} access, but its facilities are for hotel guests aged ${policy.evidence.fitness.minimum_guest_age} and over, with a first-visit waiver. Ages ${policy.excluded_child_ages.join(", ")} are outside that access band. Do not count this as a children's indoor activity or assume a fee exemption or deduction. The original October 1 sampled stay totals already include the destination charge once; no new price or extra-bed charge is established. ${link(policy.source_url,"Official gym and destination-fee policy")} inspected October 10, 2026; check current terms before booking. Actual service for your stay dates remains unverified.</p>`;
 }
 
 function museumBudgetSection() {
@@ -191,7 +191,7 @@ function museumBudgetSection() {
 <tr><th scope="row">Leave for the hotel, then return?</th><td>Ordinary admission allows an all-day stay, except TJX $1 Sunday Afternoon tickets. That does not establish exit and re-entry permission or whether another ticket is needed.</td></tr>
 </tbody></table></div>
 <p>USD is our interpretation of the dollar symbol at this US venue. Future-date availability, final taxes and fees, discounts and actual hotel-return/rest time remain unverified. Published tickets are non-refundable; transfer to another date is subject to availability. Discounts or membership cannot be applied after purchase.</p>
-<p>${link(budget.source_url,"Official general-admission source")} &middot; inspected October 9; reused here, not checked again. Review due October 23. No ticket purchase, date-specific quote or hotel-price renewal.</p></div>`;
+<p>${link(budget.source_url,"Official general-admission source")} &middot; inspected October 9; reused here, not checked again; check current admission before buying. No ticket purchase, date-specific quote or hotel-price renewal.</p></div>`;
 }
 
 export function bostonFamilyHotelPage() {
@@ -207,7 +207,7 @@ export function bostonFamilyHotelPage() {
 <main id="main"><section class="dc-intro"><p class="eyebrow">Boston</p><h1>Boston family hotels</h1>
 ${contributorCredit()}
 <p class="dc-lede">Start with the exact room: who can sleep there, what you can cook, and what the dated price leaves out.</p>
-<p>Four conditional room categories, not a city-wide best-hotel ranking. Plaza Suite category details checked October 9, 2026; other official room facts checked October 1 or 3. Prices observed October 1 and 3, not re-priced. Page assembled October 9, not a new inspection of every hotel. Park Plaza price review due October 15; Fenway October 17. Obtain current rates and exact sleeping arrangements before booking.</p>
+<p>Four conditional room categories, not a city-wide best-hotel ranking. Plaza Suite category details checked October 9, 2026; other official room facts checked October 1 or 3. Prices observed October 1 and 3, not re-priced. Page assembled October 9, not a new inspection of every hotel. Obtain current rates and exact sleeping arrangements before booking.</p>
 <div class="dc-links"><a href="#comparison">Compare rooms</a><a href="#prices">Rate details</a><a href="#excluded">Rooms that do not fit five</a><a href="../downloads/boston-family-hotels.csv" download>Download full comparison CSV</a></div></section>
 <section id="comparison"><h2>One configuration for a five-person task</h2><p><strong>Example task:</strong> two adults and children aged 4, 8 and 12; November 8-13, 2026, five nights, no car. Published maximum occupancy is not confirmed sleeping comfort, inventory or provider acceptance. A crib does not establish an extra place for these children.</p>
 <div class="dc-toolbar" hidden><label><input id="kitchen-only" type="checkbox"> Published cooking kitchen only</label><p id="comparison-status" role="status" aria-live="polite">4 room categories</p></div>

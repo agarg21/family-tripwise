@@ -15,7 +15,7 @@ function whole(value, minimum, maximum) {
 export function admissionPriceMessage(record) {
   if (record.publishedAdmissionSubtotalCents === null) return "Price unknown for this party.";
   return `${usd(record.publishedAdmissionSubtotalCents)} standard admission subtotal. ` +
-    (record.needsRecheck ? "Recheck due; historical arithmetic only." : "Published rates, not a checkout quote.");
+    (record.needsRecheck ? "Older observation; historical arithmetic only." : "Published rates, not a checkout quote.");
 }
 
 export function initializeAdmissionBudget(document, {today = localDate} = {}) {

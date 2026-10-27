@@ -61,7 +61,7 @@ test("DC premium cells retain original terms and exact stay-total arithmetic", (
   assert.match(read("site/washington-dc-comparison.css"), /\.dc-page \.dc-rate-table \{ min-width: 1000px; \}/);
   assert.match(read("site/washington-dc-comparison.css"), /\.dc-page \.dc-rate-table th:last-child \{ width: 280px; \}/);
   assert.equal((html.match(/<td data-plan-premium>Baseline<\/td>/g) || []).length, 2);
-  for (const value of ["USD 367.33", "USD 73.47", "USD 138.19", "USD 27.64", "USD 254.98", "USD 51.00", "before rounding", "do not buy or guarantee current cancellation rights", "price review remains due October 14"])
+  for (const value of ["USD 367.33", "USD 73.47", "USD 138.19", "USD 27.64", "USD 254.98", "USD 51.00", "before rounding", "do not buy or guarantee current cancellation rights", "check live rates before booking"])
     assert.ok(html.includes(value), value);
   assert.doesNotMatch(html, /USD 73\.46|guaranteed refund|current refundable quote/);
 });
@@ -135,7 +135,7 @@ test("DC public extra-trip examples retain maintained party, source date and sha
 test("public rail budget is no-JS, age-bounded, source-linked and never a hotel-night or November quote", () => {
   const html=dcFamilyHotelPage(), section=html.match(/<section id="rail-budget">([\s\S]*?)<\/section>/)[1];
   assert.equal((section.match(/<tr>/g)||[]).length,4);
-  for(const value of ["USD 18.00-USD 54.00","USD 36.00-USD 108.00","USD 18.00-USD 20.00","age 4 is free","four regular-fare riders","not per night or a route quote","not four trains","review due November 2","visit-date fare remain unknown","not establish a workable rest return","Hotel price and property check dates are unchanged"])
+  for(const value of ["USD 18.00-USD 54.00","USD 36.00-USD 108.00","USD 18.00-USD 20.00","age 4 is free","four regular-fare riders","not per night or a route quote","not four trains","check current fares before the trip","visit-date fare remain unknown","not establish a workable rest return","Hotel price and property check dates are unchanged"])
     assert.ok(section.includes(value),value);
   assert.ok(section.includes(`href="${dcTransitEvidence.policy.source.url}"`));
   assert.ok(section.includes(`href="${dcTransitEvidence.corroborating_source.url}"`));

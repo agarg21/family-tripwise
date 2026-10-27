@@ -11,8 +11,8 @@ export const cancunGrandparentsBudget = JSON.parse(readFileSync(new URL("../../d
 const groupMoney = value => `USD ${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 export function cancunGrandparentsCsv() {
   const e = cancunGrandparentsBudget, o = e.observation;
-  const headings = ["Hotel", "Booking category", "Room code", "Suites", "Adults", "Child ages", "Arrival", "Departure", "Nights", "Currency", "Nightly unit", "Plan", "Displayed nightly", "Displayed stay total", "Meals", "Tax and fee basis", "Payment and refund", "Offer eligibility", "Connection", "Room conflicts", "Checked", "Recheck due", "Source", "Limits"];
-  const rows = o.plans.map(p => [o.hotel, o.category, o.room_code, o.rooms, o.adults, o.child_ages.join(" | "), o.checkin, o.checkout, o.nights, o.currency, o.unit, p.name, p.nightly_display, p.total_display, o.meals, o.fee_basis, o.terms, o.eligibility, o.connection, o.room_conflict, e.checked_on, e.recheck_on, e.source_url, "Dated one-suite party search, not guaranteed connection, booking acceptance, full stay cost, formal group rate, savings or suitability. Grand Family Suite four-adult group price not observed; two-adult examples cannot be borrowed."]);
+  const headings = ["Hotel", "Booking category", "Room code", "Suites", "Adults", "Child ages", "Arrival", "Departure", "Nights", "Currency", "Nightly unit", "Plan", "Displayed nightly", "Displayed stay total", "Meals", "Tax and fee basis", "Payment and refund", "Offer eligibility", "Connection", "Room conflicts", "Observed", "Source", "Limits"];
+  const rows = o.plans.map(p => [o.hotel, o.category, o.room_code, o.rooms, o.adults, o.child_ages.join(" | "), o.checkin, o.checkout, o.nights, o.currency, o.unit, p.name, p.nightly_display, p.total_display, o.meals, o.fee_basis, o.terms, o.eligibility, o.connection, o.room_conflict, e.checked_on, e.source_url, "Dated one-suite party search, not guaranteed connection, booking acceptance, full stay cost, formal group rate, savings or suitability. Grand Family Suite four-adult group price not observed; two-adult examples cannot be borrowed."]);
   const cell = value => {
     const plain = String(value).replaceAll(/[\r\n\t]+/g, " ");
     const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
@@ -30,7 +30,7 @@ export function cancunGrandparentsSection() {
       <div class="quick-table-scroll" tabindex="0" role="region" aria-label="Four-adult two-child dated suite prices"><table class="quick-table"><caption>One suite for all six guests - official direct USD examples</caption><thead><tr><th scope="col">Public plan</th><th scope="col">Per suite per night</th><th scope="col">Three-night displayed total</th></tr></thead><tbody>${o.plans.map(p => `<tr><th scope="row">${esc(p.name)}</th><td data-label="Per suite per night">${esc(groupMoney(p.nightly_display))}</td><td data-label="Three-night displayed total">${esc(groupMoney(p.total_display))}</td></tr>`).join("")}</tbody></table></div>
       <p>${esc(o.fee_basis)} ${esc(o.meals)}</p>
       <details><summary>Room conflicts and rate conditions</summary><p>${esc(o.room_conflict)}</p><p>${esc(o.terms)}</p><p>${esc(o.eligibility)}</p></details>
-      <p class="source-date">Price and booking text checked <time datetime="${esc(e.checked_on)}">${esc(e.checked_on)}</time>; review due ${esc(e.recheck_on)}. <a href="${esc(e.source_url)}">Official four-adult, two-child rate search</a>. The source may reset dates, ages or category; confirm the displayed selection.</p>
+      <p class="source-date">Price and booking text observed <time datetime="${esc(e.checked_on)}">${esc(e.checked_on)}</time>; check live rates before booking. <a href="${esc(e.source_url)}">Official four-adult, two-child rate search</a>. The source may reset dates, ages or category; confirm the displayed selection.</p>
       <details id="grandparents-download"><summary>Save this party's budget</summary><p><a href="../downloads/cancun-grandparents-budget.csv" download>Download this party's two-plan budget (.csv)</a></p></details>
       <p><strong>Moon Palace The Grand:</strong> the <a href="${esc(e.grand_check.category_source_url)}">Grand Family Suite category</a> specifies two connecting rooms; this is not a reservation guarantee. <strong>A four-adult, two-child price is not verified.</strong> Its existing two-adult sample is not this party's budget. <a href="#grand-family-suite">Grand room and separate price basis</a>.</p>
       <p>Before choosing either, get written exact-party acceptance, the sleeping places assigned to each generation, connecting-door confirmation and all mandatory charges. Quiet/shared space, step-free access and rest-return practicality remain unverified. Neither result is a savings or family-suitability recommendation.</p>
@@ -44,7 +44,7 @@ export function cancunChildOfferSection() {
     <section id="child-offer" aria-labelledby="child-offer-title" style="scroll-margin-top:128px">
       <h2 id="child-offer-title">Kids stay free: eligibility before savings</h2>
       <p>${esc(offer.scope)}</p>
-      <p class="source-date">Offer checked <time datetime="${esc(offer.checked_on)}">${esc(offer.checked_on)}</time>; review due ${esc(offer.recheck_on)}. <a href="${esc(offer.source_url)}">Official offer and terms</a>. Conditions can change or be suspended.</p>
+      <p class="source-date">Offer observed <time datetime="${esc(offer.checked_on)}">${esc(offer.checked_on)}</time>; check current terms before booking. <a href="${esc(offer.source_url)}">Official offer and terms</a>. Conditions can change or be suspended.</p>
       <div class="quick-table-scroll" tabindex="0" role="region" aria-label="Child-offer eligibility conditions">
         <table class="quick-table"><caption>Published conditions and remaining checks</caption><thead><tr><th scope="col">Check</th><th scope="col">Published condition</th><th scope="col">Limit or unresolved check</th></tr></thead><tbody>${offer.rows.map(row => `<tr><th scope="row">${esc(row.check)}</th><td data-label="Published condition">${esc(row.published)}</td><td data-label="Limit or unresolved check">${esc(row.unresolved)}</td></tr>`).join("")}</tbody></table>
       </div>
@@ -81,7 +81,7 @@ export function cancunResortPage() {
       <h1>Cancun family resorts</h1>
       ${contributorCredit()}
       <p>Six all-inclusive resorts, compared by the room and policy details that can change a family booking. This is a focused planning comparison, not a ranking of every resort.</p>
-      <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Next source review due October 23, 2026; verify volatile details before booking.</span></p>
+      <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Check live rates and current rules before booking.</span></p>
       <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#grandparents-budget">Trip with grandparents</a><a href="#family-check">Your children's ages</a><a href="#child-offer">Child-offer checks</a><a href="#comparison">Full policy checks</a><a href="#before-booking">Before booking</a></div>
     </section>
     <section id="quick-comparison" aria-labelledby="quick-title">
@@ -151,7 +151,7 @@ ${cancunChildOfferSection()}    <section id="before-booking">
     <section id="methodology">
       <h2>What this comparison can establish</h2>
       <p>The same dated official-property records supply the comparison and the age checks. These six resorts cover different room sizes, locations, age rules and transfer constraints, not a statistically representative sample or a best-value shortlist. Where two official pages conflict, both remain linked. Missing policy evidence stays unknown rather than becoming an inclusion or admission promise.</p>
-      <p>We have not stayed at these resorts. No guest-review quality score, room-noise judgment, live availability, booking acceptance or total-price ranking is claimed. Published prices for other parties or undated starting rates are not family quotes. Sources can change before the next review date.</p>
+      <p>We have not stayed at these resorts. No guest-review quality score, room-noise judgment, live availability, booking acceptance or total-price ranking is claimed. Published prices for other parties or undated starting rates are not family quotes. Sources can change after the dates shown.</p>
       <p>Family inputs are processed in this page, not saved or submitted. The comparison does not book rooms, contact hotels or reserve childcare.</p>
       <p><a href="../about.html">How Family Tripwise handles research and uncertainty</a></p>
     </section>

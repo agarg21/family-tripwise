@@ -137,6 +137,46 @@ export function findYearlessOperationalNotices(html) {
   return notices;
 }
 
+const DATE_TOKEN = String.raw`(?:\d{4}-\d{2}-\d{2}|(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?\s+\d{1,2}\b)`;
+const REVIEW_DUE_PATTERNS = [
+  /\b(?:review|recheck|re-check|refresh|research)(?:\s+is)?(?:\s+next)?\s+due\b/i,
+  /\bnext\s+(?:source\s+|price\s+)?review\s+date\b/i,
+  new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:on\s+|by\s+|before\s+)?${DATE_TOKEN}`, "i"),
+  /\bdue\s+(?:on\s+|by\s+)?(?:\d{4}-\d{2}-\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}\b)/i
+];
+
+// Public pages state when a fact was observed, never when it will next be reviewed.
+export function findReviewDueDates(text) {
+  const plain = /<[a-z!/]/i.test(text) ? dateReviewTexts(text).join(" ") : text;
+  const found = [];
+  for (const pattern of REVIEW_DUE_PATTERNS) {
+    for (const match of plain.matchAll(new RegExp(pattern.source, "gi"))) {
+      found.push(plain.slice(Math.max(0, match.index - 60), match.index + match[0].length + 40).trim());
+    }
+  }
+  return found;
+}
+
+const MONTH_INDEX = (name) => MONTHS.get(name.toLowerCase().slice(0, 3));
+const STAY_RANGE =
+  /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})\s*[-–]\s*(?:(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+)?\d{1,2},?\s*(\d{4})\b[^.]{0,80}?\bnights?\b/gi;
+const PAST_STAY_LABEL = /older observation|dates passed|stay dates have passed/i;
+
+// A priced stay sample whose arrival date is today or earlier must say so in the same block.
+export function findPastStaySamples(html, { now = new Date() } = {}) {
+  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const found = [];
+  for (const block of dateReviewTexts(html.replace(/<\/(?:p|li|td|th|h[1-6]|div)>/gi, "$&\u0000"))) {
+    for (const part of block.split("\u0000")) {
+      for (const match of part.matchAll(STAY_RANGE)) {
+        const start = Date.UTC(Number(match[3]), MONTH_INDEX(match[1]), Number(match[2]));
+        if (start <= today && !PAST_STAY_LABEL.test(part)) found.push(match[0]);
+      }
+    }
+  }
+  return found;
+}
+
 function walkHtml(dir) {
   return readdirSync(dir)
     .flatMap((entry) => {

@@ -53,6 +53,6 @@ form.addEventListener("reset", () => {
   status.textContent = "Example restored.";
 });
 if (new Date().toISOString().slice(0, 10) >= cancunEvidence.recheckOn) {
-  document.querySelector("#freshness").textContent = `Source refresh due since ${cancunEvidence.recheckOn}. Verify all rules directly before relying on them.`;
+  document.querySelector("#freshness").textContent = `Sources observed ${cancunEvidence.checkedOn}; older observation. Verify all rules directly before relying on them.`;
   output.innerHTML = renderResults(compareCancunFamily({ childAges: [3, 7, 12] }));
 }

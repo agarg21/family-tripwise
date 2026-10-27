@@ -45,7 +45,7 @@ export const suites = [
     caution: "Complimentary Universal Express Unlimited is NOT included at Cabana Bay. Early Park Admission needs valid admission and is limited to participating parks, attractions and operating dates.", cautionSource: "universalBenefits",
     parking: 26, parkingSource: "cabanaHotel", resortFee: null,
     parkingUnit: null, parkingCheckedOn: "2026-10-11", parkingRecheckOn: "2026-10-18",
-    costNote: "Overnight guest self-parking: $26 plus tax per vehicle, subject to change. The inspected wording does not establish billing frequency, tax amount or inclusion in your rate; no stay subtotal is calculated. Amount interpreted as USD from the US property context, not a displayed ISO label. Parking wording checked October 11, 2026; recheck October 18. Other property facts and room prices are not renewed.",
+    costNote: "Overnight guest self-parking: $26 plus tax per vehicle, subject to change. The inspected wording does not establish billing frequency, tax amount or inclusion in your rate; no stay subtotal is calculated. Amount interpreted as USD from the US property context, not a displayed ISO label. Parking wording observed October 11, 2026; check current terms before booking. Other property facts and room prices are not renewed.",
     bookingRates: {
       checkedOn: "2026-10-11", recheckOn: "2026-10-18", source: "cabanaBooking",
       room: "Poolside Family Suite Exterior Entry", party: "two adults and three children (0-17 band counts; individual ages not entered)",

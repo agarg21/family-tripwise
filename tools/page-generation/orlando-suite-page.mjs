@@ -1,18 +1,18 @@
 import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
-import { checkedOn, pageUpdatedOn, priceRecheckOn, recheckOn, sources, suites } from "./orlando-suite-data.mjs";
+import { checkedOn, pageUpdatedOn, sources, suites } from "./orlando-suite-data.mjs";
 import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-model.mjs";
 
 export const orlandoPath = "where-to-stay/orlando-family-hotels.html";
 export const orlandoRateCsvPath = "downloads/orlando-ihg-dated-rates.csv";
 export const orlandoCombinedRateCsvPath = "downloads/orlando-dated-rates.csv";
 export const orlandoMealCsvPath = "downloads/orlando-meal-planning.csv";
-const rateHeadings = ["Property", "Exact room", "Party and age basis", "Stay dates", "Nights", "Currency", "Price unit", "Dated public plan", "Estimated stay total", "Derived approximate nightly", "Room subtotal", "Included resort fees", "Included displayed taxes", "Plan terms", "Fee and acceptance limits", "Deposit timing conflict", "Price observed", "Terms checked", "Recheck due", "Dated source", "Live comparison"];
+const rateHeadings = ["Property", "Exact room", "Party and age basis", "Stay dates", "Nights", "Currency", "Price unit", "Dated public plan", "Estimated stay total", "Derived approximate nightly", "Room subtotal", "Included resort fees", "Included displayed taxes", "Plan terms", "Fee and acceptance limits", "Deposit timing conflict", "Price observed", "Terms checked", "Dated source", "Live comparison"];
 const ihgRateRows = records => records.flatMap(suite => [suite.priceSample, suite.alternatePriceSample].filter(Boolean).map(rate => [
     suite.name, rate.room, rate.party, rate.stay, rate.nights, "USD", "one room / per night; stay total for stated nights",
     rate.plan, rate.estimatedTotal.toFixed(2), (rate.estimatedTotal / rate.nights).toFixed(2), rate.roomSubtotal.toFixed(2),
     rate.resortFees.toFixed(2), rate.taxes.toFixed(2), rate.terms, suite.priceTerms.limitation, suite.priceTerms.depositConflict,
-    rate.observedOn, suite.priceTerms.checkedOn, suite.priceTerms.recheckOn, sources[rate.source], `https://familytripwise.com/${orlandoPath}#ihg-rate-plans`
+    rate.observedOn, suite.priceTerms.checkedOn, sources[rate.source], `https://familytripwise.com/${orlandoPath}#ihg-rate-plans`
   ]));
 const rateCsv = rows => {
   const cell = value => {
@@ -33,7 +33,7 @@ const combinedRateRows = records => records.flatMap(suite => {
       "one room / per night; stay total for stated nights", rate.plan, rate.estimatedTotal.toFixed(2),
       (rate.estimatedTotal / booking.nights).toFixed(2), rate.roomSubtotal.toFixed(2), "Unknown", rate.taxes.toFixed(2),
       `${rate.restrictions} ${booking.terms}`, `${booking.feeBasis} ${booking.limitation}`, "Deposit amount and applicable cancellation deadline require confirmation.",
-      booking.checkedOn, booking.checkedOn, booking.recheckOn, sources[booking.source],
+      booking.checkedOn, booking.checkedOn, sources[booking.source],
       `https://familytripwise.com/${orlandoPath}#${suite.id}`, booking.currencyBasis
     ]);
   });
@@ -41,7 +41,7 @@ export function orlandoCombinedRateComparisonCsv(records = suites) {
   return rateCsv([[...rateHeadings, "Currency basis"], ...combinedRateRows(records)]);
 }
 export function orlandoMealComparisonCsv(records = suites) {
-  const headings = [...rateHeadings, "Currency basis", "Published equipment", "Kitchen planning scope", "Breakfast venue", "Breakfast location", "Published breakfast hours", "Meal limits", "Meal source checked", "Meal recheck due", "Equipment or room-scope source", "Breakfast source"];
+  const headings = [...rateHeadings, "Currency basis", "Published equipment", "Kitchen planning scope", "Breakfast venue", "Breakfast location", "Published breakfast hours", "Meal limits", "Meal source checked", "Equipment or room-scope source", "Breakfast source"];
   const rows = records.flatMap(suite => {
     const kitchen = suite.kitchenPolicy, meal = suite.mealPolicy;
     const policy = meal ?? kitchen;
@@ -54,7 +54,7 @@ export function orlandoMealComparisonCsv(records = suites) {
       breakfast?.location ?? "Unknown in this equipment record",
       breakfast ? `${breakfast.opens}-${breakfast.closes}` : "Unknown in this equipment record",
       policy.limitation,
-      policy.checkedOn, policy.recheckOn, sources[meal?.roomSource ?? kitchen.source],
+      policy.checkedOn, sources[meal?.roomSource ?? kitchen.source],
       meal ? sources[meal.diningSource] : "Not established in this equipment record"
     ];
     return combinedRateRows([suite]).map(row => [...row, ...mealCells]);
@@ -66,29 +66,29 @@ export const mealPolicy = suite => {
   const policy = suite.mealPolicy;
   if (!policy) return "";
   const breakfast = policy.breakfast;
-  return `\n            <div data-meal-policy="${e(suite.id)}"><dt>Kitchen &amp; breakfast</dt><dd><p>${e(policy.kitchenNote)} ${cite(policy.roomSource, "IHG room kitchen scope")}</p><p>Published breakfast buffet: ${e(breakfast.venue)}, ${e(breakfast.location)}, ${e(breakfast.opens)}-${e(breakfast.closes)}. ${cite(policy.diningSource, "IHG breakfast details")}</p><p>${e(policy.limitation)} Meal sources checked ${e(policy.checkedOn)}; recheck ${e(policy.recheckOn)}.</p></dd></div>`;
+  return `\n            <div data-meal-policy="${e(suite.id)}"><dt>Kitchen &amp; breakfast</dt><dd><p>${e(policy.kitchenNote)} ${cite(policy.roomSource, "IHG room kitchen scope")}</p><p>Published breakfast buffet: ${e(breakfast.venue)}, ${e(breakfast.location)}, ${e(breakfast.opens)}-${e(breakfast.closes)}. ${cite(policy.diningSource, "IHG breakfast details")}</p><p>${e(policy.limitation)} Meal sources observed ${e(policy.checkedOn)}; check current terms before booking.</p></dd></div>`;
 };
 export const kitchenPolicy = suite => {
   const policy = suite.kitchenPolicy;
   if (!policy) return "";
-  return `\n            <div data-kitchen-policy="${e(suite.id)}"><dt>Kitchenette &amp; meal planning</dt><dd><p>Published equipment: ${policy.equipment.map(e).join(", ")}. ${cite(policy.source, "Official suite equipment")}</p><p>${e(policy.planningNote)}</p><p>${e(policy.limitation)} Equipment checked ${e(policy.checkedOn)}; recheck ${e(policy.recheckOn)}.</p></dd></div>`;
+  return `\n            <div data-kitchen-policy="${e(suite.id)}"><dt>Kitchenette &amp; meal planning</dt><dd><p>Published equipment: ${policy.equipment.map(e).join(", ")}. ${cite(policy.source, "Official suite equipment")}</p><p>${e(policy.planningNote)}</p><p>${e(policy.limitation)} Equipment observed ${e(policy.checkedOn)}; check current details before booking.</p></dd></div>`;
 };
 const waterPolicy = suite => {
   const policy = suite.waterPolicy;
   if (!policy) return "";
-  return `\n            <div data-water-policy="${e(suite.id)}"><dt>Ride heights &amp; session cost</dt><dd><ul>${policy.rides.map(ride => `<li>${e(ride.name)}: published minimum ${ride.minimumInches} inches.</li>`).join("")}</ul><p>${e(policy.costConflict)} ${cite(suite.waterSource, "IHG fee inclusions")} ${cite(policy.source, "Waterpark FAQ")}</p><p>${e(policy.limitation)} Policy checked ${e(policy.checkedOn)}; recheck ${e(policy.recheckOn)}.</p></dd></div>`;
+  return `\n            <div data-water-policy="${e(suite.id)}"><dt>Ride heights &amp; session cost</dt><dd><ul>${policy.rides.map(ride => `<li>${e(ride.name)}: published minimum ${ride.minimumInches} inches.</li>`).join("")}</ul><p>${e(policy.costConflict)} ${cite(suite.waterSource, "IHG fee inclusions")} ${cite(policy.source, "Waterpark FAQ")}</p><p>${e(policy.limitation)} Policy observed ${e(policy.checkedOn)}; check current terms before booking.</p></dd></div>`;
 };
 const nightlySample = suite => {
   const booking = suite.bookingRates;
   if (booking) {
     const usd = value => `USD${value.toFixed(2)}`;
-    return `<div data-booking-rates="${e(suite.id)}">${booking.plans.map(rate => `<p>Observed ${e(booking.checkedOn)} for ${e(booking.stay)}, ${e(booking.room)}, ${e(booking.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / booking.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} displayed for ${booking.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.taxes)} displayed taxes). ${e(rate.restrictions)}</p>`).join("")}<p>${e(booking.terms)}</p><p>${e(booking.feeBasis)} ${e(booking.currencyBasis)}</p><p>${e(booking.limitation)} Price and terms checked ${e(booking.checkedOn)}; recheck ${e(booking.recheckOn)}. ${cite(booking.source, "Official Cabana Bay rate details")}</p></div>`;
+    return `<div data-booking-rates="${e(suite.id)}">${booking.plans.map(rate => `<p>Observed ${e(booking.checkedOn)} for ${e(booking.stay)}, ${e(booking.room)}, ${e(booking.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / booking.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} displayed for ${booking.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.taxes)} displayed taxes). ${e(rate.restrictions)}</p>`).join("")}<p>${e(booking.terms)}</p><p>${e(booking.feeBasis)} ${e(booking.currencyBasis)}</p><p>${e(booking.limitation)} Price and terms observed ${e(booking.checkedOn)}; check live rates before booking. ${cite(booking.source, "Official Cabana Bay rate details")}</p></div>`;
   }
   const sample = suite.priceSample;
   if (!sample) return "A matching room/party/date quote has not been observed.";
   const usd = value => `USD${value.toFixed(2)}`;
   const render = rate => `<p>Observed ${e(rate.observedOn)} for ${e(rate.stay)}, ${e(rate.room)}, ${e(rate.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / rate.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} estimated for ${rate.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.resortFees)} resort fee + ${usd(rate.taxes)} displayed taxes). ${e(rate.terms)} ${cite(rate.source, "Dated IHG rate details")}</p>`;
-  return `<div id="ihg-rate-plans" data-rate-plans="${e(suite.id)}"><p><a href="../${orlandoRateCsvPath}" download>Download dated IHG rates (CSV)</a></p>${[sample, suite.alternatePriceSample].filter(Boolean).map(render).join("")}<p>${e(suite.priceTerms.limitation)}</p><p>${e(suite.priceTerms.depositConflict)} Price terms checked ${e(suite.priceTerms.checkedOn)}; recheck ${e(suite.priceTerms.recheckOn)}.</p></div>`;
+  return `<div id="ihg-rate-plans" data-rate-plans="${e(suite.id)}"><p><a href="../${orlandoRateCsvPath}" download>Download dated IHG rates (CSV)</a></p>${[sample, suite.alternatePriceSample].filter(Boolean).map(render).join("")}<p>${e(suite.priceTerms.limitation)}</p><p>${e(suite.priceTerms.depositConflict)} Price terms observed ${e(suite.priceTerms.checkedOn)}; check live rates before booking.</p></div>`;
 };
 
 export function orlandoSuitePage() {
@@ -114,7 +114,7 @@ export function orlandoSuitePage() {
       ${contributorCredit()}
       <p class="lede">Room for everyone, the right park base, and water benefits that actually apply to your dates.</p>
       <p>Three suite options across Disney, Universal and an off-site waterpark base. This is a focused comparison for a family considering one room, not a best-hotel ranking or a complete Orlando directory.</p>
-      <p>Base sources checked <time datetime="${checkedOn}">September 24, 2026</time>; IHG booking capacity and general fee comparison checked <time datetime="${pageUpdatedOn}">September 27, 2026</time>. Dated IHG price plans checked October 11, 2026. <span id="freshness">Price sample recheck due ${priceRecheckOn}; other source review due ${recheckOn}. Verify changing terms before paying.</span></p>
+      <p>Base sources checked <time datetime="${checkedOn}">September 24, 2026</time>; IHG booking capacity and general fee comparison checked <time datetime="${pageUpdatedOn}">September 27, 2026</time>. Dated IHG price plans checked October 11, 2026. <span id="freshness">Check live rates and current terms before paying.</span></p>
       <div class="jump-links"><a href="#quick-compare">Compare bases</a><a href="#stay-check">Check dates &amp; fees</a><a href="#before-booking">Booking questions</a></div>
     </section>
     <section id="quick-compare">

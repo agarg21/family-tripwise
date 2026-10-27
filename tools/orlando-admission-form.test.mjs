@@ -99,7 +99,7 @@ test("blank, fractional, negative, no-adult and past-date tasks fail without sta
 
 test("future-visit recheck is explicit and reset clears all values/results",()=>{
   const f=fixture();f.ages([30,35,2,13]);f.visit.value="2026-11-10";f.submit();
-  assert.match(f.results.textContent,/Recheck due; historical arithmetic only/);assert.match(f.status.textContent,/7 choices rely on an older rate observation/);
+  assert.match(f.results.textContent,/Older observation; historical arithmetic only/);assert.match(f.status.textContent,/7 choices rely on an older rate observation/);
   f.reset();assert.equal(f.count.value,"4");assert.equal(f.visit.value,"");assert.ok(f.inputs().every(input=>input.value===""));assert.equal(f.results.hidden,true);assert.equal(f.status.textContent,"No party calculated.");
 });
 

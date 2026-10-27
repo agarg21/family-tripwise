@@ -12,7 +12,7 @@ test("PV exposes same-record meal-plan increment and preserves unknown cost righ
  assert.equal(comparison.stay_increment,1499);assert.equal(comparison.nightly_increment,299.8);
  for(const text of ['id="meal-plan-increment"','USD 1499.00 more','USD 299.80 per configuration/night',
    'not a per-person food budget','exclude tax','rounded whole-dollar','conflicts with opened ten-day',
-   '35% deposit is payment timing','not an extra fee','age 12 is not under 12','not re-priced','Original price review due October 23'])assert.ok(html.includes(text),text);
+   '35% deposit is payment timing','not an extra fee','age 12 is not under 12','not re-priced','check live rates before booking'])assert.ok(html.includes(text),text);
  assert.equal((html.match(/id="meal-plan-increment"/g)||[]).length,1);
  for(const rate of pvRooms[0].price.rates)assert.ok(html.includes(`${rate.nightly_average.toFixed(2)} <span>${rate.plan}</span>`));
  assert.equal(pvCsv,read('site/downloads/puerto-vallarta-family-resorts.csv'));
@@ -28,7 +28,7 @@ test("PV comparison and full CSV share original maintained category/price joins"
 });
 test("generic child meal block separates policy, promotion, selected tax and billing units",()=>{
  const html=puertoVallartaFamilyResortsPage(),block=html.match(/<div id="meal-policy-boundaries"[\s\S]*?<\/div>(?=<article id="pv-garza-sanctuary)/)[0];
- for(const text of ["Ages 4-12: half price", "13+: adult price", "Ages 4, 8, 12", "All guests in the same room", "cannot combine with promotions", "no child discount is deducted", "selected cards exclude tax", "pre-tax amounts stay unchanged", "at least 3 consecutive days", "Five hotel nights do not establish billable meal units", "Selected Fall Sale applicability", "remain unverified", "review due November 9"])assert.ok(block.includes(text),text);
+ for(const text of ["Ages 4-12: half price", "13+: adult price", "Ages 4, 8, 12", "All guests in the same room", "cannot combine with promotions", "no child discount is deducted", "selected cards exclude tax", "pre-tax amounts stay unchanged", "at least 3 consecutive days", "Five hotel nights do not establish billable meal units", "Selected Fall Sale applicability", "remain unverified", "check current terms before booking"])assert.ok(block.includes(text),text);
  assert.match(block,/tabindex="0" role="region" aria-label="Generic child meal policy"/);assert.match(block,/scroll-margin-top:128px/);
  assert.doesNotMatch(block,/USD \d|free for all|confirmed meals/);
  const watch=JSON.parse(read('ops/evidence-watch.json')).records.find(r=>r.id==='pv-generic-meal-policy');assert.equal(watch.verified_on,'2026-10-10');assert.equal(watch.interval_days,30);assert.ok(block.includes(watch.source_urls[0]));

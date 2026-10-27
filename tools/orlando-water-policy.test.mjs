@@ -34,7 +34,7 @@ test("Static and enhanced page use the same policy and preserve fee arithmetic",
   assert.equal((html.match(/data-water-policy=/g) ?? []).length, 1);
   for (const ride of policy.rides) assert.ok(html.includes(`${ride.name}: published minimum ${ride.minimumInches} inches.`));
   assert.match(html, /Official cost conflict/);
-  assert.match(html, /Policy checked 2026-10-11; recheck 2026-10-18/);
+  assert.match(html, /Policy observed 2026-10-11; check current terms before booking/);
   assert.deepEqual([checkedOn, pageUpdatedOn, recheckOn], ["2026-09-24", "2026-09-27", "2026-10-24"]);
   assert.equal(priceRecheckOn, suites[2].priceTerms.recheckOn);
   assert.ok(html.includes(`About USD${Math.round(suites[2].priceSample.estimatedTotal / suites[2].priceSample.nights)} per room/night`));

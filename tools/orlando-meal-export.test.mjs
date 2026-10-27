@@ -8,16 +8,16 @@ const parse = csv => csv.trimEnd().split("\n").map(line => [...line.matchAll(/"(
 test("Meal export retains every dated budget cell and scoped same-record meal evidence", () => {
   const [head, ...rows] = parse(orlandoMealComparisonCsv());
   const [priceHead, ...priceRows] = parse(orlandoCombinedRateComparisonCsv());
-  assert.equal(head.length, 32);
+  assert.equal(head.length, 30);
   assert.equal(rows.length, 4);
-  assert.deepEqual(head.slice(0, 22), priceHead);
+  assert.deepEqual(head.slice(0, 21), priceHead);
   rows.forEach((row, i) => {
-    assert.equal(row.length, 32);
-    assert.deepEqual(row.slice(0, 22), priceRows[i]);
+    assert.equal(row.length, 30);
+    assert.deepEqual(row.slice(0, 21), priceRows[i]);
     const record = Object.fromEntries(head.map((name, j) => [name, row[j]]));
     const suite = suites[i < 2 ? 1 : 2], policy = suite.mealPolicy ?? suite.kitchenPolicy;
     assert.equal(record["Meal source checked"], policy.checkedOn);
-    assert.equal(record["Meal recheck due"], policy.recheckOn);
+    assert.equal(record["Meal recheck due"], undefined);
     assert.equal(record["Meal limits"], policy.limitation);
     if (i < 2) {
       assert.equal(record["Published equipment"], policy.equipment.join("; "));
@@ -55,8 +55,8 @@ test("CSV protects new meal cells and never mutates shared records", () => {
     const copy = structuredClone(suites[2]);
     copy.mealPolicy.kitchenNote = `${prefix}note, "quoted"\nnext\ttab`;
     const [, row] = parse(orlandoMealComparisonCsv([copy]));
-    assert.equal(row[23], `'${prefix}note, "quoted" next tab`);
-    assert.equal(row.length, 32);
+    assert.equal(row[22], `'${prefix}note, "quoted" next tab`);
+    assert.equal(row.length, 30);
   }
   orlandoMealComparisonCsv();
   assert.equal(JSON.stringify(suites), before);

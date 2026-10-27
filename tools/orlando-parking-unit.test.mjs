@@ -23,7 +23,7 @@ test("Cabana fee retains amount and unknown unit with its own source clock", () 
   const fees = hotelEvidence().find(r=>r.id === "orlando-cabana-bay").fields.fees;
   assert.equal(fees.observed_on, "2026-09-24");
   assert.equal(fees.value.parking, 26);
-  assert.match(fees.value.cost_note, /Parking wording checked October 11, 2026; recheck October 18/);
+  assert.match(fees.value.cost_note, /Parking wording observed October 11, 2026; check current terms before booking/);
 });
 
 test("Unknown frequency never creates a one-, five-, or thirty-night parking subtotal", () => {
@@ -52,7 +52,7 @@ test("No vehicle is selected zero, not a free-parking or fee-waiver claim", () =
 test("Static and generated public output share the corrected null, not hidden130", () => {
   const html = orlandoSuitePage();
   assert.equal(readFileSync(new URL("../site/where-to-stay/orlando-family-hotels.html",import.meta.url),"utf8"),html);
-  assert.match(html, /Parking wording checked October 11, 2026/);
+  assert.match(html, /Parking wording observed October 11, 2026/);
   assert.match(html, /no calculated stay subtotal/);
   assert.doesNotMatch(html, /\$130|per vehicle per night[^<]*Cabana/);
   assert.ok(html.includes(`About USD${Math.round(suites[2].priceSample.estimatedTotal / suites[2].priceSample.nights)} per room/night`));

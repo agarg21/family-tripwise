@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { basename, dirname, join, normalize, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-import { findExpiredOperationalNotices, findYearlessOperationalNotices } from "./content-freshness.mjs";
+import { findExpiredOperationalNotices, findPastStaySamples, findReviewDueDates, findYearlessOperationalNotices } from "./content-freshness.mjs";
 
 const rootDir = fileURLToPath(new URL("../", import.meta.url));
 const siteDir = join(rootDir, "site");
@@ -119,12 +119,26 @@ for (const url of sitemapUrls) {
   }
 }
 
+const downloadsDir = join(siteDir, "downloads");
+for (const entry of existsSync(downloadsDir) ? readdirSync(downloadsDir) : []) {
+  if (!/\.(?:csv|txt)$/i.test(entry)) continue;
+  for (const excerpt of findReviewDueDates(readFileSync(join(downloadsDir, entry), "utf8"))) {
+    errors.push(`site/downloads/${entry} shows a forward review/recheck date: ${excerpt}`);
+  }
+}
+
 for (const filePath of htmlFiles) {
   const html = readFileSync(filePath, "utf8");
   const rel = relative(rootDir, filePath);
 
   for (const notice of findExpiredOperationalNotices(html)) {
     errors.push(`${rel} has an expired operational notice ending ${notice.endDate}: ${notice.excerpt}`);
+  }
+  for (const excerpt of findReviewDueDates(html)) {
+    errors.push(`${rel} shows a forward review/recheck date; state the observation date instead: ${excerpt}`);
+  }
+  for (const sample of findPastStaySamples(html)) {
+    errors.push(`${rel} shows a past-stay price sample without "older observation; dates passed": ${sample}`);
   }
   for (const notice of findYearlessOperationalNotices(html)) {
     warnings.push(`${rel} needs operational date review (year missing; expiry UNKNOWN) for ${notice.dateText}: ${notice.excerpt}`);
