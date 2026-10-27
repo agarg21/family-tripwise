@@ -144,6 +144,7 @@ const REVIEW_DUE_PATTERNS = [
   /\bnext\s+(?:source\s+|price\s+)?(?:review|recheck|refresh)\s*:/i,
   /\b(?:review|recheck|refresh)\s+(?:is\s+)?scheduled\b/i,
   new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:on\s+|by\s+|before\s+)?${DATE_TOKEN}`, "i"),
+  new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:[a-z]+\s+){1,3}(?:by|before)\s+${DATE_TOKEN}`, "i"),
   /(?<!\b(?:payment|payments|balance|deposit|charge|charges|fee|fees|amount|paid|payable|full payment)\s)\bdue\s+(?:on\s+|by\s+)?(?:\d{4}-\d{2}-\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}\b)/i
 ];
 
