@@ -107,8 +107,7 @@ export function orlandoSuitePage() {
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="orlando-page">
-  <a class="skip-link" href="#main">Skip to comparison</a>
-  ${siteHeader("../", "where-to-stay/orlando-family-hotels.html")}
+  ${siteHeader("../", "where-to-stay/orlando-family-hotels.html", { skipLabel: "Skip to comparison" })}
   <main id="main">
     <section class="intro">
       <p class="eyebrow">Orlando, Florida</p><h1>Orlando family hotels</h1>

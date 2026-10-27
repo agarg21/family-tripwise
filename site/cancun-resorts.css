@@ -2,6 +2,7 @@
 .cancun-page * { letter-spacing: 0; }
 .cancun-page .site-header { position: relative; background: #fff; }
 .cancun-page main { max-width: 1240px; margin: auto; padding: 32px 24px 64px; }
+.cancun-page .related-guides { width: min(1192px, calc(100% - 48px)); }
 .cancun-page h1 { font-size: 2.5rem; line-height: 1.15; max-width: 850px; margin: 12px 0 16px; }
 .cancun-page h2 { font-size: 1.65rem; line-height: 1.25; margin: 0 0 18px; }
 .cancun-page h3 { font-size: 1.1rem; line-height: 1.35; margin: 0 0 8px; }
@@ -77,6 +78,7 @@
 }
 @media (max-width: 540px) {
   .cancun-page main { padding: 24px 18px 40px; }
+  .cancun-page .related-guides { width: calc(100% - 36px); }
   .cancun-page h1 { font-size: 2rem; }
   .cancun-page h2 { font-size: 1.4rem; }
   .cancun-page .resort-row, .cancun-page .form-grid, .cancun-page #child-fields { grid-template-columns: 1fr; }

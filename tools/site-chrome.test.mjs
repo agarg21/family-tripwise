@@ -81,3 +81,26 @@ test("every internal link in the shared chrome points at an existing page", () =
     }
   }
 });
+
+test("every page with the shared header opens with one skip link to its single <main id=\"main\">", () => {
+  for (const [path, html] of Object.entries(pages)) {
+    if (!html.includes('<header class="site-header">')) continue;
+    assert.equal((html.match(/<a class="skip-link" href="#main">[^<]+<\/a><header class="site-header">/g) || []).length, 1, `${path} skip link`);
+    assert.equal((html.match(/class="skip-link"/g) || []).length, 1, `${path} has a duplicate skip link`);
+    assert.equal((html.match(/<main\b/g) || []).length, 1, `${path} main count`);
+    assert.match(html, /<main id="main"[\s>]/, `${path} main id`);
+    assert.equal((html.match(/\bid="main"/g) || []).length, 1, `${path} duplicate id="main"`);
+  }
+});
+
+test("shared chrome styles outrank page stylesheets' h2/ul/li rules and align with each layout", () => {
+  const css = readFileSync(join(site, "styles.css"), "utf8");
+  for (const selector of ["body .related-guides h2", "body .related-guides ul", "body .related-guides li", ".site-footer .guide-directory h2", ".site-footer .guide-directory ul", ".site-footer .guide-directory li"]) {
+    assert.ok(css.includes(`${selector} {`), selector);
+  }
+  assert.doesNotMatch(css, /^\.related-guides (h2|ul|li) \{/m, "unprefixed related-guides rules lose to page h2/ul rules");
+  for (const [file, cls] of [["washington-dc-comparison.css", "dc-page"], ["orlando-suites.css", "orlando-page"], ["cancun-resorts.css", "cancun-page"]]) {
+    assert.match(readFileSync(join(site, file), "utf8"), new RegExp(`\\.${cls} \\.related-guides \\{ ?width:`), file);
+  }
+  assert.match(css, /\.london-page \.related-guides \{ width:/);
+});

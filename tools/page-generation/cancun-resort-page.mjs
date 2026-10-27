@@ -74,8 +74,7 @@ export function cancunResortPage() {
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="cancun-page">
-  <a class="skip-link" href="#main">Skip to comparison</a>
-  ${siteHeader("../", "where-to-stay/cancun-family-resorts.html")}
+  ${siteHeader("../", "where-to-stay/cancun-family-resorts.html", { skipLabel: "Skip to comparison" })}
   <main id="main">
     <section class="page-intro">
       <p class="eyebrow">Cancun area, Mexico</p>

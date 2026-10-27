@@ -104,7 +104,7 @@ function sanDiegoSpecialistSources(city) {
 }
 
 function hero(city, h1, intro, lastUpdated, sourceNote) {
-  return `    <main>
+  return `    <main id="main">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">${esc(city.name)}, ${esc(city.state)}</p>
@@ -426,7 +426,7 @@ function aboutPage() {
   </head>
   <body>
     ${siteHeader("./")}
-    <main>
+    <main id="main">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">Methodology</p>
@@ -617,7 +617,7 @@ writeSite("index.html", `<!doctype html>
   </head>
   <body>
     ${siteHeader("./")}
-    <main>
+    <main id="main">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">Family travel planning</p>

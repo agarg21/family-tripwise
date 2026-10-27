@@ -91,7 +91,8 @@ function link(prefix, path, label, current) {
 }
 
 // prefix: "./" for root pages, "../" for pages one folder deep. current: site-relative path of this page.
-export function siteHeader(prefix, current = "") {
+// Every page using the header must have exactly one <main id="main">; the skip link targets it.
+export function siteHeader(prefix, current = "", { skipLabel = "Skip to main content" } = {}) {
   const here = destinationFor(current);
   const links = destinations
     .map((d) => {
@@ -99,7 +100,7 @@ export function siteHeader(prefix, current = "") {
       return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short || d.name)}</a>`;
     })
     .join("");
-  return `<header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav class="site-nav" aria-label="Destination guides">${links}</nav></header>`;
+  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav class="site-nav" aria-label="Destination guides">${links}</nav></header>`;
 }
 
 export function relatedGuides(prefix, current) {
@@ -134,6 +135,7 @@ export function siteEnd(prefix, current, options) {
 // Removes the shared chrome so page-specific tests can measure only the page's own content.
 export function stripSiteChrome(html) {
   return html
+    .replace(/<a class="skip-link" href="#main">[^<]*<\/a>/, "")
     .replace(/<header class="site-header">[\s\S]*?<\/header>/, "")
     .replace(/<nav class="related-guides"[\s\S]*?<\/nav>/, "")
     .replace(/<footer class="site-footer">[\s\S]*?<\/footer>/, "");
