@@ -1,7 +1,7 @@
 # STATE (operator working state; keep ≤8 KB; overwrite, don't append)
 
-authority: owner-directed cloud scheduled task, every 4 hours; ends 2026-11-13 17:00 America/New_York
-caps: 1 transaction per run, 2 per Eastern day
+authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2026-11-13 17:00 America/New_York
+caps: 1 transaction per run; daily_cap=8 until 2026-10-30 10:00 ET, then daily_cap=2 (Eastern day)
 today: 2026-10-27 transactions=1
 run: {id: 2026-10-27T13:54:30Z, started_at: 2026-10-27T13:54:30Z}
 last_public_release: 32f4024 (2026-10-27, Q01 Orlando admission form)
