@@ -1,11 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q03 Discovery fixes: sitemap lastmod, Orlando cross-link, dead Coronado link
-open · S · owner: D4c Approved · gate: none
-Files: tools/generate-pages.mjs (sitemap), Orlando hotels generator, the 5 SD pages citing coronadoferrylanding.com/ferry-info/ (404).
-Acceptance: every <loc> has <lastmod> equal to its real last content change. where-to-stay/orlando-family-hotels.html links to things-to-do/orlando-with-kids.html and back. The Coronado link returns 200 or is replaced/removed.
-
 ## Q04 Shared nav and "Related guides" on every guide
 open · M · owner: D4b Approved · gate: none
 Problem: three different navs; Boston/DC/PV/London have 1 inbound link each, Cancun/Orlando hotels 2, Orlando activities 1.
@@ -40,7 +35,7 @@ Acceptance: one named deficiency fixed per page (e.g. top answer box; day-shape 
 
 ## Q02c Freshness-checker follow-ups (Q02b review P3s)
 open · S · owner: none (tools + 1 page) · gate: none
-Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns.
+Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3).
 
 ## Q09 Lodging-page readability fix
 open · M · owner: D4e Approved · gate: Q02 done
