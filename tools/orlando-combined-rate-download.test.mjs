@@ -15,7 +15,7 @@ test("combined export keeps four source-based plans and property-specific unknow
     const v = Object.fromEntries(head.map((name, j) => [name, row[j]]));
     assert.equal(v.Nights, "5");
     assert.equal(v.Currency, "USD");
-    assert.equal(v["Stay dates"], "November 8-13, 2026");
+    assert.equal(v["Stay dates"], "November 8-13, 2026 (older observation)");
     assert.equal(v["Price observed"], "2026-10-11");
     assert.equal(v["Recheck due"], undefined);
     assert.match(v["Party and age basis"], /three children.*ages not entered/);

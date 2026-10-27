@@ -22,7 +22,7 @@ export function datedBudgetComparisonHtml(records) {
   return `<section id="dated-family-budgets" class="band" aria-labelledby="dated-family-budgets-title" style="scroll-margin-top: 80px">
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Dated room budgets</p><h2 id="dated-family-budgets-title">Five-person room budgets for November 8-13</h2></div>
-          <p class="review-label">Checked October 11, 2026: one unit, two adults and three children, November 8-13, 2026 (five nights). Different room categories and age-input evidence; these samples are not current quotes, confirmed family acceptance or complete trip budgets.</p>
+          <p class="review-label">Checked October 11, 2026: one unit, two adults and three children, November 8-13, 2026 (five nights). Different room categories and age-input evidence; these samples are older observations, not current quotes, confirmed family acceptance or complete trip budgets.</p>
           <div class="comparison-scroll logistics-comparison" tabindex="0" role="region" aria-label="Dated five-person NYC room budget comparison">
             <table class="comparison-table dated-family-budgets">
               <thead><tr><th scope="col">Hotel / exact category</th><th scope="col">Average nightly USD</th><th scope="col">Five-night displayed total USD</th><th scope="col">Displayed charges / separate amounts</th><th scope="col">Age and room limits</th></tr></thead>

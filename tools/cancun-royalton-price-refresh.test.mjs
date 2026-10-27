@@ -48,5 +48,5 @@ test("all generated outputs agree on current plans and dated room-continuity war
   for (const p of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
     for (const term of ["USD 2,993.10 total", "USD 3,743.25 total", "LXUU2", "earlier view and bedding are not reconfirmed", "amount is not refreshed", "2026-10-11"]) assert.ok(output.get(p).includes(term),`${p}: ${term}`);
   }
-  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"2026-10-11","no"/);
+  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"2026-10-11","older observation; stay starts 2026-11-09"/);
 });

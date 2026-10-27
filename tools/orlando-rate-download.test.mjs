@@ -16,7 +16,7 @@ test("portable rates retain both same-room plans and all dated fee/age/term boun
     const p = [hotel.priceSample, hotel.alternatePriceSample][i];
     assert.equal(values["Exact room"], p.room);
     assert.equal(values["Party and age basis"], p.party);
-    assert.equal(values["Stay dates"], p.stay);
+    assert.equal(values["Stay dates"], `${p.stay} (older observation)`);
     assert.equal(values.Nights, "5");
     assert.equal(values.Currency, "USD");
     assert.equal(values["Price unit"], "one room / per night; stay total for stated nights");

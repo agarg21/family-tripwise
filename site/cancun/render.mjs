@@ -16,9 +16,11 @@ const priceLabel = price => price.kind === "official-starting"
     : price.kind === "dated-single-plan-sample"
       ? `${money(price.usdFrom)}/night (dated family sample)`
     : `About ${money(price.usdFrom)}/night (Fall into Savings) or ${money(price.usdTo)}/night (Standard Rate)`;
-const todayIso = () => new Date().toISOString().slice(0, 10);
-const stayDatesPassed = price => Boolean(price.stayStart) && price.stayStart <= todayIso();
-const pastStayPrefix = price => stayDatesPassed(price) ? "Older observation; dates passed. " : "";
+// Labels must not depend on the build date: generated pages and downloads are compared byte-for-byte.
+// "Dates passed" is stated only for stays that had begun on this fixed label date; every dated sample is an older observation.
+const PASSED_AS_OF = "2026-10-27";
+const stayDatesPassed = price => Boolean(price.stayStart) && price.stayStart <= PASSED_AS_OF;
+const pastStayPrefix = price => !price.stayStart ? "" : stayDatesPassed(price) ? "Older observation; dates passed. " : "Older observation; not a current quote. ";
 const priceHtml = record => record.price
   ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(pastStayPrefix(record.price) + record.price.basis)}</p><p>${esc(record.price.fees)} Price observed ${esc(record.price.observedOn)}; check live rates before booking.</p>${sources(record.price.sourceIds, "Price source")}`
   : "<p><strong>Exact-room nightly price: not verified.</strong> Request a dated quote for your party.</p>";
@@ -46,7 +48,7 @@ export function comparisonCsv() {
     record.price ? priceLabel(record.price) : "Exact-room nightly price: not verified",
     record.price?.basis ?? "Request a dated quote for the exact room and party",
     record.price?.fees ?? "Complete stay cost unknown; request an itemized quote",
-    record.price?.observedOn ?? "", record.price ? (!record.price.stayStart ? "n/a (undated rate)" : stayDatesPassed(record.price) ? "yes; older observation" : "no") : "",
+    record.price?.observedOn ?? "", record.price ? (!record.price.stayStart ? "n/a (undated rate)" : stayDatesPassed(record.price) ? "yes; older observation" : `older observation; stay starts ${record.price.stayStart}`) : "",
     capacity(record), record.room.beds, record.room.checks.join(" | "), record.extras.checks.join(" | "),
     sourceUrls(record.price?.sourceIds ?? []), sourceUrls(record.room.sourceIds), sourceUrls(record.extras.sourceIds),
     cancunEvidence.checkedOn,

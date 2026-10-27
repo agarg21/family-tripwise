@@ -9,7 +9,7 @@ export const orlandoCombinedRateCsvPath = "downloads/orlando-dated-rates.csv";
 export const orlandoMealCsvPath = "downloads/orlando-meal-planning.csv";
 const rateHeadings = ["Property", "Exact room", "Party and age basis", "Stay dates", "Nights", "Currency", "Price unit", "Dated public plan", "Estimated stay total", "Derived approximate nightly", "Room subtotal", "Included resort fees", "Included displayed taxes", "Plan terms", "Fee and acceptance limits", "Deposit timing conflict", "Price observed", "Terms checked", "Dated source", "Live comparison"];
 const ihgRateRows = records => records.flatMap(suite => [suite.priceSample, suite.alternatePriceSample].filter(Boolean).map(rate => [
-    suite.name, rate.room, rate.party, rate.stay, rate.nights, "USD", "one room / per night; stay total for stated nights",
+    suite.name, rate.room, rate.party, `${rate.stay} (older observation)`, rate.nights, "USD", "one room / per night; stay total for stated nights",
     rate.plan, rate.estimatedTotal.toFixed(2), (rate.estimatedTotal / rate.nights).toFixed(2), rate.roomSubtotal.toFixed(2),
     rate.resortFees.toFixed(2), rate.taxes.toFixed(2), rate.terms, suite.priceTerms.limitation, suite.priceTerms.depositConflict,
     rate.observedOn, suite.priceTerms.checkedOn, sources[rate.source], `https://familytripwise.com/${orlandoPath}#ihg-rate-plans`
@@ -29,7 +29,7 @@ const combinedRateRows = records => records.flatMap(suite => {
     const booking = suite.bookingRates;
     if (!booking) return ihgRateRows([suite]).map(row => [...row, "USD displayed in the dated IHG currency selector and rate disclosures."]);
     return booking.plans.map(rate => [
-      suite.name, booking.room, booking.party, booking.stay, booking.nights, booking.currency,
+      suite.name, booking.room, booking.party, `${booking.stay} (older observation)`, booking.nights, booking.currency,
       "one room / per night; stay total for stated nights", rate.plan, rate.estimatedTotal.toFixed(2),
       (rate.estimatedTotal / booking.nights).toFixed(2), rate.roomSubtotal.toFixed(2), "Unknown", rate.taxes.toFixed(2),
       `${rate.restrictions} ${booking.terms}`, `${booking.feeBasis} ${booking.limitation}`, "Deposit amount and applicable cancellation deadline require confirmation.",
@@ -82,12 +82,12 @@ const nightlySample = suite => {
   const booking = suite.bookingRates;
   if (booking) {
     const usd = value => `USD${value.toFixed(2)}`;
-    return `<div data-booking-rates="${e(suite.id)}">${booking.plans.map(rate => `<p>Observed ${e(booking.checkedOn)} for ${e(booking.stay)}, ${e(booking.room)}, ${e(booking.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / booking.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} displayed for ${booking.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.taxes)} displayed taxes). ${e(rate.restrictions)}</p>`).join("")}<p>${e(booking.terms)}</p><p>${e(booking.feeBasis)} ${e(booking.currencyBasis)}</p><p>${e(booking.limitation)} Price and terms observed ${e(booking.checkedOn)}; check live rates before booking. ${cite(booking.source, "Official Cabana Bay rate details")}</p></div>`;
+    return `<div data-booking-rates="${e(suite.id)}">${booking.plans.map(rate => `<p>Older observation, checked ${e(booking.checkedOn)} for ${e(booking.stay)}, ${e(booking.room)}, ${e(booking.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / booking.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} displayed for ${booking.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.taxes)} displayed taxes). ${e(rate.restrictions)}</p>`).join("")}<p>${e(booking.terms)}</p><p>${e(booking.feeBasis)} ${e(booking.currencyBasis)}</p><p>${e(booking.limitation)} Price and terms observed ${e(booking.checkedOn)}; check live rates before booking. ${cite(booking.source, "Official Cabana Bay rate details")}</p></div>`;
   }
   const sample = suite.priceSample;
   if (!sample) return "A matching room/party/date quote has not been observed.";
   const usd = value => `USD${value.toFixed(2)}`;
-  const render = rate => `<p>Observed ${e(rate.observedOn)} for ${e(rate.stay)}, ${e(rate.room)}, ${e(rate.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / rate.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} estimated for ${rate.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.resortFees)} resort fee + ${usd(rate.taxes)} displayed taxes). ${e(rate.terms)} ${cite(rate.source, "Dated IHG rate details")}</p>`;
+  const render = rate => `<p>Older observation, checked ${e(rate.observedOn)} for ${e(rate.stay)}, ${e(rate.room)}, ${e(rate.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / rate.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} estimated for ${rate.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.resortFees)} resort fee + ${usd(rate.taxes)} displayed taxes). ${e(rate.terms)} ${cite(rate.source, "Dated IHG rate details")}</p>`;
   return `<div id="ihg-rate-plans" data-rate-plans="${e(suite.id)}"><p><a href="../${orlandoRateCsvPath}" download>Download dated IHG rates (CSV)</a></p>${[sample, suite.alternatePriceSample].filter(Boolean).map(render).join("")}<p>${e(suite.priceTerms.limitation)}</p><p>${e(suite.priceTerms.depositConflict)} Price terms observed ${e(suite.priceTerms.checkedOn)}; check live rates before booking.</p></div>`;
 };
 
@@ -138,9 +138,9 @@ export function orlandoSuitePage() {
         </div>
         <div class="actions"><button type="submit" disabled>Compare stay</button><button type="reset" disabled>Restore example</button></div>
       </form>
-      <noscript><p>Example: two adults and three children, November 8-13, 2026, one vehicle. All sources and comparison details are available below; personalized checks need JavaScript.</p></noscript>
+      <noscript><p>Example: two adults and three children, November 8-13, 2026, one vehicle; prices shown are older observations, not current quotes. All sources and comparison details are available below; personalized checks need JavaScript.</p></noscript>
       <p id="stay-status" role="status" aria-live="polite"></p>
-      <h3 id="results-title">Example: 5 people / 5 nights / November 8-13, 2026</h3>
+      <h3 id="results-title">Example (older observations): 5 people / 5 nights / November 8-13, 2026</h3>
       <div id="suite-results" tabindex="-1" aria-labelledby="results-title">${suites.map((suite, index) => `
         <article id="${suite.id}" class="suite">
           <p class="eyebrow">${e(suite.base)}</p><h3>${e(suite.name)}</h3><p><strong>${e(suite.room)}</strong></p>
