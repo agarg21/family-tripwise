@@ -25,6 +25,10 @@ Reproducible fake-DOM interaction tests cover the30/35/2/13 task, infant1/teen13
 
 Run focused checks with `node --test tools/orlando-admission-form.test.mjs tools/orlando-admission-budget.test.mjs tools/orlando-activities-page.test.mjs`. The page writer emits exactly the affected HTML and two source-identical module copies. Native preview preflight checks server bytes/headers only, never permission or rendered usability.
 
+## Superseded 2026-10-27 (Q01)
+
+Released as Q01 after the tariffs were re-observed on 2026-10-27 (`docs/research/orlando-admission-refresh-2026-10-27.md`), headless Chromium QA and an independent review. The hold, schema-date and "reused, not renewed" notes below are historical.
+
 ## Release Hold
 
 Candidate review cycle1: Boyle returned FAIL for one P2. Typing14 travelers through intermediate1 discarded the other entered ages. The repair retains per-traveler drafts in memory across count changes, prices only currently visible travelers and clears all drafts on reset. Sequential-keystroke and hidden-draft-reset regressions were added. Cycle1 findings are retained; final native QA and cycle2 re-review are required. This repair does not clear the rendered release hold below.

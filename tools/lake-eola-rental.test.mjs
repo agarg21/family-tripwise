@@ -130,6 +130,9 @@ test("source-dated desk tasks match executable rental cases, without public deli
     const predatesEvidence = admissionTariffs.some(tariff => row.as_of < tariff.checkedOn);
     if (row.result.startsWith("REJECT") || predatesEvidence) assert.throws(()=>compareOrlandoAdmission(input));
     else assert.equal(compareOrlandoAdmission(input).optionalRental.publishedRentalSubtotalCents,row.published_rental_subtotal_cents);
+    // The rental evidence itself is still dated 2026-10-15, so its arithmetic stays checkable on its own.
+    if (!row.result.startsWith("REJECT")) assert.equal(calculateLakeEolaRental(rental, {partySize:row.ages.length, boatLoads:row.boat_loads,
+      asOf:row.as_of, visitDate:row.visit_date}).publishedRentalSubtotalCents, row.published_rental_subtotal_cents);
   }
   assert.equal(record.public_release,false);
   assert.equal(record.external_mutation,false);

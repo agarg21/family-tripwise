@@ -18,6 +18,7 @@ test("all seven choices retain exact sources and native detail targets",()=>{
   for(const r of activities){assert.ok(html.includes(`id="${r.id}"`));assert.ok(html.includes(`href="#${r.id}"`));assert.ok(r.sourceIds.every(s=>sources[s]));for(const s of r.sourceIds)assert.ok(html.includes(sources[s]));}
   assert.equal((html.match(/role="region"/g)||[]).length,3);assert.equal((html.match(/tabindex="0"/g)||[]).length,3);
   assert.doesNotMatch(html,/download|\.csv|<script src=/);
+  const external=[...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map(m=>m[1]);assert.deepEqual(external,["../shared/orlando-admission-form.mjs"]);
 });
 test("admission arithmetic retains ages, units, online versus onsite and tax unknowns",()=>{
   const [osc,c,sea,m,l,g]=activities;

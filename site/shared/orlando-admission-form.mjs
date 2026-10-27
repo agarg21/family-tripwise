@@ -64,7 +64,7 @@ export function initializeAdmissionBudget(document, {today = localDate} = {}) {
       if (record.unknownReason) price.append(node("p",record.unknownReason));
       context.append(node("p",record.channel),node("p",record.guests.map(guest=>
         `Age ${guest.age}: ${guest.cents === null ? "rate unknown" : `${guest.ticket}, ${usd(guest.cents)}`}`).join("; ")),
-        node("p",record.needsRecheck ? `Rates observed ${record.checkedOn} on the official site; that observation is older than your date allows, so check the current price.` : `Rates observed ${record.checkedOn} on the official site; check the current price before buying.`),node("p",`Excluded: ${record.exclusions.join("; ")}.`));
+        node("p",record.guests.every(guest=>guest.ticket===null) ? `Official source inspected ${record.checkedOn}; no standalone rate was established.` : record.needsRecheck ? `Rates observed ${record.checkedOn} on the official site; your visit date is beyond this observation's freshness window, so check the current price.` : `Rates observed ${record.checkedOn} on the official site; check the current price before buying.`),node("p",`Excluded: ${record.exclusions.join("; ")}.`));
       const source=node("a","Official admission source");source.href=record.sourceUrl;context.append(source);
       row.append(name,price,context);body.append(row);
     }
