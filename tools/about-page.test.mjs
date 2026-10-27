@@ -44,3 +44,9 @@ test("About preserves metadata and URL inventory while correcting coverage", () 
   assert.match(html, /href="\.\/contributors\/miles-rowan\.html"/);
   assert.equal((sitemap.match(/<loc>https:\/\/familytripwise\.com\/about\.html<\/loc>/g) || []).length, 1);
 });
+
+test("Home page does not imply human-reviewed or firsthand claims", () => {
+  const index = readFileSync("site/index.html", "utf8");
+  assert.doesNotMatch(index, /human-reviewed|human reviewer supplied/);
+  assert.match(index, /our guides are AI-assisted research from dated official sources, not firsthand visits/);
+});
