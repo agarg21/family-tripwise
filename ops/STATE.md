@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2026-11-13 17:00 America/New_York
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-27 transactions=9
-run: none
+run: {id: 2026-10-27T22:04:40Z, started_at: 2026-10-27T22:04:40Z}
 last_public_release: e2c408e (2026-10-27, Q06 NYC family hotels: Check live rate, answer box)
 active: none
 
