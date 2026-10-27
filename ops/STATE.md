@@ -9,7 +9,7 @@ active: none
 
 ## Holds (one line each: what, unblock condition)
 - Orlando admission tariffs observed 2026-10-27; re-observe by 2026-11-10 (the form flags them as older for later visit dates).
-- GSC sitemap resubmission + indexing requests for 5 "unknown to Google" URLs: owner action in the GSC UI (operator credentials are read-only). See OWNER.md T1.
+- GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)

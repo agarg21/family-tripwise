@@ -11,7 +11,7 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D7 Source access — Approved: official venue/hotel/operator pages at most once per URL per run and once per week, honoring robots.txt and Crawl-delay; keep dated extracted facts, not raw bodies; never fetch third-party review sites automatically. Garfield/Dana holds closed; Tripadvisor holds rejected.
 
 ## Owner tasks (operator cannot do these)
-- T1 (open): In Google Search Console, resubmit https://familytripwise.com/sitemap.xml and Request indexing for: /things-to-do/san-diego-with-kids.html, /things-to-do/san-diego-with-teens.html, /family-itinerary/new-york-city-with-kids.html, /where-to-stay/orlando-family-hotels.html, /where-to-stay/puerto-vallarta-family-resorts.html.
+- T1 (done 2026-10-27, owner-approved, via owner's Chrome): sitemap resubmitted (Google read it immediately: 36 discovered, was 28); indexing requested for all 5 URLs. Original task: In Google Search Console, resubmit https://familytripwise.com/sitemap.xml and Request indexing for: /things-to-do/san-diego-with-kids.html, /things-to-do/san-diego-with-teens.html, /family-itinerary/new-york-city-with-kids.html, /where-to-stay/orlando-family-hotels.html, /where-to-stay/puerto-vallarta-family-resorts.html.
 
 ## Open questions
 (none)
