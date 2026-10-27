@@ -11,9 +11,9 @@ The strategy is to build destination-specific family travel pages and interactiv
 - Improve existing pages before adding URLs unless the current SERP clearly requires a separate page type.
 - Build research authority through a maintained evidence layer: official facts, source-dated review patterns, claim-level uncertainty, and visible synthesis that helps families decide faster.
 - Differentiate through current source-backed research, clean comparisons, family-constraint routing, useful maps, and compact decision support. AI accelerates collection and synthesis; it does not manufacture experience.
-- Run the renewed independent Master-thread autopilot through November 13, 2026 at 17:00 America/New_York. Cadence is not a content quota; evidence, native QA, independent review and release gates still apply.
+- A cloud scheduled operator runs every 4 hours through November 13, 2026 at 17:00 America/New_York, working `ops/QUEUE.md` top to bottom. Evidence, tests, rendered QA, independent review and release gates still apply.
 
-Seven destinations now have public guides, including Cancun and Orlando lodging comparisons. Existing-page maintenance and evidence-qualified expansion proceed together; the current ranked research queue is in `ops/seo-roadmap.json`, with the September30 search screen in `docs/research/family-expansion-2026-09-30.md`.
+Seven destinations now have public guides, including Cancun and Orlando lodging comparisons. Existing-page maintenance and evidence-qualified expansion proceed together; the current ordered work queue is `ops/QUEUE.md`, with the September30 search screen in `docs/research/family-expansion-2026-09-30.md`.
 
 ## Starter Docs
 
@@ -38,8 +38,9 @@ Seven destinations now have public guides, including Cancun and Orlando lodging 
 - [Deployment](docs/plan/deployment.md)
 - [90-day execution plan](docs/plan/90-day-execution-plan.md)
 - [Incremental city cluster playbook](docs/plan/incremental-city-cluster-playbook.md)
-- [Current operating cycle](ops/current-cycle.md)
-- [SEO roadmap](ops/seo-roadmap.md)
+- [Operator state](ops/STATE.md)
+- [Work queue](ops/QUEUE.md)
+- [Owner decisions](ops/OWNER.md)
 - [City status convention](status/README.md)
 
 ## Local Preview
@@ -138,8 +139,7 @@ Activity maintenance starts with the twelve maintained San Diego logistics recor
 
 Run `node tools/activity-card-quality.mjs` for the detailed 37-card San Antonio/Chicago/NYC editorial comparison queue. It retains nine fields per attraction (333 total) with all atomic sources and verification dates explicitly unmapped. July page-source notes and page-level source lists are retained context, not proof for the individual age, price, stroller, rain or rest labels. Save a new immutable report with `--date YYYY-MM-DD --output ops/page-quality/YYYY-MM-DD-activity-cards.json`. The unified runner includes this contract and sixteen remaining stay-area/itinerary/teen/toddler models. Current exact-visit budgets, field-source mapping and source-specific automatic price collection remain evidence gaps. The offline commands make no network calls, public changes or date renewal.
 
-- `ops/seo-roadmap.json`: machine-readable action and release state.
-- `ops/current-cycle.md`: concise current operating checkpoint.
+- `ops/STATE.md`, `ops/QUEUE.md`, `ops/OWNER.md`: operator state, ordered work and owner decisions (Codex-era roadmap and logs are frozen in `archive/2026-10/`).
 - `backlog/community-answer-drafts.json`: validated community-answer drafts and user review decisions; posting is always disabled.
 - `status/`: city-level page roles, frozen evidence baselines, review coverage, release state, and blockers.
 - `docs/research/`: dated decision packs and evidence records.

@@ -1,0 +1,25 @@
+# STATE (operator working state; keep ≤8 KB; overwrite, don't append)
+
+authority: owner-directed cloud scheduled task, every 4 hours; ends 2026-11-13 17:00 America/New_York
+caps: 1 transaction per run, 2 per Eastern day
+today: 2026-10-27 transactions=0
+run: none
+last_public_release: b77b7b3 (2026-10-13)
+active: Q01 (setup session 2026-10-27; scheduled runs skip Q01 while this line says setup session)
+
+## Holds (one line each: what, unblock condition)
+- GSC sitemap resubmission + indexing requests for 5 "unknown to Google" URLs: owner action in the GSC UI (operator credentials are read-only). See OWNER.md T1.
+- Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
+
+## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
+| Metric | Baseline 2026-10-27 | Target 2026-11-13 |
+|---|---|---|
+| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24) | report; ≥15 clicks good |
+| Sitemap URLs indexed | 31/36; sitemap last read 2026-07-27 | 36/36 or a reason per URL |
+| Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28) | 0 |
+| Verified public releases per week (release.json SHA changes) | 0 since Oct 13 | ≥4 |
+| Sitemap URLs with <3 internal inbound links | 7 | 0 |
+| Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
+
+## Last run
+- 2026-10-27 setup session: four independent reviews + judge (summary in ops/runs/2026-10.md); archived Codex-era logs to archive/2026-10/; replaced governance tests with tools/ops-state.test.mjs; created STATE/QUEUE/OWNER; GSC snapshot cadence Mon/Thu.

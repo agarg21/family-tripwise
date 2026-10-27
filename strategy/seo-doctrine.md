@@ -65,6 +65,10 @@ Use query-level evidence whenever available. Page and property averages are orie
 
 These bands are project heuristics, not claims about individual impressions or universal Google thresholds.
 
+## 6a. Early-Stage Regime (under 100 organic clicks per 28 days)
+
+Below roughly 100 clicks per finalized 28-day window, query cohorts are too thin to measure edits, so measurement gates and observation windows do not block work. Prioritize, in order: visible trust and freshness defects, discovery (sitemap, internal links, indexing), refreshing high-impression pages with observed evidence, and new pages of the type that already earns clicks. Record what changed and when, so a later, larger window can be read; do not claim causal effects from these numbers.
+
 ## 7. CTR Work Must Earn Eligibility
 
 Do not call a page a CTR problem because aggregate CTR is low.
