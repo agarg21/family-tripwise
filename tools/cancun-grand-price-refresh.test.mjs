@@ -64,6 +64,6 @@ test("all generated comparison outputs use the maintained refreshed price", () =
     assert.ok(output.get(path).includes("2026-10-11"), path);
   }
   assert.match(output.get("where-to-stay/cancun-family-resorts.html"), /price examples observed 2026-09-27, 2026-10-11/);
-  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"2026-10-11","yes; older observation"/);
+  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"2026-10-11","dates passed; older observation"/);
   assert.equal(cancunResortPage(), output.get("where-to-stay/cancun-family-resorts.html"));
 });
