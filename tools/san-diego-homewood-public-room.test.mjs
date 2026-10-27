@@ -9,7 +9,7 @@ test("Homewood scoped room note comes from exact-category maintained evidence", 
   const note = sanDiegoCurrentRoomNote(evidence.hotel);
   assert.equal(note.sourceUrl, evidence.source_url);
   assert.equal(note.policySourceUrl, evidence.policy_source_url);
-  for (const fact of [evidence.checked_on, evidence.recheck_on, evidence.category, evidence.sleeping_setup, ...evidence.equipment]) assert.ok(note.text.includes(fact), fact);
+  for (const fact of [evidence.checked_on, "check current details before booking", evidence.category, evidence.sleeping_setup, ...evidence.equipment]) assert.ok(note.text.includes(fact), fact);
   assert.equal(evidence.published_maximum, 6);
   assert.equal(evidence.size_sq_ft, 570);
   assert.equal(sanDiegoCurrentRoomNote("The Dana on Mission Bay"), null);

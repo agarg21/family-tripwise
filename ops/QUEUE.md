@@ -1,12 +1,15 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q02 Staleness sweep: no public due dates, no past-stay price samples
-open · M · owner: D4a Approved · gate: none
-Problem: 7 live pages show overdue "review due/recheck" dates (Cancun, Orlando hotels, Boston, DC, PV, London, SD hotels); Orlando activities joins them on Oct 28. Cancun Moon Palace sample is for Oct 18–23.
-Files: those pages' generators in tools/page-generation/*, plus tools/seo-qa.mjs.
-Also (Q01 review P3s): no `recheckOn` forward date in served page JSON (rename to an internal freshness field or derive it inside the module); Orlando activities page states admission rates Oct 27 vs other facts Oct 13 per fact, names the Spanish official page as the Science Center rate source, shows a no-JS line pointing to the static table, drops the stale "October 12/13" Eye hours, adds a form unit test for the "no standalone rate was established" wording, and moves the superseded note in docs/plan/orlando-admission-integration-2026-10-15.md under its H1.
-Acceptance: "Observed <date>; check live rates before booking" replaces every forward due/recheck date. Samples whose stay dates have passed are removed or labelled "older observation; dates passed". seo-qa errors on a forward-looking due date or a past-stay sample. Live check of all 8 URLs.
+## Q16 Relabel Nov 8-13 / Nov 9-12 stay samples before they pass
+open · S · owner: D4a Approved (staleness sweep) · gate: must ship by 2026-11-07
+Problem: from Nov 8 (Boston, DC, PV, London, NYC, Orlando hotels + Orlando CSVs) and Nov 9 (Cancun), example stays will have begun. seo-qa and the site-equals-generator tests fail from then, which blocks every release.
+Acceptance: each sample is re-observed for future dates from an official source, or labelled "Older observation; dates passed" (data-driven stayStart like Cancun, not hand-edited HTML). Optional: client-side relabel from stayStart. seo-qa clean when run with now=2026-11-14.
+
+## Q02b Orlando activities follow-ups (Q01 review P3s)
+open · S · owner: none (1 page + docs) · gate: none
+Files: tools/page-generation/orlando-activity-*.mjs, src/shared/orlando-admission-form.mjs, docs/plan/orlando-admission-integration-2026-10-15.md.
+Acceptance: give per-fact dates (admission rates Oct 27, other facts Oct 13); name the Spanish official page as the Science Center rate source; add a no-JS line that points to the static table; drop the stale "October 12/13" Eye hours; add a form unit test for the "no standalone rate was established" wording; move the superseded note under its H1. Also (Q02 review P3): require the price signal in findPastStaySamples to sit near the matched range.
 
 ## Q03 Discovery fixes: sitemap lastmod, Orlando cross-link, dead Coronado link
 open · S · owner: D4c Approved · gate: none

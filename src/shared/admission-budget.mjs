@@ -22,7 +22,7 @@ function validateTariff(tariff) {
     throw new TypeError("Invalid maintained admission tariff.");
   const url = new URL(tariff.sourceUrl);
   if (url.protocol !== "https:" || url.username || url.password) throw new TypeError("Use a public HTTPS source.");
-  if (dateValue(tariff.recheckOn) <= dateValue(tariff.checkedOn)) throw new RangeError("Invalid tariff review window.");
+  if (dateValue(tariff.olderFrom) <= dateValue(tariff.checkedOn)) throw new RangeError("Invalid tariff review window.");
   for (const band of tariff.bands) {
     if (!band || !Number.isInteger(band.minimumAge) || band.minimumAge < 0 || band.minimumAge > 120 ||
         !(band.maximumAge === null || Number.isInteger(band.maximumAge) && band.maximumAge >= band.minimumAge && band.maximumAge <= 120) ||
@@ -48,7 +48,7 @@ export function calculateAdmissionBudget(tariffs, input) {
     if (ids.has(tariff.id)) throw new TypeError("Duplicate admission choice.");
     ids.add(tariff.id);
     if (asOf < dateValue(tariff.checkedOn)) throw new RangeError("Assessment predates the evidence.");
-    const needsRecheck = asOf >= dateValue(tariff.recheckOn) || visit >= dateValue(tariff.recheckOn);
+    const needsRecheck = asOf >= dateValue(tariff.olderFrom) || visit >= dateValue(tariff.olderFrom);
     const guests = input.travelerAges.map(age => {
       const band = tariff.bands.find(item => age >= item.minimumAge && (item.maximumAge === null || age <= item.maximumAge));
       return { age, ticket: band?.label ?? null, cents: band?.cents ?? null };
@@ -62,7 +62,7 @@ export function calculateAdmissionBudget(tariffs, input) {
       publishedAdmissionSubtotalCents: subtotal,
       status: subtotal === null ? "price-unknown" : needsRecheck ? "historical-subtotal-needs-recheck" : "published-subtotal-not-quote",
       missingAges, unknownReason: missingAges.length ? tariff.unknownReason ?? "No published rate mapped for one or more ages." : null,
-      checkedOn: tariff.checkedOn, recheckOn: tariff.recheckOn, needsRecheck,
+      checkedOn: tariff.checkedOn, olderFrom: tariff.olderFrom, needsRecheck,
       sourceUrl: tariff.sourceUrl, taxAndFeeStatus: tariff.taxAndFeeStatus,
       exclusions: [...tariff.exclusions], completeDayCostCents: null,
       selectedDateAvailability: "unknown", admissionAcceptance: "unknown"

@@ -6,7 +6,7 @@ const status = document.querySelector("#stay-status");
 const results = document.querySelector("#suite-results");
 const heading = document.querySelector("#results-title");
 const utcToday = new Date().toISOString().slice(0, 10);
-if (utcToday >= recheckOn) document.querySelector("#freshness").textContent = "Source refresh is due. Reconfirm every policy and price illustration with the property.";
+if (utcToday >= recheckOn) document.querySelector("#freshness").textContent = "Older observation. Reconfirm every policy and price illustration with the property.";
 const hideChecks = () => {
   for (const element of document.querySelectorAll(".checks")) element.hidden = true;
   heading.textContent = "Published suite details / stay checks need updating";

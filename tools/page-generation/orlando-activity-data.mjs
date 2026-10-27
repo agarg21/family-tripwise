@@ -66,7 +66,7 @@ const admissionBasis = {
 export const admissionTariffs = activities.map(record => {
   const basis = admissionBasis[record.id], inspected = basis.bands.length ? "2026-10-27" : checkedOn;
   return {id:record.id,name:record.name,currency:"USD",product:"Single-visit standard admission",channel:basis.channel,
-    checkedOn:inspected,recheckOn:"2026-11-10",sourceUrl:sources[basis.sourceId],
+    checkedOn:inspected,olderFrom:"2026-11-10",sourceUrl:sources[basis.sourceId],
     taxAndFeeStatus:basis.taxAndFeeStatus ?? "Tax and transaction-fee inclusion unknown.",
     exclusions:["Parking, transport, meals and optional experiences", "Senior, student, military, membership and other conditional concessions", "Online discounts, promotions, special events and annual passes"],
     bands:basis.bands,unknownReason:basis.unknownReason ?? null};

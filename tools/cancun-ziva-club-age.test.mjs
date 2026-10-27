@@ -43,14 +43,14 @@ test("4-12 and 10-17 overlap survives routing rather than assuming teen13 cutoff
 test("scope-specific recheck does not renew other properties or hide unknown admission", () => {
   assert.equal(row(compare([2,7],"2026-10-17")).clubEvidence.needsRecheck,false);
   assert.equal(row(compare([2,7],"2026-10-18")).clubEvidence.needsRecheck,true);
-  assert.match(renderResults(compare([2,7],"2026-10-18")),/Club source review due/);
+  assert.match(renderResults(compare([2,7],"2026-10-18")),/Club rules are an older observation/);
   for(const r of compare([2,7]).records.filter(r=>r.id!==ziva.id)) assert.equal(r.clubEvidence,null);
   const grand = compare([2,7]).records.find(r=>r.id==="grand-family-suite");
   assert.ok(grand.children.every(c=>c.program===null));
 });
 test("overview, result and checklist expose same scoped rules without inventing care prices", () => {
   for(const text of [renderOverview(),renderResults(compare([2,7])),bookingChecklistText()]) {
-    for(const value of ["Club rules checked 2026-10-11; review due 2026-10-18", "costs extra", "parent-free care", evidence.source_url]) assert.ok(text.includes(value),value);
+    for(const value of ["Club rules observed 2026-10-11; check current rules before booking", "costs extra", "parent-free care", evidence.source_url]) assert.ok(text.includes(value),value);
   }
   assert.match(bookingChecklistText(),/4-12 KidZ Club \| 10-17 @Moods Lounge and Club/);
   assert.equal(read("site/downloads/cancun-room-comparison.csv"),comparisonCsv());

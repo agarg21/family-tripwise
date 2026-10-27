@@ -106,5 +106,5 @@ test("Worksheet stays blank, labeled and conditional; original source and price 
   for (const text of ["not ages 8 and 12", "hypothetical", "do not establish six meal entitlements", "Credits", "Not actual savings", "No food credits are deducted"])
     assert.ok((section + breakfastBudgetMessage(assessBreakfastUpgrade(config, estimate))).includes(text), text);
   assert.match(section, /aria-live="polite" aria-atomic="true"/);
-  assert.match(page, /source and prices observed October 1/); assert.match(page, /price review due October 15/);
+  assert.match(page, /source and prices observed October 1/); assert.match(page, /not re-priced; check live rates before booking/); assert.doesNotMatch(page, /review due/i);
 });

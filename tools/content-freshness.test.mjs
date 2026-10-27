@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-import { findExpiredOperationalNotices, findYearlessOperationalNotices } from "./content-freshness.mjs";
+import { findExpiredOperationalNotices, findPastStaySamples, findReviewDueDates, findYearlessOperationalNotices } from "./content-freshness.mjs";
 
 const now = new Date("2026-07-28T12:00:00Z");
 
@@ -213,4 +213,27 @@ test("source recheck dates are not operational end dates after the check day", (
   const chicago = readFileSync(new URL("../site/where-to-stay/chicago-family-hotels.html", import.meta.url), "utf8");
   assert.deepEqual(findExpiredOperationalNotices(chicago, { now: nextDay }), []);
   assert.equal(findYearlessOperationalNotices(chicago).length, 4);
+});
+
+test("forward review or recheck dates are flagged; observation wording passes", () => {
+  for (const text of ["<p>Price checked 2026-10-11; review due 2026-10-18.</p>", "<p>Next source review due October 23, 2026.</p>",
+    "<p>Policy checked 2026-10-11; recheck 2026-10-18.</p>", "<p>Parking wording checked October 11; recheck October 18.</p>",
+    "<p>Price research is next due October 16.</p>", "<p>Next price review: 2026-11-01.</p>", "<p>Review scheduled for November 3.</p>", "<p>Sources can change before the next review date.</p>", '"Price checked","Recheck due"'])
+    assert.ok(findReviewDueDates(text).length > 0, text);
+  for (const text of ["<p>Price observed 2026-10-11; check live rates before booking.</p>", "<p>Notice rechecked September 22, 2026.</p>",
+    "<p>October 11, 2026 recheck unavailable; these facts have not been renewed.</p>", "<p>Recheck venue and weather before leaving.</p>",
+    "<p>Payment due by November 1, 2026.</p>", "<p>Balance due 2026-11-01.</p>"])
+    assert.deepEqual(findReviewDueDates(text), [], text);
+});
+
+test("past-stay price samples need an older-observation label in the same block", () => {
+  const now = new Date("2026-10-27T12:00:00Z");
+  assert.equal(findPastStaySamples("<p>October 18-23, 2026, five nights; USD 9,723 displayed total.</p>", { now }).length, 1);
+  assert.equal(findPastStaySamples("<p>October 27-30, 2026, three nights; USD 934.</p>", { now }).length, 1);
+  assert.deepEqual(findPastStaySamples("<p>Older observation; dates passed. October 18-23, 2026, five nights.</p>", { now }), []);
+  assert.deepEqual(findPastStaySamples("<p>November 8-13, 2026, five nights, no car.</p>", { now }), []);
+  assert.deepEqual(findPastStaySamples("<p>Online-review themes sampled: July 18-21, 2026.</p>", { now }), []);
+  const orlando = "<p>Observed 2026-10-11 for November 8-13, 2026, Poolside Family Suite Exterior Entry, two adults and three children (ages not entered): Special Offer, a long plan name and terms text that pushes the unit well past eighty characters, for 5 nights.</p>";
+  assert.equal(findPastStaySamples(orlando, { now: new Date("2026-11-08T12:00:00Z") }).length, 1);
+  assert.deepEqual(findPastStaySamples(orlando, { now }), []);
 });

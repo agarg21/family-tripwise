@@ -10,7 +10,7 @@ export function sanDiegoCurrentRoomNote(name) {
   if (name !== currentHomewoodRoom.hotel) return null;
   const room = currentHomewoodRoom;
   return {
-    text: `Exact room facts checked ${room.checked_on} (review due ${room.recheck_on}): ${room.category}, ${room.size_sq_ft} sq ft, published sleeps ${room.published_maximum}. ${room.sleeping_setup} Published kitchen equipment: ${room.equipment.join(", ")}. ${room.dining_scope} ${room.limitation}`,
+    text: `Exact room facts observed ${room.checked_on}; check current details before booking: ${room.category}, ${room.size_sq_ft} sq ft, published sleeps ${room.published_maximum}. ${room.sleeping_setup} Published kitchen equipment: ${room.equipment.join(", ")}. ${room.dining_scope} ${room.limitation}`,
     sourceUrl: room.source_url,
     policySourceUrl: room.policy_source_url
   };

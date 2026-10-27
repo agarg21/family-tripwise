@@ -202,7 +202,7 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.equal(currentRecord.verified_on, "2026-09-24");
       assert.match(record.basis, /Published overnight parking/);
       assert.match(currentRecord.basis, /billing frequency/);
-      assert.match(currentRecord.basis, /Parking wording checked October 11, 2026/);
+      assert.match(currentRecord.basis, /Parking wording observed October 11, 2026/);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
     } else if (record.id === "cancun-ziva-ocean-view-double-activities") {
       assert.equal(record.verified_on, "2026-09-23");

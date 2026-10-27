@@ -16,14 +16,17 @@ const priceLabel = price => price.kind === "official-starting"
     : price.kind === "dated-single-plan-sample"
       ? `${money(price.usdFrom)}/night (dated family sample)`
     : `About ${money(price.usdFrom)}/night (Fall into Savings) or ${money(price.usdTo)}/night (Standard Rate)`;
+const todayIso = () => new Date().toISOString().slice(0, 10);
+const stayDatesPassed = price => Boolean(price.stayStart) && price.stayStart <= todayIso();
+const pastStayPrefix = price => stayDatesPassed(price) ? "Older observation; dates passed. " : "";
 const priceHtml = record => record.price
-  ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(record.price.basis)}</p><p>${esc(record.price.fees)} Price checked ${esc(record.price.observedOn)}; verify for your family and dates.${record.price.recheckOn ? ` Next price review due ${esc(record.price.recheckOn)}.` : ""}</p>${sources(record.price.sourceIds, "Price source")}`
+  ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(pastStayPrefix(record.price) + record.price.basis)}</p><p>${esc(record.price.fees)} Price observed ${esc(record.price.observedOn)}; check live rates before booking.</p>${sources(record.price.sourceIds, "Price source")}`
   : "<p><strong>Exact-room nightly price: not verified.</strong> Request a dated quote for your party.</p>";
 const priceText = record => record.price
-  ? `${priceLabel(record.price)}\nBasis: ${record.price.basis}\nFees: ${record.price.fees}\nPrice checked: ${record.price.observedOn}. Verify for your family and dates.${record.price.recheckOn ? ` Next price review due ${record.price.recheckOn}.` : ""}`
+  ? `${priceLabel(record.price)}\nBasis: ${pastStayPrefix(record.price)}${record.price.basis}\nFees: ${record.price.fees}\nPrice observed: ${record.price.observedOn}; check live rates before booking.`
   : "Exact-room nightly price: not verified. Request a dated quote for your party.";
 const quickPriceHtml = record => record.price?.scan
-  ? `<div class="quick-price-screen"><p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(record.price.scan.basis)}</p><p>${esc(record.price.scan.fees)}</p><p class="source-date">Price checked ${esc(record.price.observedOn)}; review due ${esc(record.price.recheckOn ?? cancunEvidence.priceRecheckOn)}. Not a live quote.</p>${sources(record.price.sourceIds, "Price source")}<details><summary>Complete price basis and booking checks</summary>${priceHtml(record)}${list(record.room.checks)}</details></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
+  ? `<div class="quick-price-screen"><p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(pastStayPrefix(record.price) + record.price.scan.basis)}</p><p>${esc(record.price.scan.fees)}</p><p class="source-date">Price observed ${esc(record.price.observedOn)}; check live rates before booking. Not a live quote.</p>${sources(record.price.sourceIds, "Price source")}<details><summary>Complete price basis and booking checks</summary>${priceHtml(record)}${list(record.room.checks)}</details></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
   : `${priceHtml(record)}${list(record.room.checks)}`;
 
 const csvCell = value => {
@@ -32,21 +35,21 @@ const csvCell = value => {
   return `"${safe.replaceAll('"', '""')}"`;
 };
 const sourceUrls = ids => [...new Set(ids)].map(id => cancunEvidence.sources[id]).join(" | ");
-const clubClockText = clubs => clubs.checkedOn ? `Club rules checked ${clubs.checkedOn}; review due ${clubs.recheckOn}. Other room, price and policy source dates are unchanged.` : "";
+const clubClockText = clubs => clubs.checkedOn ? `Club rules observed ${clubs.checkedOn}; check current rules before booking. Other room, price and policy source dates are unchanged.` : "";
 const clubClockHtml = clubs => clubs.checkedOn ? `<p class="source-date">${esc(clubClockText(clubs))}</p>` : "";
 const priorClubSources = clubs => clubs.priorSourceIds ? `<p class="source-date">Earlier property pages checked ${esc(clubs.priorCheckedOn)}; not a current club-rule verification.</p>${sources(clubs.priorSourceIds, "Retained earlier property source")}` : "";
 
 export function comparisonCsv() {
-  const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price checked", "Price refresh due", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy checked", "Policy recheck due", "Live record"];
+  const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price observed", "Stay dates passed", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy observed", "Live record"];
   const rows = cancunEvidence.records.map(record => [
     record.hotel, record.area, record.room.category,
     record.price ? priceLabel(record.price) : "Exact-room nightly price: not verified",
     record.price?.basis ?? "Request a dated quote for the exact room and party",
     record.price?.fees ?? "Complete stay cost unknown; request an itemized quote",
-    record.price?.observedOn ?? "", record.price ? record.price.recheckOn ?? cancunEvidence.priceRecheckOn : "",
+    record.price?.observedOn ?? "", record.price ? (!record.price.stayStart ? "n/a (undated rate)" : stayDatesPassed(record.price) ? "yes; older observation" : "no") : "",
     capacity(record), record.room.beds, record.room.checks.join(" | "), record.extras.checks.join(" | "),
     sourceUrls(record.price?.sourceIds ?? []), sourceUrls(record.room.sourceIds), sourceUrls(record.extras.sourceIds),
-    cancunEvidence.checkedOn, cancunEvidence.recheckOn,
+    cancunEvidence.checkedOn,
     `https://familytripwise.com/where-to-stay/cancun-family-resorts.html#${record.id}`
   ]);
   return [headings, ...rows].map(row => row.map(csvCell).join(",")).join("\r\n") + "\r\n";
@@ -54,7 +57,7 @@ export function comparisonCsv() {
 
 export function renderQuickComparison() {
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
-    <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples checked ${esc(priceObservationDates())}, earliest refresh due ${esc(cancunEvidence.priceRecheckOn)} · Policy recheck due ${esc(cancunEvidence.recheckOn)}</caption>
+    <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples observed ${esc(priceObservationDates())}; check live rates before booking</caption>
     <thead><tr><th scope="col">Resort and exact room</th><th scope="col">Approx nightly price and booking checks</th><th scope="col">Published capacity and sleeping places</th></tr></thead>
     <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Approx nightly price and booking checks">${quickPriceHtml(record)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td><td data-label="Published capacity and sleeping places"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
@@ -64,8 +67,8 @@ export function bookingChecklistText() {
   const recordSources = ids => [...new Set(ids)].map(id => `${id}: ${cancunEvidence.sources[id]}`).join("\n");
   return `FAMILY TRIPWISE - CANCUN BOOKING CHECKLIST
 https://familytripwise.com/where-to-stay/cancun-family-resorts.html#quick-comparison
-Sources checked: ${cancunEvidence.checkedOn}; recheck due: ${cancunEvidence.recheckOn}.
-Price examples checked: ${priceObservationDates()}; earliest refresh due: ${cancunEvidence.priceRecheckOn}. Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
+Sources observed: ${cancunEvidence.checkedOn}.
+Price examples observed: ${priceObservationDates()}; check live rates before booking. Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
 
 YOUR BOOKING
 Travel dates: ____________________ Adults: ____ Children's ages at travel: ____________________
@@ -130,13 +133,13 @@ const transferMessages = {
 };
 
 export function renderResults(result) {
-  return `${result.needsRecheck ? '<p class="notice"><strong>Source refresh due.</strong> These rules may have changed. Treat every result as provisional and verify directly.</p>' : ""}
+  return `${result.needsRecheck ? `<p class="notice"><strong>Older observation.</strong> These rules were observed ${esc(cancunEvidence.checkedOn)} and may have changed. Treat every result as provisional and verify directly.</p>` : ""}
   <p class="result-scope">Two adults; children aged ${result.childAges.map(esc).join(", ")}. Club ages are not hotel child-rate ages. Room acceptance, current availability and total cost remain unconfirmed.</p>
   <div class="result-grid">${result.records.map(record => `<article class="result-card">
     <h3><a href="#${esc(record.id)}">${esc(record.hotel)}</a></h3>
     <p class="room-status" data-status="${esc(record.room.status)}">${esc(roomMessages[record.room.status])}</p>
 ${record.room.layoutStatus === "unknown" ? "<p><strong>Sleeping layout unresolved:</strong> confirm every sleeping place and whether connection is guaranteed.</p>" : ""}
-${record.clubEvidence ? `    ${clubClockHtml(record.clubEvidence)}${record.clubEvidence.needsRecheck ? '<p class="notice">Club source review due; confirm the current rules.</p>' : ""}<details><summary>Current club conditions</summary>${list(record.clubChecks)}</details>\n` : ""}\
+${record.clubEvidence ? `    ${clubClockHtml(record.clubEvidence)}${record.clubEvidence.needsRecheck ? '<p class="notice">Club rules are an older observation; confirm the current rules.</p>' : ""}<details><summary>Current club conditions</summary>${list(record.clubChecks)}</details>\n` : ""}\
     <ul class="child-results">${record.children.map((child, index) => `<li data-status="${esc(child.status)}"><strong>Child ${index + 1}, age ${child.age}${child.program ? `: ${esc(child.program)}` : ""}.</strong> ${esc(childMessages[child.status])}${child.otherPrograms?.length ? ` Also listed for this age: ${child.otherPrograms.map(esc).join(" / ")}; confirm its separate admission rules.` : ""}${child.registration === true ? " Registration required." : ""}</li>`).join("")}</ul>
     <p data-transfer="${esc(record.transfers.status)}">${esc(transferMessages[record.transfers.status])}</p>
     ${sources(record.room.sourceIds, "Confirm room")}${sources([...new Set(record.children.flatMap(child => child.sources.map(source => source.id)))], "Confirm club")}${sources(record.transfers.sources.map(source => source.id), "Confirm transfer")}

@@ -36,7 +36,7 @@ test("price does not erase connection, category, fee or formal group-rate holds"
 });
 test("additive public case preserves unknown group price and separate dated terms", () => {
   const html = cancunGrandparentsSection();
-  for (const value of ["Four adults, two children", "November 9-12, 2026", "USD 1,193.00", "USD 3,579.00", "USD 1,491.87", "USD 4,475.61", "A four-adult, two-child price is not verified", "not a reservation guarantee", "not established", "step-free access", "2026-10-18", "excludes group bookings"]) assert.ok(html.includes(value), value);
+  for (const value of ["Four adults, two children", "November 9-12, 2026", "USD 1,193.00", "USD 3,579.00", "USD 1,491.87", "USD 4,475.61", "A four-adult, two-child price is not verified", "not a reservation guarantee", "not established", "step-free access", "check live rates before booking", "excludes group bookings"]) assert.ok(html.includes(value), value);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)[0].match(/<tr>/g) ?? []).length, 2);
   assert.match(html, /aria-label="Four-adult two-child dated suite prices"/);
   assert.match(html, /<details><summary>Room conflicts and rate conditions/);
@@ -46,7 +46,7 @@ test("additive public case preserves unknown group price and separate dated term
 test("both CSV plan rows keep party, price and all decision limits", () => {
   const csv = cancunGrandparentsCsv();
   assert.equal(csv.split("\r\n").filter(Boolean).length, 3);
-  for (const value of ["\"4\",\"3 | 7\"", "2026-11-09", "2026-11-12", "per suite per night", "3579", "4475.61", "environmental sanitation excluded", "six versus two", "not guaranteed connection", "Grand Family Suite four-adult group price not observed", e.checked_on, e.recheck_on, e.source_url]) assert.ok(csv.includes(value), value);
+  for (const value of ["\"4\",\"3 | 7\"", "2026-11-09", "2026-11-12", "per suite per night", "3579", "4475.61", "environmental sanitation excluded", "six versus two", "not guaranteed connection", "Grand Family Suite four-adult group price not observed", e.checked_on, e.source_url]) assert.ok(csv.includes(value), value);
 });
 test("party CSV escapes quotes and neutralizes spreadsheet formulas", () => {
   const old = o.plans[0].name;
