@@ -80,7 +80,7 @@ export const dcMetro = {
   source: "https://www.wmata.com/pay.html",
   facts: [
     "Up to two children age 4 and younger ride free with each fare-paying adult; children 5 and older pay and need their own card or SmarTrip.",
-    "Regular rail fares: weekdays 5 a.m.–9:30 p.m. USD 2.25–6.75 one way; after 9:30 p.m. and weekends USD 2.25–2.50.",
+    "Regular rail fares: weekdays 5 a.m.–9:30 p.m. USD 2.25–6.75; after 9:30 p.m. and weekends USD 2.25–2.50.",
     "Pay by tapping a contactless credit or debit card, or SmarTrip on a card or phone."
   ]
 };
@@ -91,15 +91,15 @@ const days = [
     blocks: [
       ["Morning", "Natural History from its 10 a.m. opening. No pass needed, so this is the easiest first stop. Keep bags light: there is no storage."],
       ["Lunch", "Café (Ocean Terrace closes at 3 p.m.) or a packed lunch eaten outside on the Mall."],
-      ["Rest block", "Plan about two hours of rest: back to the room or a quiet sit. Whether a room return works depends on your hotel; see the hotel guide's museum-rest notes."],
-      ["Late afternoon", "Washington Monument with a timed ticket for everyone 2 and up, or view it from outside if tickets ran out or the weather turned."]
+      ["Rest block", "Plan about two hours of rest: back to the room or a quiet sit. Whether a room return works depends on your hotel; see the museum-rest notes in the DC hotels guide."],
+      ["Afternoon", "Washington Monument at an entry time booked ahead on recreation.gov (every person 2 and up needs a ticket), or same-day tickets picked up at the Lodge from 8:45 a.m., before the museum. The NPS fees page lists no hours, so check your ticket time and the closure list. If there are no tickets or the weather turns, view it from outside."]
     ]
   },
   {
     title: "Day 2: National Zoo morning",
     blocks: [
       ["Morning", "Arrive near the 8 a.m. grounds opening with an entry pass for every person. Indoor exhibits open at 9 a.m."],
-      ["Midday", "Picnic is allowed. The Zoo suggests 2–3 hours and is on a hill; plan to leave before small children are done."],
+      ["Midday", "Picnic is allowed. The Zoo suggests 2–3 hours and is on a hill; plan to leave before small children tire."],
       ["Rest block", "Long afternoon rest. In winter hours the grounds close at 4 p.m. with last entry at 3 p.m., so the Zoo cannot be pushed into the afternoon."],
       ["Evening", "Keep it free: dinner near the hotel."]
     ]
@@ -107,7 +107,7 @@ const days = [
   {
     title: "Day 3: Air and Space, then American History",
     blocks: [
-      ["Morning", "Air and Space at 10 a.m. with timed passes for everyone, babies included. Part of the museum is closed for renovation, so pick two or three galleries."],
+      ["Morning", "Air and Space with timed passes for everyone, babies included; book the earliest entry time available. Part of the museum is closed for renovation, so pick two or three galleries."],
       ["Lunch", "Mars Café inside Air and Space, or eat before moving on."],
       ["Rest block", "Short rest before the second museum, or end the day here with younger children."],
       ["Afternoon (optional)", "American History. With children 6 and under, go Wednesday–Sunday so Wonderplace (10 a.m.–4 p.m.) is open."]
@@ -118,7 +118,7 @@ const days = [
 const swaps = [
   ["Rain or high wind", "Swap the Monument and the Zoo for any of the three museums. All three are indoors and open 10 a.m.–5:30 p.m.; the Monument can close in bad weather."],
   ["Monday or Tuesday with a child 6 or under", "Wonderplace is closed. Put American History on another day, or use Natural History that day instead."],
-  ["Only two days", "Keep Day 1 and Day 3. Drop the Zoo, which takes the most pass, transport and hill planning."],
+  ["Only two days", "Keep Day 1 and Day 3. Drop the Zoo, which needs the most planning: passes for everyone, parking or transit, and a hill."],
   ["Babies and toddlers", "Every person needs a pass at Air and Space and the Zoo; the Monument needs a ticket from age 2. Children 4 and under ride Metro free (two per paying adult)."],
   ["Teens", "Keep the same skeleton. Swap the long rest for a later museum session and give them one gallery choice each day."]
 ];
@@ -205,7 +205,7 @@ ${dcVenues.map(dcVenueCard).join("\n")}
           <p class="eyebrow">Next decision</p>
           <h2>Choose the room before the route</h2>
         </div>
-        <p>A midday rest only works if the room is close enough and fits everyone. Compare room setups, kitchens and older dated prices in the <a href="../where-to-stay/washington-dc-family-hotels.html">Washington DC family hotels guide</a>.</p>
+        <p>A midday rest only works if the room is close enough and fits everyone. Compare room setups, kitchens and older dated prices in the <a href="../where-to-stay/washington-dc-family-hotels.html">Washington DC family hotels guide</a>, and read its <a href="../where-to-stay/washington-dc-family-hotels.html#rest">museum-rest notes</a> before planning a room return.</p>
       </section>
     </main>`;
   return `<!doctype html>
