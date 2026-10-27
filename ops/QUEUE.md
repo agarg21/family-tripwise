@@ -1,11 +1,9 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q04 Shared nav and "Related guides" on every guide
-open · M · owner: D4b Approved · gate: none
-Problem: three different navs; Boston/DC/PV/London have 1 inbound link each, Cancun/Orlando hotels 2, Orlando activities 1.
-Files: shared header/footer in tools/page-generation/* and tools/generate-pages.mjs, all guide pages.
-Acceptance: one header on every guide (all destinations reachable). Every sitemap URL has ≥3 internal inbound links (scripted count). Each city's hotel list links to its itinerary and stay-area pages.
+## Q04b Shared-chrome follow-ups (Q04 review P3s)
+open · S · owner: D4b Approved · gate: none
+Acceptance: siteHeader emits a skip link to #main on pages lacking one (each <main id="main">); .related-guides aligns with each layout's content width (Cancun extra indent/gap removed); page CSS no longer enlarges related/footer h2s; hotel-page "routes from home" tests strip chrome from home and stay pages too; sitemap lastmod hashes only <main> so boilerplate changes don't bump it.
 
 ## Q05 About page truth fix (byline stays Miles Rowan per D5)
 open · S · owner: none (1 page) · gate: none
@@ -18,7 +16,7 @@ Files: site/where-to-stay/new-york-city-family-hotels.html, its data and generat
 Acceptance: no unobserved price bands. Each hotel shows a dated future-stay observation for 2 adults + 2 kids from an official source, or "check live rate". A ≤3-line answer box at the top (fits whom / rough cost / main catch). ≤3 pages touched.
 
 ## Q15 Next new page: itinerary for an existing destination that lacks one
-open · M · owner: none if existing destination (new destination needs approval) · gate: Q02–Q04 done
+open · M · owner: none if existing destination (new destination needs approval) · gate: none (Q02–Q04 done)
 Why: itinerary pages are the only page type earning clicks (LV 8.1, SA 9.5, CHI 13.8 avg position). Orlando, Washington DC, Boston and Cancun have lodging pages but no itinerary.
 Acceptance: live SERP check shows a distinct itinerary job with demand; pick the strongest candidate; build it with dated official facts (hours, closures), nap/rest blocks, no unverified stroller/route claims; linked from that city's hotel and things-to-do pages; in sitemap; Chromium QA; reviewer PASS. If no candidate qualifies, record why and the next candidate.
 
@@ -29,7 +27,7 @@ open · L · owner: D7 Approved · gate: none · Acceptance: as Q06 for site/whe
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q06 for site/where-to-stay/chicago-family-hotels.html.
 
 ## Q10 Las Vegas and San Antonio itinerary usefulness pass (avg positions 8.1 and 9.5)
-open · M · owner: none · gate: Q04 done
+open · M · owner: none · gate: none (Q04 done)
 Files: site/family-itinerary/las-vegas-with-kids.html, site/family-itinerary/san-antonio-with-kids.html, their generator.
 Acceptance: one named deficiency fixed per page (e.g. top answer box; day-shape table with nap/rest blocks and dated hours). No unverified stroller/route claims. ≤3 pages.
 
