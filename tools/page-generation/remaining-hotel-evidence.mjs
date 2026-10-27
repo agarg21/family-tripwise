@@ -175,13 +175,15 @@ export function normalizeRemainingHotel(hotel, retainedFields, research) {
   if ((city === "chicago" && index === 10) || (city === "san-antonio" && [7, 11].includes(index))) activityState = "disputed";
   const priceBasis = ledger ? ledger[hotel.name]?.["Public price basis"] : prices[row[3]]?.[0];
   const band = ledger ? ledger[hotel.name]?.["Page range"] : prices[row[3]]?.[1];
-  if (!priceBasis || !band?.includes(retainedFields.price.value.display)) throw new Error(`Retained price identity/display changed: ${hotel.name}`);
+  const liveRateOnly = city === "new-york-city";
+  if (!priceBasis || !band) throw new Error(`Retained price identity/display changed: ${hotel.name}`);
+  if (liveRateOnly ? retainedFields.price.value.display !== "Check live rate" || !hotel.twoAdultSample || !priceBasis.includes(`\`${hotel.twoAdultSample}`) : !band.includes(retainedFields.price.value.display)) throw new Error(`Retained price identity/display changed: ${hotel.name}`);
   const sample = ledger ? ledger[hotel.name]?.["Review sample"] : city === "chicago" ? samples[row[3]]?.[0] : [6, 8, 10].includes(index) ? "Thin: roughly2-4visible recent entries/snippets" : "Small: roughly3-10visible recent entries/snippets";
   if (!sample) throw new Error(`Missing retained review sample: ${hotel.name}`);
   const result = { ...retainedFields, room: envelope(room, roomRefs, roomState), activities: envelope(activities, activityRefs, activityState),
     review_signal: envelope({ summary: hotel.reviewSignal, sample_bucket: sample, sampled_on: date, representative: false, firsthand: false, family_context: ledger?.[hotel.name]?.["Family context"] ?? (city === "chicago" ? samples[row[3]][1] : "Family-tagged where visible; no representative family-only sample") }, [reviewRef], "known", "REVIEW_SIGNAL"),
     price: { ...envelope({ ...retainedFields.price.value, room_basis: null, party_basis: city === "new-york-city" ? "Two adults in the public low example; not exact family party" : null, stay_basis: priceBasis,
-      fee_basis: `${retainedFields.price.value.fee_basis} Historical examples mix total and pre-tax amounts where recorded; exact rate-specific inclusion unverified.`, source_basis: `${priceBasis} ${band} Editorially widened band; high endpoint not necessarily observed.`, structured_basis: false,
+      fee_basis: `${retainedFields.price.value.fee_basis} Historical examples mix total and pre-tax amounts where recorded; exact rate-specific inclusion unverified.`, source_basis: liveRateOnly ? `${priceBasis} Former page band ${band.match(/`([^`]+)`/)?.[1] ?? band} retired 2026-10-27: its high endpoint was an editorial ceiling, not an observation. Page shows Check live rate with the older two-adult sample ${hotel.twoAdultSample}.` : `${priceBasis} ${band} Editorially widened band; high endpoint not necessarily observed.`, ...(liveRateOnly ? { older_two_adult_sample: hotel.twoAdultSample } : {}), structured_basis: false,
       basis_unknowns: ["Exact selected family room and room count", "Exact family party and child ages", "Comparable arrival/departure dates and rate plan", "Rate-specific tax/mandatory-fee inclusion and full stay total"] }, [priceRef]), limitation: "Historical price displays and observation dates preserved. Public low examples are not prices for the room/card/overlay or exact family. Reconciliation, not collection time, can renew them." }
   };
   if (city === "san-antonio" && index === 3) {

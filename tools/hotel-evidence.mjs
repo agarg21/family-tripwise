@@ -36,7 +36,7 @@ export function hotelEvidence() {
         page_url: pageUrl(`${city}-family-hotels`), model_path: "tools/page-generation/family-hotel-pages.mjs", coverage: "legacy-partial",
         fields: {
           room: unmapped({ category: hotel.category, setup: hotel.familySetup ?? null, checks: hotel.parentCheck }),
-          price: price({ kind: "legacy-planning-band", display: hotel.priceRange, currency: "USD", unit: "room/night", amount_from: null, amount_to: null,
+          price: price({ kind: hotel.twoAdultSample ? "check-live-rate-with-older-two-adult-sample" : "legacy-planning-band", display: hotel.priceRange, currency: "USD", unit: "room/night", amount_from: null, amount_to: null,
             room_basis: null, party_basis: null, stay_basis: null, fee_basis: hotel.priceNote ?? "Tax/fee inclusion varies; exact basis needs mapping.",
             source_basis: "Historical public examples and editorial planning band, not an exact family-room quote.", structured_basis: false }, path, [], legacyDates[city], "EDITORIAL_INTERPRETATION"),
           fees: unknown(path), transport: unknown(path), activities: unmapped({ strengths: hotel.strengths ?? null, tradeoffs: hotel.tradeoffs ?? null }),

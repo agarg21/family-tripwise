@@ -21,12 +21,12 @@ test("comparisons precede the photo and detailed cards without repeated starter 
   assert.match(html, /alt="Central Park and the New York City skyline\."[^>]+loading="lazy"/);
 });
 
-test("full historical basis occurs once and every price card retains dated caution and direct access", () => {
-  assert.equal((html.match(/Historical USD\/room\/night planning ranges from July 25, 2026 checks/g) || []).length, 1);
+test("full price basis occurs once and every price card retains dated caution and direct access", () => {
+  assert.equal((html.match(/No current family-room rate has been observed for these twelve hotels/g) || []).length, 1);
   const cards = [...html.matchAll(/<article class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/article>/g)];
   assert.equal(cards.length, 12);
   for (const c of cards) {
-    assert.match(c[1], /Two-adult samples checked July 25, 2026; taxes, fees and exact basis vary/);
+    assert.match(c[1], /Older two-adult observation, not a quote for your family: Expedia, checked July 25, 2026/);
     assert.match(c[1], /not a quote for your family/);
     assert.match(c[1], /href="#historical-price-basis"/);
   }

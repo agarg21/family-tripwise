@@ -1283,6 +1283,22 @@ p.contributor-credit {
   background: none;
 }
 
+.answer-box {
+  margin-bottom: 22px;
+  border-left: 4px solid var(--teal);
+  background: var(--surface);
+  padding: 12px 16px;
+}
+
+.answer-box p {
+  margin: 0 0 6px;
+  overflow-wrap: anywhere;
+}
+
+.answer-box p:last-child {
+  margin-bottom: 0;
+}
+
 #chicago-hotel-intro {
   padding: 32px 0;
   background: var(--surface);

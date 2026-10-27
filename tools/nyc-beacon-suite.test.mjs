@@ -28,7 +28,9 @@ test("shared scoped overlays retain July dates, broad prices/reviews and unknown
   assert.deepEqual(validateHotelEvidence(records), []);
   const f = records.find(r => r.hotel === "Hotel Beacon").fields;
   for (const key of ["room", "price", "activities", "review_signal"]) assert.equal(f[key].observed_on, "2026-07-25");
-  assert.equal(f.price.value.display, "$330-$750+");
+  assert.equal(f.price.value.display, "Check live rate");
+  assert.equal(f.price.value.older_two_adult_sample, "$331");
+  assert.match(f.price.value.source_basis, /Former page band \$330-\$750\+ retired 2026-10-27/);
   assert.equal(f.price.value.structured_basis, false);
   assert.deepEqual(f.price.value.date_specific_samples, [beaconSuite]);
   assert.equal(f.room.state, "disputed");
