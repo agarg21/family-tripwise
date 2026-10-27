@@ -12,4 +12,4 @@ Purpose: re-observe the standard admission bands behind the Orlando activities p
 | SEA LIFE Orlando | not re-fetched | Standalone age-specific prices remain unestablished; stays "unknown". | No change |
 | Lake Eola Park | not re-fetched | No park entry price listed; stays "unknown", not zero. | No change |
 
-Result: priced tariffs move to `checkedOn 2026-10-27`; internal refresh trigger 2026-11-10 (not shown publicly). Public copy no longer shows forward "recheck by" dates; it states the observation date and tells parents to check the current price.
+Result: priced tariffs move to `checkedOn 2026-10-27`; refresh trigger 2026-11-10 (not visible text, but present as `recheckOn` in the page's embedded JSON; Q02 removes it). Public copy no longer shows forward "recheck by" dates; it states the observation date and tells parents to check the current price.

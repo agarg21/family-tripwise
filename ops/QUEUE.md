@@ -1,15 +1,11 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q01 Ship the Orlando admission form with refreshed tariffs
-in progress (setup session 2026-10-27) · M · owner: D3 Approved · gate: none
-Files: site/shared/{admission-budget,orlando-admission-form}.mjs, src/shared/orlando-admission-form.mjs, site/things-to-do/orlando-with-kids.html, tools/page-generation/orlando-activity-page.mjs, its 3 tests.
-Acceptance: the 7 tariff sources re-observed (unconfirmed ones render "unknown"); static table and form share one dated basis; Chromium 1280/390/320 + keyboard + no-JS pass; reviewer PASS; release.json equals the merge SHA.
-
 ## Q02 Staleness sweep: no public due dates, no past-stay price samples
 open · M · owner: D4a Approved · gate: none
 Problem: 7 live pages show overdue "review due/recheck" dates (Cancun, Orlando hotels, Boston, DC, PV, London, SD hotels); Orlando activities joins them on Oct 28. Cancun Moon Palace sample is for Oct 18–23.
 Files: those pages' generators in tools/page-generation/*, plus tools/seo-qa.mjs.
+Also (Q01 review P3s): no `recheckOn` forward date in served page JSON (rename to an internal freshness field or derive it inside the module); Orlando activities page states admission rates Oct 27 vs other facts Oct 13 per fact, names the Spanish official page as the Science Center rate source, shows a no-JS line pointing to the static table, drops the stale "October 12/13" Eye hours, adds a form unit test for the "no standalone rate was established" wording, and moves the superseded note in docs/plan/orlando-admission-integration-2026-10-15.md under its H1.
 Acceptance: "Observed <date>; check live rates before booking" replaces every forward due/recheck date. Samples whose stay dates have passed are removed or labelled "older observation; dates passed". seo-qa errors on a forward-looking due date or a past-stay sample. Live check of all 8 URLs.
 
 ## Q03 Discovery fixes: sitemap lastmod, Orlando cross-link, dead Coronado link
