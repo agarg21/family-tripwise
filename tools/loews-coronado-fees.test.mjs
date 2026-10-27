@@ -58,7 +58,8 @@ test("five-night fee proxy keeps self and valet alternatives and conditional pro
 test("historical price room review transport and activities plus La Jolla fees retain their dates", () => {
   const f = record().fields;
   assert.equal(f.price.observed_on, "2026-07-18");
-  assert.equal(f.price.value.display, "$235-$360+");
+  assert.equal(f.price.value.display, "Check live rate");
+  assert.equal(f.price.value.older_one_night_sample.amount, "$360");
   assert.equal(f.price.value.room_basis, "Lowest visible standard-room example; room/view configuration unknown");
   assert.equal(f.room.state, "unknown");
   assert.equal(f.room.observed_on, "2026-08-17");

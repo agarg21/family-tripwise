@@ -19,7 +19,8 @@ test("San Diego exposes the table before complete trip-routing guidance and lice
   assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip/);
   assert.match(html, /21a-san-diego-mission-bay\.jpg"[^>]+loading="lazy"/);
   assert.match(html, /Photo: Alfred Twu, Wikimedia Commons, CC0/);
-  assert.doesNotMatch(html, /downloads\/.*\.csv|Spreadsheet copy/);
+  assert.match(html, /href="\.\.\/downloads\/san-diego-family-hotels\.csv" download/);
+  assert.ok(html.indexOf("Spreadsheet copy") < html.indexOf("Pick the closest trip style"));
 });
 
 test("all twelve unique cards, current fee and room overlays retain their exact text", () => {
@@ -30,8 +31,9 @@ test("all twelve unique cards, current fee and room overlays retain their exact 
   }
   assert.match(html, /Hotel facts checked:<\/strong> August 17, 2026/);
   assert.match(html, /Online-review themes sampled:<\/strong> July 18-21, 2026/);
-  assert.match(html, /Approximate nightly prices remain broad July planning ranges/);
-  assert.match(html, /Planning USD\/room\/night/);
+  assert.match(html, /No current family-room rate observed: check the live rate/);
+  assert.match(html, /Nightly price \(USD\/room\)/);
+  assert.doesNotMatch(html, /planning ranges|Planning USD\/room\/night|Rough nightly range/);
   assert.match(html, /August checks did not provide consistent family totals/);
   assert.ok(html.indexOf("August checks did not provide consistent family totals") < html.indexOf("<table"));
 });

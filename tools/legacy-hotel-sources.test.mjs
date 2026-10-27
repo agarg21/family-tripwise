@@ -68,7 +68,9 @@ test("narrow September fee checks and unresolved bedding/parking conflicts stay 
   assert.equal(find("La Jolla Shores Hotel").fields.fees.observed_on, "2026-10-05");
   assert.equal(find("La Jolla Shores Hotel").fields.fees.value.parking_usd, 55);
   assert.equal(find("Hyatt Regency Mission Bay Spa and Marina").fields.fees.value.parking_usd, null);
-  assert.equal(find("LEGOLAND Hotel or Castle Hotel").fields.price.value.display, "Package-priced");
+  assert.equal(find("LEGOLAND Hotel or Castle Hotel").fields.price.value.display, "Check live rate");
+  assert.equal(find("LEGOLAND Hotel or Castle Hotel").fields.price.value.kind, "check-live-rate-package-priced");
+  assert.equal(find("LEGOLAND Hotel or Castle Hotel").fields.price.value.older_one_night_sample, null);
   assert.equal(find("LEGOLAND Hotel or Castle Hotel").fields.price.value.structured_basis, false);
 });
 

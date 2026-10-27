@@ -61,6 +61,6 @@ test("fee rendering does not renew unrelated hotel or historical price evidence"
   assert.equal(sanDiegoCurrentFeeNote("toString"), null);
   assert.match(html, /Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here/);
   assert.match(html, /Other fee and parking facts retain earlier checks/);
-  assert.match(html, /not renewed or live quotes/);
-  for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "Package-priced", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) assert.ok(html.includes(range));
+  assert.match(html, /so the figure is not a family-room price or a current quote/);
+  for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) assert.ok(!html.includes(range), range);
 });

@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { sanDiegoCurrentFeeNote, sanDiegoCurrentRoomNote } from "./san-diego-hotel-evidence.mjs";
 import { radioCityPriceHtml } from "./nyc-radio-city-price.mjs";
@@ -11,7 +12,8 @@ const sanDiegoFamilyHotels = [
     name: "Bahia Resort Hotel",
     category: "Mission Bay suite/bay stay",
     area: "Mission Bay",
-    priceRange: "$340-$630+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$339", source: "Expedia/Travelocity", seen: "2026-07-18", party: "2 adults" },
     strengths: ["Family Suite facts are unusually visible", "Parking carries no separate charge, with one vehicle allowed per room", "Bay/pool/location positives recur in online review patterns"],
     tradeoffs: ["Bedding wording conflicts on the official Family Suite page", "Room age and cleanliness comments are mixed"],
     familySetup: "Official Bay Family Suite page lists 675 sq ft, sofa bed, kitchenette, balcony, two bathrooms, refrigerator, microwave, toaster, and self-parking. The FAQ separately lists a $48 resort fee and says parking carries no charge, with one vehicle allowed per room; verify exact bedding and occupancy before using the suite as the reason to book.",
@@ -25,7 +27,8 @@ const sanDiegoFamilyHotels = [
     name: "San Diego Mission Bay Resort",
     category: "Mission Bay pool/wading-pool resort",
     area: "Mission Bay",
-    priceRange: "$375-$500+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$374", source: "Expedia", seen: "2026-07-18", party: "2 adults" },
     strengths: ["Waterfront pool and shallow wading-pool facts are official", "Beach access and seasonal activities fit a stay-put resort question", "Good contrast against suite/kitchen urban hotels"],
     tradeoffs: ["Parking and resort fee add up quickly", "Online review patterns include crowding, beds, maintenance, and room-location noise conflicts"],
     familySetup: "Official materials list a pool, shallow wading pool, beach access, seasonal activities, a $46 resort fee, $47 self-parking, limited $35 rollaways, and connecting rooms that are not guaranteed; exact family room layout remains room-specific.",
@@ -39,7 +42,8 @@ const sanDiegoFamilyHotels = [
     name: "Hyatt Regency Mission Bay Spa and Marina",
     category: "Pool/waterslide-first stay",
     area: "Mission Bay",
-    priceRange: "$270-$350+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$351", source: "Expedia", seen: "2026-07-18", party: null },
     strengths: ["Official pages list lagoon-style pools, three waterslides, hot tub, and separate children's pool area", "Room pages expose minifridge, play-yard, rollaway, and microwave-request details", "Kid enjoyment and waterslides recur in online review patterns"],
     tradeoffs: ["Official parking dollar amount was not found in the inspected pages", "Fee/value, pool temperature/size, and room variability appear in conflicts"],
     familySetup: "Official pages list two-queen options, suites, minifridges, play yards on request, microwaves on request for a fee in many room descriptions, and a $46 resort fee. The inspected official pages do not publish a parking amount.",
@@ -53,7 +57,8 @@ const sanDiegoFamilyHotels = [
     name: "Paradise Point Resort & Spa",
     category: "Stay-put Mission Bay resort",
     area: "Mission Bay",
-    priceRange: "$240-$360+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$349", source: "Expedia", seen: "2026-07-18", party: null },
     strengths: ["Official amenities describe five heated pools, beach areas, marina, sports courts, miniature golf, and seasonal activities", "Large-property resort shape may help families who want to stay on property", "Multiple-pool and family-orientation positives recur"],
     tradeoffs: ["Large footprint may be helpful or annoying depending on kid age and assigned room", "Price/fee perception and room-condition variability appear in conflicts"],
     familySetup: "Bungalow-style rooms and suites need exact room verification; do not infer family layout from the property style alone. Official amenities list a $46 fee and $49 reserved doorstep parking.",
@@ -67,7 +72,8 @@ const sanDiegoFamilyHotels = [
     name: "Catamaran Resort Hotel and Spa",
     category: "Pacific Beach bay/beach walkability",
     area: "Pacific Beach",
-    priceRange: "$395-$740+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$396", source: "Expedia/Hotels.com", seen: "2026-07-18", party: null },
     strengths: ["Official pages expose studios/suites with kitchenettes and some sofa-bed language", "Bay/beach access and Pacific Beach dining can fit families who want a walkable coastal base", "Location positives recur in online review patterns"],
     tradeoffs: ["Cribs and rollaways are request-only and not guaranteed", "Older/musty-room and small-pool conflicts appear in public signals"],
     familySetup: "Official FAQ lists a $46 resort fee, $47 self-parking, $50 valet, request-only cribs and rollaways, plus kitchenettes with a mini refrigerator, microwave, toaster oven, and requestable kitchen items for some studios/suites; exact sofa-bed and building status need verification.",
@@ -81,7 +87,8 @@ const sanDiegoFamilyHotels = [
     name: "Homewood Suites San Diego Downtown/Bayside",
     category: "Suite/kitchen downtown base",
     area: "Downtown / Little Italy",
-    priceRange: "$265-$350+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$265", source: "Expedia/Hotels.com", seen: "2026-07-18", party: "2 adults" },
     strengths: ["Official Hilton page lists recently renovated all-suite rooms, in-room kitchens, free hot breakfast, connecting rooms, and cribs", "Good contrast for families who need kitchen/breakfast more than resort amenities", "Lower rough range than many resort options"],
     tradeoffs: ["No self-parking and $65 valet create car friction", "Breakfast variety/staffing, parking, noise, and maintenance appear in conflicts"],
     familySetup: "Official Hilton page lists all-suite setup, in-room kitchens, connecting rooms, cribs, outdoor pool, and nearby distance facts; exact suite walls, doors, bedding, and occupancy still need verification.",
@@ -95,7 +102,8 @@ const sanDiegoFamilyHotels = [
     name: "LEGOLAND Hotel or Castle Hotel",
     category: "LEGOLAND-heavy North County trip",
     area: "Carlsbad / LEGOLAND",
-    priceRange: "Package-priced",
+    priceRange: "Check live rate",
+    olderSample: null,
     strengths: ["Official pages list themed rooms, kids sleeping area, breakfast, pool, entertainment, and in-room treasure hunt", "Can reduce morning friction when LEGOLAND is the core trip", "Strong child-theme positives appear in online review patterns"],
     tradeoffs: ["Not a clean San Diego city-base for zoo, Mission Bay, Downtown, or La Jolla days", "Package/per-person pricing must not be compared as a plain room rate"],
     familySetup: "Official pages list a separate kids sleeping area in every room, Pack 'N Plays by request, and room capacity by exact room size. Parking is generally not included: current support lists $40 self-parking and $55 overnight valet, with named passholder exceptions.",
@@ -109,7 +117,8 @@ const sanDiegoFamilyHotels = [
     name: "Loews Coronado Bay Resort",
     category: "Coronado bay/splurge option",
     area: "Coronado",
-    priceRange: "$235-$360+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$360", source: "Expedia", seen: "2026-07-18", party: null },
     strengths: ["Official materials list three heated pools on a waterfront Coronado resort", "No-reservation Village shuttle service can reduce one Coronado transfer", "Pool/service/family amenity positives recur in online review patterns"],
     tradeoffs: ["More isolated from Coronado Village and San Diego attractions than central bases", "Parking/fees and property-condition comments appear in conflicts"],
     familySetup: "Official pages list three heated pools, no-reservation Coronado Village shuttle service, and on-demand beach shuttle service; exact room layout and occupancy remain room-specific.",
@@ -123,7 +132,8 @@ const sanDiegoFamilyHotels = [
     name: "La Jolla Shores Hotel",
     category: "La Jolla beachfront stay",
     area: "La Jolla Shores",
-    priceRange: "$350-$550+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$406", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Beachfront location creates a distinct La Jolla trip shape", "The official site now lists a refreshed heated pool and children's wading pool", "Beach, location, staff, and refreshed-room positives recur in online review patterns"],
     tradeoffs: ["Parking availability, billed days and tax basis need checking", "Exact kitchen and sofa-bed setups remain room-specific"],
     familySetup: "Official room pages show two-queen rooms plus selected suites with sofa beds, kitchenettes, or a full kitchen. The site now lists a refreshed heated pool and children's wading pool; verify the exact room name because room features are not property-wide.",
@@ -137,7 +147,8 @@ const sanDiegoFamilyHotels = [
     name: "Hotel del Coronado",
     category: "Iconic Coronado beachfront splurge",
     area: "Coronado Beach",
-    priceRange: "$600-$900+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$619", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Official materials expose multiple room neighborhoods and guaranteed connecting-room selection or request", "Cribs, select rollaways, heated pools, beach experiences, and an ages 4-12 kids program are documented", "Beach, setting, history, and resort-experience positives recur"],
     tradeoffs: ["The five room neighborhoods do not offer the same room or pool experience", "Crowding and value are recurring conflicts at a very high total price"],
     familySetup: "Five room neighborhoods offer materially different rooms and access; Shore House villas have one to three bedrooms, living areas, and full kitchens. Official pages list guaranteed connecting selection/request, complimentary cribs, select rollaways, heated pools, an ages 4-12 program, a $50 mandatory charge, and restoration completion in June 2025.",
@@ -151,7 +162,8 @@ const sanDiegoFamilyHotels = [
     name: "The Dana on Mission Bay",
     category: "Simpler Mission Bay family base",
     area: "Mission Bay",
-    priceRange: "$250-$400+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$326", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Official pages publish two heated pools, exact room capacities, and many suite layouts", "Crib, rollaway, connecting-room, refrigerator, microwave, parking, and resort-fee details are unusually clear", "Location, pools, grounds, and family-activity positives recur"],
     tradeoffs: ["There are no full kitchens", "Room condition, parking walks, and fee/value perception vary"],
     familySetup: "Standard rooms list a four-person maximum; many junior suites and suites list up to six with sofa sleepers. Official pages list free cribs, request-only connecting rooms, refrigerators, microwaves and two heated pools, but no kitchens.",
@@ -165,7 +177,8 @@ const sanDiegoFamilyHotels = [
     name: "Manchester Grand Hyatt San Diego",
     category: "Downtown waterfront full-service stay",
     area: "Downtown / Seaport Village",
-    priceRange: "$300-$450+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$329", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Official room pages publish connecting options and multiple family-suite layouts", "Downtown waterfront position fits Seaport Village and Embarcadero days", "Views, location, and large-hotel convenience recur positively"],
     tradeoffs: ["Only Coastline Pool is operating; the fourth-floor pool is due in December 2026", "A large convention-hotel footprint can change the experience"],
     familySetup: "Official pages list a two-double connecting room, family suites with sleeper sofas or connecting bedrooms, minifridges, play yards on request, and microwaves in many suites. Guestrooms and the third-floor pool are described as refreshed; exact occupancy and connection still depend on room type.",
@@ -225,8 +238,26 @@ function googleMapsUrl(query) {
 const sanDiegoMyMapsEmbedUrl = "https://www.google.com/maps/d/embed?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 
+const sanDiegoSeen = (iso) => ({ "2026-07-18": "Jul 18", "2026-07-21": "Jul 21" })[iso] ?? (() => { throw new Error(`Unmapped San Diego sample date: ${iso}`); })();
+const sanDiegoSampleText = (hotel, withSource = false) => hotel.olderSample
+  ? `Older 1-night sample: ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}; ${withSource ? `${hotel.olderSample.source}, ` : ""}${sanDiegoSeen(hotel.olderSample.seen)})`
+  : "Package-priced; no comparable room sample";
+const sanDiegoPriceCell = (hotel, withSource = false) => `${esc(hotel.priceRange)}<br><small>${esc(sanDiegoSampleText(hotel, withSource))}</small>`;
+const sanDiegoPriceBasis = "No current family-room rate has been observed, so every hotel shows Check live rate. The sample figure beside it is an older observation: a public one-night price per room on Expedia, Travelocity or Hotels.com with displayed taxes and fees, seen July 18 or 21, 2026, for two adults unless marked not recorded. Its stay date has passed or was not recorded and the room is unknown, so the figure is not a family-room price or a current quote. LEGOLAND sells packages, so it has no comparable sample. Earlier rough ranges are gone because their upper ends were never observed. The only family-party price is Homewood's official suite sample, also an older observation. Resort fees, parking and a second room may be extra.";
+const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
+const sanDiegoHomewoodSample = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-price-observation-2026-10-04.json", import.meta.url), "utf8"))[0];
+const usd = (amount) => amount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+function sanDiegoHomewoodPrice() {
+  const o = sanDiegoHomewoodSample;
+  if (o.currency !== "USD" || o.nights !== 5 || o.arrival !== "2026-11-08" || o.departure !== "2026-11-13" || o.checked_on !== "2026-10-04" || o.engine_party.adults !== 2 || o.engine_party.children !== 3) throw new Error("Homewood sample basis changed; update the page text");
+  const rates = o.rates.map((rate) => ({ plan: rate.plan, total: rate.stay_amount, nightly: Math.round((rate.stay_amount / o.nights) * 100) / 100 }));
+  return { sourceUrl: o.source_url, rates,
+    text: `Older observation from the official Hilton site, checked October 4, 2026, for November 8-13, 2026 (5 nights): one ${o.category}, 2 adults and 3 children (counts only; child ages were not entered). ${rates.map((r) => `${r.plan}: USD ${usd(r.total)} for the stay (about $${usd(r.nightly)} per night)`).join("; ")}, estimated from displayed rates and tax lines, breakfast included; $65/night valet and other service charges excluded. Not a current quote or confirmed acceptance of your children's ages.` };
+}
+
 function sanDiegoFamilyHotelPage() {
   const hotels = sanDiegoFamilyHotels;
+  const homewoodPrice = sanDiegoHomewoodPrice();
   const hotelCards = hotels.map((hotel, index) => {
     const feeNote = sanDiegoCurrentFeeNote(hotel.name);
     const roomNote = sanDiegoCurrentRoomNote(hotel.name);
@@ -235,13 +266,13 @@ function sanDiegoFamilyHotelPage() {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Rough nightly range</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Nightly price (USD/room)</dt><dd>${sanDiegoPriceCell(hotel, true)} <a href="#price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p>${hotel.name === sanDiegoHomewoodName ? `<p class="hotel-price-sample">${esc(homewoodPrice.text)} <a href="${esc(homewoodPrice.sourceUrl)}">Official rooms page</a>; <a href="#price-basis">price basis</a>.</p>` : ""}</section>
           </article>`;
   }).join("\n");
 
@@ -249,7 +280,7 @@ function sanDiegoFamilyHotelPage() {
                 <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${esc(hotel.priceRange)}</td>
+                <td>${sanDiegoPriceCell(hotel)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
@@ -262,7 +293,9 @@ function sanDiegoFamilyHotelPage() {
       "@type": "ListItem",
       position: index + 1,
       name: hotel.name,
-      description: `${hotel.category}; rough nightly range ${hotel.priceRange}`
+      description: hotel.olderSample
+        ? `${hotel.category}; no current family-room rate observed (check live rate); older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} USD per room${hotel.olderSample.party ? ` for ${hotel.olderSample.party}` : ""}, seen ${hotel.olderSample.seen}, not a family-room quote`
+        : `${hotel.category}; package and per-person pricing (check live rate); no comparable room sample`
     }))
   };
 
@@ -272,12 +305,17 @@ function sanDiegoFamilyHotelPage() {
           <p class="eyebrow">San Diego family hotels</p>
           <h1>San Diego Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare 12 hotels by stay style, area and historical nightly budget, then check room setup, kitchens and pools.</p>
+          <p>Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
-        <p>Approximate prices are broad July planning ranges. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking.</p>
+        <p>Prices are older observations only: one-night samples seen July 18-21 and one official Homewood family-suite sample checked October 4, 2026. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
+      </section>
+      <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
+        <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
+        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (July 18-21, mostly two adults); Homewood's suite for 2 adults + 3 children was about $271-$330 per night for November 8-13, 2026 (checked October 4).</p>
+        <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
@@ -285,15 +323,16 @@ function sanDiegoFamilyHotelPage() {
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">Approximate nightly prices remain broad July planning ranges. Use them to set a budget, then compare the final total for the same dates, occupancy, and room setup.</p>
+          <p class="review-label">No current family-room rate observed: check the live rate. Small figures are older observations: one-night samples seen July 18-21, 2026, not family-room quotes; compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${comparisonRows}
               </tbody>
             </table>
           </div>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/san-diego-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and Homewood family-suite sample as this page.</p></details>
         </div>
       </section>
       <section class="container page-section rank-ready-section">
@@ -311,7 +350,7 @@ ${comparisonRows}
         </div>
         <dl class="snapshot">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
-          <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
+          <div><dt>Price format</dt><dd>Check live rate, with dated older samples</dd></div>
           <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
           <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
         </dl>
@@ -348,11 +387,12 @@ ${hotelCards}
           <p class="eyebrow">Sources checked</p>
           <h2>How the hotel information was checked</h2>
         </div>
-        <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its prices, fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays. Prices are older broad planning ranges, not renewed or live quotes.</p>
+        <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its prices, fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays.</p>
+        <p id="price-basis"><strong>Price basis:</strong> ${esc(sanDiegoPriceBasis)}</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for rough nightly-price and online-review context. An August 17 price spot check was not comparable enough to renew the ranges.</li>
+          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for one-night price samples (older observations) and online-review context. An August 17 price spot check was not comparable enough to renew them.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -360,7 +400,7 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
   return pageShell({
     title: "Top Family Hotels in San Diego: 12 Options by Trip Style",
-    description: "Compare 12 San Diego family hotels by trip style, approximate nightly price, room setup, pools, breakfast or kitchen needs, map location, and sampled online review themes.",
+    description: "Compare 12 San Diego family hotels by trip style, room setup, pools, breakfast or kitchen needs, map location, dated price samples, and sampled online review themes.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
   });
@@ -546,6 +586,20 @@ function hotelComparisonCsv(headings, rows) {
     return `"${safe.replaceAll('"', '""')}"`;
   };
   return [headings, ...rows].map((row) => row.map(cell).join(",")).join("\n") + "\n";
+}
+
+function sanDiegoHotelComparisonCsv() {
+  const page = "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html";
+  const homewood = sanDiegoHomewoodPrice();
+  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees)", "Older sample party", "Older sample source", "Older sample seen", "Official family sample", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison"];
+  const rows = sanDiegoFamilyHotels.map((hotel) => [
+    hotel.name, hotel.category, hotel.area, hotel.priceRange,
+    hotel.olderSample?.amount ?? "None (package-priced)", hotel.olderSample ? hotel.olderSample.party ?? "Not recorded" : "", hotel.olderSample?.source ?? "", hotel.olderSample?.seen ?? "",
+    hotel.name === sanDiegoHomewoodName ? homewood.text : "", sanDiegoPriceBasis,
+    hotel.priceNote, hotel.familySetup, hotel.parentCheck,
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`, `${page}#hotel-comparison`
+  ]);
+  return hotelComparisonCsv(headings, rows);
 }
 
 function lasVegasHotelComparisonCsv() {
@@ -1621,6 +1675,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
       "san-antonio": sanAntonioFamilyHotels
     }),
     sanDiegoFamilyHotelPage,
+    sanDiegoHotelComparisonCsv,
     lasVegasFamilyHotelPage,
     lasVegasHotelComparisonCsv,
     chicagoFamilyHotelPage,

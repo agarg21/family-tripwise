@@ -25,7 +25,7 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.doesNotMatch(html, /"@type":"FAQPage"/);
 });
 
-test("covers 12 named hotel options with dollar ranges and map links", () => {
+test("covers 12 named hotel options with dated price samples and map links", () => {
   const hotelNames = [
     "Bahia Resort Hotel",
     "San Diego Mission Bay Resort",
@@ -45,11 +45,23 @@ test("covers 12 named hotel options with dollar ranges and map links", () => {
     assert.match(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
-  for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "Package-priced", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) {
-    assert.match(html, new RegExp(range.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  // Q07: unobserved bands retired; each row shows Check live rate plus its older dated one-night sample.
+  for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) {
+    assert.ok(!html.includes(range), range);
   }
-
-  assert.match(html, /Rough nightly range, not a quote/);
+  const table = html.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+  assert.equal((table.match(/<td>Check live rate<br><small>/g) || []).length, 12);
+  for (const sample of ["$339 (2 adults; Jul 18)", "$374 (2 adults; Jul 18)", "$351 (party not recorded; Jul 18)", "$349 (party not recorded; Jul 18)", "$396 (party not recorded; Jul 18)", "$265 (2 adults; Jul 18)", "$360 (party not recorded; Jul 18)", "$406 (2 adults; Jul 21)", "$619 (2 adults; Jul 21)", "$326 (2 adults; Jul 21)", "$329 (2 adults; Jul 21)"]) {
+    assert.ok(table.includes(`Older 1-night sample: ${sample}`), sample);
+  }
+  assert.ok(table.includes("Package-priced; no comparable room sample"));
+  const answer = html.match(/<section id="san-diego-hotel-answer"[\s\S]*?<\/section>/)[0];
+  assert.equal((answer.match(/<p>/g) || []).length, 3);
+  assert.match(answer, /<strong>Fits:<\/strong>[\s\S]*<strong>Rough cost:<\/strong>[\s\S]*<strong>Main catch:<\/strong>/);
+  assert.match(answer, /about \$265-\$619 per room for one night/);
+  assert.match(answer, /about \$271-\$330 per night for November 8-13, 2026/);
+  assert.match(html, /USD 1,355\.19 for the stay \(about \$271\.04 per night\); Flexible Rate: USD 1,647\.58 for the stay \(about \$329\.52 per night\)/);
+  assert.match(html, /<dt>Price format<\/dt><dd>Check live rate, with dated older samples<\/dd>/);
   assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);

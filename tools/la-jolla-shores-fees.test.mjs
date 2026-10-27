@@ -45,7 +45,8 @@ test("hypothetical fee components retain parking day assumptions and avoid doubl
 test("fee renewal leaves historical price room review activity and transport evidence unchanged", () => {
   const fields = record().fields;
   assert.equal(fields.price.observed_on, "2026-07-21");
-  assert.equal(fields.price.value.display, "$350-$550+");
+  assert.equal(fields.price.value.display, "Check live rate");
+  assert.equal(fields.price.value.older_one_night_sample.amount, "$406");
   assert.equal(fields.price.value.party_basis, "Two adults");
   assert.equal(fields.room.observed_on, "2026-08-17");
   assert.equal(fields.activities.observed_on, "2026-08-17");

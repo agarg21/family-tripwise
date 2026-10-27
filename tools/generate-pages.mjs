@@ -292,6 +292,7 @@ ${sourceList(city)}
 
 const {
   sanDiegoFamilyHotelPage,
+  sanDiegoHotelComparisonCsv,
   lasVegasFamilyHotelPage,
   lasVegasHotelComparisonCsv,
   chicagoFamilyHotelPage,
@@ -566,6 +567,7 @@ for (const page of agePages) {
 }
 
 writeSite("where-to-stay/san-diego-family-hotels.html", sanDiegoFamilyHotelPage());
+writeSite("downloads/san-diego-family-hotels.csv", sanDiegoHotelComparisonCsv());
 writeSite("where-to-stay/las-vegas-family-hotels.html", lasVegasFamilyHotelPage());
 writeSite("downloads/las-vegas-family-hotels.csv", lasVegasHotelComparisonCsv());
 writeSite("where-to-stay/chicago-family-hotels.html", chicagoFamilyHotelPage());
