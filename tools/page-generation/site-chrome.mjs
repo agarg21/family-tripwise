@@ -95,7 +95,7 @@ export function siteHeader(prefix, current = "") {
   const here = destinationFor(current);
   const links = destinations
     .map((d) => {
-      const aria = here === d ? ' aria-current="true"' : "";
+      const aria = d.guides[0][0] === current ? ' aria-current="page"' : here === d ? ' aria-current="true"' : "";
       return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short || d.name)}</a>`;
     })
     .join("");
