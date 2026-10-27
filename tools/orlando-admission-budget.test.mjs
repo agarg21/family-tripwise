@@ -120,6 +120,6 @@ test("offline CLI is reproducible and rejects duplicate, empty or unknown argume
   }
 });
 
-test("existing generated activity HTML is byte-identical", () => {
+test("generated activity HTML matches the maintained generator", () => {
   assert.equal(orlandoActivityPage(),readFileSync("site/things-to-do/orlando-with-kids.html","utf8"));
 });

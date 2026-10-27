@@ -23,7 +23,7 @@
       "id": "FT-IMP-192",
       "title": "Isolate NYC Ferry comparison outputs from historical evidence",
       "kind": "shared-product-trust-fix",
-      "status": "in_progress",
+      "status": "completed",
       "selected_on": "2026-10-27",
       "started_at": "2026-10-27T05:01:16Z",
       "target_paths": [
@@ -59,7 +59,11 @@
         "initial_full_log": "/tmp/ft192-initial-qa.log",
         "initial_full_sha256": "7e3a59035183b9de2e37005576e734fa2e23a820636f8667850f51df5ae5c387"
       },
-      "review_receipt": "FT-IMP-192 Halley01a17bbd-b08a-72a1-aa8c-00fc9a40054b amended exact9 strict read-only PASS/noP0-P3 on b8pKhH manifest065afd083ef2f6c19584b1e1787f758671bb16146dfcf7da726d0609c2932226. Independent90Ferrybaseline/42validation-date/84explicitstart/8genuineexpiry/67parity/12reopeningdeadline probes PASS. Verified1170candidatehashes-modes/exact9/1166nonownedLIVE/olderrecords-history/operator-watch/79publicHEAD; Garfield exclusion/163-186holds intact. All5Masterlogs inspected/hashverified,notrerun: Ferry4fail f5a96696bf72062acf8449f4bf06b5eaa02c51d2ac99b0394c287848cee46c85;QA4fail7d9e98db972d1c37aea7d332f4594d1890fd39e460a65da3c3c4074efc22a353;initialfullSEO1failure7e3a59035183b9de2e37005576e734fa2e23a820636f8667850f51df5ae5c387 retained/notwaived;44focused7bceb0c46a54fd7f135ef80540a7108732bcdaf79b50e9f28be04742842e4260;1242full50maintenance/state0/GSC105/SEO0sixprior a63b4befc2df927643c0466db82115921bfcfd4a8707d2bb66e680f20ae12f81. Reads/in-memory probes only,no writes/runners/network-browser/Gitmutation/delegation/scheduler/externalactions. Sharedtool-QA approval only,not public/rendered/production. Master11707jjTh8cloneallfile-list/hash/mode parity before receipt verified; clone not independently inspected. Only immutable consensus appended; exact guarded shared push next."
+      "review_receipt": "FT-IMP-192 Halley01a17bbd-b08a-72a1-aa8c-00fc9a40054b amended exact9 strict read-only PASS/noP0-P3 on b8pKhH manifest065afd083ef2f6c19584b1e1787f758671bb16146dfcf7da726d0609c2932226. Independent90Ferrybaseline/42validation-date/84explicitstart/8genuineexpiry/67parity/12reopeningdeadline probes PASS. Verified1170candidatehashes-modes/exact9/1166nonownedLIVE/olderrecords-history/operator-watch/79publicHEAD; Garfield exclusion/163-186holds intact. All5Masterlogs inspected/hashverified,notrerun: Ferry4fail f5a96696bf72062acf8449f4bf06b5eaa02c51d2ac99b0394c287848cee46c85;QA4fail7d9e98db972d1c37aea7d332f4594d1890fd39e460a65da3c3c4074efc22a353;initialfullSEO1failure7e3a59035183b9de2e37005576e734fa2e23a820636f8667850f51df5ae5c387 retained/notwaived;44focused7bceb0c46a54fd7f135ef80540a7108732bcdaf79b50e9f28be04742842e4260;1242full50maintenance/state0/GSC105/SEO0sixprior a63b4befc2df927643c0466db82115921bfcfd4a8707d2bb66e680f20ae12f81. Reads/in-memory probes only,no writes/runners/network-browser/Gitmutation/delegation/scheduler/externalactions. Sharedtool-QA approval only,not public/rendered/production. Master11707jjTh8cloneallfile-list/hash/mode parity before receipt verified; clone not independently inspected. Only immutable consensus appended; exact guarded shared push next.",
+      "release_receipt": "FT-IMP-192 release 15842e3dea5ce51f3e0a3dcb6e3964a87d7a0c06 remote verified 2026-10-27T05:10:07.506Z; main0-0/emptyindex/exact9/all1170indexbytes-modes/threeGitguards/freshfetch/sole reviewedrange/normalpush. Ferry output isolation and required baselineQA explicit-start/end repair delivered/remoteverified, sharedtool-QA only not publicpage delivery. Four Ferry+four QA fail-before regressions;44focused/1242full50maintenance/state0/GSC105/staticSEO0sixprior, initialSEO1failure retained/notwaived. HalleyamendedstrictPASS/noP0-P3 with90Ferrycompat42validation/84start8genuineexpiry67parity12deadline probes. Genuine point/range/reopening expiries remain; no park-operating assurance, source renewal or announced-fare promotion. All79publicHEAD/392olderLIVE/1166nonowned/private173-186/history/dirtyledger/operator-watch/087-181-182records preserved; only191mechanicalcompletion backfill. LRN281native task learning complete, not actualparent/rendered/SEO proof or newvenue facts. One preselection Garfield reader response excluded after163hold identification; no maintainedfacts/clocks or policy-ticket-collector retry/clearance, existing163hold intact. Nativeaction no browser/paid/account/contact/scheduler mutation. Shared-only noPageswait.186release separately still needs documented normalattachment, actualrendered/finalreview/production gates. Mechanical completion only/no metadata-onlycommit; recurring mode unchanged.",
+      "completed_on": "2026-10-27T05:10:07.531Z",
+      "release_state": "completed-remote-verified",
+      "release_commit": "15842e3dea5ce51f3e0a3dcb6e3964a87d7a0c06"
     },
     {
       "id": "FT-IMP-191",
@@ -234,6 +238,56 @@
       "completed_on": "2026-10-23T05:16:48.874Z",
       "release_state": "completed-remote-verified",
       "release_commit": "6c615679e24c2f85a434d0035a4d573de29aab37"
+    },
+    {
+      "id": "FT-IMP-186",
+      "title": "Refresh held Orlando form against the reviewed admission guard",
+      "kind": "held-existing-page-candidate-refresh",
+      "status": "blocked",
+      "release_state": "held-unshipped-awaiting-rendered-qa",
+      "native_refresh_state": "native-reviewed-held",
+      "selected_on": "2026-10-22",
+      "started_at": "2026-10-22T12:57:25Z",
+      "target_paths": [
+        "src/shared/orlando-admission-form.mjs",
+        "tools/page-generation/orlando-activity-page.mjs",
+        "tools/orlando-admission-form.test.mjs",
+        "tools/orlando-activities-page.test.mjs",
+        "tools/orlando-admission-budget.test.mjs",
+        "site/shared/admission-budget.mjs",
+        "site/shared/orlando-admission-form.mjs",
+        "site/things-to-do/orlando-with-kids.html",
+        "docs/plan/orlando-admission-integration-2026-10-15.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/orlando-with-kids.html"
+      ],
+      "evidence": "185enginefix deliveredca09ef3 but held173sitecopy is old and its nativeproof pinnedoldengine. Existing native generator-parity test now fails for that oldcopy. Refresh only heldenginecopy, add served-module guard regression and update local plan; include all13originalcandidatepaths in isolated native review. No browser access recovery, new policy/source or public authority.",
+      "acceptance_criteria": [
+        "Preserve prior173implementation/body/metadata/source-review dates and all user/inherited edits. Regenerate/copy only site/shared/admission-budget.mjs from exact reviewed185source; no other sourceform/generator/HTML/style changes. Add native served-module sparse/substituted-array rejection and validtask parity test. Preserve originalplan body as historical below currentrefresh note.",
+        "Focused/full native QA and exact3asset server-only preflight with serverStoppedtrue/releaseEligiblefalse/browsernotchecked. Different strict read-only review of complete13path candidate, not justcopydelta, returns native-only PASS/HOLD_RELEASE if clean; no actualdesktop/mobile/keyboard/image/noJS check claimed.",
+        "No staging/commit/push/Pages/productionverification. Preserve386olderLIVEitems and1144nonownedbaselinebytes/modes/dirtyledger/historicaltail; nativecandidate startsHEADplus all13heldpaths, excludesunrelateddirtydocs/ledger, includesprivate173record forreviewonly.78existingnon-targetpublicHEADfiles exact; targetOrlandoHTML/sourceform unchangedfrombaseline, twoheldsite modules remainunshipped. Prior173proof retained; new186proof is not finalreleaseclearance."
+      ],
+      "measurement_plan": "Native mixed-age/infant/future/date/resize/reset/safeDOM/noJSbaseline and served current-engine arrayguards; reproduceoldcopyfailure then passafter. Existing LRN275 alreadycomplete today; no newlearning/sourcefreshness/actualparent/SEOclaim.",
+      "production_invariant": "Production remains unchanged; shared185engine/data/prices/sourceclocks untouched. Only three owned substantive edits planned: heldenginecopy, heldformtest and localplan; otherowned173files staybaselineexact. No browsernavigation/retry/alternateorigin/tool, account/contact/paid/indexing/analytics/security/scheduler change.",
+      "decision": "IMPLEMENT_LOCAL_REFRESH; retain all13paths uncommitted and HOLD_RELEASE until documented changed normalattachment, actualrenderedtask checks and different finalreleasePASS/exactguarded production gates.",
+      "next_gate": "Native/full/preflight/different read-only native-candidate PASS thisrun, then checkpoint HOLD. Remaining: documented normalattachment, actual1280/390/320/keyboard/image/noJS/interactions, finalnative/finalindependentreleasePASS, exactcommit/push/Pages-marker-productionSEO/invariants.",
+      "gsc_evidence_classification": "LatestOct21API collected15:16:49.442Z/finalOct19 versus priorOct20final18; reusedorientation only. ops/gsc-snapshots/2026-10-21.md and ops/gsc-snapshots/2026-10-21.json",
+      "review_receipt": "FT-IMP-186 Mill01a163b4-1214-71e0-abb9-e08ac818967f PASS_FOR_NATIVE_CANDIDATE/HOLD_RELEASE/noP0-P2native on YZTQVm manifesta1bba00a0167d97b7cc73b0618e3b64e3c0c841061e0a6ef165e1022ffb0faa6.336validtaskparity/28malformedarrayrejections/zerosuppliedcallbacks; oldfailure reproduced. Master41focused/1231full50maintenance/stateSEO0/GSC100/sixpriorwarnings log2e6cd4bd686fe3cc65db110b719671b93ded357722fe10f9154292139e464b10 inspected/hashverified, not rerun. Before11pass2fail429bf7345b7743495fd3a97f34d8684e75772321c5d2bc2bffa70a7f23d03f6d. Preflightdf5613ac91a3cf1f5a6daaa44e00f51b13975911e1279d16408fff9ca1c81ac4 server-only3exact200/serverStoppedtrue/browsernotchecked/releaseEligiblefalse. All1157candidate-baseline inventories/exact13/386olderLIVE/1144nonowned/78nontargetpublic/history/originalplanbody preserved; onlythree substantive baseline edits plusfour ops, sixheldtargetsunchanged. No reviewerwrites/tempfiles/fixtures/Gitmutations/network/browser/delegation/scheduler. Master1157KevFlMcloneparity before mechanicalreceipt verified; clone not separately reviewerinspected. Native refresh complete/localheld; no actual1280-390-320/keyboard/image/noJS/interaction or finalreleasePASS. No stage/commit/push/Pages/production/sourceclock/newlearning claim; remainingnormalattachment/rendered/finalrelease gate unchanged.",
+      "native_checkpoint": {
+        "snapshot_path": "/var/folders/cx/0kt3mwqj4hq0nnmylzksc4tr0000gn/T/ft186-final-KevFlM",
+        "reviewed_candidate_path": "/var/folders/cx/0kt3mwqj4hq0nnmylzksc4tr0000gn/T/ft186-native-candidate-YZTQVm",
+        "reviewed_manifest_sha256": "a1bba00a0167d97b7cc73b0618e3b64e3c0c841061e0a6ef165e1022ffb0faa6",
+        "qa_log": "/tmp/ft186-final-qa.log",
+        "qa_sha256": "2e6cd4bd686fe3cc65db110b719671b93ded357722fe10f9154292139e464b10",
+        "preflight_log": "/tmp/ft186-preflight.json",
+        "preflight_sha256": "df5613ac91a3cf1f5a6daaa44e00f51b13975911e1279d16408fff9ca1c81ac4",
+        "release_eligible": false
+      }
     },
     {
       "id": "FT-IMP-185",
@@ -707,6 +761,47 @@
       "completed_on": "2026-10-15T13:13:26.429Z",
       "release_state": "completed-remote-verified",
       "release_commit": "37e86c6638f5fca28c3592e0738ba66b98840fc8"
+    },
+    {
+      "id": "FT-IMP-173",
+      "title": "Prepare Orlando's reader-facing exact-age admission form",
+      "kind": "existing-page-product-improvement",
+      "status": "blocked",
+      "release_state": "held-unshipped-awaiting-rendered-qa",
+      "selected_on": "2026-10-15",
+      "started_at": "2026-10-15T11:59:40Z",
+      "target_paths": [
+        "src/shared/orlando-admission-form.mjs",
+        "tools/page-generation/orlando-activity-page.mjs",
+        "tools/orlando-admission-form.test.mjs",
+        "tools/orlando-activities-page.test.mjs",
+        "tools/orlando-admission-budget.test.mjs",
+        "site/shared/admission-budget.mjs",
+        "site/shared/orlando-admission-form.mjs",
+        "site/things-to-do/orlando-with-kids.html",
+        "docs/plan/orlando-admission-integration-2026-10-15.md",
+        "ops/current-cycle.md",
+        "ops/operator-review.md",
+        "ops/seo-roadmap.json",
+        "ops/seo-roadmap.md"
+      ],
+      "target_urls": [
+        "https://familytripwise.com/things-to-do/orlando-with-kids.html"
+      ],
+      "evidence": "Reviewed172 engine is delivered atff811f7, but the existing public page still only supplies the fixed two-adult/ages3,10 example. Prepare a supported progressive-enhancement form and same-engine result table locally. No need to wait on browser recovery to write/test a candidate; publication and final rendered integration remain held under the already-recorded normal attachment dependency.172 source audit is reused, not renewed. LatestOct14 GSC finalizedOct12 remains reused orientation, not query/CTR eligibility.",
+      "acceptance_criteria": [
+        "Keep the existing no-JS comparison, source/review dates, metadata, canonical, seven choices and all non-target public bytes intact. An initially hidden form progressively exposes one-to-fourteen numeric traveler ages, an exact visit date and standard-admission results from the reviewed pure engine; no duplicate prices or network/storage/analytics.",
+        "Clear old results whenever inputs change; enforce party/date validity, unknown infant and two unpriced options, source-specific check/recheck dates, fee exclusions, concessions and non-quote/non-availability scope. Safely construct result DOM, no user HTML injection or form submission/navigation.",
+        "Native interaction fixtures, source/public module parity, generator idempotence, restricted preview preflight, focused/full native QA and a different independent read-only candidate review. Fixtures/preflight do not replace actual desktop/mobile/keyboard/image/render checks. If normal access is unchanged, retain all13 paths uncommitted/unpushed and explicitly HOLD release; never retry/browser-switch/deploy to preview."
+      ],
+      "measurement_plan": "Candidate tasks: mixed ages30/35/2/13, infant1/teen13, original3/10 control, edited ages invalidating prior totals, smaller/larger party, blank/invalid/past/future visit, reset and no-JS preservation. Record native-only results separately from unperformed rendered checks; not actual parents or SEO lift.",
+      "production_invariant": "One existing HTML and2newshared modules only if eventually released; no sitemap/metadata/indexability/title/global stylesheet/otherpublicfile/hotel/source/review/observation/weekly/scheduler/paid mutation. Preserve372older ordered items and inherited11dirty paths. Keep172engine/model bytes unchanged and use its five inspected tariffs; no new fact collection or free-price inference.",
+      "decision": "IMPLEMENT_LOCAL_CANDIDATE now; only preparation is eligible without changed normal browser access. Do not commit, push or claim public delivery while actual rendered QA is missing.",
+      "initial_review": "Boyle01a13f75-1925-76c1-a3ed-cc0b2936e370 cycle1FAIL/P2: count input4->1->14 loses hidden traveler ages. Independent33focusedPASS; complete Master1169full50maintenance/stateGSCSEO green log inspected, not rerun; exact13/372olderordered/1107nonownedLIVE/78unaffectedsite/sevenHEADexclusions verified. HOLD_RELEASE missing actual rendered QA; no release approval.",
+      "repair": "Retain per-traveler age drafts in memory across count edits; calculate only visible travelers and clear visible/hidden drafts on reset. Add sequential-keystroke and hidden-draft-reset regressions. Final full nativeQA/cycle2 read-only re-review required; browser hold unchanged.",
+      "next_gate": "Finish cycle2 native candidate review and preserve all13 paths uncommitted. Release remains held for documented changed normal browser access, actual desktop/mobile/keyboard/image/no-JS checks, final independent release PASS, exact staging/push and Pages/marker/productionSEO/affected-URL invariants.",
+      "blocker": "Existing167 normal createBrowserTab(iab,SanAntonioitinerary,visibletrue) webview attachment timeout twice incl1transient retry; no page attached/providerHTTPunknown. Owner normal app/browser bridge; unblock documented changed successful normal attachment. No retry here, no alternativebrowser/tool/origin, no generic merge/city approval request. Independent native candidate work proceeds; this status is a release hold, not a project-wide stop.",
+      "review_receipt": "FT-IMP-173 Boyle01a13f75-1925-76c1-a3ed-cc0b2936e370 cycle2PASS_FOR_NATIVE_CANDIDATE/noP0-P3; HOLD_RELEASE actualdesktop-mobile-keyboard-image-render QA missing. UK2kaj manifest514f0af8adb257d2326a5be84794a9dc6a3c871df79bfa497934b1132bc9969b. Cycle1FAIL/P2 retained and fixed: in-memory drafts survive4->1->14; visible travelers only priced; reset clears hidden drafts. Independent35focused plus cache/reset probes PASS; Master1171full50maintenance/stateSEO0/GSC93/sixprior log758fff9b524f105593d129798d5ea08a1508f3c96a5bad708e4cb0b709a18c0b inspected, not rerun. Exact13/372olderordered/1107nonownedLIVE/78unaffectedsite/unchanged172engine-model/originalcontent verified. Preflight2306b879c69a195dc7c9a2be358b72590a2ee52c4f870e92f846e76f31aae5d8 threeexactbytes/serverStoppedtrue/releaseEligiblefalse/browsernotchecked. Frozen local checkpoint ft173-final-yqpAvL; statusblocked/held-unshipped-awaiting-rendered-qa. No commit/push/public delivery/newsource or browserretry. Only immutable result appended; next documentedchangednormalattachment then actualUI/finalreview/guardedproduction gates."
     },
     {
       "id": "FT-IMP-172",

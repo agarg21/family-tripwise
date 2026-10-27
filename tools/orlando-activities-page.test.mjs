@@ -11,12 +11,12 @@ test("generated Orlando hub is exact, one new canonical and reachable",()=>{
   assert.equal((read('site/sitemap.xml').match(/<loc>/g)||[]).length,36);
   assert.equal(read('site/sitemap.xml').split(`https://familytripwise.com/${activityPath}`).length-1,1);
   assert.ok(read('site/index.html').includes(activityPath));
-  const out=new Map();writeOrlandoActivityPage((p,s)=>out.set(p,s));assert.equal(out.size,1);assert.equal(out.get(activityPath),html);
+  const out=new Map();writeOrlandoActivityPage((p,s)=>out.set(p,s));assert.equal(out.size,3);assert.equal(out.get(activityPath),html);
 });
 test("all seven choices retain exact sources and native detail targets",()=>{
   const html=orlandoActivityPage();assert.equal(activities.length,7);assert.equal(new Set(activities.map(r=>r.id)).size,7);
   for(const r of activities){assert.ok(html.includes(`id="${r.id}"`));assert.ok(html.includes(`href="#${r.id}"`));assert.ok(r.sourceIds.every(s=>sources[s]));for(const s of r.sourceIds)assert.ok(html.includes(sources[s]));}
-  assert.equal((html.match(/role="region"/g)||[]).length,2);assert.equal((html.match(/tabindex="0"/g)||[]).length,2);
+  assert.equal((html.match(/role="region"/g)||[]).length,3);assert.equal((html.match(/tabindex="0"/g)||[]).length,3);
   assert.doesNotMatch(html,/download|\.csv|<script src=/);
 });
 test("admission arithmetic retains ages, units, online versus onsite and tax unknowns",()=>{

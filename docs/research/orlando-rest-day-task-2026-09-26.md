@@ -1,5 +1,7 @@
 # Orlando Rest-Day Task And Constraint Model
 
+Source/docs push verified September26 05:15:20UTC: `2e13f7080395a00650510be2298508881eb44eb2`, fresh fetch/no divergence, complete sole reviewed range/12exactpaths, successful push and HEAD/origin parity with clean worktree before mechanical backfills. Huygens cycle2 PASS and223tests. No site change or Pages release; public gates unchanged. Lower pending checkpoints are historical.
+
 FT-RES-054 / LRN-049, September26,2026. Decision: **implement an unpublished three-attraction constraint model now; do not publish a generic all-ages list or activate FT-PUB-006.** Source model, deterministic comparison and tests are in `src/prototypes/orlando-rest-day/` and `tools/orlando-rest-day.test.mjs`. No site, generator or public URL changed.
 
 ## Task And Hypothesis
