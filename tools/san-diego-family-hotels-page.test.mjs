@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const pagePath = join(root, "site", "where-to-stay", "san-diego-family-hotels.html");
@@ -102,7 +103,7 @@ test("starts with the comparison, retaining one trip-style surface before media"
   assert.doesNotMatch(html, /Start with the kind of trip you want/);
   assert.doesNotMatch(html, /For Mission Bay water time, compare the six bay resorts/);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
-  assert.equal((html.match(/href="\.\.\/where-to-stay\/san-diego-with-kids\.html"/g) || []).length, 1);
+  assert.equal((stripSiteChrome(html).match(/href="\.\.\/where-to-stay\/san-diego-with-kids\.html"/g) || []).length, 1);
   assert.match(html, /Compare San Diego stay areas first/);
   assert.ok(html.indexOf("Compare San Diego stay areas first") > comparisonIndex);
   assert.equal((html.match(/<dl class="snapshot">/g) || []).length, 1);

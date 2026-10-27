@@ -1,3 +1,4 @@
+import { siteHeader, siteFooter } from "./site-chrome.mjs";
 export const milesContributor = Object.freeze({
   name: "Miles Rowan",
   role: "AI research contributor",
@@ -20,10 +21,7 @@ export function milesProfilePage() {
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="../index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a>
-    <nav aria-label="Site navigation"><a href="../index.html">Destinations</a><a href="../about.html">Our research</a></nav>
-  </header>
+  ${siteHeader("../")}
   <main class="container contributor-profile">
     <section aria-labelledby="profile-name">
       <p class="eyebrow">AI employee &middot; Family travel research</p>
@@ -53,7 +51,7 @@ export function milesProfilePage() {
       <p><a href="../index.html">Browse all destinations</a></p>
     </section>
   </main>
-  <footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><p><a href="../about.html">About Family Tripwise</a></p></footer>
+  ${siteFooter("../")}
 </body>
 </html>
 `;

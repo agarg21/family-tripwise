@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { checkedOn, pageUpdatedOn, sources, suites } from "./orlando-suite-data.mjs";
 import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-model.mjs";
+import { siteHeader, siteEnd } from "./site-chrome.mjs";
 
 export const orlandoPath = "where-to-stay/orlando-family-hotels.html";
 export const orlandoRateCsvPath = "downloads/orlando-ihg-dated-rates.csv";
@@ -107,7 +108,7 @@ export function orlandoSuitePage() {
 </head>
 <body class="orlando-page">
   <a class="skip-link" href="#main">Skip to comparison</a>
-  <header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav aria-label="Site navigation"><a href="../index.html">Destinations</a><a href="../things-to-do/orlando-with-kids.html">Orlando activities</a><a href="../about.html">Our research</a></nav></header>
+  ${siteHeader("../", "where-to-stay/orlando-family-hotels.html")}
   <main id="main">
     <section class="intro">
       <p class="eyebrow">Orlando, Florida</p><h1>Orlando family hotels</h1>
@@ -178,7 +179,7 @@ export function orlandoSuitePage() {
       <p>Inputs are processed locally and are not saved or submitted. This page does not book, contact hotels or check live inventory. Source dates describe our inspection, not when a property's terms last changed.</p>
       <p><a href="../about.html">How Family Tripwise handles research and uncertainty</a></p>
     </section>
-  </main><footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><a href="../index.html">Browse destinations</a></footer>
+  </main>${siteEnd("../", "where-to-stay/orlando-family-hotels.html")}
   <script type="module" src="../orlando/orlando-suite-client.mjs"></script>
 </body></html>
 `;

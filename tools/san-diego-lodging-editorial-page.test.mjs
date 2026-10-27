@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
+import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const stay = readFileSync(new URL("../site/where-to-stay/san-diego-with-kids.html", import.meta.url), "utf8");
@@ -74,7 +75,7 @@ test("uses concise source boundaries without defensive internal language", () =>
 });
 
 test("keeps both pages detailed without returning to their prior repetition", () => {
-  const visibleWords = (html) => html
+  const visibleWords = (html) => stripSiteChrome(html)
     .replace(/<script[\s\S]*?<\/script>/g, " ")
     .replace(/<style[\s\S]*?<\/style>/g, " ")
     .replace(/<[^>]+>/g, " ")

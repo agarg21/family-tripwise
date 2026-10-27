@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
+import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pagePath = join(root, "site", "where-to-stay", "las-vegas-family-hotels.html");
@@ -88,7 +89,7 @@ test("keeps visible FAQ and schema aligned", () => {
 test("routes from home, the stay guide, and the activity decision flow", () => {
   const home = readFileSync(join(root, "site", "index.html"), "utf8");
   const stay = readFileSync(join(root, "site", "where-to-stay", "las-vegas-with-kids.html"), "utf8");
-  const activity = readFileSync(join(root, "site", "things-to-do", "las-vegas-with-kids.html"), "utf8");
+  const activity = stripSiteChrome(readFileSync(join(root, "site", "things-to-do", "las-vegas-with-kids.html"), "utf8"));
 
   assert.match(home, /href="\.\/where-to-stay\/las-vegas-family-hotels\.html"/);
   assert.match(stay, /href="\.\/las-vegas-family-hotels\.html"/);

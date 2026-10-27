@@ -4,6 +4,7 @@ import { comparisonUrl } from "../../src/prototypes/cancun-resort-comparison/sha
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
 import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
+import { siteHeader, siteEnd } from "./site-chrome.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export const cancunChildOffer = JSON.parse(readFileSync(new URL("../../docs/research/cancun-child-offer-eligibility-2026-10-11.json", import.meta.url), "utf8"));
@@ -74,7 +75,7 @@ export function cancunResortPage() {
 </head>
 <body class="cancun-page">
   <a class="skip-link" href="#main">Skip to comparison</a>
-  <header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav aria-label="Site navigation"><a href="../index.html">Destinations</a><a href="../about.html">Our research</a></nav></header>
+  ${siteHeader("../", "where-to-stay/cancun-family-resorts.html")}
   <main id="main">
     <section class="page-intro">
       <p class="eyebrow">Cancun area, Mexico</p>
@@ -156,7 +157,7 @@ ${cancunChildOfferSection()}    <section id="before-booking">
       <p><a href="../about.html">How Family Tripwise handles research and uncertainty</a></p>
     </section>
   </main>
-  <footer class="site-footer"><p>Family Tripwise. Research-based family travel planning.</p><a href="../index.html">Browse destinations</a></footer>
+  ${siteEnd("../", "where-to-stay/cancun-family-resorts.html")}
   <script type="module" src="../cancun/client.mjs"></script>
 </body>
 </html>

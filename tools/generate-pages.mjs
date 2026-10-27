@@ -13,19 +13,12 @@ import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-v
 import { writeLondonFamilyHotelsPage } from "./page-generation/london-family-hotels-page.mjs";
 import { writeSitemap } from "./page-generation/sitemap.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
+import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
 
 function esc(value) {
   return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
-}
-
-function staticNav(prefix) {
-  return `        <a href="${prefix}things-to-do/chicago-with-kids.html">Chicago</a>
-        <a href="${prefix}things-to-do/san-antonio-with-kids.html">San Antonio</a>
-        <a href="${prefix}things-to-do/san-diego-with-kids.html">San Diego</a>
-        <a href="${prefix}things-to-do/las-vegas-with-kids.html">Las Vegas</a>
-        <a href="${prefix}things-to-do/new-york-city-with-kids.html">NYC</a>`;
 }
 
 function pageShell({ title, description, canonical, nav, body, script = false }) {
@@ -40,20 +33,9 @@ function pageShell({ title, description, canonical, nav, body, script = false })
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="Family Tripwise home">
-        <span class="brand-mark">FT</span>
-        <span>Family Tripwise</span>
-      </a>
-      <nav aria-label="Destination guides">
-${staticNav("../")}
-      </nav>
-    </header>
+    ${siteHeader("../", canonical)}
 ${body}
-    <footer class="site-footer">
-      <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
-      <p><a href="../about.html">How our family travel guides are built</a></p>
-    </footer>
+    ${siteEnd("../", canonical)}
 ${script ? '    <script src="../app.js"></script>\n' : ""}  </body>
 </html>
 `;
@@ -443,15 +425,7 @@ function aboutPage() {
     </style>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Family Tripwise home">
-        <span class="brand-mark">FT</span>
-        <span>Family Tripwise</span>
-      </a>
-      <nav aria-label="Destination guides">
-${staticNav("./")}
-      </nav>
-    </header>
+    ${siteHeader("./")}
     <main>
       <section class="page-hero">
         <div class="container">
@@ -572,10 +546,7 @@ ${staticNav("./")}
         </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
-      <p><a href="./about.html">How our family travel guides are built</a></p>
-    </footer>
+    ${siteFooter("./")}
   </body>
 </html>
 `;
@@ -645,15 +616,7 @@ writeSite("index.html", `<!doctype html>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Family Tripwise home">
-        <span class="brand-mark">FT</span>
-        <span>Family Tripwise</span>
-      </a>
-      <nav aria-label="Destination guides">
-${staticNav("./")}
-      </nav>
-    </header>
+    ${siteHeader("./")}
     <main>
       <section class="page-hero">
         <div class="container">
@@ -810,10 +773,7 @@ ${cities.map((city) => `          <article class="activity-card">
         </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <p>Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.</p>
-      <p><a href="./about.html">How our family travel guides are built</a></p>
-    </footer>
+    ${siteFooter("./")}
   </body>
 </html>
 `);

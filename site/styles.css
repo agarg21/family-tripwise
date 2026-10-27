@@ -976,6 +976,88 @@ input {
   margin: 0;
 }
 
+.related-guides,
+.guide-directory {
+  display: block;
+  font-size: inherit;
+}
+
+.related-guides {
+  color: var(--ink);
+  max-width: 1120px;
+  margin: 32px auto;
+  padding: 0 clamp(18px, 4vw, 48px);
+}
+
+.related-guides h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.related-guides h2 + ul + h2,
+.related-guides ul + h2 {
+  margin-top: 18px;
+}
+
+.related-guides ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-guides a {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.guide-directory {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.guide-directory h2 {
+  margin: 10px 0 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.guide-directory ul {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-directory li {
+  overflow-wrap: anywhere;
+}
+
+.site-footer .guide-directory a,
+.site-footer p a {
+  color: inherit;
+}
+
+.guide-directory-city {
+  color: #fff;
+  font-weight: 700;
+}
+
+.site-nav {
+  gap: 6px 14px;
+}
+
+.site-nav a[aria-current] {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 @media (max-width: 820px) {
   .site-header {
     position: static;
