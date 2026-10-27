@@ -1,11 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q02b Orlando activities follow-ups (Q01 review P3s)
-open · S · owner: none (1 page + docs) · gate: none
-Files: tools/page-generation/orlando-activity-*.mjs, src/shared/orlando-admission-form.mjs, docs/plan/orlando-admission-integration-2026-10-15.md.
-Acceptance: give per-fact dates (admission rates Oct 27, other facts Oct 13); name the Spanish official page as the Science Center rate source; add a no-JS line that points to the static table; drop the stale "October 12/13" Eye hours; add a form unit test for the "no standalone rate was established" wording; move the superseded note under its H1. Also (Q02 review P3): require the price signal in findPastStaySamples to sit near the matched range. Also (Q16 review P3s): label the ISO-dated Nov stay samples in the Boston, DC, PV and Cancun-grandparents CSVs as older observations via their generators and extend tools/stay-sample-labels.test.mjs to ISO stay columns; rename the Cancun CSV "Stay dates passed" header to "Stay-date status"; narrow the new "review … by <date>" detector so booking-deadline copy is not flagged.
-
 ## Q03 Discovery fixes: sitemap lastmod, Orlando cross-link, dead Coronado link
 open · S · owner: D4c Approved · gate: none
 Files: tools/generate-pages.mjs (sitemap), Orlando hotels generator, the 5 SD pages citing coronadoferrylanding.com/ferry-info/ (404).
@@ -42,6 +37,10 @@ open · L · owner: D7 Approved · gate: none · Acceptance: as Q06 for site/whe
 open · M · owner: none · gate: Q04 done
 Files: site/family-itinerary/las-vegas-with-kids.html, site/family-itinerary/san-antonio-with-kids.html, their generator.
 Acceptance: one named deficiency fixed per page (e.g. top answer box; day-shape table with nap/rest blocks and dated hours). No unverified stroller/route claims. ≤3 pages.
+
+## Q02c Freshness-checker follow-ups (Q02b review P3s)
+open · S · owner: none (tools + 1 page) · gate: none
+Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns.
 
 ## Q09 Lodging-page readability fix
 open · M · owner: D4e Approved · gate: Q02 done
