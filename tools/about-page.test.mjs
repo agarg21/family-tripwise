@@ -18,7 +18,10 @@ test("About profiles distinguish the founder from the AI contributor", () => {
   assert.doesNotMatch(html, /not a human traveler|Miles has no personal trips|not a separate human employee/);
   assert.match(html, /A separate AI reviewer checks material changes/);
   assert.match(html, /#contributors, #apoorva-garg, #miles-rowan \{ scroll-margin-top: 96px; \}/);
-  assert.match(html, /Our guides distinguish official facts, research-based interpretation, and human-verified experience/);
+  assert.doesNotMatch(html, /distinguish official facts, research-based interpretation, and human-verified experience|Human review required|Unless a page says otherwise/);
+  assert.match(html, /Every Family Tripwise guide is AI-assisted research from dated official sources\. No guide is based on a firsthand visit by our team\./);
+  assert.match(html, /We do not present any guidance as firsthand or human-verified experience\./);
+  assert.match(html, /<strong>Last updated:<\/strong> October 27, 2026/);
   assert.doesNotMatch(html, /"@type"\s*:\s*"Person"/);
 });
 
