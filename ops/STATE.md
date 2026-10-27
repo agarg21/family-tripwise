@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2026-11-13 17:00 America/New_York
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-27 transactions=3
-run: none
+run: {id: 2026-10-27T16:04:59Z, started_at: 2026-10-27T16:04:59Z}
 last_public_release: 2dca9b4 (2026-10-27, Q16 stay-sample labels)
 active: none
 
