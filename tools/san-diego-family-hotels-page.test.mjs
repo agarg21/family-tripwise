@@ -59,7 +59,7 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   assert.equal((answer.match(/<p>/g) || []).length, 3);
   assert.match(answer, /<strong>Fits:<\/strong>[\s\S]*<strong>Rough cost:<\/strong>[\s\S]*<strong>Main catch:<\/strong>/);
   assert.match(answer, /about \$265-\$619 per room for one night/);
-  assert.match(answer, /about \$271-\$330 per night for November 8-13, 2026/);
+  assert.match(answer, /about \$271-\$330 per night incl. tax \(valet and any mandatory or sofa fees extra\) for November 8-13, 2026/);
   assert.match(html, /USD 1,355\.19 for the stay \(about \$271\.04 per night\); Flexible Rate: USD 1,647\.58 for the stay \(about \$329\.52 per night\)/);
   assert.match(html, /<dt>Price format<\/dt><dd>Check live rate, with dated older samples<\/dd>/);
   assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);

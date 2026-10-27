@@ -1,3 +1,4 @@
+import { hotelEvidence } from "./hotel-evidence.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -38,6 +39,10 @@ test("One additive room note preserves original cards, current fees and dated pr
   assert.equal((html.match(/class="quick-pick"/g) ?? []).length, 6);
   assert.ok(html.includes("Older 1-night sample: $265 (2 adults; Jul 18)"));
   assert.equal((html.match(/class="hotel-price-sample"/g) ?? []).length, 1);
+  const sample = hotelEvidence().find(r => r.hotel === evidence.hotel).fields.price.value.official_family_sample;
+  assert.equal(sample.checked_on, "2026-10-04");
+  assert.deepEqual(sample.rates.map(r => r.nightly_average), [271.04, 329.52]);
+  assert.match(readFileSync(new URL("../docs/research/san-diego-hotel-price-display-2026-10-27.md", import.meta.url), "utf8"), /Homewood hold decision/);
   assert.doesNotMatch(html, /\$265-\$350\+/);
   assert.ok(html.includes(`href="${note.sourceUrl}">Exact-suite source</a>`));
   assert.ok(html.includes(`href="${note.policySourceUrl}">Hotel policy source</a>`));

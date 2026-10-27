@@ -6,6 +6,19 @@ const currentLoewsFees = JSON.parse(readFileSync(new URL("../../docs/research/lo
 const currentDanaFees = JSON.parse(readFileSync(new URL("../../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8")).fee_envelope;
 const currentHomewoodRoom = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-room-policy-2026-10-11.json", import.meta.url), "utf8"));
 
+const homewoodPriceObservation = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-price-observation-2026-10-04.json", import.meta.url), "utf8"))[0];
+
+// Published 2026-10-27 (Q07) with unknowns disclosed; see docs/research/san-diego-hotel-price-display-2026-10-27.md.
+function homewoodFamilySample() {
+  const o = homewoodPriceObservation;
+  return { evidence_class: o.evidence_class, checked_on: o.checked_on, source_url: o.source_url, evidence_path: "docs/research/san-diego-homewood-price-observation-2026-10-04.json",
+    category: o.category, currency: o.currency, unit: o.unit, arrival: o.arrival, departure: o.departure, nights: o.nights,
+    party: { adults: o.engine_party.adults, children: o.engine_party.children, child_ages_entered: false },
+    rates: o.rates.map((r) => ({ plan: r.plan, stay_amount: r.stay_amount, nightly_average: Math.round((r.stay_amount / o.nights) * 100) / 100 })),
+    fee_basis: "Estimated from displayed nightly rates and tax lines; valet, applicable mandatory/sofa fees and card-hold amount excluded or unknown.",
+    label: "Older observation; not a current quote or child-age acceptance" };
+}
+
 export function sanDiegoCurrentRoomNote(name) {
   if (name !== currentHomewoodRoom.hotel) return null;
   const room = currentHomewoodRoom;
@@ -134,7 +147,8 @@ export function normalizeSanDiegoHotel(hotel, retainedPrice, registry = sanDiego
         source_basis: hotel.olderSample
           ? `Page shows Check live rate with the older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}, seen ${hotel.olderSample.seen}). Former editorially broadened planning band retired 2026-10-27: its high endpoint was never observed. Not a family-room quote; exact child ages/room/date/rate remain unverified.`
           : "Page shows Check live rate: package/per-person pricing has no comparable room sample. Former Package-priced label retained only as context; exact child ages/room/date/rate remain unverified.",
-        ...(hotel.olderSample !== undefined ? { older_one_night_sample: hotel.olderSample ? { ...hotel.olderSample } : null } : {}), structured_basis: Boolean(room && party && stay),
+        ...(hotel.olderSample !== undefined ? { older_one_night_sample: hotel.olderSample ? { ...hotel.olderSample } : null } : {}),
+        ...(hotel.name === "Homewood Suites San Diego Downtown/Bayside" ? { official_family_sample: homewoodFamilySample() } : {}), structured_basis: Boolean(room && party && stay),
         basis_unknowns: ["Exact selected room category", "Exact family party and child ages", "Exact travel dates", "Rate-specific tax/fee inclusion"] },
       limitation: "Older dated sample only. This mapping does not renew it, establish a band, or price the hotel card's family-room category." },
     review_signal: envelope([rule.review, { summary: hotel.reviewSignal, sample_bucket: path === SAN_DIEGO_ADDITIONS ? "Small:5-12visible excerpts/snippets" : "Small directional sample; count not consistently established", sampled_on: reviewDate, representative: false, firsthand: false }, "known"], "REVIEW_SIGNAL"),

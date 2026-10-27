@@ -243,7 +243,7 @@ const sanDiegoSampleText = (hotel, withSource = false) => hotel.olderSample
   ? `Older 1-night sample: ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}; ${withSource ? `${hotel.olderSample.source}, ` : ""}${sanDiegoSeen(hotel.olderSample.seen)})`
   : "Package-priced; no comparable room sample";
 const sanDiegoPriceCell = (hotel, withSource = false) => `${esc(hotel.priceRange)}<br><small>${esc(sanDiegoSampleText(hotel, withSource))}</small>`;
-const sanDiegoPriceBasis = "No current family-room rate has been observed, so every hotel shows Check live rate. The sample figure beside it is an older observation: a public one-night price per room on Expedia, Travelocity or Hotels.com with displayed taxes and fees, seen July 18 or 21, 2026, for two adults unless marked not recorded. Its stay date has passed or was not recorded and the room is unknown, so the figure is not a family-room price or a current quote. LEGOLAND sells packages, so it has no comparable sample. Earlier rough ranges are gone because their upper ends were never observed. The only family-party price is Homewood's official suite sample, also an older observation. Resort fees, parking and a second room may be extra.";
+const sanDiegoPriceBasis = "No current family-room rate has been observed, so every hotel shows Check live rate. The sample figure beside it is an older observation: a public one-night price per room on Expedia, Travelocity or Hotels.com with displayed taxes and fees, seen July 18 or 21, 2026, for two adults unless marked not recorded; where several examples were visible, it is the lowest. Its stay date has passed or was not recorded and the room is unknown, so the figure is not a family-room price or a current quote. LEGOLAND sells packages, so it has no comparable sample. Earlier rough ranges are gone because their upper ends were never observed. The only family-party price is Homewood's official suite sample, also an older observation. Resort fees, parking and a second room may be extra.";
 const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
 const sanDiegoHomewoodSample = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-price-observation-2026-10-04.json", import.meta.url), "utf8"))[0];
 const usd = (amount) => amount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -294,7 +294,7 @@ function sanDiegoFamilyHotelPage() {
       position: index + 1,
       name: hotel.name,
       description: hotel.olderSample
-        ? `${hotel.category}; no current family-room rate observed (check live rate); older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} USD per room${hotel.olderSample.party ? ` for ${hotel.olderSample.party}` : ""}, seen ${hotel.olderSample.seen}, not a family-room quote`
+        ? `${hotel.category}; no current family-room rate observed (check live rate); older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} USD per room${hotel.olderSample.party ? ` for ${hotel.olderSample.party}` : ", party not recorded"}, seen ${hotel.olderSample.seen}, not a family-room quote`
         : `${hotel.category}; package and per-person pricing (check live rate); no comparable room sample`
     }))
   };
@@ -314,7 +314,7 @@ function sanDiegoFamilyHotelPage() {
       </section>
       <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
-        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (July 18-21, mostly two adults); Homewood's suite for 2 adults + 3 children was about $271-$330 per night for November 8-13, 2026 (checked October 4).</p>
+        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults). Homewood's suite for 2 adults + 3 children was about $271-$330 per night incl. tax (valet and any mandatory or sofa fees extra) for November 8-13, 2026 (checked October 4).</p>
         <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
@@ -591,7 +591,7 @@ function hotelComparisonCsv(headings, rows) {
 function sanDiegoHotelComparisonCsv() {
   const page = "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html";
   const homewood = sanDiegoHomewoodPrice();
-  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees)", "Older sample party", "Older sample source", "Older sample seen", "Official family sample", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison"];
+  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees)", "Older sample party", "Older sample source", "Older sample seen", "Official family sample (older observation)", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison"];
   const rows = sanDiegoFamilyHotels.map((hotel) => [
     hotel.name, hotel.category, hotel.area, hotel.priceRange,
     hotel.olderSample?.amount ?? "None (package-priced)", hotel.olderSample ? hotel.olderSample.party ?? "Not recorded" : "", hotel.olderSample?.source ?? "", hotel.olderSample?.seen ?? "",
