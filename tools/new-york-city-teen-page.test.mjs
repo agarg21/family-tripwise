@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 import { cpSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, relative } from "node:path";
@@ -165,7 +166,7 @@ test("NYC Ferry fare dates and return budgets are no-JS, accessible and not disc
 });
 
 test("routes from the all-ages page and home while preserving one sitemap URL", () => {
-  const home = readFileSync(join(root, "site", "index.html"), "utf8");
+  const home = stripSiteChrome(readFileSync(join(root, "site", "index.html"), "utf8"));
   const allAges = readFileSync(join(root, "site", "things-to-do/new-york-city-with-kids.html"), "utf8");
   const sitemap = readFileSync(join(root, "site", "sitemap.xml"), "utf8");
 

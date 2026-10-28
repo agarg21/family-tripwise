@@ -1,4 +1,5 @@
 import test from "node:test";
+import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {bostonPath,bostonPack,bostonPrices,bostonRooms,bostonCsv,bostonExcluded,bostonFamilyHotelPage,bostonBreakfastUpgrade,bostonBreakfastBudgetBasis} from "./page-generation/boston-family-hotels-page.mjs";
@@ -48,7 +49,7 @@ test("Boston page retains all price, kitchen, bedding, exclusions and trust limi
  assert.match(html,/id="kitchen-only"/);assert.match(html,/role="status" aria-live="polite"/);assert.match(html,/tabindex="0" role="region" aria-label="Room comparison"/);assert.match(html,/washington-dc-comparison.js/);assert.doesNotMatch(html,/AggregateRating|"@type":"Offer"|noindex/);
 });
 test("Boston has one canonical job and maintained discovery without removing previous URLs",()=>{
- const url=`https://familytripwise.com/${bostonPath}`,html=bostonFamilyHotelPage();assert.equal((html.match(/<h1>/g)||[]).length,1);assert.ok(html.includes(`<link rel="canonical" href="${url}">`));assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);assert.ok(read("site/index.html").includes(bostonPath));assert.ok(read("site/about.html").includes("Boston"));
+ const url=`https://familytripwise.com/${bostonPath}`,html=bostonFamilyHotelPage();assert.equal((html.match(/<h1>/g)||[]).length,1);assert.ok(html.includes(`<link rel="canonical" href="${url}">`));assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);assert.ok(stripSiteChrome(read("site/index.html")).includes(bostonPath));assert.ok(read("site/about.html").includes("Boston"));
  const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);assert.equal(schema["@type"],"WebPage");assert.equal(schema.url,url);
 });
 test("Boston refresh registry uses maintained exact sources and original dates",()=>{

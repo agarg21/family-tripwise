@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { runInNewContext } from "node:vm";
@@ -86,7 +87,7 @@ test("one discoverable canonical DC job, constrained factual schema and licensed
   assert.equal(schema.dateModified,"2026-10-09");
   assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);
   assert.equal((read("site/sitemap.xml").match(/<loc>/g)||[]).length,38);
-  assert.ok(read("site/index.html").includes(dcPath));
+  assert.ok(stripSiteChrome(read("site/index.html")).includes(dcPath));
   assert.match(html,/Johnny Bivera/); assert.match(html,/2005/); assert.match(html,/public-domain record/);
 });
 test("kitchen filter is reversible and retains details/price context without transmitting data", () => {

@@ -103,4 +103,5 @@ test("shared chrome styles outrank page stylesheets' h2/ul/li rules and align wi
     assert.match(readFileSync(join(site, file), "utf8"), new RegExp(`\\.${cls} \\.related-guides \\{ ?width:`), file);
   }
   assert.match(css, /\.london-page \.related-guides \{ width:/);
+  assert.doesNotMatch(readFileSync(join(site, "cancun-resorts.css"), "utf8"), /\.cancun-page \.skip-link(?::focus)? \{/, "Cancun must use the shared skip-link style");
 });

@@ -87,7 +87,7 @@ test("scoped scroll and sticky identity styles keep the new table independent of
 
 test("page role, global source dates and source-access limitations are preserved", () => {
   const h = html();
-  assert.match(h, /Last updated:<\/strong> July 23, 2026/);
+  assert.match(h, /Garfield Park admission checked:<\/strong> October 13, 2026 · <strong>Other attraction sources checked:<\/strong> July 23, 2026/);
   assert.match(h, /Official attraction and city sources checked July 23, 2026/);
   assert.equal((h.match(/<article class="activity-card" data-tags=/g) ?? []).length, 12);
   assert.match(h, /rel="canonical" href="https:\/\/familytripwise.com\/things-to-do\/chicago-with-kids.html"/);

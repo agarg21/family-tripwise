@@ -1569,9 +1569,9 @@ const nycPriceCell = (hotel) => `${esc(hotel.priceRange)}<br><small>Older 2-adul
 
 function newYorkCityHotelComparisonCsv() {
   const page = "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html";
-  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older two-adult sample checked", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
+  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older two-adult sample (USD/room, one night; not a family-room quote)", "Older two-adult sample checked", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
   const rows = newYorkCityFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-25", newYorkCityPriceBasis,
+    hotel.name, hotel.category, hotel.area, hotel.priceRange, hotel.twoAdultSample, "2026-07-25", newYorkCityPriceBasis,
     hotel.priceNote, hotel.familySetup, "2026-07-25", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     `${page}#sources-checked`, `${page}#hotel-comparison`
@@ -1636,7 +1636,7 @@ function newYorkCityFamilyHotelPage() {
         <p>Prices are older observations only: two-adult samples checked July 25 and <a href="#dated-family-budgets">five-person samples</a> checked October 11, 2026. <a href="#historical-price-basis">Price basis</a>.</p>
       </section>
       <section id="nyc-hotel-answer" class="container answer-box" aria-label="Short answer">
-        <p><strong>Fits:</strong> kitchens or apartments (Hotel Beacon, Homewood, Residence Inn, Radio City); five or more in one unit (Radio City, TRYP family room, Beacon suites, Lotte family suites); breakfast included (Homewood, Residence Inn, Embassy Suites).</p>
+        <p><strong>Fits:</strong> kitchens (Beacon, Homewood, Residence Inn, Radio City); 5+ in one unit (Radio City, TRYP family room, Beacon or Lotte suites); breakfast (Homewood, Residence Inn, Embassy Suites).</p>
         <p><strong>Rough cost:</strong> no current family-room rate observed. Older samples: about $190-$904 per room for two adults for one night (July 25); $631-$2,544 per night with displayed taxes and fees for five-person units (October 11, for November 8-13).</p>
         <p><strong>Main catch:</strong> beds and registered occupancy differ by exact room, and several hotels publish conflicting bed or occupancy details, so confirm your party in writing and price it live before paying.</p>
       </section>

@@ -114,6 +114,8 @@ test("answer box stays within three short lines of observed facts", () => {
   const box = html.match(/<section id="nyc-hotel-answer"[^>]*>([\s\S]*?)<\/section>/)[1];
   const lines = [...box.matchAll(/<p><strong>(Fits|Rough cost|Main catch):<\/strong>/g)].map((m) => m[1]);
   assert.deepEqual(lines, ["Fits", "Rough cost", "Main catch"]);
+  const fits = box.match(/<p><strong>Fits:<\/strong>([^<]*)<\/p>/)[1].trim();
+  assert.ok(fits.length <= 190, `Fits line is ${fits.length} characters; keep it short on phones`);
   assert.match(box, /no current family-room rate observed/);
   assert.match(box, /\$190-\$904 per room for two adults for one night \(July 25\)/);
   assert.match(box, /\$631-\$2,544 per night with displayed taxes and fees for five-person units \(October 11, for November 8-13\)/);
@@ -138,23 +140,25 @@ test("portable comparison preserves same records, historical prices and source r
   const rows = csv.trimEnd().split("\n").map((line) => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map((match) => match[1].replaceAll('""', '"')));
   assert.equal(csv, pages.newYorkCityHotelComparisonCsv());
   assert.equal(rows.length, 13);
-  assert.ok(rows.every((row) => row.length === 14));
+  assert.ok(rows.every((row) => row.length === 15));
   assert.doesNotMatch(csv, /\r/);
   for (const [index, row] of rows.slice(1).entries()) {
     const hotel = hotels[index];
     assert.deepEqual(row.slice(0, 4), [hotel.name, hotel.category, hotel.area, "Check live rate"]);
-    assert.equal(row[4], "2026-07-25");
-    assert.match(row[5], /two adults on Expedia, checked July 25, 2026/);
-    assert.match(row[5], /not a price for a family room or a current quote/);
-    assert.ok(row[6].includes(`about ${hotel.twoAdultSample} for one room`));
-    assert.equal(row[6], hotel.priceNote);
-    assert.equal(row[7], hotel.familySetup);
-    assert.equal(row[8], "2026-07-25");
-    assert.equal(row[9], hotel.reviewSignal);
-    assert.equal(row[10], hotel.parentCheck);
-    assert.equal(row[11], `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`);
-    assert.equal(row[12], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#sources-checked");
-    assert.equal(row[13], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#hotel-comparison");
+    assert.equal(rows[0][4], "Older two-adult sample (USD/room, one night; not a family-room quote)");
+    assert.equal(row[4], hotel.twoAdultSample);
+    assert.equal(row[5], "2026-07-25");
+    assert.match(row[6], /two adults on Expedia, checked July 25, 2026/);
+    assert.match(row[6], /not a price for a family room or a current quote/);
+    assert.ok(row[7].includes(`about ${hotel.twoAdultSample} for one room`));
+    assert.equal(row[7], hotel.priceNote);
+    assert.equal(row[8], hotel.familySetup);
+    assert.equal(row[9], "2026-07-25");
+    assert.equal(row[10], hotel.reviewSignal);
+    assert.equal(row[11], hotel.parentCheck);
+    assert.equal(row[12], `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`);
+    assert.equal(row[13], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#sources-checked");
+    assert.equal(row[14], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#hotel-comparison");
     assert.ok(!row.some((cell) => /^\s*[=+\-@]/.test(cell)));
   }
   assert.match(html, /<section id="hotel-comparison" class="band" data-glance-first>/);

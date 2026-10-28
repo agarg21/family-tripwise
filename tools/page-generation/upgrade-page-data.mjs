@@ -579,7 +579,7 @@ export const activityPages = {
     hidePlans: true,
     baseReplacements: [
       ["<h1>Things to do in Chicago with kids</h1>", "<h1>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style</h1>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Last updated:</strong> July 23, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Garfield Park admission checked:</strong> October 13, 2026 · <strong>Other attraction sources checked:</strong> July 23, 2026</p>"],
       ["Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.", "Family Tripwise compares official attraction information, current city sources, family logistics, and practical planning tradeoffs such as age fit, stroller friction, weather backup, nap timing, and location."],
       ["<div><dt>Best toddler ideas</dt><dd>Lincoln Park Zoo, Maggie Daley Park</dd></div>", "<div><dt>Younger-child day</dt><dd>Chicago Children's Museum or Lincoln Park Zoo</dd></div>"],
       ["<div><dt>Best teen ideas</dt><dd>architecture boat tour, food halls and neighborhoods</dd></div>", "<div><dt>Older-kid day</dt><dd>Architecture cruise, Art Institute, or 360 CHICAGO</dd></div>"],

@@ -52,14 +52,25 @@ const parseCsv = text => {
   if (field || rows.at(-1).length) rows.at(-1).push(field);
   return rows.filter(row => row.length > 1);
 };
-const PRICE_COLUMNS = ["Displayed stay amount", "Displayed nightly", "Displayed stay total", "Approx nightly price"];
+const PRICE_COLUMNS = ["Displayed stay amount", "Displayed nightly", "Displayed stay total", "Approx nightly price", "Estimated stay total", "Derived approximate nightly"];
+// Q02c: stay dates may sit in an "Arrival", "Check-in" or "Stay dates" column, as ISO dates or "November 8-13, 2026".
+const STAY_DATE_COLUMN = /^(?:arrival|check-?in(?: date)?|stay dates?|.*\bstay date\b.*)$/i;
+const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+const stayStart = cell => {
+  const iso = /\b(\d{4})-(\d{2})-(\d{2})\b/.exec(cell);
+  if (iso) return Date.UTC(+iso[1], +iso[2] - 1, +iso[3]);
+  const named = /\b([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2})(?:\s*[-–]\s*(?:[A-Za-z]+\.?\s+)?\d{1,2})?,?\s+(\d{4})\b/.exec(cell);
+  const month = named ? MONTHS.indexOf(named[1].toLowerCase()) : -1;
+  return month >= 0 ? Date.UTC(+named[3], month, +named[2]) : null;
+};
 const csvFiles = files.filter(file => /\/downloads\/[^/]+\.csv$/.test(file));
 export function unlabelledIsoStayRows(text, now) {
-  const [head, ...rows] = parseCsv(text), arrival = head.indexOf("Arrival");
+  const [head, ...rows] = parseCsv(text), arrival = head.findIndex(name => STAY_DATE_COLUMN.test(name.trim()));
   if (arrival < 0) return [];
-  const priced = PRICE_COLUMNS.map(name => head.indexOf(name)).filter(index => index >= 0);
-  return rows.filter(row => /^\d{4}-\d{2}-\d{2}$/.test(row[arrival]) && Date.parse(`${row[arrival]}T00:00:00Z`) <= now.getTime() &&
-    priced.some(index => (row[index] ?? "").trim() !== "") && !/older observation|dates passed|stay dates have passed/i.test(row.join(" ")))
+  const headerLabelled = /older|passed/i.test(head[arrival]);
+  const priced = head.map((name, index) => PRICE_COLUMNS.includes(name) || /^older .*sample \(/i.test(name) ? index : -1).filter(index => index >= 0);
+  return rows.filter(row => { const start = stayStart(row[arrival] ?? ""); return start !== null && start <= now.getTime() &&
+    priced.some(index => (row[index] ?? "").trim() !== "") && !headerLabelled && !/older observation|dates passed|stay dates have passed/i.test(row.join(" ")); })
     .map(row => `${row[0]} | ${row[1]} | ${row[arrival]}`);
 }
 
@@ -69,11 +80,18 @@ test("the CSV checker parses quoted fields and flags only priced, unlabelled pas
   assert.deepEqual(unlabelledIsoStayRows(head + '"A","2026-11-08","1200","Older observation; not a current quote."\n', now), []);
   assert.deepEqual(unlabelledIsoStayRows(head + '"A","2026-11-08","","Unpriced"\n', now), []);
   assert.deepEqual(unlabelledIsoStayRows(head + '"A","2026-12-08","1200","Dated sample"\n', now), []);
+  const checkIn = '"Hotel","Room","Check-in","Displayed nightly"\n', stay = '"Hotel","Room","Stay dates","Estimated stay total"\n';
+  assert.deepEqual(unlabelledIsoStayRows(checkIn + '"A","Suite","2026-11-08","300"\n', now), ["A | Suite | 2026-11-08"]);
+  assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","2026-11-08 to 2026-11-13","1500"\n', now), ["A | Suite | 2026-11-08 to 2026-11-13"]);
+  assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","November 8-13, 2026","1500"\n', now), ["A | Suite | November 8-13, 2026"]);
+  assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","November 8-13, 2026 (older observation)","1500"\n', now), []);
+  assert.deepEqual(unlabelledIsoStayRows('"Hotel","Room","Older sample stay date (passed)","Older one-night sample (USD/room)"\n"A","King","2026-08-11","$282"\n', now), []);
+  assert.deepEqual(unlabelledIsoStayRows('"Hotel","Room","Sample stay date","Older one-night sample (USD/room)"\n"A","King","2026-08-11","$282"\n', now), ["A | King | 2026-08-11"]);
 });
 
 for (const now of ["2026-11-08", "2026-11-14", "2027-01-15"].map(day => new Date(`${day}T12:00:00Z`))) {
   test(`priced ISO-dated stay rows in CSV downloads are labelled as older observations on ${now.toISOString().slice(0, 10)}`, () => {
-    assert.ok(csvFiles.some(file => file.endsWith("boston-family-hotels.csv")));
+    assert.ok(["boston-family-hotels.csv", "orlando-dated-rates.csv", "chicago-family-hotels.csv"].every(name => csvFiles.some(file => file.endsWith(name))));
     const found = csvFiles.flatMap(file => unlabelledIsoStayRows(readFileSync(file, "utf8"), now).map(row => `${file}: ${row}`));
     assert.deepEqual(found, []);
   });

@@ -42,7 +42,8 @@ test("publishes one canonical 12-choice Chicago activity decision page", () => {
 
   assert.match(html, /<title>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style<\/title>/);
   assert.match(html, /<h1>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style<\/h1>/);
-  assert.match(html, /Last updated:<\/strong> July 23, 2026/);
+  assert.match(html, /Garfield Park admission checked:<\/strong> October 13, 2026 · <strong>Other attraction sources checked:<\/strong> July 23, 2026/);
+  assert.doesNotMatch(html, /Last updated:<\/strong> July 23, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/chicago-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/chicago-with-kids\.html/g) || []).length, 1);

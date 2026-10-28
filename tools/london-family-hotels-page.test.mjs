@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 import {readFileSync} from "node:fs";
 import test from "node:test";
 import {londonFamilyHotelPage,londonRooms,londonMaintenance,londonParty,londonPath,londonPhoto,londonCategorySource,writeLondonFamilyHotelsPage} from "./page-generation/london-family-hotels-page.mjs";
@@ -27,7 +28,7 @@ test("London writer emits only one canonical page, not another CSV or runtime",(
   const output=new Map();writeLondonFamilyHotelsPage((p,b)=>output.set(p,b));assert.deepEqual([...output.keys()],[londonPath]);assert.equal(output.get(londonPath),londonFamilyHotelPage());
   const h=output.get(londonPath);assert.ok(h.includes(`href="https://familytripwise.com/${londonPath}"`));
   assert.equal((read("site/sitemap.xml").match(new RegExp(londonPath,"g"))||[]).length,1);
-  assert.ok(read("site/index.html").includes(londonPath));assert.ok(read("site/about.html").includes("London adds"));assert.ok(read("ops/gsc-monitor.json").includes(londonPath));
+  assert.ok(stripSiteChrome(read("site/index.html")).includes(londonPath));assert.ok(read("site/about.html").includes("London adds"));assert.ok(read("ops/gsc-monitor.json").includes(londonPath));
 });
 test("dated maintenance and licensed orientation image do not renew sources",()=>{
   assert.equal(londonMaintenance("2026-10-12").records.length,0);assert.equal(londonMaintenance("2026-10-13").records.length,3);

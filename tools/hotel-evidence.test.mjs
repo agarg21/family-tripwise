@@ -21,6 +21,7 @@ test("seven comparisons share 65 validated records without replacing source valu
     assert.equal(p.value.display, hotels[i].priceRange);
     if (!["san-diego", "new-york-city", "chicago"].includes(city)) assert.equal(p.value.party_basis, null);
     assert.equal(p.evidence_class, "EDITORIAL_INTERPRETATION");
+    if (p.value.kind.startsWith("check-live-rate")) assert.doesNotMatch(p.value.source_basis, /^Historical public examples and editorial planning band/, hotels[i].name);
   }
   for (const hotel of cancunEvidence.records) {
     const r = records.find((r) => r.id === `cancun-${hotel.id}`);

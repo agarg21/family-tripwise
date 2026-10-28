@@ -23,6 +23,14 @@ function price(value, path, sourceUrls = [], observedOn = null, evidenceClass = 
     value ? "Dated planning evidence, not live inventory; structured basis gaps require reconciliation." : "Exact-room price research gap; unknown is not free.");
 }
 
+// The default price basis must describe what the page shows for each price kind (Q02c).
+const SOURCE_BASIS_BY_KIND = {
+  "check-live-rate-with-older-two-adult-sample": "No current family-room rate observed; the page says Check live rate and shows an older dated two-adult sample, not a quote.",
+  "check-live-rate-with-older-one-night-sample": "No current family-room rate observed; the page says Check live rate and shows an older dated one-night sample, not a quote.",
+  "check-live-rate-package-priced": "No current rate observed; the property is package-priced, so the page says Check live rate without a sample.",
+  "legacy-planning-band": "Historical public examples and editorial planning band, not an exact family-room quote."
+};
+
 export function hotelEvidence() {
   const records = [];
   const { hotelCatalog } = createFamilyHotelPages({});
@@ -32,13 +40,14 @@ export function hotelEvidence() {
     hotels.forEach((hotel) => {
       const path = legacyPath(city);
       const unmapped = (value, evidenceClass = "EDITORIAL_INTERPRETATION") => field(value ?? null, "unmapped", evidenceClass, null, [], path, "Existing published interpretation retained; individual facts/dates/source IDs need mapping.", "unmapped");
+      const priceKind = hotel.twoAdultSample ? "check-live-rate-with-older-two-adult-sample" : hotel.olderSample ? "check-live-rate-with-older-one-night-sample" : hotel.olderSample === null ? "check-live-rate-package-priced" : "legacy-planning-band";
       const record = { schema_version: SCHEMA_VERSION, id: `${city}-${hotel.name.normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`, hotel: hotel.name,
         page_url: pageUrl(`${city}-family-hotels`), model_path: "tools/page-generation/family-hotel-pages.mjs", coverage: "legacy-partial",
         fields: {
           room: unmapped({ category: hotel.category, setup: hotel.familySetup ?? null, checks: hotel.parentCheck }),
-          price: price({ kind: hotel.twoAdultSample ? "check-live-rate-with-older-two-adult-sample" : hotel.olderSample ? "check-live-rate-with-older-one-night-sample" : hotel.olderSample === null ? "check-live-rate-package-priced" : "legacy-planning-band", display: hotel.priceRange, currency: "USD", unit: "room/night", amount_from: null, amount_to: null,
+          price: price({ kind: priceKind, display: hotel.priceRange, currency: "USD", unit: "room/night", amount_from: null, amount_to: null,
             room_basis: null, party_basis: null, stay_basis: null, fee_basis: hotel.priceNote ?? "Tax/fee inclusion varies; exact basis needs mapping.",
-            source_basis: "Historical public examples and editorial planning band, not an exact family-room quote.", structured_basis: false }, path, [], legacyDates[city], "EDITORIAL_INTERPRETATION"),
+            source_basis: SOURCE_BASIS_BY_KIND[priceKind], structured_basis: false }, path, [], legacyDates[city], "EDITORIAL_INTERPRETATION"),
           fees: unknown(path), transport: unknown(path), activities: unmapped({ strengths: hotel.strengths ?? null, tradeoffs: hotel.tradeoffs ?? null }),
           review_signal: unmapped(hotel.reviewSignal, "REVIEW_SIGNAL")
         }
