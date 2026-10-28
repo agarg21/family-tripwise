@@ -10,7 +10,7 @@ No new source was fetched. This record documents which retained observations the
 | Sable at Navy Pier | Check live rate | $311 | 2026-07-23 | band $310-$650+ removed |
 | Swissotel Chicago | Check live rate | $235 (standard room) | pack labels it July 5; shown as "date label unclear" | band $240-$550+ removed |
 | InterContinental Magnificent Mile | Check live rate | $305 | 2026-07-23 | band $300-$600+ removed |
-| Hilton Chicago | Check live rate | $308 (standard room) | pack labels it July 19; shown as "date label unclear" | band $320-$650+ removed |
+| Hilton Chicago | Check live rate | $308 (room type not recorded) | pack labels it July 19; shown as "date label unclear" | band $320-$650+ removed |
 | Hotel Zachary | Check live rate | $363 | 2026-07-23 | band $360-$750+ removed |
 | Four Seasons Chicago | Check live rate | $630 | 2026-07-23 | band $630-$1,200+ removed |
 | The Langham Chicago | Check live rate | $600 | 2026-07-23 | band $600-$1,200+ removed |
