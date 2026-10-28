@@ -76,3 +76,20 @@ test("no deal page shows an unobserved family total, a build date or a firsthand
     assert.doesNotMatch(html, /Updated|updated on|we stayed|we sailed/i);
   }
 });
+
+test("a deadline that is our reading carries its note on the hub and both status lines", () => {
+  const noted = { ...base, expires_note: "the offer page gives no year for this date; 2026 is our reading" };
+  assert.match(dealsHubPage([noted], "2026-10-28"), /Book by:<\/strong> November 2, 2026 \(the offer page gives no year/);
+  assert.match(dealCheckPage([noted], noted, "2026-10-28"), /Book by November 2, 2026<\/strong> \(the offer page gives no year/);
+  assert.match(dealCheckPage([noted], noted, "2026-11-03"), /This offer ended November 2, 2026 \(the offer page gives no year[^)]*\)\./);
+  assert.ok(check({ expires_note: "x" }).some((p) => /expires_note/.test(p)));
+  const gw = checks.find((c) => c.id === "great-wolf-lodge-fall-flash-sale");
+  assert.ok(gw?.expires_note, "Great Wolf's page gives no year for November 1");
+});
+
+test("the Deals header link is current only on deal pages", () => {
+  const guide = readFileSync(new URL("where-to-stay/boston-family-hotels.html", site), "utf8");
+  assert.match(guide, /<a class="header-this-week header-deals" href="\.\.\/deals\/">Deals<\/a>/);
+  assert.match(readFileSync(new URL("deals/index.html", site), "utf8"), /href="\.\.\/deals\/" aria-current="page">Deals/);
+  assert.match(readFileSync(new URL(dealPagePath(checks[0]), site), "utf8"), /href="\.\.\/deals\/" aria-current="true">Deals/);
+});

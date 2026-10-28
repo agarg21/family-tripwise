@@ -7,7 +7,7 @@
       "category": "Cruise",
       "title": "Royal Caribbean Kids Sail Free and free 3rd and 4th guests",
       "headline": "Kids 12 and under pay no cruise fare on select 3+ night sailings, but every guest still pays taxes, fees and port expenses, and Thanksgiving and Christmas-to-New-Year sailings are excluded.",
-      "family_of_four": "Two adults pay full fare; two kids 12 and under in the same stateroom pay USD 0 cruise fare under Kids Sail Free. Taxes, fees and port expenses are still charged for all four, so the kids are not free. The separate Free 3rd and 4th Guests offer works the same way for any 3rd and 4th guest, with no age limit stated in our record.",
+      "family_of_four": "Two full-fare guests (for example, two parents) pay full fare; two kids 12 and under in the same stateroom pay USD 0 cruise fare under Kids Sail Free. Taxes, fees and port expenses are still charged for all four, so the kids are not free. The separate Free 3rd and 4th Guests offer works the same way for any 3rd and 4th guest, with no age limit stated in our record.",
       "terms": [
         ["Book by", "November 2, 2026 (booking window opened October 6, 2026)."],
         ["Travel window", "Kids Sail Free: select 3+ night sailings departing on or after October 7, 2026. Free 3rd and 4th Guests: sailings October 7, 2026 to August 20, 2027."],
@@ -37,7 +37,7 @@
       "operator": "Great Wolf Lodge",
       "category": "Water park resort",
       "title": "Great Wolf Lodge Fall Flash Sale: up to 40% off suites",
-      "headline": "Up to 40% off the room rate for stays to February 11, 2027, priced for two guests; a family of 4 adds an extra-person fee for each extra guest, and water park activity passes are not included.",
+      "headline": "Up to 40% off the room rate for stays to February 11, 2027, priced for two guests; a family of 4 adds an extra-person fee for each extra guest, and activity passes (Wolf, Paw, Pup) are not included.",
       "family_of_four": "The sale rate is per room, per night for two guests. Great Wolf adds a USD 20 additional-person fee for each extra guest, so two more family members add to the advertised rate. The discount applies to the room rate only: taxes, activity passes (Wolf, Paw, Pup) and incidentals are extra. One person in the room must be 21 or older (18 at Wisconsin Dells).",
       "terms": [
         ["Book by", "The page says the offer ends on November 1. Its \"Book By Date\" line shows a different year (see below)."],
@@ -65,7 +65,8 @@
       "official_url": "https://www.greatwolf.com/deals/fall-flash-sale",
       "source_label": "Great Wolf Lodge Fall Flash Sale offer page",
       "observed_on": "2026-10-28",
-      "expires_on": "2026-11-01"
+      "expires_on": "2026-11-01",
+      "expires_note": "the offer page gives no year for this date; 2026 is our reading"
     },
     {
       "id": "beaches-first-passport-credit",
@@ -79,7 +80,7 @@
         ["Travel by", "November 6, 2026."],
         ["Child ages", "Ages 5 and under at check-in; up to two children per booking."],
         ["Credit", "USD 135 per eligible child (maximum USD 270 per booking), issued on arrival after the resort checks the passport."],
-        ["Passport", "A valid passport issued after August 1, 2025 (the offer announcement date); the original must be shown at check-in. The page describes the offer as valid with U.S. or Canadian passports."],
+        ["Passport", "A valid passport issued after August 1, 2025 (also the start of the booking window); the original must be shown at check-in. The page describes the offer as valid with U.S. or Canadian passports."],
         ["Minimum nights", "5 paid nights."],
         ["How to claim", "Register the booking on the offer page. Registering does not guarantee eligibility."],
         ["Credit can be used for", "Spa services (15% service charge payable), room upgrades, extended stays, internet upgrades, private dinners, wet suit rentals, photo images, scuba, laundry (not dry cleaning) and cabana rental."],
@@ -90,7 +91,7 @@
       ],
       "before_booking": [
         "Check that each child's passport was issued after August 1, 2025 and that both will be 5 or under at check-in.",
-        "Book at least 5 paid nights that end by November 6, 2026.",
+        "Book at least 5 paid nights within the travel window (to November 6, 2026); confirm whether the whole stay must end by then.",
         "Register the booking on the offer page after booking."
       ],
       "family_total": null,

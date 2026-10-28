@@ -39,6 +39,9 @@ export function readDealChecks(path = dealChecksPath) {
   return JSON.parse(readFileSync(path, "utf8")).checks;
 }
 
+// Optional note when the deadline year or day is our reading rather than the page's exact words.
+const dateNote = (check) => (check.expires_note ? ` (${e(check.expires_note)})` : "");
+
 export function isEnded(check, today = easternDate()) {
   return check.expires_on < today;
 }
@@ -68,6 +71,7 @@ export function validateDealChecks(checks, { today = easternDate() } = {}) {
     for (const field of ["observed_on", "expires_on"]) if (!validDate(check[field])) problems.push(`${where}: ${field} must be a real YYYY-MM-DD date`);
     if (validDate(check.observed_on) && check.observed_on > today) problems.push(`${where}: observed_on is in the future`);
     if (check.expires_on < check.observed_on) problems.push(`${where}: expires_on is before observed_on`);
+    if (check.expires_note !== undefined && !(typeof check.expires_note === "string" && check.expires_note.length > 10)) problems.push(`${where}: expires_note must be a sentence when present`);
     // A family total is published only when observed for a named party on named dates.
     if (check.family_total !== null) {
       const t = check.family_total || {};
@@ -122,7 +126,7 @@ function hubCard(check) {
             <p class="fresh-type">${e(check.category)} · ${e(check.operator)}</p>
             <h3><a href="./${e(check.id)}.html">${e(check.title)}</a></h3>
             <p>${e(check.headline)}</p>
-            <p class="deal-deadline"><strong>Book by:</strong> ${e(longDate(check.expires_on))}</p>
+            <p class="deal-deadline"><strong>Book by:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
             <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
           </article>`;
 }
@@ -188,8 +192,8 @@ export function dealCheckPage(checks, check, today = easternDate()) {
   if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
   const ended = isEnded(check, today);
   const status = ended
-    ? `<p class="deal-status deal-status-ended" role="status"><strong>This offer ended ${e(longDate(check.expires_on))}.</strong> The terms below are what the official page said when we checked; they are kept for reference only.</p>`
-    : `<p class="deal-status"><strong>Book by ${e(longDate(check.expires_on))}</strong>, per the official page checked ${e(longDate(check.observed_on))}.</p>`;
+    ? `<p class="deal-status deal-status-ended" role="status"><strong>This offer ended ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The terms below are what the official page said when we checked; they are kept for reference only.</p>`
+    : `<p class="deal-status"><strong>Book by ${e(longDate(check.expires_on))}</strong>${dateNote(check)}, per the official page checked ${e(longDate(check.observed_on))}.</p>`;
   const rows = check.terms.map(([label, value]) => `<tr><th scope="row">${e(label)}</th><td>${e(value)}</td></tr>`).join("");
   const body = `    <main id="main">
       <section class="page-hero">
