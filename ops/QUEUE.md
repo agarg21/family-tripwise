@@ -1,9 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q02d Small follow-ups left from Q02c
-open · S · owner: none (tools + ≤3 pages) · gate: none
-Acceptance: the Las Vegas itinerary Cost line drops its repeated "age 1 and up" (Q10 review P3); the Boston itinerary Day 2 "Older children:" matches the "Our routing suggestion" wording (Q15b nit); the review-date detector excuses a booking word before by/before only when it is the first word after review/recheck (optionally after the/your), so "Recheck prices and booking by Nov 1" is flagged (Q02c review P3); the CSV stay-date parser handles day-first dates or fails on an unparseable non-empty cell; the Chicago activities date line hides its "·" from screen readers. Hilton Chicago parentCheck ("a standard two-double room") is NOT in scope: changing it rewrites saved historical checkpoint snapshots (page-quality, weekly-evidence-review); do it only with the next Chicago hotels evidence refresh.
 
 ## Q09 Lodging-page readability fix
 open · M · owner: D4e Approved · gate: Q02 done
