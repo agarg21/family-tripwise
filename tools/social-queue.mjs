@@ -41,6 +41,9 @@ export const DAILY_CAPS = { bluesky: 4, threads: 5, facebook: 2, instagram: 1, p
 export const unitCap = (date) => (/^\d{4}-(11|12)-/.test(date) ? 6 : 3);
 // A post may only use an observation at most this many days old; G05 re-observes to keep posting.
 export const MAX_OBSERVATION_AGE_DAYS = 14;
+// Posts stop at 00:00 ET on a record's last day: a deadline that day may fall earlier than any
+// slot (DC lottery 3 p.m. ET) or the event may end in another time zone (London 10 p.m. = 17:00 ET).
+export const lastPostDay = (expiresOn) => addDays(expiresOn, -1);
 // An item posted in any of the previous N days' queues is not queued again.
 export const REPEAT_GAP_DAYS = 3;
 // Posting times, America/New_York, in queue order.
@@ -62,18 +65,22 @@ export function easternOffset(iso) {
   const hours = Number(name.replace("GMT", ""));
   return `-${String(Math.abs(hours)).padStart(2, "0")}:00`;
 }
-export const easternTime = (iso, hhmm) => `${iso}T${hhmm}:00${easternOffset(iso)}`;
+// DST switches at 02:00 local, so a time before 02:00 takes the previous day's offset.
+export const easternTime = (iso, hhmm) => `${iso}T${hhmm}:00${easternOffset(hhmm < "02:00" ? addDays(iso, -1) : iso)}`;
 const shortDate = (iso) => longDate(iso).replace(/, \d{4}$/, "");
 
-// Split a record field into sentences without breaking "a.m. ET" or "p.m. PT".
+// Split a record field into sentences. After "a.m."/"p.m." a sentence ends only when the next word
+// starts with a capital letter that is not a time zone ("10 a.m. to noon" and "3 p.m. ET" stay whole).
 export function sentences(text) {
   const out = [];
   let current = "";
   const parts = String(text).split(/(?<=[.!?])\s+/);
   for (let i = 0; i < parts.length; i += 1) {
     current = current ? `${current} ${parts[i]}` : parts[i];
-    const abbrevThenZone = /\b[ap]\.m\.$/.test(current) && /^[A-Z]{2}\b/.test(parts[i + 1] ?? "");
-    if (!abbrevThenZone) {
+    const next = parts[i + 1];
+    const timeAbbrev = /\b[ap]\.m\.$/.test(current);
+    const keepGoing = next !== undefined && timeAbbrev && (!/^[A-Z]/.test(next) || /^[A-Z]{1,4}T\b/.test(next));
+    if (!keepGoing) {
       out.push(current);
       current = "";
     }
@@ -104,8 +111,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     city: item.city,
     title: item.title,
     lines: [
-      ["When", sentences(item.when)[0]],
-      ["Cost", sentences(item.cost)[0]],
+      ["When", brief(item.when)],
+      ["Cost", brief(item.cost)],
     ],
     short: [`When: ${brief(item.when)}`, `Cost: ${brief(item.cost)}`],
     extra: [sentences(item.family)[0], sentences(item.booking)[0]],
@@ -218,7 +225,7 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
   const recent = new Set();
   for (let i = 1; i <= REPEAT_GAP_DAYS; i += 1) for (const entry of previous(addDays(date, -i))?.entries ?? []) recent.add(entry.item_id);
   const eligible = records
-    .filter((r) => !r.third_party && r.expires_on >= date && r.observed_on <= date && daysBetween(r.observed_on, date) <= MAX_OBSERVATION_AGE_DAYS && !recent.has(r.id))
+    .filter((r) => !r.third_party && lastPostDay(r.expires_on) >= date && r.observed_on <= date && daysBetween(r.observed_on, date) <= MAX_OBSERVATION_AGE_DAYS && !recent.has(r.id))
     .map((r) => ({ r, key: r.priority_on >= date ? r.priority_on : r.expires_on }))
     .sort((a, b) => a.key.localeCompare(b.key) || a.r.id.localeCompare(b.r.id))
     .slice(0, unitCap(date))
@@ -235,7 +242,7 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
       item_id: r.id,
       kind: r.kind,
       scheduled_at: easternTime(date, slots[i]),
-      expires_at: easternTime(r.expires_on, "23:59"),
+      expires_at: easternTime(r.expires_on, "00:00"),
       source: { official_url: r.official_url, label: r.source_label, observed_on: r.observed_on },
       page: r.page,
       image: { path: `site/${cardFile(r)}`, url: `${SITE}/${cardFile(r)}`, width: 1080, height: 1350, alt: `${r.kicker}. ${r.title}. Checked on the official page ${longDate(r.observed_on)}.` },
@@ -271,7 +278,7 @@ export function validateQueue(queue, { records = sourceRecords(), today = null, 
     if (!/^https:\/\//.test(s.official_url ?? "") || !s.label || !ISO.test(s.observed_on ?? "")) problems.push(`${where}: source url, label and observed_on are required`);
     if (s.observed_on > date || daysBetween(s.observed_on, date) > MAX_OBSERVATION_AGE_DAYS) problems.push(`${where}: observation ${s.observed_on} is not within ${MAX_OBSERVATION_AGE_DAYS} days before ${date}`);
     if (!(Date.parse(entry.scheduled_at) < Date.parse(entry.expires_at))) problems.push(`${where}: scheduled after it expires`);
-    if (entry.expires_at.slice(0, 10) < date) problems.push(`${where}: expired before the queue date`);
+    if (!/T00:00:00-0[45]:00$/.test(entry.expires_at ?? "") || entry.expires_at.slice(0, 10) <= date) problems.push(`${where}: expires_at must be 00:00 ET on a day after the queue date`);
     if (!entry.scheduled_at.startsWith(date)) problems.push(`${where}: scheduled on another day`);
     const img = entry.image ?? {};
     if (!img.alt || img.width !== 1080 || img.height !== 1350 || !/^site\/social\/cards\/[a-z0-9-]+\.jpg$/.test(img.path ?? "")) problems.push(`${where}: image must be a 1080x1350 site/social/cards JPEG with alt text`);
