@@ -1,0 +1,134 @@
+{
+  "note": "Family Deal Checks for /deals/ (QUEUE G02, OWNER D11). Every term row was read on the operator's official page on observed_on; source record: docs/research/deal-checks-2026-10-28.md. family_total stays null unless a total for a named party and named dates was observed on the official site. After expires_on (America/New_York) a check leaves the hub and its page says the offer ended; it is never redirected or noindexed without an Approved OWNER.md row.",
+  "checks": [
+    {
+      "id": "royal-caribbean-kids-sail-free",
+      "operator": "Royal Caribbean",
+      "category": "Cruise",
+      "title": "Royal Caribbean Kids Sail Free and free 3rd and 4th guests",
+      "headline": "Kids 12 and under pay no cruise fare on select 3+ night sailings, but every guest still pays taxes, fees and port expenses, and Thanksgiving and Christmas-to-New-Year sailings are excluded.",
+      "family_of_four": "Two adults pay full fare; two kids 12 and under in the same stateroom pay USD 0 cruise fare under Kids Sail Free. Taxes, fees and port expenses are still charged for all four, so the kids are not free. The separate Free 3rd and 4th Guests offer works the same way for any 3rd and 4th guest, with no age limit stated in our record.",
+      "terms": [
+        ["Book by", "November 2, 2026 (booking window opened October 6, 2026)."],
+        ["Travel window", "Kids Sail Free: select 3+ night sailings departing on or after October 7, 2026. Free 3rd and 4th Guests: sailings October 7, 2026 to August 20, 2027."],
+        ["Child ages", "Kids Sail Free: 12 and under on the departure date."],
+        ["Occupancy", "The child sails in the same stateroom as 2 full-fare guests."],
+        ["Blackout dates", "Sailings November 19 to 27, 2026 and December 17, 2026 to January 4, 2027 are excluded, as are spring break 2027 dates and some Navigator sailings."],
+        ["Still charged", "Taxes, fees and port expenses for every guest, including the free-fare kids."],
+        ["Minimum nights", "3 nights (Kids Sail Free)."]
+      ],
+      "unclear": [
+        "Our record does not list the exact spring break 2027 dates that are excluded; they are on the terms page.",
+        "Our record does not list which sailings and stateroom categories qualify; check them at booking."
+      ],
+      "before_booking": [
+        "Price the same sailing with and without the kids to see what the free fare is worth after taxes, fees and port expenses.",
+        "Check your sailing date against the holiday and spring break exclusions.",
+        "Confirm both children will be 12 or under on the departure date."
+      ],
+      "family_total": null,
+      "official_url": "https://www.royalcaribbean.com/terms-and-conditions/promotions?country=USA",
+      "source_label": "Royal Caribbean promotions terms and conditions",
+      "observed_on": "2026-10-28",
+      "expires_on": "2026-11-02"
+    },
+    {
+      "id": "great-wolf-lodge-fall-flash-sale",
+      "operator": "Great Wolf Lodge",
+      "category": "Water park resort",
+      "title": "Great Wolf Lodge Fall Flash Sale: up to 40% off suites",
+      "headline": "Up to 40% off the room rate for stays to February 11, 2027, priced for two guests; a family of 4 adds an extra-person fee for each extra guest, and water park activity passes are not included.",
+      "family_of_four": "The sale rate is per room, per night for two guests. Great Wolf adds a USD 20 additional-person fee for each extra guest, so two more family members add to the advertised rate. The discount applies to the room rate only: taxes, activity passes (Wolf, Paw, Pup) and incidentals are extra. One person in the room must be 21 or older (18 at Wisconsin Dells).",
+      "terms": [
+        ["Book by", "The page says the offer ends on November 1. Its \"Book By Date\" line shows a different year (see below)."],
+        ["Stay dates", "October 28, 2026 to February 11, 2027, only on dates the offer lists."],
+        ["Discount", "Up to 40% off; the discount varies by date and applies to the room rate only."],
+        ["Room and guests", "Per room, per night, based on two guests; USD 20 additional-person fee for each additional guest. Standard suites; themed and premium suites vary. Limited rooms per date."],
+        ["Age rule", "One person 21 or older in each room (18 or older at Wisconsin Dells)."],
+        ["Lodges", "Not valid at Great Wolf Lodge Niagara, Ontario."],
+        ["Blackout dates", "May not be valid during holiday and blackout periods; no dates are listed."],
+        ["Minimum nights", "Not stated; length-of-stay requirements may apply."],
+        ["Not included", "Activity passes, taxes and incidental charges. Water park life jackets and towels are included with a stay."]
+      ],
+      "unclear": [
+        "The page shows \"Book By Date: 11/01/2021\" next to stay dates in 2026 and 2027, and separately says the offer ends November 1. Treat November 1, 2026 as the likely deadline and confirm at booking.",
+        "The page does not say whether the USD 20 additional-person fee is charged per night or per stay.",
+        "Holiday blackout dates are not listed; the booking engine shows which nights qualify.",
+        "No cancellation terms are shown on the offer page."
+      ],
+      "before_booking": [
+        "Search your lodge and dates for 4 guests, not 2, so the extra-person fees show in the price.",
+        "Add the activity pass your kids will want; it is not part of the sale.",
+        "Check whether your dates are holiday or blackout nights."
+      ],
+      "family_total": null,
+      "official_url": "https://www.greatwolf.com/deals/fall-flash-sale",
+      "source_label": "Great Wolf Lodge Fall Flash Sale offer page",
+      "observed_on": "2026-10-28",
+      "expires_on": "2026-11-01"
+    },
+    {
+      "id": "beaches-first-passport-credit",
+      "operator": "Beaches Resorts",
+      "category": "All-inclusive",
+      "title": "Beaches First Passport Offer: USD 135 resort credit per young child",
+      "headline": "A USD 135 resort credit per child ages 5 and under with a newly issued passport, up to two children, on 5+ paid-night stays; book by October 31 and travel by November 6, 2026.",
+      "family_of_four": "A family with two children ages 5 and under at check-in, each with a recently issued passport, can receive up to USD 270 in resort credit on a stay of at least five paid nights. It is a credit for listed resort extras (spa, room upgrades, extended stays and similar), not a cut in the room price, and the travel window closes November 6, 2026.",
+      "terms": [
+        ["Book by", "October 31, 2026, on Beaches websites or through a travel advisor."],
+        ["Travel by", "November 6, 2026."],
+        ["Child ages", "Ages 5 and under at check-in; up to two children per booking."],
+        ["Credit", "USD 135 per eligible child (maximum USD 270 per booking), issued on arrival after the resort checks the passport."],
+        ["Passport", "A valid passport issued after August 1, 2025 (the offer announcement date); the original must be shown at check-in. The page describes the offer as valid with U.S. or Canadian passports."],
+        ["Minimum nights", "5 paid nights."],
+        ["How to claim", "Register the booking on the offer page. Registering does not guarantee eligibility."],
+        ["Credit can be used for", "Spa services (15% service charge payable), room upgrades, extended stays, internet upgrades, private dinners, wet suit rentals, photo images, scuba, laundry (not dry cleaning) and cabana rental."],
+        ["Exclusions", "No cash value; not for contracted groups or industry rates; the offer can be withdrawn at any time."]
+      ],
+      "unclear": [
+        "The offer page does not list which Beaches resorts take part."
+      ],
+      "before_booking": [
+        "Check that each child's passport was issued after August 1, 2025 and that both will be 5 or under at check-in.",
+        "Book at least 5 paid nights that end by November 6, 2026.",
+        "Register the booking on the offer page after booking."
+      ],
+      "family_total": null,
+      "official_url": "https://www.beaches.com/first-passport-registration/",
+      "source_label": "Beaches First Passport Offer page",
+      "observed_on": "2026-10-28",
+      "expires_on": "2026-10-31"
+    },
+    {
+      "id": "club-med-all-inclusive-kids-under-4",
+      "operator": "Club Med",
+      "category": "All-inclusive",
+      "title": "Club Med all-inclusive offer: kids under 4 stay free, up to 40% off",
+      "headline": "Book by January 6, 2027 and travel by July 2, 2027 in the Caribbean, Canada or Mexico; only children under 4 are shown as free, and the conditions behind the asterisks were not readable on the offer page.",
+      "family_of_four": "Only children under 4 are shown as staying free. Children 4 and older pay a price the offer page does not show, so a family with two school-age kids should not expect free child stays. The other savings are per person per week and an air credit when flights are booked with Club Med; how they apply depends on footnoted conditions the page did not display.",
+      "terms": [
+        ["Book by", "January 6, 2027."],
+        ["Travel by", "July 2, 2027 (no start date shown); the page names the holiday season, spring break and early summer."],
+        ["Where", "Caribbean, Canada or Mexico resorts; the page does not list which resorts qualify."],
+        ["Discount", "Save up to 40%, with conditions in a footnote."],
+        ["Child ages", "Kids under 4 stay free (footnoted). No child price is shown for ages 4 and up."],
+        ["Other savings", "Up to USD 300 instant savings per person per week, and up to USD 300 instant air credit when flights are booked with Club Med (both footnoted)."],
+        ["Fees, minimum nights, blackouts", "Not stated on the offer page."]
+      ],
+      "unclear": [
+        "The footnote text behind the * and ** marks was not readable on the offer page, so eligibility, minimum stays, blackout dates and fees are unknown.",
+        "Child prices for ages 4 and up are not shown."
+      ],
+      "before_booking": [
+        "Ask for the full offer terms behind the asterisks.",
+        "Price your exact dates with every child's age entered; ages 4 and up are not free.",
+        "Ask about per-child fees and minimum stays at your resort."
+      ],
+      "family_total": null,
+      "official_url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
+      "source_label": "Club Med all-inclusive vacation deals page",
+      "observed_on": "2026-10-28",
+      "expires_on": "2027-01-06"
+    }
+  ]
+}

@@ -26,6 +26,7 @@ import { activityPath as orlandoActivityPath, orlandoActivityMaintenance } from 
 import { dcItineraryPath, dcItineraryMaintenance } from "./page-generation/washington-dc-itinerary-page.mjs";
 import { bostonItineraryPath, bostonItineraryMaintenance } from "./page-generation/boston-itinerary-page.mjs";
 import { thisWeekUrl } from "./page-generation/this-week-page.mjs";
+import { dealSitemapUrls } from "./page-generation/deals-pages.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const UTILITY = ["https://familytripwise.com/", "https://familytripwise.com/about.html", "https://familytripwise.com/contributors/miles-rowan.html"];
@@ -85,6 +86,8 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   groups["boston-itinerary-official-facts"] = [`https://familytripwise.com/${bostonItineraryPath}`];
   // /this-week/ items carry their own observed_on and expires_on; expired items drop daily (tools/this-week.mjs).
   groups["fresh-items-daily-expiry"] = [thisWeekUrl];
+  // /deals/ checks carry observed_on and expires_on; ended checks leave the hub daily (tools/this-week.mjs).
+  groups["deal-checks-daily-expiry"] = dealSitemapUrls();
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);
   // A historical report cannot screen a pack that had not yet been observed.
   const bostonPack = bostonPackForDate(today);

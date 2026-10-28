@@ -1,11 +1,12 @@
-// Daily refresh for /this-week/ (QUEUE G01). Re-renders only the this-week page for today's
+// Daily refresh for /this-week/ (QUEUE G01) and /deals/ (QUEUE G02). Re-renders only the this-week and deal pages for today's
 // America/New_York date, so expired items drop even without an operator run, then rewrites the
 // sitemap lastmod ledger for the existing sitemap URLs. Used by the Pages deploy workflow before
-// its tests run; it changes no other page.
+// its tests run; it changes no other page. Ended deal checks leave the hub; their pages say the offer ended.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { writeThisWeekPage } from "./page-generation/this-week-page.mjs";
+import { writeDealPages } from "./page-generation/deals-pages.mjs";
 import { easternDate, writeSitemap } from "./page-generation/sitemap.mjs";
 
 const siteDir = fileURLToPath(new URL("../site/", import.meta.url));
@@ -17,5 +18,10 @@ writeThisWeekPage((path, contents) => {
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
 }, today);
+writeDealPages((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
 writeSitemap(siteDir, urls, { today });
-console.log("Refreshed this-week/index.html and the sitemap ledger.");
+console.log("Refreshed this-week/index.html, the deal pages and the sitemap ledger.");

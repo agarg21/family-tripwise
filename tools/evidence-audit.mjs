@@ -132,9 +132,9 @@ export async function inventory(config, { root = ROOT, today = easternDate() } =
     const path = resolve(root, "site", decodeURIComponent(parsed.pathname.endsWith("/") ? `${parsed.pathname.slice(1)}index.html` : parsed.pathname.slice(1)));
     if (!path.startsWith(resolve(root, "site") + sep)) throw new Error("Unsafe sitemap path");
     const html = await readFile(path, "utf8");
-    // /this-week/ items carry their own observed_on/expires_on and drop daily (tools/this-week.mjs);
+    // /this-week/ items and /deals/ checks carry their own observed_on/expires_on and drop daily (tools/this-week.mjs);
     // their official links are not part of this weekly source audit, so expiry cannot change its inventory.
-    const links = parsed.pathname === "/this-week/" ? [] : [...html.matchAll(/\bhref=["'](https:\/\/[^"']+)["']/g)].map((m) => m[1].replace(/&amp;/g, "&"));
+    const links = parsed.pathname === "/this-week/" || parsed.pathname.startsWith("/deals/") ? [] : [...html.matchAll(/\bhref=["'](https:\/\/[^"']+)["']/g)].map((m) => m[1].replace(/&amp;/g, "&"));
     const approved = new Set();
     const excluded = new Set();
     for (const link of links) {

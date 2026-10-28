@@ -104,7 +104,7 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
       return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short || d.name)}</a>`;
     })
     .join("");
-  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav class="site-nav" aria-label="Destination guides">${links}</nav><nav class="header-this-week-nav" aria-label="Fresh family events"><a class="header-this-week" href="${prefix}this-week/"${current === "this-week/index.html" ? ' aria-current="page"' : ""}>This week</a></nav></header>`;
+  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav class="site-nav" aria-label="Destination guides">${links}</nav><nav class="header-this-week-nav" aria-label="Fresh family events and deals"><a class="header-this-week" href="${prefix}this-week/"${current === "this-week/index.html" ? ' aria-current="page"' : ""}>This week</a><a class="header-this-week header-deals" href="${prefix}deals/"${current === "deals/index.html" ? ' aria-current="page"' : current.startsWith("deals/") ? ' aria-current="true"' : ""}>Deals</a></nav></header>`;
 }
 
 export function relatedGuides(prefix, current) {

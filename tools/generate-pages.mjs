@@ -15,6 +15,7 @@ import { washingtonDcItineraryPage, dcItineraryPath } from "./page-generation/wa
 import { bostonItineraryPage, bostonItineraryPath } from "./page-generation/boston-itinerary-page.mjs";
 import { writeSitemap } from "./page-generation/sitemap.mjs";
 import { writeThisWeekPage, thisWeekUrl } from "./page-generation/this-week-page.mjs";
+import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
 
@@ -589,6 +590,7 @@ writeBostonFamilyHotelsPage(writeSite);
 writePuertoVallartaFamilyResortsPage(writeSite);
 writeLondonFamilyHotelsPage(writeSite);
 writeThisWeekPage(writeSite);
+writeDealPages(writeSite);
 
 const oldRedirects = [
   ["san-diego-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
@@ -792,6 +794,7 @@ const sitemapUrls = [
   "https://familytripwise.com/about.html",
   "https://familytripwise.com/contributors/miles-rowan.html",
   thisWeekUrl,
+  ...dealSitemapUrls(),
   "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
   "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
   "https://familytripwise.com/things-to-do/orlando-with-kids.html",
