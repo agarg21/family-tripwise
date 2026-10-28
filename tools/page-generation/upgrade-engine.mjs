@@ -838,7 +838,7 @@ function renderItineraryAnswer(answer) {
     throw new Error("Expected an itinerary answer box with an id, three lines, a checked date and official facts");
   }
   for (const fact of answer.facts) {
-    if (!fact.venue || !fact.text || !/^https:\/\//.test(fact.source || "")) throw new Error("Expected a sourced official fact");
+    if (!fact.label || !fact.text || !fact.sourceLabel || !/^https:\/\//.test(fact.source || "")) throw new Error("Expected a sourced official fact");
   }
   return `      <section id="${esc(answer.id)}-facts" class="container page-section rank-ready-section itinerary-checked-facts" aria-labelledby="${esc(answer.id)}-facts-title">
         <div class="section-heading">
@@ -847,7 +847,7 @@ function renderItineraryAnswer(answer) {
         </div>
         <p class="review-label">${esc(answer.factsNote)}</p>
         <ul>
-${answer.facts.map((fact) => `          <li><strong>${esc(fact.venue)}:</strong> ${esc(fact.text)} <a class="text-link" href="${esc(fact.source)}">${esc(new URL(fact.source).hostname.replace(/^www\./, ""))}</a> (checked ${esc(answer.checked)}).</li>`).join("\n")}
+${answer.facts.map((fact) => `          <li><strong>${esc(fact.label)}:</strong> ${esc(fact.text)} <a class="text-link" href="${esc(fact.source)}">${esc(fact.sourceLabel)}</a> (checked ${esc(answer.checked)}).</li>`).join("\n")}
         </ul>
       </section>
 `;
