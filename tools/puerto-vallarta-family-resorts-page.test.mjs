@@ -6,6 +6,7 @@ import {validateRoomPack,screenRoomPack} from "./family-room-task.mjs";
 import {labelOlderStaySamples,roomComparisonCsv,comparisonHeadings} from "./family-room-comparison.mjs";
 import {maintenanceReport} from "./site-maintenance.mjs";
 import {pvMealPlanComparison} from "./pv-meal-plan-comparison.mjs";
+import { readableText } from "./page-generation/readable-text.mjs";
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),"utf8");
 test("PV exposes same-record meal-plan increment and preserves unknown cost rights",()=>{
  const html=puertoVallartaFamilyResortsPage(),comparison=pvMealPlanComparison(pvPrices);
@@ -37,9 +38,9 @@ test("Sanctuary price never inherits Panoramic kitchen or prices regional catego
  assert.equal(pvRooms[0].kitchen,"not-established");assert.equal(pvRooms[1].kitchen,"published-kitchen");
  assert.deepEqual(pvRooms[0].price.rates.map(p=>p.nightly_average),[876.4,1176.2]);
  assert.ok(pvRooms.slice(1).every(r=>r.price.amount===null));assert.equal(pvRooms[0].price.requested_individual_ages_confirmed,true);
- const html=puertoVallartaFamilyResortsPage();for(const rate of pvRooms[0].price.rates){assert.ok(html.includes(`USD ${rate.stay_amount.toFixed(2)}`));assert.ok(html.includes(rate.cancellation));}
- assert.ok(html.includes(pvRooms[0].price.fee_basis));
- assert.ok(html.includes(pvRooms[0].price.deposit_basis.split(" No card,")[0]));
+ const html=puertoVallartaFamilyResortsPage();for(const rate of pvRooms[0].price.rates){assert.ok(html.includes(`USD ${rate.stay_amount.toFixed(2)}`));assert.ok(html.includes(readableText(rate.cancellation)));}
+ assert.ok(html.includes(readableText(pvRooms[0].price.fee_basis)));
+ assert.ok(html.includes(readableText(pvRooms[0].price.deposit_basis.split(" No card,")[0])));
  assert.ok(pvCsv.includes(pvRooms[0].price.deposit_basis));
  assert.doesNotMatch(html,/No source renewal of069|No card, payment, BOOK HERE/);
  const later=screenRoomPack(pvPack,pvPack.scenario,"2026-10-24",pvPrices);assert.match(later[0].price.status,/historical/);

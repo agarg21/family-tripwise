@@ -6,6 +6,7 @@ import {pvMealPlanComparison} from "../pv-meal-plan-comparison.mjs";
 import {pvMealPolicy} from "../pv-meal-policy.mjs";
 import {assessFamilyFoodBudget} from "../../src/shared/family-food-budget.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { readableText } from "./readable-text.mjs";
 
 export const pvPath = "where-to-stay/puerto-vallarta-family-resorts.html";
 export const pvScreenedOn = "2026-10-09";
@@ -19,7 +20,7 @@ export const pvPrices = read("puerto-vallarta-garza-family-budget-2026-10-09.jso
 export const pvRooms = screenRoomPack(pvPack,pvPack.scenario,pvScreenedOn,pvPrices);
 export const pvCsv = labelOlderStaySamples(roomComparisonCsv(pvPack,pvPack.scenario,pvScreenedOn,pvPrices));
 export const pvExcluded = [...dreams.records.filter(r=>r.id!=="bahia-family"),...hilton.records];
-const e = v => String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
+const e = v => String(readableText(v)).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
 const money = v => `USD ${Number(v).toFixed(2)}`;
 const base = r => r.id === "bahia-family" ? "Nayarit coast, not Puerto Vallarta city. Exact municipality and transfer/rest journey unverified." : "Puerto Vallarta, Jalisco; official Km 7.5 address. Not a central-city or measured-route assurance.";
 const kitchen = r => r.kitchen === "published-kitchen" ? "Explicit equipped kitchen in this Panoramic category. Equipment and dining capacity still need confirmation." : "Cooking kitchen not established for this exact category.";

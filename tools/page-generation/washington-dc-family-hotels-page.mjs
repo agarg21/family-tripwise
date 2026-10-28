@@ -6,6 +6,7 @@ import { assessFamilyTransit } from "../family-transit-cost.mjs";
 import { dcPlanPremiums } from "../dc-plan-premium.mjs";
 import { assessMuseumRest, restDurationFields } from "../museum-rest-task.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { readableText } from "./readable-text.mjs";
 
 export const dcPath = "where-to-stay/washington-dc-family-hotels.html";
 export const dcScreenedOn = "2026-10-09";
@@ -24,7 +25,7 @@ const museumRecord = read("washington-dc-museum-rest-task-2026-10-03.json");
 export const dcRestExample = assessMuseumRest(museumRecord,
   "National Museum of Natural History", restRecord.hypothetical_durations, dcScreenedOn);
 const restLabels = ["Morning visit", "Museum to room", "Room rest", "Room to museum", "Entry wait", "Afternoon visit"];
-const e = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
+const e = value => String(readableText(value)).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const amount = value => `USD ${Number(value).toFixed(2)}`;
 const link = (url, label) => `<a href="${e(url)}">${e(label)}</a>`;
 const band = room => room.price.rates ? room.price.rates.map(rate => `${amount(rate.nightly_average)} ${e(rate.plan)}`).join(" / ") : "Unpriced";

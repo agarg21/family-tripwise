@@ -9,6 +9,7 @@ import { bostonMuseumAdmission } from "../boston-museum-admission.mjs";
 import { parkPlazaFitnessPolicy } from "../boston-park-plaza-policy.mjs";
 import { assessBreakfastUpgrade } from "../../src/shared/breakfast-upgrade-budget.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { readableText } from "./readable-text.mjs";
 
 export const bostonPath = "where-to-stay/boston-family-hotels.html";
 export const bostonScreenedOn = "2026-10-09";
@@ -50,7 +51,7 @@ export const bostonCsv = labelOlderStaySamples(roomComparisonCsv(bostonPack, bos
 export const bostonDiningScreenedOn = "2026-10-10";
 export const bostonDiningCsv = labelOlderStaySamples(roomComparisonCsv(bostonPack, bostonPack.scenario, bostonDiningScreenedOn, bostonPrices,
   { kitchen: "published", capacity: "not-excluded", minimum_dining_seats: 5 }));
-const e = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
+const e = value => String(readableText(value)).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const amount = value => `USD ${Number(value).toFixed(2)}`;
 const link = (url, label) => `<a href="${e(url)}">${e(label)}</a>`;
 const cooking = room => room.id === bostonPlazaEvidence.record_id ? bostonPlazaEvidence.facts.kitchen_description : room.kitchen === "published-kitchen" ? "Published stovetop, oven, full refrigerator, microwave and dishwasher; dining table seats four, fifth dining place unknown." : "Cooking kitchen not established. A dining-service Private Kitchen label is not guest cooking equipment.";

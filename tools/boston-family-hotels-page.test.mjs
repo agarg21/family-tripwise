@@ -29,6 +29,7 @@ test("rate-plan task is dated proxy evidence and never renews prices or ranks ho
 });
 import {validateRoomPack} from "./family-room-task.mjs";
 import {labelOlderStaySamples,roomComparisonCsv} from "./family-room-comparison.mjs";
+import { readableText } from "./page-generation/readable-text.mjs";
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),"utf8");
 test("Boston exact category and CSV generation share maintained records",()=>{
  assert.deepEqual(validateRoomPack(bostonPack),[]);assert.equal(bostonRooms.length,4);assert.equal(bostonExcluded.length,3);
@@ -42,7 +43,7 @@ test("Boston normalization preserves original amounts and stops count-only age a
  assert.equal(normalized.schema_version,5);assert.equal(normalized.engine_party.child_age_from,null);assert.equal(normalized.engine_party.child_age_to,null);assert.equal(normalized.engine_party.child_ages,null);assert.equal(normalized.requested_individual_ages_confirmed,false);
  assert.equal(bostonRooms[1].price.status,"dated-age-unresolved-count-samples");assert.equal(bostonRooms[0].price.observed_on,"2026-10-03");assert.equal(bostonRooms[1].price.observed_on,"2026-10-01");
  assert.deepEqual(bostonRooms.slice(0,2).flatMap(r=>r.price.rates.map(p=>p.nightly_average)),[781,372.1,444.84,528.68]);
- for(const r of bostonRooms.slice(0,2)){for(const p of r.price.rates){assert.ok(bostonFamilyHotelPage().includes(`USD ${p.stay_amount.toFixed(2)}`));assert.ok(bostonFamilyHotelPage().includes(p.cancellation));}assert.ok(bostonFamilyHotelPage().includes(r.price.fee_basis));assert.ok(bostonFamilyHotelPage().includes(r.price.deposit_basis));}
+ for(const r of bostonRooms.slice(0,2)){for(const p of r.price.rates){assert.ok(bostonFamilyHotelPage().includes(`USD ${p.stay_amount.toFixed(2)}`));assert.ok(bostonFamilyHotelPage().includes(readableText(p.cancellation)));}assert.ok(bostonFamilyHotelPage().includes(readableText(r.price.fee_basis)));assert.ok(bostonFamilyHotelPage().includes(readableText(r.price.deposit_basis)));}
 });
 test("Boston page retains all price, kitchen, bedding, exclusions and trust limits",()=>{
  const html=bostonFamilyHotelPage();for(const text of ["not a city-wide", "Unpriced", "pre-tax", "child-age band", "not One Dalton", "table seats four", "Family Suite", "not exported as candidates", "King Studio", "not a reservation", "not seasonal ranges", "not checked again at launch", "CC BY 2.0", "2019", "no more than 2 adults and 4 children"])assert.ok(html.includes(text),text);

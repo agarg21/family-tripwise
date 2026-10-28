@@ -6,6 +6,7 @@ import { runInNewContext } from "node:vm";
 import { dcPath, dcPack, dcPrices, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples, dcFamilyRailForm } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
+import { readableText } from "./page-generation/readable-text.mjs";
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("DC exact-owner page and complete CSV match maintained shared records", () => {
@@ -31,10 +32,10 @@ test("all five public plans retain correct nightly and stay arithmetic and payme
     for (const rate of room.price.rates) {
       assert.equal(rate.nightly_average, Math.round(rate.stay_amount/5*100)/100);
       assert.ok(dcFamilyHotelPage().includes(`USD ${rate.stay_amount.toFixed(2)}`));
-      assert.ok(dcFamilyHotelPage().includes(rate.cancellation));
+      assert.ok(dcFamilyHotelPage().includes(readableText(rate.cancellation)));
     }
-    assert.ok(dcFamilyHotelPage().includes(room.price.fee_basis));
-    assert.ok(dcFamilyHotelPage().includes(room.price.deposit_basis));
+    assert.ok(dcFamilyHotelPage().includes(readableText(room.price.fee_basis)));
+    assert.ok(dcFamilyHotelPage().includes(readableText(room.price.deposit_basis)));
   }
 });
 test("DC overview names every dated public plan rather than hiding the middle rate in a band", () => {
