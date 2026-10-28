@@ -48,6 +48,8 @@ const shortDeadline = (check) => {
   if (check.deadline_stated === false) return `listed until ${when}${check.expires_note ? `; ${e(check.expires_note)}` : ""}`;
   return `book by ${when}${check.expires_note ? `; ${e(check.expires_note)}` : ""}`;
 };
+// An ended check whose date was never a stated deadline does not claim the offer ended; we only stopped listing it.
+export const endedLabel = (check) => (check.deadline_stated === false ? "We stopped listing this check on" : "This offer ended");
 const dateNote = (check) => (check.expires_note ? ` (${e(check.expires_note)})` : "");
 
 export function isEnded(check, today = easternDate()) {
@@ -181,7 +183,7 @@ ${trustPanel}
 function otherChecks(checks, current, today) {
   const others = checks.filter((c) => c.id !== current.id).sort((a, b) => Number(isEnded(a, today)) - Number(isEnded(b, today)) || a.expires_on.localeCompare(b.expires_on));
   if (!others.length) return "";
-  const items = others.map((c) => `<li><a href="./${e(c.id)}.html">${e(c.title)}</a> <span class="fresh-upcoming-meta">(${isEnded(c, today) ? `ended ${e(longDate(c.expires_on))}` : shortDeadline(c)})</span></li>`).join("");
+  const items = others.map((c) => `<li><a href="./${e(c.id)}.html">${e(c.title)}</a> <span class="fresh-upcoming-meta">(${isEnded(c, today) ? `${c.deadline_stated === false ? "no longer listed after" : "ended"} ${e(longDate(c.expires_on))}` : shortDeadline(c)})</span></li>`).join("");
   return `      <nav class="container page-section deal-others" aria-labelledby="deal-others-title">
         <h2 id="deal-others-title">More Family Deal Checks</h2>
         <ul>${items}</ul>
@@ -202,7 +204,7 @@ export function dealCheckPage(checks, check, today = easternDate()) {
   if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
   const ended = isEnded(check, today);
   const status = ended
-    ? `<p class="deal-status deal-status-ended" role="status"><strong>This offer ended ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The terms below are what the official page said when we checked; they are kept for reference only.</p>`
+    ? `<p class="deal-status deal-status-ended" role="status"><strong>${endedLabel(check)} ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The terms below are what the official page said when we checked; they are kept for reference only.</p>`
     : `<p class="deal-status"><strong>${deadlineLabel(check)} ${e(longDate(check.expires_on))}</strong>${dateNote(check)}${check.expires_note ? `; official page checked ${e(longDate(check.observed_on))}` : `, per the official page checked ${e(longDate(check.observed_on))}`}.</p>`;
   const rows = check.terms.map(([label, value]) => `<tr role="row"><th scope="row" role="rowheader">${e(label)}</th><td role="cell">${e(value)}</td></tr>`).join("");
   const body = `    <main id="main">

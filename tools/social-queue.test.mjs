@@ -125,6 +125,8 @@ test("sentence split keeps time zones with their times and never loses text", ()
   assert.deepEqual(sentences("Open at 10 a.m. ET until 3 p.m. ET. Winners told later."), ["Open at 10 a.m. ET until 3 p.m. ET.", "Winners told later."]);
   assert.deepEqual(sentences("Tuesday, 11 a.m. to noon, Boston Common. The tree arrives at about 11 a.m."), ["Tuesday, 11 a.m. to noon, Boston Common.", "The tree arrives at about 11 a.m."]);
   assert.deepEqual(sentences("Arrive at 1 p.m. to see animals. Then lights at 4 p.m. Doors close at 9 p.m. PT."), ["Arrive at 1 p.m. to see animals.", "Then lights at 4 p.m.", "Doors close at 9 p.m. PT."]);
+  assert.deepEqual(sentences("Open until 10 a.m. Saturday, November 7. Then it closes."), ["Open until 10 a.m. Saturday, November 7.", "Then it closes."], "a day name after a.m. continues the sentence");
+  assert.deepEqual(sentences("Doors at 6 p.m. December 3 only. Bring a coat."), ["Doors at 6 p.m. December 3 only.", "Bring a coat."], "a month name after p.m. continues the sentence");
   const lottery = buildQueue("2026-11-04", { records: [fixtureEvent], previous: () => null });
   assert.equal(lottery.entries.length, 0, "no post on the day a 3 p.m. deadline closes");
   for (const r of sourceRecords()) for (const f of r.full) assert.equal(sentences(f).join(" "), f);

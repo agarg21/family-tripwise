@@ -69,7 +69,9 @@ export const easternTime = (iso, hhmm) => `${iso}T${hhmm}:00${easternOffset(hhmm
 const shortDate = (iso) => longDate(iso).replace(/, \d{4}$/, "");
 
 // Split a record field into sentences. After "a.m."/"p.m." a sentence ends only when the next word
-// starts with a capital letter that is not a time zone ("10 a.m. to noon" and "3 p.m. ET" stay whole).
+// starts with a capital letter that is not a time zone or a day/month name ("10 a.m. to noon", "3 p.m. ET" stay whole).
+// A day or month name after "a.m."/"p.m." continues the sentence ("until 10 a.m. Saturday, November 7").
+const DAY_OR_MONTH = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|January|February|March|April|May|June|July|August|September|October|November|December)\b/;
 export function sentences(text) {
   const out = [];
   let current = "";
@@ -78,7 +80,7 @@ export function sentences(text) {
     current = current ? `${current} ${parts[i]}` : parts[i];
     const next = parts[i + 1];
     const timeAbbrev = /\b[ap]\.m\.$/.test(current);
-    const keepGoing = next !== undefined && timeAbbrev && (!/^[A-Z]/.test(next) || /^[A-Z]{1,4}T\b/.test(next));
+    const keepGoing = next !== undefined && timeAbbrev && (!/^[A-Z]/.test(next) || /^[A-Z]{1,4}T\b/.test(next) || DAY_OR_MONTH.test(next));
     if (!keepGoing) {
       out.push(current);
       current = "";

@@ -140,6 +140,16 @@ test("a listing date that is not a stated deadline reads 'Listed until' on the h
   assert.equal(sw.deadline_stated, false, "SeaWorld states no purchase deadline");
 });
 
+test("an ended check whose date was never a stated deadline says we stopped listing it, not that the offer ended", () => {
+  const listed = { ...base, id: "z-deal", expires_on: "2026-12-31", deadline_stated: false, expires_note: "no purchase deadline is stated; this is our reading" };
+  const list = [base, listed];
+  const page = dealCheckPage(list, listed, "2027-01-01");
+  assert.match(page, /<strong>We stopped listing this check on December 31, 2026 \(no purchase deadline is stated; this is our reading\)\.<\/strong>/);
+  assert.doesNotMatch(page, /This offer ended/);
+  assert.match(dealCheckPage(list, base, "2027-01-01"), /z-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(no longer listed after December 31, 2026\)/);
+  assert.match(dealCheckPage(list, base, "2027-01-01"), /This offer ended November 2, 2026\./, "a stated deadline still reads 'This offer ended'");
+});
+
 test("Margaritaville at Sea check keeps the record: 2026 booking window, fees on USD 0 fares, no child ages, no family total", () => {
   const m = checks.find((c) => c.id === "margaritaville-at-sea-black-friday-early-access");
   assert.ok(m, "added 2026-10-28 evening (docs/research/deal-checks-2026-10-28.md)");

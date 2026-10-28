@@ -40,7 +40,7 @@ Every platform and tool is chosen for (1) a posting/sending API that works unatt
 - Approvals in `ops/OWNER.md` (new URL types, spend, new channels). Everything else is the operator's job.
 
 ## Owner decisions (2026-10-28)
-1. Phase 0 channels: Bluesky + Meta (Facebook Page, Instagram, Threads). Pinterest, YouTube, TikTok next as approvals clear.
+1. Phase 0 channels (OWNER D12, revised 2026-10-28): Meta (Facebook Page, Instagram, Threads) and Pinterest; Bluesky dropped (small audience). YouTube and TikTok next as approvals clear.
 2. Newsletter: skipped for now.
 3. Operator authorization extended to 2027-01-15 17:00 ET (covers the Black Friday window and holiday/wave-season deals).
 4. hello@familytripwise.com is the single brand address (Porkbun forwarding to the owner's Gmail).
