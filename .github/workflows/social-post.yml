@@ -1,0 +1,76 @@
+name: Social posting
+
+# Posts due entries of today's ops/social-queue file (QUEUE G04, OWNER D12), platform by platform,
+# only for platforms whose secrets exist. tools/social-post.mjs checks the D12 kill switch on the
+# latest main before every post, claims a receipt on main (fast-forward only) before posting so
+# nothing posts twice, never posts an expired entry, and keeps per-platform daily caps.
+# Manual runs default to a dry run against simulated platforms (no secrets, no commits).
+
+on:
+  schedule:
+    # Slots are 07:30, 10:00, 12:30, 15:00, 17:30 and 19:30 America/New_York. These minutes cover
+    # both EDT (UTC-4) and EST (UTC-5); a run with nothing due exits without committing.
+    - cron: "40 11,12,14,15,16,17,19,20,21,22,23 * * *"
+    - cron: "40 0 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Simulated platforms only (no posting, no commits)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+
+      - name: Validate posting tool and queues
+        run: node --test tools/social-post.test.mjs tools/social-queue.test.mjs
+
+      - name: Dry run (simulated platforms)
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run
+        run: node tools/social-post.mjs --dry-run --receipts-out "$RUNNER_TEMP/dry-run"
+
+      - name: Post due entries
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run)
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          META_SYSTEM_USER_TOKEN: ${{ secrets.META_SYSTEM_USER_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          META_GRAPH_VERSION: ${{ vars.META_GRAPH_VERSION }}
+        run: |
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          node tools/social-post.mjs
+
+      - name: Upload receipts as a backup
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: social-receipts-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/dry-run/
+            ops/social-receipts/
+          if-no-files-found: ignore
+          retention-days: 30
