@@ -48,7 +48,7 @@ jobs:
             echo "::notice::DATAFORSEO_AUTH_B64 is not configured; no paid calls were made."
             exit 0
           fi
-          if ! grep -Eq '^- D8 .*Approved' ops/OWNER.md; then
+          if ! grep -Eq '^- D8 [^—]*— Approved' ops/OWNER.md || grep -Eq '^- D8 .*(Revoked|Not Approved|Rejected)' ops/OWNER.md; then
             echo "::notice::ops/OWNER.md has no Approved D8 row; no paid calls were made."
             exit 0
           fi
@@ -58,18 +58,18 @@ jobs:
           failed=0
           publish() { # $1 = receipt file name; fast-forward-only push of one new receipt, with retries
             for attempt in 1 2 3 4 5; do
-              git fetch -q origin main
+              timeout 60 git fetch -q origin main
               git checkout -q --detach origin/main
               cp "$RUNNER_TEMP/receipts/$1" "docs/research/$1"
               git add -- "docs/research/$1"
               git commit -q -m "data: DataForSEO research receipt $1"
-              if git push -q origin HEAD:main; then return 0; fi
+              if timeout 60 git push -q origin HEAD:main; then return 0; fi
               echo "Push attempt $attempt rejected; retrying from latest main."
               sleep $((attempt * 5))
             done
             return 1
           }
-          git fetch -q origin main
+          timeout 60 git fetch -q origin main
           git checkout -q --detach origin/main
           shopt -s nullglob
           for request in ops/research-requests/*.json; do
@@ -78,11 +78,11 @@ jobs:
               echo "Skipping a request file whose name does not match <topic>-YYYY-MM-DD.json"
               continue
             fi
-            if [ "$SECONDS" -gt 1500 ]; then
+            if [ "$SECONDS" -gt 1200 ]; then
               echo "::notice::Time budget used; remaining requests run on the next push or a manual run."
               break
             fi
-            git fetch -q origin main
+            timeout 60 git fetch -q origin main
             if git cat-file -e "origin/main:docs/research/dataforseo-$name" 2>/dev/null; then
               echo "Already collected: $name"
               continue
@@ -111,6 +111,8 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: dataforseo-receipts
-          path: ${{ runner.temp }}/receipts/
+          path: |
+            ${{ runner.temp }}/receipts/
+            docs/research/dataforseo-*.json
           if-no-files-found: ignore
           retention-days: 90
