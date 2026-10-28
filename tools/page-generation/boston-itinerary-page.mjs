@@ -34,7 +34,7 @@ export const bostonVenues = [
     rules: [
       "Its visit page does not state a re-entry rule, so do not plan to leave for a nap and come back on the same ticket.",
       "Its visit page suggests the Red Line or Silver Line to South Station, then a short walk.",
-      "Garage parking validation at four listed garages needs a paper ticket pulled at the gate (not parking apps)."
+      "Garage parking validation at four listed garages needs a physical ticket pulled at the garage gate."
     ]
   },
   {
@@ -42,13 +42,13 @@ export const bostonVenues = [
     name: "New England Aquarium",
     source: "https://www.neaq.org/visit/",
     extraSource: ["https://www.neaq.org/visit/frequently-asked-questions/", "Aquarium FAQs"],
-    hours: "Fall hours: weekdays 9 a.m.–5 p.m.; Saturday and Sunday 9 a.m.–6 p.m.",
+    hours: "Fall hours: weekdays 9 a.m.–5 p.m.; Saturday and Sunday 9 a.m.–6 p.m. The page does not give the season dates, so check hours for your trip.",
     entry: "Timed tickets; buy ahead to guarantee entry, as weekends and holidays often sell out. Prices were not shown on the visit pages we could read; the ticket site did not load for us.",
     rules: [
       "You may leave and come back the same day; you may be asked to show your ticket.",
       "Strollers are allowed but the Aquarium strongly recommends leaving them at home or in the car; it has none to borrow or rent. Lockers USD 5 small, USD 7 large.",
       "Bring your own food to the blue picnic tables outside; only water inside the exhibits.",
-      "The Atlantic harbor seals are temporarily off exhibit while their habitat is improved."
+      "The Atlantic harbor seals are temporarily off exhibit."
     ]
   },
   {
@@ -67,7 +67,7 @@ export const bostonVenues = [
     name: "Swan Boats, Public Garden",
     source: "https://swanboats.com/plan-your-visit/",
     hours: "Closed for the season; the operator says it returns in April 2027. Its page showed no 2027 dates, hours or fares on October 27.",
-    entry: "Tickets are bought at the dock by cash or card; individuals need no reservation. Check the operator page for 2027 fares.",
+    entry: "Pay by cash or card; individuals need no reservation. Check the operator page for 2027 fares.",
     rules: [
       "Rides last 10–15 minutes and do not run in rain, high wind or extreme heat.",
       "Strollers fold onto the boat or stay on the unsecured patio by the dock."
@@ -88,7 +88,7 @@ const days = [
     title: "Day 1: Museum of Science",
     blocks: [
       ["Morning", "Museum of Science from its 9 a.m. opening. No timed ticket is needed; under-3s are free. Pick one or two halls rather than the whole building."],
-      ["Lunch", "Food from home goes outside on the plaza or at the picnic tables behind the Museum, or use the café."],
+      ["Lunch", "Food from home goes outside on the plaza or at the picnic tables behind the Museum."],
       ["Rest block", "Plan about two hours of rest. Same-day re-entry works with your confirmation or hand stamp, so a room or quiet break can come between halls. Whether a room return works depends on your hotel; see the rest notes in the Boston hotels guide."],
       ["Afternoon (optional)", "Come back for a USD 6 Planetarium or Omni show, or stop for the day. Exhibit Halls close at 5 p.m."]
     ]
@@ -96,7 +96,7 @@ const days = [
   {
     title: "Day 2: Children's Museum or the Aquarium",
     blocks: [
-      ["Morning", "Younger children: Boston Children's Museum from 9 a.m. (closed Tuesdays; 10 a.m. on the first Saturday of the month). Older children: New England Aquarium at your timed entry."],
+      ["Morning", "Our routing suggestion for younger children: Boston Children's Museum from 9 a.m. (closed Tuesdays; 10 a.m. on the first Saturday of the month). Older children: New England Aquarium at your timed entry."],
       ["Lunch", "At the Aquarium, own food is eaten at the outdoor picnic tables. The Children's Museum visit page does not state its lunch rules."],
       ["Rest block", "Long rest. The Children's Museum page does not state a re-entry rule, so finish there before the break; the Aquarium allows same-day re-entry."],
       ["Late afternoon (optional)", "If you started at the Aquarium, the afternoon can return there before its 5 p.m. weekday closing (6 p.m. weekends)."]
@@ -108,7 +108,7 @@ const days = [
       ["Morning", "USS Constitution Museum from 9:30 a.m., then the ship when it opens at 10 a.m., Wednesday–Sunday only. Adults bring photo ID; leave the stroller on the pier."],
       ["Lunch", "Eat before or after the ship; the museum page does not list food rules."],
       ["Rest block", "Afternoon rest. The ship closes at 4 p.m., so it fits best as a morning stop."],
-      ["Afternoon (optional)", "If you skipped it on Day 2, the Aquarium is the indoor option for a second animal day."]
+      ["Afternoon (optional)", "If you skipped it on Day 2, the Aquarium is the indoor option for this afternoon."]
     ]
   }
 ];
@@ -166,7 +166,7 @@ export function bostonItineraryPage() {
           <p class="eyebrow">Day by day</p>
           <h2>Three days, one anchor each morning</h2>
         </div>
-        <p class="review-label">The museums and Aquarium open at 9 a.m.; the ship opens at 10 a.m. Same-day re-entry is stated by the Museum of Science and the Aquarium only.</p>
+        <p class="review-label">The Museum of Science, Children's Museum and Aquarium open at 9 a.m. (Children's Museum 10 a.m. on the first Saturday); the USS Constitution Museum opens at 9:30 a.m. and the ship at 10 a.m. Same-day re-entry is stated by the Museum of Science and the Aquarium only.</p>
         <div class="detail-card-grid">
 ${days.map(dayCard).join("\n")}
         </div>
