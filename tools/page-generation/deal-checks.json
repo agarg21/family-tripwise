@@ -130,6 +130,46 @@
       "source_label": "Club Med all-inclusive vacation deals page",
       "observed_on": "2026-10-28",
       "expires_on": "2027-01-06"
+    },
+    {
+      "id": "seaworld-orlando-2027-fun-card",
+      "operator": "SeaWorld Orlando",
+      "category": "Theme park pass",
+      "title": "SeaWorld Orlando 2027 Fun Card: rest of 2026 included",
+      "headline": "One per-person price covers unlimited SeaWorld Orlando visits for the rest of 2026 and all of 2027 (Aquatica added in the higher tier), but the offer page shows no child price, and parking and select special events are not included.",
+      "family_of_four": "The Fun Card is priced per person: the page shows from USD 144.99 each for SeaWorld only and from USD 184.99 each for SeaWorld + Aquatica, with no separate child price and no age rule, so plan on checking a card price for every family member. Each card is valid only for the person named on it. Parking is not included, so a family arriving by car pays for parking on each visit. Visits are blocked out on four days around Christmas 2026 and on 19 SeaWorld dates in 2027, including four spring Saturdays.",
+      "terms": [
+        ["Headline", "Unlimited visits in 2027 plus the rest of 2026 free."],
+        ["Price shown", "SeaWorld: USD 144.99 each. SeaWorld + Aquatica: USD 184.99 each. The page also shows USD 151.99 and USD 242.99 next to these prices without saying what they are. Whether tax is included is not stated."],
+        ["Parks", "SeaWorld Orlando; the SeaWorld + Aquatica tier adds Aquatica Orlando."],
+        ["Travel window", "Unlimited visits for the rest of 2026 and through December 31, 2027."],
+        ["Book by", "No purchase deadline is stated. The free rest-of-2026 visits end December 31, 2026."],
+        ["Blockout dates, SeaWorld 2026", "December 22, 24, 25 and 26."],
+        ["Blockout dates, SeaWorld 2027", "March 13, 20 and 27; April 3; June 28 and 29; July 3, 4, 10, 17, 24 and 31; August 28; October 16 and 23; December 21, 23, 24 and 25."],
+        ["Blockout dates, Aquatica 2027", "May 30 and 31; June 5, 12, 19 and 26; July 2, 3, 4, 10, 11, 17, 18, 24 and 25."],
+        ["Child ages", "No child price and no age rule are stated on the offer page."],
+        ["Not included", "Parking, select special events (including Howl-O-Scream) and food and merchandise discounts."],
+        ["Card rules", "Valid only for the person named on the card; non-transferable and non-refundable. The page lists automatic renewal as a feature."]
+      ],
+      "unclear": [
+        "The page shows two prices for each tier (USD 144.99 and USD 151.99; USD 184.99 and USD 242.99) without saying which is the current price; the checkout shows the price you pay.",
+        "No child price and no free-under age are shown on the offer page.",
+        "No purchase deadline is shown; the free rest-of-2026 visits cannot run past December 31, 2026, so we list that as the latest date this bonus can matter.",
+        "Whether the price includes tax is not stated.",
+        "How automatic renewal works and how to turn it off is not explained on the offer page."
+      ],
+      "before_booking": [
+        "Price a card for each family member at checkout and look for a child price or free-under age there.",
+        "Compare your planned visit dates with the blockout dates above, especially spring-break Saturdays and Christmas week.",
+        "Add parking for each visit if you will drive.",
+        "Check the automatic-renewal setting before you pay."
+      ],
+      "family_total": null,
+      "official_url": "https://seaworld.com/orlando/tickets/fun-card/",
+      "source_label": "SeaWorld Orlando Fun Card page",
+      "observed_on": "2026-10-28",
+      "expires_on": "2026-12-31",
+      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used"
     }
   ]
 }

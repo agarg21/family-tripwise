@@ -193,8 +193,8 @@ export function dealCheckPage(checks, check, today = easternDate()) {
   const ended = isEnded(check, today);
   const status = ended
     ? `<p class="deal-status deal-status-ended" role="status"><strong>This offer ended ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The terms below are what the official page said when we checked; they are kept for reference only.</p>`
-    : `<p class="deal-status"><strong>Book by ${e(longDate(check.expires_on))}</strong>${dateNote(check)}, per the official page checked ${e(longDate(check.observed_on))}.</p>`;
-  const rows = check.terms.map(([label, value]) => `<tr><th scope="row">${e(label)}</th><td>${e(value)}</td></tr>`).join("");
+    : `<p class="deal-status"><strong>Book by ${e(longDate(check.expires_on))}</strong>${dateNote(check)}${check.expires_note ? `; official page checked ${e(longDate(check.observed_on))}` : `, per the official page checked ${e(longDate(check.observed_on))}`}.</p>`;
+  const rows = check.terms.map(([label, value]) => `<tr role="row"><th scope="row" role="rowheader">${e(label)}</th><td role="cell">${e(value)}</td></tr>`).join("");
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
@@ -212,10 +212,10 @@ ${trustPanel}
       <section class="container page-section" aria-labelledby="deal-terms-title">
         <h2 id="deal-terms-title">The terms that matter to families</h2>
         <div class="table-wrap deal-terms-wrap">
-          <table class="deal-terms">
+          <table class="deal-terms" role="table">
             <caption>What the ${e(check.operator)} offer page said on ${e(longDate(check.observed_on))}</caption>
-            <thead><tr><th scope="col">Term</th><th scope="col">What the official page says</th></tr></thead>
-            <tbody>${rows}</tbody>
+            <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Term</th><th scope="col" role="columnheader">What the official page says</th></tr></thead>
+            <tbody role="rowgroup">${rows}</tbody>
           </table>
         </div>
         <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>

@@ -1609,7 +1609,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 @media (max-width: 520px) {
   .deal-terms thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .deal-terms tr, .deal-terms th, .deal-terms td { display: block; width: auto; }
-  .deal-terms tbody th { padding-bottom: 2px; border-top: 1px solid var(--line, #dde3e8); }
+  .deal-terms tbody th { width: auto; padding-bottom: 2px; border-top: 1px solid var(--line, #dde3e8); }
   .deal-terms tbody td { padding-top: 2px; border-top: 0; }
 }
 .deal-others ul { padding-left: 20px; }

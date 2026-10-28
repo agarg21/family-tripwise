@@ -63,3 +63,27 @@ Extracted facts only (no page bodies). Every fact below was read on the operator
 - Beaches Winter Splash Sale: booking closed October 5, 2026.
 - Club Med "40% off Christmas & New Year" (festive): booking closed October 27, 2026 (inventory record).
 - Disney offers: left for a later run (Disney-specific; marked as such when added).
+
+## Added 2026-10-28 afternoon run (QUEUE G05)
+
+| Offer | Official URL | Fetched | Notes |
+|---|---|---|---|
+| SeaWorld Orlando 2027 Fun Card | https://seaworld.com/orlando/tickets/fun-card/ | 2026-10-28 (WebFetch, once) | Surfaced by WebSearch on seaworld.com. A plain request for robots.txt got a Cloudflare challenge (not bypassed); the page itself was read through the fetch tool. Different URL from the /orlando/tickets/ index read in the inventory record (row 21) |
+
+### SeaWorld Orlando 2027 Fun Card
+| Field | Observed value | Change vs inventory row 21 |
+|---|---|---|
+| Headline | "2027 Fun Card - Now Available"; "Get Unlimited Visits in 2027 + Rest of 2026 FREE" | same |
+| Price | SeaWorld USD 144.99 /ea. (USD 151.99 also shown); SeaWorld + Aquatica USD 184.99 /ea. (USD 242.99 also shown); tax not stated; which figure is current not stated | adds the Aquatica tier and the second figures |
+| Parks | Unlimited visits to SeaWorld and Aquatica Orlando throughout 2027 (tiers "SeaWorld" and "SeaWorld + Aquatica") | new |
+| Valid | "Valid for visits until December 31, 2027." | same |
+| Purchase deadline | Not stated | — |
+| Blockouts SeaWorld 2026 | 12/22, 12/24, 12/25, 12/26 | same |
+| Blockouts SeaWorld 2027 | 3/13, 3/20, 3/27, 4/3, 6/28, 6/29, 7/3, 7/4, 7/10, 7/17, 7/24, 7/31, 8/28, 10/16, 10/23, 12/21, 12/23, 12/24, 12/25 (19 dates; Mar 13–Apr 3 are Saturdays) | listed in full |
+| Blockouts Aquatica 2027 | 5/30, 5/31, 6/5, 6/12, 6/19, 6/26, 7/2, 7/3, 7/4, 7/10, 7/11, 7/17, 7/18, 7/24, 7/25 | new |
+| Child price / ages | Not stated | — |
+| Not included | Select special events (including Howl-O-Scream), parking, food and merchandise discounts | same (parking) |
+| Card rules | Only valid for the person listed; non-transferable, non-refundable, void if altered; "Convenient Automatic Renewal" listed as a feature | new |
+| Residency | Not stated on this page | — |
+
+Published as a Family Deal Check with expires_on 2026-12-31 (no purchase deadline stated; last day the free rest-of-2026 visits can be used). Not published this run: Walt Disney World spring 2027 room offer (offer detail page not surfaced by search; the special-offers index was already read today, once-per-week rule).

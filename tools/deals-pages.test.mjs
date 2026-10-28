@@ -93,3 +93,24 @@ test("the Deals header link is current only on deal pages", () => {
   assert.match(readFileSync(new URL("deals/index.html", site), "utf8"), /href="\.\.\/deals\/" aria-current="page">Deals/);
   assert.match(readFileSync(new URL(dealPagePath(checks[0]), site), "utf8"), /href="\.\.\/deals\/" aria-current="true">Deals/);
 });
+
+test("G02b: terms table keeps table semantics when stacked; status line does not repeat 'per the official page' after a date note", () => {
+  const page = dealCheckPage([base], base, "2026-10-28");
+  assert.match(page, /<table class="deal-terms" role="table">/);
+  assert.match(page, /<tr role="row"><th scope="row" role="rowheader">Book by<\/th><td role="cell">November 2, 2026\.<\/td><\/tr>/);
+  assert.match(page, /, per the official page checked October 28, 2026\.<\/p>/);
+  const noted = { ...base, expires_note: "the page gives no year for this date" };
+  const notedPage = dealCheckPage([noted], noted, "2026-10-28");
+  assert.match(notedPage, /<strong>Book by November 2, 2026<\/strong> \(the page gives no year for this date\); official page checked October 28, 2026\.<\/p>/);
+  assert.doesNotMatch(notedPage, /\), per the official page/);
+});
+
+test("SeaWorld Fun Card check keeps the record's per-person basis, unclear prices and no family total", () => {
+  const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
+  assert.ok(sw, "added 2026-10-28 (docs/research/deal-checks-2026-10-28.md)");
+  assert.equal(sw.official_url, "https://seaworld.com/orlando/tickets/fun-card/");
+  assert.equal(sw.family_total, null);
+  assert.match(sw.family_of_four, /no separate child price/);
+  assert.ok(sw.unclear.some((u) => /USD 151\.99/.test(u)), "the second price figure stays flagged as unclear");
+  assert.ok(sw.terms.some(([l, v]) => l === "Not included" && /Parking/.test(v)));
+});
