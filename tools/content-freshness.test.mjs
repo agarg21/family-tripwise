@@ -223,7 +223,7 @@ test("forward review or recheck dates are flagged; observation wording passes", 
   for (const text of ["<p>Price observed 2026-10-11; check live rates before booking.</p>", "<p>Notice rechecked September 22, 2026.</p>",
     "<p>October 11, 2026 recheck unavailable; these facts have not been renewed.</p>", "<p>Recheck venue and weather before leaving.</p>",
     "<p>Payment due by November 1, 2026.</p>", "<p>Balance due 2026-11-01.</p>",
-    "<p>Review cancellation terms by November 1, 2026.</p>", "<p>Review the booking deadline before Nov 5.</p>", "<p>Recheck deposit rules before 2026-11-02.</p>", "<p>Review your reservation before Nov 3.</p>", "<p>Review payment terms by November 6.</p>"])
+    "<p>Review cancellation terms by November 1, 2026.</p>", "<p>Review the booking deadline before Nov 5.</p>", "<p>Recheck deposit rules before 2026-11-02.</p>", "<p>Review your reservation before Nov 3.</p>", "<p>Review payment terms by November 6.</p>", "<p>Review cancellation policy by November 1, 2026.</p>", "<p>Review the cancellation window before Nov 3.</p>"])
     assert.deepEqual(findReviewDueDates(text), [], text);
 });
 

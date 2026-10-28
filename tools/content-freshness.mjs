@@ -146,7 +146,7 @@ const REVIEW_DUE_PATTERNS = [
   new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:on\s+|by\s+|before\s+)?${DATE_TOKEN}`, "i"),
   // "Review prices by <date>" and "Review booking prices by <date>" are forward review dates; "review cancellation terms by <date>"
   // is booking-deadline advice. A booking word excuses the phrase only when it directly precedes by/before or is followed by terms/deadline/rules.
-  new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:(?!(?:the\s+)?(?:booking|bookings|cancel\w*|deposits?|payments?|deadlines?|reservations?|holds?|balances?|refunds?|check-?in|arrival)\s+(?:terms?|deadlines?|rules?|by|before)\b)[a-z]+\s+){1,3}(?:by|before)\s+${DATE_TOKEN}`, "i"),
+  new RegExp(String.raw`\b(?:review|recheck|re-check|refresh)\s+(?:(?!(?:the\s+)?(?:booking|bookings|cancel\w*|deposits?|payments?|deadlines?|reservations?|holds?|balances?|refunds?|check-?in|arrival)\s+(?:terms?|deadlines?|rules?|polic(?:y|ies)|windows?|cut-?offs?|by|before)\b)[a-z]+\s+){1,3}(?:by|before)\s+${DATE_TOKEN}`, "i"),
   /(?<!\b(?:payment|payments|balance|deposit|charge|charges|fee|fees|amount|paid|payable|full payment)\s)\bdue\s+(?:on\s+|by\s+)?(?:\d{4}-\d{2}-\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}\b)/i
 ];
 
