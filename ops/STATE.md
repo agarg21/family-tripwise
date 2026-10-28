@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2026-11-13 17:00 America/New_York
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-28 transactions=4
-run: {id: 2026-10-28T08:05:17Z, started_at: 2026-10-28T08:05:17Z}
-last_public_release: cb5745a (2026-10-28, Q09c Boston hotels readability)
+today: 2026-10-28 transactions=5
+run: none
+last_public_release: 1bdac05 (2026-10-28, Q09c DC hotels readability)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -32,3 +32,4 @@ active: none
 - 2026-10-28 Q09a delivered 25d73a7 (release.json; Boston, DC, PV and London hotel pages verified live): evidence notes such as "before11:59PM", "2adults/3kids", "with25USDHomewoodservicefee" now read with normal spacing via display-only readableText (spaces only; numbers, dates, URLs, JSON-LD unchanged). New test: 0 run-together tokens on all six Q09 pages. Reviewer FAIL(P2 "28at23")→PASS_WITH_P3. Rest of Q09 queued as Q09b.
 - 2026-10-28 Q02d delivered dfe0a04 (release.json, LV and Boston itineraries, Chicago activities verified live): LV Cost line drops repeated ticket rule; Boston Day 2 older-children wording matches; review-date detector excuses a booking word only as first word after review/recheck; CSV stay-date parser reads day-first dates and throws on unparseable cells; Chicago date-line "·" aria-hidden. Reviewer PASS_WITH_P3 (2 optional regex P3s, not taken: fail-safe/pre-existing).
 - 2026-10-27 Q02c delivered 8d42000 (release.json, Chicago and Orlando activities, NYC hotels page + CSV, cancun-resorts.css verified live): review-date detector flags "Review booking prices by …" again; CSV stay checker reads Check-in/Stay dates columns; Leu note and Chicago date line match their real check dates; NYC CSV sample column, shorter Fits; Cancun uses shared skip link. Reviewer PASS_WITH_P3 (1 fixed, rest to Q02d).
+- 2026-10-28 Q09c-DC delivered 1bdac05 (release.json; DC and Boston hotel pages and comparison CSS verified live, byte-identical): DC hotel amounts shown once, provenance in collapsed How we checked blocks; methodology h2 outside details on DC/Boston; CSS ?v=ft-q09c2. Reviewer PASS_WITH_P3. Remote q/Q09c-dc deletion refused.

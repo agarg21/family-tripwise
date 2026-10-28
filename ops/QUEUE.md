@@ -4,8 +4,8 @@ Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWN
 
 ## Q09c Lodging-page readability fix (remaining slice)
 open · M · owner: D4e Approved · gate: none
-Done: Q09a (25d73a7) spacing on six pages; Q09b (228eaac) hotel CSVs spaced; Q09c-Boston (cb5745a) Boston dated amounts shown once, per-property and page "How we checked" collapsed blocks (details.how-checked, CSS in washington-dc-comparison.css), dining CSV spaced.
-Remaining: same pattern for DC, PV, Cancun, London, Orlando hotels (one page per run; reuse details.how-checked). Boston P3s to fold in: h2 inside summary (consider heading outside details), add ?v= to washington-dc-comparison.css link, tall Cancellation/meals rows at 390 px.
+Done: Q09a (25d73a7) spacing on six pages; Q09b (228eaac) hotel CSVs spaced; Q09c-Boston (cb5745a) and Q09c-DC (1bdac05) dated hotel amounts shown once, per-property and page "How we checked" blocks (details.how-checked, CSS in washington-dc-comparison.css?v=ft-q09c2; page h2 sits outside the details), dining CSV spaced.
+Remaining: same pattern for PV, Cancun, London, Orlando hotels (one page per run; reuse details.how-checked; add ?v=ft-q09c2 to PV's CSS link). P3s to fold in: tall Cancellation/meals rows and rate-table captions cut off inside the scroll region at 390 px (Boston, DC).
 Acceptance: each price appears once in the visible HTML; provenance in a collapsed "How we checked" block; summary per property ≤4 lines; run-together tests stay at 0.
 
 ## Q11 Self-host resized hero images
