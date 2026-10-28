@@ -3,7 +3,10 @@
 The previous long-form strategy is frozen at `archive/2026-10/strategy/current-strategy.md`; `strategy/seo-doctrine.md` and `strategy/content-principles.md` still apply.
 
 ## Goal for this cycle
-Turn a technically clean but stalled site into one that ships trustworthy improvements every week and starts earning clicks. Success on 2026-11-13 is the scoreboard in `ops/STATE.md` moving in the right direction, every live page free of stale or unobserved facts, and a written renew-or-pause recommendation (Q14).
+Growth (owner, 2026-10-28). Become the place families check before they book a deal or plan a holiday outing: fresh, verified family deals and events on the site (/deals/, /this-week/) distributed daily on social and a weekly newsletter, with the existing guides as the deep layer they link to. Success on 2026-11-13: the new sections live and refreshed daily, posting running on the first platforms, newsletter started, the scoreboard in `ops/STATE.md` moving, and a written renew-or-pause recommendation (Q14).
+
+## Positioning: the Family Deal Check
+Deal sites post fast; nobody shows what a deal really costs a family of 4 on named dates, with child ages, occupancy, blackout dates and fees. That check is our product. Focus where Disney deal sites are thin: water-park resorts, kids-sail-free cruises, all-inclusives, regional parks, kids-ski-free, family suites. Inventory reality (research 2026-10-28): about 0.5 truly new family deals/day normally, 2–5/day in the Black Friday window (about Nov 20–Dec 8); events and news add 3.5–6 checkable items/day in Nov–Dec, 1–2/day in Jan–Feb. So 5–6 posts/day across all platforms in season, 2–3 off-season, never filler.
 
 ## What the evidence says (2026-10-27 review)
 - Traffic is early-stage: 8 clicks / 3,202 impressions per 28 days, average position 44. Impressions roughly doubled in October; clicks have not.
@@ -12,6 +15,7 @@ Turn a technically clean but stalled site into one that ships trustworthy improv
 - No public release since 2026-10-13: the old process produced research and offline tooling instead of site changes.
 
 ## Priorities, in order
+0. Growth lane first (QUEUE G01–G07): /this-week/, /deals/ with Family Deal Checks, daily sweep, social queue and posting, newsletter.
 1. Trust and freshness: no past-due dates, no past-stay price samples, no unobserved price bands, truthful About page.
 2. Discovery: sitemap lastmod, shared navigation, ≥3 inbound links per URL, owner resubmits the sitemap in GSC.
 3. Refresh the highest-impression hotel lists with observed, dated evidence (NYC, San Diego, Chicago, Las Vegas).
