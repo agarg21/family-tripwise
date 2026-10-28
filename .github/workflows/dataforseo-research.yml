@@ -1,5 +1,10 @@
 name: DataForSEO research
 
+# Runs pending request files in ops/research-requests/ with the DATAFORSEO_AUTH_B64 secret.
+# Safety: always works from the latest main, collects one request at a time and pushes its
+# receipt (fast-forward only, with retries) before the next paid batch, so a receipt can't be
+# lost or a request billed twice. Every receipt is also uploaded as a build artifact.
+
 on:
   push:
     branches:
@@ -18,47 +23,94 @@ concurrency:
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout latest main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
 
       - name: Validate research tool
         run: node --test tools/seo-opportunity-pull.test.mjs
 
-      - name: Run pending requests
+      - name: Collect pending requests one at a time
+        timeout-minutes: 40
         env:
           DATAFORSEO_AUTH_B64: ${{ secrets.DATAFORSEO_AUTH_B64 }}
         run: |
+          set -u
           if [ -z "$DATAFORSEO_AUTH_B64" ]; then
             echo "::notice::DATAFORSEO_AUTH_B64 is not configured; no paid calls were made."
             exit 0
           fi
-          shopt -s nullglob
-          for request in ops/research-requests/*.json; do
-            name=$(basename "$request")
-            if [ -e "docs/research/dataforseo-$name" ]; then
-              echo "Already collected: $name"
-              continue
-            fi
-            echo "Collecting: $name"
-            node tools/seo-opportunity-pull.mjs --request "$request" --execute || echo "::warning::$name stopped; its receipt (if any) records why. Not retried."
-          done
-
-      - name: Commit receipts to main
-        run: |
-          git add -- docs/research/dataforseo-*.json
-          if git diff --cached --quiet; then
-            echo "No new research receipts."
+          if ! grep -Eq '^- D8 .*Approved' ops/OWNER.md; then
+            echo "::notice::ops/OWNER.md has no Approved D8 row; no paid calls were made."
             exit 0
           fi
           git config user.name "family-tripwise-operator"
           git config user.email "family-tripwise-operator@users.noreply.github.com"
-          git commit -m "data: DataForSEO research receipts"
-          git pull --no-rebase origin main
-          git push origin HEAD:main
+          mkdir -p "$RUNNER_TEMP/receipts"
+          failed=0
+          publish() { # $1 = receipt file name; fast-forward-only push of one new receipt, with retries
+            for attempt in 1 2 3 4 5; do
+              git fetch -q origin main
+              git checkout -q --detach origin/main
+              cp "$RUNNER_TEMP/receipts/$1" "docs/research/$1"
+              git add -- "docs/research/$1"
+              git commit -q -m "data: DataForSEO research receipt $1"
+              if git push -q origin HEAD:main; then return 0; fi
+              echo "Push attempt $attempt rejected; retrying from latest main."
+              sleep $((attempt * 5))
+            done
+            return 1
+          }
+          git fetch -q origin main
+          git checkout -q --detach origin/main
+          shopt -s nullglob
+          for request in ops/research-requests/*.json; do
+            name=$(basename "$request")
+            if ! [[ "$name" =~ ^[a-z0-9-]+-20[0-9]{2}-[0-9]{2}-[0-9]{2}\.json$ ]]; then
+              echo "Skipping a request file whose name does not match <topic>-YYYY-MM-DD.json"
+              continue
+            fi
+            if [ "$SECONDS" -gt 1500 ]; then
+              echo "::notice::Time budget used; remaining requests run on the next push or a manual run."
+              break
+            fi
+            git fetch -q origin main
+            if git cat-file -e "origin/main:docs/research/dataforseo-$name" 2>/dev/null; then
+              echo "Already collected: $name"
+              continue
+            fi
+            git checkout -q --detach origin/main
+            echo "Collecting: $name"
+            status=0
+            node tools/seo-opportunity-pull.mjs --request "ops/research-requests/$name" --execute || status=$?
+            if [ -e "docs/research/dataforseo-$name" ]; then
+              cp "docs/research/dataforseo-$name" "$RUNNER_TEMP/receipts/"
+              rm -f "docs/research/dataforseo-$name"
+              if ! publish "dataforseo-$name"; then
+                echo "::error::Could not push the receipt for $name; it is in the build artifact. Stopping before any further paid batch."
+                exit 1
+              fi
+            fi
+            if [ "$status" -ne 0 ]; then
+              echo "::warning::$name stopped (exit $status); its receipt, if any, records why. It is not retried."
+              failed=1
+            fi
+          done
+          exit "$failed"
+
+      - name: Upload receipts as a backup
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: dataforseo-receipts
+          path: ${{ runner.temp }}/receipts/
+          if-no-files-found: ignore
+          retention-days: 90

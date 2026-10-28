@@ -3,6 +3,8 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { types } from "node:util";
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
+// Spend recorded in receipts before the GitHub workflow existed; the ledger never reports less.
+export const RECORDED_SPEND_FLOOR_USD = 0.3626;
 // Owner-approved cumulative DataForSEO budget across all receipts (ops/OWNER.md D8, raised from USD 5 on 2026-10-27).
 export const APPROVED_CUMULATIVE_CEILING_USD = 20; // historical manifests carry the earlier USD 5 ceiling, still valid (stricter)
 
@@ -115,7 +117,7 @@ export async function cumulativeSpend(dir) {
     const prior = report?.budget?.prior_spend_usd;
     if (!Number.isFinite(prior) || !Array.isArray(report.calls)) continue;
     const billed = report.calls.reduce((sum, c) => sum + (Number.isFinite(c?.cost_usd) ? c.cost_usd
-      : String(c?.endpoint).startsWith("dataforseo_labs/") ? 0.1 : 0.01), 0);
+      : String(c?.endpoint).startsWith("dataforseo_labs/") ? 0.14 : 0.01), 0);
     total = Math.max(total, prior + billed);
   }
   return total;
@@ -125,8 +127,9 @@ export async function cumulativeSpend(dir) {
 export async function requestBatch(request, researchDir) {
   if (!request || typeof request !== "object" || Array.isArray(request)) throw new Error("Invalid research request");
   for (const key of Object.keys(request)) if (!["action", "keywords", "serp_keywords", "purpose"].includes(key)) throw new Error(`Unexpected request field ${key}`);
+  if (request.purpose !== undefined && (typeof request.purpose !== "string" || request.purpose.length > 300)) throw new Error("Request purpose must be a short string");
   return { action: request.action, keywords: request.keywords, serp_keywords: request.serp_keywords ?? [],
-    prior_spend_usd: await cumulativeSpend(researchDir), cumulative_ceiling_usd: APPROVED_CUMULATIVE_CEILING_USD, batch_ceiling_usd: 0.5 };
+    prior_spend_usd: Math.max(await cumulativeSpend(researchDir), RECORDED_SPEND_FLOOR_USD), cumulative_ceiling_usd: APPROVED_CUMULATIVE_CEILING_USD, batch_ceiling_usd: 0.5 };
 }
 function envAuth() {
   const value = process.env.DATAFORSEO_AUTH_B64?.trim();
@@ -150,6 +153,7 @@ async function main() {
     return;
   }
   const batch = JSON.parse(await readFile(resolve(ROOT, "docs/research/family-expansion-keywords-2026-09-30.json"), "utf8"));
+  batch.prior_spend_usd = Math.max(batch.prior_spend_usd, await cumulativeSpend(resolve(ROOT, "docs/research")), RECORDED_SPEND_FLOOR_USD);
   const reserved = validateBatch(batch);
   if (!process.argv.includes("--execute")) { console.log(JSON.stringify({ keywords: batch.keywords.length, serps: batch.serp_keywords.length, conservative_reserved_usd: reserved, paid_calls: false })); return; }
   const auth = envAuth() ?? loadAuth(await readFile(resolve(process.env.HOME, ".config/seo-lab/dataforseo.env"), "utf8"));

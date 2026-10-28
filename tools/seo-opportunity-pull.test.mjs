@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { validateBatch, keywordRows, serpRows, runBatch, cumulativeSpend, requestBatch } from "./seo-opportunity-pull.mjs";
+import { validateBatch, keywordRows, serpRows, runBatch, cumulativeSpend, requestBatch, RECORDED_SPEND_FLOOR_USD } from "./seo-opportunity-pull.mjs";
+import { fileURLToPath } from "node:url";
 import { writeFile } from "node:fs/promises";
 import { mkdtemp, readFile, rm, access } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -203,7 +204,7 @@ test("cumulative spend comes from saved receipts and counts unknown outcomes con
     await writeFile(join(dir, "b.json"), JSON.stringify({ budget: { prior_spend_usd: 0.32 }, calls: [{ endpoint: "dataforseo_labs/google/keyword_overview/live", cost_usd: null }] }));
     await writeFile(join(dir, "notes.json"), JSON.stringify({ keywords: [] }));
     await writeFile(join(dir, "broken.json"), "{");
-    assert.equal(Number((await cumulativeSpend(dir)).toFixed(4)), 0.42);
+    assert.equal(Number((await cumulativeSpend(dir)).toFixed(4)), 0.46);
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
 test("request files cannot set their own budget and must pass the normal preflight", async () => {
@@ -215,5 +216,12 @@ test("request files cannot set their own budget and must pass the normal preflig
     assert.throws(() => validateBatch(b), /Budget preflight failed/);
     await assert.rejects(requestBatch({ action: "Q15", keywords: ["x"], prior_spend_usd: 0 }, dir), /Unexpected request field/);
     await assert.rejects(requestBatch([], dir), /Invalid research request/);
+    await assert.rejects(requestBatch({ action: "Q15", keywords: ["x"], purpose: "x".repeat(301) }, dir), /short string/);
+    const empty = await mkdtemp(join(tmpdir(), "tripwise-request-empty-"));
+    try { assert.equal((await requestBatch({ action: "Q15", keywords: ["x"] }, empty)).prior_spend_usd, RECORDED_SPEND_FLOOR_USD); } finally { await rm(empty, { recursive: true, force: true }); }
   } finally { await rm(dir, { recursive: true, force: true }); }
+});
+test("the committed receipt ledger never drops below recorded spend", async () => {
+  const research = fileURLToPath(new URL("../docs/research/", import.meta.url));
+  assert.ok(await cumulativeSpend(research) >= RECORDED_SPEND_FLOOR_USD - 1e-9);
 });
