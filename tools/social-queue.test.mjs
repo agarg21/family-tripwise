@@ -73,7 +73,7 @@ test("queue picks verified, unexpired, freshly observed items, most urgent first
   assert.deepEqual(q.entries.map((e) => e.scheduled_at), ["2026-10-29T07:30:00-04:00", "2026-10-29T12:30:00-04:00", "2026-10-29T19:30:00-04:00"]);
   assert.equal(q.entries[0].expires_at, "2026-11-02T00:00:00-05:00", "posting stops at 00:00 ET on the last day, with that date's offset");
   assert.deepEqual(Object.keys(q.entries[0].platforms), PLATFORMS);
-  assert.deepEqual(Object.keys(q.entries[1].platforms), ["bluesky", "threads", "facebook", "pinterest"], "Instagram, TikTok and YouTube capped at 1/day");
+  assert.deepEqual(Object.keys(q.entries[1].platforms), ["threads", "facebook", "pinterest"], "Instagram, TikTok and YouTube capped at 1/day");
   assert.deepEqual(validateQueue(q, { siteDir: null, records, today: "2026-10-29" }), []);
   const late = buildQueue("2026-11-20", { records: [record({ observed_on: "2026-10-28", expires_on: "2026-12-01" })], previous: () => null });
   assert.equal(late.entries.length, 0, `observations older than ${MAX_OBSERVATION_AGE_DAYS} days are not posted`);
@@ -88,8 +88,10 @@ test("validator refuses expired, over-limit, over-cap and changed entries", () =
   assert.deepEqual(validateQueue(base, { records, today, siteDir: null }), []);
   let q = clone(); q.entries[0].expires_at = "2026-10-29T23:59:00-04:00";
   assert.ok(has(q, /expires_at must be 00:00 ET on a day after the queue date/));
-  q = clone(); q.entries[0].platforms.bluesky.text = "x".repeat(LIMITS.bluesky.text + 1);
-  assert.ok(has(q, /bluesky text missing or over 300/));
+  q = clone(); q.entries[0].platforms.threads.text = "x".repeat(LIMITS.threads.text + 1);
+  assert.ok(has(q, /threads text missing or over 500/));
+  q = clone(); q.entries[0].platforms.bluesky = { text: "x", link: "https://familytripwise.com/deals/" };
+  assert.ok(has(q, /unknown platform bluesky/), "Bluesky is no longer a queue platform (OWNER D12 revised)");
   q = clone(); q.entries[1].platforms.instagram = q.entries[0].platforms.instagram;
   assert.ok(has(q, /instagram has 2 posts, cap 1/));
   q = clone(); q.entries[0].platforms.threads.text += " Kids stay free.";

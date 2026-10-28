@@ -21,10 +21,9 @@ export const queueDir = join(root, "ops/social-queue");
 export const cardDir = "social/cards"; // under site/, so cards are public JPEG URLs (Instagram needs one)
 export const SITE = "https://familytripwise.com";
 
-// Text limits as documented by each platform (characters; Bluesky counts graphemes, and our text is
-// plain Latin, so characters are the same). G04 must re-check these against each API before posting.
+// Text limits as documented by each platform (characters). G04 must re-check these against each API
+// before posting. Bluesky was dropped from phase 0 by the owner (OWNER D12, revised 2026-10-28).
 export const LIMITS = {
-  bluesky: { text: 300 },
   threads: { text: 500 },
   facebook: { text: 2000 }, // our own ceiling; Facebook allows far more
   instagram: { text: 2200, hashtags: 5 }, // Instagram allows 30 hashtags; we use at most 5
@@ -36,7 +35,7 @@ export const PLATFORMS = Object.keys(LIMITS);
 
 // Per-platform daily caps from docs/research/growth-distribution-landscape-2026-10-28.md §6.2
 // (upper end of each range; YouTube 3–7/week ≈ 1/day).
-export const DAILY_CAPS = { bluesky: 4, threads: 5, facebook: 2, instagram: 1, pinterest: 10, tiktok: 1, youtube: 1 };
+export const DAILY_CAPS = { threads: 5, facebook: 2, instagram: 1, pinterest: 10, tiktok: 1, youtube: 1 };
 // Total verified "units" a day: 5–6 in Nov–Dec, 2–3 off-season (strategy/current-strategy.md).
 export const unitCap = (date) => (/^\d{4}-(11|12)-/.test(date) ? 6 : 3);
 // A post may only use an observation at most this many days old; G05 re-observes to keep posting.
@@ -202,7 +201,6 @@ export function variants(record, entryId) {
   const core = deal ? [record.title, record.short[0]] : [record.title];
   const more = deal ? [record.short[1]] : record.short;
   const v = {};
-  v.bluesky = { text: fit(core, [...more, checked], LIMITS.bluesky.text) };
   v.threads = { text: fit(core, [...more, record.extra[0], checked], LIMITS.threads.text) };
   v.facebook = { text: fit([record.title, ...record.full, checked], [], LIMITS.facebook.text) };
   v.instagram = { text: fit([record.title, ...record.full, checked, `Details and the official link: ${pageWord}`], [record.hashtags.join(" ")], LIMITS.instagram.text) };

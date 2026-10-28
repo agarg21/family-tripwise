@@ -6,15 +6,16 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import {
   run, GitStore, DirStore, simulatedFetch, SIMULATED_ENV, killSwitchOpen, enabledPlatforms, planPosts, sanitize, receiptKey, checkVariant,
+  POSTING_PLATFORMS, linkTarget,
 } from "./social-post.mjs";
-import { DAILY_CAPS } from "./social-queue.mjs";
+import { DAILY_CAPS, LIMITS } from "./social-queue.mjs";
 
 const APPROVED = "# OWNER\n- D12 Social and newsletter (2026-10-28, owner) — Approved: posts. Kill switch: change \"Approved\" here to \"Paused\" to stop all posting.\n";
 const PAUSED = APPROVED.replace("— Approved", "— Paused");
 const SITE = "https://familytripwise.com";
 
 // Frozen fixture queue (never the live queue), so data refreshes cannot break these tests.
-function entry(slug, scheduled, expires, platforms = ["bluesky", "threads", "facebook", "instagram"]) {
+function entry(slug, scheduled, expires, platforms = ["threads", "facebook", "instagram", "pinterest"]) {
   const id = `2026-11-05-${slug}`;
   const text = `Fixture ${slug} title\n\nKids under 4 stay free on listed dates.\n\nChecked on the official page November 4.`;
   return {
@@ -22,15 +23,17 @@ function entry(slug, scheduled, expires, platforms = ["bluesky", "threads", "fac
     source: { official_url: "https://www.example.com/terms", label: "Fixture terms", observed_on: "2026-11-04" },
     page: `${SITE}/deals/${slug}.html`,
     image: { path: `site/social/cards/${slug}-0123456789.jpg`, url: `${SITE}/social/cards/${slug}-0123456789.jpg`, width: 1080, height: 1350, alt: `Family Deal Check. Fixture ${slug}.` },
-    platforms: Object.fromEntries(platforms.map((p) => [p, { text, link: `${SITE}/deals/${slug}.html?utm_source=${p}` }])),
+    platforms: Object.fromEntries(platforms.map((p) => [p, p === "pinterest"
+      ? { title: `Fixture ${slug} title`, text, link: `${SITE}/where-to-stay/fixture-guide.html?utm_source=${p}#deals` }
+      : { text, link: `${SITE}/deals/${slug}.html?utm_source=${p}` }])),
   };
 }
 const queue = {
   date: "2026-11-05",
   entries: [
     entry("morning", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00"),
-    entry("noon", "2026-11-05T12:30:00-05:00", "2026-11-09T00:00:00-05:00", ["bluesky", "threads", "facebook"]),
-    entry("evening", "2026-11-05T19:30:00-05:00", "2026-11-06T00:00:00-05:00", ["bluesky", "threads"]),
+    entry("noon", "2026-11-05T12:30:00-05:00", "2026-11-09T00:00:00-05:00", ["threads", "facebook", "pinterest"]),
+    entry("evening", "2026-11-05T19:30:00-05:00", "2026-11-06T00:00:00-05:00", ["threads", "pinterest"]),
   ],
 };
 const at = (hhmm) => new Date(`2026-11-05T${hhmm}:00-05:00`);
@@ -75,9 +78,11 @@ test("kill switch reads only the D12 status word", () => {
 
 test("a platform is enabled only when all of its secrets exist", () => {
   assert.deepEqual(enabledPlatforms({}), []);
-  assert.deepEqual(enabledPlatforms({ BLUESKY_HANDLE: "familytripwise.com", BLUESKY_APP_PASSWORD: " " }), []);
-  assert.deepEqual(enabledPlatforms({ BLUESKY_HANDLE: "familytripwise.com", BLUESKY_APP_PASSWORD: "x", META_SYSTEM_USER_TOKEN: "t", META_PAGE_ID: "1" }), ["bluesky", "facebook"]);
-  assert.deepEqual(enabledPlatforms(SIMULATED_ENV), ["bluesky", "threads", "facebook", "instagram"]);
+  assert.deepEqual(enabledPlatforms({ PINTEREST_TOKEN: "t", PINTEREST_BOARD_ID: " " }), []);
+  assert.deepEqual(enabledPlatforms({ PINTEREST_TOKEN: "x", PINTEREST_BOARD_ID: "1", META_SYSTEM_USER_TOKEN: "t", META_PAGE_ID: "1" }), ["facebook", "pinterest"]);
+  assert.deepEqual(enabledPlatforms(SIMULATED_ENV), ["threads", "facebook", "instagram", "pinterest"]);
+  assert.deepEqual(enabledPlatforms({ BLUESKY_HANDLE: "familytripwise.com", BLUESKY_APP_PASSWORD: "x" }), [], "Bluesky was dropped (OWNER D12 revised)");
+  assert.ok(!POSTING_PLATFORMS.includes("bluesky") && !("bluesky" in LIMITS) && !("bluesky" in DAILY_CAPS));
 });
 
 test("end to end (simulated platforms, real git receipts): each due entry posts once per platform, never twice", async () => {
@@ -86,18 +91,21 @@ test("end to end (simulated platforms, real git receipts): each due entry posts 
   assert.equal(early.posted.length, 0, "nothing is due before its slot");
   const calls = [];
   const first = await go(store, at("08:00"), { calls });
-  assert.deepEqual(first.posted.map((p) => p.key.split("--")[1]).sort(), ["bluesky.json", "facebook.json", "instagram.json", "threads.json"]);
-  // No credential ever travels in a URL; Bluesky/Threads carry the link outside the text.
-  for (const c of calls) assert.ok(!/access_token=|password=/.test(c.search), `${c.host}${c.path}${c.search}`);
-  const bsky = calls.find((c) => c.path.endsWith("createRecord")).body.record;
-  assert.equal(bsky.embed.external.uri, queue.entries[0].platforms.bluesky.link);
-  assert.ok(!bsky.text.includes("http"));
+  assert.deepEqual(first.posted.map((p) => p.key.split("--")[1]).sort(), ["facebook.json", "instagram.json", "pinterest.json", "threads.json"]);
+  // No credential ever travels in a URL; Threads carries the link outside the text.
+  for (const c of calls) assert.ok(!/access_token=|password=/.test(c.search) && !Object.values(SIMULATED_ENV).some((v) => /TOKEN|PASSWORD/i.test(v) && c.search.includes(v)), `${c.host}${c.path}${c.search}`);
+  const pin = calls.find((c) => c.host === "api.pinterest.com" && c.path === "/v5/pins");
+  const pv = queue.entries[0].platforms.pinterest;
+  assert.deepEqual(pin.body, { board_id: SIMULATED_ENV.PINTEREST_BOARD_ID, title: pv.title, description: pv.text, link: pv.link, alt_text: queue.entries[0].image.alt, media_source: { source_type: "image_url", url: queue.entries[0].image.url } });
+  assert.equal(pin.headers.authorization, `Bearer ${SIMULATED_ENV.PINTEREST_TOKEN}`);
+  assert.ok(calls.some((c) => c.method === "HEAD" && c.path === "/where-to-stay/fixture-guide.html"), "Pinterest's evergreen link target is checked live, not just the dated page");
+  assert.equal(linkTarget(pv.link), `${SITE}/where-to-stay/fixture-guide.html`);
   assert.equal(calls.find((c) => c.path.endsWith("/threads")).body.link_attachment, queue.entries[0].platforms.threads.link);
   assert.equal(calls.find((c) => c.path.endsWith("/media")).body.image_url, queue.entries[0].image.url);
   const again = await go(store, at("08:05"));
   assert.equal(again.posted.length, 0, "a receipt on main blocks any repeat");
   const later = await go(store, at("13:00"));
-  assert.deepEqual(later.posted.map((p) => p.key).sort(), ["bluesky", "facebook", "threads"].map((p) => receiptKey("2026-11-05", "2026-11-05-noon", p)));
+  assert.deepEqual(later.posted.map((p) => p.key).sort(), ["facebook", "pinterest", "threads"].map((p) => receiptKey("2026-11-05", "2026-11-05-noon", p)));
   const all = receipts();
   assert.equal(all.length, 7);
   assert.ok(all.every((r) => r.status === "posted" && r.remote_id));
@@ -110,7 +118,7 @@ test("one post per platform per run: a late run catches up slot by slot, not in 
   const r2 = await go(store, at("23:10"));
   assert.ok(r2.posted.every((p) => p.key.includes("noon")));
   const r3 = await go(store, at("23:20"));
-  assert.deepEqual(r3.posted.map((p) => p.key.split("--")[1]).sort(), ["bluesky.json", "threads.json"]);
+  assert.deepEqual(r3.posted.map((p) => p.key.split("--")[1]).sort(), ["pinterest.json", "threads.json"]);
 });
 
 test("expired entries never post, even if never posted before", async () => {
@@ -118,7 +126,7 @@ test("expired entries never post, even if never posted before", async () => {
   const late = new Date("2026-11-06T00:00:00-05:00");
   const r = await go(store, late, { loadQueue: () => queue });
   assert.ok(!r.posted.some((p) => p.key.includes("evening")));
-  const plan = planPosts({ queue, now: late, platforms: ["bluesky"], claimedNames: [] });
+  const plan = planPosts({ queue, now: late, platforms: ["pinterest"], claimedNames: [] });
   assert.ok(plan.every((p) => p.entry.id !== "2026-11-05-evening"));
 });
 
@@ -132,8 +140,8 @@ test("kill switch is checked on the latest main before posting", async () => {
 
 test("daily caps count every claimed receipt", () => {
   const claimed = Array.from({ length: DAILY_CAPS.facebook }, (_, i) => `x${i}--facebook.json`);
-  const plan = planPosts({ queue, now: at("23:00"), platforms: ["facebook", "bluesky"], claimedNames: claimed });
-  assert.deepEqual(plan.map((p) => p.platform), ["bluesky"]);
+  const plan = planPosts({ queue, now: at("23:00"), platforms: ["facebook", "pinterest"], claimedNames: claimed });
+  assert.deepEqual(plan.map((p) => p.platform), ["pinterest"]);
 });
 
 test("a failed post is recorded with secrets redacted and is never retried", async () => {
@@ -164,13 +172,34 @@ test("nothing is claimed when the page or card is not live, or the queue is inva
   assert.equal(receipts().length, 0);
 });
 
-test("variants with a URL in Bluesky/Threads text or a non-site link are refused", () => {
+test("variants with a URL in Threads text, a non-site link or a bad Pinterest title/alt are refused", () => {
   const e = entry("x", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00");
-  e.platforms.bluesky.text += "\nhttps://familytripwise.com/deals";
-  e.platforms.facebook.link = "https://example.com/";
-  assert.ok(checkVariant("bluesky", e).length > 0);
-  assert.ok(checkVariant("facebook", e).length > 0);
   assert.deepEqual(checkVariant("threads", e), []);
+  assert.deepEqual(checkVariant("pinterest", e), []);
+  e.platforms.threads.text += "\nhttps://familytripwise.com/deals";
+  e.platforms.facebook.link = "https://example.com/";
+  assert.ok(checkVariant("threads", e).length > 0);
+  assert.ok(checkVariant("facebook", e).length > 0);
+  const t = entry("y", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00");
+  t.platforms.pinterest.title = "x".repeat(LIMITS.pinterest.title + 1);
+  assert.ok(checkVariant("pinterest", t).some((p) => /title/.test(p)));
+  const a = entry("z", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00");
+  a.image.alt = "x".repeat(501);
+  assert.ok(checkVariant("pinterest", a).some((p) => /alt text/.test(p)));
+});
+
+test("Pinterest: a failed board check (expired token, wrong board) skips without claiming, so it can post later", async () => {
+  const { store, receipts } = remoteRepo();
+  const env = { ...SIMULATED_ENV, PINTEREST_TOKEN: "expired-pinterest-token" };
+  const r = await go(store, at("08:00"), { env });
+  assert.equal(r.posted.filter((p) => p.key.endsWith("--pinterest.json")).length, 0);
+  const skip = r.skipped.find((s) => s.key.endsWith("--pinterest.json"));
+  assert.match(skip.reason, /pinterest board check answered HTTP 401/);
+  assert.ok(!skip.reason.includes("expired-pinterest-token"));
+  assert.ok(!receipts().some((x) => x.platform === "pinterest"), "no receipt claimed");
+  const fixed = await go(store, at("08:30"));
+  assert.deepEqual(fixed.posted.map((p) => p.key), [receiptKey("2026-11-05", "2026-11-05-morning", "pinterest")]);
+  assert.match(fixed.posted[0].url, /^https:\/\/www\.pinterest\.com\/pin\/simpin\d+\/$/);
 });
 
 test("dry-run store writes receipts only to its scratch directory", async () => {
@@ -187,6 +216,7 @@ test("workflow posts only from main with secrets, one run at a time, and default
   assert.match(wf, /concurrency:\s*\n\s*group: social-post\s*\n\s*cancel-in-progress: false/);
   assert.match(wf, /ref: main/);
   assert.match(wf, /default: true/);
-  for (const s of ["BLUESKY_HANDLE", "BLUESKY_APP_PASSWORD", "META_SYSTEM_USER_TOKEN", "META_PAGE_ID", "IG_USER_ID", "THREADS_USER_ID", "THREADS_TOKEN"]) assert.match(wf, new RegExp(`secrets\\.${s}\\b`));
+  for (const s of ["META_SYSTEM_USER_TOKEN", "META_PAGE_ID", "IG_USER_ID", "THREADS_USER_ID", "THREADS_TOKEN", "PINTEREST_TOKEN", "PINTEREST_BOARD_ID"]) assert.match(wf, new RegExp(`secrets\\.${s}\\b`));
+  assert.doesNotMatch(wf, /BLUESKY/);
   assert.doesNotMatch(wf, /echo[^\n]*secrets\./);
 });

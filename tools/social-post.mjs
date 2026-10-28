@@ -18,10 +18,12 @@
 //   on main *before* the post. Any existing receipt, whatever its status, means never again.
 // - Per-platform daily caps (DAILY_CAPS), counting every claimed receipt, and at most one post per
 //   platform per run so a late run cannot burst.
-// - The page link and card image must answer 200 on familytripwise.com before posting.
-// - Links travel outside Bluesky/Threads text (external embed / link attachment); text holding a
-//   URL is refused. Credentials are sent in headers or POST bodies, never in URLs, and are
-//   redacted from any recorded error.
+// - The variant's link target and the card image must answer 200 on familytripwise.com before posting.
+// - A platform with a read-only preflight (Pinterest: the board must answer to the token) is checked
+//   before the receipt is claimed, so an expired token or wrong board never burns an entry.
+// - Links travel outside Threads text (link attachment); text holding a URL is refused.
+//   Credentials are sent in headers or POST bodies, never in URLs, and are redacted from any
+//   recorded error.
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
@@ -33,12 +35,15 @@ import { DAILY_CAPS, LIMITS, SITE, queueDir, readQueue, root, validateQueue } fr
 export const RECEIPTS = "ops/social-receipts";
 export const GRAPH_VERSION_DEFAULT = "v26.0"; // Graph API v26.0 listed in Meta's changelog (checked 2026-10-28)
 
-// Phase 0 platforms (OWNER D12) and the secrets each needs. Others are never posted by this tool yet.
+// Phase 0 platforms (OWNER D12, revised 2026-10-28: Pinterest in, Bluesky out) and the secrets each
+// needs. Others are never posted by this tool yet.
+export const PINTEREST_API = "https://api.pinterest.com/v5"; // Pinterest API v5 (docs read 2026-10-28)
+export const PINTEREST_ALT_MAX = 500;
 export const CREDENTIALS = {
-  bluesky: ["BLUESKY_HANDLE", "BLUESKY_APP_PASSWORD"],
   threads: ["THREADS_USER_ID", "THREADS_TOKEN"],
   facebook: ["META_SYSTEM_USER_TOKEN", "META_PAGE_ID"],
   instagram: ["META_SYSTEM_USER_TOKEN", "META_PAGE_ID", "IG_USER_ID"],
+  pinterest: ["PINTEREST_TOKEN", "PINTEREST_BOARD_ID"],
 };
 export const POSTING_PLATFORMS = Object.keys(CREDENTIALS);
 
@@ -75,7 +80,7 @@ export function sanitize(message, env) {
   let m = String(message ?? "");
   for (const v of runtimeSecrets) m = m.split(v).join("[redacted]");
   for (const k of new Set(Object.values(CREDENTIALS).flat())) if (env[k] && env[k].length >= 4) m = m.split(env[k]).join("[redacted]");
-  return m.replace(/(access_token|password|accessJwt)=?["':\s]*[^\s"'&,}]+/gi, "$1=[redacted]").slice(0, 300);
+  return m.replace(/(access_token|password|accessJwt|refresh_token)=?["':\s]*[^\s"'&,}]+/gi, "$1=[redacted]").slice(0, 300);
 }
 
 // ---------- platform adapters (all HTTP goes through the injected fetch) ----------
@@ -89,40 +94,7 @@ async function json(res, what) {
 }
 const form = (o) => new URLSearchParams(Object.entries(o).filter(([, v]) => v !== undefined && v !== null));
 
-function hashtagFacets(text) {
-  const facets = [];
-  const enc = new TextEncoder();
-  for (const m of text.matchAll(/(^|\s)#([A-Za-z][A-Za-z0-9_]*)/g)) {
-    const start = enc.encode(text.slice(0, m.index + m[1].length)).length;
-    facets.push({ index: { byteStart: start, byteEnd: start + enc.encode(`#${m[2]}`).length }, features: [{ $type: "app.bsky.richtext.facet#tag", tag: m[2] }] });
-  }
-  return facets;
-}
-
 export const adapters = {
-  async bluesky({ entry, variant, env, fetch, readImage }) {
-    const host = env.BLUESKY_SERVICE || "https://bsky.social";
-    const session = await json(await fetch(`${host}/xrpc/com.atproto.server.createSession`, {
-      method: "POST", headers: { "content-type": "application/json" },
-      body: JSON.stringify({ identifier: env.BLUESKY_HANDLE, password: env.BLUESKY_APP_PASSWORD }),
-    }), "bluesky session");
-    const auth = { authorization: `Bearer ${session.accessJwt}` };
-    const image = readImage(entry.image.path);
-    const blob = await json(await fetch(`${host}/xrpc/com.atproto.repo.uploadBlob`, { method: "POST", headers: { ...auth, "content-type": "image/jpeg" }, body: image }), "bluesky upload");
-    const record = {
-      $type: "app.bsky.feed.post", text: variant.text, createdAt: new Date().toISOString(), langs: ["en"],
-      embed: { $type: "app.bsky.embed.external", external: { uri: variant.link, title: variant.text.split("\n")[0], description: entry.image.alt, thumb: blob.blob } },
-    };
-    const facets = hashtagFacets(variant.text);
-    if (facets.length) record.facets = facets;
-    const out = await json(await fetch(`${host}/xrpc/com.atproto.repo.createRecord`, {
-      method: "POST", headers: { ...auth, "content-type": "application/json" },
-      body: JSON.stringify({ repo: session.did, collection: "app.bsky.feed.post", record }),
-    }), "bluesky post");
-    const rkey = String(out.uri ?? "").split("/").pop();
-    return { remote_id: out.uri, url: rkey ? `https://bsky.app/profile/${session.did}/post/${rkey}` : null };
-  },
-
   async threads({ variant, env, fetch, sleep }) {
     const base = `https://graph.threads.net/v1.0/${encodeURIComponent(env.THREADS_USER_ID)}`;
     const headers = { "content-type": "application/x-www-form-urlencoded" };
@@ -156,6 +128,29 @@ export const adapters = {
     const out = await json(await fetch(`${ig}/media_publish`, { method: "POST", headers, body: form({ creation_id: container.id, access_token: token }) }), "instagram publish");
     return { remote_id: out.id, url: null };
   },
+
+  // Pinterest API v5: POST /v5/pins with the public card JPEG, title, description, link and alt text.
+  async pinterest({ entry, variant, env, fetch }) {
+    const out = await json(await fetch(`${PINTEREST_API}/pins`, {
+      method: "POST", headers: { authorization: `Bearer ${env.PINTEREST_TOKEN}`, "content-type": "application/json" },
+      body: JSON.stringify({
+        board_id: env.PINTEREST_BOARD_ID, title: variant.title, description: variant.text, link: variant.link,
+        alt_text: entry.image.alt, media_source: { source_type: "image_url", url: entry.image.url },
+      }),
+    }), "pinterest pin");
+    if (!out.id) throw new Error("pinterest pin: no id returned");
+    return { remote_id: out.id, url: `https://www.pinterest.com/pin/${encodeURIComponent(out.id)}/` };
+  },
+};
+
+// Read-only checks run before a receipt is claimed. A failure skips the entry (nothing claimed), so
+// it can post on a later run once the owner fixes the token or board.
+export const preflights = {
+  async pinterest({ env, fetch }) {
+    const res = await fetch(`${PINTEREST_API}/boards/${encodeURIComponent(env.PINTEREST_BOARD_ID)}`, { headers: { authorization: `Bearer ${env.PINTEREST_TOKEN}` } });
+    if (!res.ok) return `pinterest board check answered HTTP ${res.status} (token expired or board id wrong?)`;
+    return null;
+  },
 };
 
 async function pageToken({ env, fetch, graph }) {
@@ -170,13 +165,18 @@ export function checkVariant(platform, entry) {
   const problems = [];
   if (!v?.text || v.text.length > LIMITS[platform].text) problems.push(`${platform} text missing or over limit`);
   if (!v?.link?.startsWith(`${SITE}/`)) problems.push(`${platform} link must point to ${SITE}`);
-  if ((platform === "bluesky" || platform === "threads") && /https?:\/\/|familytripwise\.com/i.test(v?.text ?? "")) problems.push(`${platform} text must not carry the link`);
-  if (platform === "instagram" && !/^https:\/\/familytripwise\.com\/social\/cards\/[a-z0-9-]+\.jpg$/.test(entry.image?.url ?? "")) problems.push("instagram needs a public JPEG card URL");
+  if (LIMITS[platform].title && (!v?.title || v.title.length > LIMITS[platform].title)) problems.push(`${platform} title missing or over limit`);
+  if (platform === "threads" && /https?:\/\/|familytripwise\.com/i.test(v?.text ?? "")) problems.push(`${platform} text must not carry the link`);
+  if ((platform === "instagram" || platform === "pinterest") && !/^https:\/\/familytripwise\.com\/social\/cards\/[a-z0-9-]+\.jpg$/.test(entry.image?.url ?? "")) problems.push(`${platform} needs a public JPEG card URL`);
+  if (platform === "pinterest" && (!entry.image?.alt || entry.image.alt.length > PINTEREST_ALT_MAX)) problems.push(`pinterest alt text missing or over ${PINTEREST_ALT_MAX}`);
   return problems;
 }
 
-async function siteReady(entry, fetch) {
-  for (const [url, type] of [[entry.page, "text/html"], [entry.image.url, "image/jpeg"]]) {
+// The page the variant links to (Pinterest links to the evergreen guide, not the dated page).
+export const linkTarget = (link) => { const u = new URL(link); return `${u.origin}${u.pathname}`; };
+
+async function siteReady(entry, variant, fetch) {
+  for (const [url, type] of [[linkTarget(variant.link), "text/html"], [entry.image.url, "image/jpeg"]]) {
     const res = await fetch(url, { method: "HEAD", redirect: "follow" });
     if (!res.ok || !(res.headers.get("content-type") ?? "").startsWith(type)) return `${url} answered ${res.status} ${res.headers.get("content-type") ?? ""}`;
   }
@@ -242,15 +242,6 @@ export function simulatedFetch(log = []) {
     if (u.searchParams.has("access_token") || u.searchParams.has("password")) return reply(400, { error: { message: "credential in URL" } });
     n += 1;
     if (u.host === "familytripwise.com") return reply(200, "", u.pathname.endsWith(".jpg") ? "image/jpeg" : "text/html; charset=utf-8");
-    if (u.host === "bsky.social") {
-      if (u.pathname.endsWith("createSession")) return reply(200, { accessJwt: "sim-jwt", did: "did:plc:simulated" });
-      if (u.pathname.endsWith("uploadBlob")) return body?.length > 1000000 ? reply(400, { message: "blob too large" }) : reply(200, { blob: { $type: "blob", ref: { $link: "bafysim" }, mimeType: "image/jpeg", size: body?.length ?? 0 } });
-      if (u.pathname.endsWith("createRecord")) {
-        const t = body?.record?.text ?? "";
-        if ([...new Intl.Segmenter().segment(t)].length > 300) return reply(400, { message: "text too long" });
-        return reply(200, { uri: `at://did:plc:simulated/app.bsky.feed.post/sim${n}` });
-      }
-    }
     if (u.host === "graph.threads.net") {
       if (u.pathname.endsWith("/threads")) return body?.media_type === "TEXT" && body.text && body.text.length <= 500 && body.access_token ? reply(200, { id: `simthr${n}` }) : reply(400, { error: { message: "bad threads container" } });
       if (u.pathname.endsWith("/threads_publish")) return reply(200, { id: `simthrpub${n}` });
@@ -261,6 +252,15 @@ export function simulatedFetch(log = []) {
       if (u.pathname.endsWith("/feed")) return body?.access_token === "sim-page-token" && body.message && body.link ? reply(200, { id: `simpage_${n}` }) : reply(400, { error: { message: "bad page post" } });
       if (u.pathname.endsWith("/media")) return body?.image_url && body.caption && body.access_token ? reply(200, { id: `simcontainer${n}` }) : reply(400, { error: { message: "bad container" } });
       if (u.pathname.endsWith("/media_publish")) return reply(200, { id: `simig${n}` });
+    }
+    if (u.host === "api.pinterest.com") {
+      const auth = (init.headers?.authorization ?? "").startsWith("Bearer dry-run-") || init.headers?.authorization === "Bearer sim-pinterest";
+      if (!auth) return reply(401, { code: 2, message: "Authentication failed." });
+      if (method === "GET" && /^\/v5\/boards\/[^/]+$/.test(u.pathname)) return reply(200, { id: decodeURIComponent(u.pathname.split("/").pop()), name: "Simulated board" });
+      if (method === "POST" && u.pathname === "/v5/pins") {
+        const ok = body?.board_id && body.title?.length <= 100 && body.description?.length <= 800 && body.alt_text?.length <= 500 && /^https:\/\//.test(body.link ?? "") && body.media_source?.source_type === "image_url" && /^https:\/\//.test(body.media_source.url ?? "");
+        return ok ? reply(201, { id: `simpin${n}`, board_id: body.board_id }) : reply(400, { code: 1, message: "bad pin" });
+      }
     }
     return reply(404, { error: { message: `simulated platform has no ${method} ${u.host}${u.pathname}` } });
   };
@@ -288,8 +288,10 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
     if (bad.length) { report.skipped.push({ key, reason: bad.join("; ") }); log(`Skip ${key}: ${bad.join("; ")}`); continue; }
     if (!killSwitchOpen(store.ownerText())) { log("Kill switch closed mid-run; stopping."); break; }
     if (clock() >= Date.parse(entry.expires_at)) { report.skipped.push({ key, reason: "expired" }); continue; }
-    const notReady = await siteReady(entry, fetch);
+    const notReady = await siteReady(entry, entry.platforms[platform], fetch);
     if (notReady) { report.skipped.push({ key, reason: notReady }); log(`Skip ${key}: ${notReady}`); continue; }
+    const pre = preflights[platform] ? await preflights[platform]({ env, fetch }).catch((err) => `preflight error: ${err.message}`) : null;
+    if (pre) { const reason = sanitize(pre, env); report.skipped.push({ key, reason }); log(`Skip ${key}: ${reason}`); continue; }
     if (!store.write(key, { ...base, status: "attempting", attempted_at: new Date().toISOString() }, "claim")) { report.skipped.push({ key, reason: "already claimed" }); continue; }
     let out;
     try {
