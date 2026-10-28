@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2026-11-13 17:00 America/New_York
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-28 transactions=10
-run: {id: 2026-10-28T14:17:06Z, started_at: 2026-10-28T14:17:06Z}
+today: 2026-10-28 transactions=11
+run: none
 last_public_release: ccf65d8 (2026-10-28, Q09c Orlando hotels readability)
 active: none
 
@@ -16,7 +16,7 @@ active: none
 - Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london and q/Q09c-orlando remain because remote deletion is refused; harmless.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
-- Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a re-observe 4 robots-permitted; Q17b remove 11 blocked unless OWNER O2).
+- Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -29,8 +29,8 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-28 Q17a research decision (no site change): Cabana Bay booking engine robots-disallowed to the fetcher (a direct request was refused as bot-check circumvention, not retried); Radio City and Marlin show no dated rate without a booking-engine date search. Q17a closed; all 15 Nov 8-13 amounts go to Q17b; O2 updated.
 - 2026-10-28 Q17 research decision (no site change): official booking engines checked via robots.txt only. Hilton, Marriott, Disney, Wyndham, SynXis, ASR and Garza Blanca disallow booking paths; IHG is bot-protected. Only Cabana Bay, Radio City Apartments and two Marlin apartments can be re-observed (Q17a, stay Jan 10-15, 2027); the other 11 amounts come off by Nov 7 unless the owner supplies observations (Q17b, O2). Deadline corrected to arrival Nov 8.
 - 2026-10-28 Q09c-Orlando delivered ccf65d8 (release.json; Orlando hotels page, orlando-suites.css and model byte-identical live): nightly samples labelled by plan in the overview table; five-night totals in per-suite tables (IHG shared USD270.00 resort-fee line once); source, deposit, tax/fee, currency and limits moved word for word into collapsed "How we checked <hotel>" blocks. Reviewer PASS_WITH_P3 (6 P3s queued in Q09c).
 - 2026-10-28 Q09c-London delivered 1e03f62 (release.json; London apartments page and styles.css byte-identical live): each dated GBP amount shown once (nightly samples, now labelled by plan, in the comparison table; five-night totals in per-apartment plan tables); source, party, tax/fee and payment basis moved word for word into collapsed "How we checked <apartment>" blocks and a page block; missing period after capacity conditions fixed. Reviewer FAIL(P2 unlabelled plan rates)→PASS_WITH_P3 (3 P3s queued in Q09c).
 - 2026-10-28 Q09c-Cancun delivered 575d512 (release.json; Cancun resorts page, CSS, client/render modules and sitemap byte-identical live): each dated USD amount shown once on screen (six-room table); full price basis, fees, dates and sources moved word for word into one collapsed How we checked block per priced resort, linked from the table and opened by hash; print keeps full evidence; downloads unchanged. Reviewer PASS_WITH_P3 (3 P3s queued in Q09c).
-- 2026-10-28 Q09c-PV delivered 4e357c1 (release.json; PV resorts page and CSV verified live, byte-identical): each dated amount shown once (nightly in comparison, five-night totals in Sanctuary rate table, increment once; meal-plan table and food budget link back); provenance in collapsed How we checked blocks; page h2 outside details; CSV spacing only (Km 7.5). Reviewer PASS_WITH_P3 (3 P3s queued in Q09c).

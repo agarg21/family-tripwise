@@ -33,3 +33,14 @@ Not affected: Dreams Bahia Mita (PV) already shows "No exact-family November 8-1
 - 4 properties (Cabana Bay, Radio City Apartments, Marlin Queen Street, Marlin Limehouse) may be re-observed by the operator: same party and room basis as the original sample, for the comparable Sunday-Friday five-night stay **2027-01-10 to 2027-01-15**, one load per URL. This is Q17a.
 - 11 properties cannot be re-observed by the operator without breaking robots.txt or bot protection. Unless the owner supplies manual official observations (OWNER.md O2), their November 8-13 amounts, derived nightly equivalents, plan premiums and ranges come off the pages, CSVs and structured data, replaced by a visible budget gap ("no current official price observed; check the live rate for your party and dates"), live by 2026-11-07. Dated non-price facts stay. This is Q17b.
 - A January sample is a different season from November; pages must say so and must not present it as a renewal of the November observation.
+
+## Q17a attempt (2026-10-28, later run): no operator re-observation possible
+
+| Property | Attempt on 2026-10-28 | Observed result | Change vs access check |
+|---|---|---|---|
+| Loews Cabana Bay | Direct page request to reservations.universalorlando.com/ibe | Refused by the run's safety policy (treated as bot-check circumvention); not retried | Candidate → blocked |
+| Loews Cabana Bay | Official-domain web search, then one fetch of the returned `ibe/details.aspx` rate page | Fetcher refused: robots_disallowed; nothing retrieved | Candidate → blocked (robots, per the fetch tool) |
+| Radio City Apartments | Official-domain web search | Only marketing room pages (radiocityapartments.com); no dated, party-specific rate. The pegsbe engine needs a scripted browser date search, which this run does not attempt after the refusal above | Candidate → blocked |
+| Marlin Queen Street, Marlin Limehouse | Official-domain web search | Only marketing room pages (marlin.com); no dated, party-specific rate reachable without a booking-engine date search | Candidate (untested) → blocked |
+
+No rate, fee or availability was observed, and no figure was changed. Decision: all four move to Q17b. With no operator-observable source, every November 8-13 amount on the seven hotel pages (15 properties) comes off by 2026-11-07, unless the owner supplies hand-checked official observations (OWNER.md O2).

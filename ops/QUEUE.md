@@ -2,13 +2,9 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
 
-## Q17a Re-observe the 4 robots-permitted price samples (Jan 10-15, 2027)
-open · S–M · owner: D9 Approved · gate: none; live by 2026-11-07
-Access check: docs/research/q17-price-sample-access-2026-10-28.md. Properties: Loews Cabana Bay (Universal IBE, server-rendered; start here), Radio City Apartments (pegsbe, JS: Playwright), Marlin Queen Street and Marlin Limehouse (marlin.com engine untested). Same party/room basis as the Nov 8-13 sample, stay Sun 2027-01-10 to Fri 2027-01-15, one load per URL per run/week; record in a dated docs/research table; replace the Nov amounts on the Orlando, NYC and London pages/CSVs, saying it is a January sample (different season), not a renewal. Any engine that fails or blocks moves to Q17b.
-
 ## Q17b Remove Nov 8-13 amounts the operator cannot re-observe
 open · M · owner: D9 Approved (O2 pending: owner manual observations) · gate: start on or after 2026-11-03 unless O2 answered; live by 2026-11-07
-Arrival Nov 8 is the past-stay point (tools/content-freshness.mjs). 11 properties are robots- or bot-blocked: Hilton Park Plaza + Residence Inn (Boston), Citadines (London), Beacon + TRYP (NYC), Art of Animation + Holiday Inn (Orlando), Garza Blanca Sanctuary (PV), Homewood (SD), Embassy Suites + Homewood (DC). Remove amounts, derived nightly figures, plan premiums, overview ranges and JSON-LD/CSV values; show the budget gap; keep dated non-price facts; update pinned tests honestly. Use owner-supplied official observations instead where O2 provides them.
+Arrival Nov 8 is the past-stay point (tools/content-freshness.mjs). All 15 properties are blocked for the operator (Q17a attempt 2026-10-28: Cabana Bay robots-disallowed to the fetcher, Radio City and Marlin Queen Street/Limehouse have no dated rate outside a booking-engine date search): Hilton Park Plaza + Residence Inn (Boston), Citadines (London), Beacon + TRYP (NYC), Art of Animation + Holiday Inn (Orlando), Garza Blanca Sanctuary (PV), Homewood (SD), Embassy Suites + Homewood (DC), plus Cabana Bay (Orlando), Radio City Apartments (NYC), Marlin Queen Street + Marlin Limehouse (London). Remove amounts, derived nightly figures, plan premiums, overview ranges and JSON-LD/CSV values; show the budget gap; keep dated non-price facts; update pinned tests honestly. Use owner-supplied official observations instead where O2 provides them.
 
 ## Q09c Lodging-page readability polish (P3s only)
 open · S · owner: D4e Approved · gate: none
