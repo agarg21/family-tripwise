@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-28 transactions=17
-run: {id: 2026-10-28T21:05:33Z, started_at: 2026-10-28T21:05:33Z}
-last_public_release: 5e457ec (2026-10-28, G05: SeaWorld Fun Card deal check, Oct 30 social queue, G02b)
+today: 2026-10-28 transactions=18
+run: none
+last_public_release: 94379e5 (2026-10-28, G07: /privacy.html and /terms.html, footer links on every page)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -18,7 +18,7 @@ active: none
 - Sitemap lastmod for 21 pages unchanged since the 2026-10-15 import is an estimate (visible date or 2026-10-13 bound); it becomes observed the next time each page changes. No action needed.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b and q/G05 remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05 and q/G07 remain because remote deletion is refused; harmless.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 - Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
@@ -34,8 +34,8 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-28 G07 delivered 94379e5 (release.json; privacy.html, terms.html, sitemap and 3 sample pages byte-identical live): privacy policy (no accounts/analytics/cookies; GitHub Pages IP logging per GitHub Docs; Wikimedia photos and the SD Google map named; email, social apps, #data-deletion section, children) and terms (planning info, not bookings or advice; dated observations; content use; liability). Footer About · Privacy · Terms on every page; tools/legal-pages.test.mjs keeps the claims true. Reviewer PASS_WITH_P3 (3 P3s fixed). Update the social sentence when Instagram/Threads/Pinterest go live.
 - 2026-10-28 G04b delivered e389a0c (on main; no site change, so no Pages deploy): Bluesky removed from queue generation, posting tool and workflow; Oct 29/30 queues stripped of Bluesky variants (equal to a fresh build). New Pinterest API v5 adapter (POST /v5/pins with card URL, title, description, evergreen link, alt text); read-only board check before claiming a receipt, so an expired token skips without burning the entry. Reviewer PASS_WITH_P3 (2 P3s fixed, 2 carried in G05).
 - 2026-10-28 G04 delivered a568c5b (workflow "Social posting" active on GitHub; no site change): tools/social-post.mjs posts today's due queue entries to Bluesky, Threads, Facebook Page and Instagram only when that platform's secrets exist; D12 kill switch re-read from main before each post; receipt claimed on main before posting (never twice, failures never retried); never after expires_at; daily caps, one post per platform per run; page and card must answer 200. Dry run on simulated platforms tested end to end with real git receipts. Reviewer PASS_WITH_P3 (3 P3s fixed).
 - 2026-10-28 G05 delivered 5e457ec (release.json; /deals/ hub, 5 check pages, styles.css, sitemap and 3 new cards byte-identical live): new SeaWorld Orlando 2027 Fun Card check (per-person price, no child price stated, parking extra, full blockout lists; no purchase deadline, listed until Dec 31); Oct 30 social queue; G02b (table roles, stacked label width, status wording). Reviewer FAIL (P2: short lists said "book by" for a non-deadline) → PASS_WITH_P3.
 - 2026-10-28 G03 delivered 9e7f1f1 (release.json; 3 card JPEGs byte-identical live at /social/cards/): social queue generator (every paragraph copied from verified records, deal headlines always kept, 3 units/day off-season and 6 Nov–Dec, per-platform caps, posting stops 00:00 ET on the last day), typographic 1080x1350 cards rendered in Chromium, validator test; first queue for Oct 29. Reviewer FAIL (3 P2: a.m. sentence cuts, last-day deadlines, live-data test fixtures) → PASS_WITH_P3. No posting.
-- 2026-10-28 G02 delivered 2d152bb (release.json; /deals/ hub, 4 check pages, sitemap, styles and a sample guide byte-identical live): Family Deal Checks for Royal Caribbean Kids Sail Free/3rd-4th guests, Great Wolf Fall Flash Sale, Beaches First Passport credit, Club Med kids-under-4 offer; terms read on official pages Oct 28, no family totals (none observed), ended checks leave the hub and say "This offer ended"; "Deals" header link on every page. Reviewer FAIL (4 P2 wording vs record) → PASS_WITH_P3.
