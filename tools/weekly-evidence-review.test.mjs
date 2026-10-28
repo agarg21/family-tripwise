@@ -90,6 +90,7 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   const changed = [];
   const laterFeeChanges = [];
   const sanDiegoPriceChanges = [];
+  const chicagoPriceChanges = [];
   for (const record of retainedRecords) {
     const currentRecord = currentRecords.get(record.id);
     if (["room", "price", "activities"].some(name => record.id === `new-york-city-hotel-beacon-${name}`)) {
@@ -132,6 +133,12 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, /Check live rate/);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
       sanDiegoPriceChanges.push(record.id);
+    } else if (record.id.startsWith("chicago-") && record.field === "nightly-price" && record.basis !== currentRecord.basis) {
+      // Q08 (2026-10-27) replaced unobserved Chicago bands with Check live rate; observation dates are unchanged.
+      assert.equal(record.verified_on, currentRecord.verified_on);
+      assert.match(currentRecord.basis, /Check live rate/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
+      chicagoPriceChanges.push(record.id);
     } else if (["san-diego-la-jolla-shores-hotel-fees", "san-diego-loews-coronado-bay-resort-fees"].includes(record.id)) {
       assert.equal(record.verified_on, "2026-08-17");
       assert.equal(record.mapping_state, "disputed");
@@ -224,9 +231,10 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   }
   assert.equal(changed.length, 12);
   assert.equal(sanDiegoPriceChanges.length, 12);
+  assert.equal(chicagoPriceChanges.length, 10);
   assert.deepEqual(laterFeeChanges, ["san-diego-loews-coronado-bay-resort-fees", "san-diego-la-jolla-shores-hotel-fees", "san-diego-the-dana-on-mission-bay-fees"]);
   assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls }), /Model\/date\/basis drift: san-diego-bahia-resort-hotel-price/);
-  const sanDiegoPricesRestored = modelRecords().map(record => sanDiegoPriceChanges.includes(record.id) ? retainedRecords.find(prior => prior.id === record.id) : record);
+  const sanDiegoPricesRestored = modelRecords().map(record => [...sanDiegoPriceChanges, ...chicagoPriceChanges].includes(record.id) ? retainedRecords.find(prior => prior.id === record.id) : record);
   assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: sanDiegoPricesRestored, expectedUrls }), /Model\/date\/basis drift: san-diego-loews-coronado-bay-resort-fees/);
   const priorLoews = retainedRecords.find(record => record.id === "san-diego-loews-coronado-bay-resort-fees");
   const loewsRestored = sanDiegoPricesRestored.map(record => record.id === priorLoews.id ? priorLoews : record);

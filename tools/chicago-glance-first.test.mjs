@@ -19,14 +19,18 @@ test("Chicago comparison leads the licensed image and all hotel details", () => 
   assert.match(html, /CC BY-SA 3\.0/);
 });
 
-test("every unique hotel field and its historical budget limits remain", () => {
+test("every unique hotel field remains and prices show Check live rate with dated older samples", () => {
   for (const hotel of hotels) for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, hotel.familySetup, hotel.priceNote, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths]) assert.ok(html.includes(esc(value)), value);
-  assert.equal((html.match(/July 23 historical USD\/room\/night band, not a family-room quote/g) || []).length, 10);
+  // Q08 (2026-10-27): the editorial bands are gone; each hotel shows Check live rate plus its older sample in the table and card.
+  assert.equal((html.match(/Check live rate<br><small>Older 1-night sample: \$[\d,]+ \((?:recorded Jul 23|date label unclear)\)<\/small>/g) || []).length, 20);
+  const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
+  assert.equal((visible.match(/date label unclear/g) || []).length, 4);
   assert.equal((html.match(/id="chicago-price-basis"/g) || []).length, 1);
-  assert.ok(html.indexOf("Two example dates are ambiguous") < html.indexOf("<table"));
-  assert.match(html, /two-adult examples with editorial room\/date widening, not family-room quotes/);
-  assert.match(html, /taxes and mandatory fees vary, and parking is separate/);
-  assert.match(html, /including the Swissotel Kids Suite/);
+  assert.ok(html.indexOf("No current family-room rate observed: check the live rate") < html.indexOf("<table"));
+  assert.ok(html.indexOf('id="chicago-hotel-answer"') < html.indexOf('id="hotel-comparison"'));
+  assert.match(html, /no figure is a family-room price, a Kids Suite price or a current quote/);
+  assert.match(html, /Earlier planning ranges are gone because their upper ends were editorial estimates, not observations/);
+  assert.doesNotMatch(html, /Planning USD\/room\/night|planning ranges?(?!s| are gone)|editorial room\/date widening|historical nightly budget|\$382/);
   assert.match(html, /Notice rechecked September 22, 2026/);
   assert.match(html, /published window has passed, but completion and current access are unconfirmed/);
 });
