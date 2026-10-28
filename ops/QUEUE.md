@@ -6,19 +6,15 @@ Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q i
 open · S · owner: D11 Approved · gate: none
 Deal terms table goes display:block under 520 px (add row/cell roles or keep a real table); drop "per the official page" from the status line when expires_note is set. Ride along with the next deals change.
 
-## G03 Social post queue and image cards (no posting)
-open · M · owner: D12 Approved · gate: none (G01 done 925b244)
-Files: ops/social-queue/YYYY-MM-DD.json (one entry per post: item id, platform variants for Instagram/Facebook/Threads/Bluesky/Pinterest/TikTok/YouTube, link with utm, image path, expires_at), a generator that renders 1080x1350 JPEG cards from verified item data via headless Chromium (no AI images of real places, no reposted promo art), and a validator test (sources present, nothing expired, per-platform length limits, max posts/day per platform from the research).
-Acceptance: a day's queue for the current items validates; sample cards render cleanly; reviewer PASS.
-
 ## G04 Posting workflow (GitHub Actions, per platform as secrets appear)
-open · M · owner: D12 Approved · gate: G03 done
+open · M · owner: D12 Approved · gate: none (G03 done 9e7f1f1)
+Input: ops/social-queue/YYYY-MM-DD.json (see its README; post only before expires_at, links outside Bluesky/Threads text, YouTube entries need video). G03 P3s to carry: sentence split after "a.m." before a capitalized day name; prune cards of ended items from site/social/cards.
 .github/workflows/social-post.yml posts due queue entries with repository secrets, platform by platform, only when that platform's secret exists (phase 0: Bluesky — BLUESKY_HANDLE + BLUESKY_APP_PASSWORD; Meta — META_SYSTEM_USER_TOKEN, META_PAGE_ID, IG_USER_ID, THREADS_USER_ID + THREADS_TOKEN; later Pinterest, YouTube, TikTok). Same safety pattern as the DataForSEO workflow: latest main, one receipt per post committed fast-forward only, never post twice, never post an expired entry, per-platform daily caps, a kill switch row in OWNER.md (D12) checked before each post.
 Acceptance: dry-run mode tested end to end with a simulated platform; reviewer PASS. Never handle tokens directly.
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
-First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue that day's posts: about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
+First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>` then `node tools/social-cards.mjs <date>`; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
 
 ## G07 Privacy and Terms pages
 open · S · owner: O3 pending · gate: O3 Approved
