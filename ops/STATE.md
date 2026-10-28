@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2026-11-13 17:00 America/New_York
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-27 transactions=12
-run: {id: 2026-10-28T01:05:50Z, started_at: 2026-10-28T01:05:50Z}
-last_public_release: da8b118 (2026-10-27, Q08 Chicago family hotels: Check live rate + dated samples)
+today: 2026-10-27 transactions=13
+run: none
+last_public_release: 93d9aad (2026-10-27, Q10 Las Vegas and San Antonio itineraries: answer box + dated anchor facts)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -32,3 +32,4 @@ active: none
 - 2026-10-27 Q15 delivered ab7d177 (release.json, new /family-itinerary/washington-dc-with-kids.html, DC hotels link, sitemap and shared footer verified live): 3-day DC plan built on official Natural History, Air and Space, American History, Zoo, Monument and WMATA facts read Oct 27; answer box; venue cards with source + date; maintenance contract. Reviewer FAIL(2 P2)→PASS_WITH_P3 (fixed). Remote q/Q15 deletion refused.
 - 2026-10-27 Q07 delivered 530633c (release.json, SD hotels page and new CSV verified live): 11 unobserved bands removed; each hotel shows Check live rate + its older Jul 18/21 one-night sample (party shown or "not recorded"); LEGOLAND package-priced; Homewood official Oct 4 family-suite sample (Nov 8-13) published with unknowns (decision note docs/research/san-diego-hotel-price-display-2026-10-27.md); 3-line answer box; CSV/JSON-LD/evidence model agree. No new fetches. Reviewer FAIL(P2)→PASS_WITH_P3. Remote q/Q07 deletion refused.
 - 2026-10-27 Q08 delivered da8b118 (release.json, Chicago hotels page and CSV verified live): 10 unobserved bands removed; each hotel shows Check live rate + its older Jul 23 research-pack Expedia sample (Swissotel/Hilton 'date label unclear'); 3-line answer box; CSV adds party and passed stay-date columns; evidence model, FAQ, ItemList agree. No family-party price exists; no new fetches. Reviewer FAIL(2 P2)→PASS_WITH_P3 (P3 to Q02c). Remote q/Q08 deletion refused.
+- 2026-10-27 Q10 delivered 93d9aad (release.json + both itinerary pages verified live): LV and SA itineraries lead with a 3-line answer box and dated official facts (DISCOVERY; DoSeum + Alamo) checked Oct 27. Shark Reef fetch not permitted; not retried. Reviewer PASS_WITH_P3 x2; last P3 folded into Q02c.
