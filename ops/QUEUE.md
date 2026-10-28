@@ -1,9 +1,9 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q02c Freshness-checker follow-ups (Q02b review P3s)
-open · S · owner: none (tools + 1 page) · gate: none
-Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3); Boston, London, DC and NYC-teen "home routes" tests strip the shared chrome from index.html; drop the duplicate Cancun .skip-link CSS (Q04b review P3s); NYC CSV gets its own "Older two-adult sample" column, Hilton Chicago's parentCheck says "a standard two-double room" (Q08 review P3), tools/hotel-evidence.mjs default source_basis matches the check-live-rate kind, and the NYC answer-box "Fits" line is shortened for phones (Q06 review P3s); the Las Vegas itinerary Cost line drops its repeated "age 1 and up" (Q10 review P3); the Boston itinerary Day 2 "Older children:" matches the "routing suggestion" wording (Q15b review nit).
+## Q02d Small follow-ups left from Q02c
+open · S · owner: none (tools + ≤3 pages) · gate: none
+Acceptance: the Las Vegas itinerary Cost line drops its repeated "age 1 and up" (Q10 review P3); the Boston itinerary Day 2 "Older children:" matches the "Our routing suggestion" wording (Q15b nit); the review-date detector excuses a booking word before by/before only when it is the first word after review/recheck (optionally after the/your), so "Recheck prices and booking by Nov 1" is flagged (Q02c review P3); the CSV stay-date parser handles day-first dates or fails on an unparseable non-empty cell; the Chicago activities date line hides its "·" from screen readers. Hilton Chicago parentCheck ("a standard two-double room") is NOT in scope: changing it rewrites saved historical checkpoint snapshots (page-quality, weekly-evidence-review); do it only with the next Chicago hotels evidence refresh.
 
 ## Q09 Lodging-page readability fix
 open · M · owner: D4e Approved · gate: Q02 done
