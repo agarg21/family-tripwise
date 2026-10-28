@@ -1,9 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
-## Q08 Refresh Chicago family-hotels (346 impressions, "editorial room/date widening")
-open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 (delivered 530633c for SD; show any official family sample with its unknowns) for site/where-to-stay/chicago-family-hotels.html.
-
 ## Q10 Las Vegas and San Antonio itinerary usefulness pass (avg positions 8.1 and 9.5)
 open · M · owner: none · gate: none (Q04 done)
 Files: site/family-itinerary/las-vegas-with-kids.html, site/family-itinerary/san-antonio-with-kids.html, their generator.
@@ -16,7 +13,7 @@ Acceptance: re-run the SERP check with a second query; build with dated official
 
 ## Q02c Freshness-checker follow-ups (Q02b review P3s)
 open · S · owner: none (tools + 1 page) · gate: none
-Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3); Boston, London, DC and NYC-teen "home routes" tests strip the shared chrome from index.html; drop the duplicate Cancun .skip-link CSS (Q04b review P3s); NYC CSV gets its own "Older two-adult sample" column, tools/hotel-evidence.mjs default source_basis matches the check-live-rate kind, and the NYC answer-box "Fits" line is shortened for phones (Q06 review P3s).
+Acceptance: the "review … by <date>" detector excludes booking words only when they directly precede by/before or are followed by terms/deadline/rules ("Review booking prices by Nov 1" is flagged again); the Leu source note on the Orlando page reconciles with its October 27 hours line; the CSV stay-sample checker also covers "Check-in"/ISO "Stay dates" columns; Chicago activities' visible "Last updated: July 23, 2026" reconciles with its 2026-10-13 admission check (Q03 review P3); Boston, London, DC and NYC-teen "home routes" tests strip the shared chrome from index.html; drop the duplicate Cancun .skip-link CSS (Q04b review P3s); NYC CSV gets its own "Older two-adult sample" column, Hilton Chicago's parentCheck says "a standard two-double room" (Q08 review P3), tools/hotel-evidence.mjs default source_basis matches the check-live-rate kind, and the NYC answer-box "Fits" line is shortened for phones (Q06 review P3s).
 
 ## Q09 Lodging-page readability fix
 open · M · owner: D4e Approved · gate: Q02 done
