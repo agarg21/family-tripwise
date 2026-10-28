@@ -129,7 +129,7 @@ export function siteFooter(prefix, current = "", { note = defaultNote } = {}) {
   const directory = destinations
     .map((d) => `<li><span class="guide-directory-city">${escHtml(d.name)}:</span> ${d.guides.map(([p, label]) => link(prefix, p, label, current)).join('<span aria-hidden="true"> · </span>')}</li>`)
     .join("");
-  return `<footer class="site-footer"><p>${escHtml(note)}</p><nav class="guide-directory" aria-label="All family guides"><h2>All family guides</h2><ul>${directory}</ul></nav><p><a href="${prefix}about.html">How our family travel guides are built</a></p></footer>`;
+  return `<footer class="site-footer"><p>${escHtml(note)}</p><nav class="guide-directory" aria-label="All family guides"><h2>All family guides</h2><ul>${directory}</ul></nav><p class="footer-links">${link(prefix, "about.html", "How our family travel guides are built", current)}<span aria-hidden="true"> · </span>${link(prefix, "privacy.html", "Privacy", current)}<span aria-hidden="true"> · </span>${link(prefix, "terms.html", "Terms", current)}</p></footer>`;
 }
 
 // Related guides plus footer, for templates that end their page with the footer.

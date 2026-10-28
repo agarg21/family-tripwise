@@ -36,7 +36,7 @@ test("additive section is accessible without JavaScript and remains outside fact
   assert.match(section, /href="#grand-family-suite"/);
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
   assert.equal(schema.dateModified, cancunEvidence.lastUpdatedOn); assert.doesNotMatch(JSON.stringify(schema), /Offer|2026-10-11/);
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 45);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 47);
 });
 
 test("scoped writer preserves all comparison modules and existing downloads", () => {

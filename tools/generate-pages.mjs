@@ -1,3 +1,4 @@
+import { writeLegalPages, legalSitemapUrls } from "./page-generation/legal-pages.mjs";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -591,6 +592,7 @@ writePuertoVallartaFamilyResortsPage(writeSite);
 writeLondonFamilyHotelsPage(writeSite);
 writeThisWeekPage(writeSite);
 writeDealPages(writeSite);
+writeLegalPages(writeSite);
 
 const oldRedirects = [
   ["san-diego-with-kids.html", "things-to-do/san-diego-with-kids.html", "Things to do in San Diego with kids"],
@@ -793,6 +795,7 @@ const sitemapUrls = [
   "https://familytripwise.com/",
   "https://familytripwise.com/about.html",
   "https://familytripwise.com/contributors/miles-rowan.html",
+  ...legalSitemapUrls,
   thisWeekUrl,
   ...dealSitemapUrls(),
   "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",

@@ -33,7 +33,7 @@ function resolveHref(href, fromPath) {
 const pages = Object.fromEntries(htmlFiles(site).map((f) => [relative(site, f).split("\\").join("/"), readFileSync(f, "utf8")]));
 
 test("every guide in the sitemap is registered once in the shared chrome", () => {
-  const guides = sitemapPaths.filter((p) => !["index.html", "about.html", "contributors/miles-rowan.html", "this-week/index.html"].includes(p) && !p.startsWith("deals/"));
+  const guides = sitemapPaths.filter((p) => !["index.html", "about.html", "privacy.html", "terms.html", "contributors/miles-rowan.html", "this-week/index.html"].includes(p) && !p.startsWith("deals/"));
   assert.deepEqual([...allGuidePaths].sort(), [...guides].sort());
   assert.equal(new Set(allGuidePaths).size, allGuidePaths.length);
 });

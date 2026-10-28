@@ -27,9 +27,10 @@ import { dcItineraryPath, dcItineraryMaintenance } from "./page-generation/washi
 import { bostonItineraryPath, bostonItineraryMaintenance } from "./page-generation/boston-itinerary-page.mjs";
 import { thisWeekUrl } from "./page-generation/this-week-page.mjs";
 import { dealSitemapUrls } from "./page-generation/deals-pages.mjs";
+import { legalSitemapUrls } from "./page-generation/legal-pages.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
-const UTILITY = ["https://familytripwise.com/", "https://familytripwise.com/about.html", "https://familytripwise.com/contributors/miles-rowan.html"];
+const UTILITY = ["https://familytripwise.com/", "https://familytripwise.com/about.html", "https://familytripwise.com/contributors/miles-rowan.html", ...legalSitemapUrls];
 
 export function validateCoverage(urls, groups) {
   if (!Array.isArray(urls) || new Set(urls).size !== urls.length) throw new Error("Invalid or duplicate canonical inventory");
