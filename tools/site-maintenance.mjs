@@ -25,6 +25,7 @@ import { spygamesPolicyClock } from "./nyc-spygames-policy.mjs";
 import { activityPath as orlandoActivityPath, orlandoActivityMaintenance } from "./page-generation/orlando-activity-data.mjs";
 import { dcItineraryPath, dcItineraryMaintenance } from "./page-generation/washington-dc-itinerary-page.mjs";
 import { bostonItineraryPath, bostonItineraryMaintenance } from "./page-generation/boston-itinerary-page.mjs";
+import { thisWeekUrl } from "./page-generation/this-week-page.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const UTILITY = ["https://familytripwise.com/", "https://familytripwise.com/about.html", "https://familytripwise.com/contributors/miles-rowan.html"];
@@ -82,6 +83,8 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   groups["orlando-activity-constraints"] = [`https://familytripwise.com/${orlandoActivityPath}`];
   groups["dc-itinerary-official-facts"] = [`https://familytripwise.com/${dcItineraryPath}`];
   groups["boston-itinerary-official-facts"] = [`https://familytripwise.com/${bostonItineraryPath}`];
+  // /this-week/ items carry their own observed_on and expires_on; expired items drop daily (tools/this-week.mjs).
+  groups["fresh-items-daily-expiry"] = [thisWeekUrl];
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);
   // A historical report cannot screen a pack that had not yet been observed.
   const bostonPack = bostonPackForDate(today);
@@ -95,7 +98,7 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   for (const page of pages) {
     const url = new URL(page.url);
     if (url.origin !== "https://familytripwise.com" || url.search || url.hash) throw new Error("Unsafe canonical URL");
-    await readFile(resolve(root, "site", url.pathname === "/" ? "index.html" : url.pathname.slice(1)), "utf8");
+    await readFile(resolve(root, "site", url.pathname.endsWith("/") ? `${url.pathname.slice(1)}index.html` : url.pathname.slice(1)), "utf8");
   }
   const reports = { hotel: qualityReport(hotels, { today }), activity: activityQualityReport(activities, { today }), cards: activityCardQualityReport(cards, { today }), planning: planningPageQualityReport(planning, { today }) };
   const policies = policyReviewClocks({ today,

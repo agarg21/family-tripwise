@@ -2,12 +2,13 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-28 transactions=11
-run: {id: 2026-10-28T15:04:57Z, started_at: 2026-10-28T15:04:57Z}
-last_public_release: ccf65d8 (2026-10-28, Q09c Orlando hotels readability)
+today: 2026-10-28 transactions=12
+run: none
+last_public_release: 925b244 (2026-10-28, G01 /this-week/ page)
 active: none
 
 ## Holds (one line each: what, unblock condition)
+- /this-week/ items expire daily: the deploy workflow (daily 05:17 UTC) refreshes the live copy, but the committed site/this-week/index.html must be re-rendered (`node tools/this-week.mjs`, commit) on the first run each Eastern day or `node --test` fails the committed-page test. Next item expiry: Nov 4 (DC lottery).
 - Growth-first since 2026-10-28 (OWNER D10–D12): work G items before old Q items, except live-site defects and the Q17b deadline. Posting waits for the owner's accounts and GitHub secrets (T3).
 - Orlando admission tariffs observed 2026-10-27; re-observe by 2026-11-10 (the form flags them as older for later visit dates).
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
@@ -30,8 +31,8 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-28 G01 delivered 925b244 (release.json; /this-week/, styles.css, sitemap and a sample guide byte-identical live): new /this-week/ page with 10 officially checked holiday items in 7 cities (DC, Orlando, London, Chicago, NYC, Boston x3, San Antonio, San Diego), each with check date, official link and expiry; "This week" header link and a per-city link on every guide; daily deploy-workflow refresh drops expired items. Reviewer FAIL(P2 unrecorded Hyde Park/Disney details, fixed in the record)→PASS_WITH_P3.
 - 2026-10-28 Q17a research decision (no site change): Cabana Bay booking engine robots-disallowed to the fetcher (a direct request was refused as bot-check circumvention, not retried); Radio City and Marlin show no dated rate without a booking-engine date search. Q17a closed; all 15 Nov 8-13 amounts go to Q17b; O2 updated.
 - 2026-10-28 Q17 research decision (no site change): official booking engines checked via robots.txt only. Hilton, Marriott, Disney, Wyndham, SynXis, ASR and Garza Blanca disallow booking paths; IHG is bot-protected. Only Cabana Bay, Radio City Apartments and two Marlin apartments can be re-observed (Q17a, stay Jan 10-15, 2027); the other 11 amounts come off by Nov 7 unless the owner supplies observations (Q17b, O2). Deadline corrected to arrival Nov 8.
 - 2026-10-28 Q09c-Orlando delivered ccf65d8 (release.json; Orlando hotels page, orlando-suites.css and model byte-identical live): nightly samples labelled by plan in the overview table; five-night totals in per-suite tables (IHG shared USD270.00 resort-fee line once); source, deposit, tax/fee, currency and limits moved word for word into collapsed "How we checked <hotel>" blocks. Reviewer PASS_WITH_P3 (6 P3s queued in Q09c).
 - 2026-10-28 Q09c-London delivered 1e03f62 (release.json; London apartments page and styles.css byte-identical live): each dated GBP amount shown once (nightly samples, now labelled by plan, in the comparison table; five-night totals in per-apartment plan tables); source, party, tax/fee and payment basis moved word for word into collapsed "How we checked <apartment>" blocks and a page block; missing period after capacity conditions fixed. Reviewer FAIL(P2 unlabelled plan rates)→PASS_WITH_P3 (3 P3s queued in Q09c).
-- 2026-10-28 Q09c-Cancun delivered 575d512 (release.json; Cancun resorts page, CSS, client/render modules and sitemap byte-identical live): each dated USD amount shown once on screen (six-room table); full price basis, fees, dates and sources moved word for word into one collapsed How we checked block per priced resort, linked from the table and opened by hash; print keeps full evidence; downloads unchanged. Reviewer PASS_WITH_P3 (3 P3s queued in Q09c).
