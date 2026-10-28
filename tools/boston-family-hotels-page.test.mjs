@@ -120,5 +120,5 @@ test("Q09c Boston readability: dated amounts shown once; provenance sits in coll
     assert.match(article.match(/<details class="how-checked">[\s\S]*?<\/details>/)[0], /Official category source<\/a> &middot; facts checked \d{4}-\d\d-\d\d\./);
     assert.doesNotMatch(article.replace(/<details[\s\S]*?<\/details>/g, ""), /Official category source|Dated booking-check source|Approx\. nightly/);
   }
-  assert.match(html, /<section id="methodology"><details class="how-checked"><summary><h2>How we checked this page<\/h2><\/summary>/);
+  assert.match(html, /<section id="methodology"><h2>How we checked this page<\/h2><details class="how-checked"><summary>Evidence types, sources and download basis<\/summary>/);
 });

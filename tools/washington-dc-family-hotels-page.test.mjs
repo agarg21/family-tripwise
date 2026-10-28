@@ -148,3 +148,25 @@ test("public rail budget is no-JS, age-bounded, source-linked and never a hotel-
   assert.doesNotMatch(section,/current quote|free family travel|per room|all-fee total is|verified nap-friendly/);
   assert.match(html,/href="#rail-budget">Family rail budget/);
 });
+
+test("Q09c DC readability: hotel amounts shown once; provenance sits in collapsed How we checked blocks", () => {
+  const html = dcFamilyHotelPage();
+  const hotelSections = html.match(/<section id="comparison">[\s\S]*?<section id="rail-budget">/)[0];
+  const visible = hotelSections.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<details[\s\S]*?<\/details>/g, "").replace(/<[^>]+>/g, " ");
+  const counts = {};
+  for (const amount of visible.match(/USD \d[\d,]*\.\d\d/g)) counts[amount] = (counts[amount] || 0) + 1;
+  for (const [amount, count] of Object.entries(counts)) assert.equal(count, 1, amount);
+  for (const room of dcRooms.filter(room => room.price.rates)) for (const rate of room.price.rates) {
+    assert.equal(counts[`USD ${rate.nightly_average.toFixed(2)}`], 1);
+    assert.equal(counts[`USD ${rate.stay_amount.toFixed(2)}`], 1);
+  }
+  const articles = html.match(/<article id="[^"]+" class="dc-room"[\s\S]*?<\/article>/g);
+  assert.equal(articles.length, 3);
+  for (const article of articles) {
+    assert.equal((article.match(/<details class="how-checked"><summary>How we checked<\/summary>/g) || []).length, 1);
+    assert.match(article.match(/<details class="how-checked">[\s\S]*?<\/details>/)[0], /Official category source<\/a> &middot; facts checked \d{4}-\d\d-\d\d\./);
+    assert.doesNotMatch(article.replace(/<details[\s\S]*?<\/details>/g, ""), /Official category source|Dated booking-check source|Approx\. nightly/);
+  }
+  assert.match(html, /<section id="methodology"><h2>How we checked this page<\/h2><p>Research, not firsthand hotel reviews: we have not stayed in these suites/);
+  assert.match(html, /washington-dc-comparison\.css\?v=ft-q09c2/);
+});

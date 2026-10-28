@@ -71,4 +71,3 @@
 .dc-rail-status { min-height: 96px; padding: 16px 0; font-weight: 600; box-sizing: border-box; }
 @media (max-width: 600px) { .dc-rail-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .how-checked > summary { cursor: pointer; min-height: 44px; padding: 10px 0; font-weight: 600; }
-.how-checked > summary h2 { display: inline; }
