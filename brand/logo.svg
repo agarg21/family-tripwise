@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
-  <rect width="1080" height="1080" fill="#126c67"/>
-  <circle cx="540" cy="500" r="190" fill="#f0bd56"/>
-  <path d="M0 640 C 220 560, 380 600, 540 610 C 720 620, 860 560, 1080 600 L1080 1080 L0 1080 Z" fill="#0b4946"/>
-  <path d="M520 612 C 470 690, 640 740, 560 820 C 500 880, 420 920, 400 1080 L 700 1080 C 690 950, 760 880, 690 810 C 620 740, 560 690, 560 612 Z" fill="#db6d4a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="1080" height="1080" role="img" aria-label="Family Tripwise: two parents with two kids between them">
+  <rect width="120" height="120" fill="#0b4946"/>
+  <g transform="translate(60 62) scale(0.72) translate(-59 -62)">
+    <circle cx="22" cy="30" r="10" fill="#fffaf2"/><rect x="12" y="45" width="20" height="59" rx="10" fill="#fffaf2"/>
+    <circle cx="46" cy="60" r="8" fill="#f0bd56"/><rect x="38.5" y="73" width="15" height="31" rx="7.5" fill="#f0bd56"/>
+    <circle cx="68" cy="66" r="7" fill="#8fd0c4"/><rect x="61.5" y="78" width="13" height="26" rx="6.5" fill="#8fd0c4"/>
+    <circle cx="96" cy="30" r="10" fill="#db6d4a"/><rect x="86" y="45" width="20" height="59" rx="10" fill="#db6d4a"/>
+  </g>
 </svg>
