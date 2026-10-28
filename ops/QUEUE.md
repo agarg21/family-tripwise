@@ -2,12 +2,6 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
-## G01 /this-week/ page: dated family events and news per city
-open · M · owner: D11 Approved · gate: none
-Build: one validated data file of fresh items (type event|news|deal, city, title, family-relevant detail: ages, price/free, booking need; dates; official_url; observed_on; expires_on; third-party flag) and a generator for /this-week/ (in sitemap, linked from the shared header and each city's guides). Items past expires_on are never rendered; add a daily schedule to the Pages deploy workflow so expired items drop even without an operator run.
-First content (verify each on its official page first): DC National Christmas Tree ticket lottery (closes Nov 4, 3 pm ET), Magic Kingdom Christmas Party sell-outs, Christkindlmarket Chicago (opens Nov 20), Rockefeller tree lighting (Dec 2), Boston Common lighting (Dec 3), Hyde Park Winter Wonderland (timed entry), Universal Orlando holidays (Nov 14–Jan 3), holiday-airfare booking window (Hopper/Google Flights, labelled third-party data).
-Acceptance: ≥10 verified items across ≥5 cities; every item shows observed date + official link; no 2025 dates carried forward; Chromium QA; reviewer PASS.
-
 ## G02 /deals/ hub + first Family Deal Checks
 open · M · owner: D11 Approved · gate: none
 A Family Deal Check is one page per deal: what the offer really means for a family of 4 (child ages, occupancy, blackout dates, minimum nights, fees, book-by and travel windows) and the family total on named dates only if observed on the official site; otherwise "check live" with the terms check. Every check has expires_on; expired checks leave the hub automatically and their page states "This offer ended <date>" (no redirect/noindex without approval).
@@ -15,7 +9,7 @@ Start with 2–3 non-Disney offers from the research (e.g. Royal Caribbean kids 
 Acceptance: hub + ≥2 checks live, each terms row sourced and dated; no unobserved totals; Chromium QA; reviewer PASS.
 
 ## G03 Social post queue and image cards (no posting)
-open · M · owner: D12 Approved · gate: G01 done
+open · M · owner: D12 Approved · gate: none (G01 done 925b244)
 Files: ops/social-queue/YYYY-MM-DD.json (one entry per post: item id, platform variants for Instagram/Facebook/Threads/Bluesky/Pinterest/TikTok/YouTube, link with utm, image path, expires_at), a generator that renders 1080x1350 JPEG cards from verified item data via headless Chromium (no AI images of real places, no reposted promo art), and a validator test (sources present, nothing expired, per-platform length limits, max posts/day per platform from the research).
 Acceptance: a day's queue for the current items validates; sample cards render cleanly; reviewer PASS.
 
@@ -25,11 +19,11 @@ open · M · owner: D12 Approved · gate: G03 done
 Acceptance: dry-run mode tested end to end with a simulated platform; reviewer PASS. Never handle tokens directly.
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
-open · S per day · owner: D10/D11/D12 Approved · gate: G01 done
-First run after 06:00 ET each day: check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, refresh /this-week/ and /deals/, and queue that day's posts: about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
+open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
+First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/, and queue that day's posts: about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
 
 ## G06 Weekly newsletter draft
-open · S · owner: D12 Approved · gate: G01 done
+open · S · owner: D12 Approved · gate: none (G01 done)
 Each Thursday, write that week's issue (top family deals checked, events by city, one useful planning tip) to ops/newsletter/YYYY-MM-DD.md from verified items only; sending happens via G04 once the Kit secret exists.
 
 ## G07 Privacy and Terms pages
