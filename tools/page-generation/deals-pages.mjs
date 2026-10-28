@@ -40,6 +40,8 @@ export function readDealChecks(path = dealChecksPath) {
 }
 
 // Optional note when the deadline year or day is our reading rather than the page's exact words.
+// Short lists keep the date note: a date with expires_note is our reading or not a stated booking deadline.
+const shortDeadline = (check) => (check.expires_note ? `listed until ${e(longDate(check.expires_on))}; ${e(check.expires_note)}` : `book by ${e(longDate(check.expires_on))}`);
 const dateNote = (check) => (check.expires_note ? ` (${e(check.expires_note)})` : "");
 
 export function isEnded(check, today = easternDate()) {
@@ -138,7 +140,7 @@ export function dealsHubPage(checks, today = easternDate()) {
   const list = current.length
     ? `<div class="detail-card-grid">\n${current.map(hubCard).join("\n")}\n        </div>`
     : `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`;
-  const closing = current.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(book by ${e(longDate(c.expires_on))})</span></li>`).join("");
+  const closing = current.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(${shortDeadline(c)})</span></li>`).join("");
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
@@ -171,7 +173,7 @@ ${trustPanel}
 function otherChecks(checks, current, today) {
   const others = checks.filter((c) => c.id !== current.id).sort((a, b) => Number(isEnded(a, today)) - Number(isEnded(b, today)) || a.expires_on.localeCompare(b.expires_on));
   if (!others.length) return "";
-  const items = others.map((c) => `<li><a href="./${e(c.id)}.html">${e(c.title)}</a> <span class="fresh-upcoming-meta">(${isEnded(c, today) ? `ended ${e(longDate(c.expires_on))}` : `book by ${e(longDate(c.expires_on))}`})</span></li>`).join("");
+  const items = others.map((c) => `<li><a href="./${e(c.id)}.html">${e(c.title)}</a> <span class="fresh-upcoming-meta">(${isEnded(c, today) ? `ended ${e(longDate(c.expires_on))}` : shortDeadline(c)})</span></li>`).join("");
   return `      <nav class="container page-section deal-others" aria-labelledby="deal-others-title">
         <h2 id="deal-others-title">More Family Deal Checks</h2>
         <ul>${items}</ul>

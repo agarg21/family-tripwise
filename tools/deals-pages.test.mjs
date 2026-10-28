@@ -114,3 +114,12 @@ test("SeaWorld Fun Card check keeps the record's per-person basis, unclear price
   assert.ok(sw.unclear.some((u) => /USD 151\.99/.test(u)), "the second price figure stays flagged as unclear");
   assert.ok(sw.terms.some(([l, v]) => l === "Not included" && /Parking/.test(v)));
 });
+
+test("short deal lists keep the date note, so a date that is not a stated deadline never reads as 'book by'", () => {
+  const noted = { ...base, id: "z-deal", expires_on: "2026-12-31", expires_note: "no purchase deadline is stated; this is our reading" };
+  const list = [base, noted];
+  const hub = dealsHubPage(list, "2026-10-28");
+  assert.match(hub, /z-deal">Operator<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline is stated; this is our reading\)/);
+  assert.doesNotMatch(hub, /book by December 31, 2026/);
+  assert.match(dealCheckPage(list, base, "2026-10-28"), /z-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline/);
+});
