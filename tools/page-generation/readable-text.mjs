@@ -67,12 +67,16 @@ export function readableText(value) {
     .replace(/\b([A-Za-z]*[a-z]{2})(?=\d)/g, "$1 ")
     // percent glued to a word, and a clock time glued to AM/PM
     .replace(/(\d%)([A-Za-z])/g, "$1 $2")
-    .replace(/(\d)(AM|PM)\b/g, "$1 $2");
+    .replace(/(\d)(AM|PM)\b/g, "$1 $2")
+    // short word between two numbers: "28at23" -> "28 at 23"
+    .replace(/(\d)(at|to|of|by|in|and|or)(?=\d)/g, "$1 $2 ")
+    // word or number glued to an opening parenthesis: "credit(excludes", "309(member)"
+    .replace(/([A-Za-z0-9])\((?=[a-z])/g, "$1 (");
 }
 
 // Tokens that still read as words glued to numbers after repair. All-caps
 // codes such as "INC20PC" are provider labels and are not counted.
 export function runTogetherTokens(text) {
-  const found = String(text).match(/\b[A-Za-z]+\d+[A-Za-z]+\b|\b[a-z]{2,}\d{2,}\b|\b\d+[a-z]{4,}\b|\b\d+[A-Z]{2,}[A-Za-z]*[a-z]\b/g) ?? [];
+  const found = String(text).match(/\b[A-Za-z]+\d+[A-Za-z]+\b|\b[a-z]{2,}\d{2,}\b|\b\d+[a-z]{4,}\b|\b\d+[A-Z]{2,}[A-Za-z]*[a-z]\b|\d[a-z]{2,}\d/g) ?? [];
   return found.filter(token => !/^[A-Z0-9]+$/.test(token));
 }

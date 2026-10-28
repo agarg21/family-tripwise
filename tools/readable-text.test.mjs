@@ -29,7 +29,9 @@ test("readableText only inserts spaces between glued words, numbers and currency
     ["free cancellation beforeOctober28,2026 at23:59; up to10days beforearrival", "free cancellation before October 28, 2026 at 23:59; up to 10 days before arrival"],
     ["Saver1286.25GBP accommodation plus257.25GBP INC20PC VAT", "Saver 1286.25 GBP accommodation plus 257.25 GBP INC20PC VAT"],
     ["min2nights15percentoffer observed", "min 2 nights 15 percent offer observed"],
-    ["Details show15.95%per-room/night", "Details show 15.95% per-room/night"]
+    ["Details show15.95%per-room/night", "Details show 15.95% per-room/night"],
+    ["Same card October28at23:59 versus children3to12", "Same card October 28 at 23:59 versus children 3 to 12"],
+    ["15USDdailyfoodcredit(excludes roomservice), cards309(member)", "15 USD daily food credit (excludes room service), cards 309 (member)"]
   ];
   for (const [input, expected] of cases) {
     const output = readableText(input);
