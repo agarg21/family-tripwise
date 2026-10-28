@@ -144,7 +144,7 @@ test("an ended check whose date was never a stated deadline says we stopped list
   const listed = { ...base, id: "z-deal", expires_on: "2026-12-31", deadline_stated: false, expires_note: "no purchase deadline is stated; this is our reading" };
   const list = [base, listed];
   const page = dealCheckPage(list, listed, "2027-01-01");
-  assert.match(page, /<strong>We stopped listing this check on December 31, 2026 \(no purchase deadline is stated; this is our reading\)\.<\/strong>/);
+  assert.match(page, /<strong>We stopped listing this check after December 31, 2026 \(no purchase deadline is stated; this is our reading\)\.<\/strong>/);
   assert.doesNotMatch(page, /This offer ended/);
   assert.match(dealCheckPage(list, base, "2027-01-01"), /z-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(no longer listed after December 31, 2026\)/);
   assert.match(dealCheckPage(list, base, "2027-01-01"), /This offer ended November 2, 2026\./, "a stated deadline still reads 'This offer ended'");

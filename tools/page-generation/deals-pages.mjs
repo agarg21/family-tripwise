@@ -1,6 +1,6 @@
 // /deals/ hub and one page per Family Deal Check (QUEUE G02, OWNER D11).
 // One validated data file (deal-checks.json) feeds every deal page. A check whose expires_on is
-// before today's America/New_York date leaves the hub; its own page stays and says the offer ended.
+// before today's America/New_York date leaves the hub; its own page stays and says the offer ended (or that we stopped listing it, when no deadline was stated).
 // No build date is shown, so pages change only when checks are added, edited or end.
 // tools/this-week.mjs re-renders these pages daily in the Pages deploy workflow.
 import { readFileSync } from "node:fs";
@@ -49,7 +49,7 @@ const shortDeadline = (check) => {
   return `book by ${when}${check.expires_note ? `; ${e(check.expires_note)}` : ""}`;
 };
 // An ended check whose date was never a stated deadline does not claim the offer ended; we only stopped listing it.
-export const endedLabel = (check) => (check.deadline_stated === false ? "We stopped listing this check on" : "This offer ended");
+export const endedLabel = (check) => (check.deadline_stated === false ? "We stopped listing this check after" : "This offer ended");
 const dateNote = (check) => (check.expires_note ? ` (${e(check.expires_note)})` : "");
 
 export function isEnded(check, today = easternDate()) {
