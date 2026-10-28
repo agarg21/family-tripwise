@@ -17,7 +17,7 @@ test("London prices cannot transfer to another party or stay; old observations d
   const detached=londonRooms();detached[0].price.rates[0].nightly_average=0;assert.equal(londonRooms()[0].price.rates[0].nightly_average,406.98);
 });
 test("native page keeps full family, fees, source and selected-review limitations",()=>{
-  const h=londonFamilyHotelPage();assert.equal((h.match(/data-room=/g)||[]).length,3);assert.equal((h.match(/<details>/g)||[]).length,3);
+  const h=londonFamilyHotelPage();assert.equal((h.match(/data-room=/g)||[]).length,3);assert.equal((h.match(/<details class="how-checked">/g)||[]).length,4);assert.equal((h.match(/<details>/g)||[]).length,0);
   for(const t of ["2 adults + children aged 4, 8, 12 and 15","November 8-13, 2026","not current quotes","not a typical seasonal price range","five-person prices","exact-age acceptance remains unconfirmed","Individual ages were entered","Not a complete checkout total","duplex","not representative","stay fee","not refreshed during page assembly","Member-only plans are excluded"])assert.ok(h.includes(t),t);
   assert.equal((h.match(/<h1>/g)||[]).length,1);assert.ok(!h.includes("downloads/"));assert.equal((h.match(/<script /g)||[]).length,1);
   assert.ok(h.includes("Not established by this report: six occupants"));assert.ok(h.includes("Reported category: One Bedroom Apartment"));
@@ -36,4 +36,19 @@ test("dated maintenance and licensed orientation image do not renew sources",()=
   assert.equal(londonPhoto.taken_on,"2009-06-19");assert.equal(londonPhoto.author,"DAVID ILIFF");assert.equal(londonPhoto.license,"https://creativecommons.org/licenses/by-sa/3.0/");
   const h=londonFamilyHotelPage();for(const t of ["June 19, 2009","Uncropped resized","not a current hotel, room or route image","check live rates before booking"])assert.ok(h.includes(t),t);
   const css=read("site/styles.css");assert.ok(css.includes(".london-page tbody th { background: #fff; }"));assert.ok(css.includes(".london-scroll { max-width: 100%; overflow-x: auto; }"));assert.ok(css.includes("position: sticky; left: 0"));assert.ok(!css.includes(".london-page h1 { font-size: 3vw"));
+});
+test("each dated GBP amount appears once on screen; provenance sits in collapsed How we checked blocks",()=>{
+  const h=stripSiteChrome(londonFamilyHotelPage());
+  const visible=h.replace(/<details class="how-checked">[\s\S]*?<\/details>/g,"");
+  const count=(text,needle)=>text.split(needle).length-1;
+  for(const r of londonRooms())for(const p of r.price.rates){
+    for(const amount of [p.nightly_average,p.stay_amount]){const m=`GBP ${Number(amount).toFixed(2)}`;assert.equal(count(visible,m),1,m);}
+  }
+  for(const r of londonRooms()){
+    const block=h.match(new RegExp(`<section id="${r.id.replace("marlin-","").replace("-two-bedroom","")}"[\\s\\S]*?</section>`))[0];
+    const how=block.match(/<details class="how-checked">([\s\S]*?)<\/details>/)[1];
+    assert.ok(how.includes("Official category source")&&how.includes("Dated booking-check source")&&how.includes("Taxes and extras")&&how.includes("Payment and holds"));
+    assert.ok(block.includes('href="#comparison"'));
+  }
+  assert.match(h,/<h2>How we checked this page<\/h2><p>Research, not firsthand apartment reviews/);
 });
