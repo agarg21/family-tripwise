@@ -2,15 +2,16 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-28 transactions=15
-run: {id: 2026-10-28T19:04:33Z, started_at: 2026-10-28T19:04:33Z}
+today: 2026-10-28 transactions=16
+run: none
 last_public_release: 5e457ec (2026-10-28, G05: SeaWorld Fun Card deal check, Oct 30 social queue, G02b)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - /deals/ checks end Oct 31 (Beaches), Nov 1 (Great Wolf; year is our reading), Nov 2 (Royal Caribbean), Dec 31 (SeaWorld Fun Card; no purchase deadline stated, re-observe weekly from Nov 4), Jan 6 (Club Med); tools/this-week.mjs re-renders deal pages daily too, and the committed deal pages must match today's render or tests fail.
 - /this-week/ items expire daily: the deploy workflow (daily 05:17 UTC) refreshes the live copy, but the committed site/this-week/index.html must be re-rendered (`node tools/this-week.mjs`, commit) on the first run each Eastern day or `node --test` fails the committed-page test. Next item expiry: Nov 4 (DC lottery).
-- Social queues: ops/social-queue/2026-10-29.json (Beaches, Great Wolf, Royal Caribbean) and 2026-10-30.json (DC tree lottery, Disney party, Hyde Park); nothing posts until G04 and the owner's secrets (T3). While a queue date is today or later, tools/social-queue.test.mjs fails if its records change: regenerate the queue (and cards) in the same commit. Queue Oct 31+ in G05.
+- Social posting (G04, a568c5b): .github/workflows/social-post.yml runs at :40 past the slot hours and posts nothing until the owner adds a platform's secrets (T3). Once live it commits receipts to ops/social-receipts/ on main several times a day: always fetch and merge before releasing. A failed or stuck "attempting" receipt is never retried; report it to the owner.
+- Social queues: ops/social-queue/2026-10-29.json (Beaches, Great Wolf, Royal Caribbean) and 2026-10-30.json (DC tree lottery, Disney party, Hyde Park); nothing posts until the owner's secrets exist (T3). While a queue date is today or later, tools/social-queue.test.mjs fails if its records change: regenerate the queue (and cards) in the same commit. Queue Oct 31+ in G05.
 - Growth-first since 2026-10-28 (OWNER D10–D12): work G items before old Q items, except live-site defects and the Q17b deadline. Posting waits for the owner's accounts and GitHub secrets (T3).
 - Orlando admission tariffs observed 2026-10-27; re-observe by 2026-11-10 (the form flags them as older for later visit dates).
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
@@ -33,8 +34,8 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-28 G04 delivered a568c5b (workflow "Social posting" active on GitHub; no site change): tools/social-post.mjs posts today's due queue entries to Bluesky, Threads, Facebook Page and Instagram only when that platform's secrets exist; D12 kill switch re-read from main before each post; receipt claimed on main before posting (never twice, failures never retried); never after expires_at; daily caps, one post per platform per run; page and card must answer 200. Dry run on simulated platforms tested end to end with real git receipts. Reviewer PASS_WITH_P3 (3 P3s fixed).
 - 2026-10-28 G05 delivered 5e457ec (release.json; /deals/ hub, 5 check pages, styles.css, sitemap and 3 new cards byte-identical live): new SeaWorld Orlando 2027 Fun Card check (per-person price, no child price stated, parking extra, full blockout lists; no purchase deadline, listed until Dec 31); Oct 30 social queue; G02b (table roles, stacked label width, status wording). Reviewer FAIL (P2: short lists said "book by" for a non-deadline) → PASS_WITH_P3.
 - 2026-10-28 G03 delivered 9e7f1f1 (release.json; 3 card JPEGs byte-identical live at /social/cards/): social queue generator (every paragraph copied from verified records, deal headlines always kept, 3 units/day off-season and 6 Nov–Dec, per-platform caps, posting stops 00:00 ET on the last day), typographic 1080x1350 cards rendered in Chromium, validator test; first queue for Oct 29. Reviewer FAIL (3 P2: a.m. sentence cuts, last-day deadlines, live-data test fixtures) → PASS_WITH_P3. No posting.
 - 2026-10-28 G02 delivered 2d152bb (release.json; /deals/ hub, 4 check pages, sitemap, styles and a sample guide byte-identical live): Family Deal Checks for Royal Caribbean Kids Sail Free/3rd-4th guests, Great Wolf Fall Flash Sale, Beaches First Passport credit, Club Med kids-under-4 offer; terms read on official pages Oct 28, no family totals (none observed), ended checks leave the hub and say "This offer ended"; "Deals" header link on every page. Reviewer FAIL (4 P2 wording vs record) → PASS_WITH_P3.
 - 2026-10-28 G01 delivered 925b244 (release.json; /this-week/, styles.css, sitemap and a sample guide byte-identical live): new /this-week/ page with 10 officially checked holiday items in 7 cities (DC, Orlando, London, Chicago, NYC, Boston x3, San Antonio, San Diego), each with check date, official link and expiry; "This week" header link and a per-city link on every guide; daily deploy-workflow refresh drops expired items. Reviewer FAIL(P2 unrecorded Hyde Park/Disney details, fixed in the record)→PASS_WITH_P3.
-- 2026-10-28 Q17a research decision (no site change): Cabana Bay booking engine robots-disallowed to the fetcher (a direct request was refused as bot-check circumvention, not retried); Radio City and Marlin show no dated rate without a booking-engine date search. Q17a closed; all 15 Nov 8-13 amounts go to Q17b; O2 updated.
