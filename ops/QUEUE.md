@@ -2,6 +2,10 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
+## G04b Match posting to the revised D12 channels (Pinterest in, Bluesky out)
+open · S · owner: D12 Approved (revised 2026-10-28) · gate: none
+G04 (a568c5b) posts Bluesky, Threads, Facebook, Instagram when secrets exist. Owner dropped Bluesky and added Pinterest to phase 0 after it shipped. Remove Bluesky from POSTING_PLATFORMS (and from queue generation/caps), add a Pinterest adapter (Pin with the card image, title, description, link; board id secret) with simulated-platform tests. Secret names for T3: META_SYSTEM_USER_TOKEN, META_PAGE_ID, IG_USER_ID, THREADS_USER_ID, THREADS_TOKEN, then PINTEREST_TOKEN + PINTEREST_BOARD_ID (confirm against Pinterest API v5 docs). See ops/social-queue/README.md.
+
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
 First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>` then `node tools/social-cards.mjs <date>`; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
