@@ -68,6 +68,14 @@ test("privacy claim: every third-party host the site embeds content from is name
       embedded.get(host).add(path);
     }
   }
+  for (const [path, css] of Object.entries(all).filter(([p]) => p.endsWith(".css"))) {
+    for (const m of css.matchAll(/url\(\s*["']?(https?:\/\/[^"')/]+)/g)) {
+      const host = new URL(m[1]).host;
+      if (host === "familytripwise.com") continue;
+      if (!embedded.has(host)) embedded.set(host, new Set());
+      embedded.get(host).add(path);
+    }
+  }
   const privacy = all["privacy.html"];
   for (const [host, pages] of embedded) {
     const anchor = embeddedHosts[host];

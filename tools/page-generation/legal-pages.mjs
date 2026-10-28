@@ -84,7 +84,7 @@ export function privacyPage() {
       `Messages to ${mail} are forwarded by our domain's email-forwarding service to an inbox the publisher controls. We use your message and address only to reply, do not share them, and delete them on request.`
     ]),
     section("social", "Social media accounts and apps", [
-      "Family Tripwise publishes posts about verified family deals and events to its own accounts on social platforms such as Facebook, Instagram, Threads and Pinterest. Our publishing tool posts only our own content to our own accounts. It does not offer sign-in with those platforms and does not request access to anyone else's account or data.",
+      "Family Tripwise publishes, or is setting up to publish, posts about verified family deals and events to its own accounts on social platforms (Facebook, with Instagram, Threads and Pinterest being set up). Our publishing tool posts only our own content to our own accounts. It does not offer sign-in with those platforms and does not request access to anyone else's account or data.",
       "We do not collect, store or sell information about people who follow, like, comment on or message our accounts. If you interact with us on a platform, that platform's own privacy policy applies, and we may read and reply to your comment or message there."
     ]),
     section("data-deletion", "Data deletion requests", [
@@ -122,7 +122,7 @@ export function termsPage() {
       "Bookings you make are agreements between you and the provider, under that provider's terms."
     ]),
     section("accuracy", "Accuracy and dates", [
-      'Our guides, deal checks and event listings are AI-assisted research from official sources, each with the date it was observed. They are not based on firsthand visits (see <a href="./about.html">how guides are built</a>). Prices, fees, availability, age rules, hours, offers and event details change, and an observation can be out of date by the time you read it.',
+      'Our guides, deal checks and event listings are AI-assisted research, mainly from dated official sources, with review signals, estimates and observation dates labelled. They are not based on firsthand visits (see <a href="./about.html">how guides are built</a>). Prices, fees, availability, age rules, hours, offers and event details change, and an observation can be out of date by the time you read it.',
       "Always confirm details that matter on the official source before booking, paying or promising a plan to your family. Estimates and planning judgments are labelled as such and are not guarantees."
     ]),
     section("not-advice", "Not professional advice", [
