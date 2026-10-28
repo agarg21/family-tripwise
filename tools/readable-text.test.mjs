@@ -58,12 +58,13 @@ test("lodging CSV downloads get display spacing in text cells only; URLs, amount
   const { readableComparisonCsv, labelOlderStaySamples, roomComparisonCsv, parseQuotedCsv, comparisonHeadings } = await import("./family-room-comparison.mjs");
   const generators = [
     ["boston-family-hotels.csv", "./page-generation/boston-family-hotels-page.mjs", "bostonPack", "bostonPrices"],
+    ["boston-cooking-dining-five.csv", "./page-generation/boston-family-hotels-page.mjs", "bostonPack", "bostonPrices", "2026-10-10", { kitchen: "published", capacity: "not-excluded", minimum_dining_seats: 5 }],
     ["washington-dc-family-hotels.csv", "./page-generation/washington-dc-family-hotels-page.mjs", "dcPack", "dcPrices"],
     ["puerto-vallarta-family-resorts.csv", "./page-generation/puerto-vallarta-family-resorts-page.mjs", "pvPack", "pvPrices"]
   ];
-  for (const [file, module, packName, pricesName] of generators) {
+  for (const [file, module, packName, pricesName, screenedOn = "2026-10-09", filters] of generators) {
     const mod = await import(module);
-    const raw = labelOlderStaySamples(roomComparisonCsv(mod[packName], mod[packName].scenario, "2026-10-09", mod[pricesName]));
+    const raw = labelOlderStaySamples(roomComparisonCsv(mod[packName], mod[packName].scenario, screenedOn, mod[pricesName], ...(filters ? [filters] : [])));
     const published = readFileSync(new URL(`../site/downloads/${file}`, import.meta.url), "utf8");
     assert.equal(published, readableComparisonCsv(raw), file);
     const [rawHead, ...rawRows] = parseQuotedCsv(raw);

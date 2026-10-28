@@ -105,3 +105,20 @@ test("public meal comparison preserves count-only uncertainty, partial fees and 
  assert.match(html,/tabindex="0" role="region" aria-label="Park Plaza breakfast upgrade"/);
  assert.equal(bostonCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices))));
 });
+
+test("Q09c Boston readability: dated amounts shown once; provenance sits in collapsed How we checked blocks", () => {
+  const html = bostonFamilyHotelPage();
+  const visible = html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<details[\s\S]*?<\/details>/g, "").replace(/<[^>]+>/g, " ");
+  const counts = {};
+  for (const amount of visible.match(/USD \d[\d,]*\.\d\d/g)) counts[amount] = (counts[amount] || 0) + 1;
+  // The breakfast increment is stated once and reused once in the worked calculator example.
+  for (const [amount, count] of Object.entries(counts)) assert.equal(count, amount === "USD 419.22" ? 2 : 1, amount);
+  const articles = html.match(/<article id="[^"]+" class="dc-room"[\s\S]*?<\/article>/g);
+  assert.equal(articles.length, 4);
+  for (const article of articles) {
+    assert.equal((article.match(/<details class="how-checked"><summary>How we checked<\/summary>/g) || []).length, 1);
+    assert.match(article.match(/<details class="how-checked">[\s\S]*?<\/details>/)[0], /Official category source<\/a> &middot; facts checked \d{4}-\d\d-\d\d\./);
+    assert.doesNotMatch(article.replace(/<details[\s\S]*?<\/details>/g, ""), /Official category source|Dated booking-check source|Approx\. nightly/);
+  }
+  assert.match(html, /<section id="methodology"><details class="how-checked"><summary><h2>How we checked this page<\/h2><\/summary>/);
+});

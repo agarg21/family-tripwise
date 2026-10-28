@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { comparisonHeadings, roomComparisonCsv } from "./family-room-comparison.mjs";
+import { comparisonHeadings, labelOlderStaySamples, readableComparisonCsv, roomComparisonCsv } from "./family-room-comparison.mjs";
 import { bostonPack, bostonPrices, bostonCsv, bostonDiningCsv, bostonDiningScreenedOn, bostonDiningSection, bostonFamilyHotelPage, writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -10,7 +10,7 @@ const v = (row, name) => row[comparisonHeadings.indexOf(name)];
 
 test("Boston dining preset shares current validated records and retains only unresolved unpriced Plaza", () => {
   assert.equal(bostonDiningScreenedOn, "2026-10-10");
-  assert.equal(bostonDiningCsv, roomComparisonCsv(bostonPack, bostonPack.scenario, bostonDiningScreenedOn, bostonPrices, { kitchen: "published", capacity: "not-excluded", minimum_dining_seats: 5 }));
+  assert.equal(bostonDiningCsv, readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack, bostonPack.scenario, bostonDiningScreenedOn, bostonPrices, { kitchen: "published", capacity: "not-excluded", minimum_dining_seats: 5 }))));
   const data = rows(bostonDiningCsv); assert.deepEqual(data[0], comparisonHeadings); assert.equal(data.length, 2);
   assert.equal(v(data[1], "Hotel"), "Four Seasons Hotel Boston"); assert.equal(v(data[1], "Published category"), "Plaza Suite");
   assert.equal(v(data[1], "Category checked"), "2026-10-09"); assert.equal(v(data[1], "Screened on"), "2026-10-10");
