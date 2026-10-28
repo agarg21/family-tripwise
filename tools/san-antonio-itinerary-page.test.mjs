@@ -146,3 +146,19 @@ test("regeneration is idempotent and changes no unrelated site file", () => {
     rmSync(temp, { recursive: true, force: true });
   }
 });
+
+test("leads with a three-line answer box and dated official DoSeum and Alamo facts", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const box = html.match(/<section id="san-antonio-itinerary-answer" class="container answer-box"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.equal((box.match(/<p><strong>/g) || []).length, 3);
+  assert.ok(html.indexOf('id="san-antonio-itinerary-answer"') < html.indexOf('class="container media-section"'));
+  assert.match(box, /closed on Tuesdays/);
+  assert.match(box, /reserved timed ticket/);
+  assert.match(box, /USD 18 per person age 1 and up \(under 1 free\)/);
+  const facts = html.match(/<section id="san-antonio-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.equal((facts.match(/<li>/g) || []).length, 4);
+  assert.equal((facts.match(/\(checked October 27, 2026\)/g) || []).length, 4);
+  assert.match(facts, /href="https:\/\/www\.thedoseum\.org\/plan-your-visit"/);
+  assert.match(facts, /href="https:\/\/www\.thealamo\.org\/visit\/calendar\/alamo-free-timed-entry"/);
+  assert.match(facts, /The two differ/);
+});

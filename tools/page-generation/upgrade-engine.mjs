@@ -830,6 +830,35 @@ ${page.stayTool ? '      <script type="module" src="../san-diego-stay-tool.mjs">
 `;
 }
 
+// Short answer plus dated official facts for an itinerary page. Every fact carries its
+// official source URL and observation date; nothing here is a route or stroller claim.
+function renderItineraryAnswer(answer) {
+  if (!answer) return "";
+  if (!answer.id || answer.lines?.length !== 3 || !answer.checked || !answer.facts?.length) {
+    throw new Error("Expected an itinerary answer box with an id, three lines, a checked date and official facts");
+  }
+  for (const fact of answer.facts) {
+    if (!fact.venue || !fact.text || !/^https:\/\//.test(fact.source || "")) throw new Error("Expected a sourced official fact");
+  }
+  return `      <section id="${esc(answer.id)}-facts" class="container page-section rank-ready-section itinerary-checked-facts" aria-labelledby="${esc(answer.id)}-facts-title">
+        <div class="section-heading">
+          <p class="eyebrow">Official facts</p>
+          <h2 id="${esc(answer.id)}-facts-title">${esc(answer.factsTitle)}</h2>
+        </div>
+        <p class="review-label">${esc(answer.factsNote)}</p>
+        <ul>
+${answer.facts.map((fact) => `          <li><strong>${esc(fact.venue)}:</strong> ${esc(fact.text)} <a class="text-link" href="${esc(fact.source)}">${esc(new URL(fact.source).hostname.replace(/^www\./, ""))}</a> (checked ${esc(answer.checked)}).</li>`).join("\n")}
+        </ul>
+      </section>
+`;
+}
+
+function renderItineraryAnswerBox(answer) {
+  return `      <section id="${esc(answer.id)}" class="container answer-box" aria-label="Short answer">
+${answer.lines.map(([label, text]) => `        <p><strong>${esc(label)}:</strong> ${esc(text)}</p>`).join("\n")}
+      </section>`;
+}
+
 function renderItineraryUpgrade(page) {
   const clusterCards = page.clusterCards?.length
     ? page.clusterCards
@@ -854,7 +883,7 @@ ${renderFaqs(page.faqs)}
 `
       : "";
     return `${markerStart}
-      <section class="band rank-ready-section">
+${renderItineraryAnswer(page.answerBox)}      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Quick route decisions</p>
@@ -1061,6 +1090,12 @@ function upgradeFile(outDir, path, page, type) {
   const schema = `${itemListSchema(page)}${faqSchema(page)}`;
   html = page.placement === "after-intro" ? insertAfterIntroBand(html, section) : insertBeforeMainEnd(html, section);
   html = insertSchema(html, schema);
+  if (type === "itinerary" && page.answerBox) {
+    // The short answer sits directly under the review-status panel, above the photo.
+    const trustPanel = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;
+    if (!trustPanel.test(html)) throw new Error("Expected itinerary trust panel");
+    html = html.replace(trustPanel, (match) => `${match}\n${markerStart}\n${renderItineraryAnswerBox(page.answerBox)}\n${markerEnd}`);
+  }
   if (page.frontComparison) {
     if (type === "teen" && !page.frontComparisonOrder && (page.comparisonHeaders?.length !== 7 || page.rows.some(row => row.length !== 7))) {
       throw new Error("Expected seven teen comparison fields");
