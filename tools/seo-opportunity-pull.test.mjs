@@ -1,10 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { validateBatch, keywordRows, serpRows, runBatch } from "./seo-opportunity-pull.mjs";
+import { validateBatch, keywordRows, serpRows, runBatch, cumulativeSpend, requestBatch } from "./seo-opportunity-pull.mjs";
+import { writeFile } from "node:fs/promises";
 import { mkdtemp, readFile, rm, access } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-const batch = { keywords: ["family hotels london"], serp_keywords: ["family hotels london"], batch_ceiling_usd: 0.5, prior_spend_usd: 0.14832, cumulative_ceiling_usd: 5 };
+const batch = { keywords: ["family hotels london"], serp_keywords: ["family hotels london"], batch_ceiling_usd: 0.5, prior_spend_usd: 0.14832, cumulative_ceiling_usd: 20 };
 test("receipts preserve registered action or explicitly disclose legacy attribution", async () => {
   const dir = await mkdtemp(join(tmpdir(), "tripwise-action-success-"));
   try {
@@ -26,7 +27,7 @@ test("invalid action IDs and accessors reject before receipt or network effects"
     Object.defineProperty(getter, "action", { get() { reads++; return "FT-RES-115"; }, enumerable: true });
     const hidden = { ...batch };
     Object.defineProperty(hidden, "action", { value: "FT-RES-115", enumerable: false });
-    const invalid = [null, 115, "", " FT-RES-115", "FT-RES-115\n", "FT-RES-115 extra", "FT-RES-1150", "FT-FOO-115"].map(action => ({ ...batch, action }));
+    const invalid = [null, 115, "", " FT-RES-115", "FT-RES-115\n", "FT-RES-115 extra", "FT-RES-1150", "FT-FOO-115", "Q1", "Q1234", "q06", "Q06 "].map(action => ({ ...batch, action }));
     for (const manifest of [...invalid, getter, hidden]) {
       const output = join(dir, "rejected.json");
       assert.throws(() => validateBatch(manifest));
@@ -66,7 +67,9 @@ test("inherited action is not adopted as registered manifest attribution", async
 test("research bounds, budget and SERP subset are explicit", () => {
   assert.ok(validateBatch(batch) < 0.5);
   assert.throws(() => validateBatch({ ...batch, keywords: Array(201).fill("a") }));
-  assert.throws(() => validateBatch({ ...batch, prior_spend_usd: 5 }));
+  assert.throws(() => validateBatch({ ...batch, prior_spend_usd: 20 }));
+  assert.ok(validateBatch({ ...batch, cumulative_ceiling_usd: 5 }) > 0);
+  assert.throws(() => validateBatch({ ...batch, cumulative_ceiling_usd: 21 }));
   assert.throws(() => validateBatch({ ...batch, serp_keywords: ["unapproved"] }));
   assert.throws(() => validateBatch({ ...batch, prior_spend_usd: "unknown" }));
 });
@@ -85,7 +88,7 @@ test("actual billed cost stops cumulative overspend before another request", asy
   const dir = await mkdtemp(join(tmpdir(), "tripwise-budget-test-")); let calls = 0;
   try {
     const path = join(dir, "report.json");
-    await assert.rejects(runBatch({ ...batch, prior_spend_usd: 4.88 }, path, { auth: "protected", fetcher: async () => { calls++; return new Response(JSON.stringify({ cost: 0.125, tasks: [{ status_code: 20000, result: [{ items: [] }] }] })); } }), /no automatic paid retry/);
+    await assert.rejects(runBatch({ ...batch, prior_spend_usd: 19.88 }, path, { auth: "protected", fetcher: async () => { calls++; return new Response(JSON.stringify({ cost: 0.125, tasks: [{ status_code: 20000, result: [{ items: [] }] }] })); } }), /no automatic paid retry/);
     assert.equal(calls, 1); assert.equal(JSON.parse(await readFile(path, "utf8")).stop_reason, "reported-budget-exceeded-reconciliation-required");
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
@@ -93,7 +96,7 @@ test("remaining cumulative headroom is reserved before each paid request", async
   const dir = await mkdtemp(join(tmpdir(), "tripwise-headroom-test-")); let calls = 0;
   try {
     const path = join(dir, "report.json");
-    await assert.rejects(runBatch({ ...batch, prior_spend_usd: 4.88 }, path, { auth: "protected", fetcher: async () => { calls++; return new Response(JSON.stringify({ cost: 0.115, tasks: [{ status_code: 20000, result: [{ items: [] }] }] })); } }), /cannot cover/);
+    await assert.rejects(runBatch({ ...batch, prior_spend_usd: 19.88 }, path, { auth: "protected", fetcher: async () => { calls++; return new Response(JSON.stringify({ cost: 0.115, tasks: [{ status_code: 20000, result: [{ items: [] }] }] })); } }), /cannot cover/);
     assert.equal(calls, 1); assert.equal(JSON.parse(await readFile(path, "utf8")).stop_reason, "remaining-budget-headroom");
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
@@ -159,7 +162,7 @@ test("async caller mutation cannot widen approved task or budget scope", async (
     assert.equal(requests.length, 2);
     assert.deepEqual(requests[0].payload.keywords, batch.keywords);
     assert.equal(requests[1].payload.keyword, batch.serp_keywords[0]);
-    assert.deepEqual(report.budget, { batch_ceiling_usd: 0.5, cumulative_ceiling_usd: 5, prior_spend_usd: batch.prior_spend_usd });
+    assert.deepEqual(report.budget, { batch_ceiling_usd: 0.5, cumulative_ceiling_usd: 20, prior_spend_usd: batch.prior_spend_usd });
     assert.deepEqual(report.keywords.map((row) => row.keyword), batch.keywords);
     assert.deepEqual(report.serps.map((row) => row.keyword), batch.serp_keywords);
     assert.equal(report.total_cost_usd, 0.004);
@@ -186,5 +189,31 @@ test("proxied manifest and task lengths are rejected before traps or side effect
     }
     assert.equal(traps, 0);
     assert.equal(calls, 0);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+
+test("queue IDs are accepted as research actions", () => {
+  for (const action of ["Q06", "Q15", "Q02c", "Q104"]) assert.ok(validateBatch({ ...batch, action }) > 0);
+});
+test("cumulative spend comes from saved receipts and counts unknown outcomes conservatively", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "tripwise-spend-"));
+  try {
+    assert.equal(await cumulativeSpend(dir), 0);
+    await writeFile(join(dir, "a.json"), JSON.stringify({ budget: { prior_spend_usd: 0.3 }, calls: [{ endpoint: "serp/google/organic/live/advanced", cost_usd: 0.02 }] }));
+    await writeFile(join(dir, "b.json"), JSON.stringify({ budget: { prior_spend_usd: 0.32 }, calls: [{ endpoint: "dataforseo_labs/google/keyword_overview/live", cost_usd: null }] }));
+    await writeFile(join(dir, "notes.json"), JSON.stringify({ keywords: [] }));
+    await writeFile(join(dir, "broken.json"), "{");
+    assert.equal(Number((await cumulativeSpend(dir)).toFixed(4)), 0.42);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});
+test("request files cannot set their own budget and must pass the normal preflight", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "tripwise-request-"));
+  try {
+    await writeFile(join(dir, "r.json"), JSON.stringify({ budget: { prior_spend_usd: 19.9 }, calls: [] }));
+    const b = await requestBatch({ action: "Q15", keywords: ["orlando itinerary with kids"], serp_keywords: ["orlando itinerary with kids"], purpose: "itinerary demand" }, dir);
+    assert.equal(b.prior_spend_usd, 19.9); assert.equal(b.cumulative_ceiling_usd, 20); assert.equal(b.batch_ceiling_usd, 0.5);
+    assert.throws(() => validateBatch(b), /Budget preflight failed/);
+    await assert.rejects(requestBatch({ action: "Q15", keywords: ["x"], prior_spend_usd: 0 }, dir), /Unexpected request field/);
+    await assert.rejects(requestBatch([], dir), /Invalid research request/);
   } finally { await rm(dir, { recursive: true, force: true }); }
 });

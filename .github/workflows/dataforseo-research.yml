@@ -1,0 +1,64 @@
+name: DataForSEO research
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "ops/research-requests/*.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dataforseo-research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate research tool
+        run: node --test tools/seo-opportunity-pull.test.mjs
+
+      - name: Run pending requests
+        env:
+          DATAFORSEO_AUTH_B64: ${{ secrets.DATAFORSEO_AUTH_B64 }}
+        run: |
+          if [ -z "$DATAFORSEO_AUTH_B64" ]; then
+            echo "::notice::DATAFORSEO_AUTH_B64 is not configured; no paid calls were made."
+            exit 0
+          fi
+          shopt -s nullglob
+          for request in ops/research-requests/*.json; do
+            name=$(basename "$request")
+            if [ -e "docs/research/dataforseo-$name" ]; then
+              echo "Already collected: $name"
+              continue
+            fi
+            echo "Collecting: $name"
+            node tools/seo-opportunity-pull.mjs --request "$request" --execute || echo "::warning::$name stopped; its receipt (if any) records why. Not retried."
+          done
+
+      - name: Commit receipts to main
+        run: |
+          git add -- docs/research/dataforseo-*.json
+          if git diff --cached --quiet; then
+            echo "No new research receipts."
+            exit 0
+          fi
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          git commit -m "data: DataForSEO research receipts"
+          git pull --no-rebase origin main
+          git push origin HEAD:main
