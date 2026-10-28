@@ -21,16 +21,12 @@ Acceptance: a day's queue for the current items validates; sample cards render c
 
 ## G04 Posting workflow (GitHub Actions, per platform as secrets appear)
 open · M · owner: D12 Approved · gate: G03 done
-.github/workflows/social-post.yml posts due queue entries with repository secrets, platform by platform, only when that platform's secret exists (Bluesky first: BLUESKY_HANDLE + BLUESKY_APP_PASSWORD; then Meta: META_PAGE_TOKEN/IG_USER_ID/THREADS_TOKEN; Pinterest; TikTok as drafts; YouTube; Kit for the newsletter). Same safety pattern as the DataForSEO workflow: latest main, one receipt per post committed fast-forward only, never post twice, never post an expired entry, per-platform daily caps, a kill switch row in OWNER.md (D12) checked before each post.
+.github/workflows/social-post.yml posts due queue entries with repository secrets, platform by platform, only when that platform's secret exists (phase 0: Bluesky — BLUESKY_HANDLE + BLUESKY_APP_PASSWORD; Meta — META_SYSTEM_USER_TOKEN, META_PAGE_ID, IG_USER_ID, THREADS_USER_ID + THREADS_TOKEN; later Pinterest, YouTube, TikTok). Same safety pattern as the DataForSEO workflow: latest main, one receipt per post committed fast-forward only, never post twice, never post an expired entry, per-platform daily caps, a kill switch row in OWNER.md (D12) checked before each post.
 Acceptance: dry-run mode tested end to end with a simulated platform; reviewer PASS. Never handle tokens directly.
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: G01 done
 First run after 06:00 ET each day: check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, refresh /this-week/ and /deals/, and queue that day's posts: about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
-
-## G06 Weekly newsletter draft
-open · S · owner: D12 Approved · gate: G01 done
-Each Thursday, write that week's issue (top family deals checked, events by city, one useful planning tip) to ops/newsletter/YYYY-MM-DD.md from verified items only; sending happens via G04 once the Kit secret exists.
 
 ## G07 Privacy and Terms pages
 open · S · owner: O3 pending · gate: O3 Approved
@@ -64,9 +60,10 @@ Acceptance: Monday runs list outbound URLs returning 404/410 (browser UA, honori
 ## Q14 Cycle go/no-go memo
 open · S · owner: none · gate: on or after 2026-11-12
 Files: ops/OWNER.md.
-Acceptance: scoreboard vs baseline, which page type to scale, prune list, renew/pause recommendation for after 2026-11-13 17:00 ET.
+Acceptance: scoreboard vs baseline, which content and channels to scale, prune list; due on or after 2026-11-12 as a mid-cycle check (authorization now runs to 2027-01-15).
 
 ## NOT NOW (do not select; the site itself is not frozen)
+- Newsletter (owner skipped it for now, 2026-10-28); Pinterest, YouTube and TikTok posting until their API approvals clear.
 - Offline CLIs and "output isolation" work (Ferry, OMNY, MoMA, Lake Eola, child-height fares), source-governance pilot, evidence-batch tooling, NWS forecast pilot.
 - New micro-calculators that only multiply numbers the parent types in.
 - Community drafts, outreach, analytics, monetization (external actions; need owner approval anyway).
