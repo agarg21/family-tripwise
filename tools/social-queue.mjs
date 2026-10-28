@@ -128,7 +128,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     hashtags: ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
   }));
   const deals = checks.map((check) => {
-    const bookBy = `Book by ${longDate(check.expires_on)}${check.expires_note ? ` (${check.expires_note})` : ""}.`;
+    const label = check.deadline_stated === false ? "Listed until" : "Book by";
+    const bookBy = `${label} ${longDate(check.expires_on)}${check.expires_note ? ` (${check.expires_note})` : ""}.`;
     return {
       id: check.id,
       kind: "deal",
@@ -136,7 +137,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       city: null,
       title: check.title,
       lines: [
-        ["Book by", `${longDate(check.expires_on)}${check.expires_note ? ` (${check.expires_note})` : ""}`],
+        [label, `${longDate(check.expires_on)}${check.expires_note ? ` (${check.expires_note})` : ""}`],
         ["For a family", check.headline],
       ],
       short: [check.headline, bookBy],

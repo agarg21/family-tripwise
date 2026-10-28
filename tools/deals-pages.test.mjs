@@ -116,10 +116,38 @@ test("SeaWorld Fun Card check keeps the record's per-person basis, unclear price
 });
 
 test("short deal lists keep the date note, so a date that is not a stated deadline never reads as 'book by'", () => {
-  const noted = { ...base, id: "z-deal", expires_on: "2026-12-31", expires_note: "no purchase deadline is stated; this is our reading" };
+  const noted = { ...base, id: "z-deal", expires_on: "2026-12-31", deadline_stated: false, expires_note: "no purchase deadline is stated; this is our reading" };
   const list = [base, noted];
   const hub = dealsHubPage(list, "2026-10-28");
   assert.match(hub, /z-deal">Operator<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline is stated; this is our reading\)/);
   assert.doesNotMatch(hub, /book by December 31, 2026/);
   assert.match(dealCheckPage(list, base, "2026-10-28"), /z-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline/);
+});
+
+test("a listing date that is not a stated deadline reads 'Listed until' on the hub card, status line and social text; a stated deadline with a year note keeps 'book by'", async () => {
+  const listed = { ...base, id: "z-deal", expires_on: "2026-12-31", deadline_stated: false, expires_note: "no purchase deadline is stated; this is our reading" };
+  const yearNote = { ...base, id: "y-deal", expires_note: "the offer page gives no year for this date; 2026 is our reading" };
+  const list = [base, listed, yearNote];
+  const hub = dealsHubPage(list, "2026-10-28");
+  assert.match(hub, /<strong>Listed until:<\/strong> December 31, 2026 \(no purchase deadline/);
+  assert.doesNotMatch(hub, /<strong>Book by:<\/strong> December 31, 2026/);
+  const page = dealCheckPage(list, listed, "2026-10-28");
+  assert.match(page, /<p class="deal-status"><strong>Listed until December 31, 2026<\/strong>/);
+  assert.match(dealCheckPage(list, base, "2026-10-28"), /y-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(book by November 2, 2026; the offer page gives no year/);
+  assert.ok(validateDealChecks([{ ...base, deadline_stated: false }], { today: "2026-10-28" }).some((p) => /needs an expires_note/.test(p)));
+  assert.ok(validateDealChecks([{ ...base, deadline_stated: "no" }], { today: "2026-10-28" }).some((p) => /deadline_stated must be/.test(p)));
+  const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
+  assert.equal(sw.deadline_stated, false, "SeaWorld states no purchase deadline");
+});
+
+test("Margaritaville at Sea check keeps the record: 2026 booking window, fees on USD 0 fares, no child ages, no family total", () => {
+  const m = checks.find((c) => c.id === "margaritaville-at-sea-black-friday-early-access");
+  assert.ok(m, "added 2026-10-28 evening (docs/research/deal-checks-2026-10-28.md)");
+  assert.equal(m.expires_on, "2026-11-03");
+  assert.equal(m.deadline_stated, undefined);
+  assert.equal(m.family_total, null);
+  assert.ok(m.terms.some(([l, v]) => l === "Book by" && /October 14 to November 3, 2026/.test(v)));
+  assert.ok(m.terms.some(([l, v]) => l === "Child ages" && /No child age terms are stated/.test(v)));
+  assert.match(m.family_of_four, /Taxes, fees and port expenses are still charged for all four guests/);
+  assert.ok(m.unclear.some((u) => /how the 65% off and the free 3rd and 4th guest fares combine/i.test(u)));
 });

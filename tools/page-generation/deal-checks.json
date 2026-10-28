@@ -169,7 +169,45 @@
       "source_label": "SeaWorld Orlando Fun Card page",
       "observed_on": "2026-10-28",
       "expires_on": "2026-12-31",
-      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used"
+      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
+      "deadline_stated": false
+    },
+    {
+      "id": "margaritaville-at-sea-black-friday-early-access",
+      "operator": "Margaritaville at Sea",
+      "category": "Cruise",
+      "title": "Margaritaville at Sea Black Friday Early Access: 3rd and 4th guests sail free",
+      "headline": "65% off cruise fares and a USD 0 fare for the 3rd and 4th guests in a stateroom on select sailings, but taxes, fees and port expenses still apply to every guest and the page states no child age terms or sailing dates.",
+      "family_of_four": "For two adults and two children in one stateroom, the page says the 3rd and 4th guests pay a USD 0 cruise fare when at least two paying guests share the stateroom, on select sailing dates that can change without notice. Taxes, fees and port expenses are still charged for all four guests, and onboard charges are not included. The 65% off applies to cruise fares for guests in the reservation party; the page says offers combine unless otherwise stated, but it does not show how the 65% and the free 3rd and 4th guest fares work together on one booking. A reduced USD 50 per person deposit is offered on select sailings, with the balance due on the sailing's final payment date.",
+      "terms": [
+        ["Headline", "65% off cruises, 3rd and 4th guests sail free, free stateroom selection, a free one-category upgrade on select sailings and a USD 50 per person deposit."],
+        ["Book by", "November 3, 2026 (booking window October 14 to November 3, 2026, new reservations only)."],
+        ["Travel window", "No sailing dates are stated. The 65% off depends on inventory for the sailing; the 3rd and 4th guest offer is valid on select sailing dates that may be added or removed without notice."],
+        ["3rd and 4th guests", "USD 0 cruise fare when there is a minimum of two paying guests in the stateroom. Blackout dates may apply."],
+        ["Child ages", "No child age terms are stated. The page says guests of any age pay the retail rate as the second guest unless another offer applies."],
+        ["Taxes and fees", "Not included: taxes, fees, port expenses and onboard charges apply to every fare, including USD 0 fares. Gratuities are not mentioned."],
+        ["Deposit", "Reduced deposit of USD 50 per person at booking on select sailing dates; balance due on the sailing's final payment date. The cruise line's cancellation policy applies."],
+        ["Promo code", "None needed for the 65% off."],
+        ["Exclusions", "May not apply to current reservations, group bookings, charters or other special sailings."]
+      ],
+      "unclear": [
+        "Which sailings qualify for the free 3rd and 4th guest fare is not listed; the dates can change without notice.",
+        "How the 65% off and the free 3rd and 4th guest fares combine on one family booking is not shown.",
+        "No child age rule is stated for the 3rd and 4th guest offer.",
+        "Gratuities are not mentioned.",
+        "The page headline shows both 60% and 65%; the offer text and terms say 65%."
+      ],
+      "before_booking": [
+        "Price your exact sailing for all four guests and check that the 3rd and 4th guest fares show as USD 0 at checkout.",
+        "Add taxes, fees and port expenses for every guest, including the children, to the quoted fare.",
+        "Ask about gratuities and onboard charges before you compare this with other cruise lines.",
+        "Read the cancellation policy before paying the USD 50 deposit."
+      ],
+      "family_total": null,
+      "official_url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
+      "source_label": "Margaritaville at Sea Black Friday Early Access page",
+      "observed_on": "2026-10-28",
+      "expires_on": "2026-11-03"
     }
   ]
 }

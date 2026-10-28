@@ -40,8 +40,14 @@ export function readDealChecks(path = dealChecksPath) {
 }
 
 // Optional note when the deadline year or day is our reading rather than the page's exact words.
-// Short lists keep the date note: a date with expires_note is our reading or not a stated booking deadline.
-const shortDeadline = (check) => (check.expires_note ? `listed until ${e(longDate(check.expires_on))}; ${e(check.expires_note)}` : `book by ${e(longDate(check.expires_on))}`);
+// deadline_stated: false marks a date that is not a booking deadline the page states (we list the check until then);
+// such a date never reads as "book by". Short lists keep the date note either way.
+export const deadlineLabel = (check) => (check.deadline_stated === false ? "Listed until" : "Book by");
+const shortDeadline = (check) => {
+  const when = e(longDate(check.expires_on));
+  if (check.deadline_stated === false) return `listed until ${when}${check.expires_note ? `; ${e(check.expires_note)}` : ""}`;
+  return `book by ${when}${check.expires_note ? `; ${e(check.expires_note)}` : ""}`;
+};
 const dateNote = (check) => (check.expires_note ? ` (${e(check.expires_note)})` : "");
 
 export function isEnded(check, today = easternDate()) {
@@ -74,6 +80,8 @@ export function validateDealChecks(checks, { today = easternDate() } = {}) {
     if (validDate(check.observed_on) && check.observed_on > today) problems.push(`${where}: observed_on is in the future`);
     if (check.expires_on < check.observed_on) problems.push(`${where}: expires_on is before observed_on`);
     if (check.expires_note !== undefined && !(typeof check.expires_note === "string" && check.expires_note.length > 10)) problems.push(`${where}: expires_note must be a sentence when present`);
+    if (check.deadline_stated !== undefined && typeof check.deadline_stated !== "boolean") problems.push(`${where}: deadline_stated must be true or false when present`);
+    if (check.deadline_stated === false && !check.expires_note) problems.push(`${where}: a date that is not a stated deadline needs an expires_note saying why it is listed`);
     // A family total is published only when observed for a named party on named dates.
     if (check.family_total !== null) {
       const t = check.family_total || {};
@@ -128,7 +136,7 @@ function hubCard(check) {
             <p class="fresh-type">${e(check.category)} · ${e(check.operator)}</p>
             <h3><a href="./${e(check.id)}.html">${e(check.title)}</a></h3>
             <p>${e(check.headline)}</p>
-            <p class="deal-deadline"><strong>Book by:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
+            <p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
             <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
           </article>`;
 }
@@ -195,7 +203,7 @@ export function dealCheckPage(checks, check, today = easternDate()) {
   const ended = isEnded(check, today);
   const status = ended
     ? `<p class="deal-status deal-status-ended" role="status"><strong>This offer ended ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The terms below are what the official page said when we checked; they are kept for reference only.</p>`
-    : `<p class="deal-status"><strong>Book by ${e(longDate(check.expires_on))}</strong>${dateNote(check)}${check.expires_note ? `; official page checked ${e(longDate(check.observed_on))}` : `, per the official page checked ${e(longDate(check.observed_on))}`}.</p>`;
+    : `<p class="deal-status"><strong>${deadlineLabel(check)} ${e(longDate(check.expires_on))}</strong>${dateNote(check)}${check.expires_note ? `; official page checked ${e(longDate(check.observed_on))}` : `, per the official page checked ${e(longDate(check.observed_on))}`}.</p>`;
   const rows = check.terms.map(([label, value]) => `<tr role="row"><th scope="row" role="rowheader">${e(label)}</th><td role="cell">${e(value)}</td></tr>`).join("");
   const body = `    <main id="main">
       <section class="page-hero">

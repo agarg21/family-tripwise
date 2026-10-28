@@ -87,3 +87,28 @@ Extracted facts only (no page bodies). Every fact below was read on the operator
 | Residency | Not stated on this page | — |
 
 Published as a Family Deal Check with expires_on 2026-12-31 (no purchase deadline stated; last day the free rest-of-2026 visits can be used). Not published this run: Walt Disney World spring 2027 room offer (offer detail page not surfaced by search; the special-offers index was already read today, once-per-week rule).
+
+## Later sweep, 2026-10-28 evening (QUEUE G05)
+
+| Offer | Official URL | Fetched | Result |
+|---|---|---|---|
+| Margaritaville at Sea Black Friday Early Access | https://www.margaritavilleatsea.com/current-offers/black-friday-early-access | 2026-10-28 | robots.txt allows; 2026 edition (booking window stated with year). Published |
+| Universal Orlando Special 3-Day Ticket | https://www.universalorlando.com/web/en/us/tickets-packages/offers/ticketoffer | 2026-10-28 | robots.txt allows. Not published: page states no purchase deadline, no blockout dates (terms link not readable) and no child price, so no listing date can be shown |
+| Disneyland Resort fall room offer | disneyland.disney.go.com (es_us detail page; offers index) | 2026-10-28 | Detail page returned a 404 shell; offers index refused the fetcher. Not retried; not published |
+| Kalahari Resorts Book Early and Autumn Savings | kalahariresorts.com (two offer pages) | 2026-10-28 | Both refused the fetcher. Not retried; not published |
+
+### Margaritaville at Sea Black Friday Early Access
+| Field | Observed value |
+|---|---|
+| Booking window | "Available for new reservations only made from October 14, 2026 through November 3, 2026" (all offers on the page) |
+| 65% off | "65% off cruise fares for guests in the reservation party"; inventory-dependent; no coupon code; combinable with other current promotions unless otherwise stated; excludes current reservations, groups, charters, special sailings. Headline shows "60% Off 65% Off" (display conflict) |
+| 3rd & 4th guests | USD 0 fare "when there is a minimum of two paying guests in a stateroom"; select sailing dates, may be added or removed without notice; blackout dates may apply |
+| Taxes and fees | "In all fares, including those with $0 fare, taxes, fees and port expenses apply"; onboard charges not included; gratuities not mentioned |
+| Child ages | Not stated; guests of any age pay retail as the second guest unless another offer applies |
+| Deposit | USD 50 per person at booking on select sailing dates; balance due on final payment date; cancellation policy applies |
+| Other perks | Free stateroom selection within subcategory; free one-category upgrade on select sailings (web, Travel Specialist or partner agents; location premiums may apply); up to 55% off drinks, excursions, spa (no terms shown) |
+| Sailing dates, ships | Not stated for the offers |
+
+### Change vs previous
+- New check (not in the 2026-10-28 morning set). The growth inventory row 7 had only a third-party source and a 2025 official page; the 2026 official page is now read.
+- SeaWorld Fun Card: no fact changed; it now carries `deadline_stated: false`, so the hub card, page status line and social text say "Listed until December 31, 2026" instead of "Book by".

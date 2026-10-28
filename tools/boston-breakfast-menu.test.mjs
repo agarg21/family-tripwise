@@ -38,5 +38,5 @@ test("Generated public owner retains a single additive menu block and blank hypo
   assert.equal((page.match(/FT-IMP-104 menu start/g) || []).length, 1);
   assert.match(page, /form id="breakfast-budget-form" hidden/);
   assert.doesNotMatch(page, /id="breakfast-(?:adult|child|mornings)"[^>]*value=/);
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) || []).length, 47);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) || []).length, 48);
 });
