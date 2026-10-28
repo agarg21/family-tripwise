@@ -49,6 +49,8 @@ test("each dated GBP amount appears once on screen; provenance sits in collapsed
     const how=block.match(/<details class="how-checked">([\s\S]*?)<\/details>/)[1];
     assert.ok(how.includes("Official category source")&&how.includes("Dated booking-check source")&&how.includes("Taxes and extras")&&how.includes("Payment and holds"));
     assert.ok(block.includes('href="#comparison"'));
+    const row=h.match(new RegExp(`<tr data-room="${r.id}">[\\s\\S]*?</tr>`))[0];
+    for(const p of r.price.rates)assert.ok(row.includes(`${p.plan}: <strong>GBP ${Number(p.nightly_average).toFixed(2)}</strong>`),p.plan);
   }
   assert.match(h,/<h2>How we checked this page<\/h2><p>Research, not firsthand apartment reviews/);
 });

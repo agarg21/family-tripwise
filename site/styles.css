@@ -1501,6 +1501,7 @@ p.contributor-credit {
 .london-page .how-checked > summary { min-height: 44px; padding: 10px 0; }
 .london-page table.london-plans { min-width: 600px; }
 .london-plans :is(th, td):nth-child(2) { width: 160px; }
+.london-rate { display: block; }
 .london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
 .london-page figure { margin: 0; }
 .london-page figure img { width: 100%; height: auto; display: block; }
