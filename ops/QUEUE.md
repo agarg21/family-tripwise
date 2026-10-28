@@ -2,11 +2,9 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
-## G02 /deals/ hub + first Family Deal Checks
-open · M · owner: D11 Approved · gate: none
-A Family Deal Check is one page per deal: what the offer really means for a family of 4 (child ages, occupancy, blackout dates, minimum nights, fees, book-by and travel windows) and the family total on named dates only if observed on the official site; otherwise "check live" with the terms check. Every check has expires_on; expired checks leave the hub automatically and their page states "This offer ended <date>" (no redirect/noindex without approval).
-Start with 2–3 non-Disney offers from the research (e.g. Royal Caribbean kids promos, Great Wolf Lodge flash sale, Club Med/Beaches sale), verified on official pages.
-Acceptance: hub + ≥2 checks live, each terms row sourced and dated; no unobserved totals; Chromium QA; reviewer PASS.
+## G02b Deal pages polish (P3s only)
+open · S · owner: D11 Approved · gate: none
+Deal terms table goes display:block under 520 px (add row/cell roles or keep a real table); drop "per the official page" from the status line when expires_note is set. Ride along with the next deals change.
 
 ## G03 Social post queue and image cards (no posting)
 open · M · owner: D12 Approved · gate: none (G01 done 925b244)
@@ -20,7 +18,7 @@ Acceptance: dry-run mode tested end to end with a simulated platform; reviewer P
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
-First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/, and queue that day's posts: about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
+First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue that day's posts: about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
 
 ## G07 Privacy and Terms pages
 open · S · owner: O3 pending · gate: O3 Approved
