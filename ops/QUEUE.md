@@ -8,7 +8,7 @@ First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if 
 Carry P3s (from the 2026-10-28 G05 review): deal page status line and hub card still open with bold "Book by <date>" when expires_note says the date is not a stated deadline (use "listed until" wording there too); Great Wolf's year-only note now reads "listed until" in short lists (consider a separate note kind). From G03/G04: sentence split after "a.m." before a capitalized day name in social text; prune cards of ended items from site/social/cards. From G04b: Pinterest preflight proves boards:read only (a missing pins:write or Trial-tier app fails at POST and burns the entry; note 403 meaning in README); docs/plan/growth-engine-2026-10-28.md still lists Bluesky as phase 0. Disney spring 2027 room offer not yet checked (detail page not found by search; index read Oct 28, refetch after Nov 4).
 
 ## G07 Privacy and Terms pages
-open · S · owner: O3 pending · gate: O3 Approved
+open · S · owner: D13 Approved · gate: none (do next: the Meta and Pinterest apps are waiting on it)
 Required by the Meta, TikTok and Pinterest developer apps the owner is creating.
 
 
