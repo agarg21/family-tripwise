@@ -11,6 +11,7 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D7 Source access — Approved: official venue/hotel/operator pages at most once per URL per run and once per week, honoring robots.txt and Crawl-delay; keep dated extracted facts, not raw bodies; never fetch third-party review sites automatically. Garfield/Dana holds closed; Tripadvisor holds rejected.
 
 - D8 Search data (DataForSEO) — Approved by owner 2026-10-27: paid keyword/SERP research via request files in ops/research-requests/ run by GitHub Actions with the DATAFORSEO_AUTH_B64 secret; at most USD 0.50 per batch and USD 20 cumulative across receipts (USD 0.36 used before Oct 27). Raising the cap needs a new owner decision.
+- D9 Nov 8-13 price-sample batch (O1) — Approved by owner 2026-10-28: one batch across the 7 hotel pages and their CSVs replacing the November 8-13, 2026 samples with re-observed later-stay prices from official sources, or removing the amount where none can be observed; no URL or indexability changes. Due before 2026-11-13.
 
 ## Owner tasks (operator cannot do these)
 - T1 (done 2026-10-27, owner-approved, via owner's Chrome): sitemap resubmitted (Google read it immediately: 36 discovered, was 28); indexing requested for all 5 URLs. Original task: In Google Search Console, resubmit https://familytripwise.com/sitemap.xml and Request indexing for: /things-to-do/san-diego-with-kids.html, /things-to-do/san-diego-with-teens.html, /family-itinerary/new-york-city-with-kids.html, /where-to-stay/orlando-family-hotels.html, /where-to-stay/puerto-vallarta-family-resorts.html.
@@ -18,4 +19,4 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T2 (done 2026-10-28, by owner): YouTube impersonation report submitted against @FamilyTripwise (channel UCL8YHu5h_XiSTQhZJuCDmtA; 5 subscribers, 1 Short, joined 2026-08-23). Evidence: docs/research/family-tripwise-branded-search-youtube-conflict-2026-09-11.md. Do not re-report; note any channel change (removed, renamed, disclaimer) in runs.
 
 ## Open questions
-- O1 (2026-10-28) Approve one batch (7 hotel pages + CSVs) to replace the November 8-13, 2026 price samples with re-observed later stays, or remove amounts where none can be observed, before Nov 13? Recommendation: yes; otherwise those pages show past-stay prices from Nov 14. Reply "O1 Approved" or "O1 Rejected".
+(none)
