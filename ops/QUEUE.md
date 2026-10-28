@@ -2,12 +2,12 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 
 
-## Q09b Lodging-page readability fix (remaining slice)
+## Q09c Lodging-page readability fix (remaining slice)
 open · M · owner: D4e Approved · gate: none
-Done in Q09a (25d73a7): 0 run-together tokens on the six pages (tools/readable-text.test.mjs).
-Remaining: price blocks repeated 3 times, provenance strings in body copy; CSV notes still use collapsed spacing (apply readableText to CSV text columns, keeping values).
+Done: Q09a (25d73a7) 0 run-together tokens on the six pages; Q09b (228eaac) Boston/DC/PV hotel CSV text cells spaced (readableComparisonCsv; JSON/URL cells unchanged).
+Remaining: price blocks repeated 3 times, provenance strings in body copy; boston-cooking-dining-five.csv not yet spaced (wrap bostonDiningCsv).
 Files: generators for Boston, DC, Cancun, PV, London, Orlando hotels.
-Acceptance: each price appears once in the HTML; provenance moves into a collapsed "How we checked" block; summary per property ≤4 lines; run-together test stays at 0.
+Acceptance: each price appears once in the HTML; provenance moves into a collapsed "How we checked" block; summary per property ≤4 lines; run-together tests stay at 0.
 
 ## Q11 Self-host resized hero images
 open · S · owner: D4d Approved · gate: none
