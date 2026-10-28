@@ -4,10 +4,9 @@ Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWN
 
 ## Q09c Lodging-page readability fix (remaining slice)
 open · M · owner: D4e Approved · gate: none
-Done: Q09a (25d73a7) 0 run-together tokens on the six pages; Q09b (228eaac) Boston/DC/PV hotel CSV text cells spaced (readableComparisonCsv; JSON/URL cells unchanged).
-Remaining: price blocks repeated 3 times, provenance strings in body copy; boston-cooking-dining-five.csv not yet spaced (wrap bostonDiningCsv).
-Files: generators for Boston, DC, Cancun, PV, London, Orlando hotels.
-Acceptance: each price appears once in the HTML; provenance moves into a collapsed "How we checked" block; summary per property ≤4 lines; run-together tests stay at 0.
+Done: Q09a (25d73a7) spacing on six pages; Q09b (228eaac) hotel CSVs spaced; Q09c-Boston (cb5745a) Boston dated amounts shown once, per-property and page "How we checked" collapsed blocks (details.how-checked, CSS in washington-dc-comparison.css), dining CSV spaced.
+Remaining: same pattern for DC, PV, Cancun, London, Orlando hotels (one page per run; reuse details.how-checked). Boston P3s to fold in: h2 inside summary (consider heading outside details), add ?v= to washington-dc-comparison.css link, tall Cancellation/meals rows at 390 px.
+Acceptance: each price appears once in the visible HTML; provenance in a collapsed "How we checked" block; summary per property ≤4 lines; run-together tests stay at 0.
 
 ## Q11 Self-host resized hero images
 open · S · owner: D4d Approved · gate: none
