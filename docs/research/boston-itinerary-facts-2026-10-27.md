@@ -1,0 +1,29 @@
+# Boston itinerary with kids: dated official facts (2026-10-27)
+
+Queue item Q15b. Each row is an extracted fact from one official page read on 2026-10-27 (America/New_York, evening); raw page bodies are not kept. robots.txt was checked for each host before reading. "Change vs previous" compares with earlier project records where one exists.
+
+## New-URL check (AGENTS.md rule)
+
+- Distinct user job: two representative US queries, "boston itinerary with kids" and "3 days in boston with kids itinerary" (live search 2026-10-27 evening), both return dedicated day-by-day family itinerary pages (mommypoppins "3 days in Boston with kids", Fora "Boston: 48 hours with kids", twisttravelmag one-day itinerary, viewboston family itinerary, somewhatsimple, endlesstravelplans, gocity 3-day itinerary). Same page type and job in both; it is a day-sequencing job, not the room/base/budget job owned by /where-to-stay/boston-family-hotels.html.
+- Material demand: a full first page of dedicated itinerary pages from family and travel publishers for both queries; no keyword-volume estimate was collected (no paid tool calls).
+- Maintainable evidence layer: five official venue pages plus two FAQ pages and one MBTA page; the generator holds each fact with its source and observation date, so a refresh is a data edit.
+- No clean fit in an existing URL: the Boston hotels page answers which room and base; a three-day route there would mix two decisions. Boston has no things-to-do page.
+
+## Facts observed 2026-10-27
+
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| https://www.mos.org/visit/hours | Exhibit Halls open daily 9:00-17:00; closed Thanksgiving and Christmas; 14:00 early close the day before Thanksgiving and Christmas Eve. Adult USD 33, child 3-11 USD 28, senior 60+ USD 29, under 3 free. Timed tickets no longer required (select date). Planetarium, Omni and 4-D add-ons USD 6 (member add-on price shown as USD 2 and USD 5 in two places). | First project observation. |
+| https://www.mos.org/visit/faq | Same-day re-entry with confirmation or hand stamp. Food from home eaten outside on front plaza or picnic tables behind the Museum; not in Exhibit Halls. Strollers available first come, first served (fee not stated). Lockers for a small fee. | First project observation. |
+| https://bostonchildrensmuseum.org/visit/ (Crawl-delay 10 honored: one request) | Open Wednesday-Monday 9:00-16:00; closed Tuesdays; opens 10:00 the first Saturday of each month. Adults USD 24, children 1-15 USD 24, infants under 12 months free. Advance/online tickets highly recommended. Re-entry, food, stroller and locker rules not stated on this page. South Station (Red Line, Silver Line SL1/2/3) then short walk. Parking validation at four garages with a physical gate ticket. Holiday list on the page is yearless and not reproduced. Header banner read "Museum Closed Today" (a Tuesday). | Hours and USD 24 age 1+ price match the 2026-10-09 record (boston-museum-return-policy-2026-10-09.md); re-entry still not stated. |
+| https://www.neaq.org/visit/ | Fall hours weekdays 9:00-17:00, Saturday-Sunday 9:00-18:00 (season dates not stated). Book ahead; weekends and holidays often sell out. Atlantic harbor seals temporarily off exhibit. Prices not stated. | First project observation. |
+| https://www.neaq.org/visit/frequently-asked-questions/ | Timed ticketing; advance reservation strongly recommended. Same-day re-entry allowed (may be asked to show ticket). Strollers welcome but strongly recommended to leave at home or in car; none to borrow or rent. Own food at outdoor blue picnic tables; only water in exhibit areas. Lockers USD 5 small, USD 7 large. Prices not stated. | First project observation. |
+| https://tickets.neaq.org/ | Page rendered only "Loading..."; no prices readable. Not retried. Aquarium price = unknown. | First attempt. |
+| https://ussconstitutionmuseum.org/hours-admission/ (Crawl-delay 10 honored: one request) | Museum open daily 9:30-17:00; closed Thanksgiving, Christmas, New Year's Day; 14:00 close Dec 24. Suggested admission: USD 25 pay-it-forward, USD 15 standard, free-USD 10 reduced. Ship open Wednesday-Sunday 10:00-16:00; closed MLK Day, Thanksgiving, Christmas, New Year's Day; free, first come, first served. Security screening; federal or state photo ID required, under 18 no ID. Strollers not allowed on board; left on the pier. | First project observation. |
+| https://swanboats.com/plan-your-visit/ | "Closed for the season. See you in April 2027." 2026 season April 18-September 7; 10:00-16:00 to June 20, 10:00-17:00 June 21-Sept 7. Ride 10-15 minutes. Adult USD 4.75, child 2-15 USD 3.25, senior 65+ USD 4.25, under 2 free. Cash or card; no reservations for individuals. No rides in rain, high winds or extreme heat. Strollers fold onto boat or stay on unsecured patio. | First project observation. |
+| https://mycharlie.mbta.com/reduced/free | Children age 11 and under ride free. Children-per-adult limit not stated. Groups of 10+ children must register via field-trip form. | Matches the 2026-10-03 record (boston-family-transit-budget-2026-10-03.md). |
+| https://www.mbta.com/robots.txt | Blocks ClaudeBot and other AI agents site-wide; mbta.com/fares not read. Adult fare = unknown; page links to it for the reader. | Consistent with the 2026-10-03 robots denial. |
+
+## Not claimed
+
+No walking times, stroller route practicality, queue lengths, ticket availability on any date, hotel-to-venue return times, Aquarium prices, MBTA adult fares or firsthand experience. The Children's Museum has no stated re-entry rule, so the page does not plan a same-ticket return. Rest blocks are planning estimates. Swan Boat 2026 season dates and fares are kept here only; the page shows the boats as closed and does not republish past-season fares. "Younger children" for the Children's Museum is an editorial routing label, not an operator age rule.

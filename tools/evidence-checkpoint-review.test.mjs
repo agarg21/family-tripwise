@@ -77,10 +77,10 @@ test('journal: active writer and corrupt result export fail closed',()=>withDir(
   await rm(join(dir,'writer.lock'));await runCheckpointBatch(f.plan,0,dir,{collect:true,executeSource:async s=>({...s.prior,url:s.url,state:'text-unchanged'})});
   const path=join(dir,'00000001.result.json'),r=JSON.parse(await readFile(path));r.source.reason={raw_body:'private'};await writeFile(path,JSON.stringify(r));await assert.rejects(()=>checkpointEvidence(f.plan,dir));
 }));
-test('journal: current508 source adapter (dead Coronado ferry-info URL removed, DC itinerary NPS and DISCOVERY tickets sources added 2026-10-27) covers all canonical/model records without collection',()=>withDir(async dir=>{
+test('journal: current509 source adapter (dead Coronado ferry-info URL removed, DC itinerary NPS, DISCOVERY tickets and Boston itinerary MBTA sources added 2026-10-27) covers all canonical/model records without collection',()=>withDir(async dir=>{
   const config=JSON.parse(await readFile(new URL('../ops/evidence-watch.json',import.meta.url))),previous=JSON.parse(await readFile(new URL('../ops/evidence-audits/2026-10-07.json',import.meta.url)));
   const plan=await currentPlan({today:'2026-10-13',notBefore:'2026-10-14',config,previous});await initializeCheckpoint(plan,dir);
-  const r=await reviewCheckpoint({directory:dir,previous,config});assert.equal(r.summary.sources,508);assert.equal(r.summary.canonical_pages,37);assert.equal(r.summary.prior_access_holds,154);assert.equal(r.summary.deferred_sources,354);assert.equal(r.standard_audit_ready,false);assert.equal(r.summary.model_records_checked,modelRecords().length);
+  const r=await reviewCheckpoint({directory:dir,previous,config});assert.equal(r.summary.sources,509);assert.equal(r.summary.canonical_pages,38);assert.equal(r.summary.prior_access_holds,154);assert.equal(r.summary.deferred_sources,355);assert.equal(r.standard_audit_ready,false);assert.equal(r.summary.model_records_checked,modelRecords().length);
   const prior=clone(previous),source=prior.sources.find(s=>s.state==='text-unchanged'),url=source.url;prior.sources[prior.sources.indexOf(source)]={url,pages:source.pages,state:'deferred-limit',last_attempt_at:null};
   const nullable=await currentPlan({today:'2026-10-13',notBefore:'2026-10-14',config,previous:prior});assert.equal(nullable.sources.find(s=>s.url===url).prior.last_attempt_at,null);
   delete prior.sources.find(s=>s.url===url).last_attempt_at;

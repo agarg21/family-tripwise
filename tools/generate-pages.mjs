@@ -12,6 +12,7 @@ import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hot
 import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import { writeLondonFamilyHotelsPage } from "./page-generation/london-family-hotels-page.mjs";
 import { washingtonDcItineraryPage, dcItineraryPath } from "./page-generation/washington-dc-itinerary-page.mjs";
+import { bostonItineraryPage, bostonItineraryPath } from "./page-generation/boston-itinerary-page.mjs";
 import { writeSitemap } from "./page-generation/sitemap.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
@@ -577,6 +578,7 @@ writeSite("downloads/new-york-city-family-hotels.csv", newYorkCityHotelCompariso
 writeSite("where-to-stay/san-antonio-family-hotels.html", sanAntonioFamilyHotelPage());
 writeSite("about.html", aboutPage());
 writeSite(dcItineraryPath, washingtonDcItineraryPage());
+writeSite(bostonItineraryPath, bostonItineraryPage());
 writeSite("contributors/miles-rowan.html", milesProfilePage());
 writeCancunResortPage(writeSite);
 writeOrlandoSuitePage(writeSite);
@@ -793,6 +795,7 @@ const sitemapUrls = [
   "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
   `https://familytripwise.com/${dcItineraryPath}`,
   "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
+  `https://familytripwise.com/${bostonItineraryPath}`,
   "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html",
   "https://familytripwise.com/where-to-stay/london-family-hotels.html",
   "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",

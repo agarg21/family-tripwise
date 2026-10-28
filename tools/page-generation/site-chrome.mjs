@@ -63,7 +63,7 @@ export const destinations = [
     ]
   },
   { name: "Washington, DC", short: "Washington DC", guides: [["where-to-stay/washington-dc-family-hotels.html", "Family hotels"], ["family-itinerary/washington-dc-with-kids.html", "Family itinerary"]], similar: ["Boston", "New York City"] },
-  { name: "Boston", guides: [["where-to-stay/boston-family-hotels.html", "Family hotels"]], similar: ["Washington, DC", "New York City"] },
+  { name: "Boston", guides: [["where-to-stay/boston-family-hotels.html", "Family hotels"], ["family-itinerary/boston-with-kids.html", "Family itinerary"]], similar: ["Washington, DC", "New York City"] },
   { name: "London", short: "London, UK", guides: [["where-to-stay/london-family-hotels.html", "Family hotels and apartments"]], similar: ["New York City", "Boston"] },
   { name: "Cancun", guides: [["where-to-stay/cancun-family-resorts.html", "Family resorts"]], similar: ["Puerto Vallarta"] },
   { name: "Puerto Vallarta", guides: [["where-to-stay/puerto-vallarta-family-resorts.html", "Family resorts"]], similar: ["Cancun"] }
