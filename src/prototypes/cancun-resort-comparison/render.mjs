@@ -27,10 +27,14 @@ const priceHtml = record => record.price
 const priceText = record => record.price
   ? `${priceLabel(record.price)}\nBasis: ${pastStayPrefix(record.price)}${record.price.basis}\nFees: ${record.price.fees}\nPrice observed: ${record.price.observedOn}; check live rates before booking.`
   : "Exact-room nightly price: not verified. Request a dated quote for your party.";
+// Q09c: each dated amount is shown once on screen (the six-room table); full provenance sits in one collapsed "How we checked" block per record.
+const priceBasisId = record => `${record.id}-price-basis`;
 const quickPriceHtml = record => record.price?.scan
-  ? `<div class="quick-price-screen"><p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(pastStayPrefix(record.price) + record.price.scan.basis)}</p><p>${esc(record.price.scan.fees)}</p><p class="source-date">Price observed ${esc(record.price.observedOn)}; check live rates before booking. Not a live quote.</p>${sources(record.price.sourceIds, "Price source")}<details><summary>Complete price basis and booking checks</summary>${priceHtml(record)}${list(record.room.checks)}</details></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
+  ? `<div class="quick-price-screen"><p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(pastStayPrefix(record.price) + record.price.scan.basis)}</p><p>${esc(record.price.scan.fees)}</p><p class="source-date">Price observed ${esc(record.price.observedOn)}; check live rates before booking. Not a live quote.</p><p><a href="#${esc(priceBasisId(record))}">How we checked this price</a></p></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
   : `${priceHtml(record)}${list(record.room.checks)}`;
-
+const overviewPriceHtml = record => record.price?.scan
+  ? `<p>Dated price sample, party, stay dates and fee basis: <a href="#quick-comparison">six-room table</a>.</p><details class="how-checked" id="${esc(priceBasisId(record))}"><summary>How we checked</summary><p>${esc(pastStayPrefix(record.price) + record.price.basis)}</p><p>${esc(record.price.fees)} Price observed ${esc(record.price.observedOn)}; check live rates before booking.</p>${sources(record.price.sourceIds, "Price source")}</details>`
+  : priceHtml(record);
 const csvCell = value => {
   const plain = String(value ?? "").replaceAll(/[\r\n\t]+/g, " ");
   const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
@@ -110,7 +114,7 @@ export function renderOverview() {
     <header><h3>${esc(record.hotel)}</h3><p class="area">${esc(record.area)}</p><a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(record.hotel + " Mexico")}">Map location</a></header>
     <div><h4>Room</h4><p><strong>${esc(record.room.category)}</strong></p><p class="key-fact">${record.room.capacityStatus === "disputed" ? esc(record.room.capacityConflict ?? "Capacity disputed: 4 versus 5") : `Published maximum: ${record.room.maximum}`}</p><p>${esc(record.room.beds)}</p>${list(record.room.checks)}${sources(record.room.sourceIds, "Official room details")}</div>
     <div><h4>Club ages</h4>${record.clubs.programs.length ? list(record.clubs.programs.map(program => `${program.min}-${program.max}: ${program.name}${program.parentRequired ? "; parent must stay" : ""}${program.registration ? "; registration required" : ""}${program.pottyRequired ? "; fully toilet-trained" : ""}`)) : "<p>Exact club-age rules: unknown in this record.</p>"}${clubClockHtml(record.clubs)}${sources(record.clubs.sourceIds, record.clubs.programs.length ? "Official club rules" : "Official pages checked")}${priorClubSources(record.clubs)}<details><summary>Admission checks</summary>${list(record.clubs.checks)}</details></div>
-    <div><h4>Price, transfers &amp; extra costs</h4>${priceHtml(record)}${record.transfers.rule === "direct-offer" ? `<p>Round-trip ${esc(record.transfers.airport)} airport offer: minimum ${record.transfers.minimumNights} nights.</p>` : ""}${list(record.transfers.checks)}${sources(record.transfers.sourceIds, record.transfers.rule === "unknown" ? "Official page checked" : "Official transfer terms")}${list(record.extras.checks)}${sources(record.extras.sourceIds, "Official extras")}<p><strong>Stay total: unknown for your dates and party.</strong> Availability is not confirmed.</p></div>
+    <div><h4>Price, transfers &amp; extra costs</h4>${overviewPriceHtml(record)}${record.transfers.rule === "direct-offer" ? `<p>Round-trip ${esc(record.transfers.airport)} airport offer: minimum ${record.transfers.minimumNights} nights.</p>` : ""}${list(record.transfers.checks)}${sources(record.transfers.sourceIds, record.transfers.rule === "unknown" ? "Official page checked" : "Official transfer terms")}${list(record.extras.checks)}${sources(record.extras.sourceIds, "Official extras")}<p><strong>Stay total: unknown for your dates and party.</strong> Availability is not confirmed.</p></div>
   </article>`).join("\n");
 }
 

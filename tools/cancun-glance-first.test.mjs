@@ -31,8 +31,9 @@ test('native scope keeps all room and section targets and does not change indexa
   const css=read('site/cancun-resorts.css');assert.match(css,/\.cancun-page \.page-intro h1 \{ font-size: 36px; letter-spacing: 0/);
   assert.match(css,/\.cancun-page \.page-intro h1 \{ font-size: 30px/);
 });
-test('compact scan keeps party, stay, fee and original full-basis disclosures',()=>{
-  const h=renderQuickComparison();assert.equal((h.match(/<summary>Complete price basis and booking checks<\/summary>/g)||[]).length,5);
+test('compact scan keeps party, stay, fee and links to the full-basis disclosure',()=>{
+  const h=renderQuickComparison();assert.doesNotMatch(h,/<details/);
+  for(const r of cancunEvidence.records.filter(r=>r.price))assert.ok(h.includes(`<a href="#${r.id}-price-basis">How we checked this price</a>`),r.id);
   for(const r of cancunEvidence.records.filter(r=>r.price)){
     assert.ok(r.price.scan.basis);assert.ok(r.price.scan.fees);
     assert.ok(h.includes(r.price.observedOn));assert.ok(h.includes(r.price.scan.basis.replaceAll('&','&amp;').replaceAll("'",'&#39;')));
@@ -46,4 +47,22 @@ test('default print has full original price evidence without opening screen deta
   for(const [i,r]of priced.entries()){assert.doesNotMatch(blocks[i],/<details/);assert.ok(blocks[i].includes(esc(r.price.basis)));assert.ok(blocks[i].includes(esc(r.price.fees)));for(const c of r.room.checks)assert.ok(blocks[i].includes(esc(c)));}
   const css=read('site/cancun-resorts.css');assert.match(css,/\.cancun-page \.quick-price-print \{ display: none; \}/);
   assert.match(css,/@media print \{\s*\.cancun-page \.quick-price-screen \{ display: none; \}\s*\.cancun-page \.quick-price-print \{ display: block; \}/);
+});
+
+test('Q09c Cancun readability: each dated amount shown once on screen; full price basis in one collapsed How we checked block per record',()=>{
+  const h=cancunResortPage();
+  const visible=h.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<details[\s\S]*?<\/details>/g,'').replace(/<div class="quick-price-print">[\s\S]*?<\/div>/g,'').replace(/<[^>]+>/g,' ');
+  const counts={};for(const a of visible.match(/USD \d[\d,]*(?:\.\d+)?/g))counts[a]=(counts[a]||0)+1;
+  for(const [a,n] of Object.entries(counts))assert.equal(n,1,a);
+  const o=renderOverview();
+  for(const r of cancunEvidence.records.filter(r=>r.price)){
+    const art=o.match(new RegExp(`<article class="resort-row" id="${r.id}">[\\s\\S]*?</article>`))[0];
+    const blocks=art.match(/<details class="how-checked" id="[^"]+"><summary>How we checked<\/summary>[\s\S]*?<\/details>/g)||[];
+    assert.equal(blocks.length,1,r.id);assert.ok(blocks[0].includes(`id="${r.id}-price-basis"`));
+    assert.ok(blocks[0].includes(esc(r.price.basis)));assert.ok(blocks[0].includes(esc(r.price.fees)));assert.ok(blocks[0].includes(r.price.observedOn));
+    assert.doesNotMatch(art.replace(/<details[\s\S]*?<\/details>/g,''),/USD \d/);
+  }
+  assert.match(o,/<article class="resort-row" id="ziva-ocean-view-double">[\s\S]*?Exact-room nightly price: not verified/);
+  assert.match(h,/cancun-resorts\.css\?v=ft-q09c3/);
+  assert.match(read('site/cancun-resorts.css'),/\.cancun-page \.how-checked > summary \{ min-height: 44px;/);
 });

@@ -4,6 +4,10 @@ import { childFields, renderResults } from "./render.mjs";
 import { setupSharing } from "./share.mjs";
 
 setupSharing({ root: document, clipboard: navigator.clipboard });
+// Open a "How we checked" block when a price link targets it.
+const openTarget = () => { const target = location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null; if (target instanceof HTMLDetailsElement) target.open = true; };
+window.addEventListener("hashchange", openTarget);
+openTarget();
 
 const form = document.querySelector("#family-form");
 const fields = document.querySelector("#child-fields");
