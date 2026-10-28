@@ -283,7 +283,7 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
   const plan = planPosts({ queue, now, platforms, claimedNames: store.claimedNames(date) });
   for (const { platform, entry } of plan) {
     const key = receiptKey(date, entry.id, platform);
-    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page };
+    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page, link: entry.platforms[platform]?.link ?? null };
     const bad = checkVariant(platform, entry);
     if (bad.length) { report.skipped.push({ key, reason: bad.join("; ") }); log(`Skip ${key}: ${bad.join("; ")}`); continue; }
     if (!killSwitchOpen(store.ownerText())) { log("Kill switch closed mid-run; stopping."); break; }

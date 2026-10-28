@@ -172,6 +172,17 @@ test("nothing is claimed when the page or card is not live, or the queue is inva
   assert.equal(receipts().length, 0);
 });
 
+test("Pinterest skips (unclaimed) when only its evergreen link target is down", async () => {
+  const { store, receipts } = remoteRepo();
+  const guideDown = async (url, init) => (String(url).startsWith(`${SITE}/where-to-stay/fixture-guide.html`) ? new Response("", { status: 404, headers: { "content-type": "text/html" } }) : simulatedFetch()(url, init));
+  const r = await go(store, at("08:00"), { fetch: guideDown });
+  assert.deepEqual(r.posted.map((p) => p.key.split("--")[1]).sort(), ["facebook.json", "instagram.json", "threads.json"]);
+  assert.deepEqual(r.skipped.map((s) => s.key), [receiptKey("2026-11-05", "2026-11-05-morning", "pinterest")]);
+  const recs = receipts();
+  assert.ok(!recs.some((x) => x.platform === "pinterest"));
+  assert.equal(recs.find((x) => x.platform === "threads").link, queue.entries[0].platforms.threads.link, "receipts record the posted link");
+});
+
 test("variants with a URL in Threads text, a non-site link or a bad Pinterest title/alt are refused", () => {
   const e = entry("x", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00");
   assert.deepEqual(checkVariant("threads", e), []);
