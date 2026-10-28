@@ -1592,3 +1592,4 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .fresh-jump a { display: inline-block; margin: 2px 10px 2px 0; }
 .fresh-city h2 { margin-bottom: 14px; }
 .fresh-guide-link { margin-top: 14px; color: var(--muted); }
+.site-header .header-this-week-nav { flex: none; }

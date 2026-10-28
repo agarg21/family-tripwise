@@ -117,7 +117,7 @@ export function thisWeekPage(items, today = easternDate()) {
   const current = currentItems(items, today);
   const byCity = (name) => current.filter((item) => item.city === name);
   const withItems = destinations.filter((d) => byCity(d.name).length);
-  const title = "Family Events and Deadlines This Week: Holiday Lights, Lotteries and Tickets";
+  const title = "Family Events and Deadlines This Week, by City | Family Tripwise";
   const description = "Dated family events, ticket deadlines and news by city, each checked on its official page with the date we checked it. Items drop off when they end.";
   const upcoming = current.slice(0, 6).map((item) => `<li><a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-upcoming-meta">(${e(item.city)}, ${e(longDate(item.sort_on))})</span></li>`).join("");
   const jump = withItems.map((d) => `<a href="#${citySlug(d.name)}">${e(d.short || d.name)} (${byCity(d.name).length})</a>`).join(" ");
