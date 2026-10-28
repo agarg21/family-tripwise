@@ -2,10 +2,6 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
-## G02b Deal pages polish (P3s only)
-open · S · owner: D11 Approved · gate: none
-Deal terms table goes display:block under 520 px (add row/cell roles or keep a real table); drop "per the official page" from the status line when expires_note is set. Ride along with the next deals change.
-
 ## G04 Posting workflow (GitHub Actions, per platform as secrets appear)
 open · M · owner: D12 Approved · gate: none (G03 done 9e7f1f1)
 Input: ops/social-queue/YYYY-MM-DD.json (see its README; post only before expires_at, links outside Bluesky/Threads text, YouTube entries need video). G03 P3s to carry: sentence split after "a.m." before a capitalized day name; prune cards of ended items from site/social/cards.
@@ -15,6 +11,7 @@ Acceptance: dry-run mode tested end to end with a simulated platform; reviewer P
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
 First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>` then `node tools/social-cards.mjs <date>`; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
+Carry P3s (from the 2026-10-28 G05 review): deal page status line and hub card still open with bold "Book by <date>" when expires_note says the date is not a stated deadline (use "listed until" wording there too); Great Wolf's year-only note now reads "listed until" in short lists (consider a separate note kind). Disney spring 2027 room offer not yet checked (detail page not found by search; index read Oct 28, refetch after Nov 4).
 
 ## G07 Privacy and Terms pages
 open · S · owner: O3 pending · gate: O3 Approved
