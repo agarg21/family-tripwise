@@ -74,7 +74,11 @@ test("lodging CSV downloads get display spacing in text cells only; URLs, amount
       const before = rawRows[r][c];
       if (["Category source", "Price source"].includes(comparisonHeadings[c]) || !/\s/.test(before) || /^[{[]/.test(before) || /https?:/.test(before))
         assert.equal(value, before, `${file} ${comparisonHeadings[c]} must be unchanged`);
-      else assert.equal(value.replace(/[\s-]/g, ""), before.replace(/[\s-]/g, ""), `${file} ${comparisonHeadings[c]} may change spacing only`);
+      else {
+        // Only spaces may change, plus the two documented COMPOUNDS hyphens (all-fee, check-in).
+        const norm = text => text.replace(/\s/g, "").replaceAll("all-fee", "allfee").replaceAll("check-in", "checkin");
+        assert.equal(norm(value), norm(before), `${file} ${comparisonHeadings[c]} may change spacing only`);
+      }
       if (!/^[{[]/.test(value)) assert.deepEqual(runTogetherTokens(value), [], `${file} ${comparisonHeadings[c]}`);
     }));
   }
