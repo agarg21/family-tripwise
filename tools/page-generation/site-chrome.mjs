@@ -75,6 +75,10 @@ function escHtml(value) {
   return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 }
 
+function citySlugFor(name) {
+  return String(name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 function byName(name) {
   const found = destinations.find((d) => d.name === name);
   if (!found) throw new Error(`site-chrome: unknown destination ${name}`);
@@ -100,7 +104,7 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
       return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short || d.name)}</a>`;
     })
     .join("");
-  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav class="site-nav" aria-label="Destination guides">${links}</nav></header>`;
+  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav class="site-nav" aria-label="Destination guides">${links}</nav><a class="header-this-week" href="${prefix}this-week/"${current === "this-week/index.html" ? ' aria-current="page"' : ""}>This week</a></header>`;
 }
 
 export function relatedGuides(prefix, current) {
@@ -115,6 +119,7 @@ export function relatedGuides(prefix, current) {
   if (similar.length) {
     blocks.push(`<h2${siblings.length ? "" : ' id="related-guides-title"'}>Similar family stay guides</h2><ul>${similar.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
   }
+  blocks.push(`<p class="related-this-week"><a href="${prefix}this-week/#${citySlugFor(here.name)}">${escHtml(here.short || here.name)} family events and deadlines this week</a></p>`);
   return `<nav class="related-guides" aria-labelledby="related-guides-title">${blocks.join("")}</nav>`;
 }
 

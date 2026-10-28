@@ -11,7 +11,7 @@ const links = (html, base) => [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)]
   .map(url => normalize(`${url.origin}${url.pathname}`));
 
 test("all canonical pages have another canonical page linking to them and are reachable from home", () => {
-  const graph = new Map(urls.map(url => [url, links(read(new URL(url).pathname.slice(1) || "index.html"), url)]));
+  const graph = new Map(urls.map(url => [url, links(read(new URL(url).pathname.endsWith("/") ? `${new URL(url).pathname.slice(1)}index.html` : new URL(url).pathname.slice(1)), url)]));
   for (const url of urls) assert.ok([...graph].some(([from, to]) => from !== url && to.includes(url)), `Orphan: ${url}`);
   const seen = new Set([`${origin}/`]);
   const queue = [...seen];

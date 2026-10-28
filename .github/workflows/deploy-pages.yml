@@ -8,6 +8,9 @@ on:
       - "site/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
+  schedule:
+    # Daily just after midnight America/New_York (05:17 UTC) so /this-week/ items drop after their last date.
+    - cron: "17 5 * * *"
 
 permissions:
   contents: read
@@ -32,6 +35,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Refresh dated items (drops expired /this-week/ items)
+        run: node tools/this-week.mjs
 
       - name: Validate site and focused tests
         run: |

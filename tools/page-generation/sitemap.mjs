@@ -11,7 +11,7 @@ const origin = "https://familytripwise.com/";
 
 export function sitePathForUrl(url) {
   const path = url.slice(origin.length);
-  return path === "" ? "index.html" : path;
+  return path === "" || path.endsWith("/") ? `${path}index.html` : path;
 }
 
 export function sha256(bytes) {

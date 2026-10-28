@@ -9,7 +9,7 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const site = join(root, "site");
 const base = "https://familytripwise.com/";
 const sitemap = readFileSync(join(site, "sitemap.xml"), "utf8");
-const sitemapPaths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].slice(base.length) || "index.html");
+const sitemapPaths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].slice(base.length) || "index.html").map((p) => (p.endsWith("/") ? `${p}index.html` : p));
 
 function htmlFiles(dir) {
   return readdirSync(dir).flatMap((name) => {
@@ -20,15 +20,20 @@ function htmlFiles(dir) {
 
 function resolveHref(href, fromPath) {
   const clean = href.split("#")[0].split("?")[0];
-  if (!clean || /^[a-z]+:/i.test(clean)) return clean.startsWith(base) ? clean.slice(base.length) || "index.html" : null;
+  if (!clean || /^[a-z]+:/i.test(clean)) {
+    if (!clean.startsWith(base)) return null;
+    const path = clean.slice(base.length) || "index.html";
+    return path.endsWith("/") ? `${path}index.html` : path;
+  }
   const resolved = clean.startsWith("/") ? clean.slice(1) : posix.normalize(posix.join(posix.dirname(fromPath), clean));
-  return resolved === "" || resolved === "." ? "index.html" : resolved;
+  if (resolved === "" || resolved === "." || resolved === "./") return "index.html";
+  return clean.endsWith("/") ? `${resolved.replace(/\/$/, "")}/index.html` : resolved;
 }
 
 const pages = Object.fromEntries(htmlFiles(site).map((f) => [relative(site, f).split("\\").join("/"), readFileSync(f, "utf8")]));
 
 test("every guide in the sitemap is registered once in the shared chrome", () => {
-  const guides = sitemapPaths.filter((p) => !["index.html", "about.html", "contributors/miles-rowan.html"].includes(p));
+  const guides = sitemapPaths.filter((p) => !["index.html", "about.html", "contributors/miles-rowan.html", "this-week/index.html"].includes(p));
   assert.deepEqual([...allGuidePaths].sort(), [...guides].sort());
   assert.equal(new Set(allGuidePaths).size, allGuidePaths.length);
 });
