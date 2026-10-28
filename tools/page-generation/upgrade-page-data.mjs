@@ -1804,7 +1804,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>Las Vegas itinerary with kids</h1>", "<h1>Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>A starter family itinerary for Las Vegas with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose a trip length, protect one reset, and give each day one main job. Then swap the anchor for age, heat, weather, and hotel location.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 23, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 23, 2026; DISCOVERY Children's Museum hours and admission checked October 27, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transport, weather, ticket, and minor policy for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
@@ -1820,6 +1820,23 @@ export const itineraryPages = {
       ["Choose the base type", "Compare Center Strip, South Strip, suite, west-side, and Downtown bases before assuming the map reflects the daily effort.", "../where-to-stay/las-vegas-with-kids.html", "Compare Las Vegas stay bases"],
       ["Compare named hotels", "Use the ten-hotel page for rough nightly totals, room setup, pool role, official facts, recent online-review themes, and maps.", "../where-to-stay/las-vegas-family-hotels.html", "Compare Las Vegas family hotels"]
     ],
+    answerBox: {
+      id: "las-vegas-itinerary-answer",
+      checked: "October 27, 2026",
+      lines: [
+        ["The plan", "1 day: one classic visual plus one anchor. 2 days: a resort/Strip day plus one child-chosen anchor day. 3 days: soft arrival, classic day, contrast day."],
+        ["Main catch", "DISCOVERY Children's Museum, the main younger-child anchor, is closed most Mondays and opens at noon on Sundays, so do not plan it for a Sunday morning, or a Monday unless it falls in a school break the museum lists."],
+        ["Cost", "DISCOVERY is USD 20 per person age 1 and up (USD 15 with a Nevada ID); everyone age 1 and up needs a ticket. Other anchors are ticketed separately; check each price for your date."]
+      ],
+      factsTitle: "DISCOVERY Children's Museum hours and entry, checked October 27, 2026",
+      factsNote: "Official facts as published on the museum's own pages on October 27, 2026. Other venue facts on this page date from the July 23, 2026 source check. Confirm hours for your exact date.",
+      facts: [
+        { label: "Hours", text: "Tuesday to Saturday 10 a.m. to 5 p.m.; Sunday noon to 5 p.m. Closed Mondays, except during summer, spring and winter breaks and on select Mondays when Clark County schools are closed.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
+        { label: "Holiday closures", text: "Closed Thanksgiving, Christmas Eve, Christmas Day, New Year's Day and Easter.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
+        { label: "Admission", text: "General admission USD 20 per person ages 1-99; local admission USD 15 with a valid Nevada ID; everyone age 1 and up needs a ticket. Online tickets bought through a non-museum third party may not be accepted.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" },
+        { label: "Children", text: "Visitors under 18 must be accompanied by an adult.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" }
+      ]
+    },
     quickTitle: "Pick the trip length before the attractions",
     quick: [
       ["One day", "One classic visual + one paid or age-led anchor", "Keep the hotel reset or slow meal; do not turn the Strip into the activity."],
@@ -2004,7 +2021,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>San Antonio itinerary with kids</h1>", "<h1>San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>A starter family itinerary for San Antonio with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, give each half day one main job, and protect one reset. Then change the anchor for age, heat, weather, budget, and the stay base.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction, route, and weather sources checked:</strong> July 27, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction, route, and weather sources checked:</strong> July 27, 2026; The DoSeum and Alamo Church hours and entry rules checked October 27, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transport or parking, weather, ticket, and accessibility details for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
       ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Matt Harriger via <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>"]
@@ -2020,6 +2037,23 @@ export const itineraryPages = {
       ["Choose the stay area", "Compare Downtown, Pearl, Broadway/Brackenridge, SeaWorld/Westover Hills, and La Cantera before assuming a map pin reflects the daily return.", "../where-to-stay/san-antonio-with-kids.html", "Compare San Antonio stay areas"],
       ["Compare named hotels", "Use the 12-hotel page for broad nightly ranges, room function, official facts, bounded online-review observations, and maps.", "../where-to-stay/san-antonio-family-hotels.html", "Compare San Antonio family hotels"]
     ],
+    answerBox: {
+      id: "san-antonio-itinerary-answer",
+      checked: "October 27, 2026",
+      lines: [
+        ["The plan", "1 day: one Downtown signature block, one reset, one easy finish. 2 days: Downtown plus one age-led anchor day. 3 days: add one flexible contrast or recovery day."],
+        ["Main catch", "The DoSeum is closed on Tuesdays and opens to non-members at noon on Sundays (check its posted closure notice); the Alamo Church is free but needs a reserved timed ticket before you go."],
+        ["Cost", "The DoSeum is USD 18 per person age 1 and up (under 1 free) with free parking; Alamo Church entry is free. Other anchors are ticketed separately; check each price for your date."]
+      ],
+      factsTitle: "The DoSeum and Alamo Church hours and entry, checked October 27, 2026",
+      factsNote: "Official facts as published on each venue's own page on October 27, 2026. Other venue facts on this page date from the July 27, 2026 source check. Confirm hours for your exact date.",
+      facts: [
+        { label: "The DoSeum hours", text: "Monday and Wednesday to Saturday 9 a.m. to 5 p.m.; Sunday noon to 5 p.m. (11 a.m. to noon is members only); closed Tuesday. The page also shows a closure notice as an image we could not read, so check it before going.", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
+        { label: "The DoSeum admission and parking", text: "General admission USD 18 for kids and adults age 1 and up; under 1 free; members free. Free parking for all guests.", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
+        { label: "Alamo Church entry", text: "Touring the church is free, but you need to reserve a free ticket ahead of the visit. The page does not state a walk-up policy or how far ahead tickets open.", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" },
+        { label: "Alamo hours", text: "The timed-entry listing says offered daily 9 a.m. to 5 p.m.; the site footer says open daily 9 a.m. to 5:30 p.m. with last entry 30 minutes before closing. The two differ, so check your ticket time.", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" }
+      ]
+    },
     quickTitle: "Pick the trip length before the attractions",
     quick: [
       ["One day", "One bounded Downtown signature block + one reset + one easy finish", "Use the Alamo, GO RIO, or both as the context; Hemisfair, a meal, or the hotel remains optional."],

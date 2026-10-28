@@ -25,6 +25,21 @@ async function historicalRecords() {
     const prior = saved.tasks.find(task => task.hotel === tryp.hotel && task.field === name);
     Object.assign(tryp.fields[name], { value: prior.retained_value, state: "known", source_urls: prior.source_urls, source_refs: prior.source_refs, limitation: prior.limitation });
   }
+  // Replay the September NYC price displays; October 27 replaced unobserved bands with Check live rate.
+  for (const record of records.filter(r => r.page_url.endsWith("/new-york-city-family-hotels.html"))) {
+    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
+    record.fields.price.value = prior.retained_value;
+  }
+  // Replay the September San Diego price displays; October 27 (Q07) replaced unobserved bands with Check live rate.
+  for (const record of records.filter(r => r.page_url.endsWith("/san-diego-family-hotels.html"))) {
+    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
+    Object.assign(record.fields.price, { value: prior.retained_value, limitation: prior.limitation });
+  }
+  // Replay the September Chicago price displays; October 27 (Q08) replaced unobserved bands with Check live rate.
+  for (const record of records.filter(r => r.page_url.endsWith("/chicago-family-hotels.html"))) {
+    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
+    record.fields.price.value = prior.retained_value;
+  }
   const priorAudit = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
   const priorPrice = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-holiday-inn-price");
   const ihgPrice = records.find(r => r.id === "orlando-holiday-inn").fields.price;

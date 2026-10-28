@@ -1,3 +1,4 @@
+import { hotelEvidence } from "./hotel-evidence.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -23,19 +24,26 @@ test("Room facts do not qualify price, dining capacity, fees, age acceptance or 
   assert.match(note.text, /chair, cookware and place-setting quantities for five are unknown/);
   assert.match(note.text, /not confirmed booking acceptance, comfortable sleeping or sofa allocation/);
   assert.match(note.text, /mandatory fees and incidental-hold amount remain unknown/);
-  assert.match(note.text, /older hotel-wide price band is not a quote for this category/);
+  assert.match(note.text, /older one-night sample is not a quote for this category/);
+  assert.doesNotMatch(note.text, /price band/);
   assert.match(evidence.task.not_qualified, /RES133.*remain held/);
   assert.match(evidence.policy_audit, /not proof of zero fees/);
 });
 
-test("One additive room note preserves original cards, current fees and price band", () => {
+test("One additive room note preserves original cards, current fees and dated price samples", () => {
   assert.equal((html.match(/data-room-policy="homewood-bayside"/g) ?? []).length, 1);
   const note = sanDiegoCurrentRoomNote(evidence.hotel);
   assert.ok(html.includes(note.text));
   assert.equal((html.match(/class="detail-card hotel-card"/g) ?? []).length, 12);
   assert.equal((html.match(/class="hotel-fee-note"/g) ?? []).length, 3);
   assert.equal((html.match(/class="quick-pick"/g) ?? []).length, 6);
-  assert.ok(html.includes("$265-$350+"));
+  assert.ok(html.includes("Older 1-night sample: $265 (2 adults; Jul 18)"));
+  assert.equal((html.match(/class="hotel-price-sample"/g) ?? []).length, 1);
+  const sample = hotelEvidence().find(r => r.hotel === evidence.hotel).fields.price.value.official_family_sample;
+  assert.equal(sample.checked_on, "2026-10-04");
+  assert.deepEqual(sample.rates.map(r => r.nightly_average), [271.04, 329.52]);
+  assert.match(readFileSync(new URL("../docs/research/san-diego-hotel-price-display-2026-10-27.md", import.meta.url), "utf8"), /Homewood hold decision/);
+  assert.doesNotMatch(html, /\$265-\$350\+/);
   assert.ok(html.includes(`href="${note.sourceUrl}">Exact-suite source</a>`));
   assert.ok(html.includes(`href="${note.policySourceUrl}">Hotel policy source</a>`));
 });

@@ -146,3 +146,18 @@ test("regeneration is idempotent and changes no unrelated site file", () => {
     rmSync(temp, { recursive: true, force: true });
   }
 });
+
+test("leads with a three-line answer box and dated official DISCOVERY facts", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const box = html.match(/<section id="las-vegas-itinerary-answer" class="container answer-box"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.equal((box.match(/<p><strong>/g) || []).length, 3);
+  assert.ok(html.indexOf('id="las-vegas-itinerary-answer"') < html.indexOf('class="container media-section"'));
+  assert.match(box, /closed most Mondays and opens at noon on Sundays/);
+  assert.match(box, /USD 20 per person age 1 and up \(USD 15 with a Nevada ID\); everyone age 1 and up needs a ticket/);
+  const facts = html.match(/<section id="las-vegas-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.equal((facts.match(/<li>/g) || []).length, 4);
+  assert.equal((facts.match(/\(checked October 27, 2026\)/g) || []).length, 4);
+  assert.match(facts, /href="https:\/\/discoverykidslv\.org\/hours-directions\/"/);
+  assert.match(facts, /href="https:\/\/discoverykidslv\.org\/visit\/buy-tickets\/"/);
+  assert.doesNotMatch(html, /stroller-friendly|review due|recheck by/i);
+});

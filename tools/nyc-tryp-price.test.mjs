@@ -25,7 +25,8 @@ test("TRYP shared scoped overlays preserve all historical clocks and general fee
   const { fields } = records.find(r => r.hotel === trypPrice.hotel);
   assert.equal(fields.room.observed_on, "2026-07-25");
   assert.equal(fields.price.observed_on, "2026-07-25");
-  assert.equal(fields.price.value.display, "$210-$700+");
+  assert.equal(fields.price.value.display, "Check live rate");
+  assert.equal(fields.price.value.older_two_adult_sample, "$205");
   assert.equal(fields.price.value.structured_basis, false);
   assert.equal(fields.review_signal.observed_on, "2026-07-25");
   assert.equal(fields.activities.observed_on, "2026-07-25");

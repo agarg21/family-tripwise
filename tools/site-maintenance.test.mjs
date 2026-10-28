@@ -124,10 +124,10 @@ test("Park Plaza gym/fee policy clock does not renew original room or price evid
   assert.equal(current.exact_room_comparisons[1].records[1].price_age.due_on,"2026-10-15");
 });
 
-test("all 36 canonical URLs have one explicit owner without renewing facts", async () => {
+test("all 38 canonical URLs have one explicit owner without renewing facts", async () => {
   const report = await maintenanceReport({ today: "2026-10-01" });
-  assert.equal(report.summary.canonical_pages, 36);
-  assert.equal(report.summary.travel_pages, 33);
+  assert.equal(report.summary.canonical_pages, 38);
+  assert.equal(report.summary.travel_pages, 35);
   assert.equal(report.summary.utility_pages, 3);
   assert.equal(report.summary.unclassified_pages, 0);
   assert.equal(report.summary.hotel_price_basis_gaps, 54);
@@ -135,6 +135,12 @@ test("all 36 canonical URLs have one explicit owner without renewing facts", asy
   assert.equal(report.automatic_fact_renewal, false);
   assert.equal(report.automatic_publication, false);
   assert.equal(report.pages.filter(page => page.contract === "itinerary").length, 5);
+  assert.equal(report.pages.filter(page => page.contract === "dc-itinerary-official-facts").length, 1);
+  assert.equal(report.dc_itinerary_facts.evidence_state, "not-yet-observed-at-report-date");
+  assert.equal(report.dc_itinerary_facts.automatic_fact_renewal, false);
+  assert.equal(report.pages.filter(page => page.contract === "boston-itinerary-official-facts").length, 1);
+  assert.equal(report.boston_itinerary_facts.evidence_state, "not-yet-observed-at-report-date");
+  assert.equal(report.boston_itinerary_facts.automatic_fact_renewal, false);
   assert.equal(report.exact_room_comparisons[0].records.length, 3);
   assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on, "2026-09-30");
   assert.equal(report.exact_room_comparisons[0].records[2].price_observed_on, null);
@@ -189,7 +195,7 @@ test("bounded source cycle carries denials and does not publish or renew claims"
     return new Response("<html><body>Fixture only; no observed travel facts.</body></html>", { status: 200, headers: { "content-type": "text/html" } });
   } });
   assert.ok(calls <= 1);
-  assert.equal(result.source_review.summary.canonical_pages, 36);
+  assert.equal(result.source_review.summary.canonical_pages, 38);
   assert.equal(result.source_review.summary.carried_denials, denied.size);
   assert.equal(result.source_audit.factual_dates_renewed, false);
   assert.equal(result.source_review.automatic_publication, false);

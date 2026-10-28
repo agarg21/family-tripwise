@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { sanDiegoCurrentFeeNote, sanDiegoCurrentRoomNote } from "./san-diego-hotel-evidence.mjs";
 import { radioCityPriceHtml } from "./nyc-radio-city-price.mjs";
@@ -11,7 +12,8 @@ const sanDiegoFamilyHotels = [
     name: "Bahia Resort Hotel",
     category: "Mission Bay suite/bay stay",
     area: "Mission Bay",
-    priceRange: "$340-$630+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$339", source: "Expedia/Travelocity", seen: "2026-07-18", party: "2 adults" },
     strengths: ["Family Suite facts are unusually visible", "Parking carries no separate charge, with one vehicle allowed per room", "Bay/pool/location positives recur in online review patterns"],
     tradeoffs: ["Bedding wording conflicts on the official Family Suite page", "Room age and cleanliness comments are mixed"],
     familySetup: "Official Bay Family Suite page lists 675 sq ft, sofa bed, kitchenette, balcony, two bathrooms, refrigerator, microwave, toaster, and self-parking. The FAQ separately lists a $48 resort fee and says parking carries no charge, with one vehicle allowed per room; verify exact bedding and occupancy before using the suite as the reason to book.",
@@ -25,7 +27,8 @@ const sanDiegoFamilyHotels = [
     name: "San Diego Mission Bay Resort",
     category: "Mission Bay pool/wading-pool resort",
     area: "Mission Bay",
-    priceRange: "$375-$500+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$374", source: "Expedia", seen: "2026-07-18", party: "2 adults" },
     strengths: ["Waterfront pool and shallow wading-pool facts are official", "Beach access and seasonal activities fit a stay-put resort question", "Good contrast against suite/kitchen urban hotels"],
     tradeoffs: ["Parking and resort fee add up quickly", "Online review patterns include crowding, beds, maintenance, and room-location noise conflicts"],
     familySetup: "Official materials list a pool, shallow wading pool, beach access, seasonal activities, a $46 resort fee, $47 self-parking, limited $35 rollaways, and connecting rooms that are not guaranteed; exact family room layout remains room-specific.",
@@ -39,7 +42,8 @@ const sanDiegoFamilyHotels = [
     name: "Hyatt Regency Mission Bay Spa and Marina",
     category: "Pool/waterslide-first stay",
     area: "Mission Bay",
-    priceRange: "$270-$350+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$351", source: "Expedia", seen: "2026-07-18", party: null },
     strengths: ["Official pages list lagoon-style pools, three waterslides, hot tub, and separate children's pool area", "Room pages expose minifridge, play-yard, rollaway, and microwave-request details", "Kid enjoyment and waterslides recur in online review patterns"],
     tradeoffs: ["Official parking dollar amount was not found in the inspected pages", "Fee/value, pool temperature/size, and room variability appear in conflicts"],
     familySetup: "Official pages list two-queen options, suites, minifridges, play yards on request, microwaves on request for a fee in many room descriptions, and a $46 resort fee. The inspected official pages do not publish a parking amount.",
@@ -53,7 +57,8 @@ const sanDiegoFamilyHotels = [
     name: "Paradise Point Resort & Spa",
     category: "Stay-put Mission Bay resort",
     area: "Mission Bay",
-    priceRange: "$240-$360+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$349", source: "Expedia", seen: "2026-07-18", party: null },
     strengths: ["Official amenities describe five heated pools, beach areas, marina, sports courts, miniature golf, and seasonal activities", "Large-property resort shape may help families who want to stay on property", "Multiple-pool and family-orientation positives recur"],
     tradeoffs: ["Large footprint may be helpful or annoying depending on kid age and assigned room", "Price/fee perception and room-condition variability appear in conflicts"],
     familySetup: "Bungalow-style rooms and suites need exact room verification; do not infer family layout from the property style alone. Official amenities list a $46 fee and $49 reserved doorstep parking.",
@@ -67,7 +72,8 @@ const sanDiegoFamilyHotels = [
     name: "Catamaran Resort Hotel and Spa",
     category: "Pacific Beach bay/beach walkability",
     area: "Pacific Beach",
-    priceRange: "$395-$740+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$396", source: "Expedia/Hotels.com", seen: "2026-07-18", party: null },
     strengths: ["Official pages expose studios/suites with kitchenettes and some sofa-bed language", "Bay/beach access and Pacific Beach dining can fit families who want a walkable coastal base", "Location positives recur in online review patterns"],
     tradeoffs: ["Cribs and rollaways are request-only and not guaranteed", "Older/musty-room and small-pool conflicts appear in public signals"],
     familySetup: "Official FAQ lists a $46 resort fee, $47 self-parking, $50 valet, request-only cribs and rollaways, plus kitchenettes with a mini refrigerator, microwave, toaster oven, and requestable kitchen items for some studios/suites; exact sofa-bed and building status need verification.",
@@ -81,7 +87,8 @@ const sanDiegoFamilyHotels = [
     name: "Homewood Suites San Diego Downtown/Bayside",
     category: "Suite/kitchen downtown base",
     area: "Downtown / Little Italy",
-    priceRange: "$265-$350+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$265", source: "Expedia/Hotels.com", seen: "2026-07-18", party: "2 adults" },
     strengths: ["Official Hilton page lists recently renovated all-suite rooms, in-room kitchens, free hot breakfast, connecting rooms, and cribs", "Good contrast for families who need kitchen/breakfast more than resort amenities", "Lower rough range than many resort options"],
     tradeoffs: ["No self-parking and $65 valet create car friction", "Breakfast variety/staffing, parking, noise, and maintenance appear in conflicts"],
     familySetup: "Official Hilton page lists all-suite setup, in-room kitchens, connecting rooms, cribs, outdoor pool, and nearby distance facts; exact suite walls, doors, bedding, and occupancy still need verification.",
@@ -95,7 +102,8 @@ const sanDiegoFamilyHotels = [
     name: "LEGOLAND Hotel or Castle Hotel",
     category: "LEGOLAND-heavy North County trip",
     area: "Carlsbad / LEGOLAND",
-    priceRange: "Package-priced",
+    priceRange: "Check live rate",
+    olderSample: null,
     strengths: ["Official pages list themed rooms, kids sleeping area, breakfast, pool, entertainment, and in-room treasure hunt", "Can reduce morning friction when LEGOLAND is the core trip", "Strong child-theme positives appear in online review patterns"],
     tradeoffs: ["Not a clean San Diego city-base for zoo, Mission Bay, Downtown, or La Jolla days", "Package/per-person pricing must not be compared as a plain room rate"],
     familySetup: "Official pages list a separate kids sleeping area in every room, Pack 'N Plays by request, and room capacity by exact room size. Parking is generally not included: current support lists $40 self-parking and $55 overnight valet, with named passholder exceptions.",
@@ -109,7 +117,8 @@ const sanDiegoFamilyHotels = [
     name: "Loews Coronado Bay Resort",
     category: "Coronado bay/splurge option",
     area: "Coronado",
-    priceRange: "$235-$360+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$360", source: "Expedia", seen: "2026-07-18", party: null },
     strengths: ["Official materials list three heated pools on a waterfront Coronado resort", "No-reservation Village shuttle service can reduce one Coronado transfer", "Pool/service/family amenity positives recur in online review patterns"],
     tradeoffs: ["More isolated from Coronado Village and San Diego attractions than central bases", "Parking/fees and property-condition comments appear in conflicts"],
     familySetup: "Official pages list three heated pools, no-reservation Coronado Village shuttle service, and on-demand beach shuttle service; exact room layout and occupancy remain room-specific.",
@@ -123,7 +132,8 @@ const sanDiegoFamilyHotels = [
     name: "La Jolla Shores Hotel",
     category: "La Jolla beachfront stay",
     area: "La Jolla Shores",
-    priceRange: "$350-$550+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$406", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Beachfront location creates a distinct La Jolla trip shape", "The official site now lists a refreshed heated pool and children's wading pool", "Beach, location, staff, and refreshed-room positives recur in online review patterns"],
     tradeoffs: ["Parking availability, billed days and tax basis need checking", "Exact kitchen and sofa-bed setups remain room-specific"],
     familySetup: "Official room pages show two-queen rooms plus selected suites with sofa beds, kitchenettes, or a full kitchen. The site now lists a refreshed heated pool and children's wading pool; verify the exact room name because room features are not property-wide.",
@@ -137,7 +147,8 @@ const sanDiegoFamilyHotels = [
     name: "Hotel del Coronado",
     category: "Iconic Coronado beachfront splurge",
     area: "Coronado Beach",
-    priceRange: "$600-$900+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$619", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Official materials expose multiple room neighborhoods and guaranteed connecting-room selection or request", "Cribs, select rollaways, heated pools, beach experiences, and an ages 4-12 kids program are documented", "Beach, setting, history, and resort-experience positives recur"],
     tradeoffs: ["The five room neighborhoods do not offer the same room or pool experience", "Crowding and value are recurring conflicts at a very high total price"],
     familySetup: "Five room neighborhoods offer materially different rooms and access; Shore House villas have one to three bedrooms, living areas, and full kitchens. Official pages list guaranteed connecting selection/request, complimentary cribs, select rollaways, heated pools, an ages 4-12 program, a $50 mandatory charge, and restoration completion in June 2025.",
@@ -151,7 +162,8 @@ const sanDiegoFamilyHotels = [
     name: "The Dana on Mission Bay",
     category: "Simpler Mission Bay family base",
     area: "Mission Bay",
-    priceRange: "$250-$400+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$326", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Official pages publish two heated pools, exact room capacities, and many suite layouts", "Crib, rollaway, connecting-room, refrigerator, microwave, parking, and resort-fee details are unusually clear", "Location, pools, grounds, and family-activity positives recur"],
     tradeoffs: ["There are no full kitchens", "Room condition, parking walks, and fee/value perception vary"],
     familySetup: "Standard rooms list a four-person maximum; many junior suites and suites list up to six with sofa sleepers. Official pages list free cribs, request-only connecting rooms, refrigerators, microwaves and two heated pools, but no kitchens.",
@@ -165,7 +177,8 @@ const sanDiegoFamilyHotels = [
     name: "Manchester Grand Hyatt San Diego",
     category: "Downtown waterfront full-service stay",
     area: "Downtown / Seaport Village",
-    priceRange: "$300-$450+",
+    priceRange: "Check live rate",
+    olderSample: { amount: "$329", source: "Expedia", seen: "2026-07-21", party: "2 adults" },
     strengths: ["Official room pages publish connecting options and multiple family-suite layouts", "Downtown waterfront position fits Seaport Village and Embarcadero days", "Views, location, and large-hotel convenience recur positively"],
     tradeoffs: ["Only Coastline Pool is operating; the fourth-floor pool is due in December 2026", "A large convention-hotel footprint can change the experience"],
     familySetup: "Official pages list a two-double connecting room, family suites with sleeper sofas or connecting bedrooms, minifridges, play yards on request, and microwaves in many suites. Guestrooms and the third-floor pool are described as refreshed; exact occupancy and connection still depend on room type.",
@@ -225,8 +238,26 @@ function googleMapsUrl(query) {
 const sanDiegoMyMapsEmbedUrl = "https://www.google.com/maps/d/embed?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 
+const sanDiegoSeen = (iso) => ({ "2026-07-18": "Jul 18", "2026-07-21": "Jul 21" })[iso] ?? (() => { throw new Error(`Unmapped San Diego sample date: ${iso}`); })();
+const sanDiegoSampleText = (hotel, withSource = false) => hotel.olderSample
+  ? `Older 1-night sample: ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}; ${withSource ? `${hotel.olderSample.source}, ` : ""}${sanDiegoSeen(hotel.olderSample.seen)})`
+  : "Package-priced; no comparable room sample";
+const sanDiegoPriceCell = (hotel, withSource = false) => `${esc(hotel.priceRange)}<br><small>${esc(sanDiegoSampleText(hotel, withSource))}</small>`;
+const sanDiegoPriceBasis = "No current family-room rate has been observed, so every hotel shows Check live rate. The sample figure beside it is an older observation: a public one-night price per room on Expedia, Travelocity or Hotels.com with displayed taxes and fees, seen July 18 or 21, 2026, for two adults unless marked not recorded; where several examples were visible, it is the lowest. Its stay date has passed or was not recorded and the room is unknown, so the figure is not a family-room price or a current quote. LEGOLAND sells packages, so it has no comparable sample. Earlier rough ranges are gone because their upper ends were never observed. The only family-party price is Homewood's official suite sample, also an older observation. Resort fees, parking and a second room may be extra.";
+const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
+const sanDiegoHomewoodSample = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-price-observation-2026-10-04.json", import.meta.url), "utf8"))[0];
+const usd = (amount) => amount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+function sanDiegoHomewoodPrice() {
+  const o = sanDiegoHomewoodSample;
+  if (o.currency !== "USD" || o.nights !== 5 || o.arrival !== "2026-11-08" || o.departure !== "2026-11-13" || o.checked_on !== "2026-10-04" || o.engine_party.adults !== 2 || o.engine_party.children !== 3) throw new Error("Homewood sample basis changed; update the page text");
+  const rates = o.rates.map((rate) => ({ plan: rate.plan, total: rate.stay_amount, nightly: Math.round((rate.stay_amount / o.nights) * 100) / 100 }));
+  return { sourceUrl: o.source_url, rates,
+    text: `Older observation from the official Hilton site, checked October 4, 2026, for November 8-13, 2026 (5 nights): one ${o.category}, 2 adults and 3 children (counts only; child ages were not entered). ${rates.map((r) => `${r.plan}: USD ${usd(r.total)} for the stay (about $${usd(r.nightly)} per night)`).join("; ")}, estimated from displayed rates and tax lines, breakfast included; $65/night valet and other service charges excluded. Not a current quote or confirmed acceptance of your children's ages.` };
+}
+
 function sanDiegoFamilyHotelPage() {
   const hotels = sanDiegoFamilyHotels;
+  const homewoodPrice = sanDiegoHomewoodPrice();
   const hotelCards = hotels.map((hotel, index) => {
     const feeNote = sanDiegoCurrentFeeNote(hotel.name);
     const roomNote = sanDiegoCurrentRoomNote(hotel.name);
@@ -235,13 +266,13 @@ function sanDiegoFamilyHotelPage() {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Rough nightly range</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Nightly price (USD/room)</dt><dd>${sanDiegoPriceCell(hotel, true)} <a href="#price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p>${hotel.name === sanDiegoHomewoodName ? `<p class="hotel-price-sample">${esc(homewoodPrice.text)} <a href="${esc(homewoodPrice.sourceUrl)}">Official rooms page</a>; <a href="#price-basis">price basis</a>.</p>` : ""}</section>
           </article>`;
   }).join("\n");
 
@@ -249,7 +280,7 @@ function sanDiegoFamilyHotelPage() {
                 <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${esc(hotel.priceRange)}</td>
+                <td>${sanDiegoPriceCell(hotel)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
@@ -262,7 +293,9 @@ function sanDiegoFamilyHotelPage() {
       "@type": "ListItem",
       position: index + 1,
       name: hotel.name,
-      description: `${hotel.category}; rough nightly range ${hotel.priceRange}`
+      description: hotel.olderSample
+        ? `${hotel.category}; no current family-room rate observed (check live rate); older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} USD per room${hotel.olderSample.party ? ` for ${hotel.olderSample.party}` : ", party not recorded"}, seen ${hotel.olderSample.seen}, not a family-room quote`
+        : `${hotel.category}; package and per-person pricing (check live rate); no comparable room sample`
     }))
   };
 
@@ -272,12 +305,17 @@ function sanDiegoFamilyHotelPage() {
           <p class="eyebrow">San Diego family hotels</p>
           <h1>San Diego Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare 12 hotels by stay style, area and historical nightly budget, then check room setup, kitchens and pools.</p>
+          <p>Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
-        <p>Approximate prices are broad July planning ranges. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking.</p>
+        <p>Prices are older observations only: one-night samples seen July 18-21 and one official Homewood family-suite sample checked October 4, 2026. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
+      </section>
+      <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
+        <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
+        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults). Homewood's suite for 2 adults + 3 children was about $271-$330 per night incl. tax (valet and any mandatory or sofa fees extra) for November 8-13, 2026 (checked October 4).</p>
+        <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
@@ -285,15 +323,16 @@ function sanDiegoFamilyHotelPage() {
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">Approximate nightly prices remain broad July planning ranges. Use them to set a budget, then compare the final total for the same dates, occupancy, and room setup.</p>
+          <p class="review-label">No current family-room rate observed: check the live rate. Small figures are older observations: one-night samples seen July 18-21, 2026, not family-room quotes; compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${comparisonRows}
               </tbody>
             </table>
           </div>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/san-diego-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and Homewood family-suite sample as this page.</p></details>
         </div>
       </section>
       <section class="container page-section rank-ready-section">
@@ -311,7 +350,7 @@ ${comparisonRows}
         </div>
         <dl class="snapshot">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
-          <div><dt>Price format</dt><dd>Rough nightly range, not a quote</dd></div>
+          <div><dt>Price format</dt><dd>Check live rate, with dated older samples</dd></div>
           <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
           <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
         </dl>
@@ -348,11 +387,12 @@ ${hotelCards}
           <p class="eyebrow">Sources checked</p>
           <h2>How the hotel information was checked</h2>
         </div>
-        <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its prices, fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays. Prices are older broad planning ranges, not renewed or live quotes.</p>
+        <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its prices, fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays.</p>
+        <p id="price-basis"><strong>Price basis:</strong> ${esc(sanDiegoPriceBasis)}</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for rough nightly-price and online-review context. An August 17 price spot check was not comparable enough to renew the ranges.</li>
+          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for one-night price samples (older observations) and online-review context. An August 17 price spot check was not comparable enough to renew them.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -360,7 +400,7 @@ ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
   return pageShell({
     title: "Top Family Hotels in San Diego: 12 Options by Trip Style",
-    description: "Compare 12 San Diego family hotels by trip style, approximate nightly price, room setup, pools, breakfast or kitchen needs, map location, and sampled online review themes.",
+    description: "Compare 12 San Diego family hotels by trip style, room setup, pools, breakfast or kitchen needs, map location, dated price samples, and sampled online review themes.",
     canonical: "where-to-stay/san-diego-family-hotels.html",
     body
   });
@@ -548,6 +588,20 @@ function hotelComparisonCsv(headings, rows) {
   return [headings, ...rows].map((row) => row.map(cell).join(",")).join("\n") + "\n";
 }
 
+function sanDiegoHotelComparisonCsv() {
+  const page = "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html";
+  const homewood = sanDiegoHomewoodPrice();
+  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees)", "Older sample party", "Older sample source", "Older sample seen", "Official family sample (older observation)", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison"];
+  const rows = sanDiegoFamilyHotels.map((hotel) => [
+    hotel.name, hotel.category, hotel.area, hotel.priceRange,
+    hotel.olderSample?.amount ?? "None (package-priced)", hotel.olderSample ? hotel.olderSample.party ?? "Not recorded" : "", hotel.olderSample?.source ?? "", hotel.olderSample?.seen ?? "",
+    hotel.name === sanDiegoHomewoodName ? homewood.text : "", sanDiegoPriceBasis,
+    hotel.priceNote, hotel.familySetup, hotel.parentCheck,
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`, `${page}#hotel-comparison`
+  ]);
+  return hotelComparisonCsv(headings, rows);
+}
+
 function lasVegasHotelComparisonCsv() {
   const headings = ["Hotel", "Trip style", "Area", "Approx USD per room per night", "Price checked", "Price basis and fee limits", "Price context", "Room capacity spot-checked", "Named room", "Published capacity", "Official room source", "Most important check", "Map", "Live comparison"];
   const rows = lasVegasFamilyHotels.map((hotel) => [
@@ -703,11 +757,13 @@ const chicagoFamilyHotels = [
     name: "Embassy Suites by Hilton Chicago Downtown Magnificent Mile",
     category: "Two-room suite, breakfast, and pool",
     area: "Streeterville",
-    priceRange: "$280-$550+",
+    priceRange: "Check live rate",
+    shortName: "Embassy Suites",
+    olderSample: { amount: "$282", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-11" },
     strengths: ["Two-room suites can separate sleep from adult downtime", "Made-to-order breakfast and an indoor pool keep two recurring family costs or needs in one place"],
     familySetup: "Hilton lists suites, made-to-order breakfast, an evening reception, indoor pool, cribs, and a daily destination charge. Children 17 and under stay free in the same suite with a parent; exact bedding and occupancy still depend on the suite.",
     reviewSignal: "The inspected sample included positive mentions of suite space, breakfast, pool, and location. It also surfaced elevator disruption, crowding, room condition, towels, and housekeeping.",
-    priceNote: "A July 23 public example was about $282 total; larger suites, weekends, and event dates can move much higher.",
+    priceNote: "Larger suites, weekends, and event dates can price well above the older sample.",
     parentCheck: "Confirm exact suite bedding and occupancy, current elevator and pool status, destination charge, parking, and final total.",
     mapQuery: "Embassy Suites Chicago Downtown Magnificent Mile"
   },
@@ -715,11 +771,13 @@ const chicagoFamilyHotels = [
     name: "Homewood Suites by Hilton Chicago-Downtown",
     category: "Kitchen, breakfast, and indoor-pool base",
     area: "River North",
-    priceRange: "$210-$450+",
+    priceRange: "Check live rate",
+    shortName: "Homewood",
+    olderSample: { amount: "$209", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-16" },
     strengths: ["Full kitchens and hot breakfast reduce meal setup", "An indoor pool and published connecting rooms add flexibility for longer stays"],
     familySetup: "Hilton lists a full kitchen, free hot breakfast, indoor pool, connecting rooms, and a location one block from Michigan Avenue. Confirm a true one-bedroom category when a door between sleep and living space matters.",
     reviewSignal: "The inspected sample included positive mentions of suite space, kitchen, breakfast, location, and the pool. It also surfaced dated condition, city noise, pool availability or crowding, breakfast variation, and valet waits or billing.",
-    priceNote: "A July 23 public one-night example was about $209 total; one-bedroom categories and peak dates can move higher.",
+    priceNote: "One-bedroom categories and peak dates can price above the older sample.",
     parentCheck: "Confirm the exact suite layout, pool status, breakfast setup, recent room condition, valet total, and final price.",
     mapQuery: "Homewood Suites by Hilton Chicago Downtown 40 East Grand"
   },
@@ -727,11 +785,13 @@ const chicagoFamilyHotels = [
     name: "Residence Inn Chicago Downtown/River North",
     category: "Kitchen and breakfast without a pool requirement",
     area: "River North",
-    priceRange: "$270-$500+",
+    priceRange: "Check live rate",
+    shortName: "Residence Inn",
+    olderSample: { amount: "$268", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-16" },
     strengths: ["Every suite has a full-size kitchen and breakfast is included", "On-site laundry and grocery-shopping service can help on a longer trip"],
     familySetup: "Marriott lists all suites, full-size kitchens, complimentary hot breakfast, on-site laundry, grocery-shopping service, and self or valet parking. Bedding, sofa-bed setup, and whether the sleeping area has a door vary by category.",
     reviewSignal: "The inspected sample included positive mentions of kitchens, breakfast, location, staff, and suite usefulness. It also surfaced room-specific city noise, kitchen supplies, the small gym, and summer value.",
-    priceNote: "A July 23 public example was about $268 total, while a stronger-demand summer date was reported near $382.",
+    priceNote: "Exact suite, events, and summer weekends can price above the older sample.",
     parentCheck: "Confirm bedding, bedroom separation, sofa-bed setup, kitchen equipment, parking, and the final total for the same suite.",
     mapQuery: "Residence Inn Chicago Downtown River North"
   },
@@ -739,11 +799,13 @@ const chicagoFamilyHotels = [
     name: "Sable at Navy Pier Chicago, Curio Collection by Hilton",
     category: "Navy Pier-centered younger-child trip",
     area: "Navy Pier / Streeterville",
-    priceRange: "$310-$650+",
+    priceRange: "Check live rate",
+    shortName: "Sable",
+    olderSample: { amount: "$311", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-17" },
     strengths: ["The hotel can put Chicago Children's Museum and pier activities at the day's starting point", "Official two-queen rooms and suites sleep four, with lake or skyline views"],
     familySetup: "Official sources list two-queen rooms and suites sleeping four, mini fridges, cribs, confirmed connecting rooms, paid breakfast, and pier parking. The property has no pool.",
     reviewSignal: "The inspected sample included positive mentions of views, room condition, and Navy Pier access. It also surfaced the long pier approach, wayfinding, parking cost, service inconsistency, and elevator disruption.",
-    priceNote: "A July 23 public one-night example was about $311 total; pier events, views, suites, and weekends can move higher.",
+    priceNote: "Pier events, views, suites, and weekends can price above the older sample.",
     parentCheck: "Decide whether a pier base helps more than it complicates other days, then verify bedding, event calendar, parking, and final total.",
     mapQuery: "Sable at Navy Pier Chicago"
   },
@@ -751,11 +813,13 @@ const chicagoFamilyHotels = [
     name: "Swissotel Chicago",
     category: "Purpose-built Kids Suite",
     area: "New Eastside",
-    priceRange: "$240-$550+",
+    priceRange: "Check live rate",
+    shortName: "Swissotel",
+    olderSample: { amount: "$235", source: "Expedia", recorded: null, stay: null },
     strengths: ["The current Kids Suite offer creates separate adult and child spaces", "The offer includes toys, games, movie night, and breakfast under stated terms"],
     familySetup: "The Kids Suite offer lists a two-room setup with a dedicated children's space and breakfast for two adults and up to two children, subject to availability. Public standard double-room inventory lists two double beds for four.",
     reviewSignal: "The inspected sample included positive mentions of views, river or lake location, room size, and staff. It also surfaced dated finishes, the experience fee, parking access, room assignment or service inconsistency, and offer availability.",
-    priceNote: "The planning range starts from standard-room evidence, not a Kids Suite quote; the Kids Suite offer and mandatory experience fee can move higher.",
+    priceNote: "The older sample is a standard room, not a Kids Suite quote; the Kids Suite offer and mandatory experience fee can price higher.",
     parentCheck: "Confirm the actual Kids Suite, breakfast terms, fee, parking, bedding, and final total rather than assuming a standard room includes the family setup.",
     mapQuery: "Swissotel Chicago"
   },
@@ -763,11 +827,13 @@ const chicagoFamilyHotels = [
     name: "InterContinental Chicago Magnificent Mile",
     category: "Historic indoor-pool base",
     area: "Magnificent Mile",
-    priceRange: "$300-$600+",
+    priceRange: "Check live rate",
+    shortName: "InterContinental",
+    olderSample: { amount: "$305", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
     strengths: ["The heated junior Olympic-size indoor pool is a distinct weather-backup amenity", "Official room inventory includes two-double rooms and requestable connecting rooms or cribs"],
     familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Notice rechecked September 22, 2026: IHG still publishes an August 10-September 16 project schedule, with August 11 and September 10 closures; the notice omits the year, while its amenities page dates the September 10 closure to 2026. The published window has passed, but completion and current access are unconfirmed. The notice describes project-period daytime construction, unavailable locker rooms, relocated pool movies and unavailable Resort Pass purchases, not verified conditions today. Published hours also conflict: 7am-10pm on the pool page versus 5am-10pm on amenities. Confirm current hours, changing facilities and guest or day-pass access for your visit.",
     reviewSignal: "The inspected sample included positive mentions of the pool, location, historic character, and staff. It also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost.",
-    priceNote: "A July 23 public one-night example was about $305 total; larger rooms, events, and weekends can move higher.",
+    priceNote: "Larger rooms, events, and weekends can price above the older sample.",
     parentCheck: "Recheck current pool access and project conditions, depth fit, exact two-double room, connecting request, parking, and final total.",
     mapQuery: "InterContinental Chicago Magnificent Mile"
   },
@@ -775,11 +841,13 @@ const chicagoFamilyHotels = [
     name: "Hilton Chicago",
     category: "Museum Campus and Grant Park base",
     area: "South Loop",
-    priceRange: "$320-$650+",
+    priceRange: "Check live rate",
+    shortName: "Hilton Chicago",
+    olderSample: { amount: "$308", source: "Expedia", recorded: null, stay: null },
     strengths: ["Grant Park and Museum Campus can shape the first half of the trip", "Hilton publishes two-double rooms, an indoor pool, game room, and larger family-connection layouts"],
     familySetup: "Hilton lists two-double rooms sleeping four, an indoor pool, connecting rooms, cribs, game room, and larger family-connection or specialty layouts. Standard and specialty options differ sharply in space and total price.",
     reviewSignal: "The inspected sample included positive mentions of Grant Park location, historic public spaces, pool, staff, and larger layouts. It also surfaced housekeeping consistency, dated-room variation, event-scale crowds, and parking cost.",
-    priceNote: "The planning range includes standard-room evidence, not a specialty-layout quote; specialty layouts and convention dates can move far higher.",
+    priceNote: "The older sample's room type was not recorded and it is not a specialty-layout quote; specialty layouts and convention dates can price far higher.",
     parentCheck: "Compare the standard room with the exact larger layout needed, then verify pool, event calendar, parking, and final total.",
     mapQuery: "Hilton Chicago 720 South Michigan Avenue"
   },
@@ -787,11 +855,13 @@ const chicagoFamilyHotels = [
     name: "Hotel Zachary Chicago, a Tribute Portfolio Hotel",
     category: "Wrigleyville and older-kid trip",
     area: "Lakeview / Wrigleyville",
-    priceRange: "$360-$750+",
+    priceRange: "Check live rate",
+    shortName: "Hotel Zachary",
+    olderSample: { amount: "$363", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-10" },
     strengths: ["Direct Wrigley Field positioning makes a Cubs game or concert the trip anchor", "Official inventory includes double-queen and ballpark-view categories"],
     familySetup: "Official pages list king and double-queen rooms directly across from Wrigley Field, with neighborhood dining and ballpark-view categories.",
     reviewSignal: "The inspected sample included positive mentions of Wrigley views, room condition, staff, and event convenience. It also surfaced event pricing, noise, blocked streets or rideshare friction, parking, breakfast cost, and limited cold storage.",
-    priceNote: "A July 23 public one-night example was about $363 total; Cubs games and concerts can invalidate the low end.",
+    priceNote: "Cubs games and concerts can price far above the older sample.",
     parentCheck: "Check the Wrigley event calendar first, then bedding, refrigerator status, post-event transport, parking, and final total.",
     mapQuery: "Hotel Zachary Chicago"
   },
@@ -799,11 +869,13 @@ const chicagoFamilyHotels = [
     name: "Four Seasons Hotel Chicago",
     category: "Luxury family amenities and pool",
     area: "Gold Coast",
-    priceRange: "$630-$1,200+",
+    priceRange: "Check live rate",
+    shortName: "Four Seasons",
+    olderSample: { amount: "$630", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
     strengths: ["The current family program combines an indoor pool, child amenities, and a play space", "Two-double lake-view rooms publicly sleep four, with larger suite choices available"],
     familySetup: "Current Four Seasons materials list a 44-foot indoor pool, family programming and child amenities, complimentary dining for children under five under stated terms, and two-double lake-view rooms for four.",
     reviewSignal: "The inspected sample included positive mentions of service, pool, child amenities, views, room space, and location. It also surfaced the high total, occasional service mismatch, pool crowding, and room-layout questions.",
-    priceNote: "A July 23 public one-night example was about $630 total; two-double rooms, suites, weekends, dining, and parking can move much higher.",
+    priceNote: "Two-double rooms, suites, weekends, dining, and parking can push the total well above the older sample.",
     parentCheck: "Price the exact room or suite and confirm bedding, pool timing, child-dining terms, parking, and the value of the family amenities.",
     mapQuery: "Four Seasons Hotel Chicago"
   },
@@ -811,11 +883,13 @@ const chicagoFamilyHotels = [
     name: "The Langham, Chicago",
     category: "Riverfront luxury with a larger pool",
     area: "Chicago River / River North",
-    priceRange: "$600-$1,200+",
+    priceRange: "Check live rate",
+    shortName: "Langham",
+    olderSample: { amount: "$600", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
     strengths: ["The 67-foot indoor pool and a separate current Kids Suite can support an indoor reset", "Large rooms and a riverfront location can work when one central luxury base is the priority"],
     familySetup: "Langham lists a 67-foot indoor pool and connecting rooms by request. Its current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended; the Cinema Suite is separate and subject to availability.",
     reviewSignal: "The inspected sample included positive mentions of room size, river location, pool, service, and cleanliness. It also surfaced weekend pool crowding, food and parking cost, and service or climate-control inconsistency.",
-    priceNote: "A July 23 public one-night example was about $600 total; connecting rooms, suites, club access, food, and parking can move much higher.",
+    priceNote: "Connecting rooms, suites, club access, food, and parking can push the total well above the older sample.",
     parentCheck: "Confirm the room and connection, pool child rules, current Kids Suite status and access, food plan, parking, and final total.",
     mapQuery: "The Langham Chicago"
   }
@@ -846,12 +920,16 @@ const chicagoHotelSources = [
   ["The Langham child policy", "https://www.langhamhotels.com/en/the-langham/chicago/policy/"]
 ];
 
+const chicagoPriceBasis = "No current family-room rate has been observed for these ten hotels, so each shows Check live rate. The small figure beside it is an older observation: a public one-night Expedia price per room, including displayed taxes and fees where stated, recorded in the July 23, 2026 research pack. The pack used two adults where the source showed a party but did not record the party for each hotel. Swissotel's and Hilton Chicago's examples carry July 5 and July 19 date labels that the pack does not explain, so their observation dates are unclear. Stay dates (August 9-17, 2026 where recorded) have passed and the exact room and rate plan are not known, so no figure is a family-room price, a Kids Suite price or a current quote. Earlier planning ranges are gone because their upper ends were editorial estimates, not observations. No family-party price has been observed for these hotels. Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra.";
+const chicagoSampleText = (hotel) => `Older 1-night sample: ${hotel.olderSample.amount} (${hotel.olderSample.recorded ? "recorded Jul 23" : "date label unclear"})`;
+const chicagoPriceCell = (hotel) => `${esc(hotel.priceRange)}<br><small>${esc(chicagoSampleText(hotel))}</small>`;
+
 function chicagoHotelComparisonCsv() {
   const page = "https://familytripwise.com/where-to-stay/chicago-family-hotels.html";
-  const headings = ["Hotel", "Trip style", "Area", "Approx USD per room per night", "Price checked", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
-  const priceBasis = "Historical July 23, 2026 research-pack planning bands from summer-2026 stay examples and two-adult public examples where party size was shown, widened editorially for room and date variation; exact room and stay-date details incomplete, two example date labels ambiguous; tax and mandatory-fee inclusion varies; parking separate; not a family-room or Kids Suite quote";
+  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees where stated)", "Older sample party", "Older sample stay date (passed)", "Older sample source", "Older sample recorded", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
   const rows = chicagoFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-23", priceBasis,
+    hotel.name, hotel.category, hotel.area, hotel.priceRange,
+    hotel.olderSample.amount, "Not recorded (two adults where the source showed a party)", hotel.olderSample.stay ?? "Unclear (example date label not explained)", hotel.olderSample.source, hotel.olderSample.recorded ?? "2026-07-23 research pack; example date label unclear", chicagoPriceBasis,
     hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     `${page}#sources-checked`, `${page}#hotel-comparison`
@@ -861,25 +939,28 @@ function chicagoHotelComparisonCsv() {
 
 function chicagoFamilyHotelPage() {
   const hotels = chicagoFamilyHotels;
+  const amounts = hotels.map((hotel) => Number(hotel.olderSample.amount.replace(/[$,]/g, "")));
+  const lowest = hotels[amounts.indexOf(Math.min(...amounts))];
+  const highest = hotels[amounts.indexOf(Math.max(...amounts))];
   const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="chicago-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Planning USD/room/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Nightly price (USD/room)</dt><dd>${chicagoPriceCell(hotel)} <a href="#chicago-price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>July 23 historical USD/room/night band, not a family-room quote. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
           </article>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
                 <td><a href="#chicago-hotel-${index + 1}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${esc(hotel.priceRange)}</td>
+                <td>${chicagoPriceCell(hotel)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
@@ -887,7 +968,7 @@ function chicagoFamilyHotelPage() {
   const faqs = [
     ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
     ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's notice, rechecked September 22, 2026, still shows an elapsed August 10-September 16 project schedule without a year; a separate dated closure listing supplies the 2026 context. Its completion, changing facilities, current hours and pass availability remain unconfirmed. Check directly before relying on it as a pool day."],
-    ["Do these Chicago hotel ranges include taxes and fees?", "These USD per-room, per-night planning ranges were assembled in a July 23, 2026 research pack from public examples for two adults where the party was shown, then widened editorially for date and room changes. Two example date labels in that pack are ambiguous. Displayed taxes and mandatory fees were included where stated, but their treatment is not verified for every example. The ranges are not quotes for a family room or Kids Suite; parking, food and optional purchases may be extra. Price your exact dates, ages, room and full stay total before deciding."]
+    ["Do these Chicago hotel prices include taxes and fees?", "No current family-room rate has been observed, so each hotel shows Check live rate. The small figures are older one-night Expedia samples per room recorded in the July 23, 2026 research pack, including displayed taxes and fees where stated; the party was two adults where shown and is not recorded for each hotel. They are not prices for a family room or Kids Suite and not current quotes. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -898,7 +979,7 @@ function chicagoFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Chicago family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; USD per-room/night planning range ${hotel.priceRange} from July 23 research pack, not a family-room quote` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; no current family-room rate observed (check live rate); older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} USD per room from the July 23, 2026 research pack${hotel.olderSample.recorded ? "" : " (example date label unclear)"}, not a family-room quote` }))
   };
 
   const body = `    <main id="main">
@@ -907,28 +988,33 @@ function chicagoFamilyHotelPage() {
           <p class="eyebrow">Chicago family hotels</p>
           <h1>Chicago Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare ten hotels by room setup, kitchens, pools, area and historical nightly budget.</p>
+          <p>Compare ten hotels by room setup, kitchens, pools, area and dated price samples.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
-        <p>Historical prices are not family-room quotes. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
+        <p><strong>Hotel facts and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
+        <p>Prices are older observations only: one-night samples from the July 23, 2026 research pack (two with unclear date labels), not family-room quotes. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
+      </section>
+      <section id="chicago-hotel-answer" class="container answer-box" aria-label="Short answer">
+        <p><strong>Fits:</strong> kitchens (Homewood, Residence Inn); two-room suites with breakfast (Embassy Suites); a separate kids' room (Swissotel Kids Suite); listed indoor pools (Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed); Navy Pier (Sable); a Cubs game (Hotel Zachary).</p>
+        <p><strong>Rough cost:</strong> no current family-room rate observed. Older one-night samples per room: about ${esc(lowest.olderSample.amount)} (${esc(lowest.shortName)}) to ${esc(highest.olderSample.amount)} (${esc(highest.shortName)}), recorded July 23, 2026 with displayed taxes and fees where stated; party not recorded per hotel.</p>
+        <p><strong>Main catch:</strong> those samples are not family rooms: suites, the Kids Suite and two-double rooms can cost more, and parking, Embassy Suites' destination charge and Swissotel's experience fee can sit on top, so confirm beds for your party and price it live.</p>
       </section>
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
           <p><a href="./chicago-with-kids.html">Compare Chicago stay areas</a></p>
-          <p>July 23, 2026 historical two-adult examples with editorial room/date widening, not family-room quotes. Two example dates are ambiguous; taxes and mandatory fees vary, and parking is separate. <a href="#chicago-price-basis">Full price basis</a>.</p>
+          <p>No current family-room rate observed: check the live rate. Small figures are older one-night samples from the July 23, 2026 research pack (two with unclear date labels), not family-room quotes; parking is separate. <a href="#chicago-price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Planning USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
             </table>
           </div>
-          <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px">USD per-room/night planning ranges from the July 23 research pack use two-adult public examples where party size was shown, widened for date and room variation. Two example dates are ambiguous; tax and mandatory-fee inclusion varies, and parking is separate. These are not family-room quotes, including the Swissotel Kids Suite. Compare exact room, child ages, dates and full total.</p>
-          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download Chicago hotel comparison (CSV)</a>. The same historical comparison records and price limitations.</p></details>
+          <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and price limits as this page.</p></details>
         </div>
       </section>
       <section class="container media-section">
@@ -951,7 +1037,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section class="container page-section source-section" id="sources-checked">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. Price ranges use volatile public examples rather than live booking quotes.</p>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. Price samples are older public examples, not live booking quotes.</p>
         <ul class="source-list">
 ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
@@ -964,7 +1050,7 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
 
   return pageShell({
     title: "Top Family Hotels in Chicago: 10 Options by Trip Style",
-    description: "Compare 10 Chicago family hotels by trip style, dated per-room nightly budget, room setup, breakfast or kitchens, indoor pools, location, and sampled online-review themes.",
+    description: "Compare 10 Chicago family hotels by trip style, room setup, breakfast or kitchens, indoor pools, location, dated price samples, and sampled online-review themes.",
     canonical: "where-to-stay/chicago-family-hotels.html",
     nav: [["./chicago-with-kids.html", "Where to stay"], ["../things-to-do/chicago-with-kids.html", "Things to do"], ["../family-itinerary/chicago-with-kids.html", "Itinerary"]],
     body
@@ -1305,7 +1391,8 @@ const newYorkCityFamilyHotels = [
     name: "Hotel Beacon",
     category: "Upper West Side kitchen and larger layouts",
     area: "Upper West Side",
-    priceRange: "$330-$750+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$331",
     strengths: ["Every published studio and suite has a fully equipped kitchenette", "One- and two-bedroom layouts create clearer options for sleep separation and larger families"],
     familySetup: "Official inventory includes two-double studios, one-bedroom suites, and an 800-square-foot two-bedroom suite. Occupancy differs by category, so choose the named layout rather than assuming every room works for the same family.",
     reviewSignal: "The inspected sample favored the Upper West Side location, staff, kitchen usefulness, room size, and park or transit access. It also surfaced dated bathrooms or kitchenettes, occasional maintenance issues, and weaker value on expensive dates.",
@@ -1317,7 +1404,8 @@ const newYorkCityFamilyHotels = [
     name: "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South",
     category: "Kitchen and breakfast near Penn Station",
     area: "Midtown South",
-    priceRange: "$230-$550+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$226",
     strengths: ["In-suite kitchens and free hot breakfast reduce two recurring family logistics", "Hilton publishes connecting rooms, cribs, guest laundry, and a rooftop terrace"],
     familySetup: "Many rooms are studios rather than true one-bedroom suites. Confirm beds, registered occupancy, and whether a door between sleep and living space matters for the trip.",
     reviewSignal: "The inspected sample favored breakfast, staff, kitchen supplies, cleanliness, location, and practical room setup. Breakfast quality varied, and exact room size or separation still mattered.",
@@ -1329,7 +1417,8 @@ const newYorkCityFamilyHotels = [
     name: "Residence Inn by Marriott New York Manhattan/Central Park",
     category: "Two doubles, kitchenette, and breakfast",
     area: "Central Park South / Columbus Circle",
-    priceRange: "$230-$550+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$227",
     strengths: ["Public inventory includes compact two-double studios sleeping four", "Kitchenettes, free hot breakfast, on-site laundry, and high-floor views can simplify a short or longer stay"],
     familySetup: "Marriott lists all suites and kitchenettes with appliances, cookware, and utensils. Current public reviews conflict with generic kitchenette wording about whether every room has a stovetop, so verify the exact equipment.",
     reviewSignal: "The inspected sample favored views, breakfast, location, staff, and cleanliness. Small rooms and inconsistent kitchen equipment were the main conflicts.",
@@ -1341,7 +1430,8 @@ const newYorkCityFamilyHotels = [
     name: "Radio City Apartments",
     category: "Practical apartment for five-plus people",
     area: "Rockefeller Center / Times Square",
-    priceRange: "$190-$600+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$190",
     strengths: ["The published two-bedroom has one queen, two twins, a sofa bed, and a kitchenette", "Official capacity is five guests plus one child age 12 or under"],
     familySetup: "The two-bedroom is about 470 square feet with a dining area and daily housekeeping. It is an older practical apartment-hotel product, not a full-service resort.",
     reviewSignal: "The inspected sample favored location, kitchenette, staff, practicality, and value. Dated condition and room-level cleanliness variation were the main conflicts.",
@@ -1353,7 +1443,8 @@ const newYorkCityFamilyHotels = [
     name: "Embassy Suites by Hilton New York Manhattan Times Square",
     category: "Breakfast start for a family of three",
     area: "Bryant Park / Herald Square",
-    priceRange: "$220-$500+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$221",
     strengths: ["Breakfast and an evening reception are included", "King-plus-sofa-bed studios can work for a compact family-of-three setup"],
     familySetup: "Do not assume the classic Embassy Suites two-room layout: current inventory is dominated by king rooms and king-plus-sofa-bed studios around 277-320 square feet. Hilton lists cribs among the amenities, while Expedia's public policy says cribs and rollaways are unavailable; treat the crib as a request that needs direct confirmation.",
     reviewSignal: "The inspected sample favored breakfast, evening snacks, location, staff, and some quiet-room experiences. Compact rooms, firm beds, the non-suite layout, parking confusion, and a mandatory nightly charge appeared as conflicts.",
@@ -1365,7 +1456,8 @@ const newYorkCityFamilyHotels = [
     name: "TRYP by Wyndham New York City Times Square / Midtown",
     category: "One-room family layout for five to eight",
     area: "Penn Station / Midtown West",
-    priceRange: "$210-$700+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$205",
     strengths: ["Wyndham publishes family rooms with bunk beds", "Current public inventory exposes a premium family room with two large double beds, a bunk bed, and a sofa bed"],
     familySetup: "The family room is the reason to compare this property; a standard room is not equivalent. Current public inventory listed capacity up to eight, but the registered occupancy and every sleeping surface still need confirmation.",
     reviewSignal: "The inspected sample favored family-room capacity, room size, Penn Station access, and value. It also surfaced inconsistent cleanliness, shower control, sofa-bed comfort, breakfast, rooftop availability, and room condition.",
@@ -1377,7 +1469,8 @@ const newYorkCityFamilyHotels = [
     name: "The Kimberly Hotel",
     category: "Spacious Midtown East one-bedroom suite",
     area: "Midtown East",
-    priceRange: "$350-$850+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$352",
     strengths: ["Most one- and two-bedroom suites are 500-600 square feet with separate living and dining areas", "Kitchenettes and private balconies are published for most suites"],
     familySetup: "Two-bedroom suites add a sofa bed and two bathrooms. Confirm the exact suite because kitchenette, balcony, bed count, and privacy differ by category.",
     reviewSignal: "The inspected sample favored suite space, kitchenettes, balconies, staff, cleanliness, and Midtown East location. It contained few negative reports, so exact view, balcony, layout, and price remain more important unknowns than a broad negative theme.",
@@ -1389,7 +1482,8 @@ const newYorkCityFamilyHotels = [
     name: "New York Marriott Marquis",
     category: "Times Square convenience and family connectors",
     area: "Times Square",
-    priceRange: "$380-$900+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$375",
     strengths: ["Two-double rooms put Broadway and Times Square at the door", "Published Family Connector layouts combine a king room, a two-double room, and a sofa bed"],
     familySetup: "The connector is a different and much more expensive product from a standard room. Cribs are requestable; rollaways are not available, and two double beds may feel small for older children.",
     reviewSignal: "The inspected sample favored location, room cleanliness and space, staff, and theater convenience. Smaller double beds, breakfast cost, the mandatory destination charge, and very high parking cost were conflicts.",
@@ -1401,7 +1495,8 @@ const newYorkCityFamilyHotels = [
     name: "Conrad New York Downtown",
     category: "Separate living and sleeping space Downtown",
     area: "Battery Park City / Lower Manhattan",
-    priceRange: "$470-$1,000+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$473",
     strengths: ["The all-suite hotel publishes separate living and sleeping areas starting around 430 square feet", "Two-double suites sleep four, with connecting rooms and cribs also listed"],
     familySetup: "A Downtown base can simplify Battery Park, Oculus, ferry, and Lower Manhattan days while adding travel to a Midtown-heavy itinerary.",
     reviewSignal: "The inspected sample favored room space, separate living areas, service, cleanliness, and the calmer Downtown base. Distance from Midtown-heavy plans and the high total were the main decision conflicts.",
@@ -1413,7 +1508,8 @@ const newYorkCityFamilyHotels = [
     name: "Lotte New York Palace",
     category: "Large family-suite splurge",
     area: "Midtown East / Rockefeller Center",
-    priceRange: "$590-$1,500+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$593",
     strengths: ["The 765-square-foot Palace Family Suite publishes capacity up to six", "A two-double family-suite version adds one king, two doubles, a sleeper sofa, and two bathrooms for up to eight"],
     familySetup: "The named family suite is a premium category. Standard connecting rooms are request and availability dependent and should not be treated as the same product.",
     reviewSignal: "The inspected sample favored central location, staff, comfort, views, and public spaces. One busy-period report noted short staffing and long front-desk lines; exact category and price dominate the decision.",
@@ -1425,7 +1521,8 @@ const newYorkCityFamilyHotels = [
     name: "1 Hotel Brooklyn Bridge",
     category: "Brooklyn and DUMBO base with two beds",
     area: "DUMBO / Brooklyn Heights",
-    priceRange: "$660-$1,400+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$664",
     strengths: ["The published Dumbo 2 Beds room is about 325 square feet with two double beds for four", "Connecting suite options and a seasonal outdoor pool add different premium setups"],
     familySetup: "This is a Brooklyn-first location, not the easiest base for a Midtown-heavy first trip. Pool season, child access, and the exact two-bed or connecting category require a current check.",
     reviewSignal: "The inspected sample favored DUMBO location, views, design, staff, and room comfort. Thin walls or noise, dark rooms, technology issues, crowded rooftop service, condition variation, and high price were conflicts.",
@@ -1437,7 +1534,8 @@ const newYorkCityFamilyHotels = [
     name: "Four Seasons Hotel New York Downtown",
     category: "Indoor-pool luxury base",
     area: "Tribeca / World Trade Center",
-    priceRange: "$900-$1,900+",
+    priceRange: "Check live rate",
+    twoAdultSample: "$904",
     strengths: ["The hotel publishes an indoor pool and rooms with two double beds plus one crib", "Downtown location can pair the Oculus, One World, Battery Park, and Brooklyn Bridge"],
     familySetup: "The common two-double configuration is published for two adults and one child or one adult and two children, not a default family of four. Optional rollaways are not available.",
     reviewSignal: "The recent sample favored service, cleanliness, Downtown location, room comfort, and pool. It was mostly positive and too thin for a broad consensus; current qualitative discussion also frames the pool as a lap-pool and spa environment rather than a water-play resort.",
@@ -1466,11 +1564,12 @@ const newYorkCityHotelSources = [
   ["Four Seasons New York Downtown accommodations", "https://www.fourseasons.com/newyorkdowntown/accommodations/"]
 ];
 
-const newYorkCityPriceBasis = "Historical USD/room/night planning ranges from July 25, 2026 checks, starting with two-adult room samples. Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded. Taxes and mandatory fees were included only where stated; parking, extras, and a second room are separate. Upper edges are editorial planning ceilings, not observed quotes. Price your exact family room and dates before booking.";
+const newYorkCityPriceBasis = "No current family-room rate has been observed for these twelve hotels, so each shows Check live rate. The small figure beside it is an older observation: the lowest USD price per room for one night for two adults on Expedia, checked July 25, 2026. Its stay date has passed or was not recorded, and the exact room, rate plan, and tax or fee inclusion are not consistently known, so it is not a price for a family room or a current quote. Earlier upper-end estimates were never observed and are no longer shown. The only family-party prices observed are the October 11, 2026 five-person samples below, also older observations. Parking, extras, and a second room are separate. Price your exact family room, party, and dates before booking.";
+const nycPriceCell = (hotel) => `${esc(hotel.priceRange)}<br><small>Older 2-adult sample: ${esc(hotel.twoAdultSample)} (seen Jul 25)</small>`;
 
 function newYorkCityHotelComparisonCsv() {
   const page = "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html";
-  const headings = ["Hotel", "Trip style", "Area", "Approx USD per room per night", "Price checked", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
+  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older two-adult sample checked", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
   const rows = newYorkCityFamilyHotels.map((hotel) => [
     hotel.name, hotel.category, hotel.area, hotel.priceRange, "2026-07-25", newYorkCityPriceBasis,
     hotel.priceNote, hotel.familySetup, "2026-07-25", hotel.reviewSignal, hotel.parentCheck,
@@ -1488,20 +1587,20 @@ function newYorkCityFamilyHotelPage() {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Approx. USD/room/night</dt><dd>${esc(hotel.priceRange)}</dd></div>
+              <div><dt>Nightly price (USD/room)</dt><dd>${nycPriceCell(hotel)}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>Historical USD/room/night, not a quote for your family. Two-adult samples checked July 25, 2026; taxes, fees and exact basis vary. <a href="#historical-price-basis">Full price basis and exclusions</a>.</p></section>${hotel.name === "Radio City Apartments" ? `\n            ${radioCityPriceHtml()}` : hotel.name === "Hotel Beacon" ? `\n            ${beaconSuiteHtml()}` : hotel.name === "TRYP by Wyndham New York City Times Square / Midtown" ? `\n            ${trypPriceHtml()}` : ""}
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>Older two-adult observation, not a quote for your family: Expedia, checked July 25, 2026; that stay date has passed or was not recorded. No family-room rate observed yet, so check the live rate for your party and dates. <a href="#historical-price-basis">Price basis and exclusions</a>.</p></section>${hotel.name === "Radio City Apartments" ? `\n            ${radioCityPriceHtml()}` : hotel.name === "Hotel Beacon" ? `\n            ${beaconSuiteHtml()}` : hotel.name === "TRYP by Wyndham New York City Times Square / Midtown" ? `\n            ${trypPriceHtml()}` : ""}
           </article>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
                 <td><a href="#nyc-hotel-${index + 1}">${esc(hotel.name)}</a></td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${esc(hotel.priceRange)}</td>
+                <td>${nycPriceCell(hotel)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
@@ -1509,7 +1608,7 @@ function newYorkCityFamilyHotelPage() {
   const faqs = [
     ["What is the best family hotel in New York City?", "There is no single best hotel for every family. Hotel Beacon, Homewood, Residence Inn, and Radio City Apartments solve different kitchen or occupancy needs. Embassy Suites adds breakfast, TRYP has a specific large-family room, Marriott Marquis puts Broadway at the door, Conrad creates separate Downtown living space, and Four Seasons is the indoor-pool luxury comparison."],
     ["Which New York City hotels on this list work for a family of five?", "Radio City Apartments publishes a two-bedroom layout for five guests plus one child age 12 or under. TRYP publishes a larger family room, while Lotte publishes named family suites for six or eight. Hotel Beacon also has larger suites. Confirm the exact category and registered occupancy before paying."],
-    ["Do these New York City hotel ranges include taxes and fees?", "These historical USD per-room, per-night ranges start with two-adult room samples checked July 25, 2026, not exact family-room quotes. Taxes and mandatory fees were included only where stated, so an all-in amount is not established for every band. Exact room, child ages, rate plan, and travel-date or season basis are not consistently recorded. Parking, food, extras, and a second room are separate. Upper edges are editorial planning ceilings, not observed quotes; compare a current final total for your party, room, and dates."]
+    ["How much do these New York City family hotels cost?", "No current family-room rate has been observed, so check the live rate for your exact room, party, and dates. As older observations only: the lowest two-adult, one-night Expedia prices checked July 25, 2026 ran from about $190 (Radio City Apartments studio) to about $904 (Four Seasons Downtown) per room, for stay dates that have passed or were not recorded. Five-person family units sampled on October 11, 2026 for November 8-13 averaged about $631 (TRYP family room) to $2,544 (Hotel Beacon two-bedroom suite) per night with displayed taxes and fees. Tax and fee inclusion varies; parking, food, extras, and a second room are separate."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1520,7 +1619,7 @@ function newYorkCityFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "New York City family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; historical USD/room/night planning range ${hotel.priceRange}, based on July 25, 2026 checks; not an exact family-room quote` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; no current family-room rate observed (check live rate); older two-adult one-night Expedia sample ${hotel.twoAdultSample} USD per room, checked July 25, 2026, not a family-room quote` }))
   };
 
   const body = `    <main id="main">
@@ -1529,28 +1628,33 @@ function newYorkCityFamilyHotelPage() {
           <p class="eyebrow">New York City family hotels</p>
           <h1>New York City Family Hotels</h1>
           ${contributorCredit()}
-          <p>Room layouts, kitchens, areas and historical nightly budgets for twelve hotels.</p>
+          <p>Room layouts, kitchens, areas and dated price samples for twelve hotels.</p>
         </div>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 25, 2026</p>
-        <p>Historical July 25 records; <a href="#historical-price-basis">price limits</a>. <a href="#dated-family-budgets">November five-person budgets</a> checked October 11, 2026.</p>
+        <p><strong>Hotel facts and review sources checked:</strong> July 25, 2026</p>
+        <p>Prices are older observations only: two-adult samples checked July 25 and <a href="#dated-family-budgets">five-person samples</a> checked October 11, 2026. <a href="#historical-price-basis">Price basis</a>.</p>
+      </section>
+      <section id="nyc-hotel-answer" class="container answer-box" aria-label="Short answer">
+        <p><strong>Fits:</strong> kitchens or apartments (Hotel Beacon, Homewood, Residence Inn, Radio City); five or more in one unit (Radio City, TRYP family room, Beacon suites, Lotte family suites); breakfast included (Homewood, Residence Inn, Embassy Suites).</p>
+        <p><strong>Rough cost:</strong> no current family-room rate observed. Older samples: about $190-$904 per room for two adults for one night (July 25); $631-$2,544 per night with displayed taxes and fees for five-person units (October 11, for November 8-13).</p>
+        <p><strong>Main catch:</strong> beds and registered occupancy differ by exact room, and several hotels publish conflicting bed or occupancy details, so confirm your party in writing and price it live before paying.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
           <p><a href="./new-york-city-with-kids.html">Compare stay areas</a> | <a href="#dated-family-budgets">Five-person dated budgets</a></p>
-          <p>July 25, 2026 historical two-adult room bands, not family-room quotes. Exact party and stay basis is incomplete; taxes and fees vary. Upper ends are editorial ceilings, not observed quotes. <a href="#historical-price-basis">Full price basis</a>.</p>
+          <p>No current family-room rate observed: check the live rate. Small figures are older two-adult, one-night samples (July 25, 2026), not family-room quotes. <a href="#historical-price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="NYC twelve-hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Approx. USD/room/night</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
             </table>
           </div>
           <p id="historical-price-basis" class="review-label" style="scroll-margin-top: 80px">${esc(priceBasis)}</p>
-          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/new-york-city-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Historical July 25 records; the separate October room-budget samples are not included.</p></details>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/new-york-city-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. July 25 records with Check live rate and the older two-adult samples; the separate October room-budget samples are not included.</p></details>
         </div>
       </section>
       ${datedBudgetComparisonHtml()}
@@ -1574,7 +1678,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section id="sources-checked" class="container page-section source-section">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages; most public slices did not expose a reliable family-only count, so treat the themes as general guest signals rather than parent consensus. Price ranges retain historical public room examples and editorial planning ceilings, not live booking quotes or priced family categories.</p>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages; most public slices did not expose a reliable family-only count, so treat the themes as general guest signals rather than parent consensus. Prices are older dated observations (July 25 two-adult Expedia samples and October 11 five-person samples from official booking sources), not live quotes; no current family-room rate has been observed.</p>
         <ul class="source-list">
 ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">New York City photo source</a>, Jet Lowe / National Park Service, public domain.</li>
@@ -1587,7 +1691,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
 
   return pageShell({
     title: "Top Family Hotels in New York City: 12 Options by Trip Style",
-    description: "Compare 12 New York City family hotels by trip style, historical per-room nightly budget, room layout, occupancy, kitchens or breakfast, and sampled review themes.",
+    description: "Compare 12 New York City family hotels by trip style, room layout, occupancy, kitchens or breakfast, dated price samples, and sampled review themes.",
     canonical: "where-to-stay/new-york-city-family-hotels.html",
     nav: [["./new-york-city-with-kids.html", "Where to stay"], ["../things-to-do/new-york-city-with-kids.html", "Things to do"], ["../family-itinerary/new-york-city-with-kids.html", "Itinerary"]],
     body
@@ -1603,6 +1707,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
       "san-antonio": sanAntonioFamilyHotels
     }),
     sanDiegoFamilyHotelPage,
+    sanDiegoHotelComparisonCsv,
     lasVegasFamilyHotelPage,
     lasVegasHotelComparisonCsv,
     chicagoFamilyHotelPage,

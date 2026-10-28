@@ -62,7 +62,8 @@ test("hypothetical partial fee arithmetic never adds authorization or assumes ho
 test("Dana historical price room review activity and unrelated reconciled fees retain dates", () => {
   const f = record().fields;
   assert.equal(f.price.observed_on, "2026-07-21");
-  assert.equal(f.price.value.display, "$250-$400+");
+  assert.equal(f.price.value.display, "Check live rate");
+  assert.equal(f.price.value.older_one_night_sample.amount, "$326");
   assert.equal(f.price.value.party_basis, "Two adults");
   assert.match(f.price.value.room_basis, /not a six-person suite quote/);
   assert.equal(f.room.observed_on, "2026-08-17");

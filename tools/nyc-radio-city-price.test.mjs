@@ -26,7 +26,8 @@ test("shared price/room overlays preserve historical envelope clocks, ranges and
   assert.equal(fields.room.state, "disputed");
   assert.equal(fields.room.observed_on, "2026-07-25");
   assert.equal(fields.price.observed_on, "2026-07-25");
-  assert.equal(fields.price.value.display, "$190-$600+");
+  assert.equal(fields.price.value.display, "Check live rate");
+  assert.equal(fields.price.value.older_two_adult_sample, "$190");
   assert.equal(fields.price.value.structured_basis, false);
   assert.equal(fields.review_signal.observed_on, "2026-07-25");
   assert.deepEqual(fields.price.value.date_specific_samples, [radioCityPrice]);
