@@ -96,7 +96,7 @@ const days = [
   {
     title: "Day 2: Children's Museum or the Aquarium",
     blocks: [
-      ["Morning", "Our routing suggestion for younger children: Boston Children's Museum from 9 a.m. (closed Tuesdays; 10 a.m. on the first Saturday of the month). Older children: New England Aquarium at your timed entry."],
+      ["Morning", "Our routing suggestion for younger children: Boston Children's Museum from 9 a.m. (closed Tuesdays; 10 a.m. on the first Saturday of the month). Our routing suggestion for older children: New England Aquarium at your timed entry."],
       ["Lunch", "At the Aquarium, own food is eaten at the outdoor picnic tables. The Children's Museum visit page does not state its lunch rules."],
       ["Rest block", "Long rest. The Children's Museum page does not state a re-entry rule, so finish there before the break; the Aquarium allows same-day re-entry."],
       ["Late afternoon (optional)", "If you started at the Aquarium, the afternoon can return there before its 5 p.m. weekday closing (6 p.m. weekends)."]

@@ -61,7 +61,14 @@ const stayStart = cell => {
   if (iso) return Date.UTC(+iso[1], +iso[2] - 1, +iso[3]);
   const named = /\b([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2})(?:\s*[-–]\s*(?:[A-Za-z]+\.?\s+)?\d{1,2})?,?\s+(\d{4})\b/.exec(cell);
   const month = named ? MONTHS.indexOf(named[1].toLowerCase()) : -1;
-  return month >= 0 ? Date.UTC(+named[3], month, +named[2]) : null;
+  if (month >= 0) return Date.UTC(+named[3], month, +named[2]);
+  // Q02d: day-first dates ("8 November 2026", "8-13 Nov 2026").
+  const dayFirst = /\b(\d{1,2})(?:\s*[-–]\s*\d{1,2})?\s+([A-Za-z]{3})[a-z]*\.?,?\s+(\d{4})\b/.exec(cell);
+  const dayMonth = dayFirst ? MONTHS.indexOf(dayFirst[2].toLowerCase()) : -1;
+  if (dayMonth >= 0) return Date.UTC(+dayFirst[3], dayMonth, +dayFirst[1]);
+  // An empty cell or an explicit unknown marker has no start date; anything else must parse.
+  if (cell.trim() === "" || /^(?:unclear|unknown|not recorded|not observed|n\/a|none)\b/i.test(cell.trim())) return null;
+  throw new Error(`Unparseable stay date cell: ${cell}`);
 };
 const csvFiles = files.filter(file => /\/downloads\/[^/]+\.csv$/.test(file));
 export function unlabelledIsoStayRows(text, now) {
@@ -87,6 +94,11 @@ test("the CSV checker parses quoted fields and flags only priced, unlabelled pas
   assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","November 8-13, 2026 (older observation)","1500"\n', now), []);
   assert.deepEqual(unlabelledIsoStayRows('"Hotel","Room","Older sample stay date (passed)","Older one-night sample (USD/room)"\n"A","King","2026-08-11","$282"\n', now), []);
   assert.deepEqual(unlabelledIsoStayRows('"Hotel","Room","Sample stay date","Older one-night sample (USD/room)"\n"A","King","2026-08-11","$282"\n', now), ["A | King | 2026-08-11"]);
+  assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","8 November 2026","1500"\n', now), ["A | Suite | 8 November 2026"]);
+  assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","8-13 Nov 2026","1500"\n', now), ["A | Suite | 8-13 Nov 2026"]);
+  assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","20-23 December 2026","1500"\n', now), []);
+  assert.deepEqual(unlabelledIsoStayRows(stay + '"A","Suite","Unclear (label not explained)","1500"\n', now), []);
+  assert.throws(() => unlabelledIsoStayRows(stay + '"A","Suite","next weekend","1500"\n', now), /Unparseable stay date cell: next weekend/);
 });
 
 for (const now of ["2026-11-08", "2026-11-14", "2027-01-15"].map(day => new Date(`${day}T12:00:00Z`))) {

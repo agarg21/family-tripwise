@@ -218,7 +218,7 @@ test("source recheck dates are not operational end dates after the check day", (
 test("forward review or recheck dates are flagged; observation wording passes", () => {
   for (const text of ["<p>Price checked 2026-10-11; review due 2026-10-18.</p>", "<p>Next source review due October 23, 2026.</p>",
     "<p>Policy checked 2026-10-11; recheck 2026-10-18.</p>", "<p>Parking wording checked October 11; recheck October 18.</p>",
-    "<p>Price research is next due October 16.</p>", "<p>Next price review: 2026-11-01.</p>", "<p>Review scheduled for November 3.</p>", "<p>Review prices by October 23, Bahia room facts by November 2.</p>", "<p>Review booking prices by Nov 1.</p>", "<p>Recheck the deposit amount before November 4.</p>", "<p>Sources can change before the next review date.</p>", '"Price checked","Recheck due"'])
+    "<p>Price research is next due October 16.</p>", "<p>Next price review: 2026-11-01.</p>", "<p>Review scheduled for November 3.</p>", "<p>Review prices by October 23, Bahia room facts by November 2.</p>", "<p>Review booking prices by Nov 1.</p>", "<p>Recheck prices and booking by Nov 1.</p>", "<p>Review rates then booking before Nov 2.</p>", "<p>Recheck the deposit amount before November 4.</p>", "<p>Sources can change before the next review date.</p>", '"Price checked","Recheck due"'])
     assert.ok(findReviewDueDates(text).length > 0, text);
   for (const text of ["<p>Price observed 2026-10-11; check live rates before booking.</p>", "<p>Notice rechecked September 22, 2026.</p>",
     "<p>October 11, 2026 recheck unavailable; these facts have not been renewed.</p>", "<p>Recheck venue and weather before leaving.</p>",

@@ -579,7 +579,7 @@ export const activityPages = {
     hidePlans: true,
     baseReplacements: [
       ["<h1>Things to do in Chicago with kids</h1>", "<h1>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style</h1>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Garfield Park admission checked:</strong> October 13, 2026 · <strong>Other attraction sources checked:</strong> July 23, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Garfield Park admission checked:</strong> October 13, 2026 <span aria-hidden=\"true\">·</span> <strong>Other attraction sources checked:</strong> July 23, 2026</p>"],
       ["Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.", "Family Tripwise compares official attraction information, current city sources, family logistics, and practical planning tradeoffs such as age fit, stroller friction, weather backup, nap timing, and location."],
       ["<div><dt>Best toddler ideas</dt><dd>Lincoln Park Zoo, Maggie Daley Park</dd></div>", "<div><dt>Younger-child day</dt><dd>Chicago Children's Museum or Lincoln Park Zoo</dd></div>"],
       ["<div><dt>Best teen ideas</dt><dd>architecture boat tour, food halls and neighborhoods</dd></div>", "<div><dt>Older-kid day</dt><dd>Architecture cruise, Art Institute, or 360 CHICAGO</dd></div>"],
@@ -1826,7 +1826,7 @@ export const itineraryPages = {
       lines: [
         ["The plan", "1 day: one classic visual plus one anchor. 2 days: a resort/Strip day plus one child-chosen anchor day. 3 days: soft arrival, classic day, contrast day."],
         ["Main catch", "DISCOVERY Children's Museum, the main younger-child anchor, is closed most Mondays and opens at noon on Sundays, so do not plan it for a Sunday morning, or a Monday unless it falls in a school break the museum lists."],
-        ["Cost", "DISCOVERY is USD 20 per person age 1 and up (USD 15 with a Nevada ID); everyone age 1 and up needs a ticket. Other anchors are ticketed separately; check each price for your date."]
+        ["Cost", "DISCOVERY is USD 20 per person age 1 and up (USD 15 with a Nevada ID). Other anchors are ticketed separately; check each price for your date."]
       ],
       factsTitle: "DISCOVERY Children's Museum hours and entry, checked October 27, 2026",
       factsNote: "Official facts as published on the museum's own pages on October 27, 2026. Other venue facts on this page date from the July 23, 2026 source check. Confirm hours for your exact date.",
