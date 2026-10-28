@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { bostonPack, bostonPackForDate, bostonPlazaEvidence, bostonRooms, bostonPrices, bostonCsv, bostonFamilyHotelPage, bostonBreakfastUpgrade } from "./page-generation/boston-family-hotels-page.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
-import { labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
+import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
 const read = path => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"));
 
 test("exact Plaza Suite overlay renews only its source facts, never a nightly quote", () => {
@@ -32,7 +32,7 @@ test("historical Boston model never consumes future kitchen facts", () => {
 
 test("page and full export share exact kitchen, price hold and source clocks", () => {
   const html=bostonFamilyHotelPage();
-  assert.equal(bostonCsv,labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices)));
+  assert.equal(bostonCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices))));
   assert.equal(bostonCsv.trim().split("\n").length,7);
   assert.equal(bostonRooms.filter(r=>r.kitchen==="published-kitchen").length,2);
   assert.equal(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices,{kitchen:"published"}).trim().split("\n").length,3);

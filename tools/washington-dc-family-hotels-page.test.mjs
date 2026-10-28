@@ -4,7 +4,7 @@ import test from "node:test";
 import { readFileSync } from "node:fs";
 import { runInNewContext } from "node:vm";
 import { dcPath, dcPack, dcPrices, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples, dcFamilyRailForm } from "./page-generation/washington-dc-family-hotels-page.mjs";
-import { labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
+import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
 import { readableText } from "./page-generation/readable-text.mjs";
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -14,7 +14,7 @@ test("DC exact-owner page and complete CSV match maintained shared records", () 
   assert.deepEqual(dcRooms.map(room => room.id), ["dc-embassy-deluxe-double", "dc-homewood-two-queen", "dc-pendry-two-bedroom"]);
   assert.equal(read(`site/${dcPath}`), dcFamilyHotelPage());
   assert.equal(read("site/downloads/washington-dc-family-hotels.csv"), dcCsv);
-  assert.equal(dcCsv, labelOlderStaySamples(roomComparisonCsv(dcPack, dcPack.scenario, "2026-10-09", dcPrices)));
+  assert.equal(dcCsv, readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(dcPack, dcPack.scenario, "2026-10-09", dcPrices))));
   assert.equal(dcCsv.trim().split("\n").length, 7);
   assert.doesNotMatch(dcFamilyHotelPage(), /Residence Inn|Hyatt|AggregateRating|"@type":"Offer"/);
   const generated = new Map();

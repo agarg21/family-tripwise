@@ -3,6 +3,7 @@ import { basename, dirname, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validDate } from "./hotel-evidence.mjs";
 import { currentEasternDate, screenRoomPack, validateRoomPack } from "./family-room-task.mjs";
+import { readableText } from "./page-generation/readable-text.mjs";
 
 export const comparisonHeadings = Object.freeze([
   "Destination", "Hotel", "Published category", "Capacity screen", "Capacity conditions", "Recorded capacity rules (dated; not revalidated)",
@@ -280,7 +281,7 @@ async function main() {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url))
   main().catch(error => { console.error(error.message); process.exitCode = 1; });
 
-function parseQuotedCsv(text) {
+export function parseQuotedCsv(text) {
   const rows = [[]];let field = "", quoted = false;
   for (let i = 0; i < text.length; i++) {
     const c = text[i];
@@ -292,6 +293,19 @@ function parseQuotedCsv(text) {
   }
   if (field || rows.at(-1).length) rows.at(-1).push(field);
   return rows.filter(row => row.length > 1);
+}
+
+// Published downloads (Q09b): text cells recorded with collapsed spacing ("before11:59PM",
+// "2adults/3kids") get the same display-only spacing repair as the lodging pages. Only spaces
+// are inserted; source URL columns, cells containing a URL and cells without a space (amounts,
+// dates, codes) are left byte-identical. The comparison engine's own CSV bytes are unchanged.
+const URL_COLUMNS = new Set(["Category source", "Price source"]);
+export function readableComparisonCsv(csv) {
+  const [head, ...rows] = parseQuotedCsv(csv);
+  if (head.join("\u0000") !== comparisonHeadings.join("\u0000")) throw new Error("Unexpected comparison CSV headings");
+  const repaired = rows.map(row => row.map((value, index) =>
+    URL_COLUMNS.has(comparisonHeadings[index]) || /https?:|www\./i.test(value) ? value : readableText(value)));
+  return comparisonCsv(repaired);
 }
 
 export const OLDER_STAY_SAMPLE_LABEL = "Older observation for these example stay dates; not a current quote. ";

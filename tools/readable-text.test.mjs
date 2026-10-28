@@ -53,3 +53,29 @@ test("lodging pages show no run-together number/word tokens in visible text", ()
     assert.deepEqual(runTogetherTokens(visibleText(html)), [], page);
   }
 });
+
+test("lodging CSV downloads get display spacing in text cells only; URLs, amounts and JSON records unchanged", async () => {
+  const { readableComparisonCsv, labelOlderStaySamples, roomComparisonCsv, parseQuotedCsv, comparisonHeadings } = await import("./family-room-comparison.mjs");
+  const generators = [
+    ["boston-family-hotels.csv", "./page-generation/boston-family-hotels-page.mjs", "bostonPack", "bostonPrices"],
+    ["washington-dc-family-hotels.csv", "./page-generation/washington-dc-family-hotels-page.mjs", "dcPack", "dcPrices"],
+    ["puerto-vallarta-family-resorts.csv", "./page-generation/puerto-vallarta-family-resorts-page.mjs", "pvPack", "pvPrices"]
+  ];
+  for (const [file, module, packName, pricesName] of generators) {
+    const mod = await import(module);
+    const raw = labelOlderStaySamples(roomComparisonCsv(mod[packName], mod[packName].scenario, "2026-10-09", mod[pricesName]));
+    const published = readFileSync(new URL(`../site/downloads/${file}`, import.meta.url), "utf8");
+    assert.equal(published, readableComparisonCsv(raw), file);
+    const [rawHead, ...rawRows] = parseQuotedCsv(raw);
+    const [head, ...rows] = parseQuotedCsv(published);
+    assert.deepEqual(head, rawHead);
+    assert.equal(rows.length, rawRows.length);
+    rows.forEach((row, r) => row.forEach((value, c) => {
+      const before = rawRows[r][c];
+      if (["Category source", "Price source"].includes(comparisonHeadings[c]) || !/\s/.test(before) || /^[{[]/.test(before) || /https?:/.test(before))
+        assert.equal(value, before, `${file} ${comparisonHeadings[c]} must be unchanged`);
+      else assert.equal(value.replace(/[\s-]/g, ""), before.replace(/[\s-]/g, ""), `${file} ${comparisonHeadings[c]} may change spacing only`);
+      if (!/^[{[]/.test(value)) assert.deepEqual(runTogetherTokens(value), [], `${file} ${comparisonHeadings[c]}`);
+    }));
+  }
+});

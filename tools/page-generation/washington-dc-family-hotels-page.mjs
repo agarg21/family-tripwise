@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { screenRoomPack } from "../family-room-task.mjs";
-import { labelOlderStaySamples, roomComparisonCsv } from "../family-room-comparison.mjs";
+import { labelOlderStaySamples, readableComparisonCsv, roomComparisonCsv } from "../family-room-comparison.mjs";
 import { contributorCredit } from "./contributors.mjs";
 import { assessFamilyTransit } from "../family-transit-cost.mjs";
 import { dcPlanPremiums } from "../dc-plan-premium.mjs";
@@ -18,7 +18,7 @@ const original = read("washington-dc-room-configurations-2026-09-30.json");
 export const dcPack = { ...original, evidence_scope: `${original.evidence_scope} Public selection is three categories; Residence Inn is excluded pending its exact-modal reinspection.`, records: original.records.filter(record => owners.has(record.id)) };
 export const dcPrices = ["washington-dc-embassy-price-observation-2026-09-30.json", "washington-dc-homewood-price-observation-2026-09-30.json"].flatMap(read);
 export const dcRooms = screenRoomPack(dcPack, dcPack.scenario, dcScreenedOn, dcPrices);
-export const dcCsv = labelOlderStaySamples(roomComparisonCsv(dcPack, dcPack.scenario, dcScreenedOn, dcPrices));
+export const dcCsv = readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(dcPack, dcPack.scenario, dcScreenedOn, dcPrices)));
 export const dcPremiums = dcPlanPremiums(dcPrices);
 const restRecord = read("dc-rest-time-budget-2026-10-03.json");
 const museumRecord = read("washington-dc-museum-rest-task-2026-10-03.json");

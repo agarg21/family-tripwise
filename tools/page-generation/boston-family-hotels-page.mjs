@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { screenRoomPack, validateRoomPack } from "../family-room-task.mjs";
 import { validDate } from "../hotel-evidence.mjs";
-import { labelOlderStaySamples, roomComparisonCsv } from "../family-room-comparison.mjs";
+import { labelOlderStaySamples, readableComparisonCsv, roomComparisonCsv } from "../family-room-comparison.mjs";
 import { contributorCredit } from "./contributors.mjs";
 import { validateRoomPrices } from "../family-room-price.mjs";
 import { bostonMuseumAdmission } from "../boston-museum-admission.mjs";
@@ -47,7 +47,7 @@ export const bostonPack = bostonPackForDate(bostonScreenedOn);
 export const bostonExcluded = original.records.filter(record => !owners.has(record.id));
 export const bostonPrices = ["boston-fenway-price-observation-2026-10-03.json", "boston-park-plaza-count-price-normalization-2026-10-09.json"].flatMap(read);
 export const bostonRooms = screenRoomPack(bostonPack, bostonPack.scenario, bostonScreenedOn, bostonPrices);
-export const bostonCsv = labelOlderStaySamples(roomComparisonCsv(bostonPack, bostonPack.scenario, bostonScreenedOn, bostonPrices));
+export const bostonCsv = readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack, bostonPack.scenario, bostonScreenedOn, bostonPrices)));
 export const bostonDiningScreenedOn = "2026-10-10";
 export const bostonDiningCsv = labelOlderStaySamples(roomComparisonCsv(bostonPack, bostonPack.scenario, bostonDiningScreenedOn, bostonPrices,
   { kitchen: "published", capacity: "not-excluded", minimum_dining_seats: 5 }));

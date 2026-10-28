@@ -28,13 +28,13 @@ test("rate-plan task is dated proxy evidence and never renews prices or ranks ho
  assert.doesNotMatch(row,/cheapest|live quote|all-in|fits.*budget/i);
 });
 import {validateRoomPack} from "./family-room-task.mjs";
-import {labelOlderStaySamples,roomComparisonCsv} from "./family-room-comparison.mjs";
+import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv} from "./family-room-comparison.mjs";
 import { readableText } from "./page-generation/readable-text.mjs";
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),"utf8");
 test("Boston exact category and CSV generation share maintained records",()=>{
  assert.deepEqual(validateRoomPack(bostonPack),[]);assert.equal(bostonRooms.length,4);assert.equal(bostonExcluded.length,3);
  assert.equal(read(`site/${bostonPath}`),bostonFamilyHotelPage());assert.equal(read("site/downloads/boston-family-hotels.csv"),bostonCsv);
- assert.equal(bostonCsv,labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices)));assert.equal(bostonCsv.trim().split("\n").length,7);
+ assert.equal(bostonCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices))));assert.equal(bostonCsv.trim().split("\n").length,7);
  assert.deepEqual(bostonExcluded.map(r=>r.configurations[0].maximum),[4,3,4]);
 });
 test("Boston normalization preserves original amounts and stops count-only age acceptance",()=>{
@@ -103,5 +103,5 @@ test("public meal comparison preserves count-only uncertainty, partial fees and 
  const html=bostonFamilyHotelPage();for(const text of ["USD 419.22", "USD 83.84", "Not breakfast for all five", "Ages 8 and 12 outside", "not individual age acceptance", "already included once", "not a value winner", "not re-priced", "check live rates before booking", "no number of breakfasts"]){assert.ok(html.toLowerCase().includes(text.toLowerCase()),text);}
  assert.match(html,/id="breakfast-upgrade" data-room="boston-park-plaza-deluxe-double" data-kitchen="not-established" class="dc-room"/);
  assert.match(html,/tabindex="0" role="region" aria-label="Park Plaza breakfast upgrade"/);
- assert.equal(bostonCsv,labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices)));
+ assert.equal(bostonCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices))));
 });

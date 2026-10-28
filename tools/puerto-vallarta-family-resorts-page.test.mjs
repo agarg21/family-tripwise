@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {pvPath,pvPack,pvPrices,pvRooms,pvCsv,pvExcluded,pvTaskEvidence,puertoVallartaFamilyResortsPage} from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import {validateRoomPack,screenRoomPack} from "./family-room-task.mjs";
-import {labelOlderStaySamples,roomComparisonCsv,comparisonHeadings} from "./family-room-comparison.mjs";
+import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv,comparisonHeadings} from "./family-room-comparison.mjs";
 import {maintenanceReport} from "./site-maintenance.mjs";
 import {pvMealPlanComparison} from "./pv-meal-plan-comparison.mjs";
 import { readableText } from "./page-generation/readable-text.mjs";
@@ -21,7 +21,7 @@ test("PV exposes same-record meal-plan increment and preserves unknown cost righ
 test("PV comparison and full CSV share original maintained category/price joins",()=>{
  assert.deepEqual(validateRoomPack(pvPack),[]);assert.equal(pvRooms.length,3);assert.equal(pvExcluded.length,6);
  assert.equal(read(`site/${pvPath}`),puertoVallartaFamilyResortsPage());assert.equal(read("site/downloads/puerto-vallarta-family-resorts.csv"),pvCsv);
- assert.equal(pvCsv,labelOlderStaySamples(roomComparisonCsv(pvPack,pvPack.scenario,"2026-10-09",pvPrices)));
+ assert.equal(pvCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(pvPack,pvPack.scenario,"2026-10-09",pvPrices))));
  const rows=pvCsv.trimEnd().split("\n").map(line=>[...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m=>m[1].replaceAll('""','"')));
  assert.equal(rows.length,5);assert.deepEqual(rows[0],comparisonHeadings);assert.ok(rows.every(row=>row.length===35));
  assert.deepEqual(pvRooms.map(r=>r.checked_on),["2026-10-09","2026-10-09","2026-10-03"]);
@@ -41,7 +41,7 @@ test("Sanctuary price never inherits Panoramic kitchen or prices regional catego
  const html=puertoVallartaFamilyResortsPage();for(const rate of pvRooms[0].price.rates){assert.ok(html.includes(`USD ${rate.stay_amount.toFixed(2)}`));assert.ok(html.includes(readableText(rate.cancellation)));}
  assert.ok(html.includes(readableText(pvRooms[0].price.fee_basis)));
  assert.ok(html.includes(readableText(pvRooms[0].price.deposit_basis.split(" No card,")[0])));
- assert.ok(pvCsv.includes(pvRooms[0].price.deposit_basis));
+ assert.ok(pvCsv.includes(readableText(pvRooms[0].price.deposit_basis)));
  assert.doesNotMatch(html,/No source renewal of069|No card, payment, BOOK HERE/);
  const later=screenRoomPack(pvPack,pvPack.scenario,"2026-10-24",pvPrices);assert.match(later[0].price.status,/historical/);
 });
