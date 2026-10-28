@@ -38,7 +38,7 @@ export const escapeHtml = value => String(value).replaceAll("&", "&amp;").replac
 export function renderChecks(result, row) {
   const money = value => `$${value.toLocaleString("en-US")}`;
   const parkingText = row.id === "cabana-bay"
-    ? row.parking === 0 ? "$0 selected because no vehicle is planned; parking itself is not free." : "Unknown: $26 plus tax per vehicle is published, but billing frequency, tax and rate inclusion are not established. Do not multiply by the number of nights."
+    ? row.parking === 0 ? "$0 selected because no vehicle is planned; parking itself is not free." : "Unknown: a per-vehicle amount plus tax is published (see Cost evidence), but billing frequency, tax and rate inclusion are not established. Do not multiply by the number of nights."
     : row.parking === null ? "Unknown until vehicle use is decided." : `${money(row.parking)} before any applicable tax; published parking rate only.`;
   return `<p class="capacity"><strong>${escapeHtml(row.capacity)}</strong></p>
     <p>${escapeHtml(row.dateNote)}</p>

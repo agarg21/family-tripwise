@@ -79,17 +79,58 @@ const waterPolicy = suite => {
   if (!policy) return "";
   return `\n            <div data-water-policy="${e(suite.id)}"><dt>Ride heights &amp; session cost</dt><dd><ul>${policy.rides.map(ride => `<li>${e(ride.name)}: published minimum ${ride.minimumInches} inches.</li>`).join("")}</ul><p>${e(policy.costConflict)} ${cite(suite.waterSource, "IHG fee inclusions")} ${cite(policy.source, "Waterpark FAQ")}</p><p>${e(policy.limitation)} Policy observed ${e(policy.checkedOn)}; check current terms before booking.</p></dd></div>`;
 };
-const nightlySample = suite => {
+const usd = value => `USD${value.toFixed(2)}`;
+const perNight = (total, nights) => `About USD${Math.round(total / nights)} per room/night`;
+// One shape for both priced records: shared stay basis plus each public plan.
+const ratePlans = suite => {
   const booking = suite.bookingRates;
-  if (booking) {
-    const usd = value => `USD${value.toFixed(2)}`;
-    return `<div data-booking-rates="${e(suite.id)}">${booking.plans.map(rate => `<p>Older observation, checked ${e(booking.checkedOn)} for ${e(booking.stay)}, ${e(booking.room)}, ${e(booking.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / booking.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} displayed for ${booking.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.taxes)} displayed taxes). ${e(rate.restrictions)}</p>`).join("")}<p>${e(booking.terms)}</p><p>${e(booking.feeBasis)} ${e(booking.currencyBasis)}</p><p>${e(booking.limitation)} Price and terms observed ${e(booking.checkedOn)}; check live rates before booking. ${cite(booking.source, "Official Cabana Bay rate details")}</p></div>`;
-  }
+  if (booking) return {
+    observedOn: booking.checkedOn, stay: booking.stay, nights: booking.nights, room: booking.room, party: booking.party,
+    plans: booking.plans.map(rate => ({ plan: rate.plan, total: rate.estimatedTotal, roomSubtotal: rate.roomSubtotal, taxes: rate.taxes, terms: rate.restrictions })),
+    totalLabel: "displayed"
+  };
+  const samples = [suite.priceSample, suite.alternatePriceSample].filter(Boolean);
+  if (!samples.length) return null;
+  const [first] = samples;
+  for (const rate of samples) if (rate.stay !== first.stay || rate.nights !== first.nights || rate.room !== first.room || rate.party !== first.party || rate.observedOn !== first.observedOn) throw new Error(`${suite.id} price samples must share one stay basis`);
+  return {
+    observedOn: first.observedOn, stay: first.stay, nights: first.nights, room: first.room, party: first.party,
+    plans: samples.map(rate => ({ plan: rate.plan, total: rate.estimatedTotal, roomSubtotal: rate.roomSubtotal, resortFees: rate.resortFees, taxes: rate.taxes, terms: rate.terms })),
+    totalLabel: "estimated"
+  };
+};
+const sampleBasis = () => {
+  const bases = [...new Set(suites.map(ratePlans).filter(Boolean).map(rates => `checked ${longDate(rates.observedOn)} for ${rates.stay}`))];
+  return `Nightly samples are older observations ${bases.map(e).join("; ")}: one room, two adults and three children (ages not entered), stay total divided by nights. Stay totals, plan terms and how we checked each sample are with each suite below.`;
+};
+const longDate = iso => new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+export const nightlyCell = suite => {
+  const rates = ratePlans(suite);
+  if (!rates) return "Not observed for this room, party and dates";
+  return rates.plans.map(rate => `${e(rate.plan)}: <strong>${perNight(rate.total, rates.nights)}</strong>`).join("<br>");
+};
+const sharedResortFee = rates => {
+  const fees = [...new Set(rates.plans.map(rate => rate.resortFees).filter(fee => fee !== undefined))];
+  return fees.length === 1 ? fees[0] : null;
+};
+const stayTotals = suite => {
+  const rates = ratePlans(suite);
+  if (!rates) return `<p><strong>Approx. nightly price:</strong> a matching room/party/date quote has not been observed.</p>`;
+  const fee = sharedResortFee(rates);
+  if (rates.plans.some(rate => rate.resortFees !== undefined) && fee === null) throw new Error(`${suite.id} plans need one shared resort-fee amount`);
+  const ihg = !suite.bookingRates;
+  const attrs = ihg ? `id="ihg-rate-plans" data-rate-plans="${e(suite.id)}"` : `data-booking-rates="${e(suite.id)}"`;
+  const caption = `Older observation ${longDate(rates.observedOn)} &middot; ${e(rates.stay)} &middot; ${rates.nights} nights &middot; one room, ${e(rates.room)} &middot; ${e(rates.party)}`;
+  const rows = rates.plans.map(rate => `<tr><th scope="row">${e(rate.plan)}</th><td>${usd(rate.total)} ${rates.totalLabel} for ${rates.nights} nights</td><td>${usd(rate.roomSubtotal)} room${rate.resortFees !== undefined ? " + resort fees" : ""} + ${usd(rate.taxes)} displayed taxes</td><td>${e(rate.terms)}</td></tr>`).join("");
+  const feeLine = fee === null ? "" : ` Both totals also include ${usd(fee)} in resort fees for the ${rates.nights} nights.`;
+  return `<div class="stay-totals" ${attrs}><p class="rate-basis">${caption}</p><div class="table-scroll" tabindex="0" role="region" aria-label="${e(suite.name)} dated stay totals"><table><caption>Dated stay totals by public plan</caption><colgroup><col class="plan-col"><col class="total-col"><col class="parts-col"><col></colgroup><thead><tr><th scope="col">Public plan</th><th scope="col">Stay total</th><th scope="col">Made up of</th><th scope="col">Plan terms</th></tr></thead><tbody>${rows}</tbody></table></div><p>Approximate nightly samples are in the <a href="#quick-compare">comparison table</a>.${feeLine} Confirm the deposit, cancellation deadline and fee inclusion for your booking before paying; check live rates.${ihg ? ` <a href="../${orlandoRateCsvPath}" download>Download dated IHG rates (CSV)</a>` : ""}</p></div>`;
+};
+const howChecked = suite => {
+  const booking = suite.bookingRates;
+  if (booking) return `<details class="how-checked"><summary>How we checked ${e(suite.name)}</summary><p>${cite(booking.source, "Official Cabana Bay rate details")} &middot; price and terms observed ${e(booking.checkedOn)}, not refreshed during page assembly.</p><p><strong>Deposit and cancellation:</strong> ${e(booking.terms)}</p><p><strong>Taxes and extras:</strong> ${e(booking.feeBasis)}</p><p><strong>Currency:</strong> ${e(booking.currencyBasis)}</p><p><strong>Limits:</strong> ${e(booking.limitation)}</p></details>`;
   const sample = suite.priceSample;
-  if (!sample) return "A matching room/party/date quote has not been observed.";
-  const usd = value => `USD${value.toFixed(2)}`;
-  const render = rate => `<p>Older observation, checked ${e(rate.observedOn)} for ${e(rate.stay)}, ${e(rate.room)}, ${e(rate.party)}: <strong>${e(rate.plan)}</strong>. <strong>About USD${Math.round(rate.estimatedTotal / rate.nights)} per room/night</strong> from ${usd(rate.estimatedTotal)} estimated for ${rate.nights} nights (${usd(rate.roomSubtotal)} room + ${usd(rate.resortFees)} resort fee + ${usd(rate.taxes)} displayed taxes). ${e(rate.terms)} ${cite(rate.source, "Dated IHG rate details")}</p>`;
-  return `<div id="ihg-rate-plans" data-rate-plans="${e(suite.id)}"><p><a href="../${orlandoRateCsvPath}" download>Download dated IHG rates (CSV)</a></p>${[sample, suite.alternatePriceSample].filter(Boolean).map(render).join("")}<p>${e(suite.priceTerms.limitation)}</p><p>${e(suite.priceTerms.depositConflict)} Price terms observed ${e(suite.priceTerms.checkedOn)}; check live rates before booking.</p></div>`;
+  if (!sample) return "";
+  return `<details class="how-checked"><summary>How we checked ${e(suite.name)}</summary><p>${cite(sample.source, "Dated IHG rate details")} &middot; price observed ${e(sample.observedOn)}; price terms checked ${e(suite.priceTerms.checkedOn)}, not refreshed during page assembly.</p><p><strong>Taxes and extras:</strong> ${e(suite.priceTerms.limitation)}</p><p><strong>Deposit timing:</strong> ${e(suite.priceTerms.depositConflict)}</p></details>`;
 };
 
 export function orlandoSuitePage() {
@@ -103,7 +144,7 @@ export function orlandoSuitePage() {
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${e(title)}</title>
   <meta name="description" content="Compare three Orlando family suite options by sleeping setup, Disney or Universal access, water-park exclusions and partial parking or resort fees. Official sources linked.">
-  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css">
+  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css?v=ft-q09c-orl">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="orlando-page">
@@ -121,9 +162,11 @@ export function orlandoSuitePage() {
       <h2>Start with the park days you will repeat</h2>
       <p><a href="../${orlandoCombinedRateCsvPath}" download>Download dated Cabana Bay and IHG rates (CSV)</a></p>
       <p data-meal-download><a href="../${orlandoMealCsvPath}" download>Download dated rates &amp; meal checks (CSV)</a></p>
-      <div class="table-scroll" tabindex="0" role="region" aria-label="Suite overview"><table><caption>Published room categories, not live availability</caption><thead><tr><th scope="col">Base / property</th><th scope="col">Exact room category</th><th scope="col">Published headcount</th></tr></thead><tbody>
-        ${suites.map(suite => `<tr><th scope="row">${e(suite.base)}<br><a href="#${suite.id}">${e(suite.name)}</a></th><td>${e(suite.room)}</td><td>${suite.maximum === null ? "Unresolved" : `Up to ${suite.maximum}`}<br>${cite(suite.capacitySource, suite.id === "holiday-inn" ? "Dated IHG rate details" : "Official rooms")}</td></tr>`).join("\n")}
+      <p id="overview-caption">Published room categories and dated nightly samples, not live availability or quotes.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Suite overview"><table class="overview-table" aria-labelledby="overview-caption"><thead><tr><th scope="col">Base / property</th><th scope="col">Exact room category</th><th scope="col">Published headcount</th><th scope="col">Dated nightly sample</th></tr></thead><tbody>
+        ${suites.map(suite => `<tr><th scope="row">${e(suite.base)}<br><a href="#${suite.id}">${e(suite.name)}</a></th><td>${e(suite.room)}</td><td>${suite.maximum === null ? "Unresolved" : `Up to ${suite.maximum}`}<br>${cite(suite.capacitySource, suite.id === "holiday-inn" ? "Dated IHG rate details" : "Official rooms")}</td><td class="nightly-cell">${nightlyCell(suite)}</td></tr>`).join("\n")}
       </tbody></table></div>
+      <p>${sampleBasis()}</p>
       <p><strong>Disney plus Universal:</strong> none of these records establishes one included transport service covering both resorts. Fix your park list before choosing a base. Compare the cost and effort of cross-resort days, not just the room price.</p>
       <p><a href="../things-to-do/orlando-with-kids.html">Plan non-park days: compare Orlando activity admission prices, hours and re-entry rules</a>.</p>
     </section>
@@ -135,7 +178,7 @@ export function orlandoSuitePage() {
           <label>Departure<input name="departure" type="date" min="2026-09-25" max="2028-01-01" value="2026-11-13" required></label>
           <label>Children (plus two adults)<select name="children">${[1,2,3,4,5].map(n => `<option${n === 3 ? " selected" : ""}>${n}</option>`).join("")}</select></label>
           <label>Overnight vehicle<select name="car"><option value="one">One vehicle</option><option value="none">No vehicle</option><option value="unknown">Not decided</option></select></label>
-          <label>Holiday Inn resort fee already in your rate?<select name="feeIncluded"><option value="unknown">Not verified</option><option value="yes">Yes, already included</option><option value="no">No, standard $65 fee applies separately</option></select></label>
+          <label>Holiday Inn resort fee already in your rate?<select name="feeIncluded"><option value="unknown">Not verified</option><option value="yes">Yes, already included</option><option value="no">No, the standard nightly fee applies separately</option></select></label>
         </div>
         <div class="actions"><button type="submit" disabled>Compare stay</button><button type="reset" disabled>Restore example</button></div>
       </form>
@@ -150,9 +193,9 @@ export function orlandoSuitePage() {
             <div><dt>Park access</dt><dd>${e(suite.transport)} ${cite(suite.transportSource, "Transport terms")}</dd></div>
             <div><dt>Water features &amp; admission</dt><dd>${e(suite.water)} ${cite(suite.waterSource, "Water terms")}</dd></div>${waterPolicy(suite)}
             <div><dt>Important limitation</dt><dd>${e(suite.caution)} ${cite(suite.cautionSource ?? suite.capacitySource, "Check the notice or benefit")}</dd></div>
-            <div><dt>Approx. nightly price</dt><dd>${nightlySample(suite)}</dd></div>
             <div><dt>Cost evidence</dt><dd>${e(suite.costNote)} ${cite(suite.parkingSource, "Published fees")}</dd></div>
           </dl>
+          ${stayTotals(suite)}${howChecked(suite)}
           <div id="${suite.id}-checks" class="checks">${renderChecks(example, example.rows[index])}</div>
           <p><strong>Next booking check:</strong> ${e(suite.next)}</p>
         </article>`).join("")}
