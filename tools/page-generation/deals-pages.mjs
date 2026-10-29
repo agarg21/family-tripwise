@@ -243,7 +243,7 @@ function heroFigure(v) {
   const img = imageLock[v.hero_image.slug];
   return `        <figure class="container licensed-photo deal-photo">
           <img src="../${e(img.path)}" alt="${e(v.hero_image.alt)}" width="${img.width}" height="${img.height}" class="intrinsic-photo" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>${e(v.hero_image.caption)} Photo: ${e(img.artist)}, Wikimedia Commons, ${e(img.license)}; Family Tripwise serves a resized copy. <a href="${e(img.source_page)}">License and source</a>.</figcaption>
+          <figcaption>${e(v.hero_image.caption)} Photo: ${e(img.artist)}, Wikimedia Commons, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}; Family Tripwise serves a resized copy. <a href="${e(img.source_page)}">License and source</a>.</figcaption>
         </figure>`;
 }
 

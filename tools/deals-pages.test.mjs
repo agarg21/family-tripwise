@@ -333,5 +333,7 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(v({ saves: "Saves: $900 off the room." }).some((p) => /\$900 is not a figure the observed terms state/.test(p)));
   assert.ok(v({ big_number: "$500" }).some((p) => /\$500 is not a figure/.test(p)));
   assert.ok(v({ chips: ["Kids eat free worth $1,000"] }).some((p) => /\$1,000 is not a figure/.test(p)));
+  assert.ok(v({ hero_image: { ...b.v2.hero_image, slug: "no-such-photo" } }).some((p) => /hero_image.slug must be a self-hosted photo/.test(p)));
+  assert.ok(v({ hero_image: { ...b.v2.hero_image, caption: "" } }).some((p) => /hero_image needs alt and caption/.test(p)));
   assert.ok(v({ og_image: "images/og/deals/other-deal.png" }).some((p) => /og_image must be images\/og\/deals\/beaches-first-passport-credit\.png/.test(p)));
 });
