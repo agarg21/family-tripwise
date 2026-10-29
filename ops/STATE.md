@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-29 transactions=15
-run: none
+run: {id: 2026-10-29T20:05:30Z, started_at: 2026-10-29T20:05:30Z}
 last_public_release: 1a3c8e8 (2026-10-29, G11 step 2: v2 deal post text and photo card; Beaches card live); last main code change 1a3c8e8
 active: none
 
