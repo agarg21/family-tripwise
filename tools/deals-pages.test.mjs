@@ -70,7 +70,7 @@ test("committed deal pages match today's render (refreshed daily by tools/this-w
 
 test("no deal page shows an unobserved family total, a build date or a firsthand claim", () => {
   for (const c of checks) {
-    const html = dealCheckPage(checks, c, "2026-10-28");
+    const html = dealCheckPage(checks, c, "2026-10-29");
     assert.match(html, /Not observed\. Check live\./, `${c.id} shows check live`);
     assert.match(html, /We have not booked these offers/);
     assert.doesNotMatch(html, /Updated|updated on|we stayed|we sailed/i);
@@ -196,4 +196,18 @@ test("MSC check keeps the record: Nov 2 deals-page date vs Nov 5, 2026 terms dat
   assert.ok(m.terms.some(([l, v]) => l === "Discount" && /first and second passengers only/.test(v)));
   assert.ok(m.unclear.some((u) => /Port charges and onboard service charges/.test(u)));
   assert.match(m.headline, /kids still pay government fees and taxes/);
+});
+
+test("LEGOLAND California check keeps the record: book by Nov 17, 2026 for stays through Jan 9, 2027, advertised from-price with its family-of-four, 1-night, pre-tax basis, non-refundable, partner-hotel conflict, no family total", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  assert.ok(l, "added 2026-10-29 (docs/research/deal-checks-2026-10-29.md)");
+  assert.equal(l.observed_on, "2026-10-29");
+  assert.equal(l.expires_on, "2026-11-17");
+  assert.equal(l.family_total, null);
+  assert.equal(l.official_url, "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/");
+  assert.ok(l.terms.some(([k, v]) => k === "Book by" && /November 17, 2026/.test(v) && /January 9, 2027/.test(v)));
+  assert.ok(l.terms.some(([k, v]) => k === "Headline" && /USD 169 per person per night/.test(v) && /2 adults and 2 children ages 2 to 12 for 1 night/.test(v) && /tax not included/.test(v)));
+  assert.ok(l.terms.some(([k, v]) => k === "Cancellation" && /non-refundable/.test(v)));
+  assert.ok(l.unclear.some((u) => /Partner hotels conflict/.test(u)));
+  assert.match(l.family_of_four, /not a quote for your dates/);
 });

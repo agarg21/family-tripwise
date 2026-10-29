@@ -280,6 +280,45 @@
       "observed_on": "2026-10-28",
       "expires_note": "the date on MSC's deals page, which gives no year (2026 is our reading); the promotional terms list November 5, 2026",
       "expires_on": "2026-11-02"
+    },
+    {
+      "id": "legoland-california-hotel-kids-tickets-39",
+      "operator": "LEGOLAND California Resort",
+      "category": "Hotel + ticket package",
+      "title": "LEGOLAND California hotel package: kids' Hopper tickets from USD 39 a day",
+      "headline": "Book a LEGOLAND Hotel or LEGOLAND Castle Hotel stay by November 17, 2026 for stays through January 9, 2027, with Park Hopper tickets, daily hot breakfast and early park access; advertised from USD 169 per person per night for a family of four before tax, but reservations are non-refundable and parking is extra.",
+      "family_of_four": "LEGOLAND's advertised pricing is based on exactly this party: 2 adults and 2 children ages 2 to 12 for a 1-night hotel stay, before tax. The deals page shows a starting price of USD 169 per person per night and kids' tickets from USD 39 per day; these are advertised starting prices, not a quote for your dates. The package includes a Park Hopper ticket (LEGOLAND Theme Park and SEA LIFE Aquarium; multi-day visits must be used within 3 days of the first visit), a daily hot buffet breakfast and early park access. Parking is charged on arrival unless pre-purchased, reservations are non-refundable and full payment is due at booking.",
+      "terms": [
+        ["Headline", "Kids' tickets from USD 39 per day with a hotel stay; from USD 169 per person per night (advertised starting price, based on 2 adults and 2 children ages 2 to 12 for 1 night, tax not included)."],
+        ["Book by", "November 17, 2026 (\"Book by November 17, 2026 and stay through January 9, 2027\")."],
+        ["Stay window", "Now through January 9, 2027. All dates are subject to availability and LEGOLAND's discretion; the park is closed on Wednesdays during select seasons."],
+        ["Child ages", "Pricing is based on 2 children ages 2 to 12. The deals page FAQ says children under 2 get free park admission."],
+        ["Hotels", "LEGOLAND Hotel and LEGOLAND Castle Hotel (see the partner-hotel conflict below)."],
+        ["Included", "Park Hopper ticket for LEGOLAND Theme Park and SEA LIFE Aquarium, daily hot buffet breakfast and early park access (start time not stated)."],
+        ["Still charged", "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."],
+        ["Cancellation", "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered at checkout."],
+        ["Combining", "Cannot be combined with any other offers, discounts, promotions or group rates. The offer page says new bookings only and not valid through third-party websites."],
+        ["Minimum nights", "Not stated."]
+      ],
+      "unclear": [
+        "How many ticket days come with each night of the stay is not stated.",
+        "Partner hotels conflict: the package page lists Hopper tickets, early access and breakfast at select partner hotels, while the kids' tickets offer page says the hotel offer is not valid for partner hotels.",
+        "No blockout dates are listed; LEGOLAND says dates are subject to availability and blockout dates may be added at any time.",
+        "No minimum stay is stated, and the early park access start time is not given.",
+        "A separate ticket-only kids' offer (from USD 39 with an adult Hopper ticket) ends November 1, 2026; this check covers only the hotel package."
+      ],
+      "before_booking": [
+        "Price your exact dates for your real party and children's ages, and check the kids' ticket price per day at checkout.",
+        "Add tax and parking to the quoted price.",
+        "Book the LEGOLAND Hotel or LEGOLAND Castle Hotel directly if you want the package benefits; partner-hotel terms conflict.",
+        "Check for Wednesday park closures on your dates.",
+        "Book only when your dates are firm: reservations are non-refundable."
+      ],
+      "family_total": null,
+      "official_url": "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/",
+      "source_label": "LEGOLAND California Hotel + Ticket Package page",
+      "observed_on": "2026-10-29",
+      "expires_on": "2026-11-17"
     }
   ]
 }
