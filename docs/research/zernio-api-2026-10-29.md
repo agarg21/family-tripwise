@@ -21,4 +21,5 @@ Public documentation only (no account, no key used). Third-party vendor docs; re
 - Accounts looked up at run time; a platform with no connected account is not posted; two connected accounts for one platform are refused as ambiguous.
 - Pinterest board: the `PINTEREST_BOARD_ID` secret if set (must be one of the account's boards), else the only public board; otherwise skipped unclaimed.
 - Threads link goes in `firstComment` (our Threads text never holds a URL); Facebook link is appended to the text; Instagram and Pinterest send the public card JPEG. Instagram/Pinterest alt text is not sent (no documented field).
-- Unknown until the first live post: whether Facebook builds a link preview from a URL in text, and the exact per-platform result fields beyond `status` and `platformPostUrl`.
+- Facebook `pageId` is sent from the META_PAGE_ID secret when it exists; without it Zernio's default Page is used.
+- Unknown until the first live post: whether `GET /v1/accounts` pages its results without `limit` (a hidden second account would bypass the ambiguity guard; the owner connects one account per platform), whether Facebook builds a link preview from a URL in text, and the exact per-platform result fields beyond `status` and `platformPostUrl`.

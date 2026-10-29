@@ -28,7 +28,8 @@
 // - The variant's link target and the card image must answer 200 on familytripwise.com before posting.
 // - A platform with a read-only preflight (Pinterest: the board must answer to the token) is checked
 //   before the receipt is claimed, so an expired token or wrong board never burns an entry.
-// - Links travel outside Threads text (link attachment); text holding a URL is refused.
+// - Links travel outside Threads text (direct: link attachment; Zernio: first comment); Threads text
+//   holding a URL is refused. Zernio Facebook posts carry the link at the end of the text.
 //   Credentials are sent in headers or POST bodies, never in URLs, and are redacted from any
 //   recorded error.
 import { execFileSync } from "node:child_process";
@@ -195,7 +196,7 @@ async function zernioBoard({ env, fetch, accountId }) {
     if (boards.some((b) => String(b.id) === wanted)) return { boardId: wanted };
     return { problem: "PINTEREST_BOARD_ID is not one of the connected Pinterest account's boards" };
   }
-  const open = boards.filter((b) => (b.privacy ?? "PUBLIC") === "PUBLIC");
+  const open = boards.filter((b) => String(b.privacy ?? "").toUpperCase() === "PUBLIC");
   if (open.length === 1) return { boardId: String(open[0].id) };
   return { problem: `the Pinterest account has ${open.length} public boards; set the PINTEREST_BOARD_ID secret to pick one` };
 }
@@ -207,11 +208,14 @@ async function zernioBoard({ env, fetch, accountId }) {
 //   Facebook's own; checked on the first live post).
 // - Instagram: the card image and caption; Zernio documents no alt-text field, so none is sent.
 // - Pinterest: the card image, description, and title/link/boardId in platformSpecificData.
-export function zernioBody({ platform, entry, variant, accountId, boardId }) {
+export function zernioBody({ platform, entry, variant, accountId, boardId, pageId }) {
   const target = { platform, accountId };
   const body = { content: variant.text, platforms: [target], publishNow: true };
-  if (platform === "threads") target.platformSpecificData = { firstComment: `Details and the official source: ${variant.link}` };
-  if (platform === "facebook") body.content = `${variant.text}\n\n${variant.link}`;
+  if (platform === "threads") target.platformSpecificData = { firstComment: `Details and the official-source link: ${variant.link}` };
+  if (platform === "facebook") {
+    body.content = `${variant.text}\n\n${variant.link}`;
+    if (pageId) target.platformSpecificData = { pageId }; // pins the Page when META_PAGE_ID is set
+  }
   if (platform === "instagram" || platform === "pinterest") body.mediaItems = [{ type: "image", url: entry.image.url }];
   if (platform === "pinterest") target.platformSpecificData = { boardId, title: variant.title, link: variant.link };
   return body;
@@ -221,7 +225,7 @@ export async function zernioPost({ platform, entry, variant, env, fetch, key, ac
   const res = await fetch(`${ZERNIO_API}/posts`, {
     method: "POST",
     headers: zHeaders(env, { "content-type": "application/json", "idempotency-key": idempotencyKey(key) }),
-    body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId })),
+    body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId, pageId: (env.META_PAGE_ID ?? "").trim() || undefined })),
   });
   const data = await json(res, `zernio ${platform} post`);
   const post = data.post ?? {};
@@ -361,7 +365,7 @@ export function simulatedFetch(log = []) {
         const t = body?.platforms?.[0];
         const media = body?.mediaItems?.[0];
         const ok = body?.publishNow === true && body.platforms.length === 1 && t?.accountId === `simacc${t?.platform}` && /^[0-9a-f-]{36}$/.test(init.headers?.["idempotency-key"] ?? "") && typeof body.content === "string" && body.content.length > 0 &&
-          ({ threads: () => body.content.length <= 500 && !media && /^Details and the official source: https:\/\/familytripwise\.com\//.test(t.platformSpecificData?.firstComment ?? ""),
+          ({ threads: () => body.content.length <= 500 && !media && /^Details and the official-source link: https:\/\/familytripwise\.com\//.test(t.platformSpecificData?.firstComment ?? ""),
             facebook: () => !media && /\nhttps:\/\/familytripwise\.com\/\S+$/.test(body.content),
             instagram: () => body.content.length <= 2200 && media?.type === "image" && /^https:\/\/.+\.jpg$/.test(media.url),
             pinterest: () => body.content.length <= 800 && media?.type === "image" && t.platformSpecificData?.boardId === "simboard1" && t.platformSpecificData.title?.length <= 100 && /^https:\/\//.test(t.platformSpecificData.link ?? "") }[t?.platform] ?? (() => false))();

@@ -254,7 +254,7 @@ test("Zernio: with ZERNIO_API_KEY every platform posts through Zernio once, with
   const e = queue.entries[0];
   const byP = Object.fromEntries(posts.map((c) => [c.body.platforms[0].platform, c.body]));
   assert.equal(byP.threads.content, e.platforms.threads.text);
-  assert.equal(byP.threads.platforms[0].platformSpecificData.firstComment, `Details and the official source: ${e.platforms.threads.link}`);
+  assert.equal(byP.threads.platforms[0].platformSpecificData.firstComment, `Details and the official-source link: ${e.platforms.threads.link}`);
   assert.equal(byP.facebook.content, `${e.platforms.facebook.text}\n\n${e.platforms.facebook.link}`);
   assert.deepEqual(byP.instagram.mediaItems, [{ type: "image", url: e.image.url }]);
   assert.deepEqual(byP.pinterest.platforms[0].platformSpecificData, { boardId: "simboard1", title: e.platforms.pinterest.title, link: e.platforms.pinterest.link });
@@ -339,4 +339,17 @@ test("Zernio body: Threads link rides in the first comment, never in the post te
   assert.ok(!/https?:\/\//.test(body.content));
   assert.equal(body.publishNow, true);
   assert.equal(body.mediaItems, undefined);
+});
+
+test("Zernio body: Facebook pins the Page only when META_PAGE_ID is set; unknown board privacy is not public", () => {
+  const e = entry("c", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00");
+  assert.equal(zernioBody({ platform: "facebook", entry: e, variant: e.platforms.facebook, accountId: "a" }).platforms[0].platformSpecificData, undefined);
+  assert.deepEqual(zernioBody({ platform: "facebook", entry: e, variant: e.platforms.facebook, accountId: "a", pageId: "123" }).platforms[0].platformSpecificData, { pageId: "123" });
+});
+
+test("Zernio: a board without a stated privacy is not treated as public", async () => {
+  const { store } = remoteRepo();
+  const noPrivacy = async (url, init) => (String(url).endsWith("/pinterest-boards") ? zreply(200, { boards: [{ id: "b1", name: "A" }] }) : simulatedFetch()(url, init));
+  const r = await zgo(store, at("08:00"), { fetch: noPrivacy });
+  assert.match(r.skipped.find((s) => s.key?.endsWith("--pinterest.json")).reason, /0 public boards/);
 });
