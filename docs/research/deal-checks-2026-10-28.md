@@ -147,7 +147,7 @@ Published as a Family Deal Check with expires_on 2026-12-31 (no purchase deadlin
 | Terms dates | "Up To 35% Off Cruises + Kids Sail Free": effective October 20, 2026, expiration November 5, 2026 | new; conflicts with the Nov 2 consumer date (we list Nov 2 and note Nov 5) |
 | Kids | "Kids seventeen years old and under sail free on select sailings as 3rd/4th guests" and "must still pay government fees and taxes" | new (row 6 had no ages) |
 | Discount | Applies to the first and second passengers only; per person, double occupancy, USD; MSC Yacht Club staterooms excluded | new |
-| Eligibility | US residents, new bookings only, not group bookings; capacity controlled; Kids Sail Free can be withdrawn without notice | new |
+| Eligibility | US residents, new bookings only, not group bookings; capacity controlled and subject to availability; Kids Sail Free can be withdrawn without notice | new |
 | Taxes | "Government fees and taxes are included in the price"; port charges and service charges/gratuities not mentioned | new |
 | Deposit | USD 99 pp (0–4 nights), USD 199 pp (5–14), USD 300 pp (15+) | new |
 | Combining | Not combinable with other promotions; one Voyagers Selection, Civil Service, Military, Senior or Interline discount per stateroom | new |
