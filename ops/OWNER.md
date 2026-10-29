@@ -13,9 +13,9 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D9 Nov 8-13 price samples — Approved: re-observe or remove on 7 hotel pages + CSVs before Nov 8.
 - D10 Pace (2026-10-28, owner) — Approved: growth-first. Most runs go to fresh deals/events/news, the new sections and social/newsletter content; site maintenance only for live-site defects and dated deadlines (Q17b).
 - D11 New URLs (2026-10-28, owner) — Approved: /deals/ hub plus one page per Family Deal Check, and /this-week/ (dated family events and news per city). Expired items drop automatically. No other new URLs, redirects or noindex without a fresh row.
-- D12 Social and newsletter (2026-10-28, owner) — Approved: the operator queues posts from verified items; a GitHub Action posts them once the platform's secret exists. Channels: Facebook Page, Instagram, Threads, Pinterest (Bluesky dropped); later YouTube, TikTok; newsletter skipped for now. Account email: hello@familytripwise.com. About 5–6 posts/day across platforms in Nov–Dec, fewer off-season, never filler; no AI images of real places; no reposted promo art. Kill switch: change "Approved" here to "Paused" to stop all posting.
+- D12 Social and newsletter (2026-10-28, owner) — Paused (2026-10-29, owner wants better posts first; G11): the operator queues posts from verified items; a GitHub Action posts them. Channels: Facebook Page, Instagram, Threads, Pinterest (Bluesky dropped); later YouTube, TikTok; newsletter skipped for now. Account email: hello@familytripwise.com. About 5–6 posts/day across platforms in Nov–Dec, fewer off-season, never filler; no AI images of real places. Kill switch: change "Approved" here to "Paused" to stop all posting.
 - D13 Privacy/Terms pages (2026-10-28) — Approved; shipped.
-- D14 Posting via Zernio (2026-10-29, owner) — Approved: about USD 12/mo (4 accounts); owner signs up with hello@ and connects Facebook, Instagram, Threads, Pinterest; API key as GitHub secret ZERNIO_API_KEY. Replaces direct Meta/Pinterest apps (owner's Meta login cannot create non-work apps).
+- D14 Posting via Zernio (2026-10-29, owner) — Approved: about USD 12/mo (4 accounts); owner signs up with hello@ and connects Facebook, Instagram, Threads, Pinterest; API key as GitHub secret ZERNIO_API_KEY.
 - D15 Deal fast lane (2026-10-29, owner) — Approved: be first with verified, worth-sharing family deals: hourly change watch on official deal pages, score each deal (family value, appeal, urgency, already covered?), post worthy ones at the next slot the same day. Accuracy still beats speed.
 - D16 Deal scope (2026-10-29, owner) — Approved: US, Mexico/Caribbean and cruises from US ports first; Europe only when the family math is exceptional; revisit later.
 
@@ -25,4 +25,5 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O2 (2026-10-28) Will you re-observe the robots-blocked Nov 8-13 hotel samples by hand (list: Q17b) for a Jan 10-15, 2027 stay and send values with screenshots by Nov 2? Recommendation: No; the operator removes them by Nov 7 and shows a dated budget gap.
+- O4 (2026-10-29) Deal images: allow credited free-license stock photos and official media-kit photos where terms allow editorial use? Recommendation: yes; never AI photos of real places.
+- O2 (2026-10-28) Re-observe the robots-blocked Nov 8-13 hotel samples by hand (list: Q17b) by Nov 2? Recommendation: No; the operator removes them by Nov 7.

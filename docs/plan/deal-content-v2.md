@@ -1,0 +1,48 @@
+# Deal content v2 (owner feedback, 2026-10-29)
+
+Owner's verdict on the first Facebook post and the Beaches deal page: bland and unclear. Specifics:
+- "In short: A USD 135 resort credit per child ages 5 and under with a newly issued passport…" does not tell a parent what the deal is.
+- "How we check" sits at the top; it belongs at the bottom.
+- "Family total on named dates: Not observed. Check live" should not be on the page at all.
+- No reader (persona) review was done; only a technical/integrity review.
+- Travel pages need good images.
+
+Evidence integrity rules are unchanged (AGENTS.md): verified facts only, no invented prices or totals, dated sources. v2 changes how we present and explain, not what we are allowed to claim.
+
+## Page order (v2)
+1. Hero visual. Until owner decision O4 on photos, a designed typographic/illustrated hero in brand colors (brand/README.md); never a fake or AI photo of a real place.
+2. Plain-English headline: what a parent gets, in one sentence, with "$" not "USD". Example shape: "Beaches gives you a $135 credit for each child under 6 who has a new passport."
+3. Verdict box: Worth it / Only for <who> / Skip, with a one-line reason, "Best for" and "Not for".
+4. What you actually get: 3 bullets with numbers for a family of 4 (2 adults + 2 kids, ages stated), from observed terms only.
+5. Is it a good deal? Context that makes the number meaningful, from verifiable public figures: the official regular price when published, fees the family pays anyway, how this compares with the same company's other offers, the last time we saw it. If no comparison can be verified, one line saying what to compare. Never pad.
+6. The catch: the top 3 gotchas.
+7. How to get it: steps, book-by and travel-by dates.
+8. Full terms table (collapsible on mobile) and "unclear on the offer page".
+9. Sources and "How we check" at the bottom. Drop the "Family total: not observed" section; show a total in section 4 only when observed.
+Also: og:title, og:description, og:image (the card), og:url and twitter:card on every deal page, /deals/ and /this-week/ (was G10).
+
+## Posts (v2: Facebook, Instagram, Threads)
+- Line 1: the hook in plain words with the key number.
+- Line 2: the verdict and who it is for.
+- Line 3: the catch.
+- Line 4: book-by date. Then the link (Facebook, Threads) or "link in bio" (Instagram).
+- About 350 characters on Facebook/Threads; "$" not "USD"; no wall of terms.
+- Card: the big number, the plain headline, a verdict chip and the brand mark; a photo background only after O4.
+
+## Persona review gate (new, required)
+For every new or changed public deal page, and every change to the post or card templates, a separate read-only subagent reviews the rendered page, post and card as three readers:
+- a busy parent of two kids under 6 scrolling Facebook;
+- a deal-savvy planner comparing options;
+- a skeptical parent who distrusts "deals".
+Each answers: what is this about after 5 seconds? Would I click or share it? What is confusing or missing? Each scores clarity, usefulness, trust and shareability from 1 to 5. Publish only when every persona gives clarity 4 or more and the overall average is 4 or more; otherwise fix and re-review (at most 3 cycles). Record the scores in the run notes. This is in addition to the existing integrity reviewer.
+
+## Example of the analysis we want (verify before use)
+A first US passport book for a child under 16 has cost $100 application + $35 acceptance fee = $135. If travel.state.gov confirms the current fees, the Beaches credit is roughly the cost of the passport itself: a plain comparison a parent understands at once. (Not yet verified: the fee pages refused the fetcher on 2026-10-29.)
+
+## Images (owner decision O4 pending)
+Options: (a) free-license stock (Unsplash/Pexels license) for mood images, credited; (b) official media-kit/press images where the company's terms allow editorial use, credited; (c) our own designed visuals only. Until O4 is answered, (c).
+
+## Rollout
+1. Build v2 for one deal (Beaches) on a branch; persona review; owner reviews the rendered page, card and post.
+2. Roll v2 out to all live deal checks; regenerate current queues.
+3. Owner sets OWNER.md D12 back to Approved; posting resumes.
