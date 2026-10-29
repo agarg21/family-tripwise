@@ -40,7 +40,7 @@ export function photoCardHtml(slug) {
   .site { font-size: 26px; font-weight: 800; margin-top: 6px; }
   .brand b { color: #f0bd56; }
   .credit { position: absolute; right: 0; bottom: 0; max-width: 640px; white-space: nowrap; overflow: hidden; background: rgba(0,0,0,0.6); color: #fff; font-size: 16px; padding: 6px 12px; border-top-left-radius: 8px; }
-  </style></head><body class="${t.deal ? "deal" : ""}">
+  </style></head><body>
   <div class="brand" data-fit><div class="place">${e(DESTINATIONS[destinationOf(slug)].place)} with kids</div><div class="site">family<b>tripwise</b>.com</div></div>
   <div class="credit" data-fit>${e(photoCreditText(photo))}</div>
   ${FIT}</body></html>`;

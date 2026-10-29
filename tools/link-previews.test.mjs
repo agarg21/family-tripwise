@@ -88,6 +88,13 @@ test("destination pages without their own photo use that destination's photo; de
   }
 });
 
+test("photo and text card HTML build without errors", async () => {
+  const { photoCardHtml, textCardHtml } = await import("./page-og-images.mjs");
+  const lock = JSON.parse(readFileSync(new URL("./images/commons-images.lock.json", import.meta.url), "utf8"));
+  assert.match(photoCardHtml("london-trafalgar-square" in lock ? "london-trafalgar-square" : Object.keys(lock)[0]), /with kids/);
+  assert.match(textCardHtml("deals"), /Family Deal Checks/);
+});
+
 test("evergreen deal cards: no dates, and every number is in the deal's own observed headline or title", async () => {
   const { readDealChecks } = await import("./page-generation/deals-pages.mjs");
   const { dealCardPath } = await import("./page-generation/link-previews.mjs");
