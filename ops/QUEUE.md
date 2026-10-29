@@ -4,7 +4,7 @@ Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q i
 
 ## G14 Photo at the top and link previews on every page (owner 2026-10-29)
 open · M · owner: D4/D17/D18 Approved (batches ok) · gate: none; before G13 step 2
-36 of 52 pages have no photo above the fold (owner saw London: its only photo is near the bottom); 0 have og tags. In batches of ≤12 pages per release: add or move a credited, self-hosted hero photo into the hero (Commons, free-license stock or media-kit per D17; tools/images/commons-images.json + self-host workflow), and og/twitter tags with a self-hosted og:image. Persona review per batch; baseline gaps close.
+og part built on branch q/G13-og (8f4aea6; 2026-10-29): tags on all pages from generators, link-previews test, cards in site/images/og/ (tools/page-og-images.mjs). Persona FAIL 3.93 after 3 cycles, mainly v1 deal cards: next run, either use v2 deal cards (D19) and the generic deals card meanwhile, or add the observed book-by/listed-until line, plainer RC title and SeaWorld catch on the card (page "In short" text too); then a fresh persona review and merge. Integrity P3s: Atlantis card drops the 21% charge/resort fee catch; Atlantis blackout dates go stale after Jan 1; deals card "book-by" vs listed-until. 36 of 52 pages have no photo above the fold (owner saw London: its only photo is near the bottom); 0 have og tags. In batches of ≤12 pages per release: add or move a credited, self-hosted hero photo into the hero (Commons, free-license stock or media-kit per D17; tools/images/commons-images.json + self-host workflow), and og/twitter tags with a self-hosted og:image. Persona review per batch; baseline gaps close.
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
