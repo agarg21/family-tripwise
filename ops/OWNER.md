@@ -19,11 +19,10 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D17 Images (2026-10-29, owner) — Approved: credited free-license stock photos and official media-kit photos where terms allow editorial use; self-hosted; never AI photos of real places.
 - D18 Link-preview tags (2026-10-29, owner) — Approved: one batch adding og/twitter tags to all pages. O2 answered No: remove the Nov 8-13 samples by Nov 7 (Q17b).
 - D19 Deal v2 rollout (2026-10-29, owner) — Approved: other deal pages, ≤3 per release.
+- D20 (2026-10-29, owner) — Approved: O8 release G14 photo batch 1 (q/G14) and fix older copy separately; O5 trip prices: SerpApi free (owner adds SERPAPI_API_KEY), D8 also covers DataForSEO hotel price checks within USD 20.
 
 ## Owner tasks (operator cannot do these)
 - T1/T2 done (GSC resubmit 10-27; YouTube report 10-28; do not repeat).
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O5 (10-29) Prices (docs/research/trip-cost-sources-2026-10-29.md): SerpApi free signup + SERPAPI_API_KEY; D8 covers hotel price checks? Rec: Yes.
-- O8 (10-29) Release G14 photo batch 1 (q/G14, top photos on 12 pages; integrity pass; persona 3.83/4.0 due to older copy, not the photos) and fix that copy separately? Rec: Yes.
