@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=16
-run: {id: 2026-10-29T23:04:36Z, started_at: 2026-10-29T23:04:36Z}
-last_public_release: c5fa555 (2026-10-29, G14 link previews on all 52 pages; evergreen per-deal cards); last main code change c5fa555
-active: {id: G14, branch: q/G14 (61aeea1), next: held for persona gate; release only if OWNER O8 says Yes, else add price glance to LV/SA first}
+today: 2026-10-29 transactions=17
+run: none
+last_public_release: ca75419 (2026-10-29, G14 batch 1: top photos on 12 pages, LV/SA $-a-night glance); last main code change ca75419
+active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -20,7 +20,7 @@ active: {id: G14, branch: q/G14 (61aeea1), next: held for persona gate; release 
 - Sitemap lastmod for 21 pages unchanged since the 2026-10-15 import is an estimate (visible date or 2026-10-13 bound); it becomes observed the next time each page changes. No action needed.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14 (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 - Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
@@ -36,6 +36,6 @@ active: {id: G14, branch: q/G14 (61aeea1), next: held for persona gate; release 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-29 G14 batch 1 delivered ca75419 (release.json + 13 files byte-identical live): top photos on 12 pages; LV/SA open with "About how much a night?" bands computed from the table (every hotel once, tested); one-line photo credits; plainer PV intro. Integrity FAIL(2 P2 labels)→PASS_WITH_P3; persona 3.93→4.00 PASS (clarity 4/4/4). Owner D20 also approved release. Next: G09w Great Wolf flag.
 - 2026-10-29 G14 batch 1 held on q/G14 (61aeea1): credited city photo moved to the top of 12 lodging/activity pages (230px banner, per-photo focus, fixed NYC/Chicago alts). Tests 1395/0, seo-qa 0, Playwright 72 checks clean. Integrity FAIL(2 P2)→PASS_WITH_P3. Persona 3.75→3.83 FAIL (clarity 4/4/4; gap is pre-existing copy: no $ glance on LV/SA, caveat-heavy intros). O8 asks the owner.
 - 2026-10-29 G14 link previews delivered c5fa555 (release.json + 81 changed files byte-identical live): og/twitter tags on all 52 pages; city photo cards; per-deal v1 cards replaced by evergreen cards (company · trip type, offer + catch, no dates; numbers tested against the observed headline); plainer RC/SeaWorld titles; queues 10-29/11-01 refreshed. Integrity FAIL(P2)→PASS_WITH_P3; persona 3.73→4.07→4.07 PASS.
-- 2026-10-29 G14/D18 og batch on branch q/G13-og, not merged: og/twitter tags on all 52 pages from the generators, 13 labelled destination photo cards, site/deals/this-week cards, per-deal cards quoting the page catch; tests 1393/0, seo-qa 0 errors, Playwright clean. Integrity PASS_WITH_P3 x3; persona FAIL after 3 cycles (3.3, 3.6, 3.93: deal cards lack date/$; "Free and free" RC title; SeaWorld catch reads like a note).

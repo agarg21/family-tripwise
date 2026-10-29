@@ -3,9 +3,9 @@ Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWN
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
-open · M · owner: D4/D17 Approved (batches ok) · gate: none; before G13 step 2
-Link previews done (c5fa555). Batch 1 (11 lodging pages + Orlando things-to-do) on q/G14 61aeea1, held: integrity PASS_WITH_P3, persona 3.83 (older copy: no $ glance on LV/SA, caveat-heavy intros). Release per O8, or add LV/SA dated $ glance and re-review. Remaining: 36 of 52 pages have no photo above the fold (owner saw London: its only photo is near the bottom). In batches of ≤12 pages per release: add or move a credited, self-hosted hero photo into the hero (Commons, free-license stock or media-kit per D17; tools/images/commons-images.json + self-host workflow). Persona review per batch; baseline gaps close.
-Carry P3s: "USD" in deal titles/RC body → "$" in D19 rollout; 4–5-line deal cards at phone width; London/Orlando meta-description jargon.
+open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
+Done: link previews (c5fa555); batch 1 ca75419 (top photos on 11 lodging pages + Orlando things-to-do, LV/SA "$ a night" glance, one-line photo credits). Remaining: 24 of 52 pages lack a photo above the fold (London itinerary etc.); ≤12 pages per release, credited self-hosted photos (D17), persona review per batch.
+Carry (persona/integrity P3s, older copy): Orlando hotels opens with dated-source caveats, no $ glance, road/parking photo; "USD" → "$" on Cancun/Orlando-with-kids/deal titles; Cancun duplicate check date; LV $60–$300+ band wide; PV "published limit is not a confirmed reservation" legalese; LV/Chicago captions lack place (LV: Bellagio is not a compared hotel); phone comparison tables cut off at right; 4–5-line deal cards at phone width.
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
