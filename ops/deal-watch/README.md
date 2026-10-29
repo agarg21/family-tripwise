@@ -14,5 +14,6 @@ no manual trigger, so each URL is fetched at most once per hour).
   the official page (a flag is a lead, never a fact), then deletes the flag in its own commit.
 
 Rules: robots.txt and Crawl-delay are honored (a Crawl-delay over 60 s counts as blocked); a blocked or
-unreachable source is not fetched again until its `sources.json` entry changes (raise `retry` by 1 after
-checking it by other means). Never add deal or news sites here; they are leads for the operator only.
+unreachable source is not fetched again until its `url` or `retry` value in `sources.json` changes (add
+`"retry": 1`, or raise it by 1, after checking the source by other means). The workflow also skips a run
+that starts under 55 minutes after the previous one, so a late scheduled run never doubles a fetch. Never add deal or news sites here; they are leads for the operator only.

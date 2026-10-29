@@ -19,10 +19,11 @@ import { fileURLToPath } from "node:url";
 export const USER_AGENT_TOKEN = "FamilyTripwiseDealWatch";
 export const USER_AGENT = `${USER_AGENT_TOKEN}/1.0 (+https://familytripwise.com/)`;
 export const MAX_SIGNAL_LINES = 60;
-export const MAX_LINE_CHARS = 240;
-export const MAX_DIFF_LINES = 12;
-export const MAX_STORED_SIGNAL_CHARS = 2000; // per source, keeps state.json small; line_hashes cover the rest
+export const MAX_LINE_CHARS = 160;
+export const MAX_DIFF_LINES = 8;
+export const MAX_STORED_SIGNAL_CHARS = 1000; // per source, keeps state.json small; line_hashes cover the rest
 export const MAX_ERRORS = 3;
+export const MAX_FILE_BYTES = 40 * 1024; // ops files must stay under 50 KB (tools/ops-state.test.mjs)
 export const MAX_CRAWL_DELAY_S = 60;
 const MAX_BODY_BYTES = 3_000_000;
 const MAX_REDIRECTS = 3;
@@ -57,7 +58,7 @@ export function parseRobots(text) {
 
 function pickGroups(groups, token) {
   const t = token.toLowerCase();
-  const named = groups.filter((g) => g.agents.some((a) => a !== "*" && t.startsWith(a)));
+  const named = groups.filter((g) => g.agents.some((a) => a !== "*" && a !== "" && a === t));
   if (named.length) return named;
   return groups.filter((g) => g.agents.includes("*"));
 }
@@ -136,7 +137,7 @@ export function extractSignal(html) {
   return { title: title.slice(0, MAX_LINE_CHARS), h1: h1.slice(0, MAX_LINE_CHARS), description: description.slice(0, MAX_LINE_CHARS), headline, signal, hash };
 }
 
-export const lineHash = (line) => sha(line.toLowerCase()).slice(0, 10);
+export const lineHash = (line) => sha(line.toLowerCase()).slice(0, 8);
 
 // Stored excerpt: the first signal lines up to MAX_STORED_SIGNAL_CHARS in total.
 export function storedSignal(lines) {
@@ -150,7 +151,8 @@ export function storedSignal(lines) {
 // Added lines are exact (hash comparison over every line); removed lines can only be shown when
 // they were in the stored excerpt, and removed_count counts all of them.
 export function diffSignal(before = {}, after = []) {
-  const prevHashes = new Set(before.line_hashes || (before.signal || []).map(lineHash));
+  const prev = typeof before.line_hashes === "string" ? before.line_hashes.split(" ").filter(Boolean) : before.line_hashes;
+  const prevHashes = new Set(prev || (before.signal || []).map(lineHash));
   const nowHashes = new Set(after.map(lineHash));
   const added = after.filter((x) => !prevHashes.has(lineHash(x)));
   const removedCount = [...prevHashes].filter((h) => !nowHashes.has(h)).length;
@@ -207,7 +209,9 @@ export async function fetchSource(url, { fetchImpl, robotsCache, lastFetchAt, sl
   for (let hop = 0; hop <= MAX_REDIRECTS; hop++) {
     const u = new URL(current);
     if (u.protocol !== "https:") return { kind: "error", reason: "not https" };
+    const fresh = !robotsCache.has(u.origin);
     const robots = await robotsFor(u.origin, { fetchImpl, cache: robotsCache });
+    if (fresh) lastFetchAt.set(u.host, now()); // the robots.txt request counts toward Crawl-delay
     if (!robots.ok) return { kind: robots.transient ? "error" : "robots", reason: robots.reason };
     const verdict = robotsVerdict(robots.text, current);
     if (!verdict.allowed) return { kind: "robots", reason: "disallowed by robots.txt" };
@@ -298,7 +302,7 @@ export async function runWatch({ sources, state = { sources: {} }, flags = { fla
     const base = { url: src.url, source_sig: sig };
     if (r.kind === "ok") {
       const s = extractSignal(r.html);
-      const entry = { ...base, status: "ok", headline: s.headline, title: s.title, h1: s.h1, description: s.description, signal_hash: s.hash, signal: storedSignal(s.signal), line_hashes: s.signal.map(lineHash), first_seen_at: keep?.first_seen_at || iso, changed_at: keep?.changed_at || iso };
+      const entry = { ...base, status: "ok", headline: s.headline, signal_hash: s.hash, signal: storedSignal(s.signal), line_hashes: s.signal.map(lineHash).join(" ") /* one string keeps state.json compact */, first_seen_at: keep?.first_seen_at || iso, changed_at: keep?.changed_at || iso };
       if (keep?.signal_hash && keep.signal_hash !== s.hash) {
         const d = diffSignal(keep, s.signal);
         entry.changed_at = iso;
@@ -313,7 +317,9 @@ export async function runWatch({ sources, state = { sources: {} }, flags = { fla
       nextState.sources[src.id] = entry;
     } else {
       const errorsSoFar = r.kind === "error" ? ((keep?.status === "error" ? keep.errors ?? 0 : 0) + 1) : undefined;
-      const entry = { ...(keep && keep.status === "ok" ? { headline: keep.headline, title: keep.title, h1: keep.h1, description: keep.description, signal_hash: keep.signal_hash, signal: keep.signal, line_hashes: keep.line_hashes, first_seen_at: keep.first_seen_at, changed_at: keep.changed_at } : {}), ...base, status: r.kind, reason: r.reason, since: keep?.status === r.kind ? keep.since : iso };
+      // Keep the last good signal through any run of errors so a change made meanwhile is still
+      // flagged when the page comes back.
+      const entry = { ...(keep?.signal_hash ? { headline: keep.headline, signal_hash: keep.signal_hash, signal: keep.signal, line_hashes: keep.line_hashes, first_seen_at: keep.first_seen_at, changed_at: keep.changed_at } : {}), ...base, status: r.kind, reason: r.reason, since: keep?.status === r.kind ? keep.since : iso };
       if (errorsSoFar != null) entry.errors = errorsSoFar;
       // A new denial, robots block or a run of errors is worth one flag so the operator knows the
       // source went dark; it is never retried until sources.json changes.
@@ -325,6 +331,17 @@ export async function runWatch({ sources, state = { sources: {} }, flags = { fla
     }
   }
   return { state: nextState, flags: nextFlags, changed, raised };
+}
+
+// Shrinks stored excerpts (never hashes or statuses) until the JSON fits MAX_FILE_BYTES.
+export function fitSize(doc, listKey, fields, limit = MAX_FILE_BYTES) {
+  const size = () => Buffer.byteLength(JSON.stringify(doc, null, 2) + "\n");
+  const items = () => (Array.isArray(doc[listKey]) ? doc[listKey] : Object.values(doc[listKey] || {}));
+  for (let keep = MAX_DIFF_LINES * 2; size() > limit && keep >= 0; keep = keep > 1 ? Math.floor(keep / 2) : keep - 1) {
+    for (const it of items()) for (const f of fields) if (Array.isArray(it[f]) && it[f].length > keep) it[f] = it[f].slice(0, keep);
+  }
+  if (size() > limit) throw new Error(`${listKey} JSON still over ${limit} bytes after trimming excerpts`);
+  return doc;
 }
 
 // ---------- CLI ----------
@@ -340,7 +357,7 @@ async function main() {
     // and add back only the flags this run raised.
     const flags = read("flags.json", { flags: [] });
     for (const f of JSON.parse(readFileSync(process.argv[reapply + 1], "utf8"))) upsertFlag(flags.flags, f);
-    writeFileSync(new URL("flags.json", dir), stable(flags));
+    writeFileSync(new URL("flags.json", dir), stable(fitSize(flags, "flags", ["added", "removed"])));
     console.log(`deal-watch: re-applied raised flags; ${flags.flags.length} pending`);
     return;
   }
@@ -351,7 +368,7 @@ async function main() {
   const note = state.note || "Written only by .github/workflows/deal-watch.yml (tools/deal-watch.mjs). Extracted offer-signal lines from official pages, not raw bodies. Do not edit by hand.";
   const flagNote = flags.note || "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.";
   // Write only when content changed, so an unchanged hour makes no commit.
-  const out = [["state.json", { note, ...result.state }], ["flags.json", { note: flagNote, ...result.flags }]];
+  const out = [["state.json", fitSize({ note, ...result.state }, "sources", ["signal"])], ["flags.json", fitSize({ note: flagNote, ...result.flags }, "flags", ["added", "removed"])]];
   for (const [name, data] of out) {
     const p = new URL(name, dir);
     const text = stable(data);

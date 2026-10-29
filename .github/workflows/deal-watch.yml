@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: deal-watch
@@ -22,25 +23,44 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Keep at least 55 minutes since the previous watch run
+        id: gap
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # GitHub may start a scheduled run late; skip this run if the previous one started
+          # under 55 minutes ago, so no URL is fetched more than once an hour.
+          prev=$(gh run list -R "$GITHUB_REPOSITORY" --workflow deal-watch.yml --limit 5 --json databaseId,startedAt \
+            --jq "[.[] | select(.databaseId != ${GITHUB_RUN_ID})][0].startedAt // empty")
+          if [ -n "$prev" ] && [ $(( $(date -u +%s) - $(date -u -d "$prev" +%s) )) -lt 3300 ]; then
+            echo "Previous run started at $prev; skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout latest main
+        if: steps.gap.outputs.skip != 'true'
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: main
 
       - name: Set up Node.js
+        if: steps.gap.outputs.skip != 'true'
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
 
       - name: Validate watcher and sources
+        if: steps.gap.outputs.skip != 'true'
         run: node --test tools/deal-watch.test.mjs
 
       - name: Watch official deal pages
+        if: steps.gap.outputs.skip != 'true'
         env:
           DEAL_WATCH_RAISED: ${{ runner.temp }}/raised-flags.json
         run: node tools/deal-watch.mjs
 
       - name: Commit changes (fast-forward or merge, never force)
+        if: steps.gap.outputs.skip != 'true'
         run: |
           git config user.name "family-tripwise-operator"
           git config user.email "family-tripwise-operator@users.noreply.github.com"
@@ -51,8 +71,9 @@ jobs:
           fi
           flags=$(node -e 'const f=require("./ops/deal-watch/flags.json");console.log(f.flags.length)')
           git commit -q -m "deal-watch: ${flags} pending flag(s)"
-          for attempt in 1 2 3 4; do
+          for attempt in 1 2 3 4 5; do
             if git push -q origin HEAD:main; then exit 0; fi
+            [ "$attempt" = 5 ] && break
             sleep $((attempt * 5))
             git fetch -q origin main
             # Only this workflow writes ops/deal-watch/state.json; the operator deletes handled flags
@@ -67,5 +88,5 @@ jobs:
             fi
             node -e 'for (const f of ["state","flags"]) JSON.parse(require("fs").readFileSync(`ops/deal-watch/${f}.json`,"utf8"))' || { echo "Merged deal-watch JSON is invalid; not pushing."; exit 1; }
           done
-          echo "Push failed after 4 attempts."
+          echo "Push failed after 5 attempts; main keeps the old state, so the next run detects the change again."
           exit 1

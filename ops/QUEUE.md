@@ -2,6 +2,10 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
+## G09w Deal-watch flags (recurring; keep this item open)
+open · S per flag · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
+Take before every other item while a flag is pending. For each flag: `changed` → read the official page once (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead, never a fact.
+
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: ZERNIO_API_KEY secret exists (T3)
 Built and on main 16e5ad8 (2026-10-29): tools/social-post.mjs posts all four platforms through Zernio when ZERNIO_API_KEY exists (accounts looked up at run time, Idempotency-Key per receipt, Threads link in first comment, Facebook link in text, Pinterest board from PINTEREST_BOARD_ID or the only public board); dry run against simulated Zernio passes; reviewer PASS_WITH_P3. API facts: docs/research/zernio-api-2026-10-29.md.

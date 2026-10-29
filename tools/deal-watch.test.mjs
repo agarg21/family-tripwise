@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
   robotsVerdict, extractSignal, diffSignal, denialReason, runWatch, validateSources, sourceSig, lineHash,
-  storedSignal, MAX_STORED_SIGNAL_CHARS, MAX_ERRORS, USER_AGENT,
+  storedSignal, fitSize, MAX_STORED_SIGNAL_CHARS, MAX_ERRORS, MAX_FILE_BYTES, MAX_LINE_CHARS, USER_AGENT,
 } from "./deal-watch.mjs";
 
 const root = new URL("..", import.meta.url);
@@ -41,6 +41,8 @@ test("robots.txt: specific group, longest match, Allow tie, wildcards, Crawl-del
   assert.equal(robotsVerdict(wild, "https://x.example/offers/kids").allowed, false);
   assert.equal(robotsVerdict("User-agent: *\nDisallow:", "https://x.example/a").allowed, true, "empty Disallow allows");
   assert.equal(robotsVerdict("", "https://x.example/a").allowed, true);
+  const prefix = "User-agent: *\nDisallow: /\n\nUser-agent: Family\nAllow: /\n\nUser-agent:\nAllow: /";
+  assert.equal(robotsVerdict(prefix, "https://x.example/a").allowed, false, "a token prefix or empty agent is not our group");
 });
 
 test("signal keeps offer lines from the page, not scripts or boilerplate", () => {
@@ -54,7 +56,7 @@ test("signal keeps offer lines from the page, not scripts or boilerplate", () =>
 });
 
 test("diff reports exact added lines and counts removals beyond the stored excerpt", () => {
-  const before = { signal: ["Save 40%", "Kids free"], line_hashes: ["Save 40%", "Kids free", "Book by Nov 1"].map(lineHash) };
+  const before = { signal: ["Save 40%", "Kids free"], line_hashes: ["Save 40%", "Kids free", "Book by Nov 1"].map(lineHash).join(" ") };
   const d = diffSignal(before, ["Save 50%", "Kids free"]);
   assert.deepEqual(d.added, ["Save 50%"]);
   assert.deepEqual(d.removed, ["Save 40%"]);
@@ -187,4 +189,34 @@ test("committed state and flags (when present) stay small and hold no raw bodies
     assert.doesNotMatch(text, /<html|<script|<body/i, `${name} holds markup`);
     JSON.parse(text);
   }
+});
+
+test("a change made during a run of errors is still flagged when the page returns", async () => {
+  const web = { "https://deals.example/robots.txt": { status: 404 }, "https://deals.example/offers": { body: page("Deals", ["Save 20% on stays"]) } };
+  let r = await runWatch({ sources: SRC(), fetchImpl: fakeWeb(web).fetchImpl, ...clock() });
+  web["https://deals.example/offers"] = { status: 503 };
+  for (let i = 0; i < MAX_ERRORS - 1; i++) r = await runWatch({ sources: SRC(), state: r.state, flags: r.flags, fetchImpl: fakeWeb(web).fetchImpl, ...clock() });
+  assert.equal(r.state.sources["fixture-deals"].status, "error");
+  assert.ok(r.state.sources["fixture-deals"].signal_hash, "last good signal kept through errors");
+  web["https://deals.example/offers"] = { body: page("Black Friday", ["Save 50% on stays"]) };
+  r = await runWatch({ sources: SRC(), state: r.state, flags: r.flags, fetchImpl: fakeWeb(web).fetchImpl, ...clock() });
+  assert.equal(r.changed, 1);
+  assert.equal(r.state.sources["fixture-deals"].errors, undefined, "error count clears on success");
+});
+
+test("state and flags stay under the ops size limit for many offer-heavy sources", async () => {
+  const sources = { sources: Array.from({ length: 30 }, (_, i) => ({ id: `s${i}`, operator: "Fixture", kind: "offer-index", url: `https://h${i}.example/offers` })) };
+  const lines = (n) => Array.from({ length: 80 }, (_, j) => `Save ${j + n}% on family suites at resort number ${j} `.padEnd(300, "x"));
+  const web = {};
+  for (let i = 0; i < 30; i++) { web[`https://h${i}.example/robots.txt`] = { status: 404 }; web[`https://h${i}.example/offers`] = { body: page(`Deals ${"y".repeat(300)}`, lines(0)) }; }
+  let r = await runWatch({ sources, fetchImpl: fakeWeb(web).fetchImpl, ...clock() });
+  for (let i = 0; i < 30; i++) web[`https://h${i}.example/offers`] = { body: page(`Sale ${"z".repeat(300)}`, lines(100)) };
+  r = await runWatch({ sources, state: r.state, flags: r.flags, fetchImpl: fakeWeb(web).fetchImpl, ...clock() });
+  assert.equal(r.flags.flags.length, 30);
+  assert.ok(Object.values(r.state.sources).every((s) => s.signal.every((l) => l.length <= MAX_LINE_CHARS)));
+  for (const [doc, key, fields] of [[{ note: "n", ...r.state }, "sources", ["signal"]], [{ note: "n", ...r.flags }, "flags", ["added", "removed"]]]) {
+    const fitted = fitSize(doc, key, fields);
+    assert.ok(Buffer.byteLength(JSON.stringify(fitted, null, 2)) <= MAX_FILE_BYTES, `${key} fits`);
+  }
+  assert.ok(Object.values(r.state.sources).every((s) => s.signal_hash && s.line_hashes.length), "hashes are never trimmed");
 });
