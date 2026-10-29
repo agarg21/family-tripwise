@@ -397,6 +397,8 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
     }
     accounts = found.accounts;
     for (const p of found.problems) { report.skipped.push({ key: null, reason: p }); log(`Zernio: ${p}`); }
+    const idle = platforms.filter((p) => !accounts[p] && !found.problems.some((x) => x.startsWith(`${p}:`)));
+    if (idle.length) { report.not_connected = idle; log(`Zernio: no connected account for ${idle.join(", ")}; those platforms are not posting.`); }
     platforms = platforms.filter((p) => accounts[p]);
     if (!platforms.length) { log("No platform connected in Zernio; nothing posted."); return report; }
   }
@@ -458,6 +460,6 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   } else {
     report = await run({ now, ...(opt("--now") ? { clock: () => now.getTime() } : {}), store: new GitStore(root) });
   }
-  console.log(JSON.stringify({ posted: report.posted.length, failed: report.failed.length, skipped: report.skipped.length }));
+  console.log(JSON.stringify({ posted: report.posted.length, failed: report.failed.length, skipped: report.skipped.length, ...(report.not_connected ? { not_connected: report.not_connected } : {}) }));
   if (report.failed.length) process.exit(1);
 }

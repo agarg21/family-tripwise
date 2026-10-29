@@ -284,6 +284,7 @@ test("Zernio: a platform with no connected account, or two, is not posted and no
   const r = await zgo(store, at("08:00"), { fetch: accounts });
   assert.deepEqual(r.posted.map((p) => p.key.split("--")[1]), ["threads.json"]);
   assert.ok(r.skipped.some((s) => /facebook: 2 connected Zernio accounts/.test(s.reason)));
+  assert.deepEqual(r.not_connected, ["instagram", "pinterest"], "platforms with no connected account are reported, ambiguous ones are not repeated");
   assert.deepEqual(receipts().map((x) => x.platform), ["threads"]);
 });
 
