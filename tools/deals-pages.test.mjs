@@ -250,6 +250,7 @@ test("G09 step 2: every check carries a validated score; family value is rated o
   assert.ok(withCompare({ amount: "USD 2,410.00" }).some((p) => /a saving/.test(p)));
   assert.ok(withCompare({ observed_on: "2026-10-27" }).some((p) => /same day/.test(p)));
   assert.ok(score({ family_value: rated, verdict: "worth_it", who: undefined }, { family_total: { ...total, party: "2 adults" } }).some((p) => /2 adults and 2 children/.test(p)));
+  assert.ok(score({ family_value: rated, verdict: "worth_it", who: undefined }, { family_total: {} }).some((p) => /rated family_value needs/.test(p)), "a malformed total is reported, not thrown");
   assert.ok(score({ family_value: { ...rated, compare: undefined } }, { family_total: total }).some((p) => /rated family_value needs/.test(p)), "total without a regular price");
   assert.ok(withCompare({}, { family_value: { ...rated, level: "low" } }).some((p) => /worth_it needs an observed family_value of medium or high/.test(p)));
   assert.ok(score({ novelty: { level: "agency_listed", checked_on: "2026-10-28", links: "not a list" } }).some((p) => /novelty needs level/.test(p)), "reported, not thrown");

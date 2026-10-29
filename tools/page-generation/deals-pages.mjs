@@ -88,7 +88,7 @@ export function validateDealScore(check, { today = easternDate() } = {}) {
   else if (v.level !== "unknown") {
     const c = v.compare ?? {};
     const t = check.family_total;
-    const ok = t && typeof c.amount === "string" && /^[A-Z]{3} [\d,]+(\.\d\d)?$/.test(c.amount) && validDate(c.observed_on) && sentence(c.basis);
+    const ok = t && typeof t.amount === "string" && /^[A-Z]{3} [\d,]+(\.\d\d)?$/.test(t.amount) && validDate(t.observed_on) && typeof c.amount === "string" && /^[A-Z]{3} [\d,]+(\.\d\d)?$/.test(c.amount) && validDate(c.observed_on) && sentence(c.basis);
     if (!ok) problems.push(`${where}: a rated family_value needs an observed family_total and compare {amount, observed_on, basis} for the same party and dates`);
     else {
       const [tCur, tNum] = [t.amount.slice(0, 3), Number(t.amount.slice(4).replaceAll(",", ""))];
