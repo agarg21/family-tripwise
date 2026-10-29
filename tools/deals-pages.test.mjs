@@ -176,3 +176,10 @@ test("Norwegian check keeps the record: Nov 2, 2026 deadline, full-fare conditio
   assert.ok(n.unclear.some((u) => /free 2nd guest still counts as guests 1 and 2 paying full fare/.test(u)));
   assert.doesNotMatch(n.headline + n.family_of_four, /kids sail free|kids are free/i);
 });
+
+test("Norwegian check's November 2 date is scoped to the Free 2nd Guest sale, so expiry never says the 3rd and 4th guest offer ended", () => {
+  const n = checks.find((c) => c.id === "norwegian-free-2nd-guest-3rd-4th-free");
+  assert.match(n.expires_note, /Free 2nd Guest booking deadline; the free 3rd and 4th guest offer has no stated end date/);
+  const page = dealCheckPage(checks, n, "2026-11-03");
+  assert.match(page, /free 3rd and 4th guest offer has no stated end date/);
+});
