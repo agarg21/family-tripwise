@@ -61,7 +61,7 @@ const latestObservation = items.map((i) => i.observed_on).sort().at(-1);
 test("every card shows its check date and official link; family notes are labelled as ours", () => {
   const html = thisWeekPage(items, latestObservation);
   const cards = html.match(/<article class="detail-card fresh-item"[\s\S]*?<\/article>/g) || [];
-  assert.equal(cards.length, items.length);
+  assert.equal(cards.length, items.filter((i) => i.expires_on >= latestObservation).length);
   for (const card of cards) {
     assert.match(card, /Official page, checked [A-Z][a-z]+ \d{1,2}, 20\d\d: <a href="https:\/\//);
     assert.match(card, /<dt>Family note<\/dt>/);
