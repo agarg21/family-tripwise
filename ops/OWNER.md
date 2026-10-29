@@ -22,7 +22,7 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T1 (done 2026-10-27): GSC sitemap resubmitted; indexing requested for 5 unknown URLs.
 
 - T2 (done 2026-10-28): owner filed a YouTube impersonation report on @FamilyTripwise (UCL8YHu5h_XiSTQhZJuCDmtA). Do not re-report; note channel changes in runs.
-- T3 (open): hello@ forward done; Facebook Page created (id 61595868517158). Remaining: Instagram (professional, linked to the Page), Threads, Pinterest Business, the Meta and Pinterest developer apps, and each token as a GitHub secret. Owner signs up and handles passwords and tokens; Claude does the rest in Chrome.
+- T3 (open): accounts done 2026-10-29 (hello@ forward; Facebook Page id 61595868517158; Instagram + Threads @familytripwise, Business, linked to the Page; Pinterest @familytripwise; logo brand/logo-1080.png). Remaining: Meta and Pinterest developer apps (need G07 privacy/terms live) and each token as a GitHub secret; owner handles passwords and tokens.
 
 ## Open questions
 - O2 (2026-10-28) Will you re-observe the robots-blocked Nov 8-13 hotel samples by hand (list: Q17b) for a Jan 10-15, 2027 stay and send values with screenshots by Nov 2? Recommendation: No; the operator removes them by Nov 7 and shows a dated budget gap.
