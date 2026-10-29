@@ -327,7 +327,8 @@ export function validateQueue(queue, { records = sourceRecords(), today = null, 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const { writeFileSync, mkdirSync } = await import("node:fs");
   // node tools/social-queue.mjs YYYY-MM-DD [--skip <item-id> "<reason>"]...
-  // Without --skip, a regeneration keeps the skips already stored in that day's queue.
+  // A regeneration keeps the skips already stored in that day's queue; --skip adds to them
+  // (a repeated item id replaces its stored reason).
   const [date, ...rest] = process.argv.slice(2);
   const skip = [];
   for (let i = 0; i < rest.length; i += 1) {
@@ -336,7 +337,8 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     i += 2;
   }
   const stored = ISO.test(date ?? "") ? readQueue(date)?.skipped ?? [] : [];
-  const queue = buildQueue(date, { skip: skip.length ? skip : stored });
+  const merged = [...stored.filter((s) => !skip.some((n) => n.item_id === s.item_id)), ...skip];
+  const queue = buildQueue(date, { skip: merged });
   mkdirSync(queueDir, { recursive: true });
   writeFileSync(join(queueDir, `${date}.json`), `${JSON.stringify(queue, null, 2)}\n`);
   console.log(`Wrote ops/social-queue/${date}.json with ${queue.entries.length} entries: ${queue.entries.map((e) => e.item_id).join(", ")}${queue.skipped ? `; skipped: ${queue.skipped.map((s) => s.item_id).join(", ")}` : ""}`);
