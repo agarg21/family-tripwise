@@ -320,6 +320,47 @@
       "source_label": "LEGOLAND California Hotel + Ticket Package page",
       "observed_on": "2026-10-29",
       "expires_on": "2026-11-17"
+    },
+    {
+      "id": "atlantis-bahamas-fall-into-paradise",
+      "operator": "Atlantis Paradise Island",
+      "category": "Resort stay offer",
+      "title": "Atlantis Bahamas Fall Into Paradise: up to 35% off 4+ nights, USD 250 resort credit",
+      "headline": "Book a 4+ night Atlantis stay by November 22 for travel through January 31, 2027 and save up to 35%, with a USD 250 per-room resort credit, daily breakfast for two and kids 5 and under eating free at select venues; Thanksgiving week and mid-December to January 1 are blacked out, and a 21% charge, a daily resort fee and mandatory gratuities are added.",
+      "family_of_four": "For 2 adults and 2 children, the free daily buffet breakfast covers two people only (a folio credit valued up to USD 100 a day), so the children's breakfasts are extra unless a child is 5 or under and eats a kids' entrée free at a participating venue alongside an adult ordering a full-priced entrée. The USD 250 resort credit is per room, per stay and can pay for Atlantis Kids Adventures, Dolphin & Marine Adventures or Atlantis food and beverage outlets, but not taxes, gratuities or retail. Atlantis lists mandatory gratuities per person, per night for guests 12 and older, so the amount depends on your children's ages. \"Up to 35%\" is a maximum; the page does not say which rooms or dates get it.",
+      "terms": [
+        ["Headline", "\"Save up to 35% on 4+ Nights\" plus a USD 250 resort credit and daily breakfast for two."],
+        ["Book by", "November 22 (\"Book by: November 22 | Travel by: January 31, 2027\"; no year is given for the booking date)."],
+        ["Travel window", "Travel by January 31, 2027; the resort credit applies to travel from October 16, 2026 to January 31, 2027."],
+        ["Blackout dates", "November 21 to 27, 2026 and mid-December 2026 to January 1, 2027 (the page gives December 15 in one place and December 16 in another)."],
+        ["Minimum nights", "4 nights. The resort credit and the breakfast both require a 4+ night stay; new reservations only."],
+        ["Hotels", "The Coral, The Royal, The Cove, The Reef and Harborside."],
+        ["Child ages", "Kids 5 and under eat free at select participating venues: a free child's entrée from the kids' menu when at least one adult orders a full-priced adult entrée, settled by room charge, for registered guests of The Coral, The Royal, The Reef and The Cove (separate Kids Eat Free page). Mandatory gratuities apply to guests 12 and older. No other child terms are stated."],
+        ["Resort credit", "USD 250 per room, per stay; usable for Dolphin & Marine Adventures, Atlantis Kids Adventures, CRUSH, Lost City Escape Room, Good Lies and Atlantis food and beverage outlets. Not for the spa, golf, casino, Atlantis LIVE performances, retail shops, laundry, gratuities, taxes or Energy Surcharges. No cash value; unused amounts are lost."],
+        ["Breakfast", "Daily buffet breakfast for two at most Atlantis dining outlets, valued up to USD 100 a day including 10% VAT and 15% gratuities, credited to the room folio."],
+        ["Still charged", "A 21% charge on the nightly room rate (VAT and levies); a daily resort fee of USD 77.00 including VAT at The Coral and The Royal, USD 82.50 at The Cove and The Reef; mandatory gratuities for guests 12 and older of up to USD 14 per person per night at The Coral and The Royal, up to USD 30 at The Cove and up to USD 52 at The Reef; at Harborside, a USD 20.52 per person daily utility service fee and USD 6.25 per person daily gratuities (12 and older). All subject to change."],
+        ["Combining", "Not combinable with other offers; not valid for group or casino bookings; combinable with luxury consortia amenities."]
+      ],
+      "unclear": [
+        "The booking deadline has no year; we read it as November 22, 2026, because travel runs to January 31, 2027.",
+        "Which room types, hotels or dates get the full 35% is not stated; \"up to\" is a maximum.",
+        "The December blackout start conflicts on the page: December 15 in one place, December 16 in another.",
+        "Whether the resort fee is charged per room or per person is not stated in the lines we read, and cancellation and deposit rules sit in general terms we did not read.",
+        "The footnote to \"Kids 5 & Under Eat Free at Select Participating Venues\" is not shown on the offer page; the separate Kids Eat Free page gives the adult-entrée condition."
+      ],
+      "before_booking": [
+        "Price your exact dates for your real party and room on the official site, and confirm how much of the 35% your dates actually get.",
+        "Avoid November 21 to 27 and December 15 to January 1, or confirm the blackout dates directly.",
+        "Add the 21% charge, the daily resort fee and mandatory gratuities for everyone 12 and older to the quoted price.",
+        "Budget breakfast for the children: the free breakfast covers two people.",
+        "Read the cancellation and deposit terms before you pay."
+      ],
+      "family_total": null,
+      "official_url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
+      "source_label": "Atlantis Fall Into Paradise offer page",
+      "observed_on": "2026-10-29",
+      "expires_on": "2026-11-22",
+      "expires_note": "the offer page gives no year for this date; 2026 is our reading"
     }
   ]
 }

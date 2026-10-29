@@ -211,3 +211,19 @@ test("LEGOLAND California check keeps the record: book by Nov 17, 2026 for stays
   assert.ok(l.unclear.some((u) => /Partner hotels conflict/.test(u)));
   assert.match(l.family_of_four, /not a quote for your dates/);
 });
+
+test("Atlantis Fall Into Paradise check keeps the record: book by Nov 22 (year is our reading), travel by Jan 31, 2027, 4-night minimum, blackouts with the Dec 15/16 conflict, breakfast for two only, fees and 12+ gratuities, no family total", () => {
+  const a = checks.find((c) => c.id === "atlantis-bahamas-fall-into-paradise");
+  assert.ok(a, "added 2026-10-29 (docs/research/deal-checks-2026-10-29.md)");
+  assert.equal(a.observed_on, "2026-10-29");
+  assert.equal(a.expires_on, "2026-11-22");
+  assert.match(a.expires_note, /no year/);
+  assert.equal(a.family_total, null);
+  assert.equal(a.official_url, "https://www.atlantisbahamas.com/fall-into-paradise-offer");
+  assert.ok(a.terms.some(([k, v]) => k === "Book by" && /no year is given/.test(v) && /January 31, 2027/.test(v)));
+  assert.ok(a.terms.some(([k, v]) => k === "Minimum nights" && /^4 nights/.test(v)));
+  assert.ok(a.terms.some(([k, v]) => k === "Blackout dates" && /November 21 to 27, 2026/.test(v) && /December 15/.test(v) && /December 16/.test(v)));
+  assert.ok(a.terms.some(([k, v]) => k === "Still charged" && /21%/.test(v) && /USD 77\.00/.test(v) && /12 and older/.test(v)));
+  assert.match(a.family_of_four, /covers two people only/);
+  assert.match(a.family_of_four, /maximum/);
+});
