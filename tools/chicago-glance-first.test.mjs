@@ -11,11 +11,13 @@ const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt
 test("Chicago comparison leads the licensed image and all hotel details", () => {
   assert.match(html, /<h1>Chicago Family Hotels<\/h1>/);
   assert.match(html, /<title>Top Family Hotels in Chicago: 10 Options by Trip Style<\/title>/);
-  assert.ok(html.indexOf('id="hotel-comparison"') < html.indexOf('<figure class="licensed-photo">'));
-  assert.ok(html.indexOf('<figure class="licensed-photo">') < html.indexOf('id="chicago-hotel-1"'));
+  // G14 (owner 2026-10-29): the credited photo sits at the top, after the h1 and before the comparison.
+  assert.ok(html.indexOf('</h1>') < html.indexOf('<figure class="licensed-photo hero-photo">'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="hotel-comparison"'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="chicago-hotel-1"'));
   assert.doesNotMatch(html, /Trip-style starts|Hotels covered|Let the room setup and first two days choose the hotel/);
   assert.match(html, /href="\.\/chicago-with-kids.html">Compare Chicago stay areas/);
-  assert.match(html, /alt="Millennium Park and the Chicago skyline at dusk\."[^>]+loading="lazy"/);
+  assert.match(html, /alt="Millennium Park and the Chicago skyline at dusk\."[^>]+loading="eager"/);
   assert.match(html, /CC BY-SA 3\.0/);
 });
 

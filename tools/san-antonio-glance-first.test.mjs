@@ -12,10 +12,12 @@ test("San Antonio comparison leads retained routing, media and hotel disclosures
   assert.match(html, /<h1>San Antonio Family Hotels<\/h1>/);
   assert.match(html, /<title>Top Family Hotels in San Antonio: 12 Options by Trip Style<\/title>/);
   assert.ok(html.indexOf('</table>') < html.indexOf("Decide whether the hotel is the attraction"));
-  assert.ok(html.indexOf("Pick the closest version of your trip") < html.indexOf('<figure class="licensed-photo">'));
-  assert.ok(html.indexOf('<figure class="licensed-photo">') < html.indexOf('id="san-antonio-hotel-1"'));
+  // G14 (owner 2026-10-29): the credited photo sits at the top, after the h1 and before the comparison.
+  assert.ok(html.indexOf('</h1>') < html.indexOf('<figure class="licensed-photo hero-photo">'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf("Pick the closest version of your trip"));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="san-antonio-hotel-1"'));
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
-  assert.match(html, /san-antonio-river-walk\.webp"[^>]+loading="lazy"/);
+  assert.match(html, /san-antonio-river-walk\.webp"[^>]+loading="eager"/);
   assert.match(html, /CC BY-SA 2\.0/);
   assert.doesNotMatch(html, /downloads\/.*\.csv|Spreadsheet copy/);
 });

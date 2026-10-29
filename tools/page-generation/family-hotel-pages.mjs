@@ -308,6 +308,12 @@ function sanDiegoFamilyHotelPage() {
           <p>Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools.</p>
         </div>
       </section>
+      <section class="container media-section hero-photo-section">
+        <figure class="licensed-photo hero-photo">
+          <img src="../images/san-diego-mission-bay.webp" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="eager" fetchpriority="high" decoding="async" width="1280" height="982">
+          <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>. Resized and cropped to fit.</figcaption>
+        </figure>
+      </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
         <p>Prices are older observations only: one-night samples seen July 18-21 and one official Homewood family-suite sample checked October 4, 2026. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
@@ -355,12 +361,6 @@ ${comparisonRows}
           <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
         </dl>
         <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
-      </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="../images/san-diego-mission-bay.webp" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="lazy" decoding="async" width="1280" height="982">
-          <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>.</figcaption>
-        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading">
@@ -667,6 +667,12 @@ function lasVegasFamilyHotelPage() {
           <p>Compare ten hotels by room setup, pool role, casino context, area and historical nightly budget. <a href="#las-vegas-room-fit">Five or more guests</a>.</p>
         </div>
       </section>
+      <section class="container media-section hero-photo-section">
+        <figure class="licensed-photo hero-photo">
+          <img src="../images/las-vegas-bellagio-fountains.webp" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Family Tripwise serves a resized copy, cropped to fit.</figcaption>
+        </figure>
+      </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
         <p>July 22 USD per-room, per-night planning bands synthesize public examples and widen for room and date variation. Some examples used two adults; party and exact room are unknown for others. Taxes and mandatory fees were included only where displayed, while other examples were before or plus tax; parking is separate. These are not current five-person suite quotes. Price the exact room, party, dates, fees and full stay before choosing.</p>
@@ -711,12 +717,6 @@ ${rows}
           <article class="quick-pick"><span>Themed or older-kid Strip</span><strong>Excalibur or New York-New York</strong><p>Use Excalibur for lower-price castle and arcade appeal; compare New York-New York for remodeled rooms, coaster energy, and arena access.</p></article>
           <article class="quick-pick"><span>North Strip or nature base</span><strong>Resorts World Hilton or Red Rock</strong><p>Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</p></article>
         </div>
-      </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="../images/las-vegas-bellagio-fountains.webp" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="lazy" decoding="async">
-          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>
-        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
@@ -991,6 +991,12 @@ function chicagoFamilyHotelPage() {
           <p>Compare ten hotels by room setup, kitchens, pools, area and dated price samples.</p>
         </div>
       </section>
+      <section class="container media-section hero-photo-section">
+        <figure class="licensed-photo hero-photo">
+          <img src="../images/chicago-millennium-park.webp" alt="Millennium Park and the Chicago skyline at dusk." width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Family Tripwise serves a resized copy, cropped to fit.</figcaption>
+        </figure>
+      </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
         <p>Prices are older observations only: one-night samples from the July 23, 2026 research pack (two with unclear date labels), not family-room quotes. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
@@ -1016,12 +1022,6 @@ ${rows}
           <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p>
           <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and price limits as this page.</p></details>
         </div>
-      </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="../images/chicago-millennium-park.webp" alt="Millennium Park and the Chicago skyline at dusk." width="1600" height="1200" loading="lazy" decoding="async">
-          <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>
-        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
@@ -1301,6 +1301,12 @@ function sanAntonioFamilyHotelPage() {
           <p>Compare 12 hotels by room function, water-play role, area and historical nightly budget.</p>
         </div>
       </section>
+      <section class="container media-section hero-photo-section">
+        <figure class="licensed-photo hero-photo">
+          <img src="../images/san-antonio-river-walk.webp" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Resized and cropped to fit.</figcaption>
+        </figure>
+      </section>
       <section class="container trust-panel" aria-label="Information freshness">
         <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Price examples and online-review sources checked:</strong> July 26, 2026.</p>
         <p>USD per-room, per-night planning bands use July 26 public examples, mostly for two adults in a standard room, then widen for room and date variation. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Price the exact room, child ages, dates, fees, pool operations and cancellation terms before choosing.</p>
@@ -1345,12 +1351,6 @@ ${rows}
           <article class="quick-pick"><span>Included-food value</span><strong>Drury Plaza</strong><p>Breakfast and evening food can reduce trip friction; count elevator crowds, parking, and the exact room against that value.</p></article>
           <article class="quick-pick"><span>Classic Downtown trip</span><strong>Contessa, Hyatt Regency, Marriott Rivercenter, or Omni</strong><p>Compare suite space, indoor-pool access, River Walk location, event noise, and parking rather than treating central hotels as interchangeable.</p></article>
         </div>
-      </section>
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="../images/san-antonio-river-walk.webp" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="lazy" decoding="async">
-          <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</figcaption>
-        </figure>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>
@@ -1631,6 +1631,12 @@ function newYorkCityFamilyHotelPage() {
           <p>Room layouts, kitchens, areas and dated price samples for twelve hotels.</p>
         </div>
       </section>
+      <section class="container media-section hero-photo-section">
+        <figure class="licensed-photo hero-photo">
+          <img src="../images/new-york-city-central-park.webp" alt="Central Park and the New York City skyline." width="1280" height="894" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>. Resized and cropped to fit.</figcaption>
+        </figure>
+      </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts and review sources checked:</strong> July 25, 2026</p>
         <p>Prices are older observations only: two-adult samples checked July 25 and <a href="#dated-family-budgets">five-person samples</a> checked October 11, 2026. <a href="#historical-price-basis">Price basis</a>.</p>
@@ -1658,12 +1664,6 @@ ${rows}
         </div>
       </section>
       ${datedBudgetComparisonHtml()}
-      <section class="container media-section">
-        <figure class="licensed-photo">
-          <img src="../images/new-york-city-central-park.webp" alt="Central Park and the New York City skyline." width="1280" height="894" loading="lazy" decoding="async">
-          <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>.</figcaption>
-        </figure>
-      </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>
         <div class="detail-card-grid hotel-card-grid">

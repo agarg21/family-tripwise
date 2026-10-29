@@ -13,10 +13,12 @@ test('comparison leads retained routing, larger-room branch and licensed media',
   assert.match(html, /<title>Top Family Hotels in Las Vegas: 10 Options by Trip Style<\/title>/);
   assert.ok(html.indexOf('</table>') < html.indexOf('Choose the hotel that removes the biggest family friction'));
   assert.ok(html.indexOf('id="las-vegas-room-fit"') < html.indexOf('Trip-style starts'));
-  assert.ok(html.indexOf('Trip-style starts') < html.indexOf('<figure class="licensed-photo">'));
-  assert.ok(html.indexOf('<figure class="licensed-photo">') < html.indexOf('id="las-vegas-hotel-1"'));
+  // G14 (owner 2026-10-29): the credited photo sits at the top, after the h1 and before the comparison.
+  assert.ok(html.indexOf('</h1>') < html.indexOf('<figure class="licensed-photo hero-photo">'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('Trip-style starts'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="las-vegas-hotel-1"'));
   assert.ok(html.indexOf('href="#las-vegas-room-fit"') < html.indexOf('<table'));
-  assert.match(html, /las-vegas-bellagio-fountains\.webp"[^>]+loading="lazy"/);
+  assert.match(html, /las-vegas-bellagio-fountains\.webp"[^>]+loading="eager"/);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   const spreadsheet = html.match(/<details><summary>Spreadsheet copy<\/summary>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(spreadsheet?.includes('href="../downloads/las-vegas-family-hotels.csv" download'));

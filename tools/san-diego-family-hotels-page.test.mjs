@@ -105,12 +105,13 @@ test("covers 12 named hotel options with dated price samples and map links", () 
 test("starts with the comparison, retaining one trip-style surface before media", () => {
   const tripStyleIndex = html.indexOf("Pick the closest trip style");
   const reviewStatusIndex = html.indexOf('aria-label="Review status"');
-  const mediaIndex = html.indexOf('class="container media-section"');
+  const mediaIndex = html.indexOf('class="container media-section hero-photo-section"');
 
   const comparisonIndex = html.indexOf('id="hotel-comparison"');
   assert.ok(reviewStatusIndex < comparisonIndex);
   assert.ok(comparisonIndex < tripStyleIndex);
-  assert.ok(tripStyleIndex < mediaIndex);
+  // G14 (owner 2026-10-29): the credited photo now sits at the top, before the review status and comparison.
+  assert.ok(html.indexOf("</h1>") < mediaIndex && mediaIndex < reviewStatusIndex);
   assert.equal((html.match(/Pick the closest trip style/g) || []).length, 1);
   assert.doesNotMatch(html, /Start with the kind of trip you want/);
   assert.doesNotMatch(html, /For Mission Bay water time, compare the six bay resorts/);

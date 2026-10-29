@@ -14,10 +14,12 @@ test("San Diego exposes the table before complete trip-routing guidance and lice
   assert.match(html, /<title>Top Family Hotels in San Diego: 12 Options by Trip Style<\/title>/);
   assert.ok(html.indexOf('aria-label="Review status"') < html.indexOf('id="hotel-comparison"'));
   assert.ok(html.indexOf("</table>") < html.indexOf("Pick the closest trip style"));
-  assert.ok(html.indexOf("One base or split?") < html.indexOf('<figure class="licensed-photo">'));
+  // G14 (owner 2026-10-29): the credited photo sits at the top, after the h1 and before the comparison.
+  assert.ok(html.indexOf('</h1>') < html.indexOf('<figure class="licensed-photo hero-photo">'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf("One base or split?"));
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
   assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip/);
-  assert.match(html, /san-diego-mission-bay\.webp"[^>]+loading="lazy"/);
+  assert.match(html, /san-diego-mission-bay\.webp"[^>]+loading="eager"/);
   assert.match(html, /Photo: Alfred Twu, Wikimedia Commons, CC0/);
   assert.match(html, /href="\.\.\/downloads\/san-diego-family-hotels\.csv" download/);
   assert.ok(html.indexOf("Spreadsheet copy") < html.indexOf("Pick the closest trip style"));

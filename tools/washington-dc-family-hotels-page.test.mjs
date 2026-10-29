@@ -89,7 +89,7 @@ test("one discoverable canonical DC job, constrained factual schema and licensed
   assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);
   assert.equal((read("site/sitemap.xml").match(/<loc>/g)||[]).length,52);
   assert.ok(stripSiteChrome(read("site/index.html")).includes(dcPath));
-  assert.match(html,/Johnny Bivera/); assert.match(html,/2005/); assert.match(html,/public-domain record/);
+  assert.match(html,/Johnny Bivera/); assert.match(html,/2005/); assert.match(html,/public domain record/);
 });
 test("kitchen filter is reversible and retains details/price context without transmitting data", () => {
   const rows=dcRooms.map(room=>({dataset:{kitchen:room.kitchen},hidden:false}));

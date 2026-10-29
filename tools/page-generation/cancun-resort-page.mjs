@@ -84,6 +84,7 @@ export function cancunResortPage() {
       <p>Six all-inclusive resorts, compared by the room and policy details that can change a family booking. This is a focused planning comparison, not a ranking of every resort.</p>
       <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Check live rates and current rules before booking.</span></p>
       <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#grandparents-budget">Trip with grandparents</a><a href="#family-check">Your children's ages</a><a href="#child-offer">Child-offer checks</a><a href="#comparison">Full policy checks</a><a href="#before-booking">Before booking</a></div>
+      <figure class="licensed-photo hero-photo"><img src="../images/cancun-aerial.webp" width="1600" height="1200" alt="Aerial view of Cancun's coast and lagoon in January 2024, for geographic context." loading="eager" fetchpriority="high" decoding="async"><figcaption>Cancun area, January 2024; not a photo of the compared rooms. Antony-22, <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped to fit.</figcaption></figure>
     </section>
     <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
@@ -147,7 +148,6 @@ ${cancunChildOfferSection()}    <section id="before-booking">
     <section class="geography">
       <h2>One airport region, different locations</h2>
       <p>Sunscape and Hyatt Ziva are in Cancun's Hotel Zone; Finest is in Playa Mujeres to the north; Dreams Sapphire and Royalton Splash are in Riviera Cancun. The map links above locate each named resort. No transfer time, beach condition, safe swimming or stroller-route guarantee is implied.</p>
-      <figure><img src="../images/cancun-aerial.webp" width="1600" height="1200" alt="Aerial view of Cancun's coast and lagoon in January 2024, for geographic context." loading="lazy" decoding="async"><figcaption>Cancun area, January 2024; not a photo of the compared rooms. Antony-22, <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Uncropped, displayed smaller.</figcaption></figure>
     </section>
     <section id="methodology">
       <h2>What this comparison can establish</h2>

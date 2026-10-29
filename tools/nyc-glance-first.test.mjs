@@ -14,11 +14,13 @@ const hotels = createFamilyHotelPages({}).hotelCatalog["new-york-city"];
 test("comparisons precede the photo and detailed cards without repeated starter layers", () => {
   assert.match(html, /<h1>New York City Family Hotels<\/h1>/);
   assert.ok(html.indexOf('id="hotel-comparison"') < html.indexOf('id="dated-family-budgets"'));
-  assert.ok(html.indexOf('id="dated-family-budgets"') < html.indexOf('<figure class="licensed-photo">'));
-  assert.ok(html.indexOf('<figure class="licensed-photo">') < html.indexOf('id="nyc-hotel-1"'));
+  // G14 (owner 2026-10-29): the credited photo sits at the top, after the h1 and before the comparison.
+  assert.ok(html.indexOf('</h1>') < html.indexOf('<figure class="licensed-photo hero-photo">'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="dated-family-budgets"'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="nyc-hotel-1"'));
   assert.doesNotMatch(html, /Trip-style starts|Hotels covered|Choose the room function before the hotel brand/);
   assert.match(html, /href="\.\/new-york-city-with-kids.html">Compare stay areas/);
-  assert.match(html, /alt="Central Park and the New York City skyline\."[^>]+loading="lazy"/);
+  assert.match(html, /alt="Central Park and the New York City skyline\."[^>]+loading="eager"/);
 });
 
 test("full price basis occurs once and every price card retains dated caution and direct access", () => {

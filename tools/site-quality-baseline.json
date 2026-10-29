@@ -69,49 +69,26 @@
       "glance",
       "no_placeholders"
     ],
-    "where-to-stay/cancun-family-resorts.html": [
-      "hero"
-    ],
+    "where-to-stay/cancun-family-resorts.html": [],
     "where-to-stay/orlando-family-hotels.html": [
-      "hero",
       "no_placeholders"
     ],
-    "things-to-do/orlando-with-kids.html": [
-      "hero"
-    ],
-    "where-to-stay/washington-dc-family-hotels.html": [
-      "hero"
-    ],
+    "things-to-do/orlando-with-kids.html": [],
+    "where-to-stay/washington-dc-family-hotels.html": [],
     "family-itinerary/washington-dc-with-kids.html": [
       "hero"
     ],
-    "where-to-stay/boston-family-hotels.html": [
-      "hero"
-    ],
+    "where-to-stay/boston-family-hotels.html": [],
     "family-itinerary/boston-with-kids.html": [
       "hero"
     ],
-    "where-to-stay/puerto-vallarta-family-resorts.html": [
-      "hero"
-    ],
-    "where-to-stay/london-family-hotels.html": [
-      "hero"
-    ],
-    "where-to-stay/san-diego-family-hotels.html": [
-      "hero"
-    ],
-    "where-to-stay/las-vegas-family-hotels.html": [
-      "hero"
-    ],
-    "where-to-stay/chicago-family-hotels.html": [
-      "hero"
-    ],
-    "where-to-stay/new-york-city-family-hotels.html": [
-      "hero"
-    ],
-    "where-to-stay/san-antonio-family-hotels.html": [
-      "hero"
-    ],
+    "where-to-stay/puerto-vallarta-family-resorts.html": [],
+    "where-to-stay/london-family-hotels.html": [],
+    "where-to-stay/san-diego-family-hotels.html": [],
+    "where-to-stay/las-vegas-family-hotels.html": [],
+    "where-to-stay/chicago-family-hotels.html": [],
+    "where-to-stay/new-york-city-family-hotels.html": [],
+    "where-to-stay/san-antonio-family-hotels.html": [],
     "things-to-do/chicago-with-kids.html": [
       "hero",
       "dated_sources"
