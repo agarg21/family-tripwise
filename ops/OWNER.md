@@ -18,6 +18,7 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D14 Posting via Zernio (2026-10-29, owner) — Approved: about USD 12/mo (4 accounts); owner signs up with hello@ and connects Facebook, Instagram, Threads, Pinterest; API key as GitHub secret ZERNIO_API_KEY.
 - D15 Deal fast lane (2026-10-29, owner) — Approved: be first with verified, worth-sharing family deals: hourly change watch on official deal pages, score each deal (family value, appeal, urgency, already covered?), post worthy ones at the next slot the same day. Accuracy still beats speed.
 - D16 Deal scope (2026-10-29, owner) — Approved: US, Mexico/Caribbean and cruises from US ports first; Europe only when the family math is exceptional; revisit later.
+- D17 Images (2026-10-29, owner) — Approved: credited free-license stock photos and official media-kit photos where terms allow editorial use; self-hosted; never AI photos of real places.
 
 ## Owner tasks (operator cannot do these)
 - T1 (done 2026-10-27): GSC sitemap resubmitted; indexing requested for 5 unknown URLs.
@@ -25,5 +26,4 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O4 (2026-10-29) Deal images: allow credited free-license stock photos and official media-kit photos where terms allow editorial use? Recommendation: yes; never AI photos of real places.
 - O2 (2026-10-28) Re-observe the robots-blocked Nov 8-13 hotel samples by hand (list: Q17b) by Nov 2? Recommendation: No; the operator removes them by Nov 7.

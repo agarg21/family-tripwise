@@ -6,9 +6,9 @@ Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q i
 open · M · owner: D4 Approved (self-hosted heroes) · gate: none; do first
 Commons hotlinks (commons.wikimedia.org Special:Redirect) answer HTTP 429 to visitors (checked 2026-10-29, orlando-with-kids), so images are missing site-wide. Download each Commons original once, resize to WebP ≤200 KB in site/images/, keep author/licence/source caption, width/height, fetchpriority="high" on the hero; no hotlinked images anywhere (add a test). Then list pages with no image at all (deals, Boston/DC itineraries, old SD pages) for G13.
 
-## G13 Scalable page-quality system
+## G13 Page quality: every deploy, weekly, on demand (owner 2026-10-29)
 open · M · owner: none · gate: after Q11
-1) tools/page-quality.mjs + test in the deploy checks: every public page has a self-hosted hero with alt and credit, og:image, a glance block (AGENTS.md Content Standard), no placeholder sections, dated sources. 2) A persona-review ledger (ops/page-reviews.json: page, date, persona scores, issues); a recurring run reviews 3 pages a day, highest impressions or lowest score first; failing pages get fix items. 3) Benchmark: things-to-do/san-diego-with-kids.html is the owner's reference for quality (rubric: docs/plan/page-quality-rubric.md). 4) Weekly scores in STATE.
+1) Every deploy (daily 05:17 UTC and each release, next to the existing freshness tests): tools/page-quality.mjs + test: self-hosted hero with alt and credit, og:image, glance block, no placeholder sections, dated sources. 2) Weekly (first run on Mondays): one site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, and a persona review (docs/plan/page-quality-rubric.md) of pages changed since their last review plus the top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE. No automatic page edits. 3) On demand: when OWNER.md asks "review <page or all>", do it next.
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
@@ -49,11 +49,6 @@ Acceptance: fixes above; ≤3 public pages per release unless under D4e.
 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
-
-## Q13 Weekly link and freshness report (report only)
-open · S · owner: none · gate: none
-Files: tools/link-check.mjs (+ test).
-Acceptance: Monday runs list outbound URLs returning 404/410 (browser UA, honoring robots) and observations older than 60 days; summary goes into STATE holds; no automatic page edits.
 
 ## Q14 Cycle go/no-go memo
 open · S · owner: none · gate: on or after 2026-11-12

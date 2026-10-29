@@ -43,8 +43,8 @@ Each answers: what is this about after 5 seconds? Would I click or share it? Wha
 ## Example of the analysis we want (verify before use)
 A first US passport book for a child under 16 has cost $100 application + $35 acceptance fee = $135. If travel.state.gov confirms the current fees, the Beaches credit is roughly the cost of the passport itself: a plain comparison a parent understands at once. (Not yet verified: the fee pages refused the fetcher on 2026-10-29.)
 
-## Images (owner decision O4 pending)
-Options: (a) free-license stock (Unsplash/Pexels license) for mood images, credited; (b) official media-kit/press images where the company's terms allow editorial use, credited; (c) our own designed visuals only. Until O4 is answered, (c).
+## Images (owner D17, 2026-10-29: approved)
+Options: (a) free-license stock (Unsplash/Pexels license) for mood images, credited; (b) official media-kit/press images where the company's terms allow editorial use, credited; (c) our own designed visuals only. Owner approved (a) and (b), credited and self-hosted; (c) remains welcome.
 
 ## Rollout
 1. Build v2 for one deal (Beaches) on a branch; persona review; owner reviews the rendered page, card and post.

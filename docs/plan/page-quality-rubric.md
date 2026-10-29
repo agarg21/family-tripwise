@@ -1,6 +1,6 @@
 # Page quality rubric (owner, 2026-10-29)
 
-Used by the persona reviewer (AGENTS.md Content Standard) and the page-quality ledger (QUEUE G13). Applies to every public page, post and card.
+Used by the persona reviewer (AGENTS.md Content Standard) and the weekly site-health report (QUEUE G13). Applies to every public page, post and card. Images: owner D17 (credited free-license stock and official media-kit photos; never AI photos of real places).
 
 ## Reference page
 `site/things-to-do/san-diego-with-kids.html` is the owner's example of a high-quality page. Reviewers compare against it: is this page at least as clear, specific and useful?
@@ -23,4 +23,4 @@ Scores 1–5: clarity, usefulness, trust, shareability, visual appeal.
 Pass: every persona gives clarity 4 or more and the overall average is 4 or more. Otherwise fix and re-review (at most 3 cycles).
 
 ## Ledger (ops/page-reviews.json)
-One entry per page: URL, date reviewed, scores per persona, top issues, status (pass / fix queued). A recurring run reviews 3 pages a day (highest impressions or lowest score first); new and changed pages are reviewed before release.
+One entry per page: URL, date reviewed, scores per persona, top issues, status (pass / fix queued). New and changed pages are reviewed before release; existing pages weekly (changed since last review + top 3 by impressions) and on demand (QUEUE G13).
