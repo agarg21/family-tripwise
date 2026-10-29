@@ -1,4 +1,37 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "great-wolf-deals",
+      "operator": "Great Wolf Lodge",
+      "url": "https://www.greatwolf.com/deals",
+      "check_id": null,
+      "kind": "changed",
+      "detected_at": "2026-10-29T23:22:41.747Z",
+      "previous_headline": "Resort Deals & Discounts",
+      "headline": "Find The Best Deals For Your Pack",
+      "added": [
+        "Big Fall Sale",
+        "Book your next getaway and save on your stay.",
+        "View Deal",
+        "Find The Best Deal For Your Pack",
+        "We’ve got great vacation deals and resort packages for an unforgettable family getaway at Great Wolf Lodge. These deals provide exceptional value—book now to s…",
+        "to get this deal.",
+        "Save up to",
+        "Always Free. Always Fun."
+      ],
+      "removed": [
+        "Great Wolf Lodge offers unbeatable vacation deals and resort packages for your next unforgettable family getaway. Our exclusive deals are designed to provide e…",
+        "Limited Time Offer",
+        "Save up to 40%",
+        "Save 30% off on a 2+ night stay when booking within 60 days of arrival",
+        "Save 30% Off",
+        "Save 40% off on a 3+ night stay when booking within 60 days of arrival",
+        "Save 40% Off",
+        "Save 50% off when booking your stay at least 60 days in advance"
+      ],
+      "added_count": 8,
+      "removed_count": 26
+    }
+  ]
 }

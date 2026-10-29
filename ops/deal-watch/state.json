@@ -30,33 +30,22 @@
       "url": "https://www.greatwolf.com/deals",
       "source_sig": "760b3cb707bfd131",
       "status": "ok",
-      "headline": "Resort Deals & Discounts",
-      "signal_hash": "ce067dd43f0ab2dff6b6066af89a9362",
+      "headline": "Find The Best Deals For Your Pack",
+      "signal_hash": "445a22e440f96ae2c77086662e892b8d",
       "signal": [
-        "Great Wolf Lodge offers unbeatable vacation deals and resort packages for your next unforgettable family getaway. Our exclusive deals are designed to provide e…",
-        "Limited Time Offer",
+        "Big Fall Sale",
+        "Book your next getaway and save on your stay.",
+        "View Deal",
+        "Find The Best Deal For Your Pack",
+        "We’ve got great vacation deals and resort packages for an unforgettable family getaway at Great Wolf Lodge. These deals provide exceptional value—book now to s…",
         "Fall Flash Sale",
-        "Save up to 40%",
-        "Save 30% off on a 2+ night stay when booking within 60 days of arrival",
-        "Save 30% Off",
-        "Save 40% off on a 3+ night stay when booking within 60 days of arrival",
-        "Save 40% Off",
-        "Save 50% off when booking your stay at least 60 days in advance",
-        "Save 50% Off",
-        "View Hero Offer",
-        "Special offer for members of any auto or vehicle club!",
-        "View Auto Offer",
-        "Special offer for guests 65 years and older!",
-        "View Seniors Offer",
-        "Free and fun daily family events",
-        "TIPS TO HELP YOU SAVE",
-        "The best way to save vacation dollars is by booking your stay in advance. You'll find the greatest availability of room options, package amenities and overall …",
-        "Bundle & Save",
-        "How can I get the best deal on my Great Wolf vacation?"
+        "to get this deal.",
+        "Save up to",
+        "Always Free. Always Fun."
       ],
-      "line_hashes": "385ca522 d3cd97cf e9139d00 f4ba6ec6 d05030a8 dd0cd809 39dfd77c e6f6fd15 58893f20 477720ff a8489148 1c9ab0c6 788c8f11 75ffb9bb 86781f82 64b47325 eb5e9cc5 eb407190 2384b11b 2904b18a 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf 3ccaf5ae",
+      "line_hashes": "5eb4e9a8 3c7d8c60 e65c0479 6196e3c2 42420030 e9139d00 d2e4bd0b 3a0fc4ac bc5b2d76",
       "first_seen_at": "2026-10-29T18:59:48.008Z",
-      "changed_at": "2026-10-29T18:59:48.008Z"
+      "changed_at": "2026-10-29T23:22:41.747Z"
     },
     "great-wolf-fall-flash-sale": {
       "url": "https://www.greatwolf.com/deals/fall-flash-sale",
@@ -346,7 +335,7 @@
       "status": "error",
       "reason": "too many redirects",
       "since": "2026-10-29T19:00:01.838Z",
-      "errors": 1
+      "errors": 2
     },
     "universal-orlando-ticket-offers": {
       "url": "https://www.universalorlando.com/web/en/US/tickets-packages/offers/ticketoffer",
