@@ -22,5 +22,7 @@ Each answers:
 Scores 1–5: clarity, usefulness, trust, shareability, visual appeal.
 Pass: every persona gives clarity 4 or more and the overall average is 4 or more. Otherwise fix and re-review (at most 3 cycles).
 
+Method: give each persona a realistic planning task (for example "book 4 days in Orlando in March for two kids, 3 and 7, under $3,000 from NYC") and ask whether this page alone gets them to a defensible next decision. This is the task-based walkthrough from the earlier docs/plan/persona-usefulness-review-protocol.md (2026-08), which existed on paper but was never wired into the operator; the "glance" questions above are added on top.
+
 ## Ledger (ops/page-reviews.json)
 One entry per page: URL, date reviewed, scores per persona, top issues, status (pass / fix queued). New and changed pages are reviewed before release; existing pages weekly (changed since last review + top 3 by impressions) and on demand (QUEUE G13).
