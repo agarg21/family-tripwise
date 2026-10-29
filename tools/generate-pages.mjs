@@ -16,6 +16,7 @@ import { washingtonDcItineraryPage, dcItineraryPath } from "./page-generation/wa
 import { bostonItineraryPage, bostonItineraryPath } from "./page-generation/boston-itinerary-page.mjs";
 import { writeSitemap } from "./page-generation/sitemap.mjs";
 import { selfHostSiteImages, selfHostImages } from "./page-generation/self-hosted-images.mjs";
+import { addSiteLinkPreviews } from "./page-generation/link-previews.mjs";
 import { writeThisWeekPage, thisWeekUrl } from "./page-generation/this-week-page.mjs";
 import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
@@ -829,6 +830,8 @@ Sitemap: https://familytripwise.com/sitemap.xml
 
 upgradePriorityPages(outDir);
 selfHostSiteImages(outDir);
+// After upgradePriorityPages: it rewrites some titles and descriptions the tags copy.
+addSiteLinkPreviews(outDir);
 writeSitemap(outDir, sitemapUrls);
 
 console.log("Generated 28 SEO pages plus about, index, redirects, robots, and sitemap.");

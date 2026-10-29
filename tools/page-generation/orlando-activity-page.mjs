@@ -4,6 +4,7 @@ const pricedIds = new Set(admissionTariffs.filter(t=>t.bands.length).map(t=>t.id
 const longDate = iso => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US",{timeZone:"UTC",month:"long",day:"numeric",year:"numeric"});
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 const e = value => String(value).replace(/([a-zA-Z])(\d)/g,"$1 $2").replace(/(\d)([a-zA-Z])/g,"$1 $2").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
 const labels = {oscRates:"Science Center admission rates (official Spanish-language visit page)",osc:"Science Center visit information",kids:"KidsTown age guidance",crayola:"Crayola visit FAQ",crayolaHours:"Crayola hours",sea:"SEA LIFE visit planning",seaFaq:"SEA LIFE FAQ",seaHours:"SEA LIFE dated hours",mennello:"Mennello visitor information",leu:"Leu admission / hours",gator:"Gatorland hours / prices",gatorRules:"Gatorland visit rules",lake:"City park information"};
 const sourceLinks = record => record.sourceIds.map(id=>`<a href="${sources[id]}">${labels[id]}</a>`).join("; ");
@@ -23,7 +24,7 @@ export function orlandoAdmissionSection() {
 export function orlandoActivityPage() {
   const title="Things to Do in Orlando With Kids: Parks, Rest Days & Indoor Choices";
   const schema={"@context":"https://schema.org","@type":"WebPage",name:title,url:`https://familytripwise.com/${activityPath}`,dateModified:"2026-10-27",publisher:{"@type":"Organization",name:"Family Tripwise"}};
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${e(title)}</title><meta name="description" content="Choose an Orlando family outing with dated age-based admission, indoor and outdoor alternatives, short-visit limits and leave-and-return checks.">
 <link rel="canonical" href="https://familytripwise.com/${activityPath}"><link rel="stylesheet" href="../styles.css">
@@ -89,7 +90,7 @@ ${activities.slice(0,3).map(r=>`<tr><th scope="row"><a href="#${r.id}">${e(r.nam
 <section class="container page-section" id="base-check"><h2>Protect the Return-to-Room Plan</h2><p>Choose the outing area first: downtown / Loch Haven, the Florida Mall, International Drive, or your booked park. Then check your hotel pickup, vehicle or transit schedule, parking, waiting time, child-seat needs and arrival buffer. No row here promises a stroller route, a short drive or a nap-friendly journey.</p><p>If returning is essential, confirm both admission re-entry and travel in both directions. Crayola's stamp answers only the admission part. When either is unknown, keep a continuous visit or a different outing as the fallback rather than counting on a split day.</p><p><a href="../where-to-stay/orlando-family-hotels.html">Compare Orlando room space, kitchens, dated hotel prices and water-feature limits</a>. The hotel page's dated observations are not renewed by this activity audit.</p>
 <figure><img src="../images/orlando-lake-eola.webp" width="1440" height="1080" loading="lazy" decoding="async" alt="Lake Eola fountain and downtown Orlando buildings."><figcaption>Lake Eola, David Akers. <a href="https://commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg">Wikimedia Commons, public domain</a>. Capture date not supplied; not evidence of current park conditions.</figcaption></figure></section>
 <section class="container page-section" id="review-signals"><h2>What the Sampled Reviews Can Tell Us</h2><p>These are dated online-review signals, not Family Tripwise reviews, firsthand visits or a representative rating. Retrieved October13; direct review bodies were throttled, so only the search-exposed excerpt sample is retained.</p>${reviewSignals.map(r=>`<p><strong>${e(r.venue)}:</strong> ${e(r.note)} ${e(r.dates)}. ${e(r.basis)}. <a href="${r.url}">Review source</a>.</p>`).join("\n")}<p>No comparable review sample was established for the other choices. Their inclusion is an official-fact / interest screen, not proof of family satisfaction. Ask what your children want to do; age tags alone cannot answer that.</p></section>
-</main>${siteEnd("../", "things-to-do/orlando-with-kids.html")}</body></html>\n`;
+</main>${siteEnd("../", "things-to-do/orlando-with-kids.html")}</body></html>\n`);
 }
 export function writeOrlandoActivityPage(writeSite) {
   writeSite(activityPath,orlandoActivityPage());

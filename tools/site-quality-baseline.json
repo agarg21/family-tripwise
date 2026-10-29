@@ -3,215 +3,149 @@
   "recorded_on": "2026-10-29",
   "pages": {
     "index.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "about.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "contributors/miles-rowan.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "privacy.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "terms.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "this-week/index.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "deals/index.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "deals/royal-caribbean-kids-sail-free.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/great-wolf-lodge-fall-flash-sale.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/beaches-first-passport-credit.html": [],
     "deals/club-med-all-inclusive-kids-under-4.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/seaworld-orlando-2027-fun-card.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/margaritaville-at-sea-black-friday-early-access.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/norwegian-free-2nd-guest-3rd-4th-free.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/msc-cruises-35-off-kids-sail-free.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/legoland-california-hotel-kids-tickets-39.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "deals/atlantis-bahamas-fall-into-paradise.html": [
       "hero",
-      "og",
       "glance",
       "no_placeholders"
     ],
     "where-to-stay/cancun-family-resorts.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/orlando-family-hotels.html": [
       "hero",
-      "og",
       "no_placeholders"
     ],
     "things-to-do/orlando-with-kids.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/washington-dc-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "family-itinerary/washington-dc-with-kids.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/boston-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "family-itinerary/boston-with-kids.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/puerto-vallarta-family-resorts.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/london-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/san-diego-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/las-vegas-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/chicago-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/new-york-city-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "where-to-stay/san-antonio-family-hotels.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "things-to-do/chicago-with-kids.html": [
       "hero",
-      "og",
       "dated_sources"
     ],
-    "where-to-stay/chicago-with-kids.html": [
-      "og"
-    ],
-    "family-itinerary/chicago-with-kids.html": [
-      "og"
-    ],
+    "where-to-stay/chicago-with-kids.html": [],
+    "family-itinerary/chicago-with-kids.html": [],
     "things-to-do/san-antonio-with-kids.html": [
-      "hero",
-      "og"
+      "hero"
     ],
-    "where-to-stay/san-antonio-with-kids.html": [
-      "og"
-    ],
-    "family-itinerary/san-antonio-with-kids.html": [
-      "og"
-    ],
-    "things-to-do/san-diego-with-kids.html": [
-      "og"
-    ],
-    "where-to-stay/san-diego-with-kids.html": [
-      "og"
-    ],
-    "family-itinerary/san-diego-with-kids.html": [
-      "og"
-    ],
-    "things-to-do/las-vegas-with-kids.html": [
-      "og"
-    ],
-    "where-to-stay/las-vegas-with-kids.html": [
-      "og"
-    ],
-    "family-itinerary/las-vegas-with-kids.html": [
-      "og"
-    ],
-    "things-to-do/new-york-city-with-kids.html": [
-      "og"
-    ],
-    "where-to-stay/new-york-city-with-kids.html": [
-      "og"
-    ],
-    "family-itinerary/new-york-city-with-kids.html": [
-      "og"
-    ],
+    "where-to-stay/san-antonio-with-kids.html": [],
+    "family-itinerary/san-antonio-with-kids.html": [],
+    "things-to-do/san-diego-with-kids.html": [],
+    "where-to-stay/san-diego-with-kids.html": [],
+    "family-itinerary/san-diego-with-kids.html": [],
+    "things-to-do/las-vegas-with-kids.html": [],
+    "where-to-stay/las-vegas-with-kids.html": [],
+    "family-itinerary/las-vegas-with-kids.html": [],
+    "things-to-do/new-york-city-with-kids.html": [],
+    "where-to-stay/new-york-city-with-kids.html": [],
+    "family-itinerary/new-york-city-with-kids.html": [],
     "things-to-do/chicago-with-teens.html": [
       "hero",
-      "og",
       "dated_sources"
     ],
     "things-to-do/las-vegas-with-teens.html": [
-      "hero",
-      "og"
+      "hero"
     ],
     "things-to-do/new-york-city-with-teens.html": [
-      "hero",
-      "og"
+      "hero"
     ],
-    "things-to-do/san-diego-with-teens.html": [
-      "og"
-    ],
-    "things-to-do/san-diego-with-toddlers.html": [
-      "og"
-    ],
+    "things-to-do/san-diego-with-teens.html": [],
+    "things-to-do/san-diego-with-toddlers.html": [],
     "things-to-do/san-antonio-with-teens.html": [
-      "hero",
-      "og"
+      "hero"
     ]
   }
 }

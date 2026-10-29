@@ -7,6 +7,7 @@ import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteFooter } from "./site-chrome.mjs";
 import { easternDate } from "./sitemap.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 
 const imageLock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
 // Free licences only: no NonCommercial or NoDerivatives photos (OWNER D17).
@@ -391,7 +392,7 @@ function page({ title, description, canonical, path, body, og }) {
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="${e(og.alt)}">
     <meta name="twitter:card" content="summary_large_image">` : "";
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -407,7 +408,7 @@ ${body}
     ${siteFooter("../", path)}
   </body>
 </html>
-`;
+`);
 }
 
 const trustPanel = `      <section class="container trust-panel" aria-label="How Family Deal Checks work">

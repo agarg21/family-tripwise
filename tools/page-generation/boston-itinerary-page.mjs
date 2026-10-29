@@ -4,6 +4,7 @@
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { ageState } from "../evidence-audit.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 
 export const bostonItineraryPath = "family-itinerary/boston-with-kids.html";
 export const bostonItineraryCheckedOn = "2026-10-27";
@@ -207,7 +208,7 @@ ${bostonVenues.map(bostonVenueCard).join("\n")}
         <p>A midday rest only works if the room is close enough and fits everyone. Compare room setups, kitchens and older dated prices in the <a href="../where-to-stay/boston-family-hotels.html">Boston family hotels guide</a>, and read its <a href="../where-to-stay/boston-family-hotels.html#rest">rest and transit notes</a> before planning a room return.</p>
       </section>
     </main>`;
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -223,7 +224,7 @@ ${body}
     ${siteEnd("../", bostonItineraryPath)}
   </body>
 </html>
-`;
+`);
 }
 
 // Maintenance clock for site-maintenance.mjs: official facts age 14 days; nothing renews automatically.

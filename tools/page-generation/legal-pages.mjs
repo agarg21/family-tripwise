@@ -3,6 +3,7 @@
 // the site sets no cookies or storage, sends no form data, loads no analytics, and that every
 // third-party host the site embeds content from is named in the privacy policy.
 import { siteHeader, siteFooter } from "./site-chrome.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 
 // Each page keeps its own date: privacy changed 2026-10-29 (photos now self-hosted, Q11); terms 2026-10-28.
 export const legalUpdatedDates = {
@@ -24,7 +25,7 @@ const wikimediaPrivacy = "https://foundation.wikimedia.org/wiki/Policy:Privacy_p
 const mail = `<a href="mailto:${contactEmail}">${contactEmail}</a>`;
 
 function shell({ path, title, description, eyebrow, h1, intro, body }) {
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -53,7 +54,7 @@ ${body}
     ${siteFooter("./", path)}
   </body>
 </html>
-`;
+`);
 }
 
 function section(id, heading, paragraphs) {

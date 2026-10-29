@@ -7,6 +7,7 @@ import { dcPlanPremiums } from "../dc-plan-premium.mjs";
 import { assessMuseumRest, restDurationFields } from "../museum-rest-task.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { readableText } from "./readable-text.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 
 export const dcPath = "where-to-stay/washington-dc-family-hotels.html";
 export const dcScreenedOn = "2026-10-09";
@@ -77,7 +78,7 @@ export function dcFamilyHotelPage() {
   const canonical = `https://familytripwise.com/${dcPath}`;
   const title = "Washington DC Family Hotels: Suites, Kitchens & Dated Prices";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: dcScreenedOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title><meta name="description" content="Compare three exact Washington DC suite categories by sleeping setup, kitchen evidence and dated nightly prices. See age, cancellation and fee limits before booking.">
 <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-q09c2">
@@ -124,7 +125,7 @@ ${dcMuseumVisitContext()}
 <details class="dc-rest-example"><summary>Hypothetical time example</summary><p>${restDurationFields.map((key, index) => `${restLabels[index]} ${dcRestExample.durations[key]}`).join(" + ")} = ${dcRestExample.total_required_minutes} planned minutes. A hypothetical ${dcRestExample.published_window_minutes}-minute allowance leaves ${dcRestExample.remaining_window_minutes} minutes. No spare time at ${dcRestExample.published_window_minutes} planned minutes; exceeding it creates a shortfall.</p><p>Original October 3, 2026 task arithmetic, not observed journeys, current opening hours, a November schedule or re-entry permission. Actual hotel-return feasibility remains unknown. Neither this example nor a positive calculation establishes a workable rest return.</p></details></div>
 <figure><img src="../images/washington-dc-national-mall.webp" width="1600" height="1038" loading="lazy" decoding="async" alt="Historic aerial view of the National Mall, with the Lincoln Memorial, Washington Monument and US Capitol."><figcaption>National Mall, 2005. US Navy photo by Chief Photographer's Mate Johnny Bivera; <a href="https://commons.wikimedia.org/wiki/File:WashingtonDCMallAerialNavyPhoto.jpg">source and public-domain record</a>. Uncropped historic orientation image, not a current route or hotel photograph.</figcaption></figure></section>
 <section id="methodology"><h2>How we checked this page</h2><p>Research, not firsthand hotel reviews: we have not stayed in these suites, tested journeys or verified family suitability.</p><details class="how-checked"><summary>Evidence types, sources and download basis</summary><p>Published property facts, dated booking observations, arithmetic estimates and unresolved questions are kept separate. This is a focused three-category comparison, not a representative DC hotel ranking. A published maximum does not confirm inventory, sleeping comfort or provider acceptance.</p><p>The downloadable CSV uses the same maintained room and price records and retains date, party, age, fee, deposit and cancellation context. It includes all three categories and all five observed public plans regardless of the on-page kitchen filter. No inputs are transmitted or saved, and no live inventory is queried.</p><p>${link("../about.html", "How Family Tripwise handles evidence and uncertainty")}</p></details></section>
-</main>${siteEnd("../", "where-to-stay/washington-dc-family-hotels.html")}<script src="../washington-dc-comparison.js?v=ft-imp093" defer></script><script type="module" src="../shared/museum-rest-budget.mjs?v=ft-imp102"></script><script type="module" data-rail-client src="../shared/family-rail-budget.mjs?v=ft-imp118"></script></body></html>\n`;
+</main>${siteEnd("../", "where-to-stay/washington-dc-family-hotels.html")}<script src="../washington-dc-comparison.js?v=ft-imp093" defer></script><script type="module" src="../shared/museum-rest-budget.mjs?v=ft-imp102"></script><script type="module" data-rail-client src="../shared/family-rail-budget.mjs?v=ft-imp118"></script></body></html>\n`);
 }
 
 export function writeWashingtonDcFamilyHotelsPage(writeSite) {

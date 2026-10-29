@@ -5,6 +5,7 @@ import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/da
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
 import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export const cancunChildOffer = JSON.parse(readFileSync(new URL("../../docs/research/cancun-child-offer-eligibility-2026-10-11.json", import.meta.url), "utf8"));
@@ -61,7 +62,7 @@ export function cancunResortPage() {
   const canonical = `https://familytripwise.com/${cancunPath}`;
   const title = "Cancun Family Resorts: Compare Rooms, Club Ages & Transfers";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: cancunEvidence.lastUpdatedOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -160,7 +161,7 @@ ${cancunChildOfferSection()}    <section id="before-booking">
   <script type="module" src="../cancun/client.mjs"></script>
 </body>
 </html>
-`;
+`);
 }
 
 export function writeCancunResortPage(writeSite) {

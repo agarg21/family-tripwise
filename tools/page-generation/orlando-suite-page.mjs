@@ -3,6 +3,7 @@ import { contributorCredit } from "./contributors.mjs";
 import { checkedOn, pageUpdatedOn, sources, suites } from "./orlando-suite-data.mjs";
 import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-model.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 
 export const orlandoPath = "where-to-stay/orlando-family-hotels.html";
 export const orlandoRateCsvPath = "downloads/orlando-ihg-dated-rates.csv";
@@ -138,7 +139,7 @@ export function orlandoSuitePage() {
   const example = compareStay();
   const title = "Orlando Family Hotels: Compare Suites, Park Benefits & Fees";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: pageUpdatedOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -224,7 +225,7 @@ export function orlandoSuitePage() {
   </main>${siteEnd("../", "where-to-stay/orlando-family-hotels.html")}
   <script type="module" src="../orlando/orlando-suite-client.mjs"></script>
 </body></html>
-`;
+`);
 }
 
 export function writeOrlandoSuitePage(writeSite) {

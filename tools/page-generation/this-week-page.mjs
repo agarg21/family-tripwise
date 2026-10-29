@@ -6,6 +6,7 @@ import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { destinations, siteHeader, siteFooter } from "./site-chrome.mjs";
 import { easternDate } from "./sitemap.mjs";
+import { withLinkPreview } from "./link-previews.mjs";
 
 export const thisWeekPath = "this-week/index.html";
 export const thisWeekUrl = "https://familytripwise.com/this-week/";
@@ -141,7 +142,7 @@ export function thisWeekPage(items, today = easternDate()) {
       </section>
 ${destinations.map((d) => citySection(d, byCity(d.name))).join("\n")}
     </main>`;
-  return `<!doctype html>
+  return withLinkPreview(`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -157,7 +158,7 @@ ${body}
     ${siteFooter("../", thisWeekPath)}
   </body>
 </html>
-`;
+`);
 }
 
 export function writeThisWeekPage(writeSite, today = easternDate()) {
