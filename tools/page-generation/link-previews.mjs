@@ -15,7 +15,7 @@ const unescape = (v) => String(v ?? "").replaceAll("&quot;", '"').replaceAll("&#
 // Typographic cards for pages without a photo (no photos, no AI images; text in tools/page-og-images.mjs).
 export const CARDS = {
   site: { path: "images/og/site.png", alt: "Family Tripwise: family trip planning by city, checked against official sources" },
-  deals: { path: "images/og/deals.png", alt: "Family Deal Checks from Family Tripwise: what a travel deal is worth to a family of four" },
+  deals: { path: "images/og/deals.png", alt: "Family Deal Checks from Family Tripwise: family travel deals, checked for what you get and the catch" },
   "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, checked on official pages" }
 };
 
@@ -74,7 +74,9 @@ export function previewImage(html, pagePath) {
   }
   const dealId = pagePath.match(/^deals\/([a-z0-9-]+)\.html$/)?.[1];
   if (dealId && dealId !== "index" && existsSync(new URL(`../../site/${dealCardPath(dealId)}`, import.meta.url))) {
-    return { path: dealCardPath(dealId), alt: "Family Deal Check from Family Tripwise: the offer, the catch and the dates, checked on the official page", width: 1200, height: 630, type: "image/png" };
+    const text = JSON.parse(readFileSync(new URL("../images/og-deal-cards.json", import.meta.url), "utf8"))[dealId];
+    if (!text) throw new Error(`link preview: ${dealCardPath(dealId)} has no entry in tools/images/og-deal-cards.json (re-render it)`);
+    return { path: dealCardPath(dealId), alt: `Family Deal Check: ${text.title}. ${text.line}`, width: 1200, height: 630, type: "image/png" };
   }
   const card = cardFor(pagePath);
   return { path: card.path, alt: card.alt, width: 1200, height: 630, type: "image/png" };

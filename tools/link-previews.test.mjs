@@ -87,3 +87,15 @@ test("destination pages without their own photo use that destination's photo; de
     assert.match(img(page), /images\/og\/photos\//, `${page}: a destination page fell back to a generic card`);
   }
 });
+
+test("each per-deal card's recorded text still matches its deal record and quotes the page", async () => {
+  const { dealCardText } = await import("./page-og-images.mjs");
+  const { readDealChecks } = await import("./page-generation/deals-pages.mjs");
+  const cards = JSON.parse(readFileSync(new URL("./images/og-deal-cards.json", import.meta.url), "utf8"));
+  for (const check of readDealChecks().filter((c) => !c.v2)) {
+    if (!existsSync(join(site, `images/og/deals/v1/${check.id}.png`))) continue;
+    assert.deepEqual(cards[check.id], dealCardText(check), `${check.id}: card text is stale; re-render with node tools/page-og-images.mjs --force`);
+    const quote = cards[check.id].line.replace(/^The catch: /, "");
+    if (quote !== cards[check.id].line) assert.ok(check.headline.toLowerCase().includes(quote.toLowerCase().replace(/\$(\d)/g, "USD $1")) || check.headline.toLowerCase().includes(quote.toLowerCase()), `${check.id}: catch is not quoted from the page`);
+  }
+});

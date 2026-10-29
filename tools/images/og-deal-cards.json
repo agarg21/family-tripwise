@@ -1,0 +1,56 @@
+{
+  "atlantis-bahamas-fall-into-paradise": {
+    "kicker": "Family Deal Check · Resort stay offer",
+    "title": "Atlantis Bahamas Fall Into Paradise: up to 35% off 4+ nights, $250 resort credit",
+    "line": "The catch: Thanksgiving week and mid-December to January 1 are blacked out",
+    "deal": true
+  },
+  "club-med-all-inclusive-kids-under-4": {
+    "kicker": "Family Deal Check · All-inclusive",
+    "title": "Club Med all-inclusive offer: kids under 4 stay free, up to 40% off",
+    "line": "The catch: only children under 4 are shown as free",
+    "deal": true
+  },
+  "great-wolf-lodge-fall-flash-sale": {
+    "kicker": "Family Deal Check · Water park resort",
+    "title": "Great Wolf Lodge Fall Flash Sale: up to 40% off suites",
+    "line": "The catch: a family of 4 adds an extra-person fee for each extra guest",
+    "deal": true
+  },
+  "legoland-california-hotel-kids-tickets-39": {
+    "kicker": "Family Deal Check · Hotel + ticket package",
+    "title": "LEGOLAND California hotel package: kids' tickets from $39 a day",
+    "line": "The catch: reservations are non-refundable and parking is extra",
+    "deal": true
+  },
+  "margaritaville-at-sea-black-friday-early-access": {
+    "kicker": "Family Deal Check · Cruise",
+    "title": "Margaritaville at Sea Black Friday Early Access: 3rd and 4th guests sail free",
+    "line": "The catch: taxes, fees and port expenses still apply to every guest",
+    "deal": true
+  },
+  "msc-cruises-35-off-kids-sail-free": {
+    "kicker": "Family Deal Check · Cruise",
+    "title": "MSC Cruises up to 35% off with kids 17 and under sailing free as 3rd and 4th guests",
+    "line": "The catch: the kids still pay government fees and taxes",
+    "deal": true
+  },
+  "norwegian-free-2nd-guest-3rd-4th-free": {
+    "kicker": "Family Deal Check · Cruise",
+    "title": "Norwegian Cruise Line Free 2nd Guest sale and free 3rd and 4th guests on select sailings",
+    "line": "The catch: the terms say the free 3rd and 4th guests need guests 1 and 2 paying full fare",
+    "deal": true
+  },
+  "royal-caribbean-kids-sail-free": {
+    "kicker": "Family Deal Check · Cruise",
+    "title": "Royal Caribbean Kids Sail Free and free 3rd and 4th guests",
+    "line": "The catch: every guest still pays taxes, fees and port expenses",
+    "deal": true
+  },
+  "seaworld-orlando-2027-fun-card": {
+    "kicker": "Family Deal Check · Theme park pass",
+    "title": "SeaWorld Orlando 2027 Fun Card: rest of 2026 included",
+    "line": "The catch: the offer page shows no child price",
+    "deal": true
+  }
+}

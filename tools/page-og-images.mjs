@@ -8,7 +8,7 @@
 // Text that does not fit is refused, not cropped. Existing files are kept unless --force.
 // Usage: node tools/page-og-images.mjs [--force]
 import { createRequire } from "node:module";
-import { existsSync, mkdirSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CARDS, DESTINATIONS, dealCardPath, destinationOf, photoCardPath } from "./page-generation/link-previews.mjs";
@@ -47,14 +47,28 @@ export function photoCardHtml(slug) {
 
 const TEXT = {
   site: { kicker: "Family trip planning by city", title: "Where to stay, what to do and what it costs with kids", line: "Checked against official sources, with dates" },
-  deals: { kicker: "Family Deal Checks", title: "Family travel deals, checked: what you get and the catch", line: "Terms and book-by dates read on each company's own offer page" },
+  deals: { kicker: "Family Deal Checks", title: "Family travel deals, checked: what you get and the catch", line: "Book-by dates and fine print, checked on each company's own offer page" },
   "this-week": { kicker: "This week for families", title: "Family events and deals worth knowing about this week", line: "Each item checked on its official page, with an end date" }
 };
 
-// Per-deal card for deal checks without a v2 card: operator, category and the page's own <h1> title
-// (amounts as "$"). No dates or verdicts, so the card cannot go stale when the offer ends.
+// Per-deal card for deal checks without a v2 card: category, operator, the page's own <h1> title
+// (amounts as "$") and its catch, quoted from the page's "In short" line (check.headline). No dates of
+// its own or verdicts. A catch that cannot be cut cleanly to one short clause falls back to a neutral line.
+export function dealCatch(headline) {
+  const m = headline.match(/,? but (.+)$/) || headline.match(/; (.+)$/);
+  if (!m) return null;
+  const clause = m[1].split(/, and |; | and the |, (?:state|do|the|sailings) /)[0].replace(/\.$/, "");
+  return clause.length > 100 ? null : clause;
+}
+
 export function dealCardText(check) {
-  return { kicker: `Family Deal Check · ${check.category}`, title: check.title.replace(/USD\s?(\d)/g, "$$$1"), line: "The offer, the catch and the dates, checked on the official page" };
+  const c = dealCatch(check.headline);
+  return {
+    kicker: `Family Deal Check · ${check.category}`,
+    title: check.title.replace(/USD\s?(\d)/g, "$$$1"),
+    line: c ? `The catch: ${c.replace(/USD\s?(\d)/g, "$$$1")}` : "The offer, the catch and the dates, checked on the official page",
+    deal: true
+  };
 }
 
 export function textCardHtml(id, text = TEXT[id]) {
@@ -67,10 +81,14 @@ export function textCardHtml(id, text = TEXT[id]) {
   .kicker { font-size: 28px; color: #126c67; font-weight: 800; }
   h1 { font-size: 54px; line-height: 1.15; margin-top: 22px; }
   .line { font-size: 26px; line-height: 1.35; margin-top: 26px; color: #0b4946; font-weight: 700; }
+  body.deal { grid-template-columns: 220px 1fr; }
+  body.deal h1 { font-size: 54px; }
+  body.deal .line { font-size: 34px; color: #142029; background: #f0bd56; border-radius: 12px; padding: 12px 18px; }
+  body.deal .main { padding: 44px 52px 38px; }
   .brand { margin-top: auto; font-size: 30px; font-weight: 800; border-top: 3px solid #142029; padding-top: 16px; }
   .brand b { color: #126c67; }
-  </style></head><body>
-  <div class="mark">${logo}</div>
+  </style></head><body class="${t.deal ? "deal" : ""}">
+  <div class="mark">${t.deal ? logo.replace('width="190" height="190"', 'width="150" height="150"') : logo}</div>
   <div class="main" data-fit><p class="kicker">${e(t.kicker)}</p><h1>${e(t.title)}</h1><p class="line">${e(t.line)}</p><p class="brand">family<b>tripwise</b>.com</p></div>
   ${FIT}</body></html>`;
 }
@@ -82,8 +100,11 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const jobs = [
     ...Object.keys(lock).filter((slug) => destinationOf(slug)).map((slug) => ({ out: photoCardPath(slug), html: () => photoCardHtml(slug), type: "jpeg" })),
     ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" })),
-    ...readDealChecks().filter((check) => !check.v2).map((check) => ({ out: dealCardPath(check.id), html: () => textCardHtml(null, dealCardText(check)), type: "png" }))
+    ...readDealChecks().filter((check) => !check.v2).map((check) => ({ out: dealCardPath(check.id), html: () => textCardHtml(null, dealCardText(check)), type: "png", deal: check }))
   ];
+  // Text of each per-deal card, so tests can tell when a card no longer matches its deal record.
+  const manifestPath = join(root, "tools/images/og-deal-cards.json");
+  const manifest = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "utf8")) : {};
   let failed = 0;
   for (const job of jobs) {
     const out = join(root, "site", job.out);
@@ -94,8 +115,10 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     mkdirSync(dirname(out), { recursive: true });
     await page.screenshot({ path: out, type: job.type, ...(job.type === "jpeg" ? { quality: 82 } : {}), clip: { x: 0, y: 0, width: 1200, height: 630 } });
     await page.close();
+    if (job.deal) manifest[job.deal.id] = dealCardText(job.deal);
     console.log(`rendered ${job.out}`);
   }
   await browser.close();
+  writeFileSync(manifestPath, `${JSON.stringify(Object.fromEntries(Object.entries(manifest).sort()), null, 2)}\n`);
   if (failed) process.exit(1);
 }
