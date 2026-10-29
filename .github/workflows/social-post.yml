@@ -5,6 +5,8 @@ name: Social posting
 # latest main before every post, claims a receipt on main (fast-forward only) before posting so
 # nothing posts twice, never posts an expired entry, and keeps per-platform daily caps.
 # Manual runs default to a dry run against simulated platforms (no secrets, no commits).
+# With the ZERNIO_API_KEY secret, all platforms post through Zernio (QUEUE G08, OWNER D14) to the
+# accounts connected there; without it, the direct Meta/Pinterest secrets are used.
 
 on:
   schedule:
@@ -51,6 +53,7 @@ jobs:
       - name: Post due entries
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run)
         env:
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
           META_SYSTEM_USER_TOKEN: ${{ secrets.META_SYSTEM_USER_TOKEN }}
           META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}

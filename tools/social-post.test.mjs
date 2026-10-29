@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import {
   run, GitStore, DirStore, simulatedFetch, SIMULATED_ENV, killSwitchOpen, enabledPlatforms, planPosts, sanitize, receiptKey, checkVariant,
-  POSTING_PLATFORMS, linkTarget,
+  POSTING_PLATFORMS, linkTarget, SIMULATED_ZERNIO_ENV, idempotencyKey, zernioBody, ZERNIO_API,
 } from "./social-post.mjs";
 import { DAILY_CAPS, LIMITS } from "./social-queue.mjs";
 
@@ -227,7 +227,116 @@ test("workflow posts only from main with secrets, one run at a time, and default
   assert.match(wf, /concurrency:\s*\n\s*group: social-post\s*\n\s*cancel-in-progress: false/);
   assert.match(wf, /ref: main/);
   assert.match(wf, /default: true/);
-  for (const s of ["META_SYSTEM_USER_TOKEN", "META_PAGE_ID", "IG_USER_ID", "THREADS_USER_ID", "THREADS_TOKEN", "PINTEREST_TOKEN", "PINTEREST_BOARD_ID"]) assert.match(wf, new RegExp(`secrets\\.${s}\\b`));
+  for (const s of ["ZERNIO_API_KEY", "META_SYSTEM_USER_TOKEN", "META_PAGE_ID", "IG_USER_ID", "THREADS_USER_ID", "THREADS_TOKEN", "PINTEREST_TOKEN", "PINTEREST_BOARD_ID"]) assert.match(wf, new RegExp(`secrets\\.${s}\\b`));
   assert.doesNotMatch(wf, /BLUESKY/);
   assert.doesNotMatch(wf, /echo[^\n]*secrets\./);
+});
+
+// ---------- Zernio route (QUEUE G08) ----------
+
+const zgo = (store, now, over = {}) => go(store, now, { env: SIMULATED_ZERNIO_ENV, ...over });
+const zreply = (status, body) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json" } });
+
+test("Zernio: with ZERNIO_API_KEY every platform posts through Zernio once, with the right body, never twice", async () => {
+  const { store, receipts } = remoteRepo();
+  const calls = [];
+  const first = await zgo(store, at("08:00"), { calls });
+  assert.deepEqual(first.posted.map((p) => p.key.split("--")[1]).sort(), ["facebook.json", "instagram.json", "pinterest.json", "threads.json"]);
+  assert.ok(!calls.some((c) => /graph\.|pinterest\.com/.test(c.host)), "no direct platform API is called on the Zernio route");
+  const posts = calls.filter((c) => c.host === "zernio.com" && c.path === "/api/v1/posts");
+  assert.equal(posts.length, 4);
+  for (const c of posts) {
+    assert.equal(c.headers.authorization, `Bearer ${SIMULATED_ZERNIO_ENV.ZERNIO_API_KEY}`);
+    assert.ok(!c.search.includes(SIMULATED_ZERNIO_ENV.ZERNIO_API_KEY), "the key never travels in a URL");
+    const platform = c.body.platforms[0].platform;
+    assert.equal(c.headers["idempotency-key"], idempotencyKey(receiptKey("2026-11-05", "2026-11-05-morning", platform)));
+  }
+  const e = queue.entries[0];
+  const byP = Object.fromEntries(posts.map((c) => [c.body.platforms[0].platform, c.body]));
+  assert.equal(byP.threads.content, e.platforms.threads.text);
+  assert.equal(byP.threads.platforms[0].platformSpecificData.firstComment, `Details and the official source: ${e.platforms.threads.link}`);
+  assert.equal(byP.facebook.content, `${e.platforms.facebook.text}\n\n${e.platforms.facebook.link}`);
+  assert.deepEqual(byP.instagram.mediaItems, [{ type: "image", url: e.image.url }]);
+  assert.deepEqual(byP.pinterest.platforms[0].platformSpecificData, { boardId: "simboard1", title: e.platforms.pinterest.title, link: e.platforms.pinterest.link });
+  const recs = receipts();
+  assert.ok(recs.every((r) => r.status === "posted" && r.via === "zernio" && /^[0-9a-f]{24}$/.test(r.remote_id) && r.url));
+  const again = await zgo(store, at("08:05"));
+  assert.equal(again.posted.length, 0, "a receipt on main blocks any repeat");
+});
+
+test("Zernio: idempotency keys are stable UUIDs per entry and platform", () => {
+  const k = idempotencyKey("ops/social-receipts/2026-11-05/a--threads.json");
+  assert.match(k, /^[0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+  assert.equal(k, idempotencyKey("ops/social-receipts/2026-11-05/a--threads.json"));
+  assert.notEqual(k, idempotencyKey("ops/social-receipts/2026-11-05/a--facebook.json"));
+});
+
+test("Zernio: a platform with no connected account, or two, is not posted and nothing is claimed for it", async () => {
+  const { store, receipts } = remoteRepo();
+  const accounts = async (url, init) => (String(url).startsWith(`${ZERNIO_API}/accounts?`)
+    ? zreply(200, { accounts: [
+      { _id: "simaccthreads", platform: "threads", isActive: true },
+      { _id: "simaccfacebook", platform: "facebook", isActive: true }, { _id: "other", platform: "facebook", isActive: true },
+      { _id: "simaccinstagram", platform: "instagram", isActive: false },
+      { _id: "x", platform: "twitter", isActive: true },
+    ] })
+    : simulatedFetch()(url, init));
+  const r = await zgo(store, at("08:00"), { fetch: accounts });
+  assert.deepEqual(r.posted.map((p) => p.key.split("--")[1]), ["threads.json"]);
+  assert.ok(r.skipped.some((s) => /facebook: 2 connected Zernio accounts/.test(s.reason)));
+  assert.deepEqual(receipts().map((x) => x.platform), ["threads"]);
+});
+
+test("Zernio: a failed account lookup posts nothing, claims nothing, redacts the key and fails the run", async () => {
+  const { store, receipts } = remoteRepo();
+  const env = { ZERNIO_API_KEY: "sk_live_secret_zernio_key" };
+  const down = async (url) => zreply(401, { error: "Invalid key sk_live_secret_zernio_key", code: "unauthorized" });
+  const r = await zgo(store, at("08:00"), { env, fetch: down });
+  assert.equal(r.posted.length, 0);
+  assert.equal(r.failed.length, 1);
+  assert.ok(!r.failed[0].error.includes("sk_live_secret_zernio_key"), r.failed[0].error);
+  assert.equal(receipts().length, 0);
+});
+
+test("Zernio: Pinterest board must be unambiguous (secret or the only public board); otherwise skipped unclaimed", async () => {
+  const twoBoards = async (url, init) => (String(url).endsWith("/pinterest-boards")
+    ? zreply(200, { boards: [{ id: "b1", name: "A", privacy: "PUBLIC" }, { id: "b2", name: "B", privacy: "PUBLIC" }, { id: "b3", name: "C", privacy: "SECRET" }] })
+    : simulatedFetch()(url, init));
+  const a = remoteRepo();
+  const r = await zgo(a.store, at("08:00"), { fetch: twoBoards });
+  assert.ok(!r.posted.some((p) => p.key.endsWith("--pinterest.json")));
+  assert.match(r.skipped.find((s) => s.key?.endsWith("--pinterest.json")).reason, /2 public boards; set the PINTEREST_BOARD_ID secret/);
+  assert.ok(!a.receipts().some((x) => x.platform === "pinterest"));
+  const b = remoteRepo();
+  const calls = [];
+  const wrong = await zgo(b.store, at("08:00"), { env: { ...SIMULATED_ZERNIO_ENV, PINTEREST_BOARD_ID: "nope" }, calls });
+  assert.match(wrong.skipped.find((s) => s.key?.endsWith("--pinterest.json")).reason, /not one of the connected Pinterest account's boards/);
+  const right = await zgo(b.store, at("08:30"), { env: { ...SIMULATED_ZERNIO_ENV, PINTEREST_BOARD_ID: "simboard1" } });
+  assert.deepEqual(right.posted.map((p) => p.key.split("--")[1]), ["pinterest.json"]);
+});
+
+test("Zernio: a partial (207) or non-published result is recorded failed with the post id and never retried", async () => {
+  const { store, receipts } = remoteRepo();
+  const partial = async (url, init) => {
+    if (String(url) === `${ZERNIO_API}/posts` && JSON.parse(init.body).platforms[0].platform === "instagram") {
+      return zreply(207, { post: { _id: "65f1c0a9e2b5af0012abcdef", status: "failed", platforms: [{ platform: "instagram", status: "failed", errorMessage: "Media aspect ratio not supported" }] } });
+    }
+    return simulatedFetch()(url, init);
+  };
+  const r = await zgo(store, at("08:00"), { fetch: partial });
+  assert.equal(r.failed.length, 1);
+  const rec = receipts().find((x) => x.platform === "instagram");
+  assert.equal(rec.status, "failed");
+  assert.equal(rec.via, "zernio");
+  assert.match(rec.error, /65f1c0a9e2b5af0012abcdef.*failed\/failed Media aspect ratio/);
+  const again = await zgo(store, at("12:31"));
+  assert.ok(!again.posted.some((p) => p.key.includes("morning--instagram")));
+});
+
+test("Zernio body: Threads link rides in the first comment, never in the post text", () => {
+  const e = entry("b", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00");
+  const body = zernioBody({ platform: "threads", entry: e, variant: e.platforms.threads, accountId: "a" });
+  assert.ok(!/https?:\/\//.test(body.content));
+  assert.equal(body.publishNow, true);
+  assert.equal(body.mediaItems, undefined);
 });

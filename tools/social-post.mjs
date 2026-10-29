@@ -4,9 +4,16 @@
 //
 // Usage:
 //   node tools/social-post.mjs              live: post due entries, receipts committed to main
-//   node tools/social-post.mjs --dry-run    simulated platforms, fake credentials, no commits;
+//   node tools/social-post.mjs --dry-run    simulated Zernio, fake credentials, no commits;
 //                                           receipts go to --receipts-out (default: a temp dir)
-//   options: --now <ISO time>  --receipts-out <dir>
+//   options: --now <ISO time>  --receipts-out <dir>  --direct (dry run the direct Meta/Pinterest
+//            paths instead of Zernio)
+//
+// Routes (QUEUE G08, OWNER D14): when ZERNIO_API_KEY exists, every platform posts through Zernio's
+// API (one request per entry and platform, publishNow, Idempotency-Key derived from the receipt key),
+// to the account connected in Zernio for that platform, looked up at run time (no ids in the repo).
+// Without it, the direct Meta/Pinterest adapters below are used for platforms whose secrets exist.
+// Zernio API facts used here: docs/research/zernio-api-2026-10-29.md.
 //
 // Safety rules (each is tested in tools/social-post.test.mjs):
 // - Kill switch: the OWNER.md D12 row must read "— Approved" (re-read from the latest main before
@@ -25,6 +32,7 @@
 //   Credentials are sent in headers or POST bodies, never in URLs, and are redacted from any
 //   recorded error.
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -46,6 +54,10 @@ export const CREDENTIALS = {
   pinterest: ["PINTEREST_TOKEN", "PINTEREST_BOARD_ID"],
 };
 export const POSTING_PLATFORMS = Object.keys(CREDENTIALS);
+export const ZERNIO_API = "https://zernio.com/api/v1"; // Zernio API v1 (docs read 2026-10-29)
+export const ZERNIO_KEY = "ZERNIO_API_KEY";
+const SECRET_NAMES = [...new Set([...Object.values(CREDENTIALS).flat(), ZERNIO_KEY])];
+export const usesZernio = (env) => (env[ZERNIO_KEY] ?? "").trim() !== "";
 
 export function killSwitchOpen(ownerText) {
   const row = (ownerText ?? "").split("\n").find((l) => /^- D12\b/.test(l));
@@ -54,6 +66,7 @@ export function killSwitchOpen(ownerText) {
 }
 
 export function enabledPlatforms(env) {
+  if (usesZernio(env)) return [...POSTING_PLATFORMS]; // narrowed to connected accounts in run()
   return POSTING_PLATFORMS.filter((p) => CREDENTIALS[p].every((k) => (env[k] ?? "").trim() !== ""));
 }
 
@@ -79,7 +92,7 @@ const runtimeSecrets = new Set(); // derived tokens (e.g. the Page token), redac
 export function sanitize(message, env) {
   let m = String(message ?? "");
   for (const v of runtimeSecrets) m = m.split(v).join("[redacted]");
-  for (const k of new Set(Object.values(CREDENTIALS).flat())) if (env[k] && env[k].length >= 4) m = m.split(env[k]).join("[redacted]");
+  for (const k of SECRET_NAMES) if (env[k] && env[k].length >= 4) m = m.split(env[k]).join("[redacted]");
   return m.replace(/(access_token|password|accessJwt|refresh_token)=?["':\s]*[^\s"'&,}]+/gi, "$1=[redacted]").slice(0, 300);
 }
 
@@ -142,6 +155,84 @@ export const adapters = {
     return { remote_id: out.id, url: `https://www.pinterest.com/pin/${encodeURIComponent(out.id)}/` };
   },
 };
+
+// ---------- Zernio (one API for all four platforms; QUEUE G08) ----------
+
+// Deterministic UUID from the receipt key: a repeated request for the same entry and platform within
+// Zernio's 24-hour idempotency window returns the original post instead of posting again.
+export function idempotencyKey(key) {
+  const h = createHash("sha256").update(`familytripwise:${key}`).digest("hex");
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-5${h.slice(13, 16)}-${((parseInt(h[16], 16) & 3) | 8).toString(16)}${h.slice(17, 20)}-${h.slice(20, 32)}`;
+}
+
+const zHeaders = (env, extra = {}) => ({ authorization: `Bearer ${env[ZERNIO_KEY]}`, ...extra });
+
+// Connected, active accounts by platform. More than one account for a platform is ambiguous and that
+// platform is left out (reported), never guessed.
+export async function zernioAccounts({ env, fetch }) {
+  const data = await json(await fetch(`${ZERNIO_API}/accounts?status=connected`, { headers: zHeaders(env) }), "zernio accounts");
+  const byPlatform = {};
+  const problems = [];
+  for (const a of data.accounts ?? []) {
+    if (!POSTING_PLATFORMS.includes(a.platform) || a.isActive === false || !a._id) continue;
+    (byPlatform[a.platform] ??= []).push(a);
+  }
+  const accounts = {};
+  for (const [platform, list] of Object.entries(byPlatform)) {
+    if (list.length === 1) accounts[platform] = list[0]._id;
+    else problems.push(`${platform}: ${list.length} connected Zernio accounts; disconnect the extras so posts cannot go to the wrong one`);
+  }
+  return { accounts, problems };
+}
+
+// The board for pins: the PINTEREST_BOARD_ID secret if set (it must be one of the account's boards),
+// otherwise the account's only public board. Anything else is a preflight failure (nothing claimed).
+async function zernioBoard({ env, fetch, accountId }) {
+  const data = await json(await fetch(`${ZERNIO_API}/accounts/${encodeURIComponent(accountId)}/pinterest-boards`, { headers: zHeaders(env) }), "zernio pinterest boards");
+  const boards = (data.boards ?? []).filter((b) => b?.id);
+  const wanted = (env.PINTEREST_BOARD_ID ?? "").trim();
+  if (wanted) {
+    if (boards.some((b) => String(b.id) === wanted)) return { boardId: wanted };
+    return { problem: "PINTEREST_BOARD_ID is not one of the connected Pinterest account's boards" };
+  }
+  const open = boards.filter((b) => (b.privacy ?? "PUBLIC") === "PUBLIC");
+  if (open.length === 1) return { boardId: String(open[0].id) };
+  return { problem: `the Pinterest account has ${open.length} public boards; set the PINTEREST_BOARD_ID secret to pick one` };
+}
+
+// The request body for one platform. Facts behind each choice (docs read 2026-10-29):
+// - Threads has no link-attachment field in Zernio, and our Threads text never holds a URL, so the
+//   link goes in Zernio's firstComment (a reply posted right after; counts toward Threads' 250/day).
+// - Facebook has no link field for feed posts; the link travels at the end of the text (preview is
+//   Facebook's own; checked on the first live post).
+// - Instagram: the card image and caption; Zernio documents no alt-text field, so none is sent.
+// - Pinterest: the card image, description, and title/link/boardId in platformSpecificData.
+export function zernioBody({ platform, entry, variant, accountId, boardId }) {
+  const target = { platform, accountId };
+  const body = { content: variant.text, platforms: [target], publishNow: true };
+  if (platform === "threads") target.platformSpecificData = { firstComment: `Details and the official source: ${variant.link}` };
+  if (platform === "facebook") body.content = `${variant.text}\n\n${variant.link}`;
+  if (platform === "instagram" || platform === "pinterest") body.mediaItems = [{ type: "image", url: entry.image.url }];
+  if (platform === "pinterest") target.platformSpecificData = { boardId, title: variant.title, link: variant.link };
+  return body;
+}
+
+export async function zernioPost({ platform, entry, variant, env, fetch, key, accountId, boardId }) {
+  const res = await fetch(`${ZERNIO_API}/posts`, {
+    method: "POST",
+    headers: zHeaders(env, { "content-type": "application/json", "idempotency-key": idempotencyKey(key) }),
+    body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId })),
+  });
+  const data = await json(res, `zernio ${platform} post`);
+  const post = data.post ?? {};
+  const result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
+  // A single-platform publishNow request is final: anything but "published" is a failure (HTTP 207
+  // means a platform failed). The post id is kept so the owner can look it up in Zernio.
+  if (res.status === 207 || post.status !== "published" || (result.status && result.status !== "published")) {
+    throw new Error(`zernio ${platform} post ${post._id ?? "(no id)"}: status ${post.status ?? "?"}/${result.status ?? "?"} ${String(result.errorMessage ?? result.error ?? data.error ?? "").slice(0, 160)}`.trim());
+  }
+  return { remote_id: post._id ?? null, url: result.platformPostUrl ?? null, via: "zernio" };
+}
 
 // Read-only checks run before a receipt is claimed. A failure skips the entry (nothing claimed), so
 // it can post on a later run once the owner fixes the token or board.
@@ -262,10 +353,27 @@ export function simulatedFetch(log = []) {
         return ok ? reply(201, { id: `simpin${n}`, board_id: body.board_id }) : reply(400, { code: 1, message: "bad pin" });
       }
     }
+    if (u.host === "zernio.com") {
+      if (init.headers?.authorization !== `Bearer ${SIMULATED_ZERNIO_ENV[ZERNIO_KEY]}`) return reply(401, { error: "Unauthorized", code: "unauthorized" });
+      if (method === "GET" && u.pathname === "/api/v1/accounts") return reply(200, { accounts: POSTING_PLATFORMS.map((p) => ({ _id: `simacc${p}`, platform: p, username: "familytripwise", isActive: true })), hasAnalyticsAccess: false });
+      if (method === "GET" && u.pathname === "/api/v1/accounts/simaccpinterest/pinterest-boards") return reply(200, { boards: [{ id: "simboard1", name: "Family travel deals", privacy: "PUBLIC" }] });
+      if (method === "POST" && u.pathname === "/api/v1/posts") {
+        const t = body?.platforms?.[0];
+        const media = body?.mediaItems?.[0];
+        const ok = body?.publishNow === true && body.platforms.length === 1 && t?.accountId === `simacc${t?.platform}` && /^[0-9a-f-]{36}$/.test(init.headers?.["idempotency-key"] ?? "") && typeof body.content === "string" && body.content.length > 0 &&
+          ({ threads: () => body.content.length <= 500 && !media && /^Details and the official source: https:\/\/familytripwise\.com\//.test(t.platformSpecificData?.firstComment ?? ""),
+            facebook: () => !media && /\nhttps:\/\/familytripwise\.com\/\S+$/.test(body.content),
+            instagram: () => body.content.length <= 2200 && media?.type === "image" && /^https:\/\/.+\.jpg$/.test(media.url),
+            pinterest: () => body.content.length <= 800 && media?.type === "image" && t.platformSpecificData?.boardId === "simboard1" && t.platformSpecificData.title?.length <= 100 && /^https:\/\//.test(t.platformSpecificData.link ?? "") }[t?.platform] ?? (() => false))();
+        if (!ok) return reply(400, { error: "bad simulated Zernio post", code: "validation_error" });
+        return reply(201, { post: { _id: `65f1c0a9e2b5af0012ab${String(n).padStart(4, "0")}`, status: "published", platforms: [{ platform: t.platform, status: "published", platformPostUrl: `https://simulated.example/${t.platform}/${n}` }] } });
+      }
+    }
     return reply(404, { error: { message: `simulated platform has no ${method} ${u.host}${u.pathname}` } });
   };
 }
 export const SIMULATED_ENV = Object.fromEntries([...new Set(Object.values(CREDENTIALS).flat())].map((k) => [k, `dry-run-${k.toLowerCase()}`]));
+export const SIMULATED_ZERNIO_ENV = { [ZERNIO_KEY]: "dry-run-zernio_api_key" };
 
 // ---------- run ----------
 
@@ -273,8 +381,21 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
   const date = easternDate(now);
   const report = { date, posted: [], failed: [], skipped: [] };
   if (!killSwitchOpen(store.ownerText())) { log("OWNER.md D12 is not Approved (kill switch); nothing posted."); return report; }
-  const platforms = enabledPlatforms(env);
+  let platforms = enabledPlatforms(env);
   if (!platforms.length) { log("No platform credentials configured; nothing posted."); return report; }
+  const zernio = usesZernio(env);
+  let accounts = {};
+  if (zernio) {
+    let found;
+    try { found = await zernioAccounts({ env, fetch }); } catch (err) {
+      const error = sanitize(err.message, env);
+      report.failed.push({ reason: "zernio accounts", error }); log(`Zernio account lookup failed; nothing posted: ${error}`); return report;
+    }
+    accounts = found.accounts;
+    for (const p of found.problems) { report.skipped.push({ key: null, reason: p }); log(`Zernio: ${p}`); }
+    platforms = platforms.filter((p) => accounts[p]);
+    if (!platforms.length) { log("No platform connected in Zernio; nothing posted."); return report; }
+  }
   const queue = loadQueue(date);
   if (!queue) { log(`No queue for ${date}; nothing posted.`); return report; }
   const problems = validate(queue, date);
@@ -290,21 +411,29 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
     if (clock() >= Date.parse(entry.expires_at)) { report.skipped.push({ key, reason: "expired" }); continue; }
     const notReady = await siteReady(entry, entry.platforms[platform], fetch);
     if (notReady) { report.skipped.push({ key, reason: notReady }); log(`Skip ${key}: ${notReady}`); continue; }
-    const pre = preflights[platform] ? await preflights[platform]({ env, fetch }).catch((err) => `preflight error: ${err.message}`) : null;
+    let boardId;
+    let pre = null;
+    if (zernio && platform === "pinterest") {
+      const b = await zernioBoard({ env, fetch, accountId: accounts.pinterest }).catch((err) => ({ problem: `preflight error: ${err.message}` }));
+      pre = b.problem ?? null;
+      boardId = b.boardId;
+    } else if (!zernio && preflights[platform]) pre = await preflights[platform]({ env, fetch }).catch((err) => `preflight error: ${err.message}`);
     if (pre) { const reason = sanitize(pre, env); report.skipped.push({ key, reason }); log(`Skip ${key}: ${reason}`); continue; }
     if (!store.write(key, { ...base, status: "attempting", attempted_at: new Date().toISOString() }, "claim")) { report.skipped.push({ key, reason: "already claimed" }); continue; }
     let out;
     try {
-      out = await adapters[platform]({ entry, variant: entry.platforms[platform], env, fetch, graph, sleep, readImage });
+      out = zernio
+        ? await zernioPost({ platform, entry, variant: entry.platforms[platform], env, fetch, key, accountId: accounts[platform], boardId })
+        : await adapters[platform]({ entry, variant: entry.platforms[platform], env, fetch, graph, sleep, readImage });
     } catch (err) {
       const error = sanitize(err.message, env);
-      store.write(key, { ...base, status: "failed", failed_at: new Date().toISOString(), error, note: "Not retried automatically: the post may or may not exist. Check the platform before any manual action." }, "finish");
+      store.write(key, { ...base, via: zernio ? "zernio" : "direct", status: "failed", failed_at: new Date().toISOString(), error, note: "Not retried automatically: the post may or may not exist. Check the platform before any manual action." }, "finish");
       report.failed.push({ key, error });
       log(`Failed ${key}: ${error}`);
       continue;
     }
     // If this write throws, the claim stays "attempting" (never reposted) and the run exits non-zero.
-    store.write(key, { ...base, status: "posted", posted_at: new Date().toISOString(), remote_id: out.remote_id ?? null, url: out.url ?? null }, "finish");
+    store.write(key, { ...base, status: "posted", posted_at: new Date().toISOString(), via: zernio ? "zernio" : "direct", remote_id: out.remote_id ?? null, url: out.url ?? null }, "finish");
     report.posted.push({ key, ...out });
     log(`Posted ${key}`);
   }
@@ -320,8 +449,8 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   if (args.includes("--dry-run")) {
     const out = opt("--receipts-out") ?? mkdtempSync(join(tmpdir(), "social-dry-run-"));
     const calls = [];
-    report = await run({ now, clock: () => now.getTime(), env: SIMULATED_ENV, store: new DirStore(out, readFileSync(join(root, "ops/OWNER.md"), "utf8")), fetch: simulatedFetch(calls), sleep: async () => {} });
-    console.log(`Dry run (simulated platforms, ${calls.length} simulated requests); receipts in ${out}`);
+    report = await run({ now, clock: () => now.getTime(), env: args.includes("--direct") ? SIMULATED_ENV : SIMULATED_ZERNIO_ENV, store: new DirStore(out, readFileSync(join(root, "ops/OWNER.md"), "utf8")), fetch: simulatedFetch(calls), sleep: async () => {} });
+    console.log(`Dry run (simulated ${args.includes("--direct") ? "direct platforms" : "Zernio"}, ${calls.length} simulated requests); receipts in ${out}`);
   } else {
     report = await run({ now, ...(opt("--now") ? { clock: () => now.getTime() } : {}), store: new GitStore(root) });
   }
