@@ -74,3 +74,16 @@ test("photo pages use their own first photo; pages without one use the section c
   assert.throws(() => linkPreviewTags(html.replace(/<link[^>]*>/, ""), "about.html", site), /canonical/);
   assert.throws(() => linkPreviewTags(html.replace("familytripwise.com/about", "example.com/about"), "about.html", site), /not on familytripwise/);
 });
+
+test("destination pages without their own photo use that destination's photo; deal checks use their own card", () => {
+  const img = (page) => readFileSync(join(site, page), "utf8").match(/og:image" content="([^"]*)"/)[1];
+  assert.equal(img("family-itinerary/washington-dc-with-kids.html"), `${ORIGIN}images/og/photos/washington-dc-national-mall.jpg`);
+  assert.equal(img("family-itinerary/boston-with-kids.html"), `${ORIGIN}images/og/photos/boston-skyline.jpg`);
+  assert.equal(img("deals/royal-caribbean-kids-sail-free.html"), `${ORIGIN}images/og/deals/v1/royal-caribbean-kids-sail-free.png`);
+  assert.equal(img("deals/index.html"), `${ORIGIN}images/og/deals.png`);
+  for (const url of urls) {
+    const page = pathOf(url);
+    if (/^(deals|this-week)\//.test(page) || ["index.html", "about.html", "privacy.html", "terms.html"].includes(page) || page.startsWith("contributors/")) continue;
+    assert.match(img(page), /images\/og\/photos\//, `${page}: a destination page fell back to a generic card`);
+  }
+});

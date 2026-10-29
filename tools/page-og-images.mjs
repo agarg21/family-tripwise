@@ -3,15 +3,16 @@
 // - Photo cards: each self-hosted photo (tools/images/commons-images.lock.json) cropped to 1200x630
 //   JPEG with a small credit strip (author, licence, "cropped"). Same free-licence photo the pages
 //   already show and credit; never an AI image or promotional art.
-// - Typographic cards (PNG) for pages without a photo: the site, /deals/ and /this-week/. No dates,
-//   prices or deal claims, so they never go stale.
+// - Typographic cards (PNG) for pages without a photo: the site, /deals/, /this-week/ and each deal check
+//   without a v2 card. No dates or verdicts, so they never go stale.
 // Text that does not fit is refused, not cropped. Existing files are kept unless --force.
 // Usage: node tools/page-og-images.mjs [--force]
 import { createRequire } from "node:module";
 import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CARDS, photoCardPath } from "./page-generation/link-previews.mjs";
+import { CARDS, DESTINATIONS, dealCardPath, destinationOf, photoCardPath } from "./page-generation/link-previews.mjs";
+import { readDealChecks } from "./page-generation/deals-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -33,23 +34,31 @@ export function photoCardHtml(slug) {
   return `<!doctype html><html><head><meta charset="utf-8"><style>
   * { box-sizing: border-box; margin: 0; }
   body { width: 1200px; height: 630px; overflow: hidden; font-family: "DejaVu Sans", Arial, sans-serif; background: url(data:image/webp;base64,${data}) center / cover; position: relative; }
-  .brand { position: absolute; left: 0; bottom: 0; background: rgba(11,73,70,0.92); color: #fffaf2; font-size: 30px; font-weight: 800; padding: 16px 28px; border-top-right-radius: 14px; }
+  .brand { position: absolute; left: 0; bottom: 0; max-width: 760px; background: rgba(11,73,70,0.94); color: #fffaf2; padding: 18px 30px 16px; border-top-right-radius: 14px; }
+  .place { font-size: 46px; font-weight: 800; line-height: 1.1; white-space: nowrap; }
+  .site { font-size: 26px; font-weight: 800; margin-top: 6px; }
   .brand b { color: #f0bd56; }
   .credit { position: absolute; right: 0; bottom: 0; max-width: 640px; white-space: nowrap; overflow: hidden; background: rgba(0,0,0,0.6); color: #fff; font-size: 16px; padding: 6px 12px; border-top-left-radius: 8px; }
   </style></head><body>
-  <div class="brand">family<b>tripwise</b></div>
+  <div class="brand" data-fit><div class="place">${e(DESTINATIONS[destinationOf(slug)].place)} with kids</div><div class="site">family<b>tripwise</b>.com</div></div>
   <div class="credit" data-fit>${e(photoCreditText(photo))}</div>
   ${FIT}</body></html>`;
 }
 
 const TEXT = {
-  site: { kicker: "Family trip planning by city", title: "Where to stay, what to do and what it really costs with kids", line: "Checked against official sources, with dates" },
-  deals: { kicker: "Family Deal Checks", title: "Is this travel deal worth it for a family of four?", line: "Terms, catches and book-by dates, checked on the official page" },
+  site: { kicker: "Family trip planning by city", title: "Where to stay, what to do and what it costs with kids", line: "Checked against official sources, with dates" },
+  deals: { kicker: "Family Deal Checks", title: "Family travel deals, checked: what you get and the catch", line: "Terms and book-by dates read on each company's own offer page" },
   "this-week": { kicker: "This week for families", title: "Family events and deals worth knowing about this week", line: "Each item checked on its official page, with an end date" }
 };
 
-export function textCardHtml(id) {
-  const t = TEXT[id];
+// Per-deal card for deal checks without a v2 card: operator, category and the page's own <h1> title
+// (amounts as "$"). No dates or verdicts, so the card cannot go stale when the offer ends.
+export function dealCardText(check) {
+  return { kicker: `Family Deal Check · ${check.category}`, title: check.title.replace(/USD\s?(\d)/g, "$$$1"), line: "The offer, the catch and the dates, checked on the official page" };
+}
+
+export function textCardHtml(id, text = TEXT[id]) {
+  const t = text;
   return `<!doctype html><html><head><meta charset="utf-8"><style>
   * { box-sizing: border-box; margin: 0; }
   body { width: 1200px; height: 630px; overflow: hidden; background: #fffaf2; color: #142029; font-family: "DejaVu Sans", Arial, sans-serif; display: grid; grid-template-columns: 330px 1fr; }
@@ -71,8 +80,9 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const { chromium } = createRequire(import.meta.url)("playwright");
   const browser = await chromium.launch();
   const jobs = [
-    ...Object.keys(lock).map((slug) => ({ out: photoCardPath(slug), html: () => photoCardHtml(slug), type: "jpeg" })),
-    ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" }))
+    ...Object.keys(lock).filter((slug) => destinationOf(slug)).map((slug) => ({ out: photoCardPath(slug), html: () => photoCardHtml(slug), type: "jpeg" })),
+    ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" })),
+    ...readDealChecks().filter((check) => !check.v2).map((check) => ({ out: dealCardPath(check.id), html: () => textCardHtml(null, dealCardText(check)), type: "png" }))
   ];
   let failed = 0;
   for (const job of jobs) {

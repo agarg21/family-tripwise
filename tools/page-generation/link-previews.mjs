@@ -20,6 +20,27 @@ export const CARDS = {
 };
 
 export const photoCardPath = (slug) => `images/og/photos/${slug}.jpg`;
+// Typographic card per deal check without a v2 card: operator, category and the page's own title.
+export const dealCardPath = (id) => `images/og/deals/v1/${id}.png`;
+
+// Destinations by URL slug: the place name printed on that destination's photo cards, and the photo a
+// destination page without its own photo uses (the same credited photo its other pages show).
+export const DESTINATIONS = {
+  "washington-dc": { place: "Washington DC", photo: "washington-dc-national-mall" },
+  "new-york-city": { place: "New York City", photo: "new-york-city-central-park" },
+  "san-diego": { place: "San Diego", photo: "san-diego-mission-bay" },
+  "san-antonio": { place: "San Antonio", photo: "san-antonio-river-walk" },
+  "las-vegas": { place: "Las Vegas", photo: "las-vegas-bellagio-fountains" },
+  "puerto-vallarta": { place: "Puerto Vallarta", photo: "puerto-vallarta-panorama" },
+  chicago: { place: "Chicago", photo: "chicago-millennium-park" },
+  boston: { place: "Boston", photo: "boston-skyline" },
+  london: { place: "London, UK", photo: "london-trafalgar-square" },
+  cancun: { place: "Cancun", photo: "cancun-aerial" },
+  orlando: { place: "Orlando", photo: "orlando-lake-eola" }
+};
+export function destinationOf(name) {
+  return Object.keys(DESTINATIONS).find((key) => name === key || name.startsWith(`${key}-`)) ?? null;
+}
 
 function attr(tag, name) {
   return tag.match(new RegExp(`\\s${name}="([^"]*)"`, "i"))?.[1] ?? null;
@@ -41,6 +62,19 @@ export function previewImage(html, pagePath) {
     const slug = local.match(/(?:^|\/)images\/([a-z0-9-]+)\.webp$/)?.[1];
     const alt = unescape(attr(tag, "alt") || "").trim();
     if (slug && alt) return { path: photoCardPath(slug), alt, width: 1200, height: 630, type: "image/jpeg" };
+  }
+  const file = pagePath.split("/").pop().replace(/\.html$/, "");
+  const dest = !/^(deals|this-week)\//.test(pagePath) && destinationOf(file);
+  if (dest) {
+    const lock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
+    const photo = lock[DESTINATIONS[dest].photo];
+    if (!photo) throw new Error(`link preview: no self-hosted photo ${DESTINATIONS[dest].photo}`);
+    const alt = `Photo of ${DESTINATIONS[dest].place} by ${photo.artist.split(" from ")[0]} (${photo.license})`;
+    return { path: photoCardPath(DESTINATIONS[dest].photo), alt, width: 1200, height: 630, type: "image/jpeg" };
+  }
+  const dealId = pagePath.match(/^deals\/([a-z0-9-]+)\.html$/)?.[1];
+  if (dealId && dealId !== "index" && existsSync(new URL(`../../site/${dealCardPath(dealId)}`, import.meta.url))) {
+    return { path: dealCardPath(dealId), alt: "Family Deal Check from Family Tripwise: the offer, the catch and the dates, checked on the official page", width: 1200, height: 630, type: "image/png" };
   }
   const card = cardFor(pagePath);
   return { path: card.path, alt: card.alt, width: 1200, height: 630, type: "image/png" };
