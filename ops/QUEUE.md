@@ -7,11 +7,13 @@ open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pendin
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead, never a fact. If the push conflicts in flags.json (the hourly watcher updated it), merge (never rebase) and keep the watcher's other flags.
 Carry P3s: a skipped (under-55-min) watch run counts as the previous run, so the next normal run can also skip (detection gap only); countdown/live-price lines may cause noise flags (judge on the first live days); robots.txt paths not percent-normalised (all sources ASCII).
 
+## G10 Link previews for shared pages
+open · S · owner: D11 Approved · gate: none
+Facebook showed a blank preview: add og:title/description/url/image (the item's typographic card) and twitter:card to /deals/*, /deals/ and /this-week/ via the generators; test each og:image resolves. Reviewer PASS.
+
 ## G08 Post through Zernio
-open · S · owner: D14 Approved · gate: ZERNIO_API_KEY secret exists (T3)
-Built and on main 16e5ad8 (2026-10-29): tools/social-post.mjs posts all four platforms through Zernio when ZERNIO_API_KEY exists (accounts looked up at run time, Idempotency-Key per receipt, Threads link in first comment, Facebook link in text, Pinterest board from PINTEREST_BOARD_ID or the only public board); dry run against simulated Zernio passes; reviewer PASS_WITH_P3. API facts: docs/research/zernio-api-2026-10-29.md.
-Remaining: after the first scheduled run with the key, check each platform's receipt and live post (Facebook link preview, Instagram card crop, Pinterest board, Threads first comment); then remove the direct Meta/Pinterest paths and their secrets from the workflow.
-Carry P3s: a `publishing`/`scheduled` Zernio result is recorded `failed` (safe, never retried; could say "in progress"); re-check expiry right after a slow claim; tests for kill switch/expiry/409 on the Zernio route.
+open · S · owner: D14 Approved · gate: none
+Built on main 16e5ad8 (API facts: docs/research/zernio-api-2026-10-29.md). First live post 2026-10-29: Facebook, Beaches (receipt in ops/social-receipts/2026-10-29). Instagram not yet connected in Zernio (owner, later today); Threads/Pinterest not connected (paid seats). Remaining: check the first Instagram post once connected, then remove the direct Meta/Pinterest paths and secrets. Carry P3s: Zernio `publishing`/`scheduled` results are recorded failed (never retried); tests for kill switch/expiry/409 on the Zernio route.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · L · owner: D15 Approved · gate: none
