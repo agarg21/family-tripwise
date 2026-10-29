@@ -1,0 +1,20 @@
+{
+  "note": "Wikimedia Commons photos the site shows, self-hosted under site/images/ (Q11, OWNER D4/D17). tools/images/fetch-commons-images.py downloads each file once (GitHub Actions; the operator sandbox is rate-limited by Commons), writes WebP <=200 KB and records author, licence and size in commons-images.lock.json.",
+  "max_width": 1600,
+  "max_bytes": 200000,
+  "images": [
+    {"slug": "san-antonio-river-walk", "file": "The_San_Antonio_River_Walk.jpg"},
+    {"slug": "san-diego-zoo", "file": "San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg"},
+    {"slug": "chicago-millennium-park", "file": "Millennium_park,chicago.JPG"},
+    {"slug": "new-york-city-central-park", "file": "Central_Park_New_York_City_New_York_23_cropped.jpg"},
+    {"slug": "las-vegas-bellagio-fountains", "file": "Bellagio_fountain_show_2010_las_vegas.JPG"},
+    {"slug": "san-diego-mission-bay", "file": "21a-san-diego-mission-bay.jpg"},
+    {"slug": "orlando-cabana-bay", "file": "Cabana_Bay_Beach_Resort_01.jpg"},
+    {"slug": "puerto-vallarta-panorama", "file": "Panorama_Puerto_Vallarte,_meksičkoga_grada_na_pacifičkoj_obali.jpg"},
+    {"slug": "london-trafalgar-square", "file": "Trafalgar_Square,_London_2_-_Jun_2009.jpg"},
+    {"slug": "boston-skyline", "file": "Boston_-_Skyline_(48718902556).jpg"},
+    {"slug": "cancun-aerial", "file": "Cancún_aerial_2024.jpg"},
+    {"slug": "washington-dc-national-mall", "file": "WashingtonDCMallAerialNavyPhoto.jpg"},
+    {"slug": "orlando-lake-eola", "file": "Lake_eola_in_Orlando_Florida_with_fountain.jpg"}
+  ]
+}

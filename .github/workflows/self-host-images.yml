@@ -1,0 +1,43 @@
+name: Self-host images
+
+# Q11: downloads the Commons photos listed in tools/images/commons-images.json once,
+# writes WebP files to site/images/ and the lock file, and commits them to the pushed
+# q/* branch (never main). The operator reviews and releases the branch as usual.
+
+on:
+  push:
+    branches:
+      - "q/Q11"
+    paths:
+      - "tools/images/commons-images.json"
+      - "tools/images/fetch-commons-images.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: self-host-images
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install Pillow
+        run: python3 -m pip install --quiet pillow
+      - name: Fetch and convert
+        run: python3 tools/images/fetch-commons-images.py
+      - name: Commit images to this branch
+        if: always()
+        run: |
+          set -eu
+          case "$GITHUB_REF_NAME" in q/*) ;; *) echo "::notice::not a q/* branch; nothing committed"; exit 0;; esac
+          git add site/images tools/images/commons-images.lock.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          git commit -m "Q11: self-hosted Commons images (workflow)"
+          git push origin "HEAD:$GITHUB_REF_NAME"
