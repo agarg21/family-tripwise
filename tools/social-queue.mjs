@@ -172,6 +172,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       v2: check.v2?.post ? {
         context: check.v2.context,
         headline: check.v2.headline,
+        title: check.v2.post.title,
         big_number: check.v2.big_number,
         big_label: check.v2.big_label,
         verdict_label: VERDICT_LABEL[check.score?.verdict] ?? null,
@@ -272,9 +273,9 @@ function variantsV2(record) {
     threads: { text: body },
     facebook: { text: body },
     instagram: { text: `${body}\n\nLink in bio: familytripwise.com/deals\n\n${tags}` },
-    pinterest: { title: v.headline, text: body },
-    tiktok: { title: v.headline, text: `${body}\n\n${tags}`, media: "photo" },
-    youtube: { title: v.headline, text: body, media: "video_required" },
+    pinterest: { title: v.title, text: body },
+    tiktok: { title: v.title, text: `${body}\n\n${tags}`, media: "photo" },
+    youtube: { title: v.title, text: body, media: "video_required" },
   };
 }
 
@@ -311,7 +312,7 @@ export function readQueue(date, dir = queueDir) {
 }
 
 const cardAlt = (r) => (r.v2
-  ? `Family Deal Check card: ${r.v2.big_number} ${r.v2.big_label}. ${r.v2.context}. ${r.v2.verdict_label}. ${r.v2.deadline}.${r.v2.hero_alt ? ` Photo: ${r.v2.hero_alt}.` : ""}`
+  ? `Family Deal Check card: ${r.v2.lines[0]} ${r.v2.lines[1]} ${r.v2.lines[2]} ${r.v2.deadline}.${r.v2.hero_alt ? ` Photo: ${r.v2.hero_alt}.` : ""}`
   : `${r.kicker}. ${r.title}. Checked on the official page ${longDate(r.observed_on)}.`);
 
 // Events are shareable once verified; a deal check only with a worth_it or only_for verdict.

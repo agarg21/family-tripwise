@@ -337,13 +337,15 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(v({ hero_image: { ...b.v2.hero_image, caption: "" } }).some((p) => /hero_image needs alt and caption/.test(p)));
   // G11 step 2: post lines
   const post = (patch) => v({ post: { ...b.v2.post, ...patch } });
-  assert.ok(v({ post: undefined }).some((p) => /post \(hook, verdict, catch\) is required/.test(p)));
+  assert.ok(v({ post: undefined }).some((p) => /post \(title, hook, verdict, catch\) is required/.test(p)));
   assert.ok(post({ hook: "Beaches gives a resort credit to young kids with passports." }).some((p) => /post.hook must state the key \$ number/.test(p)));
   assert.ok(post({ hook: "Beaches gives a $500 resort credit per child with a passport." }).some((p) => /\$500 is not a figure the observed terms state/.test(p)), "post $ figures are tied to the terms");
   assert.ok(post({ verdict: "Worth it for every family with a young child and a passport." }).some((p) => /post.verdict must start "Only for "/.test(p)));
   assert.ok(post({ catch: "Only 5+ paid nights and travel by November 6, 2026." }).some((p) => /post.catch starts "The catch: "/.test(p)));
   assert.ok(post({ hook: "Beaches gives a USD 135 credit per child 5 or under with a new passport." }).some((p) => /use "\$", not "USD"/.test(p)));
   assert.ok(post({ catch: `The catch: ${"x".repeat(140)}` }).some((p) => /at most 140 characters/.test(p)));
+  assert.ok(post({ title: "Beaches resort credit for kids with a new passport" }).some((p) => /post.title/.test(p)));
+  assert.ok(post({ title: "Beaches: $135 credit per kid, book by October 3" }).some((p) => /post date "October 3" is not a date/.test(p)), "a date that is only a prefix of a term date is refused");
   assert.ok(post({ catch: "The catch: travel by November 9, 5+ paid nights, full room price." }).some((p) => /post date "November 9" is not a date/.test(p)), "post dates are tied to the terms");
   assert.ok(post({ catch: "The catch: travel by November 6, 4+ paid nights, full room price." }).some((p) => /night count "4\+ paid nights"/.test(p)), "night counts are tied to the terms");
   assert.ok(post({ hook: `${b.v2.post.hook} ${"y".repeat(20)}`, verdict: `${b.v2.post.verdict} ${"z".repeat(40)}` }).some((p) => /keep them under 340/.test(p)));

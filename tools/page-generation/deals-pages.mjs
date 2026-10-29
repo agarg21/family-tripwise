@@ -222,21 +222,23 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
   // Social post lines (docs/plan/deal-content-v2.md "Posts"): hook with the key number and the place,
   // verdict and who it is for, the catch; tools/social-queue.mjs adds the book-by line and the dated check.
   const post = v.post;
-  if (!post || typeof post !== "object") problems.push(`${where}: post (hook, verdict, catch) is required`);
+  if (!post || typeof post !== "object") problems.push(`${where}: post (title, hook, verdict, catch) is required`);
   else {
     for (const field of ["hook", "verdict", "catch"]) {
       if (!sentence(post[field]) || post[field].length > POST_LINE_MAX) problems.push(`${where}: post.${field} must be one sentence of at most ${POST_LINE_MAX} characters`);
       else texts.push(post[field]);
     }
     if (!/\$\d/.test(post.hook ?? "")) problems.push(`${where}: post.hook must state the key $ number`);
+    if (typeof post.title !== "string" || post.title.length < 10 || post.title.length > 100 || !/\$\d/.test(post.title)) problems.push(`${where}: post.title (Pinterest, TikTok, YouTube) must be 10-100 characters with the $ number`);
+    else texts.push(post.title);
     const label = VERDICT_POST[check.score?.verdict];
     if (!label || !String(post.verdict ?? "").startsWith(`${label}`)) problems.push(`${where}: post.verdict must start "${label ?? "Worth it/Only for"}" to match the scored verdict`);
     if (!/^The catch: /.test(post.catch ?? "")) problems.push(`${where}: post.catch starts "The catch: "`);
     // Dates and night counts in the post must be ones the observed terms state, like $ figures below.
     const termsText = [...(check.terms ?? []).flat(), longDate(check.expires_on ?? "")].join(" ");
-    const postText = ["hook", "verdict", "catch"].map((f) => String(post[f] ?? "")).join(" ");
+    const postText = ["title", "hook", "verdict", "catch"].map((f) => String(post[f] ?? "")).join(" ");
     for (const m of postText.matchAll(/\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2})\b/g)) {
-      if (!termsText.includes(`${m[1]} ${m[2]}`)) problems.push(`${where}: post date "${m[0]}" is not a date the observed terms state`);
+      if (!new RegExp(`\\b${m[1]} ${m[2]}\\b`).test(termsText)) problems.push(`${where}: post date "${m[0]}" is not a date the observed terms state`);
     }
     for (const m of postText.matchAll(/\b(\d+)\+? (?:paid )?nights?\b/g)) {
       if (!new RegExp(`\\b${m[1]}\\+? (?:paid[- ])?nights?\\b`, "i").test(termsText)) problems.push(`${where}: post night count "${m[0]}" is not in the observed terms`);

@@ -206,6 +206,7 @@ const fixtureV2 = sourceRecords({ items: [], checks: [{ ...fixtureCheck, v2: {
   headline: "Fixture: kids 12 and under pay $0 cruise fare",
   big_number: "$0", big_label: "cruise fare for kids 12 and under",
   post: {
+    title: "Fixture Cruises from Miami: $0 cruise fare for kids 12 and under",
     hook: "Fixture Cruises from Miami: kids 12 and under pay $0 cruise fare on sailings this winter.",
     verdict: "Only for families who can sail with two adults paying full fare.",
     catch: "The catch: taxes and fees are still charged for all four guests.",
@@ -223,7 +224,7 @@ test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 cha
       assert.ok(x.text.startsWith(r.v2.lines[0]), `${r.id} ${platform} opens with the hook`);
       assert.match(x.text, /\$\d/, `${r.id} ${platform} states the key number`);
       assert.ok(x.text.includes(`\n\n${r.v2.lines[3]}\n\n${r.v2.checked}`), `${r.id} ${platform}: book-by then the dated check`);
-      if (x.title) assert.ok(x.title.length <= LIMITS[platform].title);
+      if (x.title) assert.equal(x.title, r.v2.title, `${r.id} ${platform} title is the validated post title`);
     }
     assert.ok(v.facebook.text.length <= 420 && v.threads.text.length <= 420, `${r.id}: Facebook/Threads about 350 characters (${v.facebook.text.length})`);
     assert.match(r.v2.lines[1], /^(Worth it|Only for )/);
