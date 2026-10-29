@@ -135,3 +135,24 @@ test("sentence split keeps time zones with their times and never loses text", ()
   assert.equal(easternTime("2027-03-14", "00:00"), "2027-03-14T00:00:00-05:00", "midnight before the 02:00 spring-forward is still EST");
   assert.equal(easternTime("2026-10-31", "07:30"), "2026-10-31T07:30:00-04:00");
 });
+
+test("a deal headline that already states its booking deadline is not followed by the same deadline", () => {
+  const stated = { ...fixtureCheck, id: "fixture-stated", headline: "Up to USD 270 credit; book by November 2 and travel by November 6, 2026." };
+  const near = { ...fixtureCheck, id: "fixture-near", expires_on: "2026-11-02", headline: "Book by November 20 for a later sailing." };
+  const noted = { ...fixtureCheck, id: "fixture-noted", expires_note: "the page gives no year", headline: "Book by November 2 for a room discount." };
+  const listed = { ...fixtureCheck, id: "fixture-listed", deadline_stated: false, headline: "Book by November 2 for a room discount." };
+  const [s, n, o, l, plain] = sourceRecords({ items: [], checks: [stated, near, noted, listed, fixtureCheck] });
+  for (const [platform, v] of Object.entries(variants(s, "id"))) {
+    assert.equal((v.text.match(/book by November 2\b/gi) ?? []).length, 1, `${platform}: deadline once`);
+  }
+  assert.deepEqual(s.full, [stated.headline, stated.family_of_four]);
+  assert.equal(n.full.at(-1), "Book by November 2, 2026.", "a different date in the headline keeps the deadline line");
+  assert.equal(o.full.at(-1), "Book by November 2, 2026 (the page gives no year).", "a deadline note is never dropped");
+  assert.equal(l.full.at(-1), "Listed until November 2, 2026.", "a listing date is not a booking deadline");
+  assert.equal(plain.full.at(-1), "Book by November 2, 2026.");
+  const [otherYear] = sourceRecords({ items: [], checks: [{ ...fixtureCheck, headline: "Book by November 2, 2027 for a later sailing." }] });
+  assert.equal(otherYear.full.at(-1), "Book by November 2, 2026.", "a headline date in another year keeps the deadline line");
+  const [sameYear] = sourceRecords({ items: [], checks: [{ ...fixtureCheck, headline: "Book by November 2, 2026 for a cabin." }] });
+  assert.deepEqual(sameYear.full, ["Book by November 2, 2026 for a cabin.", fixtureCheck.family_of_four]);
+  assert.deepEqual(s.lines, plain.lines.map(([k, v]) => [k, k === "For a family" ? stated.headline : v]), "the card keeps its Book by row");
+});

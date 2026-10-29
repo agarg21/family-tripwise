@@ -132,6 +132,12 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
   const deals = checks.map((check) => {
     const label = check.deadline_stated === false ? "Listed until" : "Book by";
     const bookBy = `${label} ${longDate(check.expires_on)}${check.expires_note ? ` (${check.expires_note})` : ""}.`;
+    // A headline that already says "book by <this date>" is not followed by the same deadline again
+    // (Beaches, Club Med). A deadline with a note (year reading) keeps its own line so the note survives.
+    const monthDay = longDate(check.expires_on).replace(/, \d{4}$/, "");
+    const headlineHasDeadline = label === "Book by" && !check.expires_note
+      && new RegExp(`\\bbook by ${monthDay}(?!\\d)(?:,\\s*${check.expires_on.slice(0, 4)}(?!\\d)|(?!,\\s*\\d{4}))`, "i").test(check.headline);
+    const deadline = headlineHasDeadline ? [] : [bookBy];
     return {
       id: check.id,
       kind: "deal",
@@ -142,9 +148,9 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
         [label, `${longDate(check.expires_on)}${check.expires_note ? ` (${check.expires_note})` : ""}`],
         ["For a family", check.headline],
       ],
-      short: [check.headline, bookBy],
-      extra: [sentences(check.family_of_four)[0], bookBy],
-      full: [check.headline, check.family_of_four, bookBy],
+      short: [check.headline, ...deadline],
+      extra: [sentences(check.family_of_four)[0], ...deadline],
+      full: [check.headline, check.family_of_four, ...deadline],
       page: `${SITE}/deals/${check.id}.html`,
       anchor: null,
       evergreen: `${SITE}/deals/`,
@@ -202,7 +208,7 @@ export function variants(record, entryId) {
   // A deal's headline carries its family caveats (fees, ages, exclusions), so it is never dropped.
   const deal = record.kind === "deal";
   const core = deal ? [record.title, record.short[0]] : [record.title];
-  const more = deal ? [record.short[1]] : record.short;
+  const more = (deal ? [record.short[1]] : record.short).filter(Boolean);
   const v = {};
   v.threads = { text: fit(core, [...more, record.extra[0], checked], LIMITS.threads.text) };
   v.facebook = { text: fit([record.title, ...record.full, checked], [], LIMITS.facebook.text) };
