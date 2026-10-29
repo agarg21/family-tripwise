@@ -2,12 +2,9 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
-## Q11 LIVE DEFECT: self-host every page image
-open · M · owner: D4 Approved (self-hosted heroes) · gate: none; do first
-Commons hotlinks (commons.wikimedia.org Special:Redirect) answer HTTP 429 to visitors (checked 2026-10-29, orlando-with-kids), so images are missing site-wide. Download each Commons original once, resize to WebP ≤200 KB in site/images/, keep author/licence/source caption, width/height, fetchpriority="high" on the hero; no hotlinked images anywhere (add a test). Then list pages with no image at all (deals, Boston/DC itineraries, old SD pages) for G13.
-
 ## G13 Page quality: every deploy, weekly, on demand (owner 2026-10-29)
-open · M · owner: none · gate: after Q11
+open · M · owner: none · gate: none (Q11 done 2026-10-29, 278dc70)
+Pages with no photo (from Q11): about, contributors/miles-rowan, privacy, terms, /this-week/, /deals/ hub and all 10 deal pages, DC and Boston itineraries. Photos are self-hosted via tools/images/commons-images.json (add a file there; the self-host-images workflow on a q/* branch downloads it; generation fails on an unlisted Commons image).
 1) Every deploy (daily 05:17 UTC and each release, next to the existing freshness tests): tools/page-quality.mjs + test: self-hosted hero with alt and credit, og:image, glance block, no placeholder sections, dated sources. 2) Weekly (first run on Mondays): one site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, and a persona review (docs/plan/page-quality-rubric.md) of pages changed since their last review plus the top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE. No automatic page edits. 3) On demand: when OWNER.md asks "review <page or all>", do it next.
 
 ## G09w Deal-watch flags (recurring; keep this item open)
