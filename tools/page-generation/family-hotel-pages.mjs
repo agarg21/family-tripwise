@@ -358,7 +358,7 @@ ${comparisonRows}
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/21a-san-diego-mission-bay.jpg" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="lazy" decoding="async">
+          <img src="../images/san-diego-mission-bay.webp" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="lazy" decoding="async" width="1280" height="982">
           <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>.</figcaption>
         </figure>
       </section>
@@ -714,7 +714,7 @@ ${rows}
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG" alt="The Bellagio fountains and Las Vegas Strip at night." width="1280" height="850" loading="lazy" decoding="async">
+          <img src="../images/las-vegas-bellagio-fountains.webp" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="lazy" decoding="async">
           <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
         </figure>
       </section>
@@ -1019,7 +1019,7 @@ ${rows}
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG" alt="Millennium Park and the Chicago skyline at dusk." width="1280" height="960" loading="lazy" decoding="async">
+          <img src="../images/chicago-millennium-park.webp" alt="Millennium Park and the Chicago skyline at dusk." width="1600" height="1200" loading="lazy" decoding="async">
           <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. No editorial changes; Wikimedia serves this resized preview.</figcaption>
         </figure>
       </section>
@@ -1348,7 +1348,7 @@ ${rows}
       </section>
       <section class="container media-section">
         <figure class="licensed-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200" srcset="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1200 1200w" sizes="(max-width: 700px) calc(100vw - 36px), 1160px" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="lazy" decoding="async">
+          <img src="../images/san-antonio-river-walk.webp" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="lazy" decoding="async">
           <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</figcaption>
         </figure>
       </section>
@@ -1660,7 +1660,7 @@ ${rows}
       ${datedBudgetComparisonHtml()}
       <section class="container media-section">
         <figure class="licensed-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200" srcset="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200 1200w" sizes="(max-width: 700px) calc(100vw - 36px), 1160px" alt="Central Park and the New York City skyline." width="1280" height="894" loading="lazy" decoding="async">
+          <img src="../images/new-york-city-central-park.webp" alt="Central Park and the New York City skyline." width="1280" height="894" loading="lazy" decoding="async">
           <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>.</figcaption>
         </figure>
       </section>

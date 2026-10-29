@@ -15,7 +15,7 @@ test("San Antonio comparison leads retained routing, media and hotel disclosures
   assert.ok(html.indexOf("Pick the closest version of your trip") < html.indexOf('<figure class="licensed-photo">'));
   assert.ok(html.indexOf('<figure class="licensed-photo">') < html.indexOf('id="san-antonio-hotel-1"'));
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
-  assert.match(html, /River%20Walk\.jpg\?width=1200"[^>]+loading="lazy"/);
+  assert.match(html, /san-antonio-river-walk\.webp"[^>]+loading="lazy"/);
   assert.match(html, /CC BY-SA 2\.0/);
   assert.doesNotMatch(html, /downloads\/.*\.csv|Spreadsheet copy/);
 });

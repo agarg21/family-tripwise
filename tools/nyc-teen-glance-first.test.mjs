@@ -16,7 +16,7 @@ test("NYC teen comparison leads the preserved quick picks and licensed image", (
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   assert.equal((html.match(/<article class="detail-card">/g) || []).length, 5);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 3);
-  assert.match(html, /Central%20Park.*loading="lazy"/);
+  assert.match(html, /new-york-city-central-park\.webp.*loading="lazy"/);
   assert.match(html, /Photo: Jet Lowe \/ National Park Service, public domain/);
   assert.doesNotMatch(html, /downloads\/.*\.csv|Spreadsheet copy/);
 });

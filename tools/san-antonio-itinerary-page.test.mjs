@@ -108,7 +108,7 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "goriocruises.com/overview/",
     "viainfo.net/service-alerts/",
     "forecast.weather.gov/MapClick.php",
-    "The%20San%20Antonio%20River%20Walk.jpg\\?width=1280",
+    "images/san-antonio-river-walk\\.webp",
     "Matt Harriger",
     "creativecommons.org/licenses/by-sa/2.0/"
   ]) assert.match(html, new RegExp(required));

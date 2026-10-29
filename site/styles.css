@@ -91,8 +91,7 @@ nav a {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(180deg, rgba(20, 32, 41, 0.16), rgba(20, 32, 41, 0.72)),
-    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/San%20Diego%20Skyline%20at%20Dawn.jpg");
+    linear-gradient(180deg, rgba(20, 32, 41, 0.16), rgba(20, 32, 41, 0.72));
   background-position: center;
   background-size: cover;
 }
@@ -157,6 +156,12 @@ nav a {
 }
 
 .licensed-photo img.intrinsic-photo {
+  height: auto;
+}
+
+/* Self-hosted photos carry width and height; keep their aspect ratio at every width. */
+img[width][height] {
+  max-width: 100%;
   height: auto;
 }
 

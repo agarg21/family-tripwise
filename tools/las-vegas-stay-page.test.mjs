@@ -86,7 +86,7 @@ test("aligns visible FAQ, schema, image attribution, sources, and cluster routes
     "family-itinerary/las-vegas-with-kids.html",
     "www.lvmonorail.com/route-map/",
     "www.rtcsnv.com/ways-to-travel/transit/",
-    "1280px-Bellagio_fountain_show_2010_las_vegas.JPG",
+    "images/las-vegas-bellagio-fountains.webp",
     "Chensiyuan",
     "creativecommons.org/licenses/by-sa/4.0/"
   ]) assert.match(html, new RegExp(required));

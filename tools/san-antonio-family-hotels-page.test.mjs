@@ -78,7 +78,7 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.match(html, />SeaWorld San Antonio<\/a>/);
   assert.match(html, /hotel-card-grid" style="grid-template-columns: 1fr;"/);
   assert.match(html, /upper edges are editorial planning ceilings, not observed quotes/);
-  assert.match(html, /srcset="[^"]+width=640 640w,[^"]+width=1200 1200w"/);
+  assert.match(html, /src="\.\.\/images\/san-antonio-river-walk\.webp"/);
   assert.match(html, /CC BY-SA 2\.0/);
   assert.doesNotMatch(html, /review[- ]signal/i);
   assert.doesNotMatch(html, /personally stayed|safest|quietest|best overall/i);

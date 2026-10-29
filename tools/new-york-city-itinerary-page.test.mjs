@@ -103,7 +103,7 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "mta.info/accessibility/stations",
     "mta.info/elevator-escalator-status",
     "amnh.org/plan-your-visit/accessibility/sensory-resources-for-visitors",
-    "1280px-Central_Park_New_York_City_New_York_23_cropped.jpg",
+    "images/new-york-city-central-park.webp",
     "Jet Lowe",
     "creativecommons.org/publicdomain/mark/1.0/"
   ]) assert.match(html, new RegExp(required));

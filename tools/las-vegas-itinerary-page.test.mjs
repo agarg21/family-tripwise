@@ -121,7 +121,7 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
     "discoverykidslv.org/about/faq/",
     "www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon",
-    "1280px-Bellagio_fountain_show_2010_las_vegas.JPG",
+    "images/las-vegas-bellagio-fountains.webp",
     "Chensiyuan",
     "creativecommons.org/licenses/by-sa/4.0/"
   ]) assert.match(html, new RegExp(required));

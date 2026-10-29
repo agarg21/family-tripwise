@@ -13,7 +13,7 @@ test("Vegas teen comparison precedes preserved photo and quick picks", () => {
   assert.ok(at > 0 && at < html.indexOf('<figure class="licensed-photo">') && at < html.indexOf("Five ways to let the teen choose"));
   assert.match(html, /Attraction facts and official sources checked:<\/strong> July 22, 2026/);
   assert.match(html, /AREA15 adult-accompaniment policy separately checked October 9, 2026/);
-  assert.match(html, /1280px-Bellagio_fountain_show_2010_las_vegas.JPG/);
+  assert.match(html, /images\/las-vegas-bellagio-fountains.webp/);
   assert.match(html, /creativecommons.org\/licenses\/by-sa\/4.0\//);
   assert.doesNotMatch(html, /downloads\/.*\.csv/);
 });

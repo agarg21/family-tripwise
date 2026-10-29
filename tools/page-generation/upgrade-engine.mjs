@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from "node:fs";
+import { selfHostImages } from "./self-hosted-images.mjs";
 import { join } from "node:path";
 
 const markerStart = "<!-- priority-upgrade:start -->";
@@ -1040,8 +1041,11 @@ function insertSchema(html, schema) {
   return html.replace(/\s*<\/body>/, () => `\n${schema}  </body>`);
 }
 
-function applyBaseReplacements(html, replacements = []) {
-  for (const [before, after] of replacements) {
+function applyBaseReplacements(html, replacements = [], path = "") {
+  // Images are self-hosted per tag (Q11), so compare and insert the self-hosted form of each pair.
+  for (const [rawBefore, rawAfter] of replacements) {
+    const before = selfHostImages(rawBefore, path);
+    const after = selfHostImages(rawAfter, path);
     if (html.includes(before)) {
       html = html.replace(before, after);
       continue;
@@ -1055,7 +1059,7 @@ function applyBaseReplacements(html, replacements = []) {
 
 function upgradeFile(outDir, path, page, type) {
   const full = join(outDir, path);
-  let html = readFileSync(full, "utf8");
+  let html = selfHostImages(readFileSync(full, "utf8"), path);
   if (page.frontComparison) {
     html = html.replace(/\n      <!-- activity-front:start -->[\s\S]*?      <!-- activity-front:end -->\n/, "");
     const navLabel = esc(`${page.city} activity sections`);
@@ -1064,7 +1068,7 @@ function upgradeFile(outDir, path, page, type) {
   let mediaSection = "";
   if (page.glanceFirst) {
     // Preserve the image before stripping a prior upgraded body during regeneration.
-    html = applyBaseReplacements(html, page.baseReplacements);
+    html = applyBaseReplacements(html, page.baseReplacements, path);
     const media = html.match(/      <section class="container media-section">[\s\S]*?<\/section>/g);
     if (media?.length !== 1) throw new Error("Expected one glance-first licensed media section");
     mediaSection = media[0];
@@ -1073,7 +1077,7 @@ function upgradeFile(outDir, path, page, type) {
   html = stripMarked(html, markerStart, markerEnd);
   html = stripMarked(html, schemaStart, schemaEnd);
   html = updateHead(html, page);
-  if (!page.glanceFirst) html = applyBaseReplacements(html, page.baseReplacements);
+  if (!page.glanceFirst) html = applyBaseReplacements(html, page.baseReplacements, path);
   html = replaceBaseActivitySection(html, page);
   html = removeBaseActivitySiblingBand(html, page);
   if (page.removeGeneratedAgeSections) html = removeGeneratedAgeSections(html);
@@ -1126,7 +1130,7 @@ ${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel
     const extraLink = page.frontComparisonExtraLink ? `<a href="${esc(page.frontComparisonExtraLink[0])}">${esc(page.frontComparisonExtraLink[1])}</a>` : "";
     html = html.replace(creditAndCopy, `$1\n        <nav aria-label="${esc(page.city)} activity sections"><a href="#${activitySectionId(page, "comparison")}">Compare activities</a>${middleLink}<a href="#${activitySectionId(page, "notes")}">Detailed checks</a>${extraLink}</nav>`);
   }
-  writeFileSync(full, html);
+  writeFileSync(full, selfHostImages(html, path));
 }
 
 export function upgradePriorityPages(outDir) {

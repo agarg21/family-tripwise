@@ -17,7 +17,7 @@ test("San Diego exposes the table before complete trip-routing guidance and lice
   assert.ok(html.indexOf("One base or split?") < html.indexOf('<figure class="licensed-photo">'));
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
   assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip/);
-  assert.match(html, /21a-san-diego-mission-bay\.jpg"[^>]+loading="lazy"/);
+  assert.match(html, /san-diego-mission-bay\.webp"[^>]+loading="lazy"/);
   assert.match(html, /Photo: Alfred Twu, Wikimedia Commons, CC0/);
   assert.match(html, /href="\.\.\/downloads\/san-diego-family-hotels\.csv" download/);
   assert.ok(html.indexOf("Spreadsheet copy") < html.indexOf("Pick the closest trip style"));

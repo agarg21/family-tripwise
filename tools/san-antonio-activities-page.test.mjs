@@ -47,7 +47,7 @@ test("publishes one canonical 13-choice San Antonio activity decision page", () 
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /The%20San%20Antonio%20River%20Walk\.jpg\?width=1200/);
+  assert.match(html, /images\/san-antonio-river-walk\.webp/);
   assert.match(html, /width="1280" height="960" loading="eager" decoding="async" fetchpriority="high"/);
 
   const baseSection = html.slice(html.indexOf('<section class="container page-section">'), html.indexOf("<!-- priority-upgrade:start -->"));

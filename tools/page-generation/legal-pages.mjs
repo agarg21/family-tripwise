@@ -4,15 +4,15 @@
 // third-party host the site embeds content from is named in the privacy policy.
 import { siteHeader, siteFooter } from "./site-chrome.mjs";
 
-export const legalUpdated = "October 28, 2026";
-export const legalUpdatedIso = "2026-10-28";
+// Each page keeps its own date: privacy changed 2026-10-29 (photos now self-hosted, Q11); terms 2026-10-28.
+export const legalUpdatedDates = {
+  "privacy.html": ["October 29, 2026", "2026-10-29"],
+  "terms.html": ["October 28, 2026", "2026-10-28"]
+};
 export const contactEmail = "hello@familytripwise.com";
 
 // Hosts that pages embed content from (img/iframe/script src). Each needs a paragraph below.
 export const embeddedHosts = {
-  "commons.wikimedia.org": "wikimedia",
-  "upload.wikimedia.org": "wikimedia",
-  "thumb.wikimedia.org": "wikimedia",
   "www.google.com": "google-maps"
 };
 
@@ -45,7 +45,7 @@ function shell({ path, title, description, eyebrow, h1, intro, body }) {
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Page status">
-        <p><strong>Last updated:</strong> <time datetime="${legalUpdatedIso}">${legalUpdated}</time></p>
+        <p><strong>Last updated:</strong> <time datetime="${legalUpdatedDates[path][1]}">${legalUpdatedDates[path][0]}</time></p>
         <p><strong>Questions:</strong> email ${mail}.</p>
       </section>
 ${body}
@@ -73,7 +73,7 @@ export function privacyPage() {
       `This site is hosted on GitHub Pages. GitHub states that when a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes (<a href="${githubPagesDoc}">GitHub Docs: What is GitHub Pages?</a>). That logging is done by GitHub under the <a href="${githubPrivacy}">GitHub General Privacy Statement</a>; Family Tripwise does not use those logs.`
     ]),
     section("third-party-content", "Content loaded from other services", [
-      { id: "wikimedia", html: `Some guides show photos loaded directly from Wikimedia Commons. When your browser loads one, Wikimedia's servers receive your IP address and browser details under the <a href="${wikimediaPrivacy}">Wikimedia Foundation privacy policy</a>.` },
+      { id: "photos", html: `Photos on this site are served from familytripwise.com itself, not loaded from other services. Their credits link to each photo's source page on Wikimedia Commons; if you follow one, the <a href="${wikimediaPrivacy}">Wikimedia Foundation privacy policy</a> applies.` },
       { id: "google-maps", html: `The San Diego family hotels guide embeds a Google My Maps map. Loading it connects your browser to Google, which may set cookies and receive your IP address under the <a href="${googlePrivacy}">Google Privacy Policy</a>.` },
       "Guides link to official hotel, venue, transit and operator websites. Those sites have their own privacy policies, which apply once you follow a link."
     ]),

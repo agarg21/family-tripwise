@@ -16,7 +16,7 @@ test('comparison leads retained routing, larger-room branch and licensed media',
   assert.ok(html.indexOf('Trip-style starts') < html.indexOf('<figure class="licensed-photo">'));
   assert.ok(html.indexOf('<figure class="licensed-photo">') < html.indexOf('id="las-vegas-hotel-1"'));
   assert.ok(html.indexOf('href="#las-vegas-room-fit"') < html.indexOf('<table'));
-  assert.match(html, /Bellagio_fountain_show_2010_las_vegas\.JPG"[^>]+loading="lazy"/);
+  assert.match(html, /las-vegas-bellagio-fountains\.webp"[^>]+loading="lazy"/);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   const spreadsheet = html.match(/<details><summary>Spreadsheet copy<\/summary>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(spreadsheet?.includes('href="../downloads/las-vegas-family-hotels.csv" download'));

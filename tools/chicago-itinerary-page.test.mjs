@@ -108,7 +108,7 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "transitchicago.com/accessibility/default.aspx",
     "fieldmuseum.org/visit",
     "sheddaquarium.org/plan-a-visit",
-    "1280px-Millennium_park%2Cchicago.JPG",
+    "images/chicago-millennium-park.webp",
     "Behnazkhazai",
     "creativecommons.org/licenses/by-sa/3.0/"
   ]) assert.match(html, new RegExp(required));

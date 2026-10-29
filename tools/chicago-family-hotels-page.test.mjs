@@ -110,8 +110,8 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.match(html, /older sample is a standard room, not a Kids Suite quote/);
   assert.doesNotMatch(html, /current public example was about \$308|recent standard-room example was about \$235/);
   assert.doesNotMatch(html, /approximate total nightly price|rough total nightly price/);
-  assert.match(html, /1280px-Millennium_park%2Cchicago\.JPG/);
-  assert.match(html, /width="1280" height="960"/);
+  assert.match(html, /images\/chicago-millennium-park\.webp/);
+  assert.match(html, /width="1600" height="1200"/);
   assert.match(html, /Behnazkhazai/);
   assert.match(html, /creativecommons\.org\/licenses\/by-sa\/3\.0\//);
   assert.doesNotMatch(html, /Special:Redirect\/file\/Millennium/);

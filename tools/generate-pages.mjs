@@ -15,6 +15,7 @@ import { writeLondonFamilyHotelsPage } from "./page-generation/london-family-hot
 import { washingtonDcItineraryPage, dcItineraryPath } from "./page-generation/washington-dc-itinerary-page.mjs";
 import { bostonItineraryPage, bostonItineraryPath } from "./page-generation/boston-itinerary-page.mjs";
 import { writeSitemap } from "./page-generation/sitemap.mjs";
+import { selfHostSiteImages, selfHostImages } from "./page-generation/self-hosted-images.mjs";
 import { writeThisWeekPage, thisWeekUrl } from "./page-generation/this-week-page.mjs";
 import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
@@ -413,7 +414,7 @@ ${sourceList(city, isSanDiego ? sanDiegoSpecialistSources(city) : city.sources, 
 function writeSite(path, contents) {
   const full = join(outDir, path);
   mkdirSync(dirname(full), { recursive: true });
-  writeFileSync(full, contents);
+  writeFileSync(full, path.endsWith(".html") ? selfHostImages(contents, path) : contents);
 }
 
 function aboutPage() {
@@ -827,6 +828,7 @@ Sitemap: https://familytripwise.com/sitemap.xml
 `);
 
 upgradePriorityPages(outDir);
+selfHostSiteImages(outDir);
 writeSitemap(outDir, sitemapUrls);
 
 console.log("Generated 28 SEO pages plus about, index, redirects, robots, and sitemap.");

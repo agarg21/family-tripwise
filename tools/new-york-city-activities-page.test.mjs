@@ -48,12 +48,9 @@ test("publishes one canonical 12-choice New York City activity decision page", (
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-kids\.html/g) || []).length, 1);
   assert.match(
     html,
-    /<img src="https:\/\/commons\.wikimedia\.org\/wiki\/Special:Redirect\/file\/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped\.jpg\?width=1200" alt="A bridge and trees in Central Park, New York City\." width="1280" height="894" loading="eager" decoding="async" fetchpriority="high">/
+    /<img src="\.\.\/images\/new-york-city-central-park\.webp" alt="A bridge and trees in Central Park, New York City\." width="1280" height="894" loading="eager" decoding="async" fetchpriority="high">/
   );
-  assert.doesNotMatch(
-    html,
-    /<img src="https:\/\/commons\.wikimedia\.org\/wiki\/Special:Redirect\/file\/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped\.jpg"/
-  );
+  assert.doesNotMatch(html, /<img[^>]+wikimedia\.org/);
 
   const baseSection = html.slice(html.indexOf('<section class="container page-section">'), html.indexOf("<!-- priority-upgrade:start -->"));
   assert.equal((baseSection.match(/<article class="activity-card" data-tags=/g) || []).length, 12);

@@ -57,8 +57,8 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 22, 2026/);
   assert.match(html, /\$120-\$320\+/);
   assert.match(html, /Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request/);
-  assert.match(html, /1280px-Bellagio_fountain_show_2010_las_vegas\.JPG/);
-  assert.match(html, /width="1280" height="850"/);
+  assert.match(html, /images\/las-vegas-bellagio-fountains\.webp/);
+  assert.match(html, /width="1600" height="1062"/);
   assert.match(html, /Chensiyuan/);
   assert.match(html, /creativecommons\.org\/licenses\/by-sa\/4\.0\//);
   assert.match(html, /No editorial changes; Wikimedia serves this resized preview/);

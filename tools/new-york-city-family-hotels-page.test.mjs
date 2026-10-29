@@ -58,7 +58,7 @@ test("publishes one canonical 12-hotel New York City comparison", () => {
   assert.match(html, /most public slices did not expose a reliable family-only count/);
   assert.doesNotMatch(html, /editorial (?:planning )?ceilings?|\$\d[\d,]*-\$\d[\d,]*\+/);
   assert.match(html, /Earlier upper-end estimates were never observed and are no longer shown/);
-  assert.match(html, /srcset="[^"]+width=640 640w,[^"]+width=1200 1200w"/);
+  assert.match(html, /src="\.\.\/images\/new-york-city-central-park\.webp"/);
   assert.match(html, /public domain via/);
   assert.doesNotMatch(html, /review[- ]signal/i);
   assert.doesNotMatch(html, /personally stayed|safest|quietest|best overall/i);

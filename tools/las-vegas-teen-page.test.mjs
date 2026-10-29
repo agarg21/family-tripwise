@@ -76,7 +76,7 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
     "Big Apple Coaster requires a current 54-inch minimum",
     "City youth-curfew guide",
     "las-vegas-family-hotels.html",
-    "1280px-Bellagio_fountain_show_2010_las_vegas.JPG",
+    "images/las-vegas-bellagio-fountains.webp",
     "Chensiyuan",
     "creativecommons.org/licenses/by-sa/4.0/"
   ]) assert.match(html, new RegExp(required));

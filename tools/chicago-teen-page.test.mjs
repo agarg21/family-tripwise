@@ -81,7 +81,7 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
     "Current film, sensory effects, 40-inch rule and ticket",
     "experienceflyover.com/chicago/plan-your-visit/faqs/",
     "chicago-family-hotels.html",
-    "1280px-Millennium_park%2Cchicago.JPG",
+    "images/chicago-millennium-park.webp",
     "Behnazkhazai",
     "creativecommons.org/licenses/by-sa/3.0/"
   ]) assert.match(html, new RegExp(required));

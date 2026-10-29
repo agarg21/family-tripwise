@@ -86,7 +86,7 @@ test("aligns visible FAQ, schema, image attribution, sources, and cluster routes
     "choosechicago.com/neighborhoods/streeterville/",
     "www.transitchicago.com/maps/",
     "www.transitchicago.com/alerts/",
-    "1280px-Millennium_park",
+    "images/chicago-millennium-park.webp",
     "Behnazkhazai",
     "creativecommons.org/licenses/by-sa/3.0/",
   ]) assert.match(html, new RegExp(required));

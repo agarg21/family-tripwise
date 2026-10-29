@@ -14,13 +14,13 @@ const targetPaths = [
   "where-to-stay/san-diego-with-kids.html",
   "family-itinerary/san-diego-with-kids.html"
 ];
-const expectedImage = /<img src="https:\/\/commons\.wikimedia\.org\/wiki\/Special:Redirect\/file\/San%20Diego%20Zoo%2C%20San%20Diego%2C%20United%20States%20%28Unsplash%20QZwf5yNopUo%29\.jpg" alt="A red panda at the San Diego Zoo\." width="3766" height="2509" class="intrinsic-photo" loading="eager" decoding="async">/;
+const expectedImage = /<img src="\.\.\/images\/san-diego-zoo\.webp" alt="A red panda at the San Diego Zoo\." width="1600" height="1066" class="intrinsic-photo" loading="eager" fetchpriority="high" decoding="async">/;
 
 test("all shared San Diego hero images reserve the verified intrinsic aspect ratio", () => {
   for (const relativePath of targetPaths) {
     const html = readFileSync(join(root, "site", relativePath), "utf8");
     assert.match(html, expectedImage, relativePath);
-    assert.equal((html.match(/width="3766" height="2509"/g) || []).length, 1, relativePath);
+    assert.equal((html.match(/width="1600" height="1066"/g) || []).length, 1, relativePath);
   }
 
   const css = readFileSync(join(root, "site", "styles.css"), "utf8");
