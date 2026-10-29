@@ -87,8 +87,17 @@ export function validateDealScore(check, { today = easternDate() } = {}) {
   if (!VALUE_LEVELS.includes(v.level) || !sentence(v.basis)) problems.push(`${where}: score.family_value needs level (${VALUE_LEVELS.join("/")}) and basis`);
   else if (v.level !== "unknown") {
     const c = v.compare ?? {};
-    const ok = check.family_total && typeof c.amount === "string" && /^[A-Z]{3} [\d,]+(\.\d\d)?$/.test(c.amount) && validDate(c.observed_on) && sentence(c.basis);
+    const t = check.family_total;
+    const ok = t && typeof c.amount === "string" && /^[A-Z]{3} [\d,]+(\.\d\d)?$/.test(c.amount) && validDate(c.observed_on) && sentence(c.basis);
     if (!ok) problems.push(`${where}: a rated family_value needs an observed family_total and compare {amount, observed_on, basis} for the same party and dates`);
+    else {
+      const [tCur, tNum] = [t.amount.slice(0, 3), Number(t.amount.slice(4).replaceAll(",", ""))];
+      const [cCur, cNum] = [c.amount.slice(0, 3), Number(c.amount.slice(4).replaceAll(",", ""))];
+      if (!/\b2 adults\b.*\b2 (children|kids)\b/i.test(String(t.party))) problems.push(`${where}: a rated family_value needs a family_total for 2 adults and 2 children`);
+      if (tCur !== cCur) problems.push(`${where}: family_value.compare must use the family_total currency`);
+      else if (!(cNum > tNum)) problems.push(`${where}: family_value.compare must be above the family_total (a saving)`);
+      if (c.observed_on !== t.observed_on) problems.push(`${where}: family_value.compare must be observed the same day as the family_total`);
+    }
   }
   const a = s.appeal ?? {};
   if (!APPEAL_LEVELS.includes(a.level) || !sentence(a.fits)) problems.push(`${where}: score.appeal needs level (${APPEAL_LEVELS.join("/")}) and fits`);

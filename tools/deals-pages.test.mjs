@@ -245,6 +245,14 @@ test("G09 step 2: every check carries a validated score; family value is rated o
   const total = { amount: "USD 2,410.00", party: "2 adults and 2 children ages 6 and 9", stay_from: "2026-11-10", stay_to: "2026-11-14", includes: "cruise fare plus taxes, fees and port expenses", observed_on: "2026-10-28" };
   const rated = { level: "high", basis: "Sale total vs the regular total for the same cabin and dates.", compare: { amount: "USD 3,900.00", observed_on: "2026-10-28", basis: "Regular fare, same party, cabin and dates." } };
   assert.deepEqual(score({ family_value: rated, verdict: "worth_it", who: undefined }, { family_total: total }), []);
+  const withCompare = (compare, extra = {}) => score({ family_value: { ...rated, compare: { ...rated.compare, ...compare } }, verdict: "worth_it", who: undefined, ...extra }, { family_total: total });
+  assert.ok(withCompare({ amount: "EUR 3,900.00" }).some((p) => /same currency|family_total currency/.test(p)));
+  assert.ok(withCompare({ amount: "USD 2,410.00" }).some((p) => /a saving/.test(p)));
+  assert.ok(withCompare({ observed_on: "2026-10-27" }).some((p) => /same day/.test(p)));
+  assert.ok(score({ family_value: rated, verdict: "worth_it", who: undefined }, { family_total: { ...total, party: "2 adults" } }).some((p) => /2 adults and 2 children/.test(p)));
+  assert.ok(score({ family_value: { ...rated, compare: undefined } }, { family_total: total }).some((p) => /rated family_value needs/.test(p)), "total without a regular price");
+  assert.ok(withCompare({}, { family_value: { ...rated, level: "low" } }).some((p) => /worth_it needs an observed family_value of medium or high/.test(p)));
+  assert.ok(score({ novelty: { level: "agency_listed", checked_on: "2026-10-28", links: "not a list" } }).some((p) => /novelty needs level/.test(p)), "reported, not thrown");
   assert.ok(score({ who: undefined }).some((p) => /only_for needs who/.test(p)));
   assert.ok(score({ verdict: "skip" }).some((p) => /who is only for only_for/.test(p)));
   assert.ok(score({ verdict: "great" }).some((p) => /verdict must be one of/.test(p)));
@@ -258,6 +266,7 @@ test("G09 step 2: every check carries a validated score; family value is rated o
 test("G09 step 2: urgency is derived from the deadline on the day, never stored", () => {
   for (const c of checks) assert.equal(c.score.urgency, undefined, c.id);
   const d = (expires_on, extra = {}) => dealUrgency({ ...base, expires_on, ...extra }, "2026-10-29");
+  assert.equal(d("2026-10-29"), "high", "expiry day itself");
   assert.equal(d("2026-11-01"), "high");
   assert.equal(d("2026-11-08"), "medium");
   assert.equal(d("2026-11-30"), "low");

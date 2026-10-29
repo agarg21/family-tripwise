@@ -157,10 +157,6 @@
           "checked_on": "2026-10-29",
           "links": [
             {
-              "label": "PR Newswire: Beaches Resorts Fall Fam Jam Tiny Traveler's First Passport offer",
-              "url": "https://www.prnewswire.com/news-releases/beaches-resorts-kicks-off-annual-fall-fam-jam-with-tiny-travelers-first-passport-offer-and-lineup-of-toddler-friendly-delights-302519666.html"
-            },
-            {
               "label": "Yahoo Lifestyle: Beaches perk for kids' first passports",
               "url": "https://www.yahoo.com/lifestyle/articles/beaches-resorts-just-launched-perk-223000122.html"
             }
@@ -283,7 +279,7 @@
         },
         "verdict": "only_for",
         "who": "Families who will visit SeaWorld Orlando more than once between now and the end of 2027, such as Florida residents or repeat Orlando visitors.",
-        "why": "Each family member needs their own card with no child price, and parking is extra, so it pays off only with repeat visits."
+        "why": "Each family member needs their own card, no child price is shown and parking is extra, so it likely pays off only with repeat visits."
       }
     },
     {
@@ -468,7 +464,7 @@
         },
         "verdict": "only_for",
         "who": "Families with children 17 and under sharing a stateroom on a qualifying sailing, booking by November 2.",
-        "why": "The child age limit is unusually wide (17 and under), but kids still pay government fees and taxes and the qualifying sailings are not listed."
+        "why": "It covers kids up to 17, but kids still pay government fees and taxes and the qualifying sailings are not listed."
       }
     },
     {
@@ -521,17 +517,12 @@
           "fits": "Families of 2 adults and 2 children ages 2 to 12 visiting LEGOLAND California."
         },
         "novelty": {
-          "level": "news_covered",
+          "level": "none_found",
           "checked_on": "2026-10-29",
-          "links": [
-            {
-              "label": "Patch: Legoland California Resort offers $39 kids' tickets",
-              "url": "https://patch.com/california/carlsbad/legoland-california-resort-offers-39-kids-tickets"
-            }
-          ]
+          "links": []
         },
         "verdict": "only_for",
-        "who": "Families with children 2 to 12 planning a LEGOLAND California visit through January 9, 2027 who are fine with a non-refundable booking.",
+        "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND California visit through January 9, 2027 who are fine with a non-refundable booking.",
         "why": "Tickets, breakfast and early access are bundled, but reservations are non-refundable, parking is extra and the starting price is not a quote for your dates."
       }
     },
