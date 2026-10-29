@@ -110,11 +110,13 @@ test("post text is copied from the record: every paragraph is a title, record fi
       for (const para of v.text.split("\n\n")) {
         const ok = fields.includes(para)
           || para === `Checked on the official page ${para.slice(29).split(":")[0]}: ${r.source_label}.`
+          || (platform === "threads" && /^Checked on the official page [A-Z][a-z]+ \d{1,2}\.$/.test(para))
           || /^Details and the official link: familytripwise\.com\/(deals|this-week)$/.test(para)
           || /^(#\w+ ?)+$/.test(para);
         assert.ok(ok, `${r.id} ${platform}: "${para}" is not from the record`);
       }
       assert.ok(v.text.length <= LIMITS[platform].text, `${r.id} ${platform} over limit`);
+      if (platform !== "pinterest") assert.match(v.text, /Checked on the official page [A-Z][a-z]+ \d{1,2}(, \d{4})?[:.]/, `${r.id} ${platform} keeps the dated check line`);
       if (r.kind === "deal") assert.ok(platform === "pinterest" || v.text.includes(r.title), `${r.id} ${platform} keeps the title`);
       if (r.kind === "deal") assert.ok(v.text.includes(r.short[0]), `${r.id} ${platform} keeps the deal headline and its caveats`);
     }
@@ -127,6 +129,8 @@ test("sentence split keeps time zones with their times and never loses text", ()
   assert.deepEqual(sentences("Arrive at 1 p.m. to see animals. Then lights at 4 p.m. Doors close at 9 p.m. PT."), ["Arrive at 1 p.m. to see animals.", "Then lights at 4 p.m.", "Doors close at 9 p.m. PT."]);
   assert.deepEqual(sentences("Open until 10 a.m. Saturday, November 7. Then it closes."), ["Open until 10 a.m. Saturday, November 7.", "Then it closes."], "a day name after a.m. continues the sentence");
   assert.deepEqual(sentences("Doors at 6 p.m. December 3 only. Bring a coat."), ["Doors at 6 p.m. December 3 only.", "Bring a coat."], "a month name after p.m. continues the sentence");
+  assert.deepEqual(sentences("Shown in the Enid A. Haupt Conservatory. Open daily."), ["Shown in the Enid A. Haupt Conservatory.", "Open daily."], "a middle initial does not end a sentence");
+  assert.deepEqual(sentences("Near St. Louis and Mt. Vernon. Bring a coat."), ["Near St. Louis and Mt. Vernon.", "Bring a coat."], "St./Mt. do not end a sentence");
   const lottery = buildQueue("2026-11-04", { records: [fixtureEvent], previous: () => null });
   assert.equal(lottery.entries.length, 0, "no post on the day a 3 p.m. deadline closes");
   for (const r of sourceRecords()) for (const f of r.full) assert.equal(sentences(f).join(" "), f);
