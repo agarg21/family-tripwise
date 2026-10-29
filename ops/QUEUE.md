@@ -2,11 +2,13 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
-## G13 Page quality: every deploy, weekly, on demand (owner 2026-10-29)
-open · M · owner: none (og batch needs O6) · gate: none (Q11 done 2026-10-29, 278dc70)
-Step 1 done 2026-10-29 (7071aa5): tools/site-quality.mjs + test on every deploy, ratchet baseline tools/site-quality-baseline.json (fails on regressions and new pages; --write-baseline refuses regressions). Gaps: 9 v1 deal pages (G11), hotel photos below the fold, og (O6). Carry P3s: empty-table check (td opening with a tag; th-only table), nested sections skip outer text, --accept takes the next arg blindly.
-Pages with no photo (from Q11): about, contributors/miles-rowan, privacy, terms, /this-week/, /deals/ hub and all 10 deal pages, DC and Boston itineraries. Photos are self-hosted via tools/images/commons-images.json (add a file there; the self-host-images workflow on a q/* branch downloads it; generation fails on an unlisted Commons image).
-Next: 2) Weekly (first run on Mondays): one site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, and a persona review (docs/plan/page-quality-rubric.md) of pages changed since their last review plus the top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE. No automatic page edits. 3) On demand: when OWNER.md asks "review <page or all>", do it next.
+## G14 Photo at the top and link previews on every page (owner 2026-10-29)
+open · M · owner: D4/D17/D18 Approved (batches ok) · gate: none; before G13 step 2
+og part: branch q/G13-og, persona 3.93 FAIL (fixes: ops/runs 10-29). 36 of 52 pages have no photo above the fold (owner saw London: its only photo is near the bottom); 0 have og tags. In batches of ≤12 pages per release: add or move a credited, self-hosted hero photo into the hero (Commons, free-license stock or media-kit per D17; tools/images/commons-images.json + self-host workflow), and og/twitter tags with a self-hosted og:image. Persona review per batch; baseline gaps close.
+
+## G13 Page quality: weekly and on demand
+open · M · owner: none · gate: none
+Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet baseline (tools/site-quality-baseline.json). Carry P3s: empty-table check edge cases; nested sections skip outer text; --accept takes the next arg blindly. Next: 2) Weekly (first Monday run): site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, persona review (docs/plan/page-quality-rubric.md) of pages changed since last review + top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE; no automatic edits. 3) On demand: OWNER.md "review <page or all>" goes next.
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
@@ -19,9 +21,9 @@ Step 1 done 2026-10-29 (b32bd32): Beaches page v2 (validateDealV2; hero photo; o
 Step 2 done 2026-10-29 (1a3c8e8): v2 post text + photo card from validated v2.post; `social-queue.mjs <date> --refresh`. Persona 4.07.
 Next: 3) after O7: v2 (page + post block) for the other deal checks, longest-lived first (Club Med, SeaWorld, Atlantis, LEGOLAND), ≤3 pages per release, then --refresh current queues; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes). Carry P3s: related-deal hedges smaller grey; phone photo pushes verdict below first screen; desktop h2s big; validateQueue: cap image.alt at 500; FB text 392 chars (aim ~350); card lacks "older visitor photo" note.
 
-## G12 Trip-cost data for the glance test (research; owner decision)
-open · S · owner: needs O5 for any signup/spend · gate: none
-Find legitimate sources for "3–4 days for 2 adults + 2 kids from NYC": flight fares and resort/hotel rates on named dates without automating booking engines (published fares/rates pages; price APIs such as Amadeus/Duffel/Travelpayouts; DataForSEO Google Hotels/Flights endpoints under D8). Compare cost, terms, freshness, coverage; record docs/research/trip-cost-sources-YYYY-MM-DD.md; ask O5 with a recommendation.
+## G12 Trip-cost data for the glance test
+open · M · owner: O5 pending · gate: O5 Approved
+Research done 2026-10-29: docs/research/trip-cost-sources-2026-10-29.md (flights: SerpApi Google Flights; hotels: DataForSEO Google Hotels; cruises/parks: official fares). Build a price-request workflow (secrets only in Actions, dated receipts) and the "about $X normally, about $Y with the deal" line (estimate; party, ages, dates, NYC gateway, observed date). Check the unknowns listed there first.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
