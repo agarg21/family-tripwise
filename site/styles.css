@@ -1659,7 +1659,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 
 /* G14: credited orientation photo at the top of the page (resized and cropped to a banner). */
 main figure.hero-photo { margin: 18px 0 0; max-width: none; }
-main figure.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 6; max-height: 340px; object-fit: cover; border-radius: 8px; box-shadow: none; }
+main figure.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 5; max-height: 230px; object-fit: cover; border-radius: 8px; box-shadow: none; }
 main figure.hero-photo figcaption { margin-top: 6px; color: var(--muted); font-size: 0.8rem; line-height: 1.4; }
 main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 @media (max-width: 600px) { main figure.hero-photo img { aspect-ratio: 16 / 8; } }

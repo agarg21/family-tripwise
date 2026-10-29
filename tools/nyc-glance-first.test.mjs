@@ -20,7 +20,7 @@ test("comparisons precede the photo and detailed cards without repeated starter 
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="nyc-hotel-1"'));
   assert.doesNotMatch(html, /Trip-style starts|Hotels covered|Choose the room function before the hotel brand/);
   assert.match(html, /href="\.\/new-york-city-with-kids.html">Compare stay areas/);
-  assert.match(html, /alt="Central Park and the New York City skyline\."[^>]+loading="eager"/);
+  assert.match(html, /alt="A cast-iron bridge among trees in Central Park, New York City\."[^>]+loading="eager"/);
 });
 
 test("full price basis occurs once and every price card retains dated caution and direct access", () => {

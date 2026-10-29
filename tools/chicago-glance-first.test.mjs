@@ -17,7 +17,7 @@ test("Chicago comparison leads the licensed image and all hotel details", () => 
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="chicago-hotel-1"'));
   assert.doesNotMatch(html, /Trip-style starts|Hotels covered|Let the room setup and first two days choose the hotel/);
   assert.match(html, /href="\.\/chicago-with-kids.html">Compare Chicago stay areas/);
-  assert.match(html, /alt="Millennium Park and the Chicago skyline at dusk\."[^>]+loading="eager"/);
+  assert.match(html, /alt="Pritzker Pavilion trellis and the Chicago skyline in Millennium Park\."[^>]+loading="eager"/);
   assert.match(html, /CC BY-SA 3\.0/);
 });
 

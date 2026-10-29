@@ -669,7 +669,7 @@ function lasVegasFamilyHotelPage() {
       </section>
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
-          <img src="../images/las-vegas-bellagio-fountains.webp" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="eager" fetchpriority="high" decoding="async">
+          <img src="../images/las-vegas-bellagio-fountains.webp" style="object-position:50% 80%" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Family Tripwise serves a resized copy, cropped to fit.</figcaption>
         </figure>
       </section>
@@ -993,7 +993,7 @@ function chicagoFamilyHotelPage() {
       </section>
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
-          <img src="../images/chicago-millennium-park.webp" alt="Millennium Park and the Chicago skyline at dusk." width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
+          <img src="../images/chicago-millennium-park.webp" alt="Pritzker Pavilion trellis and the Chicago skyline in Millennium Park." width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Family Tripwise serves a resized copy, cropped to fit.</figcaption>
         </figure>
       </section>
@@ -1633,7 +1633,7 @@ function newYorkCityFamilyHotelPage() {
       </section>
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
-          <img src="../images/new-york-city-central-park.webp" alt="Central Park and the New York City skyline." width="1280" height="894" loading="eager" fetchpriority="high" decoding="async">
+          <img src="../images/new-york-city-central-park.webp" alt="A cast-iron bridge among trees in Central Park, New York City." width="1280" height="894" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>. Resized and cropped to fit.</figcaption>
         </figure>
       </section>
