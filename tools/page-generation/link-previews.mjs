@@ -20,8 +20,6 @@ export const CARDS = {
 };
 
 export const photoCardPath = (slug) => `images/og/photos/${slug}.jpg`;
-// Typographic card per deal check without a v2 card: operator, category and the page's own title.
-export const dealCardPath = (id) => `images/og/deals/v1/${id}.png`;
 
 // Destinations by URL slug: the place name printed on that destination's photo cards, and the photo a
 // destination page without its own photo uses (the same credited photo its other pages show).
@@ -72,12 +70,7 @@ export function previewImage(html, pagePath) {
     const alt = `Photo of ${DESTINATIONS[dest].place} by ${photo.artist.split(" from ")[0]} (${photo.license})`;
     return { path: photoCardPath(DESTINATIONS[dest].photo), alt, width: 1200, height: 630, type: "image/jpeg" };
   }
-  const dealId = pagePath.match(/^deals\/([a-z0-9-]+)\.html$/)?.[1];
-  if (dealId && dealId !== "index" && existsSync(new URL(`../../site/${dealCardPath(dealId)}`, import.meta.url))) {
-    const text = JSON.parse(readFileSync(new URL("../images/og-deal-cards.json", import.meta.url), "utf8"))[dealId];
-    if (!text) throw new Error(`link preview: ${dealCardPath(dealId)} has no entry in tools/images/og-deal-cards.json (re-render it)`);
-    return { path: dealCardPath(dealId), alt: `Family Deal Check: ${text.title}. ${text.line}`, width: 1200, height: 630, type: "image/png" };
-  }
+  // Deal checks without a v2 card (their own og tags) use the evergreen /deals/ card (owner D19 rolls v2 out).
   const card = cardFor(pagePath);
   return { path: card.path, alt: card.alt, width: 1200, height: 630, type: "image/png" };
 }

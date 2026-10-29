@@ -1,7 +1,7 @@
 // Link-preview tags on every sitemap page (owner D18, QUEUE G13; tools/page-generation/link-previews.mjs).
 import test from "node:test";
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { linkPreviewTags, previewImage } from "./page-generation/link-previews.mjs";
@@ -75,11 +75,11 @@ test("photo pages use their own first photo; pages without one use the section c
   assert.throws(() => linkPreviewTags(html.replace("familytripwise.com/about", "example.com/about"), "about.html", site), /not on familytripwise/);
 });
 
-test("destination pages without their own photo use that destination's photo; deal checks use their own card", () => {
+test("destination pages without their own photo use that destination's photo; deal checks without a v2 card use the evergreen deals card", () => {
   const img = (page) => readFileSync(join(site, page), "utf8").match(/og:image" content="([^"]*)"/)[1];
   assert.equal(img("family-itinerary/washington-dc-with-kids.html"), `${ORIGIN}images/og/photos/washington-dc-national-mall.jpg`);
   assert.equal(img("family-itinerary/boston-with-kids.html"), `${ORIGIN}images/og/photos/boston-skyline.jpg`);
-  assert.equal(img("deals/royal-caribbean-kids-sail-free.html"), `${ORIGIN}images/og/deals/v1/royal-caribbean-kids-sail-free.png`);
+  assert.equal(img("deals/royal-caribbean-kids-sail-free.html"), `${ORIGIN}images/og/deals.png`);
   assert.equal(img("deals/index.html"), `${ORIGIN}images/og/deals.png`);
   for (const url of urls) {
     const page = pathOf(url);
@@ -88,14 +88,9 @@ test("destination pages without their own photo use that destination's photo; de
   }
 });
 
-test("each per-deal card's recorded text still matches its deal record and quotes the page", async () => {
-  const { dealCardText } = await import("./page-og-images.mjs");
-  const { readDealChecks } = await import("./page-generation/deals-pages.mjs");
-  const cards = JSON.parse(readFileSync(new URL("./images/og-deal-cards.json", import.meta.url), "utf8"));
-  for (const check of readDealChecks().filter((c) => !c.v2)) {
-    if (!existsSync(join(site, `images/og/deals/v1/${check.id}.png`))) continue;
-    assert.deepEqual(cards[check.id], dealCardText(check), `${check.id}: card text is stale; re-render with node tools/page-og-images.mjs --force`);
-    const quote = cards[check.id].line.replace(/^The catch: /, "");
-    if (quote !== cards[check.id].line) assert.ok(check.headline.toLowerCase().includes(quote.toLowerCase().replace(/\$(\d)/g, "USD $1")) || check.headline.toLowerCase().includes(quote.toLowerCase()), `${check.id}: catch is not quoted from the page`);
+test("no per-deal v1 cards: dated deal text lives only on v2 cards, which expire with their page", () => {
+  assert.equal(existsSync(join(site, "images/og/deals/v1")), false);
+  for (const file of readdirSync(join(site, "deals")).filter((f) => f.endsWith(".html"))) {
+    assert.doesNotMatch(readFileSync(join(site, "deals", file), "utf8"), /images\/og\/deals\/v1\//, file);
   }
 });

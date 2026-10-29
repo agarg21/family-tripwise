@@ -3,16 +3,16 @@
 // - Photo cards: each self-hosted photo (tools/images/commons-images.lock.json) cropped to 1200x630
 //   JPEG with a small credit strip (author, licence, "cropped"). Same free-licence photo the pages
 //   already show and credit; never an AI image or promotional art.
-// - Typographic cards (PNG) for pages without a photo: the site, /deals/, /this-week/ and each deal check
-//   without a v2 card. No dates or verdicts, so they never go stale.
+// - Typographic cards (PNG) for pages without a photo: the site, /deals/ (also used by deal checks without
+//   a v2 card; v2 cards come from tools/deal-og-images.mjs) and /this-week/. No dates or verdicts, so they
+//   never go stale.
 // Text that does not fit is refused, not cropped. Existing files are kept unless --force.
-// Usage: node tools/page-og-images.mjs [--force]
+// Usage: node tools/page-og-images.mjs [--force] [--only=images/og/deals.png]
 import { createRequire } from "node:module";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CARDS, DESTINATIONS, dealCardPath, destinationOf, photoCardPath } from "./page-generation/link-previews.mjs";
-import { readDealChecks } from "./page-generation/deals-pages.mjs";
+import { CARDS, DESTINATIONS, destinationOf, photoCardPath } from "./page-generation/link-previews.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -47,29 +47,9 @@ export function photoCardHtml(slug) {
 
 const TEXT = {
   site: { kicker: "Family trip planning by city", title: "Where to stay, what to do and what it costs with kids", line: "Checked against official sources, with dates" },
-  deals: { kicker: "Family Deal Checks", title: "Family travel deals, checked: what you get and the catch", line: "Book-by dates and fine print, checked on each company's own offer page" },
+  deals: { kicker: "Family Deal Checks", title: "Family travel deals, checked: what you get and the catch", line: "Deadlines and fine print, checked on each company's own offer page" },
   "this-week": { kicker: "This week for families", title: "Family events and deals worth knowing about this week", line: "Each item checked on its official page, with an end date" }
 };
-
-// Per-deal card for deal checks without a v2 card: category, operator, the page's own <h1> title
-// (amounts as "$") and its catch, quoted from the page's "In short" line (check.headline). No dates of
-// its own or verdicts. A catch that cannot be cut cleanly to one short clause falls back to a neutral line.
-export function dealCatch(headline) {
-  const m = headline.match(/,? but (.+)$/) || headline.match(/; (.+)$/);
-  if (!m) return null;
-  const clause = m[1].split(/, and |; | and the |, (?:state|do|the|sailings) /)[0].replace(/\.$/, "");
-  return clause.length > 100 ? null : clause;
-}
-
-export function dealCardText(check) {
-  const c = dealCatch(check.headline);
-  return {
-    kicker: `Family Deal Check · ${check.category}`,
-    title: check.title.replace(/USD\s?(\d)/g, "$$$1"),
-    line: c ? `The catch: ${c.replace(/USD\s?(\d)/g, "$$$1")}` : "The offer, the catch and the dates, checked on the official page",
-    deal: true
-  };
-}
 
 export function textCardHtml(id, text = TEXT[id]) {
   const t = text;
@@ -81,14 +61,10 @@ export function textCardHtml(id, text = TEXT[id]) {
   .kicker { font-size: 28px; color: #126c67; font-weight: 800; }
   h1 { font-size: 54px; line-height: 1.15; margin-top: 22px; }
   .line { font-size: 26px; line-height: 1.35; margin-top: 26px; color: #0b4946; font-weight: 700; }
-  body.deal { grid-template-columns: 220px 1fr; }
-  body.deal h1 { font-size: 54px; }
-  body.deal .line { font-size: 34px; color: #142029; background: #f0bd56; border-radius: 12px; padding: 12px 18px; }
-  body.deal .main { padding: 44px 52px 38px; }
   .brand { margin-top: auto; font-size: 30px; font-weight: 800; border-top: 3px solid #142029; padding-top: 16px; }
   .brand b { color: #126c67; }
-  </style></head><body class="${t.deal ? "deal" : ""}">
-  <div class="mark">${t.deal ? logo.replace('width="190" height="190"', 'width="150" height="150"') : logo}</div>
+  </style></head><body>
+  <div class="mark">${logo}</div>
   <div class="main" data-fit><p class="kicker">${e(t.kicker)}</p><h1>${e(t.title)}</h1><p class="line">${e(t.line)}</p><p class="brand">family<b>tripwise</b>.com</p></div>
   ${FIT}</body></html>`;
 }
@@ -99,15 +75,13 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const browser = await chromium.launch();
   const jobs = [
     ...Object.keys(lock).filter((slug) => destinationOf(slug)).map((slug) => ({ out: photoCardPath(slug), html: () => photoCardHtml(slug), type: "jpeg" })),
-    ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" })),
-    ...readDealChecks().filter((check) => !check.v2).map((check) => ({ out: dealCardPath(check.id), html: () => textCardHtml(null, dealCardText(check)), type: "png", deal: check }))
+    ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" }))
   ];
-  // Text of each per-deal card, so tests can tell when a card no longer matches its deal record.
-  const manifestPath = join(root, "tools/images/og-deal-cards.json");
-  const manifest = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "utf8")) : {};
+  const only = process.argv.find((a) => a.startsWith("--only="))?.slice(7);
   let failed = 0;
   for (const job of jobs) {
     const out = join(root, "site", job.out);
+    if (only && job.out !== only) continue;
     if (existsSync(out) && !force) { console.log(`kept ${job.out}`); continue; }
     const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
     await page.setContent(job.html(), { waitUntil: "load" });
@@ -115,10 +89,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     mkdirSync(dirname(out), { recursive: true });
     await page.screenshot({ path: out, type: job.type, ...(job.type === "jpeg" ? { quality: 82 } : {}), clip: { x: 0, y: 0, width: 1200, height: 630 } });
     await page.close();
-    if (job.deal) manifest[job.deal.id] = dealCardText(job.deal);
     console.log(`rendered ${job.out}`);
   }
   await browser.close();
-  writeFileSync(manifestPath, `${JSON.stringify(Object.fromEntries(Object.entries(manifest).sort()), null, 2)}\n`);
   if (failed) process.exit(1);
 }
