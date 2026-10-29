@@ -7,6 +7,10 @@ Owner's verdict on the first Facebook post and the Beaches deal page: bland and 
 - No reader (persona) review was done; only a technical/integrity review.
 - Travel pages need good images.
 
+Owner follow-up (same day): "Beaches gives you a $135 credit…" still fails, because a parent does not know what Beaches is. Pages must make sense to regular people with no context about the company: in one glance, where it is and what kind of trip, roughly what 3–4 days cost from a city like NYC, and how much they save. Later sections: kid/family things to do there, and pros and cons. These rules now live in AGENTS.md (Content Standard) and apply to every page and post, not only deals.
+
+Example context line: "Beaches Resorts: all-inclusive family resorts in Jamaica and Turks & Caicos (Caribbean)", verified on beaches.com before use.
+
 Evidence integrity rules are unchanged (AGENTS.md): verified facts only, no invented prices or totals, dated sources. v2 changes how we present and explain, not what we are allowed to claim.
 
 ## Page order (v2)

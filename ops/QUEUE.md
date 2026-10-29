@@ -2,6 +2,14 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
+## Q11 LIVE DEFECT: self-host every page image
+open · M · owner: D4 Approved (self-hosted heroes) · gate: none; do first
+Commons hotlinks (commons.wikimedia.org Special:Redirect) answer HTTP 429 to visitors (checked 2026-10-29, orlando-with-kids), so images are missing site-wide. Download each Commons original once, resize to WebP ≤200 KB in site/images/, keep author/licence/source caption, width/height, fetchpriority="high" on the hero; no hotlinked images anywhere (add a test). Then list pages with no image at all (deals, Boston/DC itineraries, old SD pages) for G13.
+
+## G13 Scalable page-quality system
+open · M · owner: none · gate: after Q11
+1) tools/page-quality.mjs + test in the deploy checks: every public page has a self-hosted hero with alt and credit, og:image, a glance block (AGENTS.md Content Standard), no placeholder sections, dated sources. 2) A persona-review ledger (ops/page-reviews.json: page, date, persona scores, issues); a recurring run reviews 3 pages a day, highest impressions or lowest score first; failing pages get fix items. 3) Benchmark: things-to-do/san-diego-with-kids.html is the owner's reference for quality (rubric: docs/plan/page-quality-rubric.md). 4) Weekly scores in STATE.
+
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead, never a fact. If the push conflicts in flags.json (the hourly watcher updated it), merge (never rebase) and keep the watcher's other flags.
@@ -9,17 +17,20 @@ Carry P3s: a skipped (under-55-min) watch run counts as the previous run, so the
 
 ## G11 Deal content v2 + persona review (posting paused, D12)
 open · M · owner: D11/D15 Approved · gate: none; do first
-Spec: docs/plan/deal-content-v2.md (plain headline, verdict, what you get, good deal?, catch, how-to; methodology last; no "not observed" section; og tags; post and card v2; persona review gate). Beaches first, persona review, owner review (OWNER.md), then all deal checks. Images per O4.
+Apply AGENTS.md Content Standard (glance test, page order, posts, persona review) per docs/plan/deal-content-v2.md: context line, plain headline, verdict, cost and savings for 4 (from G12 data when available; otherwise what the offer publishes, no invented totals), what you get, catch, how-to, things to do, pros/cons, terms, methodology last; og tags; post and card v2. Beaches first, persona review, owner review via OWNER.md, then all deal checks. Images per O4.
+
+## G12 Trip-cost data for the glance test (research; owner decision)
+open · S · owner: needs O5 for any signup/spend · gate: none
+Find legitimate sources for "3–4 days for 2 adults + 2 kids from NYC": flight fares and resort/hotel rates on named dates without automating booking engines (published fares/rates pages; price APIs such as Amadeus/Duffel/Travelpayouts; DataForSEO Google Hotels/Flights endpoints under D8). Compare cost, terms, freshness, coverage; record docs/research/trip-cost-sources-YYYY-MM-DD.md; ask O5 with a recommendation.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
 Built on main 16e5ad8 (API facts: docs/research/zernio-api-2026-10-29.md). First live post 2026-10-29: Facebook, Beaches (receipt in ops/social-receipts/2026-10-29). Instagram not yet connected in Zernio (owner, later today); Threads/Pinterest not connected (paid seats). 6172a5a: runs log/summarise `not_connected` platforms. Remaining: check the first Instagram post once connected, then remove the direct Meta/Pinterest paths and secrets. Carry P3s: Zernio `publishing`/`scheduled` results are recorded failed (never retried); tests for kill switch/expiry/409 on the Zernio route.
 
 ## G09 Deal fast lane: first, verified, worth sharing
-open · L · owner: D15 Approved · gate: none
-Step 1 done 2026-10-29 (8daaacb): .github/workflows/deal-watch.yml + tools/deal-watch.mjs watch 17 official pages (ops/deal-watch/sources.json) hourly at :23; flags go to G09w. No deal-watch run had appeared by 13:40 UTC Oct 29: check the first live runs (baseline status per source, noise). Step 2 done 2026-10-29 (d3f7909): every check needs a validated `score` (validateDealScore; family value only from an observed 2+2 total vs a same-day higher regular price; worth_it needs it; urgency derived by dealUrgency; novelty search with links); only worth_it/only_for are queued (shareable). All 10 current checks are only_for (no observed family math); record docs/research/deal-scores-2026-10-29.md. New checks (G05/G09w) must include a score. Next: steps 3–4. Carry P3: operator-domain novelty check uses the last two host labels (fix before a .co.uk-style operator).
-1) Detect: a scheduled GitHub Action (no secrets) checks the tracked official deal pages hourly (robots.txt honored, at most 1 fetch per URL per hour, never bypass blocks), stores a hash and extracted headline per URL under ops/deal-watch/, and on a change commits a flag the next operator run takes before other work. 2) Score each verified deal in its record: family value (savings vs the regular price for 2 adults + 2 kids, from observed prices only), appeal (how many families it fits; brand/destination pull), urgency (book-by, sell-out), novelty (first seen? already covered by major deal sites or news, from a quick search, with links), and a verdict: Worth it / Only for <who> / Skip. Only Worth it and Only-for go to social. 3) Same day: a worthy deal gets an entry in today's queue at the next slot (regenerate today's queue; caps hold). Target: official launch to post within about 4 hours. 4) Content is the product (owner 2026-10-29): verdict first, then the family math (real cost for 2 adults + 2 kids on named dates vs the regular price, only from observed prices), who it is for and not for, the catch (blackouts, ages, fees), and the book-by date; card + post + the deal check page all carry the same verified numbers. Scope: OWNER D16.
-Acceptance: watcher live with tests; scoring fields validated in deal-checks.json; one same-day end-to-end dry run; reviewer PASS.
+open · L · owner: D15/D16 Approved · gate: none
+Done 2026-10-29: step 1 watch (8daaacb; 17 official pages hourly, flags to G09w; check the first live runs for noise) and step 2 scoring (d3f7909; validateDealScore; only worth_it/only_for queued; all 10 checks only_for until observed family cost exists, see G12). Next, step 3: a verified worthy deal gets an entry in today's queue at the next slot (regenerate today's queue; caps hold); target launch-to-post about 4 hours. Content per AGENTS.md Content Standard. Carry P3: novelty check uses the last two host labels (fix before a .co.uk-style operator).
+Acceptance: one same-day end-to-end dry run; reviewer PASS.
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
@@ -35,11 +46,6 @@ open · S · owner: D4e Approved · gate: none
 Done: Q09a (25d73a7), Q09b (228eaac), Q09c slices Boston (cb5745a), DC (1bdac05), PV (4e357c1), Cancun (575d512), London (1e03f62), Orlando (ccf65d8): each dated hotel amount shown once, provenance in collapsed details.how-checked blocks.
 Remaining P3s: tall Cancellation/meals rows and rate-table captions cut off at 390 px (Boston, DC); PV next_checks comma runs ("Puerto Vallarta,Jalisco;", "18+,children 4-12,infants") not caught by run-together tests; PV Sanctuary visible block long; Cancun overview pointer wording kind-aware for Sapphire's undated two-adult rate; re-clicking a targeted "How we checked this price" link does not reopen a closed block; five identical Cancun link texts (add hotel name visually hidden); London "GBP"+amount nowrap at 390 px, scope .london-rate under .london-page, test compare e()-escaped plan names. Orlando: nightly-sample column is 4th of a 600px table (off-screen at 390; move to 2nd); sample-basis party text hardcoded (build from records); say "not complete checkout totals" visibly in the overview; "+ resort fees" cell has no amount pointer; stay-total captions identical (add hotel name); test gaps (shared USD270 line, plan terms in table, shared IHG source).
 Acceptance: fixes above; ≤3 public pages per release unless under D4e.
-
-## Q11 Self-host resized hero images
-open · S · owner: D4d Approved · gate: none
-Files: the 9 pages using commons.wikimedia.org Special:Redirect originals, plus site/images/.
-Acceptance: each hero ≤200 KB WebP served from familytripwise.com, attribution/licence caption kept, fetchpriority="high", no layout shift at 390 px.
 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
