@@ -19,12 +19,11 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D15 Deal fast lane (2026-10-29, owner) — Approved: be first with verified, worth-sharing family deals: hourly change watch on official deal pages, score each deal (family value, appeal, urgency, already covered?), post worthy ones at the next slot the same day. Accuracy still beats speed.
 - D16 Deal scope (2026-10-29, owner) — Approved: US, Mexico/Caribbean and cruises from US ports first; Europe only when the family math is exceptional; revisit later.
 - D17 Images (2026-10-29, owner) — Approved: credited free-license stock photos and official media-kit photos where terms allow editorial use; self-hosted; never AI photos of real places.
+- D18 Link-preview tags (2026-10-29, owner) — Approved: one batch adding og/twitter tags to all pages. O2 answered No: remove the Nov 8-13 samples by Nov 7 (Q17b).
 
 ## Owner tasks (operator cannot do these)
 - T1/T2 done (GSC resubmit 10-27; YouTube impersonation report UCL8YHu5h_XiSTQhZJuCDmtA 10-28; do not repeat).
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O2 (10-28) Hand-check the Nov 8-13 hotel samples (Q17b) by Nov 2? Rec: No; the operator removes them by Nov 7.
-- O6 (10-29) Only v2 deal pages have og tags. Add them to all pages in one batch? Rec: Yes.
 - O7 (10-29) Beaches deal page is live in v2 layout. Roll v2 out to the other deal pages, ≤3 per release? Rec: Yes.
