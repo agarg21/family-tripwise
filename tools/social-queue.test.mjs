@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { easternDate } from "./page-generation/sitemap.mjs";
+import { longDate } from "./page-generation/deals-pages.mjs";
 import {
   root, queueFiles, readQueue, validateQueue, buildQueue, sourceRecords, variants, sentences, easternTime,
   DAILY_CAPS, LIMITS, PLATFORMS, MAX_OBSERVATION_AGE_DAYS, unitCap,
@@ -110,7 +111,7 @@ test("post text is copied from the record: every paragraph is a title, record fi
       for (const para of v.text.split("\n\n")) {
         const ok = fields.includes(para)
           || para === `Checked on the official page ${para.slice(29).split(":")[0]}: ${r.source_label}.`
-          || (platform === "threads" && /^Checked on the official page [A-Z][a-z]+ \d{1,2}\.$/.test(para))
+          || (platform === "threads" && para === `Checked on the official page ${longDate(r.observed_on).replace(/, \d{4}$/, "")}.`)
           || /^Details and the official link: familytripwise\.com\/(deals|this-week)$/.test(para)
           || /^(#\w+ ?)+$/.test(para);
         assert.ok(ok, `${r.id} ${platform}: "${para}" is not from the record`);
