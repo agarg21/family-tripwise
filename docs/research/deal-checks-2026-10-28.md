@@ -132,3 +132,25 @@ Published as a Family Deal Check with expires_on 2026-12-31 (no purchase deadlin
 | Ages | None stated for either offer; under Free at Sea, guests 3–8 under 21 get no beverage package |
 | Combining | Each: "combinability with other promotional offers is subject to change at any time"; no sentence on combining the two |
 | Family total | Not observed (no booking-engine search) → "check live" |
+
+## Late-night addition (2026-10-28, ~23:15 ET): MSC Cruises
+
+| Offer | Official URL | Fetched | Notes |
+|---|---|---|---|
+| Up To 35% Off Cruises + Kids Sail Free (consumer page) | https://www.msccruisesusa.com/cruise-deals/cruise-from-199-plus-onboard-credit | 2026-10-28 (WebFetch, once) | Surfaced by WebSearch on msccruisesusa.com. robots.txt returned an "Unauthorized" bot page to a plain request (not bypassed); the pages were read through the fetch tool, as in the inventory record row 6 |
+| Promotional terms and conditions | https://www.msccruisesusa.com/cruise-deals/promo-terms-and-conditions | 2026-10-28 (WebFetch; second prompt served from the tool's 15-minute cache) | Holds the dated terms |
+| Not fetched: Hyatt Inclusive Collection Kids Stay Free | https://www.hyattinclusivecollection.com/en/special-offers/kids-stay-free/ | refused | robots.txt Access Denied (Akamai) and the fetch tool got a client error; not retried. The Aug 2026 offer (book by Sept 30) has ended per third-party reports; no current official terms read |
+
+| Field | Observed value | Change vs inventory row 6 |
+|---|---|---|
+| Consumer page | "UP TO 35% OFF CRUISES* + KIDS SAIL FREE*", "LIMITED-TIME OFFER", "OFFER ENDS NOVEMBER 2" (no year); "See applicable promotional Terms and Conditions. Restrictions apply." | same headline and Nov 2 date |
+| Terms dates | "Up To 35% Off Cruises + Kids Sail Free": effective October 20, 2026, expiration November 5, 2026 | new; conflicts with the Nov 2 consumer date (we list Nov 2 and note Nov 5) |
+| Kids | "Kids seventeen years old and under sail free on select sailings as 3rd/4th guests" and "must still pay government fees and taxes" | new (row 6 had no ages) |
+| Discount | Applies to the first and second passengers only; per person, double occupancy, USD; MSC Yacht Club staterooms excluded | new |
+| Eligibility | US residents, new bookings only, not group bookings; capacity controlled; Kids Sail Free can be withdrawn without notice | new |
+| Taxes | "Government fees and taxes are included in the price"; port charges and service charges/gratuities not mentioned | new |
+| Deposit | USD 99 pp (0–4 nights), USD 199 pp (5–14), USD 300 pp (15+) | new |
+| Combining | Not combinable with other promotions; one Voyagers Selection, Civil Service, Military, Senior or Interline discount per stateroom | new |
+| Code | None; ask for "ESCAPE TO SEA CRUISE ONLY" promotion | new |
+| Sailings | "Select sailings"; no sailing window stated | same |
+| Family total | Not observed (no booking-engine search) → "check live" | — |

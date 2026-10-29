@@ -8,7 +8,7 @@ test("generated Orlando hub is exact, one new canonical and reachable",()=>{
   const html=orlandoActivityPage();assert.equal(read('site/'+activityPath),html);
   assert.equal((html.match(/rel="canonical"/g)||[]).length,1);
   assert.match(html,new RegExp(`https://familytripwise.com/${activityPath}`));
-  assert.equal((read('site/sitemap.xml').match(/<loc>/g)||[]).length,49);
+  assert.equal((read('site/sitemap.xml').match(/<loc>/g)||[]).length,50);
   assert.equal(read('site/sitemap.xml').split(`https://familytripwise.com/${activityPath}`).length-1,1);
   assert.ok(read('site/index.html').includes(activityPath));
   const out=new Map();writeOrlandoActivityPage((p,s)=>out.set(p,s));assert.equal(out.size,3);assert.equal(out.get(activityPath),html);

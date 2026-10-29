@@ -243,6 +243,43 @@
       "observed_on": "2026-10-28",
       "expires_note": "this is the Free 2nd Guest booking deadline; the free 3rd and 4th guest offer has no stated end date",
       "expires_on": "2026-11-02"
+    },
+    {
+      "id": "msc-cruises-35-off-kids-sail-free",
+      "operator": "MSC Cruises",
+      "category": "Cruise",
+      "title": "MSC Cruises up to 35% off with kids 17 and under sailing free as 3rd and 4th guests",
+      "headline": "MSC's sale takes up to 35% off for guests 1 and 2, and kids 17 and under sail free as 3rd and 4th guests on select sailings, but the kids still pay government fees and taxes, the sailings are not listed, and the deals page and the terms give different end dates (November 2 and November 5, 2026).",
+      "family_of_four": "For two adults and two children 17 or under in one stateroom, the terms say the up to 35% discount applies to guests 1 and 2 only, and the children can sail free as the 3rd and 4th guests on select sailings, but they must still pay government fees and taxes. Rates are per person, based on double occupancy, in USD, for US residents on new bookings only (not group bookings). The terms do not mention port charges or onboard service charges (gratuities), and MSC Yacht Club staterooms are excluded. Book by November 2 to be safe: the deals page says the offer ends November 2, while the promotional terms list an expiration of November 5, 2026.",
+      "terms": [
+        ["Book by", "The deals page says \"Offer ends November 2\" (no year). The promotional terms list the promotion as effective October 20, 2026 and expiring November 5, 2026."],
+        ["Travel window", "Select sailings; no sailing dates are stated."],
+        ["Child ages", "Kids 17 and under sail free on select sailings as 3rd and 4th guests and must still pay government fees and taxes. The terms say Kids Sail Free can be withdrawn without notice."],
+        ["Discount", "Up to 35% off, applied to the first and second passengers only. Rates are per person, based on double occupancy, in USD. MSC Yacht Club staterooms are excluded."],
+        ["Who can book", "US residents, new bookings only; not valid for group bookings. Capacity controlled and subject to availability."],
+        ["Taxes and fees", "The terms say government fees and taxes are included in the price, and that sail-free kids must still pay them. Port charges and onboard service charges are not mentioned."],
+        ["Deposit", "USD 99 per person for 0 to 4 night sailings, USD 199 for 5 to 14 nights, USD 300 for 15+ nights."],
+        ["Combining offers", "Not combinable with other promotions; one MSC Voyagers Selection, Civil Service, Military, Senior or Interline discount may apply per stateroom."],
+        ["Promo code", "None shown; the terms say to ask for the \"ESCAPE TO SEA CRUISE ONLY\" promotion when booking."]
+      ],
+      "unclear": [
+        "Which sailings carry Kids Sail Free is not listed.",
+        "Whether the free 3rd and 4th guests need guests 1 and 2 at a particular fare is not stated.",
+        "Port charges and onboard service charges (gratuities) for the children are not mentioned in the promotion terms.",
+        "The deals page (November 2) and the promotional terms (November 5, 2026) give different end dates."
+      ],
+      "before_booking": [
+        "Price your sailing for all four guests and check that guests 3 and 4 show a free fare before you pay.",
+        "Ask for the total government fees and taxes, port charges and onboard service charges for each child.",
+        "Book by November 2 if you want this sale, since the two official pages disagree on the end date.",
+        "Compare the per-family total with other cruise lines rather than the percentage off."
+      ],
+      "family_total": null,
+      "official_url": "https://www.msccruisesusa.com/cruise-deals/promo-terms-and-conditions",
+      "source_label": "MSC Cruises USA promotional terms and conditions",
+      "observed_on": "2026-10-28",
+      "expires_note": "the date on MSC's deals page; the promotional terms list November 5, 2026",
+      "expires_on": "2026-11-02"
     }
   ]
 }

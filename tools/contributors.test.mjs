@@ -36,7 +36,7 @@ test("Miles profile is generated, linked and honest about AI and historical attr
 
 test("supporting profile inventory is complete without attributing non-guide pages", () => {
   const inventory = JSON.parse(readFileSync("ops/gsc-monitor.json", "utf8"));
-  assert.equal(urls.length, 49);
+  assert.equal(urls.length, 50);
   assert.deepEqual([...urls].sort(), [...inventory.urls].sort());
   assert.equal(urls.filter(url => url.endsWith(`/${milesContributor.path}`)).length, 1);
   for (const path of ["index.html", "about.html", milesContributor.path]) {

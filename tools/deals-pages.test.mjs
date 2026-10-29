@@ -183,3 +183,17 @@ test("Norwegian check's November 2 date is scoped to the Free 2nd Guest sale, so
   const page = dealCheckPage(checks, n, "2026-11-03");
   assert.match(page, /free 3rd and 4th guest offer has no stated end date/);
 });
+
+test("MSC check keeps the record: Nov 2 deals-page date vs Nov 5, 2026 terms date, kids 17 and under as 3rd/4th guests pay government fees and taxes, discount on guests 1 and 2 only, no family total", () => {
+  const m = checks.find((c) => c.id === "msc-cruises-35-off-kids-sail-free");
+  assert.ok(m, "added 2026-10-28 late night (docs/research/deal-checks-2026-10-28.md)");
+  assert.equal(m.expires_on, "2026-11-02");
+  assert.match(m.expires_note, /November 5, 2026/);
+  assert.equal(m.family_total, null);
+  assert.equal(m.official_url, "https://www.msccruisesusa.com/cruise-deals/promo-terms-and-conditions");
+  assert.ok(m.terms.some(([l, v]) => l === "Book by" && /November 2/.test(v) && /November 5, 2026/.test(v)));
+  assert.ok(m.terms.some(([l, v]) => l === "Child ages" && /17 and under/.test(v) && /must still pay government fees and taxes/.test(v)));
+  assert.ok(m.terms.some(([l, v]) => l === "Discount" && /first and second passengers only/.test(v)));
+  assert.ok(m.unclear.some((u) => /Port charges and onboard service charges/.test(u)));
+  assert.match(m.headline, /kids still pay government fees and taxes/);
+});

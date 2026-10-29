@@ -40,7 +40,7 @@ test("About preserves metadata and URL inventory while correcting coverage", () 
   assert.match(html, /Cancun, Washington DC, Boston and Puerto Vallarta currently have lodging comparisons/);
   assert.match(html, /Coverage varies by destination/);
   const sitemap = readFileSync("site/sitemap.xml", "utf8");
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 49);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 50);
   assert.match(html, /href="\.\/contributors\/miles-rowan\.html"/);
   assert.equal((sitemap.match(/<loc>https:\/\/familytripwise\.com\/about\.html<\/loc>/g) || []).length, 1);
 });
