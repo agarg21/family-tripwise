@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=15
-run: {id: 2026-10-29T21:05:23Z, started_at: 2026-10-29T21:05:23Z}
-last_public_release: 1a3c8e8 (2026-10-29, G11 step 2: v2 deal post text and photo card; Beaches card live); last main code change 1a3c8e8
-active: {id: G14 (og part), branch: q/G13-og (8f4aea6), next: run a fresh persona review after dropping or upgrading the v1 deal cards (D19 v2 cards replace them) and adding the observed book-by line; integrity PASS_WITH_P3 x3, persona FAIL 3.3/3.6/3.93; do not merge until persona passes}
+today: 2026-10-29 transactions=16
+run: none
+last_public_release: c5fa555 (2026-10-29, G14 link previews on all 52 pages; evergreen per-deal cards); last main code change c5fa555
+active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -20,7 +20,7 @@ active: {id: G14 (og part), branch: q/G13-og (8f4aea6), next: run a fresh person
 - Sitemap lastmod for 21 pages unchanged since the 2026-10-15 import is an estimate (visible date or 2026-10-13 bound); it becomes observed the next time each page changes. No action needed.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11 (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 - Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
@@ -36,6 +36,7 @@ active: {id: G14 (og part), branch: q/G13-og (8f4aea6), next: run a fresh person
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-29 G14 link previews delivered c5fa555 (release.json + 81 changed files byte-identical live): og/twitter tags on all 52 pages; city photo cards; per-deal v1 cards replaced by evergreen cards (company · trip type, offer + catch, no dates; numbers tested against the observed headline); plainer RC/SeaWorld titles; queues 10-29/11-01 refreshed. Integrity FAIL(P2)→PASS_WITH_P3; persona 3.73→4.07→4.07 PASS.
 - 2026-10-29 G14/D18 og batch on branch q/G13-og, not merged: og/twitter tags on all 52 pages from the generators, 13 labelled destination photo cards, site/deals/this-week cards, per-deal cards quoting the page catch; tests 1393/0, seo-qa 0 errors, Playwright clean. Integrity PASS_WITH_P3 x3; persona FAIL after 3 cycles (3.3, 3.6, 3.93: deal cards lack date/$; "Free and free" RC title; SeaWorld catch reads like a note).
 - 2026-10-29 G09w (ops only, no site change): first live deal-watch run's 3 flags were all robots.txt refusals (beaches.com/specials 403; two msccruisesusa.com pages 401). Not retried; flags cleared; noted in G05 carry. 13 sources ok, 1 error.
 - 2026-10-29 G11 step 2 on main 1a3c8e8 (verified live: release.json, new Beaches card byte-identical): v2 deal posts (hook, verdict, catch, book-by, dated check; v2.post validated against terms) and photo card; `--refresh` re-renders a queue in place. Integrity FAIL(P2)→PASS_WITH_P3; persona 3.73→4.07→4.07 PASS.

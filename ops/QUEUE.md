@@ -2,9 +2,10 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
-## G14 Photo at the top and link previews on every page (owner 2026-10-29)
-open · M · owner: D4/D17/D18 Approved (batches ok) · gate: none; before G13 step 2
-og part: branch q/G13-og, persona 3.93 FAIL (fixes: ops/runs 10-29). 36 of 52 pages have no photo above the fold (owner saw London: its only photo is near the bottom); 0 have og tags. In batches of ≤12 pages per release: add or move a credited, self-hosted hero photo into the hero (Commons, free-license stock or media-kit per D17; tools/images/commons-images.json + self-host workflow), and og/twitter tags with a self-hosted og:image. Persona review per batch; baseline gaps close.
+## G14 Photo at the top of every page (owner 2026-10-29)
+open · M · owner: D4/D17 Approved (batches ok) · gate: none; before G13 step 2
+Link previews done (c5fa555). Remaining: 36 of 52 pages have no photo above the fold (owner saw London: its only photo is near the bottom). In batches of ≤12 pages per release: add or move a credited, self-hosted hero photo into the hero (Commons, free-license stock or media-kit per D17; tools/images/commons-images.json + self-host workflow). Persona review per batch; baseline gaps close.
+Carry P3s: "USD" in deal titles/RC body → "$" in D19 rollout; 4–5-line deal cards at phone width; London/Orlando meta-description jargon.
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
