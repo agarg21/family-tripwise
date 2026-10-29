@@ -2,12 +2,13 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=8
-run: {id: 2026-10-29T12:19:58Z, started_at: 2026-10-29T12:19:58Z}
-last_public_release: 9362611 (2026-10-29, G05: Nov 4 social queue + Threads check-line fix); last main code change 16e5ad8 (G08 Zernio posting, no site change)
+today: 2026-10-29 transactions=9
+run: none
+last_public_release: 9362611 (2026-10-29, G05: Nov 4 social queue + Threads check-line fix); last main code change 8daaacb (G09 hourly deal watch, no site change)
 active: none
 
 ## Holds (one line each: what, unblock condition)
+- Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
 - Cadence: the Oct 30 one-shot reminder to switch to every 4h (trig_01Ccfq2FQJBy7UbQGESFpLF8) is superseded by the owner's 2026-10-29 decision; ignore it. The 2026-12-08 reminder (trig_016a6JJcR9FqbUGzGbmr9ZXi) makes the switch.
 - /deals/ checks end Oct 31 (Beaches), Nov 1 (Great Wolf; year is our reading), Nov 2 (Royal Caribbean; NCL Free 2nd Guest, whose 3rd/4th-guest part has no stated end; MSC, whose terms say Nov 5), Nov 3 (Margaritaville at Sea), Nov 17 (LEGOLAND California hotel package), Nov 22 (Atlantis Fall Into Paradise; year is our reading), Dec 31 (SeaWorld Fun Card; no purchase deadline stated, re-observe weekly from Nov 4), Jan 6 (Club Med); tools/this-week.mjs re-renders deal pages daily too, and the committed deal pages must match today's render or tests fail.
 - /this-week/ items expire daily: the deploy workflow (daily 05:17 UTC) refreshes the live copy, but the committed site/this-week/index.html must be re-rendered (`node tools/this-week.mjs`, commit) on the first run each Eastern day or `node --test` fails the committed-page test. Next item expiry: Nov 4 (DC lottery).
@@ -35,6 +36,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-29 G09 step 1 on main 8daaacb (no site change): hourly watch of 17 official deal pages (robots.txt and Crawl-delay honored, ≥55 min between runs, blocked sources never retried unchanged); changes become flags in ops/deal-watch/flags.json that the new top QUEUE item G09w takes first. Reviewer FAIL (1 P1, 3 P2 fixed) then PASS_WITH_P3. First live runs not yet seen.
 - 2026-10-29 G08 Zernio posting on main 16e5ad8 (no site change): with ZERNIO_API_KEY, Facebook, Instagram, Threads and Pinterest post through Zernio to accounts looked up at run time; receipts, never-post-twice (plus Zernio Idempotency-Key), caps, expiry and D12 kill switch unchanged; simulated dry run 4/4 on the Nov 4 queue. Reviewer PASS_WITH_P3 (4 fixed, 3 carried). G08 stays open for the first live-post check.
 - 2026-10-29 G05 Nov 4 social queue delivered 9362611 (release.json; 3 new cards byte-identical live): first posts for NYBG train show, Universal holidays, EPCOT festival; 3 repeats skipped with reasons. Fixed: Threads posts now always end with the dated "Checked on the official page" line (5 queued posts had dropped it; short date-only form when a deal headline fills the space), and "Enid A. Haupt" no longer cut at the initial. Reviewer PASS_WITH_P3 (date-match test fixed).
-- 2026-10-29 G05 NYBG Holiday Train Show delivered c097184 (release.json; https://familytripwise.com/this-week/ byte-identical live): NYC item from NYBG's event page: Nov 14, 2026 – Jan 10, 2027 in the Haupt Conservatory plus an outdoor display; included in the All-Garden Pass; extended evenings to 8 p.m. on listed dates; sensory-friendly mornings Nov 21 and Jan 9, 9–11 a.m. No prices, age or stroller rules on the page, so none published. Reviewer PASS_WITH_P3 (all 3 fixed).
