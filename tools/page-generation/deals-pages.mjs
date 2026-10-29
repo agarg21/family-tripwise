@@ -162,8 +162,152 @@ export function validateDealChecks(checks, { today = easternDate() } = {}) {
       }
     }
     problems.push(...validateDealScore(check, { today }));
+    if (check.v2 !== undefined) problems.push(...validateDealV2(check, { today }));
   }
   return problems;
+}
+
+
+// G11 deal content v2 (AGENTS.md Content Standard, docs/plan/deal-content-v2.md). A check with a v2 block
+// renders in the parent-first order: context line, plain headline, verdict, cost and savings for a family
+// of 4, what you get, is it a good deal, the catch, how to get it, things to do there, pros and cons, full
+// terms, sources and "how we check" last. v2 text uses "$", never "USD", and carries no placeholder lines.
+const V2_TEXT = ["page_title", "context", "big_number", "big_label", "headline", "best_for", "not_for", "cost", "saves", "family"];
+const V2_LISTS = { get: [2, 4], compare: [1, 3], catch: [1, 3], how: [2, 5], pros: [2, 4], cons: [2, 4] };
+const V2_PLACEHOLDER = /\b(?:not observed|tbd|tba|n\/a|lorem ipsum)\b/i;
+const validSource = (src) => src && sentence(src.label) && /^https:\/\/[^\s]+$/.test(src.url ?? "") && validDate(src.observed_on);
+
+export function validateDealV2(check, { today = easternDate() } = {}) {
+  const where = `check ${check?.id ?? "(no id)"} v2`;
+  const v = check.v2;
+  if (!v || typeof v !== "object") return [`${where}: must be an object`];
+  const problems = [];
+  const texts = [];
+  for (const field of V2_TEXT) {
+    if (typeof v[field] !== "string" || v[field].trim().length < 3) problems.push(`${where}: ${field} is required`);
+    else texts.push(v[field]);
+  }
+  for (const [field, [min, max]] of Object.entries(V2_LISTS)) {
+    const list = v[field];
+    if (!Array.isArray(list) || list.length < min || list.length > max || !list.every(sentence)) problems.push(`${where}: ${field} must be ${min}-${max} sentences`);
+    else texts.push(...list);
+  }
+  const t = v.things_to_do ?? {};
+  if (!Array.isArray(t.items) || t.items.length < 2 || !t.items.every(sentence) || !validSource(t.source)) problems.push(`${where}: things_to_do needs 2+ items and a dated https source`);
+  else {
+    texts.push(...t.items);
+    if (t.source.observed_on > today) problems.push(`${where}: things_to_do source observed in the future`);
+  }
+  if (!validSource(v.context_source) || v.context_source?.observed_on > today) problems.push(`${where}: context_source needs a dated https source`);
+  if (!/\$\d/.test(v.headline ?? "") || !/\$\d/.test(v.big_number ?? "")) problems.push(`${where}: headline and big_number must state a $ amount`);
+  if (!/^Trip cost\b/.test(v.cost ?? "") || !/^Saves\b/.test(v.saves ?? "")) problems.push(`${where}: cost starts "Trip cost", saves starts "Saves"`);
+  if (!/\b2 adults\b.*\b2 (?:kids|children)\b.*\baged? \d/i.test(v.family ?? "")) problems.push(`${where}: family must name 2 adults and 2 kids with ages`);
+  if (typeof v.og_image !== "string" || !/^images\/og\/deals\/[a-z0-9-]+\.png$/.test(v.og_image)) problems.push(`${where}: og_image must be images/og/deals/<id>.png`);
+  for (const text of texts) {
+    if (/\bUSD\b/.test(text)) problems.push(`${where}: use "$", not "USD" ("${text.slice(0, 40)}")`);
+    if (V2_PLACEHOLDER.test(text)) problems.push(`${where}: placeholder wording ("${text.slice(0, 40)}")`);
+  }
+  // A dollar total for the family is never claimed in v2 copy without an observed family_total.
+  if (check.family_total === null && /\btotal\b[^.]*\$\d|\$\d[^.]*\btotal\b/i.test(texts.join(" "))) problems.push(`${where}: no family total was observed, so v2 copy cannot state one`);
+  return problems;
+}
+
+const VERDICT_TEXT = { worth_it: "Worth it", only_for: "Only for some families", skip: "Skip" };
+const list = (items, cls = "") => `<ul${cls ? ` class="${cls}"` : ""}>${items.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`;
+const sourceLine = (src) => `<a href="${e(src.url)}">${e(src.label)}</a>, checked ${e(longDate(src.observed_on))}`;
+
+function dealCheckPageV2(checks, check, today, ended) {
+  const v = check.v2;
+  const s = check.score;
+  const rows = check.terms.map(([label, value]) => `<tr role="row"><th scope="row" role="rowheader">${e(label)}</th><td role="cell">${e(value)}</td></tr>`).join("");
+  const status = ended
+    ? `<p class="deal-status deal-status-ended" role="status"><strong>${endedLabel(check)} ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The details below are what the official page said when we checked; they are kept for reference only.</p>`
+    : `<p class="deal-status"><strong>${deadlineLabel(check)} ${e(longDate(check.expires_on))}</strong>${dateNote(check)}.</p>`;
+  const sources = [
+    [check.source_label, check.official_url, check.observed_on, "the offer terms"],
+    [v.context_source.label, v.context_source.url, v.context_source.observed_on, "where the resorts are and what they include"],
+    ...(v.things_to_do.source.url === v.context_source.url ? [] : [[v.things_to_do.source.label, v.things_to_do.source.url, v.things_to_do.source.observed_on, "things to do"]])
+  ];
+  const body = `    <main id="main" class="deal-v2">
+      <section class="page-hero deal-hero">
+        <div class="container deal-hero-grid">
+          <div>
+            <p class="eyebrow deal-context">${e(v.context)}</p>
+            <h1>${e(v.headline)}</h1>
+            ${contributorCredit()}
+            ${status}
+          </div>
+          <div class="deal-big" aria-hidden="true"><span class="deal-big-number">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
+        </div>
+      </section>
+      <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
+        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict: ${e(VERDICT_TEXT[s.verdict])}.</strong> ${e(s.why)}</p>
+        <p><strong>Best for:</strong> ${e(v.best_for)}</p>
+        <p><strong>Not for:</strong> ${e(v.not_for)}</p>
+        <p class="deal-money"><strong>${e(v.saves.replace(/^Saves:\s*/, "Saves: "))}</strong></p>
+        <p>${e(v.cost)}</p>
+      </section>
+      <section class="container page-section" aria-labelledby="deal-get-title">
+        <h2 id="deal-get-title">What a family of 4 gets</h2>
+        <p>${e(v.family)}</p>
+        ${list(v.get)}
+      </section>
+      <section class="container page-section" aria-labelledby="deal-compare-title">
+        <h2 id="deal-compare-title">Is it a good deal?</h2>
+        ${list(v.compare)}
+      </section>
+      <section class="container page-section" aria-labelledby="deal-catch-title">
+        <h2 id="deal-catch-title">The catch</h2>
+        ${list(v.catch, "deal-catch")}
+      </section>
+      ${ended ? "" : `<section class="container page-section" aria-labelledby="deal-how-title">
+        <h2 id="deal-how-title">How to get it</h2>
+        <ol>${v.how.map((x) => `<li>${e(x)}</li>`).join("")}</ol>
+        <p><a href="${e(check.official_url)}">Go to the ${e(check.source_label)}</a> (terms checked ${e(longDate(check.observed_on))}).</p>
+      </section>`}
+      <section class="container page-section" aria-labelledby="deal-todo-title">
+        <h2 id="deal-todo-title">What kids can do there</h2>
+        ${list(v.things_to_do.items)}
+        <p class="review-label">From ${sourceLine(v.things_to_do.source)}. This is what ${e(check.operator)} says; we have not visited.</p>
+      </section>
+      <section class="container page-section" aria-labelledby="deal-proscons-title">
+        <h2 id="deal-proscons-title">Pros and cons</h2>
+        <div class="deal-proscons">
+          <div><h3>Pros</h3>${list(v.pros)}</div>
+          <div><h3>Cons</h3>${list(v.cons)}</div>
+        </div>
+      </section>
+      <section class="container page-section" aria-labelledby="deal-terms-title">
+        <h2 id="deal-terms-title">Full terms</h2>
+        <details class="deal-terms-details">
+          <summary>Show all ${check.terms.length} terms from the offer page</summary>
+          <div class="table-wrap deal-terms-wrap">
+            <table class="deal-terms" role="table">
+              <caption>What the ${e(check.operator)} offer page said on ${e(longDate(check.observed_on))}</caption>
+              <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Term</th><th scope="col" role="columnheader">What the official page says</th></tr></thead>
+              <tbody role="rowgroup">${rows}</tbody>
+            </table>
+          </div>
+        </details>
+        <p><strong>Unclear on the offer page:</strong></p>
+        ${list(check.unclear)}
+        <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
+      </section>
+${otherChecks(checks, check, today)}
+      <section class="container page-section deal-sources" aria-labelledby="deal-sources-title">
+        <h2 id="deal-sources-title">Sources and how we check</h2>
+        <ul>${sources.map(([label, url, on, what]) => `<li>${e(what[0].toUpperCase() + what.slice(1))}: <a href="${e(url)}">${e(label)}</a>, checked ${e(longDate(on))}.</li>`).join("")}</ul>
+        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or stayed at these resorts. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. Prices and availability change: check live before you book.</p>
+      </section>
+    </main>`;
+  return page({
+    title: `${v.page_title} | Family Tripwise`,
+    description: `${v.context}. ${v.headline}. ${deadlineLabel(check)} ${longDate(check.expires_on)}.`,
+    canonical: dealPageUrl(check),
+    path: dealPagePath(check),
+    body,
+    og: { title: v.page_title, description: `${v.headline}. ${deadlineLabel(check)} ${longDate(check.expires_on)}.`, image: `https://familytripwise.com/${v.og_image}`, alt: `${v.big_number} ${v.big_label}` }
+  });
 }
 
 export function currentChecks(checks, today = easternDate()) {
@@ -172,7 +316,18 @@ export function currentChecks(checks, today = easternDate()) {
     .sort((a, b) => a.expires_on.localeCompare(b.expires_on) || a.id.localeCompare(b.id));
 }
 
-function page({ title, description, canonical, path, body }) {
+function page({ title, description, canonical, path, body, og }) {
+  const ogTags = og ? `
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Family Tripwise">
+    <meta property="og:title" content="${e(og.title)}">
+    <meta property="og:description" content="${e(og.description)}">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:image" content="${e(og.image)}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="${e(og.alt)}">
+    <meta name="twitter:card" content="summary_large_image">` : "";
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -180,7 +335,7 @@ function page({ title, description, canonical, path, body }) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${e(title)}</title>
     <meta name="description" content="${e(description)}">
-    <link rel="canonical" href="${canonical}">
+    <link rel="canonical" href="${canonical}">${ogTags}
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
@@ -198,6 +353,15 @@ const trustPanel = `      <section class="container trust-panel" aria-label="How
       </section>`;
 
 function hubCard(check) {
+  if (check.v2) {
+    return `          <article class="detail-card deal-card" id="${e(check.id)}">
+            <p class="fresh-type">${e(check.v2.context)}</p>
+            <h3><a href="./${e(check.id)}.html">${e(check.v2.headline)}</a></h3>
+            <p>${e(check.v2.saves)}</p>
+            <p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
+            <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
+          </article>`;
+  }
   return `          <article class="detail-card deal-card" id="${e(check.id)}">
             <p class="fresh-type">${e(check.category)} · ${e(check.operator)}</p>
             <h3><a href="./${e(check.id)}.html">${e(check.title)}</a></h3>
@@ -267,6 +431,7 @@ export function dealCheckPage(checks, check, today = easternDate()) {
   const problems = validateDealChecks(checks, { today });
   if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
   const ended = isEnded(check, today);
+  if (check.v2) return dealCheckPageV2(checks, check, today, ended);
   const status = ended
     ? `<p class="deal-status deal-status-ended" role="status"><strong>${endedLabel(check)} ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The terms below are what the official page said when we checked; they are kept for reference only.</p>`
     : `<p class="deal-status"><strong>${deadlineLabel(check)} ${e(longDate(check.expires_on))}</strong>${dateNote(check)}${check.expires_note ? `; official page checked ${e(longDate(check.observed_on))}` : `, per the official page checked ${e(longDate(check.observed_on))}`}.</p>`;

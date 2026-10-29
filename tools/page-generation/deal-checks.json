@@ -165,6 +165,66 @@
         "verdict": "only_for",
         "who": "Families with a child 5 or under with a newly issued passport who can book by October 31 and travel 5+ paid nights by November 6, 2026.",
         "why": "A credit for resort extras, not a room discount, with a very short booking and travel window."
+      },
+      "v2": {
+        "page_title": "Beaches First Passport Offer: $135 Resort Credit per Young Child",
+        "context": "Beaches Resorts: all-inclusive family resorts in Negril, Jamaica and in Turks & Caicos (Caribbean)",
+        "context_source": {
+          "label": "Beaches kids and family vacations page",
+          "url": "https://www.beaches.com/vacations/kids/",
+          "observed_on": "2026-10-29"
+        },
+        "big_number": "$135",
+        "big_label": "resort credit per child 5 or under with a new passport",
+        "headline": "Beaches gives you a $135 resort credit for each child 5 or under who has a new passport, up to $270 per booking",
+        "best_for": "Families with a child 5 or under whose first passport was issued after August 1, 2025, who can go within the next week.",
+        "not_for": "Anyone who can't travel by November 6, or who wants money off the room price.",
+        "cost": "Trip cost: we have no checked price for a family of 4 yet, and the offer needs at least 5 paid nights. Price your dates on beaches.com and add flights from your airport (for example New York City).",
+        "saves": "Saves: up to $270 in resort credit for two eligible kids ($135 each). It pays for extras such as spa, room upgrades or scuba; it does not lower the room price.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 2 and 5, both with passports issued after August 1, 2025.",
+        "get": [
+          "$270 in resort credit for the booking ($135 per child), given at check-in after the resort sees each child's original passport.",
+          "With only one eligible child (for example kids aged 4 and 8): $135.",
+          "Spend it on listed extras: spa (plus a 15% service charge), room upgrades, extra nights, internet upgrades, private dinners, wet suit rental, photos, scuba, laundry or a cabana. No cash value."
+        ],
+        "compare": [
+          "The room price for your dates is the normal Beaches price; this credit only helps if you would buy the listed extras anyway.",
+          "A child's first passport has its own State Department fees, so the credit can offset part of that cost; check the current fee on travel.state.gov."
+        ],
+        "catch": [
+          "Very short: book by October 31 and travel by November 6, 2026.",
+          "Only kids 5 and under at check-in with a passport issued after August 1, 2025; at most two per booking.",
+          "Credit for extras only: not cash and not off the room price. The offer page does not list which resorts take part."
+        ],
+        "how": [
+          "Book at least 5 paid nights on beaches.com or with a travel advisor by October 31, 2026, travelling by November 6, 2026 (ask whether the whole stay must end by then).",
+          "Register the booking on the Beaches First Passport Offer page. Registering does not guarantee the credit.",
+          "Bring each child's original passport to check-in; the resort checks it and adds the credit."
+        ],
+        "things_to_do": {
+          "items": [
+            "Kids Camp, included in the stay: five age levels from infants to age 12, three sessions between 8 a.m. and 9 p.m. daily.",
+            "Sesame Street: parades, stage shows and weekly activities with the characters.",
+            "Pirates Island water parks: waterslides, lazy rivers, a surf simulator and areas for toddlers.",
+            "Kids scuba (PADI Bubblemaker and SEAL Team) for ages 8 and up, an arcade, and a Choo Choo train at Turks & Caicos for ages 3 to 10."
+          ],
+          "source": {
+            "label": "Beaches kids and family vacations page",
+            "url": "https://www.beaches.com/vacations/kids/",
+            "observed_on": "2026-10-29"
+          }
+        },
+        "pros": [
+          "Real money toward extras if your child qualifies.",
+          "Kids Camp, Sesame Street and the water parks come with an all-inclusive stay at Beaches.",
+          "Easy to claim: register online, show the passport."
+        ],
+        "cons": [
+          "Booking closes October 31 and travel ends November 6, 2026.",
+          "Only children 5 or under with a passport issued after August 1, 2025 count.",
+          "No discount on the room; the credit has no cash value."
+        ],
+        "og_image": "images/og/deals/beaches-first-passport-credit.png"
       }
     },
     {

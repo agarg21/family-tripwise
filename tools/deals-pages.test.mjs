@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, readDealChecks, validateDealChecks } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
@@ -78,8 +78,15 @@ test("committed deal pages match today's render (refreshed daily by tools/this-w
 test("no deal page shows an unobserved family total, a build date or a firsthand claim", () => {
   for (const c of checks) {
     const html = dealCheckPage(checks, c, "2026-10-29");
-    assert.match(html, /Not observed\. Check live\./, `${c.id} shows check live`);
-    assert.match(html, /We have not booked these offers/);
+    if (c.v2) {
+      // v2 (G11): no "Not observed" section; the unknown trip cost is one line saying what to check.
+      assert.doesNotMatch(html, /Not observed/i, `${c.id} v2 has no placeholder`);
+      assert.match(html, /Trip cost: we have no checked price for a family of 4/);
+      assert.match(html, /We have not booked this offer/);
+    } else {
+      assert.match(html, /Not observed\. Check live\./, `${c.id} shows check live`);
+      assert.match(html, /We have not booked these offers/);
+    }
     assert.doesNotMatch(html, /Updated|updated on|we stayed|we sailed/i);
   }
 });
@@ -273,4 +280,46 @@ test("G09 step 2: urgency is derived from the deadline on the day, never stored"
   assert.equal(d("2026-11-30"), "low");
   assert.equal(d("2026-10-28"), "low", "ended");
   assert.equal(d("2026-10-30", { deadline_stated: false }), "low", "a listing date is not a deadline");
+});
+
+test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above the first heading, sources last, og tags", () => {
+  const b = checks.find((c) => c.id === "beaches-first-passport-credit");
+  assert.ok(b?.v2, "Beaches is the v2 pilot (docs/plan/deal-content-v2.md rollout step 1)");
+  const html = dealCheckPage(checks, b, "2026-10-29");
+  const main = html.slice(html.indexOf("<main"), html.indexOf("</main>"));
+  const order = ["deal-context", "<h1>", "Our verdict: Only for some families.", "Saves: up to $270", "Trip cost:", "What a family of 4 gets", "Is it a good deal?", "The catch", "How to get it", "What kids can do there", "Pros and cons", "Full terms", "More Family Deal Checks", "Sources and how we check"];
+  let at = -1;
+  for (const marker of order) {
+    const i = main.indexOf(marker);
+    assert.ok(i > at, `${marker} out of order`);
+    at = i;
+  }
+  const fold = main.slice(0, main.indexOf("<h2"));
+  assert.match(fold, /\$135/);
+  assert.match(fold, /Beaches Resorts: all-inclusive family resorts in Negril, Jamaica and in Turks &amp; Caicos/);
+  const own = main.replace(/<nav class="container page-section deal-others"[\s\S]*?<\/nav>/, "").replace(/<table[\s\S]*?<\/table>/, "");
+  assert.doesNotMatch(own, /\bUSD\b/, "USD appears only inside the quoted terms table (other checks' v1 titles aside)");
+  assert.match(html, /<meta property="og:image" content="https:\/\/familytripwise\.com\/images\/og\/deals\/beaches-first-passport-credit\.png">/);
+  assert.match(html, /<meta property="og:url" content="https:\/\/familytripwise\.com\/deals\/beaches-first-passport-credit\.html">/);
+  assert.match(html, /<meta name="twitter:card" content="summary_large_image">/);
+  assert.ok(existsSync(new URL(b.v2.og_image, site)), "run node tools/deal-og-images.mjs");
+  assert.match(main, /kids and family vacations page<\/a>, checked October 29, 2026/);
+  const ended = dealCheckPage(checks, b, "2026-11-01");
+  assert.match(ended, /This offer ended October 31, 2026\./);
+  assert.doesNotMatch(ended, /How to get it/);
+  assert.match(dealsHubPage(checks, "2026-10-29"), /Beaches gives you a \$135 resort credit/);
+});
+
+test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobserved total and undated sources", () => {
+  const b = checks.find((c) => c.id === "beaches-first-passport-credit");
+  const v = (patch) => validateDealChecks([{ ...b, v2: { ...b.v2, ...patch } }], { today: "2026-10-29" });
+  assert.deepEqual(v({}), []);
+  assert.ok(v({ headline: "A USD 135 credit, $135" }).some((p) => /not "USD"/.test(p)));
+  assert.ok(v({ cost: "Trip cost: Not observed." }).some((p) => /placeholder/.test(p)));
+  assert.ok(v({ cost: "About $3,000 for the week." }).some((p) => /Trip cost/.test(p)));
+  assert.ok(v({ saves: "Saves: a family total of $2,000 for the week." }).some((p) => /cannot state one/.test(p)));
+  assert.ok(v({ context_source: { label: "Beaches kids page", url: "https://www.beaches.com/vacations/kids/" } }).some((p) => /context_source/.test(p)));
+  assert.ok(v({ things_to_do: { ...b.v2.things_to_do, source: { ...b.v2.things_to_do.source, observed_on: "2026-11-30" } } }).some((p) => /future/.test(p)));
+  assert.ok(v({ family: "A family of four." }).some((p) => /2 adults and 2 kids/.test(p)));
+  assert.ok(v({ catch: [] }).some((p) => /catch/.test(p)));
 });
