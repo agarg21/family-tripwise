@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-29 transactions=16
-run: none
+run: {id: 2026-10-29T23:04:36Z, started_at: 2026-10-29T23:04:36Z}
 last_public_release: c5fa555 (2026-10-29, G14 link previews on all 52 pages; evergreen per-deal cards); last main code change c5fa555
 active: {id: G14, branch: q/G14 (61aeea1), next: held for persona gate; release only if OWNER O8 says Yes, else add price glance to LV/SA first}
 
