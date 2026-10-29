@@ -1652,3 +1652,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 @media (max-width: 700px) {
   .deal-v2 .page-section { padding: 30px 0; }
 }
+.deal-v2 .page-section { padding: clamp(30px, 4vw, 48px) 0; }
+.deal-photo { margin-top: 22px; }
+.deal-photo img { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 16px; display: block; }
+.deal-photo figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }

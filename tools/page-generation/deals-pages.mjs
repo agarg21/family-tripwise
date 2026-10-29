@@ -8,6 +8,10 @@ import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteFooter } from "./site-chrome.mjs";
 import { easternDate } from "./sitemap.mjs";
 
+const imageLock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
+// Free licences only: no NonCommercial or NoDerivatives photos (OWNER D17).
+const FREE_LICENCE = /^(?:CC0|Public domain|CC BY(?:-SA)? \d\.\d(?: [A-Za-z]+)?)$/;
+
 export const dealsHubPath = "deals/index.html";
 export const dealsHubUrl = "https://familytripwise.com/deals/";
 export const dealChecksPath = new URL("./deal-checks.json", import.meta.url);
@@ -205,6 +209,12 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
   if (check.family_total === null && /\$\s?\d/.test(v.cost ?? "")) problems.push(`${where}: no family total was observed, so the cost line cannot state a $ amount`);
   if (!/^Trip cost\b/.test(v.cost ?? "") || !/^Saves\b/.test(v.saves ?? "")) problems.push(`${where}: cost starts "Trip cost", saves starts "Saves"`);
   if (!/\b2 adults\b.*\b2 (?:kids|children)\b.*\baged? \d/i.test(v.family ?? "")) problems.push(`${where}: family must name 2 adults and 2 kids with ages`);
+  if (v.hero_image !== undefined) {
+    const img = imageLock[v.hero_image?.slug];
+    if (!img) problems.push(`${where}: hero_image.slug must be a self-hosted photo in tools/images/commons-images.lock.json`);
+    else if (!FREE_LICENCE.test(img.license ?? "") || !img.artist || !img.source_page) problems.push(`${where}: hero_image needs a free licence, an author and a source page`);
+    if (!sentence(v.hero_image?.alt) || !sentence(v.hero_image?.caption)) problems.push(`${where}: hero_image needs alt and caption`);
+  }
   if (v.og_image !== `images/og/deals/${check.id}.png`) problems.push(`${where}: og_image must be images/og/deals/${check.id}.png`);
   for (const text of texts) {
     if (/\bUSD\b/.test(text)) problems.push(`${where}: use "$", not "USD" ("${text.slice(0, 40)}")`);
@@ -228,6 +238,15 @@ const VERDICT_TEXT = { worth_it: "Worth it", only_for: "Only for some families",
 const list = (items, cls = "") => `<ul${cls ? ` class="${cls}"` : ""}>${items.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`;
 const sourceLine = (src) => `<a href="${e(src.url)}">${e(src.label)}</a>, checked ${e(longDate(src.observed_on))}`;
 
+function heroFigure(v) {
+  if (!v.hero_image) return "";
+  const img = imageLock[v.hero_image.slug];
+  return `        <figure class="container licensed-photo deal-photo">
+          <img src="../${e(img.path)}" alt="${e(v.hero_image.alt)}" width="${img.width}" height="${img.height}" class="intrinsic-photo" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>${e(v.hero_image.caption)} Photo: ${e(img.artist)}, Wikimedia Commons, ${e(img.license)}; Family Tripwise serves a resized copy. <a href="${e(img.source_page)}">License and source</a>.</figcaption>
+        </figure>`;
+}
+
 function dealCheckPageV2(checks, check, today, ended) {
   const v = check.v2;
   const s = check.score;
@@ -246,15 +265,16 @@ function dealCheckPageV2(checks, check, today, ended) {
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
             <h1>${e(v.headline)}</h1>
-            <ul class="deal-chips" aria-label="Key terms">${ended ? "" : `<li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${dateNote(check)}</li>`}${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>
+            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${dateNote(check)}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
           <div class="deal-big" aria-hidden="true"><span class="deal-big-number">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
         </div>
+${heroFigure(v)}
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
-${ended ? `        <p class="deal-verdict"><strong>${endedLabel(check)} ${e(longDate(check.expires_on))}.</strong> While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict: ${e(VERDICT_TEXT[s.verdict])}.</strong> ${e(s.why)}</p>
+${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict:</strong> ${e(s.why)}</p>
         <p><strong>Best for:</strong> ${e(v.best_for)}</p>
         <p><strong>Not for:</strong> ${e(v.not_for)}</p>
         <p class="deal-money"><strong>${e(v.saves)}</strong></p>

@@ -4,7 +4,7 @@
 // An image whose text does not fit is refused, not cropped. Existing files are kept unless --force.
 // Usage: node tools/deal-og-images.mjs [--force]
 import { createRequire } from "node:module";
-import { existsSync, mkdirSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readDealChecks, validateDealChecks, deadlineLabel, longDate } from "./page-generation/deals-pages.mjs";
@@ -15,10 +15,15 @@ const VERDICT = { worth_it: "Worth it", only_for: "Only for some families", skip
 
 export function dealOgHtml(check) {
   const v = check.v2;
+  // The page's own credited, self-hosted photo (if any) fills the number panel; never an AI image.
+  const lock = JSON.parse(readFileSync(join(root, "tools/images/commons-images.lock.json"), "utf8"));
+  const photo = v.hero_image && lock[v.hero_image.slug];
+  const bg = photo ? `background: linear-gradient(rgba(11,73,70,0.05) 15%, rgba(11,73,70,0.9) 62%), url(data:image/webp;base64,${readFileSync(join(root, "site", photo.path)).toString("base64")}) center / cover;` : "";
   return `<!doctype html><html><head><meta charset="utf-8"><style>
   * { box-sizing: border-box; margin: 0; }
   body { width: 1200px; height: 630px; background: #fffaf2; color: #142029; font-family: "DejaVu Sans", Arial, sans-serif; display: grid; grid-template-columns: 330px 1fr; }
-  .big { background: #126c67; color: #fff; display: flex; flex-direction: column; justify-content: center; padding: 40px 34px; }
+  .big { background: #126c67; ${bg} color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px 34px; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+  .credit { font-size: 15px; margin-top: 22px; opacity: 0.9; }
   .num { font-size: 92px; white-space: nowrap; font-weight: 800; line-height: 1; }
   .lab { font-size: 27px; line-height: 1.3; margin-top: 18px; }
   .main { padding: 48px 56px 40px; display: flex; flex-direction: column; }
@@ -31,12 +36,12 @@ export function dealOgHtml(check) {
   .chips { font-size: 23px; margin-top: 16px; color: #0b4946; font-weight: 700; line-height: 1.3; }
   .brand { margin-top: auto; font-size: 26px; font-weight: 800; border-top: 3px solid #142029; padding-top: 14px; }
   </style></head><body>
-  <div class="big" id="big"><div class="num">${e(v.big_number)}</div><div class="lab">${e(v.big_label)}</div></div>
+  <div class="big" id="big"><div class="num">${e(v.big_number)}</div><div class="lab">${e(v.big_label)}</div>${photo ? `<div class="credit">Photo: ${e(photo.artist.split(" from ")[0])}, ${e(photo.license)}</div>` : ""}</div>
   <div class="main" id="main">
     <p class="ctx">${e(v.context)}</p>
     <h1>${e(v.headline)}</h1>
     <div class="row"><span class="chip ${e(check.score.verdict)}">${e(VERDICT[check.score.verdict])}</span><span class="when">${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}</span></div>
-    <p class="chips">${check.v2.chips.map(e).join(" · ")}</p>
+    <p class="chips">${check.v2.chips.map((c) => `<span style="white-space:nowrap">${e(c)}</span>`).join(" · ")}</p>
     <p class="brand">familytripwise.com · Family Deal Check</p>
   </div>
   <script>const m = document.getElementById("main"); const b = document.getElementById("big"); document.body.dataset.fits = (m.scrollHeight <= m.clientHeight && b.scrollWidth <= b.clientWidth && b.scrollHeight <= b.clientHeight && document.body.scrollWidth <= 1200) ? "yes" : "no";</script>
