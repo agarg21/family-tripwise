@@ -34,7 +34,7 @@ test("dated maintenance and licensed orientation image do not renew sources",()=
   assert.equal(londonMaintenance("2026-10-12").records.length,0);assert.equal(londonMaintenance("2026-10-13").records.length,3);
   assert.equal(londonMaintenance("2026-10-13").records[0].price_age.due_on,"2026-10-16");assert.equal(londonMaintenance("2026-10-13").records[2].category_age.due_on,"2026-11-02");
   assert.equal(londonPhoto.taken_on,"2009-06-19");assert.equal(londonPhoto.author,"DAVID ILIFF");assert.equal(londonPhoto.license,"https://creativecommons.org/licenses/by-sa/3.0/");
-  const h=londonFamilyHotelPage();for(const t of ["June 19, 2009","resized and cropped to fit","not a current hotel, room or route image","check live rates before booking"])assert.ok(h.includes(t),t);
+  const h=londonFamilyHotelPage();for(const t of ["June 19, 2009","Resized and cropped.","check live rates before booking"])assert.ok(h.includes(t),t);
   const css=read("site/styles.css");assert.ok(css.includes(".london-page tbody th { background: #fff; }"));assert.ok(css.includes(".london-scroll { max-width: 100%; overflow-x: auto; }"));assert.ok(css.includes("position: sticky; left: 0"));assert.ok(!css.includes(".london-page h1 { font-size: 3vw"));
 });
 test("each dated GBP amount appears once on screen; provenance sits in collapsed How we checked blocks",()=>{

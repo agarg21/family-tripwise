@@ -14,12 +14,15 @@ for (const [slug, observed] of [["las-vegas", "July 22, 2026"], ["san-antonio", 
     assert.ok(glance, "glance missing");
     assert.ok(html.indexOf(glance) < html.indexOf('<table class="comparison-table hotel-comparison">'));
     assert.ok(html.indexOf(glance) < html.indexOf("<h2"), "glance must sit above the first h2");
-    assert.ok(glance.includes(`public prices checked ${observed}`));
+    assert.ok(glance.includes(`planning ranges built from public prices checked ${observed}`));
     assert.match(glance, /not (current five-person suite|family-room) quotes/);
     assert.doesNotMatch(glance, /href="#/, "glance must not add hotel anchor links");
     const bands = new Map(catalog[slug].map((hotel) => [hotel.name, hotel.priceRange]));
     const items = [...glance.matchAll(/<li><strong>\$([\d,]+)–\$([\d,]+)(\+?)<\/strong> [^:]+: ([^<]+)<\/li>/g)];
     assert.ok(items.length >= 3);
+    assert.equal(items.length, (glance.match(/<li>/g) || []).length, "every glance line must parse");
+    const listed = items.flatMap((item) => decode(item[4]).split(", "));
+    assert.deepEqual([...listed].sort(), [...bands.keys()].sort(), "every hotel appears exactly once");
     for (const [, low, high, plus, names] of items) {
       const ranges = decode(names).split(", ").map((name) => {
         assert.ok(bands.has(name), `unknown hotel ${name}`);

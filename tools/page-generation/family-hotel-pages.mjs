@@ -17,6 +17,9 @@ export function createFamilyHotelPages({ esc, pageShell }) {
   };
   const money = (value) => `$${value.toLocaleString("en-US")}`;
   const budgetGlance = ({ id, hotels, observed, groups, caveat, basis }) => {
+    const assigned = groups.flatMap((group) => group.names);
+    const missing = hotels.filter((hotel) => !assigned.includes(hotel.name)).map((hotel) => hotel.name);
+    if (missing.length || new Set(assigned).size !== assigned.length) throw new Error(`Budget glance must list every hotel once: ${missing.join(", ")}`);
     const items = groups.map(({ label, names }) => {
       const members = names.map((name) => {
         const hotel = hotels.find((entry) => entry.name === name);
@@ -30,7 +33,7 @@ export function createFamilyHotelPages({ esc, pageShell }) {
       return `            <li><strong>${money(low)}–${money(high)}${plus ? "+" : ""}</strong> ${esc(label)}: ${esc(members.map((hotel) => hotel.name).join(", "))}</li>`;
     }).join("\n");
     return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
-          <p><strong>About how much a night?</strong> Per room, from public prices checked ${esc(observed)}:</p>
+          <p><strong>About how much a night?</strong> Per room, planning ranges built from public prices checked ${esc(observed)}:</p>
           <ul>
 ${items}
           </ul>
@@ -701,7 +704,7 @@ function lasVegasFamilyHotelPage() {
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
           <img src="../images/las-vegas-bellagio-fountains.webp" style="object-position:50% 80%" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Family Tripwise serves a resized copy, cropped to fit.</figcaption>
+          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
 ${budgetGlance({
@@ -709,9 +712,10 @@ ${budgetGlance({
   hotels,
   observed: "July 22, 2026",
   groups: [
-    { label: "lower-price Strip bases", names: ["Excalibur Hotel & Casino", "New York-New York Hotel & Casino"] },
-    { label: "pools, lazy rivers and slides", names: ["Mandalay Bay Resort and Casino", "Tahiti Village Resort", "Hilton Vacation Club Cancun Resort Las Vegas"] },
-    { label: "suites with a kitchen or kitchenette", names: ["Vdara Hotel & Spa", "Marriott's Grand Chateau"] },
+    { label: "themed lower-price Strip hotels", names: ["Excalibur Hotel & Casino", "New York-New York Hotel & Casino"] },
+    { label: "pools, lazy rivers and slides (Tahiti Village and the Cancun Resort are off-Strip, in Las Vegas)", names: ["Mandalay Bay Resort and Casino", "Tahiti Village Resort", "Hilton Vacation Club Cancun Resort Las Vegas"] },
+    { label: "kitchenette suites and kitchen villas (room type varies)", names: ["Vdara Hotel & Spa", "Marriott's Grand Chateau"] },
+    { label: "North Strip and Summerlin resorts", names: ["Las Vegas Hilton at Resorts World", "Red Rock Casino Resort & Spa"] },
     { label: "non-gaming luxury", names: ["Four Seasons Hotel Las Vegas"] }
   ],
   caveat: "These are planning ranges, not current five-person suite quotes. Taxes, resort fees and parking may be extra.",
@@ -1037,7 +1041,7 @@ function chicagoFamilyHotelPage() {
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
           <img src="../images/chicago-millennium-park.webp" alt="Pritzker Pavilion trellis and the Chicago skyline in Millennium Park." width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Family Tripwise serves a resized copy, cropped to fit.</figcaption>
+          <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
       <section class="container trust-panel" aria-label="Review status">
@@ -1355,11 +1359,11 @@ ${budgetGlance({
   hotels,
   observed: "July 26, 2026",
   groups: [
-    { label: "Downtown suites with breakfast or a kitchen", names: ["Embassy Suites by Hilton San Antonio Riverwalk Downtown", "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown", "Home2 Suites by Hilton San Antonio Riverwalk", "Drury Plaza Hotel San Antonio Riverwalk"] },
+    { label: "Downtown hotels with free breakfast (some with kitchens)", names: ["Embassy Suites by Hilton San Antonio Riverwalk Downtown", "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown", "Home2 Suites by Hilton San Antonio Riverwalk", "Drury Plaza Hotel San Antonio Riverwalk"] },
     { label: "classic River Walk hotels", names: ["Hyatt Regency San Antonio Riverwalk", "Omni La Mansion del Rio", "Hotel Contessa", "San Antonio Marriott Rivercenter on the River Walk"] },
-    { label: "resorts with lazy rivers and water play", names: ["Hyatt Vacation Club at Wild Oak Ranch", "Signia by Hilton La Cantera Resort and Spa", "Hyatt Regency Hill Country Resort and Villas", "JW Marriott San Antonio Hill Country Resort and Spa"] }
+    { label: "resorts outside Downtown with pools, slides or water parks", names: ["Hyatt Vacation Club at Wild Oak Ranch", "Signia by Hilton La Cantera Resort and Spa", "Hyatt Regency Hill Country Resort and Villas", "JW Marriott San Antonio Hill Country Resort and Spa"] }
   ],
-  caveat: "These are planning ranges from mostly two-adult, standard-room prices. These are not family-room quotes; taxes, fees and parking may be extra.",
+  caveat: "Built mostly from two-adult, standard-room prices; the top ends are planning ceilings. These are not family-room quotes; taxes, fees and parking may be extra.",
   basis: "USD per-room, per-night planning bands use July 26 public examples, mostly for two adults in a standard room, then widen for room and date variation; upper edges are editorial planning ceilings, not observed quotes. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Price the exact room, child ages, dates, fees, pool operations and cancellation terms before choosing."
 })}
       <section class="container trust-panel" aria-label="Information freshness">
