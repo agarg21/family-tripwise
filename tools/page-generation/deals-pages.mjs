@@ -180,7 +180,7 @@ const V2_TEXT = ["page_title", "context", "big_number", "big_label", "headline",
 const V2_LISTS = { get: [2, 4], compare: [1, 3], catch: [1, 3], how: [2, 5], pros: [2, 4], cons: [2, 4] };
 const V2_PLACEHOLDER = /\b(?:not observed|tbd|tba|n\/a|lorem ipsum)\b/i;
 const POST_LINE_MAX = 140;
-const POST_LINES_MAX = 300;
+const POST_LINES_MAX = 340;
 const VERDICT_POST = { worth_it: "Worth it", only_for: "Only for " };
 const validSource = (src) => src && sentence(src.label) && /^https:\/\/[^\s]+$/.test(src.url ?? "") && validDate(src.observed_on);
 
@@ -232,8 +232,17 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     const label = VERDICT_POST[check.score?.verdict];
     if (!label || !String(post.verdict ?? "").startsWith(`${label}`)) problems.push(`${where}: post.verdict must start "${label ?? "Worth it/Only for"}" to match the scored verdict`);
     if (!/^The catch: /.test(post.catch ?? "")) problems.push(`${where}: post.catch starts "The catch: "`);
+    // Dates and night counts in the post must be ones the observed terms state, like $ figures below.
+    const termsText = [...(check.terms ?? []).flat(), longDate(check.expires_on ?? "")].join(" ");
+    const postText = ["hook", "verdict", "catch"].map((f) => String(post[f] ?? "")).join(" ");
+    for (const m of postText.matchAll(/\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2})\b/g)) {
+      if (!termsText.includes(`${m[1]} ${m[2]}`)) problems.push(`${where}: post date "${m[0]}" is not a date the observed terms state`);
+    }
+    for (const m of postText.matchAll(/\b(\d+)\+? (?:paid )?nights?\b/g)) {
+      if (!new RegExp(`\\b${m[1]}\\+? (?:paid[- ])?nights?\\b`, "i").test(termsText)) problems.push(`${where}: post night count "${m[0]}" is not in the observed terms`);
+    }
     const total = ["hook", "verdict", "catch"].reduce((n, f) => n + String(post[f] ?? "").length, 0);
-    if (total > POST_LINES_MAX) problems.push(`${where}: post lines total ${total} characters; keep them under ${POST_LINES_MAX} so the post stays about 350`);
+    if (total > POST_LINES_MAX) problems.push(`${where}: post lines total ${total} characters; keep them under ${POST_LINES_MAX} so the post stays about 350-400`);
   }
   for (const text of texts) {
     if (/\bUSD\b/.test(text)) problems.push(`${where}: use "$", not "USD" ("${text.slice(0, 40)}")`);

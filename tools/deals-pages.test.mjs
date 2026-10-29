@@ -344,6 +344,8 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(post({ catch: "Only 5+ paid nights and travel by November 6, 2026." }).some((p) => /post.catch starts "The catch: "/.test(p)));
   assert.ok(post({ hook: "Beaches gives a USD 135 credit per child 5 or under with a new passport." }).some((p) => /use "\$", not "USD"/.test(p)));
   assert.ok(post({ catch: `The catch: ${"x".repeat(140)}` }).some((p) => /at most 140 characters/.test(p)));
-  assert.ok(post({ hook: `${b.v2.post.hook} ${"y".repeat(20)}`, verdict: `${b.v2.post.verdict} ${"z".repeat(20)}` }).some((p) => /keep them under 300/.test(p)));
+  assert.ok(post({ catch: "The catch: travel by November 9, 5+ paid nights, full room price." }).some((p) => /post date "November 9" is not a date/.test(p)), "post dates are tied to the terms");
+  assert.ok(post({ catch: "The catch: travel by November 6, 4+ paid nights, full room price." }).some((p) => /night count "4\+ paid nights"/.test(p)), "night counts are tied to the terms");
+  assert.ok(post({ hook: `${b.v2.post.hook} ${"y".repeat(20)}`, verdict: `${b.v2.post.verdict} ${"z".repeat(40)}` }).some((p) => /keep them under 340/.test(p)));
   assert.ok(v({ og_image: "images/og/deals/other-deal.png" }).some((p) => /og_image must be images\/og\/deals\/beaches-first-passport-credit\.png/.test(p)));
 });

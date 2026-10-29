@@ -232,7 +232,7 @@ test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 cha
     assert.match(r.v2.checked, /^Checked on [a-z0-9.-]+ on [A-Z][a-z]+ \d{1,2}\.$/);
     assert.match(v.instagram.text, /Link in bio: familytripwise\.com\/deals/);
     const html = cardHtml(r);
-    for (const part of [r.v2.big_number, r.v2.headline, r.v2.verdict_label, r.v2.deadline]) assert.ok(html.includes(part.replaceAll("&", "&amp;")), `${r.id} card shows ${part}`);
+    for (const part of [r.v2.big_number, ...r.v2.lines.slice(0, 3), r.v2.verdict_label, r.v2.deadline]) assert.ok(html.includes(part.replaceAll("&", "&amp;")), `${r.id} card shows ${part}`);
     assert.match(html, /familytripwise\.com · Family Deal Check/);
     if (r.v2.hero_image) assert.match(html, /Photo: [^<]+, CC BY/, `${r.id} card credits its photo`);
     assert.doesNotMatch(html, /https?:\/\/(?!familytripwise)/, "card loads nothing remote");

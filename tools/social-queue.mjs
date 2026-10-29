@@ -189,7 +189,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
 const esc = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
 // v2 deal card (docs/plan/deal-content-v2.md "Posts"): the page's credited, self-hosted photo with the big
-// number, then who and where, the plain headline, the verdict chip and the deadline, and the brand mark.
+// number, then the post hook (company, where, the number), the verdict chip and deadline, who it is for,
+// the catch, the dated check and the brand mark.
 // Never an AI image or promotional art; without a hero photo the number panel is plain brand colour.
 function cardHtmlV2(record) {
   const v = record.v2;
@@ -198,23 +199,25 @@ function cardHtmlV2(record) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0}html,body{width:1080px;height:1350px;background:#fffaf2}
 body{font-family:"DejaVu Sans","Liberation Sans",Arial,sans-serif;color:#142029;display:flex;flex-direction:column}
-.top{height:620px;flex:none;background:#126c67;${bg}color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:56px 72px 30px;text-shadow:0 2px 10px rgba(0,0,0,.55)}
-.num{font-size:150px;font-weight:800;line-height:1}.lab{font-size:38px;line-height:1.25;margin-top:14px}
+.top{height:540px;flex:none;background:#126c67;${bg}color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:56px 72px 30px;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.num{font-size:132px;font-weight:800;line-height:1}.lab{font-size:34px;line-height:1.25;margin-top:14px}
 .credit{font-size:20px;margin-top:22px;opacity:.92}
-.main{flex:1;padding:44px 72px 56px;display:flex;flex-direction:column;overflow:hidden}
+.main{flex:1;padding:40px 72px 48px;display:flex;flex-direction:column;overflow:hidden}
 .ctx{font-size:30px;font-weight:700;color:#0b4946;line-height:1.3}
-h1{font-size:54px;line-height:1.15;margin-top:20px;font-weight:800}
-.row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:30px}
+h1{font-size:46px;line-height:1.18;font-weight:800}
+.row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:24px}
 .chip{background:#f0bd56;font-weight:800;font-size:32px;padding:10px 22px;border-radius:999px}
 .chip.w{background:#126c67;color:#fff}
 .when{font-size:32px;font-weight:700}
-.catch{font-size:31px;line-height:1.35;margin-top:30px;color:#3b4a54}
+.who{font-size:29px;line-height:1.33;margin-top:22px;font-weight:700}
+.catch{font-size:29px;line-height:1.33;margin-top:14px;color:#3b4a54}
 .brand{margin-top:auto;border-top:4px solid #142029;padding-top:20px;font-size:24px;line-height:1.4;color:#3b4a54}
 .brand b{display:block;font-size:34px;color:#142029}
 </style></head><body>
 <div class="top" id="top"><p class="num">${esc(v.big_number)}</p><p class="lab">${esc(v.big_label)}</p>${photo ? `<p class="credit">Photo: ${esc(photo.artist.split(" from ")[0])}, ${esc(photo.license)}</p>` : ""}</div>
-<div class="main" id="main"><p class="ctx">${esc(v.context)}</p><h1>${esc(v.headline)}</h1>
+<div class="main" id="main"><h1>${esc(v.lines[0])}</h1>
 <div class="row"><span class="chip${v.verdict_label === "Worth it" ? " w" : ""}">${esc(v.verdict_label)}</span><span class="when">${esc(v.deadline)}</span></div>
+<p class="who">${esc(v.lines[1])}</p>
 <p class="catch">${esc(v.lines[2])}</p>
 <div class="brand"><p>${esc(v.checked)} Confirm before booking.</p><b>familytripwise.com · Family Deal Check</b></div></div>
 <script>{const m=document.getElementById("main"),t=document.getElementById("top");
