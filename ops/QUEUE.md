@@ -2,6 +2,16 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
+## G08 Post through Zernio
+open · M · owner: D14 Approved · gate: build and dry-run now; live once ZERNIO_API_KEY exists (T3)
+tools/social-post.mjs gains a Zernio adapter used when ZERNIO_API_KEY exists: Facebook, Instagram, Threads and Pinterest through one API; look up connected account ids from the API at run time (no ids in the repo); keep claim-before-post receipts, never-post-twice, expiry, caps and the D12 kill switch; images via the public card URL. Read Zernio's public API docs first and record endpoints/limits in docs/research. Keep the direct Meta/Pinterest paths until Zernio posts succeed, then remove them.
+Acceptance: dry run against a simulated Zernio; reviewer PASS; first live post checked on each platform.
+
+## G09 Deal fast lane: first, verified, worth sharing
+open · L · owner: D15 Approved · gate: none
+1) Detect: a scheduled GitHub Action (no secrets) checks the tracked official deal pages hourly (robots.txt honored, at most 1 fetch per URL per hour, never bypass blocks), stores a hash and extracted headline per URL under ops/deal-watch/, and on a change commits a flag the next operator run takes before other work. 2) Score each verified deal in its record: family value (savings vs the regular price for 2 adults + 2 kids, from observed prices only), appeal (how many families it fits; brand/destination pull), urgency (book-by, sell-out), novelty (first seen? already covered by major deal sites or news, from a quick search, with links), and a verdict: Worth it / Only for <who> / Skip. Only Worth it and Only-for go to social. 3) Same day: a worthy deal gets an entry in today's queue at the next slot (regenerate today's queue; caps hold). Target: official launch to post within about 4 hours.
+Acceptance: watcher live with tests; scoring fields validated in deal-checks.json; one same-day end-to-end dry run; reviewer PASS.
+
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
 First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed (the deploy workflow drops expired items from the live copy daily, but the committed page must match today's render or tests fail); check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>` then `node tools/social-cards.mjs <date>`; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
