@@ -1,0 +1,22 @@
+{
+  "note": "Official deal pages watched hourly by .github/workflows/deal-watch.yml (QUEUE G09, OWNER D15). Only operators' own pages; never deal or news sites. Not listed because they refused the fetcher or are robots-disallowed (do not add back unchanged): disneyland.disney.go.com offers, prodc.www.disneyaulani.com, Hyatt Inclusive Collection offers, dollywood.com, Kalahari offers. To retry a blocked source after checking it by other means, raise its retry number by 1.",
+  "sources": [
+    { "id": "royal-caribbean-promotion-terms", "operator": "Royal Caribbean", "kind": "offer-terms", "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions?country=USA", "check_id": "royal-caribbean-kids-sail-free" },
+    { "id": "great-wolf-deals", "operator": "Great Wolf Lodge", "kind": "offer-index", "url": "https://www.greatwolf.com/deals" },
+    { "id": "great-wolf-fall-flash-sale", "operator": "Great Wolf Lodge", "kind": "offer-page", "url": "https://www.greatwolf.com/deals/fall-flash-sale", "check_id": "great-wolf-lodge-fall-flash-sale" },
+    { "id": "beaches-specials", "operator": "Beaches Resorts", "kind": "offer-index", "url": "https://www.beaches.com/specials/" },
+    { "id": "club-med-deals", "operator": "Club Med", "kind": "offer-index", "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals", "check_id": "club-med-all-inclusive-kids-under-4" },
+    { "id": "seaworld-orlando-tickets", "operator": "SeaWorld Orlando", "kind": "offer-index", "url": "https://seaworld.com/orlando/tickets/" },
+    { "id": "seaworld-orlando-fun-card", "operator": "SeaWorld Orlando", "kind": "offer-page", "url": "https://seaworld.com/orlando/tickets/fun-card/", "check_id": "seaworld-orlando-2027-fun-card" },
+    { "id": "margaritaville-at-sea-black-friday", "operator": "Margaritaville at Sea", "kind": "offer-page", "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access", "check_id": "margaritaville-at-sea-black-friday-early-access" },
+    { "id": "ncl-promotion-terms", "operator": "Norwegian Cruise Line", "kind": "offer-terms", "url": "https://www.ncl.com/cruise-deals/promotion-terms", "check_id": "norwegian-free-2nd-guest-3rd-4th-free" },
+    { "id": "msc-deals", "operator": "MSC Cruises", "kind": "offer-index", "url": "https://www.msccruisesusa.com/deals" },
+    { "id": "msc-promo-terms", "operator": "MSC Cruises", "kind": "offer-terms", "url": "https://www.msccruisesusa.com/cruise-deals/promo-terms-and-conditions", "check_id": "msc-cruises-35-off-kids-sail-free" },
+    { "id": "legoland-california-hotel-package", "operator": "LEGOLAND California", "kind": "offer-page", "url": "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/", "check_id": "legoland-california-hotel-kids-tickets-39" },
+    { "id": "atlantis-fall-into-paradise", "operator": "Atlantis Paradise Island", "kind": "offer-page", "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer", "check_id": "atlantis-bahamas-fall-into-paradise" },
+    { "id": "walt-disney-world-special-offers", "operator": "Walt Disney World", "kind": "offer-index", "url": "https://disneyworld.disney.go.com/special-offers/" },
+    { "id": "disney-cruise-special-offers", "operator": "Disney Cruise Line", "kind": "offer-index", "url": "https://disneycruise.disney.go.com/special-offers/" },
+    { "id": "universal-orlando-ticket-offers", "operator": "Universal Orlando", "kind": "offer-index", "url": "https://www.universalorlando.com/web/en/US/tickets-packages/offers/ticketoffer" },
+    { "id": "nps-fee-free-days", "operator": "National Park Service", "kind": "offer-page", "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm" }
+  ]
+}

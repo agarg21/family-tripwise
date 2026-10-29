@@ -1,0 +1,71 @@
+name: Deal watch
+
+# Hourly change watch on the official deal pages in ops/deal-watch/sources.json (QUEUE G09, OWNER D15).
+# tools/deal-watch.mjs honors robots.txt and Crawl-delay, fetches each URL at most once per run and
+# never retries a blocked source unchanged. It commits ops/deal-watch/state.json and flags.json to main
+# only when something changed; the next operator run verifies each flag on the official page.
+# Schedule only (no manual trigger), so no URL is fetched more than once an hour. No secrets.
+
+on:
+  schedule:
+    - cron: "23 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deal-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+
+      - name: Validate watcher and sources
+        run: node --test tools/deal-watch.test.mjs
+
+      - name: Watch official deal pages
+        env:
+          DEAL_WATCH_RAISED: ${{ runner.temp }}/raised-flags.json
+        run: node tools/deal-watch.mjs
+
+      - name: Commit changes (fast-forward or merge, never force)
+        run: |
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          git add ops/deal-watch/state.json ops/deal-watch/flags.json
+          if git diff --cached --quiet; then
+            echo "No change; nothing to commit."
+            exit 0
+          fi
+          flags=$(node -e 'const f=require("./ops/deal-watch/flags.json");console.log(f.flags.length)')
+          git commit -q -m "deal-watch: ${flags} pending flag(s)"
+          for attempt in 1 2 3 4; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 5))
+            git fetch -q origin main
+            # Only this workflow writes ops/deal-watch/state.json; the operator deletes handled flags
+            # from flags.json. On a conflict keep main's flags.json plus the flags this run raised,
+            # and this run's state.json.
+            if ! git merge -q --no-edit origin/main; then
+              git checkout --theirs ops/deal-watch/flags.json
+              node tools/deal-watch.mjs --reapply "$RUNNER_TEMP/raised-flags.json"
+              git checkout --ours ops/deal-watch/state.json 2>/dev/null || true
+              git add ops/deal-watch/flags.json ops/deal-watch/state.json
+              git -c core.editor=true merge --continue || { echo "Merge conflict outside ops/deal-watch; not pushing."; exit 1; }
+            fi
+            node -e 'for (const f of ["state","flags"]) JSON.parse(require("fs").readFileSync(`ops/deal-watch/${f}.json`,"utf8"))' || { echo "Merged deal-watch JSON is invalid; not pushing."; exit 1; }
+          done
+          echo "Push failed after 4 attempts."
+          exit 1
