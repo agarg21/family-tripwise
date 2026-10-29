@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-29 transactions=11
-run: none
+run: {id: 2026-10-29T15:30:39Z, started_at: 2026-10-29T15:30:39Z}
 last_public_release: 9362611 (2026-10-29, G05: Nov 4 social queue + Threads check-line fix); last main code change d3f7909 (G09 step 2 deal scores, no site change)
 active: none
 
