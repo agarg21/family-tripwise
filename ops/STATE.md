@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=4
-run: {id: 2026-10-29T08:04:50Z, started_at: 2026-10-29T08:04:50Z}
-last_public_release: aa18636 (2026-10-29, G05: Universal Orlando holidays on /this-week/)
+today: 2026-10-29 transactions=5
+run: none
+last_public_release: 81ccb00 (2026-10-29, G05: EPCOT Festival of the Holidays on /this-week/)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -18,7 +18,7 @@ active: none
 - Sitemap lastmod for 21 pages unchanged since the 2026-10-15 import is an estimate (visible date or 2026-10-13 bound); it becomes observed the next time each page changes. No action needed.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo and q/G07 remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot and q/G07 remain because remote deletion is refused; harmless.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 - Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
@@ -34,6 +34,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-29 G05 EPCOT Festival of the Holidays delivered 81ccb00 (release.json; https://familytripwise.com/this-week/ byte-identical live): Disney festival + holidays pages say Nov 27 – Dec 30, 2026; Candlelight Processional at America Gardens Theatre during the festival; no prices, admission terms, reservations or show times stated, so none published. Reviewer PASS_WITH_P3 (all 3 fixed).
 - 2026-10-29 G05 Universal Orlando holidays delivered aa18636 (release.json; https://familytripwise.com/this-week/ byte-identical live): official events guide (rev. Sep 23, 2026) says Nov 14 – Jan 3 (no year; our reading 2026–27) at all three parks, included in theme park admission; no extras or show times stated. Not published: Rockefeller tree (official page refused; magazine pages are 2025), Macy's parade (Access Denied). Test renders cards as of newest observation. Reviewer PASS_WITH_P3 (all 3 fixed).
 - 2026-10-29 G05 Nov 3 social queue delivered 75565db (release.json; both new cards byte-identical live): 4 posts (DC tree lottery last posting day, Disney party repeat a week before its first night, LEGOLAND and Atlantis first posts); Hyde Park repeat skipped with a stored reason. tools/social-queue.mjs gained `--skip <id> "<reason>"` (stored, carried on regeneration, validated) and treats "stay by <deadline>" as stating the deadline (LEGOLAND post says Nov 17 once). Reviewer PASS_WITH_P3 (1 fixed, 2 carried).
-- 2026-10-29 G05 Atlantis check delivered 57a5f9e (release.json; https://familytripwise.com/deals/atlantis-bahamas-fall-into-paradise.html, /deals/, a sibling and sitemap byte-identical live): up to 35% off 4+ nights at The Coral, Royal, Cove, Reef, Harborside, book by Nov 22 (no year; 2026 our reading), travel by Jan 31, 2027; USD 250 per-room credit (usable for Atlantis Kids Adventures), breakfast for two, kids 5 and under eat free at select venues; blackouts Nov 21–27 and Dec 15/16–Jan 1 (page conflicts); 21% charge, resort fee USD 77–82.50, 12+ gratuities. Family total "check live". Not published: Hilton kids-stay-free (expired), Carnival Bring The Bunch (ends Oct 31), Dollywood (Access Denied). Reviewer FAIL→PASS_WITH_P3.
