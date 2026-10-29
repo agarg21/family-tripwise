@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-29 transactions=16
-run: {id: 2026-10-29T22:04:29Z, started_at: 2026-10-29T22:04:29Z}
+run: none
 last_public_release: c5fa555 (2026-10-29, G14 link previews on all 52 pages; evergreen per-deal cards); last main code change c5fa555
-active: none
+active: {id: G14, branch: q/G14 (61aeea1), next: held for persona gate; release only if OWNER O8 says Yes, else add price glance to LV/SA first}
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -36,8 +36,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-29 G14 batch 1 held on q/G14 (61aeea1): credited city photo moved to the top of 12 lodging/activity pages (230px banner, per-photo focus, fixed NYC/Chicago alts). Tests 1395/0, seo-qa 0, Playwright 72 checks clean. Integrity FAIL(2 P2)→PASS_WITH_P3. Persona 3.75→3.83 FAIL (clarity 4/4/4; gap is pre-existing copy: no $ glance on LV/SA, caveat-heavy intros). O8 asks the owner.
 - 2026-10-29 G14 link previews delivered c5fa555 (release.json + 81 changed files byte-identical live): og/twitter tags on all 52 pages; city photo cards; per-deal v1 cards replaced by evergreen cards (company · trip type, offer + catch, no dates; numbers tested against the observed headline); plainer RC/SeaWorld titles; queues 10-29/11-01 refreshed. Integrity FAIL(P2)→PASS_WITH_P3; persona 3.73→4.07→4.07 PASS.
 - 2026-10-29 G14/D18 og batch on branch q/G13-og, not merged: og/twitter tags on all 52 pages from the generators, 13 labelled destination photo cards, site/deals/this-week cards, per-deal cards quoting the page catch; tests 1393/0, seo-qa 0 errors, Playwright clean. Integrity PASS_WITH_P3 x3; persona FAIL after 3 cycles (3.3, 3.6, 3.93: deal cards lack date/$; "Free and free" RC title; SeaWorld catch reads like a note).
-- 2026-10-29 G09w (ops only, no site change): first live deal-watch run's 3 flags were all robots.txt refusals (beaches.com/specials 403; two msccruisesusa.com pages 401). Not retried; flags cleared; noted in G05 carry. 13 sources ok, 1 error.
-- 2026-10-29 G11 step 2 on main 1a3c8e8 (verified live: release.json, new Beaches card byte-identical): v2 deal posts (hook, verdict, catch, book-by, dated check; v2.post validated against terms) and photo card; `--refresh` re-renders a queue in place. Integrity FAIL(P2)→PASS_WITH_P3; persona 3.73→4.07→4.07 PASS.
-- 2026-10-29 G11 step 1 on main b32bd32 (verified live: release.json, 5 files byte-identical): Beaches deal page rebuilt parent-first, credited photo, og tags and card. Integrity FAIL (4 P2) → PASS_WITH_P3; persona 3.3 → 3.87 → 4.07 PASS. O7 asks for rollout.

@@ -4,11 +4,11 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 ## Decisions (answered 2026-10-27)
 - D1 Operating model — Approved: cloud-only scheduled task (hourly to 2026-12-08 10:00 ET, then every 4h), authorized until 2027-01-15 17:00 ET (extended by owner 2026-10-28); 1 transaction/run, no daily cap; headless Chromium is the QA tool; never the owner's Mac.
 - D2 Repo simplification — Approved (done).
-- D3 Orlando admission form — shipped (owner's local files on branch owner-local-2026-10-27).
+- D3 Orlando admission form — shipped.
 - D4 Multi-page batches — Approved: staleness sweep, shared nav, Coronado link, self-hosted heroes, lodging readability. No new URLs or indexability changes.
 - D5 Byline Miles Rowan (disclosed AI). D6 New destinations need a fresh Approved row.
 - D7 Sources — Approved: official pages ≤1/URL/run and ≤1/week, honoring robots.txt; any public site readable for research; no logins or forms; never bypass robots, blocks or CAPTCHAs; third-party claims verified officially before publishing.
-- D8 Search data (DataForSEO) — Approved: request files via GitHub Actions secret DATAFORSEO_AUTH_B64; ≤USD 0.50/batch, ≤USD 20 cumulative (USD 0.36 used before Oct 27).
+- D8 DataForSEO — Approved: via Actions secret DATAFORSEO_AUTH_B64; ≤USD 0.50/batch, ≤USD 20 total (0.36 used).
 - D9 Nov 8-13 price samples — Approved: re-observe or remove on 7 hotel pages + CSVs before Nov 8.
 - D10 Pace (2026-10-28, owner) — Approved: growth-first. Most runs go to fresh deals/events/news, the new sections and social/newsletter content; site maintenance only for live-site defects and dated deadlines (Q17b).
 - D11 New URLs (2026-10-28, owner) — Approved: /deals/ hub plus one page per Family Deal Check, and /this-week/ (dated family events and news per city). Expired items drop automatically. No other new URLs, redirects or noindex without a fresh row.
@@ -21,8 +21,9 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D19 Deal v2 rollout (2026-10-29, owner) — Approved: other deal pages, ≤3 per release.
 
 ## Owner tasks (operator cannot do these)
-- T1/T2 done (GSC resubmit 10-27; YouTube impersonation report UCL8YHu5h_XiSTQhZJuCDmtA 10-28; do not repeat).
+- T1/T2 done (GSC resubmit 10-27; YouTube report 10-28; do not repeat).
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
 - O5 (10-29) Prices (docs/research/trip-cost-sources-2026-10-29.md): SerpApi free signup + SERPAPI_API_KEY; D8 covers hotel price checks? Rec: Yes.
+- O8 (10-29) Release G14 photo batch 1 (q/G14, top photos on 12 pages; integrity pass; persona 3.83/4.0 due to older copy, not the photos) and fix that copy separately? Rec: Yes.
