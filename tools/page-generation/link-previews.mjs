@@ -6,6 +6,7 @@
 import { fileURLToPath } from "node:url";
 import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { createHash } from "node:crypto";
 import { selfHostedImage } from "./self-hosted-images.mjs";
 
 const ORIGIN = "https://familytripwise.com/";
@@ -20,6 +21,14 @@ export const CARDS = {
 };
 
 export const photoCardPath = (slug) => `images/og/photos/${slug}.jpg`;
+// Evergreen card per deal check without a v2 card: company, trip type and its og_card line (no dates).
+// The file name hashes the text, so a changed line gets a new URL and cached previews cannot show the old one.
+export function dealCardText(check) {
+  return { kicker: `${check.operator} · ${check.category}`, title: check.og_card, line: "What you get, the catch and the deadline, checked on the official offer page" };
+}
+export const dealCardPath = (id, check = dealChecks().find((c) => c.id === id)) =>
+  `images/og/deals/${id}-${createHash("sha256").update(JSON.stringify(dealCardText(check))).digest("hex").slice(0, 8)}.png`;
+const dealChecks = () => JSON.parse(readFileSync(new URL("./deal-checks.json", import.meta.url), "utf8")).checks;
 
 // Destinations by URL slug: the place name printed on that destination's photo cards, and the photo a
 // destination page without its own photo uses (the same credited photo its other pages show).
@@ -70,7 +79,13 @@ export function previewImage(html, pagePath) {
     const alt = `Photo of ${DESTINATIONS[dest].place} by ${photo.artist.split(" from ")[0]} (${photo.license})`;
     return { path: photoCardPath(DESTINATIONS[dest].photo), alt, width: 1200, height: 630, type: "image/jpeg" };
   }
-  // Deal checks without a v2 card (their own og tags) use the evergreen /deals/ card (owner D19 rolls v2 out).
+  // Deal checks without a v2 card (v2 pages write their own og tags) use their evergreen deal card.
+  const dealId = pagePath.match(/^deals\/([a-z0-9-]+)\.html$/)?.[1];
+  const check = dealId && dealChecks().find((c) => c.id === dealId && c.og_card);
+  if (check) {
+    const t = dealCardText(check);
+    return { path: dealCardPath(dealId, check), alt: `${t.kicker}: ${t.title}. Family Deal Check from Family Tripwise`, width: 1200, height: 630, type: "image/png" };
+  }
   const card = cardFor(pagePath);
   return { path: card.path, alt: card.alt, width: 1200, height: 630, type: "image/png" };
 }

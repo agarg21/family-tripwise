@@ -75,11 +75,11 @@ test("photo pages use their own first photo; pages without one use the section c
   assert.throws(() => linkPreviewTags(html.replace("familytripwise.com/about", "example.com/about"), "about.html", site), /not on familytripwise/);
 });
 
-test("destination pages without their own photo use that destination's photo; deal checks without a v2 card use the evergreen deals card", () => {
+test("destination pages without their own photo use that destination's photo; deal checks without a v2 card use their evergreen deal card", () => {
   const img = (page) => readFileSync(join(site, page), "utf8").match(/og:image" content="([^"]*)"/)[1];
   assert.equal(img("family-itinerary/washington-dc-with-kids.html"), `${ORIGIN}images/og/photos/washington-dc-national-mall.jpg`);
   assert.equal(img("family-itinerary/boston-with-kids.html"), `${ORIGIN}images/og/photos/boston-skyline.jpg`);
-  assert.equal(img("deals/royal-caribbean-kids-sail-free.html"), `${ORIGIN}images/og/deals.png`);
+  assert.match(img("deals/royal-caribbean-kids-sail-free.html"), /^https:\/\/familytripwise\.com\/images\/og\/deals\/royal-caribbean-kids-sail-free-[0-9a-f]{8}\.png$/);
   assert.equal(img("deals/index.html"), `${ORIGIN}images/og/deals.png`);
   for (const url of urls) {
     const page = pathOf(url);
@@ -88,6 +88,24 @@ test("destination pages without their own photo use that destination's photo; de
   }
 });
 
+test("evergreen deal cards: no dates, and every number is in the deal's own observed headline or title", async () => {
+  const { readDealChecks } = await import("./page-generation/deals-pages.mjs");
+  const { dealCardPath } = await import("./page-generation/link-previews.mjs");
+  assert.equal(existsSync(join(site, "images/og/deals/v1")), false);
+  const norm = (v) => v.replace(/USD\s?(\d)/g, "$$$1").toLowerCase();
+  for (const check of readDealChecks().filter((c) => !c.v2)) {
+    assert.ok(check.og_card, `${check.id}: needs an og_card line`);
+    assert.doesNotMatch(check.og_card, /\b(January|February|March|April|May|June|July|August|September|October|November|December)\b|\bby\b/i, `${check.id}: og_card must stay evergreen (no dates or deadlines)`);
+    assert.doesNotMatch(check.og_card, /USD/, `${check.id}: use $ on cards`);
+    const source = norm(`${check.title} ${check.headline}`);
+    for (const n of check.og_card.match(/\$?\d+(?:%|\+)?/g) || []) assert.ok(source.includes(n.toLowerCase()), `${check.id}: "${n}" is not in the observed title or headline`);
+    assert.ok(existsSync(join(site, dealCardPath(check.id, check))), `${check.id}: card not rendered (node tools/page-og-images.mjs)`);
+  }
+  for (const file of readdirSync(join(site, "images/og/deals"))) {
+    if (file === "v1" || file.endsWith(".png") && readDealChecks().some((c) => (c.v2 ? `${c.id}.png` : dealCardPath(c.id, c).split("/").pop()) === file)) continue;
+    assert.fail(`images/og/deals/${file} is not used by any deal check (delete it)`);
+  }
+});
 test("no per-deal v1 cards: dated deal text lives only on v2 cards, which expire with their page", () => {
   assert.equal(existsSync(join(site, "images/og/deals/v1")), false);
   for (const file of readdirSync(join(site, "deals")).filter((f) => f.endsWith(".html"))) {

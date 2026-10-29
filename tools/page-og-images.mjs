@@ -3,16 +3,17 @@
 // - Photo cards: each self-hosted photo (tools/images/commons-images.lock.json) cropped to 1200x630
 //   JPEG with a small credit strip (author, licence, "cropped"). Same free-licence photo the pages
 //   already show and credit; never an AI image or promotional art.
-// - Typographic cards (PNG) for pages without a photo: the site, /deals/ (also used by deal checks without
-//   a v2 card; v2 cards come from tools/deal-og-images.mjs) and /this-week/. No dates or verdicts, so they
-//   never go stale.
+// - Typographic cards (PNG) for pages without a photo: the site, /deals/, /this-week/ and each deal check
+//   without a v2 card (company, trip type and its og_card line from deal-checks.json; v2 cards come from
+//   tools/deal-og-images.mjs). No dates or verdicts, so cached previews never show a stale deadline.
 // Text that does not fit is refused, not cropped. Existing files are kept unless --force.
 // Usage: node tools/page-og-images.mjs [--force] [--only=images/og/deals.png]
 import { createRequire } from "node:module";
 import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CARDS, DESTINATIONS, destinationOf, photoCardPath } from "./page-generation/link-previews.mjs";
+import { CARDS, DESTINATIONS, dealCardPath, dealCardText, destinationOf, photoCardPath } from "./page-generation/link-previews.mjs";
+import { readDealChecks } from "./page-generation/deals-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -39,7 +40,7 @@ export function photoCardHtml(slug) {
   .site { font-size: 26px; font-weight: 800; margin-top: 6px; }
   .brand b { color: #f0bd56; }
   .credit { position: absolute; right: 0; bottom: 0; max-width: 640px; white-space: nowrap; overflow: hidden; background: rgba(0,0,0,0.6); color: #fff; font-size: 16px; padding: 6px 12px; border-top-left-radius: 8px; }
-  </style></head><body>
+  </style></head><body class="${t.deal ? "deal" : ""}">
   <div class="brand" data-fit><div class="place">${e(DESTINATIONS[destinationOf(slug)].place)} with kids</div><div class="site">family<b>tripwise</b>.com</div></div>
   <div class="credit" data-fit>${e(photoCreditText(photo))}</div>
   ${FIT}</body></html>`;
@@ -61,9 +62,10 @@ export function textCardHtml(id, text = TEXT[id]) {
   .kicker { font-size: 28px; color: #126c67; font-weight: 800; }
   h1 { font-size: 54px; line-height: 1.15; margin-top: 22px; }
   .line { font-size: 26px; line-height: 1.35; margin-top: 26px; color: #0b4946; font-weight: 700; }
+  body.deal h1 { font-size: 48px; line-height: 1.2; }
   .brand { margin-top: auto; font-size: 30px; font-weight: 800; border-top: 3px solid #142029; padding-top: 16px; }
   .brand b { color: #126c67; }
-  </style></head><body>
+  </style></head><body class="${t.deal ? "deal" : ""}">
   <div class="mark">${logo}</div>
   <div class="main" data-fit><p class="kicker">${e(t.kicker)}</p><h1>${e(t.title)}</h1><p class="line">${e(t.line)}</p><p class="brand">family<b>tripwise</b>.com</p></div>
   ${FIT}</body></html>`;
@@ -75,7 +77,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const browser = await chromium.launch();
   const jobs = [
     ...Object.keys(lock).filter((slug) => destinationOf(slug)).map((slug) => ({ out: photoCardPath(slug), html: () => photoCardHtml(slug), type: "jpeg" })),
-    ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" }))
+    ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" })),
+    ...readDealChecks().filter((check) => !check.v2 && check.og_card).map((check) => ({ out: dealCardPath(check.id), html: () => textCardHtml(null, { ...dealCardText(check), deal: true }), type: "png" }))
   ];
   const only = process.argv.find((a) => a.startsWith("--only="))?.slice(7);
   let failed = 0;

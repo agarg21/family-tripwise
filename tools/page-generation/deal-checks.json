@@ -3,9 +3,10 @@
   "checks": [
     {
       "id": "royal-caribbean-kids-sail-free",
+      "og_card": "Kids 12 and under pay no cruise fare on select sailings; taxes, fees and port expenses still apply",
       "operator": "Royal Caribbean",
       "category": "Cruise",
-      "title": "Royal Caribbean Kids Sail Free: kids 12 and under pay no cruise fare",
+      "title": "Royal Caribbean Kids Sail Free (kids 12 and under, select sailings)",
       "headline": "Kids 12 and under pay no cruise fare on select 3+ night sailings, but every guest still pays taxes, fees and port expenses, and Thanksgiving and Christmas-to-New-Year sailings are excluded.",
       "family_of_four": "Two full-fare guests (for example, two parents) pay full fare; two kids 12 and under in the same stateroom pay USD 0 cruise fare under Kids Sail Free. Taxes, fees and port expenses are still charged for all four, so the kids are not free. The separate Free 3rd and 4th Guests offer works the same way for any 3rd and 4th guest, with no age limit stated in our record.",
       "terms": [
@@ -58,6 +59,7 @@
     },
     {
       "id": "great-wolf-lodge-fall-flash-sale",
+      "og_card": "Up to 40% off water park resort suites; activity passes and extra-guest fees cost extra",
       "operator": "Great Wolf Lodge",
       "category": "Water park resort",
       "title": "Great Wolf Lodge Fall Flash Sale: up to 40% off suites",
@@ -237,6 +239,7 @@
     },
     {
       "id": "club-med-all-inclusive-kids-under-4",
+      "og_card": "All-inclusive resorts in the Caribbean, Canada and Mexico: kids under 4 stay free, up to 40% off",
       "operator": "Club Med",
       "category": "All-inclusive",
       "title": "Club Med all-inclusive offer: kids under 4 stay free, up to 40% off",
@@ -287,9 +290,10 @@
     },
     {
       "id": "seaworld-orlando-2027-fun-card",
+      "og_card": "One price for unlimited SeaWorld Orlando visits for the rest of 2026 and all of 2027; parking extra",
       "operator": "SeaWorld Orlando",
       "category": "Theme park pass",
-      "title": "SeaWorld Orlando 2027 Fun Card: rest of 2026 included",
+      "title": "SeaWorld Orlando 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027",
       "headline": "One per-person price covers unlimited SeaWorld Orlando visits for the rest of 2026 and all of 2027 (Aquatica added in the higher tier), but the offer page shows no child price, and parking and select special events are not included.",
       "family_of_four": "The Fun Card is priced per person: the page shows from USD 144.99 each for SeaWorld only and from USD 184.99 each for SeaWorld + Aquatica, with no separate child price and no age rule, so plan on checking a card price for every family member. Each card is valid only for the person named on it. Parking is not included, so it is extra if you drive. Visits are blocked out on four days around Christmas 2026 and on 19 SeaWorld dates in 2027, including four spring Saturdays; the Aquatica tier also has 15 Aquatica blockout dates from late May to late July 2027.",
       "terms": [
@@ -352,6 +356,7 @@
     },
     {
       "id": "margaritaville-at-sea-black-friday-early-access",
+      "og_card": "65% off cruise fares and the 3rd and 4th guests sail free on select sailings; taxes and fees still apply",
       "operator": "Margaritaville at Sea",
       "category": "Cruise",
       "title": "Margaritaville at Sea Black Friday Early Access: 3rd and 4th guests sail free",
@@ -417,6 +422,7 @@
     },
     {
       "id": "norwegian-free-2nd-guest-3rd-4th-free",
+      "og_card": "3rd and 4th guests sail free on select sailings when guests 1 and 2 pay full fare",
       "operator": "Norwegian Cruise Line",
       "category": "Cruise",
       "title": "Norwegian Cruise Line Free 2nd Guest sale and free 3rd and 4th guests on select sailings",
@@ -476,6 +482,7 @@
     },
     {
       "id": "msc-cruises-35-off-kids-sail-free",
+      "og_card": "Kids 17 and under sail free as 3rd and 4th guests on select sailings; they still pay taxes and fees",
       "operator": "MSC Cruises",
       "category": "Cruise",
       "title": "MSC Cruises up to 35% off with kids 17 and under sailing free as 3rd and 4th guests",
@@ -537,6 +544,7 @@
     },
     {
       "id": "legoland-california-hotel-kids-tickets-39",
+      "og_card": "LEGOLAND Hotel stays with park tickets, breakfast and early park access; non-refundable",
       "operator": "LEGOLAND California Resort",
       "category": "Hotel + ticket package",
       "title": "LEGOLAND California hotel package: kids' tickets from USD 39 a day",
@@ -596,6 +604,7 @@
     },
     {
       "id": "atlantis-bahamas-fall-into-paradise",
+      "og_card": "Bahamas resort: up to 35% off 4+ nights and a $250 resort credit; a 21% charge and resort fee are added",
       "operator": "Atlantis Paradise Island",
       "category": "Resort stay offer",
       "title": "Atlantis Bahamas Fall Into Paradise: up to 35% off 4+ nights, USD 250 resort credit",
