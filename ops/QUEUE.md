@@ -19,9 +19,9 @@ Step 1 done 2026-10-29 (b32bd32): Beaches page v2 (validateDealV2; hero photo; o
 Step 2 done 2026-10-29 (1a3c8e8): v2 post text + photo card from validated v2.post; `social-queue.mjs <date> --refresh`. Persona 4.07.
 Next: 3) after O7: v2 (page + post block) for the other deal checks, longest-lived first (Club Med, SeaWorld, Atlantis, LEGOLAND), ≤3 pages per release, then --refresh current queues; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes). Carry P3s: related-deal hedges smaller grey; phone photo pushes verdict below first screen; desktop h2s big; validateQueue: cap image.alt at 500; FB text 392 chars (aim ~350); card lacks "older visitor photo" note.
 
-## G12 Trip-cost data for the glance test (research; owner decision)
-open · S · owner: needs O5 for any signup/spend · gate: none
-Find legitimate sources for "3–4 days for 2 adults + 2 kids from NYC": flight fares and resort/hotel rates on named dates without automating booking engines (published fares/rates pages; price APIs such as Amadeus/Duffel/Travelpayouts; DataForSEO Google Hotels/Flights endpoints under D8). Compare cost, terms, freshness, coverage; record docs/research/trip-cost-sources-YYYY-MM-DD.md; ask O5 with a recommendation.
+## G12 Trip-cost data for the glance test
+open · M · owner: O5 pending · gate: O5 Approved
+Research done 2026-10-29: docs/research/trip-cost-sources-2026-10-29.md (flights: SerpApi Google Flights; hotels: DataForSEO Google Hotels; cruises/parks: official fares). Build a price-request workflow (secrets only in Actions, dated receipts) and the "about $X normally, about $Y with the deal" line (estimate; party, ages, dates, NYC gateway, observed date). Check the unknowns listed there first.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
