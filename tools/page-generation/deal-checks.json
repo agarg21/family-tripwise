@@ -1,5 +1,5 @@
 {
-  "note": "Family Deal Checks for /deals/ (QUEUE G02, OWNER D11). Every term row was read on the operator's official page on observed_on; source record: docs/research/deal-checks-2026-10-28.md. family_total stays null unless a total for a named party and named dates was observed on the official site. After expires_on (America/New_York) a check leaves the hub and its page says the offer ended; it is never redirected or noindexed without an Approved OWNER.md row.",
+  "note": "Family Deal Checks for /deals/ (QUEUE G02, OWNER D11). Every term row was read on the operator's official page on observed_on; source record: docs/research/deal-checks-2026-10-28.md. family_total stays null unless a total for a named party and named dates was observed on the official site. After expires_on (America/New_York) a check leaves the hub and its page says the offer ended; it is never redirected or noindexed without an Approved OWNER.md row. Each check carries a score (G09 step 2): family_value is rated only from observed prices, urgency is derived from expires_on, novelty records a quick coverage search, and only worth_it and only_for checks are shared on social.",
   "checks": [
     {
       "id": "royal-caribbean-kids-sail-free",
@@ -30,7 +30,31 @@
       "official_url": "https://www.royalcaribbean.com/terms-and-conditions/promotions?country=USA",
       "source_label": "Royal Caribbean promotions terms and conditions",
       "observed_on": "2026-10-28",
-      "expires_on": "2026-11-02"
+      "expires_on": "2026-11-02",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The free child fare excludes taxes, fees and port expenses."
+        },
+        "appeal": {
+          "level": "broad",
+          "fits": "Families with children 12 and under sharing a stateroom with two full-fare guests on 3+ night sailings."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "Avoya Travel: Best cruise deals of October 2026",
+              "url": "https://www.avoyatravel.com/blog/cruise-deals-october-2026/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families with one or two children 12 and under on a 3+ night sailing outside the Thanksgiving, Christmas-to-New-Year and spring break 2027 exclusions.",
+        "why": "A free cruise fare for young kids is real money, but taxes, fees and port expenses are still charged for every guest and the main family holiday weeks are excluded."
+      }
     },
     {
       "id": "great-wolf-lodge-fall-flash-sale",
@@ -66,7 +90,26 @@
       "source_label": "Great Wolf Lodge Fall Flash Sale offer page",
       "observed_on": "2026-10-28",
       "expires_on": "2026-11-01",
-      "expires_note": "the offer page gives no year for this date; 2026 is our reading"
+      "expires_note": "the offer page gives no year for this date; 2026 is our reading",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The discount is on a two-guest room rate; extra-person fees and activity passes are extra."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who already plan a Great Wolf Lodge stay before February 11, 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-10-29",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families already planning a Great Wolf Lodge stay before February 11, 2027 who can book by November 1 and price the extra-person fees and passes.",
+        "why": "Up to 40% applies to a two-guest room rate only, so a family of 4 pays extra-person fees and passes on top; the deadline year is our reading."
+      }
     },
     {
       "id": "beaches-first-passport-credit",
@@ -98,7 +141,35 @@
       "official_url": "https://www.beaches.com/first-passport-registration/",
       "source_label": "Beaches First Passport Offer page",
       "observed_on": "2026-10-28",
-      "expires_on": "2026-10-31"
+      "expires_on": "2026-10-31",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The offer is a resort credit of up to USD 270, not a cut in the room price."
+        },
+        "appeal": {
+          "level": "narrow",
+          "fits": "Families with a child 5 or under holding a newly issued passport, on a 5+ paid-night stay."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "PR Newswire: Beaches Resorts Fall Fam Jam Tiny Traveler's First Passport offer",
+              "url": "https://www.prnewswire.com/news-releases/beaches-resorts-kicks-off-annual-fall-fam-jam-with-tiny-travelers-first-passport-offer-and-lineup-of-toddler-friendly-delights-302519666.html"
+            },
+            {
+              "label": "Yahoo Lifestyle: Beaches perk for kids' first passports",
+              "url": "https://www.yahoo.com/lifestyle/articles/beaches-resorts-just-launched-perk-223000122.html"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families with a child 5 or under with a newly issued passport who can book by October 31 and travel 5+ paid nights by November 6, 2026.",
+        "why": "A credit for resort extras, not a room discount, with a very short booking and travel window."
+      }
     },
     {
       "id": "club-med-all-inclusive-kids-under-4",
@@ -129,7 +200,26 @@
       "official_url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
       "source_label": "Club Med all-inclusive vacation deals page",
       "observed_on": "2026-10-28",
-      "expires_on": "2027-01-06"
+      "expires_on": "2027-01-06",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. Child prices for ages 4 and up are not shown."
+        },
+        "appeal": {
+          "level": "narrow",
+          "fits": "Families whose children are all under 4."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-10-29",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families whose children are all under 4, travelling to the Caribbean, Canada or Mexico by July 2, 2027, who will read the footnoted conditions at booking.",
+        "why": "Only children under 4 are shown as free and the conditions behind the asterisks were not readable, so families with older kids should not expect free child stays."
+      }
     },
     {
       "id": "seaworld-orlando-2027-fun-card",
@@ -170,7 +260,31 @@
       "observed_on": "2026-10-28",
       "expires_on": "2026-12-31",
       "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
-      "deadline_stated": false
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The card is priced per person with no child price shown."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who live near Orlando or will visit SeaWorld Orlando more than once before the end of 2027."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "FOX 35 Orlando: SeaWorld Orlando's 2027 Fun Card includes admission for rest of 2026",
+              "url": "https://www.fox35orlando.com/news/seaworld-orlandos-2027-fun-card-includes-admission-rest-2026"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families who will visit SeaWorld Orlando more than once between now and the end of 2027, such as Florida residents or repeat Orlando visitors.",
+        "why": "Each family member needs their own card with no child price, and parking is extra, so it pays off only with repeat visits."
+      }
     },
     {
       "id": "margaritaville-at-sea-black-friday-early-access",
@@ -207,7 +321,35 @@
       "official_url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
       "source_label": "Margaritaville at Sea Black Friday Early Access page",
       "observed_on": "2026-10-28",
-      "expires_on": "2026-11-03"
+      "expires_on": "2026-11-03",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. Taxes, fees and port expenses are charged for all four guests."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families of 3 or 4 sharing one stateroom on a select Margaritaville at Sea sailing."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "Cruise Industry News: Margaritaville offers Black Friday deal with 65% off cruise fares",
+              "url": "https://cruiseindustrynews.com/cruise-news/2026/10/margaritaville-offers-black-friday-deal-with-65-off-cruise-fares/"
+            },
+            {
+              "label": "TravelPulse: Margaritaville at Sea launches Black Friday Early Access sale",
+              "url": "https://www.travelpulse.com/news/cruise/margaritaville-at-sea-launches-black-friday-early-access-sale"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families of 3 or 4 sharing one stateroom whose dates match a select sailing with free 3rd and 4th guest fares, booking by November 3.",
+        "why": "The free 3rd and 4th guest fares could matter for a family, but qualifying sailings are not listed, no child age rule is stated and how the two offers combine is not shown."
+      }
     },
     {
       "id": "norwegian-free-2nd-guest-3rd-4th-free",
@@ -242,7 +384,31 @@
       "source_label": "Norwegian Cruise Line promotional terms and conditions",
       "observed_on": "2026-10-28",
       "expires_note": "this is the Free 2nd Guest booking deadline; the free 3rd and 4th guest offer has no stated end date",
-      "expires_on": "2026-11-02"
+      "expires_on": "2026-11-02",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. Whether the free 2nd guest and free 3rd and 4th guests combine on one booking is not stated."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families of 3 or 4 sharing one stateroom on an NCL sailing."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "Cruise Brothers: Norwegian Cruise Line Free 2nd Guest",
+              "url": "https://kashcruises.cruisebrothers.com/cb/special/norwegian-cruise-line-semi-annual-sale/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families of 3 or 4 sharing one stateroom who will price the same sailing under both offers before November 2.",
+        "why": "Two offers could help a family of 4, but the terms do not say whether they combine and the free 3rd and 4th guests need guests 1 and 2 at full fare."
+      }
     },
     {
       "id": "msc-cruises-35-off-kids-sail-free",
@@ -279,7 +445,31 @@
       "source_label": "MSC Cruises USA promotional terms and conditions",
       "observed_on": "2026-10-28",
       "expires_note": "the date on MSC's deals page, which gives no year (2026 is our reading); the promotional terms list November 5, 2026",
-      "expires_on": "2026-11-02"
+      "expires_on": "2026-11-02",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. Kids still pay government fees and taxes."
+        },
+        "appeal": {
+          "level": "broad",
+          "fits": "Families with children 17 and under as 3rd and 4th guests in one stateroom on select sailings."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "Leaps and Bounds Travel: Up to 35% off cruises + kids sail free",
+              "url": "https://www.leapsandboundstravel.com/product/up-to-35-off-cruises-kids-sail-free"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families with children 17 and under sharing a stateroom on a qualifying sailing, booking by November 2.",
+        "why": "The child age limit is unusually wide (17 and under), but kids still pay government fees and taxes and the qualifying sailings are not listed."
+      }
     },
     {
       "id": "legoland-california-hotel-kids-tickets-39",
@@ -319,7 +509,31 @@
       "official_url": "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/",
       "source_label": "LEGOLAND California Hotel + Ticket Package page",
       "observed_on": "2026-10-29",
-      "expires_on": "2026-11-17"
+      "expires_on": "2026-11-17",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The advertised from-price is a starting price for 2 adults and 2 children, not a quote for named dates."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families of 2 adults and 2 children ages 2 to 12 visiting LEGOLAND California."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "Patch: Legoland California Resort offers $39 kids' tickets",
+              "url": "https://patch.com/california/carlsbad/legoland-california-resort-offers-39-kids-tickets"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families with children 2 to 12 planning a LEGOLAND California visit through January 9, 2027 who are fine with a non-refundable booking.",
+        "why": "Tickets, breakfast and early access are bundled, but reservations are non-refundable, parking is extra and the starting price is not a quote for your dates."
+      }
     },
     {
       "id": "atlantis-bahamas-fall-into-paradise",
@@ -360,7 +574,35 @@
       "source_label": "Atlantis Fall Into Paradise offer page",
       "observed_on": "2026-10-29",
       "expires_on": "2026-11-22",
-      "expires_note": "the offer page gives no year for this date; 2026 is our reading"
+      "expires_note": "the offer page gives no year for this date; 2026 is our reading",
+      "score": {
+        "scored_on": "2026-10-29",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. A 21% charge, a daily resort fee and mandatory gratuities are added."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families taking a 4+ night Atlantis stay outside Thanksgiving week and mid-December to January 1."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-10-29",
+          "links": [
+            {
+              "label": "Caribbean Journal: Atlantis offering free breakfast and USD 250 resort credit",
+              "url": "https://www.caribjournal.com/2026/10/25/atlantis-bahamas-getaway/"
+            },
+            {
+              "label": "TravelPulse: Atlantis Paradise Island debuts Fall Into Paradise package",
+              "url": "https://www.travelpulse.com/news/hotels-and-resorts/atlantis-paradise-island-debuts-fall-into-paradise-package"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families taking 4+ nights at Atlantis by January 31, 2027 outside the blackout weeks, especially with children 5 and under.",
+        "why": "The resort credit and kids-eat-free help, but breakfast covers two people only and fees, a 21% charge and gratuities add up for a family of 4."
+      }
     }
   ]
 }

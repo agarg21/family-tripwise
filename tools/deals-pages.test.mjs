@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { currentChecks, dealCheckPage, dealPagePath, dealsHubPage, readDealChecks, validateDealChecks } from "./page-generation/deals-pages.mjs";
+import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, readDealChecks, validateDealChecks } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -13,7 +13,14 @@ const base = {
   family_of_four: "Two adults pay; two kids do not.", source_label: "Official offer page",
   terms: [["Book by", "November 2, 2026."], ["Travel window", "Through 2027."], ["Child ages", "12 and under."], ["Still charged", "Taxes."], ["Minimum nights", "3 nights."]],
   unclear: ["Blackout dates are not listed."], before_booking: ["Price the trip with and without the kids."],
-  family_total: null, official_url: "https://example.org/deal", observed_on: "2026-10-28", expires_on: "2026-11-02"
+  family_total: null, official_url: "https://example.org/deal", observed_on: "2026-10-28", expires_on: "2026-11-02",
+  score: {
+    scored_on: "2026-10-28",
+    family_value: { level: "unknown", basis: "No family total for named dates was observed." },
+    appeal: { level: "broad", fits: "Families with kids 12 and under." },
+    novelty: { level: "none_found", checked_on: "2026-10-28", links: [] },
+    verdict: "only_for", who: "Families with kids 12 and under on 3+ night sailings.", why: "Kids pay no fare but taxes still apply."
+  }
 };
 const check = (patch, t = "2026-10-28") => validateDealChecks([{ ...base, ...patch }], { today: t });
 
@@ -226,4 +233,34 @@ test("Atlantis Fall Into Paradise check keeps the record: book by Nov 22 (year i
   assert.ok(a.terms.some(([k, v]) => k === "Still charged" && /21%/.test(v) && /USD 77\.00/.test(v) && /12 and older/.test(v)));
   assert.match(a.family_of_four, /covers two people only/);
   assert.match(a.family_of_four, /maximum/);
+});
+
+const score = (patch, extra = {}, t = "2026-10-28") => check({ score: { ...base.score, ...patch }, ...extra }, t);
+
+test("G09 step 2: every check carries a validated score; family value is rated only from observed prices", () => {
+  for (const c of checks) assert.ok(["worth_it", "only_for", "skip"].includes(c.score.verdict), c.id);
+  assert.ok(check({ score: undefined }).some((p) => /score is required/.test(p)));
+  assert.ok(score({ verdict: "worth_it", who: undefined }).some((p) => /worth_it needs an observed family_value/.test(p)), "no observed family math, no Worth it");
+  assert.ok(score({ family_value: { level: "high", basis: "Looks like a great saving." } }).some((p) => /rated family_value needs an observed family_total/.test(p)));
+  const total = { amount: "USD 2,410.00", party: "2 adults and 2 children ages 6 and 9", stay_from: "2026-11-10", stay_to: "2026-11-14", includes: "cruise fare plus taxes, fees and port expenses", observed_on: "2026-10-28" };
+  const rated = { level: "high", basis: "Sale total vs the regular total for the same cabin and dates.", compare: { amount: "USD 3,900.00", observed_on: "2026-10-28", basis: "Regular fare, same party, cabin and dates." } };
+  assert.deepEqual(score({ family_value: rated, verdict: "worth_it", who: undefined }, { family_total: total }), []);
+  assert.ok(score({ who: undefined }).some((p) => /only_for needs who/.test(p)));
+  assert.ok(score({ verdict: "skip" }).some((p) => /who is only for only_for/.test(p)));
+  assert.ok(score({ verdict: "great" }).some((p) => /verdict must be one of/.test(p)));
+  assert.ok(score({ scored_on: "2026-10-27" }).some((p) => /scored_on/.test(p)), "scored before the observation");
+  assert.ok(score({ novelty: { level: "news_covered", checked_on: "2026-10-28", links: [] } }).some((p) => /needs at least one link/.test(p)));
+  assert.ok(score({ novelty: { level: "none_found", checked_on: "2026-10-28", links: [{ label: "Some news coverage", url: "https://news.example.com/a" }] } }).some((p) => /none_found cannot list/.test(p)));
+  assert.ok(score({ novelty: { level: "news_covered", checked_on: "2026-10-28", links: [{ label: "The operator's own page", url: "https://www.example.org/deal" }] } }).some((p) => /not the operator's own site/.test(p)));
+  assert.ok(score({ appeal: { level: "huge", fits: "Everyone everywhere." } }).some((p) => /appeal needs level/.test(p)));
+});
+
+test("G09 step 2: urgency is derived from the deadline on the day, never stored", () => {
+  for (const c of checks) assert.equal(c.score.urgency, undefined, c.id);
+  const d = (expires_on, extra = {}) => dealUrgency({ ...base, expires_on, ...extra }, "2026-10-29");
+  assert.equal(d("2026-11-01"), "high");
+  assert.equal(d("2026-11-08"), "medium");
+  assert.equal(d("2026-11-30"), "low");
+  assert.equal(d("2026-10-28"), "low", "ended");
+  assert.equal(d("2026-10-30", { deadline_stated: false }), "low", "a listing date is not a deadline");
 });

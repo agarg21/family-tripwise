@@ -162,6 +162,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       expires_on: check.expires_on,
       priority_on: check.expires_on,
       third_party: false,
+      // G09 step 2: a deal scored "skip" is never shared (only worth_it and only_for are).
+      verdict: check.score?.verdict ?? null,
       hashtags: ["#familytravel", "#familyvacation"],
     };
   });
@@ -231,6 +233,9 @@ export function readQueue(date, dir = queueDir) {
   return existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : null;
 }
 
+// Events are shareable once verified; a deal check only with a worth_it or only_for verdict.
+export const shareable = (r) => r.kind !== "deal" || ["worth_it", "only_for"].includes(r.verdict);
+
 // Pick the day's entries: verified, unexpired, freshly observed, not posted in the last few days,
 // most urgent first (deal deadline, event start or lottery close). `skip` lists items the operator
 // deliberately left out of this day (a repeat that adds nothing new), each with a written reason; the
@@ -242,7 +247,7 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
   const recent = new Set();
   for (let i = 1; i <= REPEAT_GAP_DAYS; i += 1) for (const entry of previous(addDays(date, -i))?.entries ?? []) recent.add(entry.item_id);
   const eligible = records
-    .filter((r) => !r.third_party && lastPostDay(r.expires_on) >= date && r.observed_on <= date && daysBetween(r.observed_on, date) <= MAX_OBSERVATION_AGE_DAYS && !recent.has(r.id) && !skipped.has(r.id))
+    .filter((r) => !r.third_party && shareable(r) && lastPostDay(r.expires_on) >= date && r.observed_on <= date && daysBetween(r.observed_on, date) <= MAX_OBSERVATION_AGE_DAYS && !recent.has(r.id) && !skipped.has(r.id))
     .map((r) => ({ r, key: r.priority_on >= date ? r.priority_on : r.expires_on }))
     .sort((a, b) => a.key.localeCompare(b.key) || a.r.id.localeCompare(b.r.id))
     .slice(0, unitCap(date))
@@ -315,6 +320,7 @@ export function validateQueue(queue, { records = sourceRecords(), today = null, 
       if (!record) problems.push(`${where}: source record no longer exists; regenerate the queue`);
       else {
         if (record.third_party) problems.push(`${where}: third-party record`);
+        if (!shareable(record)) problems.push(`${where}: deal is not scored worth_it or only_for; regenerate the queue`);
         if (record.observed_on !== s.observed_on || record.expires_on !== entry.expires_at.slice(0, 10)) problems.push(`${where}: record changed (observed or expiry); regenerate the queue`);
         if (`site/${cardFile(record)}` !== img.path) problems.push(`${where}: card no longer matches the record; regenerate`);
         const fresh = variants(record, entry.id);

@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { easternDate } from "./page-generation/sitemap.mjs";
 import { longDate } from "./page-generation/deals-pages.mjs";
 import {
-  root, queueFiles, readQueue, validateQueue, buildQueue, sourceRecords, variants, sentences, easternTime,
+  root, queueFiles, readQueue, validateQueue, buildQueue, sourceRecords, shareable, variants, sentences, easternTime,
   DAILY_CAPS, LIMITS, PLATFORMS, MAX_OBSERVATION_AGE_DAYS, unitCap,
 } from "./social-queue.mjs";
 
@@ -36,6 +36,7 @@ const fixtureCheck = {
   family_of_four: "Two kids pay USD 0 cruise fare. Taxes are still charged for all four.",
   terms: [["Book by", "November 2, 2026."]], unclear: [], before_booking: [], family_total: null,
   official_url: "https://www.example.com/terms", source_label: "Fixture terms", observed_on: "2026-10-28", expires_on: "2026-11-02",
+  score: { verdict: "only_for" },
 };
 const [fixtureDeal, fixtureEvent] = sourceRecords({ items: [fixtureItem], checks: [fixtureCheck] });
 const record = (over = {}) => ({ ...fixtureEvent, ...over });
@@ -185,4 +186,15 @@ test("an operator skip leaves an item out of that day, is stored with its reason
   const blank = JSON.parse(JSON.stringify(q));
   blank.skipped[0].reason = "";
   assert.ok(validateQueue(blank, { records, today, siteDir: null }).some((p) => /needs item_id and a reason/.test(p)));
+});
+
+test("a deal check is shared only with a worth_it or only_for verdict (G09 step 2)", () => {
+  const checks = ["worth_it", "only_for", "skip", undefined].map((verdict, i) => ({ ...fixtureCheck, id: `deal-${i}`, score: verdict ? { verdict } : undefined }));
+  const records = sourceRecords({ items: [], checks });
+  assert.deepEqual(records.map(shareable), [true, true, false, false]);
+  const q = buildQueue("2026-10-29", { records, previous: () => null });
+  assert.deepEqual(q.entries.map((e) => e.item_id), ["deal-0", "deal-1"]);
+  const shared = buildQueue("2026-10-29", { records: sourceRecords({ items: [], checks: [{ ...fixtureCheck, id: "deal-2", score: { verdict: "only_for" } }] }), previous: () => null });
+  const problems = validateQueue(shared, { records, today: "2026-10-29", siteDir: null });
+  assert.ok(problems.some((p) => /not scored worth_it or only_for/.test(p)), "a queued deal later scored skip must be regenerated out");
 });

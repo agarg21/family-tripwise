@@ -56,6 +56,60 @@ export function isEnded(check, today = easternDate()) {
   return check.expires_on < today;
 }
 
+// G09 step 2 (OWNER D15): every check carries a score that decides whether it is shared on social.
+// family_value is rated only from observed prices: a level other than "unknown" needs an observed
+// family_total plus an observed regular price for the same party and dates (family_value.compare).
+// "worth_it" needs a rated family value, so a deal without observed family math is at most "only_for".
+// Urgency is not stored (it would go stale): dealUrgency() derives it from expires_on on the day.
+export const VERDICTS = ["worth_it", "only_for", "skip"];
+const VALUE_LEVELS = ["unknown", "low", "medium", "high"];
+const APPEAL_LEVELS = ["broad", "medium", "narrow"];
+// none_found: a quick search on checked_on found no coverage; agency_listed: only travel-agency or
+// coupon listings; news_covered: news or travel-media coverage. The links are what the search showed.
+const NOVELTY_LEVELS = ["none_found", "agency_listed", "news_covered"];
+const hostOf = (url) => { try { return new URL(url).hostname; } catch { return ""; } };
+const onDomain = (host, domain) => Boolean(host && domain) && (host === domain || host.endsWith(`.${domain}`));
+const sentence = (x) => typeof x === "string" && x.trim().length > 10;
+
+export function dealUrgency(check, today = easternDate()) {
+  if (check.deadline_stated === false || isEnded(check, today)) return "low";
+  const days = Math.round((Date.parse(`${check.expires_on}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86400000);
+  return days <= 3 ? "high" : days <= 10 ? "medium" : "low";
+}
+
+export function validateDealScore(check, { today = easternDate() } = {}) {
+  const where = `check ${check?.id ?? "(no id)"}`;
+  const s = check?.score;
+  if (!s || typeof s !== "object") return [`${where}: score is required (G09 step 2)`];
+  const problems = [];
+  if (!validDate(s.scored_on) || s.scored_on < check.observed_on || s.scored_on > today) problems.push(`${where}: score.scored_on must be a real date between observed_on and today`);
+  const v = s.family_value ?? {};
+  if (!VALUE_LEVELS.includes(v.level) || !sentence(v.basis)) problems.push(`${where}: score.family_value needs level (${VALUE_LEVELS.join("/")}) and basis`);
+  else if (v.level !== "unknown") {
+    const c = v.compare ?? {};
+    const ok = check.family_total && typeof c.amount === "string" && /^[A-Z]{3} [\d,]+(\.\d\d)?$/.test(c.amount) && validDate(c.observed_on) && sentence(c.basis);
+    if (!ok) problems.push(`${where}: a rated family_value needs an observed family_total and compare {amount, observed_on, basis} for the same party and dates`);
+  }
+  const a = s.appeal ?? {};
+  if (!APPEAL_LEVELS.includes(a.level) || !sentence(a.fits)) problems.push(`${where}: score.appeal needs level (${APPEAL_LEVELS.join("/")}) and fits`);
+  const n = s.novelty ?? {};
+  const links = n.links ?? [];
+  if (!NOVELTY_LEVELS.includes(n.level) || !validDate(n.checked_on) || n.checked_on > today || !Array.isArray(links)) problems.push(`${where}: score.novelty needs level (${NOVELTY_LEVELS.join("/")}), checked_on and links`);
+  else {
+    if (!links.every((l) => l && sentence(l.label) && /^https:\/\/[^\s]+$/.test(l.url ?? ""))) problems.push(`${where}: score.novelty.links must be {label, url} with https URLs`);
+    if (n.level === "none_found" && links.length) problems.push(`${where}: novelty none_found cannot list coverage links`);
+    if (n.level !== "none_found" && !links.length) problems.push(`${where}: novelty ${n.level} needs at least one link`);
+    const official = hostOf(check.official_url).split(".").slice(-2).join(".");
+    if (links.some((l) => onDomain(hostOf(l?.url), official))) problems.push(`${where}: novelty links must be coverage by others, not the operator's own site`);
+  }
+  if (!VERDICTS.includes(s.verdict)) problems.push(`${where}: score.verdict must be one of ${VERDICTS.join("/")}`);
+  if (s.verdict === "worth_it" && !["medium", "high"].includes(v.level)) problems.push(`${where}: worth_it needs an observed family_value of medium or high`);
+  if (s.verdict === "only_for" && !sentence(s.who)) problems.push(`${where}: only_for needs who (the families it fits)`);
+  if (s.verdict !== "only_for" && s.who !== undefined) problems.push(`${where}: who is only for only_for verdicts`);
+  if (!sentence(s.why)) problems.push(`${where}: score.why is required`);
+  return problems;
+}
+
 // Returns a list of problems; an empty list means every check may be published.
 export function validateDealChecks(checks, { today = easternDate() } = {}) {
   const problems = [];
@@ -98,6 +152,7 @@ export function validateDealChecks(checks, { today = easternDate() } = {}) {
         if (Number(match[1]) < observedYear) problems.push(`${where}: ${field} mentions ${match[1]}, before the observation year`);
       }
     }
+    problems.push(...validateDealScore(check, { today }));
   }
   return problems;
 }
