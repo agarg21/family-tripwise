@@ -3,9 +3,10 @@ Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWN
 Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
 
 ## G08 Post through Zernio
-open · M · owner: D14 Approved · gate: build and dry-run now; live once ZERNIO_API_KEY exists (T3)
-tools/social-post.mjs gains a Zernio adapter used when ZERNIO_API_KEY exists: Facebook, Instagram, Threads and Pinterest through one API; look up connected account ids from the API at run time (no ids in the repo); keep claim-before-post receipts, never-post-twice, expiry, caps and the D12 kill switch; images via the public card URL. Read Zernio's public API docs first and record endpoints/limits in docs/research. Keep the direct Meta/Pinterest paths until Zernio posts succeed, then remove them.
-Acceptance: dry run against a simulated Zernio; reviewer PASS; first live post checked on each platform.
+open · S · owner: D14 Approved · gate: ZERNIO_API_KEY secret exists (T3)
+Built and on main 16e5ad8 (2026-10-29): tools/social-post.mjs posts all four platforms through Zernio when ZERNIO_API_KEY exists (accounts looked up at run time, Idempotency-Key per receipt, Threads link in first comment, Facebook link in text, Pinterest board from PINTEREST_BOARD_ID or the only public board); dry run against simulated Zernio passes; reviewer PASS_WITH_P3. API facts: docs/research/zernio-api-2026-10-29.md.
+Remaining: after the first scheduled run with the key, check each platform's receipt and live post (Facebook link preview, Instagram card crop, Pinterest board, Threads first comment); then remove the direct Meta/Pinterest paths and their secrets from the workflow.
+Carry P3s: a `publishing`/`scheduled` Zernio result is recorded `failed` (safe, never retried; could say "in progress"); re-check expiry right after a slow claim; tests for kill switch/expiry/409 on the Zernio route.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · L · owner: D15 Approved · gate: none
