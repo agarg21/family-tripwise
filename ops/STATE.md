@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-28 transactions=21
-run: {id: 2026-10-29T01:04:40Z, started_at: 2026-10-29T01:04:40Z}
+today: 2026-10-28 transactions=22
+run: none
 last_public_release: 31d63fb (2026-10-28, G05: DC ZooLights + Hogwarts in the Snow on /this-week/; Nov 2 social queue)
 active: none
 
@@ -34,6 +34,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-28 G05 social-text fix delivered 616326a on main: deal posts whose headline already says "book by <date>" no longer repeat the deadline (Beaches Oct 29 and Club Med Nov 2 queues regenerated; cards unchanged; other queues untouched and valid). Reviewer PASS_WITH_P3 (year-mismatch P3 fixed; abbreviated dates like "Nov. 2" still keep the duplicate, harmless).
 - 2026-10-28 G05 night sweep delivered 31d63fb (release.json; /this-week/ and three Nov 2 cards byte-identical live): Smithsonian ZooLights (DC; USD 10, ages 3+, select nights Nov 20–Jan 3, from the Oct 8 official release) and Hogwarts in the Snow (London; Nov 14–Jan 17, prices not on page) added; Nov 2 queue of 3. NPS Veterans Day fee-free day not published (no city section). Reviewer PASS_WITH_P3 (1 fixed, 2 carried).
 - 2026-10-28 G05 late sweep delivered 1769b9a (release.json; six new Nov 1 cards byte-identical live): Nov 1 queue (6 entries, within caps); an ended deal check whose date was never a stated deadline now reads "We stopped listing this check after <date>" (SeaWorld after Dec 31); a.m./p.m. before a day or month name no longer splits a sentence; Pinterest 403 README note; growth plan phase 0 without Bluesky. Reviewer PASS_WITH_P3 (2 fixed, 1 accepted: a real new sentence starting with a day/month name after a.m./p.m. would join, no text lost). Remote q/G05 deletion refused.
-- 2026-10-28 G05 evening sweep delivered dd9af5b (release.json; new deal page, /deals/ hub, SeaWorld and Great Wolf pages, sitemap and Oct 31 card byte-identical live): Margaritaville at Sea Black Friday Early Access check (book by Nov 3, 2026; USD 0 3rd/4th guest fares with taxes/fees/port for all; no child ages stated); non-deadline dates now read "Listed until" (SeaWorld); Oct 31 queue. Universal 3-Day ticket not published (no deadline/blockouts stated); Disneyland and Kalahari offer pages refused the fetcher. Reviewer PASS_WITH_P3 (1 fixed, 1 carried).
