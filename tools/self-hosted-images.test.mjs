@@ -26,6 +26,13 @@ test("no page hotlinks an image or social preview image", () => {
   }
 });
 
+test("no stylesheet or inline style loads a remote image", () => {
+  const styles = files(site).filter((f) => f.endsWith(".css")).map((f) => readFileSync(f, "utf8"));
+  for (const text of [...styles, ...pages.map(([, html]) => html)]) {
+    assert.doesNotMatch(text, /url\(\s*["']?(?:https?:)?\/\//);
+  }
+});
+
 test("every self-hosted photo exists, fits the size budget and carries its lock dimensions, alt and credit", () => {
   assert.equal(Object.keys(lock).length, manifest.images.length);
   const byPath = new Map(Object.values(lock).map((e) => [e.path, e]));

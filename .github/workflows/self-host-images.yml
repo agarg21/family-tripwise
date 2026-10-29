@@ -31,7 +31,6 @@ jobs:
       - name: Fetch and convert
         run: python3 tools/images/fetch-commons-images.py
       - name: Commit images to this branch
-        if: always()
         run: |
           set -eu
           case "$GITHUB_REF_NAME" in q/*) ;; *) echo "::notice::not a q/* branch; nothing committed"; exit 0;; esac

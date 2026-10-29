@@ -61,7 +61,7 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   assert.match(html, /width="1600" height="1062"/);
   assert.match(html, /Chensiyuan/);
   assert.match(html, /creativecommons\.org\/licenses\/by-sa\/4\.0\//);
-  assert.match(html, /No editorial changes; Wikimedia serves this resized preview/);
+  assert.match(html, /No editorial changes; Family Tripwise serves a resized copy/);
   assert.doesNotMatch(html, /Special:Redirect\/file\/Bellagio/);
   assert.doesNotMatch(html, /review[- ]signal/i);
   assert.doesNotMatch(html, /personally stayed|safest|quietest|best overall/i);
