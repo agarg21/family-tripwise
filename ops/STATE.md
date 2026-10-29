@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-28 transactions=24
-run: none
+today: 2026-10-29 transactions=0
+run: {id: 2026-10-29T04:06:36Z, started_at: 2026-10-29T04:06:36Z}
 last_public_release: a5f7823 (2026-10-28, G05: MSC Cruises up to 35% off + kids 17 and under sail free deal check)
 active: none
 
