@@ -112,3 +112,23 @@ Published as a Family Deal Check with expires_on 2026-12-31 (no purchase deadlin
 ### Change vs previous
 - New check (not in the 2026-10-28 morning set). The growth inventory row 7 had only a third-party source and a 2025 official page; the 2026 official page is now read.
 - SeaWorld Fun Card: no fact changed; it now carries `deadline_stated: false`, so the hub card, page status line and social text say "Listed until December 31, 2026" instead of "Book by".
+
+## Night addition (2026-10-28, ~22:30 ET): Norwegian Cruise Line
+
+| Offer | Official URL | Fetched | Notes |
+|---|---|---|---|
+| Free 2nd Guest + Free at Sea free 3rd & 4th guests | https://www.ncl.com/cruise-deals/promotion-terms | 2026-10-28 | robots.txt allows /cruise-deals/; whole page read (2 parts) |
+| Consumer deals page (cross-check only) | https://www.ncl.com/cruise-deals/promo | 2026-10-28 | Lists "Free 2nd Guest" (no end date, "applicable to all categories") and "Kids Sail Free" (no terms); Flex Pay book by 11/4/2026 |
+| Not published: NCL "Kids Sail Free + free balcony upgrades" | https://www.ncl.com/promo/upgrades | 2026-10-28 | Stale: "ENDS AUGUST 2", no year, no terms |
+| Not fetched: Aulani special offers | prodc.www.disneyaulani.com/rooms-offers/special-offers/ | refused | robots_disallowed on that host; not retried |
+
+| Field | Observed value (promotion-terms page) |
+|---|---|
+| Free 2nd Guest booking window | October 27 – November 2, 2026, 11:59 pm EST |
+| Free 2nd Guest sailings | "All Open for Sale"; not combinable with charters or inaugural sailings; "Offer is applicable to all guest in the stateroom" |
+| Free 2nd Guest taxes | For NCL Miami (US & Canada), Australia, NCL CE and NCL UK offices, taxes, fees and port expenses are included in the cruise fare; discretionary onboard service charges and optional packages extra |
+| Free 3rd & 4th Guest (under Free at Sea) | "Offer valid for guests 3-4 sharing a stateroom with guests 1-2 paying full fare"; "Offer only valid on select sailings"; dates "subject to change at any time without notice"; no deposit for qualifying 3rd/4th guests; guests 5–8 pay prevailing fares; not Studio/Solo (T1, IT, OT, BT) |
+| Free at Sea window | Booking 8/26/26 – cap controlled; 2+ night sailings departing on or after May 1, 2026; applicable to NCL Miami, INTL, Australia, Brazil, Asia |
+| Ages | None stated for either offer; under Free at Sea, guests 3–8 under 21 get no beverage package |
+| Combining | Each: "combinability with other promotional offers is subject to change at any time"; no sentence on combining the two |
+| Family total | Not observed (no booking-engine search) → "check live" |

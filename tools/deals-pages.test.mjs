@@ -161,3 +161,18 @@ test("Margaritaville at Sea check keeps the record: 2026 booking window, fees on
   assert.match(m.family_of_four, /Taxes, fees and port expenses are still charged for all four guests/);
   assert.ok(m.unclear.some((u) => /how the 65% off and the free 3rd and 4th guest fares combine/i.test(u)));
 });
+
+test("Norwegian check keeps the record: Nov 2, 2026 deadline, full-fare condition for free 3rd and 4th guests, no child ages, combining unclear, no family total", () => {
+  const n = checks.find((c) => c.id === "norwegian-free-2nd-guest-3rd-4th-free");
+  assert.ok(n, "added 2026-10-28 night (docs/research/deal-checks-2026-10-28.md)");
+  assert.equal(n.expires_on, "2026-11-02");
+  assert.equal(n.deadline_stated, undefined);
+  assert.equal(n.family_total, null);
+  assert.equal(n.official_url, "https://www.ncl.com/cruise-deals/promotion-terms");
+  assert.ok(n.terms.some(([l, v]) => l === "Book by" && /November 2, 2026/.test(v) && /October 27, 2026/.test(v)));
+  assert.ok(n.terms.some(([l, v]) => l === "3rd and 4th guests" && /guests 1 and 2 paying full fare/.test(v)));
+  assert.ok(n.terms.some(([l, v]) => l === "Child ages" && /No child age terms are stated/.test(v)));
+  assert.ok(n.terms.some(([l, v]) => l === "Taxes and fees" && /Free 3rd and 4th guests: not stated/.test(v)));
+  assert.ok(n.unclear.some((u) => /free 2nd guest still counts as guests 1 and 2 paying full fare/.test(u)));
+  assert.doesNotMatch(n.headline + n.family_of_four, /kids sail free|kids are free/i);
+});
