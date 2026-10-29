@@ -221,6 +221,23 @@
       "sort_on": "2026-11-14",
       "expires_on": "2027-01-17",
       "third_party": false
+    },
+    {
+      "id": "orlando-epcot-festival-of-the-holidays-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "EPCOT International Festival of the Holidays",
+      "when": "November 27 to December 30, 2026 at EPCOT, per Disney's festival page. Disney's holidays page says the Candlelight Processional is performed at America Gardens Theatre during the festival; no show times are given yet.",
+      "cost": "Not stated on Disney's festival pages: they give no prices and do not say what park admission covers. Check Disney's EPCOT ticket and festival pages before you go.",
+      "booking": "Disney's festival pages mention no event ticket or reservation; the festival page says “Check back soon for more information!”",
+      "family": "Disney's “Fun for All Ages” section lists Santa Claus photo visits, Goofy as Santa and Olaf's Holiday Tradition Expedition Scavenger Hunt; no age guidance is given.",
+      "official_url": "https://disneyworld.disney.go.com/events-tours/epcot/holiday-festival/",
+      "source_label": "Walt Disney World festival page",
+      "observed_on": "2026-10-29",
+      "starts_on": "2026-11-27",
+      "sort_on": "2026-11-27",
+      "expires_on": "2026-12-30",
+      "third_party": false
     }
   ]
 }
