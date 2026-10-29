@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=9
-run: {id: 2026-10-29T13:38:16Z, started_at: 2026-10-29T13:38:16Z}
-last_public_release: 9362611 (2026-10-29, G05: Nov 4 social queue + Threads check-line fix); last main code change 8daaacb (G09 hourly deal watch, no site change)
+today: 2026-10-29 transactions=10
+run: none
+last_public_release: 9362611 (2026-10-29, G05: Nov 4 social queue + Threads check-line fix); last main code change d3f7909 (G09 step 2 deal scores, no site change)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -36,6 +36,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-29 G09 step 2 on main d3f7909 (no site change): each deal check carries a validated score; Worth it needs observed 2+2 family math (none yet, so all 10 checks are Only for); urgency derived from the deadline; novelty from a quick coverage search; Skip deals never queue. Reviewer FAIL (2 P2 fixed) then PASS_WITH_P3. Deal-watch workflow had no runs yet at 13:40 UTC.
 - 2026-10-29 G09 step 1 on main 8daaacb (no site change): hourly watch of 17 official deal pages (robots.txt and Crawl-delay honored, ≥55 min between runs, blocked sources never retried unchanged); changes become flags in ops/deal-watch/flags.json that the new top QUEUE item G09w takes first. Reviewer FAIL (1 P1, 3 P2 fixed) then PASS_WITH_P3. First live runs not yet seen.
 - 2026-10-29 G08 Zernio posting on main 16e5ad8 (no site change): with ZERNIO_API_KEY, Facebook, Instagram, Threads and Pinterest post through Zernio to accounts looked up at run time; receipts, never-post-twice (plus Zernio Idempotency-Key), caps, expiry and D12 kill switch unchanged; simulated dry run 4/4 on the Nov 4 queue. Reviewer PASS_WITH_P3 (4 fixed, 3 carried). G08 stays open for the first live-post check.
-- 2026-10-29 G05 Nov 4 social queue delivered 9362611 (release.json; 3 new cards byte-identical live): first posts for NYBG train show, Universal holidays, EPCOT festival; 3 repeats skipped with reasons. Fixed: Threads posts now always end with the dated "Checked on the official page" line (5 queued posts had dropped it; short date-only form when a deal headline fills the space), and "Enid A. Haupt" no longer cut at the initial. Reviewer PASS_WITH_P3 (date-match test fixed).
