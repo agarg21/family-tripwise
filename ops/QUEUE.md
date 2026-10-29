@@ -15,8 +15,9 @@ Carry P3s: a skipped (under-55-min) watch run counts as the previous run, so the
 
 ## G11 Deal content v2 + persona review (posting paused, D12)
 open · M · owner: D11/D15 Approved; rollout needs O7 · gate: none
-Step 1 done 2026-10-29 (b32bd32, live): Beaches page in v2 order (`v2` block in deal-checks.json, validateDealV2 ties every $ to the terms; Commons hero photo; og tags + tools/deal-og-images.mjs card). Persona 4.07 PASS.
-Next: 2) post and card v2 (docs/plan/deal-content-v2.md "Posts"): social-queue text and 1080x1350 card from v2 fields; persona review; regenerate current queues. 3) after O7: v2 for the other deal checks, longest-lived first (Club Med, SeaWorld, Atlantis, LEGOLAND), ≤3 pages per release; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes). Carry P3s: related-deal hedges in smaller grey text; phone photo pushes the verdict below the first screen; desktop h2s oversized.
+Step 1 done 2026-10-29 (b32bd32): Beaches page v2 (validateDealV2; hero photo; og card via tools/deal-og-images.mjs).
+Step 2 done 2026-10-29 (1a3c8e8): v2 post text + photo card from validated v2.post; `social-queue.mjs <date> --refresh`. Persona 4.07.
+Next: 3) after O7: v2 (page + post block) for the other deal checks, longest-lived first (Club Med, SeaWorld, Atlantis, LEGOLAND), ≤3 pages per release, then --refresh current queues; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes). Carry P3s: related-deal hedges smaller grey; phone photo pushes verdict below first screen; desktop h2s big; validateQueue: cap image.alt at 500; FB text 392 chars (aim ~350); card lacks "older visitor photo" note.
 
 ## G12 Trip-cost data for the glance test (research; owner decision)
 open · S · owner: needs O5 for any signup/spend · gate: none

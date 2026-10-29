@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=14
-run: {id: 2026-10-29T18:05:35Z, started_at: 2026-10-29T18:05:35Z}
-last_public_release: b32bd32 (2026-10-29, G11 step 1: Beaches deal page v2 with photo and og card); last main code change b32bd32
+today: 2026-10-29 transactions=15
+run: none
+last_public_release: 1a3c8e8 (2026-10-29, G11 step 2: v2 deal post text and photo card; Beaches card live); last main code change 1a3c8e8
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -36,8 +36,8 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-10-29 G11 step 1 on main b32bd32 (verified live: release.json, 5 files byte-identical): Beaches deal page rebuilt parent-first (context line, $135 headline, chips, verdict, cost/savings, catch, how-to, things to do, pros/cons, terms, sources last), credited CC BY pool photo, og tags and 1200x630 card. Integrity FAIL (4 P2) → PASS_WITH_P3; persona 3.3 → 3.87 → 4.07 PASS. O7 asks for rollout.
+- 2026-10-29 G11 step 2 on main 1a3c8e8 (verified live: release.json, new Beaches card byte-identical): v2 deal posts (hook, verdict, catch, book-by, dated check; v2.post validated against terms) and photo card; `--refresh` re-renders a queue in place. Integrity FAIL(P2)→PASS_WITH_P3; persona 3.73→4.07→4.07 PASS.
+- 2026-10-29 G11 step 1 on main b32bd32 (verified live: release.json, 5 files byte-identical): Beaches deal page rebuilt parent-first, credited photo, og tags and card. Integrity FAIL (4 P2) → PASS_WITH_P3; persona 3.3 → 3.87 → 4.07 PASS. O7 asks for rollout.
 - 2026-10-29 G13 step 1 on main 7071aa5 (no site change): every deploy now checks each sitemap page for a self-hosted credited hero, og tags, an above-fold answer, placeholder values and dated sources; ratchet baseline fails only on regressions. Today hero 15/52, og 0/52 (O6 asks for an og batch). Reviewer FAIL (P2: baseline rewrite could hide regressions) then PASS_WITH_P3.
 - 2026-10-29 Q11 on main 278dc70 (verified live: release.json, 34 pages byte-identical, 13 images 200): Commons hotlinks (HTTP 429 to visitors) replaced by 13 self-hosted WebP photos (<=200 KB, credits kept, captions now say we serve the copy); downloaded once by a q/*-branch workflow; tests forbid remote images. Integrity FAIL (2 P2) then PASS; persona PASS (4/4/4).
 - 2026-10-29 G08 on main 6172a5a (no site change): first live Zernio run posted Facebook only (receipt posted, Zernio URL recorded; live post not fetchable by the operator); runs now report platforms with no connected Zernio account. Reviewer PASS.
-- 2026-10-29 G09 step 2 on main d3f7909 (no site change): each deal check carries a validated score; Worth it needs observed 2+2 family math (none yet, so all 10 checks are Only for); urgency derived from the deadline; novelty from a quick coverage search; Skip deals never queue. Reviewer FAIL (2 P2 fixed) then PASS_WITH_P3. Deal-watch workflow had no runs yet at 13:40 UTC.
