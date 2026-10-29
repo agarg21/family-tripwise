@@ -154,5 +154,30 @@ test("a deal headline that already states its booking deadline is not followed b
   assert.equal(otherYear.full.at(-1), "Book by November 2, 2026.", "a headline date in another year keeps the deadline line");
   const [sameYear] = sourceRecords({ items: [], checks: [{ ...fixtureCheck, headline: "Book by November 2, 2026 for a cabin." }] });
   assert.deepEqual(sameYear.full, ["Book by November 2, 2026 for a cabin.", fixtureCheck.family_of_four]);
+  const [stayBy, travelBy] = sourceRecords({ items: [], checks: [
+    { ...fixtureCheck, headline: "Book a hotel stay by November 2, 2026 for stays through January 9, 2027." },
+    { ...fixtureCheck, headline: "Kids sail free; travel by November 2, 2026." },
+  ] });
+  assert.deepEqual(stayBy.full, ["Book a hotel stay by November 2, 2026 for stays through January 9, 2027.", fixtureCheck.family_of_four], "\"stay by <deadline>\" already states it (LEGOLAND)");
+  assert.equal(travelBy.full.at(-1), "Book by November 2, 2026.", "a travel-by date is not a booking deadline");
   assert.deepEqual(s.lines, plain.lines.map(([k, v]) => [k, k === "For a family" ? stated.headline : v]), "the card keeps its Book by row");
+});
+
+test("an operator skip leaves an item out of that day, is stored with its reason and is checked", () => {
+  const records = [fixtureDeal, fixtureEvent, record({ id: "fixture-third", priority_on: "2026-11-10", expires_on: "2026-11-10" })];
+  const today = "2026-10-29";
+  const skip = [{ item_id: "fixture-lottery", reason: "Posted two days ago; nothing new to say." }];
+  const q = buildQueue(today, { records, previous: () => null, skip });
+  assert.deepEqual(q.entries.map((e) => e.item_id), ["fixture-deal", "fixture-third"]);
+  assert.deepEqual(q.skipped, skip);
+  assert.deepEqual(q.entries.map((e) => e.scheduled_at), ["2026-10-29T07:30:00-04:00", "2026-10-29T12:30:00-04:00"], "remaining entries take the first slots");
+  assert.deepEqual(validateQueue(q, { records, today, siteDir: null }), []);
+  assert.equal(buildQueue(today, { records, previous: () => null }).skipped, undefined, "no skipped key without skips");
+  assert.throws(() => buildQueue(today, { records, previous: () => null, skip: [{ item_id: "fixture-lottery", reason: " " }] }), /reason/);
+  const both = JSON.parse(JSON.stringify(q));
+  both.skipped.push({ item_id: "fixture-deal", reason: "x" });
+  assert.ok(validateQueue(both, { records, today, siteDir: null }).some((p) => /listed as skipped but also queued/.test(p)));
+  const blank = JSON.parse(JSON.stringify(q));
+  blank.skipped[0].reason = "";
+  assert.ok(validateQueue(blank, { records, today, siteDir: null }).some((p) => /needs item_id and a reason/.test(p)));
 });
