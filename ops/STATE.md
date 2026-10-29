@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=13
-run: {id: 2026-10-29T17:05:14Z, started_at: 2026-10-29T17:05:14Z}
-last_public_release: 278dc70 (2026-10-29, Q11: all 33 page photos self-hosted, privacy photo paragraph); last main code change 7071aa5 (G13 step 1 site-quality checks, no site change)
+today: 2026-10-29 transactions=14
+run: none
+last_public_release: b32bd32 (2026-10-29, G11 step 1: Beaches deal page v2 with photo and og card); last main code change b32bd32
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -20,7 +20,7 @@ active: none
 - Sitemap lastmod for 21 pages unchanged since the 2026-10-15 import is an estimate (visible date or 2026-10-13 bound); it becomes observed the next time each page changes. No action needed.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07 and q/Q11 (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11 (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 - Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
@@ -36,8 +36,8 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-29 G11 step 1 on main b32bd32 (verified live: release.json, 5 files byte-identical): Beaches deal page rebuilt parent-first (context line, $135 headline, chips, verdict, cost/savings, catch, how-to, things to do, pros/cons, terms, sources last), credited CC BY pool photo, og tags and 1200x630 card. Integrity FAIL (4 P2) → PASS_WITH_P3; persona 3.3 → 3.87 → 4.07 PASS. O7 asks for rollout.
 - 2026-10-29 G13 step 1 on main 7071aa5 (no site change): every deploy now checks each sitemap page for a self-hosted credited hero, og tags, an above-fold answer, placeholder values and dated sources; ratchet baseline fails only on regressions. Today hero 15/52, og 0/52 (O6 asks for an og batch). Reviewer FAIL (P2: baseline rewrite could hide regressions) then PASS_WITH_P3.
 - 2026-10-29 Q11 on main 278dc70 (verified live: release.json, 34 pages byte-identical, 13 images 200): Commons hotlinks (HTTP 429 to visitors) replaced by 13 self-hosted WebP photos (<=200 KB, credits kept, captions now say we serve the copy); downloaded once by a q/*-branch workflow; tests forbid remote images. Integrity FAIL (2 P2) then PASS; persona PASS (4/4/4).
 - 2026-10-29 G08 on main 6172a5a (no site change): first live Zernio run posted Facebook only (receipt posted, Zernio URL recorded; live post not fetchable by the operator); runs now report platforms with no connected Zernio account. Reviewer PASS.
 - 2026-10-29 G09 step 2 on main d3f7909 (no site change): each deal check carries a validated score; Worth it needs observed 2+2 family math (none yet, so all 10 checks are Only for); urgency derived from the deadline; novelty from a quick coverage search; Skip deals never queue. Reviewer FAIL (2 P2 fixed) then PASS_WITH_P3. Deal-watch workflow had no runs yet at 13:40 UTC.
-- 2026-10-29 G09 step 1 on main 8daaacb (no site change): hourly watch of 17 official deal pages (robots.txt and Crawl-delay honored, ≥55 min between runs, blocked sources never retried unchanged); changes become flags in ops/deal-watch/flags.json that the new top QUEUE item G09w takes first. Reviewer FAIL (1 P1, 3 P2 fixed) then PASS_WITH_P3. First live runs not yet seen.

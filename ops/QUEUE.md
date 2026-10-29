@@ -4,7 +4,7 @@ Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q i
 
 ## G13 Page quality: every deploy, weekly, on demand (owner 2026-10-29)
 open · M · owner: none (og batch needs O6) · gate: none (Q11 done 2026-10-29, 278dc70)
-Step 1 done 2026-10-29 (7071aa5): tools/site-quality.mjs + test on every deploy, ratchet baseline tools/site-quality-baseline.json (fails on regressions and new pages; --write-baseline refuses regressions). Today: hero 15/52, og 0/52, glance 42/52, placeholders 41/52, dated sources 50/52 (gaps: 10 deal pages no $ or hero and "Not observed" cells, G11; hotel pages photo below the fold; og everywhere, O6). Carry P3s: empty-table check (td opening with a tag; th-only table), nested sections skip outer text, --accept takes the next arg blindly.
+Step 1 done 2026-10-29 (7071aa5): tools/site-quality.mjs + test on every deploy, ratchet baseline tools/site-quality-baseline.json (fails on regressions and new pages; --write-baseline refuses regressions). Gaps: 9 v1 deal pages (G11), hotel photos below the fold, og (O6). Carry P3s: empty-table check (td opening with a tag; th-only table), nested sections skip outer text, --accept takes the next arg blindly.
 Pages with no photo (from Q11): about, contributors/miles-rowan, privacy, terms, /this-week/, /deals/ hub and all 10 deal pages, DC and Boston itineraries. Photos are self-hosted via tools/images/commons-images.json (add a file there; the self-host-images workflow on a q/* branch downloads it; generation fails on an unlisted Commons image).
 Next: 2) Weekly (first run on Mondays): one site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, and a persona review (docs/plan/page-quality-rubric.md) of pages changed since their last review plus the top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE. No automatic page edits. 3) On demand: when OWNER.md asks "review <page or all>", do it next.
 
@@ -14,8 +14,9 @@ One flag (or one operator's batch of flags) per run, before other items; live-si
 Carry P3s: a skipped (under-55-min) watch run counts as the previous run, so the next normal run can also skip (detection gap only); countdown/live-price lines may cause noise flags (judge on the first live days); robots.txt paths not percent-normalised (all sources ASCII).
 
 ## G11 Deal content v2 + persona review (posting paused, D12)
-open · M · owner: D11/D15 Approved · gate: none; do first
-Apply AGENTS.md Content Standard (glance test, page order, posts, persona review) per docs/plan/deal-content-v2.md: context line, plain headline, verdict, cost and savings for 4 (from G12 data when available; otherwise what the offer publishes, no invented totals), what you get, catch, how-to, things to do, pros/cons, terms, methodology last; og tags; post and card v2. Beaches first, persona review, owner review via OWNER.md, then all deal checks. Images per O4.
+open · M · owner: D11/D15 Approved; rollout needs O7 · gate: none
+Step 1 done 2026-10-29 (b32bd32, live): Beaches page in v2 order (`v2` block in deal-checks.json, validateDealV2 ties every $ to the terms; Commons hero photo; og tags + tools/deal-og-images.mjs card). Persona 4.07 PASS.
+Next: 2) post and card v2 (docs/plan/deal-content-v2.md "Posts"): social-queue text and 1080x1350 card from v2 fields; persona review; regenerate current queues. 3) after O7: v2 for the other deal checks, longest-lived first (Club Med, SeaWorld, Atlantis, LEGOLAND), ≤3 pages per release; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes). Carry P3s: related-deal hedges in smaller grey text; phone photo pushes the verdict below the first screen; desktop h2s oversized.
 
 ## G12 Trip-cost data for the glance test (research; owner decision)
 open · S · owner: needs O5 for any signup/spend · gate: none
@@ -41,7 +42,7 @@ Arrival Nov 8 is the past-stay point (tools/content-freshness.mjs). All 15 prope
 
 ## Q09c Lodging-page readability polish (P3s only)
 open · S · owner: D4e Approved · gate: none
-Done: Q09a (25d73a7), Q09b (228eaac), Q09c slices Boston (cb5745a), DC (1bdac05), PV (4e357c1), Cancun (575d512), London (1e03f62), Orlando (ccf65d8): each dated hotel amount shown once, provenance in collapsed details.how-checked blocks.
+Done: Q09a, Q09b, Q09c slices for Boston, DC, PV, Cancun, London, Orlando: each dated amount shown once, provenance collapsed.
 Remaining P3s: tall Cancellation/meals rows and rate-table captions cut off at 390 px (Boston, DC); PV next_checks comma runs ("Puerto Vallarta,Jalisco;", "18+,children 4-12,infants") not caught by run-together tests; PV Sanctuary visible block long; Cancun overview pointer wording kind-aware for Sapphire's undated two-adult rate; re-clicking a targeted "How we checked this price" link does not reopen a closed block; five identical Cancun link texts (add hotel name visually hidden); London "GBP"+amount nowrap at 390 px, scope .london-rate under .london-page, test compare e()-escaped plan names. Orlando: nightly-sample column is 4th of a 600px table (off-screen at 390; move to 2nd); sample-basis party text hardcoded (build from records); say "not complete checkout totals" visibly in the overview; "+ resort fees" cell has no amount pointer; stay-total captions identical (add hotel name); test gaps (shared USD270 line, plan terms in table, shared IHG source).
 Acceptance: fixes above; ≤3 public pages per release unless under D4e.
 

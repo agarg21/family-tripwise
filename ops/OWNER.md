@@ -21,9 +21,10 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D17 Images (2026-10-29, owner) — Approved: credited free-license stock photos and official media-kit photos where terms allow editorial use; self-hosted; never AI photos of real places.
 
 ## Owner tasks (operator cannot do these)
-- T1/T2 done (GSC resubmit 10-27; YouTube impersonation report on UCL8YHu5h_XiSTQhZJuCDmtA 10-28, do not re-report).
+- T1/T2 done (GSC resubmit 10-27; YouTube impersonation report UCL8YHu5h_XiSTQhZJuCDmtA 10-28; do not repeat).
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O2 (2026-10-28) Re-observe the robots-blocked Nov 8-13 hotel samples by hand (list: Q17b) by Nov 2? Recommendation: No; the operator removes them by Nov 7.
-- O6 (10-29) No page has og tags, so shared links show no card. Approve one batch adding them (self-hosted og:image) to all 52 pages? Recommendation: Yes.
+- O2 (10-28) Hand-check the Nov 8-13 hotel samples (Q17b) by Nov 2? Rec: No; the operator removes them by Nov 7.
+- O6 (10-29) Only v2 deal pages have og tags. Add them to all pages in one batch? Rec: Yes.
+- O7 (10-29) Beaches deal page is live in v2 layout. Roll v2 out to the other deal pages, ≤3 per release? Rec: Yes.
