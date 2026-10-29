@@ -55,8 +55,11 @@ test("the committed page matches today's render (refreshed daily by tools/this-w
   for (const item of items.filter((i) => i.expires_on < today)) assert.ok(!committed.includes(`id="${item.id}"`), `${item.id} expired`);
 });
 
+// Render as of the newest observation: an item observed later would be "in the future" for an older date.
+const latestObservation = items.map((i) => i.observed_on).sort().at(-1);
+
 test("every card shows its check date and official link; family notes are labelled as ours", () => {
-  const html = thisWeekPage(items, "2026-10-28");
+  const html = thisWeekPage(items, latestObservation);
   const cards = html.match(/<article class="detail-card fresh-item"[\s\S]*?<\/article>/g) || [];
   assert.equal(cards.length, items.length);
   for (const card of cards) {
@@ -69,7 +72,7 @@ test("every card shows its check date and official link; family notes are labell
 });
 
 test("every destination has a section anchor, and every guide's related block links to it", () => {
-  const html = thisWeekPage(items, "2026-10-28");
+  const html = thisWeekPage(items, latestObservation);
   for (const d of destinations) {
     assert.ok(html.includes(`id="${citySlug(d.name)}"`), d.name);
     const guide = readFileSync(new URL(d.guides[0][0], site), "utf8");

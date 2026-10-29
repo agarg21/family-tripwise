@@ -1,0 +1,13 @@
+# /this-week/ additions: official-page observations, 2026-10-29
+
+QUEUE G05 (run 2026-10-29T07:04Z, 03:04 ET). Each official URL below was read once (WebSearch restricted to the official domain, then one fetch). Extracted facts only; no page bodies kept. Data: tools/page-generation/fresh-items.json.
+
+| Item id | Official source | Observed value (2026-10-29) | Change vs previous |
+|---|---|---|---|
+| orlando-universal-holidays-2026 | https://blog.discoveruniversal.com/events/complete-guide-to-events-experiences-at-universal-orlando-resort-this-year/ (Universal's official blog; blog.universalorlando.com 302-redirects to blog.discoveruniversal.com; www.universalorlando.com robots.txt allows all agents) | Guide published Jan 8, 2026, updated Sep 23, 2026. Heading "Holidays at Universal Orlando \| November 14–January 3" (no year; our reading Nov 14, 2026 – Jan 3, 2027, since the guide covers "this year" and lists "New Year's Eve 2027 Celebration" on Dec 31). "takes place in Universal Studios Florida, Universal Islands of Adventure, and Universal Epic Universe, and it's included in your theme park admission!" No holiday extras, prices, reservations or show times in this section. | New item. 2026-10-28 attempt found no post (old blog URL redirected); research lead (Attractions Magazine) dates Nov 14 – Jan 3 now confirmed officially |
+
+Not published:
+- Universal's "Guide to the Holidays" post (blog.discoveruniversal.com/events/guide-to-the-holidays-at-universal-orlando-resort/) is dated Oct 8, 2025 and describes the 2025 season (parade featuring Macy's, Grinchmas, Hogwarts projections, Holiday Tour, Grinch breakfast); not carried forward to 2026.
+- Rockefeller Center tree (NYC): the tree page returned a client error to the fetcher (not retried); the two magazine pages read describe the 2025 tree (Dec 3, 2025 lighting). 2026 lighting date (press: Dec 2) stays unverified.
+- Macy's Thanksgiving Day Parade: macys.com returns Access Denied to plain requests (robots.txt included); not retried.
+- Universal CityWalk/hotel holiday dining and Earl the Squirrel meet-and-greet: year-less, no prices or booking terms on the guide.
