@@ -67,6 +67,8 @@ export function easternOffset(iso) {
 // DST switches at 02:00 local, so a time before 02:00 takes the previous day's offset.
 export const easternTime = (iso, hhmm) => `${iso}T${hhmm}:00${easternOffset(hhmm < "02:00" ? addDays(iso, -1) : iso)}`;
 const shortDate = (iso) => longDate(iso).replace(/, \d{4}$/, "");
+const VERDICT_LABEL = { worth_it: "Worth it", only_for: "Only for some families", skip: "Skip" };
+const imageLock = () => JSON.parse(readFileSync(join(root, "tools/images/commons-images.lock.json"), "utf8"));
 
 // Split a record field into sentences. After "a.m."/"p.m." a sentence ends only when the next word
 // starts with a capital letter that is not a time zone or a day/month name ("10 a.m. to noon", "3 p.m. ET" stay whole).
@@ -165,13 +167,64 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       // G09 step 2: a deal scored "skip" is never shared (only worth_it and only_for are).
       verdict: check.score?.verdict ?? null,
       hashtags: ["#familytravel", "#familyvacation"],
+      // G11 step 2: a check with v2 post lines posts in the v2 order (hook with the key number and the
+      // place, verdict, catch, book-by, dated check) and gets the v2 photo card.
+      v2: check.v2?.post ? {
+        context: check.v2.context,
+        headline: check.v2.headline,
+        big_number: check.v2.big_number,
+        big_label: check.v2.big_label,
+        verdict_label: VERDICT_LABEL[check.score?.verdict] ?? null,
+        deadline: `${label} ${longDate(check.expires_on)}`,
+        lines: [check.v2.post.hook, check.v2.post.verdict, check.v2.post.catch, bookBy],
+        checked: `Checked on ${new URL(check.official_url).hostname.replace(/^www\./, "")} on ${shortDate(check.observed_on)}.`,
+        hero_image: check.v2.hero_image?.slug ?? null,
+        hero_alt: check.v2.hero_image?.alt ?? null,
+      } : null,
     };
   });
   return [...deals, ...events];
 }
 
+const esc = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+
+// v2 deal card (docs/plan/deal-content-v2.md "Posts"): the page's credited, self-hosted photo with the big
+// number, then who and where, the plain headline, the verdict chip and the deadline, and the brand mark.
+// Never an AI image or promotional art; without a hero photo the number panel is plain brand colour.
+function cardHtmlV2(record) {
+  const v = record.v2;
+  const photo = v.hero_image && imageLock()[v.hero_image];
+  const bg = photo ? `background:linear-gradient(rgba(11,73,70,0) 30%,rgba(11,73,70,.92) 88%),url(data:image/webp;base64,${readFileSync(join(root, "site", photo.path)).toString("base64")}) center/cover;` : "";
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}html,body{width:1080px;height:1350px;background:#fffaf2}
+body{font-family:"DejaVu Sans","Liberation Sans",Arial,sans-serif;color:#142029;display:flex;flex-direction:column}
+.top{height:620px;flex:none;background:#126c67;${bg}color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:56px 72px 30px;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.num{font-size:150px;font-weight:800;line-height:1}.lab{font-size:38px;line-height:1.25;margin-top:14px}
+.credit{font-size:20px;margin-top:22px;opacity:.92}
+.main{flex:1;padding:44px 72px 56px;display:flex;flex-direction:column;overflow:hidden}
+.ctx{font-size:30px;font-weight:700;color:#0b4946;line-height:1.3}
+h1{font-size:54px;line-height:1.15;margin-top:20px;font-weight:800}
+.row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:30px}
+.chip{background:#f0bd56;font-weight:800;font-size:32px;padding:10px 22px;border-radius:999px}
+.chip.w{background:#126c67;color:#fff}
+.when{font-size:32px;font-weight:700}
+.catch{font-size:31px;line-height:1.35;margin-top:30px;color:#3b4a54}
+.brand{margin-top:auto;border-top:4px solid #142029;padding-top:20px;font-size:24px;line-height:1.4;color:#3b4a54}
+.brand b{display:block;font-size:34px;color:#142029}
+</style></head><body>
+<div class="top" id="top"><p class="num">${esc(v.big_number)}</p><p class="lab">${esc(v.big_label)}</p>${photo ? `<p class="credit">Photo: ${esc(photo.artist.split(" from ")[0])}, ${esc(photo.license)}</p>` : ""}</div>
+<div class="main" id="main"><p class="ctx">${esc(v.context)}</p><h1>${esc(v.headline)}</h1>
+<div class="row"><span class="chip${v.verdict_label === "Worth it" ? " w" : ""}">${esc(v.verdict_label)}</span><span class="when">${esc(v.deadline)}</span></div>
+<p class="catch">${esc(v.lines[2])}</p>
+<div class="brand"><p>${esc(v.checked)} Confirm before booking.</p><b>familytripwise.com · Family Deal Check</b></div></div>
+<script>{const m=document.getElementById("main"),t=document.getElementById("top");
+document.body.dataset.fits=(m.scrollHeight<=m.clientHeight&&t.scrollHeight<=t.clientHeight&&t.scrollWidth<=t.clientWidth&&document.body.scrollWidth<=1080&&document.body.scrollHeight<=1350)?"yes":"no";}</script>
+</body></html>`;
+}
+
 export function cardHtml(record) {
-  const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+  if (record.v2) return cardHtmlV2(record);
+  const e = esc;
   const rows = record.lines.map(([k, v]) => `<div class="row"><p class="k">${e(k)}</p><p class="v">${e(v)}</p></div>`).join("");
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0}html,body{width:1080px;height:1350px;background:#fbf8f2}
@@ -206,7 +259,28 @@ function link(record, platform, entryId) {
   return `${path}?utm_source=${platform}&utm_medium=social&utm_campaign=${entryId}${anchor ? `#${anchor}` : ""}`;
 }
 
+// v2 deal post: hook, verdict, catch, book-by and the dated check, about 350 characters; the link
+// travels outside the text (Facebook link field, Threads first comment); Instagram says "link in bio".
+function variantsV2(record) {
+  const v = record.v2;
+  const body = [...v.lines, v.checked].join("\n\n");
+  const tags = record.hashtags.join(" ");
+  return {
+    threads: { text: body },
+    facebook: { text: body },
+    instagram: { text: `${body}\n\nLink in bio: familytripwise.com/deals\n\n${tags}` },
+    pinterest: { title: v.headline, text: body },
+    tiktok: { title: v.headline, text: `${body}\n\n${tags}`, media: "photo" },
+    youtube: { title: v.headline, text: body, media: "video_required" },
+  };
+}
+
 export function variants(record, entryId) {
+  if (record.v2) {
+    const v = variantsV2(record);
+    for (const p of PLATFORMS) v[p].link = link(record, p, entryId);
+    return v;
+  }
   const checked = `Checked on the official page ${shortDate(record.observed_on)}: ${record.source_label}.`;
   const pageWord = record.kind === "deal" ? "familytripwise.com/deals" : "familytripwise.com/this-week";
   // A deal's headline carries its family caveats (fees, ages, exclusions), so it is never dropped.
@@ -232,6 +306,10 @@ export function readQueue(date, dir = queueDir) {
   const path = join(dir, `${date}.json`);
   return existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : null;
 }
+
+const cardAlt = (r) => (r.v2
+  ? `Family Deal Check card: ${r.v2.big_number} ${r.v2.big_label}. ${r.v2.context}. ${r.v2.verdict_label}. ${r.v2.deadline}.${r.v2.hero_alt ? ` Photo: ${r.v2.hero_alt}.` : ""}`
+  : `${r.kicker}. ${r.title}. Checked on the official page ${longDate(r.observed_on)}.`);
 
 // Events are shareable once verified; a deal check only with a worth_it or only_for verdict.
 export const shareable = (r) => r.kind !== "deal" || ["worth_it", "only_for"].includes(r.verdict);
@@ -267,7 +345,7 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
       expires_at: easternTime(r.expires_on, "00:00"),
       source: { official_url: r.official_url, label: r.source_label, observed_on: r.observed_on },
       page: r.page,
-      image: { path: `site/${cardFile(r)}`, url: `${SITE}/${cardFile(r)}`, width: 1080, height: 1350, alt: `${r.kicker}. ${r.title}. Checked on the official page ${longDate(r.observed_on)}.` },
+      image: { path: `site/${cardFile(r)}`, url: `${SITE}/${cardFile(r)}`, width: 1080, height: 1350, alt: cardAlt(r) },
       platforms,
     };
   });
@@ -277,6 +355,27 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
     entries,
     ...(skip.length ? { skipped: skip.map(({ item_id, reason }) => ({ item_id, reason })) } : {}),
   };
+}
+
+// Re-render the text and card of each entry already in a queue from the current records, keeping the
+// day's selection, slots and stored skips (G11: a template change must not reselect a posted day).
+// Platforms keep the set the entry already had; an entry whose record is gone is left for validation.
+export function refreshQueue(queue, { records = sourceRecords() } = {}) {
+  const byId = new Map(records.map((r) => [r.id, r]));
+  const entries = queue.entries.map((entry) => {
+    const r = byId.get(entry.item_id);
+    if (!r) return entry;
+    const all = variants(r, entry.id);
+    const platforms = Object.fromEntries(Object.keys(entry.platforms).map((p) => [p, all[p]]));
+    return {
+      ...entry,
+      source: { official_url: r.official_url, label: r.source_label, observed_on: r.observed_on },
+      page: r.page,
+      image: { ...entry.image, path: `site/${cardFile(r)}`, url: `${SITE}/${cardFile(r)}`, alt: cardAlt(r) },
+      platforms,
+    };
+  });
+  return { ...queue, entries };
 }
 
 export function queueFiles(dir = queueDir) {
@@ -342,6 +441,15 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   // A regeneration keeps the skips already stored in that day's queue; --skip adds to them
   // (a repeated item id replaces its stored reason).
   const [date, ...rest] = process.argv.slice(2);
+  if (rest[0] === "--refresh") {
+    // node tools/social-queue.mjs YYYY-MM-DD --refresh   (re-render texts and cards; same entries)
+    const existing = readQueue(date);
+    if (!existing) throw new Error(`No ops/social-queue/${date}.json to refresh`);
+    const refreshed = refreshQueue(existing);
+    writeFileSync(join(queueDir, `${date}.json`), `${JSON.stringify(refreshed, null, 2)}\n`);
+    console.log(`Refreshed ops/social-queue/${date}.json in place: ${refreshed.entries.map((e) => e.item_id).join(", ")}`);
+    process.exit(0);
+  }
   const skip = [];
   for (let i = 0; i < rest.length; i += 1) {
     if (rest[i] !== "--skip" || !rest[i + 1] || !rest[i + 2]) throw new Error('usage: node tools/social-queue.mjs YYYY-MM-DD [--skip <item-id> "<reason>"]...');

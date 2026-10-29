@@ -1,6 +1,6 @@
 // Renders the 1080x1350 JPEG card for each entry in ops/social-queue/YYYY-MM-DD.json (QUEUE G03)
-// with headless Chromium. Cards are typographic, built only from the verified record: no photos,
-// no AI images, no promotional art. A card whose text does not fit is refused, not cropped.
+// with headless Chromium. Cards are built only from the verified record: no AI images, no promotional
+// art; a v2 deal card (G11) may carry the page's credited, self-hosted hero photo. A card whose text does not fit is refused, not cropped.
 // Usage: node tools/social-cards.mjs YYYY-MM-DD
 import { createRequire } from "node:module";
 import { existsSync, mkdirSync } from "node:fs";
@@ -26,7 +26,7 @@ for (const entry of queue.entries) {
     continue;
   }
   mkdirSync(dirname(out), { recursive: true });
-  await page.screenshot({ path: out, type: "jpeg", quality: 85, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
+  await page.screenshot({ path: out, type: "jpeg", quality: records.get(entry.item_id).v2 ? 78 : 85, clip: { x: 0, y: 0, width: 1080, height: 1350 } });
   await page.close();
   console.log(`rendered ${entry.image.path}`);
 }

@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { easternDate } from "./page-generation/sitemap.mjs";
 import { longDate } from "./page-generation/deals-pages.mjs";
 import {
-  root, queueFiles, readQueue, validateQueue, buildQueue, sourceRecords, shareable, variants, sentences, easternTime,
+  root, queueFiles, readQueue, validateQueue, buildQueue, refreshQueue, sourceRecords, shareable, variants, sentences, easternTime, cardHtml,
   DAILY_CAPS, LIMITS, PLATFORMS, MAX_OBSERVATION_AGE_DAYS, unitCap,
 } from "./social-queue.mjs";
 
@@ -106,7 +106,7 @@ test("validator refuses expired, over-limit, over-cap and changed entries", () =
 });
 
 test("post text is copied from the record: every paragraph is a title, record field, check line or tag", () => {
-  for (const r of [fixtureDeal, fixtureEvent, ...sourceRecords()]) {
+  for (const r of [fixtureDeal, fixtureEvent, ...sourceRecords()].filter((x) => !x.v2)) {
     const fields = [r.title, ...r.full, ...r.short, ...r.extra].join("\n");
     for (const [platform, v] of Object.entries(variants(r, "id"))) {
       for (const para of v.text.split("\n\n")) {
@@ -197,4 +197,63 @@ test("a deal check is shared only with a worth_it or only_for verdict (G09 step 
   const shared = buildQueue("2026-10-29", { records: sourceRecords({ items: [], checks: [{ ...fixtureCheck, id: "deal-2", score: { verdict: "only_for" } }] }), previous: () => null });
   const problems = validateQueue(shared, { records, today: "2026-10-29", siteDir: null });
   assert.ok(problems.some((p) => /not scored worth_it or only_for/.test(p)), "a queued deal later scored skip must be regenerated out");
+});
+
+// G11 step 2 (docs/plan/deal-content-v2.md "Posts"): a v2 deal posts hook, verdict, catch, book-by and
+// the dated check, about 350 characters, "$" not "USD", every line copied from the validated v2 record.
+const fixtureV2 = sourceRecords({ items: [], checks: [{ ...fixtureCheck, v2: {
+  context: "Fixture Cruises: family cruise line sailing from Miami",
+  headline: "Fixture: kids 12 and under pay $0 cruise fare",
+  big_number: "$0", big_label: "cruise fare for kids 12 and under",
+  post: {
+    hook: "Fixture Cruises from Miami: kids 12 and under pay $0 cruise fare on sailings this winter.",
+    verdict: "Only for families who can sail with two adults paying full fare.",
+    catch: "The catch: taxes and fees are still charged for all four guests.",
+  },
+} }] })[0];
+
+test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 characters, from the record", () => {
+  for (const r of [fixtureV2, ...sourceRecords().filter((x) => x.v2)]) {
+    const v = variants(r, "id");
+    const allowed = [...r.v2.lines, r.v2.checked, "Link in bio: familytripwise.com/deals", r.hashtags.join(" ")];
+    for (const [platform, x] of Object.entries(v)) {
+      for (const para of x.text.split("\n\n")) assert.ok(allowed.includes(para), `${r.id} ${platform}: "${para}" is not from the v2 record`);
+      assert.doesNotMatch(x.text, /\bUSD\b/, `${r.id} ${platform} uses "$"`);
+      assert.doesNotMatch(x.text, /https?:\/\//, `${r.id} ${platform}: the link travels outside the text`);
+      assert.ok(x.text.startsWith(r.v2.lines[0]), `${r.id} ${platform} opens with the hook`);
+      assert.match(x.text, /\$\d/, `${r.id} ${platform} states the key number`);
+      assert.ok(x.text.includes(`\n\n${r.v2.lines[3]}\n\n${r.v2.checked}`), `${r.id} ${platform}: book-by then the dated check`);
+      if (x.title) assert.ok(x.title.length <= LIMITS[platform].title);
+    }
+    assert.ok(v.facebook.text.length <= 420 && v.threads.text.length <= 420, `${r.id}: Facebook/Threads about 350 characters (${v.facebook.text.length})`);
+    assert.match(r.v2.lines[1], /^(Worth it|Only for )/);
+    assert.match(r.v2.lines[2], /^The catch: /);
+    assert.match(r.v2.lines[3], /^(Book by|Listed until) [A-Z][a-z]+ \d{1,2}, \d{4}/);
+    assert.match(r.v2.checked, /^Checked on [a-z0-9.-]+ on [A-Z][a-z]+ \d{1,2}\.$/);
+    assert.match(v.instagram.text, /Link in bio: familytripwise\.com\/deals/);
+    const html = cardHtml(r);
+    for (const part of [r.v2.big_number, r.v2.headline, r.v2.verdict_label, r.v2.deadline]) assert.ok(html.includes(part.replaceAll("&", "&amp;")), `${r.id} card shows ${part}`);
+    assert.match(html, /familytripwise\.com · Family Deal Check/);
+    if (r.v2.hero_image) assert.match(html, /Photo: [^<]+, CC BY/, `${r.id} card credits its photo`);
+    assert.doesNotMatch(html, /https?:\/\/(?!familytripwise)/, "card loads nothing remote");
+  }
+  assert.equal(fixtureV2.v2.hero_image, null);
+  assert.doesNotMatch(cardHtml(fixtureV2), /data:image/, "no photo without a credited hero image");
+});
+
+test("refreshing a queue re-renders text and card in place without reselecting entries", () => {
+  const records = [fixtureV2, fixtureEvent, record({ id: "fixture-third", priority_on: "2026-11-10", expires_on: "2026-11-10" })];
+  const q = buildQueue("2026-10-29", { records, previous: () => null, skip: [{ item_id: "x-skip", reason: "kept" }] });
+  const stale = JSON.parse(JSON.stringify(q));
+  stale.entries[0].platforms.threads.text = "old template text";
+  stale.entries[0].image.path = "site/social/cards/old.jpg";
+  delete stale.entries[1].platforms.facebook;
+  const fresh = refreshQueue(stale, { records: [...records, record({ id: "a-new-urgent", priority_on: "2026-10-30", expires_on: "2026-10-30" })] });
+  assert.deepEqual(fresh.entries.map((e) => e.item_id), q.entries.map((e) => e.item_id), "same entries, no reselection");
+  assert.deepEqual(fresh.entries.map((e) => e.scheduled_at), q.entries.map((e) => e.scheduled_at));
+  assert.deepEqual(fresh.skipped, q.skipped);
+  assert.equal(fresh.entries[0].platforms.threads.text, q.entries[0].platforms.threads.text);
+  assert.equal(fresh.entries[0].image.path, q.entries[0].image.path);
+  assert.ok(!("facebook" in fresh.entries[1].platforms), "keeps each entry's platform set");
+  assert.deepEqual(validateQueue(fresh, { records, today: "2026-10-29", siteDir: null }), []);
 });

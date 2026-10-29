@@ -179,6 +179,9 @@ export function validateDealChecks(checks, { today = easternDate() } = {}) {
 const V2_TEXT = ["page_title", "context", "big_number", "big_label", "headline", "best_for", "not_for", "cost", "saves", "family"];
 const V2_LISTS = { get: [2, 4], compare: [1, 3], catch: [1, 3], how: [2, 5], pros: [2, 4], cons: [2, 4] };
 const V2_PLACEHOLDER = /\b(?:not observed|tbd|tba|n\/a|lorem ipsum)\b/i;
+const POST_LINE_MAX = 140;
+const POST_LINES_MAX = 300;
+const VERDICT_POST = { worth_it: "Worth it", only_for: "Only for " };
 const validSource = (src) => src && sentence(src.label) && /^https:\/\/[^\s]+$/.test(src.url ?? "") && validDate(src.observed_on);
 
 export function validateDealV2(check, { today = easternDate() } = {}) {
@@ -216,6 +219,22 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     if (!sentence(v.hero_image?.alt) || !sentence(v.hero_image?.caption)) problems.push(`${where}: hero_image needs alt and caption`);
   }
   if (v.og_image !== `images/og/deals/${check.id}.png`) problems.push(`${where}: og_image must be images/og/deals/${check.id}.png`);
+  // Social post lines (docs/plan/deal-content-v2.md "Posts"): hook with the key number and the place,
+  // verdict and who it is for, the catch; tools/social-queue.mjs adds the book-by line and the dated check.
+  const post = v.post;
+  if (!post || typeof post !== "object") problems.push(`${where}: post (hook, verdict, catch) is required`);
+  else {
+    for (const field of ["hook", "verdict", "catch"]) {
+      if (!sentence(post[field]) || post[field].length > POST_LINE_MAX) problems.push(`${where}: post.${field} must be one sentence of at most ${POST_LINE_MAX} characters`);
+      else texts.push(post[field]);
+    }
+    if (!/\$\d/.test(post.hook ?? "")) problems.push(`${where}: post.hook must state the key $ number`);
+    const label = VERDICT_POST[check.score?.verdict];
+    if (!label || !String(post.verdict ?? "").startsWith(`${label}`)) problems.push(`${where}: post.verdict must start "${label ?? "Worth it/Only for"}" to match the scored verdict`);
+    if (!/^The catch: /.test(post.catch ?? "")) problems.push(`${where}: post.catch starts "The catch: "`);
+    const total = ["hook", "verdict", "catch"].reduce((n, f) => n + String(post[f] ?? "").length, 0);
+    if (total > POST_LINES_MAX) problems.push(`${where}: post lines total ${total} characters; keep them under ${POST_LINES_MAX} so the post stays about 350`);
+  }
   for (const text of texts) {
     if (/\bUSD\b/.test(text)) problems.push(`${where}: use "$", not "USD" ("${text.slice(0, 40)}")`);
     if (V2_PLACEHOLDER.test(text)) problems.push(`${where}: placeholder wording ("${text.slice(0, 40)}")`);
