@@ -16,3 +16,14 @@ QUEUE G01. Each row was read once on the official page on 2026-10-28 (WebSearch 
 | san-diego-december-nights-2026 | https://www.sandiego.gov/december-nights | "December Nights is back for 2026!" Fri Dec 4, 4–10 p.m.; Sat Dec 5, noon–10 p.m.; free; fraud warning (city never asks for payment via Zelle or P2P apps). Page still carries 2025 PDFs (not used). | Same |
 
 Not published (could not confirm on an official page today): San Diego Zoo Jungle Bells (official page shows no year), Universal Orlando holidays (official blog URL redirects to a page without the post), Christkindlmarket Chicago and Rockefeller Center (official pages refused the fetch; not retried), San Antonio River Walk lights end date (page gives none).
+
+## Evening additions (G05, run 2026-10-29T00:04Z; still 2026-10-28 ET)
+
+Read once each on the official page (robots.txt allows both paths).
+
+| Item id | Official source | Observed value (2026-10-28) | Change vs research lead |
+|---|---|---|---|
+| dc-smithsonian-zoolights-2026 | https://nationalzoo.si.edu/news/zoolights-returns-nov-20-smithsonians-national-zoo-and-conservation-biology-institute | Release dated Oct 8, 2026. Select evenings Fri Nov 20, 2026 – Sun Jan 3, 2027: Nov 20–22, 27–29; Dec 4–6, 11–13, 16, 18–23, 26–30; Jan 2–3. Mon–Sat 5–9 p.m. (last entry 8:30), Sun 5–8 p.m. (last entry 7:30); rain or shine. USD 10 per person; ages 3+ need a ticket, 2 and under free; buy early (limited capacity). Event parking USD 30 advance / USD 40 day-of. Member Nights Dec 8–9; Adults-Only (21+) Dec 16, USD 19. Indoor animal exhibits closed; zoo closes 4 p.m., reopens 5 p.m. for ticket holders. Woodley Park-Zoo and Cleveland Park Metro walkable. | Lead (Destination DC) said Nov 20 – Jan 3 with 2026 price unconfirmed; dates and USD 10 price now observed officially; runs select nights, not daily |
+| london-hogwarts-in-the-snow-2026 | https://www.wbstudiotour.co.uk/the-experience/whats-on/hogwarts-in-the-snow/ | 14 Nov 2026 – 17 Jan 2027; tickets must be booked in advance; all Hogwarts in the Snow extras included in the ticket price; new for 2026: Backlot Stage festive Foley sound-effects session; Butterbeer Bar; sets dressed for the season. No ticket prices or child age rules on this page. | Resolves the Visit London date conflict (16 Nov – 19 Jan meta): official page says 14 Nov – 17 Jan |
+
+Not published: NPS Veterans Day fee-free day (Nov 11, 2026; US citizens and residents only; timed-entry/reservation fees may apply; https://www.nps.gov/planyourvisit/passes.htm) — national, not tied to a site city, so it has no /this-week/ section.
