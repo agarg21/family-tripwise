@@ -3,6 +3,7 @@
   "max_width": 1600,
   "max_bytes": 200000,
   "images": [
+    {"slug": "beaches-turks-caicos-pool", "file": "Beaches_Resort_Pool_-_Turks_&_Caicos_(6709609799).jpg"},
     {"slug": "san-antonio-river-walk", "file": "The_San_Antonio_River_Walk.jpg"},
     {"slug": "san-diego-zoo", "file": "San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg"},
     {"slug": "chicago-millennium-park", "file": "Millennium_park,chicago.JPG"},

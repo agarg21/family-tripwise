@@ -28,6 +28,7 @@ export function dealOgHtml(check) {
   .chip { background: #f0bd56; color: #142029; font-weight: 800; font-size: 24px; padding: 8px 16px; border-radius: 999px; }
   .chip.worth_it { background: #126c67; color: #fff; } .chip.skip { background: #db6d4a; color: #fff; }
   .when { font-size: 24px; font-weight: 700; }
+  .chips { font-size: 23px; margin-top: 16px; color: #0b4946; font-weight: 700; line-height: 1.3; }
   .brand { margin-top: auto; font-size: 26px; font-weight: 800; border-top: 3px solid #142029; padding-top: 14px; }
   </style></head><body>
   <div class="big" id="big"><div class="num">${e(v.big_number)}</div><div class="lab">${e(v.big_label)}</div></div>
@@ -35,6 +36,7 @@ export function dealOgHtml(check) {
     <p class="ctx">${e(v.context)}</p>
     <h1>${e(v.headline)}</h1>
     <div class="row"><span class="chip ${e(check.score.verdict)}">${e(VERDICT[check.score.verdict])}</span><span class="when">${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}</span></div>
+    <p class="chips">${check.v2.chips.map(e).join(" · ")}</p>
     <p class="brand">familytripwise.com · Family Deal Check</p>
   </div>
   <script>const m = document.getElementById("main"); const b = document.getElementById("big"); document.body.dataset.fits = (m.scrollHeight <= m.clientHeight && b.scrollWidth <= b.clientWidth && b.scrollHeight <= b.clientHeight && document.body.scrollWidth <= 1200) ? "yes" : "no";</script>

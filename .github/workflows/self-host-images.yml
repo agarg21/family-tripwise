@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - "q/Q11"
+      - "q/G11"
     paths:
       - "tools/images/commons-images.json"
       - "tools/images/fetch-commons-images.py"

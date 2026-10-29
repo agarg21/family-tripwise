@@ -287,7 +287,7 @@ test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above t
   assert.ok(b?.v2, "Beaches is the v2 pilot (docs/plan/deal-content-v2.md rollout step 1)");
   const html = dealCheckPage(checks, b, "2026-10-29");
   const main = html.slice(html.indexOf("<main"), html.indexOf("</main>"));
-  const order = ["deal-context", "<h1>", "Our verdict: Only for some families.", "Saves: up to $270", "Trip cost:", "What a family of 4 gets", "Is it a good deal?", "The catch", "How to get it", "What kids can do there", "Pros and cons", "Full terms", "More Family Deal Checks", "Sources and how we check"];
+  const order = ['class="eyebrow deal-context"', "<h1>", 'class="deal-chips"', "<strong>Our verdict: Only for some families.</strong>", '<p class="deal-money"><strong>Saves: up to $270', "<p>Trip cost:", 'id="deal-get-title"', 'id="deal-compare-title"', 'id="deal-catch-title"', 'id="deal-how-title"', 'id="deal-todo-title"', 'id="deal-proscons-title"', 'id="deal-terms-title"', 'id="deal-others-title"', 'id="deal-sources-title"'];
   let at = -1;
   for (const marker of order) {
     const i = main.indexOf(marker);
@@ -307,7 +307,12 @@ test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above t
   const ended = dealCheckPage(checks, b, "2026-11-01");
   assert.match(ended, /This offer ended October 31, 2026\./);
   assert.doesNotMatch(ended, /How to get it/);
-  assert.match(dealsHubPage(checks, "2026-10-29"), /Beaches gives you a \$135 resort credit/);
+  assert.doesNotMatch(ended, /Our verdict|Best for:|Not for:|Trip cost:|<li>Book by/, "an ended page drops the live verdict, fit lines, cost line and book-by chip");
+  assert.match(ended, /While it ran: up to \$270/);
+  assert.match(ended, /<meta name="description" content="[^"]*This offer ended October 31, 2026\.">/);
+  assert.match(html, /<li>Travel by November 6, 2026<\/li>/);
+  assert.doesNotMatch(own, /within the next week|offset/);
+  assert.match(dealsHubPage(checks, "2026-10-29"), /Beaches: \$135 resort credit per child 5 and under/);
 });
 
 test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobserved total and undated sources", () => {
@@ -322,4 +327,9 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(v({ things_to_do: { ...b.v2.things_to_do, source: { ...b.v2.things_to_do.source, observed_on: "2026-11-30" } } }).some((p) => /future/.test(p)));
   assert.ok(v({ family: "A family of four." }).some((p) => /2 adults and 2 kids/.test(p)));
   assert.ok(v({ catch: [] }).some((p) => /catch/.test(p)));
+  assert.ok(v({ cost: "Trip cost: about $3,000 for 5 nights for a family of 4." }).some((p) => /cost line cannot state a \$ amount/.test(p)));
+  assert.ok(v({ saves: "Saves: $900 off the room." }).some((p) => /\$900 is not a figure the observed terms state/.test(p)));
+  assert.ok(v({ big_number: "$500" }).some((p) => /\$500 is not a figure/.test(p)));
+  assert.ok(v({ chips: ["Kids eat free worth $1,000"] }).some((p) => /\$1,000 is not a figure/.test(p)));
+  assert.ok(v({ og_image: "images/og/deals/other-deal.png" }).some((p) => /og_image must be images\/og\/deals\/beaches-first-passport-credit\.png/.test(p)));
 });

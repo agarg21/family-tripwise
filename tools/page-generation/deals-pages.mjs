@@ -200,12 +200,24 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
   }
   if (!validSource(v.context_source) || v.context_source?.observed_on > today) problems.push(`${where}: context_source needs a dated https source`);
   if (!/\$\d/.test(v.headline ?? "") || !/\$\d/.test(v.big_number ?? "")) problems.push(`${where}: headline and big_number must state a $ amount`);
+  if (!Array.isArray(v.chips) || v.chips.length < 1 || v.chips.length > 4 || !v.chips.every((x) => typeof x === "string" && x.length >= 4 && x.length <= 40)) problems.push(`${where}: chips must be 1-4 short labels`);
+  else texts.push(...v.chips);
+  if (check.family_total === null && /\$\s?\d/.test(v.cost ?? "")) problems.push(`${where}: no family total was observed, so the cost line cannot state a $ amount`);
   if (!/^Trip cost\b/.test(v.cost ?? "") || !/^Saves\b/.test(v.saves ?? "")) problems.push(`${where}: cost starts "Trip cost", saves starts "Saves"`);
   if (!/\b2 adults\b.*\b2 (?:kids|children)\b.*\baged? \d/i.test(v.family ?? "")) problems.push(`${where}: family must name 2 adults and 2 kids with ages`);
-  if (typeof v.og_image !== "string" || !/^images\/og\/deals\/[a-z0-9-]+\.png$/.test(v.og_image)) problems.push(`${where}: og_image must be images/og/deals/<id>.png`);
+  if (v.og_image !== `images/og/deals/${check.id}.png`) problems.push(`${where}: og_image must be images/og/deals/${check.id}.png`);
   for (const text of texts) {
     if (/\bUSD\b/.test(text)) problems.push(`${where}: use "$", not "USD" ("${text.slice(0, 40)}")`);
     if (V2_PLACEHOLDER.test(text)) problems.push(`${where}: placeholder wording ("${text.slice(0, 40)}")`);
+  }
+  // Every $ figure in v2 copy must be one the observed terms (or an observed family total) state, so the
+  // presentation layer can never introduce a price, fee or saving of its own.
+  const termText = [...(check.terms ?? []).flat(), check.family_total?.amount ?? ""].join(" ");
+  const stated = new Set([...termText.matchAll(/(?:USD|\$)\s?([\d,]+(?:\.\d\d)?)/g)].map((m) => m[1].replaceAll(",", "")));
+  for (const text of [...texts, v.big_number ?? ""]) {
+    for (const m of String(text).matchAll(/\$\s?([\d,]+(?:\.\d\d)?)/g)) {
+      if (!stated.has(m[1].replaceAll(",", ""))) problems.push(`${where}: $${m[1]} is not a figure the observed terms state ("${String(text).slice(0, 40)}")`);
+    }
   }
   // A dollar total for the family is never claimed in v2 copy without an observed family_total.
   if (check.family_total === null && /\btotal\b[^.]*\$\d|\$\d[^.]*\btotal\b/i.test(texts.join(" "))) problems.push(`${where}: no family total was observed, so v2 copy cannot state one`);
@@ -234,18 +246,19 @@ function dealCheckPageV2(checks, check, today, ended) {
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
             <h1>${e(v.headline)}</h1>
+            <ul class="deal-chips" aria-label="Key terms">${ended ? "" : `<li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${dateNote(check)}</li>`}${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>
+            ${ended ? status : ""}
             ${contributorCredit()}
-            ${status}
           </div>
           <div class="deal-big" aria-hidden="true"><span class="deal-big-number">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
         </div>
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
-        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict: ${e(VERDICT_TEXT[s.verdict])}.</strong> ${e(s.why)}</p>
+${ended ? `        <p class="deal-verdict"><strong>${endedLabel(check)} ${e(longDate(check.expires_on))}.</strong> While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict: ${e(VERDICT_TEXT[s.verdict])}.</strong> ${e(s.why)}</p>
         <p><strong>Best for:</strong> ${e(v.best_for)}</p>
         <p><strong>Not for:</strong> ${e(v.not_for)}</p>
-        <p class="deal-money"><strong>${e(v.saves.replace(/^Saves:\s*/, "Saves: "))}</strong></p>
-        <p>${e(v.cost)}</p>
+        <p class="deal-money"><strong>${e(v.saves)}</strong></p>
+        <p>${e(v.cost)}</p>`}
       </section>
       <section class="container page-section" aria-labelledby="deal-get-title">
         <h2 id="deal-get-title">What a family of 4 gets</h2>
@@ -302,11 +315,11 @@ ${otherChecks(checks, check, today)}
     </main>`;
   return page({
     title: `${v.page_title} | Family Tripwise`,
-    description: `${v.context}. ${v.headline}. ${deadlineLabel(check)} ${longDate(check.expires_on)}.`,
+    description: `${v.context}. ${v.headline}. ${ended ? endedLabel(check) : deadlineLabel(check)} ${longDate(check.expires_on)}.`,
     canonical: dealPageUrl(check),
     path: dealPagePath(check),
     body,
-    og: { title: v.page_title, description: `${v.headline}. ${deadlineLabel(check)} ${longDate(check.expires_on)}.`, image: `https://familytripwise.com/${v.og_image}`, alt: `${v.big_number} ${v.big_label}` }
+    og: { title: v.page_title, description: `${v.headline}. ${ended ? endedLabel(check) : deadlineLabel(check)} ${longDate(check.expires_on)}.`, image: `https://familytripwise.com/${v.og_image}`, alt: `${v.big_number} ${v.big_label}` }
   });
 }
 
@@ -409,9 +422,11 @@ ${trustPanel}
 }
 
 function otherChecks(checks, current, today) {
+  // v2 pages say "$"; other checks' v1 titles still say "USD 39" until G11 rolls v2 out to them.
+  const t = (c) => (current.v2 ? String(c.v2?.headline ?? c.title).replace(/\bUSD (?=\d)/g, "$") : c.title);
   const others = checks.filter((c) => c.id !== current.id).sort((a, b) => Number(isEnded(a, today)) - Number(isEnded(b, today)) || a.expires_on.localeCompare(b.expires_on));
   if (!others.length) return "";
-  const items = others.map((c) => `<li><a href="./${e(c.id)}.html">${e(c.title)}</a> <span class="fresh-upcoming-meta">(${isEnded(c, today) ? `${c.deadline_stated === false ? "no longer listed after" : "ended"} ${e(longDate(c.expires_on))}` : shortDeadline(c)})</span></li>`).join("");
+  const items = others.map((c) => `<li><a href="./${e(c.id)}.html">${e(t(c))}</a> <span class="fresh-upcoming-meta">(${isEnded(c, today) ? `${c.deadline_stated === false ? "no longer listed after" : "ended"} ${e(longDate(c.expires_on))}` : shortDeadline(c)})</span></li>`).join("");
   return `      <nav class="container page-section deal-others" aria-labelledby="deal-others-title">
         <h2 id="deal-others-title">More Family Deal Checks</h2>
         <ul>${items}</ul>
