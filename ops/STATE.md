@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-10-30 10:00 ET, then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-29 transactions=1
-run: none
+run: {id: 2026-10-29T05:04:46Z, started_at: 2026-10-29T05:04:46Z}
 last_public_release: 08ff52c (2026-10-29, G05: LEGOLAND California hotel + ticket package deal check)
 active: none
 
