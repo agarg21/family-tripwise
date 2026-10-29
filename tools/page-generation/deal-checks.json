@@ -285,7 +285,7 @@
       "id": "legoland-california-hotel-kids-tickets-39",
       "operator": "LEGOLAND California Resort",
       "category": "Hotel + ticket package",
-      "title": "LEGOLAND California hotel package: kids' Hopper tickets from USD 39 a day",
+      "title": "LEGOLAND California hotel package: kids' tickets from USD 39 a day",
       "headline": "Book a LEGOLAND Hotel or LEGOLAND Castle Hotel stay by November 17, 2026 for stays through January 9, 2027, with Park Hopper tickets, daily hot breakfast and early park access; advertised from USD 169 per person per night for a family of four before tax, but reservations are non-refundable and parking is extra.",
       "family_of_four": "LEGOLAND's advertised pricing is based on exactly this party: 2 adults and 2 children ages 2 to 12 for a 1-night hotel stay, before tax. The deals page shows a starting price of USD 169 per person per night and kids' tickets from USD 39 per day; these are advertised starting prices, not a quote for your dates. The package includes a Park Hopper ticket (LEGOLAND Theme Park and SEA LIFE Aquarium; multi-day visits must be used within 3 days of the first visit), a daily hot buffet breakfast and early park access. Parking is charged on arrival unless pre-purchased, reservations are non-refundable and full payment is due at booking.",
       "terms": [
@@ -296,7 +296,7 @@
         ["Hotels", "LEGOLAND Hotel and LEGOLAND Castle Hotel (see the partner-hotel conflict below)."],
         ["Included", "Park Hopper ticket for LEGOLAND Theme Park and SEA LIFE Aquarium, daily hot buffet breakfast and early park access (start time not stated)."],
         ["Still charged", "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."],
-        ["Cancellation", "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered at checkout."],
+        ["Cancellation", "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered."],
         ["Combining", "Cannot be combined with any other offers, discounts, promotions or group rates. The offer page says new bookings only and not valid through third-party websites."],
         ["Minimum nights", "Not stated."]
       ],
@@ -305,6 +305,7 @@
         "Partner hotels conflict: the package page lists Hopper tickets, early access and breakfast at select partner hotels, while the kids' tickets offer page says the hotel offer is not valid for partner hotels.",
         "No blockout dates are listed; LEGOLAND says dates are subject to availability and blockout dates may be added at any time.",
         "No minimum stay is stated, and the early park access start time is not given.",
+        "The basis of the from-USD 39 per day kids' ticket price inside the package (ticket type, party, number of days) is not stated.",
         "A separate ticket-only kids' offer (from USD 39 with an adult Hopper ticket) ends November 1, 2026; this check covers only the hotel package."
       ],
       "before_booking": [
