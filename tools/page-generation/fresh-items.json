@@ -238,6 +238,23 @@
       "sort_on": "2026-11-27",
       "expires_on": "2026-12-30",
       "third_party": false
+    },
+    {
+      "id": "nyc-nybg-holiday-train-show-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Holiday Train Show at the New York Botanical Garden: two sensory-friendly mornings",
+      "when": "November 14, 2026 to January 10, 2027 in the Enid A. Haupt Conservatory, per NYBG's event page. On select evenings (Nov 27–29; Dec 5, 11, 12, 18–20, 26–30; Jan 2) the Conservatory stays open until 8 p.m., last entry 7:15 p.m.",
+      "cost": "Prices not shown on the event page; the page says the show is included in the All-Garden Pass. Check NYBG's tickets page for adult and child prices.",
+      "booking": "The event page links to NYBG's tickets page; it does not say whether advance or timed tickets are required for non-members.",
+      "family": "Sensory-friendly mornings on Saturday, November 21, 2026 and Saturday, January 9, 2027, 9 to 11 a.m.: trains and waterfalls stay on, videos and music are off, with a quiet space and an alternate exit. No age guidance or stroller rules are given.",
+      "official_url": "https://www.nybg.org/event/holiday-train-show-2026/",
+      "source_label": "New York Botanical Garden event page",
+      "observed_on": "2026-10-29",
+      "starts_on": "2026-11-14",
+      "sort_on": "2026-11-14",
+      "expires_on": "2027-01-10",
+      "third_party": false
     }
   ]
 }
