@@ -5,7 +5,8 @@ Used by the persona reviewer (AGENTS.md Content Standard) and the weekly site-he
 ## Reference page
 `site/things-to-do/san-diego-with-kids.html` is the owner's example of a high-quality page. Reviewers compare against it: is this page at least as clear, specific and useful?
 
-## Automated checks (tools/page-quality.mjs, every deploy)
+## Automated checks (tools/site-quality.mjs, every deploy)
+`tools/page-quality.mjs` is the older hotel-evidence report; the page checks below live in `tools/site-quality.mjs`. Its test (`tools/site-quality.test.mjs`, run by every deploy) fails when a page loses a check it passed; a new sitemap page also fails until its gaps are recorded. Known gaps are listed in `tools/site-quality-baseline.json`; `node tools/site-quality.mjs --write-baseline` adds new pages and drops closed gaps, and refuses while an existing page has a regression (fix it, or `--accept <page>` for a deliberate change). Heuristics: "above the fold" is the page hero plus everything in `<main>` before the first `<h2>`; a fact block is a section that links an outside source and states a price, time, age, percentage or duration. The dated-source check only confirms that some date appears in such a section, not that it is the check date. An explicitly labelled missing basis (for example a hotel price cell "Not observed for this room, party and dates") is honest labelling that AGENTS.md requires; the placeholder check flags it for review, not for deletion.
 - At least one self-hosted hero image with alt text and an author/licence/source credit; no hotlinked images.
 - og:title, og:description, og:image and og:url present; og:image resolves.
 - A glance block above the fold: what and where, trip type, who it is for, and (deal pages) cost and savings with basis.
