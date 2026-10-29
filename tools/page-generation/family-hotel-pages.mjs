@@ -7,6 +7,37 @@ import { trypPriceHtml } from "./nyc-tryp-price.mjs";
 import { datedBudgetComparisonHtml } from "./nyc-dated-budget-comparison.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
+  // G14 (owner 2026-10-29): a plain "$ a night" glance at the top of hotel pages that keep dated
+  // planning bands. Group ranges are computed from the same priceRange records the table shows
+  // (lowest low, highest high), so the glance cannot drift from the table or add a new figure.
+  const parseBand = (range) => {
+    const match = /^\$([\d,]+)-\$([\d,]+)(\+?)$/.exec(range);
+    if (!match) throw new Error(`Unparseable planning band: ${range}`);
+    return { low: Number(match[1].replace(/,/g, "")), high: Number(match[2].replace(/,/g, "")), plus: match[3] === "+" };
+  };
+  const money = (value) => `$${value.toLocaleString("en-US")}`;
+  const budgetGlance = ({ id, hotels, observed, groups, caveat, basis }) => {
+    const items = groups.map(({ label, names }) => {
+      const members = names.map((name) => {
+        const hotel = hotels.find((entry) => entry.name === name);
+        if (!hotel) throw new Error(`Budget glance hotel not in records: ${name}`);
+        return hotel;
+      });
+      const bands = members.map((hotel) => parseBand(hotel.priceRange));
+      const low = Math.min(...bands.map((band) => band.low));
+      const high = Math.max(...bands.map((band) => band.high));
+      const plus = bands.some((band) => band.plus && band.high === high);
+      return `            <li><strong>${money(low)}–${money(high)}${plus ? "+" : ""}</strong> ${esc(label)}: ${esc(members.map((hotel) => hotel.name).join(", "))}</li>`;
+    }).join("\n");
+    return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
+          <p><strong>About how much a night?</strong> Per room, from public prices checked ${esc(observed)}:</p>
+          <ul>
+${items}
+          </ul>
+          <p>${esc(caveat)} Check live rates for your dates, room and kids' ages.</p>
+          <details><summary>How these price bands were built</summary><p>${esc(basis)}</p></details>
+      </section>`;
+  };
 const sanDiegoFamilyHotels = [
   {
     name: "Bahia Resort Hotel",
@@ -664,7 +695,7 @@ function lasVegasFamilyHotelPage() {
           <p class="eyebrow">Las Vegas family hotels</p>
           <h1>Las Vegas Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare ten hotels by room setup, pool role, casino context, area and historical nightly budget. <a href="#las-vegas-room-fit">Five or more guests</a>.</p>
+          <p>Ten Las Vegas hotels that work for families, compared by room setup, pools, casino exposure, area and nightly price. <a href="#las-vegas-room-fit">Five or more guests</a>.</p>
         </div>
       </section>
       <section class="container media-section hero-photo-section">
@@ -673,9 +704,21 @@ function lasVegasFamilyHotelPage() {
           <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Family Tripwise serves a resized copy, cropped to fit.</figcaption>
         </figure>
       </section>
+${budgetGlance({
+  id: "las-vegas-budget-glance",
+  hotels,
+  observed: "July 22, 2026",
+  groups: [
+    { label: "lower-price Strip bases", names: ["Excalibur Hotel & Casino", "New York-New York Hotel & Casino"] },
+    { label: "pools, lazy rivers and slides", names: ["Mandalay Bay Resort and Casino", "Tahiti Village Resort", "Hilton Vacation Club Cancun Resort Las Vegas"] },
+    { label: "suites with a kitchen or kitchenette", names: ["Vdara Hotel & Spa", "Marriott's Grand Chateau"] },
+    { label: "non-gaming luxury", names: ["Four Seasons Hotel Las Vegas"] }
+  ],
+  caveat: "These are planning ranges, not current five-person suite quotes. Taxes, resort fees and parking may be extra.",
+  basis: "July 22 USD per-room, per-night planning bands synthesize public examples and widen for room and date variation. Some examples used two adults; party and exact room are unknown for others. Taxes and mandatory fees were included only where displayed, while other examples were before or plus tax; parking is separate. These are not current five-person suite quotes. Price the exact room, party, dates, fees and full stay before choosing."
+})}
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
-        <p>July 22 USD per-room, per-night planning bands synthesize public examples and widen for room and date variation. Some examples used two adults; party and exact room are unknown for others. Taxes and mandatory fees were included only where displayed, while other examples were before or plus tax; parking is separate. These are not current five-person suite quotes. Price the exact room, party, dates, fees and full stay before choosing.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
@@ -1298,7 +1341,7 @@ function sanAntonioFamilyHotelPage() {
           <p class="eyebrow">San Antonio family hotels</p>
           <h1>San Antonio Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare 12 hotels by room function, water-play role, area and historical nightly budget.</p>
+          <p>Twelve San Antonio hotels that work for families, compared by room setup, pools and water play, area and nightly price.</p>
         </div>
       </section>
       <section class="container media-section hero-photo-section">
@@ -1307,9 +1350,20 @@ function sanAntonioFamilyHotelPage() {
           <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Resized and cropped to fit.</figcaption>
         </figure>
       </section>
+${budgetGlance({
+  id: "san-antonio-budget-glance",
+  hotels,
+  observed: "July 26, 2026",
+  groups: [
+    { label: "Downtown suites with breakfast or a kitchen", names: ["Embassy Suites by Hilton San Antonio Riverwalk Downtown", "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown", "Home2 Suites by Hilton San Antonio Riverwalk", "Drury Plaza Hotel San Antonio Riverwalk"] },
+    { label: "classic River Walk hotels", names: ["Hyatt Regency San Antonio Riverwalk", "Omni La Mansion del Rio", "Hotel Contessa", "San Antonio Marriott Rivercenter on the River Walk"] },
+    { label: "resorts with lazy rivers and water play", names: ["Hyatt Vacation Club at Wild Oak Ranch", "Signia by Hilton La Cantera Resort and Spa", "Hyatt Regency Hill Country Resort and Villas", "JW Marriott San Antonio Hill Country Resort and Spa"] }
+  ],
+  caveat: "These are planning ranges from mostly two-adult, standard-room prices. These are not family-room quotes; taxes, fees and parking may be extra.",
+  basis: "USD per-room, per-night planning bands use July 26 public examples, mostly for two adults in a standard room, then widen for room and date variation; upper edges are editorial planning ceilings, not observed quotes. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Price the exact room, child ages, dates, fees, pool operations and cancellation terms before choosing."
+})}
       <section class="container trust-panel" aria-label="Information freshness">
         <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Price examples and online-review sources checked:</strong> July 26, 2026.</p>
-        <p>USD per-room, per-night planning bands use July 26 public examples, mostly for two adults in a standard room, then widen for room and date variation. Tax and mandatory-fee inclusion varies; parking is separate. These are not family-room quotes. Price the exact room, child ages, dates, fees, pool operations and cancellation terms before choosing.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">

@@ -1663,3 +1663,33 @@ main figure.hero-photo img { display: block; width: 100%; height: auto; aspect-r
 main figure.hero-photo figcaption { margin-top: 6px; color: var(--muted); font-size: 0.8rem; line-height: 1.4; }
 main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 @media (max-width: 600px) { main figure.hero-photo img { aspect-ratio: 16 / 8; } }
+
+/* G14: nightly budget glance on hotel pages with dated planning bands */
+.hotel-budget-glance ul {
+  margin: 4px 0 8px;
+  padding-left: 1.1rem;
+}
+
+.hotel-budget-glance li {
+  margin: 0 0 4px;
+  overflow-wrap: anywhere;
+}
+
+.hotel-budget-glance li strong {
+  white-space: nowrap;
+}
+
+.hotel-budget-glance details {
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.hotel-budget-glance summary {
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.hotel-budget-glance + .trust-panel {
+  grid-template-columns: minmax(0, 1fr);
+}
