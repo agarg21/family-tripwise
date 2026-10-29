@@ -1,32 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "beaches-specials",
-      "operator": "Beaches Resorts",
-      "url": "https://www.beaches.com/specials/",
-      "check_id": null,
-      "kind": "blocked",
-      "detected_at": "2026-10-29T18:59:50.387Z",
-      "reason": "robots.txt HTTP 403"
-    },
-    {
-      "source_id": "msc-deals",
-      "operator": "MSC Cruises",
-      "url": "https://www.msccruisesusa.com/deals",
-      "check_id": null,
-      "kind": "blocked",
-      "detected_at": "2026-10-29T18:59:57.487Z",
-      "reason": "robots.txt HTTP 401"
-    },
-    {
-      "source_id": "msc-promo-terms",
-      "operator": "MSC Cruises",
-      "url": "https://www.msccruisesusa.com/cruise-deals/promo-terms-and-conditions",
-      "check_id": "msc-cruises-35-off-kids-sail-free",
-      "kind": "blocked",
-      "detected_at": "2026-10-29T18:59:57.757Z",
-      "reason": "robots.txt HTTP 401"
-    }
-  ]
+  "flags": []
 }
