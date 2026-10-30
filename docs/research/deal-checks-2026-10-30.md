@@ -130,3 +130,12 @@ Decision: published as an only_for check (Bronze beats the cheapest USD 31.99 da
 | WebSearch (non-official domains) | No coverage of the 2027 pass offer found in a quick search (results were general discount-ticket guides) | novelty none_found |
 
 Decision: published as an only_for check (Standard USD 99 vs online day tickets from USD 49: pays off from the 3rd visit). No sale end date, so listed for one week (expires_on 2026-11-06) unless re-read. robots.txt for legoland.com read 2026-10-30 (only /app_plugins disallowed).
+
+## 2026-10-30 20:05Z G11 v3: LEGOLAND California spend-vs-save card (no new fetch)
+No page was re-read; the card sums figures already in the record (OWNER D21/O10: labelled sums of published figures, estimate).
+| Part | Figure | Source (observed) | Use |
+|---|---|---|---|
+| With the deal | from $169 per person per night × 4 = $676 (2 adults + 2 children 2-12, 1 night, before tax) | kids' tickets offer page, 2026-10-29 (deal-checks-2026-10-29.md) | "With" side |
+| Hotel without the deal | about $383 a night, LEGOLAND Castle Hotel, 2 adults + kids 5 and 8, Dec 4-7 (taxes unclear) | Google Hotels via DataForSEO receipt dataforseo-g12-family-hotel-prices-2026-10-30.json | "Without" side, drops at Dec 4 |
+| Tickets without the deal | 1-day LEGOLAND ticket from $69 per person online × 4 = $276 (no child price listed) | help article, 2026-10-30 (row above) | "Without" side |
+Result: without ≈ $659, with ≈ $676; the package costs ≈ $17 (3%) more for one night and one park day. Rough: package price is a starting price, hotel reading is for other dates, ticket days per night not stated.

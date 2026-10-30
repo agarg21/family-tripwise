@@ -285,7 +285,111 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
   }
   // A dollar total for the family is never claimed in v2 copy without an observed family_total.
   if (check.family_total === null && /\btotal\b[^.]*\$\d|\$\d[^.]*\btotal\b/i.test(texts.join(" "))) problems.push(`${where}: no family total was observed, so v2 copy cannot state one`);
+  if (v.spend_save !== undefined) problems.push(...validateSpendSave(check, stated, today));
   return problems;
+}
+
+// v3 spend-vs-save card (AGENTS.md Content Standard 2026-10-30; OWNER D21/O10): "Without the deal ≈ $A ·
+// With the deal ≈ $B · You save ≈ $C (D%)" for a named party and unit, labelled estimate. Each side is a
+// sum of parts; every part is a figure the observed terms state (or the dated hotel price sample) times a
+// whole quantity, with its own dated source, so the generator only adds and multiplies observed figures.
+const SPEND_SIDES = ["without", "with"];
+const SPEND_WORDS_MAX = 30;
+const words = (x) => String(x ?? "").trim().split(/\s+/).filter(Boolean).length;
+function validateSpendSave(check, stated, today) {
+  const where = `check ${check.id} v2.spend_save`;
+  const v = check.v2;
+  const ss = v.spend_save;
+  const problems = [];
+  if (!ss || typeof ss !== "object") return [`${where}: must be an object`];
+  if (!/^2 adults and 2 kids aged (\d+) and (\d+)$/.test(ss.party ?? "") || !String(v.family ?? "").includes(ss.party.replace(/^2 adults and 2 kids /, ""))) problems.push(`${where}: party must be "2 adults and 2 kids aged X and Y" with the same ages as v2.family`);
+  if (!sentence(ss.unit) || ss.unit.length > 60) problems.push(`${where}: unit (what one comparison covers, for example "one night and one park day") is required, at most 60 characters`);
+  if (!sentence(ss.note) || !/\b(?:rough|estimate)\b/i.test(ss.note)) problems.push(`${where}: note must say why this is a rough estimate (dates, ticket types, taxes)`);
+  if (!sentence(ss.verdict_line) || words(ss.verdict_line) > SPEND_WORDS_MAX) problems.push(`${where}: verdict_line must be one plain sentence of at most ${SPEND_WORDS_MAX} words`);
+  // Concise top of page (Content Standard): the lines above the first details stay short.
+  for (const [name, text] of [["score.why", check.score?.why], ["best_for", v.best_for], ["not_for", v.not_for]]) {
+    if (words(text) > SPEND_WORDS_MAX) problems.push(`${where}: ${name} has ${words(text)} words; keep it to ${SPEND_WORDS_MAX} on a v3 page`);
+  }
+  const ps = v.price_sample;
+  const ok$ =(text) => [...String(text ?? "").matchAll(/\$\s?([\d,]+(?:\.\d\d)?)/g)].every((m) => stated.has(m[1].replaceAll(",", "")) || (ps && Number(m[1].replaceAll(",", "")) === ps.amount));
+  for (const side of SPEND_SIDES) {
+    const s = ss[side];
+    if (!s || !sentence(s.includes) || !Array.isArray(s.parts) || s.parts.length < 1 || s.parts.length > 4) { problems.push(`${where}: ${side} needs includes and 1-4 parts`); continue; }
+    if (!ok$(s.includes)) problems.push(`${where}: ${side}.includes states a $ figure the terms do not`);
+    s.parts.forEach((p, i) => {
+      const at = `${where}: ${side}.parts[${i}]`;
+      if (!p || !sentence(p.what) || !ok$(p.what)) problems.push(`${at}: what must describe the figure and state only observed $ figures`);
+      if (!Number.isInteger(p?.qty) || p.qty < 1 || p.qty > 20) problems.push(`${at}: qty must be a whole number 1-20`);
+      if (!(typeof p?.unit_amount === "number" && p.unit_amount > 0 && Math.round(p.unit_amount * 100) === p.unit_amount * 100)) problems.push(`${at}: unit_amount must be a positive dollar figure`);
+      if (p?.from === "terms") {
+        if (!stated.has(String(p.unit_amount))) problems.push(`${at}: $${p.unit_amount} is not a figure the observed terms state`);
+        if (!validSource(p.source) || p.source.observed_on > today) problems.push(`${at}: a terms part needs a dated https source`);
+      } else if (p?.from === "price_sample") {
+        if (!ps || ps.amount !== p.unit_amount || ps.party !== ss.party) problems.push(`${at}: a price_sample part must use v2.price_sample.amount for the same party`);
+      } else problems.push(`${at}: from must be "terms" or "price_sample"`);
+    });
+  }
+  const r = problems.length ? null : spendSave(check, "0000-01-01");
+  if (r?.ok && r.save_pct < 5 && !/\bnot (?:a discount|really cheaper|cheaper)\b/i.test(ss.verdict_line)) problems.push(`${where}: the deal saves under 5%, so verdict_line must say plainly it is not a discount or not really cheaper`);
+  for (const text of [ss.unit, ss.note, ss.verdict_line]) {
+    if (/\bUSD\b/.test(String(text))) problems.push(`${where}: use "$", not "USD"`);
+    if (!ok$(text)) problems.push(`${where}: "${String(text).slice(0, 40)}" states a $ figure the terms do not`);
+  }
+  return problems;
+}
+
+const usd = (n) => `$${n.toLocaleString("en-US")}`;
+// Builds the card from a validated spend_save. A side that relies on the hotel price sample cannot be built
+// once the sampled stay has started (or the deal has ended): then the card says what is missing instead.
+export function spendSave(check, today = easternDate()) {
+  const v = check.v2;
+  const ss = v?.spend_save;
+  if (!ss) return null;
+  const psLive = Boolean(v.price_sample && v.price_sample.stay_from > today);
+  const sides = {};
+  for (const side of SPEND_SIDES) {
+    const parts = ss[side].parts.map((p) => ({ ...p, amount: Math.round(p.unit_amount * p.qty), source: p.from === "price_sample" ? { label: v.price_sample.source_label, url: v.price_sample.source_url, observed_on: v.price_sample.observed_on } : p.source }));
+    sides[side] = { includes: ss[side].includes, parts, total: parts.reduce((n, p) => n + p.amount, 0), stale: parts.some((p) => p.from === "price_sample") && !psLive };
+  }
+  const base = { party: ss.party, unit: ss.unit, note: ss.note, verdict_line: ss.verdict_line, sides };
+  if (isEnded(check, today)) return { ...base, ok: false, missing: "The deal has ended, so we no longer compare its price." };
+  const stale = SPEND_SIDES.filter((side) => sides[side].stale);
+  if (stale.length) return { ...base, ok: false, missing: `We cannot price ${stale.map((x) => (x === "with" ? "the deal" : "the trip without the deal")).join(" or ")} right now: the hotel price we saw was for dates that have now started. Price your own dates on the official site.` };
+  const A = sides.without.total;
+  const B = sides.with.total;
+  const save = A - B;
+  const save_pct = Math.round((save / A) * 100);
+  const saveText = save > 0
+    ? `You save ≈ ${usd(save)} (${save_pct}%)`
+    : save === 0 ? "You save ≈ $0 (same price)" : `You save nothing: it costs ≈ ${usd(-save)} (${-save_pct}%) more`;
+  const postSave = save > 0 ? `you save ≈ ${usd(save)} (${save_pct}%)` : save === 0 ? "you save $0" : `you save nothing (≈ ${usd(-save)} more)`;
+  return { ...base, ok: true, without: A, with: B, save, save_pct, saveText, line: `Without the deal ≈ ${usd(A)} · With the deal ≈ ${usd(B)} · ${saveText}`, post: `Family of 4 estimate: without the deal ≈ ${usd(A)} · with it ≈ ${usd(B)} · ${postSave}.` };
+}
+
+// The card at the top of a v3 deal page, and the breakdown under it (every part with its dated source).
+function spendSaveCard(check, today) {
+  const r = spendSave(check, today);
+  if (!r) return "";
+  const head = `<p class="ss-title">Estimate for ${e(r.party)}, ${e(r.unit)}</p>`;
+  if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4">${head}<p>${e(r.missing)}</p></div>`;
+  return `<div class="spend-save${r.save_pct < 5 ? " spend-save-nodeal" : ""}" role="group" aria-label="What it costs a family of 4 with and without the deal">${head}
+              <dl class="ss-row"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="ss-save"><dt>You save</dt><dd>${r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`}</dd></div></dl>
+              <p class="ss-verdict">${e(r.verdict_line)}</p>
+            </div>`;
+}
+
+function spendSaveDetails(check, today) {
+  const r = spendSave(check, today);
+  if (!r?.ok) return "";
+  const rows = SPEND_SIDES.flatMap((side) => [
+    `<tr class="ss-side"><th scope="rowgroup" colspan="3">${side === "with" ? "With the deal" : "Without the deal"} ≈ ${e(usd(r.sides[side].total))}: ${e(r.sides[side].includes)}</th></tr>`,
+    ...r.sides[side].parts.map((p) => `<tr><td>${e(p.what)}</td><td>${p.qty > 1 ? `${e(usd(p.unit_amount))} × ${p.qty} = ` : ""}${e(usd(p.amount))}</td><td><a href="${e(p.source.url)}">${e(p.source.label)}</a>, checked ${e(longDate(p.source.observed_on))}</td></tr>`)
+  ]).join("");
+  return `        <details class="ss-details">
+          <summary>How we got these numbers</summary>
+          <div class="table-wrap"><table class="ss-table"><caption>Estimate for ${e(r.party)}, ${e(r.unit)}: sums of published and observed prices, not a quote</caption><thead><tr><th scope="col">Part</th><th scope="col">Amount</th><th scope="col">Source</th></tr></thead><tbody>${rows}</tbody></table></div>
+          <p>${e(r.note)}</p>
+        </details>`;
 }
 
 const VERDICT_TEXT = { worth_it: "Worth it", only_for: "Only for some families", skip: "Skip" };
@@ -293,7 +397,6 @@ const list = (items, cls = "") => `<ul${cls ? ` class="${cls}"` : ""}>${items.ma
 const sourceLine = (src) => `<a href="${e(src.url)}">${e(src.label)}</a>, checked ${e(longDate(src.observed_on))}`;
 
 const nights = (ps) => Math.round((Date.parse(`${ps.stay_to}T00:00:00Z`) - Date.parse(`${ps.stay_from}T00:00:00Z`)) / 86400000);
-const usd = (n) => `$${n.toLocaleString("en-US")}`;
 const shortStay = (from, to) => {
   const [a, b] = [longDate(from), longDate(to)];
   const [am, ad, ay] = a.replace(",", "").split(" ");
@@ -320,6 +423,8 @@ function heroFigure(v) {
 function dealCheckPageV2(checks, check, today, ended) {
   const v = check.v2;
   const s = check.score;
+  // v3: a buildable spend-vs-save card replaces the saves/cost lines at the top; they move into its details.
+  const v3 = !ended && Boolean(spendSave(check, today)?.ok);
   const rows = check.terms.map(([label, value]) => `<tr role="row"><th scope="row" role="rowheader">${e(label)}</th><td role="cell">${e(String(value).replace(/\bUSD ?(?=\d)/g, "$"))}</td></tr>`).join("");
   const status = ended
     ? `<p class="deal-status deal-status-ended" role="status"><strong>${endedLabel(check)} ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The details below are what the official page said when we checked; they are kept for reference only.</p>`
@@ -331,12 +436,18 @@ function dealCheckPageV2(checks, check, today, ended) {
     ...(v.extra_sources ?? []).map((src) => [src.label, src.url, src.observed_on, src.covers]),
     ...(!ended && priceSampleLine(v, today) ? [[v.price_sample.source_label, v.price_sample.source_url, v.price_sample.observed_on, "the hotel price we saw (an estimate, not a quote)"]] : [])
   ];
+  if (v3) {
+    for (const side of SPEND_SIDES) for (const p of spendSave(check, today).sides[side].parts) {
+      if (!sources.some(([, url]) => url === p.source.url)) sources.push([p.source.label, p.source.url, p.source.observed_on, "a price in the spend-vs-save estimate"]);
+    }
+  }
   const body = `    <main id="main" class="deal-v2">
       <section class="page-hero deal-hero">
         <div class="container deal-hero-grid">
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
-            <h1>${e(v.headline)}</h1>
+            <h1>${e(v.headline)}</h1>${!ended && v.spend_save ? `
+            ${spendSaveCard(check, today)}` : ""}
             ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
             ${contributorCredit()}
@@ -348,9 +459,11 @@ function dealCheckPageV2(checks, check, today, ended) {
 ${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict:</strong> ${e(s.why)}</p>
         <p><strong>Best for:</strong> ${e(v.best_for)}</p>
         <p><strong>Not for:</strong> ${e(v.not_for)}</p>
-        <p class="deal-money"><strong>${e(v.saves)}</strong></p>
+${v3 ? `${spendSaveDetails(check, today).replace("</details>", `  <p>${e(v.cost)}</p>${priceSampleLine(v, today) ? `
+          ${priceSampleLine(v, today)}` : ""}
+        </details>`)}` : `        <p class="deal-money"><strong>${e(v.saves)}</strong></p>
         <p>${e(v.cost)}</p>${priceSampleLine(v, today) ? `
-        ${priceSampleLine(v, today)}` : ""}`}
+        ${priceSampleLine(v, today)}` : ""}`}`}
       </section>
 ${heroFigure(v)}
       <section class="container page-section" aria-labelledby="deal-get-title">
@@ -458,12 +571,15 @@ const trustPanel = `      <section class="container trust-panel" aria-label="How
         <p>We show a family total only when we observed one on the official site for a named party and named dates. Prices and availability change: check live before you book.</p>
       </section>`;
 
-function hubCard(check) {
+// The /deals/ card shows the spend-vs-save line when it can be built (hub pages re-render daily).
+const hubSpend = (check, today) => { const r = spendSave(check, today); return r?.ok ? `${r.line} (estimate, ${r.party}, ${r.unit}).` : null; };
+
+function hubCard(check, today = easternDate()) {
   if (check.v2) {
     return `          <article class="detail-card deal-card" id="${e(check.id)}">
             <p class="fresh-type">${e(check.v2.context)}</p>
             <h3><a href="./${e(check.id)}.html">${e(check.v2.headline)}</a></h3>
-            <p>${e(check.v2.saves)}</p>
+            <p>${e(hubSpend(check, today) ?? check.v2.saves)}</p>
             <p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
             <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
           </article>`;
@@ -482,7 +598,7 @@ export function dealsHubPage(checks, today = easternDate()) {
   if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
   const current = currentChecks(checks, today);
   const list = current.length
-    ? `<div class="detail-card-grid">\n${current.map(hubCard).join("\n")}\n        </div>`
+    ? `<div class="detail-card-grid">\n${current.map((c) => hubCard(c, today)).join("\n")}\n        </div>`
     : `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`;
   const closing = current.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(${shortDeadline(c)})</span></li>`).join("");
   const body = `    <main id="main">

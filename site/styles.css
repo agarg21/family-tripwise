@@ -1699,3 +1699,28 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .compact-hero .page-hero { padding: 28px 0 12px; background: none; }
 .compact-hero .page-hero h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
 @media (max-width: 600px) { .compact-hero .page-hero h1 { font-size: 30px; } }
+/* G11 v3 spend-vs-save card (AGENTS.md Content Standard, 2026-10-30) */
+.spend-save { margin: 16px 0 6px; padding: 14px 16px; border-radius: 14px; background: var(--surface); border: 2px solid var(--teal); max-width: 640px; }
+.spend-save p { margin: 0; max-width: none; color: var(--ink); font-size: 1rem; line-height: 1.4; }
+.spend-save .ss-title { margin: 0 0 8px; font-size: 0.9rem; color: var(--muted); font-weight: 700; }
+.spend-save .ss-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.spend-save .ss-row > div { padding: 8px 10px; border-radius: 10px; background: var(--paper); }
+.spend-save dt { font-size: 0.85rem; font-weight: 700; color: var(--muted); }
+.spend-save dd { margin: 2px 0 0; font-size: clamp(1.25rem, 4vw, 1.6rem); font-weight: 850; line-height: 1.15; }
+.spend-save dd small { display: block; font-size: 0.8rem; font-weight: 700; }
+.spend-save .ss-save { background: #e6f2f0; }
+.spend-save-nodeal { border-color: var(--coral); }
+.spend-save-nodeal .ss-save { background: #fbe9e3; }
+.spend-save .ss-verdict { margin: 10px 0 0; font-weight: 750; }
+.page-hero .spend-save p { font-size: 1rem; }
+.page-hero .spend-save .ss-title { font-size: 0.9rem; }
+.spend-save-missing p { margin: 0; }
+.ss-details summary { cursor: pointer; font-weight: 750; padding: 8px 0; }
+.ss-table .ss-side th { text-align: left; background: var(--paper); }
+.ss-table td a { overflow-wrap: anywhere; }
+@media (max-width: 420px) {
+  .spend-save { padding: 12px; }
+  .spend-save .ss-row { gap: 6px; }
+  .spend-save .ss-row > div { padding: 6px 7px; }
+  .spend-save dt { font-size: 0.78rem; }
+}

@@ -14,7 +14,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
-import { readDealChecks, longDate } from "./page-generation/deals-pages.mjs";
+import { readDealChecks, longDate, spendSave } from "./page-generation/deals-pages.mjs";
 
 export const root = fileURLToPath(new URL("../", import.meta.url));
 export const queueDir = join(root, "ops/social-queue");
@@ -166,6 +166,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       third_party: false,
       // G09 step 2: a deal scored "skip" is never shared (only worth_it and only_for are).
       verdict: check.score?.verdict ?? null,
+      // A check with a spend-vs-save card is posted only while its card can be built (Content Standard).
+      spend_missing: Boolean(check.v2?.spend_save) && !spendSave(check)?.ok,
       hashtags: ["#familytravel", "#familyvacation"],
       // G11 step 2: a check with v2 post lines posts in the v2 order (hook with the key number and the
       // place, verdict, catch, book-by, dated check) and gets the v2 photo card.
@@ -177,6 +179,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
         big_label: check.v2.big_label,
         verdict_label: check.v2?.verdict_pill ?? VERDICT_LABEL[check.score?.verdict] ?? null,
         deadline: `${label} ${longDate(check.expires_on)}`,
+        // v3 (Content Standard): the spend-vs-save line follows the hook; null when the check has no card.
+        spend: spendSave(check)?.post ?? null,
         lines: [check.v2.post.hook, check.v2.post.verdict, check.v2.post.catch, check.v2.date_note_short ? `${label} ${longDate(check.expires_on)} (${check.v2.date_note_short}).` : bookBy],
         checked: `Checked on ${new URL(check.official_url).hostname.replace(/^www\./, "")} on ${shortDate(check.observed_on)}.`,
         hero_image: check.v2.hero_image?.slug ?? null,
@@ -214,9 +218,9 @@ h1{font-size:46px;line-height:1.18;font-weight:800}
 .catch{font-size:29px;line-height:1.33;margin-top:14px;color:#3b4a54}
 .brand{margin-top:auto;border-top:4px solid #142029;padding-top:20px;font-size:24px;line-height:1.4;color:#3b4a54}
 .brand b{display:block;font-size:34px;color:#142029}
-</style></head><body>
+${v.spend ? ".spend{font-size:30px;line-height:1.28;font-weight:800;margin-top:16px;padding:12px 18px;border-radius:14px;background:#fbe9e3;color:#142029}\nh1{font-size:40px}.main{padding-top:30px}.row{margin-top:16px}.who{margin-top:14px;font-size:27px}.catch{font-size:27px;margin-top:10px}\n" : ""}</style></head><body>
 <div class="top" id="top"><p class="num">${esc(v.big_number)}</p><p class="lab">${esc(v.big_label)}</p>${photo ? `<p class="credit">Photo: ${esc(photo.artist.split(" from ")[0])}, ${esc(photo.license)}</p>` : ""}</div>
-<div class="main" id="main"><h1>${esc(v.lines[0])}</h1>
+<div class="main" id="main"><h1>${esc(v.lines[0])}</h1>${v.spend ? `<p class="spend">${esc(v.spend)}</p>` : ""}
 <div class="row"><span class="chip${v.verdict_label === "Worth it" ? " w" : ""}">${esc(v.verdict_label)}</span><span class="when">${esc(v.deadline)}</span></div>
 <p class="who">${esc(v.lines[1])}</p>
 <p class="catch">${esc(v.lines[2])}</p>
@@ -267,7 +271,7 @@ function link(record, platform, entryId) {
 // travels outside the text (Facebook link field, Threads first comment); Instagram says "link in bio".
 function variantsV2(record) {
   const v = record.v2;
-  const body = [...v.lines, v.checked].join("\n\n");
+  const body = [v.lines[0], ...(v.spend ? [v.spend] : []), ...v.lines.slice(1), v.checked].join("\n\n");
   const tags = record.hashtags.join(" ");
   return {
     threads: { text: body },
@@ -312,11 +316,11 @@ export function readQueue(date, dir = queueDir) {
 }
 
 const cardAlt = (r) => (r.v2
-  ? `Family Deal Check card: ${r.v2.lines[0]} ${r.v2.lines[1]} ${r.v2.lines[2]} ${r.v2.deadline}.${r.v2.hero_alt ? ` Photo: ${r.v2.hero_alt}.` : ""}`
+  ? `Family Deal Check card: ${r.v2.lines[0]}${r.v2.spend ? ` ${r.v2.spend}` : ""} ${r.v2.lines[1]} ${r.v2.lines[2]} ${r.v2.deadline}.${r.v2.hero_alt ? ` Photo: ${r.v2.hero_alt}.` : ""}`
   : `${r.kicker}. ${r.title}. Checked on the official page ${longDate(r.observed_on)}.`);
 
 // Events are shareable once verified; a deal check only with a worth_it or only_for verdict.
-export const shareable = (r) => r.kind !== "deal" || ["worth_it", "only_for"].includes(r.verdict);
+export const shareable = (r) => r.kind !== "deal" || (["worth_it", "only_for"].includes(r.verdict) && !r.spend_missing);
 
 // Pick the day's entries: verified, unexpired, freshly observed, not posted in the last few days,
 // most urgent first (deal deadline, event start or lottery close). `skip` lists items the operator

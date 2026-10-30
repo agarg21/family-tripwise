@@ -804,17 +804,50 @@
       "headline": "Book a LEGOLAND Hotel or LEGOLAND Castle Hotel stay by November 17, 2026 for stays through January 9, 2027, with Park Hopper tickets, daily hot breakfast and early park access; advertised from USD 169 per person per night for a family of four before tax, but reservations are non-refundable and parking is extra.",
       "family_of_four": "LEGOLAND's advertised pricing is based on exactly this party: 2 adults and 2 children ages 2 to 12 for a 1-night hotel stay, before tax. The deals page shows a starting price of USD 169 per person per night and kids' tickets from USD 39 per day; these are advertised starting prices, not a quote for your dates. The package includes a Park Hopper ticket (LEGOLAND Theme Park and SEA LIFE Aquarium; multi-day visits must be used within 3 days of the first visit), a daily hot buffet breakfast and early park access. Parking is charged on arrival unless pre-purchased, reservations are non-refundable and full payment is due at booking.",
       "terms": [
-        ["Headline", "Kids' tickets from USD 39 per day with a hotel stay; from USD 169 per person per night (advertised starting price, based on 2 adults and 2 children ages 2 to 12 for 1 night, tax not included)."],
-        ["Book by", "November 17, 2026 (\"Book by November 17, 2026 and stay through January 9, 2027\")."],
-        ["Stay window", "Now through January 9, 2027. All dates are subject to availability and LEGOLAND's discretion; the park is closed on Wednesdays during select seasons."],
-        ["Child ages", "Pricing is based on 2 children ages 2 to 12. The deals page FAQ says children under 2 get free park admission."],
-        ["Hotels", "LEGOLAND Hotel and LEGOLAND Castle Hotel (see the partner-hotel conflict below)."],
-        ["Included", "Park Hopper ticket for LEGOLAND Theme Park and SEA LIFE Aquarium, daily hot buffet breakfast and early park access (start time not stated)."],
-        ["Still charged", "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."],
-        ["Cancellation", "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered."],
-        ["Combining", "Cannot be combined with any other offers, discounts, promotions or group rates. The offer page says new bookings only and not valid through third-party websites."],
-        ["Minimum nights", "Not stated."],
-        ["Regular ticket price, for comparison", "LEGOLAND's help page \"How much is an admission ticket to LEGOLAND California?\" (no date shown; read October 30, 2026): 1-Day LEGOLAND Ticket from USD 69 per person online, USD 139 per person at the gate; it lists no separate child price."]
+        [
+          "Headline",
+          "Kids' tickets from USD 39 per day with a hotel stay; from USD 169 per person per night (advertised starting price, based on 2 adults and 2 children ages 2 to 12 for 1 night, tax not included)."
+        ],
+        [
+          "Book by",
+          "November 17, 2026 (\"Book by November 17, 2026 and stay through January 9, 2027\")."
+        ],
+        [
+          "Stay window",
+          "Now through January 9, 2027. All dates are subject to availability and LEGOLAND's discretion; the park is closed on Wednesdays during select seasons."
+        ],
+        [
+          "Child ages",
+          "Pricing is based on 2 children ages 2 to 12. The deals page FAQ says children under 2 get free park admission."
+        ],
+        [
+          "Hotels",
+          "LEGOLAND Hotel and LEGOLAND Castle Hotel (see the partner-hotel conflict below)."
+        ],
+        [
+          "Included",
+          "Park Hopper ticket for LEGOLAND Theme Park and SEA LIFE Aquarium, daily hot buffet breakfast and early park access (start time not stated)."
+        ],
+        [
+          "Still charged",
+          "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."
+        ],
+        [
+          "Cancellation",
+          "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered."
+        ],
+        [
+          "Combining",
+          "Cannot be combined with any other offers, discounts, promotions or group rates. The offer page says new bookings only and not valid through third-party websites."
+        ],
+        [
+          "Minimum nights",
+          "Not stated."
+        ],
+        [
+          "Regular ticket price, for comparison",
+          "LEGOLAND's help page \"How much is an admission ticket to LEGOLAND California?\" (no date shown; read October 30, 2026): 1-Day LEGOLAND Ticket from USD 69 per person online, USD 139 per person at the gate; it lists no separate child price."
+        ]
       ],
       "unclear": [
         "How many ticket days come with each night of the stay is not stated.",
@@ -853,7 +886,7 @@
         },
         "verdict": "only_for",
         "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND California visit through January 9, 2027 who are fine with a non-refundable booking.",
-        "why": "Good for families with firm dates who want to sleep at the park; skip it if you might cancel (it is non-refundable and paid in full) or want a cheaper hotel off site. Tax and parking are extra."
+        "why": "Not cheaper: it costs about what the hotel and tickets cost separately. Book it for breakfast, SEA LIFE and early entry, and only with firm dates (non-refundable)."
       },
       "v2": {
         "page_title": "LEGOLAND California Hotel Package: Kids' Park Tickets from $39 a Day",
@@ -864,20 +897,33 @@
           "observed_on": "2026-10-30",
           "covers": "where the resort is and what is there"
         },
-        "big_number": "$39",
-        "big_label": "a day per kid's park ticket when you stay at a LEGOLAND hotel (starting price)",
-        "headline": "LEGOLAND California hotel stay: kids' park tickets from $39 a day (book by November 17)",
+        "big_number": "$169",
+        "big_label": "a person a night with park tickets and breakfast (starting price for 2 adults + 2 kids, before tax)",
+        "headline": "LEGOLAND California hotel + park package from $169 a person a night: handy, but not cheaper (book by November 17)",
         "chips": [
-          "From $169 a person a night",
+          "Not a discount",
           "Stays to January 9, 2027",
           "Breakfast + early entry",
           "Non-refundable"
         ],
-        "best_for": "Families with kids 2 to 12 and firm dates for a LEGOLAND California trip before January 9, 2027 who want to stay at the park.",
-        "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a cheaper hotel off site.",
-        "cost": "Trip cost: we have no complete trip price for a family of 4. LEGOLAND's starting price above is for exactly 2 adults and 2 kids for 1 night; price your dates on legoland.com, then add tax, parking and flights from your airport (for example New York City to San Diego, which we have not priced).",
-        "price_sample": {"hotel": "LEGOLAND Castle Hotel", "amount": 383, "low": 378, "high": 423, "party": "2 adults and 2 kids aged 5 and 8", "stay_from": "2026-12-04", "stay_to": "2026-12-07", "observed_on": "2026-10-30", "source_label": "Google Hotels (our dated reading)", "source_url": "https://github.com/agarg21/family-tripwise/blob/main/docs/research/dataforseo-g12-family-hotel-prices-2026-10-30.json", "range_note": "One-night searches for December 4 the same morning showed {low} and {high}.", "caveat": "Google does not say whether taxes, fees, park tickets or breakfast are included; prices change by the minute, and reading it as a nightly price is ours."},
-        "saves": "Saves: kids' park tickets from $39 a day in the package (regular 1-day tickets from $69 online), but the tickets differ, so treat it as a guide, not a fixed saving.",
+        "best_for": "Families with kids 2 to 12 and firm dates who want to sleep at the park, with breakfast and early entry, before January 9, 2027.",
+        "not_for": "Families hunting a discount, anyone who may cancel (non-refundable, paid in full) or anyone happy with a cheaper hotel off site.",
+        "cost": "Trip cost: flights are not included (for example New York City to San Diego, which we have not priced). Add tax and parking on both sides.",
+        "price_sample": {
+          "hotel": "LEGOLAND Castle Hotel",
+          "amount": 383,
+          "low": 378,
+          "high": 423,
+          "party": "2 adults and 2 kids aged 5 and 8",
+          "stay_from": "2026-12-04",
+          "stay_to": "2026-12-07",
+          "observed_on": "2026-10-30",
+          "source_label": "Google Hotels (our dated reading)",
+          "source_url": "https://github.com/agarg21/family-tripwise/blob/main/docs/research/dataforseo-g12-family-hotel-prices-2026-10-30.json",
+          "range_note": "One-night searches for December 4 the same morning showed {low} and {high}.",
+          "caveat": "Google does not say whether taxes, fees, park tickets or breakfast are included; prices change by the minute, and reading it as a nightly price is ours."
+        },
+        "saves": "Saves: little or nothing. Kids' tickets from $39 a day in the package vs 1-day tickets from $69 online, but the package costs about what the hotel and tickets cost separately.",
         "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
         "get": [
           "One booking covers the hotel night, Park Hopper tickets for LEGOLAND and the SEA LIFE Aquarium, a hot buffet breakfast each day and early park access.",
@@ -886,7 +932,7 @@
           "Multi-day park visits must be used within 3 days of the first visit."
         ],
         "compare": [
-          "Worth it if you would stay at the park anyway and your dates are fixed; otherwise price your dates at a LEGOLAND hotel with the package against separate tickets plus the hotel you would otherwise use.",
+          "Not a discount: for this family, one night and one park day cost about the same with or without the package (see the estimate at the top).",
           "LEGOLAND's own help page lists 1-day tickets from $69 per person online and $139 at the gate (no date shown). The package ticket is a Park Hopper and the $39 basis is not stated, so the two are not like for like.",
           "The package page does not say how many ticket days come with each night, so price the same dates with and without the hotel before you pay."
         ],
@@ -925,17 +971,62 @@
           "Book by November 17, 2026; stays end January 9, 2027."
         ],
         "post": {
-          "title": "LEGOLAND California hotel stays: kids' park tickets from $39 a day",
-          "hook": "LEGOLAND California (Carlsbad, near San Diego): book a LEGOLAND hotel stay and kids' park tickets start at $39 a day.",
-          "verdict": "Only for families with firm dates: it's non-refundable and paid in full when you book.",
-          "catch": "The catch: tax and parking are extra, and partner hotels may not count."
+          "title": "LEGOLAND California hotel + park package from $169 a person a night: not cheaper",
+          "hook": "LEGOLAND California (near San Diego) hotel + park package: from $169 a person a night.",
+          "verdict": "Only for on-site convenience: it is not cheaper than booking it yourself.",
+          "catch": "The catch: non-refundable and paid in full; tax and parking are extra."
         },
         "hero_image": {
           "slug": "legoland-california",
           "alt": "The LEGOLAND California entrance sign, with giant LEGO bricks and colourful ticket booths in front of it",
           "caption": "The entrance to LEGOLAND California in Carlsbad (an older visitor photo, not taken by Family Tripwise)."
         },
-        "og_image": "images/og/deals/legoland-california-hotel-kids-tickets-39.png"
+        "og_image": "images/og/deals/legoland-california-hotel-kids-tickets-39.png",
+        "verdict_pill": "Only for on-site convenience",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 5 and 8",
+          "unit": "one night and one park day",
+          "verdict_line": "Not a discount: about the same price either way. The package adds breakfast, SEA LIFE and early entry.",
+          "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. Parking is extra either way.",
+          "without": {
+            "includes": "Hotel night and 1-day LEGOLAND tickets only: no breakfast, SEA LIFE or early entry.",
+            "parts": [
+              {
+                "what": "LEGOLAND Castle Hotel for this family, a night (Google Hotels, December 4 to 7)",
+                "unit_amount": 383,
+                "qty": 1,
+                "from": "price_sample"
+              },
+              {
+                "what": "1-day LEGOLAND ticket, from $69 a person online (no child price listed)",
+                "unit_amount": 69,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND California help page on admission tickets",
+                  "url": "https://california-support.legoland.com/hc/en-us/articles/27043331841693-How-much-is-an-admission-ticket-to-LEGOLAND-California",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Hotel night, Park Hopper tickets (LEGOLAND and SEA LIFE), hot breakfast and early entry; before tax.",
+            "parts": [
+              {
+                "what": "Package starting price, from $169 a person a night (2 adults + 2 kids, 1 night, before tax)",
+                "unit_amount": 169,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND California kids' tickets offer page",
+                  "url": "https://www.legoland.com/california/deals/kids-tickets",
+                  "observed_on": "2026-10-29"
+                }
+              }
+            ]
+          }
+        }
       }
     },
     {
