@@ -124,10 +124,10 @@ test("Park Plaza gym/fee policy clock does not renew original room or price evid
   assert.equal(current.exact_room_comparisons[1].records[1].price_age.due_on,"2026-10-15");
 });
 
-test("all 53 canonical URLs have one explicit owner without renewing facts", async () => {
+test("all 54 canonical URLs have one explicit owner without renewing facts", async () => {
   const report = await maintenanceReport({ today: "2026-10-01" });
-  assert.equal(report.summary.canonical_pages, 53);
-  assert.equal(report.summary.travel_pages, 48);
+  assert.equal(report.summary.canonical_pages, 54);
+  assert.equal(report.summary.travel_pages, 49);
   assert.equal(report.summary.utility_pages, 5);
   assert.equal(report.summary.unclassified_pages, 0);
   assert.equal(report.summary.hotel_price_basis_gaps, 54);
@@ -195,7 +195,7 @@ test("bounded source cycle carries denials and does not publish or renew claims"
     return new Response("<html><body>Fixture only; no observed travel facts.</body></html>", { status: 200, headers: { "content-type": "text/html" } });
   } });
   assert.ok(calls <= 1);
-  assert.equal(result.source_review.summary.canonical_pages, 53);
+  assert.equal(result.source_review.summary.canonical_pages, 54);
   assert.equal(result.source_review.summary.carried_denials, denied.size);
   assert.equal(result.source_audit.factual_dates_renewed, false);
   assert.equal(result.source_review.automatic_publication, false);

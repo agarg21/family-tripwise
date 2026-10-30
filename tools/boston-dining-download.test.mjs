@@ -44,6 +44,6 @@ test("Boston-only writer retains dining and complete comparisons with additive s
   assert.equal(output.get("downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(read("site/downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(rows(bostonCsv).length, 7);
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 53);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 54);
   assert.doesNotMatch(read("site/sitemap.xml"), /boston-cooking-dining-five/);
 });
