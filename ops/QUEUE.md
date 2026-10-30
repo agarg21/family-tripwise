@@ -25,7 +25,7 @@ LEGOLAND v2 delivered 1a5bc8d (persona 4.08; P3s: terms caption omits comparison
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Sources: docs/research/trip-cost-sources-2026-10-29.md. Step 1 done 10-30 (935cea8): `hotel_searches` request files run tools/hotel-price-pull.mjs via the DataForSEO workflow (USD 0.004/search). Atlantis gave no price (docs/research/trip-cost-observations-2026-10-30.md). Next: 2) family-party 1n+3n pair for a hotel Google prices on its own (Great Wolf/LEGOLAND) + one 2-adult Atlantis diagnostic (never published); 3) "about $X" estimate line on deal pages from receipts. P3: delete uncollected requests once check-in passes.
+Steps 1-2 done 10-30 (935cea8, c8ef869): Google price reads per night and is volatile; LEGOLAND Castle Hotel ~USD 378-423/night for 2+2 (Dec 4-7 2026, taxes unknown); LEGOLAND Hotel, Great Wolf Poconos, Atlantis unpriced; "®" broke matching (docs/research/trip-cost-observations-2026-10-30.md). Next: 3) strip ®/™ in match; labelled "about $X a night before tax" estimate on the LEGOLAND deal page (family party only; drop after Dec 4). P3: drop stale requests; confirm hotel identity.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none

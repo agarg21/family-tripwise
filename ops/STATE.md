@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-30 transactions=3
-run: {id: 2026-10-30T09:04:56Z, started_at: 2026-10-30T09:04:56Z}
+today: 2026-10-30 transactions=4
+run: none
 last_public_release: 17b989f (2026-10-30 ET, G11 SeaWorld Orlando Fun Card deal page v2 + v2 extra_sources); last main code change 17b989f
 active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE G11)
 
@@ -37,6 +37,6 @@ active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 09:05Z G12 step 2 research decided (b302ed8 request, c8ef869 receipt, USD 0.028; no site change): Google Hotels price reads as per night; LEGOLAND Castle Hotel ~USD 378-423/night for 2+2 (Dec 4-7, taxes unknown, volatile); LEGOLAND Hotel, Great Wolf Poconos and Atlantis unpriced. Integrity FAIL (P2 match string) → PASS_WITH_P3. Next G12: ® match fix + LEGOLAND estimate line.
 - 2026-10-30 08:05Z G12 step 1 delivered (b2d9772..935cea8; no site change): DataForSEO Google Hotels price requests for a named family party (tools/hotel-price-pull.mjs, workflow routing, ledger). Two Atlantis requests ran (USD 0.020): no usable price yet (Eleuthera listings; then one umbrella Atlantis row without price). Integrity PASS_WITH_P3 x3. Next G12: a property Google prices on its own.
 - 2026-10-30 07:06Z G11 Atlantis v2 still held on q/G11 (f2d3b21): integrity PASS_WITH_P3 → FAIL (P2 "credit and breakfast offset the fees"; fixed) → PASS_WITH_P3; persona 3.87 → 4.00 → 3.93 (clarity 4/4/4 each time; shortfall is shareability: no $ savings number, vague "Only for some families" pill). Fixes: plain worth-it line, 3 chips, one-line trip cost, short year note (validated v2.date_note_short). Parked on O10.
-- 2026-10-30 06:05Z G11 Atlantis v2 built on q/G11 (7f4d620), held: integrity FAIL(P2 kids breakfast)→PASS_WITH_P3→FAIL(P2 fee figures were The Coral/Royal rates shown for all hotels; fixed in 7f4d620, unreviewed, cycles used up); persona 3.73→3.80→4.00 PASS (clarity 4/4/4). Owner question O10 (labelled sums). Next: re-review and release Atlantis.
