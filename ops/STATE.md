@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=18
-run: {id: 2026-10-30T01:04:39Z, started_at: 2026-10-30T01:04:39Z}
-last_public_release: ca75419 (2026-10-29, G14 batch 1: top photos on 12 pages, LV/SA $-a-night glance); last main code change ca75419
+today: 2026-10-29 transactions=19
+run: none
+last_public_release: b7a540e (2026-10-29, G14 batch 2: top photos on 8 activity/teen/itinerary pages, At-a-glance free picks on 6 things-to-do pages); last main code change b7a540e
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -36,6 +36,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 01:04Z G14 batch 2 delivered b7a540e (release.json + 8 pages byte-identical live): credited city banner at the top of DC/Boston itineraries and 6 things-to-do pages; "At a glance" box (picks count + free picks validated against table rows); DC/Boston plan box first, "$" not "USD". Integrity PASS_WITH_P3 x3; persona 3.93→3.93→4.00 PASS (clarity 4/4/4). Next: G14 remaining 16 (hubs/legal/deals) or G11 step 3.
 - 2026-10-30 00:04Z G09w Great Wolf flag decided (no site change): /deals index now features "Big Fall Sale" (up to 40%, stays Oct 19–Nov 2, 2026, no terms); Fall Flash Sale card unchanged (book by Nov 1, stays Oct 28–Feb 11), so the published check stands; Big Fall Sale not published (ends in 3 days, no family math). Flag cleared. Next: G14 batch 2.
 - 2026-10-29 G14 batch 1 delivered ca75419 (release.json + 13 files byte-identical live): top photos on 12 pages; LV/SA open with "About how much a night?" bands computed from the table (every hotel once, tested); one-line photo credits; plainer PV intro. Integrity FAIL(2 P2 labels)→PASS_WITH_P3; persona 3.93→4.00 PASS (clarity 4/4/4). Owner D20 also approved release. Next: G09w Great Wolf flag.
-- 2026-10-29 G14 batch 1 held on q/G14 (61aeea1): credited city photo moved to the top of 12 lodging/activity pages (230px banner, per-photo focus, fixed NYC/Chicago alts). Tests 1395/0, seo-qa 0, Playwright 72 checks clean. Integrity FAIL(2 P2)→PASS_WITH_P3. Persona 3.75→3.83 FAIL (clarity 4/4/4; gap is pre-existing copy: no $ glance on LV/SA, caveat-heavy intros). O8 asks the owner.
