@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=19
-run: {id: 2026-10-30T02:04:18Z, started_at: 2026-10-30T02:04:18Z}
-last_public_release: b7a540e (2026-10-29, G14 batch 2: top photos on 8 activity/teen/itinerary pages, At-a-glance free picks on 6 things-to-do pages); last main code change b7a540e
+today: 2026-10-29 transactions=20
+run: none
+last_public_release: c25b893 (2026-10-29 ET, G14 batch 3: banner photos on home, about, contributor, privacy, terms, /this-week/, /deals/; plainer home intro); last main code change c25b893
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -36,6 +36,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 02:04Z G14 batch 3 delivered c25b893 (release.json + 7 pages byte-identical live): credited banner on home, about, contributor, privacy, terms, /this-week/, /deals/ (hubs: after the dated list; captions name the place; og cards unchanged); home intro plain with deals/this-week links, internal GSC/"expansion rule" notes removed, scope line fixed (DC/Boston itineraries). Integrity PASS_WITH_P3→PASS; persona 3.8→4.00 PASS (clarity 4/4/4). Hero gaps now only on 9 older deal pages (G11 v2). Next: G11 step 3.
 - 2026-10-30 01:04Z G14 batch 2 delivered b7a540e (release.json + 8 pages byte-identical live): credited city banner at the top of DC/Boston itineraries and 6 things-to-do pages; "At a glance" box (picks count + free picks validated against table rows); DC/Boston plan box first, "$" not "USD". Integrity PASS_WITH_P3 x3; persona 3.93→3.93→4.00 PASS (clarity 4/4/4). Next: G14 remaining 16 (hubs/legal/deals) or G11 step 3.
 - 2026-10-30 00:04Z G09w Great Wolf flag decided (no site change): /deals index now features "Big Fall Sale" (up to 40%, stays Oct 19–Nov 2, 2026, no terms); Fall Flash Sale card unchanged (book by Nov 1, stays Oct 28–Feb 11), so the published check stands; Big Fall Sale not published (ends in 3 days, no family math). Flag cleared. Next: G14 batch 2.
-- 2026-10-29 G14 batch 1 delivered ca75419 (release.json + 13 files byte-identical live): top photos on 12 pages; LV/SA open with "About how much a night?" bands computed from the table (every hotel once, tested); one-line photo credits; plainer PV intro. Integrity FAIL(2 P2 labels)→PASS_WITH_P3; persona 3.93→4.00 PASS (clarity 4/4/4). Owner D20 also approved release. Next: G09w Great Wolf flag.
