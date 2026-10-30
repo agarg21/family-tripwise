@@ -2,14 +2,14 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-30 transactions=0
-run: {id: 2026-10-30T04:04:48Z, started_at: 2026-10-30T04:04:48Z}
-last_public_release: c25b893 (2026-10-29 ET, G14 batch 3: banner photos on home, about, contributor, privacy, terms, /this-week/, /deals/; plainer home intro); last main code change c25b893
+today: 2026-10-30 transactions=1
+run: none
+last_public_release: 1a5bc8d (2026-10-30 ET, G11 LEGOLAND California deal page v2 + v2 template: photo after verdict, $ in terms); last main code change 1a5bc8d
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
-- Cadence: the Oct 30 one-shot reminder to switch to every 4h (trig_01Ccfq2FQJBy7UbQGESFpLF8) is superseded by the owner's 2026-10-29 decision; ignore it. The 2026-12-08 reminder (trig_016a6JJcR9FqbUGzGbmr9ZXi) makes the switch.
+- Cadence: ignore the Oct 30 4h-switch reminder (trig_01Ccfq2FQJBy7UbQGESFpLF8; superseded 10-29); trig_016a6JJcR9FqbUGzGbmr9ZXi switches on 2026-12-08.
 - /deals/ checks end Oct 31 (Beaches), Nov 1 (Great Wolf; year is our reading), Nov 2 (Royal Caribbean; NCL Free 2nd Guest, whose 3rd/4th-guest part has no stated end; MSC, whose terms say Nov 5), Nov 3 (Margaritaville at Sea), Nov 17 (LEGOLAND California hotel package), Nov 22 (Atlantis Fall Into Paradise; year is our reading), Dec 31 (SeaWorld Fun Card; no purchase deadline stated, re-observe weekly from Nov 4), Jan 6 (Club Med); tools/this-week.mjs re-renders deal pages daily too, and the committed deal pages must match today's render or tests fail.
 - /this-week/ items expire daily: the deploy workflow (daily 05:17 UTC) refreshes the live copy, but the committed site/this-week/index.html must be re-rendered (`node tools/this-week.mjs`, commit) on the first run each Eastern day or `node --test` fails the committed-page test. Next item expiry: Nov 4 (DC lottery).
 - Social posting (G04, a568c5b; Zernio route G08, 16e5ad8): ZERNIO_API_KEY is live; first post Facebook 2026-10-29 14:05 UTC (Beaches). Only Facebook is connected in Zernio; runs now log and summarise `not_connected` platforms (6172a5a). Since G04b (e389a0c) it posts Threads, Facebook, Instagram and Pinterest (Bluesky removed); Pinterest needs PINTEREST_TOKEN (30-day expiry, owner replaces monthly) + PINTEREST_BOARD_ID, added only once the app has Standard access. Once live it commits receipts to ops/social-receipts/ on main several times a day: always fetch and merge before releasing. A failed or stuck "attempting" receipt is never retried; report it to the owner.
@@ -21,7 +21,7 @@ active: none
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14 (deletion refused) remain because remote deletion is refused; harmless.
-- Club Med v2 on q/G11-clubmed (c296b1d) awaits OWNER O9; if approved, merge origin/main into it, re-render (deal pages re-render daily), re-test, re-check the Nov 2 queue entry, release.
+- Club Med v2 on q/G11-clubmed (c296b1d) awaits OWNER O9; its template edits are now on main (1a5bc8d), so expect conflicts in deals-pages.mjs (take main); if approved, merge origin/main into it, re-render (deal pages re-render daily), re-test, re-check the Nov 2 queue entry, release.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 - Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
@@ -37,6 +37,5 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 04:04Z G11 LEGOLAND California v2 delivered 1a5bc8d (release.json + 3 pages, og image, photo byte-identical live): context (Carlsbad, near San Diego; kids 2-12), verdict, "from $169 a person a night" chip (2 adults + 2 kids, 1 night, before tax), $39 package kids' ticket vs $69 online 1-day ticket labelled not like for like, catch, things to do, credited entrance photo; Nov 3 queue refreshed. Integrity FAIL(2 P2)→PASS_WITH_P3→PASS_WITH_P3; persona 3.5→3.92→4.08 PASS (clarity 5/5/4). Next: G11 SeaWorld/Atlantis or O9.
 - 2026-10-30 03:04Z G11 step 3 Club Med v2 HELD (branch q/G11-clubmed c296b1d, not merged): plain context/verdict/savings, kids-club things to do (clubmed.us kids pages read 10-29), Cancún photo honestly captioned, photo after verdict, $ in v2 terms tables; Nov 2 queue entry refreshed on the branch. Integrity FAIL(P2 big label)→PASS_WITH_P3→PASS_WITH_P3; persona 3.47→3.80→3.87 FAIL (clarity 5/4/4; evidence-capped). OWNER O9. Disney Cruise unreachable flag cleared (noted in G05). Next: G11 SeaWorld/Atlantis/LEGOLAND or O9 answer.
-- 2026-10-30 02:04Z G14 batch 3 delivered c25b893 (release.json + 7 pages byte-identical live): credited banner on home, about, contributor, privacy, terms, /this-week/, /deals/ (hubs: after the dated list; captions name the place; og cards unchanged); home intro plain with deals/this-week links, internal GSC/"expansion rule" notes removed, scope line fixed (DC/Boston itineraries). Integrity PASS_WITH_P3→PASS; persona 3.8→4.00 PASS (clarity 4/4/4). Hero gaps now only on 9 older deal pages (G11 v2). Next: G11 step 3.
-- 2026-10-30 01:04Z G14 batch 2 delivered b7a540e (release.json + 8 pages byte-identical live): credited city banner at the top of DC/Boston itineraries and 6 things-to-do pages; "At a glance" box (picks count + free picks validated against table rows); DC/Boston plan box first, "$" not "USD". Integrity PASS_WITH_P3 x3; persona 3.93→3.93→4.00 PASS (clarity 4/4/4). Next: G14 remaining 16 (hubs/legal/deals) or G11 step 3.

@@ -1,10 +1,10 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
-Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-{deals-inventory,events-trends-inventory,distribution-landscape}-2026-10-28.md.
+Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-*-2026-10-28.md.
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
-Done: c5fa555, ca75419, b7a540e, c25b893 (hubs/legal). Remaining: 9 older deal pages via G11 v2.
+Done: c5fa555, ca75419, b7a540e, c25b893 (hubs/legal), 1a5bc8d (LEGOLAND v2). Remaining: 8 older deal pages via G11 v2.
 Carry (persona/integrity P3s, older copy): Orlando hotels opens with dated-source caveats, no $ glance, road/parking photo; "USD" → "$" on Cancun/Orlando-with-kids/deal titles; Cancun duplicate check date; LV $60–$300+ band wide; PV "published limit is not a confirmed reservation" legalese; LV/Chicago captions lack place (LV: Bellagio is not a compared hotel); phone comparison tables cut off at right; 4–5-line deal cards at phone width. Batch 3: /deals/ "Closing soonest" lacks what/where/saving; home destinations paragraph jargon; Atlantis "USD 250". Batch 2: glance "free" check should use the cost column; hazy DC photo; Chicago "USD 10"; disclaimer-first things-to-do openings.
 
 ## G13 Page quality: weekly and on demand
@@ -20,8 +20,8 @@ Carry P3s: skipped watch runs can chain (detection gap only); countdown lines ma
 open · M · owner: D11/D15 Approved; rollout needs O7 · gate: none
 Step 1 done 2026-10-29 (b32bd32): Beaches page v2 (validateDealV2; hero photo; og card via tools/deal-og-images.mjs).
 Step 2 done 2026-10-29 (1a3c8e8): v2 post text + photo card from validated v2.post; `social-queue.mjs <date> --refresh`. Persona 4.07.
-Step 3 Club Med built on q/G11-clubmed (c296b1d), held: integrity PASS_WITH_P3, persona 3.47→3.80→3.87 (clarity 5/4/4; usefulness/share capped by evidence: no family price, unreadable footnotes); OWNER O9. Template on that branch also puts the photo after the verdict and shows $ in v2 terms tables. Branch P3s: Threads 392 chars; Pinterest title order.
-Next: 3) v2 (page + post block) for the other deal checks, longest-lived first (SeaWorld, Atlantis, LEGOLAND); pick checks with an observed price or clear family value first, since evidence-capped deals fail the persona bar, ≤3 pages per release, then --refresh current queues; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes). Carry P3s: related-deal hedges smaller grey; phone photo pushes verdict below first screen; desktop h2s big; validateQueue: cap image.alt at 500; FB text 392 chars (aim ~350); card lacks "older visitor photo" note.
+Step 3 Club Med built on q/G11-clubmed (c296b1d), held: integrity PASS_WITH_P3, persona 3.47→3.80→3.87 (clarity 5/4/4; usefulness/share capped by evidence: no family price, unreadable footnotes); OWNER O9. Branch P3s: Threads 392 chars; Pinterest title order.
+LEGOLAND v2 delivered 1a5bc8d (persona 4.08; P3s: "Worth it if" line vs only_for badge; terms heading omits the Oct 30 comparison row; bold Saves heavy on phones). Next: 3) v2 (page + post block) for the other deal checks, longest-lived first (SeaWorld, Atlantis); pick checks with an observed price or clear family value first, since evidence-capped deals fail the persona bar, ≤3 pages per release, then --refresh current queues; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes). Carry P3s: related-deal hedges smaller grey; phone photo pushes verdict below first screen; desktop h2s big; validateQueue: cap image.alt at 500; FB text 392 chars (aim ~350); card lacks "older visitor photo" note.
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
@@ -60,8 +60,8 @@ Files: ops/OWNER.md.
 Acceptance: scoreboard vs baseline, which content and channels to scale, prune list; due on or after 2026-11-12 as a mid-cycle check (authorization now runs to 2027-01-15).
 
 ## NOT NOW (do not select; the site itself is not frozen)
-- Newsletter (owner skipped it for now, 2026-10-28); Pinterest, YouTube and TikTok posting until their API approvals clear.
-- Offline CLIs and "output isolation" work (Ferry, OMNY, MoMA, Lake Eola, child-height fares), source-governance pilot, evidence-batch tooling, NWS forecast pilot.
+- Newsletter (owner skipped, 10-28); Pinterest, YouTube and TikTok posting until their API approvals clear.
+- Offline CLIs/"output isolation" work, source-governance pilot, evidence-batch tooling, NWS forecast pilot.
 - New micro-calculators that only multiply numbers the parent types in.
 - Community drafts, outreach, analytics, monetization (external actions; need owner approval anyway).
 - Removing the SD meta-refresh stubs; title/CTR tests; FAQPage schema additions.
