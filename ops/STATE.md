@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-30 transactions=7
-run: {id: 2026-10-30T13:07:10Z, started_at: 2026-10-30T13:07:10Z}
-last_public_release: 5f6962a (2026-10-30 ET, new deal check: Busch Gardens Tampa Bay 2027 Fun Card, v2); last main code change 5f6962a (v2.verdict_pill)
+today: 2026-10-30 transactions=8
+run: none
+last_public_release: 35a5b7f (2026-10-30 ET, LEGOLAND deal page: labelled Castle Hotel price estimate, G12 step 3); last main code change 35a5b7f (v2.price_sample, hotel matchKey)
 active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE G11)
 
 ## Holds (one line each: what, unblock condition)
@@ -20,7 +20,7 @@ active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE
 - Sitemap lastmod for 21 pages unchanged since the 2026-10-15 import is an estimate (visible date or 2026-10-13 bound); it becomes observed the next time each page changes. No action needed.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14 (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12 (deletion refused) remain because remote deletion is refused; harmless.
 - Club Med v2 on q/G11-clubmed (c296b1d) awaits OWNER O9; its template edits are now on main (1a5bc8d), so expect conflicts in deals-pages.mjs (take main); if approved, merge origin/main into it, re-render (deal pages re-render daily), re-test, re-check the Nov 2 queue entry, release.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
@@ -37,6 +37,6 @@ active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 13:07Z G12 step 3 delivered 35a5b7f (release.json + LEGOLAND deal page verified live): glance now shows "about $383 a night at the LEGOLAND Castle Hotel for 2 adults and 2 kids aged 5 and 8, 3 nights, Dec 4-7" (Google Hotels via DataForSEO, Oct 30; taxes/inclusions not shown; estimate, not a quote; drops at stay start). Integrity FAIL (P2 'before tax' unsupported) → PASS_WITH_P3; persona 4.00 → 4.00.
 - 2026-10-30 12:06Z G09w Royal Caribbean flag decided (no site change): not re-fetched (read Oct 28; weekly limit, next Nov 4); watcher extract shows Kids Sail Free and Free 3rd/4th lines unchanged, only a separate "$750"→"$800 Savings"/"Deal Drop Sale" promotion changed; flag cleared. Integrity PASS_WITH_P3 (wording fixed). No pending flags.
 - 2026-10-30 11:05Z G09w Margaritaville flag decided (no site change): official page re-read; Midnight banner replaced by "from $49/night" (no basis, not used); 65% off, free 3rd/4th guests, $50 deposit, book by Nov 3 unchanged; live page and Oct 31 post stand; flag cleared. Integrity PASS_WITH_P3. Royal Caribbean flag ($800 Deal Drop Sale) next.
-- 2026-10-30 10:05Z G05/G11 delivered 5f6962a (release.json + 3 pages, photo and og card verified live): new deal check for the Busch Gardens Tampa Bay 2027 Fun Card ($129.99 a person, unlimited through 2027, Adventure Island at no extra cost; pays off from day 3 vs its $106 Two-Day and $135 Three-Day tickets), v2 from the start; new validated v2.verdict_pill ("Only for 3+ park days"). Integrity FAIL (P2 record gap) → PASS_WITH_P3; persona 3.87 → 4.20. Deal-watch raised 2 flags (Royal Caribbean, Margaritaville) at 10:12Z: next run (G09w).

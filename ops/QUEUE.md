@@ -9,7 +9,7 @@ Carry (persona/integrity P3s, older copy): Orlando hotels opens with dated-sourc
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet baseline (tools/site-quality-baseline.json). Carry P3s: empty-table check edge cases; nested sections skip outer text; --accept takes the next arg blindly. Next: 2) Weekly (first Monday run): site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, persona review (docs/plan/page-quality-rubric.md) of pages changed since last review + top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE; no automatic edits. 3) On demand: OWNER.md "review <page or all>" goes next.
+Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet baseline (tools/site-quality-baseline.json). Carry P3s: empty-table edge cases; nested sections; --accept arg. Next: 2) Weekly (first Monday run): site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, persona review (docs/plan/page-quality-rubric.md) of pages changed since last review + top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE; no automatic edits. 3) On demand: OWNER.md "review <page or all>" goes next.
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
@@ -25,7 +25,7 @@ LEGOLAND v2 delivered 1a5bc8d (persona 4.08; P3s: terms caption omits comparison
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Steps 1-2 done 10-30 (935cea8, c8ef869): Google price reads per night and is volatile; LEGOLAND Castle Hotel ~USD 378-423/night for 2+2 (Dec 4-7 2026, taxes unknown); LEGOLAND Hotel, Great Wolf Poconos, Atlantis unpriced; "®" broke matching (docs/research/trip-cost-observations-2026-10-30.md). Next: 3) strip ®/™ in match; labelled "about $X a night before tax" estimate on the LEGOLAND deal page (family party only; drop after Dec 4). P3: drop stale requests; confirm hotel identity.
+Steps 1-3 done 10-30 (935cea8, c8ef869, 35a5b7f): LEGOLAND deal page shows a validated v2.price_sample "about $383 a night at the LEGOLAND Castle Hotel for 2+2 (kids 5, 8), 3 nights Dec 4-7" (auto-drops at stay start or deal end); title match strips ®/™. Next: 4) price samples for other deal hotels Google prices (Great Wolf/Atlantis/LEGOLAND Hotel showed none); flights need SERPAPI_API_KEY. P3s: How-we-check clause hardcodes "Google Hotels"; say why $169/person package and $383 room differ; shorter phone line; drop stale requests.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
