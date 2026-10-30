@@ -231,8 +231,11 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     const ok = ps && typeof ps === "object" && sentence(ps.hotel) && n(ps.amount) && (ps.low === undefined || (n(ps.low) && n(ps.high) && ps.low <= ps.amount && ps.amount <= ps.high))
       && /^2 adults and 2 kids aged \d+ and \d+$/.test(ps.party ?? "") && validDate(ps.stay_from) && validDate(ps.stay_to) && ps.stay_to > ps.stay_from
       && validDate(ps.observed_on) && ps.observed_on <= today && ps.observed_on < ps.stay_from && sentence(ps.source_label) && /^https:\/\/[^\s]+$/.test(ps.source_url ?? "")
-      && sentence(ps.caveat) && !/\$\s?\d|\bUSD\b|\btotal\b/i.test(ps.caveat) && (ps.low === undefined || sentence(ps.range_note));
-    if (!ok) problems.push(`${where}: price_sample needs hotel, whole-dollar amount (and optional low/high with range_note), party "2 adults and 2 kids aged X and Y", stay_from/stay_to after observed_on, source_label, https source_url and a caveat without $ figures`);
+      && sentence(ps.caveat) && !/\$\s?\d|\bUSD\b|\btotal\b|\bsav/i.test(ps.caveat)
+      && (ps.low === undefined || (sentence(ps.range_note) && /\{low\}/.test(ps.range_note) && /\{high\}/.test(ps.range_note) && !/\$\s?\d|\bUSD\b|\btotal\b|\bsav/i.test(ps.range_note.replace(/\{(?:low|high)\}/g, ""))))
+      && String(v.family ?? "").includes(ps.party.replace(/^2 adults and 2 kids /, ""));
+    if (ok) texts.push(ps.hotel, ps.caveat, ...(ps.range_note ? [ps.range_note] : []));
+    if (!ok) problems.push(`${where}: price_sample needs hotel, whole-dollar amount (and optional low/high with range_note), party "2 adults and 2 kids aged X and Y", stay_from/stay_to after observed_on, source_label, https source_url and a caveat without $ figures; the range_note uses {low} and {high}; v2.family names the same kids' ages`);
   }
   // Optional short pill naming who an "Only for" deal suits (replaces the generic "Only for some families").
   if (v.verdict_pill !== undefined && (check.score?.verdict !== "only_for" || typeof v.verdict_pill !== "string" || !/^Only for \S/.test(v.verdict_pill) || v.verdict_pill.length > 30)) problems.push(`${where}: verdict_pill must start "Only for " (at most 30 characters) and needs an only_for verdict`);
@@ -287,6 +290,7 @@ const VERDICT_TEXT = { worth_it: "Worth it", only_for: "Only for some families",
 const list = (items, cls = "") => `<ul${cls ? ` class="${cls}"` : ""}>${items.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`;
 const sourceLine = (src) => `<a href="${e(src.url)}">${e(src.label)}</a>, checked ${e(longDate(src.observed_on))}`;
 
+const nights = (ps) => Math.round((Date.parse(`${ps.stay_to}T00:00:00Z`) - Date.parse(`${ps.stay_from}T00:00:00Z`)) / 86400000);
 const usd = (n) => `$${n.toLocaleString("en-US")}`;
 const shortStay = (from, to) => {
   const [a, b] = [longDate(from), longDate(to)];
@@ -299,7 +303,7 @@ export function priceSampleLine(v, today = easternDate()) {
   const ps = v.price_sample;
   if (!ps || ps.stay_from <= today) return "";
   const range = ps.low === undefined ? "" : ` ${ps.range_note.replace(/\{low\}/g, usd(ps.low)).replace(/\{high\}/g, usd(ps.high))}`;
-  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
+  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${nights(ps)} nights, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
 }
 
 function heroFigure(v) {
@@ -323,7 +327,7 @@ function dealCheckPageV2(checks, check, today, ended) {
     [v.context_source.label, v.context_source.url, v.context_source.observed_on, v.context_source.covers ?? "where the resorts are and what they include"],
     ...(v.things_to_do.source.url === v.context_source.url ? [] : [[v.things_to_do.source.label, v.things_to_do.source.url, v.things_to_do.source.observed_on, "things to do"]]),
     ...(v.extra_sources ?? []).map((src) => [src.label, src.url, src.observed_on, src.covers]),
-    ...(priceSampleLine(v, today) ? [[v.price_sample.source_label, v.price_sample.source_url, v.price_sample.observed_on, "the hotel price we saw (an estimate, not a quote)"]] : [])
+    ...(!ended && priceSampleLine(v, today) ? [[v.price_sample.source_label, v.price_sample.source_url, v.price_sample.observed_on, "the hotel price we saw (an estimate, not a quote)"]] : [])
   ];
   const body = `    <main id="main" class="deal-v2">
       <section class="page-hero deal-hero">
@@ -397,7 +401,7 @@ ${otherChecks(checks, check, today)}
       <section class="container page-section deal-sources" aria-labelledby="deal-sources-title">
         <h2 id="deal-sources-title">Sources and how we check</h2>
         <ul>${sources.map(([label, url, on, what]) => `<li>${e(what[0].toUpperCase() + what.slice(1))}: <a href="${e(url)}">${e(label)}</a>, checked ${e(longDate(on))}.</li>`).join("")}</ul>
-        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or been there ourselves. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. Prices and availability change: check live before you book.</p>
+        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or been there ourselves. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. ${!ended && priceSampleLine(v, today) ? "The hotel price we saw is a dated Google Hotels reading, not a price checked on the official site. " : ""}Prices and availability change: check live before you book.</p>
       </section>
     </main>`;
   return page({

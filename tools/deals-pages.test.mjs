@@ -371,13 +371,15 @@ test("G12 price sample: LEGOLAND shows a labelled Castle Hotel estimate for a na
   assert.match(l.v2.family, /aged 5 and 8/, "the example family matches the sampled party");
   const line = priceSampleLine(l.v2, "2026-11-10");
   assert.match(line, /estimate, not a quote/);
-  assert.match(line, /about \$383 a night at the LEGOLAND Castle Hotel for 2 adults and 2 kids aged 5 and 8, December 4 to 7, 2026/);
+  assert.match(line, /about \$383 a night at the LEGOLAND Castle Hotel for 2 adults and 2 kids aged 5 and 8, 3 nights, December 4 to 7, 2026/);
   assert.match(line, /checked October 30, 2026/);
-  assert.match(line, /Before tax/);
+  assert.match(line, /does not say whether taxes, fees, park tickets or breakfast are included/);
+  assert.doesNotMatch(line, /before tax/i, "the receipt does not say whether tax is included");
   assert.doesNotMatch(line, /\btotal\b|\bsav/i, "a price sample is never a total or a saving");
   assert.equal(priceSampleLine(l.v2, "2026-12-04"), "", "dropped once the sampled stay starts");
   assert.match(dealCheckPage(checks, l, "2026-11-10"), /deal-price-sample/);
-  assert.doesNotMatch(dealCheckPage(checks, l, "2026-11-18"), /deal-price-sample/, "an ended deal shows no glance price");
+  assert.doesNotMatch(dealCheckPage(checks, l, "2026-11-18"), /deal-price-sample|dataforseo-g12|Google Hotels reading/, "an ended deal shows no glance price and no price-sample source");
+  assert.match(dealCheckPage(checks, l, "2026-11-10"), /dated Google Hotels reading, not a price checked on the official site/);
 });
 
 test("G12 price sample validation rejects a missing party, a $ caveat, a stay that starts before the observation, and an out-of-range amount", () => {
@@ -389,4 +391,7 @@ test("G12 price sample validation rejects a missing party, a $ caveat, a stay th
   assert.ok(bad({ stay_from: "2026-10-29" }));
   assert.ok(bad({ amount: 500 }));
   assert.ok(bad({ observed_on: "2026-10-31" }));
+  assert.ok(bad({ range_note: "Other searches showed $999 in total." }));
+  assert.ok(bad({ range_note: "One-night searches showed a range." }));
+  assert.ok(bad({ party: "2 adults and 2 kids aged 3 and 6" }), "party ages must match v2.family");
 });
