@@ -600,7 +600,7 @@
         },
         "verdict": "only_for",
         "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND California visit through January 9, 2027 who are fine with a non-refundable booking.",
-        "why": "Tickets, breakfast and early access are bundled, but reservations are non-refundable, parking is extra and the starting price is not a quote for your dates."
+        "why": "Good for families with firm dates who want to sleep at the park; skip it if you might cancel (it is non-refundable and paid in full) or want a cheaper hotel off site. Tax and parking are extra."
       },
       "v2": {
         "page_title": "LEGOLAND California Hotel Package: Kids' Park Tickets from $39 a Day",
@@ -615,6 +615,7 @@
         "big_label": "a day per kid's park ticket when you stay at a LEGOLAND hotel (starting price)",
         "headline": "LEGOLAND California: kids' park tickets from $39 a day when you book a LEGOLAND hotel stay by November 17",
         "chips": [
+          "From $169 a person a night",
           "Stays to January 9, 2027",
           "Breakfast + early entry",
           "Non-refundable"
@@ -622,7 +623,7 @@
         "best_for": "Families with kids 2 to 12 and firm dates for a LEGOLAND California trip before January 9, 2027 who want to stay at the park.",
         "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a cheaper hotel off site.",
         "cost": "Trip cost: we have no checked price for a family of 4 on named dates. LEGOLAND's starting price above is for exactly 2 adults and 2 kids for 1 night; price your dates on legoland.com, then add tax, parking and flights from your airport (for example New York City to San Diego, which we have not priced).",
-        "saves": "Saves: kids' park tickets from $39 a day inside the package, against regular 1-day tickets from $69 per person online ($139 at the gate). The package starts at $169 per person per night for 2 adults and 2 kids ages 2 to 12 (1 night, before tax) and also covers the hotel, breakfast and early entry.",
+        "saves": "Saves: kids' park tickets from $39 a day inside the package. LEGOLAND's regular 1-day ticket starts at $69 per person online ($139 at the gate), but that is a different ticket and LEGOLAND does not say what the $39 covers, so treat it as a rough guide, not a fixed saving.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
         "get": [
           "One booking covers the hotel night, Park Hopper tickets for LEGOLAND and the SEA LIFE Aquarium, a hot buffet breakfast each day and early park access.",
@@ -631,7 +632,8 @@
           "Multi-day park visits must be used within 3 days of the first visit."
         ],
         "compare": [
-          "LEGOLAND's own help page lists 1-day tickets from $69 per person online and $139 at the gate (no date shown), so the $39 kids' price is well below its regular starting price.",
+          "LEGOLAND's own help page lists 1-day tickets from $69 per person online and $139 at the gate (no date shown). The package ticket is a Park Hopper and the $39 basis is not stated, so the two are not like for like.",
+          "To check the saving yourself, price your dates at a LEGOLAND hotel with the package, then price separate tickets plus the hotel you would otherwise use.",
           "The package page does not say how many ticket days come with each night, so price the same dates with and without the hotel before you pay."
         ],
         "catch": [
@@ -649,7 +651,7 @@
             "More than 60 rides, shows and attractions, designed for kids ages 2 to 12.",
             "Theme park rides and areas such as The Dragon coaster, Driving School, Dino Valley, LEGO Galaxy, Miniland USA and THE LEGO MOVIE WORLD.",
             "LEGOLAND Water Park with Build-A-Raft River and Pirate Reef (the package terms list only the theme park and SEA LIFE).",
-            "SEA LIFE Aquarium Carlsbad, included in the package's Park Hopper ticket."
+            "SEA LIFE Aquarium, included in the package's Park Hopper ticket."
           ],
           "source": {
             "label": "LEGOLAND California Things to Do page",
@@ -659,7 +661,7 @@
           }
         },
         "pros": [
-          "Park tickets, breakfast and early entry come in one booking, steps from the gate.",
+          "Park tickets, breakfast, early entry and a hotel at the resort come in one booking.",
           "LEGOLAND prices the package for a family of 4, so its starting price is easy to compare.",
           "Children under 2 get into the park free."
         ],

@@ -355,7 +355,7 @@ ${heroFigure(v)}
           </div>
         </details>
         <p><strong>Unclear on the offer page:</strong></p>
-        ${list(check.unclear)}
+        ${list(check.unclear.map((x) => String(x).replace(/\bUSD ?(?=\d)/g, "$")))}
         <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
       </section>
 ${otherChecks(checks, check, today)}
