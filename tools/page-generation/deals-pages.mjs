@@ -212,7 +212,7 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
   if (v.extra_sources !== undefined && (!Array.isArray(v.extra_sources) || !v.extra_sources.every((src) => validSource(src) && src.observed_on <= today && sentence(src.covers)))) problems.push(`${where}: extra_sources must be dated https sources with what they cover`);
   if (!/\$\d/.test(v.headline ?? "") || !/\$\d/.test(v.big_number ?? "")) problems.push(`${where}: headline and big_number must state a $ amount`);
   // Optional short form of expires_note for the hero chip and the post (the full note stays in the terms and status lines).
-  if (v.date_note_short !== undefined && !(check.expires_note && typeof v.date_note_short === "string" && v.date_note_short.length >= 6 && v.date_note_short.length <= 30 && /reading/.test(v.date_note_short))) problems.push(`${where}: date_note_short must be a 6-30 character note saying the date is our reading, and needs an expires_note`);
+  if (v.date_note_short !== undefined && !(check.expires_note && /reading/.test(check.expires_note) && typeof v.date_note_short === "string" && v.date_note_short.length >= 6 && v.date_note_short.length <= 30 && /reading/.test(v.date_note_short))) problems.push(`${where}: date_note_short must be a 6-30 character note saying the date is our reading, and needs an expires_note`);
   if (!Array.isArray(v.chips) || v.chips.length < 1 || v.chips.length > 4 || !v.chips.every((x) => typeof x === "string" && x.length >= 4 && x.length <= 40)) problems.push(`${where}: chips must be 1-4 short labels`);
   else texts.push(...v.chips);
   if (check.family_total === null && /\$\s?\d/.test(v.cost ?? "")) problems.push(`${where}: no family total was observed, so the cost line cannot state a $ amount`);
