@@ -1163,6 +1163,158 @@
         "who": "Families taking 4+ nights at Atlantis by January 31, 2027 outside the blackout weeks, especially with children 5 and under.",
         "why": "The resort credit and kids-eat-free help, but breakfast covers two people only and fees, a 21% charge and gratuities add up for a family of 4."
       }
+    },
+    {
+      "id": "sesame-place-philadelphia-2027-season-pass",
+      "og_card": "Sesame Place Philadelphia 2027 season passes from $99.99 a person (ages 2+), with the rest of 2026 included; parking only on Silver and up",
+      "operator": "Sesame Place Philadelphia",
+      "category": "Theme park pass",
+      "title": "Sesame Place Philadelphia 2027 Season Pass: unlimited visits for the rest of 2026 and all of 2027, from $99.99 a person",
+      "headline": "Sesame Place Philadelphia's 2027 season passes are on sale from USD 99.99 a person (ages 2+, regular USD 175.50) and include unlimited visits for the rest of 2026, but the cheapest Bronze pass includes no parking, and no sale end date is stated.",
+      "family_of_four": "Season passes are priced per person for ages 2 and up; Sesame Place's tickets page says children under 2 are free. A family of 2 adults and 2 kids aged 2 or older needs four passes. The Bronze pass is USD 99.99 each (regular USD 175.50) and includes no parking; Silver (USD 175.50 each) adds free general parking. Taxes and fees are extra. No family total for named dates was observed.",
+      "terms": [
+        ["Headline", "\"Save up to 40% on 2027 Season Passes\", \"as low as $99.99\"; pass cards say \"Visit all of 2027 and the rest of 2026!\""],
+        ["Price shown", "Bronze USD 99.99 (regular USD 175.50; or 9 payments of USD 11.11); Silver USD 175.50 (regular USD 236.25; 9 payments of USD 19.50); Gold USD 207.00 (regular USD 303.75; 9 payments of USD 23.00); Platinum USD 248.50 (regular USD 387.00; 9 payments of USD 27.61). Ages 2+, per person. Plus taxes and fees."],
+        ["Travel window", "Unlimited visits through January 2, 2028 (pass expires 1/2/2028), including The Count's Halloween Spooktacular and A Very Furry Christmas. Bronze blockout dates: October 16, 17, 23 and 24, 2027; no blockout dates listed for Silver, Gold or Platinum."],
+        ["Book by", "No sale end date is stated; the page shows a countdown with no date."],
+        ["Child ages", "Pass prices are labelled \"Ages 2+\". Sesame Place's tickets page: children under 2 are free."],
+        ["Parking", "Bronze: no parking listed. Silver: free general parking, based on availability. Gold: free general parking and 50% off preferred parking. Platinum: free preferred parking. The parking price for Bronze holders is not shown on the pass page."],
+        ["Guest tickets", "Silver 2, Gold 4, Platinum 6 free single-day guest tickets (Bronze none), split between a use-by date of January 3, 2027 and visits from March 13, 2027 to January 2, 2028; valid only at Sesame Place Philadelphia."],
+        ["Pass rules", "Valid at Sesame Place Philadelphia only, for the person named on the pass; photo enrollment required; non-transferable and non-refundable; monthly payments are 0% APR with the first payment due at purchase; benefits subject to change without notice."],
+        ["Prices on Sesame Place's tickets page, for comparison", "Read October 30, 2026: One-Day Ticket USD 31.99 each online (date-specific, ages 2+, gate price USD 110.99); Any Day Ticket USD 59.99 each (one visit within 6 months); Any Day 2-Day Ticket USD 59.99 each (gate USD 121.99). Under 2 free. Plus taxes and fees; parking not included."]
+      ],
+      "unclear": [
+        "No sale end date is stated; the page shows a countdown timer without a date, so the sale price could end at any time.",
+        "The tickets page advertises passes \"as low as $13.25/month\", while the pass page shows 9 payments of USD 11.11 for Bronze.",
+        "Sesame Place's pricing guide (no date shown) lists the One-Day Ticket from USD 42.99, more than the USD 31.99 on the tickets page; day prices vary by date.",
+        "The pass page does not show what parking costs for Bronze pass holders."
+      ],
+      "before_booking": [
+        "Check the park calendar: Sesame Place Philadelphia is open on select dates, and the holiday event runs on select dates from November 14 to January 3.",
+        "Price a pass for everyone aged 2 and up at checkout, with taxes and fees.",
+        "If you will drive on most visits, compare Bronze plus parking with Silver, which includes free general parking.",
+        "Check the Bronze blockout dates (four October 2027 weekend days) before you buy."
+      ],
+      "family_total": null,
+      "official_url": "https://sesameplace.com/philadelphia/season-pass/",
+      "source_label": "Sesame Place Philadelphia Season Pass page",
+      "observed_on": "2026-10-30",
+      "expires_on": "2026-11-06",
+      "expires_note": "no sale end date is stated, so we list this price for one week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-10-30",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; the passes are priced per person with no separate child price, and parking on Bronze is extra at an unstated price."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families with kids around 2 to 7 who live within a drive of Sesame Place Philadelphia in Langhorne, Pennsylvania, and will go several times."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-10-30",
+          "links": [
+            {
+              "label": "Headout: Sesame Place Philadelphia annual passes (third-party seller)",
+              "url": "https://www.headout.com/sesame-place-philadelphia/sesame-place-philadelphia-annual-passes-e-45789/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Langhorne, Pennsylvania, with kids who love Sesame Street, who will visit four or more times before the start of 2028.",
+        "why": "The Bronze pass costs less than four of the cheapest online one-day tickets, so it pays off from the 4th visit; for one to three visits on the cheapest dates, day tickets cost less."
+      },
+      "v2": {
+        "page_title": "Sesame Place Philadelphia 2027 Season Pass: Rest of 2026 Included, From $99.99 a Person",
+        "context": "Sesame Place Philadelphia, in Langhorne, Pennsylvania: a Sesame Street theme park with family rides, water rides, shows, parades and character meet-and-greets",
+        "context_source": {
+          "label": "Sesame Place Philadelphia \"2027 Season Passes Bring Four Seasons of Furry Fun\" post (July 27, 2026)",
+          "url": "https://sesameplace.com/philadelphia/blog/2027-Season-Passes-Bring-Four-Seasons-of-Furry-Fun/",
+          "observed_on": "2026-10-30",
+          "covers": "what Sesame Place Philadelphia is, its 2026 events and the free rest-of-2026 visits"
+        },
+        "big_number": "$99.99",
+        "big_label": "a person aged 2+ (regular $175.50): unlimited visits for the rest of 2026 and all of 2027 on the Bronze pass",
+        "headline": "Sesame Place Philadelphia: a 2027 season pass from $99.99 a person, with unlimited visits for the rest of 2026 included",
+        "chips": [
+          "Pays off from visit 4",
+          "Under 2 free",
+          "Bronze: no parking",
+          "No sale end date"
+        ],
+        "best_for": "Families within a drive of Langhorne, Pennsylvania, with Sesame Street fans aged about 2 to 7 who will go four or more times, for example the holiday nights this winter and summer water days next year.",
+        "not_for": "One to three visits: Sesame Place sells one-day tickets online from $31.99 a person, so up to three days on the cheapest dates cost less than a pass each.",
+        "cost": "Trip cost: we have no checked price for a family of 4. Passes are priced per person for everyone aged 2 and up (under 2 is free), so plan on one pass each, plus taxes and fees, parking on the Bronze pass (price not shown) and your drive to Langhorne, which we have not priced.",
+        "saves": "Saves: Sesame Place lists the Bronze pass at $99.99, down from $175.50, and it costs less than four of its cheapest online one-day tickets ($31.99 each), so it pays off from your 4th visit; against the $59.99 Any Day ticket, from your 2nd.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 3 and 6, so four passes (everyone aged 2 and up needs one).",
+        "get": [
+          "Unlimited visits at Sesame Place Philadelphia from the day you buy through January 2, 2028, including the holiday event A Very Furry Christmas and next year's Halloween event.",
+          "Bronze ($99.99) has four blocked days, all October 2027 weekends; Silver ($175.50) has none and adds free general parking plus 2 free guest tickets.",
+          "You can pay in 9 monthly payments ($11.11 for Bronze) at 0% APR, with the first payment due when you buy."
+        ],
+        "compare": [
+          "Buy it if you will go four or more times before 2028; for one to three visits on the cheapest dates, one-day tickets ($31.99 online, date-specific) cost less.",
+          "Sesame Place's gate price for one day is $110.99, so a single walk-up visit costs more than a Bronze pass.",
+          "If you drive, Silver ($175.50) includes free general parking, which Bronze does not."
+        ],
+        "catch": [
+          "The cheapest Bronze pass does not include parking, and the pass page does not say what parking costs.",
+          "No sale end date is stated, the passes cannot be refunded or shared, and taxes and fees are extra.",
+          "The park opens on select dates only, so check the calendar before planning visits."
+        ],
+        "how": [
+          "Buy online on Sesame Place Philadelphia's Season Pass page; no sale end date is stated.",
+          "Pick Bronze ($99.99) if you will not drive often, or Silver ($175.50) for free general parking and no blockout dates.",
+          "Buy one pass for each family member aged 2 and up, then enroll each person's photo for entry at your first visit."
+        ],
+        "extra_sources": [
+          {
+            "label": "Sesame Place Philadelphia tickets page",
+            "url": "https://sesameplace.com/philadelphia/tickets/",
+            "observed_on": "2026-10-30",
+            "covers": "one-day, Any Day and gate ticket prices used for the comparison and the under-2-free rule"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "A Very Furry Christmas runs on select dates from November 14 to January 3, with Santa, holiday shows, Hanukkah and Kwanzaa celebrations and New Year's Eve fireworks.",
+            "Meet Sesame Street characters such as Elmo, Abby and the Count, and watch the shows and parades.",
+            "In summer, Sesame Summer Splash has water play areas and a six-story family raft ride.",
+            "Elmo's Springtacular adds music, magic and pirate adventures on spring weekends."
+          ],
+          "source": {
+            "label": "Sesame Place Philadelphia \"2027 Season Passes Bring Four Seasons of Furry Fun\" post (July 27, 2026)",
+            "url": "https://sesameplace.com/philadelphia/blog/2027-Season-Passes-Bring-Four-Seasons-of-Furry-Fun/",
+            "observed_on": "2026-10-30",
+            "covers": "what Sesame Place Philadelphia is, its 2026 events and the free rest-of-2026 visits"
+          }
+        },
+        "pros": [
+          "The rest of 2026, including the holiday event, comes free with a 2027 pass.",
+          "From the 4th visit, Bronze costs less than buying the cheapest day tickets.",
+          "Kids under 2 get in free, and you can spread the cost over 9 months at 0% APR."
+        ],
+        "cons": [
+          "Bronze includes no parking, and the parking price is not shown.",
+          "Every family member aged 2 and up needs a pass, with no child price.",
+          "No sale end date is stated, and passes are non-refundable."
+        ],
+        "post": {
+          "title": "Sesame Place Philadelphia 2027 season pass from $99.99, rest of 2026 included",
+          "hook": "Sesame Place Philadelphia (Langhorne, PA): 2027 season passes from $99.99 a person, rest of 2026 included.",
+          "verdict": "Only for 4+ visits; for 1-3 visits, $31.99 online day tickets cost less.",
+          "catch": "The catch: Bronze has no parking; ages 2+ each need a pass; no sale end date."
+        },
+        "hero_image": {
+          "slug": "sesame-place-ernies-waterworks",
+          "alt": "Riders carry blue rafts up a stairway to a tall yellow water slide topped by a giant rubber duck at Sesame Place, with big white flower decorations and families in the foreground",
+          "caption": "Water slides at Sesame Place in Langhorne, Pennsylvania (an older photo by Matthew McCullough, not taken by Family Tripwise; rides may have changed)."
+        },
+        "verdict_pill": "Only for 4+ visits",
+        "og_image": "images/og/deals/sesame-place-philadelphia-2027-season-pass.png"
+      }
     }
   ]
 }

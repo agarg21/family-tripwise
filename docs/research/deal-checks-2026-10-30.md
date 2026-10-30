@@ -77,3 +77,16 @@ Further facts read on the same pages on 2026-10-30 and used in the record: kids'
 Interpretation (ours, labelled on the page): the USD 162 per-person starting price is the hotel + ticket package price, so the USD 39-a-day kids' ticket is read as part of it, not an extra charge. The daily hot breakfast is listed on both the kids' tickets offer page (hotel offer inclusions) and the package page; we read them as one offer.
 
 Novelty: a quick search (2026-10-30) found no news coverage of this hotel offer (third-party ticket guides only). No family total for named dates was observed (no booking-engine search), so the page shows the advertised family-of-4 basis and "price your dates"; no saving figure is stated. Next (G12): a Google Hotels sample for a LEGOLAND Florida hotel for a named family party and dates.
+
+## Sesame Place Philadelphia 2027 Season Pass (new check, observed 2026-10-30)
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| sesameplace.com/philadelphia/season-pass/ | "Save up to 40% on 2027 Season Passes", "as low as $99.99"; Bronze USD 99.99 (was USD 175.50; 9 × USD 11.11), Silver USD 175.50 (USD 236.25), Gold USD 207.00 (USD 303.75), Platinum USD 248.50 (USD 387.00); Ages 2+; plus taxes & fees | new |
+| same | Cards: "Visit all of 2027 and the rest of 2026!"; Bronze: "Unlimited visits through 1/2/2028 (blockout dates apply)", "Including The Count's Halloween Spooktacular and A Very Furry Christmas"; Bronze blockouts 10/16, 10/17, 10/23, 10/24/2027; non-transferable, non-refundable; photo enrollment; EZpay 0% APR, first payment at purchase | new |
+| same | Parking: Bronze none listed; Silver free general; Gold free general + 50% off preferred; Platinum free preferred (based on availability); guest tickets Silver 2 / Gold 4 / Platinum 6 (use by 1/3/2027 or 3/13/2027–1/2/2028) | new |
+| same | No sale end date; countdown timer shows no date | new |
+| sesameplace.com/philadelphia/tickets/ | One-Day USD 31.99 online (gate USD 110.99, ages 2+, under 2 free, date-specific); Any Day USD 59.99; Any Day 2-Day USD 59.99 (gate USD 121.99); passes "as low as $13.25/month"; parking not included | new |
+| sesameplace.com/pricing-guide-to-sesame-place/ (no date shown) | One-Day from USD 42.99; Flex USD 53.99; Two-Day from USD 53.99; same pass prices; no parking price | new (differs from tickets page; tickets page used) |
+| sesameplace.com/philadelphia/blog/2027-Season-Passes-Bring-Four-Seasons-of-Furry-Fun/ (July 27, 2026) | 2027 pass gives "unlimited visits throughout the rest of the 2026 for free"; site nav: A Very Furry Christmas Nov 14–Jan 3 (select dates), Furry Friends Weekend Nov 7–8; Sesame Summer Splash water play + six-story family raft ride; Elmo's Springtacular weekends; characters Elmo, Abby, the Count | new |
+| headout.com (third-party seller) | Lists Sesame Place Philadelphia annual passes (novelty: agency_listed) | lead only |
+Decision: published as an only_for check (Bronze beats the cheapest USD 31.99 day ticket from the 4th visit). No sale end date, so listed for one week (expires_on 2026-11-06) unless re-read. Photo: Ernie's Waterworks, Matthew McCullough, CC BY-SA 2.0 (640 px original).
