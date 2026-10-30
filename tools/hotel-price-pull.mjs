@@ -22,7 +22,7 @@ const LIMITATIONS = Object.freeze([
   "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
   "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
   "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
-  "Null prices are unknown, not free; a listing can change within minutes",
+  "Null prices (the provider sends 0 when no price shows) are unknown, not free; a listing can change within minutes",
   "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
   "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
   "No paid automatic retries; unknown outcomes require reconciliation",
@@ -37,11 +37,15 @@ const nights = (a, b) => Math.round((Date.parse(`${b}T00:00:00Z`) - Date.parse(`
 
 function search(raw, today) {
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) throw new Error("Invalid hotel search");
-  for (const key of Object.keys(raw)) if (!["label", "keyword", "location_coordinate", "check_in", "check_out", "adults", "children", "match"].includes(key)) throw new Error(`Unexpected hotel search field ${key}`);
-  const { label, keyword, location_coordinate, check_in, check_out, adults, children = [], match } = raw;
+  for (const key of Object.keys(raw)) if (!["label", "keyword", "location_coordinate", "location_code", "check_in", "check_out", "adults", "children", "match"].includes(key)) throw new Error(`Unexpected hotel search field ${key}`);
+  const { label, keyword, location_coordinate, location_code, check_in, check_out, adults, children = [], match } = raw;
   if (typeof label !== "string" || !LABEL.test(label)) throw new Error("Invalid search label");
   if (typeof keyword !== "string" || !keyword.trim() || keyword !== keyword.trim() || keyword.length > 120) throw new Error("Invalid search keyword");
-  if (typeof location_coordinate !== "string" || !COORD.test(location_coordinate)) throw new Error("Invalid location coordinate");
+  // Exactly one of a Google geo location_code (e.g. 2044 = The Bahamas) or a "lat,lng" coordinate.
+  // Lesson 2026-10-30: a Paradise Island coordinate resolved to listings on Eleuthera; prefer location_code.
+  if ((location_coordinate === undefined) === (location_code === undefined)) throw new Error("Give exactly one of location_code or location_coordinate");
+  if (location_coordinate !== undefined && (typeof location_coordinate !== "string" || !COORD.test(location_coordinate))) throw new Error("Invalid location coordinate");
+  if (location_code !== undefined && (!Number.isInteger(location_code) || location_code < 2000 || location_code > 99999999)) throw new Error("Invalid location code");
   if (!isDate(check_in) || !isDate(check_out)) throw new Error("Invalid stay dates");
   if (check_in < today) throw new Error("Check-in is in the past");
   const n = nights(check_in, check_out);
@@ -50,7 +54,7 @@ function search(raw, today) {
   if (!Array.isArray(children) || children.length > 4 || children.some((a) => !Number.isInteger(a) || a < 0 || a > 17)) throw new Error("Invalid child ages");
   if (adults + children.length > 6) throw new Error("Party too large");
   if (typeof match !== "string" || !match.trim() || match.length > 60) throw new Error("Each search needs a short title match");
-  return Object.freeze({ label, keyword, location_coordinate, check_in, check_out, nights: n, adults, children: Object.freeze([...children]), match });
+  return Object.freeze({ label, keyword, ...(location_code !== undefined ? { location_code } : { location_coordinate }), check_in, check_out, nights: n, adults, children: Object.freeze([...children]), match });
 }
 
 // Validates a committed request file. Budget fields come from code and the receipt ledger, never the request.
@@ -69,12 +73,14 @@ export function validateRequest(request, { today, priorSpend }) {
 }
 
 const num = (v) => (typeof v === "number" && Number.isFinite(v) && v >= 0 ? v : null);
+// The provider returns price 0 when a listing shows no price for the dates; 0 is unknown, never free.
+const amount = (v) => (typeof v === "number" && Number.isFinite(v) && v > 0 ? v : null);
 const str = (v, max = 80) => (typeof v === "string" && v.trim() ? v.trim().slice(0, max) : null);
 export function hotelRows(json) {
   const result = json?.tasks?.[0]?.result?.[0] || {};
   const rows = (Array.isArray(result.items) ? result.items : []).filter((i) => i?.type === "hotel_search_item").slice(0, 18).map((i) => {
     const p = i.prices || {};
-    return { title: str(i.title, 120), stars: num(i.stars), is_paid: i.is_paid === true, price: num(p.price), price_without_discount: num(p.price_without_discount),
+    return { title: str(i.title, 120), stars: num(i.stars), is_paid: i.is_paid === true, price: amount(p.price), price_without_discount: amount(p.price_without_discount),
       currency: str(p.currency, 3), discount_text: str(p.discount_text), visitors: num(p.visitors), check_in: str(p.check_in, 30), check_out: str(p.check_out, 30) };
   });
   return { checked_at: str(result.datetime, 40), rows };
@@ -93,7 +99,7 @@ export async function runRequest(req, output, { auth, fetcher = fetch, now = () 
     }
     const entry = { endpoint: ENDPOINT, label: s.label, status: "outcome-unknown", cost_usd: null };
     report.calls.push(entry); await save();
-    const payload = { keyword: s.keyword, location_coordinate: s.location_coordinate, language_code: "en", check_in: s.check_in, check_out: s.check_out,
+    const payload = { keyword: s.keyword, ...(s.location_code !== undefined ? { location_code: s.location_code } : { location_coordinate: s.location_coordinate }), language_code: "en", check_in: s.check_in, check_out: s.check_out,
       currency: "USD", adults: s.adults, children: [...s.children], depth: 18, sort_by: "relevance", tag: s.label };
     try {
       const response = await fetcher(`https://api.dataforseo.com/v3/${ENDPOINT}`, { method: "POST", headers: { Authorization: `Basic ${auth}`, "Content-Type": "application/json" }, body: JSON.stringify([payload]), signal: AbortSignal.timeout(90000) });
@@ -109,7 +115,7 @@ export async function runRequest(req, output, { auth, fetcher = fetch, now = () 
       const { checked_at, rows } = hotelRows(json);
       const m = s.match.toLowerCase();
       report.searches.push({ label: s.label, party: { adults: s.adults, child_ages: [...s.children] }, check_in: s.check_in, check_out: s.check_out, nights: s.nights, keyword: s.keyword,
-        location_coordinate: s.location_coordinate, currency_requested: "USD", checked_at, match: s.match, matched: rows.filter((r) => r.title?.toLowerCase().includes(m)), results: rows });
+        location: s.location_code !== undefined ? { location_code: s.location_code } : { location_coordinate: s.location_coordinate }, currency_requested: "USD", checked_at, match: s.match, matched: rows.filter((r) => r.title?.toLowerCase().includes(m)), results: rows });
       const last = report.searches.at(-1); last.matched_count = last.matched.length;
       await save();
     } catch { await save(); throw new Error(`Stopped ${s.label}: see public-safe call status; no automatic paid retry`); }

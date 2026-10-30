@@ -68,9 +68,24 @@ test("provider failure stops without retry and the ledger reserves the unknown c
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
 
-test("rows treat missing or negative prices as unknown, never zero", () => {
-  const { rows } = hotelRows({ tasks: [{ result: [{ items: [{ type: "hotel_search_item", title: "X", prices: { price: -1 } }, { type: "hotel_search_item", title: "Y" }] }] }] });
-  assert.equal(rows[0].price, null); assert.equal(rows[1].price, null);
+test("rows treat missing, zero or negative prices as unknown, never free", () => {
+  const { rows } = hotelRows({ tasks: [{ result: [{ items: [{ type: "hotel_search_item", title: "X", prices: { price: -1 } }, { type: "hotel_search_item", title: "Y" }, { type: "hotel_search_item", title: "Z", prices: { price: 0, price_without_discount: 0 } }] }] }] });
+  assert.equal(rows[0].price, null); assert.equal(rows[1].price, null); assert.equal(rows[2].price, null); assert.equal(rows[2].price_without_discount, null);
+});
+
+test("location: exactly one of a geo code or a coordinate, sent as given", async () => {
+  const { location_coordinate, ...noCoord } = base;
+  assert.throws(() => validateRequest({ ...request, hotel_searches: [noCoord] }, { today, priorSpend: 0 }), /exactly one/);
+  assert.throws(() => validateRequest({ ...request, hotel_searches: [{ ...base, location_code: 2044 }] }, { today, priorSpend: 0 }), /exactly one/);
+  assert.throws(() => validateRequest({ ...request, hotel_searches: [{ ...noCoord, location_code: "2044" }] }, { today, priorSpend: 0 }), /location code/);
+  const req = validateRequest({ ...request, hotel_searches: [{ ...noCoord, location_code: 2044 }] }, { today, priorSpend: 0 });
+  const dir = await mkdtemp(join(tmpdir(), "tripwise-hotel-loc-"));
+  try {
+    let body;
+    const r = await runRequest(req, join(dir, "r.json"), { auth: "t", fetcher: async (_u, init) => { body = JSON.parse(init.body)[0]; return ok([])(); } });
+    assert.equal(body.location_code, 2044); assert.equal("location_coordinate" in body, false);
+    assert.deepEqual(r.searches[0].location, { location_code: 2044 });
+  } finally { await rm(dir, { recursive: true, force: true }); }
 });
 
 test("committed hotel price requests validate (prior spend at the floor)", async () => {
