@@ -31,7 +31,7 @@ test("homepage primary directory distinguishes eleven destinations and links all
   assert.ok(directory.includes("where-to-stay/cancun-family-resorts.html"));
   assert.ok(directory.includes("where-to-stay/puerto-vallarta-family-resorts.html"));
   assert.match(home, /Orlando has activity and lodging comparisons/);
-  assert.match(home, /Cancun, Washington DC, Boston and Puerto Vallarta currently focus on family lodging comparisons/);
+  assert.match(home, /Washington DC and Boston have family hotel comparisons and itineraries\. Cancun and Puerto Vallarta focus on family resort comparisons/);
   assert.ok(directory.includes("things-to-do/orlando-with-kids.html"));
   assert.doesNotMatch(home, /Five active destination clusters/);
 });
