@@ -568,7 +568,7 @@
         "Partner hotels conflict: the package page lists Hopper tickets, early access and breakfast at select partner hotels, while the kids' tickets offer page says the hotel offer is not valid for partner hotels.",
         "No blockout dates are listed; LEGOLAND says dates are subject to availability and blockout dates may be added at any time.",
         "No minimum stay is stated, and the early park access start time is not given.",
-        "The basis of the from-USD 39 per day kids' ticket price inside the package (ticket type, party, number of days) is not stated.",
+        "The basis of the from-USD 39-a-day kids' price inside the package (ticket type, party, number of days) is not stated.",
         "A separate ticket-only kids' offer (from USD 39 with an adult Hopper ticket) ends November 1, 2026; this check covers only the hotel package."
       ],
       "before_booking": [
@@ -613,7 +613,7 @@
         },
         "big_number": "$39",
         "big_label": "a day per kid's park ticket when you stay at a LEGOLAND hotel (starting price)",
-        "headline": "LEGOLAND California: kids' park tickets from $39 a day when you book a LEGOLAND hotel stay by November 17",
+        "headline": "LEGOLAND California hotel stay: kids' park tickets from $39 a day (book by November 17)",
         "chips": [
           "From $169 a person a night",
           "Stays to January 9, 2027",
@@ -623,7 +623,7 @@
         "best_for": "Families with kids 2 to 12 and firm dates for a LEGOLAND California trip before January 9, 2027 who want to stay at the park.",
         "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a cheaper hotel off site.",
         "cost": "Trip cost: we have no checked price for a family of 4 on named dates. LEGOLAND's starting price above is for exactly 2 adults and 2 kids for 1 night; price your dates on legoland.com, then add tax, parking and flights from your airport (for example New York City to San Diego, which we have not priced).",
-        "saves": "Saves: kids' park tickets from $39 a day inside the package. LEGOLAND's regular 1-day ticket starts at $69 per person online ($139 at the gate), but that is a different ticket and LEGOLAND does not say what the $39 covers, so treat it as a rough guide, not a fixed saving.",
+        "saves": "Saves: kids' park tickets from $39 a day in the package (regular 1-day tickets from $69 online), but the tickets differ, so treat it as a guide, not a fixed saving.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
         "get": [
           "One booking covers the hotel night, Park Hopper tickets for LEGOLAND and the SEA LIFE Aquarium, a hot buffet breakfast each day and early park access.",
@@ -632,8 +632,8 @@
           "Multi-day park visits must be used within 3 days of the first visit."
         ],
         "compare": [
+          "Worth it if you would stay at the park anyway and your dates are fixed; otherwise price your dates at a LEGOLAND hotel with the package against separate tickets plus the hotel you would otherwise use.",
           "LEGOLAND's own help page lists 1-day tickets from $69 per person online and $139 at the gate (no date shown). The package ticket is a Park Hopper and the $39 basis is not stated, so the two are not like for like.",
-          "To check the saving yourself, price your dates at a LEGOLAND hotel with the package, then price separate tickets plus the hotel you would otherwise use.",
           "The package page does not say how many ticket days come with each night, so price the same dates with and without the hotel before you pay."
         ],
         "catch": [
