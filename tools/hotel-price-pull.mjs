@@ -23,6 +23,8 @@ const LIMITATIONS = Object.freeze([
   "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
   "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
   "Null prices are unknown, not free; a listing can change within minutes",
+  "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+  "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
   "No paid automatic retries; unknown outcomes require reconciliation",
 ]);
 
@@ -108,6 +110,7 @@ export async function runRequest(req, output, { auth, fetcher = fetch, now = () 
       const m = s.match.toLowerCase();
       report.searches.push({ label: s.label, party: { adults: s.adults, child_ages: [...s.children] }, check_in: s.check_in, check_out: s.check_out, nights: s.nights, keyword: s.keyword,
         location_coordinate: s.location_coordinate, currency_requested: "USD", checked_at, match: s.match, matched: rows.filter((r) => r.title?.toLowerCase().includes(m)), results: rows });
+      const last = report.searches.at(-1); last.matched_count = last.matched.length;
       await save();
     } catch { await save(); throw new Error(`Stopped ${s.label}: see public-safe call status; no automatic paid retry`); }
   }

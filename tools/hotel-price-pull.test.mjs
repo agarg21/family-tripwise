@@ -41,7 +41,8 @@ test("receipt keeps dated rows, matched hotels, cost and the stated limitations"
     const report = await runRequest(req, out, { auth: "test-only", fetcher: async (_u, init) => { body = JSON.parse(init.body)[0]; return ok([item("Atlantis The Coral", 512), item("Atlantis The Royal", 640), { type: "ad" }])(); } });
     assert.deepEqual(body.children, [5, 8]); assert.equal(body.currency, "USD"); assert.equal(body.depth, 18);
     assert.equal(report.searches.length, 2);
-    assert.equal(report.searches[0].matched.length, 1); assert.equal(report.searches[0].matched[0].price, 512);
+    assert.equal(report.searches[0].matched.length, 1); assert.equal(report.searches[0].matched_count, 1);
+    assert.ok(report.limitations.some((l) => /not verified savings/.test(l))); assert.equal(report.searches[0].matched[0].price, 512);
     assert.equal(report.searches[0].results.length, 2);
     assert.deepEqual(report.searches[0].party, { adults: 2, child_ages: [5, 8] });
     assert.ok(report.limitations.some((l) => /per night or for the whole stay/.test(l)));
