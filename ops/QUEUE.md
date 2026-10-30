@@ -25,7 +25,7 @@ LEGOLAND v2 delivered 1a5bc8d (persona 4.08; P3s: terms caption omits comparison
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Research done 2026-10-29: docs/research/trip-cost-sources-2026-10-29.md (flights: SerpApi Google Flights; hotels: DataForSEO Google Hotels; cruises/parks: official fares). Build a price-request workflow (secrets only in Actions, dated receipts) and the "about $X normally, about $Y with the deal" line (estimate; party, ages, dates, NYC gateway, observed date). Check the unknowns listed there first.
+Research 2026-10-29: docs/research/trip-cost-sources-2026-10-29.md. Step 1 done 2026-10-30 (b2d9772..935cea8): tools/hotel-price-pull.mjs; a request file with `hotel_searches` in ops/research-requests/ runs on push via the DataForSEO workflow (USD 0.004/search observed; same ledger/caps). First two Atlantis requests gave no usable price (coordinate → Eleuthera, price 0; code 2044 → one umbrella "Atlantis Paradise Island Bahamas" row, no price): docs/research/trip-cost-observations-2026-10-30.md. Next: 2) a request for a property Google prices on its own (Great Wolf/LEGOLAND hotel), family party, 1n+3n pair to settle per-night vs stay, plus one 2-adult Atlantis diagnostic (never published as a family price); 3) the "about $X" estimate line on deal pages from receipts (party, ages, dates, NYC gateway, observed date). Carry P3s: an uncollected request whose check-in has passed fails each later workflow run (remove it); overspend caught only after billing (bounded to one call); receipt -2026-10-30 still stores 0 prices (read as unknown).
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
