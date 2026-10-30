@@ -481,6 +481,7 @@
         "alt": "Children riding sea-creature figures on a colourful ocean-themed carousel at SeaWorld Orlando, with parents waiting alongside",
         "caption": "Kids on the Sea Carousel at SeaWorld Orlando (an older photo published by SeaWorld, not taken by Family Tripwise; rides may have changed)."
       },
+      "verdict_pill": "Only for 3+ visits",
       "og_image": "images/og/deals/seaworld-orlando-2027-fun-card.png"
       }
     },
@@ -1473,7 +1474,7 @@
             "includes": "Four one-day tickets for each visit, bought online for the cheapest dates; no parking.",
             "parts": [
               {
-                "what": "One-Day Ticket bought online, $31.99 a person aged 2+ (4 people × 4 visits)",
+                "what": "One-Day Ticket bought online, from $31.99 a person aged 2+ (4 people × 4 visits)",
                 "unit_amount": 31.99,
                 "qty": 16,
                 "from": "terms",

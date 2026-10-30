@@ -357,7 +357,7 @@ export function spendSave(check, today = easternDate()) {
   const checkedOn = [...new Set(SPEND_SIDES.flatMap((x) => sides[x].parts.map((p) => p.source.observed_on)))].sort();
   const sample = SPEND_SIDES.some((x) => ss[x].parts.some((p) => p.from === "price_sample")) ? v.price_sample : null;
   const checkedText = checkedOn.length > 1 && checkedOn[0].slice(0, 7) === checkedOn.at(-1).slice(0, 7) ? `${longDate(checkedOn[0]).replace(/, \d{4}$/, "")} to ${Number(checkedOn.at(-1).slice(8))}, ${checkedOn[0].slice(0, 4)}` : checkedOn.map(longDate).join(" and ");
-  const basis = `${sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to)}; ` : ""}prices checked ${checkedText}. ${ss.basis}`;
+  const basis = `${sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to)}; prices` : "Prices"} checked ${checkedText}. ${ss.basis}`;
   const base = { party: ss.party, unit: ss.unit, note: ss.note, verdict_line: ss.verdict_line, sides, basis, sample_month: sample ? MONTHS[Number(sample.stay_from.slice(5, 7)) - 1] : null };
   if (isEnded(check, today)) return { ...base, ok: false, missing: "The deal has ended, so we no longer compare its price." };
   const stale = SPEND_SIDES.filter((side) => sides[side].stale);
@@ -608,6 +608,9 @@ export function dealsHubPage(checks, today = easternDate()) {
   const list = current.length
     ? `<div class="detail-card-grid">\n${current.map((c) => hubCard(c, today)).join("\n")}\n        </div>`
     : `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`;
+  // Top of the hub (Content Standard glance test): the deals with the largest priced saving, from validated spend_save cards.
+  const savers = current.map((c) => [c, spendSave(c, today)]).filter(([, r]) => r?.ok && r.save > 0).sort((a, b) => b[1].save - a[1].save).slice(0, 3)
+    .map(([c, r]) => `<li><a href="./${e(c.id)}.html">${e(c.operator)}</a>: save ≈ ${e(usd(r.save))} (${r.save_pct}%) over ${e(r.unit)}</li>`).join("");
   const closing = current.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(${shortDeadline(c)})</span></li>`).join("");
   const body = `    <main id="main">
       <section class="page-hero">
@@ -618,8 +621,11 @@ export function dealsHubPage(checks, today = easternDate()) {
           <p>What each offer really means for a family: which ages count, room or cabin occupancy, blackout dates, minimum stays and the fees the headline leaves out.</p>
         </div>
       </section>
-${trustPanel}
-      <section id="deals-answer" class="container answer-box" aria-label="Closing soonest">
+${savers ? `      <section class="container answer-box deals-savers" aria-label="Biggest savings we could price">
+        <p><strong>Biggest savings we could price</strong> (estimates for a family of 4, before tax, fees and parking):</p>
+        <ul class="fresh-upcoming">${savers}</ul>
+      </section>
+` : ""}      <section id="deals-answer" class="container answer-box" aria-label="Closing soonest">
         <p><strong>Closing soonest:</strong></p>
         <ul class="fresh-upcoming">${closing || "<li>No verified family deals are open right now.</li>"}</ul>
       </section>
@@ -628,6 +634,7 @@ ${trustPanel}
         ${list}
         <p class="fresh-guide-link">Offers leave this list after their booking deadline. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
       </section>
+${trustPanel}
     </main>`;
   return placeSitePageHero(page({
     title: "Family Travel Deals Checked for a Family of 4 | Family Tripwise",
