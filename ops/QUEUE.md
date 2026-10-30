@@ -13,8 +13,8 @@ Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet bas
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
-One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead, never a fact. If the push conflicts in flags.json (the hourly watcher updated it), merge (never rebase) and keep the watcher's other flags.
-Carry P3s: chained skipped runs; countdown noise flags; robots paths not percent-normalised.
+One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
+Carry P3s: Margaritaville tax line ambiguous; Oct 31 post "USD 0", FB >350 chars; chained skipped runs; countdown noise flags; robots paths not percent-normalised.
 
 ## G11 Deal content v2 + persona review (posting paused, D12)
 open · M · owner: D11/D15 Approved; rollout needs O7 · gate: none

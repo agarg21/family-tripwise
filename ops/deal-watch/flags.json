@@ -20,24 +20,6 @@
       ],
       "added_count": 3,
       "removed_count": 1
-    },
-    {
-      "source_id": "margaritaville-at-sea-black-friday",
-      "operator": "Margaritaville at Sea",
-      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
-      "check_id": "margaritaville-at-sea-black-friday-early-access",
-      "kind": "changed",
-      "detected_at": "2026-10-30T10:12:47.377Z",
-      "previous_headline": "Black Friday Early Access",
-      "headline": "Black Friday Early Access",
-      "added": [
-        "Get ahead of Black Friday with cruises from $49/night, FREE guests, and up to 55% off cruise extras."
-      ],
-      "removed": [
-        "Midnight ends your Early Access advantage. Book 65% off ALL cruises, FREE guests, and up to 55% off cruise extras."
-      ],
-      "added_count": 1,
-      "removed_count": 1
     }
   ]
 }

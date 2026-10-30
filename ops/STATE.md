@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-30 transactions=5
-run: {id: 2026-10-30T11:05:08Z, started_at: 2026-10-30T11:05:08Z}
+today: 2026-10-30 transactions=6
+run: none
 last_public_release: 5f6962a (2026-10-30 ET, new deal check: Busch Gardens Tampa Bay 2027 Fun Card, v2); last main code change 5f6962a (v2.verdict_pill)
 active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE G11)
 
@@ -37,6 +37,6 @@ active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 11:05Z G09w Margaritaville flag decided (no site change): official page re-read; Midnight banner replaced by "from $49/night" (no basis, not used); 65% off, free 3rd/4th guests, $50 deposit, book by Nov 3 unchanged; live page and Oct 31 post stand; flag cleared. Integrity PASS_WITH_P3. Royal Caribbean flag ($800 Deal Drop Sale) next.
 - 2026-10-30 10:05Z G05/G11 delivered 5f6962a (release.json + 3 pages, photo and og card verified live): new deal check for the Busch Gardens Tampa Bay 2027 Fun Card ($129.99 a person, unlimited through 2027, Adventure Island at no extra cost; pays off from day 3 vs its $106 Two-Day and $135 Three-Day tickets), v2 from the start; new validated v2.verdict_pill ("Only for 3+ park days"). Integrity FAIL (P2 record gap) → PASS_WITH_P3; persona 3.87 → 4.20. Deal-watch raised 2 flags (Royal Caribbean, Margaritaville) at 10:12Z: next run (G09w).
 - 2026-10-30 09:05Z G12 step 2 research decided (b302ed8 request, c8ef869 receipt, USD 0.028; no site change): Google Hotels price reads as per night; LEGOLAND Castle Hotel ~USD 378-423/night for 2+2 (Dec 4-7, taxes unknown, volatile); LEGOLAND Hotel, Great Wolf Poconos and Atlantis unpriced. Integrity FAIL (P2 match string) → PASS_WITH_P3. Next G12: ® match fix + LEGOLAND estimate line.
-- 2026-10-30 08:05Z G12 step 1 delivered (b2d9772..935cea8; no site change): DataForSEO Google Hotels price requests for a named family party (tools/hotel-price-pull.mjs, workflow routing, ledger). Two Atlantis requests ran (USD 0.020): no usable price yet (Eleuthera listings; then one umbrella Atlantis row without price). Integrity PASS_WITH_P3 x3. Next G12: a property Google prices on its own.
