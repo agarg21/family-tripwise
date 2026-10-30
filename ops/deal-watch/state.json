@@ -335,7 +335,7 @@
       "status": "error",
       "reason": "too many redirects",
       "since": "2026-10-29T19:00:01.838Z",
-      "errors": 2
+      "errors": 3
     },
     "universal-orlando-ticket-offers": {
       "url": "https://www.universalorlando.com/web/en/US/tickets-packages/offers/ticketoffer",

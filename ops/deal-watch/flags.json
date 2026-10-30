@@ -1,4 +1,14 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "disney-cruise-special-offers",
+      "operator": "Disney Cruise Line",
+      "url": "https://disneycruise.disney.go.com/special-offers/",
+      "check_id": null,
+      "kind": "unreachable",
+      "detected_at": "2026-10-30T02:43:15.471Z",
+      "reason": "too many redirects"
+    }
+  ]
 }
