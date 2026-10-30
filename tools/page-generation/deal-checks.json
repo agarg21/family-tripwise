@@ -1403,8 +1403,8 @@
       "og_card": "LEGOLAND New York 2027 season passes from $99 a person (ages 2+, regular $119), with the rest of 2026 included; about 60 miles from NYC",
       "operator": "LEGOLAND New York Resort",
       "category": "Theme park pass",
-      "title": "LEGOLAND New York 2027 Season Pass: unlimited visits for the rest of 2026 and all of 2027, from $99 a person",
-      "headline": "LEGOLAND New York's 2027 season passes are on sale from USD 99 a person (ages 2+, regular USD 119) and include visits for the rest of 2026, but the cheapest Standard pass has 52 blockout dates and no parking, and no sale end date is stated.",
+      "title": "LEGOLAND New York 2027 Season Pass: visits for the rest of 2026 and all of 2027, from $99 a person",
+      "headline": "LEGOLAND New York's 2027 season passes are on sale from USD 99 a person (ages 2+, regular USD 119) and include visits for the rest of 2026, but the cheapest Standard pass has 52 blockout dates and no free parking, and no sale end date is stated.",
       "family_of_four": "Passes are per person: LEGOLAND New York says guests aged 2 and up need their own pass. A family of 2 adults and 2 kids aged 2 or older needs four passes. Standard is USD 99 each (regular USD 119) with 52 blockout dates and no free parking; Preferred is USD 129 each (regular USD 169) with no blockout dates and free standard parking. The pass page does not mention taxes or fees. No family total for named dates was observed.",
       "terms": [
         ["Headline", "\"Buy a 2027 Pass, Get the Rest of 2026 FREE as Low as $99!\""],
@@ -1414,9 +1414,9 @@
         ["Child ages", "\"Guests ages 2+ require their own Pass.\" The pass page does not say how children under 2 are admitted."],
         ["Parking", "Standard: no free parking listed. Preferred and Premium: free standard parking at LEGOLAND New York, bought online in advance; 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
         ["Pass benefits", "Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, about 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, about 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
-        ["Pass rules", "Passes are non-refundable, non-transferable and issued to one person; digital pass scanned at entry."],
+        ["Pass rules", "Passes are non-refundable, non-transferable and issued to one person; passholders get a digital pass that is scanned at entry and can be added to the LEGOLAND app wallet."],
         ["Prices on LEGOLAND New York's tickets page, for comparison", "Read October 30, 2026: one-day tickets online starting from USD 49 a person; front gate USD 99 a person. Age pricing not shown."],
-        ["Park season", "LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2. Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
+        ["Park season", "LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2 (2027 by our reading: the park closes for the season January 3, 2027). Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
       ],
       "unclear": [
         "No sale end date is stated, so the sale price could end at any time.",
@@ -1458,7 +1458,7 @@
       },
       "v2": {
         "page_title": "LEGOLAND New York 2027 Season Pass: Rest of 2026 Included, From $99 a Person",
-        "context": "LEGOLAND New York Resort, in Goshen, New York, about 60 miles northwest of New York City: a LEGO theme park for kids aged 2 to 12, with 7 themed lands and a LEGOLAND Hotel",
+        "context": "LEGOLAND New York, in Goshen, NY, about 60 miles from New York City: a LEGO theme park and hotel for kids aged 2 to 12",
         "context_source": {
           "label": "LEGOLAND New York Resort home page",
           "url": "https://www.legoland.com/new-york/",
@@ -1466,38 +1466,38 @@
           "covers": "what LEGOLAND New York is, its ages, lands and location"
         },
         "big_number": "$99",
-        "big_label": "a person aged 2+ (regular $119): visits for the rest of 2026 and all of 2027 on the Standard pass",
+        "big_label": "a person, ages 2+ (regular $119): rest of 2026 and all of 2027 on the Standard pass",
         "headline": "LEGOLAND New York: a 2027 season pass from $99 a person, with the rest of 2026 included",
         "chips": [
           "Pays off from visit 3",
           "60 miles from NYC",
           "Standard: 52 blockout dates",
-          "No end date stated"
+          "Preferred $129 adds parking"
         ],
         "best_for": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12 who will go three or more times. Driving most visits or going on busy days? Preferred ($129) adds free standard parking and has no blockout dates.",
-        "not_for": "One or two visits: LEGOLAND New York sells one-day tickets online from $49 a person, so two visits on the cheapest dates cost about the same as a pass.",
+        "not_for": "One or two visits: LEGOLAND New York sells one-day tickets online from $49 a person on the cheapest dates, so two visits can cost about the same as a pass.",
         "cost": "Trip cost: we have no checked price for a family of 4; plan on one pass for everyone aged 2 and up, plus parking on the Standard pass (price not shown) and your drive from New York City (about 60 miles).",
-        "saves": "Saves: the Standard pass is $99 a person, down from $119; Preferred is $129, down from $169.",
+        "saves": "Saves: from your 3rd visit, one $99 Standard pass costs less than three online day tickets (from $49 each on the cheapest dates); the pass is down from $119.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (everyone aged 2 and up needs one).",
         "get": [
           "Visits at LEGOLAND New York from the day you buy through January 2, 2028, on the days the park is open; it closes for the season on January 3, 2027.",
-          "The rest of 2026 includes Holiday Bricktacular (November 27 to January 2), with holiday LEGO builds, a dance party and family ice skating.",
+          "The rest of 2026 includes Holiday Bricktacular (November 27, 2026 to January 2, 2027), with holiday LEGO builds, a dance party and family skating on a synthetic (Glice) rink.",
           "Standard ($99) has 52 blockout dates; Preferred ($129) has none listed and adds free standard parking; Premium ($219) adds 4 Bring-A-Friend tickets and PEPPA PIG Theme Parks."
         ],
         "compare": [
-          "Buy it if you will go three or more times before 2028; for one or two visits, online day tickets (from $49) cost the same or less.",
+          "Buy it if you will go three or more times before 2028 (our estimate, using the lowest online day-ticket price); for one or two visits, online day tickets (from $49 on the cheapest dates) can cost the same or less.",
           "The front gate price for one day is $99 a person, the same as a Standard pass.",
           "If you drive, Preferred ($129) includes free standard parking, which Standard does not."
         ],
         "catch": [
-          "The Standard pass has 52 blockout dates and no free parking, and the pass page shows neither the dates nor the parking price.",
+          "The Standard pass has 52 blockout dates and no free parking, and the pass page shows neither the dates nor the parking price: check both before you buy, and if you will drive most visits, compare Preferred ($129).",
           "From now to December the park opens on weekends and select weekdays only, and four rides close from November 2.",
           "No sale end date is stated, and passes cannot be refunded or shared."
         ],
         "how": [
           "Buy online on LEGOLAND New York's Season Passes page; no sale end date is stated.",
           "Pick Standard ($99) if your dates are not blocked, or Preferred ($129) for free standard parking and no blockout dates.",
-          "Buy one pass for each family member aged 2 and up, then add the passes to the LEGOLAND app for entry."
+          "Buy one pass for each family member aged 2 and up; you can add the digital passes to the LEGOLAND app wallet, and they are scanned at entry."
         ],
         "extra_sources": [
           {
@@ -1521,8 +1521,7 @@
         ],
         "things_to_do": {
           "items": [
-            "Holiday Bricktacular runs November 27, 2026 to January 2, with holiday LEGO builds, a holiday dance party and family ice skating.",
-            "Brick-or-Treat runs to November 1, 2026, with a Halloween dance party, crafts, LEGO building and a scavenger hunt.",
+            "Holiday Bricktacular runs November 27, 2026 to January 2, 2027, with holiday LEGO builds, a holiday dance party and family skating on a synthetic (Glice) rink.",
             "In 2027, Red, White & BOOM! on July 4 adds fireworks seen through 3D glasses, and a new LEGO Festival is listed as coming.",
             "The resort lists more than 50 rides, attractions and seasonal events, and the LEGOLAND Hotel is steps from the park entrance."
           ],
@@ -1546,8 +1545,8 @@
         "post": {
           "title": "LEGOLAND New York 2027 season pass from $99, rest of 2026 included",
           "hook": "LEGO fans near NYC: LEGOLAND New York (Goshen, NY) 2027 passes from $99 a person, rest of 2026 included.",
-          "verdict": "Only for 3+ visits; for 1-2 visits, $49 online day tickets cost about the same.",
-          "catch": "The catch: Standard has 52 blockout dates and no parking; everyone 2+ needs a pass."
+          "verdict": "Only for 3+ visits; for 1-2 visits, online day tickets from $49 can cost about the same.",
+          "catch": "The catch: Standard has 52 blockout dates and no free parking; everyone 2+ needs a pass."
         },
         "hero_image": {
           "slug": "legoland-new-york",
