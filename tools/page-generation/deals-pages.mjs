@@ -580,7 +580,8 @@ const trustPanel = `      <section class="container trust-panel" aria-label="How
       </section>`;
 
 // The /deals/ card shows the spend-vs-save line when it can be built (hub pages re-render daily).
-const hubSpend = (check, today) => { const r = spendSave(check, today); return r?.ok ? `${r.line} (estimate, ${r.party}, ${r.unit}).` : null; };
+// A small positive saving (under 5%) also says plainly on the hub that the deal is not really cheaper.
+const hubSpend = (check, today) => { const r = spendSave(check, today); return r?.ok ? `${r.line}${r.save > 0 && r.save_pct < 5 ? ": not really cheaper" : ""} (estimate, ${r.party}, ${r.unit}).` : null; };
 
 function hubCard(check, today = easternDate()) {
   if (check.v2) {

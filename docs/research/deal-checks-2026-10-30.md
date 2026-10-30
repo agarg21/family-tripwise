@@ -150,8 +150,9 @@ Built only from figures already in this record and the Oct 28 SeaWorld record; e
 No child prices are published for LEGOLAND New York or SeaWorld day tickets or passes, so every person is priced the same on both sides.
 
 ## v3 spend-vs-save card for the Busch Gardens Tampa Bay Fun Card (2026-10-30 22:04Z run; no source refetched)
-Built only from figures already in this record (Busch Gardens rows above, read Oct 30); estimate; tax, service fees and parking not counted on either side. "Without" uses Busch Gardens' own cheapest published way to get 3 days (the Three-Day, Three Park ticket), not three single-day tickets, so the saving is not overstated.
+Built only from figures already in this record (Busch Gardens rows above, read Oct 30); estimate; park tickets only, tax, service fees, parking and travel not counted on either side. "Without" uses Busch Gardens' own cheapest published products (the Three-Day, Three Park ticket, then one cheapest online day ticket), not single-day tickets for every day, so the saving is not overstated.
 | Deal | Party | Without the deal | With the deal | Save |
 |---|---|---|---|---|
-| Busch Gardens Tampa Bay Fun Card | 2 adults + 2 kids 4 and 8, 3 park days on one trip | Three-Day, Three Park $135 × 4 = $540 (tickets page, read Oct 30) | Busch Gardens + Adventure Island Fun Card $129.99 × 4 = $520 (Fun Card page, read Oct 30) | ≈ $20 (4%): not really cheaper for one 3-day trip |
-Verdict pill moved from "Only for 3+ park days" to "Only for 4+ park days": a 4th day costs at least one more $61.99 day ticket per person without the card. Neither page states a child price; the Three-Day ticket's usage window is not in our record.
+| Busch Gardens Tampa Bay Fun Card, 4 park days (card) | 2 adults + 2 kids 4 and 8 | Three-Day, Three Park $135 × 4 = $540 + Single-Day from $61.99 × 4 = $248 → $788 (tickets page, read Oct 30) | Busch Gardens + Adventure Island Fun Card $129.99 × 4 = $520 (Fun Card page, read Oct 30) | ≈ $268 (34%) |
+| Same, one 3-day trip (verdict line) | same | $135 × 4 = $540 | $520 | ≈ $20 (4%): not really cheaper |
+Verdict pill moved from "Only for 3+ park days" to "Only for 4+ park days". Neither page states a child price; the Three-Day ticket's park mix and usage window are not in our record (said on the page). The hub now adds "not really cheaper" to any card saving under 5% (code change, deals-pages.mjs). Og card regenerated.

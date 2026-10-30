@@ -434,6 +434,19 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
   assert.match(dealsHubPage(checks, "2026-11-10"), /Without the deal ≈ \$659 · With the deal ≈ \$676/);
 });
 
+test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not really cheaper", () => {
+  const b = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
+  const ss = b.v2.spend_save;
+  // One 3-day trip: 4 x $135 Three-Day, Three Park tickets against 4 x $129.99 Fun Cards saves about $20 (4%).
+  const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "For one 3-day trip the Fun Card is not really cheaper than the $135 Three-Day, Three Park ticket.", without: { ...ss.without, parts: ss.without.parts.slice(0, 1) } } } };
+  const r = spendSave(small, "2026-11-10");
+  assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 540, 520, 20, 4]);
+  assert.match(dealsHubPage([small], "2026-11-10"), /You save ≈ \$20 \(4%\): not really cheaper \(estimate/);
+  const full = spendSave(b, "2026-11-10");
+  assert.deepEqual([full.without, full.with, full.save, full.save_pct], [788, 520, 268, 34]);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /not really cheaper \(estimate/);
+});
+
 test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
   const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
   const late = { ...l, expires_on: "2026-12-20" };
