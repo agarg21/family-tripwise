@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-30 transactions=8
-run: {id: 2026-10-30T14:07:06Z, started_at: 2026-10-30T14:07:06Z}
+run: none
 last_public_release: 35a5b7f (2026-10-30 ET, LEGOLAND deal page: labelled Castle Hotel price estimate, G12 step 3); last main code change 35a5b7f (v2.price_sample, hotel matchKey)
-active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE G11)
+active: G11 LEGOLAND Florida deal check on q/G11-legofl (c6e543b): next run merges origin/main, re-renders, re-tests, one integrity + persona re-review of the "From" chip fix, then releases (Atlantis still parked on q/G11 f2d3b21 until O10)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -37,6 +37,6 @@ active: none (G11 Atlantis v2 parked on q/G11 f2d3b21 until OWNER O10; see QUEUE
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 14:07Z G11/G05 LEGOLAND Florida hotel + ticket package check built on q/G11-legofl (c6e543b), held: 3 review cycles used. Integrity FAIL (P2 facts not in evidence table) → PASS_WITH_P3 → FAIL (P2 chip dropped "From"; fixed in c6e543b, not re-reviewed). Persona 3.80 → 3.93 → 3.93 (4.00 with "From" restored, fixed).
 - 2026-10-30 13:07Z G12 step 3 delivered 35a5b7f (release.json + LEGOLAND deal page verified live): glance now shows "about $383 a night at the LEGOLAND Castle Hotel for 2 adults and 2 kids aged 5 and 8, 3 nights, Dec 4-7" (Google Hotels via DataForSEO, Oct 30; taxes/inclusions not shown; estimate, not a quote; drops at stay start). Integrity FAIL (P2 'before tax' unsupported) → PASS_WITH_P3; persona 4.00 → 4.00.
 - 2026-10-30 12:06Z G09w Royal Caribbean flag decided (no site change): not re-fetched (read Oct 28; weekly limit, next Nov 4); watcher extract shows Kids Sail Free and Free 3rd/4th lines unchanged, only a separate "$750"→"$800 Savings"/"Deal Drop Sale" promotion changed; flag cleared. Integrity PASS_WITH_P3 (wording fixed). No pending flags.
-- 2026-10-30 11:05Z G09w Margaritaville flag decided (no site change): official page re-read; Midnight banner replaced by "from $49/night" (no basis, not used); 65% off, free 3rd/4th guests, $50 deposit, book by Nov 3 unchanged; live page and Oct 31 post stand; flag cleared. Integrity PASS_WITH_P3. Royal Caribbean flag ($800 Deal Drop Sale) next.
