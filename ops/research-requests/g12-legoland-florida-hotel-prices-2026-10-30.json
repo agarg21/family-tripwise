@@ -1,0 +1,12 @@
+{
+  "action": "G12",
+  "purpose": "Step 4: LEGOLAND Florida deal spend-vs-save card (G11 v3): Google Hotels listing prices for the three on-site LEGOLAND Florida hotels for 2 adults + kids 5 and 8, as 1-night + 3-night pairs with the same check-in (December 4, 2026), to build the 'without the deal' hotel night.",
+  "hotel_searches": [
+    { "label": "legoland-fl-hotel-1n", "keyword": "LEGOLAND Hotel Winter Haven Florida", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-05", "adults": 2, "children": [5, 8], "match": "LEGOLAND Hotel" },
+    { "label": "legoland-fl-hotel-3n", "keyword": "LEGOLAND Hotel Winter Haven Florida", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-07", "adults": 2, "children": [5, 8], "match": "LEGOLAND Hotel" },
+    { "label": "legoland-fl-pirate-1n", "keyword": "LEGOLAND Pirate Island Hotel Winter Haven Florida", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-05", "adults": 2, "children": [5, 8], "match": "Pirate Island" },
+    { "label": "legoland-fl-pirate-3n", "keyword": "LEGOLAND Pirate Island Hotel Winter Haven Florida", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-07", "adults": 2, "children": [5, 8], "match": "Pirate Island" },
+    { "label": "legoland-fl-beach-1n", "keyword": "LEGOLAND Beach Retreat Winter Haven Florida", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-05", "adults": 2, "children": [5, 8], "match": "Beach Retreat" },
+    { "label": "legoland-fl-beach-3n", "keyword": "LEGOLAND Beach Retreat Winter Haven Florida", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-07", "adults": 2, "children": [5, 8], "match": "Beach Retreat" }
+  ]
+}
