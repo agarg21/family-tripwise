@@ -1625,6 +1625,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .deal-context { text-transform: none; letter-spacing: 0; font-size: 1rem; }
 .deal-big { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-width: 200px; max-width: 240px; padding: 22px 18px; border-radius: 18px; background: var(--teal); color: #fff; box-shadow: var(--shadow); }
 .deal-big-number { font-size: clamp(3rem, 9vw, 4.4rem); font-weight: 850; line-height: 1; }
+.deal-big-number-long { font-size: clamp(2.2rem, 6vw, 2.9rem); }
 .deal-big-label { margin-top: 8px; font-size: 0.95rem; line-height: 1.35; }
 .deal-glance .deal-verdict { padding: 10px 12px; border-left: 5px solid var(--sun); background: #fff7e3; }
 .deal-glance .deal-verdict-worth_it { border-left-color: var(--teal); background: #e6f2f0; }

@@ -282,6 +282,14 @@ test("G09 step 2: urgency is derived from the deadline on the day, never stored"
   assert.equal(d("2026-10-30", { deadline_stated: false }), "low", "a listing date is not a deadline");
 });
 
+test("G11 v2: a comparison price's source page is listed in the sources", () => {
+  const s = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
+  const html = dealCheckPage(checks, s, "2026-10-30");
+  const sources = html.slice(html.indexOf('id="deal-sources-title"'));
+  assert.ok(sources.includes("https://seaworld.com/pricing-guide-to-seaworld/"), "the pricing guide behind the day-ticket comparison is cited");
+  assert.match(sources, /checked October 30, 2026/);
+});
+
 test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above the first heading, sources last, og tags", () => {
   const b = checks.find((c) => c.id === "beaches-first-passport-credit");
   assert.ok(b?.v2, "Beaches is the v2 pilot (docs/plan/deal-content-v2.md rollout step 1)");
@@ -335,6 +343,8 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(v({ chips: ["Kids eat free worth $1,000"] }).some((p) => /\$1,000 is not a figure/.test(p)));
   assert.ok(v({ hero_image: { ...b.v2.hero_image, slug: "no-such-photo" } }).some((p) => /hero_image.slug must be a self-hosted photo/.test(p)));
   assert.ok(v({ hero_image: { ...b.v2.hero_image, caption: "" } }).some((p) => /hero_image needs alt and caption/.test(p)));
+  assert.ok(v({ extra_sources: [{ label: "Pricing page", url: "https://www.beaches.com/x/", covers: "prices" }] }).some((p) => /extra_sources/.test(p)), "extra sources need a date");
+  assert.deepEqual(v({ extra_sources: [{ label: "Pricing page", url: "https://www.beaches.com/x/", observed_on: "2026-10-29", covers: "prices used for comparison" }] }), []);
   // G11 step 2: post lines
   const post = (patch) => v({ post: { ...b.v2.post, ...patch } });
   assert.ok(v({ post: undefined }).some((p) => /post \(title, hook, verdict, catch\) is required/.test(p)));

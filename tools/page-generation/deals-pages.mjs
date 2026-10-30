@@ -208,6 +208,8 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     if (t.source.observed_on > today) problems.push(`${where}: things_to_do source observed in the future`);
   }
   if (!validSource(v.context_source) || v.context_source?.observed_on > today) problems.push(`${where}: context_source needs a dated https source`);
+  // Other official pages the v2 copy relies on (for example a price used for comparison) are listed in the sources.
+  if (v.extra_sources !== undefined && (!Array.isArray(v.extra_sources) || !v.extra_sources.every((src) => validSource(src) && src.observed_on <= today && sentence(src.covers)))) problems.push(`${where}: extra_sources must be dated https sources with what they cover`);
   if (!/\$\d/.test(v.headline ?? "") || !/\$\d/.test(v.big_number ?? "")) problems.push(`${where}: headline and big_number must state a $ amount`);
   if (!Array.isArray(v.chips) || v.chips.length < 1 || v.chips.length > 4 || !v.chips.every((x) => typeof x === "string" && x.length >= 4 && x.length <= 40)) problems.push(`${where}: chips must be 1-4 short labels`);
   else texts.push(...v.chips);
@@ -289,7 +291,8 @@ function dealCheckPageV2(checks, check, today, ended) {
   const sources = [
     [check.source_label, check.official_url, check.observed_on, "the offer terms"],
     [v.context_source.label, v.context_source.url, v.context_source.observed_on, v.context_source.covers ?? "where the resorts are and what they include"],
-    ...(v.things_to_do.source.url === v.context_source.url ? [] : [[v.things_to_do.source.label, v.things_to_do.source.url, v.things_to_do.source.observed_on, "things to do"]])
+    ...(v.things_to_do.source.url === v.context_source.url ? [] : [[v.things_to_do.source.label, v.things_to_do.source.url, v.things_to_do.source.observed_on, "things to do"]]),
+    ...(v.extra_sources ?? []).map((src) => [src.label, src.url, src.observed_on, src.covers])
   ];
   const body = `    <main id="main" class="deal-v2">
       <section class="page-hero deal-hero">
@@ -297,11 +300,11 @@ function dealCheckPageV2(checks, check, today, ended) {
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
             <h1>${e(v.headline)}</h1>
-            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${dateNote(check)}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
+            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : dateNote(check)}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
-          <div class="deal-big" aria-hidden="true"><span class="deal-big-number">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
+          <div class="deal-big" aria-hidden="true"><span class="deal-big-number${v.big_number.length > 5 ? " deal-big-number-long" : ""}">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
         </div>
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
@@ -362,7 +365,7 @@ ${otherChecks(checks, check, today)}
       <section class="container page-section deal-sources" aria-labelledby="deal-sources-title">
         <h2 id="deal-sources-title">Sources and how we check</h2>
         <ul>${sources.map(([label, url, on, what]) => `<li>${e(what[0].toUpperCase() + what.slice(1))}: <a href="${e(url)}">${e(label)}</a>, checked ${e(longDate(on))}.</li>`).join("")}</ul>
-        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or stayed at these resorts. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. Prices and availability change: check live before you book.</p>
+        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or been there ourselves. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. Prices and availability change: check live before you book.</p>
       </section>
     </main>`;
   return page({

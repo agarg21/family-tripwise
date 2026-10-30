@@ -328,7 +328,7 @@
       "source_label": "SeaWorld Orlando Fun Card page",
       "observed_on": "2026-10-28",
       "expires_on": "2026-12-31",
-      "expires_note": "no purchase deadline is stated; the free 2026 visits end then",
+      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
       "deadline_stated": false,
       "score": {
         "scored_on": "2026-10-30",
@@ -356,7 +356,7 @@
       },
       "v2": {
         "page_title": "SeaWorld Orlando Fun Card: Unlimited Visits Through 2027 from $144.99 a Person",
-        "context": "SeaWorld Orlando: an animal theme park with dolphins, penguins and sharks, shows and Sesame Street Land, in Orlando, Florida",
+        "context": "SeaWorld Orlando, Florida: an animal theme park with dolphins, penguins, shows and Sesame Street Land",
         "context_source": {
           "label": "SeaWorld Orlando kid-friendly attractions page",
           "url": "https://seaworld.com/orlando/kid-friendly/",
@@ -364,7 +364,7 @@
           "covers": "what SeaWorld Orlando is, where it is and what kids can do there"
         },
         "big_number": "$144.99",
-        "big_label": "a person: unlimited visits through 2027 (starting price)",
+        "big_label": "a person for the SeaWorld-only card: unlimited visits through 2027; a family of 4 needs 4 cards",
         "headline": "SeaWorld Orlando: unlimited visits through 2027 for $144.99 a person (rest of 2026 free)",
         "chips": [
           "Pays off from visit 3",
@@ -375,7 +375,7 @@
         "best_for": "Families who will go to SeaWorld Orlando three or more times before the end of 2027, such as Florida residents or families coming back to Orlando next year.",
         "not_for": "A one-time Orlando trip with a single SeaWorld day: SeaWorld lists day tickets online from $59.99, much less than the card.",
         "cost": "Trip cost: we have no checked price for a family of 4. The card is priced per person and the offer page shows no child price, so plan on one card for each of you at checkout, plus tax (not stated), parking and your trip to Orlando (for example flights from New York City, which we have not priced).",
-        "saves": "Saves: from about your third visit. The card is $144.99; SeaWorld's cheapest online day tickets start at $59.99 and the gate price is $151.99, and day prices change by date.",
+        "saves": "Saves: money from your third visit. Three of SeaWorld's cheapest online day tickets ($59.99 each) cost more than one card ($144.99); for a single visit, a day ticket is cheaper.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (the offer page shows no child price, so each of you needs a card).",
         "get": [
           "Unlimited SeaWorld Orlando visits for each person with a card, from the day you buy through December 31, 2027.",
@@ -398,10 +398,18 @@
           "Price a card for each family member at checkout and look for a child price there.",
           "Check your visit dates against the blockout dates, add parking if you will drive, and check the automatic-renewal setting."
         ],
+        "extra_sources": [
+          {
+            "label": "SeaWorld Pricing Guide page (no date shown)",
+            "url": "https://seaworld.com/pricing-guide-to-seaworld/",
+            "observed_on": "2026-10-30",
+            "covers": "day ticket, gate and Fun Card prices used for the comparison"
+          }
+        ],
         "things_to_do": {
           "items": [
             "Sesame Street Land, with family rides and a parade.",
-            "Daily shows and presentations; seats in the splash zone can get wet.",
+            "Daily shows and presentations; sit in the splash zone and you may get wet.",
             "Animal areas where kids learn about dolphins, sharks, manatees, penguins and killer whales.",
             "Aquatica Orlando, SeaWorld's sister water park, is included only with the SeaWorld + Aquatica card."
           ],
@@ -415,7 +423,7 @@
         "pros": [
           "One per-person price covers unlimited visits until the end of 2027.",
           "The rest of 2026 is included, apart from four days around Christmas.",
-          "It costs less than one day ticket at the gate price."
+          "One card costs less than one gate-price day ticket ($151.99)."
         ],
         "cons": [
           "No child price is shown, so a family of 4 buys four cards.",
@@ -424,9 +432,9 @@
         ],
         "post": {
           "title": "SeaWorld Orlando: unlimited visits through 2027 for $144.99 a person",
-          "hook": "SeaWorld Orlando, Florida: $144.99 a person buys unlimited visits through 2027, and the rest of 2026 is free.",
-          "verdict": "Only for families going 3+ times by the end of 2027; a day ticket starts at $59.99.",
-          "catch": "The catch: no child price, parking is extra, holiday dates blocked out."
+          "hook": "SeaWorld Orlando, Florida: $144.99 a person for unlimited visits through 2027, rest of 2026 free.",
+          "verdict": "Only for families going 3+ times by end of 2027; a day ticket starts at $59.99.",
+          "catch": "The catch: no child price, parking extra, holiday blockouts."
         },
         "hero_image": {
         "slug": "seaworld-orlando-sea-carousel",
