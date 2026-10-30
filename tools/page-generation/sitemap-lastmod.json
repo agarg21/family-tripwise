@@ -2,7 +2,7 @@
   "note": "sitemap <lastmod> ledger: lastmod changes only when the inner HTML of a page's <main> changes (shared chrome and <head> excluded since 2026-10-27; hashes were migrated from the same committed pages, keeping each lastmod) (set to that day, America/New_York). Seeded 2026-10-27: pages changed after the 2026-10-15 repo import use that commit date (observed). Pages unchanged since the import use an estimate, not an observed change date: the page's own Last updated/dateModified date when no later dated content appears on the page, else 2026-10-13 (last public release before the import; an upper bound, since earlier history is not in this repo).",
   "pages": {
     "index.html": {
-      "sha256": "0f842a8bb701083f404856304123cdbb8c3d252cc20edbfd9f9de9d8dcca7ada",
+      "sha256": "fce386d0b9987a3ed38045f02460b830d0a542a53c7ce96d729904c2afc96931",
       "lastmod": "2026-10-29"
     },
     "about.html": {
@@ -18,15 +18,15 @@
       "lastmod": "2026-10-29"
     },
     "terms.html": {
-      "sha256": "f798d0f71aaf6d1c710417e17d6d4488bec2e9264a1040d134136b908b91bd95",
+      "sha256": "79c1b93c4836049d93eb9d002613d0aad10622f008dd039200da80c15c47fad9",
       "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "ae5a935ff1f4590189f82c4289fb14ae4333ebb95e93e1a54a517eaee0fd62b6",
+      "sha256": "dc4bbb0abcf3a8aa594f1abe8aa40f6843201ad4c8c23c35e15abb2d673758db",
       "lastmod": "2026-10-29"
     },
     "deals/index.html": {
-      "sha256": "c631e8e4196ac0b448aa590a39fcc1f9b199bebf49e680ee20f6c23a07fee8fa",
+      "sha256": "b6ac573063597ffd97b17d523e1038f45aed397b4d74f51cdc11fa254f312bf6",
       "lastmod": "2026-10-29"
     },
     "deals/royal-caribbean-kids-sail-free.html": {

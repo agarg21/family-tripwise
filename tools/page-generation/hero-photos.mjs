@@ -60,18 +60,30 @@ export function placeHeroPhoto(html, city) {
   return html.replace(pageHero, (match) => `${match}\n${section}`);
 }
 
-/** G14 batch 3: banner for a site page listed in sitePageHeroes (path relative to site/), right after its page hero,
- * or after the first section of <main> on a page without one (the contributor profile). */
+// Visible place names for captions that do not start with one (persona review 2026-10-30).
+const sitePagePlaces = { "new-york-city": "Central Park, New York City.", "chicago": "Pritzker Pavilion, Millennium Park, Chicago." };
+// On the two fresh hubs the banner follows the "Coming up first" / "Closing soonest" list so a date shows on the first phone screen.
+const afterAnswer = /(      <section id="(?:this-week|deals)-answer"[\s\S]*?\n      <\/section>)/;
+const anyBanner = /\n *<section class="container media-section hero-photo-section">[\s\S]*?<\/section>|\n *<figure class="licensed-photo hero-photo">[\s\S]*?<\/figure>/g;
+
+/** G14 batch 3: banner for a site page listed in sitePageHeroes (path relative to site/): after the hub answer list on
+ * /this-week/ and /deals/, otherwise right after the page hero, or after the first section of <main> on a page without one. */
 export function placeSitePageHero(html, path) {
   const key = sitePageHeroes[path];
   if (!key) throw new Error(`No site-page banner for ${path}`);
   const prefix = "../".repeat(path.split("/").length - 1) || "./";
-  if (pageHero.test(html)) {
-    const section = heroPhotoSection(key, prefix);
-    return html.replace(existingHero, "").replace(pageHero, (match) => `${match}\n${section}`);
-  }
+  const place = sitePagePlaces[key];
+  const figureHtml = figures[key].replace('src="../images/', `src="${prefix}images/`).replace("<figcaption>", place ? `<figcaption>${place} ` : "<figcaption>");
+  html = html.replace(anyBanner, "");
+  const section = `      <section class="container media-section hero-photo-section">
+        <figure class="licensed-photo hero-photo">
+          ${figureHtml}
+        </figure>
+      </section>`;
+  if (afterAnswer.test(html)) return html.replace(afterAnswer, (match) => `${match}\n${section}`);
+  if (pageHero.test(html)) return html.replace(pageHero, (match) => `${match}\n${section}`);
   const figure = `    <figure class="licensed-photo hero-photo">
-      ${figures[key].replace('src="../images/', `src="${prefix}images/`)}
+      ${figureHtml}
     </figure>`;
   const first = /(<main\b[^>]*>\s*<section\b[\s\S]*?<\/section>)/;
   if (!first.test(html)) throw new Error(`Expected a first section in <main> for the ${path} banner`);
