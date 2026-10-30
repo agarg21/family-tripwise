@@ -484,7 +484,7 @@
       "source_label": "Busch Gardens Tampa Bay Fun Card page",
       "observed_on": "2026-10-30",
       "expires_on": "2026-12-31",
-      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
+      "expires_note": "no buy-by date is stated; the free rest-of-2026 visits end then",
       "deadline_stated": false,
       "score": {
         "scored_on": "2026-10-30",
@@ -594,8 +594,8 @@
         ],
         "post": {
           "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person",
-          "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person for unlimited visits through 2027, plus Adventure Island free.",
-          "verdict": "Only for 3+ days by end of 2027; for 2 days, the $106 Two-Day ticket is cheaper.",
+          "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027, Adventure Island free.",
+          "verdict": "Only for 3+ days by end of 2027; for 2 days, a $106 Two-Day ticket costs less.",
           "catch": "The catch: no child price; parking, tax and fees extra."
         },
         "hero_image": {
