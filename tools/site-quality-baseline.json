@@ -2,27 +2,13 @@
   "note": "Known page-quality gaps (tools/site-quality.mjs). Tests fail on any check a page passed before and on a new page not listed here. node tools/site-quality.mjs --write-baseline adds new pages and drops closed gaps; it refuses while an existing page has a regression.",
   "recorded_on": "2026-10-29",
   "pages": {
-    "index.html": [
-      "hero"
-    ],
-    "about.html": [
-      "hero"
-    ],
-    "contributors/miles-rowan.html": [
-      "hero"
-    ],
-    "privacy.html": [
-      "hero"
-    ],
-    "terms.html": [
-      "hero"
-    ],
-    "this-week/index.html": [
-      "hero"
-    ],
-    "deals/index.html": [
-      "hero"
-    ],
+    "index.html": [],
+    "about.html": [],
+    "contributors/miles-rowan.html": [],
+    "privacy.html": [],
+    "terms.html": [],
+    "this-week/index.html": [],
+    "deals/index.html": [],
     "deals/royal-caribbean-kids-sail-free.html": [
       "hero",
       "glance",

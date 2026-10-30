@@ -1,5 +1,6 @@
 import { siteHeader, siteFooter } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
+import { placeSitePageHero } from "./hero-photos.mjs";
 export const milesContributor = Object.freeze({
   name: "Miles Rowan",
   role: "AI research contributor",
@@ -11,7 +12,7 @@ export function contributorCredit() {
 }
 
 export function milesProfilePage() {
-  return withLinkPreview(`<!doctype html>
+  return placeSitePageHero(withLinkPreview(`<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -55,5 +56,5 @@ export function milesProfilePage() {
   ${siteFooter("../")}
 </body>
 </html>
-`);
+`), "contributors/miles-rowan.html");
 }

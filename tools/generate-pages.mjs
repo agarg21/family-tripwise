@@ -18,6 +18,7 @@ import { writeSitemap } from "./page-generation/sitemap.mjs";
 import { selfHostSiteImages, selfHostImages } from "./page-generation/self-hosted-images.mjs";
 import { addSiteLinkPreviews } from "./page-generation/link-previews.mjs";
 import { writeThisWeekPage, thisWeekUrl } from "./page-generation/this-week-page.mjs";
+import { placeSitePageHero } from "./page-generation/hero-photos.mjs";
 import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
@@ -581,7 +582,7 @@ writeSite("downloads/chicago-family-hotels.csv", chicagoHotelComparisonCsv());
 writeSite("where-to-stay/new-york-city-family-hotels.html", newYorkCityFamilyHotelPage());
 writeSite("downloads/new-york-city-family-hotels.csv", newYorkCityHotelComparisonCsv());
 writeSite("where-to-stay/san-antonio-family-hotels.html", sanAntonioFamilyHotelPage());
-writeSite("about.html", aboutPage());
+writeSite("about.html", placeSitePageHero(aboutPage(), "about.html"));
 writeSite(dcItineraryPath, washingtonDcItineraryPage());
 writeSite(bostonItineraryPath, bostonItineraryPage());
 writeSite("contributors/miles-rowan.html", milesProfilePage());
@@ -620,7 +621,7 @@ for (const [path, target, title] of oldRedirects) {
 `);
 }
 
-writeSite("index.html", `<!doctype html>
+writeSite("index.html", placeSitePageHero(`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -637,7 +638,8 @@ writeSite("index.html", `<!doctype html>
         <div class="container">
           <p class="eyebrow">Family travel planning</p>
           <h1>Plan better trips with kids</h1>
-          <p>Choose family-friendly activities, areas to stay, and starter itineraries by city, age, stroller difficulty, weather, lodging base, and trip pace. Family Tripwise is built for practical decisions: where to stay, what to do, what to skip, and how to keep the day realistic when kids, meals, weather, parking, and naps change the plan.</p>
+          <p>Free planning guides for parents in eleven cities: where to stay, family hotels compared side by side, things to do by age, and day plans that leave room for meals and naps. Facts are checked on official pages and dated.</p>
+          <p class="home-fresh-links"><a href="./deals/">Family travel deals, checked for a family of 4</a> · <a href="./this-week/">Family events and deadlines this week</a></p>
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Current scope">
@@ -650,7 +652,7 @@ writeSite("index.html", `<!doctype html>
           <div>
             <p class="eyebrow">Start here</p>
             <h2>Pick the planning question you need to answer</h2>
-            <p>Most family trips fail in the handoffs: the hotel is too far from the first activity, the pool is not useful at nap time, the stroller route is harder than expected, or a rainy-day backup requires crossing the city twice. The home page is a routing hub for the current clusters, not a generic travel magazine front page.</p>
+            <p>Most family trips fail in the handoffs: the hotel is too far from the first activity, the pool is not useful at nap time, the stroller route is harder than expected, or a rainy-day backup requires crossing the city twice.</p>
             <p>Use the links below to move from broad destination choice to a concrete plan. Each destination cluster is designed to connect stay area, activity fit, route pacing, and age-specific tradeoffs.</p>
           </div>
           <dl class="snapshot">
@@ -769,8 +771,6 @@ ${cities.map((city) => `          <article class="activity-card">
           <dl class="snapshot">
             <div><dt>Hotel claims</dt><dd>Verify room setup, fees, pool, breakfast, crib/rollaway, kitchen/laundry, parking, and noise.</dd></div>
             <div><dt>Route claims</dt><dd>Verify hours, tickets, weather, safety advisories, transit/stroller access, parking, and child energy.</dd></div>
-            <div><dt>Search data</dt><dd>GSC and SEO research guide improvements, but useful parent decision support is the actual product.</dd></div>
-            <div><dt>Expansion rule</dt><dd>Existing pages should be improved before adding new destination clusters or unsupported hotel pages.</dd></div>
           </dl>
         </div>
       </section>
@@ -791,7 +791,7 @@ ${cities.map((city) => `          <article class="activity-card">
     ${siteFooter("./")}
   </body>
 </html>
-`);
+`, "index.html"));
 
 const sitemapUrls = [
   "https://familytripwise.com/",

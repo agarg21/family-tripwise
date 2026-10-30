@@ -8,6 +8,7 @@ import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteFooter } from "./site-chrome.mjs";
 import { easternDate } from "./sitemap.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
+import { placeSitePageHero } from "./hero-photos.mjs";
 
 const imageLock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
 // Free licences only: no NonCommercial or NoDerivatives photos (OWNER D17).
@@ -463,13 +464,13 @@ ${trustPanel}
         <p class="fresh-guide-link">Offers leave this list after their booking deadline. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
       </section>
     </main>`;
-  return page({
+  return placeSitePageHero(page({
     title: "Family Travel Deals Checked for a Family of 4 | Family Tripwise",
     description: "Current family travel offers with the terms that matter to parents: child ages, occupancy, blackout dates, minimum stays and fees, each checked on the official page.",
     canonical: dealsHubUrl,
     path: dealsHubPath,
     body
-  });
+  }), dealsHubPath);
 }
 
 function otherChecks(checks, current, today) {

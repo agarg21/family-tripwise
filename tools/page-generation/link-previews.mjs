@@ -3,6 +3,7 @@
 // first self-hosted photo in <main> (its alt text). Pages without a photo get a typographic
 // Family Tripwise card. Images live in site/images/og/ and are rendered by tools/page-og-images.mjs;
 // a missing image fails generation. Pages that already carry og:title (v2 deal pages) are left alone.
+import { sitePageHeroes } from "./hero-photos.mjs";
 import { fileURLToPath } from "node:url";
 import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
@@ -61,6 +62,12 @@ function cardFor(pagePath) {
 
 /** The image a page's link preview uses: its first self-hosted photo in <main>, else a section card. */
 export function previewImage(html, pagePath) {
+  // Hub, about and legal pages keep their Family Tripwise card even though they now show a banner photo (G14 batch 3):
+  // a photo card would label the page with that photo's city.
+  if (sitePageHeroes[pagePath]) {
+    const card = cardFor(pagePath);
+    return { path: card.path, alt: card.alt, width: 1200, height: 630, type: "image/png" };
+  }
   const main = html.match(/<main\b[\s\S]*<\/main>/i)?.[0] ?? "";
   for (const tag of main.match(/<img\b[^>]*>/gi) || []) {
     const src = attr(tag, "src") || "";

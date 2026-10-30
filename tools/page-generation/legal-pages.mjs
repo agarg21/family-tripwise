@@ -4,6 +4,7 @@
 // third-party host the site embeds content from is named in the privacy policy.
 import { siteHeader, siteFooter } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
+import { placeSitePageHero } from "./hero-photos.mjs";
 
 // Each page keeps its own date: privacy changed 2026-10-29 (photos now self-hosted, Q11); terms 2026-10-28.
 export const legalUpdatedDates = {
@@ -25,7 +26,7 @@ const wikimediaPrivacy = "https://foundation.wikimedia.org/wiki/Policy:Privacy_p
 const mail = `<a href="mailto:${contactEmail}">${contactEmail}</a>`;
 
 function shell({ path, title, description, eyebrow, h1, intro, body }) {
-  return withLinkPreview(`<!doctype html>
+  return placeSitePageHero(withLinkPreview(`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -54,7 +55,7 @@ ${body}
     ${siteFooter("./", path)}
   </body>
 </html>
-`);
+`), path);
 }
 
 function section(id, heading, paragraphs) {

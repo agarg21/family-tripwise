@@ -2,31 +2,31 @@
   "note": "sitemap <lastmod> ledger: lastmod changes only when the inner HTML of a page's <main> changes (shared chrome and <head> excluded since 2026-10-27; hashes were migrated from the same committed pages, keeping each lastmod) (set to that day, America/New_York). Seeded 2026-10-27: pages changed after the 2026-10-15 repo import use that commit date (observed). Pages unchanged since the import use an estimate, not an observed change date: the page's own Last updated/dateModified date when no later dated content appears on the page, else 2026-10-13 (last public release before the import; an upper bound, since earlier history is not in this repo).",
   "pages": {
     "index.html": {
-      "sha256": "8672bcd30009388dea55b41ce84db11023a6413cdc13c2127a8ad3e1d5c38e0e",
-      "lastmod": "2026-10-27"
+      "sha256": "0f842a8bb701083f404856304123cdbb8c3d252cc20edbfd9f9de9d8dcca7ada",
+      "lastmod": "2026-10-29"
     },
     "about.html": {
-      "sha256": "cb8923af973d73d13eee9dd803c9a4a13fb807623d3b7be1167a17fc2c8763b0",
-      "lastmod": "2026-10-27"
+      "sha256": "51a64235672bf4e876fd7e4f7d57a55d84b6be6b0602b5ea43b4e4563ab4c537",
+      "lastmod": "2026-10-29"
     },
     "contributors/miles-rowan.html": {
-      "sha256": "c941cac47c1b4de19ecbfd24ccb2724c232a92762658e7d746dc593780ea3788",
-      "lastmod": "2026-10-27"
+      "sha256": "4a1deb0dd28331c0e5bda771fe6443468fd426e6c72396ed2140c334932c4bee",
+      "lastmod": "2026-10-29"
     },
     "privacy.html": {
-      "sha256": "acbbf6c9b2528e51ce7416c477778a41e74fc16c8118adb3605db5cc72c6f670",
+      "sha256": "311e3a8c7c4ee345993c9d8c51b34d197b416f4f69fe6325d98d3a414fe56d34",
       "lastmod": "2026-10-29"
     },
     "terms.html": {
-      "sha256": "296312c31667d5125b37eece463841d64ce115bcb9e0999dc046b0a2b8679400",
-      "lastmod": "2026-10-28"
+      "sha256": "f798d0f71aaf6d1c710417e17d6d4488bec2e9264a1040d134136b908b91bd95",
+      "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "cd5f160a75dfa5cd71c3b89c447eb59bd545b08998f06fdf9d2794decbbe13c4",
+      "sha256": "ae5a935ff1f4590189f82c4289fb14ae4333ebb95e93e1a54a517eaee0fd62b6",
       "lastmod": "2026-10-29"
     },
     "deals/index.html": {
-      "sha256": "e93905623f0e69b7ecfb4f6792086ebd0f8d44e6a44045ef0681517ff19edc83",
+      "sha256": "c631e8e4196ac0b448aa590a39fcc1f9b199bebf49e680ee20f6c23a07fee8fa",
       "lastmod": "2026-10-29"
     },
     "deals/royal-caribbean-kids-sail-free.html": {
