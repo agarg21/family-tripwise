@@ -22,8 +22,8 @@ test("short answer leads with the plan, the pass catch and observed costs only",
   const box = html.match(/<section id="dc-itinerary-answer"[\s\S]*?<\/section>/)[0];
   assert.equal((box.match(/<p>/g) || []).length, 3);
   assert.match(box, /free pass for every person, babies included/);
-  assert.match(box, /USD 30–40 per vehicle/);
-  assert.match(box, /USD 1\.00 fee each/);
+  assert.match(box, /\$30–40 per vehicle/);
+  assert.match(box, /\$1\.00 fee each/);
 });
 
 test("every venue card carries an official source and the observation date; research record lists every source", () => {

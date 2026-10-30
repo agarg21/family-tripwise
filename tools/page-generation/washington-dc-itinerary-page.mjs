@@ -60,7 +60,7 @@ export const dcVenues = [
     hours: "Open every day except Christmas Day. Sept. 15–March 14: grounds 8 a.m.–4 p.m. (last entry 3 p.m.), indoor exhibits 9 a.m.–4 p.m. March 15–Sept. 14: grounds 8 a.m.–6 p.m. (last entry 5 p.m.), indoor exhibits 9 a.m.–6 p.m.",
     entry: "Free, but every visitor of every age needs their own free entry pass; a limited number of walk-up passes are offered at pedestrian entrances.",
     rules: [
-      "Parking: USD 30 per vehicle bought at least a day ahead, USD 40 on the day; it may sell out.",
+      "Parking: $30 per vehicle bought at least a day ahead, $40 on the day; it may sell out.",
       "The Zoo says it sits on a hill with an incline and suggests 2–3 hours; its guest shuttle was listed as not available.",
       "Stroller rental for a fee (no cash). Your own food and non-alcoholic drinks are allowed."
     ]
@@ -70,7 +70,7 @@ export const dcVenues = [
     name: "Washington Monument",
     source: "https://www.nps.gov/wamo/planyourvisit/fees.htm",
     hours: "The NPS fees page does not list hours. It lists one maintenance closure day most months plus holiday closures; check its list for your date.",
-    entry: "Every guest age 2 and up needs a timed ticket. Free same-day tickets from 8:45 a.m. at the Washington Monument Lodge, first come, first served (up to six per person aged 16+). Advance tickets on recreation.gov open 30 days ahead at 10 a.m., with a non-refundable USD 1.00 service charge per ticket.",
+    entry: "Every guest age 2 and up needs a timed ticket. Free same-day tickets from 8:45 a.m. at the Washington Monument Lodge, first come, first served (up to six per person aged 16+). Advance tickets on recreation.gov open 30 days ahead at 10 a.m., with a non-refundable $1.00 service charge per ticket.",
     rules: [
       "The monument may close for high wind or thunderstorms, and tickets for those entry times are voided.",
       "More advance tickets are released one day before the visit date."
@@ -82,7 +82,7 @@ export const dcMetro = {
   source: "https://www.wmata.com/pay.html",
   facts: [
     "Up to two children age 4 and younger ride free with each fare-paying adult; children 5 and older pay and need their own card or SmarTrip.",
-    "Regular rail fares: weekdays 5 a.m.–9:30 p.m. USD 2.25–6.75; after 9:30 p.m. and weekends USD 2.25–2.50.",
+    "Regular rail fares: weekdays 5 a.m.–9:30 p.m. $2.25–6.75; after 9:30 p.m. and weekends $2.25–2.50.",
     "Pay by tapping a contactless credit or debit card, or SmarTrip on a card or phone."
   ]
 };
@@ -155,7 +155,6 @@ export function washingtonDcItineraryPage() {
           <p>One main stop each morning, a protected rest block, and an optional afternoon. Built from official hours and pass rules, not a visit.</p>
         </div>
       </section>
-${heroPhotoSection("washington-dc")}
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and passes for your dates.</p>
@@ -163,8 +162,9 @@ ${heroPhotoSection("washington-dc")}
       <section id="dc-itinerary-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>The plan:</strong> Day 1 Natural History + Monument, Day 2 the Zoo in the morning, Day 3 Air and Space + American History.</p>
         <p><strong>Main catch:</strong> Air and Space and the Zoo need a free pass for every person, babies included; the Monument needs a ticket from age 2.</p>
-        <p><strong>Cost:</strong> museum and Zoo entry are free; Zoo parking is USD 30–40 per vehicle and Monument advance tickets carry a USD 1.00 fee each.</p>
+        <p><strong>Cost:</strong> museum and Zoo entry are free; Zoo parking is $30–40 per vehicle and Monument advance tickets carry a $1.00 fee each.</p>
       </section>
+${heroPhotoSection("washington-dc")}
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Day by day</p>

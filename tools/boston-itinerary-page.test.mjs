@@ -24,9 +24,9 @@ test("short answer leads with the plan, the weekday/stroller catch and observed 
   assert.equal((box.match(/<p>/g) || []).length, 3);
   assert.match(box, /closed Tuesdays/);
   assert.match(box, /Wednesday–Sunday only/);
-  assert.match(box, /USD 33 adult \/ USD 28 age 3–11/);
+  assert.match(box, /\$33 adult \/ \$28 age 3–11/);
   assert.match(box, /Aquarium prices: check its ticket site/);
-  assert.doesNotMatch(box, /Aquarium[^.]*USD/);
+  assert.doesNotMatch(box, /Aquarium[^.]*(USD|\$\d)/);
 });
 
 test("every venue card carries an official source and the observation date; research record lists every source", () => {

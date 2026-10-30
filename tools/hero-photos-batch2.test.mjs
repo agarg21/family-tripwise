@@ -17,7 +17,9 @@ const pages = {
 for (const [path, slug] of Object.entries(pages)) {
   test(`${path} opens with one credited ${slug} banner`, () => {
     const html = readFileSync(new URL(`../site/${path}`, import.meta.url), "utf8");
-    assert.match(html, /<section (?:id="[^"]+" )?class="page-hero">[\s\S]*?\n      <\/section>\n      <section class="container media-section hero-photo-section">/);
+    // Activity pages: directly under the page hero; itineraries: under the short plan/catch/cost answer.
+    const anchor = path.startsWith("family-itinerary/") ? 'class="container answer-box"' : 'class="page-hero"';
+    assert.match(html, new RegExp(`<section [^>]*${anchor}[^>]*>[\\s\\S]*?\\n      <\\/section>\\n      <section class="container media-section hero-photo-section">`));
     assert.equal((html.match(/<figure /g) || []).length, 1);
     assert.equal((html.match(new RegExp(`images/${slug}\\.webp`, "g")) || []).length, 1);
     const banner = html.indexOf('class="licensed-photo hero-photo"');

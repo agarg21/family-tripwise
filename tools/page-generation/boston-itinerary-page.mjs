@@ -20,7 +20,7 @@ export const bostonVenues = [
     source: "https://www.mos.org/visit/hours",
     extraSource: ["https://www.mos.org/visit/faq", "Visitor FAQs"],
     hours: "Exhibit Halls open daily, 9 a.m.–5 p.m. Closed Thanksgiving and Christmas; closes at 2 p.m. the day before Thanksgiving and on Christmas Eve.",
-    entry: "Exhibit Halls: adult USD 33, child (3–11) USD 28, senior (60+) USD 29; children under 3 free. Timed tickets are no longer required: pick your visit date. Planetarium, Omni and 4-D shows are USD 6 add-ons.",
+    entry: "Exhibit Halls: adult $33, child (3–11) $28, senior (60+) $29; children under 3 free. Timed tickets are no longer required: pick your visit date. Planetarium, Omni and 4-D shows are $6 add-ons.",
     rules: [
       "Re-entry the same day: show your confirmation or a Museum hand stamp.",
       "Food from home is eaten outside, on the front plaza or at picnic tables behind the Museum; no eating in the Exhibit Halls.",
@@ -32,7 +32,7 @@ export const bostonVenues = [
     name: "Boston Children's Museum",
     source: "https://bostonchildrensmuseum.org/visit/",
     hours: "Wednesday–Monday 9 a.m.–4 p.m.; closed Tuesdays. Opens at 10 a.m. on the first Saturday of each month.",
-    entry: "USD 24 per adult and per child aged 1–15; infants under 12 months free. Advance online tickets are highly recommended.",
+    entry: "$24 per adult and per child aged 1–15; infants under 12 months free. Advance online tickets are highly recommended.",
     rules: [
       "Its visit page does not state a re-entry rule, so do not plan to leave for a nap and come back on the same ticket.",
       "Its visit page suggests the Red Line or Silver Line to South Station, then a short walk.",
@@ -48,7 +48,7 @@ export const bostonVenues = [
     entry: "Timed tickets; buy ahead to guarantee entry, as weekends and holidays often sell out. Prices were not shown on the visit pages we could read; the ticket site did not load for us.",
     rules: [
       "You may leave and come back the same day; you may be asked to show your ticket.",
-      "Strollers are allowed but the Aquarium strongly recommends leaving them at home or in the car; it has none to borrow or rent. Lockers USD 5 small, USD 7 large.",
+      "Strollers are allowed but the Aquarium strongly recommends leaving them at home or in the car; it has none to borrow or rent. Lockers $5 small, $7 large.",
       "Bring your own food to the blue picnic tables outside; only water inside the exhibits.",
       "The Atlantic harbor seals are temporarily off exhibit."
     ]
@@ -58,7 +58,7 @@ export const bostonVenues = [
     name: "USS Constitution and USS Constitution Museum",
     source: "https://ussconstitutionmuseum.org/hours-admission/",
     hours: "Museum open daily 9:30 a.m.–5 p.m. (closed Thanksgiving, Christmas and New Year's Day). The ship is open Wednesday–Sunday, 10 a.m.–4 p.m.",
-    entry: "Ship: free, first come, first served. Museum: suggested admission USD 15 per person (USD 25 pay-it-forward, free to USD 10 reduced).",
+    entry: "Ship: free, first come, first served. Museum: suggested admission $15 per person ($25 pay-it-forward, free to $10 reduced).",
     rules: [
       "Everyone boarding the ship goes through security; adults need a federal or state photo ID, visitors under 18 do not.",
       "Strollers are not allowed on board and must be left on the pier."
@@ -92,7 +92,7 @@ const days = [
       ["Morning", "Museum of Science from its 9 a.m. opening. No timed ticket is needed; under-3s are free. Pick one or two halls rather than the whole building."],
       ["Lunch", "Food from home goes outside on the plaza or at the picnic tables behind the Museum."],
       ["Rest block", "Plan about two hours of rest. Same-day re-entry works with your confirmation or hand stamp, so a room or quiet break can come between halls. Whether a room return works depends on your hotel; see the rest notes in the Boston hotels guide."],
-      ["Afternoon (optional)", "Come back for a USD 6 Planetarium or Omni show, or stop for the day. Exhibit Halls close at 5 p.m."]
+      ["Afternoon (optional)", "Come back for a $6 Planetarium or Omni show, or stop for the day. Exhibit Halls close at 5 p.m."]
     ]
   },
   {
@@ -154,7 +154,6 @@ export function bostonItineraryPage() {
           <p>One main stop each morning, a protected rest block, and an optional afternoon. Built from official hours and entry rules, not a visit.</p>
         </div>
       </section>
-${heroPhotoSection("boston")}
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>
@@ -162,8 +161,9 @@ ${heroPhotoSection("boston")}
       <section id="boston-itinerary-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>The plan:</strong> Day 1 Museum of Science, Day 2 Children's Museum (younger children) or the Aquarium, Day 3 USS Constitution.</p>
         <p><strong>Main catch:</strong> the Children's Museum is closed Tuesdays and the ship opens Wednesday–Sunday only; leave strollers behind for the ship and, the Aquarium advises, its exhibits.</p>
-        <p><strong>Cost:</strong> Museum of Science USD 33 adult / USD 28 age 3–11; Children's Museum USD 24 from age 1; the ship is free. Aquarium prices: check its ticket site.</p>
+        <p><strong>Cost:</strong> Museum of Science $33 adult / $28 age 3–11; Children's Museum $24 from age 1; the ship is free. Aquarium prices: check its ticket site.</p>
       </section>
+${heroPhotoSection("boston")}
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Day by day</p>
