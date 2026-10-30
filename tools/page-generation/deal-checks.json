@@ -997,7 +997,7 @@
         },
         "verdict": "only_for",
         "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND Florida visit through January 9, 2027 who are fine with a non-refundable booking.",
-        "why": "Good for families with firm dates who want to sleep at the park with breakfast and multi-park tickets included; skip it if you might cancel (it is non-refundable and paid in full) or want a cheaper hotel off site. Tax, a resort fee and parking are extra."
+        "why": "Good for families with firm dates who want to sleep at the park with breakfast and multi-park tickets included; skip it if you might cancel (it is non-refundable and paid in full) or want a different hotel off site. Tax, a resort fee and parking are extra."
       },
       "v2": {
         "page_title": "LEGOLAND Florida Hotel Package: Kids' Park Tickets from $39 a Day",
@@ -1017,15 +1017,15 @@
           "Non-refundable"
         ],
         "best_for": "Families with kids 2 to 12 and firm dates for a LEGOLAND Florida trip before January 9, 2027 who want to stay at the resort.",
-        "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a cheaper hotel off site or in Orlando.",
+        "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a different hotel off site or in Orlando.",
         "cost": "Trip cost: we have no complete trip price for a family of 4. LEGOLAND's starting price is per person, so 2 adults and 2 kids pay four times it for 1 night with park tickets and breakfast, before tax, the resort fee and parking; it is not a quote, so price your dates on legoland.com and add flights from your airport (for example New York City to Orlando, which we have not priced).",
-        "saves": "Saves: kids' park tickets from $39 a day in the package vs $129 per person at the front gate (not the same ticket, so a rough guide, not a fixed saving).",
+        "saves": "Saves: no fixed saving is stated. Kids' park tickets in the package start at $39 a day; front-gate tickets start at $129 per person (not the same ticket, so a rough guide only).",
         "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
         "get": [
           "One booking covers the hotel night, a hot breakfast each day and multi-park tickets (the package page lists LEGOLAND, the LEGOLAND Water Park, PEPPA PIG Theme Park and SEA LIFE Florida; the ticket type depends on your dates).",
           "LEGOLAND's advertised starting price is $162 per person per night for this exact party (1 night, before tax); your dates will price differently.",
           "The park tickets are part of the $162 starting price; $39 a day is LEGOLAND's kids' ticket price inside the package (our reading: part of that price, not an extra charge; LEGOLAND does not state its basis). Children under 2 get into LEGOLAND Florida free.",
-          "The second ticket day must be used within 3 days of the first visit."
+          "If your tickets cover 2 days, the second day must be used within 3 days of the first visit."
         ],
         "compare": [
           "Worth it if you would stay at the resort anyway and your dates are fixed; otherwise price the same dates with the package against separate tickets plus the hotel you would otherwise use.",
@@ -1084,7 +1084,7 @@
           "title": "LEGOLAND Florida hotel stays: kids' park tickets from $39 a day",
           "hook": "LEGOLAND Florida (Winter Haven, near Orlando): hotel stays with park tickets and breakfast, kids' tickets from $39 a day.",
           "verdict": "Only for families with firm dates: it's non-refundable and paid in full when you book.",
-          "catch": "The catch: from $162 a person a night before tax, plus a nightly resort fee and parking."
+          "catch": "The catch: from $162 a person a night before tax, plus a nightly resort fee and parking. Book by Nov 17."
         },
         "hero_image": {
           "slug": "legoland-florida-entrance",
