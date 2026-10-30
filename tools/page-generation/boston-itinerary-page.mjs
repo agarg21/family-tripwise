@@ -154,16 +154,16 @@ export function bostonItineraryPage() {
           <p>One main stop each morning, a protected rest block, and an optional afternoon. Built from official hours and entry rules, not a visit.</p>
         </div>
       </section>
-      <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
-        <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>
-      </section>
       <section id="boston-itinerary-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>The plan:</strong> Day 1 Museum of Science, Day 2 Children's Museum (younger children) or the Aquarium, Day 3 USS Constitution.</p>
         <p><strong>Main catch:</strong> the Children's Museum is closed Tuesdays and the ship opens Wednesday–Sunday only; leave strollers behind for the ship and, the Aquarium advises, its exhibits.</p>
         <p><strong>Cost:</strong> Museum of Science $33 adult / $28 age 3–11; Children's Museum $24 from age 1; the ship is free. Aquarium prices: check its ticket site.</p>
       </section>
 ${heroPhotoSection("boston")}
+      <section class="container trust-panel" aria-label="Review status">
+        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
+        <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>
+      </section>
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Day by day</p>

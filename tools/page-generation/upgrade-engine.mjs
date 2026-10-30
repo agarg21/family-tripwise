@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { selfHostImages } from "./self-hosted-images.mjs";
 import { placeHeroPhoto } from "./hero-photos.mjs";
+import { activityGlances, renderActivityGlance } from "./activity-glance.mjs";
 import { join } from "node:path";
 
 const markerStart = "<!-- priority-upgrade:start -->";
@@ -1140,6 +1141,12 @@ ${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel
     html = html.replace(creditAndCopy, `$1\n        <nav aria-label="${esc(page.city)} activity sections"><a href="#${activitySectionId(page, "comparison")}">Compare activities</a>${middleLink}<a href="#${activitySectionId(page, "notes")}">Detailed checks</a>${extraLink}</nav>`);
   }
   if (page.heroPhoto) html = placeHeroPhoto(html, page.heroPhoto);
+  html = html.replace(/\n      <section class="container answer-box activity-glance"[\s\S]*?<\/section>/, "");
+  if (activityGlances[path]) {
+    const banner = /(      <section class="container media-section hero-photo-section">[\s\S]*?<\/section>)/;
+    if (!banner.test(html)) throw new Error(`Expected a top banner before the glance on ${path}`);
+    html = html.replace(banner, (match) => `${match}\n${renderActivityGlance(activityGlances[path], page.rows)}`);
+  }
   writeFileSync(full, selfHostImages(html, path));
 }
 

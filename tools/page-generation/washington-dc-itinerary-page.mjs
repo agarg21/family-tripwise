@@ -155,16 +155,16 @@ export function washingtonDcItineraryPage() {
           <p>One main stop each morning, a protected rest block, and an optional afternoon. Built from official hours and pass rules, not a visit.</p>
         </div>
       </section>
-      <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
-        <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and passes for your dates.</p>
-      </section>
       <section id="dc-itinerary-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>The plan:</strong> Day 1 Natural History + Monument, Day 2 the Zoo in the morning, Day 3 Air and Space + American History.</p>
         <p><strong>Main catch:</strong> Air and Space and the Zoo need a free pass for every person, babies included; the Monument needs a ticket from age 2.</p>
         <p><strong>Cost:</strong> museum and Zoo entry are free; Zoo parking is $30–40 per vehicle and Monument advance tickets carry a $1.00 fee each.</p>
       </section>
 ${heroPhotoSection("washington-dc")}
+      <section class="container trust-panel" aria-label="Review status">
+        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
+        <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and passes for your dates.</p>
+      </section>
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Day by day</p>
