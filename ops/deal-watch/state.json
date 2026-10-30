@@ -6,7 +6,7 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "a30cb1c2c6ecca74b5b088824619dabe",
+      "signal_hash": "f66c0898e98bffa15334d977f3ae2393",
       "signal": [
         "Score big savings on last minute cruise deals that take you to sun‑soaked beaches, thrilling adventures, and bold getaways.",
         "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards.",
@@ -20,11 +20,11 @@
         "and provides $0 cruise fare on third and fourth guests. Taxes, fees, and port expenses are additional and apply to all guests.",
         "$100 Short Getaway Kicker",
         "and provides instant savings, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of as follows: $25 USD for Interior, O…",
-        "$750 Savings"
+        "$800 Savings"
       ],
-      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 81b37ee3 043f49b6 067da13e 831c72e8 a1acc92a 35e9c012 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 6b9ed89f 23cafa86 bd6f2774 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 81b37ee3 043f49b6 13b0391a 831c72e8 a1acc92a 35e9c012 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 8c2ab5b2 be94ac3b 50018a15 a29697e4 d9833c08 6b9ed89f 23cafa86 bd6f2774 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
-      "changed_at": "2026-10-29T18:59:45.734Z"
+      "changed_at": "2026-10-30T10:12:38.560Z"
     },
     "great-wolf-deals": {
       "url": "https://www.greatwolf.com/deals",
@@ -194,9 +194,9 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Black Friday Early Access",
-      "signal_hash": "cc869f34d02db73ec841112586589df3",
+      "signal_hash": "0d1bebaa04013f2dc83742b23eeb8af3",
       "signal": [
-        "Midnight ends your Early Access advantage. Book 65% off ALL cruises, FREE guests, and up to 55% off cruise extras.",
+        "Get ahead of Black Friday with cruises from $49/night, FREE guests, and up to 55% off cruise extras.",
         "Heroes Sail Free",
         "Black Friday Early Access",
         "Book Now",
@@ -220,9 +220,9 @@
         "Save Up to 55% Off Drinks, Excursions, Spa & More",
         "Save before you sail with"
       ],
-      "line_hashes": "de24c058 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab",
+      "line_hashes": "3988a0c3 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-10-29T18:59:54.605Z"
+      "changed_at": "2026-10-30T10:12:47.377Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
