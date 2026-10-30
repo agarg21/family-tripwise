@@ -842,6 +842,86 @@
         "verdict": "only_for",
         "who": "Families taking 4+ nights at Atlantis by January 31, 2027 outside the blackout weeks, especially with children 5 and under.",
         "why": "The resort credit and kids-eat-free help, but breakfast covers two people only and fees, a 21% charge and gratuities add up for a family of 4."
+      },
+      "v2": {
+        "page_title": "Atlantis Bahamas Deal: $250 Resort Credit, Breakfast for Two and Up to 35% Off 4+ Nights",
+        "context": "Atlantis Paradise Island, The Bahamas: a resort with the Aquaventure water park, a kids club and marine habitats",
+        "context_source": {
+          "label": "Atlantis family-friendly resort page",
+          "url": "https://www.atlantisbahamas.com/things-to-do/family-friendly",
+          "observed_on": "2026-10-30",
+          "covers": "what Atlantis is, where it is and what kids can do there"
+        },
+        "big_number": "$250",
+        "big_label": "resort credit for your room on a 4+ night stay, plus breakfast for two each day",
+        "headline": "Atlantis Bahamas: a $250 resort credit, free breakfast for two and up to 35% off when you stay 4+ nights",
+        "chips": [
+          "Holiday weeks blacked out",
+          "4+ nights",
+          "Kids 5 and under eat free",
+          "Fees and 21% charge added"
+        ],
+        "best_for": "Families already planning 4 or more nights at Atlantis before January 31, 2027, away from Thanksgiving week and the Christmas holidays, especially with a child aged 5 or under.",
+        "not_for": "Families who want an all-inclusive price, a short 2 or 3 night stay, or a Thanksgiving or Christmas trip: those dates are blacked out.",
+        "cost": "Trip cost: we have no checked price for a family of 4. Price the room for your dates on the Atlantis site, then add the 21% charge on the room rate, the daily resort fee, gratuities for everyone 12 and older, the children's breakfasts and your flights (for example from New York City, which we have not priced).",
+        "saves": "Saves: a $250 resort credit for activities or food, breakfast for two worth up to $100 a day, and up to 35% off the room (\"up to\" is a maximum; your dates may get less).",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, in one room for 4 nights at The Coral.",
+        "get": [
+          "One $250 credit for the room for the whole stay, usable at the kids club (Atlantis Kids Adventures), Dolphin & Marine Adventures or Atlantis restaurants; unused credit is lost.",
+          "Daily buffet breakfast for the 2 adults, valued up to $100 a day; the 8-year-old's breakfast is extra.",
+          "The 4-year-old gets a free kids' entrée at participating restaurants when an adult orders a full-price entrée (guests of The Coral, The Royal, The Reef and The Cove).",
+          "Up to 35% off the room rate; the offer page does not say which rooms or dates get the full 35%."
+        ],
+        "compare": [
+          "Fees you pay with or without the deal at The Coral: a resort fee of $77.00 a day and gratuities of up to $14 per person per night for guests 12 and older, plus a 21% charge on the room rate.",
+          "To judge the saving, price the same dates with and without the offer on the Atlantis site; we have not seen a regular rate to compare."
+        ],
+        "catch": [
+          "Not valid November 21 to 27, 2026 or mid-December 2026 to January 1, 2027.",
+          "Breakfast covers two people, so older kids' breakfasts are extra.",
+          "The 21% charge, the daily resort fee and gratuities for everyone 12 and older are added to the room price."
+        ],
+        "how": [
+          "Book a new reservation of 4 or more nights at The Coral, The Royal, The Cove, The Reef or Harborside by November 22 (no year is shown; we read it as 2026).",
+          "Travel by January 31, 2027, avoiding the blackout weeks.",
+          "Before you pay, compare the price with and without the offer and read the cancellation and deposit terms."
+        ],
+        "things_to_do": {
+          "items": [
+            "Aquaventure, the resort's water park, with the Leap of Faith slide through a shark-filled lagoon.",
+            "Poseidon's Playzone, a water play area for kids under 54 inches tall.",
+            "Atlantis Kids Adventures, a kids club for ages 3 to 12 with cooking classes, crafts, treasure hunts and outdoor games.",
+            "Dolphin Cay and open-air marine habitats with more than 250 marine species."
+          ],
+          "source": {
+            "label": "Atlantis family-friendly resort page",
+            "url": "https://www.atlantisbahamas.com/things-to-do/family-friendly",
+            "observed_on": "2026-10-30",
+            "covers": "what Atlantis is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "The $250 credit can pay for the kids club or a dolphin or marine activity.",
+          "Breakfast for two each day of a 4+ night stay.",
+          "Kids 5 and under eat a free entrée at participating restaurants."
+        ],
+        "cons": [
+          "A 21% charge, a daily resort fee and gratuities for guests 12 and older are added.",
+          "Thanksgiving week and the Christmas holidays are blacked out.",
+          "\"Up to 35%\" is a maximum, and no regular rate is shown to compare."
+        ],
+        "post": {
+          "title": "Atlantis Bahamas: $250 resort credit and breakfast for two on 4+ nights",
+          "hook": "Atlantis, Bahamas: stay 4+ nights and get a $250 resort credit, breakfast for two and up to 35% off.",
+          "verdict": "Only for families already set on 4+ nights at Atlantis outside the holidays.",
+          "catch": "The catch: a 21% charge, resort fee and gratuities are added; kids' breakfasts extra."
+        },
+        "hero_image": {
+          "slug": "atlantis-mayan-temple-slides",
+          "alt": "A water slide drops steeply down the front of a tall Mayan-style stone temple into a turquoise pool at Atlantis, with palm trees and people at the top",
+          "caption": "The Mayan Temple slides at Atlantis, Paradise Island (an older visitor photo, not taken by Family Tripwise; the water park may have changed)."
+        },
+        "og_image": "images/og/deals/atlantis-bahamas-fall-into-paradise.png"
       }
     }
   ]

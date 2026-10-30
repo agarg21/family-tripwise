@@ -23,3 +23,14 @@ The Fun Card offer page itself was read 2026-10-28 and is not re-fetched until t
 | Wikimedia Commons photo | https://commons.wikimedia.org/wiki/File:Sea_Carousel,_SeaWorld_Orlando.jpg | 2026-10-30 (self-host-images workflow) | Sea Carousel at SeaWorld Orlando with children riding; CC BY 2.0; author SeaWorld (Flickr); 1600 x 1071 | New hero photo, self-hosted as site/images/seaworld-orlando-sea-carousel.webp. A second candidate (SeaWorld_Orlando_lighthouse.jpg, CC BY-SA 4.0) was downloaded and not used; removed |
 
 Comparison used on the page: the Fun Card at USD 144.99 against SeaWorld's own single-day starting price (USD 59.99 online; day prices vary by date) and gate price (USD 151.99). Two cheapest day tickets (USD 119.98) cost less than one card, three (USD 179.97) cost more, so the page says the card pays off "from about your third visit" and states no saving figure of its own. A family of 4 needs four cards because no child price is shown; the page states no family total.
+
+## Atlantis Paradise Island: v2 context and things to do (G11, 2026-10-30 ~02:30 ET)
+
+The Fall Into Paradise offer page was read 2026-10-29 and was not re-fetched (weekly limit); all deal terms, $ figures and dates on the v2 page come from that dated read (docs/research/deal-checks-2026-10-29.md).
+
+| Page | Official URL | Fetched | Observed value | Change vs previous |
+|---|---|---|---|---|
+| Atlantis family-friendly resort page (official) | https://www.atlantisbahamas.com/things-to-do/family-friendly | 2026-10-30 (WebFetch, once) | "Nestled in The Bahamas"; Paradise Island; "Aquaventure, the ultimate water park within Atlantis"; "The iconic Leap of Faith slide, which sends you through a shark-filled lagoon"; Poseidon's Playzone "Exclusively designed for kids under 54 inches tall"; "Atlantis Kids Adventures" "Designed for kids aged 3 to 12" (culinary classes, arts and crafts, treasure hunts, outdoor games); Dolphin Cay; "the largest open-air marine habitat in the world representing over 250 marine species"; no page date | First read (context line and things to do) |
+| Wikimedia Commons photo | https://commons.wikimedia.org/wiki/File:Mayan_Temple_Slides_at_Atlantis_1.jpg | 2026-10-30 (self-host-images workflow) | Mayan-style temple with a water slide into a pool at Atlantis; CC BY-SA 3.0; author Fred Hsu; 1600 x 1200 | New hero photo (site/images/atlantis-mayan-temple-slides.webp). A second candidate (Atlantis_Hotel,_Paradise_Island,_Bahamas.jpg, CC BY 2.0, night shot, 800 px) was downloaded and not used; removed |
+
+Presentation only: the big number is the stated USD 250 per-room credit; no family total, regular rate or summed saving is stated (none observed). Fees shown for The Coral (USD 77.00 resort fee a day, gratuities up to USD 14 per person per night for 12+) are the offer page's own figures.
