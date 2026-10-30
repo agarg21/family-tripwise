@@ -117,7 +117,7 @@ export async function cumulativeSpend(dir) {
     const prior = report?.budget?.prior_spend_usd;
     if (!Number.isFinite(prior) || !Array.isArray(report.calls)) continue;
     const billed = report.calls.reduce((sum, c) => sum + (Number.isFinite(c?.cost_usd) ? c.cost_usd
-      : String(c?.endpoint).startsWith("dataforseo_labs/") ? 0.14 : 0.01), 0);
+      : String(c?.endpoint).startsWith("dataforseo_labs/") ? 0.14 : String(c?.endpoint).startsWith("business_data/") ? 0.05 : 0.01), 0);
     total = Math.max(total, prior + billed);
   }
   return total;
