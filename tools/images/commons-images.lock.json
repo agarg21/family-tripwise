@@ -1,4 +1,38 @@
 {
+  "atlantis-mayan-temple-slides": {
+    "file": "Mayan_Temple_Slides_at_Atlantis_1.jpg",
+    "path": "images/atlantis-mayan-temple-slides.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 133532,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mayan_Temple_Slides_at_Atlantis_1.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Mayan_Temple_Slides_at_Atlantis_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1600,
+    "original_height": 1200,
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "Fred Hsu (Wikipedia:User:Fredhsu on en.wikipedia)",
+    "credit": "Photo taken and uploaded by user",
+    "observed_on": "2026-10-30"
+  },
+  "atlantis-paradise-island-hotel": {
+    "file": "Atlantis_Hotel,_Paradise_Island,_Bahamas.jpg",
+    "path": "images/atlantis-paradise-island-hotel.webp",
+    "width": 800,
+    "height": 600,
+    "bytes": 40922,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Atlantis_Hotel,_Paradise_Island,_Bahamas.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/5/55/Atlantis_Hotel%2C_Paradise_Island%2C_Bahamas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 800,
+    "original_height": 600,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "ebodie",
+    "credit": "Flickr",
+    "observed_on": "2026-10-30"
+  },
   "beaches-turks-caicos-pool": {
     "file": "Beaches_Resort_Pool_-_Turks_&_Caicos_(6709609799).jpg",
     "path": "images/beaches-turks-caicos-pool.webp",
