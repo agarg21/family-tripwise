@@ -60,6 +60,17 @@ Flag (a lead): on https://www.royalcaribbean.com/terms-and-conditions/promotions
 
 Decision: no fact on the live Royal Caribbean deal page is contradicted by the change; no page or post change; flag cleared. The "$800 Savings" and "Deal Drop Sale" lines (type, amount basis, stateroom, sailings and dates not in the extract) is a lead only: re-read the terms page from 2026-11-04 if a new Royal Caribbean check is considered.
 
+## SeaWorld Orlando tickets and Fun Card pages: deal-watch flags 2026-10-30T16:43Z (QUEUE G09w)
+
+Flags (leads): the watcher's extracted lines changed on two seaworld.com pages. Not re-fetched by the operator: both URLs were read on 2026-10-28 (docs/research/deal-checks-2026-10-28.md, docs/research/growth-deals-inventory-2026-10-28.md row 21), so the once-per-URL-per-week rule (OWNER D7) allows the next read from 2026-11-04.
+
+| Source | Observed | Observed value (watcher extract, OWNER D15) | Change vs previous watcher state (2026-10-29T18:59Z) |
+|---|---|---|---|
+| https://seaworld.com/orlando/tickets/ (seaworld-orlando-tickets) | 2026-10-30T16:43Z | Gained a second "Save Up To 60% On Tickets" banner line; "Save Up to 60%", "Get 2 Visits for $53/Day", "$106.00 total" and "Get Unlimited Visits in 2027 + Rest of 2026 FREE" were already in the extract | Similar sales banner added; no new offer, price, basis or date |
+| https://seaworld.com/orlando/tickets/fun-card/ (seaworld-orlando-fun-card; check seaworld-orlando-2027-fun-card) | 2026-10-30T16:43Z | Gained "Unlimited Visits in 2027 + Rest of 2026 FREE!" (same offer as the existing "Get Unlimited Visits in 2027 + Rest of 2026 FREE" line); dropped the payment-plan line "for 11 mos. at 0% APR, $21.25 due today" ("$17.50 due today" and "Annual payments $210.00" remain); "Expires on 12/31/2027." unchanged | Banner repeat added; one monthly-payment variant removed |
+
+Decision: no fact on the live SeaWorld Orlando Fun Card deal page is contradicted (its headline already says unlimited visits for the rest of 2026 and all of 2027; the page does not show payment-plan figures). No page, post or queue change; both flags cleared. "Save Up To 60% On Tickets" (basis, ticket type and dates not in the extract) is a lead only: re-read the tickets page from 2026-11-04 if a new SeaWorld ticket check is considered.
+
 ## LEGOLAND Florida Hotel + Ticket Package (new deal check; QUEUE G05/G11, v2 from the start)
 
 Lead: LEGOLAND's own Florida deals pages (official search result, 2026-10-30). robots.txt for www.legoland.com allows these paths (only /app_plugins disallowed). Each URL fetched once this run.

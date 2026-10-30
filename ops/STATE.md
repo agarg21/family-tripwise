@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-30 transactions=10
-run: {id: 2026-10-30T17:06Z, started_at: 2026-10-30T17:06Z}
+today: 2026-10-30 transactions=11
+run: none
 last_public_release: 7db0666 (2026-10-30 ET, new Sesame Place Philadelphia 2027 season pass deal check, G11; live via 877099d); last main code change 35a5b7f (v2.price_sample, hotel matchKey)
 active: none (Atlantis still parked on q/G11 f2d3b21 until O10; Club Med on q/G11-clubmed until O9)
 
@@ -37,4 +37,5 @@ active: none (Atlantis still parked on q/G11 f2d3b21 until O10; Club Med on q/G1
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 17:06Z G09w SeaWorld tickets + Fun Card flags decided (no site change): banner repeats and a dropped payment-plan line; live Fun Card page not contradicted; pages read Oct 28, not refetched (next Nov 4); "Save Up To 60%" is a lead. Integrity PASS_WITH_P3.
 - 2026-10-30 16:04Z G05/G11 new Sesame Place Philadelphia 2027 season pass check delivered 7db0666 (release.json 877099d contains it; page, /deals/, photo, og card verified live): Bronze $99.99 a person aged 2+ (regular $175.50), rest of 2026 included, "Only for 4+ visits" vs $31.99 online day tickets. Integrity FAIL (P2 event facts not in evidence) → PASS_WITH_P3; persona 3.93 → 4.07 PASS. Deploy of 7db0666 first failed on STATE size (claim line); trimmed 4ab01b5 + dispatch.
