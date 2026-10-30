@@ -50,3 +50,18 @@ Options: (a) free-license stock (Unsplash/Pexels license) for mood images, credi
 1. Build v2 for one deal (Beaches) on a branch; persona review; owner reviews the rendered page, card and post.
 2. Roll v2 out to all live deal checks; regenerate current queues.
 3. Owner sets OWNER.md D12 back to Approved; posting resumes.
+
+## v3 (owner feedback on LEGOLAND, 2026-10-30)
+Owner: "I can't figure out how much I'm spending with / without this deal. Is it $60 saved on $1,000?" The page also had long paragraphs; it should read like an infographic.
+
+Required now (AGENTS.md Content Standard): a spend-vs-save card at the top, concise visual layout, and a persona gate that fails if a reader cannot state spend and save from the top of the page.
+
+Worked example from figures already in our records (all observed; labelled rough comparison because dates and ticket types differ):
+| | Per night, 2 adults + 2 kids |
+|---|---|
+| With the package (advertised "from $169 per person per night", 1 night, Park Hopper tickets + breakfast, before tax; read Oct 28–30) | from about $676 |
+| Without: LEGOLAND Castle Hotel (Google Hotels, Dec 4–7, kids 5 and 8, read Oct 30; taxes unclear) | about $383 |
+| plus four 1-day tickets "from $69" online (LEGOLAND help page, read Oct 30) | about $276 |
+| Without, total (no breakfast) | about $659 |
+Result: roughly the same price; the bundle adds breakfast, SEA LIFE and early entry rather than a discount. The "kids from $39" line saves at most about $30 per child per day against the $69 online ticket (about $60 a day for two kids on a ~$660 day, under 10%). Verdict shape: "Not a discount: a convenience bundle. Book it for breakfast and early entry, not to save money."
+Build the card from these, show what each side includes, and keep every input's date and source in the details.

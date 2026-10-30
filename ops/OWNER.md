@@ -18,11 +18,10 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D18 Link-preview tags (2026-10-29) — Approved: og/twitter tags on all pages (one batch). O2 answered No: remove the Nov 8-13 samples by Nov 7 (Q17b).
 - D19 Deal v2 rollout (2026-10-29, owner) — Approved: other deal pages, ≤3 per release.
 - D20 (2026-10-29, owner) — Approved: O8 release G14 photo batch 1 (q/G14) and fix older copy separately; O5 trip prices: SerpApi free (owner adds SERPAPI_API_KEY), D8 also covers DataForSEO hotel price checks within USD 20.
+- D21 (2026-10-30, owner) — Approved: O9 release Club Med v2 page (no posts until priced); O10 labelled sums of published figures (estimate; party, nights, source dates).
 
 ## Owner tasks (operator cannot do these)
 - T1/T2 done (10-27, 10-28; do not repeat).
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O9 (10-30) Release Club Med v2 (q/G11-clubmed; persona 3.87, gap is evidence not wording)? Recommend: yes, page only; no posts until a price is observed.
-- O10 (10-30) Allow labelled sums of published figures (e.g. "estimate: up to $650 perks vs ~$420 fees, 4 nights")? The validator forbids them; personas call it the biggest gap. Recommend: yes, labelled with party, nights, source date.
