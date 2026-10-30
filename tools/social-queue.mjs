@@ -177,7 +177,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
         big_label: check.v2.big_label,
         verdict_label: VERDICT_LABEL[check.score?.verdict] ?? null,
         deadline: `${label} ${longDate(check.expires_on)}`,
-        lines: [check.v2.post.hook, check.v2.post.verdict, check.v2.post.catch, bookBy],
+        lines: [check.v2.post.hook, check.v2.post.verdict, check.v2.post.catch, check.v2.date_note_short ? `${label} ${longDate(check.expires_on)} (${check.v2.date_note_short}).` : bookBy],
         checked: `Checked on ${new URL(check.official_url).hostname.replace(/^www\./, "")} on ${shortDate(check.observed_on)}.`,
         hero_image: check.v2.hero_image?.slug ?? null,
         hero_alt: check.v2.hero_image?.alt ?? null,

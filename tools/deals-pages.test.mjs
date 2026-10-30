@@ -361,3 +361,13 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(post({ hook: `${b.v2.post.hook} ${"y".repeat(20)}`, verdict: `${b.v2.post.verdict} ${"z".repeat(40)}` }).some((p) => /keep them under 340/.test(p)));
   assert.ok(v({ og_image: "images/og/deals/other-deal.png" }).some((p) => /og_image must be images\/og\/deals\/beaches-first-passport-credit\.png/.test(p)));
 });
+
+test("G11: v2 date_note_short shortens the year note on the hero chip and post only, and is validated", () => {
+  const a = checks.find((c) => c.id === "atlantis-bahamas-fall-into-paradise");
+  assert.equal(a.v2.date_note_short, "year is our reading");
+  const bad = validateDealChecks([{ ...a, v2: { ...a.v2, date_note_short: "2026" } }], { today: "2026-10-30" });
+  assert.ok(bad.some((p) => /date_note_short/.test(p)));
+  const noNote = validateDealChecks([{ ...a, expires_note: undefined }], { today: "2026-10-30" });
+  assert.ok(noNote.some((p) => /date_note_short/.test(p)));
+  assert.ok(!validateDealChecks([a], { today: "2026-10-30" }).some((p) => /date_note_short/.test(p)));
+});
