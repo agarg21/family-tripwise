@@ -9,7 +9,7 @@ Carry (persona/integrity P3s, older copy): Orlando hotels opens with dated-sourc
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet baseline (tools/site-quality-baseline.json). Carry P3s: empty-table edge cases; nested sections; --accept arg. Next: 2) Weekly (first Monday run): site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, persona review (docs/plan/page-quality-rubric.md) of pages changed since last review + top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE; no automatic edits. 3) On demand: OWNER.md "review <page or all>" goes next.
+Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet baseline (tools/site-quality-baseline.json). Carry P3s: empty tables; nested sections; --accept. Next: 2) Weekly (first Monday run): site-health report: outbound 404/410 links (browser UA, robots honored), observations older than 60 days, persona review (docs/plan/page-quality-rubric.md) of pages changed since last review + top 3 by impressions; ledger ops/page-reviews.json; failing pages get fix items; summary in STATE; no automatic edits. 3) On demand: OWNER.md "review <page or all>" goes next.
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
@@ -20,6 +20,7 @@ Carry P3s: RC "$800 Deal Drop Sale" lead (read terms from Nov 4); Margaritaville
 open · M · owner: D11/D15 Approved; rollout needs O7 · gate: none
 Step 1 done 2026-10-29 (b32bd32): Beaches page v2 (validateDealV2; hero photo; og card via tools/deal-og-images.mjs).
 Step 2 done 2026-10-29 (1a3c8e8): v2 post text + photo card from validated v2.post; `social-queue.mjs <date> --refresh`. Persona 4.07.
+LEGOLAND Florida (new check, v2) on q/G11-legofl c6e543b: re-review the "From" chip fix, then release. P3: related links double the book-by date.
 Step 3 Club Med on q/G11-clubmed (c296b1d), held on OWNER O9 (persona 3.87: no family price). Branch P3s: Threads 392 chars; Pinterest title order.
 LEGOLAND v2 delivered 1a5bc8d (persona 4.08; P3s: terms caption omits comparison rows; bold Saves heavy on phones). SeaWorld v2 delivered 17b989f (persona 4.00; v2.extra_sources cites comparison pages; P3s: "Listed until" chip unqualified; post date is the terms date; phone first screen lacks price box). Busch Gardens Fun Card delivered 5f6962a (persona 4.20; P3s: no verdict_pill unit test; long Saves/Trip cost lines). Atlantis v2 parked on q/G11 (f2d3b21; integrity PASS_WITH_P3, persona 3.93: no $ savings figure) until O10 or an "Only for <who>" pill (now available: validated v2.verdict_pill, 5f6962a); then merge main, re-test, re-review, release. Next: 3) v2 (page + post block) for the other deal checks, longest-lived first; pick checks with an observed price or clear family value first, since evidence-capped deals fail the persona bar, ≤3 pages per release, then --refresh current queues; photos via tools/images/commons-images.json (self-host-images workflow triggers on q/Q11, q/G11 pushes, or dispatch on q/*). Carry P3s: related-deal hedges grey; phone verdict below first screen; big desktop h2s; cap image.alt 500; card lacks year/"older photo" notes.
 
@@ -57,7 +58,7 @@ open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/whe
 ## Q14 Cycle go/no-go memo
 open · S · owner: none · gate: on or after 2026-11-12
 Files: ops/OWNER.md.
-Acceptance: scoreboard vs baseline, which content and channels to scale, prune list; due on or after 2026-11-12 as a mid-cycle check (authorization now runs to 2027-01-15).
+Acceptance: scoreboard vs baseline, what to scale, prune list (mid-cycle check).
 
 ## NOT NOW (do not select; the site itself is not frozen)
 - Newsletter (owner skipped, 10-28); Pinterest, YouTube and TikTok posting until their API approvals clear.
