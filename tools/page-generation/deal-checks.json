@@ -841,7 +841,7 @@
         },
         "verdict": "only_for",
         "who": "Families taking 4+ nights at Atlantis by January 31, 2027 outside the blackout weeks, especially with children 5 and under.",
-        "why": "The resort credit and kids-eat-free help, but breakfast covers two people only and fees, a 21% charge and gratuities add up for a family of 4."
+        "why": "The $250 credit and a free kids' entrée for under-6s help, but breakfast covers only two people, and the daily resort fee, gratuities and 21% charge add up for a family of 4."
       },
       "v2": {
         "page_title": "Atlantis Bahamas Deal: $250 Resort Credit, Breakfast for Two and Up to 35% Off 4+ Nights",
@@ -853,13 +853,13 @@
           "covers": "what Atlantis is, where it is and what kids can do there"
         },
         "big_number": "$250",
-        "big_label": "resort credit for your room on a 4+ night stay, plus breakfast for two each day",
+        "big_label": "resort credit for your room on a 4+ night stay, plus breakfast for two worth up to $100 a day",
         "headline": "Atlantis Bahamas: a $250 resort credit, free breakfast for two and up to 35% off when you stay 4+ nights",
         "chips": [
           "Holiday weeks blacked out",
           "4+ nights",
           "Free kids' entrée, ages 5 and under",
-          "Fees and 21% charge added"
+          "$77.00 a day resort fee + 21% charge"
         ],
         "best_for": "Families already planning 4 or more nights at Atlantis before January 31, 2027, away from Thanksgiving week and the Christmas holidays, especially with a child aged 5 or under.",
         "not_for": "Families who want an all-inclusive price, a short 2 or 3 night stay, or a Thanksgiving or Christmas trip: those dates are blacked out.",
@@ -873,7 +873,7 @@
           "Up to 35% off the room rate; the offer page does not say which rooms or dates get the full 35%."
         ],
         "compare": [
-          "Fees added at The Coral for 4 nights: 4 × $77.00 resort fee, up to 4 × $14 gratuities for each guest 12 or older (both adults here), and a 21% charge on the room rate.",
+          "Fees added at The Coral for 4 nights: 4 × $77.00 resort fee (per room or per person is not stated), up to 4 × $14 gratuities for each guest 12 or older (both adults here), and a 21% charge on the room rate.",
           "To judge the saving, price the same dates with and without the offer on the Atlantis site; we have not seen a regular rate to compare."
         ],
         "catch": [
@@ -912,9 +912,9 @@
         ],
         "post": {
           "title": "Atlantis Bahamas: $250 resort credit and breakfast for two on 4+ nights",
-          "hook": "Atlantis, Bahamas: stay 4+ nights, get a $250 resort credit, breakfast for two and up to 35% off.",
+          "hook": "Atlantis, Bahamas: 4+ nights gets a $250 resort credit, breakfast for two and up to 35% off.",
           "verdict": "Only for families already set on 4+ nights at Atlantis, away from the holidays.",
-          "catch": "The catch: a 21% charge, resort fee and gratuities are added; kids' breakfasts cost extra."
+          "catch": "The catch: a $77.00 a day resort fee, up to $14 a night gratuity per adult and a 21% charge; kids' breakfasts extra."
         },
         "hero_image": {
           "slug": "atlantis-mayan-temple-slides",
