@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { selfHostImages } from "./self-hosted-images.mjs";
+import { placeHeroPhoto } from "./hero-photos.mjs";
 import { join } from "node:path";
 
 const markerStart = "<!-- priority-upgrade:start -->";
@@ -1041,9 +1042,11 @@ function insertSchema(html, schema) {
   return html.replace(/\s*<\/body>/, () => `\n${schema}  </body>`);
 }
 
-function applyBaseReplacements(html, replacements = [], path = "") {
+function applyBaseReplacements(html, replacements = [], path = "", heroPhoto = false) {
   // Images are self-hosted per tag (Q11), so compare and insert the self-hosted form of each pair.
   for (const [rawBefore, rawAfter] of replacements) {
+    // G14: pages with a top banner (hero-photos.mjs) drop the lower photo, so its tag fix-ups no longer apply.
+    if (heroPhoto && /^<(img|figcaption)\b/.test(rawBefore)) continue;
     const before = selfHostImages(rawBefore, path);
     const after = selfHostImages(rawAfter, path);
     if (html.includes(before)) {
@@ -1068,16 +1071,22 @@ function upgradeFile(outDir, path, page, type) {
   let mediaSection = "";
   if (page.glanceFirst) {
     // Preserve the image before stripping a prior upgraded body during regeneration.
-    html = applyBaseReplacements(html, page.baseReplacements, path);
+    html = applyBaseReplacements(html, page.baseReplacements, path, Boolean(page.heroPhoto));
     const media = html.match(/      <section class="container media-section">[\s\S]*?<\/section>/g);
-    if (media?.length !== 1) throw new Error("Expected one glance-first licensed media section");
-    mediaSection = media[0];
-    html = html.replace(mediaSection, "");
+    if (page.heroPhoto) {
+      // The banner replaces the lower photo; on regeneration that photo is already gone.
+      if ((media?.length ?? 0) > 1) throw new Error("Expected at most one glance-first licensed media section");
+      if (media) html = html.replace(media[0], "");
+    } else {
+      if (media?.length !== 1) throw new Error("Expected one glance-first licensed media section");
+      mediaSection = media[0];
+      html = html.replace(mediaSection, "");
+    }
   }
   html = stripMarked(html, markerStart, markerEnd);
   html = stripMarked(html, schemaStart, schemaEnd);
   html = updateHead(html, page);
-  if (!page.glanceFirst) html = applyBaseReplacements(html, page.baseReplacements, path);
+  if (!page.glanceFirst) html = applyBaseReplacements(html, page.baseReplacements, path, Boolean(page.heroPhoto));
   html = replaceBaseActivitySection(html, page);
   html = removeBaseActivitySiblingBand(html, page);
   if (page.removeGeneratedAgeSections) html = removeGeneratedAgeSections(html);
@@ -1130,6 +1139,7 @@ ${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel
     const extraLink = page.frontComparisonExtraLink ? `<a href="${esc(page.frontComparisonExtraLink[0])}">${esc(page.frontComparisonExtraLink[1])}</a>` : "";
     html = html.replace(creditAndCopy, `$1\n        <nav aria-label="${esc(page.city)} activity sections"><a href="#${activitySectionId(page, "comparison")}">Compare activities</a>${middleLink}<a href="#${activitySectionId(page, "notes")}">Detailed checks</a>${extraLink}</nav>`);
   }
+  if (page.heroPhoto) html = placeHeroPhoto(html, page.heroPhoto);
   writeFileSync(full, selfHostImages(html, path));
 }
 

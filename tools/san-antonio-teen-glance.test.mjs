@@ -4,8 +4,8 @@ import {readFileSync} from 'node:fs';
 import {teenPages} from './page-generation/upgrade-page-data.mjs';
 const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),'utf8'),html=read('site/things-to-do/san-antonio-with-teens.html'),page=teenPages['things-to-do/san-antonio-with-teens.html'];
 const esc=v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-test('Teen comparison leads the original photo and quick picks without renewing facts',()=>{
-  const at=html.indexOf('id="sa-activity-comparison"');assert.ok(at>0&&at<html.indexOf('<figure class="licensed-photo">')&&at<html.indexOf('id="sa-activity-quick-picks"'));
+test('Teen top photo banner, then comparison before quick picks without renewing facts',()=>{
+  const at=html.indexOf('id="sa-activity-comparison"');assert.ok(at>0&&html.indexOf('<h1>')<html.indexOf('<figure class="licensed-photo hero-photo">')&&html.indexOf('<figure class="licensed-photo hero-photo">')<at&&(html.match(/<figure /g)||[]).length===1&&at<html.indexOf('id="sa-activity-quick-picks"'));
   assert.equal((html.match(/Teen activity decision table<\/h2>/g)||[]).length,1);
   assert.match(html,/<h1>Things to Do in San Antonio With Teens: 10 Picks by Trip Style<\/h1>/);
   assert.match(html,/Attraction facts and official sources checked:<\/strong> July 27, 2026/);

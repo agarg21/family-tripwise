@@ -6,13 +6,13 @@ const read=p=>readFileSync(new URL(`../${p}`,import.meta.url),'utf8');
 const html=read('site/things-to-do/san-antonio-with-kids.html');
 const page=activityPages['things-to-do/san-antonio-with-kids.html'];
 const esc=v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-test('San Antonio comparison precedes the licensed photo and existing filter cards',()=>{
+test('San Antonio top photo banner, then comparison before the filter cards',()=>{
   const at=html.indexOf('id="sa-activity-comparison"');assert.ok(at>0);
-  assert.ok(at<html.indexOf('<figure class="licensed-photo">'));
+  const banner=html.indexOf('<figure class="licensed-photo hero-photo">');assert.ok(html.indexOf('<h1>')<banner&&banner<at);assert.equal((html.match(/<figure /g)||[]).length,1);
   assert.ok(at<html.indexOf('data-tags='));assert.ok(at<html.indexOf('Five useful ways to start'));
   assert.equal((html.match(/Activity decision table<\/h2>/g)||[]).length,1);
   assert.match(html,/<h1>Things to Do in San Antonio With Kids: 13 Picks by Trip Style<\/h1>/);
-  assert.match(html,/July 26, 2026/);assert.match(html,/Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0/);
+  assert.match(html,/July 26, 2026/);assert.match(html,/Photo: Matt Harriger via <a href="https:\/\/commons.wikimedia.org\/wiki\/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons<\/a>, <a href="https:\/\/creativecommons.org\/licenses\/by-sa\/2.0\/">CC BY-SA 2.0<\/a>/);
 });
 test('Every original activity, estimate, filter and detail remains in the source-dated page',()=>{
   for(const row of page.rows)for(const v of row)assert.ok(html.includes(esc(v)),v);

@@ -5,6 +5,7 @@ import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { ageState } from "../evidence-audit.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
+import { heroPhotoSection } from "./hero-photos.mjs";
 
 export const bostonItineraryPath = "family-itinerary/boston-with-kids.html";
 export const bostonItineraryCheckedOn = "2026-10-27";
@@ -153,6 +154,7 @@ export function bostonItineraryPage() {
           <p>One main stop each morning, a protected rest block, and an optional afternoon. Built from official hours and entry rules, not a visit.</p>
         </div>
       </section>
+${heroPhotoSection("boston")}
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>

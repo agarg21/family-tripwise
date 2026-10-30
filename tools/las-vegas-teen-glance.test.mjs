@@ -8,9 +8,11 @@ const html = read("site/things-to-do/las-vegas-with-teens.html");
 const page = teenPages["things-to-do/las-vegas-with-teens.html"];
 const esc = v => String(v).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
-test("Vegas teen comparison precedes preserved photo and quick picks", () => {
+test("Vegas teen top photo banner, then comparison before quick picks", () => {
   const at = html.indexOf('id="lv-activity-comparison"');
-  assert.ok(at > 0 && at < html.indexOf('<figure class="licensed-photo">') && at < html.indexOf("Five ways to let the teen choose"));
+  const banner = html.indexOf('<figure class="licensed-photo hero-photo">');
+  assert.ok(at > 0 && html.indexOf("<h1>") < banner && banner < at && at < html.indexOf("Five ways to let the teen choose"));
+  assert.equal((html.match(/<figure /g) || []).length, 1);
   assert.match(html, /Attraction facts and official sources checked:<\/strong> July 22, 2026/);
   assert.match(html, /AREA15 adult-accompaniment policy separately checked October 9, 2026/);
   assert.match(html, /images\/las-vegas-bellagio-fountains.webp/);

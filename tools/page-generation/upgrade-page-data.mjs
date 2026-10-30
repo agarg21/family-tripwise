@@ -298,6 +298,7 @@ export const activityPages = {
     ]
   },
   "things-to-do/san-antonio-with-kids.html": {
+    heroPhoto: "san-antonio",
     frontComparison: true,
     title: "Things to Do in San Antonio With Kids: 13 Picks by Trip Style",
     description:
@@ -564,6 +565,7 @@ export const activityPages = {
     ]
   },
   "things-to-do/chicago-with-kids.html": {
+    heroPhoto: "chicago",
     frontComparison: true,
     frontComparisonPrefix: "chi",
     frontComparisonClass: "chi-activity-glance",
@@ -2177,6 +2179,7 @@ export const itineraryPages = {
 
 export const teenPages = {
   "things-to-do/chicago-with-teens.html": {
+    heroPhoto: "chicago",
     frontComparison: true,
     frontComparisonPrefix: "chi",
     frontComparisonClass: "chi-activity-glance chi-teen-glance",
@@ -2281,6 +2284,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/new-york-city-with-teens.html": {
+    heroPhoto: "new-york-city",
     glanceFirst: true,
     admissionBudget: momaComparison(),
     transportBudget: ferryComparison(),
@@ -2394,6 +2398,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {
+    heroPhoto: "las-vegas",
     frontComparison: true,
     frontComparisonPrefix: "lv",
     frontComparisonClass: "lv-teen-glance",
@@ -2542,6 +2547,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/san-antonio-with-teens.html": {
+    heroPhoto: "san-antonio",
     frontComparison: true,
     title: "Things to Do in San Antonio With Teens: 10 Picks by Trip Style",
     description:

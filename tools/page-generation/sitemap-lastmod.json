@@ -86,16 +86,16 @@
       "lastmod": "2026-10-29"
     },
     "family-itinerary/washington-dc-with-kids.html": {
-      "sha256": "61e7549205d8a76a7cb6a4685e408b9a9920420290a81cc666ecd0fc01c91ff7",
-      "lastmod": "2026-10-27"
+      "sha256": "e58694ab5ea552826b7d42c314f7a46bb20dce34e43494b3cf77db7f576eba04",
+      "lastmod": "2026-10-29"
     },
     "where-to-stay/boston-family-hotels.html": {
       "sha256": "d25aa2492389f201eae1e411e30099275f5b6f94b3f11bf9e9b16cf8a68d9688",
       "lastmod": "2026-10-29"
     },
     "family-itinerary/boston-with-kids.html": {
-      "sha256": "c8b63989a0028e9525c9744e331ad86ca79e9756b1ef7a393710cb53d51cd774",
-      "lastmod": "2026-10-28"
+      "sha256": "c2aad003634caa84c2380e26a6aad42065767e0fbd7c56da6b4b7509fd31e6f6",
+      "lastmod": "2026-10-29"
     },
     "where-to-stay/puerto-vallarta-family-resorts.html": {
       "sha256": "0e6666560fd02b1af25879f014f9737e173d2a006838799eff6fa3e5af4aa9f6",
@@ -126,7 +126,7 @@
       "lastmod": "2026-10-29"
     },
     "things-to-do/chicago-with-kids.html": {
-      "sha256": "5526751d4aeb0af2c479bbdc0c85d941c3208275ce96ce512d013898726ad673",
+      "sha256": "b43917c89eab11b3a1cd1383eb34656b5cd3d1433b215220e6df1a5232498408",
       "lastmod": "2026-10-29"
     },
     "where-to-stay/chicago-with-kids.html": {
@@ -138,7 +138,7 @@
       "lastmod": "2026-10-29"
     },
     "things-to-do/san-antonio-with-kids.html": {
-      "sha256": "cc44fad859303d59727d104e7729f5a8c27889751f0d74445bfd6bf9575d2ff6",
+      "sha256": "c42fdbf97e91d8fede34ee15aec16fc90e42ef90c2e940cd771805dc3fb9023e",
       "lastmod": "2026-10-29"
     },
     "where-to-stay/san-antonio-with-kids.html": {
@@ -186,15 +186,15 @@
       "lastmod": "2026-10-29"
     },
     "things-to-do/chicago-with-teens.html": {
-      "sha256": "685669b79e6ea73b3b3f1528ea6b649e0086a5e2aea949203ccb4c1e033f1c7b",
+      "sha256": "f0ecca457e0cc133482a20b667858f1fa381cd77d5ed69edec5bffab37578e33",
       "lastmod": "2026-10-29"
     },
     "things-to-do/las-vegas-with-teens.html": {
-      "sha256": "f20dbb05d89dc4185116fdf468078cd3c646c326933730b2f55daeafb8c41fcc",
+      "sha256": "33455023ae9720dcce298aebd02f4d0d91a35864eabb85ad20fc04efd435664a",
       "lastmod": "2026-10-29"
     },
     "things-to-do/new-york-city-with-teens.html": {
-      "sha256": "ccde3861d1813b278f7243fff5a0015362dbf18ab2dbc91759f808843ebf764b",
+      "sha256": "ae56b5397db4bedb0c66d049570c1fcece424dec68ec750a20a2ee9614871beb",
       "lastmod": "2026-10-29"
     },
     "things-to-do/san-diego-with-teens.html": {
@@ -206,7 +206,7 @@
       "lastmod": "2026-10-29"
     },
     "things-to-do/san-antonio-with-teens.html": {
-      "sha256": "9f8a3945c2c499fb4640175c46de0c8a68aa8b448e881df1d1658debd72b14f2",
+      "sha256": "da5a89daf13c76fb21971f64a438dde207d6903a648bcbea7dd4a61648cdb208",
       "lastmod": "2026-10-29"
     }
   }

@@ -8,15 +8,17 @@ const html = read("site/things-to-do/new-york-city-with-teens.html");
 const page = teenPages["things-to-do/new-york-city-with-teens.html"];
 const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
-test("NYC teen comparison leads the preserved quick picks and licensed image", () => {
+test("NYC teen top photo banner, then comparison before the quick picks", () => {
   assert.match(html, /<h1>New York City With Teens<\/h1>/);
   assert.match(html, /<title>Things to Do in New York City With Teens: 10 Picks by Trip Style<\/title>/);
   assert.ok(html.indexOf('id="nyc-teen-comparison"') < html.indexOf("Five ways to let the teen choose the anchor"));
-  assert.ok(html.indexOf('<!-- omny-budget:end -->') < html.indexOf('<figure class="licensed-photo">'));
+  const banner = html.indexOf('<figure class="licensed-photo hero-photo">');
+  assert.ok(html.indexOf("<h1>") < banner && banner < html.indexOf('id="nyc-teen-comparison"'));
+  assert.equal((html.match(/<figure /g) || []).length, 1);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   assert.equal((html.match(/<article class="detail-card">/g) || []).length, 5);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 3);
-  assert.match(html, /new-york-city-central-park\.webp.*loading="lazy"/);
+  assert.match(html, /new-york-city-central-park\.webp.*loading="eager"/);
   assert.match(html, /Photo: Jet Lowe \/ National Park Service, public domain/);
   assert.doesNotMatch(html, /downloads\/.*\.csv|Spreadsheet copy/);
 });
