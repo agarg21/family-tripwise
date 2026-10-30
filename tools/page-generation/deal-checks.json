@@ -445,6 +445,168 @@
       }
     },
     {
+      "id": "busch-gardens-tampa-2027-fun-card",
+      "og_card": "One per-person price for unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027, Adventure Island included; parking extra",
+      "operator": "Busch Gardens Tampa Bay",
+      "category": "Theme park pass",
+      "title": "Busch Gardens Tampa Bay 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027, Adventure Island included",
+      "headline": "One per-person price covers unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027, with the Adventure Island water park included at the same price, but the offer page shows no child price, and parking, tax, service fees and select special events are not included.",
+      "family_of_four": "The Fun Card is priced per person: the page shows USD 129.99 each for Busch Gardens only and the same USD 129.99 each for Busch Gardens + Adventure Island, online in advance only, with no separate child price on the Fun Card page. Busch Gardens' tickets page says children 2 and under do not need a ticket for entry. Parking is not included (the page's FAQ says parking starts at USD 34), and taxes and service fees are extra. Busch Gardens is blocked out on 8 days in 2027 and Adventure Island on 7 summer days in 2027; the page lists no 2026 blockout dates.",
+      "terms": [
+        ["Headline", "Buy 2027 and get the rest of 2026 plus Adventure Island free."],
+        ["Price shown", "Busch Gardens only: USD 129.99 each (also shown: USD 148.99). Busch Gardens + Adventure Island: USD 129.99 each (also shown: USD 210.99). \"Discounted price applies to online advance purchases only and is not available at the park.\" Service fees and taxes not included."],
+        ["Parks", "Busch Gardens Tampa Bay; the Busch Gardens + Adventure Island card adds the Adventure Island water park."],
+        ["Travel window", "Busch Gardens: unlimited visits now through December 31, 2027. Adventure Island: through October 24, 2027."],
+        ["Book by", "No purchase deadline is stated. Our reading: the free rest-of-2026 visits end December 31, 2026."],
+        ["Blockout dates, Busch Gardens 2027", "March 12 and 27; June 26; July 4; November 20; December 23, 25 and 26. The page lists no 2026 blockout dates."],
+        ["Blockout dates, Adventure Island 2027", "May 30; June 12 and 26; July 3, 10, 17 and 24."],
+        ["Who can buy", "US, Canadian and Puerto Rico residents; Florida residency is not required."],
+        ["Child ages", "No child price is stated on the Fun Card page. Busch Gardens' tickets page: \"Children ages 2 & under do not require a ticket for entry.\""],
+        ["Not included", "Parking (the FAQ says parking starts at USD 34), select special events (including Howl-O-Scream), and food and merchandise discounts."],
+        ["Card rules", "Non-transferable and non-refundable; not valid with other discounts or special offers; the page lists automatic renewal as a feature."],
+        ["Prices on Busch Gardens' tickets page and pricing guide, for comparison", "Tickets page (read October 30, 2026): Single-Day Ticket from USD 61.99 each (date-specific; also shown USD 150.99); Two-Day Two Park Ticket USD 106 (ages 3+, USD 53 a day); Three-Day, Three Park Ticket USD 135 (USD 45 a day, any combination of its theme parks). Pricing guide (no date shown; read October 30, 2026): Single-Day Ticket starting at USD 61.99 (gate price USD 150.99); Fun Card USD 129.99 (price at gate USD 148.99); Bronze annual passes from USD 168 a year. Ticket prices vary by date."]
+      ],
+      "unclear": [
+        "The Fun Card page shows USD 148.99 and USD 210.99 next to the USD 129.99 price without saying what they are; Busch Gardens' pricing guide calls USD 148.99 the Fun Card's gate price.",
+        "No child price is shown on the Fun Card page, so it is not clear whether children 3 and up pay the same.",
+        "No purchase deadline is shown; the free rest-of-2026 visits cannot run past December 31, 2026, so we list that as the latest date this bonus can matter.",
+        "Which parks the Three-Day, Three Park ticket covers is not listed on the tickets page.",
+        "How automatic renewal works and how to turn it off is not explained on the offer page."
+      ],
+      "before_booking": [
+        "Price a card for each family member at checkout and look for a child price there.",
+        "Compare your planned visit dates with the 2027 blockout dates above, including spring-break and July 4 dates.",
+        "Add parking for each visit if you will drive, plus tax and service fees.",
+        "Check the automatic-renewal setting before you pay."
+      ],
+      "family_total": null,
+      "official_url": "https://buschgardens.com/tampa/tickets/fun-card/",
+      "source_label": "Busch Gardens Tampa Bay Fun Card page",
+      "observed_on": "2026-10-30",
+      "expires_on": "2026-12-31",
+      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-10-30",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The card is priced per person with no child price shown."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who live near Tampa Bay or will spend three or more days at Busch Gardens Tampa Bay before the end of 2027."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-10-30",
+          "links": [
+            {
+              "label": "WFTV: Busch Gardens Tampa Bay announces 2027 Fun Card with extended access",
+              "url": "https://www.wftv.com/news/local/busch-gardens-tampa-bay-announces-2027-fun-card-with-extended-access/EKWZSU5F25F6PKNK5WAUTPJXTY/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families who will spend three or more days at Busch Gardens Tampa Bay between now and the end of 2027, such as Tampa Bay–area families or families on a longer Florida trip.",
+        "why": "One card costs less than Busch Gardens' own Three-Day ticket and less than three of its cheapest online day tickets, and it adds Adventure Island; for two days, the Two-Day ticket costs less."
+      },
+      "v2": {
+        "page_title": "Busch Gardens Tampa Bay Fun Card: Unlimited Visits Through 2027 for $129.99 a Person",
+        "context": "Busch Gardens Tampa Bay, Florida: an animal theme park with 200+ species and big roller coasters, plus the Adventure Island water park",
+        "context_source": {
+          "label": "Busch Gardens Tampa Bay \"10 reasons to get a Fun Card\" page",
+          "url": "https://buschgardens.com/tampa/tickets/10-reasons-to-get-a-fun-card/",
+          "observed_on": "2026-10-30",
+          "covers": "what Busch Gardens Tampa Bay is, where it is and what families can do there"
+        },
+        "big_number": "$129.99",
+        "big_label": "a person: unlimited Busch Gardens visits through 2027, with Adventure Island at no extra cost; a family of 4 needs a card each",
+        "headline": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person, Adventure Island water park included",
+        "chips": [
+          "Pays off from day 3",
+          "No child price shown",
+          "Parking from $34",
+          "Tax and fees extra"
+        ],
+        "best_for": "Families who will spend three or more days at Busch Gardens before the end of 2027, such as Tampa Bay–area families or families on a longer Florida trip.",
+        "not_for": "A one- or two-day visit: Busch Gardens sells day tickets online from $61.99 and a Two-Day ticket for $106 (ages 3+).",
+        "cost": "Trip cost: we have no checked price for a family of 4. The card is priced per person and the offer page shows no child price, so plan on one card for each of you aged 3 and up, plus tax and service fees (not included), parking and your trip to Tampa (for example flights from New York City, which we have not priced).",
+        "saves": "Saves: money from your third day. One card ($129.99) costs less than Busch Gardens' own Three-Day ticket ($135) and less than three of its cheapest online day tickets ($61.99 each); for two days, the Two-Day ticket ($106) is cheaper.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (the offer page shows no child price, so each of you needs a card; Busch Gardens says kids 2 and under need no ticket).",
+        "get": [
+          "Unlimited Busch Gardens Tampa Bay visits for each person with a card, from the day you buy through December 31, 2027.",
+          "Adventure Island water park visits through October 24, 2027, on the Busch Gardens + Adventure Island card, which costs the same $129.99.",
+          "Blocked days in 2027: 8 at Busch Gardens (including March 12 and 27 and July 4) and 7 summer days at Adventure Island; no 2026 blockout dates are listed.",
+          "Each card cannot be refunded or passed on, and it renews automatically."
+        ],
+        "compare": [
+          "Buy it if you will go on three or more days before the end of 2027; for one or two days, a day ticket (from $61.99 online, date-specific) or the Two-Day ticket ($106, ages 3+) costs less.",
+          "Busch Gardens' tickets page also sells a Three-Day, Three Park ticket for $135, more than one Fun Card.",
+          "Busch Gardens' pricing guide (no date shown; read October 30, 2026) lists the Fun Card at $129.99 (gate price $148.99) and Bronze annual passes from $168 a year."
+        ],
+        "catch": [
+          "No child price is shown, so each family member aged 3 and up likely needs their own card.",
+          "Parking is not included (from $34, per the FAQ), and tax and service fees are extra.",
+          "Howl-O-Scream and other select special events are not included, and the card renews automatically: check that setting before you pay."
+        ],
+        "how": [
+          "Buy online in advance on Busch Gardens' Fun Card page; the $129.99 price is not sold at the park, and no purchase deadline is stated.",
+          "Choose the Busch Gardens + Adventure Island card: it costs the same $129.99.",
+          "Price a card for each family member at checkout, check your dates against the 2027 blockout dates, add parking, and check the automatic-renewal setting."
+        ],
+        "extra_sources": [
+          {
+            "label": "Busch Gardens Tampa Bay tickets page",
+            "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+            "observed_on": "2026-10-30",
+            "covers": "day, Two-Day and Three-Day ticket prices used for the comparison and the free-under-3 rule."
+          },
+          {
+            "label": "Busch Gardens Pricing Guide page (no date shown)",
+            "url": "https://buschgardens.com/pricing-guide-to-busch-gardens/",
+            "observed_on": "2026-10-30",
+            "covers": "the Fun Card gate price and annual pass prices used for the comparison."
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "See more than 200 animal species, including lions, tigers, giraffes and gorillas, and the lions and hyenas at Lion & Hyena Ridge.",
+            "Wild Oasis has interactive play areas and family-friendly attractions for younger kids.",
+            "Big coasters such as Iron Gwazi, Cheetah Hunt, SheiKra and Montu for older kids and teens (check height rules on Busch Gardens' site).",
+            "Christmas Town runs on select nights from November 13 to January 4, 2027; Busch Gardens lists it among the events a Fun Card gets you into."
+          ],
+          "source": {
+            "label": "Busch Gardens Tampa Bay \"10 reasons to get a Fun Card\" page",
+            "url": "https://buschgardens.com/tampa/tickets/10-reasons-to-get-a-fun-card/",
+            "observed_on": "2026-10-30",
+            "covers": "what Busch Gardens Tampa Bay is, where it is and what families can do there"
+          }
+        },
+        "pros": [
+          "One per-person price covers unlimited visits until the end of 2027.",
+          "Adventure Island water park is included at no extra cost on the combined card.",
+          "From three days, it costs less than Busch Gardens' own Three-Day ticket ($135)."
+        ],
+        "cons": [
+          "No child price is shown, so a family of 4 buys a card for everyone aged 3 and up.",
+          "Parking, tax and service fees are extra, and the card is non-refundable and renews automatically.",
+          "Blockout dates include July 4 and spring dates in March 2027."
+        ],
+        "post": {
+          "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person",
+          "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027, water park included.",
+          "verdict": "Only for families going 3+ days by end of 2027; a 2-day ticket is $106.",
+          "catch": "The catch: no child price; parking, tax and fees extra."
+        },
+        "hero_image": {
+          "slug": "busch-gardens-tampa-bay",
+          "alt": "A green steam-style train decorated with holiday garlands passes a lawn at Busch Gardens Tampa Bay while riders go by on a green and yellow roller coaster behind the trees",
+          "caption": "A park train and roller coaster at Busch Gardens Tampa Bay (an older photo by Jeremy Thompson, not taken by Family Tripwise; rides and decorations may have changed)."
+        },
+        "og_image": "images/og/deals/busch-gardens-tampa-2027-fun-card.png"
+      }
+    },
+    {
       "id": "margaritaville-at-sea-black-friday-early-access",
       "og_card": "A 65% off sale, and 3rd and 4th guests sail free on select sailings; taxes, fees and port expenses still apply",
       "operator": "Margaritaville at Sea",
