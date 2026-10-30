@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-30 transactions=13
-run: none
+run: {id: 2026-10-30T20:05Z, started_at: 2026-10-30T20:05Z}
 last_public_release: 3723d9f (2026-10-30 ET, new LEGOLAND New York 2027 season pass deal check, G11; live in release.json); last main code change 35a5b7f (v2.price_sample, hotel matchKey)
 active: none (Club Med on q/G11-clubmed until O9)
 
@@ -21,7 +21,7 @@ active: none (Club Med on q/G11-clubmed until O9)
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12 (deletion refused) remain because remote deletion is refused; harmless.
-- Club Med v2 on q/G11-clubmed (c296b1d) awaits OWNER O9; its template edits are now on main (1a5bc8d), so expect conflicts in deals-pages.mjs (take main); if approved, merge origin/main into it, re-render (deal pages re-render daily), re-test, re-check the Nov 2 queue entry, release.
+- Club Med v2 on q/G11-clubmed (c296b1d): O9 Approved (D21), release after v3 card; its template edits are now on main (1a5bc8d), so expect conflicts in deals-pages.mjs (take main); if approved, merge origin/main into it, re-render (deal pages re-render daily), re-test, re-check the Nov 2 queue entry, release.
 - Owner's Mac checkout is stale after 2026-10-27 (its 20 local files are preserved on branch owner-local-2026-10-27). Never commit from the Mac; the operator works only in cloud clones.
 
 - Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
