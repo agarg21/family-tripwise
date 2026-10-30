@@ -16,3 +16,7 @@ If the retry also returns only 0 prices, next try one 2-adult diagnostic search 
 - Volatile: the same hotel, party and dates returned USD 423 and 378 within seconds; publish only as a dated "about" estimate, never a quote.
 - Resort-direct properties (LEGOLAND Hotel California, Great Wolf Poconos, Atlantis) show no Google price for this party; Castle Hotel does.
 - Next (step 3): strip ®/™ before matching in tools/hotel-price-pull.mjs; then a labelled "about $380 a night before tax for 2 adults + 2 kids (Google Hotels, Dec 4-7 2026, observed Oct 30)" line is a candidate for the LEGOLAND deal page, kept apart from LEGOLAND's own package price (which includes tickets and breakfast).
+
+## Step 3 (2026-10-30 13:07Z run): published estimate
+- tools/hotel-price-pull.mjs now strips ®, ™ and © before the title match (future receipts match "LEGOLAND® Castle Hotel").
+- The LEGOLAND California deal page glance now carries one labelled line (v2.price_sample, validated): "about $383 a night at the LEGOLAND Castle Hotel for 2 adults and 2 kids aged 5 and 8, December 4 to 7, 2026", from the two 3-night searches (383 both), with the two 1-night Dec 4 readings (378, 423), before tax, inclusions not shown, per-night basis our reading. It links this receipt, is never summed into a trip total or a saving, and drops automatically when the stay starts (Dec 4) or the deal ends (Nov 17).

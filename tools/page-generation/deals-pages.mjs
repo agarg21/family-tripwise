@@ -222,6 +222,18 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     else if (!FREE_LICENCE.test(img.license ?? "") || !img.artist || !img.source_page) problems.push(`${where}: hero_image needs a free licence, an author and a source page`);
     if (!sentence(v.hero_image?.alt) || !sentence(v.hero_image?.caption)) problems.push(`${where}: hero_image needs alt and caption`);
   }
+  // Optional dated hotel price sample (QUEUE G12): a provider reading for a named family party and stay dates,
+  // shown as a labelled estimate beside the official terms, never as a quote, a total or a saving. The page
+  // drops it automatically once the stay start date arrives (deal pages re-render daily).
+  if (v.price_sample !== undefined) {
+    const ps = v.price_sample;
+    const n = (x) => Number.isInteger(x) && x > 0 && x < 100000;
+    const ok = ps && typeof ps === "object" && sentence(ps.hotel) && n(ps.amount) && (ps.low === undefined || (n(ps.low) && n(ps.high) && ps.low <= ps.amount && ps.amount <= ps.high))
+      && /^2 adults and 2 kids aged \d+ and \d+$/.test(ps.party ?? "") && validDate(ps.stay_from) && validDate(ps.stay_to) && ps.stay_to > ps.stay_from
+      && validDate(ps.observed_on) && ps.observed_on <= today && ps.observed_on < ps.stay_from && sentence(ps.source_label) && /^https:\/\/[^\s]+$/.test(ps.source_url ?? "")
+      && sentence(ps.caveat) && !/\$\s?\d|\bUSD\b|\btotal\b/i.test(ps.caveat) && (ps.low === undefined || sentence(ps.range_note));
+    if (!ok) problems.push(`${where}: price_sample needs hotel, whole-dollar amount (and optional low/high with range_note), party "2 adults and 2 kids aged X and Y", stay_from/stay_to after observed_on, source_label, https source_url and a caveat without $ figures`);
+  }
   // Optional short pill naming who an "Only for" deal suits (replaces the generic "Only for some families").
   if (v.verdict_pill !== undefined && (check.score?.verdict !== "only_for" || typeof v.verdict_pill !== "string" || !/^Only for \S/.test(v.verdict_pill) || v.verdict_pill.length > 30)) problems.push(`${where}: verdict_pill must start "Only for " (at most 30 characters) and needs an only_for verdict`);
   else if (v.verdict_pill !== undefined) texts.push(v.verdict_pill);
@@ -275,6 +287,21 @@ const VERDICT_TEXT = { worth_it: "Worth it", only_for: "Only for some families",
 const list = (items, cls = "") => `<ul${cls ? ` class="${cls}"` : ""}>${items.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`;
 const sourceLine = (src) => `<a href="${e(src.url)}">${e(src.label)}</a>, checked ${e(longDate(src.observed_on))}`;
 
+const usd = (n) => `$${n.toLocaleString("en-US")}`;
+const shortStay = (from, to) => {
+  const [a, b] = [longDate(from), longDate(to)];
+  const [am, ad, ay] = a.replace(",", "").split(" ");
+  const [bm, bd, by] = b.replace(",", "").split(" ");
+  return am === bm && ay === by ? `${am} ${ad} to ${bd}, ${ay}` : `${a} to ${b}`;
+};
+// Visible only while the sampled stay is still ahead (never a price sample whose stay dates have started or passed).
+export function priceSampleLine(v, today = easternDate()) {
+  const ps = v.price_sample;
+  if (!ps || ps.stay_from <= today) return "";
+  const range = ps.low === undefined ? "" : ` ${ps.range_note.replace(/\{low\}/g, usd(ps.low)).replace(/\{high\}/g, usd(ps.high))}`;
+  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
+}
+
 function heroFigure(v) {
   if (!v.hero_image) return "";
   const img = imageLock[v.hero_image.slug];
@@ -295,7 +322,8 @@ function dealCheckPageV2(checks, check, today, ended) {
     [check.source_label, check.official_url, check.observed_on, "the offer terms"],
     [v.context_source.label, v.context_source.url, v.context_source.observed_on, v.context_source.covers ?? "where the resorts are and what they include"],
     ...(v.things_to_do.source.url === v.context_source.url ? [] : [[v.things_to_do.source.label, v.things_to_do.source.url, v.things_to_do.source.observed_on, "things to do"]]),
-    ...(v.extra_sources ?? []).map((src) => [src.label, src.url, src.observed_on, src.covers])
+    ...(v.extra_sources ?? []).map((src) => [src.label, src.url, src.observed_on, src.covers]),
+    ...(priceSampleLine(v, today) ? [[v.price_sample.source_label, v.price_sample.source_url, v.price_sample.observed_on, "the hotel price we saw (an estimate, not a quote)"]] : [])
   ];
   const body = `    <main id="main" class="deal-v2">
       <section class="page-hero deal-hero">
@@ -315,7 +343,8 @@ ${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^S
         <p><strong>Best for:</strong> ${e(v.best_for)}</p>
         <p><strong>Not for:</strong> ${e(v.not_for)}</p>
         <p class="deal-money"><strong>${e(v.saves)}</strong></p>
-        <p>${e(v.cost)}</p>`}
+        <p>${e(v.cost)}</p>${priceSampleLine(v, today) ? `
+        ${priceSampleLine(v, today)}` : ""}`}
       </section>
 ${heroFigure(v)}
       <section class="container page-section" aria-labelledby="deal-get-title">

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtemp, readFile, rm, access, writeFile, readdir } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { validateRequest, runRequest, hotelRows, RESERVE_PER_SEARCH_USD, MAX_SEARCHES } from "./hotel-price-pull.mjs";
+import { validateRequest, runRequest, hotelRows, matchKey, RESERVE_PER_SEARCH_USD, MAX_SEARCHES } from "./hotel-price-pull.mjs";
 import { cumulativeSpend } from "./seo-opportunity-pull.mjs";
 
 const today = "2026-10-30";
@@ -97,4 +97,10 @@ test("committed hotel price requests validate (prior spend at the floor)", async
     const day = name.match(/(20\d\d-\d\d-\d\d)\.json$/)[1];
     assert.doesNotThrow(() => validateRequest(json, { today: day, priorSpend: 0.4 }), name);
   }
+});
+
+test("title match ignores registered and trademark marks", () => {
+  assert.ok(matchKey("LEGOLAND\u00AE Castle Hotel").includes(matchKey("LEGOLAND Castle Hotel")));
+  assert.ok(matchKey("Brand\u2122  Resort").includes(matchKey("brand resort")));
+  assert.ok(!matchKey("LEGOLAND\u00AE Hotel California").includes(matchKey("LEGOLAND Castle Hotel")));
 });

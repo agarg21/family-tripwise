@@ -10,6 +10,9 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { cumulativeSpend, RECORDED_SPEND_FLOOR_USD, APPROVED_CUMULATIVE_CEILING_USD } from "./seo-opportunity-pull.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
+// Google titles carry marks such as "LEGOLAND® Castle Hotel"; strip ®, ™ and © before the title match.
+export const matchKey = (text) => String(text).replace(/[\u00AE\u2122\u00A9]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+
 export const ENDPOINT = "business_data/google/hotel_searches/live";
 export const BATCH_CEILING_USD = 0.5;
 // Conservative per-search reserve (provider bills per 18 results; depth is fixed at 18).
@@ -113,9 +116,9 @@ export async function runRequest(req, output, { auth, fetcher = fetch, now = () 
       const actual = report.calls.reduce((sum, c) => sum + (c.cost_usd ?? RESERVE_PER_SEARCH_USD), 0);
       if (actual > BATCH_CEILING_USD || req.prior_spend_usd + actual > APPROVED_CUMULATIVE_CEILING_USD) { report.stop_reason = "reported-budget-exceeded-reconciliation-required"; await save(); throw new Error("Reported budget exceeded"); }
       const { checked_at, rows } = hotelRows(json);
-      const m = s.match.toLowerCase();
+      const m = matchKey(s.match);
       report.searches.push({ label: s.label, party: { adults: s.adults, child_ages: [...s.children] }, check_in: s.check_in, check_out: s.check_out, nights: s.nights, keyword: s.keyword,
-        location: s.location_code !== undefined ? { location_code: s.location_code } : { location_coordinate: s.location_coordinate }, currency_requested: "USD", checked_at, match: s.match, matched: rows.filter((r) => r.title?.toLowerCase().includes(m)), results: rows });
+        location: s.location_code !== undefined ? { location_code: s.location_code } : { location_coordinate: s.location_coordinate }, currency_requested: "USD", checked_at, match: s.match, matched: rows.filter((r) => matchKey(r.title ?? "").includes(m)), results: rows });
       const last = report.searches.at(-1); last.matched_count = last.matched.length;
       await save();
     } catch { await save(); throw new Error(`Stopped ${s.label}: see public-safe call status; no automatic paid retry`); }
