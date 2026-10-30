@@ -1693,3 +1693,8 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .hotel-budget-glance + .trust-panel {
   grid-template-columns: minmax(0, 1fr);
 }
+
+/* G14 batch 2: shorter page hero so the top photo banner stays on the first screen (DC and Boston itineraries). */
+.compact-hero .page-hero { padding: 28px 0 12px; background: none; }
+.compact-hero .page-hero h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
+@media (max-width: 600px) { .compact-hero .page-hero h1 { font-size: 30px; } }

@@ -220,7 +220,7 @@ ${bostonVenues.map(bostonVenueCard).join("\n")}
     <link rel="canonical" href="https://familytripwise.com/${bostonItineraryPath}">
     <link rel="stylesheet" href="../styles.css">
   </head>
-  <body>
+  <body class="compact-hero">
     ${siteHeader("../", bostonItineraryPath)}
 ${body}
     ${siteEnd("../", bostonItineraryPath)}

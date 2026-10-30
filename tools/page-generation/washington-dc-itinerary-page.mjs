@@ -221,7 +221,7 @@ ${dcVenues.map(dcVenueCard).join("\n")}
     <link rel="canonical" href="https://familytripwise.com/${dcItineraryPath}">
     <link rel="stylesheet" href="../styles.css">
   </head>
-  <body>
+  <body class="compact-hero">
     ${siteHeader("../", dcItineraryPath)}
 ${body}
     ${siteEnd("../", dcItineraryPath)}
