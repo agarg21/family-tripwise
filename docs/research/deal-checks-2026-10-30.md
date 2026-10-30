@@ -112,3 +112,20 @@ Novelty: a quick search (2026-10-30) found no news coverage of this hotel offer 
 | headout.com (third-party seller) | Lists Sesame Place Philadelphia annual passes (novelty: agency_listed) | lead only |
 
 Decision: published as an only_for check (Bronze beats the cheapest USD 31.99 day ticket from the 4th visit). No sale end date, so listed for one week (expires_on 2026-11-06) unless re-read. Photo: Ernie's Waterworks, Matthew McCullough, CC BY-SA 2.0 (640 px original).
+
+## LEGOLAND New York 2027 Season Pass (new check, observed 2026-10-30; QUEUE G11/G05, v2 from the start)
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| www.legoland.com/new-york/tickets-passes/annual-passes/ | "Buy a 2027 Pass, Get the Rest of 2026 FREE as Low as $99!"; Standard Season Pass USD 99 (full price USD 119), 52 blockout dates; Preferred USD 129 (USD 169), no blockouts, free standard parking, 2 regional attractions; Premium Annual Pass USD 219 (USD 299), 20+ attractions incl. PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND NY only, through end of 2027 season), 1 Fastrack One Shot per visit, free standard parking | new |
+| same | "Pass valid for FUN now through January 2nd, 2028"; "Guests ages 2+ require their own Pass"; parking for Preferred/Premium LEGOLAND NY only, bought online in advance, 25%/50% off preferred parking; USD 29 guest tickets (Preferred/Premium on eligible dates; Standard on blockout dates); up to 20% off LEGOLAND Hotels; non-refundable, non-transferable, issued to an individual; no sale end date; taxes/fees not mentioned; blockout calendar not in page text; under-2 admission not stated | new |
+| www.legoland.com/new-york/tickets-passes/ | One-day tickets online "Starting from" USD 49 per person; "Front Gate" USD 99 per person; passes "Starting from $99 Per Person"; no age pricing, parking price or season dates | new |
+| newyork-support.legoland.com help article 22781771905053 (operating hours) | Sept–Dec "open on weekends and select weekdays"; "The park closes for the Season on January 3rd, 2027" | new |
+| www.legoland.com/new-york/plan-your-visit/know-before-you-go/seasonal-closures/ | Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle closed "Starting November 2nd 2026"; Water Playground and hotel pool closed from Sept 8, 2026 | new |
+| www.legoland.com/new-york/plan-your-visit/planning-tools/operating-calendar/ | Calendar is JavaScript-only; day-by-day dates not readable (not retried) | unknown |
+| www.legoland.com/new-york/things-to-do/seasonal-events/ | Brick-or-Treat Oct 2–Nov 1, 2026; Holiday Bricktacular Nov 27, 2026–Jan 2 (holiday builds, dance party, family "Glice" skating); Red, White & BOOM! July 4 (2027); LEGO Festival "Coming in 2027"; Goshen, NY, about 60 miles NW of NYC; over 50 rides, attractions and seasonal events; hotel steps from entrance | new |
+| www.legoland.com/new-york/ | "designed for families with children aged 2-12"; "Home to 7 LEGO® Themed Lands"; Goshen, NY, "just 60 miles northwest of New York City" | new |
+| www.legoland.com/new-york/deals/holiday-sale/ | Same pass offer, no end date; Hotel + Tickets ends Nov 17, 2026; Military & First Responders Go Free ends Nov 30, 2026 (leads, not published) | new |
+| Wikimedia Commons File:LEGOLAND_New_York.jpg | Entrance sign, sunny day; CC BY-SA 2.0; MattCC716 (Flickr 51316995061); self-hosted as site/images/legoland-new-york.webp; a second candidate (Lego Statue of Liberty, CC BY-SA 4.0) was downloaded and not used; removed | new |
+| WebSearch (non-official domains) | No coverage of the 2027 pass offer found in a quick search (results were general discount-ticket guides) | novelty none_found |
+
+Decision: published as an only_for check (Standard USD 99 vs online day tickets from USD 49: pays off from the 3rd visit). No sale end date, so listed for one week (expires_on 2026-11-06) unless re-read. robots.txt for legoland.com read 2026-10-30 (only /app_plugins disallowed).
