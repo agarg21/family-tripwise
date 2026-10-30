@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-30 transactions=16
-run: {id: 2026-10-30T23:04:19Z, started_at: 2026-10-30T23:04:19Z}
+run: none
 last_public_release: 06fb908 (2026-10-30 ET, G11 v3 Busch Gardens Fun Card spend-vs-save + hub "not really cheaper" rule; live in release.json); last main code change 06fb908 (hubSpend)
-active: none (Club Med on q/G11-clubmed until O9)
+active: none (held: q/G11-legofl-ss, LEGOLAND FL v3 card, persona 3.93 after 3 cycles, waits for OWNER O11; Club Med on q/G11-clubmed)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -37,5 +37,5 @@ active: none (Club Med on q/G11-clubmed until O9)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 23:04Z G11 v3 LEGOLAND Florida card built, NOT released: G12 Google Hotels LEGOLAND Hotel FL $269 (Dec 4, 2+2) + 4 × $114 2-day ticket ≈ $725 vs 4 × $162 package ≈ $648, save ≈ $77 (11%) only with 2 park days and the starting price; og card now carries the spend line. Integrity PASS_WITH_P3; persona 3.6 → 3.8 → 3.93 FAIL (A share 3). Branch pushed; OWNER O11.
 - 2026-10-30 22:04Z G11 v3 Busch Gardens Fun Card spend-vs-save delivered 06fb908 (release.json; page, /deals/, og card live byte-identical): 4 park days ≈ $788 ($135 Three-Day ×4 + $61.99 day ticket ×4) vs ≈ $520 (4 × $129.99), save ≈ $268 (34%); one 3-day trip about the same; pill now "Only for 4+ park days". Integrity FAIL → PASS_WITH_P3; persona 3.33 → 4.07 PASS.
-- 2026-10-30 21:05Z G11 v3 spend-vs-save for 3 passes delivered 9f38ed9 (release.json; 3 pages, /deals/, SeaWorld og + Nov 1 card live byte-identical): family of 4 on cheapest online day tickets vs passes: Sesame 4 visits $512 vs $400 (save $112), LEGOLAND NY 3 visits $588 vs $396 ($192), SeaWorld 3 visits $720 vs $580 ($140). Hub now leads with "Biggest savings we could price"; How we check moved below. Integrity PASS_WITH_P3 ×2; persona hub 3→4.0, pages 4.0→4.13 PASS.

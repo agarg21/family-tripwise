@@ -21,7 +21,7 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D21 (2026-10-30, owner) — Approved: O9 release Club Med v2 page (no posts until priced); O10 labelled sums of published figures (estimate; party, nights, source dates).
 
 ## Owner tasks (operator cannot do these)
-- T1/T2 done (10-27, 10-28; do not repeat).
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
+- O11 (10-30): LEGOLAND FL page shows ≈ $725 vs ≈ $648, save ≈ $77 (11%) only with 2 park days; persona 3.93. Allow labelled spend figures (≈ $648, estimate) to lead the post hook and og tile on all deal pages, then release? Recommend Yes.
