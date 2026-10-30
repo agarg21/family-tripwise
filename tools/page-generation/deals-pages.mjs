@@ -222,6 +222,9 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     else if (!FREE_LICENCE.test(img.license ?? "") || !img.artist || !img.source_page) problems.push(`${where}: hero_image needs a free licence, an author and a source page`);
     if (!sentence(v.hero_image?.alt) || !sentence(v.hero_image?.caption)) problems.push(`${where}: hero_image needs alt and caption`);
   }
+  // Optional short pill naming who an "Only for" deal suits (replaces the generic "Only for some families").
+  if (v.verdict_pill !== undefined && (check.score?.verdict !== "only_for" || typeof v.verdict_pill !== "string" || !/^Only for \S/.test(v.verdict_pill) || v.verdict_pill.length > 30)) problems.push(`${where}: verdict_pill must start "Only for " (at most 30 characters) and needs an only_for verdict`);
+  else if (v.verdict_pill !== undefined) texts.push(v.verdict_pill);
   if (v.og_image !== `images/og/deals/${check.id}.png`) problems.push(`${where}: og_image must be images/og/deals/${check.id}.png`);
   // Social post lines (docs/plan/deal-content-v2.md "Posts"): hook with the key number and the place,
   // verdict and who it is for, the catch; tools/social-queue.mjs adds the book-by line and the dated check.
@@ -300,7 +303,7 @@ function dealCheckPageV2(checks, check, today, ended) {
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
             <h1>${e(v.headline)}</h1>
-            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : dateNote(check)}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
+            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : dateNote(check)}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
