@@ -1413,7 +1413,7 @@
         ["Book by", "No sale end date is stated on the pass page or the deals page."],
         ["Child ages", "\"Guests ages 2+ require their own Pass.\" The pass page does not say how children under 2 are admitted."],
         ["Parking", "Standard: no free parking listed. Preferred and Premium: free standard parking at LEGOLAND New York, bought online in advance; 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
-        ["Pass benefits", "Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, about 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, about 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
+        ["Pass benefits", "Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
         ["Pass rules", "Passes are non-refundable, non-transferable and issued to one person; passholders get a digital pass that is scanned at entry and can be added to the LEGOLAND app wallet."],
         ["Prices on LEGOLAND New York's tickets page, for comparison", "Read October 30, 2026: one-day tickets online starting from USD 49 a person; front gate USD 99 a person. Age pricing not shown."],
         ["Park season", "LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2 (2027 by our reading: the park closes for the season January 3, 2027). Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
@@ -1463,7 +1463,7 @@
           "label": "LEGOLAND New York Resort home page",
           "url": "https://www.legoland.com/new-york/",
           "observed_on": "2026-10-30",
-          "covers": "what LEGOLAND New York is, its ages, lands and location"
+          "covers": "what LEGOLAND New York is, its ages, hotel and location"
         },
         "big_number": "$99",
         "big_label": "a person, ages 2+ (regular $119): rest of 2026 and all of 2027 on the Standard pass",
