@@ -3,10 +3,12 @@
 export const activityGlances = {
   "things-to-do/chicago-with-kids.html": {
     lead: "12 Chicago picks for kids, compared by age, time, cost, area and rain fit.",
+    alsoFree: "Garfield Park Conservatory is free for verified Chicago residents.",
     free: [["Lincoln Park Zoo", "Lincoln Park Zoo"], ["Millennium Park and Maggie Daley Park", "Millennium Park and Maggie Daley Park"], ["the lakefront and beaches", "Chicago lakefront and beach time"], ["the Art Institute for kids under 14", "Art Institute of Chicago"]]
   },
   "things-to-do/san-antonio-with-kids.html": {
     lead: "13 San Antonio picks for kids, compared by role, time, cost, area and heat or rain fit.",
+    alsoFree: "Morgan's Wonderland is free for guests with special needs.",
     free: [["Hemisfair and Yanaguana Garden", "Hemisfair and Yanaguana Garden"], ["the Japanese Tea Garden", "Japanese Tea Garden"], ["the Missions", "San Antonio Missions"], ["the Alamo church (reserve; extras are paid)", "The Alamo"]]
   },
   "things-to-do/chicago-with-teens.html": {
@@ -23,7 +25,7 @@ export const activityGlances = {
   },
   "things-to-do/san-antonio-with-teens.html": {
     lead: "10 San Antonio picks for teens, compared by teen payoff, time and cost, area and flexibility.",
-    free: [["Mission San José", "Mission San Jose or one selected mission"], ["the Alamo church (exhibit paid)", "Alamo church and Ralston Family Collections Center"], ["browsing the Pearl", "Pearl and Museum Reach, one teen-chosen stop"], ["Southtown and Blue Star", "Southtown and Blue Star, one selected gallery or food stop"]]
+    free: [["Mission San José", "Mission San Jose or one selected mission"], ["the Alamo church (exhibit paid)", "Alamo church and Ralston Family Collections Center"], ["browsing the Pearl", "Pearl and Museum Reach, one teen-chosen stop"], ["browsing Southtown and Blue Star", "Southtown and Blue Star, one selected gallery or food stop"]]
   }
 };
 
@@ -38,6 +40,6 @@ export function renderActivityGlance(glance, rows) {
   if (!glance.lead.startsWith(String(rows.length))) throw new Error(`Glance count does not match ${rows.length} rows`);
   return `      <section class="container answer-box activity-glance" aria-label="At a glance">
         <p><strong>At a glance:</strong> ${esc(glance.lead)}</p>
-        <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money; each card says what to check before you buy.</p>
+        <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; each card says what to check before you buy.</p>
       </section>`;
 }
