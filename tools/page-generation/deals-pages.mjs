@@ -224,6 +224,24 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     else if (!FREE_LICENCE.test(img.license ?? "") || !img.artist || !img.source_page) problems.push(`${where}: hero_image needs a free licence, an author and a source page`);
     if (!sentence(v.hero_image?.alt) || !sentence(v.hero_image?.caption)) problems.push(`${where}: hero_image needs alt and caption`);
   }
+  // Optional dated hotel price sample (QUEUE G12): a provider reading for a named family party and stay dates,
+  // shown as a labelled estimate beside the official terms, never as a quote, a total or a saving. The page
+  // drops it automatically once the stay start date arrives (deal pages re-render daily).
+  if (v.price_sample !== undefined) {
+    const ps = v.price_sample;
+    const n = (x) => Number.isInteger(x) && x > 0 && x < 100000;
+    const ok = ps && typeof ps === "object" && sentence(ps.hotel) && n(ps.amount) && (ps.low === undefined || (n(ps.low) && n(ps.high) && ps.low <= ps.amount && ps.amount <= ps.high))
+      && /^2 adults and 2 kids aged \d+ and \d+$/.test(ps.party ?? "") && validDate(ps.stay_from) && validDate(ps.stay_to) && ps.stay_to > ps.stay_from
+      && validDate(ps.observed_on) && ps.observed_on <= today && ps.observed_on < ps.stay_from && sentence(ps.source_label) && /^https:\/\/[^\s]+$/.test(ps.source_url ?? "")
+      && sentence(ps.caveat) && !/\$\s?\d|\bUSD\b|\btotal\b|\bsav/i.test(ps.caveat)
+      && (ps.low === undefined || (sentence(ps.range_note) && /\{low\}/.test(ps.range_note) && /\{high\}/.test(ps.range_note) && !/\$\s?\d|\bUSD\b|\btotal\b|\bsav/i.test(ps.range_note.replace(/\{(?:low|high)\}/g, ""))))
+      && String(v.family ?? "").includes(ps.party.replace(/^2 adults and 2 kids /, ""));
+    if (ok) texts.push(ps.hotel, ps.caveat, ...(ps.range_note ? [ps.range_note] : []));
+    if (!ok) problems.push(`${where}: price_sample needs hotel, whole-dollar amount (and optional low/high with range_note), party "2 adults and 2 kids aged X and Y", stay_from/stay_to after observed_on, source_label, https source_url and a caveat without $ figures; the range_note uses {low} and {high}; v2.family names the same kids' ages`);
+  }
+  // Optional short pill naming who an "Only for" deal suits (replaces the generic "Only for some families").
+  if (v.verdict_pill !== undefined && (check.score?.verdict !== "only_for" || typeof v.verdict_pill !== "string" || !/^Only for \S/.test(v.verdict_pill) || v.verdict_pill.length > 30)) problems.push(`${where}: verdict_pill must start "Only for " (at most 30 characters) and needs an only_for verdict`);
+  else if (v.verdict_pill !== undefined) texts.push(v.verdict_pill);
   if (v.og_image !== `images/og/deals/${check.id}.png`) problems.push(`${where}: og_image must be images/og/deals/${check.id}.png`);
   // Social post lines (docs/plan/deal-content-v2.md "Posts"): hook with the key number and the place,
   // verdict and who it is for, the catch; tools/social-queue.mjs adds the book-by line and the dated check.
@@ -274,6 +292,22 @@ const VERDICT_TEXT = { worth_it: "Worth it", only_for: "Only for some families",
 const list = (items, cls = "") => `<ul${cls ? ` class="${cls}"` : ""}>${items.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`;
 const sourceLine = (src) => `<a href="${e(src.url)}">${e(src.label)}</a>, checked ${e(longDate(src.observed_on))}`;
 
+const nights = (ps) => Math.round((Date.parse(`${ps.stay_to}T00:00:00Z`) - Date.parse(`${ps.stay_from}T00:00:00Z`)) / 86400000);
+const usd = (n) => `$${n.toLocaleString("en-US")}`;
+const shortStay = (from, to) => {
+  const [a, b] = [longDate(from), longDate(to)];
+  const [am, ad, ay] = a.replace(",", "").split(" ");
+  const [bm, bd, by] = b.replace(",", "").split(" ");
+  return am === bm && ay === by ? `${am} ${ad} to ${bd}, ${ay}` : `${a} to ${b}`;
+};
+// Visible only while the sampled stay is still ahead (never a price sample whose stay dates have started or passed).
+export function priceSampleLine(v, today = easternDate()) {
+  const ps = v.price_sample;
+  if (!ps || ps.stay_from <= today) return "";
+  const range = ps.low === undefined ? "" : ` ${ps.range_note.replace(/\{low\}/g, usd(ps.low)).replace(/\{high\}/g, usd(ps.high))}`;
+  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${nights(ps)} nights, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
+}
+
 function heroFigure(v) {
   if (!v.hero_image) return "";
   const img = imageLock[v.hero_image.slug];
@@ -294,7 +328,8 @@ function dealCheckPageV2(checks, check, today, ended) {
     [check.source_label, check.official_url, check.observed_on, "the offer terms"],
     [v.context_source.label, v.context_source.url, v.context_source.observed_on, v.context_source.covers ?? "where the resorts are and what they include"],
     ...(v.things_to_do.source.url === v.context_source.url ? [] : [[v.things_to_do.source.label, v.things_to_do.source.url, v.things_to_do.source.observed_on, "things to do"]]),
-    ...(v.extra_sources ?? []).map((src) => [src.label, src.url, src.observed_on, src.covers])
+    ...(v.extra_sources ?? []).map((src) => [src.label, src.url, src.observed_on, src.covers]),
+    ...(!ended && priceSampleLine(v, today) ? [[v.price_sample.source_label, v.price_sample.source_url, v.price_sample.observed_on, "the hotel price we saw (an estimate, not a quote)"]] : [])
   ];
   const body = `    <main id="main" class="deal-v2">
       <section class="page-hero deal-hero">
@@ -302,7 +337,7 @@ function dealCheckPageV2(checks, check, today, ended) {
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
             <h1>${e(v.headline)}</h1>
-            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
+            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
@@ -314,7 +349,8 @@ ${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^S
         <p><strong>Best for:</strong> ${e(v.best_for)}</p>
         <p><strong>Not for:</strong> ${e(v.not_for)}</p>
         <p class="deal-money"><strong>${e(v.saves)}</strong></p>
-        <p>${e(v.cost)}</p>`}
+        <p>${e(v.cost)}</p>${priceSampleLine(v, today) ? `
+        ${priceSampleLine(v, today)}` : ""}`}
       </section>
 ${heroFigure(v)}
       <section class="container page-section" aria-labelledby="deal-get-title">
@@ -367,7 +403,7 @@ ${otherChecks(checks, check, today)}
       <section class="container page-section deal-sources" aria-labelledby="deal-sources-title">
         <h2 id="deal-sources-title">Sources and how we check</h2>
         <ul>${sources.map(([label, url, on, what]) => `<li>${e(what[0].toUpperCase() + what.slice(1))}: <a href="${e(url)}">${e(label)}</a>, checked ${e(longDate(on))}.</li>`).join("")}</ul>
-        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or been there ourselves. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. Prices and availability change: check live before you book.</p>
+        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or been there ourselves. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. ${!ended && priceSampleLine(v, today) ? "The hotel price we saw is a dated Google Hotels reading, not a price checked on the official site. " : ""}Prices and availability change: check live before you book.</p>
       </section>
     </main>`;
   return page({

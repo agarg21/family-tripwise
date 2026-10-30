@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, readDealChecks, validateDealChecks } from "./page-generation/deals-pages.mjs";
+import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, validateDealChecks } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -81,7 +81,7 @@ test("no deal page shows an unobserved family total, a build date or a firsthand
     if (c.v2) {
       // v2 (G11): no "Not observed" section; the unknown trip cost is one line saying what to check.
       assert.doesNotMatch(html, /Not observed/i, `${c.id} v2 has no placeholder`);
-      assert.match(html, /Trip cost: we have no checked price for a family of 4/);
+      assert.match(html, /Trip cost: we have no (?:checked|complete trip) price for a family of 4/);
       assert.match(html, /We have not booked this offer/);
     } else {
       assert.match(html, /Not observed\. Check live\./, `${c.id} shows check live`);
@@ -370,4 +370,38 @@ test("G11: v2 date_note_short shortens the year note on the hero chip and post o
   const noNote = validateDealChecks([{ ...a, expires_note: undefined }], { today: "2026-10-30" });
   assert.ok(noNote.some((p) => /date_note_short/.test(p)));
   assert.ok(!validateDealChecks([a], { today: "2026-10-30" }).some((p) => /date_note_short/.test(p)));
+});
+
+test("G12 price sample: LEGOLAND shows a labelled Castle Hotel estimate for a named family party, only while the stay is ahead", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const ps = l.v2.price_sample;
+  // docs/research/dataforseo-g12-family-hotel-prices-2026-10-30.json: 3-night Dec 4-7 searches 383 (twice); 1-night Dec 4-5 searches 378 and 423.
+  assert.deepEqual([ps.amount, ps.low, ps.high, ps.stay_from, ps.stay_to, ps.observed_on], [383, 378, 423, "2026-12-04", "2026-12-07", "2026-10-30"]);
+  assert.equal(ps.party, "2 adults and 2 kids aged 5 and 8");
+  assert.match(l.v2.family, /aged 5 and 8/, "the example family matches the sampled party");
+  const line = priceSampleLine(l.v2, "2026-11-10");
+  assert.match(line, /estimate, not a quote/);
+  assert.match(line, /about \$383 a night at the LEGOLAND Castle Hotel for 2 adults and 2 kids aged 5 and 8, 3 nights, December 4 to 7, 2026/);
+  assert.match(line, /checked October 30, 2026/);
+  assert.match(line, /does not say whether taxes, fees, park tickets or breakfast are included/);
+  assert.doesNotMatch(line, /before tax/i, "the receipt does not say whether tax is included");
+  assert.doesNotMatch(line, /\btotal\b|\bsav/i, "a price sample is never a total or a saving");
+  assert.equal(priceSampleLine(l.v2, "2026-12-04"), "", "dropped once the sampled stay starts");
+  assert.match(dealCheckPage(checks, l, "2026-11-10"), /deal-price-sample/);
+  assert.doesNotMatch(dealCheckPage(checks, l, "2026-11-18"), /deal-price-sample|dataforseo-g12|Google Hotels reading/, "an ended deal shows no glance price and no price-sample source");
+  assert.match(dealCheckPage(checks, l, "2026-11-10"), /dated Google Hotels reading, not a price checked on the official site/);
+});
+
+test("G12 price sample validation rejects a missing party, a $ caveat, a stay that starts before the observation, and an out-of-range amount", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const bad = (patch) => validateDealChecks([{ ...l, v2: { ...l.v2, price_sample: { ...l.v2.price_sample, ...patch } } }], { today: "2026-10-30" }).some((p) => /price_sample/.test(p));
+  assert.ok(!bad({}));
+  assert.ok(bad({ party: "2 adults" }));
+  assert.ok(bad({ caveat: "Before tax, so about $450 in total with fees." }));
+  assert.ok(bad({ stay_from: "2026-10-29" }));
+  assert.ok(bad({ amount: 500 }));
+  assert.ok(bad({ observed_on: "2026-10-31" }));
+  assert.ok(bad({ range_note: "Other searches showed $999 in total." }));
+  assert.ok(bad({ range_note: "One-night searches showed a range." }));
+  assert.ok(bad({ party: "2 adults and 2 kids aged 3 and 6" }), "party ages must match v2.family");
 });

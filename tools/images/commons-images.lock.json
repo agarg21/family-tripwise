@@ -50,6 +50,23 @@
     "credit": "Boston - Skyline",
     "observed_on": "2026-10-29"
   },
+  "busch-gardens-tampa-bay": {
+    "file": "Busch_Gardens_Tampa_Bay.jpg",
+    "path": "images/busch-gardens-tampa-bay.webp",
+    "width": 960,
+    "height": 723,
+    "bytes": 195806,
+    "webp_quality": 68,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Busch_Gardens_Tampa_Bay.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Busch_Gardens_Tampa_Bay.jpg/1920px-Busch_Gardens_Tampa_Bay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 4080,
+    "original_height": 3072,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Jeremy Thompson",
+    "credit": "https://www.flickr.com/photos/rollercoasterphilosophy/53309452289/",
+    "observed_on": "2026-10-30"
+  },
   "cancun-aerial": {
     "file": "Cancún_aerial_2024.jpg",
     "path": "images/cancun-aerial.webp",
@@ -116,6 +133,23 @@
     "license_url": "https://creativecommons.org/licenses/by/2.0",
     "artist": "jdigger on Flickr",
     "credit": "https://www.flickr.com/photos/jdigger/1454970910/sizes/o/",
+    "observed_on": "2026-10-30"
+  },
+  "legoland-florida-entrance": {
+    "file": "LEGOLAND®_Florida_(8132540205).jpg",
+    "path": "images/legoland-florida-entrance.webp",
+    "width": 1400,
+    "height": 934,
+    "bytes": 189362,
+    "webp_quality": 62,
+    "source_page": "https://commons.wikimedia.org/wiki/File:LEGOLAND%C2%AE_Florida_(8132540205).jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/LEGOLAND%C2%AE_Florida_%288132540205%29.jpg/1920px-LEGOLAND%C2%AE_Florida_%288132540205%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 5184,
+    "original_height": 3456,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "VisitCentralFL",
+    "credit": "LEGOLAND® Florida",
     "observed_on": "2026-10-30"
   },
   "london-trafalgar-square": {
@@ -269,6 +303,23 @@
     "license_url": "https://creativecommons.org/licenses/by/2.0",
     "artist": "SeaWorld",
     "credit": "https://www.flickr.com/photos/131482933@N07/19548951171/",
+    "observed_on": "2026-10-30"
+  },
+  "sesame-place-ernies-waterworks": {
+    "file": "Ernie's_Waterworks_Sesame_Place.jpg",
+    "path": "images/sesame-place-ernies-waterworks.webp",
+    "width": 640,
+    "height": 480,
+    "bytes": 38664,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ernie%27s_Waterworks_Sesame_Place.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/2/25/Ernie%27s_Waterworks_Sesame_Place.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 640,
+    "original_height": 480,
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "Matthew McCullough",
+    "credit": "https://www.flickr.com/photos/mattmccullough/1145725002/",
     "observed_on": "2026-10-30"
   },
   "washington-dc-national-mall": {

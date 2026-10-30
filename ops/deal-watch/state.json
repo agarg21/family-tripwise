@@ -6,7 +6,7 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "a30cb1c2c6ecca74b5b088824619dabe",
+      "signal_hash": "f66c0898e98bffa15334d977f3ae2393",
       "signal": [
         "Score big savings on last minute cruise deals that take you to sun‑soaked beaches, thrilling adventures, and bold getaways.",
         "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards.",
@@ -20,11 +20,11 @@
         "and provides $0 cruise fare on third and fourth guests. Taxes, fees, and port expenses are additional and apply to all guests.",
         "$100 Short Getaway Kicker",
         "and provides instant savings, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of as follows: $25 USD for Interior, O…",
-        "$750 Savings"
+        "$800 Savings"
       ],
-      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 81b37ee3 043f49b6 067da13e 831c72e8 a1acc92a 35e9c012 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 6b9ed89f 23cafa86 bd6f2774 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 81b37ee3 043f49b6 13b0391a 831c72e8 a1acc92a 35e9c012 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 8c2ab5b2 be94ac3b 50018a15 a29697e4 d9833c08 6b9ed89f 23cafa86 bd6f2774 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
-      "changed_at": "2026-10-29T18:59:45.734Z"
+      "changed_at": "2026-10-30T10:12:38.560Z"
     },
     "great-wolf-deals": {
       "url": "https://www.greatwolf.com/deals",
@@ -111,12 +111,13 @@
       "source_sig": "af9196f0572b2541",
       "status": "ok",
       "headline": "SeaWorld Orlando Tickets & Admission",
-      "signal_hash": "67767af8bb0683132fbc7b23d2a08271",
+      "signal_hash": "aaf2cc0b2d4f7b4302e8a5018e869496",
       "signal": [
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "First Responder Offer",
         "Total savings of",
+        "Save Up To 60% On Tickets",
         "The following may not be eligible and should be verified at Guest Relations: Promotional/discount tickets (group sales tickets) and promotional multi-day ticke…",
         "Save Up to 60%",
         "Add All-Day Dining for $40 and eat all day during your visit.",
@@ -146,21 +147,22 @@
         "Save Over 20%",
         "$62.50 /park"
       ],
-      "line_hashes": "a5b02ddc 314eb380 62e021b0 b300b7c5 065d09ad 53fce29f 958b1680 5d595c9e ad0b236c 161ccd52 07feea12 886fda0c 03c00801 8ede6be9 9eea610b 11dbf8ea a7a93d06 b6f0d218 3da0bde7 ed5d702c 312b8162 d16936ac 0faab1c9 8562d36b 482b05f1 27edbf51 fd40c84b 3b16ef1d abbaaab5 6a6606a8 6563df75 39ffb857 21878ed0 30a1f266 3c75f9bb 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
+      "line_hashes": "a5b02ddc 314eb380 62e021b0 b300b7c5 ae0978d0 065d09ad 53fce29f 958b1680 5d595c9e ad0b236c 161ccd52 07feea12 886fda0c 03c00801 8ede6be9 9eea610b 11dbf8ea a7a93d06 b6f0d218 3da0bde7 ed5d702c 312b8162 d16936ac 0faab1c9 8562d36b 482b05f1 27edbf51 fd40c84b 3b16ef1d abbaaab5 6a6606a8 6563df75 39ffb857 21878ed0 30a1f266 3c75f9bb 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
       "first_seen_at": "2026-10-29T18:59:51.741Z",
-      "changed_at": "2026-10-29T18:59:51.741Z"
+      "changed_at": "2026-10-30T16:43:39.936Z"
     },
     "seaworld-orlando-fun-card": {
       "url": "https://seaworld.com/orlando/tickets/fun-card/",
       "source_sig": "2065334f178d3359",
       "status": "ok",
       "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "signal_hash": "68c1b17dcdc5facdd4a3df758777c42f",
+      "signal_hash": "90d82c60ccf3a4166146ec7c92583a82",
       "signal": [
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "First Responder Offer",
         "Total savings of",
+        "Unlimited Visits in 2027 + Rest of 2026 FREE!",
         "Get Unlimited Visits in 2027 + Rest of 2026 FREE",
         "Expires on 12/31/2027.",
         "Save Up to 25%",
@@ -182,21 +184,20 @@
         "Children under 3 enter for free",
         "Monthly Payments with 0% APR available",
         "EZpay credit card holder must be over the age of 18 and present to redeem EZpay vouchers. Once your initial 12-month EZpay commitment is satisfied, your accoun…",
-        "Annual payments $210.00",
-        "for 11 mos. at 0% APR, $21.25 due today"
+        "Annual payments $210.00"
       ],
-      "line_hashes": "a5b02ddc 314eb380 62e021b0 b300b7c5 9eea610b 11dbf8ea 8f0633a5 bf54df14 0913a706 0291c759 640b4d37 6eb60461 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 60343b60 ac45742a 2d3f6b4c ed5d702c 1f0c9d1f 6078cf01 d01ca257 ad823985 4a605fbb 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 ccb8278d 0b3c01bd 376d39c7 82e01e59 d51d339e b0a849be ce1a55aa 66ce2197 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08 7a73477c",
+      "line_hashes": "a5b02ddc 314eb380 62e021b0 b300b7c5 d1e5ae03 9eea610b 11dbf8ea 8f0633a5 bf54df14 0913a706 0291c759 640b4d37 6eb60461 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 60343b60 ac45742a 2d3f6b4c ed5d702c 1f0c9d1f 6078cf01 d01ca257 ad823985 4a605fbb 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 ccb8278d 0b3c01bd 376d39c7 82e01e59 d51d339e b0a849be ce1a55aa 66ce2197 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08",
       "first_seen_at": "2026-10-29T18:59:53.588Z",
-      "changed_at": "2026-10-29T18:59:53.588Z"
+      "changed_at": "2026-10-30T16:43:41.742Z"
     },
     "margaritaville-at-sea-black-friday": {
       "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Black Friday Early Access",
-      "signal_hash": "cc869f34d02db73ec841112586589df3",
+      "signal_hash": "0d1bebaa04013f2dc83742b23eeb8af3",
       "signal": [
-        "Midnight ends your Early Access advantage. Book 65% off ALL cruises, FREE guests, and up to 55% off cruise extras.",
+        "Get ahead of Black Friday with cruises from $49/night, FREE guests, and up to 55% off cruise extras.",
         "Heroes Sail Free",
         "Black Friday Early Access",
         "Book Now",
@@ -220,9 +221,9 @@
         "Save Up to 55% Off Drinks, Excursions, Spa & More",
         "Save before you sail with"
       ],
-      "line_hashes": "de24c058 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab",
+      "line_hashes": "3988a0c3 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-10-29T18:59:54.605Z"
+      "changed_at": "2026-10-30T10:12:47.377Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",

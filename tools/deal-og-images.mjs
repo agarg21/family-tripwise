@@ -40,7 +40,7 @@ export function dealOgHtml(check) {
   <div class="main" id="main">
     <p class="ctx">${e(v.context)}</p>
     <h1>${e(v.headline)}</h1>
-    <div class="row"><span class="chip ${e(check.score.verdict)}">${e(VERDICT[check.score.verdict])}</span><span class="when">${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}</span></div>
+    <div class="row"><span class="chip ${e(check.score.verdict)}">${e(check.v2?.verdict_pill ?? VERDICT[check.score.verdict])}</span><span class="when">${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}</span></div>
     <p class="chips">${check.v2.chips.map((c) => `<span style="white-space:nowrap">${e(c)}</span>`).join(" · ")}</p>
     <p class="brand">familytripwise.com · Family Deal Check</p>
   </div>

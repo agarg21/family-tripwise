@@ -1,0 +1,9 @@
+{
+  "action": "G12",
+  "purpose": "First trip-cost observation for the Atlantis deal check: Google Hotels price for 2 adults + kids 5 and 8 at The Coral and The Royal, Jan 11-15 2027 (inside the offer's travel window, outside blackouts), plus a 1-night Coral control to learn whether price is per night or per stay.",
+  "hotel_searches": [
+    { "label": "atlantis-coral-4n", "keyword": "Atlantis The Coral", "location_coordinate": "25.0849,-77.3226", "check_in": "2027-01-11", "check_out": "2027-01-15", "adults": 2, "children": [5, 8], "match": "Coral" },
+    { "label": "atlantis-coral-1n", "keyword": "Atlantis The Coral", "location_coordinate": "25.0849,-77.3226", "check_in": "2027-01-11", "check_out": "2027-01-12", "adults": 2, "children": [5, 8], "match": "Coral" },
+    { "label": "atlantis-royal-4n", "keyword": "Atlantis The Royal", "location_coordinate": "25.0849,-77.3226", "check_in": "2027-01-11", "check_out": "2027-01-15", "adults": 2, "children": [5, 8], "match": "Royal" }
+  ]
+}
