@@ -22,7 +22,7 @@ const LIMITATIONS = Object.freeze([
   "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
   "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
   "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
-  "Null prices (the provider sends 0 when no price shows) are unknown, not free; a listing can change within minutes",
+  "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
   "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
   "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
   "No paid automatic retries; unknown outcomes require reconciliation",
@@ -73,7 +73,7 @@ export function validateRequest(request, { today, priorSpend }) {
 }
 
 const num = (v) => (typeof v === "number" && Number.isFinite(v) && v >= 0 ? v : null);
-// The provider returns price 0 when a listing shows no price for the dates; 0 is unknown, never free.
+// Our reading (not stated in provider docs): price 0 means no price shown for the dates; store it as unknown, never free.
 const amount = (v) => (typeof v === "number" && Number.isFinite(v) && v > 0 ? v : null);
 const str = (v, max = 80) => (typeof v === "string" && v.trim() ? v.trim().slice(0, max) : null);
 export function hotelRows(json) {

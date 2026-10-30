@@ -2,7 +2,8 @@
 
 | Receipt | Search | Observed | Reading |
 |---|---|---|---|
-| dataforseo-g12-atlantis-hotel-prices-2026-10-30.json | "Atlantis The Coral" / "Atlantis The Royal", coordinate 25.0849,-77.3226, 2 adults + kids 5 and 8, Jan 11-15 2027 and Jan 11-12 | 2026-10-30 08:19Z, USD 0.012 for 3 searches (USD 0.004 each) | Unusable: the coordinate resolved to listings on Eleuthera (no Atlantis rows matched) and every row had provider price 0, which means no price shown, not free. The tool now stores 0 as null and prefers a country location_code; retry in the -b request. |
+| dataforseo-g12-atlantis-hotel-prices-2026-10-30.json | "Atlantis The Coral" / "Atlantis The Royal", coordinate 25.0849,-77.3226, 2 adults + kids 5 and 8, Jan 11-15 2027 and Jan 11-12 | 2026-10-30 08:19Z, USD 0.012 for 3 searches (USD 0.004 each) | Unusable: the coordinate resolved to listings on Eleuthera (no Atlantis rows matched) and every row had provider price 0, which we read as no price shown (the provider docs do not say; possibly the party or the place); never free. The receipt itself still holds 0: read it as unknown. The tool now stores 0 as null and prefers a country location_code; retry in the -b request. |
 
 Per-search cost observed: USD 0.004 (depth 18), far below the USD 0.05 reserve.
 Per-night vs per-stay basis: still unknown (no priced rows yet).
+If the retry also returns only 0 prices, next try one 2-adult diagnostic search (never published as a family price).
