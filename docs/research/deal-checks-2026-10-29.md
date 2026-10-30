@@ -63,3 +63,14 @@ Change vs previous: first observation.
 - Hilton all-inclusive "Kids & Teens Stay Free" (stories.hilton.com, Jan 21, 2026): booking ended Apr 30, 2026, travel to Oct 31, 2026. Expired.
 - Carnival "Bring The Bunch, Save A Bunch" (carnival.com specials terms): triple/quad/quint rates, book Oct 27–31, 2026, no discount amount stated; ends in 2 days, not published.
 - Dollywood resort offers (Kids Stay & Play, Everyone Pays Kids' Price): dollywood.com returned Access Denied to a plain robots.txt request; not fetched, do not retry unchanged.
+
+## Deal-watch flag: Great Wolf Lodge deals index (G09w, flagged 2026-10-29 23:22 UTC)
+Read once by the operator 2026-10-30 00:10 UTC: https://www.greatwolf.com/deals (canonical of /deals/big-fall-sale; title "Indoor Water Park Resort Deals & Discounts | Great Wolf Lodge", h1 "Find The Best Deals For Your Pack"). The fall-flash-sale detail page was read 2026-10-28 and was not re-fetched (weekly limit).
+
+| Field | Observed value | Change vs previous |
+|---|---|---|
+| Featured banner | "Big Fall Sale", "Up to 40% off", "Stay from Oct 19 – Nov 2, 2026", "Book your next getaway and save on your stay."; no book-by date, no terms on the index; countdown shows zeros | new tile (replaces the "Limited Time Offer / Save up to 40%" tile and the 30%/40%/50% length-of-stay tiles) |
+| Fall Flash Sale card | "Save up to 40%", "Book by Nov 1 to get this deal." (no year), "Stay from Oct 28, 2026 – Feb 11, 2027" | unchanged vs our 2026-10-28 check |
+| Other cards | links to /deals/splash-n-save and /deals/family-fun-sale with no visible title or terms | not read |
+
+Decision: the published Fall Flash Sale check stays as is (index still lists the same discount, book-by and stay dates; full terms remain the dated 2026-10-28 read). Big Fall Sale not published: its stay window ends Nov 2, 2026 (3 days away), and no guest basis, fees or other terms were shown, so there is no family math to check and nothing worth sharing.
