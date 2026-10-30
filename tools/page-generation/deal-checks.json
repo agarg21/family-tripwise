@@ -986,9 +986,9 @@
         "spend_save": {
           "party": "2 adults and 2 kids aged 5 and 8",
           "unit": "one night and one park day",
-        "unit_short": "1 night + 1 park day",
+          "unit_short": "1 night + 1 park day",
           "verdict_line": "Not a discount: about the same price either way. Book it for breakfast, SEA LIFE and early entry; otherwise book the hotel and tickets separately.",
-        "basis": "Package price before tax; parking not counted.",
+          "basis": "Package price before tax; parking not counted.",
           "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. Parking is extra either way.",
           "without": {
             "includes": "Hotel night and 1-day LEGOLAND tickets only: no breakfast, SEA LIFE or early entry.",
