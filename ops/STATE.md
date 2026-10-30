@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-30 transactions=10
-run: none
+run: {id: 2026-10-30T17:06Z, started_at: 2026-10-30T17:06Z}
 last_public_release: 7db0666 (2026-10-30 ET, new Sesame Place Philadelphia 2027 season pass deal check, G11; live via 877099d); last main code change 35a5b7f (v2.price_sample, hotel matchKey)
 active: none (Atlantis still parked on q/G11 f2d3b21 until O10; Club Med on q/G11-clubmed until O9)
 
@@ -38,5 +38,3 @@ active: none (Atlantis still parked on q/G11 f2d3b21 until O10; Club Med on q/G1
 
 ## Last run
 - 2026-10-30 16:04Z G05/G11 new Sesame Place Philadelphia 2027 season pass check delivered 7db0666 (release.json 877099d contains it; page, /deals/, photo, og card verified live): Bronze $99.99 a person aged 2+ (regular $175.50), rest of 2026 included, "Only for 4+ visits" vs $31.99 online day tickets. Integrity FAIL (P2 event facts not in evidence) → PASS_WITH_P3; persona 3.93 → 4.07 PASS. Deploy of 7db0666 first failed on STATE size (claim line); trimmed 4ab01b5 + dispatch.
-- 2026-10-30 15:04Z G11 LEGOLAND Florida deal check delivered c74a10e (release.json + page + /deals/ hub verified live): Saves line now says no fixed saving is stated and both prices are starting prices; post adds book-by Nov 17. Integrity FAIL (P2 gate price lacked 'from') → PASS_WITH_P3; persona 3.73 → 4.00 (PASS). Remote q/G11-legofl deletion refused.
-- 2026-10-30 14:07Z G11/G05 LEGOLAND Florida hotel + ticket package check built on q/G11-legofl (c6e543b), held: 3 review cycles used. Integrity FAIL (P2 facts not in evidence table) → PASS_WITH_P3 → FAIL (P2 chip dropped "From"; fixed in c6e543b, not re-reviewed). Persona 3.80 → 3.93 → 3.93 (4.00 with "From" restored, fixed).
