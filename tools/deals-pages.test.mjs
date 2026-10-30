@@ -414,7 +414,8 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
   // = $659 without; 4 x $169 package starting price = $676 with.
   assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 659, 676, -17, -3]);
   assert.equal(r.line, "Without the deal ≈ $659 · With the deal ≈ $676 · You save nothing: it costs ≈ $17 (3%) more");
-  assert.match(r.post, /^Family of 4 estimate: without the deal ≈ \$659 · with it ≈ \$676 · you save nothing \(≈ \$17 more\)\.$/);
+  assert.equal(r.post, "Family of 4, 1 night + 1 park day (Dec hotel price), estimate: without the deal ≈ $659 · with it ≈ $676 · you save nothing (≈ $17 more).");
+  assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package price before tax; parking not counted.");
   const html = dealCheckPage(checks, l, "2026-11-10");
   const top = html.slice(0, html.indexOf("<details"));
   assert.match(top, /Estimate for 2 adults and 2 kids aged 5 and 8, one night and one park day/);
@@ -460,4 +461,17 @@ test("v3 spend-vs-save validation: only observed figures, matching party, plain 
   assert.ok(bad({ verdict_line: "A great way to see LEGOLAND with breakfast included." }).length, "a deal that saves under 5% must say it is not a discount");
   assert.ok(bad({ note: "Prices from the pages listed." }).length, "the note must say it is a rough estimate");
   assert.ok(bad({}, { why: "word ".repeat(31).trim() + "." }).length, "the verdict stays under about 30 words");
+});
+
+test("v3 spend-vs-save: trust lines say the figures are estimates, and the price-sample part names its stay dates", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const html = dealCheckPage(checks, l, "2026-11-10");
+  assert.match(html, /estimates we added up from the dated prices/);
+  assert.doesNotMatch(html, /We show a trip price only when we saw one/);
+  assert.match(dealsHubPage(checks, "2026-11-10"), /is an estimate we added up from dated published prices/);
+  const ss = l.v2.spend_save;
+  const p0 = ss.without.parts[0];
+  const v = validateDealChecks([{ ...l, v2: { ...l.v2, spend_save: { ...ss, without: { ...ss.without, parts: [{ ...p0, what: "LEGOLAND Castle Hotel for this family, a night (Google Hotels)" }, ...ss.without.parts.slice(1)] } } } }], { today: "2026-10-30" });
+  assert.ok(v.some((p) => /sampled stay dates/.test(p)));
+  assert.ok(validateDealChecks([{ ...l, v2: { ...l.v2, spend_save: { ...ss, basis: "Before tax, about $50 more." } } }], { today: "2026-10-30" }).some((p) => /basis/.test(p)));
 });

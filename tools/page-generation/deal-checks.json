@@ -889,7 +889,7 @@
         "why": "Not cheaper: it costs about what the hotel and tickets cost separately. Book it for breakfast, SEA LIFE and early entry, and only with firm dates (non-refundable)."
       },
       "v2": {
-        "page_title": "LEGOLAND California Hotel Package: Kids' Park Tickets from $39 a Day",
+        "page_title": "LEGOLAND California Hotel + Park Package from $169 a Person: Is It Cheaper?",
         "context": "LEGOLAND California Resort: a LEGO theme park, water park and SEA LIFE aquarium for kids 2 to 12 in Carlsbad, just north of San Diego",
         "context_source": {
           "label": "LEGOLAND California Things to Do page",
@@ -899,7 +899,7 @@
         },
         "big_number": "$169",
         "big_label": "a person a night with park tickets and breakfast (starting price for 2 adults + 2 kids, before tax)",
-        "headline": "LEGOLAND California hotel + park package from $169 a person a night: handy, but not cheaper (book by November 17)",
+        "headline": "LEGOLAND California hotel + park package from $169 a person a night: no real saving (book by November 17)",
         "chips": [
           "Not a discount",
           "Stays to January 9, 2027",
@@ -923,7 +923,7 @@
           "range_note": "One-night searches for December 4 the same morning showed {low} and {high}.",
           "caveat": "Google does not say whether taxes, fees, park tickets or breakfast are included; prices change by the minute, and reading it as a nightly price is ours."
         },
-        "saves": "Saves: little or nothing. Kids' tickets from $39 a day in the package vs 1-day tickets from $69 online, but the package costs about what the hotel and tickets cost separately.",
+        "saves": "Saves: kids' tickets from $39 a day in the package vs 1-day tickets from $69 online, but the tickets differ, so this is not a fixed saving.",
         "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
         "get": [
           "One booking covers the hotel night, Park Hopper tickets for LEGOLAND and the SEA LIFE Aquarium, a hot buffet breakfast each day and early park access.",
@@ -971,10 +971,10 @@
           "Book by November 17, 2026; stays end January 9, 2027."
         ],
         "post": {
-          "title": "LEGOLAND California hotel + park package from $169 a person a night: not cheaper",
-          "hook": "LEGOLAND California (near San Diego) hotel + park package: from $169 a person a night.",
-          "verdict": "Only for on-site convenience: it is not cheaper than booking it yourself.",
-          "catch": "The catch: non-refundable and paid in full; tax and parking are extra."
+          "title": "LEGOLAND California hotel + park package from $169 a person a night: no real saving",
+          "hook": "LEGOLAND California hotel + park package: from $169 a person a night.",
+          "verdict": "Only for on-site convenience: it costs about the same as booking it yourself.",
+          "catch": "The catch: non-refundable, paid in full; tax and parking extra."
         },
         "hero_image": {
           "slug": "legoland-california",
@@ -986,7 +986,9 @@
         "spend_save": {
           "party": "2 adults and 2 kids aged 5 and 8",
           "unit": "one night and one park day",
-          "verdict_line": "Not a discount: about the same price either way. The package adds breakfast, SEA LIFE and early entry.",
+        "unit_short": "1 night + 1 park day",
+          "verdict_line": "Not a discount: about the same price either way. Book it for breakfast, SEA LIFE and early entry; otherwise book the hotel and tickets separately.",
+        "basis": "Package price before tax; parking not counted.",
           "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. Parking is extra either way.",
           "without": {
             "includes": "Hotel night and 1-day LEGOLAND tickets only: no breakfast, SEA LIFE or early entry.",

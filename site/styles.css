@@ -1724,3 +1724,4 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   .spend-save .ss-row > div { padding: 6px 7px; }
   .spend-save dt { font-size: 0.78rem; }
 }
+.spend-save .ss-basis, .page-hero .spend-save .ss-basis { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }

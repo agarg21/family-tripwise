@@ -305,6 +305,8 @@ function validateSpendSave(check, stated, today) {
   if (!/^2 adults and 2 kids aged (\d+) and (\d+)$/.test(ss.party ?? "") || !String(v.family ?? "").includes(ss.party.replace(/^2 adults and 2 kids /, ""))) problems.push(`${where}: party must be "2 adults and 2 kids aged X and Y" with the same ages as v2.family`);
   if (!sentence(ss.unit) || ss.unit.length > 60) problems.push(`${where}: unit (what one comparison covers, for example "one night and one park day") is required, at most 60 characters`);
   if (!sentence(ss.note) || !/\b(?:rough|estimate)\b/i.test(ss.note)) problems.push(`${where}: note must say why this is a rough estimate (dates, ticket types, taxes)`);
+  if (typeof ss.unit_short !== "string" || ss.unit_short.length < 4 || ss.unit_short.length > 24) problems.push(`${where}: unit_short (the unit for posts, at most 24 characters) is required`);
+  if (typeof ss.basis !== "string" || ss.basis.length < 8 || words(ss.basis) > 12 || /\$\s?\d|\bUSD\b/.test(ss.basis)) problems.push(`${where}: basis must be a short note (at most 12 words, no $ figures) on what the estimate leaves out, for example tax and parking`);
   if (!sentence(ss.verdict_line) || words(ss.verdict_line) > SPEND_WORDS_MAX) problems.push(`${where}: verdict_line must be one plain sentence of at most ${SPEND_WORDS_MAX} words`);
   // Concise top of page (Content Standard): the lines above the first details stay short.
   for (const [name, text] of [["score.why", check.score?.why], ["best_for", v.best_for], ["not_for", v.not_for]]) {
@@ -325,6 +327,7 @@ function validateSpendSave(check, stated, today) {
         if (!stated.has(String(p.unit_amount))) problems.push(`${at}: $${p.unit_amount} is not a figure the observed terms state`);
         if (!validSource(p.source) || p.source.observed_on > today) problems.push(`${at}: a terms part needs a dated https source`);
       } else if (p?.from === "price_sample") {
+        if (ps && !String(p.what ?? "").includes(shortStay(ps.stay_from, ps.stay_to).replace(/, \d{4}$/, ""))) problems.push(`${at}: what must name the sampled stay dates (${shortStay(ps.stay_from, ps.stay_to)})`);
         if (!ps || ps.amount !== p.unit_amount || ps.party !== ss.party) problems.push(`${at}: a price_sample part must use v2.price_sample.amount for the same party`);
       } else problems.push(`${at}: from must be "terms" or "price_sample"`);
     });
@@ -351,7 +354,11 @@ export function spendSave(check, today = easternDate()) {
     const parts = ss[side].parts.map((p) => ({ ...p, amount: Math.round(p.unit_amount * p.qty), source: p.from === "price_sample" ? { label: v.price_sample.source_label, url: v.price_sample.source_url, observed_on: v.price_sample.observed_on } : p.source }));
     sides[side] = { includes: ss[side].includes, parts, total: parts.reduce((n, p) => n + p.amount, 0), stale: parts.some((p) => p.from === "price_sample") && !psLive };
   }
-  const base = { party: ss.party, unit: ss.unit, note: ss.note, verdict_line: ss.verdict_line, sides };
+  const checkedOn = [...new Set(SPEND_SIDES.flatMap((x) => sides[x].parts.map((p) => p.source.observed_on)))].sort();
+  const sample = SPEND_SIDES.some((x) => ss[x].parts.some((p) => p.from === "price_sample")) ? v.price_sample : null;
+  const checkedText = checkedOn.length > 1 && checkedOn[0].slice(0, 7) === checkedOn.at(-1).slice(0, 7) ? `${longDate(checkedOn[0]).replace(/, \d{4}$/, "")} to ${Number(checkedOn.at(-1).slice(8))}, ${checkedOn[0].slice(0, 4)}` : checkedOn.map(longDate).join(" and ");
+  const basis = `${sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to)}; ` : ""}prices checked ${checkedText}. ${ss.basis}`;
+  const base = { party: ss.party, unit: ss.unit, note: ss.note, verdict_line: ss.verdict_line, sides, basis, sample_month: sample ? MONTHS[Number(sample.stay_from.slice(5, 7)) - 1] : null };
   if (isEnded(check, today)) return { ...base, ok: false, missing: "The deal has ended, so we no longer compare its price." };
   const stale = SPEND_SIDES.filter((side) => sides[side].stale);
   if (stale.length) return { ...base, ok: false, missing: `We cannot price ${stale.map((x) => (x === "with" ? "the deal" : "the trip without the deal")).join(" or ")} right now: the hotel price we saw was for dates that have now started. Price your own dates on the official site.` };
@@ -363,7 +370,7 @@ export function spendSave(check, today = easternDate()) {
     ? `You save ≈ ${usd(save)} (${save_pct}%)`
     : save === 0 ? "You save ≈ $0 (same price)" : `You save nothing: it costs ≈ ${usd(-save)} (${-save_pct}%) more`;
   const postSave = save > 0 ? `you save ≈ ${usd(save)} (${save_pct}%)` : save === 0 ? "you save $0" : `you save nothing (≈ ${usd(-save)} more)`;
-  return { ...base, ok: true, without: A, with: B, save, save_pct, saveText, line: `Without the deal ≈ ${usd(A)} · With the deal ≈ ${usd(B)} · ${saveText}`, post: `Family of 4 estimate: without the deal ≈ ${usd(A)} · with it ≈ ${usd(B)} · ${postSave}.` };
+  return { ...base, ok: true, without: A, with: B, save, save_pct, saveText, line: `Without the deal ≈ ${usd(A)} · With the deal ≈ ${usd(B)} · ${saveText}`, post: `Family of 4, ${ss.unit_short}${base.sample_month ? ` (${base.sample_month.slice(0, 3)} hotel price)` : ""}, estimate: without the deal ≈ ${usd(A)} · with it ≈ ${usd(B)} · ${postSave}.` };
 }
 
 // The card at the top of a v3 deal page, and the breakdown under it (every part with its dated source).
@@ -374,6 +381,7 @@ function spendSaveCard(check, today) {
   if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4">${head}<p>${e(r.missing)}</p></div>`;
   return `<div class="spend-save${r.save_pct < 5 ? " spend-save-nodeal" : ""}" role="group" aria-label="What it costs a family of 4 with and without the deal">${head}
               <dl class="ss-row"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="ss-save"><dt>You save</dt><dd>${r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`}</dd></div></dl>
+              <p class="ss-basis">${e(r.basis)}</p>
               <p class="ss-verdict">${e(r.verdict_line)}</p>
             </div>`;
 }
@@ -516,7 +524,7 @@ ${otherChecks(checks, check, today)}
       <section class="container page-section deal-sources" aria-labelledby="deal-sources-title">
         <h2 id="deal-sources-title">Sources and how we check</h2>
         <ul>${sources.map(([label, url, on, what]) => `<li>${e(what[0].toUpperCase() + what.slice(1))}: <a href="${e(url)}">${e(label)}</a>, checked ${e(longDate(on))}.</li>`).join("")}</ul>
-        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or been there ourselves. "Family of 4" notes are our reading of the terms, not a quote. We show a trip price only when we saw one on the official site for a named family and named dates. ${!ended && priceSampleLine(v, today) ? "The hotel price we saw is a dated Google Hotels reading, not a price checked on the official site. " : ""}Prices and availability change: check live before you book.</p>
+        <p>Every term was read on the company's own pages on the dates shown. We have not booked this offer or been there ourselves. "Family of 4" notes are our reading of the terms, not a quote. ${v3 ? "The spend-vs-save figures are estimates we added up from the dated prices listed in \"How we got these numbers\", not a quote or a price we saw for your trip. " : "We show a trip price only when we saw one on the official site for a named family and named dates. "}${!ended && priceSampleLine(v, today) ? "The hotel price we saw is a dated Google Hotels reading, not a price checked on the official site. " : ""}Prices and availability change: check live before you book.</p>
       </section>
     </main>`;
   return page({
@@ -568,7 +576,7 @@ ${body}
 
 const trustPanel = `      <section class="container trust-panel" aria-label="How Family Deal Checks work">
         <p><strong>How we check:</strong> every term below was read on the company's own offer page on the date shown, with a link to that page. We have not booked these offers. "For a family of 4" notes are our reading of those terms, not a quote or firsthand experience.</p>
-        <p>We show a family total only when we observed one on the official site for a named party and named dates. Prices and availability change: check live before you book.</p>
+        <p>We show a family total only when we observed one on the official site for a named party and named dates. A "Without the deal · With the deal" line is an estimate we added up from dated published prices (and, where shown, a dated Google Hotels reading), not an observed total. Prices and availability change: check live before you book.</p>
       </section>`;
 
 // The /deals/ card shows the spend-vs-save line when it can be built (hub pages re-render daily).
