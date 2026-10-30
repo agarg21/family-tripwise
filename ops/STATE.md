@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-29 transactions=20
-run: none
+today: 2026-10-30 transactions=0
+run: {id: 2026-10-30T04:04:48Z, started_at: 2026-10-30T04:04:48Z}
 last_public_release: c25b893 (2026-10-29 ET, G14 batch 3: banner photos on home, about, contributor, privacy, terms, /this-week/, /deals/; plainer home intro); last main code change c25b893
 active: none
 
