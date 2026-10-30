@@ -1161,7 +1161,7 @@
         },
         "verdict": "only_for",
         "who": "Families taking 4+ nights at Atlantis by January 31, 2027 outside the blackout weeks, especially with children 5 and under.",
-        "why": "The $250 credit and a free kids' entrée for under-6s help, but breakfast covers only two people, and the daily resort fee, gratuities and 21% charge add up for a family of 4."
+        "why": "The $250 credit and a free kids' entrée for under-6s help, but breakfast covers only two people, and the daily resort fee, gratuities and 21% tax and levies add up for a family of 4."
       },
       "v2": {
         "page_title": "Atlantis Bahamas Deal: $250 Resort Credit, Breakfast for Two and Up to 35% Off 4+ Nights",
@@ -1180,12 +1180,12 @@
         "chips": [
           "Travel by Jan 31, 2027",
           "Holiday weeks blacked out",
-          "From $77.00/day resort fee + 21% charge"
+          "From $77.00/day resort fee + 21% tax"
         ],
         "best_for": "Families already planning 4 or more nights at Atlantis before January 31, 2027, away from Thanksgiving week and the Christmas holidays, especially with a child aged 5 or under.",
         "not_for": "Families who want an all-inclusive price, a short 2 or 3 night stay, or a Thanksgiving or Christmas trip: those dates are blacked out.",
-        "cost": "Trip cost: we have no checked price for a family of 4. Price your dates on the Atlantis site; the 21% charge, resort fee, gratuities (12+), kids' breakfasts and flights (for example from New York City, not priced) are extra.",
-        "saves": "Saves: on a 4-night stay, the $250 credit plus up to 4 × $100 of breakfast for two (if you use every breakfast), and up to 35% off the room (\"up to\" is a maximum; your dates may get less).",
+        "cost": "Trip cost: we have no checked price for a family of 4. Price 4 nights for 2 adults and 2 kids on atlantisbahamas.com; the 21% tax and levies, resort fee, gratuities (12+), kids' breakfasts and flights (for example from New York City, not priced) are extra.",
+        "saves": "Saves: a $250 credit for your room, breakfast for two worth up to $100 a day, and up to 35% off the room on 4+ nights (\"up to\" is a maximum; your dates may get less).",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, in one room for 4 nights at The Coral.",
         "get": [
           "One $250 credit for the room for the whole stay, usable at the kids club (Atlantis Kids Adventures), Dolphin & Marine Adventures or Atlantis restaurants; unused credit is lost.",
@@ -1195,13 +1195,13 @@
         ],
         "compare": [
           "Worth it only if your 4-night price with the offer beats the same dates without it. The $250 credit and breakfast don't pay the fees; they help only if you'd spend on activities and meals there.",
-          "Fees added at The Coral for 4 nights: 4 × $77.00 resort fee (per room or per person is not stated), up to 4 × $14 gratuities for each guest 12 or older (both adults here), and a 21% charge on the room rate.",
+          "Fees added at The Coral for 4 nights: 4 × $77.00 resort fee (per room or per person is not stated), up to 4 × $14 gratuities for each guest 12 or older (both adults here), and 21% tax and levies on the room rate.",
           "We have not seen a regular rate to compare, so price both on the Atlantis site."
         ],
         "catch": [
           "Not valid November 21 to 27, 2026 or mid-December 2026 to January 1, 2027.",
           "Breakfast covers two people, so both kids' breakfasts are extra.",
-          "The 21% charge, the daily resort fee and gratuities for everyone 12 and older are added to the room price."
+          "21% tax and levies, the daily resort fee and gratuities for everyone 12 and older are added to the room price."
         ],
         "how": [
           "Book a new reservation of 4 or more nights at The Coral, The Royal, The Cove, The Reef or Harborside by November 22 (no year is shown; we read it as 2026).",
@@ -1211,7 +1211,7 @@
         "things_to_do": {
           "items": [
             "Aquaventure, the resort's water park, with the Leap of Faith slide through a shark-filled lagoon.",
-            "Poseidon's Playzone, a water play area for kids under 54 inches tall.",
+            "Poseidon's Playzone, a play area for kids under 54 inches tall.",
             "Atlantis Kids Adventures, a kids club for ages 3 to 12 with cooking classes, crafts, treasure hunts and outdoor games.",
             "Dolphin Cay and open-air marine habitats with more than 250 marine species."
           ],
@@ -1228,7 +1228,7 @@
           "Kids 5 and under eat a free entrée at participating restaurants."
         ],
         "cons": [
-          "A 21% charge, a daily resort fee and gratuities for guests 12 and older are added.",
+          "21% tax and levies, a daily resort fee and gratuities for guests 12 and older are added.",
           "Thanksgiving week and the Christmas holidays are blacked out.",
           "\"Up to 35%\" is a maximum, and no regular rate is shown to compare."
         ],
@@ -1236,7 +1236,7 @@
           "title": "Atlantis Bahamas: $250 resort credit and breakfast for two on 4+ nights",
           "hook": "Atlantis, Bahamas: 4+ nights gets a $250 resort credit, breakfast for two and up to 35% off.",
           "verdict": "Only for families set on 4+ nights at Atlantis, away from the holidays.",
-          "catch": "The catch: from $77.00/day resort fee, gratuities for everyone 12+, a 21% charge; kids' breakfasts extra."
+          "catch": "The catch: from $77.00/day resort fee, gratuities for everyone 12+, 21% tax and levies; kids' breakfasts extra."
         },
         "hero_image": {
           "slug": "atlantis-mayan-temple-slides",
