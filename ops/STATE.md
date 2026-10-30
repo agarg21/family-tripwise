@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-30 transactions=1
-run: {id: 2026-10-30T05:04:38Z, started_at: 2026-10-30T05:04:38Z}
-last_public_release: 1a5bc8d (2026-10-30 ET, G11 LEGOLAND California deal page v2 + v2 template: photo after verdict, $ in terms); last main code change 1a5bc8d
+today: 2026-10-30 transactions=2
+run: none
+last_public_release: 17b989f (2026-10-30 ET, G11 SeaWorld Orlando Fun Card deal page v2 + v2 extra_sources); last main code change 17b989f
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -37,5 +37,5 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-30 05:04Z G11 SeaWorld Orlando Fun Card v2 delivered 17b989f (release.json + SeaWorld, /deals/, Beaches, LEGOLAND pages, styles, photo, og and card byte-identical live): context, verdict, "pays off from your third visit" vs SeaWorld's own pricing guide ($59.99 online day from-price, $151.99 gate; undated, read 10-30, cited via new v2.extra_sources), 4 cards for a family of 4, credited SeaWorld carousel photo; Nov 1 queue refreshed. Integrity FAIL(P2 source)→FAIL(P2 saves)→PASS_WITH_P3; persona 3.60→4.00 PASS (clarity 4/5/4). Next: G11 Atlantis or O9.
 - 2026-10-30 04:04Z G11 LEGOLAND California v2 delivered 1a5bc8d (release.json + 3 pages, og image, photo byte-identical live): context (Carlsbad, near San Diego; kids 2-12), verdict, "from $169 a person a night" chip (2 adults + 2 kids, 1 night, before tax), $39 package kids' ticket vs $69 online 1-day ticket labelled not like for like, catch, things to do, credited entrance photo; Nov 3 queue refreshed. Integrity FAIL(2 P2)→PASS_WITH_P3→PASS_WITH_P3; persona 3.5→3.92→4.08 PASS (clarity 5/5/4). Next: G11 SeaWorld/Atlantis or O9.
-- 2026-10-30 03:04Z G11 step 3 Club Med v2 HELD (branch q/G11-clubmed c296b1d, not merged): plain context/verdict/savings, kids-club things to do (clubmed.us kids pages read 10-29), Cancún photo honestly captioned, photo after verdict, $ in v2 terms tables; Nov 2 queue entry refreshed on the branch. Integrity FAIL(P2 big label)→PASS_WITH_P3→PASS_WITH_P3; persona 3.47→3.80→3.87 FAIL (clarity 5/4/4; evidence-capped). OWNER O9. Disney Cruise unreachable flag cleared (noted in G05). Next: G11 SeaWorld/Atlantis/LEGOLAND or O9 answer.
