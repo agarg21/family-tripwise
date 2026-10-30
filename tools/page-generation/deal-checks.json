@@ -549,7 +549,7 @@
         },
         "verdict": "only_for",
         "who": "Families who will spend three or more days at Busch Gardens Tampa Bay between now and the end of 2027, such as Tampa Bay–area families or families on a longer Florida trip.",
-        "why": "Only worth it if you will go on 3 or more days before the end of 2027; for 1 or 2 days, day tickets or the Two-Day Two Park ticket cost less."
+        "why": "For one 3-day trip it costs about the same as the $135 Three-Day ticket; it pays off from a 4th day or a second trip before 2028."
       },
       "v2": {
         "page_title": "Busch Gardens Tampa Bay Fun Card: Unlimited Visits Through 2027 for $129.99 a Person",
@@ -564,15 +564,55 @@
         "big_label": "a person: unlimited Busch Gardens visits through 2027; a family of 4 needs a card each",
         "headline": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person, plus the Adventure Island water park at no extra cost",
         "chips": [
-          "Pays off from day 3",
+          "Pays off from day 4",
           "No child price shown",
           "Parking from $34",
           "Tax and fees extra"
         ],
-        "best_for": "Families who will spend three or more days at Busch Gardens before the end of 2027, such as Tampa Bay–area families or families on a longer Florida trip.",
-        "not_for": "A one- or two-day visit: Busch Gardens sells day tickets online from $61.99 and a Two-Day ticket for $106 (ages 3+).",
-        "cost": "Trip cost: we have no checked price for a family of 4. The card is priced per person and the offer page shows no child price, so plan on one card for each of you aged 3 and up, plus tax and service fees (not included), parking and your trip to Tampa (for example flights from New York City, which we have not priced).",
-        "saves": "Saves: money from your 3rd day. Per person, Busch Gardens lists the Two-Day Two Park ticket at $106, the Three-Day, Three Park ticket at $135 and this unlimited card at $129.99; three of its cheapest online day tickets ($61.99 each) also cost more than the card.",
+        "best_for": "Families who will spend four or more days at Busch Gardens before the end of 2027, such as Tampa Bay–area families or families making two trips.",
+        "not_for": "One 3-day trip (the $135 Three-Day ticket costs about the same), or one or two days (day tickets from $61.99 online; Two-Day ticket $106, ages 3+).",
+        "cost": "Trip cost: the estimate counts Fun Cards or tickets only; add tax and service fees (not included), parking and your trip to Tampa (for example flights from New York City, which we have not priced).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "3 park days on one trip",
+          "unit_short": "3 park days",
+          "verdict_line": "For one 3-day trip the Fun Card is not really cheaper than the $135 Three-Day ticket; a 4th day or a second trip is where it pays.",
+          "basis": "Tax, service fees and parking not counted.",
+          "note": "Rough estimate, not a quote: both sides use per-person prices from Busch Gardens' own pages (no child price is shown, so each of you aged 3 and up pays), and tax, service fees and parking are not counted.",
+          "without": {
+            "includes": "Four Three-Day, Three Park tickets, one for each of you; no parking.",
+            "parts": [
+              {
+                "what": "Three-Day, Three Park ticket, $135 a person (4 people)",
+                "unit_amount": 135,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Tampa Bay tickets page",
+                  "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Busch Gardens + Adventure Island Fun Cards: unlimited Busch Gardens visits through December 31, 2027, except blockout dates; no parking.",
+            "parts": [
+              {
+                "what": "Busch Gardens + Adventure Island Fun Card, $129.99 a person (4 people)",
+                "unit_amount": 129.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Tampa Bay Fun Card page",
+                  "url": "https://buschgardens.com/tampa/tickets/fun-card/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: little on one 3-day trip ($129.99 a card against the $135 Three-Day ticket, per person). Without the card, a 4th day costs at least one more day ticket (from $61.99 online); with it, nothing extra.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (the offer page shows no child price, so each of you likely needs a card; Busch Gardens says kids 2 and under need no ticket).",
         "get": [
           "Unlimited Busch Gardens Tampa Bay visits for each person with a card, from the day you buy through December 31, 2027.",
@@ -635,16 +675,16 @@
         ],
         "post": {
           "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person",
-          "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027, Adventure Island free.",
-          "verdict": "Only for 3+ days by end of 2027; for 2 days, a $106 Two-Day ticket costs less.",
-          "catch": "The catch: no child price; parking, tax and fees extra."
+          "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027.",
+          "verdict": "Only for 4+ park days; 3 days costs about the same.",
+          "catch": "The catch: no kid price; parking extra."
         },
         "hero_image": {
           "slug": "busch-gardens-tampa-bay",
           "alt": "A green steam-style train decorated with holiday garlands passes a lawn at Busch Gardens Tampa Bay while riders go by on a green and yellow roller coaster behind the trees",
           "caption": "A park train and roller coaster at Busch Gardens Tampa Bay (an older photo by Jeremy Thompson, not taken by Family Tripwise; rides and decorations may have changed)."
         },
-        "verdict_pill": "Only for 3+ park days",
+        "verdict_pill": "Only for 4+ park days",
         "og_image": "images/og/deals/busch-gardens-tampa-2027-fun-card.png"
       }
     },

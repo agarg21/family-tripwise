@@ -148,3 +148,10 @@ Built only from figures already in this record and the Oct 28 SeaWorld record; e
 | LEGOLAND New York | 2 adults + 2 kids 4 and 7, 3 visits | from $49 × 12 = $588 (tickets page, read Oct 30) | Standard $99 × 4 = $396 (pass page, read Oct 30) | ≈ $192 (33%) |
 | SeaWorld Orlando | 2 adults + 2 kids 4 and 8, 3 visits | from $59.99 × 12 = $720 (pricing guide, read Oct 30) | Fun Card $144.99 × 4 = $580 (Fun Card page, read Oct 28) | ≈ $140 (19%) |
 No child prices are published for LEGOLAND New York or SeaWorld day tickets or passes, so every person is priced the same on both sides.
+
+## v3 spend-vs-save card for the Busch Gardens Tampa Bay Fun Card (2026-10-30 22:04Z run; no source refetched)
+Built only from figures already in this record (Busch Gardens rows above, read Oct 30); estimate; tax, service fees and parking not counted on either side. "Without" uses Busch Gardens' own cheapest published way to get 3 days (the Three-Day, Three Park ticket), not three single-day tickets, so the saving is not overstated.
+| Deal | Party | Without the deal | With the deal | Save |
+|---|---|---|---|---|
+| Busch Gardens Tampa Bay Fun Card | 2 adults + 2 kids 4 and 8, 3 park days on one trip | Three-Day, Three Park $135 × 4 = $540 (tickets page, read Oct 30) | Busch Gardens + Adventure Island Fun Card $129.99 × 4 = $520 (Fun Card page, read Oct 30) | ≈ $20 (4%): not really cheaper for one 3-day trip |
+Verdict pill moved from "Only for 3+ park days" to "Only for 4+ park days": a 4th day costs at least one more $61.99 day ticket per person without the card. Neither page states a child price; the Three-Day ticket's usage window is not in our record.
