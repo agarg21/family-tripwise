@@ -156,3 +156,19 @@ Built only from figures already in this record (Busch Gardens rows above, read O
 | Busch Gardens Tampa Bay Fun Card, 4 park days (card) | 2 adults + 2 kids 4 and 8 | Three-Day, Three Park $135 × 4 = $540 + Single-Day from $61.99 × 4 = $248 → $788 (tickets page, read Oct 30) | Busch Gardens + Adventure Island Fun Card $129.99 × 4 = $520 (Fun Card page, read Oct 30) | ≈ $268 (34%) |
 | Same, one 3-day trip (verdict line) | same | $135 × 4 = $540 | $520 | ≈ $20 (4%): not really cheaper |
 Verdict pill moved from "Only for 3+ park days" to "Only for 4+ park days". Neither page states a child price; the Three-Day ticket's park mix and usage window are not in our record (said on the page). The hub now adds "not really cheaper" to any card saving under 5% (code change, deals-pages.mjs). Og card regenerated.
+
+## v3 spend-vs-save card for the LEGOLAND Florida hotel package (2026-10-30 23:04Z run)
+
+| Source | URL | Observed | Observed value | Change vs previous |
+|---|---|---|---|---|
+| LEGOLAND Florida help page "What ticket options are available for LEGOLAND Florida, and what do they include?" (official, undated) | https://florida-support.legoland.com/hc/en-us/articles/33341517791261-What-ticket-options-are-available-for-LEGOLAND-Florida-and-what-do-they-include | 2026-10-30 (WebFetch, once) | One price per person (all guests 2+ need a ticket): 1-Day LEGOLAND Florida Ticket (Theme Park + SEA LIFE) "Starting from: $69" online, gate $129; 1-Day Multi-Park (+ Water Park) $94 / $154; 2-Day LEGOLAND Florida Ticket $114 / $174; 2-Day Multi-Park $139 / $199; second day "within 3 days of the first scan"; none include PEPPA PIG Theme Park or parking | New (gate $129 matches the tickets page; $114/$174 matches the tickets page's "Ultimate Florida Ticket" figures) |
+| Help page "How much are LEGOLAND Florida Tickets?" | https://florida-support.legoland.com/hc/en-us/articles/22816388473757-How-much-are-LEGOLAND-Florida-Tickets | 2026-10-30 | Fetch failed (client error); not retried | Not used |
+| Google Hotels via DataForSEO (G12 request g12-legoland-florida-hotel-prices-2026-10-30, receipt docs/research/dataforseo-g12-legoland-florida-hotel-prices-2026-10-30.json, USD 0.024) | — | 2026-10-30 23:07Z | 2 adults + kids 5 and 8, check-in Dec 4, 2026: LEGOLAND Hotel Florida 1 night $269, 3 nights $369 (read as a nightly average: a per-stay reading would be implausibly low); Pirate Island Hotel no price shown (1n and 3n); LEGOLAND Beach Retreat 1 night $603, 3 nights no price | New |
+
+Card (estimate; party 2 adults + kids 5 and 8; one night and two park days; before tax; resort fee and parking not counted):
+
+| Without the deal | With the deal | Save |
+|---|---|---|
+| LEGOLAND Hotel night $269 (Dec 4–5 reading) + 2-Day LEGOLAND Florida Ticket from $114 × 4 = $456 → $725 | Package starting price $162 × 4 = $648 (kids' tickets offer page, read Oct 30) | ≈ $77 (11%) |
+
+Comparison choices: the package page FAQ calls the package ticket a 2-day ticket, so the 2-day ticket is used; the cheaper LEGOLAND + SEA LIFE ticket (not Multi-Park at $139) is used because the water park was listed closed on Oct 30 and the package's ticket type depends on dates, so the saving is not inflated. Dec 4 is a Friday and the $162 is a starting price ("save up to 20% on Sunday - Thursday stays"), so the Friday package price may be higher: said on the page. Whether Google's $269 includes the nightly resort fee is unknown.
