@@ -84,6 +84,23 @@
     "credit": "chensiyuan",
     "observed_on": "2026-10-29"
   },
+  "legoland-california": {
+    "file": "Legoland_California.jpg",
+    "path": "images/legoland-california.webp",
+    "width": 1272,
+    "height": 704,
+    "bytes": 67494,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Legoland_California.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Legoland_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1272,
+    "original_height": 704,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "https://www.flickr.com/photos/jdigger/",
+    "credit": "https://www.flickr.com/photos/jdigger/1454970910/sizes/o/",
+    "observed_on": "2026-10-30"
+  },
   "london-trafalgar-square": {
     "file": "Trafalgar_Square,_London_2_-_Jun_2009.jpg",
     "path": "images/london-trafalgar-square.webp",
