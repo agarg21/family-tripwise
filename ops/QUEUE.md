@@ -1,6 +1,6 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
-Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval (ops/OWNER.md id) · gate.
-Growth-first from 2026-10-28 (OWNER D10–D12): most runs go to G items; old Q items only for live-site defects and the Q17b deadline. Research: docs/research/growth-*-2026-10-28.md.
+Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
+Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
@@ -14,7 +14,7 @@ Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet bas
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead, never a fact. If the push conflicts in flags.json (the hourly watcher updated it), merge (never rebase) and keep the watcher's other flags.
-Carry P3s: skipped watch runs can chain (detection gap only); countdown lines may cause noise flags; robots.txt paths not percent-normalised.
+Carry P3s: chained skipped runs; countdown noise flags; robots paths not percent-normalised.
 
 ## G11 Deal content v2 + persona review (posting paused, D12)
 open · M · owner: D11/D15 Approved; rollout needs O7 · gate: none
@@ -25,7 +25,7 @@ LEGOLAND v2 delivered 1a5bc8d (persona 4.08; P3s: terms caption omits comparison
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Research 2026-10-29: docs/research/trip-cost-sources-2026-10-29.md. Step 1 done 2026-10-30 (b2d9772..935cea8): tools/hotel-price-pull.mjs; a request file with `hotel_searches` in ops/research-requests/ runs on push via the DataForSEO workflow (USD 0.004/search observed; same ledger/caps). First two Atlantis requests gave no usable price (coordinate → Eleuthera, price 0; code 2044 → one umbrella "Atlantis Paradise Island Bahamas" row, no price): docs/research/trip-cost-observations-2026-10-30.md. Next: 2) a request for a property Google prices on its own (Great Wolf/LEGOLAND hotel), family party, 1n+3n pair to settle per-night vs stay, plus one 2-adult Atlantis diagnostic (never published as a family price); 3) the "about $X" estimate line on deal pages from receipts (party, ages, dates, NYC gateway, observed date). Carry P3s: an uncollected request whose check-in has passed fails each later workflow run (remove it); overspend caught only after billing (bounded to one call); receipt -2026-10-30 still stores 0 prices (read as unknown).
+Sources: docs/research/trip-cost-sources-2026-10-29.md. Step 1 done 10-30 (935cea8): `hotel_searches` request files run tools/hotel-price-pull.mjs via the DataForSEO workflow (USD 0.004/search). Atlantis gave no price (docs/research/trip-cost-observations-2026-10-30.md). Next: 2) family-party 1n+3n pair for a hotel Google prices on its own (Great Wolf/LEGOLAND) + one 2-adult Atlantis diagnostic (never published); 3) "about $X" estimate line on deal pages from receipts. P3: delete uncollected requests once check-in passes.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
