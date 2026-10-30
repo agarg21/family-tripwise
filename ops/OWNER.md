@@ -25,4 +25,4 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 
 ## Open questions
 - O9 (10-30) Release Club Med v2 (q/G11-clubmed; persona 3.87, gap is evidence not wording)? Recommend: yes, page only; no posts until a price is observed.
-- O10 (10-30) Allow labelled sums of published figures (e.g. "estimate: up to $650 perks vs ~$420 fees, 4 nights")? The validator forbids them; personas call it the biggest gap. Recommend: yes, labelled with party, nights, source date (also covers per-person × party, e.g. LEGOLAND Florida "from $162 a person" for 2+2 → "about $648 a night"; personas' top gap).
+- O10 (10-30) Allow labelled sums of published figures (e.g. "estimate: up to $650 perks vs ~$420 fees, 4 nights")? The validator forbids them; personas call it the biggest gap. Recommend: yes, labelled with party, nights, source date.
