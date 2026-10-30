@@ -1222,7 +1222,7 @@
         },
         "verdict": "only_for",
         "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND Florida visit through January 9, 2027 who are fine with a non-refundable booking.",
-        "why": "A small saving (about 11% for one night and two park days) if the starting price holds for your date, plus breakfast. Non-refundable and paid in full: firm dates only."
+        "why": "A small saving only if your night gets 2 park days and the starting price; otherwise it can cost more. Non-refundable: firm dates only."
       },
       "v2": {
         "page_title": "LEGOLAND Florida Hotel Package: Kids' Park Tickets from $39 a Day",
@@ -1234,9 +1234,9 @@
           "observed_on": "2026-10-30",
           "covers": "where the resort is, the ages it is designed for and what is there"
         },
-        "big_number": "$39",
-        "big_label": "a day per kid's park ticket in a LEGOLAND Florida hotel package with breakfast (starting price)",
-        "headline": "LEGOLAND Florida hotel stay: kids' park tickets from $39 a day (book by November 17)",
+        "big_number": "$162",
+        "big_label": "a person a night for a LEGOLAND Florida hotel night, park tickets and breakfast (starting price, family of 4, before tax)",
+        "headline": "LEGOLAND Florida hotel + park package from $162 a person a night: a small saving at best (book by November 17)",
         "chips": [
           "From $162 a person a night with tickets",
           "Breakfast included",
@@ -1245,7 +1245,7 @@
         ],
         "best_for": "Families with kids 2 to 12 and firm dates for a LEGOLAND Florida trip before January 9, 2027 who want to stay at the resort.",
         "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a different hotel off site or in Orlando.",
-        "cost": "Trip cost: flights are not included (for example New York City to Orlando, which we have not priced). Tax, the resort fee and parking are not counted on either side.",
+        "cost": "Trip cost: flights are not included (for example New York City to Orlando, which we have not priced). Tax and parking are not counted; the package adds a nightly resort fee, and Google does not say whether its hotel price includes one.",
         "saves": "Saves: LEGOLAND states no fixed saving; our rough estimate for one night and two park days is at the top.",
         "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
         "get": [
@@ -1255,7 +1255,7 @@
           "If your tickets cover 2 days, the second day must be used within 3 days of the first visit."
         ],
         "compare": [
-          "A small saving: for this family, one night and two park days cost about 11% less with the package, if its starting price holds for your date (see the estimate at the top).",
+          "A small saving at best: about 11% less for one night and two park days, but only if your night comes with a 2-day ticket and LEGOLAND's starting price; with a 1-day ticket the package costs more.",
           "LEGOLAND's help page lists 2-day tickets (LEGOLAND and SEA LIFE) from $114 per person online and $174 at the gate (no date shown). The package ticket can also cover the water park and Peppa Pig park, depending on your dates.",
           "Our estimate uses a Friday night (December 4). LEGOLAND says you can save up to 20% on Sunday to Thursday stays, but not compared with what, so price a weeknight too."
         ],
@@ -1315,9 +1315,9 @@
         ],
         "post": {
           "title": "LEGOLAND Florida hotel stays: kids' park tickets from $39 a day",
-          "hook": "LEGOLAND Florida hotel + park package (near Orlando): from $162 a person a night, breakfast included.",
-          "verdict": "Only for firm dates: a small saving, but non-refundable.",
-          "catch": "The catch: paid in full; tax, resort fee and parking extra."
+          "hook": "LEGOLAND Florida hotel + park package (near Orlando): from $162 a person a night.",
+          "verdict": "Only for firm dates: a small saving only with 2 park days and the $162 price.",
+          "catch": "The catch: paid in full; tax, resort fee, parking extra."
         },
         "hero_image": {
           "slug": "legoland-florida-entrance",
@@ -1336,16 +1336,16 @@
           "observed_on": "2026-10-30",
           "source_label": "Google Hotels (our dated reading)",
           "source_url": "https://github.com/agarg21/family-tripwise/blob/main/docs/research/dataforseo-g12-legoland-florida-hotel-prices-2026-10-30.json",
-          "range_note": "Searches from December 4 the same evening showed {low} for 1 night and {high} a night for 3 nights.",
+          "range_note": "Searches made October 30 for check-in December 4 showed {low} for 1 night and {high} a night for 3 nights.",
           "caveat": "Google does not say whether taxes, the resort fee, park tickets or breakfast are included; prices change by the minute, and reading it as a nightly price is ours."
         },
         "spend_save": {
           "party": "2 adults and 2 kids aged 5 and 8",
           "unit": "one night and two park days",
           "unit_short": "1 night + 2 park days",
-          "verdict_line": "A small saving if the $162 starting price holds for your night, plus breakfast and more parks. Non-refundable, so book only with firm dates.",
-          "basis": "Before tax; resort fee and parking not counted.",
-          "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax and may be higher on a Friday; the hotel price is one Google Hotels reading for the night of December 4 (taxes and resort fee unclear); and the package's ticket type depends on your dates (its page calls it a 2-day ticket). Parking is extra either way.",
+          "verdict_line": "Saves about 11% only if your night comes with 2 park days and the $162 starting price; with a 1-day ticket or a pricier night it costs more.",
+          "basis": "Package at its lowest starting price; before tax; parking not counted.",
+          "note": "Rough estimate, not a quote: LEGOLAND's package price is its lowest starting price before tax and may be higher on a Friday (it says Sunday to Thursday stays save up to 20%); the hotel price is one Google Hotels reading for the night of December 4, and Google does not say whether it includes tax or the resort fee; and the package's ticket type depends on your dates (its page calls it a 2-day ticket; with a 1-day ticket the package costs more). The $114 ticket has one price for everyone aged 2 and up. Parking is extra either way.",
           "without": {
             "includes": "Hotel night and 2-day LEGOLAND and SEA LIFE tickets only: no breakfast, water park or Peppa Pig park.",
             "parts": [
@@ -1369,7 +1369,7 @@
             ]
           },
           "with": {
-            "includes": "Hotel night, multi-park tickets (the package page calls them 2-day) and a hot breakfast; before tax and the resort fee.",
+            "includes": "Hotel night, park tickets (the package page calls them 2-day multi-park tickets; the type depends on your dates) and a hot breakfast; before tax and the resort fee.",
             "parts": [
               {
                 "what": "Package starting price, from $162 a person a night (2 adults + 2 kids, 1 night, before tax)",
