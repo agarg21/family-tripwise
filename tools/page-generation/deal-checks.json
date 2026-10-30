@@ -1225,7 +1225,7 @@
         "why": "A small saving only if your night gets 2 park days and the starting price; otherwise it can cost more. Non-refundable: firm dates only."
       },
       "v2": {
-        "page_title": "LEGOLAND Florida Hotel Package: Kids' Park Tickets from $39 a Day",
+        "page_title": "LEGOLAND Florida Hotel + Park Package from $162 a Night: A Small Saving at Best",
         "verdict_pill": "Only for firm dates",
         "context": "LEGOLAND Florida Resort: LEGO and Peppa Pig theme parks for kids 2 to 12 in Winter Haven, about an hour from Orlando",
         "context_source": {
@@ -1235,7 +1235,7 @@
           "covers": "where the resort is, the ages it is designed for and what is there"
         },
         "big_number": "$162",
-        "big_label": "a person a night for a LEGOLAND Florida hotel night, park tickets and breakfast (starting price, family of 4, before tax)",
+        "big_label": "a person a night: hotel, park tickets and breakfast (starting price, before tax)",
         "headline": "LEGOLAND Florida hotel + park package from $162 a person a night: a small saving at best (book by November 17)",
         "chips": [
           "From $162 a person a night with tickets",
@@ -1343,7 +1343,7 @@
           "party": "2 adults and 2 kids aged 5 and 8",
           "unit": "one night and two park days",
           "unit_short": "1 night + 2 park days",
-          "verdict_line": "Saves about 11% only if your night comes with 2 park days and the $162 starting price; with a 1-day ticket or a pricier night it costs more.",
+          "verdict_line": "Saves about 11% only with 2 park days and the $162 starting price; on a pricier night or with a 1-day ticket, the saving shrinks or disappears.",
           "basis": "Package at its lowest starting price; before tax; parking not counted.",
           "note": "Rough estimate, not a quote: LEGOLAND's package price is its lowest starting price before tax and may be higher on a Friday (it says Sunday to Thursday stays save up to 20%); the hotel price is one Google Hotels reading for the night of December 4, and Google does not say whether it includes tax or the resort fee; and the package's ticket type depends on your dates (its page calls it a 2-day ticket; with a 1-day ticket the package costs more). The $114 ticket has one price for everyone aged 2 and up. Parking is extra either way.",
           "without": {
